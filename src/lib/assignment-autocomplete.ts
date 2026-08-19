@@ -181,20 +181,30 @@ export async function recordAssignmentCompletion(params: {
     for (const a of assignments) {
       const required = typeof a.requiredScore === 'number' ? a.requiredScore : null
       let completesNow = required === null || score >= required
+      // What actually lands in the gradebook. For a single-topic assignment
+      // that is the quiz score; for a multi-topic one it becomes COVERAGE.
+      let recordedScore = score
 
       // MULTI-TOPIC assignments only complete when EVERY assigned topic is
       // cleared. Previously finishing any one of them flipped the whole
       // assignment to COMPLETED, so a student assigned five subtopics did one
-      // and was told they were done — and the card then offered "Review",
-      // sending them back to the topic they had already finished.
+      // and was told they were done.
+      //
+      // PARTIAL CREDIT (owner request): the recorded score is the fraction of
+      // assigned topics cleared, so a teacher scanning the gradebook sees 60
+      // percent and knows the student is 3 of 5 through the set rather than
+      // seeing a single topic's quiz score that says nothing about coverage.
+      // Coverage only ever rises, so the GREATEST() upsert below stays correct.
       const topics = assignmentTopics(a)
-      if (completesNow && topics.length > 1) {
+      if (topics.length > 1) {
         const bar = required ?? DEFAULT_CLEAR_FRACTION
         const cleared = await clearedTopics(userId, topics, bar)
         // The topic that triggered this call counts even if its progress row
         // has not settled yet.
         if (score >= bar) cleared.add(topicSlug)
-        completesNow = topics.every((t) => cleared.has(t))
+        const clearedCount = topics.filter((t) => cleared.has(t)).length
+        recordedScore = clearedCount / topics.length
+        completesNow = clearedCount === topics.length
       }
       const id = randomUUID()
       // Atomic upsert: GREATEST keeps best-score-wins under concurrent submits,
@@ -207,23 +217,25 @@ export async function recordAssignmentCompletion(params: {
         VALUES
           (${id}, ${a.id}, ${userId},
            ${completesNow ? 'COMPLETED' : 'IN_PROGRESS'}::"AssignmentStatus",
-           ${score}, 1, 0, now(), ${completesNow ? new Date() : null})
+           ${recordedScore}, 1, 0, now(), ${completesNow ? new Date() : null})
         ON CONFLICT ("assignmentId", "studentId") DO UPDATE SET
           "score" = GREATEST(COALESCE("AssignmentSubmission"."score", 0), EXCLUDED."score"),
           "attempts" = "AssignmentSubmission"."attempts" + 1,
           "startedAt" = COALESCE("AssignmentSubmission"."startedAt", now()),
+          -- Completion is decided in TypeScript (completesNow) and passed in,
+          -- never recomputed from the score here. Recomputing was wrong twice
+          -- over for multi-topic assignments: with no requiredScore set it
+          -- completed on the first topic, and once the score became coverage
+          -- a 4-of-5 student (0.8) would satisfy a 0.8 bar and be marked done.
+          -- Prior completion is still never downgraded.
           "status" = CASE
             WHEN "AssignmentSubmission"."status" = 'COMPLETED'::"AssignmentStatus" THEN 'COMPLETED'::"AssignmentStatus"
-            WHEN ${required}::float8 IS NULL
-              OR GREATEST(COALESCE("AssignmentSubmission"."score", 0), EXCLUDED."score") >= ${required}::float8
-              THEN 'COMPLETED'::"AssignmentStatus"
+            WHEN ${completesNow} THEN 'COMPLETED'::"AssignmentStatus"
             ELSE 'IN_PROGRESS'::"AssignmentStatus"
           END,
           "completedAt" = CASE
             WHEN "AssignmentSubmission"."completedAt" IS NOT NULL THEN "AssignmentSubmission"."completedAt"
-            WHEN ${required}::float8 IS NULL
-              OR GREATEST(COALESCE("AssignmentSubmission"."score", 0), EXCLUDED."score") >= ${required}::float8
-              THEN now()
+            WHEN ${completesNow} THEN now()
             ELSE NULL
           END
         WHERE "AssignmentSubmission"."gradedManually" = false

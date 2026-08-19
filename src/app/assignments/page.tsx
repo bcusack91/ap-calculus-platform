@@ -345,7 +345,12 @@ export default function StudentAssignmentsPage() {
                             className={`px-3 py-1 rounded-full text-xs font-semibold ${statusInfo.bg} ${statusInfo.text}`}
                           >
                             {statusInfo.label}
-                            {a.submission.status === 'COMPLETED' && a.submission.score !== null && (
+                            {/* Multi-topic assignments carry partial credit
+                                (fraction of topics cleared), so show it while
+                                in progress too — not just at completion. */}
+                            {a.submission.score !== null &&
+                              (a.submission.status === 'COMPLETED' ||
+                                (a.topics && a.topics.length > 1 && a.submission.score > 0)) && (
                               <> · {Math.round(a.submission.score * 100)}%</>
                             )}
                           </span>
