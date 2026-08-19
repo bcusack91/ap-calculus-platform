@@ -17,8 +17,11 @@ import { CARS_ECONOMICS_PASSAGES } from './cars-economics'
 import { CARS_CULTURE_PASSAGES } from './cars-culture'
 import { CARS_LANGUAGE_ED_PASSAGES } from './cars-language-education'
 import { CHEM_PHYS_PASSAGES, CHEM_PHYS_DISCRETES } from './chem-phys'
+import { CHEM_PHYS_PASSAGES_2 } from './chem-phys-2'
 import { BIO_BIOCHEM_PASSAGES, BIO_BIOCHEM_DISCRETES } from './bio-biochem'
+import { BIO_BIOCHEM_PASSAGES_2 } from './bio-biochem-2'
 import { PSYCH_SOC_PASSAGES, PSYCH_SOC_DISCRETES } from './psych-soc'
+import { PSYCH_SOC_PASSAGES_2 } from './psych-soc-2'
 
 export const CARS_PASSAGES: MCATPassage[] = [
   ...CARS_HUMANITIES_PASSAGES,
@@ -36,9 +39,9 @@ export const CARS_PASSAGES: MCATPassage[] = [
 ]
 
 export const SECTION_PASSAGES: Record<Exclude<MCATSection, 'cars'>, MCATPassage[]> = {
-  'chem-phys': CHEM_PHYS_PASSAGES,
-  'bio-biochem': BIO_BIOCHEM_PASSAGES,
-  'psych-soc': PSYCH_SOC_PASSAGES,
+  'chem-phys': [...CHEM_PHYS_PASSAGES, ...CHEM_PHYS_PASSAGES_2],
+  'bio-biochem': [...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2],
+  'psych-soc': [...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2],
 }
 
 export const SECTION_DISCRETES: Record<Exclude<MCATSection, 'cars'>, MCATDiscreteQuestion[]> = {
@@ -62,6 +65,9 @@ export function discretesAsPassage(
 export const ALL_MCAT_PASSAGES: MCATPassage[] = [
   ...CARS_PASSAGES,
   ...CHEM_PHYS_PASSAGES,
+  ...CHEM_PHYS_PASSAGES_2,
   ...BIO_BIOCHEM_PASSAGES,
+  ...BIO_BIOCHEM_PASSAGES_2,
   ...PSYCH_SOC_PASSAGES,
+  ...PSYCH_SOC_PASSAGES_2,
 ]

@@ -183,38 +183,41 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // Get due flashcards
-    const dueCards = await prisma.flashcardProgress.findMany({
-      where,
-      include: {
-        flashcard: {
-          include: {
-            topic: {
-              select: {
-                title: true,
-                slug: true
+    // Get due flashcards (batched — the client refetches when a batch is
+    // finished) plus REAL counts: deriving stats from the capped batch made
+    // "Due Now" top out at 50 and showed "All Caught Up" with thousands of
+    // cards still due.
+    const [dueCards, totalCards, dueCount, newCards] = await Promise.all([
+      prisma.flashcardProgress.findMany({
+        where,
+        include: {
+          flashcard: {
+            include: {
+              topic: {
+                select: {
+                  title: true,
+                  slug: true
+                }
               }
             }
           }
+        },
+        orderBy: {
+          nextReview: 'asc' // Oldest due cards first
+        },
+        take: 50 // Batch size per fetch, not a session ceiling
+      }),
+      prisma.flashcardProgress.count({
+        where: {
+          userId: session.user.id,
+          context
         }
-      },
-      orderBy: {
-        nextReview: 'asc' // Oldest due cards first
-      },
-      take: 50 // Limit to 50 cards per session
-    })
+      }),
+      prisma.flashcardProgress.count({ where }),
+      prisma.flashcardProgress.count({ where: { ...where, repetitions: 0 } })
+    ])
 
-    // Calculate stats
-    const totalCards = await prisma.flashcardProgress.count({
-      where: {
-        userId: session.user.id,
-        context
-      }
-    })
-
-    const dueCount = dueCards.length
-    const newCards = dueCards.filter(c => c.repetitions === 0).length
-    const reviewCards = dueCards.filter(c => c.repetitions > 0).length
+    const reviewCards = dueCount - newCards
 
     return NextResponse.json({
       cards: dueCards,

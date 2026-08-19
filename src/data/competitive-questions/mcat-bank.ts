@@ -5,11 +5,12 @@
  * AAMC exam blueprint:
  *
  *   SECTION (4, the scored AAMC sections)
- *     └── AREA (9 subject areas — the "subcourses")
- *           └── SUBTOPIC (25 finely-tagged topics)
+ *     └── AREA (11 subject areas — the "subcourses")
+ *           └── SUBTOPIC (55 finely-tagged topics, ≥33 authored questions each)
  *
- * Questions are sourced from the existing MCAT exit-quiz pools rather than
- * duplicated here, so there is exactly one place to author MCAT content.
+ * Questions are sourced from the existing MCAT exit-quiz pools plus the
+ * authored competitive files (mcat-questions-*.ts), so there is exactly one
+ * place to author each MCAT question.
  * `generateExitQuiz` already preserves each question's subtopic tag in its
  * `category` field, which is what lets us filter to a single subtopic.
  *
@@ -46,6 +47,7 @@ import { behavioralQuestions } from './mcat-questions-behavioral'
 import { behavioralQuestions2 } from './mcat-questions-behavioral-2'
 import { gapsChemPhysQuestions } from './mcat-questions-gaps-chemphys'
 import { gapsBioPsychQuestions } from './mcat-questions-gaps-biopsych'
+import { gapsWave2Questions } from './mcat-questions-gaps-wave2'
 
 const AUTHORED: McatBankQuestion[] = [
   ...chemistryQuestions,
@@ -59,6 +61,7 @@ const AUTHORED: McatBankQuestion[] = [
   ...behavioralQuestions2,
   ...gapsChemPhysQuestions,
   ...gapsBioPsychQuestions,
+  ...gapsWave2Questions,
 ]
 
 /** Authored questions indexed by subtopic slug (built once). */
@@ -115,6 +118,7 @@ type QuizFn = (count: number, topicSlug?: string) => Array<{
 }>
 
 /** area key → its source quiz generator. */
+// Area keys must match MCAT_SECTIONS' area slugs (mcat-area-<key>).
 const AREA_SOURCE: Record<string, QuizFn> = {
   'general-chemistry': genChemQuiz as QuizFn,
   'organic-chemistry': orgChemQuiz as QuizFn,
@@ -165,14 +169,17 @@ export const MCAT_SECTIONS: McatSection[] = [
       },
       {
         slug: 'mcat-area-physics-mechanics',
-        title: 'Physics: Mechanics & Fluids',
+        title: 'Physics: Mechanics, Fluids & Waves',
         emoji: '🚀',
         subtopics: [
           sub('mcat-physics-mechanics-kinematics-mcat', 'Kinematics'),
           sub('mcat-physics-mechanics-forces-newton-laws-mcat', "Forces & Newton's Laws"),
           sub('mcat-physics-mechanics-work-energy-power-mcat', 'Work, Energy & Power'),
           sub('mcat-physics-mechanics-momentum-collisions-mcat', 'Momentum & Collisions'),
-          sub('mcat-physics-mechanics-fluids-waves-mcat', 'Fluids & Waves'),
+          // AAMC 4B and 4D are separate content categories; the original
+          // combined fluids-waves subtopic was split (questions retagged).
+          sub('mcat-physics-mechanics-fluids-mcat', 'Fluids'),
+          sub('mcat-physics-waves-sound-mcat', 'Waves & Sound'),
         ],
       },
       {
@@ -185,6 +192,8 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-physics-electricity-magnetism-mcat', 'Magnetism'),
           sub('mcat-physics-electricity-optics-mcat', 'Optics'),
           sub('mcat-physics-electricity-electrochemistry-mcat', 'Electrochemistry'),
+          // AAMC 4E — atomic/nuclear phenomena had no home before.
+          sub('mcat-physics-atomic-nuclear-mcat', 'Atomic & Nuclear Phenomena'),
         ],
       },
       {
@@ -277,6 +286,8 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-psych-sociology-social-structure-mcat', 'Sociology & Social Structure'),
           sub('mcat-psych-consciousness-sleep-mcat', 'Consciousness & Sleep'),
           sub('mcat-psych-identity-self-concept-mcat', 'Identity & Self-Concept'),
+          // AAMC 7A psychological disorders — previously absent entirely.
+          sub('mcat-psych-disorders-mcat', 'Psychological Disorders'),
           // AAMC Foundational Concept 10 — previously unrepresented entirely.
           sub('mcat-psych-social-inequality-mcat', 'Social Inequality & Health Disparities'),
           sub('mcat-psych-demographics-social-change-mcat', 'Demographics & Social Change'),
@@ -365,10 +376,18 @@ function pull(areaSlugOrKey: string, count: number, subtopicSlug?: string): Mcat
     // Ask for far more than needed so we get the whole pool, then filter.
     const raw = fn(500, subtopicSlug)
     // Only strict-filter when the upstream pool actually carries this tag;
-    // areas whose subtopics are defined solely by authored questions would
-    // otherwise wrongly fall back to the entire untagged pool.
+    // the generator already narrowed `raw` to the subtopic (mcatSubtopicPool's
+    // classifier), so when no exact tag matches — untagged hand-written items,
+    // or authored tags retagged to curriculum slugs (TAG_ALIASES) that a bank
+    // subtopic slug can't equal — keep the narrowed pool instead of serving
+    // nothing from it. Guard: a pool the classifier could NOT narrow (raw is
+    // the entire area bank) would dilute a subtopic match with area-level
+    // questions, so serve authored-only in that case.
     const tagged = raw.filter((q) => q.category === subtopicSlug)
-    const source = subtopicSlug ? tagged : raw
+    let source: typeof raw
+    if (!subtopicSlug) source = raw
+    else if (tagged.length) source = tagged
+    else source = raw.length < fn(500).length ? raw : []
     for (const [i, q] of source.entries()) {
       fromQuiz.push({
         id: i,

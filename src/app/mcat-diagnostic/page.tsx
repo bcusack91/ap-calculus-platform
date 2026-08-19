@@ -432,6 +432,10 @@ export default function MCATDiagnosticPage() {
             bioBiochemScore: diagnosticResults.bioBiochemScore,
             psychSocScore: diagnosticResults.psychSocScore,
             domains: diagnosticResults.domains,
+            weakAreas: diagnosticResults.weakAreas,
+            moderateAreas: diagnosticResults.moderateAreas,
+            strengths: diagnosticResults.strengths,
+            recommendedTopics: diagnosticResults.recommendedTopics,
             itemAnalytics,
           }),
           weakAreas: diagnosticResults.weakAreas.join(', '),
@@ -1015,7 +1019,7 @@ export default function MCATDiagnosticPage() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                45 questions across 9 MCAT domains
+                45 questions across 9 MCAT domains, weighted like the real exam
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

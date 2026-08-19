@@ -100,7 +100,9 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-physics-mechanics-forces-newton-laws-mcat': ['mcat-physics-mechanics-forces-newton-laws-mcat'],
   'mcat-physics-mechanics-work-energy-power-mcat': ['mcat-physics-mechanics-work-energy-power-mcat'],
   'mcat-physics-mechanics-momentum-collisions-mcat': ['mcat-physics-mechanics-momentum-collisions-mcat'],
-  'mcat-physics-mechanics-fluids-waves-mcat': ['mcat-physics-mechanics-fluids-waves-mcat'],
+  // The bank split the combined fluids-waves subtopic into two (AAMC 4B/4D);
+  // playing either satisfies the combined curriculum topic.
+  'mcat-physics-mechanics-fluids-waves-mcat': ['mcat-physics-mechanics-fluids-mcat', 'mcat-physics-waves-sound-mcat'],
   'mcat-physics-electricity-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   'mcat-physics-electricity-electrostatics-mcat': ['mcat-physics-electricity-electrostatics-mcat'],
   'mcat-physics-electricity-circuits-mcat': ['mcat-physics-electricity-circuits-mcat'],
@@ -126,6 +128,7 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-psychology-behavior-cognition-language-mcat': ['mcat-psych-cognition-language-mcat'],
   'mcat-psychology-behavior-development-mcat': ['mcat-psych-motivation-emotion-personality-mcat', 'mcat-psych-identity-self-concept-mcat'],
   'mcat-social-psychology-mcat': ['mcat-psych-social-psychology-mcat'],
+  'mcat-psychology-behavior-disorders-mcat': ['mcat-psych-disorders-mcat'],
 
   // ---- Sociology ----
   'mcat-sociology-mcat': ['mcat-psych-sociology-social-structure-mcat'],

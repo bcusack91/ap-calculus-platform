@@ -63,11 +63,14 @@ export default function FlashcardReviewPage() {
     try {
       const response = await fetch('/api/flashcards/review')
       if (!response.ok) throw new Error('Failed to load flashcards')
-      
+
       const data = await response.json()
       setCards(data.cards)
       setStats(data.stats)
-      
+      setCurrentIndex(0)
+      setIsFlipped(false)
+      setShowHint(false)
+
       if (data.cards.length === 0) {
         setReviewComplete(true)
       }
@@ -102,8 +105,10 @@ export default function FlashcardReviewPage() {
         setIsFlipped(false)
         setShowHint(false)
       } else {
-        // Finished reviewing all due cards
-        setReviewComplete(true)
+        // Batch finished — the queue serves 50 at a time, so refetch; only an
+        // empty refetch means genuinely caught up (loadDueCards sets it).
+        setLoading(true)
+        await loadDueCards()
       }
     } catch (error) {
       console.error('Error submitting review:', error)

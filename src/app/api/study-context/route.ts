@@ -52,18 +52,32 @@ export async function PUT(req: NextRequest) {
   if (isCourseContext(context)) {
     try {
       const courseSlug = context.slice('course:'.length)
-      const attempts = await prisma.exitQuizAttempt.findMany({
-        where: { userId },
-        select: { topicSlug: true },
-        distinct: ['topicSlug'],
-        take: 100,
-      })
-      const slugs = attempts.map((a) => a.topicSlug)
+      // Caps sized for the largest course decks (MCAT: 102 topics) — the old
+      // take:100/take:30 silently dropped topics for students far into a big
+      // course. Lesson-completed topics are included because quiz-less topics
+      // unlock on the lesson alone (see flashcard-unlock.ts).
+      const [attempts, completed] = await Promise.all([
+        prisma.exitQuizAttempt.findMany({
+          where: { userId },
+          select: { topicSlug: true },
+          distinct: ['topicSlug'],
+          take: 500,
+        }),
+        prisma.topicProgress.findMany({
+          where: { userId, status: { in: ['COMPLETED', 'MASTERED'] } },
+          select: { topic: { select: { slug: true } } },
+          take: 500,
+        }),
+      ])
+      const slugs = [...new Set([
+        ...attempts.map((a) => a.topicSlug),
+        ...completed.map((c) => c.topic.slug),
+      ])]
       if (slugs.length > 0) {
         const courseTopics = await prisma.topic.findMany({
           where: { slug: { in: slugs }, category: { course: { slug: courseSlug } } },
           select: { slug: true },
-          take: 30,
+          take: 200,
         })
         for (const t of courseTopics) {
           await maybeUnlockFlashcards(userId, t.slug)

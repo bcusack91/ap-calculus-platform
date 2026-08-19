@@ -294,6 +294,7 @@ const slugAliases: Record<string, string> = {
   'mcat-physics-mechanics-work-energy-power-mcat': 'mcat-physics-mechanics-mcat',
   'mcat-psychology-behavior-cognition-language-mcat': 'mcat-psychology-behavior-mcat',
   'mcat-psychology-behavior-development-mcat': 'mcat-psychology-behavior-mcat',
+  'mcat-psychology-behavior-disorders-mcat': 'mcat-psychology-behavior-mcat',
   'mcat-psychology-behavior-learning-memory-mcat': 'mcat-psychology-behavior-mcat',
   'mcat-psychology-behavior-sensation-perception-mcat': 'mcat-psychology-behavior-mcat',
   'mcat-science-passage-strategy-discrete-questions-mcat': 'mcat-science-passage-strategy-mcat',

@@ -1,10 +1,14 @@
 /**
  * MCAT Chemical & Physical Foundations of Biological Systems — passage bank.
  *
- * Seven experimental/expository passages (one per core discipline) plus six
- * discrete items. Numbers are kept clean for the calculator-free exam, and
- * every answer key has been worked by hand. Items whose key is even slightly
- * contestable carry `needsReview: true`.
+ * Ten experimental/expository passages plus eight discrete items (wave 1 —
+ * wave 2 lives in chem-phys-2.ts). Numbers are kept clean for the
+ * calculator-free exam, and every answer key has been worked by hand. Items
+ * whose key is even slightly contestable carry `needsReview: true`.
+ *
+ * KEY INVARIANT: the passage runner does NOT shuffle options. Keys were
+ * position-rebalanced by scripts/rebalance-passage-keys.ts, and explanations
+ * reference options by CONTENT, never by letter.
  *
  * LaTeX renders through KaTeX; backslashes are double-escaped in these strings.
  */
@@ -69,14 +73,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'Levamisole (Condition C) most likely acts by:',
         options: [
-          'Binding the active site in place of pNPP',
           'Binding a site distinct from the active site and lowering the catalytic rate',
           'Covalently and permanently modifying the catalytic residue',
           'Increasing the affinity of the enzyme for substrate',
-        ],
-        correctAnswer: 1,
+          'Binding the active site in place of pNPP'],
+        correctAnswer: 0,
         explanation:
-          'Levamisole lowers Vmax (100 → 40) without changing Km, and the passage notes it is structurally unlike the substrate and is not overcome by excess substrate — classic noncompetitive (allosteric) inhibition. A pure competitive inhibitor (option A) would raise Km, not lower Vmax. "Permanently/covalently" overstates the data, which were fit to reversible Michaelis–Menten kinetics. Lowering Vmax is the opposite of increasing affinity.',
+          'Levamisole lowers Vmax (100 → 40) without changing Km, and the passage notes it is structurally unlike the substrate and is not overcome by excess substrate — classic noncompetitive (allosteric) inhibition. A pure competitive inhibitor (one binding the active site in place of pNPP) would raise Km, not lower Vmax. "Permanently/covalently" overstates the data, which were fit to reversible Michaelis–Menten kinetics. Lowering Vmax is the opposite of increasing affinity.',
         skill: 'Enzyme inhibition',
       },
       {
@@ -158,14 +161,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'The equivalence-point pH is above 7 because:',
         options: [
-          'Excess NaOH remains after the reaction',
-          'Acetate ion is a weak base that hydrolyzes water to produce hydroxide',
           'Sodium ion acts as a weak acid',
           'The acetic acid is not fully neutralized at this point',
-        ],
-        correctAnswer: 1,
+          'Excess NaOH remains after the reaction',
+          'Acetate ion is a weak base that hydrolyzes water to produce hydroxide'],
+        correctAnswer: 3,
         explanation:
-          'At the equivalence point all acetic acid has been converted to acetate, the conjugate base of a weak acid. Acetate reacts with water (A− + H2O ⇌ HA + OH−) to give a basic solution. There is no excess NaOH exactly at equivalence (option A); Na+ is a spectator, not an acid; and the acid is fully neutralized, ruling out option D.',
+          'At the equivalence point all acetic acid has been converted to acetate, the conjugate base of a weak acid. Acetate reacts with water (A− + H2O ⇌ HA + OH−) to give a basic solution. There is no excess NaOH exactly at equivalence; Na+ is a spectator, not an acid; and the acid is fully neutralized, so no un-neutralized acetic acid remains.',
         skill: 'Salt hydrolysis',
       },
       {
@@ -200,8 +202,8 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     questions: [
       {
         question: 'The standard cell potential ($E^\\circ_{cell}$) is:',
-        options: ['+0.42 V', '+1.10 V', '−0.42 V', '−1.10 V'],
-        correctAnswer: 1,
+        options: [ '−0.42 V', '−1.10 V','+0.42 V', '+1.10 V'],
+        correctAnswer: 3,
         explanation:
           'E°cell = E°cathode − E°anode = (+0.34) − (−0.76) = +1.10 V. Cu2+ is reduced (cathode), Zn is oxidized (anode). The +0.42 trap adds the magnitudes incorrectly; the negative options reverse the spontaneous direction.',
         skill: 'Electrochemistry',
@@ -209,12 +211,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which electrode is the anode, and what happens to its mass?',
         options: [
+          'Zinc; mass decreases',
           'Copper; mass increases',
           'Copper; mass decreases',
-          'Zinc; mass increases',
-          'Zinc; mass decreases',
-        ],
-        correctAnswer: 3,
+          'Zinc; mass increases'],
+        correctAnswer: 0,
         explanation:
           'Oxidation occurs at the anode. Zn is oxidized (Zn → Zn2+ + 2e−), so the zinc electrode dissolves and its mass decreases. Copper is the cathode, where Cu2+ plates out and mass increases — the opposite of the chosen answer.',
         skill: 'Electrochemistry',
@@ -232,27 +233,25 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'If two identical 5.5 Ω resistors are connected in parallel across the same cell, the current drawn from the cell will:',
         options: [
-          'Double, because the equivalent resistance is halved',
           'Halve, because the equivalent resistance is doubled',
           'Stay the same, because voltage is unchanged',
           'Drop to zero, because parallel paths cancel',
-        ],
-        correctAnswer: 0,
+          'Double, because the equivalent resistance is halved'],
+        correctAnswer: 3,
         explanation:
-          'Two equal resistors in parallel give an equivalent resistance of R/2 = 2.75 Ω. With voltage fixed, I = V/R, so halving resistance doubles the total current (0.20 A → 0.40 A). Parallel resistors lower, not raise, equivalent resistance, ruling out option B.',
+          'Two equal resistors in parallel give an equivalent resistance of R/2 = 2.75 Ω. With voltage fixed, I = V/R, so halving resistance doubles the total current (0.20 A → 0.40 A). Parallel resistors lower, not raise, equivalent resistance, ruling out any answer with the current decreasing.',
         skill: 'Circuits',
       },
       {
         question: 'Why does the current stop almost immediately if the salt bridge is removed?',
         options: [
-          'The standard potentials become equal without the bridge',
           'Charge builds up in each half-cell, opposing further electron flow',
           'The copper electrode stops conducting electrons',
           'The resistor short-circuits the cell',
-        ],
-        correctAnswer: 1,
+          'The standard potentials become equal without the bridge'],
+        correctAnswer: 0,
         explanation:
-          'The salt bridge carries ions to neutralize the positive charge accumulating in the anode compartment (Zn2+ produced) and the negative charge in the cathode compartment (SO4 2− left behind). Without ion migration, this charge separation builds an opposing potential that halts electron flow. The intrinsic E° values do not change (option A), and the electrodes still conduct.',
+          'The salt bridge carries ions to neutralize the positive charge accumulating in the anode compartment (Zn2+ produced) and the negative charge in the cathode compartment (SO4 2− left behind). Without ion migration, this charge separation builds an opposing potential that halts electron flow. The intrinsic E° values are fixed properties that do not change, and the electrodes still conduct.',
         skill: 'Electrochemistry',
       },
     ],
@@ -274,12 +273,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'When the mixture is shaken with aqueous $NaHCO_{3}$, which component moves into the aqueous layer?',
         options: [
+          'All three components equally',
           'Naphthalene, as the neutral hydrocarbon',
           'Aniline, deprotonated to its conjugate base',
-          'Benzoic acid, deprotonated to benzoate',
-          'All three components equally',
-        ],
-        correctAnswer: 2,
+          'Benzoic acid, deprotonated to benzoate'],
+        correctAnswer: 3,
         explanation:
           'Bicarbonate is a mild base that deprotonates carboxylic acids (benzoic acid, pKa ~4) but not phenols or amines. The resulting benzoate ion is charged and water-soluble, so it partitions into the aqueous layer. Aniline is a base, not an acid, so NaHCO3 does not deprotonate it; naphthalene is inert.',
         skill: 'Acid–base extraction',
@@ -302,14 +300,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'In the separatory funnel, the layer containing dissolved naphthalene is found:',
         options: [
-          'On top, because dichloromethane is less dense than water',
-          'On the bottom, because dichloromethane is denser than water',
           'Evenly distributed between both layers',
           'As a solid layer at the interface',
-        ],
-        correctAnswer: 1,
+          'On top, because dichloromethane is less dense than water',
+          'On the bottom, because dichloromethane is denser than water'],
+        correctAnswer: 3,
         explanation:
-          'The passage states dichloromethane is denser than water, so the organic layer sits on the bottom. Naphthalene is neutral and nonpolar, so it stays dissolved in that lower organic layer. Option A inverts the densities.',
+          'The passage states dichloromethane is denser than water, so the organic layer sits on the bottom. Naphthalene is neutral and nonpolar, so it stays dissolved in that lower organic layer. Placing the organic layer on top inverts the stated densities.',
         skill: 'Separatory funnel technique',
       },
       {
@@ -330,12 +327,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'To then isolate pure aniline from the remaining organic layer, the best next wash is:',
         options: [
-          'Aqueous $NaHCO_{3}$ again',
-          'Aqueous NaOH',
           'Aqueous HCl',
           'Pure water',
-        ],
-        correctAnswer: 2,
+          'Aqueous $NaHCO_{3}$ again',
+          'Aqueous NaOH'],
+        correctAnswer: 0,
         explanation:
           'Aniline is a base; washing with aqueous HCl protonates it to the water-soluble anilinium ion, pulling it into the aqueous layer and leaving neutral naphthalene behind in the organic layer. Aniline can later be freed by basifying. NaHCO3/NaOH are bases and would not extract a basic compound; pure water does not ionize aniline appreciably.',
         skill: 'Acid–base extraction',
@@ -360,12 +356,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'If the radius within the stenosis is half the upstream radius, the blood velocity inside the stenosis is:',
         options: [
+          'Unchanged',
           'Half the upstream velocity',
           'Twice the upstream velocity',
-          'Four times the upstream velocity',
-          'Unchanged',
-        ],
-        correctAnswer: 2,
+          'Four times the upstream velocity'],
+        correctAnswer: 3,
         explanation:
           'By continuity, A1v1 = A2v2. Area scales with $r^{2}$, so halving the radius gives one-quarter the area. To keep Q constant, velocity must rise by 4×. The "twice" trap scales velocity with radius rather than area.',
         skill: 'Continuity',
@@ -373,12 +368,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'According to Bernoulli’s principle, the pressure exerted on the vessel wall inside the stenosis is:',
         options: [
-          'Higher than upstream, because the vessel is narrower',
           'Lower than upstream, because the fluid moves faster',
           'Equal to upstream, because flow rate is conserved',
           'Zero, because the fluid is incompressible',
-        ],
-        correctAnswer: 1,
+          'Higher than upstream, because the vessel is narrower'],
+        correctAnswer: 0,
         explanation:
           'Bernoulli’s equation requires that where velocity increases (the stenosis), pressure decreases along a horizontal streamline. The faster-moving blood in the narrowing exerts lower lateral pressure on the wall. Conserved flow rate (continuity) does not imply equal pressure.',
         skill: 'Bernoulli',
@@ -405,12 +399,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'In reality, blood is viscous and the artery is not perfectly rigid. Compared with the idealized Bernoulli prediction, accounting for viscosity would:',
         options: [
-          'Eliminate the velocity increase in the stenosis',
-          'Add an additional pressure drop along the direction of flow due to energy dissipation',
           'Reverse the direction of flow through the stenosis',
           'Make the pressure inside the stenosis higher than upstream',
-        ],
-        correctAnswer: 1,
+          'Eliminate the velocity increase in the stenosis',
+          'Add an additional pressure drop along the direction of flow due to energy dissipation'],
+        correctAnswer: 3,
         explanation:
           'Viscosity dissipates mechanical energy, so a real vessel shows an additional, net pressure drop in the flow direction beyond the reversible Bernoulli exchange — pressure is not fully recovered downstream. Continuity still forces the velocity increase (ruling out A), and viscosity does not reverse flow or raise stenosis pressure above upstream.',
         skill: 'Experimental reasoning',
@@ -433,8 +426,8 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     questions: [
       {
         question: 'The standard free-energy change of the coupled reaction (glucose + ATP → G6P + ADP) is:',
-        options: ['+44.3 kJ/mol', '−16.7 kJ/mol', '−30.5 kJ/mol', '−44.3 kJ/mol'],
-        correctAnswer: 1,
+        options: [ '−16.7 kJ/mol', '−30.5 kJ/mol', '−44.3 kJ/mol','+44.3 kJ/mol'],
+        correctAnswer: 0,
         explanation:
           'Add the two reactions; the shared Pi and H2O cancel: (+13.8) + (−30.5) = −16.7 kJ/mol. The +44.3 and −44.3 traps subtract the magnitudes instead of adding the signed values; −30.5 ignores the unfavorable phosphorylation step.',
         skill: 'Bioenergetics',
@@ -472,21 +465,20 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'Actual ΔG = ΔG°′ + RT ln Q. A high [ATP]/[ADP][Pi] ratio makes Q small, so RT ln Q is negative, pushing ΔG below ΔG°′. The 1 M condition (option C) defines ΔG°′ itself. Enzymes change kinetics, not the thermodynamic ΔG (option D).',
+          'Actual ΔG = ΔG°′ + RT ln Q. A high [ATP]/[ADP][Pi] ratio makes Q small, so RT ln Q is negative, pushing ΔG below ΔG°′. The 1 M standard condition defines ΔG°′ itself, not the cellular value. Enzymes change kinetics, not the thermodynamic ΔG.',
         skill: 'Bioenergetics',
       },
       {
         question:
           'Which statement about the role of hexokinase in this coupled reaction is correct?',
         options: [
-          'It makes the otherwise unfavorable phosphorylation thermodynamically favorable',
-          'It physically couples ATP hydrolysis to glucose phosphorylation so the reactions share a common intermediate',
           'It increases the equilibrium constant of the coupled reaction',
           'It supplies the free energy that drives phosphorylation',
-        ],
-        correctAnswer: 1,
+          'It makes the otherwise unfavorable phosphorylation thermodynamically favorable',
+          'It physically couples ATP hydrolysis to glucose phosphorylation so the reactions share a common intermediate'],
+        correctAnswer: 3,
         explanation:
-          'Hexokinase mechanistically couples the two processes by transferring the phosphoryl group directly from ATP to glucose, so the two reactions proceed as a single favorable reaction sharing that common phosphoryl group. An enzyme cannot alter thermodynamics: it does not make an unfavorable reaction favorable (A) or change Keq (C) — those come from the coupling itself. The driving free energy is supplied by ATP, not by the enzyme (D).',
+          'Hexokinase mechanistically couples the two processes by transferring the phosphoryl group directly from ATP to glucose, so the two reactions proceed as a single favorable reaction sharing that common phosphoryl group. An enzyme cannot alter thermodynamics: it does not make an unfavorable reaction favorable or change Keq — those come from the coupling itself. The driving free energy is supplied by ATP, not by the enzyme.',
         skill: 'Enzyme thermodynamics',
         needsReview: false,
       },
@@ -584,16 +576,16 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     questions: [
       {
         question: 'In trial 1, the image distance $d_i$ is:',
-        options: ['+7.5 cm', '+15 cm', '+30 cm', '−15 cm'],
-        correctAnswer: 1,
+        options: [ '+15 cm', '+30 cm', '−15 cm','+7.5 cm'],
+        correctAnswer: 0,
         explanation:
           'From 1/f = 1/do + 1/di: 1/di = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 = 1/15, so di = +15 cm (positive → a real image on the far side). The −15 cm trap flips the sign (virtual); +30 cm wrongly assumes di = do.',
         skill: 'Thin lens',
       },
       {
         question: 'The magnification of the image in trial 1 is:',
-        options: ['−2.0', '−0.5', '+0.5', '+2.0'],
-        correctAnswer: 1,
+        options: [ '+2.0','−2.0', '−0.5', '+0.5'],
+        correctAnswer: 2,
         explanation:
           'm = −di/do = −(15)/(30) = −0.5. The negative sign indicates an inverted image; the magnitude 0.5 means it is reduced to half size (a 2.0 cm object → 1.0 cm image). The −2.0 trap inverts the ratio (do/di).',
         skill: 'Magnification',
@@ -601,12 +593,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'The image formed in trial 1 is best described as:',
         options: [
-          'Virtual, upright, and enlarged',
-          'Real, inverted, and reduced',
           'Real, upright, and the same size',
           'Virtual, inverted, and reduced',
-        ],
-        correctAnswer: 1,
+          'Virtual, upright, and enlarged',
+          'Real, inverted, and reduced'],
+        correctAnswer: 3,
         explanation:
           'di > 0 means the image is real (projectable on the screen); m = −0.5 means inverted and reduced. An object outside f for a converging lens always gives a real, inverted image. Virtual images require di < 0, which occurs only when the object is inside the focal length.',
         skill: 'Image properties',
@@ -623,12 +614,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'For the laser traveling from water into air, the critical angle for total internal reflection satisfies:',
         options: [
-          '$\\sin\\theta_c = 1.33$',
           '$\\sin\\theta_c = 1.00/1.33 \\approx 0.75$',
           '$\\sin\\theta_c = 1.33/1.00 = 1.33$',
           '$\\sin\\theta_c = 1.00$',
-        ],
-        correctAnswer: 1,
+          '$\\sin\\theta_c = 1.33$'],
+        correctAnswer: 0,
         explanation:
           'At the critical angle the refracted ray grazes the surface (θ2 = 90°), so n1 sinθc = n2 sin90° = n2. Thus sinθc = n2/n1 = 1.00/1.33 ≈ 0.75 (θc ≈ 49°). Total internal reflection occurs only going from the denser (water) to the less dense (air) medium, requiring n2 < n1; sinθc = 1.33 is impossible since sine cannot exceed 1.',
         skill: 'Total internal reflection',
@@ -679,14 +669,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'Why is the standard cell potential of this concentration cell exactly zero?',
         options: [
+          'Because $Cu^{2+}$ does not undergo reduction',
           'Because copper is a noble metal',
           'Because both half-cells use the same electrode and same redox couple, so the standard reduction potentials cancel',
-          'Because the salt bridge cancels the voltage',
-          'Because $Cu^{2+}$ does not undergo reduction',
-        ],
-        correctAnswer: 1,
+          'Because the salt bridge cancels the voltage'],
+        correctAnswer: 2,
         explanation:
-          'E°cell = E°cathode − E°anode. Both half-cells are $Cu^{2+}/Cu$ with the identical standard reduction potential, so the difference is zero. Any voltage then comes only from the concentration term in the Nernst equation. The salt bridge maintains neutrality but does not set E° (option C), and $Cu^{2+}$ is certainly reduced at the cathode (option D).',
+          'E°cell = E°cathode − E°anode. Both half-cells are $Cu^{2+}/Cu$ with the identical standard reduction potential, so the difference is zero. Any voltage then comes only from the concentration term in the Nernst equation. The salt bridge maintains neutrality but does not set E°, and $Cu^{2+}$ is certainly reduced at the cathode, so reduction is not absent.',
         skill: 'Concentration cells',
       },
       {
@@ -708,14 +697,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       {
         question: 'As the concentration cell discharges, the measured voltage:',
         options: [
-          'Increases until the solutions are equal',
-          'Decreases toward zero as the two concentrations converge',
           'Stays constant until the cell suddenly dies',
           'Reverses sign immediately',
-        ],
-        correctAnswer: 1,
+          'Increases until the solutions are equal',
+          'Decreases toward zero as the two concentrations converge'],
+        correctAnswer: 3,
         explanation:
-          'Discharge dilutes the cathode (concentrated) side and concentrates the anode (dilute) side, driving Q toward 1 and log Q toward 0. So E falls toward zero, reaching equilibrium when the concentrations are equal. The voltage does not rise (A) or hold constant (C); it only reverses if the concentration ratio inverts, which discharge does not do.',
+          'Discharge dilutes the cathode (concentrated) side and concentrates the anode (dilute) side, driving Q toward 1 and log Q toward 0. So E falls toward zero, reaching equilibrium when the concentrations are equal. The voltage does not rise or hold constant; it only reverses if the concentration ratio inverts, which discharge does not do.',
         skill: 'Concentration cells',
       },
       {
@@ -728,7 +716,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'Voltage grows as the concentration ratio (cathode/anode) grows, i.e. as Q = anode/cathode shrinks. Diluting the anode side lowers [$Cu^{2+}$]anode, decreasing Q and raising E. Adding $CuSO_{4}$ to the anode (B) or diluting the cathode (C) shrinks the ratio and lowers E; adding water equally leaves the ratio unchanged.',
+          'Voltage grows as the concentration ratio (cathode/anode) grows, i.e. as Q = anode/cathode shrinks. Diluting the anode side lowers [$Cu^{2+}$]anode, decreasing Q and raising E. Adding $CuSO_{4}$ to the anode or diluting the cathode shrinks the ratio and lowers E; adding water equally leaves the ratio unchanged.',
         skill: 'Nernst equation',
       },
       {
@@ -799,26 +787,24 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question:
           'During the enzyme assay, the 340 nm absorbance falls steadily over time. This indicates that:',
         options: [
-          '$NAD^{+}$ is being converted to NADH',
-          'NADH is being consumed (oxidized to $NAD^{+}$)',
           'The path length is increasing',
           'The molar absorptivity is decreasing',
-        ],
-        correctAnswer: 1,
+          '$NAD^{+}$ is being converted to NADH',
+          'NADH is being consumed (oxidized to $NAD^{+}$)'],
+        correctAnswer: 3,
         explanation:
-          'Only NADH absorbs at 340 nm; a falling absorbance means [NADH] is decreasing as it is oxidized to non-absorbing $NAD^{+}$. Producing NADH (option A) would raise absorbance. Path length and ε are fixed properties of the cuvette and molecule, not time-dependent here.',
+          'Only NADH absorbs at 340 nm; a falling absorbance means [NADH] is decreasing as it is oxidized to non-absorbing $NAD^{+}$. Producing NADH would raise absorbance, the opposite of what is observed. Path length and ε are fixed properties of the cuvette and molecule, not time-dependent here.',
         skill: 'Enzyme assays',
       },
       {
         question:
           'If a sample is too concentrated and reads an absorbance of 2.5, the best way to obtain an accurate concentration is to:',
         options: [
-          'Report 2.5 directly using Beer’s law',
           'Dilute the sample so the reading falls within the linear range (A < ~1), then multiply by the dilution factor',
           'Increase the path length of the cuvette',
           'Switch to a wavelength where NADH does not absorb',
-        ],
-        correctAnswer: 1,
+          'Report 2.5 directly using Beer’s law'],
+        correctAnswer: 0,
         explanation:
           'At very high absorbance, stray light and detector limits make A no longer linear in c, so direct use of Beer’s law is unreliable. Diluting brings the reading into the linear range; the true concentration is the measured value times the dilution factor. Increasing the path length raises A further (wrong direction), and a non-absorbing wavelength gives no signal at all.',
         skill: 'Experimental design',
@@ -883,8 +869,8 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     discipline: 'general chemistry',
     question:
       'In the reaction $\\text{Zn} + \\text{Cu}^{2+} \\rightarrow \\text{Zn}^{2+} + \\text{Cu}$, which species is the oxidizing agent?',
-    options: ['Zn', '$Zn^{2+}$', '$Cu^{2+}$', 'Cu'],
-    correctAnswer: 2,
+    options: [ 'Cu','Zn', '$Zn^{2+}$', '$Cu^{2+}$'],
+    correctAnswer: 3,
     explanation:
       'The oxidizing agent is itself reduced. Cu2+ gains electrons (Cu2+ + 2e− → Cu), so Cu2+ is reduced and is the oxidizing agent. Zn is oxidized, making it the reducing agent — the common reversal trap.',
     skill: 'Redox',
@@ -896,12 +882,11 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'A reaction has $\\Delta H > 0$ and $\\Delta S > 0$. Under what conditions is it spontaneous?',
     options: [
-      'At all temperatures',
-      'At no temperature',
       'Only at sufficiently high temperature',
       'Only at sufficiently low temperature',
-    ],
-    correctAnswer: 2,
+      'At all temperatures',
+      'At no temperature'],
+    correctAnswer: 0,
     explanation:
       'ΔG = ΔH − TΔS. With ΔH > 0 and ΔS > 0, the −TΔS term grows more negative as T rises, so ΔG becomes negative (spontaneous) only above a threshold temperature. This is the entropy-driven, high-temperature case.',
     skill: 'Gibbs free energy',
@@ -920,7 +905,7 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'At the pI the net charge is zero, but for an amino acid this is achieved as a zwitterion — a protonated amino group (–NH3+) balancing a deprotonated carboxylate (–COO−). It is not literally uncharged (option D); both charged groups are present, summing to zero net charge.',
+      'At the pI the net charge is zero, but for an amino acid this is achieved as a zwitterion — a protonated amino group (–NH3+) balancing a deprotonated carboxylate (–COO−). It is not literally uncharged — both charged groups are present, summing to zero net charge.',
     skill: 'Amino acids',
   },
   {

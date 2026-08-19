@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 
 export interface FlashcardUnlockResult {
   unlocked: boolean
@@ -50,12 +51,17 @@ export async function maybeUnlockFlashcards(
   })
   if (!topic) return LOCKED
 
-  // (b) exit quiz submitted?
-  const quizAttempt = await prisma.exitQuizAttempt.findFirst({
-    where: { userId, topicSlug },
-    select: { id: true },
-  })
-  if (!quizAttempt) return LOCKED
+  // (b) exit quiz submitted? Topics with no quiz mapped at all are exempt —
+  // requiring an ExitQuizAttempt a student can never produce would lock their
+  // cards forever (26 MCAT topics dead-ended this way before their quizzes
+  // were mapped); for quiz-less topics the lesson (a) alone unlocks.
+  if (hasExitQuiz(topicSlug)) {
+    const quizAttempt = await prisma.exitQuizAttempt.findFirst({
+      where: { userId, topicSlug },
+      select: { id: true },
+    })
+    if (!quizAttempt) return LOCKED
+  }
 
   // (a) lesson done — self-paced completion, or in-class deck attendance.
   const progress = await prisma.topicProgress.findUnique({
@@ -122,17 +128,23 @@ export async function maybeUnlockFlashcards(
   }
 
   const now = new Date()
+  // New-card throttle: a topic unlock used to schedule its whole deck (often
+  // 60+ cards) due immediately. Drip instead — the first NEW_CARDS_PER_DAY
+  // due now, the rest in daily waves — so a big unlock doesn't bury the
+  // review queue. Once reviewed, cards follow the normal SRS schedule.
+  const NEW_CARDS_PER_DAY = 20
+  const DAY_MS = 24 * 60 * 60 * 1000
   let newInActive = 0
   for (const ctx of contexts) {
     const res = await prisma.flashcardProgress.createMany({
-      data: cardIds.map((flashcardId) => ({
+      data: cardIds.map((flashcardId, i) => ({
         userId,
         flashcardId,
         context: ctx,
         easeFactor: 2.5,
         interval: 0,
         repetitions: 0,
-        nextReview: now,
+        nextReview: new Date(now.getTime() + Math.floor(i / NEW_CARDS_PER_DAY) * DAY_MS),
         lastReviewed: now,
         reviewCount: 0,
       })),

@@ -3,6 +3,7 @@
 import MCATSectionLibrary from '@/components/MCATSectionLibrary'
 // Leaf import (not the barrel) so only this section's bank ships to the client.
 import { BIO_BIOCHEM_PASSAGES, BIO_BIOCHEM_DISCRETES } from '@/data/mcat/passages/bio-biochem'
+import { BIO_BIOCHEM_PASSAGES_2 } from '@/data/mcat/passages/bio-biochem-2'
 import { buildDiscretesPassage } from '@/data/mcat/passages/discretes-helper'
 
 export default function MCATBioBiochemPage() {
@@ -11,7 +12,7 @@ export default function MCATBioBiochemPage() {
       sectionShort="bio-biochem"
       sectionName="Bio/Biochem"
       title="MCAT Bio/Biochem Passage Practice"
-      passages={BIO_BIOCHEM_PASSAGES}
+      passages={[...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2]}
       discretes={buildDiscretesPassage('bio-biochem', BIO_BIOCHEM_DISCRETES)}
       accent={{
         from: 'from-emerald-500',

@@ -347,6 +347,11 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
     files: [
       'seed-mcat-prep.ts',
       'add-mcat-subtopics.ts',
+      // These two were omitted for a year: fresh DBs 404'd on
+      // mcat-quantitative-skills-mcat (a diagnostic recommendation target),
+      // lab-methods, social-psychology, and biological-basis-behavior.
+      'seed-mcat-skills-topics.ts',
+      'seed-mcat-new-lessons-topics.ts',
     ],
   },
   // ── Group 21: AP Social Sciences ──

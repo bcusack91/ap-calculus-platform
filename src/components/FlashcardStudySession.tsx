@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { renderRichText } from '@/lib/render-rich-text'
+import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
 
 interface SessionCard {
@@ -193,6 +194,15 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   }
 
   const card = cards[currentIndex]
+  // Cloze cards: mask deletions on the question side (raw {{c1::…}} would
+  // print the answer), and on the answer side show the completed sentence
+  // before the explanation.
+  const isClozeCard = detectCloze(card.front).isCloze
+  const cardHtml = flipped
+    ? isClozeCard
+      ? `${renderRichText(revealClozeText(card.front, true))}<br><br>${renderRichText(card.back)}`
+      : renderRichText(card.back)
+    : renderRichText(maskClozeText(card.front))
 
   return (
     <div className="max-w-lg mx-auto p-6">
@@ -229,7 +239,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         )}
         <p
           className="text-lg text-center text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap"
-          dangerouslySetInnerHTML={{ __html: renderRichText(flipped ? card.back : card.front) }}
+          dangerouslySetInnerHTML={{ __html: cardHtml }}
         />
         {!flipped && (
           <p className="text-sm text-gray-400 mt-4">

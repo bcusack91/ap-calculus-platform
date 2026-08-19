@@ -23,7 +23,52 @@ export async function GET(req: NextRequest) {
     // personal deck is NEW again inside a fresh class/course mode.
     const context = await getActiveStudyContext(userId)
 
-    const topicFilter = topicSlug ? { topic: { slug: topicSlug } } : {}
+    // UNSCOPED (the dashboard widget): serve only the user's own deck — cards
+    // already unlocked into the active study context. The old query served
+    // `progress: { none: ... }` cards from the ENTIRE platform (any course,
+    // never unlocked), which both bypassed the flashcard-unlock rule and
+    // polluted the deck with unrelated courses' cards. Newly unlocked cards
+    // carry progress rows with reviewCount 0, so "new" cards still appear.
+    if (!topicSlug) {
+      const dueWhere = { userId, context, nextReview: { lte: now } }
+      const [rows, dueCount, newCount] = await Promise.all([
+        prisma.flashcardProgress.findMany({
+          where: dueWhere,
+          include: {
+            flashcard: { include: { topic: { select: { slug: true, title: true } } } },
+          },
+          orderBy: { nextReview: 'asc' },
+          take: limit,
+        }),
+        prisma.flashcardProgress.count({ where: dueWhere }),
+        prisma.flashcardProgress.count({ where: { ...dueWhere, reviewCount: 0 } }),
+      ])
+
+      return NextResponse.json({
+        cards: rows.map((r) => ({
+          id: r.flashcard.id,
+          front: r.flashcard.front,
+          back: r.flashcard.back,
+          topicSlug: r.flashcard.topic?.slug,
+          topicTitle: r.flashcard.topic?.title,
+          // Never-reviewed unlocks present as "new" (null progress shows the
+          // New badge; the SRS preview defaults match a fresh row anyway).
+          progress: r.reviewCount === 0
+            ? null
+            : { flashcardId: r.flashcardId, nextReview: r.nextReview, repetitions: r.repetitions, easeFactor: r.easeFactor, interval: r.interval, isMinuteInterval: r.isMinuteInterval },
+        })),
+        stats: {
+          dueCount,
+          newCount,
+          totalInDeck: dueCount,
+          sessionSize: rows.length,
+        },
+      })
+    }
+
+    // TOPIC-SCOPED: deliberate practice of one topic — due cards first, then
+    // cards never seen in this context (browse-style access to that topic).
+    const topicFilter = { topic: { slug: topicSlug } }
 
     // Query due cards and new cards directly from DB instead of fetching all and filtering in JS
     const [dueCards, newCards] = await Promise.all([

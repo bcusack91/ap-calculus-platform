@@ -156,7 +156,7 @@ const questionPool: MCATQuizQuestion[] = [
 
 // Deep pool: local questions + the authored competitive bank for this area
 // (audit F1 — exit quizzes were ~18 questions; the bank holds 30-40 per subtopic).
-const fullPool = [...questionPool, ...authoredFor(['mcat-physics-mechanics-'])]
+const fullPool = [...questionPool, ...authoredFor(['mcat-physics-mechanics-', 'mcat-physics-waves-sound-'])]
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const filteredPool = topicSlug

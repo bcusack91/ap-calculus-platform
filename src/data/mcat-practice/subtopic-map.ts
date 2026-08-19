@@ -149,6 +149,10 @@ export const MCAT_SUBTOPIC_MAP: Record<string, SubtopicRule[]> = {
   ],
 
   'psych-soc': [
+    // Disorders first: vignettes mention conditioning/memory/development terms
+    // that would otherwise be swallowed by the broader rules below.
+    { slug: 'mcat-psychology-behavior-disorders-mcat', title: 'Psychological Disorders',
+      pattern: /depressi|bipolar|mani[ac]|schizophreni|psychosis|psychotic|antipsychotic|panic (attack|disorder)|phobia|anxiety disorder|obsessive.?compulsive|\bOCD\b|\bPTSD\b|dissociat|anorexia|bulimia|eating disorder|\bADHD\b|autism|personality disorder|antidepressant|\bSSRI\b/i },
     { slug: 'mcat-psychology-behavior-learning-memory-mcat', title: 'Learning & Memory',
       pattern: /classical conditioning|operant|reinforc|memory|encoding|retrieval|amnesia|long.?term potentiation|habituat/i },
     { slug: 'mcat-psychology-behavior-sensation-perception-mcat', title: 'Sensation & Perception',

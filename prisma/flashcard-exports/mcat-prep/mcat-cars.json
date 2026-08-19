@@ -1,0 +1,707 @@
+[
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "How do you find the passage author's own view in a comparative piece?",
+  "back": "Look for evaluative language and the concluding paragraph — the author often adjudicates at the end."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "How do you handle a question asking what both authors would accept?",
+  "back": "Find the overlap — a claim each position independently supports, not one unique to either."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "How should you annotate a comparative passage?",
+  "back": "Label each viewpoint distinctly so you never confuse whose claim is whose under time pressure."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "What if the author appears neutral between two positions?",
+  "back": "Accept that; the correct answer will reflect balanced treatment rather than a hidden preference."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "What is a comparative CARS passage?",
+  "back": "One presenting two or more positions, thinkers, or traditions and examining their relationship."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "What is a frequent trap in comparative passages?",
+  "back": "Attributing one thinker's position to the other, or to the passage author."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "What question type is most common here?",
+  "back": "Analogy and application — matching the STRUCTURE of a disagreement to a new situation."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-comparative-mcat",
+  "front": "What should you track most carefully in a comparative passage?",
+  "back": "Exactly where the views AGREE and where they DIVERGE — most questions target that boundary."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "Contrast consequentialism and deontology.",
+  "back": "Consequentialism judges acts by outcomes (utilitarianism); deontology judges by duties and rules regardless of outcome."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "How do you identify an unstated ethical assumption?",
+  "back": "Find the premise the conclusion needs but never states; negating it should collapse the argument."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "How should you approach an ethics passage you personally disagree with?",
+  "back": "Set your own views aside entirely; questions test the AUTHOR'S reasoning, not the right answer morally."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "What are the four principles of medical ethics?",
+  "back": "Autonomy, beneficence, non-maleficence, and justice."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "What is a common question type in ethics passages?",
+  "back": "Applying the author's principle to a new scenario — abstract the principle first, then apply it."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "What is the core structure of an ethics passage?",
+  "back": "A moral claim supported by principles, usually contrasted with a competing ethical framework."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "What is virtue ethics?",
+  "back": "Evaluating character rather than acts or consequences — asking what a virtuous person would do."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-ethics-mcat",
+  "front": "Why are ethics passages often written as dialogues with objections?",
+  "back": "Concession-then-rebuttal structure lets the author strengthen credibility by addressing counterarguments."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "How do you handle a passage about an artwork you have never seen?",
+  "back": "Focus on the author's CLAIM about it; the artwork itself is only evidence for that claim."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "How do you handle figurative or metaphorical language?",
+  "back": "Translate it into plain meaning in context; questions frequently test whether you can do exactly that."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "How should you treat quoted material in a humanities passage?",
+  "back": "Ask why the author included it — usually as evidence for or a foil against their own position."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "What if a philosophy passage uses a term in a specialized way?",
+  "back": "Accept the author's definition for the passage, even if it conflicts with ordinary usage."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "What is a common structure in art/literary criticism passages?",
+  "back": "Present the conventional interpretation, then challenge or complicate it with the author's reading."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "What makes humanities passages challenging?",
+  "back": "Abstract argumentation, figurative language, and evaluative rather than empirical claims."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "What subjects fall under humanities CARS passages?",
+  "back": "Literature, philosophy, art history, music, architecture, cultural criticism, and religious studies."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-humanities-mcat",
+  "front": "What tone is most common in humanities passages?",
+  "back": "Measured and analytical, often appreciative-but-critical rather than purely praising or condemning."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "A passage argues that modern architecture has abandoned humanistic values in favor of pure functionality. The author's main thesis is best described as:",
+  "back": "**Architectural design should balance human values with functionality**\n\nThe author criticizes \"abandoning humanistic values\" for \"pure functionality,\" implying the two should coexist — a balanced thesis grounded in the stem, not an extreme position. (The answer stays within the passage's terms — human values and functionality — without importing outside concerns.)"
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "Are CARS passages excerpted or written for the exam?",
+  "back": "They are adapted from published sources, which is why the prose can feel dense and unedited for clarity."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "Does CARS ever test science content?",
+  "back": "No. Any science-sounding passage is still evaluated purely on reasoning and textual support."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "How long is a typical CARS passage?",
+  "back": "Roughly 500–600 words with 5–7 questions."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "How should difficulty affect passage order?",
+  "back": "Do easier passages first when possible — every question is worth the same, so bank the accessible points."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "If asked how the author would respond to a critic, you should:",
+  "back": "**Apply their stated reasoning to the critic's point**\n\nThe response must follow from positions the author actually took."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "The AAMC CARS skill \"Foundations of Comprehension\" tests:",
+  "back": "**Understanding basic meaning and how ideas relate**\n\nThe first of three CARS skills, and the largest share of questions."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "The safest strategy on an unfamiliar application question is to:",
+  "back": "**Return to the passage principle and apply it literally**\n\nGrounding in the text beats intuition, which distractors are designed to exploit."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "Understanding \"how ideas relate\" includes recognizing:",
+  "back": "**Contrast, causation, sequence, and support**\n\nRelationships between claims carry most of the meaning."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "What disciplines do CARS passages come from?",
+  "back": "Humanities and social sciences only — philosophy, ethics, history, literature, art, economics, sociology, political science."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "What distinguishes a persuasive from an expository passage?",
+  "back": "Persuasive argues a position and invites strengthen/weaken questions; expository explains and invites main idea/detail questions."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "What does it mean when a passage ends with a qualification?",
+  "back": "The author is limiting their own claim — the correct main-idea answer must reflect that hedge."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "What is the function of a definition given early in a passage?",
+  "back": "**To establish shared terms the argument depends on**\n\nLater questions frequently hinge on that specific stipulated definition."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "When two paragraphs present opposing views and the third begins \"Both accounts overlook,\" the author is:",
+  "back": "**Introducing a third position critiquing both**\n\nA common CARS structure — the author's view arrives after competing positions."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-mcat",
+  "front": "Why do CARS passages often present multiple viewpoints?",
+  "back": "To test whether you can distinguish the author's position from views they merely report or critique."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "How do social science passages differ from humanities passages?",
+  "back": "They more often cite empirical studies and data, making evidence-evaluation questions more common."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "How do you handle passages presenting competing theories?",
+  "back": "Track which theory the author endorses, which they critique, and on what grounds."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "How should you evaluate a cited study in a passage?",
+  "back": "Consider sample size, representativeness, and whether the conclusion exceeds what the design can support."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "What does it mean when an author says a finding is \"suggestive\"?",
+  "back": "They are explicitly hedging — the correct answer should not overstate certainty."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "What is the most common reasoning flaw tested in these passages?",
+  "back": "Treating correlation as causation, or ignoring confounding variables."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "What should you do when a passage presents statistics?",
+  "back": "Note what the number actually measures; answer choices frequently misdescribe the comparison."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "What subjects fall under social science CARS passages?",
+  "back": "Sociology, psychology, anthropology, economics, political science, history, and education."
+ },
+ {
+  "topicSlug": "mcat-cars-passages-social-science-mcat",
+  "front": "Why is scope especially important in social science passages?",
+  "back": "Findings from one population or era are often wrongly generalized in answer choices."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "How do you spot the pivot point in a passage?",
+  "back": "A strong contrast keyword (\"however,\" \"yet,\" \"nevertheless\") often marks where the author's real argument begins."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "How do you tell the main conclusion from an intermediate conclusion?",
+  "back": "The main conclusion is supported by everything else and supports nothing further; an intermediate conclusion is proved first and then used as a premise for the main claim. Main-idea questions want the main conclusion, so a choice that states an intermediate one is a classic trap."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "What does a question asking the \"function\" of a paragraph want?",
+  "back": "Its ROLE in the argument (provides evidence, raises an objection, qualifies a claim) — not its content summary."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "What does it mean when an author qualifies a claim late in the passage?",
+  "back": "They are narrowing scope; a correct main-idea answer must include that limitation."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "What is the concession-rebuttal structure?",
+  "back": "The author grants an opposing point, then explains why it does not defeat their position — building credibility."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "What is the difference between an author's claim and their evidence?",
+  "back": "The claim is what they want you to accept; the evidence is why. Questions often ask you to separate them."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-argument-structure-mcat",
+  "front": "What is the role of an example in an argument?",
+  "back": "To illustrate or support a general claim — never itself the main idea."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "How do you find an assumption bridging a gap?",
+  "back": "Identify a term in the conclusion absent from the premises; the assumption usually links them."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "How does an assumption differ from an implication?",
+  "back": "An assumption is required BEFORE the conclusion; an implication FOLLOWS from it."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "What assumption underlies generalizing from a sample?",
+  "back": "That the sample is representative of the larger population."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "What is an assumption in argumentative terms?",
+  "back": "An unstated premise the argument REQUIRES for its conclusion to follow."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "What is the difference between an assumption and a fact stated in the passage?",
+  "back": "If it is stated, it is a premise, not an assumption. Assumptions are always unstated."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "What is the most common assumption in causal arguments?",
+  "back": "That no alternative explanation or confounding variable accounts for the observed relationship."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "What is the negation test?",
+  "back": "Negate a candidate assumption — if the argument collapses, it was a genuine assumption."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-assumptions-mcat",
+  "front": "Why are assumption answers often the least \"interesting\" choice?",
+  "back": "They state something so basic it feels obvious — but the argument still depends on it."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "Define post hoc ergo propter hoc.",
+  "back": "Assuming that because B followed A, A caused B — the classic correlation/causation error."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "How do you recognize a straw man in a passage?",
+  "back": "The author restates an opponent's view in a distorted or weakened form that its actual proponents would reject, then refutes that version — so the refutation never touches the real position."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is a false dichotomy?",
+  "back": "Presenting only two options when others exist, forcing an artificial either/or choice."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is a hasty generalization?",
+  "back": "Drawing a broad conclusion from insufficient or unrepresentative evidence."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is a slippery slope fallacy?",
+  "back": "Claiming one step inevitably leads to an extreme outcome without justifying each link."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is an ad hominem fallacy?",
+  "back": "Attacking the person making an argument rather than the argument itself."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is an appeal to authority fallacy?",
+  "back": "Treating a claim as true because an authority said so, especially outside their expertise."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is an appeal to ignorance?",
+  "back": "Claiming something is true because it has not been disproven (or false because unproven)."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-fallacies-mcat",
+  "front": "What is equivocation?",
+  "back": "Shifting a key term's meaning mid-argument so the conclusion appears to follow when it does not."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "A \"weaken the argument\" question asks you to find the choice that:",
+  "back": "**Undermines a key assumption the argument depends on**\n\nTarget the load-bearing assumption, not an incidental fact."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "A CARS answer choice that is \"too strong\" typically:",
+  "back": "**Uses absolute language the hedged passage never supports**\n\nMatch the author's certainty level exactly."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "An author describes two conflicting theories and then states \"the truth likely lies somewhere between these extremes.\" This approach is best characterized as:",
+  "back": "**Appeal to moderation (the golden mean)**\n\nClaiming the truth lies *between* two extremes is the golden mean / appeal to moderation. (It is not dialectical synthesis, which transcends thesis and antithesis with a higher resolution rather than simply averaging them.)"
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "How do you identify a conclusion?",
+  "back": "It is what the other statements support. Signal words: therefore, thus, hence, consequently."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "How does a counterexample function?",
+  "back": "A single case contradicting a universal claim refutes it — the standard tool against \"all\" statements."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "How should you evaluate analogical reasoning?",
+  "back": "Ask whether the compared cases are alike in the RELEVANT respects; irrelevant similarity is a weak analogy."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What are the components of an argument?",
+  "back": "Premises — the stated evidence — plus the conclusion they are offered to support. Any premise the conclusion needs that the author never states is an assumption."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What is a necessary vs. sufficient condition?",
+  "back": "Necessary must be present for the outcome; sufficient guarantees it. Confusing them is a frequent tested flaw."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What is circular reasoning?",
+  "back": "Assuming the conclusion within the premises, so the argument proves nothing new."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What is the difference between deductive and inductive reasoning?",
+  "back": "Deductive guarantees the conclusion if premises are true; inductive makes it probable, generalizing from cases."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What is the function of a passage's first paragraph most often?",
+  "back": "**Establishing context and the question at issue**\n\nThough some passages open with a provocative claim they later qualify."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "What makes an argument valid but unsound?",
+  "back": "The logic is correct but at least one premise is false, so the conclusion is not established."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "When a question asks what the author \"most likely means\" by a phrase, you should:",
+  "back": "**Use surrounding context, not the dictionary definition**\n\nCARS tests contextual meaning, which often differs from ordinary usage."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "Which is a hallmark of a correct CARS answer?",
+  "back": "**It can be traced to specific passage support**\n\nWord-matching without meaning-matching is a classic trap."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-mcat",
+  "front": "Which is the strongest sign an answer choice is a CARS trap?",
+  "back": "**It is true in the real world but unsupported by the passage**\n\nEverything must be defensible from the text — outside knowledge is a distractor."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "How do you handle \"EXCEPT\" versions of these questions?",
+  "back": "Three choices will strengthen (or weaken); the answer is the one that does not — or does the opposite."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "How does attacking the sample weaken a study-based argument?",
+  "back": "If the sample is unrepresentative or too small, the generalization is unsupported."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "How should you treat the new information introduced in a strengthen or weaken answer choice?",
+  "back": "Accept it as true, then ask only what it does to the link between the passage's evidence and its conclusion. Never dispute the fact itself or ask whether the passage supports it."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "What does a \"strengthen\" answer typically do?",
+  "back": "Supports an unstated assumption or eliminates a competing explanation."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "What does a \"weaken\" answer typically do?",
+  "back": "Undermines a key assumption — often by providing an alternative explanation for the evidence."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "What is the best way to weaken a causal claim?",
+  "back": "Show a confounding variable, reversed causation, or that the effect occurs without the alleged cause."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "What is the difference between weakening and contradicting?",
+  "back": "Weakening reduces support for the conclusion; contradicting denies a stated fact. Questions usually want the former."
+ },
+ {
+  "topicSlug": "mcat-cars-reasoning-strengthen-weaken-mcat",
+  "front": "Why are irrelevant answers common traps here?",
+  "back": "They discuss the topic but do not bear on the specific logical link between evidence and conclusion."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "How do you identify the thesis when it is not stated plainly?",
+  "back": "Ask what claim all the paragraphs collectively support — the thesis is what the evidence is FOR."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "How should you handle dense or confusing sentences?",
+  "back": "Keep moving — get the gist and return only if a question requires it. Do not stall on one sentence."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "What are the highest-value words to notice?",
+  "back": "Transition and signal words: however, therefore, although, moreover, in contrast, thus."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "What does active reading mean in CARS?",
+  "back": "Continuously asking what the author is claiming and why, rather than passively absorbing sentences."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "What is a passage map?",
+  "back": "A brief mental or written outline of each paragraph's role plus the overall thesis and tone."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "What is the difference between topic and main idea?",
+  "back": "Topic is what the passage is ABOUT; main idea is what the author ARGUES about it."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "What question should you ask at the end of each paragraph?",
+  "back": "\"What did that paragraph DO for the argument?\" — summarize its function in a few words."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-active-reading-mcat",
+  "front": "Why is tone so important to track?",
+  "back": "Many questions hinge on attitude, and the correct answer usually matches the author's degree of certainty."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "How does predicting an answer help elimination?",
+  "back": "Forming your own answer before reading the choices makes distractors far easier to reject."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "How should you treat answers containing \"only\" or \"solely\"?",
+  "back": "Scrutinize them: exclusivity claims are rarely supported by hedged academic prose."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "Is the longest or most detailed answer usually right?",
+  "back": "No — length is not a signal. Detail can be a distractor adding unsupported specificity."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "Name the four common CARS wrong-answer types.",
+  "back": "Out of scope, opposite (reverses the author), too extreme, and half-right/half-wrong."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "What is the fastest way to eliminate a CARS answer?",
+  "back": "Check scope: if it discusses something the passage never addressed, it is out regardless of plausibility."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "What is the value of process of elimination over selection?",
+  "back": "CARS answers are often \"least wrong\" rather than perfect, so eliminating three is more reliable than loving one."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "What should you do when all four choices seem wrong?",
+  "back": "Re-read the question stem — you likely answered a different question than the one asked."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-elimination-mcat",
+  "front": "Why are \"half-right\" answers dangerous?",
+  "back": "The first clause matches the passage so it feels correct; one wrong word in the second clause invalidates the whole choice."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "How do you answer a question about a specific word's meaning?",
+  "back": "Use surrounding context, which frequently differs from the ordinary dictionary definition."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "How do you approach a main idea question?",
+  "back": "Predict the thesis in your own words first, then find the choice matching it in scope and emphasis."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "What is the most common CARS trap answer?",
+  "back": "A statement that is true in the real world but unsupported by — or contrary to — the passage."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "What makes a main-idea answer wrong for being too broad?",
+  "back": "It extends beyond what the author actually argued, covering ground the passage never addressed."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "What makes a main-idea answer wrong for being too narrow?",
+  "back": "It captures only one paragraph or example rather than the passage's overall claim."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "What must a valid CARS inference be?",
+  "back": "Something that MUST follow from the passage — not merely plausible or probably true."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "What should \"the author would most likely agree\" answers rest on?",
+  "back": "Positions the author explicitly took — not general truth or popular opinion."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-main-idea-inference-mcat",
+  "front": "Why is extreme wording usually a warning sign?",
+  "back": "Authors typically hedge (\"suggests,\" \"often\"). Absolutes like \"always,\" \"never,\" \"proves\" rarely match their claims."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "A CARS answer choice that is \"too strong\" typically:",
+  "back": "**Uses absolute language the hedged passage never supports**\n\nMatch the author's certainty level exactly."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "How do you separate the author's voice from cited views?",
+  "back": "Watch contrast keywords (\"however,\" \"yet,\" \"but\") — they usually mark where the author breaks from a cited position."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "How should you handle unfamiliar CARS subject matter?",
+  "back": "Ignore the topic and track the ARGUMENT — CARS never rewards prior subject knowledge."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "In a passage about the ethics of genetic engineering, the author writes: \"We must ask not whether we can, but whether we should.\" This rhetorical strategy is:",
+  "back": "**Reframing the question from capability to morality**\n\nThe author shifts the frame from a question of technological capability (\"can\") to one of moral responsibility (\"should\"), which is a reframing strategy."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "In CARS passages, when \"some scholars\" or \"critics\" are referenced without specific citation, the author is most likely:",
+  "back": "**Presenting a generalized viewpoint to respond to**\n\nVague references to \"some scholars\" or \"critics\" typically introduce a generalized opposing viewpoint that the author then addresses or refutes."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "Should you read the questions before the passage?",
+  "back": "Generally no — it fragments comprehension. Build the argument map first, then answer."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "What is the ideal time allocation per CARS passage?",
+  "back": "About 10 minutes: ~4 reading, ~6 on questions. 9 passages in 90 minutes."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "What is the single rule governing every CARS answer?",
+  "back": "It must be supported BY THE PASSAGE. Outside knowledge, however true, is a distractor."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "What should you do when stuck between two answers?",
+  "back": "Return to the text for the specific line that eliminates one. Usually one overreaches or misstates scope."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "What should you note while reading a CARS passage?",
+  "back": "The author's main claim, their tone/attitude, and where views OTHER than the author's appear."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "When a question asks what a word \"most nearly means,\" you should rely on:",
+  "back": "**Surrounding context**\n\nCARS often uses words in specialized or shifted senses."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "When two paragraphs present opposing views and the third begins \"Both accounts overlook,\" the author is:",
+  "back": "**Introducing a third position critiquing both**\n\nA common CARS structure — the author's view arrives after competing positions."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "Which is a hallmark of a correct CARS answer?",
+  "back": "**It can be traced to specific passage support**\n\nWord-matching without meaning-matching is a classic trap."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "Which is the best first step after reading a CARS passage?",
+  "back": "**Summarize the main idea in your own words**\n\nA held main idea makes most questions faster."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-mcat",
+  "front": "Why should you never leave an MCAT question blank?",
+  "back": "The MCAT has no penalty for wrong answers, so a blank scores exactly the same as a missed guess. Always fill in a choice before time expires, even on questions you flag."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "How do you decide when to abandon a question?",
+  "back": "If you have eliminated what you can and are cycling with no progress, guess, flag it, and move on."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "How should you pace within a passage?",
+  "back": "About 4 minutes reading, 6 minutes on questions, roughly 1 minute per question."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "Should you review flagged questions if time remains?",
+  "back": "Yes, but change an answer only with a concrete textual reason — first instincts are often right in CARS."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "What is the best way to build CARS timing?",
+  "back": "Practice full timed sections rather than isolated passages, since fatigue and pacing pressure are part of the skill."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "What is the CARS section structure and timing?",
+  "back": "53 questions across 9 passages in 90 minutes — roughly 10 minutes per passage."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "What is the risk of spending 15 minutes on a hard passage?",
+  "back": "You trade ~6 questions you might get right later for 1–2 you may still miss — a losing exchange."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "What should you do if you fall behind on time?",
+  "back": "Triage: choose a passage to attack last, guess on it if needed, and protect your accuracy on the rest."
+ },
+ {
+  "topicSlug": "mcat-cars-strategy-timing-mcat",
+  "front": "Why is rushing the reading counterproductive?",
+  "back": "A poorly understood passage costs more time on every question than the time saved reading carefully."
+ }
+]

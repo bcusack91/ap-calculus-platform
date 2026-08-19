@@ -20,6 +20,7 @@ import { behavioralQuestions } from '../competitive-questions/mcat-questions-beh
 import { behavioralQuestions2 } from '../competitive-questions/mcat-questions-behavioral-2'
 import { gapsChemPhysQuestions } from '../competitive-questions/mcat-questions-gaps-chemphys'
 import { gapsBioPsychQuestions } from '../competitive-questions/mcat-questions-gaps-biopsych'
+import { gapsWave2Questions } from '../competitive-questions/mcat-questions-gaps-wave2'
 import type { McatBankQuestion } from '../competitive-questions/mcat-question-types'
 
 const ALL: McatBankQuestion[] = [
@@ -28,6 +29,7 @@ const ALL: McatBankQuestion[] = [
   ...biologyQuestions, ...biologyQuestions2, ...biologyQuestions3,
   ...behavioralQuestions, ...behavioralQuestions2,
   ...gapsChemPhysQuestions, ...gapsBioPsychQuestions,
+  ...gapsWave2Questions,
 ]
 
 /**
@@ -46,6 +48,7 @@ const TAG_ALIASES: Record<string, string> = {
   'mcat-psych-social-psychology-mcat': 'mcat-social-psychology-mcat',
   'mcat-psych-sociology-social-structure-mcat': 'mcat-sociology-structure-stratification-mcat',
   'mcat-psych-social-inequality-mcat': 'mcat-sociology-health-disparities-mcat',
+  'mcat-psych-disorders-mcat': 'mcat-psychology-behavior-disorders-mcat',
 }
 
 /** Authored questions whose subtopic tag starts with any given prefix. */

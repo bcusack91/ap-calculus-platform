@@ -68,6 +68,40 @@ export function detectCloze(text: string): ClozeData {
   return { isCloze: true, parts }
 }
 
+const CLOZE_RE = /\{\{(?:c\d+::)?((?:[^{}]|\{[^{}]*\})+)\}\}/g
+
+/**
+ * A deletion's content may be bare LaTeX with no `$` delimiters
+ * (`{{c1::\rho L/A}}`, `{{c1::V_{peak}/\sqrt{2}}}`) — wrap those so the math
+ * pipeline renders them. `$`-delimited and plain-prose deletions pass through.
+ */
+export function mathizeClozeAnswer(answer: string): string {
+  if (answer.includes('$')) return answer
+  if (/\\[a-zA-Z]+|[_^]\{/.test(answer)) return `$${answer}$`
+  return answer
+}
+
+/**
+ * Replace every deletion with a neutral blank for question-side display in
+ * string/HTML pipelines (renderRichText). Constant-width so it doesn't
+ * telegraph the answer's length. No-op on non-cloze text.
+ */
+export function maskClozeText(text: string, blank = '______'): string {
+  return text.replace(CLOZE_RE, blank)
+}
+
+/**
+ * Strip cloze markers, leaving the completed sentence, for answer-side display
+ * in string/HTML pipelines (renderRichText). `highlightHtml` wraps each
+ * revealed answer in <strong> — only for surfaces that render the result as
+ * HTML. No-op on non-cloze text.
+ */
+export function revealClozeText(text: string, highlightHtml = false): string {
+  return text.replace(CLOZE_RE, (_m, inner: string) =>
+    highlightHtml ? `<strong>${mathizeClozeAnswer(inner)}</strong>` : mathizeClozeAnswer(inner)
+  )
+}
+
 /**
  * Extract answer from cloze card's back text
  * For "Fill in the blank" style cards, the answer is usually the first 1-3 words

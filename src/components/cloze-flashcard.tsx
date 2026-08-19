@@ -7,6 +7,7 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { detectCloze } from '@/lib/cloze-utils'
+import { ClozeText } from '@/components/cloze-text'
 
 interface ClozeFlashcardProps {
   front: string
@@ -29,47 +30,13 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
     return null
   }
   
-  // Render cloze with blanks or revealed answers
-  const renderCloze = () => {
-    if (!clozeData.parts) return null
-    
-    return (
-      <div className="text-xl text-gray-900 leading-relaxed">
-        {clozeData.parts.map((part, index) => {
-          if (!part.isCloze) {
-            // Regular text - render with markdown support
-            return (
-              <span key={index} className="prose prose-purple max-w-none inline">
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {escapeCurrencyMath(formatFlashcardContent(part.text))}
-                </ReactMarkdown>
-              </span>
-            )
-          } else if (isRevealed) {
-            // Revealed answer - show in green
-            return (
-              <span
-                key={index}
-                className="font-bold text-green-700 bg-green-100 px-2 py-1 rounded animate-pulse"
-              >
-                {part.text}
-              </span>
-            )
-          } else {
-            // Blank - show placeholder
-            const blankLength = Math.max(part.text.length * 8, 80)
-            return (
-              <span
-                key={index}
-                className="inline-block border-b-2 border-dashed border-accent-muted mx-1"
-                style={{ minWidth: `${blankLength}px`, height: '1.5rem' }}
-              />
-            )
-          }
-        })}
-      </div>
-    )
-  }
+  // Render cloze with blanks or revealed answers (ClozeText renders revealed
+  // deletions through the math pipeline — deletions may hold LaTeX)
+  const renderCloze = () => (
+    <div className="text-xl text-gray-900 leading-relaxed">
+      <ClozeText text={front} revealed={isRevealed} />
+    </div>
+  )
   
   return (
     <div className="max-w-3xl mx-auto">

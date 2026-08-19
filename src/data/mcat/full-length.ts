@@ -7,19 +7,17 @@
  * (realized total 231). Each science section is packed to its exact count: whole
  * passages first, then a window of discrete questions fills the remainder.
  *
- * REDUNDANCY NOTES — measured against the current banks (and the honest limits):
- *   chem-phys  10 passages / 54 passage-Q + 8 discretes  (target 59 → 5 discretes used)
- *   bio-biochem 10 / 51 + 9   (target 59 → 8 used)
- *   psych-soc  10 / 51 + 8    (target 59 → 8 used)
- *   cars       12 / 72        (target 53 → ~9 passages, ~54)
+ * REDUNDANCY NOTES — measured against the current banks:
+ *   chem-phys  25 passages / 135 passage-Q + 8 discretes  (target 59)
+ *   bio-biochem 25 / 133 + 9   (target 59)
+ *   psych-soc  25 / 132 + 8    (target 59)
+ *   cars       76 / 456        (target 53 → ~9 passages)
  *
- * Because each science bank's passage-questions (51–54) barely reach 59 and the
- * smallest passage is 5 Q, hitting EXACTLY 59 forces every form to use ALL 10
- * passages — so the science passage SET is identical across Form 1 and Form 2.
- * That overlap is IRREDUCIBLE in code until a bank grows past ~64 passage-Q (so
- * a form can omit a whole passage) or the per-section target is allowed to drop.
- * We therefore differentiate the two forms — and break up within-test redundancy
- * — at the QUESTION level instead:
+ * Since the wave-2 expansion (chem-phys-2/bio-biochem-2/psych-soc-2, 15 new
+ * passages per science section) each bank holds ~2.3 forms' worth of passage
+ * questions, so Form 1 and Form 2 draw genuinely different passage SETS via
+ * orderPassagesForForm. The question-level differentiation below still breaks
+ * up within-test redundancy:
  *   1. orderPassagesForForm — deterministic per-form passage SEQUENCE (same set,
  *      different order), so a retake doesn't feel identical.
  *   2. declusterPassage / spreadSkills — reorder a passage's questions to avoid

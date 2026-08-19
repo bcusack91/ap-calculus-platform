@@ -3,6 +3,7 @@
 import MCATSectionLibrary from '@/components/MCATSectionLibrary'
 // Leaf import (not the barrel) so only this section's bank ships to the client.
 import { PSYCH_SOC_PASSAGES, PSYCH_SOC_DISCRETES } from '@/data/mcat/passages/psych-soc'
+import { PSYCH_SOC_PASSAGES_2 } from '@/data/mcat/passages/psych-soc-2'
 import { buildDiscretesPassage } from '@/data/mcat/passages/discretes-helper'
 
 export default function MCATPsychSocPage() {
@@ -11,7 +12,7 @@ export default function MCATPsychSocPage() {
       sectionShort="psych-soc"
       sectionName="Psych/Soc"
       title="MCAT Psych/Soc Passage Practice"
-      passages={PSYCH_SOC_PASSAGES}
+      passages={[...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2]}
       discretes={buildDiscretesPassage('psych-soc', PSYCH_SOC_DISCRETES)}
       accent={{
         from: 'from-indigo-500',

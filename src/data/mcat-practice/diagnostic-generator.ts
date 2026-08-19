@@ -152,6 +152,10 @@ export interface MCATDiagnosticResults {
 /*  Diagnostic Domains                                                 */
 /* ------------------------------------------------------------------ */
 
+// Section totals mirror the real exam's equal weighting (25% per section):
+// Chem/Phys 11, CARS 11, Bio/Biochem 11, Psych/Soc 12 of 45. The old layout
+// gave Chem/Phys 40% and Psych/Soc 13%, which made the CARS and Psych/Soc
+// scaled-score estimates swing ~2.3 points per single item.
 const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
   // Chem/Phys
   {
@@ -159,33 +163,33 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'General Chemistry',
     section: 'chem-phys',
     slugs: ['mcat-general-chemistry'],
-    questionCount: 5,
-    difficultyMix: { easy: 1, medium: 2, hard: 2 },
+    questionCount: 3,
+    difficultyMix: { easy: 1, medium: 1, hard: 1 },
   },
   {
     id: 'org-chem',
     name: 'Organic Chemistry',
     section: 'chem-phys',
     slugs: ['mcat-organic-chemistry'],
-    questionCount: 4,
-    difficultyMix: { easy: 0, medium: 2, hard: 2 },
+    questionCount: 3,
+    difficultyMix: { easy: 0, medium: 2, hard: 1 },
   },
   {
     id: 'physics',
     name: 'Physics',
     section: 'chem-phys',
     slugs: ['mcat-physics-mechanics', 'mcat-physics-electricity'],
-    questionCount: 5,
-    minPassageQuestions: 3,
-    difficultyMix: { easy: 1, medium: 2, hard: 2 },
+    questionCount: 3,
+    minPassageQuestions: 2,
+    difficultyMix: { easy: 1, medium: 1, hard: 1 },
   },
   {
     id: 'biochem-cp',
     name: 'Biochemistry (Chem/Phys)',
     section: 'chem-phys',
     slugs: ['mcat-biochemistry'],
-    questionCount: 4,
-    difficultyMix: { easy: 0, medium: 2, hard: 2 },
+    questionCount: 2,
+    difficultyMix: { easy: 0, medium: 1, hard: 1 },
   },
   // CARS
   {
@@ -193,9 +197,9 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Critical Analysis & Reasoning',
     section: 'cars',
     slugs: ['mcat-cars'],
-    questionCount: 7,
-    minPassageQuestions: 3,
-    difficultyMix: { easy: 1, medium: 3, hard: 3 },
+    questionCount: 11,
+    minPassageQuestions: 4,
+    difficultyMix: { easy: 2, medium: 5, hard: 4 },
   },
   // Bio/Biochem
   {
@@ -203,25 +207,25 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Cell & Molecular Biology',
     section: 'bio-biochem',
     slugs: ['mcat-biology'],
-    questionCount: 5,
-    minPassageQuestions: 3,
-    difficultyMix: { easy: 1, medium: 2, hard: 2 },
+    questionCount: 4,
+    minPassageQuestions: 2,
+    difficultyMix: { easy: 1, medium: 2, hard: 1 },
   },
   {
     id: 'organ-systems',
     name: 'Organ Systems & Physiology',
     section: 'bio-biochem',
     slugs: ['mcat-organ-systems'],
-    questionCount: 5,
-    difficultyMix: { easy: 1, medium: 2, hard: 2 },
+    questionCount: 4,
+    difficultyMix: { easy: 1, medium: 2, hard: 1 },
   },
   {
     id: 'genetics',
     name: 'Genetics & Evolution',
     section: 'bio-biochem',
     slugs: ['mcat-genetics-evolution'],
-    questionCount: 4,
-    difficultyMix: { easy: 0, medium: 2, hard: 2 },
+    questionCount: 3,
+    difficultyMix: { easy: 0, medium: 2, hard: 1 },
   },
   // Psych/Soc
   {
@@ -229,9 +233,9 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Psychology & Sociology',
     section: 'psych-soc',
     slugs: ['mcat-psychology-sociology'],
-    questionCount: 6,
-    minPassageQuestions: 3,
-    difficultyMix: { easy: 1, medium: 2, hard: 3 },
+    questionCount: 12,
+    minPassageQuestions: 4,
+    difficultyMix: { easy: 2, medium: 5, hard: 5 },
   },
 ]
 

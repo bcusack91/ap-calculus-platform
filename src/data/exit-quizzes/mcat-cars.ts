@@ -122,6 +122,6 @@ export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQu
     options: q.options,
     correctIndex: q.correctAnswer,
     explanation: q.explanation,
-    category: 'mcat-cars',
+    category: q.subtopicSlug ?? 'mcat-cars',
   }))
 }

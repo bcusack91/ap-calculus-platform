@@ -77,6 +77,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-organic-chemistry-sn1-sn2-e1-e2-mcat': () => import('./mcat-organic-chemistry'),
   'mcat-organic-chemistry-carbonyls-mcat': () => import('./mcat-organic-chemistry'),
   'mcat-organic-chemistry-spectroscopy-mcat': () => import('./mcat-organic-chemistry'),
+  'mcat-lab-methods-mcat': () => import('./mcat-organic-chemistry'), // lab-separations authored questions live in this pool
   'mcat-physics-mechanics': () => import('./mcat-physics-mechanics'),
   'mcat-physics-mechanics-mcat': () => import('./mcat-physics-mechanics'), // alias
   'mcat-physics-mechanics-kinematics-mcat': () => import('./mcat-physics-mechanics'),
@@ -103,6 +104,21 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-cars-strategy-mcat': () => import('./mcat-cars'), // alias
   'mcat-cars-passages-mcat': () => import('./mcat-cars'), // alias
   'mcat-cars-reasoning-mcat': () => import('./mcat-cars'), // alias
+  // CARS subtopics — without these entries generateExitQuiz() throws and the
+  // topics' flashcards can never unlock via the self-paced path (the unlock
+  // requires an ExitQuizAttempt). mcatSubtopicPool routes per-subtopic.
+  'mcat-cars-strategy-active-reading-mcat': () => import('./mcat-cars'),
+  'mcat-cars-strategy-elimination-mcat': () => import('./mcat-cars'),
+  'mcat-cars-strategy-main-idea-inference-mcat': () => import('./mcat-cars'),
+  'mcat-cars-strategy-timing-mcat': () => import('./mcat-cars'),
+  'mcat-cars-passages-humanities-mcat': () => import('./mcat-cars'),
+  'mcat-cars-passages-social-science-mcat': () => import('./mcat-cars'),
+  'mcat-cars-passages-ethics-mcat': () => import('./mcat-cars'),
+  'mcat-cars-passages-comparative-mcat': () => import('./mcat-cars'),
+  'mcat-cars-reasoning-argument-structure-mcat': () => import('./mcat-cars'),
+  'mcat-cars-reasoning-assumptions-mcat': () => import('./mcat-cars'),
+  'mcat-cars-reasoning-fallacies-mcat': () => import('./mcat-cars'),
+  'mcat-cars-reasoning-strengthen-weaken-mcat': () => import('./mcat-cars'),
   // Bio/Biochem
   'mcat-biology': () => import('./mcat-biology'),
   'mcat-cell-biology-mcat': () => import('./mcat-biology'), // alias
@@ -149,12 +165,30 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-psychology-behavior-learning-memory-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-psychology-behavior-cognition-language-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-psychology-behavior-development-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-disorders-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-sociology-structure-stratification-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-sociology-culture-socialization-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-sociology-groups-interaction-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-sociology-health-disparities-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-science-passage-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
+  // Remaining MCAT topics with full lessons + card decks that previously had
+  // no quiz mapping at all (flashcards were permanently locked self-paced).
+  // The psych pool also carries the research-methods/biostats authored
+  // questions, which is why the stats/methods topics route here.
+  'mcat-social-psychology-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-biological-basis-behavior-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-biostatistics-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-research-methods-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-quantitative-skills-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-science-passage-strategy-reading-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-science-passage-strategy-figures-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-science-passage-strategy-experimental-design-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-science-passage-strategy-discrete-questions-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-test-day-strategy-format-scoring-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-test-day-strategy-section-specific-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-test-day-strategy-study-planning-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-test-day-strategy-test-day-logistics-mcat': () => import('./mcat-psychology-sociology'),
 
   // ═══════════════════════════════════════════════════
   // AP Biology Exit Quizzes

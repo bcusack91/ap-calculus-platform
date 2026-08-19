@@ -9,6 +9,8 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
+import { detectCloze } from '@/lib/cloze-utils'
+import { ClozeText } from '@/components/cloze-text'
 import { InArticleAd } from '@/components/ad-banner'
 
 interface Flashcard {
@@ -158,6 +160,7 @@ export default function FlashcardStudyPage() {
   }
 
   const currentCard = topic.flashcards[currentIndex]
+  const isClozeCard = detectCloze(currentCard.front).isCloze
   const progress = ((currentIndex + 1) / topic.flashcards.length) * 100
 
   return (
@@ -207,11 +210,13 @@ export default function FlashcardStudyPage() {
                     style={{ backfaceVisibility: 'hidden' }}
                   >
                     <div className="border-2 border-accent-muted rounded-lg p-8 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[300px] flex flex-col justify-center">
-                      <div className="text-sm text-accent-dark font-semibold mb-4">QUESTION</div>
-                      <div className="text-lg prose prose-purple max-w-none text-gray-900">
-                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {escapeCurrencyMath(formatFlashcardContent(currentCard.front))}
-                        </ReactMarkdown>
+                      <div className="text-sm text-accent-dark font-semibold mb-4">
+                        {isClozeCard ? 'COMPLETE THE SENTENCE' : 'QUESTION'}
+                      </div>
+                      {/* Cloze deletions must stay hidden on the question side
+                          — raw text would print the answer inside the braces */}
+                      <div className="text-lg text-gray-900 leading-relaxed">
+                        <ClozeText text={currentCard.front} revealed={false} />
                       </div>
                       <div className="mt-6 text-sm text-gray-700 text-center">
                         Click to reveal answer
@@ -231,6 +236,11 @@ export default function FlashcardStudyPage() {
                   >
                     <div className="border-2 border-green-300 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 min-h-[300px] flex flex-col justify-center">
                       <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
+                      {isClozeCard && (
+                        <div className="text-base text-gray-900 leading-relaxed mb-4 pb-4 border-b border-green-200">
+                          <ClozeText text={currentCard.front} revealed={true} />
+                        </div>
+                      )}
                       <div className="text-lg prose prose-green max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(formatFlashcardContent(currentCard.back))}

@@ -163,7 +163,7 @@ const PHYSICS_ELECTRICITY_SUBTOPICS = new Set([
 
 // Deep pool: local questions + the authored competitive bank for this area
 // (audit F1 — exit quizzes were ~18 questions; the bank holds 30-40 per subtopic).
-const fullPool = [...questionPool, ...authoredFor(['mcat-physics-electricity-'])]
+const fullPool = [...questionPool, ...authoredFor(['mcat-physics-electricity-', 'mcat-physics-atomic-nuclear-'])]
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const filteredPool = PHYSICS_ELECTRICITY_SUBTOPICS.has(topicSlug ?? '')

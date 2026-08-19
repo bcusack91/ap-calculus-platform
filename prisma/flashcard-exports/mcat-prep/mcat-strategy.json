@@ -1,0 +1,577 @@
+[
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "Compare mean, median, and mode.",
+  "back": "Mean is the average (sensitive to outliers); median is the middle value (robust); mode is most frequent."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "Contrast sensitivity and specificity.",
+  "back": "Sensitivity: correctly identifies those WITH disease (few false negatives). Specificity: correctly identifies those WITHOUT (few false positives)."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What are positive and negative predictive value?",
+  "back": "PPV: probability of disease given a positive test. NPV: probability of no disease given a negative test. Both depend on prevalence."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What does a confidence interval tell you?",
+  "back": "A range of plausible values for the parameter. A 95% CI for a difference that includes 0 implies non-significance."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What does a correlation coefficient $r$ indicate?",
+  "back": "Strength and direction of a LINEAR relationship, from $-1$ to $+1$. It never establishes causation."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What does a p-value mean?",
+  "back": "The probability of observing results this extreme IF the null hypothesis were true. $p < 0.05$ is the usual significance threshold."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What does standard deviation measure?",
+  "back": "Spread around the mean. In a normal distribution ~68% fall within $1\\sigma$, ~95% within $2\\sigma$, ~99.7% within $3\\sigma$."
+ },
+ {
+  "topicSlug": "mcat-biostatistics-mcat",
+  "front": "What is a Type I vs. Type II error?",
+  "back": "Type I ($\\alpha$): false positive, rejecting a true null. Type II ($\\beta$): false negative, failing to reject a false null."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "How do you approach proportional reasoning questions?",
+  "back": "Identify whether the relationship is direct, inverse, or a power, then scale — most MCAT physics is ratio reasoning."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "How do you estimate $pH$ from a non-round concentration?",
+  "back": "For $[H^{+}] = 3\\times10^{-5}$, pH is between 4 and 5 (closer to 4.5), since $\\log 3 \\approx 0.5$."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "How do you handle calculations without a calculator?",
+  "back": "Round each number to one significant figure, split it into coefficient $\\times$ power of ten, and do the exponent arithmetic exactly — then check the answer spread, since choices are usually separated by factors large enough that a 10–20% estimate picks one out. E.g. $\\frac{3.9\\times10^{-5}}{1.9\\times10^{2}} \\approx \\frac{4}{2}\\times10^{-7} = 2\\times10^{-7}$."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "How do you multiply numbers in scientific notation?",
+  "back": "Multiply the coefficients and ADD the exponents: $(2\\times10^{3})(3\\times10^{4}) = 6\\times10^{7}$."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "How should you handle unit conversions?",
+  "back": "Use dimensional analysis, cancelling units explicitly — mismatched units are a common trap in answer choices."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "If $F \\propto 1/r^{2}$ and $r$ triples, what happens to $F$?",
+  "back": "It falls to $1/9$ of its original value."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "What are the key log rules for the MCAT?",
+  "back": "$\\log(ab) = \\log a + \\log b$; $\\log(a/b) = \\log a - \\log b$; $\\log(a^{n}) = n\\log a$; $\\log 10 = 1$."
+ },
+ {
+  "topicSlug": "mcat-quantitative-skills-mcat",
+  "front": "What common values are worth memorizing for estimation?",
+  "back": "$\\log 2 \\approx 0.3$, $\\log 3 \\approx 0.48$, $\\sqrt{2} \\approx 1.41$, $\\sqrt{3} \\approx 1.73$, $g \\approx 10\\ m/s^{2}$."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "Compare cohort, case-control, and cross-sectional studies.",
+  "back": "Cohort follows exposed vs. unexposed forward. Case-control starts with outcome and looks back. Cross-sectional is a single snapshot."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "Contrast experimental and observational study designs.",
+  "back": "Experimental manipulates the independent variable and can establish causation; observational only observes, yielding association."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "What is external vs. internal validity?",
+  "back": "Internal validity: the degree to which the observed effect is genuinely caused by the independent variable rather than by confounders — protected by randomization, controls, and blinding. External validity: the degree to which the findings generalize to other people, settings, and times."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "What is recall bias and which design is vulnerable?",
+  "back": "Inaccurate memory of past exposure — a particular threat in case-control studies."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "What is selection bias?",
+  "back": "Systematic non-representativeness in who enters or remains in the study, distorting results."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "What is the Hawthorne effect?",
+  "back": "Participants change behavior because they know they are being observed."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "What is the placebo effect?",
+  "back": "Improvement from the expectation of treatment rather than the treatment itself — controlled by blinding."
+ },
+ {
+  "topicSlug": "mcat-research-methods-mcat",
+  "front": "Why is peer review important?",
+  "back": "Independent expert scrutiny of methods and conclusions before publication, though it does not guarantee correctness."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "How do discrete questions differ in Psych/Soc?",
+  "back": "They are overwhelmingly terminology — knowing the precise term usually settles the answer instantly."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "How should you pace discrete questions?",
+  "back": "Faster than passage questions (~1 minute) — they are pure recall, banking time for passages."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "Should you do discrete questions first?",
+  "back": "There is no need to hunt for them — they already arrive in short blocks between passages, and clicking back and forth through the section wastes more time than it saves. Answer them in order as they appear, flag anything unresolved after ~60 seconds, and revisit flagged items at the end."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "What are discrete questions?",
+  "back": "Standalone questions between passages testing content recall directly — roughly 15 per science section."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "What content is most common in discrete questions?",
+  "back": "Core equations, definitions, amino acids, pathways, and standard mechanisms."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "What is the biggest risk on discrete questions?",
+  "back": "Overthinking — they rarely contain hidden complexity, so the straightforward reading is usually right."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "What should you do if you do not know a discrete question?",
+  "back": "Eliminate what you can, guess immediately, and move on. There is no passage to reason from."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-discrete-questions-mcat",
+  "front": "Why are discrete questions strategically valuable?",
+  "back": "They are the purest return on content review and the fastest points available in the section."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "Contrast positive and negative controls.",
+  "back": "Positive control should produce a known effect (validating the assay); negative should produce none (detecting false positives)."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "Define independent, dependent, and controlled variables.",
+  "back": "Independent is manipulated; dependent is measured; controlled variables are held constant to isolate the effect."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "What does double-blind mean and why does it matter?",
+  "back": "Neither participants nor experimenters know group assignment, preventing placebo and observer bias."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "What is a confounding variable?",
+  "back": "A factor varying with the independent variable that offers an alternative explanation for the result."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "What is the difference between reliability and validity?",
+  "back": "Reliability is consistency on repetition; validity is whether it measures what it claims to."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "What is the purpose of a control group?",
+  "back": "It provides a baseline so the effect can be attributed to the manipulation rather than to other factors."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "Why can observational studies not establish causation?",
+  "back": "Without manipulation and randomization, confounding and reverse causation remain possible."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-experimental-design-mcat",
+  "front": "Why is randomization important?",
+  "back": "It distributes unknown confounders evenly across groups, supporting causal inference."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "How do you compare two curves on one plot?",
+  "back": "Look at relative position, slope differences, and any crossover point — crossovers are commonly tested."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "How do you interpret a graph quickly?",
+  "back": "Identify the trend direction, where it changes, and what the extremes represent."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "How should you handle error bars?",
+  "back": "Overlapping error bars suggest the difference may not be statistically significant."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "What does a logarithmic axis imply?",
+  "back": "Equal spacing represents multiplicative change (10×), so apparent linearity means exponential behavior."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "What is the first question to ask of a data table?",
+  "back": "What is the independent variable (rows/columns) and what is being measured?"
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "What should you do when a figure has an unfamiliar technique?",
+  "back": "Interpret the axes and trend; the technique name rarely matters for the question."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "What should you read first on any figure?",
+  "back": "The axis labels and units — most figure errors come from misreading what is plotted."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-figures-mcat",
+  "front": "Why should you read the figure caption?",
+  "back": "It often contains the experimental condition or units that make the data interpretable."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "A mental set is:",
+  "back": "**A tendency to approach problems in a previously successful way**\n\nHelpful when the situation repeats, harmful when it changes."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "Decay theory of forgetting proposes memories fade due to:",
+  "back": "**Passage of time without use**\n\nInterference theory offers a stronger account for most human forgetting."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "Globalization's effect on health includes:",
+  "back": "**Faster disease spread alongside faster knowledge diffusion**\n\nCOVID-19 illustrated both rapid transmission and rapid vaccine science."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "How do you handle a passage full of unfamiliar terminology?",
+  "back": "Treat unknown terms as labels — the passage defines what you need, and questions test relationships, not vocabulary."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "How should you approach questions referencing a specific paragraph?",
+  "back": "Go back and read it — do not rely on memory, since precision matters and re-reading is fast."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "How should you read a science passage?",
+  "back": "Skim for structure and purpose first — you can return for detail, and many details are never tested."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "The testing effect shows that:",
+  "back": "**Retrieval practice strengthens memory more than rereading**\n\nActive recall is one of the most robust findings in learning science."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "What are the three science passage types?",
+  "back": "Information/review, experiment/research, and persuasive/argument passages."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "What is the best use of the first 30 seconds on a passage?",
+  "back": "Orient: what system is this, what did they do, and what is the take-home finding?"
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "What percentage of science questions require the passage?",
+  "back": "About 75% are passage-based: each science section has 59 questions — 44 attached to 10 passages and 15 discrete. Even among the 44, many are answerable from outside content knowledge, so the share that strictly requires the passage is lower still."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "What should you identify immediately in a research passage?",
+  "back": "The hypothesis, independent and dependent variables, and the control condition."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-mcat",
+  "front": "Why should you not memorize passage details on first read?",
+  "back": "Most are never tested; locating them when needed is faster than front-loading memorization."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "How do you handle a passage contradicting what you learned?",
+  "back": "The passage wins. Answer according to the passage even if it conflicts with outside knowledge."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "How should you read passages with multiple experiments?",
+  "back": "Track what changed between them — questions frequently hinge on that comparison."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "How should you treat the introductory paragraph of a science passage?",
+  "back": "It usually frames the question being investigated — the most useful orienting content in the passage."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "What is the difference between reading for gist and reading for detail?",
+  "back": "Gist captures purpose and structure on the first pass; detail is retrieved on demand for specific questions."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "What is the role of the final paragraph in science passages?",
+  "back": "It often states conclusions, limitations, or future directions — high-yield for inference questions."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "What should you do with a dense methods description?",
+  "back": "Note WHAT was manipulated and measured; skip procedural minutiae unless a question requires it."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "What signals that a sentence is likely to be tested?",
+  "back": "Comparisons, causal claims, unexpected results, and explicit limitations."
+ },
+ {
+  "topicSlug": "mcat-science-passage-strategy-reading-mcat",
+  "front": "Why is annotating sparingly better than heavily?",
+  "back": "Excessive noting consumes time; a few structural markers give most of the benefit."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "How is the MCAT scored?",
+  "back": "Each section scores 118–132; the total ranges 472–528 with a midpoint of 500."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "How many questions and how long is each section?",
+  "back": "Chem/Phys, Bio/Biochem, Psych/Soc: 59 questions in 95 min. CARS: 53 questions in 90 min."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "Is there a penalty for wrong answers?",
+  "back": "No — never leave a question blank. Always guess."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "Roughly how long is the full test day?",
+  "back": "About 7.5 hours including breaks; ~6h15m of actual testing."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "What are the four MCAT sections?",
+  "back": "Chem/Phys, CARS, Bio/Biochem, and Psych/Soc."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "What is a percentile vs. a scaled score?",
+  "back": "The scaled score is your converted performance; the percentile is the share of test-takers you outscored."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "What is the split between passage-based and discrete questions?",
+  "back": "Each science section has 44 passage-based questions (10 passages) plus 15 standalone discretes, totaling 59. CARS is entirely passage-based — 9 passages, 53 questions, no discretes."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-format-scoring-mcat",
+  "front": "Why is section balance important?",
+  "back": "Many schools screen on individual section scores, so one very weak section can hurt more than the total suggests."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "A chi-square test is appropriate for:",
+  "back": "**Categorical frequency data**\n\nCompares observed versus expected counts."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "A standardized test must have:",
+  "back": "**Uniform administration and established norms**\n\nStandardization allows meaningful comparison across test-takers."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "How do you manage fatigue across 7.5 hours?",
+  "back": "Take every scheduled break, eat and hydrate deliberately, and build stamina with full-length practice tests."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "How should you handle a question on unfamiliar content?",
+  "back": "Look for reasoning cues in the passage; the MCAT frequently supplies what you need in the text."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "How should you use the flag/review feature?",
+  "back": "Flag anything not confidently answered, answer it anyway, and revisit only if time remains."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "Projective tests like the Rorschach are criticized primarily for:",
+  "back": "**Low reliability and validity**\n\nInterpretation is subjective; objective inventories like the MMPI are psychometrically stronger."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "Should you change answers on review?",
+  "back": "Only with a concrete textual or conceptual reason. Random second-guessing usually lowers scores."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "Spearman's \"g\" refers to:",
+  "back": "**General intelligence underlying all cognitive tasks**\n\nSupported by positive correlations across diverse cognitive tests."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "Specificity is defined as:",
+  "back": "**True negatives / all without disease**\n\nA highly specific test rules disease IN when positive (SpPin)."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "Test-retest reliability measures:",
+  "back": "**Consistency of scores across administrations**\n\nValidity, not reliability, addresses whether it measures the intended construct."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "The Flynn effect describes:",
+  "back": "**Rising average IQ scores over generations**\n\nAttributed to nutrition, education, and test familiarity rather than genetics."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "What is the best approach to a passage you find overwhelming?",
+  "back": "Answer the discrete-feeling questions first, guess strategically on the rest, and protect the remaining passages."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "What is the highest-value test-day habit?",
+  "back": "Strict time discipline — never let one question consume time budgeted for several others."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "What mindset helps most between sections?",
+  "back": "Treat each section as independent — ruminating on a hard prior section degrades performance on the next."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-mcat",
+  "front": "What should you do in the final minutes of a section?",
+  "back": "Ensure every question has an answer selected — unanswered questions are guaranteed zeros."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "How much math is required on the MCAT?",
+  "back": "No calculator: arithmetic, scientific notation, ratios, logs, and estimation. Practice mental approximation."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "How should you approach Chem/Phys passages?",
+  "back": "Identify what is being measured and which relationships apply; many questions are ratio reasoning, not calculation."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "How should you handle experiment-based science passages?",
+  "back": "Identify the hypothesis, independent/dependent variables, and controls before reading questions."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "What is the key strategy difference for CARS vs. science sections?",
+  "back": "CARS rewards close reading and zero outside knowledge; science sections reward content recall plus data interpretation."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "What is the most efficient Bio/Biochem approach?",
+  "back": "Recognize the pathway or system being described, then use passage data for the specifics."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "What makes Psych/Soc distinctive?",
+  "back": "It is heavily terminology-driven — precise definitions and named theories/experiments carry most of the weight."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "Which section benefits most from flashcards?",
+  "back": "Psych/Soc, because of its large vocabulary of discrete terms and theorists."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-section-specific-mcat",
+  "front": "Why is content review alone insufficient?",
+  "back": "The MCAT tests APPLICATION of content to novel scenarios, so practice passages matter more than re-reading notes."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "How many full-length practice tests are recommended?",
+  "back": "Commonly 6–10, taken under realistic timed conditions, ideally at your actual test time of day."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "How should study time shift over a prep period?",
+  "back": "Content-heavy early, practice-heavy late — by the final month most time should be full-length tests and review."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "How should you use a content review book?",
+  "back": "Actively — as a reference for gaps identified by practice questions, not as passive cover-to-cover reading."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "What is a typical MCAT preparation timeline?",
+  "back": "Roughly 3–6 months at 15–25 hours per week, front-loading content and shifting toward practice."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "What is the purpose of a diagnostic test?",
+  "back": "To establish a baseline and target weak areas so study time is allocated by need rather than comfort."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "What is the single most valuable prep activity?",
+  "back": "Thorough REVIEW of practice questions — understanding why each wrong answer was wrong."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "Why is spaced repetition effective for MCAT content?",
+  "back": "Distributed practice produces markedly stronger long-term retention than massed cramming."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-study-planning-mcat",
+  "front": "Why should you avoid studying new content the last few days?",
+  "back": "Marginal gains are minimal and it raises anxiety; light review and rest protect performance more."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "How are breaks structured?",
+  "back": "Optional breaks between sections (typically 10 min, with a 30-min lunch mid-exam). The clock runs regardless, so use them."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "How far in advance should you register?",
+  "back": "Several months — popular dates and locations fill early, especially in spring and summer."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "What happens if you void your exam?",
+  "back": "No score is reported to schools, but it still counts toward your lifetime and yearly attempt limits."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "What materials are provided at the test center?",
+  "back": "A noteboard booklet and fine-point marker — no personal scratch paper or calculator."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "What should you bring on test day?",
+  "back": "Valid government-issued photo ID matching your registration exactly. Personal items go in a locker."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "What should you eat before and during the exam?",
+  "back": "A familiar, protein-rich meal and steady snacks — test day is not the time to try new foods."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "When are scores released?",
+  "back": "Approximately 30–35 days after the test date."
+ },
+ {
+  "topicSlug": "mcat-test-day-strategy-test-day-logistics-mcat",
+  "front": "Why should you visit the test center in advance if possible?",
+  "back": "It removes navigation and parking uncertainty, reducing avoidable test-day stress."
+ }
+]
