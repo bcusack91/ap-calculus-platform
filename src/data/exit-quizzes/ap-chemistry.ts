@@ -36,10 +36,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'Which electron configuration represents a ground-state copper (Cu, Z=29) atom?',
-    options: ['[Ar] $3d^{9}$ $4s^{2}$', '[Ar] $3d^{10}$ $4s^{1}$', '[Ar] $3d^{8}$ $4s^{2}$', '[Ar] $3d^{10}$ $4s^{2}$'],
-    correctAnswer: 1,
-    explanation: 'Copper is anomalous: a completely filled 3d subshell is more stable than $3d^{9}$ $4s^{2}$. The actual configuration is [Ar] $3d^{10}$ $4s^{1}$.',
+    question: 'Which ground-state electron configuration represents a neutral phosphorus atom (Z = 15)?',
+    options: ['$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$', '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$ $3p^{4}$', '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3p^{5}$', '$1s^{2}$ $2s^{2}$ $2p^{9}$'],
+    correctAnswer: 0,
+    explanation: 'Filling subshells in order of increasing energy (Aufbau principle), 15 electrons give $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$. A p subshell holds at most 6 electrons, and 3s fills before 3p.',
     difficulty: 'medium',
     domain: 'atomic-structure',
     topicSlug: 'electron-configuration',
@@ -77,10 +77,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'Which set of quantum numbers (n, l, ml, ms) is NOT valid?',
-    options: ['2, 1, 0, +½', '3, 2, -2, -½', '2, 2, 0, +½', '4, 0, 0, -½'],
-    correctAnswer: 2,
-    explanation: 'For n=2, l can only be 0 or 1 (l must be < n). l=2 with n=2 is invalid.',
+    question: 'Which of the following ions has the same ground-state electron configuration as neon?',
+    options: ['$Ca^{2+}$', '$Cl^{-}$', '$K^{+}$', '$Mg^{2+}$'],
+    correctAnswer: 3,
+    explanation: 'Mg (Z = 12) loses two electrons to form $Mg^{2+}$ with 10 electrons: $1s^{2}$ $2s^{2}$ $2p^{6}$, the configuration of neon. $Cl^{-}$, $K^{+}$, and $Ca^{2+}$ each have 18 electrons and are isoelectronic with argon.',
     difficulty: 'medium',
     domain: 'atomic-structure',
     topicSlug: 'electron-configuration',
@@ -104,8 +104,8 @@ export const apChemQuestionPool: APChemQuestion[] = [
   {
     question: 'In a PES spectrum for neon (Ne), how many distinct peaks are expected?',
     options: ['1', '2', '3', '4'],
-    correctAnswer: 1,
-    explanation: 'Ne has configuration $1s^{2}$ $2s^{2}$ $2p^{6}$. There are two distinct subshells (1s and 2s/2p each at different energies). In a simplified PES, 1s appears as one peak and the n=2 electrons (2s and 2p) sometimes merge; typically 2 peaks are observed (1s core and 2s/2p valence).',
+    correctAnswer: 2,
+    explanation: 'Ne has configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ — three occupied subshells, each with a different binding energy, so the PES spectrum shows three peaks with relative heights 2:2:6. The 2s and 2p subshells do NOT merge: their different penetration gives them distinct binding energies.',
     difficulty: 'hard',
     domain: 'atomic-structure',
     topicSlug: 'photoelectron-spectroscopy',
@@ -886,15 +886,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'How does the Nernst equation account for concentration effects on cell potential?',
-    options: [
-      'E = E° + (RT/nF)lnQ',
-      'E = E° − (RT/nF)lnQ',
-      'E = E° + nFQ',
-      'E = E°/Q',
-    ],
-    correctAnswer: 1,
-    explanation: 'Nernst equation: E = E° − (RT/nF)ln Q. As Q increases (more products), E decreases from E°. At equilibrium, E = 0 and Q = K.',
+    question: 'A Zn/Cu galvanic cell initially operates under standard conditions ($E°_{cell}$ = +1.10 V). As the cell discharges, $[Cu^{2+}]$ decreases and $[Zn^{2+}]$ increases. The cell potential will:',
+    options: ['Increase above 1.10 V because the reaction speeds up', 'Remain 1.10 V because E depends only on the identity of the half-reactions', 'Decrease below 1.10 V because Q increases toward K', 'Immediately drop to 0 V'],
+    correctAnswer: 2,
+    explanation: 'As products accumulate and reactants are consumed, Q increases toward K, so the system moves closer to equilibrium and the thermodynamic driving force decreases. E falls below E° and reaches 0 V only when Q = K.',
     difficulty: 'medium',
     domain: 'electrochemistry',
     topicSlug: 'nernst-equation-concentration',
@@ -1205,10 +1200,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'For A ⇌ 2B with K = 4.0 and initial [A] = 1.0 M, [B] = 0, what is the equilibrium [B]?',
-    options: ['0.5 M', '1.0 M', '1.33 M', '2.0 M'],
-    correctAnswer: 2,
-    explanation: 'Let x = change in [A]. Then [A] = 1−x, [B] = 2x. K = $(2x)^{2}$ / (1−x) = 4.0. Solving: $4x^{2}$ = 4 − 4x → $4x^{2}$ + 4x − 4 = 0 → x ≈ 0.618. [B] = 2(0.618) ≈ 1.24 M. Closest answer is 1.33 M (rounding in a test context).',
+    question: 'For A ⇌ 2B, a mixture reaches equilibrium with [A] = 0.25 M. If K = 4.0, what is the equilibrium [B]?',
+    options: ['0.5 M', '1.0 M', '2.0 M', '4.0 M'],
+    correctAnswer: 1,
+    explanation: 'K = $[B]^{2}$/[A], so $[B]^{2}$ = K·[A] = 4.0 × 0.25 = 1.0, giving [B] = 1.0 M. The 2.0 M trap squares the wrong way; 0.5 M halves instead of taking the square root.',
     difficulty: 'hard',
     domain: 'equilibrium',
     topicSlug: 'ice-tables-calculations',
@@ -1632,7 +1627,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Hund\'s rule states that electrons:', options: ['Fill the lowest energy orbital first', 'Occupy degenerate orbitals singly before pairing', 'Cannot share the same quantum numbers', 'Pair with opposite spins only'], correctAnswer: 1, explanation: 'Hund: maximize spin by filling each orbital of a subshell singly first.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'B' },
   { question: 'Which element has the configuration [Ne] $3s^{2}$ $3p^{5}$?', options: ['Chlorine', 'Argon', 'Sulfur', 'Fluorine'], correctAnswer: 0, explanation: '[Ne] $3s^{2}$ $3p^{5}$ = 10 + 7 = 17 electrons → Cl.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'A' },
   { question: 'The Pauli exclusion principle says that:', options: ['Two electrons in the same orbital must have opposite spins', 'Electrons fill the lowest energy first', 'Each orbital holds 3 electrons', 'All electrons have the same spin'], correctAnswer: 0, explanation: 'No two electrons can have the same set of four quantum numbers → opposite spins in an orbital.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'B' },
-  { question: 'Cu (Z = 29) has an anomalous configuration because:', options: ['It loses electrons easily', '[Ar] $3d^{10}$ $4s^{1}$ is more stable than [Ar] $3d^{9}$ $4s^{2}$', 'It is a noble gas', 'It has no d electrons'], correctAnswer: 1, explanation: 'A fully filled d subshell $(3d^{10})$ provides extra stability.', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'both' },
+  { question: 'Which species has the ground-state electron configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$?', options: ['$Na^{+}$', '$S^{2-}$', '$O^{2-}$', '$Al^{3+}$'], correctAnswer: 1, explanation: '$S^{2-}$ has 16 + 2 = 18 electrons, matching the argon configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$. $Na^{+}$, $O^{2-}$, and $Al^{3+}$ each have 10 electrons (the neon configuration).', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'both' },
 
   // ── periodic-trends (batch 2 — had 3, adding 5 → 8) ────────────
   { question: 'Across a period, atomic radius generally:', options: ['Increases', 'Decreases', 'Stays the same', 'Oscillates'], correctAnswer: 1, explanation: 'More protons pull electrons closer → smaller radius.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'periodic-trends', formSet: 'A' },
@@ -1646,7 +1641,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'The height of a PES peak tells you:', options: ['Binding energy', 'Number of electrons in that subshell', 'Atomic mass', 'Wavelength of light'], correctAnswer: 1, explanation: 'Peak height ∝ number of electrons with that binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
   { question: 'An element shows PES peaks at very high BE (2 electrons), moderate BE (2), and low BE (3). It is likely:', options: ['Nitrogen', 'Oxygen', 'Carbon', 'Boron'], correctAnswer: 0, explanation: '$1s^{2}$ $2s^{2}$ $2p^{3}$ = 7 electrons → Nitrogen.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
   { question: 'PES relies on the ___ effect.', options: ['Compton', 'Photoelectric', 'Doppler', 'Zeeman'], correctAnswer: 1, explanation: 'Photons eject electrons; KE measured to deduce binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
-  { question: 'Two elements have identical PES spectra except for a slightly different binding energy shift. They are likely:', options: ['Different elements', 'Isotopes', 'Ions of the same element', 'Allotropes'], correctAnswer: 1, explanation: 'Isotopes have the same electron structure but different nuclear mass (minor BE shift).', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'both' },
+  { question: 'In photoelectron spectra of neutral carbon and neutral nitrogen atoms, the 1s peak of nitrogen appears at:', options: ['A lower binding energy, because nitrogen atoms are larger', 'The same binding energy, because both peaks correspond to two electrons', 'Zero binding energy, because 1s electrons are core electrons', 'A higher binding energy, because nitrogen has a greater nuclear charge'], correctAnswer: 3, explanation: 'Nitrogen has one more proton than carbon, so its 1s electrons experience a stronger Coulombic attraction to the nucleus and require more energy to remove. The 1s peak shifts to higher binding energy.', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'both' },
 
   // ── types-of-chemical-bonds (batch 2 — had 3, adding 5 → 8) ────
   { question: 'An ionic bond forms between:', options: ['Two nonmetals', 'A metal and a nonmetal', 'Two metals', 'Two noble gases'], correctAnswer: 1, explanation: 'Large electronegativity difference → electron transfer → ionic bond.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'A' },
@@ -1833,7 +1828,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── nernst-equation-concentration (batch 2 — had 3, adding 5 → 8)
   { question: 'The Nernst equation: $E = E° - (RT/nF)\\ln Q$. At equilibrium, $E =$', options: ['$E°$', '1', '0', '$-E°$'], correctAnswer: 2, explanation: 'At equilibrium, $Q = K$ and $E = 0$ (no driving force).', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'A' },
-  { question: 'The simplified Nernst equation at 25°C: $E = E° - (0.0592/n) \\log Q$. If $n = 2$ and $Q = 100$:', options: ['$E = E° - 0.0592$', '$E = E° - 0.0296$', '$E = E° + 0.0592$', '$E = E° - 0.1184$'], correctAnswer: 0, explanation: '$(0.0592/2)\\log 100 = 0.0296 \\times 2 = 0.0592$; $E = E° - 0.0592$.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'B' },
+  { question: 'In a galvanic cell, the ion concentrations are adjusted so that Q < 1. Compared with the standard cell potential E°, the cell potential E is:', options: ['Greater than E°', 'Equal to E°', 'Less than E°', 'Exactly 0 V'], correctAnswer: 0, explanation: 'When Q < 1 the system is farther from equilibrium than it is under standard conditions (Q = 1), so the thermodynamic driving force is larger and E > E°. E equals E° only when Q = 1, and E = 0 only when Q = K.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'B' },
   { question: 'A concentration cell has $E° = 0$ but produces voltage because:', options: ['Different metals are used', 'Concentrations in the two half-cells differ', 'Temperature is different', 'It has no salt bridge'], correctAnswer: 1, explanation: 'Same electrodes but different [ion] → $Q \\neq 1$ → $E \\neq 0$.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'A' },
   { question: 'As a galvanic cell discharges, $Q$ ___ and $E$ ___.', options: ['Increases; decreases', 'Decreases; increases', 'Both increase', 'Both decrease'], correctAnswer: 0, explanation: 'Products build up → $Q$ increases → $E$ decreases toward 0 at equilibrium.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'B' },
   { question: '$\\Delta G° = -nFE°$. If $E° = 1.10$ V and $n = 2$: ($F = 96485$ C/mol)', options: ['$-212267$ J', '$-96485$ J', '$-1.10$ J', '$212267$ J'], correctAnswer: 0, explanation: '$\\Delta G° = -2(96485)(1.10) = -212267$ J ≈ $-212$ kJ.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'nernst-equation-concentration', formSet: 'both' },
@@ -1843,12 +1838,12 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'Faraday\'s law: $m = (MIt)/(nF)$. Depositing 1 mol of Cu (n=2) requires ___ coulombs.', options: ['96485', '192970', '48243', '289455'], correctAnswer: 1, explanation: '$Q = nF = 2(96485) = 192970$ C.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'B' },
   { question: 'In electrolysis of molten NaCl, Na is produced at the:', options: ['Anode', 'Cathode', 'Salt bridge', 'Wire'], correctAnswer: 1, explanation: '$Na^{+}$ is reduced (gains electrons) at the cathode → Na metal.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'A' },
   { question: 'Electroplating uses ___ cells.', options: ['Galvanic', 'Electrolytic', 'Fuel', 'Concentration'], correctAnswer: 1, explanation: 'External current drives metal deposition onto an object → electrolytic.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'B' },
-  { question: 'In electrolysis of aqueous NaCl, ___ is produced at the anode instead of $Cl_{2}$ if the overvoltage of $Cl_{2}$ is too high.', options: ['Na metal', '$H_{2}$', '$O_{2}$', 'NaOH'], correctAnswer: 2, explanation: 'Water can be oxidized at the anode to produce $O_{2}$ if $Cl_{2}$ overvoltage is too large.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'both' },
+  { question: 'During an electroplating experiment, the current is doubled and the electrolysis time is cut in half. The mass of metal deposited changes by a factor of:', options: ['4', '2', '1 (no change)', '1/2'], correctAnswer: 2, explanation: 'Mass deposited is proportional to the total charge passed, Q = It. Doubling I while halving t leaves Q unchanged, so the same number of moles of electrons — and the same mass of metal — is deposited.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'both' },
 
   // ── properties-states-matter (batch 2 — had 4, adding 4 → 8) ───
   { question: 'In the solid state, particles are:', options: ['Far apart and moving freely', 'Close together in a fixed arrangement', 'Close together but flowing', 'Ionized'], correctAnswer: 1, explanation: 'Solids: fixed positions, vibrate in place.', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'A' },
   { question: 'Sublimation is the transition from:', options: ['Solid to liquid', 'Liquid to gas', 'Solid directly to gas', 'Gas to liquid'], correctAnswer: 2, explanation: 'Sublimation: solid → gas (e.g., dry ice).', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'B' },
-  { question: 'A phase diagram\'s triple point is where:', options: ['Only solid exists', 'All three phases coexist', 'Only gas exists', 'Temperature = 0 K'], correctAnswer: 1, explanation: 'Triple point: unique $T$ and $P$ where solid, liquid, and gas coexist.', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'A' },
+  { question: 'According to the kinetic molecular theory, the average kinetic energy of the particles in a gas sample is directly proportional to:', options: ['The pressure of the gas', 'The absolute (Kelvin) temperature', 'The molar mass of the gas', 'The volume of the container'], correctAnswer: 1, explanation: 'KMT: average kinetic energy depends only on the Kelvin temperature. At the same temperature, all gases have the same average kinetic energy regardless of identity.', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'A' },
   { question: 'An intensive property is one that ___ on the amount of substance.', options: ['Depends', 'Does not depend', 'Sometimes depends', 'Always doubles with'], correctAnswer: 1, explanation: 'Intensive properties (density, temperature, color) are independent of amount.', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'both' },
 
   // ── mixtures-separations (batch 2 — had 4, adding 4 → 8) ───────

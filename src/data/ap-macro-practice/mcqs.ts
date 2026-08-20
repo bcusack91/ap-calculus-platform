@@ -579,20 +579,12 @@ export const MCQS: MCQItem[] = [
       'Open-market operations (buying and selling Treasury securities) are the Fed\'s primary day-to-day tool for managing the federal funds rate.',
   },
   {
+    question: 'If market interest rates rise after the purchase, the price at which the saver can sell the bond on the secondary market will most likely:',
+    options: ['Rise, because the bond\'s fixed payment is now more valuable.', 'Stay the same, because the bond\'s payment is fixed by contract.', 'Rise, because bond prices always move in the same direction as interest rates.', 'Fall, because newly issued bonds now offer higher interest payments, making the old bond less attractive.'],
+    correctAnswer: 3,
+    explanation: 'Interest rates and the prices of previously issued bonds are inversely related: when market rates rise, existing bonds with lower fixed payments become less attractive, so their resale price falls.',
     type: 'mcq',
     topic: 'unit-4-financial-sector',
-    stimulus:
-      'A bond pays a fixed coupon of $50 per year in perpetuity. Initially the market interest rate is 5%, so the bond\'s price is $1,000.',
-    question: 'If the market interest rate rises to 10%, the bond\'s price will:',
-    options: [
-      'Rise to $2,000.',
-      'Stay at $1,000.',
-      'Fall to $500.',
-      'Fall to $250.',
-    ],
-    correctAnswer: 2,
-    explanation:
-      'For a perpetuity, P = coupon / i. P = $50 / 0.10 = $500. Bond prices and interest rates move inversely.',
   },
   {
     type: 'mcq',

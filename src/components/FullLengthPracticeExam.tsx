@@ -8,6 +8,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
 import { renderRichText } from '@/lib/render-rich-text'
+import { shuffleOptions } from '@/lib/shuffle-options'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
@@ -169,8 +170,27 @@ function blankAnswer(item: ExamItem): ItemAnswer {
 /* ------------------------------------------------------------------ */
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
-  const { subject, description, backLink, ctaLinks, accent, sections, totalTimeMinutes, aboutInfo } = config
+  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo } = config
   const t = TOKENS[accent]
+
+  // Deterministically shuffle every MCQ's options. Authored key positions
+  // skew heavily toward the early letters (two subjects shipped with 100% of
+  // keys at A) and the exam previously rendered options in authored order, so
+  // the key position was predictable. Seeded by subject + stem, the shuffle is
+  // stable across re-renders and remaps correctAnswer, so grading and the
+  // review screen stay consistent.
+  const sections = useMemo(
+    () =>
+      rawSections.map((sec) => ({
+        ...sec,
+        items: sec.items.map((item) => {
+          if (item.type !== 'mcq') return item
+          const s = shuffleOptions(item.options, item.correctAnswer, `${subject}|${item.question}`)
+          return { ...item, options: s.options, correctAnswer: s.correctIndex }
+        }),
+      })),
+    [rawSections, subject],
+  )
 
   type Phase = 'overview' | 'section' | 'section-complete' | 'final-results'
   const [phase, setPhase] = useState<Phase>('overview')

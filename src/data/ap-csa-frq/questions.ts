@@ -34,102 +34,67 @@ const longFRQs: CSAFRQ[] = [
     id: 'csa-long-1',
     type: 'long' as const,
     unit: 1,
-    title: 'Variables & Types Analysis',
-    prompt: `A student is studying Variables & Types in AP Computer Science A. Using your knowledge of course concepts, analyze the following scenario and answer the questions below.`,
+    title: 'Methods & Control Structures: Ticket Pricing',
+    prompt: `A theater sells tickets with tiered pricing. A full-price ticket costs $12. Patrons age 65 and older, or age 12 and younger, pay a discounted price of $8. On Tuesdays, every ticket (full price or discounted) is an additional $2 off. You will write two methods of the TicketMachine class.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Define a key concept related to Variables & Types and explain its significance.',
-        maxPoints: 2,
+        prompt: 'Write the method basePrice, which returns the price for a patron of the given age before any Tuesday discount: public static int basePrice(int age)',
+        maxPoints: 4,
         rubric: [
-          { points: 1, description: 'Provides an accurate definition of a concept from Variables & Types', keywords: ['define', 'definition', 'concept', 'means', 'refers to'] },
-          { points: 1, description: 'Explains significance or application', keywords: ['significant', 'important', 'because', 'therefore', 'impact', 'effect'] }
+          { points: 1, description: 'Correct method header/return type used with a return on every path', keywords: ['public static int', 'return'] },
+          { points: 2, description: 'Correct boundary logic: age >= 65 or age <= 12 returns 8 (both boundaries inclusive)', keywords: ['age >= 65', 'age <= 12', '||', '8'] },
+          { points: 1, description: 'All other ages return 12', keywords: ['else', 'return 12', '12'] }
         ],
-        sampleAnswer: 'A key concept in Variables & Types is [concept]. This concept is significant because it helps explain [application]. Understanding this concept is essential for analyzing broader patterns in AP Computer Science A.',
+        sampleAnswer: 'public static int basePrice(int age)\n{\n    if (age >= 65 || age <= 12)\n    {\n        return 8;\n    }\n    return 12;\n}',
       },
       {
         label: '(b)',
-        prompt: 'Identify TWO specific examples that illustrate Variables & Types.',
-        maxPoints: 2,
+        prompt: 'Write the method finalPrice, which returns the price for a patron of the given age, where isTuesday indicates whether the sale occurs on a Tuesday. The Tuesday discount is applied after the age pricing, and the price is never negative: public static int finalPrice(int age, boolean isTuesday). Assume basePrice works as intended regardless of your answer to part (a).',
+        maxPoints: 5,
         rubric: [
-          { points: 1, description: 'Provides one relevant example', keywords: ['example', 'instance', 'such as', 'for instance', 'case'] },
-          { points: 1, description: 'Provides a second relevant example', keywords: ['another', 'additionally', 'second', 'also', 'furthermore'] }
+          { points: 2, description: 'Calls basePrice(age) rather than re-implementing the age logic', keywords: ['basePrice(age)', 'call'] },
+          { points: 2, description: 'Subtracts 2 only when isTuesday is true', keywords: ['isTuesday', 'if', '- 2'] },
+          { points: 1, description: 'Guards against a negative result (e.g., Math.max with 0)', keywords: ['Math.max', '0', 'never negative'] }
         ],
-        sampleAnswer: 'Two examples of Variables & Types include: (1) [Example 1 with specific details], and (2) [Example 2 with specific details]. Both examples demonstrate the core principles of this topic.',
+        sampleAnswer: 'public static int finalPrice(int age, boolean isTuesday)\n{\n    int price = basePrice(age);\n    if (isTuesday)\n    {\n        price -= 2;\n    }\n    return Math.max(price, 0);\n}',
       },
-      {
-        label: '(c)',
-        prompt: 'Explain how Variables & Types connects to Expressions & Operators.',
-        maxPoints: 2,
-        rubric: [
-          { points: 1, description: 'Identifies a valid connection between Variables & Types and Expressions & Operators', keywords: ['connect', 'relate', 'link', 'influence', 'affect', 'lead to'] },
-          { points: 1, description: 'Explains the mechanism of connection', keywords: ['because', 'through', 'by means of', 'resulting in', 'mechanism'] }
-        ],
-        sampleAnswer: 'Variables & Types connects to Expressions & Operators through shared underlying principles. Specifically, the processes that drive Variables & Types also influence Expressions & Operators because [mechanism]. This interconnection is a key theme in AP Computer Science A.',
-      },
-      {
-        label: '(d)',
-        prompt: 'Evaluate the long-term implications of changes in Variables & Types.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Provides a thoughtful evaluation of implications', keywords: ['implication', 'consequence', 'future', 'long-term', 'result', 'outcome', 'trend'] }
-        ],
-        sampleAnswer: 'Changes in Variables & Types have significant long-term implications including [consequence]. As these trends continue, we can expect [future development], which will require [response or adaptation].',
-      }
     ],
-    totalPoints: 7,
-    timeRecommendation: '~25 minutes',
+    totalPoints: 9,
+    timeRecommendation: '~22 minutes',
     calculatorAllowed: false,
   },
   {
     id: 'csa-long-2',
     type: 'long' as const,
-    unit: 1,
-    title: 'Class Design & Polymorphism',
-    prompt: `Consider the relationship between Class Design and Polymorphism. Using evidence and reasoning from AP Computer Science A, address the following.`,
+    unit: 5,
+    title: 'Class Design: GiftCard',
+    prompt: `You will design the GiftCard class. A gift card is created with an initial balance in dollars (a non-negative integer). Money can be spent from the card, but a purchase larger than the current balance must be refused. The class must hide its data from client code.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Compare and contrast Class Design with Polymorphism.',
-        maxPoints: 2,
+        prompt: 'Write the complete GiftCard class declaration with: a private int instance variable for the balance; a constructor that sets the balance to the given amount, or to 0 if the given amount is negative; and an accessor method getBalance.',
+        maxPoints: 5,
         rubric: [
-          { points: 1, description: 'Identifies a valid similarity between Class Design and Polymorphism', keywords: ['similar', 'both', 'share', 'common', 'alike'] },
-          { points: 1, description: 'Identifies a valid difference between Class Design and Polymorphism', keywords: ['differ', 'unlike', 'contrast', 'whereas', 'however', 'but'] }
+          { points: 1, description: 'Declares the instance variable private', keywords: ['private int', 'private'] },
+          { points: 2, description: 'Constructor validates: negative initial amount becomes 0, otherwise stores the amount', keywords: ['constructor', '< 0', '0', 'else'] },
+          { points: 2, description: 'getBalance returns the balance with correct signature (public int, no parameters)', keywords: ['public int getBalance', 'return'] }
         ],
-        sampleAnswer: 'Class Design and Polymorphism are similar in that they both [shared characteristic]. However, they differ in that Class Design focuses on [aspect] while Polymorphism emphasizes [different aspect].',
+        sampleAnswer: 'public class GiftCard\n{\n    private int balance;\n\n    public GiftCard(int startBalance)\n    {\n        if (startBalance < 0)\n        {\n            balance = 0;\n        }\n        else\n        {\n            balance = startBalance;\n        }\n    }\n\n    public int getBalance()\n    {\n        return balance;\n    }\n}',
       },
       {
         label: '(b)',
-        prompt: 'Explain ONE cause-and-effect relationship within Class Design.',
-        maxPoints: 2,
+        prompt: 'Write the method spend, which attempts to spend amount dollars from the card. If amount is greater than the balance (or negative), the purchase is refused: the balance is unchanged and the method returns false. Otherwise the balance is reduced by amount and the method returns true: public boolean spend(int amount)',
+        maxPoints: 4,
         rubric: [
-          { points: 1, description: 'Identifies a valid cause', keywords: ['cause', 'because', 'due to', 'result of', 'driven by'] },
-          { points: 1, description: 'Explains the resulting effect', keywords: ['effect', 'result', 'consequence', 'leads to', 'outcome'] }
+          { points: 2, description: 'Refuses invalid purchases (amount > balance or amount < 0) and returns false without changing state', keywords: ['amount > balance', 'return false', '< 0'] },
+          { points: 2, description: 'Otherwise subtracts amount from balance and returns true', keywords: ['balance -= amount', 'return true'] }
         ],
-        sampleAnswer: 'In Class Design, [cause] leads to [effect]. This cause-and-effect relationship is important because it explains why [pattern or outcome] occurs.',
+        sampleAnswer: 'public boolean spend(int amount)\n{\n    if (amount < 0 || amount > balance)\n    {\n        return false;\n    }\n    balance -= amount;\n    return true;\n}',
       },
-      {
-        label: '(c)',
-        prompt: 'Using a specific example, explain how Polymorphism has changed over time.',
-        maxPoints: 2,
-        rubric: [
-          { points: 1, description: 'Provides a specific historical or real-world example', keywords: ['example', 'specific', 'instance', 'case', 'historical'] },
-          { points: 1, description: 'Explains the change over time', keywords: ['change', 'evolved', 'shifted', 'transformed', 'over time', 'developed'] }
-        ],
-        sampleAnswer: 'Polymorphism has changed significantly over time. For example, [specific case] demonstrates how [aspect] evolved from [earlier state] to [current state] due to [driving factor].',
-      },
-      {
-        label: '(d)',
-        prompt: 'Predict how current trends in Polymorphism might develop in the future.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Makes a reasonable prediction supported by course concepts', keywords: ['predict', 'future', 'likely', 'expect', 'trend', 'continue', 'may'] }
-        ],
-        sampleAnswer: 'Based on current trends, Polymorphism is likely to [predicted development] because [supporting reasoning from course concepts]. This prediction is supported by [evidence or pattern].',
-      }
     ],
-    totalPoints: 7,
-    timeRecommendation: '~25 minutes',
+    totalPoints: 9,
+    timeRecommendation: '~22 minutes',
     calculatorAllowed: false,
   }
 ]
@@ -138,97 +103,69 @@ const shortFRQs: CSAFRQ[] = [
   {
     id: 'csa-short-1',
     type: 'short' as const,
-    unit: 1,
-    title: 'Strings & Objects Application',
-    prompt: `Apply your knowledge of Strings & Objects from AP Computer Science A to the following scenario.`,
+    unit: 7,
+    title: 'ArrayList: Temperature Log',
+    prompt: `A weather station stores its readings in an ArrayList<Integer> named temps, holding whole-degree temperatures in the order they were recorded. You may assume temps is not null and contains at least one element.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Define Strings & Objects in the context of AP Computer Science A.',
-        maxPoints: 1,
+        prompt: 'Write the method countAboveFreezing, which returns the number of readings in temps that are strictly greater than 32: public static int countAboveFreezing(ArrayList<Integer> temps)',
+        maxPoints: 4,
         rubric: [
-          { points: 1, description: 'Provides accurate definition', keywords: ['define', 'means', 'refers', 'concept', 'term'] }
+          { points: 1, description: 'Initializes a counter and returns it', keywords: ['int count = 0', 'return count'] },
+          { points: 2, description: 'Traverses every element of the ArrayList (enhanced for or index loop with .get)', keywords: ['for', 'temps.get', 'for (int t : temps)', 'size()'] },
+          { points: 1, description: 'Compares with strict inequality > 32', keywords: ['> 32', 'strictly greater'] }
         ],
-        sampleAnswer: 'Strings & Objects refers to [definition]. It is a fundamental component of AP Computer Science A.',
+        sampleAnswer: 'public static int countAboveFreezing(ArrayList<Integer> temps)\n{\n    int count = 0;\n    for (int t : temps)\n    {\n        if (t > 32)\n        {\n            count++;\n        }\n    }\n    return count;\n}',
       },
       {
         label: '(b)',
-        prompt: 'Provide ONE specific example.',
-        maxPoints: 1,
+        prompt: 'Write the method removeBelow, which removes every reading strictly less than the given limit from temps. The remaining readings must keep their original relative order: public static void removeBelow(ArrayList<Integer> temps, int limit)',
+        maxPoints: 5,
         rubric: [
-          { points: 1, description: 'Provides a relevant, specific example', keywords: ['example', 'instance', 'such as', 'case', 'specific'] }
+          { points: 2, description: 'Uses an index loop (removal during an enhanced for loop is not valid)', keywords: ['for (int i', 'index', 'while'] },
+          { points: 2, description: 'Removes matching elements with temps.remove(i)', keywords: ['temps.remove(i)', 'remove'] },
+          { points: 1, description: 'Handles the index shift after removal (does not increment i after removing, or traverses backward)', keywords: ['i--', 'does not increment', 'backward', 'i = i - 1'] }
         ],
-        sampleAnswer: 'A specific example of this concept is [detailed example with specific names, dates, or data].',
+        sampleAnswer: 'public static void removeBelow(ArrayList<Integer> temps, int limit)\n{\n    for (int i = temps.size() - 1; i >= 0; i--)\n    {\n        if (temps.get(i) < limit)\n        {\n            temps.remove(i);\n        }\n    }\n}\n\n// Traversing backward avoids skipping the element that shifts into a removed slot.',
       },
-      {
-        label: '(c)',
-        prompt: 'Explain the significance of this concept for the AP exam.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Explains why the concept is important for the exam', keywords: ['significant', 'important', 'tested', 'appears', 'connects', 'multiple'] }
-        ],
-        sampleAnswer: 'This concept is significant because it connects to multiple units and appears frequently on the AP exam in both MC and FRQ formats.',
-      },
-      {
-        label: '(d)',
-        prompt: 'Explain ONE limitation or criticism of this concept.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Identifies a valid limitation or criticism', keywords: ['limitation', 'criticism', 'however', 'does not', 'fails', 'overlooks', 'simplistic'] }
-        ],
-        sampleAnswer: 'One limitation is that [this concept] [specific criticism]. This limitation is important to recognize because [reasoning].',
-      }
     ],
-    totalPoints: 4,
-    timeRecommendation: '~12 minutes',
+    totalPoints: 9,
+    timeRecommendation: '~20 minutes',
     calculatorAllowed: false,
   },
   {
     id: 'csa-short-2',
     type: 'short' as const,
-    unit: 1,
-    title: 'Using Objects Skills',
-    prompt: `Demonstrate your analytical skills related to Using Objects in AP Computer Science A.`,
+    unit: 8,
+    title: '2D Array: Seating Chart',
+    prompt: `A classroom seating chart is stored in a 2D array of int named seats, where seats[r][c] is 1 if the seat in row r, column c is occupied and 0 if it is empty. The array is rectangular and has at least one row and one column.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Identify a key debate or controversy related to this topic.',
-        maxPoints: 1,
+        prompt: 'Write the method totalOccupied, which returns the number of occupied seats in the entire chart: public static int totalOccupied(int[][] seats)',
+        maxPoints: 4,
         rubric: [
-          { points: 1, description: 'Identifies a relevant debate', keywords: ['debate', 'controversy', 'disagree', 'argue', 'dispute', 'question'] }
+          { points: 2, description: 'Nested loops cover every element in row-major fashion (seats.length rows, seats[r].length columns)', keywords: ['seats.length', 'seats[r].length', 'nested', 'for'] },
+          { points: 1, description: 'Accumulates the occupied count (sum of entries or count of 1s)', keywords: ['+= seats[r][c]', '== 1', 'count++'] },
+          { points: 1, description: 'Returns the total', keywords: ['return'] }
         ],
-        sampleAnswer: 'A key debate involves [description of the controversy]. Different perspectives on this issue include [perspective 1] and [perspective 2].',
+        sampleAnswer: 'public static int totalOccupied(int[][] seats)\n{\n    int count = 0;\n    for (int r = 0; r < seats.length; r++)\n    {\n        for (int c = 0; c < seats[r].length; c++)\n        {\n            count += seats[r][c];\n        }\n    }\n    return count;\n}',
       },
       {
         label: '(b)',
-        prompt: 'Explain ONE argument on each side of this debate.',
-        maxPoints: 1,
+        prompt: 'Write the method firstEmptyRow, which returns the index of the first row that contains no occupied seats, or -1 if every row has at least one occupied seat: public static int firstEmptyRow(int[][] seats). Assume totalOccupied works as intended regardless of your answer to part (a).',
+        maxPoints: 5,
         rubric: [
-          { points: 1, description: 'Presents arguments from multiple sides', keywords: ['on one hand', 'however', 'alternatively', 'supporters', 'critics', 'proponents', 'opponents'] }
+          { points: 2, description: 'Examines rows in order and inspects every seat in a row (inner loop or row scan)', keywords: ['for', 'row', 'seats[r]'] },
+          { points: 2, description: 'Correctly detects an all-empty row (no 1s) and returns its index immediately', keywords: ['return r', 'boolean', 'flag', 'all zero'] },
+          { points: 1, description: 'Returns -1 after the loop when no empty row exists', keywords: ['return -1', '-1'] }
         ],
-        sampleAnswer: 'Proponents argue that [argument for one side]. Critics counter that [argument for the other side].',
+        sampleAnswer: 'public static int firstEmptyRow(int[][] seats)\n{\n    for (int r = 0; r < seats.length; r++)\n    {\n        boolean empty = true;\n        for (int c = 0; c < seats[r].length; c++)\n        {\n            if (seats[r][c] == 1)\n            {\n                empty = false;\n            }\n        }\n        if (empty)\n        {\n            return r;\n        }\n    }\n    return -1;\n}',
       },
-      {
-        label: '(c)',
-        prompt: 'Using evidence, explain which side you find more persuasive.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Takes a position with supporting evidence', keywords: ['because', 'evidence', 'support', 'persuasive', 'convincing', 'therefore', 'data'] }
-        ],
-        sampleAnswer: 'I find [position] more persuasive because [specific evidence]. The evidence suggests that [conclusion].',
-      },
-      {
-        label: '(d)',
-        prompt: 'Explain how this debate reflects broader themes in AP Computer Science A.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Connects to course themes', keywords: ['theme', 'broader', 'connects', 'reflects', 'illustrates', 'course'] }
-        ],
-        sampleAnswer: 'This debate reflects broader themes in AP Computer Science A because [connection to course themes]. It illustrates [broader principle or pattern].',
-      }
     ],
-    totalPoints: 4,
-    timeRecommendation: '~12 minutes',
+    totalPoints: 9,
+    timeRecommendation: '~20 minutes',
     calculatorAllowed: false,
   }
 ]

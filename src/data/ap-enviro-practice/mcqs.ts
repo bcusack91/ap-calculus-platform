@@ -847,17 +847,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'Greenhouse gases ($H_{2}O$, $CO_{2}$, $CH_{4}$, $N_{2}O$) trap outgoing infrared radiation, warming the lower atmosphere. The natural greenhouse effect makes Earth habitable; enhanced effect drives climate change.',
   },
   {
+    question: 'Which of the following correctly ranks these greenhouse gases from LOWEST to HIGHEST global warming potential per molecule (over a 100-year horizon)?',
+    options: ['CFCs < N2O < CH4 < CO2', 'CH4 < CO2 < N2O < CFCs', 'CO2 < CH4 < N2O < CFCs', 'N2O < CFCs < CO2 < CH4'],
+    correctAnswer: 2,
+    explanation: 'Global warming potential compares heat-trapping ability per molecule relative to CO2 (GWP = 1). Methane is roughly 25x CO2, nitrous oxide roughly 300x, and CFCs range into the thousands. CO2 matters most overall only because it is by far the most abundant anthropogenic greenhouse gas.',
     type: 'mcq',
     topic: 'unit-9-global-change',
-    question: 'Which of the following gases has the GREATEST global warming potential per molecule (over a 100-year horizon)?',
-    options: [
-      'Carbon dioxide $(CO_{2})$',
-      'Methane $(CH_{4})$',
-      'Nitrous oxide $(N_{2}O)$',
-      'Sulfur hexafluoride $(SF_{6})$',
-    ],
-    correctAnswer: 3,
-    explanation: 'Per molecule, $SF_{6}$ (used in electrical insulation) has GWP > 23,000× $CO_{2}$ over 100 yrs. $CO_{2}$ is most ABUNDANT but lowest GWP per molecule among these.',
   },
   {
     type: 'mcq',

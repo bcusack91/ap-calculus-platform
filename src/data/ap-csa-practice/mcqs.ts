@@ -34,12 +34,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'Floating-point arithmetic in Java is not exact; 0.1 + 0.2 is 0.30000000000000004. The standard idiom is to test that the absolute difference is below a small tolerance.',
   },
   {
+    question: 'What is the value of `result`?\n```java\ndouble result = (double) (7 / 2) + 7 % 2;\n```',
+    options: ['4.5', '4.0', '3.5', '5.0'],
+    correctAnswer: 1,
+    explanation: 'The parentheses force 7 / 2 to be evaluated first as integer division, giving 3; the cast then produces 3.0 — too late to recover the fraction. 7 % 2 = 1, so result = 3.0 + 1 = 4.0. To get 4.5 the cast would need to apply to an operand: (double) 7 / 2.',
     type: 'mcq',
     topic: 'primitive-types',
-    question: 'What is the value of `result` after this code executes?\n```java\nint x = 10;\nint result = ++x + x++ + --x;\n```',
-    options: ['30', '31', '32', '33'],
-    correctAnswer: 3,
-    explanation: '++x: x becomes 11, expression value 11. x++: expression value 11, then x becomes 12. --x: x becomes 11, expression value 11. Sum: 11 + 11 + 11 = 33.',
   },
   {
     type: 'mcq',
@@ -97,12 +97,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'Java does not allow chained comparisons. Both endpoints must be tested with &&. Using || would always be true. Using > / < excludes the endpoints.',
   },
   {
+    question: 'What is printed?\n```java\nboolean p = true, q = false;\nSystem.out.println((p && q) || (!p && !q));\nSystem.out.println(!(p || q));\n```',
+    options: ['true then true', 'true then false', 'false then true', 'false then false'],
+    correctAnswer: 3,
+    explanation: '(p && q) is false; (!p && !q) is false && true = false; false || false prints false. For the second line, p || q is true, so !(p || q) prints false. Note the first expression is true exactly when p and q are equal — here they differ.',
     type: 'mcq',
     topic: 'boolean-expressions',
-    question: 'What is printed?\n```java\nboolean p = true, q = false;\nSystem.out.println((p && q) || (!p && !q) ? "X" : "Y");\n```',
-    options: ['X', 'Y', '(prints true)', '(prints false)'],
-    correctAnswer: 1,
-    explanation: '(p && q) is false, (!p && !q) is (false && true) = false. The OR is false, so the ternary evaluates to "Y".',
   },
 
   /* ---- Unit 4: Iteration ---- */
@@ -273,17 +273,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'When list.remove(i) succeeds, all later elements shift left by one, but i still increments. If list[i] and list[i+1] were both negative, the second one shifts into position i and is skipped. The fix is to decrement i after removal, or iterate in reverse, or use an Iterator.',
   },
   {
+    question: 'An ArrayList<Integer> list contains [4, 8, 15, 16]. What does the call `list.remove(1)` do, and what does it return?',
+    options: ['Removes the first occurrence of the value 1, if present, and returns true', 'Removes the element at index 1 (the value 8), shifts later elements left, and returns 8', 'Removes the element at index 1 and returns nothing (void)', 'Throws an IndexOutOfBoundsException because 1 is not in the list'],
+    correctAnswer: 1,
+    explanation: 'In the AP subset, remove(int index) removes and returns the element at the given index; elements to its right shift left and size decreases by 1. The list becomes [4, 15, 16] and the removed Integer 8 is returned.',
     type: 'mcq',
     topic: 'arraylist',
-    question: 'Which call is the correct way to remove the first occurrence of the integer value 7 from `ArrayList<Integer> list`?',
-    options: [
-      'list.remove(7);',
-      'list.remove(Integer.valueOf(7));',
-      'list.delete(7);',
-      'list.removeFirst(7);',
-    ],
-    correctAnswer: 1,
-    explanation: 'list.remove(7) calls the remove(int index) overload — removing element at index 7. To remove by value, pass an Integer object: Integer.valueOf(7).',
   },
   {
     type: 'mcq',
@@ -363,17 +358,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'C.value() = 4 + B.value() = 4 + (2 + A.value()) = 4 + 2 + 1 = 7.',
   },
   {
+    question: 'Given:\n```java\npublic class Shape {\n  public double area() { return 0.0; }\n}\npublic class Circle extends Shape {\n  private double r;\n  public Circle(double r) { this.r = r; }\n  public double area() { return 3.14159 * r * r; }\n}\n```\nWhich declaration compiles, and when `area()` is called through that variable, executes Circle\'s version?',
+    options: ['Shape s = new Shape();', 'Circle c = new Shape();', 'Shape s = new Circle(2.0);', 'None — the declared (reference) type always determines which area() runs'],
+    correctAnswer: 2,
+    explanation: 'A superclass reference may refer to a subclass object, so Shape s = new Circle(2.0); compiles. At runtime, the object\'s actual type (Circle) determines which overridden method executes — s.area() returns about 12.57. Circle c = new Shape(); does not compile, and option D describes static rather than dynamic dispatch.',
     type: 'mcq',
     topic: 'inheritance',
-    question: 'Which is the correct way to test whether the variable `obj` (declared as `Object`) refers to a String AND, if so, to use it as one?',
-    options: [
-      'if (obj == String) { String s = obj; ... }',
-      'if (obj instanceof String) { String s = (String) obj; ... }',
-      'if (obj.getClass() = "String") { ... }',
-      'if (obj.equals(String)) { String s = obj; ... }',
-    ],
-    correctAnswer: 1,
-    explanation: 'Use `instanceof` to test runtime type, then cast to use the more specific reference. The other forms are syntactically invalid or semantically wrong.',
   },
   {
     type: 'mcq',

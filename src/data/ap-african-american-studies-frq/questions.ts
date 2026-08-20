@@ -276,12 +276,12 @@ const shortFRQs: AASFRQ[] = [
       },
       {
         label: "(d)",
-        prompt: "Identify ONE limitation of using Equiano's *Narrative* as evidence about the Middle Passage.",
+        prompt: "Equiano published his *Narrative* in 1789, more than thirty years after the events it describes, as part of the British abolitionist campaign. Using this information, explain ONE limitation of using the *Narrative* as evidence about the Middle Passage.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "Identifies a valid limitation (single perspective; written 30+ years after events; recent scholarship questioning birthplace)", keywords: ["single", "perspective", "memory", "decades later", "Carretta", "South Carolina", "birthplace", "limit"] }
+          { points: 1, description: "Explains a valid source-analysis limitation (single retrospective perspective; written decades after the events; shaped by its persuasive purpose and abolitionist audience; cannot represent the range of experiences across thousands of voyages)", keywords: ["single", "perspective", "memory", "decades later", "persuasive", "audience", "purpose", "limit"] }
         ],
-        sampleAnswer: "Recent scholarship (notably by Vincent Carretta) has raised questions about whether Equiano was actually born in Africa or in colonial South Carolina, which complicates — though does not negate — the use of his narrative as direct testimony of the Middle Passage.",
+        sampleAnswer: "Equiano wrote his Narrative more than thirty years after the events, as a persuasive text for a British abolitionist audience, so it is a single retrospective perspective shaped by its rhetorical purpose and cannot represent the range of experiences across thousands of Middle Passage voyages.",
       }
     ],
     totalPoints: 4,

@@ -232,9 +232,9 @@ const longFRQ3: Physics2FRQ = {
   id: 'phys2-frq-long-3',
   type: 'long',
   unit: 1,
-  title: 'Fluid Dynamics and Thermodynamics: Pipe Flow and Heat Engine Cycle',
+  title: 'Thermodynamics: Ideal Gas States and a Heat Engine Cycle',
   prompt:
-    'Part I concerns fluid flow through a horizontal pipe system. Part II concerns a heat engine operating on an ideal gas cycle.',
+    'A heat engine operates on n = 0.12 mol of an ideal gas taken around the cycle described below. Use R = 8.31 J/(mol\u00b7K).',
   totalPoints: 7,
   timeRecommendation: '~25 minutes',
   calculatorAllowed: true,
@@ -242,40 +242,40 @@ const longFRQ3: Physics2FRQ = {
     {
       label: '(a)',
       prompt:
-        'Water flows steadily through a horizontal pipe that narrows from a cross-sectional area $A_1 = 4.0 \\times 10^{-3}\\,\\text{m}^2$ to $A_2 = 1.0 \\times 10^{-3}\\,\\text{m}^2$. The speed of the water in the wider section is $v_1 = 1.5\\,\\text{m/s}$. Using the continuity equation, calculate the speed $v_2$ in the narrow section.',
+        'At the start of the cycle the gas is at pressure $P = 3.0 \\times 10^5\\,\\text{Pa}$ and volume $V_1 = 2.0 \\times 10^{-3}\\,\\text{m}^3$. Use the ideal gas law to calculate the temperature $T_1$ of the gas at this state.',
       maxPoints: 1,
       rubric: [
         {
           points: 1,
           description:
-            'Applies continuity equation $A_1 v_1 = A_2 v_2$ and solves: $v_2 = A_1 v_1 / A_2 = (4.0 \\times 10^{-3})(1.5)/(1.0 \\times 10^{-3}) = 6.0\\,\\text{m/s}$.',
-          keywords: ['continuity equation', 'A1v1 = A2v2', '6.0 m/s', 'conservation of mass'],
+            'Applies $PV = nRT$ and solves: $T_1 = PV_1/(nR) = (3.0 \\times 10^5)(2.0 \\times 10^{-3})/((0.12)(8.31)) \\approx 6.0 \\times 10^2\\,\\text{K}$.',
+          keywords: ['PV = nRT', '600 K', '6.0 × 10² K', 'ideal gas law'],
         },
       ],
       sampleAnswer:
-        'By the continuity equation for incompressible flow: $A_1 v_1 = A_2 v_2$. Solving: $v_2 = A_1 v_1 / A_2 = (4.0 \\times 10^{-3})(1.5) / (1.0 \\times 10^{-3}) = 6.0\\,\\text{m/s}$.',
+        '$T_1 = PV_1/(nR) = (3.0 \\times 10^5)(2.0 \\times 10^{-3}) / ((0.12)(8.31)) = 600/0.997 \\approx 6.0 \\times 10^2\\,\\text{K}$.',
     },
     {
       label: '(b)',
       prompt:
-        'The pressure in the wider section is $P_1 = 2.50 \\times 10^5\\,\\text{Pa}$. Using Bernoulli\'s equation, calculate the pressure $P_2$ in the narrow section. The density of water is $\\rho = 1000\\,\\text{kg/m}^3$.',
+        'The gas then expands isobarically to $V_2 = 5.0 \\times 10^{-3}\\,\\text{m}^3$. Calculate the temperature $T_2$ at the end of the expansion, and state whether the internal energy of the gas increased or decreased during the expansion. Justify your answer.',
       maxPoints: 2,
       rubric: [
         {
           points: 1,
           description:
-            'Writes Bernoulli\'s equation for a horizontal pipe: $P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$ (height terms cancel).',
-          keywords: ['Bernoulli\'s equation', 'horizontal pipe', 'P + ½ρv²', 'height cancels'],
+            'At constant pressure V/T is constant: $T_2 = T_1(V_2/V_1) = (6.0 \\times 10^2)(2.5) \\approx 1.5 \\times 10^3\\,\\text{K}$.',
+          keywords: ['V/T constant', '1500 K', '1.5 × 10³ K', 'isobaric'],
         },
         {
           points: 1,
           description:
-            'Correctly computes $P_2 = P_1 + \\tfrac{1}{2}\\rho(v_1^2 - v_2^2) = 2.50 \\times 10^5 + \\tfrac{1}{2}(1000)(1.5^2 - 6.0^2) = 2.50 \\times 10^5 - 16875 \\approx 2.33 \\times 10^5\\,\\text{Pa}$.',
-          keywords: ['2.33 × 10⁵ Pa', '233000 Pa', 'pressure decrease', 'numerical result'],
+            'States internal energy INCREASED because temperature increased (ideal-gas internal energy depends only on temperature).',
+          keywords: ['increased', 'temperature increased', 'internal energy depends on temperature'],
         },
       ],
       sampleAnswer:
-        'Since the pipe is horizontal, Bernoulli\'s equation gives $P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$. Solving for $P_2$: $P_2 = P_1 + \\tfrac{1}{2}\\rho(v_1^2 - v_2^2) = 2.50 \\times 10^5 + \\tfrac{1}{2}(1000)(2.25 - 36.0) = 2.50 \\times 10^5 - 16875 = 2.33 \\times 10^5\\,\\text{Pa}$. The pressure decreases in the narrow section, consistent with faster flow.',
+        'At constant pressure, $V_1/T_1 = V_2/T_2$, so $T_2 = T_1(V_2/V_1) = (6.0 \\times 10^2)(5.0/2.0) \\approx 1.5 \\times 10^3\\,\\text{K}$. The internal energy of an ideal gas depends only on temperature; since T rose from about 600 K to about 1500 K, the internal energy INCREASED.',
     },
     {
       label: '(c)',

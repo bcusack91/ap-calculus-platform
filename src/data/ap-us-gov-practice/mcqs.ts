@@ -405,20 +405,12 @@ export const MCQS: MCQItem[] = [
       'Stare decisis ("let the decision stand") is the doctrine that courts should generally follow established precedent for predictability and stability.',
   },
   {
+    question: 'The EPA\'s power to issue this regulation is best described as an example of:',
+    options: ['Judicial review exercised by an executive-branch agency.', 'An enumerated power granted to the president in Article II.', 'A concurrent power shared equally with state legislatures.', 'Discretionary and rule-making authority delegated to the bureaucracy by Congress.'],
+    correctAnswer: 3,
+    explanation: 'Congress delegates authority to agencies like the EPA, which use discretionary and rule-making authority to implement policy with the force of law. Groups that object can challenge the rule in federal court or lobby Congress to narrow the agency\'s statutory authority — key checks on the bureaucracy.',
     type: 'mcq',
     topic: 'unit-2-branches',
-    stimulus:
-      'Scenario: A new federal regulation issued by the Environmental Protection Agency limits methane emissions from oil and gas wells. Industry groups argue the regulation exceeds the agency\'s statutory authority.',
-    question: 'The judicial doctrine that historically required courts to defer to a federal agency\'s reasonable interpretation of an ambiguous statute it administers is known as:',
-    options: [
-      'The political question doctrine.',
-      'Chevron deference.',
-      'The Lemon test.',
-      'Strict scrutiny.',
-    ],
-    correctAnswer: 1,
-    explanation:
-      'Chevron v. NRDC (1984) established the long-standing doctrine of Chevron deference (since significantly limited or overturned by Loper Bright in 2024, but still part of the AP curriculum framework).',
   },
   {
     type: 'mcq',

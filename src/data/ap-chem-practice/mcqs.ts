@@ -131,25 +131,20 @@ export const MCQS: MCQItem[] = [
     explanation: '$n = 5.0/40 = 0.125$ mol. $M = 0.125/0.250 = 0.50$ M.',
   },
   {
+    question: 'In a paper chromatography experiment, one dye in a mixture travels nearly as far as the solvent front. Which statement best explains this observation?',
+    options: ['The dye is more strongly attracted to the stationary phase than to the mobile phase', 'The dye is more strongly attracted to the mobile phase than to the stationary phase', 'The dye has the largest molar mass of the components in the mixture', 'The dye is insoluble in the mobile phase'],
+    correctAnswer: 1,
+    explanation: 'A large $R_f$ means the component spends most of its time dissolved in the mobile phase: its intermolecular attractions to the mobile phase outcompete its attractions to the stationary phase, so it is carried nearly as far as the solvent front.',
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    question: 'Which solution has the highest boiling point elevation?',
-    options: ['0.10 m glucose', '0.10 m NaCl', '0.10 m $\\text{CaCl}_2$', '0.10 m sucrose'],
-    correctAnswer: 2,
-    explanation: 'Boiling point elevation $\\propto i \\cdot m$. Glucose, sucrose: $i = 1$. NaCl: $i = 2$. $CaCl_{2}$: $i = 3$ ⇒ greatest effect.',
   },
   {
+    question: 'Equal moles of He (4 g/mol) and $\\text{CH}_4$ (16 g/mol) are held in separate containers at the same temperature. Which statement is correct?',
+    options: ['The gases have the same average kinetic energy, but the He atoms have the higher average speed', 'The $\\text{CH}_4$ molecules have both higher average kinetic energy and higher average speed', 'The He atoms have the higher average kinetic energy', 'The two gases have the same average particle speed'],
+    correctAnswer: 0,
+    explanation: 'At a given temperature all gases have the same average kinetic energy. Since $KE = \\tfrac{1}{2}mv^2$, the lighter He atoms must have the higher average (rms) speed.',
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    question: 'A solution exhibits negative deviation from Raoult\'s law when',
-    options: [
-      'solute-solvent interactions are stronger than solute-solute and solvent-solvent',
-      'solute-solvent interactions are weaker than the pure components',
-      'the solution behaves ideally',
-      'gases dissolve in the liquid',
-    ],
-    correctAnswer: 0,
-    explanation: 'Negative deviation: stronger attractive forces in solution than in pure components ⇒ less escape to vapor ⇒ lower vapor pressure than predicted.',
   },
 
   /* ---- U4 Chemical Reactions (5) ---- */

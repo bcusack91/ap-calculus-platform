@@ -14,43 +14,38 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
  */
 
 export const MCQS: MCQItem[] = [
-  /* ---- U1 Fluids (4) ---- */
+  /* ---- U1 Waves, Sound & Physical Optics (4) — unit moved into Physics 2 in the 2024-25 CED ---- */
   {
     type: 'mcq',
-    topic: 'unit-1-fluids',
-    question: 'A solid object floats with 80% of its volume submerged in water ($\\rho_{water} = 1000$ $kg/m^{3}$). The density of the object is',
-    options: ['200 $kg/m^{3}$', '500 $kg/m^{3}$', '800 $kg/m^{3}$', '1250 $kg/m^{3}$'],
-    correctAnswer: 2,
-    explanation: 'Floating: $\\rho_{obj}/\\rho_{fluid} = $ submerged fraction $= 0.80 \\Rightarrow \\rho_{obj} = 800$ $kg/m^{3}$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-1-fluids',
-    question: 'Water flows through a horizontal pipe of varying cross-section. At a wide section the pressure is high. At a narrow section, by Bernoulli\'s principle,',
-    options: [
-      'pressure is higher and speed is higher',
-      'pressure is higher and speed is lower',
-      'pressure is lower and speed is higher',
-      'pressure is lower and speed is lower',
-    ],
-    correctAnswer: 2,
-    explanation: 'Continuity: smaller area ⇒ higher speed. Bernoulli: higher speed ⇒ lower pressure (in horizontal flow).',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-1-fluids',
-    question: 'A hydraulic lift uses incompressible fluid. A 100 N force on the small piston $(area 0.01 m^{2})$ lifts a load on the large piston $(area 0.10 m^{2})$. Maximum load is',
-    options: ['10 N', '100 N', '1000 N', '10000 N'],
-    correctAnswer: 2,
-    explanation: 'Pascal: $F_2 = F_1(A_2/A_1) = 100(10) = 1000$ N.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-1-fluids',
-    question: 'A tank of water has a hole at depth 5 m below the surface. The exit speed of water (use $g = 10$ $m/s^{2}$) is',
-    options: ['5 m/s', '10 m/s', '50 m/s', '100 m/s'],
+    topic: 'unit-1-waves-sound',
+    question: 'A wave on a string has frequency 20 Hz and wavelength 0.40 m. Its speed is',
+    options: ['0.02 m/s', '8 m/s', '20 m/s', '50 m/s'],
     correctAnswer: 1,
-    explanation: 'Torricelli: $v = \\sqrt{2gh} = \\sqrt{100} = 10$ m/s.',
+    explanation: '$v = f\\lambda = 20 \\times 0.40 = 8$ m/s. Dividing frequency by wavelength gives the 50 m/s trap.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-waves-sound',
+    question: 'A pipe open at both ends resonates at a fundamental frequency of 200 Hz. Its next (second) harmonic is at',
+    options: ['100 Hz', '300 Hz', '400 Hz', '600 Hz'],
+    correctAnswer: 2,
+    explanation: 'An open-open pipe supports all integer harmonics: $f_n = nf_1$, so the second harmonic is $2 \\times 200 = 400$ Hz. Only an open-closed pipe is restricted to odd harmonics.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-waves-sound',
+    question: 'In a double-slit experiment, the slit separation is doubled while the wavelength and screen distance are unchanged. The spacing between adjacent bright fringes',
+    options: ['is halved', 'is unchanged', 'doubles', 'quadruples'],
+    correctAnswer: 0,
+    explanation: 'Fringe spacing is proportional to $\\lambda L/d$, so doubling the slit separation $d$ halves the spacing between bright fringes.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-waves-sound',
+    question: 'An ambulance siren is heard by a stationary observer as the ambulance moves away at constant speed. Compared to the emitted frequency, the observed frequency is',
+    options: ['higher and increasing', 'higher and constant', 'lower and constant', 'lower and decreasing'],
+    correctAnswer: 2,
+    explanation: 'A receding source at constant speed produces a Doppler shift to a lower frequency that stays constant while the speed is constant — the pitch does not keep dropping.',
   },
 
   /* ---- U2 Thermodynamics (6) ---- */

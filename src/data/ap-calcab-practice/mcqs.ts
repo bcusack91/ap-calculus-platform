@@ -477,12 +477,12 @@ export const MCQS: MCQItem[] = [
     explanation: 'Compute $T_4=\\frac{1}{2}[\\ln 1 + 2\\ln 2 + 2\\ln 3 + 2\\ln 4 + \\ln 5]\\approx 3.84$. (Exact $\\approx 3.95$.)',
   },
   {
+    question: 'If $\\dfrac{dy}{dx} = 2xy$ and $y(0) = 3$, then $y(1) = $',
+    options: ['$3e$', '$3e^2$', '$6e$', '$e^3$'],
+    correctAnswer: 0,
+    explanation: 'Separate: $\\dfrac{dy}{y} = 2x\\,dx \\Rightarrow \\ln|y| = x^2 + C \\Rightarrow y = 3e^{x^2}$. At $x = 1$: $y = 3e$.',
     type: 'mcq',
     topic: 'unit-7-differential-equations',
-    question: 'Use Euler\'s method with $\\Delta x = 0.5$ to approximate $y(1)$ for $y\' = x+y$, $y(0)=1$.',
-    options: ['$1.50$', '$1.75$', '$2.25$', '$2.50$'],
-    correctAnswer: 3,
-    explanation: 'Step1: $y_1=1+0.5(0+1)=1.5$ at $x=0.5$. Step2: $y_2=1.5+0.5(0.5+1.5)=1.5+1=2.5$ at $x=1$.',
   },
   {
     type: 'mcq',

@@ -26,11 +26,11 @@ export const apPsychQuestionPool: APPsychQuestion[] = [
   //  1. HISTORY & APPROACHES
   // ══════════════════════════════════════════════════════════════════
   {
-    question: 'Wilhelm Wundt is credited with establishing the first psychology laboratory in 1879. His approach, which focused on breaking down mental processes into their most basic components, is known as:',
-    options: ['Functionalism', 'Structuralism', 'Behaviorism', 'Psychoanalysis'],
-    correctAnswer: 1,
-    explanation: 'Wundt\'s structuralism aimed to analyze the basic elements of consciousness through introspection.',
-    difficulty: 'easy',
+    question: 'A researcher wants to generalize survey results about study habits to all students at a large high school. Which procedure best supports that goal?',
+    options: ['Randomly assigning students to experimental groups', 'Surveying every student in one honors class', 'Selecting a random sample of students from the entire school', 'Increasing the number of questions on the survey'],
+    correctAnswer: 2,
+    explanation: 'Random sampling gives every member of the population an equal chance of being selected, so results can generalize to the whole school. (Random assignment controls confounds within an experiment; it does not improve generalizability.)',
+    difficulty: 'medium',
     domain: 'history-approaches',
     topicSlug: 'history-approaches-psychology',
     formSet: 'A',
@@ -56,11 +56,11 @@ export const apPsychQuestionPool: APPsychQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'William James, who focused on how mental processes help organisms adapt to their environment, is associated with which school of thought?',
-    options: ['Structuralism', 'Functionalism', 'Gestalt psychology', 'Behaviorism'],
-    correctAnswer: 1,
-    explanation: 'James\'s functionalism focused on the purpose and function of mental processes, influenced by Darwin\'s theory of evolution.',
-    difficulty: 'easy',
+    question: 'A study reports that the difference in test scores between the treatment and control groups is statistically significant (p < .05). This means that:',
+    options: ['The difference is large enough to be practically important', 'The hypothesis has been proven true', 'The effect size must be large', 'The observed difference is unlikely to have occurred by chance alone'],
+    correctAnswer: 3,
+    explanation: 'Statistical significance at p < .05 means there is less than a 5% probability of observing a difference this large if the null hypothesis were true — i.e., the result is unlikely due to chance. It does not by itself indicate practical importance or a large effect size.',
+    difficulty: 'medium',
     domain: 'history-approaches',
     topicSlug: 'history-approaches-psychology',
     formSet: 'B',

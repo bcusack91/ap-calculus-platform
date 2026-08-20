@@ -34,47 +34,49 @@ const longFRQs: EngLitFRQ[] = [
     id: 'englit-long-1',
     type: 'long' as const,
     unit: 1,
-    title: 'Short Fiction: Character Analysis',
-    prompt: `A student is studying Short Fiction: Character in AP English Literature. Using your knowledge of course concepts, analyze the following scenario and answer the questions below.`,
+    title: 'Prose Fiction Analysis: Austen\'s Mr. Collins',
+    prompt: `In the following excerpt from Jane Austen's novel Pride and Prejudice (1813), the narrator introduces Mr. Collins, a clergyman and distant cousin of the Bennet family. Read the passage carefully. Then, in the parts below, develop a defensible thesis, support it with specific textual evidence, explain your line of reasoning, and demonstrate a sophisticated understanding of how Austen uses literary techniques to characterize Mr. Collins and to convey the narrator's attitude toward him.
+
+"Mr. Collins was not a sensible man, and the deficiency of nature had been but little assisted by education or society; the greatest part of his life having been spent under the guidance of an illiterate and miserly father; and though he belonged to one of the universities, he had merely kept the necessary terms, without forming at it any useful acquaintance. The subjection in which his father had brought him up had given him originally great humility of manner; but it was now a good deal counteracted by the self-conceit of a weak head, living in retirement, and the consequential feelings of early and unexpected prosperity. A fortunate chance had recommended him to Lady Catherine de Bourgh when the living of Hunsford was vacant; and the respect which he felt for her high rank, and his veneration for her as his patroness, mingling with a very good opinion of himself, of his authority as a clergyman, and his right as a rector, made him altogether a mixture of pride and obsequiousness, self-importance and humility."`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Define a key concept related to Short Fiction: Character and explain its significance.',
-        maxPoints: 2,
+        prompt: 'State a defensible thesis that presents an interpretation of how Austen uses literary techniques to characterize Mr. Collins in this passage.',
+        maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Provides an accurate definition of a concept from Short Fiction: Character', keywords: ['define', 'definition', 'concept', 'means', 'refers to'] },
-          { points: 1, description: 'Explains significance or application', keywords: ['significant', 'important', 'because', 'therefore', 'impact', 'effect'] }
+          { points: 1, description: 'Presents a defensible thesis that makes an interpretive claim about how Austen characterizes Mr. Collins, rather than restating the prompt or summarizing the passage', keywords: ['thesis', 'claim', 'characterizes', 'diction', 'irony', 'narrator', 'satirize'] }
         ],
-        sampleAnswer: 'A key concept in Short Fiction: Character is [concept]. This concept is significant because it helps explain [application]. Understanding this concept is essential for analyzing broader patterns in AP English Literature.',
+        sampleAnswer: 'Through the narrator\'s bluntly judgmental diction, a mock-logical accounting of Mr. Collins\'s upbringing, and the balanced antithetical phrasing of the closing sentence, Austen characterizes Mr. Collins as a man whose servility and vanity are two halves of the same shallow mind, inviting the reader to regard him with amused contempt rather than sympathy.',
       },
       {
         label: '(b)',
-        prompt: 'Identify TWO specific examples that illustrate Short Fiction: Character.',
+        prompt: 'Identify TWO specific pieces of textual evidence — quoted words or phrases from the passage — that support your thesis.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Provides one relevant example', keywords: ['example', 'instance', 'such as', 'for instance', 'case'] },
-          { points: 1, description: 'Provides a second relevant example', keywords: ['another', 'additionally', 'second', 'also', 'furthermore'] }
+          { points: 1, description: 'Quotes or specifically references one relevant detail from the passage (e.g., "not a sensible man," "the self-conceit of a weak head")', keywords: ['sensible', 'weak head', 'self-conceit', 'quote', 'passage', 'phrase'] },
+          { points: 1, description: 'Quotes or specifically references a second, distinct relevant detail (e.g., the closing antithesis "pride and obsequiousness, self-importance and humility")', keywords: ['pride', 'obsequiousness', 'humility', 'veneration', 'patroness', 'second'] }
         ],
-        sampleAnswer: 'Two examples of Short Fiction: Character include: (1) [Example 1 with specific details], and (2) [Example 2 with specific details]. Both examples demonstrate the core principles of this topic.',
+        sampleAnswer: 'First, the narrator opens with the flatly dismissive judgment that Mr. Collins "was not a sensible man," a verdict later sharpened into the diagnosis of "the self-conceit of a weak head." Second, the passage closes with the balanced antithesis that he is "a mixture of pride and obsequiousness, self-importance and humility," a sentence whose parallel structure pairs each of his vanities with its matching servility.',
       },
       {
         label: '(c)',
-        prompt: 'Explain how Short Fiction: Character connects to Short Fiction: Plot.',
-        maxPoints: 2,
+        prompt: 'Explain how your evidence supports your thesis. Build a line of reasoning that connects Austen\'s specific choices of diction and syntax to the characterization of Mr. Collins.',
+        maxPoints: 3,
         rubric: [
-          { points: 1, description: 'Identifies a valid connection between Short Fiction: Character and Short Fiction: Plot', keywords: ['connect', 'relate', 'link', 'influence', 'affect', 'lead to'] },
-          { points: 1, description: 'Explains the mechanism of connection', keywords: ['because', 'through', 'by means of', 'resulting in', 'mechanism'] }
+          { points: 1, description: 'Explains how the first piece of evidence develops the characterization (e.g., the narrator\'s blunt opening judgment establishes an authoritative, mocking frame before Collins ever speaks)', keywords: ['because', 'diction', 'establishes', 'narrator', 'judgment', 'frame'] },
+          { points: 1, description: 'Explains how the second piece of evidence develops the characterization (e.g., the antithetical pairings show that his flattery of rank and his vanity feed each other)', keywords: ['antithesis', 'balanced', 'parallel', 'servility', 'vanity', 'syntax'] },
+          { points: 1, description: 'Connects the pieces of evidence into a coherent line of reasoning about the passage as a whole rather than treating them as isolated observations', keywords: ['line of reasoning', 'together', 'overall', 'whole', 'therefore', 'cumulative'] }
         ],
-        sampleAnswer: 'Short Fiction: Character connects to Short Fiction: Plot through shared underlying principles. Specifically, the processes that drive Short Fiction: Character also influence Short Fiction: Plot because [mechanism]. This interconnection is a key theme in AP English Literature.',
+        sampleAnswer: 'The opening verdict that Collins "was not a sensible man" matters because Austen delivers it in the narrator\'s cool, authoritative voice before Collins has spoken a single word: every subsequent detail — the "illiterate and miserly father," the university years spent "without forming at it any useful acquaintance" — reads as evidence in a case already decided. The closing antithesis then explains why his particular foolishness takes the shape it does: the parallel syntax of "pride and obsequiousness, self-importance and humility" yokes each vanity to its matching servility, suggesting that his groveling before Lady Catherine and his "very good opinion of himself" are not contradictions but twin products of the same weak head. Together, the blunt opening judgment and the tidy closing summary frame the paragraph as a mock-rational audit of a character, so that the passage\'s very orderliness becomes the vehicle of its ridicule.',
       },
       {
         label: '(d)',
-        prompt: 'Evaluate the long-term implications of changes in Short Fiction: Character.',
+        prompt: 'Demonstrate sophistication: identify and explore a complexity, tension, or broader implication in the passage that goes beyond your basic argument.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Provides a thoughtful evaluation of implications', keywords: ['implication', 'consequence', 'future', 'long-term', 'result', 'outcome', 'trend'] }
+          { points: 1, description: 'Identifies and explores a genuine complexity — e.g., the irony that a clergyman\'s "veneration" is directed at aristocratic rank rather than religion, or the satire\'s extension from one man to the patronage system itself', keywords: ['irony', 'complexity', 'tension', 'clergyman', 'rank', 'patronage'] }
         ],
-        sampleAnswer: 'Changes in Short Fiction: Character have significant long-term implications including [consequence]. As these trends continue, we can expect [future development], which will require [response or adaptation].',
+        sampleAnswer: 'The deepest irony is that Collins\'s "veneration" — a word that should describe religious devotion — is directed entirely at Lady Catherine\'s "high rank" rather than at anything sacred, even though he holds "authority as a clergyman." Austen thereby widens the satire beyond one fool: because the "living of Hunsford" was his by "a fortunate chance" of aristocratic favor, the passage quietly indicts a social system in which church positions are dispensed through patronage, so that obsequiousness, not sense or piety, is what the institution actually rewards.',
       }
     ],
     totalPoints: 7,
@@ -85,47 +87,67 @@ const longFRQs: EngLitFRQ[] = [
     id: 'englit-long-2',
     type: 'long' as const,
     unit: 1,
-    title: 'Dramatic Structure & Social Commentary',
-    prompt: `Consider the relationship between Dramatic Structure and Social Commentary. Using evidence and reasoning from AP English Literature, address the following.`,
+    title: 'Poetry Analysis: Blake\'s "London"',
+    prompt: `The following poem, "London," was written by William Blake and published in Songs of Experience (1794). Read the poem carefully. Then, in the parts below, develop a defensible thesis, support it with specific textual evidence, explain your line of reasoning, and demonstrate a sophisticated understanding of how Blake uses poetic elements and techniques — such as imagery, repetition, and figurative language — to convey the speaker's complex attitude toward the city and its institutions.
+
+I wander thro' each charter'd street,
+Near where the charter'd Thames does flow,
+And mark in every face I meet
+Marks of weakness, marks of woe.
+
+In every cry of every Man,
+In every Infant's cry of fear,
+In every voice, in every ban,
+The mind-forg'd manacles I hear:
+
+How the Chimney-sweeper's cry
+Every blackning Church appalls;
+And the hapless Soldier's sigh
+Runs in blood down Palace walls.
+
+But most thro' midnight streets I hear
+How the youthful Harlot's curse
+Blasts the new born Infant's tear,
+And blights with plagues the Marriage hearse.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Compare and contrast Dramatic Structure with Social Commentary.',
-        maxPoints: 2,
+        prompt: 'State a defensible thesis that presents an interpretation of the speaker\'s attitude toward London and identifies poetic techniques that convey it.',
+        maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Identifies a valid similarity between Dramatic Structure and Social Commentary', keywords: ['similar', 'both', 'share', 'common', 'alike'] },
-          { points: 1, description: 'Identifies a valid difference between Dramatic Structure and Social Commentary', keywords: ['differ', 'unlike', 'contrast', 'whereas', 'however', 'but'] }
+          { points: 1, description: 'Presents a defensible thesis making an interpretive claim about the speaker\'s attitude and the techniques that convey it, rather than merely paraphrasing the poem', keywords: ['thesis', 'claim', 'attitude', 'speaker', 'repetition', 'imagery', 'indictment'] }
         ],
-        sampleAnswer: 'Dramatic Structure and Social Commentary are similar in that they both [shared characteristic]. However, they differ in that Dramatic Structure focuses on [aspect] while Social Commentary emphasizes [different aspect].',
+        sampleAnswer: 'Through the obsessive repetition of "every" and "charter\'d," images that splash the suffering of the powerless directly onto the walls of the institutions that cause it, and the paradoxical metaphor of "mind-forg\'d manacles," Blake\'s speaker conveys an attitude toward London that is not mere pity but indictment: the city\'s misery is manufactured, licensed, and self-perpetuating.',
       },
       {
         label: '(b)',
-        prompt: 'Explain ONE cause-and-effect relationship within Dramatic Structure.',
+        prompt: 'Identify TWO specific pieces of textual evidence — quoted words, images, or lines from the poem — that support your thesis.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Identifies a valid cause', keywords: ['cause', 'because', 'due to', 'result of', 'driven by'] },
-          { points: 1, description: 'Explains the resulting effect', keywords: ['effect', 'result', 'consequence', 'leads to', 'outcome'] }
+          { points: 1, description: 'Quotes or specifically references one relevant detail (e.g., the repeated "charter\'d" applied to both street and Thames, or "mind-forg\'d manacles")', keywords: ['charter\'d', 'manacles', 'every', 'quote', 'image', 'repetition'] },
+          { points: 1, description: 'Quotes or specifically references a second, distinct relevant detail (e.g., the Soldier\'s sigh that "Runs in blood down Palace walls" or the closing "Marriage hearse")', keywords: ['Soldier', 'Palace', 'Church', 'Harlot', 'Marriage hearse', 'second'] }
         ],
-        sampleAnswer: 'In Dramatic Structure, [cause] leads to [effect]. This cause-and-effect relationship is important because it explains why [pattern or outcome] occurs.',
+        sampleAnswer: 'First, the speaker calls both the streets and the river "charter\'d" — even the flowing Thames is legally owned — and hears "mind-forg\'d manacles" in "every cry of every Man." Second, in the third stanza the "hapless Soldier\'s sigh / Runs in blood down Palace walls," an image that paints the cost of state power directly onto the building that commands it.',
       },
       {
         label: '(c)',
-        prompt: 'Using a specific example, explain how Social Commentary has changed over time.',
-        maxPoints: 2,
+        prompt: 'Explain how your evidence supports your thesis. Build a line of reasoning that connects Blake\'s specific poetic choices to the speaker\'s attitude toward the city.',
+        maxPoints: 3,
         rubric: [
-          { points: 1, description: 'Provides a specific historical or real-world example', keywords: ['example', 'specific', 'instance', 'case', 'historical'] },
-          { points: 1, description: 'Explains the change over time', keywords: ['change', 'evolved', 'shifted', 'transformed', 'over time', 'developed'] }
+          { points: 1, description: 'Explains how the first piece of evidence conveys the attitude (e.g., "charter\'d" turns a word of civic liberty into one of ownership, and the "every" litany makes the suffering total)', keywords: ['because', 'charter\'d', 'ownership', 'every', 'litany', 'conveys'] },
+          { points: 1, description: 'Explains how the second piece of evidence conveys the attitude (e.g., the synesthetic image of a sigh running as blood assigns responsibility to Palace and Church)', keywords: ['blood', 'Palace', 'Church', 'responsibility', 'institution', 'image'] },
+          { points: 1, description: 'Connects the evidence into a coherent line of reasoning about the poem\'s overall progression (e.g., from observation, to sound, to accusation, to the corrupted future)', keywords: ['line of reasoning', 'progression', 'stanza', 'together', 'overall', 'whole'] }
         ],
-        sampleAnswer: 'Social Commentary has changed significantly over time. For example, [specific case] demonstrates how [aspect] evolved from [earlier state] to [current state] due to [driving factor].',
+        sampleAnswer: 'The repetition of "charter\'d" is bitterly ironic because a charter was supposed to guarantee liberty; by applying the word even to the Thames, the speaker suggests that commerce and law have claimed ownership of what should be free as running water. The drumming anaphora of "every" — every face, every cry, every voice, every ban — then makes the suffering total and systematic rather than accidental, and "mind-forg\'d manacles" locates the chains partly in minds, meaning the oppression has been internalized by its victims. The third stanza converts this observation into accusation: the chimney-sweeper\'s cry "appalls" the "blackning Church" that ignores the children it should protect, and the soldier\'s sigh "Runs in blood down Palace walls," a compressed image that makes the state wear the blood it spends. Read as a progression — from what the wandering speaker sees, to what he hears, to the institutions he blames, to the "midnight streets" where the infection reaches marriage and birth itself — the poem\'s structure enacts the thesis that London\'s misery is a closed, self-perpetuating system.',
       },
       {
         label: '(d)',
-        prompt: 'Predict how current trends in Social Commentary might develop in the future.',
+        prompt: 'Demonstrate sophistication: identify and explore a complexity, tension, or paradox in the poem that goes beyond your basic argument.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Makes a reasonable prediction supported by course concepts', keywords: ['predict', 'future', 'likely', 'expect', 'trend', 'continue', 'may'] }
+          { points: 1, description: 'Identifies and explores a genuine complexity — e.g., the oxymoron "Marriage hearse," the ambiguity of "mind-forg\'d" (the victims forge their own chains), or the speaker\'s own implication in what he "marks"', keywords: ['paradox', 'oxymoron', 'Marriage hearse', 'mind-forg\'d', 'complexity', 'ambiguity'] }
         ],
-        sampleAnswer: 'Based on current trends, Social Commentary is likely to [predicted development] because [supporting reasoning from course concepts]. This prediction is supported by [evidence or pattern].',
+        sampleAnswer: 'The poem\'s final phrase, "Marriage hearse," is an oxymoron that fuses the institution meant to generate life with the vehicle of death: the harlot\'s curse — both her oath and the disease she carries — "blights" the marriage bed, so that respectable society and the exploitation it outlaws are revealed as one circulatory system. A further complexity lies in "mind-forg\'d manacles": the chains are forged by minds, including the minds of the oppressed themselves, which darkens the indictment — Blake\'s Londoners are not only shackled by Church and Palace but have learned to shackle themselves.',
       }
     ],
     totalPoints: 7,
@@ -139,44 +161,40 @@ const shortFRQs: EngLitFRQ[] = [
     id: 'englit-short-1',
     type: 'short' as const,
     unit: 1,
-    title: 'Short Fiction: Theme Application',
-    prompt: `Apply your knowledge of Short Fiction: Theme from AP English Literature to the following scenario.`,
+    title: 'Literary Argument: The Burden of a Secret',
+    prompt: `Many works of fiction feature a character who keeps a significant secret — from other characters, from society, or even from himself or herself. The character's struggle to conceal or reveal that secret often shapes the central conflict and meaning of the work.
+
+Either from your own reading or from the list below, choose a work of fiction of literary merit in which a character keeps a significant secret. Then, in the parts below, analyze how the secret and the character's concealment or revelation of it contribute to an interpretation of the work as a whole. Do not merely summarize the plot.
+
+You may wish to consider works such as: The Scarlet Letter, Jane Eyre, Great Expectations, Crime and Punishment, Their Eyes Were Watching God, Beloved, Atonement, The Kite Runner.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Define Short Fiction: Theme in the context of AP English Literature.',
+        prompt: 'State a defensible thesis that identifies your chosen work and makes an interpretive claim about how the character\'s secret contributes to the meaning of the work as a whole.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Provides accurate definition', keywords: ['define', 'means', 'refers', 'concept', 'term'] }
+          { points: 1, description: 'Presents a defensible thesis naming a specific work and character and making an interpretive claim about the secret\'s contribution to the work\'s meaning, not a plot summary', keywords: ['thesis', 'claim', 'secret', 'work as a whole', 'meaning', 'interpretation'] }
         ],
-        sampleAnswer: 'Short Fiction: Theme refers to [definition]. It is a fundamental component of AP English Literature.',
+        sampleAnswer: 'In Nathaniel Hawthorne\'s The Scarlet Letter, Arthur Dimmesdale\'s concealment of his adultery — while Hester Prynne bears their shared sin publicly — allows Hawthorne to argue that hidden guilt is more corrosive than public shame: the secret physically and spiritually destroys the man who keeps it, while open penance slowly transforms the woman who cannot.',
       },
       {
         label: '(b)',
-        prompt: 'Provide ONE specific example.',
-        maxPoints: 1,
+        prompt: 'Provide TWO specific pieces of evidence from your chosen work — particular scenes, details, or moments — that support your thesis.',
+        maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Provides a relevant, specific example', keywords: ['example', 'instance', 'such as', 'case', 'specific'] }
+          { points: 1, description: 'Provides one specific, accurate piece of evidence from the chosen work (a particular scene or detail, not a generalization)', keywords: ['scene', 'moment', 'specific', 'evidence', 'example', 'chapter'] },
+          { points: 1, description: 'Provides a second, distinct specific piece of evidence from the chosen work', keywords: ['second', 'another', 'also', 'later', 'contrast', 'additionally'] }
         ],
-        sampleAnswer: 'A specific example of this concept is [detailed example with specific names, dates, or data].',
+        sampleAnswer: 'First, in the midnight scaffold scene, Dimmesdale mounts the very platform of Hester\'s public shaming — but only in darkness, when no one can see him, and his self-flagellation and the "A" he feels burned into his own chest show concealed guilt turning inward as self-torture. Second, Hawthorne contrasts this decay with Hester\'s trajectory: years of open penance transform the meaning of her scarlet letter until townspeople say the "A" stands for "Able," while Dimmesdale can only escape his secret by confessing on the same scaffold in daylight — a revelation that frees him even as it kills him.',
       },
       {
         label: '(c)',
-        prompt: 'Explain the significance of this concept for the AP exam.',
+        prompt: 'Explain your line of reasoning: show how your evidence, taken together, supports an interpretation of the work as a whole rather than of isolated scenes.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Explains why the concept is important for the exam', keywords: ['significant', 'important', 'tested', 'appears', 'connects', 'multiple'] }
+          { points: 1, description: 'Connects the evidence into a coherent line of reasoning about the work\'s overall meaning (theme), not just the individual scenes', keywords: ['therefore', 'together', 'work as a whole', 'theme', 'suggests', 'line of reasoning'] }
         ],
-        sampleAnswer: 'This concept is significant because it connects to multiple units and appears frequently on the AP exam in both MC and FRQ formats.',
-      },
-      {
-        label: '(d)',
-        prompt: 'Explain ONE limitation or criticism of this concept.',
-        maxPoints: 1,
-        rubric: [
-          { points: 1, description: 'Identifies a valid limitation or criticism', keywords: ['limitation', 'criticism', 'however', 'does not', 'fails', 'overlooks', 'simplistic'] }
-        ],
-        sampleAnswer: 'One limitation is that [this concept] [specific criticism]. This limitation is important to recognize because [reasoning].',
+        sampleAnswer: 'Taken together, the paired scaffold scenes and the letter\'s changed meaning form the novel\'s moral architecture: the same act of adultery produces redemption when acknowledged and ruin when hidden. The variable Hawthorne isolates is not sin but secrecy. The work as a whole thus indicts a Puritan culture whose punishments make honesty unbearable — Dimmesdale\'s secret persists because his society offers no path between concealment and destruction — turning a story of private guilt into a critique of public moral spectacle.',
       }
     ],
     totalPoints: 4,
@@ -187,44 +205,64 @@ const shortFRQs: EngLitFRQ[] = [
     id: 'englit-short-2',
     type: 'short' as const,
     unit: 1,
-    title: 'Poetry: Imagery Skills',
-    prompt: `Demonstrate your analytical skills related to Poetry: Imagery in AP English Literature.`,
+    title: 'Poetry Imagery: A Certain Slant of Light',
+    prompt: `Read the following poem by Emily Dickinson (first published 1890) carefully, paying particular attention to its pattern of imagery. Then answer the parts below about how Dickinson's imagery conveys the speaker's attitude toward the winter light.
+
+There's a certain Slant of light,
+Winter Afternoons —
+That oppresses, like the Heft
+Of Cathedral Tunes —
+
+Heavenly Hurt, it gives us —
+We can find no scar,
+But internal difference —
+Where the Meanings, are —
+
+None may teach it — Any —
+'Tis the Seal Despair —
+An imperial affliction
+Sent us of the Air —
+
+When it comes, the Landscape listens —
+Shadows — hold their breath —
+When it goes, 'tis like the Distance
+On the look of Death —`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Identify a key debate or controversy related to this topic.',
+        prompt: 'Make a defensible claim about how the poem\'s pattern of imagery conveys the speaker\'s attitude toward the winter light.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Identifies a relevant debate', keywords: ['debate', 'controversy', 'disagree', 'argue', 'dispute', 'question'] }
+          { points: 1, description: 'Presents a defensible interpretive claim connecting the imagery to the speaker\'s attitude, rather than paraphrasing the poem', keywords: ['claim', 'attitude', 'imagery', 'speaker', 'oppresses', 'despair'] }
         ],
-        sampleAnswer: 'A key debate involves [description of the controversy]. Different perspectives on this issue include [perspective 1] and [perspective 2].',
+        sampleAnswer: 'By repeatedly describing the light through images of weight, wounding, and official power — a "Heft," a "Hurt," a "Seal," an "imperial affliction" — Dickinson conveys a speaker who regards the winter light with dread mixed with reverence: it is an oppressive, almost sacred force that injures the soul invisibly and cannot be resisted or explained.',
       },
       {
         label: '(b)',
-        prompt: 'Explain ONE argument on each side of this debate.',
+        prompt: 'Cite TWO specific images from the poem that support your claim.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Presents arguments from multiple sides', keywords: ['on one hand', 'however', 'alternatively', 'supporters', 'critics', 'proponents', 'opponents'] }
+          { points: 1, description: 'Quotes or specifically identifies two distinct images from the poem (e.g., "the Heft / Of Cathedral Tunes" and "Shadows — hold their breath")', keywords: ['Heft', 'Cathedral', 'scar', 'Seal', 'Shadows', 'Distance'] }
         ],
-        sampleAnswer: 'Proponents argue that [argument for one side]. Critics counter that [argument for the other side].',
+        sampleAnswer: 'Two images that support this claim are the simile comparing the light\'s oppression to "the Heft / Of Cathedral Tunes" in the first stanza, and the personified landscape at the poem\'s close, where "the Landscape listens" and "Shadows — hold their breath" when the light arrives.',
       },
       {
         label: '(c)',
-        prompt: 'Using evidence, explain which side you find more persuasive.',
+        prompt: 'Explain how the FIRST image you cited supports your claim about the speaker\'s attitude.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Takes a position with supporting evidence', keywords: ['because', 'evidence', 'support', 'persuasive', 'convincing', 'therefore', 'data'] }
+          { points: 1, description: 'Explains the connection between the first image and the claimed attitude (e.g., giving music physical weight and a sacred source fuses reverence with oppression)', keywords: ['because', 'weight', 'sacred', 'oppression', 'reverence', 'conveys'] }
         ],
-        sampleAnswer: 'I find [position] more persuasive because [specific evidence]. The evidence suggests that [conclusion].',
+        sampleAnswer: 'The "Heft / Of Cathedral Tunes" supports the claim because it gives something intangible — light, like music — physical weight that presses down on the listener, and it locates that weight in a cathedral: the very sounds meant to lift the soul become a burden. The image fuses reverence and oppression in a single sensation, establishing the speaker\'s attitude that this light is a spiritual force she must endure rather than enjoy.',
       },
       {
         label: '(d)',
-        prompt: 'Explain how this debate reflects broader themes in AP English Literature.',
+        prompt: 'Explain how the SECOND image you cited supports your claim about the speaker\'s attitude.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Connects to course themes', keywords: ['theme', 'broader', 'connects', 'reflects', 'illustrates', 'course'] }
+          { points: 1, description: 'Explains the connection between the second image and the claimed attitude (e.g., the personified, breath-holding landscape universalizes the speaker\'s dread)', keywords: ['personification', 'landscape', 'breath', 'dread', 'universal', 'supports'] }
         ],
-        sampleAnswer: 'This debate reflects broader themes in AP English Literature because [connection to course themes]. It illustrates [broader principle or pattern].',
+        sampleAnswer: 'The personification of the listening landscape and the shadows that "hold their breath" supports the claim by projecting the speaker\'s dread onto the entire natural world: even inanimate things fall silent and tense in the light\'s presence, as subjects do before an emperor. That the poem then compares the light\'s departure to "the Distance / On the look of Death" confirms the attitude of awed dread — relief from the light feels not like freedom but like the vacancy in a dead face.',
       }
     ],
     totalPoints: 4,

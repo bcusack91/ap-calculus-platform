@@ -138,45 +138,45 @@ const shortFRQs: APESFRQ[] = [
   {
     id: 'apes-short-1',
     type: 'short' as const,
-    unit: 1,
-    title: 'Earth Systems Application',
-    prompt: `Apply your knowledge of Earth Systems from AP Environmental Science to the following scenario.`,
+    unit: 4,
+    title: 'Soil Profile & Conservation on a Hillside Farm',
+    prompt: `A farmer digs a soil pit on a sloped field that has been plowed up and down the hill for decades. The pit exposes a dark upper layer rich in decomposed plant material, a lighter middle layer, and a dense lower layer. A laboratory texture analysis of the middle layer reports 15% sand, 30% silt, and 55% clay. The farmer has noticed muddy runoff leaving the field after heavy rains and standing water that persists for days after storms.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Define Earth Systems in the context of AP Environmental Science.',
+        prompt: 'Identify the soil horizon in which organic matter (humus) accumulates, and describe ONE way that organic matter benefits soil fertility.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Provides accurate definition', keywords: ['define', 'means', 'refers', 'concept', 'term'] }
+          { points: 1, description: 'Identifies the O horizon and/or A horizon (topsoil) as where humus accumulates, AND describes a valid fertility benefit (retains nutrients, retains moisture, supports decomposers, improves soil structure)', keywords: ['O horizon', 'A horizon', 'topsoil', 'humus', 'nutrients', 'moisture', 'decomposers', 'structure'] }
         ],
-        sampleAnswer: 'Earth Systems refers to [definition]. It is a fundamental component of AP Environmental Science.',
+        sampleAnswer: 'Organic matter accumulates in the O horizon (the surface layer of leaf litter and humus) and in the A horizon, or topsoil, where decomposed material mixes with minerals. This humus benefits fertility because it holds nutrients such as nitrogen and phosphorus and releases them slowly as decomposers break it down, making them available to plant roots. Humus also improves the soil’s ability to retain moisture.',
       },
       {
         label: '(b)',
-        prompt: 'Provide ONE specific example.',
+        prompt: 'Using the texture data for the middle layer, explain how its high clay content affects the soil’s water-holding capacity and its drainage (porosity/permeability).',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Provides a relevant, specific example', keywords: ['example', 'instance', 'such as', 'case', 'specific'] }
+          { points: 1, description: 'Explains that clay particles are very small, giving high water-holding capacity but small pore spaces and therefore poor drainage/low permeability (accept the reverse framing for sand)', keywords: ['clay', 'small particles', 'water-holding', 'retain', 'pore', 'porosity', 'permeability', 'drainage', 'waterlogged'] }
         ],
-        sampleAnswer: 'A specific example of this concept is [detailed example with specific names, dates, or data].',
+        sampleAnswer: 'At 55% clay, this layer is dominated by the smallest soil particles. Because clay particles are tiny and pack tightly, the layer has a very large total surface area that holds water strongly, so its water-holding capacity is high. However, the pore spaces between clay particles are extremely small, so permeability is low and water drains through it very slowly. This explains the standing water the farmer observes: rainwater percolates poorly through the clay-rich layer and the field becomes waterlogged after storms.',
       },
       {
         label: '(c)',
-        prompt: 'Explain the significance of this concept for the AP exam.',
+        prompt: 'Explain how plowing up and down the slope contributes to the muddy runoff leaving the field.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Explains why the concept is important for the exam', keywords: ['significant', 'important', 'tested', 'appears', 'connects', 'multiple'] }
+          { points: 1, description: 'Explains that up-and-down furrows channel water downhill, increasing runoff velocity and carrying away exposed topsoil (erosion); tilling also loosens/exposes soil to water erosion', keywords: ['erosion', 'runoff', 'furrows', 'downhill', 'channel', 'topsoil', 'exposed', 'loosen', 'sediment'] }
         ],
-        sampleAnswer: 'This concept is significant because it connects to multiple units and appears frequently on the AP exam in both MC and FRQ formats.',
+        sampleAnswer: 'Plowing up and down the slope creates furrows that run downhill, and these furrows act like channels that speed up the flow of rainwater. Tilling also breaks up and exposes bare topsoil with no plant cover to anchor it. The fast-moving water picks up the loosened topsoil and carries it off the field as sediment, which is why the runoff leaving the field is muddy. Over time this erosion removes the nutrient-rich A horizon and reduces the field’s productivity.',
       },
       {
         label: '(d)',
-        prompt: 'Explain ONE limitation or criticism of this concept.',
+        prompt: 'Propose ONE agricultural practice the farmer could adopt to reduce soil erosion on this field, and explain how the practice reduces erosion.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Identifies a valid limitation or criticism', keywords: ['limitation', 'criticism', 'however', 'does not', 'fails', 'overlooks', 'simplistic'] }
+          { points: 1, description: 'Names a valid practice (contour plowing, terracing, no-till farming, cover crops, strip cropping, windbreaks) AND correctly explains its erosion-reducing mechanism (slows water flow, keeps roots/residue anchoring soil, shortens slope length)', keywords: ['contour plowing', 'terracing', 'no-till', 'cover crop', 'strip cropping', 'windbreak', 'slows', 'anchor', 'roots', 'residue'] }
         ],
-        sampleAnswer: 'One limitation is that [this concept] [specific criticism]. This limitation is important to recognize because [reasoning].',
+        sampleAnswer: 'The farmer could switch to contour plowing, tilling in rows that run across the slope rather than up and down it. Each furrow then acts like a small dam that intercepts water flowing downhill, slowing the runoff so it soaks into the soil instead of gaining enough speed to carry topsoil away. (No-till farming would also work: leaving crop residue on the surface and not disturbing the soil keeps roots and residue anchoring the topsoil, so rain cannot easily detach and transport it.)',
       }
     ],
     totalPoints: 4,
@@ -186,45 +186,45 @@ const shortFRQs: APESFRQ[] = [
   {
     id: 'apes-short-2',
     type: 'short' as const,
-    unit: 1,
-    title: 'Biodiversity Skills',
-    prompt: `Demonstrate your analytical skills related to Biodiversity in AP Environmental Science.`,
+    unit: 2,
+    title: 'Highway Fragmentation of a Forest',
+    prompt: `A state transportation department builds a four-lane highway directly through a large, continuous deciduous forest. The highway divides the forest into two smaller patches and, together with new access roads, eventually splits the area into several isolated fragments. Wildlife surveys conducted five years later show that several forest-interior bird species and a population of bobcats have declined sharply in the smaller fragments, while populations of raccoons, brown-headed cowbirds, and invasive plants have increased near the road.`,
     parts: [
       {
         label: '(a)',
-        prompt: 'Identify a key debate or controversy related to this topic.',
+        prompt: 'Using the theory of island biogeography, explain why the small, isolated forest fragments support fewer species than the original continuous forest.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Identifies a relevant debate', keywords: ['debate', 'controversy', 'disagree', 'argue', 'dispute', 'question'] }
+          { points: 1, description: 'Applies island biogeography: smaller "islands" support smaller populations and have higher extinction rates, and isolation reduces immigration/recolonization, so species richness falls', keywords: ['island biogeography', 'smaller', 'isolated', 'extinction', 'immigration', 'recolonization', 'population size', 'species richness', 'habitat area'] }
         ],
-        sampleAnswer: 'A key debate involves [description of the controversy]. Different perspectives on this issue include [perspective 1] and [perspective 2].',
+        sampleAnswer: 'Island biogeography predicts that species richness depends on habitat area and isolation. The fragments act like small islands in a sea of unsuitable habitat: each fragment has less total area and fewer resources, so it supports only small populations, and small populations are more vulnerable to local extinction from disease, inbreeding, or random events. At the same time, the highway is a barrier that isolates each fragment, so once a species goes locally extinct, individuals from other patches cannot easily immigrate to recolonize it. Lower immigration plus higher extinction means each small fragment settles at a lower number of species than the original continuous forest.',
       },
       {
         label: '(b)',
-        prompt: 'Explain ONE argument on each side of this debate.',
+        prompt: 'Describe what edge effects are, and explain how edge effects could account for the decline of forest-interior bird species in the fragments.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Presents arguments from multiple sides', keywords: ['on one hand', 'however', 'alternatively', 'supporters', 'critics', 'proponents', 'opponents'] }
+          { points: 1, description: 'Defines edge effects (changed abiotic/biotic conditions at habitat boundaries: more light, wind, temperature swings, predators/parasites/invasives) AND links them to the loss of interior-adapted species as fragments become mostly edge', keywords: ['edge effect', 'boundary', 'light', 'wind', 'temperature', 'drier', 'predator', 'parasite', 'cowbird', 'interior', 'ratio'] }
         ],
-        sampleAnswer: 'Proponents argue that [argument for one side]. Critics counter that [argument for the other side].',
+        sampleAnswer: 'Edge effects are the changed conditions that occur along the boundary between a habitat and the surrounding disturbed land. Forest edges are sunnier, windier, hotter, and drier than the interior, and they attract generalist predators, invasive plants, and nest parasites such as brown-headed cowbirds. When the highway fragmented the forest, the total amount of edge increased while the amount of deep interior shrank, so a much larger fraction of each fragment now experiences edge conditions. Forest-interior birds that need cool, shaded, sheltered habitat far from the edge lose the conditions they require, and their nests suffer more predation by raccoons and more parasitism by cowbirds, which explains their sharp decline.',
       },
       {
         label: '(c)',
-        prompt: 'Using evidence, explain which side you find more persuasive.',
+        prompt: 'The department proposes building a vegetated wildlife overpass connecting the two largest fragments. Explain how this wildlife corridor could help maintain the genetic diversity of the bobcat population.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Takes a position with supporting evidence', keywords: ['because', 'evidence', 'support', 'persuasive', 'convincing', 'therefore', 'data'] }
+          { points: 1, description: 'Explains that the corridor allows individuals to move between fragments, enabling gene flow/interbreeding between otherwise isolated populations, which counteracts inbreeding and genetic drift in small populations', keywords: ['corridor', 'movement', 'gene flow', 'interbreed', 'inbreeding', 'genetic drift', 'genetic diversity', 'connect', 'mates'] }
         ],
-        sampleAnswer: 'I find [position] more persuasive because [specific evidence]. The evidence suggests that [conclusion].',
+        sampleAnswer: 'The vegetated overpass reconnects the two fragments so that bobcats can safely cross the highway instead of being confined to one patch. This movement allows individuals from the two populations to find mates in the other fragment, restoring gene flow between them. Without the corridor, each small, isolated population would lose genetic diversity through inbreeding and genetic drift, raising the risk of inherited defects and lowering the population’s ability to adapt to disease or environmental change. With the corridor, the two patches function genetically as one larger population, maintaining higher genetic diversity and long-term viability.',
       },
       {
         label: '(d)',
-        prompt: 'Explain how this debate reflects broader themes in AP Environmental Science.',
+        prompt: 'Other than supporting wildlife populations, describe ONE ecosystem service the intact forest provides to nearby human communities that fragmentation could diminish.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Connects to course themes', keywords: ['theme', 'broader', 'connects', 'reflects', 'illustrates', 'course'] }
+          { points: 1, description: 'Describes a valid ecosystem service (carbon sequestration, water filtration/flood control, air purification, erosion control, pollination, recreation/ecotourism) AND notes that fragmentation/clearing reduces it', keywords: ['ecosystem service', 'carbon', 'sequestration', 'water filtration', 'flood', 'erosion control', 'air quality', 'pollination', 'recreation'] }
         ],
-        sampleAnswer: 'This debate reflects broader themes in AP Environmental Science because [connection to course themes]. It illustrates [broader principle or pattern].',
+        sampleAnswer: 'The intact forest provides flood control and water filtration for nearby communities: tree canopies intercept rainfall, and forest soils absorb stormwater and filter sediments and pollutants before the water reaches streams and drinking-water supplies. Clearing land for the highway and fragmenting the forest replaces absorbent forest floor with impervious pavement and edge-degraded habitat, so more runoff reaches streams faster, increasing downstream flooding and degrading water quality. (Other acceptable answers include reduced carbon sequestration or loss of recreation and ecotourism value.)',
       }
     ],
     totalPoints: 4,

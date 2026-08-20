@@ -317,13 +317,13 @@ The cell operates at 25°C with [$Ag^{+}$] = 1.0 M and [$Zn^{2+}$] = 1.0 M.`,
       },
       {
         label: '(c)',
-        prompt: 'If the [$Ag^{+}$] is decreased to 0.010 M while [$Zn^{2+}$] remains at 1.0 M, calculate the new cell potential using the Nernst equation.',
+        prompt: 'If the [$Ag^{+}$] is decreased to 0.010 M while [$Zn^{2+}$] remains at 1.0 M, will the cell potential be greater than, less than, or equal to E°cell? Justify your answer without performing a calculation.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Sets up Nernst equation: E = E° - (RT/nF)ln(Q) or E = E° - (0.0592/n)log(Q)', keywords: ['Nernst', '0.0592', '0.02957', 'RT/nF', 'ln(Q)', 'log(Q)'] },
-          { points: 1, description: 'Calculates E ≈ 1.44 V (Q = [$Zn^{2+}$]/[$Ag^{+}$]$ {}^{2}$ = 1.0/0.0001 = 10000)', keywords: ['1.44', '1.4', '10000', '10⁴'] },
+          { points: 1, description: 'States the potential is LESS than E°cell', keywords: ['less than', 'lower', 'decreases', 'smaller'] },
+          { points: 1, description: 'Justifies via Q: lowering [$Ag^{+}$] (a reactant) raises Q = [$Zn^{2+}$]/[$Ag^{+}$]$ {}^{2}$ above 1, moving the cell closer to equilibrium, so the driving force (and E) is reduced', keywords: ['Q increases', 'Q > 1', 'closer to equilibrium', 'reactant', 'driving force'] },
         ],
-        sampleAnswer: 'Q = [$Zn^{2+}$]/[$Ag^{+}$]$ {}^{2}$ = $(1.0)/(0.010)^{2}$ = 10,000\n\nE = E° - (0.0592/n)log(Q) = 1.56 - (0.0592/2)log(10000)\n= 1.56 - (0.0296)(4) = 1.56 - 0.118 = 1.44 V',
+        sampleAnswer: 'The cell potential will be LESS than E°cell. Decreasing [$Ag^{+}$] removes a reactant, so Q = [$Zn^{2+}$]/[$Ag^{+}$]$ {}^{2}$ becomes much greater than 1. With Q > 1 the mixture is closer to equilibrium than at standard conditions, so the thermodynamic driving force for the forward reaction — and therefore the measured cell potential — is smaller than E°cell.',
       },
       {
         label: '(d)',

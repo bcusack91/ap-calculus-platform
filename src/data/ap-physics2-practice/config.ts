@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Physics 2',
   description:
-    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 40 multiple-choice questions across all 7 units (fluids, thermodynamics, E&M, optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
+    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 40 multiple-choice questions across all 7 units (waves & sound, thermodynamics, E&M, optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-2', label: 'AP Physics 2' },
   ctaLinks: [
     { href: '/physics2-diagnostic', label: 'Diagnostic Test' },
@@ -20,7 +20,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 multiple-choice questions across all 7 units (Fluids, Thermodynamics, Electric Forces/Fields/Potential, DC Circuits, Magnetism & Induction, Geometric Optics & Waves, Modern Physics). Calculator allowed.',
+        '40 multiple-choice questions across all 7 units (Waves & Sound, Thermodynamics, Electric Forces/Fields/Potential, DC Circuits, Magnetism & Induction, Geometric & Physical Optics, Modern Physics). Calculator allowed.',
       timeLimitMinutes: 80,
       items: MCQS,
     },

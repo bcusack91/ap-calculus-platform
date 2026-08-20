@@ -270,12 +270,12 @@ const longFRQs: MacroFRQ[] = [
       },
       {
         label: "(e)",
-        prompt: "Explain ONE specific real-world example (1980–2024) of how interest-rate-driven currency appreciation affected an economy's trade balance.",
+        prompt: "Based on the change in net exports from part (c), explain the short-run effect on U.S. real GDP and the price level. Refer to a shift of the aggregate demand curve in your explanation.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "Provides a specific example (Volcker dollar appreciation 1980-85 → Plaza Accord 1985; ECB-Fed divergence 2014-15 USD strength; Fed 2022 hiking cycle USD index up ~15% in 2022)", keywords: ["Volcker", "1980", "Plaza Accord", "1985", "1985", "ECB", "2022", "DXY", "dollar index", "Fed hiking"] }
+          { points: 1, description: "Net exports fall, so aggregate demand shifts LEFT, decreasing both real GDP and the price level in the short run", keywords: ["AD shifts left", "aggregate demand decreases", "net exports decrease", "lower real GDP", "real GDP falls", "lower price level", "price level falls"] }
         ],
-        sampleAnswer: "After Paul Volcker's 1980-82 disinflation pushed the federal funds rate above 19%, the trade-weighted USD appreciated about 50% by 1985, widening the U.S. trade deficit and prompting the September 1985 Plaza Accord (U.S., Japan, West Germany, France, U.K.) to coordinate dollar depreciation.",
+        sampleAnswer: "The dollar appreciation reduces net exports (X − M falls). Because net exports are a component of aggregate demand, AD shifts left. In the short run, both real GDP and the price level decrease. (A real-world illustration: strong-dollar episodes driven by high U.S. interest rates have historically widened the U.S. trade deficit and slowed export-sector output.)",
       }
     ],
     totalPoints: 10,
@@ -371,12 +371,12 @@ const shortFRQs: MacroFRQ[] = [
       },
       {
         label: "(d)",
-        prompt: "Provide ONE specific historical example of a U.S. monetary policy episode that produced this dynamic.",
+        prompt: "Explain what happens to the natural rate of unemployment as a result of the expansionary monetary policy.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "Identifies a specific episode (1965-79 Great Inflation; Burns Fed accommodation 1971-78; Volcker disinflation 1980-82; 2021-2024 post-COVID inflation)", keywords: ["Great Inflation", "1965", "1979", "Burns", "1971", "Volcker", "1980", "1982", "post-COVID", "2021", "2022"] }
+          { points: 1, description: "The natural rate is UNCHANGED — it is determined by frictional and structural factors, and monetary policy cannot permanently move unemployment away from it (long-run money neutrality)", keywords: ["unchanged", "does not change", "natural rate", "frictional", "structural", "money neutrality", "cannot permanently"] }
         ],
-        sampleAnswer: "The Burns Fed's accommodative policy (1971-1978) successfully lowered unemployment in the short run but ratcheted U.S. inflation expectations upward — by 1980, headline CPI inflation reached 14.8%, requiring Volcker's 1980-82 disinflation (federal funds rate >19%, unemployment peak 10.8%) to re-anchor expectations.",
+        sampleAnswer: "The natural rate of unemployment is unchanged at 4.5%. It is determined by frictional and structural factors in the labor market, not by aggregate demand. Because money is neutral in the long run, expansionary monetary policy cannot permanently hold unemployment below the natural rate — the economy returns to the vertical LRPC at u = 4.5%. (Historically, attempts to do so have only ratcheted inflation expectations upward.)",
       }
     ],
     totalPoints: 5,

@@ -73,7 +73,8 @@ export interface APPhysics2DiagnosticResults {
 /* ------------------------------------------------------------------ */
 
 const AP_PHYSICS2_DOMAINS: APPhysics2Domain[] = [
-  { id: 'fluids', name: 'Fluids', topicSlugs: ['fluid-pressure', 'buoyancy', 'fluid-dynamics'], questionTarget: 5 },
+  // 2024-25 CED: fluids moved to Physics 1; waves & sound moved INTO Physics 2.
+  { id: 'waves-sound', name: 'Waves, Sound & Physical Optics', topicSlugs: ['wave-properties', 'sound-waves', 'standing-waves', 'physical-optics'], questionTarget: 5 },
   { id: 'thermodynamics', name: 'Thermodynamics', topicSlugs: ['temperature-and-heat', 'kinetic-theory', 'thermodynamic-laws'], questionTarget: 5 },
   { id: 'electricity', name: 'Electric Force, Field & Potential', topicSlugs: ['electric-charge-and-force', 'electric-fields', 'electric-potential', 'capacitance'], questionTarget: 5 },
   { id: 'circuits', name: 'Electric Circuits', topicSlugs: ['dc-circuits', 'rc-circuits'], questionTarget: 5 },
@@ -189,8 +190,12 @@ export function scoreAPPhysics2Diagnostic(
   // Some legacy domain slugs aren't real Topic records — canonicalize them so
   // recommendation links resolve to live topic/lesson pages (same pattern as SAT).
   const CANONICAL_TOPIC_MAP: Record<string, string> = {
-    'fluid-pressure': 'density-and-pressure',
-    'buoyancy': 'buoyancy-archimedes-principle',
+    // Waves slugs have no dedicated Physics 2 topic pages yet — route to the
+    // nearest live topic (wave-optics) until dedicated topics are seeded.
+    'wave-properties': 'wave-optics',
+    'sound-waves': 'wave-optics',
+    'standing-waves': 'wave-optics',
+    'physical-optics': 'wave-optics',
     'temperature-and-heat': 'heat-specific-heat',
     'kinetic-theory': 'temperature-thermal-expansion',
     'thermodynamic-laws': 'laws-of-thermodynamics',
@@ -277,9 +282,10 @@ export function pickNextForm(previousForms: number[]): number {
 }
 
 const SLUG_LABELS: Record<string, string> = {
-  'fluid-pressure': 'Fluid Pressure & Density',
-  'buoyancy': 'Buoyancy & Archimedes',
-  'fluid-dynamics': 'Fluid Dynamics & Bernoulli',
+  'wave-properties': 'Wave Properties',
+  'sound-waves': 'Sound & Doppler',
+  'standing-waves': 'Standing Waves & Harmonics',
+  'physical-optics': 'Interference & Diffraction',
   'temperature-and-heat': 'Temperature & Heat Transfer',
   'kinetic-theory': 'Kinetic Theory of Gases',
   'thermodynamic-laws': 'Laws of Thermodynamics',

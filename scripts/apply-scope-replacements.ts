@@ -13,6 +13,8 @@ import fs from 'fs'
 const DRY = !!process.env.DRY_RUN
 
 type Finding = {
+  /** Repo-relative path (wave-2 findings); when present, overrides the target arg. */
+  file?: string
   locator: string
   verdict: 'out' | 'borderline'
   reason: string
@@ -22,13 +24,14 @@ type Finding = {
     correctAnswer: number
     explanation: string
     difficulty: string
-  }
+  } | null
+  suggestedFix?: string
 }
 
 /** Collapse any backslash run to one, then emit TS-single-quoted (backslashes doubled). */
-function tsString(s: string): string {
-  const semantic = s.replace(/\\+/g, '\\')
-  return "'" + semantic.replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'"
+function tsString(s: unknown): string {
+  const semantic = String(s ?? '').replace(/\\+/g, '\\')
+  return "'" + semantic.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n') + "'"
 }
 
 function findEnclosingObject(src: string, at: number): { start: number; end: number } | null {
@@ -58,16 +61,36 @@ function findEnclosingObject(src: string, at: number): { start: number; end: num
 }
 
 function main() {
-  const [findingsPath, targetPath] = process.argv.slice(2)
-  if (!findingsPath || !targetPath) {
-    console.error('usage: npx tsx scripts/apply-scope-replacements.ts <findings.json> <target.ts>')
+  const [findingsPath, targetArg] = process.argv.slice(2)
+  if (!findingsPath) {
+    console.error('usage: npx tsx scripts/apply-scope-replacements.ts <findings.json> [target.ts]')
     process.exit(1)
   }
   const findings: Finding[] = JSON.parse(fs.readFileSync(findingsPath, 'utf8'))
+
+  // Group by target file: wave-2 findings carry a repo-relative `file` field;
+  // wave-1 findings apply wholly to the target argument.
+  const groups = new Map<string, Finding[]>()
+  for (const f of findings) {
+    const target = f.file ?? targetArg
+    if (!target) { console.error('finding has no file and no target arg:', f.locator.slice(0, 50)); process.exit(1) }
+    groups.set(target, [...(groups.get(target) ?? []), f])
+  }
+
+  let totalMissed = 0
+  for (const [targetPath, group] of groups) {
+    const res = applyToFile(targetPath, group)
+    totalMissed += res
+  }
+  if (totalMissed > 0) process.exit(1)
+}
+
+function applyToFile(targetPath: string, findings: Finding[]): number {
   let src = fs.readFileSync(targetPath, 'utf8')
 
-  let applied = 0, borderline = 0, missed = 0
+  let applied = 0, borderline = 0, frqOut = 0, missed = 0
   for (const f of findings) {
+    if (f.verdict === 'out' && !f.replacement) { frqOut++; continue } // FRQ/manual items
     if (f.verdict !== 'out' || !f.replacement) { borderline++; continue }
     const idx = src.indexOf(f.locator)
     if (idx === -1) { missed++; console.log('  LOCATOR MISS:', f.locator.slice(0, 60)); continue }
@@ -78,19 +101,27 @@ function main() {
 
     // passthrough fields preserved verbatim from the original entry
     const pass: string[] = []
-    for (const field of ['id', 'domain', 'topicSlug', 'formSet']) {
-      const m = original.match(new RegExp(`${field}:\\s*(?:'(?:[^'\\\\]|\\\\.)*'|"(?:[^"\\\\]|\\\\.)*"|\\d+)`))
+    for (const field of ['id', 'type', 'domain', 'topicSlug', 'formSet', 'category', 'topic', 'unit', 'skill', 'calculator']) {
+      // \b prevents matching a field name inside a longer word (e.g. `id:` inside "fluid:")
+      const m = original.match(new RegExp(`\\b${field}:\\s*(?:'(?:[^'\\\\]|\\\\.)*'|"(?:[^"\\\\]|\\\\.)*"|\\d+)`))
       if (m) pass.push(m[0])
     }
 
-    const r = f.replacement
+    const r = f.replacement as Record<string, unknown> & { options: string[] }
+    const answerIdx = (r.correctAnswer ?? r.correctIndex) as number | undefined
+    if (typeof r.question !== 'string' || !Array.isArray(r.options) || r.options.length !== 4 || typeof answerIdx !== 'number') {
+      missed++; console.log('  BAD REPLACEMENT SHAPE:', f.locator.slice(0, 60)); continue
+    }
     const multiline = original.includes('\n')
+    // Answer-index key mirrors whichever the ORIGINAL entry uses.
+    const answerKey = original.includes('correctIndex:') ? 'correctIndex' : 'correctAnswer'
+    // Emit only fields the original entry carried — excess properties fail tsc.
     const fields = [
       `question: ${tsString(r.question)}`,
       `options: [${r.options.map(tsString).join(', ')}]`,
-      `correctAnswer: ${r.correctAnswer}`,
-      `explanation: ${tsString(r.explanation)}`,
-      `difficulty: ${tsString(r.difficulty)}`,
+      `${answerKey}: ${answerIdx}`,
+      ...(original.includes('explanation:') ? [`explanation: ${tsString(r.explanation)}`] : []),
+      ...(original.includes('difficulty:') && r.difficulty ? [`difficulty: ${tsString(r.difficulty)}`] : []),
       ...pass,
     ]
     const replacementText = multiline
@@ -101,8 +132,8 @@ function main() {
   }
 
   if (!DRY) fs.writeFileSync(targetPath, src)
-  console.log(`${DRY ? '[DRY RUN] ' : ''}${targetPath.split('/').pop()}: applied ${applied}, borderline (untouched) ${borderline}, missed ${missed}`)
-  if (missed > 0) process.exit(1)
+  console.log(`${DRY ? '[DRY RUN] ' : ''}${targetPath.split('/').pop()}: applied ${applied}, borderline ${borderline}, manual/FRQ-out ${frqOut}, missed ${missed}`)
+  return missed
 }
 
 main()

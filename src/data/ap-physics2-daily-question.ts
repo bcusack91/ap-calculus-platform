@@ -8,10 +8,11 @@
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
 const TOPIC_SLUGS = [
-  // Fluids
-  'fluid-pressure',
-  'buoyancy',
-  'fluid-dynamics',
+  // Waves, Sound & Physical Optics (moved into Physics 2 in the 2024-25 CED)
+  'wave-properties',
+  'sound-waves',
+  'standing-waves',
+  'physical-optics',
   // Thermodynamics
   'temperature-and-heat',
   'kinetic-theory',
