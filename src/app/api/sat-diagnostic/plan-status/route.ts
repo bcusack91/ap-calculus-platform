@@ -37,9 +37,18 @@ export async function GET() {
     }
 
     const latestDiagnostic = await prisma.diagnosticTest.findFirst({
-      where: { userId: session.user.id, category: 'sat-full-diagnostic' },
+      // The study plan follows the student's LATEST diagnostic attempt of
+      // either kind: the regular screen, or a hard-track module (whose
+      // recommendations come from the 700-800-tier items they missed).
+      where: {
+        userId: session.user.id,
+        OR: [
+          { category: 'sat-full-diagnostic' },
+          { category: { startsWith: 'sat-hard-module' } },
+        ],
+      },
       orderBy: { createdAt: 'desc' },
-      select: { id: true, createdAt: true, results: true },
+      select: { id: true, category: true, createdAt: true, results: true },
     })
 
     if (!latestDiagnostic) {
@@ -141,6 +150,8 @@ export async function GET() {
       hasDiagnostic: true,
       diagnosticId: latestDiagnostic.id,
       diagnosticCreatedAt: latestDiagnostic.createdAt,
+      /** 'hard' when the plan comes from a hard-track module attempt. */
+      planSource: latestDiagnostic.category.startsWith('sat-hard-module') ? 'hard' : 'regular',
       canRetakeDiagnostic: pendingTopics.length === 0,
       requiredScorePercent,
       recommendedTopics: recommendedWithStatus,
