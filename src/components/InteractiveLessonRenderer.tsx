@@ -29,6 +29,7 @@ const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
 // Lazy-load TopicEntranceQuiz since it's only shown before lesson starts
 const TopicEntranceQuiz = dynamic(() => import('@/components/TopicEntranceQuiz'), { ssr: false })
 import { hasEntranceQuiz, loadEntranceQuiz } from '@/data/entrance-quizzes'
+import { isBeyondExam } from '@/data/interactive-lessons/beyond-exam'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
@@ -1387,6 +1388,19 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       />
 
       <div className="space-y-6">
+      {/* Enrichment notice for topics beyond the current exam's scope */}
+      {isBeyondExam(topicSlug) && (
+        <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-4 dark:border-amber-600/60 dark:bg-amber-900/20">
+          <p className="text-sm font-semibold text-amber-900 dark:text-amber-200">
+            🔭 Beyond the AP exam
+          </p>
+          <p className="mt-1 text-sm text-amber-800 dark:text-amber-300">
+            This topic goes beyond what the current AP exam tests — it&apos;s optional
+            enrichment for students who want to dig deeper. You won&apos;t need it on
+            test day.
+          </p>
+        </div>
+      )}
       {/* Part Navigation Menu - Show for multi-part lessons (hide if only 1 unmastered part remains) */}
       {preloadedParts.length > 1 && (preloadedParts.length - entranceQuizMasteredParts.size) > 1 && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-accent-light/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-accent-light/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
