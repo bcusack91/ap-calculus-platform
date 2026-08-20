@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       )
     }
-    const { flashcardId, rating } = parsed.data
+    const { flashcardId, rating, tzOffset } = parsed.data
 
     // Reviews accrue to the user's ACTIVE study mode (personal / class /
     // course) — resolved server-side so each mode is an independent deck.
@@ -60,13 +60,15 @@ export async function POST(req: NextRequest) {
     // Convert button rating to quality score
     const quality = buttonToQuality(rating)
 
-    // Calculate next review using SM-2 algorithm
+    // Calculate the next review (day-scale intervals anchor to the student's
+    // 4am local day rollover when tzOffset is provided)
     const result = calculateNextReview(
       quality,
       easeFactor,
       interval,
       repetitions,
-      isMinuteInterval
+      isMinuteInterval,
+      tzOffset
     )
 
     // Upsert progress: create the row on a first review, update it otherwise.

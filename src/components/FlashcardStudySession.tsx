@@ -81,7 +81,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         await fetch('/api/flashcards/review', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ flashcardId: card.id, rating }),
+          body: JSON.stringify({ flashcardId: card.id, rating, tzOffset: new Date().getTimezoneOffset() }),
         })
       } catch {
         console.error('Failed to submit review')

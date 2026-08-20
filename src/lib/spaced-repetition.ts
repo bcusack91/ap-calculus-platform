@@ -22,6 +22,41 @@
  * longer drives the interval (the ladder does).
  */
 
+/**
+ * Local hour at which one "study day" rolls over to the next (Anki uses 4am
+ * for the same reason): a 1-day card graduated at 8pm comes due at 4am the
+ * next morning — ready when the student wakes up — instead of at 8pm sharp;
+ * and a 1am session still counts as "tonight", so its 1-day cards land at
+ * 4am the FOLLOWING morning's boundary, not an hour later.
+ */
+const DAY_ROLLOVER_HOUR = 4
+
+/**
+ * Due date for a day-scale interval, anchored to the student's day rollover.
+ * With a known timezone offset (JS getTimezoneOffset convention, minutes),
+ * the card becomes due at DAY_ROLLOVER_HOUR local time on the target study
+ * day. Without one (legacy callers), falls back to exact +N×24h.
+ */
+export function dayIntervalDueDate(
+  intervalDays: number,
+  tzOffsetMinutes?: number,
+  now: Date = new Date(),
+): Date {
+  const days = Math.max(1, Math.round(intervalDays))
+  if (tzOffsetMinutes === undefined || !Number.isFinite(tzOffsetMinutes)) {
+    const exact = new Date(now)
+    exact.setDate(exact.getDate() + days)
+    return exact
+  }
+  const tzMs = tzOffsetMinutes * 60000
+  // Local wall clock, shifted back by the rollover hour so 12:00–3:59am
+  // belongs to the previous study day.
+  const shifted = new Date(now.getTime() - tzMs - DAY_ROLLOVER_HOUR * 3600000)
+  shifted.setUTCHours(0, 0, 0, 0) // start of the current study day, local wall time
+  const dueLocalWallMs = shifted.getTime() + days * 86400000 + DAY_ROLLOVER_HOUR * 3600000
+  return new Date(dueLocalWallMs + tzMs)
+}
+
 /** Early day-phase interval ladder. Good = next rung, Easy = skip a rung. */
 const FIB_DAYS = [1, 2, 3, 5, 8, 13, 21, 34]
 /** At/after this interval, growth switches from the ladder to multipliers. */
@@ -62,7 +97,10 @@ export function calculateNextReview(
   previousEaseFactor: number = 2.5,
   previousInterval: number = 0,
   previousRepetitions: number = 0,
-  wasMinuteInterval: boolean = false
+  wasMinuteInterval: boolean = false,
+  /** Student's timezone offset (JS getTimezoneOffset, minutes). When present,
+   *  day-scale intervals come due at the 4am local day rollover. */
+  tzOffsetMinutes?: number
 ): ReviewResult {
   // Validate quality rating
   if (quality < 0 || quality > 5) {
@@ -135,12 +173,14 @@ export function calculateNextReview(
     }
   }
 
-  // Calculate next review date
-  const nextReview = new Date()
+  // Calculate next review date. Minute steps are exact; day-scale intervals
+  // anchor to the student's 4am day rollover when the timezone is known.
+  let nextReview: Date
   if (isMinuteInterval) {
+    nextReview = new Date()
     nextReview.setMinutes(nextReview.getMinutes() + interval)
   } else {
-    nextReview.setDate(nextReview.getDate() + interval)
+    nextReview = dayIntervalDueDate(interval, tzOffsetMinutes)
   }
 
   return {

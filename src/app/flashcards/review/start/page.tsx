@@ -115,7 +115,8 @@ export default function FlashcardReviewPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           flashcardId: currentCard.flashcard.id,
-          rating
+          rating,
+          tzOffset: new Date().getTimezoneOffset()
         })
       })
 

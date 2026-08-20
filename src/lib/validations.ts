@@ -42,6 +42,10 @@ export type ProgressSave = z.infer<typeof progressSaveSchema>
 export const flashcardReviewSchema = z.object({
   flashcardId: z.string().min(1),
   rating: z.enum(['again', 'hard', 'good', 'easy']),
+  /** Client timezone offset in minutes (JS getTimezoneOffset convention,
+   *  real-world range ±14h) — lets day-scale intervals land at the student's
+   *  4am day rollover. Optional for backward compatibility. */
+  tzOffset: z.number().int().min(-900).max(900).optional(),
 })
 
 export type FlashcardReview = z.infer<typeof flashcardReviewSchema>
