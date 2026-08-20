@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import SATStudyPlan from '@/components/SATStudyPlan'
+import CourseStudyPlan from '@/components/CourseStudyPlan'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
@@ -166,7 +166,13 @@ export default function SATLandingPage() {
         })) }}
       />
       {/* Personalized plan: flashcards due + diagnostic study modules */}
-      <SATStudyPlan />
+      <CourseStudyPlan
+        courseSlug="sat-prep"
+        courseLabel="SAT"
+        planStatusEndpoint="/api/sat-diagnostic/plan-status"
+        diagnosticHref="/sat-diagnostic"
+        accent="purple"
+      />
       <CourseHero
         courseName='Digital SAT'
         tagline='Full-length practice tests, diagnostic assessments, 35+ topic quizzes, interactive lessons, and a personalized score predictor.'

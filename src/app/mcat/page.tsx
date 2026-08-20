@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import type { Metadata } from 'next'
-import MCATRecommendedModules from '@/components/MCATRecommendedModules'
+import CourseStudyPlan from '@/components/CourseStudyPlan'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
 import { InArticleAd } from '@/components/ad-banner'
 import CourseToolGrid from '@/components/CourseToolGrid'
@@ -258,6 +258,14 @@ export default function MCATLandingPage() {
           canonicalPath: '/mcat',
         })) }}
       />
+      {/* Personalized plan: flashcards due + diagnostic study modules */}
+      <CourseStudyPlan
+        courseSlug="mcat-prep"
+        courseLabel="MCAT"
+        planStatusEndpoint="/api/mcat-diagnostic/plan-status"
+        diagnosticHref="/mcat-diagnostic"
+        accent="emerald"
+      />
       {/* Hero */}
       <CourseUniqueIntro slug="mcat" />
       <CourseHero
@@ -269,8 +277,6 @@ export default function MCATLandingPage() {
         accentTo="teal"
         leadWord='Conquer the'
       />
-
-      <MCATRecommendedModules />
 
       {/* Features Grid */}
       <section className="container pb-12">
