@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import CourseUniqueIntro from '@/components/CourseUniqueIntro'
+import SATStudyPlan from '@/components/SATStudyPlan'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
@@ -165,8 +165,8 @@ export default function SATLandingPage() {
           canonicalPath: '/sat',
         })) }}
       />
-      {/* Hero */}
-      <CourseUniqueIntro slug="sat" />
+      {/* Personalized plan: flashcards due + diagnostic study modules */}
+      <SATStudyPlan />
       <CourseHero
         courseName='Digital SAT'
         tagline='Full-length practice tests, diagnostic assessments, 35+ topic quizzes, interactive lessons, and a personalized score predictor.'

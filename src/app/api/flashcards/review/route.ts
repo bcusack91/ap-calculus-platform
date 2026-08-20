@@ -181,9 +181,15 @@ export async function GET(req: NextRequest) {
     localDayEnd.setUTCHours(23, 59, 59, 999)
     const endOfStudentDay = new Date(localDayEnd.getTime() + tzOffsetMs)
 
-    const topicFilter: Prisma.FlashcardProgressWhereInput = topicId
-      ? { flashcard: { topicId } }
-      : {}
+    // Optional narrowing: a single topic, or a whole course (used by course
+    // pages to show "N SAT flashcards due now"-style banners).
+    const courseSlug = searchParams.get('courseSlug')
+    const flashcardFilter: Prisma.FlashcardWhereInput = {
+      ...(topicId ? { topicId } : {}),
+      ...(courseSlug ? { topic: { category: { course: { slug: courseSlug } } } } : {}),
+    }
+    const topicFilter: Prisma.FlashcardProgressWhereInput =
+      topicId || courseSlug ? { flashcard: flashcardFilter } : {}
     const where: Prisma.FlashcardProgressWhereInput = {
       userId: session.user.id,
       context,

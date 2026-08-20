@@ -182,13 +182,8 @@ export const courseLandingIntros: Record<string, CourseLandingIntro> = {
       "We map every reaction in our problem library to the underlying mechanism class (SN1, SN2, E1, E2, electrophilic addition, electrophilic aromatic substitution, etc.) so you build pattern recognition rather than memorising a table of named reactions in isolation.",
     ],
   },
-  'sat': {
-    headline: 'Digital, adaptive, and dramatically shorter than the paper SAT — but graded on the same scale.',
-    paragraphs: [
-      "The Digital SAT runs ~2 hours 14 minutes (versus ~3 hours for the old paper SAT) and uses a section-adaptive format: the difficulty of your second module in each section depends on your performance on the first. This means that to score in the top range, you must perform well enough in the first module to unlock the harder second module — there's no second-half comeback available.",
-      "Our coverage matches the College Board's official Bluebook practice tests: Reading and Writing emphasises evidence-based questions and short ~150-word passages; Math weighs heavily toward Algebra and Advanced Math (linear functions, quadratics, exponentials) with a built-in Desmos calculator on every question.",
-    ],
-  },
+  // 'sat' intro removed (owner request, Aug 2026): the SAT page now leads
+  // with the personalized study plan (SATStudyPlan) instead of course copy.
   'act': {
     headline: 'Pace-driven, content-broad — speed is the main differentiator on every section.',
     paragraphs: [
