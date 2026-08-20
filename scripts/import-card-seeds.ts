@@ -30,12 +30,17 @@ function validateText(text: string): string | null {
     if (/(?<!\\)[&%]/.test(inner)) return 'bare-&-or-%-in-math'
     try { katex.renderToString(inner, { throwOnError: true }) } catch (e) { return `katex: ${(e as Error).message.slice(0, 60)}` }
   }
+  // Ordinary nested LaTeX ends in `}}` all the time (`\frac{a^{2}}{b^{3}}`),
+  // so a closing run is no evidence of cloze syntax. Only a `{{` opener is —
+  // gate the cloze checks on that, or every card with nested math is rejected.
   const opens = (text.match(/\{\{/g) ?? []).length
-  const closes = (text.match(/\}\}/g) ?? []).length
-  if (opens !== closes) return 'unbalanced cloze braces'
-  // Same capture as the runtime parser (src/lib/cloze-utils.ts): one level of
-  // nested braces so LaTeX survives inside a deletion.
-  if (opens > 0 && !/\{\{(?:c\d+::)?(?:[^{}]|\{[^{}]*\})+\}\}/.test(text)) return 'malformed cloze'
+  if (opens > 0) {
+    const closes = (text.match(/\}\}/g) ?? []).length
+    if (opens !== closes) return 'unbalanced cloze braces'
+    // Same capture as the runtime parser (src/lib/cloze-utils.ts): one level of
+    // nested braces so LaTeX survives inside a deletion.
+    if (!/\{\{(?:c\d+::)?(?:[^{}]|\{[^{}]*\})+\}\}/.test(text)) return 'malformed cloze'
+  }
   return null
 }
 

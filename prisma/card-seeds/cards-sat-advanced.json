@@ -386,7 +386,7 @@
  },
  {
   "topicSlug": "sat-effective-language-use-advanced",
-  "front": "Goal says 'emphasize the change between the two surveys' and one option names the intervention that likely caused it",
+  "front": "One choice names the program, policy, or installation that produced the shift, and the notes make it look authoritative. When is that choice wrong?",
   "back": "Cause is not change. The change sentence needs both counts and both dates ('12 of 40 in 2003; 29 of those same stations in 2023'). The intervention option (lanes shifted, grilles installed, program launched) explains WHY the change happened — a different goal, and a planted distractor on nearly every change item."
  },
  {
@@ -396,7 +396,7 @@
  },
  {
   "topicSlug": "sat-effective-language-use-advanced",
-  "front": "Goal says 'explain why the saving/benefit does not straightforwardly materialize'",
+  "front": "The notes describe a benefit that turns out to be partly cancelled by a hidden cost. What must the sentence hold together?",
   "back": "The offset pattern: the sentence must hold the saving AND the offsetting cost, causally linked ('electricity saved is partly offset by a new heating bill, because...'). Saving-alone restates what you must complicate; cost-alone floats unconnected; a remedy for the complication ('growers added heaters') is a response, not the explanation."
  },
  {
@@ -541,7 +541,7 @@
  },
  {
   "topicSlug": "sat-linear-inequalities-graphs-advanced",
-  "front": "Venue sells out; need at least $\\$30{,}100$ — least VIP count",
+  "front": "Venue sells out; need at least 30,100 dollars — least VIP count",
   "back": "Express the other ticket count as (total - v), build revenue >= target, solve, round UP. Traps: round-down neighbor, the OTHER ticket type's count, and target-divided-by-one-price (ignores the second revenue stream)."
  },
  {
@@ -726,7 +726,7 @@
  },
  {
   "topicSlug": "sat-quadratic-equations-advanced",
-  "front": "Asked for r^2 + s^2 or (r - s)^2 for the roots of a quadratic",
+  "front": "You need the sum of the SQUARES of a quadratic's two solutions, or the square of their difference, without ever finding them.",
   "back": "r^2 + s^2 = (r + s)^2 - 2rs and (r - s)^2 = (r + s)^2 - 4rs. Get sum and product from Vieta, then plug in. The planted wrong answers drop the -2rs term or flip one sign."
  },
  {
@@ -841,8 +841,8 @@
  },
  {
   "topicSlug": "sat-polynomials-factoring-advanced",
-  "front": "\"One zero of $P(x) = x^{3} - 2x^{2} - 5x + 6$ is $x = 1$. Find the sum of the RECIPROCALS of the other two zeros.\"",
-  "back": "Divide out $x - 1$ to get $x^{2} - x - 6$, then use $\\frac{1}{r} + \\frac{1}{s} = \\frac{r + s}{rs} = \\frac{1}{-6} = -\\frac{1}{6}$ — Vieta on the quotient, no zeros needed. Planted: $\\frac{1}{6}$ is the sign flip, $1$ is the sum of the zeros THEMSELVES ($3 - 2$, stopping early), $\\frac{5}{6}$ drops both signs."
+  "front": "After dividing a known root out of a cubic, you are left with a quadratic — and asked to add together the reciprocals of its two solutions.",
+  "back": "Example: $P(x) = x^{3} - 2x^{2} - 5x + 6$ with known zero $x = 1$. Divide out $x - 1$ to get $x^{2} - x - 6$, then use $\\frac{1}{r} + \\frac{1}{s} = \\frac{r + s}{rs} = \\frac{1}{-6} = -\\frac{1}{6}$ — Vieta on the quotient, no zeros needed. Planted: $\\frac{1}{6}$ is the sign flip, $1$ is the sum of the zeros THEMSELVES ($3 - 2$, stopping early), $\\frac{5}{6}$ drops both signs."
  },
  {
   "topicSlug": "sat-polynomials-factoring-advanced",
@@ -992,7 +992,7 @@
  {
   "topicSlug": "sat-geometry-basics-advanced",
   "front": "A rate problem asks 'how many HOURS' but gives the rate per minute, or mixes liters with cubic meters.",
-  "back": "Volume $\\div$ rate $=$ time, then finish the conversion: the un-converted minute count is always a choice. Remember $1$ m³ $= 1000$ L, and cubic conversions CUBE the factor — $1$ ft³ $= 1728$ in³, not $144$."
+  "back": "Volume $\\div$ rate $=$ time, then finish the conversion: the un-converted minute count is always a choice. Remember $1$ cubic meter $= 1000$ liters, and cubic conversions CUBE the factor — $1$ cubic foot $= 1728$ cubic inches, not $144$."
  },
  {
   "topicSlug": "sat-geometry-basics-advanced",
@@ -1121,8 +1121,8 @@
  },
  {
   "topicSlug": "sat-statistics-data-interpretation-advanced",
-  "front": "Group means are $26$ and $34$, and the combined mean is $29$. What is the ratio of group sizes?",
-  "back": "The lever runs BACKWARD: distances are $3$ and $5$, so the sizes are in ratio $5:3$ — group 1 is bigger, which is why the combined mean drifted toward $26$. Writing it as $3:5$ is the single most common error on this archetype and is always a choice."
+  "front": "You know both group averages and the blended average, but not how many people are in each group. How do you recover the size ratio?",
+  "back": "The lever runs BACKWARD: sizes are proportional to the OPPOSITE distances. With group means $26$ and $34$ and a combined mean of $29$, the distances are $3$ and $5$, so the sizes are in ratio $5:3$ — group 1 is bigger, which is why the combined mean drifted toward $26$. Writing it as $3:5$ is the single most common error on this archetype and is always a choice."
  },
  {
   "topicSlug": "sat-statistics-data-interpretation-advanced",

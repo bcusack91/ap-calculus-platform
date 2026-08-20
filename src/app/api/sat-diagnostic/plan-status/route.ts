@@ -29,6 +29,22 @@ function priorityValue(p: RecommendedTopic['priority']): number {
   return p === 'high' ? 0 : p === 'medium' ? 1 : 2
 }
 
+/**
+ * The diagnostic can recommend six slugs that have no `-advanced` twin of their
+ * own. Each is a narrower cut of a topic that does, so hard-track students are
+ * routed to the advanced lesson covering the same skill rather than dropped
+ * back into the general lane. (Subject-verb agreement and the other grammar
+ * slugs are taught inside the sentence-structure advanced bundle.)
+ */
+const ADVANCED_SLUG_ALIASES: Record<string, string> = {
+  'sat-finding-textual-evidence': 'sat-command-evidence',
+  'sat-conciseness-redundancy': 'sat-effective-language-use',
+  'sat-punctuation-commas-semicolons': 'sat-punctuation',
+  'sat-grammar-usage': 'sat-sentence-structure',
+  'sat-grammar-conventions': 'sat-sentence-structure',
+  'sat-subject-verb-agreement': 'sat-sentence-structure',
+}
+
 export async function GET() {
   try {
     const session = await auth()
@@ -78,16 +94,27 @@ export async function GET() {
     // its entrance-quiz test-out) stands in.
     const isHardSource = latestDiagnostic.category.startsWith('sat-hard-module')
     if (isHardSource && recommendedTopics.length > 0) {
-      const advSlugs = recommendedTopics.map((t) => `${t.slug}-advanced`)
+      const advancedFor = (slug: string) => `${ADVANCED_SLUG_ALIASES[slug] ?? slug}-advanced`
       const advTopics = await prisma.topic.findMany({
-        where: { slug: { in: advSlugs } },
+        where: { slug: { in: recommendedTopics.map((t) => advancedFor(t.slug)) } },
         select: { slug: true, title: true },
       })
       const advTitle = new Map(advTopics.map((t) => [t.slug, t.title]))
-      recommendedTopics = recommendedTopics.map((t) =>
-        advTitle.has(`${t.slug}-advanced`)
-          ? { ...t, slug: `${t.slug}-advanced`, name: advTitle.get(`${t.slug}-advanced`)! }
-          : t,
+      recommendedTopics = recommendedTopics.map((t) => {
+        const adv = advancedFor(t.slug)
+        return advTitle.has(adv) ? { ...t, slug: adv, name: advTitle.get(adv)! } : t
+      })
+      // Several base slugs can alias onto one advanced lesson, so collapse
+      // duplicates and keep the highest priority among them.
+      const collapsed = new Map<string, RecommendedTopic>()
+      recommendedTopics.forEach((t) => {
+        const existing = collapsed.get(t.slug)
+        if (!existing || priorityValue(t.priority) < priorityValue(existing.priority)) {
+          collapsed.set(t.slug, t)
+        }
+      })
+      recommendedTopics = Array.from(collapsed.values()).sort(
+        (a, b) => priorityValue(a.priority) - priorityValue(b.priority),
       )
     }
 
