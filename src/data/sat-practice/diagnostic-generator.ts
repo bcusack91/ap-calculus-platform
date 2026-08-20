@@ -32,6 +32,8 @@ export interface DiagnosticTestData {
   domains: DiagnosticDomain[]
   totalQuestions: number
   timeLimitMinutes: number
+  /** 'hard' = an all-700-800-tier module (hard track); affects score scaling. */
+  band?: 'regular' | 'hard'
 }
 
 export interface DomainResult {
@@ -340,9 +342,26 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
 /*  Scoring & Analysis                                                 */
 /* ------------------------------------------------------------------ */
 
+/** Diagnostic domain id that studies the given topic slug (null if unknown). */
+export function domainIdForTopicSlug(slug: string): string | null {
+  const canonical = canonicalizeSlug(slug)
+  for (const d of DIAGNOSTIC_DOMAINS) {
+    if (d.slugs.includes(slug) || d.slugs.includes(canonical)) return d.id
+  }
+  return null
+}
+
+/** Read-only view of the diagnostic domains (for hard-track test data). */
+export function listDiagnosticDomains(): DiagnosticDomain[] {
+  return DIAGNOSTIC_DOMAINS
+}
+
 export function analyzeDiagnosticResults(
   questions: DiagnosticQuestion[],
   answers: { questionIndex: number; selectedIndex: number | null }[],
+  /** 'hard' = all questions are from the 700-800 tier, so raw percentage maps
+   *  to the TOP of the scale (600-800 per section), not the whole 200-800. */
+  band: 'regular' | 'hard' = 'regular',
 ): DiagnosticResults {
   // Score by domain
   const domainScores = new Map<string, { correct: number; total: number }>()
@@ -358,21 +377,26 @@ export function analyzeDiagnosticResults(
     domainScores.set(q.domain, entry)
   }
 
-  // Build domain results
-  const domains: DomainResult[] = DIAGNOSTIC_DOMAINS.map(d => {
-    const scores = domainScores.get(d.id) ?? { correct: 0, total: 0 }
-    const pct = scores.total > 0 ? Math.round((scores.correct / scores.total) * 100) : 0
-    const level = pct >= 75 ? 'strong' : pct >= 50 ? 'moderate' : 'weak'
-    return {
-      domainId: d.id,
-      domainName: d.name,
-      section: d.section,
-      correct: scores.correct,
-      total: scores.total,
-      percentage: pct,
-      level,
-    }
-  })
+  // Build domain results. Domains the test didn't sample are EXCLUDED — an
+  // untested domain is unknown, not weak. (The regular diagnostic covers every
+  // domain; hard-track modules sample a rotating subset, and treating the
+  // unsampled ones as 0% once made a perfect hard run "weak everywhere".)
+  const domains: DomainResult[] = DIAGNOSTIC_DOMAINS
+    .map(d => {
+      const scores = domainScores.get(d.id) ?? { correct: 0, total: 0 }
+      const pct = scores.total > 0 ? Math.round((scores.correct / scores.total) * 100) : 0
+      const level: DomainResult['level'] = pct >= 75 ? 'strong' : pct >= 50 ? 'moderate' : 'weak'
+      return {
+        domainId: d.id,
+        domainName: d.name,
+        section: d.section,
+        correct: scores.correct,
+        total: scores.total,
+        percentage: pct,
+        level,
+      }
+    })
+    .filter(d => d.total > 0)
 
   // Overall stats
   const totalCorrect = domains.reduce((s, d) => s + d.correct, 0)
@@ -390,8 +414,12 @@ export function analyzeDiagnosticResults(
   const rwPct = rwTotal > 0 ? rwCorrect / rwTotal : 0
   const mathPct = mathTotal > 0 ? mathCorrect / mathTotal : 0
 
-  const rwScore = Math.round(200 + rwPct * 600)
-  const mathScore = Math.round(200 + mathPct * 600)
+  // Hard-track modules are drawn entirely from the 700-800 item tier, so a
+  // raw percentage there resolves the TOP of the scale: a student who missed
+  // 4 of 20 hard items is in the mid-700s, not the low 600s the regular
+  // mapping would report.
+  const rwScore = band === 'hard' ? Math.round(600 + rwPct * 200) : Math.round(200 + rwPct * 600)
+  const mathScore = band === 'hard' ? Math.round(600 + mathPct * 200) : Math.round(200 + mathPct * 600)
 
   // Categorize areas
   const weakAreas = domains.filter(d => d.level === 'weak').map(d => d.domainName)

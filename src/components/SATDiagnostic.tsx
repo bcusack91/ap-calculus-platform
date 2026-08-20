@@ -146,11 +146,11 @@ export default function DiagnosticTest({
 
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { analyzeDiagnosticResults } = require('@/data/sat-practice/diagnostic-generator')
-    const results = analyzeDiagnosticResults(testData.questions, answers)
+    const results = analyzeDiagnosticResults(testData.questions, answers, testData.band ?? 'regular')
 
     setPhase('complete')
     onComplete(results, answers.map(a => a.selectedIndex))
-  }, [testData.questions, answers, onComplete])
+  }, [testData.questions, testData.band, answers, onComplete])
 
   // ----------------------------------------------------------------
   //  Intro

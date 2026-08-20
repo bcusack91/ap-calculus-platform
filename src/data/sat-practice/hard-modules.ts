@@ -17,6 +17,7 @@
  */
 import type { ExitQuizQuestion } from '../exit-quizzes'
 import type { DiagnosticQuestion, DiagnosticResults } from './diagnostic-generator'
+import { domainIdForTopicSlug } from './diagnostic-generator'
 
 export const HARD_MODULE_COUNT = 12
 export const HARD_MODULE_RW_COUNT = 10
@@ -155,7 +156,11 @@ async function drawHard(
       const stem = q.question.trim().toLowerCase()
       if (seenStems.has(stem)) continue
       seenStems.add(stem)
-      out.push({ ...(q as ExitQuizQuestion), domain: slug, sourceSlug: slug, section })
+      // domain must be a real DIAGNOSTIC_DOMAINS id — the scorer buckets by
+      // domain and reports zeros for ids it doesn't know (a hard-track attempt
+      // once showed 0/0 because topic slugs were stored here). sourceSlug
+      // keeps the topic slug for per-topic recommendation tallies.
+      out.push({ ...(q as ExitQuizQuestion), domain: domainIdForTopicSlug(slug) ?? slug, sourceSlug: slug, section })
     }
   }
   return out.slice(0, count)

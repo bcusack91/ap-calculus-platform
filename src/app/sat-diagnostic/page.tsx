@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { generateDiagnosticTest, rebuildRecommendedTopics } from '@/data/sat-practice/diagnostic-generator'
+import { generateDiagnosticTest, rebuildRecommendedTopics, listDiagnosticDomains } from '@/data/sat-practice/diagnostic-generator'
 import { generateHardModule, HARD_MODULE_CATEGORY, HARD_MODULE_COUNT } from '@/data/sat-practice/hard-modules'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
@@ -191,9 +191,11 @@ export default function SATDiagnosticPage() {
           const mod = await generateHardModule(hardModuleNumber)
           return {
             questions: mod.questions,
-            domains: [],
+            // Real domain list so scoring and the review's domain labels work.
+            domains: listDiagnosticDomains(),
             totalQuestions: mod.totalQuestions,
             timeLimitMinutes: mod.timeLimitMinutes,
+            band: 'hard',
           }
         }
         if (assignedId) {
