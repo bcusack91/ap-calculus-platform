@@ -163,31 +163,39 @@ export async function GET(req: NextRequest) {
 
     const { searchParams } = new URL(req.url)
     const topicId = searchParams.get('topicId')
+    // Client's timezone offset in minutes (JS getTimezoneOffset convention:
+    // local + offset = UTC). Used to compute "later today" in the STUDENT's
+    // day, so learning-step cards due in minutes/hours count correctly.
+    const tzOffsetParam = Number(searchParams.get('tzOffset'))
+    const tzOffsetMs = Number.isFinite(tzOffsetParam) ? tzOffsetParam * 60000 : 0
 
     // The review queue shows only the ACTIVE study mode's deck.
     const context = await getActiveStudyContext(session.user.id)
 
     // Build query
     const now = new Date()
+    const localNow = new Date(now.getTime() - tzOffsetMs)
+    const localDayEnd = new Date(localNow)
+    localDayEnd.setUTCHours(23, 59, 59, 999)
+    const endOfStudentDay = new Date(localDayEnd.getTime() + tzOffsetMs)
+
+    const topicFilter: Prisma.FlashcardProgressWhereInput = topicId
+      ? { flashcard: { topicId } }
+      : {}
     const where: Prisma.FlashcardProgressWhereInput = {
       userId: session.user.id,
       context,
       nextReview: {
         lte: now // Cards due now or in the past
-      }
-    }
-
-    if (topicId) {
-      where.flashcard = {
-        topicId: topicId
-      }
+      },
+      ...topicFilter,
     }
 
     // Get due flashcards (batched — the client refetches when a batch is
     // finished) plus REAL counts: deriving stats from the capped batch made
     // "Due Now" top out at 50 and showed "All Caught Up" with thousands of
     // cards still due.
-    const [dueCards, totalCards, dueCount, newCards] = await Promise.all([
+    const [dueCards, totalCards, dueCount, newCards, dueLaterToday, nextUpcoming] = await Promise.all([
       prisma.flashcardProgress.findMany({
         where,
         include: {
@@ -214,7 +222,28 @@ export async function GET(req: NextRequest) {
         }
       }),
       prisma.flashcardProgress.count({ where }),
-      prisma.flashcardProgress.count({ where: { ...where, repetitions: 0 } })
+      prisma.flashcardProgress.count({ where: { ...where, repetitions: 0 } }),
+      // Cards that come back LATER TODAY (learning-step returns, mostly) —
+      // students otherwise assume they're done after the first pass.
+      prisma.flashcardProgress.count({
+        where: {
+          userId: session.user.id,
+          context,
+          nextReview: { gt: now, lte: endOfStudentDay },
+          ...topicFilter,
+        },
+      }),
+      // The very next card to come due, for "next card in 5 minutes" copy.
+      prisma.flashcardProgress.findFirst({
+        where: {
+          userId: session.user.id,
+          context,
+          nextReview: { gt: now },
+          ...topicFilter,
+        },
+        orderBy: { nextReview: 'asc' },
+        select: { nextReview: true },
+      }),
     ])
 
     const reviewCards = dueCount - newCards
@@ -225,7 +254,9 @@ export async function GET(req: NextRequest) {
         total: totalCards,
         due: dueCount,
         new: newCards,
-        review: reviewCards
+        review: reviewCards,
+        dueLaterToday,
+        nextDueAt: nextUpcoming?.nextReview ?? null
       }
     })
 

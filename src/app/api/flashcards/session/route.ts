@@ -30,8 +30,17 @@ export async function GET(req: NextRequest) {
     // polluted the deck with unrelated courses' cards. Newly unlocked cards
     // carry progress rows with reviewCount 0, so "new" cards still appear.
     if (!topicSlug) {
+      // Student's timezone offset (JS getTimezoneOffset convention) for
+      // computing "cards returning later today" in their local day.
+      const tzOffsetParam = Number(req.nextUrl.searchParams.get('tzOffset'))
+      const tzOffsetMs = Number.isFinite(tzOffsetParam) ? tzOffsetParam * 60000 : 0
+      const localNow = new Date(now.getTime() - tzOffsetMs)
+      const localDayEnd = new Date(localNow)
+      localDayEnd.setUTCHours(23, 59, 59, 999)
+      const endOfStudentDay = new Date(localDayEnd.getTime() + tzOffsetMs)
+
       const dueWhere = { userId, context, nextReview: { lte: now } }
-      const [rows, dueCount, newCount] = await Promise.all([
+      const [rows, dueCount, newCount, dueLaterToday, nextUpcoming] = await Promise.all([
         prisma.flashcardProgress.findMany({
           where: dueWhere,
           include: {
@@ -42,6 +51,14 @@ export async function GET(req: NextRequest) {
         }),
         prisma.flashcardProgress.count({ where: dueWhere }),
         prisma.flashcardProgress.count({ where: { ...dueWhere, reviewCount: 0 } }),
+        prisma.flashcardProgress.count({
+          where: { userId, context, nextReview: { gt: now, lte: endOfStudentDay } },
+        }),
+        prisma.flashcardProgress.findFirst({
+          where: { userId, context, nextReview: { gt: now } },
+          orderBy: { nextReview: 'asc' },
+          select: { nextReview: true },
+        }),
       ])
 
       return NextResponse.json({
@@ -62,6 +79,8 @@ export async function GET(req: NextRequest) {
           newCount,
           totalInDeck: dueCount,
           sessionSize: rows.length,
+          dueLaterToday,
+          nextDueAt: nextUpcoming?.nextReview ?? null,
         },
       })
     }

@@ -12,6 +12,7 @@ import 'katex/dist/katex.min.css'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { detectCloze } from '@/lib/cloze-utils'
 import { ClozeFlashcard } from '@/components/cloze-flashcard'
+import { formatTimeUntil } from '@/lib/format-due-time'
 
 interface Flashcard {
   id: string
@@ -40,6 +41,10 @@ interface ReviewStats {
   due: number
   new: number
   review: number
+  /** Cards that come back later in the student's local day (learning steps). */
+  dueLaterToday: number
+  /** ISO timestamp of the next upcoming card, or null when none scheduled. */
+  nextDueAt: string | null
 }
 
 export default function FlashcardReviewPage() {
@@ -61,7 +66,7 @@ export default function FlashcardReviewPage() {
 
   async function loadDueCards() {
     try {
-      const response = await fetch('/api/flashcards/review')
+      const response = await fetch(`/api/flashcards/review?tzOffset=${new Date().getTimezoneOffset()}`)
       if (!response.ok) throw new Error('Failed to load flashcards')
 
       const data = await response.json()
@@ -71,15 +76,32 @@ export default function FlashcardReviewPage() {
       setIsFlipped(false)
       setShowHint(false)
 
-      if (data.cards.length === 0) {
-        setReviewComplete(true)
-      }
+      // Cards may COME BACK due while the student sits on the completion
+      // screen (learning steps), so completeness must track the fetch result
+      // in both directions.
+      setReviewComplete(data.cards.length === 0)
     } catch (error) {
       console.error('Error loading flashcards:', error)
     } finally {
       setLoading(false)
     }
   }
+
+  // On the completion screen, tick every 20s so the "next card in N minutes"
+  // countdown stays fresh — and automatically pull the queue again once the
+  // next card's due time arrives, so students never think they're done when
+  // learning-step cards are about to return.
+  const nextDueAt = stats?.nextDueAt ?? null
+  const [nowTick, setNowTick] = useState(() => Date.now())
+  useEffect(() => {
+    if (!reviewComplete || !nextDueAt) return
+    const interval = setInterval(() => setNowTick(Date.now()), 20000)
+    return () => clearInterval(interval)
+  }, [reviewComplete, nextDueAt])
+  useEffect(() => {
+    if (!reviewComplete || !nextDueAt) return
+    if (new Date(nextDueAt).getTime() <= nowTick) loadDueCards()
+  }, [nowTick, reviewComplete, nextDueAt])
 
   async function handleRating(rating: 'again' | 'hard' | 'good' | 'easy') {
     if (reviewing) return // Prevent double-clicks
@@ -148,16 +170,47 @@ export default function FlashcardReviewPage() {
   }
 
   if (reviewComplete || cards.length === 0) {
+    const moreToday = stats?.dueLaterToday ?? 0
+    const nextDueLabel = stats?.nextDueAt ? formatTimeUntil(stats.nextDueAt, new Date(nowTick)) : null
     return (
       <div className="container py-10">
         <div className="max-w-2xl mx-auto">
           <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-300 rounded-xl p-12">
-            <div className="text-6xl mb-4">🎉</div>
-            <h1 className="text-3xl font-bold mb-4 text-gray-900">All Caught Up!</h1>
+            <div className="text-6xl mb-4">{moreToday > 0 ? '⏳' : '🎉'}</div>
+            <h1 className="text-3xl font-bold mb-4 text-gray-900">
+              {moreToday > 0 ? 'Done for now — but not for today!' : 'All Caught Up!'}
+            </h1>
             <p className="text-lg text-gray-700 mb-6">
-              You&apos;ve reviewed all your due flashcards. Great work!
+              {moreToday > 0
+                ? 'You’ve cleared everything due right now. Spaced repetition brings cards back after a short wait — that second look is where the learning sticks.'
+                : 'You’ve reviewed all your due flashcards. Great work!'}
             </p>
-            
+
+            {moreToday > 0 && (
+              <div className="mb-8 rounded-xl border-2 border-amber-300 bg-amber-50 p-5 max-w-md mx-auto">
+                <div className="text-2xl font-bold text-amber-800">
+                  {moreToday} card{moreToday === 1 ? '' : 's'} still due later today
+                </div>
+                {nextDueLabel && (
+                  <div className="mt-1 text-amber-800">
+                    Next card {nextDueLabel} — this page will bring it up automatically.
+                  </div>
+                )}
+                <button
+                  onClick={() => { setLoading(true); loadDueCards() }}
+                  className="mt-4 px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-semibold"
+                >
+                  Check for due cards now
+                </button>
+              </div>
+            )}
+
+            {moreToday === 0 && nextDueLabel && (
+              <p className="mb-6 text-gray-700">
+                Your next review is {nextDueLabel}.
+              </p>
+            )}
+
             {stats && (
               <div className="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
                 <div className="bg-white rounded-lg p-4 border border-gray-200">
@@ -165,8 +218,8 @@ export default function FlashcardReviewPage() {
                   <div className="text-sm text-gray-600">Total Cards</div>
                 </div>
                 <div className="bg-white rounded-lg p-4 border border-gray-200">
-                  <div className="text-3xl font-bold text-green-600">0</div>
-                  <div className="text-sm text-gray-600">Due Now</div>
+                  <div className="text-3xl font-bold text-green-600">{moreToday}</div>
+                  <div className="text-sm text-gray-600">Coming Up Today</div>
                 </div>
               </div>
             )}

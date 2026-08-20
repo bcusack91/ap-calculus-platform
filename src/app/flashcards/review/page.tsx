@@ -4,12 +4,15 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
+import { formatTimeUntil } from '@/lib/format-due-time'
 
 interface ReviewStats {
   total: number
   due: number
   new: number
   review: number
+  dueLaterToday: number
+  nextDueAt: string | null
 }
 
 export default function FlashcardReviewDashboard() {
@@ -25,7 +28,7 @@ export default function FlashcardReviewDashboard() {
 
   async function loadStats() {
     try {
-      const response = await fetch('/api/flashcards/review')
+      const response = await fetch(`/api/flashcards/review?tzOffset=${new Date().getTimezoneOffset()}`)
       if (!response.ok) throw new Error('Failed to load stats')
       
       const data = await response.json()
@@ -127,6 +130,20 @@ export default function FlashcardReviewDashboard() {
               </Link>
             </div>
           </div>
+        ) : stats && stats.dueLaterToday > 0 ? (
+          <div className="bg-gradient-to-r from-amber-50 to-orange-100 border-2 border-amber-300 rounded-xl p-8 mb-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">⏳</div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                Caught up for now — {stats.dueLaterToday} card{stats.dueLaterToday === 1 ? '' : 's'} return{stats.dueLaterToday === 1 ? 's' : ''} later today
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                {stats.nextDueAt
+                  ? `Your next card is due ${formatTimeUntil(stats.nextDueAt)}. Come back then to lock it in.`
+                  : 'Come back later today to lock them in.'}
+              </p>
+            </div>
+          </div>
         ) : (
           <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-2 border-green-300 rounded-xl p-8 mb-8">
             <div className="text-center">
@@ -135,7 +152,9 @@ export default function FlashcardReviewDashboard() {
                 All Caught Up!
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                No cards due right now. Keep learning to add more!
+                {stats?.nextDueAt
+                  ? `No cards due right now — your next review is ${formatTimeUntil(stats.nextDueAt)}.`
+                  : 'No cards due right now. Keep learning to add more!'}
               </p>
             </div>
           </div>

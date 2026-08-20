@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { renderRichText } from '@/lib/render-rich-text'
 import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
+import { formatTimeUntil } from '@/lib/format-due-time'
 
 interface SessionCard {
   id: string
@@ -19,6 +20,9 @@ interface SessionStats {
   newCount: number
   totalInDeck: number
   sessionSize: number
+  /** Cards returning later in the student's local day (unscoped sessions). */
+  dueLaterToday?: number
+  nextDueAt?: string | null
 }
 
 interface ReviewResult {
@@ -47,7 +51,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
     setError(null)
     const url = topicSlug
       ? `/api/flashcards/session?topicSlug=${encodeURIComponent(topicSlug)}`
-      : '/api/flashcards/session'
+      : `/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}`
     fetch(url)
       .then((r) => { if (!r.ok) throw new Error('Failed to load flashcards'); return r.json() })
       .then((data) => {
@@ -87,11 +91,19 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
 
       if (currentIndex + 1 >= cards.length) {
         setSessionComplete(true)
+        // Refresh stats so the completion screen's "come back later today"
+        // count includes the cards just sent into learning steps.
+        if (!topicSlug) {
+          fetch(`/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}`)
+            .then((r) => (r.ok ? r.json() : null))
+            .then((d) => { if (d?.stats) setStats(d.stats) })
+            .catch(() => {})
+        }
       } else {
         setCurrentIndex((i) => i + 1)
       }
     },
-    [cards, currentIndex]
+    [cards, currentIndex, topicSlug]
   )
 
   // Keyboard shortcuts
@@ -143,11 +155,23 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
     return (
       <div className="max-w-lg mx-auto p-6 text-center">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-          <div className="text-5xl mb-4">🎉</div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Session Complete!</h2>
+          <div className="text-5xl mb-4">{(stats?.dueLaterToday ?? 0) > 0 ? '⏳' : '🎉'}</div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            {(stats?.dueLaterToday ?? 0) > 0 ? 'Done for now!' : 'Session Complete!'}
+          </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             {total === 0 ? 'No cards were due for review.' : `You reviewed ${total} cards.`}
           </p>
+          {(stats?.dueLaterToday ?? 0) > 0 && (
+            <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-900/20 p-4 text-sm text-amber-800 dark:text-amber-300">
+              <span className="font-semibold">{stats!.dueLaterToday} card{stats!.dueLaterToday === 1 ? '' : 's'} come{stats!.dueLaterToday === 1 ? 's' : ''} back later today</span>
+              {stats!.nextDueAt && <> — next one {formatTimeUntil(stats!.nextDueAt)}</>}.
+              {' '}
+              <button onClick={() => { setSessionComplete(false); setResults([]); setCurrentIndex(0); loadSession() }} className="underline font-semibold">
+                Check again
+              </button>
+            </div>
+          )}
 
           {total > 0 && (
             <div className="grid grid-cols-3 gap-4 mb-6">
