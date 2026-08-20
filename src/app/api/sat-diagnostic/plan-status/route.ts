@@ -69,9 +69,27 @@ export async function GET() {
       }
     })
 
-    const recommendedTopics = Array.from(dedupedMap.values()).sort(
+    let recommendedTopics = Array.from(dedupedMap.values()).sort(
       (a, b) => priorityValue(a.priority) - priorityValue(b.priority),
     )
+
+    // Hard-track attempts recommend the 700-800 ADVANCED lane when a dedicated
+    // advanced lesson exists for the topic; otherwise the regular lesson (with
+    // its entrance-quiz test-out) stands in.
+    const isHardSource = latestDiagnostic.category.startsWith('sat-hard-module')
+    if (isHardSource && recommendedTopics.length > 0) {
+      const advSlugs = recommendedTopics.map((t) => `${t.slug}-advanced`)
+      const advTopics = await prisma.topic.findMany({
+        where: { slug: { in: advSlugs } },
+        select: { slug: true, title: true },
+      })
+      const advTitle = new Map(advTopics.map((t) => [t.slug, t.title]))
+      recommendedTopics = recommendedTopics.map((t) =>
+        advTitle.has(`${t.slug}-advanced`)
+          ? { ...t, slug: `${t.slug}-advanced`, name: advTitle.get(`${t.slug}-advanced`)! }
+          : t,
+      )
+    }
 
     if (recommendedTopics.length === 0) {
       return NextResponse.json({

@@ -58,6 +58,33 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Strategy
   'sat-time-management': () => import('./sat-time-management'),
   'sat-test-strategies': () => import('./sat-time-management'), // alias
+  // 700-800 advanced track — exit quizzes drawn from the hard item tier
+  'sat-vocabulary-context-advanced': () => import('./sat-advanced'),
+  'sat-central-ideas-details-advanced': () => import('./sat-advanced'),
+  'sat-command-evidence-advanced': () => import('./sat-advanced'),
+  'sat-reading-comprehension-advanced': () => import('./sat-advanced'),
+  'sat-punctuation-advanced': () => import('./sat-advanced'),
+  'sat-sentence-structure-advanced': () => import('./sat-advanced'),
+  'sat-transitions-organization-advanced': () => import('./sat-advanced'),
+  'sat-effective-language-use-advanced': () => import('./sat-advanced'),
+  'sat-linear-equations-inequalities-advanced': () => import('./sat-advanced'),
+  'sat-systems-linear-equations-advanced': () => import('./sat-advanced'),
+  'sat-linear-inequalities-graphs-advanced': () => import('./sat-advanced'),
+  'sat-ratios-proportions-percents-advanced': () => import('./sat-advanced'),
+  'sat-functions-advanced': () => import('./sat-advanced'),
+  'sat-nonlinear-equations-functions-advanced': () => import('./sat-advanced'),
+  'sat-quadratic-equations-advanced': () => import('./sat-advanced'),
+  'sat-exponential-functions-advanced': () => import('./sat-advanced'),
+  'sat-polynomials-factoring-advanced': () => import('./sat-advanced'),
+  'sat-polynomial-rational-expressions-advanced': () => import('./sat-advanced'),
+  'sat-exponents-radicals-advanced': () => import('./sat-advanced'),
+  'sat-geometry-basics-advanced': () => import('./sat-advanced'),
+  'sat-geometry-trigonometry-advanced': () => import('./sat-advanced'),
+  'sat-circles-advanced': () => import('./sat-advanced'),
+  'sat-statistics-data-interpretation-advanced': () => import('./sat-advanced'),
+  'sat-data-statistics-advanced': () => import('./sat-advanced'),
+  'sat-scatterplots-line-fit-advanced': () => import('./sat-advanced'),
+  'sat-probability-two-way-tables-advanced': () => import('./sat-advanced'),
 
   // ═══════════════════════════════════════════════════
   // MCAT Exit Quizzes

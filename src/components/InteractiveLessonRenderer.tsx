@@ -417,12 +417,12 @@ function buildFallbackEntranceQuiz(
     }
     for (const section of part.data?.sections ?? []) {
       const s = section as { type?: string; exercise?: { questions?: RawQuestion[] } } & RawQuestion
-      // Two authoring shapes exist: 'multiple-choice' sections nest questions
-      // under exercise.questions; 'mcq' sections (Physics C and others) ARE a
-      // single question themselves.
+      // Authoring shapes: 'multiple-choice' sections nest questions under
+      // exercise.questions; 'mcq' (Physics C) and 'quiz' (SAT lessons)
+      // sections ARE a single question themselves.
       if (s.type === 'multiple-choice' && Array.isArray(s.exercise?.questions)) {
         for (const q of s.exercise.questions) consider(q)
-      } else if (s.type === 'mcq') {
+      } else if (s.type === 'mcq' || s.type === 'quiz') {
         consider(s)
       }
     }

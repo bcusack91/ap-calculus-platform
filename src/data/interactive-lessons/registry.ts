@@ -31,6 +31,7 @@ import { registryChunk2 } from './registry-chunk-2'
 import { registryChunk3 } from './registry-chunk-3'
 import { registryChunk4 } from './registry-chunk-4'
 import { registryExtra } from './registry-extra'
+import { registrySatAdvanced } from './registry-sat-advanced'
 
 const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   ...registryChunk0,
@@ -40,6 +41,9 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   ...registryChunk4,
   // Hand-authored lessons for previously-uncovered topics (see registry-extra.ts).
   ...registryExtra,
+  // SAT 700-800 advanced track: `<slug>-advanced` lessons for students routed
+  // here by a hard-module attempt (see scripts/build-sat-advanced.ts).
+  ...registrySatAdvanced,
 }
 
 // ---------------------------------------------------------------------------

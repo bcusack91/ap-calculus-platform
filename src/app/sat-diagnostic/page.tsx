@@ -57,6 +57,7 @@ export default function SATDiagnosticPage() {
     completedModules: number; nextModule: number | null
   } | null>(null)
   const [hardModuleNumber, setHardModuleNumber] = useState<number | null>(null)
+  const [pendingLessons, setPendingLessons] = useState(0)
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   // Reconstruct full DiagnosticResults from a stored history entry
@@ -101,12 +102,16 @@ export default function SATDiagnosticPage() {
     }
   }, [status, router])
 
-  // Fetch previous diagnostic history
+  // Fetch previous diagnostic history + study-plan status (soft gate copy)
   useEffect(() => {
     if (status === 'authenticated') {
       fetch('/api/sat-diagnostic/history')
         .then(r => (r.ok ? r.json() : { attempts: [] }))
         .then(data => { setHistory(data.attempts ?? []); setHardTrack(data.hardTrack ?? null) })
+        .catch(() => {})
+      fetch('/api/sat-diagnostic/plan-status')
+        .then(r => (r.ok ? r.json() : null))
+        .then(data => { if (typeof data?.summary?.pending === 'number') setPendingLessons(data.summary.pending) })
         .catch(() => {})
     }
   }, [status])
@@ -479,6 +484,14 @@ export default function SATDiagnosticPage() {
                     ? 'You have scored in the top band twice in a row, so the standard diagnostic is retired for you — it can no longer tell you anything you do not already know. These modules are 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier.'
                     : 'Your last diagnostic scored in the top band. This module is 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier — the multi-step modeling, rate chains, and precision-of-language items that separate 700 from 800.'}
                 </p>
+                {/* Soft gate: surface pending recommendations without blocking —
+                    strong students may rightly self-direct. */}
+                {pendingLessons > 0 && (
+                  <div className="mb-3 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-600/60 dark:bg-amber-900/20 dark:text-amber-300">
+                    📘 {pendingLessons} recommended lesson{pendingLessons === 1 ? '' : 's'} from your last module {pendingLessons === 1 ? 'is' : 'are'} still pending —{' '}
+                    <Link href="/sat" className="font-semibold underline">tackle {pendingLessons === 1 ? 'it' : 'them'} first</Link> for the best score gains, or start the next module anyway.
+                  </div>
+                )}
                 <button
                   onClick={() => { setHardModuleNumber(hardTrack.nextModule); setPhase('testing') }}
                   className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
