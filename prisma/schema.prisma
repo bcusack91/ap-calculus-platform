@@ -17,6 +17,7 @@ model User {
   password               String?
   role                   UserRole                      @default(FREE)
   studyContext           String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
+  satTrackOverride       String?                       // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
   stripeCustomerId       String?                       @unique
   stripeSubscriptionId   String?                       @unique
   stripePriceId          String?

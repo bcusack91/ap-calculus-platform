@@ -32,6 +32,7 @@ import { registryChunk3 } from './registry-chunk-3'
 import { registryChunk4 } from './registry-chunk-4'
 import { registryExtra } from './registry-extra'
 import { registrySatAdvanced } from './registry-sat-advanced'
+import { registrySatCoreSkills } from './registry-sat-core-skills'
 
 const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   ...registryChunk0,
@@ -44,6 +45,9 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   // SAT 700-800 advanced track: `<slug>-advanced` lessons for students routed
   // here by a hard-module attempt (see scripts/build-sat-advanced.ts).
   ...registrySatAdvanced,
+  // SAT Core Skills track: short `<slug>-core-skills` lessons for students
+  // placed under 950 (see scripts/build-sat-core-skills.ts).
+  ...registrySatCoreSkills,
 }
 
 // ---------------------------------------------------------------------------

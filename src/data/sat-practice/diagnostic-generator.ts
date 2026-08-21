@@ -32,8 +32,9 @@ export interface DiagnosticTestData {
   domains: DiagnosticDomain[]
   totalQuestions: number
   timeLimitMinutes: number
-  /** 'hard' = an all-700-800-tier module (hard track); affects score scaling. */
-  band?: 'regular' | 'hard'
+  /** Which item tier this test was drawn from; affects score scaling. See
+   *  SECTION_BANDS: 'hard' = all 700-800 tier, 'easy' = all easy/light-medium. */
+  band?: DiagnosticBand
 }
 
 export interface DomainResult {
@@ -356,12 +357,36 @@ export function listDiagnosticDomains(): DiagnosticDomain[] {
   return DIAGNOSTIC_DOMAINS
 }
 
+/** Which item tier a diagnostic attempt was drawn from. */
+export type DiagnosticBand = 'regular' | 'hard' | 'easy'
+
+/**
+ * How a raw percentage maps onto one section's 200-800 scale, per tier.
+ *
+ * A percentage only means something relative to the difficulty of the items
+ * that produced it. The regular screen samples the whole range, so it uses the
+ * whole scale. The other two are deliberately narrower:
+ *
+ * - `hard` — every item is 700-800 tier, so missing 4 of 20 puts a student in
+ *   the mid-700s, not the low 600s the regular mapping would report.
+ * - `easy` — every item is easy or light-medium tier. Acing those proves
+ *   command of the fundamentals, not a 1600: the ceiling is 550 per section
+ *   (1100 total). This keeps the reported score honest, and it sets the Core
+ *   Skills graduation bar of 950 total at about 79 percent correct — a real
+ *   standard a student has to clear, and one they can actually reach.
+ */
+const SECTION_BANDS: Record<DiagnosticBand, { base: number; span: number }> = {
+  regular: { base: 200, span: 600 },
+  hard: { base: 600, span: 200 },
+  easy: { base: 200, span: 350 },
+}
+
 export function analyzeDiagnosticResults(
   questions: DiagnosticQuestion[],
   answers: { questionIndex: number; selectedIndex: number | null }[],
-  /** 'hard' = all questions are from the 700-800 tier, so raw percentage maps
-   *  to the TOP of the scale (600-800 per section), not the whole 200-800. */
-  band: 'regular' | 'hard' = 'regular',
+  /** Which item tier the questions came from, which decides how a raw
+   *  percentage maps onto the 200-800 section scale. See SECTION_BANDS. */
+  band: DiagnosticBand = 'regular',
 ): DiagnosticResults {
   // Score by domain
   const domainScores = new Map<string, { correct: number; total: number }>()
@@ -414,12 +439,9 @@ export function analyzeDiagnosticResults(
   const rwPct = rwTotal > 0 ? rwCorrect / rwTotal : 0
   const mathPct = mathTotal > 0 ? mathCorrect / mathTotal : 0
 
-  // Hard-track modules are drawn entirely from the 700-800 item tier, so a
-  // raw percentage there resolves the TOP of the scale: a student who missed
-  // 4 of 20 hard items is in the mid-700s, not the low 600s the regular
-  // mapping would report.
-  const rwScore = band === 'hard' ? Math.round(600 + rwPct * 200) : Math.round(200 + rwPct * 600)
-  const mathScore = band === 'hard' ? Math.round(600 + mathPct * 200) : Math.round(200 + mathPct * 600)
+  const { base, span } = SECTION_BANDS[band]
+  const rwScore = Math.round(base + rwPct * span)
+  const mathScore = Math.round(base + mathPct * span)
 
   // Categorize areas
   const weakAreas = domains.filter(d => d.level === 'weak').map(d => d.domainName)

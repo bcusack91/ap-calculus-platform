@@ -21,7 +21,7 @@ type PlanStatus = {
   recommendedTopics: PlanTopicStatus[]
   pendingTopics: PlanTopicStatus[]
   /** 'hard' when the plan comes from a hard-track module (SAT 700-800 path). */
-  planSource?: 'regular' | 'hard'
+  planSource?: 'regular' | 'hard' | 'core-skills'
 }
 
 type FlashcardStats = {
@@ -135,7 +135,11 @@ export default function CourseStudyPlan({ courseSlug, courseLabel, planStatusEnd
                 Your Recommended Study Modules
               </h2>
               <span className="text-xs text-gray-500 dark:text-gray-400">
-                {plan!.planSource === 'hard' ? 'From your last hard module' : 'From your last diagnostic'} · {plan!.recommendedTopics.length - plan!.pendingTopics.length} of {plan!.recommendedTopics.length} done
+                {plan!.planSource === 'hard'
+                  ? 'From your last hard module'
+                  : plan!.planSource === 'core-skills'
+                    ? 'Core Skills — start here'
+                    : 'From your last diagnostic'} · {plan!.recommendedTopics.length - plan!.pendingTopics.length} of {plan!.recommendedTopics.length} done
               </span>
             </div>
             <ul className="space-y-2">

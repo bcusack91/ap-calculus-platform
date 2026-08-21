@@ -23,6 +23,24 @@ function tokens(s: string): Set<string> {
   return new Set(s.toLowerCase().replace(/\{\{c\d+::|\}\}/g, ' ').replace(/\\[a-zA-Z]+/g, ' ').split(/[^a-z0-9]+/).filter(w => w.length >= 3))
 }
 
+/** Share of the shorter text's tokens that also appear in the other. */
+function overlap(a: Set<string>, b: Set<string>): number {
+  const smaller = Math.min(a.size, b.size)
+  if (smaller < 4) return 0
+  return [...a].filter((x) => b.has(x)).length / smaller
+}
+
+const FRONT_DUP_THRESHOLD = 0.7
+/**
+ * Backs need a higher bar than fronts. Answer text carries templated
+ * scaffolding ("The 7 is being added, so undo it by subtracting 7 from both
+ * sides") that two genuinely different answers still share, so 0.7 on a back
+ * flags contrast pairs — add vs divide, shade above vs below, row vs column
+ * total — that are the whole point of a basic-recall deck. A real duplicate
+ * restates the same answer almost word for word and clears 0.85 easily.
+ */
+const BACK_DUP_THRESHOLD = 0.85
+
 function validateText(text: string): string | null {
   if (/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻ₐ-ₜ₀-₉]/.test(text)) return 'unicode-super/subscript'
   for (const seg of text.match(/\$\$?[^$]+\$\$?/g) ?? []) {
@@ -62,9 +80,9 @@ async function main() {
     const byTopic = new Map<string, typeof cards>()
     for (const c of cards) byTopic.set(c.topicSlug, [...(byTopic.get(c.topicSlug) ?? []), c])
     for (const [slug, list] of byTopic) {
-      const topic = await prisma.topic.findUnique({ where: { slug }, select: { id: true, flashcards: { select: { front: true } } } })
+      const topic = await prisma.topic.findUnique({ where: { slug }, select: { id: true, flashcards: { select: { front: true, back: true } } } })
       if (!topic) { rejects['unknown-topic'] = (rejects['unknown-topic'] ?? 0) + list.length; rejected += list.length; console.log('UNKNOWN TOPIC:', slug); continue }
-      const seen = topic.flashcards.map(c => tokens(c.front))
+      const seen = topic.flashcards.map(c => ({ front: tokens(c.front), back: tokens(c.back) }))
       const exact = new Set(topic.flashcards.map(c => c.front.trim().toLowerCase()))
       const toInsert: { front: string; back: string }[] = []
       for (const c of list) {
@@ -75,12 +93,17 @@ async function main() {
         else if (exact.has(front.toLowerCase())) reason = 'exact-dup'
         else reason = validateText(front) ?? validateText(back)
         if (!reason) {
-          const tk = tokens(front)
+          // A real duplicate repeats the QUESTION AND THE ANSWER. Matching on
+          // the front alone rejects minimal-pair cards — "when do you draw a
+          // solid boundary line?" vs "...a dashed boundary line?" — whose one
+          // differing word is the entire teaching point. Those share a front
+          // but have opposite backs, so requiring both to match keeps them.
+          const tkFront = tokens(front)
+          const tkBack = tokens(back)
           for (const prev of seen) {
-            const shared = [...tk].filter(x => prev.has(x)).length
-            if (shared >= 0.7 * Math.min(tk.size, prev.size) && Math.min(tk.size, prev.size) >= 4) { reason = 'near-dup'; break }
+            if (overlap(tkFront, prev.front) >= FRONT_DUP_THRESHOLD && overlap(tkBack, prev.back) >= BACK_DUP_THRESHOLD) { reason = 'near-dup'; break }
           }
-          if (!reason) { seen.push(tk); exact.add(front.toLowerCase()) }
+          if (!reason) { seen.push({ front: tkFront, back: tkBack }); exact.add(front.toLowerCase()) }
         }
         if (reason) { rejects[reason.split(':')[0]] = (rejects[reason.split(':')[0]] ?? 0) + 1; rejected++; if (reason.startsWith('katex')) console.log('  KATEX REJECT:', front.slice(0, 60), '|', reason) }
         else { toInsert.push({ front, back }); if (front.includes('{{')) cloze++ }

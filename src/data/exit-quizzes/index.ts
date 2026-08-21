@@ -1165,9 +1165,21 @@ function mulberry32(seed: number): () => number {
  * requests on Node's single thread.
  */
 export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty, seed?: number): Promise<ExitQuizQuestion[]> {
+  // Core Skills topics have no item pool of their own: they draw the EASY tier
+  // of the topic they are built from. Normalizing here rather than registering
+  // 26 adapter entries means the difficulty is forced to 'easy' no matter what
+  // the caller passes, so a Core Skills exit quiz can never serve a hard item.
+  const requestedSlug = topicSlug
+  if (topicSlug.endsWith(CORE_SKILLS_SUFFIX)) {
+    const base = topicSlug.slice(0, -CORE_SKILLS_SUFFIX.length)
+    if (quizLoaders[base]) {
+      topicSlug = base
+      difficulty = 'easy'
+    }
+  }
   const loader = quizLoaders[topicSlug]
   if (!loader) {
-    throw new Error(`No exit quiz found for topic: ${topicSlug}`)
+    throw new Error(`No exit quiz found for topic: ${requestedSlug}`)
   }
   const mod = await loader()
   let questions: ReturnType<typeof mod.generateExitQuiz>
@@ -1195,6 +1207,9 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
     ),
   }))
 }
+
+/** Topic-slug suffix for the SAT Core Skills track (see core-skills-modules). */
+const CORE_SKILLS_SUFFIX = '-core-skills'
 
 /** Share of a MIXED-difficulty quiz drawn from the 700-800 tier. */
 const HARD_TIER_MIX_SHARE = 0.25

@@ -1,0 +1,1042 @@
+[
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What is a \"vocabulary in context\" question asking you to do?",
+  "back": "Put the right word back into a blank in a short paragraph. The paragraph gives you the meaning you need, so you do not have to already know the word."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What is the \"clue\" in a vocab-in-context question, and where is it usually found?",
+  "back": "The clue is the part of the passage that explains or describes the blank. It is usually right after a colon or semicolon, or in the sentence next to the blank."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What are the three steps for a vocab-in-context question?",
+  "back": "1) Find the clue. 2) Say the answer in your own plain words. 3) Match your word to the closest answer choice, then read it back into the sentence."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What is the \"plus or minus\" shortcut?",
+  "back": "Before reading the choices, decide whether the blank needs a positive word or a negative word. Marking a small + or − usually eliminates about half the options right away."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What do the words but, however, although, and yet tell you?",
+  "back": "They signal a turn. What comes next goes in the opposite direction from what came before it."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What do the words because, since, in fact, and for example tell you?",
+  "back": "They signal that what comes next goes in the same direction as what came before, and usually explains or supports it."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "Why should you cover the answer choices before reading the paragraph?",
+  "back": "The choices can pull you off track before you know what you are looking for. Reading the paragraph first lets you decide on your own word, then match."
+ },
+ {
+  "topicSlug": "sat-vocabulary-context-core-skills",
+  "front": "What should you do if you do not know some of the words in the choices?",
+  "back": "Cross out the words you do know that clearly do not fit, then pick from what is left. Narrowing to two choices and picking one is a good outcome."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What does a central idea question ask for?",
+  "back": "The point the whole passage adds up to. It must cover every sentence, like a roof over every room in a house."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What does a detail question ask for?",
+  "back": "One specific fact that is written somewhere in the passage. Your job is to locate the line, not to reason your way to an answer."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "How do you tell a central idea question from a detail question?",
+  "back": "Read the question stem. Wording like \"main idea\" or \"central idea\" wants the big point. Wording like \"according to the passage\" plus a specific fact wants a detail."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What is the \"too small\" wrong answer?",
+  "back": "A choice that is true and does appear in the passage, but covers only one sentence. It is a detail being offered as if it were the central idea."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What are the three common wrong-answer shapes on these questions?",
+  "back": "Too small (covers one sentence only), not in the text (sounds reasonable but the passage never says it), and backwards (flips something the passage said)."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "Where in a short passage is the main idea usually stated?",
+  "back": "Most often in the first sentence or the last sentence. The middle is usually examples and support. It is a good place to look first, not a guaranteed rule."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What should you do before looking at the choices on a central idea question?",
+  "back": "Say the point of the passage in your own words, in one short sentence. Then find the choice closest to what you said."
+ },
+ {
+  "topicSlug": "sat-central-ideas-details-core-skills",
+  "front": "What if the passage says something different from what you already know about the topic?",
+  "back": "The passage wins. Answer only from what is written on the page, never from outside knowledge."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What is a claim, and what is evidence?",
+  "back": "A claim is something someone says is true. Evidence is the fact, number, quote, or example that backs it up and makes you believe it."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What does it mean for evidence to be \"relevant\"?",
+  "back": "It is about the same thing as the claim. If the claim is about cost, evidence about cost is relevant; evidence about history is not, no matter how true it is."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What is the first step when you see \"Which choice best supports the claim?\"",
+  "back": "Find and underline the claim itself. Then ask what you would need to see in order to believe it, before reading any answer choices."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What kinds of evidence are considered strong?",
+  "back": "Measured data, results from a study or experiment, and direct quotes or specific actions from the text. Strong evidence is something another person could check."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What kinds of evidence are considered weak?",
+  "back": "One person's story, a general feeling, or an emotional appeal with no facts behind it. Nothing there can be verified."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What should you read first when a question includes a graph or table?",
+  "back": "The title, the axis labels, and the units. They tell you what the numbers actually measure. Grabbing the tallest bar first is where most graph errors start."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What is a counterexample?",
+  "back": "A fact that works against a claim rather than supporting it. Questions asking what would weaken or challenge an argument are asking for a counterexample."
+ },
+ {
+  "topicSlug": "sat-command-evidence-core-skills",
+  "front": "What are the three common wrong-answer shapes on evidence questions?",
+  "back": "Off topic (a true fact about the wrong subject), too vague (\"many people are interested\" is not proof), and backwards (it argues against the claim)."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What three question types cover most SAT reading passages?",
+  "back": "Main idea (what is it mostly about), structure (how is it put together), and support (which fact backs up the claim)."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What makes an answer choice correct on a main idea question?",
+  "back": "It covers every sentence in the passage. A choice that matches only one sentence is too small, and a choice about something the passage never mentions is out."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What does a structure question ask about?",
+  "back": "The shape of the passage, not its facts. For example: a common belief followed by evidence against it, a claim followed by examples, or two things compared."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "How do you spot the structure of a short passage quickly?",
+  "back": "Find the turn word. \"But\" or \"however\" after a stated belief means the passage is about to contradict it. \"For example\" means support is coming."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What is the first step on a support question?",
+  "back": "Find the claim being made. Then pick the choice that is about that same subject and actually settles it, rather than one that just sits nearby."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What is a \"too big\" wrong answer?",
+  "back": "A choice that goes further than the passage does. Watch for all, never, the only, and proves. Those words are not automatically wrong, but check whether the text really supports them."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "What do therefore, so, and as a result signal in a passage?",
+  "back": "A conclusion. What follows is being drawn from what came just before it."
+ },
+ {
+  "topicSlug": "sat-reading-comprehension-core-skills",
+  "front": "How many times should you read a short SAT passage?",
+  "back": "Once, all the way through, at a normal pace. These passages are short, so one careful pass is enough. Read the question stem before you start."
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What is a clause?",
+  "back": "A group of words with a subject (who or what) and a verb (what they do or are)."
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What makes a clause independent?",
+  "back": "It can stand alone as its own complete sentence. Example: \"The bus was late.\""
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What is a comma splice?",
+  "back": "Two complete sentences joined by only a comma, like \"The bus was late, we missed the movie.\" It is always wrong on the SAT."
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What are the three ways to join two complete sentences?",
+  "back": "A period, a semicolon, or a comma plus a FANBOYS word (for, and, nor, but, or, yet, so)."
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What does a semicolon do?",
+  "back": "It separates two complete sentences that are closely related, doing the same job as a period. Example: \"The bakery closed early; we bought bread elsewhere.\""
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "What must come BEFORE a colon?",
+  "back": "A complete sentence. What follows the colon can be a list, a word, or an explanation. Example: \"I packed three things: a hat, a map, and water.\""
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "Where does the comma go when a sentence starts with an opening phrase?",
+  "back": "At the end of the opening phrase, right before the main sentence begins. Example: \"Before the game, we ate pizza.\""
+ },
+ {
+  "topicSlug": "sat-punctuation-core-skills",
+  "front": "How do you punctuate extra information dropped into the middle of a sentence?",
+  "back": "Use the same mark on both sides — comma...comma. Test it by removing the extra part; the sentence should still work. Example: \"My uncle, who lives in Texas, sends postcards.\""
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What two parts does every clause have?",
+  "back": "A subject (who or what the words are about) and a verb (what the subject does or is)."
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What is a dependent clause?",
+  "back": "A clause that has a subject and a verb but cannot stand alone, because it starts with a word like because, although, since, when, if, or while."
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "Name six words that start a dependent clause.",
+  "back": "Because, although, since, when, while, and if. Others include unless, after, before, and though."
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What is a sentence fragment?",
+  "back": "A group of words punctuated like a sentence that is missing a subject, a verb, or a finished thought. Example: \"Since the project began.\""
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "How do you fix a fragment that starts with a word like \"because\"?",
+  "back": "Attach it to a complete sentence. \"Since the project began\" becomes \"Since the project began, costs have risen.\""
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What is a run-on sentence?",
+  "back": "Two complete sentences pushed together without the right punctuation. Example: \"The power went out we lit candles.\""
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What are the three ways to fix a run-on?",
+  "back": "Add a period, add a semicolon, or add a comma plus a FANBOYS word (for, and, nor, but, or, yet, so)."
+ },
+ {
+  "topicSlug": "sat-sentence-structure-core-skills",
+  "front": "What punctuation rule applies when a dependent clause comes first in a sentence?",
+  "back": "Put a comma after it, where the dependent clause ends and the main sentence begins. Example: \"If it snows, the game will be canceled.\""
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "What does a transition word do?",
+  "back": "It connects two sentences and names how they are related — adding, contrast, cause and effect, example, sequence, or conclusion."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "What is the first step on a transition question?",
+  "back": "Cover the blank and the answer choices, then read the sentence before and the sentence after in your own words to figure out the relationship."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "Name three contrast transitions.",
+  "back": "However, on the other hand, and nevertheless. They signal that the next sentence turns and goes the opposite direction."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "Name three cause-and-effect transitions.",
+  "back": "Therefore, as a result, and consequently. They signal that the first idea caused the second."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "Name three addition transitions.",
+  "back": "Also, in addition, and furthermore. They signal more of the same kind of information."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "Which transitions introduce a specific case of a general idea?",
+  "back": "For example, for instance, and specifically. Example: \"Many birds migrate far. For example, arctic terns fly pole to pole.\""
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "What do conclusion transitions do, and what are three of them?",
+  "back": "They signal a summary or final point. Three of them are in conclusion, ultimately, and in short."
+ },
+ {
+  "topicSlug": "sat-transitions-organization-core-skills",
+  "front": "What clue tells you where a sentence belongs in a paragraph?",
+  "back": "Pointing-back words like she, he, it, this, they, and those. The sentence containing one must come after the sentence that names the thing it points to."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "What does \"concise\" mean on the SAT?",
+  "back": "Saying the same thing in fewer words. The correct choice keeps all the meaning and uses the fewest words to do it."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "How do you answer a \"most concise\" question?",
+  "back": "Cross out any choice that leaves out part of the meaning, then pick the shortest choice that is left."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "What is a redundant phrase?",
+  "back": "A phrase that says the same thing twice, like \"free gift\" or \"combined together.\" One of the words can be deleted with no loss of meaning."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "Give three examples of redundant phrases.",
+  "back": "Free gift, past history, and combined together. Others include \"the reason is because\" and \"in the year 1937\" instead of \"in 1937.\""
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "How do you shorten \"due to the fact that\"?",
+  "back": "Replace it with \"because.\" One word does the same job as five."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "How do you shorten \"made a decision\" or \"did a review of\"?",
+  "back": "Turn the phrase back into one verb: \"decided\" and \"reviewed.\" Also \"gave an explanation of\" becomes \"explained.\""
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "On a notes question, what decides the right answer?",
+  "back": "The stated goal. The correct choice covers every part of the goal; a choice that is true but covers only part of it is wrong."
+ },
+ {
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "front": "What are the three steps for a notes question?",
+  "back": "Read the goal twice and note each thing it asks for, check each choice against the goal, and cross out any choice that misses one part."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "What does it mean to \"solve for $x$\"?",
+  "back": "It means getting $x$ alone on one side of the equation. Once $x$ stands by itself, the other side tells you its value."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "What is the one rule you must follow when solving an equation?",
+  "back": "Whatever you do to one side, do the exact same thing to the other side. That keeps the two sides equal."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "What is a variable?",
+  "back": "A letter that stands for a number you do not know yet. In most SAT questions that letter is $x$."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "In $x + 7 = 12$, how do you get $x$ alone?",
+  "back": "The 7 is being added, so undo it by subtracting 7 from both sides. That leaves $x = 5$."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "In $5x = 20$, how do you get $x$ alone?",
+  "back": "The 5 is multiplying $x$, so undo it by dividing both sides by 5. That leaves $x = 4$."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "What is the first step to solve $2x + 5 = 13$?",
+  "back": "Subtract 5 from both sides to undo the adding. That gives $2x = 8$. Then divide both sides by 2 to get $x = 4$."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "What happens to an inequality sign when you divide both sides by a negative number?",
+  "back": "The sign flips to point the other way. For example, dividing $-2x < 8$ by $-2$ gives $x > -4$."
+ },
+ {
+  "topicSlug": "sat-linear-equations-inequalities-core-skills",
+  "front": "How do you check that your answer to an equation is right?",
+  "back": "Put your answer back into the original equation in place of $x$ and do the arithmetic. If both sides come out equal, the answer is correct."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "What is a system of equations?",
+  "back": "Two equations that are true at the same time. They share the same $x$ value and the same $y$ value."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "What does the solution to a system look like?",
+  "back": "A pair of numbers written as a point, $(x, y)$. It is the one pair that makes both equations true."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "In the point $(5, 2)$, which number is $x$?",
+  "back": "The first number is always $x$, so $x = 5$. The second number is always $y$, so $y = 2$."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "When should you use substitution?",
+  "back": "When one equation already tells you what a variable equals, such as $y = 4$ or $y = 3x$. Put that value into the other equation in place of the variable."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "When should you add the two equations together?",
+  "back": "When one equation has a plus $y$ and the other has a minus $y$. Adding straight down makes the $y$ terms cancel out."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "If $x + y = 10$ and $x - y = 4$, what is the first step?",
+  "back": "Add the two equations straight down. The $y$ terms cancel and you get $2x = 14$, so $x = 7$."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "After you find $x$, how do you find $y$?",
+  "back": "Put your value for $x$ back into either original equation and solve for $y$."
+ },
+ {
+  "topicSlug": "sat-systems-linear-equations-core-skills",
+  "front": "How do you check the solution to a system?",
+  "back": "Put both numbers into both equations. The pair has to make both equations true, not just one of them."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "What is a boundary line?",
+  "back": "The line you draw by treating the inequality sign as an equals sign. It separates the shaded region from the unshaded region."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "When do you draw a solid boundary line?",
+  "back": "When the sign is greater than or equal to, or less than or equal to. The small line under the sign means points on the boundary count, so the line is solid."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "When do you draw a dashed boundary line?",
+  "back": "When the sign is plain greater than or plain less than, with no line underneath. Points on the boundary do not count, so the line is dashed."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "For $y >$ something, do you shade above or below the line?",
+  "back": "Above. Greater $y$ values sit higher up on the graph, so you shade the region above the boundary line."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "For $y <$ something, do you shade above or below the line?",
+  "back": "Below. Smaller $y$ values sit lower on the graph, so you shade the region below the boundary line."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "What is the test-point method?",
+  "back": "Pick an easy point, usually $(0, 0)$, and put its numbers into the inequality. If the statement is true, shade the side that contains that point. If it is false, shade the other side."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "How do you check whether a point is in the solution region?",
+  "back": "Put the $x$ value and the $y$ value into the inequality. If the statement comes out true, the point is in the shaded region."
+ },
+ {
+  "topicSlug": "sat-linear-inequalities-graphs-core-skills",
+  "front": "How is $x \\ge 2$ graphed on the coordinate plane?",
+  "back": "As a solid vertical line at $x = 2$, with the region to the right shaded, because numbers greater than 2 sit to the right."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "What is a ratio?",
+  "back": "A comparison of two amounts. If there are 6 red marbles and 9 blue marbles, the ratio of red to blue is 6 to 9."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "How do you simplify the ratio 6 to 9?",
+  "back": "Divide both numbers by the same value. Both divide by 3, giving 2 to 3."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "What is a proportion?",
+  "back": "A statement that two ratios are equal, such as one half equals three sixths. You use it to scale one amount up or down."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "What is the most common mistake when setting up a proportion?",
+  "back": "Flipping one side. Whatever kind of amount you put on top on the left side must also go on top on the right side."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "What does percent mean?",
+  "back": "Out of one hundred. So 25 percent means 25 out of 100, which is the same as the decimal 0.25."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "How do you find 20 percent of 60?",
+  "back": "Turn 20 percent into the decimal 0.20, then multiply, because the word of means multiply. That gives 0.20 times 60, which equals 12."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "What are the shortcuts for 50 percent and 10 percent of a number?",
+  "back": "For 50 percent, take half by dividing by 2. For 10 percent, move the decimal point one place to the left."
+ },
+ {
+  "topicSlug": "sat-ratios-proportions-percents-core-skills",
+  "front": "A 50 dollar jacket is 10 percent off. What are the two steps to find the sale price?",
+  "back": "First find the discount: 10 percent of 50 is 5. Then subtract it from the original price: 50 minus 5 equals 45 dollars."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "What is a function?",
+  "back": "A rule that takes one number in and gives one number out. The same input always produces the same output."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "How do you read $f(x)$, and what does it mean?",
+  "back": "It is read f of x. The $f$ is the name of the function, $x$ is the input, and $f(x)$ is the output. It does not mean $f$ times $x$."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "What does it mean to evaluate $f(3)$?",
+  "back": "It means find the output when the input is 3. Wherever you see $x$ in the rule, write 3 instead, then do the arithmetic."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "If $f(x) = 2x + 5$, what is $f(3)$?",
+  "back": "Replace $x$ with 3 to get $2(3) + 5$. Multiply first to get 6, then add 5. The answer is 11."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "In $f(x) = 2x + 5$, why do you multiply before you add?",
+  "back": "Multiplication comes before addition in the order of operations. Adding first would give the wrong answer."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "What does slope mean?",
+  "back": "Slope is the rate of change. It is the number multiplied by $x$, and it tells you how much the output changes each time the input goes up by one."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "What is the y-intercept of a function?",
+  "back": "The output when the input is zero. In $f(x) = mx + b$ it is $b$, the number standing alone with no $x$ attached, and it is often called the starting value."
+ },
+ {
+  "topicSlug": "sat-functions-core-skills",
+  "front": "In a cost function like $C(m) = 20m + 30$, what do the two numbers represent?",
+  "back": "The 20 is attached to the variable, so it is the rate: 20 dollars per month. The 30 stands alone, so it is the one-time starting cost."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "What does the notation $f(3)$ tell you to do?",
+  "back": "Replace every $x$ in the rule with $3$, then do the arithmetic. The number that comes out is $f(3)$."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "What is $(-3)^{2}$, and why?",
+  "back": "It is $9$. The exponent means $(-3) \\times (-3)$, and a negative times a negative is positive."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "What do the bars in $|x|$ mean?",
+  "back": "Absolute value: the distance from zero. The result is never negative, so $|-5| = 5$ and $|5| = 5$."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "If $g(x) = 5x - 2$, what is $g(3)$?",
+  "back": "It is $13$. Replace $x$ with $3$: $5(3) - 2 = 15 - 2 = 13$."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "How does the graph of $f(x) + 3$ compare to the graph of $f(x)$?",
+  "back": "It is the same graph moved up $3$ units. Adding on the outside shifts the graph up; subtracting shifts it down."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "Where is the vertex of $f(x) = (x - h)^{2} + k$?",
+  "back": "At the point $(h, k)$. For example, $(x - 5)^{2} + 2$ has its vertex at $(5, 2)$."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "How do you find where $f(x) = \\frac{1}{x - 6}$ is undefined?",
+  "back": "Set the bottom equal to zero and solve: $x - 6 = 0$ gives $x = 6$. A denominator can never be zero."
+ },
+ {
+  "topicSlug": "sat-nonlinear-equations-functions-core-skills",
+  "front": "When evaluating $f(4) = 4^{2} + 5$, which operation comes first?",
+  "back": "The exponent. First $4^{2} = 16$, and then $16 + 5 = 21$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "What does it mean to factor an expression?",
+  "back": "It means to rewrite it as a multiplication. For example, $x^{2} + 5x + 6$ factors into $(x + 2)(x + 3)$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "For $x^{2} + 5x + 6$, what two numbers are you looking for?",
+  "back": "Two numbers that multiply to $6$ and add to $5$. Those are $2$ and $3$, so the factored form is $(x + 2)(x + 3)$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "What is the zero product rule?",
+  "back": "If two things multiply to zero, at least one of them must be zero. So $(x + 3)(x + 4) = 0$ means $x + 3 = 0$ or $x + 4 = 0$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "The factor $(x - 4)$ gives which solution?",
+  "back": "It gives $x = 4$. Set $x - 4 = 0$ and add $4$ to both sides. The sign flips from the parenthesis to the answer."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "What is a zero of an equation?",
+  "back": "A value of $x$ that makes the equation true. The words zero, root, and solution all mean the same thing."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "How do you factor $x^{2} - 49$?",
+  "back": "It factors into $(x - 7)(x + 7)$. This is the difference of squares pattern, since $7 \\times 7 = 49$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "How do you solve $x^{2} - 5x = 0$?",
+  "back": "Pull out the shared $x$: $x(x - 5) = 0$. The solutions are $x = 0$ and $x = 5$. Do not divide by $x$, or you lose the answer $x = 0$."
+ },
+ {
+  "topicSlug": "sat-quadratic-equations-core-skills",
+  "front": "How do you solve $x^{2} = 36$?",
+  "back": "Take the square root of both sides and keep both signs: $x = 6$ or $x = -6$. Both numbers square to $36$."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "What is the general form of an exponential function?",
+  "back": "It is $y = a \\cdot b^{x}$, where $a$ is the starting amount and $b$ is the number you multiply by at each step."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "What does the base $b$ tell you in $y = a \\cdot b^{x}$?",
+  "back": "Whether the amount grows or shrinks. If $b$ is greater than 1 the amount grows. If $b$ is between 0 and 1 the amount decays."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "A quantity grows 6 percent each year. What is the growth factor?",
+  "back": "It is 1.06. You keep everything you had, which is 1 whole, and add 0.06 for the 6 percent."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "A quantity loses 15 percent of its value each year. What is the decay factor?",
+  "back": "It is 0.85. Losing 15 percent means keeping 85 percent, and 85 percent written as a decimal is 0.85."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "What is the difference between linear growth and exponential growth?",
+  "back": "Linear growth adds the same amount each step. Exponential growth multiplies by the same number each step."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "What is any number raised to the power $0$?",
+  "back": "It is 1. That is why the $y$-intercept of $y = a \\cdot b^{x}$ is always the point $(0, a)$."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "What does the exponent mean in $2^{5}$?",
+  "back": "It tells you how many times to multiply the base by itself: $2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$."
+ },
+ {
+  "topicSlug": "sat-exponential-functions-core-skills",
+  "front": "A town of 400 people grows 25 percent in one year. What is the new population?",
+  "back": "It is 500 people. Multiply by the growth factor: $400 \\times 1.25 = 500$."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What is the degree of a polynomial?",
+  "back": "The largest exponent anywhere in it. In $4x^{3} - 2x^{2} + 7$ the degree is $3$."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What is the leading coefficient of a polynomial?",
+  "back": "The number in front of the term with the largest exponent. In $-7x^{4} + 3x - 1$ it is $-7$, and the minus sign is part of it."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What is the greatest common factor, and when do you use it?",
+  "back": "It is the biggest number and the most $x$ letters that every term shares. Pull it out first, before trying any other factoring."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "Factor $5x^{2} + 20x$ completely.",
+  "back": "It is $5x(x + 4)$. Both terms share a $5$ and an $x$, and dividing each term by $5x$ leaves $x$ and $4$."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What is the difference of squares pattern?",
+  "back": "$x^{2} - n^{2}$ factors into $(x - n)(x + n)$. For example, $x^{2} - 25 = (x - 5)(x + 5)$."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What does it mean that $3$ is a zero of $f(x)$?",
+  "back": "Putting $3$ in for $x$ gives an output of $0$, and it also means $(x - 3)$ is a factor of $f(x)$."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "How do you check that you factored correctly?",
+  "back": "Multiply the factors back out. If you get the original expression, the factoring is right."
+ },
+ {
+  "topicSlug": "sat-polynomials-factoring-core-skills",
+  "front": "What are the zeros of $f(x) = (x - 2)(x + 6)$?",
+  "back": "They are $x = 2$ and $x = -6$. Set each factor equal to zero and solve the two small equations."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "What is a rational expression?",
+  "back": "A fraction with letters in it, such as $\\frac{3x + 12}{x + 4}$. Rational here means ratio, which means fraction."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "Why can the bottom of a fraction never be zero?",
+  "back": "Dividing by zero is not allowed in math. Any $x$ that makes the denominator zero is undefined and is excluded from the domain."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "How do you find where $\\frac{x + 1}{x - 8}$ is undefined?",
+  "back": "Set the bottom equal to zero and solve: $x - 8 = 0$, so $x = 8$. That value is excluded."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "What is the difference between a factor and a term?",
+  "back": "A factor is something being multiplied. A term is something being added or subtracted. You may only cancel factors."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "Can $\\frac{x + 4}{x + 6}$ be simplified?",
+  "back": "No. The $x$ letters are terms being added, not factors being multiplied, so nothing cancels. It is already in simplest form."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "Simplify $\\frac{3}{x} + \\frac{4}{x}$.",
+  "back": "It is $\\frac{7}{x}$. The bottoms already match, so add the tops and keep the bottom the same."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "What is a vertical asymptote?",
+  "back": "An up-and-down line the graph gets close to but never touches. It sits where the bottom equals zero after all canceling is done."
+ },
+ {
+  "topicSlug": "sat-polynomial-rational-expressions-core-skills",
+  "front": "How do you divide by a rational expression?",
+  "back": "Flip the second fraction and multiply. Dividing by a fraction is the same as multiplying by its reciprocal."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "What does the exponent in $2^{5}$ tell you to do?",
+  "back": "Multiply the base by itself that many times. $2^{5} = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$. The base is 2 and the exponent is 5."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "When you MULTIPLY two powers with the same base, what do you do with the exponents?",
+  "back": "Add them. $x^{3} \\cdot x^{4} = x^{7}$, because $3 + 4 = 7$."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "When you DIVIDE two powers with the same base, what do you do with the exponents?",
+  "back": "Subtract the bottom exponent from the top one. $\\frac{x^{9}}{x^{4}} = x^{5}$, because $9 - 4 = 5$."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "When a power is raised to another power, like $(x^{3})^{2}$, what do you do with the exponents?",
+  "back": "Multiply them. $(x^{3})^{2} = x^{6}$, because $3 \\times 2 = 6$."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "What is any number raised to the zero power?",
+  "back": "It is 1. So $5^{0} = 1$ and $x^{0} = 1$. It is never 0."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "What does a negative exponent mean, as in $3^{-2}$?",
+  "back": "It means one over that power. $3^{-2} = \\frac{1}{3^{2}} = \\frac{1}{9}$. The answer is a fraction, not a negative number."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "What does the exponent $\\frac{1}{2}$ mean, as in $x^{1/2}$?",
+  "back": "It means the square root: $x^{1/2} = \\sqrt{x}$. The bottom number of the fraction tells you which root, so $x^{1/3} = \\sqrt[3]{x}$."
+ },
+ {
+  "topicSlug": "sat-exponents-radicals-core-skills",
+  "front": "What does a square root ask you to find?",
+  "back": "The number that times itself gives you the number under the symbol. $\\sqrt{49} = 7$ because $7 \\times 7 = 49$. Worth knowing by sight: 4, 9, 16, 25, 36, 49, 64, 81, 100."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What is the difference between perimeter and area?",
+  "back": "Perimeter is the distance around the outside of a shape. Area is the amount of flat space inside it. Perimeter is measured in units; area is measured in square units."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What is the formula for the area of a rectangle?",
+  "back": "Area = length times width. A rectangle with length 9 and width 6 has area $9 \\times 6 = 54$ square units."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What is the formula for the area of a triangle?",
+  "back": "Area = one half times base times height, or $\\frac{1}{2}bh$. With base 10 and height 4: $\\frac{1}{2} \\times 10 \\times 4 = 20$."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "How do you find the perimeter of any shape with straight sides?",
+  "back": "Add up the lengths of all the sides. A square with side 7 has perimeter $7 + 7 + 7 + 7 = 28$."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What do supplementary angles add up to? What about complementary angles?",
+  "back": "Supplementary angles add to $180°$ — they form a straight line. Complementary angles add to $90°$ — they form a right angle."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What do the three angles inside a triangle add up to?",
+  "back": "They always add to $180°$. If two angles are $50°$ and $60°$, the third is $180 - 110 = 70°$."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "When two straight lines cross, what is true about the angles directly across from each other?",
+  "back": "They are equal. These are called vertical angles. If one is $72°$, the one across from it is also $72°$."
+ },
+ {
+  "topicSlug": "sat-geometry-basics-core-skills",
+  "front": "What is the Pythagorean theorem, and which side is $c$?",
+  "back": "$a^{2} + b^{2} = c^{2}$. The letter $c$ is the hypotenuse, the longest side, always across from the $90°$ angle. The letters $a$ and $b$ are the two legs."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "In a right triangle, which side is the hypotenuse?",
+  "back": "The longest side, always the one directly across from the $90°$ angle. Its name never changes, no matter which angle you are working with."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What does SOH-CAH-TOA stand for?",
+  "back": "Sine = Opposite over Hypotenuse. Cosine = Adjacent over Hypotenuse. Tangent = Opposite over Adjacent."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What is the formula for $\\sin\\theta$?",
+  "back": "$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$. The opposite side is the one across the triangle from the angle theta."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What is the formula for $\\cos\\theta$?",
+  "back": "$\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$. The adjacent side is the leg that touches the angle theta."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What is the formula for $\\tan\\theta$?",
+  "back": "$\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$. Tangent is the only one of the three that never uses the hypotenuse."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What is $\\sin 30°$, and what does it mean about the triangle?",
+  "back": "$\\sin 30° = \\frac{1}{2}$. It means the side across from a $30°$ angle is exactly half the length of the hypotenuse."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What is $\\tan 45°$?",
+  "back": "$\\tan 45° = 1$. In a triangle with a $45°$ angle, the two legs are the same length, and any number divided by itself is 1."
+ },
+ {
+  "topicSlug": "sat-geometry-trigonometry-core-skills",
+  "front": "What does $\\sin^{2}\\theta + \\cos^{2}\\theta$ equal?",
+  "back": "It equals 1, for every angle. This is called the Pythagorean identity. When you see this exact sum, write 1 — there is nothing to calculate."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "What is the radius of a circle?",
+  "back": "The distance from the center of the circle out to the edge. It is half the diameter."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "If you know the diameter of a circle, how do you get the radius?",
+  "back": "Divide the diameter by 2. A diameter of 14 gives a radius of 7. Going the other way, the diameter is twice the radius."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "What is the formula for the area of a circle?",
+  "back": "Area = $\\pi r^{2}$. Square the radius first, then multiply by pi. A radius of 5 gives an area of $25\\pi$."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "What is the formula for the circumference of a circle?",
+  "back": "Circumference = $2\\pi r$. It is the distance all the way around the edge. A radius of 6 gives a circumference of $12\\pi$."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "A circle question gives you the diameter. What should you do before using any formula?",
+  "back": "Cut the diameter in half to get the radius. Both the area formula and the circumference formula use the radius, never the diameter."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "What is the standard equation of a circle on the xy-plane?",
+  "back": "$(x - h)^{2} + (y - k)^{2} = r^{2}$, where $(h, k)$ is the center and $r$ is the radius."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "In the equation $(x - h)^{2} + (y - k)^{2} = r^{2}$, what is the number on the right side?",
+  "back": "It is the radius squared, not the radius. If it is 49, the radius is $\\sqrt{49} = 7$. Take the square root every time."
+ },
+ {
+  "topicSlug": "sat-circles-core-skills",
+  "front": "How do you read the center from $(x + 2)^{2} + (y - 5)^{2} = 9$?",
+  "back": "Flip the signs you see. The center is $(-2, 5)$. The standard form has minus signs built in, so a plus in the equation means a negative coordinate."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "How do you find the mean of a list of numbers?",
+  "back": "Add every number in the list, then divide by how many numbers there are. Example: 4, 8, 6, 10, 2 adds up to 30, and there are 5 numbers, so 30 divided by 5 is 6."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "What is another everyday word for the mean?",
+  "back": "The average. Mean and average are the same thing."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "What is the median of a data set?",
+  "back": "The middle number once the list is in order from smallest to largest. In 2, 4, 6, 8, 10 the median is 6."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "What is the very first step before you can find a median?",
+  "back": "Put the numbers in order from smallest to largest. Write the sorted list down. Looking at the middle of an unsorted list gives the wrong answer."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "How do you find the median when the list has an even number of values?",
+  "back": "There are two middle numbers. Add them and divide by 2. For 4, 6, 8, 10 the middle numbers are 6 and 8, and 6 plus 8 is 14, so the median is 14 divided by 2, which is 7."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "How do you find the range of a data set?",
+  "back": "Subtract the smallest number from the biggest number. For 14, 6, 11, 9, 6 the biggest is 14 and the smallest is 6, so the range is 14 minus 6, which is 8."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "What does the range tell you about a data set?",
+  "back": "It tells you how spread out the numbers are. A bigger range means the numbers are farther apart. A smaller range means they are packed close together."
+ },
+ {
+  "topicSlug": "sat-statistics-data-interpretation-core-skills",
+  "front": "Which of mean, median, and range describe the center, and which describes the spread?",
+  "back": "Mean and median describe the center of the data. Range describes the spread."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "What is a two-way table?",
+  "back": "A table that sorts one group of people two different ways at the same time, such as boys and girls across Yes and No answers. Each box inside is called a cell and holds a count."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "How do you find a row total in a two-way table?",
+  "back": "Add all the cells across that row. If a row has 9 and 6, the row total is 9 plus 6, which is 15."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "How do you find a column total in a two-way table?",
+  "back": "Add all the cells down that column. If a column has 14 and 6, the column total is 14 plus 6, which is 20."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "What number goes on top of the fraction, and what goes on the bottom?",
+  "back": "The count you want goes on top. The total of the group the question asks about goes on the bottom."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "The question says \"of all 50 students.\" What is the bottom of your fraction?",
+  "back": "50, the grand total. The phrase names the whole group, so everyone counts."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "The question says \"of the boys.\" What is the bottom of your fraction?",
+  "back": "The total number of boys only. The question narrowed the group, so the rest of the table is not part of the bottom number."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "How do you turn a fraction into a percent?",
+  "back": "Make the bottom number 100 if you can, multiplying the top by the same amount. 18 over 50 becomes 36 over 100, which is 36 percent. Otherwise divide the top by the bottom and move the decimal point two places to the right."
+ },
+ {
+  "topicSlug": "sat-data-statistics-core-skills",
+  "front": "What is 30 out of 50 as a percent?",
+  "back": "60 percent. Since 50 times 2 is 100, multiply the top by 2 as well: 30 times 2 is 60, giving 60 out of 100."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "What is a scatterplot?",
+  "back": "A graph made of dots, where each dot stands for one thing that was measured two ways at once, such as one student's study hours and that student's test score."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "What is a line of best fit?",
+  "back": "A straight line drawn through the middle of the dots on a scatterplot to show the general direction of the data. It is not meant to touch every dot."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "What does it mean when the dots on a scatterplot rise from left to right?",
+  "back": "It is a positive association. As x increases, y tends to increase too."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "What does it mean when the dots on a scatterplot fall from left to right?",
+  "back": "It is a negative association. As x increases, y tends to decrease."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "In the equation y = 4x + 10, what does the slope of 4 mean?",
+  "back": "Each time x increases by 1, y increases by about 4. The slope is always the number in front of x, and it tells you how much y changes per 1 unit of x."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "In the equation y = 6x + 12, what does the 12 mean?",
+  "back": "It is the y-intercept, which is the predicted value of y when x is 0. Substituting 0 for x gives 6 times 0 plus 12, which is 12."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "How do you use a line of best fit to predict a value?",
+  "back": "Put the given number in for x, multiply, then add. For y = 3x + 4 at x = 5: 3 times 5 is 15, and 15 plus 4 is 19."
+ },
+ {
+  "topicSlug": "sat-scatterplots-line-fit-core-skills",
+  "front": "What is a residual, and how do you find one?",
+  "back": "A residual is the gap between a real data point and the line. Predict first, then subtract: residual equals actual minus predicted. If the actual value is 15 and the line predicted 12, the residual is 3, and the dot sits above the line."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "What is the basic formula for probability?",
+  "back": "Probability equals the number of outcomes you want divided by the total number of outcomes. What you want goes on top, and everything that could happen goes on the bottom."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "A bag has 3 red, 5 blue, and 2 green marbles. What is the probability of drawing red?",
+  "back": "3 over 10. Add all the marbles for the total: 3 plus 5 is 8, and 8 plus 2 is 10. There are 3 red, so the probability is 3 out of 10."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "How do you handle a probability question with the word NOT in it?",
+  "back": "Count everything that does not match and put that count on top. In a bag of 10 marbles where 3 are red, not red is 10 minus 3, which is 7, so the probability is 7 over 10."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "How do you know what number belongs on the bottom of a probability fraction?",
+  "back": "The opening words of the question name the group. \"A student is picked at random\" means use the grand total. \"A junior is picked\" means use the junior total only."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "Of 30 soccer players, 12 also play tennis. A soccer player is picked at random. What is the probability the student plays tennis?",
+  "back": "2 over 5. The group is the 30 soccer players, so the fraction is 12 over 30, and dividing top and bottom by 6 gives 2 over 5."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "What is a two-way table, and where do you find the group totals?",
+  "back": "A table sorting one group of people two ways at once. A row added across gives that row's total, a column added down gives that column's total, and the corner of the table is everyone."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "What do you do if the total you need is not printed in the table?",
+  "back": "Add the cells yourself. If 8 people completed a program and 4 did not, the group total is 8 plus 4, which is 12."
+ },
+ {
+  "topicSlug": "sat-probability-two-way-tables-core-skills",
+  "front": "How can you tell right away that a probability answer is wrong?",
+  "back": "Every probability is between 0 and 1. If your fraction comes out bigger than 1, the top and bottom got swapped."
+ }
+]

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { generateDiagnosticTest, rebuildRecommendedTopics, listDiagnosticDomains } from '@/data/sat-practice/diagnostic-generator'
 import { generateHardModule, HARD_MODULE_CATEGORY, HARD_MODULE_COUNT } from '@/data/sat-practice/hard-modules'
+import { generateCoreModule, CORE_MODULE_CATEGORY, CORE_MODULE_COUNT, CORE_MODULE_MINUTES, CORE_SKILLS_GRADUATION_SCORE } from '@/data/sat-practice/core-skills-modules'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
@@ -57,6 +58,15 @@ export default function SATDiagnosticPage() {
     completedModules: number; nextModule: number | null
   } | null>(null)
   const [hardModuleNumber, setHardModuleNumber] = useState<number | null>(null)
+  const [coreModuleNumber, setCoreModuleNumber] = useState<number | null>(null)
+  const [coreSkills, setCoreSkills] = useState<{
+    placed: boolean
+    graduated: boolean
+    bestModuleScore: number | null
+    pointsToGraduate: number | null
+    completedModules: number
+    nextModule: number | null
+  } | null>(null)
   const [pendingLessons, setPendingLessons] = useState(0)
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
@@ -111,7 +121,10 @@ export default function SATDiagnosticPage() {
         .catch(() => {})
       fetch('/api/sat-diagnostic/plan-status')
         .then(r => (r.ok ? r.json() : null))
-        .then(data => { if (typeof data?.summary?.pending === 'number') setPendingLessons(data.summary.pending) })
+        .then(data => {
+          if (typeof data?.summary?.pending === 'number') setPendingLessons(data.summary.pending)
+          if (data?.coreSkills) setCoreSkills(data.coreSkills)
+        })
         .catch(() => {})
     }
   }, [status])
@@ -128,8 +141,12 @@ export default function SATDiagnosticPage() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            category: hardModuleNumber ? `${HARD_MODULE_CATEGORY}-${hardModuleNumber}` : 'sat-full-diagnostic',
-            classDiagnosticId: hardModuleNumber ? undefined : (assignedId || undefined),
+            category: hardModuleNumber
+              ? `${HARD_MODULE_CATEGORY}-${hardModuleNumber}`
+              : coreModuleNumber
+                ? `${CORE_MODULE_CATEGORY}-${coreModuleNumber}`
+                : 'sat-full-diagnostic',
+            classDiagnosticId: (hardModuleNumber || coreModuleNumber) ? undefined : (assignedId || undefined),
             results: JSON.stringify({
               review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
@@ -169,7 +186,7 @@ export default function SATDiagnosticPage() {
         // Silent fail
       }
     },
-    [challengeToken, testData, assignedId, hardModuleNumber],
+    [challengeToken, testData, assignedId, hardModuleNumber, coreModuleNumber],
   )
 
   if (status === 'loading') {
@@ -201,6 +218,18 @@ export default function SATDiagnosticPage() {
             totalQuestions: mod.totalQuestions,
             timeLimitMinutes: mod.timeLimitMinutes,
             band: 'hard',
+          }
+        }
+        // Core Skills track: a 20-question all-easy-tier module, scored on the
+        // compressed 'easy' band so the reported number stays honest.
+        if (coreModuleNumber) {
+          const mod = await generateCoreModule(coreModuleNumber)
+          return {
+            questions: mod.questions,
+            domains: listDiagnosticDomains(),
+            totalQuestions: mod.totalQuestions,
+            timeLimitMinutes: mod.timeLimitMinutes,
+            band: 'easy',
           }
         }
         if (assignedId) {
@@ -467,6 +496,49 @@ export default function SATDiagnosticPage() {
                 Personalized topic recommendations based on results
               </li>
             </ul>
+
+            {/* Core Skills track: the mirror of the hard track at the other end.
+                A student near 400 gets short modules on easy-tier items instead
+                of a 30-question screen that tells them only that they missed
+                most of it. */}
+            {coreSkills?.placed && coreSkills.nextModule !== null && (
+              <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
+                <div className="mb-1 flex items-center gap-2">
+                  <span className="rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white">CORE SKILLS</span>
+                  <span className="text-xs text-emerald-700 dark:text-emerald-300">
+                    Module {coreSkills.nextModule} of {CORE_MODULE_COUNT}
+                    {coreSkills.completedModules > 0 && ` · ${coreSkills.completedModules} done`}
+                  </span>
+                </div>
+                <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+                  This module is 20 questions — 10 Reading &amp; Writing, 10 Math — covering the
+                  fundamentals every SAT question is built on. You get {CORE_MODULE_MINUTES} minutes,
+                  and the lessons it recommends are short: one core idea, one worked example, and a
+                  little practice.
+                </p>
+                {coreSkills.bestModuleScore !== null && (
+                  <div className="mb-3 rounded-lg border border-emerald-300 bg-white/70 p-3 text-sm text-emerald-900 dark:border-emerald-600/60 dark:bg-emerald-900/30 dark:text-emerald-200">
+                    Your best Core Skills score so far is <strong>{coreSkills.bestModuleScore}</strong>.
+                    {coreSkills.pointsToGraduate !== null && (
+                      <> Reach <strong>{CORE_SKILLS_GRADUATION_SCORE}</strong> — about 16 of 20 correct — and you move up to the standard lessons. That is {coreSkills.pointsToGraduate} points away.</>
+                    )}
+                  </div>
+                )}
+                <button
+                  onClick={() => { setCoreModuleNumber(coreSkills.nextModule); setHardModuleNumber(null); setPhase('testing') }}
+                  className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+                >
+                  Start Core Skills Module {coreSkills.nextModule}
+                </button>
+              </div>
+            )}
+            {coreSkills?.graduated && (
+              <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 text-sm text-gray-700 dark:border-emerald-700 dark:bg-emerald-900/20 dark:text-gray-300">
+                🎉 You reached {CORE_SKILLS_GRADUATION_SCORE} on a Core Skills module, so you have moved up
+                to the standard lessons and the full diagnostic. The Core Skills modules stay available
+                any time you want to warm up on the fundamentals.
+              </div>
+            )}
 
             {/* Hard track: once a student proves the top band, the mid-level
                 screen stops telling them anything useful. */}

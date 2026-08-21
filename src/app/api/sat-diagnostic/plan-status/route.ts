@@ -1,6 +1,12 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { HARD_MODULE_CATEGORY } from '@/data/sat-practice/hard-modules'
+import {
+  CORE_MODULE_CATEGORY,
+  coreSkillsTrackStatus,
+  type SatTrackOverride,
+} from '@/data/sat-practice/core-skills-modules'
 
 type RecommendedTopic = {
   slug: string
@@ -52,20 +58,46 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const latestDiagnostic = await prisma.diagnosticTest.findFirst({
-      // The study plan follows the student's LATEST diagnostic attempt of
-      // either kind: the regular screen, or a hard-track module (whose
-      // recommendations come from the 700-800-tier items they missed).
-      where: {
-        userId: session.user.id,
-        OR: [
-          { category: 'sat-full-diagnostic' },
-          { category: { startsWith: 'sat-hard-module' } },
-        ],
-      },
-      orderBy: { createdAt: 'desc' },
-      select: { id: true, category: true, createdAt: true, results: true },
-    })
+    const [latestDiagnostic, user, regularAttempts, coreModuleAttempts] = await Promise.all([
+      prisma.diagnosticTest.findFirst({
+        // The study plan follows the student's LATEST diagnostic attempt of any
+        // kind: the regular screen, a hard-track module (recommendations from
+        // the 700-800 items they missed), or a Core Skills module.
+        where: {
+          userId: session.user.id,
+          OR: [
+            { category: 'sat-full-diagnostic' },
+            { category: { startsWith: HARD_MODULE_CATEGORY } },
+            { category: { startsWith: CORE_MODULE_CATEGORY } },
+          ],
+        },
+        orderBy: { createdAt: 'desc' },
+        select: { id: true, category: true, createdAt: true, results: true },
+      }),
+      prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { satTrackOverride: true },
+      }),
+      prisma.diagnosticTest.findMany({
+        where: { userId: session.user.id, category: 'sat-full-diagnostic' },
+        orderBy: { createdAt: 'desc' },
+        select: { results: true },
+      }),
+      prisma.diagnosticTest.findMany({
+        where: { userId: session.user.id, category: { startsWith: CORE_MODULE_CATEGORY } },
+        orderBy: { createdAt: 'desc' },
+        select: { category: true, results: true },
+      }),
+    ])
+
+    // Placement is a property of the STUDENT, not of the last attempt: a
+    // student who scored 620 on the regular screen needs Core Skills lessons
+    // immediately, without first sitting a Core Skills module.
+    const coreStatus = coreSkillsTrackStatus(
+      regularAttempts,
+      coreModuleAttempts,
+      (user?.satTrackOverride ?? null) as SatTrackOverride,
+    )
 
     if (!latestDiagnostic) {
       return NextResponse.json({
@@ -92,9 +124,14 @@ export async function GET() {
     // Hard-track attempts recommend the 700-800 ADVANCED lane when a dedicated
     // advanced lesson exists for the topic; otherwise the regular lesson (with
     // its entrance-quiz test-out) stands in.
-    const isHardSource = latestDiagnostic.category.startsWith('sat-hard-module')
-    if (isHardSource && recommendedTopics.length > 0) {
-      const advancedFor = (slug: string) => `${ADVANCED_SLUG_ALIASES[slug] ?? slug}-advanced`
+    // Core Skills placement wins over the hard lane — the two can never both
+    // apply, but placement is about the student while the hard lane is about
+    // the last attempt, so state the precedence explicitly.
+    const isHardSource = !coreStatus.placed && latestDiagnostic.category.startsWith(HARD_MODULE_CATEGORY)
+    const suffix = coreStatus.placed ? '-core-skills' : '-advanced'
+
+    if ((coreStatus.placed || isHardSource) && recommendedTopics.length > 0) {
+      const advancedFor = (slug: string) => `${ADVANCED_SLUG_ALIASES[slug] ?? slug}${suffix}`
       const advTopics = await prisma.topic.findMany({
         where: { slug: { in: recommendedTopics.map((t) => advancedFor(t.slug)) } },
         select: { slug: true, title: true },
@@ -196,7 +233,17 @@ export async function GET() {
       diagnosticId: latestDiagnostic.id,
       diagnosticCreatedAt: latestDiagnostic.createdAt,
       /** 'hard' when the plan comes from a hard-track module attempt. */
-      planSource: latestDiagnostic.category.startsWith('sat-hard-module') ? 'hard' : 'regular',
+      planSource: coreStatus.placed ? 'core-skills' : isHardSource ? 'hard' : 'regular',
+      /** Core Skills placement, so the page can show progress toward graduating. */
+      coreSkills: {
+        placed: coreStatus.placed,
+        graduated: coreStatus.graduated,
+        bestModuleScore: coreStatus.bestModuleScore,
+        pointsToGraduate: coreStatus.pointsToGraduate,
+        completedModules: coreStatus.completedModules,
+        nextModule: coreStatus.nextModule,
+        source: coreStatus.source,
+      },
       canRetakeDiagnostic: pendingTopics.length === 0,
       requiredScorePercent,
       recommendedTopics: recommendedWithStatus,
