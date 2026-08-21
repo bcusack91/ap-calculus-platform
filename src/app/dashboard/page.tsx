@@ -576,6 +576,29 @@ function DashboardContent() {
           </div>
         )}
 
+        {/* Teacher-assigned work leads the page: it carries deadlines and it is
+            why most students are here. Deliberately ABOVE the fetchError guard
+            further down — both of these load from their own endpoints, so a
+            failure of the /api/dashboard stats payload must not hide an
+            assigned diagnostic or a due assignment. */}
+
+        {/* Assigned class diagnostics not yet taken */}
+        <ClassDiagnosticBanner />
+
+        {/* Pending Assignments */}
+        {pendingAssignments > 0 && (
+          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-accent-subtle dark:from-blue-900/20 dark:to-accent-light/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">📋</span>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
+              </div>
+            </div>
+            <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
+          </Link>
+        )}
+
         {/* Daily Challenge */}
         <DailyChallenge />
 
@@ -630,23 +653,6 @@ function DashboardContent() {
 
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
-
-        {/* Assigned class diagnostics not yet taken */}
-        <ClassDiagnosticBanner />
-
-        {/* Pending Assignments */}
-        {pendingAssignments > 0 && (
-          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-accent-subtle dark:from-blue-900/20 dark:to-accent-light/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">📋</span>
-              <div>
-                <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
-              </div>
-            </div>
-            <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
-          </Link>
-        )}
 
         {/* Tabs — keep the default view focused; everything else is one click away (#6) */}
         <div role="tablist" aria-label="Dashboard sections" className="mb-6 flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
