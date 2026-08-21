@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState, Suspense } from 'react'
+import { useEffect, useRef, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 
 function VerifyEmailContent() {
@@ -9,6 +10,14 @@ function VerifyEmailContent() {
   const token = searchParams.get('token')
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading')
   const [message, setMessage] = useState('')
+
+  // Held in a ref so the verification effect keeps `[token]` as its only
+  // dependency. The token is single-use and deleted on success, so re-running
+  // that effect would re-POST a dead token and report "Invalid or expired"
+  // over a verification that actually worked.
+  const { update } = useSession()
+  const updateSession = useRef(update)
+  useEffect(() => { updateSession.current = update }, [update])
 
   useEffect(() => {
     if (!token) {
@@ -22,15 +31,27 @@ function VerifyEmailContent() {
     let isCancelled = false
     fetch(`/api/auth/verify-email?token=${token}`)
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         if (isCancelled) return
         if (data.error) {
           setStatus('error')
           setMessage(data.error)
-        } else {
-          setStatus('success')
-          setMessage(data.message)
+          return
         }
+        // The signed-in JWT still carries the pre-verification `emailVerified`
+        // (null). The jwt callback only re-reads it from the database on an
+        // explicit update() or after a five-minute throttle, so without this
+        // the dashboard keeps showing "Verify your email address" immediately
+        // after a SUCCESSFUL verification — which reads as failure and sends
+        // people round the loop again.
+        try {
+          await updateSession.current()
+        } catch {
+          // Non-fatal: the banner still clears once the throttle lapses.
+        }
+        if (isCancelled) return
+        setStatus('success')
+        setMessage(data.message)
       })
       .catch(() => {
         if (isCancelled) return
