@@ -40,7 +40,35 @@ interface StudentReport {
     status: string
     completedAt?: string
   }[]
+  selfDirected?: {
+    unitTests: { courseSlug: string; unit: string; correct: number; total: number; percentage: number; completedAt: string }[]
+    frqs: { courseSlug: string; mode: string; pointsEarned: number; pointsPossible: number; questionCount: number; percentage: number; completedAt: string }[]
+    satPracticeTests: { testNumber: number; totalScore: number; rwScore: number; mathScore: number; completedAt: string }[]
+    mcatPracticeTests: { section: string; score: number; percentage: number; completedAt: string }[]
+    diagnostics: { category: string; scoreLabel: string | null; takenAt: string }[]
+    counts: { unitTests: number; frqs: number; satPracticeTests: number; mcatPracticeTests: number; diagnostics: number }
+  }
   generatedAt: string
+}
+
+/** One line of self-directed work: what it was, when, and how it went. */
+function WorkRow({ title, meta, right, tone }: {
+  title: string; meta: string; right: string; tone?: 'good' | 'warn' | 'bad' | 'default'
+}) {
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-xl bg-gray-50 dark:bg-gray-700/30 p-3">
+      <div className="min-w-0">
+        <p className="font-medium text-sm text-gray-900 dark:text-white truncate">{title}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400">{meta}</p>
+      </div>
+      <span className={`shrink-0 text-sm font-bold ${
+        tone === 'good' ? 'text-green-600 dark:text-green-400'
+          : tone === 'warn' ? 'text-amber-600 dark:text-amber-400'
+          : tone === 'bad' ? 'text-red-600 dark:text-red-400'
+          : 'text-gray-500 dark:text-gray-400'
+      }`}>{right}</span>
+    </div>
+  )
 }
 
 function Stat({ label, value, hint, tone = 'default' }: {
@@ -216,6 +244,68 @@ export default function StudentReportModal({
               </section>
             )}
 
+            {/* Work the student chose to do on their own. None of this used to
+                reach a teacher at all — it was recorded nowhere, so a student
+                could put in hours and the report would look empty. */}
+            {report.selfDirected && (
+              report.selfDirected.counts.unitTests +
+              report.selfDirected.counts.frqs +
+              report.selfDirected.counts.satPracticeTests +
+              report.selfDirected.counts.mcatPracticeTests +
+              report.selfDirected.counts.diagnostics
+            ) > 0 && (
+              <section>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Work done independently</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                  Not assigned by anyone — this is what the student took on themselves.
+                </p>
+                <div className="space-y-2">
+                  {report.selfDirected.unitTests.slice(0, 6).map((u, i) => (
+                    <WorkRow
+                      key={`ut-${i}`}
+                      title={`Unit test — ${u.unit}`}
+                      meta={`${u.courseSlug} · ${u.correct}/${u.total} · ${new Date(u.completedAt).toLocaleDateString()}`}
+                      right={`${u.percentage}%`}
+                      tone={scoreTone(u.percentage, 70)}
+                    />
+                  ))}
+                  {report.selfDirected.frqs.slice(0, 6).map((f, i) => (
+                    <WorkRow
+                      key={`frq-${i}`}
+                      title={`Free response — ${f.questionCount} question${f.questionCount === 1 ? '' : 's'}${f.mode === 'timed' ? ' (timed)' : ''}`}
+                      meta={`${f.courseSlug} · ${f.pointsEarned}/${f.pointsPossible} points · ${new Date(f.completedAt).toLocaleDateString()}`}
+                      right={`${f.percentage}%`}
+                      tone={scoreTone(f.percentage, 70)}
+                    />
+                  ))}
+                  {report.selfDirected.satPracticeTests.slice(0, 4).map((t, i) => (
+                    <WorkRow
+                      key={`sat-${i}`}
+                      title={`SAT practice test ${t.testNumber}`}
+                      meta={`R&W ${t.rwScore} · Math ${t.mathScore} · ${new Date(t.completedAt).toLocaleDateString()}`}
+                      right={String(t.totalScore)}
+                    />
+                  ))}
+                  {report.selfDirected.mcatPracticeTests.slice(0, 4).map((t, i) => (
+                    <WorkRow
+                      key={`mcat-${i}`}
+                      title={`MCAT practice — ${t.section}`}
+                      meta={new Date(t.completedAt).toLocaleDateString()}
+                      right={String(t.score)}
+                    />
+                  ))}
+                  {report.selfDirected.diagnostics.slice(0, 5).map((d, i) => (
+                    <WorkRow
+                      key={`diag-${i}`}
+                      title={`Diagnostic — ${d.category}`}
+                      meta={new Date(d.takenAt).toLocaleDateString()}
+                      right={d.scoreLabel ?? '—'}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
             {/* Assignment history for THIS classroom */}
             <section>
               <h3 className="font-bold text-gray-900 dark:text-white mb-3">Assignments in this class</h3>
@@ -251,7 +341,7 @@ export default function StudentReportModal({
             </section>
 
             <p className="text-[11px] text-gray-400 dark:text-gray-500">
-              Quiz and flashcard figures cover this student across all of Study Mondo; assignments are limited to this class.
+              Quiz, flashcard and independent-work figures cover this student across all of Study Mondo; assignments are limited to this class.
             </p>
           </div>
         )}

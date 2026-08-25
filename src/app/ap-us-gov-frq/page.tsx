@@ -15,6 +15,7 @@ import {
   type FRQRubricItem,
 } from '@/data/ap-us-gov-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 
 function gradeResponse(
   response: string,
@@ -147,6 +148,9 @@ function APUSGovFRQPageInner() {
       }, 0)
     )
   }, 0)
+
+  // Persist the session so it reaches the teacher's student report.
+  useRecordFrqAttempt('ap-us-gov', mode, totalEarned, totalPossible, frqs.length)
 
   if (status === 'loading') {
     return (

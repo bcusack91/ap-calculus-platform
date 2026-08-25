@@ -17,7 +17,7 @@ model User {
   password               String?
   role                   UserRole                      @default(FREE)
   studyContext           String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
-  satTrackOverride       String?                       // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
+  satTrackOverride       String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
   stripeCustomerId       String?                       @unique
   stripeSubscriptionId   String?                       @unique
   stripePriceId          String?
@@ -73,6 +73,8 @@ model User {
   teacherLobbyParticipations TeacherLobbyParticipant[]  @relation("TeacherLobbyParticipantUser")
   satTestAttempts            SatTestAttempt[]
   mcatTestAttempts           McatTestAttempt[]
+  unitTestAttempts           UnitTestAttempt[]
+  frqAttempts                FrqAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
 }
@@ -471,15 +473,15 @@ model LearningPath {
 }
 
 model DiagnosticTest {
-  id                String   @id @default(cuid())
+  id                String           @id @default(cuid())
   userId            String
   category          String
   results           Json
   weakAreas         Json?
   strengths         String?
   classDiagnosticId String? // set when this attempt answered an assigned class diagnostic
-  createdAt         DateTime @default(now())
-  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt         DateTime         @default(now())
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   classDiagnostic   ClassDiagnostic? @relation(fields: [classDiagnosticId], references: [id], onDelete: SetNull)
 
   // Hot path: every diagnostic history/latest-attempt lookup filters on
@@ -796,33 +798,33 @@ enum LobbyStatus {
 
 // Teacher-created multi-student lobby with MMR-balanced team formation
 model TeacherLobby {
-  id            String             @id @default(cuid())
-  joinCode      String             @unique
-  teacherId     String
-  classroomId   String?
-  name          String
-  topicSlug     String?
-  courseSlug    String?
-  topicSlugs    Json               @default("[]")
-  durationSec   Int                @default(600)
-  endsAt        DateTime?
-  questionPool  Json?
-  gameMode      String             @default("competitive")
-  numTeams      Int                @default(2)
+  id             String             @id @default(cuid())
+  joinCode       String             @unique
+  teacherId      String
+  classroomId    String?
+  name           String
+  topicSlug      String?
+  courseSlug     String?
+  topicSlugs     Json               @default("[]")
+  durationSec    Int                @default(600)
+  endsAt         DateTime?
+  questionPool   Json?
+  gameMode       String             @default("competitive")
+  numTeams       Int                @default(2)
   // Student-hosted open lobbies run on this same engine: the host is a student
   // (teacherId holds their id), plays as a participant, and the lobby can be
   // publicly listed. format: TEAM_2V2 (cap 4, MMR-balanced) or RACE_FFA
   // (cap maxPlayers, every player their own team, assigned at start).
-  studentHosted Boolean            @default(false)
-  isPublic      Boolean            @default(false)
-  maxPlayers    Int?
-  format        String?
-  difficulty    String?
-  hostLastSeenAt DateTime          @default(now())
-  status        TeacherLobbyStatus @default(OPEN)
-  createdAt     DateTime           @default(now())
-  startedAt     DateTime?
-  closedAt      DateTime?
+  studentHosted  Boolean            @default(false)
+  isPublic       Boolean            @default(false)
+  maxPlayers     Int?
+  format         String?
+  difficulty     String?
+  hostLastSeenAt DateTime           @default(now())
+  status         TeacherLobbyStatus @default(OPEN)
+  createdAt      DateTime           @default(now())
+  startedAt      DateTime?
+  closedAt       DateTime?
 
   teacher      User                      @relation("TeacherLobbyTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   classroom    Classroom?                @relation("TeacherLobbyClassroom", fields: [classroomId], references: [id], onDelete: SetNull)
@@ -1439,6 +1441,50 @@ model McatTestAttempt {
   @@index([userId, sectionId])
 }
 
+// Unit-test completions. Every course's unit-test page renders through the
+// shared UnitTestsClient, so persisting here covers all of them at once.
+// Until this existed a student could work every unit test in a course and
+// their teacher saw nothing.
+model UnitTestAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  courseSlug  String // e.g. 'ap-biology'
+  unitId      String // which unit within the course
+  unitTitle   String
+  variant     Int      @default(1) // which of the unit's test variations
+  correct     Int
+  total       Int
+  percentage  Int
+  timeSpent   Int      @default(0) // seconds
+  completedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, courseSlug])
+  @@index([completedAt])
+}
+
+// Free-response practice sessions. Scored against the published rubric on the
+// client; we store the totals so the work is visible to a teacher.
+model FrqAttempt {
+  id             String   @id @default(cuid())
+  userId         String
+  courseSlug     String // e.g. 'ap-biology'
+  mode           String // 'practice' | 'timed'
+  pointsEarned   Int
+  pointsPossible Int
+  frqCount       Int // how many free-response questions were in the set
+  timeSpent      Int      @default(0) // seconds
+  completedAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, courseSlug])
+  @@index([completedAt])
+}
+
 model EmailSubscriber {
   id           String   @id @default(cuid())
   email        String   @unique
@@ -1462,18 +1508,18 @@ model EmailSubscriber {
 // ---------------------------------------------------------------------------
 
 model LiveSession {
-  id           String    @id @default(cuid())
-  classroomId  String
-  teacherId    String
-  mode         String // 'CONFERENCE' | 'WEBCAST'
-  status       String    @default("LIVE") // 'LIVE' | 'ENDED'
-  roomName     String // unguessable Jitsi room slug (conference mode)
+  id            String    @id @default(cuid())
+  classroomId   String
+  teacherId     String
+  mode          String // 'CONFERENCE' | 'WEBCAST'
+  status        String    @default("LIVE") // 'LIVE' | 'ENDED'
+  roomName      String // unguessable Jitsi room slug (conference mode)
   streamVideoId String? // YouTube video id (webcast mode)
-  mutedUserIds Json? // string[] of userIds muted in this session's chat
-  boardMode    String    @default("OFF") // class whiteboard: 'OFF' | 'TEACHER' (students watch) | 'SHARED' (students draw too)
-  padsEnabled  Boolean   @default(false) // per-student pads + teacher gallery
-  startedAt    DateTime  @default(now())
-  endedAt      DateTime?
+  mutedUserIds  Json? // string[] of userIds muted in this session's chat
+  boardMode     String    @default("OFF") // class whiteboard: 'OFF' | 'TEACHER' (students watch) | 'SHARED' (students draw too)
+  padsEnabled   Boolean   @default(false) // per-student pads + teacher gallery
+  startedAt     DateTime  @default(now())
+  endedAt       DateTime?
 
   classroom  Classroom               @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   messages   LiveSessionMessage[]

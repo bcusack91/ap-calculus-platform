@@ -15,6 +15,7 @@ import {
   type FRQRubricItem,
 } from '@/data/ap-physics-2-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 
 function gradeResponse(
   response: string,
@@ -148,6 +149,9 @@ function APPhysics2FRQPageInner() {
       }, 0)
     )
   }, 0)
+
+  // Persist the session so it reaches the teacher's student report.
+  useRecordFrqAttempt('ap-physics-2', mode, totalEarned, totalPossible, frqs.length)
 
   if (status === 'loading') {
     return (

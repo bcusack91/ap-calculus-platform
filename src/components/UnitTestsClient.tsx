@@ -83,6 +83,9 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [reviewing, setReviewing] = useState(false)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  // One recorded attempt per test run — the countdown expiring and the student
+  // pressing Finish can both call handleFinish.
+  const submittedRef = useRef(false)
 
   // Pre-load KaTeX so the first math-bearing question doesn't render briefly as raw $...$.
   useEffect(() => { void preloadKatex() }, [])
@@ -127,6 +130,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
       setAnswers(new Array(data.questions.length).fill(null))
       setTimeRemaining(data.timeLimitMinutes * 60)
       setReviewing(false)
+      submittedRef.current = false
       setPhase('testing')
       if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
     },
@@ -142,8 +146,32 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
     const r = scoreUnitTest(config, testData, answersRecord)
     setResults(r)
     setPhase('results')
+
+    // Record the attempt so it reaches the teacher's student report. Every
+    // course's unit-test page renders through this component, so this single
+    // call covers all of them. Guarded against a double fire (the timer and a
+    // manual finish can race) and deliberately not awaited — a logged-out user
+    // or a network blip must never cost the student their results screen.
+    if (!submittedRef.current) {
+      submittedRef.current = true
+      const spent = Math.max(0, testData.timeLimitMinutes * 60 - timeRemaining)
+      void fetch('/api/unit-tests/attempt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          courseSlug: config.courseSlug,
+          unitId: activeUnit?.id ?? '',
+          unitTitle: activeUnit?.name ?? '',
+          variant: activeVariant,
+          correct: r.totalCorrect,
+          total: r.totalQuestions,
+          timeSpent: spent,
+        }),
+      }).catch(() => {})
+    }
+
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [testData, answers, config])
+  }, [testData, answers, config, activeUnit, activeVariant, timeRemaining])
 
   const goToMenu = useCallback(() => {
     setPhase('menu')

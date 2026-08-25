@@ -15,6 +15,7 @@ import {
   type FRQRubricItem,
 } from '@/data/ap-chem-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -161,6 +162,9 @@ function APChemFRQPageInner() {
       }, 0)
     )
   }, 0)
+
+  // Persist the session so it reaches the teacher's student report.
+  useRecordFrqAttempt('ap-chem', mode, totalEarned, totalPossible, frqs.length)
 
   if (status === 'loading') {
     return (

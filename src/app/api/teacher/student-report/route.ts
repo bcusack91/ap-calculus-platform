@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher } from '@/lib/auth-guard'
+import { scoreLabelFromResults } from '@/lib/class-plan-config'
 
 // GET /api/teacher/student-report?studentId=xxx&classroomId=xxx
 export async function GET(req: NextRequest) {
@@ -42,6 +43,11 @@ export async function GET(req: NextRequest) {
     assignments,
     flashcardStats,
     streakData,
+    unitTests,
+    frqs,
+    satTests,
+    mcatTests,
+    diagnostics,
   ] = await Promise.all([
     // Lesson progress
     prisma.topicProgress.findMany({
@@ -72,6 +78,40 @@ export async function GET(req: NextRequest) {
     }),
     // Streak
     prisma.dailyStreak.findUnique({ where: { userId: studentId } }),
+    // Self-directed work. None of the five below used to reach a teacher at
+    // all: a student could sit every unit test in a course, write a dozen
+    // free-response questions and take a full practice test, and this report
+    // would show nothing. Capped because these are read for a single screen.
+    prisma.unitTestAttempt.findMany({
+      where: { userId: studentId },
+      select: { courseSlug: true, unitTitle: true, correct: true, total: true, percentage: true, completedAt: true },
+      orderBy: { completedAt: 'desc' },
+      take: 30,
+    }),
+    prisma.frqAttempt.findMany({
+      where: { userId: studentId },
+      select: { courseSlug: true, mode: true, pointsEarned: true, pointsPossible: true, frqCount: true, completedAt: true },
+      orderBy: { completedAt: 'desc' },
+      take: 30,
+    }),
+    prisma.satTestAttempt.findMany({
+      where: { userId: studentId },
+      select: { testNumber: true, totalScore: true, rwScore: true, mathScore: true, completedAt: true },
+      orderBy: { completedAt: 'desc' },
+      take: 15,
+    }),
+    prisma.mcatTestAttempt.findMany({
+      where: { userId: studentId },
+      select: { sectionName: true, score: true, percentage: true, completedAt: true },
+      orderBy: { completedAt: 'desc' },
+      take: 15,
+    }),
+    prisma.diagnosticTest.findMany({
+      where: { userId: studentId },
+      select: { category: true, results: true, createdAt: true },
+      orderBy: { createdAt: 'desc' },
+      take: 15,
+    }),
   ])
 
   // Resolve exit-quiz topic slugs to human-readable titles for the trend chart.
@@ -155,6 +195,53 @@ export async function GET(req: NextRequest) {
       percentage: data.total > 0 ? Math.round((data.completed / data.total) * 100) : 0,
     })),
     quizTrend,
+    // Self-directed work, newest first. Surfaced separately from `assignments`
+    // because a teacher never asked for any of it — that is the point: it
+    // shows what the student chose to do on their own.
+    selfDirected: {
+      unitTests: unitTests.map((u) => ({
+        courseSlug: u.courseSlug,
+        unit: u.unitTitle,
+        correct: u.correct,
+        total: u.total,
+        percentage: u.percentage,
+        completedAt: u.completedAt.toISOString(),
+      })),
+      frqs: frqs.map((f) => ({
+        courseSlug: f.courseSlug,
+        mode: f.mode,
+        pointsEarned: f.pointsEarned,
+        pointsPossible: f.pointsPossible,
+        questionCount: f.frqCount,
+        percentage: f.pointsPossible > 0 ? Math.round((f.pointsEarned / f.pointsPossible) * 100) : 0,
+        completedAt: f.completedAt.toISOString(),
+      })),
+      satPracticeTests: satTests.map((t) => ({
+        testNumber: t.testNumber,
+        totalScore: t.totalScore,
+        rwScore: t.rwScore,
+        mathScore: t.mathScore,
+        completedAt: t.completedAt.toISOString(),
+      })),
+      mcatPracticeTests: mcatTests.map((t) => ({
+        section: t.sectionName,
+        score: t.score,
+        percentage: t.percentage,
+        completedAt: t.completedAt.toISOString(),
+      })),
+      diagnostics: diagnostics.map((d) => ({
+        category: d.category,
+        scoreLabel: scoreLabelFromResults(d.results),
+        takenAt: d.createdAt.toISOString(),
+      })),
+      counts: {
+        unitTests: unitTests.length,
+        frqs: frqs.length,
+        satPracticeTests: satTests.length,
+        mcatPracticeTests: mcatTests.length,
+        diagnostics: diagnostics.length,
+      },
+    },
     assignments: assignments.map((a) => ({
       title: a.assignment.title,
       type: a.assignment.type,
