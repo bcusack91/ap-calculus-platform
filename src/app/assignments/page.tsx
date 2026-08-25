@@ -13,7 +13,9 @@ interface AssignmentItem {
   id: string
   title: string
   description: string | null
-  type: 'INTERACTIVE_LESSON' | 'FLASHCARD_REVIEW' | 'QUIZ' | 'COMPETITIVE_PRACTICE' | 'UNIT_TEST' | 'FRQ_PRACTICE'
+  type: 'INTERACTIVE_LESSON' | 'FLASHCARD_REVIEW' | 'QUIZ' | 'COMPETITIVE_PRACTICE' | 'UNIT_TEST' | 'FRQ_PRACTICE' | 'CLASS_DIAGNOSTIC'
+  /** Set only on CLASS_DIAGNOSTIC items, which carry their own destination. */
+  href?: string
   topicSlug: string | null
   topicSlugs: string[] | null
   flashcardSetId: string | null
@@ -55,6 +57,7 @@ const TYPE_LABELS: Record<string, { label: string; icon: string }> = {
   FLASHCARD_REVIEW: { label: 'Flashcard Review', icon: '🃏' },
   QUIZ: { label: 'Quiz', icon: '📝' },
   COMPETITIVE_PRACTICE: { label: 'Competitive Practice', icon: '⚔️' },
+  CLASS_DIAGNOSTIC: { label: 'Class Diagnostic', icon: '🧭' },
   UNIT_TEST: { label: 'Unit Test', icon: '🧪' },
   FRQ_PRACTICE: { label: 'Free Response', icon: '✍️' },
 }
@@ -69,6 +72,8 @@ const STATUS_STYLES: Record<string, { bg: string; text: string; label: string }>
 type FilterStatus = 'all' | 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'
 
 function getActionUrl(a: AssignmentItem): string {
+  // Class diagnostics come from their own table and carry a ready-made link.
+  if (a.type === 'CLASS_DIAGNOSTIC') return a.href ?? '/dashboard'
   // Course-scoped types resolve to that course's activity page. A unit test
   // with a specific unit deep-links to it; without one the student picks.
   if (a.type === 'UNIT_TEST') {
@@ -156,13 +161,49 @@ export default function StudentAssignmentsPage() {
 
   const loadAssignments = async () => {
     try {
-      const res = await fetch('/api/student/assignments')
+      // Teacher-assigned work lives in two tables — Assignment and
+      // ClassDiagnostic — which used to mean two disconnected lists and a
+      // student wondering which one counted. Merge them into one stream here.
+      const [res, diagRes] = await Promise.all([
+        fetch('/api/student/assignments'),
+        fetch('/api/class-diagnostics/pending', { cache: 'no-store' }),
+      ])
+      let merged: AssignmentItem[] = []
       if (res.ok) {
         const data = await res.json()
-        setAssignments(data.assignments)
+        merged = data.assignments
         setClassrooms(data.classrooms)
         setUpcomingCompetitions(data.upcomingCompetitions || [])
       }
+      if (diagRes.ok) {
+        const { pending } = await diagRes.json()
+        const asItems: AssignmentItem[] = (pending ?? []).map((d: {
+          id: string; title: string; dueDate: string | null; href: string
+          classroomId: string; classroomName: string
+        }) => ({
+          id: `diag-${d.id}`,
+          title: d.title,
+          description: 'Diagnostic assigned by your teacher',
+          type: 'CLASS_DIAGNOSTIC' as const,
+          href: d.href,
+          topicSlug: null, topicSlugs: null, flashcardSetId: null,
+          courseSlug: null, unitId: null, topics: null,
+          dueDate: d.dueDate,
+          maxAttempts: 1,
+          requiredScore: null,
+          createdAt: d.dueDate ?? new Date().toISOString(),
+          classroom: { id: d.classroomId, name: d.classroomName, teacher: '' },
+          // The endpoint only returns diagnostics this student has NOT taken,
+          // so anything here is outstanding — overdue once its due date passes.
+          submission: {
+            id: null,
+            status: d.dueDate && new Date(d.dueDate) < new Date() ? 'OVERDUE' as const : 'NOT_STARTED' as const,
+            score: null, attempts: 0, completedAt: null,
+          },
+        }))
+        merged = [...asItems, ...merged]
+      }
+      setAssignments(merged)
     } catch {
       // ignore
     } finally {

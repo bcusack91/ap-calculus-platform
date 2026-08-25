@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { diagnosticRouteForKey } from '@/lib/class-plan-config'
 
 /**
  * GET /api/class-diagnostics/pending — assigned class diagnostics in my active
@@ -26,12 +27,11 @@ export async function GET() {
     take: 20,
     select: {
       id: true, courseKey: true, title: true, dueDate: true,
-      classroom: { select: { name: true } },
+      classroom: { select: { id: true, name: true } },
       attempts: { where: { userId }, select: { id: true }, take: 1 },
     },
   })
 
-  const PAGE: Record<string, string> = { mcat: '/mcat-diagnostic', sat: '/sat-diagnostic' }
   return NextResponse.json({
     pending: diagnostics
       .filter(d => d.attempts.length === 0)
@@ -40,8 +40,9 @@ export async function GET() {
         title: d.title,
         courseKey: d.courseKey,
         dueDate: d.dueDate,
+        classroomId: d.classroom.id,
         classroomName: d.classroom.name,
-        href: `${PAGE[d.courseKey] ?? '/dashboard'}?assigned=${d.id}`,
+        href: `${diagnosticRouteForKey(d.courseKey)}?assigned=${d.id}`,
       })),
   }, { headers: { 'Cache-Control': 'private, no-store' } })
 }

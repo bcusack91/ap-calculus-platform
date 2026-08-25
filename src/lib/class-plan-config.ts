@@ -62,6 +62,23 @@ export const CLASS_PLAN_COURSES: ClassPlanCourse[] = [
   { key: 'ochem', label: 'Organic Chemistry', categoryPrefix: 'ochem-diagnostic' },
 ]
 
+/**
+ * Diagnostic page routes that do not follow the `/<key>-diagnostic` convention.
+ * Only one course differs, so this covers the stray rather than listing all 33.
+ */
+const DIAGNOSTIC_ROUTE_OVERRIDES: Record<string, string> = {
+  'ap-aas': '/ap-african-american-studies-diagnostic',
+}
+
+/**
+ * Where a course's diagnostic lives. Previously only SAT and MCAT were mapped,
+ * so an assigned class diagnostic in any of the other 31 courses sent students
+ * to /dashboard instead of the test they were told to take.
+ */
+export function diagnosticRouteForKey(key: string): string {
+  return DIAGNOSTIC_ROUTE_OVERRIDES[key] ?? `/${key}-diagnostic`
+}
+
 export function classPlanCourse(key: string): ClassPlanCourse | null {
   return CLASS_PLAN_COURSES.find(c => c.key === key) ?? null
 }
