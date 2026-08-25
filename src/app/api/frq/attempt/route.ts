@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recordCourseWorkCompletion } from '@/lib/assignment-autocomplete'
 import { classPlanCourse } from '@/lib/class-plan-config'
 
 /**
@@ -80,6 +81,15 @@ export async function POST(req: Request) {
         timeSpent,
       },
       select: { id: true },
+    })
+
+    // Complete any FRQ_PRACTICE assignment for this course. Scored server-side
+    // from the stored rubric points, never from a client-reported score.
+    await recordCourseWorkCompletion({
+      userId: session.user.id,
+      type: 'FRQ_PRACTICE',
+      courseSlug: resolveCourseSlug(courseSlug),
+      score: pointsEarned / pointsPossible,
     })
 
     return NextResponse.json({ ok: true, id: attempt.id })

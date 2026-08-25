@@ -27,6 +27,8 @@ interface Assignment {
   type: string
   topicSlug: string | null
   topicSlugs: string[] | null
+  courseSlug?: string | null
+  unitId?: string | null
   dueDate: string | null
   requiredScore: number | null
   maxAttempts: number | null
@@ -121,6 +123,8 @@ interface AssignmentCreateBody {
   dueDate?: string
   topicSlugs?: string[]
   topicSlug?: string
+  courseSlug?: string
+  unitId?: string
 }
 
 type TabType = 'members' | 'assignments' | 'announcements' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'classplan' | 'engagement' | 'settings'
@@ -170,11 +174,15 @@ export default function ClassroomDetailPage() {
   // Assignment creation
   const [showAssignmentModal, setShowAssignmentModal] = useState(false)
   const [courses, setCourses] = useState<CourseGroup[]>([])
+  // Units for the course selected on a UNIT_TEST assignment.
+  const [unitOptions, setUnitOptions] = useState<{ id: string; unitNumber: number; name: string }[]>([])
   const [assignmentForm, setAssignmentForm] = useState({
     title: '',
     type: 'INTERACTIVE_LESSON' as string,
     topicSlug: '',
     topicSlugs: [] as string[],
+    courseSlug: '',
+    unitId: '',
     dueDate: '',
     maxAttempts: '',
     requiredScore: '80',
@@ -490,6 +498,7 @@ export default function ClassroomDetailPage() {
     setEditingAssignmentId(null)
     setAssignmentForm({
       title: '', type: 'INTERACTIVE_LESSON', topicSlug: '', topicSlugs: [],
+      courseSlug: '', unitId: '',
       dueDate: '', maxAttempts: '', requiredScore: '80',
     })
   }
@@ -522,7 +531,14 @@ export default function ClassroomDetailPage() {
         maxAttempts: assignmentForm.maxAttempts ? parseInt(assignmentForm.maxAttempts) : undefined,
         dueDate: assignmentForm.dueDate || undefined,
       }
-      if (assignmentForm.topicSlugs.length > 0) {
+      // UNIT_TEST and FRQ_PRACTICE target a course (and optionally a unit)
+      // rather than topics — a unit test is not a topic-slug thing.
+      if (assignmentForm.type === 'UNIT_TEST' || assignmentForm.type === 'FRQ_PRACTICE') {
+        body.courseSlug = assignmentForm.courseSlug || undefined
+        if (assignmentForm.type === 'UNIT_TEST' && assignmentForm.unitId) {
+          body.unitId = assignmentForm.unitId
+        }
+      } else if (assignmentForm.topicSlugs.length > 0) {
         body.topicSlugs = assignmentForm.topicSlugs
         body.topicSlug = assignmentForm.topicSlugs[0]
       } else if (assignmentForm.topicSlug) {
@@ -555,6 +571,8 @@ export default function ClassroomDetailPage() {
       type: a.type,
       topicSlug: a.topicSlug || '',
       topicSlugs: a.topicSlugs && a.topicSlugs.length > 0 ? a.topicSlugs : (a.topicSlug ? [a.topicSlug] : []),
+      courseSlug: a.courseSlug || '',
+      unitId: a.unitId || '',
       dueDate: toLocalDatetimeInput(a.dueDate),
       maxAttempts: a.maxAttempts ? String(a.maxAttempts) : '',
       requiredScore: a.requiredScore != null ? String(Math.round(a.requiredScore * 100)) : '',
@@ -754,6 +772,8 @@ export default function ClassroomDetailPage() {
     { value: 'FLASHCARD_REVIEW', label: 'Flashcard Review' },
     { value: 'QUIZ', label: 'Quiz' },
     { value: 'COMPETITIVE_PRACTICE', label: 'Competitive Practice' },
+    { value: 'UNIT_TEST', label: 'Unit Test' },
+    { value: 'FRQ_PRACTICE', label: 'Free Response (FRQ)' },
   ]
 
 
@@ -1649,6 +1669,63 @@ export default function ClassroomDetailPage() {
                 ))}
               </select>
             </div>
+            {(assignmentForm.type === 'UNIT_TEST' || assignmentForm.type === 'FRQ_PRACTICE') ? (
+              <div className="space-y-4">
+                <div>
+                  <label htmlFor="assignment-course" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                    Course *
+                  </label>
+                  <select
+                    id="assignment-course"
+                    value={assignmentForm.courseSlug}
+                    onChange={async (e) => {
+                      const courseSlug = e.target.value
+                      setAssignmentForm({ ...assignmentForm, courseSlug, unitId: '' })
+                      setUnitOptions([])
+                      if (courseSlug && assignmentForm.type === 'UNIT_TEST') {
+                        try {
+                          const r = await fetch(`/api/unit-tests/units?courseSlug=${encodeURIComponent(courseSlug)}`)
+                          if (r.ok) setUnitOptions((await r.json()).units ?? [])
+                        } catch { /* leave the picker on "any unit" */ }
+                      }
+                    }}
+                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                  >
+                    <option value="">Select a course…</option>
+                    {(() => {
+                      const attached = classCourses ?? []
+                      const pinned = courses.filter((c) => attached.includes(c.courseSlug))
+                      const rest = courses.filter((c) => !attached.includes(c.courseSlug))
+                      return [...pinned, ...rest].map((c) => (
+                        <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
+                      ))
+                    })()}
+                  </select>
+                </div>
+                {assignmentForm.type === 'UNIT_TEST' && (
+                  <div>
+                    <label htmlFor="assignment-unit" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                      Unit
+                    </label>
+                    <select
+                      id="assignment-unit"
+                      value={assignmentForm.unitId}
+                      onChange={(e) => setAssignmentForm({ ...assignmentForm, unitId: e.target.value })}
+                      disabled={!assignmentForm.courseSlug}
+                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white disabled:opacity-50"
+                    >
+                      <option value="">Any unit in this course</option>
+                      {unitOptions.map((u) => (
+                        <option key={u.id} value={u.id}>{u.name}</option>
+                      ))}
+                    </select>
+                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                      Leave on &ldquo;any unit&rdquo; to let students choose which unit to test.
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : (
             <div>
               <label
                 htmlFor="assignment-topic"
@@ -1737,6 +1814,7 @@ export default function ClassroomDetailPage() {
               )}
               <p className="mt-1 text-xs text-gray-400">Add one or more topics — students complete all of them.</p>
             </div>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label

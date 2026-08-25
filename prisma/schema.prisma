@@ -606,6 +606,8 @@ enum AssignmentType {
   FLASHCARD_REVIEW
   QUIZ
   COMPETITIVE_PRACTICE
+  UNIT_TEST
+  FRQ_PRACTICE
 }
 
 enum AssignmentStatus {
@@ -1150,6 +1152,8 @@ model Assignment {
   topicSlugs     Json? // array of topic slugs for multi-topic assignments
   quizId         String? // if type is QUIZ
   flashcardSetId String? // if type is FLASHCARD_REVIEW, the teacher-created set to study
+  courseSlug     String? // if type is UNIT_TEST or FRQ_PRACTICE — these are scoped to a course, not a topic
+  unitId         String? // if type is UNIT_TEST — a specific unit, or null for "any unit in the course"
   dueDate        DateTime?
   maxAttempts    Int            @default(1)
   requiredScore  Float? // minimum mastery/score required (0-1)

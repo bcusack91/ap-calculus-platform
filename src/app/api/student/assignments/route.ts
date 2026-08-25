@@ -94,6 +94,10 @@ export async function GET() {
             }))
           : null,
         flashcardSetId: a.flashcardSetId,
+        // UNIT_TEST / FRQ_PRACTICE are course-scoped, so the student page needs
+        // these to route to the right unit-tests or free-response page.
+        courseSlug: a.courseSlug,
+        unitId: a.unitId,
         dueDate: a.dueDate,
         maxAttempts: a.maxAttempts,
         requiredScore: a.requiredScore,

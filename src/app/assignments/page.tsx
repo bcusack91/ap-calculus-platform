@@ -7,15 +7,18 @@ import Link from 'next/link'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
+import { unitTestRouteFor, frqRouteFor } from '@/lib/course-activity-routes'
 
 interface AssignmentItem {
   id: string
   title: string
   description: string | null
-  type: 'INTERACTIVE_LESSON' | 'FLASHCARD_REVIEW' | 'QUIZ' | 'COMPETITIVE_PRACTICE'
+  type: 'INTERACTIVE_LESSON' | 'FLASHCARD_REVIEW' | 'QUIZ' | 'COMPETITIVE_PRACTICE' | 'UNIT_TEST' | 'FRQ_PRACTICE'
   topicSlug: string | null
   topicSlugs: string[] | null
   flashcardSetId: string | null
+  courseSlug: string | null
+  unitId: string | null
   dueDate: string | null
   maxAttempts: number
   requiredScore: number | null
@@ -52,6 +55,8 @@ const TYPE_LABELS: Record<string, { label: string; icon: string }> = {
   FLASHCARD_REVIEW: { label: 'Flashcard Review', icon: '🃏' },
   QUIZ: { label: 'Quiz', icon: '📝' },
   COMPETITIVE_PRACTICE: { label: 'Competitive Practice', icon: '⚔️' },
+  UNIT_TEST: { label: 'Unit Test', icon: '🧪' },
+  FRQ_PRACTICE: { label: 'Free Response', icon: '✍️' },
 }
 
 const STATUS_STYLES: Record<string, { bg: string; text: string; label: string }> = {
@@ -64,6 +69,16 @@ const STATUS_STYLES: Record<string, { bg: string; text: string; label: string }>
 type FilterStatus = 'all' | 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'
 
 function getActionUrl(a: AssignmentItem): string {
+  // Course-scoped types resolve to that course's activity page. A unit test
+  // with a specific unit deep-links to it; without one the student picks.
+  if (a.type === 'UNIT_TEST') {
+    const route = unitTestRouteFor(a.courseSlug)
+    if (!route) return '/courses'
+    return a.unitId ? `${route}?unit=${encodeURIComponent(a.unitId)}` : route
+  }
+  if (a.type === 'FRQ_PRACTICE') {
+    return frqRouteFor(a.courseSlug) ?? '/courses'
+  }
   // Multi-topic assignments must advance: send the student to the first topic
   // they have NOT cleared, not always to the first topic in the list.
   const nextUnfinished = a.topics?.find((t) => !t.done)?.slug

@@ -164,6 +164,98 @@ export async function clearedTopics(
 }
 
 /**
+ * Atomic submission upsert shared by every completion path.
+ *
+ * GREATEST keeps best-score-wins under concurrent submits, attempts counts TRUE
+ * retakes (not clamped — teachers should see volume), COMPLETED is never
+ * downgraded, and rows a teacher has manually graded are left untouched.
+ *
+ * Completion is decided by the CALLER and passed in, never recomputed from the
+ * score here. Recomputing was wrong twice over for multi-topic assignments:
+ * with no requiredScore set it completed on the first topic, and once the score
+ * became coverage a 4-of-5 student (0.8) would satisfy a 0.8 bar and be marked
+ * done.
+ */
+async function upsertSubmission(
+  assignmentId: string,
+  userId: string,
+  recordedScore: number,
+  completesNow: boolean,
+): Promise<void> {
+  const id = randomUUID()
+  await prisma.$executeRaw`
+    INSERT INTO "AssignmentSubmission"
+      ("id", "assignmentId", "studentId", "status", "score", "attempts", "timeSpent", "startedAt", "completedAt")
+    VALUES
+      (${id}, ${assignmentId}, ${userId},
+       ${completesNow ? 'COMPLETED' : 'IN_PROGRESS'}::"AssignmentStatus",
+       ${recordedScore}, 1, 0, now(), ${completesNow ? new Date() : null})
+    ON CONFLICT ("assignmentId", "studentId") DO UPDATE SET
+      "score" = GREATEST(COALESCE("AssignmentSubmission"."score", 0), EXCLUDED."score"),
+      "attempts" = "AssignmentSubmission"."attempts" + 1,
+      "startedAt" = COALESCE("AssignmentSubmission"."startedAt", now()),
+      "status" = CASE
+        WHEN "AssignmentSubmission"."status" = 'COMPLETED'::"AssignmentStatus" THEN 'COMPLETED'::"AssignmentStatus"
+        WHEN ${completesNow} THEN 'COMPLETED'::"AssignmentStatus"
+        ELSE 'IN_PROGRESS'::"AssignmentStatus"
+      END,
+      "completedAt" = CASE
+        WHEN "AssignmentSubmission"."completedAt" IS NOT NULL THEN "AssignmentSubmission"."completedAt"
+        WHEN ${completesNow} THEN now()
+        ELSE NULL
+      END
+    WHERE "AssignmentSubmission"."gradedManually" = false
+  `
+}
+
+/**
+ * Complete UNIT_TEST and FRQ_PRACTICE assignments.
+ *
+ * These two are scoped to a COURSE rather than a topic slug, so they cannot go
+ * through slugMatches — that function carries a lot of hard-won SAT/MCAT bank
+ * and skill-tier matching that has nothing to say about a course-level target.
+ * A UNIT_TEST assignment with no unitId means "any unit in this course".
+ */
+export async function recordCourseWorkCompletion(params: {
+  userId: string
+  type: 'UNIT_TEST' | 'FRQ_PRACTICE'
+  courseSlug: string
+  unitId?: string | null
+  score: number // 0–1, server-computed by the caller
+}): Promise<void> {
+  const { userId, type, courseSlug, unitId } = params
+  const score = Math.min(1, Math.max(0, params.score))
+  if (!courseSlug) return
+  try {
+    const memberships = await prisma.classroomMember.findMany({
+      where: { userId, isActive: true },
+      select: { classroomId: true },
+    })
+    if (memberships.length === 0) return
+
+    const assignments = await prisma.assignment.findMany({
+      where: {
+        classroomId: { in: memberships.map((m) => m.classroomId) },
+        isActive: true,
+        type,
+        courseSlug,
+        // A unit-scoped assignment only matches its own unit; one with no unit
+        // set accepts any unit in the course.
+        ...(type === 'UNIT_TEST' && unitId ? { OR: [{ unitId }, { unitId: null }] } : {}),
+      },
+      select: { id: true, requiredScore: true },
+    })
+
+    for (const a of assignments) {
+      const required = typeof a.requiredScore === 'number' ? a.requiredScore : null
+      await upsertSubmission(a.id, userId, score, required === null || score >= required)
+    }
+  } catch (error) {
+    console.error('[assignment-autocomplete] course-work completion failed:', error)
+  }
+}
+
+/**
  * Record a COMPLETED submission (score 0–1, server-computed by the caller)
  * for every matching assignment. Best score wins; attempts increment up to
  * maxAttempts; a COMPLETED status is never downgraded.
@@ -206,40 +298,7 @@ export async function recordAssignmentCompletion(params: {
         recordedScore = clearedCount / topics.length
         completesNow = clearedCount === topics.length
       }
-      const id = randomUUID()
-      // Atomic upsert: GREATEST keeps best-score-wins under concurrent submits,
-      // attempts counts TRUE retakes (not clamped — teachers should see volume),
-      // COMPLETED is never downgraded, requiredScore gates completion, and rows
-      // a teacher has manually graded (feedback set) are left untouched.
-      await prisma.$executeRaw`
-        INSERT INTO "AssignmentSubmission"
-          ("id", "assignmentId", "studentId", "status", "score", "attempts", "timeSpent", "startedAt", "completedAt")
-        VALUES
-          (${id}, ${a.id}, ${userId},
-           ${completesNow ? 'COMPLETED' : 'IN_PROGRESS'}::"AssignmentStatus",
-           ${recordedScore}, 1, 0, now(), ${completesNow ? new Date() : null})
-        ON CONFLICT ("assignmentId", "studentId") DO UPDATE SET
-          "score" = GREATEST(COALESCE("AssignmentSubmission"."score", 0), EXCLUDED."score"),
-          "attempts" = "AssignmentSubmission"."attempts" + 1,
-          "startedAt" = COALESCE("AssignmentSubmission"."startedAt", now()),
-          -- Completion is decided in TypeScript (completesNow) and passed in,
-          -- never recomputed from the score here. Recomputing was wrong twice
-          -- over for multi-topic assignments: with no requiredScore set it
-          -- completed on the first topic, and once the score became coverage
-          -- a 4-of-5 student (0.8) would satisfy a 0.8 bar and be marked done.
-          -- Prior completion is still never downgraded.
-          "status" = CASE
-            WHEN "AssignmentSubmission"."status" = 'COMPLETED'::"AssignmentStatus" THEN 'COMPLETED'::"AssignmentStatus"
-            WHEN ${completesNow} THEN 'COMPLETED'::"AssignmentStatus"
-            ELSE 'IN_PROGRESS'::"AssignmentStatus"
-          END,
-          "completedAt" = CASE
-            WHEN "AssignmentSubmission"."completedAt" IS NOT NULL THEN "AssignmentSubmission"."completedAt"
-            WHEN ${completesNow} THEN now()
-            ELSE NULL
-          END
-        WHERE "AssignmentSubmission"."gradedManually" = false
-      `
+      await upsertSubmission(a.id, userId, recordedScore, completesNow)
     }
   } catch (error) {
     console.error('[assignment-autocomplete] completion recording failed:', error)

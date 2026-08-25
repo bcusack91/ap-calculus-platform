@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recordCourseWorkCompletion } from '@/lib/assignment-autocomplete'
 
 /**
  * Record a completed unit test.
@@ -57,6 +58,16 @@ export async function POST(req: Request) {
         timeSpent,
       },
       select: { id: true },
+    })
+
+    // Complete any UNIT_TEST assignment covering this course/unit. Scored
+    // server-side from the stored counts, never from a client-reported score.
+    await recordCourseWorkCompletion({
+      userId: session.user.id,
+      type: 'UNIT_TEST',
+      courseSlug,
+      unitId,
+      score: correct / total,
     })
 
     return NextResponse.json({ ok: true, id: attempt.id })
