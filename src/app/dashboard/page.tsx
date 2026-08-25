@@ -576,11 +576,15 @@ function DashboardContent() {
           </div>
         )}
 
-        {/* Teacher-assigned work leads the page: it carries deadlines and it is
-            why most students are here. Deliberately ABOVE the fetchError guard
-            further down — both of these load from their own endpoints, so a
-            failure of the /api/dashboard stats payload must not hide an
-            assigned diagnostic or a due assignment. */}
+        {/* Time-critical, teacher-driven items lead the page, most urgent
+            first: a class that is live RIGHT NOW, then an assigned diagnostic,
+            then work with a due date. All three sit deliberately ABOVE the
+            fetchError guard further down — each loads from its own endpoint,
+            so a failure of the /api/dashboard stats payload must not hide a
+            live session, an assigned diagnostic, or a due assignment. */}
+
+        {/* Live class sessions — shows only while an enrolled class is live */}
+        <LiveNowBanner />
 
         {/* Assigned class diagnostics not yet taken */}
         <ClassDiagnosticBanner />
@@ -650,9 +654,6 @@ function DashboardContent() {
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
           </div>
         </div>
-
-        {/* Live class sessions — shows only while an enrolled class is live */}
-        <LiveNowBanner />
 
         {/* Tabs — keep the default view focused; everything else is one click away (#6) */}
         <div role="tablist" aria-label="Dashboard sections" className="mb-6 flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
