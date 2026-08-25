@@ -461,15 +461,14 @@ model TopicProgress {
 }
 
 model LearningPath {
-  id           String    @id @default(cuid())
-  userId       String    @unique
+  id           String   @id @default(cuid())
+  userId       String   @unique
   topicOrder   String?
   currentTopic String?
-  startDate    DateTime  @default(now())
-  targetDate   DateTime?
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
-  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startDate    DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model DiagnosticTest {
@@ -1150,7 +1149,6 @@ model Assignment {
   type           AssignmentType
   topicSlug      String? // specific topic to complete
   topicSlugs     Json? // array of topic slugs for multi-topic assignments
-  quizId         String? // if type is QUIZ
   flashcardSetId String? // if type is FLASHCARD_REVIEW, the teacher-created set to study
   courseSlug     String? // if type is UNIT_TEST or FRQ_PRACTICE — these are scoped to a course, not a topic
   unitId         String? // if type is UNIT_TEST — a specific unit, or null for "any unit in the course"

@@ -50,7 +50,7 @@ export async function POST(
     const result = await requireClassroomAccess(id)
     if ('error' in result && result.error) return result.error
 
-  const { title, description, type, topicSlug, topicSlugs, quizId, flashcardSetId, courseSlug, unitId, dueDate, maxAttempts, requiredScore } =
+  const { title, description, type, topicSlug, topicSlugs, flashcardSetId, courseSlug, unitId, dueDate, maxAttempts, requiredScore } =
     await req.json()
 
   if (!title || typeof title !== 'string') {
@@ -93,7 +93,6 @@ export async function POST(
       type,
       topicSlug: topicSlug || null,
       topicSlugs: topicSlugs || null,
-      quizId: quizId || null,
       // UNIT_TEST / FRQ_PRACTICE are scoped to a course rather than a topic.
       courseSlug: courseSlug || null,
       unitId: unitId || null,
