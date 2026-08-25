@@ -322,6 +322,35 @@ export default function StudentAssignmentsPage() {
                 Join a Class
               </Link>
             )}
+
+            {/* A student with no teacher has no assignments and never will, so
+                this page used to be a dead end. Their structure comes from a
+                diagnostic instead: it produces a tracked plan with the same
+                done/pending states as assigned work. */}
+            <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 text-left">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                You don&apos;t need a teacher to get a plan
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                Take a diagnostic in any course and it builds you a study plan — the exact
+                topics to work on, in order, with each one tracked as you finish it. Your
+                plans show up on your dashboard.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/courses"
+                  className="inline-block px-5 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent-hover transition-colors"
+                >
+                  Pick a course
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="inline-block px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                >
+                  See my study plans
+                </Link>
+              </div>
+            </div>
           </div>
         ) : (
           <>

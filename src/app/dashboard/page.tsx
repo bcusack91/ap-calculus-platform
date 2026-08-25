@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, GraduationCap } from 'lucide-react'
+import { ClipboardList, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -187,58 +187,28 @@ function DashboardContent() {
   const [achievements, setAchievements] = useState<AchievementData[]>([])
   const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
   const [newAchievements, setNewAchievements] = useState<string[]>([])
-  const [apChemDiagnostic, setApChemDiagnostic] = useState<{
-    estimatedAPScore?: number
-    percentage?: number
-    form?: string
-    recommendedTopics?: { slug: string; name: string; priority: string }[]
-  } | null>(null)
-  const [calcABDiagnostic, setCalcABDiagnostic] = useState<{
-    estimatedAPScore?: number
-    percentage?: number
-    form?: string
-    recommendedTopics?: { slug: string; name: string; priority: string }[]
-  } | null>(null)
-  const [calcBCDiagnostic, setCalcBCDiagnostic] = useState<{
-    estimatedAPScore?: number
-    percentage?: number
-    abSubscore?: number
-    form?: string
-    recommendedTopics?: { slug: string; name: string; priority: string }[]
-  } | null>(null)
-  const [satDiagnostic, setSatDiagnostic] = useState<{
-    estimatedScore?: number
-    rwScore?: number
-    mathScore?: number
-    recommendedTopics?: { slug: string; name: string; priority: string }[]
-  } | null>(null)
-  // slug -> cleared (entrance mastery or exit >= 80%) for study-plan Done badges
-  const [clearedModules, setClearedModules] = useState<Record<string, boolean>>({})
-  const [mcatPlanStatus, setMcatPlanStatus] = useState<{
-    hasDiagnostic: boolean
-    canRetakeDiagnostic: boolean
+  /**
+   * Diagnostic study plans, one per course the student has a diagnostic in.
+   *
+   * This replaced five separate per-course states (AP Chem, Calc AB, Calc BC,
+   * SAT, MCAT) plus a cleared-modules lookup. Because each course had to be
+   * hand-wired here, the other 28 courses with diagnostics had no plan at all.
+   */
+  const [studyPlans, setStudyPlans] = useState<{
+    courseKey: string
+    label: string
+    diagnosticRoute: string
+    gated: boolean
     requiredScorePercent: number
-    recommendedTopics: {
+    topics: {
       slug: string
       name: string
       priority: 'high' | 'medium' | 'low'
       topicPath: string
-      entranceSatisfied: boolean
-      bestExitScorePercent: number | null
-      exitSatisfied: boolean
       isSatisfied: boolean
     }[]
-    pendingTopics: {
-      slug: string
-      name: string
-      priority: 'high' | 'medium' | 'low'
-      topicPath: string
-      entranceSatisfied: boolean
-      bestExitScorePercent: number | null
-      exitSatisfied: boolean
-      isSatisfied: boolean
-    }[]
-  } | null>(null)
+    summary: { total: number; completed: number; pending: number }
+  }[]>([])
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -331,84 +301,15 @@ function DashboardContent() {
       if (d.learningPath?.currentTopic) setPathTopic(d.learningPath.currentTopic)
     }
 
-    // Collect every recommended slug across plans for one Done-status lookup
-    const planSlugs = new Set<string>()
-    const collectSlugs = (results: Record<string, unknown>) => {
-      const recs = (results as { recommendedTopics?: { slug?: string }[] }).recommendedTopics
-      for (const t of recs ?? []) if (typeof t?.slug === 'string') planSlugs.add(t.slug)
-    }
-
-    // Fetch AP Chem diagnostic recommendations
+    // One call covers every course the student has a diagnostic in, with
+    // per-topic done/pending already computed server-side. This replaced six
+    // sequential fetches (four course histories, the MCAT plan, and a
+    // module-status lookup) that between them still only covered five courses.
     try {
-      const chemRes = await fetch('/api/ap-chem-diagnostic/history')
-      if (chemRes.ok) {
-        const chemData = await chemRes.json()
-        if (chemData.attempts?.length > 0) {
-          const latest = chemData.attempts[0].results as Record<string, unknown>
-          setApChemDiagnostic(latest)
-          collectSlugs(latest)
-        }
-      }
-    } catch { /* silent */ }
-
-    // Fetch AP Calculus AB diagnostic recommendations
-    try {
-      const abRes = await fetch('/api/calcab-diagnostic/history')
-      if (abRes.ok) {
-        const abData = await abRes.json()
-        if (abData.attempts?.length > 0) {
-          const latest = abData.attempts[0].results as Record<string, unknown>
-          setCalcABDiagnostic(latest)
-          collectSlugs(latest)
-        }
-      }
-    } catch { /* silent */ }
-
-    // Fetch AP Calculus BC diagnostic recommendations
-    try {
-      const bcRes = await fetch('/api/calcbc-diagnostic/history')
-      if (bcRes.ok) {
-        const bcData = await bcRes.json()
-        if (bcData.attempts?.length > 0) {
-          const latest = bcData.attempts[0].results as Record<string, unknown>
-          setCalcBCDiagnostic(latest)
-          collectSlugs(latest)
-        }
-      }
-    } catch { /* silent */ }
-
-    // Fetch SAT diagnostic recommendations
-    try {
-      const satRes = await fetch('/api/sat-diagnostic/history')
-      if (satRes.ok) {
-        const satData = await satRes.json()
-        if (satData.attempts?.length > 0) {
-          const latest = satData.attempts[0].results as Record<string, unknown>
-          setSatDiagnostic(latest)
-          collectSlugs(latest)
-        }
-      }
-    } catch { /* silent */ }
-
-    // Fetch MCAT diagnostic remediation/recommendation plan
-    try {
-      const mcatRes = await fetch('/api/mcat-diagnostic/plan-status')
-      if (mcatRes.ok) {
-        const mcatData = await mcatRes.json()
-        if (mcatData?.hasDiagnostic) {
-          setMcatPlanStatus(mcatData)
-        }
-      }
-    } catch { /* silent */ }
-
-    // One lookup for all plan Done badges
-    try {
-      if (planSlugs.size > 0) {
-        const ms = await fetch(`/api/progress/module-status?slugs=${encodeURIComponent([...planSlugs].join(','))}`)
-        if (ms.ok) {
-          const d = await ms.json()
-          setClearedModules(d.cleared ?? {})
-        }
+      const planRes = await fetch('/api/study-plan/plan-status')
+      if (planRes.ok) {
+        const d = await planRes.json()
+        setStudyPlans(Array.isArray(d.plans) ? d.plans : [])
       }
     } catch { /* silent */ }
 
@@ -727,150 +628,54 @@ function DashboardContent() {
               </div>
             )}
 
-            {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
-            {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length || satDiagnostic?.recommendedTopics?.length) ? (
+            {/* Diagnostic study plans, for EVERY course the student has taken a
+                diagnostic in. This was five courses written out one after
+                another, each with its own state, its own fetch and its own copy
+                of this markup — which is why the other 28 silently had none. */}
+            {studyPlans.length > 0 && (
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
-                {mcatPlanStatus?.recommendedTopics && mcatPlanStatus.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-emerald-300 dark:border-emerald-700 p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white"><Stethoscope className="inline w-4 h-4 mr-1 -mt-0.5 text-emerald-600 dark:text-emerald-400" aria-hidden /> MCAT Remediation Plan</h3>
+                {studyPlans.map((plan) => (
+                  <div key={plan.courseKey} className="bg-white dark:bg-gray-800 rounded-xl border-2 border-accent-light dark:border-accent-hover p-5 shadow-sm">
+                    <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <h3 className="font-bold text-gray-900 dark:text-white">{plan.label}</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
-                          {mcatPlanStatus.pendingTopics.length === 0 ? 'All recommended modules complete' : `${mcatPlanStatus.pendingTopics.length} module${mcatPlanStatus.pendingTopics.length === 1 ? '' : 's'} left`}
+                          {plan.summary.pending === 0
+                            ? 'All recommended topics complete'
+                            : `${plan.summary.completed} of ${plan.summary.total} done`}
                         </span>
-                        <Link href="/mcat-diagnostic" className="text-xs text-emerald-600 hover:underline dark:text-emerald-400">View Plan →</Link>
+                        <Link href={plan.diagnosticRoute} className="text-xs text-accent hover:underline">View plan →</Link>
                       </div>
                     </div>
-                    <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
-                      Retake unlock rule: score 100% on entrance quiz or at least {mcatPlanStatus.requiredScorePercent}% on exit quiz for each recommended module.
-                    </p>
+                    {plan.gated && (
+                      <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
+                        Retake unlock rule: reach lesson mastery, or at least {plan.requiredScorePercent}% on the exit quiz, for each recommended topic.
+                      </p>
+                    )}
                     <div className="space-y-1.5">
-                      {mcatPlanStatus.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={topic.topicPath} className={`flex items-center justify-between rounded-lg border border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-2 hover:border-emerald-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-[10px] font-bold text-emerald-700 dark:text-emerald-300">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400">{topic.name}</span>
+                      {plan.topics.map((topic, i) => (
+                        <Link
+                          key={topic.slug}
+                          href={topic.topicPath}
+                          className={`flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group ${topic.isSatisfied ? 'opacity-60' : ''}`}
+                        >
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent-light dark:bg-accent-hover text-[10px] font-bold text-accent-hover dark:text-white">{i + 1}</span>
+                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
-                            {clearedModules[topic.slug] && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
-                            )}
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.isSatisfied ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}`}>
-                              {topic.isSatisfied ? 'Complete' : 'Pending'}
+                              {topic.isSatisfied ? '✓ Done' : 'Pending'}
                             </span>
-                          </div>
-                          <span className="text-emerald-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {apChemDiagnostic?.recommendedTopics && apChemDiagnostic.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-orange-300 dark:border-orange-700 p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white"><FlaskConical className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> AP Chemistry</h3>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-gray-500 dark:text-gray-400">Score: {apChemDiagnostic.estimatedAPScore}/5 ({apChemDiagnostic.percentage}%)</span>
-                        <Link href="/ap-chem-diagnostic" className="text-xs text-orange-600 hover:underline dark:text-orange-400">Retake →</Link>
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
-                      {apChemDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-orange-200 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20 px-3 py-2 hover:border-orange-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50 text-[10px] font-bold text-orange-700 dark:text-orange-300">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-orange-700 dark:group-hover:text-orange-400">{topic.name}</span>
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
-                            {clearedModules[topic.slug] && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
-                            )}
-                          </div>
-                          <span className="text-orange-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {calcABDiagnostic?.recommendedTopics && calcABDiagnostic.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-accent-muted dark:border-accent-hover p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white">∫ AP Calculus AB</h3>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-gray-500 dark:text-gray-400">Score: {calcABDiagnostic.estimatedAPScore}/5 ({calcABDiagnostic.percentage}%)</span>
-                        <Link href="/calcab-diagnostic" className="text-xs text-accent hover:underline dark:text-accent-muted">Retake →</Link>
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
-                      {calcABDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent-light dark:bg-accent-light/50 text-[10px] font-bold text-accent-hover dark:text-accent-muted">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover dark:group-hover:text-accent-muted">{topic.name}</span>
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
-                            {clearedModules[topic.slug] && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
-                            )}
                           </div>
                           <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
                       ))}
                     </div>
                   </div>
-                )}
-                {satDiagnostic?.recommendedTopics && satDiagnostic.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-green-300 dark:border-green-700 p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white"><GraduationCap className="inline w-4 h-4 mr-1 -mt-0.5 text-green-600 dark:text-green-400" aria-hidden /> SAT</h3>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-gray-500 dark:text-gray-400">Score: {satDiagnostic.estimatedScore} (R&W {satDiagnostic.rwScore} · Math {satDiagnostic.mathScore})</span>
-                        <Link href="/sat-diagnostic" className="text-xs text-green-600 hover:underline dark:text-green-400">Retake →</Link>
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
-                      {satDiagnostic.recommendedTopics.slice(0, 5).map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className={`flex items-center justify-between rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 px-3 py-2 hover:border-green-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50 text-[10px] font-bold text-green-700 dark:text-green-300">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-green-700 dark:group-hover:text-green-400">{topic.name}</span>
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
-                            {clearedModules[topic.slug] && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
-                            )}
-                          </div>
-                          <span className="text-green-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {calcBCDiagnostic?.recommendedTopics && calcBCDiagnostic.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-violet-300 dark:border-violet-700 p-5 shadow-sm">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white">∬ AP Calculus BC</h3>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-gray-500 dark:text-gray-400">BC: {calcBCDiagnostic.estimatedAPScore}/5, AB: {calcBCDiagnostic.abSubscore}/5</span>
-                        <Link href="/calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">Retake →</Link>
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
-                      {calcBCDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-violet-200 dark:border-violet-700 bg-violet-50 dark:bg-violet-900/20 px-3 py-2 hover:border-violet-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-900/50 text-[10px] font-bold text-violet-700 dark:text-violet-300">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-violet-700 dark:group-hover:text-violet-400">{topic.name}</span>
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
-                            {clearedModules[topic.slug] && (
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
-                            )}
-                          </div>
-                          <span className="text-violet-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                ))}
               </div>
-            ) : null}
+            )}
 
             {/* Cold start: onboarding picked a course but nothing studied yet —
                 give the promised "start your study path" entry point. */}
