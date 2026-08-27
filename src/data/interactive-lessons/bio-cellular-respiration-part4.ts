@@ -9,11 +9,11 @@ export const bioCellRespirationPart4Data = {
 
 **Part 4 of 7**
 
-The citric acid cycle — also called the **Krebs cycle** (after Hans Krebs, who elucidated it in 1937) or the **tricarboxylic acid (TCA) cycle** — is the central metabolic hub of the cell.  It completes the oxidation of the carbon atoms originally present in glucose, producing CO\\(_2\\), and generates most of the NADH and FADH\\(_2\\) that will drive ATP production in the electron transport chain.
+The citric acid cycle — also called the **Krebs cycle** (after Hans Krebs, who elucidated it in 1937) or the **tricarboxylic acid (TCA) cycle** — is the central metabolic hub of the cell.  It completes the oxidation of the carbon atoms originally present in glucose, producing CO$_2$, and generates most of the NADH and FADH$_2$ that will drive ATP production in the electron transport chain.
 
 **Location:** Mitochondrial matrix
 
-**Overall function:** Oxidize the acetyl group from acetyl-CoA, releasing 2 CO\\(_2\\) and capturing energy as NADH, FADH\\(_2\\), and GTP (equivalent to ATP).
+**Overall function:** Oxidize the acetyl group from acetyl-CoA, releasing 2 CO$_2$ and capturing energy as NADH, FADH$_2$, and GTP (equivalent to ATP).
       `
     },
     {
@@ -26,27 +26,27 @@ The cycle begins when **acetyl-CoA** donates its 2-carbon acetyl group to the 4-
 
 | Step | Enzyme | Reaction | Products |
 |------|--------|----------|----------|
-| 1 | Citrate synthase | Acetyl-CoA + Oxaloacetate \\(\\rightarrow\\) Citrate | Citrate (6C), free CoA |
-| 2 | Aconitase | Citrate \\(\\rightarrow\\) Isocitrate | Isocitrate (6C) |
-| 3 | **Isocitrate dehydrogenase** | Isocitrate \\(\\rightarrow\\) \\(\\alpha\\)-ketoglutarate | **NADH**, CO\\(_2\\) (5C) |
-| 4 | **\\(\\alpha\\)-ketoglutarate dehydrogenase** | \\(\\alpha\\)-KG \\(\\rightarrow\\) Succinyl-CoA | **NADH**, CO\\(_2\\) (4C) |
-| 5 | Succinyl-CoA synthetase | Succinyl-CoA \\(\\rightarrow\\) Succinate | **GTP** (=ATP), free CoA |
-| 6 | **Succinate dehydrogenase** | Succinate \\(\\rightarrow\\) Fumarate | **FADH\\(_2\\)** |
-| 7 | Fumarase | Fumarate \\(\\rightarrow\\) Malate | Malate (4C) |
-| 8 | Malate dehydrogenase | Malate \\(\\rightarrow\\) Oxaloacetate | **NADH** |
+| 1 | Citrate synthase | Acetyl-CoA + Oxaloacetate $\\rightarrow$ Citrate | Citrate (6C), free CoA |
+| 2 | Aconitase | Citrate $\\rightarrow$ Isocitrate | Isocitrate (6C) |
+| 3 | **Isocitrate dehydrogenase** | Isocitrate $\\rightarrow$ $\\alpha$-ketoglutarate | **NADH**, CO$_2$ (5C) |
+| 4 | **$\\alpha$-ketoglutarate dehydrogenase** | $\\alpha$-KG $\\rightarrow$ Succinyl-CoA | **NADH**, CO$_2$ (4C) |
+| 5 | Succinyl-CoA synthetase | Succinyl-CoA $\\rightarrow$ Succinate | **GTP** (=ATP), free CoA |
+| 6 | **Succinate dehydrogenase** | Succinate $\\rightarrow$ Fumarate | **FADH$_2$** |
+| 7 | Fumarase | Fumarate $\\rightarrow$ Malate | Malate (4C) |
+| 8 | Malate dehydrogenase | Malate $\\rightarrow$ Oxaloacetate | **NADH** |
 
 The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, continuing the cycle.
 
 **Per acetyl-CoA (one turn):**
-- 2 CO\\(_2\\) released
+- 2 CO$_2$ released
 - 3 NADH produced
-- 1 FADH\\(_2\\) produced
+- 1 FADH$_2$ produced
 - 1 GTP (= ATP) produced
 
 **Per glucose (two turns):**
-- 4 CO\\(_2\\), 6 NADH, 2 FADH\\(_2\\), 2 ATP
+- 4 CO$_2$, 6 NADH, 2 FADH$_2$, 2 ATP
 
-> **Note:** The 4 CO\\(_2\\) from the citric acid cycle plus the 2 CO\\(_2\\) from pyruvate oxidation = 6 CO\\(_2\\) total, matching the 6 carbons in the original glucose.
+> **Note:** The 4 CO$_2$ from the citric acid cycle plus the 2 CO$_2$ from pyruvate oxidation = 6 CO$_2$ total, matching the 6 carbons in the original glucose.
       `
     },
     {
@@ -103,14 +103,14 @@ The citric acid cycle is regulated at three key enzymes:
 
 1. **Citrate synthase** — inhibited by ATP, NADH, and citrate
 2. **Isocitrate dehydrogenase** — stimulated by ADP; inhibited by ATP and NADH
-3. **\\(\\alpha\\)-ketoglutarate dehydrogenase** — inhibited by succinyl-CoA and NADH; activated by Ca\\(^{2+}\\)
+3. **$\\alpha$-ketoglutarate dehydrogenase** — inhibited by succinyl-CoA and NADH; activated by Ca$^{2+}$
 
 **The Citric Acid Cycle as a Metabolic Hub:**
 
 The cycle is not just for glucose catabolism.  It intersects with many other metabolic pathways:
 
-- **Amino acid metabolism:** Several amino acids can be converted to citric acid cycle intermediates (e.g., glutamate \\(\\rightarrow\\) \\(\\alpha\\)-ketoglutarate)
-- **Fat metabolism:** Fatty acids are broken down to acetyl-CoA via \\(\\beta\\)-oxidation
+- **Amino acid metabolism:** Several amino acids can be converted to citric acid cycle intermediates (e.g., glutamate $\\rightarrow$ $\\alpha$-ketoglutarate)
+- **Fat metabolism:** Fatty acids are broken down to acetyl-CoA via $\\beta$-oxidation
 - **Gluconeogenesis:** Oxaloacetate can be used to make new glucose
 - **Biosynthesis:** Cycle intermediates serve as precursors for amino acids, fatty acids, and porphyrins
 

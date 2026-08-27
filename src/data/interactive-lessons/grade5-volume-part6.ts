@@ -23,11 +23,11 @@ Apply volume to multi-step problems:
       content: `
 ## Worked Example
 
-**A garden bed is 6 m × 3 m × 0.5 m. Soil costs \$5/m³. Total cost?**
+**A garden bed is 6 m × 3 m × 0.5 m. Soil costs \\$5/m³. Total cost?**
 
 $V = 6 \\times 3 \\times 0.5 = 9$ $m^{3}$
 
-Cost: $9 \\times 5 = 45$ → **\$45** ✅
+Cost: $9 \\times 5 = 45$ → **\\$45** ✅
     
     `
     },
@@ -63,7 +63,7 @@ Cost: $9 \\times 5 = 45$ → **\$45** ✅
 
 2) A 5 × 4 × 3 box. You double the height. New volume?
 
-3) A 2 × 2 × 2 m hole. Gravel costs \$3/m³. Total cost?
+3) A 2 × 2 × 2 m hole. Gravel costs \\$3/m³. Total cost?
     
     `,
       exercise: {
@@ -99,7 +99,7 @@ Cost: $9 \\times 5 = 45$ → **\$45** ✅
 |---|---------|-------|
 | 1 | Fill a 4×3×2 box with 1-inch cubes | V = lwh |
 | 2 | Double the height of a 5×4×3 box | Compare volumes |
-| 3 | Cost to fill 2×2×2 m with gravel at \$3/m³ | V then cost |
+| 3 | Cost to fill 2×2×2 m with gravel at \\$3/m³ | V then cost |
     
     `
     },

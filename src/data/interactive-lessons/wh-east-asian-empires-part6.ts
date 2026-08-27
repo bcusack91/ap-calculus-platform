@@ -72,7 +72,7 @@ export const whEastAsianEmpiresPart6Data = {
     Template:
 
     $$
-    	ext{Claim} \\rightarrow \\text{Named evidence} \\rightarrow \\text{Reasoning (historical significance)}
+    \\text{Claim} \\rightarrow \\text{Named evidence} \\rightarrow \\text{Reasoning (historical significance)}
     $$
 
     Example claim: Tokugawa foreign policy prioritized domestic order.

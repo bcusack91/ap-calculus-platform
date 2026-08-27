@@ -37,7 +37,7 @@ A: \\$12/5 = \\$2.40. B: \\$20/8 = \\$2.50. **Store A** is cheaper. ✅
       exercise: {
         questions: [
           {
-                    "question": "3 lb for $6 vs 5 lb for $9. Better deal?",
+                    "question": "3 lb for \\$6 vs 5 lb for \\$9. Better deal?",
                     "options": [
                               "5 lb for $9",
                               "3 lb for $6",
@@ -45,7 +45,7 @@ A: \\$12/5 = \\$2.40. B: \\$20/8 = \\$2.50. **Store A** is cheaper. ✅
                               "Cannot tell"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$6/3=$2/lb vs $9/5=$1.80/lb. 5 lb is cheaper."
+                    "explanation": "\\$6/3=\\$2/lb vs \\$9/5=\\$1.80/lb. 5 lb is cheaper."
           }
 ]
       }

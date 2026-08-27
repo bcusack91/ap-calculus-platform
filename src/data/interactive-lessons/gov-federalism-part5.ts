@@ -69,7 +69,7 @@ export const govFederalismPart5Data = {
 
 | Year | Event | Federalism direction |
 |---|---|---|
-| 1937-69 | Cooperative federalism / "marble cake" era | Federal $ + federal regulations + state implementation; Wickard v. Filburn 1942 (max Commerce Clause); Heart of Atlanta Motel 1964 (CRA valid under commerce); Civil Rights Act 1964; Voting Rights Act 1965 |
+| 1937-69 | Cooperative federalism / "marble cake" era | Federal \\$ + federal regulations + state implementation; Wickard v. Filburn 1942 (max Commerce Clause); Heart of Atlanta Motel 1964 (CRA valid under commerce); Civil Rights Act 1964; Voting Rights Act 1965 |
 | 1969-77 | Nixon "New Federalism" | General Revenue Sharing 1972; first major block grants |
 | 1981-89 | Reagan New Federalism | 77 categorical → 9 block grants (OBRA 1981); cuts to federal aid |
 | 1995-2018 | Modern federalism revival | Lopez 1995, Printz 1997, Morrison 2000, NFIB v. Sebelius 2012, Shelby County 2013, Murphy v. NCAA 2018 |

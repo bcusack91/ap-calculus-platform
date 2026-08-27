@@ -7,7 +7,7 @@ import type { LessonData } from '../registry'
  * teach → worked passage analysis → interactive practice (multiple-choice +
  * dropdown + input-boxes) → exit quiz. Non-math topic, so concept checks favor
  * multiple-choice and dropdown over numeric input; the few input boxes ask for
- * short, unambiguous terms. Bare dollar signs in prose are escaped as \$.
+ * short, unambiguous terms. Bare dollar signs in prose are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

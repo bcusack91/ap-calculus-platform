@@ -34,7 +34,7 @@ export const satWordProblemsPart7Data = {
     {
       id: 'wp7-q1',
       type: 'quiz' as const,
-      question: 'A phone plan costs $30/month plus $0.10 per text. Another plan costs $50/month with unlimited texts. How many texts make the plans equal?',
+      question: 'A phone plan costs \\$30/month plus \\$0.10 per text. Another plan costs \\$50/month with unlimited texts. How many texts make the plans equal?',
       options: [
         '100',
         '150',

@@ -24,16 +24,16 @@ The **Meselson-Stahl experiment** (1958) elegantly determined which model is cor
 ### The Meselson-Stahl Experiment
 
 **Design:**
-1. E. coli were grown for many generations in medium containing **heavy nitrogen** (\\(^{15}\\)N) — all DNA became uniformly "heavy"
-2. Cells were transferred to medium containing **light nitrogen** (\\(^{14}\\)N)
+1. E. coli were grown for many generations in medium containing **heavy nitrogen** ($^{15}$N) — all DNA became uniformly "heavy"
+2. Cells were transferred to medium containing **light nitrogen** ($^{14}$N)
 3. DNA was extracted after each generation and centrifuged in a **CsCl density gradient**
 
 **Results:**
 
 | Generation | DNA bands observed | Interpretation |
 |-----------|-------------------|----------------|
-| 0 (all \\(^{15}\\)N) | One heavy band | All DNA is heavy |
-| 1 (one round of replication in \\(^{14}\\)N) | One intermediate band | Each DNA molecule has one heavy and one light strand |
+| 0 (all $^{15}$N) | One heavy band | All DNA is heavy |
+| 1 (one round of replication in $^{14}$N) | One intermediate band | Each DNA molecule has one heavy and one light strand |
 | 2 | Half intermediate, half light | Half the molecules retain a heavy strand; half are entirely light |
 | 3 | 1/4 intermediate, 3/4 light | Pattern continues predictably |
 

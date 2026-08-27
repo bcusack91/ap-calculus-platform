@@ -22,7 +22,7 @@ This is a brief but critical step that connects glycolysis to the rest of aerobi
 
 Pyruvate is a small, charged molecule that cannot freely diffuse across the mitochondrial membranes.  It enters the mitochondrial matrix through a specific **pyruvate translocase** (a transport protein) in the inner mitochondrial membrane.
 
-This transport is an example of **facilitated transport** — pyruvate moves down its concentration gradient (higher in cytoplasm, lower in matrix) through a carrier protein.  It is co-transported with a proton (H\\(^+\\)), making it a **symport** mechanism.
+This transport is an example of **facilitated transport** — pyruvate moves down its concentration gradient (higher in cytoplasm, lower in matrix) through a carrier protein.  It is co-transported with a proton (H$^+$), making it a **symport** mechanism.
 
 > **Important:** This transport step requires an intact inner mitochondrial membrane.  Any damage to the membrane or inhibition of the translocase blocks all downstream aerobic respiration.
       `
@@ -37,19 +37,19 @@ Once inside the matrix, pyruvate undergoes an **oxidative decarboxylation** cata
 
 The reaction proceeds in three steps:
 
-1. **Decarboxylation:** The carboxyl group of pyruvate is removed as **CO\\(_2\\)** (the first CO\\(_2\\) released in respiration)
-2. **Oxidation:** The remaining 2-carbon fragment is oxidized, and NAD\\(^+\\) is reduced to **NADH**
+1. **Decarboxylation:** The carboxyl group of pyruvate is removed as **CO$_2$** (the first CO$_2$ released in respiration)
+2. **Oxidation:** The remaining 2-carbon fragment is oxidized, and NAD$^+$ is reduced to **NADH**
 3. **Attachment to Coenzyme A:** The oxidized 2-carbon fragment (acetyl group) is attached to **coenzyme A** (CoA), forming **acetyl-CoA**
 
 $$\\text{Pyruvate} + \\text{NAD}^+ + \\text{CoA} \\longrightarrow \\text{Acetyl-CoA} + \\text{CO}_2 + \\text{NADH}$$
 
 **Per glucose (2 pyruvates):**
-- 2 CO\\(_2\\) released
+- 2 CO$_2$ released
 - 2 NADH produced
 - 2 Acetyl-CoA formed
 - **0 ATP** produced directly
 
-The CO\\(_2\\) released here (and in the subsequent citric acid cycle) is ultimately exhaled by the organism.  This is literally where the carbon in your food becomes the carbon dioxide in your breath.
+The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately exhaled by the organism.  This is literally where the carbon in your food becomes the carbon dioxide in your breath.
       `
     },
     {
@@ -124,9 +124,9 @@ The PDC is also regulated by **covalent modification**: a kinase phosphorylates 
       content: `
 ### The Anaerobic Alternative: Fermentation
 
-When oxygen is absent, the electron transport chain cannot operate, NADH cannot be reoxidized, and the citric acid cycle stalls.  Without NAD\\(^+\\) regeneration, glycolysis would also stop.
+When oxygen is absent, the electron transport chain cannot operate, NADH cannot be reoxidized, and the citric acid cycle stalls.  Without NAD$^+$ regeneration, glycolysis would also stop.
 
-**Fermentation** solves this problem by regenerating NAD\\(^+\\) without using the electron transport chain:
+**Fermentation** solves this problem by regenerating NAD$^+$ without using the electron transport chain:
 
 **Lactic Acid Fermentation:**
 $$\\text{Pyruvate} + \\text{NADH} \\longrightarrow \\text{Lactate} + \\text{NAD}^+$$
@@ -139,7 +139,7 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
 - Occurs in yeast and some plant cells
 - Pyruvate is first decarboxylated, then the acetaldehyde is reduced to ethanol
 
-> **Key Point:** Fermentation does NOT produce additional ATP beyond the 2 ATP from glycolysis. Its sole purpose is to regenerate NAD\\(^+\\) so that glycolysis can continue.
+> **Key Point:** Fermentation does NOT produce additional ATP beyond the 2 ATP from glycolysis. Its sole purpose is to regenerate NAD$^+$ so that glycolysis can continue.
       `
     },
     {

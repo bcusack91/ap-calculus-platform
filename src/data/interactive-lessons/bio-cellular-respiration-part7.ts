@@ -22,10 +22,10 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
 
 **Critical connections to remember:**
 
-1. **Energy flows through carriers:** Glucose \\(\\rightarrow\\) NADH/FADH\\(_2\\) \\(\\rightarrow\\) proton gradient \\(\\rightarrow\\) ATP
-2. **Carbon tracking:** 6C glucose \\(\\rightarrow\\) 2 × 3C pyruvate \\(\\rightarrow\\) 2 × 2C acetyl-CoA + 2 CO\\(_2\\) \\(\\rightarrow\\) 4 CO\\(_2\\) (from cycle) = 6 CO\\(_2\\) total
-3. **Oxygen role:** O\\(_2\\) is ONLY used at Complex IV as the final electron acceptor — it does not participate in any earlier step
-4. **Water production:** H\\(_2\\)O is formed at Complex IV when O\\(_2\\) accepts electrons and combines with H\\(^+\\)
+1. **Energy flows through carriers:** Glucose $\\rightarrow$ NADH/FADH$_2$ $\\rightarrow$ proton gradient $\\rightarrow$ ATP
+2. **Carbon tracking:** 6C glucose $\\rightarrow$ 2 × 3C pyruvate $\\rightarrow$ 2 × 2C acetyl-CoA + 2 CO$_2$ $\\rightarrow$ 4 CO$_2$ (from cycle) = 6 CO$_2$ total
+3. **Oxygen role:** O$_2$ is ONLY used at Complex IV as the final electron acceptor — it does not participate in any earlier step
+4. **Water production:** H$_2$O is formed at Complex IV when O$_2$ accepts electrons and combines with H$^+$
 5. **Coupling:** The ETC does not make ATP directly — it builds the proton gradient that ATP synthase uses
       `
     },

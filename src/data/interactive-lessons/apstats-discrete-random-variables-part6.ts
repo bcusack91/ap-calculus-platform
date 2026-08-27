@@ -36,10 +36,10 @@ When asked to **interpret** standard deviation:
       exercise: {
         questions: [
           {
-            question: 'A fair die costs $2 to roll. You win $X$ dollars equal to 3 times the face. $E(\\\\text{profit}) = ?$',
+            question: 'A fair die costs \\$2 to roll. You win $X$ dollars equal to 3 times the face. $E(\\\\text{profit}) = ?$',
             options: ['$8.50', '$10.50', '$3.50', '$5.50'],
             correctAnswer: 0,
-            explanation: '$E(X) = 3 \\\\cdot 3.5 = 10.50$. Profit = $10.50 - $2 = $8.50.'
+            explanation: '$E(X) = 3 \\\\cdot 3.5 = 10.50$. Profit = \\$10.50 - \\$2 = \\$8.50.'
           },
           {
             question: 'Two independent measurements have $\\\\sigma_1 = 3$ and $\\\\sigma_2 = 4$. The $\\\\sigma$ of their difference is:',
@@ -61,7 +61,7 @@ When asked to **interpret** standard deviation:
       content: `
 **Insurance Problem** 🧮
 
-An insurance company charges $300/year. Claims: $0 (prob 0.9), $1000 (prob 0.08), $5000 (prob 0.02).
+An insurance company charges \\$300/year. Claims: \\$0 (prob 0.9), \\$1000 (prob 0.08), \\$5000 (prob 0.02).
 
 **1)** Expected claim per customer?
 

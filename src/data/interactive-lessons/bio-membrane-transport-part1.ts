@@ -38,7 +38,7 @@ In an aqueous environment, phospholipids spontaneously arrange into a bilayer �
 | **Temperature** | Higher temp increases fluidity; lower temp decreases fluidity |
 | **Tail length** | Shorter tails increase fluidity (fewer van der Waals interactions) |
 
-> **Why "fluid"?** Phospholipids can move **laterally** within their leaflet (~10\\(^7\\) times per second) but rarely **flip-flop** between leaflets (requires flippase enzymes).  Membrane proteins also move laterally, as demonstrated by the **Frye-Edidin experiment** (1970) using fluorescent labels on human and mouse cells fused into heterokaryons.
+> **Why "fluid"?** Phospholipids can move **laterally** within their leaflet (~10$^7$ times per second) but rarely **flip-flop** between leaflets (requires flippase enzymes).  Membrane proteins also move laterally, as demonstrated by the **Frye-Edidin experiment** (1970) using fluorescent labels on human and mouse cells fused into heterokaryons.
       `
     },
     {
@@ -144,8 +144,8 @@ The lipid bilayer is selectively permeable — it allows some substances to cros
 
 | Can cross freely | Cannot cross freely |
 |-----------------|-------------------|
-| Small, nonpolar molecules (O\\(_2\\), CO\\(_2\\), N\\(_2\\)) | Large, polar molecules (glucose, amino acids) |
-| Small, uncharged polar molecules (H\\(_2\\)O — slowly, ethanol) | Ions (Na\\(^+\\), K\\(^+\\), Cl\\(^-\\), Ca\\(^{2+}\\)) |
+| Small, nonpolar molecules (O$_2$, CO$_2$, N$_2$) | Large, polar molecules (glucose, amino acids) |
+| Small, uncharged polar molecules (H$_2$O — slowly, ethanol) | Ions (Na$^+$, K$^+$, Cl$^-$, Ca$^{2+}$) |
 | Lipid-soluble molecules (steroid hormones) | Charged molecules (ATP, proteins) |
 
 Substances that cannot cross freely require **transport proteins** (channels or carriers) to cross the membrane.  This selective control allows the cell to maintain an internal environment very different from the exterior.

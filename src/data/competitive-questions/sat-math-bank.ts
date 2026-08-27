@@ -1117,7 +1117,7 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 74,
-    "question": "A gym charges a one-time sign-up fee of $25 plus $15 for each month of membership. Which equation gives the total cost $C$, in dollars, for $m$ months of membership?",
+    "question": "A gym charges a one-time sign-up fee of \\$25 plus \\$15 for each month of membership. Which equation gives the total cost $C$, in dollars, for $m$ months of membership?",
     "options": [
       "$C = 15 + 25m$",
       "$C = 25 + 15m$",
@@ -1125,7 +1125,7 @@ const allQuestions: SatMathQuestion[] = [
       "$C = 40m$"
     ],
     "correctAnswer": 1,
-    "explanation": "The $25 sign-up fee is a one-time constant, and $15 is charged for each of the $m$ months, giving $C = 25 + 15m$.",
+    "explanation": "The \\$25 sign-up fee is a one-time constant, and \\$15 is charged for each of the $m$ months, giving $C = 25 + 15m$.",
     "difficulty": "easy",
     "area": "algebra",
     "skill": "Linear equations in two variables"
@@ -1237,7 +1237,7 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 82,
-    "question": "A salesperson earns a fixed daily wage of $180 plus a commission of $12 for each item sold. On a day when the salesperson earned a total of $456, how many items were sold?",
+    "question": "A salesperson earns a fixed daily wage of \\$180 plus a commission of \\$12 for each item sold. On a day when the salesperson earned a total of \\$456, how many items were sold?",
     "options": [
       "$21$",
       "$23$",

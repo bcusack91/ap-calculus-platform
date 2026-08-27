@@ -27,7 +27,7 @@ export const psychSocialInfluencePart7Data = {
 | **Deindividuation** | Zimbardo (1970) | Anonymous → impulsive behavior | ANONYMITY is required — not just being in a group |
 | **Central route** | Petty & Cacioppo (1986) | Deep analysis of argument quality | High motivation AND ability needed |
 | **Peripheral route** | Petty & Cacioppo (1986) | Superficial cues (celebrity, emotion) | Not "worse" — just different processing when motivation/ability low |
-| **Cognitive dissonance** | Festinger (1957) | $1 > $20 in attitude change | LESS reward = MORE dissonance = MORE attitude change |
+| **Cognitive dissonance** | Festinger (1957) | \\$1 > \\$20 in attitude change | LESS reward = MORE dissonance = MORE attitude change |
 | **Foot-in-the-door** | Freedman & Fraser (1966) | Small → large request | Based on CONSISTENCY principle |
 | **Door-in-the-face** | Cialdini et al. (1975) | Large → small request | Based on RECIPROCITY principle |
 
@@ -133,7 +133,7 @@ export const psychSocialInfluencePart7Data = {
         hint1: 'Line judgment task — participants said obviously wrong answers to match the group.',
         hint2: 'Electric shock paradigm — participants obeyed authority to deliver "dangerous" shocks.',
         hint3: 'Proposed that contradictory beliefs/behaviors create uncomfortable tension.',
-        explanation: 'Asch = conformity (line judgment, normative influence). Milgram = obedience (65% max shock, authority figure). Festinger = cognitive dissonance ($1/$20 study, insufficient justification).'
+        explanation: 'Asch = conformity (line judgment, normative influence). Milgram = obedience (65% max shock, authority figure). Festinger = cognitive dissonance (\\$1/\\$20 study, insufficient justification).'
       }
     },
     {
@@ -146,7 +146,7 @@ export const psychSocialInfluencePart7Data = {
 2. **Milgram obedience** — 65% to max, factors increasing/decreasing obedience
 3. **FAE** — overestimate dispositional, underestimate situational
 4. **Normative vs. informational** — fitting in vs. being right
-5. **Cognitive dissonance** — $1/$20, insufficient justification
+5. **Cognitive dissonance** — \\$1/\\$20, insufficient justification
 6. **Central vs. peripheral route** — ELM model
 7. **Groupthink vs. group polarization** — suppressed dissent vs. becoming more extreme
 8. **Foot-in-the-door vs. door-in-the-face** — consistency vs. reciprocity
@@ -172,7 +172,7 @@ export const psychSocialInfluencePart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Dr. Kim asks participants to rate how interesting a dull task was after paying them either $1 or $20 to tell the next participant it was fun. She finds the $1 group rated the task as significantly more interesting. To replicate this study, a researcher must include all of the following EXCEPT:',
+            question: 'Dr. Kim asks participants to rate how interesting a dull task was after paying them either \\$1 or \\$20 to tell the next participant it was fun. She finds the \\$1 group rated the task as significantly more interesting. To replicate this study, a researcher must include all of the following EXCEPT:',
             options: [
               'A boring task that participants perform',
               'Different payment amounts as the independent variable',

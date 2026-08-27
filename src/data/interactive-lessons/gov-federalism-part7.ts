@@ -118,11 +118,11 @@ export const govFederalismPart7Data = {
 | **Cooperative federalism** | "Marble cake" — intermingled federal and state authority (1937-69) |
 | **New federalism / devolution** | Conscious return of authority from federal to state (1969-present) |
 | **Coercive federalism** | Federal preemption + spending-clause coercion (modern overlay) |
-| **Categorical grant** | Federal $ for specific narrow purpose with extensive regulations |
-| **Block grant** | Federal $ for broad purpose with state discretion |
+| **Categorical grant** | Federal \\$ for specific narrow purpose with extensive regulations |
+| **Block grant** | Federal \\$ for broad purpose with state discretion |
 | **Project grant** | Federal $ awarded competitively |
 | **Formula grant** | Federal $ distributed by statutory formula |
-| **Revenue sharing** | General federal $ with no specific purpose (1972-86) |
+| **Revenue sharing** | General federal \\$ with no specific purpose (1972-86) |
 | **Mandate (funded)** | Federal requirement on states with federal funds (Medicaid, SNAP, VRA) |
 | **Mandate (unfunded)** | Federal requirement on states without federal funds (NCLB testing, ADA, Real ID) |
 | **Preemption** | Federal statute displaces conflicting state statute |

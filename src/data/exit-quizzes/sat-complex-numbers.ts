@@ -245,7 +245,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `$(${a} + ${b}i) - (${c} + ${d}i) = ?$`,
         options, correctIndex,
-        explanation: `Real: $${a} - ${c} = ${re}$, Imaginary: $${b} - ${d} = ${im}$. Answer: $${correct.replace(/\$/g, '')}$.`
+        explanation: `Real: $${a} - ${c} = ${re}$, Imaginary: $${b} - ${d} = ${im}$. Answer: $${correct.replace(/\\$/g, '')}$.`
       }
     }
   },

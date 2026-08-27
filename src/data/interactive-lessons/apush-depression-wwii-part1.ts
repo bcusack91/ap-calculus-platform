@@ -101,7 +101,7 @@ export const apushDepressionWwiiPart1Data = {
 | **Works Progress Admin.** | WPA | Employed ~8.5 million people (roads, bridges, schools, arts projects) | Relief |
 | **Social Security Act** | SSA (1935) | Retirement pensions, unemployment insurance, aid to disabled and dependent children | Reform |
 | **Wagner Act** | NLRA (1935) | Guaranteed workers' right to organize unions and collective bargaining | Reform |
-| **FDIC** | (1933) | Insured bank deposits up to \$2,500 (now \$250,000); restored confidence in banks | Reform |
+| **FDIC** | (1933) | Insured bank deposits up to \\$2,500 (now \\$250,000); restored confidence in banks | Reform |
 | **SEC** | (1934) | Regulated stock market; prevented fraud and speculation abuses | Reform |
 
 ### The Three R's: **Relief** (immediate help), **Recovery** (economic restart), **Reform** (prevent future crises)

@@ -130,7 +130,7 @@ Range $=$ max $-$ min
       content: '**Mean vs. Median** 🔍\n\nWhich measure of center is more appropriate?',
       exercise: {
         dropdowns: [
-          { label: 'Salaries at a company where the CEO makes $10M and everyone else makes ~$60K', options: ['Median (outlier skews mean)', 'Mean (more accurate)', 'Mode (most common)', 'Range'] },
+          { label: 'Salaries at a company where the CEO makes \\$10M and everyone else makes ~\\$60K', options: ['Median (outlier skews mean)', 'Mean (more accurate)', 'Mode (most common)', 'Range'] },
           { label: 'Test scores that are evenly distributed between 60 and 100', options: ['Mean (no outliers, symmetric)', 'Median (always better)', 'Mode (most frequent)', 'Range'] },
           { label: 'Home prices in a neighborhood where one mansion sold for $5M', options: ['Median (outlier skews mean)', 'Mean (includes all data)', 'Mode (typical price)', 'Range'] },
           { label: '"Find the average score to determine the class grade"', options: ['Mean (average = mean)', 'Median (middle value)', 'Mode (most common)', 'Cannot determine'] }

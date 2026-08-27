@@ -65,9 +65,9 @@ Before choosing your answer on any Expression question:
 
 | Step | Action |
 |---|---|
-| **Notes** | • Solar panels cost $20,000 average • Payback period is 7-10 years • Reduce electricity bills by 50-70% • Government tax credit covers 30% of cost |
+| **Notes** | • Solar panels cost \\$20,000 average • Payback period is 7-10 years • Reduce electricity bills by 50-70% • Government tax credit covers 30% of cost |
 | **Goal** | "emphasize the financial accessibility of solar panels" |
-| **Evaluate A** | "Solar panels cost $20,000 on average." → States cost but doesn't emphasize accessibility ❌ |
+| **Evaluate A** | "Solar panels cost \\$20,000 on average." → States cost but doesn't emphasize accessibility ❌ |
 | **Evaluate B** | "With a 30% tax credit reducing the upfront cost, solar panels pay for themselves within 7-10 years through 50-70% lower electricity bills." → Shows affordability mechanisms ✅ |
 | **Evaluate C** | "Solar panels reduce electricity bills." → Too vague ❌ |
 | **Evaluate D** | "The average payback period is 7-10 years." → One fact, doesn't emphasize accessibility ❌ |

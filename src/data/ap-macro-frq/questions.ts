@@ -47,7 +47,7 @@ const longFRQs: MacroFRQ[] = [
         maxPoints: 3,
         rubric: [
           { points: 1, description: "Correctly labels axes (Price Level on Y-axis, Real GDP on X-axis) and shows downward-sloping AD, upward-sloping SRAS, vertical LRAS at Y_f", keywords: ["price level", "real GDP", "AD", "SRAS", "LRAS", "downward sloping", "upward sloping", "vertical"] },
-          { points: 1, description: "Shows short-run equilibrium where AD intersects SRAS at $18T, to the LEFT of LRAS at $20T", keywords: ["equilibrium", "intersection", "left of LRAS", "below full employment", "$18", "$20"] },
+          { points: 1, description: "Shows short-run equilibrium where AD intersects SRAS at \\$18T, to the LEFT of LRAS at \\$20T", keywords: ["equilibrium", "intersection", "left of LRAS", "below full employment", "$18", "$20"] },
           { points: 1, description: "Identifies the gap as a RECESSIONARY (or contractionary) gap of $2 trillion", keywords: ["recessionary gap", "contractionary gap", "$2 trillion", "below potential", "negative"] }
         ],
         sampleAnswer: "On the graph, AD intersects SRAS at Y=\\$18T < Y_f=\\$20T (LRAS), creating a recessionary gap of \\$2T. Cyclical unemployment is 8.5% − 4.5% = 4 percentage points above the natural rate.",
@@ -58,7 +58,7 @@ const longFRQs: MacroFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Correctly calculates spending multiplier = 1 / (1 − MPC) = 1 / (1 − 0.8) = 5", keywords: ["multiplier", "1/(1-MPC)", "1/0.2", "= 5", "spending multiplier"] },
-          { points: 1, description: "Calculates ΔG = Gap / Multiplier = $2T / 5 = $400 billion", keywords: ["$400 billion", "$0.4 trillion", "gap divided", "ΔG", "minimum"] }
+          { points: 1, description: "Calculates ΔG = Gap / Multiplier = \\$2T / 5 = \\$400 billion", keywords: ["$400 billion", "$0.4 trillion", "gap divided", "ΔG", "minimum"] }
         ],
         sampleAnswer: "Spending multiplier = 1/(1−MPC) = 1/(1−0.8) = 1/0.2 = 5. Minimum ΔG = \\$2T / 5 = \\$400 billion.",
       },
@@ -68,7 +68,7 @@ const longFRQs: MacroFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: "States the tax cut must be LARGER because the tax multiplier (-MPC/(1-MPC) = -4) is smaller in absolute value than the spending multiplier", keywords: ["larger", "tax multiplier", "MPC/(1-MPC)", "4", "smaller multiplier", "savings leakage", "first round"] },
-          { points: 1, description: "Calculates: ΔT = -$2T / 4 = -$500 billion (a $500B tax CUT)", keywords: ["$500 billion", "$0.5 trillion", "tax cut"] }
+          { points: 1, description: "Calculates: ΔT = -\\$2T / 4 = -\\$500 billion (a \\$500B tax CUT)", keywords: ["$500 billion", "$0.5 trillion", "tax cut"] }
         ],
         sampleAnswer: "The tax cut must be LARGER because part of the first-round tax cut is saved (1−MPC=0.2), so only MPC × ΔT = 0.8 × ΔT enters spending. Tax multiplier = MPC/(1−MPC) = 0.8/0.2 = 4 in absolute value, so required tax cut = \\$2T/4 = \\$500 billion.",
       },
@@ -297,7 +297,7 @@ const shortFRQs: MacroFRQ[] = [
         prompt: "Calculate the maximum amount Bank A can lend from this new deposit.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "$4,500 (= $5,000 × 0.90, since 10% must be held as required reserves)", keywords: ["$4,500", "4500", "0.90", "0.9", "$5,000 × 0.9", "excess reserves"] }
+          { points: 1, description: "\\$4,500 (= \\$5,000 × 0.90, since 10% must be held as required reserves)", keywords: ["$4,500", "4500", "0.90", "0.9", "$5,000 × 0.9", "excess reserves"] }
         ],
         sampleAnswer: "Required reserves = 10% × \\$5,000 = \\$500. Excess reserves available to lend = \\$5,000 − \\$500 = \\$4,500.",
       },
@@ -307,7 +307,7 @@ const shortFRQs: MacroFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Money multiplier = 1 / required reserve ratio = 1 / 0.10 = 10", keywords: ["money multiplier", "1/RR", "1/0.10", "= 10", "ten"] },
-          { points: 1, description: "Maximum change in money supply = $5,000 × 10 = $50,000 (or, more precisely, change in loans × multiplier = $4,500 × 10 = $45,000 with original deposit already counted)", keywords: ["$50,000", "$45,000", "money supply", "total change"] }
+          { points: 1, description: "Maximum change in money supply = \\$5,000 × 10 = \\$50,000 (or, more precisely, change in loans × multiplier = \\$4,500 × 10 = \\$45,000 with original deposit already counted)", keywords: ["$50,000", "$45,000", "money supply", "total change"] }
         ],
         sampleAnswer: "Money multiplier = 1/RR = 1/0.10 = 10. Maximum change in money supply from a \\$5,000 deposit cascade = \\$5,000 × 10 = \\$50,000 (or \\$4,500 × 10 = \\$45,000 in newly created loans plus the original \\$5,000 deposit = \\$50,000).",
       },
@@ -444,7 +444,7 @@ const shortFRQs: MacroFRQ[] = [
         prompt: "Calculate NOMINAL GDP for 2024 and 2025. Show your work.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "2024 nominal GDP = (100×$2) + (50×$10) = $200 + $500 = $700; 2025 nominal GDP = (110×$3) + (55×$12) = $330 + $660 = $990", keywords: ["$700", "$990", "100 × 2", "50 × 10", "110 × 3", "55 × 12", "200 + 500", "330 + 660"] }
+          { points: 1, description: "2024 nominal GDP = (100×\\$2) + (50×\\$10) = \\$200 + \\$500 = \\$700; 2025 nominal GDP = (110×\\$3) + (55×\\$12) = \\$330 + \\$660 = \\$990", keywords: ["$700", "$990", "100 × 2", "50 × 10", "110 × 3", "55 × 12", "200 + 500", "330 + 660"] }
         ],
         sampleAnswer: "2024 nominal GDP = (100 × \\$2) + (50 × \\$10) = \\$200 + \\$500 = \\$700. 2025 nominal GDP = (110 × \\$3) + (55 × \\$12) = \\$330 + \\$660 = \\$990.",
       },
@@ -453,8 +453,8 @@ const shortFRQs: MacroFRQ[] = [
         prompt: "Calculate REAL GDP for 2025 in 2024 base-year prices, and the percentage growth in real GDP from 2024 to 2025.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Real GDP 2025 = (110×$2) + (55×$10) = $220 + $550 = $770", keywords: ["$770", "real GDP", "110 × 2", "55 × 10", "220 + 550", "base year prices"] },
-          { points: 1, description: "Real growth = ($770 − $700) / $700 = 10%", keywords: ["10%", "0.10", "real growth", "($770 - $700)/$700", "70/700"] }
+          { points: 1, description: "Real GDP 2025 = (110×\\$2) + (55×\\$10) = \\$220 + \\$550 = \\$770", keywords: ["$770", "real GDP", "110 × 2", "55 × 10", "220 + 550", "base year prices"] },
+          { points: 1, description: "Real growth = (\\$770 − \\$700) / \\$700 = 10%", keywords: ["10%", "0.10", "real growth", "(\\$770 - \\$700)/\\$700", "70/700"] }
         ],
         sampleAnswer: "Real GDP 2025 (in 2024 prices) = (110 × \\$2) + (55 × \\$10) = \\$220 + \\$550 = \\$770. Real growth = (\\$770 − \\$700)/\\$700 = \\$70/\\$700 = 10%.",
       },
@@ -463,7 +463,7 @@ const shortFRQs: MacroFRQ[] = [
         prompt: "Calculate the GDP deflator for 2025 (with 2024 = 100) and the inflation rate from 2024 to 2025.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "GDP deflator 2025 = (Nominal/Real) × 100 = ($990/$770) × 100 ≈ 128.6; inflation = (128.6 − 100)/100 = 28.6%", keywords: ["128.6", "($990/$770)", "deflator", "28.6%", "inflation", "100"] }
+          { points: 1, description: "GDP deflator 2025 = (Nominal/Real) × 100 = (\\$990/\\$770) × 100 ≈ 128.6; inflation = (128.6 − 100)/100 = 28.6%", keywords: ["128.6", "(\\$990/\\$770)", "deflator", "28.6%", "inflation", "100"] }
         ],
         sampleAnswer: "GDP deflator 2025 = (\\$990/\\$770) × 100 ≈ 128.6. Inflation rate = (128.6 − 100)/100 ≈ 28.6%.",
       },

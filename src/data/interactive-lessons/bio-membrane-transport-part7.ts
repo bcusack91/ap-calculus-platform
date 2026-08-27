@@ -20,7 +20,7 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
 
 1. **Membranes are selectively permeable** — small nonpolar molecules cross freely; large, polar, and charged molecules need transport proteins
 2. **Passive transport** follows the gradient (no ATP); **active transport** goes against the gradient (requires ATP, directly or indirectly)
-3. **Water potential** determines the direction of osmosis: \\(\\Psi = \\Psi_s + \\Psi_p\\); water moves from high \\(\\Psi\\) to low \\(\\Psi\\)
+3. **Water potential** determines the direction of osmosis: $\\Psi = \\Psi_s + \\Psi_p$; water moves from high $\\Psi$ to low $\\Psi$
 4. **The Na+/K+ ATPase** is the foundation for many secondary transport processes and helps maintain the resting membrane potential
 5. **Bulk transport** (endocytosis/exocytosis) handles large molecules and particles via membrane vesicles
       `

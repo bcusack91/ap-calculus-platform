@@ -33,7 +33,7 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
 - Telomeres provide a "buffer zone" of expendable sequence — shortening removes repeats, not genes
 - Telomeres also form a protective structure called a **T-loop** (the 3' overhang folds back and invades the double-stranded region) with a protein complex called **shelterin** that prevents the cell from recognizing chromosome ends as DNA breaks
 
-> **Hayflick Limit:** Normal somatic cells can divide approximately **50-70 times** before telomeres become critically short.  At this point, cells enter **replicative senescence** (a permanent G\\(_0\\) state) or undergo apoptosis.  This is a tumor-suppression mechanism.
+> **Hayflick Limit:** Normal somatic cells can divide approximately **50-70 times** before telomeres become critically short.  At this point, cells enter **replicative senescence** (a permanent G$_0$ state) or undergo apoptosis.  This is a tumor-suppression mechanism.
       `
     },
     {

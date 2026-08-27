@@ -41,7 +41,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Opportunity cost = value of next best alternative forgone = 4 hours × $15/hr = $60 in forgone wages.',
+      'Opportunity cost = value of next best alternative forgone = 4 hours × \\$15/hr = \\$60 in forgone wages.',
   },
   {
     type: 'mcq',
@@ -225,7 +225,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-2-supply-demand',
     stimulus:
-      'Diagram (described): A competitive market for sugar shows demand and supply intersecting at P* = $2/lb and Q* = 100. The government imposes an excise tax of $0.50/lb on sellers.',
+      'Diagram (described): A competitive market for sugar shows demand and supply intersecting at P* = \\$2/lb and Q* = 100. The government imposes an excise tax of \\$0.50/lb on sellers.',
     question:
       'Which of the following best describes the effects of the tax?',
     options: [
@@ -314,7 +314,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-2-supply-demand',
     stimulus:
-      'When the price of a good rises from $10 to $12, the quantity supplied increases from 100 to 120.',
+      'When the price of a good rises from \\$10 to \\$12, the quantity supplied increases from 100 to 120.',
     question: 'Using the midpoint method, the price elasticity of supply is approximately:',
     options: [
       '0.18',
@@ -361,7 +361,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-3-production-cost-perfect-comp',
     stimulus:
-      'A firm produces 100 units at total cost = $1,000. Fixed cost = $200.',
+      'A firm produces 100 units at total cost = \\$1,000. Fixed cost = \\$200.',
     question: 'Average variable cost equals:',
     options: [
       '$2',
@@ -371,7 +371,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Variable cost = TC − FC = 1,000 − 200 = $800. AVC = VC / Q = 800 / 100 = $8.',
+      'Variable cost = TC − FC = 1,000 − 200 = \\$800. AVC = VC / Q = 800 / 100 = \\$8.',
   },
   {
     type: 'mcq',
@@ -406,7 +406,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-3-production-cost-perfect-comp',
     stimulus:
-      'A perfectly competitive firm faces a market price of $20. At its current output of 50 units, ATC = $18, AVC = $14, MC = $20, and MR = $20.',
+      'A perfectly competitive firm faces a market price of \\$20. At its current output of 50 units, ATC = \\$18, AVC = \\$14, MC = \\$20, and MR = \\$20.',
     question:
       'In the SHORT run, this firm is most likely:',
     options: [
@@ -417,7 +417,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'P = MR = MC = 20 at Q = 50, so the firm is profit-maximizing. Profit per unit = P − ATC = 20 − 18 = $2; total profit = 2 × 50 = $100.',
+      'P = MR = MC = 20 at Q = 50, so the firm is profit-maximizing. Profit per unit = P − ATC = 20 − 18 = \\$2; total profit = 2 × 50 = \\$100.',
   },
   {
     type: 'mcq',
@@ -496,7 +496,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-3-production-cost-perfect-comp',
     stimulus:
-      'A firm produces 200 units at AVC = $5 and AFC = $3.',
+      'A firm produces 200 units at AVC = \\$5 and AFC = \\$3.',
     question: 'The firm\'s total cost equals:',
     options: [
       '$1,000',
@@ -506,7 +506,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 3,
     explanation:
-      'ATC = AVC + AFC = 5 + 3 = $8. TC = ATC × Q = 8 × 200 = $1,600.',
+      'ATC = AVC + AFC = 5 + 3 = \\$8. TC = ATC × Q = 8 × 200 = \\$1,600.',
   },
   {
     type: 'mcq',

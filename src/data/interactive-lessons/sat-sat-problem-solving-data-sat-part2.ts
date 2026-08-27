@@ -41,7 +41,7 @@ $$\\frac{24}{80} \\times 100 = 30\\%$$
         '$50.00'
       ],
       correctAnswer: 1,
-      explanation: 'Markup: $40 × 1.25 = $50. Discount: $50 × 0.75 = $37.50. The final price is $37.50, NOT $40 — successive equal percent changes don\'t cancel out.'
+      explanation: 'Markup: \\$40 × 1.25 = \\$50. Discount: \\$50 × 0.75 = \\$37.50. The final price is \\$37.50, NOT \\$40 — successive equal percent changes don\'t cancel out.'
     },
     {
       id: 'psd2-text2',
@@ -123,9 +123,9 @@ $$\\frac{24}{80} \\times 100 = 30\\%$$
         ],
         correctAnswers: ['0.65', '\\$81', '\\$75', '1.21'],
         hint1: 'Decrease: 1 − 0.35 = 0.65.',
-        hint2: 'Tax: $75 × 1.08 = $81.',
-        hint3: '80% of original = $60 → original = 60/0.80 = $75.',
-        explanation: '35% decrease → ×0.65. Tax: 75 × 1.08 = $81. Original: 60/0.80 = $75. Successive: 1.10 × 1.10 = 1.21 (not 1.20).'
+        hint2: 'Tax: \\$75 × 1.08 = \\$81.',
+        hint3: '80% of original = \\$60 → original = 60/0.80 = \\$75.',
+        explanation: '35% decrease → ×0.65. Tax: 75 × 1.08 = \\$81. Original: 60/0.80 = \\$75. Successive: 1.10 × 1.10 = 1.21 (not 1.20).'
       }
     },
     {

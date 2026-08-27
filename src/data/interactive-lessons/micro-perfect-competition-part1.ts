@@ -198,7 +198,7 @@ In the long run, free entry and exit drive economic profit to **zero**:
             explanation: 'Free entry means profit attracts new firms → supply shifts right → market price falls → each firm\'s profit shrinks until P = min ATC and economic profit = 0.'
           },
           {
-            question: 'A competitive firm has P = $8, ATC = $10, and AVC = $7. The firm should:',
+            question: 'A competitive firm has P = \\$8, ATC = \\$10, and AVC = \\$7. The firm should:',
             options: [
               'Shut down because it is making a loss',
               'Continue producing because P > AVC',
@@ -206,7 +206,7 @@ In the long run, free entry and exit drive economic profit to **zero**:
               'Increase output to cover fixed costs'
             ],
             correctAnswer: 1,
-            explanation: 'P ($8) > AVC ($7), so the firm covers all variable costs and $1 toward fixed costs. Shutting down would mean losing ALL fixed costs. It\'s better to produce and minimize losses.'
+            explanation: 'P (\\$8) > AVC (\\$7), so the firm covers all variable costs and \\$1 toward fixed costs. Shutting down would mean losing ALL fixed costs. It\'s better to produce and minimize losses.'
           }
         ]
       }

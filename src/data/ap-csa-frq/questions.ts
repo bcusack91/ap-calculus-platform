@@ -35,7 +35,7 @@ const longFRQs: CSAFRQ[] = [
     type: 'long' as const,
     unit: 1,
     title: 'Methods & Control Structures: Ticket Pricing',
-    prompt: `A theater sells tickets with tiered pricing. A full-price ticket costs $12. Patrons age 65 and older, or age 12 and younger, pay a discounted price of $8. On Tuesdays, every ticket (full price or discounted) is an additional $2 off. You will write two methods of the TicketMachine class.`,
+    prompt: `A theater sells tickets with tiered pricing. A full-price ticket costs \\$12. Patrons age 65 and older, or age 12 and younger, pay a discounted price of \\$8. On Tuesdays, every ticket (full price or discounted) is an additional \\$2 off. You will write two methods of the TicketMachine class.`,
     parts: [
       {
         label: '(a)',

@@ -11,7 +11,7 @@ export const bioCellRespirationPart5Data = {
 
 Oxidative phosphorylation is the culminating stage of aerobic respiration and produces the vast majority of ATP — approximately **30-34 ATP** per glucose.  It consists of two tightly coupled components:
 
-1. **The Electron Transport Chain (ETC):** A series of protein complexes in the inner mitochondrial membrane that pass electrons from NADH and FADH\\(_2\\) to O\\(_2\\), pumping protons (H\\(^+\\)) into the intermembrane space
+1. **The Electron Transport Chain (ETC):** A series of protein complexes in the inner mitochondrial membrane that pass electrons from NADH and FADH$_2$ to O$_2$, pumping protons (H$^+$) into the intermembrane space
 2. **Chemiosmosis:** The flow of protons back through ATP synthase, driving the phosphorylation of ADP to ATP
 
 **Location:** Inner mitochondrial membrane and intermembrane space
@@ -27,12 +27,12 @@ The ETC consists of four major protein complexes plus two mobile electron carrie
 
 | Component | Name | Function |
 |-----------|------|----------|
-| **Complex I** | NADH dehydrogenase | Accepts electrons from NADH; pumps 4 H\\(^+\\) |
-| **Complex II** | Succinate dehydrogenase | Accepts electrons from FADH\\(_2\\); does NOT pump H\\(^+\\) |
+| **Complex I** | NADH dehydrogenase | Accepts electrons from NADH; pumps 4 H$^+$ |
+| **Complex II** | Succinate dehydrogenase | Accepts electrons from FADH$_2$; does NOT pump H$^+$ |
 | **Ubiquinone (Q)** | Coenzyme Q | Mobile carrier; shuttles electrons from Complexes I and II to Complex III |
-| **Complex III** | Cytochrome bc1 complex | Passes electrons to cytochrome c; pumps 4 H\\(^+\\) |
+| **Complex III** | Cytochrome bc1 complex | Passes electrons to cytochrome c; pumps 4 H$^+$ |
 | **Cytochrome c** | — | Mobile carrier; shuttles electrons from Complex III to Complex IV |
-| **Complex IV** | Cytochrome c oxidase | Passes electrons to O\\(_2\\) (final electron acceptor); pumps 2 H\\(^+\\) |
+| **Complex IV** | Cytochrome c oxidase | Passes electrons to O$_2$ (final electron acceptor); pumps 2 H$^+$ |
 
 **The electron flow path:**
 
@@ -40,9 +40,9 @@ $$\\text{NADH} \\rightarrow \\text{Complex I} \\rightarrow \\text{Q} \\rightarro
 
 $$\\text{FADH}_2 \\rightarrow \\text{Complex II} \\rightarrow \\text{Q} \\rightarrow \\text{Complex III} \\rightarrow \\text{Cyt c} \\rightarrow \\text{Complex IV} \\rightarrow \\text{O}_2$$
 
-> **Why FADH\\(_2\\) produces fewer ATP than NADH:** FADH\\(_2\\) enters at Complex II, which does NOT pump protons. NADH enters at Complex I, which does pump protons. Fewer protons pumped = smaller gradient = fewer ATP via chemiosmosis (1.5 ATP per FADH\\(_2\\) vs. 2.5 ATP per NADH).
+> **Why FADH$_2$ produces fewer ATP than NADH:** FADH$_2$ enters at Complex II, which does NOT pump protons. NADH enters at Complex I, which does pump protons. Fewer protons pumped = smaller gradient = fewer ATP via chemiosmosis (1.5 ATP per FADH$_2$ vs. 2.5 ATP per NADH).
 
-At Complex IV, molecular oxygen accepts the electrons and combines with H\\(^+\\) to form **water** — this is why we breathe oxygen:
+At Complex IV, molecular oxygen accepts the electrons and combines with H$^+$ to form **water** — this is why we breathe oxygen:
 
 $$\\frac{1}{2}\\text{O}_2 + 2\\text{H}^+ + 2e^- \\longrightarrow \\text{H}_2\\text{O}$$
       `
@@ -97,23 +97,23 @@ $$\\frac{1}{2}\\text{O}_2 + 2\\text{H}^+ + 2e^- \\longrightarrow \\text{H}_2\\te
       content: `
 ### Chemiosmosis and ATP Synthase
 
-As electrons pass through Complexes I, III, and IV, the energy released is used to pump H\\(^+\\) ions from the mitochondrial matrix into the **intermembrane space**.  This creates an **electrochemical gradient** (also called the **proton-motive force**):
+As electrons pass through Complexes I, III, and IV, the energy released is used to pump H$^+$ ions from the mitochondrial matrix into the **intermembrane space**.  This creates an **electrochemical gradient** (also called the **proton-motive force**):
 
-- **Chemical gradient:** Higher H\\(^+\\) concentration in the intermembrane space
+- **Chemical gradient:** Higher H$^+$ concentration in the intermembrane space
 - **Electrical gradient:** More positive charge in the intermembrane space
 
 This gradient represents **stored potential energy** — like water behind a dam.
 
 **ATP synthase** (sometimes called Complex V) is a remarkable molecular machine that harnesses this gradient.  It has two main components:
 
-- **F\\(_0\\) subunit:** A channel embedded in the membrane through which H\\(^+\\) ions flow back into the matrix
-- **F\\(_1\\) subunit:** The catalytic "head" that protrudes into the matrix and synthesizes ATP
+- **F$_0$ subunit:** A channel embedded in the membrane through which H$^+$ ions flow back into the matrix
+- **F$_1$ subunit:** The catalytic "head" that protrudes into the matrix and synthesizes ATP
 
-As protons flow through F\\(_0\\), the rotor spins (~100 revolutions per second), causing conformational changes in F\\(_1\\) that catalyze:
+As protons flow through F$_0$, the rotor spins (~100 revolutions per second), causing conformational changes in F$_1$ that catalyze:
 
 $$\\text{ADP} + \\text{P}_i \\longrightarrow \\text{ATP}$$
 
-Approximately **4 H\\(^+\\)** must pass through ATP synthase to produce 1 ATP.
+Approximately **4 H$^+$** must pass through ATP synthase to produce 1 ATP.
 
 > **Nobel Prize Connection:** Peter Mitchell received the 1978 Nobel Prize for the chemiosmotic hypothesis — the idea that ATP synthesis is driven by an electrochemical proton gradient across a membrane.  This was initially controversial but is now one of the most fundamental concepts in bioenergetics.
       `

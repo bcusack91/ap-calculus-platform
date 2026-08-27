@@ -10,7 +10,7 @@ import type { LessonData } from '../registry'
  * Concept-and-chronology topic, so checks favor multiple-choice + dropdown, with a few
  * quantitative input-boxes (years, election margins, economic figures, vote counts).
  * Every fact, date, and figure has been verified. LaTeX uses DOUBLED backslashes
- * (template-literal strings); literal dollar amounts in prose are escaped as \$.
+ * (template-literal strings); literal dollar amounts in prose are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -706,7 +706,7 @@ In **2008**, the U.S. plunged into the **Great Recession** — the worst economi
 
 The government responded with massive intervention:
 
-- **TARP (Troubled Asset Relief Program, 2008)** — a roughly \$700 billion bank "bailout" signed under George W. Bush.
+- **TARP (Troubled Asset Relief Program, 2008)** — a roughly \\$700 billion bank "bailout" signed under George W. Bush.
 - **The 2009 stimulus** (American Recovery and Reinvestment Act) — large federal spending to revive the economy under the new president.
 
 Amid this crisis, Democrat **Barack Obama** defeated Republican **John McCain** in **2008**, becoming the **first African American president** of the United States — a milestone in the nation's long struggle over race.
@@ -776,7 +776,7 @@ These years also saw deepening **political polarization** and gridlock, the rise
           hint1: 'Nicknamed "Obamacare," passed in 2010.',
           hint2: 'The 2015 marriage case is named for plaintiff Jim Obergefell.',
           hint3: 'The Troubled Asset Relief Program is known by its acronym.',
-          explanation: 'The Affordable Care Act (2010) expanded coverage; Obergefell v. Hodges (2015) legalized same-sex marriage nationwide; and TARP (2008) was the roughly \$700 billion financial-crisis bailout.',
+          explanation: 'The Affordable Care Act (2010) expanded coverage; Obergefell v. Hodges (2015) legalized same-sex marriage nationwide; and TARP (2008) was the roughly \\$700 billion financial-crisis bailout.',
         },
       },
       {

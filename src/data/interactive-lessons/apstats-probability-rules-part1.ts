@@ -212,7 +212,7 @@ $$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{10} = \\frac{7}{10} = 
           },
           {
             question: '"At least one head in 3 flips" is easiest to calculate using:',
-            options: ['The addition rule', 'The complement rule', 'The multiplication rule', 'Bayes\\text{\' } theorem'],
+            options: ['The addition rule', 'The complement rule', 'The multiplication rule', 'Bayes\' theorem'],
             correctAnswer: 1,
             explanation: '$P(\\text{at least one}) = 1 - P(\\text{none}) = 1 - P(\\text{TTT})$.'
           },

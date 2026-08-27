@@ -115,7 +115,7 @@ $q_1 = +2.0\\ \\mu\\text{C}$, $q_2 = +8.0\\ \\mu\\text{C}$, separated by $r = 0.
 Use $k = 9.0 \\times 10^9$ $N\\cdot m^{2}/C^{2}$ (rounded for cleaner math).
 
 Enter in order:
-1) $|q_1 q_2|$ in $C^{2}$ (use scientific notation like \$216e-12\`)
+1) $|q_1 q_2|$ in $C^{2}$ (use scientific notation like \\$216e-12\`)
 2) $r^2$ in $m^{2}$
 3) Force magnitude in N (to 3 significant figures)
       `,

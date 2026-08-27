@@ -8,7 +8,7 @@ import type { LessonData } from '../registry'
  * worked applications → Exit Quiz. Concept-forward macro topic with quantitative
  * elements (multiplier, GDP gaps, equilibrium), so checks mix all three exercise types.
  * LaTeX uses DOUBLED backslashes (template-literal strings); bare dollar amounts are
- * escaped as \$ so they don't open a math span.
+ * escaped as \\$ so they don't open a math span.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

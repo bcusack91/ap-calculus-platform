@@ -104,7 +104,7 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
 |---------|--------------|
 | **Salary negotiation** | The first number mentioned becomes the anchor — whoever states a number first has an advantage |
 | **Real estate** | Listing price anchors the buyer's perception of value, even if inflated |
-| **Retail pricing** | "Was $100, now $40" — the $100 anchor makes $40 seem like a bargain |
+| **Retail pricing** | "Was \\$100, now \\$40" — the \\$100 anchor makes \\$40 seem like a bargain |
 | **Sentencing** | Prosecutors' recommended sentences anchor judges' decisions |
 
 ### Confirmation Bias
@@ -152,7 +152,7 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
       exercise: {
         dropdowns: [
           { label: 'A person estimates that more words start with "K" than have "K" as the third letter (the reverse is true)', options: ['Availability heuristic', 'Representativeness heuristic', 'Anchoring bias', 'Confirmation bias'] },
-          { label: 'A car buyer sees a $50,000 sticker price and thinks $38,000 is a great deal, even though the car is worth $30,000', options: ['Anchoring bias', 'Availability heuristic', 'Representativeness heuristic', 'Sunk cost fallacy'] },
+          { label: 'A car buyer sees a \\$50,000 sticker price and thinks \\$38,000 is a great deal, even though the car is worth \\$30,000', options: ['Anchoring bias', 'Availability heuristic', 'Representativeness heuristic', 'Sunk cost fallacy'] },
           { label: 'A person who believes vaccines are harmful only reads anti-vaccine websites and dismisses medical research', options: ['Confirmation bias', 'Availability heuristic', 'Anchoring bias', 'Representativeness heuristic'] }
         ],
         correctAnswers: ['Availability heuristic', 'Anchoring bias', 'Confirmation bias'],

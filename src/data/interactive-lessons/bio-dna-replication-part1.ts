@@ -94,7 +94,7 @@ DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
       content: `
 ### DNA Packaging in Eukaryotes
 
-Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell if stretched out).  This must be packaged into a nucleus only ~6 \\(\\mu\\)m in diameter — a compaction ratio of ~10,000:1.
+Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell if stretched out).  This must be packaged into a nucleus only ~6 $\\mu$m in diameter — a compaction ratio of ~10,000:1.
 
 **Packaging hierarchy:**
 1. **Nucleosome** — 147 bp of DNA wraps ~1.65 times around a histone octamer (2 copies each of H2A, H2B, H3, H4); the fundamental unit of chromatin (11 nm "beads on a string")

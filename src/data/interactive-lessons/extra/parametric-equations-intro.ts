@@ -29,8 +29,8 @@ export const parts: LessonData[] = [
 
 | Section |
 |---------|
-| Why \\(y = f(x)\\) Isn't Enough |
-| The Parameter \\(t\\) |
+| Why $y = f(x)$ Isn't Enough |
+| The Parameter $t$ |
 | Building a Table of Values |
 | Plotting a Parametric Curve |
 
@@ -39,7 +39,7 @@ export const parts: LessonData[] = [
       {
         id: 'param1-why',
         type: 'text' as const,
-        content: `## Why \\(y = f(x)\\) Isn't Enough
+        content: `## Why $y = f(x)$ Isn't Enough
 
 A function $y = f(x)$ assigns **exactly one** $y$ to each $x$. That rules out a lot of useful curves:
 

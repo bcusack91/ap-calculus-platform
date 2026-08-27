@@ -134,7 +134,7 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
       exercise: {
         dropdowns: [
           { label: 'A car depreciates 12% per year from $25,000', options: ['$25000(0.88)^{t}$', '25000 − 0.12t', '$25000(1.12)^{t}$', '25000/0.12t'] },
-          { label: 'A salary increases by $2,000 each year from $40,000', options: ['40000 + 2000t', '$40000(1.02)^{t}$', '$40000(2000)^{t}$', '$42000^{t}$'] },
+          { label: 'A salary increases by \\$2,000 each year from \\$40,000', options: ['40000 + 2000t', '$40000(1.02)^{t}$', '$40000(2000)^{t}$', '$42000^{t}$'] },
           { label: 'An investment grows 7% annually from $10,000', options: ['$10000(1.07)^{t}$', '10000 + 0.07t', '$10000(0.93)^{t}$', '$10700^{t}$'] },
           { label: 'A sample halves every 4 years from 600g', options: ['$600(0.5)^{t/4}$', '600 − 150t', '$600(0.5)^{4t}$', '600/2t'] }
         ],

@@ -159,7 +159,7 @@ A **heating curve** plots **temperature vs. heat added** as a substance is heate
           },
           {
             id: 'sm4-dd2',
-            label: 'The _______ is longer because $\\Delta H_{\\text{vap}} > \\Delta',
+            label: 'The _______ is longer because $\\Delta H_{\\text{vap}} > \\Delta H_{\\text{fus}}$',
             options: ['melting plateau', 'boiling plateau', 'solid heating region'],
             correctIndex: 1,
             explanation: 'The boiling plateau is longer because $\\Delta H_{\\text{vap}} > \\Delta H_{\\text{fus}}$. More energy is required to completely separate particles (vaporization) than to merely disrupt the solid lattice (melting).'

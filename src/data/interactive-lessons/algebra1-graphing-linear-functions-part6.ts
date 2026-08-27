@@ -26,11 +26,11 @@ Now we combine all graphing skills:
       content: `
 ## Worked Examples
 
-**Example 1:** A cell phone plan charges \$0.10 per text after a \$30 base fee. Write the cost equation.
+**Example 1:** A cell phone plan charges \\$0.10 per text after a \\$30 base fee. Write the cost equation.
 
 $$C = 0.10t + 30$$
 
-Slope = \$0.10/text, intercept = \$30.
+Slope = \\$0.10/text, intercept = \\$30.
 
 **Example 2:** Two points on a supply line: $(10, 50)$ and $(20, 75)$. Find the equation.
 
@@ -118,7 +118,7 @@ $$y - 50 = 2.5(x - 10) \\implies y = 2.5x + 25$$
 
 | # | Problem | Answer |
 |---|---------|--------|
-| 1 | Gym: \$50 + \$25/month | $C = 25m + 50$ |
+| 1 | Gym: \\$50 + \\$25/month | $C = 25m + 50$ |
 | 2 | Through $(2,3)$ and $(8,15)$ | $y = 2x - 1$ |
 | 3 | Parallel to $y = -x + 7$ through origin | $y = -x$ |
       `

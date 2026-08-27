@@ -202,7 +202,7 @@ These test deeper understanding — not just mechanics.
             explanation: 'LCD = 9. Multiply all terms by 9: $3(x-1) = x + 5$. Distribute: $3x - 3 = x + 5$. Subtract $x$: $2x - 3 = 5$. Add 3: $2x = 8$. $x = 4$. Check: $\\frac{3}{3} = 1$ and $\\frac{9}{9} = 1$ ✓'
           },
           {
-            question: 'A plumber charges a $50 service fee plus $35 per hour. If the total bill was $225, which equation finds the number of hours $h$?',
+            question: 'A plumber charges a \\$50 service fee plus \\$35 per hour. If the total bill was \\$225, which equation finds the number of hours $h$?',
             options: [
               '$50h + 35 = 225$',
               '$35h + 50 = 225$',
@@ -210,7 +210,7 @@ These test deeper understanding — not just mechanics.
               '$85h = 225$'
             ],
             correctAnswer: 1,
-            explanation: 'The $50 fee is fixed (added once), and the $35 rate multiplies the hours: $35h + 50 = 225$. Solving: $35h = 175$, $h = 5$ hours.'
+            explanation: 'The \\$50 fee is fixed (added once), and the \\$35 rate multiplies the hours: \\$35h + 50 = 225$. Solving: \\$35h = 175$, $h = 5$ hours.'
           }
         ]
       }

@@ -39,11 +39,11 @@ To sell one more unit, the monopolist must lower the price on **all** units:
 
 | Q | Price | TR | MR |
 |---|-------|-----|-----|
-| 1 | $10 | $10 | $10 |
-| 2 | $9 | $18 | $8 |
-| 3 | $8 | $24 | $6 |
-| 4 | $7 | $28 | $4 |
-| 5 | $6 | $30 | $2 |
+| 1 | \\$10 | \\$10 | \\$10 |
+| 2 | \\$9 | \\$18 | \\$8 |
+| 3 | \\$8 | \\$24 | \\$6 |
+| 4 | \\$7 | \\$28 | \\$4 |
+| 5 | \\$6 | \\$30 | \\$2 |
 
 MR falls **twice as fast** as the demand curve (for a linear demand).
       `
@@ -65,7 +65,7 @@ MR falls **twice as fast** as the demand curve (for a linear demand).
               'Demand is perfectly elastic for monopolies'
             ],
             correctAnswer: 1,
-            explanation: 'To sell the 3rd unit at $8, the monopolist also drops from $9 to $8 on the first two units — losing $2 on inframarginal units. MR = $6 < P = $8.'
+            explanation: 'To sell the 3rd unit at \\$8, the monopolist also drops from \\$9 to \\$8 on the first two units — losing \\$2 on inframarginal units. MR = \\$6 < P = \\$8.'
           },
           {
             question: 'A monopoly can earn positive economic profit in the long run because:',
@@ -199,7 +199,7 @@ Most regulated monopolies use **fair-return pricing** (P = ATC) as a compromise.
             explanation: 'A natural monopoly has declining ATC. At P = MC, price is below ATC (since MC is below ATC when ATC is declining), so the firm incurs a loss and needs a subsidy to stay in business.'
           },
           {
-            question: 'A profit-maximizing monopolist produces where MR = MC and finds that P = $15, ATC = $12, and Q = 100. The monopolist\'s economic profit is:',
+            question: 'A profit-maximizing monopolist produces where MR = MC and finds that P = \\$15, ATC = \\$12, and Q = 100. The monopolist\'s economic profit is:',
             options: [
               '$300',
               '$1,500',
@@ -207,7 +207,7 @@ Most regulated monopolies use **fair-return pricing** (P = ATC) as a compromise.
               '$12'
             ],
             correctAnswer: 0,
-            explanation: 'Profit = (P − ATC) × Q = ($15 − $12) × 100 = $300.'
+            explanation: 'Profit = (P − ATC) × Q = (\\$15 − \\$12) × 100 = \\$300.'
           }
         ]
       }

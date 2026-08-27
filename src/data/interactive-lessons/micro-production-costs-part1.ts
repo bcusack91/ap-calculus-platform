@@ -188,7 +188,7 @@ In the long run, the **LRATC** (Long-Run Average Total Cost) curve shows:
       exercise: {
         questions: [
           {
-            question: 'If a firm\'s MC is $6 and ATC is $8, we know that ATC is:',
+            question: 'If a firm\'s MC is \\$6 and ATC is \\$8, we know that ATC is:',
             options: [
               'Rising',
               'Falling',
@@ -196,7 +196,7 @@ In the long run, the **LRATC** (Long-Run Average Total Cost) curve shows:
               'Equal to AVC'
             ],
             correctAnswer: 1,
-            explanation: 'When MC ($6) < ATC ($8), each additional unit costs less than the current average, pulling the average DOWN. ATC is falling.'
+            explanation: 'When MC (\\$6) < ATC (\\$8), each additional unit costs less than the current average, pulling the average DOWN. ATC is falling.'
           },
           {
             question: 'A firm doubles all inputs and output more than doubles. This firm is experiencing:',

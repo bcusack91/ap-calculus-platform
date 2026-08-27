@@ -62,13 +62,13 @@ export const FRQS: SAQItem[] = [
           'On your graph from part (A), shade the deadweight loss (DWL) created by the monopoly (compared to the perfectly competitive outcome). Calculate the dollar value of the DWL. Show your work.',
         rubric: [
           { id: 'e1', label: '1 pt — DWL triangle correctly shaded between Q_M and Q_C, bounded above by the demand curve and below by MC', description: 'Triangle bounded by D above, MC below, between Q_M = 300 and Q_C = 600.' },
-          { id: 'e2', label: '1 pt — DWL = $450', description: 'Competitive Q_C where P = MC: 8 − 0.01Q = 2 → Q_C = 600. DWL = ½ × base × height = ½ × (600 − 300) × ($5 − $2) = ½ × 300 × 3 = $450.' },
+          { id: 'e2', label: '1 pt — DWL = $450', description: 'Competitive Q_C where P = MC: 8 − 0.01Q = 2 → Q_C = 600. DWL = ½ × base × height = ½ × (600 − 300) × (\\$5 − \\$2) = ½ × 300 × 3 = \\$450.' },
         ],
       },
       {
         letter: 'F',
         question:
-          'Suppose the government considers two regulatory options: (i) a price ceiling set at MC = $2 per bottle, OR (ii) a price ceiling set at average total cost = $2 per bottle (which here is the same as MC since there are no fixed costs). Identify which regulation produces the socially efficient (allocatively efficient) quantity and explain why.',
+          'Suppose the government considers two regulatory options: (i) a price ceiling set at MC = \\$2 per bottle, OR (ii) a price ceiling set at average total cost = \\$2 per bottle (which here is the same as MC since there are no fixed costs). Identify which regulation produces the socially efficient (allocatively efficient) quantity and explain why.',
         rubric: [
           { id: 'f1', label: '1 pt — A price ceiling at MC = $2 produces the allocatively efficient quantity', description: 'Allocative efficiency requires P = MC, which equals the competitive Q_C = 600 in this case. The ceiling at MC eliminates DWL.' },
         ],

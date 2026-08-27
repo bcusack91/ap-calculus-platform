@@ -18,17 +18,17 @@ This workshop applies photosynthesis concepts to experimental scenarios and data
       content: `
 ### Scenario 1: Hill Reaction Experiment
 
-In 1937, Robert Hill demonstrated that isolated chloroplasts could produce O\\(_2\\) in the presence of an artificial electron acceptor (like DCPIP, a dye that changes from blue to colorless when reduced), even without CO\\(_2\\).
+In 1937, Robert Hill demonstrated that isolated chloroplasts could produce O$_2$ in the presence of an artificial electron acceptor (like DCPIP, a dye that changes from blue to colorless when reduced), even without CO$_2$.
 
 **Experimental setup:**
-- Tube A: Chloroplasts + DCPIP + light → DCPIP decolorizes; O\\(_2\\) produced
-- Tube B: Chloroplasts + DCPIP + dark → No color change; no O\\(_2\\)
-- Tube C: Boiled chloroplasts + DCPIP + light → No color change; no O\\(_2\\)
-- Tube D: Chloroplasts + no DCPIP + light → Minimal O\\(_2\\) (DCPIP is needed as electron acceptor)
+- Tube A: Chloroplasts + DCPIP + light → DCPIP decolorizes; O$_2$ produced
+- Tube B: Chloroplasts + DCPIP + dark → No color change; no O$_2$
+- Tube C: Boiled chloroplasts + DCPIP + light → No color change; no O$_2$
+- Tube D: Chloroplasts + no DCPIP + light → Minimal O$_2$ (DCPIP is needed as electron acceptor)
 
 This experiment demonstrated that:
 1. The light reactions can occur independently of the Calvin cycle
-2. O\\(_2\\) comes from water splitting, not from CO\\(_2\\)
+2. O$_2$ comes from water splitting, not from CO$_2$
 3. Light and functional proteins are both required
       `
     },
@@ -71,17 +71,17 @@ This experiment demonstrated that:
       content: `
 ### Scenario 2: The Lollipop Experiment (Calvin and Benson)
 
-Melvin Calvin and Andrew Benson used the "lollipop" apparatus and \\(^{14}\\text{C}\\)-labeled CO\\(_2\\) to trace the path of carbon through photosynthesis:
+Melvin Calvin and Andrew Benson used the "lollipop" apparatus and $^{14}\\text{C}$-labeled CO$_2$ to trace the path of carbon through photosynthesis:
 
 1. Algae (*Chlorella*) were grown in a thin, flat flask illuminated continuously
-2. \\(^{14}\\text{CO}_2\\) was injected into the culture
+2. $^{14}\\text{CO}_2$ was injected into the culture
 3. At various time intervals (5 seconds, 30 seconds, 5 minutes), samples were killed in hot methanol
 4. Radioactive compounds were separated by **two-dimensional paper chromatography** and identified by autoradiography
 
 **Results:**
-- After **5 seconds:** Nearly all \\(^{14}\\text{C}\\) was in **3-PGA** (confirming it as the first stable product)
-- After **30 seconds:** \\(^{14}\\text{C}\\) appeared in G3P, RuBP, and several sugar phosphates
-- After **5 minutes:** \\(^{14}\\text{C}\\) was found in glucose, amino acids, and lipids
+- After **5 seconds:** Nearly all $^{14}\\text{C}$ was in **3-PGA** (confirming it as the first stable product)
+- After **30 seconds:** $^{14}\\text{C}$ appeared in G3P, RuBP, and several sugar phosphates
+- After **5 minutes:** $^{14}\\text{C}$ was found in glucose, amino acids, and lipids
 
 This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 Nobel Prize.
       `
@@ -127,7 +127,7 @@ This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 
 
 Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under varying temperatures:
 
-| Temperature (°C) | C3 Net Photosynthesis (\\(\\mu\\)mol CO\\(_2\\)/m\\(^2\\)/s) | C4 Net Photosynthesis (\\(\\mu\\)mol CO\\(_2\\)/m\\(^2\\)/s) |
+| Temperature (°C) | C3 Net Photosynthesis ($\\mu$mol CO$_2$/m$^2$/s) | C4 Net Photosynthesis ($\\mu$mol CO$_2$/m$^2$/s) |
 |------|------|------|
 | 10 | 12 | 5 |
 | 20 | 22 | 18 |

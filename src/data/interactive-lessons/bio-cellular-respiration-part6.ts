@@ -18,9 +18,9 @@ This workshop applies concepts from Parts 1-5 to experimental scenarios and data
       content: `
 ### Scenario 1: Respirometer Experiment
 
-A student uses a **respirometer** to measure the rate of cellular respiration in germinating vs. non-germinating pea seeds at two temperatures (10 °C and 25 °C).  The respirometer measures **O\\(_2\\) consumption** by tracking the movement of a fluid indicator in a sealed system.  KOH is included to absorb any CO\\(_2\\) produced, so the only gas change measured is O\\(_2\\) uptake.
+A student uses a **respirometer** to measure the rate of cellular respiration in germinating vs. non-germinating pea seeds at two temperatures (10 °C and 25 °C).  The respirometer measures **O$_2$ consumption** by tracking the movement of a fluid indicator in a sealed system.  KOH is included to absorb any CO$_2$ produced, so the only gas change measured is O$_2$ uptake.
 
-| Condition | O\\(_2\\) consumed (mL/min) |
+| Condition | O$_2$ consumed (mL/min) |
 |-----------|--------------------------|
 | Germinating seeds, 25 °C | 0.21 |
 | Germinating seeds, 10 °C | 0.10 |
@@ -28,8 +28,8 @@ A student uses a **respirometer** to measure the rate of cellular respiration in
 | Non-germinating seeds, 10 °C | 0.01 |
 
 **Key observations:**
-- Germinating seeds consume far more O\\(_2\\) than non-germinating seeds
-- Higher temperature increases O\\(_2\\) consumption for both conditions
+- Germinating seeds consume far more O$_2$ than non-germinating seeds
+- Higher temperature increases O$_2$ consumption for both conditions
       `
     },
     {
@@ -133,14 +133,14 @@ A researcher treats four groups of cells with different metabolic poisons and me
 
 Complete the ATP accounting table for the aerobic oxidation of one glucose molecule:
 
-| Stage | ATP by SLP | NADH | FADH\\(_2\\) | ATP from e\\(^-\\) carriers* |
+| Stage | ATP by SLP | NADH | FADH$_2$ | ATP from e$^-$ carriers* |
 |-------|-----------|------|------------|---------------------------|
 | Glycolysis | 2 | 2 | 0 | 2 × 2.5 = 5** |
 | Pyruvate oxidation | 0 | 2 | 0 | 2 × 2.5 = 5 |
 | Citric acid cycle | 2 | 6 | 2 | (6 × 2.5) + (2 × 1.5) = 18 |
 | **Total** | **4** | **10** | **2** | **28** |
 
-*Using 2.5 ATP per NADH and 1.5 ATP per FADH\\(_2\\)
+*Using 2.5 ATP per NADH and 1.5 ATP per FADH$_2$
 
 **The cytoplasmic NADH from glycolysis may yield only 1.5 ATP each if transported via the glycerol-3-phosphate shuttle (instead of 2.5 via the malate-aspartate shuttle), reducing the total to 30 ATP.
 

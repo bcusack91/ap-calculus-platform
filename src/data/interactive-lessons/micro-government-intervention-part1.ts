@@ -76,12 +76,12 @@ A **price floor** is a legally imposed **minimum price** — buyers cannot pay b
             explanation: 'Below equilibrium, Qd > Qs at the ceiling price, creating a shortage. The quantity actually traded equals Qs (the short side of the market).'
           },
           {
-            question: 'The government sets a minimum wage of $12/hour in a market where the equilibrium wage is $10/hour. This will likely cause:',
+            question: 'The government sets a minimum wage of \\$12/hour in a market where the equilibrium wage is \\$10/hour. This will likely cause:',
             options: [
               'A shortage of workers at $12/hour',
               'An increase in the quantity of labor demanded',
               'Unemployment among low-skill workers',
-              'No effect because $12 > $10'
+              'No effect because \\$12 > \\$10'
             ],
             correctAnswer: 2,
             explanation: 'A minimum wage above equilibrium is a binding price floor. At $12, Qs of labor > Qd of labor, creating a surplus of workers — unemployment.'

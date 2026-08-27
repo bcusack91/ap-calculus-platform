@@ -40,7 +40,7 @@ $t = 60$ texts ✅
       exercise: {
         questions: [
           {
-                    "question": "\"I have $x$ dollars and earn $12 more, now I have $30.\" Equation?",
+                    "question": "\"I have $x$ dollars and earn \\$12 more, now I have \\$30.\" Equation?",
                     "options": [
                               "$x + 12 = 30$",
                               "$x - 12 = 30$",
@@ -86,7 +86,7 @@ $t = 60$ texts ✅
         correctAnswers: ["Define the variable","$5"],
         hint1: "What are you solving for?",
         hint2: "20 ÷ 4 = ?",
-        explanation: "Define variable first. $20 ÷ 4 = $5."
+        explanation: "Define variable first. \\$20 ÷ 4 = \\$5."
       }
     },
     {

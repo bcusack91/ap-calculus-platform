@@ -60,7 +60,7 @@ $-4.5 + 3.2 - 1.8 = -1.3 - 1.8 = -3.1$° ✅
 
 2) Temp: −8°F, rises 12°. New temp?
 
-3) Owe \$50, pay \$32. Balance? (negative = debt)
+3) Owe \\$50, pay \\$32. Balance? (negative = debt)
     
     `,
       exercise: {
@@ -109,7 +109,7 @@ $-4.5 + 3.2 - 1.8 = -1.3 - 1.8 = -3.1$° ✅
       exercise: {
         questions: [
           {
-                    "question": "Owe $50, pay $32. Remaining debt?",
+                    "question": "Owe \\$50, pay \\$32. Remaining debt?",
                     "options": [
                               "$18",
                               "$82",
@@ -117,7 +117,7 @@ $-4.5 + 3.2 - 1.8 = -1.3 - 1.8 = -3.1$° ✅
                               "$32"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$50 − $32 = $18 remaining."
+                    "explanation": "\\$50 − \\$32 = \\$18 remaining."
           }
 ]
       }

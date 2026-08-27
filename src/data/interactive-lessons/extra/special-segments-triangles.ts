@@ -455,7 +455,7 @@ $$\\overline{DE} \\parallel \\overline{BC} \\qquad \\text{and} \\qquad DE = \\tf
 | Known | Find | How |
 |-------|------|-----|
 | Third side $= 14$ | midsegment | $\\frac{1}{2}(14) = 7$ |
-| Midsegment $= 9$ | third side | $2(9) = 18$ |
+| Midsegment $= 9$ | third side | \\$2(9) = 18$ |
 
 > ⚠️ **Direction matters.** Going *third side → midsegment* you **halve**; going *midsegment → third side* you **double**. Mixing these up is the classic midsegment error.`,
       },

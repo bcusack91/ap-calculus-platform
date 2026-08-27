@@ -28,7 +28,7 @@ A student observes 200 onion root tip cells under a microscope and counts the nu
 | Anaphase | 4 |
 | Telophase | 6 |
 
-**Mitotic Index** = (cells in mitosis / total cells) \\(\\times\\) 100
+**Mitotic Index** = (cells in mitosis / total cells) $\\times$ 100
 
 $$\\text{Mitotic Index} = \\frac{14 + 6 + 4 + 6}{200} \\times 100 = \\frac{30}{200} \\times 100 = 15\\%$$
 
@@ -36,8 +36,8 @@ The mitotic index tells us the proportion of cells actively dividing.  A higher 
 
 **The relative time in each phase** is proportional to the number of cells observed:
 - If the total cell cycle is 24 hours, and 15% of cells are in mitosis, then mitosis takes ~3.6 hours
-- Prophase (14/200 = 7%) \\(\\approx\\) 1.68 hours
-- Anaphase (4/200 = 2%) \\(\\approx\\) 0.48 hours (shortest phase — confirmed by observation)
+- Prophase (14/200 = 7%) $\\approx$ 1.68 hours
+- Anaphase (4/200 = 2%) $\\approx$ 0.48 hours (shortest phase — confirmed by observation)
       `
     },
     {
@@ -81,12 +81,12 @@ The mitotic index tells us the proportion of cells actively dividing.  A higher 
 
 Researchers fuse cells in different phases and observe the results:
 
-**Experiment A:** S-phase cell fused with G\\(_1\\)-phase cell
-- Result: The G\\(_1\\) nucleus immediately enters S phase (begins DNA replication)
-- Interpretation: S-phase cells contain factors (Cyclin E/A-Cdk2) that can drive a G\\(_1\\) nucleus into S phase
+**Experiment A:** S-phase cell fused with G$_1$-phase cell
+- Result: The G$_1$ nucleus immediately enters S phase (begins DNA replication)
+- Interpretation: S-phase cells contain factors (Cyclin E/A-Cdk2) that can drive a G$_1$ nucleus into S phase
 
-**Experiment B:** M-phase cell fused with G\\(_1\\)-phase cell
-- Result: The G\\(_1\\) nucleus undergoes premature chromosome condensation (PCC) — but the chromosomes are single-chromatid (unreplicated), leading to chromosome damage
+**Experiment B:** M-phase cell fused with G$_1$-phase cell
+- Result: The G$_1$ nucleus undergoes premature chromosome condensation (PCC) — but the chromosomes are single-chromatid (unreplicated), leading to chromosome damage
 - Interpretation: M-phase cells contain MPF (Cyclin B-Cdk1) that forces any nucleus to enter M phase regardless of DNA replication status
 
 **Experiment C:** M-phase cell fused with S-phase cell

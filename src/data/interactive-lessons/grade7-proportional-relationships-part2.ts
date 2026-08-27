@@ -23,7 +23,7 @@ Example: If $k = 3$, then $y = 3x$.
       content: `
 ## Worked Example
 
-**Bananas cost \$0.50 each. Write the equation.**
+**Bananas cost \\$0.50 each. Write the equation.**
 
 $\\text{Cost} = 0.50 \\times n$ → $C = 0.50n$, so $k = 0.50$ ✅
     
@@ -57,11 +57,11 @@ $\\text{Cost} = 0.50 \\times n$ → $C = 0.50n$, so $k = 0.50$ ✅
       content: `
 **Find k** 🧮
 
-1) \$3 per pound. k = ?
+1) \\$3 per pound. k = ?
 
 2) 60 miles per hour. k = ?
 
-3) Cost = \$0.50 per banana. k = ?
+3) Cost = \\$0.50 per banana. k = ?
     
     `,
       exercise: {
@@ -95,7 +95,7 @@ $\\text{Cost} = 0.50 \\times n$ → $C = 0.50n$, so $k = 0.50$ ✅
 
 | # | Scenario | k |
 |---|---------|---|
-| 1 | \$3 per lb | 3 |
+| 1 | \\$3 per lb | 3 |
 | 2 | 60 mph | 60 |
 | 3 | 5 pages/min | 5 |
     

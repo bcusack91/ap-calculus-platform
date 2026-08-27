@@ -277,7 +277,7 @@ Maria is 5 years older than twice her brother's age. If Maria is 31, how old is 
             explanation: 'Let $w$ = width. Length $= 2w + 3$. Perimeter $= 2(w) + 2(2w + 3) = 48$. So $2w + 4w + 6 = 48$, $6w = 42$, $w = 7$ cm. Length $= 2(7) + 3 = 17$ cm. Check: $2(7) + 2(17) = 14 + 34 = 48$ ✓'
           },
           {
-            question: 'Two friends have $95 combined. Friend A has $15 more than Friend B. How much does Friend B have?',
+            question: 'Two friends have \\$95 combined. Friend A has \\$15 more than Friend B. How much does Friend B have?',
             options: [
               '$40',
               '$45$',
@@ -285,10 +285,10 @@ Maria is 5 years older than twice her brother's age. If Maria is 31, how old is 
               '$55$'
             ],
             correctAnswer: 0,
-            explanation: 'Let $b$ = Friend B\'s money. Friend A $= b + 15$. Sum: $b + (b + 15) = 95$. $2b + 15 = 95$. $2b = 80$. $b = 40$. Check: B has $40, A has $55, sum = $95 ✓'
+            explanation: 'Let $b$ = Friend B\'s money. Friend A $= b + 15$. Sum: $b + (b + 15) = 95$. \\$2b + 15 = 95$. \\$2b = 80$. $b = 40$. Check: B has \\$40, A has \\$55, sum = \\$95 ✓'
           },
           {
-            question: 'A phone plan costs $30/month plus $0.10 per text. If your bill was $52, how many texts did you send?',
+            question: 'A phone plan costs \\$30/month plus \\$0.10 per text. If your bill was \\$52, how many texts did you send?',
             options: [
               '22 texts',
               '52 texts',

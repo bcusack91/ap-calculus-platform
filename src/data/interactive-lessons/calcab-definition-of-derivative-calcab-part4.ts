@@ -141,7 +141,7 @@ $$\\boxed{\\text{Units of } \\frac{dy}{dx} = \\frac{\\text{units of } y}{\\text{
               'Profit is $12 at 100 widgets'
             ],
             correctAnswer: 1,
-            explanation: '$C\'(100) = 12$ means the marginal cost at $x=100$ is $12/widget. The next widget (101st) costs approximately $12.'
+            explanation: '$C\'(100) = 12$ means the marginal cost at $x=100$ is \\$12/widget. The next widget (101st) costs approximately \\$12.'
           }
         ]
       }

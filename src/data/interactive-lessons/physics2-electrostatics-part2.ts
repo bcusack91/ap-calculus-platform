@@ -117,7 +117,7 @@ Enter the **multiplier** for force in each case:
 
 3) One charge is doubled AND distance is doubled
 
-Use fractions like \$21/4\` or whole numbers like \$24\`.
+Use fractions like \`1/4\` or whole numbers like \`4\`.
       `,
       exercise: {
         boxes: 3,

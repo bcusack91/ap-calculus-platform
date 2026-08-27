@@ -16,9 +16,9 @@ Interphase is often called the "resting phase," but this is a misnomer — the c
       id: 'cc2-g1',
       type: 'text' as const,
       content: `
-### G\\(_1\\) Phase — Growth and Preparation
+### G$_1$ Phase — Growth and Preparation
 
-G\\(_1\\) is typically the longest and most variable phase of interphase:
+G$_1$ is typically the longest and most variable phase of interphase:
 
 **Key events:**
 - Cell growth — increase in cell size and mass
@@ -27,14 +27,14 @@ G\\(_1\\) is typically the longest and most variable phase of interphase:
 - Centriole duplication begins (in animal cells)
 - Gene expression patterns establish the functional identity of the cell
 
-**G\\(_1\\)/S Checkpoint (Restriction Point):**
+**G$_1$/S Checkpoint (Restriction Point):**
 - The most important checkpoint in the cell cycle
 - The cell "decides" whether to commit to division
 - Checks: adequate cell size, sufficient nutrients, growth factor signals, and intact DNA
 - If the cell passes this checkpoint, it is committed to S phase and division
-- If conditions are unfavorable, the cell enters **G\\(_0\\)**
+- If conditions are unfavorable, the cell enters **G$_0$**
 
-> **Growth Factors:** External signals (like PDGF, EGF, and insulin-like growth factor) bind to receptors and activate signaling cascades that promote passage through the G\\(_1\\)/S checkpoint.  Cancer cells often have mutations that make them independent of growth factor signaling.
+> **Growth Factors:** External signals (like PDGF, EGF, and insulin-like growth factor) bind to receptors and activate signaling cascades that promote passage through the G$_1$/S checkpoint.  Cancer cells often have mutations that make them independent of growth factor signaling.
       `
     },
     {
@@ -58,22 +58,22 @@ During S phase, the entire genome is copied:
 - Heterochromatin (condensed, inactive regions) replicates late in S phase
 - Each origin of replication fires only ONCE per S phase (licensing system prevents re-replication)
 
-> **DNA Content Notation:** A cell in G\\(_1\\) has **2n** chromosomes and **2C** DNA content.  After S phase (in G\\(_2\\)), it has **2n** chromosomes but **4C** DNA content (each chromosome has doubled its DNA).
+> **DNA Content Notation:** A cell in G$_1$ has **2n** chromosomes and **2C** DNA content.  After S phase (in G$_2$), it has **2n** chromosomes but **4C** DNA content (each chromosome has doubled its DNA).
       `
     },
     {
       id: 'cc2-g2',
       type: 'text' as const,
       content: `
-### G\\(_2\\) Phase — Final Preparation
+### G$_2$ Phase — Final Preparation
 
-G\\(_2\\) is the final preparation period before mitosis:
+G$_2$ is the final preparation period before mitosis:
 
 **Key events:**
 - Continued cell growth and protein synthesis
 - Synthesis of proteins needed for mitosis (e.g., tubulin for the mitotic spindle)
 - Final duplication of centrosomes completed
-- **G\\(_2\\)/M Checkpoint** — the cell verifies:
+- **G$_2$/M Checkpoint** — the cell verifies:
   - All DNA has been completely and accurately replicated
   - DNA damage has been repaired
   - The cell is large enough to divide

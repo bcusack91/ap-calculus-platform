@@ -886,7 +886,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-7-industrial-economic',
     question:
-      'Microcredit lending — small loans (often $50–$500) provided to low-income borrowers (often women) without traditional collateral — is most directly associated with:',
+      'Microcredit lending — small loans (often \\$50–\\$500) provided to low-income borrowers (often women) without traditional collateral — is most directly associated with:',
     options: [
       'Bottom-up development efforts to expand small-scale entrepreneurship in low-income regions.',
       'Top-down structural-adjustment programs imposed by the IMF and the World Bank in the 1980s.',

@@ -93,12 +93,12 @@ An oligopoly has **few dominant firms** with **high barriers to entry**. The dis
 
 | | Firm B: Low Price | Firm B: High Price |
 |---|---|---|
-| **Firm A: Low Price** | A: $5M, B: $5M | A: $12M, B: $2M |
-| **Firm A: High Price** | A: $2M, B: $12M | A: $8M, B: $8M |
+| **Firm A: Low Price** | A: \\$5M, B: \\$5M | A: \\$12M, B: \\$2M |
+| **Firm A: High Price** | A: \\$2M, B: \\$12M | A: \\$8M, B: \\$8M |
 
 - **Dominant strategy**: Both firms choose LOW price (it's best regardless of rival's choice)
-- **Nash equilibrium**: (Low, Low) → $5M each
-- **Cooperative outcome**: (High, High) → $8M each — but it's unstable because each firm has incentive to cheat
+- **Nash equilibrium**: (Low, Low) → \\$5M each
+- **Cooperative outcome**: (High, High) → \\$8M each — but it's unstable because each firm has incentive to cheat
 
 > 🔑 **AP Connection:** The prisoner's dilemma explains why cartels (collusion agreements) are **inherently unstable** — each member benefits from cheating on the agreement.
 

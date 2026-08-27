@@ -21,7 +21,7 @@ $$\\frac{3}{5} = \\frac{x}{20} \implies 3 \\times 20 = 5x \implies x = 12$$
 ### Unit Rates
 A unit rate has a denominator of 1:
 - 240 miles in 4 hours → **60 mph**
-- \$45 for 3 shirts → **\$15 per shirt**
+- \\$45 for 3 shirts → **\\$15 per shirt**
 
 ### SAT Trap: Mixing Up Parts and Wholes
 If the ratio of boys to girls is 3:5, there are **8 total parts** (not 5).
@@ -136,7 +136,7 @@ $$45 \\frac{\\text{mi}}{\\text{hr}} \\times \\frac{5280 \\text{ ft}}{1 \\text{ m
         hint1: 'Total parts = 4 + 7 = 11. Each part = 55/11 = 5.',
         hint2: 'Speed = distance ÷ time = 90 ÷ 1.5.',
         hint3: 'Boys are 3 parts out of 3 + 5 = 8 total parts.',
-        explanation: 'A = (4/11) × 55 = 20. Speed = 90/1.5 = 60 mph. Boys = 3/(3+5) = 3/8. Unit price = $2.50/lb, so 8 lb = $20.'
+        explanation: 'A = (4/11) × 55 = 20. Speed = 90/1.5 = 60 mph. Boys = 3/(3+5) = 3/8. Unit price = \\$2.50/lb, so 8 lb = \\$20.'
       }
     },
     {

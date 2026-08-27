@@ -84,7 +84,7 @@ NGS technologies sequence **millions of fragments simultaneously** (massively pa
 |---------|--------|-----|
 | Throughput | One fragment at a time | Millions in parallel |
 | Read length | ~700–1,000 bp | 75–300 bp (short-read); 10–100 kb (long-read) |
-| Cost per genome | ~$1,000,000 (HGP era) | ~$200–1,000 today |
+| Cost per genome | ~\\$1,000,000 (HGP era) | ~\\$200–1,000 today |
 | Speed | Weeks to months | Hours to days |
 
 #### Common NGS Platforms

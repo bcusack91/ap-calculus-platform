@@ -25,17 +25,17 @@ Despite its name, PSII acts **first** in linear electron flow (it was named "II"
 **Structure:**
 - **Antenna complex (LHC II):** ~250 chlorophyll and carotenoid molecules that absorb photons and funnel energy to the reaction center
 - **P680 reaction center:** A pair of chlorophyll a molecules with peak absorption at 680 nm
-- **Oxygen-evolving complex (OEC):** A manganese-containing cluster (Mn\\(_4\\)CaO\\(_5\\)) that catalyzes water splitting
+- **Oxygen-evolving complex (OEC):** A manganese-containing cluster (Mn$_4$CaO$_5$) that catalyzes water splitting
 - **Primary electron acceptor (pheophytin):** Accepts the excited electron from P680
 
 **Function:**
 1. A photon is absorbed by the antenna complex and energy is funneled to P680
-2. An electron in P680 is excited and transferred to pheophytin (the reaction center is now oxidized: P680\\(^+\\))
-3. P680\\(^+\\) is the strongest biological oxidizing agent — it pulls electrons from water via the OEC
-4. Water splitting: \\(2\\text{H}_2\\text{O} \\rightarrow 4\\text{H}^+ + 4e^- + \\text{O}_2\\) (occurs in the lumen)
+2. An electron in P680 is excited and transferred to pheophytin (the reaction center is now oxidized: P680$^+$)
+3. P680$^+$ is the strongest biological oxidizing agent — it pulls electrons from water via the OEC
+4. Water splitting: $2\\text{H}_2\\text{O} \\rightarrow 4\\text{H}^+ + 4e^- + \\text{O}_2$ (occurs in the lumen)
 5. The excited electron passes to plastoquinone (PQ) and onward through the ETC
 
-> **Key Fact:** The O\\(_2\\) we breathe is a byproduct of PSII splitting water.  Every O\\(_2\\) molecule requires two water molecules and four photons of light.
+> **Key Fact:** The O$_2$ we breathe is a byproduct of PSII splitting water.  Every O$_2$ molecule requires two water molecules and four photons of light.
       `
     },
     {
@@ -51,9 +51,9 @@ Despite its name, PSII acts **first** in linear electron flow (it was named "II"
 
 **Function:**
 1. A photon energizes P700, and an electron is transferred to the primary acceptor
-2. The "hole" in P700\\(^+\\) is filled by an electron arriving from PSII via plastocyanin (PC)
+2. The "hole" in P700$^+$ is filled by an electron arriving from PSII via plastocyanin (PC)
 3. The excited electron passes through a series of iron-sulfur (Fe-S) proteins to **ferredoxin** (Fd)
-4. **Ferredoxin-NADP\\(^+\\) reductase (FNR)** transfers electrons from ferredoxin to NADP\\(^+\\):
+4. **Ferredoxin-NADP$^+$ reductase (FNR)** transfers electrons from ferredoxin to NADP$^+$:
 
 $$\\text{NADP}^+ + 2e^- + \\text{H}^+ \\longrightarrow \\text{NADPH}$$
 
@@ -116,14 +116,14 @@ $$\\text{PSI} \\rightarrow \\text{Fd} \\rightarrow \\text{Cyt b6f} \\rightarrow 
 
 In cyclic flow:
 - Electrons from PSI are passed to ferredoxin
-- Instead of going to NADP\\(^+\\), ferredoxin passes them back to the **cytochrome b6f complex**
-- Cytochrome b6f pumps H\\(^+\\) into the thylakoid lumen (contributing to the proton gradient)
+- Instead of going to NADP$^+$, ferredoxin passes them back to the **cytochrome b6f complex**
+- Cytochrome b6f pumps H$^+$ into the thylakoid lumen (contributing to the proton gradient)
 - Electrons return to PSI via plastocyanin
 
 **Products of cyclic electron flow:**
-- **ATP** (via chemiosmosis) \\(\\checkmark\\)
-- **NADPH** ✗ (electrons return to PSI, not to NADP\\(^+\\))
-- **O\\(_2\\)** ✗ (no water splitting — PSII is not involved)
+- **ATP** (via chemiosmosis) $\\checkmark$
+- **NADPH** ✗ (electrons return to PSI, not to NADP$^+$)
+- **O$_2$** ✗ (no water splitting — PSII is not involved)
 
 **Why is cyclic electron flow important?**
 

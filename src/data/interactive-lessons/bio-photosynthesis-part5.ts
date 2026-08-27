@@ -13,7 +13,7 @@ The rate of photosynthesis is influenced by several environmental variables.  Un
 
 The three main **limiting factors** are:
 1. **Light intensity**
-2. **CO\\(_2\\) concentration**
+2. **CO$_2$ concentration**
 3. **Temperature**
       `
     },
@@ -26,13 +26,13 @@ The three main **limiting factors** are:
 As light intensity increases from zero:
 - The rate of photosynthesis increases **linearly** at first (light is the limiting factor)
 - The curve gradually levels off and reaches a **plateau** (the light-saturation point)
-- Beyond the saturation point, increasing light does not increase the rate — another factor (CO\\(_2\\), temperature, or enzyme capacity) becomes limiting
+- Beyond the saturation point, increasing light does not increase the rate — another factor (CO$_2$, temperature, or enzyme capacity) becomes limiting
 
-**Compensation point:** The light intensity at which the rate of photosynthesis equals the rate of cellular respiration (net gas exchange = 0).  Below this point, the plant consumes more O\\(_2\\) than it produces.
+**Compensation point:** The light intensity at which the rate of photosynthesis equals the rate of cellular respiration (net gas exchange = 0).  Below this point, the plant consumes more O$_2$ than it produces.
 
 **Very high light intensity** can actually cause **photoinhibition** — damage to PSII reaction centers from excess absorbed energy, reducing photosynthetic efficiency.
 
-> **Experiment Tip:** The leaf disc flotation assay is a common AP lab technique that measures photosynthetic rate by counting how quickly leaf discs float to the surface (O\\(_2\\) production makes them buoyant).  Light intensity is varied by changing the distance between the light source and the beaker.
+> **Experiment Tip:** The leaf disc flotation assay is a common AP lab technique that measures photosynthetic rate by counting how quickly leaf discs float to the surface (O$_2$ production makes them buoyant).  Light intensity is varied by changing the distance between the light source and the beaker.
       `
     },
     {
@@ -41,14 +41,14 @@ As light intensity increases from zero:
       content: `
 ### CO2 Concentration
 
-CO\\(_2\\) is a substrate for RuBisCO in the Calvin cycle:
-- At low CO\\(_2\\): The rate of carbon fixation is limited because RuBisCO is not saturated
-- As CO\\(_2\\) increases: The rate increases linearly
-- At high CO\\(_2\\): The rate plateaus when RuBisCO is fully saturated or when the light reactions cannot supply enough ATP/NADPH
+CO$_2$ is a substrate for RuBisCO in the Calvin cycle:
+- At low CO$_2$: The rate of carbon fixation is limited because RuBisCO is not saturated
+- As CO$_2$ increases: The rate increases linearly
+- At high CO$_2$: The rate plateaus when RuBisCO is fully saturated or when the light reactions cannot supply enough ATP/NADPH
 
-**Current atmospheric CO\\(_2\\)** (~420 ppm) is below the saturation point for most C3 plants, meaning **CO\\(_2\\) enrichment can increase photosynthetic rates** in greenhouses.
+**Current atmospheric CO$_2$** (~420 ppm) is below the saturation point for most C3 plants, meaning **CO$_2$ enrichment can increase photosynthetic rates** in greenhouses.
 
-C4 and CAM plants are less responsive to CO\\(_2\\) enrichment because their carbon-concentrating mechanisms already saturate RuBisCO under normal conditions.
+C4 and CAM plants are less responsive to CO$_2$ enrichment because their carbon-concentrating mechanisms already saturate RuBisCO under normal conditions.
       `
     },
     {
@@ -64,8 +64,8 @@ Temperature affects the rate of enzyme-catalyzed reactions:
 - At extremely high temperatures: Enzymes are completely denatured and photosynthesis stops
 
 **Temperature also affects the ratio of RuBisCO carboxylation to oxygenation:**
-- Higher temperatures decrease the relative solubility of CO\\(_2\\) vs O\\(_2\\)
-- RuBisCO also has lower affinity for CO\\(_2\\) at higher temperatures
+- Higher temperatures decrease the relative solubility of CO$_2$ vs O$_2$
+- RuBisCO also has lower affinity for CO$_2$ at higher temperatures
 - Both effects increase **photorespiration** in C3 plants
 
 This is why C4 plants (which circumvent photorespiration) dominate in tropical grasslands, while C3 plants dominate in temperate forests.
@@ -126,9 +126,9 @@ In real ecosystems, multiple factors interact:
 | Scenario | Primary Limiting Factor | Explanation |
 |----------|------------------------|-------------|
 | Winter morning, clear sky | Temperature & light | Cold slows enzyme kinetics; short days limit light duration |
-| Summer noon, full sun | CO\\(_2\\) (and photorespiration) | Abundant light and heat, but atmospheric CO\\(_2\\) limits Calvin cycle |
-| Cloudy day, warm temperature | Light intensity | Temperature and CO\\(_2\\) are adequate but insufficient light limits the light reactions |
-| Greenhouse with supplemental CO\\(_2\\) and lighting | Temperature or enzyme capacity | Once light and CO\\(_2\\) are optimized, the biochemical machinery reaches its maximum capacity |
+| Summer noon, full sun | CO$_2$ (and photorespiration) | Abundant light and heat, but atmospheric CO$_2$ limits Calvin cycle |
+| Cloudy day, warm temperature | Light intensity | Temperature and CO$_2$ are adequate but insufficient light limits the light reactions |
+| Greenhouse with supplemental CO$_2$ and lighting | Temperature or enzyme capacity | Once light and CO$_2$ are optimized, the biochemical machinery reaches its maximum capacity |
 
 **Liebig's Law of the Minimum** applies: the rate of photosynthesis is determined by whichever factor is most limiting, regardless of the abundance of other factors.
       `

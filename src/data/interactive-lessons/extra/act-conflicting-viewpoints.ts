@@ -8,7 +8,7 @@ import type { LessonData } from '../registry'
  * dropdown + input-boxes) → exit quiz. Non-math topic, so concept checks
  * favor multiple-choice and dropdown over numeric input. LaTeX (rare here)
  * uses doubled backslashes (template-literal strings); bare dollar signs in
- * prose are escaped as \$.
+ * prose are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

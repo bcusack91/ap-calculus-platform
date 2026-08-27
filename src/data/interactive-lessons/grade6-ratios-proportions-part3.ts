@@ -110,15 +110,15 @@ $\\frac{12}{4} = 3$ → **\\$3 per pound** ✅
       exercise: {
         questions: [
           {
-                    "question": "Which is the better deal: $6 for 3 or $10 for 4?",
+                    "question": "Which is the better deal: \\$6 for 3 or \\$10 for 4?",
                     "options": [
-                              "$6 for 3 ($2 each)",
-                              "$10 for 4 ($2.50 each)",
+                              "\\$6 for 3 (\\$2 each)",
+                              "\\$10 for 4 (\\$2.50 each)",
                               "They are equal",
                               "Cannot tell"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$6/3 = $2 each vs $10/4 = $2.50 each."
+                    "explanation": "\\$6/3 = \\$2 each vs \\$10/4 = \\$2.50 each."
           }
 ]
       }

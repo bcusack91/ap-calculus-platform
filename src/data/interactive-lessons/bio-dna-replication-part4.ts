@@ -9,7 +9,7 @@ export const bioDnaReplicationPart4Data = {
 
 **Part 4 of 7**
 
-DNA replication must be extraordinarily accurate — the error rate is approximately **1 mistake per 10\\(^{10}\\) base pairs** in E. coli.  This remarkable fidelity is achieved through three layers of error correction.
+DNA replication must be extraordinarily accurate — the error rate is approximately **1 mistake per 10$^{10}$ base pairs** in E. coli.  This remarkable fidelity is achieved through three layers of error correction.
       `
     },
     {
@@ -18,24 +18,24 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
       content: `
 ### Three Layers of Replication Fidelity
 
-**Layer 1: Base selection by DNA polymerase (~10\\(^5\\) accuracy)**
+**Layer 1: Base selection by DNA polymerase (~10$^5$ accuracy)**
 - DNA polymerase has a tight active site that favors correct Watson-Crick base pairs (A-T, G-C)
 - Incorrect bases fit poorly and are rejected before incorporation
 - Error rate: ~1 in 100,000
 
-**Layer 2: Proofreading (3' → 5' exonuclease activity, ~10\\(^2\\) improvement)**
+**Layer 2: Proofreading (3' → 5' exonuclease activity, ~10$^2$ improvement)**
 - DNA polymerase has a built-in editor: if a wrong nucleotide is incorporated, the polymerase detects the mismatch (distortion in the helix)
 - The polymerase reverses direction and removes the incorrect nucleotide using **3' → 5' exonuclease** activity
 - A correct nucleotide is then inserted
-- Combined error rate: ~1 in 10\\(^7\\)
+- Combined error rate: ~1 in 10$^7$
 
-**Layer 3: Mismatch repair (MMR, ~10\\(^3\\) improvement)**
+**Layer 3: Mismatch repair (MMR, ~10$^3$ improvement)**
 - After replication, mismatch repair proteins scan the newly synthesized DNA
 - They detect and correct remaining mismatches
 - The key challenge: distinguishing which strand has the error (old vs. new strand)
   - In E. coli: the parental strand is methylated (GATC sites); the new strand is not yet methylated, so repair enzymes know to fix the new strand
   - In eukaryotes: the new strand is identified by the presence of nicks (gaps not yet sealed)
-- Combined final error rate: ~1 in 10\\(^{10}\\)
+- Combined final error rate: ~1 in 10$^{10}$
       `
     },
     {
@@ -92,7 +92,7 @@ Beyond replication errors, DNA is constantly damaged by environmental and metabo
 |---------|------------|-----------|
 | **Base excision repair (BER)** | Modified/damaged single bases | Glycosylase removes damaged base → AP endonuclease cuts backbone → polymerase fills gap → ligase seals |
 | **Nucleotide excision repair (NER)** | Bulky lesions (thymine dimers, crosslinks) | Endonucleases cut on both sides of damage → ~12 nt oligonucleotide removed → polymerase fills → ligase seals |
-| **Homologous recombination (HR)** | Double-strand breaks (DSBs) | Uses sister chromatid as template for accurate repair — only in S/G\\(_2\\) phase |
+| **Homologous recombination (HR)** | Double-strand breaks (DSBs) | Uses sister chromatid as template for accurate repair — only in S/G$_2$ phase |
 | **Non-homologous end joining (NHEJ)** | Double-strand breaks | Directly ligates broken ends — faster but error-prone (may lose bases) |
 
 > **Xeroderma pigmentosum (XP):** A genetic disease caused by mutations in NER genes.  Patients cannot repair UV-induced thymine dimers and are extremely sensitive to sunlight, with high rates of skin cancer.

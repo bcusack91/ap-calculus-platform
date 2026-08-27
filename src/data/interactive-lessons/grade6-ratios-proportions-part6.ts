@@ -22,10 +22,10 @@ Apply ratios, proportions, and percents to real-world problems:
       content: `
 ## Worked Example
 
-**A shirt is \$40 with 20% off. Sale price?**
+**A shirt is \\$40 with 20% off. Sale price?**
 
 Discount: $0.20 \\times 40 = 8$
-Sale price: $40 - 8 = 32$ → **\$32** ✅
+Sale price: $40 - 8 = 32$ → **\\$32** ✅
     
     `
     },
@@ -57,7 +57,7 @@ Sale price: $40 - 8 = 32$ → **\$32** ✅
       content: `
 **Real-World Problems** 🧮
 
-1) \$60 shirt, 25% off. Sale price?
+1) \\$60 shirt, 25% off. Sale price?
 
 2) Recipe: 2 cups for 4 people. How many cups for 10 people?
 
@@ -95,7 +95,7 @@ Sale price: $40 - 8 = 32$ → **\$32** ✅
 
 | # | Problem | Concept |
 |---|---------|---------|
-| 1 | \$60 shirt, 25% off | Discount |
+| 1 | \\$60 shirt, 25% off | Discount |
 | 2 | Recipe: 2 cups for 4 people → cups for 10? | Proportion |
 | 3 | Map: 1 in = 50 mi, 3.5 in = ? mi | Scale |
     

@@ -49,7 +49,7 @@ Apply decimal skills to real-world problems:
                               "$42.50"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "3 × $4.25 = $12.75."
+                    "explanation": "3 × \\$4.25 = \\$12.75."
           }
 ]
       }
@@ -83,11 +83,11 @@ Apply decimal skills to real-world problems:
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To find the total cost of multiple items, you","options":["Multiply price × quantity","Divide price by quantity","Add all prices then multiply","Subtract"]},{"label":"If you pay $10 for a $3.80 item, your change is","options":["$6.20","$7.20","$6.80","$33.80"]}],
+        dropdowns: [{"label":"To find the total cost of multiple items, you","options":["Multiply price × quantity","Divide price by quantity","Add all prices then multiply","Subtract"]},{"label":"If you pay \\$10 for a \\$3.80 item, your change is","options":["$6.20","$7.20","$6.80","$33.80"]}],
         correctAnswers: ["Multiply price × quantity","$6.20"],
         hint1: "Price per item × number of items.",
-        hint2: "$10.00 − $3.80.",
-        explanation: "Total = price × quantity. $10.00 − $3.80 = $6.20."
+        hint2: "\\$10.00 − \\$3.80.",
+        explanation: "Total = price × quantity. \\$10.00 − \\$3.80 = \\$6.20."
       }
     },
     {
@@ -113,7 +113,7 @@ Apply decimal skills to real-world problems:
       exercise: {
         questions: [
           {
-                    "question": "$10.00 − $3.47 = ?",
+                    "question": "\\$10.00 − \\$3.47 = ?",
                     "options": [
                               "$6.53",
                               "$7.53",
@@ -121,7 +121,7 @@ Apply decimal skills to real-world problems:
                               "$3.47"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$10.00 − $3.47 = $6.53."
+                    "explanation": "\\$10.00 − \\$3.47 = \\$6.53."
           }
 ]
       }

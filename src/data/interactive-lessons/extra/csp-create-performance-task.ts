@@ -9,7 +9,7 @@ import type { LessonData } from '../registry'
  * multiple-choice + dropdown, with quantitative input-boxes where natural (scoring points,
  * list indexing, binary/data sizes). Pseudocode follows the College Board AP CSP Exam
  * Reference (1-indexed lists, DISPLAY/INPUT, MOD, etc.). LaTeX uses DOUBLED backslashes
- * (template-literal strings); bare currency is escaped as \$.
+ * (template-literal strings); bare currency is escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

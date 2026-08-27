@@ -26,10 +26,10 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
 
 | Complex | Phase regulated | Function |
 |---------|----------------|----------|
-| **Cyclin D — Cdk4/6** | G\\(_1\\) progression | Responds to growth factor signals; phosphorylates Rb |
-| **Cyclin E — Cdk2** | G\\(_1\\)/S transition | Commits cell to S phase; initiates DNA replication licensing |
+| **Cyclin D — Cdk4/6** | G$_1$ progression | Responds to growth factor signals; phosphorylates Rb |
+| **Cyclin E — Cdk2** | G$_1$/S transition | Commits cell to S phase; initiates DNA replication licensing |
 | **Cyclin A — Cdk2** | S phase | Drives DNA replication; prevents re-replication |
-| **Cyclin B — Cdk1 (MPF)** | G\\(_2\\)/M transition | Triggers entry into mitosis; promotes chromosome condensation, nuclear envelope breakdown, spindle assembly |
+| **Cyclin B — Cdk1 (MPF)** | G$_2$/M transition | Triggers entry into mitosis; promotes chromosome condensation, nuclear envelope breakdown, spindle assembly |
 
 **How cyclin-Cdk regulation works:**
 1. Cyclins are synthesized and degraded in a cyclical pattern — each cyclin accumulates during a specific phase
@@ -49,12 +49,12 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
 
 | Checkpoint | Location | What is checked | Key molecules |
 |-----------|----------|----------------|---------------|
-| **G\\(_1\\)/S (Restriction Point)** | End of G\\(_1\\) | Cell size, nutrients, growth signals, DNA integrity | Cyclin D-Cdk4/6, Rb, p53, p21 |
+| **G$_1$/S (Restriction Point)** | End of G$_1$ | Cell size, nutrients, growth signals, DNA integrity | Cyclin D-Cdk4/6, Rb, p53, p21 |
 | **Intra-S** | During S phase | Replication fork stalling, DNA damage | ATR, Chk1 |
-| **G\\(_2\\)/M** | End of G\\(_2\\) | Complete DNA replication, DNA damage repair | Cyclin B-Cdk1, ATM, Chk2, p53 |
+| **G$_2$/M** | End of G$_2$ | Complete DNA replication, DNA damage repair | Cyclin B-Cdk1, ATM, Chk2, p53 |
 | **Spindle Assembly (SAC)** | Metaphase | All kinetochores attached to spindle | Mad2, BubR1, APC/C |
 
-### The Rb Pathway (G\\(_1\\)/S control)
+### The Rb Pathway (G$_1$/S control)
 
 1. **Rb (Retinoblastoma protein)** normally INHIBITS E2F transcription factors
 2. When E2F is inhibited, genes needed for S phase entry are NOT transcribed

@@ -471,7 +471,7 @@ $$(\\text{rate}) \\times (\\text{quantity}) + (\\text{fixed amount}) = (\\text{t
 
 ### Worked Example — The Taxi Ride
 
-A taxi charges a \$3 flat fee plus \$2 per mile. A ride cost \$17. How many miles ($m$) was it?
+A taxi charges a \\$3 flat fee plus \\$2 per mile. A ride cost \\$17. How many miles ($m$) was it?
 
 $$2m + 3 = 17$$
 $$2m = 14 \\;\\Rightarrow\\; m = 7 \\text{ miles}$$
@@ -480,7 +480,7 @@ $$2m = 14 \\;\\Rightarrow\\; m = 7 \\text{ miles}$$
 
 ### Worked Example — Saving Up
 
-Maria has \$20 saved and adds \$5 each week. After how many weeks ($w$) will she have \$60?
+Maria has \\$20 saved and adds \\$5 each week. After how many weeks ($w$) will she have \\$60?
 
 $$5w + 20 = 60 \\;\\Rightarrow\\; 5w = 40 \\;\\Rightarrow\\; w = 8 \\text{ weeks}$$`,
       },

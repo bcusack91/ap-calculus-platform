@@ -5,7 +5,7 @@ import type { LessonData } from '../registry'
  * Registry key: 'percent-problems-prealgebra' (matches the DB Topic.slug).
  * 5 parts, gold-standard structure: teach → worked examples → interactive practice
  * (multiple-choice + input-boxes + dropdown) → exit quiz. LaTeX uses doubled
- * backslashes (template-literal strings). Currency in prose is escaped as \$.
+ * backslashes (template-literal strings). Currency in prose is escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

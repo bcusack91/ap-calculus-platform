@@ -21,19 +21,19 @@ This final section presents comprehensive AP-exam-style questions integrating co
 $$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{light} \\longrightarrow \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$
 
 **Light Reactions (thylakoid membrane):**
-- Inputs: H\\(_2\\)O, light, NADP\\(^+\\), ADP + P\\(_i\\)
-- Outputs: O\\(_2\\), ATP, NADPH
+- Inputs: H$_2$O, light, NADP$^+$, ADP + P$_i$
+- Outputs: O$_2$, ATP, NADPH
 - Key complexes: PSII, cytochrome b6f, PSI, ATP synthase
 
 **Calvin Cycle (stroma):**
-- Inputs: CO\\(_2\\), ATP, NADPH
-- Outputs: G3P, ADP + P\\(_i\\), NADP\\(^+\\)
+- Inputs: CO$_2$, ATP, NADPH
+- Outputs: G3P, ADP + P$_i$, NADP$^+$
 - Key enzyme: RuBisCO
 - 3 phases: fixation, reduction, regeneration
 
 **Connections to respiration:**
-- Products of photosynthesis (glucose, O\\(_2\\)) are the reactants of respiration
-- Products of respiration (CO\\(_2\\), H\\(_2\\)O) are the reactants of photosynthesis
+- Products of photosynthesis (glucose, O$_2$) are the reactants of respiration
+- Products of respiration (CO$_2$, H$_2$O) are the reactants of photosynthesis
 - Both use chemiosmosis (proton gradients + ATP synthase)
 - Both involve electron transport chains
       `

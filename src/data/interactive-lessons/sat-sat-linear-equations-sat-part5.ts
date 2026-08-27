@@ -163,7 +163,7 @@ The SAT frequently asks questions like:
 
 | Concept | How to Find It |
 |---------|---------------|
-| Slope from context | Rate per unit ($/hour, miles/gallon, etc.) |
+| Slope from context | Rate per unit (\\$/hour, miles/gallon, etc.) |
 | Y-intercept from context | Starting value, initial amount, base cost |
 | Slope from table | $\\Delta y / \\Delta x$ using any two rows |
 | "When are they equal?" | Set the two expressions equal |

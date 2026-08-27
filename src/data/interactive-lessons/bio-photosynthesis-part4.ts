@@ -15,7 +15,7 @@ Plants have evolved different strategies to deal with the problem of photorespir
 - **C4 plants** — initial product is a 4-carbon molecule (oxaloacetate)
 - **CAM plants** — use crassulacean acid metabolism (temporal separation)
 
-All three types ultimately use the Calvin cycle for sugar synthesis, but C4 and CAM plants have evolved mechanisms to **concentrate CO\\(_2\\) around RuBisCO**, minimizing photorespiration.
+All three types ultimately use the Calvin cycle for sugar synthesis, but C4 and CAM plants have evolved mechanisms to **concentrate CO$_2$ around RuBisCO**, minimizing photorespiration.
       `
     },
     {
@@ -24,7 +24,7 @@ All three types ultimately use the Calvin cycle for sugar synthesis, but C4 and 
       content: `
 ### C3 Photosynthesis
 
-C3 plants (e.g., rice, wheat, soybeans, most trees) use only the Calvin cycle for carbon fixation.  RuBisCO directly fixes CO\\(_2\\) from the air in the **mesophyll cells**.
+C3 plants (e.g., rice, wheat, soybeans, most trees) use only the Calvin cycle for carbon fixation.  RuBisCO directly fixes CO$_2$ from the air in the **mesophyll cells**.
 
 **Characteristics:**
 - Most common pathway (~85% of plant species)
@@ -32,7 +32,7 @@ C3 plants (e.g., rice, wheat, soybeans, most trees) use only the Calvin cycle fo
 - Susceptible to photorespiration, especially in hot, dry, or bright conditions
 - **Optimal environment:** Cool, moist climates with moderate light
 
-When stomata close to conserve water, CO\\(_2\\) levels drop and O\\(_2\\) rises inside the leaf, dramatically increasing photorespiration.
+When stomata close to conserve water, CO$_2$ levels drop and O$_2$ rises inside the leaf, dramatically increasing photorespiration.
       `
     },
     {
@@ -44,29 +44,29 @@ When stomata close to conserve water, CO\\(_2\\) levels drop and O\\(_2\\) rises
 C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-step carbon fixation process that **spatially separates** initial carbon fixation from the Calvin cycle:
 
 **Step 1 — Mesophyll cells:**
-- The enzyme **PEP carboxylase** (not RuBisCO) fixes CO\\(_2\\) by attaching it to **PEP** (phosphoenolpyruvate, 3C) to form **oxaloacetate** (OAA, 4C)
+- The enzyme **PEP carboxylase** (not RuBisCO) fixes CO$_2$ by attaching it to **PEP** (phosphoenolpyruvate, 3C) to form **oxaloacetate** (OAA, 4C)
 - OAA is quickly converted to **malate** (4C)
 - Malate is transported to the **bundle-sheath cells** via plasmodesmata
 
 **Step 2 — Bundle-sheath cells:**
-- Malate is decarboxylated, releasing CO\\(_2\\) inside the bundle-sheath cells
-- This CO\\(_2\\) is then fixed by **RuBisCO** in the normal Calvin cycle
+- Malate is decarboxylated, releasing CO$_2$ inside the bundle-sheath cells
+- This CO$_2$ is then fixed by **RuBisCO** in the normal Calvin cycle
 - The remaining 3C molecule (pyruvate) returns to the mesophyll to regenerate PEP (costs 2 ATP)
 
 **Why this works:**
-- PEP carboxylase has a **much higher affinity for CO\\(_2\\)** than RuBisCO and does **not** bind O\\(_2\\)
-- CO\\(_2\\) is concentrated to high levels around RuBisCO in the bundle-sheath cells
+- PEP carboxylase has a **much higher affinity for CO$_2$** than RuBisCO and does **not** bind O$_2$
+- CO$_2$ is concentrated to high levels around RuBisCO in the bundle-sheath cells
 - Photorespiration is virtually eliminated
 
-**Cost:** 2 extra ATP per CO\\(_2\\) fixed (for PEP regeneration), so C4 photosynthesis is only advantageous when photorespiration would otherwise be significant.
+**Cost:** 2 extra ATP per CO$_2$ fixed (for PEP regeneration), so C4 photosynthesis is only advantageous when photorespiration would otherwise be significant.
 
 | Feature | C3 | C4 |
 |---------|----|----|
-| First CO\\(_2\\) fixation enzyme | RuBisCO | PEP carboxylase |
+| First CO$_2$ fixation enzyme | RuBisCO | PEP carboxylase |
 | First stable product | 3-PGA (3C) | Oxaloacetate (4C) |
 | Leaf anatomy | No bundle-sheath distinction | **Kranz anatomy** (distinct mesophyll/bundle-sheath) |
 | Photorespiration | Significant in hot conditions | Minimal |
-| ATP cost per CO\\(_2\\) | 3 ATP | 5 ATP |
+| ATP cost per CO$_2$ | 3 ATP | 5 ATP |
 | Optimal environment | Cool, moist | Hot, sunny, tropical |
       `
     },
@@ -112,19 +112,19 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
 **CAM** (Crassulacean Acid Metabolism) plants — e.g., cacti, pineapple, jade plant, many succulents — face extreme water stress and have evolved a different strategy: **temporal separation** of carbon fixation and the Calvin cycle.
 
 **Night (stomata OPEN):**
-- CO\\(_2\\) enters through open stomata
-- **PEP carboxylase** fixes CO\\(_2\\) into oxaloacetate, which is converted to **malate**
+- CO$_2$ enters through open stomata
+- **PEP carboxylase** fixes CO$_2$ into oxaloacetate, which is converted to **malate**
 - Malate is stored in large **vacuoles** (as malic acid)
 
 **Day (stomata CLOSED):**
 - Stomata close to prevent water loss
-- Malate is released from the vacuole and **decarboxylated**, releasing CO\\(_2\\)
-- CO\\(_2\\) is fixed by RuBisCO in the Calvin cycle using ATP and NADPH from the light reactions
+- Malate is released from the vacuole and **decarboxylated**, releasing CO$_2$
+- CO$_2$ is fixed by RuBisCO in the Calvin cycle using ATP and NADPH from the light reactions
 
 **Key difference from C4:**
 - C4 plants separate fixation and Calvin cycle **spatially** (different cell types)
 - CAM plants separate them **temporally** (different times of day)
-- Both use PEP carboxylase for initial fixation and concentrate CO\\(_2\\) around RuBisCO
+- Both use PEP carboxylase for initial fixation and concentrate CO$_2$ around RuBisCO
 
 | Feature | C4 | CAM |
 |---------|----|----|

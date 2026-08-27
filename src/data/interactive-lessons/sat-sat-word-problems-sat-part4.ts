@@ -22,7 +22,7 @@ $$\\text{amount₁ × concentration₁} + \\text{amount₂ × concentration₂} 
 **Revenue** = price × quantity
 **Profit** = revenue − cost
 
-**Example:** Adult tickets cost \$12, child tickets cost \$8. 200 tickets sold for \$2,000 total.
+**Example:** Adult tickets cost \\$12, child tickets cost \\$8. 200 tickets sold for \\$2,000 total.
 - Let $a$ = adult tickets: $a + c = 200$ and $12a + 8c = 2000$
 - From first equation: $c = 200 - a$
 - $12a + 8(200 - a) = 2000$
@@ -35,7 +35,7 @@ $$\\text{Weighted avg} = \\frac{\\sum (\\text{value × weight})}{\\sum \\text{we
     {
       id: 'wp4-q1',
       type: 'quiz' as const,
-      question: 'A store sells pens for $2 and notebooks for $5. If 50 items are sold for $175 total, how many pens were sold?',
+      question: 'A store sells pens for \\$2 and notebooks for \\$5. If 50 items are sold for \\$175 total, how many pens were sold?',
       options: [
         '15',
         '25',
@@ -119,13 +119,13 @@ $$\\text{Weighted avg} = \\frac{\\sum (\\text{value × weight})}{\\sum \\text{we
       exercise: {
         dropdowns: [
           'Mix x L of 20% with 10 L of 50% to get 30%. Equation: [0.2x + 5 = 0.3(x + 10)|0.2x + 0.5(10) = 0.3x|0.2(10) + 0.5x = 30|20x + 50(10) = 30]',
-          'Items cost $4 to make, sell for $10. Fixed costs $600. Break-even qty: [100|60|150|200]',
+          'Items cost \\$4 to make, sell for \\$10. Fixed costs \\$600. Break-even qty: [100|60|150|200]',
           'Weighted avg: 20 students scored 80, 30 scored 90. Average = [86|85|87|84]',
           'Evaporate water from 50 L of 10% salt to get 25% salt. Liters remaining = [20|30|25|40]'
         ],
         correctAnswers: ['0.2x + 5 = 0.3(x + 10)', '100', '86', '20'],
         hint1: 'Solute from both sources = solute in final mixture.',
-        hint2: 'Break even: profit per item × quantity = fixed costs. Profit per item = $10 − $4 = $6.',
+        hint2: 'Break even: profit per item × quantity = fixed costs. Profit per item = \\$10 − \\$4 = \\$6.',
         hint3: 'Weighted average: (20×80 + 30×90) / (20+30).',
         explanation: 'Mixture: 0.2x + 0.50(10) = 0.30(x+10). Break-even: 6n = 600 → n = 100. Weighted: (1600+2700)/50 = 4300/50 = 86. Evaporate: salt stays at 5 L. 5/x = 0.25 → x = 20 L.'
       }

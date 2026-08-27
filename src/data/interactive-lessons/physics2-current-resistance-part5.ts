@@ -44,7 +44,7 @@ A kilowatt-hour is the energy used by a 1000 W device running for 1 hour.
 
 ### Typical Electricity Cost
 
-In the US: approximately **$0.12–$0.15 per kWh** (varies by region).
+In the US: approximately **\\$0.12–\\$0.15 per kWh** (varies by region).
 
 $$\\text{Cost} = \\text{Energy (kWh)} \\times \\text{Rate (\\$/kWh)}$$
       `

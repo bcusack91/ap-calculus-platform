@@ -55,14 +55,14 @@ export const FRQS: SAQItem[] = [
         letter: 'E',
         question: 'Calculate the maximum increase in the money supply that could result from a Reserve Bank open-market purchase of $200 million in government bonds, assuming banks hold no excess reserves and no cash leakages. Show your work.',
         rubric: [
-          { id: 'e1', label: '1 pt — Correct money multiplier and final answer', description: 'Money multiplier = 1/RR = 1/0.10 = 10. Maximum increase = $200M × 10 = $2,000M (or $2 billion). Work must be shown.' },
+          { id: 'e1', label: '1 pt — Correct money multiplier and final answer', description: 'Money multiplier = 1/RR = 1/0.10 = 10. Maximum increase = \\$200M × 10 = \\$2,000M (or \\$2 billion). Work must be shown.' },
         ],
       },
       {
         letter: 'F',
         question: 'Suppose instead that the Westland government uses fiscal policy and increases government spending (G) by $100 million. Calculate the maximum potential change in real GDP, holding all else constant. Show your work.',
         rubric: [
-          { id: 'f1', label: '1 pt — Correct spending multiplier and final answer', description: 'Spending multiplier = 1/(1−MPC) = 1/(1−0.75) = 4. Max ΔGDP = 4 × $100M = $400M. Work must be shown.' },
+          { id: 'f1', label: '1 pt — Correct spending multiplier and final answer', description: 'Spending multiplier = 1/(1−MPC) = 1/(1−0.75) = 4. Max ΔGDP = 4 × \\$100M = \\$400M. Work must be shown.' },
         ],
       },
       {

@@ -42,7 +42,7 @@ export const apushGildedAgePart1Data = {
 
 | Industrialist | Company / Industry | Key Strategy | Controversy |
 |---|---|---|---|
-| **Andrew Carnegie** | Carnegie Steel | **Vertical integration** — controlled every stage from iron mines to finished steel | Homestead Strike (1892); gave away \$350M in philanthropy |
+| **Andrew Carnegie** | Carnegie Steel | **Vertical integration** — controlled every stage from iron mines to finished steel | Homestead Strike (1892); gave away \\$350M in philanthropy |
 | **John D. Rockefeller** | Standard Oil | **Horizontal integration** — bought out competitors to create monopoly; trusts | Controlled 90% of U.S. oil refining by 1880 |
 | **Cornelius Vanderbilt** | Railroads | Consolidated competing rail lines | Stock manipulation; cut-throat competition |
 | **J.P. Morgan** | Banking / Finance | Financed mergers; bailed out U.S. government (1895) | Enormous concentration of financial power |
@@ -167,7 +167,7 @@ Use the exact historical term.
           }
         ],
         correctAnswers: ['Gospel of Wealth', 'Pullman Strike', 'Tammany Hall'],
-        hint1: 'Carnegie donated \$350 million to libraries, universities, and parks',
+        hint1: 'Carnegie donated \\$350 million to libraries, universities, and parks',
         hint2: 'Federal troops and a court injunction were used to break this strike',
         hint3: 'Led by Boss Tweed; controlled NYC politics through patronage and graft',
         explanation: 'Carnegie\'s Gospel of Wealth (1889) argued philanthropy was the rich\'s duty — critics called it hypocritical given his brutal labor practices. The Pullman Strike (1894) showed the federal government would side with business against labor. Tammany Hall exemplified Gilded Age political corruption.'

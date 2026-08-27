@@ -37,7 +37,7 @@ $-8 + 15 = 7$°F ✅
       exercise: {
         questions: [
           {
-                    "question": "Bank balance $50, withdraw $75. Balance?",
+                    "question": "Bank balance \\$50, withdraw \\$75. Balance?",
                     "options": [
                               "−$25",
                               "$125",
@@ -45,7 +45,7 @@ $-8 + 15 = 7$°F ✅
                               "−$125"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$50 − $75 = −$25 (overdrawn)."
+                    "explanation": "\\$50 − \\$75 = −\\$25 (overdrawn)."
           }
 ]
       }
@@ -56,7 +56,7 @@ $-8 + 15 = 7$°F ✅
       content: `
 **Word Problems** 🧮
 
-1) \$50 − \$75 = ? (use negative for overdrawn)
+1) \\$50 − \\$75 = ? (use negative for overdrawn)
 
 2) 3°F drops 10°. New temperature?
 
@@ -94,7 +94,7 @@ $-8 + 15 = 7$°F ✅
 
 | # | Problem | Expression |
 |---|---------|-----------|
-| 1 | Bank: \$50, withdraw \$75 | $50 - 75$ |
+| 1 | Bank: \\$50, withdraw \\$75 | $50 - 75$ |
 | 2 | Temp: 3°, drops 10° | $3 - 10$ |
 | 3 | Elevator: floor −2, up 5 floors | $-2 + 5$ |
     

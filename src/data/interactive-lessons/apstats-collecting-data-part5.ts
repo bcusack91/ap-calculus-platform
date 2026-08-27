@@ -85,7 +85,7 @@ $$\sigma_X = \\sqrt{\\text{Var}(X)}$$`
       content: `
 **Expected Value Calculations** 🧮
 
-A game costs \$5 to play. You roll a die: if you get a 6, you win \$20; otherwise you win nothing.
+A game costs \\$5 to play. You roll a die: if you get a 6, you win \\$20; otherwise you win nothing.
 
 **1)** What is $P(\\text{win})$? Express as a decimal (round to 2 places).
 
@@ -99,7 +99,7 @@ A game costs \$5 to play. You roll a die: if you get a 6, you win \$20; otherwis
         hint1: '$P(6) = 1/6 \\approx 0.17$.',
         hint2: '$E = (1/6)(20) + (5/6)(0) = 20/6 \\approx 3.33$.',
         hint3: '$3.33 - 5 = -1.67$. The game has negative expected profit.',
-        explanation: '1) $1/6 \\approx 0.17$. 2) $\$3.33$. 3) $-\$1.67$ — unfavorable game.'
+        explanation: '1) $1/6 \\approx 0.17$. 2) $\\$3.33$. 3) $-\\$1.67$ — unfavorable game.'
       }
     }
   ]

@@ -59,7 +59,7 @@ Cross: $12x = 72$ → $x = 6$ ✅
 
 1) 14:21 simplified = ?:3. First number?
 
-2) \$24 for 6 items = \$? per item
+2) \\$24 for 6 items = \\$? per item
 
 3) $\\frac{x}{5} = \\frac{8}{10}$. $x = ?$
     

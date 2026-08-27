@@ -18,7 +18,7 @@ export const parts: LessonData[] = [
         type: 'text' as const,
         content: `# 📈 Writing Linear Equations
 
-**Part 1 of 5 — Slope-Intercept Form: \\(y = mx + b\\)**
+**Part 1 of 5 — Slope-Intercept Form: $y = mx + b$**
 
 ---
 
@@ -28,7 +28,7 @@ export const parts: LessonData[] = [
 |---------|
 | What the Form Tells You |
 | Reading Slope and Intercept |
-| Graphing from \\(y = mx + b\\) |
+| Graphing from $y = mx + b$ |
 
 > 🔑 **Key Concept:** Every straight (non-vertical) line can be written as $y = mx + b$, where $m$ is the **slope** and $b$ is the **$y$-intercept**. Master this one form and you can describe any line.`,
       },
@@ -99,7 +99,7 @@ For each line, enter the slope $m$ first, then the $y$-intercept $b$.
       {
         id: 'wle1-graph',
         type: 'text' as const,
-        content: `## Graphing from \\(y = mx + b\\)
+        content: `## Graphing from $y = mx + b$
 
 Slope-intercept form is a recipe for drawing the line in two moves:
 
@@ -447,7 +447,7 @@ $$2 \\;\\to\\; -\\tfrac{1}{2}, \\qquad -3 \\;\\to\\; \\tfrac{1}{3}, \\qquad \\tf
       {
         id: 'wle4-standard',
         type: 'text' as const,
-        content: `## Standard Form: \\(Ax + By = C\\)
+        content: `## Standard Form: $Ax + By = C$
 
 Lines often appear as $Ax + By = C$. To find the slope and intercept, **solve for $y$**.
 

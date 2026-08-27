@@ -27,11 +27,11 @@ export const microDemandSupplyEquilibriumPart1Data = {
 | **Total Surplus** | CS + PS = total gains from trade | Triangle between D and S curves up to equilibrium quantity |
 
 ### Example
-- You're willing to pay $50 for a textbook but buy it for $30
-- Your consumer surplus = $50 − $30 = **$20**
-- The seller's cost is $15 but they sell for $30
-- Producer surplus = $30 − $15 = **$15**
-- Total surplus from this trade = $20 + $15 = **$35**
+- You're willing to pay \\$50 for a textbook but buy it for \\$30
+- Your consumer surplus = \\$50 − \\$30 = **\\$20**
+- The seller's cost is \\$15 but they sell for \\$30
+- Producer surplus = \\$30 − \\$15 = **\\$15**
+- Total surplus from this trade = \\$20 + \\$15 = **\\$35**
 
 ### Allocative Efficiency
 - Achieved at market equilibrium where **MB = MC** (demand = supply)

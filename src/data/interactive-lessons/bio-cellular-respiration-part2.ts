@@ -40,7 +40,7 @@ In this phase, the cell *spends* 2 ATP to phosphorylate and rearrange glucose:
 
 Each G3P molecule is oxidized and rearranged, producing ATP and NADH:
 
-6. G3P is oxidized; NAD\\(^+\\) is reduced to **NADH** (×2)
+6. G3P is oxidized; NAD$^+$ is reduced to **NADH** (×2)
 7. Substrate-level phosphorylation produces **1 ATP** per G3P (×2)
 8-9. Molecular rearrangements prepare the substrate for the final step
 10. **Pyruvate kinase** catalyzes the final substrate-level phosphorylation: **1 ATP** per G3P (×2)

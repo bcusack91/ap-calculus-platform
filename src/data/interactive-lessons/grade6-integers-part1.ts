@@ -98,7 +98,7 @@ Total drop: $8 + 3 = 11$ degrees ✅
 | # | Item | Integer |
 |---|------|---------|
 | 1 | 15° below zero | −15 |
-| 2 | Gain of \$50 | +50 |
+| 2 | Gain of \\$50 | +50 |
 | 3 | 200 ft below sea level | −200 |
     
     `

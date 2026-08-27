@@ -96,8 +96,8 @@ export const psychThinkingPart7Data = {
 
 **Model Answer Structure:**
 
-**Sam chooses the more expensive car because the salesperson mentioned a price of $60,000 before showing the $35,000 car.**
-→ This illustrates **anchoring bias**. The $60,000 mentioned first serves as an anchor that biases Sam's perception of value. The $35,000 car seems like a bargain compared to the $60,000 anchor, even though $35,000 may be above fair market value. Tversky and Kahneman's research showed that even arbitrary anchors influence numerical estimates.
+**Sam chooses the more expensive car because the salesperson mentioned a price of \\$60,000 before showing the \\$35,000 car.**
+→ This illustrates **anchoring bias**. The \\$60,000 mentioned first serves as an anchor that biases Sam's perception of value. The \\$35,000 car seems like a bargain compared to the \\$60,000 anchor, even though \\$35,000 may be above fair market value. Tversky and Kahneman's research showed that even arbitrary anchors influence numerical estimates.
 
 **Sam overestimates the danger of car fires because he recently saw a dramatic news report.**
 → This demonstrates the **availability heuristic**. The vivid, emotionally charged news report makes car fires easy to recall, leading Sam to overestimate their frequency. In reality, car fires are statistically rare. The ease of recall — driven by recency and vividness — biases Sam's judgment of how common car fires actually are.

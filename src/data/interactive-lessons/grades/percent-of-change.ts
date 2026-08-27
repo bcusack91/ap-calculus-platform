@@ -112,7 +112,7 @@ The population had a **10% increase**. 🎉
 
 A jacket normally costs **$80** but is on sale for **$60**. Find the percent decrease.
 
-- **Step 1 — Amount of change:** $80 - 60 = 20$ dollars (the price dropped by $20).
+- **Step 1 — Amount of change:** $80 - 60 = 20$ dollars (the price dropped by \\$20).
 - **Step 2 — Divide by the original:** $\\frac{20}{80} = 0.25$.
 - **Step 3 — Convert to a percent:** $0.25 \\times 100\\% = 25\\%$.
 
@@ -171,7 +171,7 @@ Work through each one with the three steps: find the change, divide by the origi
               explanation: 'The change is $50 - 40 = 10$ members. Then $\\frac{10}{40} = 0.25$, and $0.25 \\times 100\\% = 25\\%$.'
             },
             {
-              question: 'A phone’s price drops from **$200** to **$150**. What is the percent **decrease**?',
+              question: 'A phone’s price drops from **\\$200** to **\\$150**. What is the percent **decrease**?',
               options: ['$50\\%$', '$33\\%$', '$25\\%$', '$15\\%$'],
               correctAnswer: 2,
               explanation: 'The change is $200 - 150 = 50$ dollars. Then $\\frac{50}{200} = 0.25$, so the price fell by $25\\%$.'
@@ -248,7 +248,7 @@ A video game originally costs **$60**. During a holiday sale it is marked down t
         exercise: {
           boxes: 3,
           correctAnswers: ['15', '0.25', '25'],
-          hint1: 'The price dropped from $60 to $45, so the amount of change is $60 - 45$.',
+          hint1: 'The price dropped from \\$60 to \\$45, so the amount of change is \\$60 - 45$.',
           hint2: 'Divide the change by the original price: $\\frac{15}{60} = 0.25$, then multiply by 100 to get a percent.',
           explanation: 'The change is $60 - 45 = 15$ dollars. Then $\\frac{15}{60} = 0.25$, and $0.25 \\times 100\\% = 25\\%$. The game is **25% off**.'
         }
@@ -289,7 +289,7 @@ A video game originally costs **$60**. During a holiday sale it is marked down t
 
 You now have a complete toolkit for percent of change. Here is a quick summary:
 
-| Step | What to do | Example ($40 → $50) |
+| Step | What to do | Example (\\$40 → \\$50) |
 |------|------------|----------------------|
 | 1 | Find the amount of change | $50 - 40 = 10$ |
 | 2 | Divide by the **original** | $\\frac{10}{40} = 0.25$ |
@@ -316,7 +316,7 @@ Mix of increase and decrease — read each one carefully.
         exercise: {
           questions: [
             {
-              question: 'A savings account grows from **$50** to **$80**. What is the percent **increase**?',
+              question: 'A savings account grows from **\\$50** to **\\$80**. What is the percent **increase**?',
               options: ['$30\\%$', '$37.5\\%$', '$60\\%$', '$160\\%$'],
               correctAnswer: 2,
               explanation: 'The change is $80 - 50 = 30$ dollars. Then $\\frac{30}{50} = 0.6$, and $0.6 \\times 100\\% = 60\\%$.'

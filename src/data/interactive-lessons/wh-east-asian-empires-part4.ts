@@ -80,7 +80,7 @@ export const whEastAsianEmpiresPart4Data = {
     Example:
 
     $$
-    	ext{Foreign restrictions} \\rightarrow \\text{greater domestic control} \\rightarrow \\text{elite confidence in restrictions} \\rightarrow \\text{continued restrictions}
+    \\text{Foreign restrictions} \\rightarrow \\text{greater domestic control} \\rightarrow \\text{elite confidence in restrictions} \\rightarrow \\text{continued restrictions}
     $$
 
     AP skill: identify whether a historical process is self-reinforcing or self-limiting.

@@ -81,9 +81,9 @@ A **central angle** has its vertex at the **center** of the circle. Its two side
 
 $$\\textbf{The measure of a minor arc} = \\textbf{the measure of its central angle.}$$
 
-So if central angle $\\angle AOB = 70°$ (where $O$ is the center), then the minor arc it opens onto, $\\overset{\\frown}{AB}$, is also $70°$.
+So if central angle $\\angle AOB = 70°$ (where $O$ is the center), then the minor arc it opens onto, $\\overset{\\frown}{AB}$, is also \\$70°$.
 
-Because a full circle is $360°$:
+Because a full circle is \\$360°$:
 
 $$\\text{minor arc} + \\text{major arc} = 360°.$$
 

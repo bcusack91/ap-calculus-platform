@@ -99,13 +99,13 @@ Osmosis is technically a special case of facilitated diffusion (when aquaporins 
       content: `
 ### Water Potential (for AP Biology)
 
-The AP Biology curriculum uses the concept of **water potential** (\\(\\Psi\\), psi) to quantitatively predict the direction of water movement:
+The AP Biology curriculum uses the concept of **water potential** ($\\Psi$, psi) to quantitatively predict the direction of water movement:
 
 $$\\Psi = \\Psi_s + \\Psi_p$$
 
 Where:
-- \\(\\Psi_s\\) = **solute potential** (also called osmotic potential) — always \\(\\leq 0\\); more solute makes it more negative
-- \\(\\Psi_p\\) = **pressure potential** — can be positive (turgor in plant cells), zero, or negative (tension in xylem)
+- $\\Psi_s$ = **solute potential** (also called osmotic potential) — always $\\leq 0$; more solute makes it more negative
+- $\\Psi_p$ = **pressure potential** — can be positive (turgor in plant cells), zero, or negative (tension in xylem)
 
 **Water moves from HIGH water potential to LOW water potential.**
 
@@ -114,16 +114,16 @@ Where:
 $$\\Psi_s = -iCRT$$
 
 Where:
-- \\(i\\) = ionization constant (number of particles the solute dissociates into; NaCl = 2, glucose = 1)
-- \\(C\\) = molar concentration (mol/L)
-- \\(R\\) = ideal gas constant (0.0831 L bar/mol K)
-- \\(T\\) = temperature in Kelvin
+- $i$ = ionization constant (number of particles the solute dissociates into; NaCl = 2, glucose = 1)
+- $C$ = molar concentration (mol/L)
+- $R$ = ideal gas constant (0.0831 L bar/mol K)
+- $T$ = temperature in Kelvin
 
 **Rules for water potential:**
-1. Pure water in an open container: \\(\\Psi = 0\\) (maximum water potential)
-2. Adding solute: \\(\\Psi_s\\) becomes more negative, \\(\\Psi\\) decreases
-3. Adding pressure: \\(\\Psi_p\\) increases, \\(\\Psi\\) increases
-4. Water always moves from higher \\(\\Psi\\) to lower \\(\\Psi\\)
+1. Pure water in an open container: $\\Psi = 0$ (maximum water potential)
+2. Adding solute: $\\Psi_s$ becomes more negative, $\\Psi$ decreases
+3. Adding pressure: $\\Psi_p$ increases, $\\Psi$ increases
+4. Water always moves from higher $\\Psi$ to lower $\\Psi$
       `
     },
     {

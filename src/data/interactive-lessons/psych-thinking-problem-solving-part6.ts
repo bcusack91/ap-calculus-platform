@@ -66,7 +66,7 @@ This section integrates ALL thinking and problem-solving concepts into a decisio
               'Confirmation bias — the other party will seek evidence supporting the first offer'
             ],
             correctAnswer: 2,
-            explanation: 'Anchoring: the first number in a negotiation becomes the "anchor" that pulls all subsequent offers toward it. If the negotiator opens with $90,000, the counterparty\'s counteroffer will be higher than if she had opened with $70,000 — even if the counterparty knows the anchor is strategic. Research consistently shows that anchors affect judgment even when people KNOW they\'re arbitrary (recall the wheel-of-fortune study). This is why negotiations experts advise: always make the first offer.'
+            explanation: 'Anchoring: the first number in a negotiation becomes the "anchor" that pulls all subsequent offers toward it. If the negotiator opens with \\$90,000, the counterparty\'s counteroffer will be higher than if she had opened with \\$70,000 — even if the counterparty knows the anchor is strategic. Research consistently shows that anchors affect judgment even when people KNOW they\'re arbitrary (recall the wheel-of-fortune study). This is why negotiations experts advise: always make the first offer.'
           }
         ]
       }
@@ -188,7 +188,7 @@ Real decisions often involve MULTIPLE biases at once:
       exercise: {
         questions: [
           {
-            question: 'A startup founder has invested $500,000 and two years into a product that market research now shows has no viable customer base. She decides to invest another $200,000(saying "We\'ve come too far to quit now." Later, she is also overheard saying "I\'m 90% confident this will succeed." Which TWO biases are MOST evident?',
+            question: 'A startup founder has invested \\$500,000 and two years into a product that market research now shows has no viable customer base. She decides to invest another \\$200,000(saying "We\'ve come too far to quit now." Later, she is also overheard saying "I\'m 90% confident this will succeed." Which TWO biases are MOST evident?',
             options: [
               'Availability heuristic and anchoring bias',
               'Sunk cost fallacy ("We\'ve come too far") and overconfidence ("90% confident" despite evidence suggesting failure)',

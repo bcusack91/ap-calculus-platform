@@ -25,13 +25,13 @@ Due to **diminishing marginal returns**: As more workers are added to fixed capi
 
 | Workers | MP (units) | Product Price | MRP |
 |---------|-----------|--------------|------|
-| 1 | 20 | $10 | $200 |
-| 2 | 16 | $10 | $160 |
-| 3 | 11 | $10 | $110 |
-| 4 | 7 | $10 | $70 |
-| 5 | 3 | $10 | $30 |
+| 1 | 20 | \\$10 | \\$200 |
+| 2 | 16 | \\$10 | \\$160 |
+| 3 | 11 | \\$10 | \\$110 |
+| 4 | 7 | \\$10 | \\$70 |
+| 5 | 3 | \\$10 | \\$30 |
 
-If the market wage is $70/hour, the firm hires **4 workers** (MRP ≥ W for workers 1-4).
+If the market wage is \\$70/hour, the firm hires **4 workers** (MRP ≥ W for workers 1-4).
 
 > 🔑 **Rule:** Hire until MRP = W. Every worker whose MRP ≥ W generates profit; stop when the next worker's MRP < W.
       `
@@ -45,7 +45,7 @@ If the market wage is $70/hour, the firm hires **4 workers** (MRP ≥ W for work
       exercise: {
         questions: [
           {
-            question: 'Based on the table above, if the market wage rises from $70 to $120, how many workers will the firm hire?',
+            question: 'Based on the table above, if the market wage rises from \\$70 to \\$120, how many workers will the firm hire?',
             options: [
               '2 workers',
               '3 workers',
@@ -53,7 +53,7 @@ If the market wage is $70/hour, the firm hires **4 workers** (MRP ≥ W for work
               '5 workers'
             ],
             correctAnswer: 0,
-            explanation: 'At W = $120, only workers 1 (MRP=$200) and 2 (MRP=$160) have MRP ≥ W. Worker 3 has MRP=$110 < $120, so only 2 are hired.'
+            explanation: 'At W = \\$120, only workers 1 (MRP=\\$200) and 2 (MRP=\\$160) have MRP ≥ W. Worker 3 has MRP=\\$110 < \\$120, so only 2 are hired.'
           },
           {
             question: 'The labor demand curve slopes downward because of:',
@@ -183,7 +183,7 @@ The minimum wage is a **price floor** on labor. If set above the equilibrium wag
       exercise: {
         questions: [
           {
-            question: 'In a competitive labor market with equilibrium wage of $14/hour, a minimum wage of $11/hour will:',
+            question: 'In a competitive labor market with equilibrium wage of \\$14/hour, a minimum wage of \\$11/hour will:',
             options: [
               'Create unemployment equal to the labor surplus',
               'Have no effect on wages or employment',
@@ -191,10 +191,10 @@ The minimum wage is a **price floor** on labor. If set above the equilibrium wag
               'Cause a shortage of workers'
             ],
             correctAnswer: 1,
-            explanation: '$11 is below the equilibrium of $14, so the minimum wage is NOT binding. The market wage stays at $14 — the floor has no effect.'
+            explanation: '\\$11 is below the equilibrium of \\$14, so the minimum wage is NOT binding. The market wage stays at \\$14 — the floor has no effect.'
           },
           {
-            question: 'A technology firm finds that each additional programmer adds $150,000 in annual revenue. If the market salary is $130,000, the firm should:',
+            question: 'A technology firm finds that each additional programmer adds \\$150,000 in annual revenue. If the market salary is \\$130,000, the firm should:',
             options: [
               'Stop hiring since salaries are too high',
               'Hire more programmers because MRP exceeds the wage',
@@ -202,7 +202,7 @@ The minimum wage is a **price floor** on labor. If set above the equilibrium wag
               'Hire exactly one programmer'
             ],
             correctAnswer: 1,
-            explanation: 'MRP ($150K) > W ($130K), so each additional programmer adds more revenue than they cost. The firm should hire more until MRP falls to equal the wage.'
+            explanation: 'MRP (\\$150K) > W (\\$130K), so each additional programmer adds more revenue than they cost. The firm should hire more until MRP falls to equal the wage.'
           }
         ]
       }

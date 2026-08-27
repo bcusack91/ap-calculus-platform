@@ -24,31 +24,31 @@ Active transport is essential for:
       content: `
 ### Primary Active Transport: The Na+/K+ ATPase
 
-The most important primary active transport protein in animal cells is the **sodium-potassium pump** (Na\\(^+\\)/K\\(^+\\) ATPase):
+The most important primary active transport protein in animal cells is the **sodium-potassium pump** (Na$^+$/K$^+$ ATPase):
 
 **For each ATP hydrolyzed, the pump moves:**
-- **3 Na\\(^+\\) ions OUT** of the cell
-- **2 K\\(^+\\) ions INTO** the cell
+- **3 Na$^+$ ions OUT** of the cell
+- **2 K$^+$ ions INTO** the cell
 
 This creates and maintains steep concentration gradients:
-- High Na\\(^+\\) outside, low Na\\(^+\\) inside
-- High K\\(^+\\) inside, low K\\(^+\\) outside
+- High Na$^+$ outside, low Na$^+$ inside
+- High K$^+$ inside, low K$^+$ outside
 - Net export of positive charge → contributes to the negative resting membrane potential (-70 mV)
 
 **The pump cycle:**
-1. 3 Na\\(^+\\) bind to cytoplasmic side of the pump
+1. 3 Na$^+$ bind to cytoplasmic side of the pump
 2. ATP is hydrolyzed; phosphate group is transferred to the pump (phosphorylation)
-3. Conformational change exposes Na\\(^+\\) to the extracellular side; Na\\(^+\\) is released
-4. 2 K\\(^+\\) bind to the extracellular side
+3. Conformational change exposes Na$^+$ to the extracellular side; Na$^+$ is released
+4. 2 K$^+$ bind to the extracellular side
 5. Dephosphorylation causes conformational change back
-6. K\\(^+\\) is released into the cytoplasm
+6. K$^+$ is released into the cytoplasm
 
-> **Energy Cost:** The Na\\(^+\\)/K\\(^+\\) ATPase consumes approximately **25-30% of total cellular ATP** in many animal cells. In neurons, this figure can reach 70%.
+> **Energy Cost:** The Na$^+$/K$^+$ ATPase consumes approximately **25-30% of total cellular ATP** in many animal cells. In neurons, this figure can reach 70%.
 
 **Other primary active transport pumps:**
-- **Ca\\(^{2+}\\) ATPase** — pumps Ca\\(^{2+}\\) out of the cytoplasm (into ER or extracellular space)
-- **H\\(^+\\)/K\\(^+\\) ATPase** — pumps H\\(^+\\) into the stomach lumen (gastric acid secretion)
-- **H\\(^+\\) ATPase (proton pump)** — in plant cell membranes, creates proton gradients for secondary transport
+- **Ca$^{2+}$ ATPase** — pumps Ca$^{2+}$ out of the cytoplasm (into ER or extracellular space)
+- **H$^+$/K$^+$ ATPase** — pumps H$^+$ into the stomach lumen (gastric acid secretion)
+- **H$^+$ ATPase (proton pump)** — in plant cell membranes, creates proton gradients for secondary transport
       `
     },
     {
@@ -97,15 +97,15 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
 **1. Symport (cotransport):**
 - Both substances move in the **same direction**
 - The ion moves DOWN its gradient, providing energy for the other substance to move AGAINST its gradient
-- Example: **SGLT1** — Na\\(^+\\)/glucose symporter in the intestinal epithelium uses the Na\\(^+\\) gradient (established by Na\\(^+\\)/K\\(^+\\) ATPase) to import glucose against its gradient
+- Example: **SGLT1** — Na$^+$/glucose symporter in the intestinal epithelium uses the Na$^+$ gradient (established by Na$^+$/K$^+$ ATPase) to import glucose against its gradient
 
 **2. Antiport (exchange):**
 - Substances move in **opposite directions**
-- Example: **Na\\(^+\\)/H\\(^+\\) exchanger** — Na\\(^+\\) enters (down its gradient), H\\(^+\\) exits (against its gradient), helping regulate intracellular pH
+- Example: **Na$^+$/H$^+$ exchanger** — Na$^+$ enters (down its gradient), H$^+$ exits (against its gradient), helping regulate intracellular pH
 
 > **Key Concept:** Secondary active transport is "indirectly" active — it does not directly use ATP, but it depends on a gradient that was created by a primary active transporter that DID use ATP. The energy was stored in the gradient.
 
-**In plants:** The H\\(^+\\) ATPase (proton pump) in the plasma membrane creates a proton gradient. This gradient powers secondary active transport of sucrose, amino acids, and other nutrients into the cell via H\\(^+\\)/solute symporters.
+**In plants:** The H$^+$ ATPase (proton pump) in the plasma membrane creates a proton gradient. This gradient powers secondary active transport of sucrose, amino acids, and other nutrients into the cell via H$^+$/solute symporters.
       `
     },
     {

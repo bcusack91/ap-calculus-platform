@@ -250,7 +250,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 3,
     explanation:
-      'Multiplier = 1 / (1 − 0.75) = 4. Change in GDP = 4 × $50B = $200B.',
+      'Multiplier = 1 / (1 − 0.75) = 4. Change in GDP = 4 × \\$50B = \\$200B.',
   },
   {
     type: 'mcq',
@@ -340,12 +340,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Tax multiplier = −MPC / (1 − MPC) = −0.75 / 0.25 = −3. ΔGDP = −3 × $100B = −$300B.',
+      'Tax multiplier = −MPC / (1 − MPC) = −0.75 / 0.25 = −3. ΔGDP = −3 × \\$100B = −\\$300B.',
   },
   {
     type: 'mcq',
     topic: 'unit-3-national-income-price',
-    question: 'If autonomous consumption is $300, MPC is 0.8, and disposable income is $1,000, total planned consumption equals:',
+    question: 'If autonomous consumption is \\$300, MPC is 0.8, and disposable income is \\$1,000, total planned consumption equals:',
     options: [
       '$800',
       '$1,000',
@@ -402,7 +402,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-3-national-income-price',
     stimulus:
-      'Diagram (described): The AD curve and SRAS curve intersect at price level 110 and real GDP $18 trillion. The vertical LRAS is drawn at $20 trillion.',
+      'Diagram (described): The AD curve and SRAS curve intersect at price level 110 and real GDP \\$18 trillion. The vertical LRAS is drawn at \\$20 trillion.',
     question: 'Which of the following is the most appropriate fiscal policy response to close the gap shown?',
     options: [
       'Increase income taxes by $1 trillion.',
@@ -412,7 +412,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'A short-run output of $18T below LRAS of $20T is a recessionary gap. Expansionary fiscal policy — increased G — shifts AD right to close the gap.',
+      'A short-run output of \\$18T below LRAS of \\$20T is a recessionary gap. Expansionary fiscal policy — increased G — shifts AD right to close the gap.',
   },
   {
     type: 'mcq',
@@ -458,7 +458,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Money multiplier = 1 / RR = 1 / 0.10 = 10. Maximum new money supply = $1,000 × 10 = $10,000 (which includes the original $1,000 deposit).',
+      'Money multiplier = 1 / RR = 1 / 0.10 = 10. Maximum new money supply = \\$1,000 × 10 = \\$10,000 (which includes the original \\$1,000 deposit).',
   },
   {
     type: 'mcq',
@@ -509,7 +509,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-4-financial-sector',
     question:
-      'If banks hold $10 billion in deposits and $1.5 billion in reserves, and the required reserve ratio is 10%, the banking system can create up to an additional:',
+      'If banks hold \\$10 billion in deposits and \\$1.5 billion in reserves, and the required reserve ratio is 10%, the banking system can create up to an additional:',
     options: [
       '$500 million in new loans, increasing the money supply.',
       '$5 billion in new loans.',
@@ -518,7 +518,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Required reserves = 10% × $10B = $1B. Excess reserves = $1.5B − $1B = $0.5B. Maximum loan creation = excess reserves × money multiplier = $0.5B × 10 = $5B.',
+      'Required reserves = 10% × \\$10B = \\$1B. Excess reserves = \\$1.5B − \\$1B = \\$0.5B. Maximum loan creation = excess reserves × money multiplier = \\$0.5B × 10 = \\$5B.',
   },
   {
     type: 'mcq',
@@ -697,7 +697,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-5-long-run-stabilization',
     stimulus:
-      'A nation\'s federal debt was $20 trillion at the end of Year 1. During Year 2, the federal government ran a budget deficit of $1.5 trillion.',
+      'A nation\'s federal debt was \\$20 trillion at the end of Year 1. During Year 2, the federal government ran a budget deficit of \\$1.5 trillion.',
     question: 'The nation\'s federal debt at the end of Year 2 is approximately:',
     options: [
       '$1.5 trillion',
@@ -707,7 +707,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Debt is the accumulated stock of past deficits. New debt = $20T + $1.5T = $21.5T.',
+      'Debt is the accumulated stock of past deficits. New debt = \\$20T + \\$1.5T = \\$21.5T.',
   },
   {
     type: 'mcq',

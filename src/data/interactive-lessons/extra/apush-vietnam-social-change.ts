@@ -9,7 +9,7 @@ import type { LessonData } from '../registry'
  * Concept/period-forward (non-math topic, APUSH Period 8, c. 1945–1980), so checks favor
  * multiple-choice + dropdown, with a handful of date / number / term input-boxes.
  * Every date, name, statute, and figure has been cross-checked. LaTeX uses DOUBLED
- * backslashes (template-literal strings); dollar amounts in prose are escaped as \$.
+ * backslashes (template-literal strings); dollar amounts in prose are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

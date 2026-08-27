@@ -89,7 +89,7 @@ Visible light is a small portion of the electromagnetic spectrum with wavelength
 |---------|---------------|-----------------|------|
 | **Chlorophyll a** | Blue-violet, red-orange | Green | Primary pigment; directly participates in light reactions |
 | **Chlorophyll b** | Blue, red-orange | Yellow-green | Accessory pigment; broadens absorption spectrum |
-| **Carotenoids** | Blue, green | Yellow, orange | Accessory pigments; photoprotection (quench reactive O\\(_2\\) species) |
+| **Carotenoids** | Blue, green | Yellow, orange | Accessory pigments; photoprotection (quench reactive O$_2$ species) |
 
 The **absorption spectrum** shows which wavelengths a pigment absorbs.  The **action spectrum** shows the rate of photosynthesis at each wavelength.  These two spectra closely match, confirming that light absorption drives photosynthesis.
 
@@ -149,26 +149,26 @@ The **absorption spectrum** shows which wavelengths a pigment absorbs.  The **ac
       content: `
 ### The Light-Dependent Reactions: Overview
 
-The light reactions use light energy to produce **ATP** and **NADPH**, which then power the Calvin cycle.  They also split water and release **O\\(_2\\)** as a byproduct.
+The light reactions use light energy to produce **ATP** and **NADPH**, which then power the Calvin cycle.  They also split water and release **O$_2$** as a byproduct.
 
 The process involves **linear (noncyclic) electron flow** through two photosystems:
 
 $$\\text{H}_2\\text{O} \\xrightarrow{\\text{PSII}} \\text{PQ} \\xrightarrow{\\text{Cyt b6f}} \\text{PC} \\xrightarrow{\\text{PSI}} \\text{Fd} \\rightarrow \\text{NADP}^+ \\rightarrow \\text{NADPH}$$
 
-1. **Photosystem II (PSII):** Light excites electrons in the P680 reaction center. The electrons are passed to the primary electron acceptor.  The "hole" left behind is filled by electrons from **water splitting** (photolysis): \\(2\\text{H}_2\\text{O} \\rightarrow 4\\text{H}^+ + 4e^- + \\text{O}_2\\)
-2. **Electron Transport Chain:** Electrons flow from PSII through plastoquinone (PQ), the cytochrome b6f complex (which pumps H\\(^+\\) into the thylakoid lumen), and plastocyanin (PC)
-3. **Photosystem I (PSI):** Light re-energizes electrons at the P700 reaction center. Electrons pass through ferredoxin (Fd) to NADP\\(^+\\) reductase
-4. **NADPH production:** NADP\\(^+\\) reductase reduces NADP\\(^+\\) to NADPH
+1. **Photosystem II (PSII):** Light excites electrons in the P680 reaction center. The electrons are passed to the primary electron acceptor.  The "hole" left behind is filled by electrons from **water splitting** (photolysis): $2\\text{H}_2\\text{O} \\rightarrow 4\\text{H}^+ + 4e^- + \\text{O}_2$
+2. **Electron Transport Chain:** Electrons flow from PSII through plastoquinone (PQ), the cytochrome b6f complex (which pumps H$^+$ into the thylakoid lumen), and plastocyanin (PC)
+3. **Photosystem I (PSI):** Light re-energizes electrons at the P700 reaction center. Electrons pass through ferredoxin (Fd) to NADP$^+$ reductase
+4. **NADPH production:** NADP$^+$ reductase reduces NADP$^+$ to NADPH
 
 **Chemiosmosis in Chloroplasts:**
 
-As H\\(^+\\) accumulates in the thylakoid lumen (from water splitting and proton pumping by cytochrome b6f), it flows back into the stroma through **ATP synthase**, driving ATP production.
+As H$^+$ accumulates in the thylakoid lumen (from water splitting and proton pumping by cytochrome b6f), it flows back into the stroma through **ATP synthase**, driving ATP production.
 
-| Source of H\\(^+\\) in lumen | Mechanism |
+| Source of H$^+$ in lumen | Mechanism |
 |----------------------------|-----------|
-| Water splitting (PSII) | Direct release of H\\(^+\\) in lumen |
-| Plastoquinone (PQ) shuttle | Carries H\\(^+\\) from stroma to lumen |
-| Cytochrome b6f complex | Actively pumps H\\(^+\\) into lumen |
+| Water splitting (PSII) | Direct release of H$^+$ in lumen |
+| Plastoquinone (PQ) shuttle | Carries H$^+$ from stroma to lumen |
+| Cytochrome b6f complex | Actively pumps H$^+$ into lumen |
       `
     },
     {

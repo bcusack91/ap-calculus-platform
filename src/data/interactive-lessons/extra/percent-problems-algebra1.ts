@@ -5,7 +5,7 @@ import type { LessonData } from '../registry'
  * Registry key / DB Topic.slug: 'percent-problems-algebra1'.
  * 5 parts, gold-standard structure: teach → worked examples → interactive practice
  * (multiple-choice + input-boxes + dropdown) → exit quiz. LaTeX uses doubled
- * backslashes (template-literal strings). Currency is escaped as \$.
+ * backslashes (template-literal strings). Currency is escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -434,11 +434,11 @@ $$\\text{percent change} = \\frac{\\text{new} - \\text{old}}{\\text{old}} \\time
 
 > ⚠️ **Always divide by the ORIGINAL (old) amount**, not the new one. The "old" value is your $100\\%$ baseline.
 
-### Worked Example: Price rises from \$40 to \$50
+### Worked Example: Price rises from \\$40 to \\$50
 
 $$\\frac{50 - 40}{40} \\times 100\\% = \\frac{10}{40} \\times 100\\% = 25\\% \\text{ increase}$$
 
-### Worked Example: Price drops from \$80 to \$60
+### Worked Example: Price drops from \\$80 to \\$60
 
 $$\\frac{60 - 80}{80} \\times 100\\% = \\frac{-20}{80} \\times 100\\% = -25\\% \\;(\\text{a } 25\\% \\text{ decrease})$$`,
       },
@@ -455,7 +455,7 @@ $$\\frac{60 - 80}{80} \\times 100\\% = \\frac{-20}{80} \\times 100\\% = -25\\% \
               explanation: '$\\frac{26-20}{20} \\times 100\\% = \\frac{6}{20} \\times 100\\% = 30\\%$. Divide the change by the ORIGINAL ($20$).',
             },
             {
-              question: 'A \$50 jacket is marked down to \$35. What is the percent decrease?',
+              question: 'A \\$50 jacket is marked down to \\$35. What is the percent decrease?',
               options: ['$15\\%$', '$35\\%$', '$30\\%$', '$43\\%$'],
               correctAnswer: 2,
               explanation: '$\\frac{35-50}{50} \\times 100\\% = \\frac{-15}{50} \\times 100\\% = -30\\%$, i.e. a $30\\%$ decrease.',
@@ -479,11 +479,11 @@ Instead of finding the change and then adding or subtracting, multiply **once** 
 
 > 🔑 **Rule:** To **increase** by $p\\%$, multiply by $\\left(1 + \\dfrac{p}{100}\\right)$. To **decrease** by $p\\%$, multiply by $\\left(1 - \\dfrac{p}{100}\\right)$.
 
-### Worked Example: \$60 meal with a $20\\%$ tip
+### Worked Example: \\$60 meal with a $20\\%$ tip
 
 $$60 \\times 1.20 = 72 \\;\\Rightarrow\\; \\$72 \\text{ total}$$
 
-### Worked Example: \$80 shoes, $25\\%$ off
+### Worked Example: \\$80 shoes, $25\\%$ off
 
 $$80 \\times 0.75 = 60 \\;\\Rightarrow\\; \\$60 \\text{ sale price}$$`,
       },
@@ -580,7 +580,7 @@ It ends at **\\$96** — a net **$4\\%$ loss**! The second $20\\%$ is taken from
         exercise: {
           questions: [
             {
-              question: 'A \$200 item goes up $50\\%$, then down $50\\%$. Final price?',
+              question: 'A \\$200 item goes up $50\\%$, then down $50\\%$. Final price?',
               options: ['$\\$200$', '$\\$150$', '$\\$100$', '$\\$50$'],
               correctAnswer: 1,
               explanation: '$200 \\times 1.50 = 300$, then $300 \\times 0.50 = 150$. The overall multiplier is $1.5 \\times 0.5 = 0.75$, a $25\\%$ net loss.',

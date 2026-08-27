@@ -117,11 +117,11 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
 
 | Transport Type | Direction relative to gradient | Energy required? | Protein required? | Examples |
 |---------------|-------------------------------|-----------------|------------------|---------|
-| Simple diffusion | Down | No | No | O\\(_2\\), CO\\(_2\\), ethanol |
-| Facilitated diffusion (channels) | Down | No | Yes (channel) | K\\(^+\\) leak channels, aquaporins |
+| Simple diffusion | Down | No | No | O$_2$, CO$_2$, ethanol |
+| Facilitated diffusion (channels) | Down | No | Yes (channel) | K$^+$ leak channels, aquaporins |
 | Facilitated diffusion (carriers) | Down | No | Yes (carrier) | GLUT glucose transporters |
-| Primary active transport | Against | Yes (ATP) | Yes (pump) | Na\\(^+\\)/K\\(^+\\) ATPase, Ca\\(^{2+}\\) ATPase |
-| Secondary active transport | Against (for cargo) | Yes (indirect — gradient) | Yes (cotransporter) | SGLT1, Na\\(^+\\)/H\\(^+\\) exchanger |
+| Primary active transport | Against | Yes (ATP) | Yes (pump) | Na$^+$/K$^+$ ATPase, Ca$^{2+}$ ATPase |
+| Secondary active transport | Against (for cargo) | Yes (indirect — gradient) | Yes (cotransporter) | SGLT1, Na$^+$/H$^+$ exchanger |
 | Exocytosis | Out of cell | Yes (ATP) | Yes (SNAREs) | Neurotransmitter release, insulin secretion |
 | Endocytosis | Into cell | Yes (ATP) | Yes (clathrin, receptors) | Phagocytosis, LDL receptor uptake |
       `

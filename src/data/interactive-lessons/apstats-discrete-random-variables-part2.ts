@@ -67,11 +67,11 @@ $$E(X) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7$$
       content: `
 **Expected Value Calculation** 🧮
 
-A game costs $5 to play. You win $20 with probability 0.2, win $5 with probability 0.3, and win $0 with probability 0.5.
+A game costs \\$5 to play. You win \\$20 with probability 0.2, win \\$5 with probability 0.3, and win \\$0 with probability 0.5.
 
 Let $X$ = net gain (winnings minus cost).
 
-**1)** $X$ values: $15, $0, and $\\\\underline{\\\\quad}$ (third net gain value)
+**1)** $X$ values: \\$15, \\$0, and $\\\\underline{\\\\quad}$ (third net gain value)
 
 **2)** $E(X) = ?$ (expected net gain)
 
@@ -80,10 +80,10 @@ Let $X$ = net gain (winnings minus cost).
       exercise: {
         boxes: 3,
         correctAnswers: ['-5', '-1', 'no'],
-        hint1: 'Win $0 minus $5 cost = ?',
+        hint1: 'Win \\$0 minus \\$5 cost = ?',
         hint2: '$E(X) = 15(0.2) + 0(0.3) + (-5)(0.5)$',
         hint3: 'Negative expected value means you lose money on average.',
-        explanation: '1) $0 - $5 = -$5. 2) $E(X) = 15(0.2) + 0(0.3) + (-5)(0.5) = 3 + 0 - 2.5 = -1$. 3) No — negative expected value.'
+        explanation: '1) \\$0 - \\$5 = -\\$5. 2) $E(X) = 15(0.2) + 0(0.3) + (-5)(0.5) = 3 + 0 - 2.5 = -1$. 3) No — negative expected value.'
       }
     }
   ]

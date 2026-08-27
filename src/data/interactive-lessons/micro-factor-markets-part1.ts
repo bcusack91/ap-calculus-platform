@@ -42,11 +42,11 @@ $$MRP = MP \\times P$$
 
 | Workers | Total Product | MP | Product Price | MRP |
 |---------|--------------|-----|--------------|-----|
-| 1 | 10 | 10 | $5 | $50 |
-| 2 | 18 | 8 | $5 | $40 |
-| 3 | 24 | 6 | $5 | $30 |
-| 4 | 28 | 4 | $5 | $20 |
-| 5 | 30 | 2 | $5 | $10 |
+| 1 | 10 | 10 | \\$5 | \\$50 |
+| 2 | 18 | 8 | \\$5 | \\$40 |
+| 3 | 24 | 6 | \\$5 | \\$30 |
+| 4 | 28 | 4 | \\$5 | \\$20 |
+| 5 | 30 | 2 | \\$5 | \\$10 |
 
 > The **MRP curve is the firm's demand curve for labor.**
       `
@@ -79,7 +79,7 @@ $$MRP = MP \\times P$$
               '$6'
             ],
             correctAnswer: 1,
-            explanation: 'The 3rd worker has MP = 6 units. MRP = MP × P = 6 × $5 = $30.'
+            explanation: 'The 3rd worker has MP = 6 units. MRP = MP × P = 6 × \\$5 = \\$30.'
           },
           {
             question: 'A profit-maximizing firm should hire workers up to the point where:',
@@ -216,7 +216,7 @@ The monopsonist must raise wages for ALL workers to attract one more, so MFC ris
             explanation: 'A monopsonist restricts hiring (lower employment) and pays a lower wage than would prevail in a competitive market — extracting surplus from workers.'
           },
           {
-            question: 'If the wage in a competitive labor market is $15/hour and a firm\'s MRP for the 10th worker is $18, the firm should:',
+            question: 'If the wage in a competitive labor market is \\$15/hour and a firm\'s MRP for the 10th worker is \\$18, the firm should:',
             options: [
               'Lay off the 10th worker since MRP exceeds the wage',
               'Hire more workers since MRP exceeds the wage',
@@ -224,7 +224,7 @@ The monopsonist must raise wages for ALL workers to attract one more, so MFC ris
               'Lower its product price to reduce MRP'
             ],
             correctAnswer: 1,
-            explanation: 'When MRP ($18) > W ($15), the additional worker generates more revenue than they cost. The firm should keep hiring until MRP = W.'
+            explanation: 'When MRP (\\$18) > W (\\$15), the additional worker generates more revenue than they cost. The firm should keep hiring until MRP = W.'
           }
         ]
       }

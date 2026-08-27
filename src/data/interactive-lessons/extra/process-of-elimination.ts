@@ -8,7 +8,7 @@ import type { LessonData } from '../registry'
  * input-boxes) → exit quiz. This is a test-taking strategy topic, so concept
  * checks favor multiple-choice and dropdown, with input-boxes used for
  * probability/counting facts. LaTeX uses doubled backslashes (template-literal
- * strings); bare dollar signs in prose are escaped as \$.
+ * strings); bare dollar signs in prose are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────

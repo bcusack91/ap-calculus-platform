@@ -18,7 +18,7 @@ This workshop applies DNA replication concepts to experimental scenarios and qua
       content: `
 ### Scenario 1: Replication Fork Analysis
 
-A researcher treats E. coli with radioactive thymidine (\\(^3\\)H-thymidine) for a brief pulse, then chases with unlabeled thymidine. After autoradiography of the replicating DNA:
+A researcher treats E. coli with radioactive thymidine ($^3$H-thymidine) for a brief pulse, then chases with unlabeled thymidine. After autoradiography of the replicating DNA:
 
 - The label appears as a band along the newly synthesized DNA
 - The leading strand shows a continuous band of label
@@ -57,20 +57,20 @@ A researcher treats E. coli with radioactive thymidine (\\(^3\\)H-thymidine) for
       content: `
 ### Scenario 2: Density Gradient Predictions
 
-Starting with one double-stranded DNA molecule where BOTH strands are labeled with \\(^{15}\\)N (heavy):
+Starting with one double-stranded DNA molecule where BOTH strands are labeled with $^{15}$N (heavy):
 
-**After 1 generation in \\(^{14}\\)N:**
-- 2 molecules, each with one \\(^{15}\\)N strand + one \\(^{14}\\)N strand = **2 intermediate**
+**After 1 generation in $^{14}$N:**
+- 2 molecules, each with one $^{15}$N strand + one $^{14}$N strand = **2 intermediate**
 
-**After 2 generations in \\(^{14}\\)N:**
+**After 2 generations in $^{14}$N:**
 - 4 molecules total
-- 2 have one \\(^{15}\\)N + one \\(^{14}\\)N = **2 intermediate**  
-- 2 have both \\(^{14}\\)N = **2 light**
+- 2 have one $^{15}$N + one $^{14}$N = **2 intermediate**  
+- 2 have both $^{14}$N = **2 light**
 
 **After n generations:**
-- Total molecules = \\(2^n\\)
+- Total molecules = $2^n$
 - Intermediate molecules = **always 2** (the two original parental strands + a new partner)
-- Light molecules = \\(2^n - 2\\)
+- Light molecules = $2^n - 2$
 - Heavy molecules = **0** (after generation 1)
 
 > **Quantitative AP Tip:** The number of intermediate-density molecules never changes (always 2) because the two original heavy strands are conserved indefinitely, each paired with a new light strand.

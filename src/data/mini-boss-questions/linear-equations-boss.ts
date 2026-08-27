@@ -78,7 +78,7 @@ export const linearEquationsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lin-6',
     type: 'word-problem',
-    question: 'A phone plan costs $30/month plus $0.05 per text. If the bill is $42.50, how many texts were sent?',
+    question: 'A phone plan costs \\$30/month plus \\$0.05 per text. If the bill is \\$42.50, how many texts were sent?',
     correctAnswer: '250',
     options: [
       { label: 'A', value: '250', isCorrect: true },

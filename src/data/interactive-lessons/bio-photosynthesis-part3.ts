@@ -9,7 +9,7 @@ export const bioPhotosynthesisPart3Data = {
 
 **Part 3 of 7**
 
-The Calvin cycle (named after Melvin Calvin, who traced its steps using radioactive \\(^{14}\\text{C}\\)) uses the ATP and NADPH produced by the light reactions to fix atmospheric CO\\(_2\\) into organic molecules.  It occurs in the **stroma** of the chloroplast and does not directly require light — though it depends on the light reactions for its energy inputs.
+The Calvin cycle (named after Melvin Calvin, who traced its steps using radioactive $^{14}\\text{C}$) uses the ATP and NADPH produced by the light reactions to fix atmospheric CO$_2$ into organic molecules.  It occurs in the **stroma** of the chloroplast and does not directly require light — though it depends on the light reactions for its energy inputs.
       `
     },
     {
@@ -18,11 +18,11 @@ The Calvin cycle (named after Melvin Calvin, who traced its steps using radioact
       content: `
 ### The Three Phases of the Calvin Cycle
 
-The Calvin cycle can be divided into three phases.  For each molecule of CO\\(_2\\) fixed, the cycle uses **3 ATP** and **2 NADPH**.  Three complete turns of the cycle fix 3 CO\\(_2\\) and produce one net molecule of glyceraldehyde-3-phosphate (G3P).
+The Calvin cycle can be divided into three phases.  For each molecule of CO$_2$ fixed, the cycle uses **3 ATP** and **2 NADPH**.  Three complete turns of the cycle fix 3 CO$_2$ and produce one net molecule of glyceraldehyde-3-phosphate (G3P).
 
 **Phase 1: Carbon Fixation**
 
-The enzyme **RuBisCO** (ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyzes the attachment of CO\\(_2\\) to the 5-carbon sugar **RuBP** (ribulose-1,5-bisphosphate), forming an unstable 6-carbon intermediate that immediately splits into two molecules of **3-PGA** (3-phosphoglycerate):
+The enzyme **RuBisCO** (ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyzes the attachment of CO$_2$ to the 5-carbon sugar **RuBP** (ribulose-1,5-bisphosphate), forming an unstable 6-carbon intermediate that immediately splits into two molecules of **3-PGA** (3-phosphoglycerate):
 
 $$\\text{CO}_2 + \\text{RuBP (5C)} \\longrightarrow 2 \\times \\text{3-PGA (3C)}$$
 
@@ -40,21 +40,21 @@ This is the step that converts the energy of ATP and NADPH into the chemical bon
 
 Five of every six G3P molecules are rearranged and phosphorylated (using ATP) to regenerate 3 RuBP molecules, allowing the cycle to continue.  Only **one out of every six G3P** molecules represents net carbon gain and exits the cycle.
 
-**Summary for 3 turns of the cycle (3 CO\\(_2\\) fixed):**
+**Summary for 3 turns of the cycle (3 CO$_2$ fixed):**
 
 | Input | Amount |
 |-------|--------|
-| CO\\(_2\\) | 3 |
+| CO$_2$ | 3 |
 | ATP | 9 |
 | NADPH | 6 |
 
 | Output | Amount |
 |--------|--------|
 | G3P (net) | 1 (a 3-carbon sugar) |
-| ADP + P\\(_i\\) | 9 |
-| NADP\\(^+\\) | 6 |
+| ADP + P$_i$ | 9 |
+| NADP$^+$ | 6 |
 
-Two net G3P molecules (from 6 turns / 6 CO\\(_2\\)) can be combined to make one glucose.
+Two net G3P molecules (from 6 turns / 6 CO$_2$) can be combined to make one glucose.
       `
     },
     {
@@ -107,19 +107,19 @@ Two net G3P molecules (from 6 turns / 6 CO\\(_2\\)) can be combined to make one 
       content: `
 ### RuBisCO: The Most Important (and Imperfect) Enzyme
 
-RuBisCO has a critical flaw: it can react with **O\\(_2\\)** as well as CO\\(_2\\).  When O\\(_2\\) binds to RuBP instead of CO\\(_2\\), the process is called **photorespiration**:
+RuBisCO has a critical flaw: it can react with **O$_2$** as well as CO$_2$.  When O$_2$ binds to RuBP instead of CO$_2$, the process is called **photorespiration**:
 
 $$\\text{RuBP} + \\text{O}_2 \\longrightarrow \\text{3-PGA (3C)} + \\text{Phosphoglycolate (2C)}$$
 
-Phosphoglycolate is toxic and must be recycled in a complex pathway involving the chloroplast, peroxisome, and mitochondrion — **consuming ATP and releasing CO\\(_2\\) without producing useful sugar**.
+Phosphoglycolate is toxic and must be recycled in a complex pathway involving the chloroplast, peroxisome, and mitochondrion — **consuming ATP and releasing CO$_2$ without producing useful sugar**.
 
 **Photorespiration:**
 - Wastes energy (ATP and NADPH are consumed without net carbon fixation)
-- Increases when O\\(_2\\) concentration is high relative to CO\\(_2\\)
-- Is more severe at **high temperatures** (RuBisCO has lower affinity for CO\\(_2\\) at higher temperatures, and O\\(_2\\) solubility decreases less than CO\\(_2\\) solubility)
+- Increases when O$_2$ concentration is high relative to CO$_2$
+- Is more severe at **high temperatures** (RuBisCO has lower affinity for CO$_2$ at higher temperatures, and O$_2$ solubility decreases less than CO$_2$ solubility)
 - Reduces photosynthetic efficiency by as much as 25-50% in C3 plants on hot days
 
-> **Why does RuBisCO bind O\\(_2\\)?** RuBisCO evolved ~3.5 billion years ago when Earth had very little atmospheric O\\(_2\\).  It never needed to distinguish between CO\\(_2\\) and O\\(_2\\).  Today, with ~21% O\\(_2\\) in the atmosphere, this ancient inability to discriminate is a significant liability.
+> **Why does RuBisCO bind O$_2$?** RuBisCO evolved ~3.5 billion years ago when Earth had very little atmospheric O$_2$.  It never needed to distinguish between CO$_2$ and O$_2$.  Today, with ~21% O$_2$ in the atmosphere, this ancient inability to discriminate is a significant liability.
       `
     },
     {

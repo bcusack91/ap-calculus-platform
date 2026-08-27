@@ -29,13 +29,13 @@ Cellular respiration can be divided into four main stages, each occurring in a s
 | Stage | Location | Input(s) | Output(s) | ATP Yield |
 |-------|----------|----------|-----------|-----------|
 | **Glycolysis** | Cytoplasm | 1 Glucose | 2 Pyruvate, 2 NADH, 2 ATP (net) | 2 ATP |
-| **Pyruvate Oxidation** | Mitochondrial matrix | 2 Pyruvate | 2 Acetyl-CoA, 2 NADH, 2 CO\\(_2\\) | 0 ATP |
-| **Citric Acid Cycle** | Mitochondrial matrix | 2 Acetyl-CoA | 4 CO\\(_2\\), 6 NADH, 2 FADH\\(_2\\), 2 ATP | 2 ATP |
-| **Oxidative Phosphorylation** | Inner mitochondrial membrane | NADH, FADH\\(_2\\), O\\(_2\\) | H\\(_2\\)O, ~30-34 ATP | ~30-34 ATP |
+| **Pyruvate Oxidation** | Mitochondrial matrix | 2 Pyruvate | 2 Acetyl-CoA, 2 NADH, 2 CO$_2$ | 0 ATP |
+| **Citric Acid Cycle** | Mitochondrial matrix | 2 Acetyl-CoA | 4 CO$_2$, 6 NADH, 2 FADH$_2$, 2 ATP | 2 ATP |
+| **Oxidative Phosphorylation** | Inner mitochondrial membrane | NADH, FADH$_2$, O$_2$ | H$_2$O, ~30-34 ATP | ~30-34 ATP |
 
 The total theoretical maximum yield is **30-38 ATP** per glucose, depending on the shuttle system used to transport cytoplasmic NADH into the mitochondria.
 
-> **Key Concept:** The vast majority of ATP (~90%) is produced in the final stage — oxidative phosphorylation. The earlier stages primarily generate the electron carriers (NADH and FADH\\(_2\\)) that feed into the electron transport chain.
+> **Key Concept:** The vast majority of ATP (~90%) is produced in the final stage — oxidative phosphorylation. The earlier stages primarily generate the electron carriers (NADH and FADH$_2$) that feed into the electron transport chain.
       `
     },
     {
@@ -94,10 +94,10 @@ At its core, cellular respiration is a series of **redox reactions**.  Understan
 
 | Term | Definition | Example in Respiration |
 |------|-----------|----------------------|
-| **Oxidation** | Loss of electrons (often loss of H atoms) | Glucose is oxidized to CO\\(_2\\) |
-| **Reduction** | Gain of electrons (often gain of H atoms) | O\\(_2\\) is reduced to H\\(_2\\)O |
+| **Oxidation** | Loss of electrons (often loss of H atoms) | Glucose is oxidized to CO$_2$ |
+| **Reduction** | Gain of electrons (often gain of H atoms) | O$_2$ is reduced to H$_2$O |
 
-When glucose is oxidized, it does not lose all its electrons at once in a single explosive reaction.  Instead, enzymes remove electrons **gradually**, passing them to the coenzyme NAD\\(^+\\), which is reduced to NADH:
+When glucose is oxidized, it does not lose all its electrons at once in a single explosive reaction.  Instead, enzymes remove electrons **gradually**, passing them to the coenzyme NAD$^+$, which is reduced to NADH:
 
 $$\\text{NAD}^+ + 2\\text{H} \\longrightarrow \\text{NADH} + \\text{H}^+$$
 
@@ -148,7 +148,7 @@ Each NADH molecule carries a pair of high-energy electrons.  These electrons tra
 ATP consists of three components: the nitrogenous base adenine, the sugar ribose, and a chain of **three phosphate groups**.  The bonds between the phosphate groups are often called "high-energy bonds" — not because the bonds themselves are unusually strong, but because **hydrolysis of these bonds releases a large amount of free energy** due to:
 
 1. **Electrostatic repulsion** — the negatively charged phosphate groups repel each other
-2. **Resonance stabilization** — the products (ADP + P\\(_i\\)) are more stable than ATP
+2. **Resonance stabilization** — the products (ADP + P$_i$) are more stable than ATP
 3. **Increased entropy** — hydrolysis increases the number of molecules in solution
 
 $$\\text{ATP} + \\text{H}_2\\text{O} \\longrightarrow \\text{ADP} + \\text{P}_i + \\text{energy} \\quad (\\Delta G = -30.5 \\text{ kJ/mol})$$

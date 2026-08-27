@@ -153,15 +153,15 @@ export const psychHistoryApproachesPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Five employees earn $30K, $32K, $35K, $33K, and $200K. Which measure of central tendency best represents the typical salary?',
+            question: 'Five employees earn \\$30K, \\$32K, \\$35K, \\$33K, and \\$200K. Which measure of central tendency best represents the typical salary?',
             options: [
-              'Median ($33K) — the mean would be inflated by the $200K outlier',
+              'Median (\\$33K) — the mean would be inflated by the \\$200K outlier',
               'Mean ($66K) — it averages all values equally',
               'Mode — use the most frequent value',
               'Range — it captures the spread of salaries'
             ],
             correctAnswer: 0,
-            explanation: 'The $200K salary is an extreme outlier that pulls the mean ($66K) far above most salaries. The median ($33K) is unaffected by outliers and better represents the typical salary. This is why the AP exam tests when to use mean vs. median.'
+            explanation: 'The \\$200K salary is an extreme outlier that pulls the mean (\\$66K) far above most salaries. The median (\\$33K) is unaffected by outliers and better represents the typical salary. This is why the AP exam tests when to use mean vs. median.'
           },
           {
             question: 'A personality test gives a student similar scores every time they take it, but experts agree it doesn\'t actually measure personality well. This test has:',

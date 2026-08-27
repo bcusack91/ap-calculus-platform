@@ -19,10 +19,10 @@ export const FRQS: SAQItem[] = [
     stimulus: `**FRQ #1 — Methods & Control Structures: Discount Calculator (9 points)**
 
 A retail store offers a tiered discount:
-- subtotal < $50.00 ⇒ no discount
-- $50.00 ≤ subtotal < $100.00 ⇒ 10% off
-- $100.00 ≤ subtotal < $250.00 ⇒ 15% off
-- subtotal ≥ $250.00 ⇒ 20% off
+- subtotal < \\$50.00 ⇒ no discount
+- \\$50.00 ≤ subtotal < \\$100.00 ⇒ 10% off
+- \\$100.00 ≤ subtotal < \\$250.00 ⇒ 15% off
+- subtotal ≥ \\$250.00 ⇒ 20% off
 
 Additionally, members of the loyalty program receive an extra 5% off the *already-discounted* total. Sales tax of 7% is then applied to the final amount.`,
     parts: [

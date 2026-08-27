@@ -27,7 +27,7 @@ Simple diffusion is the net movement of molecules from a region of **higher conc
 
 **Characteristics:**
 - No protein required
-- Only small, nonpolar molecules (O\\(_2\\), CO\\(_2\\), N\\(_2\\)) and some small uncharged polar molecules (ethanol) can diffuse through the lipid bilayer
+- Only small, nonpolar molecules (O$_2$, CO$_2$, N$_2$) and some small uncharged polar molecules (ethanol) can diffuse through the lipid bilayer
 - Rate depends on: concentration gradient, temperature, membrane surface area, and membrane thickness
 
 > **Equilibrium does NOT mean no movement** — at equilibrium, molecules continue to move randomly in both directions, but the **net movement** is zero because the rates of movement in both directions are equal.
@@ -45,7 +45,7 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
 
 **1. Channel Proteins:**
 - Form a hydrophilic pore through the membrane
-- Very fast (up to 10\\(^8\\) ions/second)
+- Very fast (up to 10$^8$ ions/second)
 - Selective — each channel is specific to particular ions or molecules
 - **Gated channels** can be regulated:
   - *Voltage-gated* — open/close in response to membrane potential changes (neurons)
@@ -65,7 +65,7 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
 | Mechanism | Hydrophilic pore | Conformational change |
 | Speed | Very fast | Slower |
 | Saturation | Rarely saturated | Can be saturated |
-| Example | K\\(^+\\) channels, aquaporins | GLUT glucose transporters |
+| Example | K$^+$ channels, aquaporins | GLUT glucose transporters |
       `
     },
     {
@@ -126,8 +126,8 @@ For uncharged molecules, the concentration gradient alone determines the directi
 Together these form the **electrochemical gradient**.  An ion might move against its concentration gradient if the electrical force is strong enough (or vice versa).
 
 The **membrane potential** (typically -70 mV in animal cells, inside negative) means:
-- Cations (like K\\(^+\\)) have an electrical force pulling them INTO the cell
-- Anions (like Cl\\(^-\\)) have an electrical force pushing them OUT of the cell
+- Cations (like K$^+$) have an electrical force pulling them INTO the cell
+- Anions (like Cl$^-$) have an electrical force pushing them OUT of the cell
 
 > **AP Exam Tip:** When asked about ion movement, always consider BOTH the concentration gradient AND the electrical gradient.
       `

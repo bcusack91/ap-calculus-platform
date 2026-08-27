@@ -612,7 +612,7 @@ export const SAT_PASSAGES: ReadingPassage[] = [
     id: 'soc-14',
     title: 'Prospect Theory',
     genre: 'social-science',
-    text: `Kahneman and Tversky’s prospect theory, published in 1979, challenged the classical economic assumption that people evaluate outcomes rationally. Their research demonstrated that people feel the pain of a loss roughly twice as strongly as the pleasure of an equivalent gain — a phenomenon called loss aversion. A person who loses $100, for example, experiences more distress than the satisfaction they would derive from finding $100. Prospect theory also showed that people tend to be risk-averse when facing gains but risk-seeking when facing losses.`,
+    text: `Kahneman and Tversky’s prospect theory, published in 1979, challenged the classical economic assumption that people evaluate outcomes rationally. Their research demonstrated that people feel the pain of a loss roughly twice as strongly as the pleasure of an equivalent gain — a phenomenon called loss aversion. A person who loses \\$100, for example, experiences more distress than the satisfaction they would derive from finding \\$100. Prospect theory also showed that people tend to be risk-averse when facing gains but risk-seeking when facing losses.`,
     questions: [
       {
         question: 'According to prospect theory, a person holding a stock that has lost 20% of its value would most likely',

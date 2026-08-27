@@ -5,7 +5,7 @@ import type { LessonData } from '../registry'
  * Registry key / DB Topic.slug: 'percent-applications'.
  * 5 parts, gold-standard structure: teach → worked examples → interactive practice
  * (multiple-choice + input-boxes + dropdown) → exit quiz. LaTeX uses doubled
- * backslashes (template-literal strings); bare dollar signs are escaped as \$.
+ * backslashes (template-literal strings); bare dollar signs are escaped as \\$.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -449,7 +449,7 @@ $$\\text{percent change} = \\frac{\\text{new} - \\text{original}}{\\text{origina
 
 A positive result is an **increase**; a negative result is a **decrease**.
 
-### Worked Example: A price rises from \$50 to \$65
+### Worked Example: A price rises from \\$50 to \\$65
 
 **Step 1 — Find the change:** $65 - 50 = 15$
 
@@ -604,9 +604,9 @@ Each price already includes the change. Find the **original** price in dollars b
         exercise: {
           boxes: 3,
           correctAnswers: ['60', '200', '150'],
-          hint1: '\$45 is $75\\%$ of the original: $\\frac{45}{0.75} = 60$.',
-          hint2: '\$220 is $110\\%$ of the pre-tax price: $\\frac{220}{1.10} = 200$.',
-          hint3: '\$90 is $60\\%$ of the original: $\\frac{90}{0.60} = 150$.',
+          hint1: '\\\$45 is $75\\%$ of the original: $\\frac{45}{0.75} = 60$.',
+          hint2: '\\\$220 is $110\\%$ of the pre-tax price: $\\frac{220}{1.10} = 200$.',
+          hint3: '\\\$90 is $60\\%$ of the original: $\\frac{90}{0.60} = 150$.',
           explanation: '1) $45 \\div 0.75 = 60$.  2) $220 \\div 1.10 = 200$.  3) $90 \\div 0.60 = 150$. Discounts divide by the complement; tax divides by $1 + \\text{rate}$.',
         },
       },

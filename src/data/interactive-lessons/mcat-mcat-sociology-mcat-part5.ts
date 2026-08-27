@@ -14,7 +14,7 @@ export const mcatSociologyPart5Data = {
 |------|-----------|
 | **Crude birth rate** | Live births per 1,000 people per year |
 | **Total fertility rate (TFR)** | Average number of children per woman over her lifetime |
-| **Replacement-level fertility** | TFR ≈ \\(2.1\\); below this, a population shrinks without migration |
+| **Replacement-level fertility** | TFR ≈ $2.1$; below this, a population shrinks without migration |
 | **Crude death (mortality) rate** | Deaths per 1,000 people per year |
 | **Infant mortality rate** | Deaths under age 1 per 1,000 live births (a sensitive index of population health) |
 | **Migration** | Movement of people between areas (immigration in / emigration out) |
@@ -107,7 +107,7 @@ In **Stage 2**, death rates fall first (sanitation, vaccines, food supply) while
 **Question:** Country X: TFR = 1.6, median age = 44, death rate slightly exceeds birth rate, large elderly cohort. Which demographic-transition stage is it in, and what policy challenge follows?
 
 **Solution:**
-1. Low fertility (below replacement \\(2.1\\)) + low death rate + aging population → **Stage 4 (post-industrial)**, possibly declining population. ✓
+1. Low fertility (below replacement $2.1$) + low death rate + aging population → **Stage 4 (post-industrial)**, possibly declining population. ✓
 2. A growing elderly share raises the **dependency ratio** (fewer workers per retiree) → strain on healthcare and pension systems. ✓
 
 **MCAT skill:** Below-replacement TFR + high median age = post-industrial/Stage 4; expect aging-population and dependency-ratio consequences.
@@ -143,7 +143,7 @@ In **Stage 2**, death rates fall first (sanitation, vaccines, food supply) while
       type: 'text' as const,
       content: `### Key Takeaways — Part 5
 
-- Replacement-level fertility ≈ \\(2.1\\); below it, populations shrink without migration.
+- Replacement-level fertility ≈ $2.1$; below it, populations shrink without migration.
 - Demographic transition: Stage 2 boom = death rates fall first while birth rates stay high.
 - Epidemiological transition: infectious → chronic disease burden as nations develop.
 - Population change = (births − deaths) + (immigration − emigration); know push vs. pull.

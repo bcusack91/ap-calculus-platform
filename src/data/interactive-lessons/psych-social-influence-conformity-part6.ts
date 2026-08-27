@@ -191,7 +191,7 @@ When a social influence question is tricky, systematically eliminate:
       exercise: {
         questions: [
           {
-            question: 'In a classic study, participants performed a boring task and were paid either $1 or $20 to tell the next participant it was enjoyable. Those paid $1 later rated the task as more enjoyable. A student explains this by saying, "The $1 participants must have been people who naturally enjoy boring tasks." This explanation BEST demonstrates:',
+            question: 'In a classic study, participants performed a boring task and were paid either \\$1 or \\$20 to tell the next participant it was enjoyable. Those paid \\$1 later rated the task as more enjoyable. A student explains this by saying, "The \\$1 participants must have been people who naturally enjoy boring tasks." This explanation BEST demonstrates:',
             options: [
               'Cognitive dissonance — the student is experiencing psychological tension',
               'The fundamental attribution error — attributing behavior to disposition rather than the situational manipulation',
@@ -199,7 +199,7 @@ When a social influence question is tricky, systematically eliminate:
               'Normative social influence — the student is conforming to the expected interpretation'
             ],
             correctAnswer: 1,
-            explanation: 'Beautiful integration question! The $1/$20 finding is about cognitive dissonance (insufficient justification), but the STUDENT\'S EXPLANATION is a separate concept — the FAE. The student attributes the $1 participants\' behavior to their personality (\"naturally enjoy boring tasks\") rather than the situational factor (insufficient monetary justification creating dissonance). This is exactly the FAE: overestimating dispositional factors and underestimating situational ones.'
+            explanation: 'Beautiful integration question! The \\$1/\\$20 finding is about cognitive dissonance (insufficient justification), but the STUDENT\'S EXPLANATION is a separate concept — the FAE. The student attributes the $1 participants\' behavior to their personality (\"naturally enjoy boring tasks\") rather than the situational factor (insufficient monetary justification creating dissonance). This is exactly the FAE: overestimating dispositional factors and underestimating situational ones.'
           },
           {
             question: 'A manager notices that her team generates more creative ideas when brainstorming individually vs. in a group. When the team works together, some members contribute very little while a few do most of the work. The REDUCED creativity in the group is BEST explained by:',

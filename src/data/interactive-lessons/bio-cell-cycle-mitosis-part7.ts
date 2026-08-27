@@ -18,10 +18,10 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
       content: `
 ### Key Principles Summary
 
-1. The cell cycle consists of **interphase** (G\\(_1\\), S, G\\(_2\\)) and **M phase** (mitosis + cytokinesis)
+1. The cell cycle consists of **interphase** (G$_1$, S, G$_2$) and **M phase** (mitosis + cytokinesis)
 2. **Mitosis** produces two genetically identical daughter cells (preserving chromosome number)
 3. **Cyclin-Cdk complexes** drive progression through each phase; cyclin degradation resets the system
-4. **Checkpoints** (G\\(_1\\)/S, G\\(_2\\)/M, SAC) ensure accuracy before committing to the next phase
+4. **Checkpoints** (G$_1$/S, G$_2$/M, SAC) ensure accuracy before committing to the next phase
 5. **Cancer** results from mutations in proto-oncogenes (gain of function) and tumor suppressors (loss of function)
 6. Cytokinesis uses a **cleavage furrow** (animal) or **cell plate** (plant)
       `

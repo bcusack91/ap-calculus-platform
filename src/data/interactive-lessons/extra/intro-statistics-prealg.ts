@@ -352,15 +352,15 @@ Range = largest − smallest.
 
 An **outlier** is a value that is much larger or much smaller than the rest of the data.
 
-Consider weekly allowances (\$): $10, 12, 11, 13, 60$.
+Consider weekly allowances (\\$): $10, 12, 11, 13, 60$.
 
-Four students get around \$10–13, but one gets \$60. That \$60 is an **outlier** — it stands far apart from the rest.
+Four students get around \\$10–13, but one gets \\$60. That \\$60 is an **outlier** — it stands far apart from the rest.
 
 ### How an outlier affects the mean
 
 $$\\text{mean} = \\frac{10 + 12 + 11 + 13 + 60}{5} = \\frac{106}{5} = 21.2$$
 
-The mean is \$21.2 — but **no one** actually gets close to that! The single large outlier dragged the mean way up.
+The mean is \\$21.2 — but **no one** actually gets close to that! The single large outlier dragged the mean way up.
 
 > ⚠️ **The mean is sensitive to outliers.** One extreme value can pull it far from where most of the data sits.`,
       },
@@ -371,7 +371,7 @@ The mean is \$21.2 — but **no one** actually gets close to that! The single la
 
 Compare what each measure does to the allowance data $10, 11, 12, 13, 60$ (now in order):
 
-| Measure | Value | Affected by the \$60 outlier? |
+| Measure | Value | Affected by the \\$60 outlier? |
 |---------|-------|------------------------------|
 | Mean | $\\dfrac{106}{5} = 21.2$ | **Yes** — pulled high |
 | Median | middle value $= 12$ | **Barely** — still $12$ |

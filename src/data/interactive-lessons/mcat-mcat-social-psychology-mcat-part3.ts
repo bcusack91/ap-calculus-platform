@@ -53,7 +53,7 @@ These three are distinguished by the SOURCE of social influence.
             explanation: `The presence of even ONE ally who dissents shatters the unanimity of the majority and frees the participant to give the correct answer — conformity plummets. Unanimity is the critical ingredient; break it and normative pressure collapses.`
           },
           {
-            question: `A fundraiser first asks you to donate $500 (you refuse), then asks for $20 (you agree). This compliance technique is:`,
+            question: `A fundraiser first asks you to donate \\$500 (you refuse), then asks for \\$20 (you agree). This compliance technique is:`,
             options: [`Door-in-the-face`, `Foot-in-the-door`, `Lowball`, `That's-not-all`],
             correctAnswer: 0,
             explanation: `Door-in-the-face starts with a large request that is expected to be refused, then follows with a smaller one. The concession triggers reciprocity (they "compromised," so you should too). Foot-in-the-door is the reverse: small request first, then larger.`

@@ -7,7 +7,7 @@ import type { LessonData } from '../registry'
  * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
  * worked rhetorical analysis → Exit Quiz. Non-math humanities topic, so concept checks
  * favor multiple-choice and dropdown-select, with short-answer input-boxes used for
- * device-naming drills. No LaTeX needed; any bare dollar signs in prose are escaped as \$.
+ * device-naming drills. No LaTeX needed; any bare dollar signs in prose are escaped as \\$.
  * Every device, definition, and example below was verified before writing.
  */
 export const parts: LessonData[] = [

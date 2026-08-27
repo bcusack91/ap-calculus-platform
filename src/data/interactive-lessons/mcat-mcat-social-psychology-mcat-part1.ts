@@ -35,7 +35,7 @@ $$\\text{Conflicting cognitions} \\to \\text{psychological discomfort} \\to \\te
 
 People resolve dissonance by: **changing the attitude**, **changing the behavior**, or **adding a justification** (rationalization).
 
-**Counterintuitive finding:** SMALLER incentives produce MORE attitude change. With a small reward, there's no external justification for the behavior, so people change their internal attitude to reduce dissonance (Festinger & Carlsmith $1 vs. $20 study).`
+**Counterintuitive finding:** SMALLER incentives produce MORE attitude change. With a small reward, there's no external justification for the behavior, so people change their internal attitude to reduce dissonance (Festinger & Carlsmith \\$1 vs. \\$20 study).`
     },
     {
       id: 'sp1-quiz1',
@@ -44,10 +44,10 @@ People resolve dissonance by: **changing the attitude**, **changing the behavior
       exercise: {
         questions: [
           {
-            question: `In Festinger & Carlsmith's study, participants paid only $1 to lie that a boring task was fun rated the task as MORE enjoyable than those paid $20. This is because:`,
+            question: `In Festinger & Carlsmith's study, participants paid only \\$1 to lie that a boring task was fun rated the task as MORE enjoyable than those paid \\$20. This is because:`,
             options: [`The $1 group had insufficient external justification, so they changed their attitude to reduce dissonance`, `The $1 group was paid enough to believe the lie`, `The $20 group experienced more dissonance`, `Money always increases attitude change`],
             correctAnswer: 0,
-            explanation: `The $20 group had a strong external justification ("I lied for the money"), so little dissonance and no attitude change. The $1 group couldn't justify lying externally, creating dissonance they resolved by genuinely deciding the task was fun. Less external justification → MORE internal attitude change.`
+            explanation: `The \\$20 group had a strong external justification ("I lied for the money"), so little dissonance and no attitude change. The \\$1 group couldn't justify lying externally, creating dissonance they resolved by genuinely deciding the task was fun. Less external justification → MORE internal attitude change.`
           },
           {
             question: `A consumer carefully weighs the technical specifications of two laptops before buying. According to the elaboration likelihood model, this person is using the:`,

@@ -37,7 +37,7 @@ $C = 2m + 3$. For 7 miles: $C = 2(7) + 3 = 17$ → **\\$17** ✅
       exercise: {
         questions: [
           {
-                    "question": "Gym: $50 join + $30/mo. Cost after 6 months?",
+                    "question": "Gym: \\$50 join + \\$30/mo. Cost after 6 months?",
                     "options": [
                               "$230",
                               "$180",

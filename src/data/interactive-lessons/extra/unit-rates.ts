@@ -8,7 +8,7 @@ import type { LessonData } from '../registry'
  * backslashes (template-literal strings).
  *
  * CURRENCY CONVENTION: every dollar amount is written math-wrapped as `$\\$N$`
- * (renders `\$N` inside KaTeX). This is the only form that is safe in BOTH render
+ * (renders `\\$N` inside KaTeX). This is the only form that is safe in BOTH render
  * paths — the markdown/remark-math path used for `text` content AND the
  * renderRichText path used for multiple-choice / dropdown options, questions,
  * hints, and explanations — and it can never collide with neighbouring inline math.

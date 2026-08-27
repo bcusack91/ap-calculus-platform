@@ -24,9 +24,9 @@ export const g7ProportionalPart5Data = {
       content: `
 ## Worked Example
 
-**Meal: \$45. Tip: 20%. Total?**
+**Meal: \\$45. Tip: 20%. Total?**
 
-Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
+Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\\$54** ✅
     
     `
     },
@@ -58,11 +58,11 @@ Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
       content: `
 **Percent Applications** 🧮
 
-1) \$80 + 10% tax. Total?
+1) \\$80 + 10% tax. Total?
 
-2) \$60 with 25% off. Sale price?
+2) \\$60 with 25% off. Sale price?
 
-3) Was \$40, now \$50. Percent increase?
+3) Was \\$40, now \\$50. Percent increase?
     
     `,
       exercise: {
@@ -96,9 +96,9 @@ Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
 
 | # | Problem | Type |
 |---|---------|------|
-| 1 | \$80, 10% tax | Tax |
-| 2 | \$60, 25% off | Discount |
-| 3 | Was \$40, now \$50 | % increase |
+| 1 | \\$80, 10% tax | Tax |
+| 2 | \\$60, 25% off | Discount |
+| 3 | Was \\$40, now \\$50 | % increase |
     
     `
     },
@@ -111,7 +111,7 @@ Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
       exercise: {
         questions: [
           {
-                    "question": "Price went from $40 to $50. Percent increase?",
+                    "question": "Price went from \\$40 to \\$50. Percent increase?",
                     "options": [
                               "25%",
                               "10%",

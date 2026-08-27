@@ -23,9 +23,9 @@ A typical mammalian cell cycle lasts about **24 hours**, though this varies enor
 The cell cycle consists of two major periods:
 
 **1. Interphase** (~90% of the cell cycle)
-- **G\\(_1\\) phase** (Gap 1) — cell growth, organelle duplication, preparation for DNA synthesis
+- **G$_1$ phase** (Gap 1) — cell growth, organelle duplication, preparation for DNA synthesis
 - **S phase** (Synthesis) — DNA replication; each chromosome is duplicated into two sister chromatids joined at the centromere
-- **G\\(_2\\) phase** (Gap 2) — continued growth, preparation for mitosis; error-checking of replicated DNA
+- **G$_2$ phase** (Gap 2) — continued growth, preparation for mitosis; error-checking of replicated DNA
 
 **2. Mitotic (M) phase** (~10% of the cell cycle)
 - **Mitosis** — division of the nucleus (karyokinesis) into two genetically identical daughter nuclei
@@ -33,12 +33,12 @@ The cell cycle consists of two major periods:
 
 | Phase | Duration (typical) | Key Events |
 |-------|-------------------|------------|
-| G\\(_1\\) | 10-12 hours | Growth, protein synthesis, organelle production |
+| G$_1$ | 10-12 hours | Growth, protein synthesis, organelle production |
 | S | 6-8 hours | DNA replication |
-| G\\(_2\\) | 3-4 hours | Growth, preparation for mitosis, checkpoint |
+| G$_2$ | 3-4 hours | Growth, preparation for mitosis, checkpoint |
 | M (mitosis + cytokinesis) | ~1 hour | Nuclear and cytoplasmic division |
 
-> **G\\(_0\\) Phase:** Some cells exit the cell cycle and enter a quiescent state called G\\(_0\\). These cells are metabolically active but do not divide. Examples include neurons and mature muscle cells.  Some G\\(_0\\) cells can re-enter the cycle if stimulated (e.g., hepatocytes after liver damage).
+> **G$_0$ Phase:** Some cells exit the cell cycle and enter a quiescent state called G$_0$. These cells are metabolically active but do not divide. Examples include neurons and mature muscle cells.  Some G$_0$ cells can re-enter the cycle if stimulated (e.g., hepatocytes after liver damage).
       `
     },
     {
@@ -93,11 +93,11 @@ The cell cycle consists of two major periods:
 
 Understanding chromosome structure throughout the cell cycle is critical:
 
-**Before S phase (G\\(_1\\)):**
+**Before S phase (G$_1$):**
 - Each chromosome = 1 DNA double helix + histones = **unreplicated chromosome**
 - Human cell: 46 unreplicated chromosomes
 
-**After S phase (G\\(_2\\) and early mitosis):**
+**After S phase (G$_2$ and early mitosis):**
 - Each chromosome = 2 identical copies (sister chromatids) joined at the centromere = **replicated chromosome**
 - Human cell: 46 replicated chromosomes (= 92 chromatids)
 - The chromosome number does NOT change after replication — the cell still has 46 chromosomes
