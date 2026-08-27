@@ -1,9 +1,10 @@
+import { fileURLToPath } from 'node:url'
 // Independent verification of every SAT exit-quiz generator: correctness + tiering.
 import { readdirSync } from 'node:fs'
 import { pathToFileURL } from 'node:url'
 import path from 'node:path'
 
-const DIR = '/Users/brendancusack/Desktop/AP Calculus Website - Ad Revenue Based/src/data/exit-quizzes'
+const DIR = fileURLToPath(new URL('../../', import.meta.url)) + 'src/data/exit-quizzes'
 const files = readdirSync(DIR).filter(f => f.startsWith('sat-') && f.endsWith('.ts'))
 const FILLER = /none of the above|none of these/i
 

@@ -73,6 +73,23 @@ export interface UnitTestsClientProps {
 
 export default function UnitTestsClient({ config, theme }: UnitTestsClientProps) {
   const variantCount = variantCountFor(config)
+  // ?unit=<id> deep link — a UNIT_TEST assignment targeting a specific unit
+  // lands here. Highlight and scroll to that unit rather than auto-starting:
+  // the student should still choose their variation (and their moment).
+  // Read from window.location instead of useSearchParams: these pages are
+  // statically prerendered, and useSearchParams would demand a Suspense
+  // boundary in every one of the 35 course pages.
+  const [assignedUnitId, setAssignedUnitId] = useState<string | null>(null)
+  const assignedRef = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get('unit')
+    if (id && config.units.some(u => u.id === id)) setAssignedUnitId(id)
+  }, [config.units])
+  useEffect(() => {
+    if (assignedUnitId && assignedRef.current) {
+      assignedRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }, [assignedUnitId])
   const [phase, setPhase] = useState<Phase>('menu')
   const [activeUnit, setActiveUnit] = useState<UnitDef | null>(null)
   const [activeVariant, setActiveVariant] = useState<number>(1)
@@ -232,14 +249,22 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
         <section className="container pb-16">
           <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
             {config.units.map(unit => (
-              <UnitCard
+              <div
                 key={unit.id}
-                unit={unit}
-                variantCount={variantCount}
-                qPerVariant={getQuestionsPerVariant(config, unit.id)}
-                poolSize={getUnitPoolSize(config, unit.id)}
-                onStart={v => startTest(unit, v)}
-              />
+                ref={unit.id === assignedUnitId ? assignedRef : undefined}
+                className={unit.id === assignedUnitId ? 'rounded-2xl ring-2 ring-accent ring-offset-2 dark:ring-offset-gray-900' : undefined}
+              >
+                {unit.id === assignedUnitId && (
+                  <p className="mb-1 text-center text-xs font-semibold text-accent">📌 Assigned by your teacher</p>
+                )}
+                <UnitCard
+                  unit={unit}
+                  variantCount={variantCount}
+                  qPerVariant={getQuestionsPerVariant(config, unit.id)}
+                  poolSize={getUnitPoolSize(config, unit.id)}
+                  onStart={v => startTest(unit, v)}
+                />
+              </div>
             ))}
           </div>
 

@@ -1,5 +1,6 @@
+import { fileURLToPath } from 'node:url'
 import { pathToFileURL } from 'node:url'
-const idx = await import(pathToFileURL('/Users/brendancusack/Desktop/AP Calculus Website - Ad Revenue Based/src/data/exit-quizzes/index.ts').href)
+const idx = await import(pathToFileURL(fileURLToPath(new URL('../../', import.meta.url)) + 'src/data/exit-quizzes/index.ts').href)
 
 // 1. Determinism: same seed -> identical quiz (ids + options + correctIndex)
 const slug = 'sat-quadratic-equations'
@@ -24,8 +25,8 @@ const r1 = Math.random(), r2 = Math.random()
 console.log('Math.random restored (not frozen):', r1 !== r2)
 
 // 5. Seeded regrade catches a fabricated "all correct" submission
-const reg = await import(pathToFileURL('/Users/brendancusack/Desktop/AP Calculus Website - Ad Revenue Based/src/lib/exit-quiz-regrade.ts').href)
-const shuf = await import(pathToFileURL('/Users/brendancusack/Desktop/AP Calculus Website - Ad Revenue Based/src/lib/shuffle-options.ts').href)
+const reg = await import(pathToFileURL(fileURLToPath(new URL('../../', import.meta.url)) + 'src/lib/exit-quiz-regrade.ts').href)
+const shuf = await import(pathToFileURL(fileURLToPath(new URL('../../', import.meta.url)) + 'src/lib/shuffle-options.ts').href)
 // Build an HONEST all-correct submission: for each question compute the true shuffled index
 const honest = a.map(q => {
   const { correctIndex } = shuf.shuffleOptions(q.options, q.correctIndex, q.id + q.question)

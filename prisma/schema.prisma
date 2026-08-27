@@ -1487,6 +1487,19 @@ model FrqAttempt {
   @@index([completedAt])
 }
 
+// One row per (campaign, recipient) delivery — the idempotency ledger for
+// scripts/send-campaign.ts. A resumed or re-run campaign skips every address
+// already recorded here, so a crash mid-send can never double-mail anyone.
+model CampaignSend {
+  id          String   @id @default(cuid())
+  campaignKey String
+  email       String
+  sentAt      DateTime @default(now())
+
+  @@unique([campaignKey, email])
+  @@index([campaignKey])
+}
+
 model EmailSubscriber {
   id           String   @id @default(cuid())
   email        String   @unique
