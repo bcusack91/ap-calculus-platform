@@ -30,6 +30,26 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+  content-audit:
+    name: Content Rendering Audit
+    runs-on: ubuntu-latest
+    steps:
+      # Full history so the gate can diff changed content against main's
+      # merge-base. It audits only touched src/data files, so it stays fast.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Audit changed content for rendering errors
+        run: npm run content:audit
+
   test:
     name: Unit Tests
     runs-on: ubuntu-latest

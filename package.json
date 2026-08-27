@@ -28,7 +28,9 @@
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,css,json}'",
     "format:check": "prettier --check 'src/**/*.{ts,tsx,js,jsx,css,json}'",
     "db:studio": "prisma studio",
-    "db:reset": "prisma migrate reset --force && npm run seed:all"
+    "db:reset": "prisma migrate reset --force && npm run seed:all",
+    "content:audit": "tsx scripts/audit-changed-content.ts",
+    "build:local": "NODE_OPTIONS=--max-old-space-size=12288 next build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",

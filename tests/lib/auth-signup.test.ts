@@ -23,7 +23,9 @@ vi.mock('bcryptjs', () => ({
 }))
 
 vi.mock('@/lib/rate-limit', () => ({
-  checkRateLimit: vi.fn().mockReturnValue({ success: true }),
+  // The route builds a limiter once at module load (rateLimit({...})) and
+  // calls limiter.check(ip) per request.
+  rateLimit: vi.fn().mockReturnValue({ check: vi.fn().mockResolvedValue({ success: true }) }),
   getClientIp: vi.fn().mockReturnValue('127.0.0.1'),
 }))
 

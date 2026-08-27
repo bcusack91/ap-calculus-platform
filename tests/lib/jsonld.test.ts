@@ -15,7 +15,7 @@ describe('organizationJsonLd', () => {
     expect(data['@type']).toBe('EducationalOrganization')
     expect(data.name).toBe('Study Mondo')
     expect(data.url).toBeDefined()
-    expect(data.logo).toContain('icon-512.png')
+    expect(data.logo).toContain('android-chrome-512x512.png')
   })
 })
 

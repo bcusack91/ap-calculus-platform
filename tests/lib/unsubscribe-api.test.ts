@@ -36,7 +36,11 @@ describe('GET /api/unsubscribe', () => {
   })
 
   it('should unsubscribe user with valid token', async () => {
-    const token = Buffer.from('user@example.com').toString('base64')
+    // Tokens are HMAC-signed (base64url(email).signature); bare base64 is a
+    // legacy form the route deliberately rejects.
+    process.env.AUTH_SECRET = 'test-unsubscribe-secret'
+    const { makeUnsubscribeToken } = await import('@/lib/unsubscribe-token')
+    const token = makeUnsubscribeToken('user@example.com')!
     ;(prisma.emailSubscriber.updateMany as ReturnType<typeof vi.fn>).mockResolvedValue({ count: 1 })
 
     const response = await callUnsubscribe(token)

@@ -71,13 +71,17 @@ describe('Progress Load API', () => {
 
   it('returns progress for authenticated user', async () => {
     mockAuth.mockResolvedValueOnce({ user: { id: 'user-1' } })
-    mockTopicFindUnique.mockResolvedValueOnce({ id: 'topic-1' })
-    mockProgressFindUnique.mockResolvedValueOnce({
-      status: 'IN_PROGRESS',
-      masteryLevel: 0.6,
-      timeSpent: 120,
-      lastAccessed: new Date(),
-      completedAt: null,
+    // The route fetches progress via an include on the topic query
+    // (topic.topicProgress[0]), not a separate topicProgress lookup.
+    mockTopicFindUnique.mockResolvedValueOnce({
+      id: 'topic-1',
+      topicProgress: [{
+        status: 'IN_PROGRESS',
+        masteryLevel: 0.6,
+        timeSpent: 120,
+        lastAccessed: new Date(),
+        completedAt: null,
+      }],
     })
 
     const { GET } = await import('@/app/api/progress/load/route')
@@ -92,8 +96,7 @@ describe('Progress Load API', () => {
 
   it('returns null progress when no record exists', async () => {
     mockAuth.mockResolvedValueOnce({ user: { id: 'user-1' } })
-    mockTopicFindUnique.mockResolvedValueOnce({ id: 'topic-1' })
-    mockProgressFindUnique.mockResolvedValueOnce(null)
+    mockTopicFindUnique.mockResolvedValueOnce({ id: 'topic-1', topicProgress: [] })
 
     const { GET } = await import('@/app/api/progress/load/route')
     const req = new Request('http://localhost/api/progress/load?topicSlug=new-topic')

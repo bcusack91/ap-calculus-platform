@@ -25,7 +25,7 @@ describe('generateTopicFaqs', () => {
     const faqs = generateTopicFaqs({ title: 'Limits' })
     const free = faqs.find((f: FaqItem) => f.question.toLowerCase().includes('free'))
     expect(free).toBeDefined()
-    expect(free!.answer).toContain('100% free')
+    expect(free!.answer).toContain('free to access')
   })
 
   it('includes practice problem FAQ when problems exist', () => {

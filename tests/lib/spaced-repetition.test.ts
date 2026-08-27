@@ -42,33 +42,44 @@ describe('calculateNextReview', () => {
   })
 
   it('graduates from minute interval to days on second review', () => {
-    // Second review (was minute interval) with Good
+    // Second review (was minute interval) with Good graduates conservatively
+    // to 1 day — the Fibonacci ladder replaced SM-2's 6-day jump so a card is
+    // seen again the next morning before its interval starts climbing.
     const result = calculateNextReview(4, 2.5, 5, 1, true)
-    expect(result.interval).toBe(6) // 6 days
+    expect(result.interval).toBe(1)
     expect(result.isMinuteInterval).toBe(false)
     expect(result.repetitions).toBe(2)
   })
 
-  it('uses SM-2 formula for graduated cards', () => {
-    // Third review with Good, previous interval = 6 days, EF ~2.5
+  it('climbs the Fibonacci ladder for graduated cards', () => {
+    // Day-phase Good climbs one rung: 6 days sits between rungs 5 and 8,
+    // so the next rung is 8 (1 → 2 → 3 → 5 → 8 → 13 → 21 → 34).
     const result = calculateNextReview(4, 2.5, 6, 2, false)
-    expect(result.interval).toBe(15) // 6 * 2.5 = 15
+    expect(result.interval).toBe(8)
     expect(result.isMinuteInterval).toBe(false)
     expect(result.repetitions).toBe(3)
   })
 
-  it('reduces interval for Hard on graduated cards', () => {
+  it('holds the interval for Hard on graduated cards', () => {
+    // Day-phase Hard holds the current interval instead of shrinking it —
+    // the student got it right, just slowly.
     const result = calculateNextReview(3, 2.5, 10, 3, false)
-    // Should be interval * EF * 0.8
-    expect(result.interval).toBe(Math.max(1, Math.round(10 * 2.36 * 0.8)))
+    expect(result.interval).toBe(10)
     expect(result.isMinuteInterval).toBe(false)
   })
 
-  it('increases interval for Easy on graduated cards', () => {
+  it('skips a rung for Easy on graduated cards', () => {
+    // Day-phase Easy skips a rung while young: from 10 days the next rungs
+    // are 13 then 21, so Easy lands on 21.
     const result = calculateNextReview(5, 2.5, 10, 3, false)
-    // Should be interval * EF * 1.3
-    expect(result.interval).toBe(Math.round(10 * 2.6 * 1.3))
+    expect(result.interval).toBe(21)
     expect(result.isMinuteInterval).toBe(false)
+  })
+
+  it('switches to multipliers once mature (at the 34-day ladder top)', () => {
+    // At/after 34 days the ladder ends: Good grows x1.25, Easy x1.5.
+    expect(calculateNextReview(4, 2.5, 34, 8, false).interval).toBe(Math.round(34 * 1.25))
+    expect(calculateNextReview(5, 2.5, 34, 8, false).interval).toBe(Math.round(34 * 1.5))
   })
 
   it('never lets ease factor drop below 1.3', () => {

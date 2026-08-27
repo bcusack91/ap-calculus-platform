@@ -13,7 +13,16 @@ vi.mock('@/lib/prisma', () => ({
   prisma: {
     user: {
       update: (...args: unknown[]) => mockUserUpdate(...args),
+      // the route clears stale subscription state on other users atomically
+      updateMany: (...args: unknown[]) => mockUserUpdate(...args),
       findFirst: (...args: unknown[]) => mockUserFindFirst(...args),
+    },
+    // Idempotency ledger: the route claims each Stripe event id before
+    // processing. A resolving create() means "first delivery".
+    processedWebhookEvent: {
+      create: vi.fn().mockResolvedValue({ id: 'evt_test' }),
+      // released again when processing fails, so duplicates of FAILED events retry
+      delete: vi.fn().mockResolvedValue({ id: 'evt_test' }),
     },
   },
 }))
