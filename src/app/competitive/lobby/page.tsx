@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { ArrowLeft, Swords } from 'lucide-react'
 
 export default function LobbyHomePage() {
   const router = useRouter()
@@ -77,18 +78,20 @@ export default function LobbyHomePage() {
     return (
       <div className="mx-auto max-w-md p-6 text-center">
         <p className="mb-4 text-gray-700 dark:text-gray-300">Please sign in to play in a private lobby.</p>
-        <Link href="/auth/signin" className="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white">Sign In</Link>
+        <Link href="/auth/signin" className="rounded-lg bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-hover">Sign In</Link>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-blue-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-3 sm:px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 py-8 px-3 sm:px-4">
       <div className="mx-auto max-w-2xl space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">🎮 Private Lobby</h1>
+          <h1 className="flex items-center justify-center gap-2 text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">
+            <Swords className="h-8 w-8 text-accent" aria-hidden /> Private Lobby
+          </h1>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          Looking for someone to play? <Link href="/competitive/lobbies" className="font-semibold text-orange-600 underline dark:text-orange-400">Browse open lobbies</Link> instead.
+          Looking for someone to play? <Link href="/competitive/lobbies" className="font-semibold text-accent underline">Browse open lobbies</Link> instead.
         </p>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Play head-to-head with a friend. Create a lobby, share the code, and pick any challenge together.
@@ -128,12 +131,12 @@ export default function LobbyHomePage() {
               placeholder="ENTER CODE"
               maxLength={8}
               autoCapitalize="characters"
-              className="w-full rounded-xl border-2 border-gray-300 px-4 py-3 text-center text-2xl font-bold tracking-[0.4em] uppercase focus:border-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-white"
+              className="w-full rounded-xl border-2 border-gray-300 px-4 py-3 text-center text-2xl font-bold tracking-[0.4em] uppercase focus:border-accent focus:outline-none dark:border-gray-600 dark:bg-gray-900 dark:text-white"
             />
             <button
               type="submit"
               disabled={busy || !code.trim()}
-              className="w-full rounded-xl border-2 border-blue-300 px-6 py-3 font-semibold text-blue-700 transition hover:bg-blue-50 disabled:opacity-50 dark:border-blue-600 dark:text-blue-300 dark:hover:bg-blue-900/30"
+              className="w-full rounded-xl border-2 border-accent px-6 py-3 font-semibold text-accent transition hover:bg-accent-subtle disabled:opacity-50 dark:hover:bg-accent-light/20"
             >
               {busy ? 'Joining…' : 'Join Lobby'}
             </button>
@@ -141,8 +144,8 @@ export default function LobbyHomePage() {
         </div>
 
         <div className="text-center">
-          <Link href="/competitive" className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400">
-            ← Back to Competitive
+          <Link href="/competitive" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400">
+            <ArrowLeft className="h-4 w-4" aria-hidden /> Back to Competitive
           </Link>
         </div>
       </div>

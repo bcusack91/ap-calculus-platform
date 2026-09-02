@@ -16,7 +16,7 @@ async function getOwnedAssignment(classroomId: string, assignmentId: string) {
   if (!assignment || assignment.classroomId !== classroomId) {
     return { error: NextResponse.json({ error: 'Assignment not found' }, { status: 404 }) }
   }
-  return { assignment }
+  return { assignment, user: result.user! }
 }
 
 export async function PUT(
@@ -28,11 +28,20 @@ export async function PUT(
     const owned = await getOwnedAssignment(id, assignmentId)
     if ('error' in owned && owned.error) return owned.error
 
-    const { title, description, type, topicSlug, topicSlugs, dueDate, maxAttempts, requiredScore } =
+    const { title, description, type, topicSlug, topicSlugs, courseSlug, unitId, flashcardSetId, dueDate, maxAttempts, requiredScore } =
       await req.json()
 
     if (title !== undefined && (!title || typeof title !== 'string')) {
       return NextResponse.json({ error: 'Title is required' }, { status: 400 })
+    }
+
+    // If a flashcard set is being attached, the caller must own it (mirrors POST).
+    const fsid = typeof flashcardSetId === 'string' && flashcardSetId.trim() ? flashcardSetId.trim() : null
+    if (fsid) {
+      const teacherId = 'user' in owned ? owned.user.id : null
+      if (!teacherId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      const ownedSet = await prisma.flashcardSet.findFirst({ where: { id: fsid, teacherId } })
+      if (!ownedSet) return NextResponse.json({ error: 'Not your flashcard set' }, { status: 403 })
     }
 
     // Only update fields that were explicitly provided so a partial edit can't
@@ -45,6 +54,11 @@ export async function PUT(
         ...(type !== undefined && { type }),
         ...(topicSlug !== undefined && { topicSlug: topicSlug || null }),
         ...(topicSlugs !== undefined && { topicSlugs: topicSlugs || null }),
+        // UNIT_TEST / FRQ_PRACTICE course scoping and flashcard sets were
+        // previously dropped on edit — the modal sends them, persist them.
+        ...(courseSlug !== undefined && { courseSlug: courseSlug || null }),
+        ...(unitId !== undefined && { unitId: unitId || null }),
+        ...(flashcardSetId !== undefined && { flashcardSetId: fsid }),
         ...(dueDate !== undefined && { dueDate: dueDate ? new Date(dueDate) : null }),
         ...(maxAttempts !== undefined && { maxAttempts: Number(maxAttempts) > 0 ? Math.min(Math.floor(Number(maxAttempts)), 9999) : 9999 }),
         ...(requiredScore !== undefined && { requiredScore: requiredScore ?? null }),

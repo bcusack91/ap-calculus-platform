@@ -53,6 +53,16 @@ export default async function TopicsPage() {
           </p>
         </div>
 
+        {orderedSections.length === 0 && (
+          <div className="mx-auto max-w-md rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-10 text-center">
+            <p className="text-4xl mb-3" aria-hidden>📚</p>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No courses available yet</h2>
+            <p className="text-muted-foreground">
+              We&apos;re loading the course catalog — please check back in a moment.
+            </p>
+          </div>
+        )}
+
         {orderedSections.map(([sectionName, sectionCourses], sectionIdx) => (
           <div key={sectionName} className={sectionIdx > 0 ? 'mt-16' : 'mt-8'}>
             <h2
@@ -74,7 +84,7 @@ export default async function TopicsPage() {
                   <Link
                     key={course.id}
                     href={getCourseHref(course.slug)}
-                    className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
+                    className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:-translate-y-0.5 hover:border-transparent"
                   >
                     <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${info.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>
                     <div className="relative">
@@ -91,7 +101,7 @@ export default async function TopicsPage() {
                         {course._count.categories} {course._count.categories === 1 ? 'category' : 'categories'}
                       </p>
                       <div className="mt-4 flex items-center text-sm font-semibold">
-                        <span className={`bg-gradient-to-r ${info.gradient} bg-clip-text text-transparent`}>
+                        <span className={`bg-gradient-to-r ${info.gradient} gradient-text-accessible`}>
                           Explore Course →
                         </span>
                       </div>

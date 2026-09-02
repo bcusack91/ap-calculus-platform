@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { ArrowLeft, Flag, Gamepad2, Plus, Swords, Users, type LucideIcon } from 'lucide-react'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
 import CompetitiveTopicPicker, { composeTopicSlug, describeTopicSlug } from '@/components/CompetitiveTopicPicker'
 
@@ -41,16 +42,16 @@ interface OpenLobby {
   joinHref: string
 }
 
-const FORMAT_META: Record<OpenLobby['format'], { icon: string; label: string; blurb: string }> = {
-  DUEL_1V1: { icon: '⚔️', label: '1v1 Ranked Duel', blurb: 'Head-to-head — affects your MMR' },
-  TEAM_2V2: { icon: '👥', label: '2v2 Team Battle', blurb: 'MMR-balanced teams · casual' },
-  RACE_FFA: { icon: '🏁', label: 'Free-for-All Race', blurb: 'Up to 8 players · casual' },
+const FORMAT_META: Record<OpenLobby['format'], { icon: LucideIcon; label: string; blurb: string }> = {
+  DUEL_1V1: { icon: Swords, label: '1v1 Ranked Duel', blurb: 'Head-to-head — affects your MMR' },
+  TEAM_2V2: { icon: Users, label: '2v2 Team Battle', blurb: 'MMR-balanced teams · casual' },
+  RACE_FFA: { icon: Flag, label: 'Free-for-All Race', blurb: 'Up to 8 players · casual' },
 }
 
 const DIFFICULTIES = [
-  { id: 'easy', label: '🟢 Easy', desc: 'All easy questions' },
-  { id: 'medium', label: '🟡 Medium', desc: 'A few easy, then medium' },
-  { id: 'hard', label: '🔴 Hard', desc: 'Warm-up, then mostly hard' },
+  { id: 'easy', label: 'Easy', desc: 'All easy questions' },
+  { id: 'medium', label: 'Medium', desc: 'A few easy, then medium' },
+  { id: 'hard', label: 'Hard', desc: 'Warm-up, then mostly hard' },
 ] as const
 type Difficulty = typeof DIFFICULTIES[number]['id']
 
@@ -130,24 +131,26 @@ export default function OpenLobbiesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container max-w-4xl py-8">
-        <Link href="/competitive" className="mb-4 inline-flex items-center gap-1 text-sm text-orange-600 hover:underline dark:text-orange-400">
-          ← Competitive Hub
+        <Link href="/competitive" className="mb-4 inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <ArrowLeft className="h-4 w-4" aria-hidden /> Competitive Hub
         </Link>
 
         <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">🎮 Open Lobbies</h1>
+            <h1 className="flex items-center gap-2 text-3xl font-bold text-gray-900 dark:text-white">
+              <Gamepad2 className="h-8 w-8 text-accent" aria-hidden /> Open Lobbies
+            </h1>
             <p className="mt-1 text-gray-600 dark:text-gray-400">
               Host a game and wait for challengers, or jump into one that&apos;s waiting.
             </p>
           </div>
           <button
             onClick={() => setShowCreate(true)}
-            className="rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-brand-gradient px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
           >
-            + Host a Lobby
+            <Plus className="h-4 w-4" aria-hidden /> Host a Lobby
           </button>
         </div>
 
@@ -166,16 +169,16 @@ export default function OpenLobbiesPage() {
             <p className="mx-auto mt-2 max-w-md text-sm text-gray-500 dark:text-gray-400">
               Be the first — host a lobby and it stays listed until someone joins.
               Or try the{' '}
-              <Link href="/competitive" className="text-orange-600 underline dark:text-orange-400">
+              <Link href="/competitive" className="text-accent underline">
                 ranked queue
               </Link>
               .
             </p>
             <button
               onClick={() => setShowCreate(true)}
-              className="mt-5 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 font-semibold text-white shadow transition hover:shadow-lg"
+              className="mt-5 inline-flex items-center gap-1.5 rounded-xl bg-brand-gradient px-6 py-3 font-semibold text-white shadow transition hover:shadow-lg"
             >
-              + Host a Lobby
+              <Plus className="h-4 w-4" aria-hidden /> Host a Lobby
             </button>
           </div>
         ) : (
@@ -195,12 +198,14 @@ export default function OpenLobbiesPage() {
                   className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800"
                 >
                   <div className="flex min-w-0 items-center gap-3">
-                    <span className="text-3xl" aria-hidden>{meta.icon}</span>
+                    <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-accent-subtle text-accent">
+                      <meta.icon className="h-6 w-6" aria-hidden />
+                    </span>
                     <div className="min-w-0">
                       <p className="font-bold text-gray-900 dark:text-white">
                         {meta.label}
                         {l.isMine && (
-                          <span className="ml-2 rounded-full bg-orange-100 px-2 py-0.5 text-[11px] font-semibold text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">
+                          <span className="ml-2 rounded-full bg-accent-light px-2 py-0.5 text-[11px] font-semibold text-accent dark:bg-accent-light/30 dark:text-accent-muted">
                             your lobby
                           </span>
                         )}
@@ -222,7 +227,7 @@ export default function OpenLobbiesPage() {
                     <button
                       onClick={() => join(l)}
                       disabled={joining === l.id || (full && !l.isMine)}
-                      className="rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50"
+                      className="rounded-xl bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50"
                     >
                       {joining === l.id ? 'Joining…' : l.isMine ? 'Return' : full ? 'Full' : 'Join'}
                     </button>
@@ -334,12 +339,12 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                 onClick={() => setFormat(f)}
                 className={`rounded-xl border-2 p-3 text-left transition ${
                   format === f
-                    ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
-                    : 'border-gray-200 hover:border-orange-300 dark:border-gray-700'
+                    ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                    : 'border-gray-200 hover:border-accent-muted dark:border-gray-700'
                 }`}
               >
-                <div className="text-xl" aria-hidden>{FORMAT_META[f].icon}</div>
-                <div className="text-sm font-bold text-gray-900 dark:text-white">{FORMAT_META[f].label}</div>
+                {(() => { const FormatIcon = FORMAT_META[f].icon; return <FormatIcon className="h-5 w-5 text-accent" aria-hidden /> })()}
+                <div className="mt-1 text-sm font-bold text-gray-900 dark:text-white">{FORMAT_META[f].label}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">{FORMAT_META[f].blurb}</div>
               </button>
             ))}
@@ -364,7 +369,7 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                     onClick={() => setDuelMode(id)}
                     className={`rounded-xl border-2 px-4 py-2 text-sm font-semibold transition ${
                       duelMode === id
-                        ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
+                        ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
                         : 'border-gray-200 dark:border-gray-700'
                     }`}
                   >
@@ -412,7 +417,7 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                         }
                         className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
                           on
-                            ? 'border-orange-500 bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-200'
+                            ? 'border-accent bg-accent-light text-accent dark:bg-accent-light/30 dark:text-accent-muted'
                             : 'border-gray-300 text-gray-600 dark:border-gray-600 dark:text-gray-300'
                         }`}
                       >
@@ -468,8 +473,8 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                 onClick={() => setDifficulty(d.id)}
                 className={`rounded-xl border-2 p-2.5 text-left transition ${
                   difficulty === d.id
-                    ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
-                    : 'border-gray-200 hover:border-orange-300 dark:border-gray-700'
+                    ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                    : 'border-gray-200 hover:border-accent-muted dark:border-gray-700'
                 }`}
               >
                 <div className="text-sm font-bold text-gray-900 dark:text-white">{d.label}</div>
@@ -491,7 +496,7 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
           <button
             onClick={create}
             disabled={!canCreate || creating}
-            className="rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50"
+            className="rounded-xl bg-brand-gradient px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50"
           >
             {creating ? 'Creating…' : 'Create lobby'}
           </button>

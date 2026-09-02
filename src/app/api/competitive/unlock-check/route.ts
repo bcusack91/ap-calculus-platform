@@ -399,7 +399,13 @@ export async function GET() {
         currentTopic: topicSlug,
         currentTopicTitle: topicTitle,
         masteryLevel: masteryLevel,
-        masteryRequired: 0.6
+        masteryRequired: 0.6,
+        // Real per-requirement state for the locked-view checklist. (Unlock is
+        // any-one-of, so these are all unmet whenever this branch is reached —
+        // but the hub renders from these booleans, not hardcoded circles.)
+        quizPassed: passedQuizSlugs.length > 0,
+        diagnosticPassed: uniqueDiagnosticSlugs.length > 0,
+        teacherGranted: hasTeacherGrant
       }
     })
 

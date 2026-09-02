@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
+import { parseRoster, MAX_ROSTER_ROWS } from '@/lib/roster-parse'
 
 /**
  * POST /api/teacher/classrooms/[id]/import-roster
@@ -19,59 +20,9 @@ import { requireClassroomAccess } from '@/lib/teacher-auth'
  * membership (and a class-scoped nickname).
  */
 
-const MAX_ROWS = 300
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-function sanitizeName(raw: string): string {
-  // Drop control characters (codepoint < 32) via a filter so no control bytes
-  // appear in source; strip angle brackets/quotes, collapse whitespace, and cap
-  // length. Roster labels are teacher-entered and surface in the gradebook.
-  const noControl = Array.from(raw)
-    .filter((ch) => ch.charCodeAt(0) >= 32)
-    .join('')
-  return noControl
-    .replace(/[<>"']/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 60)
-}
-
-type ParsedRow = { email: string; name: string }
-
-function parseRoster(text: string): { rows: ParsedRow[]; invalid: string[] } {
-  const seen = new Set<string>()
-  const rows: ParsedRow[] = []
-  const invalid: string[] = []
-
-  const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
-  for (const line of lines) {
-    const tokens = line.split(/[,\t;]/).map((t) => t.trim()).filter(Boolean)
-    if (tokens.length === 0) continue
-
-    // Skip an obvious header row ("name,email" with no "@").
-    const looksLikeHeader =
-      !line.includes('@') && /(^|[,\t;\s])e-?mail($|[,\t;\s])/i.test(line)
-    if (looksLikeHeader) continue
-
-    const emailToken = tokens.find((t) => t.includes('@'))
-    if (!emailToken) {
-      invalid.push(line)
-      continue
-    }
-    const email = emailToken.toLowerCase()
-    if (!EMAIL_RE.test(email)) {
-      invalid.push(line)
-      continue
-    }
-    if (seen.has(email)) continue
-    seen.add(email)
-
-    const nameRaw = tokens.filter((t) => t !== emailToken).join(' ')
-    rows.push({ email, name: sanitizeName(nameRaw) })
-  }
-
-  return { rows, invalid }
-}
+// Parsing lives in src/lib/roster-parse.ts so the client-side import preview
+// shows exactly what this route will do with the same text.
+const MAX_ROWS = MAX_ROSTER_ROWS
 
 export async function POST(
   req: NextRequest,

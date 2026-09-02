@@ -5,6 +5,7 @@ import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
+import { useQueueElapsed, formatElapsed, QUEUE_FALLBACK_AFTER_SEC } from '@/components/competitive/QueueSearchPanel'
 import { ChevronDown, Check, Users, Bot, SlidersHorizontal, Lock, X } from 'lucide-react'
 
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
@@ -53,6 +54,7 @@ function SatCompetitiveInner() {
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [error, setError] = useState('')
   const hasApplied = useRef(false)
+  const queueElapsed = useQueueElapsed(inQueue)
 
   // Teachers deep-link assignments as ?topics=a,b,c; the older single-topic
   // ?topic= link from the SAT dashboard still works.
@@ -491,13 +493,23 @@ function SatCompetitiveInner() {
       <div className="fixed bottom-0 inset-x-0 border-t border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-gray-900/70 pb-[env(safe-area-inset-bottom)]">
         <div className="max-w-3xl mx-auto px-4 py-3">
           {inQueue ? (
-            <div className="flex items-center gap-3">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600 flex-shrink-0" />
-              <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-gray-900 dark:text-white truncate">Finding an opponent…</p>
-                {queueStatus?.position !== undefined && <p className="text-xs text-gray-500">Queue position {queueStatus.position}</p>}
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600 flex-shrink-0" />
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white truncate">Finding an opponent…</p>
+                  <p className="text-xs text-gray-500">
+                    <span className="font-mono tabular-nums">{formatElapsed(queueElapsed)}</span> elapsed
+                    {queueStatus?.position !== undefined && <> · Queue position {queueStatus.position}</>}
+                  </p>
+                </div>
+                <button onClick={leaveQueue} className="flex-shrink-0 rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300">Cancel</button>
               </div>
-              <button onClick={leaveQueue} className="flex-shrink-0 rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300">Cancel</button>
+              {queueElapsed >= QUEUE_FALLBACK_AFTER_SEC && (
+                <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">
+                  No opponent yet — matchmaking depends on who&apos;s online. Cancel to play vs AI or send an async challenge instead.
+                </p>
+              )}
             </div>
           ) : (
             <>

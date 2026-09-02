@@ -3,7 +3,10 @@ import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
- * GET  /api/teacher/classrooms/[id]/assignments — list assignments
+ * GET  /api/teacher/classrooms/[id]/assignments — list assignments with real
+ *      per-status counts. Submission rows are pre-created NOT_STARTED for every
+ *      member at assignment creation, so a raw submissions count equals roster
+ *      size forever — the stats block reports what students have actually done.
  * POST /api/teacher/classrooms/[id]/assignments — create an assignment
  */
 
@@ -20,7 +23,13 @@ export async function GET(
       where: { classroomId: id, isActive: true },
       include: {
         submissions: {
-          include: {
+          select: {
+            id: true,
+            status: true,
+            score: true,
+            attempts: true,
+            feedback: true,
+            completedAt: true,
             student: { select: { id: true, name: true, email: true, image: true } },
           },
         },
@@ -34,12 +43,51 @@ export async function GET(
       where: { classroomId: id, isActive: true },
     })
 
-    return NextResponse.json({ assignments, memberCount })
+    // Aggregate real progress per assignment. OVERDUE rows are still "not
+    // done" — they fold into notStarted for the summary bar, while the
+    // per-student list keeps the raw status.
+    const withStats = assignments.map((a) => {
+      let notStarted = 0
+      let inProgress = 0
+      let completed = 0
+      let scoreSum = 0
+      let scoreCount = 0
+      for (const s of a.submissions) {
+        if (s.status === 'COMPLETED') {
+          completed++
+          if (typeof s.score === 'number') {
+            scoreSum += s.score
+            scoreCount++
+          }
+        } else if (s.status === 'IN_PROGRESS') {
+          inProgress++
+        } else {
+          notStarted++
+        }
+      }
+      return {
+        ...a,
+        stats: {
+          notStarted,
+          inProgress,
+          completed,
+          // 0-1 fraction (matches AssignmentSubmission.score), null when no
+          // completed submission carries a score.
+          avgScore: scoreCount > 0 ? scoreSum / scoreCount : null,
+        },
+      }
+    })
+
+    return NextResponse.json({ assignments: withStats, memberCount })
   } catch (error) {
     console.error('[GET /api/teacher/classrooms/[id]/assignments]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
+
+const VALID_TYPES = ['INTERACTIVE_LESSON', 'FLASHCARD_REVIEW', 'QUIZ', 'COMPETITIVE_PRACTICE', 'UNIT_TEST', 'FRQ_PRACTICE']
+const COURSE_SCOPED_TYPES = ['UNIT_TEST', 'FRQ_PRACTICE']
+const TOPIC_SCOPED_TYPES = ['INTERACTIVE_LESSON', 'QUIZ', 'COMPETITIVE_PRACTICE']
 
 export async function POST(
   req: NextRequest,
@@ -57,9 +105,23 @@ export async function POST(
     return NextResponse.json({ error: 'Title is required' }, { status: 400 })
   }
 
-  const VALID_TYPES = ['INTERACTIVE_LESSON', 'FLASHCARD_REVIEW', 'QUIZ', 'COMPETITIVE_PRACTICE', 'UNIT_TEST', 'FRQ_PRACTICE']
   if (!type || !VALID_TYPES.includes(type)) {
     return NextResponse.json({ error: 'Valid assignment type is required' }, { status: 400 })
+  }
+
+  // Type-aware target validation, mirroring the modal: an assignment with no
+  // target is unstartable for students, so refuse to create one.
+  if (COURSE_SCOPED_TYPES.includes(type) && (!courseSlug || typeof courseSlug !== 'string')) {
+    return NextResponse.json({ error: 'This assignment type requires a course' }, { status: 400 })
+  }
+  const hasTopics =
+    (Array.isArray(topicSlugs) && topicSlugs.length > 0) ||
+    (typeof topicSlug === 'string' && topicSlug.trim())
+  if (TOPIC_SCOPED_TYPES.includes(type) && !hasTopics) {
+    return NextResponse.json({ error: 'This assignment type requires at least one topic' }, { status: 400 })
+  }
+  if (type === 'FLASHCARD_REVIEW' && (!flashcardSetId || typeof flashcardSetId !== 'string' || !flashcardSetId.trim())) {
+    return NextResponse.json({ error: 'A flashcard review assignment requires a flashcard set' }, { status: 400 })
   }
 
   // Coerce/validate the optional fields BEFORE Prisma so a malformed value

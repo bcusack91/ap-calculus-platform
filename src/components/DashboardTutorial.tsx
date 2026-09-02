@@ -5,7 +5,6 @@ import { useState } from 'react'
 interface Step {
   title: string
   description: string
-  target?: string
   icon: string
 }
 
@@ -18,7 +17,14 @@ const STEPS: Step[] = [
   { icon: '🏆', title: 'Achievements', description: 'Earn badges for milestones like completing courses, maintaining streaks, and mastering topics.' },
 ]
 
-export default function DashboardTutorial() {
+export default function DashboardTutorial({
+  forceOpen = false,
+  onClose,
+}: {
+  /** When flipped to true (e.g. via the "Replay tour" header button), reopens the tour from step 1. */
+  forceOpen?: boolean
+  onClose?: () => void
+}) {
   const [step, setStep] = useState(() => {
     if (typeof window === 'undefined') return -1
     const seen = localStorage.getItem('dashboard-tutorial-completed')
@@ -26,10 +32,23 @@ export default function DashboardTutorial() {
   })
   const [dismissed, setDismissed] = useState(false)
 
+  // Intentional replay: restart from the beginning even if previously completed.
+  // Render-time state adjustment (React's sanctioned prop-change pattern) rather
+  // than an effect, so the reset happens in the same pass with no flicker.
+  const [prevForceOpen, setPrevForceOpen] = useState(forceOpen)
+  if (forceOpen !== prevForceOpen) {
+    setPrevForceOpen(forceOpen)
+    if (forceOpen) {
+      setStep(0)
+      setDismissed(false)
+    }
+  }
+
   const complete = () => {
     setStep(-1)
     setDismissed(true)
     localStorage.setItem('dashboard-tutorial-completed', 'true')
+    onClose?.()
   }
 
   const next = () => {

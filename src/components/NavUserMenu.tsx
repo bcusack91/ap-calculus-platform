@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
 import { ViewAsToggle } from './ViewAsToggle'
+import { LayoutDashboard, User, School, Shield, LogOut } from 'lucide-react'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
 import { useRef, useCallback } from 'react'
@@ -61,23 +62,23 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
           </div>
 
           <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
-            📊 Dashboard
+            <LayoutDashboard className="w-4 h-4" aria-hidden /> Dashboard
           </Link>
           <Link href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
-            👤 Profile
+            <User className="w-4 h-4" aria-hidden /> Profile
           </Link>
 
           {isTeacher && (
             <>
               <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
               <Link href="/teacher" className="flex items-center gap-2 px-4 py-2 text-sm text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors" onClick={onClose}>
-                🏫 Teacher Dashboard
+                <School className="w-4 h-4" aria-hidden /> Teacher Dashboard
               </Link>
             </>
           )}
           {isAdmin && (
             <Link href="/admin" className="flex items-center gap-2 px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 transition-colors" onClick={onClose}>
-              🛡️ Admin Panel
+              <Shield className="w-4 h-4" aria-hidden /> Admin Panel
             </Link>
           )}
 
@@ -89,7 +90,7 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
             onClick={() => { onClose(); signOut() }}
             className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           >
-            🚪 Sign Out
+            <LogOut className="w-4 h-4" aria-hidden /> Sign Out
           </button>
         </div>
       )}

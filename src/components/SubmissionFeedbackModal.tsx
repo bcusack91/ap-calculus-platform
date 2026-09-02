@@ -144,7 +144,7 @@ export default function SubmissionFeedbackModal({
           <button
             onClick={save}
             disabled={saving}
-            className="px-4 py-2 rounded-xl bg-accent text-white text-sm font-semibold hover:opacity-90 disabled:opacity-50"
+            className="px-4 py-2 rounded-xl bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent-hover disabled:opacity-50"
           >
             {saving ? 'Saving…' : 'Save feedback'}
           </button>

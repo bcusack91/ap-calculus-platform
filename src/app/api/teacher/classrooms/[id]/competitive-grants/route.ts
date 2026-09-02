@@ -24,10 +24,24 @@ export async function GET(
   return NextResponse.json({ grants })
 }
 
+/** Normalize {studentId} | {studentIds: []} into a deduped id list. */
+function idsFromBody(body: { studentId?: unknown; studentIds?: unknown }): string[] {
+  const ids: string[] = []
+  if (typeof body.studentId === 'string' && body.studentId) ids.push(body.studentId)
+  if (Array.isArray(body.studentIds)) {
+    for (const s of body.studentIds) {
+      if (typeof s === 'string' && s) ids.push(s)
+    }
+  }
+  return Array.from(new Set(ids))
+}
+
 /**
  * POST /api/teacher/classrooms/[id]/competitive-grants
- * Grant competitive mode access to a student
+ * Grant competitive mode access to one or many students.
  * Body: { studentId: string, categories?: string[] }
+ *   or  { studentIds: string[], categories?: string[] }  (batch — one request
+ *        instead of the old N serial calls from "Grant all")
  */
 export async function POST(
   req: NextRequest,
@@ -40,62 +54,70 @@ export async function POST(
   const teacher = result.user!
 
   const body = await req.json()
-  const { studentId, categories } = body
+  const { categories } = body
+  const studentIds = idsFromBody(body)
 
-  if (!studentId) {
-    return NextResponse.json({ error: 'studentId is required' }, { status: 400 })
+  if (studentIds.length === 0) {
+    return NextResponse.json({ error: 'studentId or studentIds is required' }, { status: 400 })
   }
 
-  // Verify student is a member of the classroom
-  const membership = await prisma.classroomMember.findUnique({
-    where: { classroomId_userId: { classroomId, userId: studentId } },
+  // Verify every target is an active member of the classroom
+  const memberships = await prisma.classroomMember.findMany({
+    where: { classroomId, userId: { in: studentIds }, isActive: true },
+    select: { userId: true },
   })
-
-  if (!membership || !membership.isActive) {
+  const activeIds = new Set(memberships.map((m) => m.userId))
+  const missing = studentIds.filter((s) => !activeIds.has(s))
+  if (missing.length > 0) {
     return NextResponse.json(
       { error: 'Student is not an active member of this classroom' },
       { status: 400 }
     )
   }
 
-  // Upsert the grant (update if already exists for this student+teacher)
-  const grant = await prisma.competitiveGrant.upsert({
-    where: {
-      studentId_grantedById: {
-        studentId,
-        grantedById: teacher.id,
-      },
-    },
-    update: {
-      categories: categories || null,
-      classroomId,
-    },
-    create: {
-      studentId,
-      grantedById: teacher.id,
-      classroomId,
-      categories: categories || null,
-    },
-  })
+  // Upsert grant + profile per student (update if already exists for this
+  // student+teacher). Runs as one transaction so a batch is all-or-nothing.
+  const grants = await prisma.$transaction(
+    studentIds.flatMap((studentId) => [
+      prisma.competitiveGrant.upsert({
+        where: {
+          studentId_grantedById: {
+            studentId,
+            grantedById: teacher.id,
+          },
+        },
+        update: {
+          categories: categories || null,
+          classroomId,
+        },
+        create: {
+          studentId,
+          grantedById: teacher.id,
+          classroomId,
+          categories: categories || null,
+        },
+      }),
+      // Also ensure the student has a CompetitiveProfile so they can play immediately
+      prisma.competitiveProfile.upsert({
+        where: { userId: studentId },
+        update: { competitiveModeUnlocked: true },
+        create: {
+          userId: studentId,
+          competitiveModeUnlocked: true,
+          overallMMR: 1000,
+        },
+      }),
+    ])
+  )
 
-  // Also ensure the student has a CompetitiveProfile so they can play immediately
-  await prisma.competitiveProfile.upsert({
-    where: { userId: studentId },
-    update: { competitiveModeUnlocked: true },
-    create: {
-      userId: studentId,
-      competitiveModeUnlocked: true,
-      overallMMR: 1000,
-    },
-  })
-
-  return NextResponse.json({ grant }, { status: 201 })
+  // Preserve the original single-grant response shape.
+  return NextResponse.json({ grant: grants[0], granted: studentIds.length }, { status: 201 })
 }
 
 /**
  * DELETE /api/teacher/classrooms/[id]/competitive-grants
- * Revoke competitive mode access from a student
- * Body: { studentId: string }
+ * Revoke competitive mode access from one or many students.
+ * Body: { studentId: string } or { studentIds: string[] } (batch)
  */
 export async function DELETE(
   req: NextRequest,
@@ -108,46 +130,42 @@ export async function DELETE(
   const teacher = result.user!
 
   const body = await req.json()
-  const { studentId } = body
+  const studentIds = idsFromBody(body)
 
-  if (!studentId) {
-    return NextResponse.json({ error: 'studentId is required' }, { status: 400 })
+  if (studentIds.length === 0) {
+    return NextResponse.json({ error: 'studentId or studentIds is required' }, { status: 400 })
   }
 
-  // Delete the grant
-  try {
-    await prisma.competitiveGrant.delete({
-      where: {
-        studentId_grantedById: {
-          studentId,
-          grantedById: teacher.id,
-        },
-      },
-    })
-  } catch {
+  // Delete the grants this teacher issued for these students.
+  const deleted = await prisma.competitiveGrant.deleteMany({
+    where: { studentId: { in: studentIds }, grantedById: teacher.id },
+  })
+  if (deleted.count === 0) {
     return NextResponse.json({ error: 'Grant not found' }, { status: 404 })
   }
 
-  // Check if student still has any other grants or mastery-based unlocks
-  const otherGrants = await prisma.competitiveGrant.count({
-    where: { studentId },
-  })
-
-  const masteryBasedAccess = await prisma.topicProgress.count({
-    where: {
-      userId: studentId,
-      status: { in: ['COMPLETED', 'MASTERED'] },
-      masteryLevel: { gte: 0.8 },
-    },
-  })
-
-  // If no other grants and no mastery, revoke competitive mode
-  if (otherGrants === 0 && masteryBasedAccess === 0) {
-    await prisma.competitiveProfile.updateMany({
-      where: { userId: studentId },
-      data: { competitiveModeUnlocked: false },
+  // Per student: if no other grants and no mastery-based unlock remain, revoke
+  // competitive mode on the profile.
+  for (const studentId of studentIds) {
+    const otherGrants = await prisma.competitiveGrant.count({
+      where: { studentId },
     })
+
+    const masteryBasedAccess = await prisma.topicProgress.count({
+      where: {
+        userId: studentId,
+        status: { in: ['COMPLETED', 'MASTERED'] },
+        masteryLevel: { gte: 0.8 },
+      },
+    })
+
+    if (otherGrants === 0 && masteryBasedAccess === 0) {
+      await prisma.competitiveProfile.updateMany({
+        where: { userId: studentId },
+        data: { competitiveModeUnlocked: false },
+      })
+    }
   }
 
-  return NextResponse.json({ success: true })
+  return NextResponse.json({ success: true, revoked: deleted.count })
 }

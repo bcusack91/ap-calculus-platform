@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { TeacherActivateCTA } from '@/components/TeacherActivateCTA'
 import { COURSE_COUNT } from '@/lib/site-stats'
+import { Users, ClipboardList, Target, Repeat, UserPlus, Gamepad2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'For Teachers | Study Mondo — Free classroom tools',
@@ -11,79 +12,89 @@ export const metadata: Metadata = {
 }
 
 const FEATURES = [
-  { icon: '👩‍🏫', title: 'Classrooms in seconds', body: 'Create a class and share a join code, QR, or link. Bulk-import your whole roster by CSV or paste — accounts are pre-provisioned so students just sign in.' },
-  { icon: '📒', title: 'A real gradebook', body: 'Assign interactive lessons, flashcards, quizzes, and practice. Scores flow into a live gradebook you can export to CSV.' },
-  { icon: '🎯', title: 'Standards mastery', body: 'See class mastery grouped by the official AP unit / SAT domain / MCAT category, with exam weightings — not just raw scores.' },
-  { icon: '🔁', title: 'One-click remediation', body: 'The Performance view surfaces exactly which topics students failed and assigns a targeted review lesson to the class in one click.' },
-  { icon: '👥', title: 'Co-teachers', body: 'Share a class with another teacher — they can view the roster and teach, while owner-only settings stay protected.' },
-  { icon: '⚔️', title: 'Live review games', body: 'Run a real-time, team-based review game your students join live from any device.' },
+  { Icon: Users, title: 'Classrooms in seconds', body: 'Share a join code or link, or bulk-import your whole roster by CSV.' },
+  { Icon: ClipboardList, title: 'A real gradebook', body: 'Scores from every assignment flow into a live, CSV-exportable gradebook.' },
+  { Icon: Target, title: 'Standards mastery', body: 'Class mastery grouped by official AP unit, SAT domain, or MCAT category.' },
+  { Icon: Repeat, title: 'One-click remediation', body: 'See exactly which topics failed and assign targeted review in one click.' },
+  { Icon: UserPlus, title: 'Co-teachers', body: 'Share a class with another teacher while owner-only settings stay protected.' },
+  { Icon: Gamepad2, title: 'Live review games', body: 'Run real-time, team-based review games students join from any device.' },
 ]
 
 export default function ForTeachersPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-sm font-medium mb-5">
-            Free for teachers — no ads, student-privacy first
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Everything you need to run your class
-          </h1>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
-            Rosters, a real gradebook, standards-mastery, and one-click remediation across {COURSE_COUNT} courses
-            from Grade 4 through AP, SAT/ACT, and MCAT — all free.
-          </p>
-          <TeacherActivateCTA />
+      <section className="bg-brand-gradient-br text-white">
+        <div className="container py-20 text-center">
+          <div className="mx-auto max-w-4xl">
+            <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-sm font-medium mb-5">
+              Free for teachers — no ads, student-privacy first
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
+              Everything you need to run your class
+            </h1>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+              Rosters, a real gradebook, standards-mastery, and one-click remediation across {COURSE_COUNT} courses
+              from Grade 4 through AP, SAT/ACT, and MCAT — all free.
+            </p>
+            <TeacherActivateCTA />
+          </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="max-w-5xl mx-auto px-4 py-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f) => (
-            <div key={f.title} className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="font-bold text-gray-900 dark:text-white mb-1">{f.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section className="bg-gray-50 dark:bg-gray-900/40 py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-10">Get started in three steps</h2>
-          <div className="grid gap-8 sm:grid-cols-3 text-center">
-            {[
-              { n: '1', t: 'Activate your account', b: 'Confirm you’re an educator — teacher features turn on instantly, free.' },
-              { n: '2', t: 'Add your class', b: 'Create a classroom and import your roster by code, link, or CSV.' },
-              { n: '3', t: 'Assign & track', b: 'Post assignments and watch mastery, gradebook, and remediation update live.' },
-            ].map((s) => (
-              <div key={s.n}>
-                <div className="w-12 h-12 mx-auto rounded-full bg-blue-600 text-white font-bold text-lg flex items-center justify-center mb-4">{s.n}</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{s.t}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{s.b}</p>
+      <section className="py-16">
+        <div className="container">
+          <div className="mx-auto max-w-5xl grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {FEATURES.map(({ Icon, title, body }) => (
+              <div key={title} className="bg-card rounded-2xl border border-card-border p-6">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-white">
+                  <Icon className="w-5 h-5" aria-hidden />
+                </div>
+                <h3 className="font-bold text-foreground mb-1">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="bg-gray-50 dark:bg-gray-900/40 py-16">
+        <div className="container">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-10">Get started in three steps</h2>
+            <div className="grid gap-8 sm:grid-cols-3 text-center">
+              {[
+                { n: '1', t: 'Activate your account', b: 'Confirm you’re an educator — teacher features turn on instantly, free.' },
+                { n: '2', t: 'Add your class', b: 'Create a classroom and import your roster by code, link, or CSV.' },
+                { n: '3', t: 'Assign & track', b: 'Post assignments and watch mastery, gradebook, and remediation update live.' },
+              ].map((s) => (
+                <div key={s.n}>
+                  <div className="w-12 h-12 mx-auto rounded-full bg-accent text-white font-bold text-lg flex items-center justify-center mb-4">{s.n}</div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{s.t}</h3>
+                  <p className="text-sm text-muted-foreground">{s.b}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Privacy / bottom CTA */}
-      <section className="bg-gradient-to-br from-indigo-700 to-blue-700 text-white">
-        <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-          <h2 className="text-2xl font-bold mb-3">Built for schools</h2>
-          <p className="text-blue-100 mb-2">
-            No ads, no selling student data. We’re glad to sign a Data Privacy Agreement with your district.
-          </p>
-          <p className="text-sm text-blue-200 mb-8">
-            See our <Link href="/security" className="underline hover:text-white">Security &amp; Student Data Privacy</Link> and{' '}
-            <Link href="/dpa" className="underline hover:text-white">DPA</Link> pages.
-          </p>
-          <TeacherActivateCTA />
+      <section className="bg-brand-gradient-br text-white">
+        <div className="container py-16 text-center">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold mb-3">Built for schools</h2>
+            <p className="text-white/90 mb-2">
+              No ads, no selling student data. We’re glad to sign a Data Privacy Agreement with your district.
+            </p>
+            <p className="text-sm text-white/80 mb-8">
+              See our <Link href="/security" className="underline hover:text-white">Security &amp; Student Data Privacy</Link> and{' '}
+              <Link href="/dpa" className="underline hover:text-white">DPA</Link> pages.
+            </p>
+            <TeacherActivateCTA />
+          </div>
         </div>
       </section>
     </div>

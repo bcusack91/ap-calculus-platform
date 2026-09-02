@@ -28,6 +28,13 @@ export async function GET() {
     orderBy: { endsAt: 'asc' },
   })
 
+  // Lifetime challenge XP for this user (across ALL challenges, not just the
+  // active window). The competitive hub's cosmetics shop spends against this.
+  const xpAggregate = await prisma.challengeParticipant.aggregate({
+    where: { userId: session.user.id },
+    _sum: { xpEarned: true },
+  })
+
   const formatted = challenges.map((c) => ({
     id: c.id,
     title: c.title,
@@ -46,7 +53,10 @@ export async function GET() {
     xpEarned: c.participants[0]?.xpEarned ?? 0,
   }))
 
-  return NextResponse.json({ challenges: formatted })
+  return NextResponse.json({
+    challenges: formatted,
+    totalXpEarned: xpAggregate._sum.xpEarned ?? 0,
+  })
 }
 
 // POST /api/challenges — join a challenge

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { COURSE_COUNT, TOPIC_COUNT_LABEL, COURSE_CATALOG } from "@/lib/site-stats";
+import { getCourseHref } from "@/data/course-metadata";
 
 export const metadata: Metadata = {
   title: "About Us | Study Mondo",
@@ -12,17 +13,17 @@ export const metadata: Metadata = {
 // covers every course and can never under-count the catalog.
 const courseList = COURSE_CATALOG.map((g) => ({
   section: g.section.replace(/\s*\(Grades[^)]*\)/, ""),
-  courses: g.courses.map((c) => ({ name: c.name, icon: c.icon })),
+  courses: g.courses.map((c) => ({ slug: c.slug, name: c.name, icon: c.icon })),
 }));
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-blue-50 to-cyan-50 dark:from-accent-subtle dark:via-gray-900 dark:to-blue-950 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-b from-accent-subtle to-white dark:from-accent-subtle dark:to-gray-950 border-b border-accent-light py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-accent via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
               About Study Mondo
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -38,11 +39,14 @@ export default function AboutPage() {
           <div className="space-y-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 We believe that high-quality educational resources should be accessible to every student,
                 regardless of their financial situation. That&apos;s why we created this platform
                 to help students master challenging math and science courses.
               </p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-3">
+                Built by educators, free to start
+              </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 Our comprehensive study materials span {COURSE_COUNT} courses with {TOPIC_COUNT_LABEL} topics, thousands of flashcards,
                 interactive lessons, and detailed explanations — all created by educators who understand what
@@ -109,14 +113,18 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{COURSE_COUNT} Courses We Cover</h2>
               <div className="space-y-6">
                 {courseList.map((section) => (
-                  <div key={section.section} className="bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-subtle/50 dark:to-blue-950/50 rounded-2xl p-6">
+                  <div key={section.section} className="bg-accent-subtle dark:bg-accent-subtle/60 border border-accent-light rounded-2xl p-6">
                     <h3 className="text-lg font-bold text-accent-dark dark:text-accent-muted mb-3">{section.section}</h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {section.courses.map((course) => (
-                        <div key={course.name} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                          <span className="text-xl">{course.icon}</span>
+                        <Link
+                          key={course.slug}
+                          href={getCourseHref(course.slug)}
+                          className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-accent-hover dark:hover:text-accent-muted transition-colors"
+                        >
+                          <span className="text-xl" aria-hidden>{course.icon}</span>
                           <span className="font-medium">{course.name}</span>
-                        </div>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -148,7 +156,7 @@ export default function AboutPage() {
             </div>
 
             {/* Funding Model */}
-            <div className="bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900 rounded-2xl p-8">
+            <div className="bg-accent-subtle dark:bg-accent-subtle/60 border border-accent-light rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Model</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 A large free tier means any student can learn here at no cost — courses, lessons,
@@ -166,7 +174,7 @@ export default function AboutPage() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 <strong>Original Content:</strong> All study materials, explanations, and practice problems
                 on this platform are original works created and reviewed by our education team (see our{' '}
-                <a href="/editorial-standards" className="text-blue-600 hover:underline">Editorial Standards</a>).
+                <a href="/editorial-standards" className="text-accent hover:underline">Editorial Standards</a>).
                 We are not affiliated with the College Board.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -200,25 +208,25 @@ export default function AboutPage() {
             {/* Stats */}
             <div className="grid sm:grid-cols-4 gap-6 text-center">
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
+                <div className="text-4xl font-bold gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
                   {COURSE_COUNT}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Courses</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
+                <div className="text-4xl font-bold gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
                   {TOPIC_COUNT_LABEL}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Topics</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
+                <div className="text-4xl font-bold gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
                   1000+
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Practice Problems</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
+                <div className="text-4xl font-bold gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
                   $0
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Free to start</div>

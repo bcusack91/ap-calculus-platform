@@ -2,6 +2,7 @@
 
 import { useEffect, useState, use, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { Check, X } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
@@ -61,6 +62,8 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const [error, setError] = useState<string | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [answerResult, setAnswerResult] = useState<{ correct: boolean } | null>(null)
+  // Personal consecutive-correct streak (your own answers, not the team's).
+  const [streak, setStreak] = useState(0)
   const [submitting, setSubmitting] = useState(false)
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [katexLoaded, setKatexLoaded] = useState(false)
@@ -189,6 +192,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       })
       const data = await res.json()
       setAnswerResult({ correct: data.correct })
+      setStreak(prev => (data.correct ? prev + 1 : 0))
 
       // Brief feedback, then advance
       setTimeout(() => {
@@ -209,7 +213,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4" />
           <p className="text-white text-xl">Loading Team Battle...</p>
@@ -220,7 +224,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   if (error || !matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 flex items-center justify-center">
         <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-8 text-center">
           <p className="text-red-500 text-lg mb-4">{error || 'Match not found'}</p>
           <button
@@ -246,7 +250,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       : matchState.team2.score >= 15
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 p-4">
         <div className="max-w-3xl mx-auto pt-10">
           {/* Victory / Defeat */}
           <div className={`text-center mb-8 ${myTeamWon ? 'text-yellow-400' : 'text-red-400'}`}>
@@ -272,7 +276,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
               </div>
               <div className="text-gray-400 text-2xl font-bold">VS</div>
               <div>
-                <p className="text-blue-300 text-sm font-semibold mb-2">
+                <p className="text-accent-secondary text-sm font-semibold mb-2">
                   {matchState.myTeam === 2 ? 'YOUR TEAM' : 'OPPONENT TEAM'}
                 </p>
                 <p className="text-white text-sm">
@@ -298,7 +302,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   // ---- IN-PROGRESS STATE ----
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 p-4">
       <div className="max-w-4xl mx-auto">
         {/* Score Header */}
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 mb-6">
@@ -315,7 +319,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
               <p className="text-gray-500 text-xs">First to 15</p>
             </div>
             <div>
-              <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider">Opponent Team</p>
+              <p className="text-accent-secondary text-xs font-semibold uppercase tracking-wider">Opponent Team</p>
               <p className="text-white text-sm mt-1">
                 {opponentTeam.players.map(p => p.name).join(' & ')}
               </p>
@@ -333,7 +337,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
             </div>
             <div className="flex-1 bg-gray-700 rounded-full h-3 overflow-hidden">
               <div
-                className="bg-blue-500 h-3 rounded-full transition-all duration-300"
+                className="bg-accent-secondary h-3 rounded-full transition-all duration-300"
                 style={{ width: `${Math.min(100, (opponentTeam.score / 15) * 100)}%` }}
               />
             </div>
@@ -358,9 +362,9 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
               </span>
               {question.difficulty && (
                 <span className={`text-xs px-2 py-1 rounded-full ${
-                  question.difficulty === 'easy' ? 'bg-green-100 text-green-700' :
-                  question.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                  'bg-red-100 text-red-700'
+                  question.difficulty === 'easy' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+                  question.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
+                  'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
                 }`}>
                   {question.difficulty}
                 </span>
@@ -402,6 +406,28 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
                 )
               })}
             </div>
+
+            {/* Answer feedback: explicit correct/incorrect line + streak pop.
+                Pacing stays at the existing 1200ms — this is a live team race. */}
+            {answerResult && (
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <p className={`inline-flex items-center gap-1.5 text-lg font-semibold ${
+                  answerResult.correct ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+                }`}>
+                  {answerResult.correct
+                    ? <><Check className="w-5 h-5" aria-hidden="true" /> Correct!</>
+                    : <><X className="w-5 h-5" aria-hidden="true" /> Incorrect</>}
+                </p>
+                {answerResult.correct && streak >= 2 && (
+                  <span
+                    key={`streak-${streak}`}
+                    className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-1 text-sm font-bold text-amber-700 dark:text-amber-400"
+                  >
+                    🔥 {streak} in a row
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         )}
       </div>

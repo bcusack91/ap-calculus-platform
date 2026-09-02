@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
+import QueueSearchPanel from '@/components/competitive/QueueSearchPanel'
 import { ChevronDown, ChevronRight, Check, Shuffle, Users, Bot } from 'lucide-react'
 
 interface Subtopic { slug: string; title: string; questionCount: number }
@@ -334,13 +335,22 @@ function McatCompetitiveInner() {
 
         {/* Actions */}
         {inQueue ? (
-          <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 text-center">
-            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-accent mx-auto mb-3" />
-            <p className="font-semibold text-gray-900 dark:text-white">Finding an opponent…</p>
-            {queueStatus?.position !== undefined && <p className="text-sm text-gray-500 mt-1">Queue position: {queueStatus.position}</p>}
-            <button onClick={leaveQueue} className="mt-4 rounded-lg border border-gray-300 dark:border-gray-600 px-5 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
-              Cancel
-            </button>
+          <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
+            <QueueSearchPanel
+              position={queueStatus?.position}
+              estimatedWait={queueStatus?.estimatedWait}
+              onCancel={leaveQueue}
+              fallback={
+                <div className="mt-3 text-center">
+                  <button
+                    onClick={async () => { await leaveQueue(); void playAI() }}
+                    className="inline-flex items-center gap-2 rounded-lg border-2 border-accent px-5 py-2.5 text-sm font-semibold text-accent-hover dark:text-accent-muted transition-colors hover:bg-accent-subtle dark:hover:bg-accent-light/20"
+                  >
+                    <Bot className="w-4 h-4" aria-hidden /> Practice vs AI instead
+                  </button>
+                </div>
+              }
+            />
           </div>
         ) : (
           <div className="flex flex-wrap gap-3">

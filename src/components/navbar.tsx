@@ -1,11 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { useEffectiveRole } from '@/lib/use-effective-role'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
-import { Gamepad2, Trophy, Users, Info, Mail } from 'lucide-react'
+import { Gamepad2, Trophy, Users, Info, Mail, School, CreditCard } from 'lucide-react'
 import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
@@ -71,6 +72,15 @@ const STATIC_COURSES: CourseLink[] = Object.entries(STATIC_COURSE_NAMES).map(([s
   icon: courseMeta[slug]?.icon ?? null,
 }))
 
+/** Shared dropdown chevron — rotates when its menu/section is open */
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg className={`h-3 w-3 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  )
+}
+
 /** Arrow-key navigation inside dropdown menus */
 function useDropdownKeyNav(containerRef: React.RefObject<HTMLDivElement | null>, isOpen: boolean) {
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -100,6 +110,7 @@ function useDropdownKeyNav(containerRef: React.RefObject<HTMLDivElement | null>,
 
 export function Navbar() {
   const { data: session } = useSession()
+  const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [coursesOpen, setCoursesOpen] = useState(false)
@@ -188,11 +199,11 @@ export function Navbar() {
     }
   }, [])
 
-  const chevronSvg = (open: boolean) => (
-    <svg className={`h-3 w-3 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-    </svg>
-  )
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
+  const topLinkClass = (href: string) =>
+    isActive(href)
+      ? 'text-accent font-semibold underline underline-offset-8 decoration-2'
+      : 'transition-colors hover:text-accent'
 
   return (
     <header role="banner" className="sticky top-0 z-50">
@@ -203,19 +214,19 @@ export function Navbar() {
             <span className="inline-block align-middle" style={{ width: 32, height: 32 }}>
               {/* Mascot: Smiling Book SVG */}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-                <rect width="32" height="32" rx="7" fill="url(#g)"/>
+                <rect width="32" height="32" rx="7" fill="url(#brandGradNav)"/>
                 <defs>
-                  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#7C3AED"/>
-                    <stop offset="100%" stopColor="#2563EB"/>
+                  <linearGradient id="brandGradNav" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stopColor="var(--accent)"/>
+                    <stop offset="100%" stopColor="var(--accent-secondary)"/>
                   </linearGradient>
                 </defs>
-                <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="#7C3AED" strokeWidth="1.2"/>
+                <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="var(--accent)" strokeWidth="1.2"/>
                 <rect x="9" y="12" width="14" height="8" rx="1.5" fill="#e0e7ff"/>
-                <path d="M9 12 Q16 14.5 23 12" fill="none" stroke="#7C3AED" strokeWidth="0.7"/>
-                <ellipse cx="13" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                <ellipse cx="19" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                <path d="M13.5 19 Q16 20.8 18.5 19" stroke="#7C3AED" strokeWidth="0.7" fill="none"/>
+                <path d="M9 12 Q16 14.5 23 12" fill="none" stroke="var(--accent)" strokeWidth="0.7"/>
+                <ellipse cx="13" cy="16" rx="1.2" ry="1.5" fill="var(--accent)"/>
+                <ellipse cx="19" cy="16" rx="1.2" ry="1.5" fill="var(--accent)"/>
+                <path d="M13.5 19 Q16 20.8 18.5 19" stroke="var(--accent)" strokeWidth="0.7" fill="none"/>
               </svg>
             </span>
             <span className="text-xl font-bold">Study Mondo</span>
@@ -223,23 +234,32 @@ export function Navbar() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-5 text-sm font-medium">
-            <Link href="/topics" className="transition-colors hover:text-foreground/80">
+            <Link href="/topics" className={topLinkClass('/topics')}>
               Topics
             </Link>
-            <Link href="/for-teachers" className="transition-colors hover:text-foreground/80">
-              For Teachers
-            </Link>
+            {isTeacher ? (
+              <Link
+                href="/teacher"
+                className={`text-accent dark:text-accent-muted font-semibold transition-colors hover:text-accent-hover ${isActive('/teacher') ? 'underline underline-offset-8 decoration-2' : ''}`}
+              >
+                <School className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden /> My Classes
+              </Link>
+            ) : (
+              <Link href="/for-teachers" className={topLinkClass('/for-teachers')}>
+                For Teachers
+              </Link>
+            )}
 
             {/* Courses Dropdown */}
             <div ref={coursesRef} className="relative" onKeyDown={coursesKeyNav}>
               <button
                 onClick={() => { setCoursesOpen(!coursesOpen); setMoreOpen(false); setUserMenuOpen(false) }}
-                className="transition-colors hover:text-foreground/80 flex items-center gap-1"
+                className="transition-colors hover:text-accent flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={coursesOpen}
               >
                 Courses
-                {chevronSvg(coursesOpen)}
+                <Chevron open={coursesOpen} />
               </button>
               {coursesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50 max-h-[70vh] overflow-y-auto">
@@ -296,9 +316,7 @@ export function Navbar() {
                                 aria-expanded={expandedSection === section}
                               >
                                 {section}
-                                <svg className={`h-3 w-3 transition-transform ${expandedSection === section ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <Chevron open={expandedSection === section} />
                               </button>
                               {expandedSection === section && grouped[section].map(course => (
                                 <Link
@@ -320,22 +338,22 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/flashcards" className="transition-colors hover:text-foreground/80">
+            <Link href="/flashcards" className={topLinkClass('/flashcards')}>
               Flashcards
             </Link>
-            <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-accent dark:text-accent-muted font-semibold">
+            <Link href="/competitive" className={`text-accent dark:text-accent-muted font-semibold transition-colors hover:text-accent-hover ${isActive('/competitive') ? 'underline underline-offset-8 decoration-2' : ''}`}>
               <Gamepad2 className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden /> Competitive
             </Link>
             {/* More Dropdown */}
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
               <button
                 onClick={() => { setMoreOpen(!moreOpen); setCoursesOpen(false); setExpandedSection(null); setUserMenuOpen(false) }}
-                className="transition-colors hover:text-foreground/80 flex items-center gap-1"
+                className="transition-colors hover:text-accent flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={moreOpen}
               >
                 More
-                {chevronSvg(moreOpen)}
+                <Chevron open={moreOpen} />
               </button>
               {moreOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
@@ -344,6 +362,9 @@ export function Navbar() {
                   </Link>
                   <Link href="/study-groups" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     <Users className="w-4 h-4 text-accent" aria-hidden /> Study Groups
+                  </Link>
+                  <Link href="/pricing" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                    <CreditCard className="w-4 h-4 text-accent" aria-hidden /> Pricing
                   </Link>
                   <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     <Info className="w-4 h-4 text-accent" aria-hidden /> About
@@ -355,7 +376,7 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/search" className="transition-colors hover:text-foreground/80" title="Search" aria-label="Search">
+            <Link href="/search" className={isActive('/search') ? 'text-accent' : 'transition-colors hover:text-accent'} title="Search" aria-label="Search">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -386,7 +407,7 @@ export function Navbar() {
               <div className="flex items-center space-x-2">
                 <Link
                   href="/auth/signin"
-                  className="rounded-md px-4 py-2 text-sm font-medium hover:bg-accent bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                  className="rounded-md px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                 >
                   Sign In
                 </Link>

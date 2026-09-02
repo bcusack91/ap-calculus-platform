@@ -3,6 +3,16 @@
 import { useEffect, useState, use, useCallback, useMemo, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import {
+  Check,
+  X,
+  Target,
+  CheckCircle2,
+  Lightbulb,
+  ClipboardList,
+  Sparkles,
+  ArrowRight,
+} from 'lucide-react';
 import AvatarDisplay from '@/components/AvatarDisplay';
 import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
@@ -137,6 +147,18 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const matchStateRef = useRef<MatchState | null>(null);
   const [accuracyTimer, setAccuracyTimer] = useState<number | null>(null);
 
+  // ---- Answer-feedback signal state ----
+  // Consecutive-correct streak (client-side, per session on this page).
+  const [streak, setStreak] = useState(0);
+  // "+N pts" flash after a correct answer; key retriggers the pop animation.
+  const [pointsFlash, setPointsFlash] = useState<{ key: number; points: number } | null>(null);
+  // Wrong-answer explanation hold (practice matches only): while non-null, the
+  // question card stays on this index and the poll won't clear the feedback,
+  // so the player can actually read the explanation before tapping Next.
+  const [heldFeedbackIndex, setHeldFeedbackIndex] = useState<number | null>(null);
+  const feedbackHoldRef = useRef(false);
+  const [showNextButton, setShowNextButton] = useState(false);
+
   // ---- Chaos Mode state ----
   const [chaosToasts, setChaosToasts] = useState<ChaosToast[]>([]);
   const [fiftyFiftyElim, setFiftyFiftyElim] = useState<{ questionIndex: number; eliminated: number[] } | null>(null);
@@ -174,7 +196,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           : previousState.player2QuestionIndex
       );
 
-      if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
+      // While an explanation hold is active (practice matches), the server has
+      // already advanced the index — don't let the poll wipe the feedback the
+      // player is still reading; advanceAfterFeedback clears it instead.
+      if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex && !feedbackHoldRef.current) {
         setFeedback(null);
         setFeedbackQuestionIndex(null);
         setSelectedPosition(null);
@@ -642,6 +667,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // (for ranked matches the question object itself no longer carries it).
         if (resolvedCorrectIndex !== null) setCorrectAnswerIndex(resolvedCorrectIndex);
 
+        // Streak + "+N pts" flash. Points earned come from the score delta the
+        // server reports (chaos double-points answers correctly show +2).
+        setStreak((s) => s + 1);
+        const myPrevScore = isPlayer1 ? matchState.player1Score : matchState.player2Score;
+        const myNewScore = typeof data.currentScore === 'number'
+          ? data.currentScore
+          : (data.finalScores ? (isPlayer1 ? data.finalScores.player1 : data.finalScores.player2) : null);
+        const earned = typeof myNewScore === 'number' ? myNewScore - myPrevScore : null;
+        if (earned && earned > 0) {
+          setPointsFlash({ key: Date.now(), points: earned });
+          setTimeout(() => setPointsFlash(null), 1600);
+        }
+
         // Set happy emotion for the player who answered
         if (isPlayer1) {
           setPlayer1Emotion('happy');
@@ -650,7 +688,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         }
 
         setIsSubmitting(false);
-        
+
         // Wait 1600ms to show feedback, then refresh state for next question
         setTimeout(async () => {
           setFeedback(null);
@@ -667,19 +705,39 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       } else {
         setFeedback('incorrect');
         setFeedbackQuestionIndex(playerQuestionIndex);
-        
+        setStreak(0);
+        setPointsFlash(null);
+
         // Set sad emotion for the player who answered
         if (isPlayer1) {
           setPlayer1Emotion('sad');
         } else {
           setPlayer2Emotion('sad');
         }
-        
+
         // Show correct answer in green for 1600ms (from the answer POST response;
         // the question no longer carries answerIndex for ranked matches — #1)
         setCorrectAnswerIndex(resolvedCorrectIndex ?? 0);
         setIsSubmitting(false);
-        
+
+        // Wrong answer + explanation: in PRACTICE matches (vs the client-driven
+        // bot, unranked) pause on the question with a "Next" button so the
+        // explanation is actually readable. Never in ranked/live play (the
+        // opponent keeps racing) and never in ACCURACY_CHALLENGE (the 5-minute
+        // wall clock keeps ticking) — those keep the exact 1600ms auto-advance,
+        // and the explanation remains available in the post-match review.
+        const canHoldForExplanation =
+          !!currentQuestion?.explanation &&
+          !!matchState.gameData?.isPracticeMatch &&
+          matchState.gameMode !== 'ACCURACY_CHALLENGE';
+
+        if (canHoldForExplanation) {
+          feedbackHoldRef.current = true;
+          setHeldFeedbackIndex(playerQuestionIndex);
+          setShowNextButton(true);
+          return;
+        }
+
         // Wait 1600ms to show feedback, then clear and refresh
         setTimeout(async () => {
           setFeedback(null);
@@ -703,9 +761,24 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     }
   };
 
+  // Ends a wrong-answer explanation hold (practice matches): clears the frozen
+  // feedback and lets the already-advanced server state render the next question.
+  const advanceAfterFeedback = useCallback(async () => {
+    feedbackHoldRef.current = false;
+    setHeldFeedbackIndex(null);
+    setShowNextButton(false);
+    setFeedback(null);
+    setFeedbackQuestionIndex(null);
+    setSelectedPosition(null);
+    setCorrectAnswerIndex(null);
+    setPlayer1Emotion('neutral');
+    setPlayer2Emotion('neutral');
+    await fetchMatchState();
+  }, [fetchMatchState]);
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-accent mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading match...</p>
@@ -716,7 +789,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   if (!matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-600 dark:text-red-400">Match not found</p>
           <button
@@ -732,11 +805,15 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   const isPlayer1 = currentUserId === matchState.player1Id;
   const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
-  const currentQuestion = matchState.questions[playerQuestionIndex];
-  // Only show feedback styling when it belongs to the current question
+  // During an explanation hold (practice matches) keep rendering the question
+  // that was just answered even though the server has already advanced the
+  // index; everywhere else this is exactly the live index.
+  const displayQuestionIndex = heldFeedbackIndex ?? playerQuestionIndex;
+  const currentQuestion = matchState.questions[displayQuestionIndex];
+  // Only show feedback styling when it belongs to the displayed question
   // This prevents the next question's correct answer from flashing green
   // when polling updates matchState before the feedback timeout clears
-  const isFeedbackCurrent = feedback !== null && feedbackQuestionIndex === playerQuestionIndex;
+  const isFeedbackCurrent = feedback !== null && feedbackQuestionIndex === displayQuestionIndex;
   
   // Results screen
   if (matchState.status === 'COMPLETED') {
@@ -763,7 +840,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const totalCorrect = Array.from(answersByQuestion.values()).filter(a => a.correct).length;
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-5 sm:p-8 text-center" role="status" aria-live="polite">
             <h1 className={`text-3xl sm:text-4xl font-bold mb-4 ${
@@ -843,7 +920,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   onClick={() => setShowReview(!showReview)}
                   className="px-5 sm:px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 font-semibold flex items-center gap-2"
                 >
-                  <span>📝</span>
+                  <ClipboardList className="w-5 h-5" aria-hidden="true" />
                   {showReview ? 'Hide Review' : `Review Mistakes (${missedQuestions.length})`}
                 </button>
               )}
@@ -852,7 +929,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   onClick={() => setShowReview(!showReview)}
                   className="px-5 sm:px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold flex items-center gap-2"
                 >
-                  <span>✨</span>
+                  <Sparkles className="w-5 h-5" aria-hidden="true" />
                   {showReview ? 'Hide Review' : 'Review All Questions'}
                 </button>
               )}
@@ -916,7 +993,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                               ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
                               : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
                           }`}>
-                            {wasCorrect ? '✓' : '✗'}
+                            {wasCorrect
+                              ? <Check className="w-4 h-4" aria-hidden="true" />
+                              : <X className="w-4 h-4" aria-hidden="true" />}
                           </span>
                           <div className="flex-1">
                             <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
@@ -968,8 +1047,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                                     {renderPrompt(option)}
                                   </div>
                                   {isCorrectAnswer && (
-                                    <span className="text-green-600 dark:text-green-400 text-sm font-semibold">
-                                      ✓ Correct
+                                    <span className="inline-flex items-center gap-1 text-green-600 dark:text-green-400 text-sm font-semibold">
+                                      <Check className="w-4 h-4" aria-hidden="true" /> Correct
                                     </span>
                                   )}
                                   {isUserAnswer && !wasCorrect && (
@@ -1003,11 +1082,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
                         {/* Explanation */}
                         {question.explanation && !wasCorrect && (
-                          <div className="ml-4 sm:ml-11 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                            <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-1">
-                              💡 Explanation
+                          <div className="ml-4 sm:ml-11 p-4 bg-accent-subtle dark:bg-accent-light/20 rounded-lg border border-accent-muted/40 dark:border-accent/40">
+                            <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-hover dark:text-accent-muted mb-1">
+                              <Lightbulb className="w-4 h-4" aria-hidden="true" /> Explanation
                             </p>
-                            <div className="text-sm text-blue-800 dark:text-blue-400 overflow-x-auto">
+                            <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
                               {renderPrompt(question.explanation)}
                             </div>
                           </div>
@@ -1042,7 +1121,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   return (
     // pb-28 (not pb-24) reserves room for the floating power-up bar once the
     // iPhone safe-area inset pushes it up, so it never covers the answers.
-    <div className={`min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
       {/* Chaos Mode HUD extras: drop/attack toasts + floating inventory bar */}
       <ChaosToasts toasts={chaosToasts} />
       {isChaosMode && matchState.status === 'IN_PROGRESS' && (
@@ -1077,12 +1156,17 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   </div>
                 </div>
               </div>
-              {/* Center: VS + accuracy timer */}
+              {/* Center: VS + accuracy timer + streak (parity with desktop panels) */}
               <div className="text-center px-1">
                 <p className="text-xs font-extrabold text-gray-400 dark:text-gray-500">VS</p>
                 {matchState.gameMode === 'ACCURACY_CHALLENGE' && accuracyTimer !== null && (
                   <p className={`text-sm font-mono font-bold ${accuracyTimer <= 60 ? 'text-red-600 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
                     {Math.floor(accuracyTimer / 60)}:{String(accuracyTimer % 60).padStart(2, '0')}
+                  </p>
+                )}
+                {streak >= 2 && (
+                  <p key={`hud-streak-${streak}`} className="animate-celebration-pop text-[11px] font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap">
+                    🔥 {streak}
                   </p>
                 )}
               </div>
@@ -1094,9 +1178,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                     {matchState.player2Name}{!isPlayer1 ? ' (You)' : ''}
                   </p>
                   <div className="flex items-center gap-1.5 flex-row-reverse">
-                    <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{matchState.player2Score}</span>
+                    <span className="text-sm font-bold text-accent-secondary">{matchState.player2Score}</span>
                     <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-blue-600 to-blue-400 transition-all duration-500 rounded-full ml-auto" style={{ width: `${Math.min(p2Progress, 100)}%` }} />
+                      <div className="h-full bg-gradient-to-r from-accent-secondary to-accent-secondary-hover transition-all duration-500 rounded-full ml-auto" style={{ width: `${Math.min(p2Progress, 100)}%` }} />
                     </div>
                   </div>
                 </div>
@@ -1128,6 +1212,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   {matchState.player1Score}
                 </p>
                 <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
+                {isPlayer1 && streak >= 2 && (
+                  <p key={`p1-streak-${streak}`} className="animate-celebration-pop mt-1 text-xs font-bold text-amber-600 dark:text-amber-400">
+                    🔥 {streak} streak
+                  </p>
+                )}
               </div>
             </div>
             
@@ -1150,7 +1239,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {matchState.gameMode === 'ACCURACY_CHALLENGE' && matchState.status === 'IN_PROGRESS' && (
           <div className="hidden md:flex bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="text-lg">🎯</span>
+              <Target className="w-5 h-5 text-accent" aria-hidden="true" />
               <div>
                 <p className="font-bold text-gray-900 dark:text-white text-sm">Accuracy Challenge</p>
                 <p className="text-xs text-gray-500">{matchState.questions.length} questions &middot; highest accuracy wins</p>
@@ -1186,7 +1275,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {/* Question prompt */}
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
-            <div className="text-5xl mb-4">✅</div>
+            <CheckCircle2 className="w-14 h-14 mx-auto mb-4 text-green-500" aria-hidden="true" />
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All Questions Answered!</h2>
             <p className="text-gray-500">Waiting for your opponent to finish...</p>
             <div className="mt-4 animate-pulse text-accent">
@@ -1195,11 +1284,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           </div>
         ) : currentQuestion && (
         <>
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${displayQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
           {currentQuestion.skill && (
             <div className="mb-3 flex justify-center">
               <span className="inline-flex items-center gap-1 rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-accent-hover dark:bg-accent-light/40 dark:text-accent-muted" title="The SAT skill this question targets">
-                🎯 {currentQuestion.skill}
+                <Target className="w-3.5 h-3.5" aria-hidden="true" /> {currentQuestion.skill}
               </span>
             </div>
           )}
@@ -1221,11 +1310,31 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           )}
           {isFeedbackCurrent && (
-            <p className={`text-xl font-semibold ${
-              feedback === 'correct' ? 'text-green-600' : 'text-red-600'
-            }`}>
-              {feedback === 'correct' ? '✓ Correct!' : '✗ Incorrect'}
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <p className={`inline-flex items-center gap-1.5 text-xl font-semibold ${
+                feedback === 'correct' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+              }`}>
+                {feedback === 'correct'
+                  ? <><Check className="w-6 h-6" aria-hidden="true" /> Correct!</>
+                  : <><X className="w-6 h-6" aria-hidden="true" /> Incorrect</>}
+              </p>
+              {feedback === 'correct' && pointsFlash && (
+                <span
+                  key={pointsFlash.key}
+                  className="animate-celebration-pop inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-1 text-sm font-bold text-green-700 dark:text-green-400"
+                >
+                  +{pointsFlash.points} pt{pointsFlash.points === 1 ? '' : 's'}
+                </span>
+              )}
+              {feedback === 'correct' && streak >= 2 && (
+                <span
+                  key={`streak-${streak}`}
+                  className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-1 text-sm font-bold text-amber-700 dark:text-amber-400"
+                >
+                  🔥 {streak} in a row
+                </span>
+              )}
+            </div>
           )}
         </div>
 
@@ -1249,9 +1358,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 const showCorrect = isFeedbackCurrent && isCorrect;
                 const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
                 // 50/50: wrong options the server told THIS player to eliminate.
-                const ffElim = fiftyFiftyElim && fiftyFiftyElim.questionIndex === playerQuestionIndex
+                const ffElim = fiftyFiftyElim && fiftyFiftyElim.questionIndex === displayQuestionIndex
                   ? fiftyFiftyElim.eliminated
-                  : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === playerQuestionIndex
+                  : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === displayQuestionIndex
                       ? myPowerUps.fiftyFifty.eliminated
                       : []);
                 const isEliminated = ffElim.includes(index);
@@ -1293,10 +1402,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                         {renderPrompt(option)}
                       </div>
                       {showCorrect && (
-                        <div className="text-green-600 dark:text-green-400 text-xl">✓</div>
+                        <Check className="w-6 h-6 flex-shrink-0 text-green-600 dark:text-green-400" aria-hidden="true" />
                       )}
                       {showIncorrect && (
-                        <div className="text-red-600 dark:text-red-400 text-xl">✗</div>
+                        <X className="w-6 h-6 flex-shrink-0 text-red-600 dark:text-red-400" aria-hidden="true" />
                       )}
                     </div>
                   </button>
@@ -1305,13 +1414,23 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
             
             {isFeedbackCurrent && currentQuestion.explanation && (
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-2">
-                  Explanation:
+              <div className="mt-6 p-4 bg-accent-subtle dark:bg-accent-light/20 rounded-lg border border-accent-muted/40 dark:border-accent/40">
+                <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-hover dark:text-accent-muted mb-2">
+                  <Lightbulb className="w-4 h-4" aria-hidden="true" />
+                  Explanation
                 </p>
-                <div className="text-sm text-blue-800 dark:text-blue-400 overflow-x-auto">
+                <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
                   {renderPrompt(currentQuestion.explanation)}
                 </div>
+                {showNextButton && (
+                  <button
+                    onClick={advanceAfterFeedback}
+                    className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold"
+                  >
+                    Next question
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -1360,6 +1479,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   {matchState.player2Score}
                 </p>
                 <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
+                {!isPlayer1 && streak >= 2 && (
+                  <p key={`p2-streak-${streak}`} className="animate-celebration-pop mt-1 text-xs font-bold text-amber-600 dark:text-amber-400">
+                    🔥 {streak} streak
+                  </p>
+                )}
               </div>
             </div>
             
@@ -1368,7 +1492,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div
-                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-400 transition-all duration-500 rounded-full"
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-accent-secondary to-accent-secondary-hover transition-all duration-500 rounded-full"
                   style={{ height: `${Math.min(p2Progress, 100)}%` }}
                 />
               </div>

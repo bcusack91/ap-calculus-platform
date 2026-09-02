@@ -21,6 +21,15 @@
 
 /* ===== Register accent colors as Tailwind utilities ===== */
 @theme {
+  /* Base text colors. `text-foreground` / `text-muted-foreground` were used in
+     many components but never registered, so they silently rendered as no-ops
+     until these lines existed. */
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  /* Canonical card surface: `bg-card border border-card-border` replaces the
+     ad-hoc bg-white/gray-800/gray-900 + border-gray-200/700 variants. */
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-secondary: var(--accent-secondary);
@@ -55,6 +64,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted-foreground: #4b5563; /* gray-600 — AA on white */
+  --card: #ffffff;
+  --card-border: #e5e7eb; /* gray-200 */
   --accent: #9333ea;
   --accent-hover: #7e22ce;
   --accent-secondary: #2563eb;
@@ -71,6 +83,9 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --muted-foreground: #9ca3af; /* gray-400 — AA on gray-900 */
+  --card: #111827; /* gray-900 */
+  --card-border: #374151; /* gray-700 */
   --accent: #a855f7;
   --accent-hover: #9333ea;
   --accent-secondary: #3b82f6;
@@ -87,6 +102,9 @@
   :root:not(.light) {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --muted-foreground: #9ca3af;
+    --card: #111827;
+    --card-border: #374151;
   }
 }
 

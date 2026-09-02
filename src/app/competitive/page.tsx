@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { Swords, Gamepad2, Lock, School, UserPen, Inbox, Hourglass, CheckCircle2, Check } from 'lucide-react'
 import { PowerUpShop } from '@/components/PowerUps'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import AchievementBanner from '@/components/AchievementBanner'
@@ -23,6 +24,10 @@ interface UnlockRequirements {
   masteryLevel?: number
   currentTopic?: string
   currentTopicTitle?: string
+  /** Real per-requirement state served by /api/competitive/unlock-check. */
+  quizPassed?: boolean
+  diagnosticPassed?: boolean
+  teacherGranted?: boolean
 }
 
 interface UnlockCheckResponse {
@@ -58,6 +63,35 @@ interface AsyncChallengeSummary {
 // on this hub as a result).
 const COURSE_CATEGORIES = COMPETITIVE_COURSE_CATEGORIES
 
+/* The three multiplayer doors, rendered as one consistent "Ways to play"
+   section instead of scattered promo blocks with competing gradients. */
+const WAYS_TO_PLAY = [
+  {
+    href: '/competitive/lobbies',
+    icon: Gamepad2,
+    title: 'Open Lobbies',
+    desc: 'Jump into a game that’s waiting for players — 1v1 duels, 2v2 battles, free-for-all races — or host your own.',
+    when: 'Best when you want a live game right now.',
+    cta: 'Browse lobbies',
+  },
+  {
+    href: '/competitive/lobby',
+    icon: Swords,
+    title: 'Private Lobby',
+    desc: 'Create a code, invite a friend, and play challenges back-to-back.',
+    when: 'Best for playing a specific friend.',
+    cta: 'Open lobby',
+  },
+  {
+    href: '/competitive/join',
+    icon: School,
+    title: 'Class Lobby',
+    desc: 'Enter the 6-character code from your teacher to join a class battle with MMR-balanced teams.',
+    when: 'Best when your teacher gave you a code.',
+    cta: 'Join with code',
+  },
+] as const
+
 export default function CompetitivePage() {
   const router = useRouter()
   const { data: session, status } = useSession()
@@ -68,6 +102,7 @@ export default function CompetitivePage() {
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
   const [asyncChallenges, setAsyncChallenges] = useState<{ sent: AsyncChallengeSummary[]; received: AsyncChallengeSummary[] }>({ sent: [], received: [] })
   const [showUnlockBanner, setShowUnlockBanner] = useState(false)
+  const [challengeXP, setChallengeXP] = useState(0)
 
   const checkUnlock = useCallback(async () => {
     try {
@@ -99,6 +134,21 @@ export default function CompetitivePage() {
     }
   }, [])
 
+  // Real, server-persisted XP: the challenges endpoint aggregates the user's
+  // lifetime challenge XP (ChallengeParticipant.xpEarned). Monotonic, so the
+  // cosmetics spend ledger never shows phantom debt.
+  const fetchChallengeXP = useCallback(async () => {
+    try {
+      const res = await fetch('/api/challenges')
+      if (res.ok) {
+        const data = await res.json()
+        if (typeof data.totalXpEarned === 'number') setChallengeXP(data.totalXpEarned)
+      }
+    } catch (e) {
+      console.error('Error fetching challenge XP:', e)
+    }
+  }, [])
+
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/competitive')
@@ -107,15 +157,16 @@ export default function CompetitivePage() {
 
   useEffect(() => {
     if (session) {
-      // Fetch-on-mount: both are async, so every setState runs after `await`,
+      // Fetch-on-mount: all are async, so every setState runs after `await`,
       // never synchronously in the effect body. The set-state-in-effect rule
       // can't see through the async boundary, so scope-disable it here.
       /* eslint-disable react-hooks/set-state-in-effect */
       void checkUnlock()
       void fetchAsyncChallenges()
+      void fetchChallengeXP()
       /* eslint-enable react-hooks/set-state-in-effect */
     }
-  }, [session, checkUnlock, fetchAsyncChallenges])
+  }, [session, checkUnlock, fetchAsyncChallenges, fetchChallengeXP])
 
   if (status === 'loading' || loading) {
     return (
@@ -127,16 +178,41 @@ export default function CompetitivePage() {
 
   if (!session) return null
 
-  /* ---- Locked state (kept for parity with old page) ---- */
+  /* ---- Locked state ---- */
   if (!unlocked) {
     const masteryPercent = Math.round((requirements?.masteryLevel || 0) * 100)
     const currentTopic = requirements?.currentTopic || ''
     const topicTitle = requirements?.currentTopicTitle || 'a topic'
+    // Each requirement reflects real server state from unlock-check. (Accepting
+    // a friend's challenge unlocks instantly, so it has no pending state to
+    // show — it appears as a tip below instead of a dead checklist row.)
+    const checklist = [
+      {
+        done: masteryPercent >= 60,
+        title: 'Complete any interactive lesson (60%+ mastery)',
+        detail: `Your best progress: ${masteryPercent}%`,
+      },
+      {
+        done: !!requirements?.quizPassed,
+        title: 'Pass any topic quiz (70%+)',
+        detail: 'Take an entrance or exit quiz from any course',
+      },
+      {
+        done: !!requirements?.diagnosticPassed,
+        title: 'Score 60%+ on any diagnostic test',
+        detail: 'Take a diagnostic test from any course',
+      },
+      {
+        done: !!requirements?.teacherGranted,
+        title: 'Get access from your teacher',
+        detail: 'Teachers can grant competitive mode access',
+      },
+    ]
     return (
       <div className="min-h-screen flex items-center justify-center p-6">
         <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8">
           <div className="text-center">
-            <div className="text-6xl mb-6">🔒</div>
+            <Lock className="mx-auto mb-6 h-14 w-14 text-gray-400" aria-hidden />
             <h1 className="text-4xl font-bold mb-4">Competitive Mode Locked</h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
               Unlock competitive challenges by doing any ONE of the following:
@@ -152,7 +228,7 @@ export default function CompetitivePage() {
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
                     <div
-                      className="bg-gradient-to-r from-accent to-blue-500 h-4 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-accent to-accent-secondary h-4 rounded-full transition-all duration-500"
                       style={{ width: `${masteryPercent}%` }}
                     />
                   </div>
@@ -161,61 +237,29 @@ export default function CompetitivePage() {
               <div className="text-left bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements (any one)</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent >= 60 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
-                      {masteryPercent >= 60 ? '✓' : '○'}
+                  {checklist.map(item => (
+                    <div key={item.title} className="flex items-start gap-3">
+                      <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${item.done ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
+                        {item.done ? <Check className="h-3.5 w-3.5" aria-hidden /> : <span aria-hidden>○</span>}
+                      </div>
+                      <div>
+                        <p className="font-medium">{item.title}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">{item.detail}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-medium">Complete any interactive lesson (60%+ mastery)</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Your best progress: {masteryPercent}%</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
-                    <div>
-                      <p className="font-medium">Score 70%+ on any entrance quiz</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Take an entrance quiz from any course</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
-                    <div>
-                      <p className="font-medium">Score 60%+ on any diagnostic test</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Take a diagnostic test from any course</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
-                    <div>
-                      <p className="font-medium">Accept a challenge from a friend</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Have a friend send you a challenge link!</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
-                    <div>
-                      <p className="font-medium">Ask your teacher for access</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Teachers can grant competitive mode access</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
+                <p className="mt-5 text-sm text-gray-500 dark:text-gray-400">
+                  Tip: accepting a challenge link from a friend also unlocks competitive mode instantly.
+                </p>
               </div>
             </div>
-            {currentTopic ? (
-              <button
-                onClick={() => router.push(`/topics/${currentTopic}/interactive`)}
-                className="w-full bg-gradient-to-r from-accent to-accent-secondary text-white font-bold py-4 rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
-              >
-                Continue Learning: {topicTitle}
-              </button>
-            ) : (
-              <button
-                onClick={() => router.push('/topics')}
-                className="w-full bg-gradient-to-r from-accent to-accent-secondary text-white font-bold py-4 rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
-              >
-                Browse Topics
-              </button>
-            )}
+            <button
+              onClick={() => router.push(currentTopic ? `/topics/${currentTopic}/interactive` : '/topics')}
+              className="w-full bg-gradient-to-r from-accent to-accent-secondary text-white font-bold py-4 rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
+            >
+              {currentTopic ? `Continue Learning: ${topicTitle}` : 'Browse Topics'}
+            </button>
           </div>
         </div>
       </div>
@@ -242,16 +286,15 @@ export default function CompetitivePage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mb-4">
-            <div className="hidden sm:block w-40" />
+          <div className="relative mb-4 flex flex-col items-center gap-3 sm:block">
             <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
               Competitive Mode
             </h1>
             <button
               onClick={() => router.push('/profile')}
-              className="px-4 py-2 bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors text-sm font-semibold w-40"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors text-sm font-semibold sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2"
             >
-              ✏️ Customize Avatar
+              <UserPen className="h-4 w-4" aria-hidden /> Customize Avatar
             </button>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
@@ -262,51 +305,82 @@ export default function CompetitivePage() {
           </p>
         </div>
 
-        {/* Profile Card */}
+        {/* Profile Card — Rank | MMR | Record, equal treatment */}
         {profile && (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-5 sm:p-8 mb-8">
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700 text-center">
               <div>
-                <h2 className="text-xl sm:text-3xl font-bold mb-1">{profile.rank}</h2>
+                <div className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-1">{profile.rank}</div>
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Current Rank</p>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-accent dark:text-accent-muted">
+                <div className="text-xl sm:text-3xl font-bold text-accent dark:text-accent-muted mb-1">
                   {profile.overallMMR}
                 </div>
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">MMR Rating</p>
               </div>
               <div>
-                <div className="text-xl sm:text-3xl font-bold text-green-600">{profile.wins}W</div>
-                <div className="text-xl sm:text-3xl font-bold text-red-600">{profile.losses}L</div>
+                <div className="text-xl sm:text-3xl font-bold mb-1">
+                  <span className="text-green-600">{profile.wins}W</span>
+                  <span className="mx-1 text-gray-400">–</span>
+                  <span className="text-red-600">{profile.losses}L</span>
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Record</p>
               </div>
             </div>
           </div>
         )}
 
-        {/* Open Lobbies — first thing after the profile: joining a live game
-            beats queueing when traffic is thin, so it gets the top slot */}
-        <div className="mb-8 rounded-2xl border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-red-50 p-5 sm:p-6 shadow-xl dark:border-orange-800 dark:from-orange-900/20 dark:to-red-900/20">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        {/* Primary play CTA — the ranked flow this page is built around */}
+        <div className="mb-8 rounded-2xl bg-brand-gradient p-6 sm:p-8 text-white shadow-xl">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Open Lobbies</h3>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                Jump into a game that&apos;s waiting for players — 1v1 ranked duels, 2v2 team
-                battles, and free-for-all races up to 8 — or host your own and let
-                challengers come to you.
+              <h2 className="flex items-center gap-2 text-2xl font-bold">
+                <Swords className="h-6 w-6" aria-hidden /> Ready to compete?
+              </h2>
+              <p className="mt-1 text-sm text-white/85">
+                Pick a course below, choose a topic you&apos;ve completed, and get matched
+                against another student at your level.
               </p>
             </div>
-            <Link
-              href="/competitive/lobbies"
-              className="shrink-0 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
+            <a
+              href="#course-catalog"
+              className="shrink-0 self-start rounded-xl bg-white px-6 py-3 font-bold text-accent shadow transition hover:shadow-lg sm:self-auto"
             >
-              Browse Lobbies →
-            </Link>
+              Find a Match
+            </a>
           </div>
         </div>
 
+        {/* Ways to play — the three multiplayer doors, one consistent row */}
+        <section className="mb-10">
+          <div className="flex items-center gap-2 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">Ways to play</h2>
+            <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 ml-2" />
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {WAYS_TO_PLAY.map(way => (
+              <Link
+                key={way.href}
+                href={way.href}
+                className="group flex h-full flex-col rounded-2xl border border-card-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent-subtle text-accent">
+                  <way.icon className="h-5 w-5" aria-hidden />
+                </span>
+                <h3 className="font-bold text-gray-900 dark:text-white">{way.title}</h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{way.desc}</p>
+                <p className="mt-2 text-xs text-gray-500 dark:text-gray-500">{way.when}</p>
+                <span className="mt-auto pt-3 text-sm font-semibold text-accent group-hover:underline">
+                  {way.cta} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Course Selection — categorized cards */}
-        <div className="space-y-8 mb-10">
+        <div id="course-catalog" className="space-y-8 mb-10 scroll-mt-6">
           {COURSE_CATEGORIES.map(category => (
             <section key={category.id}>
               <div className="flex items-center gap-2 mb-4">
@@ -325,7 +399,7 @@ export default function CompetitivePage() {
                           : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 opacity-60 cursor-not-allowed'
                       }`}
                     >
-                      {/* Top accent gradient bar */}
+                      {/* Top course-identity gradient bar */}
                       <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${course.gradient}`} />
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex items-start gap-3">
@@ -342,7 +416,7 @@ export default function CompetitivePage() {
                         {isUnlocked ? (
                           <span className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-green-500 mt-1.5" title="Unlocked" />
                         ) : (
-                          <span className="flex-shrink-0 text-gray-400 text-xs mt-1">🔒</span>
+                          <Lock className="mt-1 h-3.5 w-3.5 flex-shrink-0 text-gray-400" aria-hidden />
                         )}
                       </div>
                       <div className="mt-4 flex items-center justify-between">
@@ -381,7 +455,7 @@ export default function CompetitivePage() {
               <p className="text-gray-600 dark:text-gray-400">Total Matches</p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600">{profile.winStreak}</div>
+              <div className="text-3xl font-bold text-accent-secondary">{profile.winStreak}</div>
               <p className="text-gray-600 dark:text-gray-400">Win Streak</p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
@@ -391,46 +465,12 @@ export default function CompetitivePage() {
           </div>
         )}
 
-        {/* Private Lobby — play head-to-head with a friend */}
-        <div className="mt-8 rounded-2xl border-2 border-accent-light bg-gradient-to-r from-accent-subtle to-blue-50 p-5 sm:p-6 shadow-xl dark:border-accent-light dark:from-accent-light/20 dark:to-blue-900/20">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Private Lobby</h3>
-              <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
-                Create a code, invite a friend, and play multiple challenges back-to-back.
-              </p>
-            </div>
-            <Link
-              href="/competitive/lobby"
-              className="shrink-0 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Open Lobby →
-            </Link>
-          </div>
-        </div>
-
-        {/* Class Lobby — student joins their teacher's MMR-balanced lobby */}
-        <div className="mt-4 rounded-2xl border-2 border-indigo-200 bg-gradient-to-r from-indigo-50 to-emerald-50 p-5 sm:p-6 shadow-xl dark:border-indigo-800 dark:from-indigo-900/20 dark:to-emerald-900/20">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">⚔️ Class Lobby (Teacher Code)</h3>
-              <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
-                Got a 6-character code from your teacher? Enter it here to join the class lobby and get auto-assigned to a balanced team.
-              </p>
-            </div>
-            <Link
-              href="/competitive/join"
-              className="shrink-0 rounded-xl bg-gradient-to-r from-indigo-600 to-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Join Class Lobby →
-            </Link>
-          </div>
-        </div>
-
         {/* Async Challenges Inbox */}
         {profile && (asyncChallenges.sent.length > 0 || asyncChallenges.received.length > 0) && (
           <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📬 Your Async Challenges</h3>
+            <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white mb-4">
+              <Inbox className="h-5 w-5 text-accent" aria-hidden /> Your Async Challenges
+            </h3>
 
             {asyncChallenges.received.filter(c => c.status === 'WAITING_FOR_OPPONENT').length > 0 && (
               <div className="mb-6">
@@ -445,7 +485,7 @@ export default function CompetitivePage() {
                         className="w-full flex items-center justify-between p-3 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-700/50 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl">⚔️</span>
+                          <Swords className="h-6 w-6 text-emerald-600 dark:text-emerald-400" aria-hidden />
                           <div className="text-left">
                             <p className="font-semibold text-gray-900 dark:text-white text-sm">
                               {c.challenger?.name || 'Someone'} challenged you
@@ -473,7 +513,7 @@ export default function CompetitivePage() {
                         className="w-full flex items-center justify-between p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl">⏳</span>
+                          <Hourglass className="h-6 w-6 text-amber-600 dark:text-amber-400" aria-hidden />
                           <div className="text-left">
                             <p className="font-semibold text-gray-900 dark:text-white text-sm">
                               Your {c.topicSlug.replace(/-/g, ' ')} challenge
@@ -502,7 +542,7 @@ export default function CompetitivePage() {
                         className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/30 border border-gray-200 dark:border-gray-600/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl">✅</span>
+                          <CheckCircle2 className="h-6 w-6 text-green-600 dark:text-green-400" aria-hidden />
                           <div className="text-left">
                             <p className="font-semibold text-gray-900 dark:text-white text-sm">
                               {c.topicSlug.replace(/-/g, ' ')}
@@ -528,13 +568,12 @@ export default function CompetitivePage() {
           </div>
         )}
 
-        {/* Cosmetics Shop. Base the spendable balance ONLY on a monotonic value
-            (total wins) — winStreak resets to 0 on any loss, and the spend
-            ledger only grows, so including streak would make already-purchased
-            cosmetics show phantom debt after a loss. */}
+        {/* Cosmetics Shop. Balance = server-persisted challenge XP (aggregated
+            by /api/challenges), which is monotonic — the localStorage spend
+            ledger only grows, so the balance can never show phantom debt. */}
         {profile && (
           <div className="mt-8">
-            <PowerUpShop currentXP={profile.wins * 10} />
+            <PowerUpShop currentXP={challengeXP} />
           </div>
         )}
       </div>

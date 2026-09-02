@@ -30,7 +30,7 @@ export function TeacherActivateCTA() {
     return (
       <Link
         href="/auth/signup?callbackUrl=/for-teachers"
-        className="inline-block px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:bg-blue-50 transition-colors"
+        className="inline-block px-8 py-4 rounded-xl bg-white text-accent-hover font-bold text-lg shadow-lg hover:bg-white/90 transition-colors"
       >
         Sign up free to get started
       </Link>
@@ -41,7 +41,7 @@ export function TeacherActivateCTA() {
     return (
       <Link
         href="/teacher"
-        className="inline-block px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:bg-blue-50 transition-colors"
+        className="inline-block px-8 py-4 rounded-xl bg-white text-accent-hover font-bold text-lg shadow-lg hover:bg-white/90 transition-colors"
       >
         Go to your teacher dashboard →
       </Link>
@@ -85,7 +85,7 @@ export function TeacherActivateCTA() {
       <button
         onClick={activate}
         disabled={!attest || loading}
-        className="px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="px-8 py-4 rounded-xl bg-white text-accent-hover font-bold text-lg shadow-lg hover:bg-white/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
         {loading ? 'Activating…' : 'Activate my free teacher account'}
       </button>

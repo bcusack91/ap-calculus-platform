@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
-import { Gamepad2, Trophy, Search } from 'lucide-react'
+import { Gamepad2, Trophy, Search, Users, Info, Mail, CreditCard, School, LayoutDashboard, User, Shield, LogOut } from 'lucide-react'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
 import { courseMeta, sectionOrder, getCourseHref } from '@/data/course-metadata'
@@ -26,6 +27,19 @@ interface NavMobileMenuProps {
 
 export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin, onClose }: NavMobileMenuProps) {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
+  const pathname = usePathname()
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
+  const linkClass = (href: string) =>
+    `block px-3 py-2 text-base rounded-md hover:bg-accent-subtle dark:hover:bg-accent-light/30 ${
+      isActive(href) ? 'font-semibold text-accent dark:text-accent-muted' : 'font-medium'
+    }`
+
+  // Lock body scroll while the menu panel is open (this component only mounts when open)
+  useEffect(() => {
+    document.body.classList.add('overflow-hidden')
+    return () => document.body.classList.remove('overflow-hidden')
+  }, [])
 
   // Group courses by section
   const grouped: Record<string, CourseLink[]> = {}
@@ -49,14 +63,20 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
     })
 
   return (
-    <div className="md:hidden border-t max-h-[calc(100vh-3.5rem)] overflow-y-auto overscroll-contain">
+    <div className="md:hidden border-t max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain">
       <div className="space-y-1 px-4 pb-3 pt-2">
-        <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
+        <Link href="/topics" className={linkClass('/topics')} onClick={onClose}>
           Topics
         </Link>
-        <Link href="/for-teachers" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-          For Teachers
-        </Link>
+        {isTeacher ? (
+          <Link href="/teacher" className={`block px-3 py-2 text-base font-semibold text-accent dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md ${isActive('/teacher') ? 'bg-accent-subtle dark:bg-accent-light/30' : ''}`} onClick={onClose}>
+            <School className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> My Classes
+          </Link>
+        ) : (
+          <Link href="/for-teachers" className={linkClass('/for-teachers')} onClick={onClose}>
+            For Teachers
+          </Link>
+        )}
         {/* Mobile Courses List — categorized */}
         <div className="px-3 py-2">
           <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
@@ -103,22 +123,28 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
             </div>
           ))}
         </div>
-        <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
+        <Link href="/flashcards" className={linkClass('/flashcards')} onClick={onClose}>
           Flashcards
         </Link>
-        <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-accent dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
+        <Link href="/competitive" className={`block px-3 py-2 text-base text-accent dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md ${isActive('/competitive') ? 'font-semibold' : 'font-medium'}`} onClick={onClose}>
           <Gamepad2 className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Competitive Mode
         </Link>
-        <Link href="/leaderboard" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
+        <Link href="/leaderboard" className={linkClass('/leaderboard')} onClick={onClose}>
           <Trophy className="inline w-4 h-4 mr-1.5 -mt-0.5 text-amber-500" aria-hidden /> Leaderboard
         </Link>
-        <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-          About
+        <Link href="/study-groups" className={linkClass('/study-groups')} onClick={onClose}>
+          <Users className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> Study Groups
         </Link>
-        <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-          Contact
+        <Link href="/pricing" className={linkClass('/pricing')} onClick={onClose}>
+          <CreditCard className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> Pricing
         </Link>
-        <Link href="/search" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
+        <Link href="/about" className={linkClass('/about')} onClick={onClose}>
+          <Info className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> About
+        </Link>
+        <Link href="/contact" className={linkClass('/contact')} onClick={onClose}>
+          <Mail className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> Contact
+        </Link>
+        <Link href="/search" className={linkClass('/search')} onClick={onClose}>
           <Search className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Search
         </Link>
         
@@ -127,19 +153,19 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
           {session ? (
             <div className="space-y-2">
               <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-accent dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-                📊 Dashboard
+                <LayoutDashboard className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Dashboard
               </Link>
               <Link href="/profile" className="block px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-                👤 Profile
+                <User className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Profile
               </Link>
               {isTeacher && (
                 <Link href="/teacher" className="block px-3 py-2 text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-                  🏫 Teacher Dashboard
+                  <School className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Teacher Dashboard
                 </Link>
               )}
               {isAdmin && (
                 <Link href="/admin" className="block px-3 py-2 text-base font-medium text-red-600 dark:text-red-400 hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
-                  🛡️ Admin Panel
+                  <Shield className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Admin Panel
                 </Link>
               )}
               <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md" onClick={onClose}>
@@ -152,7 +178,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
                 onClick={() => { onClose(); signOut() }}
                 className="block w-full text-left px-3 py-2 text-base font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/30 rounded-md"
               >
-                Sign Out
+                <LogOut className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden /> Sign Out
               </button>
             </div>
           ) : (

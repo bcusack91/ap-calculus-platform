@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen } from 'lucide-react'
+import { ClipboardList, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -15,8 +15,10 @@ import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
 import ChallengesWidget from '@/components/ChallengesWidget'
-import ContinueWhereYouLeftOff from '@/components/ContinueWhereYouLeftOff'
 import StreakNotification from '@/components/StreakNotification'
+import DashboardSkeleton from '@/components/dashboard/DashboardSkeleton'
+import EmptyState from '@/components/dashboard/EmptyState'
+import EngagementStrip from '@/components/dashboard/EngagementStrip'
 import PomodoroTimer from '@/components/PomodoroTimer'
 import WeakTopicsDashboard from '@/components/WeakTopicsDashboard'
 import ProgressComparison from '@/components/ProgressComparison'
@@ -115,57 +117,6 @@ function isDashboardTab(value: string | null): value is DashboardTab {
   return DASHBOARD_TABS.some(([key]) => key === value)
 }
 
-/** Skeleton shown while session/dashboard data load (also used as the Suspense fallback). */
-function DashboardSkeleton() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-      <div className="container py-8 sm:py-12">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
-          <div className="space-y-2">
-            <div className="w-48 h-7 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-            <div className="w-32 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-          </div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
-              <div className="w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2" />
-              <div className="w-24 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-            </div>
-          ))}
-        </div>
-        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            {[1, 2].map((i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
-                <div className="w-40 h-6 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
-                <div className="space-y-3">
-                  {[1, 2, 3].map((j) => (
-                    <div key={j} className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            {[1, 2].map((i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
-                <div className="w-32 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
-                <div className="space-y-3">
-                  {[1, 2].map((j) => (
-                    <div key={j} className="w-full h-14 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function DashboardContent() {
   const { data: session, status } = useSession()
   const router = useRouter()
@@ -183,6 +134,12 @@ function DashboardContent() {
   const [sendingVerification, setSendingVerification] = useState(false)
   const [verificationError, setVerificationError] = useState(false)
   const [pendingAssignments, setPendingAssignments] = useState(0)
+  // Pending class diagnostics (same endpoint ClassDiagnosticBanner uses) so the
+  // page can decide which single "today" item deserves the full-card slot.
+  const [classDiags, setClassDiags] = useState<{ id: string; title: string; href: string }[]>([])
+  // Daily Challenge, when demoted to a chip, expands in place on click.
+  const [showDailyChallenge, setShowDailyChallenge] = useState(false)
+  const [showTutorial, setShowTutorial] = useState(false)
   const [pathTopic, setPathTopic] = useState<string | null>(null)
   const [achievements, setAchievements] = useState<AchievementData[]>([])
   const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
@@ -247,7 +204,7 @@ function DashboardContent() {
   }
 
   const fetchAll = async () => {
-    const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes, notesRes] = await Promise.allSettled([
+    const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes, notesRes, classDiagRes] = await Promise.allSettled([
       fetch('/api/dashboard'),
       fetch('/api/user/avatar'),
       fetch('/api/student/assignments'),
@@ -255,6 +212,7 @@ function DashboardContent() {
       fetch('/api/achievements'),
       fetch('/api/onboarding'),
       fetch('/api/notes'),
+      fetch('/api/class-diagnostics/pending', { cache: 'no-store' }),
     ])
 
     if (dashRes.status === 'fulfilled' && dashRes.value.ok) {
@@ -300,6 +258,16 @@ function DashboardContent() {
       // Keep the study path so the cold-start card can point at the next topic.
       if (d.learningPath?.currentTopic) setPathTopic(d.learningPath.currentTopic)
     }
+    if (classDiagRes.status === 'fulfilled' && classDiagRes.value.ok) {
+      try {
+        const d = await classDiagRes.value.json()
+        setClassDiags(Array.isArray(d?.pending) ? d.pending : [])
+      } catch { /* silent */ }
+    }
+
+    // Core stats/progress have settled — paint the dashboard now. Everything
+    // below fills in after the initial render instead of blocking it.
+    setLoading(false)
 
     // One call covers every course the student has a diagnostic in, with
     // per-topic done/pending already computed server-side. This replaced six
@@ -313,7 +281,8 @@ function DashboardContent() {
       }
     } catch { /* silent */ }
 
-    // Check for new achievements
+    // Check for new achievements — deliberately after setLoading(false) so the
+    // POST + re-GET never sit in the first paint's critical path.
     try {
       const checkRes = await fetch('/api/achievements', { method: 'POST' })
       if (checkRes.ok) {
@@ -329,8 +298,6 @@ function DashboardContent() {
         }
       }
     } catch { /* silent */ }
-
-    setLoading(false)
   }
 
   const removeBookmark = async (topicSlug: string, part: number) => {
@@ -365,10 +332,10 @@ function DashboardContent() {
 
   const statusLabel = (s: string) => {
     switch (s) {
-      case 'MASTERED': return '🏆 Mastered'
-      case 'COMPLETED': return '✅ Completed'
-      case 'IN_PROGRESS': return '📖 In Progress'
-      default: return '⬜ Not Started'
+      case 'MASTERED': return <><Trophy className="inline w-3 h-3 mr-1 -mt-0.5" aria-hidden /> Mastered</>
+      case 'COMPLETED': return <><CheckCircle2 className="inline w-3 h-3 mr-1 -mt-0.5" aria-hidden /> Completed</>
+      case 'IN_PROGRESS': return <><BookOpen className="inline w-3 h-3 mr-1 -mt-0.5" aria-hidden /> In Progress</>
+      default: return <><Circle className="inline w-3 h-3 mr-1 -mt-0.5" aria-hidden /> Not Started</>
     }
   }
 
@@ -419,33 +386,45 @@ function DashboardContent() {
               <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-accent-muted dark:border-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors text-accent-hover dark:text-accent-muted">
-              🏫 Join a Class
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Quiet secondary actions share one outlined style; the single
+                brand-gradient primary is Review Flashcards. */}
+            <Link href="/join-class" className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
+              <School className="w-4 h-4" aria-hidden /> Join a Class
             </Link>
-            <Link href="/profile" className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
+            <Link href="/profile" className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               Edit Profile
             </Link>
-            <Link href="/flashcards/review" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all">
+            <Link href="/flashcards/review" className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all">
               Review Flashcards {overview && overview.dueFlashcards > 0 && (
-                <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
+                <span className="ml-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
               )}
             </Link>
+            <button
+              onClick={() => setShowTutorial(true)}
+              title="Replay the dashboard tour"
+              aria-label="Replay the dashboard tour"
+              className="p-2 rounded-lg text-gray-400 hover:text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors"
+            >
+              <HelpCircle className="w-5 h-5" aria-hidden />
+            </button>
           </div>
         </div>
 
-        {/* Email Verification Banner */}
+        {/* Email verification — deliberately a slim one-line bar, not a card,
+            so it never competes with time-critical items below. */}
         {session?.user?.email && !session?.user?.emailVerified && (
-          <div className="mb-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <span className="text-2xl">📧</span>
-            <div className="flex-1">
-              <p className="font-semibold text-yellow-900 dark:text-yellow-200">Verify your email address</p>
-              <p className="text-sm text-yellow-800 dark:text-yellow-300">Please verify {session.user.email} to secure your account.</p>
-            </div>
+          <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-amber-200 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20 px-3 py-2 text-sm">
+            <Mail className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" aria-hidden />
+            <span className="text-amber-900 dark:text-amber-200">
+              Verify {session.user.email} to secure your account.
+            </span>
             {verificationSent ? (
-              <span className="text-sm font-medium text-green-700 dark:text-green-400">✅ Verification email sent!</span>
+              <span className="font-medium text-green-700 dark:text-green-400">
+                <CheckCircle2 className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden />Verification email sent!
+              </span>
             ) : (
-              <div className="flex flex-col items-start gap-1">
+              <>
                 <button
                   onClick={async () => {
                     setSendingVerification(true)
@@ -463,52 +442,90 @@ function DashboardContent() {
                     setSendingVerification(false)
                   }}
                   disabled={sendingVerification}
-                  className="px-4 py-2 text-sm font-semibold bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50"
+                  className="font-semibold text-amber-800 dark:text-amber-300 underline underline-offset-2 hover:text-amber-900 dark:hover:text-amber-200 disabled:opacity-50 transition-colors"
                 >
-                  {sendingVerification ? 'Sending...' : 'Send Verification Email'}
+                  {sendingVerification ? 'Sending...' : 'Send verification email'}
                 </button>
                 {verificationError && (
                   <span role="alert" className="text-xs font-medium text-red-700 dark:text-red-400">
-                    Couldn&apos;t send the verification email. Please try again.
+                    Couldn&apos;t send it — please try again.
                   </span>
                 )}
-              </div>
+              </>
             )}
           </div>
         )}
 
-        {/* Time-critical, teacher-driven items lead the page, most urgent
-            first: a class that is live RIGHT NOW, then an assigned diagnostic,
-            then work with a due date. All three sit deliberately ABOVE the
-            fetchError guard further down — each loads from its own endpoint,
-            so a failure of the /api/dashboard stats payload must not hide a
-            live session, an assigned diagnostic, or a due assignment. */}
+        {/* One full-width card at most above the stats. LiveNowBanner always
+            stays (time-critical). Of the rest, only the single highest-priority
+            item gets the full-card slot (assignments > class diagnostic > daily
+            challenge); the others demote to compact chips in the "Today" row.
+            This all sits deliberately ABOVE the fetchError guard further down —
+            each item loads from its own endpoint, so a failure of the
+            /api/dashboard stats payload must not hide a live session, an
+            assigned diagnostic, or due work. */}
 
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
 
-        {/* Assigned class diagnostics not yet taken */}
-        <ClassDiagnosticBanner />
+        {(() => {
+          const primary: 'assignments' | 'diagnostic' | 'daily' =
+            pendingAssignments > 0 ? 'assignments' : classDiags.length > 0 ? 'diagnostic' : 'daily'
+          return (
+            <>
+              {primary === 'assignments' && (
+                <Link href="/assignments" className="mb-6 flex items-center justify-between bg-accent-subtle dark:bg-accent-light/20 border border-accent-light dark:border-accent-hover rounded-xl p-4 hover:shadow-md transition-all group">
+                  <div className="flex items-center gap-3">
+                    <ClipboardList className="w-7 h-7 text-accent shrink-0" aria-hidden />
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
+                    </div>
+                  </div>
+                  <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
+                </Link>
+              )}
 
-        {/* Pending Assignments */}
-        {pendingAssignments > 0 && (
-          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-accent-subtle dark:from-blue-900/20 dark:to-accent-light/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">📋</span>
-              <div>
-                <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
-              </div>
-            </div>
-            <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
-          </Link>
-        )}
+              {/* Assigned class diagnostics not yet taken (self-hides when none) */}
+              {primary === 'diagnostic' && <ClassDiagnosticBanner />}
 
-        {/* Daily Challenge */}
-        <DailyChallenge />
+              {/* Demoted items become one compact "Today" chip row */}
+              {primary !== 'daily' && (
+                <div className="mb-6 flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Today</span>
+                  {primary === 'assignments' && classDiags.length > 0 && (
+                    <Link
+                      href={classDiags[0].href}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
+                    >
+                      <NotebookPen className="w-4 h-4 text-accent" aria-hidden />
+                      Class diagnostic due{classDiags.length > 1 ? ` (${classDiags.length})` : ''}
+                    </Link>
+                  )}
+                  <button
+                    onClick={() => setShowDailyChallenge((v) => !v)}
+                    aria-expanded={showDailyChallenge}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
+                  >
+                    <Target className="w-4 h-4 text-accent" aria-hidden />
+                    Daily Challenge
+                    {showDailyChallenge
+                      ? <ChevronUp className="w-3.5 h-3.5" aria-hidden />
+                      : <ChevronDown className="w-3.5 h-3.5" aria-hidden />}
+                  </button>
+                </div>
+              )}
 
-        {/* Continue Where You Left Off (#121) */}
-        <ContinueWhereYouLeftOff />
+              {/* Daily Challenge — the full card when nothing outranks it, or
+                  expanded on demand from its chip */}
+              {(primary === 'daily' || showDailyChallenge) && (
+                <div className="mb-6">
+                  <DailyChallenge />
+                </div>
+              )}
+            </>
+          )
+        })()}
 
         {/* Streak Notification (#122) */}
         <StreakNotification />
@@ -516,7 +533,7 @@ function DashboardContent() {
         {fetchError ? (
         /* Dashboard payload failed — show an inline error instead of zeroed stats */
         <div role="alert" className="bg-white dark:bg-gray-800 rounded-xl border border-red-200 dark:border-red-800 p-8 text-center shadow-sm">
-          <div className="text-4xl mb-3" aria-hidden="true">⚠️</div>
+          <AlertTriangle className="w-10 h-10 mx-auto mb-3 text-red-500" aria-hidden="true" />
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Couldn&apos;t load your progress</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-5 max-w-md mx-auto">
             Something went wrong while loading your dashboard data. Check your connection and try again.
@@ -530,30 +547,30 @@ function DashboardContent() {
         </div>
         ) : (
         <>
-        {/* Stats Grid with Progress Rings */}
+        {/* Stats Grid with Progress Rings — every tile links somewhere useful */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3">
-            <ProgressRing percentage={completionPct} size={48} strokeWidth={5} color="#8b5cf6" />
+          <Link href="/dashboard?tab=progress" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3 hover:border-accent-muted hover:shadow-md transition-all group">
+            <ProgressRing percentage={completionPct} size={48} strokeWidth={5} color="var(--accent)" />
             <div>
               <div className="text-2xl font-bold text-gray-900 dark:text-white">{overview?.topicsCompleted ?? 0}</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Completed</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-accent transition-colors">Completed</div>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3">
-            <ProgressRing percentage={masteryPct} size={48} strokeWidth={5} color="#f59e0b" />
+          </Link>
+          <Link href="/dashboard?tab=progress" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3 hover:border-accent-muted hover:shadow-md transition-all group">
+            <ProgressRing percentage={masteryPct} size={48} strokeWidth={5} color="var(--accent-secondary)" />
             <div>
               <div className="text-2xl font-bold text-gray-900 dark:text-white">{overview?.topicsMastered ?? 0}</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Mastered</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-accent transition-colors">Mastered</div>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-500">{overview?.totalFlashcards ?? 0}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Flashcards Studied</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
-            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">{streak?.current ?? 0}🔥</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
-          </div>
+          </Link>
+          <Link href="/flashcards/review" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:border-accent-muted hover:shadow-md transition-all group">
+            <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">{overview?.totalFlashcards ?? 0}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 group-hover:text-accent transition-colors">Flashcards Studied</div>
+          </Link>
+          <Link href="/dashboard?tab=extras" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:border-accent-muted hover:shadow-md transition-all group">
+            <div className="text-3xl font-bold text-gray-900 dark:text-white">{streak?.current ?? 0}<span aria-hidden>🔥</span></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 group-hover:text-accent transition-colors">Day Streak</div>
+          </Link>
         </div>
 
         {/* Tabs — keep the default view focused; everything else is one click away (#6) */}
@@ -574,14 +591,6 @@ function DashboardContent() {
               {label}
             </button>
           ))}
-          {/* Full cross-activity history lives on its own page — link it from the
-              tab strip so the dashboard stays a summary, not a dumping ground. */}
-          <Link
-            href="/progress"
-            className="-mb-px ml-auto border-b-2 border-transparent px-4 py-2.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
-          >
-            My Progress →
-          </Link>
         </div>
 
         {/* ============ OVERVIEW: what to study now ============ */}
@@ -627,6 +636,10 @@ function DashboardContent() {
                 </div>
               </div>
             )}
+
+            {/* Compact engagement strip — streak, weekly-challenge XP, leaderboard.
+                One row by design; never a banner. */}
+            <EngagementStrip streak={streak?.current ?? 0} />
 
             {/* Diagnostic study plans, for EVERY course the student has taken a
                 diagnostic in. This was five courses written out one after
@@ -676,6 +689,18 @@ function DashboardContent() {
                 ))}
               </div>
             )}
+            {studyPlans.length === 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
+                <EmptyState
+                  icon={ClipboardList}
+                  message="Take a diagnostic in any course and a personalized study plan will appear here."
+                  ctaHref="/courses"
+                  ctaLabel="Find your course"
+                  compact
+                />
+              </div>
+            )}
 
             {/* Cold start: onboarding picked a course but nothing studied yet —
                 give the promised "start your study path" entry point. */}
@@ -718,6 +743,18 @@ function DashboardContent() {
                 </div>
               </div>
             )}
+            {courseProgress.length === 0 && !pathTopic && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course Progress</h2>
+                <EmptyState
+                  icon={BookOpen}
+                  message="Start any topic and your course progress will show up here."
+                  ctaHref="/topics"
+                  ctaLabel="Browse topics"
+                  compact
+                />
+              </div>
+            )}
 
           </div>
           {/* Overview sidebar — quick actions + what's weak */}
@@ -726,21 +763,21 @@ function DashboardContent() {
               <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Zap className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Quick Actions</h3>
               <div className="space-y-3">
                 <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border border-accent-light dark:border-accent-hover hover:border-accent-muted transition-colors group">
-                  <span className="text-2xl">🎴</span>
+                  <Layers className="w-6 h-6 text-accent shrink-0" aria-hidden />
                   <div>
                     <p className="font-medium text-accent-dark dark:text-accent-dark">Review Flashcards</p>
                     <p className="text-xs text-accent dark:text-accent-muted">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
                   </div>
                 </Link>
                 <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
-                  <span className="text-2xl">🎮</span>
+                  <Gamepad2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0" aria-hidden />
                   <div>
                     <p className="font-medium text-green-900 dark:text-green-200">Competitive Mode</p>
                     <p className="text-xs text-green-600 dark:text-green-400">Challenge AI or other students</p>
                   </div>
                 </Link>
                 <Link href="/topics" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 hover:border-amber-300 transition-colors group">
-                  <span className="text-2xl">📖</span>
+                  <BookOpen className="w-6 h-6 text-amber-600 dark:text-amber-400 shrink-0" aria-hidden />
                   <div>
                     <p className="font-medium text-amber-900 dark:text-amber-200">Browse Topics</p>
                     <p className="text-xs text-amber-600 dark:text-amber-400">Explore all study materials</p>
@@ -777,7 +814,7 @@ function DashboardContent() {
               {achievements.length === 0 ? (
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center py-4">Complete topics, review flashcards, and build streaks to earn achievements!</p>
               ) : (
-                <div className="grid grid-cols-4 sm:grid-cols-6 gap-3">
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                   {achievements.slice(0, 12).map((a) => (
                     <div
                       key={a.id}
@@ -788,7 +825,7 @@ function DashboardContent() {
                       }`}
                     >
                       <span className="text-2xl" aria-hidden="true">{a.icon}</span>
-                      <span className="text-[10px] text-center text-gray-600 dark:text-gray-400 mt-1 leading-tight">{a.name}</span>
+                      <span className="text-xs text-center text-gray-600 dark:text-gray-400 mt-1 leading-tight">{a.name}</span>
                       {!a.unlocked && <span className="sr-only">(locked)</span>}
                     </div>
                   ))}
@@ -796,15 +833,21 @@ function DashboardContent() {
               )}
             </div>
 
-            {/* Recent Activity */}
+            {/* Recent Activity — the full cross-activity history lives on its
+                own page, linked from this card's header (moved out of the tab
+                strip, where its ml-auto placement wrapped badly on mobile). */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4"><Clock className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Recent Activity</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white"><Clock className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Recent Activity</h2>
+                <Link href="/progress" className="text-sm font-semibold text-accent hover:text-accent-hover transition-colors">Full history →</Link>
+              </div>
               {recentActivity.length === 0 ? (
-                <div className="text-center py-8">
-                  <div className="text-4xl mb-3">📖</div>
-                  <p className="text-gray-500 dark:text-gray-400 mb-4">No activity yet! Start learning to see your progress here.</p>
-                  <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg font-medium hover:from-accent-hover hover:to-accent-secondary-hover transition-all">Browse Courses →</Link>
-                </div>
+                <EmptyState
+                  icon={BookOpen}
+                  message="No activity yet! Start learning to see your progress here."
+                  ctaHref="/"
+                  ctaLabel="Browse courses"
+                />
               ) : (
                 <div className="divide-y divide-gray-100 dark:divide-gray-700">
                   {recentActivity.map((activity, i) => (
@@ -887,9 +930,17 @@ function DashboardContent() {
             <FlashcardStudySession />
 
             {/* Bookmarks (server-synced) */}
-            {bookmarks.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Bookmark className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Saved Lessons</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Bookmark className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Saved Lessons</h3>
+              {bookmarks.length === 0 ? (
+                <EmptyState
+                  icon={Bookmark}
+                  message="Bookmark a lesson while studying and it will show up here."
+                  ctaHref="/topics"
+                  ctaLabel="Browse topics"
+                  compact
+                />
+              ) : (
                 <div className="space-y-2">
                   {bookmarks.slice(0, 5).map((bookmark) => (
                     <Link
@@ -910,16 +961,24 @@ function DashboardContent() {
                   ))}
                   {bookmarks.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{bookmarks.length - 5} more saved</p>}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
             {/* My Notes (server-synced per-topic notes) */}
-            {notes.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-gray-900 dark:text-white"><NotebookPen className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> My Notes</h3>
-                  <Link href="/notes" className="text-xs font-medium text-accent hover:underline">View all →</Link>
-                </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-bold text-gray-900 dark:text-white"><NotebookPen className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> My Notes</h3>
+                {notes.length > 0 && <Link href="/notes" className="text-xs font-medium text-accent hover:underline">View all →</Link>}
+              </div>
+              {notes.length === 0 ? (
+                <EmptyState
+                  icon={NotebookPen}
+                  message="Notes you take on any topic are saved here."
+                  ctaHref="/topics"
+                  ctaLabel="Find a topic"
+                  compact
+                />
+              ) : (
                 <div className="space-y-2">
                   {notes.slice(0, 5).map((note) => (
                     <Link
@@ -928,13 +987,13 @@ function DashboardContent() {
                       className="block p-2 -mx-2 rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors group"
                     >
                       <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-accent truncate">{note.topicTitle}</span>
-                      <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{note.content.replace(/\s+/g, ' ').trim().slice(0, 90) || (note.drawing ? '🖊️ Hand-drawn sketch' : 'Empty note')}</span>
+                      <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{note.content.replace(/\s+/g, ' ').trim().slice(0, 90) || (note.drawing ? 'Hand-drawn sketch' : 'Empty note')}</span>
                     </Link>
                   ))}
                   {notes.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{notes.length - 5} more</p>}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
         )}
@@ -958,8 +1017,8 @@ function DashboardContent() {
         )}
       </div>
 
-      {/* Dashboard Tutorial (#151) */}
-      <DashboardTutorial />
+      {/* Dashboard Tutorial (#151) — replayable via the header help button */}
+      <DashboardTutorial forceOpen={showTutorial} onClose={() => setShowTutorial(false)} />
     </div>
   )
 }

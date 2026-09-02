@@ -13,10 +13,10 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-blue-50 to-cyan-50 dark:from-accent-subtle dark:via-gray-900 dark:to-blue-950 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-accent-subtle dark:via-gray-950 dark:to-accent-subtle py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-accent via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl gradient-text-accessible bg-gradient-to-r from-accent to-accent-secondary">
               Get In Touch
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -66,7 +66,7 @@ export default function ContactPage() {
             </div>
 
             {/* Alternative Contact Methods */}
-            <div className="bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900 rounded-2xl p-8">
+            <div className="bg-accent-subtle dark:bg-accent-subtle/60 border border-accent-light rounded-2xl p-8">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                 Other Ways to Reach Us
               </h2>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     href="https://github.com/bcusack91/ap-calculus-platform" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 underline text-sm"
+                    className="text-accent hover:text-accent-hover underline text-sm"
                   >
                     github.com/bcusack91/ap-calculus-platform
                   </a>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       </svg>
                     </span>
                   </summary>
-                  <p className="mt-3 text-gray-600 text-sm">
+                  <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm">
                     Yes — the free plan includes all courses, lessons, practice, and study plans, plus a few
                     AI tutor explanations per day. Premium is an optional upgrade that adds unlimited AI
                     tutoring, advanced analytics, and priority support.

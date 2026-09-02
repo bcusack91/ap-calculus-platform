@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import { Printer, BarChart3, MessageSquare } from 'lucide-react'
+import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
 
 interface Assignment {
   id: string
@@ -12,9 +14,11 @@ interface Assignment {
 
 interface Grade {
   assignmentId: string
+  submissionId: string | null
   score: number | null
   status: string
   percentage: number | null
+  feedback: string | null
 }
 
 interface Student {
@@ -50,9 +54,21 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
   // Which cell is currently being edited, and which is mid-save.
   const [editing, setEditing] = useState<{ studentId: string; assignmentId: string } | null>(null)
   const [savingCell, setSavingCell] = useState<string | null>(null)
-  // Set when the user hits Escape, so the input's onBlur (which can fire as the
-  // field unmounts) skips the save instead of committing the typed value.
+  // Cell-level feedback modal target (submission id + display context).
+  const [feedbackFor, setFeedbackFor] = useState<{
+    submissionId: string; studentName: string; assignmentTitle: string
+    score: number | null; feedback: string | null
+  } | null>(null)
+  // Set when the user hits Escape (or Enter/Tab, which save explicitly), so the
+  // input's onBlur (which can fire as the field unmounts) skips the save instead
+  // of committing the typed value.
   const cancelRef = useRef(false)
+  // Blur doesn't reliably fire when a focused input unmounts, so the flag
+  // resets itself on the next tick rather than depending on the blur handler.
+  const suppressNextBlur = () => {
+    cancelRef.current = true
+    setTimeout(() => { cancelRef.current = false }, 0)
+  }
 
   const load = useCallback(async () => {
     try {
@@ -72,9 +88,11 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
     load()
   }, [load])
 
-  // Persist (or clear) a single grade, then refetch so averages/footer stay in
-  // sync with the server's calculation. `raw` is a percentage string (0-100);
-  // empty clears the grade.
+  // Persist (or clear) a single grade. The local state is updated optimistically
+  // (grades, student averages and the footer's assignment averages are all
+  // recomputed in place) so a cell edit doesn't refetch the whole gradebook; on
+  // a failed save the previous state is rolled back. `raw` is a percentage
+  // string (0-100); empty clears the grade.
   const saveGrade = async (studentId: string, assignmentId: string, raw: string) => {
     setEditing(null)
     const trimmed = raw.trim()
@@ -100,15 +118,57 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
 
     const cellKey = `${studentId}-${assignmentId}`
     setSavingCell(cellKey)
+
+    // Snapshot for rollback, then apply the edit locally.
+    const prevStudents = students
+    const prevStats = stats
+    const newPct = score === null ? null : Math.round(score * 100)
+    const nextStudents = students.map((s) => {
+      if (s.id !== studentId) return s
+      const grades = s.grades.map((g) =>
+        g.assignmentId === assignmentId
+          ? { ...g, score, percentage: newPct, status: score === null ? g.status : 'COMPLETED' }
+          : g
+      )
+      const scored = grades.filter((g) => g.percentage !== null)
+      const average = scored.length > 0
+        ? Math.round(scored.reduce((sum, g) => sum + (g.percentage ?? 0), 0) / scored.length)
+        : null
+      return {
+        ...s,
+        grades,
+        average,
+        submitted: grades.filter((g) => g.status !== 'NOT_SUBMITTED').length,
+      }
+    })
+    setStudents(nextStudents)
+    setStats(stats.map((st) => {
+      if (st.id !== assignmentId) return st
+      const scores = nextStudents
+        .map((s) => s.grades.find((g) => g.assignmentId === assignmentId)?.percentage)
+        .filter((p): p is number => p != null)
+      return {
+        ...st,
+        average: scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null,
+        submissionCount: scores.length,
+      }
+    }))
+
     try {
       const res = await fetch('/api/teacher/gradebook', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ classroomId, assignmentId, studentId, score }),
       })
-      if (res.ok) await load()
+      if (!res.ok) throw new Error(`Save failed (${res.status})`)
+      // A brand-new grade upserts a submission row server-side; refresh quietly
+      // so the cell gains its submission id (for the feedback affordance)
+      // without blocking the edit flow.
+      if (!current?.submissionId && score !== null) load()
     } catch (err) {
       console.error(err)
+      setStudents(prevStudents)
+      setStats(prevStats)
     } finally {
       setSavingCell(null)
     }
@@ -171,7 +231,7 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
   if (assignments.length === 0) {
     return (
       <div className="p-8 text-center">
-        <p className="text-3xl mb-2">📊</p>
+        <BarChart3 className="w-8 h-8 mx-auto mb-2 text-gray-400" aria-hidden />
         <p className="text-gray-500 font-medium">No assignments yet</p>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Create assignments to see grades here</p>
       </div>
@@ -196,7 +256,7 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
           onClick={() => window.print()}
           className="px-4 py-2 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
         >
-          🖨️ Print report
+          <Printer className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden />Print report
         </button>
       </div>
 
@@ -246,10 +306,10 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
               {assignments.map((a) => (
                 <th
                   key={a.id}
-                  className="text-center p-3 font-medium text-gray-600 dark:text-gray-400 min-w-[80px]"
+                  className="text-center p-3 font-medium text-gray-600 dark:text-gray-400 min-w-[100px]"
                   title={a.title}
                 >
-                  <div className="truncate max-w-[80px]">{a.title}</div>
+                  <div className="truncate max-w-[140px] mx-auto" title={a.title}>{a.title}</div>
                 </th>
               ))}
               <th
@@ -275,7 +335,7 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
                   const isEditing = editing?.studentId === student.id && editing?.assignmentId === a.id
                   const isSaving = savingCell === `${student.id}-${a.id}`
                   return (
-                    <td key={a.id} className="text-center p-3">
+                    <td key={a.id} className="text-center p-3 relative group/cell">
                       {isEditing ? (
                         <input
                           autoFocus
@@ -288,22 +348,66 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
                             saveGrade(student.id, a.id, e.target.value)
                           }}
                           onKeyDown={(e) => {
-                            if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
-                            else if (e.key === 'Escape') { cancelRef.current = true; setEditing(null) }
+                            // Enter saves and moves down a row; Tab moves across
+                            // (shift+Tab back); Escape cancels. cancelRef keeps
+                            // the unmounting input's blur from double-saving.
+                            if (e.key === 'Enter') {
+                              e.preventDefault()
+                              const value = (e.target as HTMLInputElement).value
+                              suppressNextBlur()
+                              saveGrade(student.id, a.id, value)
+                              const rowIdx = sorted.findIndex((s) => s.id === student.id)
+                              const nextStudent = sorted[rowIdx + 1]
+                              if (nextStudent) setEditing({ studentId: nextStudent.id, assignmentId: a.id })
+                            } else if (e.key === 'Tab') {
+                              e.preventDefault()
+                              const value = (e.target as HTMLInputElement).value
+                              suppressNextBlur()
+                              saveGrade(student.id, a.id, value)
+                              const colIdx = assignments.findIndex((x) => x.id === a.id)
+                              const nextAssignment = assignments[colIdx + (e.shiftKey ? -1 : 1)]
+                              if (nextAssignment) setEditing({ studentId: student.id, assignmentId: nextAssignment.id })
+                            } else if (e.key === 'Escape') {
+                              suppressNextBlur()
+                              setEditing(null)
+                            }
                           }}
-                          className="w-16 px-1 py-0.5 text-center text-base border-2 border-blue-400 rounded dark:bg-gray-700 dark:text-white"
+                          className="w-16 px-1 py-0.5 text-center text-base border-2 border-accent rounded dark:bg-gray-700 dark:text-white"
                           aria-label={`Grade for ${student.name || 'student'} on ${a.title}`}
                         />
                       ) : (
-                        <button
-                          type="button"
-                          onClick={() => setEditing({ studentId: student.id, assignmentId: a.id })}
-                          disabled={isSaving}
-                          className={`w-full font-medium rounded px-1 py-0.5 hover:bg-blue-50 dark:hover:bg-blue-900/20 ${gradeColor(g?.percentage ?? null)} ${isSaving ? 'opacity-40' : ''}`}
-                          title="Click to edit grade"
-                        >
-                          {g?.percentage != null ? `${g.percentage}%` : '—'}
-                        </button>
+                        <>
+                          <button
+                            type="button"
+                            onClick={() => setEditing({ studentId: student.id, assignmentId: a.id })}
+                            disabled={isSaving}
+                            className={`w-full font-medium rounded px-1 py-0.5 hover:bg-accent-subtle dark:hover:bg-accent-light/20 ${gradeColor(g?.percentage ?? null)} ${isSaving ? 'opacity-40' : ''}`}
+                            title="Click to edit grade"
+                          >
+                            {g?.percentage != null ? `${g.percentage}%` : '—'}
+                          </button>
+                          {g?.submissionId && (
+                            <button
+                              type="button"
+                              onClick={() => setFeedbackFor({
+                                submissionId: g.submissionId!,
+                                studentName: student.name || 'Student',
+                                assignmentTitle: a.title,
+                                score: g.percentage,
+                                feedback: g.feedback,
+                              })}
+                              className={`absolute top-0.5 right-0.5 p-0.5 rounded transition-opacity hover:text-accent-hover focus-visible:opacity-100 print:hidden ${
+                                g.feedback
+                                  ? 'opacity-100 text-accent'
+                                  : 'opacity-0 group-hover/cell:opacity-100 text-gray-400'
+                              }`}
+                              title={g.feedback ? 'Edit feedback' : 'Leave feedback'}
+                              aria-label={`Feedback for ${student.name || 'student'} on ${a.title}`}
+                            >
+                              <MessageSquare className="w-3.5 h-3.5" aria-hidden />
+                            </button>
+                          )}
+                        </>
                       )}
                     </td>
                   )
@@ -337,6 +441,17 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
           </tfoot>
         </table>
       </div>
+
+      <SubmissionFeedbackModal
+        open={!!feedbackFor}
+        onClose={() => setFeedbackFor(null)}
+        submissionId={feedbackFor?.submissionId ?? null}
+        studentName={feedbackFor?.studentName}
+        assignmentTitle={feedbackFor?.assignmentTitle}
+        currentScore={feedbackFor?.score ?? null}
+        currentFeedback={feedbackFor?.feedback ?? null}
+        onSaved={load}
+      />
     </div>
   )
 }

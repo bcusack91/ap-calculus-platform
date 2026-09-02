@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
+import { Layers, ChevronDown } from 'lucide-react'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -72,69 +73,67 @@ export default async function FlashcardsPage({
           </Link>
         </div>
 
-        <div className="space-y-12 mt-8">
+        <div className="space-y-4 mt-8">
           {categories.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">No flashcards available yet. Check back soon!</p>
+            <div className="mx-auto max-w-md rounded-xl bg-card border border-card-border p-10 text-center">
+              <Layers className="mx-auto mb-4 h-10 w-10 text-accent dark:text-accent-muted" aria-hidden />
+              <h2 className="text-xl font-semibold text-foreground mb-2">No flashcards here yet</h2>
+              <p className="text-muted-foreground mb-6">
+                {course
+                  ? "We haven't published flashcards for this course yet — browse other courses in the meantime."
+                  : 'Flashcards are on the way. Browse our courses to start studying now.'}
+              </p>
+              <Link
+                href="/topics"
+                className="inline-block px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg shadow-lg transition-all"
+              >
+                Browse Courses
+              </Link>
             </div>
           ) : (
             categories.map((category) => (
-              <div key={category.id} className="space-y-4">
-                <div className="flex items-center gap-3">
-                  {category.icon && <span className="text-3xl">{category.icon}</span>}
-                  <h2 className="text-2xl font-bold">{category.name}</h2>
-                </div>
-                
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              // Collapsible per-category sections keep the all-course catalog
+              // scannable: collapsed by default when browsing everything, open
+              // when filtered to a single course.
+              <details key={category.id} open={Boolean(course)} className="group rounded-xl bg-card border border-card-border">
+                <summary className="flex cursor-pointer list-none items-center gap-3 p-5 [&::-webkit-details-marker]:hidden">
+                  {category.icon && <span className="text-3xl" aria-hidden>{category.icon}</span>}
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-xl font-bold">{category.name}</h2>
+                    <p className="text-sm text-muted-foreground">
+                      {!course && `${category.course.name} · `}
+                      {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'}
+                    </p>
+                  </div>
+                  <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden />
+                </summary>
+
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 px-5 pb-5">
                   {category.topics.map((topic) => (
                     <Link
                       key={topic.id}
                       href={`/flashcards/${topic.slug}`}
-                      className="block group rounded-lg border p-6 hover:shadow-lg transition-all hover:border-accent-muted"
+                      className="block group/card rounded-xl bg-card border border-card-border p-6 hover:shadow-lg transition-all hover:border-accent-muted"
                     >
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="font-semibold group-hover:text-accent transition-colors">
-                          {topic.title}
-                        </h3>
-                        {/* Temporarily hidden for free tier launch
-                        {topic.isPremium && (
-                          <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-accent-light text-accent-dark">
-                            Premium
-                          </span>
-                        )}
-                        */}
-                      </div>
+                      <h3 className="font-semibold mb-2 group-hover/card:text-accent transition-colors">
+                        {topic.title}
+                      </h3>
                       <p className="text-sm text-muted-foreground">
                         {topic._count.flashcards} {topic._count.flashcards === 1 ? 'card' : 'cards'}
                       </p>
-                      <div className="mt-4 text-sm text-accent group-hover:underline">
+                      <div className="mt-4 text-sm text-accent group-hover/card:underline">
                         Study now →
                       </div>
                     </Link>
                   ))}
                 </div>
-              </div>
+              </details>
             ))
           )}
         </div>
 
         {/* Ad placement after flashcard list */}
         <InArticleAd />
-
-        {/* Temporarily hidden for free tier launch
-        <div className="mt-12 p-6 rounded-lg bg-accent-subtle border border-accent-light">
-          <h3 className="text-xl font-bold mb-2">🌟 Upgrade for Spaced Repetition</h3>
-          <p className="text-muted-foreground mb-4">
-            Premium members get smart spaced-repetition flashcards that adapt to your memory. Never forget what you've learned!
-          </p>
-          <Link
-            href="/premium"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-2 text-sm font-semibold text-white hover:bg-accent-hover"
-          >
-            Learn More
-          </Link>
-        </div>
-        */}
 
       </div>
     </div>

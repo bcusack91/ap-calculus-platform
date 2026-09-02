@@ -54,11 +54,13 @@ export async function GET(req: NextRequest) {
       studentId: { in: studentIds },
     },
     select: {
+      id: true,
       assignmentId: true,
       studentId: true,
       score: true,
       status: true,
       completedAt: true,
+      feedback: true,
     },
   })
 
@@ -74,10 +76,13 @@ export async function GET(req: NextRequest) {
       const sub = submissionMap.get(`${a.id}-${m.user.id}`)
       return {
         assignmentId: a.id,
+        // The submission id lets the UI open feedback for this exact cell.
+        submissionId: sub?.id ?? null,
         score: sub?.score ?? null,
         status: sub?.status ?? 'NOT_SUBMITTED',
         completedAt: sub?.completedAt?.toISOString() ?? null,
         percentage: sub?.score != null ? Math.round(sub.score * 100) : null,
+        feedback: sub?.feedback ?? null,
       }
     })
 

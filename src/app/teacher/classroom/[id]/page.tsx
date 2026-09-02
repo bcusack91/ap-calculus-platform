@@ -13,6 +13,41 @@ import LiveSessionTeacherCard from '@/components/LiveSessionTeacherCard'
 import ClassPlan from '@/components/ClassPlan'
 import ClassEngagement from '@/components/ClassEngagement'
 import StudentReportModal from '@/components/StudentReportModal'
+import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
+import ImportRosterModal from '@/components/teacher/ImportRosterModal'
+import AssignmentModal, {
+  ASSIGNMENT_TYPES,
+  type CourseGroup,
+  type TopicOption,
+} from '@/components/teacher/AssignmentModal'
+import AssignmentResults, {
+  type AssignmentStatsData,
+  type SubmissionRow,
+} from '@/components/teacher/AssignmentResults'
+import {
+  Activity,
+  AlertTriangle,
+  BarChart3,
+  BookOpenCheck,
+  CalendarDays,
+  CalendarPlus,
+  Check,
+  ClipboardList,
+  Copy,
+  Download,
+  Link as LinkIcon,
+  Megaphone,
+  Play,
+  QrCode,
+  Search,
+  Settings as SettingsIcon,
+  Swords,
+  Target,
+  Upload,
+  UserPlus,
+  Users,
+  X,
+} from 'lucide-react'
 
 interface Member {
   id: string
@@ -29,6 +64,7 @@ interface Assignment {
   topicSlugs: string[] | null
   courseSlug?: string | null
   unitId?: string | null
+  flashcardSetId?: string | null
   dueDate: string | null
   requiredScore: number | null
   maxAttempts: number | null
@@ -63,18 +99,6 @@ interface ClassroomDetail {
   members: Member[]
   assignments: Assignment[]
   competitions: Competition[]
-}
-
-interface TopicOption {
-  slug: string
-  title: string
-  category: string
-}
-
-interface CourseGroup {
-  courseSlug: string
-  courseTitle: string
-  topics: TopicOption[]
 }
 
 interface ClassroomPerformanceData {
@@ -115,19 +139,96 @@ interface ClassroomPerformanceData {
   }[]
 }
 
-interface AssignmentCreateBody {
-  title: string
-  type: string
-  requiredScore?: number
-  maxAttempts?: number
-  dueDate?: string
-  topicSlugs?: string[]
-  topicSlug?: string
-  courseSlug?: string
-  unitId?: string
+/** Real per-assignment progress from the assignments GET route. */
+interface AssignmentDetail {
+  stats: AssignmentStatsData
+  submissions: SubmissionRow[]
 }
 
-type TabType = 'members' | 'assignments' | 'announcements' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'classplan' | 'engagement' | 'settings'
+// ---------------------------------------------------------------------------
+// Navigation: 10 legacy tabs regrouped into 4. `view` is the leaf surface (it
+// keeps the legacy tab names so ?tab=performance-style links keep working);
+// `group` is what renders in the primary tab bar.
+// ---------------------------------------------------------------------------
+
+type ViewType =
+  | 'members'
+  | 'assignments'
+  | 'announcements'
+  | 'competitions'
+  | 'performance'
+  | 'gradebook'
+  | 'standards'
+  | 'classplan'
+  | 'engagement'
+  | 'settings'
+type GroupType = 'roster' | 'work' | 'insights' | 'settings'
+
+const VIEW_GROUP: Record<ViewType, GroupType> = {
+  members: 'roster',
+  assignments: 'work',
+  announcements: 'work',
+  competitions: 'work',
+  performance: 'insights',
+  gradebook: 'insights',
+  standards: 'insights',
+  classplan: 'insights',
+  engagement: 'insights',
+  settings: 'settings',
+}
+const GROUP_HOME: Record<GroupType, ViewType> = {
+  roster: 'members',
+  work: 'assignments',
+  insights: 'performance',
+  settings: 'settings',
+}
+const isView = (v: string | null): v is ViewType => !!v && v in VIEW_GROUP
+const isGroup = (v: string | null): v is GroupType => !!v && v in GROUP_HOME
+
+/** Resolve ?tab= / ?view= (including legacy ?tab=<leaf> links) to a leaf view. */
+const resolveView = (tab: string | null, view: string | null): ViewType => {
+  if (isView(view)) return view
+  if (isView(tab)) return tab // legacy deep links: ?tab=performance, ?tab=gradebook, …
+  if (isGroup(tab)) return GROUP_HOME[tab]
+  return 'members'
+}
+
+const GROUP_TABS: { key: GroupType; label: string; icon: typeof Users }[] = [
+  { key: 'roster', label: 'Roster', icon: Users },
+  { key: 'work', label: 'Work', icon: ClipboardList },
+  { key: 'insights', label: 'Insights', icon: BarChart3 },
+  { key: 'settings', label: 'Settings', icon: SettingsIcon },
+]
+
+// Each sub-view carries a one-line answer to "what does this screen tell me?"
+const SUB_VIEWS: Record<'work' | 'insights', { key: ViewType; label: string; icon: typeof Users; desc: string }[]> = {
+  work: [
+    { key: 'assignments', label: 'Assignments', icon: ClipboardList, desc: 'Create work, set due dates, and see who has actually finished each assignment.' },
+    { key: 'announcements', label: 'Announcements', icon: Megaphone, desc: 'Post messages the whole class sees on their dashboard.' },
+    { key: 'competitions', label: 'Live games', icon: Swords, desc: 'Run a real-time review game now, or put one on the calendar.' },
+  ],
+  insights: [
+    { key: 'performance', label: 'Performance', icon: BarChart3, desc: 'Mastery, assignment averages, streaks, and exit-quiz results for each student.' },
+    { key: 'gradebook', label: 'Gradebook', icon: BookOpenCheck, desc: 'Every assignment score in one grid — exportable for your SIS.' },
+    { key: 'standards', label: 'Standards', icon: Target, desc: 'Class mastery mapped to curriculum standards.' },
+    { key: 'classplan', label: 'Class plan', icon: CalendarDays, desc: 'A day-by-day pacing plan for this class.' },
+    { key: 'engagement', label: 'Engagement', icon: Activity, desc: 'Who is logging in, when, and how much time they spend.' },
+  ],
+}
+
+const TYPE_CHIP: Record<string, string> = {
+  INTERACTIVE_LESSON: 'bg-accent-subtle text-accent dark:bg-accent-light/20 dark:text-accent-muted',
+  FLASHCARD_REVIEW: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+  QUIZ: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400',
+  COMPETITIVE_PRACTICE: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400',
+  UNIT_TEST: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400',
+  FRQ_PRACTICE: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400',
+}
+const typeLabel = (type: string) =>
+  ASSIGNMENT_TYPES.find((t) => t.value === type)?.label ?? type.replace(/_/g, ' ')
+
+const inputCls =
+  'w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-accent focus:outline-none dark:bg-gray-700 dark:text-white'
 
 export default function ClassroomDetailPage() {
   const router = useRouter()
@@ -139,62 +240,65 @@ export default function ClassroomDetailPage() {
   const [loading, setLoading] = useState(true)
   // Tab state lives in the URL so a teacher can be linked straight to the view
   // that matters — the dashboard points at ?tab=performance for remediation and
-  // ?tab=gradebook for grading, and back/forward behave as expected.
+  // ?tab=gradebook for grading, and back/forward behave as expected. Legacy
+  // single-tab links resolve to the same surface inside its new group.
   const searchParams = useSearchParams()
-  const tabParam = searchParams.get('tab')
-  const isTab = (v: string | null): v is TabType =>
-    !!v && ['members', 'assignments', 'gradebook', 'performance', 'standards', 'announcements', 'competitions', 'classplan', 'engagement', 'settings'].includes(v)
-  const [activeTab, setActiveTabState] = useState<TabType>(isTab(tabParam) ? tabParam : 'members')
+  const [activeView, setActiveViewState] = useState<ViewType>(
+    resolveView(searchParams.get('tab'), searchParams.get('view'))
+  )
+  const activeGroup = VIEW_GROUP[activeView]
   // Roster rows open the student's full report — the roster is where a teacher
   // is already looking when they wonder how someone is doing.
   const [reportFor, setReportFor] = useState<{ id: string; name: string } | null>(null)
   // The classroom's attached courses (Khan-style). null = not loaded yet;
   // [] = explicitly none configured, which keeps the full-catalog fallback.
   const [classCourses, setClassCourses] = useState<string[] | null>(null)
-  const [savingCourses, setSavingCourses] = useState(false)
-  // Course the teacher is currently browsing in the assignment modal.
-  const [assignCourse, setAssignCourse] = useState('')
+  const [courseSaveState, setCourseSaveState] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
 
-  // Keep the URL in step with the tab, without pushing a history entry per click.
-  const setActiveTab = useCallback((tab: TabType) => {
-    setActiveTabState(tab)
+  // One visible place for background failures that used to die in console.error.
+  const [pageError, setPageError] = useState('')
+  // Accessible confirm dialog state — replaces bare confirm() calls.
+  const [confirmReq, setConfirmReq] = useState<ConfirmRequest | null>(null)
+
+  // Keep the URL in step with the view, without pushing a history entry per click.
+  const setActiveView = useCallback((view: ViewType) => {
+    setActiveViewState(view)
     const url = new URL(window.location.href)
-    if (tab === 'members') url.searchParams.delete('tab')
-    else url.searchParams.set('tab', tab)
+    const group = VIEW_GROUP[view]
+    if (view === 'members') {
+      url.searchParams.delete('tab')
+      url.searchParams.delete('view')
+    } else {
+      url.searchParams.set('tab', group)
+      if (view === GROUP_HOME[group]) url.searchParams.delete('view')
+      else url.searchParams.set('view', view)
+    }
     window.history.replaceState(null, '', url.toString())
   }, [])
 
-  // Follow back/forward and in-app links that change ?tab= while mounted.
+  // Follow back/forward and in-app links that change ?tab=/?view= while mounted.
   useEffect(() => {
-    if (isTab(tabParam) && tabParam !== activeTab) setActiveTabState(tabParam)
+    const next = resolveView(searchParams.get('tab'), searchParams.get('view'))
+    if (next !== activeView) setActiveViewState(next)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tabParam])
+  }, [searchParams])
   const [copiedCode, setCopiedCode] = useState(false)
 
-  // Assignment creation
+  // Assignment creation / editing (form lives in AssignmentModal)
   const [showAssignmentModal, setShowAssignmentModal] = useState(false)
+  const [editingAssignment, setEditingAssignment] = useState<Assignment | null>(null)
   const [courses, setCourses] = useState<CourseGroup[]>([])
-  // Units for the course selected on a UNIT_TEST assignment.
-  const [unitOptions, setUnitOptions] = useState<{ id: string; unitNumber: number; name: string }[]>([])
-  const [assignmentForm, setAssignmentForm] = useState({
-    title: '',
-    type: 'INTERACTIVE_LESSON' as string,
-    topicSlug: '',
-    topicSlugs: [] as string[],
-    courseSlug: '',
-    unitId: '',
-    dueDate: '',
-    maxAttempts: '',
-    requiredScore: '80',
-  })
-  const [creatingAssignment, setCreatingAssignment] = useState(false)
-  const [editingAssignmentId, setEditingAssignmentId] = useState<string | null>(null)
   const [deletingAssignmentId, setDeletingAssignmentId] = useState<string | null>(null)
-
+  // Real per-assignment progress (status counts + per-student rows).
+  const [assignmentDetails, setAssignmentDetails] = useState<Record<string, AssignmentDetail> | null>(null)
 
   // Competitive grants
   const [competitiveGrants, setCompetitiveGrants] = useState<Record<string, boolean>>({})
   const [grantingAccess, setGrantingAccess] = useState<string | null>(null)
+  const [bulkGranting, setBulkGranting] = useState(false)
+
+  // Roster search
+  const [memberQuery, setMemberQuery] = useState('')
 
   // Performance data
   const [perfData, setPerfData] = useState<ClassroomPerformanceData | null>(null)
@@ -222,6 +326,8 @@ export default function ClassroomDetailPage() {
   const [editGrade, setEditGrade] = useState('')
   const [editSection, setEditSection] = useState('')
   const [saving, setSaving] = useState(false)
+  const [settingsSaved, setSettingsSaved] = useState(false)
+  const [settingsError, setSettingsError] = useState('')
 
   const loadClassroom = useCallback(async () => {
     try {
@@ -273,14 +379,7 @@ export default function ClassroomDetailPage() {
     }
   }, [refreshClassroom])
 
-  // The Settings tab's course checkboxes and the assignment modal both need
-  // the catalog + attachments; load them when either surface opens.
-  useEffect(() => {
-    if (activeTab === 'settings') void loadTopics()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeTab])
-
-  const loadTopics = async () => {
+  const loadTopics = useCallback(async () => {
     if (courses.length === 0) {
       const res = await fetch('/api/teacher/topics')
       if (res.ok) setCourses(await res.json())
@@ -292,23 +391,27 @@ export default function ClassroomDetailPage() {
         setClassCourses(Array.isArray(j.courseSlugs) ? j.courseSlugs : [])
       }
     }
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [courses.length, classCourses, classroomId])
 
-  const saveClassCourses = async (slugs: string[]) => {
-    setSavingCourses(true)
-    setClassCourses(slugs) // optimistic — checkbox flips immediately
+  // Real submission-status counts per assignment — the classroom payload's
+  // _count can't distinguish "started" from "finished".
+  const loadAssignmentDetails = useCallback(async () => {
     try {
-      await fetch(`/api/teacher/classrooms/${classroomId}/courses`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ courseSlugs: slugs }),
-      })
-    } finally {
-      setSavingCourses(false)
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`)
+      if (!res.ok) return
+      const j = await res.json()
+      const map: Record<string, AssignmentDetail> = {}
+      for (const a of j.assignments ?? []) {
+        if (a.stats) map[a.id] = { stats: a.stats, submissions: a.submissions ?? [] }
+      }
+      setAssignmentDetails(map)
+    } catch {
+      // the per-assignment bar shows its own loading placeholder
     }
-  }
+  }, [classroomId])
 
-  const loadPerformance = async () => {
+  const loadPerformance = useCallback(async () => {
     if (perfData) return
     setLoadingPerf(true)
     loadTopics() // so remediation suggestions can show human topic titles
@@ -317,6 +420,33 @@ export default function ClassroomDetailPage() {
       if (res.ok) setPerfData(await res.json())
     } finally {
       setLoadingPerf(false)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [perfData, classroomId])
+
+  // Load what each view needs when it opens. Settings and the assignment
+  // surfaces both need the catalog + attachments (topic titles, course pins).
+  useEffect(() => {
+    if (activeView === 'performance') void loadPerformance()
+    if (activeView === 'settings' || activeView === 'assignments') void loadTopics()
+    if (activeView === 'assignments' && assignmentDetails === null) void loadAssignmentDetails()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeView])
+
+  const saveClassCourses = async (slugs: string[]) => {
+    setCourseSaveState('saving')
+    setClassCourses(slugs) // optimistic — checkbox flips immediately
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/courses`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ courseSlugs: slugs }),
+      })
+      if (!res.ok) throw new Error()
+      setCourseSaveState('saved')
+      setTimeout(() => setCourseSaveState((s) => (s === 'saved' ? 'idle' : s)), 2500)
+    } catch {
+      setCourseSaveState('error')
     }
   }
 
@@ -337,52 +467,8 @@ export default function ClassroomDetailPage() {
 
   const [showQR, setShowQR] = useState(false)
 
-  // CSV roster import
+  // CSV roster import (preview + confirm lives in ImportRosterModal)
   const [showImport, setShowImport] = useState(false)
-  const [importText, setImportText] = useState('')
-  const [importing, setImporting] = useState(false)
-  const [importError, setImportError] = useState('')
-  const [importResult, setImportResult] = useState<null | {
-    totalRows: number
-    added: number
-    reactivated: number
-    alreadyMembers: number
-    newAccounts: number
-    invalid: string[]
-  }>(null)
-
-  const importRoster = async () => {
-    setImporting(true)
-    setImportError('')
-    setImportResult(null)
-    try {
-      const res = await fetch(`/api/teacher/classrooms/${classroomId}/import-roster`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: importText }),
-      })
-      const data = await res.json()
-      if (!res.ok) {
-        setImportError(data.error || 'Import failed')
-      } else {
-        setImportResult(data.summary)
-        setImportText('')
-        loadClassroom()
-      }
-    } catch {
-      setImportError('Import failed. Please try again.')
-    } finally {
-      setImporting(false)
-    }
-  }
-
-  const onRosterFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-    const txt = await file.text()
-    setImportText((prev) => (prev ? `${prev}\n${txt}` : txt))
-    e.target.value = ''
-  }
 
   // Co-teachers (owner-only management)
   const [coTeacherEmail, setCoTeacherEmail] = useState('')
@@ -413,30 +499,55 @@ export default function ClassroomDetailPage() {
     }
   }
 
-  const removeCoTeacher = async (userId: string) => {
-    if (!confirm('Remove this co-teacher? They will lose access to this class.')) return
-    const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${userId}`, {
-      method: 'DELETE',
+  const removeCoTeacher = (userId: string) => {
+    setConfirmReq({
+      title: 'Remove co-teacher',
+      message: 'Remove this co-teacher? They will lose access to this class.',
+      confirmLabel: 'Remove',
+      danger: true,
+      onConfirm: async () => {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${userId}`, {
+          method: 'DELETE',
+        })
+        if (res.ok) loadClassroom()
+        else setPageError('Could not remove the co-teacher. Please try again.')
+      },
     })
-    if (res.ok) loadClassroom()
   }
 
   // A co-teacher removing themselves (leave the class).
-  const leaveClass = async () => {
+  const leaveClass = () => {
     if (!session?.user?.id) return
-    if (!confirm('Leave this class? You will lose access to it.')) return
-    const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${session.user.id}`, {
-      method: 'DELETE',
+    const userId = session.user.id
+    setConfirmReq({
+      title: 'Leave class',
+      message: 'Leave this class? You will lose access to it.',
+      confirmLabel: 'Leave class',
+      danger: true,
+      onConfirm: async () => {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${userId}`, {
+          method: 'DELETE',
+        })
+        if (res.ok) router.push('/teacher')
+        else setPageError('Could not leave the class. Please try again.')
+      },
     })
-    if (res.ok) router.push('/teacher')
   }
 
-  const removeMember = async (memberId: string) => {
-    if (!confirm('Remove this student from the classroom?')) return
-    const res = await fetch(`/api/teacher/classrooms/${classroomId}/members/${memberId}`, {
-      method: 'DELETE',
+  const removeMember = (member: Member) => {
+    setConfirmReq({
+      title: 'Remove student',
+      message: `Remove ${member.user.name || member.user.email || 'this student'} from the classroom? They can rejoin with the class code, and their grades are kept.`,
+      confirmLabel: 'Remove',
+      danger: true,
+      onConfirm: async () => {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}/members/${member.id}`, {
+          method: 'DELETE',
+        })
+        if (res.ok) loadClassroom()
+        else setPageError('Could not remove the student. Please try again.')
+      },
     })
-    if (res.ok) loadClassroom()
   }
 
   const loadCompetitiveGrants = useCallback(async () => {
@@ -450,8 +561,8 @@ export default function ClassroomDetailPage() {
         }
         setCompetitiveGrants(grantMap)
       }
-    } catch (err) {
-      console.error('Error loading competitive grants:', err)
+    } catch {
+      setPageError('Could not load competitive-access status. Refresh to retry.')
     }
   }, [classroomId])
 
@@ -463,138 +574,142 @@ export default function ClassroomDetailPage() {
     const hasGrant = competitiveGrants[studentId]
     setGrantingAccess(studentId)
     try {
-      if (hasGrant) {
-        const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ studentId }),
-        })
-        if (res.ok) {
-          setCompetitiveGrants(prev => {
-            const next = { ...prev }
-            delete next[studentId]
-            return next
-          })
-        }
-      } else {
-        const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ studentId }),
-        })
-        if (res.ok) {
-          setCompetitiveGrants(prev => ({ ...prev, [studentId]: true }))
-        }
-      }
-    } catch (err) {
-      console.error('Error toggling competitive access:', err)
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
+        method: hasGrant ? 'DELETE' : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentId }),
+      })
+      if (!res.ok) throw new Error()
+      setCompetitiveGrants((prev) => {
+        const next = { ...prev }
+        if (hasGrant) delete next[studentId]
+        else next[studentId] = true
+        return next
+      })
+    } catch {
+      setPageError('Could not update competitive access. Please try again.')
     } finally {
       setGrantingAccess(null)
     }
   }
 
+  // One batch request instead of a serial per-student loop.
+  const grantAllCompetitive = async (studentIds: string[]) => {
+    if (studentIds.length === 0) return
+    setBulkGranting(true)
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentIds }),
+      })
+      if (!res.ok) throw new Error()
+      setCompetitiveGrants((prev) => ({
+        ...prev,
+        ...Object.fromEntries(studentIds.map((id) => [id, true])),
+      }))
+    } catch {
+      setPageError('Could not grant competitive access. Please try again.')
+    } finally {
+      setBulkGranting(false)
+    }
+  }
+
+  const revokeAllCompetitive = (studentIds: string[]) => {
+    setConfirmReq({
+      title: 'Revoke competitive access',
+      message: 'Revoke competitive access for all students in this class?',
+      confirmLabel: 'Revoke all',
+      danger: true,
+      onConfirm: async () => {
+        setBulkGranting(true)
+        try {
+          const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitive-grants`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ studentIds }),
+          })
+          if (!res.ok) throw new Error()
+          setCompetitiveGrants((prev) => {
+            const next = { ...prev }
+            for (const id of studentIds) delete next[id]
+            return next
+          })
+        } catch {
+          setPageError('Could not revoke competitive access. Please try again.')
+        } finally {
+          setBulkGranting(false)
+        }
+      },
+    })
+  }
+
   const closeAssignmentModal = () => {
     setShowAssignmentModal(false)
-    setEditingAssignmentId(null)
-    setAssignmentForm({
-      title: '', type: 'INTERACTIVE_LESSON', topicSlug: '', topicSlugs: [],
-      courseSlug: '', unitId: '',
-      dueDate: '', maxAttempts: '', requiredScore: '80',
-    })
+    setEditingAssignment(null)
+  }
+
+  const onAssignmentSaved = () => {
+    loadClassroom()
+    loadAssignmentDetails()
   }
 
   // Resolve a topic slug to its human title using the loaded course list (for chips).
-  const topicTitle = (slug: string) => {
-    for (const c of courses) {
-      const t = c.topics.find((tp) => tp.slug === slug)
-      if (t) return t.title
-    }
-    return slug
-  }
-
-  // ISO timestamp -> value for a <input type="datetime-local"> (local wall clock).
-  const toLocalDatetimeInput = (iso: string | null) => {
-    if (!iso) return ''
-    const d = new Date(iso)
-    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16)
-  }
-
-  // Create (POST) or edit (PUT) depending on whether we're editing an existing one.
-  const submitAssignment = async () => {
-    if (!assignmentForm.title.trim()) return
-    setCreatingAssignment(true)
-    try {
-      const body: AssignmentCreateBody = {
-        title: assignmentForm.title,
-        type: assignmentForm.type,
-        requiredScore: assignmentForm.requiredScore ? parseInt(assignmentForm.requiredScore) / 100 : undefined,
-        maxAttempts: assignmentForm.maxAttempts ? parseInt(assignmentForm.maxAttempts) : undefined,
-        dueDate: assignmentForm.dueDate || undefined,
+  const topicTitle = useCallback(
+    (slug: string) => {
+      for (const c of courses) {
+        const t = c.topics.find((tp) => tp.slug === slug)
+        if (t) return t.title
       }
-      // UNIT_TEST and FRQ_PRACTICE target a course (and optionally a unit)
-      // rather than topics — a unit test is not a topic-slug thing.
-      if (assignmentForm.type === 'UNIT_TEST' || assignmentForm.type === 'FRQ_PRACTICE') {
-        body.courseSlug = assignmentForm.courseSlug || undefined
-        if (assignmentForm.type === 'UNIT_TEST' && assignmentForm.unitId) {
-          body.unitId = assignmentForm.unitId
-        }
-      } else if (assignmentForm.topicSlugs.length > 0) {
-        body.topicSlugs = assignmentForm.topicSlugs
-        body.topicSlug = assignmentForm.topicSlugs[0]
-      } else if (assignmentForm.topicSlug) {
-        body.topicSlug = assignmentForm.topicSlug
-      }
-      const res = await fetch(
-        editingAssignmentId
-          ? `/api/teacher/classrooms/${classroomId}/assignments/${editingAssignmentId}`
-          : `/api/teacher/classrooms/${classroomId}/assignments`,
-        {
-          method: editingAssignmentId ? 'PUT' : 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body),
-        },
-      )
-      if (res.ok) {
-        closeAssignmentModal()
-        loadClassroom()
-      }
-    } finally {
-      setCreatingAssignment(false)
-    }
-  }
+      return slug
+    },
+    [courses]
+  )
 
   const startEditAssignment = (a: Assignment) => {
     loadTopics()
-    setEditingAssignmentId(a.id)
-    setAssignmentForm({
-      title: a.title,
-      type: a.type,
-      topicSlug: a.topicSlug || '',
-      topicSlugs: a.topicSlugs && a.topicSlugs.length > 0 ? a.topicSlugs : (a.topicSlug ? [a.topicSlug] : []),
-      courseSlug: a.courseSlug || '',
-      unitId: a.unitId || '',
-      dueDate: toLocalDatetimeInput(a.dueDate),
-      maxAttempts: a.maxAttempts ? String(a.maxAttempts) : '',
-      requiredScore: a.requiredScore != null ? String(Math.round(a.requiredScore * 100)) : '',
-    })
+    setEditingAssignment(a)
     setShowAssignmentModal(true)
   }
 
-  const deleteAssignment = async (a: Assignment) => {
-    if (!confirm(`Unassign "${a.title}"? Students will no longer see it. Any submitted grades are kept.`)) return
-    setDeletingAssignmentId(a.id)
-    try {
-      const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments/${a.id}`, { method: 'DELETE' })
-      if (res.ok) loadClassroom()
-    } finally {
-      setDeletingAssignmentId(null)
-    }
+  const deleteAssignment = (a: Assignment) => {
+    setConfirmReq({
+      title: 'Unassign assignment',
+      message: `Unassign "${a.title}"? Students will no longer see it. Any submitted grades are kept.`,
+      confirmLabel: 'Unassign',
+      danger: true,
+      onConfirm: async () => {
+        setDeletingAssignmentId(a.id)
+        try {
+          const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments/${a.id}`, {
+            method: 'DELETE',
+          })
+          if (res.ok) {
+            loadClassroom()
+            loadAssignmentDetails()
+          } else {
+            setPageError('Could not unassign the assignment. Please try again.')
+          }
+        } finally {
+          setDeletingAssignmentId(null)
+        }
+      },
+    })
   }
 
-  const archiveClassroom = async () => {
-    if (!confirm('Archive this classroom? Students will lose access and it will be removed from your active list. Grades are preserved; contact support to restore it.')) return
-    const res = await fetch(`/api/teacher/classrooms/${classroomId}`, { method: 'DELETE' })
-    if (res.ok) router.push('/teacher')
+  const archiveClassroom = () => {
+    setConfirmReq({
+      title: 'Archive classroom',
+      message:
+        'Archive this classroom? Students will lose access and it will be removed from your active list. Grades are preserved; contact support to restore it.',
+      confirmLabel: 'Archive',
+      danger: true,
+      onConfirm: async () => {
+        const res = await fetch(`/api/teacher/classrooms/${classroomId}`, { method: 'DELETE' })
+        if (res.ok) router.push('/teacher')
+        else setPageError('Could not archive the classroom. Please try again.')
+      },
+    })
   }
 
   // Auto-remediation: from the exit-quiz data the Performance tab already loads,
@@ -638,7 +753,12 @@ export default function ClassroomDetailPage() {
           maxAttempts: 3,
         }),
       })
-      if (res.ok) await loadClassroom() // refresh assignments so this topic drops out of suggestions
+      if (res.ok) {
+        await loadClassroom() // refresh assignments so this topic drops out of suggestions
+        loadAssignmentDetails()
+      } else {
+        setPageError('Could not create the remediation assignment. Please try again.')
+      }
     } finally {
       setCreatingRemediation(null)
     }
@@ -661,8 +781,9 @@ export default function ClassroomDetailPage() {
         return
       }
     } catch {
-      // fall through to re-enable the button
+      // fall through to the visible error below
     }
+    setPageError('Could not start the live game. Please try again.')
     setStartingLobby(false)
   }
 
@@ -716,16 +837,17 @@ export default function ClassroomDetailPage() {
         return
       }
     } catch {
-      // fall through to re-enable the button
+      // fall through to the visible error below
     }
+    setPageError('Could not launch the game. Please try again.')
     setLaunchingCompId(null)
   }
 
-
   const saveSettings = async () => {
     setSaving(true)
+    setSettingsError('')
     try {
-      await fetch(`/api/teacher/classrooms/${classroomId}`, {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -736,7 +858,12 @@ export default function ClassroomDetailPage() {
           section: editSection || null,
         }),
       })
-      loadClassroom()
+      if (!res.ok) throw new Error()
+      await loadClassroom()
+      setSettingsSaved(true)
+      setTimeout(() => setSettingsSaved(false), 2500)
+    } catch {
+      setSettingsError('Could not save settings. Please try again.')
     } finally {
       setSaving(false)
     }
@@ -753,38 +880,105 @@ export default function ClassroomDetailPage() {
   if (!classroom) return null
 
   const activeMembers = classroom.members.filter((m) => m.isActive)
+  const query = memberQuery.trim().toLowerCase()
+  const filteredMembers = query
+    ? activeMembers.filter(
+        (m) =>
+          (m.user.name || '').toLowerCase().includes(query) ||
+          (m.user.email || '').toLowerCase().includes(query)
+      )
+    : activeMembers
 
-  const tabs: { key: TabType; label: string; icon: string }[] = [
-    { key: 'members', label: 'Students', icon: '👤' },
-    { key: 'assignments', label: 'Assignments', icon: '📋' },
-    { key: 'announcements', label: 'Announce', icon: '📢' },
-    { key: 'competitions', label: 'Competitions', icon: '⚔️' },
-    { key: 'performance', label: 'Performance', icon: '📊' },
-    { key: 'gradebook', label: 'Gradebook', icon: '📒' },
-    { key: 'standards', label: 'Standards', icon: '🎯' },
-    { key: 'classplan', label: 'Class Plan', icon: '🗓️' },
-    { key: 'engagement', label: 'Engagement', icon: '⏱' },
-    { key: 'settings', label: 'Settings', icon: '⚙️' },
-  ]
+  const settingsDirty =
+    editName !== classroom.name ||
+    editDesc !== (classroom.description || '') ||
+    editSubject !== (classroom.subject || '') ||
+    editGrade !== (classroom.grade || '') ||
+    editSection !== (classroom.section || '')
 
-  const assignmentTypes = [
-    { value: 'INTERACTIVE_LESSON', label: 'Interactive Lesson' },
-    { value: 'FLASHCARD_REVIEW', label: 'Flashcard Review' },
-    { value: 'QUIZ', label: 'Quiz' },
-    { value: 'COMPETITIVE_PRACTICE', label: 'Competitive Practice' },
-    { value: 'UNIT_TEST', label: 'Unit Test' },
-    { value: 'FRQ_PRACTICE', label: 'Free Response (FRQ)' },
-  ]
+  // Assignments grouped by due date: upcoming/undated first (soonest due
+  // first), past-due separated below so what still matters leads.
+  const nowMs = Date.now()
+  const isPastDue = (a: Assignment) => !!a.dueDate && new Date(a.dueDate).getTime() < nowMs
+  const upcomingAssignments = classroom.assignments
+    .filter((a) => !isPastDue(a))
+    .sort((a, b) => {
+      if (a.dueDate && b.dueDate) return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
+      if (a.dueDate) return -1
+      if (b.dueDate) return 1
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    })
+  const pastDueAssignments = classroom.assignments
+    .filter(isPastDue)
+    .sort((a, b) => new Date(b.dueDate!).getTime() - new Date(a.dueDate!).getTime())
 
+  const renderAssignmentCard = (a: Assignment, pastDue: boolean) => {
+    const detail = assignmentDetails?.[a.id] ?? null
+    return (
+      <div
+        key={a.id}
+        className={`p-4 rounded-xl border bg-gray-50 dark:bg-gray-700/30 ${
+          pastDue ? 'border-amber-200 dark:border-amber-900' : 'border-gray-100 dark:border-gray-700'
+        }`}
+      >
+        <div className="flex flex-wrap justify-between items-start gap-2">
+          <div className="min-w-0">
+            <h4 className="font-semibold text-gray-900 dark:text-white">{a.title}</h4>
+            <div className="flex flex-wrap items-center gap-3 mt-1 text-xs text-gray-500">
+              <span className={`px-2 py-0.5 rounded font-medium ${TYPE_CHIP[a.type] ?? 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'}`}>
+                {typeLabel(a.type)}
+              </span>
+              {a.topicSlugs && a.topicSlugs.length > 1 ? (
+                <span title={a.topicSlugs.map(topicTitle).join(', ')}>{a.topicSlugs.length} topics</span>
+              ) : (
+                a.topicSlug && <span>Topic: {topicTitle(a.topicSlug)}</span>
+              )}
+              {a.requiredScore != null && <span>Required: {Math.round(a.requiredScore * 100)}%</span>}
+              {a.maxAttempts != null && a.maxAttempts < 9999 && <span>Max attempts: {a.maxAttempts}</span>}
+            </div>
+          </div>
+          {a.dueDate && (
+            <p className={`text-xs shrink-0 ${pastDue ? 'font-semibold text-amber-600 dark:text-amber-400' : 'text-gray-400'}`}>
+              {pastDue ? 'Was due' : 'Due'}: {new Date(a.dueDate).toLocaleDateString()}
+            </p>
+          )}
+        </div>
+
+        {/* Real progress: distribution + per-student results with feedback */}
+        <AssignmentResults
+          assignmentTitle={a.title}
+          stats={detail?.stats ?? null}
+          submissions={detail?.submissions ?? null}
+          onChanged={loadAssignmentDetails}
+        />
+
+        <div className="flex gap-2 mt-3">
+          <button
+            onClick={() => startEditAssignment(a)}
+            className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
+          >
+            Edit
+          </button>
+          <button
+            onClick={() => deleteAssignment(a)}
+            disabled={deletingAssignmentId === a.id}
+            className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all disabled:opacity-50"
+          >
+            {deletingAssignmentId === a.id ? 'Removing…' : 'Unassign'}
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center gap-3 mb-2">
           <Link
             href="/teacher"
-            className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+            className="text-accent hover:text-accent-hover text-sm font-medium"
           >
             ← Dashboard
           </Link>
@@ -805,31 +999,50 @@ export default function ClassroomDetailPage() {
           <div className="flex items-center gap-3 flex-wrap">
             <div className="bg-white dark:bg-gray-800 rounded-xl px-4 py-2 flex items-center gap-2 shadow">
               <span className="text-xs text-gray-500">Join Code:</span>
-              <span className="font-mono font-bold text-lg text-blue-600">{classroom.joinCode}</span>
+              <span className="font-mono font-bold text-lg text-accent">{classroom.joinCode}</span>
               <button
                 onClick={copyJoinCode}
-                className="ml-1 text-gray-400 hover:text-blue-600 transition-colors"
+                className="ml-1 text-gray-400 hover:text-accent transition-colors"
                 title="Copy join code"
               >
-                {copiedCode ? '✓' : '📋'}
+                {copiedCode ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
+                <span className="sr-only">Copy join code</span>
               </button>
             </div>
             <button
               onClick={copyJoinLink}
-              className="px-3 py-2 text-xs font-medium bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
               title="Copy shareable invite link"
             >
-              🔗 Copy Link
+              <LinkIcon className="w-3.5 h-3.5" aria-hidden="true" />
+              Copy Link
             </button>
             <button
               onClick={() => setShowQR(!showQR)}
-              className="px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
               title="Show QR code for students to scan"
             >
-              📱 QR Code
+              <QrCode className="w-3.5 h-3.5" aria-hidden="true" />
+              QR Code
             </button>
           </div>
         </div>
+
+        {/* Visible surface for background failures (grants, launches, removals) */}
+        {pageError && (
+          <div
+            role="alert"
+            className="mb-4 flex items-start justify-between gap-3 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-xl text-sm"
+          >
+            <span className="flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
+              {pageError}
+            </span>
+            <button onClick={() => setPageError('')} className="shrink-0 hover:text-red-800 dark:hover:text-red-300" aria-label="Dismiss error">
+              <X className="w-4 h-4" aria-hidden="true" />
+            </button>
+          </div>
+        )}
 
         {/* QR Code Modal */}
         {showQR && classroom && (
@@ -844,7 +1057,7 @@ export default function ClassroomDetailPage() {
                 className="mx-auto"
               />
             </div>
-            <p className="text-sm text-gray-500 mb-1">Join Code: <strong className="font-mono text-blue-600">{classroom.joinCode}</strong></p>
+            <p className="text-sm text-gray-500 mb-1">Join Code: <strong className="font-mono text-accent">{classroom.joinCode}</strong></p>
             <p className="text-xs text-gray-400">Students can scan this or go to studymondo.com/join-class</p>
             <button
               onClick={() => setShowQR(false)}
@@ -858,28 +1071,64 @@ export default function ClassroomDetailPage() {
         {/* Live class sessions — conference or webcast, see LiveSessionTeacherCard */}
         <LiveSessionTeacherCard classroomId={classroomId} />
 
-        {/* Tabs */}
-        <div className="flex gap-1 mb-6 bg-white dark:bg-gray-800 rounded-xl p-1 shadow overflow-x-auto">
-          {tabs.map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => {
-                setActiveTab(tab.key)
-                if (tab.key === 'performance') loadPerformance()
-              }}
-              className={`flex-1 px-4 py-3 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                activeTab === tab.key
-                  ? 'bg-blue-600 text-white shadow'
-                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
-              }`}
-            >
-              {tab.icon} {tab.label}
-            </button>
-          ))}
+        {/* Primary tabs: 4 groups instead of 10 scrolling tabs */}
+        <div className="grid grid-cols-4 gap-1 mb-2 bg-white dark:bg-gray-800 rounded-xl p-1 shadow">
+          {GROUP_TABS.map((tab) => {
+            const Icon = tab.icon
+            const active = activeGroup === tab.key
+            return (
+              <button
+                key={tab.key}
+                onClick={() => setActiveView(GROUP_HOME[tab.key])}
+                aria-current={active ? 'page' : undefined}
+                className={`flex items-center justify-center gap-2 px-2 sm:px-4 py-3 rounded-lg text-sm font-semibold transition-all ${
+                  active
+                    ? 'bg-accent text-white shadow'
+                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
+                }`}
+              >
+                <Icon className="w-4 h-4 shrink-0" aria-hidden="true" />
+                <span className="truncate">{tab.label}</span>
+              </button>
+            )
+          })}
         </div>
 
-        {/* Members Tab */}
-        {activeTab === 'members' && (
+        {/* Secondary tabs for the grouped surfaces, with a one-line "what this
+            view answers" so five analytics screens stop blurring together. */}
+        {(activeGroup === 'work' || activeGroup === 'insights') && (
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-1.5">
+              {SUB_VIEWS[activeGroup].map((sub) => {
+                const Icon = sub.icon
+                const active = activeView === sub.key
+                return (
+                  <button
+                    key={sub.key}
+                    onClick={() => setActiveView(sub.key)}
+                    aria-current={active ? 'page' : undefined}
+                    title={sub.desc}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                      active
+                        ? 'bg-accent-light dark:bg-accent-light/30 text-accent-dark dark:text-accent-muted ring-1 ring-accent'
+                        : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-sm'
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5" aria-hidden="true" />
+                    {sub.label}
+                  </button>
+                )
+              })}
+            </div>
+            <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+              {SUB_VIEWS[activeGroup].find((s) => s.key === activeView)?.desc}
+            </p>
+          </div>
+        )}
+        {(activeGroup === 'roster' || activeGroup === 'settings') && <div className="mb-4" />}
+
+        {/* Roster */}
+        {activeView === 'members' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -887,115 +1136,138 @@ export default function ClassroomDetailPage() {
               </h2>
               <div className="flex flex-wrap items-center gap-3 gap-y-2">
                 <button
-                  onClick={() => {
-                    setShowImport(true)
-                    setImportResult(null)
-                    setImportError('')
-                  }}
-                  className="text-xs font-medium px-3 py-1.5 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors"
+                  onClick={() => setShowImport(true)}
+                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
                   title="Bulk-add students from a CSV or pasted list of emails"
                 >
-                  📥 Import students
+                  <Upload className="w-3.5 h-3.5" aria-hidden="true" />
+                  Import students
                 </button>
                 {activeMembers.length > 0 && (
                   <button
-                    onClick={async () => {
-                      const allGranted = activeMembers.every(m => competitiveGrants[m.user.id])
+                    onClick={() => {
+                      const allGranted = activeMembers.every((m) => competitiveGrants[m.user.id])
                       if (allGranted) {
-                        if (!confirm('Revoke competitive access for all students?')) return
-                        for (const m of activeMembers) {
-                          if (competitiveGrants[m.user.id]) {
-                            await toggleCompetitiveAccess(m.user.id)
-                          }
-                        }
+                        revokeAllCompetitive(activeMembers.map((m) => m.user.id))
                       } else {
-                        for (const m of activeMembers) {
-                          if (!competitiveGrants[m.user.id]) {
-                            await toggleCompetitiveAccess(m.user.id)
-                          }
-                        }
+                        grantAllCompetitive(
+                          activeMembers.filter((m) => !competitiveGrants[m.user.id]).map((m) => m.user.id)
+                        )
                       }
                     }}
-                    className="text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
+                    disabled={bulkGranting}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors disabled:opacity-50"
                   >
-                    {activeMembers.every(m => competitiveGrants[m.user.id]) ? '⚔️ Revoke All Competitive' : '⚔️ Grant All Competitive'}
+                    <Swords className="w-3.5 h-3.5" aria-hidden="true" />
+                    {bulkGranting
+                      ? 'Working…'
+                      : activeMembers.every((m) => competitiveGrants[m.user.id])
+                      ? 'Revoke All Competitive'
+                      : 'Grant All Competitive'}
                   </button>
                 )}
                 <div className="text-sm text-gray-500">
-                  Join code: <span className="font-mono font-bold text-blue-600">{classroom.joinCode}</span>
+                  Join code: <span className="font-mono font-bold text-accent">{classroom.joinCode}</span>
                 </div>
               </div>
             </div>
             {activeMembers.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">👋</div>
+                <Users className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
                 <h3 className="text-lg font-bold mb-2">No students yet</h3>
                 <p className="text-gray-500 mb-2">Share the join code <strong>{classroom.joinCode}</strong> with your students</p>
-                <p className="text-sm text-gray-400">Students can enter it at <strong>studymondo.com/join-class</strong></p>
+                <p className="text-sm text-gray-400 mb-4">Students can enter it at <strong>studymondo.com/join-class</strong></p>
+                <button
+                  onClick={() => setShowImport(true)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-accent text-white text-sm font-semibold rounded-xl hover:bg-accent-hover transition-all"
+                >
+                  <UserPlus className="w-4 h-4" aria-hidden="true" />
+                  Import a roster (CSV or pasted emails)
+                </button>
               </div>
             ) : (
-              <div className="space-y-2">
-                {activeMembers.map((m) => (
-                  <div
-                    key={m.id}
-                    className="flex flex-wrap items-center justify-between gap-y-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30"
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      {m.user.image ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={m.user.image}
-                          alt=""
-                          className="w-10 h-10 rounded-full"
-                        />
-                      ) : (
-                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 font-bold">
-                          {(m.user.name || m.user.email || '?')[0].toUpperCase()}
-                        </div>
-                      )}
-                      <button
-                        onClick={() => setReportFor({ id: m.user.id, name: m.user.name || m.user.email || 'Student' })}
-                        className="min-w-0 text-left group"
-                        title="View full student report"
-                      >
-                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-accent-hover group-hover:underline">
-                          {m.user.name || 'Unnamed Student'}
-                        </p>
-                        <p className="text-xs text-gray-500 truncate">{m.user.email}</p>
-                      </button>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-3 gap-y-2">
-                      <span className="text-xs text-gray-400">
-                        Joined {new Date(m.joinedAt).toLocaleDateString()}
-                      </span>
-                      <button
-                        onClick={() => toggleCompetitiveAccess(m.user.id)}
-                        disabled={grantingAccess === m.user.id}
-                        className={`text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
-                          competitiveGrants[m.user.id]
-                            ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50'
-                            : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-accent-light dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted'
-                        }`}
-                        title={competitiveGrants[m.user.id] ? 'Click to revoke competitive access' : 'Grant competitive mode access (bypasses mastery requirement)'}
-                      >
-                        {grantingAccess === m.user.id ? '...' : competitiveGrants[m.user.id] ? '⚔️ Competitive ✓' : '⚔️ Grant Competitive'}
-                      </button>
-                      <button
-                        onClick={() => removeMember(m.id)}
-                        className="text-red-500 hover:text-red-700 text-sm font-medium"
-                      >
-                        Remove
-                      </button>
-                    </div>
+              <>
+                {activeMembers.length > 3 && (
+                  <div className="relative mb-3">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
+                    <input
+                      type="search"
+                      value={memberQuery}
+                      onChange={(e) => setMemberQuery(e.target.value)}
+                      placeholder="Search students by name or email…"
+                      aria-label="Search students"
+                      className="w-full pl-9 pr-4 py-2 border-2 border-gray-200 dark:border-gray-600 rounded-xl text-sm focus:border-accent focus:outline-none dark:bg-gray-700 dark:text-white"
+                    />
                   </div>
-                ))}
-              </div>
+                )}
+                {filteredMembers.length === 0 ? (
+                  <p className="text-sm text-gray-500 py-6 text-center">No students match &ldquo;{memberQuery}&rdquo;.</p>
+                ) : (
+                  <div className="space-y-2">
+                    {filteredMembers.map((m) => (
+                      <div
+                        key={m.id}
+                        className="flex flex-wrap items-center justify-between gap-y-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          {m.user.image ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={m.user.image}
+                              alt=""
+                              className="w-10 h-10 rounded-full"
+                            />
+                          ) : (
+                            <div className="w-10 h-10 rounded-full bg-accent-subtle dark:bg-accent-light/30 flex items-center justify-center text-accent font-bold">
+                              {(m.user.name || m.user.email || '?')[0].toUpperCase()}
+                            </div>
+                          )}
+                          <button
+                            onClick={() => setReportFor({ id: m.user.id, name: m.user.name || m.user.email || 'Student' })}
+                            className="min-w-0 text-left group"
+                            title="View full student report"
+                          >
+                            <p className="font-medium text-gray-900 dark:text-white group-hover:text-accent-hover group-hover:underline">
+                              {m.user.name || 'Unnamed Student'}
+                            </p>
+                            <p className="text-xs text-gray-500 truncate">{m.user.email}</p>
+                          </button>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-3 gap-y-2">
+                          <span className="text-xs text-gray-400">
+                            Joined {new Date(m.joinedAt).toLocaleDateString()}
+                          </span>
+                          <button
+                            onClick={() => toggleCompetitiveAccess(m.user.id)}
+                            disabled={grantingAccess === m.user.id}
+                            className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
+                              competitiveGrants[m.user.id]
+                                ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50'
+                                : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-accent-light dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted'
+                            }`}
+                            title={competitiveGrants[m.user.id] ? 'Click to revoke competitive access' : 'Grant competitive mode access (bypasses mastery requirement)'}
+                          >
+                            <Swords className="w-3.5 h-3.5" aria-hidden="true" />
+                            {grantingAccess === m.user.id ? '…' : competitiveGrants[m.user.id] ? 'Competitive ✓' : 'Grant Competitive'}
+                          </button>
+                          <button
+                            onClick={() => removeMember(m)}
+                            className="text-red-500 hover:text-red-700 text-sm font-medium"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
             )}
           </div>
         )}
 
-        {/* Assignments Tab */}
-        {activeTab === 'assignments' && (
+        {/* Work › Assignments */}
+        {activeView === 'assignments' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -1004,75 +1276,40 @@ export default function ClassroomDetailPage() {
               <button
                 onClick={() => {
                   loadTopics()
+                  setEditingAssignment(null)
                   setShowAssignmentModal(true)
                 }}
-                className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all text-sm"
+                className="px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
               >
                 + New Assignment
               </button>
             </div>
             {classroom.assignments.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">📋</div>
+                <ClipboardList className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
                 <h3 className="text-lg font-bold mb-2">No assignments yet</h3>
                 <p className="text-gray-500">Create your first assignment for this class</p>
               </div>
             ) : (
               <div className="space-y-3">
-                {classroom.assignments.map((a) => (
-                  <div
-                    key={a.id}
-                    className="p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30"
-                  >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white">{a.title}</h4>
-                        <div className="flex flex-wrap gap-3 mt-1 text-xs text-gray-500">
-                          <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded">
-                            {a.type.replace(/_/g, ' ')}
-                          </span>
-                          {a.topicSlugs && a.topicSlugs.length > 1
-                            ? <span>Topics: {a.topicSlugs.length}</span>
-                            : a.topicSlug && <span>Topic: {a.topicSlug}</span>}
-                          {a.requiredScore && <span>Required: {Math.round(a.requiredScore * 100)}%</span>}
-                          {a.maxAttempts && <span>Max attempts: {a.maxAttempts}</span>}
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-sm font-bold text-green-600">
-                          {a._count.submissions} submissions
-                        </span>
-                        {a.dueDate && (
-                          <p className="text-xs text-gray-400 mt-1">
-                            Due: {new Date(a.dueDate).toLocaleDateString()}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    <div className="flex gap-2 mt-3">
-                      <button
-                        onClick={() => startEditAssignment(a)}
-                        className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => deleteAssignment(a)}
-                        disabled={deletingAssignmentId === a.id}
-                        className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all disabled:opacity-50"
-                      >
-                        {deletingAssignmentId === a.id ? 'Removing…' : 'Unassign'}
-                      </button>
+                {upcomingAssignments.map((a) => renderAssignmentCard(a, false))}
+                {pastDueAssignments.length > 0 && (
+                  <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 className="text-sm font-bold text-gray-500 dark:text-gray-400 mb-3">
+                      Past due ({pastDueAssignments.length})
+                    </h3>
+                    <div className="space-y-3 opacity-90">
+                      {pastDueAssignments.map((a) => renderAssignmentCard(a, true))}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             )}
           </div>
         )}
 
-        {/* Competitions Tab */}
-        {activeTab === 'competitions' && (
+        {/* Work › Live games */}
+        {activeView === 'competitions' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -1085,18 +1322,20 @@ export default function ClassroomDetailPage() {
                     setScheduleError('')
                     setShowScheduleModal(true)
                   }}
-                  className="px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
                   title="Put a live game on the calendar — students see it on their assignments page"
                 >
-                  📅 Schedule live game
+                  <CalendarPlus className="w-4 h-4" aria-hidden="true" />
+                  Schedule live game
                 </button>
                 <button
                   onClick={startLiveLobby}
                   disabled={startingLobby}
-                  className="px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm disabled:opacity-50"
                   title="Run a real-time team game your students join live"
                 >
-                  {startingLobby ? 'Starting…' : '▶ Start live game'}
+                  <Play className="w-4 h-4" aria-hidden="true" />
+                  {startingLobby ? 'Starting…' : 'Start live game'}
                 </button>
               </div>
             </div>
@@ -1106,7 +1345,7 @@ export default function ClassroomDetailPage() {
             </p>
             {classroom.competitions.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">⚔️</div>
+                <Swords className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
                 <h3 className="text-lg font-bold mb-2">No competitions yet</h3>
                 <p className="text-gray-500">Start a live game to run a real-time review match with your class</p>
               </div>
@@ -1121,7 +1360,7 @@ export default function ClassroomDetailPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-white">{c.title}</h4>
                         <div className="flex gap-3 mt-1 text-xs text-gray-500">
-                          <span>Topic: {c.topicSlug}</span>
+                          <span>Topic: {topicTitle(c.topicSlug)}</span>
                           <span>Mode: {c.gameMode.replace(/_/g, ' ')}</span>
                           <span>Duration: {Math.round(c.duration / 60)}min</span>
                         </div>
@@ -1153,10 +1392,11 @@ export default function ClassroomDetailPage() {
                         <button
                           onClick={() => launchCompetition(c.id)}
                           disabled={launchingCompId === c.id}
-                          className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all disabled:opacity-50"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all disabled:opacity-50"
                           title="Start this game now as a live lobby your students join by code"
                         >
-                          {launchingCompId === c.id ? 'Launching…' : '▶ Launch now'}
+                          <Play className="w-3.5 h-3.5" aria-hidden="true" />
+                          {launchingCompId === c.id ? 'Launching…' : 'Launch now'}
                         </button>
                       </div>
                     )}
@@ -1167,19 +1407,20 @@ export default function ClassroomDetailPage() {
           </div>
         )}
 
-        {/* Performance Tab */}
-        {activeTab === 'performance' && (
+        {/* Insights › Performance */}
+        {activeView === 'performance' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white">📊 Student Performance</h2>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Student Performance</h2>
               {perfData && perfData.students.length > 0 && (
                 <div className="flex items-center gap-2">
                   <a
                     href={`/api/teacher/classrooms/${classroomId}/export?format=csv`}
                     download
-                    className="px-3 py-1.5 text-xs font-medium bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/50 transition-colors"
                   >
-                    📥 Export CSV
+                    <Download className="w-3.5 h-3.5" aria-hidden="true" />
+                    Export CSV
                   </a>
                 </div>
               )}
@@ -1190,7 +1431,7 @@ export default function ClassroomDetailPage() {
               <div className="text-center py-12 text-gray-500">Unable to load performance data</div>
             ) : perfData.students.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">📊</div>
+                <BarChart3 className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
                 <h3 className="text-lg font-bold mb-2">No performance data yet</h3>
                 <p className="text-gray-500">Students need to start working on topics first</p>
               </div>
@@ -1198,8 +1439,8 @@ export default function ClassroomDetailPage() {
               <>
                 {/* Class Summary */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                  <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/10 text-center">
-                    <div className="text-2xl font-bold text-blue-600">{perfData.classSummary.avgMastery}%</div>
+                  <div className="p-4 rounded-xl bg-accent-subtle dark:bg-accent-light/10 text-center">
+                    <div className="text-2xl font-bold text-accent">{perfData.classSummary.avgMastery}%</div>
                     <div className="text-xs text-gray-500">Avg Mastery</div>
                   </div>
                   <div className="p-4 rounded-xl bg-green-50 dark:bg-green-900/10 text-center">
@@ -1223,7 +1464,7 @@ export default function ClassroomDetailPage() {
                   return (
                     <div className="mb-6 rounded-2xl border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/10 p-5">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xl">🛠️</span>
+                        <Target className="w-5 h-5 text-orange-600 dark:text-orange-400" aria-hidden="true" />
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white">Suggested remediation</h3>
                       </div>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
@@ -1244,7 +1485,7 @@ export default function ClassroomDetailPage() {
                             <button
                               onClick={() => createRemediation(sug.topicSlug, sug.topicTitle)}
                               disabled={creatingRemediation === sug.topicSlug}
-                              className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 transition-all"
+                              className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg bg-accent text-white hover:bg-accent-hover disabled:opacity-50 transition-all"
                             >
                               {creatingRemediation === sug.topicSlug ? 'Assigning…' : '+ Assign review'}
                             </button>
@@ -1317,7 +1558,7 @@ export default function ClassroomDetailPage() {
                 {/* Exit Quiz Results */}
                 {perfData.students.some(s => s.exitQuizzes && s.exitQuizzes.length > 0) && (
                   <div className="mt-8">
-                    <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white">📝 Exit Quiz Results</h3>
+                    <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white">Exit Quiz Results</h3>
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
@@ -1349,15 +1590,15 @@ export default function ClassroomDetailPage() {
                                 <td className="text-center py-3 px-4">
                                   {eq.passed ? (
                                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
-                                      ✅ Passed
+                                      Passed
                                     </span>
                                   ) : eq.mustRedoUnit ? (
                                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
-                                      🔄 Must Redo Unit
+                                      Must Redo Unit
                                     </span>
                                   ) : (
                                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
-                                      ⏳ Can Retry
+                                      Can Retry
                                     </span>
                                   )}
                                 </td>
@@ -1377,36 +1618,36 @@ export default function ClassroomDetailPage() {
           </div>
         )}
 
-        {/* Gradebook Tab */}
-        {activeTab === 'gradebook' && (
+        {/* Insights › Gradebook */}
+        {activeView === 'gradebook' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Gradebook</h2>
             <Gradebook classroomId={classroomId} classroomName={classroom.name} />
           </div>
         )}
 
-        {/* Announcements Tab */}
-        {activeTab === 'classplan' && <ClassPlan classroomId={classroomId} />}
+        {activeView === 'classplan' && <ClassPlan classroomId={classroomId} />}
 
-        {activeTab === 'engagement' && <ClassEngagement classroomId={classroomId} />}
+        {activeView === 'engagement' && <ClassEngagement classroomId={classroomId} />}
 
-        {activeTab === 'announcements' && (
+        {/* Work › Announcements */}
+        {activeView === 'announcements' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Announcements</h2>
             <ClassroomAnnouncements classroomId={classroomId} isTeacher={true} />
           </div>
         )}
 
-        {/* Standards Mastery Tab */}
-        {activeTab === 'standards' && (
+        {/* Insights › Standards */}
+        {activeView === 'standards' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Standards Mastery</h2>
             <StandardsMastery classroomId={classroomId} />
           </div>
         )}
 
-        {/* Settings Tab */}
-        {activeTab === 'settings' && (
+        {/* Settings */}
+        {activeView === 'settings' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 max-w-2xl">
             <h2 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Classroom Settings</h2>
             <div className="space-y-4">
@@ -1422,7 +1663,7 @@ export default function ClassroomDetailPage() {
                   type="text"
                   value={editName}
                   onChange={(e) => setEditName(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                  className={inputCls}
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -1438,7 +1679,7 @@ export default function ClassroomDetailPage() {
                     type="text"
                     value={editSubject}
                     onChange={(e) => setEditSubject(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                    className={inputCls}
                   />
                 </div>
                 <div>
@@ -1453,7 +1694,7 @@ export default function ClassroomDetailPage() {
                     type="text"
                     value={editGrade}
                     onChange={(e) => setEditGrade(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                    className={inputCls}
                   />
                 </div>
               </div>
@@ -1471,7 +1712,7 @@ export default function ClassroomDetailPage() {
                   value={editSection}
                   onChange={(e) => setEditSection(e.target.value)}
                   placeholder="e.g., Period 3 or Section A"
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                  className={inputCls}
                 />
               </div>
               <div>
@@ -1486,17 +1727,33 @@ export default function ClassroomDetailPage() {
                   value={editDesc}
                   onChange={(e) => setEditDesc(e.target.value)}
                   rows={3}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white resize-none"
+                  className={`${inputCls} resize-none`}
                 />
               </div>
+              {settingsError && (
+                <p className="text-sm text-red-600 dark:text-red-400" role="alert">{settingsError}</p>
+              )}
               {classroom.isOwner !== false && (
-                <button
-                  onClick={saveSettings}
-                  disabled={saving || !editName.trim()}
-                  className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all"
-                >
-                  {saving ? 'Saving...' : 'Save Changes'}
-                </button>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={saveSettings}
+                    disabled={saving || !editName.trim()}
+                    className="px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover disabled:opacity-50 transition-all"
+                  >
+                    {saving ? 'Saving...' : 'Save Changes'}
+                  </button>
+                  {settingsDirty && !saving && (
+                    <span className="text-xs font-medium text-amber-600 dark:text-amber-400">
+                      Unsaved changes — these fields don&rsquo;t save until you click Save.
+                    </span>
+                  )}
+                  {settingsSaved && !settingsDirty && (
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-green-600 dark:text-green-400">
+                      <Check className="w-3.5 h-3.5" aria-hidden="true" />
+                      Saved
+                    </span>
+                  )}
+                </div>
               )}
 
               {classroom.isOwner === false && (
@@ -1548,12 +1805,12 @@ export default function ClassroomDetailPage() {
                       onChange={(e) => setCoTeacherEmail(e.target.value)}
                       onKeyDown={(e) => { if (e.key === 'Enter') addCoTeacher() }}
                       placeholder="teacher@school.org"
-                      className="flex-1 px-4 py-2.5 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white text-sm"
+                      className="flex-1 px-4 py-2.5 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-accent focus:outline-none dark:bg-gray-700 dark:text-white text-sm"
                     />
                     <button
                       onClick={addCoTeacher}
                       disabled={!coTeacherEmail.trim() || addingCoTeacher}
-                      className="px-4 py-2.5 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all text-sm whitespace-nowrap"
+                      className="px-4 py-2.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover disabled:opacity-50 transition-all text-sm whitespace-nowrap"
                     >
                       {addingCoTeacher ? 'Adding…' : 'Add co-teacher'}
                     </button>
@@ -1565,13 +1822,27 @@ export default function ClassroomDetailPage() {
               )}
 
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">
-                  📚 Class courses
-                  {savingCourses && <span className="ml-2 text-xs font-normal text-gray-400">saving…</span>}
+                <h3 className="flex items-center gap-2 text-sm font-bold text-gray-900 dark:text-white mb-1">
+                  Class courses
+                  {/* Auto-saves on toggle — the indicator is the only save UI, so keep it loud */}
+                  {courseSaveState === 'saving' && (
+                    <span className="text-xs font-normal text-gray-400">Saving…</span>
+                  )}
+                  {courseSaveState === 'saved' && (
+                    <span className="inline-flex items-center gap-1 text-xs font-normal text-green-600 dark:text-green-400">
+                      <Check className="w-3.5 h-3.5" aria-hidden="true" />
+                      Saved
+                    </span>
+                  )}
+                  {courseSaveState === 'error' && (
+                    <span className="text-xs font-normal text-red-600 dark:text-red-400" role="alert">
+                      Save failed — toggle again to retry
+                    </span>
+                  )}
                 </h3>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
-                  Pick the courses this class uses. Assignment creation shows these first
-                  instead of every course on the platform.
+                  Pick the courses this class uses — changes here save automatically. Assignment creation
+                  shows these first instead of every course on the platform.
                 </p>
                 {courses.length === 0 ? (
                   <p className="text-sm text-gray-400">Loading courses…</p>
@@ -1584,8 +1855,8 @@ export default function ClassroomDetailPage() {
                           key={c.courseSlug}
                           className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm cursor-pointer transition ${
                             checked
-                              ? 'border-blue-400 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200'
-                              : 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-300'
+                              ? 'border-accent bg-accent-subtle dark:bg-accent-light/20 text-accent-dark dark:text-accent-muted'
+                              : 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-accent-muted'
                           }`}
                         >
                           <input
@@ -1597,7 +1868,7 @@ export default function ClassroomDetailPage() {
                                 checked ? cur.filter((x) => x !== c.courseSlug) : [...cur, c.courseSlug]
                               )
                             }}
-                            className="accent-blue-600"
+                            className="accent-accent"
                           />
                           <span className="truncate">{c.courseTitle}</span>
                         </label>
@@ -1627,265 +1898,15 @@ export default function ClassroomDetailPage() {
       </div>
 
       {/* Create / Edit Assignment Modal */}
-      <FocusTrapDialog
+      <AssignmentModal
         open={showAssignmentModal}
         onClose={closeAssignmentModal}
-        title={editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}
-      >
-        <div className="p-4 sm:p-8">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}</h2>
-          <div className="space-y-4">
-            <div>
-              <label
-                htmlFor="assignment-title"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Title *
-              </label>
-              <input
-                id="assignment-title"
-                type="text"
-                value={assignmentForm.title}
-                onChange={(e) => setAssignmentForm({ ...assignmentForm, title: e.target.value })}
-                placeholder="e.g., Practice Derivatives"
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="assignment-type"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Type
-              </label>
-              <select
-                id="assignment-type"
-                value={assignmentForm.type}
-                onChange={(e) => setAssignmentForm({ ...assignmentForm, type: e.target.value })}
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              >
-                {assignmentTypes.map((t) => (
-                  <option key={t.value} value={t.value}>{t.label}</option>
-                ))}
-              </select>
-            </div>
-            {(assignmentForm.type === 'UNIT_TEST' || assignmentForm.type === 'FRQ_PRACTICE') ? (
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="assignment-course" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Course *
-                  </label>
-                  <select
-                    id="assignment-course"
-                    value={assignmentForm.courseSlug}
-                    onChange={async (e) => {
-                      const courseSlug = e.target.value
-                      setAssignmentForm({ ...assignmentForm, courseSlug, unitId: '' })
-                      setUnitOptions([])
-                      if (courseSlug && assignmentForm.type === 'UNIT_TEST') {
-                        try {
-                          const r = await fetch(`/api/unit-tests/units?courseSlug=${encodeURIComponent(courseSlug)}`)
-                          if (r.ok) setUnitOptions((await r.json()).units ?? [])
-                        } catch { /* leave the picker on "any unit" */ }
-                      }
-                    }}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  >
-                    <option value="">Select a course…</option>
-                    {(() => {
-                      const attached = classCourses ?? []
-                      const pinned = courses.filter((c) => attached.includes(c.courseSlug))
-                      const rest = courses.filter((c) => !attached.includes(c.courseSlug))
-                      return [...pinned, ...rest].map((c) => (
-                        <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
-                      ))
-                    })()}
-                  </select>
-                </div>
-                {assignmentForm.type === 'UNIT_TEST' && (
-                  <div>
-                    <label htmlFor="assignment-unit" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                      Unit
-                    </label>
-                    <select
-                      id="assignment-unit"
-                      value={assignmentForm.unitId}
-                      onChange={(e) => setAssignmentForm({ ...assignmentForm, unitId: e.target.value })}
-                      disabled={!assignmentForm.courseSlug}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white disabled:opacity-50"
-                    >
-                      <option value="">Any unit in this course</option>
-                      {unitOptions.map((u) => (
-                        <option key={u.id} value={u.id}>{u.name}</option>
-                      ))}
-                    </select>
-                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                      Leave on &ldquo;any unit&rdquo; to let students choose which unit to test.
-                    </p>
-                  </div>
-                )}
-              </div>
-            ) : (
-            <div>
-              <label
-                htmlFor="assignment-topic"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Topics
-              </label>
-              {/* Two-step picker: course first, then only that course's topics.
-                  Attached class courses (Settings) lead the list; the full
-                  catalog stays reachable so nothing is ever unassignable. */}
-              {(() => {
-                const attached = classCourses ?? []
-                const pinned = courses.filter((c) => attached.includes(c.courseSlug))
-                const rest = courses.filter((c) => !attached.includes(c.courseSlug))
-                const activeGroup = courses.find((c) => c.courseSlug === assignCourse)
-                // Group the chosen course's topics by category for a readable list
-                const byCategory = new Map<string, TopicOption[]>()
-                for (const t of activeGroup?.topics ?? []) {
-                  const list = byCategory.get(t.category) ?? []
-                  list.push(t)
-                  byCategory.set(t.category, list)
-                }
-                return (
-                  <div className="space-y-2">
-                    <select
-                      id="assignment-topic"
-                      value={assignCourse}
-                      onChange={(e) => setAssignCourse(e.target.value)}
-                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                    >
-                      <option value="">Choose a course…</option>
-                      {pinned.length > 0 && (
-                        <optgroup label="★ Your class courses">
-                          {pinned.map((c) => (
-                            <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
-                          ))}
-                        </optgroup>
-                      )}
-                      <optgroup label={pinned.length > 0 ? 'All courses' : 'All courses (tip: pin your class courses in Settings)'}>
-                        {rest.map((c) => (
-                          <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
-                        ))}
-                      </optgroup>
-                    </select>
-                    {activeGroup && (
-                      <select
-                        aria-label={`Topics in ${activeGroup.courseTitle}`}
-                        value=""
-                        onChange={(e) => {
-                          const slug = e.target.value
-                          if (slug && !assignmentForm.topicSlugs.includes(slug)) {
-                            setAssignmentForm({ ...assignmentForm, topicSlugs: [...assignmentForm.topicSlugs, slug] })
-                          }
-                        }}
-                        className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                      >
-                        <option value="">+ Add a topic from {activeGroup.courseTitle}…</option>
-                        {[...byCategory.entries()].map(([cat, ts]) => (
-                          <optgroup key={cat} label={cat}>
-                            {ts.map((t) => (
-                              <option key={t.slug} value={t.slug} disabled={assignmentForm.topicSlugs.includes(t.slug)}>{t.title}</option>
-                            ))}
-                          </optgroup>
-                        ))}
-                      </select>
-                    )}
-                  </div>
-                )
-              })()}
-              {assignmentForm.topicSlugs.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {assignmentForm.topicSlugs.map((slug) => (
-                    <span key={slug} className="inline-flex items-center gap-1 px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-xs">
-                      {topicTitle(slug)}
-                      <button
-                        type="button"
-                        onClick={() => setAssignmentForm({ ...assignmentForm, topicSlugs: assignmentForm.topicSlugs.filter((s) => s !== slug) })}
-                        className="text-blue-500 hover:text-blue-800 dark:hover:text-blue-100 font-bold leading-none"
-                        aria-label={`Remove ${topicTitle(slug)}`}
-                      >
-                        ×
-                      </button>
-                    </span>
-                  ))}
-                </div>
-              )}
-              <p className="mt-1 text-xs text-gray-400">Add one or more topics — students complete all of them.</p>
-            </div>
-            )}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label
-                  htmlFor="assignment-due-date"
-                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-                >
-                  Due Date
-                </label>
-                <input
-                  id="assignment-due-date"
-                  type="datetime-local"
-                  value={assignmentForm.dueDate}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, dueDate: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="assignment-required-score"
-                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-                >
-                  Required Score (%)
-                </label>
-                <input
-                  id="assignment-required-score"
-                  type="number"
-                  value={assignmentForm.requiredScore}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, requiredScore: e.target.value })}
-                  min="0"
-                  max="100"
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                htmlFor="assignment-max-attempts"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Max Attempts (optional)
-              </label>
-              <input
-                id="assignment-max-attempts"
-                type="number"
-                value={assignmentForm.maxAttempts}
-                onChange={(e) => setAssignmentForm({ ...assignmentForm, maxAttempts: e.target.value })}
-                min="1"
-                placeholder="Unlimited"
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              />
-            </div>
-          </div>
-          <div className="flex gap-3 mt-6">
-            <button
-              onClick={closeAssignmentModal}
-              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
-            >
-              Cancel
-            </button>
-            <button
-              onClick={submitAssignment}
-              disabled={!assignmentForm.title.trim() || creatingAssignment}
-              className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              {creatingAssignment
-                ? (editingAssignmentId ? 'Saving…' : 'Creating...')
-                : (editingAssignmentId ? 'Save Changes' : 'Create Assignment')}
-            </button>
-          </div>
-        </div>
-      </FocusTrapDialog>
+        classroomId={classroomId}
+        courses={courses}
+        classCourses={classCourses}
+        editing={editingAssignment}
+        onSaved={onAssignmentSaved}
+      />
 
       {/* Schedule live game (creates a ScheduledCompetition calendar entry) */}
       <FocusTrapDialog
@@ -1894,7 +1915,7 @@ export default function ClassroomDetailPage() {
         title="Schedule live game"
       >
         <div className="p-4 sm:p-8">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">📅 Schedule live game</h2>
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Schedule live game</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             Students see this on their assignments page so they know to be in class.
             At game time, hit <strong>Launch now</strong> on the competition to open the live lobby.
@@ -1913,7 +1934,7 @@ export default function ClassroomDetailPage() {
                 value={scheduleForm.title}
                 onChange={(e) => setScheduleForm({ ...scheduleForm, title: e.target.value })}
                 placeholder="e.g., Friday Derivatives Showdown"
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                className={inputCls}
               />
             </div>
             <div>
@@ -1927,12 +1948,12 @@ export default function ClassroomDetailPage() {
                 id="schedule-topic"
                 value={scheduleForm.topicSlug}
                 onChange={(e) => setScheduleForm({ ...scheduleForm, topicSlug: e.target.value })}
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                className={inputCls}
               >
                 <option value="">Select a topic…</option>
                 {courses.map((c) => (
                   <optgroup key={c.courseTitle} label={c.courseTitle}>
-                    {c.topics.map((t) => (
+                    {c.topics.map((t: TopicOption) => (
                       <option key={t.slug} value={t.slug}>{t.title}</option>
                     ))}
                   </optgroup>
@@ -1952,7 +1973,7 @@ export default function ClassroomDetailPage() {
                   type="datetime-local"
                   value={scheduleForm.scheduledAt}
                   onChange={(e) => setScheduleForm({ ...scheduleForm, scheduledAt: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                  className={inputCls}
                 />
               </div>
               <div>
@@ -1969,7 +1990,7 @@ export default function ClassroomDetailPage() {
                   onChange={(e) => setScheduleForm({ ...scheduleForm, durationMin: e.target.value })}
                   min="1"
                   max="60"
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                  className={inputCls}
                 />
               </div>
             </div>
@@ -1997,81 +2018,17 @@ export default function ClassroomDetailPage() {
         </div>
       </FocusTrapDialog>
 
-
-      {/* Import students (CSV roster) */}
-      <FocusTrapDialog
+      {/* Import students (CSV roster) — parse preview, then confirm */}
+      <ImportRosterModal
         open={showImport}
         onClose={() => setShowImport(false)}
-        title="Import students"
-      >
-        <div className="p-4 sm:p-8 max-w-lg">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Import students</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            Paste a list of students or upload a CSV. One per line — just the email, or{' '}
-            <span className="font-mono">name, email</span>. A header row is ignored.
-          </p>
+        classroomId={classroomId}
+        joinCode={classroom.joinCode}
+        onImported={loadClassroom}
+      />
 
-          <textarea
-            value={importText}
-            onChange={(e) => setImportText(e.target.value)}
-            rows={7}
-            placeholder={'Ada Lovelace, ada@school.org\nalan@school.org\nGrace Hopper, grace@school.org'}
-            className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white font-mono text-sm"
-          />
-
-          <div className="flex items-center gap-3 mt-3">
-            <label className="text-xs font-medium px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer">
-              📄 Upload CSV
-              <input type="file" accept=".csv,text/csv,text/plain" onChange={onRosterFile} className="hidden" />
-            </label>
-            <span className="text-xs text-gray-400">Up to 300 students per import</span>
-          </div>
-
-          <div className="mt-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900/20 p-3 text-xs text-gray-600 dark:text-gray-300">
-            Students you add this way can sign in with their <strong>school Google or Microsoft account</strong>{' '}
-            using the same email. You can also just share the join code{' '}
-            <span className="font-mono font-bold text-blue-600">{classroom.joinCode}</span>.
-          </div>
-
-          {importError && (
-            <div className="mt-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg text-sm">
-              {importError}
-            </div>
-          )}
-
-          {importResult && (
-            <div className="mt-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 px-4 py-3 rounded-lg text-sm text-gray-700 dark:text-gray-300">
-              <p className="font-semibold text-green-700 dark:text-green-400 mb-1">Import complete</p>
-              <ul className="space-y-0.5">
-                <li>{importResult.added} added{importResult.newAccounts > 0 ? ` (${importResult.newAccounts} new account${importResult.newAccounts !== 1 ? 's' : ''})` : ''}</li>
-                {importResult.reactivated > 0 && <li>{importResult.reactivated} re-added</li>}
-                {importResult.alreadyMembers > 0 && <li>{importResult.alreadyMembers} already in this class</li>}
-                {importResult.invalid.length > 0 && (
-                  <li className="text-amber-600 dark:text-amber-400">
-                    {importResult.invalid.length} line{importResult.invalid.length !== 1 ? 's' : ''} skipped (no valid email)
-                  </li>
-                )}
-              </ul>
-            </div>
-          )}
-
-          <div className="flex gap-3 mt-6">
-            <button
-              onClick={() => setShowImport(false)}
-              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
-            >
-              {importResult ? 'Done' : 'Cancel'}
-            </button>
-            <button
-              onClick={importRoster}
-              disabled={!importText.trim() || importing}
-              className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              {importing ? 'Importing...' : 'Import'}
-            </button>
-          </div>
-        </div>
-      </FocusTrapDialog>
+      {/* Accessible confirm dialog (replaces bare confirm() calls) */}
+      <ConfirmDialog request={confirmReq} onClose={() => setConfirmReq(null)} />
 
       <StudentReportModal
         open={!!reportFor}

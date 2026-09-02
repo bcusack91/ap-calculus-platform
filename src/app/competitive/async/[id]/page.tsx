@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { use } from 'react'
+import { Lightbulb, ArrowRight } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import AvatarDisplay from '@/components/AvatarDisplay'
@@ -85,6 +86,11 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   const [answers, setAnswers] = useState<Array<{ questionIndex: number; answerIndex: number; timeMs: number }>>([])
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showFeedback, setShowFeedback] = useState(false)
+  // Wrong answer with an explanation: hold on the question (async is
+  // self-paced) until the player taps Next. The countdown keeps running.
+  const [awaitingNext, setAwaitingNext] = useState(false)
+  // Consecutive-correct streak for the pop in the top bar.
+  const [streak, setStreak] = useState(0)
   // Avatar reaction to your own answer — mirrors the live 1v1 match.
   const [selfEmotion, setSelfEmotion] = useState<'neutral' | 'happy' | 'sad'>('neutral')
   const [timeRemaining, setTimeRemaining] = useState(0)
@@ -95,6 +101,12 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
   // Score tracking during play
   const [liveScore, setLiveScore] = useState(0)
+
+  // Always-current answers for callbacks captured by long-lived timers (the
+  // countdown interval holds the submitAllAnswers closure from startPlaying,
+  // whose `answers` state would otherwise be stale).
+  const answersRef = useRef<typeof answers>([])
+  useEffect(() => { answersRef.current = answers }, [answers])
 
   useEffect(() => { preloadKatex() }, [])
 
@@ -140,7 +152,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     setPhase('submitting')
     if (timerRef.current) clearInterval(timerRef.current)
 
-    const answersToSubmit = finalAnswers || answers
+    const answersToSubmit = finalAnswers || answersRef.current
     const elapsed = Date.now() - startTimeRef.current
 
     try {
@@ -160,7 +172,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     } catch {
       setError('Failed to submit answers')
     }
-  }, [answers, id, fetchChallenge])
+  }, [id, fetchChallenge])
 
   const startPlaying = useCallback(() => {
     if (!challenge?.questions) return
@@ -169,6 +181,8 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     setAnswers([])
     setSelectedAnswer(null)
     setLiveScore(0)
+    setStreak(0)
+    setAwaitingNext(false)
     startTimeRef.current = Date.now()
     questionStartRef.current = Date.now()
     setTimeRemaining(challenge.timeLimit)
@@ -187,6 +201,25 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     }, 250)
   }, [challenge, submitAllAnswers])
 
+  // Clear feedback and move on to the next question (or submit after the last).
+  // By the time this runs (Next click or the 800ms timeout), the just-recorded
+  // answer has committed to state, so answersRef is always complete on submit.
+  const advanceQuestion = useCallback(() => {
+    setShowFeedback(false)
+    setAwaitingNext(false)
+    setSelectedAnswer(null)
+    setSelfEmotion('neutral')
+
+    if (challenge?.questions && currentQuestion + 1 < challenge.questions.length) {
+      setCurrentQuestion(prev => prev + 1)
+      questionStartRef.current = Date.now()
+    } else {
+      // Done — submit
+      if (timerRef.current) clearInterval(timerRef.current)
+      submitAllAnswers()
+    }
+  }, [challenge, currentQuestion, submitAllAnswers])
+
   const handleAnswer = useCallback((answerIndex: number) => {
     if (selectedAnswer !== null || !challenge?.questions) return
     setSelectedAnswer(answerIndex)
@@ -195,6 +228,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
     const isCorrect = answerIndex === correctIdx
     if (isCorrect) setLiveScore(prev => prev + 1)
+    setStreak(prev => (isCorrect ? prev + 1 : 0))
     setSelfEmotion(isCorrect ? 'happy' : 'sad')
 
     const timeMs = Date.now() - questionStartRef.current
@@ -202,23 +236,16 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     setAnswers(prev => [...prev, { questionIndex: currentQuestion, answerIndex, timeMs }])
     setShowFeedback(true)
 
-    setTimeout(() => {
-      setShowFeedback(false)
-      setSelectedAnswer(null)
-      setSelfEmotion('neutral')
+    // Wrong answer with an explanation: async play is self-paced, so hold on
+    // this question and let the player read it before tapping Next. (The
+    // overall countdown keeps running — reading time is the player's own.)
+    if (!isCorrect && q.explanation) {
+      setAwaitingNext(true)
+      return
+    }
 
-      if (currentQuestion + 1 < challenge.questions!.length) {
-        setCurrentQuestion(prev => prev + 1)
-        questionStartRef.current = Date.now()
-      } else {
-        // Done — submit
-        if (timerRef.current) clearInterval(timerRef.current)
-        // Use updated answers (including this last one)
-        const allAnswers = [...answers, { questionIndex: currentQuestion, answerIndex, timeMs }]
-        submitAllAnswers(allAnswers)
-      }
-    }, 800)
-  }, [selectedAnswer, challenge, currentQuestion, answers, submitAllAnswers])
+    setTimeout(advanceQuestion, 800)
+  }, [selectedAnswer, challenge, currentQuestion, advanceQuestion])
 
 
 
@@ -232,7 +259,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   if (loading || sessionStatus === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     )
   }
@@ -242,7 +269,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center p-4">
         <div className="bg-gray-800 rounded-2xl p-8 max-w-md text-center">
           <p className="text-red-400 text-lg mb-4">{error}</p>
-          <button onClick={() => router.push('/competitive')} className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+          <button onClick={() => router.push('/competitive')} className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover">
             Back to Competitive
           </button>
         </div>
@@ -273,7 +300,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
           {/* Share link (for challenger waiting) */}
           {isWaiting && challenge.isChallenger && (
-            <div className="bg-indigo-900/30 border border-indigo-500/30 rounded-xl p-6 mb-6">
+            <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 mb-6">
               <h3 className="text-lg font-semibold text-white mb-2">Share this challenge!</h3>
               <p className="text-gray-300 text-sm mb-3">Send this link to a friend — they&apos;ll play the same questions and you&apos;ll see who scores higher.</p>
               <div className="flex gap-2">
@@ -286,7 +313,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                   onClick={() => {
                     navigator.clipboard.writeText(`${window.location.origin}/competitive/async/${id}`)
                   }}
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 text-sm font-medium whitespace-nowrap"
+                  className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover text-sm font-medium whitespace-nowrap"
                 >
                   Copy Link
                 </button>
@@ -303,7 +330,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                   {challenge.challenger.avatarData ? (
                     <AvatarDisplay avatarData={challenge.challenger.avatarData as AvatarData} size={48} />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg">
                       {(challenge.challenger.name || '?')[0]}
                     </div>
                   )}
@@ -417,7 +444,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                 <p className="text-gray-300 mb-6">You created this challenge. Play your round first, then share the link with a friend!</p>
                 <button
                   onClick={startPlaying}
-                  className="w-full py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 text-lg transition-colors"
+                  className="w-full py-3 bg-accent text-white font-bold rounded-xl hover:bg-accent-hover text-lg transition-colors"
                 >
                   Start Playing
                 </button>
@@ -430,7 +457,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                   {challenge.challenger.avatarData ? (
                     <AvatarDisplay avatarData={challenge.challenger.avatarData as AvatarData} size={40} />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold">
                       {(challenge.challenger.name || '?')[0]}
                     </div>
                   )}
@@ -488,7 +515,17 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-emerald-400 font-bold">{liveScore} correct</span>
+              {streak >= 2 && (
+                <span
+                  key={`streak-${streak}`}
+                  className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-sm font-bold text-amber-400"
+                >
+                  🔥 {streak}
+                </span>
+              )}
+              <span key={`score-${liveScore}`} className={`text-emerald-400 font-bold ${liveScore > 0 ? 'animate-celebration-pop' : ''}`}>
+                {liveScore} correct
+              </span>
               <span className={`font-mono text-lg font-bold ${timeRemaining <= 30 ? 'text-red-400 animate-pulse' : 'text-white'}`}>
                 {minutes}:{seconds.toString().padStart(2, '0')}
               </span>
@@ -497,7 +534,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
           {/* Progress bar */}
           <div className="w-full h-1.5 bg-gray-700 rounded-full mb-8">
-            <div className="h-full bg-indigo-500 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
+            <div className="h-full bg-accent rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
           </div>
 
           {/* Question */}
@@ -525,9 +562,9 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
               } else if (showFeedback && isCorrect) {
                 className += 'bg-green-900/20 border-green-500/50 text-green-300'
               } else if (isSelected) {
-                className += 'bg-indigo-900/30 border-indigo-500 text-white'
+                className += 'bg-accent/20 border-accent text-white'
               } else {
-                className += 'bg-gray-800/50 border-gray-600 text-gray-300 hover:border-indigo-500/50 hover:bg-gray-700/50 cursor-pointer'
+                className += 'bg-gray-800/50 border-gray-600 text-gray-300 hover:border-accent/50 hover:bg-gray-700/50 cursor-pointer'
               }
 
               return (
@@ -543,6 +580,27 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
               )
             })}
           </div>
+
+          {/* Wrong-answer explanation + Next (self-paced, so reading is safe) */}
+          {awaitingNext && q.explanation && (
+            <div className="mt-6 animate-fadeIn rounded-xl border border-accent/40 bg-gray-800/60 p-4">
+              <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-muted mb-2">
+                <Lightbulb className="w-4 h-4" aria-hidden="true" />
+                Explanation
+              </p>
+              <div
+                className="text-sm text-gray-300 leading-relaxed overflow-x-auto"
+                dangerouslySetInnerHTML={{ __html: renderRichText(q.explanation) }}
+              />
+              <button
+                onClick={advanceQuestion}
+                className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold transition-colors"
+              >
+                {currentQuestion + 1 < challenge.questions.length ? 'Next question' : 'Finish & submit'}
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     )
@@ -552,7 +610,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto mb-4" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4" />
         <p className="text-gray-400">Submitting your answers...</p>
       </div>
     </div>
@@ -626,7 +684,7 @@ function RematchPanel({
   }
 
   return (
-    <div className="mt-6 bg-gradient-to-br from-indigo-900/40 to-accent-dark/40 border border-indigo-500/30 rounded-2xl p-6">
+    <div className="mt-6 bg-gradient-to-br from-accent/20 to-accent-dark/40 border border-accent/30 rounded-2xl p-6">
       {!open ? (
         <div className="text-center">
           <h3 className="text-lg font-bold text-white mb-1">Get them back?</h3>
@@ -635,7 +693,7 @@ function RematchPanel({
           </p>
           <button
             onClick={handleOpen}
-            className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-accent hover:from-indigo-600 hover:to-accent text-white font-bold rounded-xl text-lg shadow-lg transition-all"
+            className="px-8 py-3 bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover text-white font-bold rounded-xl text-lg shadow-lg transition-all"
           >
             🔁 Rematch {publicDisplayName(opponent.name, 'them').split(' ')[0]}
           </button>
@@ -670,7 +728,7 @@ function RematchPanel({
                           <button
                             key={topic.slug}
                             onClick={() => setSelected(topic.slug)}
-                            className={`text-left text-sm px-3 py-2 rounded-lg border transition-all ${isSel ? 'border-indigo-400 bg-indigo-500/20 text-white' : 'border-gray-600 bg-gray-800/40 text-gray-300 hover:border-indigo-500/50'}`}
+                            className={`text-left text-sm px-3 py-2 rounded-lg border transition-all ${isSel ? 'border-accent bg-accent/20 text-white' : 'border-gray-600 bg-gray-800/40 text-gray-300 hover:border-accent/50'}`}
                           >
                             {topic.title}
                           </button>
@@ -691,7 +749,7 @@ function RematchPanel({
           <button
             onClick={handleSend}
             disabled={!selected || submitting}
-            className="mt-5 w-full py-3 bg-gradient-to-r from-indigo-500 to-accent hover:from-indigo-600 hover:to-accent text-white font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            className="mt-5 w-full py-3 bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover text-white font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           >
             {submitting ? 'Creating rematch…' : selected ? 'Send Rematch →' : 'Pick a topic'}
           </button>

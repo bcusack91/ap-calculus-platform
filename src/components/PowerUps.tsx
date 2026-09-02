@@ -6,8 +6,13 @@ import { useState, useCallback } from 'react'
  * Competitive cosmetics ("power-ups" — kept that export name for callers).
  * These are PURELY VISUAL flair: they make you look cooler in competitive mode
  * but give NO gameplay advantage, so every match stays perfectly fair. Bought
- * with XP earned from wins; ownership + the equipped pick persist in
- * localStorage (no server stakes since they're cosmetic).
+ * with server-tracked challenge XP (see /api/challenges `totalXpEarned`).
+ *
+ * KNOWN CONSTRAINT: ownership, the equipped pick, and the spend ledger live in
+ * localStorage only — they are DEVICE-LOCAL and do not roam with the account
+ * (a new browser starts with nothing owned, and spend resets there too).
+ * Server-side persistence is a known follow-up; acceptable for now because
+ * cosmetics carry no gameplay stakes.
  */
 export interface Cosmetic {
   id: string
@@ -88,7 +93,8 @@ const rarityChip: Record<Cosmetic['rarity'], string> = {
 }
 
 /**
- * Cosmetics shop. `currentXP` is the player's earned XP (e.g. wins*10 + streak*5);
+ * Cosmetics shop. `currentXP` is the player's real, server-persisted challenge
+ * XP total (must be monotonic — the localStorage spend ledger only grows);
  * available = earned − spent. Self-contained: purchase + equip handled internally.
  */
 export function PowerUpShop({ currentXP }: { currentXP: number }) {
@@ -98,7 +104,7 @@ export function PowerUpShop({ currentXP }: { currentXP: number }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
       <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">🛍️ Cosmetics Shop</h3>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Spend XP on visual flair for competitive mode. Cosmetics are looks only — they never affect gameplay, so matches stay fair.</p>
+      <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Spend XP from daily &amp; weekly challenges on visual flair for competitive mode. Cosmetics are looks only — they never affect gameplay, so matches stay fair.</p>
       <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mb-2">⭐ {available} XP available</p>
 
       {(() => {
