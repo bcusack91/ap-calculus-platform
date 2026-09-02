@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { Search } from 'lucide-react'
 
 /** Seconds in queue before we surface the "no opponent yet" fallback. */
@@ -17,19 +17,24 @@ export const QUEUE_POLL_TIMEOUT_SEC = 180
  * when it flips back on. All setState happens inside the interval callback.
  */
 export function useQueueElapsed(active: boolean): number {
-  const [now, setNow] = useState(0)
-  const startRef = useRef<number | null>(null)
+  const [elapsed, setElapsed] = useState(0)
+  // Reset synchronously when `active` flips (render-time adjustment pattern),
+  // so a re-queue never flashes the previous search's elapsed time.
+  const [prevActive, setPrevActive] = useState(active)
+  if (active !== prevActive) {
+    setPrevActive(active)
+    setElapsed(0)
+  }
   useEffect(() => {
-    if (!active) {
-      startRef.current = null
-      return
-    }
-    startRef.current = Date.now()
-    const i = setInterval(() => setNow(Date.now()), 1000)
+    if (!active) return
+    const start = Date.now()
+    const i = setInterval(
+      () => setElapsed(Math.max(0, Math.floor((Date.now() - start) / 1000))),
+      1000
+    )
     return () => clearInterval(i)
   }, [active])
-  if (!active || startRef.current === null) return 0
-  return Math.max(0, Math.floor((now - startRef.current) / 1000))
+  return active ? elapsed : 0
 }
 
 export function formatElapsed(totalSec: number): string {
