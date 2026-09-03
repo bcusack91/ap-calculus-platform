@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 import { EmailCapture } from '@/components/email-capture'
 import { getCourseHref } from '@/data/course-metadata'
+import { ReportProblem } from '@/components/report-problem'
 
 const footerLinks = {
   'Courses': [
@@ -110,6 +111,7 @@ export function Footer() {
                 AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
               </p>
             </div>
+            <ReportProblem />
           </div>
         </div>
       </div>

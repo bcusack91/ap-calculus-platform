@@ -1,23 +1,30 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { Suspense, useEffect, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { ArrowLeft, School } from 'lucide-react'
 
-export default function JoinTeacherLobbyPage() {
+function JoinTeacherLobbyContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const codeFromUrl = (searchParams.get('code') || '').toUpperCase()
   const { status } = useSession()
-  const [code, setCode] = useState('')
+  const [code, setCode] = useState(codeFromUrl)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/competitive/join')
+      // Carry the lobby code through sign-in so the student returns here with
+      // the code pre-filled instead of losing the join intent.
+      const dest = codeFromUrl
+        ? `/competitive/join?code=${encodeURIComponent(codeFromUrl)}`
+        : '/competitive/join'
+      router.push(`/auth/signin?callbackUrl=${encodeURIComponent(dest)}`)
     }
-  }, [status, router])
+  }, [status, router, codeFromUrl])
 
   if (status === 'unauthenticated') return null
 
@@ -74,5 +81,19 @@ export default function JoinTeacherLobbyPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function JoinTeacherLobbyPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
+        </div>
+      }
+    >
+      <JoinTeacherLobbyContent />
+    </Suspense>
   )
 }

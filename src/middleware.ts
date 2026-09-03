@@ -216,7 +216,10 @@ export async function middleware(request: NextRequest) {
 
   if (!token) {
     const signInUrl = new URL('/auth/signin', nextUrl.origin)
-    signInUrl.searchParams.set('callbackUrl', nextUrl.pathname)
+    // Preserve the query string too — join/share links carry their intent in
+    // params (e.g. /competitive/join?code=ABC123), and dropping the search
+    // stranded students on a blank join form after sign-in.
+    signInUrl.searchParams.set('callbackUrl', nextUrl.pathname + nextUrl.search)
     return NextResponse.redirect(signInUrl)
   }
 

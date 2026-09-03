@@ -569,8 +569,9 @@ export default function CompetitivePage() {
         )}
 
         {/* Cosmetics Shop. Balance = server-persisted challenge XP (aggregated
-            by /api/challenges), which is monotonic — the localStorage spend
-            ledger only grows, so the balance can never show phantom debt. */}
+            by /api/challenges), which is monotonic; the spend ledger is also
+            server-persisted (/api/competitive/cosmetics), so purchases and
+            balance roam with the account across devices. */}
         {profile && (
           <div className="mt-8">
             <PowerUpShop currentXP={challengeXP} />

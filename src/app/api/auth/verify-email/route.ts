@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
 import crypto from 'crypto'
 import { rateLimit } from '@/lib/rate-limit'
 import { sendVerificationEmail } from '@/lib/email'
@@ -48,7 +49,17 @@ export async function POST() {
       data: { email, token: tokenHash, expires },
     })
 
-    const verifyUrl = `${getPublicAppUrl()}/auth/verify-email?token=${token}`
+    // Carry a pending class-join intent (persisted by /join-class before the
+    // auth detour) into the emailed link, so the join completes even when the
+    // email is opened on a different device/browser where the cookie doesn't
+    // exist. Strictly validated — this value is client-controlled.
+    const pendingJoin = (await cookies()).get('mondo_pending_join')?.value?.toUpperCase()
+    const joinParam =
+      pendingJoin && /^[A-Z0-9-]{4,10}$/.test(pendingJoin)
+        ? `&join=${encodeURIComponent(pendingJoin)}`
+        : ''
+
+    const verifyUrl = `${getPublicAppUrl()}/auth/verify-email?token=${token}${joinParam}`
 
     await sendVerificationEmail(email, verifyUrl)
 

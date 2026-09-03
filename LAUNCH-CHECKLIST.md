@@ -34,7 +34,8 @@ A 7-dimension end-to-end review ran (overall B‑: strong engine, unfinished fin
 - **Teacher self-provisioning** — `/for-teachers` + one-click FREE→TEACHER (no admin needed).
 - **Schools UI** — admin can create schools; teachers attach classes → the district rollup can finally populate.
 - **UX** — onboarding routing, tool-page breadcrumbs, unified course front-door, differentiated hero, plain-language premium perks.
-- **Still open (from the review, not yet done):** wire real Announcements/Groups back into the classroom (were hidden, not rebuilt); gamification depth (Daily Challenge/BattlePass are shallow — deferred); full `/courses/[slug]`→hub redirect (only homepage links unified); printable/PDF class reports.
+- **Announcements: DONE (Sep 2026)** — real end-to-end: `Announcement` model + `/api/teacher/classrooms/[id]/announcements` (GET member-readable, POST/PATCH/DELETE teacher+co-teacher), teacher UI under Work › Announcements (post/edit/pin/delete), students see them per-class on `/assignments` with a localStorage "New" badge. **Classroom Groups: still open** — needs schema (`ClassroomGroup` + `ClassroomGroupMember` join to `ClassroomMember`); no existing model can host sub-groups without abuse, so deliberately not rebuilt yet.
+- **Still open (from the review, not yet done):** classroom Groups (above); gamification depth (Daily Challenge/BattlePass are shallow — deferred); full `/courses/[slug]`→hub redirect (only homepage links unified); printable/PDF class reports.
 
 ---
 

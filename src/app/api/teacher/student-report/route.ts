@@ -177,6 +177,8 @@ export async function GET(req: NextRequest) {
       email: membership.user.email,
       image: membership.user.image,
     },
+    // For the printable report header ("<student> — <class>").
+    classroom: { id: classroom.id, name: classroom.name },
     summary: {
       completedLessons,
       totalLessons,

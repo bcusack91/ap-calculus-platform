@@ -2,9 +2,10 @@
 
 import { useEffect, useState, use, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Check, X } from 'lucide-react'
+import { Check, X, ClipboardList, Sparkles } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -42,6 +43,9 @@ interface TeamMatchState {
   team2: TeamInfo
   questions: Question[]
   myQuestionIndex: number
+  // The current player's own chronological answer history (server-stored per
+  // participant in gameData.teamN.answers). Powers the post-match review.
+  myAnswers?: ReviewAnswer[]
   myTeam: 1 | 2
   player1MMRBefore?: number
   player2MMRBefore?: number
@@ -64,6 +68,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const [answerResult, setAnswerResult] = useState<{ correct: boolean } | null>(null)
   // Personal consecutive-correct streak (your own answers, not the team's).
   const [streak, setStreak] = useState(0)
+  const [showReview, setShowReview] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [katexLoaded, setKatexLoaded] = useState(false)
@@ -249,6 +254,11 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       ? matchState.team1.score >= 15
       : matchState.team2.score >= 15
 
+    // Personal review data: server-stored per-player answer history plus the
+    // full questions (explanations included once the match is COMPLETED).
+    const reviewSummary = summarizeAnswers(matchState.myAnswers ?? [])
+    const { totalAnswered, totalCorrect, missedCount, bestStreak } = reviewSummary
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 p-4">
         <div className="max-w-3xl mx-auto pt-10">
@@ -285,9 +295,44 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
                 <p className="text-5xl font-black text-white mt-2">{matchState.team2.score}</p>
               </div>
             </div>
+
+            {/* Your contribution */}
+            {totalAnswered > 0 && (
+              <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+                <span className="text-gray-400 uppercase tracking-wider text-xs font-semibold">Your contribution</span>
+                <span className="inline-flex items-center gap-1.5 font-semibold text-white">
+                  <Check className="w-4 h-4 text-green-400" aria-hidden="true" />
+                  {totalCorrect}/{totalAnswered} correct
+                </span>
+                {bestStreak >= 2 && (
+                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-900/40 px-2.5 py-1 font-bold text-amber-400">
+                    🔥 Best streak: {bestStreak}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-wrap gap-4 justify-center">
+            {totalAnswered > 0 && (
+              missedCount > 0 ? (
+                <button
+                  onClick={() => setShowReview(!showReview)}
+                  className="px-5 sm:px-8 py-4 bg-amber-500 text-white font-bold rounded-lg text-lg hover:bg-amber-600 flex items-center gap-2"
+                >
+                  <ClipboardList className="w-5 h-5" aria-hidden="true" />
+                  {showReview ? 'Hide Review' : `Review Mistakes (${missedCount})`}
+                </button>
+              ) : (
+                <button
+                  onClick={() => setShowReview(!showReview)}
+                  className="px-5 sm:px-8 py-4 bg-green-500 text-white font-bold rounded-lg text-lg hover:bg-green-600 flex items-center gap-2"
+                >
+                  <Sparkles className="w-5 h-5" aria-hidden="true" />
+                  {showReview ? 'Hide Review' : 'Review All Questions'}
+                </button>
+              )
+            )}
             <button
               onClick={() => router.push(lobbyPath)}
               className="px-8 py-4 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg text-lg hover:from-accent-hover hover:to-accent-secondary-hover"
@@ -295,6 +340,17 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
               Back to Lobby
             </button>
           </div>
+
+          {/* Post-match question review (your own answers only) */}
+          {showReview && (
+            <div className="mt-8">
+              <TeamMatchReview
+                questions={matchState.questions}
+                summary={reviewSummary}
+                renderMath={renderMath}
+              />
+            </div>
+          )}
         </div>
       </div>
     )

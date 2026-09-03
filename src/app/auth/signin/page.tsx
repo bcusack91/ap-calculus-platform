@@ -5,6 +5,7 @@ import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { trackLogin } from '@/lib/analytics'
+import { pendingJoinUrl } from '@/lib/pending-join'
 
 function SignInForm() {
   const router = useRouter()
@@ -22,6 +23,15 @@ function SignInForm() {
     rawCallback.startsWith('/') && !rawCallback.startsWith('//')
       ? rawCallback
       : '/'
+
+  // With no explicit callback, honor a pending class-join intent (persisted as
+  // a cookie by /join-class) so students who detoured through auth still land
+  // back in the join flow instead of on the homepage/dashboard. Resolved at
+  // click time — cookies aren't readable during prerender.
+  const resolveDestination = () => {
+    if (safeCallback !== '/') return safeCallback
+    return pendingJoinUrl() ?? safeCallback
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -50,7 +60,7 @@ function SignInForm() {
       trackLogin('credentials')
 
       // Redirect back to the page the user originally tried to access.
-      router.push(safeCallback)
+      router.push(resolveDestination())
       router.refresh()
     } catch {
       setError('An error occurred during sign in')
@@ -75,7 +85,7 @@ function SignInForm() {
           type="button"
           onClick={() => {
             trackLogin('google')
-            signIn('google', { callbackUrl: safeCallback })
+            signIn('google', { callbackUrl: resolveDestination() })
           }}
           className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium text-gray-700 dark:text-gray-200"
         >
@@ -94,7 +104,7 @@ function SignInForm() {
             type="button"
             onClick={() => {
               trackLogin('microsoft-entra-id')
-              signIn('microsoft-entra-id', { callbackUrl: safeCallback })
+              signIn('microsoft-entra-id', { callbackUrl: resolveDestination() })
             }}
             className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium text-gray-700 dark:text-gray-200"
           >

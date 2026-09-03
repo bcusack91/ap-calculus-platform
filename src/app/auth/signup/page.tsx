@@ -7,6 +7,7 @@ import { signIn } from 'next-auth/react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { PRESET_AVATARS, AvatarData } from '@/types/avatar'
 import { trackSignUp } from '@/lib/analytics'
+import { pendingJoinUrl } from '@/lib/pending-join'
 
 function SignUpForm() {
   const router = useRouter()
@@ -16,6 +17,17 @@ function SignUpForm() {
     rawCallback.startsWith('/') && !rawCallback.startsWith('//')
       ? rawCallback
       : '/'
+
+  // With no explicit callback, honor a pending class-join intent (persisted as
+  // a cookie by /join-class) so a student who scanned a teacher's QR code and
+  // had to create an account still lands back in the join flow. Resolved at
+  // click time — cookies aren't readable during prerender. Returns null when
+  // there is neither, so callers can pick their own default (onboarding).
+  const resolveDestination = () => {
+    if (safeCallback !== '/') return safeCallback
+    return pendingJoinUrl()
+  }
+
   const [step, setStep] = useState(1) // 1: account details, 2: avatar selection
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -136,10 +148,11 @@ function SignUpForm() {
 
       trackSignUp('credentials')
 
-      // If the user was heading somewhere specific, honor it; otherwise send new
-      // users through the guided onboarding wizard (course pick + first topic)
-      // instead of dropping them back on the homepage.
-      router.push(safeCallback !== '/' ? safeCallback : '/onboarding')
+      // If the user was heading somewhere specific (callbackUrl or a pending
+      // class-join), honor it; otherwise send new users through the guided
+      // onboarding wizard (course pick + first topic) instead of dropping
+      // them back on the homepage.
+      router.push(resolveDestination() ?? '/onboarding')
       router.refresh()
     } catch {
       setError('An error occurred during sign up')
@@ -338,7 +351,7 @@ function SignUpForm() {
                 type="button"
                 onClick={() => {
                   trackSignUp('google')
-                  signIn('google', { callbackUrl: safeCallback })
+                  signIn('google', { callbackUrl: resolveDestination() ?? safeCallback })
                 }}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-300"
               >

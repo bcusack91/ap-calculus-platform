@@ -48,28 +48,23 @@ export const metadata: Metadata = {
     "flashcards",
     "free study resources",
   ],
+  // NOTE: no `images` arrays here — the file-convention routes
+  // (src/app/opengraph-image.tsx / twitter-image.tsx) generate the social
+  // card and take precedence over config-based images anyway; listing the
+  // old static /og-image.png too just conflicted with them.
   openGraph: {
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — study smarter, free to start.",
+      "Free interactive lessons, flashcards & competitive practice for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — study smarter, free to start.",
     url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
-    images: [
-      {
-        url: "https://www.studymondo.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Study Mondo — Free AP, SAT & MCAT Study Platform",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, practice problems & interactive lessons. Study smarter — free to start.",
-    images: ["https://www.studymondo.com/og-image.png"],
+      "Free interactive lessons, flashcards & competitive practice. Study smarter — free to start.",
   },
   icons: {
     icon: [

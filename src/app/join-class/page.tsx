@@ -4,6 +4,11 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import {
+  setPendingJoinCode,
+  getPendingJoinCode,
+  clearPendingJoinCode,
+} from '@/lib/pending-join'
 
 function JoinClassContent() {
   const { data: session, status } = useSession()
@@ -26,6 +31,26 @@ function JoinClassContent() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [codeFromUrl, session])
 
+  // Not signed in with a code in hand: persist the join intent so it survives
+  // sign-up, sign-in, and the email-verification detour (which may open in a
+  // fresh tab where the callbackUrl chain is gone).
+  useEffect(() => {
+    if (codeFromUrl && status === 'unauthenticated') {
+      setPendingJoinCode(codeFromUrl)
+    }
+  }, [codeFromUrl, status])
+
+  // No ?code= in the URL: prefill from a pending join persisted before an
+  // auth/verification detour, so the student only has to press "Join Class".
+  // Done in an effect (not render) — cookies don't exist during SSR and a
+  // render-time read would cause a hydration mismatch.
+  useEffect(() => {
+    if (!codeFromUrl) {
+      const pending = getPendingJoinCode()
+      if (pending) setJoinCode((current) => current || pending)
+    }
+  }, [codeFromUrl])
+
   const handleAutoJoin = async (code: string) => {
     setLoading(true)
     setError('')
@@ -37,8 +62,11 @@ function JoinClassContent() {
       })
       const data = await res.json()
       if (res.ok) {
+        clearPendingJoinCode()
         setSuccess({ name: data.classroom?.name || 'Classroom', teacher: data.classroom?.teacher || 'Teacher' })
       } else {
+        // A stale pending code shouldn't keep re-prompting once it's spent.
+        if (res.status === 409) clearPendingJoinCode()
         setError(data.error || 'Failed to join classroom')
       }
     } catch {
@@ -62,13 +90,24 @@ function JoinClassContent() {
         <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
           <div className="text-5xl mb-4">🔒</div>
           <h1 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Sign in to join a class</h1>
-          <p className="text-gray-500 mb-6">You need an account to join a classroom.</p>
-          <Link
-            href={`/auth/signin?callbackUrl=${encodeURIComponent(joinCode ? `/join-class?code=${joinCode}` : '/join-class')}`}
-            className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
-          >
-            Sign In
-          </Link>
+          <p className="text-gray-500 mb-6">
+            You need an account to join a classroom.
+            {joinCode ? ' Your class code is saved — you’ll join automatically after signing in.' : ''}
+          </p>
+          <div className="flex flex-col gap-3">
+            <Link
+              href={`/auth/signin?callbackUrl=${encodeURIComponent(joinCode ? `/join-class?code=${joinCode}` : '/join-class')}`}
+              className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
+            >
+              Sign In
+            </Link>
+            <Link
+              href={`/auth/signup?callbackUrl=${encodeURIComponent(joinCode ? `/join-class?code=${joinCode}` : '/join-class')}`}
+              className="inline-block px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-all"
+            >
+              Create a Free Account
+            </Link>
+          </div>
         </div>
       </div>
     )
@@ -93,10 +132,12 @@ function JoinClassContent() {
       const data = await res.json()
 
       if (!res.ok) {
+        if (res.status === 409) clearPendingJoinCode()
         setError(data.error || 'Failed to join class')
         return
       }
 
+      clearPendingJoinCode()
       setSuccess({ name: data.classroom.name, teacher: data.classroom.teacher || 'your teacher' })
     } catch {
       setError('Something went wrong. Please try again.')

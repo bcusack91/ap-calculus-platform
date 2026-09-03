@@ -4,12 +4,22 @@ import { useEffect, useRef, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { pendingJoinUrl } from '@/lib/pending-join'
 
 function VerifyEmailContent() {
   const searchParams = useSearchParams()
   const token = searchParams.get('token')
+  // Pending class-join code embedded in the verification link by
+  // /api/auth/verify-email (POST). Validated before use.
+  const rawJoin = (searchParams.get('join') || '').toUpperCase()
+  const joinFromLink = /^[A-Z0-9-]{4,10}$/.test(rawJoin) ? rawJoin : null
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading')
   const [message, setMessage] = useState('')
+  // Pending class-join intent persisted by /join-class before the auth or
+  // verification detour, so a student who verifies mid-join is routed back to
+  // finish joining instead of being dropped on the dashboard. Read alongside
+  // the verification result (never during render — cookies don't exist in SSR).
+  const [joinUrl, setJoinUrl] = useState<string | null>(null)
 
   // Held in a ref so the verification effect keeps `[token]` as its only
   // dependency. The token is single-use and deleted on success, so re-running
@@ -50,6 +60,9 @@ function VerifyEmailContent() {
           // Non-fatal: the banner still clears once the throttle lapses.
         }
         if (isCancelled) return
+        // Cookie-persisted join intent (the emailed ?join= code is handled at
+        // render so this effect keeps `[token]` as its only dependency).
+        setJoinUrl(pendingJoinUrl())
         setStatus('success')
         setMessage(data.message)
       })
@@ -63,6 +76,12 @@ function VerifyEmailContent() {
       isCancelled = true
     }
   }, [token])
+
+  // Prefer the join code embedded in the emailed link (it survives opening
+  // the email on another device); fall back to the local pending-join cookie.
+  const effectiveJoinUrl = joinFromLink
+    ? `/join-class?code=${encodeURIComponent(joinFromLink)}`
+    : joinUrl
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
@@ -80,12 +99,29 @@ function VerifyEmailContent() {
             <div className="text-5xl mb-4">✅</div>
             <h1 className="text-2xl font-bold mb-3">Email Verified!</h1>
             <p className="text-gray-600 dark:text-gray-400 mb-6">{message}</p>
-            <Link
-              href="/dashboard"
-              className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
-            >
-              Go to Dashboard →
-            </Link>
+            {effectiveJoinUrl ? (
+              <div className="flex flex-col items-center gap-3">
+                <Link
+                  href={effectiveJoinUrl}
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
+                >
+                  Finish Joining Your Class →
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="text-sm text-accent hover:text-accent-hover font-semibold"
+                >
+                  Go to Dashboard instead
+                </Link>
+              </div>
+            ) : (
+              <Link
+                href="/dashboard"
+                className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
+              >
+                Go to Dashboard →
+              </Link>
+            )}
           </>
         )}
 

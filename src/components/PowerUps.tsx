@@ -1,6 +1,19 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback, useEffect, useSyncExternalStore } from 'react'
+import {
+  COSMETICS,
+  getCosmetic,
+  sanitizeCosmeticsState,
+  type Cosmetic,
+  type CosmeticSlot,
+} from '@/lib/cosmetics-catalog'
+
+// Re-exported so existing importers keep working; the catalog itself now lives
+// in src/lib/cosmetics-catalog.ts (shared with the server route, which is the
+// price/ownership authority).
+export { COSMETICS }
+export type { Cosmetic }
 
 /**
  * Competitive cosmetics ("power-ups" — kept that export name for callers).
@@ -8,82 +21,225 @@ import { useState, useCallback } from 'react'
  * but give NO gameplay advantage, so every match stays perfectly fair. Bought
  * with server-tracked challenge XP (see /api/challenges `totalXpEarned`).
  *
- * KNOWN CONSTRAINT: ownership, the equipped pick, and the spend ledger live in
- * localStorage only — they are DEVICE-LOCAL and do not roam with the account
- * (a new browser starts with nothing owned, and spend resets there too).
- * Server-side persistence is a known follow-up; acceptable for now because
- * cosmetics carry no gameplay stakes.
+ * Ownership, the equipped picks, and the XP spend ledger are ACCOUNT-WIDE:
+ * persisted on `CompetitiveProfile.cosmetics` via /api/competitive/cosmetics,
+ * so purchases roam across devices. A legacy device's localStorage state
+ * (`mondo_cosmetics`) is imported once, server-side validated, on first load —
+ * then the key is cleared. If the API is unreachable (e.g. the migration
+ * hasn't been applied in an environment yet), the shop degrades to a
+ * read-only view of this device's legacy state instead of crashing.
  */
-export interface Cosmetic {
-  id: string
-  name: string
-  description: string
-  icon: string
-  rarity: 'common' | 'rare' | 'epic'
-  cost: number
-  /** Tailwind classes applied to the player's nameplate when equipped. */
-  nameplateClass: string
+
+const STORE_KEY = 'mondo_cosmetics' // legacy device-local state, import-then-clear
+
+// ---------------------------------------------------------------------------
+// Shared client store (module-level, one fetch per page load, every
+// useCosmetics() instance sees the same state).
+// ---------------------------------------------------------------------------
+
+interface CosmeticsClientState {
+  /** 'loading' until the API answers; 'unavailable' = read-only local fallback. */
+  status: 'loading' | 'ready' | 'unavailable'
+  owned: string[]
+  equipped: Partial<Record<CosmeticSlot, string>>
+  xpSpent: number
+  /** Last mutation error (e.g. rejected purchase) — shown in the shop. */
+  error: string | null
 }
 
-export const COSMETICS: Cosmetic[] = [
-  { id: 'neon-trail', name: 'Neon Trail', description: 'A glowing neon outline on your nameplate.', icon: '✨', rarity: 'common', cost: 50,
-    nameplateClass: 'text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]' },
-  { id: 'confetti', name: 'Confetti Burst', description: 'A festive sparkle frames your name.', icon: '🎉', rarity: 'common', cost: 75,
-    nameplateClass: 'text-pink-500' },
-  { id: 'golden-nameplate', name: 'Golden Nameplate', description: 'Your name shines in radiant gold.', icon: '🏷️', rarity: 'rare', cost: 100,
-    nameplateClass: 'bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold' },
-  { id: 'flame-aura', name: 'Flame Aura', description: 'A flickering flame aura around your name.', icon: '🔥', rarity: 'rare', cost: 150,
-    nameplateClass: 'text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.9)]' },
-  { id: 'galaxy', name: 'Galaxy Arena', description: 'A cosmic gradient sweeps across your name.', icon: '🌌', rarity: 'epic', cost: 200,
-    nameplateClass: 'bg-gradient-to-r from-indigo-400 via-accent-muted to-fuchsia-400 bg-clip-text text-transparent font-extrabold' },
-  { id: 'champion-crown', name: 'Champion Crown', description: 'A crown sits beside your name.', icon: '👑', rarity: 'epic', cost: 300,
-    nameplateClass: 'text-amber-400 font-extrabold' },
-]
+const INITIAL_STATE: CosmeticsClientState = {
+  status: 'loading',
+  owned: [],
+  equipped: {},
+  xpSpent: 0,
+  error: null,
+}
 
-interface CosmeticState { owned: string[]; equipped: string | null; spent: number }
-const STORE_KEY = 'mondo_cosmetics'
+let store: CosmeticsClientState = INITIAL_STATE
+const listeners = new Set<() => void>()
 
-function load(): CosmeticState {
-  if (typeof window === 'undefined') return { owned: [], equipped: null, spent: 0 }
+function setStore(next: CosmeticsClientState) {
+  store = next
+  listeners.forEach((l) => l())
+}
+function subscribe(listener: () => void) {
+  listeners.add(listener)
+  return () => listeners.delete(listener)
+}
+const getSnapshot = () => store
+const getServerSnapshot = () => INITIAL_STATE
+
+interface ServerStatePayload {
+  persistence?: string
+  owned?: string[]
+  equipped?: Partial<Record<CosmeticSlot, string>>
+  xpSpent?: number
+  canImport?: boolean
+  error?: string
+  alreadyInitialized?: boolean
+}
+
+function applyServerState(data: ServerStatePayload, error: string | null = null) {
+  setStore({
+    status: 'ready',
+    owned: Array.isArray(data.owned) ? data.owned : [],
+    equipped: data.equipped && typeof data.equipped === 'object' ? data.equipped : {},
+    xpSpent: Number(data.xpSpent) || 0,
+    error,
+  })
+}
+
+function readLegacyLocal() {
   try {
-    const s = JSON.parse(localStorage.getItem(STORE_KEY) || '{}')
-    return { owned: Array.isArray(s.owned) ? s.owned : [], equipped: s.equipped ?? null, spent: Number(s.spent) || 0 }
-  } catch { return { owned: [], equipped: null, spent: 0 } }
+    return sanitizeCosmeticsState(JSON.parse(localStorage.getItem(STORE_KEY) || 'null'))
+  } catch {
+    return sanitizeCosmeticsState(null)
+  }
 }
+
+function fallbackToLocal() {
+  const local = readLegacyLocal()
+  setStore({
+    status: 'unavailable',
+    owned: local.owned,
+    equipped: local.equipped,
+    xpSpent: local.xpSpent,
+    error: null,
+  })
+}
+
+let loadPromise: Promise<void> | null = null
+
+/** Fetch server state once per page load; runs the one-time localStorage import. */
+function ensureLoaded() {
+  if (loadPromise) return loadPromise
+  loadPromise = (async () => {
+    try {
+      const res = await fetch('/api/competitive/cosmetics')
+      if (!res.ok) return fallbackToLocal()
+      const data: ServerStatePayload = await res.json()
+      if (data.persistence !== 'ok') return fallbackToLocal()
+
+      // One-time migration handshake: while the server has never stored state
+      // for this user (canImport), push this device's legacy purchases up.
+      // The server validates ids against the catalog, caps xpSpent at the sum
+      // of the imported items' prices, and closes the window permanently.
+      if (data.canImport) {
+        const local = readLegacyLocal()
+        if (local.owned.length > 0) {
+          try {
+            const importRes = await fetch('/api/competitive/cosmetics', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ action: 'import', state: local }),
+            })
+            const importData: ServerStatePayload = await importRes.json()
+            if (importRes.ok) {
+              try { localStorage.removeItem(STORE_KEY) } catch {}
+              return applyServerState(importData)
+            }
+            if (importData.alreadyInitialized) {
+              // Another device won the race — the account state is authoritative
+              // now, so drop the legacy key and re-read.
+              try { localStorage.removeItem(STORE_KEY) } catch {}
+              const refetch = await fetch('/api/competitive/cosmetics')
+              if (refetch.ok) {
+                const fresh: ServerStatePayload = await refetch.json()
+                if (fresh.persistence === 'ok') return applyServerState(fresh)
+              }
+            }
+          } catch {}
+        }
+      }
+      applyServerState(data)
+    } catch {
+      fallbackToLocal()
+    }
+  })()
+  return loadPromise
+}
+
+async function mutate(body: Record<string, unknown>, optimistic: CosmeticsClientState) {
+  const previous = store
+  setStore(optimistic)
+  try {
+    const res = await fetch('/api/competitive/cosmetics', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+    const data: ServerStatePayload = await res.json().catch(() => ({}))
+    if (!res.ok) {
+      setStore({ ...previous, error: data.error || 'Something went wrong — try again.' })
+      return false
+    }
+    applyServerState(data)
+    return true
+  } catch {
+    setStore({ ...previous, error: 'Network error — your purchase was not charged.' })
+    return false
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Hook + components
+// ---------------------------------------------------------------------------
 
 export function useCosmetics() {
-  // Lazy init reads localStorage on the client; SSR-safe (load() returns the
-  // default when window is undefined).
-  const [state, setState] = useState<CosmeticState>(load)
+  const state = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+
+  useEffect(() => {
+    ensureLoaded()
+  }, [])
 
   const purchase = useCallback((id: string, availableXP: number): boolean => {
-    const c = COSMETICS.find((x) => x.id === id)
+    const c = getCosmetic(id)
     if (!c) return false
-    // Report the ACTUAL outcome: true only when the purchase commits (not when
-    // already owned or unaffordable). The flag is set inside the updater so it
-    // reflects fresh state; under StrictMode's double-invoke it still ends true
-    // iff the purchase is valid.
-    let ok = false
-    setState((prev) => {
-      if (prev.owned.includes(id) || availableXP < c.cost) return prev
-      ok = true
-      const next = { owned: [...prev.owned, id], equipped: prev.equipped ?? id, spent: prev.spent + c.cost }
-      try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
-      return next
-    })
-    return ok
+    const s = store
+    if (s.status !== 'ready') return false
+    if (s.owned.includes(id) || availableXP < c.cost) return false
+    // Optimistic: own it, auto-equip if the slot is free, charge the XP.
+    // `mutate` rolls back and surfaces the server's error text on rejection.
+    void mutate(
+      { action: 'purchase', itemId: id },
+      {
+        ...s,
+        owned: [...s.owned, id],
+        equipped: s.equipped[c.slot] ? s.equipped : { ...s.equipped, [c.slot]: id },
+        xpSpent: s.xpSpent + c.cost,
+        error: null,
+      }
+    )
+    return true
   }, [])
 
-  const equip = useCallback((id: string | null) => {
-    setState((prev) => {
-      if (id !== null && !prev.owned.includes(id)) return prev
-      const next = { ...prev, equipped: prev.equipped === id ? null : id }
-      try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
-      return next
-    })
+  /** Toggle: equips the item, or unequips its slot if it's already equipped. */
+  const equip = useCallback((id: string) => {
+    const c = getCosmetic(id)
+    if (!c) return
+    const s = store
+    if (s.status !== 'ready' || !s.owned.includes(id)) return
+    if (s.equipped[c.slot] === id) {
+      const equipped = { ...s.equipped }
+      delete equipped[c.slot]
+      void mutate({ action: 'unequip', slot: c.slot }, { ...s, equipped, error: null })
+    } else {
+      void mutate(
+        { action: 'equip', itemId: id, slot: c.slot },
+        { ...s, equipped: { ...s.equipped, [c.slot]: id }, error: null }
+      )
+    }
   }, [])
 
-  return { ...state, purchase, equip }
+  return {
+    status: state.status,
+    owned: state.owned,
+    equipped: state.equipped.nameplate ?? null,
+    spent: state.xpSpent,
+    error: state.error,
+    purchase,
+    equip,
+  }
 }
 
 const rarityChip: Record<Cosmetic['rarity'], string> = {
@@ -94,18 +250,26 @@ const rarityChip: Record<Cosmetic['rarity'], string> = {
 
 /**
  * Cosmetics shop. `currentXP` is the player's real, server-persisted challenge
- * XP total (must be monotonic — the localStorage spend ledger only grows);
- * available = earned − spent. Self-contained: purchase + equip handled internally.
+ * XP total (monotonic); the spend ledger is server-persisted too, so
+ * available = earned − spent and both halves roam with the account.
+ * Self-contained: purchase + equip are optimistic API calls with rollback.
  */
 export function PowerUpShop({ currentXP }: { currentXP: number }) {
-  const { owned, equipped, spent, purchase, equip } = useCosmetics()
+  const { status, owned, equipped, spent, error, purchase, equip } = useCosmetics()
   const available = Math.max(0, currentXP - spent)
+  const readOnly = status !== 'ready'
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
       <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">🛍️ Cosmetics Shop</h3>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Spend XP from daily &amp; weekly challenges on visual flair for competitive mode. Cosmetics are looks only — they never affect gameplay, so matches stay fair.</p>
       <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mb-2">⭐ {available} XP available</p>
+      {status === 'unavailable' && (
+        <p className="mb-2 text-xs text-amber-600 dark:text-amber-400">Purchases are temporarily unavailable — showing what this device has. Your XP is safe; check back soon.</p>
+      )}
+      {error && (
+        <p className="mb-2 text-xs font-medium text-red-600 dark:text-red-400" role="alert">{error}</p>
+      )}
 
       {(() => {
         const e = COSMETICS.find((c) => c.id === equipped)
@@ -120,7 +284,7 @@ export function PowerUpShop({ currentXP }: { currentXP: number }) {
         {COSMETICS.map((c) => {
           const isOwned = owned.includes(c.id)
           const isEquipped = equipped === c.id
-          const canAfford = available >= c.cost
+          const canAfford = available >= c.cost && !readOnly
           return (
             <div key={c.id} className={`p-3 rounded-lg border text-center ${isEquipped ? 'border-indigo-500 ring-1 ring-indigo-400' : 'border-gray-200 dark:border-gray-600'}`}>
               <div className="text-2xl mb-1">{c.icon}</div>
@@ -130,7 +294,8 @@ export function PowerUpShop({ currentXP }: { currentXP: number }) {
               {isOwned ? (
                 <button
                   onClick={() => equip(c.id)}
-                  className={`mt-2 w-full py-1 text-xs rounded font-medium transition-colors ${isEquipped ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200'}`}
+                  disabled={readOnly}
+                  className={`mt-2 w-full py-1 text-xs rounded font-medium transition-colors ${isEquipped ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200'} ${readOnly ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
                   {isEquipped ? '✓ Equipped' : 'Equip'}
                 </button>
@@ -154,6 +319,8 @@ export function PowerUpShop({ currentXP }: { currentXP: number }) {
 /**
  * Renders the player's name with their equipped cosmetic flair applied. Drop in
  * wherever the competitive player's name appears (lobby card, match header).
+ * Equipped state comes from the account (server), so flair follows the player
+ * across devices; renders the plain name while loading or if the API is down.
  */
 export function CosmeticNameplate({ name, className = '' }: { name: string; className?: string }) {
   const { equipped } = useCosmetics()

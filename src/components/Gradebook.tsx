@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
-import { Printer, BarChart3, MessageSquare } from 'lucide-react'
+import Link from 'next/link'
+import { Printer, BarChart3, MessageSquare, FileText } from 'lucide-react'
 import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
 
 interface Assignment {
@@ -250,7 +251,13 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
       </div>
 
       {/* Toolbar (hidden when printing) */}
-      <div className="flex justify-end mb-4 print:hidden">
+      <div className="flex justify-end gap-2 mb-4 print:hidden">
+        <Link
+          href={`/teacher/classroom/${classroomId}/report`}
+          className="px-4 py-2 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+        >
+          <FileText className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden />Class report
+        </Link>
         <button
           type="button"
           onClick={() => window.print()}

@@ -27,7 +27,10 @@ export default function Image() {
           flexDirection: 'column',
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(135deg, #7C3AED 0%, #4F46E5 40%, #2563EB 100%)',
+          // Default brand gradient, hardcoded: OG images render once server-side
+          // and can't read the CSS accent tokens, so the default purple→blue
+          // scheme is the correct constant here.
+          background: 'linear-gradient(135deg, #9333ea 0%, #2563eb 100%)',
           padding: '60px',
           fontFamily: 'sans-serif',
           position: 'relative',
@@ -107,8 +110,8 @@ export default function Image() {
           >
             Study Resources
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '26px', margin: '0 0 36px 0', maxWidth: '700px' }}>
-            Notes, flashcards, practice problems & interactive lessons
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '26px', margin: '0 0 36px 0', maxWidth: '760px' }}>
+            Free interactive lessons, flashcards & competitive practice
           </p>
 
           {/* Subject pills */}

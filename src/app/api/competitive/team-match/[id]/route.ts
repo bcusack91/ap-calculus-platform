@@ -114,6 +114,10 @@ export async function GET(
         },
         questions: safeQuestions,
         myQuestionIndex,
+        // The current user's own answer history (chronological). Powers the
+        // post-match review; it's only ever the requester's answers, so it
+        // reveals nothing about opponents or upcoming questions.
+        myAnswers: myTeam.answers?.[session.user.id] ?? [],
         myTeam: isTeam1 ? 1 : 2,
         player1MMRBefore: match.player1MMRBefore,
         player2MMRBefore: match.player2MMRBefore,
