@@ -1,6 +1,7 @@
 /**
- * MCAT psych-soc passage bank — expansion wave 2 (agent-authored, every
- * passage carries needsReview: true pending SME review; gated by
+ * MCAT psych-soc passage bank — expansion wave 2 (agent-authored; all 15
+ * passages passed adversarial content QA — keys blind-verified, figure
+ * arithmetic checked — so needsReview is false throughout; gated by
  * scripts/import-passage-seeds.ts: KaTeX compile, chart integrity, key
  * balance, no letter-position references, dup checks vs the live banks).
  *
@@ -92,7 +93,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "interpret-data"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-02",
@@ -173,7 +174,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "According to Figure 1, raising the first-generation dose from 8 mg/day to 16 mg/day would most likely:",
         "options": [
-          "increase the risk of extrapyramidal symptoms while adding little antipsychotic benefit, since occupancy climbs from 78% past the 80% EPS threshold after the response threshold was already exceeded",
+          "increase the risk of extrapyramidal symptoms while adding little antipsychotic benefit",
           "roughly double the antipsychotic effect, because the dose doubles",
           "improve negative symptoms by pushing occupancy higher",
           "decrease occupancy as D2 receptors upregulate"
@@ -219,7 +220,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "research-methods"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-03",
@@ -289,7 +290,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "research-methods"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-04",
@@ -359,7 +360,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "symptom-classification"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-05",
@@ -470,7 +471,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "interpret-data"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-06",
@@ -537,7 +538,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "Groupthink"
         ],
         "correctAnswer": 0,
-        "explanation": "Normative influence is conformity to gain acceptance or avoid standing out; it depends on the group seeing one's response, so removing surveillance (private typing) should—and did—collapse conformity. Informational influence, going along because one believes the group is correct, would persist in private, yet private conformity was near the control error rate. Deindividuation involves loss of self-awareness in anonymous crowds and would, if anything, predict more norm violation when anonymous, not the observed accuracy. Groupthink describes flawed consensus-seeking in cohesive decision-making groups deliberating together, not individual perceptual judgments.",
+        "explanation": "Normative influence is conformity to gain acceptance or avoid standing out; it depends on the group seeing one's response, so removing surveillance (private typing) should—and did—collapse conformity. Informational influence, going along because one believes the group is correct, would persist in private, yet private conformity was low (9%)—well above the sub-1% control error rate, but far closer to it than to the 33% public figure—so belief in the group's accuracy accounts for little of the public effect. Deindividuation involves loss of self-awareness in anonymous crowds and would, if anything, predict more norm violation when anonymous, not the observed accuracy. Groupthink describes flawed consensus-seeking in cohesive decision-making groups deliberating together, not individual perceptual judgments.",
         "skill": "which-concept"
       },
       {
@@ -589,7 +590,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "which-concept"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-07",
@@ -672,11 +673,11 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "That the test had high internal-consistency reliability",
           "That the sample was representative of all undergraduates",
-          "That performance differences across conditions reflect the situational framing rather than preexisting ability differences",
+          "That the gender gap observed under threat reflects the situational framing rather than preexisting ability differences between the gender groups",
           "That working memory causes mathematical ability"
         ],
         "correctAnswer": 2,
-        "explanation": "Equating groups on prior achievement removes preexisting ability as an explanation for any observed gaps, so score differences can be attributed to the manipulated instructions—an internal-validity safeguard. Reliability concerns the consistency of the test's items with one another and is unaffected by how participants were selected. Matching on ability does nothing to make the convenience sample representative of a broader population; that is an external-validity issue. The design tests whether threat affects performance through working memory in the moment, not whether working memory causes stable mathematical ability.",
+        "explanation": "Random assignment equates the condition groups, but only matching the gender groups on prior achievement removes preexisting ability differences between women and men as an explanation for the gender gap under threat—so that gap can be attributed to the situational framing, an internal-validity safeguard for the between-gender comparison. Reliability concerns the consistency of the test's items with one another and is unaffected by how participants were selected. Matching on ability does nothing to make the convenience sample representative of a broader population; that is an external-validity issue. The design tests whether threat affects performance through working memory in the moment, not whether working memory causes stable mathematical ability.",
         "skill": "experimental-reasoning"
       },
       {
@@ -692,7 +693,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "interpret-the-data"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-08",
@@ -763,7 +764,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "moderation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-09",
@@ -879,7 +880,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "causal-inference"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-10",
@@ -997,7 +998,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "interpret-the-data"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-11",
@@ -1112,7 +1113,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "real-world-application"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-12",
@@ -1219,7 +1220,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "which-theory"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-13",
@@ -1290,7 +1291,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "experimental-reasoning"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-14",
@@ -1373,7 +1374,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "calculation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "ps2-15",
@@ -1443,6 +1444,6 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "skill": "which-theory"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

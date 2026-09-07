@@ -660,7 +660,7 @@ None of this requires us to despise the immediate. The instantly delightful is a
     section: 'cars',
     discipline: 'translation theory',
     title: 'The Translator\'s Fidelity',
-    needsReview: true,
+    needsReview: false,
     passageText: `Every translator lives under an accusation that predates any particular offense: traduttore, traditore — translator, traitor. The epigram assumes that a text possesses a single, stable meaning that the translator either delivers intact or betrays. I want to suggest that this picture of fidelity is not merely too strict; it is incoherent, and its incoherence has consequences for how we read anything at all.
 
 Consider what "delivering the text intact" would require. A poem's meaning does not float free of its sounds, its meter, the histories its words drag behind them. The German word Heimat is not "homeland" plus some removable aura; the aura is the meaning, accreted through decades of longing, propaganda, and return. A translator who renders Heimat as "homeland" has not preserved a core and lost a decoration. She has substituted one word's history for another's. There is no kernel that survives the exchange untouched.
@@ -684,6 +684,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 2,
         explanation: 'The author explicitly replaces lexical fidelity with "functional fidelity" — standing in the same relation to readers as the original did, which is the answer about judging translation by its effect on readers. The passage denies strict replication is possible but insists translations "plainly succeed," so the answer calling for abandonment contradicts it; the answer crowning translators as original authors is raised as an objection and answered; the answer denying modern readers access to older texts overstates the time-translation point.',
         skill: 'main-idea',
+        needsReview: false,
       },
       {
         question: 'The author mentions the word Heimat primarily in order to:',
@@ -696,6 +697,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 3,
         explanation: 'Heimat illustrates that "the aura is the meaning" — there is no removable kernel, so the answer about historical associations being inseparable from meaning is right. Nothing in the passage ranks languages by difficulty, recommends leaving words untranslated, or presents the "homeland" rendering as a success.',
         skill: 'function',
+        needsReview: false,
       },
       {
         question: 'Based on the passage, the author would most likely describe the "traduttore, traditore" epigram as:',
@@ -708,6 +710,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 0,
         explanation: 'The author calls the fidelity picture the epigram assumes "incoherent" — meaning is not a vault to be delivered intact, so the answer about a mistaken picture of meaning as a stable possession is right. The author never assesses most published translations as betrayals; the quip about traitors is wordplay the passage does not make; the poetry/prose split never appears.',
         skill: 'inference',
+        needsReview: false,
       },
       {
         question: 'Which finding, if true, would most WEAKEN the author\'s defense of functional fidelity against the "alibi" objection?',
@@ -720,6 +723,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 2,
         explanation: 'The defense is that effects CANNOT be produced at will from any material — the original\'s structure constrains the translator. If free invention routinely produced the same effects as painstaking translation, that constraint (and the defense) collapses. The finding that some jokes cannot be made funny elsewhere supports the author\'s picture of difficulty; readers\' inability to compare with the original and dictionary disagreement are irrelevant to the constraint claim.',
         skill: 'strengthen-weaken',
+        needsReview: false,
       },
       {
         question: 'The author\'s claim that a text "was always a score, awaiting performance" most nearly means that:',
@@ -732,6 +736,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 1,
         explanation: 'The score/vault contrast closes the argument that meaning is portable and non-proprietary — realized in performance (reading, translating) rather than stored, which the answer about meaning realized anew in each act of reading captures. The musical-setting reading is literalism; the manuscript-value and formal-training readings reverse or invent claims.',
         skill: 'meaning-in-context',
+        needsReview: false,
       },
       {
         question: 'Suppose a director stages a nineteenth-century play in modern dress so that its satire of social climbing lands on a contemporary audience. The author would most likely regard this as:',
@@ -744,6 +749,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         correctAnswer: 0,
         explanation: 'Modern dress to preserve the satire\'s bite parallels changing the joke\'s "furniture" so it lands — legitimate if the effect is earned, not easy, so the functional-fidelity answer is right. Calling it a betrayal of explicit intentions applies the lexical-fidelity standard the author rejects; requiring the original staging alongside it is a compromise the passage never demands; treating it as evidence of no stable meaning mistakes anti-essentialism for the nihilism the author disclaims.',
         skill: 'application',
+        needsReview: false,
       },
     ],
   },
@@ -752,7 +758,7 @@ What follows for readers is uncomfortable. If translation is impossible in the s
     section: 'cars',
     discipline: 'architecture criticism',
     title: 'Against the Honest Ruin',
-    needsReview: true,
+    needsReview: false,
     passageText: `When a historic building is restored, an orthodoxy now governs the work: every new stone must announce itself. Repairs are made in frankly modern materials, joints are left visible, missing figures are replaced by blank volumes. The doctrine is called honesty, and its rationale seems unimpeachable — the visitor must never be deceived into taking the new for the old. I want to argue that this honesty is itself a deception, and a condescending one.
 
 The doctrine descends from Ruskin's fury at Victorian restorers who scraped medieval churches down to a guess and called the guess authentic. His fury was earned. But notice what the modern orthodoxy has kept and what it has discarded. It kept the horror of deception; it discarded Ruskin's actual reverence, which was for the building as a living whole — the "golden stain of time" on a surface worked by human hands. The honest-repair doctrine reveres something else: the legibility of the intervention. The building becomes a document about its own restoration, a lecture delivered in limestone and titanium.
@@ -776,6 +782,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 0,
         explanation: 'The passage\'s pivot — "One of these is about the cathedral. The other is about us" — is the answer that the doctrine serves the restorer\'s self-regard at the building\'s expense. The answer crediting Ruskin with inventing and being preserved by the doctrine reverses the argument: it kept Ruskin\'s horror of deception but discarded his reverence. The answer resting on visitors\' right to accurate information is the defense the author rebuts, and the answer urging stricter application contradicts the thesis.',
         skill: 'main-idea',
+        needsReview: false,
       },
       {
         question: 'The author refers to the fourteenth-century mason in order to:',
@@ -788,6 +795,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 3,
         explanation: 'The mason "matched it as best he could, and no one has ever called those masons liars" — seamless repair has an honorable pedigree, which is the answer about style-matching being historically normal. Medieval craft superiority, universal pre-Ruskin fraud, and the relative cost of repairs never appear in the passage.',
         skill: 'function',
+        needsReview: false,
       },
       {
         question: 'It can be inferred that the author believes the harm prevented by legible repairs is:',
@@ -800,6 +808,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 1,
         explanation: 'The author says the prevented deception "is one only specialists could suffer, and specialists have archives... they are the last people who need the wall itself to confess," which the answer about specialists with better sources states. The answer locating the harm with first-time ordinary visitors inverts this; calling it the primary danger to historic architecture overstates, and calling it impossible to define dodges the point.',
         skill: 'inference',
+        needsReview: false,
       },
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author\'s argument?',
@@ -812,6 +821,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 2,
         explanation: 'The author claims seamless repair delivers "the experience the building exists to give"; survey evidence of deeper visitor engagement in seamlessly restored interiors directly supports that. Relative durability of titanium is off-topic; Ruskin\'s private admiration is biographical trivia; the training of modern restorers could cut either way.',
         skill: 'strengthen-weaken',
+        needsReview: false,
       },
       {
         question: 'The author\'s attitude toward the orthodoxy\'s treatment of genuinely uncertain reconstructions is best described as:',
@@ -824,6 +834,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 1,
         explanation: '"I concede one strong case... Where we do not know what stood, the blank volume tells the truth" — a bounded concession ("a boundary, not a rule"). Not rejection, mockery, or indifference.',
         skill: 'tone',
+        needsReview: false,
       },
       {
         question: 'A museum conservator repairs a torn Renaissance tapestry by reweaving the missing section from surviving full-scale drawings of the original design, matching the old dyes so closely that the repair is invisible except under ultraviolet light. Based on the passage, the author would most likely judge this repair:',
@@ -836,6 +847,7 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
         correctAnswer: 3,
         explanation: 'The author\'s boundary: invention passed off as knowledge is the corruption; replacing "the documented with the documented" is the normal, legitimate case, so the answer resting on documentation is right. Calling the repair illegitimate because visitors cannot detect it, or legitimate only with a visible border, applies the doctrine the author rejects; the textiles-differ-from-buildings answer contradicts the passage\'s willingness to reason across art forms (music, texts, buildings).',
         skill: 'application',
+        needsReview: false,
       },
     ],
   },

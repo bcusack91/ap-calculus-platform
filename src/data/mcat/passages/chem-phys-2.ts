@@ -1,8 +1,10 @@
 /**
- * MCAT chem-phys passage bank — expansion wave 2 (agent-authored, every
- * passage carries needsReview: true pending SME review; gated by
- * scripts/import-passage-seeds.ts: KaTeX compile, chart integrity, key
- * balance, no letter-position references, dup checks vs the live banks).
+ * MCAT chem-phys passage bank — expansion wave 2 (agent-authored; all 15
+ * passages reviewed and marked needsReview: false — 13 passed as written,
+ * cp2-03 and cp2-15 corrected during review, with minor text/annotation
+ * fixes to cp2-01 and cp2-07; gated by scripts/import-passage-seeds.ts:
+ * KaTeX compile, chart integrity, key balance, no letter-position
+ * references, dup checks vs the live banks).
  *
  * KEY INVARIANT: the passage runner does NOT shuffle options — keys were
  * authored position-balanced and explanations reference options by CONTENT,
@@ -16,7 +18,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
     "section": "chem-phys",
     "discipline": "general chemistry",
     "title": "Calcium Oxalate and Kidney Stones",
-    "passageText": "Calcium oxalate ($\\text{CaC}_2\\text{O}_4$) is the principal component of most kidney stones. To model stone formation, researchers measured the equilibrium solubility of calcium oxalate at 37 °C, where $K_{sp} = [\\text{Ca}^{2+}][\\text{C}_2\\text{O}_4^{2-}] = 1.6 \\times 10^{-9}$.\n\nIn Experiment 1, excess solid $\\text{CaC}_2\\text{O}_4$ was stirred in pure water until equilibrium was reached, and the dissolved calcium concentration was determined by atomic absorption spectroscopy. In Experiment 2, the procedure was repeated in sodium oxalate ($\\text{Na}_2\\text{C}_2\\text{O}_4$) solutions ranging from 0.0010 M to 0.10 M; the measured equilibrium calcium concentrations are plotted in Figure 1. In Experiment 3, the researchers mixed equal volumes of $2.0 \\times 10^{-4}$ M $\\text{CaCl}_2$ and $2.0 \\times 10^{-4}$ M $\\text{Na}_2\\text{C}_2\\text{O}_4$ and monitored the mixture for turbidity over 30 minutes.\n\nBecause oxalate is the conjugate base of a weak acid (for $\\text{HC}_2\\text{O}_4^-$, $K_a = 6.1 \\times 10^{-5}$), the team also examined solubility as a function of pH. Lowering the pH from 7.0 to 4.0 markedly increased the amount of solid that dissolved. Finally, they tested potassium citrate, a chelator of $\\text{Ca}^{2+}$ prescribed clinically to prevent stone recurrence: adding citrate increased the total dissolved calcium in every trial. One investigator cautioned that citrate solutions can also shift the pH of an unbuffered mixture, which could confound the interpretation of the citrate result.",
+    "passageText": "Calcium oxalate ($\\text{CaC}_2\\text{O}_4$) is the principal component of most kidney stones. To model stone formation, researchers measured the equilibrium solubility of calcium oxalate at 37 °C, where $K_{sp} = [\\text{Ca}^{2+}][\\text{C}_2\\text{O}_4^{2-}] = 1.6 \\times 10^{-9}$.\n\nIn Experiment 1, excess solid $\\text{CaC}_2\\text{O}_4$ was stirred in pure water until equilibrium was reached, and the dissolved calcium concentration was determined by atomic absorption spectroscopy. In Experiment 2, the procedure was repeated in sodium oxalate ($\\text{Na}_2\\text{C}_2\\text{O}_4$) solutions ranging from 0.0010 M to 0.10 M; the measured equilibrium calcium concentrations are plotted in Figure 1. In Experiment 3, the researchers mixed equal volumes of $2.0 \\times 10^{-4}$ M $\\text{CaCl}_2$ and $2.0 \\times 10^{-4}$ M $\\text{Na}_2\\text{C}_2\\text{O}_4$ and monitored the mixture for turbidity over 30 minutes.\n\nBecause oxalate is the conjugate base of a weak acid (for $\\text{HC}_2\\text{O}_4^-$, $K_a = 6.1 \\times 10^{-5}$), the team also examined solubility as a function of pH. Lowering the pH from 7.0 to 4.0 measurably increased the amount of solid that dissolved. Finally, they tested potassium citrate, a chelator of $\\text{Ca}^{2+}$ prescribed clinically to prevent stone recurrence: adding citrate increased the total dissolved calcium in every trial. One investigator cautioned that citrate solutions can also shift the pH of an unbuffered mixture, which could confound the interpretation of the citrate result.",
     "chart": {
       "title": "Figure 1. Equilibrium calcium concentration vs. added sodium oxalate (37 °C)",
       "kind": "line",
@@ -124,7 +126,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-02",
@@ -207,14 +209,14 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-03",
     "section": "chem-phys",
     "discipline": "physics",
     "title": "Flow Through Intravenous Catheters",
-    "passageText": "Intravenous (IV) fluid delivery is driven by gravity: a fluid bag hangs a height $h$ above the catheter, providing a driving pressure $\\Delta P = \\rho g h$. Researchers measured the volumetric flow rate $Q$ of saline ($\\rho = 1000\\ \\text{kg/m}^3$, viscosity $\\eta = 1.0\\ \\text{mPa·s}$) through catheters of varying inner radius. For steady laminar flow through a tube of radius $r$ and length $L$, Poiseuille's law applies:\n\n$Q = \\frac{\\pi \\Delta P r^4}{8 \\eta L}$\n\nIn the baseline series, the bag hung 1.0 m above the catheter hub, the catheter length was fixed at 3.0 cm, and $Q$ was measured by timed collection for catheters with inner radii from 0.20 mm to 1.0 mm (Figure 1; take $g = 10\\ \\text{m/s}^2$). In a second series, the saline was replaced by a dextrose solution with twice the viscosity of saline, and the measurements were repeated.\n\nThe researchers also examined a catheter whose inner radius narrows from 0.60 mm along its body to 0.30 mm at the tip. With saline moving at 20 cm/s in the wide section, they used the continuity equation to predict the speed at the tip, and they noted that by Bernoulli's principle the faster-moving fluid at the tip is at lower pressure than fluid in the wide section at the same height. All measurements were made at room temperature, and flows were confirmed to be laminar.",
+    "passageText": "Intravenous (IV) fluid delivery is driven by gravity: a fluid bag hangs a height $h$ above the catheter, providing a driving pressure $\\Delta P = \\rho g h$. Researchers measured the volumetric flow rate $Q$ of saline ($\\rho = 1000\\ \\text{kg/m}^3$, viscosity $\\eta = 1.0\\ \\text{mPa·s}$) through catheters of varying inner radius. For steady laminar flow through a tube of radius $r$ and length $L$, Poiseuille's law applies:\n\n$Q = \\frac{\\pi \\Delta P r^4}{8 \\eta L}$\n\nIn the baseline series, the bag hung 1.0 m above the patient end and saline flowed through the full length of the administration set — tubing of fixed length $L = 2.0$ m — and $Q$ was measured by timed collection for tubing sets with inner radii from 0.20 mm to 1.0 mm (Figure 1; take $g = 10\\ \\text{m/s}^2$). In a second series, the saline was replaced by a dextrose solution with twice the viscosity of saline, and the measurements were repeated.\n\nThe researchers also examined a short (3.0 cm) catheter whose inner radius narrows from 0.60 mm along its body to 0.30 mm at the tip. With saline moving at 20 cm/s in the wide section, they used the continuity equation to predict the speed at the tip, and they noted that by Bernoulli's principle the faster-moving fluid at the tip is at lower pressure than fluid in the wide section at the same height. All measurements were made at room temperature, and flows were confirmed to be laminar.",
     "chart": {
       "title": "Figure 1. Saline flow rate vs. catheter inner radius (baseline series)",
       "kind": "line",
@@ -222,7 +224,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
       "xUnit": "mm",
       "yLabel": "Flow rate Q",
       "yUnit": "mL/min",
-      "seriesLabel": "Saline, L = 3.0 cm, h = 1.0 m",
+      "seriesLabel": "Saline, L = 2.0 m, h = 1.0 m",
       "xValues": [
         0.2,
         0.4,
@@ -231,16 +233,16 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         1
       ],
       "yValues": [
-        0.0128,
-        0.205,
-        1.04,
-        3.28,
-        8
+        0.19,
+        3.02,
+        15.3,
+        48.3,
+        118
       ],
       "annotations": [
         {
           "xIndex": 4,
-          "label": "Q = 8.0 mL/min at r = 1.0 mm"
+          "label": "Q ≈ 118 mL/min at r = 1.0 mm"
         }
       ]
     },
@@ -272,9 +274,9 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
       {
         "question": "For the dextrose comparison to isolate the effect of viscosity on flow rate, which variables must be held constant between the two series?",
         "options": [
-          "Catheter radius, catheter length, and bag height",
-          "Bag height only, because catheter geometry cancels out of the comparison",
-          "Catheter radius only, because length does not appear in Poiseuille's law",
+          "Tubing radius, tubing length, and bag height",
+          "Bag height only, because tubing geometry cancels out of the comparison",
+          "Tubing radius only, because length does not appear in Poiseuille's law",
           "Collection time only, because the other variables cancel in the ratio"
         ],
         "correctAnswer": 0,
@@ -302,11 +304,11 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
           "4"
         ],
         "correctAnswer": 3,
-        "explanation": "Compare radii that differ by a factor of 2: going from r = 0.2 mm to r = 0.4 mm, Q rises from 0.0128 to 0.205 mL/min, a ratio of 0.205/0.0128 = 16 = 2⁴, so n = 4. (The same check works from 0.4 to 0.8 mm: 3.28/0.205 = 16.) If n were 1, doubling the radius would double the flow; n = 2 would give a factor of 4; n = 3 would give a factor of 8 — none of which matches the sixteenfold jumps in the data.",
+        "explanation": "Compare radii that differ by a factor of 2: going from r = 0.2 mm to r = 0.4 mm, Q rises from 0.19 to 3.02 mL/min, a ratio of 3.02/0.19 ≈ 16 = 2⁴, so n = 4. (The same check works from 0.4 to 0.8 mm: 48.3/3.02 ≈ 16.) If n were 1, doubling the radius would double the flow; n = 2 would give a factor of 4; n = 3 would give a factor of 8 — none of which matches the sixteenfold jumps in the data.",
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-04",
@@ -417,7 +419,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Imaging trade-offs"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-05",
@@ -487,7 +489,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-06",
@@ -588,7 +590,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Activity"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-07",
@@ -621,6 +623,10 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         3
       ],
       "annotations": [
+        {
+          "xIndex": 0,
+          "label": "no photoemission below 2.0 eV"
+        },
         {
           "xIndex": 1,
           "label": "threshold: φ = 2.0 eV"
@@ -701,7 +707,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-08",
@@ -772,7 +778,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-09",
@@ -883,7 +889,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-10",
@@ -982,7 +988,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-11",
@@ -1053,7 +1059,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Rf calculation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-12",
@@ -1136,7 +1142,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Spectral prediction"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-13",
@@ -1245,7 +1251,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-14",
@@ -1336,7 +1342,7 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "cp2-15",
@@ -1368,15 +1374,15 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
       ],
       "yValues": [
         20,
+        20,
+        20,
         20.5,
-        21,
-        22,
-        30,
-        70,
-        150,
-        75,
-        32,
-        29,
+        23,
+        38,
+        67,
+        44,
+        31,
+        28.5,
         28,
         28
       ],
@@ -1465,6 +1471,6 @@ export const CHEM_PHYS_PASSAGES_2: MCATPassage[] = [
         "skill": "Gibbs energy"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

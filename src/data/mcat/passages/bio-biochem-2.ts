@@ -1,7 +1,7 @@
 /**
- * MCAT bio-biochem passage bank — expansion wave 2 (agent-authored, every
- * passage carries needsReview: true pending SME review; gated by
- * scripts/import-passage-seeds.ts: KaTeX compile, chart integrity, key
+ * MCAT bio-biochem passage bank — expansion wave 2 (agent-authored; all 15
+ * passages have completed content review and carry needsReview: false; gated
+ * by scripts/import-passage-seeds.ts: KaTeX compile, chart integrity, key
  * balance, no letter-position references, dup checks vs the live banks).
  *
  * KEY INVARIANT: the passage runner does NOT shuffle options — keys were
@@ -52,7 +52,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
           "TFA acts only at promoters and not at distal elements"
         ],
         "correctAnswer": 1,
-        "explanation": "Supplying the missing factor restores most enhancer activity in a cell type where E1 was inert, so absence of TFA accounts for the cell-type restriction. Irreversible silencing is refuted by that same restoration. Polymerase loading cannot be the limiting problem because the promoter-only construct is expressed comparably in both cell lines (0.9 versus 1.0). The claim that TFA works only at promoters is contradicted by the ChIP enrichment at E1 and by the enhancer-dependent response to the vector.",
+        "explanation": "Supplying the missing factor restores substantial enhancer activity — about half the level seen in hepatocytes (12-fold versus 24-fold) — in a cell type where E1 was inert, so absence of TFA accounts for the cell-type restriction. Irreversible silencing is refuted by that same restoration. Polymerase loading cannot be the limiting problem because the promoter-only construct is expressed comparably in both cell lines (0.9 versus 1.0). The claim that TFA works only at promoters is contradicted by the ChIP enrichment at E1 and by the enhancer-dependent response to the vector.",
         "skill": "Cell-type specificity"
       },
       {
@@ -92,7 +92,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Chromatin looping"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-02",
@@ -163,15 +163,15 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Rescue experiment"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-03",
     "section": "bio-biochem",
     "discipline": "molecular biology",
     "title": "A Splice-Site Variant Tested in a Minigene Assay",
-    "passageText": "A child with a recessive metabolic disorder was found to be homozygous for the variant c.812+1G>A in gene MTX. The variant changes the first base of intron 7, disrupting the invariant GU dinucleotide of the 5' splice site. Because the change lies outside the coding sequence, investigators tested its effect on splicing directly.\n\nThey built a minigene: a genomic fragment containing exon 7 (150 bp), intron 7, exon 8 (130 bp), intron 8, and exon 9 (170 bp) was cloned downstream of a strong promoter in an expression plasmid. Wild-type and variant minigenes were transfected separately into HEK293 cells. RNA was harvested, reverse transcribed, and amplified with a forward primer in exon 7 and a reverse primer in exon 9. Products were sized on an agarose gel and confirmed by sequencing. Every transfection was also processed through a parallel reaction in which reverse transcriptase was omitted.\n\nThe wild-type minigene yielded a single 450-bp product containing all three exons. The variant minigene yielded a single 320-bp product in which exon 8 was absent and exon 7 was joined directly to exon 9. The patient's own fibroblasts produced only the 320-bp product, while each parent's fibroblasts produced both products. Quantitative PCR showed the exon-8-skipped transcript at roughly 30 percent of wild-type transcript abundance in the parents' cells; that ratio rose substantially when the cells were treated for four hours with cycloheximide before harvest.\n\nA second, unrelated patient with a much milder presentation carried c.812+3A>G. Her minigene produced both the 450-bp and 320-bp products in approximately equal amounts.",
-    "figure": "| RNA source | 450-bp band (exons 7-8-9) | 320-bp band (exon 8 skipped) |\n| --- | --- | --- |\n| Wild-type minigene | strong | absent |\n| c.812+1G>A minigene | absent | strong |\n| c.812+3A>G minigene | moderate | moderate |\n| Patient fibroblasts (homozygous c.812+1G>A) | absent | strong |\n| Parent fibroblasts (heterozygous) | strong | weak |\n| Reverse-transcriptase-omitted control | absent | absent |",
+    "passageText": "A child with a recessive metabolic disorder was found to be homozygous for the variant c.942+1G>A in gene MTX. The variant changes the first base of intron 8, disrupting the invariant GU dinucleotide of the 5' splice site that lies at the end of exon 8. Because the change lies outside the coding sequence, investigators tested its effect on splicing directly.\n\nThey built a minigene: a genomic fragment containing exon 7 (150 bp), intron 7, exon 8 (130 bp, coding positions c.813 through c.942), intron 8, and exon 9 (170 bp) was cloned downstream of a strong promoter in an expression plasmid. Wild-type and variant minigenes were transfected separately into HEK293 cells. RNA was harvested, reverse transcribed, and amplified with a forward primer in exon 7 and a reverse primer in exon 9. Products were sized on an agarose gel and confirmed by sequencing. Every transfection was also processed through a parallel reaction in which reverse transcriptase was omitted.\n\nThe wild-type minigene yielded a single 450-bp product containing all three exons. The variant minigene yielded a single 320-bp product in which exon 8 was absent and exon 7 was joined directly to exon 9. The patient's own fibroblasts produced only the 320-bp product, while each parent's fibroblasts produced both products. Quantitative PCR showed the exon-8-skipped transcript at roughly 30 percent of wild-type transcript abundance in the parents' cells; that ratio rose substantially when the cells were treated for four hours with cycloheximide before harvest.\n\nA second, unrelated patient with a much milder presentation carried c.942+3A>G. Her minigene produced both the 450-bp and 320-bp products in approximately equal amounts.",
+    "figure": "| RNA source | 450-bp band (exons 7-8-9) | 320-bp band (exon 8 skipped) |\n| --- | --- | --- |\n| Wild-type minigene | strong | absent |\n| c.942+1G>A minigene | absent | strong |\n| c.942+3A>G minigene | moderate | moderate |\n| Patient fibroblasts (homozygous c.942+1G>A) | absent | strong |\n| Parent fibroblasts (heterozygous) | strong | weak |\n| Reverse-transcriptase-omitted control | absent | absent |",
     "questions": [
       {
         "question": "Which spliceosomal snRNP normally base-pairs with the 5' splice site that this variant disrupts?",
@@ -202,7 +202,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "options": [
           "cycloheximide stabilizes the spliceosome so more skipping occurs",
           "cycloheximide increases transcription from the variant allele",
-          "cycloheximide restores correct recognition of the intron 7 splice site",
+          "cycloheximide restores correct recognition of the intron 8 splice site",
           "the skipped transcript was being degraded by translation-dependent nonsense-mediated decay"
         ],
         "correctAnswer": 3,
@@ -210,7 +210,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "mRNA surveillance"
       },
       {
-        "question": "Which feature of the c.812+3A>G result best accounts for that patient's milder phenotype?",
+        "question": "Which feature of the c.942+3A>G result best accounts for that patient's milder phenotype?",
         "options": [
           "The variant lies in an exon rather than in an intron",
           "A substantial fraction of transcripts are still spliced into full-length, in-frame mRNA",
@@ -234,7 +234,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-04",
@@ -242,7 +242,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
     "discipline": "genetics",
     "title": "Bisulfite Sequencing of an Imprinting Control Region",
     "passageText": "The mouse Igf2 and H19 genes sit about 90 kb apart and share a set of downstream enhancers. Between them lies an imprinting control region (ICR) containing binding sites for the insulator protein CTCF, which binds only unmethylated DNA. Investigators set out to characterize the methylation and expression of this locus by parent of origin.\n\nThey performed reciprocal crosses between two inbred strains, B and C, whose ICR sequences differ at several single-nucleotide polymorphisms. Liver DNA from the offspring was treated with sodium bisulfite, which deaminates unmethylated cytosine to uracil so that it is read as thymine after PCR, while 5-methylcytosine is chemically protected and continues to read as cytosine. Amplicons spanning 21 CpG sites in the ICR were sequenced, and each read was assigned to the maternal or paternal allele using the strain polymorphisms. As a technical measure, the investigators also tabulated conversion at the 48 cytosines in the amplicon that were not part of a CpG dinucleotide; more than 99 percent of these read as thymine in every sample.\n\nIn both crosses, the paternally inherited ICR was 94 percent methylated across the 21 CpG sites and the maternally inherited ICR was 4 percent methylated, irrespective of which strain contributed which gamete. Reverse-transcription sequencing of the same livers showed that Igf2 transcripts carried only the paternal polymorphism, while H19 transcripts carried only the maternal polymorphism.\n\nIn a separate line, a 2.4-kb deletion removed the CTCF sites from the ICR. The investigators then compared offspring that inherited the deletion from the mother with offspring that inherited it from the father.",
-    "figure": "| Sample | ICR methylation, maternal allele | ICR methylation, paternal allele | Non-CpG cytosine conversion |\n| --- | --- | --- | --- |\n| B mother x C father | 4% | 94% | 99.4% |\n| C mother x B father | 4% | 93% | 99.3% |\n| Unmethylated control DNA | 1% | 1% | 99.6% |\n| In vitro fully methylated control DNA | 97% | 97% | 99.5% |",
+    "figure": "| Sample | ICR methylation, maternal allele | ICR methylation, paternal allele | Non-CpG cytosine conversion |\n| --- | --- | --- | --- |\n| B mother x C father | 4% | 94% | 99.4% |\n| C mother x B father | 4% | 93% | 99.3% |\n| Unmethylated control DNA | 1% | 1% | 99.6% |\n| In vitro fully methylated control DNA | 97% | 97% | 99.5% |\n\n*The two control DNAs have no parental origin; their single overall methylation value is entered under both allele columns.*",
     "questions": [
       {
         "question": "After bisulfite treatment, PCR, and sequencing, a cytosine that had been unmethylated in the original DNA is read as:",
@@ -317,7 +317,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-05",
@@ -339,10 +339,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         35,
         45,
         55,
-        65,
-        75,
-        85,
-        100
+        65
       ],
       "yValues": [
         10.2,
@@ -351,14 +348,11 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         8.2,
         7.6,
         6.9,
-        6.4,
-        6.4,
-        6.4,
         6.4
       ],
       "comparisonSeries": [
         {
-          "label": "IMM immortalized line (telomerase positive)",
+          "label": "IMM immortalized line (telomerase positive; TRF stable past PD 100)",
           "yValues": [
             4.1,
             4,
@@ -366,14 +360,11 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
             4.1,
             4.1,
             4,
-            4.2,
-            4.1,
-            4.1,
             4.2
           ]
         },
         {
-          "label": "HF-1 + hTERT (telomerase restored)",
+          "label": "HF-1 + hTERT (telomerase restored; still dividing past PD 100)",
           "yValues": [
             10.2,
             10.6,
@@ -381,10 +372,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
             11.2,
             11.3,
             11.4,
-            11.4,
-            11.5,
-            11.5,
-            11.6
+            11.4
           ]
         }
       ],
@@ -392,10 +380,6 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         {
           "xIndex": 6,
           "label": "HF-1 arrest at PD ~62; no further doublings"
-        },
-        {
-          "xIndex": 9,
-          "label": "hTERT cells still dividing at PD 100"
         }
       ]
     },
@@ -461,7 +445,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Telomere maintenance"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-06",
@@ -544,7 +528,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Neural pathways"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-07",
@@ -701,7 +685,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Experimental design"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-08",
@@ -850,7 +834,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Quantitative reasoning"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-09",
@@ -921,7 +905,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-10",
@@ -992,7 +976,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Data interpretation"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-11",
@@ -1039,12 +1023,12 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         {
           "label": "Protease inhibitor",
           "yValues": [
-            1,
-            1,
-            2,
-            3,
-            5,
-            9
+            0.5,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9
           ]
         }
       ],
@@ -1133,7 +1117,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Proviral latency"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-12",
@@ -1152,7 +1136,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
           "Double selection raises the frequency with which the plasmid is transferred"
         ],
         "correctAnswer": 0,
-        "explanation": "The double-antibiotic plate is a counterselection: the donor is killed by streptomycin, the recipient that never received pR1 is killed by ampicillin, and only a recipient that has both its own chromosomal streptomycin resistance and the newly acquired plasmid gene survives, so every colony is a transconjugant. Antibiotics are irrelevant to phage viability, and phage carryover is addressed by the membrane and filtrate controls instead. The plate does not select for the donor, which cannot grow there at all, and streptomycin is not an inducer of transfer. Selection acts after mating is over, so it can reveal but cannot increase the transfer frequency.",
+        "explanation": "The double-antibiotic plate is a counterselection: the donor is killed by streptomycin, the recipient that never received pR1 is killed by ampicillin, and only a recipient that has both its own chromosomal streptomycin resistance and the newly acquired plasmid gene survives, so every colony is a transconjugant. Antibiotics are irrelevant to phage viability, and phage carryover is addressed by the membrane control instead. The plate does not select for the donor, which cannot grow there at all, and streptomycin is not an inducer of transfer. Selection acts after mating is over, so it can reveal but cannot increase the transfer frequency.",
         "skill": "Selection strategy"
       },
       {
@@ -1204,7 +1188,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Conjugation mechanism"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-13",
@@ -1337,7 +1321,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Apoptosis"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-14",
@@ -1408,14 +1392,14 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Independent assortment"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "bb2-15",
     "section": "bio-biochem",
     "discipline": "immunology",
     "title": "Adjuvants, T-Cell Help, and Immune Memory",
-    "passageText": "A protein antigen that has never been encountered elicits a slow, modest antibody response, whereas a second exposure produces a rapid and much larger one. To dissect the requirements for that difference, investigators immunized groups of genetically identical mice on day 0 and boosted them with the same antigen on day 28.\n\nGroup 1 received soluble antigen alone. Group 2 received the same dose of antigen emulsified with an adjuvant containing a bacterial cell-wall preparation. Group 3 received antigen plus adjuvant but was depleted of CD4+ T cells with a monoclonal antibody beginning one week before immunization and continuing throughout. Serum was collected at intervals and antigen-specific antibody was measured separately for each isotype; Figure 1 reports the antigen-specific IgG titer as the log of the highest serum dilution still giving a signal.\n\nIn all three groups, antigen-specific IgM appeared first and peaked near day 7, and in Group 3 the small IgM response was the only antibody detected at any time. In Groups 1 and 2, IgG rose after IgM and, when measured by the antigen concentration required for half-maximal binding, the IgG collected after the boost bound antigen roughly 100-fold more tightly than the IgG collected on day 14. Lymph nodes from Group 2 mice contained large germinal centers on day 14, Group 1 mice had few and small ones, and Group 3 mice had none. Antigen-specific B cells with a memory surface phenotype were abundant in Group 2 on day 28, before the boost was given, and were essentially absent in Group 3.",
+    "passageText": "A protein antigen that has never been encountered elicits a slow, modest antibody response, whereas a second exposure produces a rapid and much larger one. To dissect the requirements for that difference, investigators immunized groups of genetically identical mice on day 0 and boosted them with the same antigen, at the same dose, on day 28.\n\nGroup 1 received soluble antigen alone. Group 2 received the same dose of antigen emulsified with an adjuvant containing a bacterial cell-wall preparation. Group 3 received antigen plus adjuvant but was depleted of CD4+ T cells with a monoclonal antibody beginning one week before immunization and continuing throughout. Serum was collected at intervals and antigen-specific antibody was measured separately for each isotype; Figure 1 reports the antigen-specific IgG titer as the log of the highest serum dilution still giving a signal.\n\nIn all three groups, antigen-specific IgM appeared first and peaked near day 7, and in Group 3 the small IgM response was the only antibody detected at any time. In Groups 1 and 2, IgG rose after IgM and, when measured by the antigen concentration required for half-maximal binding, the IgG collected after the boost bound antigen roughly 100-fold more tightly than the IgG collected on day 14. Lymph nodes from Group 2 mice contained large germinal centers on day 14, Group 1 mice had few and small ones, and Group 3 mice had none. Antigen-specific B cells with a memory surface phenotype were abundant in Group 2 on day 28, before the boost was given, and were essentially absent in Group 3.",
     "chart": {
       "title": "Figure 1. Antigen-specific serum IgG titer before and after a day-28 boost",
       "kind": "line",
@@ -1541,6 +1525,6 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "skill": "Antibody structure"
       }
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

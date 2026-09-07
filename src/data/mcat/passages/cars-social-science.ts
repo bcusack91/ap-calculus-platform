@@ -10,9 +10,8 @@ import type { MCATPassage } from '../types'
  *
  * These passages and their answer keys have undergone an adversarial SME
  * review pass: each item was checked for a single defensible, passage-grounded
- * answer with AAMC-mold distractors, and verified items carry needsReview:
- * false. Any item still genuinely contestable after that pass retains
- * needsReview: true.
+ * answer with AAMC-mold distractors. Every passage and item passed that
+ * review and carries needsReview: false.
  */
 export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
   {
@@ -590,7 +589,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
     section: 'cars',
     discipline: 'sociology of expertise',
     title: 'The Credential and the Craft',
-    needsReview: true,
+    needsReview: false,
     passageText: `A curious inversion has overtaken the way modern societies certify competence. The credential — degree, license, board certification — began as a proxy: an efficient signal that its holder had probably acquired a craft too complex for outsiders to assess directly. Proxies are useful precisely because they are cheap to check. But a proxy that becomes cheap enough to check eventually becomes the thing employers, patients, and courts actually consult, and at that point a slow substitution begins: the signal stops standing for the craft and starts standing in for it.
 
 The substitution is visible at both ends of working life. At entry, occupations that once trained novices through apprenticeship — journalism, software, midwifery — now filter them through classroom credentials whose content practitioners routinely describe as remote from the work. At the far end, the veteran whose skill everyone acknowledges but whose paperwork has lapsed becomes, overnight, officially incompetent. Neither case involves any change in what anyone can do. What changed is which fact about a person the institution is able to see.
@@ -612,6 +611,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 1,
         explanation: 'The reform proposed is "to restore the credential to its proxy status: to multiply the routes by which craft can become visible." The abolition answer is explicitly rejected ("Not abolition"); calling credentials the only reliable protection against quackery is the defenders\' overreach; saying they matter at a career\'s start but not its end contradicts the lapsed-paperwork example.',
         skill: 'main-idea',
+        needsReview: false,
       },
       {
         question: 'The author cites the licensing of physicians primarily to:',
@@ -624,6 +624,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 3,
         explanation: 'It appears in the defenders\' favor — "The history is on their side more than critics like to admit" — before the author narrows what the defense licenses. The readings that guild motives always corrupt licensing, that patent medicine was harmless, and that surgery should be deregulated each reverse the passage.',
         skill: 'function',
+        needsReview: false,
       },
       {
         question: 'It can be inferred that the author regards the licensing of hair braiding as:',
@@ -636,6 +637,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 0,
         explanation: 'Hair braiding heads the list of occupations where "the gate does not protect the public from the incompetent; it protects incumbents from competition." The other options apply the surgeon-case logic the author explicitly withholds from such occupations.',
         skill: 'inference',
+        needsReview: false,
       },
       {
         question: 'Which of the following, if true, would most WEAKEN the author\'s reform proposal?',
@@ -648,6 +650,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 2,
         explanation: 'The proposal depends on alternative routes making craft visible and breaking the monopoly; if institutions ignore those routes, the reform fails in practice. That some credentialed practitioners are incompetent supports the author; licensing fees funding continuing education is minor; the restriction of apprenticeships to guild members\' relatives complicates the apprenticeship aside but not the proposal itself.',
         skill: 'strengthen-weaken',
+        needsReview: false,
       },
       {
         question: 'The sentence "A credential that fears such competition has confessed what it actually certifies" most nearly means that:',
@@ -660,6 +663,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 1,
         explanation: 'If the credential truly certified craft, other ways of demonstrating craft would not threaten it; fearing them "confesses" it certifies incumbency. The other readings are literalisms.',
         skill: 'meaning-in-context',
+        needsReview: false,
       },
       {
         question: 'A state legislature is debating whether to require a two-year certificate for app-based dog groomers. Based on the passage, the author would most likely ask FIRST whether:',
@@ -672,6 +676,7 @@ What would reform look like? Not abolition — the defenders are right about sur
         correctAnswer: 3,
         explanation: 'The author\'s test for justified gates: catastrophic stakes plus consumers who cannot judge. Incumbent groomers\' support might signal protectionism but is not the author\'s threshold question; the program\'s affordability and other states\' practice are secondary.',
         skill: 'application',
+        needsReview: false,
       },
     ],
   },
@@ -680,7 +685,7 @@ What would reform look like? Not abolition — the defenders are right about sur
     section: 'cars',
     discipline: 'economic history',
     title: 'The Tyranny of the Standard Gauge',
-    needsReview: true,
+    needsReview: false,
     passageText: `Standardization is the great invisible achievement of industrial civilization. That any bolt fits any matching nut, that a shipping container lifts from a Shanghai crane onto a Rotterdam truck, that this page renders on a thousand different screens — each is a quiet treaty among strangers, and the treaties compound: every standard makes the next one cheaper to adopt. Economists celebrate these "network effects" and they are right to. I want to dwell instead on what the celebration omits: a standard is also a decision about whose way of doing things becomes everyone\'s, taken at a moment when no one can foresee what it will cost to have decided.
 
 The railway gauge is the canonical case. The width between British rails — famously traceable to the axle of the horse cart — was not the best of the candidate gauges; engineers at the time argued that a broader gauge ran faster and steadier, and the Great Western Railway proved them right for decades. It lost anyway. Once enough track existed, the cost of incompatibility exceeded the benefit of superiority, and the better system was torn up mile by mile. The economists\' term is "lock-in," and the term\'s blandness conceals its meaning: a network can permanently entrench its own first draft.
@@ -702,6 +707,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         correctAnswer: 0,
         explanation: 'The closing paragraph gives the thesis: treat standards as "provisional infrastructure" with escape hatches. The claim that network effects ensure the best standard prevails is refuted by the gauge case (the better system lost); the counsel to delay until the best option is identified is rejected via Baltimore; calling the gauge and QWERTY deliberate frauds misreads inheritance as fraud.',
         skill: 'main-idea',
+        needsReview: false,
       },
       {
         question: 'The author includes the 1904 Baltimore fire in order to:',
@@ -714,6 +720,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         correctAnswer: 2,
         explanation: 'Baltimore is the counterweight: "delay has its own casualties." It is the OPPOSITE of a lock-in case like the railway gauge — it is the no-standard case; the federal-regulation and cities-rarely-cooperate readings generalize beyond the passage.',
         skill: 'function',
+        needsReview: false,
       },
       {
         question: 'The passage suggests that the "temporal asymmetry" of standardization refers to the fact that:',
@@ -726,6 +733,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         correctAnswer: 1,
         explanation: 'Stated nearly verbatim: "the deciders are few and early, the bound are many and late, and the two groups never meet." The other options describe different (unclaimed) asymmetries.',
         skill: 'inference',
+        needsReview: false,
       },
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author\'s closing recommendation?',
@@ -738,18 +746,20 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         correctAnswer: 3,
         explanation: 'The recommendation is escape hatches/adapters as provisional infrastructure; evidence that they enable cheap migration directly supports it. The findings about engineers on committees, QWERTY\'s learnability, and container lengths are neutral details.',
         skill: 'strengthen-weaken',
+        needsReview: false,
       },
       {
         question: 'The author\'s attitude toward the economists\' celebration of network effects is best described as:',
         options: [
           'wholesale rejection of the economic analysis',
-          'amused indifference',
+          'skepticism that the celebrated network effects are as large as economists claim',
           'agreement with the celebration, paired with insistence on what it leaves out',
-          'envy of the economists\' influence',
+          'reluctant acceptance that lock-in is the unavoidable price of the benefits',
         ],
         correctAnswer: 2,
-        explanation: '"They are right to. I want to dwell instead on what the celebration omits" — endorsement plus supplement. Not rejection, indifference, or envy.',
+        explanation: '"They are right to. I want to dwell instead on what the celebration omits" — endorsement plus supplement, not rejection. The author never doubts the size of network effects; he affirms them ("the treaties compound") and questions only what the celebration leaves out. Nor does he treat lock-in as unavoidable: the closing paragraph is precisely about adapters and escape hatches that keep "a treaty from becoming a prison."',
         skill: 'tone',
+        needsReview: false,
       },
       {
         question: 'A consortium is defining the charging connector for a new class of electric aircraft, expecting mass adoption within twenty years. Which proposal is most consistent with the passage\'s final recommendation?',
@@ -762,6 +772,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         correctAnswer: 1,
         explanation: 'Standardize now (avoiding Baltimores) while building the escape hatch (avoiding gauge-style lock-in) — exactly "provisional infrastructure." Delaying until the objectively best connector is proven repeats the delay error; letting each manufacturer stay proprietary is the no-treaty world; copying the widespread automotive connector is inheritance of a first draft without a hatch.',
         skill: 'application',
+        needsReview: false,
       },
     ],
   },
