@@ -10,6 +10,7 @@ export default function MCATPsychSocPage() {
   return (
     <MCATSectionLibrary
       sectionShort="psych-soc"
+      sectionId="psych-soc"
       sectionName="Psych/Soc"
       title="MCAT Psych/Soc Passage Practice"
       passages={[...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2]}

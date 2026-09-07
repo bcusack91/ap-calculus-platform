@@ -6,6 +6,8 @@
  */
 
 import { generateExitQuiz } from '../exit-quizzes'
+import { shuffleOptions } from '@/lib/shuffle-options'
+import { sectionScaledScore } from '@/lib/mcat-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -43,8 +45,22 @@ export interface MCATTestQuestion {
   difficulty: 'easy' | 'medium' | 'hard'
 }
 
+/**
+ * Uniform Fisher–Yates shuffle (returns a new array). The old
+ * `.sort(() => Math.random() - 0.5)` comparator is biased and
+ * engine-dependent.
+ */
+function shuffleArray<T>(items: T[]): T[] {
+  const shuffled = [...items]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
 function takeRandom<T>(items: T[], count: number): T[] {
-  const shuffled = [...items].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(items)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
 
@@ -235,11 +251,19 @@ export async function generateSectionTest(sectionId: string): Promise<MCATSectio
   }
 
   // Shuffle and cap
-  const questions = section.difficultyMix
+  const selected = section.difficultyMix
     ? selectQuestionsByDifficulty(allQuestions, section.questionCount, section.difficultyMix)
-    : allQuestions
-        .sort(() => Math.random() - 0.5)
-        .slice(0, section.questionCount)
+    : shuffleArray(allQuestions).slice(0, section.questionCount)
+
+  // Shuffle each question's options so the correct answer isn't stuck at a
+  // fixed position (the authored bank stores correctAnswer: 0 throughout).
+  // correctAnswer is remapped to the shuffled index here, so scoring, the
+  // review screen, and the submit payload — which all read from this test
+  // object — stay consistent automatically.
+  const questions = selected.map(q => {
+    const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+    return { ...q, options: s.options, correctAnswer: s.correctIndex }
+  })
 
   return {
     section,
@@ -280,7 +304,9 @@ export function scoreSectionTest(
 
   const total = test.questions.length
   const percentage = total > 0 ? Math.round((correct / total) * 100) : 0
-  const scaledScore = Math.round(118 + (percentage / 100) * 14)
+  // Shared percentile-anchored 118-132 curve (@/lib/mcat-scoring) — keeps this
+  // surface consistent with the diagnostic and the full-length exam.
+  const scaledScore = sectionScaledScore(total > 0 ? correct / total : 0)
 
   return {
     correct,

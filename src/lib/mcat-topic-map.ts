@@ -155,6 +155,28 @@ const CURRICULUM_TO_BANK: Record<string, string[]> = {
   'mcat-cars-reasoning-strengthen-weaken-mcat': ['mcat-cars-reasoning-beyond-text-mcat'],
 }
 
+/**
+ * Translate a list of assigned MCAT slugs into competitive-bank slugs, for
+ * building `/competitive/mcat?topics=` deep links. Curriculum slugs become the
+ * bank subtopic(s) that cover them; slugs already in the bank vocabulary (or
+ * unknown, e.g. test-day logistics with no playable pool) pass through
+ * unchanged for the picker's own validation to keep or drop. Deduplicated,
+ * order-preserving.
+ */
+export function toBankSlugs(slugs: Iterable<string>): string[] {
+  const out: string[] = []
+  const seen = new Set<string>()
+  for (const slug of slugs) {
+    for (const mapped of CURRICULUM_TO_BANK[slug] ?? [slug]) {
+      if (!seen.has(mapped)) {
+        seen.add(mapped)
+        out.push(mapped)
+      }
+    }
+  }
+  return out
+}
+
 /** True for any slug in either MCAT vocabulary. */
 export function isMcatTopicSlug(slug: string): boolean {
   return slug.startsWith('mcat-')

@@ -6,7 +6,8 @@ import { useSession } from 'next-auth/react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 import QueueSearchPanel from '@/components/competitive/QueueSearchPanel'
-import { ChevronDown, ChevronRight, Check, Shuffle, Users, Bot } from 'lucide-react'
+import { toBankSlugs } from '@/lib/mcat-topic-map'
+import { ChevronDown, ChevronRight, Check, Shuffle, Users, Bot, Info } from 'lucide-react'
 
 interface Subtopic { slug: string; title: string; questionCount: number }
 interface Area { slug: string; title: string; emoji: string; questionCount: number; subtopics: Subtopic[] }
@@ -16,6 +17,13 @@ interface QueueStatus { status: string; matchId?: string; position?: number; est
 
 const MULTI_PREFIX = 'multi:'
 const MAX_TOPICS = 12
+
+/**
+ * Live matchmaking pairs on EXACT topicSlug equality, so a `multi:` composite
+ * slug (73 selectable nodes, up to 12 picks) essentially never finds a live
+ * opponent. Surface the queue fallback much sooner for those searches.
+ */
+const COMPOSITE_QUEUE_FALLBACK_SEC = 15
 
 function buildSlug(selected: string[], allSlug: string): string {
   if (selected.length === 0) return allSlug
@@ -37,6 +45,9 @@ function McatCompetitiveInner() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [error, setError] = useState('')
+  // Some (or all) ?topics= slugs from an assignment link had no playable
+  // equivalent — tell the student instead of silently showing an empty picker.
+  const [assignedNotice, setAssignedNotice] = useState(false)
   const hasApplied = useRef(false)
 
   // Teachers deep-link assignments here as ?topics=a,b,c
@@ -63,7 +74,14 @@ function McatCompetitiveInner() {
               for (const t of a.subtopics) valid.add(t.slug)
             }
           }
-          const applied = topicsParam.split(',').map((s) => s.trim()).filter((s) => valid.has(s))
+          // Assignment links may carry curriculum (DB Topic) slugs rather than
+          // bank slugs — translate them before validating, so both vocabularies
+          // work here (old links included). Unmappable slugs (e.g. test-day
+          // strategy topics with no question pool) are dropped, with a notice.
+          const requested = topicsParam.split(',').map((s) => s.trim()).filter(Boolean)
+          const applied = toBankSlugs(requested).filter((s) => valid.has(s))
+          const unresolved = requested.filter((r) => !toBankSlugs([r]).some((s) => valid.has(s)))
+          if (unresolved.length > 0) setAssignedNotice(true)
           if (applied.length > 0) {
             setSelected(applied.slice(0, MAX_TOPICS))
             const toOpen: Record<string, boolean> = {}
@@ -101,6 +119,7 @@ function McatCompetitiveInner() {
   }, [inQueue, checkQueue])
 
   const effectiveSlug = useMemo(() => buildSlug(selected, data?.allSlug ?? 'mcat'), [selected, data])
+  const isComposite = effectiveSlug.startsWith(MULTI_PREFIX)
 
   const selectedQuestionCount = useMemo(() => {
     if (!data) return 0
@@ -157,24 +176,29 @@ function McatCompetitiveInner() {
     })
   }
 
-  const joinQueue = async () => {
+  // The slug actually sent to matchmaking — the picker stays interactive while
+  // queued, so don't derive in-queue UI (fallback timing) from live selection.
+  const [queuedSlug, setQueuedSlug] = useState<string | null>(null)
+
+  const joinQueue = async (slugOverride?: string) => {
     setError('')
+    const topicSlug = slugOverride ?? effectiveSlug
     try {
       const res = await fetch('/api/competitive/queue', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug: effectiveSlug, gameMode: selectedMode }),
+        body: JSON.stringify({ topicSlug, gameMode: selectedMode }),
       })
       const d: QueueStatus = await res.json()
       if (!res.ok) { setError((d as { error?: string }).error || 'Could not join the queue.'); return }
       if (d.status === 'matched') router.push(`/competitive/match/${d.matchId}?from=mcat`)
-      else { setInQueue(true); setQueueStatus(d) }
+      else { setInQueue(true); setQueueStatus(d); setQueuedSlug(topicSlug) }
     } catch { setError('Could not join the queue.') }
   }
 
   const leaveQueue = async () => {
     try { await fetch('/api/competitive/queue', { method: 'DELETE' }) } catch { /* best effort */ }
-    setInQueue(false); setQueueStatus(null)
+    setInQueue(false); setQueueStatus(null); setQueuedSlug(null)
   }
 
   const playAI = async () => {
@@ -208,6 +232,12 @@ function McatCompetitiveInner() {
         </div>
 
         {error && <div className="mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>}
+
+        {assignedNotice && (
+          <div className="mb-4 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 px-4 py-2 text-sm text-amber-800 dark:text-amber-200" role="status">
+            Some assigned topics aren&rsquo;t available in competitive play — pick from the list below.
+          </div>
+        )}
 
         {/* Selection summary */}
         <div className="mb-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4">
@@ -340,6 +370,9 @@ function McatCompetitiveInner() {
               position={queueStatus?.position}
               estimatedWait={queueStatus?.estimatedWait}
               onCancel={leaveQueue}
+              fallbackAfterSec={
+                (queuedSlug ?? effectiveSlug).startsWith(MULTI_PREFIX) ? COMPOSITE_QUEUE_FALLBACK_SEC : undefined
+              }
               fallback={
                 <div className="mt-3 text-center">
                   <button
@@ -352,9 +385,35 @@ function McatCompetitiveInner() {
               }
             />
           </div>
+        ) : isComposite ? (
+          // Custom (multi:) topic mixes are paired on exact-slug equality, so a
+          // live opponent is vanishingly unlikely — lead with the options that
+          // don't need one, but keep matchmaking available.
+          <div>
+            <p className="mb-3 flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400" role="note">
+              <Info className="mt-0.5 w-4 h-4 flex-shrink-0 text-accent" aria-hidden />
+              Custom topic mixes rarely match live — race the AI or send an async challenge.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <button onClick={playAI} className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all">
+                <Bot className="w-4 h-4" aria-hidden /> Practice vs AI
+              </button>
+              <AsyncChallengeButton topicSlug={effectiveSlug} />
+              <button onClick={() => void joinQueue()} className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 px-5 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700" title="Live matchmaking pairs on exact topic mixes — expect a wait">
+                <Users className="w-4 h-4" aria-hidden /> Find opponent
+              </button>
+              <button
+                onClick={() => { setSelected([]); void joinQueue(data?.allSlug ?? 'mcat') }}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 px-5 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                title="Queue across the entire MCAT — the mix live opponents actually play"
+              >
+                <Shuffle className="w-4 h-4" aria-hidden /> Full exam mix
+              </button>
+            </div>
+          </div>
         ) : (
           <div className="flex flex-wrap gap-3">
-            <button onClick={joinQueue} className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all">
+            <button onClick={() => void joinQueue()} className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all">
               <Users className="w-4 h-4" aria-hidden /> Find opponent
             </button>
             <button onClick={playAI} className="inline-flex items-center gap-2 rounded-lg border-2 border-accent px-6 py-3 text-sm font-semibold text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors">
@@ -362,7 +421,7 @@ function McatCompetitiveInner() {
             </button>
             <AsyncChallengeButton topicSlug={effectiveSlug} />
             <button
-              onClick={() => { setSelected([]); void joinQueue() }}
+              onClick={() => { setSelected([]); void joinQueue(data?.allSlug ?? 'mcat') }}
               className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 px-5 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
               title="Queue across the entire MCAT"
             >

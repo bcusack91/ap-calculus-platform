@@ -119,9 +119,20 @@ const questionPool: MCATQuizQuestion[] = [
 // (audit F1). Authored items carry subtopic tags the selector prefers.
 const fullPool = [...questionPool, ...authoredFor(['mcat-biology-'])]
 
+// Uniform Fisher–Yates shuffle (the old `.sort(() => Math.random() - 0.5)`
+// comparator is biased and engine-dependent).
+function shuffleArray<T>(items: T[]): T[] {
+  const shuffled = [...items]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const source = topicSlug ? mcatSubtopicPool(fullPool, 'cell-mol-bio', topicSlug) : fullPool
-  const shuffled = [...source].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(source)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `biology-${i}`,
     question: q.question,

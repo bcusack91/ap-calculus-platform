@@ -14,5 +14,19 @@ export function isPlaceholderContent(text: string | null | undefined): boolean {
   // Short single-line stubs of the form "<Some Title> content" with no real body
   // (no markdown headings, math, lists, or tables — i.e. no actual lesson).
   if (c.length < 80 && /\bcontent$/i.test(c) && !/[#$|\n]/.test(c)) return true
+  // Generated MCAT-subtopic boilerplate (prisma/add-mcat-subtopics.ts): every
+  // seeded subtopic got the identical "Why This Matters / Core Concepts /
+  // Study Checklist / Next Step" skeleton with only the titles interpolated.
+  // Match the skeleton STRUCTURALLY — its generator-only sentence plus both
+  // fixed headings — so no hand-written lesson can false-positive ("## Why
+  // This Matters" alone appears in real lessons; the sentence below exists
+  // nowhere but the generator).
+  if (
+    c.includes('This subtopic breaks down one high-yield part of ') &&
+    c.includes('## Why This Matters') &&
+    c.includes('## Study Checklist')
+  ) {
+    return true
+  }
   return false
 }

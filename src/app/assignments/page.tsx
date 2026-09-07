@@ -8,6 +8,7 @@ import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 import { unitTestRouteFor, frqRouteFor } from '@/lib/course-activity-routes'
+import { toBankSlugs } from '@/lib/mcat-topic-map'
 
 interface AssignmentItem {
   id: string
@@ -105,7 +106,10 @@ function getActionUrl(a: AssignmentItem): string {
       const all = a.topicSlugs && a.topicSlugs.length > 0 ? a.topicSlugs : (slug ? [slug] : [])
       if (all.length === 0) return '/competitive'
       if (all.every((s) => s.startsWith('mcat'))) {
-        return `/competitive/mcat?topics=${encodeURIComponent(all.join(','))}`
+        // Assignments store curriculum (DB Topic) slugs, but the MCAT picker
+        // validates ?topics= against competitive-bank slugs — translate first
+        // (bank slugs pass through unchanged).
+        return `/competitive/mcat?topics=${encodeURIComponent(toBankSlugs(all).join(','))}`
       }
       return all.length === 1 ? `/competitive?topic=${encodeURIComponent(all[0])}` : '/competitive'
     }
@@ -478,7 +482,17 @@ export default function StudentAssignmentsPage() {
                                   </span>
                                 </span>
                                 <Link
-                                  href={a.type === 'QUIZ' ? `/topics/${t.slug}` : `/topics/${t.slug}/interactive`}
+                                  href={
+                                    // Competitive per-topic links go to the competitive
+                                    // picker, not /topics/<slug> (bank slugs 404 there).
+                                    a.type === 'COMPETITIVE_PRACTICE'
+                                      ? t.slug.startsWith('mcat')
+                                        ? `/competitive/mcat?topics=${encodeURIComponent(toBankSlugs([t.slug]).join(','))}`
+                                        : `/competitive?topic=${encodeURIComponent(t.slug)}`
+                                      : a.type === 'QUIZ'
+                                      ? `/topics/${t.slug}`
+                                      : `/topics/${t.slug}/interactive`
+                                  }
                                   className="shrink-0 rounded-lg px-2.5 py-1 text-xs font-semibold text-accent transition hover:bg-accent-subtle dark:hover:bg-gray-600"
                                 >
                                   {t.done ? 'Review' : 'Start'}

@@ -10,6 +10,7 @@ export default function MCATBioBiochemPage() {
   return (
     <MCATSectionLibrary
       sectionShort="bio-biochem"
+      sectionId="bio-biochem"
       sectionName="Bio/Biochem"
       title="MCAT Bio/Biochem Passage Practice"
       passages={[...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2]}

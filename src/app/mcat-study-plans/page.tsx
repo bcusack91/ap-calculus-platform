@@ -1,11 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import type { MCATStudyPlanTemplate } from '@/data/mcat-study-plans'
 import DiagnosticFocusBanner from '@/components/DiagnosticFocusBanner'
+
+type PlanTemplatesModule = typeof import('@/data/mcat-study-plans')
 
 const difficultyColors: Record<string, string> = {
   Beginner:
@@ -31,15 +32,29 @@ export default function MCATStudyPlansPage() {
   const [success, setSuccess] = useState(false)
   // Defer the large study-plan templates module out of the initial bundle —
   // it's only needed to render the grid below, so load it on mount.
-  const [plans, setPlans] = useState<MCATStudyPlanTemplate[]>([])
+  const [planLib, setPlanLib] = useState<PlanTemplatesModule | null>(null)
+  const plans = planLib?.MCAT_STUDY_PLANS ?? []
 
   useEffect(() => {
     let active = true
     import('@/data/mcat-study-plans').then((m) => {
-      if (active) setPlans(m.MCAT_STUDY_PLANS)
+      if (active) setPlanLib(m)
     })
     return () => { active = false }
   }, [])
+
+  // Weeks from today until the entered exam date (null when unset/invalid).
+  const weeksToExam = useMemo(() => {
+    if (!examDate || !planLib) return null
+    const d = new Date(`${examDate}T12:00:00`)
+    if (Number.isNaN(d.getTime())) return null
+    return planLib.weeksUntil(d)
+  }, [examDate, planLib])
+
+  const recommendedId =
+    planLib && weeksToExam !== null && weeksToExam > 0
+      ? planLib.recommendMCATTemplateId(weeksToExam)
+      : null
 
   async function adoptPlan(templateId: string) {
     if (status !== 'authenticated') {
@@ -54,7 +69,7 @@ export default function MCATStudyPlansPage() {
         body: JSON.stringify({
           templateId,
           startDate: new Date().toISOString(),
-          ...(examDate ? { examDate: new Date(examDate).toISOString() } : {}),
+          ...(examDate ? { examDate: new Date(`${examDate}T12:00:00`).toISOString() } : {}),
         }),
       })
       if (res.ok) {
@@ -100,6 +115,33 @@ export default function MCATStudyPlansPage() {
         {/* Personalized from the student's MCAT diagnostic (#4) */}
         <DiagnosticFocusBanner prefix="mcat-full-diagnostic" />
 
+        {/* Exam date → timeline-aware recommendation. The adopted plan's task
+            schedule is scaled to finish ~1 week before this date. */}
+        <div className="mx-auto mb-8 max-w-lg rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200">
+            When is your MCAT? (optional)
+            <input
+              type="date"
+              value={examDate}
+              onChange={e => setExamDate(e.target.value)}
+              className="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm font-normal dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+            />
+          </label>
+          {weeksToExam !== null && (
+            weeksToExam > 0 ? (
+              <p className="mt-3 text-sm text-emerald-700 dark:text-emerald-400">
+                <span className="font-bold">{weeksToExam} {weeksToExam === 1 ? 'week' : 'weeks'} until your exam.</span>{' '}
+                Whichever plan you pick, its tasks are scheduled to wrap up about a week before test day
+                {recommendedId ? ' — the best fit for your timeline is highlighted below.' : '.'}
+              </p>
+            ) : (
+              <p className="mt-3 text-sm text-amber-700 dark:text-amber-400">
+                That date is less than a week away (or in the past) — pick a future test date, or adopt a plan without one.
+              </p>
+            )
+          )}
+        </div>
+
         {/* Plans Grid */}
         <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
           {plans.length === 0
@@ -118,12 +160,15 @@ export default function MCATStudyPlansPage() {
               ))
             : plans.map(plan => {
             const isSelected = selectedPlan === plan.id
+            const isRecommended = recommendedId === plan.id
             return (
               <div
                 key={plan.id}
                 className={`flex flex-col rounded-2xl border bg-white shadow-sm transition dark:bg-gray-800 ${
                   isSelected
                     ? 'border-emerald-500 shadow-lg ring-2 ring-emerald-300 dark:ring-emerald-600'
+                    : isRecommended
+                    ? 'border-emerald-400 shadow-md dark:border-emerald-600'
                     : 'border-gray-200 hover:shadow-md dark:border-gray-700'
                 }`}
               >
@@ -131,11 +176,18 @@ export default function MCATStudyPlansPage() {
                 <div
                   className={`rounded-t-2xl bg-gradient-to-r p-6 text-white ${gradients[plan.id] ?? 'from-gray-500 to-gray-600'}`}
                 >
-                  <span
-                    className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-bold ${difficultyColors[plan.difficulty]}`}
-                  >
-                    {plan.difficulty}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span
+                      className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-bold ${difficultyColors[plan.difficulty]}`}
+                    >
+                      {plan.difficulty}
+                    </span>
+                    {isRecommended && (
+                      <span className="inline-block rounded-full bg-white/90 px-2.5 py-0.5 text-xs font-bold text-emerald-700">
+                        ★ Best fit for your exam date
+                      </span>
+                    )}
+                  </div>
                   <h2 className="mt-2 text-xl font-bold">{plan.title}</h2>
                 </div>
 
@@ -176,15 +228,19 @@ export default function MCATStudyPlansPage() {
                   {/* Select / Adopt */}
                   {isSelected ? (
                     <div className="space-y-3">
-                      <label className="block text-sm text-gray-700 dark:text-gray-300">
-                        MCAT Test Date (optional)
-                        <input
-                          type="date"
-                          value={examDate}
-                          onChange={e => setExamDate(e.target.value)}
-                          className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-                        />
-                      </label>
+                      {weeksToExam !== null && weeksToExam > 0 ? (
+                        <p className="rounded-lg bg-emerald-50 p-2.5 text-xs text-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-300">
+                          {weeksToExam < plan.durationWeeks
+                            ? `This ${plan.durationWeeks}-week plan will be compressed into your ${weeksToExam}-week runway — same tasks, tighter schedule.`
+                            : weeksToExam > plan.durationWeeks
+                            ? `This ${plan.durationWeeks}-week plan will be stretched across your ${weeksToExam}-week runway.`
+                            : `Your ${weeksToExam}-week runway matches this plan exactly.`}
+                        </p>
+                      ) : (
+                        <p className="rounded-lg bg-gray-50 p-2.5 text-xs text-gray-600 dark:bg-gray-700/50 dark:text-gray-300">
+                          No exam date set — tasks follow the template&apos;s full {plan.durationWeeks}-week schedule. Add your test date above to fit the plan to it.
+                        </p>
+                      )}
                       <button
                         onClick={() => adoptPlan(plan.id)}
                         disabled={!!adopting}

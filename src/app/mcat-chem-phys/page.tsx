@@ -11,6 +11,7 @@ export default function MCATChemPhysPage() {
   return (
     <MCATSectionLibrary
       sectionShort="chem-phys"
+      sectionId="chem-phys"
       sectionName="Chem/Phys"
       title="MCAT Chem/Phys Passage Practice"
       passages={[...CHEM_PHYS_PASSAGES, ...CHEM_PHYS_PASSAGES_2]}

@@ -12,6 +12,7 @@ const TABS: { key: string; label: string }[] = [
   { key: 'chem-phys', label: 'Chem/Phys' },
   { key: 'bio-biochem', label: 'Bio/Biochem' },
   { key: 'psych-soc', label: 'Psych/Soc' },
+  { key: 'cars', label: 'CARS' },
 ]
 
 function RichItem({ text }: { text: string }) {
@@ -51,7 +52,7 @@ export default function MCATReferencePage() {
         <Link href="/mcat" className="text-sm text-blue-600 hover:underline dark:text-blue-400">← MCAT Prep</Link>
         <h1 className="mb-2 mt-4 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl dark:text-white">MCAT High-Yield Reference Sheets</h1>
         <p className="mb-6 text-gray-600 dark:text-gray-400">
-          The equations, constants, and facts worth memorizing cold — organized by section. Use these for quick review and to build flashcards.
+          The equations, constants, and facts worth memorizing cold — plus a CARS strategy sheet — organized by section. Use these for quick review and to build flashcards.
         </p>
 
         <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Reference sheet section">

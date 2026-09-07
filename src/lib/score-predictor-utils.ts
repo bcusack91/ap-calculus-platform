@@ -5,6 +5,9 @@
 
 import { prisma } from '@/lib/prisma'
 import { unstable_cache } from 'next/cache'
+import { sectionScaledScore } from '@/lib/mcat-scoring'
+import type { MCATSection } from '@/data/mcat/types'
+import { MCAT_SECTION_ORDER } from '@/data/mcat/types'
 
 interface BasicStats {
   totalTopics: number
@@ -126,10 +129,49 @@ export function mapToACTScore(avgPct: number): number {
   return Math.max(1, Math.min(36, Math.round(avgPct * 36)))
 }
 
-/** Map average quiz percentage (0-1) to a total MCAT score (472-528). */
-export function mapToMCATScore(avgPct: number, masteryRate: number): number {
-  // Blend 75% quiz performance + 25% mastery rate for MCAT prediction.
-  const blended = avgPct * 0.75 + masteryRate * 0.25
-  const raw = 472 + Math.round(blended * (528 - 472))
-  return Math.max(472, Math.min(528, raw))
+/**
+ * Classify an MCAT topic slug into its exam section, mirroring the diagnostic
+ * generator's domain→section assignment (biochemistry counts toward
+ * Chem/Phys, like the diagnostic's `biochem-cp` domain). Returns null for
+ * slugs that don't clearly belong to one section (e.g. cross-cutting
+ * strategy/quantitative topics).
+ */
+export function mcatSectionForTopicSlug(slug: string): MCATSection | null {
+  if (/cars/i.test(slug)) return 'cars'
+  if (/psych|sociolog/i.test(slug)) return 'psych-soc'
+  if (/biolog|molecular|microbio|anatomy|physiolog|organ-systems|genetic|immuno/i.test(slug)) {
+    return 'bio-biochem'
+  }
+  if (/biochem|chemistry|physics/i.test(slug)) return 'chem-phys'
+  return null
+}
+
+/**
+ * Map quiz performance to a total MCAT score (472-528) using the shared
+ * percentile-anchored section curve from @/lib/mcat-scoring (the same curve
+ * behind the diagnostic and full-length exam) instead of a flat linear map.
+ *
+ * The blend stays 75% quiz performance + 25% mastery rate. When per-section
+ * quiz averages (0-1) are available, each attempted section is scaled through
+ * the anchor curve individually and unattempted sections fall back to the
+ * overall blend; without section data, the overall blend is pushed through
+ * the same curve once and applied to all four sections.
+ */
+export function mapToMCATScore(
+  avgPct: number,
+  masteryRate: number,
+  sectionAvgs?: Partial<Record<MCATSection, number>>,
+): number {
+  const blend = (pct: number) => Math.max(0, Math.min(1, pct * 0.75 + masteryRate * 0.25))
+  const overallSectionScaled = sectionScaledScore(blend(avgPct))
+
+  const total =
+    sectionAvgs && Object.keys(sectionAvgs).length > 0
+      ? MCAT_SECTION_ORDER.reduce((sum, section) => {
+          const pct = sectionAvgs[section]
+          return sum + (typeof pct === 'number' ? sectionScaledScore(blend(pct)) : overallSectionScaled)
+        }, 0)
+      : overallSectionScaled * 4
+
+  return Math.max(472, Math.min(528, total))
 }

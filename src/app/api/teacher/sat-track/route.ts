@@ -83,7 +83,7 @@ export async function GET(req: NextRequest) {
  *
  * 'auto' clears the override and returns the student to score-based placement.
  * An override always beats the score — a teacher who has watched the student
- * work knows things a 30-question screen does not.
+ * work knows things a 36-question screen does not.
  */
 export async function PATCH(req: NextRequest) {
   const authResult = await requireTeacher()

@@ -23,6 +23,8 @@ interface Section {
   color: string   // e.g. 'blue'
   bgLight: string // e.g. 'bg-blue-50 dark:bg-blue-900/20'
   textColor: string
+  /** Per-section confidence (MCAT sends this; other subjects may omit it). */
+  confidence?: 'high' | 'medium' | 'low'
 }
 
 interface PredictionData {
@@ -31,6 +33,11 @@ interface PredictionData {
   percentile?: number
   confidence: 'high' | 'medium' | 'low'
   sections?: Section[]
+  /**
+   * Honest projection window around primaryScore (SAT sends this; course
+   * predictors that return only a point estimate simply omit it).
+   */
+  range?: { low: number; high: number }
 }
 
 interface StatsData {
@@ -242,10 +249,19 @@ function ScorePredictorInner(config: ScorePredictorConfig) {
           <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
             <div className="mb-6 text-center">
               <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">Predicted Score</p>
-              <p className={`text-7xl font-black ${scoreColor(prediction.primaryScore, prediction.maxScore)}`}>
-                {prediction.primaryScore}
+              {/* A range (when the API provides one) is more honest than a
+                  point estimate; other courses fall back to the point score. */}
+              <p className={`${prediction.range ? 'text-6xl' : 'text-7xl'} font-black ${scoreColor(prediction.primaryScore, prediction.maxScore)}`}>
+                {prediction.range
+                  ? `${prediction.range.low}–${prediction.range.high}`
+                  : prediction.primaryScore}
               </p>
               <p className="mt-1 text-sm text-gray-400">{scoreLabel}</p>
+              {prediction.range && (
+                <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+                  Estimate from your practice data — expect a score within this range, not an exact number
+                </p>
+              )}
               <div className="mt-3 flex items-center justify-center gap-3">
                 <span className={`rounded-full px-3 py-1 text-xs font-semibold ${CONF_BADGE[prediction.confidence]}`}>
                   {prediction.confidence} confidence
@@ -266,6 +282,7 @@ function ScorePredictorInner(config: ScorePredictorConfig) {
                     <p className={`text-xs font-medium uppercase ${s.textColor}`}>{s.name}</p>
                     <p className={`text-2xl font-bold ${s.textColor}`}>{s.score}</p>
                     {s.quizCount > 0 && <p className={`mt-1 text-xs opacity-70 ${s.textColor}`}>Avg: {s.avgPct}% ({s.quizCount} quizzes)</p>}
+                    {s.confidence && <p className={`mt-1 text-[10px] font-semibold uppercase tracking-wide opacity-60 ${s.textColor}`}>{s.confidence} confidence</p>}
                   </div>
                 ))}
               </div>

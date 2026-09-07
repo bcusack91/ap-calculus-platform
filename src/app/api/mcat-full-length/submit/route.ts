@@ -23,8 +23,10 @@ import { Prisma } from '@prisma/client'
 
 type IncomingTopic = { slug: string; name?: string; priority?: string }
 type StoredTopic = { slug: string; name: string; priority: 'high' | 'medium' }
-type IncomingSection = { section?: string; short?: string; correct?: number; total?: number; scaled?: number }
-type StoredSection = { section: string; short: string; correct: number; total: number; scaled: number }
+type IncomingSection = { section?: string; short?: string; correct?: number; total?: number; scaled?: number; elapsedSeconds?: number }
+// elapsedSeconds is ADDITIVE (sectioned full-lengths only): seconds actually
+// spent inside that section's own clock. Older/flat submissions omit it.
+type StoredSection = { section: string; short: string; correct: number; total: number; scaled: number; elapsedSeconds?: number }
 
 function num(v: unknown): number {
   return typeof v === 'number' && Number.isFinite(v) ? v : 0
@@ -55,13 +57,18 @@ function sanitizeSections(raw: unknown): StoredSection[] {
     const s = item as IncomingSection
     const section = typeof s.section === 'string' ? s.section : ''
     if (!section) continue
-    out.push({
+    const clean: StoredSection = {
       section,
       short: typeof s.short === 'string' ? s.short : section,
       correct: num(s.correct),
       total: num(s.total),
       scaled: num(s.scaled),
-    })
+    }
+    // Only persist per-section timing when the client actually measured it.
+    if (typeof s.elapsedSeconds === 'number' && Number.isFinite(s.elapsedSeconds)) {
+      clean.elapsedSeconds = Math.max(0, Math.round(s.elapsedSeconds))
+    }
+    out.push(clean)
   }
   return out
 }

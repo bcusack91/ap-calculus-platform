@@ -44,7 +44,7 @@ const features = [
       </svg>
     ),
     color: 'from-green-500 to-teal-500',
-    stats: '~30 questions · 25 min',
+    stats: '36 questions · 30 min',
   },
   {
     title: 'Score Predictor',

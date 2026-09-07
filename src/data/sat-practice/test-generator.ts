@@ -16,6 +16,7 @@
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
 import { getBalancedPassages, type ReadingPassage } from '../sat-passages'
 import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
+import { satSectionScaled } from '@/lib/sat-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -294,64 +295,24 @@ async function generateMathModule(
  * Estimate scaled SAT score from raw correct answers.
  * Digital SAT uses equating/scaling — this is an approximation.
  *
- * Reading & Writing: ~27 raw → 200-800 scaled per module
- * Math: ~22 raw → 200-800 scaled per module
+ * Both sections run through the calibrated piecewise-linear curve in
+ * src/lib/sat-scoring.ts, which is anchored on real students' College Board
+ * results measured against OUR item mix. The step tables this replaced were
+ * transcribed from official raw→scaled conversions, but official tables
+ * assume official items: on our pools they read ~60-130 total points high
+ * (e.g. 88% correct mapped to ~1450 when the real outcome was ~1345). One
+ * shared curve also keeps practice tests, diagnostics, and the score
+ * predictor telling the student the same story. The `section` parameter is
+ * kept for call-site compatibility (real R&W/Math curves differ by less than
+ * our calibration error can resolve).
  */
 export function estimateScaledScore(
   correct: number,
   total: number,
-  section: SATSectionType,
+  _section: SATSectionType,
 ): number {
   const pct = total > 0 ? correct / total : 0
-
-  // Approximate conversion curves based on official SAT tables
-  if (section === 'reading-writing') {
-    // R&W: 200 base, up to 800
-    if (pct >= 0.98) return 800
-    if (pct >= 0.95) return 780
-    if (pct >= 0.90) return 750
-    if (pct >= 0.85) return 720
-    if (pct >= 0.80) return 690
-    if (pct >= 0.75) return 660
-    if (pct >= 0.70) return 630
-    if (pct >= 0.65) return 600
-    if (pct >= 0.60) return 570
-    if (pct >= 0.55) return 540
-    if (pct >= 0.50) return 510
-    if (pct >= 0.45) return 480
-    if (pct >= 0.40) return 450
-    if (pct >= 0.35) return 420
-    if (pct >= 0.30) return 390
-    if (pct >= 0.25) return 360
-    if (pct >= 0.20) return 330
-    if (pct >= 0.15) return 300
-    if (pct >= 0.10) return 270
-    if (pct >= 0.05) return 240
-    return 200
-  } else {
-    // Math: slightly different curve
-    if (pct >= 0.98) return 800
-    if (pct >= 0.95) return 790
-    if (pct >= 0.90) return 760
-    if (pct >= 0.85) return 730
-    if (pct >= 0.80) return 700
-    if (pct >= 0.75) return 670
-    if (pct >= 0.70) return 640
-    if (pct >= 0.65) return 610
-    if (pct >= 0.60) return 580
-    if (pct >= 0.55) return 550
-    if (pct >= 0.50) return 520
-    if (pct >= 0.45) return 490
-    if (pct >= 0.40) return 460
-    if (pct >= 0.35) return 430
-    if (pct >= 0.30) return 400
-    if (pct >= 0.25) return 370
-    if (pct >= 0.20) return 340
-    if (pct >= 0.15) return 310
-    if (pct >= 0.10) return 280
-    if (pct >= 0.05) return 250
-    return 200
-  }
+  return satSectionScaled(pct)
 }
 
 /**

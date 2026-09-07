@@ -6,6 +6,8 @@ import { generateTopicFaqs } from '@/lib/topic-faqs'
 import { faqJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { MarkdownCallout } from '@/components/MarkdownCallout'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
+import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -189,6 +191,9 @@ export default async function TopicPage(props: TopicPageProps) {
       parentTopic: {
         select: { slug: true, title: true }
       },
+      _count: {
+        select: { flashcards: true }
+      },
       subtopics: {
         orderBy: { order: 'asc' },
         select: {
@@ -222,10 +227,17 @@ export default async function TopicPage(props: TopicPageProps) {
     .slice(0, 6)
   const topicAdVariant = getTopicAdVariant(topic.slug)
 
-  // Some topics were seeded with a placeholder stub ("<Title> content") and have
-  // no problems/flashcards yet. Don't render the stub as a lesson — show a
-  // focused "coming soon" state instead.
+  // Some topics were seeded with a placeholder stub ("<Title> content" or the
+  // generated MCAT-subtopic boilerplate). Don't render the stub as a lesson —
+  // show a focused "coming soon" state instead, but still surface the study
+  // tools the topic DOES have (interactive lesson, flashcards, practice quiz)
+  // so students who need this topic — e.g. for diagnostic remediation — aren't
+  // dead-ended.
   if (isPlaceholderContent(topic.textContent) && topic.exampleProblems.length === 0) {
+    const topicHasLesson = hasInteractiveLesson(topic.slug)
+    const topicHasQuiz = hasExitQuiz(topic.slug)
+    const flashcardCount = topic._count.flashcards
+    const hasStudyTools = topicHasLesson || topicHasQuiz || flashcardCount > 0
     return (
       <div className="container py-10">
         <div className="mx-auto max-w-2xl text-center">
@@ -233,11 +245,31 @@ export default async function TopicPage(props: TopicPageProps) {
             <div className="text-5xl mb-4">📝</div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">{topic.title}</h1>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We&apos;re still writing this lesson. In the meantime, explore related topics and
-              practice in this subject — full content for this topic is coming soon.
+              {hasStudyTools
+                ? 'We’re still writing the written lesson for this topic — but you can study it right now with the tools below.'
+                : 'We’re still writing this lesson. In the meantime, explore related topics and practice in this subject — full content for this topic is coming soon.'}
             </p>
+            {hasStudyTools && (
+              <div className="mb-6 flex flex-wrap justify-center gap-3">
+                {topicHasLesson && (
+                  <Link href={`/topics/${topic.slug}/interactive`} className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover">
+                    Start Interactive Lesson
+                  </Link>
+                )}
+                {flashcardCount > 0 && (
+                  <Link href={`/flashcards/${topic.slug}`} className="inline-flex items-center justify-center rounded-md border border-accent-muted px-6 py-3 text-base font-semibold text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20">
+                    Flashcards ({flashcardCount})
+                  </Link>
+                )}
+                {topicHasQuiz && (
+                  <Link href={`/topics/${topic.slug}/interactive?exitQuiz=1`} className="inline-flex items-center justify-center rounded-md border border-accent-muted px-6 py-3 text-base font-semibold text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20">
+                    Practice Quiz
+                  </Link>
+                )}
+              </div>
+            )}
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href={`/categories/${topic.category.slug}`} className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover">
+              <Link href={`/categories/${topic.category.slug}`} className={`inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold ${hasStudyTools ? 'border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700' : 'bg-accent text-white hover:bg-accent-hover'}`}>
                 Browse {topic.category.name}
               </Link>
               <Link href="/topics" className="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-600 px-6 py-3 text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">

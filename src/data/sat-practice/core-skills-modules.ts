@@ -1,13 +1,13 @@
 /**
  * SAT Core Skills Track — the build-up path.
  *
- * The mirror image of the hard track. The regular 30-question diagnostic
+ * The mirror image of the hard track. The regular 36-question diagnostic
  * samples the whole 200-800 range, so a student working near 400 misses most
  * of it, lands "weak everywhere", and is handed the same 7-part, 42-section
  * lessons a 1200 student gets. That is not a study plan, it is a wall.
  *
  * The Core Skills track fixes that:
- *   - Score under 950 on a regular diagnostic and the student is placed on
+ *   - Score under 1050 on a regular diagnostic and the student is placed on
  *     the track (a teacher can override the placement either way).
  *   - They work 20-question modules drawn entirely from the EASY and
  *     light-medium item tiers, and are recommended short 2-part Core Skills
@@ -32,8 +32,13 @@ export const CORE_MODULE_MINUTES = 35
 /** DiagnosticTest.category prefix for Core Skills module attempts. */
 export const CORE_MODULE_CATEGORY = 'sat-core-module'
 
-/** Below this estimated score, a regular diagnostic places the student. */
-export const CORE_SKILLS_ENTRY_SCORE = 950
+/** Below this estimated score, a regular diagnostic places the student.
+ *  Entry sits on the calibrated `regular` curve (sat-scoring.ts): 1050 ≈ 62%
+ *  correct — the same student population the pre-calibration 950 captured
+ *  under the old linear map. Graduation stays 950 because it is measured on
+ *  the compressed `easy` band, which the calibration deliberately left
+ *  untouched (~79% on easy/light-medium items). */
+export const CORE_SKILLS_ENTRY_SCORE = 1050
 /** At or above this on a Core Skills module, the track retires. */
 export const CORE_SKILLS_GRADUATION_SCORE = 950
 

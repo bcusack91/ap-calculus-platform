@@ -120,6 +120,33 @@ export async function POST(
   if (TOPIC_SCOPED_TYPES.includes(type) && !hasTopics) {
     return NextResponse.json({ error: 'This assignment type requires at least one topic' }, { status: 400 })
   }
+  // INTERACTIVE_LESSON and QUIZ deep-link students to /topics/<slug>, which
+  // 404s for anything that isn't a real DB Topic (e.g. MCAT competitive-bank
+  // slugs from the "MCAT Prep (Competitive)" pseudo-course). Verify every slug
+  // up front and name the offenders instead of shipping a dead assignment.
+  if (type === 'INTERACTIVE_LESSON' || type === 'QUIZ') {
+    const requested = [
+      ...new Set([
+        ...(Array.isArray(topicSlugs) ? topicSlugs : []),
+        ...(typeof topicSlug === 'string' && topicSlug.trim() ? [topicSlug.trim()] : []),
+      ]),
+    ].filter((s): s is string => typeof s === 'string' && s.length > 0)
+    if (requested.length > 0) {
+      const found = await prisma.topic.findMany({ where: { slug: { in: requested } }, select: { slug: true } })
+      const foundSet = new Set(found.map((t) => t.slug))
+      const missing = requested.filter((s) => !foundSet.has(s))
+      if (missing.length > 0) {
+        return NextResponse.json(
+          {
+            error: `These topics have no ${type === 'QUIZ' ? 'quiz' : 'lesson'} page and can't be assigned as ${
+              type === 'QUIZ' ? 'a quiz' : 'an interactive lesson'
+            }: ${missing.join(', ')}. Competitive-only topics can only be assigned as Competitive Practice.`,
+          },
+          { status: 400 }
+        )
+      }
+    }
+  }
   if (type === 'FLASHCARD_REVIEW' && (!flashcardSetId || typeof flashcardSetId !== 'string' || !flashcardSetId.trim())) {
     return NextResponse.json({ error: 'A flashcard review assignment requires a flashcard set' }, { status: 400 })
   }

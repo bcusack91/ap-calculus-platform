@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 
 type RecommendedTopic = {
   slug: string
@@ -109,11 +111,13 @@ export async function GET() {
       select: {
         id: true,
         slug: true,
+        _count: { select: { flashcards: true } },
       },
     })
 
     const topicIdToSlug = new Map(topics.map((topic) => [topic.id, topic.slug]))
     const slugToTopicId = new Map(topics.map((topic) => [topic.slug, topic.id]))
+    const flashcardCountBySlug = new Map(topics.map((topic) => [topic.slug, topic._count.flashcards]))
 
     const [progressRows, exitAttempts] = await Promise.all([
       prisma.topicProgress.findMany({
@@ -170,12 +174,39 @@ export async function GET() {
       const bestExit = bestExitBySlug.get(topic.slug)
       const entranceSatisfied = masteryLevel >= 1
       const exitSatisfied = (bestExit?.scorePercent ?? 0) >= requiredScorePercent
-      const isSatisfied = entranceSatisfied || exitSatisfied
+      const topicFound = slugToTopicId.has(topic.slug)
+
+      // Safety valve: if a recommended slug no longer resolves to a Topic row
+      // (subtopic-map drift, renamed slug, …), the student has NO page to study
+      // and NO progress row to earn — the requirement could never be cleared
+      // and the retake gate would deadlock forever. Treat it as satisfied and
+      // log so the drift gets fixed.
+      if (!topicFound) {
+        console.warn(
+          `[mcat plan-status] recommended topic slug "${topic.slug}" has no Topic row — ` +
+          'treating its remediation requirement as satisfied so the retake gate cannot deadlock. ' +
+          'Check src/data/mcat-practice/subtopic-map.ts against the Topic table.'
+        )
+      }
+      const isSatisfied = entranceSatisfied || exitSatisfied || !topicFound
+
+      // What actually exists for this topic, so the client can offer direct,
+      // real actions instead of a bare topic link (most MCAT subtopic pages
+      // have no written lesson — the interactive lesson / flashcards / exit
+      // quiz are the study surfaces that exist).
+      const hasLesson = hasInteractiveLesson(topic.slug)
+      const topicHasExitQuiz = hasExitQuiz(topic.slug)
 
       return {
         ...topic,
         topicPath: `/topics/${topic.slug}`,
-        topicFound: slugToTopicId.has(topic.slug),
+        topicFound,
+        hasLesson,
+        lessonPath: hasLesson ? `/topics/${topic.slug}/interactive` : null,
+        flashcardCount: flashcardCountBySlug.get(topic.slug) ?? 0,
+        flashcardsPath: `/flashcards/${topic.slug}`,
+        hasExitQuiz: topicHasExitQuiz,
+        exitQuizPath: topicHasExitQuiz ? `/topics/${topic.slug}/interactive?exitQuiz=1` : null,
         masteryLevel,
         entranceSatisfied,
         bestExitScorePercent: bestExit?.scorePercent ?? null,

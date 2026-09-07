@@ -1,7 +1,7 @@
 /**
  * SAT Hard Track — the 700-800 path.
  *
- * The regular 30-question diagnostic cannot resolve the top band: with 2-4
+ * The regular 36-question diagnostic cannot resolve the top band: with 2-4
  * questions per domain, a student who misses two items is indistinguishable
  * from one who misses none for the wrong reasons, and the study plan only
  * recommends domains scoring under 75 percent — so a genuine 750 scorer got an

@@ -35,6 +35,47 @@ export async function PUT(
       return NextResponse.json({ error: 'Title is required' }, { status: 400 })
     }
 
+    // Mirror of the POST-route topic check: lessons and quizzes deep-link to
+    // /topics/<slug>, so every slug must be a real DB Topic — competitive-bank
+    // slugs 404 there. Validate whenever this edit touches the type or the
+    // topic list; unspecified fields fall back to the stored values so a
+    // type-only change can't smuggle stored bank slugs into a QUIZ.
+    const existing = 'assignment' in owned ? owned.assignment : null
+    const effectiveType = type !== undefined ? type : existing?.type
+    if (
+      (effectiveType === 'INTERACTIVE_LESSON' || effectiveType === 'QUIZ') &&
+      (type !== undefined || topicSlug !== undefined || topicSlugs !== undefined)
+    ) {
+      const rawList: unknown[] =
+        topicSlugs !== undefined
+          ? (Array.isArray(topicSlugs) ? topicSlugs : [])
+          : topicSlug !== undefined
+          ? [topicSlug]
+          : Array.isArray(existing?.topicSlugs)
+          ? (existing?.topicSlugs as unknown[])
+          : existing?.topicSlug
+          ? [existing.topicSlug]
+          : []
+      const requested = [
+        ...new Set(rawList.filter((s): s is string => typeof s === 'string' && s.trim().length > 0).map((s) => s.trim())),
+      ]
+      if (requested.length > 0) {
+        const found = await prisma.topic.findMany({ where: { slug: { in: requested } }, select: { slug: true } })
+        const foundSet = new Set(found.map((t) => t.slug))
+        const missing = requested.filter((s) => !foundSet.has(s))
+        if (missing.length > 0) {
+          return NextResponse.json(
+            {
+              error: `These topics have no ${effectiveType === 'QUIZ' ? 'quiz' : 'lesson'} page and can't be assigned as ${
+                effectiveType === 'QUIZ' ? 'a quiz' : 'an interactive lesson'
+              }: ${missing.join(', ')}. Competitive-only topics can only be assigned as Competitive Practice.`,
+            },
+            { status: 400 }
+          )
+        }
+      }
+    }
+
     // If a flashcard set is being attached, the caller must own it (mirrors POST).
     const fsid = typeof flashcardSetId === 'string' && flashcardSetId.trim() ? flashcardSetId.trim() : null
     if (fsid) {

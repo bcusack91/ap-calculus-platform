@@ -94,6 +94,8 @@ export default function SATDiagnosticPage() {
         totalQuestions: (stored.totalQuestions as number) ?? 0,
         percentage: (stored.percentage as number) ?? 0,
         estimatedScore: (stored.estimatedScore as number) ?? 0,
+        // Additive — attempts before the calibration overhaul have no range.
+        scoreRange: stored.scoreRange as DiagnosticResults['scoreRange'],
         rwScore: (stored.rwScore as number) ?? 0,
         mathScore: (stored.mathScore as number) ?? 0,
         domains,
@@ -152,7 +154,10 @@ export default function SATDiagnosticPage() {
               totalCorrect: diagnosticResults.totalCorrect,
               totalQuestions: diagnosticResults.totalQuestions,
               percentage: diagnosticResults.percentage,
+              // estimatedScore stays the single trend value; scoreRange is
+              // stored additively so range display survives reloads.
               estimatedScore: diagnosticResults.estimatedScore,
+              scoreRange: diagnosticResults.scoreRange,
               rwScore: diagnosticResults.rwScore,
               mathScore: diagnosticResults.mathScore,
               domains: diagnosticResults.domains,
@@ -208,7 +213,7 @@ export default function SATDiagnosticPage() {
       // when ?assigned= is present, a fresh generated one otherwise.
       const loadTest = async (): Promise<DiagnosticTestData> => {
         // Hard track: a 20-question all-hard-tier module instead of the
-        // 30-question mid-level screen.
+        // 36-question mid-level screen.
         if (hardModuleNumber) {
           const mod = await generateHardModule(hardModuleNumber)
           return {
@@ -408,7 +413,12 @@ export default function SATDiagnosticPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
-                    {String(lastResult.estimatedScore ?? '—')}
+                    {(() => {
+                      const r = lastResult.scoreRange as { low?: number; high?: number } | undefined
+                      return r?.low != null && r?.high != null
+                        ? `${r.low}–${r.high}`
+                        : String(lastResult.estimatedScore ?? '—')
+                    })()}
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Score</p>
                 </div>
@@ -475,19 +485,19 @@ export default function SATDiagnosticPage() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                ~30 questions across 11 domains (Reading, Writing, Math)
+                36 questions across 11 domains — most Reading &amp; Writing items are real passage questions, and about a quarter of each section comes from the hardest (700-800) tier, like the real exam
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                25 minute time limit
+                30 minute time limit
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Estimated SAT score and domain-by-domain breakdown
+                Estimated SAT score range (an estimate from a 36-question sample — expect about ±40 points) and domain-by-domain breakdown
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -499,7 +509,7 @@ export default function SATDiagnosticPage() {
 
             {/* Core Skills track: the mirror of the hard track at the other end.
                 A student near 400 gets short modules on easy-tier items instead
-                of a 30-question screen that tells them only that they missed
+                of a 36-question screen that tells them only that they missed
                 most of it. */}
             {coreSkills?.placed && coreSkills.nextModule !== null && (
               <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
@@ -627,7 +637,12 @@ export default function SATDiagnosticPage() {
                       key={h.id} href={`/diagnostic-review/${h.id}`}
                       className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
                       <span className="text-sm text-gray-700 dark:text-gray-300">
-                        Score: {String(parsed.estimatedScore ?? '—')}
+                        Score: {(() => {
+                          const r = parsed.scoreRange as { low?: number; high?: number } | undefined
+                          return r?.low != null && r?.high != null
+                            ? `${r.low}–${r.high}`
+                            : String(parsed.estimatedScore ?? '—')
+                        })()}
                       </span>
                       <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Prep | Free MCAT Practice & Review',
     description:
-      'Master the MCAT with practice questions across all 4 sections, diagnostic assessments, 18+ topic lessons, and personalized study plans.',
+      'Master the MCAT with practice questions across all 4 sections, diagnostic assessments, interactive lessons for 29 topics, and personalized study plans.',
     url: 'https://www.studymondo.com/mcat',
   },
 }
@@ -46,7 +46,7 @@ const features = [
       </svg>
     ),
     color: 'from-purple-500 to-pink-500',
-    stats: '12 passages · humanities + soc sci',
+    stats: '76 passages · humanities + soc sci',
   },
   {
     title: 'Chem/Phys Passage Practice',
@@ -106,7 +106,7 @@ const features = [
       </svg>
     ),
     color: 'from-blue-500 to-indigo-500',
-    stats: '~40 questions · 30 min',
+    stats: '45 questions · 55 min',
   },
   {
     title: 'Interactive Lessons',
@@ -118,7 +118,7 @@ const features = [
       </svg>
     ),
     color: 'from-amber-500 to-orange-500',
-    stats: '18+ lessons · All sections',
+    stats: '29 topics · 170+ lesson parts',
   },
   {
     title: 'Study Plans',
@@ -220,10 +220,16 @@ const sections = [
     topics: [
       'Psychology & Behavior',
       'Sociology',
+    ],
+    color: 'purple',
+  },
+  {
+    title: 'Strategy (All Sections)',
+    topics: [
       'Science Passage Strategy',
       'Test Day Strategy',
     ],
-    color: 'purple',
+    color: 'teal',
   },
 ]
 
@@ -243,6 +249,10 @@ const sectionColorMap: Record<string, { heading: string; icon: string }> = {
   purple: {
     heading: 'text-purple-700 dark:text-purple-400',
     icon: 'text-purple-500',
+  },
+  teal: {
+    heading: 'text-teal-700 dark:text-teal-400',
+    icon: 'text-teal-500',
   },
 }
 
@@ -270,7 +280,7 @@ export default function MCATLandingPage() {
       <CourseUniqueIntro slug="mcat" />
       <CourseHero
         courseName='MCAT'
-        tagline='Practice questions across all 4 MCAT sections, diagnostic assessments, 18+ topic lessons, study plans, and daily practice.'
+        tagline='Practice questions across all 4 MCAT sections, diagnostic assessments, 170+ interactive lesson parts, study plans, and daily practice.'
         primaryCta={{ href: '/mcat-diagnostic', label: 'Start with Diagnostic' }}
         secondaryCta={{ href: '/mcat-practice', label: 'Practice Questions' }}
         accentFrom="emerald"

@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
-import { Eye, Layers } from 'lucide-react'
+import { AlertTriangle, Eye, Layers } from 'lucide-react'
+import { frqRouteFor } from '@/lib/course-activity-routes'
 
 export interface TopicOption {
   slug: string
@@ -13,6 +14,14 @@ export interface TopicOption {
 export interface CourseGroup {
   courseSlug: string
   courseTitle: string
+  /**
+   * Which slug vocabulary the group's topics belong to (tagged by
+   * /api/teacher/topics): 'curriculum' slugs are real DB Topics with
+   * /topics/<slug> pages; 'bank' slugs exist only in a competitive question
+   * bank and are assignable ONLY as COMPETITIVE_PRACTICE. Missing (older
+   * cached payloads) is treated as 'curriculum'.
+   */
+  kind?: 'curriculum' | 'bank'
   topics: TopicOption[]
 }
 
@@ -218,12 +227,34 @@ export default function AssignmentModal({
   const needsTopics = TOPIC_SCOPED.has(form.type)
   const needsSet = form.type === 'FLASHCARD_REVIEW'
 
+  // Type-aware course-group filtering:
+  //  - 'bank' groups (competitive-only slugs, no /topics pages) are offered
+  //    only for COMPETITIVE_PRACTICE — assigned as a lesson or quiz they 404.
+  //  - FRQ_PRACTICE only offers courses that actually have a free-response
+  //    page; anything else resolves to a dead /courses link for students.
+  const offerable = courses.filter((c) => {
+    if ((c.kind ?? 'curriculum') === 'bank') return form.type === 'COMPETITIVE_PRACTICE'
+    if (form.type === 'FRQ_PRACTICE') return frqRouteFor(c.courseSlug) !== null
+    return true
+  })
+  // Chips already on the form (from editing an older assignment) can carry
+  // slugs the current type can't deliver — keep them visible and removable,
+  // marked, and block submit until they're gone. Skip the check while the
+  // course list is still loading (everything would look invalid).
+  const allowedSlugs = new Set(offerable.flatMap((c) => c.topics.map((t) => t.slug)))
+  const invalidChips =
+    needsTopics && courses.length > 0 ? form.topicSlugs.filter((s) => !allowedSlugs.has(s)) : []
+
   const validationHint = !form.title.trim()
     ? 'Add a title to continue.'
     : needsCourse && !form.courseSlug
     ? 'Choose a course to continue.'
     : needsTopics && form.topicSlugs.length === 0
     ? 'Add at least one topic to continue.'
+    : needsTopics && invalidChips.length > 0
+    ? `Remove the marked topic${invalidChips.length !== 1 ? 's' : ''} — ${
+        invalidChips.length !== 1 ? "they aren't" : "it isn't"
+      } available for this assignment type.`
     : needsSet && !form.flashcardSetId
     ? 'Choose a flashcard set to continue.'
     : null
@@ -278,8 +309,8 @@ export default function AssignmentModal({
   }
 
   const attachedCourses = classCourses ?? []
-  const pinned = courses.filter((c) => attachedCourses.includes(c.courseSlug))
-  const rest = courses.filter((c) => !attachedCourses.includes(c.courseSlug))
+  const pinned = offerable.filter((c) => attachedCourses.includes(c.courseSlug))
+  const rest = offerable.filter((c) => !attachedCourses.includes(c.courseSlug))
   const chosenCourse = courses.find((c) => c.courseSlug === form.courseSlug)
   const chosenUnit = unitOptions.find((u) => u.id === form.unitId)
   const chosenSet = (flashcardSets ?? []).find((s) => s.id === form.flashcardSetId)
@@ -355,6 +386,14 @@ export default function AssignmentModal({
                   className={inputCls}
                 >
                   <option value="">Select a course…</option>
+                  {/* An edited assignment can hold a course this type no longer
+                      offers (e.g. an FRQ course with no FRQ page) — keep it
+                      selectable so the dropdown isn't silently blank. */}
+                  {form.courseSlug && !offerable.some((c) => c.courseSlug === form.courseSlug) && (
+                    <option value={form.courseSlug}>
+                      {courses.find((c) => c.courseSlug === form.courseSlug)?.courseTitle ?? form.courseSlug} (unavailable for this type — pick another)
+                    </option>
+                  )}
                   {[...pinned, ...rest].map((c) => (
                     <option key={c.courseSlug} value={c.courseSlug}>
                       {c.courseTitle}
@@ -505,23 +544,45 @@ export default function AssignmentModal({
               })()}
               {form.topicSlugs.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {form.topicSlugs.map((slug) => (
-                    <span
-                      key={slug}
-                      className="inline-flex items-center gap-1 px-2 py-1 bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg text-xs"
-                    >
-                      {topicTitle(slug)}
-                      <button
-                        type="button"
-                        onClick={() => setForm({ ...form, topicSlugs: form.topicSlugs.filter((s) => s !== slug) })}
-                        className="text-accent hover:text-accent-dark dark:hover:text-accent-light font-bold leading-none"
-                        aria-label={`Remove ${topicTitle(slug)}`}
+                  {form.topicSlugs.map((slug) => {
+                    const invalid = invalidChips.includes(slug)
+                    return (
+                      <span
+                        key={slug}
+                        className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs ${
+                          invalid
+                            ? 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700'
+                            : 'bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted'
+                        }`}
+                        title={invalid ? 'Not available for this assignment type — remove it.' : undefined}
                       >
-                        ×
-                      </button>
-                    </span>
-                  ))}
+                        {invalid && <AlertTriangle className="w-3 h-3 shrink-0" aria-label="Not available for this assignment type" />}
+                        {topicTitle(slug)}
+                        <button
+                          type="button"
+                          onClick={() => setForm({ ...form, topicSlugs: form.topicSlugs.filter((s) => s !== slug) })}
+                          className={`font-bold leading-none ${
+                            invalid
+                              ? 'text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-100'
+                              : 'text-accent hover:text-accent-dark dark:hover:text-accent-light'
+                          }`}
+                          aria-label={`Remove ${topicTitle(slug)}`}
+                        >
+                          ×
+                        </button>
+                      </span>
+                    )
+                  })}
                 </div>
+              )}
+              {invalidChips.length > 0 && (
+                <p className="mt-1 text-xs text-amber-600 dark:text-amber-400" role="alert">
+                  {form.type === 'COMPETITIVE_PRACTICE'
+                    ? `The marked topic${invalidChips.length !== 1 ? 's' : ''} no longer exist${invalidChips.length !== 1 ? '' : 's'} — remove ${invalidChips.length !== 1 ? 'them' : 'it'}.`
+                    : `The marked topic${invalidChips.length !== 1 ? 's are' : ' is'} competitive-only (or no longer exist${invalidChips.length !== 1 ? '' : 's'}) and can't be assigned as ${
+                        form.type === 'QUIZ' ? 'a quiz' : 'an interactive lesson'
+                      } — remove ${invalidChips.length !== 1 ? 'them' : 'it'}, or switch the type to Competitive Practice.`}
+                </p>
               )}
               <p className="mt-1 text-xs text-gray-400">Add one or more topics — students complete all of them.</p>
             </div>

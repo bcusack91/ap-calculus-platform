@@ -372,13 +372,71 @@ export const MCAT_STUDY_PLANS: MCATStudyPlanTemplate[] = [
   },
 ]
 
+const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000
+
+/** Whole weeks from `from` until `to` (floor; negative if `to` is earlier). */
+export function weeksUntil(to: Date, from: Date = new Date()): number {
+  return Math.floor((to.getTime() - from.getTime()) / MS_PER_WEEK)
+}
+
+/**
+ * Which template fits a student whose exam is `weeksUntilExam` away.
+ * ≤14 weeks → 3-month intensive; ≤32 → 6-month comprehensive; else 12-month.
+ * (Thresholds allow a little slack beyond each template's nominal duration —
+ * adopting scales the schedule to the real date anyway.)
+ */
+export function recommendMCATTemplateId(weeksUntilExam: number): string {
+  if (weeksUntilExam <= 14) return '3-month-intensive'
+  if (weeksUntilExam <= 32) return '6-month-comprehensive'
+  return '12-month-mastery'
+}
+
+/**
+ * Lay a template's tasks onto the calendar from `startDate`.
+ *
+ * When `examDate` is provided (and is after `startDate`), the template's week
+ * layout is scaled proportionally so the LAST task week lands about one week
+ * before the exam:
+ *   scaledWeek = round(weekOffset × targetLastWeek / maxTemplateWeek)
+ * Compression (exam sooner than the template's duration) maps several template
+ * weeks onto the same calendar week — overflow tasks merge into the final
+ * weeks rather than being dropped, and nothing is ever due after the exam.
+ * Expansion (exam further out) stretches the same tasks across the longer
+ * runway. Without an examDate, behavior is unchanged (template weeks as-is).
+ */
 export function resolveMCATTemplateTasks(
   template: MCATStudyPlanTemplate,
   startDate: Date,
+  examDate?: Date | null,
 ): { title: string; type: string; topicSlug?: string; dueDate: Date; sortOrder: number }[] {
+  const maxTemplateWeek = template.tasks.reduce((max, t) => Math.max(max, t.weekOffset), 0)
+
+  // Only a real, future-of-start exam date participates in scaling/clamping —
+  // a past or invalid date falls back to the unscaled template layout.
+  const effectiveExam =
+    examDate && !Number.isNaN(examDate.getTime()) && examDate.getTime() > startDate.getTime()
+      ? examDate
+      : null
+
+  let scale = 1
+  if (effectiveExam && maxTemplateWeek > 0) {
+    // The exam falls during week `weeksAvailable`; aim the last task week at
+    // ~1 week before it (never below week 0 — exam inside a week ⇒ everything
+    // this week, spread by dayOfWeek).
+    const weeksAvailable = Math.max(1, weeksUntil(effectiveExam, startDate))
+    const targetLastWeek = Math.max(0, weeksAvailable - 1)
+    scale = targetLastWeek / maxTemplateWeek
+  }
+
   return template.tasks.map((t, i) => {
+    const scaledWeek = scale === 1 ? t.weekOffset : Math.round(t.weekOffset * scale)
     const dueDate = new Date(startDate)
-    dueDate.setDate(dueDate.getDate() + t.weekOffset * 7 + t.dayOfWeek)
+    dueDate.setDate(dueDate.getDate() + scaledWeek * 7 + t.dayOfWeek)
+    // Defensive: never schedule past the exam (only reachable when the exam is
+    // under a week away and dayOfWeek overshoots it).
+    if (effectiveExam && dueDate.getTime() >= effectiveExam.getTime()) {
+      dueDate.setTime(effectiveExam.getTime() - 24 * 60 * 60 * 1000)
+    }
     return {
       title: t.title,
       type: t.type,

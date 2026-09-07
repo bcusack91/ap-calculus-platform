@@ -2,8 +2,10 @@
  * MCAT High-Yield Reference Sheet Data
  *
  * Contains high-yield equations, constants, and facts the MCAT expects
- * test-takers to have memorized (the exam provides no equation sheet).
- * Organized by the three science sections of the exam.
+ * test-takers to have memorized (the exam provides no equation sheet),
+ * organized by the three science sections of the exam — plus a CARS
+ * strategy sheet (question-type taxonomy, timing, and trap patterns),
+ * since CARS tests skills rather than content.
  *
  * Formulas use inline KaTeX (`$...$`). Backslashes are doubled in the
  * TypeScript source so the rendered string contains a single backslash.
@@ -404,6 +406,87 @@ export const MCAT_REFERENCE_SHEETS: Record<string, MCATReferenceSheet> = {
           'Network — web of social ties',
           'Organization — formal coordinated structure (bureaucracy)',
           'Dramaturgy (Goffman) — front-stage vs. back-stage self-presentation',
+        ],
+      },
+    ],
+  },
+
+  cars: {
+    name: 'MCAT CARS Strategy Reference',
+    emoji: '📖',
+    sections: [
+      {
+        title: 'Section at a Glance & Timing Math',
+        items: [
+          '9 passages, 53 questions, 90 minutes — no outside knowledge tested',
+          '$90 \\div 9 = 10$ min per passage: ~3–4 min reading + ~6 min for its 5–7 questions',
+          '$90 \\div 53 \\approx 1.7$ min (~100 s) per question on average',
+          'Checkpoints: passage 3 done by ~30 min, passage 6 by ~60 min',
+          'Passages split roughly half humanities, half social sciences',
+          'Every correct answer is supported by passage text — never by facts you know',
+        ],
+      },
+      {
+        title: 'Foundations of Comprehension (~30%)',
+        items: [
+          'Asks: main idea, author\'s purpose, meaning of a word or phrase in context',
+          'Signal stems: "central thesis," "primary purpose," "as used in the passage, X most nearly means"',
+          'Main idea = the claim most of the passage works to support — not a one-paragraph detail',
+          'Context-definition questions: use the surrounding sentences, not the dictionary meaning',
+          'Correct answers paraphrase the passage in new words rather than echoing it',
+        ],
+      },
+      {
+        title: 'Reasoning Within the Text (~30%)',
+        items: [
+          'Asks: how claims relate — evidence, structure, tone, and the author\'s credibility',
+          'Signal stems: "mentions X in order to," "which claim is LEAST supported," "the relationship between paragraphs"',
+          'Track each sentence\'s job: claim, example, concession, or rebuttal',
+          'Attribute views carefully — the author\'s own position vs. a critic the author quotes',
+          'Weigh hedged language ("perhaps," "may") against committed language ("clearly," "must")',
+        ],
+      },
+      {
+        title: 'Reasoning Beyond the Text (~40%)',
+        items: [
+          'Two flavors: apply passage ideas to a new situation; judge how new info affects the argument',
+          'Signal stems: "would most weaken," "the author would most likely respond," "most analogous to"',
+          'Extend the author\'s logic — never your own opinion or outside facts',
+          'Analogy questions: match the relationship\'s structure, not the subject matter',
+          'For new information, ask: does it strengthen, weaken, or leave the thesis untouched?',
+        ],
+      },
+      {
+        title: 'Reading the Passage',
+        items: [
+          'Read for structure: find the thesis, then what each paragraph does for it',
+          'Mark sparingly: names, pivot words ("but," "however," "yet"), conclusions ("thus," "therefore")',
+          'Tone lives in word choice — "so-called," "remarkably," "fails to" reveal the author\'s attitude',
+          'Separate what the author believes from views the author merely reports',
+          'Don\'t memorize details — note where they live and return only if a question asks',
+          'Finish each passage with a one-sentence summary: main idea + author\'s attitude',
+        ],
+      },
+      {
+        title: 'Trap-Answer Patterns',
+        items: [
+          'Out of scope — sounds true, but the passage never discusses it',
+          'Extreme language — "always," "never," "only," "all" (authors usually hedge)',
+          'Half right — starts correct, then sneaks in an unsupported second half',
+          'Opposite / distortion — reverses or overstates what the author actually claims',
+          'Faulty attribution — a view the author reports (or refutes) presented as the author\'s own',
+          'Familiar words, wrong answer — recycles passage phrasing; correct answers usually paraphrase',
+        ],
+      },
+      {
+        title: 'Elimination Heuristics',
+        items: [
+          'Prove it: keep an answer only if you can point to the passage text that supports it',
+          'Cut the confidently wrong first, then re-test survivors against the exact question stem',
+          'Torn between two? The more moderate, better-supported choice usually wins',
+          'Re-read the stem before committing — many misses answer a different question than asked',
+          'No penalty for guessing: never leave blanks — pick, flag, move on',
+          'Cap your losses: no passage is worth 15 minutes; guess the killer question and bank the time',
         ],
       },
     ],

@@ -225,6 +225,102 @@ function DataVisual({
 }
 
 /* ------------------------------------------------------------------ */
+/*  Remediation plan types + row                                       */
+/* ------------------------------------------------------------------ */
+
+type PlanTopicStatus = {
+  slug: string
+  name: string
+  priority: 'high' | 'medium' | 'low'
+  topicPath: string
+  // What actually exists for this topic (plan-status enrichment) — older
+  // cached responses may omit these, so all are optional.
+  hasLesson?: boolean
+  lessonPath?: string | null
+  flashcardCount?: number
+  flashcardsPath?: string
+  hasExitQuiz?: boolean
+  exitQuizPath?: string | null
+  entranceSatisfied: boolean
+  bestExitScorePercent: number | null
+  exitSatisfied: boolean
+  isSatisfied: boolean
+}
+
+type PlanStatus = {
+  hasDiagnostic: boolean
+  canRetakeDiagnostic: boolean
+  requiredScorePercent: number
+  recommendedTopics: PlanTopicStatus[]
+  pendingTopics: PlanTopicStatus[]
+  summary?: {
+    totalRecommended: number
+    completed: number
+    pending: number
+  }
+}
+
+/**
+ * One pending remediation topic, rendered as a row of DIRECT actions — the
+ * interactive lesson (only when one really exists), flashcards, and the
+ * practice quiz that clears the requirement — instead of a bare topic link
+ * (most MCAT subtopic pages have no written lesson to land on).
+ */
+function RemediationTopicRow({ topic }: { topic: PlanTopicStatus }) {
+  const flashcardCount = topic.flashcardCount ?? 0
+  const hasActions = !!topic.hasLesson || flashcardCount > 0 || !!topic.hasExitQuiz
+  return (
+    <div className="rounded-lg border border-amber-200 bg-white px-3 py-2.5 dark:border-amber-800 dark:bg-gray-800">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <span className="flex items-center gap-2">
+          <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{topic.name}</span>
+          <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-semibold ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+            {topic.priority === 'high' ? 'High' : 'Med'}
+          </span>
+        </span>
+        {topic.bestExitScorePercent !== null && (
+          <span className="text-xs text-gray-500 dark:text-gray-400">best quiz: {topic.bestExitScorePercent}%</span>
+        )}
+      </div>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {topic.hasLesson && topic.lessonPath ? (
+          <Link
+            href={topic.lessonPath}
+            className="rounded-md bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white transition hover:bg-emerald-700"
+          >
+            Lesson
+          </Link>
+        ) : null}
+        {flashcardCount > 0 ? (
+          <Link
+            href={topic.flashcardsPath ?? `/flashcards/${topic.slug}`}
+            className="rounded-md border border-emerald-300 px-2.5 py-1 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+          >
+            Flashcards ({flashcardCount})
+          </Link>
+        ) : null}
+        {topic.hasExitQuiz && topic.exitQuizPath ? (
+          <Link
+            href={topic.exitQuizPath}
+            className="rounded-md border border-emerald-300 px-2.5 py-1 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+          >
+            Practice quiz
+          </Link>
+        ) : null}
+        {!hasActions && (
+          <Link
+            href={topic.topicPath}
+            className="rounded-md border border-amber-300 px-2.5 py-1 text-xs font-semibold text-amber-700 transition hover:bg-amber-50 dark:border-amber-700 dark:text-amber-300 dark:hover:bg-amber-900/20"
+          >
+            Open topic →
+          </Link>
+        )}
+      </div>
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
@@ -237,30 +333,6 @@ export default function MCATDiagnosticPage() {
   // generating, so the whole class answers identical questions.
   const assignedId = searchParams.get('assigned')
   // MCAT has a single form — challengeForm not used
-
-  type PlanTopicStatus = {
-    slug: string
-    name: string
-    priority: 'high' | 'medium' | 'low'
-    topicPath: string
-    entranceSatisfied: boolean
-    bestExitScorePercent: number | null
-    exitSatisfied: boolean
-    isSatisfied: boolean
-  }
-
-  type PlanStatus = {
-    hasDiagnostic: boolean
-    canRetakeDiagnostic: boolean
-    requiredScorePercent: number
-    recommendedTopics: PlanTopicStatus[]
-    pendingTopics: PlanTopicStatus[]
-    summary?: {
-      totalRecommended: number
-      completed: number
-      pending: number
-    }
-  }
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<MCATDiagnosticTestData | null>(null)
@@ -889,18 +961,11 @@ export default function MCATDiagnosticPage() {
                   Next diagnostic is locked until remediation is complete
                 </h4>
                 <p className="mb-3 text-xs text-amber-800 dark:text-amber-300">
-                  For each recommended topic, either score 100% on the entrance quiz or score at least {planStatus.requiredScorePercent}% on the exit quiz.
+                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s practice quiz clears its requirement (finishing its lesson does too).
                 </p>
                 <div className="space-y-2">
                   {planStatus.pendingTopics.slice(0, 6).map((topic) => (
-                    <Link
-                      key={topic.slug}
-                      href={topic.topicPath}
-                      className="flex items-center justify-between rounded-lg border border-amber-200 bg-white px-3 py-2 text-sm text-gray-800 hover:border-amber-400 dark:border-amber-800 dark:bg-gray-800 dark:text-gray-200"
-                    >
-                      <span>{topic.name}</span>
-                      <span className="text-amber-600 dark:text-amber-400">Study →</span>
-                    </Link>
+                    <RemediationTopicRow key={topic.slug} topic={topic} />
                   ))}
                 </div>
               </div>
@@ -977,7 +1042,7 @@ export default function MCATDiagnosticPage() {
               </div>
               <p className="mb-3 text-sm text-emerald-700 dark:text-emerald-400">
                 From your last diagnostic — based on the questions you missed. Clear each module
-                (100% entrance quiz, or ≥{planStatus.requiredScorePercent}% exit quiz) to unlock your next diagnostic.
+                — finish its lesson, or score ≥{planStatus.requiredScorePercent}% on its practice quiz — to unlock your next diagnostic.
               </p>
               <div className="space-y-2">
                 {planStatus.recommendedTopics.map((topic, i) => (
@@ -1071,18 +1136,11 @@ export default function MCATDiagnosticPage() {
                   Complete your recommended modules before the next diagnostic.
                 </p>
                 <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">
-                  Requirement: 100% on entrance quiz, or at least {planStatus.requiredScorePercent}% on exit quiz.
+                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s practice quiz clears its requirement (finishing its lesson does too).
                 </p>
                 <div className="mt-3 space-y-2">
                   {planStatus.pendingTopics.slice(0, 5).map((topic) => (
-                    <Link
-                      key={topic.slug}
-                      href={topic.topicPath}
-                      className="flex items-center justify-between rounded-md border border-amber-200 bg-white px-3 py-2 text-sm text-gray-800 hover:border-amber-400 dark:border-amber-800 dark:bg-gray-800 dark:text-gray-200"
-                    >
-                      <span>{topic.name}</span>
-                      <span className="text-amber-600 dark:text-amber-400">Open →</span>
-                    </Link>
+                    <RemediationTopicRow key={topic.slug} topic={topic} />
                   ))}
                 </div>
               </div>

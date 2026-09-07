@@ -13,6 +13,8 @@ interface Prediction {
   rwScore: number
   mathScore: number
   totalScore: number
+  /** Honest projection window (±30-50 by evidence); older cached payloads may omit it. */
+  range?: { low: number; high: number }
   percentile: number
   confidence: 'high' | 'medium' | 'low'
 }
@@ -273,10 +275,17 @@ export default function ScorePredictorPage() {
               <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">
                 Predicted Score
               </p>
-              <p className={`text-7xl font-black ${scoreColor(prediction.totalScore)}`}>
-                {prediction.totalScore}
+              <p className={`${prediction.range ? 'text-6xl' : 'text-7xl'} font-black ${scoreColor(prediction.totalScore)}`}>
+                {prediction.range
+                  ? `${prediction.range.low}–${prediction.range.high}`
+                  : prediction.totalScore}
               </p>
               <p className="mt-1 text-sm text-gray-400">out of 1600</p>
+              {prediction.range && (
+                <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+                  Estimate from your quizzes, diagnostics, and practice tests — expect a score within this range, not an exact number
+                </p>
+              )}
               <div className="mt-3 flex items-center justify-center gap-3">
                 <span
                   className={`rounded-full px-3 py-1 text-xs font-semibold ${confidenceBadge(prediction.confidence)}`}

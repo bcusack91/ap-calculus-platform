@@ -52,6 +52,13 @@ interface QueueSearchPanelProps {
    * "practice vs AI instead" button). The hint text always appears.
    */
   fallback?: ReactNode
+  /**
+   * Seconds before the fallback surfaces. Defaults to
+   * `QUEUE_FALLBACK_AFTER_SEC` (45). Pages queueing on slugs that rarely
+   * match live (e.g. `multi:` composite topic mixes) can shorten this so
+   * students aren't left waiting on a near-impossible pairing.
+   */
+  fallbackAfterSec?: number
 }
 
 /**
@@ -59,9 +66,9 @@ interface QueueSearchPanelProps {
  * animated pulse, live elapsed time, and — after ~45s — an honest fallback
  * pointing at ways to play that don't need a concurrent opponent.
  */
-export default function QueueSearchPanel({ position, estimatedWait, onCancel, fallback }: QueueSearchPanelProps) {
+export default function QueueSearchPanel({ position, estimatedWait, onCancel, fallback, fallbackAfterSec = QUEUE_FALLBACK_AFTER_SEC }: QueueSearchPanelProps) {
   const elapsed = useQueueElapsed(true)
-  const showFallback = elapsed >= QUEUE_FALLBACK_AFTER_SEC
+  const showFallback = elapsed >= fallbackAfterSec
 
   return (
     <div className="text-center">

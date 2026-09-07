@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { MCAT_STUDY_PLANS, resolveMCATTemplateTasks } from '@/data/mcat-study-plans'
+import { MCAT_STUDY_PLANS, resolveMCATTemplateTasks, weeksUntil, recommendMCATTemplateId } from '@/data/mcat-study-plans'
 import { applyAdaptivePriority } from '@/lib/adaptive-study-plan'
 
 export async function POST(request: Request) {
@@ -23,7 +23,16 @@ export async function POST(request: Request) {
   }
 
   const start = startDate ? new Date(startDate) : new Date()
-  const resolvedTasks = resolveMCATTemplateTasks(template, start)
+
+  // Exam-date-aware scheduling: when the student gave a real exam date, scale
+  // the template's week layout to the weeks actually remaining (compressing or
+  // stretching; overflow merges into the final weeks) so no task is ever due
+  // after their test. Invalid/past dates fall back to the unscaled template.
+  const parsedExam = examDate ? new Date(examDate) : null
+  const exam = parsedExam && !Number.isNaN(parsedExam.getTime()) && parsedExam.getTime() > start.getTime()
+    ? parsedExam
+    : null
+  const resolvedTasks = resolveMCATTemplateTasks(template, start, exam)
 
   // Adaptive (#4): front-load weak areas from the latest MCAT diagnostic AND the
   // latest full-length exam (distinct categories, merged + deduped by slug). No-op if none.
@@ -39,7 +48,7 @@ export async function POST(request: Request) {
       title: template.title,
       goalType: 'CUSTOM',
       courseSlug: 'mcat-prep',
-      examDate: examDate ? new Date(examDate) : defaultExamDate,
+      examDate: exam ?? defaultExamDate,
       isActive: true,
       tasks: {
         create: tasks,
@@ -48,7 +57,16 @@ export async function POST(request: Request) {
     include: { tasks: { orderBy: { sortOrder: 'asc' } } },
   })
 
-  return NextResponse.json(plan)
+  // Additive fields only — existing consumers read the plan object unchanged.
+  return NextResponse.json({
+    ...plan,
+    scheduling: {
+      scaledToExamDate: exam !== null,
+      weeksUntilExam: exam ? Math.max(0, weeksUntil(exam, start)) : null,
+      templateDurationWeeks: template.durationWeeks,
+      recommendedTemplateId: exam ? recommendMCATTemplateId(weeksUntil(exam, start)) : null,
+    },
+  })
 }
 
 export async function GET() {

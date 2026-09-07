@@ -517,13 +517,19 @@ export function DiagnosticResultsView({
           </p>
         </div>
 
-        {/* Estimated Score */}
+        {/* Estimated Score — shown as a range: a short diagnostic cannot
+            resolve a score more finely, and a bare number implies it can. */}
         <div className="mb-8 text-center">
           <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">
             Estimated SAT Score
           </p>
           <p className="text-5xl font-black text-accent dark:text-accent-muted">
-            {results.estimatedScore}
+            {results.scoreRange
+              ? `${results.scoreRange.low}–${results.scoreRange.high}`
+              : results.estimatedScore}
+          </p>
+          <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+            Estimate from a {results.totalQuestions}-question sample — expect about ±{results.scoreRange ? Math.round((results.scoreRange.high - results.scoreRange.low) / 2) : 40} points
           </p>
           <div className="mt-2 flex justify-center gap-6 text-sm">
             <span className="text-blue-600 dark:text-blue-400">

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { MathText } from '@/components/MathText'
 import {
   MCAT_SECTIONS,
   generateSectionTest,
@@ -40,6 +41,21 @@ interface ModuleRecommendation {
   percentage: number
   correct: number
   total: number
+}
+
+/**
+ * Truncate review-screen question text without cutting inside a `$...$` LaTeX
+ * run (which would leave raw, unrenderable source). If the cut lands mid-math,
+ * back up to before the opening delimiter.
+ */
+function truncateMathSafe(text: string, max: number): string {
+  if (text.length <= max) return text
+  let cut = text.slice(0, max)
+  const dollarCount = (cut.match(/\$/g) ?? []).length
+  if (dollarCount % 2 === 1) {
+    cut = cut.slice(0, cut.lastIndexOf('$'))
+  }
+  return `${cut}…`
 }
 
 function formatTopicTitleFromSlug(slug: string): string {
@@ -286,7 +302,7 @@ export default function MCATractricePage() {
                     >
                       <div className="flex items-start justify-between mb-2">
                         <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                          Q{i + 1}: {q.question.slice(0, 120)}{q.question.length > 120 ? '…' : ''}
+                          Q{i + 1}: <MathText inline text={truncateMathSafe(q.question, 120)} />
                         </p>
                         <span className={`shrink-0 ml-2 text-sm font-bold ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
                           {isCorrect ? '✓' : '✗'}
@@ -294,14 +310,15 @@ export default function MCATractricePage() {
                       </div>
                       {!isCorrect && (
                         <p className="text-xs text-gray-600 dark:text-gray-400">
-                          Your answer: {userAnswer !== null ? q.options[userAnswer] : 'Skipped'} · 
-                          Correct: {q.options[q.correctAnswer]}
+                          Your answer: {userAnswer !== null ? <MathText inline text={q.options[userAnswer]} /> : 'Skipped'} ·{' '}
+                          Correct: <MathText inline text={q.options[q.correctAnswer]} />
                         </p>
                       )}
                       {q.explanation && (
-                        <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                          {q.explanation}
-                        </p>
+                        <MathText
+                          text={q.explanation}
+                          className="mt-1 text-xs text-gray-500 dark:text-gray-400"
+                        />
                       )}
                     </div>
                   )
@@ -405,9 +422,12 @@ export default function MCATractricePage() {
 
             {/* Question */}
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                {q.question}
-              </p>
+              {/* Bank questions carry $…$ LaTeX — render through the shared
+                  MathText pipeline like the other MCAT surfaces. */}
+              <MathText
+                text={q.question}
+                className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200"
+              />
 
               {/* Options */}
               <div className="space-y-2">
@@ -428,7 +448,7 @@ export default function MCATractricePage() {
                       }`}
                     >
                       <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>
-                      {opt}
+                      <MathText inline text={opt} />
                     </button>
                   )
                 })}
