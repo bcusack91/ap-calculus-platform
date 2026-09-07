@@ -103,15 +103,19 @@ describe('mapToACTScore (clamps to 1..36)', () => {
 })
 
 /*
- * mapToMCATScore was migrated from a flat linear 472 + blend*56 mapping onto
- * the shared percentile-anchored section curve in @/lib/mcat-scoring (the same
- * curve behind the diagnostic and full-length exam), so all four MCAT scoring
- * surfaces agree. The pinned expectations below changed accordingly:
- *   - endpoints and the 50% midpoint are unchanged (472 / 500 / 528),
- *   - mid-band blends shift slightly because the anchor curve is steeper near
- *     the extremes and "stickier" in the middle than the flat line, e.g.
- *     blended 0.75 now maps to 4 x 129 = 516 (was 514) and blended 0.25 to
- *     4 x 122 = 488 (was 486).
+ * mapToMCATScore routes through the shared section curve in @/lib/mcat-scoring
+ * (the same curve behind the diagnostic and full-length exam), so all four
+ * MCAT scoring surfaces agree. The pinned expectations below changed when that
+ * curve was re-anchored to the shape of released AAMC practice-exam
+ * conversions: the old table put 125 at 50% raw, conflating the scale midpoint
+ * with median performance, when the real median test-taker answers ~70%
+ * correct. Under the new anchors (0->118, 35%->119, 50%->121, 60%->123,
+ * 70%->125, 83%->128, 92%->130, 100%->132):
+ *   - endpoints are unchanged (472 / 528),
+ *   - a 50% blend now maps to 4 x 121 = 484 (was 500) — below median, as it
+ *     should be — and 70% is the new 500,
+ *   - mid-band blends drop by ~8-14 total, e.g. blended 0.75 -> 4 x 126 = 504
+ *     (was 516) and blended 0.25 -> 4 x 119 = 476 (was 488).
  * The test's intent is preserved: monotonicity, 472..528 bounds, sensible
  * mixed-input behavior, and the 75/25 quiz/mastery blend weighting.
  */
@@ -124,18 +128,21 @@ describe('mapToMCATScore (blends 75% quiz + 25% mastery -> 472..528, anchor curv
     expect(mapToMCATScore(0, 0)).toBe(472)
   })
 
-  it('maps a 50% blended student to the 500 midpoint (anchor: 50% -> 125/section)', () => {
-    expect(mapToMCATScore(0.5, 0.5)).toBe(500)
+  it('maps a 50% blended student to 484 (anchor: 50% -> 121/section, below median)', () => {
+    expect(mapToMCATScore(0.5, 0.5)).toBe(484)
+  })
+
+  it('maps a 70% blended student to the 500 median (anchor: 70% -> 125/section)', () => {
+    expect(mapToMCATScore(0.7, 0.7)).toBe(500)
   })
 
   it('weights quizzes at 75% of the blend', () => {
-    // quiz 1.0, mastery 0 -> blended 0.75 -> per-section 129 -> 516
-    // (formerly 514 under the flat linear map; the anchor curve sits slightly
-    // higher between the 67%->127 and 83%->130 landmarks)
-    expect(mapToMCATScore(1, 0)).toBe(516)
-    // quiz 0, mastery 1.0 -> blended 0.25 -> per-section 122 -> 488
-    // (formerly 486; the curve climbs faster over the 0%->118..33%->123 leg)
-    expect(mapToMCATScore(0, 1)).toBe(488)
+    // quiz 1.0, mastery 0 -> blended 0.75 -> between 70%->125 and 83%->128:
+    // t = 0.05/0.13 ≈ 0.385 -> 125 + 0.385*3 ≈ 126.15 -> 126/section -> 504
+    expect(mapToMCATScore(1, 0)).toBe(504)
+    // quiz 0, mastery 1.0 -> blended 0.25 -> between 0%->118 and 35%->119:
+    // t = 0.25/0.35 ≈ 0.714 -> 118.71 -> 119/section -> 476
+    expect(mapToMCATScore(0, 1)).toBe(476)
     // And quizzes must dominate: strong quizzes beat strong mastery.
     expect(mapToMCATScore(1, 0)).toBeGreaterThan(mapToMCATScore(0, 1))
   })
@@ -165,7 +172,7 @@ describe('mapToMCATScore (blends 75% quiz + 25% mastery -> 472..528, anchor curv
 
   describe('with per-section quiz averages', () => {
     it('scales each provided section through the anchor curve and sums', () => {
-      // All four sections at 50% with 50% mastery -> 4 x 125 = 500, matching
+      // All four sections at 50% with 50% mastery -> 4 x 121 = 484, matching
       // the sectionless call.
       expect(
         mapToMCATScore(0.5, 0.5, {
@@ -174,21 +181,22 @@ describe('mapToMCATScore (blends 75% quiz + 25% mastery -> 472..528, anchor curv
           'bio-biochem': 0.5,
           'psych-soc': 0.5,
         }),
-      ).toBe(500)
+      ).toBe(484)
     })
 
     it('rewards a strong section without inflating the others (mixed inputs)', () => {
       // Chem/Phys perfect, others at 50%, mastery 50%:
-      // chem-phys blend 0.875 -> 131; others 125 each -> 506.
+      // chem-phys blend 0.875 -> midway between 83%->128 and 92%->130 -> 129;
+      // others 121 each -> 129 + 3*121 = 492.
       const mixed = mapToMCATScore(0.5, 0.5, {
         'chem-phys': 1,
         cars: 0.5,
         'bio-biochem': 0.5,
         'psych-soc': 0.5,
       })
-      expect(mixed).toBe(506)
-      // Strictly better than uniform 50%, but far from the 528 ceiling.
-      expect(mixed).toBeGreaterThan(500)
+      expect(mixed).toBe(492)
+      // Strictly better than uniform 50% (484), but far from the 528 ceiling.
+      expect(mixed).toBeGreaterThan(484)
       expect(mixed).toBeLessThan(520)
     })
 
@@ -197,9 +205,9 @@ describe('mapToMCATScore (blends 75% quiz + 25% mastery -> 472..528, anchor curv
       expect(mapToMCATScore(0.5, 0.5, { cars: 0.5 })).toBe(mapToMCATScore(0.5, 0.5))
       // Only CARS provided, weaker than overall: total drops by exactly the
       // CARS section's shortfall. With the 75/25 blend, cars quiz 0 + mastery
-      // 0.5 -> blend 0*0.75 + 0.5*0.25 = 0.125 -> 120 on the anchor curve
-      // (vs overall 125), so 500 - (125 - 120) = 495.
-      expect(mapToMCATScore(0.5, 0.5, { cars: 0 })).toBe(500 - (125 - 120))
+      // 0.5 -> blend 0*0.75 + 0.5*0.25 = 0.125 -> 118.36 -> 118 on the anchor
+      // curve (vs overall 121), so 484 - (121 - 118) = 481.
+      expect(mapToMCATScore(0.5, 0.5, { cars: 0 })).toBe(484 - (121 - 118))
     })
 
     it('stays within 472..528 even with extreme section inputs', () => {

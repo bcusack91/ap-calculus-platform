@@ -34,8 +34,8 @@ interface PredictionData {
   confidence: 'high' | 'medium' | 'low'
   sections?: Section[]
   /**
-   * Honest projection window around primaryScore (SAT sends this; course
-   * predictors that return only a point estimate simply omit it).
+   * Honest projection window around primaryScore (SAT and MCAT send this;
+   * course predictors that return only a point estimate simply omit it).
    */
   range?: { low: number; high: number }
 }

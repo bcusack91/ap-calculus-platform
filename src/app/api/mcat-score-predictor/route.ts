@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { gatherSubjectData, mapToMCATScore, mcatSectionForTopicSlug } from '@/lib/score-predictor-utils'
-import { sectionScaledScore } from '@/lib/mcat-scoring'
+import { sectionScaledScore, projectionRange } from '@/lib/mcat-scoring'
 import type { MCATSection } from '@/data/mcat/types'
 import { MCAT_SECTION_META, MCAT_SECTION_ORDER } from '@/data/mcat/types'
 
@@ -77,7 +77,16 @@ export async function GET() {
     })
 
     return NextResponse.json({
-      prediction: { primaryScore: predictedScore, maxScore: 528, confidence, sections },
+      prediction: {
+        primaryScore: predictedScore,
+        maxScore: 528,
+        confidence,
+        // Additive: honest ±2-4 band keyed to the same evidence tiers as
+        // `confidence` (quiz volume). The shared ScorePredictor renders the
+        // range as the headline when present, falling back to the point score.
+        range: projectionRange(predictedScore, confidence),
+        sections,
+      },
       stats,
       trend,
     })

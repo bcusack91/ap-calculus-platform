@@ -10,6 +10,7 @@ import {
   type MCATDiagnosticTestData,
   type MCATDiagnosticResults,
 } from '@/data/mcat-practice/diagnostic-generator'
+import { projectionRange } from '@/lib/mcat-scoring'
 import { trackCustomEvent } from '@/lib/analytics'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import { MathText } from '@/components/MathText'
@@ -499,6 +500,10 @@ export default function MCATDiagnosticPage() {
             totalQuestions: diagnosticResults.totalQuestions,
             percentage: diagnosticResults.percentage,
             estimatedScore: diagnosticResults.estimatedScore,
+            // Additive: honest ±3 band around the estimate (one short
+            // diagnostic = medium evidence). estimatedScore semantics are
+            // unchanged — trend rows keep reading it as the point estimate.
+            scoreRange: projectionRange(diagnosticResults.estimatedScore, 'medium'),
             chemPhysScore: diagnosticResults.chemPhysScore,
             carsScore: diagnosticResults.carsScore,
             bioBiochemScore: diagnosticResults.bioBiochemScore,
@@ -766,10 +771,22 @@ export default function MCATDiagnosticPage() {
             <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Total</p>
-                <p className="text-4xl font-black text-emerald-600 dark:text-emerald-400">
-                  {results.estimatedScore}
+                {(() => {
+                  // One short diagnostic = medium evidence -> honest ±3 band;
+                  // the point estimate is de-emphasized below it.
+                  const range = projectionRange(results.estimatedScore, 'medium')
+                  return (
+                    <p className="text-4xl font-black text-emerald-600 dark:text-emerald-400">
+                      {range.low}–{range.high}
+                    </p>
+                  )
+                })()}
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  midpoint {results.estimatedScore} · out of 528
                 </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">out of 528</p>
+                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                  Estimated from {results.totalQuestions} questions — expect a score within this band
+                </p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>

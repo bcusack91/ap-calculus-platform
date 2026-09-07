@@ -28,7 +28,7 @@ import Link from 'next/link'
 import MCATFigure from '@/components/MCATFigure'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
-import { scoreMCAT, type MCATScoreReport } from '@/lib/mcat-scoring'
+import { scoreMCAT, projectionRange, type MCATScoreReport } from '@/lib/mcat-scoring'
 import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
 import { MCAT_SECTION_META, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import 'katex/dist/katex.min.css'
@@ -449,7 +449,7 @@ export default function MCATPassageRunner({
               <div className="my-6 rounded-2xl border border-blue-200 bg-white p-6 text-center shadow-sm dark:border-blue-800 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Estimated {singleSection.short} section score</p>
                 <p className="text-5xl font-black text-blue-600 dark:text-blue-400">{singleSection.scaled}</p>
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{singleSection.correct}/{singleSection.total} correct · scale 118–132</p>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{singleSection.correct}/{singleSection.total} correct · scale 118–132 · typically ±1</p>
               </div>
               <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">Scaled scores are estimates from an unequated curve — use them for relative feedback, not as an official prediction.</p>
               <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-900/20">
@@ -466,11 +466,20 @@ export default function MCATPassageRunner({
           )}
           {mode === 'exam' && !singleSection && (
             <>
-              <div className="my-6 rounded-2xl border border-blue-200 bg-white p-6 text-center shadow-sm dark:border-blue-800 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Estimated total score</p>
-                <p className="text-5xl font-black text-blue-600 dark:text-blue-400">{report.total}</p>
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{report.percentileLabel} · scale 472–528</p>
-              </div>
+              {(() => {
+                // One full-length from unequated practice items = medium
+                // evidence, so the honest headline is a ±3 band, with the
+                // point estimate de-emphasized below it.
+                const range = projectionRange(report.total, 'medium')
+                return (
+                  <div className="my-6 rounded-2xl border border-blue-200 bg-white p-6 text-center shadow-sm dark:border-blue-800 dark:bg-gray-800">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Estimated total score</p>
+                    <p className="text-5xl font-black text-blue-600 dark:text-blue-400">{range.low}–{range.high}</p>
+                    <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">midpoint {report.total} · {report.percentileLabel} · scale 472–528</p>
+                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">Estimate from practice items — expect a score within this band</p>
+                  </div>
+                )
+              })()}
               <div className="mb-6 grid gap-3 sm:grid-cols-2">
                 {report.sections.map((s) => (
                   <div key={s.section} className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">

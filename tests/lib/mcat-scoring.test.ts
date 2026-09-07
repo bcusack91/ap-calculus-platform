@@ -1,7 +1,14 @@
 import { describe, it, expect } from 'vitest'
-import { sectionScaledScore, scoreMCAT } from '@/lib/mcat-scoring'
+import { sectionScaledScore, scoreMCAT, projectionRange } from '@/lib/mcat-scoring'
 import type { MCATSection } from '@/data/mcat/types'
 
+/*
+ * The pinned values below changed when the curve was re-anchored to the shape
+ * of released AAMC practice-exam conversions. The old table put 125 at 50%
+ * raw, conflating the scale midpoint with median performance; on real AAMC
+ * exams the MEDIAN test-taker answers ~70% correct, so 70% → 125 and 50% raw
+ * is well below median (121). See the calibration note in mcat-scoring.ts.
+ */
 describe('sectionScaledScore', () => {
   it('maps 0% correct to the floor of 118', () => {
     expect(sectionScaledScore(0)).toBe(118)
@@ -11,14 +18,19 @@ describe('sectionScaledScore', () => {
     expect(sectionScaledScore(1)).toBe(132)
   })
 
-  it('maps the 50% midpoint anchor to 125', () => {
-    expect(sectionScaledScore(0.5)).toBe(125)
+  it('maps 50% raw to 121 — below-median, NOT the 125 scale midpoint', () => {
+    expect(sectionScaledScore(0.5)).toBe(121)
   })
 
-  it('hits the published anchor points exactly', () => {
-    expect(sectionScaledScore(0.33)).toBe(123)
-    expect(sectionScaledScore(0.67)).toBe(127)
-    expect(sectionScaledScore(0.83)).toBe(130)
+  it('maps ~70% raw (median performance on real AAMC forms) to the 125 median score', () => {
+    expect(sectionScaledScore(0.7)).toBe(125)
+  })
+
+  it('hits the AAMC-conversion anchor points exactly', () => {
+    expect(sectionScaledScore(0.35)).toBe(119)
+    expect(sectionScaledScore(0.6)).toBe(123)
+    expect(sectionScaledScore(0.83)).toBe(128)
+    expect(sectionScaledScore(0.92)).toBe(130)
   })
 
   it('clamps inputs below 0 to the floor', () => {
@@ -29,12 +41,12 @@ describe('sectionScaledScore', () => {
     expect(sectionScaledScore(5)).toBe(132)
   })
 
-  it('interpolates linearly between anchors (0.25 sits between 118 and 123)', () => {
+  it('compresses sub-35% performance onto the 118-119 floor', () => {
     const v = sectionScaledScore(0.25)
     expect(v).toBeGreaterThanOrEqual(118)
-    expect(v).toBeLessThanOrEqual(123)
-    // 0.25 of the way from 0%..33% is t≈0.758 → 118 + 0.758*5 ≈ 121.79 → round 122
-    expect(v).toBe(122)
+    expect(v).toBeLessThanOrEqual(119)
+    // 0.25 of the way from 0%..35% is t≈0.714 → 118 + 0.714*1 ≈ 118.71 → round 119
+    expect(v).toBe(119)
   })
 
   it('is monotonic non-decreasing across the range', () => {
@@ -72,8 +84,16 @@ describe('scoreMCAT', () => {
     expect(report.percentileLabel).toBe('~99th percentile')
   })
 
-  it('returns 500 (4*125) when every section is exactly 50% correct', () => {
+  it('returns 484 (4*121) when every section is exactly 50% correct', () => {
+    // Re-anchored curve: 50% raw is below-median performance (121/section),
+    // not the 500 scale midpoint the old table produced.
     const report = scoreMCAT(rawAll(5, 10))
+    expect(report.total).toBe(484)
+    expect(report.percentileLabel).toBe('below ~25th percentile')
+  })
+
+  it('returns 500 (4*125, the median score) when every section is 70% correct', () => {
+    const report = scoreMCAT(rawAll(7, 10))
     expect(report.total).toBe(500)
     expect(report.percentileLabel).toBe('~45th percentile')
   })
@@ -99,7 +119,7 @@ describe('scoreMCAT', () => {
     for (const s of report.sections) {
       expect(s.correct).toBe(3)
       expect(s.total).toBe(6)
-      expect(s.scaled).toBe(125) // 3/6 = 50% -> 125
+      expect(s.scaled).toBe(121) // 3/6 = 50% -> 121 on the AAMC-shaped curve
     }
   })
 
@@ -124,7 +144,23 @@ describe('scoreMCAT', () => {
       { correct: number; total: number }
     >
     const report = scoreMCAT(partial)
-    // cars=125, others 118*3 -> 125 + 354 = 479
-    expect(report.total).toBe(479)
+    // cars = 121 (50% raw), others 118*3 -> 121 + 354 = 475
+    expect(report.total).toBe(475)
+  })
+})
+
+describe('projectionRange (evidence-keyed ±band on the 472-528 total)', () => {
+  it('is ±3 at the default medium evidence', () => {
+    expect(projectionRange(500)).toEqual({ low: 497, high: 503 })
+  })
+
+  it('tightens to ±2 with high evidence and widens to ±4 with low', () => {
+    expect(projectionRange(500, 'high')).toEqual({ low: 498, high: 502 })
+    expect(projectionRange(500, 'low')).toEqual({ low: 496, high: 504 })
+  })
+
+  it('clamps to the 472-528 scale at both ends', () => {
+    expect(projectionRange(473, 'low')).toEqual({ low: 472, high: 477 })
+    expect(projectionRange(527, 'low')).toEqual({ low: 523, high: 528 })
   })
 })
