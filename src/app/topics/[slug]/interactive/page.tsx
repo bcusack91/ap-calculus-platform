@@ -10,10 +10,20 @@ import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
+import { getBuildTimeTopicSlugs } from '@/lib/static-topic-params'
 import 'katex/dist/katex.min.css'
 
 // ISR: revalidate every hour
 export const revalidate = 3600
+
+// Prerender the same priority subset as /topics/[slug], filtered to slugs that
+// actually have an interactive lesson; everything else renders on first
+// request and is ISR-cached. generateStaticParams must exist for Next 15 to
+// treat this dynamic segment as static/ISR rather than fully dynamic.
+export async function generateStaticParams() {
+  const slugs = await getBuildTimeTopicSlugs()
+  return slugs.filter((slug) => hasInteractiveLesson(slug)).map((slug) => ({ slug }))
+}
 
 interface InteractivePageProps {
   params: Promise<{

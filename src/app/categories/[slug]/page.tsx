@@ -8,6 +8,20 @@ import { ArticleByline } from '@/components/ArticleByline'
 // ISR: revalidate content every hour
 export const revalidate = 3600
 
+// Prerender all category pages at build time (only a few dozen). Wrapped in
+// try/catch so a build without database access still succeeds — the route
+// stays ISR and simply prerenders nothing up front. generateStaticParams must
+// exist for Next 15 to treat this dynamic segment as static/ISR rather than
+// fully dynamic (no-store).
+export async function generateStaticParams() {
+  try {
+    const categories = await prisma.category.findMany({ select: { slug: true } })
+    return categories.map((c) => ({ slug: c.slug }))
+  } catch {
+    return []
+  }
+}
+
 interface CategoryPageProps {
   params: Promise<{
     slug: string

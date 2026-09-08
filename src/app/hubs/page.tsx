@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { topicHubs } from '@/data/topic-hubs'
+
+export const metadata: Metadata = {
+  title: 'Topic Hubs | Study Mondo',
+  description:
+    'Browse curated unit-level study hubs for AP Calculus, SAT, and AP Biology with fast links to diagnostics, practice tests, and daily questions.',
+  alternates: { canonical: 'https://www.studymondo.com/hubs' },
+}
 
 export default function TopicHubIndexPage() {
   const exams = Array.from(new Set(topicHubs.map((hub) => hub.exam)))

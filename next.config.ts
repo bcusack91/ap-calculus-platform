@@ -233,7 +233,24 @@ const nextConfig: NextConfig = {
       'common-taylor-series': 'taylor-maclaurin-series-calcbc',
     }
 
-    const redirects: { source: string; destination: string; permanent: true }[] = []
+    const redirects: {
+      source: string
+      destination: string
+      permanent: true
+      has?: { type: 'host'; value: string }[]
+    }[] = [
+      // Canonical-host redirect as a permanent 308. The live apex currently
+      // answers with a 307 (temporary), which tells Google both hosts are real
+      // and splits ranking signals. If Vercel's dashboard-level domain redirect
+      // intercepts apex traffic before it reaches the app, this rule is a
+      // no-op — the dashboard setting must also be flipped to permanent.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'studymondo.com' }],
+        destination: 'https://www.studymondo.com/:path*',
+        permanent: true,
+      },
+    ]
     for (const [micro, parent] of Object.entries(microLessonRedirects)) {
       redirects.push(
         { source: `/topics/${micro}`, destination: `/topics/${parent}`, permanent: true },

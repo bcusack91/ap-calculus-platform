@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "About Us | Study Mondo",
   description:
     "Learn about Study Mondo's mission to provide free, high-quality study resources for students from Grade 4 through AP and test prep.",
+  alternates: { canonical: "https://www.studymondo.com/about" },
 };
 
 // Derived from the course registry (single source of truth) so this list always

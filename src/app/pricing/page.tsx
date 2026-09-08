@@ -4,6 +4,7 @@ import PricingPage from './PricingPageClient'
 export const metadata: Metadata = {
   title: 'Pricing — Study Mondo',
   description: 'Compare the free and Premium plans on Study Mondo. Premium adds unlimited AI tutoring, advanced analytics, and priority support.',
+  alternates: { canonical: 'https://www.studymondo.com/pricing' },
   openGraph: {
     title: 'Pricing — Study Mondo',
     description: 'Compare free and premium plans on Study Mondo.',

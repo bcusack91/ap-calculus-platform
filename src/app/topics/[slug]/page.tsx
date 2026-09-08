@@ -30,9 +30,19 @@ import { TopicContentTools } from '@/components/TopicContentTools'
 import StudyNotes from '@/components/StudyNotes'
 import TrackedLink from '@/components/TrackedLink'
 import { getTopicAdVariant } from '@/lib/experiments'
+import { getBuildTimeTopicSlugs } from '@/lib/static-topic-params'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
+
+// Prerender a priority subset at build time; all other slugs render on first
+// request and are ISR-cached (dynamicParams defaults to true). Without
+// generateStaticParams, Next 15 treats this dynamic segment as fully dynamic
+// (no-store) — its presence is what opts the route into static/ISR rendering.
+export async function generateStaticParams() {
+  const slugs = await getBuildTimeTopicSlugs()
+  return slugs.map((slug) => ({ slug }))
+}
 
 interface TopicPageProps {
   params: Promise<{
