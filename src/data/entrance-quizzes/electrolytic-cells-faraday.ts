@@ -1,5 +1,6 @@
 /** Entrance Quiz — Electrolytic Cells & Faraday's Laws — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ecf-ent-1a', question: 'Electrolysis uses electrical energy to drive a reaction that is:', options: ['Spontaneous', 'Nonspontaneous', 'At equilibrium', 'Exothermic'], correctIndex: 1, explanation: 'Electrolytic cells use external electrical energy to force a nonspontaneous ($\\Delta G > 0$) redox reaction to occur.', partNumber: 1, partTitle: 'Electrolysis Basics' },
   { id: 'ecf-ent-1b', question: 'In an electrolytic cell, the anode is connected to the ___ terminal of the power supply:', options: ['Negative', 'Positive', 'Neutral', 'Ground'], correctIndex: 1, explanation: 'The anode is connected to the positive terminal. This pulls electrons away from the anode, enabling oxidation.', partNumber: 1, partTitle: 'Electrolysis Basics' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ecf-ent-7a', question: 'In industrial electrolysis, the Hall-Héroult process is used to produce:', options: ['Copper', 'Aluminum', 'Iron', 'Gold'], correctIndex: 1, explanation: 'The Hall-Héroult process electrolyzes $Al_2O_3$ dissolved in molten cryolite to produce aluminum metal.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'ecf-ent-7b', question: 'Quantitatively, to deposit 1 mole of $Ag$ from $Ag^+$ requires ___ Faraday(s):', options: ['0.5', '1', '2', '3'], correctIndex: 1, explanation: '$Ag^+ + e^- \\to Ag$: 1 mole of electrons (1 Faraday) per mole of silver deposited.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Electrolysis Basics' }, { partNumber: 2, partTitle: 'Electrolytic vs. Galvanic' },

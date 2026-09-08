@@ -9,6 +9,8 @@ import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
 import { renderRichText } from '@/lib/render-rich-text'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { psatTotal, projectionRange as psatProjectionRange } from '@/lib/psat-scoring'
+import { actSectionScaled, actComposite, projectionRange as actProjectionRange } from '@/lib/act-scoring'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
@@ -127,6 +129,15 @@ export interface FullLengthExamConfig {
   sections: FullExamSection[]
   totalTimeMinutes: number
   aboutInfo?: { title: string; columns: { heading: string; items: string[] }[] }
+  /**
+   * Optional scaled-score projection for exam-scale courses. When set, the
+   * final results screen adds an estimated scaled score shown as an honest
+   * range ('psat': 320-1520 total from the R&W + Math sections; 'act': 1-36
+   * composite from the four sections) through the calibrated anchor curves
+   * in @/lib/psat-scoring and @/lib/act-scoring. Additive — courses that
+   * omit it (all AP subjects) are unchanged.
+   */
+  scaledExam?: 'psat' | 'act'
 }
 
 /* ------------------------------------------------------------------ */
@@ -170,7 +181,7 @@ function blankAnswer(item: ExamItem): ItemAnswer {
 /* ------------------------------------------------------------------ */
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
-  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo } = config
+  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam } = config
   const t = TOKENS[accent]
 
   // Deterministically shuffle every MCQ's options. Authored key positions
@@ -380,6 +391,32 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   /*  FINAL RESULTS                                                      */
   /* =================================================================== */
   if (phase === 'final-results' && scoring) {
+    // Optional scaled projection (PSAT total / ACT composite) through the
+    // calibrated anchor curves — always displayed as a range, never a bare
+    // number, because a practice exam is a sample, not a real administration.
+    let scaledCard: { heading: string; range: string; outOf: string; note: string } | null = null
+    if (scaledExam === 'psat' && scoring.perSection.length >= 2) {
+      // PSAT configs list Reading & Writing first, then Math.
+      const fr = scoring.perSection.map(s => (s.possible ? s.earned / s.possible : 0))
+      const total = psatTotal(fr[0], fr[1])
+      const r = psatProjectionRange(total, scoring.possible >= 90 ? 'high' : 'medium')
+      scaledCard = {
+        heading: 'Estimated PSAT/NMSQT Score',
+        range: `${r.low}–${r.high}`,
+        outOf: 'on the 320–1520 scale',
+        note: 'Estimate from one practice exam — expect a score within this range, not an exact number.',
+      }
+    } else if (scaledExam === 'act' && scoring.perSection.length > 0) {
+      const sectionScores = scoring.perSection.map(s => actSectionScaled(s.possible ? s.earned / s.possible : 0))
+      const composite = actComposite(sectionScores)
+      const r = actProjectionRange(composite, 'medium')
+      scaledCard = {
+        heading: 'Estimated ACT Composite',
+        range: `${r.low}–${r.high}`,
+        outOf: 'out of 36',
+        note: 'Estimate from a shortened practice exam — expect a composite within this range, not an exact number.',
+      }
+    }
     return (
       <div className={`min-h-screen bg-gradient-to-br ${t.pageBg} py-8`}>
         <div className="container"><div className="mx-auto max-w-3xl">
@@ -398,6 +435,15 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
               <p className="text-4xl font-black">{scoring.pct >= 80 ? '🎉' : scoring.pct >= 60 ? '👍' : '📚'}</p>
             </div>
           </div>
+
+          {scaledCard && (
+            <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-sm text-gray-500 dark:text-gray-400">{scaledCard.heading}</p>
+              <p className={`text-5xl font-black ${t.text}`}>{scaledCard.range}</p>
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{scaledCard.outOf}</p>
+              <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">{scaledCard.note}</p>
+            </div>
+          )}
 
           {/* Share your score */}
           {scoring.possible > 0 && (

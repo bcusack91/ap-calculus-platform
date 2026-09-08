@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mcs-ent-1a', question: 'The MCAT CARS (Critical Analysis and Reasoning Skills) section primarily tests your ability to:', options: ['Recall scientific facts from biology and chemistry', 'Read, analyze, and reason about complex passages in humanities and social sciences', 'Perform mathematical calculations quickly', 'Memorize vocabulary from medical texts'], correctIndex: 1, explanation: 'CARS tests critical reading and reasoning — not content knowledge. Passages come from humanities and social sciences, and all answers are supported by the passage itself.', partNumber: 1, partTitle: 'CARS Overview' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

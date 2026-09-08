@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspf-ent-1a', question: 'Fault tolerance is BEST defined as:', options: ['The total absence of any failures in a system, achieved through perfectly engineered hardware that never breaks', 'The ability of a system to continue functioning, perhaps with reduced capacity, when some components fail', 'A type of encryption used to protect a system from unauthorized access by outside attackers on the network', 'A measure of internet bandwidth indicating how much data the system can process per second on average'], correctIndex: 1, explanation: 'A fault-tolerant system continues operating when components fail — it does not require zero failures, just graceful handling of them.', partNumber: 1, partTitle: 'Fault Tolerance' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

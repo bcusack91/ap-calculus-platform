@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aa-ent-1a", question: "Puberty in girls is typically marked by MENARCHE around age:", options: ["6", "About 12 (range 9-16); average has dropped over the past century, partly due to nutrition", "20", "30"], correctIndex: 1, explanation: "Secular trend: average menarche fell from ~16 in 1840 to ~12 today in industrialized countries (better nutrition, lower infectious load).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -1,5 +1,6 @@
 /** Entrance Quiz — Acid-Base Theories & pH — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'abt-ent-1a', question: 'According to Arrhenius, an acid is a substance that:', options: ['Donates a proton', 'Produces $H^+$ ions in aqueous solution', 'Accepts an electron pair', 'Produces $OH^-$ ions'], correctIndex: 1, explanation: 'Arrhenius defined acids as substances that increase $H^+$ (or $H_3O^+$) concentration in water.', partNumber: 1, partTitle: 'Arrhenius & Brønsted-Lowry' },
   { id: 'abt-ent-1b', question: 'A Brønsted-Lowry base is a substance that:', options: ['Produces $OH^-$ in water', 'Accepts a proton ($H^+$)', 'Donates a proton', 'Donates an electron pair'], correctIndex: 1, explanation: 'Brønsted-Lowry bases are proton acceptors. This is broader than Arrhenius — it includes non-aqueous species like $NH_3$.', partNumber: 1, partTitle: 'Arrhenius & Brønsted-Lowry' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'abt-ent-7a', question: 'Water acts as both an acid and a base. This property is called being:', options: ['Amphiprotic (amphoteric)', 'Diprotic', 'Monoprotic', 'Aprotic'], correctIndex: 0, explanation: 'Water is amphiprotic — it can donate a proton (act as acid) or accept a proton (act as base).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'abt-ent-7b', question: 'The autoionization of water produces equal concentrations of:', options: ['$Na^+$ and $Cl^-$', '$H_3O^+$ and $OH^-$', '$H_2$ and $O_2$', '$H^+$ and $e^-$'], correctIndex: 1, explanation: '$2H_2O \\rightleftharpoons H_3O^+ + OH^-$. In pure water, $[H_3O^+] = [OH^-] = 10^{-7}$ M at 25°C.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Arrhenius & Brønsted-Lowry' }, { partNumber: 2, partTitle: 'Conjugate Acid-Base Pairs' },

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "Price elasticity of demand (PED) measures:", options: ["Slope of the demand curve", "Percent change in Q_d divided by percent change in P (in absolute value)", "Total revenue", "Marginal cost"], correctIndex: 1, explanation: "PED = |%ΔQ_d / %ΔP|. Pure ratio of percentages — independent of units.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

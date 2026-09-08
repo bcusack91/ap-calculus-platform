@@ -1,5 +1,6 @@
 /** Entrance Quiz — Oxidation-Reduction Reactions — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'orr-ent-1a', question: 'The oxidation state of oxygen in most compounds is:', options: ['+2', '−1', '−2', '0'], correctIndex: 2, explanation: 'Oxygen is almost always −2 in compounds (exceptions: peroxides −1, $OF_2$ +2, elemental $O_2$ 0).', partNumber: 1, partTitle: 'Oxidation States' },
   { id: 'orr-ent-1b', question: 'What is the oxidation state of Mn in $KMnO_4$?', options: ['+3', '+5', '+7', '+4'], correctIndex: 2, explanation: 'K is +1, each O is −2: (+1) + Mn + 4(−2) = 0 → Mn = +7.', partNumber: 1, partTitle: 'Oxidation States' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'orr-ent-7a', question: 'In electrochemistry, the anode is where ___ occurs:', options: ['Reduction', 'Oxidation', 'Neutralization', 'Precipitation'], correctIndex: 1, explanation: 'AN-OX, RED-CAT: Oxidation occurs at the Anode, Reduction occurs at the Cathode. This applies to both galvanic and electrolytic cells.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'orr-ent-7b', question: 'A disproportionation reaction is one where the same element is:', options: ['Only oxidized', 'Only reduced', 'Both oxidized and reduced', 'Neither oxidized nor reduced'], correctIndex: 2, explanation: 'In disproportionation, one element in a single compound is simultaneously oxidized and reduced. Example: $2H_2O_2 \\to 2H_2O + O_2$ (O goes from −1 to both −2 and 0).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Oxidation States' }, { partNumber: 2, partTitle: 'Identifying Redox Reactions' },

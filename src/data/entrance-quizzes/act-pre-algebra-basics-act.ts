@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'pab-ent-1a', question: 'Which statement about multiplication of even and odd numbers is correct?', options: ['Even × odd = odd', 'Even × odd = even', 'Odd × odd = even', 'Even × even = odd'], correctIndex: 1, explanation: 'Even × odd always equals even. Any product involving an even number is even.', partNumber: 1, partTitle: 'Number Properties' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ed-ent-1a', question: 'What is the purpose of random assignment in an experiment?', options: ['To ensure a large sample size', 'To randomly place subjects into treatment groups so the groups are comparable', 'To select a representative sample from the population', 'To eliminate the need for a control group'], correctIndex: 1, explanation: 'Random assignment places subjects randomly into treatment groups to create comparable groups, balancing out confounding variables.', partNumber: 1, partTitle: 'Randomization' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

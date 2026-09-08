@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hap-ent-1a", question: "Psychology as a formal discipline began with Wilhelm Wundt's 1879 lab in Leipzig. Wundt's school of psychology was:", options: ["Behaviorism", "Structuralism (using introspection to break consciousness into elements)", "Psychoanalysis", "Humanism"], correctIndex: 1, explanation: "Wundt (1879, Leipzig) and his student Edward Titchener pioneered structuralism, using trained introspection to identify the basic elements of conscious experience.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

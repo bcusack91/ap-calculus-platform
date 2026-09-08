@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "macr-ent-1a", question: "Government purchases (G) include:", options: ["Social Security benefits", "Spending on goods and services like defense and infrastructure", "Welfare payments", "Unemployment insurance"], correctIndex: 1, explanation: "G includes only direct purchases; transfers (Social Security, UI, welfare) are excluded from G.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

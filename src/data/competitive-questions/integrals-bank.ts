@@ -1,5 +1,7 @@
 // Integrals question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface IntegralQuestion {
   id: number
   question: string
@@ -419,6 +421,6 @@ const allQuestions: IntegralQuestion[] = [
 ]
 
 export function getIntegralQuestions(count: number = 10): IntegralQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

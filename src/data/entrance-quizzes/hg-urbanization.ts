@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgur-ent-1a", question: "As of 2024, about what share of humans live in urban areas?", options: ["10%", "~57% (UN 2024); projected ~68% by 2050. Urbanization accelerating in LICs", "100%", "20%"], correctIndex: 1, explanation: "UN DESA 2024: ~57% urban. Crossed 50% ~2007. Projected 68% by 2050. Growth mostly in Asia/Africa.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -1,5 +1,7 @@
 // Ap Micro Question question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface ApMicroQuestion {
   id: number
   question: string
@@ -431,6 +433,6 @@ export function getApMicroQuestions(count: number = 10, topicSlug?: string): ApM
     const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
     if (filtered.length > 0) pool = filtered
   }
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

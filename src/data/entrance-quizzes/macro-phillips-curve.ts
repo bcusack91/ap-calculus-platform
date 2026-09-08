@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "macr-ent-1a", question: "The original Phillips curve (Phillips 1958) showed an empirical inverse relationship between:", options: ["Inflation and GDP", "Wage inflation and unemployment in the U.K. 1861-1957", "Interest rates and unemployment", "Tax rates and unemployment"], correctIndex: 1, explanation: "A.W. Phillips (1958) plotted UK wage inflation vs unemployment 1861-1957, finding a stable inverse curve.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

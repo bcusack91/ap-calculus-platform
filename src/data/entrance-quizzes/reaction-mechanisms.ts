@@ -1,5 +1,6 @@
 /** Entrance Quiz — Reaction Mechanisms — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'rm-ent-1a', question: 'A reaction mechanism is:', options: ['The balanced equation for a reaction', 'A series of elementary steps that make up the overall reaction', 'The energy diagram for a reaction', 'The rate law for a reaction'], correctIndex: 1, explanation: 'A reaction mechanism is the step-by-step sequence of elementary reactions by which an overall chemical change occurs.', partNumber: 1, partTitle: 'Elementary Steps' },
   { id: 'rm-ent-1b', question: 'The molecularity of an elementary step with two reactant molecules is:', options: ['Unimolecular', 'Bimolecular', 'Termolecular', 'Zero-molecular'], correctIndex: 1, explanation: 'Molecularity refers to the number of reactant molecules in an elementary step. Two molecules → bimolecular.', partNumber: 1, partTitle: 'Elementary Steps' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'rm-ent-7a', question: 'Can a mechanism be proven correct by matching the experimental rate law?', options: ['Yes, it proves the mechanism', 'No, it can only be consistent — other mechanisms may also fit', 'Only if all steps are known', 'Only at high temperature'], correctIndex: 1, explanation: 'A mechanism can be supported but never proven — multiple mechanisms might produce the same rate law. It can be disproven if the rate law does not match.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'rm-ent-7b', question: 'On an energy diagram for a multi-step mechanism, each elementary step has:', options: ['Its own activation energy peak', 'No transition state', 'The same activation energy', 'No energy change'], correctIndex: 0, explanation: 'Each elementary step has its own transition state and activation energy, creating multiple peaks on the energy diagram.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Elementary Steps' }, { partNumber: 2, partTitle: 'Molecularity & Rate Laws' },

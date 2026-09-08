@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'csps-ent-1a', question: 'Personally Identifiable Information (PII) is BEST defined as:', options: ['Any data on the Internet, including public news articles and weather updates available on any open website', 'Information that can be used (alone or in combination) to identify a specific individual', 'Only encrypted data such as password hashes and credit-card numbers stored inside a secure database', 'A type of computer hardware used to read identification cards and biometric scans inside government facilities'], correctIndex: 1, explanation: 'PII includes obvious identifiers (name, SSN) AND combinations (birthdate + ZIP + gender) that can re-identify a person.', partNumber: 1, partTitle: 'PII & Privacy' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -111,7 +111,7 @@ export default function ACTDiagnosticPage() {
     try {
       await fetch('/api/act-diagnostic/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ category: `act-diagnostic-${testData.form}`, results: { review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) }, form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedComposite: diagnosticResults.estimatedComposite, englishScore: diagnosticResults.englishScore, mathScore: diagnosticResults.mathScore, readingScore: diagnosticResults.readingScore, scienceScore: diagnosticResults.scienceScore, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
+        body: JSON.stringify({ category: `act-diagnostic-${testData.form}`, results: { review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) }, form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedComposite: diagnosticResults.estimatedComposite, compositeRange: diagnosticResults.compositeRange, englishScore: diagnosticResults.englishScore, mathScore: diagnosticResults.mathScore, readingScore: diagnosticResults.readingScore, scienceScore: diagnosticResults.scienceScore, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
       })
       const histRes = await fetch('/api/act-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
@@ -278,7 +278,17 @@ export default function ACTDiagnosticPage() {
         <div className="container"><div className="mx-auto max-w-3xl">
           <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">ACT Diagnostic Results</h2>
           <div className="mb-8 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800"><p className="text-sm text-gray-500 dark:text-gray-400">Estimated Composite</p><p className="text-5xl font-black text-red-600 dark:text-red-400">{results.estimatedComposite}</p><p className="text-xs text-gray-500 dark:text-gray-400">out of 36</p></div>
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Composite</p>
+              {/* A range is more honest than a point estimate from ~40 questions. */}
+              <p className={`${results.compositeRange ? 'text-4xl' : 'text-5xl'} font-black text-red-600 dark:text-red-400`}>
+                {results.compositeRange ? `${results.compositeRange.low}–${results.compositeRange.high}` : results.estimatedComposite}
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">out of 36</p>
+              {results.compositeRange && (
+                <p className="mt-1 text-[11px] text-gray-400 dark:text-gray-500">Estimate from a ~40-question sample — expect a composite within this range, not an exact number</p>
+              )}
+            </div>
             <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800"><p className="text-sm text-gray-500 dark:text-gray-400">Correct</p><p className="text-4xl font-black text-orange-600 dark:text-orange-400">{results.totalCorrect}/{results.totalQuestions}</p><p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage}%</p></div>
             <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800"><p className="text-sm text-gray-500 dark:text-gray-400">Performance</p><p className="text-4xl">{scoreEmoji}</p><p className="text-xs text-gray-500 dark:text-gray-400">{results.estimatedComposite >= 30 ? 'Excellent' : results.estimatedComposite >= 24 ? 'Good' : 'Needs Review'}</p></div>
           </div>
@@ -422,7 +432,18 @@ export default function ACTDiagnosticPage() {
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-3 text-sm font-medium text-gray-500 uppercase dark:text-gray-400">Most Recent Result</h3>
             <div className="flex items-center justify-between">
-              <div><p className="text-3xl font-bold text-red-600 dark:text-red-400">{String(lastResult.estimatedComposite ?? '—')}/36</p><p className="text-sm text-gray-500 dark:text-gray-400">Estimated Composite</p></div>
+              <div>
+                <p className="text-3xl font-bold text-red-600 dark:text-red-400">
+                  {(() => {
+                    // Additive — attempts before the calibration overhaul have no range.
+                    const r = lastResult.compositeRange as { low?: number; high?: number } | undefined
+                    return r?.low != null && r?.high != null
+                      ? `${r.low}–${r.high}`
+                      : `${String(lastResult.estimatedComposite ?? '—')}/36`
+                  })()}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Composite (out of 36)</p>
+              </div>
               <div className="text-right"><p className="text-sm text-gray-600 dark:text-gray-400">{String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct</p><p className="text-xs text-gray-400">Form {String(lastResult.form ?? '—')} · {new Date(history[0].createdAt).toLocaleDateString()}<br /><Link href={`/diagnostic-review/${history[0].id}`} className="mt-1 inline-block text-xs font-semibold text-purple-600 hover:underline dark:text-purple-400" onClick={(e) => e.stopPropagation()}>Review past attempt →</Link></p></div>
             </div>
           </div>

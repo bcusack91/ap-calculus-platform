@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'atds-ent-1a', question: 'How many required sections does the ACT have, and what are their time limits?', options: ['3 sections: English, Math, Reading', '5 sections all 30 minutes each', '4 sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min)', '2 sections: Math and Reading'], correctIndex: 2, explanation: 'The ACT has 4 required sections: English (45 min), Math (60 min), Reading (35 min), Science (35 min), plus an optional Writing section (40 min).', partNumber: 1, partTitle: 'Test Format & Registration' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'rrp-ent-1a', question: 'How is a residual calculated?', options: ['ŷ − y', 'y − ŷ', 'y − ȳ', 'ŷ − ȳ'], correctIndex: 1, explanation: 'A residual equals the observed value minus the predicted value: residual = y − ŷ.', partNumber: 1, partTitle: 'Definition of Residuals' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aascrm-ent-1a", question: "In AP African American Studies, the \"Civil Rights Movement\" most precisely refers to:", options: ["A purely 1960s federal legislative campaign with no Black grassroots component.", "The sustained mass movement, c. 1954–1968, combining NAACP litigation, Black church-based organizing, student-led nonviolent direct action, and federal legislation, that dismantled de jure segregation and disenfranchisement in the U.S. South.", "A 19th-century abolitionist movement.", "A 1990s academic theory only."], correctIndex: 1, explanation: "The classical Civil Rights Movement (c. 1954–1968) combined litigation (NAACP LDF), church-based organizing (SCLC), student direct action (SNCC), and federal action (CRA 1964, VRA 1965).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

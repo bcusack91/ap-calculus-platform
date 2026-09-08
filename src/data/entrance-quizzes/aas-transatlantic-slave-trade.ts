@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aastst-ent-1a", question: "In AP African American Studies, the \"Middle Passage\" refers specifically to:", options: ["The land journey across the Sahara from Mali to Morocco.", "The forced oceanic voyage transporting captive Africans from West and West-Central Africa to the Americas — one leg of the broader triangular Atlantic trade.", "The voyage of European migrants from Britain to the New England colonies.", "The travel of returning African Americans to Liberia in the 1820s."], correctIndex: 1, explanation: "The Middle Passage (\"middle\" because it was the second leg of the triangular trade: Europe→Africa→Americas→Europe) was the forced transatlantic voyage of captives.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hggt-ent-1a", question: "RICARDO's Comparative Advantage (1817) argues:", options: ["Only absolute advantage matters", "Countries gain from specializing in goods they produce at LOWEST OPPORTUNITY COST, even without absolute advantage", "Trade hurts all", "Autarky is best"], correctIndex: 1, explanation: "Ricardo 1817: England/Portugal cloth-wine example. Even if one country is absolutely better at everything, mutual gain from specialization.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

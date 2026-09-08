@@ -1,5 +1,6 @@
 /** Entrance Quiz — Nernst Equation & Concentration Cells — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'necc-ent-1a', question: 'The Nernst equation is needed when cell conditions are:', options: ['Standard', 'Non-standard (concentrations ≠ 1 M, pressures ≠ 1 atm)', 'At equilibrium', 'At absolute zero'], correctIndex: 1, explanation: 'The Nernst equation adjusts $E°_{cell}$ for non-standard conditions: $E = E° - \\frac{RT}{nF}\\ln Q$.', partNumber: 1, partTitle: 'Non-Standard Conditions' },
   { id: 'necc-ent-1b', question: 'At standard conditions (Q = 1), the Nernst equation gives $E_{cell}$ =:', options: ['0', '$E°_{cell}$', '$-E°_{cell}$', '$2E°_{cell}$'], correctIndex: 1, explanation: 'When Q = 1, $\\ln Q = 0$, so $E = E° - 0 = E°$.', partNumber: 1, partTitle: 'Non-Standard Conditions' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'necc-ent-7a', question: 'The Nernst equation shows that cell potential depends on:', options: ['Only temperature', 'Only the identity of the electrodes', 'Both the nature of the reaction and the concentrations of species', 'Only the volume of solution'], correctIndex: 2, explanation: '$E = E°$ (nature of reaction) $- \\frac{RT}{nF}\\ln Q$ (concentrations via Q). Both contribute to the cell potential.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'necc-ent-7b', question: 'From $\\Delta G° = -nFE°$ and $\\Delta G° = -RT\\ln K$, we get $\\ln K =$:', options: ['$nFE°/RT$', '$-nFE°/RT$', '$RT/nFE°$', '$nF/RTE°$'], correctIndex: 0, explanation: '$-nFE° = -RT\\ln K → \\ln K = nFE°/RT$. This links the equilibrium constant directly to the standard cell potential.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Non-Standard Conditions' }, { partNumber: 2, partTitle: 'The Nernst Equation' },

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'dd-ent-1a', question: 'Which of the following is NOT a term used to describe the shape of a distribution?', options: ['Symmetric', 'Skewed right', 'Bimodal', 'Resistant'], correctIndex: 3, explanation: '"Resistant" describes a statistic (like the median) that is not affected by extreme values. Shape is described as symmetric, skewed, bimodal, uniform, etc.', partNumber: 1, partTitle: 'Shape, Center, Spread' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

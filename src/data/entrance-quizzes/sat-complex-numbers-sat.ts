@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'scn-ent-1a', question: 'What is the value of $i^{2}$?', options: ['1', '−1', 'i', '0'], correctIndex: 1, explanation: 'By definition, i = $\\sqrt{-1}$, so $i^{2}$ = −1.', partNumber: 1, partTitle: 'Imaginary Unit' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

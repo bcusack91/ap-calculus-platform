@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgig-ent-1a", question: "The 'five themes of geography' (National Geographic, 1984) include:", options: ["Location, Place, Human-Environment Interaction, Movement, Region", "Past, Present, Future, People, Power", "North, South, East, West, Center", "Weather, Climate, Soil, Plants, Animals"], correctIndex: 0, explanation: "The 5 themes (location, place, HEI, movement, region) were articulated in the 1984 Guidelines for Geographic Education.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

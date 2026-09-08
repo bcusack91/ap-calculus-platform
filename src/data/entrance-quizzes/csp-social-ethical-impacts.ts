@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'csps-ent-1a', question: 'Algorithmic bias MOST commonly arises from:', options: ['Algorithms that secretly know the developer’s personal opinions and silently apply them when scoring inputs at run time', 'Training data that under-represents certain groups, or design choices that encode existing inequalities', 'Random hardware errors during training that flip a small fraction of bits and bias the resulting model weights', 'Use of open-source software, since publicly visible code is more often modified by malicious contributors than proprietary code'], correctIndex: 1, explanation: 'Bias usually enters through skewed training data, biased labels, or design choices that reflect historical inequalities — not through random errors.', partNumber: 1, partTitle: 'Algorithmic Bias' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

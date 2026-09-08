@@ -1,5 +1,6 @@
 /** Entrance Quiz — Reaction Rates & Rate Laws — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'rrl-ent-1a', question: 'Reaction rate is defined as the change in concentration of a reactant or product per unit:', options: ['Volume', 'Mass', 'Time', 'Pressure'], correctIndex: 2, explanation: 'Rate = Δ[concentration] / Δtime. It describes how quickly reactant is consumed or product is formed.', partNumber: 1, partTitle: 'Measuring Reaction Rates' },
   { id: 'rrl-ent-1b', question: 'For the reaction $A \\to B$, if [A] decreases from 0.80 M to 0.60 M in 10 seconds, the average rate is:', options: ['0.02 M/s', '0.20 M/s', '0.06 M/s', '0.08 M/s'], correctIndex: 0, explanation: 'Rate = −Δ[A]/Δt = −(0.60 − 0.80)/10 = 0.20/10 = 0.02 M/s.', partNumber: 1, partTitle: 'Measuring Reaction Rates' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'rrl-ent-7a', question: 'If the rate constant doubles when temperature increases by 10°C, this is best explained by:', options: ['Le Chatelier\'s principle', 'The Arrhenius equation', 'Hess\'s law', 'Dalton\'s law'], correctIndex: 1, explanation: 'The Arrhenius equation ($k = Ae^{-E_a/RT}$) relates the rate constant to temperature, explaining why k increases with T.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'rrl-ent-7b', question: 'Which change will NOT increase the rate of a gas-phase reaction?', options: ['Adding a catalyst', 'Increasing temperature', 'Adding an inert gas at constant volume', 'Increasing the concentration of a reactant'], correctIndex: 2, explanation: 'Adding an inert gas at constant volume increases total pressure but does not change the partial pressures or concentrations of reactants, so the rate is unaffected.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Measuring Reaction Rates' }, { partNumber: 2, partTitle: 'Rate Laws & Reaction Orders' },

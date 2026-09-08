@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "Demand for labor is a DERIVED demand, meaning:", options: ["Labor demand is independent of output", "Labor demand depends on the demand for the goods labor produces", "Labor demand is set by government", "Labor demand is fixed"], correctIndex: 1, explanation: "Derived demand: D for inputs comes from D for the outputs they help produce. If car demand falls, auto-worker demand falls.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

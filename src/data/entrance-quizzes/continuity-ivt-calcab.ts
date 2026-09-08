@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'civ-ent-1a', question: 'A function $f$ is continuous at $x = a$ if and only if all three of the following hold:', options: ['$f(a)$ is defined, $\\lim_{x \\to a} f(x)$ exists, and they are equal', 'Only that $\\lim_{x \\to a} f(x)$ exists', 'Only that $f(a)$ is defined', 'Only that the left- and right-hand limits exist'], correctIndex: 0, explanation: 'The classical 3-part definition: (1) $f(a)$ defined, (2) $\\lim_{x\\to a}f(x)$ exists, (3) $\\lim_{x\\to a}f(x) = f(a)$.', partNumber: 1, partTitle: 'What Does It Mean for a Function to Be Continuous?' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'civ-ent-7b', question: 'A function $f$ has a removable discontinuity at $x = 2$. Which redefinition makes $f$ continuous there?', options: ['Set $f(2) = 0$', 'Set $f(2) = \\lim_{x \\to 2} f(x)$', 'Set $f(2)$ undefined', 'Multiply $f$ by $(x-2)$'], correctIndex: 1, explanation: 'Defining $f(2)$ to equal the (existing) limit removes the hole and restores continuity.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'What Does It Mean for a Function to Be Continuous?' },

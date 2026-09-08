@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "Market failure occurs when:", options: ["Markets always fail", "The free-market outcome is NOT allocatively efficient (e.g., externalities, public goods, info asymmetry, market power)", "Government regulates", "Producers earn profit"], correctIndex: 1, explanation: "Market failure = free market doesn't maximize total surplus. Sources: externalities, public goods, asymmetric info, market power.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -8,11 +8,12 @@
  */
 import { hardTierFor } from './sat-hard-tier'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const base = (topicSlug ?? '').replace(/-advanced$/, '')
   const pool = hardTierFor(base)
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     ...q,
     id: `sat-adv-${base}-${i}`,

@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'lai-ent-1a', question: 'Find $\\lim_{x \\to \\infty} \\frac{1}{x}$:', options: ['$0$', '$1$', '$\\infty$', 'Does not exist'], correctIndex: 0, explanation: 'As $x$ grows large, $1/x \\to 0$.', partNumber: 1, partTitle: 'End Behavior of Functions' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'lai-ent-7b', question: 'For $f(x) = \\frac{5x^4 - 3x + 2}{2x^4 + 7}$, the horizontal asymptote is:', options: ['$y = 0$', '$y = \\frac{5}{2}$', '$y = \\frac{2}{5}$', 'No horizontal asymptote'], correctIndex: 1, explanation: 'Same degrees: ratio of leading coefficients = $5/2$.', partNumber: 7, partTitle: 'Comprehensive Assessment' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'End Behavior of Functions' },

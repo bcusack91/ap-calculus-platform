@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'aeg-ent-1a', question: 'Which sentence uses correct subject-verb agreement?', options: ['The dogs runs fast.', 'The dog run fast.', 'The dogs run fast.', 'The dog are fast.'], correctIndex: 2, explanation: 'The subject and verb must agree in number: "dogs" is plural, so the verb is "run" (not "runs").', partNumber: 1, partTitle: 'Subject-Verb Agreement' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

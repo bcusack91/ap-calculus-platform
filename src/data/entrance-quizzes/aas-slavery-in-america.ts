@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aassia-ent-1a", question: "Which best describes \"chattel slavery\" as practiced in the Americas?", options: ["A temporary indentured contract that ended after seven years.", "A racialized, hereditary system in which enslaved people were defined as movable property under law, transferable by sale, gift, or inheritance, with status passed through the mother (*partus sequitur ventrem*).", "A communal labor obligation owed to the king for one season.", "A guild apprenticeship paid in wages."], correctIndex: 1, explanation: "Chattel slavery — codified in colonies such as Virginia's 1662 *partus sequitur ventrem* law — defined enslaved people as inheritable property and made enslavement matrilineal.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

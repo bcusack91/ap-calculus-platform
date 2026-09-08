@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "A binding price CEILING (e.g., rent control) below equilibrium causes:", options: ["A surplus and falling rents", "A SHORTAGE, DWL, deteriorating quality, and possible black markets", "Equilibrium pricing", "No effect"], correctIndex: 1, explanation: "Binding ceiling: Q_d > Q_s → shortage. Long-run effects: reduced quality, less new construction, queues.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -1,6 +1,8 @@
 // Geometry question bank for competitive mode
 // 30 questions per topic across 10 core Geometry topics.
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface GeometryQuestion {
   id: number
   question: string
@@ -340,6 +342,6 @@ export function getGeometryQuestions(count: number = 10, topicSlug?: string): Ge
   if (topicSlug) {
     pool = allQuestions.filter(q => q.topicSlug === topicSlug)
   }
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

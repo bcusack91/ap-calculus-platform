@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'asp-ent-1a', question: 'For the data set {4, 8, 6, 8, 9}, what is the mean?', options: ['8', '6', '7', '9'], correctIndex: 2, explanation: 'Mean = sum/count = (4 + 8 + 6 + 8 + 9) / 5 = 35 / 5 = 7.', partNumber: 1, partTitle: 'Mean, Median, Mode' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

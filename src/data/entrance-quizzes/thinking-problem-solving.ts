@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "tps-ent-1a", question: "A CONCEPT is:", options: ["A specific event", "A mental grouping of similar objects, events, or ideas (e.g., 'furniture')", "An emotion", "A neuron"], correctIndex: 1, explanation: "Concepts let us treat new instances by their category. Hierarchies (basic, superordinate, subordinate) organize them (Rosch).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

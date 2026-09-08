@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sol-ent-1a', question: 'In a solution, the substance present in the largest amount is the:', options: ['Solute', 'Solvent', 'Precipitate', 'Catalyst'], correctIndex: 1, explanation: 'The solvent is the substance present in the greatest quantity. The solute is the substance dissolved in the solvent.', partNumber: 1, partTitle: 'Types of Solutions' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

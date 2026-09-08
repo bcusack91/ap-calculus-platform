@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'aae-ent-1a', question: 'What is the value of x in 3x + 7 = 22?', options: ['3', '4', '5', '6'], correctIndex: 2, explanation: 'Subtract 7 from both sides: 3x = 15. Divide by 3: x = 5.', partNumber: 1, partTitle: 'Linear Equations' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

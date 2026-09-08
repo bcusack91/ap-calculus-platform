@@ -3,6 +3,19 @@
  * Ensures the correct answer position is uniformly distributed across questions
  * while remaining stable across re-renders for the same seed.
  */
+/**
+ * Uniform Fisher-Yates shuffle. Returns a NEW array; the input is not mutated.
+ * Use this instead of the biased `.sort(() => Math.random() - 0.5)` idiom.
+ */
+export function shuffleArray<T>(arr: readonly T[]): T[] {
+  const result = arr.slice()
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
+
 export function shuffleOptions(
   options: string[],
   correctIndex: number,

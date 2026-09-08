@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { mapToACTScore } from '@/lib/score-predictor-utils'
+import { actComposite, projectionRange } from '@/lib/act-scoring'
 import { unstable_cache } from 'next/cache'
 
 export async function GET() {
@@ -24,7 +25,9 @@ export async function GET() {
         select: { status: true },
       }),
       prisma.diagnosticTest.findMany({
-        where: { userId, category: 'act-diagnostic' },
+        // Submissions are stored per-form as `act-diagnostic-<form>` (see
+        // /act-diagnostic and /api/act-diagnostic/history) — prefix match.
+        where: { userId, category: { startsWith: 'act-diagnostic' } },
         orderBy: { createdAt: 'asc' },
         select: { results: true, createdAt: true },
       }),
@@ -66,7 +69,8 @@ export async function GET() {
       }
     })
 
-    const composite = Math.round(sections.reduce((s, sec) => s + sec.score, 0) / 4)
+    // Real-ACT composite: rounded mean of the four integer section scores.
+    const composite = actComposite(sections.map(sec => sec.score))
 
     const totalTopics = topicProgress.length
     const masteredTopics = topicProgress.filter(tp => tp.status === 'MASTERED').length
@@ -82,8 +86,11 @@ export async function GET() {
     for (const d of diagnosticTests) {
       try {
         const parsed = d.results as Record<string, unknown>
-        if (parsed.estimatedScore) {
-          trend.push({ date: (d.createdAt as Date).toISOString(), score: parsed.estimatedScore as number, source: 'diagnostic' })
+        // ACT diagnostics store `estimatedComposite`; `estimatedScore` kept as
+        // a fallback for any legacy rows.
+        const score = (parsed.estimatedComposite ?? parsed.estimatedScore) as number | undefined
+        if (score) {
+          trend.push({ date: (d.createdAt as Date).toISOString(), score, source: 'diagnostic' })
         }
       } catch {}
     }
@@ -92,7 +99,15 @@ export async function GET() {
       quizzesAttempted >= 10 ? 'high' : quizzesAttempted >= 3 ? 'medium' : 'low'
 
     return {
-      prediction: { primaryScore: composite, maxScore: 36, confidence, sections },
+      prediction: {
+        primaryScore: composite,
+        maxScore: 36,
+        confidence,
+        sections,
+        // Additive: honest projection window (±1/±2/±3 by evidence). The
+        // shared ScorePredictor UI renders it as "24–28" with a qualifier.
+        range: projectionRange(composite, confidence),
+      },
       stats: { totalTopics, masteredTopics, masteryRate, quizzesAttempted, quizPassRate, recentAvg },
       trend,
     }

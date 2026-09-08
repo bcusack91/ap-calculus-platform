@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "pt-ent-1a", question: "Freud's PSYCHOANALYTIC theory divides personality into:", options: ["Conscious and unconscious only", "Id (pleasure principle, unconscious), Ego (reality principle), Superego (conscience/ideal)", "Big Five traits", "Conditioning histories"], correctIndex: 1, explanation: "Freud's structural model (1923, The Ego and the Id). Ego mediates between id impulses and superego ideals using defense mechanisms.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

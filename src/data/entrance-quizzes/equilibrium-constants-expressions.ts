@@ -1,5 +1,6 @@
 /** Entrance Quiz — Equilibrium Constants and Expressions — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ece-ent-1a', question: 'Dynamic equilibrium occurs when:', options: ['All reactions stop', 'Forward and reverse rates are equal', 'Only the forward reaction occurs', 'Reactant concentrations are zero'], correctIndex: 1, explanation: 'At dynamic equilibrium, both forward and reverse reactions continue at equal rates, so concentrations remain constant.', partNumber: 1, partTitle: 'What Is Equilibrium?' },
   { id: 'ece-ent-1b', question: 'At equilibrium, the concentrations of reactants and products are:', options: ['Always equal to each other', 'Constant but not necessarily equal', 'Continuously changing', 'Always zero'], correctIndex: 1, explanation: 'At equilibrium concentrations are constant over time but are generally NOT equal — their ratio is defined by K.', partNumber: 1, partTitle: 'What Is Equilibrium?' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ece-ent-7a', question: 'Which change will alter the value of K?', options: ['Adding a catalyst', 'Increasing concentration of a reactant', 'Changing the temperature', 'Decreasing the volume'], correctIndex: 2, explanation: 'K depends only on temperature. Concentration, pressure, and catalysts shift position but do not change K.', partNumber: 7, partTitle: 'AP Review' },
   { id: 'ece-ent-7b', question: 'For a heterogeneous equilibrium $CaCO_3(s) \\rightleftharpoons CaO(s) + CO_2(g)$, $K_c$ equals:', options: ['$\\frac{[CaO][CO_2]}{[CaCO_3]}$', '$[CO_2]$', '$\\frac{[CaCO_3]}{[CaO][CO_2]}$', '$[CaO] + [CO_2]$'], correctIndex: 1, explanation: 'Both $CaCO_{3}$ and CaO are pure solids (excluded), leaving $K_c = [CO_2]$.', partNumber: 7, partTitle: 'AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'What Is Equilibrium?' }, { partNumber: 2, partTitle: 'Writing K Expressions' },

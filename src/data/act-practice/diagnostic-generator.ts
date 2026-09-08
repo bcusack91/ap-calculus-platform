@@ -15,6 +15,7 @@
 export const TOTAL_FORMS = 10
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
+import { actSectionScaled, actComposite, projectionRange, type ScoreRange } from '@/lib/act-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -67,6 +68,12 @@ export interface ACTDiagnosticResults {
   totalQuestions: number
   percentage: number
   estimatedComposite: number // 1-36
+  /**
+   * Honest projection window around estimatedComposite (±2 for a ~40-question
+   * diagnostic). Additive — stored results from before the calibration
+   * overhaul won't have it; estimatedComposite stays the trend value.
+   */
+  compositeRange?: ScoreRange
   englishScore: number       // 1-36
   mathScore: number          // 1-36
   readingScore: number       // 1-36
@@ -388,33 +395,10 @@ export async function generateACTDiagnosticTest(
 /* ------------------------------------------------------------------ */
 
 function percentToACTScore(pct: number): number {
-  // Map percentage to ACT 1-36 scale
-  if (pct >= 97) return 36
-  if (pct >= 93) return 34
-  if (pct >= 90) return 33
-  if (pct >= 87) return 32
-  if (pct >= 83) return 31
-  if (pct >= 80) return 30
-  if (pct >= 77) return 29
-  if (pct >= 73) return 28
-  if (pct >= 70) return 27
-  if (pct >= 67) return 26
-  if (pct >= 63) return 25
-  if (pct >= 60) return 24
-  if (pct >= 57) return 23
-  if (pct >= 53) return 22
-  if (pct >= 50) return 21
-  if (pct >= 47) return 20
-  if (pct >= 43) return 19
-  if (pct >= 40) return 18
-  if (pct >= 37) return 17
-  if (pct >= 33) return 16
-  if (pct >= 30) return 15
-  if (pct >= 25) return 14
-  if (pct >= 20) return 13
-  if (pct >= 15) return 12
-  if (pct >= 10) return 11
-  return 10
+  // Calibrated anchor curve (see src/lib/act-scoring.ts) — replaces the old
+  // step table that ran ~2-3 points hot through the middle of the scale
+  // (70% -> 27, 80% -> 30, 90% -> 33 vs. real conversions of ~24-25/27/30-31).
+  return actSectionScaled(pct / 100)
 }
 
 export function scoreACTDiagnostic(
@@ -468,7 +452,7 @@ export function scoreACTDiagnostic(
   const mathScore = sectionScore('math')
   const readingScore = sectionScore('reading')
   const scienceScore = sectionScore('science')
-  const estimatedComposite = Math.round((englishScore + mathScore + readingScore + scienceScore) / 4)
+  const estimatedComposite = actComposite([englishScore, mathScore, readingScore, scienceScore])
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
@@ -533,6 +517,9 @@ export function scoreACTDiagnostic(
     totalQuestions,
     percentage,
     estimatedComposite,
+    // One ~40-question diagnostic = medium evidence (±2), same tiering as
+    // the SAT/MCAT diagnostics.
+    compositeRange: projectionRange(estimatedComposite, 'medium'),
     englishScore,
     mathScore,
     readingScore,

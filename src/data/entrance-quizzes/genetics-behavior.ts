@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "gb-ent-1a", question: "Monozygotic (identical) twins share approximately:", options: ["50% of DNA", "100% of nuclear DNA (from a single zygote that split)", "25%", "0%"], correctIndex: 1, explanation: "MZ twins arise from one fertilized egg → genetically identical (apart from rare somatic mutations).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

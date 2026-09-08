@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "The law of demand states that, ceteris paribus:", options: ["Higher price → higher quantity demanded", "Higher price → lower quantity demanded (downward-sloping D)", "Demand always rises", "Price doesn't affect quantity"], correctIndex: 1, explanation: "Law of demand: P↑ → Q_d↓ (substitution + income effects), holding other factors constant.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

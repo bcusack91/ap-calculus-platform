@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspb-ent-1a', question: 'A bit is BEST defined as:', options: ['Eight binary digits grouped together to form the smallest unit of information that a processor can directly work with', 'A single binary digit, with a value of either 0 or 1', 'A unit of network speed that measures how quickly data is moved between two connected devices on a network', 'A pixel on a display that can be lit up to show one piece of information to the user at a time'], correctIndex: 1, explanation: 'A bit (binary digit) is the smallest unit of digital information. Eight bits is a byte.', partNumber: 1, partTitle: 'Bits & Binary Numbers' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

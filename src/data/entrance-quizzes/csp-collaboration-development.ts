@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspc-ent-1a', question: 'Which is the STRONGEST argument for collaboration in software development?', options: ['It always reduces the total number of developer-hours required to ship any given software project on time', 'Diverse perspectives help identify edge cases, surface bugs, and produce better-designed programs than a solo developer would', 'It eliminates the need for any testing because each teammate can verify the others’ work informally during writing', 'It guarantees the code will compile cleanly the first time and run correctly without further integration work'], correctIndex: 1, explanation: 'Collaboration brings diverse perspectives that catch edge cases and design flaws a single developer might miss. It does not always reduce hours, eliminate testing, or guarantee compilation.', partNumber: 1, partTitle: 'Why Collaborate' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

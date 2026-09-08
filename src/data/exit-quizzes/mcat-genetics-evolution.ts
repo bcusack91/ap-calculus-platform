@@ -6,6 +6,7 @@ import { authoredFor } from './mcat-authored-pool'
 import { mcatSubtopicPool } from './mcat-subtopic-pool'
 import type { MCATQuizQuestion } from './mcat-general-chemistry'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questionPool: MCATQuizQuestion[] = [
   {
@@ -58,7 +59,7 @@ const fullPool = [...questionPool, ...authoredFor(['mcat-genetics-'])]
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const source = topicSlug ? mcatSubtopicPool(fullPool, 'genetics', topicSlug) : fullPool
-  const shuffled = [...source].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(source)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `genetics-evolution-${i}`,
     question: q.question,

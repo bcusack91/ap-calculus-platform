@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "mpd-ent-1a", question: "Major Depressive Disorder (MDD) requires at least:", options: ["1 day of low mood", "5 of 9 symptoms (incl. depressed mood OR anhedonia) for ≥2 weeks, causing impairment", "Mania", "Hallucinations only"], correctIndex: 1, explanation: "DSM-5 MDD criteria: depressed mood, anhedonia, sleep, appetite/weight, psychomotor, fatigue, guilt/worthlessness, concentration, suicidal ideation.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgap-ent-1a", question: "Von THÜNEN's Model (1826) explains:", options: ["Industrial location", "Agricultural land use zones around a central market, based on transport costs and perishability (dairy/gardening near center; grain middle; ranching edge)", "Urban hierarchies", "Population pyramids"], correctIndex: 1, explanation: "Von Thünen 'The Isolated State' (1826). Rings: intensive (dairy, vegetables) → grain → livestock/ranching → wilderness. First spatial economics model.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

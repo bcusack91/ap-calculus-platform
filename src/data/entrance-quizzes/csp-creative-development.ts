@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspc-ent-1a', question: 'A team is starting work on a fitness-tracking app. Which question is MOST important to answer FIRST when defining the program purpose?', options: ['Which specific programming language and framework should the team use to build the very first prototype version of the app?', 'Who are the users and what problem will the program solve for them?', 'What font and color scheme should the buttons in the user interface use throughout the application from launch onward?', 'How many total lines of code should the finished program have once development of the application is fully complete?'], correctIndex: 1, explanation: 'Program purpose starts with identifying users and the problem being solved. Tools, styling, and length follow from purpose.', partNumber: 1, partTitle: 'Program Function & Purpose' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

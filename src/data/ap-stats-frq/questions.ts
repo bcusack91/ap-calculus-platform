@@ -1,3 +1,5 @@
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface FRQRubricItem {
   points: number
   description: string
@@ -557,7 +559,7 @@ export function generateFullExamFRQs(): { long: StatsFRQ[]; short: StatsFRQ[]; t
   const selectedLong = [longPool[Math.floor(Math.random() * longPool.length)]]
 
   // Randomly select 5 short FRQs from the pool of 6
-  const shuffledShort = [...shortPool].sort(() => Math.random() - 0.5)
+  const shuffledShort = shuffleArray(shortPool)
   const selectedShort = shuffledShort.slice(0, 5)
 
   const totalPoints = selectedLong.reduce((sum, q) => sum + q.totalPoints, 0) +

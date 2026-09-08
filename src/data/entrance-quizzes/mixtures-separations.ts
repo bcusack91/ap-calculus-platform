@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ms-ent-1a', question: 'A pure substance is composed of:', options: ['Only one type of atom or molecule', 'A homogeneous mixture', 'Any single phase', 'Only elements'], correctIndex: 0, explanation: 'A pure substance has a fixed composition — either a single element (like gold) or a single compound (like water). Mixtures contain multiple substances.', partNumber: 1, partTitle: 'Pure Substances vs Mixtures' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

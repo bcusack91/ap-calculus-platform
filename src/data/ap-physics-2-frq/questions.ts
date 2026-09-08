@@ -1,6 +1,8 @@
 // AP Physics 2 Free Response Questions
 // Covers Units 1-7: Fluids, Thermodynamics, E&M, Circuits, Magnetism, Optics, Quantum/Nuclear
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface FRQRubricItem {
   points: number
   description: string
@@ -731,8 +733,8 @@ export function generateFullExamFRQs(): {
   const shortPool = getShortFRQs()
 
   // Shuffle and pick 2 long + 3 short
-  const shuffledLong = [...longPool].sort(() => Math.random() - 0.5)
-  const shuffledShort = [...shortPool].sort(() => Math.random() - 0.5)
+  const shuffledLong = shuffleArray(longPool)
+  const shuffledShort = shuffleArray(shortPool)
 
   const selectedLong = shuffledLong.slice(0, 2)
   const selectedShort = shuffledShort.slice(0, 3)

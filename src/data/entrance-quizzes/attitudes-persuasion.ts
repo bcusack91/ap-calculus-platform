@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "ap-ent-1a", question: "An ATTITUDE is generally defined as:", options: ["A behavior", "An evaluative belief and/or feeling toward an object, person, or idea (cognitive, affective, behavioral components)", "A trait", "A reflex"], correctIndex: 1, explanation: "Tripartite ABC model: Affect, Behavior tendencies, Cognition.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

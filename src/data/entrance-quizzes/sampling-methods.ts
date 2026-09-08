@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sm-ent-1a', question: 'What defines a simple random sample (SRS)?', options: ['Every individual has an equal chance of being selected', 'Every possible sample of size n has an equal chance of being chosen', 'The first n people on a list are selected', 'Subjects volunteer to participate'], correctIndex: 1, explanation: 'In a simple random sample (SRS), every possible sample of size n has an equal chance of being chosen — not just every individual.', partNumber: 1, partTitle: 'Simple Random Sampling' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

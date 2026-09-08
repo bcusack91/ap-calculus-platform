@@ -7,6 +7,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ser-ent-1a', question: 'Simplify: $x^3 \\cdot x^5$', options: ['$x^8$', '$x^{15}$', '$2x^8$', '$x^2$'], correctIndex: 0, explanation: 'When multiplying powers with the same base, add the exponents: $x^3 \\cdot x^5 = x^{3+5} = x^8$.', partNumber: 1, partTitle: 'Exponent Rules' },
@@ -26,7 +27,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

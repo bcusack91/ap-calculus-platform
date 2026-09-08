@@ -1,5 +1,6 @@
 /** Entrance Quiz — Spontaneity, Free Energy & Applications — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'sfea-ent-1a', question: 'Gibbs free energy (ΔG) combines which two thermodynamic quantities?', options: ['Entropy and volume', 'Enthalpy and entropy', 'Pressure and temperature', 'Heat capacity and enthalpy'], correctIndex: 1, explanation: 'ΔG = ΔH − TΔS combines enthalpy (ΔH) and entropy (ΔS) to predict spontaneity.', partNumber: 1, partTitle: 'What Is Gibbs Free Energy?' },
   { id: 'sfea-ent-1b', question: 'A reaction is spontaneous when:', options: ['ΔG > 0', 'ΔG = 0', 'ΔG < 0', 'ΔH > 0'], correctIndex: 2, explanation: 'A negative ΔG means the process is thermodynamically favorable (spontaneous) under the given conditions.', partNumber: 1, partTitle: 'What Is Gibbs Free Energy?' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'sfea-ent-7a', question: 'For a reaction with ΔH° = +50 kJ/mol and ΔS° = +150 J/(mol·K), estimate the temperature above which it becomes spontaneous.', options: ['About 33 K', 'About 333 K', 'About 500 K', 'It is always non-spontaneous'], correctIndex: 1, explanation: 'T = ΔH / ΔS = 50,000 J/mol ÷ 150 J/(mol·K) ≈ 333 K. Above ~333 K, TΔS > ΔH and ΔG < 0.', partNumber: 7, partTitle: 'AP Exam Practice' },
   { id: 'sfea-ent-7b', question: 'On the AP exam, when asked to justify whether a reaction is spontaneous, you should reference:', options: ['Only the sign of ΔH', 'Only the sign of ΔS', 'The sign of ΔG and how ΔH and ΔS contribute to it', 'Only the magnitude of K'], correctIndex: 2, explanation: 'A complete answer requires discussing ΔG = ΔH − TΔS and explaining how the signs and magnitudes of ΔH and ΔS determine the sign of ΔG.', partNumber: 7, partTitle: 'AP Exam Practice' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'What Is Gibbs Free Energy?' }, { partNumber: 2, partTitle: 'ΔG = ΔH − TΔS' },

@@ -1,5 +1,6 @@
 /** Entrance Quiz — Reaction Quotient & Le Chatelier's Principle — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'rqlc-ent-1a', question: 'The reaction quotient Q has the same form as K but uses:', options: ['Only equilibrium concentrations', 'Current (non-equilibrium) concentrations', 'Only initial concentrations of reactants', 'Mole fractions only'], correctIndex: 1, explanation: 'Q is calculated the same way as K, but uses the current concentrations at any point in time, not just at equilibrium.', partNumber: 1, partTitle: 'The Reaction Quotient (Q)' },
   { id: 'rqlc-ent-1b', question: 'If no products are present at the start of a reaction, Q equals:', options: ['K', 'Infinity', '0', '1'], correctIndex: 2, explanation: 'Q = [products]/[reactants]. With no products, the numerator is zero, so Q = 0.', partNumber: 1, partTitle: 'The Reaction Quotient (Q)' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'rqlc-ent-7a', question: 'At equilibrium, Q equals:', options: ['0', '1', 'K', 'Infinity'], correctIndex: 2, explanation: 'By definition, when a system is at equilibrium, Q = K.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'rqlc-ent-7b', question: 'Le Chatelier\'s principle predicts the direction of shift, but it does NOT tell us:', options: ['Whether the reaction shifts', 'The exact new equilibrium concentrations', 'Which direction the shift occurs', 'Whether temperature matters'], correctIndex: 1, explanation: 'Le Chatelier\'s principle qualitatively predicts direction but does not give quantitative new concentrations — ICE tables are needed for that.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'The Reaction Quotient (Q)' }, { partNumber: 2, partTitle: 'Comparing Q and K' },

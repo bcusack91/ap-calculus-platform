@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "oc-ent-1a", question: "Operant conditioning was systematized by:", options: ["Pavlov", "B.F. Skinner (building on Thorndike's Law of Effect, 1898) using operant chambers ('Skinner boxes')", "Wundt", "Freud"], correctIndex: 1, explanation: "Thorndike (1898) Law of Effect: behaviors followed by satisfying consequences are more likely to recur. Skinner extended this systematically.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

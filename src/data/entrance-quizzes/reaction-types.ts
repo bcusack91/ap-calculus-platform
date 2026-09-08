@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'rt-ent-1a', question: 'A synthesis (combination) reaction has the general form:', options: ['$AB \\to A + B$', '$A + B \\to AB$', '$AB + CD \\to AD + CB$', '$A + BC \\to AC + B$'], correctIndex: 1, explanation: 'Synthesis reactions combine two or more reactants into one product: $A + B \\to AB$.', partNumber: 1, partTitle: 'Synthesis & Decomposition' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

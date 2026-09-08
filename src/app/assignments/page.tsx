@@ -42,6 +42,9 @@ interface ClassroomInfo {
   id: string
   name: string
   teacher: string
+  /** The student's group name(s) within this class ("Blue Table"). Optional so
+      an older/degraded API response (groups table not migrated yet) still fits. */
+  groups?: string[]
 }
 
 interface UpcomingCompetition {
@@ -294,17 +297,35 @@ export default function StudentAssignmentsPage() {
           </div>
         )}
 
-        {/* Class announcements (hidden per classroom when there are none) */}
+        {/* Class announcements (hidden per classroom when there are none),
+            with the student's group name(s) shown under each class header. */}
         {classrooms.length > 0 && (
           <div className="space-y-6 mb-8">
             {classrooms.map((c) => (
-              <ClassroomAnnouncements
-                key={c.id}
-                classroomId={c.id}
-                isTeacher={false}
-                hideWhenEmpty
-                classroomName={c.name}
-              />
+              <div key={c.id}>
+                {c.groups && c.groups.length > 0 && (
+                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
+                      {c.name}
+                    </span>
+                    {c.groups.map((g) => (
+                      <span
+                        key={g}
+                        className="px-2 py-0.5 rounded-full bg-accent-subtle dark:bg-accent-light/20 text-accent dark:text-accent-muted text-xs font-medium"
+                        title={`Your group in ${c.name}`}
+                      >
+                        Group: {g}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <ClassroomAnnouncements
+                  classroomId={c.id}
+                  isTeacher={false}
+                  hideWhenEmpty
+                  classroomName={c.name}
+                />
+              </div>
             ))}
           </div>
         )}

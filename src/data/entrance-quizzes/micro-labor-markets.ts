@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "The supply of labor is generally:", options: ["Backward-bending at very high wages (income effect dominates)", "Upward-sloping with possible backward-bend at very high wages", "Vertical", "Always horizontal"], correctIndex: 1, explanation: "Substitution effect: higher wage → more work. Income effect: higher wage → more leisure. SE dominates at low wages; IE may dominate at very high wages → backward-bending S_L.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

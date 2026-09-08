@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'asr-ent-1a', question: 'What is the correct order of the scientific method?', options: ['Conclude → experiment → hypothesize → observe', 'Hypothesize → observe → conclude → experiment', 'Observe → question → hypothesize → experiment → analyze → conclude', 'Experiment → observe → question → hypothesize'], correctIndex: 2, explanation: 'The scientific method follows: observe → question → hypothesize → experiment → analyze → conclude.', partNumber: 1, partTitle: 'Scientific Method' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hglr-ent-1a", question: "About how many living languages exist today (Ethnologue 2024)?", options: ["50", "About 7,100 (with ~40% endangered; half spoken by fewer than 10,000 people)", "100,000", "50,000"], correctIndex: 1, explanation: "Ethnologue counts ~7,168 living languages (2024). Top 10 account for ~50% of speakers; long tail of endangered languages.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

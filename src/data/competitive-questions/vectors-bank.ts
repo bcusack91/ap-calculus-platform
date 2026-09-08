@@ -1,5 +1,7 @@
 // Vectors question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface VectorQuestion {
   id: number
   question: string
@@ -176,6 +178,6 @@ const allQuestions: VectorQuestion[] = [
 ]
 
 export function getVectorQuestions(count: number = 10): VectorQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, allQuestions.length))
 }

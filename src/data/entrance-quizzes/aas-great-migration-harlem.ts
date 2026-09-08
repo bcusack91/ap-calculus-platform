@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasgm-ent-1a", question: "In AP African American Studies, the \"Great Migration\" refers specifically to:", options: ["A 19th-century westward movement of African Americans across the Mississippi River.", "The two-stage 20th-century movement of roughly 6 million African Americans from the rural South to Northern, Midwestern, and Western cities — c. 1910–1940 (First) and c. 1940–1970 (Second) — chronicled by Isabel Wilkerson in *The Warmth of Other Suns* (2010).", "A purely intra-Southern rural-to-rural migration.", "A post-1980 return migration to the Deep South."], correctIndex: 1, explanation: "The Great Migration moved ~6M African Americans from the South over two waves (1910–1940 and 1940–1970); Wilkerson's *Warmth of Other Suns* (2010) is the major narrative history.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

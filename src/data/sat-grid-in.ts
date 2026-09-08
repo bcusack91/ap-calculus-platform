@@ -6,6 +6,8 @@
  * This module provides a bank of SPR problems with procedural generation.
  */
 
+import { shuffleArray } from '@/lib/shuffle-options'
+
 export interface GridInProblem {
   id: string
   question: string
@@ -60,7 +62,7 @@ export function generateGridInProblems(count = 10): GridInProblem[] {
   ]
 
   // Shuffle and pick
-  const shuffled = [...allGenerators].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allGenerators)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((gen, i) => ({
     id: `gridin-${i + 1}`,
     ...gen(),

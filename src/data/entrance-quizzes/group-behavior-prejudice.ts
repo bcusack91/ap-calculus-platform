@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "gbp-ent-1a", question: "GROUP polarization is the tendency for:", options: ["Group decisions to moderate", "Group discussion to STRENGTHEN the average pre-existing tendency of members (initially leaning risky → riskier; initially cautious → more cautious)", "Random shifts", "Reduce conformity"], correctIndex: 1, explanation: "Polarization driven by persuasive arguments and social comparison; observed in juries, online forums, political groups.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

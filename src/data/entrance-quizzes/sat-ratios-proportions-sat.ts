@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'srp-ent-1a', question: 'In a class of 30 students, the ratio of boys to girls is 2:3. How many girls are in the class?', options: ['12', '15', '18', '20'], correctIndex: 2, explanation: 'Total parts = 2 + 3 = 5. Girls = $(3/5) \\times 30$ = 18.', partNumber: 1, partTitle: 'Ratio Basics' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

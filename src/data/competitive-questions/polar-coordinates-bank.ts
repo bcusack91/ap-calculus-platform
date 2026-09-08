@@ -1,5 +1,7 @@
 // Polar Coordinates question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface PolarQuestion {
   id: number
   question: string
@@ -160,6 +162,6 @@ const allQuestions: PolarQuestion[] = [
 ]
 
 export function getPolarQuestions(count: number = 10): PolarQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, allQuestions.length))
 }

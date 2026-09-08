@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'arst-ent-1a', question: 'How many passages and questions are on the ACT Reading section?', options: ['3 passages, 30 questions', '5 passages, 50 questions', '4 passages, 40 questions in 60 minutes', '4 passages, 40 questions in 35 minutes'], correctIndex: 3, explanation: 'ACT Reading has 4 passages and 40 questions with a 35-minute time limit.', partNumber: 1, partTitle: 'ACT Reading Overview' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

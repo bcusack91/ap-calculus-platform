@@ -14,6 +14,7 @@ import ClassPlan from '@/components/ClassPlan'
 import ClassEngagement from '@/components/ClassEngagement'
 import StudentReportModal from '@/components/StudentReportModal'
 import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
+import GroupsPanel from '@/components/teacher/GroupsPanel'
 import ImportRosterModal from '@/components/teacher/ImportRosterModal'
 import AssignmentModal, {
   ASSIGNMENT_TYPES,
@@ -1129,6 +1130,7 @@ export default function ClassroomDetailPage() {
 
         {/* Roster */}
         {activeView === 'members' && (
+          <>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -1264,6 +1266,19 @@ export default function ClassroomDetailPage() {
               </>
             )}
           </div>
+
+          {/* Groups — named subsets of the roster (table groups, lab partners).
+              GroupsPanel hides itself behind a subtle note when the API reports
+              the migration hasn't been applied yet (available: false). */}
+          <GroupsPanel
+            classroomId={classroomId}
+            members={activeMembers.map((m) => ({
+              id: m.id,
+              name: m.user.name || m.user.email || 'Unnamed Student',
+            }))}
+            onError={setPageError}
+          />
+          </>
         )}
 
         {/* Work › Assignments */}

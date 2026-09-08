@@ -1,5 +1,6 @@
 /** Entrance Quiz — Integrated Rate Laws — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'irl-ent-1a', question: 'For a zero-order reaction, the integrated rate law is:', options: ['[A] = [A]$ {}_{0}$ − kt', 'ln[A] = ln[A]$ {}_{0}$ − kt', '1/[A] = 1/[A]$ {}_{0}$ + kt', '[A] = [A]$ {}_{0}e^{-kt}$'], correctIndex: 0, explanation: 'Zero-order: [A] = [A]$ {}_{0}$ − kt. Concentration decreases linearly with time.', partNumber: 1, partTitle: 'Zero-Order Reactions' },
   { id: 'irl-ent-1b', question: 'A zero-order reaction produces a straight line when plotting:', options: ['ln[A] vs. t', '1/[A] vs. t', '[A] vs. t', '[A]$ {}^{2}$ vs. t'], correctIndex: 2, explanation: 'For zero-order, [A] = [A]$ {}_{0}$ − kt is linear in [A] vs. t, with slope = −k.', partNumber: 1, partTitle: 'Zero-Order Reactions' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'irl-ent-7a', question: 'Radioactive decay follows ___ order kinetics:', options: ['Zero', 'First', 'Second', 'Fractional'], correctIndex: 1, explanation: 'Radioactive decay is a classic example of first-order kinetics: rate = λN, where λ is the decay constant.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'irl-ent-7b', question: 'Which reaction order has a half-life that increases as the reaction proceeds?', options: ['Zero order', 'First order', 'Second order', 'All orders'], correctIndex: 2, explanation: 'Second-order: $t_{1/2} = 1/(k[A])$. As [A] decreases, half-life increases. First-order half-life is constant; zero-order half-life decreases.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Zero-Order Reactions' }, { partNumber: 2, partTitle: 'First-Order Reactions' },

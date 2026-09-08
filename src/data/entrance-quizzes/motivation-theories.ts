@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "mot-ent-1a", question: "INSTINCT theory (early 20th century, James, McDougall) explained motivation by:", options: ["Learned habits", "Innate, fixed action patterns shared by a species — fell out of favor as 'instincts' multiplied without explanation", "Reinforcement schedules", "Cognitive appraisal"], correctIndex: 1, explanation: "Instinct theory was largely abandoned as the list of named instincts ballooned past 6,000 with little predictive value.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

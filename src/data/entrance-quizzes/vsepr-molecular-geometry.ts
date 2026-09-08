@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'vs-ent-1a', question: 'VSEPR theory predicts molecular geometry based on:', options: ['Atomic masses', 'Electron pair repulsion around the central atom', 'Bond energies', 'Electronegativity differences'], correctIndex: 1, explanation: 'VSEPR (Valence Shell Electron Pair Repulsion) theory states that electron groups around a central atom arrange themselves to minimize repulsion.', partNumber: 1, partTitle: 'Introduction to VSEPR' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

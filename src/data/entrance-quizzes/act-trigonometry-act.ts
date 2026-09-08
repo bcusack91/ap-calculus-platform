@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'atrig-ent-1a', question: 'Which set of ratios correctly defines sine, cosine, and tangent for an acute angle in a right triangle?', options: ['sin = opp/hyp, cos = adj/hyp, tan = opp/adj', 'sin = adj/hyp, cos = opp/hyp, tan = adj/opp', 'sin = hyp/opp, cos = hyp/adj, tan = adj/opp', 'sin = opp/adj, cos = adj/hyp, tan = opp/hyp'], correctIndex: 0, explanation: 'SOH-CAH-TOA: sin = opposite/hypotenuse, cos = adjacent/hypotenuse, tan = opposite/adjacent.', partNumber: 1, partTitle: 'Right Triangle Trig' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

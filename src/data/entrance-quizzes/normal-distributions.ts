@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'nd-ent-1a', question: 'Which of the following best describes the shape and center of a normal curve?', options: ['Skewed right with the mean at the peak', 'Symmetric and bell-shaped with mean = median = mode at the center', 'Uniform with the mean at the left edge', 'Bimodal with two peaks at the mean and median'], correctIndex: 1, explanation: 'Normal curves are symmetric, bell-shaped, and the mean, median, and mode are all equal and located at the center of the distribution.', partNumber: 1, partTitle: 'Properties of Normal Curves' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

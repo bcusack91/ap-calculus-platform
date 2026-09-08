@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgid-ent-1a", question: "The INDUSTRIAL REVOLUTION began in:", options: ["France 1900", "Britain ~1760-1840, centered on textiles (cotton), coal, iron, steam engines (Watt 1769)", "U.S. 1900", "Japan 1800"], correctIndex: 1, explanation: "British Industrial Revolution ~1760-1840. Cotton mills Manchester/Lancashire; steam engine (Watt 1769); iron (Coalbrookdale).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

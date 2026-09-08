@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'tl-ent-1a', question: 'Which of the following is true about relationships between variables?', options: ['All relationships are linear', 'Non-linear relationships do not exist in real data', 'Exponential, power, and logarithmic models are common alternatives to linear models', 'Only linear models are tested on the AP exam'], correctIndex: 2, explanation: 'Not all relationships are linear — exponential, power, and logarithmic models are common alternatives.', partNumber: 1, partTitle: 'Non-Linear Relationships' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "cc-ent-1a", question: "Ivan Pavlov (~1902, Nobel 1904) discovered classical conditioning while studying:", options: ["Memory in pigeons", "Salivation/digestion in dogs — dogs began salivating to cues that predicted food", "Phobias", "Reinforcement schedules"], correctIndex: 1, explanation: "Pavlov was studying digestive physiology when he noticed dogs salivating to lab assistants and bells before food arrived.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

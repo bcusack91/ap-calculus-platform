@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'asd-ent-1a', question: 'What is the primary purpose of a data table in a scientific experiment?', options: ['To organize numerical information in rows and columns', 'To make the report longer', 'To replace graphs entirely', 'To list the scientists involved'], correctIndex: 0, explanation: 'Data tables organize numerical information in rows and columns so it can be read and compared efficiently.', partNumber: 1, partTitle: 'Reading Data Tables' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

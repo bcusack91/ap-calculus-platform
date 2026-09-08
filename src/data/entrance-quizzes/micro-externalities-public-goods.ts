@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "A NEGATIVE production externality (e.g., pollution) results in:", options: ["Underproduction", "OVERPRODUCTION at the unregulated equilibrium because firms ignore external costs", "Equilibrium efficiency", "Zero output"], correctIndex: 1, explanation: "Negative externality: MSC > MPC. Free market produces where MPB = MPC, beyond the socially optimal Q (where MSB = MSC).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

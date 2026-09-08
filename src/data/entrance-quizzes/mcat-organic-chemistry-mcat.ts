@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'moc-ent-1a', question: 'Which functional group is characteristic of alcohols?', options: ['$-COOH$', '$-OH$', '$-NH_2$', '$-CHO$'], correctIndex: 1, explanation: 'Alcohols contain the hydroxyl group $-OH$ bonded to a carbon atom. Examples: ethanol ($CH_3CH_2OH$), methanol ($CH_3OH$).', partNumber: 1, partTitle: 'Functional Groups' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

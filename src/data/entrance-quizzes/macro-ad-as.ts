@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "macr-ent-1a", question: "Aggregate Demand (AD) slopes downward because of:", options: ["Diminishing marginal utility", "The wealth, interest-rate, and exchange-rate effects", "Income effects on individual goods", "Substitution between goods"], correctIndex: 1, explanation: "AD slopes down due to three macro effects: real-balances (wealth), interest-rate, and exchange-rate.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

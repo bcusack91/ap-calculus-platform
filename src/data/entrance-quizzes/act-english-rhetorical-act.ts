@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'aer-ent-1a', question: 'Which transition word signals a CONTRAST between ideas?', options: ['Furthermore', 'Therefore', 'However', 'Additionally'], correctIndex: 2, explanation: 'Transitions show relationships: "however" signals contrast, "furthermore" signals addition, and "therefore" signals cause/effect.', partNumber: 1, partTitle: 'Transitions & Organization' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

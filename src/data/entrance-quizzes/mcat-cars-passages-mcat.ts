@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mcp-ent-1a', question: 'CARS humanities passages typically draw from which fields?', options: ['Chemistry, physics, and biology', 'Literature, philosophy, art, and ethics', 'Economics, sociology, and anthropology', 'History, geography, and political science exclusively'], correctIndex: 1, explanation: 'Humanities passages come from literature, philosophy, arts, cultural studies, and ethics. They often contain abstract arguments and require careful analysis of the author\'s perspective.', partNumber: 1, partTitle: 'Humanities Passages' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

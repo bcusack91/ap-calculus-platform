@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sct-ent-1a', question: 'What is the center and radius of the circle $(x - 3)^{2}$ + $(y + 2)^{2}$ = 25?', options: ['Center (3, −2), radius 25', 'Center (−3, 2), radius 5', 'Center (3, −2), radius 5', 'Center (3, 2), radius 5'], correctIndex: 2, explanation: 'Standard form $(x - h)^{2}$ + $(y - k)^{2}$ = $r^{2}$. Here h = 3, k = −2, r = $\\sqrt{25}$ = 5. Center (3, −2), radius 5.', partNumber: 1, partTitle: 'Circle Equation' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

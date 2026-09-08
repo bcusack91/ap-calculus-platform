@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "macr-ent-1a", question: "Discretionary fiscal policy refers to:", options: ["Automatic stabilizers like unemployment insurance", "Deliberate changes in G and T enacted by Congress and the President", "Fed monetary actions", "State-level budgets only"], correctIndex: 1, explanation: "Discretionary = active legislative action (e.g., 2009 ARRA, 2020 CARES Act). Automatic stabilizers act without new legislation.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

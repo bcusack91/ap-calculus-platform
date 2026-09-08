@@ -1,5 +1,7 @@
 // Ap Enviro Question question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface ApEnviroQuestion {
   id: number
   question: string
@@ -743,6 +745,6 @@ const allQuestions: ApEnviroQuestion[] = [
 
 export function getApAPESQuestions(count: number = 10, topicSlug?: string): ApEnviroQuestion[] {
   const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

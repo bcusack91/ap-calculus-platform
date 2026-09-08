@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgao-ent-1a", question: "The AGRICULTURAL REVOLUTION (First, Neolithic) began approximately:", options: ["500 years ago", "~10,000-12,000 years ago at end of Pleistocene; multiple independent origins", "2,000 years ago", "100,000 years ago"], correctIndex: 1, explanation: "Neolithic Revolution ~10-12 kya. Multiple independent centers identified — not single origin.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

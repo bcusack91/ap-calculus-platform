@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgcd-ent-1a", question: "CULTURE includes:", options: ["Only art and music", "Beliefs, values, practices, language, religion, technology, foodways — everything a group shares and transmits", "Only religion", "Only language"], correctIndex: 1, explanation: "Culture = total way of life: material (artifacts) and non-material (beliefs, norms).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

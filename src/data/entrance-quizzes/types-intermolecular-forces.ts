@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'imf-ent-1a', question: 'London dispersion forces are present in:', options: ['Only polar molecules', 'Only nonpolar molecules', 'All molecules and atoms', 'Only ionic compounds'], correctIndex: 2, explanation: 'London dispersion forces (LDFs) arise from temporary dipoles and exist in ALL molecules and atoms, though they are the only IMF in nonpolar substances.', partNumber: 1, partTitle: 'London Dispersion Forces' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

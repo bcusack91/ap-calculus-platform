@@ -4,6 +4,7 @@
  */
 
 import { relevantPool } from './relevance-fallback'
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface CsaQuestion {
   question: string
   options: string[]
@@ -80,7 +81,7 @@ export const csaQuestionPool: CsaQuestion[] = [
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }[] {
   let pool = csaQuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
+  return shuffleArray(pool).slice(0, count).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,
     options: q.options,

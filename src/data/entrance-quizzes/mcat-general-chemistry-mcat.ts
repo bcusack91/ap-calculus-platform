@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mgc-ent-1a', question: 'Which subatomic particle determines the identity (atomic number) of an element?', options: ['Neutron', 'Electron', 'Proton', 'Nucleon'], correctIndex: 2, explanation: 'The atomic number equals the number of protons. Changing the proton count changes the element entirely.', partNumber: 1, partTitle: 'Atomic Structure Basics' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

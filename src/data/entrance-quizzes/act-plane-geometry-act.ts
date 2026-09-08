@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'apg-ent-1a', question: 'Two angles are supplementary. If one angle is 65°, what is the other?', options: ['25°', '65°', '115°', '125°'], correctIndex: 2, explanation: 'Supplementary angles sum to 180°. 180° − 65° = 115°.', partNumber: 1, partTitle: 'Angles and Lines' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

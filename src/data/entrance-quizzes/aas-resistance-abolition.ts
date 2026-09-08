@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasra-ent-1a", question: "In AP African American Studies, \"everyday resistance\" under slavery refers to:", options: ["Only large armed rebellions.", "Daily acts of refusal — work slowdowns, tool breakage, feigned illness, theft of food, running away temporarily, preserving forbidden literacy and worship — that historian Stephanie Camp (*Closer to Freedom*, 2004) calls a \"rival geography\" of enslaved life.", "Voluntary cooperation with enslavers in all matters.", "A purely 20th-century concept with no antebellum referent."], correctIndex: 1, explanation: "Camp's *Closer to Freedom* (2004) and earlier work by Eugene Genovese (*Roll, Jordan, Roll*, 1974) describe \"everyday resistance\" as the ordinary infrapolitics of enslaved life.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

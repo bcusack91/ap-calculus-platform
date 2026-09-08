@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sle-ent-1a', question: 'What is the slope of the line given by 4x − 2y = 8?', options: ['−2', '2', '4', '−4'], correctIndex: 1, explanation: 'Rewrite in slope-intercept form: −2y = −4x + 8 → y = 2x − 4. The slope is 2.', partNumber: 1, partTitle: 'Linear Equation Basics' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

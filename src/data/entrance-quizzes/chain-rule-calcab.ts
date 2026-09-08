@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cr-ent-1a', question: 'The Chain Rule states that $\\frac{d}{dx}[f(g(x))] =$', options: ['$f\'(g(x))$', '$f\'(g(x)) \\cdot g\'(x)$', '$f\'(x) \\cdot g\'(x)$', '$f(g\'(x))$'], correctIndex: 1, explanation: 'The Chain Rule: differentiate the outer function evaluated at the inner, times the derivative of the inner.', partNumber: 1, partTitle: 'Understanding Composite Functions' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'cr-ent-7b', question: 'If $f(x) = \\ln(\\cos x)$, then $f\'(x) =$', options: ['$\\frac{1}{\\cos x}$', '$-\\tan x$', '$\\tan x$', '$-\\frac{1}{\\cos x}$'], correctIndex: 1, explanation: '$\\frac{-\\sin x}{\\cos x} = -\\tan x$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Understanding Composite Functions' },

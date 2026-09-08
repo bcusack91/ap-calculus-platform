@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgpg-ent-1a", question: "Thomas MALTHUS (1798) argued:", options: ["Population can grow indefinitely", "Population grows geometrically while food grows arithmetically → inevitable crisis (largely wrong empirically since Green Revolution)", "Technology eliminates hunger", "Birth rates always fall"], correctIndex: 1, explanation: "Malthus 'Essay on the Principle of Population' (1798). Tech (Green Revolution post-1945) has so far outpaced his prediction.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

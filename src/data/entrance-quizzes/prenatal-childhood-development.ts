@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "pcd-ent-1a", question: "The three prenatal stages, in order, are:", options: ["Fetal, embryonic, germinal", "Germinal (0-2 wk), embryonic (3-8 wk), fetal (9 wk-birth)", "Embryonic, germinal, fetal", "Fetal, germinal, embryonic"], correctIndex: 1, explanation: "Germinal: zygote to implantation. Embryonic: organ formation (most teratogen-vulnerable). Fetal: growth and refinement.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -10,6 +10,7 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import type { ChemFRQ, FRQRubricItem } from '@/data/ap-chem-frq/questions'
 import { generateExitQuiz } from '@/data/exit-quizzes'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -79,7 +80,7 @@ async function loadMCQuestions(): Promise<MCQuestion[]> {
       })))
     } catch { /* skip unavailable */ }
   }
-  return all.sort(() => Math.random() - 0.5).slice(0, 60)
+  return shuffleArray(all).slice(0, 60)
 }
 
 /* ------------------------------------------------------------------ */

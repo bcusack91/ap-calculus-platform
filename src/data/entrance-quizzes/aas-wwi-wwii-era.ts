@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasww-ent-1a", question: "In AP African American Studies, the \"Double V\" campaign of WWII referred to:", options: ["Victory in the air and at sea, with no domestic dimension.", "A 1942 *Pittsburgh Courier* slogan — Victory over fascism abroad and Victory over racism at home — that framed Black wartime service as a claim on full citizenship.", "A military strategy unrelated to civil rights.", "A 21st-century branding campaign."], correctIndex: 1, explanation: "James G. Thompson's January 1942 letter to the *Pittsburgh Courier* launched the Double V campaign, linking the global anti-fascist war to the domestic struggle against Jim Crow.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

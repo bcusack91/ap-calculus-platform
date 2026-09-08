@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ove-ent-1a', question: 'In an observational study, the researcher:', options: ['Randomly assigns subjects to treatment groups', 'Observes individuals without imposing any treatments', 'Controls all variables in a laboratory setting', 'Uses a placebo on the control group'], correctIndex: 1, explanation: 'In an observational study, researchers observe individuals and measure variables without imposing treatments or using random assignment.', partNumber: 1, partTitle: 'Observational Studies' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

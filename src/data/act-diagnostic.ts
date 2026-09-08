@@ -5,6 +5,8 @@
  * sections: English, Math, Reading, Science. Weak areas map to topic slugs.
  */
 
+import { actSectionScaled } from '@/lib/act-scoring'
+
 export const TOTAL_FORMS = 10
 
 export interface ACTDiagnosticQuestion {
@@ -169,20 +171,10 @@ export function scoreACTDiagnostic(form: number, questions: ACTDiagnosticQuestio
   const totalQuestions = domainResults.reduce((s, d) => s + d.total, 0)
   const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
-  // Estimated ACT composite (1-36 scale)
-  let estimatedComposite: number
-  if (percentage >= 95) estimatedComposite = 35
-  else if (percentage >= 90) estimatedComposite = 33
-  else if (percentage >= 85) estimatedComposite = 31
-  else if (percentage >= 80) estimatedComposite = 29
-  else if (percentage >= 75) estimatedComposite = 27
-  else if (percentage >= 70) estimatedComposite = 25
-  else if (percentage >= 65) estimatedComposite = 23
-  else if (percentage >= 60) estimatedComposite = 21
-  else if (percentage >= 50) estimatedComposite = 19
-  else if (percentage >= 40) estimatedComposite = 16
-  else if (percentage >= 30) estimatedComposite = 13
-  else estimatedComposite = 10
+  // Estimated ACT composite (1-36 scale) through the calibrated anchor curve
+  // (see src/lib/act-scoring.ts) — replaces a step table that ran hot at the
+  // top of the scale (85% -> 31, 90% -> 33 vs. real ~28-29/30-31).
+  const estimatedComposite = actSectionScaled(totalQuestions > 0 ? totalCorrect / totalQuestions : 0)
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)

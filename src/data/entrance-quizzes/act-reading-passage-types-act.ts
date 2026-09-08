@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'arpt-ent-1a', question: 'What should you focus on when reading a Literary Narrative / Prose Fiction passage on the ACT?', options: ['Data and statistics', 'Characters, relationships, emotions, and plot', 'Scientific processes and cause-effect', 'The author\'s political argument'], correctIndex: 1, explanation: 'Literary narrative passages focus on characters, relationships, emotions, and plot. Read for character development and story arc.', partNumber: 1, partTitle: 'Prose Fiction / Literary Narrative' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

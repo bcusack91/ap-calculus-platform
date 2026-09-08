@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "li-ent-1a", question: "Language has hierarchical levels:", options: ["Sentences only", "Phonemes (sounds) → morphemes (smallest meaning units) → words → syntax → semantics", "Just words", "Letters only"], correctIndex: 1, explanation: "Phonology, morphology, syntax, semantics, and pragmatics are the standard linguistic levels.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

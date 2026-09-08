@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ase-ent-1a', question: 'What is the key principle of a well-designed experiment?', options: ['Test as many variables as possible at once', 'Avoid using a control group', 'Test one variable at a time while keeping others constant', 'Change all variables simultaneously'], correctIndex: 2, explanation: 'A good experiment tests one variable at a time while keeping others constant to isolate cause and effect.', partNumber: 1, partTitle: 'Experimental Design' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

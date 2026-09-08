@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgpd-ent-1a", question: "About what percentage of the world's 8+ billion people live in the Northern Hemisphere?", options: ["20%", "About 90% (most land and major population clusters are north of equator)", "50%", "10%"], correctIndex: 1, explanation: "~90% of humans live in the Northern Hemisphere — most continents, including East Asia, South Asia, and Europe.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

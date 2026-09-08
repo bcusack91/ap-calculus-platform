@@ -1,5 +1,6 @@
 /** Entrance Quiz — Acid-Base Titrations — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'abtit-ent-1a', question: 'In a titration, the equivalence point is where:', options: ['The indicator changes color', 'Moles of acid equal moles of base', 'pH is exactly 7', 'The solution turns clear'], correctIndex: 1, explanation: 'The equivalence point is where the moles of titrant exactly equal the moles of analyte (stoichiometric equivalence).', partNumber: 1, partTitle: 'Titration Basics' },
   { id: 'abtit-ent-1b', question: 'A standard solution is one whose ___ is precisely known:', options: ['pH', 'Concentration', 'Volume', 'Temperature'], correctIndex: 1, explanation: 'A standard solution has a precisely known concentration, used as the titrant to determine the concentration of an unknown.', partNumber: 1, partTitle: 'Titration Basics' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'abtit-ent-7a', question: 'A polyprotic acid titration curve shows:', options: ['One equivalence point', 'Multiple equivalence points (one for each ionizable proton)', 'No equivalence point', 'Only one buffer region'], correctIndex: 1, explanation: 'Polyprotic acids like $H_3PO_4$ show multiple equivalence points — one for each proton donated.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'abtit-ent-7b', question: 'Adding excess titrant beyond the equivalence point in a weak acid/strong base titration makes the solution pH:', options: ['Return to the initial value', 'Approach the pH of the titrant (strongly basic)', 'Stay at 7', 'Decrease'], correctIndex: 1, explanation: 'Excess strong base (NaOH) beyond equivalence makes the solution increasingly basic, approaching the pH of the NaOH solution.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Titration Basics' }, { partNumber: 2, partTitle: 'Strong Acid–Strong Base' },

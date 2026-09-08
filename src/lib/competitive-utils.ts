@@ -5,6 +5,8 @@
 // all ~2.3MB of banks into every route's cold-start graph. Each wrapper keeps
 // the SAME name as the original named export so the dispatch maps and call
 // sites resolve unchanged — callers just `await` the now-async getter.
+
+import { shuffleArray } from '@/lib/shuffle-options'
 type BankQuestion = OptionQuestion
 type AnyGetter = (...a: unknown[]) => BankQuestion[]
 async function getQuestionSet(...args: unknown[]) { const m = await import('@/data/competitive-questions/reflection-refraction-bank'); return (m.getQuestionSet as unknown as AnyGetter)(...args) }
@@ -1234,7 +1236,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     const allCourseQuestions = await bankFn(999) // get all questions
     const filteredQuestions = allCourseQuestions.filter(q => completedTopics.includes(q.topicSlug))
     if (filteredQuestions.length > 0) {
-      const shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5)
+      const shuffled = shuffleArray(filteredQuestions)
       const selected = shuffled.slice(0, Math.min(totalQuestions, shuffled.length))
       return (selected).map((q: OptionQuestion, i: number) => {
         const s = shuffleOptions(q)

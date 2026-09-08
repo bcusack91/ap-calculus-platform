@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ars-ent-1a', question: 'How much time do you have per passage on the ACT Reading section?', options: ['About 5 minutes', 'About 8 minutes and 45 seconds', 'About 12 minutes', 'About 15 minutes'], correctIndex: 1, explanation: 'ACT Reading gives you 35 minutes for 40 questions across 4 passages, which works out to approximately 8 minutes and 45 seconds per passage.', partNumber: 1, partTitle: 'Time Management' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

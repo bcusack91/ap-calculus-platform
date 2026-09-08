@@ -1,3 +1,5 @@
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface NegativeNumberQuestion {
   id: number
   question: string
@@ -409,6 +411,6 @@ const allQuestions: NegativeNumberQuestion[] = [
 ]
 
 export function getNegativeNumbersQuestions(count: number = 10): NegativeNumberQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

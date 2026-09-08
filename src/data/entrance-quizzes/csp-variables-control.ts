@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspv-ent-1a', question: 'A variable in a program is BEST described as:', options: ['A constant value that cannot change once the program has finished loading the variable\'s initial assignment statement', 'A named storage location whose value can be set or updated during program execution', 'A type of loop that repeats a stored expression until the controlling termination condition becomes true', 'A built-in function that returns the value most recently assigned to any other identifier in scope'], correctIndex: 1, explanation: 'A variable is a name that refers to a storage location holding a value, which can be assigned or updated during execution.', partNumber: 1, partTitle: 'Variables & Storage' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

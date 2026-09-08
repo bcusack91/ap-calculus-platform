@@ -1,5 +1,6 @@
 /** Entrance Quiz — Buffer Solutions & Henderson-Hasselbalch — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'bshh-ent-1a', question: 'A buffer solution resists changes in:', options: ['Volume', 'Temperature', 'pH', 'Pressure'], correctIndex: 2, explanation: 'A buffer solution resists changes in pH when small amounts of acid or base are added.', partNumber: 1, partTitle: 'What Is a Buffer?' },
   { id: 'bshh-ent-1b', question: 'A buffer is typically composed of:', options: ['A strong acid and its conjugate base', 'A weak acid and its conjugate base (or weak base and its conjugate acid)', 'Two strong acids', 'Pure water and a salt'], correctIndex: 1, explanation: 'Buffers consist of a weak acid/conjugate base pair (e.g., $CH_3COOH/CH_3COO^-$) or a weak base/conjugate acid pair.', partNumber: 1, partTitle: 'What Is a Buffer?' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'bshh-ent-7a', question: 'Blood is buffered near pH 7.4 primarily by the:', options: ['Acetic acid/acetate system', 'Carbonic acid/bicarbonate system', 'Ammonia/ammonium system', 'Phosphate system only'], correctIndex: 1, explanation: 'The $H_2CO_3/HCO_3^-$ buffer system is the primary blood buffer, maintaining pH near 7.4.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'bshh-ent-7b', question: 'A buffer functions effectively within approximately ___ pH unit(s) of pKa:', options: ['0.1', '±1', '±3', '±7'], correctIndex: 1, explanation: 'Buffers are effective when $pH = pK_a ± 1$ (i.e., when the ratio $[A^-]/[HA]$ is between 0.1 and 10).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'What Is a Buffer?' }, { partNumber: 2, partTitle: 'Henderson-Hasselbalch Equation' },

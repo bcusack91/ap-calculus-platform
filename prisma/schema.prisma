@@ -1056,6 +1056,7 @@ model Classroom {
   curriculumPlans CurriculumPlan[]
   flashcardSets   FlashcardSet[]
   coTeachers      ClassroomCoTeacher[]
+  groups          ClassroomGroup[]
 
   @@index([teacherId])
   @@index([joinCode])
@@ -1141,8 +1142,40 @@ model ClassroomMember {
   classroom Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
+  groupMemberships ClassroomGroupMember[]
+
   @@unique([classroomId, userId])
   @@index([userId])
+}
+
+// Small named groups within a classroom (table groups, lab partners, reading
+// circles). Kept deliberately lean: a group is just a name plus a member set.
+// Assignment targeting by group is the natural follow-up, not in this pass.
+model ClassroomGroup {
+  id          String   @id @default(cuid())
+  classroomId String
+  name        String
+  createdAt   DateTime @default(now())
+
+  classroom Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  members   ClassroomGroupMember[]
+
+  @@unique([classroomId, name])
+  @@index([classroomId])
+}
+
+model ClassroomGroupMember {
+  id       String @id @default(cuid())
+  groupId  String
+  // FK to ClassroomMember (not User) so removing a student from the class
+  // cascades them out of every group in that class automatically.
+  memberId String
+
+  group  ClassroomGroup  @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  member ClassroomMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, memberId])
+  @@index([memberId])
 }
 
 model Assignment {

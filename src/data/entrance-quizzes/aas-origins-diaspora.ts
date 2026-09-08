@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasod-ent-1a", question: "In AP African American Studies, the term \"African Diaspora\" refers to:", options: ["The voluntary migration of Europeans into Africa during the colonial era.", "The dispersal of Africans and their descendants worldwide, primarily through the transatlantic and Indian Ocean slave trades.", "The internal migration of West Africans across the Sahara before 1500.", "The post-1965 migration of African students to U.S. universities."], correctIndex: 1, explanation: "The African Diaspora describes the global dispersal of Africans and their descendants — most consequentially via the transatlantic slave trade (c. 1500–1866) — and the cultures they built in the Americas, Europe, and the Indian Ocean world.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

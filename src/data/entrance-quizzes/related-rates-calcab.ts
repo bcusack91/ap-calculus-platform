@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'rr-ent-1a', question: 'In a related rates problem, you implicitly differentiate the equation with respect to:', options: ['$x$', '$y$', 'time $t$', 'A constant'], correctIndex: 2, explanation: 'Related rates: differentiate with respect to time, treating each variable as a function of $t$.', partNumber: 1, partTitle: 'Introduction to Related Rates' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'rr-ent-7b', question: 'A common AP error in related rates is:', options: ['Using too much algebra', 'Substituting specific values BEFORE differentiating', 'Using radians', 'Drawing a diagram'], correctIndex: 1, explanation: 'Premature substitution treats changing quantities as constants, producing a wrong derivative.', partNumber: 7, partTitle: 'AP Exam Free Response Strategies' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to Related Rates' },

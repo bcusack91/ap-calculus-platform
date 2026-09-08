@@ -1,5 +1,6 @@
 /** Entrance Quiz — Stoichiometry & Limiting Reactants — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'slr-ent-1a', question: 'In the reaction $2H_2 + O_2 \\to 2H_2O$, the mole ratio of $H_2$ to $O_2$ is:', options: ['1:1', '1:2', '2:1', '2:2'], correctIndex: 2, explanation: 'The coefficients give the mole ratio: 2 mol $H_2$ : 1 mol $O_2$ = 2:1.', partNumber: 1, partTitle: 'Mole Ratios' },
   { id: 'slr-ent-1b', question: 'If 3 mol of $O_2$ react completely, how many moles of $H_2O$ form? ($2H_2 + O_2 \\to 2H_2O$)', options: ['1.5 mol', '3 mol', '6 mol', '2 mol'], correctIndex: 2, explanation: 'Mole ratio of $O_2$ to $H_2O$ is 1:2. So $3 \\times 2 = 6$ mol $H_2O$.', partNumber: 1, partTitle: 'Mole Ratios' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'slr-ent-7a', question: 'In a multistep synthesis, the overall percent yield equals:', options: ['The sum of individual yields', 'The product of individual yields', 'The average of individual yields', 'The highest individual yield'], correctIndex: 1, explanation: 'Overall yield = $yield_{1}$ × $yield_{2}$ × $yield_{3}$ × ... For example, 3 steps each at 80% gives $(0.80)^3 = 0.512 = 51.2\\%$ overall.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'slr-ent-7b', question: 'A student mixes 5.0 g Zn (M=65.4) with 5.0 g S (M=32.1) to form ZnS. Which is the limiting reactant?', options: ['Zn', 'S', 'Neither', 'Cannot determine'], correctIndex: 0, explanation: 'Mol Zn = 5.0/65.4 = 0.076. Mol S = 5.0/32.1 = 0.156. Ratio Zn:S = 1:1, so Zn (fewer moles) is limiting.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Mole Ratios' }, { partNumber: 2, partTitle: 'Mass-to-Mass Calculations' },

@@ -1,5 +1,7 @@
 // Algebra question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface AlgebraQuestion {
   id: number
   question: string
@@ -417,6 +419,6 @@ const allQuestions: AlgebraQuestion[] = [
 ]
 
 export function getAlgebraQuestions(count: number = 10): AlgebraQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

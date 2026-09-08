@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspa-ent-1a', question: 'An algorithm is BEST defined as:', options: ['A specific programming language that a computer must use in order to carry out any kind of step-by-step solution', 'A finite sequence of well-defined steps that solves a problem or performs a task', 'A computer chip on the motherboard that physically stores the steps used to solve any given problem', 'Any random list of instructions, even ones that contradict each other or never reach a final stopping point'], correctIndex: 1, explanation: 'An algorithm is a finite, well-defined procedure for solving a problem. It exists independently of any programming language.', partNumber: 1, partTitle: 'What Is an Algorithm' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

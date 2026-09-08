@@ -1,5 +1,7 @@
 // Derivatives question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface DerivativeQuestion {
   id: number
   question: string
@@ -419,6 +421,6 @@ const allQuestions: DerivativeQuestion[] = [
 ]
 
 export function getDerivativeQuestions(count: number = 10): DerivativeQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

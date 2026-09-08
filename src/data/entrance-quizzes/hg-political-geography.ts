@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgpt-ent-1a", question: "A STATE in political geography is:", options: ["A federal subunit", "A politically organized territory with defined borders, population, sovereignty, and recognition", "Any region", "A city"], correctIndex: 1, explanation: "State = country with sovereignty, territory, population, recognition. Confusingly, U.S. 'states' are subunits (should be called provinces).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

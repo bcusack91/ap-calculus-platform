@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mbf-ent-1a', question: 'At physiological pH (~7.4), which amino acid side chain would be positively charged?', options: ['Aspartate (pKa ~3.9)', 'Glutamate (pKa ~4.1)', 'Lysine (pKa ~10.5)', 'Tyrosine (pKa ~10.1)'], correctIndex: 2, explanation: "Lysine's ε-amino group (pKa ~10.5) is above physiological pH, so it remains protonated ($-NH_3^+$) at pH 7.4 — positively charged.", partNumber: 1, partTitle: 'Amino Acids & Proteins' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

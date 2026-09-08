@@ -1,6 +1,8 @@
 // Pre-Calculus question bank for competitive mode
 // ~7-8 questions per topic across AP Precalculus topics
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface PreCalcQuestion {
   id: number
   question: string
@@ -404,6 +406,6 @@ export function getPreCalcQuestions(count: number = 10, topicSlug?: string): Pre
     const filtered = pool.filter(q => q.topicSlug === topicSlug)
     if (filtered.length > 0) pool = filtered
   }
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

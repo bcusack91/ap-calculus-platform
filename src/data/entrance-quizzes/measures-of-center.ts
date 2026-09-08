@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'moc-ent-1a', question: 'The sample mean is denoted by which symbol?', options: ['μ', 'x̄', 'σ', 's'], correctIndex: 1, explanation: 'x̄ (x-bar) denotes the sample mean. μ (mu) is the population mean, σ is population standard deviation, and s is sample standard deviation.', partNumber: 1, partTitle: 'Mean (Average)' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

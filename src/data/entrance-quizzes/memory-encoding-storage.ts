@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "mes-ent-1a", question: "The Atkinson-Shiffrin (1968) model proposes three memory stores:", options: ["Working, episodic, semantic", "Sensory memory → Short-term (working) memory → Long-term memory", "Procedural, declarative, implicit", "Iconic only"], correctIndex: 1, explanation: "The 'modal model' became the dominant framework, later updated by Baddeley's working memory model (1974).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

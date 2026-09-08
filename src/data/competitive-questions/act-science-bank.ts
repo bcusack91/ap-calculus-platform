@@ -1,5 +1,7 @@
 // ACT Science question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface ActScienceQuestion {
   id: number
   question: string
@@ -1653,6 +1655,6 @@ const allQuestions: ActScienceQuestion[] = [
 export const actScienceQuestionBank: ActScienceQuestion[] = allQuestions
 
 export function getActScienceQuestions(count: number = 10): ActScienceQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

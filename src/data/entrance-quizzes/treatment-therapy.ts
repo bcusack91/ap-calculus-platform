@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "tt-ent-1a", question: "Psychoanalysis (Freud) uses techniques such as:", options: ["Token economies", "FREE ASSOCIATION, dream analysis, interpretation of resistance and TRANSFERENCE", "Cognitive restructuring", "Exposure therapy"], correctIndex: 1, explanation: "Modern psychodynamic therapy is briefer but retains attention to unconscious processes and the therapeutic relationship.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

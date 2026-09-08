@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ams-ent-1a', question: 'How many questions are on the ACT Math section, and how much time is allowed?', options: ['30 questions in 30 minutes', '60 questions in 60 minutes', '50 questions in 75 minutes', '40 questions in 45 minutes'], correctIndex: 1, explanation: 'The ACT Math section has 60 questions in 60 minutes — an average of 1 minute per question.', partNumber: 1, partTitle: 'ACT Math Overview' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
 
 import { authoredFor } from './mcat-authored-pool'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 export interface MCATQuizQuestion {
   question: string
@@ -227,7 +228,7 @@ export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQu
     ? fullPool.filter((q) => q.subtopicSlug === topicSlug)
     : fullPool
   const sourcePool = filteredPool.length > 0 ? filteredPool : fullPool
-  const shuffled = [...sourcePool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(sourcePool)
 
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `mcat-genchem-${i}`,

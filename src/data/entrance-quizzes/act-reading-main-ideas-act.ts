@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'armi-ent-1a', question: 'Where is the main idea of a passage most often found?', options: ['In the middle of the passage only', 'In footnotes or captions', 'In title, topic sentences, or concluding sentences', 'In the longest paragraph'], correctIndex: 2, explanation: 'The main idea is the central point the author makes and is often found in the title, topic sentences, or concluding sentences of a passage.', partNumber: 1, partTitle: 'Finding the Main Idea' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

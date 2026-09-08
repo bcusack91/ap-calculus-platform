@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mos-ent-1a', question: 'The range of a data set is calculated as:', options: ['Q3 − Q1', 'Mean − median', 'Max − min', 'Standard deviation × 2'], correctIndex: 2, explanation: 'Range = maximum value − minimum value. It is the simplest measure of spread but is sensitive to outliers since it uses only two values.', partNumber: 1, partTitle: 'Range & IQR' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

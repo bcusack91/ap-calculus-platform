@@ -1,5 +1,6 @@
 /** Entrance Quiz — Le Chatelier's Principle and Equilibrium Shifts — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'lce-ent-1a', question: 'Le Chatelier\'s principle states that a system at equilibrium will:', options: ['Stop reacting when disturbed', 'Shift to partially counteract a disturbance', 'Always shift toward products', 'Change the value of K'], correctIndex: 1, explanation: 'Le Chatelier\'s principle says an equilibrium system shifts to partially counteract any stress applied to it.', partNumber: 1, partTitle: 'Le Chatelier\'s Principle' },
   { id: 'lce-ent-1b', question: 'A "stress" on an equilibrium system refers to:', options: ['Only temperature changes', 'Any change in concentration, pressure, or temperature', 'Only the addition of a catalyst', 'Only volume changes'], correctIndex: 1, explanation: 'Stress includes changes in concentration, pressure/volume, or temperature — not catalysts, which affect rate but not position.', partNumber: 1, partTitle: 'Le Chatelier\'s Principle' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'lce-ent-7a', question: 'For $N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)$ ($\\Delta H < 0$), which change increases the yield of $NH_3$?', options: ['Increasing temperature', 'Decreasing pressure', 'Removing $H_2$', 'Increasing pressure'], correctIndex: 3, explanation: 'The product side has fewer moles of gas (2 vs 4). Increasing pressure shifts toward fewer gas moles → more $NH_{3}$.', partNumber: 7, partTitle: 'AP Exam Practice' },
   { id: 'lce-ent-7b', question: 'When explaining an equilibrium shift on the AP exam, you must include:', options: ['Only the direction of the shift', 'The direction AND a justification using Le Chatelier\'s principle', 'Only the new K value', 'A balanced equation'], correctIndex: 1, explanation: 'AP Chemistry requires stating the shift direction AND explaining why using Le Chatelier\'s principle (the system counteracts the stress).', partNumber: 7, partTitle: 'AP Exam Practice' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Le Chatelier\'s Principle' }, { partNumber: 2, partTitle: 'Concentration Changes' },

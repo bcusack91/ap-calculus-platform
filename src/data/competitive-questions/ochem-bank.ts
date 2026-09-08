@@ -1,5 +1,7 @@
 // Organic Chemistry question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface OChemQuestion {
   id: number
   question: string
@@ -216,6 +218,6 @@ const allQuestions: OChemQuestion[] = [
 ]
 
 export function getOChemQuestions(count: number = 10): OChemQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

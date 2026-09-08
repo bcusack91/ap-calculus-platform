@@ -2,6 +2,7 @@
  * Entrance Quiz — Inverse Functions & Derivatives (AP Calculus AB)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ifd-ent-1a', question: 'If $f$ and $g$ are inverses, then $f(g(x)) =$', options: ['$0$', '$x$', '$1$', '$f(x)g(x)$'], correctIndex: 1, explanation: 'By definition of inverse functions, $f(g(x)) = x$.', partNumber: 1, partTitle: 'Inverse Function Review' },
   { id: 'ifd-ent-1b', question: 'If $f(2) = 5$, then $f^{-1}(5) =$', options: ['$2$', '$5$', '$\\frac{1}{5}$', '$\\frac{1}{2}$'], correctIndex: 0, explanation: 'Inverse functions swap inputs and outputs: $f^{-1}(5) = 2$.', partNumber: 1, partTitle: 'Inverse Function Review' },
@@ -18,7 +19,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ifd-ent-7a', question: 'The domain of $\\arcsin(x)$ is:', options: ['$(-\\infty, \\infty)$', '$[-1, 1]$', '$[0, \\pi]$', '$(-1, 1)$'], correctIndex: 1, explanation: '$\\arcsin x$ is defined for $-1 \\leq x \\leq 1$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
   { id: 'ifd-ent-7b', question: 'Find $\\frac{d}{dx}[x \\cdot \\arctan(x)] $ at $x = 1$:', options: ['$\\frac{\\pi}{4} + \\frac{1}{2}$', '$\\frac{1}{2}$', '$\\frac{\\pi}{4}$', '$1$'], correctIndex: 0, explanation: 'Product Rule: $\\arctan(x) + \\frac{x}{1+x^2}$. At $x=1$: $\\frac{\\pi}{4} + \\frac{1}{2}$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Inverse Function Review' }, { partNumber: 2, partTitle: 'Inverse Function Theorem' },

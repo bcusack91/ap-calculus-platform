@@ -1,6 +1,8 @@
 // Algebra 2 question bank for competitive mode
 // Each question is tagged with a subtopic so we can filter based on what the student has actually completed.
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export type Algebra2Subtopic = 'polynomials' | 'rational-expressions' | 'exponentials' | 'logarithms' | 'complex-numbers'
 
 export interface Algebra2Question {
@@ -243,7 +245,7 @@ export function getAlgebra2Questions(count: number = 10, allowedSubtopics?: Alge
   if (allowedSubtopics && allowedSubtopics.length > 0) {
     pool = pool.filter(q => allowedSubtopics.includes(q.subtopic))
   }
-  const shuffled = pool.sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
 

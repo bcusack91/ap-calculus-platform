@@ -6,6 +6,7 @@
 import { prisma } from '@/lib/prisma'
 import { unstable_cache } from 'next/cache'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
+import { actSectionScaled } from '@/lib/act-scoring'
 import type { MCATSection } from '@/data/mcat/types'
 import { MCAT_SECTION_ORDER } from '@/data/mcat/types'
 
@@ -124,9 +125,14 @@ export function mapToAPScore(avgPct: number, masteryRate: number): number {
   return 1
 }
 
-/** Map average quiz percentage (0–1) to an ACT section score (1–36). */
+/**
+ * Map average quiz percentage (0–1) to an ACT section score (1–36) through
+ * the shared anchor curve in @/lib/act-scoring (the same curve behind the
+ * diagnostic), replacing the old linear `round(pct * 36)` map that ran hot
+ * at the top of the scale.
+ */
 export function mapToACTScore(avgPct: number): number {
-  return Math.max(1, Math.min(36, Math.round(avgPct * 36)))
+  return actSectionScaled(avgPct)
 }
 
 /**

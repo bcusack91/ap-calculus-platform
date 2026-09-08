@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspd-ent-1a', question: 'Data compression is a process that:', options: ['Permanently destroys data and overwrites the original with random noise that cannot be reversed', 'Reduces the number of bits needed to store or transmit data', 'Always increases file size by adding redundancy and extra metadata for higher quality', 'Encrypts data so it cannot be read without the correct decryption key'], correctIndex: 1, explanation: 'Compression reduces the bits required to represent data — either by removing redundancy (lossless) or by discarding less-important detail (lossy).', partNumber: 1, partTitle: 'Compression Basics' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

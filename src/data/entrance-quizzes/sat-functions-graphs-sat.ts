@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sfg-ent-1a', question: 'If f(x) = $3x^{2}$ − 2x + 1, what is f(2)?', options: ['7', '9', '11', '13'], correctIndex: 1, explanation: 'f(2) = 3(4) − 2(2) + 1 = 12 − 4 + 1 = 9.', partNumber: 1, partTitle: 'Function Notation' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

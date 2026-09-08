@@ -1,5 +1,6 @@
 /** Entrance Quiz — Entropy & Second Law — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'esl-ent-1a', question: 'Entropy (S) is a measure of:', options: ['The heat content of a system', 'The disorder or number of microstates of a system', 'The free energy available for work', 'The activation energy'], correctIndex: 1, explanation: 'Entropy measures the degree of disorder or randomness in a system — quantitatively, the number of possible microstates.', partNumber: 1, partTitle: 'Introduction to Entropy' },
   { id: 'esl-ent-1b', question: 'Which phase of matter has the highest entropy?', options: ['Solid', 'Liquid', 'Gas', 'Plasma'], correctIndex: 2, explanation: 'Gases have the most molecular freedom (translation, rotation, spread-out positions), so they have the highest entropy among the common three phases.', partNumber: 1, partTitle: 'Introduction to Entropy' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'esl-ent-7a', question: 'The third law of thermodynamics states that the entropy of a perfect crystal at 0 K is:', options: ['Infinite', 'Undefined', 'Zero', 'Maximum'], correctIndex: 2, explanation: 'Third law: at absolute zero, a perfect crystal has exactly one microstate ($W = 1$), so $S = k_B \\ln 1 = 0$.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'esl-ent-7b', question: 'Entropy is a ___ function:', options: ['Path', 'State', 'Transfer', 'Work'], correctIndex: 1, explanation: 'Entropy is a state function — its value depends only on the current state of the system, not on the path taken to reach it.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to Entropy' }, { partNumber: 2, partTitle: 'Microstates' },

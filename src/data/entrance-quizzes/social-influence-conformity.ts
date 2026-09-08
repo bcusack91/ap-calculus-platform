@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "sic-ent-1a", question: "Solomon Asch's line-judgment experiments (1951) found that participants conformed to the wrong group answer about:", options: ["1% of trials", "About 37% of trials on average; ~75% conformed at least once", "100% always", "Never"], correctIndex: 1, explanation: "Asch demonstrated normative social influence even on perceptually obvious tasks. Conformity dropped sharply with one dissenting ally.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

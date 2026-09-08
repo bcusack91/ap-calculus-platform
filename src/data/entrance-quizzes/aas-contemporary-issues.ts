@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasci-ent-1a", question: "In AP African American Studies, \"mass incarceration\" most precisely refers to:", options: ["A short-lived 1990s policy with no demographic consequences.", "The dramatic post-1970 expansion of U.S. imprisonment — from roughly 200,000 prisoners in 1972 to roughly 2.3 million by the 2008 peak — that disproportionately affected Black Americans and that Michelle Alexander analyzes in *The New Jim Crow* (2010).", "A purely 19th-century convict-leasing system that ended in 1900.", "A federal program limited to white-collar crime."], correctIndex: 1, explanation: "U.S. incarceration grew from ~200K (1972) to ~2.3M (2008) — disproportionately Black; Alexander, *The New Jim Crow* (2010), is the AP-cited overview.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

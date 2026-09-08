@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'whex-ent-1a', question: 'Which of the following best describes the main focus of Exploration & the Columbian Exchange?', options: ['An unrelated topic', 'The core principles and patterns within Exploration & the Columbian Exchange', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'Exploration & the Columbian Exchange focuses on understanding key principles and patterns within AP World History.', partNumber: 1, partTitle: 'Core Concepts' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

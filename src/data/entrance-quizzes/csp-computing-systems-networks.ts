@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspc-ent-1a', question: 'A computing device is BEST described as:', options: ['Only a desktop computer that sits on a table and is plugged into both wall power and a wired network connection', 'Any physical artifact that can run a program (computer, phone, smart sensor, embedded controller, etc.)', 'A type of network cable used to connect two physical machines so they can pass packets of data between them', 'A printed book of step-by-step instructions that a human reads aloud so a machine can carry out a task'], correctIndex: 1, explanation: 'Computing devices include any hardware that executes programs — from servers and laptops to phones, watches, and embedded sensors.', partNumber: 1, partTitle: 'Computing Devices' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

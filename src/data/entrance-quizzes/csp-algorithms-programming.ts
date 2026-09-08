@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspa-ent-1a', question: 'A program is BEST described as:', options: ['A single line of code that runs once and cannot use any control flow such as branching or looping', 'A collection of code that, when executed, performs a task by sequencing, selecting, and iterating over instructions', 'Only the visual layout of an app, with no instructions for the processor to actually execute at runtime', 'A piece of hardware soldered onto a circuit board that physically stores instructions but cannot run them'], correctIndex: 1, explanation: 'A program executes instructions using sequencing (one after another), selection (if/else), and iteration (loops).', partNumber: 1, partTitle: 'Programs & Sequencing' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

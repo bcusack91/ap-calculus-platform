@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ddg-ent-1a', question: 'A histogram displays data by:', options: ['Plotting individual data points on a number line', 'Grouping data into bins and showing the frequency of each bin', 'Connecting data points with a line', 'Showing the five-number summary'], correctIndex: 1, explanation: 'A histogram groups quantitative data into bins (intervals) and uses bars to show the frequency or relative frequency of each bin.', partNumber: 1, partTitle: 'Dot Plots & Histograms' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

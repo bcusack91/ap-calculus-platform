@@ -1,5 +1,6 @@
 /** Entrance Quiz — Weak Acids, Bases, Ka & Kb — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'wakb-ent-1a', question: 'A weak acid is one that:', options: ['Fully dissociates in water', 'Partially dissociates in water', 'Does not dissociate at all', 'Only dissociates at high temperature'], correctIndex: 1, explanation: 'Weak acids only partially dissociate in water, establishing an equilibrium between the acid and its ions.', partNumber: 1, partTitle: 'Weak Acid Equilibria' },
   { id: 'wakb-ent-1b', question: 'For the equilibrium $HA \\rightleftharpoons H^+ + A^-$, the acid dissociation constant is:', options: ['$K_a = \\frac{[HA]}{[H^+][A^-]}$', '$K_a = \\frac{[H^+][A^-]}{[HA]}$', '$K_a = [H^+][A^-][HA]$', '$K_a = \\frac{[H^+]}{[A^-]}$'], correctIndex: 1, explanation: '$K_a = [H^+][A^-]/[HA]$. Larger $K_a$ means a stronger weak acid (more dissociation).', partNumber: 1, partTitle: 'Weak Acid Equilibria' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'wakb-ent-7a', question: 'A salt formed from a weak acid and a strong base will produce a solution that is:', options: ['Acidic', 'Basic', 'Neutral', 'Cannot predict'], correctIndex: 1, explanation: 'The conjugate base of the weak acid hydrolyzes water to produce $OH^-$, making the solution basic (e.g., $CH_3COONa$).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'wakb-ent-7b', question: 'Comparing $HF$ ($K_a = 6.8 \\times 10^{-4}$) and $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$), HF is the:', options: ['Weaker acid', 'Stronger acid', 'Stronger base', 'They are equal in strength'], correctIndex: 1, explanation: 'Larger $K_a$ = more dissociation = stronger acid. $6.8 \\times 10^{-4} > 1.8 \\times 10^{-5}$, so HF is stronger.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Weak Acid Equilibria' }, { partNumber: 2, partTitle: '$K_a$ & Percent Ionization' },

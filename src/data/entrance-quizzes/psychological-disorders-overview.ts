@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "pdo-ent-1a", question: "Mental disorder is generally defined by clinically significant disturbance that:", options: ["Always involves hallucinations", "Causes distress or impairment in functioning and is not culturally normative or due to expected reactions (DSM-5-TR criterion)", "Requires brain damage", "Must include violence"], correctIndex: 1, explanation: "DSM-5-TR (2022) defines disorder by significant distress, dysfunction, or risk of harm; ordinary grief or culturally sanctioned beliefs are excluded.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

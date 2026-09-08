@@ -11,6 +11,9 @@ export const config: FullLengthExamConfig = {
     { href: '/sat-daily-question', label: 'SAT Daily Question' },
   ],
   accent: 'sky',
+  // Final results add an estimated 320-1520 score range through the
+  // calibrated PSAT anchor curve (src/lib/psat-scoring.ts).
+  scaledExam: 'psat',
   totalTimeMinutes: 134,
   sections: [
     {

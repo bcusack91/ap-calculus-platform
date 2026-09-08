@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mpm-ent-1a', question: 'A ball is thrown horizontally from a cliff. Which of the following best describes its motion?', options: ['Constant velocity in both horizontal and vertical directions', 'Constant horizontal velocity and increasing vertical velocity (downward)', 'Decreasing horizontal velocity and constant vertical velocity', 'Constant speed throughout the fall'], correctIndex: 1, explanation: 'Projectile motion: horizontal velocity is constant (no air resistance), vertical velocity increases due to gravitational acceleration $(9.8 m/s^{2})$.', partNumber: 1, partTitle: 'Kinematics' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'bdr-ent-1a', question: 'The Power Rule states $\\frac{d}{dx}[x^n] =$', options: ['$nx^{n-1}$', '$x^{n+1}/(n+1)$', '$nx^n$', '$x^{n-1}$'], correctIndex: 0, explanation: 'The Power Rule: bring the exponent down and subtract 1 from the exponent.', partNumber: 1, partTitle: 'The Power Rule' },
@@ -22,7 +23,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

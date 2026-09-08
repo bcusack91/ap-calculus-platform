@@ -3,6 +3,8 @@
 // Ideas, Standard English Conventions). Assembled from per-domain pools; 30 per
 // domain (10 easy / 10 medium / 10 hard). getSatRwQuestions(count, domain?) filters.
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export type SatRwDomain = 'information-ideas' | 'craft-structure' | 'expression' | 'conventions'
 
 export interface SatRwQuestion {
@@ -3983,7 +3985,7 @@ const allQuestions: SatRwQuestion[] = [
 ]
 
 function pick(pool: SatRwQuestion[], count: number): SatRwQuestion[] {
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
 

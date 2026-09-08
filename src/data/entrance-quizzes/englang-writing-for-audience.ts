@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'engl-ent-1a', question: 'Which of the following best describes the main focus of Writing for Different Audiences?', options: ['An unrelated topic', 'The core principles and patterns within Writing for Different Audiences', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'Writing for Different Audiences focuses on understanding key principles and patterns within AP English Language.', partNumber: 1, partTitle: 'Core Concepts' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

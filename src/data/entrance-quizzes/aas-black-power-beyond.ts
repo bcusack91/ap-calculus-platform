@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasbpb-ent-1a", question: "In AP African American Studies, the slogan \"Black Power\" was popularized by:", options: ["Martin Luther King, Jr. at the 1963 March on Washington.", "SNCC Chair Stokely Carmichael (later Kwame Ture) on June 16, 1966 during the Meredith March Against Fear in Greenwood, Mississippi — articulated more fully in Carmichael and Charles V. Hamilton's *Black Power: The Politics of Liberation* (1967).", "W. E. B. Du Bois in 1903.", "Marcus Garvey in 1920."], correctIndex: 1, explanation: "Stokely Carmichael's June 16, 1966 Greenwood speech popularized \"Black Power\"; Carmichael and Hamilton's *Black Power* (1967) provided the book-length articulation.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

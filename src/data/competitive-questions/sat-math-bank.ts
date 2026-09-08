@@ -3,6 +3,8 @@
 // Geometry & Trigonometry). Assembled from per-area pools; 30 questions per area
 // (10 easy / 10 medium / 10 hard). getSatMathQuestions(count, area?) filters by area.
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export type SatMathArea = 'algebra' | 'advanced' | 'problem-solving' | 'geometry'
 
 export interface SatMathQuestion {
@@ -5243,7 +5245,7 @@ const allQuestions: SatMathQuestion[] = [
 ]
 
 function pick(pool: SatMathQuestion[], count: number): SatMathQuestion[] {
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
 

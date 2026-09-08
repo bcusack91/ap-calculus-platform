@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cod-ent-1a', question: 'What does $R^{2}$ represent?', options: ['The slope of the regression line', 'The proportion of variability in y explained by the linear relationship with x', 'The y-intercept of the model', 'The number of data points'], correctIndex: 1, explanation: '$R^{2}$ is the proportion of variability in y that is explained by the linear relationship with x.', partNumber: 1, partTitle: 'R-Squared Definition' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

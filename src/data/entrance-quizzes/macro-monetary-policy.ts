@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "macr-ent-1a", question: "The Federal Reserve's dual mandate (Humphrey-Hawkins, 1978) is:", options: ["Inflation and exchange rates", "Maximum employment and price stability", "GDP growth and balanced budget", "Financial stability and trade balance"], correctIndex: 1, explanation: "Federal Reserve Reform Act 1977 / Humphrey-Hawkins 1978 mandate: maximum employment + stable prices.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

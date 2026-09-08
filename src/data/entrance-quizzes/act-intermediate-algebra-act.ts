@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'aia-ent-1a', question: 'In the quadratic formula x = $(-b \\pm \\sqrt{b^{2}-4ac})$ / (2a), what is the expression under the square root called?', options: ['The coefficient', 'The vertex', 'The discriminant', 'The axis of symmetry'], correctIndex: 2, explanation: 'The expression $b^{2}$ − 4ac under the square root in the quadratic formula is called the discriminant.', partNumber: 1, partTitle: 'Quadratic Equations' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

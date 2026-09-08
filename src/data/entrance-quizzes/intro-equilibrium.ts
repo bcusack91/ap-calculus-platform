@@ -1,5 +1,6 @@
 /** Entrance Quiz — Introduction to Equilibrium — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ieq-ent-1a', question: 'Dynamic equilibrium occurs when:', options: ['All reactions have stopped', 'The forward and reverse reaction rates are equal', 'Only the forward reaction is occurring', 'Concentrations are zero'], correctIndex: 1, explanation: 'At dynamic equilibrium, both forward and reverse reactions continue at equal rates, so concentrations remain constant but are not static.', partNumber: 1, partTitle: 'Dynamic Equilibrium' },
   { id: 'ieq-ent-1b', question: 'At equilibrium, the concentrations of reactants and products:', options: ['Must be equal', 'Are constant but not necessarily equal', 'Continue to change', 'Are always zero'], correctIndex: 1, explanation: 'At equilibrium, concentrations are constant over time but need not be equal — the ratio is defined by the equilibrium constant.', partNumber: 1, partTitle: 'Dynamic Equilibrium' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ieq-ent-7a', question: 'The equilibrium constant K changes with:', options: ['Concentration', 'Pressure', 'Temperature', 'Addition of a catalyst'], correctIndex: 2, explanation: 'K is constant at a given temperature. Only a change in temperature changes the value of K.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'ieq-ent-7b', question: 'A catalyst affects equilibrium by:', options: ['Increasing K', 'Decreasing K', 'Reaching equilibrium faster without changing K', 'Shifting equilibrium toward products'], correctIndex: 2, explanation: 'A catalyst speeds up both forward and reverse reactions equally, reaching equilibrium faster but not changing its position or K.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Dynamic Equilibrium' }, { partNumber: 2, partTitle: 'The Equilibrium Constant' },

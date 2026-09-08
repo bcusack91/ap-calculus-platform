@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'del-ent-1a', question: 'Find $\\frac{d}{dx}[e^x]$:', options: ['$e^x$', '$xe^{x-1}$', '$\\ln(x) e^x$', '$1$'], correctIndex: 0, explanation: '$e^x$ is its own derivative — the defining property of the natural exponential.', partNumber: 1, partTitle: 'The Natural Exponential Function' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'del-ent-7b', question: 'Find the slope of $y = \\ln(x)$ at $x = e$:', options: ['$1$', '$\\frac{1}{e}$', '$e$', '$0$'], correctIndex: 1, explanation: '$y\' = 1/x$; at $x = e$, slope $= 1/e$.', partNumber: 7, partTitle: 'AP Exam Review & Comprehensive Practice' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'The Natural Exponential Function' },

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ir-ent-1a', question: 'What question does regression inference answer?', options: ['Is the sample mean significantly different from zero?', 'Is there a significant linear relationship between x and y in the population?', 'Is the data normally distributed?', 'Are two categorical variables independent?'], correctIndex: 1, explanation: 'Regression inference answers: "Is there a significant linear relationship between x and y in the population?"', partNumber: 1, partTitle: 'Regression Inference Overview' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

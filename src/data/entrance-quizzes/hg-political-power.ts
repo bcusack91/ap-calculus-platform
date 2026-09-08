@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgpp-ent-1a", question: "SOVEREIGNTY is:", options: ["Natural geography", "The supreme authority of a state over its territory and population (legal concept, not physical)", "Military strength", "Economic power"], correctIndex: 1, explanation: "Sovereignty: ultimate legal authority within borders, recognized externally. Can be eroded (failed states, interventions).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

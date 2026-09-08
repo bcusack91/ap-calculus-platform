@@ -1,5 +1,6 @@
 /** Entrance Quiz — Galvanic Cells & Thermodynamic Applications — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'gcta-ent-1a', question: 'In a galvanic (voltaic) cell, the flow of electrons is driven by:', options: ['An external power source', 'A spontaneous redox reaction', 'A non-spontaneous reaction', 'Electrolysis'], correctIndex: 1, explanation: 'Galvanic cells convert chemical energy from a spontaneous redox reaction into electrical energy.', partNumber: 1, partTitle: 'Galvanic Cell Basics' },
   { id: 'gcta-ent-1b', question: 'In a galvanic cell, oxidation occurs at the:', options: ['Cathode', 'Anode', 'Salt bridge', 'External wire'], correctIndex: 1, explanation: 'Oxidation always occurs at the anode (AN OX). In galvanic cells the anode is the negative terminal.', partNumber: 1, partTitle: 'Galvanic Cell Basics' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'gcta-ent-7a', question: 'A cell has E°cell = +0.46 V and transfers 2 moles of electrons. Calculate ΔG° (F = 96,485 C/mol).', options: ['−88.8 kJ', '−44.4 kJ', '+88.8 kJ', '−46.0 kJ'], correctIndex: 0, explanation: 'ΔG° = −nFE° = −(2)(96,485)(0.46) = −88,766 J ≈ −88.8 kJ.', partNumber: 7, partTitle: 'AP Exam Practice' },
   { id: 'gcta-ent-7b', question: 'On the AP exam, when asked about a galvanic cell you should be prepared to:', options: ['Only draw the cell diagram', 'Connect E°, ΔG°, and K and explain spontaneity', 'Only calculate E°cell', 'Only identify the anode and cathode'], correctIndex: 1, explanation: 'AP Chemistry expects you to connect all three quantities and justify spontaneity using ΔG° = −nFE° and ΔG° = −RT ln K.', partNumber: 7, partTitle: 'AP Exam Practice' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Galvanic Cell Basics' }, { partNumber: 2, partTitle: 'Standard Reduction Potentials' },

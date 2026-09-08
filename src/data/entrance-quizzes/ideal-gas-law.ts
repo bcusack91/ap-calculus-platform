@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'igl-ent-1a', question: 'Standard temperature and pressure (STP) for gases is:', options: ['0°C and 1 atm', '25°C and 1 atm', '0°C and 0 atm', '100°C and 1 atm'], correctIndex: 0, explanation: 'STP is defined as 0°C (273.15 K) and 1 atm (101.325 kPa). At STP, one mole of an ideal gas occupies 22.4 L.', partNumber: 1, partTitle: 'Gas Properties & Pressure' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

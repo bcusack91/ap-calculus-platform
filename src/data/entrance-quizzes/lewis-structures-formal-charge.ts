@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'ls-ent-1a', question: 'The first step in drawing a Lewis structure is to:', options: ['Draw all bonds', 'Count total valence electrons', 'Place lone pairs', 'Determine formal charges'], correctIndex: 1, explanation: 'Always start by counting the total number of valence electrons from all atoms (adjusting for charge if an ion).', partNumber: 1, partTitle: 'Drawing Lewis Structures' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

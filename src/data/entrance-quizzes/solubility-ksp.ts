@@ -1,5 +1,6 @@
 /** Entrance Quiz — Solubility & Ksp — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'sksp-ent-1a', question: 'The solubility product constant $K_{sp}$ applies to:', options: ['Strong electrolytes in solution', 'Slightly soluble (sparingly soluble) ionic compounds', 'All ionic compounds', 'Covalent compounds'], correctIndex: 1, explanation: '$K_{sp}$ is used for slightly soluble ionic compounds at equilibrium between solid and dissolved ions.', partNumber: 1, partTitle: '$K_{sp}$ Expressions' },
   { id: 'sksp-ent-1b', question: 'For $PbCl_2(s) \\rightleftharpoons Pb^{2+}(aq) + 2Cl^-(aq)$, the $K_{sp}$ expression is:', options: ['$[Pb^{2+}][Cl^-]$', '$[Pb^{2+}][Cl^-]^2$', '$[Pb^{2+}]^2[Cl^-]$', '$\\frac{[Pb^{2+}][Cl^-]^2}{[PbCl_2]}$'], correctIndex: 1, explanation: '$K_{sp} = [Pb^{2+}][Cl^-]^2$. The solid $PbCl_2$ is excluded from the expression.', partNumber: 1, partTitle: '$K_{sp}$ Expressions' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'sksp-ent-7a', question: 'Increasing pH (making solution more basic) would affect the solubility of $Mg(OH)_2$ by:', options: ['Increasing it (more $OH^{-}$ dissolves the solid)', 'Decreasing it (common ion effect with $OH^{-}$)', 'Having no effect', 'Making it infinitely soluble'], correctIndex: 1, explanation: 'Higher pH means more $OH^-$ in solution. This is a common ion that shifts the equilibrium left, decreasing $Mg(OH)_2$ solubility.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'sksp-ent-7b', question: 'The solubility of $CaF_2$ in acidic solution is ___ than in pure water because:', options: ['Lower; acid reacts with $Ca^{2+}$', 'Higher; $H^{+}$ reacts with $F^{-}$ to form HF, removing a product ion', 'The same; acids don\'t affect Ksp', 'Lower; HF is a strong acid'], correctIndex: 1, explanation: '$H^+$ reacts with $F^-$ to form the weak acid HF, removing $F^-$ from solution and shifting dissolution equilibrium right, increasing solubility.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: '$K_{sp}$ Expressions' }, { partNumber: 2, partTitle: 'Molar Solubility' },

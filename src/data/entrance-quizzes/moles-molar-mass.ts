@@ -15,6 +15,8 @@
  *  7 — Synthesis & AP Review
  */
 
+import { shuffleArray } from '@/lib/shuffle-options'
+
 export interface EntranceQuizQuestion {
   id: string
   question: string          // may contain $LaTeX$
@@ -196,7 +198,7 @@ const questions: EntranceQuizQuestion[] = [
  * Returns all 14 questions in shuffled order.
  */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 /**

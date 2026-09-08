@@ -3,6 +3,7 @@
  * 14 questions (2 per part)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'hyb-ent-1a', question: 'Hybridization is the mixing of:', options: ['Atoms to form molecules', 'Bonds to form networks', 'Atomic orbitals to form new hybrid orbitals', 'Electrons to form pairs'], correctIndex: 2, explanation: 'Hybridization is the concept of mixing atomic orbitals (s, p, d) to form new hybrid orbitals that are equivalent in energy and shape.', partNumber: 1, partTitle: 'Introduction to Hybridization' },
@@ -28,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

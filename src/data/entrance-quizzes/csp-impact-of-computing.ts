@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspi-ent-1a', question: 'Innovations in computing typically produce:', options: ['Only beneficial effects, with no negative consequences for any group of users at all', 'Only harmful effects, with no positive contributions for any group of users at all', 'BOTH beneficial AND harmful effects — often unintended', 'No effects at all on people’s lives, on businesses, or on the broader society'], correctIndex: 2, explanation: 'AP CSP emphasizes that computing innovations have BOTH beneficial AND harmful effects, often impacting different groups differently and sometimes unintentionally.', partNumber: 1, partTitle: 'Beneficial & Harmful Effects' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

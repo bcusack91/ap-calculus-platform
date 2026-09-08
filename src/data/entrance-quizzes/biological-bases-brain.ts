@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "bbb-ent-1a", question: "A neuron's resting potential is approximately:", options: ["+30 mV", "−70 mV (inside negative relative to outside)", "0 mV", "−200 mV"], correctIndex: 1, explanation: "At rest, the neuron's interior is ~−70 mV due to the Na+/K+ pump and selective permeability.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -2,6 +2,7 @@
  * Entrance Quiz — Applications of Derivatives (AP Calculus AB)
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'aod-ent-1a', question: 'If $f\'(c) = 0$, then $x = c$ is called a:', options: ['Root', 'Critical point', 'Inflection point', 'Asymptote'], correctIndex: 1, explanation: 'A critical point occurs where $f\'(c) = 0$ or $f\'(c)$ is undefined.', partNumber: 1, partTitle: 'Critical Points & Extrema' },
   { id: 'aod-ent-1b', question: 'The Extreme Value Theorem guarantees absolute extrema on:', options: ['Any interval', 'A closed interval $[a,b]$ if $f$ is continuous', 'An open interval', 'Any differentiable function'], correctIndex: 1, explanation: 'EVT requires $f$ to be continuous on a closed interval $[a,b]$.', partNumber: 1, partTitle: 'Critical Points & Extrema' },
@@ -18,7 +19,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'aod-ent-7a', question: 'Find the intervals where $f(x) = x^3 - 3x$ is increasing:', options: ['$(-\\infty, -1) \\cup (1, \\infty)$', '$(-1, 1)$', '$(0, \\infty)$', '$(-\\infty, 0)$'], correctIndex: 0, explanation: '$f\'(x) = 3x^2 - 3 = 3(x-1)(x+1) > 0$ when $x < -1$ or $x > 1$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
   { id: 'aod-ent-7b', question: 'The absolute maximum of $f(x) = -x^2 + 4x$ on $[0, 5]$ occurs at:', options: ['$x = 0$', '$x = 2$', '$x = 4$', '$x = 5$'], correctIndex: 1, explanation: '$f\'(x) = -2x + 4 = 0 \\Rightarrow x = 2$. Check: $f(0)=0$, $f(2)=4$, $f(5)=-5$. Max at $x=2$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Critical Points & Extrema' }, { partNumber: 2, partTitle: 'First & Second Derivative Tests' },

@@ -15,6 +15,7 @@
  */
 
 import { relevantPool } from './relevance-fallback'
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface APPrecalcQuestion {
   question: string
   options: string[]
@@ -166,8 +167,7 @@ export const apPrecalcQuestionPool: APPrecalcQuestion[] = [
 export function generateExitQuiz(count = 10, topicSlug?: string) {
   let pool = apPrecalcQuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
-  return [...pool]
-    .sort(() => Math.random() - 0.5)
+  return shuffleArray(pool)
     .slice(0, count)
     .map((q, i) => ({
       id: `${q.topicSlug}-q${i}`,

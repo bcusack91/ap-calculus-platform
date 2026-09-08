@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgmg-ent-1a", question: "Ravenstein's LAWS OF MIGRATION (1885) include:", options: ["Most migrants travel long distances", "Most migrants travel short distances; step migration common; urban areas attract; economic motives dominate", "Migration is random", "Only rich migrate"], correctIndex: 1, explanation: "Ravenstein 1885 foundational laws: short distances dominate, economic motive primary, step migration, counter-streams, urban pull.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

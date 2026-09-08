@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "olc-ent-1a", question: "Observational (social) learning was systematized by:", options: ["B.F. Skinner", "Albert Bandura — Social Learning / Social Cognitive Theory (1960s-)", "Pavlov", "Tolman"], correctIndex: 1, explanation: "Bandura argued people learn by observing models, not just through direct reinforcement — extending behaviorism toward cognitive social learning.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

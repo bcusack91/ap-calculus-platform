@@ -1,5 +1,6 @@
 /** Entrance Quiz — Activation Energy & Arrhenius Equation — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'aea-ent-1a', question: 'For a reaction to occur, colliding molecules must have sufficient energy and:', options: ['Be in the gas phase', 'Proper orientation', 'Equal masses', 'Opposite charges'], correctIndex: 1, explanation: 'Collision theory states that molecules must collide with (1) sufficient energy to overcome $E_{a}$ and (2) proper orientation for bonds to form.', partNumber: 1, partTitle: 'Collision Theory' },
   { id: 'aea-ent-1b', question: 'The minimum energy required for an effective collision is called the:', options: ['Enthalpy of reaction', 'Gibbs free energy', 'Activation energy', 'Ionization energy'], correctIndex: 2, explanation: 'Activation energy ($E_a$) is the minimum kinetic energy molecules need to initiate a reaction upon collision.', partNumber: 1, partTitle: 'Collision Theory' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'aea-ent-7a', question: 'An enzyme is a biological catalyst that:', options: ['Increases ΔG of the reaction', 'Lowers the activation energy for a specific reaction', 'Is consumed during the reaction', 'Shifts equilibrium toward products'], correctIndex: 1, explanation: 'Enzymes are biological catalysts that lower activation energy for specific biochemical reactions, dramatically increasing their rates.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'aea-ent-7b', question: 'On an energy diagram, adding a catalyst changes:', options: ['The energy of the reactants', 'The height of the energy barrier', 'The energy of the products', 'The overall ΔH'], correctIndex: 1, explanation: 'A catalyst lowers the energy barrier (transition state peak) without changing reactant energy, product energy, or ΔH.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Collision Theory' }, { partNumber: 2, partTitle: 'Activation Energy' },

@@ -72,7 +72,13 @@ describe('mapToAPScore (blends 70% quiz + 30% mastery -> 1..5)', () => {
   })
 })
 
-describe('mapToACTScore (clamps to 1..36)', () => {
+/*
+ * mapToACTScore routes through the shared anchor curve in @/lib/act-scoring
+ * (the same curve behind the ACT diagnostic), so all ACT scoring surfaces
+ * agree. The pinned expectations below changed when that curve replaced the
+ * old linear `round(pct * 36)` map, which ran hot at the top of the scale.
+ */
+describe('mapToACTScore (calibrated curve, clamps to 1..36)', () => {
   it('maps a perfect quiz average to 36', () => {
     expect(mapToACTScore(1)).toBe(36)
   })
@@ -81,16 +87,13 @@ describe('mapToACTScore (clamps to 1..36)', () => {
     expect(mapToACTScore(0)).toBe(1)
   })
 
-  it('rounds the linear mapping at the midpoint', () => {
-    // 0.5 * 36 = 18
-    expect(mapToACTScore(0.5)).toBe(18)
+  it('maps the midpoint to ~19, matching real conversions (not linear 18)', () => {
+    expect(mapToACTScore(0.5)).toBe(19)
   })
 
-  it('rounds to nearest whole composite point', () => {
-    // 0.7 * 36 = 25.2 -> 25
+  it('maps 70% to ~25 instead of the old inflated values', () => {
     expect(mapToACTScore(0.7)).toBe(25)
-    // 0.71 * 36 = 25.56 -> 26
-    expect(mapToACTScore(0.71)).toBe(26)
+    expect(mapToACTScore(0.71)).toBe(25)
   })
 
   it('clamps an out-of-range over-100% average down to 36', () => {

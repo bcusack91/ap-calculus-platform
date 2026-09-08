@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "es-ent-1a", question: "The James-Lange theory (1884-1885) proposes:", options: ["Emotion causes bodily arousal", "Bodily AROUSAL comes FIRST and the emotion is our perception of that arousal ('we feel afraid because we tremble')", "Emotion and arousal are simultaneous", "Cognition produces all emotion"], correctIndex: 1, explanation: "James-Lange: stimulus → physiological response → labeled emotion. Critiqued because many emotions share similar arousal patterns.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

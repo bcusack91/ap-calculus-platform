@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'imd-ent-1a', question: 'Differentiating $x^2 + y^2 = 25$ implicitly with respect to $x$ gives:', options: ['$2x + 2y = 0$', '$2x + 2y \\frac{dy}{dx} = 0$', '$2x + \\frac{dy}{dx} = 0$', '$2x + 2 \\frac{dy}{dx} = 0$'], correctIndex: 1, explanation: 'Each $y$ term gets multiplied by $\\frac{dy}{dx}$ via the chain rule.', partNumber: 1, partTitle: 'Differentiating Equations Not Solved for $y$' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'imd-ent-7b', question: 'A common mistake on the AP exam is forgetting to:', options: ['Add a constant of integration', 'Apply the product rule when both $x$ and $y$ multiply', 'Convert to radians', 'Multiply by $-1$'], correctIndex: 1, explanation: 'Forgetting the product rule on terms like $xy$ or $x^2 y$ is one of the most-cited AP errors.', partNumber: 7, partTitle: 'AP Exam Review & Mixed Practice' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Differentiating Equations Not Solved for $y$' },

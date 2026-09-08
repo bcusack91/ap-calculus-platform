@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'mpe-ent-1a', question: "Coulomb's Law states that the electrostatic force between two charges is:", options: ['Proportional to the product of the charges and inversely proportional to their distance', 'Proportional to the product of the charges and inversely proportional to the square of their distance', 'Proportional to the sum of the charges', 'Independent of distance'], correctIndex: 1, explanation: "$F = k\\frac{q_1 q_2}{r^2}$ (Coulomb's Law). The force follows an inverse-square law with distance, similar to gravity.", partNumber: 1, partTitle: 'Electric Forces' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

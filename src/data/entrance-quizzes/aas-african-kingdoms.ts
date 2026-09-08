@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasak-ent-1a", question: "Which best captures the historical significance of the West African empires of Ghana, Mali, and Songhai?", options: ["They were small, isolated polities with no long-distance trade.", "From roughly 300 to 1591 CE they controlled the trans-Saharan gold–salt trade, sustained large literate Muslim cities (Timbuktu, Djenné, Gao), and rivaled contemporary European states in wealth and scale.", "They existed only after 1700 and never participated in long-distance trade.", "They were colonies founded by Portugal in the 1500s."], correctIndex: 1, explanation: "Ghana (c. 300–1076), Mali (c. 1235–1600), and Songhai (c. 1464–1591) successively dominated the trans-Saharan gold–salt trade and supported major centers of Islamic scholarship.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

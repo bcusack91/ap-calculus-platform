@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasrjc-ent-1a", question: "The \"Reconstruction Amendments\" comprise:", options: ["The 1st, 2nd, and 4th Amendments.", "The 13th (1865, abolishing slavery), 14th (1868, citizenship and equal protection), and 15th (1870, voting rights regardless of race).", "The 18th, 19th, and 21st Amendments.", "The 22nd, 23rd, and 24th Amendments."], correctIndex: 1, explanation: "The Reconstruction Amendments — 13th (1865), 14th (1868), 15th (1870) — established constitutional birthright citizenship, equal protection, due process, and the right to vote regardless of race.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -1,5 +1,6 @@
 /** Entrance Quiz — Enthalpy & Calorimetry — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ec-ent-1a', question: 'Enthalpy (H) is a measure of:', options: ['The disorder of a system', 'The heat content of a system at constant pressure', 'The kinetic energy of molecules', 'The rate of a reaction'], correctIndex: 1, explanation: 'Enthalpy is the total heat content of a system. At constant pressure, the change in enthalpy equals the heat exchanged: $q_p = \\Delta H$.', partNumber: 1, partTitle: 'Enthalpy & ΔH' },
   { id: 'ec-ent-1b', question: 'ΔH for a reaction is negative. This means the reaction is:', options: ['Endothermic', 'Exothermic', 'At equilibrium', 'Nonspontaneous'], correctIndex: 1, explanation: 'Negative ΔH means heat is released to the surroundings — the reaction is exothermic.', partNumber: 1, partTitle: 'Enthalpy & ΔH' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ec-ent-7a', question: 'Bond enthalpy can be used to estimate ΔH using: ΔH ≈', options: ['Σ(bonds broken) − Σ(bonds formed)', 'Σ(bonds formed) − Σ(bonds broken)', 'Σ(bonds broken) + Σ(bonds formed)', 'Σ(bonds formed) / Σ(bonds broken)'], correctIndex: 0, explanation: 'ΔH ≈ Σ(bonds broken) − Σ(bonds formed). Breaking bonds requires energy (+), forming bonds releases energy (−).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'ec-ent-7b', question: 'Standard enthalpy of formation, $\\Delta H_f^°$, of an element in its standard state is:', options: ['Always positive', 'Always negative', 'Zero', 'Depends on temperature'], correctIndex: 2, explanation: 'By definition, the standard enthalpy of formation of an element in its most stable form (standard state) is zero.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Enthalpy & ΔH' }, { partNumber: 2, partTitle: 'Exothermic & Endothermic' },

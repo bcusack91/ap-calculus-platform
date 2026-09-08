@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspp-ent-1a', question: 'A procedure (function) is BEST described as:', options: ['A single variable that stores one value and cannot be reused with different inputs in the program', 'A named, reusable block of code that performs a specific task and may take parameters and return a value', 'A type of list that holds multiple ordered values referenced by the same overall name', 'A built-in keyword in pseudocode that controls the order in which assignment statements are evaluated'], correctIndex: 1, explanation: 'A procedure encapsulates a sequence of steps under a name. Calling it executes the body — a key tool for abstraction and reuse.', partNumber: 1, partTitle: 'Procedures & Abstraction' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'tds-ent-1a', question: 'Which of the following is an example of categorical data?', options: ['Height in centimeters', 'Zip code', 'Weight in kilograms', 'Temperature in Fahrenheit'], correctIndex: 1, explanation: 'Zip codes label geographic areas and are categorical, even though they are numbers. They do not represent measurable quantities.', partNumber: 1, partTitle: 'Categorical vs Quantitative Data' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sef-ent-1a', question: 'A population of bacteria starts at 500 and doubles every hour. What is the population after 3 hours?', options: ['1,500', '2,000', '3,000', '4,000'], correctIndex: 3, explanation: 'Population = $500 \\times$ $2^{3}$ = $500 \\times 8$ = 4,000.', partNumber: 1, partTitle: 'Exponential Growth' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

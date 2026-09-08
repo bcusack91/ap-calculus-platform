@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'aep-ent-1a', question: 'Which sentence correctly uses commas to separate items in a list?', options: ['I bought apples bananas and oranges.', 'I bought apples, bananas, and oranges.', 'I bought, apples, bananas and oranges.', 'I bought apples bananas, and oranges.'], correctIndex: 1, explanation: 'Commas separate each item in a list. A comma before "and" (the Oxford comma) is standard on the ACT: "apples, bananas, and oranges."', partNumber: 1, partTitle: 'Commas' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hguc-ent-1a", question: "URBAN SPRAWL refers to:", options: ["Compact growth", "Low-density, auto-dependent development extending far beyond older urban cores (post-WWII U.S. suburbs)", "Vertical growth", "Population decline"], correctIndex: 1, explanation: "Sprawl: low-density, separated land uses, auto-reliance. U.S. since 1945 (GI Bill, Interstate Highway 1956).", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cip-ent-1a', question: 'A function $f$ is concave up on an interval if:', options: ['$f\'(x) > 0$', '$f\'\'(x) > 0$', '$f\'\'(x) < 0$', '$f(x) > 0$'], correctIndex: 1, explanation: 'Concave up $\\iff$ $f\'\'(x) > 0$ (the slope $f\'$ is increasing).', partNumber: 1, partTitle: 'Understanding Concavity' },
@@ -21,7 +22,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'cip-ent-7b', question: 'On the AP exam, a complete justification for "concave up on $(a,b)$" is:', options: ['"$f\'(x) > 0$ on $(a,b)$"', '"$f\'\'(x) > 0$ on $(a,b)$"', '"$f(x) > 0$ on $(a,b)$"', '"$f$ is increasing on $(a,b)$"'], correctIndex: 1, explanation: 'Concavity is determined by the sign of the second derivative.', partNumber: 7, partTitle: 'AP Free Response Justifications' },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Understanding Concavity' },

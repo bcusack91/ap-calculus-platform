@@ -1,5 +1,6 @@
 /** Entrance Quiz — Gibbs Free Energy — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'gfe-ent-1a', question: 'Gibbs free energy (G) combines which two thermodynamic quantities?', options: ['Entropy and volume', 'Enthalpy and entropy', 'Pressure and temperature', 'Internal energy and work'], correctIndex: 1, explanation: '$G = H - TS$. Gibbs free energy combines enthalpy and entropy into a single value that predicts spontaneity at constant T and P.', partNumber: 1, partTitle: 'Introduction to ΔG' },
   { id: 'gfe-ent-1b', question: 'A reaction is spontaneous at constant T and P when:', options: ['ΔG > 0', 'ΔG = 0', 'ΔG < 0', 'ΔH > 0'], correctIndex: 2, explanation: 'A process is spontaneous (thermodynamically favorable) when $\\Delta G < 0$.', partNumber: 1, partTitle: 'Introduction to ΔG' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'gfe-ent-7a', question: 'Which statement is correct about $\\Delta G$ vs. $\\Delta G°$?', options: ['They are always equal', '$\\Delta G°$ applies at standard conditions; $\\Delta G$ applies at any conditions', '$\\Delta G$ is always more negative', '$\\Delta G°$ depends on Q'], correctIndex: 1, explanation: '$\\Delta G° $ is for standard conditions. Under non-standard conditions, $\\Delta G = \\Delta G° + RT\\ln Q$.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'gfe-ent-7b', question: 'A nonspontaneous reaction ($\\Delta G > 0$) can be driven forward by:', options: ['Lowering the temperature', 'Coupling it with a reaction that has a more negative ΔG', 'Removing all products', 'Adding a catalyst'], correctIndex: 1, explanation: 'Coupling an unfavorable reaction with a strongly favorable one (more negative ΔG) can make the combined process spontaneous.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to ΔG' }, { partNumber: 2, partTitle: 'ΔG = ΔH − TΔS' },

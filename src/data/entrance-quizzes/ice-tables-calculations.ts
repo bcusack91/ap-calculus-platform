@@ -1,5 +1,6 @@
 /** Entrance Quiz — ICE Tables & Equilibrium Calculations — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'ice-ent-1a', question: 'In an ICE table, "I" stands for:', options: ['Ionization', 'Initial concentration', 'Integrated rate', 'Isothermal'], correctIndex: 1, explanation: 'ICE = Initial, Change, Equilibrium. "I" is the initial concentration before the reaction proceeds toward equilibrium.', partNumber: 1, partTitle: 'Setting Up ICE Tables' },
   { id: 'ice-ent-1b', question: 'In the "Change" row of an ICE table for $A \\rightleftharpoons 2B$, if A decreases by x, B increases by:', options: ['x', '2x', 'x/2', '3x'], correctIndex: 1, explanation: 'Changes follow stoichiometric ratios. 1 mol A consumed produces 2 mol B, so B increases by 2x.', partNumber: 1, partTitle: 'Setting Up ICE Tables' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'ice-ent-7a', question: 'ICE tables are used for equilibrium calculations involving:', options: ['Only gas-phase reactions', 'Only acid-base reactions', 'Any reaction where K and initial conditions are known', 'Only precipitation reactions'], correctIndex: 2, explanation: 'ICE tables are a universal method for any equilibrium calculation: gas phase, acid-base, solubility, and more.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'ice-ent-7b', question: 'In an ICE table with a common ion already present, the initial concentration of that ion is:', options: ['Always zero', 'Set to the concentration from the common ion source', 'Ignored completely', 'Equal to K'], correctIndex: 1, explanation: 'If a common ion is already in solution, its initial concentration in the ICE table reflects the amount already present.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Setting Up ICE Tables' }, { partNumber: 2, partTitle: 'Solving for x' },

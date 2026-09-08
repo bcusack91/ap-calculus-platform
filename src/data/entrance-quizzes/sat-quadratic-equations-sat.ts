@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sqe-ent-1a', question: 'Which of the following is a quadratic equation in standard form?', options: ['y = 3x + 2', 'y = $x^{2}$ + 5x − 6', 'y = 2/x', 'y = $\\sqrt{x}$ + 1'], correctIndex: 1, explanation: 'Standard form of a quadratic is $ax^{2}$ + bx + c. Only y = $x^{2}$ + 5x − 6 fits this form.', partNumber: 1, partTitle: 'Quadratic Standard Form' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

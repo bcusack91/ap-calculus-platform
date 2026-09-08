@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspd-ent-1a', question: 'Which of the following BEST distinguishes “data” from “information”?', options: ['They are identical concepts that always refer to the same thing in any computing or analytics context', 'Data are raw values; information is data that has been processed or interpreted to be useful', 'Information is always numeric while data is always text, and the two never appear together in a dataset', 'Data is what users see on the screen, while information is the hidden internal state of the program'], correctIndex: 1, explanation: 'Data are raw, unprocessed values. Information is what you get when you organize, filter, or interpret data so it answers a question.', partNumber: 1, partTitle: 'Data vs. Information' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

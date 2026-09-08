@@ -1,5 +1,6 @@
 /** Entrance Quiz — Net Ionic Equations — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'nie-ent-1a', question: 'A molecular equation shows:', options: ['Only ions in solution', 'Complete formulas of all reactants and products', 'Only the reacting species', 'Only precipitates'], correctIndex: 1, explanation: 'A molecular equation shows the complete, undissociated formulas of all compounds involved in the reaction.', partNumber: 1, partTitle: 'Molecular Equations' },
   { id: 'nie-ent-1b', question: 'In the molecular equation $NaCl(aq) + AgNO_3(aq) \\to AgCl(s) + NaNO_3(aq)$, which product is insoluble?', options: ['$NaNO_3$', '$AgCl$', 'Both', 'Neither'], correctIndex: 1, explanation: '$AgCl$ is an insoluble silver halide that precipitates. $NaNO_3$ is soluble (all sodium and nitrate salts are soluble).', partNumber: 1, partTitle: 'Molecular Equations' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'nie-ent-7a', question: 'Which combination produces a gas as a driving force?', options: ['$NaCl + KNO_3$', '$Na_2CO_3 + HCl$', '$NaOH + KCl$', '$NaNO_3 + KBr$'], correctIndex: 1, explanation: '$Na_2CO_3 + 2HCl \\to 2NaCl + H_2O + CO_2\\uparrow$. The carbonate reacts with acid to produce $CO_2$ gas, driving the reaction forward.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'nie-ent-7b', question: 'Weak electrolytes in ionic equations are written as:', options: ['Dissociated ions', 'Complete molecular formulas', 'Only their cations', 'Only their anions'], correctIndex: 1, explanation: 'Weak electrolytes (weak acids, weak bases) do not fully dissociate, so they are written as complete formulas (e.g., $CH_3COOH$, not $CH_3COO^-$ + $H^+$).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Molecular Equations' }, { partNumber: 2, partTitle: 'Complete Ionic Equations' },

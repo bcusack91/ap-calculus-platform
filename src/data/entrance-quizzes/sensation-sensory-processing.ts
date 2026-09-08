@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "ssp-ent-1a", question: "Sensation refers to:", options: ["Interpreting stimuli", "DETECTION of physical energy by sensory receptors and transmission to the brain (bottom-up)", "Memory of stimuli", "Choosing a response"], correctIndex: 1, explanation: "Sensation = receptor detection + transduction. Perception = brain's interpretation/organization of those signals.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

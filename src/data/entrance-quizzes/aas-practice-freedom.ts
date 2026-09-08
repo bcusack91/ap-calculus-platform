@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aaspf-ent-1a", question: "In AP African American Studies, the \"practice of freedom\" most precisely refers to:", options: ["A purely 21st-century social-media phenomenon.", "The ongoing, everyday work — political, cultural, religious, educational, economic — by which Black communities have built and sustained free Black life under and beyond formal legal emancipation, from the antebellum era through the present.", "A 17th-century theological doctrine.", "A purely federal legislative process."], correctIndex: 1, explanation: "The \"practice of freedom\" frames freedom as ongoing institution-building (church, school, press, family, electoral, cultural) rather than a single legal moment.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

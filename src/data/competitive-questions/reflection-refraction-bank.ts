@@ -1,6 +1,8 @@
 // Question bank for Reflection & Refraction Competitive Mode
 // 40-50 questions covering all concepts from Parts 1-7
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface CompetitiveQuestion {
   id: string
   type: 'multiple-choice' | 'calculated'
@@ -146,8 +148,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((n + 0.33).toFixed(2))
       const wrong3 = Number((3.0 - speed).toFixed(2))
       
-      const options = [n, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([n, wrong1, wrong2, wrong3])
         .map(v => `n = ${v}`)
       
       return {
@@ -214,8 +215,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((3.0 - n).toFixed(2))
       const wrong3 = Number((3.0 / (n + 0.5)).toFixed(2))
       
-      const options = [speed, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([speed, wrong1, wrong2, wrong3])
         .map(v => `${v} × 10⁸ m/s`)
       
       return {
@@ -259,8 +259,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((Math.asin(n2 / n1 * Math.sin(theta1 * Math.PI / 180)) * 180 / Math.PI).toFixed(1)) // Inverted n
       const wrong3 = Number((90 - theta2).toFixed(1)) // Measured from surface
       
-      const options = [theta2, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([theta2, wrong1, wrong2, wrong3])
         .map(v => `${v}°`)
       
       const material = n2 === 1.33 ? 'water' : n2 === 1.5 ? 'glass' : 'a material'
@@ -293,8 +292,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((theta1 / (n1 / n2)).toFixed(1))
       const wrong3 = Number((90 - theta2).toFixed(1))
       
-      const options = [theta2, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([theta2, wrong1, wrong2, wrong3])
         .map(v => `${v}°`)
       
       return {
@@ -355,8 +353,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((theta1 * n2 / n1).toFixed(1))
       const wrong3 = Number((theta1).toFixed(1))
       
-      const options = [theta2, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([theta2, wrong1, wrong2, wrong3])
         .map(v => `${v}°`)
       
       return {
@@ -396,8 +393,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((n2 * theta2 / theta1).toFixed(2))
       const wrong3 = Number((n2 + 0.33).toFixed(2))
       
-      const options = [n1, wrong1, wrong2, wrong3]
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([n1, wrong1, wrong2, wrong3])
         .map(v => `n = ${v}`)
       
       return {
@@ -448,9 +444,8 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const wrong2 = Number((90 - thetaC).toFixed(1)) // Complementary
       const wrong3 = Number((thetaC / 2).toFixed(1)) // Forgot asin
       
-      const options = [thetaC, wrong1, wrong2, wrong3]
-        .filter(v => !isNaN(v) && v <= 90)
-        .sort(() => Math.random() - 0.5)
+      const options = shuffleArray([thetaC, wrong1, wrong2, wrong3]
+        .filter(v => !isNaN(v) && v <= 90))
         .slice(0, 4)
         .map(v => `${v}°`)
       

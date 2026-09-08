@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "micr-ent-1a", question: "A monopoly exists when:", options: ["Many firms compete", "A SINGLE firm is the sole producer with no close substitutes and high barriers to entry", "There are exactly two firms", "Firms are price takers"], correctIndex: 1, explanation: "Pure monopoly: one seller, unique product, blocked entry. Rare in pure form; degree of monopoly power varies.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

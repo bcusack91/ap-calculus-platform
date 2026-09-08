@@ -41,6 +41,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
+import { shuffleArray } from '@/lib/shuffle-options'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Detects a markdown pipe-table (a row containing "|" immediately followed by a
@@ -3489,7 +3490,7 @@ function MiniBossBattle({
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
       
       // Shuffle the options so correct answer isn't always first
-      const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5)
+      const shuffledOptions = shuffleArray(question.options)
       
       setCurrentQuestion({
         ...question,
@@ -4461,7 +4462,7 @@ function DropdownExercise({
   const [answers, setAnswers] = useState<string[]>(Array(dropdowns.length).fill(''))
   const [randomizedOptions] = useState(() => 
     dropdowns.map((dropdown: ExerciseDropdown) => 
-      [...dropdown.options].sort(() => Math.random() - 0.5)
+      shuffleArray(dropdown.options)
     )
   )
   const [attempts, setAttempts] = useState(0)

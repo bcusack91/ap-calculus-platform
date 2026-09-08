@@ -22,6 +22,7 @@ export async function GET() {
     const memberships = await prisma.classroomMember.findMany({
       where: { userId, isActive: true },
       select: {
+        id: true,
         classroom: {
           select: {
             id: true,
@@ -125,10 +126,31 @@ export async function GET() {
       }
     })
 
+    // The student's classroom groups ("Blue Table"), keyed by membership id.
+    // ADDITIVE + P2021-safe: the ClassroomGroup tables may not exist yet in an
+    // environment (migrations are applied manually) — then groups are just [].
+    const groupsByMemberId = new Map<string, string[]>()
+    try {
+      const groupRows = await prisma.classroomGroupMember.findMany({
+        where: { memberId: { in: memberships.map((m) => m.id) } },
+        select: { memberId: true, group: { select: { name: true } } },
+        orderBy: { group: { name: 'asc' } },
+      })
+      for (const row of groupRows) {
+        const list = groupsByMemberId.get(row.memberId) ?? []
+        list.push(row.group.name)
+        groupsByMemberId.set(row.memberId, list)
+      }
+    } catch (e) {
+      const code = (e as { code?: string } | null)?.code
+      if (code !== 'P2021' && code !== 'P2022') throw e
+    }
+
     const classrooms = memberships.map((m) => ({
       id: m.classroom.id,
       name: m.classroom.name,
       teacher: m.classroom.teacher?.name || 'Teacher',
+      groups: groupsByMemberId.get(m.id) ?? [],
     }))
 
     // Upcoming scheduled live games for the student's classrooms — a read-only

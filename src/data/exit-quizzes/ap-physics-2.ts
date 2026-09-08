@@ -9,6 +9,7 @@
  */
 
 import { relevantPool } from './relevance-fallback'
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface APPhysics2Question {
   question: string
   options: string[]
@@ -472,7 +473,7 @@ export const apPhysics2QuestionPool: APPhysics2Question[] = [
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string }[] {
   let pool = apPhysics2QuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
+  return shuffleArray(pool).slice(0, count).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,
     options: q.options,

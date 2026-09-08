@@ -1,5 +1,6 @@
 /** Entrance Quiz — Galvanic Cells & Standard Potentials — 14 questions (2 per part) */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   { id: 'gcp-ent-1a', question: 'A galvanic (voltaic) cell converts:', options: ['Electrical energy to chemical energy', 'Chemical energy to electrical energy', 'Heat to electrical energy', 'Nuclear energy to chemical energy'], correctIndex: 1, explanation: 'Galvanic cells use spontaneous redox reactions to convert chemical energy into electrical energy.', partNumber: 1, partTitle: 'Introduction to Galvanic Cells' },
   { id: 'gcp-ent-1b', question: 'In a galvanic cell, electrons flow from the ___ to the ___ through the external circuit:', options: ['Cathode to anode', 'Anode to cathode', 'Salt bridge to anode', 'Cathode to salt bridge'], correctIndex: 1, explanation: 'Electrons flow from the anode (oxidation) to the cathode (reduction) through the external wire.', partNumber: 1, partTitle: 'Introduction to Galvanic Cells' },
@@ -16,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'gcp-ent-7a', question: 'The relationship between $E°_{cell}$ and K is: $E°_{cell} = \\frac{RT}{nF}\\ln K$. A large K corresponds to:', options: ['A negative $E°_{cell}$', 'A positive $E°_{cell}$', '$E°_{cell} = 0$', 'No relationship'], correctIndex: 1, explanation: 'Large K (products favored) → $\\ln K > 0$ → $E°_{cell} > 0$. Products-favored reactions have positive cell potentials.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
   { id: 'gcp-ent-7b', question: 'When a galvanic cell reaches equilibrium:', options: ['$E_{cell} = E°_{cell}$', '$E_{cell} = 0$ and the battery is "dead"', '$E_{cell}$ becomes negative', 'Current doubles'], correctIndex: 1, explanation: 'At equilibrium, $\\Delta G = 0$ → $E_{cell} = 0$. No net electron flow occurs and the cell can do no more work.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return [...questions].sort(() => Math.random() - 0.5) }
+export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to Galvanic Cells' }, { partNumber: 2, partTitle: 'Cell Notation' },

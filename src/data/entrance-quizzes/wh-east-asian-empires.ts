@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'whea-ent-1a', question: 'Which development best reflects Song Dynasty economic innovation?', options: ['Expansion of civil service exams', 'Use of paper money and growth of commercial cities', 'Adoption of Christianity as state religion', 'Complete closure of all ports'], correctIndex: 1, explanation: 'Song China is known for major commercial growth, including paper money, urbanization, and increasing specialization.', partNumber: 1, partTitle: 'Core Concepts' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

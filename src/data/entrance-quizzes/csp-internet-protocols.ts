@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'cspi-ent-1a', question: 'A network protocol is BEST described as:', options: ['A piece of physical hardware that connects multiple devices together on a single shared network', 'An agreed-upon set of rules that govern how data is formatted and transmitted between devices', 'A type of operating system designed specifically to run on routers and other networking equipment', 'A user’s password used to authenticate before joining a private corporate or home network'], correctIndex: 1, explanation: 'Protocols are shared rules. Devices from any manufacturer can interoperate as long as they follow the same protocol.', partNumber: 1, partTitle: 'Protocols' },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

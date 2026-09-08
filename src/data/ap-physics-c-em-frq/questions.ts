@@ -1,6 +1,8 @@
 // AP Physics C: Electricity & Magnetism — Free Response Questions
 // Calculus-based FRQs covering all 5 units
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface FRQRubricItem {
   points: number
   description: string
@@ -1015,8 +1017,8 @@ export function generateFullExamFRQs(): {
   totalPoints: number
   totalTime: number
 } {
-  const shuffledLong = [...longFRQs].sort(() => Math.random() - 0.5);
-  const shuffledShort = [...shortFRQs].sort(() => Math.random() - 0.5);
+  const shuffledLong = shuffleArray(longFRQs);
+  const shuffledShort = shuffleArray(shortFRQs);
 
   const selectedLong = shuffledLong.slice(0, 3);
   const selectedShort = shuffledShort.slice(0, 4);

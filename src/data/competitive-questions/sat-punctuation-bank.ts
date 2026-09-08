@@ -1,3 +1,5 @@
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface SatPunctuationQuestion {
   id: number
   question: string
@@ -875,6 +877,6 @@ const allQuestions: SatPunctuationQuestion[] = [
 ]
 
 export function getSatPunctuationQuestions(count: number = 10): SatPunctuationQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

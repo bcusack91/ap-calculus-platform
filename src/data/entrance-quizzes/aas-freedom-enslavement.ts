@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasfre-ent-1a", question: "In AP African American Studies, the \"contraband of war\" doctrine refers to:", options: ["A naval blockade strategy unrelated to slavery.", "Union General Benjamin Butler's May 1861 decision at Fort Monroe, Virginia, to refuse return of three escaped enslaved men — Frank Baker, James Townsend, and Shepard Mallory — declaring them \"contraband of war,\" a precedent that drew tens of thousands of self-emancipating Black people behind Union lines.", "A 19th-century tariff policy on imported cotton.", "A purely Confederate legal category."], correctIndex: 1, explanation: "Butler's contraband doctrine (May 1861) — codified in the First Confiscation Act (Aug 1861) — turned escape into a de facto wartime emancipation route long before the formal proclamation.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

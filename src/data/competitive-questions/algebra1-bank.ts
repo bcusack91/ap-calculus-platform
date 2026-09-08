@@ -1,6 +1,8 @@
 // Algebra 1 question bank for competitive mode
 // 30 questions per topic across 10 core Algebra 1 topics.
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface Algebra1Question {
   id: number
   question: string
@@ -977,6 +979,6 @@ export function getAlgebra1Questions(count: number = 10, topicSlug?: string): Al
     const filtered = pool.filter(q => q.topicSlug === topicSlug)
     if (filtered.length > 0) pool = filtered
   }
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

@@ -1,5 +1,7 @@
 // Ap Csa Question question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface ApCsaQuestion {
   id: number
   question: string
@@ -466,6 +468,6 @@ const allQuestions: ApCsaQuestion[] = [
 
 export function getApCSAQuestions(count: number = 10, topicSlug?: string): ApCsaQuestion[] {
   const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
-  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

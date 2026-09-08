@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'spf-ent-1a', question: 'What is the degree of the polynomial $4x^{3}$ − $2x^{2}$ + 7x − 1?', options: ['1', '2', '3', '4'], correctIndex: 2, explanation: 'The degree of a polynomial is the highest power of the variable. Here it is 3.', partNumber: 1, partTitle: 'Polynomial Basics' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

@@ -13,6 +13,9 @@ export const config: FullLengthExamConfig = {
     { href: '/act-study-plans', label: 'Study Plans' },
   ],
   accent: 'red',
+  // Final results add an estimated 1-36 composite range through the
+  // calibrated ACT anchor curve (src/lib/act-scoring.ts).
+  scaledExam: 'act',
   totalTimeMinutes: 64,
   sections: [
     {

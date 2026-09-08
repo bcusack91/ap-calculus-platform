@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'bss-ent-1a', question: 'Sampling bias is best described as:', options: ['Random variation in results', 'A systematic tendency to favor certain outcomes due to how the sample was selected', 'A result of small sample sizes', 'A statistical test that fails'], correctIndex: 1, explanation: 'Sampling bias is a systematic tendency to favor certain outcomes because of how the sample was selected, not random variation.', partNumber: 1, partTitle: 'Sampling Bias' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

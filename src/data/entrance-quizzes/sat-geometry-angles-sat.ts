@@ -4,6 +4,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'sga-ent-1a', question: 'Two angles are supplementary. One angle measures $65^\\circ$. What is the measure of the other angle?', options: ['$25^\\circ$', '$35^\\circ$', '$115^\\circ$', '$125^\\circ$'], correctIndex: 2, explanation: 'Supplementary angles sum to $180^\\circ$. $180^\\circ - 65^\\circ = 115^\\circ$.', partNumber: 1, partTitle: 'Angle Relationships' },
@@ -23,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

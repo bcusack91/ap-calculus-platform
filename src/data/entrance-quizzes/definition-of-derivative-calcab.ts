@@ -3,6 +3,7 @@
  * 14 questions covering all 7 lesson parts (2 per part).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: 'dd-ent-1a', question: 'The derivative of $f$ at $x = a$ is defined as:', options: ['$\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$', '$\\frac{f(a+1) - f(a)}{1}$', '$f(a+h) - f(a)$', '$\\lim_{x \\to \\infty} \\frac{f(x)}{x}$'], correctIndex: 0, explanation: 'The derivative is the limit of the difference quotient as $h \\to 0$.', partNumber: 1, partTitle: 'The Difference Quotient' },
@@ -22,7 +23,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

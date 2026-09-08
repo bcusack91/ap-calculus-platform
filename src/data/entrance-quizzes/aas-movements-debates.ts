@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "aasmd-ent-1a", question: "In AP African American Studies, the field's intellectual origins trace most directly to:", options: ["A 21st-century social-media debate.", "Late-19th- and early-20th-century Black scholarship including W. E. B. Du Bois's *The Philadelphia Negro* (1899) and *The Souls of Black Folk* (1903), Carter G. Woodson's *The Mis-Education of the Negro* (1933), and Woodson's founding of the Association for the Study of Negro Life and History (1915) and Negro History Week (1926).", "Post-1990 academic theory only.", "A 17th-century European academy."], correctIndex: 1, explanation: "Du Bois (*Philadelphia Negro* 1899, *Souls* 1903) and Woodson (ASNLH 1915, Negro History Week 1926, *Mis-Education* 1933) are foundational figures of African American Studies.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {

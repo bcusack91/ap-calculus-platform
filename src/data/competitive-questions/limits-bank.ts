@@ -1,5 +1,7 @@
 // Limits question bank for competitive mode
 
+
+import { shuffleArray } from '@/lib/shuffle-options'
 export interface LimitQuestion {
   id: number
   question: string
@@ -419,6 +421,6 @@ const allQuestions: LimitQuestion[] = [
 ]
 
 export function getLimitQuestions(count: number = 10): LimitQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  const shuffled = shuffleArray(allQuestions)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

@@ -6,6 +6,8 @@
  * Topics span all 9 units
  */
 
+import { shuffleArray } from '@/lib/shuffle-options'
+
 export interface FRQRubricItem {
   points: number
   description: string
@@ -616,8 +618,8 @@ export function getShortFRQs(): ChemFRQ[] {
 
 export function generateFullExamFRQs(): { long: ChemFRQ[]; short: ChemFRQ[] } {
   // AP exam has 3 long + 4 short
-  const shuffledLong = [...longFRQs].sort(() => Math.random() - 0.5).slice(0, 3)
-  const shuffledShort = [...shortFRQs].sort(() => Math.random() - 0.5).slice(0, 4)
+  const shuffledLong = shuffleArray(longFRQs).slice(0, 3)
+  const shuffledShort = shuffleArray(shortFRQs).slice(0, 4)
   return { long: shuffledLong, short: shuffledShort }
 }
 

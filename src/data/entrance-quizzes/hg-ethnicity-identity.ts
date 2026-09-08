@@ -5,6 +5,7 @@
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
   { id: "hgei-ent-1a", question: "ETHNICITY refers to:", options: ["Biological difference", "Shared cultural identity based on ancestry, language, religion, or customs (socially constructed)", "Nationality only", "Race synonym"], correctIndex: 1, explanation: "Ethnicity = shared cultural identity. Constructed, not biological. Can be claimed, modified, lost across generations.", partNumber: 1, partTitle: "Core Concepts" },
@@ -24,7 +25,7 @@ const questions: EntranceQuizQuestion[] = [
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
