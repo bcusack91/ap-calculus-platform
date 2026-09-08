@@ -2996,7 +2996,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
     const parts = content.split(/(\[SINE_TABLE\]|\[COSINE_TABLE\]|\[UNIT_CIRCLE\]|\[UNIT_CIRCLE_ANIMATION\]|\[UNIT_CIRCLE_GAME\]|\[FULL_UNIT_CIRCLE_GAME\])/)
     
     return (
-      <div className="animate-fade-in prose prose-lg max-w-none">
+      <div className="animate-fade-in prose prose-lg max-w-none dark:prose-invert">
         {parts.map((part, index) => {
           if (part === '[SINE_TABLE]') {
             return <SineTable key={index} />
@@ -3052,7 +3052,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
   if (hasIframe || content.includes('<img')) {
     // Process markdown to HTML first, then render
     return (
-      <div className="animate-fade-in prose prose-lg max-w-none">
+      <div className="animate-fade-in prose prose-lg max-w-none dark:prose-invert">
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
@@ -3085,7 +3085,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
   
   if (hasLatex) {
     return (
-      <div className="animate-fade-in prose prose-lg max-w-none">
+      <div className="animate-fade-in prose prose-lg max-w-none dark:prose-invert">
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
@@ -3124,7 +3124,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
   }
   
   return (
-    <div className="animate-fade-in prose prose-lg max-w-none">
+    <div className="animate-fade-in prose prose-lg max-w-none dark:prose-invert">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
@@ -3286,7 +3286,7 @@ function MultipleChoiceQuiz({
       {section.content && <FadeInText content={section.content} onComplete={() => {}} />}
 
       {/* Progress indicator */}
-      <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
+      <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-4">
         <span>Question {currentQuestionIndex + 1} of {questions.length}</span>
         <span>{score} correct so far</span>
       </div>

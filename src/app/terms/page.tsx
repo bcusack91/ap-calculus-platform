@@ -13,7 +13,7 @@ export default function TermsPage() {
     <div className="container max-w-4xl py-12">
       <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
       
-      <div className="prose prose-slate max-w-none">
+      <div className="prose prose-slate dark:prose-invert max-w-none">
         <p className="text-muted-foreground">
           <strong>Last Updated:</strong> February 17, 2026
         </p>

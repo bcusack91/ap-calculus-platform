@@ -542,7 +542,7 @@ export default async function TopicPage(props: TopicPageProps) {
 
             {/* Main Content with styled boxes */}
             <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-8 mb-8 border border-gray-200 dark:border-gray-700">
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg dark:prose-invert max-w-none">
                 {/* Check if content includes component markers */}
                 {topic.textContent.includes('<MultiplicationAnimation') || 
                  topic.textContent.includes('<TwoDigitMultiplicationAnimation') ||
@@ -613,7 +613,7 @@ export default async function TopicPage(props: TopicPageProps) {
                         <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200 flex items-center gap-2">
                           <span>❓</span> Question:
                         </h4>
-                        <div className="prose max-w-none">
+                        <div className="prose dark:prose-invert max-w-none">
                           <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {escapeCurrencyMath(problem.question)}
                           </ReactMarkdown>
@@ -625,7 +625,7 @@ export default async function TopicPage(props: TopicPageProps) {
                         <summary className="cursor-pointer font-semibold text-gray-900 dark:text-gray-100 hover:text-accent bg-accent-subtle dark:bg-accent-light/30 p-3 rounded border-2 border-accent-light dark:border-accent-hover transition-colors">
                           💡 Show Solution
                         </summary>
-                        <div className="mt-4 prose max-w-none bg-accent-subtle dark:bg-accent-light/20 p-4 rounded border-l-4 border-accent">
+                        <div className="mt-4 prose dark:prose-invert max-w-none bg-accent-subtle dark:bg-accent-light/20 p-4 rounded border-l-4 border-accent">
                           <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {escapeCurrencyMath(problem.solution)}
                           </ReactMarkdown>

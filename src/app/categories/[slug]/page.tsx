@@ -236,7 +236,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
             <ArticleByline updatedAt={category.updatedAt} className="mb-5" />
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">What You&apos;ll Learn in {category.name}</h2>
-            <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
+            <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
               {category.description && <p>{category.description}</p>}
               <p>
                 This section contains {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'} with{' '}

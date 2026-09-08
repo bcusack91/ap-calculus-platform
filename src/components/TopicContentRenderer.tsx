@@ -24,16 +24,16 @@ type MarkdownCodeProps = {
 // Define markdown components
 const MarkdownComponents = {
   h1: ({ children }: MarkdownChildrenProps) => (
-    <h1 className="text-3xl font-bold mb-6 mt-8 text-blue-900 border-b-2 border-blue-200 pb-2">{children}</h1>
+    <h1 className="text-3xl font-bold mb-6 mt-8 text-blue-900 dark:text-blue-200 border-b-2 border-blue-200 dark:border-blue-800 pb-2">{children}</h1>
   ),
   h2: ({ children }: MarkdownChildrenProps) => (
-    <h2 className="text-2xl font-bold mb-4 mt-6 text-blue-800">{children}</h2>
+    <h2 className="text-2xl font-bold mb-4 mt-6 text-blue-800 dark:text-blue-300">{children}</h2>
   ),
   h3: ({ children }: MarkdownChildrenProps) => (
-    <h3 className="text-xl font-bold mb-3 mt-4 text-blue-700">{children}</h3>
+    <h3 className="text-xl font-bold mb-3 mt-4 text-blue-700 dark:text-blue-300">{children}</h3>
   ),
   p: ({ children }: MarkdownChildrenProps) => (
-    <p className="mb-4 leading-relaxed text-gray-800">{children}</p>
+    <p className="mb-4 leading-relaxed text-gray-800 dark:text-gray-200">{children}</p>
   ),
   ul: ({ children }: MarkdownChildrenProps) => (
     <ul className="list-disc list-inside mb-4 space-y-2 ml-4">{children}</ul>
@@ -42,21 +42,21 @@ const MarkdownComponents = {
     <ol className="list-decimal list-inside mb-4 space-y-2 ml-4">{children}</ol>
   ),
   li: ({ children }: MarkdownChildrenProps) => (
-    <li className="text-gray-700">{children}</li>
+    <li className="text-gray-700 dark:text-gray-300">{children}</li>
   ),
   blockquote: ({ children }: MarkdownChildrenProps) => (
-    <blockquote className="border-l-4 border-blue-500 bg-blue-50 pl-4 py-3 mb-4 italic rounded-r">
+    <blockquote className="border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-950/40 text-gray-800 dark:text-gray-200 pl-4 py-3 mb-4 italic rounded-r">
       {children}
     </blockquote>
   ),
   code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (
-      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-accent-hover">{children}</code>
+      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-accent-hover dark:text-accent-muted">{children}</code>
     ) : (
       <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
     ),
   strong: ({ children }: MarkdownChildrenProps) => (
-    <strong className="font-bold text-accent-hover">{children}</strong>
+    <strong className="font-bold text-accent-hover dark:text-accent-muted">{children}</strong>
   ),
 }
 

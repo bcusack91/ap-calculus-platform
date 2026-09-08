@@ -178,7 +178,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   // Pre-game: lobby still OPEN
   if (state.status === 'OPEN') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-indigo-50">
+      <div className="min-h-screen flex items-center justify-center bg-indigo-50 text-gray-900">
         <div className="rounded-lg bg-white p-8 shadow text-center max-w-md">
           <div className="text-5xl mb-3">⏳</div>
           <h1 className="text-2xl font-bold mb-2">Waiting for the teacher…</h1>
@@ -202,7 +202,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
     const accuracy =
       questionsAnswered > 0 ? Math.round((questionsCorrect / questionsAnswered) * 100) : 0
     return (
-      <div className="min-h-screen flex items-center justify-center bg-indigo-50 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-indigo-50 p-4 text-gray-900">
         <div className="rounded-lg bg-white p-8 shadow text-center max-w-md">
           <div className="text-5xl mb-3">🏁</div>
           <h1 className="text-2xl font-bold mb-2">Match over!</h1>
@@ -244,7 +244,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
     totalSec <= 30 ? 'text-rose-600' : totalSec <= 60 ? 'text-amber-600' : 'text-gray-900'
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white p-4 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white p-4 sm:p-6 text-gray-900">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <div className="text-sm text-gray-600">

@@ -48,7 +48,7 @@ function APCsaDailyQuestionPageInner() {
         </div>
 
         {loading ? (
-          <div className="flex justify-center py-20"><div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-gray-600" /></div>
+          <div className="flex justify-center py-20"><div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-gray-600 dark:border-gray-700 dark:border-t-gray-300" /></div>
         ) : q ? (
           <div className="mx-auto max-w-2xl">
             <div className="rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">

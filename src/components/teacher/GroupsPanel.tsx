@@ -372,7 +372,7 @@ export default function GroupsPanel({
                               type="checkbox"
                               checked={memberDraft.has(m.id)}
                               onChange={() => toggleDraftMember(m.id)}
-                              className="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent"
+                              className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-accent focus:ring-accent"
                             />
                             <span className="truncate">{m.name}</span>
                           </label>

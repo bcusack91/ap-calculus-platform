@@ -656,6 +656,7 @@ blockquote h2 {
   border: 1px solid #d1d5db;
   padding: 0.4rem 0.75rem;
   text-align: center;
+  color: #171717;
 }
 
 .inline-table td {
@@ -670,6 +671,7 @@ blockquote h2 {
 .dark .inline-table th,
 .dark .inline-table td {
   border-color: #4b5563;
+  color: #e5e7eb;
 }
 
 .dark .inline-table th {

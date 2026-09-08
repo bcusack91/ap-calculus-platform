@@ -30,11 +30,11 @@ const SEOMarkdownComponents = {
   ul: ({ children }: MarkdownChildrenProps) => <ul className="list-disc list-inside mb-3 space-y-1 ml-4">{children}</ul>,
   ol: ({ children }: MarkdownChildrenProps) => <ol className="list-decimal list-inside mb-3 space-y-1 ml-4">{children}</ol>,
   li: ({ children }: MarkdownChildrenProps) => <li>{children}</li>,
-  blockquote: ({ children }: MarkdownChildrenProps) => <blockquote className="border-l-4 border-gray-300 pl-4 py-2 mb-3 italic">{children}</blockquote>,
+  blockquote: ({ children }: MarkdownChildrenProps) => <blockquote className="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 mb-3 italic">{children}</blockquote>,
   strong: ({ children }: MarkdownChildrenProps) => <strong className="font-bold">{children}</strong>,
   table: ({ children }: MarkdownChildrenProps) => <table className="w-full border-collapse mb-4">{children}</table>,
-  th: ({ children }: MarkdownChildrenProps) => <th className="border border-gray-300 px-3 py-2 bg-gray-100 text-left font-semibold">{children}</th>,
-  td: ({ children }: MarkdownChildrenProps) => <td className="border border-gray-300 px-3 py-2">{children}</td>,
+  th: ({ children }: MarkdownChildrenProps) => <th className="border border-gray-300 dark:border-gray-600 px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-left font-semibold">{children}</th>,
+  td: ({ children }: MarkdownChildrenProps) => <td className="border border-gray-300 dark:border-gray-600 px-3 py-2 text-gray-800 dark:text-gray-200">{children}</td>,
 }
 
 interface InteractiveLessonSEOProps {

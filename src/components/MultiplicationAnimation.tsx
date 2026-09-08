@@ -136,7 +136,7 @@ export default function MultiplicationAnimation({
   const currentStepData = currentStep > 0 ? steps[currentStep - 1] : null
 
   return (
-    <div className="my-8 p-6 bg-gradient-to-br from-blue-50 to-accent-subtle rounded-lg border-2 border-blue-200">
+    <div className="my-8 p-6 bg-gradient-to-br from-blue-50 to-accent-subtle rounded-lg border-2 border-blue-200 text-gray-900">
       <h3 className="text-lg font-bold text-blue-900 mb-4">
         Step-by-Step Multiplication with Carrying
       </h3>

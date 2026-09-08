@@ -264,7 +264,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
           <ArticleByline updatedAt={course.updatedAt} className="mb-5" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course Overview</h2>
-          <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
+          <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
             <p>
               This {course.name} course on Study Mondo covers {totalTopics} topics organized across {allCategories.length} categories. 
               Each topic includes detailed written explanations, worked examples, practice problems with step-by-step solutions, 
