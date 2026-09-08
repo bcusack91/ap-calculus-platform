@@ -39,8 +39,32 @@ export async function GET() {
 
     const classroomIds = memberships.map((m) => m.classroom.id)
 
+    // The student's classroom-group memberships, used twice: to FILTER OUT
+    // group-targeted assignments whose group the student isn't in, and to show
+    // group names ("Blue Table") under each class header / on assignment cards.
+    // ADDITIVE + P2021-safe: the ClassroomGroup tables may not exist yet in an
+    // environment (migrations are applied manually) — then groups are just [].
+    const myGroupIds = new Set<string>()
+    const groupsByMemberId = new Map<string, string[]>()
+    try {
+      const groupRows = await prisma.classroomGroupMember.findMany({
+        where: { memberId: { in: memberships.map((m) => m.id) } },
+        select: { memberId: true, groupId: true, group: { select: { name: true } } },
+        orderBy: { group: { name: 'asc' } },
+      })
+      for (const row of groupRows) {
+        myGroupIds.add(row.groupId)
+        const list = groupsByMemberId.get(row.memberId) ?? []
+        list.push(row.group.name)
+        groupsByMemberId.set(row.memberId, list)
+      }
+    } catch (e) {
+      const code = (e as { code?: string } | null)?.code
+      if (code !== 'P2021' && code !== 'P2022') throw e
+    }
+
     // Get all active assignments for those classrooms, with this student's submission
-    const assignments = await prisma.assignment.findMany({
+    const allAssignments = await prisma.assignment.findMany({
       where: {
         classroomId: { in: classroomIds },
         isActive: true,
@@ -49,6 +73,7 @@ export async function GET() {
         classroom: {
           select: { id: true, name: true, teacher: { select: { name: true } } },
         },
+        group: { select: { name: true } },
         submissions: {
           where: { studentId: userId },
           take: 1,
@@ -56,6 +81,10 @@ export async function GET() {
       },
       orderBy: [{ dueDate: 'asc' }, { createdAt: 'desc' }],
     })
+
+    // GROUP TARGETING: an assignment with a groupId is only for that group's
+    // members — a classmate outside the group must not see it at all.
+    const assignments = allAssignments.filter((a) => !a.groupId || myGroupIds.has(a.groupId))
 
     // Per-topic progress for MULTI-TOPIC assignments, so the student can see
     // which of the assigned subtopics are done and jump to the next one. A
@@ -99,6 +128,9 @@ export async function GET() {
         // these to route to the right unit-tests or free-response page.
         courseSlug: a.courseSlug,
         unitId: a.unitId,
+        // Non-null only for group-targeted assignments (which this student is
+        // in, or it was filtered out above) — the card shows a group chip.
+        groupName: a.group?.name ?? null,
         dueDate: a.dueDate,
         maxAttempts: a.maxAttempts,
         requiredScore: a.requiredScore,
@@ -125,26 +157,6 @@ export async function GET() {
             },
       }
     })
-
-    // The student's classroom groups ("Blue Table"), keyed by membership id.
-    // ADDITIVE + P2021-safe: the ClassroomGroup tables may not exist yet in an
-    // environment (migrations are applied manually) — then groups are just [].
-    const groupsByMemberId = new Map<string, string[]>()
-    try {
-      const groupRows = await prisma.classroomGroupMember.findMany({
-        where: { memberId: { in: memberships.map((m) => m.id) } },
-        select: { memberId: true, group: { select: { name: true } } },
-        orderBy: { group: { name: 'asc' } },
-      })
-      for (const row of groupRows) {
-        const list = groupsByMemberId.get(row.memberId) ?? []
-        list.push(row.group.name)
-        groupsByMemberId.set(row.memberId, list)
-      }
-    } catch (e) {
-      const code = (e as { code?: string } | null)?.code
-      if (code !== 'P2021' && code !== 'P2022') throw e
-    }
 
     const classrooms = memberships.map((m) => ({
       id: m.classroom.id,

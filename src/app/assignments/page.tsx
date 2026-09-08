@@ -22,6 +22,10 @@ interface AssignmentItem {
   flashcardSetId: string | null
   courseSlug: string | null
   unitId: string | null
+  /** Set when the assignment targets one of the student's classroom groups
+      ("Blue Table") rather than the whole class. Optional so an older API
+      response still fits. */
+  groupName?: string | null
   dueDate: string | null
   maxAttempts: number
   requiredScore: number | null
@@ -442,6 +446,14 @@ export default function StudentAssignmentsPage() {
                               {typeInfo.label}
                             </span>
                             <span>{a.classroom.name}</span>
+                            {a.groupName && (
+                              <span
+                                className="px-2 py-0.5 rounded-full bg-accent-subtle dark:bg-accent-light/20 text-accent dark:text-accent-muted font-medium"
+                                title={`Assigned to your group in ${a.classroom.name}`}
+                              >
+                                Group: {a.groupName}
+                              </span>
+                            )}
                             <span className={a.dueDate && a.submission.status === 'OVERDUE' ? 'text-red-500 font-semibold' : ''}>
                               {formatDue(a.dueDate)}
                             </span>

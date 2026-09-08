@@ -69,6 +69,10 @@ export async function PATCH(
 /**
  * DELETE /api/teacher/classrooms/[id]/groups/[groupId] — delete a group.
  * Memberships cascade away with it; students themselves are untouched.
+ * Assignments targeted at the group are NOT deleted: Assignment.groupId is
+ * SetNull, so they widen to the whole class (grades and submissions survive).
+ * A teacher who wants them gone or retargeted edits/unassigns them in the
+ * Assignments tab.
  */
 export async function DELETE(
   _req: NextRequest,

@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
-import CourseEntranceQuiz from '@/components/CourseEntranceQuiz'
+import CourseExitQuizGate from '@/components/CourseExitQuizGate'
 import DiagnosticStudyPlanBanner from '@/components/DiagnosticStudyPlanBanner'
 import TrackedLink from '@/components/TrackedLink'
 import { ArticleByline } from '@/components/ArticleByline'
@@ -40,9 +40,6 @@ export async function generateStaticParams() {
 interface CoursePageProps {
   params: Promise<{
     slug: string
-  }>
-  searchParams: Promise<{
-    exitQuiz?: string
   }>
 }
 
@@ -101,11 +98,9 @@ function CategoryGlyph({ icon, name, gradient }: { icon: string | null; name: st
   )
 }
 
-export default async function CoursePage({ params, searchParams: searchParamsPromise }: CoursePageProps) {
+export default async function CoursePage({ params }: CoursePageProps) {
   const { slug } = await params
-  const searchParams = await searchParamsPromise
-  const isExitQuizMode = searchParams?.exitQuiz === 'true'
-  
+
   const course = await prisma.course.findUnique({
     where: { slug },
     include: {
@@ -170,6 +165,25 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
   }
 
   const colors = colorMap[course.color || 'purple'] || colorMap.purple
+
+  // Empty-course fallback. Also rendered below the entrance quiz in
+  // ?exitQuiz=true mode (via CourseExitQuizGate) exactly as the old
+  // server-side conditional did.
+  const comingSoonBlock = (
+    <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
+      <div className="text-6xl mb-4">🚧</div>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Content Coming Soon!</h2>
+      <p className="text-gray-600 dark:text-gray-400 mb-6">
+        We&apos;re working hard to create comprehensive study materials for {course.name}.
+      </p>
+      <Link
+        href="/"
+        className="inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover"
+      >
+        Explore Other Courses
+      </Link>
+    </div>
+  )
 
   return (
     <div className="container py-10">
@@ -480,30 +494,31 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
           </section>
         )}
 
-        {/* Exit Quiz Mode — show entrance quiz + filtered topics */}
-        {isExitQuizMode && (
-          <CourseEntranceQuiz
-            courseSlug={slug}
-            courseName={course.name}
-            categories={allCategories.map(cat => ({
-              id: cat.id,
-              name: cat.name,
-              slug: cat.slug,
-              description: cat.description,
-              icon: cat.icon,
-              topics: cat.topics.map(t => ({
-                id: t.id,
-                slug: t.slug,
-                title: t.title,
-                description: t.description,
-                subtopicCount: t._count.subtopics,
-              })),
-            }))}
-          />
-        )}
-
-        {/* Categories Grid — only shown in normal mode */}
-        {!isExitQuizMode && allCategories.length > 0 ? (
+        {/* Exit Quiz Mode (?exitQuiz=true) is resolved on the CLIENT via
+            CourseExitQuizGate so this page never reads searchParams on the
+            server — reading them forced the whole route dynamic and killed
+            ISR. The gate renders normalContent (categories grid / coming-soon)
+            unless the param is set, in which case it swaps in the entrance
+            quiz — replicating the old server-side conditional exactly. */}
+        <CourseExitQuizGate
+          courseSlug={slug}
+          courseName={course.name}
+          categories={allCategories.map(cat => ({
+            id: cat.id,
+            name: cat.name,
+            slug: cat.slug,
+            description: cat.description,
+            icon: cat.icon,
+            topics: cat.topics.map(t => ({
+              id: t.id,
+              slug: t.slug,
+              title: t.title,
+              description: t.description,
+              subtopicCount: t._count.subtopics,
+            })),
+          }))}
+          emptyStateContent={comingSoonBlock}
+          normalContent={allCategories.length > 0 ? (
           <div className="space-y-12">
             {/* AB Foundation Section (only shown on BC page) */}
             {abCategories.length > 0 && (
@@ -651,21 +666,10 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
               </div>
             ))}
           </div>
-        ) : (
-          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
-            <div className="text-6xl mb-4">🚧</div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Content Coming Soon!</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We&apos;re working hard to create comprehensive study materials for {course.name}.
-            </p>
-            <Link
-              href="/"
-              className="inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover"
-            >
-              Explore Other Courses
-            </Link>
-          </div>
-        )}
+          ) : (
+            comingSoonBlock
+          )}
+        />
 
       </div>
     </div>

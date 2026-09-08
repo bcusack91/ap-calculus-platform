@@ -43,6 +43,9 @@ export async function GET(
             // Count only real activity — creation seeds a NOT_STARTED row per
             // student, which made every new assignment show "N submissions".
             _count: { select: { submissions: { where: { status: { not: 'NOT_STARTED' } } } } },
+            // Group targeting: the card chip and the edit modal's "Assign to"
+            // select both need the current target's name/id.
+            group: { select: { id: true, name: true } },
           },
         },
         competitions: {

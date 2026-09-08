@@ -65,7 +65,7 @@ export async function POST(
           members: { some: { userId: studentId, isActive: true } },
         },
       },
-      select: { id: true, maxAttempts: true, type: true },
+      select: { id: true, maxAttempts: true, type: true, groupId: true },
     })
 
     if (!assignment) {
@@ -73,6 +73,18 @@ export async function POST(
         { error: 'Assignment not found' },
         { status: 404 }
       )
+    }
+
+    // Group-targeted assignments only accept submissions from members of the
+    // target group — to everyone else they don't exist (mirror the list API).
+    if (assignment.groupId) {
+      const inGroup = await prisma.classroomGroupMember.findFirst({
+        where: { groupId: assignment.groupId, member: { userId: studentId, isActive: true } },
+        select: { id: true },
+      })
+      if (!inGroup) {
+        return NextResponse.json({ error: 'Assignment not found' }, { status: 404 })
+      }
     }
 
     // Only FLASHCARD_REVIEW may self-report completion (its score is

@@ -69,6 +69,9 @@ interface Assignment {
   dueDate: string | null
   requiredScore: number | null
   maxAttempts: number | null
+  /** null = whole class; set when the assignment targets a classroom group. */
+  groupId?: string | null
+  group?: { id: string; name: string } | null
   createdAt: string
   _count: { submissions: number }
 }
@@ -933,6 +936,15 @@ export default function ClassroomDetailPage() {
                 <span title={a.topicSlugs.map(topicTitle).join(', ')}>{a.topicSlugs.length} topics</span>
               ) : (
                 a.topicSlug && <span>Topic: {topicTitle(a.topicSlug)}</span>
+              )}
+              {a.group && (
+                <span
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded font-medium bg-accent-subtle dark:bg-accent-light/20 text-accent dark:text-accent-muted"
+                  title="Only this group's students see and get this assignment"
+                >
+                  <Users className="w-3 h-3" aria-hidden="true" />
+                  Group: {a.group.name}
+                </span>
               )}
               {a.requiredScore != null && <span>Required: {Math.round(a.requiredScore * 100)}%</span>}
               {a.maxAttempts != null && a.maxAttempts < 9999 && <span>Max attempts: {a.maxAttempts}</span>}

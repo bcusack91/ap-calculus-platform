@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
+import { coveredUserIds } from '@/lib/classroom-groups'
 
 /**
  * PUT    /api/teacher/classrooms/[id]/assignments/[assignmentId] — edit an assignment
@@ -28,7 +29,7 @@ export async function PUT(
     const owned = await getOwnedAssignment(id, assignmentId)
     if ('error' in owned && owned.error) return owned.error
 
-    const { title, description, type, topicSlug, topicSlugs, courseSlug, unitId, flashcardSetId, dueDate, maxAttempts, requiredScore } =
+    const { title, description, type, topicSlug, topicSlugs, courseSlug, unitId, flashcardSetId, dueDate, maxAttempts, requiredScore, groupId } =
       await req.json()
 
     if (title !== undefined && (!title || typeof title !== 'string')) {
@@ -85,6 +86,15 @@ export async function PUT(
       if (!ownedSet) return NextResponse.json({ error: 'Not your flashcard set' }, { status: 403 })
     }
 
+    // Group retargeting (mirrors POST validation): undefined = untouched,
+    // ''/null = whole class, a group id must belong to THIS classroom.
+    const gid = typeof groupId === 'string' && groupId.trim() ? groupId.trim() : null
+    if (groupId !== undefined && gid) {
+      const group = await prisma.classroomGroup.findFirst({ where: { id: gid, classroomId: id }, select: { id: true } })
+      if (!group) return NextResponse.json({ error: 'Group not found in this classroom' }, { status: 400 })
+    }
+    const groupChanged = groupId !== undefined && gid !== (existing?.groupId ?? null)
+
     // Only update fields that were explicitly provided so a partial edit can't
     // null out untouched fields.
     const updated = await prisma.assignment.update({
@@ -103,8 +113,50 @@ export async function PUT(
         ...(dueDate !== undefined && { dueDate: dueDate ? new Date(dueDate) : null }),
         ...(maxAttempts !== undefined && { maxAttempts: Number(maxAttempts) > 0 ? Math.min(Math.floor(Number(maxAttempts)), 9999) : 9999 }),
         ...(requiredScore !== undefined && { requiredScore: requiredScore ?? null }),
+        ...(groupId !== undefined && { groupId: gid }),
       },
     })
+
+    // RECONCILE SUBMISSIONS on a target change (group→group, group→class,
+    // class→group):
+    //  - Newly-covered members get a NOT_STARTED row so they show up in the
+    //    stats and can start the work.
+    //  - Members no longer covered lose ONLY their NOT_STARTED rows. Rows that
+    //    are IN_PROGRESS or COMPLETED (or manually graded) are deliberately
+    //    KEPT: a student did — or is doing — real work while covered, and that
+    //    work must stay visible in the teacher drill-in and gradeable, even
+    //    though the assignment no longer targets them.
+    if (groupChanged) {
+      const covered = new Set(await coveredUserIds(id, gid))
+      const rows = await prisma.assignmentSubmission.findMany({
+        where: { assignmentId },
+        select: { studentId: true, status: true, gradedManually: true },
+      })
+      const haveRow = new Set(rows.map((r) => r.studentId))
+      const toRemove = rows
+        .filter((r) => !covered.has(r.studentId) && r.status === 'NOT_STARTED' && !r.gradedManually)
+        .map((r) => r.studentId)
+      const toCreate = [...covered].filter((uid) => !haveRow.has(uid))
+      await prisma.$transaction([
+        ...(toRemove.length > 0
+          ? [
+              prisma.assignmentSubmission.deleteMany({
+                where: { assignmentId, studentId: { in: toRemove }, status: 'NOT_STARTED' },
+              }),
+            ]
+          : []),
+        ...(toCreate.length > 0
+          ? [
+              prisma.assignmentSubmission.createMany({
+                data: toCreate.map((studentId) => ({ assignmentId, studentId, status: 'NOT_STARTED' as const })),
+                // A student can start work between our read and this write —
+                // never clobber, never fail the edit over it.
+                skipDuplicates: true,
+              }),
+            ]
+          : []),
+      ])
+    }
 
     return NextResponse.json({ assignment: updated })
   } catch (error) {

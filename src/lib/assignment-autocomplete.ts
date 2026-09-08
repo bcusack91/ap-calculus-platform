@@ -102,11 +102,32 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
   return false
 }
 
+/**
+ * GROUP TARGETING: drop assignments whose groupId names a group this student's
+ * classroom membership isn't in. Without this filter the upserts below would
+ * CREATE submission rows for classmates outside the target group the moment
+ * they happened to study the same topic — polluting the teacher's stats and
+ * the gradebook. groupId: null means classroom-wide (all pre-groups history).
+ */
+async function coveredByTarget<T extends { groupId: string | null }>(
+  membershipIds: string[],
+  assignments: T[],
+): Promise<T[]> {
+  const gids = [...new Set(assignments.map((a) => a.groupId).filter((g): g is string => !!g))]
+  if (gids.length === 0) return assignments
+  const rows = await prisma.classroomGroupMember.findMany({
+    where: { groupId: { in: gids }, memberId: { in: membershipIds } },
+    select: { groupId: true },
+  })
+  const mine = new Set(rows.map((r) => r.groupId))
+  return assignments.filter((a) => !a.groupId || mine.has(a.groupId))
+}
+
 /** Find active assignments of the given types matching this topic in the student's active classrooms. */
 async function matchingAssignments(userId: string, topicSlug: string, types: AssignmentType[]) {
   const memberships = await prisma.classroomMember.findMany({
     where: { userId, isActive: true },
-    select: { classroomId: true },
+    select: { id: true, classroomId: true },
   })
   if (memberships.length === 0) return []
   const assignments = await prisma.assignment.findMany({
@@ -115,9 +136,10 @@ async function matchingAssignments(userId: string, topicSlug: string, types: Ass
       isActive: true,
       type: { in: types },
     },
-    select: { id: true, topicSlug: true, topicSlugs: true, maxAttempts: true, requiredScore: true },
+    select: { id: true, topicSlug: true, topicSlugs: true, maxAttempts: true, requiredScore: true, groupId: true },
   })
-  return assignments.filter((a) => slugMatches(a, topicSlug))
+  const covered = await coveredByTarget(memberships.map((m) => m.id), assignments)
+  return covered.filter((a) => slugMatches(a, topicSlug))
 }
 
 /** Every topic an assignment covers (single + multi), deduped. */
@@ -229,11 +251,11 @@ export async function recordCourseWorkCompletion(params: {
   try {
     const memberships = await prisma.classroomMember.findMany({
       where: { userId, isActive: true },
-      select: { classroomId: true },
+      select: { id: true, classroomId: true },
     })
     if (memberships.length === 0) return
 
-    const assignments = await prisma.assignment.findMany({
+    const allAssignments = await prisma.assignment.findMany({
       where: {
         classroomId: { in: memberships.map((m) => m.classroomId) },
         isActive: true,
@@ -243,8 +265,9 @@ export async function recordCourseWorkCompletion(params: {
         // set accepts any unit in the course.
         ...(type === 'UNIT_TEST' && unitId ? { OR: [{ unitId }, { unitId: null }] } : {}),
       },
-      select: { id: true, requiredScore: true },
+      select: { id: true, requiredScore: true, groupId: true },
     })
+    const assignments = await coveredByTarget(memberships.map((m) => m.id), allAssignments)
 
     for (const a of assignments) {
       const required = typeof a.requiredScore === 'number' ? a.requiredScore : null

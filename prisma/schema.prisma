@@ -1159,6 +1159,10 @@ model ClassroomGroup {
 
   classroom Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   members   ClassroomGroupMember[]
+  // Assignments targeted at this group (Assignment.groupId). SetNull on the
+  // assignment side: deleting a group widens its assignments to the whole
+  // class rather than orphaning or destroying them.
+  assignments Assignment[]
 
   @@unique([classroomId, name])
   @@index([classroomId])
@@ -1190,6 +1194,11 @@ model Assignment {
   flashcardSetId String? // if type is FLASHCARD_REVIEW, the teacher-created set to study
   courseSlug     String? // if type is UNIT_TEST or FRQ_PRACTICE — these are scoped to a course, not a topic
   unitId         String? // if type is UNIT_TEST — a specific unit, or null for "any unit in the course"
+  // Group targeting: null = the whole class (the default, and all pre-groups
+  // history). When set, only that group's active members get submission rows
+  // and see the assignment. SetNull: deleting a group makes its assignments
+  // classroom-wide — grades and rows survive, the audience just widens.
+  groupId        String?
   dueDate        DateTime?
   maxAttempts    Int            @default(1)
   requiredScore  Float? // minimum mastery/score required (0-1)
@@ -1200,12 +1209,14 @@ model Assignment {
   classroom    Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   createdBy    User                   @relation("AssignmentCreator", fields: [createdById], references: [id], onDelete: Cascade)
   flashcardSet FlashcardSet?          @relation(fields: [flashcardSetId], references: [id], onDelete: SetNull)
+  group        ClassroomGroup?        @relation(fields: [groupId], references: [id], onDelete: SetNull)
   submissions  AssignmentSubmission[]
 
   @@index([classroomId])
   @@index([createdById])
   @@index([dueDate])
   @@index([flashcardSetId])
+  @@index([groupId])
 }
 
 model AssignmentSubmission {

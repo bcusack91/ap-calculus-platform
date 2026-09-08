@@ -35,9 +35,17 @@ export interface AssignmentEditTarget {
   courseSlug?: string | null
   unitId?: string | null
   flashcardSetId?: string | null
+  /** null/undefined = whole class; otherwise the target ClassroomGroup id. */
+  groupId?: string | null
   dueDate: string | null
   requiredScore: number | null
   maxAttempts: number | null
+}
+
+interface GroupOption {
+  id: string
+  name: string
+  memberCount: number
 }
 
 interface FlashcardSetOption {
@@ -57,6 +65,8 @@ interface AssignmentCreateBody {
   courseSlug?: string
   unitId?: string
   flashcardSetId?: string
+  /** Sent only when the "Assign to" control is shown: null = whole class. */
+  groupId?: string | null
 }
 
 export const ASSIGNMENT_TYPES: { value: string; label: string; description: string }[] = [
@@ -89,6 +99,7 @@ const emptyForm = {
   courseSlug: '',
   unitId: '',
   flashcardSetId: '',
+  groupId: '', // '' = whole class
   dueDate: '',
   maxAttempts: '',
   requiredScore: '80',
@@ -124,6 +135,10 @@ export default function AssignmentModal({
   const [unitsError, setUnitsError] = useState('')
   const [flashcardSets, setFlashcardSets] = useState<FlashcardSetOption[] | null>(null)
   const [setsError, setSetsError] = useState('')
+  // Classroom groups for the optional "Assign to" select. null = still
+  // loading; [] = feature unavailable or no groups — the control stays hidden
+  // and groupId is never sent (so an edit can't accidentally retarget).
+  const [groupOptions, setGroupOptions] = useState<GroupOption[] | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
@@ -164,6 +179,7 @@ export default function AssignmentModal({
         courseSlug: editing.courseSlug || '',
         unitId: editing.unitId || '',
         flashcardSetId: editing.flashcardSetId || '',
+        groupId: editing.groupId || '',
         dueDate: toLocalDatetimeInput(editing.dueDate),
         maxAttempts:
           editing.maxAttempts && editing.maxAttempts < 9999 ? String(editing.maxAttempts) : '',
@@ -175,6 +191,39 @@ export default function AssignmentModal({
       setForm({ ...emptyForm })
     }
   }, [open, editing, loadUnits])
+
+  // Fetch the classroom's groups each time the dialog opens (they're edited in
+  // the Roster tab, so a cached list can go stale between opens). Any failure
+  // or `available: false` (groups tables not migrated yet) hides the control.
+  useEffect(() => {
+    if (!open) return
+    let cancelled = false
+    setGroupOptions(null)
+    ;(async () => {
+      try {
+        const r = await fetch(`/api/teacher/classrooms/${classroomId}/groups`)
+        if (!r.ok) throw new Error()
+        const j = await r.json()
+        if (cancelled) return
+        if (j.available === false || !Array.isArray(j.groups)) {
+          setGroupOptions([])
+          return
+        }
+        setGroupOptions(
+          (j.groups as { id: string; name: string; members?: unknown[] }[]).map((g) => ({
+            id: g.id,
+            name: g.name,
+            memberCount: Array.isArray(g.members) ? g.members.length : 0,
+          }))
+        )
+      } catch {
+        if (!cancelled) setGroupOptions([]) // group targeting is optional — degrade silently
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [open, classroomId])
 
   // Lazily fetch the teacher's flashcard sets the first time they're needed.
   useEffect(() => {
@@ -226,6 +275,10 @@ export default function AssignmentModal({
   const needsCourse = COURSE_SCOPED.has(form.type)
   const needsTopics = TOPIC_SCOPED.has(form.type)
   const needsSet = form.type === 'FLASHCARD_REVIEW'
+  // "Assign to" is only offered when the classroom actually has groups; while
+  // hidden, groupId is never sent so the stored target can't change by accident.
+  const showGroupControl = groupOptions !== null && groupOptions.length > 0
+  const chosenGroup = (groupOptions ?? []).find((g) => g.id === form.groupId)
 
   // Type-aware course-group filtering:
   //  - 'bank' groups (competitive-only slugs, no /topics pages) are offered
@@ -271,6 +324,10 @@ export default function AssignmentModal({
         maxAttempts: form.maxAttempts ? parseInt(form.maxAttempts) : undefined,
         dueDate: form.dueDate || undefined,
       }
+      // Only send a target when the control was actually shown: on edit,
+      // changing it makes the server reconcile submission rows (newly-covered
+      // members gain NOT_STARTED rows; uncovered NOT_STARTED rows are removed).
+      if (showGroupControl) body.groupId = form.groupId || null
       if (needsCourse) {
         // UNIT_TEST and FRQ_PRACTICE target a course (and optionally a unit)
         // rather than topics — a unit test is not a topic-slug thing.
@@ -334,6 +391,11 @@ export default function AssignmentModal({
   if (needsSet && chosenSet) {
     preview.push(`"${chosenSet.title}" (${chosenSet._count.cards} card${chosenSet._count.cards !== 1 ? 's' : ''})`)
   }
+  if (chosenGroup) {
+    preview.push(
+      `Only the "${chosenGroup.name}" group (${chosenGroup.memberCount} student${chosenGroup.memberCount !== 1 ? 's' : ''})`
+    )
+  }
 
   return (
     <FocusTrapDialog open={open} onClose={onClose} title={editing ? 'Edit Assignment' : 'Create Assignment'}>
@@ -368,6 +430,38 @@ export default function AssignmentModal({
             </select>
             {typeMeta && <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{typeMeta.description}</p>}
           </div>
+
+          {showGroupControl && (
+            <div>
+              <label htmlFor="assignment-group" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                Assign to
+              </label>
+              <select
+                id="assignment-group"
+                value={form.groupId}
+                onChange={(e) => setForm({ ...form, groupId: e.target.value })}
+                className={inputCls}
+              >
+                <option value="">Whole class</option>
+                {/* An edited assignment can target a group that was deleted
+                    since the list loaded — keep it selectable so the dropdown
+                    isn't silently wrong. */}
+                {form.groupId && !groupOptions!.some((g) => g.id === form.groupId) && (
+                  <option value={form.groupId}>Current group (no longer exists — pick another)</option>
+                )}
+                {groupOptions!.map((g) => (
+                  <option key={g.id} value={g.id}>
+                    {g.name} ({g.memberCount} student{g.memberCount !== 1 ? 's' : ''})
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {form.groupId
+                  ? 'Only students in this group see and get the assignment.'
+                  : 'Every student in the class gets the assignment.'}
+              </p>
+            </div>
+          )}
 
           {needsCourse && (
             <div className="space-y-4">
