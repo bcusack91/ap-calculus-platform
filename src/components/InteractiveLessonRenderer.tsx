@@ -18,6 +18,7 @@ import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
 import StudyNotes from '@/components/StudyNotes'
+import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
@@ -1233,6 +1234,26 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Disable Next button if it's an exercise that hasn't been completed
   const canProceedToNext = !currentSectionRequiresCompletion || isCurrentSectionComplete
 
+  // Lesson fully finished on THIS surface: viewing the last section of the
+  // final unmastered part with every section complete, and no exit quiz left
+  // to take (passing one routes to competitive mode, so with a pending quiz
+  // this state is never "done"). Competitive-destination lessons also route
+  // away on completion, so they never linger here either. Drives the
+  // study-plan "next up" panel below the navigation buttons.
+  const hasLaterUnmasteredPart = (() => {
+    for (let i = lessonPart + 1; i <= totalParts; i++) {
+      if (!entranceQuizMasteredParts.has(i)) return true
+    }
+    return false
+  })()
+  const lessonFinished =
+    !hasLaterUnmasteredPart &&
+    sections.length > 0 &&
+    currentSectionIndex === sections.length - 1 &&
+    completedSections.size >= sections.length &&
+    (!topicHasExitQuiz || exitQuizStatus.hasPassed) &&
+    !entersCompetitiveModeOnComplete
+
   // Keyboard navigation for lessons
   useLessonKeyboard({
     onNext: handleNext,
@@ -1587,7 +1608,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           💡 Complete the exercise above to continue
         </div>
       )}
-      
+
+      {/* Study-plan routing on lesson completion: if this topic was one of
+          the student's diagnostic recommendations, point them at the next one
+          (or the diagnostic retake once the plan is done), plus a flashcards-
+          unlocked notice. Fetches on mount — i.e. only once the lesson is
+          finished — and renders nothing for topics outside any plan or on any
+          fetch failure. Signed-out students skip it entirely. */}
+      {lessonFinished && session?.user && (
+        <StudyPlanNextUp topicSlug={topicSlug} completion="lesson" />
+      )}
+
+
       {/* Bookmark and keyboard shortcuts */}
       <div className="flex items-center justify-between pt-2">
         <BookmarkButton lessonId={`${topicSlug}-part${lessonPart}`} lessonTitle={lessonTitle} />

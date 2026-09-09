@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getActiveStudyContext } from '@/lib/study-context'
+import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 
 /**
  * GET /api/flashcards/session?topicSlug=xxx&limit=20
@@ -39,27 +40,47 @@ export async function GET(req: NextRequest) {
       localDayEnd.setUTCHours(23, 59, 59, 999)
       const endOfStudentDay = new Date(localDayEnd.getTime() + tzOffsetMs)
 
-      const dueWhere = { userId, context, nextReview: { lte: now } }
-      const [rows, dueCount, newCount, dueLaterToday, nextUpcoming] = await Promise.all([
-        prisma.flashcardProgress.findMany({
-          where: dueWhere,
-          include: {
-            flashcard: { include: { topic: { select: { slug: true, title: true } } } },
-          },
-          orderBy: { nextReview: 'asc' },
-          take: limit,
-        }),
-        prisma.flashcardProgress.count({ where: dueWhere }),
-        prisma.flashcardProgress.count({ where: { ...dueWhere, reviewCount: 0 } }),
+      // Anki-style daily limits (same composition as GET /api/flashcards/
+      // review — see src/lib/flashcard-daily-queue.ts): due REVIEW cards
+      // first (capped at the remaining max-reviews/day allowance), then NEW
+      // cards — including drip-backlog cards with future nextReview dates,
+      // pulled forward up to the remaining new-cards/day allowance.
+      const dailyState = await getDailyQueueState(userId, context, now)
+
+      const cardInclude = {
+        flashcard: { include: { topic: { select: { slug: true, title: true } } } },
+      }
+      const [reviewRows, dueLaterToday, nextUpcoming] = await Promise.all([
+        dailyState.reviewsToday > 0
+          ? prisma.flashcardProgress.findMany({
+              where: { userId, context, reviewCount: { gt: 0 }, nextReview: { lte: now } },
+              include: cardInclude,
+              orderBy: { nextReview: 'asc' },
+              take: Math.min(limit, dailyState.reviewsToday),
+            })
+          : Promise.resolve([]),
+        // Learning-step returns later today (reviewCount > 0 only — new-card
+        // drip dates don't gate availability anymore, the allowance does).
         prisma.flashcardProgress.count({
-          where: { userId, context, nextReview: { gt: now, lte: endOfStudentDay } },
+          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now, lte: endOfStudentDay } },
         }),
         prisma.flashcardProgress.findFirst({
-          where: { userId, context, nextReview: { gt: now } },
+          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now } },
           orderBy: { nextReview: 'asc' },
           select: { nextReview: true },
         }),
       ])
+
+      const newTake = Math.min(limit - reviewRows.length, dailyState.newToday)
+      const newRows = newTake > 0
+        ? await prisma.flashcardProgress.findMany({
+            where: { userId, context, reviewCount: 0 },
+            include: cardInclude,
+            orderBy: { nextReview: 'asc' },
+            take: newTake,
+          })
+        : []
+      const rows = [...reviewRows, ...newRows]
 
       return NextResponse.json({
         cards: rows.map((r) => ({
@@ -75,10 +96,14 @@ export async function GET(req: NextRequest) {
             : { flashcardId: r.flashcardId, nextReview: r.nextReview, repetitions: r.repetitions, easeFactor: r.easeFactor, interval: r.interval, isMinuteInterval: r.isMinuteInterval },
         })),
         stats: {
-          dueCount,
-          newCount,
-          totalInDeck: dueCount,
+          // Today's remaining workload under the daily limits.
+          dueCount: dailyState.dueToday,
+          newCount: dailyState.newToday,
+          totalInDeck: dailyState.dueToday,
           sessionSize: rows.length,
+          reviewsBeyondLimit: dailyState.reviewsBeyondLimit,
+          newBeyondLimit: dailyState.newBeyondLimit,
+          limits: dailyState.limits,
           dueLaterToday,
           nextDueAt: nextUpcoming?.nextReview ?? null,
         },

@@ -18,6 +18,10 @@ model User {
   role                   UserRole                      @default(FREE)
   studyContext           String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
   satTrackOverride       String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
+  // Anki-style flashcard daily limits (null = code defaults, see
+  // src/lib/flashcard-daily-limits.ts: 100 new/day, 200 reviews/day).
+  flashcardNewPerDay        Int? // new cards introduced per day (bounds 1-500)
+  flashcardMaxReviewsPerDay Int? // max due-card reviews per day (bounds 10-1000)
   stripeCustomerId       String?                       @unique
   stripeSubscriptionId   String?                       @unique
   stripePriceId          String?
@@ -505,11 +509,16 @@ model DailyChallengeResult {
 // ("did each student do their flashcards 5-7 days this week?"). One row per
 // user per UTC day, incremented best-effort on every card review.
 model FlashcardDailyActivity {
-  id      String   @id @default(cuid())
-  userId  String
-  day     DateTime @db.Date
-  reviews Int      @default(0)
-  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id       String   @id @default(cuid())
+  userId   String
+  day      DateTime @db.Date
+  reviews  Int      @default(0)
+  /// Cards INTRODUCED this day: ratings that were a card's first-ever review in
+  /// its study context (reviewCount 0 -> 1). Powers the Anki-style
+  /// new-cards-per-day allowance; incremented alongside `reviews` in
+  /// POST /api/flashcards/review.
+  newCards Int      @default(0)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, day])
   @@index([userId, day])

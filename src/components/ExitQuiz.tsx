@@ -9,6 +9,7 @@ import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
+import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 interface ExitQuizQuestion {
@@ -63,6 +64,9 @@ export default function ExitQuiz({
   const [showExplanation, setShowExplanation] = useState(false)
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correct: boolean }[]>([])
   const [quizComplete, setQuizComplete] = useState(false)
+  // Flips once the results POST has settled (success or failure) — the
+  // study-plan panel waits for it so its status fetch sees this attempt.
+  const [submitSettled, setSubmitSettled] = useState(false)
   const [startTime] = useState(Date.now())
   // One submission per mounted quiz, ever.
   const hasSubmittedRef = useRef(false)
@@ -217,6 +221,8 @@ export default function ExitQuiz({
       })
     } catch (err) {
       console.error('Failed to submit exit quiz:', err)
+    } finally {
+      setSubmitSettled(true)
     }
   }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
 
@@ -282,6 +288,16 @@ export default function ExitQuiz({
                 You need {passThreshold}/{totalQuestions} to pass. Review the explanations below and try again!
               </p>
             </div>
+          )}
+
+          {/* Study-plan routing: if this topic was one of the student's
+              diagnostic recommendations, point them at the next one (or the
+              diagnostic retake once the plan is done), plus a flashcards-
+              unlocked notice. Mounted only after the results POST settles so
+              the plan fetch sees this attempt; renders nothing for signed-out
+              students, topics outside any plan, or fetch failures. */}
+          {passed && submitSettled && (
+            <StudyPlanNextUp topicSlug={topicSlug} completion="quiz" quizPassed />
           )}
 
           {/* Answer Review */}

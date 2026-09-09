@@ -41,6 +41,8 @@ interface ReviewStats {
   due: number
   new: number
   review: number
+  /** Due review cards held back by the max-reviews-per-day daily limit. */
+  reviewsBeyondLimit?: number
   /** Cards that come back later in the student's local day (learning steps). */
   dueLaterToday: number
   /** ISO timestamp of the next upcoming card, or null when none scheduled. */
@@ -209,6 +211,13 @@ export default function FlashcardReviewPage() {
             {moreToday === 0 && nextDueLabel && (
               <p className="mb-6 text-gray-700">
                 Your next review is {nextDueLabel}.
+              </p>
+            )}
+
+            {(stats?.reviewsBeyondLimit ?? 0) > 0 && (
+              <p className="mb-6 text-sm text-amber-800 bg-amber-50 border border-amber-300 rounded-lg px-4 py-3 max-w-md mx-auto">
+                {stats!.reviewsBeyondLimit} more review{stats!.reviewsBeyondLimit === 1 ? '' : 's'} waiting beyond today&apos;s limit — they&apos;re first in line tomorrow, or raise your daily limits on the{' '}
+                <Link href="/flashcards/review" className="underline font-semibold">review dashboard</Link>.
               </p>
             )}
 

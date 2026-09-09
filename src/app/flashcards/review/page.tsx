@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
+import FlashcardDailyLimits from '@/components/FlashcardDailyLimits'
 import { formatTimeUntil } from '@/lib/format-due-time'
 
 interface ReviewStats {
@@ -11,6 +12,10 @@ interface ReviewStats {
   due: number
   new: number
   review: number
+  /** Due review cards held back by the max-reviews-per-day limit. */
+  reviewsBeyondLimit?: number
+  /** Never-reviewed cards held back by the new-cards-per-day limit. */
+  newBeyondLimit?: number
   dueLaterToday: number
   nextDueAt: string | null
 }
@@ -112,6 +117,14 @@ export default function FlashcardReviewDashboard() {
           </div>
         </div>
 
+        {/* Reviews truncated by the daily cap */}
+        {(stats?.reviewsBeyondLimit ?? 0) > 0 && (
+          <div role="status" className="mb-8 -mt-6 rounded-xl border-2 border-amber-300 bg-amber-50 px-5 py-3 text-sm text-amber-900">
+            <span className="font-semibold">{stats!.reviewsBeyondLimit} more review{stats!.reviewsBeyondLimit === 1 ? '' : 's'} waiting beyond today&apos;s limit.</span>{' '}
+            They&apos;ll be first in line tomorrow — or raise your max reviews per day below.
+          </div>
+        )}
+
         {/* Action Buttons */}
         {stats && stats.due > 0 ? (
           <div className="bg-gradient-to-r from-accent-light to-blue-100 border-2 border-accent-muted rounded-xl p-8 mb-8">
@@ -159,6 +172,10 @@ export default function FlashcardReviewDashboard() {
             </div>
           </div>
         )}
+
+        {/* Anki-style daily pacing settings — saving refetches the counts,
+            since the effective limits change what's "due today". */}
+        <FlashcardDailyLimits onChanged={() => { void loadStats() }} />
 
         {/* How It Works */}
         <div className="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8">

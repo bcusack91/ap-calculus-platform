@@ -20,6 +20,8 @@ interface SessionStats {
   newCount: number
   totalInDeck: number
   sessionSize: number
+  /** Due review cards held back by the max-reviews-per-day daily limit. */
+  reviewsBeyondLimit?: number
   /** Cards returning later in the student's local day (unscoped sessions). */
   dueLaterToday?: number
   nextDueAt?: string | null
@@ -162,6 +164,11 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             {total === 0 ? 'No cards were due for review.' : `You reviewed ${total} cards.`}
           </p>
+          {(stats?.reviewsBeyondLimit ?? 0) > 0 && (
+            <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-900/20 p-4 text-sm text-amber-800 dark:text-amber-300">
+              {stats!.reviewsBeyondLimit} more review{stats!.reviewsBeyondLimit === 1 ? '' : 's'} waiting beyond today&apos;s limit — first in line tomorrow.
+            </div>
+          )}
           {(stats?.dueLaterToday ?? 0) > 0 && (
             <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-900/20 p-4 text-sm text-amber-800 dark:text-amber-300">
               <span className="font-semibold">{stats!.dueLaterToday} card{stats!.dueLaterToday === 1 ? '' : 's'} come{stats!.dueLaterToday === 1 ? 's' : ''} back later today</span>

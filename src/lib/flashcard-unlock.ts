@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { effectiveDailyLimits } from '@/lib/flashcard-daily-limits'
 
 export interface FlashcardUnlockResult {
   unlocked: boolean
@@ -107,7 +108,13 @@ export async function maybeUnlockFlashcards(
   }
   if (cardIds.length === 0) return LOCKED
 
-  const context = await getActiveStudyContext(userId)
+  const [context, user] = await Promise.all([
+    getActiveStudyContext(userId),
+    prisma.user.findUnique({
+      where: { id: userId },
+      select: { studyContext: true, flashcardNewPerDay: true },
+    }),
+  ])
 
   // Unlock into the active mode — and ALSO into the topic's course study mode
   // when the student already has one (owner report: passed the SAT grammar
@@ -119,20 +126,26 @@ export async function maybeUnlockFlashcards(
   if (courseSlug) {
     const courseKey = `course:${courseSlug}`
     if (!contexts.has(courseKey)) {
-      const [user, inUse] = await Promise.all([
-        prisma.user.findUnique({ where: { id: userId }, select: { studyContext: true } }),
-        prisma.flashcardProgress.findFirst({ where: { userId, context: courseKey }, select: { id: true } }),
-      ])
+      const inUse = await prisma.flashcardProgress.findFirst({
+        where: { userId, context: courseKey },
+        select: { id: true },
+      })
       if (user?.studyContext === courseKey || inUse) contexts.add(courseKey)
     }
   }
 
   const now = new Date()
   // New-card throttle: a topic unlock used to schedule its whole deck (often
-  // 60+ cards) due immediately. Drip instead — the first NEW_CARDS_PER_DAY
-  // due now, the rest in daily waves — so a big unlock doesn't bury the
-  // review queue. Once reviewed, cards follow the normal SRS schedule.
-  const NEW_CARDS_PER_DAY = 20
+  // 60+ cards) due immediately. Drip instead — the first newPerDay due now,
+  // the rest in daily waves — so a big unlock doesn't bury the review queue.
+  // The rate is the STUDENT'S new-cards/day setting (default 100 — the old
+  // hardcoded 20 stranded big unlocks: 71 MCAT cards, only 20 offered). The
+  // stagger is a soft ordering hint anyway: the session builder pulls
+  // never-reviewed cards with future nextReview forward up to the remaining
+  // daily allowance (see src/lib/flashcard-daily-queue.ts), so cards dripped
+  // under an older/lower rate are never stranded. Once reviewed, cards follow
+  // the normal SRS schedule.
+  const { newPerDay } = effectiveDailyLimits(user)
   const DAY_MS = 24 * 60 * 60 * 1000
   let newInActive = 0
   for (const ctx of contexts) {
@@ -144,7 +157,7 @@ export async function maybeUnlockFlashcards(
         easeFactor: 2.5,
         interval: 0,
         repetitions: 0,
-        nextReview: new Date(now.getTime() + Math.floor(i / NEW_CARDS_PER_DAY) * DAY_MS),
+        nextReview: new Date(now.getTime() + Math.floor(i / newPerDay) * DAY_MS),
         lastReviewed: now,
         reviewCount: 0,
       })),

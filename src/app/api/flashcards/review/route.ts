@@ -7,6 +7,7 @@ import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
 import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { getActiveStudyContext } from '@/lib/study-context'
+import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 
 /**
  * POST /api/flashcards/review
@@ -104,12 +105,19 @@ export async function POST(req: NextRequest) {
     })
 
     // Best-effort daily-habit rollup: one row per user per UTC day, powering
-    // the teacher's "did they do their flashcards this week" view.
+    // the teacher's "did they do their flashcards this week" view AND the
+    // Anki-style daily limits (src/lib/flashcard-daily-queue.ts). `newCards`
+    // counts INTRODUCTIONS — this rating was the card's first-ever review in
+    // this context (no progress row yet / reviewCount 0) — which is how
+    // "new cards introduced today" is measured against flashcardNewPerDay.
     try {
+      const introduced = reviewCount === 0 ? 1 : 0
       await prisma.$executeRaw`
-        INSERT INTO "FlashcardDailyActivity" ("id", "userId", "day", "reviews")
-        VALUES (${randomUUID()}, ${session.user.id}, CURRENT_DATE, 1)
-        ON CONFLICT ("userId", "day") DO UPDATE SET "reviews" = "FlashcardDailyActivity"."reviews" + 1`
+        INSERT INTO "FlashcardDailyActivity" ("id", "userId", "day", "reviews", "newCards")
+        VALUES (${randomUUID()}, ${session.user.id}, CURRENT_DATE, 1, ${introduced})
+        ON CONFLICT ("userId", "day") DO UPDATE SET
+          "reviews" = "FlashcardDailyActivity"."reviews" + 1,
+          "newCards" = "FlashcardDailyActivity"."newCards" + ${introduced}`
     } catch (rollupError) {
       console.error('flashcard daily rollup failed (non-fatal):', rollupError)
     }
@@ -190,6 +198,107 @@ export async function GET(req: NextRequest) {
     }
     const topicFilter: Prisma.FlashcardProgressWhereInput =
       topicId || courseSlug ? { flashcard: flashcardFilter } : {}
+
+    const cardInclude = {
+      flashcard: {
+        include: {
+          topic: {
+            select: {
+              title: true,
+              slug: true,
+            },
+          },
+        },
+      },
+    } satisfies Prisma.FlashcardProgressInclude
+    const BATCH_SIZE = 50 // Batch size per fetch, not a session ceiling
+
+    // UNFILTERED (the main review session + dashboard stats): Anki-style
+    // daily limits apply. The queue is composed as
+    //   1. due REVIEW cards (reviewCount > 0, due-soonest first), capped at
+    //      the remaining max-reviews-per-day allowance — overflow is
+    //      reported as reviewsBeyondLimit ("M more waiting beyond today's
+    //      limit"), and
+    //   2. NEW cards (reviewCount === 0, scheduled-soonest first), capped at
+    //      the remaining new-cards-per-day allowance. Future nextReview dates
+    //      do NOT hide new cards: drip-staggered unlock backlogs are pulled
+    //      forward into today's allowance.
+    // Allowances shrink as reviews are logged (FlashcardDailyActivity), so
+    // batch refetches naturally stop at the daily limits.
+    if (!topicId && !courseSlug) {
+      const dailyState = await getDailyQueueState(session.user.id, context, now)
+
+      const [reviewRows, totalCards, dueLaterToday, nextUpcoming] = await Promise.all([
+        dailyState.reviewsToday > 0
+          ? prisma.flashcardProgress.findMany({
+              where: { userId: session.user.id, context, reviewCount: { gt: 0 }, nextReview: { lte: now } },
+              include: cardInclude,
+              orderBy: { nextReview: 'asc' },
+              take: Math.min(BATCH_SIZE, dailyState.reviewsToday),
+            })
+          : Promise.resolve([]),
+        prisma.flashcardProgress.count({
+          where: {
+            userId: session.user.id,
+            context,
+          },
+        }),
+        // Cards that come back LATER TODAY (learning-step returns). Only
+        // reviewCount > 0 rows count: never-reviewed cards are handled by the
+        // new-card allowance above, not by their scheduled drip date.
+        prisma.flashcardProgress.count({
+          where: {
+            userId: session.user.id,
+            context,
+            reviewCount: { gt: 0 },
+            nextReview: { gt: now, lte: endOfStudentDay },
+          },
+        }),
+        // The very next REVIEW card to come due, for "next card in 5 minutes"
+        // copy (drip-scheduled new cards excluded for the same reason).
+        prisma.flashcardProgress.findFirst({
+          where: {
+            userId: session.user.id,
+            context,
+            reviewCount: { gt: 0 },
+            nextReview: { gt: now },
+          },
+          orderBy: { nextReview: 'asc' },
+          select: { nextReview: true },
+        }),
+      ])
+
+      // Fill the rest of the batch with new cards (pull-forward included).
+      const newTake = Math.min(BATCH_SIZE - reviewRows.length, dailyState.newToday)
+      const newRows = newTake > 0
+        ? await prisma.flashcardProgress.findMany({
+            where: { userId: session.user.id, context, reviewCount: 0 },
+            include: cardInclude,
+            orderBy: { nextReview: 'asc' },
+            take: newTake,
+          })
+        : []
+
+      return NextResponse.json({
+        cards: [...reviewRows, ...newRows],
+        stats: {
+          total: totalCards,
+          // "Due" is today's remaining workload under the daily limits.
+          due: dailyState.dueToday,
+          new: dailyState.newToday,
+          review: dailyState.reviewsToday,
+          reviewsBeyondLimit: dailyState.reviewsBeyondLimit,
+          newBeyondLimit: dailyState.newBeyondLimit,
+          limits: dailyState.limits,
+          dueLaterToday,
+          nextDueAt: nextUpcoming?.nextReview ?? null,
+        },
+      })
+    }
+
+    // FILTERED (topic/course banners and topic drills): legacy semantics —
+    // cards literally due now, no daily-limit composition (limits bound the
+    // student's whole day, not one course's slice of it).
     const where: Prisma.FlashcardProgressWhereInput = {
       userId: session.user.id,
       context,
@@ -206,22 +315,11 @@ export async function GET(req: NextRequest) {
     const [dueCards, totalCards, dueCount, newCards, dueLaterToday, nextUpcoming] = await Promise.all([
       prisma.flashcardProgress.findMany({
         where,
-        include: {
-          flashcard: {
-            include: {
-              topic: {
-                select: {
-                  title: true,
-                  slug: true
-                }
-              }
-            }
-          }
-        },
+        include: cardInclude,
         orderBy: {
           nextReview: 'asc' // Oldest due cards first
         },
-        take: 50 // Batch size per fetch, not a session ceiling
+        take: BATCH_SIZE,
       }),
       prisma.flashcardProgress.count({
         where: {
