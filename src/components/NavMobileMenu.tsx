@@ -32,7 +32,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
   const linkClass = (href: string) =>
     `block px-3 py-2 text-base rounded-md hover:bg-accent-subtle dark:hover:bg-accent-light/30 ${
-      isActive(href) ? 'font-semibold text-accent dark:text-accent-muted' : 'font-medium'
+      isActive(href) ? 'font-semibold text-accent dark:text-accent-muted' : 'font-medium text-gray-700 dark:text-gray-200'
     }`
 
   // Lock body scroll while the menu panel is open (this component only mounts when open)

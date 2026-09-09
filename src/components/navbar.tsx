@@ -203,7 +203,7 @@ export function Navbar() {
   const topLinkClass = (href: string) =>
     isActive(href)
       ? 'text-accent font-semibold underline underline-offset-8 decoration-2'
-      : 'transition-colors hover:text-accent'
+      : 'text-gray-700 dark:text-gray-300 transition-colors hover:text-accent'
 
   return (
     <header role="banner" className="sticky top-0 z-50">
@@ -217,8 +217,10 @@ export function Navbar() {
                 <rect width="32" height="32" rx="7" fill="url(#brandGradNav)"/>
                 <defs>
                   <linearGradient id="brandGradNav" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stopColor="var(--accent)"/>
-                    <stop offset="100%" stopColor="var(--accent-secondary)"/>
+                    {/* CSS vars are invalid in SVG presentation ATTRIBUTES (browsers
+                        fall back to black stops) — they only work as CSS properties. */}
+                    <stop offset="0%" style={{ stopColor: 'var(--accent)' }}/>
+                    <stop offset="100%" style={{ stopColor: 'var(--accent-secondary)' }}/>
                   </linearGradient>
                 </defs>
                 <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="var(--accent)" strokeWidth="1.2"/>
@@ -254,7 +256,7 @@ export function Navbar() {
             <div ref={coursesRef} className="relative" onKeyDown={coursesKeyNav}>
               <button
                 onClick={() => { setCoursesOpen(!coursesOpen); setMoreOpen(false); setUserMenuOpen(false) }}
-                className="transition-colors hover:text-accent flex items-center gap-1"
+                className="text-gray-700 dark:text-gray-300 transition-colors hover:text-accent flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={coursesOpen}
               >
@@ -348,7 +350,7 @@ export function Navbar() {
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
               <button
                 onClick={() => { setMoreOpen(!moreOpen); setCoursesOpen(false); setExpandedSection(null); setUserMenuOpen(false) }}
-                className="transition-colors hover:text-accent flex items-center gap-1"
+                className="text-gray-700 dark:text-gray-300 transition-colors hover:text-accent flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={moreOpen}
               >
@@ -376,7 +378,7 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/search" className={isActive('/search') ? 'text-accent' : 'transition-colors hover:text-accent'} title="Search" aria-label="Search">
+            <Link href="/search" className={isActive('/search') ? 'text-accent' : 'text-gray-700 dark:text-gray-300 transition-colors hover:text-accent'} title="Search" aria-label="Search">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>

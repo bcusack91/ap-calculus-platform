@@ -140,8 +140,10 @@ export default async function Home() {
                 <rect width="64" height="64" rx="14" fill="url(#brandGradHero)"/>
                 <defs>
                   <linearGradient id="brandGradHero" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stopColor="var(--accent)"/>
-                    <stop offset="100%" stopColor="var(--accent-secondary)"/>
+                    {/* stop-color must be a CSS property for var() to resolve —
+                        as an SVG attribute it is invalid and renders black. */}
+                    <stop offset="0%" style={{ stopColor: 'var(--accent)' }}/>
+                    <stop offset="100%" style={{ stopColor: 'var(--accent-secondary)' }}/>
                   </linearGradient>
                 </defs>
                 <rect x="14" y="20" width="36" height="24" rx="5" fill="#fff" stroke="var(--accent)" strokeWidth="2"/>

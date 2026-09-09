@@ -1920,7 +1920,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
-              className="w-32 h-16 text-center text-2xl font-bold border-2 border-accent rounded-lg focus:ring-2 focus:ring-accent focus:outline-none"
+              className="w-32 h-16 text-center text-2xl font-bold border-2 border-accent rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-accent focus:outline-none"
               placeholder="?"
               disabled={feedbackType === 'correct'}
             />
@@ -2276,7 +2276,10 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     } else if (checked[key] === false) {
       return `${baseClasses} border-red-500 bg-red-50 dark:bg-red-900 text-gray-900 dark:text-white`
     }
-    return `${baseClasses} border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white`
+    // Explicit light text color: these widgets can sit inside gradient callouts
+    // whose inherited color is white — without text-gray-900 the typed answer is
+    // white-on-white in light mode.
+    return `${baseClasses} border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white`
   }
 
   // Format display value to show √ instead of sqrt.
@@ -2660,7 +2663,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
           onChange={(e) => handleInputChange(key, e.target.value)}
           onBlur={() => handleBlur(key)}
           placeholder={placeholder}
-          className="dark:bg-gray-800 dark:text-white"
+          className="bg-white text-gray-900 dark:bg-gray-800 dark:text-white"
           style={{
             width: '100%',
             height: '100%',
@@ -2679,7 +2682,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
         />
         {answers[key] && (
           <div
-            className="dark:bg-gray-800 dark:text-white"
+            className="bg-white text-gray-900 dark:bg-gray-800 dark:text-white"
             style={{
               position: 'absolute',
               top: 0,
@@ -2694,7 +2697,8 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'white',
+              // background comes from the bg-white/dark:bg-gray-800 classes —
+              // an inline backgroundColor here would override the dark variant.
               color: 'black',
               pointerEvents: 'none',
             }}
@@ -4032,7 +4036,7 @@ function FactoringPractice({
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
-              className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-accent rounded-lg focus:ring-2 focus:ring-accent focus:outline-none px-4"
+              className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-accent rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-accent focus:outline-none px-4"
               placeholder={section.problemType === 'gcf-identify' ? 'Enter GCF (e.g., 3x^2)' : 'Enter factored form'}
               disabled={feedbackType === 'correct'}
             />
