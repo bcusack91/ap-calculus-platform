@@ -56,7 +56,21 @@ export async function maybeUnlockFlashcards(
   // requiring an ExitQuizAttempt a student can never produce would lock their
   // cards forever (26 MCAT topics dead-ended this way before their quizzes
   // were mapped); for quiz-less topics the lesson (a) alone unlocks.
-  if (hasExitQuiz(topicSlug)) {
+  // Fetched up front: needed for both the entrance-mastery waiver in (b) and
+  // the lesson check in (a).
+  const progress = await prisma.topicProgress.findUnique({
+    where: { userId_topicId: { userId, topicId: topic.id } },
+    select: { status: true, masteryLevel: true },
+  })
+
+  // Entrance-mastery waiver (owner decision 2026-09-09): a student who aced the
+  // entrance quiz (masteryLevel >= 0.9 => MASTERED) has demonstrated the topic
+  // and is routed past the lesson/exit-quiz pair entirely — on a
+  // diagnostic-recommended topic that satisfied the section with no
+  // ExitQuizAttempt ever existing, which permanently locked their cards.
+  const entranceMastered = (progress?.masteryLevel ?? 0) >= 0.9
+
+  if (hasExitQuiz(topicSlug) && !entranceMastered) {
     const quizAttempt = await prisma.exitQuizAttempt.findFirst({
       where: { userId, topicSlug },
       select: { id: true },
@@ -65,10 +79,7 @@ export async function maybeUnlockFlashcards(
   }
 
   // (a) lesson done — self-paced completion, or in-class deck attendance.
-  const progress = await prisma.topicProgress.findUnique({
-    where: { userId_topicId: { userId, topicId: topic.id } },
-    select: { status: true },
-  })
+  // (Entrance mastery sets status MASTERED, so it passes here by construction.)
   let lessonDone = progress?.status === 'COMPLETED' || progress?.status === 'MASTERED'
   if (!lessonDone) {
     const presented = await prisma.slideDeck.findFirst({

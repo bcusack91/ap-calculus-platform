@@ -150,7 +150,12 @@ export async function POST(request: Request) {
     // student took the exit quiz on an earlier failed run, or in class), so
     // check on part completions that finish the topic. Best-effort.
     let unlock: Awaited<ReturnType<typeof maybeUnlockFlashcards>> | null = null
-    if (isPartCompletion && (progress.status === 'COMPLETED' || progress.status === 'MASTERED')) {
+    // Also trigger on entrance-mastery saves (masteryLevel >= 0.9 without a
+    // part completion): an aced entrance quiz now unlocks cards directly (the
+    // exit-quiz requirement is waived in flashcard-unlock.ts for mastered
+    // topics), so the unlock must run on that save too.
+    const masterySave = (masteryLevel ?? 0) >= 0.9
+    if ((isPartCompletion || masterySave) && (progress.status === 'COMPLETED' || progress.status === 'MASTERED')) {
       try {
         unlock = await maybeUnlockFlashcards(userId, topic.slug)
       } catch (unlockError) {
