@@ -200,6 +200,20 @@ export async function PUT(req: NextRequest) {
   })
   if (!member) return NextResponse.json({ error: 'Student not in classroom' }, { status: 404 })
 
+  // Group-targeted assignments only accept grades for covered students — the
+  // gradebook UI already skips "not assigned" cells; this closes the API path.
+  if (assignment.groupId) {
+    const covered = await prisma.classroomGroupMember.findFirst({
+      where: { groupId: assignment.groupId, memberId: member.id },
+    })
+    if (!covered) {
+      return NextResponse.json(
+        { error: 'Student is not in the group this assignment targets' },
+        { status: 403 },
+      )
+    }
+  }
+
   if (score === null) {
     // Clear an existing grade only — nothing to create.
     await prisma.assignmentSubmission.updateMany({
