@@ -166,9 +166,8 @@ export default async function CoursePage({ params }: CoursePageProps) {
 
   const colors = colorMap[course.color || 'purple'] || colorMap.purple
 
-  // Empty-course fallback. Also rendered below the entrance quiz in
-  // ?exitQuiz=true mode (via CourseExitQuizGate) exactly as the old
-  // server-side conditional did.
+  // Empty-course fallback: shown (via normalContent) only when the course has
+  // no categories at all. Exit-quiz mode renders the quiz alone.
   const comingSoonBlock = (
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
       <div className="text-6xl mb-4">🚧</div>
@@ -517,7 +516,6 @@ export default async function CoursePage({ params }: CoursePageProps) {
               subtopicCount: t._count.subtopics,
             })),
           }))}
-          emptyStateContent={comingSoonBlock}
           normalContent={allCategories.length > 0 ? (
           <div className="space-y-12">
             {/* AB Foundation Section (only shown on BC page) */}

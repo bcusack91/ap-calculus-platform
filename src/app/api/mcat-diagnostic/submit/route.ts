@@ -49,10 +49,31 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid results format' }, { status: 400 })
     }
 
+    // Link to an assigned class diagnostic when one is claimed — but only
+    // after verifying the assignment exists and this student belongs to its
+    // classroom (a spoofed id must not attach to another class's results).
+    // Mirrors the SAT submit route; without this the teacher class-diagnostics
+    // panel never sees MCAT attempts.
+    let assignedId: string | null = null
+    if (typeof classDiagnosticId === 'string' && classDiagnosticId) {
+      const assigned = await prisma.classDiagnostic.findUnique({
+        where: { id: classDiagnosticId },
+        select: { classroomId: true },
+      })
+      if (assigned) {
+        const member = await prisma.classroomMember.findUnique({
+          where: { classroomId_userId: { classroomId: assigned.classroomId, userId: session.user.id } },
+          select: { isActive: true },
+        })
+        if (member?.isActive) assignedId = classDiagnosticId
+      }
+    }
+
     const diagnostic = await prisma.diagnosticTest.create({
       data: {
         userId: session.user.id,
         category,
+        classDiagnosticId: assignedId,
         results: parsedResults,
         weakAreas: parseMaybeJsonArray(weakAreas),
         strengths: (() => {

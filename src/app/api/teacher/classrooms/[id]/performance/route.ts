@@ -111,6 +111,18 @@ export async function GET(
     orderBy: { completedAt: 'desc' },
   })
 
+  // Resolve real Topic titles for the exit-quiz slugs (one query on the
+  // distinct slugs) so the client never has to humanize raw slugs like
+  // "mcat-physics-mechanics-kinematics-mcat".
+  const exitQuizSlugs = Array.from(new Set(exitQuizAttempts.map((a) => a.topicSlug)))
+  const exitQuizTopics = exitQuizSlugs.length > 0
+    ? await prisma.topic.findMany({
+        where: { slug: { in: exitQuizSlugs } },
+        select: { slug: true, title: true },
+      })
+    : []
+  const exitQuizTitleBySlug = new Map(exitQuizTopics.map((t) => [t.slug, t.title]))
+
   // Aggregate per-student
   const studentPerformance = members.map((member) => {
     const userId = member.user.id
@@ -179,6 +191,7 @@ export async function GET(
         }
         return Object.entries(byTopic).map(([topicSlug, attempts]) => ({
           topicSlug,
+          topicTitle: exitQuizTitleBySlug.get(topicSlug) ?? null,
           totalAttempts: attempts.length,
           passed: attempts.some((a) => a.passed),
           bestScore: Math.max(...attempts.map((a) => a.score)),

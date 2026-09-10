@@ -17,12 +17,6 @@ interface CourseExitQuizGateProps {
    * the full page in the prerendered HTML.
    */
   normalContent: ReactNode
-  /**
-   * The "Content Coming Soon" block. In exitQuiz mode the old server render's
-   * ternary fell through to this block below the quiz, so it is preserved
-   * verbatim to keep the rendered output identical to the pre-static page.
-   */
-  emptyStateContent: ReactNode
 }
 
 /**
@@ -36,7 +30,7 @@ interface CourseExitQuizGateProps {
  * On a hard load of `?exitQuiz=true` the static HTML briefly shows the normal
  * categories view (the Suspense fallback) before hydration swaps in the quiz.
  */
-function GateInner({ courseSlug, courseName, categories, normalContent, emptyStateContent }: CourseExitQuizGateProps) {
+function GateInner({ courseSlug, courseName, categories, normalContent }: CourseExitQuizGateProps) {
   const searchParams = useSearchParams()
   const isExitQuizMode = searchParams.get('exitQuiz') === 'true'
 
@@ -44,16 +38,15 @@ function GateInner({ courseSlug, courseName, categories, normalContent, emptySta
     return <>{normalContent}</>
   }
 
+  // Exit Quiz Mode — the quiz alone. (The "Content Coming Soon" block lives in
+  // normalContent's no-categories branch; the old server ternary used to leak
+  // it below the quiz here.)
   return (
-    <>
-      {/* Exit Quiz Mode — show entrance quiz + filtered topics */}
-      <CourseEntranceQuiz
-        courseSlug={courseSlug}
-        courseName={courseName}
-        categories={categories}
-      />
-      {emptyStateContent}
-    </>
+    <CourseEntranceQuiz
+      courseSlug={courseSlug}
+      courseName={courseName}
+      categories={categories}
+    />
   )
 }
 

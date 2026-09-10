@@ -24,6 +24,23 @@ const GENERATABLE: Record<string, { label: string; page: string }> = {
   sat: { label: 'SAT', page: '/sat-diagnostic' },
 }
 
+/** MCAT results JSON carries the four 118-132 section scores as flat fields. */
+const MCAT_SECTIONS: { short: string; field: string }[] = [
+  { short: 'C/P', field: 'chemPhysScore' },
+  { short: 'CARS', field: 'carsScore' },
+  { short: 'B/B', field: 'bioBiochemScore' },
+  { short: 'P/S', field: 'psychSocScore' },
+]
+
+function mcatSections(results: unknown): { short: string; scaled: number }[] | null {
+  if (!results || typeof results !== 'object') return null
+  const r = results as Record<string, unknown>
+  const sections = MCAT_SECTIONS.flatMap(({ short, field }) =>
+    typeof r[field] === 'number' ? [{ short, scaled: r[field] as number }] : []
+  )
+  return sections.length === MCAT_SECTIONS.length ? sections : null
+}
+
 export async function GET(_req: NextRequest, { params }: Ctx) {
   const { id } = await params
   const access = await requireClassroomAccess(id)
@@ -45,17 +62,58 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   ])
   const nameOf = new Map(members.map(m => [m.userId, m.nickname || m.user.name || 'Student']))
 
+  // Retake-gate waiver state (MCAT only): a waiver is "active" (unused) while
+  // User.diagnosticGateWaivedAt is NEWER than the student's latest
+  // mcat-full-diagnostic attempt — the same comparison plan-status makes.
+  const memberIds = members.map(m => m.userId)
+  const hasMcat = diagnostics.some(d => d.courseKey === 'mcat')
+  const waivedAtByUser = new Map<string, Date>()
+  const latestMcatByUser = new Map<string, Date>()
+  if (hasMcat && memberIds.length > 0) {
+    const [waivers, latestMcat] = await Promise.all([
+      prisma.user.findMany({
+        where: { id: { in: memberIds }, diagnosticGateWaivedAt: { not: null } },
+        select: { id: true, diagnosticGateWaivedAt: true },
+      }),
+      prisma.diagnosticTest.groupBy({
+        by: ['userId'],
+        where: { userId: { in: memberIds }, category: 'mcat-full-diagnostic' },
+        _max: { createdAt: true },
+      }),
+    ])
+    for (const w of waivers) if (w.diagnosticGateWaivedAt) waivedAtByUser.set(w.id, w.diagnosticGateWaivedAt)
+    for (const l of latestMcat) if (l._max.createdAt) latestMcatByUser.set(l.userId, l._max.createdAt)
+  }
+
   return NextResponse.json({
     diagnostics: diagnostics.map(d => {
       // First attempt per student counts (retaking an assigned test is rare
-      // but possible — the assigned score is the first sitting).
+      // but possible — the assigned score is the first sitting). All attempts
+      // are kept per student, oldest-first, so retake deltas can be computed.
       const firstByUser = new Map<string, { createdAt: Date; results: unknown }>()
+      const attemptsByUser = new Map<string, { createdAt: Date; results: unknown }[]>()
       for (const a of [...d.attempts].sort((x, y) => x.createdAt.getTime() - y.createdAt.getTime())) {
         if (!firstByUser.has(a.userId)) firstByUser.set(a.userId, a)
+        const list = attemptsByUser.get(a.userId) ?? []
+        list.push(a)
+        attemptsByUser.set(a.userId, list)
+      }
+      const estimatedScoreOf = (results: unknown): number | null => {
+        const v = (results as { estimatedScore?: unknown } | null | undefined)?.estimatedScore
+        return typeof v === 'number' ? v : null
       }
       const students = members.map(m => {
         const attempt = firstByUser.get(m.userId)
         const results = attempt?.results as { percentage?: unknown; estimatedScore?: unknown; mathScore?: unknown; rwScore?: unknown } | undefined
+        // Retake delta: latest attempt vs the one before it (both need a
+        // real-scale estimatedScore for the difference to mean anything).
+        const all = attemptsByUser.get(m.userId) ?? []
+        const latestScore = all.length > 0 ? estimatedScoreOf(all[all.length - 1].results) : null
+        const previousScore = all.length >= 2 ? estimatedScoreOf(all[all.length - 2].results) : null
+        const scoreDelta = latestScore !== null && previousScore !== null ? latestScore - previousScore : null
+        // MCAT waiver: set, and not yet consumed by a newer attempt.
+        const waivedAt = d.courseKey === 'mcat' ? waivedAtByUser.get(m.userId) : undefined
+        const latestMcatAt = latestMcatByUser.get(m.userId)
         return {
           userId: m.userId,
           name: nameOf.get(m.userId) ?? 'Student',
@@ -65,6 +123,12 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           estimatedScore: typeof results?.estimatedScore === 'number' ? results.estimatedScore : null,
           mathScore: typeof results?.mathScore === 'number' ? results.mathScore : null,
           rwScore: typeof results?.rwScore === 'number' ? results.rwScore : null,
+          // MCAT: the four 118-132 section scaled scores of the first sitting.
+          sections: d.courseKey === 'mcat' ? mcatSections(attempt?.results) : null,
+          attemptCount: all.length,
+          latestEstimatedScore: latestScore,
+          scoreDelta,
+          retakeWaiverActive: !!waivedAt && (!latestMcatAt || waivedAt.getTime() > latestMcatAt.getTime()),
         }
       }).sort((a, b) => a.name.localeCompare(b.name))
 
@@ -92,10 +156,19 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         const nums = vals.filter((v): v is number => typeof v === 'number')
         return nums.length > 0 ? Math.round(nums.reduce((a, b) => a + b, 0) / nums.length) : null
       }
+      // MCAT: per-section (118-132) class averages, in C/P·CARS·B/B·P/S order,
+      // over attempts that carry all four section scores.
+      const sectionAverages = d.courseKey === 'mcat'
+        ? MCAT_SECTIONS.map(({ short }, i) => ({
+            short,
+            avg: avgOf(taken.map(x => x.sections?.[i]?.scaled ?? null)),
+          })).filter((s): s is { short: string; avg: number } => s.avg !== null)
+        : []
       const scoreAverages = {
         overall: avgOf(taken.map(x => x.estimatedScore)),
         math: avgOf(taken.map(x => x.mathScore)),
         rw: avgOf(taken.map(x => x.rwScore)),
+        sections: sectionAverages.length === MCAT_SECTIONS.length ? sectionAverages : null,
       }
 
       return {

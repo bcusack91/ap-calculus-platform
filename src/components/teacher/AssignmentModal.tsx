@@ -54,6 +54,20 @@ interface FlashcardSetOption {
   _count: { cards: number }
 }
 
+/** A platform topic deck (seeded Flashcards on a Topic) from /api/teacher/flashcard-decks. */
+interface PlatformDeck {
+  topicSlug: string
+  topicTitle: string
+  category: string
+  cardCount: number
+}
+
+interface DeckCourseGroup {
+  courseSlug: string
+  courseTitle: string
+  decks: PlatformDeck[]
+}
+
 interface AssignmentCreateBody {
   title: string
   type: string
@@ -99,6 +113,10 @@ const emptyForm = {
   courseSlug: '',
   unitId: '',
   flashcardSetId: '',
+  // FLASHCARD_REVIEW alternative target: a platform topic deck. Mutually
+  // exclusive with flashcardSetId; materialized into a teacher-owned set at
+  // submit time (never on selection, so an abandoned modal creates nothing).
+  platformTopicSlug: '',
   groupId: '', // '' = whole class
   dueDate: '',
   maxAttempts: '',
@@ -135,6 +153,11 @@ export default function AssignmentModal({
   const [unitsError, setUnitsError] = useState('')
   const [flashcardSets, setFlashcardSets] = useState<FlashcardSetOption[] | null>(null)
   const [setsError, setSetsError] = useState('')
+  // Platform topic decks (grouped by course) for the two-source set picker.
+  const [platformDecks, setPlatformDecks] = useState<DeckCourseGroup[] | null>(null)
+  const [decksError, setDecksError] = useState('')
+  // Course the teacher is browsing in the platform-deck picker.
+  const [deckCourse, setDeckCourse] = useState('')
   // Classroom groups for the optional "Assign to" select. null = still
   // loading; [] = feature unavailable or no groups — the control stays hidden
   // and groupId is never sent (so an edit can't accidentally retarget).
@@ -163,6 +186,8 @@ export default function AssignmentModal({
     setSubmitError('')
     setUnitsError('')
     setSetsError('')
+    setDecksError('')
+    setDeckCourse('')
     setAssignCourse('')
     setUnitOptions([])
     if (editing) {
@@ -179,6 +204,9 @@ export default function AssignmentModal({
         courseSlug: editing.courseSlug || '',
         unitId: editing.unitId || '',
         flashcardSetId: editing.flashcardSetId || '',
+        // An edited assignment always references a real set (a platform deck
+        // picked earlier was materialized at create time), so this starts empty.
+        platformTopicSlug: '',
         groupId: editing.groupId || '',
         dueDate: toLocalDatetimeInput(editing.dueDate),
         maxAttempts:
@@ -244,6 +272,29 @@ export default function AssignmentModal({
     }
   }, [open, form.type, flashcardSets])
 
+  // Lazily fetch the platform topic decks the first time they're needed.
+  // Scoped to the classroom so the list leads with (or is limited to) the
+  // classroom's attached courses.
+  useEffect(() => {
+    if (!open || form.type !== 'FLASHCARD_REVIEW' || platformDecks !== null) return
+    let cancelled = false
+    ;(async () => {
+      try {
+        const r = await fetch(`/api/teacher/flashcard-decks?classroomId=${encodeURIComponent(classroomId)}`)
+        if (!r.ok) throw new Error()
+        const j = await r.json()
+        if (!cancelled) setPlatformDecks(Array.isArray(j.courses) ? j.courses : [])
+      } catch {
+        // Platform decks are an ADDITIONAL source — the teacher's own sets
+        // still work, so degrade with a note rather than blocking the form.
+        if (!cancelled) setDecksError('Could not load the platform decks. Close and reopen to retry.')
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [open, form.type, platformDecks, classroomId])
+
   // Changing the type resets every branch-specific field so a leftover topic
   // or course from the previous type can't ride along invisibly.
   const changeType = (type: string) => {
@@ -255,7 +306,9 @@ export default function AssignmentModal({
       courseSlug: '',
       unitId: '',
       flashcardSetId: '',
+      platformTopicSlug: '',
     }))
+    setDeckCourse('')
     setAssignCourse('')
     setUnitOptions([])
     setUnitsError('')
@@ -308,8 +361,8 @@ export default function AssignmentModal({
     ? `Remove the marked topic${invalidChips.length !== 1 ? 's' : ''} — ${
         invalidChips.length !== 1 ? "they aren't" : "it isn't"
       } available for this assignment type.`
-    : needsSet && !form.flashcardSetId
-    ? 'Choose a flashcard set to continue.'
+    : needsSet && !form.flashcardSetId && !form.platformTopicSlug
+    ? 'Choose a flashcard set or platform deck to continue.'
     : null
 
   const submit = async () => {
@@ -317,6 +370,25 @@ export default function AssignmentModal({
     setSubmitting(true)
     setSubmitError('')
     try {
+      // Platform deck chosen: materialize it into a teacher-owned set NOW (not
+      // on selection — an abandoned modal must not leave orphan sets). The
+      // endpoint is idempotent per (teacher, topic), so retries after a failed
+      // assignment save reuse the same set instead of stacking duplicates.
+      let materializedSetId = ''
+      if (form.type === 'FLASHCARD_REVIEW' && !form.flashcardSetId && form.platformTopicSlug) {
+        const r = await fetch('/api/teacher/flashcard-sets/from-topic', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlug: form.platformTopicSlug }),
+        })
+        const j = await r.json().catch(() => ({}))
+        if (!r.ok || !j?.set?.id) {
+          setSubmitError(j?.error || 'Could not prepare the platform deck. Please try again.')
+          setSubmitting(false)
+          return
+        }
+        materializedSetId = j.set.id as string
+      }
       const body: AssignmentCreateBody = {
         title: form.title,
         type: form.type,
@@ -334,7 +406,7 @@ export default function AssignmentModal({
         body.courseSlug = form.courseSlug || undefined
         if (form.type === 'UNIT_TEST' && form.unitId) body.unitId = form.unitId
       } else if (needsSet) {
-        body.flashcardSetId = form.flashcardSetId
+        body.flashcardSetId = form.flashcardSetId || materializedSetId
       } else if (form.topicSlugs.length > 0) {
         body.topicSlugs = form.topicSlugs
         body.topicSlug = form.topicSlugs[0]
@@ -371,6 +443,9 @@ export default function AssignmentModal({
   const chosenCourse = courses.find((c) => c.courseSlug === form.courseSlug)
   const chosenUnit = unitOptions.find((u) => u.id === form.unitId)
   const chosenSet = (flashcardSets ?? []).find((s) => s.id === form.flashcardSetId)
+  const chosenDeck = form.platformTopicSlug
+    ? (platformDecks ?? []).flatMap((c) => c.decks).find((d) => d.topicSlug === form.platformTopicSlug)
+    : undefined
 
   // What students will get — visible before the teacher commits.
   const preview: string[] = []
@@ -390,6 +465,13 @@ export default function AssignmentModal({
   }
   if (needsSet && chosenSet) {
     preview.push(`"${chosenSet.title}" (${chosenSet._count.cards} card${chosenSet._count.cards !== 1 ? 's' : ''})`)
+  }
+  if (needsSet && !chosenSet && chosenDeck) {
+    preview.push(
+      `"${chosenDeck.topicTitle}" platform deck (${chosenDeck.cardCount} card${
+        chosenDeck.cardCount !== 1 ? 's' : ''
+      }) — a copy is saved to your flashcard sets`
+    )
   }
   if (chosenGroup) {
     preview.push(
@@ -535,34 +617,126 @@ export default function AssignmentModal({
           )}
 
           {needsSet && (
-            <div>
-              <label htmlFor="assignment-flashcard-set" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                Flashcard set *
-              </label>
-              {setsError ? (
-                <p className="text-sm text-red-600 dark:text-red-400" role="alert">{setsError}</p>
-              ) : flashcardSets === null ? (
-                <p className="text-sm text-gray-400">Loading your flashcard sets…</p>
-              ) : flashcardSets.length === 0 ? (
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  You don&rsquo;t have any flashcard sets yet. Create one from your teacher dashboard&rsquo;s
-                  Flashcards section, then come back to assign it.
+            <div className="space-y-4">
+              {/* Two-source picker: the teacher's own sets, or a platform topic
+                  deck (seeded course flashcards). The two are mutually
+                  exclusive — choosing from one clears the other. A platform
+                  deck is materialized into a teacher-owned set on submit. */}
+              <div>
+                <label htmlFor="assignment-flashcard-set" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                  Your flashcard sets
+                </label>
+                {setsError ? (
+                  <p className="text-sm text-red-600 dark:text-red-400" role="alert">{setsError}</p>
+                ) : flashcardSets === null ? (
+                  <p className="text-sm text-gray-400">Loading your flashcard sets…</p>
+                ) : flashcardSets.length === 0 ? (
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    You don&rsquo;t have any flashcard sets yet — pick a ready-made platform deck below,
+                    or create your own from the teacher dashboard&rsquo;s Flashcards section.
+                  </p>
+                ) : (
+                  <select
+                    id="assignment-flashcard-set"
+                    value={form.flashcardSetId}
+                    onChange={(e) => setForm({ ...form, flashcardSetId: e.target.value, platformTopicSlug: '' })}
+                    className={inputCls}
+                  >
+                    <option value="">Select a set…</option>
+                    {flashcardSets.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.title} ({s._count.cards} cards)
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+              <div>
+                <label htmlFor="assignment-deck-course" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                  …or a ready-made platform deck
+                </label>
+                {decksError ? (
+                  <p className="text-sm text-red-600 dark:text-red-400" role="alert">{decksError}</p>
+                ) : platformDecks === null ? (
+                  <p className="text-sm text-gray-400">Loading platform decks…</p>
+                ) : platformDecks.length === 0 ? (
+                  <p className="text-sm text-gray-500 dark:text-gray-400">No platform decks are available.</p>
+                ) : (
+                  (() => {
+                    // Course-first, then that course's decks grouped by unit —
+                    // the same two-step pattern as the topic picker, so a long
+                    // catalog stays navigable.
+                    const activeDeckGroup = platformDecks.find((c) => c.courseSlug === deckCourse)
+                    const byCategory = new Map<string, PlatformDeck[]>()
+                    for (const d of activeDeckGroup?.decks ?? []) {
+                      const list = byCategory.get(d.category) ?? []
+                      list.push(d)
+                      byCategory.set(d.category, list)
+                    }
+                    const deckInActiveCourse = activeDeckGroup?.decks.some(
+                      (d) => d.topicSlug === form.platformTopicSlug
+                    )
+                    return (
+                      <div className="space-y-2">
+                        <select
+                          id="assignment-deck-course"
+                          value={deckCourse}
+                          onChange={(e) => setDeckCourse(e.target.value)}
+                          className={inputCls}
+                        >
+                          <option value="">Choose a course…</option>
+                          {platformDecks.map((c) => (
+                            <option key={c.courseSlug} value={c.courseSlug}>
+                              {c.courseTitle}
+                            </option>
+                          ))}
+                        </select>
+                        {activeDeckGroup && (
+                          <select
+                            aria-label={`Platform decks in ${activeDeckGroup.courseTitle}`}
+                            value={deckInActiveCourse ? form.platformTopicSlug : ''}
+                            onChange={(e) => {
+                              const slug = e.target.value
+                              if (slug) setForm({ ...form, platformTopicSlug: slug, flashcardSetId: '' })
+                            }}
+                            className={inputCls}
+                          >
+                            <option value="">Select a deck from {activeDeckGroup.courseTitle}…</option>
+                            {[...byCategory.entries()].map(([cat, ds]) => (
+                              <optgroup key={cat} label={cat}>
+                                {ds.map((d) => (
+                                  <option key={d.topicSlug} value={d.topicSlug}>
+                                    {d.topicTitle} ({d.cardCount} cards)
+                                  </option>
+                                ))}
+                              </optgroup>
+                            ))}
+                          </select>
+                        )}
+                      </div>
+                    )
+                  })()
+                )}
+                {chosenDeck && (
+                  <p className="mt-2 text-xs text-gray-600 dark:text-gray-300">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted">
+                      {chosenDeck.topicTitle} ({chosenDeck.cardCount} card{chosenDeck.cardCount !== 1 ? 's' : ''})
+                      <button
+                        type="button"
+                        onClick={() => setForm({ ...form, platformTopicSlug: '' })}
+                        className="font-bold leading-none text-accent hover:text-accent-dark dark:hover:text-accent-light"
+                        aria-label={`Remove ${chosenDeck.topicTitle}`}
+                      >
+                        ×
+                      </button>
+                    </span>
+                  </p>
+                )}
+                <p className="mt-1 text-xs text-gray-400">
+                  Platform decks are the site&rsquo;s built-in topic flashcards. Assigning one saves a copy
+                  to your flashcard sets so you can reuse or edit it later.
                 </p>
-              ) : (
-                <select
-                  id="assignment-flashcard-set"
-                  value={form.flashcardSetId}
-                  onChange={(e) => setForm({ ...form, flashcardSetId: e.target.value })}
-                  className={inputCls}
-                >
-                  <option value="">Select a set…</option>
-                  {flashcardSets.map((s) => (
-                    <option key={s.id} value={s.id}>
-                      {s.title} ({s._count.cards} cards)
-                    </option>
-                  ))}
-                </select>
-              )}
+              </div>
             </div>
           )}
 

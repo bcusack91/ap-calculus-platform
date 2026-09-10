@@ -11,6 +11,10 @@ interface Assignment {
   type: string
   topicSlug: string | null
   dueDate: string | null
+  /** Set when the assignment targets a classroom group rather than the whole class. */
+  group?: { id: string; name: string } | null
+  /** userIds the assignment covers; null/undefined = whole class. */
+  coveredUserIds?: string[] | null
 }
 
 interface Grade {
@@ -89,6 +93,19 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
     load()
   }, [load])
 
+  // Per assignment, the set of covered userIds (null = whole class). Cells for
+  // non-covered students render as "not assigned" and stay out of averages.
+  const coveredSets = useMemo(() => {
+    const m = new Map<string, Set<string> | null>()
+    for (const a of assignments) m.set(a.id, a.coveredUserIds ? new Set(a.coveredUserIds) : null)
+    return m
+  }, [assignments])
+
+  const isCovered = useCallback((assignmentId: string, studentId: string) => {
+    const covered = coveredSets.get(assignmentId)
+    return covered == null || covered.has(studentId)
+  }, [coveredSets])
+
   // Persist (or clear) a single grade. The local state is updated optimistically
   // (grades, student averages and the footer's assignment averages are all
   // recomputed in place) so a cell edit doesn't refetch the whole gradebook; on
@@ -131,7 +148,10 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
           ? { ...g, score, percentage: newPct, status: score === null ? g.status : 'COMPLETED' }
           : g
       )
-      const scored = grades.filter((g) => g.percentage !== null)
+      // Same denominator rule as the server: only assignments covering this
+      // student count toward their average and submitted totals.
+      const coveredGrades = grades.filter((g) => isCovered(g.assignmentId, s.id))
+      const scored = coveredGrades.filter((g) => g.percentage !== null)
       const average = scored.length > 0
         ? Math.round(scored.reduce((sum, g) => sum + (g.percentage ?? 0), 0) / scored.length)
         : null
@@ -139,13 +159,14 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
         ...s,
         grades,
         average,
-        submitted: grades.filter((g) => g.status !== 'NOT_SUBMITTED').length,
+        submitted: coveredGrades.filter((g) => g.status !== 'NOT_SUBMITTED').length,
       }
     })
     setStudents(nextStudents)
     setStats(stats.map((st) => {
       if (st.id !== assignmentId) return st
       const scores = nextStudents
+        .filter((s) => isCovered(assignmentId, s.id))
         .map((s) => s.grades.find((g) => g.assignmentId === assignmentId)?.percentage)
         .filter((p): p is number => p != null)
       return {
@@ -310,15 +331,18 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
               >
                 Student {sortBy === 'name' && (sortDir === 'asc' ? '↑' : '↓')}
               </th>
-              {assignments.map((a) => (
-                <th
-                  key={a.id}
-                  className="text-center p-3 font-medium text-gray-600 dark:text-gray-400 min-w-[100px]"
-                  title={a.title}
-                >
-                  <div className="truncate max-w-[140px] mx-auto" title={a.title}>{a.title}</div>
-                </th>
-              ))}
+              {assignments.map((a) => {
+                const headerTitle = a.group ? `${a.title} — Group: ${a.group.name}` : a.title
+                return (
+                  <th
+                    key={a.id}
+                    className="text-center p-3 font-medium text-gray-600 dark:text-gray-400 min-w-[100px]"
+                    title={headerTitle}
+                  >
+                    <div className="truncate max-w-[140px] mx-auto" title={headerTitle}>{a.title}</div>
+                  </th>
+                )
+              })}
               <th
                 className="text-center p-3 font-medium text-gray-600 dark:text-gray-400 cursor-pointer hover:text-gray-900 min-w-[80px]"
                 onClick={() => toggleSort('average')}
@@ -341,6 +365,29 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
                   const g = student.grades.find((gr) => gr.assignmentId === a.id)
                   const isEditing = editing?.studentId === student.id && editing?.assignmentId === a.id
                   const isSaving = savingCell === `${student.id}-${a.id}`
+                  // Group assignment that doesn't cover this student: render a
+                  // distinct "not assigned" cell (dimmed diagonal stripes), not
+                  // an em-dash that reads as missing work. Backgrounds are
+                  // stripped by the print stylesheet, so it prints blank.
+                  if (!isCovered(a.id, student.id)) {
+                    return (
+                      <td
+                        key={a.id}
+                        className="text-center p-3"
+                        title={`Not assigned (Group: ${a.group?.name ?? 'group'})`}
+                        aria-label={`${student.name || 'Student'} not assigned — ${a.title} targets group ${a.group?.name ?? ''}`}
+                      >
+                        <div
+                          className="mx-auto h-6 w-full max-w-[64px] rounded opacity-60"
+                          style={{
+                            backgroundImage:
+                              'repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(107,114,128,0.25) 4px, rgba(107,114,128,0.25) 8px)',
+                          }}
+                          aria-hidden
+                        />
+                      </td>
+                    )
+                  }
                   return (
                     <td key={a.id} className="text-center p-3 relative group/cell">
                       {isEditing ? (
@@ -364,7 +411,8 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
                               suppressNextBlur()
                               saveGrade(student.id, a.id, value)
                               const rowIdx = sorted.findIndex((s) => s.id === student.id)
-                              const nextStudent = sorted[rowIdx + 1]
+                              // Skip students this (group) assignment doesn't cover.
+                              const nextStudent = sorted.slice(rowIdx + 1).find((s) => isCovered(a.id, s.id))
                               if (nextStudent) setEditing({ studentId: nextStudent.id, assignmentId: a.id })
                             } else if (e.key === 'Tab') {
                               e.preventDefault()
@@ -372,7 +420,11 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
                               suppressNextBlur()
                               saveGrade(student.id, a.id, value)
                               const colIdx = assignments.findIndex((x) => x.id === a.id)
-                              const nextAssignment = assignments[colIdx + (e.shiftKey ? -1 : 1)]
+                              const dir = e.shiftKey ? -1 : 1
+                              // Skip columns whose (group) assignment doesn't cover this student.
+                              let nextIdx = colIdx + dir
+                              while (assignments[nextIdx] && !isCovered(assignments[nextIdx].id, student.id)) nextIdx += dir
+                              const nextAssignment = assignments[nextIdx]
                               if (nextAssignment) setEditing({ studentId: student.id, assignmentId: nextAssignment.id })
                             } else if (e.key === 'Escape') {
                               suppressNextBlur()

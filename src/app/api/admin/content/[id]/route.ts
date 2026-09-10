@@ -25,6 +25,8 @@ const TYPE_ROUTE_SUFFIX: Record<string, string> = {
 // /ap-bio-study-plans, /ap-bio-unit-tests). Map long slugs to route prefixes.
 const COURSE_SLUG_ROUTE_PREFIXES: Record<string, string[]> = {
   'act-prep': ['act'],
+  'algebra-1': ['algebra1'],
+  'algebra-2': ['algebra2'],
   'ap-african-american-studies': ['ap-aas'], // unit tests live at /ap-aas-unit-tests
   'ap-biology': ['ap-bio'],
   'ap-calculus-ab': ['ap-calcab'],
@@ -41,10 +43,19 @@ const COURSE_SLUG_ROUTE_PREFIXES: Record<string, string[]> = {
   'ap-microeconomics': ['ap-micro'],
   'ap-physics-1': ['ap-physics1'],
   'ap-physics-2': ['ap-physics2'],
+  'ap-physics-c-mechanics': ['ap-physics-c-mech'], // /ap-physics-c-mech-unit-tests, -frq
   'ap-precalculus': ['ap-precalc'],
   'ap-psychology': ['ap-psych'],
   'ap-statistics': ['ap-stats'],
   'ap-us-government': ['ap-us-gov'],
+  'grade-8-math': ['grade8-math'],
+  'mcat-prep': ['mcat'],
+  'organic-chemistry-1': ['ochem1'],
+  'organic-chemistry-2': ['ochem2'],
+  'pre-algebra': ['prealgebra'],
+  'precalculus': ['precalc'],
+  'psat': ['psat'], // identity — listed so the prefix reads as verified, not missing
+  'sat-prep': ['sat'],
 }
 
 /**

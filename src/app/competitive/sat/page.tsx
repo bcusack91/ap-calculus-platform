@@ -5,7 +5,7 @@ import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
-import { useQueueElapsed, formatElapsed, QUEUE_FALLBACK_AFTER_SEC } from '@/components/competitive/QueueSearchPanel'
+import { useQueueElapsed, formatElapsed, QUEUE_FALLBACK_AFTER_SEC, QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
 import { ChevronDown, Check, Users, Bot, SlidersHorizontal, Lock, X } from 'lucide-react'
 
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
@@ -53,7 +53,9 @@ function SatCompetitiveInner() {
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [error, setError] = useState('')
+  const [queueTimedOut, setQueueTimedOut] = useState(false)
   const hasApplied = useRef(false)
+  const queueJoinedAt = useRef<number | null>(null)
   const queueElapsed = useQueueElapsed(inQueue)
 
   // Teachers deep-link assignments as ?topics=a,b,c; the older single-topic
@@ -111,7 +113,24 @@ function SatCompetitiveInner() {
     } catch { /* transient poll failure */ }
   }, [router, selectedMode])
 
-  useEffect(() => { if (inQueue) { const i = setInterval(checkQueue, 2000); return () => clearInterval(i) } }, [inQueue, checkQueue])
+  const leaveQueue = useCallback(async () => {
+    try { await fetch('/api/competitive/queue', { method: 'DELETE' }) } catch { /* best effort */ }
+    setInQueue(false); setQueueStatus(null)
+  }, [])
+
+  // Poll while queued — with a hard ceiling so we never poll forever.
+  useEffect(() => {
+    if (!inQueue) return
+    const i = setInterval(() => {
+      if (queueJoinedAt.current && Date.now() - queueJoinedAt.current > QUEUE_POLL_TIMEOUT_SEC * 1000) {
+        setQueueTimedOut(true)
+        void leaveQueue()
+        return
+      }
+      void checkQueue()
+    }, 2000)
+    return () => clearInterval(i)
+  }, [inQueue, checkQueue, leaveQueue])
 
   const effectiveSlug = useMemo(() => buildSlug(selected, data?.allSlug ?? 'sat-math'), [selected, data])
 
@@ -223,13 +242,8 @@ function SatCompetitiveInner() {
       const d: QueueStatus = await res.json()
       if (!res.ok) { setError((d as { error?: string }).error || 'Could not join the queue.'); return }
       if (d.status === 'matched') router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${d.matchId}?from=sat`)
-      else { setInQueue(true); setQueueStatus(d) }
+      else { queueJoinedAt.current = Date.now(); setQueueTimedOut(false); setInQueue(true); setQueueStatus(d) }
     } catch { setError('Could not join the queue.') }
-  }
-
-  const leaveQueue = async () => {
-    try { await fetch('/api/competitive/queue', { method: 'DELETE' }) } catch { /* best effort */ }
-    setInQueue(false); setQueueStatus(null)
   }
 
   const startAIPractice = async (difficulty: MatchTier) => {
@@ -513,6 +527,12 @@ function SatCompetitiveInner() {
             </div>
           ) : (
             <>
+              {queueTimedOut && (
+                <div className="mb-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-700/50 dark:bg-amber-900/20 dark:text-amber-300">
+                  No opponent found — you left the queue after {Math.round(QUEUE_POLL_TIMEOUT_SEC / 60)} minutes.
+                  Try vs AI or send an async challenge instead.
+                </div>
+              )}
               <div className="flex items-center justify-between gap-3 mb-2">
                 <p className="text-xs text-gray-600 dark:text-gray-400 min-w-0 truncate">
                   <span className="font-semibold text-gray-900 dark:text-white">{selectionLabel}</span>

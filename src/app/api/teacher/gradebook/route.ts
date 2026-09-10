@@ -35,6 +35,19 @@ export async function GET(req: NextRequest) {
           topicSlug: true,
           dueDate: true,
           requiredScore: true,
+          // Group-targeted assignments only cover that group's members; the
+          // gradebook needs the roster to distinguish "not assigned" from
+          // "assigned but missing" and to average over the right denominator.
+          group: {
+            select: {
+              id: true,
+              name: true,
+              members: {
+                where: { member: { isActive: true } },
+                select: { member: { select: { userId: true } } },
+              },
+            },
+          },
         },
       },
     },
@@ -70,6 +83,30 @@ export async function GET(req: NextRequest) {
     submissionMap.set(`${s.assignmentId}-${s.studentId}`, s)
   }
 
+  // Per assignment: the set of userIds it covers, or null when it targets the
+  // whole class. Non-covered students are "not assigned" — not "missing" — so
+  // they are excluded from every average's denominator below.
+  const coveredMap = new Map<string, Set<string> | null>()
+  const assignmentsOut = classroom.assignments.map((a) => {
+    const covered = a.group ? new Set(a.group.members.map((gm) => gm.member.userId)) : null
+    coveredMap.set(a.id, covered)
+    return {
+      id: a.id,
+      title: a.title,
+      type: a.type,
+      topicSlug: a.topicSlug,
+      dueDate: a.dueDate,
+      requiredScore: a.requiredScore,
+      group: a.group ? { id: a.group.id, name: a.group.name } : null,
+      coveredUserIds: covered ? [...covered] : null,
+    }
+  })
+
+  const isCovered = (assignmentId: string, userId: string) => {
+    const covered = coveredMap.get(assignmentId)
+    return covered === null || covered === undefined || covered.has(userId)
+  }
+
   // Build gradebook
   const students = classroom.members.map((m) => {
     const grades = classroom.assignments.map((a) => {
@@ -86,7 +123,10 @@ export async function GET(req: NextRequest) {
       }
     })
 
-    const scoredGrades = grades.filter((g) => g.score !== null && g.percentage !== null)
+    // Only assignments that actually cover this student count toward their
+    // totals — a group assignment must not drag down non-members' averages.
+    const coveredGrades = grades.filter((g) => isCovered(g.assignmentId, m.user.id))
+    const scoredGrades = coveredGrades.filter((g) => g.score !== null && g.percentage !== null)
     const average = scoredGrades.length > 0
       ? Math.round(scoredGrades.reduce((sum, g) => sum + (g.percentage ?? 0), 0) / scoredGrades.length)
       : null
@@ -98,27 +138,28 @@ export async function GET(req: NextRequest) {
       image: m.user.image,
       grades,
       average,
-      submitted: grades.filter((g) => g.status !== 'NOT_SUBMITTED').length,
-      total: grades.length,
+      submitted: coveredGrades.filter((g) => g.status !== 'NOT_SUBMITTED').length,
+      total: coveredGrades.length,
     }
   })
 
-  // Assignment averages
+  // Assignment averages — over covered students only.
   const assignmentStats = classroom.assignments.map((a) => {
-    const scores = students
+    const coveredStudents = students.filter((s) => isCovered(a.id, s.id))
+    const scores = coveredStudents
       .map((s) => s.grades.find((g) => g.assignmentId === a.id)?.percentage)
       .filter((p): p is number => p !== null)
     return {
       id: a.id,
       average: scores.length > 0 ? Math.round(scores.reduce((s, v) => s + v, 0) / scores.length) : null,
       submissionCount: scores.length,
-      totalStudents: students.length,
+      totalStudents: coveredStudents.length,
     }
   })
 
   return NextResponse.json({
     classroom: { id: classroom.id, name: classroom.name },
-    assignments: classroom.assignments,
+    assignments: assignmentsOut,
     students: students.sort((a, b) => (a.name ?? '').localeCompare(b.name ?? '')),
     assignmentStats,
   })

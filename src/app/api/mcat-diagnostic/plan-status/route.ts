@@ -54,20 +54,26 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const latestDiagnostic = await prisma.diagnosticTest.findFirst({
-      where: {
-        userId: session.user.id,
-        category: 'mcat-full-diagnostic',
-      },
-      orderBy: {
-        createdAt: 'desc',
-      },
-      select: {
-        id: true,
-        createdAt: true,
-        results: true,
-      },
-    })
+    const [latestDiagnostic, userRow] = await Promise.all([
+      prisma.diagnosticTest.findFirst({
+        where: {
+          userId: session.user.id,
+          category: 'mcat-full-diagnostic',
+        },
+        orderBy: {
+          createdAt: 'desc',
+        },
+        select: {
+          id: true,
+          createdAt: true,
+          results: true,
+        },
+      }),
+      prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { diagnosticGateWaivedAt: true },
+      }),
+    ])
 
     if (!latestDiagnostic) {
       return NextResponse.json({
@@ -219,11 +225,21 @@ export async function GET() {
 
     const pendingTopics = recommendedWithStatus.filter((topic) => !topic.isSatisfied)
 
+    // Teacher retake-gate override ("Allow retake now"), ONE-SHOT: the waiver
+    // opens the gate only while User.diagnosticGateWaivedAt is NEWER than the
+    // most recent diagnostic attempt. Taking the retake consumes it naturally —
+    // the new attempt's createdAt is then newer than the waiver, so the gate
+    // is governed by pending topics again with no cleanup needed.
+    const gateWaived =
+      userRow?.diagnosticGateWaivedAt != null &&
+      userRow.diagnosticGateWaivedAt.getTime() > latestDiagnostic.createdAt.getTime()
+
     return NextResponse.json({
       hasDiagnostic: true,
       diagnosticId: latestDiagnostic.id,
       diagnosticCreatedAt: latestDiagnostic.createdAt,
-      canRetakeDiagnostic: pendingTopics.length === 0,
+      canRetakeDiagnostic: pendingTopics.length === 0 || gateWaived,
+      gateWaived,
       requiredScorePercent,
       recommendedTopics: recommendedWithStatus,
       pendingTopics,

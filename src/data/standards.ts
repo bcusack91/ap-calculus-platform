@@ -1223,9 +1223,56 @@ export const STANDARDS_BY_COURSE: Record<string, StandardEntry[]> = {
 
 const norm = (s: string) => (s || '').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').replace(/\b(unit|the|of|to|in|a|an)\b/g,' ').replace(/\s+/g,' ').trim()
 
+// ---------------------------------------------------------------------------
+// Explicit alias layer for DB course names the fuzzy matcher cannot route.
+//
+// The MCAT taxonomy above is keyed by the four official AAMC section names,
+// but the DB course is named "MCAT Prep" and its five seeded categories
+// (prisma/seed-mcat-prep.ts) are section-level groupings — so the fuzzy
+// course match never hits and MCAT classes rendered standards rows with no
+// code and no exam weight. Each DB category IS a whole scored section, so it
+// maps to a section-level entry (spanning that section's foundational
+// concepts) rather than any single content category. "MCAT Strategy & Test
+// Day" is study strategy, not AAMC exam content — it deliberately maps to
+// null so its row renders plainly, exactly as it does today.
+//
+// Keyed by the EXACT DB course name, checked before the fuzzy matcher: no
+// other course name can ever enter this layer, and when the alias misses the
+// function falls through to the fuzzy path unchanged — so every existing
+// course resolves exactly as before. (For "MCAT Prep" the fuzzy path returns
+// null for every category, which is the pre-alias behavior anyway.)
+const COURSE_ALIASES: Record<string, Record<string, StandardEntry | null>> = {
+  "MCAT Prep": {
+    "Chemical & Physical Foundations": {
+      code: "FC4–FC5",
+      name: "Chemical and Physical Foundations of Biological Systems",
+      weight: "1 of 4 scored sections — 59 of 230 questions, ~26% of the exam. Spans Foundational Concepts 4–5: physics, general and organic chemistry, and biochemistry applied to living systems."
+    },
+    "Biological & Biochemical Foundations": {
+      code: "FC1–FC3",
+      name: "Biological and Biochemical Foundations of Living Systems",
+      weight: "1 of 4 scored sections — 59 of 230 questions, ~26% of the exam. Spans Foundational Concepts 1–3: biochemistry, cell and molecular biology, genetics, and organ systems."
+    },
+    "Psychological, Social & Biological Foundations": {
+      code: "FC6–FC10",
+      name: "Psychological, Social, and Biological Foundations of Behavior",
+      weight: "1 of 4 scored sections — 59 of 230 questions, ~26% of the exam. Spans Foundational Concepts 6–10: psychology, sociology, and their biological bases."
+    },
+    "Critical Analysis & Reasoning Skills (CARS)": {
+      code: "CARS",
+      name: "Critical Analysis and Reasoning Skills",
+      weight: "1 of 4 scored sections — 53 of 230 questions, ~23% of the exam. Passage-based reasoning (Foundations of Comprehension; Reasoning Within the Text; Reasoning Beyond the Text); no outside content knowledge required."
+    },
+    // No AAMC standard exists for test-day strategy content.
+    "MCAT Strategy & Test Day": null,
+  },
+}
+
 // Best-effort match of an app (courseName, categoryName) to an official standard,
 // for decorating the standards-mastery view with the unit code + exam weighting.
 export function findStandard(courseName: string, categoryName: string): StandardEntry | null {
+  const aliased = COURSE_ALIASES[courseName]
+  if (aliased && categoryName in aliased) return aliased[categoryName]
   const ck = norm(courseName)
   let stds: StandardEntry[] | undefined
   for (const [course, list] of Object.entries(STANDARDS_BY_COURSE)) {

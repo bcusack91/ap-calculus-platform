@@ -14,6 +14,9 @@ import type { Prisma } from '@prisma/client'
 import { prisma } from '../src/lib/prisma'
 import { CONTENT_TYPES, UNIT_TEST_UNITS_KEY } from '../src/lib/content-store'
 
+import { ACT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/act'
+import { ALGEBRA_1_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/algebra-1'
+import { ALGEBRA_2_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/algebra-2'
 import { AP_AAS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-african-american-studies'
 import { AP_BIOLOGY_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-biology'
 import { AP_CALCULUS_AB_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-calculus-ab'
@@ -37,8 +40,20 @@ import { AP_STATISTICS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-stati
 import { AP_US_GOV_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-us-government'
 import { AP_US_HISTORY_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-us-history'
 import { AP_WORLD_HISTORY_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-world-history'
+import { GEOMETRY_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/geometry'
+import { GRADE_8_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/grade-8-math'
+import { MCAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/mcat'
+import { OCHEM_1_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/organic-chemistry-1'
+import { OCHEM_2_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/organic-chemistry-2'
+import { PRE_ALGEBRA_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/pre-algebra'
+import { PRECALCULUS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/precalculus'
+import { PSAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/psat'
+import { SAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/sat'
 
 const CONFIGS = [
+  ACT_UNIT_TESTS_CONFIG,
+  ALGEBRA_1_UNIT_TESTS_CONFIG,
+  ALGEBRA_2_UNIT_TESTS_CONFIG,
   AP_AAS_UNIT_TESTS_CONFIG,
   AP_BIOLOGY_UNIT_TESTS_CONFIG,
   AP_CALCULUS_AB_UNIT_TESTS_CONFIG,
@@ -62,6 +77,15 @@ const CONFIGS = [
   AP_US_GOV_UNIT_TESTS_CONFIG,
   AP_US_HISTORY_UNIT_TESTS_CONFIG,
   AP_WORLD_HISTORY_UNIT_TESTS_CONFIG,
+  GEOMETRY_UNIT_TESTS_CONFIG,
+  GRADE_8_UNIT_TESTS_CONFIG,
+  MCAT_UNIT_TESTS_CONFIG,
+  OCHEM_1_UNIT_TESTS_CONFIG,
+  OCHEM_2_UNIT_TESTS_CONFIG,
+  PRE_ALGEBRA_UNIT_TESTS_CONFIG,
+  PRECALCULUS_UNIT_TESTS_CONFIG,
+  PSAT_UNIT_TESTS_CONFIG,
+  SAT_UNIT_TESTS_CONFIG,
 ]
 
 async function main() {

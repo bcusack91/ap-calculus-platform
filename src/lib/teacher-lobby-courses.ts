@@ -160,6 +160,18 @@ async function getSatPunctuationGeneralQuestions(count?: number): Promise<AnyQue
   const m = await import('@/data/competitive-questions/sat-punctuation-general-bank')
   return (m.getSatPunctuationGeneralQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
 }
+async function getActMathQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/act-math-bank')
+  return (m.getActMathQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
+async function getActScienceQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/act-science-bank')
+  return (m.getActScienceQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
+async function getOChemQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ochem-bank')
+  return (m.getOChemQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
 
 
 /** Wrap a bank getter that supports topicSlug. Passes the slug through. */
@@ -261,6 +273,60 @@ function satAdapter(): CourseRegistryEntry['getQuestions'] {
   }
 }
 
+/**
+ * ACT adapter: combines the 2 ACT banks under one course, tagging each bank's
+ * questions with its competitive pseudo-slug (the banks themselves don't tag a
+ * topicSlug) so the lobby topic picker can offer Math / Science. Mirrors the
+ * SAT legacy-bank pattern; ids are prefixed because both banks number from 1.
+ */
+const ACT_BANKS: { slug: string; getter: (count?: number) => Promise<AnyQuestion[]> }[] = [
+  { slug: 'act-math', getter: getActMathQuestions },
+  { slug: 'act-science', getter: getActScienceQuestions },
+]
+
+function actAdapter(): CourseRegistryEntry['getQuestions'] {
+  return async (count, topic) => {
+    const banks = topic ? ACT_BANKS.filter(b => b.slug === topic) : ACT_BANKS
+    const out: TeacherLobbyQuestion[] = []
+    for (const bank of banks) {
+      const qs = await bank.getter(count)
+      out.push(...qs.map(q => ({
+        id: `${bank.slug}-${q.id}`,
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+        difficulty: q.difficulty,
+        topicSlug: bank.slug,
+      })))
+    }
+    return out.slice(0, Math.max(count, 1))
+  }
+}
+
+/**
+ * MCAT adapter: getMcatQuestions resolves every slug in the 3-level MCAT
+ * hierarchy (section → area → subtopic, see mcat-bank.ts) plus the whole-exam
+ * 'mcat' slug, so any granularity the picker offers passes straight through.
+ * Ids are stem hashes because broad slugs overlap their constituent subtopics
+ * (a section draw contains its areas' questions) and the bank's own numeric
+ * ids restart per pull — buildQuestionPool dedupes selected topics by id.
+ */
+function mcatAdapter(): CourseRegistryEntry['getQuestions'] {
+  return async (count, topic) => {
+    const m = await import('@/data/competitive-questions/mcat-bank')
+    return m.getMcatQuestions(Math.max(count, 1), topic).map(q => ({
+      id: `mcat-${stemHash(q.question)}`,
+      question: q.question,
+      options: q.options,
+      correctAnswer: q.correctAnswer,
+      explanation: q.explanation,
+      difficulty: q.difficulty,
+      topicSlug: q.topicSlug,
+    }))
+  }
+}
+
 /** Algebra 2 bank groups by subtopic (enum), not topicSlug. */
 function algebra2Adapter(): CourseRegistryEntry['getQuestions'] {
   return async (count, topic) => {
@@ -301,6 +367,7 @@ const COURSES: CourseRegistryEntry[] = [
   { slug: 'ap-physics-c-mechanics', name: 'AP Physics C: Mechanics', getQuestions: topicTagged(getApPhysicsCMechQuestions) },
   { slug: 'ap-physics-c-em', name: 'AP Physics C: E&M', getQuestions: topicTagged(getApPhysicsCEMQuestions) },
   { slug: 'ap-enviro', name: 'AP Environmental Science', getQuestions: topicTagged(getApAPESQuestions) },
+  { slug: 'ochem', name: 'Organic Chemistry', getQuestions: untagged(getOChemQuestions) },
 
   // History & Social Science
   { slug: 'ap-world-history', name: 'AP World History', getQuestions: topicTagged(getApWorldHistoryQuestions) },
@@ -322,6 +389,8 @@ const COURSES: CourseRegistryEntry[] = [
 
   // Test Prep
   { slug: 'sat-prep', name: 'SAT Prep', getQuestions: satAdapter() },
+  { slug: 'act-prep', name: 'ACT Prep', getQuestions: actAdapter() },
+  { slug: 'mcat', name: 'MCAT Prep', getQuestions: mcatAdapter() },
 ]
 
 export function listSupportedCourses(): { slug: string; name: string }[] {
@@ -354,6 +423,22 @@ export async function getCourseTopics(slug: string): Promise<{ slug: string; tit
       ])
     )
   }
+  // MCAT mirrors the SAT approach with its 3-level hierarchy: an "All
+  // <section>" entry per scored section, an "All <area>" entry per subject
+  // area, then the finely-tagged subtopics — all in blueprint order with the
+  // titles the rest of the MCAT UI uses. Every slug resolves through
+  // getMcatQuestions, so any mix of granularities works in one lobby
+  // (stem-hash ids dedupe the overlap).
+  if (slug === 'mcat') {
+    const m = await import('@/data/competitive-questions/mcat-bank')
+    return m.MCAT_SECTIONS.flatMap(section => [
+      { slug: section.slug, title: `All ${section.short}`, count: m.mcatQuestionCount(section.slug) },
+      ...section.areas.flatMap(a => [
+        { slug: a.slug, title: `All ${a.title}`, count: m.mcatQuestionCount(a.slug) },
+        ...a.subtopics.map(t => ({ slug: t.slug, title: t.title, count: m.mcatQuestionCount(t.slug) })),
+      ]),
+    ])
+  }
   const all = await entry.getQuestions(100000)
   const counts = new Map<string, number>()
   for (const q of all) {
@@ -371,6 +456,8 @@ const SPECIAL_TOPIC_TITLES: Record<string, string> = {
   'sat-reading': 'SAT Reading',
   'sat-punctuation-commas-semicolons': 'SAT Punctuation: Commas & Semicolons',
   'sat-punctuation': 'SAT Punctuation: All Marks',
+  'act-math': 'ACT Math',
+  'act-science': 'ACT Science',
 }
 
 function prettifyTopicSlug(slug: string): string {

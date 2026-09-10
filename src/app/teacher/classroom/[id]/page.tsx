@@ -133,6 +133,7 @@ interface ClassroomPerformanceData {
     }
     exitQuizzes?: {
       topicSlug: string
+      topicTitle?: string | null // real Topic title, resolved by the performance API
       totalAttempts: number
       passed: boolean
       bestScore: number
@@ -1606,7 +1607,17 @@ export default function ClassroomDetailPage() {
                                   <p className="font-medium text-gray-900 dark:text-white">{s.name}</p>
                                 </td>
                                 <td className="py-3 px-4 text-gray-700 dark:text-gray-300">
-                                  {eq.topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                                  {/* Prefer the real Topic title from the API; the humanized
+                                      fallback drops a duplicated leading/trailing "mcat"
+                                      segment (e.g. "mcat-physics-…-mcat") and renders the
+                                      exam name as MCAT, not "Mcat". */}
+                                  {eq.topicTitle ?? (() => {
+                                    const parts = eq.topicSlug.split('-')
+                                    if (parts.length > 1 && parts[0] === 'mcat' && parts[parts.length - 1] === 'mcat') parts.pop()
+                                    return parts
+                                      .map(w => (w === 'mcat' ? 'MCAT' : w.charAt(0).toUpperCase() + w.slice(1)))
+                                      .join(' ')
+                                  })()}
                                 </td>
                                 <td className="text-center py-3 px-4">
                                   <span className={`font-bold ${eq.bestScore >= 7 ? 'text-green-600' : eq.bestScore >= 5 ? 'text-yellow-600' : 'text-red-600'}`}>

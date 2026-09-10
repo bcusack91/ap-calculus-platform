@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
-import QueueSearchPanel from '@/components/competitive/QueueSearchPanel'
+import QueueSearchPanel, { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
 import { toBankSlugs } from '@/lib/mcat-topic-map'
 import { ChevronDown, ChevronRight, Check, Shuffle, Users, Bot, Info } from 'lucide-react'
 
@@ -45,6 +45,8 @@ function McatCompetitiveInner() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [error, setError] = useState('')
+  const [queueTimedOut, setQueueTimedOut] = useState(false)
+  const queueJoinedAt = useRef<number | null>(null)
   // Some (or all) ?topics= slugs from an assignment link had no playable
   // equivalent — tell the student instead of silently showing an empty picker.
   const [assignedNotice, setAssignedNotice] = useState(false)
@@ -112,11 +114,28 @@ function McatCompetitiveInner() {
     } catch { /* transient poll failure */ }
   }, [router])
 
+  // The slug actually sent to matchmaking — the picker stays interactive while
+  // queued, so don't derive in-queue UI (fallback timing) from live selection.
+  const [queuedSlug, setQueuedSlug] = useState<string | null>(null)
+
+  const leaveQueue = useCallback(async () => {
+    try { await fetch('/api/competitive/queue', { method: 'DELETE' }) } catch { /* best effort */ }
+    setInQueue(false); setQueueStatus(null); setQueuedSlug(null)
+  }, [])
+
+  // Poll while queued — with a hard ceiling so we never poll forever.
   useEffect(() => {
     if (!inQueue) return
-    const i = setInterval(checkQueue, 2000)
+    const i = setInterval(() => {
+      if (queueJoinedAt.current && Date.now() - queueJoinedAt.current > QUEUE_POLL_TIMEOUT_SEC * 1000) {
+        setQueueTimedOut(true)
+        void leaveQueue()
+        return
+      }
+      void checkQueue()
+    }, 2000)
     return () => clearInterval(i)
-  }, [inQueue, checkQueue])
+  }, [inQueue, checkQueue, leaveQueue])
 
   const effectiveSlug = useMemo(() => buildSlug(selected, data?.allSlug ?? 'mcat'), [selected, data])
   const isComposite = effectiveSlug.startsWith(MULTI_PREFIX)
@@ -176,10 +195,6 @@ function McatCompetitiveInner() {
     })
   }
 
-  // The slug actually sent to matchmaking — the picker stays interactive while
-  // queued, so don't derive in-queue UI (fallback timing) from live selection.
-  const [queuedSlug, setQueuedSlug] = useState<string | null>(null)
-
   const joinQueue = async (slugOverride?: string) => {
     setError('')
     const topicSlug = slugOverride ?? effectiveSlug
@@ -192,13 +207,8 @@ function McatCompetitiveInner() {
       const d: QueueStatus = await res.json()
       if (!res.ok) { setError((d as { error?: string }).error || 'Could not join the queue.'); return }
       if (d.status === 'matched') router.push(`/competitive/match/${d.matchId}?from=mcat`)
-      else { setInQueue(true); setQueueStatus(d); setQueuedSlug(topicSlug) }
+      else { queueJoinedAt.current = Date.now(); setQueueTimedOut(false); setInQueue(true); setQueueStatus(d); setQueuedSlug(topicSlug) }
     } catch { setError('Could not join the queue.') }
-  }
-
-  const leaveQueue = async () => {
-    try { await fetch('/api/competitive/queue', { method: 'DELETE' }) } catch { /* best effort */ }
-    setInQueue(false); setQueueStatus(null); setQueuedSlug(null)
   }
 
   const playAI = async () => {
@@ -364,6 +374,12 @@ function McatCompetitiveInner() {
         </div>
 
         {/* Actions */}
+        {!inQueue && queueTimedOut && (
+          <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-700/50 dark:bg-amber-900/20 dark:text-amber-300">
+            No opponent found — you left the queue after {Math.round(QUEUE_POLL_TIMEOUT_SEC / 60)} minutes.
+            Try Practice vs AI or send an async challenge below.
+          </div>
+        )}
         {inQueue ? (
           <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6">
             <QueueSearchPanel

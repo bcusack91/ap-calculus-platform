@@ -1,6 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import { TrendingDown, TrendingUp, Unlock } from 'lucide-react'
+import ConfirmDialog, { ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 
 /**
  * Assigned class diagnostics — sits at the top of the Class Plan tab.
@@ -19,6 +21,14 @@ interface DiagStudent {
   estimatedScore: number | null
   mathScore: number | null
   rwScore: number | null
+  /** MCAT only: the four 118-132 section scaled scores of the first sitting. */
+  sections: { short: string; scaled: number }[] | null
+  attemptCount: number
+  latestEstimatedScore: number | null
+  /** Latest attempt minus the one before it (needs ≥2 attempts). */
+  scoreDelta: number | null
+  /** MCAT only: retake-gate waiver set and not yet consumed by a new attempt. */
+  retakeWaiverActive: boolean
 }
 interface Diag {
   id: string
@@ -30,7 +40,13 @@ interface Diag {
   takenCount: number
   totalStudents: number
   avgPercentage: number | null
-  scoreAverages: { overall: number | null; math: number | null; rw: number | null }
+  scoreAverages: {
+    overall: number | null
+    math: number | null
+    rw: number | null
+    /** MCAT only: per-section 118-132 class averages. */
+    sections?: { short: string; avg: number }[] | null
+  }
   domainAverages: { name: string; avg: number }[]
   students: DiagStudent[]
 }
@@ -44,6 +60,7 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
   const [dueDate, setDueDate] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [confirmReq, setConfirmReq] = useState<ConfirmRequest | null>(null)
 
   const load = useCallback(() => {
     fetch(`/api/teacher/classrooms/${classroomId}/class-diagnostics`, { cache: 'no-store' })
@@ -76,6 +93,31 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
     } finally {
       setBusy(false)
     }
+  }
+
+  // Teacher retake-gate override: sets User.diagnosticGateWaivedAt so the
+  // student's MCAT retake gate opens immediately. One-shot — taking the retake
+  // consumes the waiver (the new attempt is newer than the timestamp).
+  const waiveGate = (student: DiagStudent) => {
+    setConfirmReq({
+      title: 'Allow retake now',
+      message: `Open the diagnostic retake for ${student.name} right away, even if their study plan still has pending topics? This applies to their next attempt only.`,
+      confirmLabel: 'Allow retake',
+      onConfirm: async () => {
+        const r = await fetch(`/api/teacher/classrooms/${classroomId}/class-diagnostics/waive-gate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ studentUserId: student.userId }),
+        })
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) {
+          setError(d.error || 'Could not unlock the retake')
+          return
+        }
+        setError(null)
+        load()
+      },
+    })
   }
 
   if (diagnostics === null && !error) return null
@@ -143,8 +185,10 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
                   {d.scoreAverages?.overall !== null && d.scoreAverages?.overall !== undefined ? (
                     <span className="text-gray-500 dark:text-gray-400">
                       class avg <span className="font-semibold text-gray-700 dark:text-gray-200">{d.scoreAverages.overall}</span>
-                      {d.scoreAverages.math !== null && d.scoreAverages.rw !== null &&
-                        ` (Math ${d.scoreAverages.math} · R&W ${d.scoreAverages.rw})`}
+                      {d.scoreAverages.sections && d.scoreAverages.sections.length > 0
+                        ? ` (${d.scoreAverages.sections.map(sec => `${sec.short} ${sec.avg}`).join(' · ')})`
+                        : d.scoreAverages.math !== null && d.scoreAverages.rw !== null &&
+                          ` (Math ${d.scoreAverages.math} · R&W ${d.scoreAverages.rw})`}
                     </span>
                   ) : d.avgPercentage !== null ? (
                     <span className="text-gray-500 dark:text-gray-400">class avg {d.avgPercentage}%</span>
@@ -167,14 +211,50 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
                   )}
                   <div className="grid gap-1.5 sm:grid-cols-2">
                     {d.students.map(s => (
-                      <div key={s.userId} className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-1.5 text-sm dark:bg-gray-700/50">
+                      <div key={s.userId} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-lg bg-gray-50 px-3 py-1.5 text-sm dark:bg-gray-700/50">
                         <span className="font-medium text-gray-800 dark:text-gray-200">{s.name}</span>
                         {s.takenAt ? (
-                          <span className="text-gray-600 dark:text-gray-400">
-                            {s.scoreLabel ?? '—'}
-                            {s.mathScore !== null && s.rwScore !== null
-                              ? ` (M ${s.mathScore} · RW ${s.rwScore})`
-                              : s.percentage !== null ? ` (${s.percentage}%)` : ''}
+                          <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-gray-600 dark:text-gray-400">
+                            <span>
+                              {s.scoreLabel ?? '—'}
+                              {s.sections && s.sections.length > 0
+                                ? ` (${s.sections.map(sec => `${sec.short} ${sec.scaled}`).join(' · ')})`
+                                : s.mathScore !== null && s.rwScore !== null
+                                ? ` (M ${s.mathScore} · RW ${s.rwScore})`
+                                : s.percentage !== null ? ` (${s.percentage}%)` : ''}
+                            </span>
+                            {s.attemptCount >= 2 && s.scoreDelta !== null && (
+                              <span
+                                className={`inline-flex items-center gap-1 text-xs font-medium ${
+                                  s.scoreDelta > 0
+                                    ? 'text-green-600 dark:text-green-400'
+                                    : s.scoreDelta < 0
+                                    ? 'text-red-600 dark:text-red-400'
+                                    : 'text-gray-500 dark:text-gray-400'
+                                }`}
+                                title={s.latestEstimatedScore !== null ? `Latest attempt: ${s.latestEstimatedScore} (first sitting shown)` : undefined}
+                              >
+                                {s.scoreDelta >= 0
+                                  ? <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
+                                  : <TrendingDown className="h-3.5 w-3.5" aria-hidden="true" />}
+                                {s.latestEstimatedScore !== null && <span>{s.latestEstimatedScore}</span>}
+                                {s.scoreDelta >= 0 ? `+${s.scoreDelta}` : s.scoreDelta} since last attempt
+                              </span>
+                            )}
+                            {d.courseKey === 'mcat' && (
+                              s.retakeWaiverActive ? (
+                                <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/40 dark:text-green-300">
+                                  <Unlock className="h-3 w-3" aria-hidden="true" /> retake unlocked
+                                </span>
+                              ) : (
+                                <button
+                                  onClick={() => waiveGate(s)}
+                                  className="rounded-full border border-gray-300 px-2 py-0.5 text-xs font-medium text-gray-600 transition hover:border-accent hover:text-accent dark:border-gray-600 dark:text-gray-300 dark:hover:border-accent-muted dark:hover:text-accent-muted"
+                                >
+                                  Allow retake now
+                                </button>
+                              )
+                            )}
                           </span>
                         ) : (
                           <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/40 dark:text-red-300">not taken</span>
@@ -188,6 +268,7 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
           ))}
         </div>
       )}
+      <ConfirmDialog request={confirmReq} onClose={() => setConfirmReq(null)} />
     </div>
   )
 }
