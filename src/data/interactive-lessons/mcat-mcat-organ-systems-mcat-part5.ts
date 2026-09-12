@@ -69,21 +69,21 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
         questions: [
           {
             question: `A patient has high T3/T4 levels AND high TSH. The most likely cause is:`,
-            options: [`A TSH-secreting pituitary tumor (secondary hyperthyroidism)`, `A primary thyroid problem`, `Normal feedback functioning`, `Iodine deficiency`],
+            options: [`A TSH-secreting pituitary tumor`, `A hyperfunctioning thyroid nodule`, `Normal feedback functioning`, `Dietary iodine deficiency`],
             correctAnswer: 0,
-            explanation: `Normally, high T3/T4 suppresses TSH (negative feedback). If both are high, the pituitary is autonomously producing TSH and ignoring feedback — a TSH-secreting adenoma. A primary thyroid problem causing high T3/T4 would SUPPRESS TSH (option 2 wrong). Iodine deficiency lowers T3/T4 and raises TSH (option 4 reversed).`
+            explanation: `Normally, high T3/T4 suppresses TSH (negative feedback). If both are high, the pituitary is autonomously producing TSH and ignoring feedback — a TSH-secreting adenoma (secondary hyperthyroidism). A primary thyroid problem such as a hyperfunctioning nodule would raise T3/T4 but SUPPRESS TSH. Iodine deficiency lowers T3/T4 and raises TSH — the reverse of the thyroid-hormone half of this pattern.`
           },
           {
             question: `A researcher gives a patient dexamethasone (a synthetic cortisol analog). In a healthy person, plasma ACTH should:`,
-            options: [`Fall, because exogenous glucocorticoid mimics cortisol's negative feedback on the pituitary and hypothalamus`, `Rise, because the body senses extra steroid and compensates`, `Stay unchanged, because dexamethasone does not bind cortisol receptors`, `Fall, but only because dexamethasone destroys ACTH directly`],
+            options: [`Fall, because it mimics cortisol's negative feedback on the HPA axis`, `Rise, because the body senses extra steroid and compensates`, `Stay unchanged, because dexamethasone does not bind cortisol receptors`, `Fall, but only because dexamethasone destroys ACTH directly`],
             correctAnswer: 0,
-            explanation: `Dexamethasone acts at the glucocorticoid receptor and triggers negative feedback on the HPA axis → ↓CRH and ↓ACTH (this is the basis of the dexamethasone suppression test). Option 2 reverses the feedback; option 3 is false (it is a potent agonist); option 4 invents a destruction mechanism — feedback suppression, not degradation, lowers ACTH.`
+            explanation: `Dexamethasone acts at the glucocorticoid receptor and triggers negative feedback on the pituitary and hypothalamus (HPA axis) → ↓CRH and ↓ACTH (this is the basis of the dexamethasone suppression test). A rise in ACTH reverses the feedback; the claim that it does not bind cortisol receptors is false (it is a potent agonist); and direct destruction of ACTH is an invented mechanism — feedback suppression, not degradation, lowers ACTH.`
           },
           {
             question: `Why does a peptide hormone like insulin act within seconds while a steroid like aldosterone takes hours, despite both being potent regulators?`,
-            options: [`Insulin uses surface receptors and pre-existing second-messenger pathways, while aldosterone must enter the nucleus and drive new protein synthesis`, `Insulin is lipophilic and crosses membranes faster than aldosterone`, `Aldosterone circulates unbound and is cleared before it can act`, `Insulin alters gene transcription while aldosterone uses cAMP`],
+            options: [`Insulin uses existing signaling; aldosterone needs new protein synthesis`, `Insulin is lipophilic and crosses membranes faster than aldosterone`, `Aldosterone circulates unbound and is cleared before it can act`, `Insulin alters gene transcription while aldosterone uses cAMP`],
             correctAnswer: 0,
-            explanation: `Hydrophilic peptide hormones bind surface receptors and activate existing enzymes/channels via second messengers — fast and transient. Lipophilic steroids cross the membrane, bind nuclear receptors, and change TRANSCRIPTION, which requires time to synthesize new protein — slow and durable. Option 2 swaps the solubilities; option 3 is false (steroids are carrier-bound, extending half-life); option 4 reverses the two mechanisms.`
+            explanation: `Hydrophilic peptide hormones bind surface receptors and activate existing enzymes/channels via second messengers — fast and transient. Lipophilic steroids cross the membrane, bind nuclear receptors, and change TRANSCRIPTION, which requires time to synthesize new protein — slow and durable. Calling insulin lipophilic swaps the solubilities; the claim that aldosterone circulates unbound is false (steroids are carrier-bound, extending half-life); and pairing insulin with transcription and aldosterone with cAMP reverses the two mechanisms.`
           }
         ]
       }

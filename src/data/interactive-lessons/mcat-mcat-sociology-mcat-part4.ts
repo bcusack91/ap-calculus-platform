@@ -64,21 +64,21 @@ export const mcatSociologyPart4Data = {
         questions: [
           {
             question: `A teenager from a low-income neighborhood turns to drug dealing to achieve financial success. According to Merton's strain theory, this adaptation is:`,
-            options: [`Innovation — accepting the cultural goal (wealth) but using illegitimate means`, `Conformity`, `Retreatism`, `Ritualism`],
+            options: [`Innovation`, `Conformity`, `Retreatism`, `Ritualism`],
             correctAnswer: 0,
-            explanation: `Innovation: the person accepts society's goal (wealth/success) but rejects/lacks conventional means (education, career) and substitutes illegitimate ones (crime). Retreatism (option 3) would reject BOTH the goal and the means (e.g., withdrawal). Ritualism (option 4) is the opposite of this case — abandoning the goal while rigidly following the means. The key discriminator is: does the person still chase the cultural goal? Here, yes.`
+            explanation: `Innovation: the person accepts society's goal (wealth/success) but rejects/lacks conventional means (education, career) and substitutes illegitimate ones (crime). Retreatism would reject BOTH the goal and the means (e.g., withdrawal). Ritualism is the opposite of this case — abandoning the goal while rigidly following the means. Conformity accepts both the goal and the legitimate means. The key discriminator is: does the person still chase the cultural goal, and by what means? Here, yes, by illegitimate ones.`
           },
           {
             question: `A boy caught shoplifting once is repeatedly called a "delinquent" by teachers and police; he begins associating only with other labeled youths and commits further crimes, now seeing himself as "a criminal." This progression from the label to a reorganized identity is BEST described as:`,
-            options: [`Secondary deviance under labeling theory — the label becomes a master status`, `Primary deviance`, `Strain-theory innovation`, `Differential reinforcement`],
+            options: [`Secondary deviance`, `Primary deviance`, `Tertiary deviance`, `Strain-theory innovation`],
             correctAnswer: 0,
-            explanation: `The first shoplifting act is primary deviance; the later deviance driven by internalizing the "delinquent" label — which becomes a master status reorganizing his self-concept — is secondary deviance (Becker/Lemert). The trap is "primary deviance" (option 2), which is only the initial act before any labeling effect. Strain-theory innovation describes motive, not the labeling cascade, and differential reinforcement is a learning-theory term.`
+            explanation: `The first shoplifting act is primary deviance; the later deviance driven by internalizing the "delinquent" label — which becomes a master status reorganizing his self-concept — is secondary deviance under labeling theory (Becker/Lemert). The trap is primary deviance, which is only the initial act before any labeling effect. Tertiary deviance is a later stage in which a labeled person rejects the stigma and redefines the behavior as normal or positive — not what happens here. Strain-theory innovation describes motive, not the labeling cascade.`
           },
           {
             question: `A sociologist argues that defining "addiction" as a brain disease rather than a moral failing shifts authority over deviant behavior from courts and churches to physicians. This observation is the core of:`,
-            options: [`Medicalization, often critiqued through a conflict-theory lens about who controls definitions of deviance`, `Differential association`, `Functionalist boundary maintenance`, `Cultural relativism`],
+            options: [`Medicalization of deviance`, `Differential association`, `Durkheim's boundary maintenance`, `Cultural relativism`],
             correctAnswer: 0,
-            explanation: `Medicalization is the process of reframing a behavior/condition as a medical issue under medical authority. The conflict-theory angle highlights that this transfers social control to the medical profession — who defines and treats deviance. Differential association (option 2) is about learning deviance, not redefining it. Functionalist boundary maintenance is Durkheim's idea that punishing deviance affirms norms — a different mechanism. Cultural relativism is unrelated.`
+            explanation: `Medicalization is the process of reframing a behavior/condition as a medical issue under medical authority. The conflict-theory angle highlights that this transfers social control to the medical profession — who defines and treats deviance. Differential association is about learning deviance, not redefining it. Boundary maintenance is Durkheim's functionalist idea that punishing deviance affirms norms — a different mechanism. Cultural relativism is unrelated.`
           }
         ]
       }

@@ -68,21 +68,21 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
         questions: [
           {
             question: `Multiple sclerosis destroys myelin sheaths. This would:`,
-            options: [`Slow or block action potential conduction (loss of saltatory conduction)`, `Speed up conduction`, `Have no effect on signal transmission`, `Only affect the CNS, not the PNS`],
+            options: [`Slow or block action potential conduction`, `Speed conduction by lowering membrane capacitance`, `Have no effect on signal transmission`, `Directly inhibit vesicle fusion at the synapse`],
             correctAnswer: 0,
-            explanation: `Myelin insulates axons, enabling saltatory conduction (the AP jumps between nodes of Ranvier). Without myelin, current leaks across the membrane and conduction slows dramatically or fails, causing motor and sensory deficits. Demyelination never speeds conduction (option 2) and MS specifically targets CNS myelin made by oligodendrocytes.`
+            explanation: `Myelin insulates axons, enabling saltatory conduction (the AP jumps between nodes of Ranvier). Without myelin, current leaks across the membrane and conduction slows dramatically or fails, causing motor and sensory deficits. Demyelination never speeds conduction — losing myelin actually raises membrane capacitance — and it acts on axonal conduction, not directly on vesicle fusion or neurotransmitter release at synapses. MS targets CNS myelin (made by oligodendrocytes), so its deficits reflect slowed or blocked central conduction.`
           },
           {
             question: `A neurotoxin blocks voltage-gated $Na^{+}$ channels (like tetrodotoxin). What is the direct effect on neurons?`,
-            options: [`Action potentials cannot fire because depolarization to threshold is blocked`, `Neurons fire continuously because they cannot repolarize`, `Resting potential becomes more negative than $E_K$`, `Only the relative refractory period is affected`],
+            options: [`Action potentials cannot fire because the upstroke is blocked`, `Neurons fire continuously because they cannot repolarize`, `The resting potential becomes more negative than $E_K$`, `Only the relative refractory period is prolonged by the toxin`],
             correctAnswer: 0,
-            explanation: `The rising phase of the AP depends on voltage-gated $Na^{+}$ influx. Block those channels and the membrane cannot depolarize to +30 mV, so no AP fires → paralysis. Option 2 describes a channel that fails to inactivate (the opposite). Resting potential is set mainly by $K^{+}$ leak, not these channels (option 3), and the entire spike — not just the relative refractory period — is abolished.`
+            explanation: `The rising phase of the AP depends on voltage-gated $Na^{+}$ influx. Block those channels and the membrane cannot depolarize to +30 mV, so no AP fires → paralysis. Continuous firing describes a channel that fails to inactivate (the opposite). Resting potential is set mainly by $K^{+}$ leak, not these channels, so it does not fall below $E_K$, and the entire spike — not just the relative refractory period — is abolished.`
           },
           {
             question: `An inhibitory interneuron releases GABA onto a postsynaptic cell, opening $Cl^{-}$ channels. How does this make the postsynaptic neuron less likely to fire?`,
-            options: [`$Cl^{-}$ influx hyperpolarizes the cell (IPSP), moving $V_m$ further from threshold`, `$Cl^{-}$ efflux depolarizes the cell toward threshold`, `It triggers $Ca^{2+}$ influx and immediate vesicle release`, `It permanently inactivates the $Na^{+}/K^{+}$ ATPase`],
+            options: [`$Cl^{-}$ influx hyperpolarizes the cell, away from threshold`, `$Cl^{-}$ efflux depolarizes the cell toward firing threshold`, `It triggers $Ca^{2+}$ influx and immediate vesicle release`, `It permanently inactivates the neuron's $Na^{+}/K^{+}$ ATPase`],
             correctAnswer: 0,
-            explanation: `Opening $Cl^{-}$ channels drives $Cl^{-}$ into the neuron (its equilibrium is near/below rest), hyperpolarizing the membrane — an inhibitory postsynaptic potential (IPSP). This moves $V_m$ away from the $-55$ mV threshold, so more excitatory input is needed to fire. $Cl^{-}$ enters (not exits) and the effect is inhibitory, ruling out options 2–4.`
+            explanation: `Opening $Cl^{-}$ channels drives $Cl^{-}$ into the neuron (its equilibrium is near/below rest), hyperpolarizing the membrane — an inhibitory postsynaptic potential (IPSP). This moves $V_m$ away from the $-55$ mV threshold, so more excitatory input is needed to fire. $Cl^{-}$ enters (not exits) and the effect is inhibitory, ruling out the efflux, calcium-triggered release, and pump-inactivation options.`
           }
         ]
       }

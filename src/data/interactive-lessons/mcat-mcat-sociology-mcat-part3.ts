@@ -68,21 +68,21 @@ $$\\text{Audience/co-actors} \\to \\text{arousal} \\to \\begin{cases} \\uparrow 
         questions: [
           {
             question: `A medical team makes a poor treatment decision because no one wants to disagree with the attending physician. This is:`,
-            options: [`Groupthink — desire for group harmony suppresses dissenting opinions`, `Social loafing`, `Deindividuation`, `Bystander effect`],
+            options: [`Groupthink — the drive for consensus suppresses dissenting views`, `Social loafing — members exert less effort within a group`, `Deindividuation — anonymity in a group weakens self-restraint`, `Bystander effect — others' presence diffuses the duty to help`],
             correctAnswer: 0,
             explanation: `Groupthink occurs when the desire for conformity/harmony overrides realistic appraisal. In medical settings, this is particularly dangerous — it can be combated by explicitly encouraging dissent and assigning a "devil's advocate" role.`
           },
           {
             question: `In Milgram's obedience studies, the proportion of participants delivering the maximum shock DROPPED most when:`,
-            options: [`The experimenter gave orders by phone rather than in person`, `Participants were paid more`, `The learner was in a separate room`, `Participants were told the study was about memory`],
+            options: [`The experimenter issued orders by phone`, `Participants were paid a larger fee`, `The learner was in a separate room`, `Participants were told the study was about memory`],
             correctAnswer: 0,
-            explanation: `Obedience is highly situational. When the authority figure was physically remote (e.g., issuing commands by telephone), obedience fell sharply. Increasing the VICTIM's proximity also reduced obedience, while the cover story and pay had little effect. This is the central lesson: situation, not just personality, drives obedience.`
+            explanation: `Obedience is highly situational. When the authority figure was physically remote (e.g., issuing commands by telephone), obedience fell sharply. Increasing the VICTIM's proximity also reduced obedience, whereas the separate-room arrangement was the standard baseline setup. The memory-study cover story was used in every variation, and payment was never varied as a condition, so neither explains a drop. This is the central lesson: situation, not just personality, drives obedience.`
           },
           {
             question: `An experienced pianist plays a well-rehearsed piece better in front of an audience but a beginner plays a difficult new piece worse. This pattern is explained by:`,
-            options: [`Social facilitation — arousal helps dominant (well-learned) responses and hurts complex ones`, `Social loafing`, `Deindividuation`, `Groupthink`],
+            options: [`Social facilitation`, `Social loafing`, `Stereotype threat`, `Diffusion of responsibility`],
             correctAnswer: 0,
-            explanation: `Social facilitation: the presence of others raises arousal, which enhances performance on simple/well-learned tasks (the expert's rehearsed piece) but impairs it on complex/novel tasks (the beginner's hard new piece). Note this requires the performer to be evaluated — contrast with social loafing, which occurs when effort is pooled and anonymous.`
+            explanation: `Social facilitation: the presence of others raises arousal, which enhances performance on simple/well-learned tasks (the expert's rehearsed piece) but impairs it on complex/novel tasks (the beginner's hard new piece). It is strongest when individual performance is identifiable — contrast with social loafing, which occurs when effort is pooled and anonymous. Stereotype threat requires a salient negative stereotype about one's group, and diffusion of responsibility concerns shared obligation to act (e.g., helping in an emergency), not skill-dependent performance.`
           }
         ]
       }

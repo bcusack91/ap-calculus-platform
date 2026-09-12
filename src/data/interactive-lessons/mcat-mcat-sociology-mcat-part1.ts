@@ -77,21 +77,21 @@ This is the canonical link between functionalism and the medical system the MCAT
         questions: [
           {
             question: `A sociologist argues that healthcare inequality exists because the wealthy benefit from maintaining the current system. This perspective is:`,
-            options: [`Conflict theory — focusing on power dynamics and inequality between social classes`, `Functionalism`, `Symbolic interactionism`, `Social constructionism`],
+            options: [`Conflict theory — groups compete for power and scarce resources`, `Functionalism — institutions persist because they serve society`, `Symbolic interactionism — meaning arises in everyday interaction`, `Social constructionism — reality is defined by shared agreement`],
             correctAnswer: 0,
             explanation: `Conflict theory (Marx) views society as a competition for resources. Healthcare inequality is maintained because it benefits the powerful — a classic conflict theory explanation. Functionalism would ask what purpose inequality serves for society as a whole.`
           },
           {
             question: `A researcher notes that public schools, beyond teaching academics, also keep children supervised during work hours and create friendship networks. These supervisory and networking outcomes are best described as:`,
-            options: [`Latent functions`, `Manifest functions`, `Latent dysfunctions`, `Anomie`],
+            options: [`Latent functions`, `Manifest functions`, `Latent dysfunctions`, `Hidden curriculum`],
             correctAnswer: 0,
-            explanation: `Merton's latent functions are beneficial consequences that are unintended and largely unrecognized by participants. Teaching academics is the manifest (intended) function; supervision and network-building are latent functions. If the unintended outcome were harmful (e.g., reinforcing class inequality), it would be a latent dysfunction.`
+            explanation: `Merton's latent functions are beneficial consequences that are unintended and largely unrecognized by participants. Teaching academics is the manifest (intended) function; supervision and network-building are latent functions. If the unintended outcome were harmful (e.g., reinforcing class inequality), it would be a latent dysfunction. The hidden curriculum refers to the implicit norms and values schools teach (punctuality, obedience), not supervision or friendship networks.`
           },
           {
             question: `A study finds that people most often hear about new clinical-trial opportunities from acquaintances rather than close friends. This finding is best explained by:`,
-            options: [`Granovetter's strength of weak ties`, `Durkheim's anomie`, `The sick role`, `Conflict theory`],
+            options: [`The strength of weak ties`, `Bonding social capital`, `Primary-group influence`, `Durkheim's social integration`],
             correctAnswer: 0,
-            explanation: `Weak ties (acquaintances) connect otherwise separate social clusters, so they channel NEW information that close friends — who tend to share the same dense network and thus the same information — do not. This is Granovetter's "strength of weak ties," a high-yield social-network concept.`
+            explanation: `Weak ties (acquaintances) connect otherwise separate social clusters, so they channel NEW information that close friends — who tend to share the same dense network and thus the same information — do not. This is Granovetter's "strength of weak ties," a high-yield social-network concept. Bonding social capital and primary groups describe close, dense ties, which tend to recirculate information members already share; Durkheim's social integration concerns attachment to society, not how information travels.`
           }
         ]
       }

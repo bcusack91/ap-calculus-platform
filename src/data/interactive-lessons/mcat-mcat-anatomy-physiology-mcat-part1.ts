@@ -75,19 +75,19 @@ Remodeling is hormonally controlled:
         questions: [
           {
             question: `A researcher adds a drug that blocks the SERCA pump in isolated skeletal muscle fibers, then stimulates them once. Compared with normal fibers, the treated fibers will most likely:`,
-            options: [`Fail to relax normally, remaining contracted because cytosolic $Ca^{2+}$ cannot be cleared`, `Fail to contract at all because $Ca^{2+}$ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because $Ca^{2+}$ is pumped out of the cell`],
+            options: [`Fail to relax normally because cytosolic $Ca^{2+}$ stays high`, `Fail to contract at all because $Ca^{2+}$ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because $Ca^{2+}$ is pumped out of the cell instead`],
             correctAnswer: 0,
             explanation: `SERCA pumps cytosolic $Ca^{2+}$ back into the SR to terminate contraction. Block it and $Ca^{2+}$ stays high, keeping troponin occupied and tropomyosin off the binding sites → sustained contraction (impaired relaxation). The trap "fail to contract" confuses SERCA (relaxation) with the ryanodine release channel (contraction) — $Ca^{2+}$ release is unaffected here. SERCA pumps into the SR, not out of the cell.`
           },
           {
             question: `An experimental sarcomere is stretched so far that thick and thin filaments barely overlap, then stimulated. The force it generates is much lower than at resting length. This is best explained by:`,
-            options: [`Fewer cross-bridges can form between myosin and actin at extreme length`, `Less $Ca^{2+}$ is released from the SR at long sarcomere lengths`, `Troponin loses its affinity for $Ca^{2+}$ when stretched`, `ATP hydrolysis is inhibited by the increased length`],
+            options: [`Fewer myosin heads can form cross-bridges with actin when stretched`, `Less $Ca^{2+}$ is released from the SR at long sarcomere lengths`, `Troponin loses its affinity for $Ca^{2+}$ when stretched`, `ATP hydrolysis by myosin is inhibited by the increased length`],
             correctAnswer: 0,
             explanation: `Active force depends on the number of cross-bridges, which depends on filament overlap (the length–tension relationship). At extreme stretch, overlap is minimal, so few heads can bind actin and force falls. $Ca^{2+}$ release, troponin affinity, and ATP hydrolysis are not the length-dependent limiters here — the geometry of overlap is. This is the molecular basis of the Frank–Starling-style length–tension curve.`
           },
           {
             question: `A patient with chronic kidney disease cannot activate vitamin D and develops low blood $Ca^{2+}$. The expected compensatory hormonal change and its effect on bone is:`,
-            options: [`Increased PTH, which stimulates osteoclast-mediated resorption, releasing $Ca^{2+}$ from bone`, `Increased calcitonin, which drives $Ca^{2+}$ into bone`, `Decreased PTH, which spares bone from resorption`, `Increased calcitonin, which stimulates osteoblasts to absorb $Ca^{2+}$`],
+            options: [`Increased PTH, which drives osteoclast resorption, releasing bone $Ca^{2+}$`, `Increased calcitonin, which drives $Ca^{2+}$ into bone`, `Decreased PTH, which spares bone from osteoclast resorption`, `Increased calcitonin, which stimulates osteoblasts to absorb $Ca^{2+}$`],
             correctAnswer: 0,
             explanation: `Low blood $Ca^{2+}$ is sensed by the parathyroid glands → PTH rises. PTH increases osteoclast activity (via RANKL), liberating $Ca^{2+}$ from bone, and boosts renal $Ca^{2+}$ reabsorption. Chronically this causes renal osteodystrophy (weakened bone). Calcitonin would *lower* blood $Ca^{2+}$ — the wrong direction for a hypocalcemic patient — so the calcitonin options are traps.`
           }

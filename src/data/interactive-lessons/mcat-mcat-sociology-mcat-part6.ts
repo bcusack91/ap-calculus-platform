@@ -73,21 +73,21 @@ export const mcatSociologyPart6Data = {
         questions: [
           {
             question: `A patient from a different culture refuses a blood transfusion for religious reasons. A physician who first seeks to understand the belief within its cultural context rather than dismissing it is practicing:`,
-            options: [`Cultural relativism — understanding behavior within its own cultural context`, `Ethnocentrism`, `Anomie`, `Cultural lag`],
+            options: [`Cultural relativism`, `Ethnocentrism`, `Cultural assimilation`, `Cultural diffusion`],
             correctAnswer: 0,
-            explanation: `Cultural relativism evaluates beliefs within their cultural context rather than by the observer's own standards (ethnocentrism, option 2). It underlies cultural competence in medicine. Anomie (option 3) is normlessness during social breakdown — unrelated. Cultural lag (option 4) is non-material culture trailing material/technological change — also unrelated to the physician's stance here.`
+            explanation: `Cultural relativism evaluates beliefs within their cultural context rather than by the observer's own standards (ethnocentrism). It underlies cultural competence in medicine. Cultural assimilation is a minority group's absorption into the dominant culture, and cultural diffusion is the spread of cultural traits between societies — neither describes the physician's interpretive stance here.`
           },
           {
             question: `A pre-medical student spends years adopting the language, dress, and demeanor of physicians before ever entering medical school. This rehearsal of a not-yet-occupied role is BEST termed:`,
-            options: [`Anticipatory socialization`, `Resocialization`, `Primary socialization`, `The hidden curriculum`],
+            options: [`Anticipatory socialization`, `Resocialization in a total institution`, `Primary socialization`, `The hidden curriculum`],
             correctAnswer: 0,
-            explanation: `Anticipatory socialization is learning the norms of a role one expects to occupy in the future. Resocialization (option 2) involves shedding an old identity for a new one, usually in a total institution — not merely preparing for a role. Primary socialization (option 3) is early childhood learning. The hidden curriculum (option 4) is implicit lessons schools teach, not role rehearsal.`
+            explanation: `Anticipatory socialization is learning the norms of a role one expects to occupy in the future. Resocialization involves shedding an old identity for a new one, typically inside a total institution such as the military or a prison — not merely preparing for a future role. Primary socialization is early childhood learning. The hidden curriculum is the implicit lessons schools teach, not role rehearsal.`
           },
           {
             question: `A passage argues that the values of the dominant class are presented as universal "common sense," so the disadvantaged accept arrangements that disadvantage them. This analysis of culture reflects:`,
-            options: [`Conflict theory — cultural hegemony (Gramsci) serving the powerful`, `Functionalism — culture as value consensus that promotes cohesion`, `Symbolic interactionism — meaning built through interaction`, `Cultural relativism`],
+            options: [`Conflict theory — Gramsci's cultural hegemony serving the powerful`, `Functionalism — culture as value consensus that promotes cohesion`, `Symbolic interactionism — meaning built through interaction`, `Cultural relativism — judging practices in their own context`],
             correctAnswer: 0,
-            explanation: `Cultural hegemony — dominant-class values becoming taken-for-granted "common sense" that legitimizes inequality — is a conflict-theory concept (Gramsci). The functionalist trap (option 2) reads shared culture positively, as cohesion-producing value consensus, rather than as elite domination. Symbolic interactionism operates at the micro level of meaning, and cultural relativism is a methodological stance, not an account of power.`
+            explanation: `Cultural hegemony — dominant-class values becoming taken-for-granted "common sense" that legitimizes inequality — is a conflict-theory concept (Gramsci). The functionalist trap reads shared culture positively, as cohesion-producing value consensus, rather than as elite domination. Symbolic interactionism operates at the micro level of meaning, and cultural relativism is a methodological stance, not an account of power.`
           }
         ]
       }

@@ -73,9 +73,9 @@ $$J_v \\propto (P_c - P_i) - (\\pi_c - \\pi_i)$$
         questions: [
           {
             question: `During exercise, cardiac output increases primarily through:`,
-            options: [`Increased heart rate AND increased stroke volume`, `Increased heart rate only`, `Decreased peripheral resistance only`, `Increased blood vessel diameter only`],
+            options: [`Increased heart rate and stroke volume`, `Increased stroke volume with heart rate unchanged`, `Decreased peripheral resistance only`, `Increased blood vessel diameter only`],
             correctAnswer: 0,
-            explanation: `CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise.`
+            explanation: `CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise; heart rate does not stay unchanged.`
           },
           {
             question: `An arteriole vasoconstricts so that its radius decreases to one-half its original value. Assuming flow is driven by the same pressure gradient, resistance to flow through that vessel:`,
@@ -85,7 +85,7 @@ $$J_v \\propto (P_c - P_i) - (\\pi_c - \\pi_i)$$
           },
           {
             question: `A patient with severe liver disease has very low plasma albumin. The most direct cardiovascular consequence is:`,
-            options: [`Edema due to reduced capillary oncotic pressure`, `Increased capillary reabsorption of fluid`, `Hypertension from increased blood viscosity`, `Reduced cardiac preload from blood loss`],
+            options: [`Edema due to reduced capillary oncotic pressure`, `Increased capillary reabsorption of interstitial fluid`, `Hypertension from increased blood viscosity`, `Reduced cardiac preload from blood loss`],
             correctAnswer: 0,
             explanation: `Albumin generates plasma oncotic pressure ($\\pi_c$), which normally pulls fluid back into capillaries at the venular end. Low albumin → low $\\pi_c$ → filtration exceeds reabsorption → fluid accumulates in the interstitium (edema/ascites). This links cardiovascular Starling forces to hepatic and renal pathology.`
           }

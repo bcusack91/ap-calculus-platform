@@ -74,21 +74,21 @@ The **hypothalamus** is the body's thermostat (set point ~37 °C).
         questions: [
           {
             question: `A patient sustains a large third-degree burn over the trunk. Which complication is the most immediate life-threatening concern, and why?`,
-            options: [`Massive fluid and electrolyte loss, because the epidermal barrier that prevents evaporation is destroyed`, `Severe pain, because the burned nociceptors fire continuously`, `Hypothermia, because melanin can no longer absorb UV`, `Vitamin D deficiency, because 7-dehydrocholesterol is gone`],
+            options: [`Fluid and electrolyte loss, because the skin's barrier is destroyed`, `Severe pain, because the burned nociceptors fire continuously`, `Hypothermia, because melanin can no longer absorb UV radiation`, `Vitamin D deficiency, because 7-dehydrocholesterol is gone`],
             correctAnswer: 0,
-            explanation: `Third-degree burns destroy the full-thickness barrier, so the body loses fluid and electrolytes rapidly by evaporation and exudation — the leading early cause of shock in burn patients (along with infection). Notably, full-thickness burns are *painless* in the burned area because nociceptors are destroyed, which rules out the "severe pain" trap. The vitamin D and UV options are not acute threats.`
+            explanation: `Third-degree burns destroy the full-thickness barrier that prevents evaporation, so the body loses fluid and electrolytes rapidly by evaporation and exudation — the leading early cause of shock in burn patients (along with infection). Notably, full-thickness burns are *painless* in the burned area because nociceptors are destroyed, which rules out the "severe pain" trap. The vitamin D and UV options are not acute threats.`
           },
           {
             question: `A long-distance runner competes in a hot, very humid environment and her core temperature climbs despite heavy sweating. The best physiological explanation is that:`,
-            options: [`High humidity reduces evaporation, so sweat drips off without removing much heat`, `Sweating triggers vasoconstriction, trapping heat in the core`, `Sweat glands stop producing sweat above 37 °C`, `Melanin production blocks heat loss from the skin`],
+            options: [`High humidity limits evaporation, so sweat removes little heat`, `Sweating triggers vasoconstriction, trapping heat in the core`, `Sweat glands shut down once core temperature exceeds 37 °C`, `Increased melanin production blocks radiant heat loss from the skin`],
             correctAnswer: 0,
-            explanation: `Sweat cools by *evaporation* (latent heat of vaporization). In high humidity the air is near saturation, so sweat cannot evaporate efficiently and simply drips off — carrying away little heat — even though the body keeps producing it. Heat stress causes vasodilation (not vasoconstriction), sweat glands keep working, and melanin governs UV, not heat loss.`
+            explanation: `Sweat cools by *evaporation* (latent heat of vaporization). In high humidity the air is near saturation, so sweat cannot evaporate efficiently and simply drips off — carrying away little heat — even though the body keeps producing it. Heat stress causes vasodilation (not vasoconstriction), sweat glands keep working at high core temperatures, and melanin governs UV absorption, not radiant heat loss.`
           },
           {
             question: `A pharmaceutical company develops a topical drug and finds it works only if it can reach the dermal blood supply. Which property must the formulation have to be absorbed, given the structure of the epidermis?`,
-            options: [`It must cross the avascular, lipid-rich stratum corneum, favoring lipophilic molecules`, `It must be highly water-soluble to dissolve in epidermal capillaries`, `It must target melanocytes in the stratum corneum`, `It must be injected because the epidermis is impermeable to all molecules`],
+            options: [`It must be lipophilic enough to cross the lipid-rich stratum corneum`, `It must be highly water-soluble to dissolve in epidermal capillaries`, `It must be taken up by melanocytes in the stratum corneum`, `It must be injected because the epidermis is impermeable to all molecules`],
             correctAnswer: 0,
-            explanation: `The epidermis is avascular, so a topical drug must diffuse down through the dead, lipid-rich stratum corneum to reach dermal capillaries; lipophilic, small molecules cross this barrier best (the basis of transdermal patches). There are no capillaries in the epidermis (ruling out the water-soluble option), melanocytes reside in the basale not the corneum, and the epidermis is selectively — not absolutely — impermeable.`
+            explanation: `The epidermis is avascular, so a topical drug must diffuse down through the dead, lipid-rich stratum corneum to reach dermal capillaries; lipophilic, small molecules cross this barrier best (the basis of transdermal patches). There are no capillaries in the epidermis (ruling out the water-soluble option), melanocytes reside in the stratum basale, not the corneum, and the epidermis is selectively — not absolutely — impermeable.`
           }
         ]
       }

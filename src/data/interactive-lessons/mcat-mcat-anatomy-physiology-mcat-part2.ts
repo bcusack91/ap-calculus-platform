@@ -72,21 +72,21 @@ Endometrium: shed → proliferative → ───── secretory ────�
         questions: [
           {
             question: `A combined oral contraceptive delivers steady estrogen + progestin throughout the cycle. The most direct reason it prevents pregnancy is that it:`,
-            options: [`Maintains negative feedback on the pituitary, suppressing the LH surge and preventing ovulation`, `Causes positive feedback that prematurely depletes all follicles`, `Directly blocks fertilization in the fallopian tube`, `Stimulates the corpus luteum to overproduce progesterone`],
+            options: [`Keeps feedback negative, so no LH surge triggers ovulation`, `Causes positive feedback that prematurely depletes all follicles`, `Directly blocks sperm–egg fusion in the fallopian tube`, `Stimulates the corpus luteum to overproduce progesterone`],
             correctAnswer: 0,
-            explanation: `Constant exogenous estrogen/progestin keeps hypothalamic–pituitary feedback in the *negative* mode, so the mid-cycle estrogen threshold that normally flips feedback to positive is never reached. Without the LH surge, no ovulation occurs. The "positive feedback" and "block fertilization" options describe the wrong mechanism — the pill works upstream by preventing egg release, not by acting at the tube.`
+            explanation: `Constant exogenous estrogen/progestin keeps hypothalamic–pituitary feedback in the *negative* mode, suppressing pituitary gonadotropin release, so the mid-cycle estrogen threshold that normally flips feedback to positive is never reached. Without the LH surge, no ovulation occurs. The "positive feedback" and "block fertilization" options describe the wrong mechanism — the pill works upstream by preventing egg release, not by acting at the tube.`
           },
           {
             question: `In an IVF clinic, a researcher examines an oocyte arrested at metaphase II that has just been penetrated by a sperm. What completes next, and what is the immediate product?`,
-            options: [`Meiosis II completes, yielding a mature ovum and a second polar body`, `Meiosis I completes, yielding a secondary oocyte and first polar body`, `Mitosis begins immediately, producing two identical daughter cells`, `Meiosis II completes, yielding two functional ova`],
+            options: [`Meiosis II completes, yielding a mature ovum and a second polar body`, `Meiosis I completes, yielding a secondary oocyte and first polar body`, `Mitosis begins immediately, producing two identical daughter cells`, `Meiosis II completes, yielding two functional haploid ova`],
             correctAnswer: 0,
             explanation: `The secondary oocyte is arrested in metaphase II and only finishes meiosis II upon fertilization, producing one ovum (keeping the cytoplasm) and a small second polar body. Meiosis I already finished at ovulation, so that option is too early. Oogenesis never yields two functional ova — unequal division conserves resources for a single egg.`
           },
           {
             question: `A pregnant patient's blood is sampled at week 6. Which finding best explains why her endometrium has NOT been shed despite the time elapsed since her last period?`,
-            options: [`Trophoblast-derived hCG is sustaining the corpus luteum, keeping progesterone high`, `The LH surge is being repeated monthly to maintain the lining`, `FSH is elevated, driving continued endometrial proliferation`, `Calcitonin is preventing endometrial breakdown`],
+            options: [`hCG is sustaining the corpus luteum, keeping progesterone high`, `The LH surge is being repeated monthly to maintain the lining`, `FSH is elevated, driving continued endometrial proliferation`, `Oxytocin is keeping the uterine lining from being shed`],
             correctAnswer: 0,
-            explanation: `In pregnancy the blastocyst's trophoblast secretes hCG, an LH analog that rescues the corpus luteum so it continues secreting progesterone — and progesterone maintains the secretory endometrium, preventing menstruation. There is no repeated monthly LH surge during pregnancy, FSH is suppressed, and calcitonin regulates calcium, not the endometrium — all distractors.`
+            explanation: `In pregnancy the blastocyst's trophoblast secretes hCG, an LH analog that rescues the corpus luteum so it continues secreting progesterone — and progesterone maintains the secretory endometrium, preventing menstruation. There is no repeated monthly LH surge during pregnancy, FSH is suppressed, and oxytocin stimulates uterine contraction rather than preserving the lining — all distractors.`
           }
         ]
       }

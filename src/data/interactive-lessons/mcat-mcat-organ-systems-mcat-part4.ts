@@ -71,21 +71,21 @@ The thick ascending limb actively pumps $Na^{+}/K^{+}/2Cl^{-}$ out (impermeable 
         questions: [
           {
             question: `A patient with diabetes insipidus (ADH deficiency) would present with:`,
-            options: [`Large volumes of dilute urine (can't reabsorb water in collecting duct)`, `Small volumes of concentrated urine`, `High blood glucose`, `Edema`],
+            options: [`Large volumes of dilute urine and thirst`, `Small volumes of concentrated urine`, `Glucosuria from high blood glucose`, `Dilutional hyponatremia from water retention`],
             correctAnswer: 0,
-            explanation: `Without ADH, aquaporins aren't inserted in the collecting duct → water can't be reabsorbed → large volumes of very dilute urine (polyuria) + excessive thirst (polydipsia). Not to be confused with diabetes mellitus!`
+            explanation: `Without ADH, aquaporins aren't inserted in the collecting duct → water can't be reabsorbed → large volumes of very dilute urine (polyuria) + excessive thirst (polydipsia). Not to be confused with diabetes mellitus, which causes high blood glucose and glucosuria! Water retention with dilutional hyponatremia is the picture of ADH EXCESS (SIADH), the opposite condition.`
           },
           {
             question: `Constriction of the EFFERENT arteriole (e.g., by angiotensin II at moderate levels) will, in the short term:`,
-            options: [`Increase glomerular capillary pressure and increase GFR`, `Decrease glomerular capillary pressure and decrease GFR`, `Have no effect on GFR`, `Decrease both renal blood flow and GFR proportionally`],
+            options: [`Increase glomerular capillary pressure and increase GFR`, `Decrease glomerular capillary pressure and decrease GFR`, `Have no effect on GFR, since filtration is autoregulated`, `Decrease both renal blood flow and GFR proportionally`],
             correctAnswer: 0,
             explanation: `The efferent arteriole is downstream of the glomerulus. Constricting it dams blood in the glomerular capillary, raising $P_{GC}$ → higher net filtration pressure → higher GFR (even though total renal blood flow falls). This is why ACE inhibitors can drop GFR in renal artery stenosis: they remove angiotensin II's efferent constriction.`
           },
           {
             question: `Inulin clearance is 120 mL/min. A drug X has a clearance of 480 mL/min. What can you conclude about drug X?`,
-            options: [`It is filtered and net secreted by the tubule`, `It is filtered and net reabsorbed`, `It is neither filtered nor secreted`, `It binds plasma proteins and cannot be filtered`],
+            options: [`It is filtered and net secreted by the tubule`, `It is freely filtered and net reabsorbed`, `It is filtered but neither secreted nor reabsorbed`, `It binds plasma proteins and cannot be filtered`],
             correctAnswer: 0,
-            explanation: `Inulin clearance = GFR = 120 mL/min. Because $C_X$ (480) far exceeds GFR, the kidney must be adding X to the tubular fluid beyond filtration → net secretion. Clearance above GFR always implies secretion; below GFR implies reabsorption.`
+            explanation: `Inulin clearance = GFR = 120 mL/min. Because $C_X$ (480) far exceeds GFR, the kidney must be adding X to the tubular fluid beyond filtration → net secretion. Clearance above GFR always implies secretion; below GFR implies reabsorption. A substance filtered but neither secreted nor reabsorbed would have a clearance equal to GFR, like inulin itself.`
           }
         ]
       }

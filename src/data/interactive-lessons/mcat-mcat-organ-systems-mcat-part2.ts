@@ -85,21 +85,21 @@ $$\\uparrow P_{CO_2} \\to \\uparrow \\text{H}^+ \\text{ in CSF} \\to \\text{cent
         questions: [
           {
             question: `During intense exercise, the O$_2$-hemoglobin dissociation curve shifts RIGHT because:`,
-            options: [`Increased CO$_2$, lower pH, and higher temperature all promote O$_2$ release to working muscles`, `Muscles need less oxygen`, `Hemoglobin concentration increases`, `The lungs absorb more oxygen`],
+            options: [`Rising CO$_2$, acidity, and heat lower Hb's O$_2$ affinity`, `Working muscles consume less oxygen during intense exercise`, `Hemoglobin concentration increases in working muscle capillaries`, `The lungs load more oxygen onto each hemoglobin molecule`],
             correctAnswer: 0,
-            explanation: `Active muscles produce CO$_2$, lactic acid (lower pH), and heat. All three right-shift the curve (Bohr effect), lowering Hb's $O_{2}$ affinity so more $O_{2}$ is released exactly where it is needed. "Muscles need less oxygen" is the opposite of reality; Hb concentration and lung uptake do not change the curve's position.`
+            explanation: `Active muscles produce CO$_2$, lactic acid (lower pH), and heat. All three right-shift the curve (Bohr effect), lowering Hb's $O_{2}$ affinity so more $O_{2}$ is released to working muscles exactly where it is needed. The claim that muscles consume less oxygen is the opposite of reality; Hb concentration and lung loading do not change the curve's position.`
           },
           {
             question: `A climber at 4500 m has a chronically low arterial $P_{O_2}$. Over days, RBCs upregulate 2,3-BPG. The adaptive benefit of increased 2,3-BPG is best described as:`,
-            options: [`It right-shifts the curve, improving $O_{2}$ unloading at the tissues despite low arterial $P_{O_2}$`, `It left-shifts the curve so the lungs load $O_{2}$ more easily`, `It increases the total number of hemoglobin molecules`, `It directly increases alveolar surface area`],
+            options: [`It right-shifts the curve, improving $O_{2}$ unloading in tissues`, `It left-shifts the curve so the lungs load $O_{2}$ more easily`, `It increases the total number of hemoglobin molecules per RBC`, `It stimulates erythropoietin release, raising the hematocrit`],
             correctAnswer: 0,
-            explanation: `2,3-BPG binds deoxyhemoglobin and stabilizes the low-affinity (T) state, right-shifting the curve. On the steep portion of the curve this markedly improves $O_{2}$ delivery to tissues. A left shift (option 2) would hold $O_{2}$ more tightly and worsen unloading — the wrong direction. 2,3-BPG changes affinity, not Hb quantity or alveolar area.`
+            explanation: `2,3-BPG binds deoxyhemoglobin and stabilizes the low-affinity (T) state, right-shifting the curve. On the steep portion of the curve this markedly improves $O_{2}$ delivery to tissues despite the low arterial $P_{O_2}$. A left shift would hold $O_{2}$ more tightly and worsen unloading — the wrong direction. 2,3-BPG changes affinity, not Hb quantity, and it does not trigger erythropoietin release; raised EPO is a separate kidney response to hypoxia.`
           },
           {
             question: `A patient with pulmonary fibrosis has thickened alveolar membranes. By Fick's law, which intervention would MOST directly compensate for impaired $O_{2}$ diffusion?`,
-            options: [`Increasing inspired $O_{2}$ fraction to raise the alveolar–capillary $P_{O_2}$ gradient`, `Lowering the patient's body temperature`, `Decreasing the alveolar surface area`, `Reducing hemoglobin concentration`],
+            options: [`Raising the inspired $O_{2}$ fraction`, `Lowering the patient's body temperature`, `Decreasing the alveolar surface area`, `Reducing hemoglobin concentration`],
             correctAnswer: 0,
-            explanation: `Fick's law: $V_{gas} \\propto A \\cdot (P_1 - P_2)/T$. Fibrosis raises $T$ (thickness), reducing flux. You cannot easily thin the membrane, but supplemental $O_{2}$ raises alveolar $P_{O_2}$, increasing the $(P_1 - P_2)$ gradient to partially offset the larger $T$. Decreasing surface area (option 3) reduces $A$ and worsens exchange; temperature and Hb concentration do not appear in Fick's diffusion equation.`
+            explanation: `Fick's law: $V_{gas} \\propto A \\cdot (P_1 - P_2)/T$. Fibrosis raises $T$ (thickness), reducing flux. You cannot easily thin the membrane, but supplemental $O_{2}$ raises alveolar $P_{O_2}$, increasing the alveolar–capillary $(P_1 - P_2)$ gradient to partially offset the larger $T$. Decreasing surface area reduces $A$ and worsens exchange; temperature and Hb concentration do not appear in Fick's diffusion equation.`
           }
         ]
       }

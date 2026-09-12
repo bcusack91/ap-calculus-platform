@@ -68,21 +68,21 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
         questions: [
           {
             question: `Bile salts aid fat digestion by:`,
-            options: [`Emulsifying large fat globules into smaller droplets (increasing surface area for lipase)`, `Directly breaking down triglycerides`, `Neutralizing stomach acid`, `Activating pepsinogen`],
+            options: [`Emulsifying fat globules into smaller droplets`, `Hydrolyzing triglycerides into free fatty acids`, `Neutralizing acidic chyme entering the duodenum`, `Converting pepsinogen into active pepsin`],
             correctAnswer: 0,
-            explanation: `Bile salts are amphipathic — they break large fat globules into smaller micelles (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT chemically digest fat (option 2) — it physically prepares fat. Acid neutralization is bicarbonate's job; pepsinogen is activated by HCl.`
+            explanation: `Bile salts are amphipathic — they break large fat globules into smaller droplets (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT chemically digest fat — hydrolyzing triglycerides is lipase's job; bile physically prepares fat. Neutralizing acidic chyme is bicarbonate's job; pepsinogen is activated by HCl.`
           },
           {
             question: `Surgical removal of the terminal ileum would most likely cause which two deficiencies, and why?`,
-            options: [`Vitamin B$_{12}$ deficiency and bile-salt malabsorption, because both are absorbed in the ileum`, `Iron and calcium deficiency, because both are absorbed in the ileum`, `Protein and carbohydrate malabsorption, because all enzymes act in the ileum`, `Water-soluble vitamin loss only, because the ileum absorbs all vitamins`],
+            options: [`Vitamin B$_{12}$ deficiency and bile-salt malabsorption, because both are taken up in the ileum`, `Iron and calcium deficiency, because both are absorbed in the ileum`, `Protein and carbohydrate malabsorption, because all enzymes act in the ileum`, `Water-soluble vitamin loss only, because the ileum absorbs all vitamins`],
             correctAnswer: 0,
-            explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → $B_{12}$ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed in the duodenum (option 2); most macronutrient absorption occurs in the jejunum (option 3).`
+            explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → $B_{12}$ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed mainly in the duodenum, not the ileum; most macronutrient absorption occurs in the jejunum; and the ileum does not absorb all vitamins.`
           },
           {
             question: `A patient takes a proton-pump inhibitor that strongly suppresses parietal-cell HCl secretion. By negative feedback, blood levels of which hormone would RISE, and what downstream effect is impaired?`,
-            options: [`Gastrin rises; pepsinogen activation and $B_{12}$ absorption are impaired due to low acid and reduced intrinsic factor effectiveness`, `Secretin rises; bicarbonate secretion is impaired`, `CCK rises; bile release is impaired`, `Gastrin falls; acid secretion increases`],
+            options: [`Gastrin rises; pepsinogen activation is impaired by low acid`, `Secretin rises; pancreatic bicarbonate secretion is impaired`, `CCK rises; gallbladder contraction and bile release are impaired`, `Gastrin falls; gastric acid secretion increases in compensation`],
             correctAnswer: 0,
-            explanation: `Acid normally suppresses gastrin (negative feedback). Blocking acid removes that inhibition, so G cells release MORE gastrin (hypergastrinemia). Low gastric acid impairs pepsin activation (pepsinogen needs acid) and reduces nonheme iron and $B_{12}$ availability. Secretin and CCK respond to duodenal acid/fat, not directly to parietal-cell blockade; option 4 reverses the feedback logic.`
+            explanation: `Acid normally suppresses gastrin (negative feedback). Blocking acid removes that inhibition, so G cells release MORE gastrin (hypergastrinemia). Low gastric acid impairs pepsin activation (pepsinogen needs acid) and reduces nonheme iron and $B_{12}$ availability. Secretin and CCK respond to duodenal acid/fat, not directly to parietal-cell blockade; a falling gastrin reverses the feedback logic.`
           }
         ]
       }

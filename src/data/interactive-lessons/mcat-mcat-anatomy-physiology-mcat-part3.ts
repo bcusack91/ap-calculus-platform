@@ -75,21 +75,21 @@ These close at birth when the lungs inflate and pressures shift; a patent ductus
         questions: [
           {
             question: `In a frog embryo, a researcher surgically removes the notochord before the overlying ectoderm has formed a neural plate. The most likely result is:`,
-            options: [`The neural plate fails to form, because the notochord normally induces it`, `The neural plate forms early from mesoderm instead`, `Two neural tubes form due to loss of inhibition`, `The ectoderm differentiates into endoderm`],
+            options: [`The neural plate fails to form without notochord induction`, `The neural plate forms early from mesoderm instead of ectoderm`, `Two neural tubes form due to loss of inhibition`, `The overlying ectoderm transdifferentiates into endoderm`],
             correctAnswer: 0,
             explanation: `The notochord is the classic inducer of neurulation: it secretes signals (e.g., Sonic hedgehog) that instruct the overlying ectoderm to become the neural plate/tube. Remove the inducer and the induced structure fails to form. The neural plate is ectodermal (not mesodermal), and removing an inducer causes loss, not duplication, of the structure.`
           },
           {
             question: `A patient is born with the adrenal cortex intact but a defective adrenal medulla. From a developmental standpoint, which other tissue is most likely affected by the same underlying defect?`,
-            options: [`Melanocytes, because both derive from neural crest (ectoderm)`, `Skeletal muscle, because both derive from mesoderm`, `Liver, because both derive from endoderm`, `Kidney tubules, because both derive from mesoderm`],
+            options: [`Melanocytes, because both derive from neural crest`, `Skeletal muscle, because both derive from mesoderm`, `Thyroid follicles, because both derive from endoderm`, `Kidney tubules, because both derive from mesoderm`],
             correctAnswer: 0,
-            explanation: `The adrenal medulla and melanocytes are both neural crest derivatives (ectoderm), so a neural-crest defect could affect both. The adrenal *cortex*, in contrast, is mesodermal — which is the trap behind the muscle and kidney options. Liver is endoderm. This "split adrenal gland" is a high-yield discrimination point.`
+            explanation: `The adrenal medulla and melanocytes are both neural crest derivatives (ectoderm), so a neural-crest defect could affect both. The adrenal *cortex*, in contrast, is mesodermal — which is the trap behind the muscle and kidney options. Thyroid follicular cells derive from endoderm, not neural crest. This "split adrenal gland" is a high-yield discrimination point.`
           },
           {
             question: `During cleavage, the total volume of the early embryo stays roughly constant even though cell number rises sharply. What is the direct consequence most relevant to development?`,
-            options: [`The nuclear-to-cytoplasmic ratio increases as cells get smaller`, `Each cell accumulates more cytoplasm, increasing totipotency`, `The embryo grows substantially in mass before implantation`, `DNA replication halts to conserve resources`],
+            options: [`The nuclear-to-cytoplasmic ratio rises as cells get smaller`, `Each cell accumulates more cytoplasm, increasing totipotency`, `The embryo grows substantially in mass before implantation`, `DNA replication pauses between divisions to conserve resources`],
             correctAnswer: 0,
-            explanation: `Cleavage is mitosis without growth: the same cytoplasm is partitioned into more, smaller cells, so the nuclear:cytoplasmic ratio rises — a prerequisite for normal gene-expression control later. Cells get *less* cytoplasm (not more), the embryo does not gain mass during cleavage, and DNA replication continues every cycle (that's how cell number rises).`
+            explanation: `Cleavage is mitosis without growth: the same cytoplasm is partitioned into more, smaller cells, so the nuclear:cytoplasmic ratio rises — a prerequisite for normal gene-expression control later. Cells get *less* cytoplasm (not more), the embryo does not gain mass during cleavage, and DNA replication does not pause — it occurs in every rapid cycle (that's how cell number rises).`
           }
         ]
       }
