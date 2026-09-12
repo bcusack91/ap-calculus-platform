@@ -325,14 +325,14 @@ export default function FlashcardReviewPage() {
                     }`}
                     style={{ backfaceVisibility: 'hidden' }}
                   >
-                    <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] h-full flex flex-col justify-center">
+                    <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 min-h-[350px] h-full flex flex-col justify-center">
                       <div className="text-sm text-accent-dark font-semibold mb-4">QUESTION</div>
-                      <div className="text-xl prose prose-purple max-w-none text-gray-900">
+                      <div className="text-xl prose dark:prose-invert prose-purple max-w-none text-foreground">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.front))}
                         </ReactMarkdown>
                       </div>
-                      <div className="mt-8 text-sm text-gray-600 text-center italic">
+                      <div className="mt-8 text-sm text-muted-foreground text-center italic">
                         Click to reveal answer
                       </div>
                     </div>
@@ -345,14 +345,14 @@ export default function FlashcardReviewPage() {
                 }`}
                 style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               >
-                <div className="border-2 border-green-300 rounded-xl p-10 bg-gradient-to-br from-green-50 to-emerald-50 min-h-[350px] h-full flex flex-col justify-center">
-                  <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
-                  <div className="text-xl prose prose-green max-w-none text-gray-900">
+                <div className="border-2 border-green-300 dark:border-green-700 rounded-xl p-10 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/40 dark:to-emerald-950/40 min-h-[350px] h-full flex flex-col justify-center">
+                  <div className="text-sm text-green-900 dark:text-green-300 font-semibold mb-4">ANSWER</div>
+                  <div className="text-xl prose dark:prose-invert prose-green max-w-none text-foreground">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                       {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.back))}
                     </ReactMarkdown>
                   </div>
-                  <div className="mt-8 text-sm text-gray-600 text-center">
+                  <div className="mt-8 text-sm text-muted-foreground text-center">
                     <span className="font-semibold">Topic:</span> {currentCard.flashcard.topic.title}
                   </div>
                 </div>
@@ -371,9 +371,9 @@ export default function FlashcardReviewPage() {
                   💡 Show Hint
                 </button>
               ) : (
-                <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
-                  <div className="text-sm prose prose-yellow max-w-none text-gray-900">
+                <div className="p-4 bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+                  <div className="text-sm text-yellow-900 dark:text-yellow-200 font-semibold mb-2">💡 HINT</div>
+                  <div className="text-sm prose dark:prose-invert prose-yellow max-w-none text-foreground">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                       {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.hint || ''))}
                     </ReactMarkdown>

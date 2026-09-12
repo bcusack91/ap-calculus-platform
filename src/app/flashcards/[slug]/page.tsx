@@ -209,16 +209,16 @@ export default function FlashcardStudyPage() {
                     }`}
                     style={{ backfaceVisibility: 'hidden' }}
                   >
-                    <div className="border-2 border-accent-muted rounded-lg p-8 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[300px] flex flex-col justify-center">
+                    <div className="border-2 border-accent-muted rounded-lg p-8 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 min-h-[300px] flex flex-col justify-center">
                       <div className="text-sm text-accent-dark font-semibold mb-4">
                         {isClozeCard ? 'COMPLETE THE SENTENCE' : 'QUESTION'}
                       </div>
                       {/* Cloze deletions must stay hidden on the question side
                           — raw text would print the answer inside the braces */}
-                      <div className="text-lg text-gray-900 leading-relaxed">
+                      <div className="text-lg text-foreground leading-relaxed">
                         <ClozeText text={currentCard.front} revealed={false} />
                       </div>
-                      <div className="mt-6 text-sm text-gray-700 text-center">
+                      <div className="mt-6 text-sm text-muted-foreground text-center">
                         Click to reveal answer
                       </div>
                     </div>
@@ -234,19 +234,19 @@ export default function FlashcardStudyPage() {
                       transform: 'rotateY(180deg)',
                     }}
                   >
-                    <div className="border-2 border-green-300 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 min-h-[300px] flex flex-col justify-center">
+                    <div className="border-2 border-green-300 dark:border-green-700 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-950/40 dark:to-teal-950/40 min-h-[300px] flex flex-col justify-center">
                       <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
                       {isClozeCard && (
-                        <div className="text-base text-gray-900 leading-relaxed mb-4 pb-4 border-b border-green-200">
+                        <div className="text-base text-foreground leading-relaxed mb-4 pb-4 border-b border-green-200">
                           <ClozeText text={currentCard.front} revealed={true} />
                         </div>
                       )}
-                      <div className="text-lg prose prose-green max-w-none text-gray-900">
+                      <div className="text-lg prose dark:prose-invert prose-green max-w-none text-foreground">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(formatFlashcardContent(currentCard.back))}
                         </ReactMarkdown>
                       </div>
-                      <div className="mt-6 text-sm text-gray-700 text-center">
+                      <div className="mt-6 text-sm text-muted-foreground text-center">
                         Click to see question again
                       </div>
                     </div>
@@ -265,9 +265,9 @@ export default function FlashcardStudyPage() {
                       💡 Show Hint
                     </button>
                   ) : (
-                    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <div className="p-4 bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-lg">
                       <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
-                      <div className="text-sm prose prose-yellow max-w-none text-gray-900">
+                      <div className="text-sm prose dark:prose-invert prose-yellow max-w-none text-foreground">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(currentCard.hint)}
                         </ReactMarkdown>
@@ -347,7 +347,7 @@ export default function FlashcardStudyPage() {
             </div>
 
             {/* Quick Navigation */}
-            <div className="mt-8 bg-gradient-to-br from-accent-subtle to-blue-50 border-2 border-accent-light rounded-lg p-6">
+            <div className="mt-8 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border-2 border-accent-light rounded-lg p-6">
               <h3 className="font-bold text-accent-dark mb-4 flex items-center gap-2">
                 <span>🎯</span> Quick Navigation
               </h3>

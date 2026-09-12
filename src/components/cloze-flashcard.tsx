@@ -22,7 +22,18 @@ interface ClozeFlashcardProps {
 export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewing, intervals }: ClozeFlashcardProps) {
   const [isRevealed, setIsRevealed] = useState(false)
   const [showHint, setShowHint] = useState(false)
-  
+
+  // Per-card state must reset when the parent swaps in the next card. The
+  // review page renders this component in the same position for every card, so
+  // React keeps the instance and its state — without this, advancing from one
+  // cloze card to the next opens the next one already revealed.
+  const [prevFront, setPrevFront] = useState(front)
+  if (prevFront !== front) {
+    setPrevFront(front)
+    setIsRevealed(false)
+    setShowHint(false)
+  }
+
   const clozeData = detectCloze(front)
   
   if (!clozeData.isCloze) {
@@ -33,7 +44,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
   // Render cloze with blanks or revealed answers (ClozeText renders revealed
   // deletions through the math pipeline — deletions may hold LaTeX)
   const renderCloze = () => (
-    <div className="text-xl text-gray-900 leading-relaxed">
+    <div className="text-xl text-foreground leading-relaxed">
       <ClozeText text={front} revealed={isRevealed} />
     </div>
   )
@@ -42,7 +53,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
     <div className="max-w-3xl mx-auto">
       {/* Cloze Card */}
       <div className="mb-8">
-        <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] flex flex-col justify-center">
+        <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 min-h-[350px] flex flex-col justify-center">
           <div className="text-sm text-accent-dark font-semibold mb-6">COMPLETE THE SENTENCE</div>
           
           {renderCloze()}
@@ -59,9 +70,9 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
           )}
           
           {isRevealed && (
-            <div className="mt-8 p-4 bg-white border border-green-300 rounded-lg">
-              <div className="text-sm text-green-900 font-semibold mb-2">EXPLANATION</div>
-              <div className="text-sm prose prose-green max-w-none text-gray-900">
+            <div className="mt-8 p-4 bg-card border border-green-300 dark:border-green-700 rounded-lg">
+              <div className="text-sm text-green-900 dark:text-green-300 font-semibold mb-2">EXPLANATION</div>
+              <div className="text-sm prose dark:prose-invert prose-green max-w-none text-foreground">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                   {escapeCurrencyMath(formatFlashcardContent(back))}
                 </ReactMarkdown>
@@ -69,7 +80,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             </div>
           )}
           
-          <div className="mt-4 text-sm text-gray-600 text-center">
+          <div className="mt-4 text-sm text-muted-foreground text-center">
             <span className="font-semibold">Topic:</span> {topicTitle}
           </div>
         </div>
@@ -86,9 +97,9 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
               💡 Show Hint
             </button>
           ) : (
-            <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
-              <div className="text-sm prose prose-yellow max-w-none text-gray-900">
+            <div className="p-4 bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+              <div className="text-sm text-yellow-900 dark:text-yellow-200 font-semibold mb-2">💡 HINT</div>
+              <div className="text-sm prose dark:prose-invert prose-yellow max-w-none text-foreground">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                   {escapeCurrencyMath(formatFlashcardContent(hint))}
                 </ReactMarkdown>

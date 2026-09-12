@@ -298,7 +298,7 @@ export default async function TopicPage(props: TopicPageProps) {
     return (
       <div className="container py-10">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-lg border-2 border-accent-muted bg-gradient-to-br from-accent-subtle to-blue-50 p-8 text-center shadow-lg">
+          <div className="rounded-lg border-2 border-accent-muted bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 p-8 text-center shadow-lg">
             <div className="text-6xl mb-4">🌟</div>
             <h1 className="text-3xl font-bold mb-4 text-accent-dark">Premium Content</h1>
             <p className="text-lg mb-6 text-gray-700">
@@ -785,7 +785,7 @@ export default async function TopicPage(props: TopicPageProps) {
           <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="sticky top-4 space-y-6">
               {/* Quick Links Card */}
-              <div className="bg-gradient-to-br from-accent-subtle to-blue-50 border-2 border-accent-light rounded-lg p-4">
+              <div className="bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border-2 border-accent-light rounded-lg p-4">
                 <h3 className="font-bold text-accent-dark mb-3 flex items-center gap-2">
                   <span>🎯</span> Quick Navigation
                 </h3>

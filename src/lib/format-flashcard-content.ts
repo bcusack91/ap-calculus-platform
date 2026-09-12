@@ -42,6 +42,11 @@ export function formatFlashcardContent(content: string): string {
       return part.replace(
         /\d[\d.,]*(?:\s*[×÷+*/=\-]\s*\d[\d.,]*)+/g,
         (run) => {
+          // A run joined only by slashes is a date, score or idiom inside prose
+          // ("Studies of 9/11", "open 24/7", "a 50/50 split") — not arithmetic.
+          // Typesetting it turns 9/11 into the fraction nine-elevenths. Real
+          // arithmetic in prose carries a ×, ÷, +, −, * or = as well.
+          if (!/[×÷+*=\-]/.test(run)) return run
           // Sentence punctuation trailing the arithmetic ("= 20,") belongs to
           // the prose, not the math span.
           const m = run.match(/^(.*?)([.,]*)$/) as RegExpMatchArray
