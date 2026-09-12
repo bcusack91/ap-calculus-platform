@@ -30,8 +30,8 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         options: [
           'A sufficiently mature neuroscience will eventually explain why brain processes are accompanied by experience.',
           'The persistence of the explanatory gap is powerful evidence that consciousness is not a physical phenomenon.',
-          'The explanatory gap is genuine and permanent but metaphysically uninformative, since it would arise on any account of the world.',
-          'Because explanation is third-personal, science cannot give an accurate description of the brain.',
+          'The gap is genuine and permanent but uninformative, since it would arise on any account of the world.',
+          'Because explanation is third-personal, science cannot accurately describe what the brain is doing.',
         ],
         correctAnswer: 2,
         explanation:
@@ -42,24 +42,24 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author mentions the transparency of water and the division of a cell primarily in order to:',
         options: [
-          'characterize the structural, third-personal format that explanation takes',
+          'characterize the structural, third-personal format explanation takes',
           'suggest that biological phenomena resist explanation more stubbornly than physical ones',
           'offer examples of mysteries that science once could not solve and later did',
           'propose that consciousness will be understood by analogy with simpler systems',
         ],
         correctAnswer: 0,
         explanation:
-          'The examples arrive immediately after "Consider what an explanation does" and are offered as instances of exhibiting a phenomenon "as the upshot of a structure," a format the author calls "irreducibly third-personal." Their job is to define the format, which is the pivot of the whole argument. Nothing in the sentence ranks biology against physics. The "once unsolved, later solved" reading belongs to the heat analogy, which the author attributes to the deflationists and then denies. And the author cannot be recommending an analogy from simpler systems, since his point is that no structural story of any kind delivers acquaintance.',
+          'The examples arrive immediately after "Consider what an explanation does" and are offered as instances of exhibiting a phenomenon "as the upshot of a structure," a format the author calls "irreducibly third-personal." Their job is to define the format, which is the pivot of the whole argument. Nothing in the sentence ranks biology against physics. Reading them as mysteries science once could not solve and later did belongs to the heat analogy, which the author attributes to the deflationists and then denies. And the author cannot be recommending an analogy from simpler systems, since his point is that no structural story of any kind delivers acquaintance.',
         skill: 'function',
         needsReview: false,
       },
       {
         question: 'The author’s claim that a dualist universe "would leave the gap precisely where it is" is offered in support of which conclusion?',
         options: [
-          'Dualism is an internally incoherent doctrine.',
-          'The gap exists only because current physical theory is incomplete.',
-          'Immaterial substances of the kind dualists describe cannot exist.',
-          'The presence of the gap cannot settle a dispute between competing metaphysical views.',
+          'Dualism is a doctrine that turns out to be internally incoherent.',
+          'The gap exists only because our current physical theory remains incomplete.',
+          'Immaterial substances of the kind dualists describe could not exist.',
+          'The gap cannot settle a dispute between competing metaphysical views.',
         ],
         correctAnswer: 3,
         explanation:
@@ -71,9 +71,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following, if true, would most WEAKEN the author’s argument?',
         options: [
           'A number of prominent philosophers continue to expect that neuroscience will one day close the explanatory gap.',
-          'Patients given a certain neural intervention report that structural descriptions of their brain states now convey to them what those states feel like.',
-          'Anaesthetic agents reliably abolish conscious experience without abolishing all neural activity.',
-          'The scientific explanation of heat required centuries of failed attempts before it succeeded.',
+          'Patients given a neural intervention report that structural descriptions now convey what those states feel like.',
+          'Anaesthetic agents reliably abolish conscious experience without abolishing any measurable neural activity.',
+          'The scientific explanation of heat required centuries of failed attempts before it finally succeeded.',
         ],
         correctAnswer: 1,
         explanation:
@@ -84,10 +84,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'A researcher argues that because no purely functional account of a robot could establish whether the robot feels anything, feeling must be something over and above function. The author would most likely respond that the researcher:',
         options: [
-          'has noticed a failure that would occur whether or not feeling were a function, and so has established nothing',
-          'is right about robots but wrong to extend the conclusion to biological organisms',
-          'is correct, since acquaintance is never delivered by any description',
-          'should wait for more sophisticated functional accounts, which will settle the matter',
+          'has noticed a failure that would occur whether or not feeling were a function',
+          'is right about robots but wrong to extend the conclusion to living organisms',
+          'is correct, since acquaintance is never delivered by any description at all',
+          'should wait for more sophisticated functional accounts, which will settle it',
         ],
         correctAnswer: 0,
         explanation:
@@ -99,9 +99,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         question: 'In context, the charge that the dualist "has taken the one item in his ledger that cannot count and counted it twice" most nearly means that the dualist:',
         options: [
           'has made an arithmetical mistake in tallying the considerations on each side',
-          'has conceded too much to the physicalist about the dependence of mind on brain',
-          'treats a consideration that could support no view at all as though it were positive support for his own',
-          'has advanced two separate arguments where a single argument would have sufficed',
+          'has conceded too much to the physicalist about the dependence of mind upon brain tissue',
+          'treats a consideration that could support no view at all as support for his own',
+          'has advanced two separate arguments where a single argument would have done',
         ],
         correctAnswer: 2,
         explanation:
@@ -138,7 +138,7 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the sceptic is best described as:',
         options: [
           'admiring of a position he regards as ultimately unanswerable',
-          'indifferent toward a puzzle he considers unworthy of serious attention',
+          'indifferent toward a puzzle he considers unworthy of attention',
           'indignant at what he takes to be a deliberately dishonest maneuver',
           'respectful of the challenge but unconvinced by the standard it assumes',
         ],
@@ -151,10 +151,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "an instrument that returns the identical reading for every sample is not an exacting instrument. It is a broken one" most nearly means that:',
         options: [
-          'a criterion that disqualifies every belief cannot separate careful inquiry from careless inquiry',
+          'a criterion that disqualifies every belief cannot separate careful from careless inquiry',
           'philosophical claims are measured less reliably than claims in the empirical sciences',
-          'the sceptic’s standard ought to be replaced by a more precisely formulated version of itself',
-          'beliefs should be assessed one at a time rather than in large groups',
+          'the sceptic’s standard ought to be replaced by a more precisely formulated version',
+          'beliefs ought to be assessed one at a time rather than condemned in large groups',
         ],
         correctAnswer: 0,
         explanation:
@@ -165,14 +165,14 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that the sceptic’s standard is imposed rather than discovered?',
         options: [
-          'A majority of contemporary philosophers reject global scepticism.',
+          'A majority of contemporary philosophers reject global scepticism as untenable.',
           'At least some beliefs turn out on examination to be genuinely immune to doubt.',
-          'Studies of ordinary usage find that speakers readily credit people with knowledge even when far-fetched alternatives have not been excluded.',
+          'Studies of usage find that speakers credit people with knowledge despite far-fetched alternatives.',
           'Sceptical arguments have been formulated independently in several unrelated philosophical traditions.',
         ],
         correctAnswer: 2,
         explanation:
-          'The claim under test is a claim about our practice: that "no ordinary use of ‘know’ carries" the sceptic’s requirement, which is why the author offers the mechanic and the child. Systematic evidence that ordinary speakers attribute knowledge without excluding far-fetched alternatives is direct confirmation that the requirement is an addition rather than a finding. What most philosophers believe is a headcount, not evidence about the standard. Beliefs immune to doubt would support the foundationalist reply the author dismisses. The recurrence of sceptical arguments across traditions shows the argument is attractive, which if anything cuts the other way.',
+          'The claim under test is a claim about our practice: the sceptic’s requirement "is not extracted from our practice. It is imposed on it," which is why the author offers the mechanic and the child. Systematic evidence that ordinary speakers attribute knowledge without excluding far-fetched alternatives is direct confirmation that the requirement is an addition rather than a finding. What most philosophers believe is a headcount, not evidence about the standard. Beliefs immune to doubt would support the foundationalist reply the author dismisses. The recurrence of sceptical arguments across traditions shows the argument is attractive, which if anything cuts the other way.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -181,8 +181,8 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         options: [
           'is exercising precisely the disciplined scepticism the passage recommends',
           'is correct, because the possibility of fabrication genuinely cannot be excluded',
-          'has identified a real possibility but should convict only once certainty is achieved',
-          'has mistaken a bare possibility of error for a reason to suspect error',
+          'has identified a real possibility but should convict once certainty is achieved',
+          'has mistaken a bare possibility of error for a reason to suspect one',
         ],
         correctAnswer: 3,
         explanation:
@@ -218,10 +218,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the author’s main claim?',
         options: [
-          'Theory choice is rational without being algorithmic: programs are judged over time by whether their repairs yield new checkable consequences.',
+          'Theory choice is rational without being algorithmic: programs are judged by the consequences their repairs yield.',
           'Because falsification fails as a description of scientific practice, theory choice is governed by persuasion and interest.',
-          'A theory should be given up as soon as one of its predictions is disconfirmed.',
-          'Postulating unobserved entities is an illegitimate way to rescue a theory in trouble.',
+          'A theory should be given up as soon as one of its predictions is disconfirmed by careful observation.',
+          'Postulating entities nobody has seen is an illegitimate way to rescue a theory that is in trouble.',
         ],
         correctAnswer: 0,
         explanation:
@@ -246,9 +246,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The comparison to a lender who continues extending credit serves primarily to:',
         options: [
-          'argue that scientific research programs should be evaluated by their economic returns',
-          'illustrate that rationality can attach to a policy sustained over time rather than to any single decision',
-          'imply that scientists who persist with failing programs are acting in bad faith',
+          'argue that scientific research programs ought to be evaluated by the economic returns that they yield',
+          'illustrate that rationality can attach to a policy sustained over time rather than to one decision',
+          'imply that scientists who persist with failing programs are behaving in bad faith',
           'concede that scientific judgment is finally a matter of individual risk tolerance',
         ],
         correctAnswer: 1,
@@ -260,24 +260,24 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if established, would most WEAKEN the author’s position?',
         options: [
-          'Several enduringly successful theories were defended for decades despite anomalies no one could explain.',
+          'Several enduringly successful theories were defended for decades despite unexplained anomalies.',
           'Scientists frequently disagree about which of two research programs has become degenerate.',
-          'The Vulcan hypothesis was advanced by astronomers of considerable reputation.',
-          'A survey of research programs finds that those later judged successful produced no more novel confirmed predictions than those eventually abandoned.',
+          'The Vulcan hypothesis was advanced by astronomers of considerable professional reputation.',
+          'Programs later judged successful produced no more novel confirmed predictions than abandoned ones.',
         ],
         correctAnswer: 3,
         explanation:
-          'The author’s criterion is that good programs are the ones whose repairs "pay their own way" by generating new consequences that survive checking. If successful and abandoned programs turn out to be indistinguishable on exactly that measure, the criterion tracks nothing and the account collapses. Long survival amid anomalies is what the author already asserts in his first paragraph. Disagreement at the margins is explicitly accommodated: "often disputed at the margins, which is why scientists argue." The standing of Vulcan’s proponents is true but idle, since the author’s test concerns the content of a rescue, not the reputation of its author.',
+          'The author’s criterion is that good programs are the ones whose repairs pay their own way by generating new consequences that survive checking. If successful and abandoned programs turn out to be indistinguishable on exactly that measure, the criterion tracks nothing and the account collapses. Long survival amid anomalies is what the author already asserts in his first paragraph. Disagreement at the margins is explicitly accommodated: "often disputed at the margins, which is why scientists argue." The standing of Vulcan’s proponents is true but idle, since the author’s test concerns the content of a rescue, not the reputation of its author.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
       {
         question: 'A dietary hypothesis fails a clinical trial, and its defenders respond that the dose was too low, specifying a higher dose that a further trial can test. A rival hypothesis fails, and its defenders respond that the effect is real but too subtle for any trial to detect. On the author’s account, the correct assessment is that:',
         options: [
-          'both responses are improvised rescues, so both hypotheses should be set aside',
+          'both responses are improvised rescues, so both hypotheses ought to be set aside',
           'the first response is illegitimate because it was formulated only after the trial failed',
-          'the first response is the respectable one because it commits its defenders to a new checkable consequence',
-          'neither response can be evaluated until many years of further research have accumulated',
+          'the first response is respectable because it commits its defenders to a new test',
+          'neither response can be evaluated until years of further research have accumulated',
         ],
         correctAnswer: 2,
         explanation:
@@ -288,9 +288,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the closing statement that "there is no algorithm does not mean there is no accounting" most nearly means that:',
         options: [
-          'the absence of a mechanical rule for theory choice is compatible with holding theories answerable to a public record',
-          'scientific decisions ought to be documented in more systematic detail than they currently are',
-          'science requires a formal decision procedure that has not yet been discovered',
+          'the absence of a mechanical rule for theory choice is compatible with a public record',
+          'scientific decisions ought to be documented in more systematic detail than they now are',
+          'science requires a formal decision procedure that nobody has yet managed to discover',
           'the history of science is best reconstructed in terms of the funding available to researchers',
         ],
         correctAnswer: 0,
@@ -313,10 +313,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The central claim of the passage is that:',
         options: [
-          'puzzle cases demonstrate that the self is an illusion and that personal identity does not exist',
-          'there is always a determinate fact about whether a person survives a given transformation',
+          'puzzle cases demonstrate that the self is an illusion and that personal identity does not exist at all',
+          'there is always a determinate fact about whether a person survives a given transformation of the body',
           'philosophers should stop devising thought experiments, which distort our ordinary intuitions',
-          'at the margins identity is settled by decision rather than discovery, and what we care about can be described without settling it',
+          'at the margins identity is decided rather than discovered, and what matters can be described without it',
         ],
         correctAnswer: 3,
         explanation:
@@ -327,10 +327,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The example of the ship whose planks are replaced functions primarily to:',
         options: [
-          'demonstrate that no object can survive the gradual replacement of its parts',
-          'present a case in which every physical fact is settled and the identity question nonetheless remains open',
+          'demonstrate that no object can survive the gradual replacement of all of its parts',
+          'present a case where every physical fact is settled and the question remains open',
           'suggest that questions about artifacts are more tractable than questions about persons',
-          'show that our concept of identity originated in the practices of shipbuilders',
+          'show that our concept of identity originated in the practices of shipbuilders and harbours',
         ],
         correctAnswer: 1,
         explanation:
@@ -341,10 +341,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the intuition that "there is surely a fact about whether I wake up tomorrow" is best characterized as:',
         options: [
-          'dismissive of it as a superstition that careful reasoning removes',
-          'accepting of it as the decisive datum against his own position',
-          'sympathetic to its source while denying that it carries over to the cases at issue',
-          'puzzled by it, since he can identify no one who actually holds it',
+          'dismissive of it as a superstition that careful reasoning ought to have removed',
+          'accepting of it as the decisive datum standing against his own position',
+          'sympathetic to its source while denying that it carries over to these cases',
+          'puzzled by it, since he can identify nobody who actually holds the view',
         ],
         correctAnswer: 2,
         explanation:
@@ -355,10 +355,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s position?',
         options: [
-          'When people are told precisely which continuities a procedure will preserve and which it will sever, whatever disagreement remains concerns what to value rather than what will happen.',
-          'Most people report a strong conviction that they would not survive being disassembled and reassembled elsewhere.',
-          'Neuroscientists identify a specific structure whose uninterrupted operation is necessary for a stream of consciousness to continue.',
-          'Philosophers have proposed a large number of competing criteria of personal identity.',
+          'Told which continuities a procedure preserves and severs, people disagree only about what to value.',
+          'Most people report a strong conviction that they would not survive being reassembled elsewhere.',
+          'Neuroscientists identify a specific structure whose uninterrupted operation is necessary for consciousness.',
+          'Philosophers have proposed a large number of competing criteria of personal identity over the years.',
         ],
         correctAnswer: 0,
         explanation:
@@ -369,9 +369,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'A patient facing a procedure that will erase her memories while leaving her body and temperament intact asks her surgeon whether the person who wakes will really be her. On the author’s view, the most useful reply would:',
         options: [
-          'assure her that identity is preserved, since bodily continuity is what identity consists in',
-          'set out exactly which continuities will be preserved and which severed, and leave her to weigh what she cares about',
-          'tell her the question has no answer and therefore does not matter',
+          'assure her that identity is preserved, since bodily continuity is what it consists in',
+          'set out which continuities will be preserved and which severed, and leave her to weigh them',
+          'tell her the question has no answer at all and therefore need not concern her',
           'refer the question to a philosopher who has established the correct criterion of identity',
         ],
         correctAnswer: 1,
@@ -383,10 +383,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s remark that our practices of promising, punishment, inheritance, and grief embody decisions "taken long ago" most directly implies that:',
         options: [
-          'these practices are arbitrary and could be abandoned without any loss',
-          'our intuitions about identity are innate rather than acquired',
-          'claims about personal identity are, strictly speaking, always false',
-          'the sense that identity is a discovered fact partly reflects conventions that have hardened into intuition',
+          'these practices are arbitrary conventions that could be abandoned without any real loss at all',
+          'our intuitions about identity are innate rather than culturally acquired',
+          'claims about personal identity are, strictly speaking, always false ones',
+          'the sense that identity is a discovered fact reflects conventions hardened into intuition',
         ],
         correctAnswer: 3,
         explanation:
@@ -410,7 +410,7 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         options: [
           'Authenticity consists in discovering the self one truly is and expressing it faithfully.',
           'Since there is no true self, no course of action can be better or worse than any other.',
-          'Authenticity is not fidelity to a given self but the refusal to disown one’s choices by presenting them as necessities.',
+          'Authenticity is not fidelity to a given self but the refusal to disown one’s choices.',
           'Social roles are inherently oppressive and should be refused by anyone seeking to live well.',
         ],
         correctAnswer: 2,
@@ -420,9 +420,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         needsReview: false,
       },
       {
-        question: 'In context, the author treats the remark "I am simply not a mathematical person" as:',
+        question: 'In context, the author treats the remark that one is "simply not a mathematical person" as:',
         options: [
-          'a claim of necessity that converts a choice into a fact about oneself',
+          'a claim of necessity that converts a choice into a fact',
           'a candid acknowledgment of temperament that the author regards as healthy',
           'an unremarkable conversational formula of no philosophical interest',
           'evidence that one’s true self can be located through careful introspection',
@@ -436,10 +436,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'It can be inferred that the author regards the popular ideal of authenticity as:',
         options: [
-          'wholly empty, a slogan that corresponds to nothing in experience',
-          'a faithful restatement of the original insight in more accessible language',
+          'wholly empty, a slogan that corresponds to nothing anyone actually experiences',
+          'a faithful restatement of the original insight in more accessible modern language',
           'objectionable primarily because it encourages people to defy social expectations',
-          'a distorted response to something genuine, namely the experience of betraying oneself',
+          'a distorted response to a genuine experience, that of betraying oneself',
         ],
         correctAnswer: 3,
         explanation:
@@ -450,10 +450,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s account of self-betrayal?',
         options: [
-          'Some people describe choices as freely made at the time and come to regret them later.',
-          'People report the sharpest sense of having betrayed themselves in cases where they chose deliberately and were fully aware of choosing.',
-          'Many people find the vocabulary of authenticity motivating in their working lives.',
-          'Measured personality traits show substantial stability across the course of a lifetime.',
+          'Some people describe their choices as freely made at the time and regret them later.',
+          'People report the sharpest self-betrayal where they chose deliberately and knew they were choosing.',
+          'Many people find the vocabulary of authenticity motivating in their working lives and careers.',
+          'Measured personality traits show substantial stability across the whole course of a lifetime.',
         ],
         correctAnswer: 1,
         explanation:
@@ -464,10 +464,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'A student who has failed several examinations explains that she is not a scientific person and changes her field of study. The author would most likely respond that:',
         options: [
-          'she has acted authentically by honestly acknowledging her limitations',
+          'she has acted authentically by honestly acknowledging her own real limitations',
           'her decision is inauthentic because changing fields is a way of avoiding difficulty',
           'the case cannot be assessed without first determining whether her self-assessment is accurate',
-          'the decision may be entirely reasonable, but the explanation recasts it as a fate she did not choose',
+          'the decision may be reasonable, but the explanation recasts it as a fate she did not choose',
         ],
         correctAnswer: 3,
         explanation:
@@ -478,10 +478,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The description of the waiter serves chiefly to:',
         options: [
-          'exhibit a person performing a role so completely that the performance is presented as a nature',
-          'criticize service work as a uniquely alienating form of employment',
-          'argue that social roles make authentic action impossible',
-          'depict someone who has successfully discovered and expressed his true self',
+          'exhibit a person performing a role so completely that it is presented as a nature',
+          'criticize service work as a uniquely alienating and degrading form of employment',
+          'argue that social roles make genuinely authentic action impossible for anyone',
+          'depict someone who has successfully discovered and then expressed his own true self',
         ],
         correctAnswer: 0,
         explanation:
@@ -504,9 +504,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
         question: 'The author’s main claim is that:',
         options: [
           'moral disagreement shows that moral claims express preferences rather than truths',
-          'disagreement indicates difficulty rather than the absence of moral facts, except in a narrow class of cases the author specifies',
+          'disagreement indicates difficulty rather than the absence of moral facts, with narrow exceptions',
           'all moral disagreement can ultimately be traced to disagreement about non-moral facts',
-          'moral inquiry should aim at the unanimity that the natural sciences have achieved',
+          'moral inquiry should aim at the unanimity that the natural sciences have already achieved',
         ],
         correctAnswer: 1,
         explanation:
@@ -517,10 +517,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the possibility that some moral disagreement is irreducible is best described as:',
         options: [
-          'alarmed, since such a residue would undermine his position',
-          'dismissive, since he denies that any such residue exists',
-          'untroubled, since he expects any difficult domain to contain unsettled questions',
-          'triumphant, since the residue refutes the position he opposes',
+          'alarmed, since a residue of that kind would badly undermine his position',
+          'dismissive, since he denies that any such residue really exists',
+          'untroubled, since hard domains contain unsettled questions',
+          'triumphant, since the residue refutes the very position he opposes',
         ],
         correctAnswer: 2,
         explanation:
@@ -531,9 +531,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author would be most likely to agree that a dispute about whether a particular practice is cruel:',
         options: [
-          'may dissolve if the parties come to agree about what the practice does to those subjected to it',
-          'cannot be resolved, because cruelty is a matter of perspective',
-          'demonstrates that the concept of cruelty is incoherent',
+          'may dissolve once the parties agree about what the practice does to those subjected to it',
+          'cannot be resolved at all, because judgments of cruelty are finally a matter of perspective',
+          'demonstrates that the concept of cruelty is incoherent and should be dropped',
           'should be settled by determining which party belongs to the more tolerant society',
         ],
         correctAnswer: 0,
@@ -545,10 +545,10 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s argument?',
         options: [
-          'Moral disagreements arise more frequently than disagreements in the natural sciences.',
-          'People rarely abandon a moral view once they have adopted it.',
-          'A large proportion of moral philosophers hold that moral claims can be true or false.',
-          'When parties to a moral dispute are supplied with the same detailed information about what a practice does and to whom, their disagreement narrows substantially.',
+          'Moral disagreements arise far more frequently, and last far longer, than disagreements in the sciences.',
+          'People rarely abandon a moral view once they have adopted it, whatever they learn.',
+          'A large proportion of moral philosophers hold that moral claims can be either true or false.',
+          'Given the same information about what a practice does and to whom, disagreement narrows sharply.',
         ],
         correctAnswer: 3,
         explanation:
@@ -562,7 +562,7 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
           'is a paradigm case of the irreducible disagreement that would undermine moral objectivity',
           'shows that medical ethics rests on institutional convention rather than on anything more',
           'is not the kind that counts as evidence against moral facts, since it rests on a factual dispute',
-          'indicates that such questions are best decided by majority vote among the clinicians involved',
+          'indicates that such questions are best decided by majority vote among the clinicians',
         ],
         correctAnswer: 2,
         explanation:
@@ -573,9 +573,9 @@ export const CARS_PHILOSOPHY_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "the sceptic bills difficulty as vacancy" most nearly means that the sceptic:',
         options: [
-          'overstates how much agreement about morality actually exists',
-          'treats the hardness of a question as though it established that the question has no answer',
-          'demands excessive compensation for a modest philosophical service',
+          'overstates how much agreement about moral questions actually exists',
+          'treats the hardness of a question as showing that it has no answer',
+          'demands excessive compensation for a rather modest philosophical service',
           'mistakes moral questions for questions that could be settled empirically',
         ],
         correctAnswer: 1,

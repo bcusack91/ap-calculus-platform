@@ -27,10 +27,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
-          'Economic models should be judged primarily by how closely their assumptions resemble observed human behavior.',
-          'Because every model simplifies, criticism directed at a model’s assumptions is never legitimate.',
-          'Realism of assumptions is the wrong test for a model; what matters is whether the conclusion survives when the assumptions generating it are loosened.',
-          'Argument conducted in prose is more trustworthy than formal modeling because it commits to no assumptions.',
+          'Economic models should be judged primarily by how closely their assumptions resemble the behavior of actual people.',
+          'Since every model simplifies, criticism aimed at a model’s assumptions is never legitimate.',
+          'Realism of assumptions is the wrong test; what matters is whether a conclusion survives their loosening.',
+          'Argument conducted in prose is more trustworthy than formal modeling, since it commits to no assumptions.',
         ],
         correctAnswer: 2,
         explanation:
@@ -41,7 +41,7 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The reference to a map drawn at a scale of one to one functions primarily to:',
         options: [
-          'illustrate that completeness of detail is not what makes a representation useful',
+          'illustrate that completeness of detail is not what makes a map useful',
           'demonstrate that maps and economic models are built for fundamentally unrelated purposes',
           'suggest that modelers should aim to include more of the world in their models',
           'concede that critics of economic modeling have identified a genuine defect in the method',
@@ -69,10 +69,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s proposed test for evaluating a model?',
         options: [
-          'Many of the discipline’s most widely used models rest on assumptions that their own practitioners, when asked directly, describe as plainly false of actual behavior.',
-          'Models whose conclusions collapse as soon as their central assumptions are loosened have nonetheless anticipated real outcomes more accurately than any available alternative.',
-          'Certain economic questions, such as those involving perceived injustice, cannot be stated in formal notation at all.',
-          'Physicists routinely rely on idealizations, such as surfaces without friction, without their conclusions about motion being doubted for it.',
+          'Many of the discipline’s most used models rest on assumptions their own practitioners call plainly false of behavior.',
+          'Models whose conclusions collapse once their assumptions are loosened have anticipated real outcomes better than any rival.',
+          'Certain economic questions, such as those involving humiliation or perceived injustice, cannot be put into formal notation.',
+          'Physicists reason about surfaces without friction, and the conclusions about motion they draw are not doubted for it.',
         ],
         correctAnswer: 1,
         explanation:
@@ -83,23 +83,23 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A researcher builds a model that assumes workers know every wage on offer, derives from it the conclusion that anyone jobless has chosen to be, and presents this as an account of unemployment. The author would most likely respond that:',
         options: [
-          'the conclusion was already contained in the assumption, so the model has shown only that the researcher is consistent with himself',
-          'the model must be discarded because no worker could possibly know every wage on offer',
-          'the result is acceptable provided the researcher acknowledges that all models simplify',
-          'the question would be better settled by argument in prose than by a model',
+          'the conclusion was placed among the premises, so the model shows only that the researcher is consistent with himself',
+          'the model must be discarded, since its assumption of perfect knowledge is plainly false of actual workers',
+          'the result stands so long as the researcher acknowledges, as every modeler must, that a model simplifies somewhere',
+          'the question would be better settled in prose, where the reasoning is not hidden inside formal notation',
         ],
         correctAnswer: 0,
         explanation:
-          'This is the passage’s own example in different clothing: assume perfect foresight and the tidy conclusion "was placed among the premises before the argument began." The rejection based on unrealism alone is exactly the confused indictment the author opens by dismissing. The appeal to "all models simplify" is the license the author says has been "worked nearly to death" and that shelters this very move. And retreating to prose reverses the closing paragraph, which finds prose less audited rather than more reliable.',
+          'This is the passage’s own example in different clothing: assume perfect foresight and the tidy conclusion "was placed among the premises before the argument began," so the model has established only that the modeler is consistent with himself. Rejecting the model for unrealism alone is exactly the confused indictment the author opens by dismissing. The appeal to the license that "everything simplifies" is the defense the author says has been "worked nearly to death," and it is what shelters this very move. And retreating to prose reverses the closing paragraph, which finds prose less audited rather than more reliable.',
         skill: 'application',
         needsReview: false,
       },
       {
         question: 'In context, the author’s claim that prose is "not more realistic, only less audited" most nearly means that:',
         options: [
-          'verbal arguments are usually mistaken about the facts they describe',
-          'verbal arguments make no assumptions and therefore cannot be checked',
-          'verbal arguments rest on assumptions too, but ones that are harder to locate and test',
+          'verbal arguments are usually mistaken about the facts they purport to describe',
+          'verbal arguments rest on no assumptions at all and so cannot be checked',
+          'verbal arguments rest on assumptions too, but ones harder to locate and test',
           'economists ought to write more accessibly for readers outside the discipline',
         ],
         correctAnswer: 2,
@@ -122,9 +122,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The main point of the passage is that:',
         options: [
-          'markets in contested goods should be prohibited whenever the participants are economically desperate',
-          'the coercion objection to contested markets is weaker than the corruption objection, which holds that pricing certain goods changes what they are',
-          'objections to extending markets into new areas ultimately reduce to unexamined aesthetic distaste',
+          'markets in contested goods should be prohibited wherever the participants are economically desperate',
+          'the coercion objection is weaker than the corruption objection, which holds that pricing alters what a good is',
+          'objections to extending markets into new areas turn out, on inspection, to be unexamined aesthetic distaste',
           'because attitudes toward markets shift over time, no principled objection to any market can be sustained',
         ],
         correctAnswer: 1,
@@ -138,8 +138,8 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
         options: [
           'acted permissibly, so long as no voter sells under economic duress',
           'demonstrated that voting was never a valuable practice to begin with',
-          'violated a principle that equally forbids markets in life insurance and lending at interest',
-          'asserted something about what voting is, whether or not it meant to',
+          'violated a principle that also forbids life insurance and lending at interest',
+          'asserted something about what voting is, whether it meant to',
         ],
         correctAnswer: 3,
         explanation:
@@ -150,10 +150,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage opens with the example of a friend paid to visit the hospital primarily in order to:',
         options: [
-          'introduce, through a concrete case, the claim that paying for a good can substitute a different good rather than a lesser version of the same one',
-          'show that people are generally unwilling to pay for companionship',
-          'concede that the coercion objection captures what is genuinely wrong with such exchanges',
-          'argue that friendship should receive legal protection from commercial arrangement',
+          'introduce the claim that paying for a good can substitute a different good rather than a lesser one',
+          'show that people are generally unwilling to pay for companionship that they might otherwise receive freely',
+          'concede that the coercion objection identifies what is genuinely wrong with exchanges of this kind',
+          'argue that friendship ought to be protected by law from commercial arrangement of any sort',
         ],
         correctAnswer: 0,
         explanation:
@@ -164,10 +164,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s proposed test for corruption?',
         options: [
-          'Surveys across many countries consistently find that large majorities are uncomfortable with the idea of a legal market in kidneys, even for wealthy sellers.',
-          'Historical attitudes toward lending at interest shifted rapidly once such lending became widespread.',
-          'People who receive an apology they have paid for report that it fails to accomplish what an apology accomplishes, while people who receive a paid delivery of firewood report no shortfall compared with firewood given freely.',
-          'Soldiers who enlist for pay perform their duties in the field as capably and as loyally as soldiers conscripted out of civic obligation.',
+          'Surveys across many countries find large majorities uncomfortable with a legal market in kidneys, even for wealthy sellers.',
+          'Historical attitudes toward lending at interest shifted rapidly once such lending became widespread in Europe.',
+          'People report that a paid apology accomplishes nothing an apology should, while paid firewood disappoints nobody.',
+          'Soldiers who enlist for pay perform their duties in the field as capably and as loyally as those conscripted.',
         ],
         correctAnswer: 2,
         explanation:
@@ -179,9 +179,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
         question: 'A city proposes selling passes that allow buyers to skip the line at a public health clinic. On the author’s account, the first question to ask is:',
         options: [
           'whether purchasers of the passes could afford them without financial hardship',
-          'whether the revenue raised would improve the clinic for everyone who uses it',
+          'whether the revenue raised would improve the clinic for everyone who depends on it',
           'whether comparable arrangements have been adopted elsewhere without provoking objection',
-          'whether what the queue distributes draws part of its value from the basis on which it is distributed',
+          'whether the good the queue distributes draws its value from how it is distributed',
         ],
         correctAnswer: 3,
         explanation:
@@ -217,10 +217,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The central claim of the passage is that:',
         options: [
-          'work is best understood as a cost that wages exist to compensate',
-          'certain occupations confer dignity on those who perform them',
-          'because the rhetoric of dignity has been abused, workers should confine their demands to higher pay and shorter hours',
-          'work carries meaning, but the meaning lies in arrangements — being needed and holding discretion — rather than in the tasks themselves',
+          'work is best understood as a cost that wages exist to compensate, and progress means less of it',
+          'certain occupations confer dignity on those who perform them, whatever the conditions of the work',
+          'because the rhetoric of dignity has been abused, workers should confine their demands to pay and hours',
+          'work carries meaning, but it lies in the arrangements of work and not in the nature of the tasks themselves',
         ],
         correctAnswer: 3,
         explanation:
@@ -231,10 +231,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s account of how "the dignity of labor" has been invoked serves primarily to:',
         options: [
-          'reject the claim that work can be meaningful in any respect',
-          'grant the critics a point that the author will then refuse to let them extend',
-          'explain why wages in many occupations have failed to rise',
-          'establish that the first story about work is the correct one',
+          'reject the claim that work can be meaningful in any respect at all',
+          'grant the critics a point he then refuses to let them extend',
+          'explain why wages in many occupations have failed to rise for decades',
+          'establish that the first story about work is the correct one after all',
         ],
         correctAnswer: 1,
         explanation:
@@ -245,9 +245,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that a well-compensated employee who describes her work as unbearable is most likely responding to:',
         options: [
-          'the physical difficulty of the tasks she is assigned',
-          'a rate of compensation inadequate to the effort she expends',
-          'the sense that her judgment bears on nothing, or that the work would not be missed if it stopped',
+          'the sheer physical difficulty of the tasks that she is assigned day after day',
+          'a rate of compensation inadequate to the effort her work demands of her',
+          'the sense that her judgment counts for nothing and her work would not be missed',
           'the absence of an occupation possessing an inherently noble character',
         ],
         correctAnswer: 2,
@@ -273,10 +273,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s account of where meaning in work resides?',
         options: [
-          'Some workers in highly repetitive jobs, surveyed about their working lives, report substantial satisfaction provided they judge the pay fair for the effort required.',
-          'Workers granted substantial discretion over their methods and regular contact with those they serve report no greater satisfaction than comparable workers granted neither.',
+          'Some workers in highly repetitive jobs report substantial satisfaction, provided they judge the pay fair for the effort required of them.',
+          'Workers granted wide discretion over their methods and regular contact with those they serve report no more satisfaction than others.',
           'Employers seeking to resist demands for higher wages frequently invoke the dignity of work in their public statements.',
-          'Large numbers of people say they would prefer to work fewer hours than they currently do.',
+          'Large numbers of people say they would prefer to work substantially fewer hours than they currently do.',
         ],
         correctAnswer: 1,
         explanation:
@@ -288,9 +288,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
         question: 'The tone of the final paragraph is best characterized as:',
         options: [
           'defiant and polemical, calling for the overthrow of existing arrangements',
-          'wistful and resigned about the prospects for change',
-          'detached and purely descriptive, withholding any recommendation',
-          'measured, offering a modest remedy without overstating what it can accomplish',
+          'wistful and resigned about the prospects for changing any of it',
+          'detached and descriptive, withholding any recommendation of its own',
+          'measured, offering a modest remedy without overstating it',
         ],
         correctAnswer: 3,
         explanation:
@@ -312,10 +312,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the main idea of the passage?',
         options: [
-          'Because the method of controlled comparison determines which questions can be studied, the choice of method is itself a contested claim about where the important causes lie.',
-          'Controlled trials have established that small interventions accomplish more than structural reform does.',
-          'The planners’ record of failure demonstrates that deliberate structural transformation cannot succeed.',
-          'Development economics should abandon controlled trials in favor of national-scale planning.',
+          'Because the method determines which questions can be studied, the choice of method is itself a claim about causes.',
+          'Controlled trials have established that small interventions accomplish more for the poor than structural reform does.',
+          'The planners’ record of failure shows that deliberate structural transformation cannot be made to succeed.',
+          'Development economics should abandon controlled trials in favor of planning at the national scale.',
         ],
         correctAnswer: 0,
         explanation:
@@ -326,10 +326,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that the trial literature’s silence about tariffs and port ownership is best explained by:',
         options: [
-          'accumulated evidence that such policies rarely affect economic outcomes',
+          'accumulated evidence that such policies rarely affect economic outcomes much',
           'a deliberate effort by researchers to leave existing arrangements unexamined',
-          'the fact that such arrangements exist in single instances that cannot be set against otherwise similar cases',
-          'the difficulty of persuading national governments to permit research of any kind',
+          'the fact that a national economy exists in one instance and cannot be run twice',
+          'the difficulty of persuading national governments to permit research at all',
         ],
         correctAnswer: 2,
         explanation:
@@ -340,10 +340,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s statement that the sceptics "were right about something important" functions primarily to:',
         options: [
-          'signal that the author ultimately endorses the sceptics’ program over the planners’',
-          'establish the author’s good faith before raising an objection that does not dispute the method’s validity',
-          'introduce evidence that the planners’ programs were fraudulently justified',
-          'prepare the reader for the claim that trials take too long to be useful',
+          'signal that the author endorses the sceptics’ program over the planners’ own',
+          'establish good faith before raising an objection that leaves the method intact',
+          'introduce evidence that the planners’ programs were justified by fraudulent claims',
+          'prepare the reader for the claim that trials take far too long to be useful',
         ],
         correctAnswer: 1,
         explanation:
@@ -354,10 +354,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s central argument?',
         options: [
-          'Some programs first validated by controlled comparison have subsequently been adopted at national scale.',
-          'Planners in several countries oversaw economic transformations that proved durable.',
-          'Researchers who rely on controlled comparison acknowledge that their findings apply only to the settings studied.',
-          'Researchers who work primarily with controlled trials publish on tariffs, land ownership, and exchange-rate policy as often as researchers who do not.',
+          'Some programs first validated by controlled comparison have since been adopted at national scale.',
+          'Planners in several countries oversaw economic transformations that proved durable for decades.',
+          'Researchers who rely on controlled comparison acknowledge that findings apply only to the settings studied.',
+          'Trial-based researchers publish on tariffs and exchange-rate policy as often as everyone else does.',
         ],
         correctAnswer: 3,
         explanation:
@@ -368,9 +368,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A foundation announces that it will fund only proposals whose effects can be demonstrated by comparison with an untreated group within three years. The author would most likely respond that this policy:',
         options: [
-          'is unobjectionable, since untested spending is precisely what discredited earlier development programs',
-          'will fail because comparisons of this kind are rarely accurate',
-          'settles, without argument, a contested question about which causes matter',
+          'is unobjectionable, since untested spending discredited earlier development programs',
+          'will fail, because comparisons of this kind are rarely accurate enough',
+          'settles, without argument, a contested question about which causes really matter',
           'shows that the foundation has aligned itself with the planners against the sceptics',
         ],
         correctAnswer: 2,
@@ -382,10 +382,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In saying that a body of valid results can "misdescribe a subject by the pattern of its silences," the author most nearly means that:',
         options: [
-          'individually sound findings can together create a false impression of what drives a subject, because of what was never studied',
-          'the findings in question are unreliable and ought to be reexamined',
-          'researchers have suppressed results that failed to support their conclusions',
-          'no finding is worth much unless it addresses structural questions',
+          'individually sound findings can together create a false impression of what drives a subject',
+          'the findings in question are unreliable and ought to be reexamined before being cited',
+          'researchers have suppressed results that failed to support their own conclusions',
+          'no finding is worth much unless it addresses questions of national structure',
         ],
         correctAnswer: 0,
         explanation:
@@ -407,10 +407,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage is primarily concerned with arguing that:',
         options: [
-          'experimental findings about framing and defaults have been exaggerated and largely fail to hold up',
-          'the perfectly calculating chooser, whatever its critics say, remains the most accurate description of how people actually weigh gains, losses, and defaults when deciding',
-          'by treating deviations as errors against a fixed standard, behavioral economics has preserved the model it claims to have replaced, and has avoided the harder possibility that no settled preference underlies choice',
-          'the design of choices should be abandoned, since no arrangement of menus and defaults can be justified once the preferences it claims to serve are in doubt',
+          'experimental findings about framing and defaults have been exaggerated and largely fail to replicate',
+          'the perfectly calculating chooser remains the most accurate description of how people weigh gains and losses',
+          'behavioral economics has preserved the model it claims to have replaced, by treating deviations as errors',
+          'the design of choices should be abandoned, since the preferences it claims to serve are in doubt',
         ],
         correctAnswer: 2,
         explanation:
@@ -422,9 +422,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the experimental findings themselves is best described as:',
         options: [
           'accepting of the findings while skeptical of the framework used to interpret them',
-          'dismissive of both the findings and the conclusions drawn from them',
+          'dismissive of both the findings and the conclusions that have been drawn from them',
           'enthusiastic, treating them as a decisive overthrow of the earlier theory',
-          'undecided, declining to take any position on their validity',
+          'undecided, declining to take a position on whether they are valid',
         ],
         correctAnswer: 0,
         explanation:
@@ -435,10 +435,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s remark that the calculating chooser has been "promoted" implies that:',
         options: [
-          'economists now regard perfect calculation as an accurate description of behavior',
-          'the calculating chooser has been abandoned as a point of comparison',
+          'economists have come to regard perfect calculation as an accurate description of how people behave',
+          'the calculating chooser has been abandoned altogether as a point of comparison',
           'behavioral researchers deliberately set out to preserve the earlier framework',
-          'the calculating chooser now functions as a norm of correct choice rather than as a description, and thereby retains his authority',
+          'the calculating chooser now serves as a norm of correct choice rather than a description',
         ],
         correctAnswer: 3,
         explanation:
@@ -449,9 +449,9 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The paragraph presenting the argument from regret functions primarily to:',
         options: [
-          'introduce evidence that conclusively confirms the existence of settled underlying preferences',
+          'introduce evidence that conclusively confirms the existence of settled preferences',
           'raise the strongest available objection, grant it partial force, and then limit it',
-          'abandon the position the author has been defending',
+          'abandon the position that the author has been defending up to that point',
           'illustrate that people are unreliable in recalling the choices they have made',
         ],
         correctAnswer: 1,
@@ -463,10 +463,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that preferences are assembled rather than uncovered?',
         options: [
-          'People who have been taught about framing effects, and can identify them in the choices of others, continue to display those effects in their own.',
-          'Default arrangements influence enrolment more powerfully than financial incentives do.',
-          'Most people, when asked directly about the decisions before them, report holding clear and stable preferences that they say no change of wording could alter.',
-          'When the same choice is put to comparable groups in different but equally natural wordings, each group afterward reports its own answer as the one it had wanted all along.',
+          'People who have been taught about framing effects, and can spot them in others, still display those effects themselves.',
+          'Default arrangements influence retirement enrolment more powerfully than financial incentives do.',
+          'Most people report holding clear and stable preferences that no change of wording could alter.',
+          'Given the same choice in different wordings, each group later reports its answer as what it wanted all along.',
         ],
         correctAnswer: 3,
         explanation:
@@ -477,10 +477,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A government adopts a retirement plan that enrolls workers automatically, defending the policy on the ground that it gives people what they already want. The author would most likely respond that:',
         options: [
-          'the defense borrows an authority it has not established, and the policy should instead be argued for on the ground that its outcomes are better',
-          'the policy is illegitimate because it overrides choices people have genuinely made',
+          'the defense borrows an authority it has not established and should rest on outcomes instead',
+          'the policy is illegitimate because it overrides choices that people have genuinely made',
           'the defense is sound, since evidence of later regret establishes the underlying preference',
-          'the policy should be replaced by financial education so that choices come to reflect people’s true preferences',
+          'the policy should give way to financial education, so choices reflect true preferences',
         ],
         correctAnswer: 0,
         explanation:
@@ -502,10 +502,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best expressed as:',
         options: [
-          'the national accounts should be replaced by an improved index that adds unpaid work and subtracts environmental depletion',
-          'because no rate of exchange among unlike goods can be justified, societies should publish indicators separately and refuse to aggregate them',
-          'any summary figure embeds a chosen rate of exchange among unlike goods, so what matters is whether those weights are stated and open to dispute',
-          'the national accounts are sound measures whose critics have misunderstood what they were designed to do',
+          'the national accounts should be replaced by an index that adds unpaid work and subtracts depletion',
+          'because no rate of exchange among unlike goods can be justified, societies should publish indicators unranked',
+          'any summary figure embeds a chosen rate of exchange, so what matters is whether the weights are stated',
+          'the national accounts are sound measures whose critics have misunderstood what they were built to do',
         ],
         correctAnswer: 2,
         explanation:
@@ -516,10 +516,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The observation that the figure governments live by "rises after a hurricane" serves primarily to:',
         options: [
-          'invoke a familiar complaint about the national accounts in order to show that reformers have drawn the wrong program from it',
-          'demonstrate that natural disasters can leave an economy better off than before',
-          'present the author’s own principal objection to the national accounts',
-          'argue that spending on reconstruction ought to be removed from the accounts',
+          'invoke a familiar complaint in order to show that reformers have drawn the wrong program from it',
+          'demonstrate that natural disasters can leave an economy better off than it was before',
+          'present the author’s own principal objection to the national accounts as they stand',
+          'argue that spending on reconstruction ought to be removed from the accounts entirely',
         ],
         correctAnswer: 0,
         explanation:
@@ -530,10 +530,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author describes a well-made index as "a settled dispute wearing the clothes of a measurement" chiefly to convey that:',
         options: [
-          'indices are typically produced by committees that cannot reach agreement',
+          'indices are typically produced by committees that cannot reach any agreement',
           'measurements are inherently less trustworthy than arguments conducted in words',
           'disputes about value are eventually resolved by the accumulation of better data',
-          'a judgment about relative worth has already been made and is then presented as though it were an observed fact',
+          'a judgment of relative worth has been made and is then presented as a fact',
         ],
         correctAnswer: 3,
         explanation:
@@ -544,10 +544,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s objection to publishing indicators without aggregating them?',
         options: [
-          'Some readers presented with long lists of separate indicators report finding them too difficult to interpret to be of any practical use.',
-          'In places where governments publish unranked indicator sets, public debate has converged on shared priorities and officials have been unable to select flattering figures.',
-          'Committees charged with constructing composite indices routinely disagree, sometimes for years, about how the components ought to be weighted against one another.',
-          'Aggregate indices are cited in the press far more often than sets of separate indicators are.',
+          'Some readers given long lists of separate indicators find them too difficult to interpret to be of use.',
+          'Where governments publish unranked indicators, debate converges and officials cannot select flattering figures.',
+          'Committees constructing composite indices routinely disagree for years about how the components should be weighted.',
+          'Aggregate indices are cited in the press far more often than sets of separate indicators ever are.',
         ],
         correctAnswer: 1,
         explanation:
@@ -560,8 +560,8 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
         options: [
           'the change is a clear improvement, since the weights in the old score were arbitrary',
           'the separate indicators will be measured less accurately than the composite score was',
-          'the weighting has not been eliminated but handed to whichever readers have the most power to insist on a favored column',
-          'the university ought to restore the single score exactly as it stood before',
+          'the weighting has not been eliminated but delegated to readers with the most power',
+          'the university ought to restore its single score exactly as it stood before',
         ],
         correctAnswer: 2,
         explanation:
@@ -572,10 +572,10 @@ export const CARS_ECONOMICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that the author’s chief complaint against the national accounts is that they:',
         options: [
-          'presented a set of contestable decisions in a form that made them look like discovered facts',
-          'omitted unpaid work and environmental damage from their totals',
+          'presented contestable decisions in a form that made them look like discovered facts',
+          'omitted unpaid work and environmental damage from the totals they published',
           'were computed by techniques too specialized for ordinary citizens to follow',
-          'were adopted by governments before any adequate alternative had been developed',
+          'were adopted by governments before any adequate alternative had been proposed',
         ],
         correctAnswer: 0,
         explanation:

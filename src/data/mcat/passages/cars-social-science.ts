@@ -27,8 +27,8 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         options: [
           'Anthropology has successfully replaced its early arrogance with a mature ethical humility.',
           'The Victorian practice of ranking societies on a ladder of progress should be revived.',
-          'Ethnographic description should aim to be as purely neutral and value-free as possible.',
-          'Cultural relativism is valuable as a method but corrosive when treated as a moral prohibition on judgment.',
+          'Ethnographic description should aim to be as purely neutral and value-free as it can.',
+          'Cultural relativism is valuable as method but corrosive as a prohibition on judgment.',
         ],
         correctAnswer: 3,
         explanation:
@@ -39,24 +39,24 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the "comforting story anthropology likes to tell about itself" is best described as:',
         options: [
-          'skeptical and gently mocking',
-          'neutral and merely expository',
+          'skeptical, with a note of dry mockery',
+          'neutral and purely expository in aim',
           'sympathetic but ultimately resigned',
           'hostile to the point of contempt',
         ],
         correctAnswer: 0,
         explanation:
-          'The author calls the story "comforting," "flattering," and "mostly false," and dryly notes that "like most flattering stories" it misleads—skeptical, with a light irony rather than rage. "Sympathetic but ultimately resigned" is wrong because the author is not resigned; she proposes a remedy ("more candid judgment"). "Neutral and merely expository" ignores the clearly evaluative diction. "Hostile to the point of contempt" overshoots: the tone is wry, not contemptuous, and the author treats the discipline as worth reforming, not despising.',
+          'The author calls the story "comforting," "flattering," and "mostly false," and dryly notes that "like most flattering stories" it misleads—skeptical, with a light irony rather than rage. "Sympathetic but ultimately resigned" is wrong because the author is not resigned; she proposes a remedy ("more candid judgment"). Calling the account purely expository ignores the clearly evaluative diction. "Hostile to the point of contempt" overshoots: the tone is wry, not contemptuous, and the author treats the discipline as worth reforming, not despising.',
         skill: 'tone-attitude',
         needsReview: false,
       },
       {
         question: 'The author argues that the relativist doctrine "devours itself" primarily because:',
         options: [
-          'no culture can ever be fully understood by an outsider',
-          'relativists secretly believe their own culture is superior to all others',
-          'universalizing the demand to suspend evaluation is itself an act of exporting one culture’s values',
-          'method and morality are ultimately the same thing',
+          'no culture can ever be fully understood by an outside observer',
+          'relativists secretly believe their own culture is superior',
+          'universalizing the demand to suspend evaluation exports values',
+          'method and morality are in the end one and the same thing',
         ],
         correctAnswer: 2,
         explanation:
@@ -67,10 +67,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'What is the primary function of the final paragraph in the passage?',
         options: [
-          'To summarize the preceding arguments and restate the thesis without adding new content',
-          'To introduce a further, less obvious cost of relativism—that it shields entrenched power against dissent',
-          'To concede that the relativist position has more merit than the author earlier allowed',
-          'To shift the discussion from ethics to the practical training of fieldworkers',
+          'To summarize the preceding arguments and restate the thesis without new content',
+          'To introduce a further cost of relativism: that it shields power against dissent',
+          'To concede that the relativist position has more merit than the author allowed',
+          'To shift the discussion from ethics toward the practical training of fieldworkers',
         ],
         correctAnswer: 1,
         explanation:
@@ -81,8 +81,8 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'Suppose a critic objected that judging another culture inevitably distorts it through the observer’s biases. The author would most likely respond that:',
         options: [
-          'announcing and defending one’s standards exposes them to dispute, which is preferable to concealing them',
-          'the objection is decisive and evaluation should therefore be abandoned',
+          'announcing and defending one’s standards exposes them to dispute',
+          'the objection is decisive, so evaluation ought to be abandoned',
           'biases are best neutralized by aspiring to purely neutral description',
           'only insiders to a culture are entitled to evaluate its practices',
         ],
@@ -95,10 +95,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the author’s statement that the relativist "has mistaken the abdication of argument for its highest form" most nearly means that the relativist:',
         options: [
-          'has reached the most sophisticated possible form of moral reasoning',
-          'argues so forcefully that other positions cannot be heard',
-          'abandons fieldwork in favor of abstract theorizing',
-          'treats a refusal to reason as though it were the pinnacle of careful reasoning',
+          'has reached the most sophisticated form of moral reasoning available',
+          'argues so forcefully that competing positions cannot be heard at all',
+          'has abandoned fieldwork in favor of purely abstract theorizing',
+          'treats a refusal to reason as though it were careful reasoning',
         ],
         correctAnswer: 3,
         explanation:
@@ -120,24 +120,24 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best stated as:',
         options: [
-          'Measurement is inherently fraudulent and should be abandoned by serious institutions.',
-          'Because measuring a complex good distorts how it is pursued, metrics must be held in suspicion and never permitted to override judgment.',
-          'Better-designed metrics will eventually solve the problems caused by flawed ones.',
-          'The unaccountable judgment of insiders is always preferable to governance by numbers.',
+          'Measurement is inherently fraudulent and should be abandoned by institutions.',
+          'Because measuring a complex good distorts its pursuit, judgment must be protected.',
+          'Better-designed metrics will eventually solve the problems flawed ones caused.',
+          'The unaccountable judgment of insiders is always preferable to numbers.',
         ],
         correctAnswer: 1,
         explanation:
-          'The author argues that "the act of measuring something changes how it is pursued" in a direction the measure cannot capture, and concludes that metrics should be held "in deliberate suspicion" while preserving "a domain of judgment that no number is permitted to override." The answer tying the distortion of pursuit to suspicion of metrics and a protected domain of judgment captures both the diagnosis and the prescription. The answer calling measurement inherently fraudulent and urging its abandonment overstates: the author explicitly rejects "abandonment of measurement." The answer promising that better-designed metrics will eventually solve the problem is the defenders’ view the author refutes ("Better numbers do not solve this"). The answer preferring insiders’ unaccountable judgment inverts the author, who concedes the unmeasured past concealed "cruelty and waste."',
+          'The author argues that "the act of measuring something changes how it is pursued" in a direction the measure cannot capture, and concludes that metrics should be held "in deliberate suspicion" while preserving "a domain of judgment that no number is permitted to override." The answer tying the distortion of pursuit to a protected domain of judgment captures both the diagnosis and the prescription. The answer calling measurement inherently fraudulent and urging its abandonment overstates: the author explicitly rejects "abandonment of measurement." The answer promising that better-designed metrics will eventually solve the problem is the defenders’ view the author refutes ("Better numbers do not solve this"). The answer preferring insiders’ unaccountable judgment inverts the author, who concedes the unmeasured past concealed "cruelty and waste."',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The author insists that the teachers and doctors described are "not" committing fraud chiefly in order to:',
         options: [
-          'absolve institutions of any responsibility for poor outcomes',
-          'argue that measurement has no effect on professional behavior',
-          'locate the problem in the system of incentives rather than in individual dishonesty',
-          'praise professionals for resisting the pressure to game metrics',
+          'absolve institutions of any responsibility for their poor outcomes',
+          'argue that measurement has no real effect on professional behavior',
+          'locate the problem in the incentives rather than in dishonesty',
+          'praise professionals for resisting the pressure to game their metrics',
         ],
         correctAnswer: 2,
         explanation:
@@ -148,14 +148,14 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which finding, if true, would most WEAKEN the author’s central claim?',
         options: [
-          'In several fields, tying rewards to a metric produced sustained gains in the underlying goal without measurable distortion.',
-          'Schools that adopted standardized testing saw test scores rise sharply within two years.',
-          'Hospital administrators report that they value readmission data.',
-          'Most teachers say they dislike being evaluated by test scores.',
+          'Tying rewards to a metric produced sustained gains in the underlying goal.',
+          'Schools that adopted standardized testing saw test scores rise sharply.',
+          'Hospital administrators report that they greatly value readmission data.',
+          'Most teachers say they dislike being evaluated by their test scores.',
         ],
         correctAnswer: 0,
         explanation:
-          'The author’s core claim is that measuring distorts pursuit of the underlying good. Evidence that rewarding a metric "produced sustained gains in the underlying goal without measurable distortion" directly contradicts that mechanism. The finding that test scores rose sharply after standardized testing arrived is consistent with the author, who predicts scores rise even as education decays. The findings that administrators value readmission data and that teachers dislike test-score evaluation concern attitudes toward metrics, not whether metrics distort the underlying good, so they leave the thesis untouched.',
+          'The author’s core claim is that measuring distorts pursuit of the underlying good. Evidence that rewarding a metric produced sustained gains in the underlying good itself directly contradicts that mechanism. The finding that test scores rose sharply after standardized testing arrived is consistent with the author, who predicts scores rise even as education decays. The findings that administrators value readmission data and that teachers dislike test-score evaluation concern attitudes toward metrics, not whether metrics distort the underlying good, so they leave the thesis untouched.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -163,9 +163,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'The author’s overall stance toward the "defenders of measurement" is best characterized as:',
         options: [
           'dismissive, treating their position as obviously mistaken',
-          'indifferent to the merits of their argument',
-          'fully persuaded by their rejoinder',
-          'partly conceding their point while denying that it answers the real objection',
+          'indifferent to the merits of the argument they offer',
+          'fully persuaded by the rejoinder they put forward',
+          'partly conceding the point while denying it answers him',
         ],
         correctAnswer: 3,
         explanation:
@@ -176,10 +176,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'Based on the passage, which institutional practice would the author most likely endorse?',
         options: [
-          'Selecting a single optimal metric and tying all rewards tightly to it for maximal clarity',
-          'Periodically rotating the measures used so that none becomes entrenched enough to be gamed',
-          'Eliminating all quantitative measures in favor of insider judgment',
-          'Publishing dashboards as the definitive account of an institution’s performance',
+          'Selecting one optimal metric and tying all rewards tightly to it for clarity',
+          'Periodically rotating the measures used so that none becomes entrenched',
+          'Eliminating all quantitative measures in favor of insider judgment alone',
+          'Publishing dashboards as the definitive account of institutional performance',
         ],
         correctAnswer: 1,
         explanation:
@@ -191,13 +191,13 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'In the final sentence, "defend those purposes from the very instruments we built to serve them" most nearly means:',
         options: [
           'abandon any purpose that cannot be precisely quantified',
-          'replace human judgment with more sophisticated measuring instruments',
-          'protect important goals from being corrupted by the metrics meant to track them',
+          'replace human judgment with more sophisticated instruments',
+          'protect important goals from corruption by their own metrics',
           'build better instruments so that purposes need no defending',
         ],
         correctAnswer: 2,
         explanation:
-          'Throughout, the "instruments" are the metrics, and the danger is that they displace the goals they were proxies for. "Defend those purposes from… those instruments" thus means shielding important goals from corruption by their own metrics. The answer about protecting important goals from corruption by the metrics meant to track them captures this. Replacing human judgment with more sophisticated instruments reverses it (the author distrusts over-reliance on instruments). Abandoning any purpose that cannot be precisely quantified echoes the "tyranny of the measurable" the author opposes. Building better instruments so that purposes need no defending restates the defenders’ faith that better numbers fix the problem, which the author denies.',
+          'Throughout, the "instruments" are the metrics, and the danger is that they displace the goals they were proxies for. To "defend those purposes from the very instruments we built to serve them" thus means shielding important goals from corruption by their own metrics. The answer about protecting important goals from corruption by the metrics meant to track them captures this. Replacing human judgment with more sophisticated instruments reverses it (the author distrusts over-reliance on instruments). Abandoning any purpose that cannot be precisely quantified echoes the "quiet faith that what can be counted is what matters" the author opposes. Building better instruments so that purposes need no defending restates the defenders’ faith that better numbers fix the problem, which the author denies.',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -215,38 +215,38 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'the market’s claim to serve those who value goods most rests on a confusion, and some goods are degraded by being priced at all',
-          'markets are the most just mechanism yet devised for allocating scarce resources',
-          'all inequality could be eliminated by redistributing purchasing power before market exchange',
-          'economics should abandon the concept of price entirely',
+          'the market rewards willingness to pay, and some goods are degraded by pricing',
+          'markets are the most just mechanism yet devised for allocating scarce goods',
+          'all inequality could be removed by redistributing purchasing power first',
+          'economics ought to abandon the concept of price altogether as a tool',
         ],
         correctAnswer: 0,
         explanation:
-          'The passage advances two linked claims: that "willingness to pay" is wrongly equated with "valuing most" (a confusion exposed by unequal wealth), and that some goods are "corrupted by being priced at all." The answer joining that confusion to the degradation of certain goods states both. The answer calling markets the most just allocation mechanism is the faith the author critiques. The answer that redistributing purchasing power would eliminate all inequality is the redistributive reply the author calls inadequate to the "deeper difficulty." The answer urging economics to abandon price entirely overstates—the author critiques the moral reach of pricing, never calls for abolishing prices.',
+          'The passage advances two linked claims: that "willingness to pay" is wrongly equated with "valuing most" (a confusion exposed by unequal wealth), and that some goods are "corrupted by being priced at all." The answer joining willingness to pay to the degradation of certain goods states both. The answer calling markets the most just allocation mechanism is the faith the author critiques. The answer that redistributing purchasing power would eliminate all inequality is the redistributive reply the author calls inadequate to the "deeper difficulty." The answer urging economics to abandon price entirely overstates—the author critiques the moral reach of pricing, never calls for abolishing prices.',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s claim about goods that are "corrupted by being priced at all"?',
         options: [
-          'Wealthy buyers can outbid poorer ones for scarce medicines because they have more purchasing power.',
-          'Redistributing income before exchange leaves the underlying price mechanism intact.',
+          'Wealthy buyers outbid poorer ones for scarce medicines because they can pay more.',
+          'Redistributing income before exchange leaves the price mechanism fully intact.',
           'University admissions offices already weigh applicants’ ability to pay tuition.',
-          'Recipients of a transplanted kidney report the same gratitude and sense of its worth whether the organ was donated or purchased.',
+          'Recipients value a transplanted kidney identically whether donated or purchased.',
         ],
         correctAnswer: 3,
         explanation:
-          'The "corruption" thesis holds that pricing certain goods "changes what the thing is"—"a purchased honor is not the honor it imitates." Evidence that a purchased kidney is experienced as identical in worth to a donated one suggests pricing did NOT change the good, undercutting that claim. The finding that wealthy buyers outbid poorer ones for scarce medicines is an inequality-of-purchasing-power case, the shallower objection the author says redistribution could address—it leaves the degradation thesis untouched. The observation that admissions offices already weigh ability to pay is true-in-reality but does not test whether pricing degrades the good. The point that redistribution leaves the price mechanism intact restates the remedy the author already grants cannot reach this difficulty.',
+          'The corruption thesis holds that pricing certain goods "changes what the thing is"—"a purchased honor is not the honor it imitates." Evidence that a purchased kidney is experienced as identical in worth to a donated one suggests pricing did NOT change the good, undercutting that claim. The finding that wealthy buyers outbid poorer ones for scarce medicines is an inequality-of-purchasing-power case, the shallower objection the author says redistribution could address—it leaves the degradation thesis untouched. The observation that admissions offices already weigh ability to pay is true-in-reality but does not test whether pricing degrades the good. The point that redistribution leaves the price mechanism intact restates the remedy the author already grants cannot reach this difficulty.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
       {
         question: 'The author claims the redistributive defense of markets "concedes more than its proponents notice" because it:',
         options: [
-          'proves that redistribution is impossible in practice',
-          'admits that market outcomes are only as just as the wealth people bring to them',
-          'shows that markets are perfectly just regardless of the distribution of wealth',
-          'abandons the idea that prices convey information',
+          'proves that redistribution is impossible to carry out in practice',
+          'admits outcomes are only as just as the wealth people bring to them',
+          'shows markets are perfectly just whatever the distribution of wealth',
+          'abandons the idea that prices convey information to market actors',
         ],
         correctAnswer: 1,
         explanation:
@@ -257,10 +257,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'What is the primary purpose of the fourth paragraph (beginning "But there is a deeper difficulty")?',
         options: [
-          'To restate the inequality objection in stronger terms',
-          'To concede that the redistributive defense fully resolves the author’s concerns',
-          'To introduce a distinct objection—that pricing certain goods degrades them—that redistribution cannot answer',
-          'To argue that all goods are corrupted by being exchanged',
+          'To restate the inequality objection in considerably stronger terms',
+          'To concede that the redistributive defense resolves the author’s concerns',
+          'To introduce a distinct objection that redistribution cannot answer',
+          'To argue that all goods whatever are corrupted by being exchanged',
         ],
         correctAnswer: 2,
         explanation:
@@ -271,10 +271,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author would most likely regard which of the following as the BEST illustration of the "deeper difficulty"?',
         options: [
-          'A poor family is outbid for housing by a wealthier one.',
-          'A scarce medication is sold at a price only the rich can afford.',
-          'A government redistributes income before allowing market exchange.',
-          'A university openly auctions its admissions offers to the highest bidders.',
+          'A poor family is outbid for housing by a considerably wealthier one.',
+          'A scarce medication is sold at a price only the rich can afford to pay.',
+          'A government redistributes income before permitting market exchange.',
+          'A university auctions its admissions offers to the highest bidders.',
         ],
         correctAnswer: 3,
         explanation:
@@ -285,10 +285,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'When the author writes that the claim of market neutrality is "convenient," the tone conveyed is best described as:',
         options: [
-          'pointedly critical, implying the claim lets its holder evade responsibility',
-          'admiring of the intellectual rigor behind the claim',
-          'detached and strictly descriptive',
-          'apologetic about challenging established economics',
+          'pointedly critical, implying the claim licenses an evasion',
+          'admiring of the intellectual rigor that stands behind the claim',
+          'detached and strictly descriptive in its account of the view',
+          'apologetic about challenging the settled findings of economics',
         ],
         correctAnswer: 0,
         explanation:
@@ -310,10 +310,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage is primarily concerned with:',
         options: [
-          'demonstrating that the delegate model is clearly superior to the trustee model',
-          'tracing the historical origins of representative government',
-          'arguing that the unresolved tension between two models of representation is itself valuable',
-          'proposing a new model that finally reconciles delegate and trustee',
+          'demonstrating that the delegate model is clearly superior to the trustee',
+          'tracing the historical origins of modern representative government',
+          'arguing that the unresolved tension between the models is valuable',
+          'proposing a new model that at last reconciles delegate and trustee',
         ],
         correctAnswer: 2,
         explanation:
@@ -324,14 +324,14 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author argues that the delegate model "cannot help shaping the current it claims merely to carry" in order to show that:',
         options: [
-          'representatives should always defer to the most recent opinion polls',
-          'even a delegate must exercise the very judgment the model was meant to forbid',
-          'public opinion is always stable and easy to ascertain',
-          'the trustee model is logically incoherent',
+          'representatives should always defer to the most recent of the opinion polls',
+          'even a delegate must exercise the judgment the model meant to forbid',
+          'public opinion is generally stable and easy enough to ascertain',
+          'the trustee model is logically incoherent on its own premises',
         ],
         correctAnswer: 1,
         explanation:
-          'The point of the "conduit cannot help shaping the current" image is that a delegate "must first decide whose voice counts as the people’s," and in doing so "exercises exactly the judgment the delegate model was meant to forbid." The answer that even a delegate must exercise the forbidden judgment states this. The answer urging permanent deference to the latest polls is the opposite of the author’s warning about "the most recently surveyed." The answer calling public opinion always stable and easy to ascertain contradicts the claim that opinion is "rarely the stable, knowable thing." The answer charging the trustee model with incoherence misattributes the charge to the wrong model.',
+          'The point of the image — the conduit "cannot help shaping the current it claims merely to carry" — is that a delegate "must first decide whose voice counts as the people’s," and in doing so "exercises exactly the judgment the delegate model was meant to forbid." The answer that even a delegate must exercise the forbidden judgment states this. The answer urging permanent deference to the latest polls is the opposite of the author’s warning about "the most recently surveyed." The answer calling public opinion always stable and easy to ascertain contradicts the claim that opinion is "rarely the stable, knowable thing." The answer charging the trustee model with incoherence misattributes the charge to the wrong model.',
         skill: 'inference',
         needsReview: false,
       },
@@ -339,9 +339,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'The reference to Burke telling his electors he owed them his judgment functions chiefly to:',
         options: [
           'provide a historical example that undermines the trustee model',
-          'introduce a third model distinct from delegate and trustee',
+          'introduce a third model distinct from delegate and from trustee',
           'prove that representatives should always ignore their constituents',
-          'illustrate the trustee model’s honest acknowledgment of the inevitability of judgment',
+          'illustrate the trustee’s honest admission that judgment is inevitable',
         ],
         correctAnswer: 3,
         explanation:
@@ -353,8 +353,8 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the trustee model is best described as:',
         options: [
           'appreciative of its insight yet alert to its danger of paternalism',
-          'unreserved endorsement',
-          'complete rejection as inherently despotic',
+          'unreserved endorsement of its account of the representative’s role',
+          'complete rejection of it as inherently despotic in its tendency',
           'indifference, treating it as interchangeable with the delegate model',
         ],
         correctAnswer: 0,
@@ -368,8 +368,8 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         options: [
           'A legislator polls her district before every vote and follows the majority.',
           'A legislator resigns because she cannot ascertain her constituents’ views.',
-          'A legislator overrides her constituents’ clear wishes, insisting she knows their true interests better than they do.',
-          'A legislator deliberates with colleagues but ultimately abstains.',
+          'A legislator overrides clear wishes, claiming to know her voters’ interests.',
+          'A legislator deliberates at length with colleagues but ultimately abstains.',
         ],
         correctAnswer: 2,
         explanation:
@@ -381,13 +381,13 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'In the final paragraph, the phrase "the sound of a necessary argument" most nearly conveys that the ongoing tension is:',
         options: [
           'a flaw that better institutional design will eventually silence',
-          'a productive disagreement whose persistence preserves competing values',
-          'a meaningless quarrel with no bearing on governance',
+          'a productive disagreement whose persistence preserves values',
+          'a meaningless quarrel with no real bearing on actual governance',
           'evidence that representative government has fundamentally failed',
         ],
         correctAnswer: 1,
         explanation:
-          'The author calls the discontent "not a sign that something has gone wrong" but a necessary argument "that must never be allowed to end," because resolving it would forfeit "accountability on one side, deliberation on the other." The answer describing a productive disagreement whose persistence preserves competing values captures this. Calling the tension a flaw that better design will silence, or evidence that representative government has failed, treats it as a defect the author explicitly denies. Calling it a meaningless quarrel collides with the author’s own word, "necessary."',
+          'The author calls the discontent "not a sign that something has gone wrong" but a necessary argument "that must never be allowed to end," because resolving it would forfeit "accountability on one side, deliberation on the other." The answer describing a productive disagreement whose persistence preserves those values captures this. Calling the tension a flaw that better design will silence, or evidence that representative government has failed, treats it as a defect the author explicitly denies. Calling it a meaningless quarrel collides with the author’s own word, "necessary."',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -419,10 +419,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author observes that "we are far better at explaining our behavior than at predicting or controlling it" in order to:',
         options: [
-          'prove conclusively that the self is entirely a fiction',
+          'prove conclusively that the self is nothing but a fiction',
           'demonstrate that human behavior is fundamentally random',
-          'argue that prediction is the only legitimate form of self-knowledge',
-          'introduce the suspicion that our self-explanations may be after-the-fact constructions',
+          'argue that prediction is the only legitimate self-knowledge',
+          'raise the suspicion that our explanations come after the act',
         ],
         correctAnswer: 3,
         explanation:
@@ -433,10 +433,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'According to the passage, the deflationist position "proves too much" because:',
         options: [
-          'it relies on experiments that have failed to replicate',
-          'it underestimates how often people rationalize their behavior',
-          'if all reasoning is mere after-the-fact storytelling, then the deflationist’s own argument is just another story',
-          'it depends on a definition of the self that no one accepts',
+          'it relies on experiments that have repeatedly failed to replicate',
+          'it underestimates how often people rationalize their own behavior',
+          'if all reasoning is storytelling, so is the deflationist’s argument',
+          'it depends on a definition of the self that virtually no one accepts',
         ],
         correctAnswer: 2,
         explanation:
@@ -447,10 +447,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author compares the constructed self to a nation primarily to make the point that:',
         options: [
-          'something can be constructed and still exert genuine, real force',
-          'nations and selves are both ultimately illusions',
-          'the self is governed by political institutions',
-          'collective identities are more real than individual ones',
+          'something can be constructed and still exert genuine force',
+          'nations and selves alike are ultimately comforting illusions',
+          'the self is in large part governed by political institutions',
+          'collective identities are more real than individual ones are',
         ],
         correctAnswer: 0,
         explanation:
@@ -461,10 +461,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the deflationist (debunking) view is best described as:',
         options: [
-          'wholly dismissive from the outset',
-          'initially respectful but ultimately judging it to overreach',
-          'fully persuaded and adopting it as the conclusion',
-          'uninterested in evaluating its merits',
+          'wholly dismissive of it from the very outset',
+          'initially respectful but judging it to overreach',
+          'fully persuaded, adopting it as his conclusion',
+          'uninterested in evaluating its merits at all',
         ],
         correctAnswer: 1,
         explanation:
@@ -475,10 +475,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that the fiction, "once authored, begins to author us in turn" most nearly means that:',
         options: [
-          'self-narratives are written by external authorities rather than by us',
-          'the self is finished and unchangeable once the story is complete',
+          'self-narratives are written by external authorities, not by us',
+          'the self is finished and unchangeable once its story is complete',
           'fiction and reality can never be meaningfully distinguished',
-          'a self-story, once told, becomes a commitment that shapes our future conduct',
+          'a self-story, once told, shapes the conduct that follows it',
         ],
         correctAnswer: 3,
         explanation:
@@ -501,9 +501,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'The main idea of the passage is that:',
         options: [
           'language determines the boundaries of what its speakers can think',
-          'language has no measurable effect on thought and should be ignored by theorists',
-          'language does not determine thought but does incline speakers toward certain habitual distinctions',
-          'translation between languages is fundamentally impossible',
+          'language has no measurable effect on thought and can be ignored',
+          'language does not determine thought but inclines it toward habits',
+          'translation between different languages is fundamentally impossible',
         ],
         correctAnswer: 2,
         explanation:
@@ -515,9 +515,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'The author argues that the strong "imprisonment" thesis is false chiefly on the grounds that:',
         options: [
           'translation and second-language learning are both possible',
-          'no two languages share any vocabulary',
-          'all languages descend from a common ancestor',
-          'grammar has no effect on habitual thought',
+          'no two languages share any vocabulary in common at all',
+          'all human languages descend from one common ancestor',
+          'grammar exerts no effect whatever on habitual thought',
         ],
         correctAnswer: 0,
         explanation:
@@ -529,9 +529,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         question: 'What is the primary purpose of the third paragraph, which contrasts "exoticizing" with "condescension"?',
         options: [
           'To recommend that linguists stop studying unfamiliar languages',
-          'To prove that the strong thesis is correct after all',
-          'To argue that translation is always perfectly accurate',
-          'To show that both the strong thesis and its flat denial lead to opposite mistakes',
+          'To prove that the strong imprisonment thesis is correct after all',
+          'To argue that translation between tongues is always fully accurate',
+          'To show that the strong thesis and its denial invite opposite errors',
         ],
         correctAnswer: 3,
         explanation:
@@ -542,9 +542,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
       {
         question: 'In responding to the skeptics, the author maintains that:',
         options: [
-          'a cause that is hard to isolate must therefore be absent',
-          'the difficulty of isolating language’s effect is a limit of method, not proof of its absence',
-          'subtle effects are always more important than obvious ones',
+          'a cause that is hard to isolate must for that reason be absent',
+          'the difficulty is a limit of method, not proof of absence',
+          'subtle effects are always more important than obvious ones are',
           'only effects that can be precisely measured are worth studying',
         ],
         correctAnswer: 1,
@@ -563,7 +563,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The author offers exactly this case as an illustration of nudging: a grammar that obliges marking of evidence "makes the question of evidence harder to ignore." If such speakers are "no quicker" to question unsupported claims, the predicted nudge fails to appear, so the nudging thesis is weakened. The strengthening answer reverses the effect. The answer that the finding confirms the strong "imprisonment" thesis is wrong—that thesis predicts determination, not a measurable nudge, and a null result does not support it. The answer that the finding has no bearing on the passage is wrong, because it bears squarely on the nudging claim.',
+          'The author offers exactly this case as an illustration of nudging: a grammar that obliges marking of evidence "makes the question of evidence harder to ignore." If such speakers are no quicker to question unsupported claims, the predicted nudge fails to appear, so the nudging thesis is weakened. The strengthening answer reverses the effect. The answer that the finding confirms the strong "imprisonment" thesis is wrong—that thesis predicts determination, not a measurable nudge, and a null result does not support it. The answer that the finding has no bearing on the passage is wrong, because it bears squarely on the nudging claim.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -572,8 +572,8 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         options: [
           'walls off regions of thought that speakers can never reach',
           'has no influence on which thoughts speakers tend to have',
-          'makes one route far easier than others without forbidding the alternatives',
-          'is a transparent window that adds nothing to thought',
+          'makes one route far easier without forbidding the others',
+          'is a transparent window adding nothing at all to thought',
         ],
         correctAnswer: 2,
         explanation:
@@ -603,10 +603,10 @@ What would reform look like? Not abolition — the defenders are right about sur
       {
         question: 'The passage\'s central argument is that credentials:',
         options: [
-          'should be abolished because they no longer measure competence',
-          'should be returned to their role as one signal of competence among several, rather than its sole gatekeeper',
-          'are the only reliable protection against quackery',
-          'matter at the start of a career but not at its end',
+          'should be abolished, since they no longer measure any competence',
+          'should return to being one signal of competence among several',
+          'are the only reliable protection the public has against quackery',
+          'matter at the start of a career but cease to matter at its end',
         ],
         correctAnswer: 1,
         explanation: 'The reform proposed is "to restore the credential to its proxy status: to multiply the routes by which craft can become visible." The abolition answer is explicitly rejected ("Not abolition"); calling credentials the only reliable protection against quackery is the defenders\' overreach; saying they matter at a career\'s start but not its end contradicts the lapsed-paperwork example.',
@@ -616,10 +616,10 @@ What would reform look like? Not abolition — the defenders are right about sur
       {
         question: 'The author cites the licensing of physicians primarily to:',
         options: [
-          'show that guild motives always corrupt licensing',
-          'argue that surgery should be deregulated',
-          'prove that patent medicine was harmless',
-          'concede a genuine success of credentialism before limiting its scope',
+          'show that guild motives always end up corrupting licensing',
+          'argue that surgery ought to be substantially deregulated',
+          'prove that the trade in patent medicine was largely harmless',
+          'concede a real success of credentialism before limiting it',
         ],
         correctAnswer: 3,
         explanation: 'It appears in the defenders\' favor — "The history is on their side more than critics like to admit" — before the author narrows what the defense licenses. The readings that guild motives always corrupt licensing, that patent medicine was harmless, and that surgery should be deregulated each reverse the passage.',
@@ -629,10 +629,10 @@ What would reform look like? Not abolition — the defenders are right about sur
       {
         question: 'It can be inferred that the author regards the licensing of hair braiding as:',
         options: [
-          'protection of incumbents rather than of consumers',
+          'the protection of incumbents rather than of consumers',
           'a helpful signal in a market consumers cannot judge',
           'an unfortunate but necessary cost of public safety',
-          'justified by the catastrophic risk of incompetent braiding',
+          'justified by the catastrophic risk of bad braiding',
         ],
         correctAnswer: 0,
         explanation: 'Hair braiding heads the list of occupations where "the gate does not protect the public from the incompetent; it protects incumbents from competition." The other options apply the surgeon-case logic the author explicitly withholds from such occupations.',
@@ -642,10 +642,10 @@ What would reform look like? Not abolition — the defenders are right about sur
       {
         question: 'Which of the following, if true, would most WEAKEN the author\'s reform proposal?',
         options: [
-          'Licensing fees fund continuing education programs',
-          'Some credentialed practitioners are incompetent',
-          'In fields that adopted portfolio and examination routes, employers ignored them and continued hiring only by degree',
-          'Apprenticeships were historically restricted to guild members\' relatives',
+          'Licensing fees fund continuing education for practitioners',
+          'Some credentialed practitioners turn out to be incompetent',
+          'Employers ignored portfolio routes and kept hiring by degree',
+          'Apprenticeships were historically restricted to guild relatives',
         ],
         correctAnswer: 2,
         explanation: 'The proposal depends on alternative routes making craft visible and breaking the monopoly; if institutions ignore those routes, the reform fails in practice. That some credentialed practitioners are incompetent supports the author; licensing fees funding continuing education is minor; the restriction of apprenticeships to guild members\' relatives complicates the apprenticeship aside but not the proposal itself.',
@@ -655,23 +655,23 @@ What would reform look like? Not abolition — the defenders are right about sur
       {
         question: 'The sentence "A credential that fears such competition has confessed what it actually certifies" most nearly means that:',
         options: [
-          'credentials should be kept secret from competitors',
-          'resisting alternative routes reveals that the credential protects position rather than verifies skill',
-          'certification exams are too easy to pass',
-          'fear is a poor qualification for professional work',
+          'credentials ought to be kept secret from potential competitors',
+          'resisting alternative routes reveals it protects position',
+          'certification examinations have become far too easy to pass',
+          'fear is a poor qualification for any kind of professional work',
         ],
         correctAnswer: 1,
-        explanation: 'If the credential truly certified craft, other ways of demonstrating craft would not threaten it; fearing them "confesses" it certifies incumbency. The other readings are literalisms.',
+        explanation: 'If the credential truly certified craft, other ways of demonstrating craft would not threaten it; a credential that fears them "has confessed what it actually certifies," namely incumbency. The other readings are literalisms.',
         skill: 'meaning-in-context',
         needsReview: false,
       },
       {
         question: 'A state legislature is debating whether to require a two-year certificate for app-based dog groomers. Based on the passage, the author would most likely ask FIRST whether:',
         options: [
-          'incumbent groomers support the requirement',
-          'other states have adopted similar requirements',
-          'the certificate program is affordable',
-          'incompetent grooming poses catastrophic, hard-to-judge risks to consumers',
+          'incumbent groomers actively support the proposed requirement',
+          'other states have already adopted similar certification rules',
+          'the certificate program is affordable for new entrants',
+          'incompetent grooming poses catastrophic risks consumers cannot judge',
         ],
         correctAnswer: 3,
         explanation: 'The author\'s test for justified gates: catastrophic stakes plus consumers who cannot judge. Incumbent groomers\' support might signal protectionism but is not the author\'s threshold question; the program\'s affordability and other states\' practice are secondary.',
@@ -699,10 +699,10 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
       {
         question: 'Which of the following best states the main idea of the passage?',
         options: [
-          'Standardization delivers enormous benefits but entrenches early choices, so standards should be designed with their own revision in mind',
-          'Standardization should be delayed until the best option is identified',
+          'Standardization entrenches early choices, so standards should expect revision',
+          'Standardization should be delayed until the best available option is identified',
           'Network effects ensure that the best technical standard eventually prevails',
-          'The railway gauge and QWERTY keyboard were deliberate frauds imposed on the public',
+          'The railway gauge and QWERTY were deliberate frauds imposed on the public',
         ],
         correctAnswer: 0,
         explanation: 'The closing paragraph gives the thesis: treat standards as "provisional infrastructure" with escape hatches. The claim that network effects ensure the best standard prevails is refuted by the gauge case (the better system lost); the counsel to delay until the best option is identified is rejected via Baltimore; calling the gauge and QWERTY deliberate frauds misreads inheritance as fraud.',
@@ -713,8 +713,8 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         question: 'The author includes the 1904 Baltimore fire in order to:',
         options: [
           'prove that fire safety requires federal regulation',
-          'illustrate another case of lock-in like the railway gauge',
-          'show the cost of failing to standardize, complicating the case against early standardization',
+          'illustrate another case of lock-in like the gauge',
+          'show the cost of failing to standardize at all',
           'demonstrate that neighboring cities rarely cooperate',
         ],
         correctAnswer: 2,
@@ -725,10 +725,10 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
       {
         question: 'The passage suggests that the "temporal asymmetry" of standardization refers to the fact that:',
         options: [
-          'older standards are always technically inferior to newer ones',
-          'those who set a standard are few and act early, while those bound by it are many and come later',
-          'early adopters pay more than late adopters',
-          'standards decay over time unless renewed',
+          'older standards are always technically inferior to newer',
+          'those who set a standard are few and early, the bound many',
+          'early adopters pay considerably more than late adopters',
+          'standards decay over time unless they are actively renewed',
         ],
         correctAnswer: 1,
         explanation: 'Stated nearly verbatim: "the deciders are few and early, the bound are many and late, and the two groups never meet." The other options describe different (unclaimed) asymmetries.',
@@ -738,10 +738,10 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author\'s closing recommendation?',
         options: [
-          'Shipping containers come in two standard lengths',
-          'Most standards committees include engineers',
-          'The QWERTY layout can be learned in a week',
-          'Industries that built adapter mechanisms into early standards later migrated to superior technologies at far lower cost',
+          'Shipping containers come in only two standard lengths',
+          'Most standards committees include experienced practicing engineers',
+          'The QWERTY layout can be learned in about a week',
+          'Industries that built in adapters migrated later at lower cost',
         ],
         correctAnswer: 3,
         explanation: 'The recommendation is escape hatches/adapters as provisional infrastructure; evidence that they enable cheap migration directly supports it. The findings about engineers on committees, QWERTY\'s learnability, and container lengths are neutral details.',
@@ -751,10 +751,10 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
       {
         question: 'The author\'s attitude toward the economists\' celebration of network effects is best described as:',
         options: [
-          'wholesale rejection of the economic analysis',
-          'skepticism that the celebrated network effects are as large as economists claim',
-          'agreement with the celebration, paired with insistence on what it leaves out',
-          'reluctant acceptance that lock-in is the unavoidable price of the benefits',
+          'wholesale rejection of the underlying economic analysis',
+          'skepticism that network effects are as large as claimed',
+          'agreement, paired with insistence on what it leaves out',
+          'reluctant acceptance of lock-in as the unavoidable price',
         ],
         correctAnswer: 2,
         explanation: '"They are right to. I want to dwell instead on what the celebration omits" — endorsement plus supplement, not rejection. The author never doubts the size of network effects; he affirms them ("the treaties compound") and questions only what the celebration leaves out. Nor does he treat lock-in as unavoidable: the closing paragraph is precisely about adapters and escape hatches that keep "a treaty from becoming a prison."',
@@ -765,9 +765,9 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
         question: 'A consortium is defining the charging connector for a new class of electric aircraft, expecting mass adoption within twenty years. Which proposal is most consistent with the passage\'s final recommendation?',
         options: [
           'Delay any standard until the objectively best connector is proven',
-          'Adopt a workable connector now, but require every port to accept a standardized adapter module that can host future connector designs',
+          'Adopt a workable connector now, requiring ports to accept adapters',
           'Let each manufacturer use a proprietary connector indefinitely',
-          'Copy the existing automotive connector because it is already widespread',
+          'Copy the existing automotive connector because it is widespread',
         ],
         correctAnswer: 1,
         explanation: 'Standardize now (avoiding Baltimores) while building the escape hatch (avoiding gauge-style lock-in) — exactly "provisional infrastructure." Delaying until the objectively best connector is proven repeats the delay error; letting each manufacturer stay proprietary is the no-treaty world; copying the widespread automotive connector is inheritance of a first draft without a hatch.',

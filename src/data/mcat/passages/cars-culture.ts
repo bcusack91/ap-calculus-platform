@@ -27,24 +27,24 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the conclusion the passage builds toward?',
         options: [
-          'People today attend to media less closely than the dock crowds of the nineteenth century attended to serialized novels.',
-          'The compulsory common culture of the broadcast era was preferable to the freedom of modern media.',
-          'New media should be evaluated chiefly by how thoroughly they satisfy each individual user.',
-          'Modern media have deepened individual absorption while dissolving the shared material that once let strangers talk to one another.',
+          'People today attend to media less closely than the dock crowds of 1841 attended to serialized novels.',
+          'The compulsory common culture of the broadcast era was preferable to the personalization that replaced it.',
+          'New media should be judged chiefly by how completely they satisfy each individual user who receives them.',
+          'Modern media have deepened absorption while dissolving the shared material strangers once talked about.',
         ],
         correctAnswer: 3,
         explanation:
-          'The three scenes are assembled precisely to yield this: "Attention is thriving; the carriage proves it," while what has vanished is "the license to open a conversation with a stranger on the assumption that he has done the same homework." The less-attention option is contradicted by the carriage absorption being "deeper, probably, than the dock crowd’s." The preference for the broadcast era is refused outright — "I would not trade the carriage for the bakery." And the individual-satisfaction standard is the one the closing paragraph calls asking "real questions, but late ones."',
+          'The three scenes are assembled precisely to yield this: "Attention is thriving; the carriage proves it," while what has vanished is "the license to open a conversation with a stranger on the assumption that he has done the same homework." The less-attention option is contradicted by the carriage absorption being "deeper, probably, than the dock crowd’s." The preference for the broadcast era is refused outright — "I would not trade the carriage for the bakery." And the individual-satisfaction standard is the one the closing paragraph dismisses as asking "Real questions, but late ones."',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The description of the train carriage at dusk serves primarily to:',
         options: [
-          'demonstrate that commuters prefer solitude to conversation',
-          'complete the sequence of scenes by exhibiting absorption that is genuine yet shared with no one present',
-          'argue that handheld devices produce shallower engagement than novels or broadcasts',
-          'lament the decline of courtesy in public spaces',
+          'demonstrate that modern commuters have come to prefer solitude to the company of strangers',
+          'supply the third scene, in which absorption is genuine but shared with no one present',
+          'argue that handheld devices produce shallower engagement than novels or broadcasts did',
+          'lament a decline of courtesy among passengers absorbed in screens of their own',
         ],
         correctAnswer: 1,
         explanation:
@@ -55,10 +55,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s remark that strangers "were talkable because they shared material" rather than values implies that:',
         options: [
-          'people of the broadcast era agreed with one another more than people do now',
-          'shared moral commitments are sufficient to sustain conversation between strangers',
-          'common acquaintance with the same object, not agreement about it, is what makes exchange between strangers possible',
-          'strangers in earlier eras confined their conversations to uncontroversial subjects',
+          'people of the broadcast era agreed with one another far more readily than audiences do now',
+          'shared moral commitments are by themselves enough to sustain talk between strangers',
+          'acquaintance with the same object, not agreement about it, is what lets strangers talk',
+          'strangers in earlier eras kept to subjects on which disagreement was unlikely',
         ],
         correctAnswer: 2,
         explanation:
@@ -69,24 +69,24 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s argument?',
         options: [
-          'Studies of fully personalized audiences find that the same handful of stories nonetheless reaches nearly everyone within days, and that strangers discuss them readily.',
-          'Ridership on commuter railways has declined steadily in recent decades.',
-          'The dock crowds of 1841 represented only the literate minority of the city.',
-          'Most people report preferring tailored recommendations to scheduled broadcasts.',
+          'Under full personalization, the same few stories still reach nearly everyone within days.',
+          'Commuter railway ridership has fallen steadily since the broadcast era the author recalls.',
+          'The dock crowds of 1841 were drawn from the literate minority of a much larger city.',
+          'Readers offered a scheduled evening broadcast now choose tailored recommendations instead.',
         ],
         correctAnswer: 0,
         explanation:
-          'The argument requires that machine-tailored consumption dissolve the shared object — that the odds of the next seat having seen the same thing approach zero. If personalization in practice still concentrates nearly everyone on the same stories within days, the loss that "appears only between the seats" loses its cause and has not occurred. Railway ridership is scenery, not mechanism. The narrowness of the 1841 public is already conceded — the old commonness "starved everyone whose tastes ran elsewhere." And a preference for tailoring is compatible with the argument, which grants that each seat is "better served than any seat has ever been."',
+          'The argument requires that machine-tailored consumption dissolve the shared object — that "the odds that the next seat saw the same thing have fallen, quietly, to almost nothing." If personalization in practice still concentrates nearly everyone on the same few stories within days, the loss that "appears only between the seats" loses its cause and has not occurred. Railway ridership is scenery, not mechanism. The narrowness of the 1841 public is already conceded — the old commonness "starved everyone whose tastes ran elsewhere." And readers choosing tailoring over a schedule is compatible with the argument, which grants that each seat is "better served than any seat has ever been."',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
       {
         question: 'The author’s reasoning most strongly supports which of the following judgments about a proposed media service?',
         options: [
-          'It should be judged favorably if each subscriber reports high personal satisfaction.',
-          'It should be judged favorably if it maximizes the hours each subscriber spends absorbed.',
-          'It should be judged unfavorably if subscribers are required to view identical content.',
-          'It deserves credit if large numbers of its subscribers encounter the same material at roughly the same time.',
+          'It should be judged favorably when each subscriber reports high personal satisfaction with it.',
+          'It should be judged favorably when it maximizes the hours each subscriber spends absorbed.',
+          'It should be judged unfavorably when subscribers are given no choice but identical content.',
+          'It deserves credit when large numbers of subscribers meet the same material at the same hour.',
         ],
         correctAnswer: 3,
         explanation:
@@ -97,10 +97,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the closing contrast between an audience as "an event" and an audience as "a statistic" most nearly means that:',
         options: [
-          'attendance at live public performances has fallen below historical levels',
-          'audiences once formed around the same thing at the same hour, whereas they now exist only as aggregated counts of separate, private viewings',
-          'media companies now gather more data about their viewers than broadcasters ever could',
-          'genuinely memorable public events no longer occur',
+          'attendance at live public performances has fallen far below the levels of earlier decades',
+          'audiences once formed around the same thing at the same hour and are now merely counted',
+          'media companies now gather far more data about viewers than any broadcaster ever could',
+          'public occasions memorable enough to be discussed for years afterward no longer occur',
         ],
         correctAnswer: 1,
         explanation:
@@ -122,10 +122,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best stated as:',
         options: [
-          'Technologies determine the form of the societies that adopt them, leaving human intention little role.',
-          'Tools govern by pricing behavior rather than by compelling it, which makes those who arrange the costs answerable for what follows.',
-          'Because every path a tool leaves open can still be taken, responsibility rests entirely with the user.',
-          'Technologies should be judged by asking whether they are, on the whole, good or bad for society.',
+          'Technologies determine the form of the societies that adopt them, leaving intention little role.',
+          'Tools govern by pricing behavior rather than compelling it, so whoever sets the costs answers for them.',
+          'Because every path a tool leaves open can still be taken, responsibility rests entirely with the chooser.',
+          'Technologies are best judged by asking whether they are, on the whole, good or bad for a society.',
         ],
         correctAnswer: 1,
         explanation:
@@ -136,10 +136,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s discussion of costs set "by material or by arithmetic" serves primarily to:',
         options: [
-          'concede that the neutrality thesis was correct after all',
-          'supply a further example of designers who evade blame for the arrangements they chose',
-          'establish that most technological defaults arise by accident rather than by design',
-          'mark a limit on the argument by separating explanation from blame',
+          'concede that the defenders of neutrality were right about tools after all',
+          'supply a further example of designers evading blame for arrangements they chose',
+          'establish that most technological defaults arise by accident rather than design',
+          'mark a limit on the argument by separating explanation from indictment',
         ],
         correctAnswer: 3,
         explanation:
@@ -150,10 +150,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The claim that "a population is not a deliberator" most directly supports which conclusion?',
         options: [
-          'Cost differences too small to override any individual’s choice can still shape what large numbers of people do.',
-          'Individuals are incapable of resisting the defaults their tools establish.',
+          'Cost differences too small to override any one person’s choice can still move large numbers.',
+          'Individuals are largely incapable of resisting the defaults that their tools establish for them.',
           'Groups reach decisions through formal procedures rather than through individual reflection.',
-          'Technologies influence only those users who happen to be tired or hurried.',
+          'Technologies influence only those users who happen to be tired, hurried, or inattentive.',
         ],
         correctAnswer: 0,
         explanation:
@@ -164,10 +164,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s account of how tools exert influence?',
         options: [
-          'Users of a widely adopted tool consistently report in surveys that they feel the tool controls their behavior in ways they did not choose.',
-          'A tool redesigned so that a harmful action became physically impossible eliminated that action entirely.',
-          'When a service reversed which of two equally available options required one extra step, the share of users choosing each option reversed as well.',
-          'Designers of widely used systems generally intend their products to benefit the people who use them.',
+          'Users of a widely adopted tool report feeling that it controls behavior they did not choose.',
+          'A tool redesigned so that a harmful action became physically impossible ended that action.',
+          'When a service reversed which of two options took an extra step, users’ shares reversed too.',
+          'Designers of widely used systems generally intend their products to benefit the people using them.',
         ],
         correctAnswer: 2,
         explanation:
@@ -178,10 +178,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A city wants a larger share of residents to compost their food waste. The author’s reasoning most supports:',
         options: [
-          'mounting a campaign that explains the environmental benefits of composting',
-          'arranging collection so that composting requires no extra sorting while landfill disposal requires an additional step',
-          'making composting compulsory, with penalties enforced against households that refuse',
-          'surveying residents about their attitudes toward waste disposal',
+          'mounting a campaign that explains to residents the environmental benefits of composting',
+          'arranging collection so that composting needs no sorting while landfill disposal takes a step',
+          'making composting compulsory, with penalties enforced against the households that refuse',
+          'surveying residents about their attitudes toward composting and other waste disposal',
         ],
         correctAnswer: 1,
         explanation:
@@ -193,9 +193,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the defender of technological neutrality is best described as:',
         options: [
           'dismissive of an argument he regards as transparently self-serving',
-          'persuaded by the main point but troubled by its implications',
-          'respectful of the objection while judging it to rest on a mistaken assumption',
-          'indifferent, on the ground that the dispute has no practical consequences',
+          'persuaded by his main point but troubled by its wider implications',
+          'respectful of the objection while judging it to rest on a mistake',
+          'indifferent, on the ground that the dispute settles nothing practical',
         ],
         correctAnswer: 2,
         explanation:
@@ -217,10 +217,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best captures the passage’s central argument?',
         options: [
-          'Objects should be interpreted as texts, since every artifact encodes a message from its maker.',
-          'Because wear can be manufactured, objects are no more trustworthy as evidence than written documents.',
-          'Conservators should never alter the physical condition of a historical object.',
-          'Objects are valuable as evidence because their most informative marks were made unintentionally, unlike the marks in a text.',
+          'Objects should be read as texts, since every artifact encodes a message from the maker.',
+          'Because wear can be manufactured, objects are no more trustworthy as evidence than documents.',
+          'Conservators should never alter the physical condition of a surviving historical object.',
+          'Objects are valuable as evidence because their most informative marks were made unintentionally.',
         ],
         correctAnswer: 3,
         explanation:
@@ -231,9 +231,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the description of an object as "a witness that never meant to speak" most nearly means that:',
         options: [
-          'an object conveys meaning only when a skilled interpreter supplies that meaning',
+          'an object conveys meaning only when a skilled interpreter supplies that meaning to it',
           'an object informs us through marks that were not produced in order to inform anyone',
-          'objects are mute and therefore of limited use to the historian',
+          'objects are mute, and therefore of only limited use to the working historian',
           'the makers of objects deliberately concealed their intentions from later observers',
         ],
         correctAnswer: 1,
@@ -245,10 +245,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author raises the semiotician’s reply that "wear is also a sign" primarily in order to:',
         options: [
-          'concede that the textual metaphor is ultimately the correct framework',
-          'demonstrate that traces left by use cannot be interpreted at all',
-          'show that widening the metaphor costs the analyst a distinction the argument requires',
-          'introduce the problem of forged patinas taken up in the following paragraph',
+          'concede that the textual metaphor is, in the end, the correct framework after all',
+          'demonstrate that the traces left by use cannot be interpreted by anyone at all',
+          'show that widening the metaphor costs the analyst a distinction he needs',
+          'introduce the problem of forged patinas that the following paragraph takes up',
         ],
         correctAnswer: 2,
         explanation:
@@ -259,10 +259,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s argument?',
         options: [
-          'Convincing false histories of use are routinely produced at roughly the cost of writing a false document.',
-          'Some documents are composed without any intention that another person read them.',
-          'Museum visitors report preferring objects that have been restored to pristine condition.',
-          'Many surviving artifacts show no visible wear of any kind.',
+          'Convincing false histories of use are produced at about the cost of a false document.',
+          'Some documents are composed without any intention that another person ever read them.',
+          'Museum visitors report preferring objects restored to their original pristine condition.',
+          'Many artifacts surviving from the period show no visible wear of any kind at all.',
         ],
         correctAnswer: 0,
         explanation:
@@ -273,10 +273,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A historian studying daily life in a village must choose one of four surviving farmhouses to examine. The author’s reasoning most supports selecting:',
         options: [
-          'the house whose owner left behind a detailed written inventory of its contents',
+          'the house whose owner left behind a detailed written inventory of all its contents',
           'the house that a preservation society has restored to its original appearance',
-          'the house whose floors, thresholds, and door frames retain the marks of long use',
-          'the house built by the village’s most celebrated craftsman',
+          'the house whose floors, thresholds, and door frames retain the marks of use',
+          'the house built by the village’s most celebrated and widely imitated craftsman',
         ],
         correctAnswer: 2,
         explanation:
@@ -287,10 +287,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that the author would regard a room deliberately arranged for visitors as:',
         options: [
-          'worthless as evidence about the household that maintained it',
-          'closer in kind to a document than an ordinary room is',
-          'the clearest available record of how the household actually lived',
-          'impossible to distinguish from a room shaped by ordinary use',
+          'worthless as evidence about the household that arranged and maintained it',
+          'closer in kind to a document than an ordinary lived-in room is',
+          'the clearest available record of how that household actually lived',
+          'impossible to tell apart from a room shaped only by ordinary use',
         ],
         correctAnswer: 1,
         explanation:
@@ -313,9 +313,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
         question: 'The central claim of the passage is that:',
         options: [
           'emigrants suffer more from the loss of everyday foods than from the loss of ceremonies',
-          'what holds a person most deeply may be what was never chosen or appraised, which is why it surfaces only when disturbed',
-          'the woman’s tears are best explained by the scarcity of familiar goods in her adopted country',
-          'scholars of culture should stop documenting festivals and ceremonial foods',
+          'what holds a person most deeply may be what was never chosen, which is why loss exposes it',
+          'the woman’s tears are explained by the scarcity of familiar goods in her adopted country',
+          'scholars of culture should stop documenting festivals and the foods eaten at them',
         ],
         correctAnswer: 1,
         explanation:
@@ -326,10 +326,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author considers and rejects the "heirloom account" primarily in order to:',
         options: [
-          'distinguish what a person deliberately carries and displays from what she repeats without thought',
-          'show that the woman had abandoned the ceremonies of her childhood',
-          'establish that recipes and songs are incapable of producing strong emotion',
-          'demonstrate that photographs are unreliable records of family life',
+          'distinguish what a person deliberately carries from what she repeats without thought',
+          'show that the woman had abandoned the ceremonies she grew up with as a child',
+          'establish that recipes and songs cannot produce emotion of any real strength',
+          'demonstrate that photographs are unreliable records of a family’s daily life',
         ],
         correctAnswer: 0,
         explanation:
@@ -340,10 +340,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that the reason "the floor leaves almost no record" is that:',
         options: [
-          'historians have judged everyday matters too trivial to preserve',
-          'ordinary household objects decay faster than ceremonial ones',
+          'historians have judged the everyday too trivial a matter to be worth preserving',
+          'ordinary household objects decay a good deal faster than ceremonial ones do',
           'communities deliberately conceal their daily habits from outside observers',
-          'recording requires attention, and the floor consists of exactly what receives none',
+          'recording is an act of attention, and the floor is what receives none',
         ],
         correctAnswer: 3,
         explanation:
@@ -354,9 +354,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most STRENGTHEN the author’s claim that disturbance reveals unappraised attachments?',
         options: [
-          'Emigrants asked before departure what they expect to miss produce lists that match what they later report missing.',
-          'Most adults can describe their childhood breakfasts in considerable detail when interviewed.',
-          'People asked in advance what they would miss under rationing almost never name the goods whose loss they later grieve most.',
+          'Emigrants asked before departure what they will miss list exactly what they later report missing.',
+          'Most adults can describe their childhood breakfasts in detail when they are interviewed.',
+          'People asked in advance what rationing would cost them rarely name what they later grieve.',
           'Ceremonial foods are documented far more thoroughly than everyday ones in most archives.',
         ],
         correctAnswer: 2,
@@ -368,10 +368,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'An ethnographer wants to learn which of a community’s practices its members are least able to articulate. The passage most supports:',
         options: [
-          'observing daily routine without inquiry, and noting what members grieve when that routine is interrupted',
-          'asking members to list the traditions they consider most essential',
-          'documenting the community’s principal festival in full detail',
-          'collecting the recipes that families have deliberately preserved',
+          'observing daily routine without inquiry, and noting what members grieve when it breaks',
+          'asking members to list the traditions they consider most essential to the community',
+          'documenting the community’s principal festival in as much detail as possible',
+          'collecting the recipes that families have deliberately preserved and passed down',
         ],
         correctAnswer: 0,
         explanation:
@@ -382,10 +382,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s closing observation that the bread was "never even good bread, which is the point" most nearly means that:',
         options: [
-          'the woman’s memory had exaggerated the bread’s quality over the years',
-          'inexpensive foods are generally remembered more fondly than fine ones',
-          'the woman regretted the mornings she had spent on inferior bread',
-          'the bread’s hold on her never depended on its merits, since it had never been valued for any',
+          'the woman’s memory had, over forty years, exaggerated the bread’s actual quality',
+          'inexpensive foods are generally remembered more fondly than fine ones are',
+          'the woman regretted the many mornings she had spent eating inferior bread',
+          'the bread’s hold on her owed nothing to merits it was never credited with',
         ],
         correctAnswer: 3,
         explanation:
@@ -407,10 +407,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the lesson the passage draws from the dance’s history?',
         options: [
-          'Audience, payment, and outside pressure are constants across the dance’s three eras; what changed is who controls the standard of correct performance.',
-          'The dance was authentic in the landowner’s courtyard and was corrupted first by the state and then by tourism.',
-          'Tourism has damaged the dance less than the state folklore program did, because tourists impose no formal penalties.',
-          'Traditional performances lose their value whenever they are shortened for the convenience of an audience.',
+          'Audience, payment, and outside pressure persist across all three eras; what moved is the standard.',
+          'The dance was authentic in the landowner’s courtyard and was corrupted first by the state, then by tourism.',
+          'Tourism has damaged the dance less than the state folklore program did, since tourists impose no penalties.',
+          'Traditional performances lose their value whenever they are shortened to suit an audience’s convenience.',
         ],
         correctAnswer: 0,
         explanation:
@@ -421,10 +421,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The detail that the elders trimmed figures "when the priest complained, and restored them after he was transferred" is included primarily to show that:',
         options: [
-          'the church held permanent authority over village performance',
-          'the dance had no stable form worth preserving',
-          'outside pressure produced alterations while the village retained the authority to make and unmake them',
-          'the villagers were indifferent to the content of their own dance',
+          'the church held permanent authority over what the village was allowed to perform',
+          'the dance had no stable form that was worth the trouble of preserving',
+          'pressure produced alterations that the village retained the power to undo',
+          'the villagers were largely indifferent to the content of their own dance',
         ],
         correctAnswer: 2,
         explanation:
@@ -435,10 +435,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author implies that the state choreographer’s changes differed from the priest’s interference chiefly in that they:',
         options: [
-          'were more extensive than any changes the village had ever accepted',
-          'moved the authority over correctness outside the village rather than merely influencing how the village exercised it',
+          'were more extensive than any change the village had ever accepted before',
+          'moved authority over correctness outside the village rather than merely pressing on it',
           'improved the dance by professional standards the village could not have applied',
-          'were resented more bitterly by the dancers who performed under them',
+          'were resented more bitterly by the dancers who had to perform under them',
         ],
         correctAnswer: 1,
         explanation:
@@ -449,10 +449,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that the present standard is "issued by no one"?',
         options: [
-          'Some visitors tell the dancers afterward that they would happily have watched the full-length version.',
-          'The troupe now earns more from two nightly performances than its grandparents earned in a season.',
-          'The version visitors expect is traceable to one agency’s promotional film, and when the agency recut the film, arriving audiences’ expectations shifted within a season.',
-          'The state ensemble in the capital still performs the corrected version from the 1950s.',
+          'Some visitors tell the dancers afterward that they would gladly have watched the full version.',
+          'The troupe now earns more from two nightly performances than its grandparents did in a season.',
+          'One agency’s promotional film sets the expected version, and recutting it shifts what visitors want.',
+          'The state ensemble in the capital still performs the corrected version created in the 1950s.',
         ],
         correctAnswer: 2,
         explanation:
@@ -463,10 +463,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A weavers’ cooperative holds all legal rights to its traditional patterns but finds that buyers reject any cloth differing from the patterns shown in guidebooks. According to the passage’s analysis, the weavers’ situation most resembles that of:',
         options: [
-          'the elders under the priest, since both retained the power to restore what pressure removed',
-          'the landowner’s guests, since both parties pay for what they enjoy',
-          'the dancers under the district inspector, since both faced citations for deviating',
-          'the dancers before their tourist audiences, since a standard enforced by demand governs a craft its practitioners legally control',
+          'the elders under the priest, since both kept the power to restore what pressure removed',
+          'the landowner’s guests, since both parties pay for a performance that they have come to enjoy',
+          'the dancers under the district inspector, since both face citations for any deviation',
+          'the dancers before tourist audiences, since demand sets a standard the makers legally own',
         ],
         correctAnswer: 3,
         explanation:
@@ -478,9 +478,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the dancers of the present troupe is best described as:',
         options: [
           'disappointment at their willingness to abbreviate their grandparents’ dance',
-          'sympathy for practitioners governed by a standard they did not set and cannot negotiate with',
+          'sympathy for workers bound by a standard they can neither petition nor negotiate',
           'nostalgia for the era when the landowner’s patronage sustained the dance',
-          'contempt for performers he regards as deceiving their audiences',
+          'contempt for performers he regards as deceiving the visitors who pay them',
         ],
         correctAnswer: 1,
         explanation:
@@ -502,10 +502,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best expressed as:',
         options: [
-          'Nostalgic statements are usually accurate descriptions of a better past.',
-          'The author’s memories of bookshops demonstrate that retail bookselling has declined.',
-          'Nostalgic sentences are present losses wearing a past-tense disguise, and so call for translation rather than fact-checking.',
-          'People who voice nostalgia are in the early stages of restorationist politics.',
+          'Nostalgic statements are, for the most part, accurate descriptions of a genuinely better past.',
+          'The author’s memories of bookshops show that retail bookselling has genuinely declined.',
+          'Nostalgic sentences are present losses in past-tense disguise, so they need translating.',
+          'People who voice nostalgia are in the early stages of a restorationist politics.',
         ],
         correctAnswer: 2,
         explanation:
@@ -516,10 +516,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s detailed recital of the defects of the bookshops of his youth serves primarily to:',
         options: [
-          'establish his credentials as a historian of the book trade',
-          'show that his sentence failed as a factual report by his own audit — and that his belief in it survived the failure',
+          'establish his credentials as a historian of the twentieth-century book trade',
+          'show that his sentence failed his own audit and was believed all the same',
           'prove that present-day bookshops are the finest that have ever existed',
-          'excuse the proprietor whose service he remembers resenting',
+          'excuse the proprietor whose service he remembers resenting as a boy',
         ],
         correctAnswer: 1,
         explanation:
@@ -530,10 +530,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that the author’s complaint was sayable at dinner in its past-tense form because:',
         options: [
-          'his companions shared his interest in the history of bookselling',
-          'statements about the past cannot be checked by anyone present',
-          'complaints about shops are more polite than complaints about people',
-          'the disguised form cost him nothing, whereas the translated version would have been a confession',
+          'his companions at the table shared his own interest in the history of bookselling',
+          'statements about a vanished past cannot be checked by anyone who is present',
+          'complaints about shops are more polite than complaints about the people present',
+          'the disguised form cost him nothing, while the translation was a confession',
         ],
         correctAnswer: 3,
         explanation:
@@ -544,10 +544,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s account of why factual correction "wins nothing"?',
         options: [
-          'People who accept a correction of one nostalgic claim promptly restate the same longing about a different period or object.',
-          'Most nostalgic claims turn out, on careful investigation, to be factually correct.',
-          'People rarely remember, a month later, who corrected them.',
-          'Statistical arguments are harder for most audiences to follow than anecdotes.',
+          'People who accept one claim’s correction restate the same longing about another period.',
+          'Most nostalgic claims turn out, on careful investigation, to be factually correct after all.',
+          'People rarely remember, a month afterward, who it was that corrected them about anything.',
+          'Statistical arguments are harder for most audiences to follow than anecdotes about the past.',
         ],
         correctAnswer: 0,
         explanation:
@@ -559,9 +559,9 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
         question: 'A colleague sighs that "students used to read whole books." Following the passage’s method, the best first response is to:',
         options: [
           'present circulation records showing what students actually borrowed in earlier decades',
-          'ask the colleague what has gone out of his own teaching life that this sentence might be carrying',
+          'ask the colleague what has gone out of his teaching life that the sentence carries',
           'warn the colleague that sentiments of this kind are exploited by political movements',
-          'agree that students of earlier decades were superior readers',
+          'agree that the students of earlier decades really were the better readers of books',
         ],
         correctAnswer: 1,
         explanation:
@@ -572,10 +572,10 @@ export const CARS_CULTURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s caution that the translation "must be done from inside" functions primarily to:',
         options: [
-          'retract the method the passage has recommended',
-          'establish that only trained analysts should interpret nostalgic speech',
-          'mark a limit of the method by noting that an outside translator can make a sentence mean whatever the translator requires',
-          'concede that his own translation of the bookshop sentence was probably mistaken',
+          'retract the method that the passage has spent five paragraphs recommending',
+          'establish that only trained analysts should interpret the speech of others',
+          'mark a limit: an outside translator can make the sentence mean anything',
+          'concede that his own translation of the bookshop sentence was mistaken',
         ],
         correctAnswer: 2,
         explanation:

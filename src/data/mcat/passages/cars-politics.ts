@@ -29,10 +29,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
-          'Democracy is justified because the pooled judgment of many citizens is more reliable than the judgment of a few experts.',
-          'Because majorities are so often mistaken, democratic decisions carry no genuine claim on the citizens who lose them.',
-          'Democracy’s authority rests not on the accuracy of majorities but on its refusal to close citizens’ disagreement in advance, and on the losing side’s preserved standing to reopen it.',
-          'Fair procedure by itself is sufficient to generate an obligation to obey, whatever the substance of what is decided.',
+          'Democracy is justified because the pooled judgment of many citizens is more reliable than the judgment of experts.',
+          'Because majorities are so often mistaken, their decisions have no real claim on the citizens who lose them.',
+          'Democracy’s authority lies in its refusal to close citizens’ disagreement, and in the losing side’s standing to reopen it.',
+          'Fair procedure is by itself enough to oblige obedience, whatever the substance of what has been decided.',
         ],
         correctAnswer: 2,
         explanation:
@@ -43,10 +43,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the claim that "many heads are better than few" is best described as:',
         options: [
-          'respectful of its internal logic but convinced it cannot bear the weight placed upon it',
-          'wholly dismissive, treating it as an obvious fallacy unworthy of statement',
-          'approving, provided its three conditions are specified with greater care',
-          'indifferent, since the author regards every defense of democracy as unavailable',
+          'respectful of its logic but convinced it cannot bear the weight placed on it',
+          'wholly dismissive, treating it as a fallacy too obvious to merit statement',
+          'approving, provided its three conditions are stated with greater precision',
+          'indifferent, since he regards every available defense of democracy as hopeless',
         ],
         correctAnswer: 0,
         explanation:
@@ -57,24 +57,24 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The mention of a lottery serves primarily to:',
         options: [
-          'propose selection by lot as a superior alternative to voting',
-          'suggest that democratic outcomes are in practice indistinguishable from chance',
-          'concede that procedural fairness is the strongest defense of democracy still standing',
-          'demonstrate that fairness of procedure alone cannot generate a right to govern',
+          'propose selection by lot as an alternative that would govern more fairly than voting',
+          'suggest that democratic outcomes are in practice hard to distinguish from pure chance',
+          'concede that procedural fairness is the strongest defense of democracy still available',
+          'demonstrate that fairness of procedure cannot by itself generate a right to govern anyone',
         ],
         correctAnswer: 3,
         explanation:
-          'The lottery appears immediately after the author refuses "to retreat to the claim that democratic procedure is simply fair": it is "perfectly fair," yet governing by dice earns no right to imprison. Its work is to close off fairness as a sufficient ground. Nothing in the passage recommends selection by lot. The passage never claims democratic outcomes are random. And the lottery undercuts rather than concedes the fairness defense.',
+          'The lottery appears immediately after the author declines to "retreat to the claim that democratic procedure is simply fair": it is "perfectly fair," yet governing by dice earns no right to imprison. Its work is to close off fairness as a sufficient ground. Nothing in the passage recommends selection by lot. The passage never claims democratic outcomes are random. And the lottery undercuts rather than concedes the fairness defense.',
         skill: 'function',
         needsReview: false,
       },
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s defense of democracy?',
         options: [
-          'Some democratic majorities have endorsed policies that later generations judged monstrous.',
-          'In functioning democracies, positions defeated at the polls are permanently barred from being placed before the electorate again.',
-          'Expert bodies charged with technical questions occasionally reach conclusions that later prove mistaken.',
-          'A substantial share of voters cast ballots without having formed any judgment on the questions before them.',
+          'Some democratic majorities have endorsed policies that later generations came to judge monstrous.',
+          'In functioning democracies, a position once defeated at the polls may never again be put before the electorate.',
+          'Expert bodies charged with technical questions sometimes reach conclusions that prove mistaken.',
+          'A substantial share of voters cast ballots without having formed a judgment on the questions before them.',
         ],
         correctAnswer: 1,
         explanation:
@@ -87,8 +87,8 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
         options: [
           'an instance of the move he criticizes, since it closes a disagreement rather than counting it',
           'defensible, because tribunals are staffed by people more likely than legislatures to be right',
-          'defensible, provided the tribunal’s procedure treated both parties fairly',
-          'objectionable only if the tribunal’s substantive conclusion turns out to be mistaken',
+          'defensible, provided the tribunal’s own procedure treated both parties with scrupulous fairness',
+          'objectionable only if the tribunal’s substantive conclusion turns out to have been mistaken',
         ],
         correctAnswer: 0,
         explanation:
@@ -99,10 +99,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the remark that "thinner justifications wear better" most nearly means that:',
         options: [
-          'political arguments should be stated as briefly as circumstances permit',
-          'democracy’s defenders have historically been too modest in the claims they advanced',
-          'a defense assuming less about citizens’ wisdom is less easily overturned by events',
-          'no justification of democratic rule can be more than a temporary expedient',
+          'political arguments ought to be stated as briefly as the occasion will allow for',
+          'democracy’s defenders have historically been too modest in the claims they advance',
+          'a defense that assumes less about citizens’ wisdom is harder to overturn',
+          'no justification of democratic rule can amount to more than a temporary expedient',
         ],
         correctAnswer: 2,
         explanation:
@@ -124,10 +124,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The central claim of the passage is that:',
         options: [
-          'desert becomes a workable basis for distribution once we correct for the influence of unchosen talents',
-          'because distributive shares are produced by institutions rather than found in individuals, justice asks whether the rules can be defended to everyone bound by them',
-          'redistribution is unjustifiable because those who work hard have genuinely earned what they hold',
-          'since nothing a person does is truly chosen, effort should play no part whatever in how goods are distributed',
+          'desert becomes a workable basis for distribution once we correct for the influence of talents nobody chose',
+          'because shares are made by institutions, justice asks whether the rules can be defended to everyone bound by them',
+          'redistribution is unjustifiable because those who work hard have genuinely earned the fortunes they hold',
+          'since nothing a person does is truly chosen, effort should play no part at all in distributing goods',
         ],
         correctAnswer: 1,
         explanation:
@@ -139,8 +139,8 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s objection to sifting a life into the deserved and the undeserved is best characterized as an objection to:',
         options: [
           'the practical difficulty of obtaining reliable information about applicants',
-          'the tendency of such assessments to favor those who are already advantaged',
-          'the premise that a person’s talents and temperament are unchosen',
+          'the tendency of such assessments to favor applicants who are already advantaged',
+          'the premise that a person’s talents and temperament are not of her own choosing',
           'the indignity of requiring a person to justify her own misfortune to an official',
         ],
         correctAnswer: 3,
@@ -154,8 +154,8 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
         options: [
           'present the desert objection in its strongest and most intuitive form before it is examined',
           'demonstrate that incentive effects are the true source of disagreement about redistribution',
-          'establish that diligent people ordinarily end up with more than idle people do',
-          'illustrate the distribution the author himself regards as just',
+          'establish that diligent people ordinarily end up with more than those who prefer leisure',
+          'illustrate a distribution of holdings that the author himself regards as fully just',
         ],
         correctAnswer: 0,
         explanation:
@@ -166,10 +166,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most strengthen the claim that the forty-year fortune "is a fact that institutions make"?',
         options: [
-          'In every society yet studied, diligent people accumulate more than idle people do.',
-          'Most people report that they consciously chose their own habits of work.',
-          'Identical labor over identical periods yields sharply different holdings depending on which rules of property and contract are in force.',
-          'Institutions are frequently designed by those who stand to gain most from them.',
+          'In every society yet studied, the diligent accumulate more than those who prefer their leisure.',
+          'Most people report that they consciously chose the habits of work that brought them what they have.',
+          'Identical labor yields sharply different holdings depending on which rules of property are in force.',
+          'Institutions are frequently designed by the very people who stand to gain the most from them.',
         ],
         correctAnswer: 2,
         explanation:
@@ -180,10 +180,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A legislator proposes that a benefit be available only to applicants who can document that their hardship arose from circumstances beyond their control. The author would most likely object that the proposal:',
         options: [
-          'rests on the false premise that talents and temperament are unchosen',
-          'would be acceptable if only its documentation requirements were made less burdensome',
-          'correctly implements the principle that distribution should track genuine choice',
-          'makes assistance turn on an official’s audit of a life, which the author treats as degrading rather than merely impractical',
+          'rests on the false premise that talents and temperament are not chosen by those who have them',
+          'would be acceptable if its documentation requirements were made considerably less burdensome',
+          'correctly implements the principle that distribution should track what a person genuinely chose',
+          'makes assistance turn on an official’s audit of a life, which the author calls degrading',
         ],
         correctAnswer: 3,
         explanation:
@@ -194,10 +194,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, "a ledger no one has ever seen" most nearly refers to:',
         options: [
-          'the historical record of what each citizen has contributed to the common store',
-          'a supposed prior accounting of what each person is owed, standing behind and independent of any institution',
-          'the concealed accounts through which existing institutions actually distribute advantage',
-          'the practical impossibility of measuring individual effort with accuracy',
+          'the historical record of what each citizen has contributed to the common store of goods',
+          'an accounting of what each person is owed that stands behind and apart from any institution',
+          'the concealed accounts through which existing institutions actually distribute advantage among us',
+          'the practical impossibility of measuring an individual’s effort with any real accuracy',
         ],
         correctAnswer: 1,
         explanation:
@@ -222,7 +222,7 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
           'original meaning is superior to evolving standards because it alone genuinely constrains interpreters',
           'because neither camp can supply determinate content, a constitution places no real limit on official action',
           'the capacious terms of a constitution should always be read at the highest available level of generality',
-          'a constitution constrains not by fixing outcomes but by requiring that exercises of power be justified in the terms it supplies',
+          'a constitution constrains not by fixing outcomes but by disciplining how power is justified',
         ],
         correctAnswer: 3,
         explanation:
@@ -233,10 +233,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s stance toward the two interpretive camps is best described as:',
         options: [
-          'partisan, siding with evolving standards once the flaws of original meaning are exposed',
-          'evenhandedly critical, crediting each with a real insight while denying both the external standard each claims',
-          'dismissive, treating the entire dispute as unworthy of serious attention',
-          'undecided, since the author finds the arguments on the two sides equally persuasive',
+          'partisan, siding with evolving standards once the flaws in original meaning are exposed',
+          'evenhandedly critical, crediting each with an insight while denying both an external standard',
+          'dismissive, treating the whole dispute as unworthy of the serious attention it continues to receive',
+          'undecided, since the author finds the arguments on the two sides about equally persuasive',
         ],
         correctAnswer: 1,
         explanation:
@@ -247,10 +247,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The example of the ratifiers who forbade cruelty is introduced in order to establish that:',
         options: [
-          'the ratifiers of a constitution were mistaken about which punishments are cruel',
-          'capacious terms should be understood as enacting principles rather than particular applications',
-          'the text cannot itself determine whether it enacts a principle or the drafters’ applications of it, so an interpreter must decide',
-          'reliable historical evidence about ratification is generally unavailable to modern interpreters',
+          'the ratifiers of a constitution were themselves mistaken about which punishments are cruel',
+          'capacious terms should be understood to enact principles rather than the drafters’ own applications',
+          'the text cannot settle whether a principle or an application was enacted, so the choice falls to an interpreter',
+          'reliable historical evidence about what the ratifiers intended is unavailable to interpreters',
         ],
         correctAnswer: 2,
         explanation:
@@ -261,10 +261,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s account of what a constitution accomplishes?',
         options: [
-          'Officials reliably obtain whatever outcomes they want simply by redescribing the desired measure in the document’s terms, without changing what they do.',
+          'Officials obtain whatever outcomes they want simply by redescribing the measure in the document’s terms.',
           'Interpreters frequently disagree about the level of generality at which constitutional terms should be read.',
-          'Some constitutional provisions are drafted in highly specific rather than capacious language.',
-          'The ratifiers of constitutions often disagreed among themselves about what they were enacting.',
+          'Many constitutional provisions are drafted in highly specific language rather than capacious terms.',
+          'The ratifiers of a constitution often disagreed sharply among themselves about what they were enacting.',
         ],
         correctAnswer: 0,
         explanation:
@@ -275,10 +275,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'An official defends a newly adopted measure solely on the ground that a large majority of citizens favor it. On the author’s account, this defense:',
         options: [
-          'is legitimate, since popular support is the ultimate source of constitutional authority',
-          'falls outside the currency the constitution establishes, and is therefore among the justifications the document rules out',
-          'is acceptable so long as the measure also proves efficient in operation',
-          'would satisfy interpreters in the first camp but not those in the second',
+          'is legitimate, since popular support is the ultimate source of a constitution’s authority',
+          'falls outside the currency the constitution establishes, and so is a justification it rules out',
+          'is acceptable so long as the measure also proves efficient once it is put into operation',
+          'would satisfy interpreters in the first camp but not those who read by present lights',
         ],
         correctAnswer: 1,
         explanation:
@@ -289,10 +289,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In saying that a constitution yielding to every strongly felt want "is a mirror," the author means that such a document:',
         options: [
-          'merely reflects back the wishes of those it was supposed to restrain',
-          'reveals the true character of the society that produced it',
+          'merely reflects back the wishes of those it was meant to restrain',
+          'reveals the true character of the society that drafted and ratified it',
           'shows interpreters their own biases so that they may correct for them',
-          'reproduces the content of ordinary legislation word for word',
+          'closely reproduces the content of ordinary legislation, word for word',
         ],
         correctAnswer: 0,
         explanation:
@@ -314,10 +314,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage is primarily concerned with arguing that:',
         options: [
-          'political membership is grounded in subjection to a polity’s commands, which gives those commanded standing to share in making them',
-          'membership should be extended to anyone significantly affected by a polity’s decisions',
-          'shared inheritance and consent each capture part of what genuine membership requires',
-          'residents who are well treated by a government they cannot vote in have no real grievance',
+          'membership rests on subjection to a polity’s commands, which gives the commanded standing to be asked',
+          'membership should extend to anyone whose life is significantly affected by a polity’s decisions',
+          'shared inheritance and consent each capture part of what genuine political membership requires of a person',
+          'residents who are governed well by a state they cannot vote in have no grievance worth hearing',
         ],
         correctAnswer: 0,
         explanation:
@@ -328,10 +328,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The observation that the inheritance view "yields conclusions almost no one is willing to defend aloud" conveys:',
         options: [
-          'sympathy for a position the author regards as unfashionable but sound',
-          'uncertainty about what the inheritance view actually implies',
-          'pointed disapproval, implying that the view’s consistent form is one its adherents find embarrassing',
-          'detachment, since the author considers the dispute merely terminological',
+          'sympathy for a position the author regards as unfashionable but fundamentally sound',
+          'uncertainty about what the inheritance view actually implies in the hardest cases',
+          'pointed disapproval, implying the view’s consistent form embarrasses its adherents',
+          'detachment, since the author considers the dispute a merely terminological one',
         ],
         correctAnswer: 2,
         explanation:
@@ -343,9 +343,9 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
         question: 'It can be inferred that the author rejects the consent-based account of membership because:',
         options: [
           'residents rarely understand in detail the rules they are said to have accepted',
-          'consent is a moral notion with no legitimate role in political argument',
-          'too few residents actually take part in the polity’s decisions',
-          'consent available only on pain of exile is not consent in any meaningful sense',
+          'consent is a moral notion with no legitimate role in any political argument at all',
+          'too few residents actually take part in the decisions their polity makes for them',
+          'consent available only on pain of exile is not consent in any real sense',
         ],
         correctAnswer: 3,
         explanation:
@@ -356,10 +356,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The example of the distant farmer whose crop loses its market functions primarily to:',
         options: [
-          'demonstrate that cross-border economic effects are more severe than commonly acknowledged',
-          'mark the boundary between being affected by a decision and being subject to the authority that makes it',
-          'concede that the author’s principle does after all extend a claim to foreigners',
-          'argue that decisions with international consequences should be made by international bodies',
+          'demonstrate that cross-border economic effects are more severe than acknowledged',
+          'mark the boundary between being affected by a decision and being subject to its authority',
+          'concede that the author’s principle does after all extend a claim to some foreigners',
+          'argue that decisions with international consequences belong to international bodies',
         ],
         correctAnswer: 1,
         explanation:
@@ -370,10 +370,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s argument?',
         options: [
-          'Some long-settled residents decline to seek formal membership even when it is available.',
-          'Governments sometimes treat formally excluded residents with considerable generosity.',
-          'Polities routinely enforce their decrees against distant foreigners who never enter their territory, appearing at their doors and compelling obedience.',
-          'The inheritance view of membership remains widely held among citizens of many countries.',
+          'Some long-settled residents decline to seek formal membership even when it is freely available.',
+          'Governments sometimes treat formally excluded residents with considerable generosity of provision.',
+          'Polities routinely enforce their decrees against foreigners who never enter their territory.',
+          'The inheritance view of membership remains widely held among the citizens of many countries.',
         ],
         correctAnswer: 2,
         explanation:
@@ -384,10 +384,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A polity extends to long-resident non-members generous housing, schooling, and medical benefits, but no vote. The author would most likely conclude that this arrangement:',
         options: [
-          'satisfies the demands of membership, since the residents’ interests are well protected',
-          'is objectionable chiefly because the benefits provided are not generous enough',
-          'is acceptable so long as dissatisfied residents remain free to leave',
-          'leaves the grievance untouched, because the complaint concerns being commanded by an authority that need never justify itself to them',
+          'satisfies the demands of membership, since the residents’ material interests are amply protected',
+          'is objectionable chiefly because the benefits provided are not generous enough to suffice',
+          'is acceptable so long as dissatisfied residents remain free to leave for another country',
+          'leaves the grievance untouched, since they are still commanded by an unaccountable authority',
         ],
         correctAnswer: 3,
         explanation:
@@ -409,10 +409,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s description of the standard picture of public speech as "tidy" primarily conveys:',
         options: [
-          'admiration for the analytical precision the picture achieves',
-          'neutrality about how useful the picture has proved',
-          'skepticism, implying the picture owes its appeal to its neatness rather than to its accuracy',
-          'regret that a once-accurate picture has been overtaken by events',
+          'admiration for the analytical precision that the standard picture manages to achieve',
+          'neutrality about how useful the picture has proved to those who have relied on it',
+          'skepticism, implying the picture owes its appeal to its neatness, not its accuracy',
+          'regret that a picture once accurate has since been overtaken by changing events',
         ],
         correctAnswer: 2,
         explanation:
@@ -423,9 +423,9 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The discussion of the speaker who recites accurate figures in a level voice implies that:',
         options: [
-          'statistical evidence is generally less trustworthy than vivid description',
-          'a calm manner of delivery is ordinarily a sign of concealed dishonesty',
-          'audiences ought to disregard any speech that omits relevant data',
+          'statistical evidence is generally less trustworthy than vivid description of conditions',
+          'a calm manner of delivery is ordinarily a sign of concealed dishonesty in a speaker',
+          'audiences ought to disregard any speech that omits data bearing on its claims',
           'the absence of emotional appeal is no evidence that a speech is honest',
         ],
         correctAnswer: 3,
@@ -437,9 +437,9 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The workhouse example functions in the argument to:',
         options: [
-          'show that arousing feeling can be a way of informing judgment rather than circumventing it',
-          'establish that most political questions ultimately concern cruelty',
-          'illustrate a case in which the author concedes that emotional appeal is demagogic',
+          'show that arousing feeling can inform judgment rather than circumventing it',
+          'establish that most political questions ultimately concern acts of cruelty',
+          'illustrate a case in which the author grants that emotional appeal is demagogic',
           'contrast the political speech of earlier eras with its contemporary counterpart',
         ],
         correctAnswer: 0,
@@ -451,10 +451,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most strengthen the case for the test the author proposes?',
         options: [
-          'Audiences report that they enjoy speeches in which opposing views are stated fairly.',
-          'Audiences exposed to speeches that state the strongest opposing case become measurably better at detecting misleading claims in later speeches.',
-          'Speakers who name the evidence against their own position are less likely to persuade their audiences.',
-          'Passionate speeches are remembered longer than calm ones.',
+          'Audiences report that they enjoy speeches in which opposing views are stated fairly and fully.',
+          'Audiences hearing speeches that state the opposing case grow better at detecting later deception.',
+          'Speakers who name the evidence against their own position are less likely to persuade an audience.',
+          'Passionate speeches are remembered by their audiences far longer than calm and measured ones are.',
         ],
         correctAnswer: 1,
         explanation:
@@ -465,10 +465,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A speaker calmly presents accurate data, never raises her voice, and concludes by declaring that anyone who disagrees is either uninformed or corrupt. By the author’s test, this speech is:',
         options: [
-          'honest, since its manner is measured and its figures are accurate',
-          'demagogic, since data unaccompanied by feeling cannot inform judgment',
-          'demagogic, since it closes the audience against the possibility of being answered',
-          'impossible to evaluate, since the speaker’s motives cannot be known',
+          'honest, since its manner is measured and every figure it presents is accurate',
+          'demagogic, since data unaccompanied by feeling cannot inform anyone’s judgment',
+          'demagogic, since it closes the audience against the possibility of answer',
+          'impossible to evaluate, since the speaker’s own motives are not available to us',
         ],
         correctAnswer: 2,
         explanation:
@@ -479,10 +479,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, "the handles by which it might be refuted" refers to:',
         options: [
-          'the materials a speech provides that allow an audience to check and challenge it',
-          'the rhetorical devices that make a speech memorable to those who hear it',
-          'the concessions a speaker makes in order to appear reasonable',
-          'the formal rules that govern the conduct of public debate',
+          'the materials a speech gives an audience for checking and challenging it',
+          'the rhetorical devices that make a speech memorable to those who happen to hear it',
+          'the concessions a speaker makes in order to appear reasonable to his listeners',
+          'the formal rules that govern how a public debate is to be conducted in practice',
         ],
         correctAnswer: 0,
         explanation:
@@ -504,10 +504,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the passage’s central argument?',
         options: [
-          'Disobedience is legitimate only when the disobedient citizen accepts the legal penalty for his act.',
-          'Covert sabotage and open protest are equally defensible forms of political resistance.',
-          'Lawbreaking of any kind erodes the legal order and therefore cannot be justified.',
-          'What makes disobedience civil is that it is addressed to fellow citizens as an argument; accepting the penalty is evidence of this rather than its definition.',
+          'disobedience is legitimate only when the citizen who breaks the law accepts the penalty',
+          'covert sabotage and open protest are equally defensible forms of political resistance',
+          'lawbreaking erodes the legal order, so no act of disobedience can ever be justified at all',
+          'what makes disobedience civil is that it addresses fellow citizens as an argument',
         ],
         correctAnswer: 3,
         explanation:
@@ -519,9 +519,9 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s point about a regime that raises the price of protest is that the penalty-acceptance formula:',
         options: [
           'would make a protest’s legitimacy depend on how harshly the state chooses to punish it',
-          'underestimates how much suffering conscientious citizens are willing to bear',
-          'applies only to states that punish acts of protest lightly',
-          'should be replaced by a rule permitting resistance whenever penalties are severe',
+          'underestimates how much suffering conscientious citizens will actually bear',
+          'applies only to those states that already punish acts of political protest lightly',
+          'should give way to a rule permitting resistance whenever the penalties are severe',
         ],
         correctAnswer: 0,
         explanation:
@@ -532,10 +532,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The list of reasons a man might go to prison — reverence, publicity, calculation, capture — serves primarily to:',
         options: [
-          'suggest that most protesters who accept punishment are insincere',
-          'show that penalty-acceptance is compatible with too many motives to certify any one of them',
-          'establish that a protester’s motives can be determined through careful observation',
-          'argue that imprisonment is an inappropriate response to acts of protest',
+          'suggest that most protesters who accept punishment are insincere about their reasons',
+          'show that penalty-acceptance is compatible with too many motives to certify any',
+          'establish that a protester’s motives can be determined by careful observation',
+          'argue that imprisonment is an inappropriate response to peaceful acts of protest',
         ],
         correctAnswer: 1,
         explanation:
@@ -546,10 +546,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s account of what makes disobedience civil?',
         options: [
-          'Some protesters who accept punishment are motivated primarily by a desire for publicity.',
-          'Severe penalties deter many citizens who would otherwise have joined a protest.',
-          'Covert acts of sabotage, once discovered, reliably provoke public argument about the practices they targeted and change how citizens view them.',
-          'Obstructing a road is an effective means of drawing attention to a grievance.',
+          'Some protesters who accept punishment are motivated chiefly by a desire for wider publicity.',
+          'Severe penalties deter many citizens who would otherwise have joined a public protest.',
+          'Covert sabotage, once discovered, reliably provokes argument about the practice it targeted.',
+          'Obstructing a road is an effective means of drawing public attention to a grievance.',
         ],
         correctAnswer: 2,
         explanation:
@@ -560,10 +560,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A group secretly disables machinery at a facility whose practices it condemns and never announces responsibility. The author would most likely classify this act as:',
         options: [
-          'civil disobedience, provided the group would accept punishment if apprehended',
-          'outside the category, because a hidden act cannot address the citizens it would need to persuade',
-          'outside the category, because secrecy in political action reveals a lack of courage',
-          'civil disobedience, since the group’s motives are conscientious ones',
+          'civil disobedience, provided the group would accept punishment if it were apprehended',
+          'outside the category, because a hidden act cannot address the citizens it would persuade',
+          'outside the category, because secrecy in political action always reveals a want of courage',
+          'civil disobedience, since the group’s motives are conscientious and its target deserved',
         ],
         correctAnswer: 1,
         explanation:
@@ -574,10 +574,10 @@ export const CARS_POLITICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the contrast between "the leverage of inconvenience" and "the labor of persuasion" distinguishes:',
         options: [
-          'lawful forms of protest from unlawful ones',
-          'protests that achieve their aims from protests that fail',
+          'protests that remain lawful from protests that break the law outright',
+          'protests that achieve their stated aims from protests that fail to do so',
           'protests directed at governments from protests directed at private parties',
-          'acts that simply impose costs until others yield from acts that give others reasons to change their minds',
+          'acts that impose costs until others yield from acts that supply reasons',
         ],
         correctAnswer: 3,
         explanation:

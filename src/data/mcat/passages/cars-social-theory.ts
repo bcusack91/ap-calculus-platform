@@ -25,10 +25,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
-          'Modernity has emptied the world of meaning, leaving contracts and clocks where the sacred once stood.',
-          'Religious belief in the modern era is held with less fervor than it was in premodern societies.',
-          'Modernity is best understood not as the removal of meaning but as the conversion of inherited practice into chosen commitment.',
-          'Restorationist movements demonstrate that some communities have successfully refused the modern settlement.',
+          'Modernity emptied the world of meaning, leaving contracts and clocks where the sacred canopy once stood.',
+          'Religious belief is now held with less fervor than premodern believers brought to the very same creeds.',
+          'Modernity converted inherited practice into elected identity rather than removing meaning from life.',
+          'Restorationist movements show that some communities have genuinely refused the modern settlement.',
         ],
         correctAnswer: 2,
         explanation:
@@ -39,10 +39,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The comparison of the medieval peasant with the contemporary devout functions primarily to:',
         options: [
-          'distinguish the content of a belief from its status, in order to relocate what modernity actually changed',
-          'establish that religious conviction has remained constant throughout recorded history',
-          'demonstrate that premodern people were psychologically incapable of doubt',
-          'argue that modern believers hold their faith more rigorously than their predecessors did',
+          'distinguish the content of a belief from its status, relocating what modernity actually changed',
+          'establish that religious conviction has held steady in content across the whole of recorded history',
+          'demonstrate that premodern people were constitutionally incapable of entertaining any doubt at all',
+          'argue that modern believers hold their faith more rigorously than their predecessors ever managed',
         ],
         correctAnswer: 0,
         explanation:
@@ -67,10 +67,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that restorationist movements are modernity’s "most literal-minded children"?',
         options: [
-          'Such movements frequently rely on modern communications technology to spread their message.',
-          'Historians find that societies in which no alternative to the tradition had ever been articulated nonetheless produced doctrinal manifestos indistinguishable from those such movements publish today.',
+          'Such movements rely heavily on modern communications technology to spread their message.',
+          'Societies in which no alternative was ever articulated still published doctrinal manifestos.',
           'Members of such movements report religious conviction that is sincere and unwavering.',
-          'Such movements usually fail to restore the practices they champion.',
+          'Such movements usually fail to restore the practices their manifestos so loudly champion.',
         ],
         correctAnswer: 1,
         explanation:
@@ -81,24 +81,24 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A ministry of culture proposes to strengthen national tradition by making instruction in traditional practice compulsory in every school. Based on the passage, the author would most likely predict that the program will:',
         options: [
-          'produce students who regard the tradition as one assigned option among others, since a tradition delivered as a curriculum has already become optional',
-          'restore the unreflective background that the author says modern conditions dissolved',
-          'succeed, because the author holds that traditions are best sustained by state authority',
+          'produce students who regard the tradition as one assigned option among several rivals',
+          'restore the unreflective background that the author says modern conditions have dissolved',
+          'succeed, since the author holds that traditions are best sustained by state authority',
           'fail because students in modern societies are indifferent to traditional questions',
         ],
         correctAnswer: 0,
         explanation:
-          'On the author’s account, what makes a background unquestioned is that no alternative presents itself as live; a tradition taught, defended, and examined is thereby presented as something that could have been otherwise. Teaching it cannot restore unchosenness, which is why the option predicting restoration reverses the argument. The passage never endorses state authority as a means of sustaining tradition. The prediction of indifference contradicts the author’s explicit allowance that modern conviction can be entirely fervent.',
+          'A background counts as unquestioned, on the author’s account, only where "no alternative presented itself as a live possibility." A tradition that is taught, defended, and examined has thereby been presented as something that could have been otherwise, so delivering it as a curriculum makes it optional rather than restoring unchosenness — which is why the option predicting restoration reverses the argument. The passage never endorses state authority as a means of sustaining tradition. The prediction of indifference contradicts the author’s explicit allowance that modern conviction can be entirely fervent.',
         skill: 'application',
         needsReview: false,
       },
       {
         question: 'In context, the author’s remark that "thinness is the price of a choice one could actually make" most nearly means that:',
         options: [
-          'modern commitments are degraded imitations of premodern ones',
-          'a commitment that has been chosen is necessarily stronger than one that was inherited',
-          'a commitment cannot be both freely chosen and unquestioned, so the very feature that makes it one’s own is what makes it feel insubstantial',
-          'people in modern societies have become incapable of sustained commitment',
+          'modern commitments are degraded imitations of the premodern ones they have replaced',
+          'a commitment that was chosen is necessarily stronger than one a person merely inherited',
+          'what makes a commitment one’s own is the same thing that makes it feel insubstantial',
+          'people in modern societies have become incapable of any sustained commitment at all',
         ],
         correctAnswer: 2,
         explanation:
@@ -120,10 +120,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best stated as:',
         options: [
-          'Organizational procedures persist mainly because managers lack the courage to remove them.',
-          'Much organizational procedure survives because it diffuses responsibility, which is why streamlining campaigns reliably fail and why reform must target norms of accountability instead.',
-          'Procedures should be eliminated wherever they cannot be shown to improve measurable outcomes.',
-          'Formal procedure has no genuine coordinating value and exists only for ceremonial purposes.',
+          'Organizational procedures persist chiefly because managers lack the courage to delete them outright.',
+          'Much procedure survives because it diffuses responsibility, so reform must target how blame falls.',
+          'Procedures ought to be eliminated wherever they cannot be shown to improve real outcomes.',
+          'Formal procedure has no genuine coordinating value and exists purely for ceremonial purposes.',
         ],
         correctAnswer: 1,
         explanation:
@@ -134,10 +134,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author mentions "the approval from a department with no relevant expertise" primarily in order to:',
         options: [
-          'illustrate the general incompetence of large organizations',
-          'show that procedures are usually written by people who do not understand the work',
-          'concede that some procedures serve no purpose whatsoever',
-          'supply a case that looks irrational until the blame-diffusing function is added to the account',
+          'illustrate the general incompetence of very large bureaucratic organizations',
+          'show that procedures are usually written by people who have never done the work',
+          'concede that a handful of procedures serve no discernible purpose at all',
+          'supply a case that looks irrational until the blame-diffusing function is added',
         ],
         correctAnswer: 3,
         explanation:
@@ -148,10 +148,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'According to the passage, the clearest indication that a given procedure is serving absolution rather than coordination is that:',
         options: [
-          'when confronted with evidence that it does not improve outcomes, it is defended in terms that never mention outcomes',
-          'it requires more signatures than the underlying task appears to warrant',
-          'it was introduced in the aftermath of a highly publicized failure',
-          'the employees who follow it are unable to explain how it originated',
+          'when challenged with evidence about outcomes, its defense never mentions outcomes',
+          'it demands considerably more signatures than the underlying task appears to warrant',
+          'it was introduced in the immediate aftermath of some highly publicized failure',
+          'the employees who follow it are no longer able to explain how the rule originated',
         ],
         correctAnswer: 0,
         explanation:
@@ -162,10 +162,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings would most STRENGTHEN the author’s explanation of why streamlining campaigns fail?',
         options: [
-          'Organizations that streamline procedures report short-term improvements in employee satisfaction.',
+          'Organizations that streamline their procedures report short-term gains in employee satisfaction.',
           'Consultants hired to simplify procedures are rarely experts in the work they are simplifying.',
-          'After streamlining, procedural steps reappear fastest in the organizations that most severely punish individuals for bad outcomes.',
-          'Organizations with the fewest formal procedures reach decisions more quickly than those with the most.',
+          'Steps reappear fastest in the organizations that punish individuals hardest for bad outcomes.',
+          'Organizations with the fewest formal procedures reach decisions faster than those with the most.',
         ],
         correctAnswer: 2,
         explanation:
@@ -176,10 +176,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A hospital adopts a surgical checklist and complication rates fall. Two years later the checklist has grown to include several items unrelated to surgical safety, each requiring an initial. The author would most likely interpret the growth as:',
         options: [
-          'evidence that the original checklist was poorly designed',
-          'proof that checklists have no real coordinating value',
-          'an instance of clinical expertise being displaced by administrative convenience',
-          'a coordinating instrument accumulating absolving functions, exactly as one rule serving both masters would predict',
+          'evidence that the original surgical checklist had been poorly designed',
+          'proof that checklists carry no real coordinating value whatever',
+          'clinical expertise being displaced by administrative convenience',
+          'a coordinating instrument that has accumulated absolving functions',
         ],
         correctAnswer: 3,
         explanation:
@@ -190,10 +190,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward employees who accumulate procedural protections is best described as:',
         options: [
-          'indignant at their evasion of personal responsibility',
-          'understanding, treating their conduct as a sensible response to how they are judged',
-          'indifferent, since the author regards individual behavior as beside the point',
-          'admiring of their skill at organizational politics',
+          'indignant at their deliberate evasion of personal responsibility',
+          'understanding, treating it as a sensible response to how they are judged',
+          'indifferent, since individual behavior strikes the author as irrelevant',
+          'admiring of their evident skill at internal organizational politics',
         ],
         correctAnswer: 1,
         explanation:
@@ -215,10 +215,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'social ties carry no economic value and should not be studied by economists',
-          'the concept of social capital is imprecise, and better measurement would resolve its difficulties',
-          'communities have weakened primarily because associational membership has fallen',
-          'describing social ties as capital corrupts them, because the strategic orientation the metaphor invites destroys the good it names',
+          'social ties carry no economic value and ought not to be studied by economists at all',
+          'the concept of social capital is imprecise, and better measurement would resolve it',
+          'communities have weakened chiefly because associational membership has been falling',
+          'describing social ties as capital corrupts the good the metaphor sets out to name',
         ],
         correctAnswer: 3,
         explanation:
@@ -229,10 +229,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'In saying that the calculating man does not acquire "slightly inferior friendships," the author most nearly means that:',
         options: [
-          'strategic friendships yield smaller returns than sincere ones do',
-          'the strategic orientation changes what kind of relationship it is, not merely how well it performs',
-          'friendship and acquaintance cannot be distinguished in practice',
-          'relationships entered for instrumental reasons are worthless',
+          'strategic friendships yield materially smaller returns than sincere friendships would',
+          'the strategic orientation changes the kind of relationship, not merely its quality',
+          'friendship and mere acquaintance cannot in practice be told apart from each other',
+          'relationships entered for instrumental reasons turn out to be entirely worthless',
         ],
         correctAnswer: 1,
         explanation:
@@ -257,9 +257,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s answer to the economist’s objection?',
         options: [
-          'Social scientific vocabulary is almost never adopted by the people it describes, remaining confined to research literature.',
-          'People who network deliberately report greater satisfaction with their careers.',
-          'The term "social capital" was in use well before economists adopted it.',
+          'Social scientific vocabulary is almost never adopted by the people whom it describes.',
+          'People who network deliberately report much greater satisfaction with their careers.',
+          'The term "social capital" was in circulation well before economists ever adopted it.',
           'Communities with dense networks of ties are more economically productive than sparse ones.',
         ],
         correctAnswer: 0,
@@ -271,10 +271,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A city hoping to rebuild neighborhood trust funds a program that pays residents a small stipend to attend monthly community dinners. Based on the passage, the author would most likely object that:',
         options: [
-          'the program is too small in scale to register in any measurement',
-          'it raises the count of gatherings while the stipend supplies precisely the instrumental motive under which trust does not form',
-          'residents cannot be relied upon to attend without supervision',
-          'shared meals are an outdated form of neighborhood association',
+          'the program is much too small in scale to register in any measurement at all',
+          'the stipend supplies the very instrumental motive under which trust cannot form',
+          'residents cannot be relied on to attend such dinners without supervision',
+          'shared meals are an outdated form of neighborhood association in a modern city',
         ],
         correctAnswer: 1,
         explanation:
@@ -285,10 +285,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that the author’s own prescription rests chiefly on:',
         options: [
-          'increasing the number of voluntary associations available to residents',
-          'restoring the thick community life of the past',
-          'measuring trust more accurately before designing any intervention',
-          'repeated, non-optional shared presence with something genuinely at stake, followed by leaving people alone',
+          'increasing the number of voluntary associations available to local residents',
+          'restoring the thick community life that villages of the past once supplied',
+          'measuring trust far more accurately before any intervention is designed',
+          'repeated, non-optional shared presence with something genuinely at stake',
         ],
         correctAnswer: 3,
         explanation:
@@ -310,10 +310,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the passage’s central claim?',
         options: [
-          'Public space exists chiefly to permit voluntary co-presence among strangers, a good that programming for interaction undermines.',
-          'Public spaces fail when planners neglect to program them with sufficient activity.',
-          'Cities should abandon the attempt to design public space deliberately.',
-          'Community is the highest good a city can offer to its residents.',
+          'Public space exists chiefly to permit voluntary co-presence among strangers.',
+          'Public spaces fail when planners neglect to program them with enough activity.',
+          'Cities ought to abandon the attempt to design their public space deliberately.',
+          'Community is the highest good that a city can offer to any of its residents.',
         ],
         correctAnswer: 0,
         explanation:
@@ -324,10 +324,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'By "liveliness is not interaction; it is voluntary presence," the author most nearly means that:',
         options: [
-          'quiet spaces are in all cases preferable to busy ones',
+          'quiet spaces are in every case preferable to crowded and busy ones',
           'a space succeeds when strangers are encouraged to speak with one another',
-          'a space succeeds when people choose to be there, whether or not they engage each other',
-          'the number of people present is the only meaningful measure of a space’s success',
+          'a space succeeds when people choose to be there, engaged or not',
+          'the number of people present is the only meaningful measure of success',
         ],
         correctAnswer: 2,
         explanation:
@@ -338,10 +338,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The description of the festival crowd that "departs with it" functions primarily to:',
         options: [
-          'show that temporary events cost less than permanent construction',
-          'distinguish attendance, which programming produces, from occupancy, which it does not',
-          'argue that public celebrations ought to be discouraged in cities',
-          'concede that programmed spaces achieve the author’s own preferred outcome',
+          'show that temporary events cost less than permanent construction does',
+          'distinguish attendance, which programming produces, from real occupancy',
+          'argue that public celebrations ought to be discouraged in the largest cities',
+          'concede that programmed spaces achieve the author’s preferred outcome',
         ],
         correctAnswer: 1,
         explanation:
@@ -352,10 +352,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that programming a space begins the process of exclusion?',
         options: [
-          'Programmed squares attract a larger share of visitors from outside the immediate neighborhood.',
-          'Cities that program their squares spend more on maintenance than those that do not.',
-          'Surveys find that most people enjoy watching performances in public squares.',
-          'Removals of people from public squares increase after a square is assigned an official use, and those removed are typically doing nothing that is prohibited.',
+          'Programmed squares attract a larger share of visitors from outside the neighborhood.',
+          'Cities that program their squares spend more on maintenance than cities that do not.',
+          'Surveys find that most people enjoy watching staged performances in public squares.',
+          'Removals of people breaking no rule rise after a square is assigned an official use.',
         ],
         correctAnswer: 3,
         explanation:
@@ -367,9 +367,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
         question: 'A parks department replaces a lawn’s scattered benches with a tiered seating bowl facing a new performance stage. Based on the passage, the author would most likely predict that:',
         options: [
           'the park will at last achieve the conviviality its designers intended',
-          'the park will be used more heavily on every day of the week',
-          'the park will fill when something is staged and stand empty otherwise, because the seating now supplies a purpose in place of a place',
-          'the change will make little difference, since seating arrangements do not much affect how space is used',
+          'the park will be used far more heavily on every single day of the week',
+          'the park will fill when something is staged and stand empty at other times',
+          'the change will make little difference, since seating hardly affects use',
         ],
         correctAnswer: 2,
         explanation:
@@ -381,9 +381,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward planners who seek to "activate" public space is best characterized as:',
         options: [
           'critical of their method while granting the value of the good they pursue',
-          'wholly dismissive of their competence and their motives',
-          'neutral toward a controversy the author regards as unresolved',
-          'supportive, provided that programming is applied more consistently',
+          'wholly dismissive of their competence as well as of their underlying motives',
+          'neutral toward a controversy the author regards as entirely unresolved',
+          'supportive, provided that programming is applied far more consistently',
         ],
         correctAnswer: 0,
         explanation:
@@ -405,10 +405,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage’s central claim is that:',
         options: [
-          'workers today enjoy substantially fewer leisure hours than workers of earlier generations',
-          'complaints about busyness are best explained by the poor personal discipline of people with devices',
-          'what has changed about time is not its quantity but its shape, since contiguous unclaimed blocks have become scarce',
-          'researchers who tally time use have made errors in their measurement of leisure',
+          'workers today enjoy substantially fewer leisure hours than earlier generations did',
+          'complaints about busyness reduce to the poor personal discipline of device owners',
+          'what changed is not time’s quantity but its shape, as contiguous blocks vanish',
+          'researchers who tally time use have made errors in measuring leisure hours',
         ],
         correctAnswer: 2,
         explanation:
@@ -419,10 +419,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The remark that both parties "are counting different things" functions primarily to:',
         options: [
-          'reframe an apparent dispute about facts as a disagreement about which unit of time matters',
-          'concede that the complainants have exaggerated the difficulty of their situation',
-          'dismiss time-use research as methodologically unsound',
-          'introduce evidence showing that leisure hours have increased',
+          'reframe an apparent dispute about facts as one about which unit of time matters',
+          'concede that the complainants have exaggerated the difficulty they face',
+          'dismiss time-use research as methodologically unsound in its basic design',
+          'introduce evidence showing that leisure hours have in fact increased',
         ],
         correctAnswer: 0,
         explanation:
@@ -433,10 +433,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that the difference between four hours in one piece and four hours in twelve pieces matters most for:',
         options: [
-          'physical rest and recovery from fatigue',
-          'the total quantity of leisure a person can be said to enjoy',
+          'physical rest and the ordinary recovery from fatigue',
+          'the sheer quantity of leisure a person may be said to enjoy',
           'activities that can be paused and resumed at no cost',
-          'undertakings that must be held whole while they are built and so cannot be assembled from fragments',
+          'undertakings that must be held whole while they are built',
         ],
         correctAnswer: 3,
         explanation:
@@ -447,9 +447,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that being on call damages an hour whether or not the call arrives?',
         options: [
-          'Most workers report that they are contacted outside working hours only rarely.',
-          'Workers who are on call but are never actually contacted pursue long-horizon projects at the same rate as workers with no on-call obligation at all.',
-          'On-call obligations are far more common in some industries than in others.',
+          'Most workers report being contacted outside their working hours only very rarely.',
+          'On-call workers never contacted pursue long-horizon projects at unchanged rates.',
+          'On-call obligations are considerably more common in some industries than others.',
           'Employers who impose on-call obligations tend to offer higher pay in exchange.',
         ],
         correctAnswer: 1,
@@ -461,9 +461,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'An employer concerned about burnout adds three floating holidays that employees may take at any time with a manager’s approval. Based on the passage, the author would most likely respond that:',
         options: [
-          'the benefit adds to a total that was never scarce while suspending no one’s claim, and so purchases mainly the appearance of relief',
+          'the benefit adds to a total that was never scarce and suspends no one’s claim',
           'the benefit should work, because burnout tracks the total number of leisure hours',
-          'holiday policy has no bearing on how workers experience their time',
+          'holiday policy has no bearing at all on how workers experience their time',
           'the policy will succeed only if managers approve the requests promptly',
         ],
         correctAnswer: 0,
@@ -475,9 +475,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, "recorded as leisure and lived as standby" most nearly means that:',
         options: [
-          'workers systematically misreport their own time when surveyed',
+          'workers systematically misreport their own time when they are surveyed',
           'paid work and leisure have become indistinguishable in economic terms',
-          'an hour that counts as free is not experienced as free while someone else retains an option on it',
+          'an hour is not experienced as free while another retains an option on it',
           'standby time ought to be legally reclassified and compensated as work',
         ],
         correctAnswer: 2,
@@ -500,9 +500,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best captures the passage’s main argument?',
         options: [
-          'Surveillance has become so pervasive that privacy can no longer be meaningfully protected.',
-          'Contemporary control increasingly works by preventing acts rather than deterring them, and its deepest cost is the loss of occasions on which trustworthiness could be shown.',
-          'The disciplinary model of internalized surveillance remains the best available account of modern institutions.',
+          'Surveillance is now so pervasive that privacy can no longer be meaningfully protected.',
+          'Control now prevents acts rather than deterring them, costing us occasions for restraint.',
+          'The disciplinary model of internalized surveillance remains the best account of institutions.',
           'Preventing harm is in every case preferable to punishing it after the fact.',
         ],
         correctAnswer: 1,
@@ -514,10 +514,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The references to "the door that will not open, the payment that will not clear" serve primarily to:',
         options: [
-          'catalogue the most frequent failures of automated systems',
+          'catalogue the most frequent failures of automated administrative systems',
           'suggest that preventive measures are chiefly experienced as inconveniences',
           'argue that new technology has made deterrence considerably more effective',
-          'supply concrete instances of control that operates without engaging the agent’s will',
+          'give concrete instances of control that never engages the agent’s will',
         ],
         correctAnswer: 3,
         explanation:
@@ -542,10 +542,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that prevention destroys the grounds for trust?',
         options: [
-          'Comprehensive preventive systems are expensive to build and maintain.',
-          'People subject to preventive systems commonly report resenting them.',
-          'People who have lived for years under comprehensive preventive systems show the same restraint, readily observable, when placed in settings where nothing prevents them.',
-          'Institutions that rely heavily on prevention also invest in training their employees.',
+          'Comprehensive preventive systems are expensive to build and to maintain.',
+          'People subject to preventive systems commonly report resenting them deeply.',
+          'People long under prevention show equal restraint where nothing prevents them.',
+          'Institutions that rely heavily on prevention also invest in training.',
         ],
         correctAnswer: 2,
         explanation:
@@ -556,10 +556,10 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A university replaces proctored examinations with software that makes it technically impossible for students to consult unauthorized material during a test, and recorded cheating falls to zero. Based on the passage, the author would most likely conclude that:',
         options: [
-          'the university has succeeded in cultivating academic honesty among its students',
-          'determined students will inevitably find a way to circumvent the software',
+          'the university has succeeded in cultivating genuine honesty among its students',
+          'determined students will inevitably find some way to circumvent the software',
           'proctoring was the more humane form of surveillance and ought to be restored',
-          'the university now knows less about which of its students are honest than it did before',
+          'the university now knows less about which of its students are honest',
         ],
         correctAnswer: 3,
         explanation:
@@ -571,9 +571,9 @@ export const CARS_SOCIAL_THEORY_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the claim that preventing harm is better than punishing it afterward is best described as:',
         options: [
           'dismissive, since the author regards prevention as illegitimate in all its forms',
-          'accepting across a wide range of harms, while insisting that the acceptance carries a cost that goes unnoticed',
-          'undecided, since the author declines to take any position on the question',
-          'enthusiastic, treating prevention as the signal achievement of modern institutions',
+          'accepting for a wide range of harms while insisting the acceptance carries a cost',
+          'undecided, since the author declines to take any position at all on the question',
+          'enthusiastic, treating prevention as the chief achievement of modern life',
         ],
         correctAnswer: 1,
         explanation:

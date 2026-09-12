@@ -25,9 +25,9 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
         question: 'Which of the following best captures the central thesis of the passage?',
         options: [
           'Prescriptive rules accurately describe the underlying logic of English and should be defended on that basis.',
-          'Because prescriptive rules are arbitrary conventions, students are best served by being told to disregard them.',
-          'Prescriptive rules describe no fact about the language, yet remain consequential as the entry conditions of a social guild, so they should be taught without being presented as logic.',
-          'The nonstandard varieties studied by linguists are less systematically rule-governed than the standard dialect.',
+          'Because prescriptive rules are arbitrary conventions, students are best served by being told to ignore them.',
+          'Prescriptive rules describe no fact about the language, yet remain powerful as the entry conditions of a social guild.',
+          'The nonstandard varieties studied by linguists are less rule-governed than the standard dialect.',
         ],
         correctAnswer: 2,
         explanation:
@@ -39,20 +39,20 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
         question: 'The author’s discussion of money in the second paragraph serves primarily to:',
         options: [
           'illustrate that a convention’s arbitrary origin does not diminish its present force',
-          'propose that linguistic standards be regulated in the way currency is regulated',
+          'propose that linguistic standards be regulated in the way that currency is regulated',
           'argue that economic inequality is the underlying source of grammatical prejudice',
           'concede that descriptivists have correctly identified the origin of prescriptive rules',
         ],
         correctAnswer: 0,
         explanation:
-          'The money example is introduced to break the chain "arbitrary, therefore unimportant": nothing in a banknote entitles it to buy bread, yet "no one concludes that money is unimportant." Its work is entirely about force versus origin. The regulation option literalizes an analogy the passage never extends into policy. The inequality option imports an economic thesis the passage does not argue. The concession option misidentifies the function — the author concedes descriptivist findings in the first paragraph, but this paragraph is a rebuttal, not a concession.',
+          'The money example is introduced to break the chain that runs from arbitrary to unimportant: nothing in a banknote entitles it to buy bread, yet "no one concludes that money is unimportant." Its work is entirely about force versus origin. The regulation option literalizes an analogy the passage never extends into policy. The inequality option imports an economic thesis the passage does not argue. The concession option misidentifies the function — the author concedes descriptivist findings in the first paragraph, but this paragraph is a rebuttal, not a concession.',
         skill: 'function',
         needsReview: false,
       },
       {
         question: 'The author’s remark that the professor who calls grammar a fiction "has already been admitted" most strongly implies that:',
         options: [
-          'professors are generally insincere about their views on language',
+          'professors are generally insincere about the views on language they publish',
           'academic linguists lack the training required to advise students about employment',
           'the standard dialect is easier to acquire for those who study language professionally',
           'advice to disregard the standard dialect is cheapest for those who no longer need it',
@@ -66,21 +66,21 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s argument for teaching the standard dialect?',
         options: [
-          'Employers report noticing nonstandard usage during job interviews.',
-          'Hiring and admissions outcomes for speakers of nonstandard varieties are unaffected by how those speakers speak.',
+          'Employers report that they notice a candidate’s nonstandard usage during a job interview.',
+          'Hiring and admissions outcomes for nonstandard speakers do not vary with how those speakers speak.',
           'Linguists broadly agree that nonstandard varieties are internally consistent systems.',
-          'Students taught the standard dialect as a costume report less shame than those taught it as a correction.',
+          'Students taught the standard dialect as a costume report less shame than those corrected.',
         ],
         correctAnswer: 1,
         explanation:
-          'The whole practical argument rests on the claim that the guild controls real doors — that skipping the convention means "skipping an interview." If speech makes no difference to hiring and admissions, the toll booth the author describes does not exist and the case for teaching evaporates. Employers noticing usage supports the author rather than weakening him. Agreement that nonstandard varieties are systematic is a premise the author already grants in the opening paragraph. Reduced shame under the costume framing supports the author’s recommended manner of teaching.',
+          'The whole practical argument rests on the claim that the guild controls real doors — that ignoring the convention is like telling a student to "skip an interview." If speech makes no difference to hiring and admissions, the toll booth the author describes does not exist and the case for teaching evaporates. Employers noticing usage supports the author rather than weakening him. Agreement that nonstandard varieties are systematic is a premise the author already grants in the opening paragraph. Reduced shame under the costume framing supports the author’s recommended manner of teaching.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
       {
         question: 'A school district is drafting guidance on how teachers should treat students’ home dialects. Which policy language most closely matches the author’s position?',
         options: [
-          'Instruction should present the standard dialect as the register expected in specified settings, without characterizing students’ home speech as incorrect.',
+          'Instruction should present the standard dialect as the register expected in certain settings, not as a correction.',
           'Instruction should correct nonstandard forms wherever they appear, since disciplined thinking depends on standard grammar.',
           'Instruction should not teach the standard dialect, since its rules reflect social preference rather than linguistic logic.',
           'Instruction should treat all varieties as equally useful in every setting, since no variety is linguistically superior.',
@@ -94,10 +94,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward descriptivist linguists is best characterized as:',
         options: [
-          'dismissive of their findings and doubtful of their methods',
-          'wholly admiring, without reservation',
-          'accepting their conclusions about language while faulting the practical advice drawn from those conclusions',
-          'openly hostile, regarding their project as a fashionable pretense',
+          'dismissive of their findings and openly doubtful of their methods of inquiry',
+          'wholly admiring of both their findings and the practical advice they give',
+          'accepting their account of language while faulting the advice drawn from it',
+          'openly hostile, regarding their whole project as a fashionable pretense',
         ],
         correctAnswer: 2,
         explanation:
@@ -119,10 +119,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage’s central claim is that:',
         options: [
-          'speakers’ intentions are irrelevant to communication and should be disregarded entirely',
-          'what a speaker’s words mean is fixed by public practice rather than private intention, so speakers are answerable for the words they borrow',
-          'because language changes continually, no utterance possesses a determinate meaning',
-          'a sincere statement that one meant no harm ordinarily resolves disputes about wounding speech',
+          'speakers’ intentions are irrelevant to what is communicated and should be disregarded',
+          'what words mean is fixed by public practice, so a speaker is answerable for the words she borrows',
+          'because language changes continually, no utterance possesses a meaning that stays determinate',
+          'a sincere statement that one meant no harm ordinarily resolves a dispute about such speech',
         ],
         correctAnswer: 1,
         explanation:
@@ -133,10 +133,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "a passenger cannot be the driver" most nearly means that:',
         options: [
-          'hearers rather than speakers determine what a conversation is about',
-          'speakers should avoid irony because it is so easily misread',
-          'public meanings shift only when many speakers change their usage simultaneously',
-          'intention can exploit a word’s public meaning only by depending on it, and therefore cannot be its source',
+          'hearers rather than speakers decide what a conversation is really about in the end',
+          'speakers should avoid irony, because it is so often misread by their hearers',
+          'public meanings shift only when many speakers change their usage all at once',
+          'intention can exploit a public meaning only by depending on it, not making it',
         ],
         correctAnswer: 3,
         explanation:
@@ -147,10 +147,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Based on the passage, the author would most likely regard a language whose terms were given meaning by one person’s intentions alone as:',
         options: [
-          'unable to do what the author says meaning does, since its terms would answer to no shared practice',
-          'the purest instance of meaning, since the speaker’s intention would be perfectly transparent',
-          'possible but seldom attempted, because most speakers prefer the convenience of an existing language',
-          'equivalent to metaphor, which likewise departs from established usage',
+          'unable to do the work meaning does, since its terms would answer to no shared practice',
+          'the purest instance of meaning, since the speaker’s intention would be fully transparent',
+          'possible but seldom attempted, since most speakers prefer an existing language’s convenience',
+          'equivalent to metaphor, which likewise departs from the established senses of words',
         ],
         correctAnswer: 0,
         explanation:
@@ -161,9 +161,9 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author raises the objection concerning language change primarily in order to:',
         options: [
-          'concede that the public account of meaning must ultimately be abandoned',
-          'establish that metaphor is a species of error that communities tolerate',
-          'draw a distinction between a meaning that is strict and one that is fixed, and thereby answer a challenge to the public account',
+          'concede that the public account of meaning must in the end be abandoned entirely',
+          'establish that metaphor is a species of error that communities come to tolerate',
+          'distinguish a meaning that is strict from one that is fixed, and so answer a challenge',
           'show that individual speakers gradually steer the direction of linguistic change',
         ],
         correctAnswer: 2,
@@ -176,9 +176,9 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
         question: 'Which of the following observations, if true, would most STRENGTHEN the author’s account of linguistic innovation?',
         options: [
           'New words enter a language most often through deliberate coinage by individual writers.',
-          'Most speakers are unable to state definitions for the words they use most frequently.',
-          'Speech communities differ widely in how rapidly they absorb novel usages.',
-          'Novel metaphors are understood only by hearers already familiar with the standard sense of the words involved.',
+          'Most speakers cannot state a usable definition for the words they use most frequently of all.',
+          'Speech communities differ widely in how rapidly they absorb an unfamiliar new usage of a word.',
+          'Novel metaphors are understood only by hearers who already hold the standard sense.',
         ],
         correctAnswer: 3,
         explanation:
@@ -189,10 +189,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'A novelist rewrites a paragraph whose meaning she is certain she already understands. The author would most likely describe this revision as:',
         options: [
-          'evidence that the novelist’s stated intentions were insincere',
-          'an acknowledgment that the sentences must do their work without her present to explain them',
-          'an attempt to fix the meaning of her words by private decision',
-          'unnecessary, since her intention already settles what the paragraph means',
+          'evidence that the novelist’s stated intentions were not sincerely held at all',
+          'an acknowledgment that her sentences must work without her there to explain them',
+          'an attempt to fix the meaning of her words by a private decision of her own making',
+          'unnecessary, since her intention already settles what the paragraph must mean',
         ],
         correctAnswer: 1,
         explanation:
@@ -215,9 +215,9 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
         question: 'Which statement best expresses the author’s central position?',
         options: [
           'Rhetoric cannot be distinguished from manipulation, and the ancient charge against it should be accepted.',
-          'Because every argument requires arrangement and delivery, no line can be drawn between honest and dishonest persuasion.',
-          'A persuasive technique is legitimate if and only if it can be announced to an audience without losing its force.',
-          'Persuasion that withstands disclosure has been converted into a claim that can be examined and answered, which is the condition legitimate persuasion requires.',
+          'Because every argument requires arrangement, no line can be drawn between honest and dishonest persuasion.',
+          'A technique is legitimate if and only if it can be announced to an audience without losing its force.',
+          'Persuasion that survives disclosure has become a claim that can be examined, checked, and answered.',
         ],
         correctAnswer: 3,
         explanation:
@@ -228,10 +228,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the standard defense that "no argument reaches anyone unclothed" is best described as:',
         options: [
-          'enthusiastic endorsement of a decisive rebuttal',
+          'enthusiastic endorsement of what the author takes to be a wholly decisive rebuttal',
           'agreement that it is true, combined with dissatisfaction that it settles nothing',
-          'suspicion that it is a rationalization advanced in bad faith',
-          'indifference, since the author regards the ancient charge as unimportant',
+          'suspicion that it is a rationalization advanced by rhetoricians in bad faith',
+          'indifference, since the author regards the ancient charge as unimportant today',
         ],
         correctAnswer: 1,
         explanation:
@@ -242,24 +242,24 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The example of the photograph of a frightened child functions primarily to:',
         options: [
-          'condemn the use of emotional appeals in any form of public argument',
-          'demonstrate that visual evidence is inherently less trustworthy than verbal argument',
-          'supply a contrasting case in which stating the technique aloud destroys its effect',
-          'illustrate a technique whose disclosure an audience would welcome',
+          'condemn the use of emotional appeals in every form of public argument',
+          'demonstrate that visual evidence is less trustworthy than verbal argument',
+          'supply a contrasting case in which stating the technique aloud destroys it',
+          'illustrate a technique whose disclosure an audience would actually welcome',
         ],
         correctAnswer: 2,
         explanation:
-          'The photograph is paired against the "strongest reason last" example: one survives being announced, the other dies the moment it is described, and "the manner of its dying is a confession." Its role is to mark the failing side of the test. A blanket condemnation of emotional appeals overshoots a passage that later grants anger may be "correct." Nothing is claimed about visual versus verbal evidence generally. The welcome-disclosure option reverses the example, whose whole point is that disclosure ruins it.',
+          'The photograph is paired against the example of the speaker who has "placed my strongest reason at the end": one survives being announced, the other dies the moment it is described, and "the manner of its dying is a confession." Its role is to mark the failing side of the test. A blanket condemnation of emotional appeals overshoots a passage that later grants anger may be "correct." Nothing is claimed about visual versus verbal evidence generally. The welcome-disclosure option reverses the example, whose whole point is that disclosure ruins it.',
         skill: 'function',
         needsReview: false,
       },
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s response to the demagogue objection?',
         options: [
-          'Audiences told openly that a speaker is playing on their anger become less willing, not more, to examine whether that anger is warranted.',
-          'Demagogues rarely announce the techniques they are using.',
-          'Some listeners find techniques more persuasive once the techniques have been disclosed.',
-          'Anger is sometimes a warranted response to genuine political conditions.',
+          'Audiences told that a speaker is playing on their anger become less willing to examine it.',
+          'Demagogues rarely announce to a crowd the techniques they are actually using on it.',
+          'Some listeners find a technique more persuasive once it has been openly disclosed.',
+          'Anger is sometimes a warranted response to conditions a speaker accurately describes.',
         ],
         correctAnswer: 0,
         explanation:
@@ -270,10 +270,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'An advocacy organization is choosing between two tactics: placing its most compelling statistic in the final line of a letter, and mailing the letter in an envelope designed to resemble an official government notice so that recipients will open it. On the author’s test, the author would most likely conclude that:',
         options: [
-          'both tactics are illegitimate, since both are calculated to produce an effect',
-          'the first is legitimate and the second is not, because only the first would keep working if it were described to recipients',
-          'the second is legitimate because opening a letter is not itself being persuaded',
-          'both are legitimate so long as the statistic in the letter is accurate',
+          'both tactics are illegitimate, since each is calculated to produce a specific effect',
+          'the first is legitimate and the second is not, since only the first survives disclosure',
+          'the second is legitimate, since opening an envelope is not yet being persuaded by it',
+          'both are legitimate so long as the statistic in the letter is entirely accurate',
         ],
         correctAnswer: 1,
         explanation:
@@ -284,10 +284,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s closing observation about a speaker who "could not bear" to have his methods read aloud most strongly suggests that:',
         options: [
-          'most public speakers privately recognize that their techniques are dishonest',
-          'audiences are largely incapable of detecting manipulation on their own',
-          'sincerity is the quality the author most wants from public speakers',
-          'a speaker’s own reluctance to disclose a technique is evidence about that technique’s character',
+          'most public speakers privately recognize that their own techniques are dishonest',
+          'audiences are largely incapable of detecting manipulation without being told',
+          'sincerity is the quality the author most wants to see in public speakers',
+          'a speaker’s reluctance to disclose a technique is evidence about that technique',
         ],
         correctAnswer: 3,
         explanation:
@@ -309,10 +309,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is that:',
         options: [
-          'the vocational and humanist accounts of schooling share a mistaken premise, and schooling’s central product is instead a shared public stock of reference',
-          'schools should set aside curricular content in favor of teaching habits of public address',
-          'the humanist account of education is correct and the vocational account is a recent corruption of it',
-          'because students forget most of what they learn, the individual benefits of schooling have been overstated and its costs should be reduced',
+          'the two familiar accounts share a mistaken premise; schooling’s product is a shared stock of reference',
+          'schools should set aside curricular content in favor of teaching students habits of public address',
+          'the humanist account of education is correct and the vocational account corrupts it',
+          'because students forget most of what they learn, the benefits of schooling are overstated',
         ],
         correctAnswer: 0,
         explanation:
@@ -323,10 +323,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The observation that citizens who have read nothing in common "can still trade with each other; they cannot deliberate with each other" most directly supports which inference?',
         options: [
-          'Commerce is a less valuable form of social activity than political argument.',
-          'Deliberation requires that participants ultimately agree on the conclusions they reach.',
-          'Some forms of cooperation depend on shared reference in a way that other forms do not.',
-          'Schools should give civics instruction priority over vocational training.',
+          'Commerce is a less valuable form of social activity than political argument is.',
+          'Deliberation requires that participants ultimately agree on the conclusions reached.',
+          'Some forms of cooperation depend on shared reference in a way that others do not.',
+          'Schools should give instruction in civics priority over vocational training.',
         ],
         correctAnswer: 2,
         explanation:
@@ -337,10 +337,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The comparison of schooling to a road system functions primarily to:',
         options: [
-          'argue that education should be financed through the mechanisms used for public infrastructure',
-          'make vivid that a good may be worth providing even though its value is not lodged in any individual recipient',
+          'argue that education should be financed through the mechanisms used for public roads',
+          'make vivid that a good may be worth providing though its value lodges in no recipient',
           'concede that education, like infrastructure, decays without continual maintenance',
-          'suggest that curricula ought to be standardized nationally as road networks are',
+          'suggest that curricula ought to be standardized nationally as road networks already are',
         ],
         correctAnswer: 1,
         explanation:
@@ -351,10 +351,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'A district proposes replacing its shared literature curriculum with a system in which each student selects texts matched to personal interest. The author would most likely object that:',
         options: [
-          'students are poor judges of which texts will benefit them',
+          'students are poor judges of which texts will do them the most good in the long run',
           'personalized reading lists would fail to prepare students for particular occupations',
-          'the plan would reduce the total quantity of reading each student completes',
-          'the plan optimizes what each student carries away at the cost of what students would have held in common',
+          'the plan would reduce the total quantity of reading that each student completes',
+          'the plan serves private acquisition at the cost of what students hold in common',
         ],
         correctAnswer: 3,
         explanation:
@@ -365,10 +365,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s argument?',
         options: [
-          'Adults recall very little of the specific content they were taught in secondary school.',
-          'Curricular selections have historically favored the inheritance of socially dominant groups.',
-          'Populations with no schooling in common deliberate as effectively as populations educated on a shared curriculum.',
-          'Commercial media reach a substantially wider audience than schools do.',
+          'Adults recall very little of the content they were taught in secondary school.',
+          'Curricular selections have historically favored the inheritance of dominant groups.',
+          'Populations with no schooling in common deliberate as effectively as those who share one.',
+          'Commercial media reach a substantially wider audience than any school system does.',
         ],
         correctAnswer: 2,
         explanation:
@@ -379,10 +379,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the author’s phrase "an unchosen one" refers to:',
         options: [
-          'a body of common reference assembled by parties with no obligation to defend their selections',
-          'a curriculum imposed on students without the consent of their parents',
-          'the private acquisitions that students carry away from schooling',
-          'the vocational skills that the labor market demands of graduates',
+          'a body of common reference assembled by parties who owe no one a defense',
+          'a curriculum imposed upon students without the consent of their own parents',
+          'the private acquisitions that students carry out of the building with them',
+          'the vocational skills that the labor market demands of its newest graduates',
         ],
         correctAnswer: 0,
         explanation:
@@ -404,10 +404,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the passage’s main argument?',
         options: [
-          'Digital media have shortened attention spans and have thereby made sustained reading impossible.',
+          'Digital media have shortened attention spans and made sustained reading impossible.',
           'Deep reading is a natural human capacity that modern abundance has corrupted.',
-          'The practice actually in decline is rereading, and because it was always enforced by scarcity rather than by nature, it must now be constructed deliberately.',
-          'Readers ought to read fewer books so that they will remember more of what they have read.',
+          'The practice in decline is rereading, which scarcity once enforced and must now be built.',
+          'Readers ought to read fewer books so that they remember more of what they have read.',
         ],
         correctAnswer: 2,
         explanation:
@@ -418,10 +418,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s stance toward the popular lament about lost attention is best described as:',
         options: [
-          'sharing its unease while rejecting its explanation',
-          'endorsing both its unease and its explanation',
-          'treating the entire complaint as manufactured nostalgia',
-          'amused detachment from a dispute the author considers trivial',
+          'sharing its unease while rejecting the explanation it offers',
+          'endorsing both its unease and the explanation it advances',
+          'treating the whole complaint as a piece of manufactured nostalgia',
+          'amused detachment from a dispute the author finds trivial',
         ],
         correctAnswer: 0,
         explanation:
@@ -432,10 +432,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "the container is spent" most nearly means that:',
         options: [
-          'a book loses its physical value once it has circulated among many readers',
-          'readers exhaust their patience before reaching the end of long works',
-          'information becomes obsolete more quickly than readers can absorb it',
-          'a text read only for its content has nothing further to offer once the content has been taken',
+          'a book loses its physical value once it has circulated among a great many readers',
+          'readers exhaust their patience long before they reach the end of a long work',
+          'information becomes obsolete faster than readers can manage to absorb any of it',
+          'a text read only for content has nothing left once the content is taken',
         ],
         correctAnswer: 3,
         explanation:
@@ -446,10 +446,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author cites the ability to watch nine hours of a serial drama chiefly to support which inference?',
         options: [
-          'Television has replaced books as the primary medium for serious narrative.',
+          'Television has replaced the book as the main medium for serious narrative art.',
           'Sustained attention has not disappeared, so it cannot be what was lost.',
-          'Audiences generally prefer visual media to printed text.',
-          'The habit of rereading survives in media other than print.',
+          'Audiences now prefer visual media to printed text for their long narratives.',
+          'The habit of rereading survives in media other than the printed book alone.',
         ],
         correctAnswer: 1,
         explanation:
@@ -460,10 +460,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings would most STRENGTHEN the author’s claim about what has actually changed?',
         options: [
-          'Readers today complete as many long books as readers of earlier generations did, but return to an already finished book far less often.',
-          'Readers today report substantially greater difficulty concentrating than readers surveyed fifty years ago.',
-          'The number of books published each year has risen sharply over the past century.',
-          'Students who reread assigned texts score higher on comprehension assessments than students who do not.',
+          'Readers today finish as many long books as earlier readers did but return to them far less often.',
+          'Readers today report substantially greater difficulty concentrating than readers did fifty years ago.',
+          'The number of books published each year has risen sharply over the course of the past century.',
+          'Students who reread assigned texts score higher on comprehension tests than students who do not.',
         ],
         correctAnswer: 0,
         explanation:
@@ -477,7 +477,7 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
           'assign a wider range of texts so that students encounter more of the tradition',
           'evaluate students primarily by the number of works they complete in a term',
           'assign fewer texts and require students to return to them after finishing them',
-          'replace printed assignments with formats that hold student attention for longer stretches',
+          'replace printed assignments with formats that hold attention for longer stretches',
         ],
         correctAnswer: 2,
         explanation:
@@ -499,10 +499,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'endangered languages should be preserved because each encodes knowledge that exists nowhere else',
-          'the case for an endangered language rests on its speakers’ standing to conduct their own common life, not on the language’s usefulness to outsiders',
-          'communities that abandon their languages voluntarily have made an error that public policy should correct',
-          'language policy should aim to keep endangered languages in use regardless of what their speakers decide',
+          'endangered languages should be preserved because each encodes knowledge found nowhere else',
+          'the case for a language rests on its speakers’ standing to conduct their own common life',
+          'communities that abandon their languages have erred, and policy should correct the error',
+          'policy should keep endangered languages in use regardless of what their speakers decide',
         ],
         correctAnswer: 1,
         explanation:
@@ -513,10 +513,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s reference to defending "specimens" serves primarily to:',
         options: [
-          'introduce a scientific standard by which endangered languages might be evaluated',
-          'concede that linguistic documentation carries a research value the author had earlier denied',
-          'argue that outside researchers seldom understand the communities they study',
-          'recall the repository defense and mark what preservationists become when they override speakers',
+          'introduce a scientific standard by which an endangered language might be evaluated',
+          'concede that documentation carries a research value the author had earlier denied it',
+          'argue that outside researchers seldom understand the communities whose speech they study',
+          'mark what preservationists become when they override the speakers they claim to serve',
         ],
         correctAnswer: 3,
         explanation:
@@ -527,10 +527,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author calls the repository defense "hostage to fact" because:',
         options: [
-          'it makes a language’s claim to continue depend on an audit that many languages would fail',
+          'it makes a language’s claim to continue depend on an audit that many would fail',
           'linguists have not yet catalogued the contents of most endangered languages',
-          'the factual assertions made by preservationists are usually exaggerated',
-          'communities cannot be relied upon to report accurately what their languages encode',
+          'the factual claims made by preservationists are usually exaggerated',
+          'communities cannot be relied on to report what their languages encode',
         ],
         correctAnswer: 0,
         explanation:
@@ -541,10 +541,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s preferred defense?',
         options: [
-          'Several endangered languages have been found to encode botanical knowledge previously unknown to science.',
-          'Language shift typically unfolds across three generations rather than abruptly.',
-          'Communities shift to majority languages at the same rate whether or not schooling, courts, and employment are available in their own language.',
-          'Some communities have successfully revived languages that had ceased to be spoken entirely.',
+          'Several endangered languages encode botanical knowledge that was previously unknown to science.',
+          'Language shift typically unfolds over three generations rather than within a single generation.',
+          'Communities shift at the same rate whether or not courts and schools use their language.',
+          'Some communities have successfully revived a language that had ceased to be spoken entirely.',
         ],
         correctAnswer: 2,
         explanation:
@@ -556,9 +556,9 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
         question: 'A government asks the author to evaluate a proposal requiring all children of a minority-language community to be schooled exclusively in that language. The author would most likely respond that:',
         options: [
           'the proposal is sound, because preserving the language serves the interest of the wider public',
-          'the proposal should be rejected because language policy ought never to involve public expenditure',
-          'the proposal is acceptable only if researchers first confirm that the language encodes distinctive knowledge',
-          'the proposal makes the decision on the community’s behalf, when the aim should be to make schooling in that language genuinely available',
+          'the proposal should be rejected, since language policy ought never to involve public money',
+          'the proposal is acceptable only if researchers confirm the language encodes rare knowledge',
+          'the proposal decides for the community, when the aim is to make schooling available',
         ],
         correctAnswer: 3,
         explanation:
@@ -569,10 +569,10 @@ export const CARS_LANGUAGE_ED_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward preservationists is best described as:',
         options: [
-          'contemptuous of their motives',
-          'sympathetic to their aim but critical of the argument they use to advance it',
-          'fully persuaded by their case for intervention',
-          'indifferent to whether endangered languages survive',
+          'contemptuous of their motives and dismissive of their aims',
+          'sympathetic to their aim but critical of their argument',
+          'fully persuaded by their case for outside intervention',
+          'indifferent to whether an endangered language survives',
         ],
         correctAnswer: 1,
         explanation:

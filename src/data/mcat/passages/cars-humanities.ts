@@ -39,10 +39,10 @@ If the argument holds, then the discipline we owe our memories is not the discip
       {
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
-          'Forgetting is a defect that disciplined minds can overcome through deliberate practice.',
-          'Cultures that forget their crimes inevitably repeat them.',
-          'Selective forgetting is a constitutive condition of useful thought rather than a mere failure of memory.',
-          'Memory and forgetting are governed by entirely separate mental faculties.',
+          'Forgetting is a defect that a disciplined mind can overcome with deliberate practice.',
+          'Cultures that forget their own crimes will inevitably repeat them before long.',
+          'Selective forgetting is a condition of useful thought, not a mere failure of memory.',
+          'Memory and forgetting are governed by two entirely separate mental faculties.',
         ],
         correctAnswer: 2,
         explanation:
@@ -53,10 +53,10 @@ If the argument holds, then the discipline we owe our memories is not the discip
       {
         question: 'The author characterizes the person who "never forgets a slight" primarily in order to',
         options: [
-          'illustrate that the inability to release the past is a failure of proportion rather than a virtue',
-          'concede that some forms of grievance are a legitimate kind of integrity',
-          'argue that forgiveness is psychologically impossible for most people',
-          'demonstrate that moral memory is more reliable than ordinary memory',
+          'illustrate that clinging to the past is a failure of proportion rather than a virtue',
+          'concede that some forms of grievance amount to a legitimate kind of personal integrity',
+          'argue that forgiveness is psychologically impossible for most ordinary people',
+          'demonstrate that moral memory is far more reliable than ordinary episodic memory',
         ],
         correctAnswer: 0,
         explanation:
@@ -67,7 +67,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
       {
         question: 'Based on the passage, the author would be most likely to agree that',
         options: [
-          'a person who recalls every detail of his past possesses an enviable advantage in judgment',
+          'a person who recalls every detail of his past has an enviable advantage in judgment',
           'recognizing a friend is essentially the retrieval of a complete stored record',
           'moral progress requires preserving every grievance until it is formally redressed',
           'the capacity to deliberate presupposes that most information has already been set aside',
@@ -81,10 +81,10 @@ If the argument holds, then the discipline we owe our memories is not the discip
       {
         question: 'The contrast between "the gardener\'s pruning and the flood" functions in the passage to',
         options: [
-          'suggest that all loss of the past is ultimately destructive',
-          'distinguish active, discriminating forgetting from passive, indiscriminate erasure',
-          'argue that cultural memory is more important than individual memory',
-          'prove that forgetting can never be morally justified',
+          'suggest that any loss of the past is ultimately destructive of understanding',
+          'distinguish active, discriminating forgetting from passive, wholesale erasure',
+          'argue that cultural memory matters more than the memory of any individual',
+          'prove that forgetting can never be justified in moral terms of any kind',
         ],
         correctAnswer: 1,
         explanation:
@@ -96,10 +96,10 @@ If the argument holds, then the discipline we owe our memories is not the discip
         question:
           'Suppose researchers found that people with unusually comprehensive autobiographical memory tend to make decisions as quickly and effectively as everyone else. This finding would most directly weaken the author\'s claim that',
         options: [
-          'forgetting performs an editorial labor essential to recognition',
-          'forgiveness requires that an injury cease to organize one\'s perception',
+          'forgetting performs an editorial labor that is essential to recognizing a friend',
+          'forgiveness requires that an injury cease to organize one\'s perception of another',
           'a mind unable to let go would be "paralyzed by relevance" and unable to deliberate',
-          'a culture that forgets its crimes cannot recognize their repetition',
+          'a culture that forgets its crimes cannot recognize their repetition when it comes',
         ],
         correctAnswer: 2,
         explanation:
@@ -112,7 +112,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
         options: [
           'the practice of judging each retained memory by what purpose it serves',
           'a rigorous effort to preserve as much of the past as possible',
-          'an emotional detachment that prevents one from valuing the past at all',
+          'an emotional detachment that prevents one valuing the past at all',
           'the technical skill of organizing an archive for completeness',
         ],
         correctAnswer: 0,
@@ -145,7 +145,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         options: [
           'Consent is a discredited principle that should be replaced by paternalist decision-making.',
           'Consent works flawlessly in ordinary cases and fails only in rare, exotic ones.',
-          'Employers bear primary responsibility for the poverty that drives workers to accept bad terms.',
+          'Employers are responsible for the poverty that drives workers to accept bad terms.',
           'Consent is a necessary but insufficient condition for legitimate dealings between persons.',
         ],
         correctAnswer: 3,
@@ -172,9 +172,9 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         question: 'The example of the laborer who accepts dangerous work primarily serves to',
         options: [
           'show that consent alone cannot distinguish a free bargain from a coerced one',
-          'prove that all employment contracts are inherently coercive',
+          'prove that all employment contracts are inherently coercive arrangements',
           'establish that poverty is always the fault of those who profit from it',
-          'argue that dangerous work should be prohibited by law',
+          'argue that dangerous work ought to be prohibited by law in every case',
         ],
         correctAnswer: 0,
         explanation:
@@ -202,9 +202,9 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
           'Which of the following scenarios would most strengthen the author\'s claim that arrangements "reshape the very preferences that would later evaluate them"?',
         options: [
           'A person signs a contract and later regrets it but retains exactly the values she held before.',
-          'A recruit enlists in a demanding order whose training leaves her unable to desire the life she previously valued.',
-          'A consumer buys a product after comparing several alternatives at leisure.',
-          'A patient consents to a treatment after a thorough and unpressured explanation.',
+          'A recruit enters a demanding order whose training leaves her unable to want her former life.',
+          'A consumer buys a product after comparing several alternatives at leisure and without pressure.',
+          'A patient consents to a treatment after a thorough, unpressured explanation of the options.',
         ],
         correctAnswer: 1,
         explanation:
@@ -215,10 +215,10 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
       {
         question: 'In the final paragraph, describing consent as "a door for a destination" most nearly means that consent',
         options: [
-          'is an obstacle that blocks genuine moral inquiry',
-          'is a private matter that excludes others from judgment',
+          'is an obstacle that blocks genuine moral inquiry from proceeding',
+          'is a private matter that excludes other people from judging it',
           'marks the start of moral responsibilities rather than their completion',
-          'should be abandoned in favor of collective decision-making',
+          'should be abandoned in favor of collective decision-making instead',
         ],
         correctAnswer: 2,
         explanation:
@@ -248,10 +248,10 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
       {
         question: 'The central argument of the passage is that the appeal of unfinished works',
         options: [
-          'is largely a product of the viewer\'s own imaginative participation, often mistaken for a property of the object',
-          'derives entirely from the authentic revelation of the artist\'s true intention',
-          'proves that finished works are inferior because they conceal the creative process',
-          'demonstrates that no meaningful distinction exists between designed and accidental fragments',
+          'is largely a product of the viewer\'s own imaginative labor, mistaken for the object\'s',
+          'derives entirely from an authentic revelation of the artist\'s true intention before convention',
+          'proves that finished works are inferior because they conceal the process of their making',
+          'demonstrates that no real distinction exists between designed fragments and accidental ones',
         ],
         correctAnswer: 0,
         explanation:
@@ -262,9 +262,9 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
       {
         question: 'The author\'s tone toward the contemporary admiration of unfinished works is best described as',
         options: [
-          'wholly contemptuous and dismissive',
-          'enthusiastically endorsing without reservation',
-          'sympathetic yet critical, separating a valid insight from an error',
+          'wholly contemptuous and dismissive of the fashion',
+          'enthusiastically endorsing it, without reservation',
+          'sympathetic yet critical, separating insight from error',
           'detached and strictly neutral, offering no evaluation',
         ],
         correctAnswer: 2,
@@ -277,10 +277,10 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         question:
           'The author concedes that finished works also require imaginative participation primarily in order to',
         options: [
-          'abandon his earlier claim about the unfinished work',
-          'show that his point about the viewer applies, in degree, to all art and is thereby sharpened',
-          'prove that finished and unfinished works are indistinguishable in value',
-          'argue that viewers should ignore the artist\'s intentions entirely',
+          'abandon the earlier claim he made about the unfinished work',
+          'show that his point about the viewer applies, in degree, to all art',
+          'prove that finished and unfinished works are of indistinguishable value',
+          'argue that viewers ought to ignore the artist\'s intentions entirely',
         ],
         correctAnswer: 1,
         explanation:
@@ -292,10 +292,10 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         question:
           'A curator displays a tapestry that scholars now agree the weaver deliberately left open-ended as a finished artistic statement. Based on the passage, the author would most likely say that calling this work "unfinished"',
         options: [
-          'misleads, because such a work is "finished as a fragment" and its openness is its form',
-          'is accurate because all open works are by definition incomplete',
-          'reveals the weaver\'s true unguarded intention more reliably than a closed work would',
-          'shows that designed and accidental fragments belong in a single category',
+          'misleads, because such a work is finished as a fragment and its openness is its form',
+          'is accurate, because every open work is by definition incomplete in some respect',
+          'reveals the weaver\'s unguarded intention more reliably than a closed work would',
+          'shows that designed and accidental fragments belong in a single category after all',
         ],
         correctAnswer: 0,
         explanation:
@@ -307,10 +307,10 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         question:
           'Which finding would most weaken the author\'s claim that the unfinished work is "silent" about its maker\'s intentions?',
         options: [
-          'Surveys show that most viewers enjoy completing fragments in their own imagination.',
-          'Critics disagree about whether a given fragment is moving.',
-          'Finished paintings are also completed in part by the viewer\'s mind.',
-          'Detailed studio notebooks reveal that an artist halted a work at a precise point to achieve a calculated expressive effect.',
+          'Surveys show that most gallery viewers enjoy completing fragments in imagination.',
+          'Critics disagree sharply about whether a particular fragment is moving or merely curious.',
+          'Finished paintings are also completed, in part, by the imagination of every viewer.',
+          'Studio notebooks show an artist halted a work exactly to achieve a calculated effect.',
         ],
         correctAnswer: 3,
         explanation:
@@ -321,10 +321,10 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
       {
         question: 'As used in the final paragraph, "the mere romance of arrested effort" refers to',
         options: [
-          'a reliable insight into the artist\'s creative vision',
-          'the viewer\'s legitimate act of imaginatively completing the work',
-          'a sentimental pleasure in the idea of interrupted labor that reveals nothing about the artwork itself',
-          'the technical skill required to leave a work deliberately open',
+          'a reliable insight into the artist\'s creative vision and working method',
+          'the viewer\'s legitimate act of imaginatively completing what the work leaves open',
+          'a sentimental pleasure in the idea of interrupted labor rather than in the art',
+          'the technical skill required to leave a work deliberately open to completion',
         ],
         correctAnswer: 2,
         explanation:
@@ -355,7 +355,7 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         question: 'The primary purpose of the passage is to',
         options: [
           'argue that unpleasant characters are always more artistically valuable than pleasant ones',
-          'challenge the standard that fictional protagonists must be likeable, distinguishing likeability from comprehensibility',
+          'challenge the likeability standard by distinguishing likeability from comprehensibility',
           'demonstrate that readers should feel no emotional connection to characters at all',
           'prove that professional critics understand fiction better than ordinary readers do',
         ],
@@ -368,10 +368,10 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
       {
         question: 'The author\'s attitude toward the demand for likeable characters is best characterized as',
         options: [
-          'mildly amused but ultimately accepting',
+          'mildly amused, but in the end accepting of it',
           'ambivalent, finding equal merit on both sides',
-          'cautiously supportive with minor reservations',
-          'firmly opposed, regarding it as a confusion that impoverishes fiction',
+          'cautiously supportive, with some minor reservations',
+          'firmly opposed, taking it to impoverish fiction',
         ],
         correctAnswer: 3,
         explanation:
@@ -384,9 +384,9 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
           'The author distinguishes "interest" from "sympathy" chiefly in order to',
         options: [
           'concede that sympathy is in fact necessary to sustain a reader\'s attention',
-          'argue that curiosity is a moral failing in readers',
-          'explain what keeps a reader engaged with a character she does not like',
-          'show that all riveting characters are ultimately virtuous',
+          'argue that curiosity is itself a moral failing in serious readers',
+          'explain what keeps a reader engaged with a character that she does not like',
+          'show that every riveting character turns out to be virtuous in the end',
         ],
         correctAnswer: 2,
         explanation:
@@ -398,10 +398,10 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         question:
           'Based on the passage, the author would most likely agree that a novel narrated by a cruel but fully comprehensible figure',
         options: [
-          'can stretch the reader\'s moral imagination precisely by rendering an alien mind intelligible',
-          'fails as art because the reader cannot like the narrator',
-          'should excuse the narrator\'s cruelty to make him sympathetic',
-          'is valuable only if the narrator eventually reforms',
+          'can stretch the moral imagination by rendering an alien mind intelligible',
+          'fails as art, because the reader is never able to like its narrator at all',
+          'ought to excuse the narrator\'s cruelty in order to make him sympathetic',
+          'is valuable only if the narrator eventually reforms before the book ends',
         ],
         correctAnswer: 0,
         explanation:
@@ -413,10 +413,10 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         question:
           'When the likeability critic "retreats" to the claim that readers need a "foothold of understanding," the author responds that this',
         options: [
-          'fully vindicates the original demand for likeable characters',
+          'fully vindicates the original demand for likeable protagonists',
           'proves that comprehensibility and likeability are the same thing',
-          'shows the critic was right all along about sympathy',
-          'is a different and acceptable claim that effectively concedes his point',
+          'shows that the critic was right all along about sympathy',
+          'is a different and acceptable claim that concedes his point',
         ],
         correctAnswer: 3,
         explanation:
@@ -429,9 +429,9 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
           'In the final paragraph, the contrast between fiction as a "mirror" and as a "window" most nearly conveys that valuable novels',
         options: [
           'should reflect readers\' own values back to them for reassurance',
-          'offer access to discomfiting perspectives rather than flattering self-confirmation',
+          'offer access to discomfiting perspectives rather than flattery',
           'must depict only settings and people unfamiliar to the reader',
-          'are best when they avoid moral discomfort of any kind',
+          'are best when they avoid moral discomfort of every kind',
         ],
         correctAnswer: 1,
         explanation:
@@ -461,10 +461,10 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
       {
         question: 'Which statement best captures the author\'s central claim?',
         options: [
-          'Turning points never occur in history and should be entirely discarded.',
-          'Historians should write flat chronicles in which no event matters more than another.',
-          'The great-man theory is the only valid framework for understanding causation.',
-          'The concept of the singular turning point distorts history by imposing the shape of hindsight onto a contingent past.',
+          'Turning points never occur in history and should be discarded entirely.',
+          'Historians should write flat chronicles in which no event matters more.',
+          'The great-man theory is the only valid framework for historical causation.',
+          'The singular turning point imposes the shape of hindsight on a contingent past.',
         ],
         correctAnswer: 3,
         explanation:
@@ -475,10 +475,10 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
       {
         question: 'The author\'s attitude toward narrative shapeliness in history is best described as',
         options: [
-          'wary, regarding it as a partly self-imposed distortion to be held loosely',
-          'uncritically appreciative of its teaching value',
-          'wholly hostile, demanding its complete elimination',
-          'indifferent to whether history has narrative form',
+          'wary, treating it as a partly self-imposed distortion to hold loosely',
+          'uncritically appreciative of its considerable value in teaching',
+          'wholly hostile, and demanding that narrative form be eliminated entirely',
+          'indifferent to whether historical accounts take narrative form',
         ],
         correctAnswer: 0,
         explanation:
@@ -490,10 +490,10 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         question:
           'The author discusses how "contemporaries of a supposedly decisive battle rarely experienced it as decisive" primarily to',
         options: [
-          'prove that no battle has ever changed the course of events',
-          'argue that ordinary people are poor judges of historical importance',
-          'show that decisiveness is conferred retrospectively, robbing past actors of their genuine uncertainty',
-          'establish that historians should rely only on contemporary testimony',
+          'prove that no battle has ever changed the actual course of events',
+          'argue that ordinary people judge historical importance poorly',
+          'show that decisiveness is conferred later, robbing actors of uncertainty',
+          'establish that historians should rely only on the testimony of contemporaries',
         ],
         correctAnswer: 2,
         explanation:
@@ -505,10 +505,10 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         question:
           'Based on the passage, the author would most likely agree that the "roads not taken leave no monument" implies that',
         options: [
-          'historical outcomes were always inevitable',
-          'our sense of which event was decisive is biased by the survival of one outcome over its alternatives',
-          'historians should construct monuments to alternative histories',
-          'contingency plays no real role in historical events',
+          'historical outcomes were inevitable all along, whatever anyone believed',
+          'our sense of which event was decisive is biased by one outcome\'s survival',
+          'historians ought to construct monuments to the histories that never happened',
+          'contingency plays no real part in how historical events actually unfold',
         ],
         correctAnswer: 1,
         explanation:
@@ -520,14 +520,14 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         question:
           'Which discovery would most strengthen the author\'s claim that turning points are "artifacts of hindsight"?',
         options: [
-          'Evidence that a famous battle was immediately recognized by all sides as permanently settling the conflict',
-          'Evidence that historians broadly agree on which events were most important',
-          'Evidence that participants in a famous "decisive" treaty regarded it at the time as routine and reversible',
-          'Evidence that narrative accounts make history easier for students to remember',
+          'A famous battle was recognized at once by all sides as settling the conflict permanently.',
+          'Historians broadly agree today about which past events were the most important ones.',
+          'Participants in a "decisive" treaty regarded it at the time as routine and reversible.',
+          'Narrative accounts of history make the material easier for students to remember.',
         ],
         correctAnswer: 2,
         explanation:
-          'The author claims decisiveness is assigned in retrospect, not felt at the time. Evidence that contemporaries treated a "decisive" treaty as routine and reversible directly confirms that the decisiveness was a later imposition, strengthening the thesis. Evidence that a battle was immediately recognized as permanently settling the conflict would weaken the thesis by showing the importance was recognized contemporaneously. Evidence of broad agreement among historians speaks to consensus, not to hindsight bias. Evidence that narrative aids student memory supports narrative\'s pedagogical value, which the author already grants and which does not bear on the hindsight claim.',
+          'The author claims decisiveness is assigned in retrospect, not felt at the time. The finding that participants treated a "decisive" treaty as routine and reversible directly confirms that the decisiveness was a later imposition, strengthening the thesis. A battle recognized at once by all sides as settling the conflict would weaken the thesis instead, by showing the importance was recognized contemporaneously. Broad agreement among historians speaks to consensus, not to hindsight bias. That narrative aids student memory supports narrative\'s pedagogical value, which the author already grants and which does not bear on the hindsight claim.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -535,10 +535,10 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         question:
           'In the passage, the assertion that "the great-man theory and the turning-point theory are siblings" most nearly means that both',
         options: [
-          'locate causation in the most visible figures or moments rather than in diffuse, less conspicuous forces',
-          'were developed by the same historians',
-          'correctly identify where historical change truly originates',
-          'reject the role of individual leaders in history',
+          'locate causation in the most visible figures or moments, not in diffuse ones',
+          'were devised by the same generation of nineteenth-century academic historians',
+          'correctly identify the place where historical change actually originates',
+          'reject any significant role for individual leaders in the shaping of history',
         ],
         correctAnswer: 0,
         explanation:
@@ -568,10 +568,10 @@ None of this requires us to despise the immediate. The instantly delightful is a
       {
         question: 'The main idea of the passage is that',
         options: [
-          'difficult music is inherently superior to accessible music',
-          'the demand for instant musical gratification threatens to eliminate a legitimate axis of musical value rooted in patience',
-          'accessibility in music is a form of pretension disguised as populism',
-          'listeners today are simply less intelligent than those of the past',
+          'difficult music is inherently superior to music that is immediately accessible',
+          'the demand for instant gratification threatens a legitimate axis of musical value',
+          'accessibility in music is a form of pretension disguised as healthy populism',
+          'listeners today are simply less intelligent than the listeners of the past were',
         ],
         correctAnswer: 1,
         explanation:
@@ -582,10 +582,10 @@ None of this requires us to despise the immediate. The instantly delightful is a
       {
         question: 'Which best describes the author\'s overall attitude?',
         options: [
-          'concerned yet even-handed, defending plurality rather than the superiority of difficulty',
-          'nostalgic and resigned to inevitable cultural decline',
-          'celebratory of contemporary accessibility',
-          'contemptuous of ordinary listeners and their tastes',
+          'concerned yet even-handed, defending plurality rather than difficulty',
+          'nostalgic and resigned to an inevitable decline in the culture of listening',
+          'celebratory of contemporary accessibility and its wide reach',
+          'contemptuous of ordinary listeners and of their untutored tastes',
         ],
         correctAnswer: 0,
         explanation:
@@ -597,10 +597,10 @@ None of this requires us to despise the immediate. The instantly delightful is a
         question:
           'The author concedes that "difficulty has too often been a cover for pretension" primarily in order to',
         options: [
-          'abandon his defense of demanding music',
-          'prove that all difficult music is pretentious',
-          'argue that accessibility has no merits whatsoever',
-          'grant a valid point so as to isolate the precise overreach he wishes to criticize',
+          'abandon his own defense of demanding music',
+          'prove that all difficult music must be pretentious',
+          'argue that accessibility has no merits at all',
+          'grant a valid point to isolate the overreach',
         ],
         correctAnswer: 3,
         explanation:
@@ -613,9 +613,9 @@ None of this requires us to despise the immediate. The instantly delightful is a
           'Based on the passage, the author would most likely agree that the "freedom to seek difficulty" is',
         options: [
           'a complete solution that fully protects challenging music',
-          'irrelevant because difficult music has no real value',
-          'hollow when the culture has failed to cultivate the capacity needed to enjoy such music',
-          'a guarantee that taste will naturally diversify on its own',
+          'irrelevant, because difficult music has no real value',
+          'hollow where the culture has not cultivated the capacity',
+          'a guarantee that taste will diversify of its own accord',
         ],
         correctAnswer: 2,
         explanation:
@@ -628,9 +628,9 @@ None of this requires us to despise the immediate. The instantly delightful is a
           'Suppose a study showed that listeners raised on instantly gratifying music can, with brief exposure, immediately come to love highly complex works without any repeated listening. This finding would most directly weaken the author\'s claim that',
         options: [
           'difficulty has sometimes served as a cover for pretension',
-          'the instantly delightful is a real good',
+          'the instantly delightful is a real good worth preserving',
           'a culture should be capacious enough to honor varied kinds of music',
-          'certain musical satisfactions are temporal and require a listener to have a history with a piece',
+          'some musical satisfactions require a history with the piece',
         ],
         correctAnswer: 3,
         explanation:
@@ -643,9 +643,9 @@ None of this requires us to despise the immediate. The instantly delightful is a
           'In the fifth paragraph, the statement "A diminished palate does not experience itself as diminished; it experiences itself as satisfied" most nearly means that',
         options: [
           'people with narrow tastes are consciously aware of what they are missing',
-          'a culture can lose a capacity for appreciation without recognizing that anything has been lost',
-          'satisfaction is the only reliable measure of musical value',
-          'difficult music always leaves listeners feeling unsatisfied',
+          'a culture can lose a capacity without recognizing any loss at all',
+          'satisfaction is the only reliable measure of real musical value',
+          'difficult music always leaves its listeners feeling unsatisfied',
         ],
         correctAnswer: 1,
         explanation:
@@ -676,10 +676,10 @@ What follows for readers is uncomfortable. If translation is impossible in the s
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'translation is impossible and should be abandoned as a literary practice',
-          'translators deserve recognition as original authors of the works they translate',
-          'faithful translation should be judged by the effect on readers rather than by word-for-word correspondence',
-          'older texts cannot be understood by modern readers in any language',
+          'translation is impossible and ought to be abandoned as a literary practice',
+          'translators deserve recognition as original authors of the works they render',
+          'fidelity should be judged by the effect on readers, not by word-for-word match',
+          'older texts cannot be understood by modern readers in any language at all',
         ],
         correctAnswer: 2,
         explanation: 'The author explicitly replaces lexical fidelity with "functional fidelity" — standing in the same relation to readers as the original did, which is the answer about judging translation by its effect on readers. The passage denies strict replication is possible but insists translations "plainly succeed," so the answer calling for abandonment contradicts it; the answer crowning translators as original authors is raised as an objection and answered; the answer denying modern readers access to older texts overstates the time-translation point.',
@@ -689,9 +689,9 @@ What follows for readers is uncomfortable. If translation is impossible in the s
       {
         question: 'The author mentions the word Heimat primarily in order to:',
         options: [
-          'prove that German is more difficult to translate than other languages',
-          'argue that translators should leave certain words untranslated',
-          'illustrate a successful translation choice',
+          'prove that German is harder to translate than other European languages',
+          'argue that certain loaded words ought simply to be left untranslated entirely',
+          'illustrate a translation choice the author regards as a clear success',
           'show that a word\'s historical associations are inseparable from its meaning',
         ],
         correctAnswer: 3,
@@ -703,9 +703,9 @@ What follows for readers is uncomfortable. If translation is impossible in the s
         question: 'Based on the passage, the author would most likely describe the "traduttore, traditore" epigram as:',
         options: [
           'resting on a mistaken picture of meaning as a stable possession',
-          'an accurate description of most published translations',
-          'unfair to traitors rather than to translators',
-          'true of poetry but false of prose',
+          'an accurate description of most published literary translations today',
+          'unfair to traitors rather than unfair to translators themselves',
+          'true of poetry but false of the translation of ordinary prose',
         ],
         correctAnswer: 0,
         explanation: 'The author calls the fidelity picture the epigram assumes "incoherent" — meaning is not a vault to be delivered intact, so the answer about a mistaken picture of meaning as a stable possession is right. The author never assesses most published translations as betrayals; the quip about traitors is wordplay the passage does not make; the poetry/prose split never appears.',
@@ -715,10 +715,10 @@ What follows for readers is uncomfortable. If translation is impossible in the s
       {
         question: 'Which finding, if true, would most WEAKEN the author\'s defense of functional fidelity against the "alibi" objection?',
         options: [
-          'Some jokes cannot be made funny in any other language',
-          'Most readers cannot compare a translation with its original',
-          'Translators freely inventing content routinely produce the same effects on readers as painstaking translators',
-          'Dictionaries disagree about the meanings of common words',
+          'Some jokes simply cannot be made funny in any other language',
+          'Most readers have no way to compare a translation against its original',
+          'Translators who freely invent produce the same effects as careful ones',
+          'Dictionaries disagree about the meanings of quite common words',
         ],
         correctAnswer: 2,
         explanation: 'The defense is that effects CANNOT be produced at will from any material — the original\'s structure constrains the translator. If free invention routinely produced the same effects as painstaking translation, that constraint (and the defense) collapses. The finding that some jokes cannot be made funny elsewhere supports the author\'s picture of difficulty; readers\' inability to compare with the original and dictionary disagreement are irrelevant to the constraint claim.',
@@ -728,10 +728,10 @@ What follows for readers is uncomfortable. If translation is impossible in the s
       {
         question: 'The author\'s claim that a text "was always a score, awaiting performance" most nearly means that:',
         options: [
-          'texts should be set to music to be fully appreciated',
-          'a text\'s meaning is realized anew in each act of reading or translating',
-          'the original manuscript is more valuable than any copy',
-          'performance of a text requires formal training',
+          'texts ought to be set to music to be fully appreciated',
+          'a text\'s meaning is realized anew in each act of reading',
+          'the original manuscript is worth more than any copy of it',
+          'performing a text properly requires formal musical training',
         ],
         correctAnswer: 1,
         explanation: 'The score/vault contrast closes the argument that meaning is portable and non-proprietary — realized in performance (reading, translating) rather than stored, which the answer about meaning realized anew in each act of reading captures. The musical-setting reading is literalism; the manuscript-value and formal-training readings reverse or invent claims.',
@@ -741,10 +741,10 @@ What follows for readers is uncomfortable. If translation is impossible in the s
       {
         question: 'Suppose a director stages a nineteenth-century play in modern dress so that its satire of social climbing lands on a contemporary audience. The author would most likely regard this as:',
         options: [
-          'an instance of functional fidelity, provided the new staging earns the original\'s effects',
-          'a betrayal of the playwright\'s explicit intentions',
-          'acceptable only if the original staging is also performed',
-          'evidence that the play has no stable meaning worth preserving',
+          'an instance of functional fidelity, provided the effects are earned',
+          'a betrayal of the playwright\'s explicit and documented intentions',
+          'acceptable only if the original staging is performed alongside it as well',
+          'evidence that the play has no stable meaning worth preserving now',
         ],
         correctAnswer: 0,
         explanation: 'Modern dress to preserve the satire\'s bite parallels changing the joke\'s "furniture" so it lands — legitimate if the effect is earned, not easy, so the functional-fidelity answer is right. Calling it a betrayal of explicit intentions applies the lexical-fidelity standard the author rejects; requiring the original staging alongside it is a compromise the passage never demands; treating it as evidence of no stable meaning mistakes anti-essentialism for the nihilism the author disclaims.',
@@ -774,9 +774,9 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'The author\'s central claim is that the "honest repair" doctrine:',
         options: [
-          'serves the restorer\'s self-regard at the expense of the building\'s purpose',
-          'should be applied more strictly to medieval churches',
-          'was invented by Ruskin and faithfully preserves his values',
+          'serves the restorer\'s scruples at the expense of the building\'s purpose',
+          'ought to be applied far more strictly to the surviving medieval churches',
+          'was invented by Ruskin and faithfully preserves his stated values',
           'is justified because visitors have a right to accurate information',
         ],
         correctAnswer: 0,
@@ -787,10 +787,10 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'The author refers to the fourteenth-century mason in order to:',
         options: [
-          'prove that medieval construction techniques were superior to modern ones',
-          'establish that all restoration before Ruskin was fraudulent',
-          'demonstrate that repairs were once cheaper than they are today',
-          'show that matching the existing style was historically normal and never counted as deception',
+          'prove that medieval construction techniques surpassed modern ones',
+          'establish that all restoration before Ruskin was essentially fraudulent',
+          'demonstrate that repairs were once far cheaper than they are today',
+          'show that matching the existing style was normal and not deception',
         ],
         correctAnswer: 3,
         explanation: 'The mason "matched it as best he could, and no one has ever called those masons liars" — seamless repair has an honorable pedigree, which is the answer about style-matching being historically normal. Medieval craft superiority, universal pre-Ruskin fraud, and the relative cost of repairs never appear in the passage.',
@@ -800,10 +800,10 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'It can be inferred that the author believes the harm prevented by legible repairs is:',
         options: [
-          'the primary danger facing historic architecture today',
-          'suffered, if at all, only by specialists who already have better sources',
-          'greatest for ordinary visitors encountering a building for the first time',
-          'impossible to define with any precision',
+          'the primary danger now facing historic architecture everywhere',
+          'suffered, if at all, only by specialists with better sources',
+          'greatest for ordinary visitors seeing a building for the first time',
+          'impossible to define with any real precision whatever',
         ],
         correctAnswer: 1,
         explanation: 'The author says the prevented deception "is one only specialists could suffer, and specialists have archives... they are the last people who need the wall itself to confess," which the answer about specialists with better sources states. The answer locating the harm with first-time ordinary visitors inverts this; calling it the primary danger to historic architecture overstates, and calling it impossible to define dodges the point.',
@@ -813,10 +813,10 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author\'s argument?',
         options: [
-          'Titanium repairs last longer than stone repairs',
+          'Titanium repairs last considerably longer than stone repairs do',
           'Ruskin privately admired several seamless Victorian restorations',
-          'Surveys show visitors report deeper engagement in seamlessly restored interiors than in ones with visibly modern repairs',
-          'Most modern restorers are trained as historians rather than craftsmen',
+          'Visitors report deeper engagement in seamlessly restored interiors',
+          'Most modern restorers train as historians rather than as craftsmen',
         ],
         correctAnswer: 2,
         explanation: 'The author claims seamless repair delivers "the experience the building exists to give"; survey evidence of deeper visitor engagement in seamlessly restored interiors directly supports that. Relative durability of titanium is off-topic; Ruskin\'s private admiration is biographical trivia; the training of modern restorers could cut either way.',
@@ -826,10 +826,10 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'The author\'s attitude toward the orthodoxy\'s treatment of genuinely uncertain reconstructions is best described as:',
         options: [
-          'unqualified rejection',
-          'agreement within a limited boundary',
-          'ironic mockery',
-          'reluctant indifference',
+          'unqualified rejection of it',
+          'agreement within a boundary',
+          'ironic mockery throughout',
+          'reluctant indifference to it',
         ],
         correctAnswer: 1,
         explanation: '"I concede one strong case... Where we do not know what stood, the blank volume tells the truth" — a bounded concession ("a boundary, not a rule"). Not rejection, mockery, or indifference.',
@@ -839,10 +839,10 @@ The honest ruin, then, is a genre error. It mistakes buildings for texts and vis
       {
         question: 'A museum conservator repairs a torn Renaissance tapestry by reweaving the missing section from surviving full-scale drawings of the original design, matching the old dyes so closely that the repair is invisible except under ultraviolet light. Based on the passage, the author would most likely judge this repair:',
         options: [
-          'illegitimate, because visitors cannot detect the intervention',
-          'legitimate only if a visible border marks the rewoven area',
+          'illegitimate, because ordinary visitors cannot detect the intervention',
+          'legitimate only if a visible border marks off the rewoven area',
           'illegitimate, because textiles differ fundamentally from buildings',
-          'legitimate, because the missing section was documented rather than invented',
+          'legitimate, because the missing section was documented, not invented',
         ],
         correctAnswer: 3,
         explanation: 'The author\'s boundary: invention passed off as knowledge is the corruption; replacing "the documented with the documented" is the normal, legitimate case, so the answer resting on documentation is right. Calling the repair illegitimate because visitors cannot detect it, or legitimate only with a visible border, applies the doctrine the author rejects; the textiles-differ-from-buildings answer contradicts the passage\'s willingness to reason across art forms (music, texts, buildings).',

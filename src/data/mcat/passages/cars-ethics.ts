@@ -26,10 +26,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
-          'Consent forms should be abolished and decisions returned to the trained judgment of experienced physicians.',
-          'The chief defect of the modern consent form is that it is too long for most patients to finish reading.',
-          'Authorization and indemnity are distinct acts, and the modern consent form accomplishes the second while being mistaken for the first.',
-          'Because conversations cannot be documented, a signature remains the only reliable evidence that a patient has exercised autonomy.',
+          'Consent forms should be abolished and the decision returned to the trained judgment of physicians.',
+          'The modern consent form fails chiefly because its length deters patients from reading it.',
+          'The consent form accomplishes indemnity while being mistaken for the distinct act of authorization.',
+          'A signature is the only durable evidence that a patient has genuinely exercised her autonomy.',
         ],
         correctAnswer: 2,
         explanation:
@@ -40,10 +40,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the defenders of consent paperwork is best characterized as:',
         options: [
-          'respectful of their reasoning while denying that it answers his objection',
-          'dismissive of a position he regards as merely self-serving',
-          'persuaded by it, to the point of withdrawing his earlier criticism',
-          'indifferent, since he takes the dispute to be a purely legal one',
+          'respectful of their reasoning while denying that it disposes of his objection',
+          'dismissive of an argument he regards as self-serving institutional pleading',
+          'persuaded by it, to the point of retracting the criticism with which he began',
+          'indifferent, since he takes the dispute to be a legal one rather than a moral one',
         ],
         correctAnswer: 0,
         explanation:
@@ -54,10 +54,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The remark that the form’s "length varies inversely with the likelihood that anyone will read it" functions primarily to:',
         options: [
-          'recommend a statutory limit on the length of consent documents',
-          'establish that most patients are incapable of understanding medical risk',
+          'recommend a statutory ceiling on the length of surgical consent documents',
+          'establish that most patients cannot understand the risks a surgeon discloses to them',
           'concede that the form succeeds at the task its drafters actually set for it',
-          'suggest, with irony, that the document is written for a reader other than the patient',
+          'suggest wryly that the document is written for a reader other than the patient',
         ],
         correctAnswer: 3,
         explanation:
@@ -68,10 +68,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s argument?',
         options: [
-          'Patients who sign lengthy consent forms are more likely than other patients to file suit after a poor outcome.',
-          'Patients who sign the standard form can, when questioned afterward, accurately describe the procedure, its risks, and the alternatives they declined.',
+          'Patients who sign lengthy consent forms sue more often after a poor outcome than others do.',
+          'Patients who sign the standard form can afterward state the risks and the alternatives they declined.',
           'Most consent forms are drafted by attorneys rather than by the clinicians who perform the procedure.',
-          'Physicians who spend longer in conversation with patients are sued less often than those who do not.',
+          'Surgeons who spend longer in conversation with patients are sued less often than those who do not.',
         ],
         correctAnswer: 1,
         explanation:
@@ -82,10 +82,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A hospital that reformed its practice along the lines the author recommends would most likely:',
         options: [
-          'shorten its consent forms while continuing to collect signatures at the same point in the process',
-          'require a second physician to countersign every consent form',
-          'offer patients a fuller explanation in exchange for waiving the right to sue',
-          'ask each patient to describe, in her own words, what will be done and what else she might have chosen, and treat that account as the record',
+          'shorten its consent forms while collecting signatures at the same point in the process',
+          'require a second physician to countersign every consent form before the procedure begins',
+          'offer patients a fuller spoken explanation in exchange for waiving the right to sue',
+          'ask each patient to say back what will be done, and treat that account as the record',
         ],
         correctAnswer: 3,
         explanation:
@@ -96,10 +96,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In saying that a patient whose consent was defective "has been used," the author most nearly means that she has been:',
         options: [
-          'made the instrument of a decision about her own body that another person effectively made',
-          'physically injured by a procedure she did not need',
-          'actively deceived about the risks of the procedure she underwent',
-          'denied compensation for an outcome she never agreed to bear',
+          'made the instrument of a decision about her body that someone else effectively made',
+          'physically injured by an operation she did not need and would otherwise have declined',
+          'actively deceived about the risks of the procedure she was being asked to undergo',
+          'denied compensation for an outcome that she never agreed in advance to bear',
         ],
         correctAnswer: 0,
         explanation:
@@ -121,9 +121,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage as a whole is best understood as an argument that:',
         options: [
-          'care and justice are complementary theories that together supply a complete account of morality',
-          'care is best understood as an objection to the ambition of impartial theory, and it requires justice to correct its own bias toward the near',
-          'justice should be abandoned, since moral attention cannot be reduced to the application of rules',
+          'care and justice are complementary theories that jointly complete our account of morality',
+          'care objects to the ambition of impartial theory yet needs justice to correct its own blind spot',
+          'justice should be abandoned, since moral attention cannot be reduced to the following of rules',
           'the principal defect of the ethics of care is that it is sentimental rather than rigorous',
         ],
         correctAnswer: 1,
@@ -150,8 +150,8 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward the description of care and justice as "complementary" is best described as:',
         options: [
           'impatient with it as a formula that avoids the question rather than resolving it',
-          'approving, since it accurately names the relation he ultimately defends',
-          'neutral, since he employs it as an established technical term',
+          'approving, since it accurately names the relation he goes on to defend in the end',
+          'neutral, since he employs it as an established term of art in moral philosophy',
           'hostile, because he denies that care and justice bear any relation to each other',
         ],
         correctAnswer: 0,
@@ -164,9 +164,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'Which of the following findings, if true, would most STRENGTHEN the author’s claim that care requires justice as a corrective?',
         options: [
           'Professional caregivers report higher job satisfaction than workers in comparably demanding fields.',
-          'Most people asked to state a general moral principle are able to do so accurately.',
-          'In studies of family caregiving, the burden falls overwhelmingly on whichever relative lives closest at hand, and no participant describes the arrangement as unfair until asked to compare her contribution with what others contribute.',
-          'Ethical theories emphasizing impartial rules are taught in universities more often than theories emphasizing relationships.',
+          'Most people asked to state a general moral principle are able to do so accurately and consistently.',
+          'Caregiving burden falls on whoever lives nearest, and none calls it unfair until asked to compare.',
+          'Ethical theories built on impartial rules are taught far more often than theories built on relationships.',
         ],
         correctAnswer: 2,
         explanation:
@@ -177,10 +177,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A hospital ethics committee persuaded by the author would be most likely to:',
         options: [
-          'supplement its case-by-case discussion of what each patient needs with a periodic review of which patients the staff has consistently overlooked',
-          'replace case-by-case discussion entirely with a written protocol applied uniformly to every patient',
-          'instruct clinicians to set aside their personal relationships with patients when deciding difficult cases',
-          'assign its most attentive clinicians to the patients who request them most frequently',
+          'add to its case-by-case discussion a periodic review of which patients the staff overlooks',
+          'replace case-by-case discussion entirely with a written protocol applied uniformly to everyone',
+          'instruct clinicians to set aside their personal relationships with patients when deciding cases',
+          'assign its most attentive clinicians to the patients who request them the most frequently',
         ],
         correctAnswer: 0,
         explanation:
@@ -191,10 +191,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the claim that justice occupies "the office of a mirror" most nearly means that justice:',
         options: [
-          'merely reflects back the conclusions that caring attention has already reached',
+          'merely reflects back the conclusions that caring attention has already reached on its own',
           'does not compete with care but enables care to see what it would otherwise miss about itself',
-          'and care are two names for a single underlying moral capacity',
-          'should be abandoned along with the rest of moral theory’s metaphors',
+          'and care are finally two names for one underlying capacity of moral perception',
+          'should be discarded along with the rest of moral philosophy’s decorative metaphors',
         ],
         correctAnswer: 1,
         explanation:
@@ -217,9 +217,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'The central claim of the passage is that:',
         options: [
           'retributive punishment is justified because wrongdoers genuinely deserve to suffer',
-          'deterrence and rehabilitation have historically produced more cruelty than retribution has',
-          'punishment should be abolished, since no theory can specify how much of it is enough',
-          'desert merits defense not because it justifies suffering but because it alone supplies a principled upper limit on punishment',
+          'deterrence and rehabilitation have historically produced far more cruelty than retribution has',
+          'punishment should be abolished, since no theory can say how much of it is ever enough',
+          'desert merits defense not because it justifies suffering but because it supplies a ceiling',
         ],
         correctAnswer: 3,
         explanation:
@@ -230,10 +230,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author introduces the indeterminate sentence primarily in order to:',
         options: [
-          'concede that rehabilitation has succeeded where deterrence has failed',
-          'show that a punishment justified by the offender’s improvement contains no internal stopping point',
-          'argue that rehabilitation programs are chronically underfunded',
-          'illustrate the crowd’s appetite for satisfaction rather than for desert',
+          'concede that rehabilitation has succeeded where deterrence has plainly failed',
+          'show that a sentence justified by improvement contains no internal stopping point',
+          'argue that rehabilitation programs are chronically and severely underfunded everywhere',
+          'illustrate the crowd’s appetite for satisfaction rather than for measured desert',
         ],
         correctAnswer: 1,
         explanation:
@@ -244,10 +244,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the contrast the author draws between desert and the forward-looking theories?',
         options: [
-          'Public opinion surveys consistently find support for sentences harsher than those judges impose.',
-          'Executions have never been shown to reduce the rate of minor theft.',
-          'Deterrence theorists standardly adopt a side-constraint, defended on grounds internal to their own view, forbidding punishment beyond what the offense would warrant.',
-          'Sentencing schemes built on desert produce longer average sentences than rehabilitative schemes do.',
+          'Public opinion surveys consistently find support for sentences harsher than judges impose.',
+          'Executions have never been shown to reduce the rate of minor theft in any jurisdiction.',
+          'Deterrence theorists standardly adopt an internal side-constraint against excess punishment.',
+          'Sentencing schemes built on desert produce longer average sentences than rehabilitative ones.',
         ],
         correctAnswer: 2,
         explanation:
@@ -259,9 +259,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward "the crowd outside the courthouse" is best described as:',
         options: [
           'critical, and careful to distinguish the crowd’s appetite from the principle it invokes',
-          'sympathetic, since the crowd’s demand for desert is the very demand he defends',
-          'unconcerned, since he regards public sentiment as having no effect on sentencing',
-          'admiring of the crowd’s moral instincts despite its occasional excesses',
+          'sympathetic, since the crowd’s demand for desert is the very demand that he defends',
+          'unconcerned, since he takes public sentiment to have no real effect on sentencing',
+          'admiring of the crowd’s moral instincts despite its occasional and regrettable excesses',
         ],
         correctAnswer: 0,
         explanation:
@@ -272,10 +272,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'A legislature persuaded by the passage would be most likely to enact which of the following?',
         options: [
-          'A provision permitting a sentence to be extended when the offender is judged still dangerous at the end of his term',
-          'A statutory maximum for each offense that no finding about public safety may override, combined with discretion to sentence below that maximum',
-          'Mandatory minimum sentences calibrated to the deterrent effect of each penalty',
-          'A requirement that every sentence match the harm the offender caused as exactly as possible',
+          'A provision allowing a sentence to be extended when the offender is still judged dangerous',
+          'A statutory maximum per offense that no safety finding may override, with discretion below it',
+          'Mandatory minimum sentences calibrated to the measured deterrent effect of each penalty',
+          'A requirement that every sentence match the harm the offender actually caused as exactly as possible',
         ],
         correctAnswer: 1,
         explanation:
@@ -286,10 +286,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "satisfaction is a feeling, elastic and unappeasable, whereas desert is a measure" most nearly conveys that:',
         options: [
-          'the public’s demand for punishment is basically accurate but poorly articulated',
-          'the punishment a person deserves can be calculated with mathematical precision',
-          'unlike a fixed standard, a demand for satisfaction has no point at which it can be met',
-          'feelings should play no role whatever in the design of penal institutions',
+          'the public’s demand for punishment is basically accurate but very poorly articulated',
+          'the punishment a person deserves can be calculated with something close to precision',
+          'unlike a fixed standard, a demand for satisfaction has no point at which it is met',
+          'feelings should play no role whatever in the design of penal institutions or rules',
         ],
         correctAnswer: 2,
         explanation:
@@ -311,10 +311,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the author’s thesis?',
         options: [
-          'Role-based permissions are genuine but conditional, so the professional still owes a personal account of whether her institution delivers the good that licenses her conduct.',
-          'Professionals should refuse any role that requires them to act contrary to their own moral judgment.',
-          'The claim that the adversary system produces better verdicts than an inquisitor would has been shown to be false.',
-          'Institutions rather than individuals are the proper bearers of moral responsibility in professional life.',
+          'Role permissions are real but conditional, so the professional still owes a personal account.',
+          'Professionals should refuse any role that requires acting against their own moral judgment.',
+          'The claim that adversary systems yield better verdicts than inquisitors has been refuted.',
+          'Institutions rather than individuals are the proper bearers of responsibility in professional life.',
         ],
         correctAnswer: 0,
         explanation:
@@ -326,8 +326,8 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'The remark about the lawyer who "declined to defend clients she believed guilty" functions primarily to:',
         options: [
           'criticize attorneys who agree to represent clients they believe to be guilty',
-          'suggest that individual conscience is a more reliable guide than institutional design',
-          'concede the strength of the position the author will go on to qualify',
+          'suggest that individual conscience is a better guide than institutional design',
+          'concede the strength of the position that the author will go on to qualify',
           'introduce the resource inequality that would void the lawyer’s permission',
         ],
         correctAnswer: 2,
@@ -340,8 +340,8 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'The author’s distinction between a justification and an exemption most strongly implies that:',
         options: [
           'professionals should never be granted permissions unavailable to ordinary persons',
-          'a defense that forecloses further questioning is for that reason suspect',
-          'institutions are able to answer on behalf of their members when those members are challenged',
+          'a defense that forecloses further questioning is for that very reason suspect',
+          'institutions can answer on behalf of their members when those members are challenged',
           'the adversary system is justified only if every defendant is acquitted',
         ],
         correctAnswer: 1,
@@ -354,9 +354,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that the professional still owes a personal accounting?',
         options: [
           'Most defense lawyers report private discomfort about clients they believe to be guilty.',
-          'Adversary systems have been found to produce more accurate verdicts than inquisitorial systems do.',
-          'Some professions operate without any written code of ethics.',
-          'A professional who evaluated her institution’s performance before each act would produce judgments so unreliable that the institution could no longer generate the good it exists to produce.',
+          'Adversary systems have been found to produce more accurate verdicts than inquisitorial ones.',
+          'Some professions operate with no written code of ethics governing their members at all.',
+          'Requiring every professional to judge her institution before acting would destroy its output.',
         ],
         correctAnswer: 3,
         explanation:
@@ -367,10 +367,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best illustrates the misuse of role morality that the author describes?',
         options: [
-          'A physician who declines a patient’s request because she believes granting it would harm him',
-          'A journalist who withholds a leaked name after weighing the public interest against the harm to the person named',
-          'An auditor who signs a misleading financial statement and explains that scrutinizing management’s assumptions is not the auditor’s assigned function',
-          'A soldier who disobeys an order that he judges to be unlawful',
+          'A physician who declines a request because she believes granting it would harm the patient',
+          'A journalist who withholds a leaked name after weighing public interest against private harm',
+          'An auditor who signs a misleading statement, since scrutinizing assumptions is not his part',
+          'A soldier who disobeys an order that he has judged, after reflection, to be plainly unlawful',
         ],
         correctAnswer: 2,
         explanation:
@@ -381,10 +381,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that "a machine that does not make it has no warrant to lend" most nearly means that:',
         options: [
-          'institutions that perform badly should be reformed rather than abolished',
-          'professionals are entitled to presume that their institutions function as advertised',
+          'institutions that perform badly ought to be reformed rather than simply abolished',
+          'professionals are entitled to presume that their own institutions function as advertised',
           'the good an institution produces is always difficult to measure with confidence',
-          'a role confers permission only so long as the institution actually produces the good that justifies the role',
+          'a role permits only while the institution actually produces the good that justifies it',
         ],
         correctAnswer: 3,
         explanation:
@@ -406,10 +406,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The main point of the passage is that:',
         options: [
-          'arguments from animal suffering should be abandoned because they have failed to change public behavior',
-          'killing an animal is wrong only in cases where the killing causes the animal distress',
-          'because a wrong measured in suffering can be discharged by removing the suffering, the case for animals should rest instead on their being subjects whose lives can go better or worse',
-          'welfare reforms such as larger enclosures and gentler handling are the most promising route to ending animal exploitation',
+          'arguments from animal suffering should be abandoned, having failed to change public behavior',
+          'killing an animal is wrong only in those cases where the killing causes it real distress',
+          'the case for animals should rest on their being subjects whose lives can go better or worse',
+          'welfare reforms such as larger enclosures are the most promising route to ending exploitation',
         ],
         correctAnswer: 2,
         explanation:
@@ -420,10 +420,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The imagined facility in which no animal suffers serves primarily to:',
         options: [
-          'propose a practical standard that existing facilities ought to be required to meet',
+          'propose a practical standard that existing slaughter facilities ought to be required to meet',
           'concede that utilitarian reasoning reaches the same conclusion the author reaches',
-          'demonstrate that no method of killing can in fact be made painless',
-          'show that the suffering framework, followed consistently, has no objection left to raise',
+          'demonstrate that no method of killing can in fact be made wholly painless',
+          'show that the suffering framework, if followed out consistently, has no objection left to raise',
         ],
         correctAnswer: 3,
         explanation:
@@ -434,10 +434,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward suffering-based arguments for animals is best described as:',
         options: [
-          'appreciative of their practical achievement while convinced that they rest on the wrong ground',
-          'contemptuous of them as a sentimental evasion of the real question',
-          'entirely persuaded by them, and concerned only to extend their reach',
-          'indifferent, since he regards the underlying debate as unresolvable',
+          'appreciative of their practical achievement while convinced they rest on wrong ground',
+          'contemptuous of them as a sentimental evasion of the question that really matters',
+          'entirely persuaded by them, and concerned only to extend their reach much further still',
+          'indifferent, since he takes the underlying debate to be finally unresolvable',
         ],
         correctAnswer: 0,
         explanation:
@@ -448,10 +448,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most undermine the author’s distinction between hurting and wronging?',
         options: [
-          'Most consumers say they would pay more for meat from animals that were raised without distress.',
-          'Any interruption of a creature’s ongoing pursuits is itself experienced by the creature as a form of distress, so that no wrong of the kind the author describes could occur without suffering.',
+          'Most consumers say they would pay more for meat from animals raised without distress.',
+          'Any interruption of a creature’s ongoing pursuits is itself experienced by it as distress.',
           'Some veterinary procedures cause an animal more pain than they ultimately prevent.',
-          'Welfare reforms have measurably reduced the number of animals kept in close confinement.',
+          'Welfare reforms have measurably reduced the number of animals now kept in close confinement.',
         ],
         correctAnswer: 1,
         explanation:
@@ -462,10 +462,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author would most likely accept which of the following as the strongest evidence that a given creature is a "subject" in his sense?',
         options: [
-          'Observation that the creature pursues something over time and that its circumstances can be better or worse for it',
-          'Evidence that the creature conceives of its own future and can narrate its past experiences',
-          'A demonstration that the creature reliably responds to painful stimuli',
-          'A showing that the creature resembles a human being in appearance and behavior',
+          'Observation that the creature pursues something over time and can fare better or worse',
+          'Evidence that the creature conceives its own future and can narrate its past experience',
+          'A demonstration that the creature reliably responds to painful stimuli of many kinds',
+          'A showing that the creature closely resembles a human being in appearance and behavior',
         ],
         correctAnswer: 0,
         explanation:
@@ -476,10 +476,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the remark that "misery is not a property of thermometers" most nearly means that:',
         options: [
-          'instruments are unable to measure animal welfare with any accuracy',
-          'the suffering theorist relies too heavily on quantitative methods of investigation',
-          'misery must be given a precise definition before it can be studied at all',
-          'to call a creature miserable is already to treat it as more than a place where a quantity is registered',
+          'instruments are unable to measure animal welfare with any real accuracy at all',
+          'the suffering theorist leans too heavily on quantitative methods of investigation',
+          'misery must be given a precise definition before it can be studied scientifically',
+          'to call a creature miserable is already to treat it as more than a mere location',
         ],
         correctAnswer: 3,
         explanation:
@@ -501,10 +501,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'individuals should refuse to disclose personal information in order to protect both themselves and others',
-          'because the power of data lies in inference across people, privacy cannot be secured through individual consent and should be governed as a shared condition',
-          'the collection of personal data should be prohibited except where a regulator has approved it in advance',
-          'privacy notices fail chiefly because they are too long and too technical for ordinary readers to understand',
+          'individuals should refuse to disclose personal data in order to protect themselves and others',
+          'privacy cannot be secured by individual consent, since data’s power lies in resemblance',
+          'the collection of personal data should be barred unless a regulator has approved it first',
+          'privacy notices fail chiefly because they are too long for ordinary readers to finish',
         ],
         correctAnswer: 1,
         explanation:
@@ -517,7 +517,7 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         options: [
           'argue that data collection produces physical harms comparable to those of pollution',
           'suggest that individuals bear personal responsibility for harms they collectively cause',
-          'show why an individual’s refusal cannot secure a good that exists only collectively',
+          'explain why a single individual’s refusal cannot secure a good that exists only collectively',
           'propose that data practices be regulated by environmental authorities',
         ],
         correctAnswer: 2,
@@ -529,10 +529,10 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s treatment of the "nothing to hide" retort suggests that he regards it as:',
         options: [
-          'misdirected, because the exposure at issue falls on people other than the one who disclosed',
-          'sound, but insufficiently sensitive to the embarrassment of ordinary people',
-          'the strongest argument available to defenders of current data practices',
-          'an objection that would succeed if consent procedures were substantially improved',
+          'misdirected, because the exposure at issue falls on people other than the discloser',
+          'sound, but insufficiently sensitive to the embarrassment felt by ordinary people',
+          'the strongest argument now available to defenders of current data practices',
+          'an objection that would succeed if consent procedures were substantially improved upon',
         ],
         correctAnswer: 0,
         explanation:
@@ -544,9 +544,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'Which of the following, if true, would most WEAKEN the author’s argument?',
         options: [
           'Surveys find that most people do not read privacy notices before agreeing to them.',
-          'Predictions drawn about third parties are sometimes inaccurate.',
-          'Very large data collections are expensive to assemble and costly to maintain.',
-          'Predictive systems lose nearly all of their accuracy unless the specific individual being evaluated has recently supplied data about himself.',
+          'Predictions drawn about third parties turn out to be inaccurate a good deal of the time.',
+          'Very large data collections are expensive to assemble and costly to maintain over time.',
+          'Predictive accuracy collapses unless the evaluated person has recently supplied data.',
         ],
         correctAnswer: 3,
         explanation:
@@ -558,9 +558,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'Which policy would best reflect the shift in focus the author recommends?',
         options: [
           'Requiring every firm to obtain renewed consent from each of its users once a year',
-          'Barring an insurer from setting an applicant’s premium on the basis of predictions derived from other people’s records',
-          'Prohibiting the collection of any health-related information whatsoever',
-          'Allowing individuals to sell their personal data at a price each of them sets',
+          'Barring an insurer from pricing a policy using predictions drawn from other people’s own records',
+          'Prohibiting outright the collection of any health-related information whatsoever by any firm',
+          'Allowing individuals to sell their own personal data at a price each of them sets',
         ],
         correctAnswer: 1,
         explanation:
@@ -572,9 +572,9 @@ export const CARS_ETHICS_PASSAGES: MCATPassage[] = [
         question: 'In context, the claim that the harm "is shaped like a discharge into a commons" most nearly means that:',
         options: [
           'personal data ought to be made freely available to everyone on equal terms',
-          'firms dispose of user data carelessly once they have finished using it',
-          'the harm spreads through a shared condition rather than removing something from a particular owner',
-          'privacy violations are best remedied by compensating the individuals whose data was taken',
+          'firms dispose of user data carelessly once they have finished making use of it',
+          'the harm spreads through a shared condition rather than taking from an owner',
+          'privacy violations are best remedied by compensating the individuals whose data was used',
         ],
         correctAnswer: 2,
         explanation:

@@ -32,22 +32,22 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following best expresses the central thesis of the passage?',
         options: [
           'Historical accounts are revised principally because previously unavailable documents come to light.',
-          'Because historians’ questions arise from present concerns, historical conclusions are ultimately expressions of the historian’s own moment.',
-          'Interpretation changes chiefly because questions change, and a question’s present-day origin does not compromise an answer the evidence remains free to reject.',
+          'Because historians’ questions arise from present concerns, their conclusions express the historian’s own moment.',
+          'Interpretation changes because questions change, and a question’s origin does not compromise its answer.',
           'Historians should suppress contemporary preoccupations so that the sources may speak without interference.',
         ],
         correctAnswer: 2,
         explanation:
-          'The author denies that discovery drives revision ("If evidence were the engine, revision would move at the pace of discovery. It does not"), locates the engine in the question, and then defends that view by separating "the origin of a question" from "the discipline of its answer." The option naming new documents as the principal cause is the explanation the author calls "almost entirely inadequate." The option concluding that history is autobiography states the objection the author raises in order to answer it, not the author’s own view. The option urging suppression of present concerns is the posture the author calls "concealment," since such a historian has merely inherited an older question without noticing it.',
+          'The author denies that discovery drives revision ("If evidence were the engine, revision would move at the pace of discovery. It does not"), locates the engine in the question, and then defends that view by separating "the origin of a question" from "the discipline of its answer." A present-day motive taints nothing so long as the historian asks "questions the documents remain free to answer with a no." The option naming new documents as the principal cause is the explanation the author calls "almost entirely inadequate." The option concluding that history is autobiography states the objection the author raises in order to answer it, not the author’s own view. The option urging suppression of present concerns is the posture the author calls "concealment," since such a historian has merely inherited an older question without noticing it.',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The discussion of the parish register in the second paragraph functions primarily to:',
         options: [
-          'illustrate how identical evidence acquires different significance depending on the question brought to it',
-          'demonstrate that demographic sources are more reliable than political ones',
-          'offer an example of the newly discovered material that forces reinterpretation',
+          'show how the same evidence shifts significance with the question brought to it',
+          'demonstrate that demographic sources are more reliable than political narratives',
+          'offer an example of the newly discovered material that forces a reinterpretation',
           'concede that some documents remain uninformative no matter how they are questioned',
         ],
         correctAnswer: 0,
@@ -59,10 +59,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that a historian who claims to bring no question of his own to the archive is:',
         options: [
-          'practicing the only defensible form of historical neutrality',
+          'practicing the only defensible form of neutrality available to historians',
           'likely to produce work that is unimaginative but methodologically sound',
-          'guilty of the same corruption as a historian whose question admits only one answer',
-          'operating under an inherited question so familiar that he no longer recognizes it as a question',
+          'guilty of the same corruption as a historian whose question allows one answer',
+          'working under an inherited question too familiar for him to recognize as one',
         ],
         correctAnswer: 3,
         explanation:
@@ -74,8 +74,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following findings, if true, would most WEAKEN the author’s account of why historical interpretations change?',
         options: [
           'Several fields have reversed their prevailing consensus twice within a single scholar’s career.',
-          'A survey of major reinterpretations finds that each was immediately preceded by the opening of a previously sealed archive.',
-          'Historians frequently disagree about which questions are worth asking.',
+          'Each major reinterpretation was immediately preceded by the opening of a sealed archive.',
+          'Historians frequently disagree about which questions are worth asking at all.',
           'Parish registers have been used to answer questions their compilers never contemplated.',
         ],
         correctAnswer: 1,
@@ -87,9 +87,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A literary scholar proposes to study a long-ignored genre of household account books on the ground that readers today care about the economics of domestic life. A critic replies that this motive taints the resulting scholarship. Based on the passage, the author would most likely respond that:',
         options: [
-          'the critic is right, since scholarship driven by present concerns cannot reach reliable conclusions',
+          'the critic is right, since scholarship driven by present concerns is unreliable',
           'the scholar must first establish that the account books were valued by those who kept them',
-          'the motive is irrelevant to the truth of the findings, provided the books remain able to contradict what the scholar expects',
+          'the motive is irrelevant to the findings, provided the books can contradict the scholar',
           'the critic’s standard of untainted scholarship is unattainable, so no standard can survive',
         ],
         correctAnswer: 2,
@@ -101,10 +101,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the author’s claim that a corrupt question permits the sources “to supply detail but never dissent” most nearly means that such a question:',
         options: [
-          'allows evidence to enrich a conclusion already fixed while blocking evidence that would overturn it',
-          'obliges the historian to work from an unusually narrow body of surviving documents',
-          'encourages historians to quarrel with one another instead of with the sources',
-          'treats a historian’s present-day motives as automatically disqualifying',
+          'lets evidence enrich a conclusion already fixed while blocking what would overturn it',
+          'obliges the historian to work from an unusually narrow body of surviving documentation',
+          'encourages historians to quarrel with one another rather than with the sources',
+          'treats a historian’s present-day motives as automatically disqualifying evidence',
         ],
         correctAnswer: 0,
         explanation:
@@ -126,8 +126,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The central claim of the passage is that:',
         options: [
-          'contested monuments should be removed when the intentions of those who erected them are found to be objectionable',
-          'because a monument asserts a present endorsement rather than records a fact, keeping or removing one is an unavoidable choice a community should make openly',
+          'contested monuments should be removed when the intentions behind them prove objectionable',
+          'a monument asserts a present endorsement, so keeping or removing one is a choice made openly or not',
           'removing a monument erases history and should therefore be resisted in all but the most extreme cases',
           'the meanings of monuments shift so thoroughly over time that public debate about them cannot be productive',
         ],
@@ -141,9 +141,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'The author’s attitude toward those who argue that removing a statue erases history is best described as:',
         options: [
           'sympathetic to their motives though doubtful they can succeed',
-          'openly contemptuous of their bad faith',
-          'detached and unwilling to take a position',
-          'unpersuaded, but no harsher than toward the opposing camp',
+          'openly contemptuous of what he takes to be their bad faith',
+          'detached, and unwilling to take any position of his own',
+          'unpersuaded, but no harsher than he is toward the opposing camp',
         ],
         correctAnswer: 3,
         explanation:
@@ -155,7 +155,7 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'The passage implies that a statue’s continued presence in a public square is best understood as:',
         options: [
           'an act of commemoration performed anew by each generation that declines to remove it',
-          'a historical record whose removal would diminish public knowledge of the figure depicted',
+          'a historical record whose removal would diminish public knowledge of the figure',
           'a neutral inheritance that acquires political meaning only once it is challenged',
           'evidence that the original subscribers still exert influence over public life',
         ],
@@ -168,10 +168,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The third paragraph, which criticizes campaigners for removal, functions primarily to:',
         options: [
-          'withdraw the author’s earlier objection to the erasure argument',
-          'concede that monuments should generally be left where they stand',
-          'show that both camps rest on a shared mistaken premise, preparing the reframing that follows',
-          'establish that a monument’s meaning is determined by the intentions of those who paid for it',
+          'withdraw the objection the author had earlier raised to the erasure argument',
+          'concede that contested monuments should as a rule be left where they stand',
+          'show that both camps rest on one mistaken premise, preparing the reframing',
+          'establish that a monument’s meaning is fixed by the intentions of those who paid for it',
         ],
         correctAnswer: 2,
         explanation:
@@ -183,8 +183,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that a monument asserts rather than records?',
         options: [
           'Figures commemorated in public squares are also treated at length in academic scholarship.',
-          'Communities commissioning monuments routinely omit documented facts about the honoree that would complicate the tribute.',
-          'Public monuments are considerably more expensive to maintain than archival collections.',
+          'Communities commissioning monuments routinely omit documented facts that complicate the tribute.',
+          'Public monuments are considerably more expensive to maintain than archival collections are.',
           'Surveys find that most passersby cannot identify the figure depicted in a statue they walk past daily.',
         ],
         correctAnswer: 1,
@@ -196,14 +196,14 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A university has for a century awarded a prize named for a benefactor whose conduct is now widely condemned. Applying the author’s reasoning, the university should recognize that:',
         options: [
-          'renaming the prize would erase the benefactor from the institution’s history',
-          'the decision turns on what the prize’s founders intended the name to signify',
-          'retaining the name is the neutral course, since it alters nothing',
-          'continuing to award the prize under that name is itself a present endorsement requiring a defense',
+          'renaming the prize would erase the benefactor from the institution’s own history',
+          'the decision turns on what the prize’s founders intended the name to signify then',
+          'retaining the name is the neutral course, since nothing about it changes',
+          'continuing to award the prize under that name is itself a present endorsement',
         ],
         correctAnswer: 3,
         explanation:
-          'The author’s framework converts every act of retention into a present assertion: the community may say "we still mean this, and here is our reason," but may not claim the question does not arise. The erasure worry is the argument the passage dismantles, since the record survives renaming. Founders’ intentions are precisely what the author’s better frame "dispenses with." Calling retention neutral repeats the option the author says only appears neutral while quietly securing the honor.',
+          'The author’s framework converts every act of retention into a present assertion requiring a defense: the community may say "we still mean this, and here is our reason," but may not claim the question does not arise. The erasure worry is the argument the passage dismantles, since the record survives renaming. Founders’ intentions are precisely what the author’s better frame "dispenses with." Calling retention neutral repeats the option the author says only appears neutral while quietly securing the honor.',
         skill: 'application',
         needsReview: false,
       },
@@ -221,23 +221,23 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the passage’s main argument?',
         options: [
-          'Archives are so thoroughly shaped by institutional purposes that the lives of the poor cannot be reconstructed at all.',
-          'Historians should concentrate on the wealthy, whose records are abundant and self-authored.',
+          'Archives are so shaped by institutional purpose that the lives of the poor cannot be reconstructed.',
+          'Historians should concentrate on the wealthy, whose records are abundant and self-authored throughout.',
           'Recovering the inner lives of the excluded is the principal achievement of modern archival research.',
-          'Because archives record what institutions needed, their silences are patterned evidence supporting disciplined inference, though not the recovery of interior lives.',
+          'Archives record what institutions needed, so their silences are patterned evidence for inference.',
         ],
         correctAnswer: 3,
         explanation:
-          'The author argues that archives are "residue" of institutional purpose, that "a silence has a shape" determined by that purpose and therefore yields real knowledge, and that what such work recovers is "a constraint" rather than an interior life. The claim that nothing can be reconstructed is the objection the author answers. Concentrating on the wealthy is never proposed and would abandon the method the author defends. Treating the recovery of inner lives as the field’s achievement is the overselling the author explicitly deflates.',
+          'The author argues that archives are "residue" of institutional purpose, that "a silence has a shape" determined by that purpose and therefore yields real knowledge, and that what such disciplined inference recovers is "a constraint" rather than an interior life. The claim that nothing can be reconstructed is the objection the author answers. Concentrating on the wealthy is never proposed and would abandon the method the author defends. Treating the recovery of inner lives as the field’s achievement is the overselling the author explicitly deflates.',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The passage suggests that a biography of a poor person built solely from surviving archival documents would most likely:',
         options: [
-          'be more trustworthy than a biography of a wealthy person, since it rests on official rather than self-serving sources',
-          'misrepresent that life by consisting largely of episodes of crisis',
-          'prove impossible to construct, since no relevant documents survive',
+          'rest on official records rather than self-serving ones and so be more reliable',
+          'misrepresent that life by consisting largely of episodes of crisis and friction',
+          'prove impossible to construct, since no relevant documents survive at all',
           'reveal the person’s beliefs more reliably than her material circumstances',
         ],
         correctAnswer: 1,
@@ -263,9 +263,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'A researcher studying a factory finds that individual workers are named in surviving company files only in disciplinary reports. Following the author’s method, the most defensible conclusion is that the files reveal:',
         options: [
-          'what the firm considered worth policing and the conditions under which a worker became visible to management',
+          'what the firm considered worth policing and when a worker became visible to it',
           'that the workforce was unusually uncooperative, since discipline dominates the record',
-          'nothing usable, because a record this biased cannot support inference',
+          'nothing usable, since a record this biased cannot support inference of any kind',
           'the workers’ own attitudes toward the factory, which can be read out of the reports',
         ],
         correctAnswer: 0,
@@ -277,10 +277,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that reading against the grain is testable rather than merely speculative?',
         options: [
-          'Institutions occasionally preserved records for reasons unconnected to enforcement.',
+          'Institutions occasionally preserved records for reasons wholly unconnected to enforcement.',
           'Historians disagree about which social groups suffered most from hostile record-keeping.',
           'Several bodies of destroyed records have been reconstructed from copies held in other collections.',
-          'Predictions about which documents ought to exist elsewhere have consistently proved incapable of confirmation or disconfirmation by surviving collections.',
+          'Predictions about which documents should exist elsewhere can never be checked in practice.',
         ],
         correctAnswer: 3,
         explanation:
@@ -291,10 +291,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the phrase “recovering lost voices” is best described as:',
         options: [
-          'approving, since it accurately names what archival method achieves',
-          'critical of its overstatement while still endorsing the work it names',
-          'dismissive of the entire enterprise the phrase describes',
-          'indifferent, since terminology has no bearing on method',
+          'approving, since it accurately names what the archival method achieves',
+          'critical of its overstatement, though still endorsing the work',
+          'dismissive of the whole enterprise the phrase is used to describe',
+          'indifferent, since terminology has no bearing on historical method',
         ],
         correctAnswer: 1,
         explanation:
@@ -316,9 +316,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best captured by which of the following?',
         options: [
-          'Period boundaries are useful instruments that distort when they carry an implicit plot or are exported to domains that never justified them.',
+          'Period boundaries are useful instruments that distort when they carry a plot or are exported.',
           'Historians should abandon periodization in favor of a single continuous narrative of the past.',
-          'Periodization is harmless so long as its boundaries are drawn from the history of politics and technology.',
+          'Periodization is harmless so long as its boundaries come from politics and technology.',
           'Because every period boundary is arbitrary, disputes over when an age began cannot be settled by evidence.',
         ],
         correctAnswer: 0,
@@ -331,8 +331,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'The author calls a boundary that “seems to answer every question equally well” an ornament chiefly to suggest that it:',
         options: [
           'is pleasing enough to be valuable for teaching even if it is imprecise',
-          'applies so broadly that it must correspond to a genuine feature of the past',
-          'discriminates among no cases and therefore explains nothing',
+          'applies so broadly that it must name a genuine feature of the past',
+          'draws no distinction among cases and therefore explains nothing',
           'is a recent invention that has not yet earned scholarly acceptance',
         ],
         correctAnswer: 2,
@@ -344,8 +344,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The third paragraph, beginning “The obvious reply is that the alternative is worse,” primarily functions to:',
         options: [
-          'abandon the criticism developed in the preceding paragraph',
-          'grant a genuine objection in order to narrow the author’s claim',
+          'abandon the criticism developed in the preceding paragraph entirely',
+          'grant a genuine objection in order to narrow the claim the author is making',
           'supply historical examples of period boundaries that were drawn correctly',
           'argue that periods should be defined by political rather than cultural change',
         ],
@@ -358,9 +358,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that describing a long-lasting practice as a “holdover” is objectionable mainly because the description:',
         options: [
-          'may exaggerate how widespread the practice actually was',
-          'relies on a term that lacks any agreed technical definition',
-          'suggests that historians should avoid evaluative vocabulary altogether',
+          'may exaggerate how widespread the practice actually was in its day',
+          'relies on a term that lacks any agreed technical definition among scholars',
+          'suggests that historians ought to avoid evaluative vocabulary altogether',
           'treats continuity as a failure to conform to a schedule the historian supplied',
         ],
         correctAnswer: 3,
@@ -372,10 +372,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following observations, if true, would most STRENGTHEN the author’s argument about exported boundaries?',
         options: [
-          'Studies of rural diet and everyday speech across a celebrated political watershed find no discontinuity at the date in question.',
-          'Historians of technology and historians of government tend to place their boundaries in the same decades.',
-          'Students retain historical material better when it is organized into named periods.',
-          'The number of recognized historical periods has grown steadily over the last century.',
+          'Studies of rural diet and speech find no discontinuity at a celebrated political date.',
+          'Historians of technology and of government place their boundaries in the same decades.',
+          'Students retain historical material better when it is arranged into named periods.',
+          'The number of recognized historical periods has grown steadily over the past century.',
         ],
         correctAnswer: 0,
         explanation:
@@ -387,13 +387,13 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'A scholar of music proposes to organize her field using the period boundaries long established in the history of painting. The author would most likely advise her to:',
         options: [
           'adopt them, since a shared framework is what allows scholars to find one another',
-          'reject all period boundaries and treat musical change as an undivided flow',
-          'adopt them only if musical evidence independently marks those boundaries, and to keep rival schemes available',
-          'devise a single new scheme capable of organizing both fields at once',
+          'reject all period boundaries and treat musical change as one undivided flow',
+          'adopt them only if musical evidence independently marks those boundaries',
+          'devise a single new scheme capable of organizing both fields simultaneously',
         ],
         correctAnswer: 2,
         explanation:
-          'This is the exported-boundary case, and the author’s remedy is "plurality: to keep several incompatible periodizations in use at once, selecting among them according to the question at hand," with any boundary justified in its own domain. The appeal to scholars finding one another is a real point in the passage but here licenses precisely the export the author warns against, making it half-right and misapplied. Rejecting all boundaries is the abolition the author refuses. A single scheme spanning both fields is the "better master scheme" the remedy explicitly rules out.',
+          'This is the exported-boundary case, and the author’s remedy is "plurality: to keep several incompatible periodizations in use at once, selecting among them according to the question at hand," with any boundary justified in its own domain and rival schemes kept available. The appeal to scholars finding one another is a real point in the passage but here licenses precisely the export the author warns against, making it half-right and misapplied. Rejecting all boundaries is the abolition the author refuses. A single scheme spanning both fields is the "better master scheme" the remedy explicitly rules out.',
         skill: 'application',
         needsReview: false,
       },
@@ -413,7 +413,7 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         options: [
           'counterfactual reasoning is inherently speculative and should be excluded from serious historical work',
           'historians who avoid counterfactuals produce more rigorous scholarship than those who embrace them',
-          'counterfactual reasoning is implicit in every causal claim and is defensible when kept minimal, since brevity keeps it constrained by evidence',
+          'counterfactual reasoning is implicit in every causal claim and is defensible when kept minimal',
           'because historical outcomes are contingent, no result should ever be described as inevitable',
         ],
         correctAnswer: 2,
@@ -425,9 +425,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward book-length counterfactual narratives is best described as:',
         options: [
-          'admiring of their imaginative ambition despite their flaws',
+          'admiring of their imaginative ambition in spite of their flaws',
           'neutral, since their weaknesses are shared by all historical writing',
-          'hostile toward the counterfactual mood such books exemplify',
+          'hostile toward the counterfactual mood that such books exemplify',
           'disparaging, though for a reason different from the one usually given',
         ],
         correctAnswer: 3,
@@ -439,10 +439,10 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The one-sentence paragraph beginning “The real question, then, was never whether” primarily serves to:',
         options: [
-          'shift the inquiry from whether counterfactual reasoning is legitimate to how it may be constrained',
-          'concede that the objection to counterfactual reasoning is decisive',
+          'shift the inquiry from whether such reasoning is valid to how it is disciplined',
+          'concede that the standing objection to counterfactual reasoning is decisive',
           'summarize the documentary evidence presented in the opening paragraph',
-          'introduce the claim that causal explanation in history is impossible',
+          'introduce the claim that causal explanation in history is ultimately impossible',
         ],
         correctAnswer: 0,
         explanation:
@@ -454,8 +454,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following, if true, would most STRENGTHEN the author’s distinction between minimal and extended counterfactuals?',
         options: [
           'Readers report finding extended counterfactual narratives more engaging than short ones.',
-          'Short-range counterfactual claims about a military campaign have repeatedly been revised once newly examined logistical records contradicted them.',
-          'Historians rarely agree on a definition of historical causation.',
+          'Short-range claims about a campaign have repeatedly been revised by newly examined records.',
+          'Historians rarely agree on how historical causation should best be defined.',
           'Several extended counterfactual narratives have anticipated developments that later research confirmed.',
         ],
         correctAnswer: 1,
@@ -481,9 +481,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that a historian who refuses on principle to consider alternatives to what actually occurred:',
         options: [
-          'implicitly asserts a stronger claim about necessity than the counterfactualist does',
-          'attains the rigor the discipline properly demands of its practitioners',
-          'will be unable to construct even a reliable chronology of events',
+          'asserts a stronger claim about necessity than the counterfactualist does',
+          'attains the rigor the discipline properly demands of its practitioners today',
+          'will prove unable to construct even a reliable chronology of events',
           'commits the error of compounding conjectures across a long chain of speculation',
         ],
         correctAnswer: 0,
@@ -507,8 +507,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'Which of the following best states the author’s central claim?',
         options: [
           'All systems of healing are equally valid and differ only in the vocabulary they employ.',
-          'Because judgments of efficacy depend on chosen endpoints, medicine’s triumphalist history misgrades past practice and obscures shifts in the profession’s own standards.',
-          'The history of medicine should be written by practicing scientists rather than by humanists.',
+          'Because judgments of efficacy depend on chosen endpoints, the ascent narrative misgrades past practice.',
+          'The history of medicine should be written by practicing scientists rather than by humanist scholars.',
           'Past medical practices were considerably more effective than the modern profession is willing to acknowledge.',
         ],
         correctAnswer: 1,
@@ -535,9 +535,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'The author writes that decisions about what shall count “disappear into the machinery and re-emerge looking like measurements.” This most nearly means that:',
         options: [
           'measurement instruments have become too automated for clinicians to scrutinize',
-          'clinical results are now too complex for nonspecialists to interpret',
+          'clinical results are now too complex for nonspecialists to interpret safely',
           'a single endpoint can be assessed using several incompatible instruments',
-          'value judgments made before a study begins are later reported as neutral findings',
+          'value judgments made before a study begins are later reported as findings',
         ],
         correctAnswer: 3,
         explanation:
@@ -550,7 +550,7 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         options: [
           'retract the criticism of triumphalist history developed in the preceding paragraphs',
           'establish that efficacy cannot be compared across different systems of healing',
-          'separate the author’s argument from a relativism that would otherwise be attributed to it',
+          'distinguish the author’s argument from a relativism otherwise attributed to it',
           'introduce evidence that past therapies were more dangerous than is generally believed',
         ],
         correctAnswer: 2,
@@ -562,9 +562,9 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that shifting endpoints rather than shifting therapies drive changing verdicts?',
         options: [
-          'Different institutions assess quality of life using different questionnaires.',
-          'Reassessments that overturned established therapies were in nearly every case prompted by new biochemical findings about the therapies themselves, with the measured endpoints unchanged.',
-          'Patients and physicians frequently disagree about which endpoints matter most.',
+          'Different institutions assess quality of life using quite different questionnaires.',
+          'Overturned verdicts nearly always followed new biochemical findings, endpoints unchanged.',
+          'Patients and physicians frequently disagree about which endpoints ought to matter most.',
           'Historians of medicine disagree about when the modern clinical trial first appeared.',
         ],
         correctAnswer: 1,
@@ -577,8 +577,8 @@ export const CARS_HISTORY_PASSAGES: MCATPassage[] = [
         question: 'A committee announces that a long-standing surgical procedure “has been shown to be ineffective” after the field replaced its measure of success from tumor shrinkage to functional independence at five years. Applying the author’s reasoning, the most accurate description of this announcement is that:',
         options: [
           'the procedure was always ineffective and the earlier favorable verdict was simply an error',
-          'the new measure is the superior one because it reflects what patients actually value',
-          'the procedure’s performance under a newly chosen standard changed the verdict, though the procedure itself did not change',
+          'the new measure is the superior one because it reflects what patients themselves value',
+          'a newly chosen standard changed the verdict, though the procedure itself did not change',
           'no comparison between the two verdicts is possible, since the standards are incommensurable',
         ],
         correctAnswer: 2,

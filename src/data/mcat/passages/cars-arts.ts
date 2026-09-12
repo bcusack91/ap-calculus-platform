@@ -27,21 +27,21 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         question: 'Which of the following best states the central argument of the passage?',
         options: [
           'Because a perfect forgery matches the original in every visible respect, the two panels deserve the same admiration.',
-          'The forger’s challenge fails because it assumes that everything we value in a painting must be carried by the visible surface, whereas what we chiefly admire is what was done.',
+          'The forger’s challenge fails because it assumes that everything we value in a painting is carried by the visible surface.',
           'The experts’ inability to defend their own judgments shows that the distinction between original and copy was empty all along.',
           'Museums that remove unmasked forgeries from display are protecting investments rather than artistic standards.',
         ],
         correctAnswer: 1,
         explanation:
-          'The author locates the brief’s failure "at its first, quietest move: the assumption that whatever we value in a painting must be a property the surface can carry," and answers it with the principle that "identical residues can be left by unequal doings." The equal-admiration option is the advocate’s brief, which the author argues against after stating it. The option about empty distinctions takes the closing concession too far: the author says the experts gave "the false account," but that "the judgment survives it." The museum-basement option is a detail from the advocate’s side of the case, not the author’s conclusion.',
+          'The author locates the brief’s failure "at its first, quietest move: the assumption that whatever we value in a painting must be a property the surface can carry," and answers it with the principle that "identical residues can be left by unequal doings." What we chiefly admire is the doing rather than the residue, since "what we look at, in a painting, is mostly decisions." The equal-admiration option is the advocate’s brief, which the author argues against after stating it. The option about empty distinctions takes the closing concession too far: the author says the experts gave "the false account," but that "the judgment survives it." The museum-basement option is a detail from the advocate’s side of the case, not the author’s conclusion.',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The example of the sprinter who runs a record time with a gale at her back functions primarily to:',
         options: [
-          'concede that athletic accomplishment, unlike artistic accomplishment, can be read directly off its measurable results',
-          'argue that records set under irregular conditions ought to be struck from the books',
+          'concede that athletic accomplishment, unlike artistic, can be read off its measurable results',
+          'argue that records set under irregular conditions should be struck from the record books',
           'suggest that competition among painters is as legitimate as competition among athletes',
           'illustrate that identical outcomes can be left behind by doings of unequal standing',
         ],
@@ -56,7 +56,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         options: [
           'described their own judgment in terms it could not honestly support',
           'demonstrated that no reliable difference between originals and copies exists',
-          'fallen victim to forgers too skillful for any method to expose',
+          'fallen victim to forgers too skillful for any known method to expose',
           'supplied the strongest available evidence for the distinction the author defends',
         ],
         correctAnswer: 0,
@@ -68,14 +68,14 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s reply to the forger’s advocate?',
         options: [
-          'Some forgers produce admired original work under their own names.',
+          'Several known forgers have also produced admired original work under their own names.',
           'Museum visitors spend, on average, less than one minute before any single painting.',
-          'Viewers informed partway through a long viewing that a painting is a copy show no change at all in what they notice, describe, or admire in it.',
-          'Laboratory methods can now expose most forgeries produced before the twentieth century.',
+          'Viewers told midway that a painting is a copy notice and admire just what they did before.',
+          'Laboratory methods can now expose nearly every forgery made before the twentieth century.',
         ],
         correctAnswer: 2,
         explanation:
-          'The author’s reply turns on the claim that unmasking a copy changes the viewing: "every mark changes its standing" and "the looking changes," because we "see the doing in the thing done." Viewers whose noticing, describing, and admiring are wholly unaffected by the news would be evidence that looking is the pure optics the advocate requires and the author denies. Forgers with original careers are compatible with everything the author says about doing versus tracing. Average viewing time bears on museum behavior, not on the argument. And better detection methods change nothing, since the case was built on a forgery no method can expose.',
+          'The author’s reply turns on the claim that unmasking a copy changes the viewing: "every mark changes its standing" and "the looking changes," because we "see the doing in the thing done." Viewers whose noticing, describing, and admiring are wholly unaffected by the news would be evidence that looking is the pure optics the advocate requires and the author denies. Forgers with original careers of their own are compatible with everything the author says about doing versus tracing, since his claim is about the standing of a copy, not about the talents of copyists. Average viewing time bears on museum behavior, not on the argument. And better detection methods change nothing, since the case was built on a forgery no method can expose.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -96,14 +96,14 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the forger’s advocate is best described as:',
         options: [
-          'contempt for a position he considers beneath serious argument',
-          'complete agreement with both the advocate’s sociology and his philosophy',
-          'reluctant surrender to a case he cannot answer',
-          'willingness to state the case at its strongest, joined to a firm rejection of its central assumption',
+          'contempt for a position he regards as beneath the dignity of argument',
+          'complete agreement with the advocate’s sociology and his philosophy',
+          'reluctant surrender to a case whose central claim he cannot answer',
+          'fair statement of the case, joined to rejection of its central premise',
         ],
         correctAnswer: 3,
         explanation:
-          'The author opens by promising to argue the advocate’s side "at full strength," then splits the brief: "The sociology is correct... The philosophy fails." That is engagement at the opponent’s best, followed by refutation of the assumption about surfaces. Contempt is ruled out by the care taken to build the brief before answering it. Complete agreement fails on the philosophy, which the author spends three paragraphs dismantling. And surrender fails in the other direction: the closing paragraph declares that the judgment, and the distinction between doing and tracing, both survive.',
+          'The author opens by promising to argue the advocate’s side "at full strength," then splits the brief: "The sociology is correct... The philosophy fails." That is engagement at the opponent’s best, followed by firm refutation of the premise about surfaces. Contempt is ruled out by the care taken to build the brief before answering it. Complete agreement fails on the philosophy, which the author spends three paragraphs dismantling. And surrender fails in the other direction: the closing paragraph declares that the judgment, and the distinction between doing and tracing, both survive.',
         skill: 'tone',
         needsReview: false,
       },
@@ -123,8 +123,8 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         options: [
           'disputes within an ensemble are ordinarily settled by whichever player holds the senior chair',
           'documentary evidence about a composer’s life is the most reliable guide to interpretive decisions',
-          'appeals to a composer’s intention dignify and close arguments that are actually decided by testable claims about the music itself',
-          'performers should disregard the markings that composers leave in their scores',
+          'appeals to a composer’s intention close arguments that claims about the music itself decide',
+          'performers should disregard the tempo and dynamic markings that composers leave in their scores',
         ],
         correctAnswer: 2,
         explanation:
@@ -135,7 +135,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s observation that each citation "ended the exchange without ending the disagreement" serves primarily to:',
         options: [
-          'illustrate that the violinist’s documentary appeals silenced discussion without persuading anyone',
+          'show that the violinist’s documents silenced discussion without persuading anyone',
           'show that the cellist lacked the historical learning needed to answer the documents',
           'suggest that the players were too fatigued by the fourth hour to argue productively',
           'imply that the letters and memoir the violinist cited were of doubtful authenticity',
@@ -149,7 +149,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'It can be inferred that the author regards the cellist’s argument as superior to the violinist’s chiefly because it:',
         options: [
-          'was delivered with greater conviction than the violinist could muster',
+          'was delivered with more conviction than the violinist could muster',
           'reflected her longer acquaintance with the quartet’s repertoire',
           'happened to coincide with what the composer’s letters describe',
           'could be confirmed or defeated by playing the passage and listening',
@@ -163,9 +163,9 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that appeals to the composer are "ceremonial rather than evidentiary"?',
         options: [
-          'Musicians who cite composers’ letters usually read them in the original language.',
-          'In recorded rehearsal disputes, players invoke the composer only after their preference has already formed, and different ensembles invoke the same composer on opposite sides of identical questions.',
-          'Several composers left metronome markings precise enough to leave little room for dispute.',
+          'Musicians who cite composers’ letters usually read them in the original rather than in translation.',
+          'Players invoke the composer only after a preference has formed, and rival ensembles cite him on both sides.',
+          'Several composers left metronome markings precise enough to settle most questions of tempo outright.',
           'Concert audiences cannot reliably distinguish performances advertised as historically informed from those that are not.',
         ],
         correctAnswer: 1,
@@ -178,7 +178,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         question: 'A conductor tells her orchestra: "Take the coda faster — the letters tell us the composer despised sluggish endings." Based on the passage, the author would most likely observe that this instruction:',
         options: [
           'makes the kind of claim about the piece that an evening of rehearsal can settle',
-          'should be followed only if the letters can first be authenticated',
+          'should be followed only if the letters she cites can first be authenticated',
           'invokes a standard that cannot rule against her, however the coda sounds',
           'is illegitimate, because tempo decisions belong to the players rather than the conductor',
         ],
@@ -191,9 +191,9 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s closing wager that every penciled marking would be "attributed by morning to the ghost" most nearly suggests that:',
         options: [
-          'decisions reached by ear are habitually re-described afterward as discoveries about the composer',
+          'decisions reached by ear are habitually re-described as discoveries about the composer',
           'the markings in inherited performing parts are routinely erased and rewritten by each generation',
-          'the violinist’s teachers enjoyed access to the composer’s unpublished papers',
+          'the violinist’s teachers enjoyed access to the composer’s unpublished manuscripts and papers',
           'performing traditions preserve the composer’s wishes more faithfully than printed scores do',
         ],
         correctAnswer: 0,
@@ -216,14 +216,14 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage is primarily concerned with arguing that:',
         options: [
-          'the thematic rehang did not remove curatorial argument but made it harder to identify and therefore harder to contest',
-          'museums should return to displays organized by century and nation',
-          'curatorial neutrality is achievable so long as curators avoid stating explicit interpretive claims',
-          'the older museum’s account of artistic development was substantially accurate',
+          'the thematic rehang did not remove curatorial argument but made it harder to contest',
+          'museums should return to the older arrangement of galleries by century and nation',
+          'curatorial neutrality is achievable so long as curators state no explicit claims',
+          'the older museum’s account of how art develops was substantially accurate after all',
         ],
         correctAnswer: 0,
         explanation:
-          'The author grants the rehang real "gains" yet argues that "a thematic room argues too, and it argues harder," producing "instruction that has removed its signature" and "authority without a return address." A return to the old hang is never proposed; the author calls the reform "overdue." The neutrality option reverses the essay’s conclusion that neutrality "is unavailable." And the author says of the old story that "most of the claim is false."',
+          'The author grants the rehang real "gains" yet argues that "a thematic room argues too, and it argues harder," producing "instruction that has removed its signature" and "authority without a return address" — an argument no less present for being harder to identify. A return to the old hang is never proposed; the author calls the reform "overdue." The neutrality option reverses the essay’s conclusion that neutrality "is unavailable." And the author says of the old story that "most of the claim is false."',
         skill: 'main-idea',
         needsReview: false,
       },
@@ -231,13 +231,13 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         question: 'The author’s question about what a visitor could dispute in a room called Encounters serves chiefly to:',
         options: [
           'reproach curators for choosing imprecise titles for their exhibitions',
-          'suggest that thematic displays draw smaller audiences than chronological ones',
-          'illustrate that a claim made by arrangement gives the visitor nothing specific to contest',
-          'propose a more informative title for such an exhibition',
+          'suggest that thematic displays draw smaller crowds than chronological ones',
+          'show that a claim made by arrangement leaves the visitor nothing to contest',
+          'recommend that exhibition titles name the comparison the room proposes',
         ],
         correctAnswer: 2,
         explanation:
-          'The question follows directly from the contrast with a dated national label, which a visitor "could say which boundary she meant" about; the room title is offered as the case where no such sentence exists. Fixing titles is not the author’s remedy — his proposal is a wall text stating the claim and its strongest objection. Attendance figures never appear. And the author suggests no alternative title, since a better word would not supply the missing proposition.',
+          'The question follows directly from the contrast with a dated national label, which a visitor "could say which boundary she meant" about; the room title is offered as the case where no such specific sentence exists to dispute. Fixing titles is not the author’s remedy — his proposal is a wall text stating the claim and its strongest objection, not a more descriptive heading. Attendance figures never appear. And the author suggests no alternative title, since a better word would not supply the missing proposition.',
         skill: 'function',
         needsReview: false,
       },
@@ -259,9 +259,9 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         question: 'Which of the following findings would most weaken the author’s objection to thematic displays?',
         options: [
           'Visitors to thematic exhibitions report enjoying them more than chronological displays.',
-          'Visitors leaving thematic rooms readily state, and criticize, the specific comparison the room proposed.',
+          'Visitors leaving thematic rooms readily state and criticize the comparison the room proposed.',
           'Curators of thematic exhibitions spend longer selecting objects than curators of chronological ones.',
-          'Some thematic exhibitions draw all of their objects from a single century.',
+          'Some thematic exhibitions draw all of their objects from a single century and region.',
         ],
         correctAnswer: 1,
         explanation:
@@ -272,9 +272,9 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'A museum posts a panel reading: "We have placed these three objects together because we think each treats mourning as a public act; scholars of the middle object disagree, and their reasons are given below." The author would most likely regard this as:',
         options: [
-          'an improvement, because it names the claim being made and directs the visitor to the case against it',
+          'an improvement, because it names the claim and points to the case against it',
           'a failure, because it substitutes the curator’s judgment for the visitor’s own',
-          'acceptable only if the three objects also share a period and region',
+          'acceptable only if the three objects also belong to a single period and region',
           'unnecessary, because the arrangement of the objects already communicates the claim',
         ],
         correctAnswer: 0,
@@ -286,10 +286,10 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the phrase "instruction that has removed its signature" most nearly means:',
         options: [
-          'teaching that has been simplified for a non-specialist audience',
-          'an exhibition assembled without any single curator responsible for it',
-          'guidance that continues to shape the visitor while concealing that anyone is guiding',
-          'an argument that its author has formally withdrawn',
+          'teaching that has been simplified for the benefit of a non-specialist audience',
+          'an exhibition assembled without any single curator taking responsibility for it',
+          'guidance that still shapes the visitor while hiding that anyone is guiding',
+          'an argument whose author has formally withdrawn it from circulation',
         ],
         correctAnswer: 2,
         explanation:
@@ -311,24 +311,24 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The main point of the passage is that:',
         options: [
-          'critics misjudged both films by failing to ask whether each film produced the feeling it was credited with or merely collected feeling its audience already held',
+          'both verdicts failed to ask whether a film made the feeling it was credited with',
           'war films should avoid imperiled children, familiar songs, and letters from the dead',
           'small domestic dramas are inherently superior to films of great scale and ambition',
-          'audiences’ tears are an unreliable sign that a film possesses any value at all',
+          'audiences’ tears are an unreliable sign that a film possesses any artistic value',
         ],
         correctAnswer: 0,
         explanation:
-          'The author calls the twin verdicts "a single error seen from opposite sides" and names it "an error of accounting: we credit the borrowing film with power that was ours before the lights went down, and we debit the building film for lacking a fortune it never claimed to hold." The prohibition option contradicts his statement that "Nor is borrowing a crime" and that the borrowings "arguably serve remembrance." The superiority-of-domestic-drama option generalizes from one comparison the author never makes into a rule of genre. And the tears option overshoots: he says of his own tears, "I do not disown them" — the question is their source, not their sincerity.',
+          'The author calls the twin verdicts "a single error seen from opposite sides" and names it "an error of accounting: we credit the borrowing film with power that was ours before the lights went down, and we debit the building film for lacking a fortune it never claimed to hold." The unasked question is whether a film produced its feeling or merely collected what the audience already held. The prohibition option contradicts his statement that "Nor is borrowing a crime" and that the borrowings "arguably serve remembrance." The superiority-of-domestic-drama option generalizes from one comparison the author never makes into a rule of genre. And the tears option overshoots: he says of his own tears, "I do not disown them" — the question is their source, not their sincerity.',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The author’s remark that his tears "came on schedule" functions primarily to:',
         options: [
-          'confess that emotion clouded his judgment of the war film',
-          'establish that the war film was, after all, the better constructed of the two',
-          'grant the reality of the war film’s effect before questioning where that effect was assembled',
-          'mock the colleagues who wept at a film that left him unmoved',
+          'confess that emotion clouded the judgment he brought to the war film',
+          'establish that the war film was, after all, the better made of the two',
+          'grant that the war film’s effect was real before asking where it came from',
+          'mock the colleagues who wept at a film that had left him entirely unmoved',
         ],
         correctAnswer: 2,
         explanation:
@@ -339,8 +339,8 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'It can be inferred that the author considers the dissenters who called the war film "manipulative" to have been:',
         options: [
-          'motivated chiefly by envy of the film’s reception',
-          'closer to the truth than the consensus, though mistaken in the word they chose for it',
+          'motivated chiefly by resentment of the acclaim the war film received',
+          'closer to the truth than the consensus, though wrong in the word they chose',
           'wrong, because the war film created every feeling its audience experienced',
           'right that films which arrange their audience’s attention deserve condemnation',
         ],
@@ -353,10 +353,10 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s account of the difference between the two films?',
         options: [
-          'The war film’s director spent a decade researching the period it depicts.',
-          'The kitchen film earned a small fraction of the war film’s box-office receipts.',
+          'The war film’s director spent a decade researching the period before shooting a frame.',
+          'The kitchen film earned only a tiny fraction of the war film’s box-office receipts overall.',
           'Some viewers of the war film reported feeling nothing during its most celebrated sequences.',
-          'Audiences who see both films twice find the war film’s power increased by familiarity while the kitchen film’s last scene loses its force on a second viewing.',
+          'On a second viewing the war film’s power grows while the kitchen film’s ending thins.',
         ],
         correctAnswer: 3,
         explanation:
@@ -367,28 +367,28 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'A director opens her film with archival footage of a historical catastrophe, and preview audiences weep within minutes. The author would most likely say that the director has:',
         options: [
-          'collected feeling the audience carried into the theater, whatever the film may go on to build',
-          'committed an offense for which the film deserves condemnation',
-          'demonstrated exceptional skill at establishing feeling rapidly',
-          'guaranteed that the film will hold its power on repeated viewings',
+          'collected feeling the audience had already carried into the theater',
+          'committed the kind of offense for which a film deserves condemnation',
+          'demonstrated unusual skill at establishing strong feeling within minutes',
+          'ensured that the film will keep its power across repeated viewings',
         ],
         correctAnswer: 0,
         explanation:
-          'Archival catastrophe is grief already "loaded" in the audience, like the folk song and the letters: the tears arrive before the film has built anything, so on the author’s accounting they were located, "fully formed, in its audience." Condemnation contradicts the explicit ruling: "Nor is borrowing a crime." The rapid-establishment option repeats the crediting error the passage anatomizes — nothing was established; a deposit was found. And the repeat-viewing option gets the author’s own prediction backward: collected feeling is precisely what he expects to thin by the second visit.',
+          'Archival catastrophe is grief already "loaded" in the audience, like the folk song and the letters: the tears arrive before the film has built anything, so on the author’s accounting they were located, "fully formed, in its audience." Whatever the film goes on to construct, that opening charge was collected rather than made. Condemnation contradicts the explicit ruling: "Nor is borrowing a crime." The rapid-establishment option repeats the crediting error the passage anatomizes — nothing was established; a deposit was found. And the repeat-viewing option gets the author’s own prediction backward: collected feeling is precisely what he expects to thin by the second visit.',
         skill: 'application',
         needsReview: false,
       },
       {
         question: 'In context, the statement that every unit of the kitchen film’s feeling "was minted on the premises" most nearly means that:',
         options: [
-          'the film was produced inexpensively and confined to a single set',
-          'the film’s restraint kept its audience at an emotional distance',
-          'the feeling its last scene produces derives from what the film itself constructed rather than from anything the audience brought in',
-          'the film counterfeited an emotion it could not genuinely produce',
+          'the film was made inexpensively and confined almost entirely to a single set',
+          'the film’s restraint held its audience at a deliberate emotional distance',
+          'the feeling of its last scene was built by the film, not carried in by viewers',
+          'the film counterfeited an emotion it could not honestly produce on its own',
         ],
         correctAnswer: 2,
         explanation:
-          'The sentence concludes the paragraph contrasting the kitchen film with the borrower: it had "no such deposits to call on," so the last scene lands "because of ninety patient minutes of construction." Minting on the premises is making rather than collecting. The production-budget reading takes "premises" literally as real estate. The emotional-distance reading contradicts the screening-room silence that "had weight." And counterfeiting reverses the metaphor entirely — minting here is the legitimate manufacture of feeling, the opposite of passing off borrowed charges as one’s own.',
+          'The sentence concludes the paragraph contrasting the kitchen film with the borrower: it had "no such deposits to call on," so the last scene lands "because of ninety patient minutes of construction" rather than on anything the audience brought in. Minting on the premises is making rather than collecting. The production-budget reading takes "premises" literally as real estate. The emotional-distance reading contradicts the screening-room silence that "had weight." And counterfeiting reverses the metaphor entirely — minting here is the legitimate manufacture of feeling, the opposite of passing off borrowed charges as one’s own.',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -406,37 +406,37 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is that:',
         options: [
-          'contextual buildings should be prohibited in historic districts',
-          'architecture should be judged by the same standards of expression, integrity, and daring that critics apply to painting and music',
-          'conspicuous buildings serve their cities better than deferential ones, because boldness invites the public judgment that quiet buildings escape',
-          'because architecture is imposed on an audience that cannot decline it, deference in style is not the same as restraint in effect and may hide a decision from public argument',
+          'contextual buildings ought to be prohibited wherever they overshadow public space',
+          'architecture should be judged by the standards of expression and daring critics apply elsewhere',
+          'conspicuous buildings serve their cities better, since boldness invites the judgment quiet ones escape',
+          'deference in style is not restraint in effect, and architecture’s audience cannot decline it',
         ],
         correctAnswer: 3,
         explanation:
-          'The essay isolates the captive audience, then draws its central distinction "between humility of form and humility of effect," illustrated by the matching tower that "has made itself hard to argue with while doing something that could not have survived an argument." No prohibition is proposed. Judging architecture like the other arts is the borrowing the author criticizes. And he explicitly disowns the claim that conspicuous buildings are better: "it would be a bad point."',
+          'The essay isolates the captive audience, then draws its central distinction "between humility of form and humility of effect," illustrated by the matching tower that "has made itself hard to argue with while doing something that could not have survived an argument" — a decision hidden from public dispute by its own tact. No prohibition is proposed. Judging architecture like the other arts is the borrowing the author criticizes. And he explicitly disowns the claim that conspicuous buildings are better: "it would be a bad point."',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The passage suggests that the author would regard the phrase "a building in keeping with its neighbors" as:',
         options: [
-          'a description of appearance that says nothing about what the building does to those around it',
-          'the highest praise available to a work of architecture',
-          'a meaningless phrase, since no two buildings genuinely resemble one another',
-          'a reliable measure of an architect’s respect for the public',
+          'a claim about appearance that says nothing about the building’s effects',
+          'close to the highest praise a new urban building can now receive',
+          'a meaningless phrase, since no two buildings truly resemble one another',
+          'a dependable measure of an architect’s regard for the people nearby',
         ],
         correctAnswer: 0,
         explanation:
-          'The brick-clad tower is presented as being in keeping with its neighbors while taking "the afternoon sun off the only park," which is the author’s demonstration that style and effect come apart. Treating the phrase as highest praise is the confusion the essay exists to break. Calling it meaningless overshoots — the author accepts that such buildings really do match, only that matching is not restraint. Treating it as a measure of respect for the public reverses the argument.',
+          'The brick-clad tower is presented as being in keeping with its neighbors while taking "the afternoon sun off the only park," which is the author’s demonstration that style and effect come apart — the phrase describes appearance and is silent about what the building does to those around it. Treating the phrase as highest praise is the confusion the essay exists to break. Calling it meaningless overshoots — the author accepts that such buildings really do match, only that matching is not restraint. Treating it as a measure of respect for the public reverses the argument.',
         skill: 'inference',
         needsReview: false,
       },
       {
         question: 'The comparison of architecture with books, concerts, and paintings serves primarily to:',
         options: [
-          'establish that architecture is the most technically demanding of the arts',
-          'argue that buildings should not be evaluated in aesthetic terms at all',
-          'isolate the feature — an audience that cannot leave — that makes borrowed critical vocabulary misfit',
+          'establish that architecture is the most technically demanding of all the arts',
+          'argue that buildings should not be judged in aesthetic terms by critics at all',
+          'isolate the feature that makes the borrowed vocabulary misfit: a captive audience',
           'show that architects have historically envied the freedom of painters and composers',
         ],
         correctAnswer: 2,
@@ -448,10 +448,10 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following findings would most strengthen the author’s claim that deferential buildings escape public argument?',
         options: [
-          'Deferential buildings are typically more expensive to construct than conspicuous ones.',
-          'Planning records show that proposals matching the surrounding style attract far fewer public objections than proposals of equal size in a contrasting style.',
-          'Residents surveyed about contrasting new buildings describe them as ugly.',
-          'Architects who design contextual buildings often design conspicuous ones as well.',
+          'Deferential buildings are typically more expensive to construct than conspicuous ones of equal size.',
+          'Proposals that match the local style draw far fewer objections than equally large ones that do not.',
+          'Residents surveyed about new buildings in contrasting styles usually describe them as ugly.',
+          'Architects who design contextual buildings often design conspicuous ones elsewhere as well.',
         ],
         correctAnswer: 1,
         explanation:
@@ -462,14 +462,14 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'A developer proposes a large structure clad in brick to match the surrounding row houses; it will place the neighborhood’s only park in shadow for most of the afternoon. The author would most likely say that:',
         options: [
-          'the brick cladding is an adequate answer to the objections of neighbors',
-          'the structure’s appearance makes it a model of architectural humility',
+          'the brick cladding answers the objections the neighbors are likely to raise',
+          'the structure’s appearance makes it a model of humility in a dense district',
           'the proposal should be approved, since it respects the character of the area',
-          'its matching surface is not restraint, because the imposition lies in an effect the style conceals',
+          'the matching surface is not restraint, since the imposition lies in the shadow',
         ],
         correctAnswer: 3,
         explanation:
-          'This is the author’s own illustration in all but name: such a tower "is not a humble building" but one that "has made itself hard to argue with while doing something that could not have survived an argument." Treating the cladding as an answer to objections mistakes form for effect. Calling it a model of humility states the confusion the passage attacks. Approving it for respecting local character applies the style proxy the author calls poor.',
+          'This is the author’s own illustration in all but name: such a tower "is not a humble building" but one that "has made itself hard to argue with while doing something that could not have survived an argument." The style conceals the effect, which is where the imposition actually falls. Treating the cladding as an answer to objections mistakes form for effect. Calling it a model of humility states the confusion the passage attacks. Approving it for respecting local character applies the style proxy the author calls poor.',
         skill: 'application',
         needsReview: false,
       },
@@ -479,7 +479,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
           'wary, granting that the term has excused a good deal of genuine arrogance',
           'approving, since bold buildings invite the public judgment he favors',
           'neutral, since the author takes no position on questions of architectural style',
-          'contemptuous of the profession as a whole',
+          'contemptuous of the architectural profession taken as a whole',
         ],
         correctAnswer: 0,
         explanation:
@@ -501,24 +501,24 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'The central claim of the passage is that:',
         options: [
-          'documentary photographers should avoid making beautiful images of suffering',
-          'photographs of suffering raise no ethical difficulties worth taking seriously',
-          'the genuine wrong in documentary photography is that it fixes a person permanently in a single terrible moment, not that it renders that moment beautifully',
-          'captions are sufficient to restore the dignity that photographs of suffering take from their subjects',
+          'documentary photographers should stop making beautiful images of suffering',
+          'photographs of suffering raise no ethical difficulty serious enough to constrain anyone',
+          'the wrong in documentary photography is fixing a person permanently in a single terrible hour',
+          'captions are sufficient to restore the dignity that photographs of suffering take from subjects',
         ],
         correctAnswer: 2,
         explanation:
-          'The author states that "the wrong actually done to the subject is not aesthetic but temporal" and that this harm "is committed by the crude photograph and the exquisite one alike." Avoiding beauty is the position he rejects, calling beauty "frequently the only instrument available." Denying all ethical difficulty is too absolute, since he names a genuine harm. And he explicitly says a caption "cannot return her a tomorrow."',
+          'The author states that "the wrong actually done to the subject is not aesthetic but temporal" and that this harm "is committed by the crude photograph and the exquisite one alike," since the image goes on "presenting her as she was when the worst thing happened." Avoiding beauty is the position he rejects, calling beauty "frequently the only instrument available." Denying all ethical difficulty is too absolute, since he names a genuine harm. And he explicitly says a caption "cannot return her a tomorrow."',
         skill: 'main-idea',
         needsReview: false,
       },
       {
         question: 'The author’s attitude toward the charge that documentary photography aestheticizes suffering is best described as:',
         options: [
-          'wholehearted endorsement of the charge as usually stated',
-          'critical of the charge as stated while granting that it points at a real cost',
-          'dismissive of any ethical scrutiny of photographs of suffering',
-          'undecided, since the author declines to take a position of his own',
+          'wholehearted endorsement of the charge in the form it is usually given',
+          'critical of the charge as stated, though granting it a real cost',
+          'dismissive of ethical scrutiny of photographs of people who are suffering',
+          'undecided, since the author declines to settle on a position of his own',
         ],
         correctAnswer: 1,
         explanation:
@@ -545,8 +545,8 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         options: [
           'Beautiful photographs of suffering are reproduced far more often than plain ones.',
           'Some photographers arrange scenes of suffering deliberately for visual effect.',
-          'Viewers are able to recall beautiful images long after they have forgotten plain ones.',
-          'Subjects of such photographs report feeling most misrepresented by the images composed most beautifully.',
+          'Viewers recall beautiful images long after they have forgotten plain ones.',
+          'Subjects report feeling most misrepresented by the most beautifully composed images.',
         ],
         correctAnswer: 3,
         explanation:
@@ -559,7 +559,7 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
         options: [
           'a fresh violation, since it exposes the subject to public view a second time',
           'irrelevant to his argument, which concerns composition rather than publication',
-          'the appropriate remedy, because it restores to the subject the future the single image had withheld',
+          'the appropriate remedy, since it restores the future the single image withheld',
           'acceptable only if the second portrait is made in the same style as the first',
         ],
         correctAnswer: 2,
@@ -571,10 +571,10 @@ export const CARS_ARTS_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the statement that a caption "can return a subject her name, but it cannot return her a tomorrow" most nearly means that:',
         options: [
-          'photographs of suffering should be published without captions',
-          'identifying a subject does not undo the image’s fixing of her in a single moment',
+          'photographs of suffering are better published without captions at all',
+          'identifying a subject does not undo the image’s fixing of her in one moment',
           'captioning is the only ethical obligation a photographer has toward a subject',
-          'naming a subject does her more harm than leaving her anonymous',
+          'naming a subject does her more harm than leaving her anonymous would',
         ],
         correctAnswer: 1,
         explanation:

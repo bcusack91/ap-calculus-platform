@@ -26,10 +26,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best captures the central thesis of the passage?',
         options: [
-          'An author’s stated account of his own work should be treated as the authoritative guide to its meaning.',
-          'Because writers are often poor readers of themselves, questions of intention should be excluded from criticism.',
-          'Anti-intentionalists were right that the author’s testimony carries no special authority but wrong to conclude that intention is irrelevant, since interpretation is itself the attribution of purpose.',
-          'The critical vocabulary of strategy and logic should be abandoned as an unscientific residue of biographical criticism.',
+          'An author’s account of his own work should be treated as the authoritative guide to its meaning.',
+          'Because writers are poor readers of themselves, questions of intention should be excluded from criticism.',
+          'The author’s testimony carries no special authority, but interpretation still attributes purpose.',
+          'The critical vocabulary of strategy and logic should be dropped as a residue of biographical criticism.',
         ],
         correctAnswer: 2,
         explanation:
@@ -40,10 +40,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The second paragraph of the passage functions primarily to:',
         options: [
-          'state the opposing case at its strongest before limiting the conclusion that can be drawn from it',
-          'concede that an author’s testimony does in fact settle most disputes about a work’s meaning',
-          'establish that most novelists are careless and unreliable writers',
-          'introduce biographical criticism as the method the author will go on to recommend',
+          'state the opposing case at full strength before limiting what follows from it',
+          'concede that an author’s testimony settles most disputes about a work’s meaning',
+          'establish that most novelists are careless and unreliable readers of themselves',
+          'introduce the biographical criticism that the author goes on to recommend',
         ],
         correctAnswer: 0,
         explanation:
@@ -55,23 +55,23 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         question: 'In context, the author’s statement that a text without the assumption of purpose "becomes weather" most nearly means that the text:',
         options: [
           'takes on a meaning that shifts unpredictably from one reader to the next',
-          'should be interpreted in light of the historical climate that produced it',
-          'is a natural rather than a human product and is therefore beautiful',
-          'becomes a pattern to which the question "why is this here?" no longer applies',
+          'must be interpreted in light of the historical climate that produced it',
+          'is a natural rather than a human product, and is beautiful for that reason',
+          'becomes a pattern about which the question of purpose no longer arises',
         ],
         correctAnswer: 3,
         explanation:
-          'The sentence caps a paragraph built on the reader’s question "why is it there," and the contrast drawn is between a mind at work and something that merely occurs. Weather is the standing example of a pattern nobody asks the purpose of. The shifting-meaning option describes reader relativism, a different claim the paragraph does not make. The historical-climate reading takes the figure literally as a metaphor for period context. The beauty-of-nature reading also literalizes the image and, worse, treats as praise a consequence the author presents as a loss.',
+          'The sentence caps a paragraph built on the reader’s question "why it is there," and the contrast drawn is between a mind at work and something that merely occurs. Weather is the standing example of a pattern nobody asks the purpose of. The shifting-meaning option describes reader relativism, a different claim the paragraph does not make. The historical-climate reading takes the figure literally as a metaphor for period context. The beauty-of-nature reading also literalizes the image and, worse, treats as praise a consequence the author presents as a loss.',
         skill: 'meaning-in-context',
         needsReview: false,
       },
       {
         question: 'Which of the following findings, if true, would most WEAKEN the author’s claim that reading necessarily involves attributing purpose?',
         options: [
-          'A novelist’s published account of her aims is shown to contradict the finished novel.',
-          'Skilled readers told that a text had been produced by a random process nonetheless generated detailed and mutually consistent interpretations of it.',
+          'A novelist’s published account of her aims is shown to contradict her finished novel.',
+          'Readers told a text came from a random process still interpret it richly and alike.',
           'Editors routinely correct printers’ errors without consulting the surviving author.',
-          'Critics who reject intentionalism frequently describe what a text is "doing" to its reader.',
+          'Critics who reject intentionalism frequently describe what a text is doing to its reader.',
         ],
         correctAnswer: 1,
         explanation:
@@ -82,10 +82,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'An editor discovers that a celebrated line, long admired for its strangeness, entered the text as a compositor’s error. The author of the passage would most likely conclude that:',
         options: [
-          'the line should be corrected, because deciding between error and effect is itself an appeal to what the words were for',
-          'the line should be preserved, because the reader’s experience of strangeness is the only fact that bears on meaning',
-          'the question cannot be settled, because an author’s private wishes are finally unknowable',
-          'the discovery is beside the point, because a work’s meaning is fixed by its earliest printed form',
+          'the line should be corrected, since choosing between error and effect appeals to purpose',
+          'the line should be kept, since the reader’s experience of strangeness is the only fact',
+          'the question cannot be settled, since an author’s private wishes are finally unknowable',
+          'the discovery is beside the point, since meaning is fixed by the earliest printed form',
         ],
         correctAnswer: 0,
         explanation:
@@ -96,10 +96,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage suggests that the author regards a critic’s phrase such as "the novel’s logic" as:',
         options: [
-          'a metaphor so loose that careful critics ought to avoid it',
+          'a metaphor loose enough that careful critics would do better to avoid it',
           'proof that criticism can describe a text without any reference to purpose',
           'a claim about the novelist’s biography disguised as a claim about the book',
-          'an indispensable attribution of design, and therefore a covert appeal to intention',
+          'an indispensable attribution of design, and so a covert appeal to intention',
         ],
         correctAnswer: 3,
         explanation:
@@ -121,10 +121,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The central argument of the passage is best summarized as:',
         options: [
-          'Free verse is an inferior art that should give way to a revival of traditional meter.',
-          'Form is not a container but a public system of expectation against which departures become meaningful, which is why free verse must generate its own.',
-          'Metrical conventions are justified by their descent from a long and distinguished European tradition.',
-          'Because meters are historically arbitrary, no formal choice in poetry can be evaluated as better or worse.',
+          'Free verse is an inferior art that ought to give way to a revival of traditional meter.',
+          'Form is a public expectation that makes departures legible, which free verse must supply.',
+          'Metrical conventions are justified by their descent from a distinguished European tradition.',
+          'Because meters are historically arbitrary, no formal choice can be judged better or worse.',
         ],
         correctAnswer: 1,
         explanation:
@@ -135,10 +135,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the author’s description of unsuccessful free-verse poems as "unaccountable" most nearly means that such poems:',
         options: [
-          'cannot be understood by readers who lack training in prosody',
-          'make demands on the reader that no poem has a right to make',
+          'cannot be understood by readers who lack any training in prosody',
+          'make demands on a reader that no poem has the right to make of him',
           'are morally irresponsible in their treatment of inherited tradition',
-          'offer no established expectation against which their choices could be recognized as choices',
+          'set up no expectation by which their choices could be read as choices',
         ],
         correctAnswer: 3,
         explanation:
@@ -149,10 +149,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s discussion of a line that ends on a verb serves primarily to:',
         options: [
-          'demonstrate that a formal feature can carry meaning that paraphrase cannot preserve',
-          'show that free verse handles syntax more skillfully than metrical verse does',
+          'show that a formal feature can carry meaning no paraphrase preserves',
+          'show that free verse handles syntax more skillfully than meter does',
           'argue that verbs are the most consequential words in a poetic line',
-          'trace the historical origins of the English poetic line',
+          'trace the historical origins of the English five-foot poetic line',
         ],
         correctAnswer: 0,
         explanation:
@@ -163,10 +163,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s account of why a metrical substitution registers as "an event"?',
         options: [
-          'Poets working in meter revise their lines more frequently than free-verse poets do.',
+          'Poets working in meter revise their lines far more frequently than free-verse poets do.',
           'Surveyed readers report enjoying metrical poetry more than they enjoy free verse.',
-          'Readers unfamiliar with a poem’s meter fail to notice the very substitutions that experienced readers describe as its most striking moments.',
-          'Metrical conventions in English can be traced to Italian and French models.',
+          'Readers who cannot hear a poem’s meter miss the substitutions experts find striking.',
+          'The metrical conventions of English can be traced to Italian and French models.',
         ],
         correctAnswer: 2,
         explanation:
@@ -177,10 +177,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A composer states a rhythmic pattern for two minutes and then disrupts it. Based on the passage, the author would most likely say that the disruption:',
         options: [
-          'is arbitrary, since musical conventions carry no more necessity than poetic ones',
-          'cannot be assessed, because the pattern was invented rather than inherited',
+          'is arbitrary, since musical conventions carry no more necessity than poetic ones do',
+          'cannot be assessed at all, because the pattern was invented rather than inherited',
           'would have been more effective had the composer used an inherited pattern instead',
-          'can be felt as a disruption precisely because the piece first made its pattern public',
+          'can be felt as a disruption because the piece first made its pattern public',
         ],
         correctAnswer: 3,
         explanation:
@@ -191,10 +191,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward free verse is best described as:',
         options: [
-          'dismissive of it as an evasion of genuine craft',
-          'respectful of its difficulty while critical of the claim that it dispenses with form',
+          'dismissive of it as an evasion of the demands of genuine craft',
+          'respectful of its difficulty, critical of its claim to formlessness',
           'enthusiastic about its liberation of the poet from inherited rules',
-          'indifferent, since the quarrel between verse traditions has outlived its usefulness',
+          'indifferent, since the quarrel between the traditions is exhausted',
         ],
         correctAnswer: 1,
         explanation:
@@ -216,10 +216,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best states the passage’s main claim?',
         options: [
-          'Unreliability is a relation requiring a standard supplied by the text, and its most significant form is a failure of understanding rather than of fact.',
-          'Narrators who contradict the events they describe represent the highest achievement of novelistic technique.',
+          'Unreliability is a relation needing a textual standard, and its deepest form is misunderstanding.',
+          'Narrators who contradict the events they describe represent the technique’s highest achievement.',
           'Readers should approach every first-person narrator with suspicion, since all narration distorts.',
-          'Because the reader’s counter-story is supplied by the author, the technique of unreliable narration is essentially fraudulent.',
+          'Because the reader’s counter-story comes from the author, the technique is essentially fraudulent.',
         ],
         correctAnswer: 0,
         explanation:
@@ -231,8 +231,8 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         question: 'In describing certain narrators as giving "the modest pleasure of being right," the author means that such narration:',
         options: [
           'rewards readers who bring specialized historical knowledge to the text',
-          'produces the moral satisfaction of watching dishonesty exposed and punished',
-          'offers only the small satisfaction of solving a puzzle the text has already solved',
+          'produces the moral satisfaction of seeing dishonesty exposed and punished',
+          'offers only the small satisfaction of solving a puzzle the text has solved',
           'confirms that the reader’s first impression of the narrator was accurate',
         ],
         correctAnswer: 2,
@@ -245,9 +245,9 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         question: 'The paragraph beginning "An objection presents itself at once" functions primarily to:',
         options: [
           'abandon the distinction between failures of fact and failures of understanding',
-          'raise a challenge the author takes seriously and then uses to specify when a reader’s counter-story is warranted',
-          'concede that readers can never reliably distinguish a text’s irony from their own invention',
-          'summarize a rival theory of narration held by most contemporary critics',
+          'raise a real challenge and use it to specify when a counter-story is warranted',
+          'concede that readers can never distinguish a text’s irony from their own invention',
+          'summarize a rival theory of narration held by most contemporary critics of fiction',
         ],
         correctAnswer: 1,
         explanation:
@@ -258,10 +258,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s claim that the reader’s corrective standard is supplied by the text?',
         options: [
-          'Some novels built around this technique are widely regarded as artistic failures.',
-          'Critics disagree about which passages best reveal a given narrator’s blindness.',
-          'Novelists rarely describe their own narrators as unreliable when interviewed.',
-          'Readers given isolated paragraphs, stripped of surrounding scenes and of other characters’ behavior, identify the same narrators as blind, and at the same rates, as readers given the whole novel.',
+          'Some of the novels built around this technique are widely regarded as artistic failures today.',
+          'Critics disagree sharply about which passages best reveal a given narrator’s blindness.',
+          'Novelists interviewed about their work rarely call their own narrators unreliable.',
+          'Readers given paragraphs stripped of surrounding scenes still find the same narrators blind.',
         ],
         correctAnswer: 3,
         explanation:
@@ -272,9 +272,9 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A reader argues that a memoirist who reports her family’s history accurately has nonetheless "entirely missed" what her own account reveals. The author of the passage would most likely say this claim is legitimate only if:',
         options: [
-          'the memoirist’s factual record can be shown to contain errors',
-          'the reader can cite the memoirist’s own statements about her purposes',
-          'the memoir’s arrangement and emphases themselves supply the standard by which the omission is recognized',
+          'the memoirist’s factual record can be shown to contain demonstrable errors',
+          'the reader can cite the memoirist’s own statements about her purposes in writing',
+          'the memoir’s own arrangement and emphases supply the standard of the omission',
           'other family members have published competing accounts of the same events',
         ],
         correctAnswer: 2,
@@ -286,10 +286,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The passage implies that a reader who feels he has "seen through" a narrator has:',
         options: [
-          'responded to an effect the novel was constructed to produce',
-          'demonstrated an interpretive acuity that most readers do not possess',
+          'responded to an effect the novel was constructed to produce in him',
+          'shown an interpretive acuity that most other readers do not possess',
           'confused a failure of fact with a failure of understanding',
-          'been misled, since a narrator should be granted final authority over his own story',
+          'been misled, since a narrator has final authority over his own story',
         ],
         correctAnswer: 0,
         explanation:
@@ -311,10 +311,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The central thesis of the passage is that:',
         options: [
-          'realist novels have been shown to increase readers’ sympathy, which justifies their place in education',
+          'realist novels have been shown to increase readers’ sympathy, which justifies teaching them',
           'because reading has no measurable effect on conduct, the realist novel has no defensible value',
           'the realist novel’s techniques are less sophisticated than those of epic, tragedy, and romance',
-          'the realist novel should be defended not as a source of moral improvement but as a technical achievement that made ordinary inner life narratable',
+          'realism is defensible not as moral improvement but as a technical enlargement of the sayable',
         ],
         correctAnswer: 3,
         explanation:
@@ -325,9 +325,9 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the laboratory support mentioned in the first paragraph is best described as:',
         options: [
-          'enthusiastic endorsement',
+          'enthusiastic endorsement of a promising line of evidence',
           'dismissive, treating it as weak evidence cited uncritically',
-          'cautiously neutral, pending further replication',
+          'cautiously neutral, pending replication of the findings',
           'outraged at what he takes to be deliberate scientific fraud',
         ],
         correctAnswer: 1,
@@ -339,10 +339,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s claim that the interior life of an unremarkable person was "unnarratable" before the realist novel most nearly means that:',
         options: [
-          'writers were prohibited by custom and censorship from depicting common people',
-          'readers of earlier literature were incapable of sympathy with strangers',
-          'the available literary forms lacked the techniques for treating such a life as significant',
-          'ordinary people had not yet developed complex inner lives to be described',
+          'writers were prohibited by custom and by censorship from depicting common people',
+          'readers of earlier literature were incapable of sympathy with ordinary strangers',
+          'the available forms had no technique for treating such a life as significant',
+          'ordinary people had not yet developed inner lives complex enough to describe',
         ],
         correctAnswer: 2,
         explanation:
@@ -353,24 +353,24 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most WEAKEN the author’s case against the sympathy defense?',
         options: [
-          'Across many societies and periods, the spread of realist fiction is followed by measurable declines in tolerance for public cruelty, even after controlling for wealth and literacy.',
+          'The spread of realist fiction is followed by lasting declines in tolerance for cruelty.',
           'Contemporary readers report being deeply moved by novels about people unlike themselves.',
-          'Several celebrated realist novelists behaved cruelly toward their own families.',
-          'Techniques resembling free indirect style appear in works written well before the realist novel.',
+          'Several of the celebrated realist novelists behaved cruelly toward their own families.',
+          'Techniques resembling free indirect style appear in works written before the realist novel.',
         ],
         correctAnswer: 0,
         explanation:
-          'The author’s objection rests on the historical record: the reading classes were not the merciful ones, so "we should have noticed the output by now." A cross-cultural pattern surviving obvious controls is precisely the output he says is missing. Readers reporting that they were moved concerns feeling rather than conduct, which the passage treats as the thing to be shown. Cruel novelists reinforce rather than undermine the author’s point. The last option challenges a historical claim about technique, not the argument about sympathy.',
+          'The author’s objection rests on the historical record: the reading classes were not the merciful ones, so "we should have noticed the output by now." A durable decline in cruelty that tracks the spread of realist fiction is precisely the output he says is missing. Readers reporting that they were moved concerns feeling rather than conduct, which the passage treats as the thing to be shown. Cruel novelists reinforce rather than undermine the author’s point. The last option challenges a historical claim about technique, not the argument about sympathy.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
       {
         question: 'A film critic praises a new documentary form on the ground that it lets audiences attend to lives that earlier forms could not represent, while admitting there is no evidence it changes anyone’s behavior. The author of the passage would most likely regard this argument as:',
         options: [
-          'mistaken, since a form’s worth depends on effects that can be measured',
+          'mistaken, since a form’s worth depends on effects that can actually be measured',
           'sound, since enlarging what can be represented is a good of a distinct kind',
-          'premature, since claims about audience sympathy must be tested before a form can be judged',
-          'irrelevant to criticism, which should confine itself to matters of style',
+          'premature, since claims about audience sympathy must be tested before judging',
+          'irrelevant to criticism, which should confine itself to matters of style alone',
         ],
         correctAnswer: 1,
         explanation:
@@ -382,8 +382,8 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         question: 'The final paragraph’s concession that "a capacity nobody uses well is worth very little" serves primarily to:',
         options: [
           'retract the author’s central claim in the face of a strong objection',
-          'supply criteria for distinguishing accomplished novels from inferior ones',
-          'show that even the objection presupposes the existence of the capacity the author has been defending',
+          'supply criteria for telling accomplished novels from inferior ones',
+          'show that the objection presupposes the capacity being defended',
           'return the discussion to the question of readers’ moral improvement',
         ],
         correctAnswer: 2,
@@ -406,10 +406,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following best expresses the passage’s central argument?',
         options: [
-          'The finest genre novels deserve recognition because their prose rivals that of literary fiction.',
+          'The finest genre novels deserve recognition because their prose rivals literary fiction.',
           'Because formula governs genre fiction, distinctions of quality within it cannot be drawn.',
-          'Genre fiction should be judged under its own contract, in which a known shape makes small deviations legible, rather than admitted to literary standards.',
-          'Literary criticism should abandon its concern with originality, the sentence, and the singular voice.',
+          'Genre should be judged under its own contract, where a known shape makes deviations legible.',
+          'Literary criticism should abandon its concern with originality, sentences, and singular voice.',
         ],
         correctAnswer: 2,
         explanation:
@@ -420,10 +420,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s example of the solitary detective accepting a dinner invitation functions primarily to:',
         options: [
-          'illustrate how an expected shape lets a small deviation carry unusual weight',
-          'suggest that genre novels are best read as psychological case studies',
+          'illustrate how a known shape lets a small deviation carry great weight',
+          'suggest that the best genre novels are really psychological case studies',
           'argue that long series are artistically superior to standalone novels',
-          'demonstrate that plot summaries are an unreliable basis for criticism',
+          'demonstrate that plot summary is an unreliable basis for any criticism',
         ],
         correctAnswer: 0,
         explanation:
@@ -434,10 +434,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'In context, the author’s remark that a plea for admission "concedes the court’s jurisdiction" most nearly means that such defenses:',
         options: [
-          'improperly rely on legal analogies to settle questions of aesthetic value',
-          'acknowledge that popular novels have often been unjustly censored',
+          'rely improperly on legal analogies to settle questions of aesthetic value',
+          'acknowledge that popular novels have often been unjustly censored in the past',
           'assume that genre writers should be evaluated only by other genre writers',
-          'accept in advance that literary standards are the ones by which genre must be judged',
+          'accept in advance the literary standards by which genre is then judged',
         ],
         correctAnswer: 3,
         explanation:
@@ -448,10 +448,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'Which of the following, if true, would most STRENGTHEN the author’s claim that genre readers judge at a finer resolution?',
         options: [
-          'Genre novels outsell literary novels by a wide margin in most markets.',
-          'Experienced readers of a genre agree closely in ranking works that first-time readers of the same works rank essentially at random.',
-          'Many literary novelists have written detective fiction under pseudonyms.',
-          'The conventions of most popular genres have changed substantially over the past century.',
+          'Genre novels outsell literary novels by a wide margin in most national markets.',
+          'Veteran readers of a genre rank its works alike where newcomers rank them at random.',
+          'Many literary novelists have written detective fiction under assumed pseudonyms.',
+          'The conventions of most popular genres have changed substantially over a century.',
         ],
         correctAnswer: 1,
         explanation:
@@ -462,10 +462,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A critic praises a country song for "rising above the clichés of the form." Based on the passage, the author would most likely respond that the praise:',
         options: [
-          'is appropriate, since clichés are a defect in any art form',
-          'should be extended to the genre as a whole rather than to a single song',
-          'condescends, because it credits the song for abandoning the system that makes its effects legible',
-          'is accurate but incomplete, since the song’s lyrics must also be judged as poetry',
+          'is appropriate, since clichés are a defect in any art form whatever',
+          'should be extended to the genre as a whole rather than to one song',
+          'condescends, crediting the song for leaving its own system behind',
+          'is accurate but incomplete, since the lyrics must be judged as poetry',
         ],
         correctAnswer: 2,
         explanation:
@@ -476,9 +476,9 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s attitude toward the defenders of popular fiction described in the first paragraph is best characterized as:',
         options: [
-          'sympathetic to their aim but critical of the strategy they have adopted',
-          'contemptuous of their taste in fiction',
-          'persuaded by their comparisons between genre novels and literary ones',
+          'sympathetic to their aim but critical of the strategy they adopted',
+          'contemptuous of the taste in fiction that their examples display',
+          'persuaded by their comparisons between genre and literary novels',
           'indifferent, since questions of literary status do not interest him',
         ],
         correctAnswer: 0,
@@ -501,10 +501,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The main idea of the passage is best stated as:',
         options: [
-          'The canon is an honor roll whose contents should be defended against revision.',
-          'Because a canon is a coordinating device built by accumulated attention, neither confident defense of it nor rapid revision of it is warranted.',
-          'Any list of books would serve equally well, since the canon is purely a matter of convention.',
-          'Canonical works have been shown to possess literary qualities that excluded works lack.',
+          'The canon is an honor roll whose contents must be defended against every revision.',
+          'A canon is accumulated, so neither confident defense nor quick revision is warranted.',
+          'Any list of books would serve equally well, since a canon is purely a matter of convention.',
+          'Canonical works have been shown to possess the literary qualities that excluded works lack.',
         ],
         correctAnswer: 1,
         explanation:
@@ -515,10 +515,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The author’s comparison of the canon to "a language" most nearly conveys that a canon is:',
         options: [
-          'a system of rules that determines how books must be interpreted',
-          'a national possession that expresses the distinctive character of a people',
-          'a barrier that excludes readers without formal education',
-          'valuable chiefly because it is held in common, without therefore being arbitrary',
+          'a system of rules determining how the books on it must be interpreted',
+          'a national possession expressing the distinctive character of a people',
+          'a barrier that excludes readers without a formal literary education',
+          'valuable because it is held in common, though not therefore arbitrary',
         ],
         correctAnswer: 3,
         explanation:
@@ -529,10 +529,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'The third paragraph, beginning "The traditionalist will reply," primarily serves to:',
         options: [
-          'answer an objection by showing that coordination selects for real properties of works',
-          'concede that the canon is finally arbitrary after all',
-          'present the reformer’s strongest argument in its sharpest form',
-          'name the particular works the author would include in a canon',
+          'answer an objection by showing that coordination selects for real properties',
+          'concede that the canon is, in the end, an arbitrary inheritance after all',
+          'present the reformer’s strongest argument in its sharpest available form',
+          'name the particular works the author would himself include in a canon',
         ],
         correctAnswer: 0,
         explanation:
@@ -545,8 +545,8 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         options: [
           'Surveyed readers report finding canonical works more difficult than non-canonical ones.',
           'Several works now regarded as canonical were neglected for decades after publication.',
-          'Works added to widely used syllabi accumulate scholarly commentary at rates far above comparable works left off, and are subsequently rated as more important by critics.',
-          'Committees that revise reading lists usually include specialists in previously excluded literatures.',
+          'Works added to syllabi gather commentary, and are later rated more important by critics.',
+          'Committees revising reading lists usually include specialists in excluded literatures.',
         ],
         correctAnswer: 2,
         explanation:
@@ -557,10 +557,10 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
       {
         question: 'A university announces that it has "fixed" a longstanding imbalance by adding twelve previously excluded novels to its required reading list. The author would most likely respond that:',
         options: [
-          'the addition is an act of vandalism against an inherited tradition',
-          'the addition is unnecessary, since coordination is indifferent to what it coordinates on',
+          'the addition is an act of vandalism against an inherited scholarly tradition',
+          'the addition is unnecessary, since coordination is indifferent to its objects',
           'the novels should first be shown to equal canonical works in literary merit',
-          'the addition is a beginning rather than a fix, since centrality is built by generations of argument rather than conferred by a list',
+          'the addition is a beginning, since centrality is built rather than conferred',
         ],
         correctAnswer: 3,
         explanation:
@@ -572,9 +572,9 @@ export const CARS_LITERATURE_PASSAGES: MCATPassage[] = [
         question: 'The passage suggests that the author regards the dispute between traditionalists and reformers as:',
         options: [
           'a genuine disagreement about merit that further evidence could eventually settle',
-          'misconceived from the start, because both sides treat the canon as a register of desert',
+          'misconceived, since both sides treat the canon as a register of desert',
           'less important than the practical question of what students enjoy reading',
-          'essentially settled in the reformer’s favor',
+          'essentially settled in the reformer’s favor by the argument about attention',
         ],
         correctAnswer: 1,
         explanation:
