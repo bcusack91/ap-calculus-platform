@@ -76,31 +76,31 @@ Cost-benefit machinery at the household level: **rational choice/exchange** logi
         questions: [
           {
             question: `A country's population pyramid shows a very wide base and a narrow top. Even if fertility instantly dropped to replacement level, the population would keep growing for decades because:`,
-            options: [`Mortality always falls faster than fertility`, `Population momentum — the unusually large young cohorts have not yet reached childbearing age, so total births stay high even at replacement-level fertility per woman`, `Net migration is always positive in young countries`, `The dependency ratio rises as populations age`],
+            options: [`Mortality always falls faster than fertility`, `Its large young cohorts carry population momentum`, `Net migration is always positive in young countries`, `A high dependency ratio forces families to have more children`],
             correctAnswer: 1,
-            explanation: `A wide-based pyramid means the largest cohorts are still children; as they enter reproductive years, the sheer NUMBER of childbearing adults keeps aggregate births above deaths even when each woman has only replacement-level children. This is population momentum. The other options describe real demographic phenomena, but none explains continued growth under instant replacement fertility.`
+            explanation: `A wide-based pyramid means the largest cohorts are still children; as they enter reproductive years, the sheer NUMBER of childbearing adults keeps aggregate births above deaths even when each woman has only replacement-level children. This is population momentum. Mortality does not always fall faster than fertility, migration is not always positive, and a dependency ratio pushing families to have more children contradicts the stipulated replacement fertility; none explains continued growth under instant replacement fertility.`
           },
           {
             question: `Neighborhoods with more fast-food restaurants have higher average rates of diabetes. A commentator concludes that any individual who eats fast food will probably develop diabetes. The commentator's error is:`,
-            options: [`The ecological fallacy — inferring individual-level risk from a group-level correlation`, `Confusing a cohort effect with an age effect`, `Assuming the study was longitudinal when it was cross-sectional`, `Treating relative poverty as absolute poverty`],
+            options: [`The ecological fallacy, from group to individual`, `Confusing a cohort effect with an age effect`, `Treating cross-sectional data as longitudinal`, `Treating relative poverty as absolute poverty`],
             correctAnswer: 0,
             explanation: `The data live at the neighborhood level; the conclusion is about individuals. Group-level correlations cannot be transferred to members — the diabetic residents need not even be the fast-food eaters, and neighborhood-level confounders (income, walkability, clinic access) could generate the pattern entirely. That level-jump is the ecological fallacy, regardless of the study's timing or design.`
           },
           {
             question: `Between 1955 and 1980, Country Q's death rate fell from 25 to 8 per 1,000 while its birth rate stayed near 40 per 1,000. According to the demographic transition model, Country Q in 1980 was:`,
-            options: [`In stage 4, with an aging, stable population`, `In stage 1, since birth rates remained high`, `In stage 2, experiencing rapid population growth because mortality declined long before fertility`, `In stage 3, since mortality was low`],
+            options: [`In stage 4, with an aging, stable population`, `In stage 1, since birth rates remained high`, `In stage 2, with rapid population growth`, `In stage 3, since mortality was low`],
             correctAnswer: 2,
             explanation: `High and unchanged births combined with sharply fallen deaths is the stage-2 signature, and the wide birth-death gap means maximal growth. Stage 1 requires HIGH death rates too; stage 3 requires births to be visibly falling; stage 4 requires both rates low. The model's core sequence — mortality falls first, fertility follows after a lag — is exactly what the numbers show mid-lag.`
           },
           {
             question: `Researchers find that 70-year-olds score lower than 30-year-olds on internet-skills tests in a single 2024 survey and conclude that aging erodes internet skills. The most important rival explanation is:`,
-            options: [`Reverse causation — internet skill loss causes aging`, `The feminization of poverty`, `Random error, because the sample was large`, `A cohort effect — today's 70-year-olds grew up without the internet, so the cross-sectional gap may reflect generational experience, not aging`],
+            options: [`Reverse causation, from skill loss to aging`, `A period effect specific to the 2024 survey`, `Random error, because the sample was large`, `A cohort effect of generational experience`],
             correctAnswer: 3,
-            explanation: `A single-time-point comparison of different ages cannot separate growing old (age effect) from having been born into a particular era (cohort effect); the 70-year-olds' lower scores plausibly reflect learning history, not decline. A longitudinal design following the same people would distinguish the two. Reverse causation is absurd here, and large samples reduce random error while doing nothing about systematic confounding.`
+            explanation: `A single-time-point comparison of different ages cannot separate growing old (age effect) from having been born into a particular era (cohort effect); the 70-year-olds' lower scores plausibly reflect learning history, not decline. A longitudinal design following the same people would distinguish the two. A period effect would shift every age group alike in 2024 and cannot create an age gap within one survey, reverse causation is absurd here, and large samples reduce random error while doing nothing about systematic confounding.`
           },
           {
             question: `A historically low-income urban district gains art galleries and rising rents; long-term residents relocate outward as higher-income professionals move in. The process described is:`,
-            options: [`Suburbanization`, `Gentrification, with displacement of lower-income residents as neighborhood class composition shifts upward`, `White flight`, `The demographic transition`],
+            options: [`Suburbanization of the middle class`, `Gentrification with displacement`, `White flight from the city core`, `The demographic transition`],
             correctAnswer: 1,
             explanation: `Gentrification is the reversal of a neighborhood's class composition through in-migration of higher-income residents and rising property costs, displacing established lower-income communities. Suburbanization and white flight describe the OUTWARD movement of affluent (historically white) residents from city cores — the opposite flow — and the demographic transition concerns national birth and death rates, not neighborhoods.`
           }

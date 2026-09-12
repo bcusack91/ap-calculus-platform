@@ -69,15 +69,15 @@ export const mcatPsychLearnMemPart2Data = {
         questions: [
           {
             question: `A driver starts buckling the seatbelt immediately upon entering the car because doing so silences an unpleasant chime. Buckling has increased because it:`,
-            options: [`Is positively reinforced by the chime`, `Is positively punished`, `Is negatively punished by losing the chime`, `Removes an aversive stimulus — negative reinforcement`],
+            options: [`Is positively reinforced by the chime`, `Is positively punished by the chime's sound`, `Is negatively punished by losing the chime`, `Is negatively reinforced by chime removal`],
             correctAnswer: 3,
             explanation: `The behavior INCREASED, so the consequence is reinforcement; the mechanism is removal of an aversive stimulus (the chime), making it negative reinforcement — specifically escape learning that typically evolves into avoidance (buckling before the chime begins). Punishment is ruled out because the behavior strengthened.`
           },
           {
             question: `Slot-machine players continue gambling at high, steady rates through long losing streaks. The schedule responsible and the reason for its persistence are:`,
-            options: [`Variable ratio — payoffs depend on an unpredictable number of responses, producing the highest response rates and the greatest resistance to extinction`, `Fixed interval — payoffs come at set times, producing scalloped responding`, `Continuous reinforcement — every response pays off`, `Variable interval — payoffs depend on unpredictable elapsed time, producing slow steady responding`],
+            options: [`Variable ratio, which is most resistant to extinction`, `Fixed interval, which produces scalloped responding`, `Continuous reinforcement, since every play pays off`, `Variable interval, which produces slow steady responding`],
             correctAnswer: 0,
-            explanation: `Slot machines pay after an unpredictable NUMBER of plays — a variable-ratio schedule. Because reinforcement is response-count-based, faster play pays sooner, driving high rates; because the count is unpredictable, a losing streak is indistinguishable from normal variability, so extinction is extremely slow. VI schedules are time-based and produce slower responding.`
+            explanation: `Slot machines pay after an unpredictable NUMBER of plays — a variable-ratio schedule. Because reinforcement is response-count-based, faster play pays sooner, driving high rates; because the count is unpredictable, a losing streak is indistinguishable from normal variability, so extinction is extremely slow. VI schedules are time-based and produce slower responding, fixed-interval schedules produce scallops rather than steady play, and continuous reinforcement extinguishes fastest of all — nor does every play pay off.`
           },
           {
             question: `A cumulative-response record shows an animal nearly stopping after each reinforcement, then accelerating steadily as the next reinforcement becomes available, in a repeating scallop. This pattern identifies which schedule?`,
@@ -87,13 +87,13 @@ export const mcatPsychLearnMemPart2Data = {
           },
           {
             question: `Rats allowed to explore a maze for ten days without reward show no improvement, but the day food is introduced at the goal box, their performance immediately matches rats rewarded all along. Tolman argued this shows:`,
-            options: [`Shaping by successive approximations`, `Latent learning — a cognitive map was acquired without reinforcement, and reinforcement affected performance rather than learning`, `Instinctive drift toward foraging behavior`, `The partial reinforcement extinction effect`],
+            options: [`Shaping by successive approximations to the goal`, `Latent learning: a map formed without reward`, `Instinctive drift toward foraging behavior`, `The partial reinforcement extinction effect`],
             correctAnswer: 1,
             explanation: `The sudden, full-sized jump in performance proves the spatial knowledge existed BEFORE reward — learning had occurred latently, and reward merely motivated its expression. This dissociation of learning from performance was a landmark problem for strict reinforcement theory. No approximations were differentially reinforced, and no extinction phase is described.`
           },
           {
             question: `Trained raccoons initially deposit coins in a bank for food but increasingly rub the coins together and dip them, as if washing food, until the trick collapses. This deterioration is best described as:`,
-            options: [`Operant extinction from withdrawn reinforcement`, `Stimulus generalization`, `Vicarious punishment`, `Instinctive drift — species-typical fixed action patterns intruding on and overriding reinforced behavior`],
+            options: [`Extinction from withdrawn reinforcement`, `Stimulus generalization to coins`, `Vicarious punishment by other raccoons`, `Instinctive drift toward innate behavior`],
             correctAnswer: 3,
             explanation: `Reinforcement continued, yet behavior migrated toward the raccoon's innate food-washing pattern — the Brelands' instinctive drift, the classic demonstration that biological predispositions constrain operant training. Extinction requires reinforcement to stop, and no model or observer is involved.`
           }

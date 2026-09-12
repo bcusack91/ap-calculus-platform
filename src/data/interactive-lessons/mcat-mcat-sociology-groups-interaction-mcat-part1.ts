@@ -70,31 +70,31 @@ A **group** is people who interact and share identity. A crowd at a bus stop is 
         questions: [
           {
             question: `A medical student is expected by the same attending to ask questions freely AND to never slow down rounds. The tension she feels is best labeled:`,
-            options: [`Role conflict, because two expectations collide`, `Role exit, because she wants to leave rounds`, `Role strain — competing expectations built into a single status (medical student)`, `Status inconsistency`],
+            options: [`Role conflict, since the expectations come from two statuses`, `Role exit, since she is disengaging from the student role`, `Role strain, since both expectations come from one status`, `Status inconsistency, since her rank and duties do not match`],
             correctAnswer: 2,
-            explanation: `Both expectations attach to ONE status: medical student on rounds. Strain is intra-status tension; conflict requires expectations from two DIFFERENT statuses (e.g., student vs. parent). The presence of "two expectations" alone never settles the question — count the statuses issuing them, which is the discrimination the exam is testing.`
+            explanation: `Both expectations attach to ONE status: medical student on rounds. Strain is intra-status tension; conflict requires expectations from two DIFFERENT statuses (e.g., student vs. parent). The presence of "two expectations" alone never settles the question — count the statuses issuing them, which is the discrimination the exam is testing. Nothing indicates she is leaving the role (role exit), and status inconsistency concerns mismatched ranks across statuses, not clashing expectations within one.`
           },
           {
             question: `"Convicted felon" often overrides a person's other statuses in hiring, housing, and everyday interaction, despite being attained through the person's own actions. This status is best described as:`,
-            options: [`An achieved status functioning as a master status`, `An ascribed status functioning as a reference group`, `A role set`, `A primary group`],
+            options: [`An achieved status functioning as a master status`, `An ascribed status functioning as a reference group`, `A role set`, `A primary group shared with other felons`],
             correctAnswer: 0,
-            explanation: `Achieved means attained through action — including disvalued attainments like felon — while master status describes its FUNCTION: dominating others' perceptions and organizing the person's social existence. The pairing shows the two classifications are independent axes. A reference group is a comparison standard, and a role set is one status's bundle of role relationships.`
+            explanation: `Achieved means attained through action — including disvalued attainments like felon — while master status describes its FUNCTION: dominating others' perceptions and organizing the person's social existence. The pairing shows the two classifications are independent axes. A reference group is a comparison standard, a role set is one status's bundle of role relationships, and a primary group is a small intimate circle, not a classification of a status.`
           },
           {
             question: `Commuters waiting at the same bus stop every morning without interacting or sharing identity constitute a(n) ______, whereas all licensed pilots in a country — sharing a trait but never assembling — constitute a(n) ______.`,
             options: [`primary group; secondary group`, `category; aggregate`, `in-group; out-group`, `aggregate; category`],
             correctAnswer: 3,
-            explanation: `An aggregate is people physically together without interaction or shared identity (the bus stop); a category is people sharing an attribute without gathering at all (all pilots). Neither is a group — groups require interaction plus shared identity. Option B reverses the two terms, the standard trap.`
+            explanation: `An aggregate is people physically together without interaction or shared identity (the bus stop); a category is people sharing an attribute without gathering at all (all pilots). Neither is a group — groups require interaction plus shared identity. The reversed pairing (category; aggregate) is the standard trap.`
           },
           {
             question: `A hospital's second-year residents evaluate their own competence not against classmates or attendings, but against the idealized standards of a famous surgical program none of them attends. That program is functioning as their:`,
-            options: [`Primary group`, `Reference group — a comparison standard for self-evaluation that requires no membership`, `Out-group`, `Dyad`],
+            options: [`Secondary group`, `Reference group`, `Out-group`, `Formal organization`],
             correctAnswer: 1,
-            explanation: `Reference groups are the standards against which people measure themselves, and membership is not required — aspiration is enough. This is also why reference-group choice drives relative deprivation: the residents may feel inadequate despite objectively strong performance because the comparison bar is elite. An out-group would be defined by contrast and distancing, not emulation.`
+            explanation: `Reference groups are the standards against which people measure themselves, and membership is not required — aspiration is enough. This is also why reference-group choice drives relative deprivation: the residents may feel inadequate despite objectively strong performance because the comparison bar is elite. An out-group would be defined by contrast and distancing, not emulation, and a secondary group or formal organization requires actual membership, which the residents lack.`
           },
           {
             question: `Simmel argued that adding a third member to a dyad transforms the group more fundamentally than any subsequent addition because the triad is the first group in which:`,
-            options: [`Coalitions, mediation, and majority pressure become possible, and the group can survive one member's departure`, `Intimacy reaches its maximum`, `Formal bureaucratic rules become necessary`, `Social loafing disappears`],
+            options: [`Coalitions and mediation first become possible`, `Intimacy and mutual dependence reach their peak`, `Formal bureaucratic rules become necessary`, `Social loafing disappears as roles specialize`],
             correctAnswer: 0,
             explanation: `The dyad's defining fragility is that either member's exit ends it, and no alliance structure can exist between two people. The third member introduces two-against-one coalitions, a potential mediator role, and group survival beyond any individual — qualitative changes in kind. Intimacy is highest in the dyad and declines with size; bureaucracy and loafing belong to much larger scales.`
           }

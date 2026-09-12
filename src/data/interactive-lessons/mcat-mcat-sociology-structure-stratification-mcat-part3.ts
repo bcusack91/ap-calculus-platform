@@ -77,33 +77,33 @@ Inequality also ranks nations (high-, middle-, low-income). Note the level-of-an
         questions: [
           {
             question: `A first-generation college student is academically strong but does not know that professors expect office-hours visits, how to request recommendation letters, or which extracurriculars signal "leadership" to admissions committees. Bourdieu would say she lacks:`,
-            options: [`Economic capital`, `Structural mobility`, `Cultural capital — the institutional know-how and dispositions that signal belonging in advantaged settings`, `Achieved status`],
+            options: [`Human capital`, `Social capital`, `Cultural capital`, `Achieved status`],
             correctAnswer: 2,
-            explanation: `Cultural capital is precisely this unwritten institutional fluency — tastes, manners, and know-how transmitted in advantaged families that institutions silently reward. It is distinct from money (economic capital) and from network connections (social capital). Her academic strength shows achieved status is present; what is missing is the embodied knowledge that converts ability into institutional recognition.`
+            explanation: `Cultural capital is precisely this unwritten institutional fluency — tastes, manners, and know-how transmitted in advantaged families that institutions silently reward. It is distinct from skills and credentials (human capital), from money, and from network connections (social capital). Her academic strength shows achieved status is present; what is missing is the embodied knowledge that converts ability into institutional recognition.`
           },
           {
             question: `When a nation's agricultural sector mechanizes, millions of farm laborers' children end up in urban service jobs of lower relative standing — regardless of individual talent. This pattern exemplifies:`,
-            options: [`Structural mobility, because economy-wide change moved a whole stratum`, `Intragenerational mobility, because it occurred within single lifetimes`, `Horizontal mobility, because workers changed sectors`, `Meritocratic sorting, because talent determined outcomes`],
+            options: [`Structural mobility, because economic change moved a whole stratum`, `Intragenerational mobility, because it occurred within single lifetimes`, `Horizontal mobility, because workers changed sectors`, `Meritocratic sorting, because talent determined outcomes`],
             correctAnswer: 0,
             explanation: `The defining feature of structural mobility is that shifts in the occupational structure itself — not individual attributes — move entire groups up or down. The question explicitly severs outcomes from talent, ruling out meritocratic sorting. The movement described is downward in standing (not horizontal), and it compares parents' positions to children's, making it intergenerational.`
           },
           {
             question: `A family in a wealthy country has stable housing, sufficient food, and a television, yet cannot afford internet access, school trips, or transportation to most jobs, cutting them off from ordinary participation in their society. This situation is best described as:`,
-            options: [`Absolute poverty, because participation is a basic need`, `Relative poverty, because their deprivation is defined against their society's standard of living rather than against subsistence`, `Neither form of poverty, because subsistence needs are met`, `The feminization of poverty`],
+            options: [`Absolute poverty, because participation is a basic need`, `Relative poverty, judged against their society's norms`, `Neither form of poverty, because subsistence needs are met`, `The feminization of poverty among single parents`],
             correctAnswer: 1,
-            explanation: `Relative poverty is measured against the prevailing standards of one's own society: subsistence is covered, but full social participation is not — which is exactly the scenario. Absolute poverty requires deprivation below subsistence. Option C mistakenly assumes poverty has only the absolute definition, and nothing here concerns the gendered distribution of poverty.`
+            explanation: `Relative poverty is measured against the prevailing standards of one's own society: subsistence is covered, but full social participation is not — which is exactly the scenario. Absolute poverty requires deprivation below subsistence. Calling it neither form of poverty mistakenly assumes poverty has only the absolute definition, and nothing here concerns the gendered distribution of poverty.`
           },
           {
             question: `Weber's multidimensional view of stratification improves on a purely economic model MOST clearly in which case?`,
-            options: [`A CEO with high income, high prestige, and political influence`, `Two janitors with identical wages and identical prestige`, `A subsistence farmer with no income, no prestige, and no power`, `A state judge whose salary is modest but whose occupational prestige and legal power are very high`],
+            options: [`A CEO with high income, high prestige, and political power`, `Two janitors with identical wages and identical prestige`, `A subsistence farmer with no income, prestige, or power`, `A state judge with a modest salary but high prestige and power`],
             correctAnswer: 3,
             explanation: `Weber separated class (economic), status (prestige), and power precisely because they can DIVERGE; the judge — middling on the economic axis but high on prestige and power — is invisible to a one-axis economic model. The CEO and the farmer are consistent across all three dimensions, so a single economic axis would rank them just as well; identical janitors discriminate between nothing.`
           },
           {
             question: `Researchers find that children from poor families who attend well-funded schools still enter professional jobs at lower rates than wealthy classmates with identical grades, largely because hiring flows through informal referrals from family acquaintances. The capital gap doing the work in this finding is:`,
-            options: [`Social capital — access to resources through networks, here job referrals`, `Economic capital, because school funding was unequal`, `Cultural capital, because the students' grades differed`, `Human capital, because the poor students were less skilled`],
+            options: [`Social capital, because hiring flowed through referrals`, `Economic capital, because school funding was unequal`, `Cultural capital, because the students' grades differed`, `Human capital, because the poor students were less skilled`],
             correctAnswer: 0,
-            explanation: `The design holds schooling quality and grades constant — equalizing the usual economic and skill explanations — and the remaining mechanism is who can activate professional networks for referrals: social capital by definition. Options B and C contradict the stated controls (same schools, identical grades), and option D's skill claim is likewise ruled out by the grade-matching.`
+            explanation: `The design holds schooling quality and grades constant — equalizing the usual economic and skill explanations — and the remaining mechanism is who can activate professional networks for referrals: social capital by definition. The economic-capital and cultural-capital options rest on premises that contradict the stated controls (same schools, identical grades), and the human-capital skill claim is likewise ruled out by the grade-matching.`
           }
         ]
       }

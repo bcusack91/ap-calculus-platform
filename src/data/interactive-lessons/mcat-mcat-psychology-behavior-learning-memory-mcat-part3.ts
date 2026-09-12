@@ -67,33 +67,33 @@ export const mcatPsychLearnMemPart3Data = {
         questions: [
           {
             question: `A patient with bilateral hippocampal damage practices a mirror-tracing task daily. His error rate steadily improves across a week, yet each day he insists he has never seen the apparatus. This pattern demonstrates that:`,
-            options: [`Procedural (implicit) memory is preserved and anatomically separable from hippocampus-dependent explicit memory`, `His semantic memory is intact but episodic memory is not`, `He is experiencing retrieval failure that cueing would reverse`, `Motor learning requires the hippocampus`],
+            options: [`Procedural memory survives, separable from explicit memory`, `His semantic memory is intact but episodic memory is not`, `He has a retrieval failure that cueing would reverse`, `Motor learning depends on an intact hippocampus`],
             correctAnswer: 0,
             explanation: `Improving performance without any conscious recollection is the H.M. dissociation: implicit/procedural learning (basal ganglia, cerebellum) proceeds normally while the damaged hippocampus blocks formation of new explicit memories. The deficit is in STORAGE of new episodes, not retrieval — no cue restores what was never consolidated — and both semantic and episodic (explicit) learning are impaired.`
           },
           {
             question: `In a free-recall study, one group recalls a word list immediately; another counts backward for 30 seconds first. The delay group loses the advantage for the LAST few words but recalls early words as well as the immediate group. The best interpretation is that:`,
-            options: [`The delay disrupted consolidation of the whole list`, `Counting backward caused proactive interference with early words`, `Recency depends on working memory, which the distractor task flushed, while primacy reflects items already rehearsed into long-term memory`, `The delay group encoded the list less deeply`],
+            options: [`The delay disrupted consolidation of the whole list`, `Counting backward caused proactive interference with early words`, `Recency reflects working memory; primacy, long-term memory`, `The delay group encoded the list less deeply`],
             correctAnswer: 2,
             explanation: `Selective loss of recency with spared primacy is the two-store dissociation: final items lived only in working memory and were displaced by counting; early items had already been rehearsed into LTM. Whole-list consolidation failure or shallow encoding would depress ALL positions, and proactive interference would come from material learned BEFORE the list.`
           },
           {
             question: `Participants judge words by appearance, sound, or meaning for equal amounts of time, then take a surprise memory test. Meaning-judged words are remembered best. This result most directly supports the claim that:`,
-            options: [`Longer exposure produces stronger memories`, `Depth of semantic processing at encoding, not study time or intent to learn, determines later retention`, `Recognition is easier than recall`, `Iconic memory lasts under one second`],
+            options: [`Longer exposure produces stronger memories`, `Processing depth at encoding drives retention`, `Recognition is easier than free recall`, `Intent to learn drives how much is retained`],
             correctAnswer: 1,
-            explanation: `Time is equated and the test is a surprise, so neither exposure duration nor deliberate memorization can explain the gradient — only the depth of processing the orienting task induced (Craik and Lockhart). The recognition-vs-recall contrast and iconic memory duration are true facts but not what this design tests.`
+            explanation: `Time is equated and the test is a surprise, so neither exposure duration nor deliberate memorization can explain the gradient — only the depth of processing the orienting task induced (Craik and Lockhart). The recognition-vs-recall contrast is a true fact but not what this design tests, and intent to learn cannot be the cause because the test was a surprise in every condition.`
           },
           {
             question: `Students who study while calm but take the exam highly anxious often underperform relative to their practice scores. The retrieval principle most directly implicated is:`,
-            options: [`The spacing effect`, `Chunking failure`, `The self-reference effect`, `State-dependent memory — retrieval suffers when the internal physiological state at test mismatches the state at encoding`],
+            options: [`The spacing effect`, `Chunking failure`, `The self-reference effect`, `State-dependent memory`],
             correctAnswer: 3,
             explanation: `State-dependent memory holds that internal state (arousal, drug state) is encoded with the material and serves as a retrieval cue; a calm-study/anxious-test mismatch removes that cue. Context-dependent memory would be the analogous EXTERNAL-environment effect. Spacing, chunking, and self-reference are encoding-side phenomena.`
           },
           {
             question: `A participant does a verbal reasoning task while simultaneously either (a) repeating "the the the" aloud or (b) tapping a spatial pattern. Baddeley's working memory model predicts:`,
-            options: [`Greater disruption from the verbal repetition, because it occupies the phonological loop the reasoning task also needs, while spatial tapping loads a different subsystem`, `Equal disruption from both, since working memory is a single undifferentiated store`, `Greater disruption from tapping, because motor tasks always dominate the central executive`, `No disruption from either task`],
+            options: [`More disruption from repeating, which uses the phonological loop`, `Equal disruption from both, since working memory is a single store`, `More disruption from tapping, since motor tasks always dominate`, `No disruption, since the central executive handles both at once`],
             correctAnswer: 0,
-            explanation: `The model's signature prediction is selective interference: tasks sharing a subsystem (both verbal, phonological loop) collide, while tasks split across the loop and the visuospatial sketchpad can proceed in parallel under central-executive coordination. A unitary short-term store would predict equal interference — that failed prediction is why the multicomponent model replaced it.`
+            explanation: `The model's signature prediction is selective interference: tasks sharing a subsystem (both verbal, phonological loop) collide, while tasks split across the loop and the visuospatial sketchpad can proceed in parallel under central-executive coordination. A unitary short-term store would predict equal interference — that failed prediction is why the multicomponent model replaced it. The executive has limited capacity, so it cannot absorb both tasks cost-free, and motor tasks have no privileged claim on it.`
           }
         ]
       }

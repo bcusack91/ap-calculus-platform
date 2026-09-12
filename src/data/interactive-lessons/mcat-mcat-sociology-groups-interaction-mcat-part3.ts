@@ -82,33 +82,33 @@ The two halves of this part are one story: bureaucracies script front-stage perf
         questions: [
           {
             question: `A funeral director maintains solemn composure with grieving families, then jokes casually with colleagues in the preparation room, where families never enter. Goffman would describe the preparation room as:`,
-            options: [`A total institution`, `The back stage — a region closed to the audience where the front-stage performance is dropped and maintained`, `An out-group`, `A reference group`],
+            options: [`A total institution`, `The back stage`, `An out-group`, `A reference group`],
             correctAnswer: 1,
             explanation: `Regions are defined by audience access: with families (the audience) present, the director performs the solemn front-stage role; the preparation room excludes that audience, permitting out-of-character behavior and performance maintenance. Note the relativity — if the boss visited the preparation room, it would become front stage for THAT audience. The other terms belong to different frameworks entirely.`
           },
           {
             question: `A flight attendant reports that she no longer merely fakes warmth toward difficult passengers but actively conjures sympathetic thoughts until she genuinely feels warm — yet after years of this she feels estranged from her own emotions. Hochschild would classify her technique and her risk as:`,
-            options: [`Surface acting; groupthink`, `Impression management; role exit`, `Informational influence; deindividuation`, `Deep acting; the burnout and self-estrangement costs of sustained emotional labor`],
+            options: [`Surface acting; self-estrangement and burnout`, `Impression management; role exit`, `Informational influence; deindividuation`, `Deep acting; self-estrangement and burnout`],
             correctAnswer: 3,
             explanation: `Inducing the required feeling itself — rather than just arranging the outward display — is deep acting, the more thorough form of emotional labor. Hochschild's central warning is exactly the reported outcome: chronically manufacturing feelings for an employer can estrange workers from their own emotional signals and feed burnout. Surface acting is the display-only strategy she moved beyond.`
           },
           {
             question: `In job-search studies, new positions are disproportionately found through acquaintances rather than close friends. The structural explanation is that:`,
-            options: [`Weak ties bridge otherwise disconnected clusters, carrying novel information that dense strong-tie networks — where everyone already knows the same things — cannot provide`, `Acquaintances feel more obligation to help than friends do`, `Close friends actively withhold job information as competition`, `Strong ties transmit information more slowly per interaction`],
+            options: [`Weak ties bridge clusters, carrying non-redundant job information`, `Acquaintances feel more obligation to help than friends do`, `Close friends actively withhold job information as competition`, `Strong ties transmit information more slowly per interaction`],
             correctAnswer: 0,
             explanation: `Granovetter's argument is structural, not motivational: strong-tie clusters are dense and redundant, so their information pool is shared and stale; weak ties are the bridges into other clusters where different information circulates. Friends are typically MORE willing to help — they simply know the same openings you do. Speed per interaction is not the operative variable; novelty of the reachable information is.`
           },
           {
             question: `A benefits clerk denies an application because one signature sits in the wrong box, although the applicant is present, indisputably eligible, and could sign correctly on the spot. The clerk agrees it is absurd but says rules forbid on-site corrections. This scenario BEST illustrates:`,
-            options: [`Charismatic authority`, `The iron law of oligarchy`, `Goal displacement — bureaucratic rules, designed as means, being enforced as ends even when they defeat the organization's purpose`, `Social loafing by the clerk`],
+            options: [`Charismatic authority overriding written procedure`, `The iron law of oligarchy within the agency`, `Goal displacement, with rules treated as ends`, `Social loafing, withholding effort behind the rules`],
             correctAnswer: 2,
             explanation: `The rule (correct signatures ensure valid applications) exists to serve a goal (benefits to the eligible); enforcing it here defeats that goal while the clerk complies faithfully — the definition of goal displacement, a structural pathology of rule-governed impersonality. No elite capture (oligarchy), personal magnetism, or effort-withholding is involved; the clerk is working exactly as the system directs.`
           },
           {
             question: `A grassroots organization founded on radical internal democracy grows to 200,000 members; a decade later, a small permanent staff sets the agenda, controls information, and runs uncontested elections. Michels would say this outcome:`,
-            options: [`Proves the founders secretly wanted power`, `Resulted from groupthink among ordinary members`, `Could have been avoided by stronger shared values alone`, `Illustrates the iron law of oligarchy — large-scale organization itself concentrates control in a leadership few, regardless of democratic ideals`],
+            options: [`Proves the founders secretly wanted power`, `Resulted from groupthink among ordinary members`, `Could have been avoided by stronger shared values`, `Illustrates the iron law of oligarchy at scale`],
             correctAnswer: 3,
-            explanation: `Michels's claim is structural inevitability, not hidden motive: coordinating a mass organization requires full-time delegation, which concentrates expertise, information, and agenda control in the delegates — who then entrench. Because the mechanism is organizational scale itself, ideals and values do not immunize; that is what makes the "law" iron. Member psychology (option B) is not the engine.`
+            explanation: `Michels's claim is structural inevitability, not hidden motive: coordinating a mass organization requires full-time delegation, which concentrates expertise, information, and agenda control in the delegates — who then entrench. Because the mechanism is organizational scale itself, ideals and values do not immunize; that is what makes the "law" iron. Member psychology such as groupthink is not the engine.`
           }
         ]
       }

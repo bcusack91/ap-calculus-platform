@@ -79,27 +79,27 @@ Early environments program later health: childhood poverty predicts adult cardio
           },
           {
             question: `Which pattern of disease-specific data would BEST support fundamental cause theory?`,
-            options: [`Equal SES gradients across all diseases regardless of treatability`, `Gradients only for infectious diseases`, `Gradients that disappeared permanently after 1950`, `Steep SES gradients for preventable/treatable diseases but nearly flat gradients for diseases medicine cannot yet prevent or treat`],
+            options: [`Equal SES gradients across all diseases regardless of treatability`, `Steep gradients for infectious diseases, flat ones for chronic diseases`, `Gradients that vanish once universal health coverage is introduced`, `Steep gradients for treatable diseases, flat ones for untreatable diseases`],
             correctAnswer: 3,
-            explanation: `The theory's mechanism is flexible resources (money, knowledge, power, connections) deployed against current threats — so advantage should show its largest health payoff exactly where something CAN be done, and no payoff where nothing can. That treatability-tracking pattern is the theory's unique fingerprint; uniform gradients (option A) would fit simpler material-deprivation accounts instead.`
+            explanation: `The theory's mechanism is flexible resources (money, knowledge, power, connections) deployed against current threats — so advantage should show its largest health payoff exactly where something CAN be done, and no payoff where nothing can. That treatability-tracking pattern is the theory's unique fingerprint; uniform gradients would fit simpler material-deprivation accounts instead, an infectious-versus-chronic split tracks disease type rather than treatability, and gradients vanishing under universal coverage contradicts the theory's prediction that resources find new routes to advantage.`
           },
           {
             question: `A researcher measures blood pressure, cortisol regulation, inflammatory markers, and metabolic indicators in adults, combining them into a single index of cumulative physiological wear that rises with years of economic hardship. The construct being measured is:`,
-            options: [`The social gradient`, `Weathering, but only if subjects are elderly`, `Allostatic load — the accumulated biological cost of chronic adaptation to stressors`, `Health inequity`],
+            options: [`The socioeconomic gradient in health`, `Weathering, which applies only to elderly subjects`, `Allostatic load from chronic stress exposure`, `Health inequity between income groups`],
             correctAnswer: 2,
             explanation: `Allostatic load is precisely this multi-system tally of wear from prolonged stress-axis engagement — the biological ledger where chronic social adversity is recorded. The social gradient is the population-level SES-health association the index helps EXPLAIN; weathering applies the same logic to discrimination-driven accelerated aging and requires no elderly sample; inequity is a normative classification of disparities, not a biomarker.`
           },
           {
             question: `Two findings: (a) men and women differ in autoimmune disease rates in ways tied to X-chromosome biology; (b) two neighborhoods differ five-fold in asthma hospitalizations because one sits beside a freight corridor that zoning decisions routed through low-income housing. In disparity/inequity terms:`,
-            options: [`Both (a) and (b) are disparities, but (b) is also a health inequity — an avoidable difference produced by social arrangements`, `Both are inequities`, `(a) is an inequity; (b) is a mere disparity`, `Neither is a disparity because both have identifiable causes`],
+            options: [`Both are disparities, but only (b) is also an inequity`, `Both are disparities, and both are also inequities`, `Both are disparities, but only (a) is also an inequity`, `Neither is a disparity because both have identifiable causes`],
             correctAnswer: 0,
             explanation: `Disparity is the descriptive umbrella: any measured between-group difference, which covers both findings. Inequity adds the normative tests of avoidability and injustice — chromosome-linked disease biology fails those tests, while zoning-assigned pollution exposure passes both (it could be otherwise, and its burden was socially allocated). The distinction determines which differences health policy is obligated to target.`
           },
           {
             question: `Adults who escaped childhood poverty and achieved high incomes still show elevated cardiovascular risk decades later, compared with the always-affluent of identical adult SES. This pattern most directly supports:`,
-            options: [`The claim that adult SES fully determines health`, `A life-course latency effect — early-life conditions program later disease risk independent of adult position`, `Reverse causation from adult disease to childhood poverty`, `The mortality-morbidity paradox`],
+            options: [`The claim that adult SES fully determines health`, `A life-course latency effect of early-life conditions`, `Reverse causation from adult disease to childhood poverty`, `Health selection, in which illness drives downward mobility`],
             correctAnswer: 1,
-            explanation: `Holding adult SES constant while childhood conditions still predict adult disease is the definitional evidence for latency (critical/sensitive-period) effects: early environments leave durable biological signatures — stress-axis calibration, developmental programming — that later mobility does not erase. Reverse causation is chronologically impossible here, and the gender-specific mortality-morbidity paradox is unrelated.`
+            explanation: `Holding adult SES constant while childhood conditions still predict adult disease is the definitional evidence for latency (critical/sensitive-period) effects: early environments leave durable biological signatures — stress-axis calibration, developmental programming — that later mobility does not erase. Reverse causation is chronologically impossible here, and health selection (illness pushing people down the ladder) cannot explain people who rose into affluence.`
           }
         ]
       }

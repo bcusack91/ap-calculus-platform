@@ -73,33 +73,33 @@ Passages rarely name the paradigm. They describe a researcher's CLAIM, and you i
         questions: [
           {
             question: `A sociologist argues that religious congregations persist in modern cities primarily because they integrate newcomers, reinforce shared norms, and stabilize communities during economic shocks. This account is best classified as:`,
-            options: [`Symbolic interactionist, because it concerns shared norms`, `Functionalist, because it explains an institution's persistence by the stabilizing functions it performs`, `Conflict theory, because economic shocks are mentioned`, `Social constructionist, because religion is a human creation`],
+            options: [`Symbolic interactionist, because it concerns shared norms`, `Functionalist, because it explains persistence by function`, `Conflict theory, because economic shocks are mentioned`, `Social constructionist, since religion is a human creation`],
             correctAnswer: 1,
             explanation: `Persistence-because-stability is functionalism's signature argument form: the institution endures because it serves system-maintaining functions (integration, norm reinforcement). Mentioning norms does not make an account interactionist — interactionism requires the micro machinery of meaning and interaction, and conflict theory would ask which groups religion advantages, which this account never does.`
           },
           {
             question: `Which claim is the clearest example of a LATENT function, as Merton defined it?`,
-            options: [`Hospitals intend to treat illness and succeed in doing so`, `Prisons fail to rehabilitate, undermining their stated purpose`, `Universities publish admission standards to attract qualified applicants`, `Weekly farmers markets, organized to sell produce, unintentionally become the main setting where neighborhood political organizing occurs`],
+            options: [`Hospitals intend to treat illness and succeed in doing so`, `Prisons fail to rehabilitate, undermining their stated purpose`, `Universities publish admission standards to attract qualified applicants`, `Farmers markets unintentionally becoming hubs of political organizing`],
             correctAnswer: 3,
-            explanation: `A latent function is an UNINTENDED and largely unrecognized consequence that nonetheless serves the community — here, produce markets incidentally sustaining civic life. Option A is a manifest function (intended and recognized); option B describes a dysfunction relative to a manifest goal; option C is simply an intended practice. The manifest/latent split is about intention and recognition, not about success.`
+            explanation: `A latent function is an UNINTENDED and largely unrecognized consequence that nonetheless serves the community — here, produce markets incidentally sustaining civic life. Hospitals treating illness is a manifest function (intended and recognized); prisons failing to rehabilitate is a dysfunction relative to a manifest goal; publishing admission standards is simply an intended practice. The manifest/latent split is about intention and recognition, not about success.`
           },
           {
             question: `The Thomas theorem states that situations defined as real are real in their consequences. Which observation most directly illustrates it?`,
-            options: [`After a false rumor that a vaccine causes infertility spreads, clinic attendance collapses even though the vaccine is safe`, `Vaccine side effects occur at the biologically expected rate`, `Wealthier neighborhoods have more clinics per capita`, `A new law increases vaccination by mandating it for school entry`],
+            options: [`A false rumor about a safe vaccine collapses clinic attendance`, `Vaccine side effects occur at the biologically expected rate`, `Wealthier neighborhoods have more clinics per capita`, `A new law increases vaccination by mandating it for school entry`],
             correctAnswer: 0,
-            explanation: `The theorem's point is that the DEFINITION of the situation — not its objective accuracy — drives behavior and thus produces real outcomes: a false belief empties real clinics. Option B is a biological fact with no definitional component, option C is structural inequality, and option D is behavior driven by formal sanction rather than by a collectively held definition.`
+            explanation: `The theorem's point is that the DEFINITION of the situation — not its objective accuracy — drives behavior and thus produces real outcomes: a false belief empties real clinics. Side effects at the expected rate are a biological fact with no definitional component, clinic density is structural inequality, and the school mandate is behavior driven by formal sanction rather than by a collectively held definition.`
           },
           {
             question: `A researcher documents that occupational-licensing laws, publicly justified as consumer protection, were historically written by incumbent practitioners and consistently restrict market entry by poorer workers. The theoretical framework organizing this analysis is:`,
-            options: [`Functionalism, because licensing coordinates the labor market`, `Rational choice theory, because workers weigh licensing costs`, `Conflict theory, because an institution's official justification is unmasked as ideology serving the interests of an advantaged group`, `Symbolic interactionism, because licenses are symbols`],
+            options: [`Functionalism, because licensing coordinates the labor market`, `Rational choice theory, because workers weigh licensing costs`, `Conflict theory, because the rationale masks group interests`, `Symbolic interactionism, because licenses are symbols`],
             correctAnswer: 2,
             explanation: `The analytic moves — asking who wrote the rules, who benefits, and treating the public rationale as legitimating ideology — are conflict theory's toolkit. The mere presence of a symbol (a license) does not make analysis interactionist; interactionism would study how licensing changes face-to-face encounters and self-definitions, not how it distributes group advantage.`
           },
           {
             question: `Two micro-level researchers study friendship dissolution. Researcher X finds friendships end when the effort a partner invests exceeds the companionship received relative to alternative friends. Researcher Y finds friendships end after one partner reinterprets shared rituals as signs of obligation rather than affection. How should the two accounts be classified?`,
-            options: [`Both are symbolic interactionist, since both are micro-level`, `X is social exchange theory (cost-benefit ledger); Y is symbolic interactionism (renegotiated meaning of the same behavior)`, `X is functionalist; Y is conflict theory`, `X is symbolic interactionism; Y is social exchange theory`],
+            options: [`Both are symbolic interactionist, since both are micro-level`, `X is social exchange theory; Y is symbolic interactionism`, `X is functionalist; Y is conflict theory`, `X is symbolic interactionism; Y is social exchange theory`],
             correctAnswer: 1,
-            explanation: `Sharing the micro scale does not make theories identical — the causal engine differs. X explains behavior through calculated rewards, costs, and comparison to alternatives: exchange/rational choice. Y explains the SAME breakup through a shift in what the rituals MEAN to a participant: interactionism. Option A is the standard trap of collapsing all micro theories together; option D reverses the two engines.`
+            explanation: `Sharing the micro scale does not make theories identical — the causal engine differs. X explains behavior through calculated rewards, costs, and comparison to alternatives: exchange/rational choice. Y explains the SAME breakup through a shift in what the rituals MEAN to a participant: interactionism. Calling both interactionist is the standard trap of collapsing all micro theories together; labeling X interactionist and Y exchange reverses the two engines; functionalism and conflict theory are macro frameworks that fit neither account.`
           }
         ]
       }

@@ -72,27 +72,27 @@ Classical (Pavlovian, respondent) conditioning pairs a neutral stimulus with one
           },
           {
             question: `A dog's conditioned salivation to a bell is fully extinguished on Monday. On Friday, with no further training, the bell again produces some salivation. This return of responding is best explained as:`,
-            options: [`Higher-order conditioning`, `Stimulus generalization`, `Relearning through unnoticed pairings`, `Spontaneous recovery, indicating extinction inhibited rather than erased the original association`],
+            options: [`Higher-order conditioning`, `Stimulus generalization from similar sounds`, `Relearning through unnoticed pairings`, `Spontaneous recovery of the response`],
             correctAnswer: 3,
             explanation: `A rest interval followed by partial return of an extinguished CR is spontaneous recovery — the standard evidence that extinction is new inhibitory learning layered over an intact CS-US association. No new pairings occurred, no new stimulus resembles the CS, and no second-order stimulus is involved.`
           },
           {
             question: `Rats given a novel-tasting solution and made ill six hours later avoid that taste after a single trial, yet a light and click paired with the same illness produce no avoidance. This finding challenged early learning theory because it shows that:`,
-            options: [`Associative learning is biologically constrained — prepared CS-US combinations condition rapidly across long delays, while unprepared ones fail`, `Contiguity of a few seconds is always required for conditioning`, `Rats cannot form visual or auditory associations of any kind`, `Illness is not an effective unconditioned stimulus`],
+            options: [`Associative learning is constrained by biological preparedness`, `Contiguity of a few seconds is always required to condition`, `Rats cannot form visual or auditory associations of any kind`, `Illness is not an effective unconditioned stimulus`],
             correctAnswer: 0,
             explanation: `The Garcia taste-aversion result breaks the classical rules twice — one trial, hours-long delay — but only for the evolutionarily sensible taste-illness pairing. Rats readily learn audiovisual signals for shock, so they can use those modalities; and illness clearly worked as a US for taste. The lesson is preparedness, not modality failure.`
           },
           {
             question: `A child bitten by one dog initially fears all dogs, but after many safe encounters with other dogs fears only large dark-coated dogs resembling the one that bit him. The narrowing of the fear response reflects:`,
-            options: [`Extinction of the original fear`, `Spontaneous recovery`, `Stimulus discrimination developing after generalization`, `Backward conditioning`],
+            options: [`Extinction of the original conditioned fear response`, `Spontaneous recovery`, `Stimulus discrimination after generalization`, `Stimulus generalization across all dogs`],
             correctAnswer: 2,
-            explanation: `The initial spread of fear to all dogs is generalization. Safe (unpaired) experiences with dissimilar dogs act as CS-minus trials, and responding narrows to stimuli most like the true CS — discrimination. The original fear is intact for similar dogs, so this is not extinction of the CR itself.`
+            explanation: `The initial spread of fear to all dogs is generalization. Safe (unpaired) experiences with dissimilar dogs act as CS-minus trials, and responding narrows to stimuli most like the true CS — discrimination. The original fear is intact for similar dogs, so this is not extinction of the CR itself; generalization names the earlier SPREAD of fear, not its narrowing, and no rest-then-return pattern suggests spontaneous recovery.`
           },
           {
             question: `After a tone reliably elicits conditioned salivation, a light is repeatedly presented just before the tone — with food never delivered during this phase. The dog begins salivating to the light alone, though more weakly than to the tone. This demonstrates:`,
-            options: [`Simultaneous conditioning`, `Higher-order conditioning, with the established CS functioning like a US for the new stimulus`, `Sensory adaptation to the light`, `Negative reinforcement`],
+            options: [`Simultaneous conditioning`, `Higher-order conditioning`, `Sensory adaptation to the light`, `Negative reinforcement`],
             correctAnswer: 1,
-            explanation: `No primary US (food) was present, yet the light acquired the response by predicting the already-conditioned tone — the definition of higher-order (second-order) conditioning, characteristically weaker than first-order. Negative reinforcement belongs to operant conditioning, and adaptation would reduce, not create, responding.`
+            explanation: `No primary US (food) was present, yet the light acquired the response by predicting the already-conditioned tone — the definition of higher-order (second-order) conditioning, characteristically weaker than first-order. Simultaneous conditioning would require the light and tone to overlap in time rather than the light preceding the tone, negative reinforcement belongs to operant conditioning, and adaptation would reduce, not create, responding.`
           }
         ]
       }

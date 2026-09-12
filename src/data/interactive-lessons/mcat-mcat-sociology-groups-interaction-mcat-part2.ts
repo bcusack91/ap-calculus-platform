@@ -72,31 +72,31 @@ In crowds, anonymity + arousal + diffused responsibility can suspend self-awaren
         questions: [
           {
             question: `In a line-judgment task with an obviously correct answer, a subject conforms to a unanimous wrong majority on public trials but answers correctly when responding in writing. Her public conformity reflected:`,
-            options: [`Informational social influence, because she doubted her eyes`, `Deindividuation`, `Obedience to authority`, `Normative social influence — compliance to avoid social disapproval, without private acceptance`],
+            options: [`Informational influence: she doubted her eyes`, `Deindividuation within the anonymous majority`, `Obedience to the experimenter's authority`, `Normative social influence, to avoid disapproval`],
             correctAnswer: 3,
             explanation: `The task was unambiguous and her private (written) answers stayed correct, so the group never changed her belief — she changed only her public behavior to avoid standing alone. That is normative influence's definition. Informational influence requires ambiguity and produces private acceptance; no authority figure issued orders, and her self-awareness was fully intact.`
           },
           {
             question: `In the obedience experiments, which modification produced the LARGEST drop in subjects' willingness to continue?`,
-            options: [`Moving the experiment to a prestigious university`, `Seeing two fellow participants defy the experimenter and refuse to continue`, `Increasing the payment offered to subjects`, `Having the experimenter emphasize that he bore full responsibility`],
+            options: [`Moving the experiment to a prestigious university`, `Seeing two peer participants defy the experimenter`, `Increasing the payment offered to subjects`, `Having the experimenter emphasize that he bore full responsibility`],
             correctAnswer: 1,
             explanation: `Defiant peers collapsed obedience more than almost any other variation — rebellion, like conformity, is socially licensed; models of refusal break the authority's monopoly on defining the situation. Prestige and explicit responsibility-taking INCREASE obedience (they strengthen legitimacy and the agentic state), and payment was never a meaningful lever.`
           },
           {
             question: `A charity first asks homeowners to display a small window sticker supporting a cause; two weeks later it asks the same homeowners to install a large lawn sign, and they agree at far higher rates than controls. The technique and its usual mechanism are:`,
-            options: [`Foot-in-the-door, working through self-perception — having complied with the small request, people come to see themselves as supporters and act consistently`, `Door-in-the-face, working through reciprocal concessions`, `Lowballing, working through prior commitment`, `Normative influence, working through group pressure`],
+            options: [`Foot-in-the-door, working through self-perception`, `Door-in-the-face, working through reciprocal concessions`, `Lowballing, working through prior commitment`, `Normative influence, working through group pressure`],
             correctAnswer: 0,
             explanation: `Small-request-first-then-large is foot-in-the-door; the standard mechanism is self-perception and consistency — the first compliance updates identity ("I'm someone who supports this"), and the larger request cashes in on that identity. Door-in-the-face runs in the opposite order (large refused, then moderate), and lowballing reveals hidden costs after commitment.`
           },
           {
             question: `A jury whose members individually favored moderately high damages awards, after deliberating together, unanimously awards damages far above ANY member's initial figure — with no evidence of suppressed disagreement. This outcome exemplifies:`,
-            options: [`Groupthink, because the verdict was unanimous`, `Social loafing`, `Group polarization — discussion among the like-minded shifted the shared initial lean to a more extreme position`, `The bystander effect`],
+            options: [`Groupthink, because the verdict was unanimous`, `Social loafing, as members deferred to the loudest juror`, `Group polarization, amplifying the shared initial lean`, `The bystander effect, as responsibility was diffused`],
             correctAnswer: 2,
             explanation: `Everyone leaned the same way beforehand, and deliberation amplified that lean via new same-side arguments and normative one-upping — polarization's exact signature. Groupthink requires suppressed private dissent producing a defective consensus, which the stem explicitly rules out; unanimity alone never diagnoses groupthink. No effort-pooling or helping situation is involved.`
           },
           {
             question: `A choir member sings noticeably quieter in a 60-person ensemble where microphones cannot isolate voices, but at full effort during solo auditions. The intervention MOST directly targeted at this mechanism would be:`,
-            options: [`Adding more singers to diffuse the workload further`, `Recording and reviewing each singer's individual channel — restoring identifiability of individual contributions`, `Having an audience watch rehearsals to increase arousal`, `Encouraging the group to bond so members like each other more`],
+            options: [`Adding more singers to diffuse the workload further`, `Recording and reviewing each singer's individual channel`, `Having an audience watch rehearsals to increase arousal`, `Encouraging the group to bond so members like each other more`],
             correctAnswer: 1,
             explanation: `Quieter effort when output is pooled and anonymous is social loafing, and its mechanism is unidentifiability of individual contribution — so the direct fix is making each contribution traceable. Adding singers worsens loafing; audiences engage facilitation (a different presence effect that would help only well-learned singing); cohesion helps somewhat but does not target the identifiability mechanism.`
           }

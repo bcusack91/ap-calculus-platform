@@ -71,31 +71,31 @@ A **social institution** is a durable complex of statuses, roles, norms, and val
         questions: [
           {
             question: `Students in a strict academy learn to line up silently, defer to adults, and accept rank orderings posted publicly — none of which appears in any course syllabus. Sociologists call this learning:`,
-            options: [`Credentialism`, `The manifest curriculum`, `Tracking`, `The hidden curriculum`],
+            options: [`Credential inflation`, `The manifest curriculum`, `Educational tracking`, `The hidden curriculum`],
             correctAnswer: 3,
-            explanation: `The hidden curriculum is the set of unofficial norms — obedience, punctuality, acceptance of hierarchy — that schools transmit alongside official content. Credentialism concerns degree requirements as job filters, tracking is the sorting of students into ability groups, and the manifest curriculum is precisely the official syllabus content this learning is NOT part of.`
+            explanation: `The hidden curriculum is the set of unofficial norms — obedience, punctuality, acceptance of hierarchy — that schools transmit alongside official content. Credential inflation concerns rising degree requirements as job filters, tracking is the sorting of students into ability groups, and the manifest curriculum is precisely the official syllabus content this learning is NOT part of.`
           },
           {
             question: `A religious group formed by breaking away from an established denomination, demanding stricter observance and existing in high tension with mainstream society while recruiting adult converts, is best classified as a:`,
-            options: [`Sect`, `Ecclesia`, `Church`, `Denomination`],
+            options: [`Sectarian group`, `Ecclesia`, `Established church`, `Denomination`],
             correctAnswer: 0,
             explanation: `Schismatic origin, strictness, tension with society, and adult conversion are the defining sect features. Churches and ecclesiae are large, low-tension bodies integrated with society into which members are typically born; denominations are established, socially accepted organizations. The spectrum runs church → denomination → sect → cult as tension with the surrounding society rises.`
           },
           {
             question: `Citizens obey a newly elected tax commissioner they personally dislike, because statutes define the office's powers. When she leaves office, obedience transfers seamlessly to her successor. Weber would classify this authority as:`,
-            options: [`Charismatic, because she won a personal following in the election`, `Rational-legal, because legitimacy attaches to rules and the office rather than to the person`, `Traditional, because taxation is an old custom`, `Coercive power, because taxes are mandatory`],
+            options: [`Charismatic, because she won a personal following in the election`, `Rational-legal, because legitimacy resides in the office`, `Traditional, because taxation is an old custom`, `Coercive power, because taxes are mandatory`],
             correctAnswer: 1,
             explanation: `The tell is that obedience survives the officeholder's replacement: legitimacy resides in codified rules and the office itself. Charismatic authority attaches to an individual's extraordinary qualities and famously struggles with succession; traditional authority rests on custom and inheritance. Coercive power without legitimacy is not authority at all — and the citizens here comply out of accepted legitimacy, not mere force.`
           },
           {
             question: `Over two decades, ordinary shyness is increasingly diagnosed as "social anxiety disorder," treated pharmacologically, and covered by insurance. A sociologist labels this process medicalization. Which additional finding would BEST support a conflict-theory reading of it?`,
-            options: [`Patients report that diagnosis relieved their self-blame`, `The diagnosis appears in multiple countries`, `Marketing by treatment manufacturers preceded and predicted diagnostic expansion, and diagnosis rates track profitability rather than symptom prevalence`, `Shyness has measurable physiological correlates`],
+            options: [`Patients report that diagnosis relieved their self-blame`, `The diagnosis spread across many countries' clinical manuals`, `Diagnoses tracked drug-maker profits, not symptom rates`, `Shyness has measurable physiological and genetic correlates`],
             correctAnswer: 2,
             explanation: `Conflict theory asks who benefits from redefining a condition as disease; evidence that commercial interests drove the definitional change — decoupled from underlying symptom rates — directly serves that argument. Relief of self-blame describes a consequence for patients (closer to interactionist identity work), cross-national presence and physiological correlates say nothing about whose interests the redefinition serves.`
           },
           {
             question: `Under Parsons's sick-role concept, a patient loses the role's protections (exemption from obligations, freedom from blame) primarily when he:`,
-            options: [`Has an illness that is difficult to diagnose`, `Recovers more slowly than his physician predicted`, `Contracts a stigmatized rather than a respectable disease`, `Declines to seek competent help and shows no effort to get well`],
+            options: [`Has an illness that is difficult to diagnose`, `Recovers more slowly than his physician predicted`, `Contracts a stigmatized rather than a respectable disease`, `Refuses competent help and makes no effort to recover`],
             correctAnswer: 3,
             explanation: `The sick role is a bargain: society grants exemptions and suspends blame IN EXCHANGE for the patient treating sickness as undesirable — wanting recovery and cooperating with competent treatment. Violating those obligations, not slow recovery or diagnostic difficulty, dissolves the bargain. Stigma affects how the role is granted in practice (a standard criticism of Parsons) but is not part of the role's formal obligations.`
           }
