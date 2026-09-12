@@ -64,32 +64,32 @@ Organelle passages almost never ask "what does the Golgi do?" They give you an *
         questions: [
           {
             question: `A 100 kDa transcription factor accumulates in the nucleus in healthy cells. After a mutation deletes a short basic stretch of its sequence, the protein remains functional in vitro but stays cytosolic. The deleted element is most likely:`,
-            options: [`A signal peptide directing it to the rough ER`, `A mannose-6-phosphate tag`, `A nuclear localization signal recognized by importins`, `A transmembrane anchor domain`],
-            correctAnswer: 2,
+            options: [`A signal peptide for the rough ER`, `A mannose-6-phosphate sorting tag`, `A transmembrane anchor sequence`, `A nuclear localization signal`],
+            correctAnswer: 3,
             explanation: `A 100 kDa protein is far above the nuclear pore's passive diffusion limit, so nuclear entry requires an NLS — classically a short, basic (lysine/arginine-rich) stretch bound by importins. A signal peptide would have sent it INTO the ER lumen (and it was nuclear before the mutation), M6P routes lysosomal hydrolases, and a transmembrane anchor would place it in a membrane, not the nucleoplasm.`
           },
           {
             question: `In prokaryotes, ribosomes commonly translate an mRNA while RNA polymerase is still transcribing it. The reason this is impossible for a eukaryotic nuclear gene is that:`,
-            options: [`The nuclear envelope separates transcription from the cytosolic translation machinery, and transcripts are exported only after processing`, `Eukaryotic ribosomes cannot bind mRNA that lacks a Shine-Dalgarno sequence`, `Eukaryotic RNA polymerase degrades ribosomes on contact`, `Eukaryotic mRNAs are translated inside the nucleolus instead`],
-            correctAnswer: 0,
+            options: [`Eukaryotic RNA polymerase degrades ribosomes it meets`, `The nuclear envelope separates the two processes`, `Eukaryotic ribosomes need a Shine-Dalgarno sequence`, `Eukaryotic mRNA is translated in the nucleolus`],
+            correctAnswer: 1,
             explanation: `Compartmentalization uncouples the two processes: pre-mRNA is capped, spliced, and polyadenylated inside the nucleus, and only mature mRNA is exported through nuclear pores to meet ribosomes. This is why intron-containing transcripts are never translated in healthy cells. The Shine-Dalgarno point is a prokaryotic initiation detail, not the barrier; the nucleolus assembles ribosomal subunits and translates nothing.`
           },
           {
             question: `At the onset of mitosis, the nuclear envelope disassembles. The direct molecular trigger is:`,
-            options: [`Digestion of the envelope by lysosomal hydrolases`, `Phosphorylation of lamin intermediate filaments by mitotic CDK activity, collapsing the nuclear lamina`, `Ran-GTP hydrolysis sealing the nuclear pores`, `Fusion of the envelope with the plasma membrane`],
-            correctAnswer: 1,
+            options: [`The envelope fuses with the plasma membrane and is lost`, `Lysosomal hydrolases digest the nuclear envelope`, `CDK phosphorylation of lamins disassembles the lamina`, `Ran-GTP hydrolysis seals the nuclear pore complexes`],
+            correctAnswer: 2,
             explanation: `The lamina is a shell of lamin intermediate filaments; mitotic CDK (cyclin B-CDK1) phosphorylation makes lamins disassemble, and the envelope fragments into vesicles/ER until telophase, when phosphatases reverse the modification. It is a reversible phosphorylation switch — no proteolysis or membrane fusion with the cell surface is involved. The same add-phosphate/remove-phosphate logic runs the whole cell cycle lesson.`
           },
           {
             question: `Cells expressing a dominant-negative Drp1 (blocking mitochondrial fission) accumulate elongated, hyperfused mitochondria. Which downstream defect is the most direct prediction?`,
-            options: [`Loss of the proton gradient across all inner membranes`, `Failure of transcription of nuclear-encoded mitochondrial genes`, `Immediate arrest of glycolysis`, `Impaired segregation of damaged mitochondrial segments into mitophagy, and unequal partitioning at cell division`],
-            correctAnswer: 3,
+            options: [`Damaged segments cannot be pinched off and sent to mitophagy`, `Loss of the proton gradient across the inner membrane`, `Failure to transcribe nuclear-encoded mitochondrial genes`, `Immediate arrest of glycolysis in the cytosol`],
+            correctAnswer: 0,
             explanation: `Fission serves logistics: it pinches off damaged segments so autophagosomes can engulf them (mitophagy) and creates enough discrete units to distribute to daughter cells. Blocking it therefore lets damage accumulate in the network and skews inheritance. Fusion, not fission, mixes contents; the ETC can still run in a hyperfused network, and glycolysis is cytosolic — deliberately placed distractors from adjacent compartments.`
           },
           {
             question: `A secreted protease is normal in sequence, yet in patient cells it accumulates in the Golgi and never reaches secretory vesicles; all other secreted proteins behave normally. The most focused hypothesis is a defect in:`,
-            options: [`The signal recognition particle shared by all secreted proteins`, `The proteasome`, `A sorting receptor or signal that packages this specific cargo at the trans-Golgi`, `General vesicle fusion machinery at the plasma membrane`],
-            correctAnswer: 2,
+            options: [`The signal recognition particle in the cytosol`, `Proteasomal degradation of the mature protein`, `General vesicle fusion machinery at the surface`, `A sorting receptor specific to this one cargo`],
+            correctAnswer: 3,
             explanation: `Localization plus specificity is the whole question: the block is AFTER the ER (protein reached the Golgi, so SRP and translocation work) and affects ONE cargo (so shared machinery like SNARE-mediated fusion or COPII is intact). That leaves a cargo-specific sorting event at the trans-Golgi — the same one-station-upstream logic as I-cell disease, where the M6P tag fails and hydrolases are missorted. Broken-shared-machinery answers contradict the normal behavior of other proteins.`
           }
         ]

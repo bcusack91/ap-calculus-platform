@@ -55,19 +55,19 @@ $$v = \\frac{V_{max}[S]}{K_m + [S]}$$
         questions: [
           {
             question: `A researcher measures glucose uptake into erythrocytes as external glucose rises. Uptake increases, then plateaus at high concentrations. Adding galactose lowers glucose uptake at every concentration. These data indicate glucose enters by:`,
-            options: [`Carrier-mediated facilitated diffusion — saturable and competitively inhibited`, `Simple diffusion through the bilayer`, `Primary active transport`, `An always-open channel with no binding site`],
-            correctAnswer: 0,
+            options: [`An always-open channel with no binding site`, `Carrier-mediated facilitated diffusion`, `Simple diffusion through the lipid bilayer`, `Primary active transport powered by ATP`],
+            correctAnswer: 1,
             explanation: `Saturation (a $V_{max}$) means a limited number of binding sites — the hallmark of a carrier (GLUT1 here). Competition by the structural analog galactose confirms a stereospecific binding site. Simple diffusion never saturates, and nothing in the data requires ATP, ruling out active transport.`
           },
           {
             question: `A patient receives an IV of iso-osmotic urea solution. Compared with iso-osmotic saline, the urea infusion will cause red blood cells to:`,
-            options: [`Swell, because urea permeates the membrane and does not contribute to tonicity`, `Shrink, because urea draws water out of cells`, `Remain unchanged, because the solution is iso-osmotic`, `Lyse immediately due to urea toxicity`],
-            correctAnswer: 0,
+            options: [`Stay unchanged, since the solution is iso-osmotic`, `Shrink, since urea draws water out of the cells`, `Lyse at once from the chemical toxicity of urea`, `Swell, since urea permeates and contributes no tonicity`],
+            correctAnswer: 3,
             explanation: `Tonicity depends only on impermeant solutes. Urea crosses membranes (via urea transporters and slow diffusion), equilibrates, and stops opposing water entry — so an iso-osmotic urea solution behaves like pure water over time: functionally hypotonic. Cells take on water and swell. This osmolarity-vs-tonicity distinction is a classic MCAT trap.`
           },
           {
             question: `GLUT4 differs from GLUT1 in that GLUT4-mediated glucose uptake increases sharply after insulin signaling. The mechanism is:`,
-            options: [`Insulin triggers translocation of GLUT4-containing vesicles to the plasma membrane, raising transporter number`, `Insulin phosphorylates GLUT4, converting it into an ATP-driven pump`, `Insulin raises the glucose gradient by inhibiting glycolysis`, `Insulin opens a gate within the GLUT4 pore`],
+            options: [`GLUT4-containing vesicles fuse with the membrane`, `Insulin phosphorylates GLUT4 into an ATP-driven pump`, `Insulin steepens the gradient by halting glycolysis`, `Insulin opens a gate within the GLUT4 pore itself`],
             correctAnswer: 0,
             explanation: `GLUT4 in muscle and adipose is stored in intracellular vesicles. Insulin (via the RTK → PI3K/Akt pathway) drives vesicle fusion with the plasma membrane, increasing $V_{max}$ by increasing transporter count — the transporter itself remains a passive carrier. GLUT4 never uses ATP to move glucose.`
           }
@@ -114,14 +114,14 @@ These gradients (built by pumps — Part 3) are potential energy: they power sec
         questions: [
           {
             question: `A 150 mM NaCl solution and a 300 mM glucose solution are separated from pure water by membranes impermeable to both solutes. Their osmotic pressures are:`,
-            options: [`Approximately equal — NaCl dissociates into two particles, so both are ~300 mOsm`, `NaCl exerts half the osmotic pressure of glucose`, `Glucose exerts twice the pressure because it is larger`, `Osmotic pressure depends on solute identity, so they cannot be compared`],
-            correctAnswer: 0,
+            options: [`NaCl exerts half the osmotic pressure that glucose does`, `Glucose exerts twice the pressure, being larger`, `Approximately equal, since NaCl gives two particles`, `They cannot be compared, since identity matters`],
+            correctAnswer: 2,
             explanation: `Osmotic pressure is colligative: $\\Pi = iMRT$ depends on particle count, not identity. NaCl has $i \\approx 2$, so 150 mM NaCl ≈ 300 mOsm, matching 300 mM glucose ($i = 1$). Molecular size is irrelevant to colligative properties.`
           },
           {
             question: `In patients with nephrogenic diabetes insipidus, ADH levels are high but urine remains dilute. The defect most likely lies in:`,
-            options: [`The collecting duct's ability to insert aquaporin-2 in response to ADH signaling`, `ADH synthesis in the hypothalamus`, `The glomerular filtration barrier`, `Sodium reabsorption in the proximal tubule`],
-            correctAnswer: 0,
+            options: [`The glomerular filtration barrier's integrity`, `Aquaporin-2 insertion in the collecting duct`, `ADH synthesis and release by the hypothalamus`, `Sodium reabsorption in the proximal tubule`],
+            correctAnswer: 1,
             explanation: `"Nephrogenic" means the kidney cannot respond: the ADH receptor (V2) or aquaporin-2 pathway is defective, so water channels are not inserted into the apical membrane and water cannot follow the medullary osmotic gradient out of the duct. Central diabetes insipidus, by contrast, is failed ADH production — distinguishable because desmopressin (an ADH analog) fixes central but not nephrogenic DI.`
           }
         ]

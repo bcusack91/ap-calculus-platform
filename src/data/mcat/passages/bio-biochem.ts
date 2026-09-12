@@ -61,7 +61,12 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       {
         question:
           'The inhibition pattern observed in Experiment 2 (increased $K_m$, unchanged $V_{max}$) is most consistent with which type of inhibition?',
-        options: [ 'Uncompetitive', 'Irreversible','Competitive', 'Noncompetitive'],
+        options: [
+          "Uncompetitive inhibition",
+          "Irreversible inhibition",
+          "Competitive inhibition",
+          "Noncompetitive inhibition"
+        ],
         correctAnswer: 2,
         explanation:
           'A pure increase in $K_m$ with $V_{max}$ unchanged is the signature of competitive inhibition: the inhibitor competes with substrate for the active site, so more substrate is needed to reach half-maximal velocity, but a high enough [S] still reaches the original $V_{max}$. Inorganic phosphate is a product that resembles substrate, so product (competitive) inhibition fits. Noncompetitive inhibition lowers $V_{max}$ with unchanged $K_m$; uncompetitive lowers both; an irreversible inhibitor would not be overcome by substrate at all.',
@@ -97,23 +102,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Why is p-nitrophenyl phosphate a convenient substrate for measuring AP activity in this assay?',
         options: [
-          'It is the only phosphate ester that resists hydrolysis',
-          'It is the natural substrate of alkaline phosphatase',
-          'Its hydrolysis product absorbs at 405 nm, allowing a continuous spectrophotometric rate measurement',
-          'It binds $\\text{Zn}^{2+}$ and thereby activates the enzyme'],
+          "It is the only phosphate ester that resists hydrolysis",
+          "It is the natural substrate of alkaline phosphatase",
+          "Its hydrolysis product p-nitrophenol absorbs strongly at 405 nm",
+          "It binds $\\text{Zn}^{2+}$ and thereby activates the enzyme"
+        ],
         correctAnswer: 2,
         explanation:
-          'The passage states that hydrolysis of pNPP releases p-nitrophenol, which absorbs strongly at 405 nm, so the rate of absorbance increase directly reports reaction velocity in a continuous (real-time) assay. This convenience is optical, not because it is the natural substrate (A is false and irrelevant), nor because it activates the enzyme, nor because it resists hydrolysis (the opposite of what is measured).',
+          "The passage states that hydrolysis of pNPP releases p-nitrophenol, which absorbs strongly at 405 nm, so the rate of absorbance increase directly reports reaction velocity in a continuous, real-time assay; the convenience is purely optical. pNPP is a synthetic chromogenic substrate rather than the natural one, and a phosphate ester that resisted hydrolysis would generate no signal at all. Chelating the active-site $\\text{Zn}^{2+}$ would strip the enzyme of its catalytic metal rather than activate it.",
         skill: 'Experimental design',
       },
       {
         question:
           'If the researchers wanted to determine $V_{max}$ and $K_m$ most accurately from initial-velocity data, which experimental practice is most important?',
         options: [
-          'Allow each reaction to proceed to completion before measuring',
-          'Use a substrate concentration far below $K_m$ for every data point',
-          'Measure velocity only at a single very low substrate concentration',
-          'Measure initial rates across a range of substrate concentrations spanning below and above $K_m$'],
+          "Allow each reaction to proceed to completion before measuring",
+          "Use a substrate concentration far below $K_m$ for every point",
+          "Measure velocity at a single very low substrate concentration",
+          "Measure initial rates at concentrations bracketing $K_m$"
+        ],
         correctAnswer: 3,
         explanation:
           'Reliable estimates of both kinetic constants require initial velocities sampled across a range of [S] that brackets $K_m$ (well below up to saturating), so the curvature of the Michaelis-Menten plot is captured. A single low [S] or only sub-$K_m$ points constrain $K_m$ poorly and barely sample $V_{max}$. Letting reactions go to completion violates the initial-rate assumption, allowing substrate depletion and product inhibition to distort the measurement.',
@@ -164,23 +171,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'What is the primary purpose of including the rescue (R re-added) cell line?',
         options: [
-          'To test whether luciferase is toxic to the cells',
-          'To serve as a negative control with no R expression',
-          'To confirm that the changes seen in R-KO are specifically due to loss of R, not an off-target effect',
-          'To increase the amount of T mRNA for easier detection'],
+          "To test whether luciferase is toxic to the cells",
+          "To serve as a negative control with no R expression",
+          "To confirm the R-KO phenotype is truly caused by loss of R",
+          "To increase the amount of T mRNA for easier detection"
+        ],
         correctAnswer: 2,
         explanation:
-          'A rescue (complementation) line reintroduces the deleted gene; if the knockout phenotype reverses when R is restored, the phenotype is attributable to loss of R rather than to an unrelated mutation introduced during engineering or another off-target effect. It is not a no-R negative control (A is the opposite). It does not exist to boost T or to test luciferase toxicity.',
+          "A rescue (complementation) line reintroduces the deleted gene; if the knockout phenotype reverses when R is restored, the phenotype is attributable to loss of R rather than to an unrelated mutation introduced during engineering or another off-target effect. The rescue line expresses R, so it is the opposite of a no-R negative control. It does not exist to boost T mRNA levels or to test luciferase toxicity.",
         skill: 'Experimental controls',
       },
       {
         question:
           'The ChIP result (anti-R antibody pulls down the T promoter but not an unrelated promoter) most strongly supports that R:',
         options: [
-          'Degrades the T promoter region',
-          'Is exported from the nucleus in WT cells',
-          'Binds RNA polymerase but not DNA',
-          'Physically associates with the T promoter DNA in cells'],
+          "Degrades the T promoter region after binding it",
+          "Is exported from the nucleus in wild-type cells",
+          "Binds RNA polymerase but never promoter DNA itself",
+          "Physically associates with the T promoter DNA"
+        ],
         correctAnswer: 3,
         explanation:
           'ChIP crosslinks proteins to the DNA they occupy, then immunoprecipitates the protein and identifies the co-purifying DNA. Recovery of the T promoter (but not an unrelated promoter) by anti-R indicates R is bound at the T promoter in cells, consistent with direct, sequence-specific repression. It does not show binding to RNA polymerase, degradation of DNA (ChIP detects occupancy, not destruction), or nuclear export (which would oppose promoter binding).',
@@ -190,27 +199,28 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'The actin Western blot bands were equal across all lanes. What is the role of this measurement?',
         options: [
-          'It is a loading control showing equal protein was analyzed per lane',
-          'It proves that gene R is functional',
-          'It measures the activity of the luciferase reporter',
-          'It is the experimental variable of interest'],
+          "A loading control showing equal protein per lane",
+          "Evidence that the R gene is functional in these cells",
+          "A readout of luciferase reporter activity",
+          "The experimental variable the study manipulates"
+        ],
         correctAnswer: 0,
         explanation:
-          'Actin is an abundant, constitutively expressed housekeeping protein used as a loading control: equal actin bands confirm that comparable total protein was loaded in each lane, so differences in the R band reflect true expression differences rather than uneven loading. It is not the variable of interest, does not assess R function, and is unrelated to the luciferase readout.',
+          "Actin is an abundant, constitutively expressed housekeeping protein used as a loading control: equal actin bands confirm that comparable total protein was loaded in each lane, so differences in the R band reflect true expression differences rather than uneven loading. Actin levels say nothing about whether R is functional, actin is not the variable being manipulated, and it is unrelated to the luminescence readout.",
         skill: 'Experimental controls',
       },
       {
         question:
           'Suppose a new cell line expresses a mutant R protein that folds normally and is detected on the Western blot but cannot bind DNA. What would you most likely predict for the T mRNA and luciferase reporter in this line?',
         options: [
-          'T mRNA faint and reporter low, like wild-type',
-          'T mRNA strong and reporter high, like the R-knockout',
-          'T mRNA absent and reporter undetectable',
-          'R protein absent on the Western blot',
+          "T mRNA faint and reporter low, just as in wild-type cells",
+          "T mRNA strong and reporter high, just as in the R-knockout",
+          "T mRNA and reporter activity both undetectable",
+          "No R protein detectable on the Western blot of this line"
         ],
         correctAnswer: 1,
         explanation:
-          'Repression requires R to occupy the T promoter (shown by ChIP). A DNA-binding-dead mutant is present as protein but cannot dock at the promoter, so it cannot repress; functionally it phenocopies the knockout: high T mRNA and high reporter. The wild-type-like outcome requires functional repression, which this mutant lacks. T is not abolished. The protein is still expressed and folded, so it appears on the Western blot (D is wrong).',
+          "Repression requires R to occupy the T promoter, as the ChIP result shows. A DNA-binding-dead mutant is present as protein but cannot dock at the promoter, so it cannot repress and functionally phenocopies the knockout: high T mRNA and high reporter. A wild-type-like outcome would require functional repression, which this mutant lacks, and T is not abolished. Because the protein is still expressed and folds normally, it remains detectable on the Western blot.",
         skill: 'Mechanism application',
       },
     ],
@@ -254,10 +264,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'GLUT4 transports glucose by facilitated diffusion. Which statement about this process is correct?',
         options: [
-          'It pumps glucose using the energy of GTP hydrolysis',
-          'It moves glucose against its concentration gradient using ATP',
-          'It moves glucose down its concentration gradient without direct ATP hydrolysis at the transporter',
-          'It requires a sodium gradient to co-transport glucose'],
+          "It pumps glucose using the energy of GTP hydrolysis",
+          "It pumps glucose against its gradient using ATP",
+          "It moves glucose down its gradient without ATP input",
+          "It requires a sodium gradient to co-transport glucose"
+        ],
         correctAnswer: 2,
         explanation:
           'Facilitated diffusion is passive: a transporter provides a path for the solute to move down its electrochemical gradient, with no direct energy input at the transporter. The passage reinforces this, noting uptake of a non-metabolizable analog still occurs. ATP-driven pumping against a gradient describes primary active transport; sodium-coupled symport describes secondary active transport (e.g., SGLT); GTP-driven pumping is not how GLUT works.',
@@ -267,10 +278,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Insulin plus wortmannin reduced uptake nearly to basal levels. This is best explained by:',
         options: [
-          'Wortmannin directly blocking the GLUT4 pore',
-          'Wortmannin inhibiting PI3-kinase, blocking the signaling required for GLUT4 translocation',
-          'Wortmannin degrading the insulin receptor',
-          'Wortmannin increasing the glucose gradient',
+          "Wortmannin physically plugging the GLUT4 transporter pore",
+          "Wortmannin inhibiting PI3-kinase upstream of Akt",
+          "Wortmannin triggering insulin receptor degradation",
+          "Wortmannin steepening the glucose gradient inward"
         ],
         correctAnswer: 1,
         explanation:
@@ -281,10 +292,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Cytochalasin B (with insulin) drove uptake below even the basal level. The most direct interpretation is that cytochalasin B:',
         options: [
-          'Blocks the signaling cascade upstream of Akt',
-          'Inhibits glucose transport at the GLUT transporter itself',
-          'Increases the rate of glucose efflux only',
-          'Activates the insulin receptor',
+          "Blocks PI3-kinase signaling upstream of Akt",
+          "Inhibits glucose transport at the GLUT transporter itself",
+          "Selectively accelerates glucose efflux from the cell",
+          "Directly activates the insulin receptor kinase"
         ],
         correctAnswer: 1,
         explanation:
@@ -295,10 +306,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'That insulin-stimulated uptake still occurs with a non-metabolizable glucose analog argues against which idea?',
         options: [
-          'That Akt is required for GLUT4 translocation',
-          'That GLUT4 moves to the plasma membrane upon insulin signaling',
-          'That insulin acts through a receptor tyrosine kinase',
-          'That GLUT4 transport requires the cell to metabolize the glucose it imports'],
+          "That Akt kinase activity is required for GLUT4 translocation",
+          "That GLUT4 relocates to the plasma membrane upon insulin",
+          "That insulin signals through a receptor tyrosine kinase",
+          "That uptake requires the imported sugar be metabolized"
+        ],
         correctAnswer: 3,
         explanation:
           'A non-metabolizable analog cannot be phosphorylated/consumed downstream, yet it is still taken up, showing transport does not depend on subsequent metabolism of the imported sugar. The experiment does not contradict the receptor mechanism, the requirement for Akt, or GLUT4 translocation; those remain consistent with the rest of the data.',
@@ -308,13 +320,14 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Suppose a patient has a mutation that constitutively activates Akt independently of insulin. In their muscle cells without insulin, you would most likely predict:',
         options: [
-          'Elevated glucose uptake even without insulin, due to GLUT4 translocation',
-          'No glucose uptake under any condition',
-          'Uptake that responds only to wortmannin',
-          'Glucose uptake near basal because insulin is absent'],
+          "Elevated uptake without insulin, via GLUT4 translocation",
+          "No measurable glucose uptake under any condition tested here",
+          "Uptake that increases only when wortmannin is added",
+          "Basal uptake only, since insulin is not present"
+        ],
         correctAnswer: 0,
         explanation:
-          'Akt drives GLUT4 translocation, and constitutive Akt activity bypasses the need for upstream insulin signaling. So GLUT4 would reach the membrane and raise glucose uptake even without insulin. Basal-only uptake assumes Akt is off, which the mutation prevents. Uptake is not abolished. Wortmannin acts upstream of Akt, so an Akt downstream of it that is already constitutively active would not be rescued or revealed by wortmannin in the way described.',
+          "Akt drives GLUT4 translocation, so constitutive Akt activity bypasses the need for upstream insulin signaling: GLUT4 reaches the membrane and glucose uptake rises even with no insulin present. Basal-only uptake assumes Akt is off, which the mutation prevents, and uptake is certainly not abolished. Wortmannin acts on PI3-kinase upstream of Akt, so it can only lower uptake, and it cannot even do that in a cell whose Akt is already active independently of that step.",
         skill: 'Mechanism application',
       },
     ],
@@ -362,32 +375,43 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       {
         question:
           'Using Hardy-Weinberg with an affected frequency of 1/2,500, what is the frequency of the recessive allele q?',
-        options: ['1/2,500', '1/50', '1/25', '1/100'],
+        options: [
+          "0.0004 (1/2,500)",
+          "0.02 (1/50)",
+          "0.04 (1/25)",
+          "0.01 (1/100)"
+        ],
         correctAnswer: 1,
         explanation:
-          'Affected frequency $q^2 = 1/2500$, so $q = \\sqrt{1/2500} = 1/50 = 0.02$. 1/2,500 is $q^2$ itself, not $q$; 1/25 and 1/100 are arithmetic errors in taking the square root.',
+          "Affected frequency $q^2 = 1/2500$, so $q = \\sqrt{1/2500} = 1/50 = 0.02$. The value 0.0004 is $q^2$ itself rather than $q$. The value 0.04 is $2q$, and 0.01 would square to 1/10,000 rather than 1/2,500; both are errors in taking the square root.",
         skill: 'Population genetics',
       },
       {
         question:
           'Given $q = 1/50$, the estimated carrier (heterozygote) frequency $2pq$ in this population is approximately:',
-        options: [ 'About 1 in 2,500', 'About 1 in 50', '0.5','About 1 in 25'],
+        options: [
+          "About 1 in 2,500",
+          "About 1 in 50",
+          "About 1 in 2",
+          "About 1 in 25"
+        ],
         correctAnswer: 3,
         explanation:
-          'With $q = 0.02$, $p = 0.98$, so $2pq = 2(0.98)(0.02) = 0.0392 \\approx 0.04$, i.e., about 1 in 25. 1 in 2,500 is the affected frequency; 1 in 50 is $q$ itself; 0.5 is far too high.',
+          "With $q = 0.02$, $p = 0.98$, so $2pq = 2(0.98)(0.02) = 0.0392 \\approx 0.04$, i.e., about 1 in 25. About 1 in 2,500 is the affected frequency; about 1 in 50 is $q$ itself; about 1 in 2 (0.5) is far too high for a heterozygote frequency at this allele frequency.",
         skill: 'Population genetics',
       },
       {
         question:
           'Which assumption, if violated, would most directly undermine using the $q^2 = 1/2,500$ relationship to estimate allele frequencies in this population?',
         options: [
-          'Mating is random with respect to the locus and there is no selection',
-          'Affected individuals are detectable at birth',
-          'The locus has exactly two alleles',
-          'The disorder is autosomal rather than X-linked'],
+          "Mating is random with respect to the locus and no selection acts",
+          "Affected individuals are detectable at birth by screening",
+          "The locus has exactly two alleles in this population",
+          "Carriers (Qq) show no clinical signs of the condition"
+        ],
         correctAnswer: 0,
         explanation:
-          'The $q^2$ relationship is the Hardy-Weinberg result, which assumes random mating and no selection (plus large population size, no migration, no new mutation). Violating random mating or introducing selection breaks the predicted genotype proportions. Autosomal inheritance and a two-allele locus are background conditions consistent with the model rather than violations, and detectability at birth is about measurement, not the equilibrium assumptions.',
+          'The $q^2$ relationship is the Hardy-Weinberg result, which assumes random mating and no selection (plus large population size, no migration, no new mutation). Violating random mating or introducing selection breaks the predicted genotype proportions. A two-allele locus is a background condition consistent with the model rather than a violation, whether carriers show symptoms does not change the fact that only qq individuals are affected, and detectability at birth is about measurement, not the equilibrium assumptions.',
         skill: 'Population genetics',
       },
     ],
@@ -432,13 +456,14 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'SGLT-mediated glucose reabsorption is described as secondary active transport. What does the energy for moving glucose against its gradient ultimately come from?',
         options: [
-          'GTP hydrolysis at the apical membrane',
-          'Direct ATP hydrolysis by SGLT itself',
-          'The sodium gradient maintained by the $\\text{Na}^+/\\text{K}^+$-ATPase',
-          'The glucose concentration gradient alone'],
+          "GTP hydrolysis by a pump in the apical cell membrane",
+          "Direct ATP hydrolysis by the SGLT carrier protein itself",
+          "The inward sodium gradient, which is built using ATP",
+          "The glucose concentration gradient across the membrane"
+        ],
         correctAnswer: 2,
         explanation:
-          'In secondary active transport, the transporter uses the energy stored in an ion gradient rather than hydrolyzing ATP itself. SGLT couples glucose uptake to sodium moving down its gradient, and that sodium gradient is built by the ATP-consuming $\\text{Na}^+/\\text{K}^+$-ATPase. So ATP is used indirectly. SGLT does not hydrolyze ATP directly, glucose moves against — not down — its own gradient, and GTP is not the source.',
+          "In secondary active transport the carrier spends no ATP itself; it harnesses energy stored in an ion gradient. SGLT couples glucose uptake to sodium moving down its gradient, and that sodium gradient is built by the ATP-consuming $\\text{Na}^+/\\text{K}^+$-ATPase, so ATP powers the process indirectly. SGLT hydrolyzes neither ATP nor GTP itself, and glucose here moves against, not down, its own concentration gradient.",
         skill: 'Membrane transport',
       },
       {
@@ -454,10 +479,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Why does the filtered glucose load increase linearly with plasma glucose across the entire range tested, while reabsorption plateaus?',
         options: [
-          'Filtration depends on plasma concentration and is not transporter-limited in this range, whereas reabsorption is limited by a finite number of SGLT carriers',
-          'Reabsorption is faster than filtration at all plasma levels',
-          'Excretion is constant regardless of plasma glucose',
-          'Filtration uses the same saturable transporters as reabsorption'],
+          "Filtration is not carrier-mediated, but reabsorption is",
+          "Reabsorption outpaces filtration at all plasma levels tested",
+          "Excretion stays constant regardless of plasma glucose",
+          "Filtration uses the same saturable SGLT carriers"
+        ],
         correctAnswer: 0,
         explanation:
           'Glomerular filtration of glucose is roughly the product of GFR and plasma glucose; it is not carrier-mediated and so is not saturable in this range, rising linearly. Reabsorption, by contrast, depends on a finite pool of SGLT transporters and therefore saturates at the $T_m$. Filtration does not use the SGLT transporters. Reabsorption is not always faster (it plateaus while filtration keeps rising). Excretion clearly increases above threshold.',
@@ -467,23 +493,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Glucose begins to appear in the urine once plasma glucose exceeds about 300 mg/dL. The best explanation is that:',
         options: [
-          'The $\\text{Na}^+/\\text{K}^+$-ATPase shuts off',
-          'The glomerulus stops filtering glucose above this level',
-          'The filtered glucose load begins to exceed the reabsorptive $T_m$, so the excess is excreted',
-          'SGLT transporters reverse direction and secrete glucose'],
+          "The $\\text{Na}^+/\\text{K}^+$-ATPase shuts off at this level",
+          "The glomerulus stops filtering glucose above this level",
+          "The filtered glucose load now exceeds the reabsorptive $T_m$",
+          "SGLT reverses direction and secretes glucose into urine"
+        ],
         correctAnswer: 2,
         explanation:
-          'Once the filtered load exceeds what the saturated SGLT system can reclaim (the $T_m$), the unreabsorbed glucose spills into the urine (glucosuria). The glomerulus keeps filtering more, not less (A is wrong). SGLT does not reverse to actively secrete glucose. The pump is not described as shutting off; reabsorption simply maxes out.',
+          'Once the filtered load exceeds what the saturated SGLT system can reclaim (the $T_m$), the unreabsorbed glucose spills into the urine (glucosuria). The glomerulus keeps filtering more, not less. SGLT does not reverse to actively secrete glucose. The pump is not described as shutting off; reabsorption simply maxes out.',
         skill: 'Renal physiology',
       },
       {
         question:
           'A drug that inhibits SGLT in the proximal tubule (an SGLT2 inhibitor) is given. What would you most likely predict at a normal plasma glucose of 100 mg/dL?',
         options: [
-          'No change, because reabsorption is already maximal at 100 mg/dL',
-          'Increased glomerular filtration rate of glucose',
-          'Increased glucose reabsorption and no urinary glucose',
-          'Decreased glucose reabsorption and appearance of glucose in the urine even at this normal plasma level'],
+          "No change, since reabsorption is already maximal at 100 mg/dL",
+          "A rise in the glomerular filtration rate of glucose",
+          "Greater glucose reabsorption and no urinary glucose",
+          "Less reabsorption, with glucose appearing in the urine"
+        ],
         correctAnswer: 3,
         explanation:
           'Blocking SGLT reduces the tubule’s capacity to reabsorb filtered glucose, so glucose escapes into the urine even when plasma glucose is normal and well below the usual threshold. Increased reabsorption is the opposite of what the drug does. At 100 mg/dL reabsorption was complete but not maximal (the $T_m$ is 320; far above the 125 mg/min reabsorbed), so blocking the transporters does change things rather than having no effect. Inhibiting reabsorption does not raise glucose filtration.',
@@ -533,19 +561,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Antibiotic X caused lysis when added to exponentially growing cells but had little effect on stationary-phase cells. The best explanation is that:',
         options: [
-          'Cell-wall synthesis inhibitors are most lethal when cells are actively building new cell wall during growth',
-          'The drug is destroyed in stationary phase',
-          'Stationary cells grow faster than exponential cells',
-          'Stationary cells lack a cell wall'],
+          "Cell-wall inhibitors kill best the cells building new wall",
+          "The drug is chemically destroyed in stationary phase",
+          "Stationary-phase cells divide faster than log-phase cells",
+          "Stationary-phase cells have shed their peptidoglycan wall"
+        ],
         correctAnswer: 0,
         explanation:
-          'A peptidoglycan-crosslinking inhibitor undermines new cell-wall construction; it kills best when cells are actively dividing and synthesizing wall, leaving them osmotically fragile and prone to lysis. Stationary cells are not actively building much new wall, so the drug has little to disrupt. Stationary cells still have a wall (A is false), the drug is not described as degraded, and stationary cells grow slower, not faster.',
+          "A peptidoglycan-crosslinking inhibitor undermines new cell-wall construction, so it kills best when cells are actively dividing and laying down new wall, leaving them osmotically fragile and prone to lysis. Stationary-phase cells build little new wall, so the drug has little to disrupt, but they still retain a wall and they divide more slowly, not faster, than log-phase cells. Nothing in the data suggests the drug itself is degraded.",
         skill: 'Antibiotic mechanism',
       },
       {
         question:
           'Antibiotic Y halted growth without lysis, and growth resumed after washout. This identifies antibiotic Y as:',
-        options: ['Bactericidal', 'Bacteriostatic', 'A cell-wall inhibitor', 'A DNA gyrase inhibitor'],
+        options: [
+          "A bactericidal agent",
+          "A bacteriostatic agent",
+          "A cell-wall synthesis inhibitor",
+          "A DNA gyrase inhibitor"
+        ],
         correctAnswer: 1,
         explanation:
           'A drug that arrests growth but leaves cells viable, allowing recovery once removed, is bacteriostatic; the passage labels Y exactly this way and the washout recovery confirms cells were not killed. Bactericidal would kill, preventing recovery. It binds the 30S ribosome, not the cell wall or DNA gyrase.',
@@ -555,10 +589,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'The plateau in the untreated control culture (stationary phase) is best attributed to:',
         options: [
-          'Loss of the ability to perform protein synthesis',
-          'A fixed genetic limit on cell number unrelated to the medium',
-          'Nutrient depletion and accumulation of waste products limiting net growth',
-          'The cells dying as fast as they divide from the start'],
+          "The cells permanently lose the ability to make protein",
+          "A fixed genetic ceiling on cell number, set by the strain itself",
+          "Nutrient depletion and waste accumulation limiting growth",
+          "Cells dying as fast as they divide from the very start"
+        ],
         correctAnswer: 2,
         explanation:
           'Stationary phase reflects the environment: as nutrients run out and toxic waste builds up, the division rate falls to match the death rate, so net growth plateaus (as the passage states). It is not a fixed genetic ceiling independent of the medium. Cells do not die as fast as they divide from the start (that would prevent the exponential phase). Protein synthesis is not abolished.',
@@ -568,10 +603,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'What is the purpose of the sterile, uninoculated medium blank?',
         options: [
-          'To provide extra nutrients to the experimental cultures',
-          'To test the antibiotic on sterile medium',
-          'To measure the maximum growth rate',
-          'To control for any $\\text{OD}_{600}$ signal not caused by bacterial growth (e.g., the medium itself)'],
+          "To supply extra nutrients to the experimental cultures",
+          "To test the antibiotics against cell-free sterile medium",
+          "To establish the maximum attainable growth rate",
+          "To show that $\\text{OD}_{600}$ rises only from bacterial growth"
+        ],
         correctAnswer: 3,
         explanation:
           'An uninoculated blank establishes the baseline absorbance and confirms that increases in $\\text{OD}_{600}$ are due to bacterial growth rather than the medium, turbidity from reagents, or contamination. It does not measure growth rate, feed the cultures, or test drug effects (there are no bacteria to affect).',
@@ -581,10 +617,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'If antibiotic Y (the bacteriostatic 30S inhibitor) and antibiotic X (the cell-wall inhibitor) were added together to an exponential culture, which prediction is most consistent with their mechanisms?',
         options: [
-          'Y could reduce X’s killing because X requires active cell-wall synthesis, which Y’s growth arrest curtails',
-          'Y would enhance lysis by X because both target the cell wall',
-          'Neither drug would have any effect in combination',
-          'X would become bacteriostatic and Y bactericidal',
+          "Y would blunt X's killing by arresting cell growth",
+          "Y would enhance lysis, since both drugs attack the cell wall",
+          "Neither drug would act, because they inactivate each other",
+          "X would turn bacteriostatic and Y would turn bactericidal"
         ],
         correctAnswer: 0,
         explanation:
@@ -633,10 +669,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Why does oligomycin, which blocks ATP synthase, decrease oxygen consumption in coupled mitochondria?',
         options: [
-          'It directly inhibits Complex IV from binding oxygen',
-          'Blocking proton return through ATP synthase raises the gradient, and the back-pressure slows electron transport and thus oxygen use',
-          'It destroys the inner mitochondrial membrane',
-          'It uncouples electron transport from ATP synthesis',
+          "It blocks Complex IV from binding molecular oxygen directly",
+          "Back-pressure from the proton gradient slows the chain",
+          "It dissolves the inner mitochondrial membrane",
+          "It uncouples electron transport from ATP synthesis"
         ],
         correctAnswer: 1,
         explanation:
@@ -647,10 +683,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'After oligomycin, adding the uncoupler FCCP raised OCR above baseline. The best explanation is that FCCP:',
         options: [
-          'Inhibits Complex III directly',
-          'Repairs ATP synthase so ATP synthesis resumes',
-          'Provides an alternative route for protons across the membrane, dissipating the gradient and relieving back-pressure so electron transport accelerates',
-          'Donates extra electrons to Complex I'],
+          "Inhibits Complex III in the same way antimycin A does",
+          "Repairs ATP synthase so ATP synthesis resumes",
+          "Carries protons back in, collapsing the proton gradient",
+          "Donates extra electrons directly to Complex I"
+        ],
         correctAnswer: 2,
         explanation:
           'An uncoupler shuttles protons across the inner membrane independent of ATP synthase, collapsing the gradient. Removing the back-pressure lets the ETC run fast (high OCR) even though ATP synthase is still blocked by oligomycin—electron flow is now uncoupled from ATP synthesis. It does not repair ATP synthase, supply electrons, or inhibit Complex III (that is antimycin A).',
@@ -660,10 +697,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'After FCCP, why is the electron transport occurring no longer productive for ATP synthesis?',
         options: [
-          'NADH can no longer be oxidized by Complex I',
-          'ATP synthase is now running in reverse to hydrolyze ATP',
-          'Oxygen is no longer the terminal electron acceptor',
-          'The proton gradient that ATP synthase requires is being dissipated by the uncoupler'],
+          "Complex I can no longer accept electrons from NADH",
+          "ATP synthase now runs backward, hydrolyzing ATP",
+          "Oxygen has been replaced as the terminal acceptor",
+          "The uncoupler dissipates the proton gradient"
+        ],
         correctAnswer: 3,
         explanation:
           'ATP synthase needs the proton-motive force to drive ATP synthesis. The uncoupler short-circuits that gradient, so even rapid electron flow and proton pumping cannot build the gradient ATP synthase needs; the energy is released as heat instead. Oxygen is still the terminal acceptor (OCR is high). NADH is still oxidized (electrons are flowing). The drop in ATP is due to gradient dissipation, not ATP synthase reversal.',
@@ -673,10 +711,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Rotenone plus antimycin A drove OCR nearly to zero. This occurs because:',
         options: [
-          'Electron flow through the chain is blocked at Complexes I and III, so electrons cannot reach oxygen at Complex IV',
-          'The mitochondria run out of oxygen',
-          'The uncoupler is no longer present',
-          'ATP synthase is blocked, raising the gradient'],
+          "Blocks at Complexes I and III bar electrons from oxygen",
+          "The mitochondria exhaust the oxygen present in the chamber",
+          "The uncoupler FCCP is no longer present in the assay medium",
+          "ATP synthase is blocked, so the proton gradient builds up"
+        ],
         correctAnswer: 0,
         explanation:
           'Rotenone blocks Complex I and antimycin A blocks Complex III; with the chain interrupted upstream of Complex IV, electrons never reach oxygen, so oxygen consumption collapses to near zero. ATP synthase blockade describes oligomycin and only partially lowers OCR. The mitochondria are not depleted of oxygen by the inhibitors. The effect is due to the inhibitors, not the absence of FCCP (which would have raised OCR).',
@@ -685,7 +724,12 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       {
         question:
           'Based on these results, which compound would most directly cause electron transport to continue rapidly while producing heat instead of ATP in intact cells?',
-        options: ['Oligomycin', 'FCCP', 'Rotenone', 'Antimycin A'],
+        options: [
+          "Oligomycin, an ATP synthase blocker",
+          "FCCP, a protonophore uncoupler",
+          "Rotenone, a Complex I inhibitor",
+          "Antimycin A, a Complex III inhibitor"
+        ],
         correctAnswer: 1,
         explanation:
           'An uncoupler like FCCP lets the ETC run fast (high OCR) while the energy of the dissipated proton gradient is released as heat rather than captured as ATP—exactly the thermogenic, uncoupled state. Oligomycin slows electron transport. Rotenone and antimycin A halt electron transport, so they cannot keep it running.',
@@ -725,10 +769,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'In SDS-PAGE, proteins separate primarily on the basis of which property?',
         options: [
-          'Their three-dimensional folded shape',
-          'Their native charge at neutral pH',
-          'Their mass (polypeptide chain length), because SDS imposes a uniform charge-to-mass ratio',
-          'Their isoelectric point'],
+          "Their folded three-dimensional shape in solution",
+          "Their intrinsic native charge at neutral pH in buffer",
+          "Their mass, since SDS equalizes charge-to-mass",
+          "Their isoelectric point along a pH gradient in a gel"
+        ],
         correctAnswer: 2,
         explanation:
           'SDS denatures proteins and coats them with negative charge in proportion to chain length, giving an approximately constant charge-to-mass ratio so migration depends almost entirely on mass, with smaller chains moving farther. Native charge and pI are what isoelectric focusing exploits, not SDS-PAGE. Folded shape is largely abolished by SDS denaturation.',
@@ -738,10 +783,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Reducing SDS-PAGE gave 30 kDa and 20 kDa bands, native chromatography gave ~100 kDa, and non-reducing SDS-PAGE gave a 50 kDa band. The most consistent quaternary structure for protein P is:',
         options: [
-          'A homodimer of two identical 50 kDa chains',
-          'A monomer of 50 kDa',
-          'A single 100 kDa polypeptide',
-          'A heterotetramer of two 30 kDa and two 20 kDa subunits, where each 30 kDa and 20 kDa pair is disulfide-linked'],
+          "A homodimer built from two identical 50 kDa chains",
+          "A 50 kDa monomer with one internal disulfide bond",
+          "One continuous 100 kDa polypeptide with no subunits",
+          "A heterotetramer of two 30 kDa and two 20 kDa chains"
+        ],
         correctAnswer: 3,
         explanation:
           'Reducing SDS-PAGE shows the smallest covalent units are 30 and 20 kDa. Non-reducing SDS-PAGE shows a 50 kDa species, meaning a 30 kDa and a 20 kDa chain are joined by a disulfide bond (30 + 20 = 50). Native mass ~100 kDa = two such 50 kDa disulfide-linked pairs, i.e., a heterotetramer (2 × 30 + 2 × 20 = 100). A single chain and a 50 kDa monomer cannot give two reduced bands; a homodimer of identical 50 kDa chains would not yield two different reduced subunit sizes.',
@@ -751,10 +797,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Why did protein P migrate as a single 50 kDa band on non-reducing SDS-PAGE but as two bands when reducing agent was added?',
         options: [
-          'Reducing agent breaks the disulfide bond holding the 30 kDa and 20 kDa chains together, releasing them as separate bands',
-          'Without reducing agent, SDS cannot bind the protein',
-          'Reducing agent changes the proteins’ isoelectric points',
-          'Reducing agent cleaves peptide bonds within each chain'],
+          "Reducing agent breaks the interchain disulfide bond",
+          "Without reductant, SDS cannot coat the polypeptides",
+          "Reducing agent shifts each subunit's isoelectric point",
+          "Reducing agent cleaves peptide bonds within the chains"
+        ],
         correctAnswer: 0,
         explanation:
           'Disulfide bonds covalently tether the 30 kDa and 20 kDa chains into one 50 kDa unit; reducing agent ($\\beta$-mercaptoethanol) cleaves these S–S bonds, freeing the two chains so they run separately. Reducing agents break disulfides, not peptide bonds. SDS still binds either way, and reduction does not redefine pI in this context.',
@@ -764,10 +811,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'At a buffer pH of 7.0, what is the expected net charge of the isolated 30 kDa subunit (pI 5.0) compared with the isolated 20 kDa subunit (pI 8.5)?',
         options: [
-          'Both are positively charged',
-          'The 30 kDa subunit is negatively charged and the 20 kDa subunit is positively charged',
-          'Both are negatively charged',
-          'The 30 kDa subunit is positively charged and the 20 kDa subunit is negatively charged',
+          "Both subunits carry a net positive charge at pH 7.0",
+          "The 30 kDa subunit is negative, the 20 kDa positive",
+          "Both subunits carry a net negative charge at pH 7.0",
+          "The 30 kDa subunit is positive, the 20 kDa negative"
         ],
         correctAnswer: 1,
         explanation:
@@ -778,24 +825,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Size-exclusion chromatography eluted protein P as a single peak. In this method, which molecules elute from the column first?',
         options: [
-          'The smallest molecules, because they pass through fastest',
-          'The largest molecules, because they are excluded from the pores and take a shorter path',
-          'The most positively charged molecules',
-          'The molecules with the highest pI',
+          "The smallest molecules, which slip through the gel fastest",
+          "The largest molecules, excluded from the beads' pores",
+          "The molecules carrying the most positive charge in the sample",
+          "The molecules with the highest isoelectric point value"
         ],
         correctAnswer: 1,
         explanation:
-          'Size-exclusion (gel-filtration) beads have pores that small molecules enter, lengthening their path and retarding them; large molecules are excluded from the pores and travel the shorter route around the beads, eluting first. Smallest-first is backward. The separation is by size/hydrodynamic radius, not charge or pI (D).',
+          "Size-exclusion (gel-filtration) beads have pores that small molecules enter, lengthening their path and retarding them; large molecules are excluded from the pores and travel the shorter route around the beads, eluting first. Smallest-first is exactly backward. The separation depends on size and hydrodynamic radius, not on net charge or isoelectric point.",
         skill: 'Molecular techniques',
       },
       {
         question:
           'Which result most directly establishes that protein P is a multi-subunit (oligomeric) protein rather than a single polypeptide?',
         options: [
-          'The focusing of a band at pH 5.0',
-          'The native mass of ~100 kDa alone',
-          'The appearance of two distinct bands (30 and 20 kDa) on reducing SDS-PAGE',
-          'The single peak in size-exclusion chromatography'],
+          "A single focused band at pH 5.0 in isoelectric focusing",
+          "The native mass of about 100 kDa, taken by itself",
+          "Two distinct bands, 30 and 20 kDa, on reducing SDS-PAGE",
+          "The single peak in size-exclusion chromatography"
+        ],
         correctAnswer: 2,
         explanation:
           'Reducing SDS-PAGE fully dissociates a protein into its constituent polypeptide chains; two distinct bands prove there are at least two different polypeptides, so P cannot be a single chain. Native mass alone could in principle be one large chain. A single SEC peak shows one complex but not how many chains compose it. A single pI band characterizes one subunit, not the oligomeric state.',
@@ -834,10 +882,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'PCR requires a heat-stable DNA polymerase (e.g., Taq) because each cycle includes a step that would denature an ordinary polymerase. That step is:',
         options: [
-          'Annealing of primers at ~55 °C',
-          'Denaturation of the template at ~95 °C',
-          'Extension by the polymerase at ~72 °C',
-          'Loading the sample onto the gel',
+          "Annealing of the primers at about 55 °C",
+          "Denaturation of the template at 95 °C",
+          "Extension by the polymerase at 72 °C",
+          "Loading the samples onto the agarose gel"
         ],
         correctAnswer: 1,
         explanation:
@@ -857,24 +905,25 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'Based on the band pattern, what is the genotype of the patient of unknown status?',
         options: [
-          'Homozygous wild-type',
-          'Heterozygous',
-          'Homozygous mutant',
-          'Cannot be determined from these data',
+          "Homozygous wild-type at this site",
+          "Heterozygous at this site",
+          "Homozygous mutant at this site",
+          "Indeterminate from these data"
         ],
         correctAnswer: 2,
         explanation:
-          'The patient shows only the 250 bp and 150 bp fragments and no uncut 400 bp band, matching the homozygous mutant control: both alleles carry the HinfI site and are fully cut. A heterozygote would show all three bands (one allele cut, one uncut); homozygous wild-type would show only 400 bp. The pattern is unambiguous (so D is wrong).',
+          "The patient shows only the 250 bp and 150 bp fragments and no uncut 400 bp band, matching the homozygous mutant control: both alleles carry the HinfI site and are fully cut. A heterozygote would show all three bands (one allele cut, one uncut), and a homozygous wild-type would show only 400 bp. The pattern is therefore unambiguous rather than indeterminate.",
         skill: 'Data interpretation',
       },
       {
         question:
           'The heterozygote lane shows 400 bp, 250 bp, AND 150 bp bands. Why are all three present?',
         options: [
-          'One allele lacks the HinfI site (uncut, 400 bp) while the other allele is cut into 250 and 150 bp',
-          'PCR amplified an extra contaminating fragment',
-          'The 400 bp band is the size ladder',
-          'The enzyme partially digested every molecule'],
+          "One allele lacks the HinfI site; the other is cut",
+          "PCR amplified an extra contaminating fragment",
+          "The 400 bp band comes from the DNA size ladder",
+          "HinfI digested every molecule only partially"
+        ],
         correctAnswer: 0,
         explanation:
           'A heterozygote carries one wild-type allele (no site, stays 400 bp) and one mutant allele (cut to 250 + 150 bp), so all three fragments appear together. This is full digestion of one allele, not partial digestion of all molecules. The pattern is expected from the two alleles, not contamination, and the 400 bp band is patient DNA, not the ladder.',
@@ -884,10 +933,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'What is the purpose of the no-template (water) control, which showed no bands?',
         options: [
-          'To estimate fragment sizes',
-          'To detect contamination of PCR reagents with stray DNA, which would produce spurious bands',
-          'To serve as the homozygous wild-type reference',
-          'To measure the efficiency of HinfI digestion',
+          "To estimate the sizes of the digested DNA fragments",
+          "To detect stray DNA contaminating the PCR reagents",
+          "To serve as the homozygous wild-type reference lane",
+          "To gauge how completely HinfI cut the amplified products"
         ],
         correctAnswer: 1,
         explanation:
@@ -945,31 +994,32 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'The primary response is dominated by IgM, which appears first; the secondary (memory) response is dominated by high-affinity IgG produced rapidly and to higher titer, as the data show (IgG peaks at 9,600 after the boost). The reversed assignment and the IgE/IgA and IgA/IgM options (D) do not match the classic primary-IgM/secondary-IgG pattern.',
+          "The primary response is dominated by IgM, which appears first; the secondary (memory) response is dominated by high-affinity IgG produced rapidly and to higher titer, as the data show (IgG peaks at 9,600 after the boost). The reversed IgG-then-IgM assignment and the IgE/IgA and IgA/IgM pairings do not match the classic primary-IgM, secondary-IgG pattern.",
         skill: 'Adaptive immunity',
       },
       {
         question:
           'The post-booster IgG response was faster and reached a far higher titer than the primary IgG response. This is best explained by:',
         options: [
-          'The innate immune system remembering the antigen',
-          'Memory B cells generated during the primary response enabling a rapid, robust secondary response',
-          'A reduction in the antigen dose at the booster',
-          'Loss of antigen specificity after the booster',
+          "Innate immune cells remembering the antigen",
+          "Memory B cells formed in the primary response",
+          "A smaller antigen dose given at the booster",
+          "Loss of antigen specificity after the booster"
         ],
         correctAnswer: 1,
         explanation:
-          'Immunological memory resides in long-lived memory B (and T) cells produced during the primary response; on re-exposure they proliferate and differentiate quickly into plasma cells, giving the faster, higher-affinity, higher-titer IgG secondary response. The innate system does not generate this classical antigen-specific memory. The booster used the same antigen (and specificity is retained, ruling out C and D).',
+          "Immunological memory resides in long-lived memory B (and T) cells produced during the primary response; on re-exposure they proliferate and differentiate quickly into plasma cells, giving the faster, higher-affinity, higher-titer secondary IgG response. The innate system does not generate this classical antigen-specific memory. The booster used the same antigen at the same dose, and specificity is retained rather than lost.",
         skill: 'Immunological memory',
       },
       {
         question:
           'In the direct ELISA described, what produces the measurable signal?',
         options: [
-          'Fluorescence of the antigen itself',
-          'Radioactive decay of a labeled antigen',
-          'An enzyme conjugated to the detection antibody converts a substrate into a colored product',
-          'Agglutination of red blood cells'],
+          "Intrinsic fluorescence of the immobilized antigen",
+          "Radioactive decay of an isotope-labeled antigen",
+          "An enzyme on the detection antibody colors a substrate",
+          "Agglutination of red blood cells added to the well"
+        ],
         correctAnswer: 2,
         explanation:
           'ELISA reads out bound antibody through an enzyme linked to the detection (secondary) antibody; the enzyme converts a substrate into a colored product whose intensity is proportional to the amount of bound antibody. It is enzymatic/colorimetric, not radioactive, not hemagglutination, and the antigen is not intrinsically fluorescent in this format.',
@@ -979,10 +1029,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'What is the purpose of the control group immunized with an unrelated antigen?',
         options: [
-          'To measure the enzyme activity of the ELISA substrate',
-          'To provide memory cells to the experimental group',
-          'To boost the test antigen response',
-          'To confirm that the measured antibody rise is specific to the test antigen, not a nonspecific reaction'],
+          "To measure the enzyme activity of the ELISA substrate",
+          "To supply memory cells to the experimental group",
+          "To amplify the response to the test antigen",
+          "To show the antibody rise is antigen-specific"
+        ],
         correctAnswer: 3,
         explanation:
           'A group given an unrelated antigen should not develop antibodies that bind the test antigen; its flat titer confirms that the signal in the experimental group reflects a specific response to the test antigen rather than nonspecific or cross-reactive binding. It does not boost, measure substrate kinetics, or share cells with the experimental group.',
@@ -992,14 +1043,14 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         question:
           'B cells and T cells both mediate adaptive immunity. Which statement correctly distinguishes a key function?',
         options: [
-          'B cells secrete antibodies; cytotoxic T cells kill infected host cells',
-          'B cells directly engulf pathogens as professional phagocytes; T cells secrete antibodies',
-          'Both B and T cells secrete antibodies in equal amounts',
-          'T cells provide humoral immunity while B cells provide all cell-mediated immunity',
+          "B cells secrete antibodies; cytotoxic T cells kill infected cells",
+          "B cells are professional phagocytes; T cells secrete antibodies",
+          "B cells and T cells both secrete antibodies in equal amounts",
+          "T cells mediate humoral and B cells cell-mediated immunity"
         ],
         correctAnswer: 0,
         explanation:
-          'B cells (as plasma cells) secrete antibodies, the basis of humoral immunity; cytotoxic (CD8+) T cells recognize and kill virus-infected or abnormal host cells, a core of cell-mediated immunity. T cells do not secrete antibodies (C are wrong), and the humoral/cell-mediated assignment in D is reversed.',
+          "B cells, as plasma cells, secrete antibodies, the basis of humoral immunity; cytotoxic (CD8+) T cells recognize and kill virus-infected or abnormal host cells, a core of cell-mediated immunity. T cells never secrete antibody, so any option assigning antibody production to them is wrong, and B cells are antigen-presenting cells rather than professional phagocytes of the macrophage or neutrophil type. The humoral and cell-mediated assignments in the last option are reversed.",
         skill: 'Adaptive immunity',
       },
     ],
@@ -1014,13 +1065,14 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'A peptide bond forms between the carboxyl group of one amino acid and the amino group of another. What type of reaction creates this bond, and what small molecule is released?',
     options: [
-      'Condensation (dehydration), releasing $\\text{H}_2\\text{O}$',
-      'Condensation, releasing $\\text{CO}_2$',
-      'Reduction, releasing $\\text{O}_2$',
-      'Hydrolysis, releasing $\\text{H}_2\\text{O}$'],
+      "Condensation, releasing $\\text{H}_2\\text{O}$",
+      "Condensation, releasing $\\text{CO}_2$ instead",
+      "Reduction, which releases molecular $\\text{O}_2$",
+      "Hydrolysis, which consumes $\\text{H}_2\\text{O}$"
+    ],
     correctAnswer: 0,
     explanation:
-      'Peptide bond formation is a condensation (dehydration) reaction: the carboxyl and amino groups join with loss of a water molecule. Hydrolysis is the reverse, adding water to break the bond. No $\\text{CO}_2$ or $\\text{O}_2$ is released in peptide bond formation.',
+      'Peptide bond formation is a condensation (dehydration) reaction: the carboxyl and amino groups join with loss of a water molecule. Hydrolysis does consume water, but it breaks a peptide bond rather than forming one. No $\\text{CO}_2$ or $\\text{O}_2$ is released in peptide bond formation.',
     skill: 'Amino acids and proteins',
   },
   {
@@ -1042,10 +1094,11 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'A man with hemophilia A (X-linked recessive) has children with a woman who is not a carrier and is unaffected. What is expected for their children?',
     options: [
-      'All daughters will be affected',
-      'All sons will be affected',
-      'All daughters will be carriers; sons will be unaffected',
-      'Half of all children will be affected regardless of sex'],
+      "All daughters affected and all sons unaffected",
+      "All sons affected and all daughters unaffected",
+      "All daughters carriers, all sons unaffected",
+      "Half of all children affected, regardless of sex"
+    ],
     correctAnswer: 2,
     explanation:
       'The father is $X^h Y$; the mother is $X^H X^H$. Daughters receive the father’s $X^h$ and a maternal $X^H$, so all are unaffected carriers ($X^H X^h$). Sons receive the father’s Y and a maternal $X^H$, so all are $X^H Y$, unaffected. Sons are not affected, affection is not 50% across both sexes, and daughters are carriers, not affected.',
@@ -1058,10 +1111,11 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'Under anaerobic conditions in human muscle, pyruvate is converted to lactate by lactate dehydrogenase. What is the primary metabolic purpose of this step?',
     options: [
-      'To produce $\\text{CO}_2$ for the bicarbonate buffer',
-      'To synthesize acetyl-CoA for the TCA cycle',
-      'To generate additional ATP directly from lactate',
-      'To regenerate $\\text{NAD}^+$ so that glycolysis can continue'],
+      "To make $\\text{CO}_2$ for the bicarbonate buffer",
+      "To supply acetyl-CoA to the TCA cycle",
+      "To generate extra ATP directly from lactate",
+      "To regenerate $\\text{NAD}^+$ for glycolysis"
+    ],
     correctAnswer: 3,
     explanation:
       'Reducing pyruvate to lactate oxidizes $\\text{NADH}$ back to $\\text{NAD}^+$. Glycolysis needs $\\text{NAD}^+$ at the glyceraldehyde-3-phosphate dehydrogenase step, so regenerating it lets glycolysis (and its net ATP production) keep running without oxygen. The lactate step itself yields no ATP and produces no $\\text{CO}_2$. Acetyl-CoA formation is the aerobic fate via pyruvate dehydrogenase, not this anaerobic step.',
@@ -1074,14 +1128,14 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'The $\\text{Na}^+/\\text{K}^+$-ATPase moves ions across the plasma membrane. Which statement accurately describes its action per cycle?',
     options: [
-      'It pumps 3 $\\text{Na}^+$ out and 2 $\\text{K}^+$ in, using ATP, against their gradients',
-      'It pumps 2 $\\text{Na}^+$ out and 3 $\\text{K}^+$ in, without using ATP',
-      'It moves both ions down their gradients by facilitated diffusion',
-      'It exchanges $\\text{Na}^+$ for $\\text{Ca}^{2+}$ using the sodium gradient',
+      "It pumps 3 $\\text{Na}^+$ out and 2 $\\text{K}^+$ in per ATP",
+      "It pumps 2 $\\text{Na}^+$ out and 3 $\\text{K}^+$ in without ATP",
+      "It lets both ions move down their gradients passively",
+      "It swaps $\\text{Na}^+$ for $\\text{Ca}^{2+}$ without ATP"
     ],
     correctAnswer: 0,
     explanation:
-      'The $\\text{Na}^+/\\text{K}^+$-ATPase is a primary active transporter that hydrolyzes one ATP to pump 3 $\\text{Na}^+$ out of and 2 $\\text{K}^+$ into the cell, both against their gradients. The stoichiometry in B is reversed and wrongly omits ATP. It is active, not facilitated diffusion. The $\\text{Na}^+/\\text{Ca}^{2+}$ exchanger described in D is a different, secondary-active transporter.',
+      "The $\\text{Na}^+/\\text{K}^+$-ATPase is a primary active transporter that hydrolyzes one ATP to pump 3 $\\text{Na}^+$ out of and 2 $\\text{K}^+$ into the cell, both against their gradients. The reversed 2-out, 3-in stoichiometry is wrong and also wrongly omits ATP. The pump is active, not facilitated diffusion. The $\\text{Na}^+/\\text{Ca}^{2+}$ exchanger is a different, secondary-active transporter driven by the sodium gradient this pump creates.",
     skill: 'Membrane transport',
   },
   {
@@ -1091,10 +1145,11 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'A retrovirus such as HIV must perform which step that distinguishes its replication from that of a typical DNA virus?',
     options: [
-      'Reverse transcription of its RNA genome into DNA, which integrates into the host genome',
-      'Assembly of new virions at the host plasma membrane',
-      'Use of host RNA polymerase to transcribe its genes',
-      'Translation of viral mRNA on host ribosomes'],
+      "Reverse transcription of its RNA genome into DNA",
+      "Assembly of new virions at the plasma membrane",
+      "Transcription of its genes by RNA polymerase II",
+      "Translation of viral mRNA on host ribosomes"
+    ],
     correctAnswer: 0,
     explanation:
       'Retroviruses carry an RNA genome and the enzyme reverse transcriptase, which copies that RNA into DNA; integrase then inserts the DNA (provirus) into the host genome—the defining feature absent from typical DNA viruses. Translation on host ribosomes, membrane assembly, and using host RNA polymerase are shared with many viruses and do not uniquely distinguish a retrovirus.',
@@ -1107,10 +1162,11 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'Which set of amino acids is correctly grouped by side-chain property?',
     options: [
-      'Serine and threonine are basic amino acids',
-      'Lysine, arginine, and histidine are basic (positively chargeable) side chains',
-      'Aspartate and glutamate have nonpolar, hydrophobic side chains',
-      'Valine, leucine, and isoleucine carry negative charges at physiological pH'],
+      "Serine and threonine have basic, chargeable side chains",
+      "Lysine, arginine, and histidine are basic residues",
+      "Aspartate and glutamate have nonpolar, hydrophobic chains",
+      "Valine, leucine, and isoleucine are negatively charged"
+    ],
     correctAnswer: 1,
     explanation:
       'Lysine, arginine, and histidine have basic side chains that can carry a positive charge near physiological pH (histidine’s pKa ~6 makes it partly protonated). Aspartate and glutamate are acidic and negatively charged, not positively charged. Valine, leucine, and isoleucine are branched, nonpolar/hydrophobic and uncharged. Serine and threonine are polar uncharged (hydroxyl) residues, not basic.',
@@ -1123,10 +1179,11 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'In a well-fed state, high insulin and high glucose promote which metabolic shift in the liver?',
     options: [
-      'Lipolysis in adipose tissue with fatty acid release',
-      'Glycogen breakdown (glycogenolysis) and gluconeogenesis',
-      'Glycogen synthesis and glycolysis, storing and using glucose',
-      'Ketone body production for export to the brain'],
+      "Lipolysis in adipose tissue, releasing fatty acids",
+      "Glycogenolysis together with gluconeogenesis",
+      "Glycogen synthesis together with glycolysis",
+      "Ketone body production for export to the brain"
+    ],
     correctAnswer: 2,
     explanation:
       'In the fed state, insulin signals fuel abundance: the liver takes up glucose and favors glycogen synthesis and glycolysis (and lipogenesis), storing and using glucose. Glycogenolysis and gluconeogenesis are fasting-state, glucagon-driven processes that release glucose. Ketogenesis and adipose lipolysis are also fasting/low-insulin responses, opposite to the fed state.',

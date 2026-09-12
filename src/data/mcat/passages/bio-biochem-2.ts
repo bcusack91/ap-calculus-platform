@@ -22,10 +22,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which result most strongly supports the conclusion that E1 functions as an enhancer rather than as a second promoter?",
         "options": [
-          "E1 is conserved across mammalian genomes",
-          "Acetylated H3K27 is enriched at E1 in HepG2 cells",
-          "E1 raises promoter-driven luciferase activity in either orientation and even when moved downstream of the reporter",
-          "TFA protein is undetectable in C2C12 lysate"
+          "The E1 sequence is conserved across mammalian genomes",
+          "Acetylated H3K27 is enriched at E1 in HepG2 chromatin",
+          "E1 works in either orientation and from downstream",
+          "TFA protein is undetectable in C2C12 myoblast lysate"
         ],
         "correctAnswer": 2,
         "explanation": "Enhancers are defined operationally by their ability to stimulate a promoter independently of orientation and position, which is exactly the pattern seen: activity is roughly 19- to 24-fold whether E1 is upstream, inverted, or downstream. A promoter would have to sit immediately upstream in a fixed orientation to initiate transcription. Sequence conservation suggests functional importance but says nothing about enhancer versus promoter behavior. The active chromatin mark shows E1 is a regulatory element in liver cells but does not distinguish which kind. The absence of TFA in myoblasts addresses cell-type specificity, not the enhancer/promoter question.",
@@ -34,10 +34,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Scrambling the three TFA motifs reduced activity in HepG2 cells from 24.0 to 1.4. This result indicates that:",
         "options": [
-          "TFA binding at those motifs is required for E1 to stimulate the LPX promoter",
-          "TFA represses LPX transcription in hepatocytes",
-          "the scrambled construct was not delivered into the cells",
-          "E1 stimulates transcription by a mechanism that does not involve sequence-specific factor binding"
+          "TFA binding at those motifs is required for E1 activity",
+          "TFA acts as a repressor of LPX in hepatocytes",
+          "The scrambled construct never entered the cells",
+          "E1 works without any sequence-specific factor binding"
         ],
         "correctAnswer": 0,
         "explanation": "Destroying the binding sites collapses enhancer output to near the promoter-only baseline, so those motifs, and by extension the factor that binds them, are necessary for E1 activity. TFA cannot be a repressor here because losing its sites lowers rather than raises reporter output. Failed delivery is excluded because the co-transfected constitutive reporter normalizes each well for transfection efficiency and would have flagged a delivery failure. A binding-independent mechanism is contradicted by the fact that changing only the motif sequences abolishes the effect.",
@@ -46,10 +46,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "C2C12 cells given the E1 construct plus a TFA expression vector showed 12-fold activity, compared with 1.1-fold without the vector. This is best interpreted as evidence that:",
         "options": [
-          "E1 is irreversibly silenced in myoblasts and cannot respond to any factor",
-          "the lack of TFA protein is sufficient to explain why E1 is inactive in myoblasts",
-          "myoblasts fail to load RNA polymerase II at the LPX promoter",
-          "TFA acts only at promoters and not at distal elements"
+          "E1 is irreversibly silenced in myoblast chromatin",
+          "Absence of TFA explains why E1 is inert in myoblasts",
+          "Myoblasts fail to load RNA polymerase II at the promoter",
+          "TFA acts only at promoters, never at distal elements"
         ],
         "correctAnswer": 1,
         "explanation": "Supplying the missing factor restores substantial enhancer activity — about half the level seen in hepatocytes (12-fold versus 24-fold) — in a cell type where E1 was inert, so absence of TFA accounts for the cell-type restriction. Irreversible silencing is refuted by that same restoration. Polymerase loading cannot be the limiting problem because the promoter-only construct is expressed comparably in both cell lines (0.9 versus 1.0). The claim that TFA works only at promoters is contradicted by the ChIP enrichment at E1 and by the enhancer-dependent response to the vector.",
@@ -58,10 +58,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "In the ChIP experiment, what does the approximately 1-fold enrichment at the gene-desert region establish?",
         "options": [
-          "That the anti-TFA antibody recognizes TFA and no other protein",
+          "That the anti-TFA antibody binds TFA and nothing else",
           "That TFA is expressed at equal levels in both cell types",
-          "That E1 physically contacts the LPX promoter",
-          "That enrichment measured at E1 exceeds the nonspecific background recovery of chromatin"
+          "That E1 physically contacts the LPX promoter region",
+          "That E1 enrichment exceeds nonspecific background"
         ],
         "correctAnswer": 3,
         "explanation": "A region with no expected binding serves as a negative locus control: recovering it at background levels shows that the 33-fold signal at E1 reflects specific occupancy rather than generic carryover of chromatin during immunoprecipitation. Antibody specificity for the protein itself is addressed by the Western blot, not by a control locus. Equal expression between cell types is refuted by the Western blot, which shows TFA only in hepatocyte-derived cells. Physical contact between distant elements is not measured by ChIP-qPCR at all.",
@@ -70,10 +70,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why was a constitutively expressed second reporter co-transfected into every well?",
         "options": [
-          "To supply the TFA protein needed for enhancer activity",
-          "To correct for well-to-well differences in transfection efficiency and cell number",
+          "To supply the TFA protein enhancer activity needs",
+          "To correct for well-to-well transfection differences",
           "To measure the abundance of endogenous LPX mRNA",
-          "To suppress background luciferase expression from the promoter"
+          "To suppress background expression from the promoter"
         ],
         "correctAnswer": 1,
         "explanation": "Dividing the experimental signal by an internal reporter that is unaffected by the tested element normalizes each well for how many cells took up plasmid and how many cells are present, which is the dominant source of scatter in transfection assays. The second reporter is a normalization standard, not a source of TFA, which was supplied separately by an expression vector in one condition. It does not report on the endogenous gene, since it measures plasmid-derived signal. It cannot suppress background, because normalization changes the denominator rather than the promoter's intrinsic activity.",
@@ -83,9 +83,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "Which approach would best test whether E1 comes into physical proximity with the LPX promoter 28 kb away in hepatocytes?",
         "options": [
           "Chromosome conformation capture (3C)",
-          "Northern blotting for LPX mRNA",
+          "Northern blotting for LPX mRNA levels",
           "Bisulfite sequencing of the LPX promoter",
-          "Two-dimensional gel electrophoresis of nuclear protein extracts"
+          "Two-dimensional gels of nuclear protein extracts"
         ],
         "correctAnswer": 0,
         "explanation": "Conformation capture cross-links chromatin, digests it, and ligates fragments that were spatially close, then detects the resulting enhancer-promoter junction, so it directly reports looping between distant sites. Blotting for the mRNA quantifies output but cannot localize the DNA contacts producing it. Bisulfite sequencing reports cytosine methylation, a separate regulatory feature. Separating nuclear proteins by charge and mass characterizes the proteome and says nothing about DNA geometry.",
@@ -106,20 +106,20 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "G6PD-targeting guides were strongly depleted in the peroxide arm but essentially unchanged in the vehicle arm. This pattern indicates that G6PD is:",
         "options": [
           "essential for proliferation under every condition tested",
-          "represented by guides that were poorly cloned into the library",
+          "targeted by guides poorly represented in the library",
           "a gene whose loss confers resistance to oxidative stress",
-          "required for survival under oxidative stress but largely dispensable in unstressed cells"
+          "required under oxidative stress but not in unstressed cells"
         ],
         "correctAnswer": 3,
-        "explanation": "A gene that is depleted only when the selective pressure is applied is conditionally required: knockout cells grow normally in vehicle but are outcompeted once peroxide is present, consistent with the NADPH this enzyme supplies being needed to regenerate antioxidant systems. A gene essential in all conditions would be depleted in the vehicle arm as well, which it is not. Poor cloning would lower read counts identically at day 0 in both arms, and would not produce an arm-specific difference. Resistance would appear as enrichment, the opposite of the observed negative score.",
+        "explanation": "A gene that is depleted only when the selective pressure is applied is conditionally required: knockout cells grow normally in vehicle but are outcompeted once peroxide is present, consistent with the NADPH this enzyme supplies being needed to regenerate antioxidant systems. A gene essential in all conditions would be depleted in the vehicle arm as well, which it is not. Guides poorly represented in the library would give low read counts at day 0 in both arms and could not produce an arm-specific difference. Resistance would appear as enrichment, the opposite of the observed negative score.",
         "skill": "Screen interpretation"
       },
       {
         "question": "The enrichment of KEAP1-targeting guides in the peroxide arm is best explained by which mechanism?",
         "options": [
-          "Loss of KEAP1 increases the amount of hydrogen peroxide the cells generate",
-          "KEAP1 normally restrains an antioxidant transcription program, so removing it raises stress tolerance",
-          "KEAP1 guides have unusually high off-target cutting activity",
+          "Loss of KEAP1 raises the amount of peroxide cells generate",
+          "KEAP1 normally restrains a protective antioxidant program",
+          "KEAP1 guides have unusually high off-target cutting",
           "KEAP1 is required for Cas9 to enter the nucleus"
         ],
         "correctAnswer": 1,
@@ -129,10 +129,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "What is the primary purpose of including 1,000 non-targeting sgRNAs in the library?",
         "options": [
-          "They reveal which genes are essential in all growth conditions",
+          "They reveal which genes are essential in all conditions",
           "They raise the cutting efficiency of Cas9 at targeted loci",
-          "They define the distribution of fold changes expected when no gene is disrupted",
-          "They guarantee that every gene is covered by four independent guides"
+          "They define the fold changes expected with no cutting",
+          "They guarantee four independent guides for every single gene"
         ],
         "correctAnswer": 2,
         "explanation": "Guides with no genomic match still undergo infection, selection, passaging, amplification, and sequencing, so their spread of fold changes measures the technical and stochastic noise of the screen; their near-zero mean is the baseline against which real scores are judged. Core essential genes are identified by depletion in the vehicle arm, not by non-targeting controls. Non-targeting guides do not participate in cutting, so they cannot improve efficiency. Per-gene guide coverage is set by library design, independent of the control guides.",
@@ -141,10 +141,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "TXNRD1 had a peroxide-arm score of -1.8 but only 2 of 4 concordant guides, and it was not called a hit. Which interpretation of that decision is most defensible?",
         "options": [
-          "Discordance among independent guides leaves open that the depletion reflects off-target cutting or differing guide efficiency rather than loss of the gene",
-          "The gene must not be expressed in these cells",
-          "Two guides are more reliable than four because fewer double-strand breaks are made",
-          "The gene score should be taken as the largest, not the median, of the four guide values"
+          "Discordance leaves off-target cutting as a live explanation",
+          "The gene must not be expressed in these cells at all",
+          "Two guides are more reliable than four, since fewer breaks",
+          "The largest guide value, not the median, should be scored"
         ],
         "correctAnswer": 0,
         "explanation": "Independent guides targeting different sites in one gene share only the intended target, so concordance is the screen's built-in control for off-target effects and for guides that simply cut inefficiently; when half the guides disagree, the phenotype is not yet attributable to the gene. Lack of expression is a possible biological explanation for a null result but cannot explain why two guides did show depletion. Fewer breaks does not make a smaller set of guides more reliable, since the risk being controlled is that any single guide has idiosyncratic targets. Using the extreme value instead of the median would amplify exactly the outlier-driven artifacts the criterion is meant to exclude.",
@@ -154,9 +154,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "Why were the codons overlapping the sgRNA target changed to synonymous alternatives in the rescue construct?",
         "options": [
           "To increase the catalytic rate of the encoded enzyme",
-          "To allow the introduced cDNA to be spliced correctly",
-          "To keep the introduced DNA from becoming methylated",
-          "So the still-active sgRNA cannot cut the rescue construct, while the encoded protein remains identical"
+          "To let the introduced cDNA be spliced correctly",
+          "To keep the introduced DNA from being methylated",
+          "So the resident sgRNA cannot cut the rescue cDNA"
         ],
         "correctAnswer": 3,
         "explanation": "The cells continue to express Cas9 and the integrated guide, so an unaltered cDNA would be cleaved as soon as it was introduced and no rescue could be observed; synonymous changes destroy guide recognition without changing the amino acid sequence, so restored survival can be attributed to the protein. Faster catalysis is not the goal and synonymous changes do not alter the protein anyway. Splicing is irrelevant because a cDNA contains no introns. Methylation of the plasmid is not what silences it in this experiment; targeted cutting is.",
@@ -188,10 +188,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Skipping of the 130-nucleotide exon 8 is expected to have which consequence for the MTX open reading frame?",
         "options": [
-          "An in-frame internal deletion of about 43 amino acids",
-          "No change, because introns and exons are both removed from mature mRNA",
-          "A downstream frameshift that generates a premature termination codon",
-          "Loss of the polyadenylation signal"
+          "An in-frame deletion of about 43 internal amino acids",
+          "No change, since introns and exons are both removed",
+          "A frameshift producing a premature stop codon",
+          "Loss of the polyadenylation signal at the 3' end"
         ],
         "correctAnswer": 2,
         "explanation": "Because 130 is not a multiple of three, removing exon 8 shifts the reading frame for all downstream codons, and a shifted frame typically encounters a stop codon well before the normal one. A clean internal deletion of amino acids would require the skipped exon to be a multiple of three in length. Exons are retained in mature mRNA, so losing one is not equivalent to intron removal. The polyadenylation signal lies at the 3' end of the transcript and is unaffected by an internal splicing change.",
@@ -200,10 +200,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Cycloheximide treatment substantially raised the abundance of the exon-8-skipped transcript. The most likely explanation is that:",
         "options": [
-          "cycloheximide stabilizes the spliceosome so more skipping occurs",
-          "cycloheximide increases transcription from the variant allele",
-          "cycloheximide restores correct recognition of the intron 8 splice site",
-          "the skipped transcript was being degraded by translation-dependent nonsense-mediated decay"
+          "cycloheximide stabilizes spliceosomes, raising skipping",
+          "cycloheximide drives transcription of the variant allele",
+          "cycloheximide restores recognition of the intron 8 site",
+          "nonsense-mediated decay normally destroys that transcript"
         ],
         "correctAnswer": 3,
         "explanation": "Nonsense-mediated decay requires a round of translation to detect the premature stop codon created by the frameshift; blocking elongation with cycloheximide prevents that surveillance step, so the unstable transcript accumulates. Stabilizing the spliceosome would predict more skipped product made rather than less destroyed, and cycloheximide acts on the ribosome, not the spliceosome. Increased transcription is not expected from a translation inhibitor and would raise both transcripts. Restored splicing would increase the full-length product, not the skipped one.",
@@ -213,9 +213,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "Which feature of the c.942+3A>G result best accounts for that patient's milder phenotype?",
         "options": [
           "The variant lies in an exon rather than in an intron",
-          "A substantial fraction of transcripts are still spliced into full-length, in-frame mRNA",
+          "Much of the mRNA is still spliced full-length",
           "Exon skipping in her cells restores the reading frame",
-          "The variant creates an alternative translation start codon"
+          "The variant creates an alternative start codon"
         ],
         "correctAnswer": 1,
         "explanation": "A position three bases into the intron is part of the splice-site consensus but not invariant, so it weakens rather than abolishes 5' splice-site use; producing roughly half normal full-length mRNA leaves partial enzyme activity, which maps onto milder disease. The variant is intronic, as the plus-numbering indicates. Skipping the same 130-bp exon shifts the frame in her cells exactly as in the severe case, so it cannot be restorative. Nothing in the data implicates a new initiation codon, and an intronic change three bases from the junction would not create a usable one.",
@@ -226,8 +226,8 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "options": [
           "confirm that the PCR primers do not form primer dimers",
           "measure how efficiently the plasmid entered the cells",
-          "show that the observed products arise from mRNA rather than from residual transfected plasmid DNA",
-          "verify the sequence of the minigene before transfection"
+          "show the products came from mRNA, not plasmid DNA",
+          "verify the minigene sequence before it was transfected"
         ],
         "correctAnswer": 2,
         "explanation": "Cells transfected with a genomic minigene contain large amounts of plasmid DNA that the same exon primers could amplify; omitting reverse transcriptase leaves no cDNA, so any band appearing in that reaction would signal DNA carryover. The absence of bands in those lanes therefore validates that the 450-bp and 320-bp products came from spliced RNA. Primer dimers are addressed by a no-template control, which contains neither RNA nor DNA. Transfection efficiency is not measured by the presence or absence of an enzyme in a downstream reaction, and construct sequence is verified by sequencing the plasmid itself.",
@@ -259,10 +259,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "That the same 94-percent-methylated state tracks with paternal transmission in both reciprocal crosses, regardless of strain, indicates that:",
         "options": [
-          "a strain-specific sequence polymorphism determines which allele is methylated",
-          "one of the two alleles is chosen for methylation at random in each cell",
-          "the ICR is methylated on both alleles in the zygote and later demethylated somatically",
-          "the methylation mark is established in the germline according to parent of origin"
+          "a strain-specific polymorphism decides which allele is marked",
+          "one allele is chosen for methylation at random in each cell",
+          "both alleles are methylated in the zygote, then demethylated",
+          "the mark is laid down in the germline by parent of origin"
         ],
         "correctAnswer": 3,
         "explanation": "Reciprocal crosses swap which strain supplies the sperm and which supplies the egg; when the mark follows the parent rather than the strain, the instruction must be laid down during gametogenesis and then maintained in the offspring, which is the definition of an imprint. A strain-determined mark would move with the strain across the reciprocal crosses, and it does not. Random monoallelic choice would produce a mixture of maternal and paternal methylation across animals rather than a consistent 4-versus-94 split. Methylation of both alleles in the zygote is excluded by the maternal allele reading only 4 percent methylated.",
@@ -271,10 +271,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "What is the most likely consequence of inheriting the 2.4-kb CTCF-site deletion from the mother?",
         "options": [
-          "The maternal allele loses insulator function, so the shared enhancers activate Igf2 from both alleles",
-          "Igf2 becomes silenced on both alleles",
-          "The maternal allele becomes hypermethylated across the rest of the locus",
-          "Nothing changes, because the maternal ICR is already unmethylated"
+          "The maternal allele loses insulation, activating Igf2",
+          "Igf2 becomes silenced on both parental alleles",
+          "The maternal allele is hypermethylated at the locus",
+          "Nothing changes, as the maternal ICR is unmethylated"
         ],
         "correctAnswer": 0,
         "explanation": "CTCF bound to the unmethylated maternal ICR blocks the downstream enhancers from reaching Igf2 and redirects them to H19; deleting its sites removes that boundary, so the maternal allele now behaves like the paternal one and Igf2 is expressed from both chromosomes. Silencing of both alleles would require also disabling the paternal allele, which is unaffected by a maternally transmitted deletion. Hypermethylation is not the expected result of deleting a protein-binding site. The claim that nothing changes confuses the mark with its readout: the maternal allele is unmethylated precisely so that CTCF can bind, so removing the sites is consequential.",
@@ -283,10 +283,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why did the investigators tabulate conversion at the 48 non-CpG cytosines?",
         "options": [
-          "To identify the polymorphisms that distinguish strain B from strain C",
-          "To quantify the level of Igf2 transcription",
-          "To confirm that conversion of unmethylated cytosine was nearly complete, so residual C at CpG sites reflects methylation",
-          "To normalize for preferential PCR amplification of one allele over the other"
+          "To identify polymorphisms separating strain B from strain C",
+          "To quantify the level of Igf2 transcription in liver",
+          "To confirm that bisulfite conversion ran to completion",
+          "To normalize for preferential amplification of one allele"
         ],
         "correctAnswer": 2,
         "explanation": "Cytosines outside CpG context are essentially unmethylated in mammalian somatic DNA, so they should all convert; observing over 99 percent conversion shows the chemistry ran to completion and that C read at a CpG is a real methyl mark rather than an unconverted artifact. Strain polymorphisms are identified by comparing genome sequences and are used for allele assignment, a separate purpose. Transcription is measured in the RNA experiment, not in bisulfite reads. Allele-amplification bias would be assessed by mixing known amounts of the two alleles, which is what the fully methylated and unmethylated control DNAs partly address.",
@@ -296,9 +296,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "Why are strain-specific polymorphisms in the ICR essential to this experimental design?",
         "options": [
           "They improve the efficiency of bisulfite conversion",
-          "They prevent PCR primers from annealing to methylated DNA",
-          "They cause the imprint to be reset between generations",
-          "They allow each sequencing read to be assigned to the maternal or the paternal allele"
+          "They keep primers from annealing to methylated DNA",
+          "They cause the imprint to reset between generations",
+          "They let every read be assigned to a parental allele"
         ],
         "correctAnswer": 3,
         "explanation": "Bulk methylation measurements average the two chromosomes and would report about 49 percent methylation, hiding the imprint entirely; sequence differences let each read be sorted by parental origin, which is what reveals the 4-versus-94 asymmetry. Conversion efficiency depends on the chemistry, not the sequence variants. Primer annealing is designed to be indifferent to methylation status, since converted and unconverted templates must both amplify. Imprint resetting occurs in the germline through erasure and re-establishment and is not caused by polymorphisms.",
@@ -307,10 +307,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The finding that Igf2 transcripts carried only the paternal polymorphism while H19 transcripts carried only the maternal polymorphism is best described as:",
         "options": [
-          "monoallelic expression of each gene determined by parent of origin",
-          "equal biallelic expression of both genes",
-          "transcription of Igf2 and H19 as a single shared mRNA",
-          "complete transcriptional silence of the entire maternal chromosome"
+          "monoallelic expression set by parent of origin",
+          "equal biallelic expression of both of these genes",
+          "transcription of Igf2 and H19 as one shared mRNA",
+          "complete silencing of the whole maternal chromosome"
         ],
         "correctAnswer": 0,
         "explanation": "Each gene's transcripts carry only one parental sequence variant, and which parent that is differs between the two genes, so both are expressed from a single allele in a parent-of-origin-specific way. Biallelic expression would show both polymorphisms in the transcripts of each gene. A single shared mRNA is excluded because the two transcripts carry opposite parental markers. Global silencing of the maternal chromosome is refuted by the maternal-only expression of H19 from that same chromosome.",
@@ -387,10 +387,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which mechanism best accounts for the progressive loss of telomeric DNA in HF-1 cells?",
         "options": [
-          "Telomerase progressively digests the chromosome ends in primary cells",
-          "Nucleotide excision repair removes telomeric repeats during each cell cycle",
-          "After the terminal RNA primer is removed, the lagging strand cannot be completed to the very end of the template",
-          "Topoisomerase II cleaves telomeres during chromosome condensation"
+          "Telomerase digests chromosome ends in primary cells",
+          "Excision repair strips telomeric repeats each cycle",
+          "Removing the last RNA primer leaves the lagging strand short",
+          "Topoisomerase II cleaves telomeres during condensation"
         ],
         "correctAnswer": 2,
         "explanation": "Discontinuous lagging-strand synthesis requires an RNA primer for each Okazaki fragment; when the most distal primer is excised there is no upstream 3' end for polymerase to extend, so a short stretch at the end of each linear template cannot be copied and the daughter telomere is shorter. Telomerase adds repeats rather than removing them, and these cells have none detectable anyway. Excision repair removes damaged bases and refills the gap, so it does not cause net shortening each division. Topoisomerase relieves torsional strain and religates the DNA it nicks, leaving no net loss.",
@@ -399,10 +399,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The behavior of hTERT-transduced HF-1 cells most directly supports which conclusion?",
         "options": [
-          "Restoring telomerase activity is sufficient to prevent telomere attrition and replicative senescence in these fibroblasts",
-          "Telomere shortening is a consequence of senescence rather than a cause of it",
-          "Expressing hTERT is by itself sufficient to make fibroblasts tumorigenic",
-          "Replicative senescence requires the loss of p53 function"
+          "Restoring telomerase alone prevents attrition and senescence",
+          "Telomere shortening is a consequence, not a cause, of senescence",
+          "hTERT expression by itself makes fibroblasts tumorigenic",
+          "Replicative senescence requires loss of p53 function"
         ],
         "correctAnswer": 0,
         "explanation": "Adding back a single missing component both stops the length decline and abolishes the proliferative limit, which establishes sufficiency: the telomere maintenance deficit was what capped the lifespan of these cells. If shortening were merely a downstream consequence, blocking it would not have extended the lifespan. Nothing in the data addresses transformation, and immortalization is not the same as tumorigenicity. Loss of p53 is not tested here, and the hTERT cells bypassed arrest without any such manipulation.",
@@ -411,9 +411,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Heating the extract before the TRAP assay abolished the telomeric product ladder while the internal amplification control band still appeared. Together these results show that:",
         "options": [
-          "the PCR amplification step of the assay is itself heat sensitive",
-          "the ladder depends on a heat-labile enzymatic activity in the extract rather than on a PCR artifact",
-          "telomerase is a DNA-dependent DNA polymerase",
+          "the PCR amplification step is itself heat sensitive",
+          "the ladder needs a heat-labile extract activity",
+          "telomerase must be a DNA-dependent DNA polymerase",
           "the internal control band is generated by telomerase"
         ],
         "correctAnswer": 1,
@@ -423,10 +423,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which observation most strongly argues that arrested HF-1 cells are senescent rather than simply quiescent from inadequate growth factors?",
         "options": [
-          "Their mean TRF length has fallen to 6.4 kb",
+          "Their mean TRF length has fallen to about 6.4 kb",
           "Telomerase activity is undetectable in their extracts",
-          "They remain metabolically active for months",
-          "They do not resume dividing when fresh serum is supplied"
+          "They stay metabolically active for months after arrest",
+          "Fresh serum does not make them resume dividing"
         ],
         "correctAnswer": 3,
         "explanation": "Quiescence is reversible by definition: restoring growth factors returns the cells to cycling, so failure to re-enter the cycle after fresh serum is the observation that specifically excludes it. A shortened TRF is consistent with the senescence model but does not by itself distinguish a reversible from an irreversible arrest. Absent telomerase is a property of these fibroblasts at every passage, including when they were proliferating happily, so it cannot mark the arrest. Continued metabolic activity distinguishes the state from cell death, not from quiescence, since quiescent cells are also viable.",
@@ -435,10 +435,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The short but stable 4.1-kb mean TRF in IMM cells across more than 100 doublings is best explained by which of the following?",
         "options": [
-          "IMM cells divide more slowly than HF-1 cells, so less shortening accumulates",
+          "IMM cells divide more slowly, so less shortening occurs",
           "IMM cells have deleted their telomeric repeats entirely",
-          "Telomerase in IMM cells adds repeats at a rate that offsets the loss occurring at each replication",
-          "IMM cells copy their chromosome ends with a polymerase that requires no primer"
+          "Telomerase adds repeats as fast as replication loses them",
+          "IMM cells replicate chromosome ends without any primer"
         ],
         "correctAnswer": 2,
         "explanation": "Length is a steady-state balance between end-replication loss and enzymatic addition; strong TRAP activity plus an unchanging TRF over many doublings indicates that addition matches loss, which is why an immortalized line can hold a set point well below the primary cells' starting length. Slower division would not produce stability, because the x-axis counts doublings rather than time, so loss per doubling would still accumulate. Complete loss of telomeres is excluded by a measurable 4.1-kb terminal fragment and by continued viability. No primer-independent replicative polymerase exists in these cells; telomerase instead extends the 3' overhang using its own RNA template.",
@@ -458,10 +458,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Immediately after the table is tilted to 70 degrees, what happens to action potential frequency in the carotid sinus afferents, and why?",
         "options": [
-          "It increases, because pooling of blood in the legs raises pressure in the carotid sinus",
-          "It decreases, because reduced venous return lowers arterial pressure and therefore carotid sinus wall stretch",
-          "It is unchanged, because the carotid sinus responds only to arterial oxygen content",
-          "It decreases, because the receptors are chemoreceptors that sense falling arterial pH"
+          "It increases, because leg pooling raises sinus pressure",
+          "It decreases, because less venous return lowers wall stretch",
+          "It is unchanged, since these endings sense arterial oxygen",
+          "It decreases, because these endings sense falling pH"
         ],
         "correctAnswer": 1,
         "explanation": "Tilting moves blood to the dependent veins, so venous return, stroke volume, and arterial pressure all fall transiently. Carotid sinus endings are mechanoreceptors that fire in proportion to wall stretch, so less distending pressure means fewer action potentials, which disinhibits sympathetic outflow and produces the tachycardia in Table 1. Firing cannot increase, because leg venous pooling lowers rather than raises central arterial pressure. Saying firing is unchanged and oxygen-driven confuses baroreceptors with the peripheral chemoreceptors of the carotid body, and the pH-sensing explanation makes the same error even though it names the correct direction.",
@@ -494,10 +494,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "MAP rose only from 90 to 105 mmHg during cycling even though CO tripled. Which factor best accounts for this?",
         "options": [
-          "Stroke volume fell during exercise, offsetting the rise in heart rate",
-          "Baroreceptor afferents stopped firing altogether once exercise began",
-          "TPR fell by roughly 60% as metabolites dilated arterioles in the active skeletal muscle",
-          "Venous return decreased, limiting the pressure the ventricle could generate"
+          "Stroke volume fell, offsetting the rise in heart rate",
+          "Baroreceptor afferents stopped firing once exercise began",
+          "TPR fell by about 60% as muscle arterioles dilated",
+          "Venous return fell, limiting the pressure the heart makes"
         ],
         "correctAnswer": 2,
         "explanation": "TPR dropped from 18 to 7 mmHg·min/L, a fall of about 60%, because local metabolic vasodilation in exercising muscle opens a large, low-resistance parallel vascular bed; this offsets nearly all of the pressure effect of tripling CO. Table 1 shows stroke volume rising from 81 to 107 mL, not falling. Baroreceptors continue firing during exercise, with their operating point reset upward rather than silenced. Venous return must equal CO in the steady state, so it rose threefold as well, aided by the skeletal muscle pump.",
@@ -506,10 +506,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The follow-up protocol with a ganglionic blocking agent was included primarily to:",
         "options": [
-          "Raise the resting heart rate so that tilt-induced changes would be easier to detect",
-          "Test whether the heart rate and pressure responses to tilt require intact autonomic neural transmission",
-          "Confirm that impedance cardiography measures stroke volume accurately",
-          "Determine the maximum tilt angle the subjects could tolerate"
+          "Raise resting heart rate so tilt changes show better",
+          "Test whether the tilt response needs neural transmission",
+          "Confirm that impedance cardiography is accurate",
+          "Determine the maximum tilt angle subjects tolerate"
         ],
         "correctAnswer": 1,
         "explanation": "Blocking transmission at autonomic ganglia interrupts the efferent limb common to both sympathetic and parasympathetic pathways; the loss of tachycardia, the failure of norepinephrine to rise, and the 34 mmHg fall in MAP together show that the intact tilt response was neurally mediated rather than a passive mechanical consequence of gravity on the heart. Ganglionic blockade removes tonic vagal restraint but does not create a cleaner detection window, and the design point is causal, not cosmetic. Nothing in the manipulation validates the impedance measurement, which would require comparison with an independent stroke volume method. Tilt angle was fixed at 70 degrees in both protocols, so tolerance was not the variable under study.",
@@ -518,9 +518,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Afferent information from the carotid sinus reaches the central nervous system by which route?",
         "options": [
-          "The vagus nerve, projecting to the hypothalamus",
-          "The phrenic nerve, projecting to cervical spinal cord segments",
-          "The glossopharyngeal nerve, projecting to the nucleus tractus solitarius of the medulla",
+          "The vagus nerve, projecting up to the hypothalamus",
+          "The phrenic nerve, projecting to cervical spinal segments",
+          "The glossopharyngeal nerve, projecting to the medulla",
           "Postganglionic sympathetic fibers, projecting to the pons"
         ],
         "correctAnswer": 2,
@@ -615,10 +615,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Blood perfusing a vigorously contracting skeletal muscle would be best described by which curve in Figure 1, and what is the functional consequence?",
         "options": [
-          "The curve with $P_{50}$ of 19 mmHg, which increases the fraction of O2 released to the tissue",
-          "The curve with $P_{50}$ of 26 mmHg, because affinity is fixed for a given hemoglobin",
-          "The curve with $P_{50}$ of 35 mmHg, which increases the fraction of O2 released at a given tissue pO2",
-          "None of the curves, because O2 delivery to muscle depends only on blood flow, not on affinity"
+          "The curve with $P_{50}$ of 19 mmHg, which unloads more O2 in tissue",
+          "The curve with $P_{50}$ of 26 mmHg, since affinity is fixed",
+          "The curve with $P_{50}$ of 35 mmHg, which unloads more O2",
+          "None, because delivery depends only on blood flow"
         ],
         "correctAnswer": 2,
         "explanation": "Contracting muscle is acidic, hypercapnic, and warm, exactly the conditions of Preparation 2, whose curve lies lowest and has the highest $P_{50}$; at a tissue pO2 of 40 mmHg it is only about 60% saturated versus 75% for the resting adult curve, so more O2 is unloaded per unit of blood. The $P_{50}$ of 19 mmHg belongs to the left-shifted fetal preparation, which holds O2 more tightly and unloads less. Claiming affinity is fixed contradicts the whole Bohr phenomenon the study demonstrates. Flow certainly matters, but the curves show that affinity changes independently alter extraction at a fixed flow.",
@@ -639,10 +639,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The higher O2 affinity of HbF compared with adult HbA is best explained by which structural difference?",
         "options": [
-          "HbF is a monomer and therefore binds O2 without cooperativity",
-          "HbF contains gamma subunits in place of beta subunits, and gamma chains bind 2,3-BPG poorly",
-          "HbF contains an additional heme group per tetramer, increasing total O2 capacity",
-          "HbF uses Fe(III) rather than Fe(II) at the heme iron, which binds O2 more tightly"
+          "HbF is a monomer, so it binds O2 without cooperativity",
+          "HbF has gamma chains, which bind 2,3-BPG poorly",
+          "HbF carries a fifth heme group per tetramer",
+          "HbF uses Fe(III) rather than Fe(II) at the heme"
         ],
         "correctAnswer": 1,
         "explanation": "In HbF, gamma chains replace beta chains, and a serine substitution in the central cavity weakens the electrostatic contacts that anchor 2,3-BPG. With less T-state stabilizer bound, the equilibrium favors the R state, so the curve shifts left, which is what lets fetal blood extract O2 from maternal blood across the placenta. HbF remains a cooperative tetramer, and its curve in Figure 1 is clearly sigmoidal rather than hyperbolic. All hemoglobin tetramers carry four hemes, fetal included. Oxidation of heme iron to Fe(III) produces methemoglobin, which cannot bind O2 at all.",
@@ -651,10 +651,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "At the molecular level, how does a fall in pH shift the curve in the direction seen for Preparation 2?",
         "options": [
-          "Protons oxidize heme iron, which lowers the number of functional binding sites",
-          "Protons compete directly with O2 for the heme iron binding site",
-          "Protons cleave the tetramer into dimers that bind O2 non-cooperatively",
-          "Protonation of specific residues stabilizes salt bridges characteristic of the T state, lowering O2 affinity"
+          "Protons oxidize heme iron, cutting binding sites",
+          "Protons compete with O2 for the heme iron itself",
+          "Protons split the tetramer into separate dimers",
+          "Protonation stabilizes the salt bridges of the T state"
         ],
         "correctAnswer": 3,
         "explanation": "The Bohr effect works allosterically: at low pH, residues such as the beta-chain C-terminal histidine become protonated and form salt bridges that hold the tetramer in the low-affinity T conformation, so a higher pO2 is needed for half saturation. Protons do not oxidize the iron; that is the separate chemistry of methemoglobin formation. They also do not occupy the O2 site, since the shift is a change in affinity rather than competitive site blockade, and the curve remains sigmoidal and eventually reaches near-full saturation. Dissociation into non-cooperative dimers would flatten the sigmoid shape, which Figure 1 does not show.",
@@ -663,10 +663,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The sigmoidal shape of all three curves, in contrast to the hyperbolic O2 binding curve of myoglobin, reflects that:",
         "options": [
-          "Hemoglobin subunits bind O2 cooperatively, whereas myoglobin is a single-subunit protein with one binding site",
-          "Myoglobin has a much lower affinity for O2 than hemoglobin at every pO2",
-          "Hemoglobin binds O2 irreversibly once all four sites are filled",
-          "Myoglobin requires 2,3-BPG for O2 binding, whereas hemoglobin does not"
+          "Hemoglobin binds cooperatively; myoglobin has one site",
+          "Myoglobin has far lower O2 affinity at every pO2",
+          "Hemoglobin binds O2 irreversibly once all sites fill",
+          "Myoglobin needs 2,3-BPG to bind O2, hemoglobin does not"
         ],
         "correctAnswer": 0,
         "explanation": "Sigmoidicity arises from cooperative interaction among four subunits: early binding events shift the tetramer toward the R state and make later binding easier, producing the steep midportion of each curve. Myoglobin has one heme and no partner subunits, so its binding follows a simple hyperbolic isotherm. Myoglobin actually has a higher affinity than hemoglobin across the physiologic range, which is what lets it accept O2 from blood in muscle. Hemoglobin binding is reversible by design, since unloading in tissue is its function. 2,3-BPG binds hemoglobin, not myoglobin, and it lowers affinity rather than being required for binding.",
@@ -675,10 +675,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The investigators note that Preparation 2 differed from Preparation 1 in four variables at once. Which modification would best isolate the contribution of pH to the observed rightward shift?",
         "options": [
-          "Repeat Preparation 2 at pH 7.20 in a second cohort of donors to confirm reproducibility",
-          "Repeat the tonometry at several pH values while holding temperature, pCO2, and 2,3-BPG at their Preparation 1 values",
-          "Compare Preparation 2 with the cord blood preparation, since both differ from Preparation 1",
-          "Measure total O2 content rather than fractional saturation at each pO2"
+          "Repeat Preparation 2 in a second cohort to test reproducibility",
+          "Vary pH alone, holding temperature, pCO2, and 2,3-BPG fixed",
+          "Compare Preparation 2 with the cord blood preparation",
+          "Measure total O2 content instead of fractional saturation"
         ],
         "correctAnswer": 1,
         "explanation": "Apportioning a multivariable effect requires varying one factor at a time against a fixed background, so a pH series run at 37 degrees Celsius, pCO2 40 mmHg, and baseline 2,3-BPG isolates the proton contribution to the change in $P_{50}$. Repeating the same four-variable condition in new donors tests reproducibility but leaves the variables just as confounded. Comparing Preparation 2 with cord blood introduces a different hemoglobin isoform, adding a variable rather than removing three. Switching the readout to total O2 content changes the units on the y-axis but does not disentangle which condition caused the shift.",
@@ -764,10 +764,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The obese normoglycemic group required a steady-state GIR of 4.2 mg/kg/min versus 8.0 mg/kg/min in lean controls. This difference is best interpreted as showing that the obese group:",
         "options": [
-          "Secreted less insulin from pancreatic beta cells during the clamp",
-          "Had a higher rate of hepatic glucose production before the clamp began",
-          "Disposed of less glucose per unit time at the same plasma insulin concentration, indicating insulin resistance",
-          "Cleared infused insulin from the plasma more slowly, prolonging its action"
+          "Secreted less insulin from beta cells during the clamp",
+          "Had higher hepatic glucose production before the clamp",
+          "Disposed of less glucose at the same plasma insulin level",
+          "Cleared the infused insulin from plasma more slowly"
         ],
         "correctAnswer": 2,
         "explanation": "Because the exogenous insulin infusion sets plasma insulin at the same level in every group and glucose is clamped at 90 mg/dL, the only variable left is how much glucose the tissues take up, which the GIR measures directly; roughly half the lean disposal rate means roughly half the insulin sensitivity. Endogenous secretion is deliberately made irrelevant here, since the infusion dominates and in fact suppresses it, as the C-peptide data show. Pre-clamp hepatic glucose production is not what the steady-state GIR reports, and at this insulin dose hepatic output is largely switched off in all groups. Slower insulin clearance would raise, not lower, the achieved insulin level and would if anything increase the required GIR.",
@@ -776,10 +776,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why is glucose infused at a variable rate to hold plasma glucose at 90 mg/dL rather than simply allowing it to fall during the insulin infusion?",
         "options": [
-          "To keep the subjects comfortable, since the infusion itself has no effect on the measurement",
-          "To raise plasma glucose above the renal threshold so that urinary losses can be quantified",
-          "To ensure that hepatic glucose production continues at its fasting rate throughout the study",
-          "To hold glucose constant so that the GIR reflects insulin action alone, uncontaminated by mass-action uptake and by counterregulatory hormone release during hypoglycemia"
+          "To keep subjects comfortable, since the infusion is inert",
+          "To push glucose above the renal threshold for urine losses",
+          "To keep hepatic glucose production at its fasting rate",
+          "So the GIR reflects insulin action, not glucose level"
         ],
         "correctAnswer": 3,
         "explanation": "Clamping the glucose concentration removes it as a variable in two ways: glucose uptake depends on its own concentration as well as on insulin, and falling glucose would trigger glucagon, epinephrine, and cortisol release that opposes insulin and would confound the result. Comfort is a real consideration but not the methodologic rationale, and the infusion clearly does affect the measurement, since the infusion rate is the measurement. Exceeding the renal threshold near 180 mg/dL would create urinary glucose losses that invalidate the disposal calculation, the opposite of the design goal. Hepatic glucose output is suppressed rather than preserved at these insulin levels, which is precisely what allows the GIR to be read as peripheral disposal.",
@@ -788,10 +788,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Insulin binding to its receptor on skeletal muscle initiates which sequence?",
         "options": [
-          "Receptor tyrosine kinase autophosphorylation, then IRS and PI3K signaling and Akt activation, then GLUT4 translocation to the plasma membrane",
-          "G protein activation, then adenylate cyclase stimulation and a rise in cAMP, then protein kinase A activation",
-          "Diffusion of insulin across the membrane to a cytoplasmic receptor that then binds hormone response elements in DNA",
-          "Ligand-gated ion channel opening, then Ca2+ influx and direct activation of glycogen synthase"
+          "Receptor autophosphorylation, then IRS and PI3K-Akt, then GLUT4 traffic",
+          "G protein activation, then a rise in cAMP, then protein kinase A",
+          "Diffusion to a cytoplasmic receptor that then binds hormone response elements",
+          "Ligand-gated channel opening, then Ca2+ entry and glycogen synthase"
         ],
         "correctAnswer": 0,
         "explanation": "The insulin receptor is a preassembled tyrosine kinase; ligand binding drives transphosphorylation of the beta subunits, recruitment and phosphorylation of insulin receptor substrate proteins, and PI3K-Akt signaling that moves GLUT4-containing vesicles to the surface, which is the step that raises muscle glucose uptake during the clamp. The cAMP and protein kinase A cascade is the glucagon and epinephrine pathway, which opposes insulin. Insulin is a peptide and cannot cross the plasma membrane to reach an intracellular receptor, a mechanism reserved for steroid and thyroid hormones. No ligand-gated channel mediates insulin action, and glycogen synthase is activated downstream through dephosphorylation rather than by Ca2+ binding.",
@@ -800,10 +800,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The type 1 diabetes group achieved a steady-state GIR of 7.6 mg/kg/min. What does this result indicate about the pathophysiologic difference between type 1 and type 2 diabetes?",
         "options": [
-          "Type 1 diabetes involves more severe peripheral insulin resistance than type 2 diabetes",
-          "Type 1 diabetes reflects loss of insulin secretion with largely preserved insulin sensitivity, whereas type 2 diabetes reflects resistance to insulin that is still being secreted",
-          "Both conditions are caused by the same defect, and the GIR difference reflects the shorter disease duration in the type 1 group",
-          "Type 1 diabetes results from a defect in GLUT4 that is bypassed by intravenous glucose"
+          "Type 1 involves more severe peripheral resistance than type 2",
+          "Type 1 is lost secretion; type 2 is resistance to insulin",
+          "Both conditions share one defect; duration explains the gap",
+          "Type 1 stems from a GLUT4 defect bypassed by infused glucose"
         ],
         "correctAnswer": 1,
         "explanation": "When insulin is supplied exogenously at a fixed rate, the type 1 group disposes of glucose nearly as fast as lean controls, showing that their tissues respond normally and that their hyperglycemia stems from autoimmune destruction of beta cells; the type 2 group, whose beta cells still secrete insulin, disposes of only 2.4 mg/kg/min, the signature of resistance. Their GIR of 7.6 is the highest of the three diabetes-related comparisons, so it cannot indicate more severe resistance. Duration was at least 5 years in the type 1 group, and in any case a shared defect would predict similar GIRs rather than a threefold difference. A primary GLUT4 defect would lower disposal regardless of the route by which glucose is delivered.",
@@ -813,9 +813,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
         "question": "C-peptide fell by 55% to 70% during the clamp in the lean, obese, and type 2 diabetes groups. This observation is best explained by:",
         "options": [
           "Degradation of C-peptide by the infused insulin preparation",
-          "Dilution of plasma C-peptide by the volume of dextrose and insulin infused",
-          "Negative feedback in which the infused insulin and clamped glucose reduce endogenous beta cell secretion, of which C-peptide is a marker",
-          "Increased renal clearance of C-peptide caused by the elevated glucose infusion rate"
+          "Dilution of plasma C-peptide by the infused fluid volume",
+          "Feedback suppression of endogenous beta cell insulin secretion",
+          "Faster renal clearance of C-peptide during the infusion"
         ],
         "correctAnswer": 2,
         "explanation": "C-peptide is cosecreted with endogenous insulin but is not present in the pharmaceutical infusate, so it isolates the pancreatic contribution; its fall shows that high circulating insulin and a glucose level held at a non-stimulatory 90 mg/dL suppress beta cell output, the expected negative feedback. Insulin preparations do not carry proteolytic activity against C-peptide. Infused volumes over 120 min are far too small to dilute plasma by more than half, and dilution would lower every plasma solute equally, including glucose, which was held constant. Nothing in the protocol raises glucose above the renal threshold, so there is no mechanism for the infusion to accelerate C-peptide clearance.",
@@ -847,10 +847,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which feature of the action potential in mutant-expressing cells would be most directly altered by the persistent inward current listed in Table 1?",
         "options": [
-          "The resting potential would be driven further from threshold before any stimulus arrives",
-          "The rate of rise of the upstroke would be markedly slowed",
-          "The threshold voltage for channel opening would shift to a much more positive value",
-          "Repolarization would be delayed, because inward Na+ current continues to oppose the outward K+ current"
+          "The resting potential would sit much further from threshold",
+          "The rate of rise of the upstroke would be markedly slower",
+          "The threshold for channel opening would shift far positive",
+          "Repolarization would be delayed by the inward current"
         ],
         "correctAnswer": 3,
         "explanation": "Repolarization normally depends on sodium channels inactivating while delayed-rectifier K+ channels carry outward current; a sustained 4.1% inward current opposes that outward current and prolongs the falling phase. The resting potential in the mutant is depolarized by 8 mV, which moves it closer to threshold rather than further away. The upstroke rate depends on peak current density and activation voltage, both of which Table 1 shows to be unchanged, so the depolarizing phase itself is preserved. The half-maximal activation voltages of -24 and -25 mV are essentially identical, so the threshold for opening is not meaningfully shifted.",
@@ -859,10 +859,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The absolute refractory period of a normal skeletal muscle fiber exists primarily because:",
         "options": [
-          "Voltage-gated Na+ channels occupy the inactivated state and cannot reopen until the membrane repolarizes",
-          "Voltage-gated K+ channels remain closed until the membrane returns to rest",
-          "The Na+/K+ ATPase has not yet restored the ion gradients dissipated by the preceding action potential",
-          "The membrane is hyperpolarized, so a larger than normal stimulus is required to reach threshold"
+          "Na+ channels sit in the inactivated state and cannot reopen",
+          "K+ channels stay closed until the membrane returns to rest",
+          "The Na+/K+ ATPase has not yet restored the ion gradients",
+          "The membrane is hyperpolarized, so a bigger stimulus is needed"
         ],
         "correctAnswer": 0,
         "explanation": "During the absolute refractory period, sodium channels are in the inactivated conformation with the inactivation gate closed, and no stimulus of any strength can reopen them until repolarization resets the gate; the mutant's faster recovery from inactivation, tau of 1.8 versus 5.0 ms, therefore shortens this period and permits the bursts of repetitive firing observed in current clamp. Potassium channels are open, not closed, during repolarization. Only a tiny fraction of the ion gradients is dissipated by a single action potential, so the pump is not rate limiting for excitability on this timescale. Requiring a larger stimulus during hyperpolarization describes the relative refractory period, in which firing is possible rather than impossible.",
@@ -871,10 +871,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Holding the cells at -120 mV for 100 ms before each test pulse serves what experimental purpose?",
         "options": [
-          "It activates the accessory beta1 subunit, which is otherwise silent",
-          "It loads the cell with Na+ so that a measurable inward current can be recorded",
-          "It prevents contamination of the recording by endogenous HEK293 sodium current",
-          "It ensures that essentially all channels start each trial in the closed, non-inactivated state, so peak current reflects the full complement of available channels"
+          "It activates the beta1 subunit, otherwise silent",
+          "It loads the cell with Na+ for a measurable current",
+          "It excludes contamination by endogenous HEK293 current",
+          "It starts every trial with all channels available to open"
         ],
         "correctAnswer": 3,
         "explanation": "A strongly hyperpolarized conditioning potential removes steady-state inactivation, standardizing the starting condition so that differences in peak current between constructs reflect channel properties rather than differing fractions already inactivated, which matters greatly here because the mutant recovers from inactivation faster. The beta1 subunit modulates gating constitutively and is not switched on by voltage. Intracellular Na+ is set by the pipette solution at 10 mM, not by the holding potential. Contamination by endogenous current is not the issue, since the passage states that HEK293 cells express no voltage-gated sodium current, which is why they were chosen.",
@@ -883,10 +883,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "If the extracellular Na+ concentration were lowered from 140 mM to 70 mM with all else unchanged, the peak inward current during a step to 0 mV would be expected to:",
         "options": [
-          "Increase, because the reduced gradient slows inactivation",
-          "Remain unchanged, because current depends only on the number of open channels",
-          "Reverse in direction, because Na+ would flow outward at every test potential",
-          "Decrease, because the reduced electrochemical driving force on Na+ at 0 mV lowers the flux through each open channel"
+          "Increase, because the weaker gradient slows inactivation",
+          "Stay the same, since current depends on open channels alone",
+          "Reverse, because Na+ would flow outward at every potential",
+          "Decrease, because the driving force on Na+ at 0 mV falls"
         ],
         "correctAnswer": 3,
         "explanation": "Current through open channels equals conductance times the difference between membrane potential and the Na+ equilibrium potential; halving external Na+ lowers that equilibrium potential by roughly 18 mV, shrinking the driving force at 0 mV and reducing peak inward current even though channel gating is untouched. A weaker gradient does not increase current, and inactivation kinetics are voltage dependent rather than set by the concentration gradient. Current cannot depend on open channel number alone, since flux through each pore scales with driving force. Reversal would require the test potential to exceed the new equilibrium potential, which at 70 mM external Na+ remains well positive of 0 mV.",
@@ -895,10 +895,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Affected family members experience episodes of flaccid weakness with electrically silent fibers after prolonged exertion. Which explanation best reconciles this with a mutation that increases Na+ current?",
         "options": [
-          "Sustained depolarization from the persistent current keeps most Na+ channels in the inactivated state, so fibers can no longer generate action potentials",
-          "The persistent current depletes intracellular ATP, preventing myosin from detaching from actin",
-          "The mutation reduces acetylcholine release at the neuromuscular junction during repetitive activity",
-          "Prolonged activity converts the channel to a K+-selective pore, hyperpolarizing the fiber below threshold"
+          "Sustained depolarization leaves Na+ channels inactivated",
+          "The persistent current drains ATP, locking up myosin",
+          "The mutation cuts acetylcholine release at the junction",
+          "Activity converts the channel into a K+-selective pore"
         ],
         "correctAnswer": 0,
         "explanation": "The mutant resting potential is already 8 mV depolarized, and repeated activity with a leaky persistent current depolarizes the fiber further; because the fraction of sodium channels available falls steeply with maintained depolarization, the membrane can reach a state in which too few channels are closed and resting to mount an upstroke, producing weakness rather than stiffness. ATP depletion would cause rigidity from persistent cross-bridge attachment, the opposite of flaccid weakness. The mutation is in a muscle sodium channel expressed in the sarcolemma, not in the presynaptic terminal, and the recordings characterize the channel itself. Selectivity filters are not remodeled by activity, and hyperpolarization would contradict the measured depolarized resting potential.",
@@ -918,10 +918,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which sequence best explains how the resin lowers serum LDL cholesterol?",
         "options": [
-          "The resin binds LDL particles in the intestinal lumen and carries them into the stool",
-          "The resin inhibits HMG-CoA reductase in hepatocytes, reducing cholesterol synthesis directly",
-          "The resin blocks pancreatic lipase, so less dietary cholesterol is esterified and absorbed",
-          "Loss of returning bile acids relieves feedback inhibition of CYP7A1, so hepatocytes consume cholesterol to make new bile acids and upregulate LDL receptors to replenish it"
+          "The resin binds LDL particles in the gut and voids them in stool",
+          "The resin inhibits hepatic HMG-CoA reductase directly",
+          "The resin blocks pancreatic lipase, cutting absorption",
+          "Lost bile acids derepress CYP7A1, consuming cholesterol"
         ],
         "correctAnswer": 3,
         "explanation": "Interrupting the enterohepatic loop removes the signal that normally suppresses CYP7A1, and the rat data confirm a 3.4-fold rise in that transcript; cholesterol is the substrate for the new bile acids, so hepatic cholesterol falls and the cell compensates by doubling surface LDL receptors, which clears LDL from plasma. LDL particles circulate in blood and never enter the intestinal lumen, so the resin cannot bind them there. Statins, not resins, inhibit HMG-CoA reductase, and a non-absorbable resin never reaches the hepatocyte. Pancreatic lipase hydrolyzes triacylglycerol rather than handling cholesterol esters, and blocking it would not induce CYP7A1.",
@@ -930,10 +930,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Mixed micelles are required for efficient absorption of fatty acids and monoacylglycerol primarily because they:",
         "options": [
-          "Transport lipids directly across the enterocyte membrane by an ATP-dependent pump",
-          "Solubilize lipolysis products and ferry them across the unstirred water layer to the brush border, where the lipids are released and diffuse into the enterocyte",
-          "Hydrolyze triacylglycerol into fatty acids and glycerol within the intestinal lumen",
-          "Package absorbed lipid with apolipoproteins so that it can enter the bloodstream"
+          "Pump lipids across the enterocyte membrane using ATP",
+          "Carry lipolysis products across the unstirred layer",
+          "Hydrolyze triacylglycerol into fatty acids and glycerol",
+          "Package absorbed lipid with apolipoproteins for export"
         ],
         "correctAnswer": 1,
         "explanation": "Lipolysis products are poorly soluble in the aqueous layer adjacent to the mucosa, and micelles keep them dispersed and deliver them to the brush border, where they dissociate and cross the membrane; the micelle itself is not absorbed, which is why sequestering bile acids lowered the coefficient of fat absorption from 96% to 91%. No ATP-dependent pump carries micelles across the membrane, and uptake of the released lipids is largely passive and carrier-facilitated. Hydrolysis is the job of pancreatic lipase with colipase, a step that occurs before micelle incorporation. Packaging with apolipoproteins happens inside the enterocyte during chylomicron assembly, not in the lumen.",
@@ -942,10 +942,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The prothrombin time rose from 12.1 s to 14.6 s on the resin. Deficiency of which vitamin best explains this finding?",
         "options": [
-          "Vitamin K, a cofactor for the gamma-carboxylation of several clotting factors",
-          "Vitamin C, a cofactor for the hydroxylation of proline in collagen",
+          "Vitamin K, needed to gamma-carboxylate clotting factors",
+          "Vitamin C, needed to hydroxylate proline residues in collagen",
           "Vitamin B12, a cofactor for methylmalonyl-CoA mutase",
-          "Niacin, the precursor of NAD+ and NADP+"
+          "Niacin, the precursor of NAD+ and NADP+ in the cell"
         ],
         "correctAnswer": 0,
         "explanation": "Vitamin K is fat soluble and its absorption depends on micelle formation, so binding bile acids reduces its uptake; without it, the gamma-carboxylation of factors II, VII, IX, and X is impaired, and factor VII's short half-life makes the extrinsic-pathway prothrombin time the first test to lengthen. Vitamin C is water soluble and its deficiency causes defective collagen and fragile vessels rather than a prolonged prothrombin time. Vitamin B12 is water soluble, absorbed in the terminal ileum with intrinsic factor, and its deficiency produces megaloblastic anemia and neurologic disease. Niacin is likewise water soluble, and its deficiency causes pellagra, with no direct effect on clotting factor carboxylation.",
@@ -954,10 +954,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "After lipids are re-esterified inside the enterocyte, the resulting chylomicrons reach the systemic circulation by which route?",
         "options": [
-          "Diffusion directly across the basolateral membrane into intestinal capillaries and then the hepatic portal vein",
-          "Secretion into the intestinal lumen for reabsorption further downstream in the ileum",
-          "Assembly with apolipoprotein B-48 and exocytosis into lymphatic lacteals, reaching the blood at the thoracic duct and bypassing the portal vein",
-          "Binding to serum albumin in the portal blood for direct delivery to hepatocytes"
+          "Diffusion across the basolateral membrane into portal blood",
+          "Secretion back into the lumen for uptake in the ileum",
+          "Exocytosis into lacteals, entering blood at the thoracic duct",
+          "Binding to albumin in portal blood for delivery to the liver"
         ],
         "correctAnswer": 2,
         "explanation": "Chylomicrons are too large to cross capillary endothelium, so the enterocyte builds them around apoB-48 and exocytoses them into lacteals; lymph carries them up the thoracic duct into the left subclavian vein, which is why dietary fat reaches peripheral tissues before the liver sees it. Direct diffusion into portal capillaries is the route for monosaccharides, amino acids, and short- and medium-chain fatty acids, not for chylomicrons. Secretion back into the lumen would undo absorption entirely. Albumin-bound transport describes free fatty acids released from adipose tissue, a separate transport pool from newly absorbed dietary triacylglycerol.",
@@ -966,10 +966,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which single result in Table 1 most directly confirms that the resin acted by interrupting the enterohepatic circulation, and what additional finding would most strengthen that conclusion?",
         "options": [
-          "The fall in serum LDL cholesterol, strengthened by showing that dietary cholesterol intake was unchanged between periods",
-          "The rise in serum triacylglycerol, strengthened by measuring hepatic VLDL secretion in the rat arm",
-          "The nearly fivefold rise in fecal bile acid excretion, strengthened by showing reduced bile acid concentration in portal blood in the rat arm",
-          "The drop in the coefficient of fat absorption, strengthened by repeating the stool collection on a higher fat diet"
+          "The LDL fall, plus evidence that dietary cholesterol intake was unchanged",
+          "The triacylglycerol rise, plus hepatic VLDL secretion data",
+          "The fivefold rise in fecal bile acids, plus lower portal bile acids",
+          "The drop in fat absorption, plus a repeat on a higher-fat diet"
         ],
         "correctAnswer": 2,
         "explanation": "Bile acids appearing in stool rather than being reclaimed in the ileum is the direct signature of a broken enterohepatic loop, and demonstrating that less bile acid returns in the portal blood closes the mechanistic link between luminal binding and the hepatic CYP7A1 response. The LDL fall is a downstream consequence shared with several other drug classes and does not by itself localize the action to the intestinal loop, though controlling diet is good practice. The triacylglycerol rise is a known but indirect effect on hepatic VLDL output and says nothing about bile acid recycling. The 5-point fall in fat absorption is a modest secondary effect of reduced micelle formation, and a higher fat challenge would test absorptive capacity rather than the recycling mechanism.",
@@ -1047,10 +1047,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The RT-inhibitor curve in Figure 1 rises toward the untreated value earlier than the integrase-inhibitor curve. This difference is best explained by which statement?",
         "options": [
-          "The integrase inhibitor is intrinsically more potent than the RT inhibitor at every concentration tested",
-          "Reverse transcription is completed earlier in the replication cycle than integration, so its inhibitor has a shorter useful window",
-          "The RT inhibitor is degraded by host cells within about 4 h of addition",
-          "Integrase acts on viral RNA, whereas reverse transcriptase acts on viral DNA"
+          "The integrase inhibitor is intrinsically more potent",
+          "Reverse transcription finishes earlier than integration does",
+          "Host cells degrade the RT inhibitor within about four hours",
+          "Integrase acts on viral RNA and RT acts on viral DNA"
         ],
         "correctAnswer": 1,
         "explanation": "A drug that blocks a step can only help if it is present before that step happens. Reverse transcription precedes integration, so by 6 h the DNA copy already exists and adding an RT inhibitor accomplishes nothing, while integration is still partly ahead and its inhibitor still works. Relative potency is not being compared here, because the passage says every drug was used at a concentration that gave complete suppression when present from time zero. Nothing in the design speaks to drug degradation, and each drug was added fresh at its stated time. The claim about substrates is simply backwards: reverse transcriptase copies the RNA genome into DNA, and integrase acts on that DNA product.",
@@ -1059,10 +1059,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The protease inhibitor added at 24 h reduced infectious titer more than 100-fold while p24 in the medium stayed near the untreated value. Which explanation best accounts for both observations?",
         "options": [
-          "It prevents viral genomic RNA from being packaged into budding particles",
-          "It blocks fusion of the virion envelope with the host plasma membrane",
-          "Polyprotein cleavage occurs during and after budding, so particles are still released but fail to mature into infectious virions",
-          "It inhibits host ribosomes, so no viral polyprotein is synthesized"
+          "It keeps viral genomic RNA out of the budding particles",
+          "It blocks fusion of the envelope with the host membrane",
+          "Cleavage happens at budding, so particles bud immature",
+          "It inhibits host ribosomes, so no viral polyprotein is made"
         ],
         "correctAnswer": 2,
         "explanation": "p24 measures capsid protein released, and titer measures infectivity; the two diverge exactly when particles are made but are defective. Protease acts last, cleaving Gag and Gag-Pol as the particle buds and matures, so blocking it yields immature, noninfectious particles that still carry p24 into the medium. Blocking RNA packaging or blocking translation of the polyprotein would reduce particle output and therefore lower p24 along with titer, which is not what was seen. Blocking entry would prevent infection of new cells but would not describe a drug added to already-infected cultures and would not leave p24 output intact while destroying infectivity of the particles produced.",
@@ -1071,10 +1071,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "HIV must carry reverse transcriptase inside the virion rather than rely on a host enzyme because:",
         "options": [
-          "host cells have no RNA-dependent DNA polymerase able to copy the viral RNA genome into DNA",
-          "the viral genome is double-stranded DNA that must be unwound before integration",
-          "host RNA polymerase II cannot transcribe integrated proviral DNA",
-          "reverse transcription takes place in the nucleolus, which excludes host polymerases"
+          "no host enzyme copies the viral RNA genome into DNA",
+          "the genome arrives as double-stranded DNA to unwind",
+          "host RNA polymerase II cannot transcribe the provirus",
+          "reverse transcription occurs inside the nucleolus"
         ],
         "correctAnswer": 0,
         "explanation": "Host cells make DNA from DNA templates and RNA from DNA templates; they have no general enzyme that makes DNA from an RNA template, which is precisely the reaction the retrovirus needs, so the virus supplies that activity itself. The genome as delivered is single-stranded RNA, not double-stranded DNA, so the description of unwinding does not apply. Host RNA polymerase II does transcribe the provirus, and the passage says so, which is why the virus does not need to bring its own RNA polymerase. Reverse transcription occurs in the cytoplasm in the incoming reverse-transcription complex, not in the nucleolus, and nucleolar exclusion is not a reason a virion packages an enzyme.",
@@ -1083,10 +1083,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which statement best describes how the RT-inhibitor-resistant variant most likely arose during 12 weeks of passage in sub-inhibitory drug?",
         "options": [
-          "The drug chemically modified the RT gene, directing the particular substitution that appeared",
-          "The virus detected the drug and raised its mutation rate in response to the stress",
-          "Host enzymes edited the proviral DNA in order to protect the virus from the drug",
-          "Reverse transcriptase lacks proofreading, so variants pre-existed in the population and the drug selected those that replicated best in its presence"
+          "The drug chemically wrote that substitution into the RT gene",
+          "The virus sensed the drug and raised its own mutation rate",
+          "Host enzymes edited the provirus to protect the virus",
+          "Error-prone RT made variants that the drug then selected"
         ],
         "correctAnswer": 3,
         "explanation": "RT is error-prone and has no proofreading exonuclease, so a large infected culture already contains an enormous swarm of sequence variants before any drug is added; sub-inhibitory drug does not create the useful mutation, it merely lets the rare variant that tolerates the drug outgrow the rest. Mutations are not directed to a specific codon by the selecting agent, so the idea that the drug chemically writes the substitution misstates how selection works. A virus has no sensory apparatus for tuning its own mutation rate to a drug. Host DNA-editing enzymes such as APOBEC family members act to damage retroviral genomes, not to engineer helpful resistance substitutions on the virus's behalf.",
@@ -1095,10 +1095,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which additional experiment would best establish that the fall in released virus reflects inhibition of viral replication rather than drug toxicity to the host cells?",
         "options": [
-          "Repeat the assay using a 10-fold higher concentration of each drug",
-          "Treat uninfected CD4+ T cells with each drug and measure viability and proliferation",
-          "Measure p24 in culture medium that was never exposed to cells",
-          "Add all three drugs simultaneously and measure released virus"
+          "Repeat the assay with ten-fold higher drug concentrations",
+          "Treat uninfected T cells and measure their viability",
+          "Measure p24 in medium never exposed to any cells",
+          "Add all three drugs at once and measure released virus"
         ],
         "correctAnswer": 1,
         "explanation": "Toxicity is an alternative explanation for less virus in the medium, because dying cells make less of everything; the control that separates the two is to expose uninfected cells to the same drug concentrations and show that viability and division are unaffected. Raising the concentration tenfold pushes toward toxicity rather than excluding it. Medium never exposed to cells is a blank for the ELISA and tests assay background, not cell health. Combining all three drugs asks a different question about additive suppression and would, if anything, make a toxicity artifact harder to detect.",
@@ -1107,10 +1107,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "None of the three drugs cleared virus from cells that already carried an integrated provirus, and those cells resumed producing viral RNA when drug was withdrawn. The best explanation is that:",
         "options": [
-          "the provirus is degraded by host nucleases faster than any drug can reach it",
+          "host nucleases degrade the provirus faster than drugs act",
           "none of the three drugs can cross the nuclear envelope",
-          "the provirus is a stable part of host chromosomal DNA, and its transcription and translation are carried out by host enzymes that these drugs do not target",
-          "integrase must act continuously to keep the provirus in the host genome"
+          "the provirus is host DNA, read out by host enzymes",
+          "integrase must act continuously to retain the provirus"
         ],
         "correctAnswer": 2,
         "explanation": "Each drug targets a virus-encoded enzyme acting at a specific step: making the DNA copy, inserting it, or maturing new particles. Once the DNA is inserted, it is ordinary chromosomal DNA read out by host RNA polymerase II and host ribosomes, so nothing the three drugs inhibit is required to maintain it, which is exactly why virus reappears when drug is removed. Rapid nuclease degradation would predict loss of the provirus and no rebound, the opposite of the observation. Nuclear access is not the barrier, since the integrase inhibitor works on nuclear events when given early. Integrase catalyzes a one-time insertion and is not needed thereafter to retain the provirus.",
@@ -1130,10 +1130,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why were the mating mixtures plated on medium containing both ampicillin and streptomycin?",
         "options": [
-          "Only recipients that acquired the plasmid can grow, because donors are streptomycin-sensitive and unmated recipients are ampicillin-sensitive",
-          "The two antibiotics act synergistically to kill any bacteriophage carried over from the donor culture",
-          "Streptomycin induces plasmid transfer while ampicillin selects for the donor strain",
-          "Double selection raises the frequency with which the plasmid is transferred"
+          "Only recipients that gained the plasmid survive both drugs",
+          "The two drugs together kill phage carried from donors",
+          "Streptomycin induces transfer and ampicillin picks donors",
+          "Double selection raises the frequency of plasmid transfer"
         ],
         "correctAnswer": 0,
         "explanation": "The double-antibiotic plate is a counterselection: the donor is killed by streptomycin, the recipient that never received pR1 is killed by ampicillin, and only a recipient that has both its own chromosomal streptomycin resistance and the newly acquired plasmid gene survives, so every colony is a transconjugant. Antibiotics are irrelevant to phage viability, and phage carryover is addressed by the membrane control instead. The plate does not select for the donor, which cannot grow there at all, and streptomycin is not an inducer of transfer. Selection acts after mating is over, so it can reveal but cannot increase the transfer frequency.",
@@ -1154,10 +1154,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Neither the donor-only nor the recipient-only culture produced colonies on ampicillin plus streptomycin. This control is important because it rules out:",
         "options": [
-          "transfer of the plasmid through a conjugative pilus",
-          "the requirement for direct cell-to-cell contact",
-          "degradation of the transferred plasmid by DNase I",
-          "spontaneous mutation to double resistance within either parent strain as the source of the colonies"
+          "transfer of the plasmid through a conjugative pilus tube",
+          "the requirement for direct contact between the two cells",
+          "degradation of the transferred plasmid by added DNase I",
+          "spontaneous double-resistant mutants in either parent"
         ],
         "correctAnswer": 3,
         "explanation": "Each parent culture contains a huge number of cells, so a rare spontaneous mutation to resistance against the second antibiotic could generate colonies on the selective plate that look exactly like transconjugants; showing that neither parent alone yields any such colonies establishes that the colonies from the mixture required both strains. The control cannot rule out the very mechanism it is being used to demonstrate, so conjugation through a pilus is not what is being excluded. The contact requirement is tested by the membrane chamber, not by single-strain plating. Sensitivity to DNase is tested in the DNase arm, and that arm showed no effect.",
@@ -1178,10 +1178,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Transconjugants from Experiment 1 efficiently transferred resistance to a fresh recipient, whereas recipients that acquired chromosomal markers in Experiment 2 almost never became donors. The best explanation is that:",
         "options": [
-          "the Hfr donor has lost the genes needed to build a conjugative pilus",
-          "chromosomal genes are transferred as RNA rather than as DNA",
-          "in an Hfr strain the transfer factor is integrated in the chromosome and enters the recipient last, so mating is nearly always interrupted before it is transferred",
-          "recipients rapidly degrade all incoming chromosomal DNA"
+          "the Hfr donor has lost the genes for building a pilus",
+          "chromosomal genes move as RNA rather than as DNA",
+          "in an Hfr the transfer factor enters the recipient last",
+          "recipients rapidly degrade all the incoming chromosomal DNA"
         ],
         "correctAnswer": 2,
         "explanation": "A cell becomes a donor only if it receives the complete transfer factor. In Experiment 1 the whole plasmid moves as a unit, so transconjugants inherit the transfer machinery and can mate again. In an Hfr strain the transfer factor sits in the chromosome and most of it is transferred at the very end of the linear sequence, so ordinary mating breaks off first and recipients get chromosomal markers without donor capability. An Hfr strain that could not build a pilus would transfer nothing, yet markers clearly entered recipients. DNA, not RNA, is transferred during conjugation. Wholesale degradation of incoming DNA would prevent the recombinant markers that were in fact recovered.",
@@ -1251,10 +1251,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The accumulation of cells in the 2n compartment of wild-type cultures after irradiation is most directly produced by:",
         "options": [
-          "degradation of cyclin B, which prevents entry into mitosis",
-          "activation of the anaphase-promoting complex, which triggers sister-chromatid separation",
-          "p53-driven transcription of p21, which inhibits cyclin-dependent kinases and leaves Rb hypophosphorylated",
-          "inhibition of ribosome biogenesis, which starves the cell of new protein"
+          "Degradation of cyclin B, preventing entry into mitosis",
+          "Activation of the anaphase-promoting complex in mitosis",
+          "p53-driven p21 inhibiting the G1 cyclin-dependent kinases",
+          "Inhibition of ribosome biogenesis, starving the cell"
         ],
         "correctAnswer": 2,
         "explanation": "The data localize the block before DNA synthesis: cells pile up at 2n, and the molecular arm shows p53 accumulating first and p21 rising after it, with no p21 induction when p53 is absent. p21 inhibits the G1 cyclin-dependent kinases, so Rb stays hypophosphorylated, E2F-dependent genes are not turned on, and cells do not enter S phase. Cyclin B destruction and anaphase-promoting-complex activity govern mitotic entry and exit and would trap cells at 4n, not 2n. A general shutdown of ribosome biogenesis would slow both lines indiscriminately, yet the p53-null cells cycled normally under identical irradiation.",
@@ -1263,10 +1263,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Because p53-null cells continued to enter and traverse S phase after irradiation, they would be expected to show:",
         "options": [
-          "fewer mutations, because damaged template regions are skipped during replication",
-          "a complete block of DNA replication until repair is finished",
+          "fewer mutations, since damaged regions are skipped",
+          "a complete block of replication until repair finishes",
           "loss of all cyclin-dependent kinase activity",
-          "a higher frequency of fixed mutations and chromosomal aberrations in their daughter cells"
+          "more fixed mutations and chromosomal aberrations"
         ],
         "correctAnswer": 3,
         "explanation": "The point of pausing in G1 is to repair lesions before they are copied. Replicating a damaged template converts a repairable lesion into a permanent sequence change or a broken, rearranged chromosome, so cells that skip the pause pass more mutations and aberrations to their progeny. Replication machinery does not selectively skip damaged regions to protect the genome, so predicting fewer mutations inverts the logic. A complete replication block describes the checkpoint that these cells specifically lack. Loss of all cyclin-dependent kinase activity would arrest the cells, which is the opposite of the observed continued cycling.",
@@ -1275,10 +1275,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "In these propidium iodide histograms, cells held at the G1 restriction point appear at which DNA content?",
         "options": [
-          "2n, in the G1 peak itself",
-          "between 2n and 4n",
-          "4n",
-          "8n"
+          "At 2n, within the G1 peak",
+          "Between the 2n and 4n peaks",
+          "At 4n, with the G2 cells",
+          "At 8n, above the G2 peak"
         ],
         "correctAnswer": 0,
         "explanation": "The restriction point lies in late G1, before any DNA has been replicated, so an arrested cell still carries exactly one unreplicated diploid genome and stains at 2n, which is why the 2n percentage climbs in wild-type cells. Fluorescence between the two peaks marks cells in the middle of replication, which is the compartment the arrested cells never reach. A 4n signal marks cells that have completed replication and are in G2 or M. An 8n signal would require two rounds of replication without an intervening division, which is not what a G1 arrest produces.",
@@ -1287,10 +1287,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Wild-type cells treated with the ATM kinase inhibitor still contained the p53 gene, yet failed to accumulate at 2n. This result indicates that:",
         "options": [
-          "p53 phosphorylates and activates ATM in response to DNA damage",
-          "ATM acts upstream of p53, phosphorylating it so that it escapes degradation and accumulates",
-          "ATM and p53 act in independent, parallel pathways to the same endpoint",
-          "ATM activity is required for propidium iodide to enter and stain cells"
+          "p53 phosphorylates and activates ATM after DNA damage",
+          "ATM acts upstream, stabilizing p53 after damage",
+          "ATM and p53 act in independent parallel pathways",
+          "ATM activity is needed for the dye to stain cells"
         ],
         "correctAnswer": 1,
         "explanation": "Blocking ATM prevented p53 protein from accumulating and abolished the arrest, placing ATM above p53 in the same pathway; this fits the immunoblot detail that p53 rises without any increase in its mRNA, meaning the regulation is post-translational stabilization rather than new transcription. Reversing the order, with p53 activating ATM, cannot explain why inhibiting ATM removes the p53 protein response. Strictly parallel pathways would predict that losing one still leaves partial arrest through the other, whereas either lesion alone abolished it completely. Staining was performed on fixed cells, and identical histograms were obtained from all lines, so dye entry is not at issue.",
@@ -1299,10 +1299,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which additional measurement would best distinguish a genuine G1 arrest in wild-type cells from selective killing of the cells that happened to be in S phase at the time of irradiation?",
         "options": [
-          "Repeat the flow cytometry using a higher radiation dose",
+          "Repeat the flow cytometry at a higher radiation dose",
           "Immunoblot for p53 protein at each time point",
           "Measure the total DNA content of the whole culture",
-          "Pulse-label with a nucleoside analog such as BrdU and count how many cells enter S phase during each interval"
+          "Pulse-label with BrdU to count cells entering S phase"
         ],
         "correctAnswer": 3,
         "explanation": "Both arrest and selective loss of S-phase cells raise the fraction of surviving cells that sit at 2n, so a percentage alone cannot separate them; what distinguishes them is entry rate, and pulse-labeling counts the cells that newly begin replicating in a defined window, which falls only under a real arrest. A higher dose amplifies both processes together and resolves nothing. Immunoblotting p53 confirms that the signaling pathway is engaged but says nothing about whether cells died or paused. Total DNA content of the culture is a bulk number that conflates cell number with per-cell content and cannot report either quantity.",
@@ -1311,10 +1311,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The population with fluorescence below the 2n peak, seen only in irradiated wild-type cultures at 48 h, most likely consists of:",
         "options": [
-          "apoptotic cells whose DNA has been fragmented and partly lost from the cell",
+          "apoptotic cells that have lost fragmented DNA",
           "quiescent cells that have withdrawn into G0",
-          "tetraploid cells that failed to complete cytokinesis",
-          "cells in early S phase that have just begun replicating"
+          "tetraploid cells that failed to finish cytokinesis",
+          "cells in early S phase that just began replicating"
         ],
         "correctAnswer": 0,
         "explanation": "Sub-2n staining means less DNA per particle than an unreplicated diploid genome, which happens when caspase-activated endonucleases cut chromatin into fragments that leak out during processing, the classic sub-G1 apoptotic signal; that it appears late, only after damage, and only in the p53-competent line fits p53-dependent apoptosis in cells that cannot repair. Quiescent cells have retained a full unreplicated genome and stain squarely at 2n. Tetraploid cells that failed cytokinesis carry more DNA, not less, appearing at or above 4n. Cells in early S phase have already added DNA and therefore lie just above the 2n peak.",
@@ -1346,10 +1346,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The gray-body, vestigial-wing and black-body, normal-wing progeny are classified as recombinant because:",
         "options": [
-          "they are the two most numerous classes recovered in the testcross",
-          "each of them carries two dominant alleles on the same chromosome",
-          "their allele combinations differ from the arrangements carried on the two homologs of the F1 parent, which were set by the original parental cross",
-          "they arose from gametes contributed by the homozygous recessive tester parent"
+          "they are the two most numerous classes in the testcross",
+          "each carries two dominant alleles on one chromosome",
+          "their allele pairings differ from the F1 parent's homologs",
+          "they arose from gametes of the homozygous tester parent"
         ],
         "correctAnswer": 2,
         "explanation": "Whether a class is parental or recombinant depends on the arrangement in the heterozygous parent, and here the parental cross established that one F1 homolog carries both wild-type alleles while the other carries both recessive alleles; a gamete pairing one wild-type with one recessive allele therefore required a crossover between the loci. The rare classes, not the numerous ones, are the recombinants, so counting the largest classes as recombinant inverts the reasoning. Neither rare class carries two dominant alleles together, since that is precisely the parental gray, normal-winged combination. The tester parent contributes only recessive alleles to every progeny fly, so it cannot generate any of the phenotypic differences being scored.",
@@ -1358,10 +1358,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Given map distances of 12 cM between b and vg, 8 cM between vg and c, and 20 cM between b and c, the gene order is:",
         "options": [
-          "b-c-vg",
-          "b-vg-c",
-          "c-b-vg",
-          "the data are inconsistent with any linear order"
+          "The order is b-c-vg",
+          "The order is b-vg-c",
+          "The order is c-b-vg",
+          "No linear order fits"
         ],
         "correctAnswer": 1,
         "explanation": "In a linear map the largest of the three pairwise distances spans the outermost pair, and the middle gene is the one whose two distances sum to it: 12 plus 8 equals 20, so vg lies between b and c. Placing c in the middle would require the b-to-vg distance to be the sum of the other two, meaning 20 plus 8 equals 12, which is false. Placing b in the middle would require the vg-to-c distance to be the largest, but 8 cM is the smallest of the three. The three values are perfectly additive, so there is no inconsistency to invoke.",
@@ -1370,10 +1370,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why did the investigators cross F1 heterozygotes to a homozygous recessive tester rather than to each other?",
         "options": [
-          "The tester contributes only recessive alleles, so each progeny phenotype directly reports the gamete contributed by the heterozygous parent",
+          "The tester's recessive alleles make each gamete visible",
           "F1 by F1 crosses cannot generate recombinant chromosomes",
-          "The presence of the tester parent increases the rate of crossing over in the F1",
-          "Only a testcross allows dominant alleles to be phenotypically expressed"
+          "The tester parent raises the rate of crossing over in the F1",
+          "Only a testcross lets dominant alleles be expressed at all"
         ],
         "correctAnswer": 0,
         "explanation": "A testcross makes gametes visible: because every gamete from the tester carries recessive alleles at both loci, the progeny phenotype is a direct readout of which alleles the heterozygous parent's gamete carried, so counting flies is equivalent to counting gametes. Crossing two heterozygotes still produces crossovers, but dominance masks the contributing gametes and several genotypes collapse into one phenotype, which is the practical problem being avoided. A mating partner cannot influence recombination occurring in the other parent's meiosis. Dominant alleles are expressed in any cross, including the F1 generation described in the passage.",
@@ -1382,10 +1382,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A fourth gene, d, scored against b in an identical testcross, gave the four phenotypic classes in a 1:1:1:1 ratio. The most defensible conclusion is that:",
         "options": [
-          "b and d lie about 1 cM apart",
-          "b and d lie on the same chromosome about 25 cM apart",
-          "d must lie on the same chromosome as vg",
-          "b and d assort independently, either because they are on different chromosomes or because they are far enough apart on one chromosome that crossing over separates them half the time"
+          "b and d lie about 1 cM apart on one chromosome",
+          "b and d lie about 25 cM apart on one chromosome",
+          "d must lie on the same chromosome as the vg locus",
+          "b and d assort independently of one another"
         ],
         "correctAnswer": 3,
         "explanation": "A 1:1:1:1 ratio means recombinants equal parentals, a 50% recombination frequency, which is the maximum any pair of loci can show; that outcome is produced both by genes on different chromosomes and by genes so far apart on one chromosome that multiple crossovers randomize them, so the data cannot distinguish the two possibilities. A 1 cM separation would give a strong excess of parental classes, roughly 99 to 1, not equal classes. A 25 cM separation would still give a clear parental excess, about 3 to 1, which the observed ratio does not show. Nothing in this cross involves vg, so no placement relative to vg can be inferred.",
@@ -1467,10 +1467,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "In Group 2, the response after the day-28 boost is faster, larger, and composed of higher-affinity IgG than the primary response. The best explanation is that:",
         "options": [
-          "the booster injection delivered a larger dose of antigen than the primary immunization",
-          "naive B cells respond more rapidly the second time an antigen is encountered",
-          "the primary response generated memory B cells that had already undergone class-switch recombination and affinity maturation",
-          "IgM-secreting plasma cells convert into IgG-secreting plasma cells when antigen returns"
+          "the booster delivered a larger antigen dose than the first",
+          "naive B cells respond faster on a second encounter",
+          "the primary response left switched memory B cells",
+          "IgM-secreting plasma cells convert to IgG secretion"
         ],
         "correctAnswer": 2,
         "explanation": "The passage supplies the mechanism directly: germinal centers formed during the primary response, affinity for antigen improved about 100-fold, and switched memory B cells were already abundant on day 28 before the boost, so re-exposure recruits a large pool of pre-selected, already-switched cells that need no further differentiation from scratch. The passage states the boost used the same antigen dose, so dose cannot account for the difference. Naive B cells have no record of a prior encounter, and it is the memory compartment, not the naive one, that responds faster. Terminally differentiated plasma cells are end-stage secretory cells and do not switch their isotype after the fact; class switching happens in activated B cells before plasma-cell differentiation.",
@@ -1479,9 +1479,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "CD4-depleted mice made a small early IgM response but essentially no IgG, even with adjuvant. This pattern is best explained by a requirement for:",
         "options": [
-          "CD40 ligand and cytokines supplied by helper T cells to drive class-switch recombination and affinity maturation",
-          "helper T cells to secrete the antibody molecules themselves",
-          "CD4+ T cells to present antigen to naive B cells using MHC class I",
+          "CD40 ligand plus cytokines supplied by helper T cells",
+          "helper T cells to secrete the antibody molecules",
+          "CD4+ T cells to present antigen to B cells on MHC I",
           "helper T cells to carry antigen into the B-cell cytoplasm"
         ],
         "correctAnswer": 0,
@@ -1491,10 +1491,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The adjuvant most plausibly enhanced the response in Group 2 by:",
         "options": [
-          "serving as the antigen that the B-cell receptor recognizes",
-          "directly cross-linking membrane IgM on naive B cells regardless of specificity",
-          "supplying preformed antibody that opsonizes the injected antigen",
-          "stimulating innate pattern-recognition receptors and prolonging antigen availability, thereby increasing dendritic-cell activation and costimulation of T cells"
+          "serving as the antigen the B-cell receptor recognizes",
+          "cross-linking membrane IgM regardless of specificity",
+          "supplying preformed antibody that opsonizes the antigen",
+          "engaging innate receptors and prolonging antigen exposure"
         ],
         "correctAnswer": 3,
         "explanation": "The adjuvant here is a bacterial cell-wall preparation in an emulsion, a combination that both delivers ligands for innate pattern-recognition receptors and keeps antigen at the site longer; the resulting dendritic-cell maturation and upregulated costimulation give T cells the second signal they need, which is why germinal centers were large in Group 2 and small in Group 1. The adjuvant is not the antigen being measured, since the assay scores antibody specific for the protein antigen. Nonspecific cross-linking of surface immunoglobulin would activate B cells irrespective of specificity and would not yield the antigen-specific, high-affinity response observed. No antibody is administered in this design, and Group 3 shows that the adjuvant cannot substitute for the animal's own T-dependent response.",
@@ -1503,10 +1503,10 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which comparison in this study most directly isolates the contribution of helper T cells to the IgG response?",
         "options": [
-          "Group 1 versus Group 2",
-          "Group 2 versus Group 3",
-          "IgM titer versus IgG titer within Group 1",
-          "Pre-boost versus post-boost titers within Group 1"
+          "Group 1 compared with Group 2",
+          "Group 2 compared with Group 3",
+          "IgM versus IgG titer within Group 1",
+          "Pre-boost versus post-boost in Group 1"
         ],
         "correctAnswer": 1,
         "explanation": "Isolating one variable requires two groups that differ in that variable alone; Group 2 and Group 3 both received antigen with adjuvant and differ only in whether CD4+ T cells were present, so the difference between them is attributable to T-cell help. Comparing the group given antigen alone with the group given antigen plus adjuvant varies the adjuvant, which measures adjuvant effect rather than T-cell help. Comparing isotypes within a single group describes the kinetics of switching but holds T-cell status constant, so it cannot attribute anything to T cells. Comparing time points before and after the boost within one group measures the memory response, again without varying T-cell availability.",
@@ -1515,9 +1515,9 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Class switching from IgM to IgG in these mice changes:",
         "options": [
-          "the heavy-chain constant region, and therefore effector function, while antigen-binding specificity is retained",
-          "the antigen-binding site, so that a new specificity is generated",
-          "the light-chain variable region only, leaving the heavy chain unaltered",
+          "the heavy-chain constant region, not the binding specificity",
+          "the antigen-binding site, generating an entirely new specificity",
+          "only the light-chain variable region, sparing the heavy chain",
           "the number of antigen-binding sites per molecule from two to ten"
         ],
         "correctAnswer": 0,

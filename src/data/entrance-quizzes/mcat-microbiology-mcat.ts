@@ -12,13 +12,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-1a',
     question: 'Gram-positive bacteria stain purple with the Gram stain because they:',
     options: [
-      'Possess an outer membrane that retains the crystal violet-iodine complex.',
-      'Have a thick peptidoglycan cell wall that retains the crystal violet-iodine complex after decolorization.',
-      'Lack peptidoglycan, allowing safranin to bind directly to the cell membrane.',
-      'Contain lipopolysaccharide (LPS) that binds crystal violet permanently.'
+      'Have an outer membrane that traps the crystal violet-iodine complex.',
+      'Have a thick peptidoglycan wall that holds the crystal violet-iodine complex.',
+      'Lack peptidoglycan, so safranin binds the plasma membrane directly.',
+      'Carry lipopolysaccharide that binds crystal violet permanently.'
     ],
     correctIndex: 1,
-    explanation: 'Gram-positive bacteria have a thick peptidoglycan layer (~20–80 nm). Crystal violet-iodine complexes become trapped in this mesh after ethanol decolorization, retaining purple color. Gram-negative bacteria have a thin peptidoglycan plus an outer membrane containing LPS; ethanol dissolves the outer membrane, allowing dye to escape, and safranin counterstains them pink.',
+    explanation: 'The decolorization step is what separates the two groups. A gram-positive cell has a thick (~20-80 nm) peptidoglycan mesh that traps the crystal violet-iodine complex when ethanol is applied, so it stays purple. Gram-NEGATIVE cells are the ones with an outer membrane and LPS; ethanol dissolves that membrane and washes the dye out through their thin peptidoglycan layer, leaving them to take up the pink safranin counterstain.',
     partNumber: 1,
     partTitle: 'Bacterial Structure'
   },
@@ -26,13 +26,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-1b',
     question: 'Which of the following structures is unique to bacteria and is the target of penicillin antibiotics?',
     options: [
-      'Ribosome (70S)',
-      'Peptidoglycan cell wall',
-      'Plasma membrane phospholipid bilayer',
-      'Flagella (composed of flagellin)'
+      'The 70S ribosome',
+      'The peptidoglycan cell wall',
+      'The phospholipid plasma membrane',
+      'The flagellum, built from flagellin'
     ],
     correctIndex: 1,
-    explanation: 'Penicillins (and other β-lactams) inhibit transpeptidases (penicillin-binding proteins, PBPs) that cross-link peptidoglycan strands. Since eukaryotic cells lack peptidoglycan, penicillin has selective toxicity for bacteria. 70S ribosomes are also uniquely bacterial but are targeted by different antibiotics.',
+    explanation: 'Penicillins and the other beta-lactams acylate the transpeptidases (penicillin-binding proteins) that cross-link peptidoglycan strands, so the wall cannot be completed and the cell lyses. Human cells have no peptidoglycan at all, which is the source of the selective toxicity. The 70S ribosome is also uniquely bacterial, but it is the target of aminoglycosides, macrolides, and tetracyclines rather than penicillin.',
     partNumber: 1,
     partTitle: 'Bacterial Structure'
   },
@@ -42,13 +42,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-2a',
     question: 'During which phase of bacterial growth does cell division occur at the maximum rate, with generation time constant and population doubling exponentially?',
     options: [
-      'Lag phase',
-      'Log (exponential) phase',
-      'Stationary phase',
-      'Death phase'
+      'The lag phase',
+      'The log phase',
+      'The stationary phase',
+      'The death phase'
     ],
     correctIndex: 1,
-    explanation: 'The log (exponential) phase is characterized by rapid, constant cell division. Nutrients are plentiful, waste is not yet limiting, and bacteria divide at maximum rate. This is when bacteria are most metabolically active and most sensitive to antibiotics targeting cell wall synthesis or replication.',
+    explanation: 'In the log (exponential) phase nutrients are plentiful and waste has not yet accumulated, so each cell divides at its maximum rate and the generation time is constant. Lag phase is the pre-division period of enzyme and ribosome synthesis; stationary phase is the plateau where division equals death as resources run out. Cells are most antibiotic-susceptible in log phase, since wall-synthesis and replication inhibitors need actively growing cells.',
     partNumber: 2,
     partTitle: 'Bacterial Growth'
   },
@@ -62,7 +62,7 @@ const questions: EntranceQuizQuestion[] = [
       'Binary fission'
     ],
     correctIndex: 2,
-    explanation: 'Transduction: a bacteriophage accidentally packages bacterial DNA and injects it into a new host. Generalized transduction uses lytic phages (any bacterial DNA); specialized transduction uses lysogenic phages (genes near the phage integration site). Conjugation requires pili and direct cell contact; transformation uses naked DNA from the environment.',
+    explanation: 'In transduction a bacteriophage mispackages host DNA and injects it into the next cell it infects; generalized transduction uses lytic phages and can move any bacterial gene, while specialized transduction uses a temperate phage and moves genes flanking its integration site. Conjugation needs a sex pilus and direct cell-to-cell contact, transformation takes up naked DNA from the environment, and binary fission is ordinary vertical reproduction.',
     partNumber: 2,
     partTitle: 'Bacterial Growth'
   },
@@ -72,13 +72,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-3a',
     question: 'All viruses must contain which of the following?',
     options: [
-      'A lipid envelope derived from the host cell membrane.',
-      'Both DNA and RNA as their genetic material.',
-      'A protein capsid enclosing a nucleic acid genome (DNA or RNA, never both).',
-      'Ribosomes for protein synthesis.'
+      'A lipid envelope taken from the host membrane.',
+      'Both DNA and RNA packaged in the same virion.',
+      'A protein capsid surrounding a nucleic acid genome.',
+      'Ribosomes for synthesizing their own proteins.'
     ],
     correctIndex: 2,
-    explanation: 'The minimal viral components are a nucleic acid genome (either DNA or RNA, single or double-stranded, never both) and a protein capsid. Envelopes are present only in enveloped viruses. Viruses lack ribosomes and depend entirely on host cell machinery for protein synthesis.',
+    explanation: 'The irreducible minimum for a virus is a genome — DNA or RNA, single- or double-stranded, but never both in one virion — packaged inside a protein capsid. An envelope is optional and marks only the enveloped families, which acquire it by budding through a host membrane. No virus carries ribosomes; every one of them borrows the host translation machinery, which is why viruses are obligate intracellular parasites.',
     partNumber: 3,
     partTitle: 'Viral Structure'
   },
@@ -86,13 +86,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-3b',
     question: 'The antigenic shift responsible for influenza pandemics occurs when:',
     options: [
-      'Gradual point mutations accumulate in hemagglutinin or neuraminidase over many replication cycles.',
-      'Two different influenza A strains co-infect a host cell and exchange RNA segments, producing a novel reassortant virus.',
-      'The influenza virus mutates its capsid proteins to evade T-cell recognition.',
-      'Influenza virus integrates its RNA genome into the host chromosome and reactivates.'
+      'Point mutations gradually accumulate in hemagglutinin and neuraminidase.',
+      'Two influenza A strains co-infect a cell and swap RNA segments.',
+      'The virus alters its capsid proteins to escape T-cell recognition.',
+      'The viral RNA integrates into the host chromosome and reactivates.'
     ],
     correctIndex: 1,
-    explanation: 'Antigenic shift: influenza A\'s segmented RNA genome allows reassortment when two strains co-infect a cell (e.g., avian and human strains in pigs). A new combination of HA and/or NA subtypes emerges to which humans have no prior immunity—the basis of pandemic strains. Antigenic drift = gradual point mutations (seasonal flu variation).',
+    explanation: 'Influenza A has a segmented genome of eight RNA pieces, so when two strains infect the same cell (classically an avian and a human strain in a pig) progeny virions can reassort those segments. The result is an abrupt new combination of HA and/or NA subtypes against which the population has no immunity — the making of a pandemic. Gradual point mutation is antigenic DRIFT, which drives ordinary seasonal variation.',
     partNumber: 3,
     partTitle: 'Viral Structure'
   },
@@ -102,13 +102,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-4a',
     question: 'HIV, a retrovirus, uses reverse transcriptase to:',
     options: [
-      'Convert host cell DNA into viral RNA for packaging into new virions.',
-      'Synthesize double-stranded DNA from its single-stranded RNA genome, which is then integrated into the host chromosome.',
-      'Replicate its RNA genome directly in the cytoplasm without a DNA intermediate.',
-      'Cleave the host cell membrane to facilitate viral budding.'
+      'Transcribe host DNA into viral RNA for packaging into new virions.',
+      'Copy its single-stranded RNA genome into double-stranded DNA.',
+      'Replicate the RNA genome directly, with no DNA intermediate.',
+      'Cleave Gag-Pol polyproteins so that new virions can mature.'
     ],
     correctIndex: 1,
-    explanation: 'HIV replication: viral RNA genome → (reverse transcriptase) → DNA:RNA hybrid → (RNase H degrades RNA) → dsDNA → (integrase) → integrated provirus in host chromosome. The host\'s RNA Pol II then transcribes the provirus. Reverse transcriptase is highly error-prone, generating mutations and drug resistance.',
+    explanation: 'Reverse transcriptase runs the central dogma backwards: viral RNA becomes an RNA:DNA hybrid, RNase H degrades the RNA strand, and the second DNA strand is made, yielding dsDNA that integrase then splices into the host chromosome as a provirus for host RNA Pol II to transcribe. Polyprotein cleavage is the job of HIV protease, the target of a separate drug class, and the enzyme has no proofreading, which is why resistance arises so fast.',
     partNumber: 4,
     partTitle: 'Viral Replication'
   },
@@ -116,13 +116,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-4b',
     question: 'Which statement best describes the lytic vs. lysogenic cycles of a bacteriophage?',
     options: [
-      'In the lytic cycle, phage DNA integrates into the bacterial chromosome as a prophage and is replicated with host DNA.',
-      'In the lysogenic cycle, phage DNA integrates as a prophage; in the lytic cycle, the phage hijacks host machinery, replicates, and lyses the cell.',
-      'The lysogenic cycle always progresses to the lytic cycle within one generation.',
-      'In the lytic cycle, the host cell survives and continuously releases new phages by budding.'
+      'The lytic cycle integrates phage DNA into the bacterial chromosome.',
+      'The lysogenic cycle integrates a prophage; the lytic cycle bursts the cell.',
+      'A lysogenic infection always becomes lytic within a single generation.',
+      'In the lytic cycle the host survives and buds off new phages.'
     ],
     correctIndex: 1,
-    explanation: 'Lysogenic cycle: phage integrates as a prophage, replicating silently with the host. Lytic cycle (induced or direct): phage DNA takes over host machinery → makes ~100–200 progeny phages → lysosome degrades cell wall → burst (lysis) and release. Lambda phage is the classic example of a temperate phage capable of both cycles.',
+    explanation: 'In lysogeny the phage genome integrates as a prophage and is copied passively with the host chromosome, causing no immediate harm until an inducing stress activates it. The lytic cycle is the productive one: the phage commandeers host machinery, assembles roughly 100-200 progeny, and lyses the cell to release them. Lambda phage is the classic temperate phage able to do either; budding without killing the host is an animal-virus strategy, not a phage one.',
     partNumber: 4,
     partTitle: 'Viral Replication'
   },
@@ -132,13 +132,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-5a',
     question: 'Plasmodium falciparum, the causative agent of severe malaria, is an example of which type of eukaryotic microorganism?',
     options: [
-      'Fungus (mold)',
-      'Helminth (parasitic worm)',
-      'Protozoan (apicomplexan parasite)',
-      'Prion'
+      'A mold (filamentous fungus)',
+      'A helminth (parasitic worm)',
+      'A protozoan (apicomplexan)',
+      'A prion (misfolded protein)'
     ],
     correctIndex: 2,
-    explanation: 'Plasmodium is an apicomplexan protozoan parasite. It completes part of its life cycle in the Anopheles mosquito vector and part in human red blood cells (causing their periodic lysis → fever cycles). Apicomplexans have a distinctive apical complex for host cell invasion.',
+    explanation: 'Plasmodium is a single-celled apicomplexan protozoan, named for the apical complex of organelles it uses to invade host cells. Its life cycle is split between the Anopheles mosquito vector and the human host, where synchronized rupture of infected erythrocytes produces the classic periodic fevers. Note that a prion is not even a microorganism — it is a protein with no cells and no genome.',
     partNumber: 5,
     partTitle: 'Eukaryotic Microbes'
   },
@@ -146,13 +146,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-5b',
     question: 'Fungi differ from bacteria in that fungi:',
     options: [
-      'Are prokaryotes with peptidoglycan cell walls.',
-      'Are eukaryotes with ergosterol-containing cell membranes and chitin cell walls.',
-      'Lack a nucleus and reproduce only sexually.',
-      'Are obligate intracellular parasites that cannot grow outside a host cell.'
+      'Are prokaryotes whose cell walls contain peptidoglycan.',
+      'Are eukaryotes with chitin walls and ergosterol membranes.',
+      'Have no nucleus and reproduce only by sexual means.',
+      'Are obligate intracellular parasites, unable to grow outside a host.'
     ],
     correctIndex: 1,
-    explanation: 'Fungi are eukaryotes with: chitin cell walls (not peptidoglycan), ergosterol in membranes (target of antifungals like azoles and polyenes—not present in human cholesterol-containing membranes), nucleus, and mitochondria. They can reproduce sexually and asexually and can grow as free-living organisms.',
+    explanation: 'Fungi are true eukaryotes, with a nucleus and mitochondria, walls of chitin rather than peptidoglycan, and ergosterol where an animal membrane would carry cholesterol. That sterol difference is what azole and polyene antifungals exploit for selectivity. Fungi also reproduce both sexually and asexually and most are free-living saprophytes rather than obligate parasites.',
     partNumber: 5,
     partTitle: 'Eukaryotic Microbes'
   },
@@ -162,13 +162,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-6a',
     question: 'A patient with a bacterial infection is treated with rifamycin, which inhibits bacterial RNA polymerase. Why does rifamycin NOT affect human cells?',
     options: [
-      'Human cells do not use RNA polymerase for transcription.',
-      'Human RNA polymerases have a different β-subunit structure that rifamycin cannot bind.',
-      'Rifamycin is too large to cross the nuclear envelope in eukaryotic cells.',
-      'Human cells inactivate rifamycin before it reaches the nucleus.'
+      'Human cells do not use an RNA polymerase for transcription.',
+      'Human RNA polymerase has a structurally different subunit.',
+      'Rifamycin is too large to cross the nuclear envelope.',
+      'Human cells pump rifamycin out before it reaches the nucleus.'
     ],
     correctIndex: 1,
-    explanation: 'Rifamycin binds specifically to the β-subunit of bacterial RNA polymerase. Eukaryotic (including human) RNA Pol II has a structurally distinct β-subunit (the largest subunit, RPB1) that rifamycin cannot bind. This structural difference underlies selective toxicity—a core principle of antimicrobial pharmacology.',
+    explanation: 'Rifamycins bind a pocket on the beta subunit of BACTERIAL RNA polymerase and physically block the growing RNA chain. The eukaryotic enzymes (RNA Pol I, II, and III) are built from a different set of subunits that lack that binding pocket, so the drug simply has no target in human cells. This kind of structural divergence between homologous enzymes is the basis of selective toxicity throughout antimicrobial pharmacology.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -176,13 +176,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-6b',
     question: 'An epidemic of food poisoning is traced to a strain of Staphylococcus aureus that produces enterotoxin B. The enterotoxin is a preformed toxin in the food. Which characteristic of this illness distinguishes it from infection-based food poisoning?',
     options: [
-      'The illness requires 2–3 days to develop because the bacteria must colonize the gut first.',
-      'Antibiotics effectively treat this illness by eliminating the toxin-producing bacteria.',
-      'Symptoms (vomiting, diarrhea) appear within 1–6 hours because preformed toxin acts immediately without bacterial replication.',
-      'The illness is caused by direct bacterial invasion of intestinal mucosa.'
+      'It takes 2-3 days to appear while the bacteria colonize the gut.',
+      'Antibiotics clear it rapidly by killing the toxin-producing bacteria.',
+      'Symptoms appear within 1-6 hours, before any bacterial growth.',
+      'It is produced by bacterial invasion of the intestinal mucosa.'
     ],
     correctIndex: 2,
-    explanation: 'S. aureus food poisoning is an intoxication (not infection): the toxin is preformed in food. Ingested toxin acts immediately on intestinal receptors → rapid onset (1–6 h). Antibiotics are ineffective because they kill bacteria but cannot destroy already-formed heat-stable toxin. This distinguishes it from infection-based illnesses (e.g., Salmonella, 8–48 h onset).',
+    explanation: 'This is an intoxication rather than an infection: the toxin is already present in the food, so it acts on gut receptors and vagal afferents as soon as it is swallowed, producing vomiting and diarrhea in 1-6 hours with no incubation period for bacterial growth. Antibiotics cannot help, because the staphylococcal enterotoxins are heat-stable superantigens that survive both cooking and the death of the organism. Invasive infections such as Salmonella instead take 8-48 hours.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -192,13 +192,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-7a',
     question: 'Prions are infectious agents responsible for transmissible spongiform encephalopathies (TSEs) such as Creutzfeldt-Jakob disease (CJD). What makes prions unique compared to other infectious agents?',
     options: [
-      'Prions are very small viruses containing a single-stranded RNA genome.',
-      'Prions are misfolded proteins (PrPSc) with no nucleic acid; they propagate by inducing normal PrPC proteins to misfold.',
-      'Prions are bacteria that can only survive within neurons.',
-      'Prions are toxins produced by fungal contamination of grain.'
+      'They are very small viruses with a single-strand RNA genome.',
+      'They are misfolded proteins that carry no nucleic acid at all.',
+      'They are bacteria able to survive only inside neurons.',
+      'They are fungal toxins that contaminate stored grain.'
     ],
     correctIndex: 1,
-    explanation: 'Prions (proteinaceous infectious particles) are misfolded forms of the normal cellular prion protein (PrPC → PrPSc). PrPSc is β-sheet-rich, protease-resistant, and induces the normal protein to adopt the same misfolded conformation—a protein-only propagation mechanism with no nucleic acid. This violates the central dogma.',
+    explanation: 'A prion is the normal cellular protein PrPC refolded into the beta-sheet-rich, protease-resistant PrPSc conformation, which then templates the same misfolding onto further copies of PrPC. Propagation therefore needs no DNA or RNA — an apparent exception to the central dogma — and explains why prions resist autoclaving, formalin, and the radiation doses that destroy conventional pathogens.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   },
@@ -206,13 +206,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mmicro-ent-7b',
     question: 'mRNA vaccines (like those for COVID-19) work by:',
     options: [
-      'Integrating viral DNA into the host genome to produce antibodies permanently.',
-      'Delivering mRNA encoding a viral antigen (e.g., spike protein) into host cells, which translate it to protein, triggering an adaptive immune response.',
-      'Injecting attenuated live virus that causes mild infection and natural immunity.',
-      'Providing pre-formed neutralizing antibodies that remain in circulation for life.'
+      'Integrating viral DNA into the genome for permanent antibody output.',
+      'Delivering mRNA that host cells translate into a viral antigen.',
+      'Injecting a live attenuated virus that causes a mild infection.',
+      'Supplying pre-formed neutralizing antibodies that last for life.'
     ],
     correctIndex: 1,
-    explanation: 'mRNA vaccines deliver lipid nanoparticle-encapsulated mRNA encoding the SARS-CoV-2 spike protein into host cells. Ribosomes translate it → spike protein is produced → presented to the immune system → B and T cell responses generated. The mRNA is transient and never integrated into DNA. Lipid nanoparticles protect mRNA from degradation.',
+    explanation: 'A lipid nanoparticle carries mRNA encoding the SARS-CoV-2 spike protein into the cytoplasm, where the cell\'s own ribosomes translate it; the spike protein is then displayed to the immune system, generating B-cell antibody and T-cell responses. The mRNA never enters the nucleus and is degraded within days, so nothing is integrated. Nor is any live virus given, and the durable protection comes from the recipient\'s own memory cells rather than from transferred antibody.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   }

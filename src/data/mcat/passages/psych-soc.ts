@@ -40,9 +40,9 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'The pattern in which spaced + retrieval produced the highest actual recall while spaced + restudy and massed + retrieval each produced intermediate recall best supports which of the study’s predictions?',
         options: [
           'That only retrieval practice, not spacing, improves retention',
-          'That massing study improves retention when combined with restudy',
-          'That JOLs accurately track final performance',
-          'That spacing and retrieval practice each independently improve retention'],
+          'That massed study improves retention when paired with restudy',
+          'That learners’ predictions accurately track final performance',
+          'That spacing and retrieval each improve retention independently'],
         correctAnswer: 3,
         explanation:
           'Moving from massed+restudy (31%) to either spaced+restudy (44%) or massed+retrieval (48%) raises recall, and combining both yields the highest (61%). This shows each manipulation independently helps—the spacing effect and the testing effect both operate. Claiming only retrieval matters fails because spacing alone (spaced+restudy, 44%) beat massed+restudy (31%); claiming massed practice was best contradicts the data (massed+restudy was lowest); and claiming learners judged their memory accurately is contradicted by the JOL/actual mismatch.',
@@ -74,14 +74,14 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'Which feature of the design most strengthens the claim that retrieval practice (not just extra exposure) caused better recall?',
         options: [
-          'Both the restudy and retrieval-practice groups had equal opportunity to view the pairs across two sessions',
-          'The final test gave no feedback',
-          'Participants were undergraduates',
-          'The retention interval was one week',
+          'Both groups had equal exposure to the correct pairs',
+          'The final test was given without corrective feedback',
+          'All participants were undergraduate volunteers',
+          'The retention interval was a full week for everyone',
         ],
         correctAnswer: 0,
         explanation:
-          'Restudy participants reread the pairs while retrieval participants tried to recall first, then saw the answer—so total exposure to the correct pairs is held roughly constant, isolating the act of retrieval as the manipulated variable. Withholding final-test feedback is appropriate but does not isolate the cause. C and D are features shared by all conditions and do not address the comparison.',
+          'Restudy participants reread the pairs while retrieval participants tried to recall first, then saw the answer—so total exposure to the correct pairs is held roughly constant, isolating the act of retrieval as the manipulated variable. Withholding feedback on the final test is appropriate but does not isolate the cause. The undergraduate sample and the one-week interval were identical across all four conditions, so neither can explain the restudy-versus-retrieval difference.',
         skill: 'experimental-reasoning',
       },
       {
@@ -89,13 +89,13 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'If the researchers had given the final test 5 minutes after learning instead of one week later, prior literature predicts that the advantage of retrieval practice over restudy would most likely:',
         options: [
           'Reverse, with restudy outperforming retrieval practice',
-          'Disappear, with both methods performing identically and poorly',
-          'Shrink or reverse, because the testing effect emerges mainly at delayed tests',
-          'Grow even larger than at one week',
+          'Disappear, with both methods yielding identically poor recall',
+          'Shrink or reverse relative to the one-week advantage',
+          'Grow substantially larger than at the one-week test',
         ],
         correctAnswer: 2,
         explanation:
-          'A robust finding is that restudy can match or exceed retrieval practice on immediate tests, with retrieval practice’s benefit appearing on delayed tests—the testing effect is largest after a delay. So at 5 minutes the advantage would shrink or reverse. Predicting poor immediate recall is wrong because immediate recall is typically high. A growing retrieval advantage at 5 minutes is the opposite of the established time course.',
+          'A robust finding is that restudy can match or exceed retrieval practice on immediate tests, with retrieval practice’s benefit appearing on delayed tests—the testing effect is largest after a delay. So at 5 minutes the advantage would shrink or reverse. Predicting poor immediate recall is wrong because immediate recall is typically high. A growing retrieval advantage at 5 minutes is the opposite of the established time course. Predicting a definite reversal is too strong; restudy may only match retrieval practice at an immediate test, which is why “shrink or reverse” is the better answer.',
         skill: 'experimental-reasoning',
         needsReview: false,
       },
@@ -127,9 +127,9 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'The finding that severe-initiation participants rated the dull group MORE attractive than control or mild participants is best explained by:',
         options: [
           'The mere-exposure effect',
-          'Social facilitation',
+          'Social facilitation from an audience',
           'The fundamental attribution error',
-          'Cognitive dissonance reduction (effort justification)'],
+          'Cognitive dissonance reduction'],
         correctAnswer: 3,
         explanation:
           'Effort justification follows from cognitive dissonance theory: having freely suffered to join, participants face dissonance between "I endured a lot" and "the group is boring," and resolve it by inflating the group’s value. Mere exposure would predict equal ratings since all heard the same recording once. Social facilitation concerns performance changes from others’ presence. The fundamental attribution error is about over-attributing others’ behavior to disposition.',
@@ -140,9 +140,9 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'Including the screening-anxiety measure (control 12, mild 38, severe 71) primarily serves to:',
         options: [
           'Confound the independent variable with anxiety',
-          'Demonstrate a manipulation check that the severe condition was more aversive',
+          'Serve as a manipulation check on initiation severity',
           'Establish that the dependent variable was reliable',
-          'Show a placebo effect'],
+          'Document a placebo response to the screening'],
         correctAnswer: 1,
         explanation:
           'A manipulation check verifies that the independent variable (initiation severity) actually produced the intended difference in experience—here, that the severe condition was genuinely more aversive (anxiety rose 12 → 38 → 71). It is not a measure of the dependent variable’s reliability. There is no inert treatment, so no placebo. The anxiety differences are the intended effect of the manipulation, not a confound.',
@@ -153,36 +153,36 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'For dissonance theory to apply, participants must perceive that they freely chose to undergo the screening. If the experimenter had instead ORDERED participants to endure the severe screening, dissonance theory predicts the inflated rating would:',
         options: [
           'Increase further, because the experience was still aversive',
-          'Be weakened, because external coercion provides sufficient justification',
-          'Be unchanged, because only the aversiveness matters',
-          'Reverse, producing the lowest ratings',
+          'Be weakened, because coercion supplies external justification',
+          'Be unchanged, because only the aversiveness of the task matters',
+          'Reverse, producing the lowest ratings of the three groups',
         ],
         correctAnswer: 1,
         explanation:
-          'Dissonance requires insufficient external justification plus perceived choice. If an authority orders the behavior, the coercion supplies an external explanation ("I had no choice"), so there is little dissonance to reduce and attitude change weakens. Aversiveness alone (C) is not sufficient—the cognitive inconsistency depends on freely choosing. A full reversal is not predicted.',
+          'Dissonance requires insufficient external justification plus perceived choice. If an authority orders the behavior, the coercion supplies an external explanation ("I had no choice"), so there is little dissonance to reduce and attitude change weakens. Aversiveness alone is not sufficient—the cognitive inconsistency depends on freely choosing. A full reversal to the lowest ratings is not predicted.',
         skill: 'apply-a-theory',
       },
       {
         question:
           'That the mild-initiation and control groups gave nearly identical ratings (80 vs. 81) while the severe group diverged sharply (95) suggests the value-inflation effect is:',
         options: [
-          'Driven by the control group',
-          'Linear with anxiety across all conditions',
-          'Present only above a threshold of suffering, not a simple linear function of anxiety',
-          'An artifact of the rating scale ceiling'],
+          'Driven entirely by the control group’s baseline',
+          'Linear in anxiety across all three conditions',
+          'Present only above some threshold of suffering',
+          'An artifact of a ceiling on the rating scale'],
         correctAnswer: 2,
         explanation:
-          'Anxiety rose steadily (12 → 38 → 71) but attractiveness was flat from control to mild (81 → 80) and jumped only at the severe level (95). So the effect is not a simple linear function of anxiety; substantial dissonance/value inflation appears only once suffering is high enough. A is contradicted by the flat mild–control comparison. The top condition (95) is not at the 100 ceiling for all, and the control is the baseline, not the driver.',
+          'Anxiety rose steadily (12 → 38 → 71) but attractiveness was flat from control to mild (81 → 80) and jumped only at the severe level (95). So the effect is not a simple linear function of anxiety; substantial dissonance/value inflation appears only once suffering is high enough. The claim that the control group drives the effect is contradicted by the flat mild–control comparison, and the control is the baseline rather than the driver. The top condition (95) is not at the 100 ceiling for all.',
         skill: 'interpret-the-data',
       },
       {
         question:
           'A reviewer worries the severe group simply felt relieved the screening was over, biasing their ratings upward. The best control to address THIS alternative would be to:',
         options: [
-          'Increase the sample size',
-          'Use a within-subjects design',
-          'Tell participants the true hypothesis',
-          'Add a severe-screening group that rates an unrelated neutral object afterward'],
+          'Increase the sample size to sharpen the group comparisons',
+          'Use a within-subjects design so each person rates all groups',
+          'Tell participants the true hypothesis before they rate',
+          'Add a severe-screening group that rates an unrelated object'],
         correctAnswer: 3,
         explanation:
           'If post-screening relief produced a general positive glow, a severe group rating an unrelated object should also rate it high; if instead inflation is specific to the joined group, dissonance is supported. This directly tests the relief alternative. A larger N sharpens precision but not specificity. A within-subjects design risks demand and does not isolate relief. Revealing the hypothesis would introduce demand characteristics.',
@@ -217,7 +217,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       {
         question:
           'The stepwise improvement in every indicator from Q1 through Q5—rather than a gap only between Q1 and the rest—is the defining feature of the:',
-        options: ['Social gradient in health', 'Sick role', 'Medicalization of deviance', 'Demographic transition'],
+        options: ['Social gradient in health', 'Parsons’s sick role', 'Medicalization of deviance', 'Demographic transition'],
         correctAnswer: 0,
         explanation:
           'A social gradient means health improves at each successive step up the SES hierarchy, exactly the monotonic Q1→Q5 pattern in all three columns. The sick role (Parsons) is a set of social expectations for ill people. Medicalization is reframing nonmedical problems as medical. The demographic transition describes population shifts from high to low birth/death rates with development.',
@@ -228,7 +228,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'The observation that the gradient persists among adults healthy at baseline most directly argues against which explanation?',
         options: [
           'The social-causation hypothesis',
-          'The social-selection (drift) hypothesis',
+          'The social-selection hypothesis',
           'The relative-income hypothesis',
           'The fundamental-cause framework',
         ],
@@ -241,37 +241,37 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'That the gradient stays steep even in countries with universal health coverage best supports the passage’s claim that:',
         options: [
-          'The drift hypothesis fully explains the data',
-          'Lack of medical insurance is the sole driver of disparities',
-          'Psychosocial pathways, not only access to care, contribute to the gradient',
+          'The drift hypothesis fully explains the gradient',
+          'Lack of insurance is the sole driver of disparities',
+          'Psychosocial pathways, not only access to care, matter',
           'Health disparities are biologically predetermined'],
         correctAnswer: 2,
         explanation:
-          'If equalizing medical access does not erase the gradient, then access alone cannot explain it; the passage points to psychosocial pathways such as chronic stress/allostatic load. A is the opposite of what universal coverage results imply. The passage never claims a biological inevitability, and it explicitly says selection is only partial.',
+          'If equalizing medical access does not erase the gradient, then access alone cannot explain it; the passage points to psychosocial pathways such as chronic stress/allostatic load. Saying insurance is the sole driver is the opposite of what the universal-coverage result implies. The passage never claims a biological inevitability, and it explicitly says selection is only partial, so drift cannot be the whole story.',
         skill: 'interpret-the-data',
       },
       {
         question:
           'According to the fundamental-cause framework cited in the passage, SES will continue to predict mortality even as specific diseases change over time because higher-SES individuals:',
         options: [
-          'Are genetically more resilient',
-          'Can deploy flexible resources (knowledge, money, power, connections) to avoid emerging risks',
-          'Are exempt from the sick role',
-          'Experience less relative deprivation only in poor nations',
+          'Are genetically more resilient to emerging diseases',
+          'Can deploy flexible resources to avoid emerging risks',
+          'Are exempt from the obligations of the sick role',
+          'Face less relative deprivation only in poor nations',
         ],
         correctAnswer: 1,
         explanation:
-          'Fundamental-cause theory (Link & Phelan) holds that SES persists as a cause of disease across eras precisely because flexible resources let advantaged people adopt whatever protective behaviors or technologies arise. It is explicitly not a genetic claim. The sick role is unrelated. The relative-deprivation point in the passage applies within wealthy nations, contradicting D.',
+          'Fundamental-cause theory (Link & Phelan) holds that SES persists as a cause of disease across eras precisely because flexible resources—knowledge, money, power, and beneficial connections—let advantaged people adopt whatever protective behaviors or technologies arise. It is explicitly not a genetic claim. The sick role is unrelated. And the relative-deprivation point in the passage applies within wealthy nations, not only poor ones.',
         skill: 'apply-a-theory',
       },
       {
         question:
           'The relative-income hypothesis, as used in the passage, is best supported by which observation?',
         options: [
-          'The lowest quintile has the highest smoking rate',
-          'Life expectancy rises monotonically with income',
-          'Universal coverage exists in some countries',
-          'Lower quintiles in wealthy nations meet basic needs yet still show worse health'],
+          'The lowest income quintile has the highest smoking rate',
+          'Life expectancy rises monotonically with income quintile',
+          'Universal health coverage exists in some of the countries',
+          'Lower quintiles with basic needs met still show worse health'],
         correctAnswer: 3,
         explanation:
           'The relative-income hypothesis says one’s rank in the hierarchy affects health beyond absolute resources. The strongest evidence is that in wealthy nations, where lower quintiles still meet material needs, the gradient persists—implicating relative position rather than absolute deprivation. The smoking rate and the monotonic gradient describe the gradient but not specifically its relative-vs-absolute basis. Universal coverage speaks to access, not relative income.',
@@ -294,7 +294,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       {
         question:
           'The failure of many counting-task participants to notice the gorilla is best labeled:',
-        options: ['Inattentional blindness', 'Change blindness', 'Sensory adaptation', 'Weber’s law'],
+        options: ['Inattentional blindness', 'Change blindness', 'Sensory adaptation', 'Weber’s law of proportional JNDs'],
         correctAnswer: 0,
         explanation:
           'Inattentional blindness is failing to perceive a fully visible but unexpected object when attention is engaged elsewhere—exactly the gorilla result. Change blindness is failing to detect a change between two views/scenes. Sensory adaptation is reduced sensitivity to a constant stimulus. Weber’s law concerns the proportional just-noticeable difference between stimuli.',
@@ -307,7 +307,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'Bottom-up processing alone',
           'Top-down processing via perceptual set',
           'Signal detection at the absolute threshold',
-          'Transduction',
+          'Transduction of light into neural signals',
         ],
         correctAnswer: 1,
         explanation:
@@ -318,10 +318,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The investigators argue the gorilla result reflects limited attention rather than a visual-sensory failure. Which additional finding would most strengthen that interpretation?',
         options: [
-          'The gorilla was small and dimly lit',
-          'Noticers counted passes less accurately',
-          'Eye-tracking shows non-noticers fixated directly on the gorilla yet did not report it',
-          'Non-noticers had worse visual acuity than noticers'],
+          'The gorilla was small, dim, and visible only briefly',
+          'Noticers counted the passes less accurately than others',
+          'Eye-tracking shows non-noticers fixated on the gorilla',
+          'Non-noticers had worse visual acuity than the noticers'],
         correctAnswer: 2,
         explanation:
           'If eye-tracking shows the eyes landed on the gorilla yet observers still failed to report it, the information reached the retina/visual cortex but was not consciously processed—pinpointing an attentional, not sensory, bottleneck. Worse acuity or a dim stimulus would support a sensory explanation, the opposite. Counting accuracy does not bear on the sensory-vs-attention question.',
@@ -332,8 +332,8 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'In the gorilla study, the heavy attentional demand of counting passes most directly illustrates the role of:',
         options: [
           'Divided attention with unlimited capacity',
-          'Iconic memory decay',
-          'The cocktail-party effect',
+          'Decay of the iconic sensory store',
+          'The cocktail-party effect in hearing',
           'Selective attention with limited capacity'],
         correctAnswer: 3,
         explanation:
@@ -344,14 +344,14 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The 91% noticing rate in the passive-viewing control mainly serves to show that:',
         options: [
-          'The gorilla was perceptually salient and easily seen when attention was not loaded',
-          'Passive viewers had better eyesight',
-          'Counting improves memory',
-          'The gorilla appeared longer for controls',
+          'The gorilla was easy to see without an attentional load',
+          'Passive viewers happened to have sharper eyesight',
+          'Counting passes improves memory for the whole video',
+          'The gorilla appeared for longer in the control video',
         ],
         correctAnswer: 0,
         explanation:
-          'When viewers were not loaded by a counting task, almost everyone (91%) saw the gorilla, confirming it was salient and visible—so the 42% miss rate under counting load must stem from the attentional demand, not invisibility. B is unsupported (groups were comparable). C is irrelevant to noticing the gorilla. The stimulus duration was the same across groups.',
+          'When viewers were not loaded by a counting task, almost everyone (91%) saw the gorilla, confirming it was salient and visible—so the 42% miss rate under counting load must stem from the attentional demand, not invisibility. An eyesight difference is unsupported, since the groups were comparable. Whether counting aids memory is irrelevant to noticing the gorilla. And the stimulus duration was the same across groups.',
         skill: 'interpret-the-data',
       },
     ],
@@ -371,9 +371,9 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'According to the passage, the behavior most diagnostic of attachment classification in the Strange Situation is the infant’s response to:',
         options: [
           'The caregiver’s return at reunion',
-          'The novelty of the room',
-          'The separation itself',
-          'The stranger’s entrance'],
+          'The novelty of the laboratory room',
+          'The intensity of separation distress',
+          'The stranger’s entrance into the room'],
         correctAnswer: 0,
         explanation:
           'The passage states explicitly that the behavior of greatest diagnostic interest is how the infant responds to the caregiver’s return at reunion, not the degree of separation distress. The stranger’s entrance and room novelty are part of the procedure but not the key index. Separation distress is explicitly downplayed relative to reunion behavior.',
@@ -382,7 +382,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       {
         question:
           'An infant who shows little distress when the caregiver leaves and then ignores or turns away from the caregiver at reunion would most likely be classified as:',
-        options: ['Securely attached', 'Insecure-avoidant', 'Insecure-resistant (ambivalent)', 'Disorganized'],
+        options: ['Secure attachment', 'Insecure-avoidant attachment', 'Insecure-resistant attachment', 'Disorganized/disoriented attachment'],
         correctAnswer: 1,
         explanation:
           'Minimal separation distress combined with active avoidance/ignoring at reunion is the defining profile of insecure-avoidant attachment. Secure infants seek and accept comfort at reunion. Insecure-resistant infants are very distressed and show the seek-and-resist pattern. Disorganized infants show contradictory, fearful behaviors. The avoidance-at-reunion signature points to avoidant.',
@@ -391,7 +391,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       {
         question:
           'An infant who is intensely distressed at separation and, at reunion, reaches to be held but then arches away and cannot be soothed best fits which pattern?',
-        options: ['Secure', 'Insecure-avoidant', 'Insecure-resistant (ambivalent)', 'Disorganized'],
+        options: ['Secure attachment', 'Insecure-avoidant attachment', 'Insecure-resistant attachment', 'Disorganized/disoriented attachment'],
         correctAnswer: 2,
         explanation:
           'Simultaneously seeking contact and resisting it—reaching up then arching away, remaining inconsolable—is the hallmark of the insecure-resistant/anxious-ambivalent pattern described in the passage. Avoidant infants ignore the caregiver rather than seek-and-resist; secure infants are comforted; disorganized infants show contradictory, apprehensive (often fearful) behavior rather than this specific approach–resist profile.',
@@ -401,10 +401,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The passage attributes individual differences in attachment security primarily to:',
         options: [
-          'The infant’s innate temperament alone',
-          'The number of strangers the infant has met',
-          'The total amount of time the caregiver spends with the infant',
-          'The caregiver’s sensitivity—consistent, appropriate responses to infant signals'],
+          'The infant’s innate temperament, acting alone',
+          'The number of unfamiliar adults the infant has met',
+          'The sheer amount of time the caregiver spends nearby',
+          'The caregiver’s sensitivity to the infant’s signals'],
         correctAnswer: 3,
         explanation:
           'The passage links security to caregiver sensitivity—the consistency and appropriateness of responses to the infant’s signals—explicitly contrasting this with the sheer quantity of contact. Temperament is not named as the sole cause, and exposure to strangers is not offered as the determinant.',
@@ -415,13 +415,13 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'Cross-cultural data showing the secure pattern is most common everywhere but with varying rates of insecure patterns is used in the passage to raise the concern that the Strange Situation may:',
         options: [
           'Be biased toward culturally specific caregiving norms',
-          'Lack any predictive validity',
-          'Measure temperament rather than attachment',
-          'Apply only to infants over age three',
+          'Lack any predictive validity for later social competence',
+          'Measure infant temperament rather than attachment',
+          'Apply only to infants older than three years',
         ],
         correctAnswer: 0,
         explanation:
-          'The passage notes the debate over whether the procedure’s "ideal" reflects culturally specific caregiving norms—i.e., a potential cultural bias in interpreting the insecure patterns. It does not claim the measure lacks all predictive validity (B; it says classifications modestly predict later competence). It does not equate the measure with temperament, and the procedure targets 12–18-month-olds.',
+          'The passage notes the debate over whether the procedure’s "ideal" reflects culturally specific caregiving norms—i.e., a potential cultural bias in interpreting the insecure patterns. It does not claim the measure lacks all predictive validity; it says classifications modestly predict later social competence. It does not equate the measure with temperament, and the procedure targets 12–18-month-olds rather than older children.',
         skill: 'interpret-the-data',
       },
     ],
@@ -452,9 +452,9 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'The depressed group’s failure to suppress cortisol after dexamethasone (9.8 vs. 2.1 µg/dL) most directly indicates:',
         options: [
           'An overactive negative-feedback loop',
-          'A blunted negative-feedback loop with HPA-axis hyperactivity',
-          'Adrenal insufficiency',
-          'Normal HPA function',
+          'A blunted negative-feedback loop',
+          'Primary adrenal insufficiency',
+          'Normal HPA-axis function',
         ],
         correctAnswer: 1,
         explanation:
@@ -465,37 +465,37 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The lower hippocampal volume in the depressed group, combined with the stated role of the hippocampus in inhibiting the HPA axis, supports which mechanism?',
         options: [
-          'A vicious cycle in which glucocorticoid exposure damages the hippocampus, further weakening HPA inhibition',
-          'A protective adaptation that down-regulates cortisol',
-          'A purely genetic cause unrelated to cortisol',
-          'Increased negative feedback over time',
+          'A vicious cycle of glucocorticoid damage and lost inhibition',
+          'A protective adaptation that down-regulates cortisol output',
+          'A purely genetic cause of depression unrelated to cortisol',
+          'Progressively stronger negative feedback over the years',
         ],
         correctAnswer: 0,
         explanation:
-          'The passage notes the hippocampus helps inhibit the HPA axis and that prolonged glucocorticoids can damage hippocampal neurons. A smaller hippocampus would impair that inhibition, raising cortisol and causing more damage—the vicious cycle the passage flags. Smaller volume would weaken, not strengthen, feedback (D). The passage frames a stress–cortisol mechanism, not a purely genetic one.',
+          'The passage notes the hippocampus helps inhibit the HPA axis and that prolonged glucocorticoids can damage hippocampal neurons. A smaller hippocampus would impair that inhibition, raising cortisol and causing more damage—the vicious cycle the passage flags. Smaller volume would weaken rather than strengthen feedback, so a strengthening-feedback account runs backward, and nothing here is protective. The passage frames a stress–cortisol mechanism, not a purely genetic one.',
         skill: 'apply-a-theory',
       },
       {
         question:
           'The monoamine hypothesis as described links depression to reduced signaling of which neurotransmitters?',
         options: [
-          'Cortisol and ACTH',
-          'GABA and glutamate',
+          'Cortisol and ACTH from the HPA axis',
+          'GABA and glutamate, the amino-acid transmitters',
           'Serotonin, norepinephrine, and dopamine',
-          'Acetylcholine and histamine'],
+          'Acetylcholine, histamine, and adenosine'],
         correctAnswer: 2,
         explanation:
-          'The monoamines implicated in the hypothesis are serotonin, norepinephrine, and dopamine; many antidepressants increase their synaptic availability. GABA/glutamate are amino-acid transmitters, not monoamines. Acetylcholine and histamine are not the monoamines named here. Cortisol and ACTH are hormones of the HPA axis, not neurotransmitters in this hypothesis.',
+          'The monoamines implicated in the hypothesis are serotonin, norepinephrine, and dopamine; many antidepressants increase their synaptic availability. GABA/glutamate are amino-acid transmitters, not monoamines. Acetylcholine and adenosine are not monoamines, and histamine is not among the monoamines this hypothesis names. Cortisol and ACTH are hormones of the HPA axis, not neurotransmitters in this hypothesis.',
         skill: 'identify-the-concept',
       },
       {
         question:
           'A drug that selectively blocks reuptake of serotonin at the synapse would, according to the monoamine framework, be expected to:',
         options: [
-          'Have no effect on monoamine signaling',
+          'Leave monoamine signaling essentially unchanged',
           'Directly suppress the HPA axis within minutes',
           'Decrease serotonin signaling and worsen mood',
-          'Increase synaptic serotonin availability and improve depressive symptoms'],
+          'Increase synaptic serotonin and improve symptoms'],
         correctAnswer: 3,
         explanation:
           'Blocking reuptake leaves more serotonin in the synapse, increasing signaling—consistent with how SSRIs are described as raising synaptic availability and, per the monoamine hypothesis, improving symptoms. Blocking reuptake increases rather than decreases serotonin. It clearly affects monoamine signaling. It does not act as an immediate HPA suppressant; the passage treats neuroendocrine and monoamine systems as related but distinct.',
@@ -526,7 +526,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       {
         question:
           'The decline in helping as the believed number of other bystanders increased (85% → 62% → 31%) is the signature of:',
-        options: ['The bystander effect via diffusion of responsibility', 'Social facilitation', 'Deindividuation', 'Groupthink'],
+        options: ['Diffusion of responsibility', 'Social facilitation', 'Deindividuation in crowds', 'Groupthink in cohesive teams'],
         correctAnswer: 0,
         explanation:
           'Fewer individuals help as group size rises—the bystander effect—here attributed to diffusion of responsibility, with each witness feeling a smaller share of the obligation. Social facilitation concerns performance changes due to others’ presence, not helping. Deindividuation is loss of self-awareness in groups. Groupthink is faulty group decision-making prioritizing consensus.',
@@ -536,23 +536,23 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'By isolating participants in cubicles so they could NOT see the others, the design specifically rules out which alternative explanation?',
         options: [
-          'Diffusion of responsibility',
-          'Pluralistic ignorance from observing others’ calm',
-          'Evaluation apprehension',
-          'Conformity to a unanimous majority',
+          'Diffusion of responsibility among witnesses',
+          'Pluralistic ignorance based on others’ calm',
+          'Social loafing on a shared group task',
+          'Conformity to a unanimous silent majority',
         ],
         correctAnswer: 1,
         explanation:
-          'Pluralistic ignorance requires seeing others appear calm and inferring no emergency. Because participants were isolated and could not observe the others, that visual mechanism is removed, leaving diffusion of responsibility (which does not require seeing others) as the operative cause. The design is meant to preserve diffusion, not rule it out. Evaluation apprehension and majority conformity are not the targeted alternative here.',
+          'Pluralistic ignorance requires seeing others appear calm and inferring no emergency. Because participants were isolated and could not observe the others, that visual mechanism is removed, leaving diffusion of responsibility (which does not require seeing others) as the operative cause. The design is meant to preserve diffusion, not rule it out. Social loafing concerns effort on pooled tasks, not helping, and majority conformity is not the targeted alternative here.',
         skill: 'experimental-reasoning',
       },
       {
         question:
           'That non-helpers commonly reported uncertainty and conflict rather than indifference is used to argue against which interpretation?',
         options: [
-          'That group size affected helping',
-          'That the emergency seemed real',
-          'That bystanders failed to help out of apathy/indifference',
+          'That group size affected the rate of helping',
+          'That the emergency seemed real to participants',
+          'That non-helpers failed to act out of apathy',
           'That diffusion of responsibility occurred'],
         correctAnswer: 2,
         explanation:
@@ -563,10 +563,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'Diffusion of responsibility, as defined in the passage, refers to the process by which:',
         options: [
-          'A group makes riskier decisions than individuals',
-          'People conform to perceived group norms',
-          'Individuals work less hard in a group than alone on a shared task',
-          'Each additional witness reduces any single person’s felt obligation to act'],
+          'A group reaches riskier decisions than its members would alone',
+          'People shift their behavior toward perceived group norms',
+          'Individuals work less hard on a shared task than alone',
+          'Each added witness reduces any one person’s felt obligation'],
         correctAnswer: 3,
         explanation:
           'Diffusion of responsibility is the spreading of perceived obligation across witnesses, so each feels less personally responsible as the group grows. Reduced effort on a collective task describes social loafing, a related but distinct phenomenon; shifting toward extreme positions describes group polarization; and matching one’s behavior to the group describes conformity—none matches the passage’s definition.',
@@ -576,10 +576,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The median response time also lengthened with group size (52 → 93 → 166 s). This pattern is best interpreted as:',
         options: [
-          'A second measure converging with the helping-rate data to support diffusion of responsibility',
-          'Proof that the emergency was not believable',
-          'An artifact unrelated to group size',
-          'Evidence that larger groups helped faster'],
+          'A second measure converging with the helping-rate data',
+          'Proof that the staged emergency was not believable',
+          'An artifact of the intercom, unrelated to group size',
+          'Evidence that larger groups mobilized help faster'],
         correctAnswer: 0,
         explanation:
           'Both that fewer people helped and that those who did acted more slowly as the group grew point the same direction, providing converging evidence for diffusion of responsibility. Larger groups responded slower, not faster. Slower, more conflicted responding does not show the emergency was unbelievable, and the systematic increase with group size is the opposite of an unrelated artifact.',
@@ -631,18 +631,18 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         options: [
           'More conservative (strict) criterion',
           'More liberal (lenient) criterion',
-          'Higher sensitivity',
-          'Lower sensitivity',
+          'Higher sensitivity (larger d′)',
+          'Lower sensitivity (smaller d′)',
         ],
         correctAnswer: 1,
         explanation:
-          'Raising the cost of a miss pushes the observer to say "yes" more often, increasing both hits and false alarms—a liberal/lenient criterion. A conservative criterion would lower both rates, as in the false-alarm-costly block (hits 0.55, false alarms 0.07). Because d′ barely moved, sensitivity did not change (D).',
+          'Raising the cost of a miss pushes the observer to say "yes" more often, increasing both hits and false alarms—a liberal/lenient criterion. A conservative criterion would lower both rates, as in the false-alarm-costly block (hits 0.55, false alarms 0.07). Because d′ barely moved, sensitivity did not change in either direction.',
         skill: 'apply-a-theory',
       },
       {
         question:
           'A reader in the baseline block correctly reports "no nodule" on an image that in fact contains none. In SDT terms this outcome is a:',
-        options: [ 'Miss', 'False alarm', 'Correct rejection','Hit'],
+        options: ['Miss (false negative)', 'False alarm (false positive)', 'Correct rejection (true negative)', 'Hit (true positive)'],
         correctAnswer: 2,
         explanation:
           'Signal absent and the observer responds "no" → correct rejection. A hit is signal present plus "yes"; a miss is signal present plus "no"; a false alarm is signal absent plus "yes." Saying "no" when nothing is there is the correct rejection.',
@@ -652,10 +652,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The passage argues that hit rate alone is an incomplete measure of perceptual skill chiefly because:',
         options: [
-          'Hit rate is unaffected by the stimulus',
-          'Sensitivity cannot be measured',
-          'False alarms are always zero',
-          'Hits can be inflated by simply responding "yes" more often, at the cost of more false alarms'],
+          'Hit rate is unaffected by the stimulus presented',
+          'Sensitivity cannot be measured in a real reader',
+          'False alarms are always zero for experienced readers',
+          'Hits can be raised just by saying "yes" more often'],
         correctAnswer: 3,
         explanation:
           'A reader can raise the hit rate just by adopting a more liberal criterion, but this also raises false alarms—so a high hit rate may reflect a lax criterion rather than better discrimination. That is exactly why d′, which combines hits and false alarms, is the proper index. The other options are false: hits do depend on the stimulus, sensitivity is measurable (d′), and false alarms are clearly nonzero in the data.',
@@ -666,8 +666,8 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'Which result, if observed, would constitute a genuine improvement in the radiologists’ discrimination rather than a criterion shift?',
         options: [
           'Hits rise from 0.72 to 0.85 while false alarms fall from 0.20 to 0.12',
-          'Hits fall and false alarms fall by the same amount',
-          'Hits and false alarms both stay exactly the same',
+          'Hits fall from 0.72 to 0.60 and false alarms from 0.20 to 0.12',
+          'Hits and false alarms both stay exactly where they are',
           'Hits rise from 0.72 to 0.90 while false alarms rise from 0.20 to 0.40'],
         correctAnswer: 0,
         explanation:
@@ -719,8 +719,8 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         options: [
           'A main effect of explanatory style only',
           'A main effect of grade outcome only',
-          'A diathesis–stress (style × event) interaction',
-          'No relationship between style and depression',
+          'A style-by-event diathesis–stress interaction',
+          'No relationship between style and later depression',
         ],
         correctAnswer: 2,
         explanation:
@@ -740,10 +740,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The passage distinguishes explanatory style from the Big Five trait neuroticism by claiming that, unlike neuroticism, explanatory style was designed to predict:',
         options: [
-          'Extraversion in social settings',
-          'Performance on intelligence tests',
-          'General distress across all situations',
-          'Who becomes depressed specifically after a negative event'],
+          'Extraversion in unfamiliar social settings',
+          'Performance on standardized intelligence tests',
+          'General distress across all kinds of situations',
+          'Who becomes depressed after a negative event'],
         correctAnswer: 3,
         explanation:
           'The passage states neuroticism predicts distress broadly, whereas explanatory style was meant to predict who becomes depressed specifically after a negative event—a situation-contingent vulnerability, consistent with the diathesis–stress framing. Broad distress-proneness describes neuroticism itself, not the contrast intended. Extraversion and intelligence are unrelated to the comparison.',
@@ -753,13 +753,13 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The cognitive-behavioral treatment rationale described in the passage would most directly attempt to:',
         options: [
-          'Train patients to reattribute setbacks to specific, unstable, and external causes where appropriate',
+          'Retrain attributions toward specific, unstable causes',
           'Use systematic desensitization to extinguish a phobia',
           'Strengthen the unconscious transference relationship',
-          'Increase synaptic serotonin pharmacologically'],
+          'Increase synaptic serotonin with medication'],
         correctAnswer: 0,
         explanation:
-          'The cognitive-behavioral rationale here targets maladaptive attributions, retraining the internal/stable/global pattern toward specific/unstable/external explanations—cognitive restructuring. Increasing serotonin is the biomedical rationale the passage contrasts it with. Systematic desensitization is a behavioral technique for phobias, not the attributional retraining described. Transference is a psychodynamic concept, not the cognitive model.',
+          'The cognitive-behavioral rationale here targets maladaptive attributions, retraining the internal/stable/global pattern toward specific, unstable (and, where appropriate, external) explanations—cognitive restructuring. Increasing serotonin is the biomedical rationale the passage contrasts it with. Systematic desensitization is a behavioral technique for phobias, not the attributional retraining described. Transference is a psychodynamic concept, not the cognitive model.',
         skill: 'apply-a-theory',
       },
     ],
@@ -793,7 +793,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
           'Birth rates rise sharply while death rates stay high',
           'Death rates fall while birth rates remain high',
           'Both birth and death rates fall together',
-          'Immigration exceeds emigration',
+          'Immigration exceeds emigration in these societies',
         ],
         correctAnswer: 1,
         explanation:
@@ -817,10 +817,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The researchers warn that high upward mobility during industrialization may be mostly structural mobility. Structural mobility means movement caused by:',
         options: [
-          'Random measurement error',
-          'Marriage between social classes',
-          'Individuals trading places within an unchanged occupational structure',
-          'Changes in the occupational structure itself, such as new white-collar jobs being created'],
+          'Random error in how occupations are coded',
+          'Marriage across social class boundaries',
+          'Individuals trading places within a fixed structure',
+          'Changes in the occupational structure itself'],
         correctAnswer: 3,
         explanation:
           'Structural mobility is upward (or downward) movement driven by changes in the occupational structure—e.g., industrialization creating many new professional jobs—so people can rise without others falling. Trading places within a fixed structure is exchange mobility, the contrast the passage draws. It is not error or marital mobility.',
@@ -830,10 +830,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The passage notes the dependency ratio is high both early and late in the transition, but for different reasons. The Stage 4 (post-industrial) increase in the dependency ratio is driven mainly by:',
         options: [
-          'Population aging (a growing elderly share)',
-          'Falling life expectancy',
-          'Rising death rates among children',
-          'A surge in births'],
+          'Population aging, a growing elderly share',
+          'Falling life expectancy among adults',
+          'Rising death rates among school-age children',
+          'A renewed surge in the birth rate'],
         correctAnswer: 0,
         explanation:
           'Late in the transition, low fertility and long life expectancy raise the elderly share, so the dependency ratio rises because of aging—not because of more children, which dominates early. Life expectancy rises, not falls, and child mortality is low in post-industrial societies.',
@@ -843,10 +843,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'The investigators’ caution that high observed upward mobility "need not indicate an increasingly open, merit-based society" follows most directly because:',
         options: [
-          'The dependency ratio determines mobility',
-          'Structural mobility can lift many children above their parents without genuine openness or competition for fixed slots',
-          'Mobility is impossible to measure',
-          'Intragenerational mobility is always downward'],
+          'The dependency ratio determines the mobility rate',
+          'Structural mobility can raise many without anyone falling',
+          'Mobility is impossible to measure across generations',
+          'Intragenerational mobility is nearly always downward'],
         correctAnswer: 1,
         explanation:
           'If industrialization simply creates more high-status slots, children can rise without anyone losing position—so upward movement reflects a changing structure, not necessarily a more meritocratic or fluid contest for limited positions. The other options are unsupported: mobility is measured here, intragenerational mobility is not inherently downward, and the dependency ratio is a separate demographic measure.',
@@ -856,10 +856,10 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         question:
           'A government wishing to reduce the rapid population growth of Stage 2 would, per the model, most effectively focus on policies that:',
         options: [
-          'Halt all industrialization',
-          'Raise the death rate',
-          'Lower the birth rate (e.g., via education, family planning, women’s economic opportunity)',
-          'Increase the dependency ratio'],
+          'Halt industrialization and slow urban migration',
+          'Raise the death rate back toward Stage 1 levels',
+          'Lower the birth rate via family planning programs',
+          'Increase the dependency ratio through policy'],
         correctAnswer: 2,
         explanation:
           'Stage 2 growth comes from births outpacing the already-fallen death rate, so accelerating the fertility decline—through education, access to family planning, and expanded economic opportunity for women—addresses the cause and moves the society toward Stage 3. Raising the death rate is neither ethical nor the model’s mechanism, manipulating the dependency ratio is not a growth lever, and halting industrialization would not by itself lower fertility.',
@@ -889,14 +889,14 @@ export const PSYCH_SOC_DISCRETES: MCATDiscreteQuestion[] = [
     question:
       'Observers explaining a stranger’s stumble as "he’s clumsy" while explaining their own stumble as "the floor was slippery" best illustrates:',
     options: [
-      'The fundamental attribution error / actor–observer bias',
+      'The actor–observer bias',
       'The just-world hypothesis',
-      'The self-serving bias',
-      'Cognitive dissonance',
+      'The self-serving attributional bias',
+      'Cognitive dissonance reduction',
     ],
     correctAnswer: 0,
     explanation:
-      'Over-attributing others’ behavior to disposition while attributing one’s own to the situation is the actor–observer asymmetry, of which the fundamental attribution error (favoring dispositional causes for others) is the core. The just-world hypothesis is the belief people get what they deserve. The self-serving bias specifically credits the self for successes and blames the situation for failures. Cognitive dissonance is discomfort from inconsistent cognitions.',
+      'Attributing others’ behavior to disposition while attributing the same behavior in oneself to the situation is the actor–observer bias; the fundamental attribution error names only the observer half of that contrast. The just-world hypothesis is the belief people get what they deserve. The self-serving bias concerns credit for success versus blame for failure, not the self–other asymmetry for the identical act described here. Cognitive dissonance is discomfort from inconsistent cognitions.',
     skill: 'identify-the-concept',
   },
   {
@@ -917,7 +917,7 @@ export const PSYCH_SOC_DISCRETES: MCATDiscreteQuestion[] = [
     discipline: 'sociology',
     question:
       'A sociologist argues that crime persists because it serves latent functions, such as clarifying moral boundaries and promoting social cohesion. This argument reflects which theoretical perspective?',
-    options: ['Symbolic interactionism', 'Conflict theory', 'Structural functionalism', 'Rational choice theory'],
+    options: ['Symbolic interactionism', 'Conflict theory', 'Structural functionalism', 'Rational choice theory of crime'],
     correctAnswer: 2,
     explanation:
       'Explaining a social phenomenon by the functions (manifest and latent) it serves for social stability is structural functionalism (Durkheim’s view that deviance reinforces norms). Symbolic interactionism focuses on meaning in micro-level interaction. Conflict theory emphasizes power and inequality between groups. Rational choice theory explains behavior via individual cost–benefit calculation.',
@@ -941,7 +941,7 @@ export const PSYCH_SOC_DISCRETES: MCATDiscreteQuestion[] = [
     discipline: 'cognition-and-perception',
     question:
       'Judging that more words start with the letter "K" than have "K" as their third letter—because the former come to mind more easily—best illustrates:',
-    options: [ 'The availability heuristic', 'Confirmation bias', 'Anchoring','The representativeness heuristic'],
+    options: [ 'The availability heuristic', 'Confirmation bias', 'Anchoring and adjustment','The representativeness heuristic'],
     correctAnswer: 0,
     explanation:
       'The availability heuristic judges frequency or probability by how easily examples come to mind; words starting with "K" are easier to retrieve, so people overestimate them (in fact more words have "K" third). The representativeness heuristic judges likelihood by similarity to a prototype. Confirmation bias is seeking information that confirms prior beliefs. Anchoring is over-relying on an initial reference value.',

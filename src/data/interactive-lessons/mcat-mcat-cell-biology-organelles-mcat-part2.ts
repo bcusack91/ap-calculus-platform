@@ -49,19 +49,19 @@ Loss of the phosphotransferase that creates M6P → hydrolases are **secreted in
         questions: [
           {
             question: `The signal sequence of a secreted protein is experimentally fused onto the N-terminus of a normally cytosolic protein. The hybrid protein will be found:`,
-            options: [`In the secretory pathway (ER lumen and beyond) — the signal is sufficient to redirect it`, `Still in the cytosol — destination depends on the mature protein's fold`, `In the nucleus`, `Degraded immediately by the proteasome`],
-            correctAnswer: 0,
+            options: [`Still in the cytosol, since the mature fold sets its fate`, `In the ER lumen and the secretory pathway beyond`, `Degraded by the proteasome immediately after synthesis`, `In the nucleus, carried in by the basic signal`],
+            correctAnswer: 1,
             explanation: `Signal sequences are both necessary and sufficient: SRP reads the emerging hydrophobic stretch regardless of what follows, so the passenger protein is co-translationally threaded into the ER. The reciprocal experiment (deleting the signal from a secreted protein) leaves it stranded in the cytosol. Sufficiency-by-fusion is the canonical evidence style for every targeting signal — expect it with NLS and mitochondrial presequences too.`
           },
           {
             question: `Mitochondrial matrix proteins must be kept unfolded by cytosolic chaperones before import, while nuclear proteins are imported fully folded. This difference exists because:`,
-            options: [`TOM/TIM are narrow channels threading extended polypeptides, whereas nuclear pores accommodate large folded cargo bound to importins`, `Mitochondrial proteins cannot fold in any compartment`, `The nucleus lacks chaperones`, `Folded proteins are too dense to cross any membrane`],
-            correctAnswer: 0,
+            options: [`Mitochondrial proteins cannot fold in any compartment`, `Folded proteins are too dense to cross any membrane`, `The nucleus contains no chaperone proteins at all`, `TOM/TIM are narrow channels; nuclear pores are wide gates`],
+            correctAnswer: 3,
             explanation: `Import machinery dictates cargo state. The mitochondrial translocases are protein-conducting channels only wide enough for an unfolded chain (matrix Hsp70 then ratchets it in and the presequence is cleaved). The nuclear pore complex is a huge gated aperture passing intact complexes — even assembled ribosomal subunits exit through it. Linking transport mechanism to cargo requirements is a favorite discrete question.`
           },
           {
             question: `In I-cell disease, lysosomal hydrolases appear at high levels in the patient's serum. This mis-localization occurs because:`,
-            options: [`Without the mannose-6-phosphate tag, hydrolases are not captured at the trans-Golgi and follow the default constitutive secretion route`, `Lysosomes rupture and spill enzymes into the blood`, `The hydrolases are synthesized by free ribosomes and cannot enter the ER`, `Serum proteases generate the hydrolases from precursors`],
+            options: [`Untagged hydrolases take the default secretory route`, `Lysosomes rupture and spill their enzymes into blood`, `Free ribosomes make the hydrolases, which skip the ER`, `Serum proteases generate hydrolases from precursors`],
             correctAnswer: 0,
             explanation: `The hydrolases still enter the ER (they have signal sequences) and transit the Golgi normally — they simply miss their exit. Untagged proteins in the trans-Golgi default to constitutive secretion, so the enzymes leave the cell while lysosomes, starved of hydrolases, engorge with substrate (inclusion bodies). The disease elegantly proves both the M6P pathway and the existence of a secretion default route.`
           }
@@ -107,14 +107,14 @@ Loss of the phosphotransferase that creates M6P → hydrolases are **secreted in
         questions: [
           {
             question: `A single-pass plasma-membrane receptor is translated in vitro with microsomes, then the vesicles are treated with protease. The receptor's ligand-binding domain is protected from digestion unless detergent is added. In the intact cell, this domain will face:`,
-            options: [`The extracellular space — protected inside the microsome lumen, which is topologically equivalent to the cell exterior`, `The cytosol`, `The mitochondrial matrix`, `The nuclear interior`],
-            correctAnswer: 0,
+            options: [`The mitochondrial matrix, imported after translation is done`, `The cytosol, where added protease can reach it`, `The extracellular space, outside the plasma membrane`, `The nuclear interior, behind the pore complex`],
+            correctAnswer: 2,
             explanation: `Microsomes are inside-out fragments of nobody — they preserve ER topology: luminal contents are shielded from added protease until detergent dissolves the membrane. Since the ER lumen becomes the extracellular face after transport to the plasma membrane, protease protection here predicts an extracellular ligand-binding domain (sensible for a receptor). This assay-and-inference chain appears in MCAT passages almost verbatim.`
           },
           {
             question: `A secreted glycoprotein from cells treated with brefeldin A remains fully Endo H-sensitive and is not secreted. These observations indicate that the protein:`,
-            options: [`Entered the ER and was N-glycosylated but never reached the medial Golgi, where glycans acquire Endo H resistance`, `Never entered the secretory pathway at all`, `Was secreted but degraded outside the cell`, `Lacks a signal sequence`],
-            correctAnswer: 0,
+            options: [`Was secreted and then degraded outside the cell`, `Reached the ER but never the medial Golgi`, `Never entered the secretory pathway at all`, `Lacks a functional signal sequence`],
+            correctAnswer: 1,
             explanation: `Endo H sensitivity is a location stamp: high-mannose (ER-type) N-glycans are Endo H substrates; medial-Golgi processing makes them resistant. Persistent sensitivity plus failed secretion under brefeldin A places the block between ER and Golgi — exactly the drug's known action. The protein clearly entered the ER (it is glycosylated), ruling out a missing signal sequence. Reading glycan processing as an itinerary is a high-yield skill.`
           }
         ]

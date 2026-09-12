@@ -48,20 +48,20 @@ export const mcatCellSignalingPart1Data = {
         questions: [
           {
             question: `Epinephrine causes vasoconstriction in skin arterioles but vasodilation in skeletal muscle arterioles. The best explanation is:`,
-            options: [`The two vascular beds express different adrenergic receptor subtypes coupled to different downstream pathways`, `Epinephrine is chemically modified in skeletal muscle`, `Skin arterioles receive higher epinephrine concentrations`, `Skeletal muscle arterioles lack receptors entirely`],
-            correctAnswer: 0,
+            options: [`Epinephrine is chemically modified as it enters muscle`, `Skin arterioles see higher epinephrine concentrations`, `Skin and muscle arterioles express different adrenergic receptor subtypes`, `Skeletal muscle arterioles respond to norepinephrine, not epinephrine`],
+            correctAnswer: 2,
             explanation: `The response to a ligand is a property of the receiving cell, not the ligand. Skin vessels are rich in alpha-1 receptors (Gq → contraction), while skeletal muscle vessels express beta-2 receptors (Gs → cAMP → relaxation). Same first messenger, different receptor and effector wiring — a foundational MCAT concept.`
           },
           {
             question: `A new hormone produces measurable changes in target-cell gene expression only after several hours, and its effect is blocked by transcription inhibitors. The hormone most likely:`,
-            options: [`Is lipophilic and binds an intracellular receptor that acts as a transcription factor`, `Is a peptide acting through a ligand-gated ion channel`, `Acts through a GPCR-cAMP pathway exclusively`, `Cannot enter its target cells`],
+            options: [`Is lipophilic and binds a receptor that is a transcription factor`, `Binds a surface receptor whose second-messenger cascade is unusually slow`, `Is a peptide acting through a ligand-gated cation channel`, `Acts through a GPCR whose effects require no new transcription`],
             correctAnswer: 0,
             explanation: `Hours-long latency plus dependence on new transcription is the signature of the nuclear (intracellular) receptor mechanism used by steroids and thyroid hormone. Ion channels act in milliseconds; second-messenger pathways in seconds to minutes, and their acute effects (phosphorylation of existing proteins) do not require transcription.`
           },
           {
             question: `The nicotinic acetylcholine receptor at the neuromuscular junction depolarizes muscle within a millisecond of ACh binding because it:`,
-            options: [`Is itself an ion channel — ligand binding directly opens a cation pore with no intermediary steps`, `Activates the fastest known G protein`, `Triggers instant exocytosis of Na$^+$`, `Phosphorylates voltage-gated channels`],
-            correctAnswer: 0,
+            options: [`Activates a G protein already bound to the cation channel`, `Phosphorylates a voltage-gated Na$^+$ channel to open it`, `Releases Ca$^{2+}$ from the SR to depolarize`, `Is an ion channel itself; ligand binding opens the pore`],
+            correctAnswer: 3,
             explanation: `Ionotropic receptors fuse receptor and effector into one protein: binding opens the pore directly, so the delay is essentially the channel's gating time. Any pathway with intermediate steps (G proteins, kinases) is orders of magnitude slower. Contrast with the muscarinic ACh receptor — same ligand, but a GPCR, hence slower parasympathetic effects.`
           }
         ]
@@ -105,14 +105,14 @@ $$[LR] = \\frac{[R]_{total}[L]}{K_d + [L]}$$
         questions: [
           {
             question: `Drug X shifts the epinephrine dose-response curve to the right, but the original maximal response is still reached at high epinephrine doses. Drug X is best classified as a:`,
-            options: [`Competitive antagonist — surmountable by excess agonist`, `Noncompetitive antagonist`, `Partial agonist`, `Irreversible receptor inhibitor`],
-            correctAnswer: 0,
+            options: [`Noncompetitive antagonist, lowering the maximal response`, `Competitive antagonist, outcompeted by excess agonist`, `Partial agonist, plateauing below the maximal response`, `Irreversible blocker, removing receptors from the pool`],
+            correctAnswer: 1,
             explanation: `A competitive antagonist occupies the same site reversibly, so sufficient agonist can outcompete it: potency falls (right shift) but efficacy (max response) is preserved. Noncompetitive or irreversible blockers reduce the achievable maximum because no agonist concentration can reclaim the disabled receptors.`
           },
           {
             question: `Sildenafil enhances NO-mediated vasodilation by inhibiting phosphodiesterase-5. Its direct biochemical effect is to:`,
-            options: [`Slow the degradation of cGMP, prolonging smooth muscle relaxation`, `Increase NO synthesis from arginine`, `Activate membrane-bound adenylyl cyclase`, `Block cGMP synthesis by guanylyl cyclase`],
-            correctAnswer: 0,
+            options: [`Increase NO synthesis from arginine in the endothelium`, `Activate soluble guanylyl cyclase in place of NO itself`, `Slow cGMP breakdown, prolonging smooth muscle relaxation`, `Block cGMP production by soluble guanylyl cyclase`],
+            correctAnswer: 2,
             explanation: `Second-messenger levels reflect a synthesis/degradation balance. NO stimulates soluble guanylyl cyclase (synthesis of cGMP); PDE5 hydrolyzes cGMP (degradation). Inhibiting PDE5 raises cGMP only where NO is already being produced — the drug amplifies an existing signal rather than creating one. Degradation-side drug targets are a recurring MCAT theme.`
           }
         ]

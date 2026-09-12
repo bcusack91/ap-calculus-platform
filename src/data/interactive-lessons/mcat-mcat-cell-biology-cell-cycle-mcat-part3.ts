@@ -57,20 +57,20 @@ Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cyst
         questions: [
           {
             question: `In unstressed cells p53 protein is nearly undetectable, yet within an hour of irradiation it is abundant — without any increase in TP53 mRNA. The mechanism is:`,
-            options: [`Damage signaling blocks MDM2-mediated ubiquitination, so existing p53 escapes proteasomal degradation and accumulates`, `Radiation directly activates TP53 transcription`, `p53 is imported from neighboring cells`, `Radiation inhibits all protein synthesis except p53`],
+            options: [`MDM2 can no longer ubiquitinate p53, which accumulates`, `Radiation directly switches on transcription of the TP53 gene`, `Radiation halts all protein synthesis except that of p53`, `p53 protein is imported from neighboring damaged cells`],
             correctAnswer: 0,
             explanation: `p53 is constitutively made and constitutively destroyed; its steady-state level is set by MDM2-driven turnover. ATM/ATR phosphorylation of p53 (and MDM2) breaks the interaction, so half-life jumps from minutes to hours with no transcriptional change. Regulation-by-stabilization is faster than transcription — appropriate for an emergency responder — and the constant mRNA with rising protein is the passage giveaway.`
           },
           {
             question: `A lymphoma overexpresses Bcl-2 due to a chromosomal translocation. These tumor cells resist chemotherapy primarily because:`,
-            options: [`Excess Bcl-2 prevents BAX/BAK-mediated mitochondrial permeabilization, blocking cytochrome c release and apoptosome formation`, `Bcl-2 pumps chemotherapy drugs out of the cell`, `Bcl-2 repairs DNA damage directly`, `Bcl-2 accelerates the cell cycle past checkpoints`],
-            correctAnswer: 0,
+            options: [`Bcl-2 directly repairs the DNA damage caused by the drugs`, `Bcl-2 drives cells past checkpoints faster than the drug`, `Bcl-2 blocks BAX/BAK pores, so cytochrome c stays in`, `Bcl-2 pumps chemotherapeutic drugs back out of the cell`],
+            correctAnswer: 2,
             explanation: `Most chemotherapies kill by damaging cells badly enough that the intrinsic apoptotic pathway executes them. Bcl-2 guards the mitochondrial outer membrane; overexpression raises the threshold for BAX/BAK pore formation, so cytochrome c stays inside and caspase-9 is never activated — damaged cells survive. This is follicular lymphoma's t(14;18) lesion: an oncogene that works by blocking death rather than driving proliferation.`
           },
           {
             question: `A child develops bilateral retinoblastoma at age one; an unrelated adult develops a single unilateral tumor at 25. Knudson's two-hit model explains the difference because the child:`,
-            options: [`Inherited one mutant RB allele in every cell, so a single somatic hit in any retinal cell suffices — making tumors earlier and multiple`, `Was exposed to more radiation`, `Carries an activated oncogene that is dominant`, `Has defective apoptosis in all tissues`],
-            correctAnswer: 0,
+            options: [`Was exposed to far more ionizing radiation in utero`, `Inherited one mutant RB allele in every cell of the body`, `Carries a dominant activating oncogene in the retina`, `Has defective apoptosis in every tissue of the body`],
+            correctAnswer: 1,
             explanation: `RB is a tumor suppressor: both alleles must be lost. In hereditary cases every retinoblast starts one hit deep, and with millions of target cells, several will independently take the second hit — early, bilateral, often multifocal tumors. Sporadic disease needs two rare hits in the SAME cell: later onset, single tumor. The kinetics of tumor appearance were Knudson's actual data — a statistics argument establishing a molecular mechanism.`
           }
         ]
@@ -113,13 +113,13 @@ Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — par
         questions: [
           {
             question: `CDK4/6 inhibitors benefit breast cancers with cyclin D overexpression but fail entirely in tumors that have deleted the RB gene. The reason for the failure is that:`,
-            options: [`Without Rb, E2F is constitutively free, so S-phase entry no longer depends on the CDK4/6 activity the drug blocks`, `RB deletion increases drug efflux`, `CDK4/6 inhibitors require Rb as a cofactor for binding CDK4`, `RB-deleted cells cannot enter the cell cycle at all`],
-            correctAnswer: 0,
+            options: [`RB deletion raises drug efflux through ABC transporters`, `CDK4/6 inhibitors need Rb as a cofactor to bind CDK4`, `RB-deleted cells cannot enter the cell cycle at all`, `Without Rb, E2F is free regardless of CDK4/6 activity`],
+            correctAnswer: 3,
             explanation: `The drug works upstream of Rb: it prevents Rb phosphorylation, keeping E2F sequestered. If Rb itself is gone, E2F is permanently liberated and the pathway's control node has vanished — blocking the kinase that would have phosphorylated a nonexistent brake accomplishes nothing. Drug-sensitivity-depends-on-downstream-intactness is a signature MCAT reasoning pattern.`
           },
           {
             question: `Fibroblasts transfected with an activated RAS gene form colonies in soft agar, while untransfected fibroblasts do not. This result demonstrates that the transfected cells have:`,
-            options: [`Lost anchorage dependence — a hallmark of transformation`, `Gained contact inhibition`, `Become dependent on higher serum concentrations`, `Entered permanent senescence`],
+            options: [`Lost their dependence on anchorage for growth`, `Gained contact inhibition and stopped dividing`, `Become dependent on much higher serum levels`, `Entered permanent replicative senescence early`],
             correctAnswer: 0,
             explanation: `Normal adherent cells require integrin-mediated attachment signals to pass the restriction point; suspended in agar, they arrest. Growth as free-floating colonies means proliferation signaling has become attachment-independent — constitutive Ras output substitutes for the missing adhesion and growth-factor inputs. Soft agar is the classic functional read-out that a gene is transforming (oncogenic).`
           }

@@ -58,20 +58,20 @@ Cytokine receptors (erythropoietin, growth hormone, interferons) have **no kinas
         questions: [
           {
             question: `A truncated EGF receptor lacks its intracellular kinase domain but binds EGF normally. When co-expressed with wild-type receptors, it suppresses EGF signaling. The best explanation is that the truncated receptor:`,
-            options: [`Dimerizes with wild-type receptors, forming pairs that cannot trans-autophosphorylate (a dominant-negative effect)`, `Sequesters all cellular ATP`, `Degrades EGF in the medium`, `Blocks transcription of the wild-type gene`],
+            options: [`Dimerizes with wild-type receptors, poisoning each pair`, `Sequesters the cell's entire ATP pool away from the kinases`, `Degrades EGF in the medium before it can reach a receptor`, `Blocks transcription of the wild-type receptor gene`],
             correctAnswer: 0,
             explanation: `RTK activation requires each partner in a dimer to phosphorylate the other. A kinase-dead subunit that still dimerizes poisons every dimer it joins — the wild-type partner has no one to phosphorylate it. This dominant-negative logic is a standard MCAT experimental construct; note the mutant would NOT affect a pathway that signals through monomeric receptors.`
           },
           {
             question: `Grb2 contains SH2 and SH3 domains but no enzymatic activity, yet it is essential for RTK-driven Ras activation. Its role is to:`,
-            options: [`Physically link phosphotyrosines on the receptor to SOS, positioning the GEF next to membrane-bound Ras`, `Hydrolyze GTP on Ras`, `Phosphorylate Raf directly`, `Transport ERK into the nucleus`],
-            correctAnswer: 0,
+            options: [`Phosphorylate Raf directly on its activation loop`, `Hydrolyze the GTP bound to Ras after activation`, `Link the receptor's phosphotyrosines to SOS`, `Carry activated ERK through the nuclear pore`],
+            correctAnswer: 2,
             explanation: `Adaptor proteins are pure connectors: the SH2 domain reads phosphotyrosine on the activated receptor; the SH3 domains hold SOS. Bringing SOS to the membrane — where Ras is prenyl-anchored — is sufficient to activate Ras. Signal transduction frequently works by regulated proximity rather than catalysis, a concept passages love to test with adaptor mutants.`
           },
           {
             question: `Cells lacking functional PTEN show elevated Akt activity even without growth factors. This occurs because PTEN normally:`,
-            options: [`Dephosphorylates PIP$_3$ back to PIP$_2$, removing the membrane docking site that recruits and activates Akt`, `Phosphorylates and inhibits PI3K`, `Degrades insulin receptors`, `Blocks transcription of the Akt gene`],
-            correctAnswer: 0,
+            options: [`Phosphorylates PI3K and shuts off its lipid kinase activity`, `Dephosphorylates PIP$_3$ to PIP$_2$, erasing Akt's docking site`, `Targets the insulin receptor for lysosomal degradation`, `Represses transcription of the gene encoding Akt itself`],
+            correctAnswer: 1,
             explanation: `PI3K writes the PIP$_3$ signal; PTEN erases it. Without the eraser, basal PI3K activity accumulates PIP$_3$, so Akt stays membrane-recruited and active — constitutive survival/growth signaling. This is why PTEN is among the most frequently lost tumor suppressors. Distinguish lipid phosphatases (PTEN) from protein phosphatases: PTEN's substrate is a membrane lipid.`
           }
         ]
@@ -121,13 +121,13 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
         questions: [
           {
             question: `In cells expressing a constitutively active MEK mutant, an EGF-receptor kinase inhibitor fails to block ERK phosphorylation. This result indicates that:`,
-            options: [`MEK acts downstream of the receptor, so activating it bypasses the receptor blockade`, `The inhibitor is inactive in all contexts`, `ERK phosphorylation does not require MEK`, `EGF receptor and MEK are the same protein`],
-            correctAnswer: 0,
+            options: [`The inhibitor fails to enter cells under any condition`, `ERK phosphorylation does not require MEK at all`, `The EGF receptor and MEK are the same protein`, `MEK acts downstream of the receptor in the cascade`],
+            correctAnswer: 3,
             explanation: `Classic epistasis: constitutive activity at a downstream node makes upstream input unnecessary. Active MEK phosphorylates ERK regardless of receptor status, so the receptor inhibitor loses its effect. Had MEK been upstream of the receptor (or in a parallel pathway), the inhibitor would still have blocked ERK. Ordering pathway components from such experiments is a guaranteed MCAT skill.`
           },
           {
             question: `Erythropoietin stimulates red-cell precursors through a receptor with no intrinsic kinase domain, yet triggers rapid tyrosine phosphorylation and STAT-dependent transcription. The receptor accomplishes this by:`,
-            options: [`Using constitutively associated JAK kinases that trans-phosphorylate the receptor upon ligand-induced dimerization`, `Coupling to Gs and raising cAMP`, `Acting as a ligand-gated calcium channel`, `Entering the nucleus with its ligand`],
+            options: [`Using associated JAK kinases that phosphorylate its tails`, `Using an intrinsic guanylyl cyclase domain to make cGMP`, `Coupling to Gs, raising cAMP and activating PKA`, `Entering the nucleus together with its bound ligand`],
             correctAnswer: 0,
             explanation: `Cytokine receptors outsource catalysis: JAKs bound to the receptor tails are brought into range when ligand dimerizes the receptor, then phosphorylate the receptor and the docking STATs. Phosphorylated STATs dimerize via reciprocal SH2-phosphotyrosine contacts and act directly as transcription factors — the shortest membrane-to-gene route among the major pathways.`
           }

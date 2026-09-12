@@ -58,20 +58,20 @@ Substrates arrive by three routes: **endocytosis** (extracellular material), **p
         questions: [
           {
             question: `A toxin makes the inner mitochondrial membrane freely permeable to protons. Electron transport continues, but the immediate consequence is:`,
-            options: [`Collapse of the proton gradient — ATP synthesis stops while O$_2$ consumption continues and energy is released as heat`, `Cessation of electron flow through the chain`, `Increased ATP yield per glucose`, `Export of the TCA cycle to the cytosol`],
+            options: [`The gradient collapses, ATP synthesis stops, heat is made`, `Electron flow through the chain stops almost at once`, `The ATP yield per glucose rises above normal levels`, `The TCA cycle is relocated into the cytosol`],
             correctAnswer: 0,
             explanation: `Uncoupling separates the two halves of chemiosmosis: the ETC keeps pumping (indeed runs faster, since back-pressure is gone), but protons leak back without turning ATP synthase, dissipating the gradient as heat. This is the mechanism of dinitrophenol toxicity and, in controlled physiologic form, of brown fat's UCP1. Distinguish uncouplers (O$_2$ use continues) from ETC inhibitors like cyanide (O$_2$ use stops).`
           },
           {
             question: `A child of an affected mother has a mitochondrial DNA disease; the child's affected sibling has much milder symptoms. The severity difference is best explained by:`,
-            options: [`Heteroplasmy — the siblings inherited different proportions of mutant versus wild-type mtDNA in the egg`, `Paternal mtDNA rescuing one sibling`, `X-linked dominant inheritance`, `Different diets after birth`],
-            correctAnswer: 0,
+            options: [`Differences in diet and exercise after birth`, `Paternal mtDNA rescuing one of the siblings`, `Heteroplasmy: differing mutant mtDNA loads`, `X-linked dominant inheritance of the trait`],
+            correctAnswer: 2,
             explanation: `Each oocyte carries thousands of mtDNA copies, and the mutant fraction segregates randomly into eggs (the mitochondrial bottleneck). Offspring therefore inherit different mutant loads, and phenotype appears once the load in a high-demand tissue crosses its threshold. Paternal mitochondria are degraded after fertilization, so father-to-child transmission of mtDNA disease argues against a mitochondrial locus entirely.`
           },
           {
             question: `Pompe disease features glycogen accumulation inside lysosomes, even though the cytosolic enzymes of glycogenolysis are fully functional. Lysosomal glycogen persists because:`,
-            options: [`Substrates inside a lysosome are accessible only to lysosomal enzymes — cytosolic phosphorylase cannot reach glycogen behind the lysosomal membrane`, `Lysosomal pH activates glycogen synthesis`, `Cytosolic glycogenolysis produces lysosomal glycogen as a byproduct`, `The disease also inactivates cytosolic phosphorylase`],
-            correctAnswer: 0,
+            options: [`Cytosolic glycogenolysis makes lysosomal glycogen as waste`, `Cytosolic phosphorylase cannot reach lysosomal glycogen`, `The acidic lysosomal pH drives glycogen synthesis`, `The disease also inactivates cytosolic phosphorylase`],
+            correctAnswer: 1,
             explanation: `Compartmentalization cuts both ways: membranes that protect the cytosol from hydrolases also bar cytosolic enzymes from lysosomal contents. Glycogen delivered by autophagy can be degraded only by acid alpha-glucosidase; without it, the substrate is trapped regardless of how healthy the cytosolic pathway is. Any "enzyme X is normal, yet substrate accumulates" stem should trigger a where-is-the-substrate compartment check.`
           }
         ]
@@ -116,13 +116,13 @@ A single metabolic thread crossing four organelles — passages that name an acc
         questions: [
           {
             question: `Cytochrome c performs electron transport in healthy cells but triggers caspase activation during apoptosis. The switch between these roles is accomplished by:`,
-            options: [`A change in localization — outer-membrane permeabilization moves cytochrome c from the intermembrane space to the cytosol, where Apaf-1 resides`, `Phosphorylation converting it into a protease`, `Transcription of a distinct apoptotic isoform`, `Binding of oxygen at high concentrations`],
-            correctAnswer: 0,
+            options: [`Phosphorylation converts it into an active protease`, `Oxygen binding at high concentrations switches it`, `A distinct apoptotic isoform is transcribed`, `Its location changes, moving it into the cytosol`],
+            correctAnswer: 3,
             explanation: `The protein is unchanged; its address changes. Sequestered in the intermembrane space it can only ferry electrons; released through BAX/BAK pores it encounters Apaf-1 and nucleates the apoptosome. Compartmentalization-as-regulation — the same chemistry with different neighbors — is among the most transferable concepts organelle passages test.`
           },
           {
             question: `In X-linked adrenoleukodystrophy, VLCFA accumulate although all peroxisomal beta-oxidation enzymes are catalytically normal. The defect is in a transporter that imports VLCFA into peroxisomes. This situation is most analogous to:`,
-            options: [`I-cell disease, where normal enzymes fail because cargo and enzyme are never brought together in the right compartment`, `Tay-Sachs disease, where the hydrolase itself is missing`, `Cyanide poisoning, where an enzyme is directly inhibited`, `Zellweger syndrome, where peroxisomes are absent entirely`],
+            options: [`I-cell disease, where enzyme and cargo never meet up`, `Tay-Sachs disease, where the hydrolase is absent`, `Cyanide poisoning, where an enzyme is inhibited`, `Zellweger syndrome, where peroxisomes are absent`],
             correctAnswer: 0,
             explanation: `Both ALD and I-cell disease are logistics failures, not catalytic ones: functional enzymes are useless if substrate (ALD) or the enzymes themselves (I-cell) cannot reach the compartment where the reaction must occur. Tay-Sachs is a true enzyme deficiency, and Zellweger removes the whole organelle. Classifying diseases as enzyme-broken vs. delivery-broken vs. compartment-missing organizes a surprising number of MCAT answers.`
           }

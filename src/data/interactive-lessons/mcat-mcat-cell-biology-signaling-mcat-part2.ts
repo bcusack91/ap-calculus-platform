@@ -55,19 +55,19 @@ One epinephrine molecule → ~100 G proteins → each adenylyl cyclase makes man
         questions: [
           {
             question: `A mutant G-alpha-s subunit binds GTP normally but has lost its intrinsic GTPase activity. In cells expressing it, glucagon stimulation will produce:`,
-            options: [`A prolonged cAMP signal that persists after the hormone is removed, because G-alpha-s cannot turn itself off`, `No cAMP signal, because GTP hydrolysis is required to activate adenylyl cyclase`, `A normal signal, because receptor internalization terminates G protein signaling`, `Decreased cAMP, because the mutant subunit sequesters beta-gamma`],
-            correctAnswer: 0,
+            options: [`No cAMP signal at all, since GTP hydrolysis is the activating step`, `A prolonged cAMP signal that persists after hormone washout`, `A normal cAMP signal, since arrestin still terminates it`, `Reduced cAMP, since the mutant traps beta-gamma subunits`],
+            correctAnswer: 1,
             explanation: `G-alpha is active while GTP-bound; hydrolysis to GDP is the OFF step, not the ON step. Losing GTPase activity locks the subunit in the active state, so adenylyl cyclase keeps producing cAMP long after ligand is gone. This is precisely what cholera toxin does chemically (ADP-ribosylation of G-alpha-s) and what activating GNAS mutations do in some endocrine tumors.`
           },
           {
             question: `Acetylcholine slows heart rate through M2 muscarinic receptors but triggers smooth muscle contraction through M3 receptors. The M2 and M3 pathways differ in that:`,
-            options: [`M2 couples to Gi (lowering cAMP and opening K$^+$ channels via beta-gamma), while M3 couples to Gq (IP$_3$/Ca$^{2+}$)`, `M2 is an ion channel and M3 is a GPCR`, `M2 uses cGMP while M3 uses cAMP`, `M2 is intracellular while M3 is on the cell surface`],
-            correctAnswer: 0,
+            options: [`M2 is an ionotropic channel, while M3 is a GPCR`, `M2 is intracellular, while M3 is on the surface`, `M2 raises cGMP and M3 raises cAMP`, `M2 couples to Gi, while M3 couples to Gq`],
+            correctAnswer: 3,
             explanation: `Both are muscarinic GPCRs for the same ligand; the downstream G protein differs. M2 (heart) is Gi-coupled — it inhibits adenylyl cyclase and its freed beta-gamma subunits open GIRK K$^+$ channels, hyperpolarizing pacemaker cells. M3 (smooth muscle, glands) is Gq-coupled — PLC → IP$_3$ → Ca$^{2+}$ → contraction/secretion. Same first messenger, different wiring: the MCAT's favorite signaling theme.`
           },
           {
             question: `In hepatocytes, a single PKA activation event simultaneously accelerates glycogen breakdown and halts glycogen synthesis. This is possible because:`,
-            options: [`PKA phosphorylates multiple substrates, activating the degradative enzyme cascade while inhibiting glycogen synthase`, `PKA degrades glycogen synthase mRNA`, `cAMP directly allosterically activates glycogen phosphorylase`, `PKA pumps glucose out of the cell, depleting the synthesis substrate`],
+            options: [`PKA phosphorylates several substrates at once`, `cAMP allosterically activates glycogen phosphorylase`, `PKA targets glycogen synthase to the proteasome`, `PKA degrades the mRNA encoding glycogen synthase`],
             correctAnswer: 0,
             explanation: `A kinase with broad substrate specificity coordinates a whole program: phosphorylation activates phosphorylase kinase (which activates glycogen phosphorylase) AND inhibits glycogen synthase. Reciprocal regulation by one signal prevents a futile cycle. cAMP itself binds PKA's regulatory subunits — it does not act directly on phosphorylase — and no transcription or transport step is needed for this acute response.`
           }
@@ -115,14 +115,14 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
         questions: [
           {
             question: `A cell is treated with a drug that blocks the IP$_3$ receptor on the ER. Stimulation of a Gq-coupled receptor in these cells will still produce:`,
-            options: [`DAG in the plasma membrane, since PLC cleavage of PIP$_2$ is upstream of the block`, `A normal cytosolic Ca$^{2+}$ spike from the ER`, `Increased cAMP, because IP$_3$ is rerouted to adenylyl cyclase`, `No signaling events of any kind`],
-            correctAnswer: 0,
+            options: [`A normal cytosolic Ca$^{2+}$ spike released from the ER`, `Extra cAMP, since IP$_3$ is rerouted to adenylyl cyclase`, `DAG in the plasma membrane, produced upstream of the block`, `Nothing at all, since Gq signaling starts with IP$_3$`],
+            correctAnswer: 2,
             explanation: `PLC generates IP$_3$ and DAG in one cleavage; blocking the IP$_3$ receptor only prevents the downstream ER Ca$^{2+}$ release. DAG production is untouched (though PKC activation will be weakened, since PKC needs Ca$^{2+}$ as a coactivator). Mapping where in a cascade an inhibitor acts — and what remains intact upstream and in parallel — is the core MCAT signaling skill.`
           },
           {
             question: `In rod photoreceptors, light causes hyperpolarization rather than depolarization. The mechanistic reason is that photon absorption:`,
-            options: [`Activates a phosphodiesterase that lowers cGMP, closing cGMP-gated cation channels that were open in the dark`, `Opens Cl$^-$ channels directly`, `Activates adenylyl cyclase, raising cAMP`, `Blocks the Na$^+$/K$^+$ ATPase`],
-            correctAnswer: 0,
+            options: [`An adenylyl cyclase raising cAMP in the outer segment`, `A PDE that lowers cGMP, closing open cation channels`, `A phosphatase that opens chloride channels directly`, `An inhibitor of the Na$^+$/K$^+$ ATPase in the rod`],
+            correctAnswer: 1,
             explanation: `In darkness, high cGMP holds cation channels open (the "dark current") and the cell sits relatively depolarized. Light-activated rhodopsin → transducin → PDE drops cGMP, channels close, and the cell hyperpolarizes, reducing glutamate release. Signaling by removing a messenger is counterintuitive and therefore heavily tested.`
           }
         ]

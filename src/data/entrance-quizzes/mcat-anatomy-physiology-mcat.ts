@@ -12,13 +12,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-1a',
     question: 'During a skeletal muscle contraction, the binding of $Ca^{2+}$ to troponin causes:',
     options: [
-      'Direct cross-bridge formation between actin and myosin without further steps.',
-      'Tropomyosin to shift, exposing myosin-binding sites on actin filaments.',
-      'Myosin heads to hydrolyze ATP before any conformational change.',
-      'Actin filaments to slide toward the Z-discs without myosin involvement.'
+      'Myosin heads to hydrolyze ATP, cocking them into the high-energy state.',
+      'Tropomyosin to shift, exposing myosin-binding sites on actin.',
+      'Cross-bridges to detach from actin so that the muscle can relax.',
+      'Thin filaments to slide toward the Z-discs without myosin involvement.'
     ],
     correctIndex: 1,
-    explanation: 'At rest, tropomyosin blocks myosin-binding sites on actin. $Ca^{2+}$ (released from the SR) binds troponin C, causing a conformational shift in the troponin-tropomyosin complex. Tropomyosin moves laterally, exposing binding sites—allowing myosin heads (already charged with ADP + Pi) to bind and initiate the power stroke.',
+    explanation: 'At rest, tropomyosin covers the myosin-binding sites on actin. $Ca^{2+}$ released from the sarcoplasmic reticulum binds troponin C, the troponin-tropomyosin complex changes shape, and tropomyosin rolls aside so myosin heads — already charged with ADP + Pi from an earlier ATP hydrolysis — can bind and drive the power stroke. ATP hydrolysis recocks the head independently of $Ca^{2+}$, and it is ATP BINDING (not $Ca^{2+}$) that detaches a cross-bridge.',
     partNumber: 1,
     partTitle: 'Musculoskeletal System'
   },
@@ -26,13 +26,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-1b',
     question: 'The sarcomere is the functional unit of a myofibril. During contraction, which band/zone SHORTENS?',
     options: [
-      'A band (thick filament zone)',
-      'I band (thin filament only zone)',
-      'Both the A band and H zone shorten equally.',
-      'The I band and H zone shorten; the A band length remains constant.'
+      'The A band shortens while the I band and H zone both stay constant.',
+      'Only the I band shortens, while the H zone gets wider.',
+      'The I band and the H zone shorten; the A band stays constant.',
+      'All three bands shorten, but the A band shortens least.'
     ],
-    correctIndex: 3,
-    explanation: 'In the sliding filament model, thin filaments slide over thick filaments. The A band (containing all thick filaments) remains constant in length. The I band (thin filaments only) and H zone (thick filaments only, no overlap) both shorten as filaments slide past each other.',
+    correctIndex: 2,
+    explanation: 'In the sliding filament model the filaments themselves do not shorten; they overlap more. The A band equals the length of the thick filaments, so it never changes. The I band (thin filament only) and the H zone (thick filament only) are the regions of non-overlap, so both narrow as the Z-discs are pulled toward the M line.',
     partNumber: 1,
     partTitle: 'Musculoskeletal System'
   },
@@ -42,13 +42,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-2a',
     question: 'Pepsinogen, the inactive zymogen of pepsin, is secreted by which gastric cells and activated by:',
     options: [
-      'Chief cells; activated by HCl (low pH) in the stomach lumen.',
-      'Parietal cells; activated by intrinsic factor.',
-      'G cells; activated by gastrin.',
-      'Goblet cells; activated by enterokinase.'
+      'Chief cells; activated by gastric HCl at low pH.',
+      'Parietal cells; activated by the intrinsic factor they secrete.',
+      'G cells; activated by gastrin released into the circulation.',
+      'Goblet cells; activated by duodenal enterokinase.'
     ],
     correctIndex: 0,
-    explanation: 'Chief (zymogenic) cells in gastric glands secrete pepsinogen. The low pH (~2) of gastric HCl (secreted by parietal cells) cleaves the inhibitory peptide from pepsinogen, forming active pepsin. Pepsin itself also autocatalytically activates more pepsinogen.',
+    explanation: 'Chief (zymogenic) cells of the gastric glands secrete pepsinogen; the pH ~2 environment created by parietal-cell HCl cleaves off the inhibitory propeptide to yield active pepsin, which then autocatalytically activates more pepsinogen. Parietal cells make HCl and intrinsic factor (for $B_{12}$ absorption, not zymogen activation), G cells secrete gastrin, and enterokinase acts in the duodenum on trypsinogen.',
     partNumber: 2,
     partTitle: 'Digestive System'
   },
@@ -56,13 +56,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-2b',
     question: 'Bile salts emulsify dietary fats in the small intestine. This process aids digestion because:',
     options: [
-      'Bile salts chemically hydrolyze triglycerides into fatty acids and glycerol.',
-      'Emulsification increases the surface area of fat droplets, allowing pancreatic lipase greater access for hydrolysis.',
-      'Bile salts transport fatty acids directly across enterocyte membranes.',
-      'Emulsification raises the pH of the duodenum, optimizing lipase activity.'
+      'Bile salts hydrolyze triglycerides into fatty acids and glycerol.',
+      'Emulsification increases fat-droplet surface area for pancreatic lipase.',
+      'Bile salts carry fatty acids directly across the enterocyte membrane.',
+      'Emulsification raises duodenal pH to the optimum for lipase activity.'
     ],
     correctIndex: 1,
-    explanation: 'Bile salts (amphipathic molecules from cholesterol) disperse large fat globules into smaller microdroplets (emulsification), dramatically increasing surface area. This allows pancreatic lipase (with colipase) to hydrolyze triglycerides more efficiently. Bile salts do not chemically digest fats.',
+    explanation: 'Bile salts are amphipathic cholesterol derivatives that break large fat globules into microdroplets, multiplying the lipid-water interface where pancreatic lipase (with colipase) can work. They are detergents, not enzymes, so they perform no hydrolysis; micelles ferry the products to the brush border but the fatty acids then cross the membrane on their own; and it is pancreatic bicarbonate, not emulsification, that neutralizes duodenal acid.',
     partNumber: 2,
     partTitle: 'Digestive System'
   },
@@ -78,7 +78,7 @@ const questions: EntranceQuizQuestion[] = [
       'IgE'
     ],
     correctIndex: 2,
-    explanation: 'IgG is the most abundant serum Ig (~75%). It is the primary antibody of secondary responses due to B-cell class switching and memory. IgG crosses the placenta (passive immunity to the fetus). IgM is the first produced in a primary response; IgA is the dominant mucosal antibody.',
+    explanation: 'IgG is the most abundant serum immunoglobulin (~75%) and the isotype that dominates secondary responses after class switching in memory B cells. It is also the only isotype that crosses the placenta. IgM is the first antibody of a primary response, IgA dominates mucosal secretions, and IgE mediates allergy and antiparasitic responses.',
     partNumber: 3,
     partTitle: 'Immune System'
   },
@@ -86,13 +86,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-3b',
     question: 'MHC class I molecules present peptide antigens to:',
     options: [
-      '$CD4^{+}$ helper T cells, initiating antibody production.',
-      '$CD8^{+}$ cytotoxic T cells, triggering destruction of the presenting cell.',
-      'B cells, promoting immunoglobulin class switching.',
-      'NK cells, inhibiting their cytotoxic activity.'
+      '$CD4^{+}$ helper T cells, which then license B-cell antibody production.',
+      '$CD8^{+}$ cytotoxic T cells, which kill the presenting cell.',
+      'B cells, driving immunoglobulin class switching.',
+      'NK cells, triggering their release of cytotoxic granules.'
     ],
     correctIndex: 1,
-    explanation: 'MHC class I (on all nucleated cells) presents endogenous/intracellular antigens (e.g., viral peptides) to $CD8^{+}$ cytotoxic T cells via TCR interaction. Activated CTLs kill the presenting cell. MHC class II (on APCs) presents to $CD4^{+}$ helper T cells.',
+    explanation: 'MHC class I is expressed on all nucleated cells and displays endogenous peptides — viral or tumor proteins made inside the cell — to $CD8^{+}$ cytotoxic T cells, which then kill that cell. MHC class II on professional APCs is what presents to $CD4^{+}$ helper T cells. NK cells read MHC class I with INHIBITORY receptors: normal class I expression suppresses NK killing, and it is the LOSS of class I ("missing self") that triggers degranulation.',
     partNumber: 3,
     partTitle: 'Immune System'
   },
@@ -102,13 +102,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-4a',
     question: 'The LH surge on approximately day 14 of the menstrual cycle triggers:',
     options: [
-      'Proliferation of the endometrium in preparation for implantation.',
-      'Ovulation and conversion of the dominant follicle into the corpus luteum.',
-      'Menstruation by causing progesterone levels to fall.',
-      'FSH secretion to stimulate primordial follicle development.'
+      'Proliferation of the endometrial lining ahead of implantation.',
+      'Ovulation and conversion of the follicle into the corpus luteum.',
+      'Menstruation, by causing progesterone levels to fall abruptly.',
+      'The FSH rise that recruits a new cohort of follicles.'
     ],
     correctIndex: 1,
-    explanation: 'High estrogen from the dominant follicle causes a positive feedback LH surge. The LH surge triggers final maturation and release of the oocyte (ovulation) ~36 hours later, and transforms the ruptured follicle into the corpus luteum, which secretes progesterone and estrogen during the luteal phase.',
+    explanation: 'Rising estrogen from the dominant follicle flips to POSITIVE feedback and produces the LH surge, which completes oocyte maturation and releases it about 36 hours later, then luteinizes the ruptured follicle into the corpus luteum that secretes progesterone through the luteal phase. Endometrial proliferation is driven by follicular estrogen; menstruation follows corpus luteum regression about two weeks later.',
     partNumber: 4,
     partTitle: 'Reproductive System'
   },
@@ -116,13 +116,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-4b',
     question: 'Testosterone produced by Leydig cells in the testes is required for:',
     options: [
-      'FSH-independent spermatogenesis and Sertoli cell support functions.',
-      'Spermatogenesis, secondary sexual characteristics, and anabolic effects on muscle and bone.',
-      'LH production by the anterior pituitary.',
-      'Inhibin synthesis, which promotes FSH release.'
+      'Stimulating LH secretion from the anterior pituitary.',
+      'Spermatogenesis and male secondary sexual characteristics.',
+      'Inhibin synthesis by Sertoli cells, which promotes FSH release.',
+      'Blocking aromatase so that no estrogen is produced in males.'
     ],
     correctIndex: 1,
-    explanation: 'Testosterone (and its metabolite DHT) is essential for: initiation and maintenance of spermatogenesis (acts on Sertoli cells), development and maintenance of male secondary sexual characteristics, anabolic effects (muscle mass, bone density), and libido. Inhibin from Sertoli cells inhibits FSH (negative feedback).',
+    explanation: 'Testosterone (and its 5-alpha-reductase product DHT) acts on Sertoli cells to sustain spermatogenesis and drives male secondary sexual characteristics, muscle and bone anabolism, and libido. It INHIBITS rather than stimulates LH by negative feedback on the hypothalamus and pituitary; inhibin comes from Sertoli cells and suppresses FSH; and a fraction of testosterone is aromatized to estradiol, which males need for bone maturation.',
     partNumber: 4,
     partTitle: 'Reproductive System'
   },
@@ -132,13 +132,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-5a',
     question: 'Negative feedback is the primary mechanism maintaining homeostasis. In thermoregulation, if body temperature rises above the set point:',
     options: [
-      'The hypothalamus increases metabolic heat production.',
-      'The response amplifies the temperature increase to reach a new equilibrium.',
-      'Effectors (sweat glands, vasodilation) are activated to return temperature to the set point.',
-      'Positive feedback loops are activated to rapidly raise temperature further.'
+      'The hypothalamus raises metabolic heat production still further.',
+      'Shivering and cutaneous vasoconstriction begin in the periphery.',
+      'Sweat glands and cutaneous vasodilation are activated.',
+      'Positive feedback drives temperature further above the set point.'
     ],
     correctIndex: 2,
-    explanation: 'Negative feedback: the stimulus (↑ temperature) → hypothalamic thermostat detects deviation → activates effectors (sweating, cutaneous vasodilation) → heat is lost → temperature returns to set point (~37°C). The response opposes the original change—defining negative feedback.',
+    explanation: 'The defining feature of negative feedback is that the response OPPOSES the deviation: the hypothalamic thermostat detects the rise and recruits heat-losing effectors — sweating for evaporative loss and cutaneous vasodilation for radiative loss — returning temperature toward ~37°C. Shivering and vasoconstriction are the opposite (heat-conserving) responses used when temperature falls below set point.',
     partNumber: 5,
     partTitle: 'Homeostasis'
   },
@@ -146,13 +146,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-5b',
     question: 'Positive feedback in physiology:',
     options: [
-      'Is always pathological and serves no normal function.',
-      'Occurs when the response amplifies the original stimulus, moving away from the set point, as seen in childbirth contractions and blood clotting.',
-      'Returns the body to its set point more rapidly than negative feedback.',
-      'Requires external hormonal input and cannot be initiated internally.'
+      'Is always pathological and never serves a normal role.',
+      'Occurs when the response amplifies the original stimulus.',
+      'Restores the body to its set point faster than negative feedback does.',
+      'Requires an external hormone and cannot be initiated internally.'
     ],
     correctIndex: 1,
-    explanation: 'Positive feedback amplifies a change (response reinforces stimulus), moving away from the initial state. This is appropriate in self-limited processes: oxytocin/uterine contractions during labor (until delivery stops the stimulus) and platelet aggregation/blood clotting (until vessel is sealed).',
+    explanation: 'Positive feedback drives a variable further from its starting point rather than back toward it, so it cannot be a set-point-restoring mechanism. Physiology uses it for self-terminating cascades: oxytocin and uterine contractions during labor (delivery removes the stimulus) and platelet activation in clotting (a sealed vessel removes the stimulus). Both are normal, internally initiated, and not pathological.',
     partNumber: 5,
     partTitle: 'Homeostasis'
   },
@@ -162,13 +162,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-6a',
     question: 'A patient takes a drug that blocks acetylcholinesterase at the neuromuscular junction. The most likely consequence is:',
     options: [
-      'Muscle paralysis due to insufficient ACh binding at motor end plates.',
-      'Sustained muscle contraction/spasm because ACh accumulates and continuously stimulates nicotinic receptors.',
-      'Decreased heart rate due to excess parasympathetic tone at the SA node.',
-      'Inhibition of epinephrine release from the adrenal medulla.'
+      'Flaccid paralysis from too little ACh reaching the motor end plate.',
+      'Sustained contraction and spasm as ACh accumulates in the cleft.',
+      'A faster heart rate caused by excess sympathetic tone at the SA node.',
+      'Reduced epinephrine release from the adrenal medulla.'
     ],
     correctIndex: 1,
-    explanation: 'Acetylcholinesterase normally breaks down ACh in the synaptic cleft. Blocking it → ACh accumulates → prolonged binding to nAChRs at the NMJ → sustained depolarization → spastic paralysis (like organophosphate poisoning). This is the mechanism of nerve agents and some insecticides.',
+    explanation: 'Acetylcholinesterase normally clears ACh from the synaptic cleft within milliseconds. Blocking it leaves ACh bound to nicotinic receptors, producing prolonged end-plate depolarization, fasciculations, and spastic paralysis — the picture of organophosphate and nerve-agent poisoning. Systemically the same drug SLOWS the heart (excess ACh at muscarinic receptors on the SA node) and INCREASES adrenal catecholamine release, since the preganglionic sympathetic fibers to the medulla are cholinergic.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -176,13 +176,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-6b',
     question: 'The juxtaglomerular apparatus (JGA) releases renin when:',
     options: [
-      'Blood pressure in the afferent arteriole increases.',
-      'Blood pressure in the afferent arteriole decreases, $Na^{+}$ delivery to the macula densa falls, or sympathetic stimulation occurs.',
-      'Aldosterone levels are high.',
-      'ANP (atrial natriuretic peptide) is released from the atria.'
+      'Pressure in the afferent arteriole rises and stretches the JG cells.',
+      'Afferent arteriolar pressure falls or macula densa NaCl delivery drops.',
+      'Plasma aldosterone and angiotensin II are already high.',
+      'Atrial natriuretic peptide is released in response to atrial stretch.'
     ],
     correctIndex: 1,
-    explanation: 'Renin is released from JG cells in response to: (1) decreased stretch in the afferent arteriole (↓BP), (2) decreased NaCl at the macula densa, and (3) β1-adrenergic stimulation. Renin initiates the RAAS cascade → angiotensin II → aldosterone → ↑$Na^{+}/water$ retention → ↑BP.',
+    explanation: 'Three stimuli release renin from JG cells: reduced stretch of the afferent arteriole (low renal perfusion pressure), reduced NaCl sensed by the macula densa, and beta-1 adrenergic sympathetic stimulation. Renin then starts the RAAS cascade toward angiotensin II and aldosterone, raising $Na^{+}$ and water retention and blood pressure. High angiotensin II/aldosterone feeds back to SUPPRESS renin, and ANP likewise inhibits it.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -192,13 +192,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-7a',
     question: 'Type I muscle fibers (slow-twitch, oxidative) are better suited for endurance exercise than type II fibers because they:',
     options: [
-      'Have fewer mitochondria but more glycogen stores.',
-      'Are larger in diameter and generate more peak force.',
-      'Rely primarily on anaerobic glycolysis for rapid ATP production.',
-      'Have abundant mitochondria, high myoglobin content, and resist fatigue via aerobic metabolism.'
+      'Contain fewer mitochondria but hold much larger glycogen stores.',
+      'Are larger in diameter and generate more peak force per fiber.',
+      'Are packed with mitochondria and myoglobin, so they resist fatigue.',
+      'Rely mainly on anaerobic glycolysis for very rapid ATP production.'
     ],
-    correctIndex: 3,
-    explanation: 'Type I (slow-twitch, red, oxidative) fibers: rich in mitochondria, high myoglobin $(O_{2} storage)$, dense capillary supply, rely on aerobic respiration → fatigue-resistant, ideal for endurance. Type IIb (fast-twitch, white, glycolytic) fibers: large, powerful, fatigue quickly, rely on anaerobic glycolysis.',
+    correctIndex: 2,
+    explanation: 'Type I fibers are red and oxidative: dense mitochondria, high myoglobin for local $O_{2}$ storage, and a rich capillary supply let them regenerate ATP aerobically almost indefinitely, so they fatigue slowly. The other options describe type IIb (fast-twitch, white, glycolytic) fibers, which are larger, more forceful, glycogen- and glycolysis-dependent, and fatigue quickly.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   },
@@ -206,13 +206,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-7b',
     question: 'Inflammation is a hallmark of the innate immune response. Which of the following best describes the role of histamine in acute inflammation?',
     options: [
-      'Histamine activates complement proteins to lyse bacterial membranes.',
-      'Histamine is released from mast cells, causing vasodilation and increased vascular permeability, facilitating immune cell recruitment.',
-      'Histamine kills bacteria directly through oxidative burst mechanisms.',
-      'Histamine activates cytotoxic T cells to clear infected tissue.'
+      'It activates the complement cascade, which lyses bacterial membranes.',
+      'It kills ingested bacteria directly through an oxidative burst.',
+      'It causes vasodilation and a local rise in vascular permeability.',
+      'It activates cytotoxic T cells to clear the infected tissue.'
     ],
-    correctIndex: 1,
-    explanation: 'Mast cell degranulation releases histamine and other mediators. Histamine acts on H1 receptors on venular endothelium, causing vasodilation (redness, warmth) and increased vascular permeability (edema formation). This allows plasma proteins and phagocytes to access the site of infection.',
+    correctIndex: 2,
+    explanation: 'Mast cells and basophils degranulate and release histamine, which acts on H1 receptors of venular endothelium: arteriolar vasodilation produces the redness and warmth, and endothelial contraction opens interendothelial gaps so plasma proteins and leukocytes can leave the vessel, producing the swelling. Complement is activated by antibody or microbial surfaces, the oxidative burst belongs to phagocytes, and cytotoxic T cells are adaptive rather than innate.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   }

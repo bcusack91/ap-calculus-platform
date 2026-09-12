@@ -60,20 +60,20 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
         questions: [
           {
             question: `A researcher measures the rate at which four molecules cross a pure phospholipid bilayer (no proteins). Which molecule crosses fastest?`,
-            options: [`O$_2$ — small and nonpolar`, `Glucose — small and metabolically important`, `Na$^+$ — the smallest hydrated ion`, `A tripeptide — flexible backbone`],
-            correctAnswer: 0,
+            options: [`Glucose — polar and hydrogen-bonding`, `Na$^+$ — a small but charged ion`, `O$_2$ — a small nonpolar gas`, `A tripeptide — polar and bulky`],
+            correctAnswer: 2,
             explanation: `Permeability across a protein-free bilayer tracks size and polarity: small nonpolar gases (O$_2$, CO$_2$) cross fastest. Glucose is polar and too large; ions are charged and essentially excluded regardless of size (their hydration shells and charge make the hydrophobic core an enormous energy barrier); a tripeptide is both large and polar.`
           },
           {
             question: `Bacteria grown at low temperature increase the proportion of unsaturated fatty acids in their membrane phospholipids. The most likely purpose is to:`,
-            options: [`Maintain membrane fluidity — cis double-bond kinks prevent tight lipid packing in the cold`, `Increase membrane thickness for insulation`, `Reduce permeability to water`, `Strengthen the peptidoglycan cell wall`],
+            options: [`Maintain fluidity, since kinks block tight packing`, `Increase membrane thickness for better insulation`, `Reduce the membrane's permeability to water`, `Strengthen the peptidoglycan of the cell wall`],
             correctAnswer: 0,
             explanation: `Cold temperatures rigidify membranes by allowing tails to pack tightly. Cis double bonds introduce kinks that disrupt packing, restoring fluidity — a classic homeoviscous adaptation. This is a favorite MCAT experimental setup: expect fluidity logic (unsaturation, tail length, cholesterol, temperature).`
           },
           {
             question: `Cortisol (a steroid) and insulin (a peptide) both regulate metabolism, but only cortisol binds a receptor inside the cytosol. This difference exists because:`,
-            options: [`Cortisol is lipophilic and diffuses through the bilayer; insulin is hydrophilic and cannot`, `Insulin is degraded by cytosolic proteases before reaching a receptor`, `Cortisol is actively pumped into cells by ABC transporters`, `Steroid receptors have higher affinity than surface receptors`],
-            correctAnswer: 0,
+            options: [`Insulin is destroyed by cytosolic proteases first`, `Cortisol is pumped inward by ABC transporters actively`, `Steroid receptors simply have higher affinity`, `Cortisol is lipophilic and crosses the bilayer`],
+            correctAnswer: 3,
             explanation: `Steroids have high oil/water partition coefficients, so they cross the bilayer and bind intracellular (cytosolic or nuclear) receptors that act as transcription factors. Hydrophilic peptide hormones cannot cross and must signal through cell-surface receptors and second messengers. This structural logic — not receptor affinity — determines receptor location.`
           }
         ]
@@ -114,14 +114,14 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
         questions: [
           {
             question: `In a FRAP experiment, a membrane protein shows only 40% fluorescence recovery even after long times. The best interpretation is:`,
-            options: [`A substantial fraction of the protein population is immobilized, likely by cytoskeletal anchoring`, `The laser destroyed the membrane in the bleached region`, `The protein has been internalized by endocytosis`, `The fluorophore spontaneously regenerated`],
-            correctAnswer: 0,
+            options: [`The laser physically destroyed the membrane in the bleached spot`, `Much of the protein is immobilized by the cytoskeleton`, `The protein was internalized by endocytosis meanwhile`, `The fluorophore spontaneously regenerated over time`],
+            correctAnswer: 1,
             explanation: `The mobile fraction (here 40%) diffuses back into the bleached spot; the immobile fraction (60%) cannot, most often because it is tethered to the cytoskeleton or trapped in a domain. Photobleaching is irreversible, so recovery must come from lateral diffusion of unbleached neighbors — the whole basis of the assay.`
           },
           {
             question: `A cell line lacking flippase activity for phosphatidylserine would most likely:`,
-            options: [`Display PS on its outer leaflet and be engulfed by macrophages despite being healthy`, `Lose all membrane fluidity`, `Be unable to synthesize phospholipids`, `Have increased transverse (flip-flop) lipid movement`],
-            correctAnswer: 0,
+            options: [`Show far faster spontaneous flip-flop of lipids between leaflets`, `Lose membrane fluidity entirely at body temperature`, `Display PS on its outer leaflet and be eaten by macrophages`, `Be unable to synthesize phospholipids at all`],
+            correctAnswer: 2,
             explanation: `Flippases actively keep PS on the inner (cytosolic) leaflet. Without them, PS accumulates on the outer leaflet — the "eat me" signal normally displayed by apoptotic cells — so macrophages would engulf otherwise healthy cells. Flippase loss does not abolish fluidity or synthesis, and spontaneous flip-flop remains rare, not increased.`
           }
         ]

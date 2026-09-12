@@ -48,7 +48,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "The trial could not be fully double-blind primarily because:",
         "options": [
           "remission was assessed only by participant self-report",
-          "participants receiving CBT necessarily knew they were receiving psychotherapy",
+          "participants receiving CBT necessarily knew they were in therapy",
           "the placebo capsules looked different from the SSRI capsules",
           "the outcome raters were informed of each participant's arm assignment"
         ],
@@ -62,7 +62,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "increases statistical power by enlarging the analyzed sample",
           "removes the placebo response from the remission estimates",
           "guarantees each arm ends the trial with equal numbers of completers",
-          "preserves the benefits of randomization and prevents differential dropout from biasing the comparison"
+          "preserves randomization and prevents bias from differential dropout"
         ],
         "correctAnswer": 3,
         "explanation": "Randomization equates the arms only at baseline; if analysis is restricted to completers, and different kinds of people drop out of different arms (attrition ranged from 8 to 20 participants per arm here), the compared groups are no longer the randomized groups and the estimate is biased. Intent-to-treat keeps every randomized participant in their assigned arm, preserving comparability. It does not meaningfully change power relative to the randomized sample, does nothing to subtract placebo response (that is the placebo arm's job), and cannot equalize completion—dropouts still drop out; they are simply retained in the analysis.",
@@ -71,9 +71,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The SSRI used in this trial most directly produces its initial neurochemical effect by:",
         "options": [
-          "blocking presynaptic reuptake of serotonin, increasing serotonin availability in the synapse",
-          "blocking postsynaptic serotonin receptors",
-          "irreversibly inhibiting monoamine oxidase in the presynaptic terminal",
+          "blocking presynaptic reuptake of released serotonin",
+          "blocking postsynaptic serotonin receptors directly",
+          "irreversibly inhibiting presynaptic monoamine oxidase",
           "directly stimulating vesicular release of serotonin"
         ],
         "correctAnswer": 0,
@@ -85,8 +85,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "The SSRI was clearly superior to CBT as a monotherapy",
           "Neither monotherapy produced more remission than pill placebo",
-          "Combination treatment produced more remission than either monotherapy alone",
-          "Attrition was highest in the combination arm"
+          "Combination treatment beat each single monotherapy on remission",
+          "Attrition was highest in the combination-treatment arm"
         ],
         "correctAnswer": 2,
         "explanation": "Combination treatment reached 58% remission, exceeding both CBT alone (40%) and SSRI alone (41%), so the combination outperformed each monotherapy. The one-point difference between the SSRI (41%) and CBT (40%) is far too small to support a claim of clear superiority for the drug. Both monotherapies exceeded placebo (25%), contradicting the claim that neither beat placebo. Attrition was highest in the placebo arm (20 dropouts), not the combination arm (10).",
@@ -165,7 +165,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "Negative symptoms often persist despite effective D2 antagonist treatment",
           "The second-generation agent achieved clinical benefit at relatively low D2 occupancy",
           "Schizophrenia shows substantially higher concordance in monozygotic than dizygotic twins",
-          "Amphetamine, which increases synaptic dopamine, can induce paranoid psychosis in people without schizophrenia"
+          "Amphetamine, which raises synaptic dopamine, can induce psychosis in healthy people"
         ],
         "correctAnswer": 3,
         "explanation": "The hypothesis predicts that raising dopamine signaling should produce psychosis, and amphetamine-induced paranoid psychosis in previously nonpsychotic users is exactly that prediction borne out—converging with the passage's other pillar, that D2 antagonists relieve positive symptoms. The persistence of negative symptoms under D2 blockade and the second-generation agent's efficacy at low occupancy are findings that complicate the classical hypothesis rather than support it. Twin concordance establishes heritability but says nothing about which neurotransmitter system is involved.",
@@ -174,10 +174,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "According to Figure 1, raising the first-generation dose from 8 mg/day to 16 mg/day would most likely:",
         "options": [
-          "increase the risk of extrapyramidal symptoms while adding little antipsychotic benefit",
+          "raise extrapyramidal symptom risk with little added benefit",
           "roughly double the antipsychotic effect, because the dose doubles",
-          "improve negative symptoms by pushing occupancy higher",
-          "decrease occupancy as D2 receptors upregulate"
+          "improve negative symptoms by pushing occupancy still higher",
+          "decrease occupancy as D2 receptors upregulate in response"
         ],
         "correctAnswer": 0,
         "explanation": "At 8 mg/day occupancy is already 78%, well above the ~65% response threshold, so the therapeutic criterion is met; moving to 16 mg/day raises occupancy to 86%, crossing the ~80% level above which EPS become common. The result is more motor side-effect risk with minimal added benefit. Antipsychotic effect does not scale with dose once the response threshold is exceeded—the curve is flattening, and occupancy rises only 8 percentage points as dose doubles. The passage states negative symptoms did not improve and sometimes worsened at higher first-generation doses. The figure shows occupancy rising monotonically with dose, not falling.",
@@ -199,9 +199,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Based on the mesocortical refinement described in the passage, why would escalating doses of a D2 antagonist be expected to fail to improve—and possibly worsen—negative symptoms?",
         "options": [
           "The drugs increase dopamine release in the prefrontal cortex",
-          "Negative symptoms arise from serotonergic excess, which D2 antagonists do not address",
-          "At clinical doses the drugs occupy too few D2 receptors to affect any symptoms",
-          "Negative symptoms are linked to dopamine hypoactivity in mesocortical projections, a deficit that additional D2 blockade cannot correct and may deepen"
+          "Negative symptoms arise from serotonergic excess instead",
+          "At clinical doses the drugs occupy too few D2 receptors",
+          "Negative symptoms reflect hypoactivity in mesocortical projections"
         ],
         "correctAnswer": 3,
         "explanation": "If negative symptoms reflect too little dopaminergic signaling in prefrontal projections, then a drug whose action is to block dopamine receptors addresses the wrong direction of dysfunction—further antagonism can only leave the cortical deficit in place or aggravate it, matching the observation that negative symptoms sometimes worsened at higher doses. D2 antagonists do not raise prefrontal dopamine release. The refinement described in the passage is dopaminergic, not serotonergic. And the occupancy data contradict the idea that clinical doses barely engage receptors—occupancy exceeded 65% at moderate doses, which is precisely when positive symptoms respond.",
@@ -210,10 +210,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "In this PET paradigm, D2 receptor occupancy by the antipsychotic was inferred from:",
         "options": [
-          "an increase in [11C]raclopride binding relative to the drug-free baseline scan",
-          "a decrease in [11C]raclopride binding relative to the drug-free baseline scan, because receptors occupied by drug are unavailable to the tracer",
-          "the plasma concentration of the antipsychotic alone",
-          "participants' self-reported symptom change between scans"
+          "an increase in [11C]raclopride binding relative to the drug-free scan",
+          "a decrease in [11C]raclopride binding relative to the drug-free scan",
+          "the steady-state plasma concentration of the antipsychotic",
+          "participants' self-reported symptom change between the scans"
         ],
         "correctAnswer": 1,
         "explanation": "The drug and the radioligand compete for the same D2 binding sites, so the more receptors the antipsychotic occupies, the fewer remain available for raclopride and the lower the tracer signal falls relative to the drug-free scan—the binding reduction is the occupancy measure. An increase in tracer binding would imply receptors had become more available, the opposite of drug occupancy. Plasma drug level correlates only loosely with brain receptor engagement, which is why the imaging was done at all. Symptom self-report is a clinical outcome, not a receptor measurement.",
@@ -235,7 +235,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "an unconditioned stimulus",
           "an unconditioned response",
           "a conditioned response",
-          "a neutral stimulus that became a conditioned stimulus through pairing with the bite"
+          "a neutral stimulus"
         ],
         "correctAnswer": 3,
         "explanation": "Before conditioning, the dog elicited no fear—it was a neutral stimulus. Pairing with the bite (the unconditioned stimulus, which elicits pain and fear without any learning) transformed the dog into a conditioned stimulus that elicits fear on its own. The unconditioned stimulus in this episode is the bite itself, not the animal. The unconditioned response is the reflexive fear and pain during the attack, and the conditioned response is the learned fear to dogs afterward—both are responses, and the question asks about a stimulus.",
@@ -256,10 +256,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "According to two-factor theory as described in the passage, avoidance keeps the phobia from fading over time because it:",
         "options": [
-          "prevents exposure to the conditioned stimulus without the unconditioned stimulus, so the conditioned fear response never undergoes extinction",
+          "prevents the dog encounters without a bite that extinction requires",
           "intensifies the original unconditioned stimulus with each avoided encounter",
-          "causes the fear to generalize to unrelated animals",
-          "produces spontaneous recovery of the fear response"
+          "causes the fear to generalize to other, unrelated animals",
+          "produces spontaneous recovery of the extinguished fear"
         ],
         "correctAnswer": 0,
         "explanation": "Extinction of a conditioned fear requires repeated encounters with the conditioned stimulus (dogs) in the absence of the unconditioned stimulus (being bitten), so the learned association can weaken. Avoidance guarantees those disconfirming encounters never happen, freezing the fear in place—this is the second factor (operant) protecting the first (classical). Avoidance cannot alter the original unconditioned stimulus, which lies in the past. Generalization may occur in phobias but is not the mechanism two-factor theory identifies for maintenance. Spontaneous recovery is the reappearance of an extinguished response after a rest period, which presupposes extinction has occurred—the very thing avoidance prevents.",
@@ -269,9 +269,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Systematic desensitization differs from flooding chiefly in that desensitization:",
         "options": [
           "exposes the patient immediately to the most feared situation",
-          "relies on punishing fearful responses",
-          "pairs a relaxation response incompatible with fear against a graded hierarchy of feared stimuli, advancing only when each step is tolerated",
-          "avoids any contact with the feared stimulus"
+          "relies on punishing fearful responses during exposure",
+          "pairs a relaxation response with a graded hierarchy of stimuli",
+          "avoids any direct contact with the feared stimulus"
         ],
         "correctAnswer": 2,
         "explanation": "Desensitization is counterconditioning: the patient learns progressive relaxation, then confronts feared stimuli in graded steps while staying relaxed, so an incompatible response gradually replaces fear at each level of the hierarchy. Immediate, prolonged exposure to the most feared situation describes flooding, the comparison treatment. Neither therapy uses punishment. And both are exposure therapies—desensitization delivers contact with the feared stimulus gradually, not never.",
@@ -280,9 +280,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The completers-only comparison showed equal improvement in the two arms, but 30% of flooding patients dropped out versus 7% of desensitization patients. Why does this attrition pattern threaten the conclusion that the treatments are equally effective?",
         "options": [
-          "Differential dropout means the flooding completers may be a self-selected, more distress-tolerant subgroup, so the compared groups are no longer equivalent despite randomization",
+          "Flooding completers may be a self-selected, distress-tolerant subgroup",
           "The behavioral approach test is incapable of detecting improvement",
-          "Random assignment guarantees that the completer groups remained comparable, so any difference must be real",
+          "Random assignment guarantees the completer groups stayed comparable",
           "Higher dropout increases the statistical power of the flooding arm"
         ],
         "correctAnswer": 0,
@@ -304,8 +304,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "adrenal exhaustion that has abolished cortisol production",
           "no involvement of the hypothalamic-pituitary-adrenal axis in PTSD",
-          "enhanced negative-feedback sensitivity of the hypothalamic-pituitary-adrenal axis",
-          "chronically elevated cortisol of the kind produced by ongoing unremitting stress"
+          "heightened glucocorticoid negative-feedback sensitivity",
+          "chronically elevated cortisol from ongoing unremitting stress"
         ],
         "correctAnswer": 2,
         "explanation": "Exaggerated suppression by a low dexamethasone dose means glucocorticoid feedback receptors are hyperresponsive: the axis shuts itself down more readily than normal, which also explains the low basal cortisol. Cortisol production is reduced, not abolished—patients still show measurable morning levels, so adrenal failure does not fit. The axis is clearly involved, just in an unexpected direction. Chronically elevated cortisol is the classic profile of ongoing stress and of major depression, and it is precisely the expectation this PTSD finding contradicts—which is what made the result surprising.",
@@ -315,9 +315,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "A patient experiences a full flashback triggered by an isolated cue—a stranger's cologne—far from any context resembling the assault. Given the memory framework in the passage, this is best explained by:",
         "options": [
           "hippocampal overactivity binding the trauma memory too tightly to its original context",
-          "amygdala damage preventing normal fear expression",
-          "cerebellar mediation of procedural trauma memories",
-          "a strongly consolidated amygdala-dependent emotional memory paired with weak hippocampus-dependent contextual encoding, so cues evoke intense fear untethered from time and place"
+          "amygdala damage that prevents the normal expression of fear",
+          "cerebellar mediation of procedural memories for the trauma",
+          "a strongly consolidated amygdala memory with weak hippocampal contextual encoding"
         ],
         "correctAnswer": 3,
         "explanation": "The passage's account is an imbalance: stress hormones and noradrenergic signaling overconsolidate the amygdala-dependent emotional core, while contextual encoding by the (smaller-volume) hippocampus is comparatively weak. A sensory fragment can then ignite the full fear response without the contextual frame that would mark the memory as past and elsewhere—hence a flashback in a safe setting. Hippocampal overactivity binding memory tightly to context predicts the opposite: fear confined to assault-like settings. The PTSD group showed amygdala hyperactivation, not damage, and fear expression is intact to a fault. The cerebellum and procedural memory play no role in the framework described.",
@@ -327,7 +327,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "The process by which a reactivated memory returns to a labile state and must be restabilized is called:",
         "options": [
           "long-term potentiation",
-          "reconsolidation",
+          "memory reconsolidation",
           "systems consolidation",
           "proactive interference"
         ],
@@ -338,10 +338,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "What was the primary purpose of including the group that received propranolol WITHOUT recounting the trauma?",
         "options": [
-          "To test whether the drug weakens the fear memory only when the memory has been reactivated into a labile state",
+          "To test whether the drug works only after the memory is reactivated",
           "To establish baseline heart rate in trauma-naive healthy participants",
-          "To enlarge the sample size of the treatment arm",
-          "To keep participants blind to their group assignment"
+          "To enlarge the sample size of the active treatment arm",
+          "To keep participants blind to their own group assignment"
         ],
         "correctAnswer": 0,
         "explanation": "Reconsolidation theory makes a specific prediction: propranolol can blunt noradrenergic restabilization only while the memory is labile, so the drug should work after reactivation and do nothing without it. The no-reactivation group tests exactly this, and its null result—no change in reactivity—rules out the alternative that propranolol simply dampens physiology or weakens memories whenever it is taken. All participants in this experiment were assault survivors with PTSD, so no group provides trauma-naive baselines. The group is a separate control condition, not padding for the treatment arm, and blinding was handled by the placebo comparison, not by this condition.",
@@ -415,8 +415,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "substantia nigra to the dorsal striatum",
           "ventral tegmental area to the nucleus accumbens",
-          "raphe nuclei to the prefrontal cortex",
-          "locus coeruleus to the amygdala"
+          "raphe nuclei to the medial prefrontal cortex",
+          "locus coeruleus to the amygdala and hippocampus"
         ],
         "correctAnswer": 1,
         "explanation": "The mesolimbic pathway—dopaminergic neurons of the ventral tegmental area projecting to the nucleus accumbens—is the circuit on which drugs of abuse converge, and it is the projection the passage names. The nigrostriatal projection from substantia nigra to dorsal striatum serves motor control (and habit formation), not the primary reward signal. The raphe nuclei are serotonergic and the locus coeruleus is noradrenergic; neither is the dopaminergic reward projection.",
@@ -437,8 +437,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "By admission, most patients used cocaine 'less to feel good than to escape feeling bad.' In operant terms, drug taking at this late stage is maintained primarily by:",
         "options": [
-          "negative reinforcement, because taking the drug removes the aversive withdrawal state",
-          "positive punishment, because withdrawal is aversive",
+          "negative reinforcement, removing the aversive withdrawal state",
+          "positive punishment, because withdrawal feels aversive",
           "positive reinforcement, because taking the drug adds euphoria",
           "extinction, because the drug no longer produces any effect"
         ],
@@ -449,8 +449,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Craving and skin conductance responses elicited by paraphernalia images, but not by neutral images, most directly reflect:",
         "options": [
-          "habituation to the drug-taking context",
-          "classical conditioning, in which drug-associated cues have become conditioned stimuli that elicit conditioned craving and physiological responses",
+          "habituation to the drug-taking context over time",
+          "classical conditioning, with drug cues as conditioned stimuli",
           "operant shaping of successive approximations to drug seeking",
           "observational learning from other patients on the unit"
         ],
@@ -463,8 +463,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "Relapse vulnerability is highest in the first 24 hours of abstinence and declines steadily thereafter",
           "Neutral everyday stimuli come to elicit progressively greater craving over abstinence",
-          "Cue-induced craving is fully extinguished by day 60",
-          "Vulnerability to cue-triggered relapse can grow during early abstinence, so treatment and cue-management support should extend well beyond detoxification"
+          "Cue-induced craving is fully extinguished by day 60 of abstinence",
+          "Relapse vulnerability can grow during early abstinence, so support should outlast detoxification"
         ],
         "correctAnswer": 3,
         "explanation": "Cue-induced craving rose from 3.2 on day 1 to a peak of 6.4 around day 30—the incubation pattern—meaning a patient discharged after detoxification re-enters a cue-rich world at a moment when reactivity is climbing, not fading; sustained treatment through and beyond that window is the supported implication. The data directly contradict a steadily declining risk from day 1, since day-1 craving was the lowest measured. Neutral-cue craving stayed near floor at every visit, so generalized craving growth is not supported. And day-60 craving (5.1) remained well above the day-1 level, so extinction was far from complete.",
@@ -534,8 +534,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "Normative social influence",
           "Informational social influence",
-          "Deindividuation",
-          "Groupthink"
+          "Deindividuation in groups",
+          "Groupthink in cohesive groups"
         ],
         "correctAnswer": 0,
         "explanation": "Normative influence is conformity to gain acceptance or avoid standing out; it depends on the group seeing one's response, so removing surveillance (private typing) should—and did—collapse conformity. Informational influence, going along because one believes the group is correct, would persist in private, yet private conformity was low (9%)—well above the sub-1% control error rate, but far closer to it than to the 33% public figure—so belief in the group's accuracy accounts for little of the public effect. Deindividuation involves loss of self-awareness in anonymous crowds and would, if anything, predict more norm violation when anonymous, not the observed accuracy. Groupthink describes flawed consensus-seeking in cohesive decision-making groups deliberating together, not individual perceptual judgments.",
@@ -545,7 +545,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "In the unanimity condition, a single confederate who gave a DIFFERENT wrong answer still cut conformity from 33% to 6%. This result is best explained by the idea that:",
         "options": [
           "The dissenter provided participants with the correct answer to copy",
-          "Any break in unanimity relieves the normative pressure to match the majority, even if the dissenter is also wrong",
+          "Any break in unanimity relieves the pressure to match the majority",
           "Smaller majorities always produce less conformity than larger ones",
           "The dissenter increased task ambiguity, strengthening informational influence"
         ],
@@ -556,10 +556,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Why was it methodologically important that the line-judgment task was unambiguous, with control participants erring on fewer than 1% of trials alone?",
         "options": [
-          "It guaranteed that all participants had equal visual acuity",
-          "It made the study a true double-blind experiment",
+          "It guaranteed that all participants had equally good visual acuity",
+          "It turned the study into a true double-blind experiment",
           "It increased statistical power by reducing the total number of trials needed",
-          "It allowed conforming responses to be attributed to social pressure rather than genuine uncertainty about the answer"
+          "It let conformity be attributed to social pressure, not uncertainty"
         ],
         "correctAnswer": 3,
         "explanation": "Because participants could plainly see the correct answer, agreement with an obviously wrong majority operationalizes yielding to social pressure; with an ambiguous task, matching the group could simply reflect reasonable reliance on others' judgments, confounding normative and informational processes. The design does not measure or equate visual acuity across individuals. The experimenters and confederates knew the hypothesis, so nothing about task clarity creates blinding. Task difficulty is unrelated to how many trials are needed for power.",
@@ -568,10 +568,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Suppose the researchers reran the study using a genuinely ambiguous task, such as estimating how far a point of light appears to move in a dark room. Based on prior research, private-response conformity would most likely:",
         "options": [
-          "Increase substantially, because participants would treat others' answers as useful information",
-          "Decrease, because ambiguity makes people distrust the group",
+          "Increase, because participants would treat others' answers as information",
+          "Decrease, because ambiguity would make people distrust the group",
           "Stay near zero, because private responding eliminates all social influence",
-          "Match public conformity exactly at 34%"
+          "Match public conformity exactly, at the same 34%"
         ],
         "correctAnswer": 0,
         "explanation": "With no objective anchor, people use others' estimates as evidence about reality—informational influence—and such convergence persists in private and even when later responding alone, as in classic autokinetic-norm studies. Ambiguity increases rather than decreases reliance on the group, so distrust is the wrong prediction. Private responding removes normative pressure but not informational influence, so conformity would not remain near zero. There is no basis for expecting private conformity to equal any specific public figure; the two modes reflect different mechanisms.",
@@ -580,9 +580,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A participant who repeatedly announced the majority's wrong answer aloud but reported in the interview that she never doubted her own perception was exhibiting:",
         "options": [
-          "Internalization of the group norm",
-          "Obedience to authority",
-          "Compliance—public agreement without private acceptance",
+          "Internalization of the group's norm",
+          "Obedience to an authority figure",
+          "Compliance without private acceptance",
           "Identification with the experimenter"
         ],
         "correctAnswer": 2,
@@ -638,7 +638,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "Self-serving bias",
           "Stereotype threat",
           "Out-group homogeneity",
-          "A teacher-expectancy (Pygmalion) effect"
+          "A teacher-expectancy effect"
         ],
         "correctAnswer": 1,
         "explanation": "Stereotype threat is the situational risk of confirming a negative stereotype about one's group, which impairs performance precisely when the stereotype is made relevant—here, by framing the test as diagnostic and gender-relevant. Self-serving bias concerns attributing one's successes internally and failures externally, an attributional pattern, not a performance effect. Out-group homogeneity is the perception that members of other groups are all alike. A teacher-expectancy effect requires an evaluator whose expectations change how they treat students; here the instructions were standardized and no evaluator interacted differentially with participants.",
@@ -659,10 +659,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Within the researchers' resource-depletion account, the values-affirmation exercise most plausibly improved women's scores by:",
         "options": [
-          "Buffering self-worth so that fewer executive resources were spent monitoring for failure and suppressing doubt",
-          "Teaching mathematical content relevant to the test items",
+          "Buffering self-worth so fewer resources went to self-monitoring",
+          "Teaching mathematical content directly relevant to the items",
           "Making participants unaware that gender differences were being studied",
-          "Increasing men's scores, which narrowed the gender gap"
+          "Raising men's scores, which narrowed the gender gap on the test"
         ],
         "correctAnswer": 0,
         "explanation": "Affirming an unrelated personal value secures a sense of global self-integrity, so a poor test outcome poses less threat to the self; with less vigilance and suppression, working memory is freed for the math itself—consistent with the mediation evidence. The writing task contained no mathematics, so content tutoring cannot explain the gain. Affirmation participants heard the identical diagnostic, gender-relevant instructions, so the threat information was not concealed. The figure shows men's scores were essentially flat across conditions; the gap closed because women's scores rose.",
@@ -671,10 +671,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Matching the gender groups on prior SAT-Math scores before random assignment primarily strengthens which inference?",
         "options": [
-          "That the test had high internal-consistency reliability",
-          "That the sample was representative of all undergraduates",
-          "That the gender gap observed under threat reflects the situational framing rather than preexisting ability differences between the gender groups",
-          "That working memory causes mathematical ability"
+          "That the test itself had high internal-consistency reliability",
+          "That the sample was representative of undergraduates generally",
+          "That the gap under threat reflects framing, not prior ability",
+          "That working memory causes stable mathematical ability"
         ],
         "correctAnswer": 2,
         "explanation": "Random assignment equates the condition groups, but only matching the gender groups on prior achievement removes preexisting ability differences between women and men as an explanation for the gender gap under threat—so that gap can be attributed to the situational framing, an internal-validity safeguard for the between-gender comparison. Reliability concerns the consistency of the test's items with one another and is unaffected by how participants were selected. Matching on ability does nothing to make the convenience sample representative of a broader population; that is an external-validity issue. The design tests whether threat affects performance through working memory in the moment, not whether working memory causes stable mathematical ability.",
@@ -684,9 +684,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Which feature of the data pattern in Figure 1 most strengthens the conclusion that the instructions specifically affected the group targeted by the stereotype, rather than making the test harder for everyone?",
         "options": [
           "Women's scores were highest in the reduced-threat condition",
-          "Men's scores remained essentially unchanged across all three conditions while women's scores varied",
-          "The affirmation condition included a writing exercise",
-          "All participants completed the same 25 items"
+          "Men's scores were unchanged across all three conditions",
+          "The affirmation condition included a ten-minute writing exercise",
+          "All participants completed the same 25 test items"
         ],
         "correctAnswer": 1,
         "explanation": "If the diagnostic framing simply raised difficulty or evaluation pressure generally, men's scores should also have dropped in the threat condition; their flat profile alongside women's condition-sensitive scores localizes the effect to the stereotyped group, which is the signature interaction of stereotype threat. Women scoring highest under reduced threat shows the manipulation mattered but, by itself, cannot rule out an effect on everyone. The writing exercise and the constant item set are design features, not data patterns, and neither speaks to whether the effect was group-specific.",
@@ -707,9 +707,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "A participant who learned about a job opening from a fellow member of a neighborhood civic association she sees only at monthly meetings obtained that resource primarily through:",
         "options": [
           "Bonding social capital, because the association meets in her neighborhood",
-          "Cultural capital, because job information is a form of knowledge",
-          "Social cohesion, because the association holds regular meetings",
-          "Bridging social capital, because a weak tie connected her to information circulating outside her close network"
+          "Cultural capital, because job information is a valued form of knowledge",
+          "Social cohesion, because the association holds regular monthly meetings",
+          "Bridging social capital, because a weak tie linked her to outside information"
         ],
         "correctAnswer": 3,
         "explanation": "The tie is a casual acquaintance who links her to a different social circle, and novel information such as job leads characteristically travels through exactly these weak, group-spanning connections—the defining function of bridging capital. Bonding capital involves strong ties among close, similar others, and geographic proximity of the meetings does not make a monthly acquaintance a close confidant. Cultural capital refers to internalized knowledge, tastes, and credentials that signal status, not to resources obtained through a network contact. Social cohesion describes solidarity and trust at the level of a whole group, not an individual's access to a specific resource through a tie.",
@@ -719,8 +719,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Socioeconomic status was adjusted for in Model 2 because it is a potential confounder. For SES to confound the tie–mortality association, which condition must hold?",
         "options": [
           "SES must be affected by network ties and then affect mortality",
-          "SES must be measured with perfect reliability",
-          "SES must be associated with network ties and independently associated with mortality, without lying on the causal path between them",
+          "SES must be measured with perfect reliability in the cohort",
+          "SES must predict both ties and mortality without mediating them",
           "SES must differ between the top and bottom tertiles of age"
         ],
         "correctAnswer": 2,
@@ -730,10 +730,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Excluding deaths that occurred within the first two years of follow-up primarily addresses which threat to causal inference?",
         "options": [
-          "Reverse causation, in which preexisting serious illness both shrinks networks and causes early death",
+          "Reverse causation, with preexisting illness shrinking networks",
           "Selection bias arising from recruiting a community cohort",
           "Recall bias in participants' reports of their confidants",
-          "Confounding by education and income"
+          "Confounding by baseline education, income, and occupation"
         ],
         "correctAnswer": 0,
         "explanation": "People who were already gravely ill at baseline would have both withdrawn from social life and died soon after enrollment, manufacturing an isolation–mortality association that runs from health to networks; removing early deaths trims exactly those participants, and adjusting for baseline health does the same work. How the cohort was recruited is unchanged by dropping early deaths, so recruitment-related selection is not the target. Counting current confidants at baseline is not a memory task over long intervals, and the exclusion would not fix misremembering anyway. Socioeconomic confounding was handled by direct adjustment in Model 2, not by the exclusion.",
@@ -743,7 +743,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Which conclusion is best supported by the pattern of hazard ratios across the three models in Table 1?",
         "options": [
           "Adjustment strengthened both associations, indicating suppression",
-          "After full adjustment, bridging ties remained associated with lower mortality, while the remaining bonding-tie association was compatible with chance",
+          "Fully adjusted, only the bridging-tie interval excluded a hazard ratio of 1",
           "Bonding ties were more strongly protective than bridging ties in every model",
           "Fully adjusted, both tie types were associated with higher mortality"
         ],
@@ -755,9 +755,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "The exploratory finding that ties predicted survival more strongly among high-stress participants than low-stress participants is most consistent with which account of how social networks affect health?",
         "options": [
           "Networks affect health only through material resources such as money",
-          "Networks harm health by spreading infectious disease",
-          "Stress and social ties are unrelated constructs",
-          "A stress-buffering account, in which support from ties matters most when people face high demands"
+          "Networks harm health mainly by spreading infectious disease",
+          "Stress and social ties are empirically unrelated constructs",
+          "A stress-buffering account, in which support matters most under stress"
         ],
         "correctAnswer": 3,
         "explanation": "If social ties protect health chiefly by cushioning the physiological and psychological impact of stressors, their benefit should be concentrated among people who have stressors to buffer—precisely the observed interaction, with stress moderating the tie–survival association. A purely material-resources pathway would predict roughly uniform benefit regardless of stress levels. Disease spread through contact would predict worse outcomes for well-connected people, the opposite of every hazard ratio in the table. The very existence of a stress-by-ties interaction demonstrates the two constructs are empirically related, not independent.",
@@ -823,9 +823,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "According to the functionalist conception of the sick role, a child diagnosed with ADHD is granted certain exemptions but, in exchange, is expected to:",
         "options": [
           "Be held fully responsible for having developed the condition",
-          "Withdraw permanently from student obligations",
+          "Withdraw permanently from ordinary student obligations",
           "Cooperate with treatment and work toward managing the condition",
-          "Conceal the diagnosis from teachers and classmates"
+          "Conceal the diagnosis from teachers and from classmates"
         ],
         "correctAnswer": 2,
         "explanation": "The sick role pairs two rights—exemption from some normal role obligations and freedom from blame for the condition—with two duties: regarding the sick state as undesirable and seeking and cooperating with competent help to get well. Holding the child responsible for causing the condition contradicts the blamelessness the role confers. Permanent withdrawal violates the expectation that the exemption is temporary and conditional on trying to recover. Concealment is no part of the role; legitimacy in the functionalist account comes from openly occupying the role under medical supervision.",
@@ -835,9 +835,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Which observation would a conflict theorist cite as MOST supportive of their interpretation of rising ADHD diagnosis?",
         "options": [
           "Diagnosis rates are similar across all school districts regardless of funding",
-          "The sick role helps schools maintain orderly classrooms",
-          "Teachers refer children out of genuine concern for their learning",
-          "Pharmaceutical firms spent heavily marketing stimulants to physicians and parent groups during the same period diagnoses rose"
+          "The sick role helps schools maintain orderly, functioning classrooms",
+          "Teachers refer children out of sincere concern for their learning progress",
+          "Stimulant marketing to doctors and parents rose as diagnoses rose"
         ],
         "correctAnswer": 3,
         "explanation": "Conflict theory locates the expansion of diagnostic categories in the interests of powerful actors who profit from defining behavior as illness, so industry marketing tracking the rise in diagnoses is its signature evidence. Uniform rates across rich and poor districts would, if anything, weaken claims that resources and power shape who gets labeled. Framing diagnosis as serving classroom order is a functionalist argument about social control and system stability. Attributing referrals to teachers' benevolent concern describes individual motives and supports neither exploitation nor profit-driven category expansion.",
@@ -846,10 +846,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "After a student receives an ADHD diagnosis, his teacher begins attributing ordinary fidgeting to the disorder and seats him apart during tests; the student starts describing himself as \"a kid with ADHD\" who cannot sit still. An interactionist would analyze this sequence as an instance of:",
         "options": [
-          "Anomie produced by weakened social norms",
-          "Labeling, in which the diagnosis reorganizes others' interpretations and the child's self-concept",
-          "Role strain within the student role",
-          "Social facilitation of classroom behavior"
+          "Anomie produced by weakened social norms at school",
+          "Labeling that reshapes interpretation and identity",
+          "Role strain within the demands of the student role",
+          "Social facilitation of the child's classroom behavior"
         ],
         "correctAnswer": 1,
         "explanation": "Labeling theory, the interactionist account of deviance and illness, holds that a label changes how audiences read subsequent behavior and can be internalized into identity—exactly the teacher's reinterpretation of ordinary fidgeting and the child's new self-description, a path toward secondary deviance and a master status. Anomie is normlessness arising when society's norms lose grip, not a labeling dynamic. Role strain involves competing demands within a single role, such as a student juggling homework and exams. Social facilitation concerns performance changes due to the mere presence of others, irrelevant to interpretation of a diagnosis.",
@@ -858,10 +858,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The relative-age gradient in Figure 1—youngest-third students diagnosed at 10.9% versus 6.8% for oldest-third classmates—most directly supports which conclusion?",
         "options": [
-          "Some diagnoses reflect developmentally normal immaturity judged against older classmates, indicating that social context shapes who gets labeled",
+          "Some diagnoses reflect normal immaturity judged against older classmates",
           "Younger children in a grade have a higher underlying neurological prevalence of ADHD",
           "Stimulant medication causes children to be born later in the year",
-          "Teachers are unable to observe classroom behavior accurately"
+          "Teachers are generally unable to observe classroom behavior accurately"
         ],
         "correctAnswer": 0,
         "explanation": "Relative age within a grade is set by an arbitrary enrollment cutoff, not by neurobiology, so a diagnosis gradient across relative-age thirds implies that being compared with older, more mature classmates raises a child's chance of being labeled—diagnosis depends partly on social comparison context. A true difference in underlying prevalence by birth-month position within a grade is biologically implausible because all thirds come from the same birth cohorts. The causal arrow from medication to birth timing is temporally impossible. The data show systematic, context-dependent judgment, not a general inability of teachers to observe behavior.",
@@ -870,10 +870,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A colleague argues that the 2000–2020 rise in diagnosed ADHD demonstrates that the true prevalence of the underlying condition increased. Which alternative explanation must be ruled out before accepting this claim?",
         "options": [
-          "Regression toward the mean in test scores",
-          "Random measurement error, which always inflates trends",
-          "Increased detection due to broadened diagnostic criteria, greater screening, and more referral pathways",
-          "A placebo effect of stimulant medication"
+          "Regression toward the mean in repeated test scores",
+          "Random measurement error, which would inflate any trend",
+          "Increased detection from broader criteria and more screening",
+          "A placebo response to stimulant medication in children"
         ],
         "correctAnswer": 2,
         "explanation": "Diagnosed prevalence is a product of both the underlying condition and the surveillance system that finds it; expanded criteria, routine screening, and teacher-initiated referral can raise recorded rates with no change in the true rate, so this detection artifact must be excluded before inferring a real increase. Regression toward the mean describes extreme scores drifting toward the average on retest and cannot generate a two-decade population trend. Random error adds noise but does not systematically inflate a trend in one direction. Placebo effects concern symptom response to inert treatment and have no bearing on how many children receive a diagnosis.",
@@ -940,10 +940,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A metropolitan area in the study has a Black-White index of dissimilarity of 0.74. This value indicates that:",
         "options": [
-          "74% of the area's residents are Black",
-          "About 74% of one group would need to move to a different neighborhood for the two groups to be evenly distributed",
+          "74% of the metropolitan area's residents are Black",
+          "About 74% of one group would have to move for even distribution",
           "Black residents' incomes average 74% of White residents' incomes",
-          "74% of neighborhoods contain no Black residents at all"
+          "74% of the area's neighborhoods contain no Black residents"
         ],
         "correctAnswer": 1,
         "explanation": "The index of dissimilarity measures evenness: its value is the share of either group that would have to relocate across neighborhoods to make every neighborhood match the metropolitan area's overall composition. It says nothing about the overall size of either group, so it is not a population percentage. It is computed purely from residential distributions, not from earnings, so income ratios are outside its scope. It also does not count all-White neighborhoods; an area could score 0.74 with every neighborhood containing some members of both groups, provided the proportions are uneven.",
@@ -952,10 +952,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Highways and industrial zones were concentrated near historically redlined neighborhoods decades ago, and current lending and zoning practices perpetuate the resulting exposure differences without any individual decision-maker intending racial harm. This pattern best exemplifies:",
         "options": [
-          "Individual discrimination by present-day loan officers",
-          "Ethnocentrism among zoning officials",
-          "Self-segregation reflecting residential preferences",
-          "Institutional discrimination embedded in the routine operation of housing and land-use systems"
+          "Individual discrimination by today's loan officers and zoning staff",
+          "Ethnocentrism among the zoning and highway officials involved",
+          "Self-segregation reflecting freely chosen residential preferences",
+          "Institutional discrimination built into housing and land-use systems"
         ],
         "correctAnswer": 3,
         "explanation": "Institutional discrimination consists of unequal outcomes produced by the normal, ongoing functioning of organizations and policies—here, siting and lending structures that channel environmental burdens onto the same neighborhoods regardless of any actor's current intent. Individual discrimination requires biased acts by particular persons, which the passage explicitly sets aside. Ethnocentrism is judging other cultures by the standards of one's own, an attitude, not a siting mechanism. A preference-based self-segregation account cannot explain why hazardous land uses—not merely group clustering—were concentrated in specific neighborhoods by historical policy.",
@@ -976,10 +976,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A journalist reads the study and writes that any individual Black child living in a metro area with a dissimilarity index of 0.81 has an asthma ED visit rate of 46 per 1,000. The main problem with this claim is:",
         "options": [
-          "Attrition bias, because children left the cohort over time",
-          "Publication bias, because null results go unpublished",
-          "The ecological fallacy: an area-level association is being applied to individuals, whose exposures within the metro area vary widely",
-          "The Hawthorne effect, because families knew they were studied"
+          "Attrition bias, because children left the cohort over the years",
+          "Publication bias, because null results tend to go unpublished",
+          "The ecological fallacy: an area-level rate applied to one child",
+          "The Hawthorne effect, because families knew they were being studied"
         ],
         "correctAnswer": 2,
         "explanation": "The unit of analysis was the metropolitan area, so the 46 per 1,000 figure is an area-wide average; within that area, individual children's neighborhood exposures and risks vary enormously, and inferring an individual's risk from a group-level statistic is the ecological fallacy—the exact caution the authors raised. Attrition bias concerns differential dropout from longitudinal follow-up, but the claim's flaw is present even with complete data. Publication bias distorts literatures across many studies, not the interpretation of one study's numbers. The Hawthorne effect involves people changing behavior because they are observed, and administrative ED and census data involve no such reactivity.",
@@ -991,7 +991,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "Segregation is associated with equal increases in asthma burden for both groups",
           "White children's asthma rates decline steeply as segregation rises",
           "Asthma ED rates for Black children are unrelated to the dissimilarity index",
-          "The Black-White gap in asthma ED rates widens as segregation increases, from about 6 per 1,000 in the least segregated metros to about 31 per 1,000 in the most segregated"
+          "The Black-White gap in asthma ED rates widens as segregation increases"
         ],
         "correctAnswer": 3,
         "explanation": "Black children's rates climb from 18 to 46 per 1,000 across the dissimilarity range while White children's rates stay near 12 to 15, so the between-group gap grows from roughly 6 to roughly 31 per 1,000—segregation tracks a widening disparity borne by the segregated group. An equal increase for both groups is contradicted by the nearly flat White series. That series is flat-to-slightly-rising, not steeply declining. And the strong upward gradient in the Black-children series across every metro directly contradicts any claim of no relationship with the index.",
@@ -1079,10 +1079,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which feature of the design most directly supports the claim that the verb wording CAUSED the difference in broken-glass reports?",
         "options": [
-          "The large overall sample size",
-          "The one-week retention interval",
-          "The use of a 0-100 confidence scale",
-          "Random assignment of participants to wording conditions"
+          "The large overall sample size of 210",
+          "The one-week delay before the memory test",
+          "The use of a 0-100 confidence rating scale",
+          "Random assignment to wording conditions"
         ],
         "correctAnswer": 3,
         "explanation": "Random assignment equates the groups, in expectation, on all pre-existing characteristics (memory ability, suggestibility, attention), so a difference in false reports can be attributed to the manipulated wording rather than to pre-existing group differences—the core requirement for causal inference. A large sample improves precision but cannot by itself rule out confounding. The one-week delay is a constant shared by all conditions and so cannot explain a between-group difference. The confidence scale measures a separate dependent variable and bears on calibration, not causation.",
@@ -1094,7 +1094,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "Proactive interference",
           "Anterograde amnesia",
           "Retroactive interference",
-          "Repression"
+          "Repression of the memory"
         ],
         "correctAnswer": 2,
         "explanation": "In retroactive interference, newer information disrupts memory for older information—the direction operating here, where the post-event verb and narrative degraded the original trace of the video. Proactive interference runs the opposite direction, with older learning impairing newer learning. Anterograde amnesia is an inability to form new long-term memories after brain injury; these participants formed new memories readily (that was the problem). Repression is a psychodynamic notion of motivated forgetting of threatening material, not distortion by neutral post-event details.",
@@ -1163,9 +1163,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "The decline in grammatical accuracy with later first exposure, despite all groups having 20+ years of daily ASL use, most directly supports which conclusion?",
         "options": [
           "Language is acquired entirely through operant reinforcement of correct forms",
-          "There is a sensitive period during which grammatical systems are acquired most fully",
+          "There is a sensitive period for acquiring grammatical systems",
           "Vocabulary and grammar are acquired by identical mechanisms",
-          "ASL is not a fully grammatical natural language"
+          "ASL is not a fully grammatical natural language after all"
         ],
         "correctAnswer": 1,
         "explanation": "Because total experience is matched (everyone had decades of use), the remaining systematic difference is when acquisition began—and starting later produced permanently lower grammatical attainment, the signature of a sensitive (critical) period. A pure reinforcement account predicts that 20 years of practice and feedback should erase early differences, which it did not. The claim that vocabulary and grammar share identical mechanisms is contradicted by the dissociation: vocabulary was spared while grammar declined. The full grammatical status of ASL is well established and is presupposed by the grammaticality task, not undermined by it.",
@@ -1175,9 +1175,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Deaf infants exposed to sign from birth produce manual babbling on the same timetable as vocal babbling in hearing infants. This finding best supports the claim that:",
         "options": [
           "Babbling requires auditory feedback from the infant's own voice",
-          "Deaf infants skip the pre-linguistic stages of development",
-          "Babbling is simple imitation of adult speech sounds",
-          "Babbling reflects an amodal language capacity rather than merely vocal-motor practice"
+          "Deaf infants skip the pre-linguistic stages of development entirely",
+          "Babbling is simple imitation of the adult speech sounds heard",
+          "Babbling reflects an amodal language capacity, not vocal practice"
         ],
         "correctAnswer": 3,
         "explanation": "If babbling emerges in the manual modality, on the normal schedule, in infants who cannot hear, then the stage is driven by a language capacity indifferent to modality rather than by practicing speech sounds. The auditory-feedback account is directly refuted: these infants babble without hearing themselves. Far from skipping pre-linguistic stages, the deaf infants pass through them in sign. The imitation account fails because manual babbling is not a copy of speech sounds at all, and babbling in hearing infants includes sounds absent from the ambient language.",
@@ -1186,10 +1186,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "A hearing three-year-old who says \"goed\" and \"foots\" is best understood as demonstrating that the child:",
         "options": [
-          "Is overapplying a grammatical rule that no adult explicitly taught or modeled",
+          "Is overapplying a grammatical rule no adult ever modeled",
           "Is imitating errors commonly made by the adults around them",
-          "Has a clinically significant language delay",
-          "Lacks a sensitive period for language"
+          "Has a clinically significant expressive language delay",
+          "Lacks a sensitive period for language altogether"
         ],
         "correctAnswer": 0,
         "explanation": "Overregularization errors show the child has extracted the productive past-tense and plural rules (add -ed, add -s) and is applying them even to irregular forms—rule use, since adults say \"went\" and \"feet\" and never model \"goed.\" The imitation account is untenable for exactly that reason: there is no adult model producing these forms. Overregularization is a normal, expected stage, not a delay; it typically appears after a period of correct irregular use. The errors say nothing against a sensitive period; they are evidence about the mechanism of acquisition, not its timing.",
@@ -1198,9 +1198,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "The researchers deliberately recruited only adults with at least 20 years of ASL experience. The primary methodological purpose of this criterion was to:",
         "options": [
-          "Increase the total sample size",
-          "Permit random assignment to exposure ages",
-          "Hold amount of language experience roughly constant, isolating age of first exposure as the variable of interest",
+          "Increase the total size of the recruited sample",
+          "Permit random assignment to age-of-exposure groups",
+          "Hold language experience roughly constant across groups",
           "Eliminate the need for a native-signer comparison group"
         ],
         "correctAnswer": 2,
@@ -1211,7 +1211,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Late learners' preserved vocabulary alongside impaired grammar is MOST consistent with which claim in the acquisition debate?",
         "options": [
           "All aspects of language are shaped equally by reinforcement history",
-          "Grammatical acquisition depends on maturationally constrained mechanisms more than word learning does",
+          "Grammatical acquisition depends more on maturationally constrained mechanisms",
           "Scaffolding within the zone of proximal development eliminates age-of-acquisition effects",
           "Grammar is intrinsically easier to learn than vocabulary at any age"
         ],
@@ -1234,7 +1234,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "A 17-year-old in the study reported that she will become a physician because her parents expect it, and that she has never seriously considered any alternative. The coders would classify her occupational identity status as:",
         "options": [
           "Identity diffusion",
-          "Moratorium",
+          "Identity moratorium",
           "Identity foreclosure",
           "Identity achievement"
         ],
@@ -1246,8 +1246,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "Marcia's four statuses are generated by crossing which two dimensions?",
         "options": [
           "Exploration and commitment",
-          "Autonomy and shame",
-          "Trust and mistrust",
+          "Autonomy and shame/doubt",
+          "Basic trust and mistrust",
           "Assimilation and accommodation"
         ],
         "correctAnswer": 0,
@@ -1257,10 +1257,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Which statement is best supported by the data in the table?",
         "options": [
-          "Foreclosure increases steadily from 14 to 20",
-          "Achievement is the most common status at every age",
-          "Diffusion peaks at age 17",
-          "Moratorium peaks in mid-adolescence, before achievement becomes the most common status at 20"
+          "Foreclosure increases steadily from age 14 to age 20",
+          "Achievement is the most common status at every age tested",
+          "Diffusion peaks at the middle, age-17 assessment",
+          "Moratorium peaks at 17, before achievement leads at 20"
         ],
         "correctAnswer": 3,
         "explanation": "Moratorium rises from 20% at 14 to its maximum of 34% at 17, then falls to 26%, while achievement climbs from 8% to 42% and is the largest single category at 20—consistent with exploration preceding consolidated commitment. Foreclosure actually declines across the three waves (34% to 26% to 18%). Achievement is the least common status at 14 (8%), so it is not the modal status at every age. Diffusion is highest at 14 (38%) and declines monotonically, so it does not peak at 17.",
@@ -1281,10 +1281,10 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Compared with a cross-sectional design testing separate groups of 14-, 17-, and 20-year-olds in a single year, the longitudinal design used here has which principal advantage?",
         "options": [
-          "It eliminates participant attrition",
-          "It is faster and less expensive to conduct",
-          "It removes the need to establish interrater reliability among coders",
-          "It tracks change within the same individuals, so age trends cannot be artifacts of cohort differences"
+          "It eliminates participant attrition entirely",
+          "It is faster and less expensive to carry out",
+          "It removes the need to establish interrater reliability",
+          "It tracks change within the same individuals over time"
         ],
         "correctAnswer": 3,
         "explanation": "Following one cohort lets the researchers observe genuine within-person transitions (including the backward movement from achievement to moratorium), and it rules out cohort effects—differences between generations that can masquerade as age effects in cross-sectional comparisons. Attrition is a distinctive weakness of longitudinal work, not something it eliminates; the study reported 9% loss. Longitudinal designs are slower and costlier than cross-sectional ones, since the same sample must be retained for years. Interrater reliability concerns the coding of interviews and is required in either design.",
@@ -1331,7 +1331,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
           "The JND grows in proportion to the standard, keeping delta-I / I constant",
           "The JND is a fixed number of grams regardless of the standard",
           "Discrimination is more acute, in proportional terms, at heavier standards",
-          "Absolute thresholds increase with stimulus magnitude"
+          "Absolute thresholds increase with the standard's magnitude"
         ],
         "correctAnswer": 0,
         "explanation": "4/200 and 10/500 both equal 0.02: as the standard grew 2.5-fold, the JND grew 2.5-fold, holding the ratio constant—Weber's law in action. A fixed-gram JND is directly contradicted, since the threshold rose from 4 g to 10 g. Proportional acuity did not improve at the heavier standard; the fraction stayed the same (only the absolute JND changed). Absolute thresholds were measured in a separate session against no background and are not addressed by these two data points at all.",
@@ -1342,8 +1342,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "Salt detection has a lower absolute threshold than weight detection",
           "A 2% change in salt concentration would be reliably detected",
-          "A far larger proportional change is needed to notice a difference in saltiness than in heaviness",
-          "Weber's law fails to apply to the sense of taste"
+          "A far larger proportional change is needed for saltiness",
+          "Weber's law fails to apply to the sense of taste at all"
         ],
         "correctAnswer": 2,
         "explanation": "A larger Weber fraction means coarser proportional discrimination: saltiness must change by about 20% of the standard to be noticed, versus about 2% for heaviness—a tenfold difference in proportional sensitivity. Absolute thresholds are a different quantity entirely; Weber fractions describe difference detection and license no comparison of absolute thresholds across modalities. A 2% concentration change is a tenth of the salt JND and would go unnoticed, not be reliably detected. Taste is not an exception to Weber's law here—the law held with a (large) constant fraction, which is exactly what the law predicts.",
@@ -1352,9 +1352,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "In the method of constant stimuli, the comparison stimuli were presented in RANDOM order. The main purpose of randomization here is to:",
         "options": [
-          "Prevent participants from anticipating the next intensity, which would bias threshold estimates",
-          "Increase each participant's Weber fraction",
-          "Allow reaction time to be measured on every trial",
+          "Prevent participants from anticipating the next intensity",
+          "Increase each participant's measured Weber fraction",
+          "Allow reaction time to be recorded on every single trial",
           "Guarantee that every participant receives a different set of stimuli"
         ],
         "correctAnswer": 0,
@@ -1387,9 +1387,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "question": "A 3-year-old who answers that Sally will look in the BOX (the marble's actual location) is failing to demonstrate:",
         "options": [
           "Object permanence",
-          "The ability to attribute a mental state that differs from reality",
-          "Conservation of number",
-          "Telegraphic speech"
+          "Attribution of a false belief",
+          "Conservation of number and liquid",
+          "Telegraphic two-word speech"
         ],
         "correctAnswer": 1,
         "explanation": "The task requires representing Sally's belief as distinct from—and contradicted by—the true state of the world; answering with the marble's real location shows the child cannot yet attribute such a false belief, the core of theory of mind. Object permanence (knowing hidden objects still exist) is achieved in infancy and is presupposed by the child's own correct tracking of the marble. Conservation of number concerns the invariance of quantity under rearrangement, a separate preoperational limitation. Telegraphic speech is a two-word production stage of language, irrelevant to belief attribution.",
@@ -1398,9 +1398,9 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Some 3-year-olds who failed the standard task passed a version with reduced inhibitory demands. This result most strongly suggests that:",
         "options": [
-          "Three-year-olds possess a fully adult-like theory of mind",
+          "Three-year-olds already possess a fully adult-like theory of mind",
           "Inhibitory control is irrelevant to false-belief performance",
-          "Standard false-belief tasks may underestimate younger children's belief understanding because of their executive demands",
+          "Standard false-belief tasks may understate belief understanding",
           "Executive function and theory of mind are the same construct"
         ],
         "correctAnswer": 2,
@@ -1412,8 +1412,8 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
         "options": [
           "False-belief understanding is transmitted entirely by culture-specific instruction",
           "Differences among languages fully explain when children pass the task",
-          "Formal schooling is the cause of theory-of-mind development",
-          "The transition reflects a partly maturational, species-typical developmental process"
+          "Formal schooling is the main cause of theory-of-mind development",
+          "The transition reflects a partly maturational, species-typical process"
         ],
         "correctAnswer": 3,
         "explanation": "When communities differing in language, schooling, and child-rearing show the same 3-to-5 transition, culture-specific inputs cannot be carrying the whole explanation; a shared, maturationally constrained human developmental process best accounts for the convergence. Purely cultural transmission predicts timetables that vary with the practices that differ across sites, contrary to the data. A fully linguistic explanation likewise predicts cross-language variation in timing that was not observed. Schooling as the cause fails most directly: the rural community differed in schooling, and 3-to-5-year-olds at all sites were largely below school age.",
@@ -1422,7 +1422,7 @@ export const PSYCH_SOC_PASSAGES_2: MCATPassage[] = [
       {
         "question": "Children on the autism spectrum failed false-belief tasks at higher rates than comparison children matched on verbal mental age, including children with unrelated intellectual disability. These matches allow the researchers to conclude that the difficulty reflects:",
         "options": [
-          "A relatively specific difficulty with mental-state attribution, not reducible to verbal ability or general intellectual delay",
+          "A relatively specific difficulty with mental-state attribution",
           "A global intellectual impairment affecting all cognitive domains equally",
           "An absence of all social motivation in autistic children",
           "A flaw in the false-belief task that makes it invalid for clinical groups"

@@ -56,20 +56,20 @@ Secondary (coupled) transport uses the energy **stored in one gradient** (almost
         questions: [
           {
             question: `Ouabain is applied to intestinal epithelial cells, inhibiting the basolateral Na$^+$/K$^+$ ATPase. Over time, apical glucose uptake via SGLT1 will:`,
-            options: [`Decrease — the Na$^+$ gradient that powers the symporter dissipates`, `Increase — more ATP is available for SGLT1`, `Be unaffected — SGLT1 does not use Na$^+$`, `Reverse immediately, secreting glucose into the lumen`],
+            options: [`Decrease, as the Na$^+$ gradient dissipates`, `Increase, as more ATP is free for SGLT1`, `Be unaffected, as SGLT1 ignores Na$^+$`, `Reverse, secreting glucose into the lumen`],
             correctAnswer: 0,
             explanation: `SGLT1 is a secondary active transporter: it has no ATPase activity and depends entirely on the inward Na$^+$ gradient maintained by the Na$^+$/K$^+$ pump. Block the pump, intracellular Na$^+$ rises, the gradient collapses, and glucose can no longer be moved uphill. This "poison the pump, kill the symporter" logic is the single most-tested secondary transport concept.`
           },
           {
             question: `Per catalytic cycle, the Na$^+$/K$^+$ ATPase moves:`,
-            options: [`3 Na$^+$ out and 2 K$^+$ in, making it electrogenic (net +1 charge exported)`, `2 Na$^+$ out and 3 K$^+$ in, hyperpolarizing the cell by importing charge`, `Equal Na$^+$ and K$^+$, so it is electroneutral`, `3 Na$^+$ in and 2 K$^+$ out, depolarizing the cell`],
-            correctAnswer: 0,
+            options: [`3 Na$^+$ in and 2 K$^+$ out, depolarizing the cell`, `2 Na$^+$ out and 3 K$^+$ in, importing net charge`, `3 Na$^+$ out and 2 K$^+$ in, net charge exported`, `Equal Na$^+$ and K$^+$, so it is electroneutral`],
+            correctAnswer: 2,
             explanation: `The stoichiometry is fixed: 3 Na$^+$ exported, 2 K$^+$ imported per ATP. The unequal exchange exports one net positive charge per cycle (electrogenic), making a small direct contribution to the negative resting potential — though the dominant determinant of resting potential is K$^+$ leak permeability.`
           },
           {
             question: `Cardiac glycosides like digoxin increase the strength of heart contraction. The mechanism chain is:`,
-            options: [`Pump inhibition → intracellular Na$^+$ rises → Na$^+$/Ca$^{2+}$ exchanger slows → intracellular Ca$^{2+}$ rises → stronger contraction`, `Pump inhibition → intracellular K$^+$ rises → faster action potentials`, `Pump stimulation → more ATP for the contractile apparatus`, `Direct opening of voltage-gated Ca$^{2+}$ channels by digoxin`],
-            correctAnswer: 0,
+            options: [`Higher intracellular K$^+$ speeds up action potentials`, `Higher intracellular Na$^+$ slows Ca$^{2+}$ export`, `Pump stimulation gives more ATP for contraction`, `Digoxin opens voltage-gated Ca$^{2+}$ channels`],
+            correctAnswer: 1,
             explanation: `Digoxin inhibits the Na$^+$/K$^+$ ATPase, raising intracellular Na$^+$. This shrinks the Na$^+$ gradient that drives the Na$^+$/Ca$^{2+}$ antiporter (3 Na$^+$ in per Ca$^{2+}$ out), so less Ca$^{2+}$ is extruded. Elevated Ca$^{2+}$ loads the SR and strengthens contraction (positive inotropy). A two-transporter chain like this is textbook MCAT integration.`
           }
         ]
@@ -111,13 +111,13 @@ Cholera toxin locks Gs "on" → cAMP soars → CFTR is **hyperactivated** → ma
         questions: [
           {
             question: `SGLT1 couples 2 Na$^+$ per glucose, while SGLT2 couples only 1 Na$^+$ per glucose. Compared with SGLT2, SGLT1 can:`,
-            options: [`Concentrate glucose against a steeper gradient, since twice the Na$^+$ energy is invested per glucose`, `Move glucose faster but only down its gradient`, `Transport glucose without any Na$^+$ gradient`, `Generate ATP from glucose movement`],
-            correctAnswer: 0,
+            options: [`Transport glucose with no Na$^+$ gradient at all`, `Move glucose faster, but only down its gradient`, `Generate ATP from the movement of glucose`, `Concentrate glucose against a steeper gradient`],
+            correctAnswer: 3,
             explanation: `Coupling stoichiometry sets the maximum gradient: with 2 Na$^+$ per glucose, twice the downhill free energy is harvested per glucose moved, so a much steeper uphill glucose gradient can be sustained. That is why SGLT1 sits in the late intestine/nephron where luminal glucose is scarce and must be scavenged.`
           },
           {
             question: `In cystic fibrosis airways, chloride secretion fails. Mucus becomes thick and dehydrated because:`,
-            options: [`Without apical Cl$^-$ efflux, the osmotic driving force that normally pulls water onto the airway surface is lost`, `CFTR normally transports mucin proteins`, `Na$^+$ absorption ceases, trapping water inside cells`, `The cilia are structurally destroyed by the mutation`],
+            options: [`No apical Cl$^-$ efflux means no osmotic pull for water`, `Na$^+$ absorption ceases, trapping water inside cells`, `CFTR normally transports mucin proteins out of cells`, `The mutation structurally destroys the airway cilia`],
             correctAnswer: 0,
             explanation: `Water follows solute. Apical Cl$^-$ secretion through CFTR creates the osmotic gradient that hydrates the airway surface liquid; losing it (plus unchecked Na$^+$ absorption via ENaC) dehydrates mucus, crippling mucociliary clearance. The cilia themselves are normal — they simply cannot beat through thick mucus. Note the contrast with cholera, where CFTR overactivity floods the gut with fluid.`
           }

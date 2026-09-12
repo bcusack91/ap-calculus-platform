@@ -53,20 +53,20 @@ A drug that arrests cells in mitosis grows the 4C peak; one that blocks replicat
         questions: [
           {
             question: `A human somatic cell in G$_2$ contains how many chromosomes and how much DNA relative to a G$_1$ cell?`,
-            options: [`46 chromosomes (each with two sister chromatids) and twice the G$_1$ DNA content`, `92 chromosomes and twice the DNA`, `46 chromosomes and the same DNA content`, `23 chromosomes and half the DNA`],
-            correctAnswer: 0,
+            options: [`92 chromosomes, since each chromatid is counted separately`, `46 chromosomes and exactly the same DNA content as G$_1$`, `46 chromosomes, each with two chromatids, and twice the DNA`, `23 chromosomes, one set having already segregated`],
+            correctAnswer: 2,
             explanation: `S phase duplicates DNA but not chromosome number: each of the 46 chromosomes now consists of two cohesin-joined sister chromatids, so DNA content is 4C while the count remains 46. Chromatids are not counted as separate chromosomes until cohesin cleavage at anaphase separates them. Confusing n (chromosome sets) with C (DNA mass) is the most common cell-cycle error.`
           },
           {
             question: `Flow cytometry of a tumor sample treated with a new drug shows a dramatic increase in cells with exactly 4C DNA content and condensed chromosomes. The drug most likely arrests cells in:`,
-            options: [`Mitosis — replication finished but division blocked`, `G$_1$ — before replication begins`, `Mid-S phase — during replication`, `G$_0$ — a quiescent state`],
+            options: [`Mitosis, with replication already complete`, `Mid-S phase, partway through DNA replication`, `G$_1$, before replication has begun`, `G$_0$, quiescent and outside the cycle`],
             correctAnswer: 0,
             explanation: `4C DNA means replication is complete (G$_2$ or M); condensed chromosomes distinguish M from G$_2$, since chromatin condenses only in mitosis. Spindle poisons such as vinca alkaloids and taxanes produce exactly this profile by triggering the spindle checkpoint (Part 2). A G$_1$ block would grow the 2C peak; an S block accumulates intermediate DNA contents.`
           },
           {
             question: `Cardiac muscle damaged by infarction is replaced by scar tissue rather than new cardiomyocytes because adult cardiomyocytes:`,
-            options: [`Reside in G$_0$ and have essentially lost the capacity to re-enter the cell cycle`, `Lack DNA polymerase genes`, `Are haploid and cannot undergo mitosis`, `Are continuously arrested in metaphase`],
-            correctAnswer: 0,
+            options: [`They are permanently arrested in metaphase instead`, `They lack functional DNA polymerase genes altogether`, `They are haploid and cannot undergo mitosis`, `They reside in G$_0$ and cannot re-enter the cycle`],
+            correctAnswer: 3,
             explanation: `Terminally differentiated cardiomyocytes and most neurons exit permanently to G$_0$: their cycle machinery is transcriptionally shut down, not mutated away. Fibroblasts, which CAN divide, fill the wound with collagenous scar instead. Contrast with liver (facultative divider — hepatocytes re-enter the cycle after resection) and gut/skin epithelium (continuously cycling stem-cell compartments).`
           }
         ]
@@ -109,14 +109,14 @@ Both leave kinetochores without proper tension → spindle checkpoint arrest →
         questions: [
           {
             question: `Colchicine and paclitaxel arrest cells in mitosis through opposite effects on microtubules. Their common downstream consequence is:`,
-            options: [`Failure to generate proper kinetochore attachment and tension, activating the spindle checkpoint`, `Direct inhibition of DNA replication`, `Cleavage of cohesin before metaphase`, `Immediate breakdown of the nuclear envelope`],
-            correctAnswer: 0,
+            options: [`DNA replication forks are directly inhibited`, `The spindle checkpoint is never satisfied`, `Cohesin is cleaved before metaphase alignment`, `The nuclear envelope breaks down prematurely`],
+            correctAnswer: 1,
             explanation: `A functional spindle must be dynamic: colchicine prevents microtubule assembly, while paclitaxel freezes microtubules so they cannot search, release, and re-attach. Either way kinetochores are not all attached under bipolar tension, the spindle checkpoint stays on, and anaphase never fires. Two opposite biochemical actions converging on one checkpoint is classic MCAT reasoning.`
           },
           {
             question: `Cells are pulsed with EdU (a thymidine analog) for 30 minutes, and 40% of cells become labeled. The best interpretation is that:`,
-            options: [`About 40% of the population was in S phase during the pulse`, `40% of the cells are in G$_0$`, `The cell cycle lasts 40 minutes`, `40% of cells are undergoing mitosis`],
-            correctAnswer: 0,
+            options: [`About 40% of the cells are quiescent, resting in G$_0$`, `The complete cell cycle lasts roughly 40 minutes total`, `About 40% of the population was in S phase during the pulse`, `About 40% of the cells were in mitosis during the pulse`],
+            correctAnswer: 2,
             explanation: `A nucleotide analog is incorporated only by cells actively replicating DNA, so the labeled fraction estimates the S-phase fraction (and, since time-in-phase is proportional to fraction-of-cells in an asynchronous steady-state culture, S occupies ~40% of the cycle length). Mitotic cells would be identified instead by condensed chromosomes or phospho-histone H3 staining.`
           }
         ]

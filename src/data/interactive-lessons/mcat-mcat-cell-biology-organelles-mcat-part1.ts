@@ -51,20 +51,20 @@ Eukaryotic organelles create **dedicated chemical environments**: the lysosome r
         questions: [
           {
             question: `A liver homogenate fraction shows high catalase activity and little succinate dehydrogenase or acid phosphatase. The fraction is enriched in:`,
-            options: [`Peroxisomes`, `Mitochondria`, `Lysosomes`, `Rough ER`],
-            correctAnswer: 0,
+            options: [`Mitochondria`, `Lysosomes`, `Peroxisomes`, `Rough ER`],
+            correctAnswer: 2,
             explanation: `Marker-enzyme logic is pure elimination: catalase is the peroxisomal signature (H$_2$O$_2$ disposal), succinate dehydrogenase marks the mitochondrial inner membrane, and acid phosphatase marks lysosomes. Because mitochondria, lysosomes, and peroxisomes co-pellet at medium speed, marker enzymes — not centrifugation speed — are what distinguish them; a density gradient would then separate them physically.`
           },
           {
             question: `Cells of the adrenal cortex, which secrete steroid hormones, are dominated by which organelle?`,
-            options: [`Smooth ER — the site of steroid synthesis from cholesterol`, `Rough ER — because hormones are proteins`, `Lysosomes — to degrade cholesterol`, `A large Golgi devoted to packaging steroid vesicles`],
+            options: [`Smooth ER, where steroids are made from cholesterol`, `Rough ER, because hormones are secreted proteins`, `Lysosomes, which degrade cholesterol precursors`, `A large Golgi for packaging steroid vesicles`],
             correctAnswer: 0,
             explanation: `Steroids are lipids built by smooth-ER (and mitochondrial) enzymes, not proteins — so no rough ER, no signal sequence, and critically no secretory vesicles: steroids diffuse out across the membrane as they are made (which is also why steroid-secreting cells cannot store hormone and why blood levels track synthesis rate). Rough-ER-dominated cells (plasma cells, acinar cells) secrete proteins instead — form follows function on organelle questions.`
           },
           {
             question: `Lysosomal enzymes that leak into the cytosol cause relatively little immediate damage. The main protective factor is that:`,
-            options: [`Acid hydrolases have sharp acidic pH optima and are largely inactive at the cytosol's pH of ~7.2`, `The cytosol contains no substrates for hydrolases`, `Cytosolic ATP instantly repels the enzymes`, `Leaked enzymes are re-imported by the lysosome within seconds`],
-            correctAnswer: 0,
+            options: [`Cytosolic ATP binds the leaked enzymes and inactivates them`, `The cytosol contains no substrates for these hydrolases`, `Leaked enzymes are re-imported by lysosomes at once`, `Acid hydrolases are largely inactive at cytosolic pH`],
+            correctAnswer: 3,
             explanation: `The lysosome's V-type H$^+$ ATPase maintains pH ~4.5-5, and its hydrolases evolved optima to match — a built-in safety: the enzyme and its compartment are a matched pair, so escape neutralizes the threat. (Massive lysosomal rupture still kills cells, as in gout, where urate crystals destabilize lysosomal membranes.) Compartment-specific pH as a control mechanism recurs with the endosome and the mitochondrial intermembrane space.`
           }
         ]
@@ -104,14 +104,14 @@ Lysosomes were **discovered by fractionation**, not microscopy: acid phosphatase
         questions: [
           {
             question: `In a fresh homogenate, acid phosphatase activity is low; after adding a mild detergent, measured activity rises five-fold with no new enzyme added. This latency indicates that:`,
-            options: [`The enzyme is enclosed in a membrane compartment that normally separates it from its substrate`, `Detergent is a direct allosteric activator of acid phosphatase`, `The enzyme was synthesized in response to detergent`, `Acid phosphatase requires lipids as substrates`],
-            correctAnswer: 0,
+            options: [`Detergent allosterically activates acid phosphatase`, `The enzyme is sealed inside a membrane compartment`, `The enzyme is newly synthesized in response to detergent`, `Acid phosphatase uses membrane lipids as its substrate`],
+            correctAnswer: 1,
             explanation: `Substrate added to the assay cannot reach an enzyme sealed inside intact lysosomes; lysing the membrane with detergent (or freeze-thaw, or aging) unmasks full activity. De Duve used exactly this reasoning to infer a new organelle before anyone had imaged it. Latency-relieved-by-membrane-disruption is the standard experimental fingerprint of "this enzyme lives inside a compartment."`
           },
           {
             question: `A patient has chronic respiratory infections, immotile sperm, and organs mirrored left-to-right. The underlying molecular defect is most likely in:`,
-            options: [`Axonemal dynein — the motor that powers ciliary and flagellar bending`, `Actin polymerization`, `Keratin intermediate filaments`, `Kinesin-based vesicle transport`],
-            correctAnswer: 0,
+            options: [`Kinesin-based transport of vesicles along axons`, `Actin polymerization at the cell cortex`, `Axonemal dynein, the motor that bends cilia`, `Keratin intermediate filament assembly`],
+            correctAnswer: 2,
             explanation: `The triad of Kartagener syndrome (primary ciliary dyskinesia) unites three cilia jobs: airway mucociliary clearance (infections), the sperm flagellum (infertility), and embryonic nodal cilia whose beating establishes left-right asymmetry (situs inversus — ~50% of patients, since without ciliary flow the axis is randomized). All depend on dynein arms sliding adjacent doublets of the 9+2 axoneme.`
           }
         ]

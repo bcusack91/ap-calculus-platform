@@ -54,19 +54,19 @@ One ubiquitin ligase thus triggers both chromosome separation and the end of mit
         questions: [
           {
             question: `Throughout the cell cycle, CDK1 protein levels remain constant, yet its kinase activity peaks sharply at the G$_2$/M transition. The activity peak is explained by:`,
-            options: [`Accumulation of cyclin B, whose binding (plus removal of inhibitory phosphates by Cdc25) activates CDK1`, `A burst of CDK1 transcription at G$_2$/M`, `CDK1 cleavage into an active fragment`, `CDK1 relocation into the mitochondria`],
-            correctAnswer: 0,
+            options: [`Proteolytic cleavage of CDK1 into a constitutively active fragment`, `Cyclin B accumulation plus Cdc25 removing inhibitory phosphates`, `A burst of CDK1 transcription timed to the G$_2$/M switch`, `Relocation of CDK1 from the cytosol into mitochondria`],
+            correctAnswer: 1,
             explanation: `CDKs are regulated by partner availability, not by their own abundance: cyclin B rises through S/G$_2$, and the cyclin B-CDK1 complex is held in check by inhibitory phosphorylation until Cdc25 removes it — producing an abrupt activity spike. This "constant enzyme, oscillating activator" design was established by the classic MPF experiments (see the deep-dive below) and is the single most-tested cell-cycle concept.`
           },
           {
             question: `A tumor is found to overexpress cyclin D. The most direct consequence for cell-cycle control is:`,
-            options: [`Excess CDK4/6 activity hyperphosphorylates Rb, releasing E2F and driving S-phase entry with reduced growth-factor dependence`, `Premature cohesin cleavage in metaphase`, `Failure of cytokinesis`, `Arrest at the G$_2$/M boundary`],
-            correctAnswer: 0,
+            options: [`Cytokinesis fails, leaving binucleate daughter cells behind`, `Cohesin is cleaved prematurely during metaphase alignment`, `Cells arrest at the G$_2$/M boundary before mitosis`, `Rb is hyperphosphorylated, freeing E2F for S-phase entry`],
+            correctAnswer: 3,
             explanation: `Cyclin D is the growth-factor-responsive input to the restriction point. Overexpressing it uncouples Rb phosphorylation from mitogen signaling: E2F is released regardless of external signals, and cells commit to division autonomously. The same phenotype results from Rb deletion or p16 loss — four different mutations, one broken brake, which is why passages treat the Rb-E2F axis as a single pathway.`
           },
           {
             question: `After ionizing radiation, cells arrest in G$_1$. The molecular chain producing this arrest is:`,
-            options: [`DNA damage → p53 stabilization → p21 transcription → inhibition of G$_1$/S cyclin-CDK complexes → Rb stays active`, `DNA damage → cyclin B degradation → CDK1 activation`, `DNA damage → direct cleavage of E2F by caspases`, `DNA damage → APC/C activation in G$_1$`],
+            options: [`p53 stabilizes, induces p21, and CDKs shut down`, `DNA damage triggers APC/C activation during G$_1$`, `Cyclin B is degraded, and that activates CDK1 early`, `Caspases directly cleave E2F, silencing its targets`],
             correctAnswer: 0,
             explanation: `p53 is the damage sensor's transcription factor: stabilized p53 induces p21, a CDK inhibitor that shuts down cyclin E/A-CDK2 (and cyclin D-CDK4/6), so Rb remains hypophosphorylated and E2F silent. The cell holds at G$_1$/S until repair finishes — or, if damage is overwhelming, p53 escalates to apoptosis (Part 3). Note the arrest is transcription-dependent, hence slower than the phosphorylation-based G$_2$/M block.`
           }
@@ -106,14 +106,14 @@ Temperature-sensitive **cdc** (cell division cycle) yeast mutants arrest at a *u
         questions: [
           {
             question: `A single unattached kinetochore in an otherwise perfect metaphase cell prevents anaphase. It does so by:`,
-            options: [`Generating a Mad/Bub "wait" signal that inhibits APC/C, so securin is not degraded and separase stays inhibited`, `Physically blocking the contractile ring`, `Degrading cyclin B prematurely`, `Cleaving cohesin only on the attached chromosomes`],
-            correctAnswer: 0,
+            options: [`The unattached kinetochore blocks the contractile ring`, `Cyclin B is degraded well ahead of its normal schedule`, `A Mad/Bub wait signal inhibits APC/C, so securin survives`, `Cohesin is cleaved only on the attached chromosomes`],
+            correctAnswer: 2,
             explanation: `The spindle checkpoint is exquisitely sensitive: one signaling kinetochore suffices to keep APC/C off. With APC/C inactive, securin persists, separase is sequestered, cohesin remains intact, and no chromatid separates — protecting against aneuploidy from even a single mis-attached chromosome. When the last kinetochore attaches, the wait signal stops and APC/C fires anaphase and mitotic exit together.`
           },
           {
             question: `When an S-phase cell is fused with a G$_2$ cell, the G$_2$ nucleus does not re-replicate its DNA, even though S-phase activators fill the shared cytoplasm. The reason is that:`,
-            options: [`Origin licensing occurs only under low-CDK conditions in G$_1$, and the G$_2$ nucleus's origins have already fired and cannot be re-licensed`, `G$_2$ nuclei lack DNA polymerase`, `The nuclear envelope of a G$_2$ cell is impermeable to all proteins`, `S-phase activators are consumed by the S-phase nucleus first`],
-            correctAnswer: 0,
+            options: [`G$_2$ nuclei lack the DNA polymerase needed to copy DNA`, `The G$_2$ nucleus has no licensed origins left to fire`, `The G$_2$ envelope blocks entry of S-phase activators`, `S-phase activators are used up by the S-phase nucleus`],
+            correctAnswer: 1,
             explanation: `Replication control is a license system, not just an activator system: MCM helicase loading (licensing) is possible only when CDK activity is low (G$_1$), and high S/G$_2$ CDK activity blocks re-loading while firing existing licenses. A G$_2$ nucleus has no licensed origins left, so no activator can make it re-replicate. This single mechanism guarantees once-and-only-once replication each cycle.`
           }
         ]

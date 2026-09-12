@@ -56,20 +56,20 @@ Example: 5% mitotic cells with a 20-hour cycle → M lasts about $0.05 \\times 2
         questions: [
           {
             question: `Cells are pulsed with BrdU for 15 minutes, washed, and sampled hourly. Labeled mitotic figures first appear 4 hours after the pulse. This 4-hour lag corresponds to:`,
-            options: [`The duration of G$_2$ — the time for cells that were finishing S to reach mitosis`, `The duration of S phase`, `The duration of the entire cycle`, `The duration of G$_1$`],
-            correctAnswer: 0,
+            options: [`The time cells spend in S phase`, `The length of one complete cell cycle`, `The length of G$_1$ in these cells`, `The time cells spend in G$_2$`],
+            correctAnswer: 3,
             explanation: `Only S-phase cells took the label. The first labeled cells to reach mitosis are those that were at the very END of S during the pulse; their journey to M is exactly G$_2$. (The window during which labeled mitoses keep appearing then reports S-phase length.) This percent-labeled-mitoses design is the classic way phase durations were first measured, and its logic is pure MCAT.`
           },
           {
             question: `A population is treated with hydroxyurea, which depletes dNTP pools. Flow cytometry after 24 hours will show cells accumulated:`,
-            options: [`At or just above 2C DNA content — arrested at entry into or early in S phase`, `Exclusively at 4C`, `At 8C, from re-replication`, `Evenly across all DNA contents`],
-            correctAnswer: 0,
+            options: [`Exclusively at 4C, with replication complete`, `At or just above 2C, stalled at entry into S phase`, `At 8C, having re-replicated the whole genome`, `Spread evenly across every possible DNA content`],
+            correctAnswer: 1,
             explanation: `Without dNTPs, replication cannot proceed: cells reaching G$_1$/S stall immediately, and cells already in S stall with barely-begun synthesis. The population collects at ~2C (slightly above for those that had started). A 4C pile-up would indicate a G$_2$/M block; 8C would require re-replication, which licensing forbids. Matching a drug's biochemical target to its flow profile is a staple passage question.`
           },
           {
             question: `Fibroblasts are serum-starved, re-fed, and serum is then withdrawn from separate dishes at 2-hour intervals. Cells given at least 8 hours of serum divide even after withdrawal; cells given less return to quiescence. The experiment locates:`,
-            options: [`The restriction point — about 8 hours into G$_1$, after which the cycle is growth-factor independent`, `The G$_2$/M checkpoint at 8 hours`, `The duration of mitosis`, `The time needed for serum to enter cells`],
-            correctAnswer: 0,
+            options: [`The G$_2$/M checkpoint, reached 8 hours after re-feeding`, `The time serum proteins need to enter cells`, `The restriction point, about 8 hours into G$_1$`, `The length of mitosis in these fibroblasts`],
+            correctAnswer: 2,
             explanation: `Passing the restriction point means cyclin E-CDK2/Rb-E2F positive feedback has become self-sustaining: external mitogens are no longer required to finish the cycle. Cells short of that point still need serum-driven cyclin D and slip back to G$_0$. The all-or-none outcome at a sharp time threshold is the experimental signature of a bistable commitment switch.`
           }
         ]
@@ -110,14 +110,14 @@ The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I pr
         questions: [
           {
             question: `HPV E7 protein binds host Rb, and E6 promotes degradation of host p53. Cells expressing both proteins would be expected to show:`,
-            options: [`Unscheduled S-phase entry AND failure to arrest or apoptose after DNA damage — two independent brakes removed`, `Permanent G$_1$ arrest`, `Inability to replicate viral DNA`, `Hyperactive apoptosis eliminating infected cells`],
+            options: [`Unscheduled S-phase entry plus no damage response`, `Permanent G$_1$ arrest with Rb held in active form`, `Hyperactive apoptosis that clears infected cells early`, `Failure to replicate the viral DNA in host cells`],
             correctAnswer: 0,
             explanation: `E7 sequestering Rb liberates E2F (constant proliferative drive, which the virus needs because it relies on host S-phase machinery); E6 destroying p53 removes the damage-triggered arrest/apoptosis response that would otherwise kill such abnormally cycling cells. The virus phenocopies the two most common tumor-suppressor losses in human cancer — the molecular basis of HPV-driven cervical carcinoma.`
           },
           {
             question: `Two tumors have identical cell-cycle durations, but tumor A has a growth fraction of 90% and tumor B of 15%. S-phase-targeted chemotherapy will:`,
-            options: [`Kill a much larger proportion of tumor A per dose, because more of its cells pass through the drug-sensitive phase during treatment`, `Kill both tumors equally, since cycle length is identical`, `Kill more of tumor B, because quiescent cells are fragile`, `Have no effect on either tumor`],
-            correctAnswer: 0,
+            options: [`Kill both equally, since cycle lengths are identical`, `Kill more of tumor B, whose quiescent cells are fragile`, `Have no effect on either tumor, regardless of dose`, `Kill more of tumor A, which has more cycling cells`],
+            correctAnswer: 3,
             explanation: `Phase-specific agents only hit cells that traverse the sensitive phase while drug is present. Tumor B's 85% quiescent (G$_0$) cells are untouched and can re-enter the cycle later — the reason slow-growth-fraction tumors respond poorly and regrow between doses, and why chemotherapy is given in repeated cycles. Fast-renewing normal tissues (marrow, gut) have high growth fractions, explaining shared toxicity.`
           }
         ]

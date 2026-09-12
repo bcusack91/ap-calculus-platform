@@ -53,20 +53,20 @@ The Brown & Goldstein LDL story is the canonical MCAT passage:
         questions: [
           {
             question: `Fibroblasts from a familial hypercholesterolemia patient bind normal amounts of fluorescent LDL at the cell surface, yet internalize almost none of it. The most likely defect is:`,
-            options: [`A mutant LDL receptor cytoplasmic tail that cannot localize to clathrin-coated pits`, `Absence of LDL receptors from the cell surface`, `A defective lysosomal acid lipase`, `Overactive receptor recycling`],
-            correctAnswer: 0,
+            options: [`Complete absence of LDL receptors from the cell surface`, `A defective acid lipase within the lysosome lumen`, `Receptor recycling running far faster than normal`, `An LDL receptor tail that misses clathrin pits`],
+            correctAnswer: 3,
             explanation: `Normal surface binding rules out an absent or non-binding receptor. Binding without internalization localizes the lesion to the internalization step: the receptor's cytoplasmic tail must engage adaptor proteins (AP2) to cluster into clathrin-coated pits. This exact mutant class (JD mutation) was key evidence in Brown & Goldstein's Nobel-winning work — and is a recurring MCAT passage.`
           },
           {
             question: `A drug that inhibits the V-type H$^+$ ATPase of endosomes would most directly impair:`,
-            options: [`Release of LDL from its receptor, since ligand-receptor dissociation requires endosomal acidification`, `Clathrin coat assembly at the plasma membrane`, `Dynamin-mediated vesicle scission`, `LDL binding at the cell surface`],
-            correctAnswer: 0,
+            options: [`Assembly of the clathrin coat at the cell surface`, `Release of LDL from its receptor after uptake`, `Dynamin-mediated scission of the budding vesicle`, `Binding of LDL at the cell surface`],
+            correctAnswer: 1,
             explanation: `LDL-receptor affinity is pH-dependent: the acidic early endosome (~pH 6) triggers dissociation, letting receptors recycle while cargo proceeds to lysosomes. Blocking acidification traps ligand-receptor complexes together, halting both cargo delivery and receptor recycling. Coat assembly, scission, and surface binding are all upstream and pH-independent.`
           },
           {
             question: `Botulinum toxin causes flaccid paralysis by:`,
-            options: [`Proteolytically cleaving SNARE proteins, preventing synaptic vesicle fusion and acetylcholine release`, `Blocking acetylcholine receptors on muscle`, `Inhibiting acetylcholinesterase in the synaptic cleft`, `Depolarizing the motor neuron permanently`],
-            correctAnswer: 0,
+            options: [`Inhibiting acetylcholinesterase in the synaptic cleft`, `Blocking acetylcholine receptors on muscle`, `Cleaving SNARE proteins so vesicles cannot fuse`, `Permanently depolarizing the motor neuron`],
+            correctAnswer: 2,
             explanation: `Botulinum toxin is a zinc protease that cleaves SNAREs (synaptobrevin, SNAP-25, or syntaxin depending on serotype). Without intact SNARE complexes, vesicles cannot fuse and ACh is never released — the synapse is silenced presynaptically. Receptor blockers (curare) and esterase inhibitors act postsynaptically or in the cleft; distinguishing pre- vs. postsynaptic mechanisms is a classic exam move.`
           }
         ]
@@ -104,14 +104,14 @@ A single intestinal enterocyte uses nearly every transport mode at once:
         questions: [
           {
             question: `Cells are incubated with transferrin (which enters by receptor-mediated endocytosis) at 4°C, then washed and warmed to 37°C. Which prediction is correct?`,
-            options: [`At 4°C transferrin binds surface receptors but is not internalized; internalization begins upon warming`, `At 4°C transferrin is internalized but not bound`, `Transferrin uptake is identical at both temperatures`, `Warming releases all bound transferrin into the medium`],
+            options: [`Binding occurs at 4°C, internalization only on warming`, `Transferrin is internalized at 4°C but never bound`, `Uptake is identical at both of these temperatures`, `Warming releases all bound transferrin to the medium`],
             correctAnswer: 0,
             explanation: `Receptor binding is a biochemical association that persists in the cold, but vesicle budding requires membrane fluidity and active machinery, both of which stop at 4°C. This bind-in-the-cold, chase-at-37°C protocol is the standard way to synchronize endocytosis — recognize it instantly in passages.`
           },
           {
             question: `A secreted hormone is synthesized with its receptor-binding domain facing the ER lumen. After exocytosis, this domain will be:`,
-            options: [`Extracellular — the vesicle lumen is topologically equivalent to the cell exterior`, `Cytosolic — fusion inverts the vesicle`, `Embedded within the bilayer`, `Degraded, because luminal domains cannot be secreted`],
-            correctAnswer: 0,
+            options: [`Cytosolic, because fusion inverts the vesicle`, `Embedded within the lipid bilayer itself`, `Degraded, since luminal domains cannot exit`, `Extracellular, facing out from the cell`],
+            correctAnswer: 3,
             explanation: `Topology is conserved through the secretory pathway: ER lumen → Golgi lumen → vesicle lumen → extracellular space. A luminal domain never touches the cytosol and emerges outside the cell after fusion. The same logic explains why the extracellular domain of a membrane receptor starts as an ER-luminal domain.`
           }
         ]

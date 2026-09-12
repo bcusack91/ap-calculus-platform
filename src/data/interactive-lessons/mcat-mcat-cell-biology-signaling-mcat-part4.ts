@@ -52,20 +52,20 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
         questions: [
           {
             question: `Cholera toxin and an activating G-alpha-s point mutation both cause sustained cAMP elevation. The shared biochemical lesion is:`,
-            options: [`Loss of G-alpha-s GTPase activity, trapping the subunit in its GTP-bound active state`, `Increased affinity of the receptor for ligand`, `Direct allosteric activation of PKA`, `Inhibition of adenylyl cyclase degradation`],
-            correctAnswer: 0,
+            options: [`A rise in the receptor's affinity for its ligand`, `Direct allosteric activation of PKA by the toxin`, `Blocked breakdown of adenylyl cyclase protein`, `Loss of GTPase activity in G-alpha-s itself`],
+            correctAnswer: 3,
             explanation: `ADP-ribosylation by cholera toxin chemically disables the same GTPase function that the mutation destroys genetically. Either way, G-alpha-s cannot hydrolyze GTP, so adenylyl cyclase is stimulated continuously. Recognizing that a toxin phenocopies a mutation (and vice versa) is a recurring MCAT passage device.`
           },
           {
             question: `An asthma patient using a beta-2 agonist inhaler many times daily finds it progressively less effective. Receptor studies would most likely show:`,
-            options: [`GRK/beta-arrestin-mediated desensitization and reduced surface beta-2 receptor number`, `Conversion of beta-2 receptors into alpha-1 receptors`, `Increased receptor affinity for the agonist`, `Depletion of airway ATP`],
-            correctAnswer: 0,
+            options: [`Conversion of beta-2 receptors into alpha-1 receptors`, `GRK/arrestin desensitization with fewer surface receptors`, `A rise in beta-2 receptor affinity for the agonist`, `Depletion of ATP stores in airway smooth muscle`],
+            correctAnswer: 1,
             explanation: `Sustained agonist exposure activates the full shutdown ladder: GRK phosphorylates occupied receptors, arrestin uncouples and internalizes them, and prolonged stimulation downregulates total receptor expression. The result is tachyphylaxis — the same dose produces less response. Receptors do not interconvert between subtypes, and affinity typically does not rise with overuse.`
           },
           {
             question: `Neurofibromin (NF1) is a GAP for Ras. In cells that have lost both NF1 alleles, growth-factor stimulation produces:`,
-            options: [`A Ras-GTP signal of normal onset but abnormally long duration, because hydrolysis is no longer accelerated`, `No Ras activation, because GAPs are required to load GTP`, `Normal signaling, because SOS compensates`, `Constitutive receptor autophosphorylation`],
-            correctAnswer: 0,
+            options: [`Constitutive autophosphorylation of the receptor itself`, `Normal signaling, because SOS compensates for the loss`, `Normal onset but abnormally prolonged Ras-GTP signaling`, `No Ras activation, since GAPs are needed to load GTP`],
+            correctAnswer: 2,
             explanation: `GAPs act on the OFF step: they accelerate Ras's slow intrinsic GTP hydrolysis. Without NF1, Ras still requires a GEF (SOS) to turn on — so onset is ligand-dependent and normal — but once on, it lingers far longer, producing excessive proliferation (neurofibromatosis type 1). Distinguish GEF loss (can't turn ON) from GAP loss (can't turn OFF).`
           }
         ]
@@ -106,14 +106,14 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
         questions: [
           {
             question: `In permeabilized cells, GTP-gamma-S (a nonhydrolyzable GTP analog) triggers sustained glycogen breakdown even without epinephrine. Epinephrine plus GDP-beta-S (which locks G proteins in the GDP state) triggers none. Together these results show that:`,
-            options: [`A G protein's nucleotide state, downstream of the receptor, is both sufficient and necessary for the response`, `Epinephrine acts by entering the cell`, `Glycogen breakdown requires receptor internalization`, `GTP is a substrate for glycogen phosphorylase`],
+            options: [`A G protein's nucleotide state controls the response`, `Epinephrine acts by entering the cell and binding G proteins`, `Glycogen breakdown requires receptor internalization first`, `GTP is a substrate for glycogen phosphorylase`],
             correctAnswer: 0,
             explanation: `GTP-gamma-S bypasses the receptor and locks any activated G-alpha ON (sufficiency without ligand); GDP-beta-S prevents activation even with ligand present (necessity). The paired sufficiency/necessity design brackets the G protein between receptor and effector — exactly how heterotrimeric G proteins were originally mapped, and a template for interpreting any two-part passage experiment.`
           },
           {
             question: `A tumor's cells show high phospho-Akt. Treating them with an RTK inhibitor does not lower phospho-Akt, but a PI3K inhibitor does. The most likely driver lesion is:`,
-            options: [`An activating mutation in PI3K (or PTEN loss) — a node between the receptor and Akt`, `Overexpression of the growth-factor ligand`, `An activating RTK mutation`, `A defect downstream of Akt`],
-            correctAnswer: 0,
+            options: [`Overexpression of the growth-factor ligand itself`, `A gain-of-function lesion acting downstream of Akt`, `An activating mutation in the receptor kinase`, `An activating PI3K mutation, or loss of PTEN`],
+            correctAnswer: 3,
             explanation: `If the receptor were the driver (mutation or autocrine ligand), blocking it would drop Akt phosphorylation — it did not, so the lesion is downstream of the RTK. The PI3K inhibitor still works, so the lesion is at or upstream of PI3K's output (activating PI3K mutation, or loss of PTEN, which lets basal PIP$_3$ accumulate). Ordering lesions by which inhibitors still work is the pharmacologic version of epistasis.`
           }
         ]
