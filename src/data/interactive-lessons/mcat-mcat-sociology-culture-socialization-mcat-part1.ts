@@ -79,31 +79,31 @@ Language transmits culture across generations and, per the **Sapir-Whorf hypothe
         questions: [
           {
             question: `Wearing pajamas to a formal lecture draws amused glances; falsifying research data ends careers and triggers institutional investigation. In normative terms, the first act violates a ______ while the second violates a ______.`,
-            options: [`taboo; folkway`, `more; law`, `law; taboo`, `folkway; more (also formally sanctioned)`],
+            options: [`taboo; folkway`, `more; folkway`, `law; taboo`, `folkway; more`],
             correctAnswer: 3,
             explanation: `Norm grades are read off the reaction: mild amusement marks a folkway (etiquette-level rule), while moral outrage plus institutional punishment marks a more — here one that institutions also formally sanction. Data falsification is not generally a taboo (taboos provoke visceral revulsion at the very thought, like incest) nor typically a criminal law matter, and pajamas break no law.`
           },
           {
             question: `A society develops inexpensive facial-recognition cameras years before any shared norms about consent, privacy, or acceptable use develop; conflict over the devices surges. Ogburn would call this period:`,
-            options: [`Cultural relativism`, `Culture lag — nonmaterial culture failing to keep pace with material change`, `Culture shock`, `Counterculture formation`],
+            options: [`Cultural relativism`, `A period of culture lag`, `Collective culture shock`, `Counterculture formation`],
             correctAnswer: 1,
             explanation: `Culture lag is precisely this asymmetry: material culture (technology) changes quickly while the nonmaterial culture regulating it — norms, laws, ethics — adapts slowly, and the gap produces social conflict. Culture shock is an individual's disorientation in an unfamiliar culture, relativism is a methodological stance, and no oppositional group is described.`
           },
           {
             question: `A study finds that speakers of a language with obligatory grammatical marking of cardinal directions (rather than left/right) perform far better at dead-reckoning navigation, though they remain fully capable of learning left/right concepts. This finding best supports:`,
-            options: [`The weak (relativist) version of the Sapir-Whorf hypothesis: linguistic categories shape habitual cognition without strictly determining what can be thought`, `The strong version of the Sapir-Whorf hypothesis: language determines the limits of possible thought`, `Ethnocentrism in the researchers`, `The claim that language is material culture`],
+            options: [`The weak (relativist) Sapir-Whorf hypothesis`, `The strong (determinist) Sapir-Whorf hypothesis`, `Ethnocentrism in the researchers' task design`, `The claim that language is material culture`],
             correctAnswer: 0,
             explanation: `Enhanced habitual performance shows language INFLUENCES cognition (weak version); the speakers' preserved ability to learn left/right concepts directly refutes determinism (strong version), which would predict such concepts are unthinkable for them. Language is a paradigm case of nonmaterial culture, and no cross-cultural value judgment by the researchers appears.`
           },
           {
             question: `Group A maintains distinctive religious dress and dietary rules while participating fully in national schools, employment, and politics. Group B arms itself, rejects the legitimacy of the state, and works to replace the constitutional order. Sociologically:`,
-            options: [`Both are countercultures, since both differ from the mainstream`, `A is a counterculture; B is a subculture`, `A is a subculture (distinct but coexisting); B is a counterculture (norms in active opposition to the dominant culture)`, `Both are subcultures, since both have shared norms`],
+            options: [`Both are countercultures, since both differ`, `A is a counterculture; B is a subculture`, `A is a subculture; B is a counterculture`, `Both are subcultures, since both share norms`],
             correctAnswer: 2,
             explanation: `The subculture/counterculture line is drawn at OPPOSITION, not distinctiveness: Group A layers distinctive practices atop participation in dominant institutions, while Group B's defining norms reject and seek to overturn the dominant order. Difference alone never makes a counterculture — that is the trap in option A.`
           },
           {
             question: `A medical researcher initially dismisses a community's postpartum food restrictions as "ignorant superstition," then is instructed to instead document the practice's origins, internal logic, and effects before drawing conclusions. The instruction converts which stance into which?`,
-            options: [`Culture shock into assimilation`, `Multiculturalism into amalgamation`, `Cultural relativism into ethnocentrism`, `Ethnocentrism into cultural relativism as a methodological discipline`],
+            options: [`Culture shock into full assimilation`, `Multiculturalism into amalgamation`, `Cultural relativism into ethnocentrism`, `Ethnocentrism into cultural relativism`],
             correctAnswer: 3,
             explanation: `Judging the practice by the researcher's own culture's standards — and finding it deficient — is ethnocentrism; suspending that judgment to understand the practice within its own context is cultural relativism functioning as research method. The instruction does not require endorsing the practice, which is why relativism is compatible with later evidence-based health recommendations.`
           }

@@ -73,31 +73,31 @@ Reward circuit: mesolimbic **dopamine** pathway (VTA → nucleus accumbens); tol
         questions: [
           {
             question: `A polysomnogram segment shows theta background punctuated by brief high-frequency bursts and large biphasic waves, with no rapid eye movements and normal muscle tone. The sleeper is in:`,
-            options: [`REM sleep`, `Stage N1`, `Stage N2 — sleep spindles and K-complexes on a theta background are its defining features`, `Stage N3`],
+            options: [`REM sleep`, `Stage N1`, `Stage N2`, `Stage N3`],
             correctAnswer: 2,
             explanation: `Spindles (brief bursts) and K-complexes (large biphasic waves) are the exclusive markers of N2. N1 shows plain theta without them; N3 is dominated by slow delta waves; REM pairs an awake-looking EEG with rapid eye movements and muscle atonia — both absent here.`
           },
           {
             question: `A 6-year-old sits up screaming 90 minutes after bedtime, is inconsolable and unresponsive for several minutes, then returns to sleep and remembers nothing in the morning. This episode is best classified as:`,
-            options: [`A nightmare, since it involved fear`, `Narcolepsy`, `REM behavior disorder`, `A night terror — an N3 arousal event, early in the night, with no dream recall`],
+            options: [`A nightmare, since it involved fear`, `A narcoleptic attack of sleep-onset REM`, `An episode of REM sleep behavior disorder`, `A night terror arising from N3 sleep`],
             correctAnswer: 3,
             explanation: `Timing (first sleep cycle, when N3 dominates), inconsolability, and morning amnesia are the night-terror triad, an N3 parasomnia common in children. Nightmares are REM events later in the night and are RECALLED. Narcolepsy is daytime REM intrusion; REM behavior disorder involves acting out dreams when atonia fails, typically in older adults.`
           },
           {
             question: `After several nights of selective REM deprivation, participants allowed to sleep freely show a marked increase in the proportion of the night spent in REM. This "rebound" is most directly interpreted as evidence that:`,
-            options: [`REM sleep is dispensable`, `REM serves a homeostatically regulated function that the brain makes up when deprived`, `Delta waves generate dreams`, `The suprachiasmatic nucleus has been damaged`],
+            options: [`REM sleep is dispensable and can be skipped`, `REM meets a regulated need the brain repays`, `Delta waves of deep sleep generate dreams`, `The suprachiasmatic nucleus has been damaged`],
             correctAnswer: 1,
             explanation: `Compensatory overshoot after selective deprivation is the standard signature of a regulated need: the brain tracks a REM debt and repays it, implying REM does necessary work (consolidation and emotional processing are leading candidates). Dispensable processes show no rebound. Delta belongs to N3, and circadian pacemaker damage would disorganize timing, not produce selective REM repayment.`
           },
           {
             question: `A drug increases synaptic dopamine and norepinephrine; users show elevated heart rate, suppressed appetite, insomnia, and — with heavy use — paranoia. Withdrawal brings fatigue and depressed mood. This profile identifies a:`,
-            options: [`Stimulant, such as amphetamine or cocaine`, `Depressant enhancing GABA`, `An opioid acting at endorphin receptors`, `A classical hallucinogen like LSD`],
+            options: [`Stimulant, such as amphetamine`, `Depressant enhancing GABA`, `Narcotic at opioid receptors`, `Classic hallucinogen like LSD`],
             correctAnswer: 0,
             explanation: `Catecholamine elevation with sympathetic arousal, appetite suppression, insomnia, and a crash-type withdrawal is the stimulant signature; high-dose paranoia links to excess dopamine (one pillar of the dopamine hypothesis covered in the disorders lesson). Depressants sedate via GABA, opioids produce analgesia and respiratory depression, and hallucinogens act mainly on serotonin with perceptual distortion.`
           },
           {
             question: `In a within-subject Stroop experiment, every participant completes the congruent block first and the incongruent block second. The interference effect the researchers report is uninterpretable primarily because:`,
-            options: [`Reaction time cannot measure interference`, `The sample was too small by definition`, `Block order was not counterbalanced, so practice and fatigue effects are perfectly confounded with condition`, `Stroop effects appear only in between-subject designs`],
+            options: [`Reaction time cannot measure interference`, `The sample was too small to detect interference`, `Block order was fixed rather than counterbalanced`, `Stroop effects appear only in between-subject designs`],
             correctAnswer: 2,
             explanation: `With a fixed order, any difference between blocks could reflect the manipulation OR systematic change over time (practice speeding people up, fatigue slowing them down); the two are inseparable. Counterbalancing order across participants breaks the confound. RT is the standard interference measure, and Stroop is robust in within-subject designs when properly counterbalanced.`
           }

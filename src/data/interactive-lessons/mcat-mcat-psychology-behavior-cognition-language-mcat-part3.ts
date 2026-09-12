@@ -69,31 +69,31 @@ Global aphasia = both regions; reading/writing analogs are alexia/agraphia.`
         questions: [
           {
             question: `A three-year-old who previously said "went" correctly begins saying "goed" and "runned." Developmental psycholinguists treat these NEW errors as important because they:`,
-            options: [`Indicate a language delay requiring intervention`, `Show the child is imitating adult speech more closely`, `Reflect loss of previously reinforced forms`, `Demonstrate rule extraction — the child is overregularizing a grammatical pattern to forms no adult ever modeled, which imitation-based accounts cannot explain`],
+            options: [`Indicate a language delay requiring intervention`, `Show the child is imitating adult speech more closely`, `Reflect extinction of previously reinforced forms`, `Show the child is overapplying an extracted rule`],
             correctAnswer: 3,
             explanation: `No adult says "goed," so the form cannot be imitated; it appears precisely when the child induces the add -ed rule and overapplies it, temporarily displacing memorized irregulars. This U-shaped curve is normal development and the textbook evidence FOR internal rule learning and AGAINST Skinner's imitation-reinforcement account.`
           },
           {
             question: `A stroke patient speaks in rapid, grammatical-sounding streams filled with invented words, cannot follow simple spoken instructions, and appears unaware anything is wrong. The lesion is most likely in the:`,
-            options: [`Left frontal lobe near the motor cortex`, `Left superior temporal lobe — Wernicke's area, producing fluent speech devoid of meaning with impaired comprehension`, `Arcuate fasciculus`, `Right occipital lobe`],
+            options: [`Left inferior frontal lobe (Broca's area)`, `Left superior temporal lobe (Wernicke's area)`, `Arcuate fasciculus between language areas`, `Right occipital lobe (primary visual cortex)`],
             correctAnswer: 1,
             explanation: `Fluent-but-empty output, neologisms, failed comprehension, and lack of insight compose Wernicke's (receptive) aphasia, localizing to left superior temporal cortex. Broca's lesions (left frontal) produce the opposite: effortful, telegraphic speech with preserved comprehension and marked frustration. Arcuate damage selectively spares both fluency and comprehension while breaking repetition.`
           },
           {
             question: `Deaf individuals who are first exposed to sign language in adulthood typically achieve large vocabularies but persistently nonnative grammar, whereas those exposed from infancy sign with native syntax. This pattern most strongly supports:`,
-            options: [`A critical (sensitive) period for grammar acquisition, consistent with nativist theory`, `The behaviorist claim that reinforcement schedules were inadequate in adulthood`, `The strong Whorfian claim that language determines thought`, `The view that sign languages lack true syntax`],
+            options: [`A critical period for grammar, as nativists predict`, `The behaviorist view that adult reinforcement was lacking`, `The strong Whorfian view that language determines thought`, `The view that sign languages lack true syntax`],
             correctAnswer: 0,
-            explanation: `Vocabulary (learnable at any age) dissociating from syntax (native only with early exposure) is the fingerprint of a maturationally limited window for grammar — Chomsky's nativist prediction, echoed in cases like Genie. Reinforcement is available to adult learners too, so behaviorism cannot explain the age effect; sign languages are fully syntactic natural languages.`
+            explanation: `Vocabulary (learnable at any age) dissociating from syntax (native only with early exposure) is the fingerprint of a maturationally limited window for grammar — Chomsky's nativist prediction, echoed in cases like Genie. Reinforcement is available to adult learners too, so behaviorism cannot explain the age effect; linguistic determinism concerns language shaping thought, not when grammar can be acquired; and sign languages are fully syntactic natural languages.`
           },
           {
             question: `A 20-month-old says "more milk," "daddy go," and "want cookie," omitting articles and verb endings but preserving word order. This stage is called:`,
-            options: [`Babbling`, `The holophrastic stage`, `Telegraphic speech — two-word, content-heavy utterances with correct order but missing function morphemes`, `Overregularization`],
+            options: [`The canonical babbling stage`, `The holophrastic (one-word) stage`, `The telegraphic (two-word) stage`, `The overregularization stage`],
             correctAnswer: 2,
             explanation: `Two-word combinations that keep syntactic ORDER while dropping grammatical function words (articles, inflections) define telegraphic speech, typical at 18-24 months. Babbling is prelinguistic sound play; holophrastic speech is the earlier one-word stage; overregularization comes later, once inflectional rules are being extracted.`
           },
           {
             question: `A patient converses fluently and follows complex instructions without difficulty, yet reliably fails when asked to repeat sentences verbatim. The most likely site of damage, and why, is the:`,
-            options: [`Broca's area, because production is impaired`, `Hippocampus, because new memories cannot form`, `Wernicke's area, because input cannot be decoded`, `Arcuate fasciculus — the tract linking Wernicke's to Broca's area, so heard speech cannot be relayed directly to production despite intact comprehension and fluency`],
+            options: [`Broca's area, because production is impaired`, `Hippocampus, because new memories cannot form`, `Wernicke's area, as input cannot be decoded`, `Arcuate fasciculus, as the relay to Broca's is cut`],
             correctAnswer: 3,
             explanation: `Selective repetition failure with fluent output and good comprehension is conduction aphasia: both cortical language centers work, but the arcuate fasciculus connecting them is cut, breaking the direct perception-to-production route. Broca's or Wernicke's lesions would impair fluency or comprehension respectively, and hippocampal damage impairs new episodic learning, not immediate repetition.`
           }

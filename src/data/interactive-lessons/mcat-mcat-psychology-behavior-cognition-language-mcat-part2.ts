@@ -63,31 +63,31 @@ Related distortions: **framing effects** (identical options chosen differently a
         questions: [
           {
             question: `Told that Steve is "quiet, tidy, and loves detail," most people judge him more likely a librarian than a farmer, even though farmers outnumber male librarians many times over. The error illustrates:`,
-            options: [`The representativeness heuristic producing base-rate neglect — resemblance to a stereotype overrides category frequency`, `The availability heuristic`, `Anchoring on the word librarian`, `Functional fixedness`],
+            options: [`Representativeness heuristic and base-rate neglect`, `The availability heuristic, driven by ease of recall`, `Anchoring on the first occupation that was named`, `Functional fixedness applied to job categories`],
             correctAnswer: 0,
             explanation: `The judgment is driven by how well Steve MATCHES the librarian prototype while the vastly larger farmer base rate is ignored — the defining representativeness error. Availability would require the judgment to depend on ease of recalling instances; no initial numeric anchor is given; and functional fixedness concerns object use in problem solving.`
           },
           {
             question: `After a week of saturation news coverage of a rare train derailment, survey respondents rate rail travel as more dangerous than driving, contradicting fatality statistics. The bias at work is:`,
-            options: [`The conjunction fallacy`, `Belief perseverance`, `The availability heuristic — vivid, heavily reported events are easier to recall and therefore judged more frequent`, `Hindsight bias`],
+            options: [`The conjunction fallacy`, `The belief perseverance effect`, `The availability heuristic`, `Hindsight bias about the crash`],
             correctAnswer: 2,
             explanation: `Risk is being estimated from the EASE with which examples come to mind, which media coverage has just inflated — the availability heuristic's signature case. The conjunction fallacy requires a compound event judged likelier than its component; belief perseverance requires discredited evidence; hindsight bias requires an after-the-fact "I knew it."`
           },
           {
             question: `Given a candle, a book of matches, and a box of tacks, participants struggle to mount the candle on the wall until they empty the tack box — at which point many suddenly see the solution of tacking the BOX to the wall as a shelf. The initial difficulty is attributed to:`,
-            options: [`Mental set from prior candle problems`, `The framing effect`, `Insufficient fluid intelligence`, `Functional fixedness — representing the box only in its container role blocks seeing its use as a platform`],
+            options: [`Mental set from prior candle problems`, `A framing effect from how the task was described`, `Insufficient fluid reasoning ability`, `Functional fixedness about the tack box`],
             correctAnswer: 3,
-            explanation: `Duncker's candle problem is THE demonstration of functional fixedness: the box's habitual function (holding tacks) dominates its representation until emptying it perceptually frees the object for a new role. Mental set is persistence of a prior STRATEGY, not an object-role fixation, and the sudden restructuring afterward is insight at work.`
+            explanation: `Duncker's candle problem is THE demonstration of functional fixedness: the box's habitual function (holding tacks) dominates its representation until emptying it perceptually frees the object for a new role. Mental set is persistence of a prior STRATEGY, not an object-role fixation, and the sudden restructuring afterward is insight at work. Nothing about the task wording was reframed, and the solution appears once the box is emptied, not once reasoning ability changes.`
           },
           {
             question: `Longitudinal cognitive data typically show that vocabulary and accumulated professional knowledge hold steady or improve into the 60s, while speed of solving novel logic puzzles declines from early adulthood. This dissociation is described as:`,
-            options: [`A decline in g across the board`, `Stable crystallized intelligence alongside declining fluid intelligence`, `The Flynn effect`, `Evidence for Gardner's independent intelligences`],
+            options: [`A general decline in g across all abilities`, `Stable crystallized, declining fluid intelligence`, `Declining crystallized, stable fluid ability`, `Evidence for Gardner's independent intelligences`],
             correctAnswer: 1,
-            explanation: `Crystallized intelligence (stored knowledge, vocabulary) is age-robust; fluid intelligence (novel, speeded reasoning) peaks early and declines — the standard aging dissociation. A global g decline would drag both down; the Flynn effect is a cross-GENERATIONAL rise in scores; Gardner's model concerns distinct domains, not the knowledge-vs-novelty split.`
+            explanation: `Crystallized intelligence (stored knowledge, vocabulary) is age-robust; fluid intelligence (novel, speeded reasoning) peaks early and declines — the standard aging dissociation. A global g decline would drag both down; the reverse pattern contradicts the data, in which knowledge endures while novel speeded reasoning falls; Gardner's model concerns distinct domains, not the knowledge-vs-novelty split.`
           },
           {
             question: `Patients choose an operation described as having "90% one-month survival" far more often than the identical operation described as having "10% one-month mortality." This preference reversal demonstrates:`,
-            options: [`A framing effect — logically equivalent descriptions shift choices because losses and gains are evaluated differently`, `The gambler's fallacy`, `Accurate probabilistic reasoning`, `The testing effect`],
+            options: [`A framing effect from gain versus loss wording`, `The gambler's fallacy about survival odds`, `Accurate reasoning about the stated probabilities`, `The testing effect on memory for statistics`],
             correctAnswer: 0,
             explanation: `The options are numerically identical; only the description changed, yet choices reversed — the framing effect, rooted in prospect theory's asymmetry (people treat losses as looming larger than equivalent gains). Rational-agent reasoning would be frame-invariant. The gambler's fallacy concerns independence of sequential events, and the testing effect belongs to memory.`
           }

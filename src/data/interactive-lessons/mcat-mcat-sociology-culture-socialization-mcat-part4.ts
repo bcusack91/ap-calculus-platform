@@ -66,31 +66,31 @@ Sociology-of-culture passages lean on distinctive designs; know each one's chara
         questions: [
           {
             question: `A person classified as one race in Brazil is classified differently upon moving to the United States, with real consequences for how institutions treat them. Sociologists cite such cases primarily as evidence that:`,
-            options: [`Racial categories are biologically fixed but poorly measured`, `Race is socially constructed — classification systems are cultural products that vary across societies, yet produce real consequences`, `Ethnicity and race are identical concepts`, `Migration changes a person's ancestry`],
+            options: [`Racial categories are biologically fixed but poorly measured`, `Race is socially constructed yet has real consequences`, `Ethnicity and race are identical, interchangeable concepts`, `Migration changes a person's underlying ancestry`],
             correctAnswer: 1,
             explanation: `A biologically fixed category could not change at a border; classification varying by society while ancestry stays constant shows the category system is culturally built. The "real consequences" clause matters too — construction does not mean unreal (Thomas theorem). Ethnicity (claimed shared culture/ancestry) remains conceptually distinct from race (imposed classification treated as biological).`
           },
           {
             question: `Historians note that revolutions are rarely launched by the most destitute populations, but often by groups whose conditions had been IMPROVING until expectations outran gains. This pattern is the core evidence for:`,
-            options: [`Relative deprivation theory — movements arise from the perceived gap between deserved and actual conditions, not absolute misery`, `Resource mobilization theory`, `Mass hysteria`, `Culture lag`],
+            options: [`Relative deprivation theory`, `Resource mobilization theory`, `Mass hysteria and contagion`, `Ogburn's theory of culture lag`],
             correctAnswer: 0,
             explanation: `Relative deprivation locates movement energy in the comparison between what people believe they deserve and what they have; rising expectations that outpace real gains widen that perceived gap even as objective conditions improve — exactly the pattern described. Resource mobilization would instead point to organization, money, and networks; neither panic nor norm-technology mismatch is at issue.`
           },
           {
             question: `Two well-funded advocacy organizations press the same grievance in different states. The one with experienced leadership, donor networks, and allies inside the legislature wins policy change; the other, with equal public discontent but no such infrastructure, fails. This comparison best supports:`,
-            options: [`Relative deprivation theory, because discontent was present`, `The Sapir-Whorf hypothesis`, `Resource mobilization theory — given comparable grievances, organizational resources and political access determine movement success`, `Labeling theory`],
+            options: [`Relative deprivation theory`, `The Sapir-Whorf hypothesis`, `Resource mobilization theory`, `Labeling theory of deviance`],
             correctAnswer: 2,
             explanation: `Grievance level is held constant across the comparison; the outcome varies with leadership, money, networks, and institutional access — resource mobilization's exact claim that discontent is necessary but insufficient. Relative deprivation cannot explain the DIFFERENCE here because deprivation was equal; the other two theories concern language-cognition and deviance careers.`
           },
           {
             question: `An ethnographer spends a year inside one hospital documenting how residents learn to mask emotion during codes. The MOST defensible criticism of generalizing her conclusions to "medical socialization" broadly is that:`,
-            options: [`Ethnography cannot capture meaning or mechanism`, `A year is too long for valid observation`, `Emotion cannot be studied scientifically`, `A single setting cannot establish how typical the documented processes are, and her presence may itself have altered residents' behavior`],
+            options: [`Ethnography cannot capture meaning or causal mechanism`, `A full year is too long for valid, unbiased observation`, `Emotion cannot be studied with scientific observation`, `One site limits generalizability and invites reactivity`],
             correctAnswer: 3,
             explanation: `Ethnography's strengths are precisely meaning and mechanism (option A inverts them); its structural limits are generalizability from one case and reactivity — observed people behave differently (Hawthorne effect). Duration strengthens rather than weakens observation, and emotion norms are a standard, studiable sociological object (feeling rules).`
           },
           {
             question: `A study reports that teens who use a violent video game more hours per week commit more aggressive acts, concluding the game CAUSES aggression. The alternative explanation a careful reader should raise FIRST is:`,
-            options: [`The Hawthorne effect, because subjects knew they were surveyed`, `Selection — already-aggressive teens may choose violent games, so the correlation may reflect preexisting traits rather than media effects`, `Culture shock among the teens`, `That aggression is a folkway violation`],
+            options: [`The Hawthorne effect, because subjects knew they were surveyed`, `Selection of violent games by already-aggressive teens`, `Culture shock among teens new to violent games`, `That aggression is merely a folkway violation`],
             correctAnswer: 1,
             explanation: `Agent-outcome correlations in socialization research are chronically vulnerable to selection: people pick media and peers matching prior dispositions, so causation may run from trait to exposure. This rival is first because it attacks the causal direction itself; a randomized or longitudinal design addressing prior aggression would be the fix. The Hawthorne effect concerns behavior under observation, not correlational direction.`
           }

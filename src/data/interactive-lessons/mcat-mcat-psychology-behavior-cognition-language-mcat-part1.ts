@@ -66,33 +66,33 @@ Three classic accounts, ordered by where the filter sits:
         questions: [
           {
             question: `At a loud reception, a physician is absorbed in one conversation yet immediately turns when her name is spoken across the room. Among classic attention theories, this breakthrough is BEST accommodated by:`,
-            options: [`Broadbent's early filter, which blocks unattended channels before meaning analysis`, `Treisman's attenuation model, in which unattended input is weakened but personally significant, low-threshold stimuli still reach awareness`, `The visuospatial sketchpad`, `Sensory adaptation in the auditory nerve`],
+            options: [`Broadbent's early filter model, with strict channel blocking`, `Treisman's attenuation model, with a leaky early filter`, `Baddeley's visuospatial sketchpad in working memory`, `Sensory adaptation within the auditory nerve`],
             correctAnswer: 1,
             explanation: `A strict early filter cannot explain how an unattended word's MEANING (her name) was recognized. Attenuation theory keeps the filter early but leaky: unattended channels are turned down, and items with permanently low thresholds — one's name, danger words — break through. The sketchpad is a working-memory component, and adaptation would reduce, not enable, detection.`
           },
           {
             question: `Radiologists searching CT images for lung nodules were shown scans with a small gorilla image embedded; a large majority failed to notice it despite eye-tracking showing many looked directly at it. This is a demonstration of:`,
-            options: [`Change blindness`, `The Stroop effect`, `Retroactive interference`, `Inattentional blindness — an unexpected, fully visible stimulus goes unseen when attention is committed to another task`],
+            options: [`Visual change blindness`, `Stroop-type interference`, `Retroactive memory interference`, `Inattentional blindness`],
             correctAnswer: 3,
             explanation: `The stimulus was continuously present and fixated, yet unattended because the observers' attention was consumed by nodule search — inattentional blindness, the proof that fixation without attention does not produce awareness. Change blindness requires a change across a disruption; nothing changed here.`
           },
           {
             question: `Fluent readers are slow to say "blue" when the word RED appears in blue ink. The theoretical significance of this interference is that it:`,
-            options: [`Shows color perception is slower than reading in all humans`, `Demonstrates iconic memory decay`, `Indexes the automaticity of reading — a practiced process that runs involuntarily and generates a competing response that must be suppressed`, `Shows early filtering of word meaning`],
+            options: [`Shows color perception is slower than reading in all humans`, `Demonstrates rapid decay of iconic memory`, `Indexes the automaticity of practiced reading`, `Shows word meaning is filtered out early`],
             correctAnswer: 2,
             explanation: `Stroop interference exists BECAUSE reading has become automatic: it cannot be switched off even when it hurts performance, so its output (the word name) competes with the controlled task (ink-color naming). Preliterate children show little Stroop interference, confirming it tracks practice, not innate processing speeds. If word meaning were filtered early, there would be no conflict at all.`
           },
           {
             question: `Two tasks are performed together with almost no cost: an experienced driver holds a conversation on an empty highway. Which change would the controlled-vs-automatic framework predict MOST degrades the pairing?`,
-            options: [`Entering a construction zone with unpredictable merges, forcing driving back into effortful, controlled processing that competes with conversation for central capacity`, `Turning the radio off`, `The passenger speaking slightly more quietly`, `Continuing on the same empty highway for another hour`],
+            options: [`Entering a construction zone with unpredictable merges`, `Turning off the radio to reduce background noise`, `The passenger speaking slightly more quietly`, `Continuing on the same empty highway for another hour`],
             correctAnswer: 0,
             explanation: `Practiced highway driving runs largely automatically, leaving capacity for talk. Novel, unpredictable demands revert driving to controlled processing, and two controlled tasks exceed central capacity — conversation performance and hazard response both suffer. The other options leave the demand structure unchanged or reduce load.`
           },
           {
             question: `In a visual search study, time to find a target increases by roughly 40 ms for every added distractor in one condition, but stays flat regardless of distractor count in another. The most defensible interpretation is that search was:`,
-            options: [`Parallel in both conditions`, `Serial and effortful in the flat condition`, `Impossible in the linear condition`, `Serial (item-by-item, attention-demanding) when RT rose with set size, and parallel/automatic "pop-out" when RT was flat`],
+            options: [`Parallel in both conditions, differing only in speed`, `Serial in the flat condition and parallel in the rising one`, `Abandoned partway through in the linear condition`, `Serial when RT rose; parallel pop-out when RT was flat`],
             correctAnswer: 3,
-            explanation: `A linear RT-by-set-size slope is the signature of serial, attention-demanding comparison; a flat function means all items were processed simultaneously — the target pops out via a basic feature difference. This RT-slope logic is the standard way cognition passages quantify whether processing is controlled or automatic, so read the axes before the conclusions.`
+            explanation: `A linear RT-by-set-size slope is the signature of serial, attention-demanding comparison; a flat function means all items were processed simultaneously — the target pops out via a basic feature difference. Swapping the labels inverts that signature; slopes that differ between conditions rule out one parallel mechanism in both, and nothing in the data indicates search was abandoned. This RT-slope logic is the standard way cognition passages quantify whether processing is controlled or automatic, so read the axes before the conclusions.`
           }
         ]
       }

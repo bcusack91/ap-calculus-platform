@@ -77,31 +77,31 @@ The sociological position is not that biology is irrelevant — it is that biolo
         questions: [
           {
             question: `A 5-year-old convincingly plays "teacher" to her dolls, mimicking her own teacher's phrases, but the game collapses whenever a playmate tries to join as a student with independent ideas. In Mead's framework the child is in the:`,
-            options: [`Game stage, because she sustains a full classroom scene`, `Play stage — she can take the role of one significant other but cannot yet coordinate multiple simultaneous roles`, `Preparatory stage, because she is imitating`, `Generalized-other stage, because she invokes school norms`],
+            options: [`Game stage, since she sustains a full classroom scene`, `Play stage, because she enacts only one role at a time`, `Preparatory stage, because she is imitating`, `Generalized-other stage, as she invokes school norms`],
             correctAnswer: 1,
             explanation: `Role-taking is present (she genuinely enacts the teacher's perspective — beyond preparatory imitation), but only ONE role at a time; a playmate's independent complementary role demands the multi-role coordination of the game stage, which she lacks. Invoking a specific teacher's phrases points to a significant other, not the generalized other's abstract community standpoint.`
           },
           {
             question: `New army recruits surrender their clothing and haircuts, are addressed by number, follow one authority's schedule for eating, sleeping, and exercise, and emerge with transformed identities. Goffman would emphasize that the transformation is powered by:`,
-            options: [`Anticipatory socialization through media portrayals of soldiers`, `Peer-group socialization alone`, `The total institution's control over all spheres of life, beginning with a ceremonial stripping of prior identity`, `The looking-glass self operating without any audience`],
+            options: [`Anticipatory socialization through media portrayals of soldiers`, `Peer-group socialization among recruits alone`, `The total institution's control over every sphere of life`, `The looking-glass self operating without any audience`],
             correctAnswer: 2,
             explanation: `Boot camp is the model total institution: a single authority administers every life domain, and entry rituals (uniforms, shaved heads, numbers) function as degradation ceremonies dismantling the civilian self so a new one can be built — resocialization. Anticipatory socialization happens BEFORE entering a role, and peers matter inside the institution but are not the distinctive engine Goffman identified.`
           },
           {
             question: `A premedical student begins wearing professional dress to volunteer shifts, practices delivering bad news aloud, and adopts physicians' vocabulary years before medical school. This is best described as:`,
-            options: [`Resocialization within a total institution`, `A degradation ceremony`, `Primary socialization`, `Anticipatory socialization — rehearsing the norms of a role she does not yet occupy`],
+            options: [`Resocialization within a total institution`, `A degradation ceremony`, `Primary socialization`, `Anticipatory socialization`],
             correctAnswer: 3,
             explanation: `Anticipatory socialization is the advance rehearsal of a future role's norms, easing the eventual transition. Nothing here dismantles an existing identity under institutional control (resocialization), no ritual strips her prior self (degradation ceremony), and primary socialization is the childhood acquisition of basic culture in the family — long since complete.`
           },
           {
             question: `Cooley's looking-glass self implies that a student who WRONGLY believes his classmates see him as incompetent will:`,
-            options: [`Develop shame and a self-concept of incompetence anyway, because imagined judgments — accurate or not — construct the self`, `Be unaffected, because self-concept responds only to actual judgments`, `Correct the belief automatically through the generalized other`, `Shift to the game stage of development`],
+            options: [`Develop a self-concept of incompetence anyway`, `Be unaffected, since only actual judgments count`, `Correct it automatically via the generalized other`, `Shift into the game stage of self-development`],
             correctAnswer: 0,
             explanation: `The looking-glass process runs entirely on our IMAGINATION of others' appraisals: imagine appearance, imagine judgment, feel and internalize the result. Accuracy is nowhere required — a mistaken imagined judgment shapes the self exactly as an accurate one would (the Thomas theorem inside the self). No mechanism guarantees automatic correction.`
           },
           {
             question: `In Mead's account, a purely conforming person whose every act merely executes internalized social expectations would be exhibiting:`,
-            options: [`A dominant "I" with a weak "me"`, `A balanced dialogue of "I" and "me"`, `A dominant "me" with a suppressed "I" — society's internalized attitudes without the spontaneous, creative phase of the self`, `The preparatory stage of the self`],
+            options: [`A dominant "I" with a weak "me"`, `A balanced dialogue of "I" and "me"`, `A dominant "me" with a suppressed "I"`, `The preparatory stage of the self`],
             correctAnswer: 2,
             explanation: `The "me" is the organized set of others' attitudes taken into the self; the "I" is the spontaneous respondent that makes conduct more than social playback. All-"me" behavior is pure conformity; all-"I" would be pure impulse. Mead's point is that normal selfhood is the ongoing conversation between the two — which is why novelty and social change remain possible at all.`
           }
