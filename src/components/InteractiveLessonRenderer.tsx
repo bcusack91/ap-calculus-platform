@@ -3525,8 +3525,12 @@ function MiniBossBattle({
     ).then(module => {
       const question = module.getRandomMiniBossQuestion(questionType, usedQuestionIds)
       
-      // Shuffle the options so correct answer isn't always first
-      const shuffledOptions = shuffleArray(question.options)
+      // Shuffle, then re-letter by position. The letters are stored on the
+      // options and the banks letter the correct one "A", so a label that moved
+      // with its option would still give the answer away.
+      const shuffledOptions = shuffleArray<MiniBossOption>(question.options).map(
+        (option, i) => ({ ...option, label: String.fromCharCode(65 + i) }),
+      )
       
       setCurrentQuestion({
         ...question,

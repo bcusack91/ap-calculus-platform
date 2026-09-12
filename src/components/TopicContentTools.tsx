@@ -9,6 +9,7 @@ import { WorkedExample } from '@/components/WorkedExamples'
 import { MultiStepProblem } from '@/components/MultiStepProblem'
 import { GraphingQuestion } from '@/components/GraphingQuestion'
 import { AdaptivePractice } from '@/components/AdaptivePractice'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 /**
  * Client-side content tools rendered on topic pages.
@@ -88,14 +89,27 @@ export function TopicContentTools({ topicTitle, topicSlug, courseName }: {
   // Worked example data
   const workedExample = getWorkedExample(courseName, topicTitle)
 
-  // Multi-step problem data
-  const multiStepData = getMultiStepProblem(courseName, topicTitle)
+  // The multi-step and adaptive banks below are authored with the correct
+  // option mostly in second place, and both components render options as
+  // given. Shuffle with a seed so the order is stable across re-renders and
+  // matches between server and client.
+  const rawMultiStep = getMultiStepProblem(courseName, topicTitle)
+  const multiStepData = rawMultiStep && {
+    ...rawMultiStep,
+    steps: rawMultiStep.steps.map((step) => {
+      const shuffled = shuffleOptions(step.options, step.correctAnswer, step.prompt)
+      return { ...step, options: shuffled.options, correctAnswer: shuffled.correctIndex }
+    }),
+  }
 
   // Graphing question (calculus only)
   const graphingData = isCalculus ? getGraphingQuestion(topicTitle) : null
 
   // Adaptive practice questions
-  const adaptiveQuestions = getAdaptiveQuestions(courseName, topicTitle)
+  const adaptiveQuestions = getAdaptiveQuestions(courseName, topicTitle).map((q) => {
+    const shuffled = shuffleOptions(q.options, q.correctAnswer, q.question)
+    return { ...q, options: shuffled.options, correctAnswer: shuffled.correctIndex }
+  })
 
   return (
     <div className="space-y-6 mt-8">

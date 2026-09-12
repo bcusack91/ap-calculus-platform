@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { generateExitQuiz } from '@/data/exit-quizzes'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 /**
  * Auto-generated in-class slide decks (owner spec, Aug 2026: ~25 slides ≈ one
@@ -324,7 +325,11 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       const stem = q.question.trim().toLowerCase()
       if (seen.has(stem)) continue
       seen.add(stem)
-      polls.push({ kind: 'poll', question: q.question, options: q.options, correctIndex, explanation: q.explanation })
+      // Poll sources store options in authored order — most exit-quiz pools key
+      // option B, lesson exercises key option A — and the deck shows them as
+      // given. Seeded by the stem so a pre-built deck and a live rebuild agree.
+      const shuffled = shuffleOptions(q.options, correctIndex, q.question)
+      polls.push({ kind: 'poll', question: q.question, options: shuffled.options, correctIndex: shuffled.correctIndex, explanation: q.explanation })
       if (polls.length >= MAX_POLLS) break
     }
   } catch { polls = [] }
@@ -358,11 +363,12 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
               Array.isArray(qq.options) && qq.options.length >= 2 && qq.options.every(o => typeof o === 'string') &&
               typeof qq.correctAnswer === 'number' && qq.correctAnswer >= 0 && qq.correctAnswer < qq.options.length
             ) {
+              const shuffled = shuffleOptions(qq.options as string[], qq.correctAnswer, qq.question)
               lessonPolls.push({
                 kind: 'poll',
                 question: qq.question,
-                options: qq.options as string[],
-                correctIndex: qq.correctAnswer,
+                options: shuffled.options,
+                correctIndex: shuffled.correctIndex,
                 explanation: typeof qq.explanation === 'string' ? qq.explanation : '',
               })
             }

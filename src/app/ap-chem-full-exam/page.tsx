@@ -10,7 +10,8 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import type { ChemFRQ, FRQRubricItem } from '@/data/ap-chem-frq/questions'
 import { generateExitQuiz } from '@/data/exit-quizzes'
-import { shuffleArray } from '@/lib/shuffle-options'
+import { shuffleArray, shuffleOptions } from '@/lib/shuffle-options'
+import { AP_CHEM_EXAM_TOPICS as TOPIC_SLUGS } from '@/data/ap-chem-full-exam-topics'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -53,31 +54,29 @@ function gradeResponse(
   }
 }
 
-const TOPIC_SLUGS = [
-  'atomic-structure-periodicity-apchem', 'chemical-bonding-apchem', 'intermolecular-forces-apchem',
-  'stoichiometry-apchem', 'gas-laws-apchem', 'solutions-mixtures-apchem',
-  'thermodynamics-apchem', 'enthalpy-hess-law-apchem', 'entropy-gibbs-apchem',
-  'kinetics-rate-laws-apchem', 'reaction-mechanisms-apchem', 'equilibrium-apchem',
-  'le-chatelier-principle-apchem', 'acids-bases-apchem', 'buffers-titrations-apchem',
-  'electrochemistry-apchem', 'oxidation-reduction-apchem', 'nuclear-chemistry-apchem',
-  'spectroscopy-analysis-apchem', 'molecular-geometry-apchem',
-  'lewis-structures-apchem', 'periodic-trends-apchem',
-  'colligative-properties-apchem', 'calorimetry-apchem',
-  'solubility-equilibrium-apchem', 'chemical-equations-apchem',
-]
-
 async function loadMCQuestions(): Promise<MCQuestion[]> {
   const all: MCQuestion[] = []
+  const seen = new Set<string>()
   for (const slug of TOPIC_SLUGS) {
     try {
-      const pool = await generateExitQuiz(slug, 4)
-      all.push(...pool.map(q => ({
-        question: q.question,
-        options: q.options,
-        correctAnswer: q.correctIndex ?? 0,
-        explanation: q.explanation,
-        topic: slug,
-      })))
+      const pool = (await generateExitQuiz(slug, 4)).filter(q => {
+        const stem = q.question.trim().toLowerCase()
+        if (seen.has(stem)) return false
+        seen.add(stem)
+        return true
+      })
+      // The AP Chem pool stores options in authored order (B is correct in over
+      // half of it), so shuffle here — this page renders options as given.
+      all.push(...pool.map(q => {
+        const shuffled = shuffleOptions(q.options, q.correctIndex ?? 0, q.question)
+        return {
+          question: q.question,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctIndex,
+          explanation: q.explanation,
+          topic: slug,
+        }
+      }))
     } catch { /* skip unavailable */ }
   }
   return shuffleArray(all).slice(0, 60)
