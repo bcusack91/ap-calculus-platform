@@ -49,31 +49,31 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
         questions: [
           {
             question: `MRSA resists essentially all classic beta-lactams because it:`,
-            options: [`Produces an extended-spectrum beta-lactamase that destroys them`, `Acquired mecA, encoding PBP2a, a transpeptidase with very low affinity for beta-lactams`, `Lost the porins through which beta-lactams enter`, `Replaced its peptidoglycan terminus with D-Ala-D-lactate`],
+            options: [`Produces an extended-spectrum beta-lactamase that destroys them`, `Acquired mecA, encoding a low-affinity transpeptidase (PBP2a)`, `Lost the porins through which beta-lactams enter`, `Replaced its peptidoglycan terminus with D-Ala-D-lactate`],
             correctAnswer: 1,
             explanation: `Methicillin was designed to survive beta-lactamase, so staph escaped by target replacement: the horizontally acquired mecA gene supplies an alternative PBP that keeps cross-linking wall even when native PBPs are acylated. D-Ala-D-lactate is the VANCOMYCIN-resistance change in enterococci.`
           },
           {
             question: `Clavulanate has almost no antibacterial activity by itself, yet dramatically extends amoxicillin's spectrum. Clavulanate acts by:`,
-            options: [`Irreversibly inhibiting beta-lactamase, protecting the co-administered beta-lactam`, `Opening porins so amoxicillin enters faster`, `Blocking efflux pumps`, `Binding PBP2a in resistant staphylococci`],
+            options: [`Irreversibly inhibiting the bacterial beta-lactamase`, `Opening porins so amoxicillin enters faster`, `Blocking efflux pumps that export amoxicillin`, `Binding PBP2a in resistant staphylococci`],
             correctAnswer: 0,
             explanation: `Clavulanate is a beta-lactam-ring 'decoy' that acylates and permanently disables beta-lactamase — a suicide inhibitor. With the destroying enzyme occupied, amoxicillin survives to reach its PBP targets. It does not touch PBP2a, which is why the combination still fails against MRSA.`
           },
           {
             question: `In the Luria-Delbruck fluctuation experiment, parallel cultures plated on phage (or drug) showed wildly variable numbers of resistant colonies. This variability demonstrated that resistance mutations:`,
-            options: [`Are induced by the selective agent at a constant rate`, `Occur only during exposure to the agent`, `Arise spontaneously BEFORE exposure, at random times during prior growth`, `Are transferred between cultures by conjugation`],
+            options: [`Are induced by the selective agent at a constant rate`, `Occur only during exposure to the agent`, `Arise spontaneously and randomly before any exposure`, `Are transferred between cultures by conjugation`],
             correctAnswer: 2,
             explanation: `If exposure induced mutations, every culture would yield similar counts (Poisson). Instead, cultures where a mutation happened to arise EARLY produced 'jackpots' of descendants — huge variance. Mutation is random and pre-adaptive; the drug only selects.`
           },
           {
             question: `A single conjugation event renders a previously susceptible E. coli resistant to four unrelated antibiotic classes simultaneously. The most likely vehicle is:`,
-            options: [`Four independent chromosomal point mutations`, `A lysogenic phage carrying one resistance gene`, `Natural transformation with fragmented DNA`, `An R plasmid carrying multiple resistance cassettes (often assembled by transposons/integrons)`],
+            options: [`Four independent chromosomal point mutations`, `A lysogenic phage carrying one resistance gene`, `Natural transformation with fragmented DNA`, `An R plasmid carrying stacked resistance genes`],
             correctAnswer: 3,
             explanation: `Multidrug resistance appearing in one step is the signature of an R plasmid: a conjugative element loaded with stacked resistance genes. Independent mutations in four targets in one generation would be astronomically unlikely, and transformation/transduction move smaller pieces less reliably.`
           },
           {
             question: `Bacteria deep in a catheter biofilm survive antibiotic concentrations far above the MIC measured for the same strain in liquid culture, yet cells recovered from the biofilm test as fully susceptible. This is best described as:`,
-            options: [`Horizontal acquisition of resistance genes within the biofilm`, `Phenotypic tolerance from slow growth and matrix shielding, not genetic resistance`, `Selection of rpoB mutants by the antibiotic`, `Conversion to L-forms lacking cell walls`],
+            options: [`Horizontal acquisition of resistance genes within the biofilm`, `Phenotypic tolerance, not genetic resistance`, `Selection of rpoB mutants by the antibiotic`, `Conversion to L-forms lacking cell walls`],
             correctAnswer: 1,
             explanation: `The recovered cells are genetically unchanged (susceptible when re-tested) — so survival came from their physiological state: dormancy defeats drugs that require growth, and the exopolysaccharide matrix slows penetration. This is why infected devices are removed rather than sterilized in place.`
           }

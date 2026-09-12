@@ -54,7 +54,7 @@ An **F$^+$** cell (carrying the fertility plasmid) builds a **sex pilus**, conta
           },
           {
             question: `In an Hfr x F-minus interrupted-mating experiment, recipients acquire donor genes in a reproducible time order, and virtually none become F-plus. Recipients stay F-minus because:`,
-            options: [`The F factor transfers first and is immediately degraded`, `Hfr cells lack the genes for pilus formation`, `The conjugation bridge usually breaks before the integrated F sequence, which transfers LAST, crosses over`, `The recipient's restriction enzymes destroy only F DNA`],
+            options: [`The F factor transfers first and is immediately degraded`, `Hfr cells lack the genes for pilus formation`, `The mating bridge breaks before F finishes transferring`, `The recipient's restriction enzymes destroy only F DNA`],
             correctAnswer: 2,
             explanation: `In an Hfr, transfer begins within the integrated F, proceeds through chromosomal genes in map order, and would complete F only after the ENTIRE chromosome — but mating pairs separate long before that. The time-of-entry order is precisely what made interrupted mating a mapping tool.`
           },
@@ -66,13 +66,13 @@ An **F$^+$** cell (carrying the fertility plasmid) builds a **sex pilus**, conta
           },
           {
             question: `Generalized and specialized transduction differ in that generalized transduction:`,
-            options: [`Occurs only with temperate phages integrating site-specifically`, `Transfers only genes adjacent to the phage integration site`, `Requires a sex pilus`, `Can package and transfer essentially ANY host gene, because random chromosome fragments are mispackaged during lytic growth`],
+            options: [`Occurs only with temperate phages integrating site-specifically`, `Transfers only genes adjacent to the phage integration site`, `Requires a sex pilus for DNA transfer`, `Can package and transfer essentially any host gene`],
             correctAnswer: 3,
             explanation: `Generalized: lytic-cycle packaging errors grab random host DNA — any locus, equal (low) odds. Specialized: an imprecisely excising prophage carries only its neighboring genes. Both are phage-borne, so neither needs a pilus.`
           },
           {
             question: `A multidrug-resistance gene cluster moves from a chromosome onto a conjugative plasmid, then into another species. The element most directly responsible for the chromosome-to-plasmid step is:`,
-            options: [`A sex pilus`, `A transposon carrying the resistance cassette`, `A restriction endonuclease`, `An origin of replication`],
+            options: [`The conjugative pilus of the donor cell`, `A transposon carrying the resistance cassette`, `A restriction endonuclease in the donor`, `A second origin of replication`],
             correctAnswer: 1,
             explanation: `Transposons cut-and-paste (or copy-and-paste) between replicons within a cell — the chromosome-to-plasmid hop. Conjugation then handles the BETWEEN-cell step via the pilus. Two distinct mobility layers stack to spread resistance.`
           }

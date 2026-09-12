@@ -44,31 +44,31 @@ Ask in order: (1) Which stage of infection is the experiment probing — adhesio
         questions: [
           {
             question: `A vaccine is made by formalin-inactivating a purified bacterial product, and it elicits protective antibodies. The product must be:`,
-            options: [`Lipopolysaccharide from the outer membrane`, `Peptidoglycan fragments`, `A protein exotoxin (the vaccine is a toxoid)`, `Capsular lipid`],
+            options: [`Lipopolysaccharide from the outer membrane`, `Peptidoglycan wall fragments`, `A secreted protein exotoxin`, `A capsular lipid anchor`],
             correctAnswer: 2,
             explanation: `Toxoids are denatured protein exotoxins: antigenic enough to raise neutralizing antitoxin, but catalytically dead (tetanus and diphtheria vaccines). LPS is poorly antigenic, structurally required, and cannot be 'inactivated' into a useful protein-like immunogen.`
           },
           {
             question: `Cholera toxin causes profuse watery diarrhea WITHOUT destroying intestinal cells. Its A subunit acts by:`,
-            options: [`ADP-ribosylating a stimulatory G protein, locking adenylyl cyclase on and raising cAMP`, `Cleaving SNARE proteins in enterocytes`, `Forming pores in the apical membrane`, `Inactivating elongation factor EF-2`],
+            options: [`ADP-ribosylating a stimulatory G protein`, `Cleaving SNARE proteins in enterocytes`, `Forming pores in the apical membrane`, `ADP-ribosylating elongation factor EF-2`],
             correctAnswer: 0,
             explanation: `Cholera toxin's ADP-ribosylation freezes G-alpha-s in its GTP-bound (active) state; runaway cAMP drives CFTR-mediated chloride secretion, and water follows osmotically. The epithelium stays intact — pure signaling hijack. EF-2 ADP-ribosylation is DIPHTHERIA toxin's move.`
           },
           {
             question: `Botulinum and tetanus toxins both cleave SNARE proteins, yet botulism causes flaccid paralysis while tetanus causes spastic paralysis. The difference arises because the toxins:`,
-            options: [`Use entirely different catalytic mechanisms`, `Act on different neurons — botulinum at the neuromuscular junction (blocking ACh release), tetanus in inhibitory interneurons (blocking glycine/GABA release)`, `Differ in heat stability`, `Are endotoxin vs exotoxin respectively`],
+            options: [`Use entirely different catalytic mechanisms`, `Act on different types of neurons`, `Differ in heat stability, not in target site`, `Are endotoxin vs exotoxin respectively`],
             correctAnswer: 1,
             explanation: `Same enzymatic step — SNARE cleavage stops vesicle fusion — but location decides the sign: silencing motor-neuron ACh output relaxes muscle (flaccid); silencing inhibitory interneurons disinhibits motor neurons (spastic). A beautiful example of context determining phenotype.`
           },
           {
             question: `A patient on broad-spectrum antibiotics for pneumonia develops severe colitis caused by toxin-producing C. difficile. The predisposing event was:`,
-            options: [`Direct stimulation of C. difficile growth by the antibiotic`, `Transfer of toxin genes from the pneumonia pathogen`, `Antibiotic-induced mutation of gut commensals into pathogens`, `Elimination of competing normal gut flora, vacating a niche the resistant spore-former then colonized`],
+            options: [`Direct stimulation of C. difficile growth by the antibiotic`, `Transfer of toxin genes from the pneumonia pathogen`, `Antibiotic-induced mutation of gut commensals into pathogens`, `Elimination of competing normal gut flora`],
             correctAnswer: 3,
             explanation: `Normal flora suppress C. difficile by competition for nutrients and niches. Broad-spectrum therapy clears the competitors; ingested or resident C. difficile spores (intrinsically resistant to many drugs) germinate and expand. Antibiotics select and vacate — they neither feed, mutate, nor transfer.`
           },
           {
             question: `Toxic shock syndrome toxin activates about 20 percent of the body's T cells regardless of their antigen specificity. It accomplishes this by:`,
-            options: [`Being processed and presented on MHC I in every cell`, `Directly binding the CD8 coreceptor`, `Crosslinking MHC II on antigen-presenting cells to T-cell receptors OUTSIDE the normal peptide-binding groove`, `Mimicking interleukin-2 at its receptor`],
+            options: [`Being processed and presented on MHC I in every cell`, `Directly binding the CD8 coreceptor on T cells`, `Crosslinking MHC II on APCs to T-cell receptors outside the peptide groove`, `Mimicking interleukin-2 at its receptor`],
             correctAnswer: 2,
             explanation: `Superantigens clamp MHC II to the TCR's variable beta region externally, bypassing peptide specificity entirely — so entire TCR V-beta families fire at once. Normal antigens activate roughly 1 in 10,000 T cells; superantigens activate 1 in 5, releasing a systemic cytokine storm.`
           }

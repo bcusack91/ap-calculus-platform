@@ -51,31 +51,31 @@ $$\\text{alkane} \\rightarrow \\text{alcohol} \\rightarrow \\text{aldehyde/keton
         questions: [
           {
             question: `Which reagent converts 1-pentanol into pentanal WITHOUT overoxidation to pentanoic acid?`,
-            options: [`PCC in anhydrous dichloromethane`, `Jones reagent (CrO3/H2SO4)`, `Hot aqueous KMnO4`, `LiAlH4`],
+            options: [`PCC in dry dichloromethane`, `Jones reagent (CrO3/H2SO4)`, `Hot aqueous KMnO4 with base`, `LiAlH4 in dry ether`],
             correctAnswer: 0,
             explanation: `PCC is the anhydrous, mild oxidant that stops primary alcohols at the aldehyde stage. Aqueous strong oxidants (Jones, KMnO4) hydrate the aldehyde to the gem-diol, which oxidizes again to the acid. LiAlH4 is a reductant, moving the wrong way on the ladder.`
           },
           {
             question: `Lactate dehydrogenase oxidizes lactate to pyruvate. In carbonyl terms, the enzyme:`,
-            options: [`Forms an acetal at C2 of lactate`, `Catalyzes an aldol addition between lactate and $NAD^+$`, `Performs a nucleophilic acyl substitution on the carboxylate`, `Removes a hydride from the carbinol carbon, transferring it to $NAD^+$ and converting a secondary alcohol into a ketone`],
+            options: [`Forms an acetal at C2 of lactate`, `Catalyzes an aldol addition between lactate and $NAD^+$`, `Performs a nucleophilic acyl substitution on the carboxylate`, `Transfers a hydride from the alcohol carbon to $NAD^+$`],
             correctAnswer: 3,
             explanation: `Alcohol → ketone is one rung up the oxidation ladder; biology climbs it by hydride transfer to the nicotinamide ring of NAD+ (plus loss of the O-H proton). The carboxylate of lactate is a spectator — it is the C2 secondary alcohol that becomes pyruvate's ketone.`
           },
           {
             question: `Glucose gives a positive Tollens/Benedict's test but methyl glucoside (the O-methyl acetal at the anomeric carbon) does not, because:`,
-            options: [`Methylation destroys all hydroxyl groups`, `The glucoside is too large to enter the reagent solution`, `The acetal cannot reopen to the free aldehyde under the test's basic conditions, while glucose's hemiacetal can`, `Glucose is a ketose`],
+            options: [`Methylation destroys all hydroxyl groups`, `The glucoside is too large to enter the reagent solution`, `The acetal cannot reopen to the free aldehyde`, `Glucose is a ketose, not an aldose`],
             correctAnswer: 2,
             explanation: `Reducing-sugar tests oxidize the open-chain ALDEHYDE. A hemiacetal is in equilibrium with that open form, so glucose reacts. Converting the anomeric center to a full acetal locks the ring — acetals are stable to base, so no aldehyde is ever available. One methyl at one carbon changes the verdict.`
           },
           {
             question: `HbA1c forms when glucose reacts non-enzymatically with an N-terminal valine amine of hemoglobin. The FIRST covalent intermediate is:`,
-            options: [`An acetal`, `An imine (Schiff base) formed from the open-chain aldehyde and the amine`, `An ester`, `An enolate`],
+            options: [`An acetal of glucose`, `An imine (Schiff base)`, `An amide bond to valine`, `An enolate of glucose`],
             correctAnswer: 1,
             explanation: `Glycation begins exactly like any imine formation: the amine adds to glucose's open-chain aldehyde, then dehydration gives the Schiff base, which slowly rearranges (Amadori) to the stable ketoamine measured clinically. Recognizing textbook mechanisms inside clinical passages is the core MCAT skill here.`
           },
           {
             question: `In fatty acid synthesis, the condensing enzyme joins malonyl-ACP to the growing acyl chain with loss of $CO_2$. The carbon-carbon bond-forming step is best classified as:`,
-            options: [`An E2 elimination`, `A 1,2-hydride addition`, `An electrophilic aromatic substitution`, `A Claisen-type condensation in which decarboxylation generates the nucleophilic carbanion/enolate`],
+            options: [`An E2 elimination across the acyl chain`, `A 1,2-hydride addition to the thioester`, `An electrophilic aromatic substitution`, `A decarboxylative Claisen-type condensation`],
             correctAnswer: 3,
             explanation: `Losing CO2 from malonyl-ACP creates a stabilized carbanion (enolate equivalent) that attacks the thioester carbonyl of the acyl chain, expelling the sulfur leaving group — the biological Claisen condensation. The decarboxylation makes the step effectively irreversible, which is why synthesis uses malonyl (C3) rather than acetyl (C2) donors.`
           }

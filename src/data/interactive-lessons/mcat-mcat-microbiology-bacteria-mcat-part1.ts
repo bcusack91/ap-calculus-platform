@@ -44,31 +44,31 @@ Cocci (spheres) and bacilli (rods) dominate; division-plane geometry generates c
         questions: [
           {
             question: `A bacterium stains pink after Gram staining. Which structure does it necessarily possess?`,
-            options: [`Thick multilayered peptidoglycan`, `Teichoic acids`, `An outer membrane containing lipopolysaccharide`, `Mycolic acid coat`],
+            options: [`Thick multilayered peptidoglycan`, `Teichoic acids anchored in the wall`, `An LPS-bearing outer membrane`, `A waxy mycolic acid coat`],
             correctAnswer: 2,
             explanation: `Pink (safranin counterstain) = gram-negative: the thin peptidoglycan cannot hold crystal violet through alcohol decolorization. The defining gram-negative feature is the LPS-bearing outer membrane. Thick peptidoglycan and teichoic acids are gram-POSITIVE traits; mycolic acids mark acid-fast organisms.`
           },
           {
             question: `Septic shock caused by gram-negative bacteremia is triggered primarily by:`,
-            options: [`The lipid A portion of LPS activating a massive innate immune response`, `Secreted exotoxin proteins`, `Teichoic acid release`, `Peptidoglycan fragments alone`],
+            options: [`The lipid A portion of the LPS outer membrane`, `Secreted protein exotoxins from the pathogen`, `Teichoic acid shed from the cell wall`, `Peptidoglycan fragments released during lysis`],
             correctAnswer: 0,
             explanation: `Endotoxin = LPS, and its toxic moiety is lipid A, recognized by TLR4 on innate immune cells. Released in bulk during bacterial lysis, it drives cytokine storm, vasodilation, and DIC. It is heat-stable and membrane-integral — unlike secreted, protein exotoxins.`
           },
           {
             question: `In a bacterium, ribosomes begin translating an mRNA before its transcription is complete. This is possible because:`,
-            options: [`Bacterial ribosomes read RNA 3' to 5'`, `There is no nuclear envelope separating transcription from the translational machinery`, `Bacterial mRNA requires no ribosomes`, `RNA polymerase itself synthesizes the protein`],
+            options: [`Bacterial ribosomes read mRNA in the 3'-to-5' direction`, `There is no nuclear envelope separating the two steps`, `Bacterial mRNA carries a 5' cap added during transcription`, `RNA polymerase itself synthesizes the protein`],
             correctAnswer: 1,
             explanation: `In eukaryotes, transcription (nucleus) and translation (cytosol) are physically separated and mRNA is processed in between. Prokaryotes have no such compartment: ribosomes engage the 5' end of nascent mRNA immediately — coupled transcription-translation, one basis for their rapid growth.`
           },
           {
             question: `An autoclave (121 degrees C, pressurized steam) is required to sterilize surgical instruments contaminated with Clostridium because boiling alone fails to destroy:`,
-            options: [`LPS in the outer membrane`, `The organism's plasmids`, `Capsular polysaccharide`, `Endospores, whose dehydrated dipicolinate-calcium core resists 100 degrees C`],
+            options: [`LPS in the organism's outer membrane`, `Resistance plasmids carried by the organism`, `The capsular polysaccharide layer`, `The organism's dormant endospores`],
             correctAnswer: 3,
-            explanation: `Endospores are dormant, dehydrated structures packed with calcium dipicolinate and shielded by keratin-like coats; many survive hours of boiling. Pressurized steam above 121 C denatures even spore components. Vegetative cells, capsules, and plasmids are destroyed far more easily.`
+            explanation: `Endospores are dormant, dehydrated structures packed with calcium dipicolinate and shielded by keratin-like coats; many survive hours of boiling. Pressurized steam above 121 C denatures even spore components. Vegetative cells, capsules, and plasmids are destroyed far more easily. Clostridium is gram-positive, so it has no LPS-bearing outer membrane at all.`
           },
           {
             question: `The D-amino acids in peptidoglycan cross-bridges benefit bacteria because they:`,
-            options: [`Rotate plane-polarized light for chemotaxis`, `Are required for Gram stain retention`, `Resist cleavage by host proteases, which recognize only L-amino acid peptide bonds`, `Provide the energy for wall synthesis`],
+            options: [`Make the wall resistant to lysozyme's glycan cleavage`, `Are required for Gram stain retention`, `Resist cleavage by host proteases`, `Chelate iron that the cell needs to grow`],
             correctAnswer: 2,
             explanation: `Host proteolytic enzymes evolved on L-amino acid substrates; D-Ala and D-Glu linkages are effectively invisible to them, protecting the wall from digestion. (Lysozyme circumvents this by attacking the sugar backbone instead, and beta-lactams mimic the D-Ala-D-Ala motif.)`
           }

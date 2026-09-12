@@ -45,31 +45,31 @@ Acid catalysis **activates the carbonyl** (protonating O makes C more electrophi
         questions: [
           {
             question: `Aldehydes undergo nucleophilic addition faster than ketones because:`,
-            options: [`The aldehyde C=O bond is weaker`, `Aldehydes are better leaving groups`, `Aldehyde oxygens are more basic`, `The aldehyde carbonyl carbon is less hindered and more electrophilic, having only one electron-donating alkyl group`],
+            options: [`The aldehyde C=O bond is weaker and breaks more easily`, `Aldehydes carry a better leaving group than ketones`, `Aldehyde oxygens are more basic and protonate more readily`, `The aldehyde carbon is less hindered and more electrophilic`],
             correctAnswer: 3,
             explanation: `Both effects favor the aldehyde: one alkyl group instead of two means less steric blockage of the attack trajectory AND less electron donation into the electrophilic carbon. Neither compound has a leaving group, and basicity of oxygen is not the discriminating factor.`
           },
           {
             question: `A carbon bearing one -OH and one -OR group on the same carbon (with an H or R filling the remaining bonds) is called:`,
-            options: [`An acetal`, `A hemiacetal`, `A gem-diol`, `An enol`],
+            options: [`An acetal`, `A hemiacetal`, `A gem-diol (hydrate)`, `An enol`],
             correctAnswer: 1,
             explanation: `OH + OR on one carbon = hemiacetal, the product of a single alcohol adding to an aldehyde or ketone. Two OR groups = acetal; two OH groups = gem-diol (hydrate); an enol is C=C-OH. Ring-form sugars are cyclic hemiacetals — the anomeric carbon carries the OH and ring OR.`
           },
           {
             question: `Which reagent converts a ketone into a tertiary alcohol?`,
-            options: [`$CH_3MgBr$, followed by aqueous workup`, `$NaBH_4$ in methanol`, `$H_2O$ with catalytic acid`, `HCN`],
+            options: [`$CH_3MgBr$, then aqueous workup`, `$NaBH_4$ in methanol, then aqueous workup`, `$H_2O$ with catalytic acid`, `HCN with catalytic cyanide`],
             correctAnswer: 0,
             explanation: `A Grignard reagent delivers a carbanion-like R group; adding a new C-C bond to a ketone's carbon (already bearing two R groups) gives a tertiary alkoxide, protonated on workup to the 3° alcohol. NaBH4 gives only a 2° alcohol from a ketone (delivers H, not R); water gives a hydrate; HCN gives a cyanohydrin.`
           },
           {
             question: `Imine formation from a ketone and a primary amine is fastest near pH 4.5-5 because:`,
-            options: [`The carbonyl is only stable in mildly acidic solution`, `Hydroxide must be present to remove the alpha proton`, `Enough acid is present to protonate the carbinolamine OH for loss of water, while most of the amine remains unprotonated and nucleophilic`, `The imine product is only aromatic at that pH`],
+            options: [`The carbonyl is only stable in mildly acidic solution`, `Hydroxide must be present to remove the alpha proton`, `Acid assists water loss, yet most amine stays nucleophilic`, `The imine product becomes aromatic only at that pH`],
             correctAnswer: 2,
             explanation: `Dehydration of the carbinolamine needs acid (OH must leave as water), but too much acid converts RNH2 into non-nucleophilic RNH3+. The rate is a compromise between the two demands, peaking in mildly acidic solution — a favorite MCAT graph question.`
           },
           {
             question: `Why do secondary amines give enamines rather than imines with ketones?`,
-            options: [`Secondary amines are too weakly nucleophilic to add to the carbonyl`, `After dehydration, the nitrogen of a secondary amine has no N-H to lose, so the double bond forms toward the alpha carbon instead`, `Secondary amines attack the alpha carbon directly`, `Enamines are aromatic and therefore always preferred`],
+            options: [`Secondary amines are too weakly nucleophilic to add to the carbonyl`, `The iminium N has no H to lose, so an alpha H is removed instead`, `Secondary amines attack the alpha carbon directly`, `Enamines are aromatic and therefore always preferred`],
             correctAnswer: 1,
             explanation: `Both amine classes add and dehydrate. Forming a neutral C=N requires removing a proton from nitrogen; a secondary amine's nitrogen in the iminium intermediate carries no H, so deprotonation occurs at the alpha carbon, giving the C=C of an enamine. It is a bookkeeping consequence, not a nucleophilicity difference.`
           }

@@ -84,25 +84,25 @@ Transfusion logic: match the DONOR's cell antigens against the RECIPIENT's antib
           },
           {
             question: `Why does HIV infection ultimately impair BOTH antibody production and cytotoxic T-cell responses?`,
-            options: [`HIV infects B cells and CD8+ T cells simultaneously`, `The virus destroys the bone marrow where all lymphocytes mature`, `HIV blocks V(D)J recombination in developing lymphocytes`, `HIV depletes CD4+ helper T cells, which are required to license both arms of adaptive immunity`],
+            options: [`HIV infects B cells and CD8+ T cells simultaneously`, `The virus destroys the bone marrow where all lymphocytes mature`, `HIV blocks V(D)J recombination in developing lymphocytes`, `HIV depletes CD4+ helper T cells needed by both arms`],
             correctAnswer: 3,
             explanation: `HIV targets CD4+ helper T cells; because helpers supply the cytokines and CD40L needed for full B-cell responses AND support CD8+ responses, their loss collapses humoral and cell-mediated immunity together. HIV does not primarily infect B cells or CD8+ cells (choice A), does not ablate marrow (choice B), and V(D)J recombination in new lymphocytes is unaffected (choice C).`
           },
           {
             question: `Type O red blood cells can be transfused into recipients of any ABO type because they:`,
-            options: [`Lack A and B surface antigens for recipient antibodies to attack`, `Carry both A and B antigens, saturating recipient antibodies`, `Contain no plasma antibodies of any kind`, `Express extra Rh antigen that masks ABO differences`],
+            options: [`Lack both A and B antigens on their surface`, `Carry both A and B antigens, saturating recipient antibodies`, `Contain no plasma antibodies of any kind`, `Express extra Rh antigen that masks ABO differences`],
             correctAnswer: 0,
             explanation: `Transfusion reactions occur when the RECIPIENT'S antibodies bind antigens on DONOR cells; O cells display no ABO antigen, so anti-A and anti-B in any recipient find nothing to bind — universal donor. Choice B describes AB cells, which are the WORST universal donor. Choice C confuses cells with plasma (O plasma is actually rich in anti-A and anti-B), and Rh is a separate antigen system, not a mask.`
           },
           {
             question: `An indirect ELISA for HIV coats plates with viral antigen, adds patient serum, then adds an enzyme-linked anti-human antibody. A positive color change indicates that the patient's serum contains:`,
-            options: [`Live HIV virions`, `Antibodies that bind the plated HIV antigens`, `CD4+ T cells reactive to HIV`, `The enzyme used for detection`],
+            options: [`Live HIV virions captured by the plate`, `Antibodies that bind the plated antigens`, `CD4+ T cells reactive to HIV antigens`, `The enzyme that produces the color`],
             correctAnswer: 1,
             explanation: `The indirect format detects the patient's ANTIBODIES: they bridge the plated antigen and the labeled anti-human secondary antibody, so color means seroconversion has occurred. The assay contains no live virus readout (choice A) and no cells at all (choice C — cell subsets are counted by flow cytometry). The enzyme is added by the lab as part of the secondary reagent, not found in serum.`
           },
           {
             question: `RhoGAM (anti-Rh antibody) given to an Rh-negative mother at delivery prevents hemolytic disease in future pregnancies by:`,
-            options: [`Inducing her to produce protective anti-Rh IgG of her own`, `Neutralizing anti-Rh antibodies she has already made`, `Clearing fetal Rh-positive cells before her immune system mounts a primary response, so no memory forms`, `Blocking IgM transport across the placenta`],
+            options: [`Inducing her to produce protective anti-Rh IgG of her own`, `Neutralizing anti-Rh antibodies she has already made`, `Clearing fetal Rh+ cells before she can be sensitized`, `Blocking IgM transport across the placenta`],
             correctAnswer: 2,
             explanation: `RhoGAM is passive immunization used preventively: the injected antibody opsonizes and clears fetal Rh+ red cells before maternal B cells are activated, so the mother is never sensitized and forms no anti-Rh memory. It PREVENTS active immunity rather than inducing it (choice A is backwards), it cannot help once sensitization exists (choice B), and IgM never crosses the placenta anyway (choice D).`
           }

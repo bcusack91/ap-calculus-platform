@@ -55,25 +55,25 @@ Within a class, bulky groups near the carbonyl slow substitution (the tetrahedra
           },
           {
             question: `Saponification of an ester with NaOH is irreversible because:`,
-            options: [`Hydroxide is a catalyst and is regenerated`, `The alcohol product evaporates`, `The final deprotonation gives a resonance-stabilized carboxylate that no longer attracts nucleophiles`, `The tetrahedral intermediate is aromatic`],
+            options: [`Hydroxide is a catalyst and is regenerated`, `The alcohol product evaporates from solution`, `Deprotonation gives a carboxylate that resists attack`, `The tetrahedral intermediate is aromatic and stable`],
             correctAnswer: 2,
             explanation: `After hydroxide substitutes at the ester, the carboxylic acid formed is instantly deprotonated by the basic medium. The carboxylate's delocalized negative charge makes its carbon a very poor electrophile — the reaction cannot run backward. Note that hydroxide is CONSUMED (stoichiometric), not catalytic.`
           },
           {
             question: `Which conversion requires "going uphill" on the reactivity ladder and therefore needs an activating reagent?`,
-            options: [`Acyl chloride → amide`, `Anhydride → ester`, `Ester → carboxylic acid`, `Carboxylic acid → acyl chloride`],
+            options: [`Acyl chloride → secondary amide`, `Acid anhydride → methyl ester`, `Ester → carboxylic acid`, `Carboxylic acid → acyl chloride`],
             correctAnswer: 3,
             explanation: `Acid to acyl chloride climbs from mid-ladder to the top, so it needs SOCl2 (or PCl3/PCl5) to convert the poor OH leaving group into a good one. The other three all descend the ladder and proceed directly with the appropriate nucleophile.`
           },
           {
             question: `Acetyl-CoA transfers its acetyl group far more readily than an ordinary oxygen ester would because the thioester:`,
-            options: [`Loses less resonance stabilization on reaching the tetrahedral intermediate, since sulfur's 3p orbital overlaps poorly with the carbonyl pi system`, `Contains a stronger C=O bond`, `Has a positively charged sulfur`, `Is aromatic`],
+            options: [`Loses less resonance stabilization on nucleophilic attack`, `Contains an unusually strong C=O bond`, `Has a positively charged sulfur that activates the carbonyl`, `Is stabilized by strong sulfur lone-pair donation`],
             correctAnswer: 0,
             explanation: `An oxygen ester is resonance-stabilized (O lone pair into C=O) and gives that stabilization up during attack. Sulfur, one row down, overlaps poorly, so the thioester starts higher in energy — hydrolysis and acyl transfer are more exergonic. This is the design principle behind CoA chemistry in metabolism.`
           },
           {
             question: `Mixing acetic acid directly with methylamine at room temperature mostly yields:`,
-            options: [`N-methylacetamide immediately`, `An ester`, `An ammonium carboxylate salt, because the acid-base reaction outruns substitution`, `No reaction at all`],
+            options: [`N-methylacetamide immediately`, `An imine (Schiff base)`, `An ammonium carboxylate salt`, `No reaction at all at room temperature`],
             correctAnswer: 2,
             explanation: `Proton transfer is far faster than acyl substitution: the amine deprotonates the acid, giving methylammonium acetate. The carboxylate is unreactive and the protonated amine is non-nucleophilic, so amide formation stalls (it needs strong heating, a coupling reagent, or an activated derivative like an acyl chloride).`
           }

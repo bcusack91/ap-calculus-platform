@@ -49,31 +49,31 @@ Alpha,beta-unsaturated carbonyls are electrophilic at TWO sites: the carbonyl ca
         questions: [
           {
             question: `The alpha hydrogens of a ketone ($pK_a$ ~20) are vastly more acidic than those of an alkane ($pK_a$ ~50) because:`,
-            options: [`The alpha C-H bond is longer`, `Oxygen inductively strengthens the C-H bond`, `The conjugate base delocalizes its negative charge onto the carbonyl oxygen`, `The ketone can hydrogen bond with solvent`],
+            options: [`The alpha C-H bond is much longer`, `Oxygen inductively strengthens the C-H bond`, `The conjugate base delocalizes charge onto oxygen`, `The ketone can hydrogen bond with solvent`],
             correctAnswer: 2,
             explanation: `Acidity tracks conjugate-base stability: the enolate spreads charge between the alpha carbon and the electronegative oxygen. With two flanking carbonyls the effect doubles and pKa falls to ~9-13. Bond length and H-bonding are not the operative factors.`
           },
           {
             question: `Keto and enol forms of acetone are best described as:`,
-            options: [`Constitutional isomers interconverting by proton transfer (tautomers)`, `Resonance structures of one compound`, `Enantiomers`, `Conformers related by bond rotation`],
+            options: [`Tautomers (constitutional isomers)`, `Resonance structures of one compound`, `Mirror-image enantiomers`, `Conformers related by bond rotation`],
             correctAnswer: 0,
             explanation: `Tautomerization moves atoms — a proton relocates from carbon to oxygen and the double bond migrates — so keto and enol are distinct constitutional isomers in equilibrium. Resonance forms differ only in electron placement, never atom positions. This distinction is a recurring MCAT trap.`
           },
           {
             question: `A solution of optically pure (R)-2-methylcyclohexanone in mildly basic water slowly loses its optical activity because:`,
-            options: [`The C=O bond hydrolyzes`, `Reversible enolization makes the alpha stereocenter planar, and reprotonation occurs on either face (racemization)`, `Hydroxide substitutes at the alpha carbon with inversion`, `The molecule polymerizes`],
+            options: [`The ketone is hydrolyzed and ring-opened`, `Reversible enolization planarizes the stereocenter`, `Hydroxide substitutes at the alpha carbon with inversion`, `The molecule polymerizes through its carbonyl`],
             correctAnswer: 1,
             explanation: `Deprotonation at the alpha stereocenter gives a planar, achiral enolate; reprotonation from either face is equally likely, so the sample racemizes over time. Any stereocenter bearing an acidic alpha H is configurationally unstable in acid or base — the same chemistry that epimerizes sugars.`
           },
           {
             question: `In the aldol addition between two molecules of acetaldehyde, the new carbon-carbon bond forms between:`,
-            options: [`The two carbonyl carbons`, `The two alpha carbons`, `The oxygen of one molecule and the alpha carbon of the other`, `The alpha carbon of the enolate and the carbonyl carbon of the other molecule`],
+            options: [`The carbonyl carbons of the two molecules`, `The alpha carbons of the two molecules`, `The oxygen of one molecule and the alpha carbon of the other`, `The enolate alpha carbon and the other carbonyl carbon`],
             correctAnswer: 3,
             explanation: `The enolate is nucleophilic at its alpha carbon; the electrophile is the second molecule's carbonyl carbon. The product, 3-hydroxybutanal, is a beta-hydroxy aldehyde: OH on the beta carbon, carbonyl intact. Mapping which carbon attacks which is the whole game in aldol questions.`
           },
           {
             question: `A Claisen condensation differs from an aldol addition in that the Claisen's tetrahedral intermediate:`,
-            options: [`Is protonated to give a stable beta-hydroxy ester`, `Expels an alkoxide leaving group, restoring the C=O and giving a beta-ketoester`, `Loses carbon dioxide`, `Rearranges to an enamine`],
+            options: [`Is protonated to give a stable beta-hydroxy ester`, `Expels alkoxide to give a beta-ketoester`, `Loses carbon dioxide to form a ketone`, `Rearranges to an enamine intermediate`],
             correctAnswer: 1,
             explanation: `Esters carry a leaving group, so after the enolate adds, the intermediate collapses by ejecting alkoxide — acyl SUBSTITUTION, giving a beta-ketoester (2 ethyl acetate → ethyl acetoacetate). Aldehyde/ketone electrophiles have no leaving group, so the aldol stops at the addition (alkoxide → beta-hydroxy carbonyl).`
           }

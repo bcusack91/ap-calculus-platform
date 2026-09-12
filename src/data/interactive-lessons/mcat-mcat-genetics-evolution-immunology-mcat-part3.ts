@@ -86,19 +86,19 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
         questions: [
           {
             question: `Which part of an antibody determines whether it can activate complement and which phagocyte receptors it engages?`,
-            options: [`The light-chain variable domain`, `The epitope`, `The Fc (constant) region of the heavy chains`, `The disulfide bonds between chains`],
+            options: [`The variable domains of the light chains`, `The epitope it recognizes on the antigen`, `The Fc (constant) region of the heavy chains`, `The disulfide bonds between chains`],
             correctAnswer: 2,
             explanation: `Effector functions — complement activation, Fc-receptor binding, placental transfer — are set by the heavy-chain constant region (Fc), which defines the isotype. Variable domains (choice A) determine antigen SPECIFICITY, not effector behavior. The epitope is part of the ANTIGEN, not the antibody, and disulfide bonds merely hold the chains together.`
           },
           {
             question: `A newborn has protective levels of antibody against measles despite never being infected or vaccinated. The most likely explanation is:`,
-            options: [`Maternal IgG that crossed the placenta — natural passive immunity`, `Maternal IgM that crossed the placenta`, `The newborn's own secondary immune response`, `Vaccine-induced active immunity acquired in utero`],
+            options: [`Maternal IgG that crossed the placenta`, `Maternal IgM that crossed the placenta`, `The newborn's own secondary immune response`, `Vaccine-induced active immunity acquired in utero`],
             correctAnswer: 0,
             explanation: `IgG is the ONLY isotype that crosses the placenta, giving the infant temporary natural passive immunity. IgM is a large pentamer that cannot cross (choice B). The newborn has had no antigen exposure, so neither a secondary response nor active immunity is possible — and passive protection will fade over months as maternal IgG degrades.`
           },
           {
             question: `During class switching, a B cell that switches from IgM to IgG production:`,
-            options: [`Changes its antigen specificity to bind new epitopes`, `Keeps the same variable region while exchanging the heavy-chain constant region`, `Replaces its light chains with heavy chains`, `Loses the ability to secrete antibody entirely`],
+            options: [`Changes its antigen specificity to bind new epitopes`, `Retains the same variable region and specificity`, `Replaces its light chains with additional heavy chains`, `Loses the ability to secrete antibody entirely`],
             correctAnswer: 1,
             explanation: `Class switching swaps only the heavy-chain CONSTANT region; the variable region — and therefore specificity — is retained, so the same epitope is now attacked with IgG effector functions. Specificity changes (choice A) would defeat the purpose; that is altered only in AFFINITY by somatic hypermutation, which fine-tunes rather than retargets. Light chains are never replaced by heavy chains, and switched cells secrete robustly.`
           },
@@ -110,7 +110,7 @@ Passive immunity is immediate but temporary — transferred antibodies degrade o
           },
           {
             question: `Compared with the primary response to an antigen, the secondary response is characterized by:`,
-            options: [`A longer lag phase but higher peak titer`, `Predominantly IgM production at higher levels`, `Identical kinetics but different specificity`, `A shorter lag, higher titer, and predominantly high-affinity IgG`],
+            options: [`A longer lag phase but higher peak titer`, `Predominantly IgM production at higher levels`, `Identical kinetics but different specificity`, `A shorter lag and higher titer of mostly IgG`],
             correctAnswer: 3,
             explanation: `Memory cells are abundant, pre-switched, and affinity-matured, so re-exposure yields antibody within days, at much higher titer, dominated by high-affinity IgG. The lag SHORTENS, not lengthens (choice A). IgM dominance is the primary-response signature, and specificity is preserved — the same epitopes are recognized, just better and faster.`
           }

@@ -46,7 +46,7 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
         questions: [
           {
             question: `Beta-lactam antibiotics are selectively toxic to bacteria because human cells:`,
-            options: [`Have no peptidoglycan cell wall for the drug to target`, `Pump the drug out with P-glycoprotein`, `Use 80S rather than 70S ribosomes`, `Absorb folate from the diet`],
+            options: [`Lack a peptidoglycan cell wall and the PBPs that build it`, `Pump the drug out with P-glycoprotein efflux`, `Use 80S rather than 70S ribosomes`, `Absorb preformed folate from the diet`],
             correctAnswer: 0,
             explanation: `Beta-lactams inhibit transpeptidases that cross-link peptidoglycan. Human cells have no wall and no PBPs, so the target simply does not exist in the host. Ribosome and folate differences explain the selectivity of OTHER drug classes.`
           },
@@ -58,19 +58,19 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
           },
           {
             question: `A neutropenic leukemia patient develops a bloodstream infection. Why is a bactericidal drug strongly preferred over a bacteriostatic one?`,
-            options: [`Bactericidal drugs always have broader spectra`, `Bacteriostatic drugs rely on host immune cells to clear the halted bacteria, which this patient lacks`, `Bacteriostatic drugs cannot penetrate the bloodstream`, `Bactericidal drugs are less toxic to human cells`],
+            options: [`Bactericidal drugs always cover a broader spectrum of organisms`, `Bacteriostatic drugs depend on neutrophils to clear halted bacteria`, `Bacteriostatic drugs cannot penetrate the bloodstream to reach bacteria`, `Bactericidal drugs are less toxic to human cells than static drugs`],
             correctAnswer: 1,
             explanation: `A static drug freezes bacterial growth but leaves killing to phagocytes. With neutrophils absent, halted organisms survive and resume growth. The distinction is about the host's contribution, not spectrum, penetration, or toxicity.`
           },
           {
             question: `Vancomycin-resistant enterococci evade the drug by:`,
-            options: [`Hydrolyzing vancomycin with a modified beta-lactamase`, `Methylating their 23S rRNA`, `Thickening the outer membrane`, `Replacing the D-Ala-D-Ala peptidoglycan terminus with D-Ala-D-lactate`],
+            options: [`Hydrolyzing vancomycin with a modified beta-lactamase`, `Methylating the 23S rRNA of the 50S subunit`, `Thickening the outer membrane to exclude the drug`, `Swapping D-Ala-D-Ala termini for D-Ala-D-lactate`],
             correctAnswer: 3,
             explanation: `Vancomycin binds the D-Ala-D-Ala substrate, not an enzyme. Swapping the terminal residue to D-lactate removes one hydrogen bond and drops binding roughly 1000-fold. Vancomycin has no beta-lactam ring to hydrolyze, and rRNA methylation is a macrolide-resistance mechanism.`
           },
           {
             question: `Beta-lactams kill only actively dividing bacteria because their lethal effect requires:`,
-            options: [`DNA replication forks as a co-target`, `Uptake through transporters expressed only in growing cells`, `Ongoing synthesis of new peptidoglycan that is left un-cross-linked and vulnerable to autolysins`, `Rapid protein turnover to deplete PBPs`],
+            options: [`Active DNA replication forks as a second target`, `Uptake through transporters expressed only in growing cells`, `Ongoing assembly of new peptidoglycan that is not yet cross-linked`, `Rapid protein turnover that depletes existing PBPs`],
             correctAnswer: 2,
             explanation: `The drug blocks cross-linking of NEW wall. A dormant cell with intact wall is unharmed; a growing cell inserts weak, un-cross-linked material while autolysins keep remodeling, and osmotic pressure lyses it. This is also why combining a beta-lactam with a static drug can be antagonistic.`
           }

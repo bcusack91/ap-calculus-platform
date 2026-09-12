@@ -79,31 +79,31 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
         questions: [
           {
             question: `A virus-infected cell downregulates its MHC I molecules to evade cytotoxic T cells. Which immune cell is specialized to kill it anyway?`,
-            options: [`Neutrophil`, `Natural killer (NK) cell`, `B lymphocyte`, `Eosinophil`],
+            options: [`Neutrophil granulocyte`, `Natural killer cell`, `B lymphocyte`, `Eosinophil granulocyte`],
             correctAnswer: 1,
             explanation: `NK cells kill host cells that LACK MHC I ("missing self") — precisely the evasion strategy described. Neutrophils phagocytose extracellular microbes, not host cells; B cells make antibody rather than killing cells directly; eosinophils target parasites. This complementarity (T cells need MHC I present, NK cells attack when it is absent) leaves viruses no easy escape.`
           },
           {
             question: `Toll-like receptors allow a macrophage to respond to a bacterial species it has never encountered because TLRs:`,
-            options: [`Are randomly rearranged during development to cover all possible antigens`, `Bind antibodies already attached to the bacterium`, `Recognize conserved molecular patterns (PAMPs) shared by broad classes of microbes`, `Detect the absence of MHC I on the bacterial surface`],
+            options: [`Are randomly rearranged during development to cover all possible antigens`, `Bind antibodies already attached to the bacterium`, `Recognize conserved patterns shared by broad microbial classes`, `Detect the absence of MHC I on the bacterial surface`],
             correctAnswer: 2,
             explanation: `PRRs like TLRs are germline-encoded and bind conserved PAMPs (LPS, flagellin, dsRNA) common to whole microbial classes — pattern-based, not pathogen-specific. Random rearrangement (choice A) describes B/T-cell receptors, the adaptive strategy. Antibody-dependent recognition would require prior adaptive response, and MHC I surveillance is the NK-cell mechanism for HOST cells, not bacteria.`
           },
           {
             question: `Which set correctly lists the three major effector outcomes of complement activation?`,
-            options: [`Opsonization, membrane attack complex formation, and inflammatory anaphylatoxin release`, `Antibody production, memory cell formation, and clonal expansion`, `Histamine release, fever induction, and interferon secretion`, `Neutralization, agglutination, and class switching`],
+            options: [`Opsonization, membrane attack complex, and inflammation`, `Antibody production, memory cell formation, and clonal expansion`, `Histamine release, fever induction, and interferon secretion`, `Neutralization, agglutination, and class switching`],
             correctAnswer: 0,
             explanation: `Complement's three outcomes are C3b opsonization (tagging for phagocytosis), the MAC lytic pore, and anaphylatoxins (C3a/C5a) that amplify inflammation. Choice B lists adaptive B-cell events; choice C mixes mast-cell and cytokine effects that are not complement products; choice D lists antibody functions (and class switching is a B-cell process).`
           },
           {
             question: `During inflammation, the correct order of neutrophil events is:`,
-            options: [`Chemotaxis → diapedesis → adhesion to endothelium`, `Diapedesis → adhesion to endothelium → chemotaxis`, `Phagocytosis → diapedesis → vasodilation`, `Adhesion to endothelium → diapedesis → chemotaxis to the infection site`],
+            options: [`Chemotaxis → diapedesis → adhesion to endothelium`, `Diapedesis → adhesion to endothelium → chemotaxis`, `Phagocytosis → diapedesis → vasodilation`, `Adhesion to endothelium → diapedesis → chemotaxis`],
             correctAnswer: 3,
             explanation: `The neutrophil must first stick to the activated vessel wall (adhesion), then squeeze between endothelial cells out of the blood (diapedesis), and only then migrate through tissue along the chemical gradient (chemotaxis) to reach the microbes it will phagocytose. Options placing chemotaxis or diapedesis before adhesion reverse the physical sequence — a cell cannot exit a vessel it has not stopped in.`
           },
           {
             question: `Interferons released by a virus-infected cell primarily act to:`,
-            options: [`Lyse the infected cell that released them`, `Directly neutralize free virions in the blood`, `Recruit eosinophils to the infected tissue`, `Induce an antiviral state in neighboring uninfected cells`],
+            options: [`Lyse the infected cell that released them`, `Directly neutralize free virions in the blood`, `Recruit eosinophils to the infected tissue`, `Induce an antiviral state in neighboring cells`],
             correctAnswer: 3,
             explanation: `Interferons are a warning signal: neighboring cells respond by degrading RNA and slowing protein synthesis, hobbling viral replication before it starts. They do not lyse the secreting cell (cytotoxic T and NK cells kill infected cells), and direct virion neutralization is an ANTIBODY function. Eosinophil recruitment belongs to antiparasitic and allergic responses.`
           }

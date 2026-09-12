@@ -86,25 +86,25 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
           },
           {
             question: `During thymic negative selection, T cells are deleted if they:`,
-            options: [`Fail to bind self-MHC molecules at all`, `Bind self-peptide/self-MHC complexes too strongly`, `Express CD8 instead of CD4`, `Have not yet encountered foreign antigen`],
+            options: [`Fail to bind self-MHC molecules at all`, `Bind self-peptide/MHC complexes too strongly`, `Express CD8 rather than CD4 on their surface`, `Have not yet encountered foreign antigen`],
             correctAnswer: 1,
             explanation: `Negative selection deletes strongly self-reactive thymocytes, establishing central tolerance — its failure predisposes to autoimmunity. Failing to bind self-MHC at all causes death by neglect during POSITIVE selection (choice A confuses the two filters). CD8 expression is a normal fate, and no T cell has met foreign antigen in the thymus — naivety is expected, not punished.`
           },
           {
             question: `Cytotoxic T cells eliminate virus-infected cells primarily by:`,
-            options: [`Releasing perforin and granzymes that trigger apoptosis of the target`, `Secreting antibodies that neutralize the cell surface`, `Phagocytosing the infected cell whole`, `Releasing histamine to lyse the target osmotically`],
+            options: [`Releasing perforin and granzymes that induce apoptosis`, `Secreting antibodies that neutralize the cell surface`, `Phagocytosing the infected cell whole`, `Releasing histamine to lyse the target osmotically`],
             correctAnswer: 0,
             explanation: `CD8+ cells deliver perforin (pore formation) and granzymes (apoptosis-inducing proteases), or engage Fas — either way the target undergoes tidy apoptosis rather than bursting. T cells never secrete antibody (that is the plasma-cell job), they are not phagocytes (neutrophils/macrophages are), and histamine is a mast-cell/basophil inflammatory mediator, not a killing mechanism.`
           },
           {
             question: `Compared with a T-dependent protein antigen, a T-independent bacterial capsular polysaccharide typically elicits:`,
-            options: [`Stronger memory and extensive class switching to IgG`, `Activation of CD8+ T cells instead of B cells`, `No antibody response of any kind`, `Mostly IgM with weak memory, because helper-T signals for class switching are absent`],
+            options: [`Stronger memory and extensive class switching to IgG`, `Activation of CD8+ T cells instead of B cells`, `No antibody response of any kind`, `Mostly IgM with little class switching or memory`],
             correctAnswer: 3,
             explanation: `Repetitive polysaccharides cross-link many BCRs and activate B cells without T help, but the missing CD40L/cytokine signals mean little class switching or affinity maturation — mostly IgM and poor memory. Choice A describes the T-DEPENDENT outcome. Antibody is still made (so not choice C), and polysaccharide antigens do not redirect the response to CD8+ cells.`
           },
           {
             question: `Which statement best explains why the immune system can respond to antigens that have never existed before in nature?`,
-            options: [`Antigens serve as templates that instruct lymphocytes to fold matching receptors`, `Random V(D)J recombination and junctional diversity pre-generate a vast receptor repertoire, from which antigen selects matching clones`, `Each lymphocyte expresses thousands of different receptor specificities simultaneously`, `Toll-like receptors mutate rapidly upon infection to fit the new antigen`],
+            options: [`Antigens serve as templates that instruct lymphocytes to fold matching receptors`, `Random V(D)J recombination creates a diverse repertoire before exposure`, `Each lymphocyte expresses thousands of different receptor specificities simultaneously`, `Toll-like receptors mutate rapidly upon infection to fit the new antigen`],
             correctAnswer: 1,
             explanation: `Somatic recombination of V, (D), and J segments plus imprecise junctions builds billions of specificities BEFORE any exposure; antigen then selects and expands the rare matching clones (clonal selection). The "instructional" template model (choice A) is historically famous but wrong. Each lymphocyte carries essentially ONE specificity, and TLRs are fixed germline pattern receptors that do not mutate to fit antigens.`
           }
