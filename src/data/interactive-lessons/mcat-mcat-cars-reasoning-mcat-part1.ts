@@ -62,13 +62,13 @@ Read this short argument the way a CARS passage would present it:
         questions: [
           {
             question: `An author surveys 500 college students and concludes that young adults prefer digital textbooks. This is an example of:`,
-            options: [`Inductive reasoning — generalizing from a sample to a broad claim`, `Deductive reasoning from established principles`, `Neither — this is pure observation`, `Circular reasoning`],
+            options: [`Inductive reasoning from a sample to a broader claim`, `Deductive reasoning from an established general principle`, `Pure observation with no conclusion drawn`, `Circular reasoning that assumes what it sets out to prove`],
             correctAnswer: 0,
             explanation: `The author moves from specific observations (500 students) to a general claim (young adults broadly). This is inductive — the conclusion may be likely but is not guaranteed.`
           },
           {
             question: `"Every member of the committee holds an advanced degree. Dr. Reyes is a member of the committee. Therefore, Dr. Reyes holds an advanced degree." This argument is:`,
-            options: [`Deductive and valid — the conclusion follows necessarily from the premises`, `Inductive and probable — based on a limited sample`, `Deductive but invalid — the conclusion does not follow`, `An appeal to authority`],
+            options: [`Deductive, and the conclusion follows necessarily`, `Inductive, and the conclusion is only probable`, `Deductive, but the conclusion does not follow`, `An appeal to authority based on the members' degrees`],
             correctAnswer: 0,
             explanation: `This is a classic deductive syllogism. If both premises are true, the conclusion cannot be false. Moving from a general rule (every member) to a specific case (Dr. Reyes) with guaranteed certainty is the hallmark of valid deduction.`
           },
@@ -80,19 +80,19 @@ Read this short argument the way a CARS passage would present it:
           },
           {
             question: `Which feature of an author's language MOST strongly signals that an argument is intended as inductive rather than deductive?`,
-            options: [`Hedged, probabilistic wording such as "tends to," "suggests," or "likely"`, `The use of the word "therefore"`, `A numbered list of premises`, `A reference to a historical event`],
+            options: [`Hedged wording such as "tends to" or "likely"`, `Conclusion markers such as "therefore" or "thus"`, `A numbered list of premises leading to the claim`, `A reference to a specific historical event`],
             correctAnswer: 0,
             explanation: `Inductive arguments yield probable conclusions, and careful authors mark that uncertainty with qualifiers like "tends to," "suggests," or "likely." "Therefore" merely signals a conclusion and appears in both types, so it does not distinguish them.`
           },
           {
             question: `On CARS, why does correctly classifying an argument as inductive help you answer a "which would most weaken" question?`,
-            options: [`It tells you the argument can be undermined by a counterexample or an unrepresentative sample, focusing your search for the best answer`, `It proves the conclusion is false`, `It means any answer choice that mentions the topic will weaken it`, `It guarantees the correct answer uses the word "always"`],
+            options: [`It points you toward counterexamples and unrepresentative samples`, `It proves the conclusion is false, since induction never yields certainty`, `It means any choice that mentions the topic will weaken it`, `It guarantees the correct answer will use absolute wording`],
             correctAnswer: 0,
             explanation: `Knowing an argument is inductive tells you HOW it is vulnerable: through a weak or biased sample or a counterexample. This lets you predict the form of the best weakener instead of evaluating four choices blindly. Classification narrows the search.`
           },
           {
             question: `An author writes: "No purely deductive argument can establish a new empirical fact about the world; deduction only unpacks what its premises already contain." The author's point is best understood as a claim that deduction is:`,
-            options: [`Truth-preserving but not ampliative — it cannot add information beyond the premises`, `Always weaker than induction`, `A type of logical fallacy`, `Identical to circular reasoning`],
+            options: [`Unable to add information beyond what its premises contain`, `Always a weaker form of argument than induction`, `A kind of fallacy, since it adds nothing new`, `Identical to circular reasoning, since the conclusion repeats the premises`],
             correctAnswer: 0,
             explanation: `Deduction is "truth-preserving": valid form guarantees the conclusion given the premises, but it is not "ampliative" — it never reaches beyond the content already in the premises. Induction, by contrast, is ampliative (it adds risk and reach) but not truth-preserving.`
           }

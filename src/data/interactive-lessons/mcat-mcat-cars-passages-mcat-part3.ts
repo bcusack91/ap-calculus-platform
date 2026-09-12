@@ -63,25 +63,25 @@ After reading, you should be able to articulate:
         questions: [
           {
             question: `A passage argues that public art funding improves community well-being, citing three city case studies. An unstated assumption is likely:`,
-            options: [`That the improvements in those cities were caused by the art funding and not other factors`, `That all cities are identical`, `That public art is always popular`, `That community well-being cannot be measured`],
+            options: [`That the funding, not other factors, caused the gains`, `That the three cities are identical to all other cities`, `That public art is always popular with local residents`, `That community well-being cannot be measured reliably`],
             correctAnswer: 0,
             explanation: `The argument assumes a causal link between art funding and improved well-being. But the case studies could be explained by other factors (confounding variables). CARS loves testing your ability to identify unstated assumptions.`
           },
           {
             question: `In the worked-example excerpt, the author's central claim is that:`,
-            options: [`Standardized tests should be abolished immediately`, `The objectivity of standardized scoring does not by itself establish that the tests are fair measures`, `Teacher judgment is always superior to standardized testing`, `Standardized tests are administered inconsistently across schools`],
+            options: [`Standardized tests should be abolished immediately`, `Objective scoring does not by itself make the tests fair`, `Teacher judgment is always superior to standardized testing`, `Standardized tests are administered inconsistently across schools`],
             correctAnswer: 1,
             explanation: `The author distinguishes "objectivity in scoring" from "fairness in measurement," arguing the former does not guarantee the latter. Option A goes beyond the text; C is the opposite of the author's careful stance; D contradicts the author's concession that the test "surely is" uniformly administered.`
           },
           {
             question: `The ruler analogy ("a ruler applied identically to every student is still useless if it measures the wrong thing") most directly serves to:`,
-            options: [`Concede that standardized tests are fair`, `Illustrate that uniform application is worthless if the instrument measures the wrong trait`, `Prove that no measurement tool can ever be valid`, `Argue that teachers should grade with rulers`],
+            options: [`Concede that the tests are fair because they are applied uniformly`, `Show that uniformity is useless if the wrong trait is measured`, `Prove that no measurement tool can ever be fully valid`, `Argue that teachers should grade students with rulers`],
             correctAnswer: 1,
             explanation: `The analogy dramatizes the author's core distinction: consistency of application (the identical ruler) is separate from validity (whether it measures the right thing). It is the engine of the argument, not a concession or an absolute denial of measurement.`
           },
           {
             question: `Which assumption does the author attribute to the proponents of standardized testing?`,
-            options: [`That uniform, objective administration of a test makes the test fair`, `That teacher judgment is never biased`, `That tests are too expensive to scale`, `That community well-being is unmeasurable`],
+            options: [`That objective, uniform administration makes a test fair`, `That teacher judgment is never influenced by favoritism`, `That standardized tests are too expensive to scale widely`, `That tests are best graded by teachers rather than machines`],
             correctAnswer: 0,
             explanation: `The author's whole critique targets the proponents' hidden warrant — that because tests are "objective" and uniformly applied, they are therefore fair. The author severs exactly this link ("objectivity in scoring is not the same as fairness in measurement").`
           }
@@ -96,19 +96,19 @@ After reading, you should be able to articulate:
         questions: [
           {
             question: `Which of the following, if true, would most STRENGTHEN the author's argument?`,
-            options: [`A study finds that scores on the standardized test correlate poorly with the real-world competencies schools say they value`, `The test is graded by a computer with no human involvement`, `Students take the test in identical conditions nationwide`, `Most teachers support standardized testing`],
+            options: [`Test scores correlate poorly with the competencies schools value`, `The test is graded by a computer with no human involvement`, `Students take the test in identical conditions nationwide`, `Most teachers say they support the use of standardized testing`],
             correctAnswer: 0,
             explanation: `The author argues the test may measure the wrong trait. Evidence that scores correlate poorly with the valued competencies directly supports that the instrument lacks validity — the author's load-bearing point. Options B and C reinforce uniformity, which the author already grants and considers beside the point.`
           },
           {
             question: `Which of the following, if true, would most WEAKEN the author's argument?`,
-            options: [`Decades of research show the test's scores strongly predict the exact skills educators identify as most valuable`, `The test is administered in the same way to every student`, `Some critics dislike standardized testing on principle`, `The proponents have published several essays defending the test`],
+            options: [`The scores strongly predict the skills educators value most`, `The test is administered in the same way to every student`, `Some critics dislike standardized testing on principle`, `The proponents have published several essays defending the test`],
             correctAnswer: 0,
             explanation: `The author claims proponents have not shown the test captures "the trait we claim to value." Strong evidence that scores predict precisely those valued skills undercuts that claim and rescues the proponents' fairness argument. Option B addresses uniformity, which is not the contested issue.`
           },
           {
             question: `Which choice best describes the overall structure of the worked-example passage?`,
-            options: [`It presents a popular claim, then dismantles it by drawing a distinction the claim ignores`, `It lists several unrelated facts about testing without an argument`, `It defends standardized testing against unfair attacks`, `It compares two historical periods of education reform`],
+            options: [`It presents a popular claim, then exposes a distinction it ignores`, `It lists several unrelated facts about testing without an argument`, `It defends standardized testing against its critics' unfair attacks`, `It compares two historical periods of education reform`],
             correctAnswer: 0,
             explanation: `The passage opens with the proponents' "tidy case" (a popular claim), then pivots ("But objectivity in scoring is not the same as fairness in measurement") to expose the overlooked distinction between scoring and measurement. Recognizing this claim-then-critique architecture is a structure/function skill.`
           }

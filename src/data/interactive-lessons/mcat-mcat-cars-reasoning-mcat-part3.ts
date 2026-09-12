@@ -68,37 +68,37 @@ Negate it: *"The museum did not advertise the new hours."* The argument can stil
         questions: [
           {
             question: `An author argues that teaching students chess improves their math skills because chess requires logical thinking. An assumption of this argument is:`,
-            options: [`Logical thinking skills transfer between different domains (chess to math)`, `All students enjoy chess`, `Math is the most important subject`, `Chess is harder than math`],
+            options: [`Logic practiced in chess carries over to math`, `Most students enjoy chess enough to practice it`, `Math depends more on logic than on memorization`, `Chess is a harder logical task than math`],
             correctAnswer: 0,
             explanation: `The argument assumes that practicing logical thinking in one domain (chess) improves it in another (math). If skills don't transfer between domains, the argument fails. Use the negation test to verify.`
           },
           {
             question: `Argument: "The new highway will cut commute times, so it will improve workers' quality of life." Which is a NECESSARY assumption?`,
-            options: [`Shorter commutes contribute meaningfully to workers' quality of life`, `The highway is the cheapest possible project`, `All workers commute by car`, `Quality of life can be measured precisely`],
+            options: [`Shorter commutes improve workers' quality of life`, `The highway is the cheapest project that would cut commutes`, `All of the affected workers commute to their jobs by car`, `Quality of life can be measured precisely enough to compare`],
             correctAnswer: 0,
             explanation: `The conclusion jumps from "shorter commutes" to "better quality of life." That bridge requires that shorter commutes actually improve quality of life. Negate it — "shorter commutes do not improve quality of life" — and the conclusion no longer follows. The other choices are not required.`
           },
           {
             question: `Apply the negation test. Argument: "Since the clinic adopted electronic records, billing errors dropped; therefore electronic records reduce billing errors." A proposed assumption is "No new billing staff were hired at the same time." Negating this assumption shows it is:`,
-            options: [`Necessary — if new staff were hired, they could explain the drop, undermining the causal claim`, `Not necessary — the conclusion holds either way`, `A restatement of the conclusion`, `An appeal to authority`],
+            options: [`Necessary, since new staff would offer a rival cause of the drop`, `Not necessary, since the records still preceded the drop`, `Not necessary, since staffing is unrelated to billing errors`, `Necessary, since it restates the argument's conclusion`],
             correctAnswer: 0,
             explanation: `Negation gives "new billing staff WERE hired at the same time," which supplies a rival cause for the error reduction and breaks the causal conclusion. Because negating it destroys the argument, the statement is a necessary assumption.`
           },
           {
             question: `Which statement best distinguishes a NECESSARY assumption from a SUFFICIENT strengthener on CARS?`,
-            options: [`A necessary assumption must be true for the argument to work; a sufficient strengthener would help but the argument can survive without it`, `They are the same thing`, `A necessary assumption always appears explicitly in the passage`, `A sufficient strengthener must be negated to test it`],
+            options: [`Negating the assumption breaks the argument; negating a strengthener does not`, `They are two names for the same kind of premise`, `A necessary assumption always appears explicitly in the passage`, `A strengthener is tested by negation; an assumption is not`],
             correctAnswer: 0,
             explanation: `Assumption questions demand a premise the argument cannot do without — confirmed when its negation breaks the argument. A strengthener merely improves the case; the argument can still stand if the strengthener is false. Mistaking a helpful strengthener for a required assumption is a classic trap.`
           },
           {
             question: `Author: "This poem must have been written after 1850, because it references the telegraph." This argument depends on the unstated assumption that:`,
-            options: [`The telegraph reference reflects technology that existed only after 1850, and the poem is not deliberately anachronistic or later-edited`, `The poet personally used a telegraph`, `All poems mention technology`, `1850 is the most important date in literary history`],
+            options: [`This poem's telegraph reference could not predate 1850 or be a later addition`, `The poet personally sent or received a telegraph message`, `Poets of that period routinely wrote about new inventions of their day`, `The poem was published soon after it was first composed`],
             correctAnswer: 0,
             explanation: `The dating inference assumes the telegraph reference genuinely fixes the composition date — i.e., the technology postdates 1850 and the reference was not inserted anachronistically or in a later revision. Negate that link and the conclusion about the date no longer follows.`
           },
           {
             question: `A passage argues a policy "will succeed because similar policies succeeded in Denmark." Identifying the hidden assumption most helps you answer which related question type?`,
-            options: [`An analogy/transfer question — whether relevant conditions in Denmark also hold in the new setting`, `A vocabulary-in-context question`, `A question about the author's tone`, `A simple detail-retrieval question`],
+            options: [`An analogy question about whether Denmark's conditions apply here`, `A vocabulary-in-context question about the word "succeed"`, `A tone question about the author's confidence in the policy`, `A detail question about what the Danish policy included`],
             correctAnswer: 0,
             explanation: `The argument assumes the two settings are relevantly similar so the Danish result transfers. Surfacing that assumption is exactly what analogy and "would this also apply" questions test — they hinge on whether the conditions that made the policy work in Denmark are present elsewhere.`
           }

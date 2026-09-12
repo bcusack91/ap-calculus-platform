@@ -72,25 +72,25 @@ The best CARS students do not review by re-reading the answer key. They reconstr
         questions: [
           {
             question: `A student consistently misses "Reasoning Beyond the Text" questions but does well on comprehension questions. The most targeted improvement would be:`,
-            options: [`Practice applying passage logic to new scenarios — the weak area is inference and application`, `Read passages more slowly`, `Focus on improving reading speed`, `Study more vocabulary`],
+            options: [`Practice applying passage logic to new scenarios`, `Read passages more slowly to improve comprehension`, `Drill reading speed to finish passages sooner`, `Study vocabulary lists to decode dense passages`],
             correctAnswer: 0,
             explanation: `The student understands the passage (good comprehension) but struggles with extending ideas beyond the text. Targeted practice on inference and application questions will address this specific weakness.`
           },
           {
             question: `In the worked example, the student chose (D) "scientific institutions reward individuals." According to the passage, the best answer is (B). The student's error is best classified as:`,
-            options: [`A timing error from rushing`, `Importing outside knowledge — selecting a real-world-plausible claim the passage never states`, `Misreading who held the view`, `A vocabulary gap`],
+            options: [`A timing error from rushing`, `An outside-knowledge intrusion`, `Misattributing who held the view`, `A vocabulary gap in the passage`],
             correctAnswer: 1,
             explanation: `Option (D) may be true in reality, but the passage's only stated reason the myth endures is "a story needs a protagonist." Choosing a true-but-unsupported claim is the classic outside-knowledge intrusion error — distinct from timing, attribution, or vocabulary problems.`
           },
           {
             question: `Based on the worked-example passage, which statement best captures the author's main idea?`,
-            options: [`Scientific breakthroughs are usually the work of a single brilliant individual`, `The "lone genius" narrative is largely a myth; discoveries emerge from networks, yet the myth persists for narrative reasons`, `Collaboration has only recently become important in science`, `Memory is a reliable guide to how discovery actually works`],
+            options: [`Scientific breakthroughs are usually the work of a single brilliant individual`, `The "lone genius" idea is a myth that endures for narrative reasons`, `Collaboration has only recently become important in science`, `Memory is a reliable guide to how discovery actually works`],
             correctAnswer: 1,
             explanation: `The author argues the lone-genius idea "persists despite a century of evidence against it," that breakthroughs "emerge from dense networks," and that the myth survives because "a story needs a protagonist." Option A is the view the author rejects; D is contradicted ("a convenience of memory, not a description").`
           },
           {
             question: `A student's review log shows that, across ten passages, most misses are on questions asking what the author "implies" or "suggests," while detail-retrieval questions are nearly all correct. The most efficient next step is to:`,
-            options: [`Spend more time memorizing passage details`, `Drill inference questions specifically, practicing the discipline of staying one controlled step beyond the text`, `Switch to reading passages twice as fast`, `Abandon CARS review and focus only on the sciences`],
+            options: [`Spend more time memorizing and reviewing passage details`, `Drill inference questions, staying one step beyond the text`, `Switch to reading passages twice as fast as before`, `Set CARS aside and focus only on the science sections`],
             correctAnswer: 1,
             explanation: `The pattern isolates inference as the weakness, since literal retrieval is already strong. Targeted inference drilling — practicing the "one step beyond" without overreaching — directly addresses the diagnosed gap. The other options ignore the pattern the log reveals.`
           }
@@ -105,19 +105,19 @@ The best CARS students do not review by re-reading the answer key. They reconstr
         questions: [
           {
             question: `Which review habit is most consistent with the passage's claim that "the review process is more important than the practice itself"?`,
-            options: [`Completing as many passages as possible without analyzing mistakes`, `For each miss, identifying where the correct answer was supported, why the wrong choice was tempting, and a rule to prevent the error`, `Re-reading only the answer key explanations once`, `Tracking only the raw number of questions answered correctly`],
+            options: [`Completing as many passages as possible without analyzing mistakes`, `For each miss, noting the support, the trap, and a preventive rule`, `Re-reading the answer key explanations once after each set`, `Tracking only the raw number of questions answered correctly`],
             correctAnswer: 1,
             explanation: `The worked example models exactly this three-part diagnosis (textual basis, trap mechanism, preventive rule). Volume without analysis (A), passive re-reading (C), and score-only tracking (D) fail to convert mistakes into transferable lessons.`
           },
           {
             question: `On the worked-example question, why is choice (A) — that the narrative "accurately reflects how discovery happens" — incorrect?`,
-            options: [`It is correct and the student should have chosen it`, `It directly contradicts the passage, which says the evidence runs against the lone-genius view`, `It is supported but less precise than (B)`, `It restates the author's thesis word for word`],
+            options: [`It is correct and the student should have chosen it`, `It contradicts what the passage says about the evidence`, `It is supported by the passage but less precise than (B)`, `It restates the author's thesis nearly word for word`],
             correctAnswer: 1,
             explanation: `The passage opens by noting the lone-genius idea "persists despite a century of evidence against it." Claiming the narrative is accurate flatly contradicts that, making (A) a reversal of the author's position rather than a partially-correct option.`
           },
           {
             question: `A student notices she selects the right answer on many questions but, during review, cannot explain why the other three options are wrong. The most valuable adjustment is to:`,
-            options: [`Stop reviewing questions she answered correctly, since they are already right`, `For every question, actively articulate why each wrong option is wrong — not just why the credited answer is right`, `Increase the number of passages per session`, `Answer faster to leave more time for guessing`],
+            options: [`Stop reviewing questions she answered correctly, since they are already right`, `Articulate why each wrong option is wrong, not only the right one`, `Increase the number of passages she completes per session`, `Answer faster to leave more time for revisiting guesses`],
             correctAnswer: 1,
             explanation: `Getting an item right "for the wrong reason" is a known CARS risk, which is why the review process checks correct answers too. Forcing herself to eliminate each distractor builds the trap-recognition that transfers to harder questions. The other options skip the diagnostic work the passage emphasizes.`
           }

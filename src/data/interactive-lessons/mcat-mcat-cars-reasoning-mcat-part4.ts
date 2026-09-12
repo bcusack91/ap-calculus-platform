@@ -67,37 +67,37 @@ Now rank candidate weakeners:
         questions: [
           {
             question: `An author argues that meditation reduces anxiety based on a study where meditators reported less anxiety than non-meditators. Which would MOST weaken this argument?`,
-            options: [`People who choose to meditate may have been less anxious to begin with (self-selection bias)`, `Meditation has existed for thousands of years`, `Some meditators also exercise regularly`, `Anxiety can be measured in multiple ways`],
+            options: [`Meditators may have been less anxious before they began`, `Meditation has been practiced for thousands of years`, `Some of the meditators in the study also exercised regularly`, `Anxiety can be measured with several different scales`],
             correctAnswer: 0,
-            explanation: `Self-selection bias provides an alternative explanation: the correlation may not be causal. Less anxious people might simply be more likely to try meditation. This directly undermines the argument's core assumption of causation.`
+            explanation: `Self-selection bias provides an alternative explanation: the correlation may not be causal. Less anxious people might simply be more likely to try meditation. This directly undermines the argument's core assumption of causation. That some meditators also exercised is a weaker confounder, since nothing shows that non-meditators exercised less.`
           },
           {
             question: `Argument: "Country A's literacy rate rose after it increased education spending; therefore the spending caused the rise." Which finding would MOST strengthen this causal claim?`,
-            options: [`Comparable countries that did NOT increase spending saw no comparable rise in literacy over the same period`, `Country A has a long cultural history of valuing books`, `Education spending is popular with voters`, `Literacy is difficult to define precisely`],
+            options: [`Similar countries that did not raise spending saw no such rise`, `Country A has a long cultural tradition of valuing books`, `The spending increase was popular with Country A's voters`, `Literacy rates are difficult to define and measure precisely`],
             correctAnswer: 0,
             explanation: `A controlled comparison that holds other factors roughly constant and isolates the spending variable is the strongest support for causation. By ruling out the possibility that literacy would have risen anyway, it closes the main alternative explanation.`
           },
           {
             question: `A study claims a drug works because patients improved after taking it. The single most powerful design feature that would strengthen the causal conclusion is:`,
-            options: [`A randomized control group given a placebo that did NOT improve`, `A larger sample of patients who all received the drug`, `Testimonials from patients who felt better`, `Endorsement by a famous physician`],
+            options: [`A randomized placebo group that did not improve`, `A larger sample of patients who all received the drug`, `Detailed testimonials from patients who felt much better`, `An endorsement from a prominent physician in the field`],
             correctAnswer: 0,
             explanation: `Without a control group, improvement could reflect the placebo effect or natural recovery. A randomized placebo control that fails to improve isolates the drug as the cause. Simply enlarging a single-arm sample does not address the missing comparison.`
           },
           {
             question: `Among four answer choices to a "which most weakens" question, which feature usually identifies the BEST weakener?`,
-            options: [`It introduces a plausible alternative explanation for the observed result, directly challenging the causal claim`, `It uses the most forceful, absolute language`, `It is the longest and most detailed choice`, `It repeats a fact already stated in the passage`],
+            options: [`It offers a plausible alternative explanation for the result`, `It uses the most forceful and sweeping language of any choice`, `It is the longest and most detailed of the four choices`, `It restates a key fact already given in the passage`],
             correctAnswer: 0,
             explanation: `The strongest weakener attacks the inference from evidence to conclusion, typically by supplying a rival cause. Length, forcefulness, or restating known facts do not weaken an argument; a credible alternative explanation does.`
           },
           {
             question: `Argument: "Schools with longer recess have happier students, so lengthening recess will make students happier." Which choice, if true, would MOST weaken it?`,
-            options: [`Schools that lengthened recess as an experiment saw no change in student happiness`, `Recess is enjoyable for most children`, `Happiness can be assessed with surveys`, `Some schools have indoor recess`],
+            options: [`Schools that tried longer recess saw no change in happiness`, `Most children say that recess is their favorite part of the day`, `Student happiness is usually assessed with self-report surveys`, `Some schools hold recess indoors during bad weather`],
             correctAnswer: 0,
             explanation: `A direct experimental result showing that actually lengthening recess produced no happiness gain attacks the precise causal prediction. It is far more damaging than choices about the pleasantness of recess, measurement methods, or recess location, which leave the causal leap intact.`
           },
           {
             question: `Why is "the data were collected by a researcher with a financial interest in the result" generally a WEAKER weakener than "a controlled replication failed to reproduce the result"?`,
-            options: [`A conflict of interest only raises suspicion about bias, whereas a failed replication directly attacks whether the effect is real`, `Conflicts of interest are never relevant on the MCAT`, `Failed replications are easier to ignore`, `The two are logically identical`],
+            options: [`Bias is merely suspected, while a failed replication tests the effect`, `Conflicts of interest are never relevant to evaluating evidence`, `Replications are always more carefully conducted than originals`, `The two kinds of evidence are logically equivalent`],
             correctAnswer: 0,
             explanation: `A conflict of interest is an ad-hominem-adjacent concern: it suggests possible bias but does not show the conclusion is false. A failed controlled replication is direct empirical evidence against the effect itself, so it strikes the conclusion more decisively.`
           }

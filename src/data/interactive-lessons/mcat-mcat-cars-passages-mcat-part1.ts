@@ -58,31 +58,31 @@ Below is a short excerpt in the style of a CARS humanities passage. Read it once
         questions: [
           {
             question: `A philosophy passage discusses three philosophers' views on justice. To answer questions about the AUTHOR's view, you should:`,
-            options: [`Distinguish the author's voice from the philosophers being discussed — look for evaluative language`, `Assume the author agrees with the last philosopher mentioned`, `Average the three philosophers' views`, `Look for the most modern perspective`],
+            options: [`Separate the author's evaluations from the philosophers' views`, `Assume the author agrees with the last philosopher mentioned`, `Treat the author's view as a blend of all three philosophers'`, `Identify the most modern perspective, as authors usually favor it`],
             correctAnswer: 0,
             explanation: `Authors often present others' views before giving their own assessment. Look for evaluative language: "However," "More convincingly," "This argument fails because" — these signal the author's actual position.`
           },
           {
             question: `Based on the worked-example excerpt, which statement best captures the author's main idea?`,
-            options: [`The novel has no effect on a reader's moral sensibilities`, `The popular claim that novels teach empathy is partly valid but seriously overstated`, `Eighteenth-century readers were uniquely cruel compared to modern readers`, `Empathy is best cultivated through formal philosophy rather than fiction`],
+            options: [`The novel has no effect on a reader's moral sensibilities`, `The claim that novels teach empathy is partly true but overstated`, `Eighteenth-century readers were uniquely cruel compared to modern readers`, `Empathy is best cultivated through formal philosophy rather than fiction`],
             correctAnswer: 1,
             explanation: `The closing line — "both true and dangerously incomplete" — signals a qualified position. The author concedes a kernel of truth while arguing the empathy claim is overstated. Options A and D push past what the text supports; C misreads a single example as the thesis.`
           },
           {
             question: `In the excerpt, the author calls the empathy claim "seductive." This word choice primarily functions to:`,
-            options: [`Endorse the claim enthusiastically`, `Signal that the author finds the claim appealing yet ultimately suspect`, `Indicate that the claim is purely emotional and irrational`, `Establish that the claim is universally accepted by scholars`],
+            options: [`Express the author's enthusiastic endorsement of the claim`, `Signal that the claim is appealing but suspect`, `Indicate that the claim is purely emotional and irrational`, `Establish that the claim is universally accepted by scholars`],
             correctAnswer: 1,
             explanation: `"Seductive" carries a connotation of tempting-but-deceptive. It previews the author's move from acknowledging the claim's appeal ("The claim is seductive") to undermining it ("Yet it rests on an assumption..."). This is tone analysis — a core CARS skill.`
           },
           {
             question: `The author introduces eighteenth-century readers who were both "cultivated" and cruel. The function of this example is to:`,
-            options: [`Provide evidence that complicates the assumed link between reading fiction and increased empathy`, `Prove that reading fiction causes cruelty`, `Concede that the empathy claim is entirely correct`, `Shift the topic away from the novel toward history`],
+            options: [`Complicate the assumed link between reading and empathy`, `Show that reading fiction tends to make readers crueler`, `Concede that the empathy claim is entirely correct`, `Shift the topic away from the novel toward history`],
             correctAnswer: 0,
             explanation: `The example is counter-evidence: if fiction reliably produced empathy, these well-read individuals should not have been "efficient administrators of cruelty." It complicates — but does not reverse — the claim. Option B overstates causation the author never asserts.`
           },
           {
             question: `A later paragraph (not shown) states: "Sympathy, like a muscle, may be trained toward some objects and left to atrophy toward others." This sentence most directly supports the passage's idea that:`,
-            options: [`Fiction is incapable of shaping emotion`, `Empathy cultivated by novels can be selective rather than universal`, `Readers should avoid emotionally demanding novels`, `Eighteenth-century fiction was poorly written`],
+            options: [`Fiction is entirely incapable of shaping a reader's emotions`, `Novel-trained empathy can be selective, not universal`, `Readers should avoid emotionally demanding novels`, `Eighteenth-century fiction was too poorly written to train sympathy`],
             correctAnswer: 1,
             explanation: `The muscle analogy reinforces the earlier point that fiction "trained their sympathy... narrowly — toward characters who resembled themselves." Selective training of empathy is precisely the author's qualification of the popular claim. This is an integration question linking new text to the established thesis.`
           }
@@ -97,19 +97,19 @@ Below is a short excerpt in the style of a CARS humanities passage. Read it once
         questions: [
           {
             question: `Which new piece of information, if true, would most WEAKEN the author's argument?`,
-            options: [`Controlled studies show that readers of literary fiction demonstrate measurably broader empathy toward strangers of all backgrounds`, `Many eighteenth-century novels featured aristocratic protagonists`, `Some modern readers dislike morally complex fiction`, `Philosophers disagree about how to define empathy`],
+            options: [`Fiction readers show broader empathy to strangers of all backgrounds`, `Many eighteenth-century novels featured aristocratic protagonists`, `Some modern readers avoid novels that are morally complex or demanding`, `Philosophers disagree about how empathy should be defined and measured`],
             correctAnswer: 0,
-            explanation: `The author's case depends on empathy gains being narrow and unreliable. Evidence that fiction broadens empathy "toward strangers of all backgrounds" directly contradicts the "narrow," "selective" claim and would weaken the argument. The other options are irrelevant or merely restate background detail.`
+            explanation: `The author's case depends on empathy gains being narrow and unreliable. Evidence that fiction broadens empathy "to strangers of all backgrounds" directly contradicts the "narrow," "selective" claim and would weaken the argument. The other options are irrelevant or merely restate background detail.`
           },
           {
             question: `Which finding, if true, would most STRENGTHEN the author's argument?`,
-            options: [`A survey finds that avid novel readers show no greater concern for people unlike themselves than non-readers do`, `Novels are read in nearly every country`, `Some eighteenth-century novelists were widely admired`, `Literary criticism is itself a humanistic discipline`],
+            options: [`Avid novel readers show no greater concern for people unlike themselves than nonreaders do`, `Novels are read and translated in nearly every country in the world`, `Some eighteenth-century novelists were widely admired in their own lifetimes`, `Literary criticism is itself a humanistic discipline with its own methods`],
             correctAnswer: 0,
             explanation: `The author claims the empathy novels cultivate is narrow and may not extend to dissimilar others. Evidence that heavy readers show "no greater concern for people unlike themselves" supports exactly that limitation, reinforcing the thesis. The other options are neutral background.`
           },
           {
             question: `The author's overall tone toward the claim that "the novel teaches empathy" is best described as:`,
-            options: [`Dismissive and mocking`, `Qualified and skeptical — accepting a limited version while resisting the sweeping one`, `Enthusiastically supportive`, `Entirely neutral and uncommitted`],
+            options: [`Dismissive, rejecting the claim as naive`, `Skeptical, accepting only a limited version`, `Supportive, with only minor reservations`, `Neutral, reporting the claim without judgment`],
             correctAnswer: 1,
             explanation: `The author grants the claim is "true" but "dangerously incomplete," and earlier calls it "seductive." That blend of partial acceptance and pointed doubt is qualified skepticism — neither outright dismissal nor neutrality nor endorsement.`
           }

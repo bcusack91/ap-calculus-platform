@@ -56,25 +56,25 @@ export const mcatCarsPsgPart2Data = {
         questions: [
           {
             question: `A social science passage presents data showing a correlation between two variables. The author concludes one causes the other. A good critical reader would:`,
-            options: [`Note that the author may be conflating correlation with causation — a potential weakness`, `Accept the conclusion since data supports it`, `Ignore the data and focus on the argument`, `Assume the author is wrong without evidence`],
+            options: [`Note that the correlation may not establish causation`, `Accept the conclusion, since the data support it`, `Set the data aside and evaluate only the argument`, `Reject the causal claim, since correlation is never evidence`],
             correctAnswer: 0,
             explanation: `Correlation does not establish causation — a fundamental critical-thinking principle. CARS questions often test whether you can identify logical weaknesses, including unwarranted causal claims.`
           },
           {
             question: `In the worked-example excerpt, the author's central claim is best stated as:`,
-            options: [`Mid-century downtowns declined mainly because their design was unappealing`, `The decline of downtowns was driven primarily by cheaper suburban commuting, not by design flaws`, `Beautiful plazas always revive struggling downtowns`, `Geography is irrelevant to where people choose to live`],
+            options: [`Mid-century downtowns declined mainly because their design was unappealing`, `Cheaper suburban commuting, not design, mainly drove downtown decline`, `Well-designed plazas will always revive struggling downtowns`, `Geography plays no role in where people choose to live or work`],
             correctAnswer: 1,
             explanation: `The passage explicitly subordinates the design explanation ("a symptom mistaken for a cause") to the commuting-cost explanation. Option A states the very view the author rejects; C and D contradict the text.`
           },
           {
             question: `The author notes that cities "hemmed in by geography" retained downtown crowds even when those downtowns were "unlovely." This detail functions to:`,
-            options: [`Concede that design is the true cause of downtown decline`, `Serve as a comparative case that isolates commuting cost as the decisive variable`, `Prove that geography alone determines a city's economy`, `Undermine the author's own conclusion`],
+            options: [`Concede that design is the true cause of downtown decline`, `Serve as a comparison case that isolates commuting cost`, `Prove that geography alone determines a city's economy`, `Undermine the author's own conclusion about commuting`],
             correctAnswer: 1,
             explanation: `By holding design "unlovely" but removing easy suburban commuting (geography blocks sprawl), the example isolates the commuting variable. When the suburban-commute factor is absent, downtowns thrive regardless of looks — supporting the author's causal claim.`
           },
           {
             question: `A student concludes from the passage that "good urban design has no effect on downtown vitality." This conclusion is:`,
-            options: [`Fully supported, because the author dismisses design entirely`, `Too strong — the author argues design was not the primary cause, not that it has zero effect`, `Supported by the plaza example`, `Irrelevant to the passage's argument`],
+            options: [`Fully supported, because the author dismisses design entirely`, `Overstated; the author says only that design was not the main cause`, `Supported, since the redesigned plazas often remained empty`, `Irrelevant, because the passage does not address design's effects at all`],
             correctAnswer: 1,
             explanation: `The author calls design "a symptom mistaken for a cause," demoting it from primary driver — but never claims design is wholly inconsequential. CARS routinely punishes answers that overstate ("no effect," "always," "never") beyond what the text licenses.`
           }
@@ -89,19 +89,19 @@ export const mcatCarsPsgPart2Data = {
         questions: [
           {
             question: `Which finding, if true, would most STRENGTHEN the author's argument?`,
-            options: [`A study shows that after new highways cut suburban commute times, nearby downtowns lost population regardless of how their public spaces were rated`, `Several cities built award-winning plazas in the 1990s`, `Downtown rents rose during the period studied`, `Urban planners disagree about the definition of "good design"`],
+            options: [`After highways cut commutes, nearby downtowns shrank whatever their design`, `Several cities built award-winning downtown plazas during the 1990s`, `Downtown rents rose in many cities during the period the author studied`, `Urban planners still disagree about how to define "good design"`],
             correctAnswer: 0,
-            explanation: `The author's thesis is that falling commuting cost drove the flight from downtown. Evidence that downtown decline followed highway-driven commute reductions "regardless of public-space ratings" directly supports commuting-as-cause while controlling for design. The other options are tangential.`
+            explanation: `The author's thesis is that falling commuting cost drove the flight from downtown. Evidence that downtown decline followed highway-driven commute reductions regardless of design quality directly supports commuting-as-cause while controlling for design. The other options are tangential.`
           },
           {
             question: `Which finding, if true, would most WEAKEN the author's argument?`,
-            options: [`Geographically constrained cities and sprawling cities lost downtown population at nearly identical rates, but the constrained cities had far better-designed public spaces`, `Suburban commuting became cheaper after the highway boom`, `Some plazas built downtown were poorly maintained`, `Historians debate exactly when the highway boom began`],
+            options: [`Hemmed-in cities lost downtown crowds as fast as sprawling ones`, `Suburban commuting became much cheaper after the postwar highway boom`, `Some of the new downtown plazas were poorly maintained and rarely used`, `Historians still debate exactly when the highway boom began in each city`],
             correctAnswer: 0,
-            explanation: `The author leaned on geographically constrained cities retaining crowds as proof that commuting cost, not design, mattered. If those cities declined just as fast — and only kept crowds where design was better — the design explanation revives and the commuting thesis weakens. Option B actually supports the author; C and D are minor.`
+            explanation: `The author leaned on geographically constrained cities retaining crowds as proof that commuting cost, not design, mattered. If those cities declined just as fast, that comparative evidence disappears, the design explanation revives, and the commuting thesis weakens. Option B actually supports the author; C and D are minor.`
           },
           {
             question: `The author's attitude toward the design-focused explanation favored by "urban planners" is best described as:`,
-            options: [`Respectful agreement`, `Critical — the author treats it as a well-meaning misdiagnosis that confused a symptom for a cause`, `Completely indifferent`, `Hostile and mocking`],
+            options: [`Respectful agreement with its premises`, `Critical, seeing it as a misdiagnosis`, `Completely indifferent to its merits`, `Hostile and mocking toward planners`],
             correctAnswer: 1,
             explanation: `The author grants that the design view "seemed obvious" yet concludes design "was a symptom mistaken for a cause." That is pointed but measured critique — diagnosing an error without ridicule. "Respectful agreement" and "indifferent" understate the disagreement; "hostile and mocking" overstates the tone.`
           }

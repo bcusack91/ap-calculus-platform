@@ -65,37 +65,37 @@ The trap in analogy questions is that the *most topically similar* answer is usu
         questions: [
           {
             question: `A passage describes how an invasive species outcompeted native plants because it grew faster and used more resources. Which is the best analogy?`,
-            options: [`A large retailer driving small businesses out by offering lower prices through greater buying power`, `A student studying harder and earning better grades`, `A drought killing all plants equally`, `Two athletes competing fairly in a race`],
+            options: [`A large retailer using its buying power to drive out small shops`, `A student who studies longer than classmates and earns better grades`, `A drought that kills native and invasive plants alike`, `Two evenly matched athletes trading wins over a season`],
             correctAnswer: 0,
             explanation: `The key structure: an entity with a resource advantage displaces a weaker entity. The large retailer (invasive species) outcompetes small businesses (native plants) through resource advantage (buying power/growth rate).`
           },
           {
             question: `A passage argues that a critic who never created art has no standing to judge artists. The deep structure is "one who has not done X cannot evaluate X." Which situation is most analogous?`,
-            options: [`Claiming a food reviewer who cannot cook has no right to critique restaurants`, `Claiming a chef should taste a dish before serving it`, `Claiming critics and artists often disagree`, `Claiming art is purely subjective`],
+            options: [`Claiming a food reviewer who cannot cook has no standing to judge restaurants`, `Claiming a chef must taste each dish before sending it to diners`, `Claiming that critics and artists rarely agree about what is good`, `Claiming that artistic merit is purely a matter of personal taste`],
             correctAnswer: 0,
             explanation: `The abstract pattern is "lack of first-hand practice disqualifies one from evaluating." The food reviewer who cannot cook mirrors the non-artist critic precisely. The chef option reverses the relationship (it is about the doer, not the evaluator).`
           },
           {
             question: `In an analogy question, the answer choice that shares the passage's TOPIC but not its logical relationship is best described as:`,
-            options: [`A surface-similarity trap — tempting because of subject overlap but structurally mismatched`, `The correct answer, since topic match is what matters`, `An out-of-scope choice`, `A circular argument`],
+            options: [`A surface-similarity trap that lures with shared subject matter`, `The correct answer, since shared topic signals a shared structure`, `An out-of-scope choice that raises an unrelated subject`, `A circular argument that restates the passage's claim`],
             correctAnswer: 0,
             explanation: `Analogy questions reward structural correspondence, not subject-matter overlap. A choice that merely shares the topic while reversing or omitting the key relationship is the surface-similarity trap — the most common wrong answer on these items.`
           },
           {
             question: `Passage structure: "A short-term subsidy created long-term dependence, so the cure worsened the disease." Which option preserves this exact relationship?`,
-            options: [`Prescribing a painkiller that relieves symptoms briefly but creates an addiction that is worse than the original pain`, `Prescribing antibiotics that fully cure an infection`, `A subsidy that successfully ended a famine`, `A patient who recovers without any treatment`],
+            options: [`A painkiller that briefly helps but causes an addiction worse than the pain`, `Antibiotics that clear an infection completely with no lasting effects`, `A temporary food subsidy that ended a famine without creating reliance`, `A patient who recovers fully without receiving any treatment at all`],
             correctAnswer: 0,
             explanation: `The template is "a remedy produces a worse long-term problem than it solved." The painkiller-to-addiction case matches it directly. The antibiotics and successful-subsidy options describe remedies that work, reversing the relationship.`
           },
           {
             question: `Which step should come FIRST when answering a CARS analogy question efficiently?`,
-            options: [`Reduce the passage scenario to an abstract one-sentence relationship with the specifics removed`, `Pick the choice with the most words in common with the passage`, `Eliminate the longest answer choice`, `Look up the topic in outside knowledge`],
+            options: [`Reduce the scenario to an abstract one-sentence template`, `Pick the choice sharing the most words with the passage`, `Eliminate the longest and most detailed answer choices`, `Recall what you already know about the topic of the passage`],
             correctAnswer: 0,
             explanation: `Abstracting the relationship first gives you a template to test each option against, which neutralizes surface-similarity traps. Matching shared words or judging by length ignores logical structure, the very thing the question tests.`
           },
           {
             question: `An analogy choice uses the same actors as the passage but swaps which one holds power (e.g., the suppressed party becomes the suppressor). This choice exhibits:`,
-            options: [`A reversed-relationship trap — correct elements arranged in the wrong roles`, `A perfect structural match`, `An appeal to authority`, `A hasty generalization`],
+            options: [`A reversed-relationship trap with roles swapped`, `A perfect structural match, since the actors are the same`, `An appeal to authority by the powerful party`, `A hasty generalization from a single case`],
             correctAnswer: 0,
             explanation: `When the same elements appear but their roles are flipped, the logical relationship is inverted, so the analogy fails despite the familiar cast. Recognizing reversed relationships prevents you from being fooled by superficially matching elements.`
           }

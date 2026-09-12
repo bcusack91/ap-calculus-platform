@@ -66,37 +66,37 @@ Question: *The author mentions Homer primarily in order to...*
         questions: [
           {
             question: `An author argues that education reform improves outcomes, then describes one school that succeeded after reforms. A questioner could fairly note that:`,
-            options: [`One school is anecdotal evidence — not sufficient to generalize to all schools`, `The school must be representative of all schools`, `Education reform always works everywhere`, `The example disproves the argument`],
+            options: [`A single school is too thin a basis for generalizing`, `The school is surely typical of schools in general`, `The example shows that reform works in every school`, `The example disproves the author's argument outright`],
             correctAnswer: 0,
             explanation: `A single case study is anecdotal — it illustrates possibility but doesn't prove the claim for all schools. The MCAT tests whether you can evaluate the strength and limitations of evidence.`
           },
           {
             question: `A passage states: "Granted, a few early trials showed no effect. But these used doses now known to be too low." The phrase "Granted... But" indicates the author is:`,
-            options: [`Conceding a point to the opposition, then rebutting it to strengthen their own position`, `Abandoning their argument`, `Committing a straw man fallacy`, `Presenting purely neutral background`],
+            options: [`Conceding a point, then rebutting it to support their view`, `Abandoning their thesis in light of the negative trials`, `Committing a straw man by misstating the early trials`, `Presenting neutral background with no bearing on the thesis`],
             correctAnswer: 0,
             explanation: `"Granted" signals a concession (acknowledging contrary evidence), and "But" signals the rebuttal. This concede-then-counter structure is a common rhetorical move that actually reinforces the author's position by addressing objections.`
           },
           {
             question: `Which ranking of evidence strength is most defensible on CARS, from strongest to weakest?`,
-            options: [`Large controlled empirical study > qualified expert testimony > single anecdote > hypothetical scenario`, `Hypothetical scenario > anecdote > expert testimony > empirical study`, `Anecdote > empirical study > hypothetical > expert testimony`, `All evidence types are equally strong`],
+            options: [`Controlled study > expert testimony > anecdote > hypothetical`, `Hypothetical > anecdote > expert testimony > controlled study`, `Expert testimony > controlled study > anecdote > hypothetical`, `Controlled study > anecdote > expert testimony > hypothetical`],
             correctAnswer: 0,
             explanation: `Systematic empirical data generally outranks expert opinion, which outranks a lone anecdote, which outranks a purely imagined hypothetical. CARS does not require statistics, but it does reward recognizing this rough hierarchy when comparing how well evidence supports a claim.`
           },
           {
             question: `A "primary purpose of this example" question is best answered by:`,
-            options: [`Examining the example's role in the argument — what claim it supports, concedes, or rebuts`, `Paraphrasing exactly what the example says`, `Picking the choice that repeats the most words from the example`, `Recalling outside facts about the example's subject`],
+            options: [`Examining the role the example plays in the argument`, `Paraphrasing exactly what the example says in the passage`, `Picking the choice that repeats the most words from the example`, `Recalling outside facts about the example's subject`],
             correctAnswer: 0,
             explanation: `Function questions test rhetorical purpose, not content. The correct answer describes the job the example performs in the argument (illustrate, support, concede, rebut, qualify). Restating the content or matching vocabulary ignores the question being asked.`
           },
           {
             question: `Mid-paragraph, an author writes a strong claim and then immediately adds "or so its advocates contend." This signals that the strong claim:`,
-            options: [`Represents the advocates' view, which the author may be about to challenge — not necessarily the author's own position`, `Is the author's firmly held conclusion`, `Is a proven empirical fact`, `Should be ignored entirely`],
+            options: [`Is the advocates' view, which the author may go on to challenge`, `Is the author's own firmly held conclusion on the matter`, `Is an established fact that the author and advocates share`, `Is irrelevant and can be skipped without losing anything`],
             correctAnswer: 0,
             explanation: `The attribution "or so its advocates contend" assigns the claim to others and distances the author from it, often foreshadowing a rebuttal. Tracking whose voice a sentence expresses is essential; CARS routinely plants opposing claims to test whether you attribute them correctly.`
           },
           {
             question: `An author supports a sweeping claim using only a single vivid personal story. The best critique of this evidentiary choice is that the story:`,
-            options: [`Is anecdotal and may be unrepresentative, so it cannot by itself justify a general conclusion`, `Is too boring to be persuasive`, `Proves the claim conclusively`, `Is irrelevant because stories are never evidence`],
+            options: [`May be unrepresentative, so it cannot alone justify a general claim`, `Is too personal to be verified, so it must be fabricated`, `Proves the claim conclusively because it is so specific`, `Is irrelevant, because personal stories never count as evidence`],
             correctAnswer: 0,
             explanation: `A single anecdote can illustrate a possibility and engage the reader, but it provides no assurance of being typical, so it cannot establish a broad generalization. The flaw is unrepresentativeness, not that stories can never be evidence at all.`
           }

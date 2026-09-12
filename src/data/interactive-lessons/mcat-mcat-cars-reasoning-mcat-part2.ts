@@ -51,37 +51,37 @@ CARS rarely asks "is this argument flawed?" Instead it asks you to *name the spe
         questions: [
           {
             question: `A critic responds to a scientist's climate research by saying, "She receives government funding, so her conclusions cannot be trusted." This is an example of:`,
-            options: [`Ad hominem — attacking the researcher's credibility rather than the evidence`, `Straw man`, `False dichotomy`, `Circular reasoning`],
+            options: [`Ad hominem, faulting the researcher rather than the evidence`, `Straw man, distorting her findings into a weaker claim`, `False dichotomy, allowing only complete trust or none at all`, `Post hoc, linking her funding to her results by timing`],
             correctAnswer: 0,
             explanation: `Ad hominem attacks the person rather than addressing the argument's merits. The funding source doesn't automatically invalidate the research findings.`
           },
           {
             question: `An author writes: "Opponents of the new curriculum say we should not adopt it without testing. In other words, they want our children to remain ignorant forever." The author has committed which fallacy?`,
-            options: [`Straw man — distorting the opponents' modest position into an extreme one that is easier to attack`, `Post hoc — confusing sequence with causation`, `Appeal to authority`, `Circular reasoning`],
+            options: [`Straw man, recasting the opponents' view as extreme`, `Post hoc, confusing sequence with causation`, `Appeal to authority, invoking experts in place of evidence`, `Circular reasoning, assuming what it sets out to prove`],
             correctAnswer: 0,
             explanation: `The opponents asked only for testing before adoption. The author replaces this reasonable request with a grotesque exaggeration ("ignorant forever") and attacks that instead. Misrepresenting a position to knock it down is the straw man fallacy.`
           },
           {
             question: `"Either we permit unlimited free speech on campus, or we descend into censorship and tyranny." The flaw here is best described as:`,
-            options: [`False dichotomy — presenting only two extremes when intermediate positions exist`, `Hasty generalization`, `Ad hominem`, `Slippery slope`],
+            options: [`False dichotomy, offering only two extreme options`, `Hasty generalization from a few campus cases`, `Ad hominem, dismissing supporters of speech limits`, `Slippery slope, predicting a chain of worsening events`],
             correctAnswer: 0,
-            explanation: `The statement forces a choice between two extremes and ignores the many moderate positions (e.g., narrow, content-neutral restrictions). Presenting an artificially limited menu of options is the false dichotomy (false dilemma).`
+            explanation: `The statement forces a choice between two extremes and ignores the many moderate positions (e.g., narrow, content-neutral restrictions). Presenting an artificially limited menu of options is the false dichotomy (false dilemma). It is not a slippery slope, because no chain of intermediate steps is described; the two outcomes are simply posed as the only choices.`
           },
           {
             question: `A passage argues: "Crime fell the year after the city repainted its bridges; clearly, civic beautification deters criminals." Which fallacy is present, and what is the BEST single objection?`,
-            options: [`Post hoc — one event following another does not establish causation; an unmentioned factor could explain the drop`, `Straw man — the author distorts an opposing view`, `Circular reasoning — the conclusion merely restates a premise`, `Appeal to authority — the author cites an expert improperly`],
+            options: [`Post hoc; an unmentioned factor could explain the drop`, `Straw man; the author distorts an opposing view`, `Circular reasoning; the conclusion merely restates a premise`, `Appeal to authority; the author relies on an expert improperly`],
             correctAnswer: 0,
             explanation: `"After this, therefore because of this" (post hoc ergo propter hoc) infers cause from mere temporal order. The strongest objection introduces an alternative explanation (e.g., increased policing) rather than disputing the crime statistic itself.`
           },
           {
             question: `Which scenario illustrates a slippery slope fallacy rather than a legitimate causal warning?`,
-            options: [`"If we let students retake one exam, soon they will demand to retake all exams, then grades will become meaningless, and the school will collapse" — with no evidence linking the steps`, `"If we remove the load-bearing wall, the second floor will sag, because engineers have measured the stress" — supported by structural data`, `"Smoking raises lung-cancer risk, according to large cohort studies"`, `"Raising the price of a good tends to reduce quantity demanded"`],
+            options: [`"One retake will lead to endless retakes, then meaningless grades, then the school's collapse"`, `"If we remove the load-bearing wall, the second floor will sag, because engineers have measured the stress"`, `"If the spillway clogs, the reservoir will overflow and flood the valley, as hydrologists' models show"`, `"If smoking rates rise, lung-cancer cases will rise in turn, according to large cohort studies"`],
             correctAnswer: 0,
             explanation: `A slippery slope becomes fallacious when it asserts an inevitable chain of consequences without evidence that each link follows. The wall example is a justified causal chain backed by data; the retake example simply assumes catastrophe with no support for any step.`
           },
           {
             question: `Why is it a mistake to conclude that an argument's CONCLUSION is false merely because the argument contains a logical fallacy?`,
-            options: [`A fallacy shows the reasoning fails to support the conclusion, but the conclusion could still be true for independent reasons`, `Fallacies always make the conclusion true`, `A fallacy converts a deductive argument into an inductive one`, `Identifying a fallacy is itself a fallacy`],
+            options: [`A fallacy breaks the support, not necessarily the conclusion's truth`, `A fallacy only matters in deductive arguments, not inductive ones`, `A fallacy converts a deductive argument into an inductive one`, `Identifying a fallacy is itself a fallacy, so the charge cancels out`],
             correctAnswer: 0,
             explanation: `A fallacy undermines the *link* between premises and conclusion, not the conclusion's truth value. Treating "the argument is fallacious, therefore its conclusion is false" as valid is itself an error (the fallacy fallacy). The conclusion must be evaluated on its own evidence.`
           }

@@ -59,25 +59,25 @@ These passages discuss:
         questions: [
           {
             question: `A passage argues that Postmodern architecture deliberately rejects Modernist emphasis on function. This suggests that understanding Postmodern architecture requires:`,
-            options: [`Knowledge of what Modernism valued — since Postmodernism is defined as a reaction against it`, `Ignoring all historical context`, `Focusing only on building materials`, `Measuring the buildings' energy efficiency`],
+            options: [`Knowledge of the Modernist values it rejects`, `Ignoring the historical context of earlier movements`, `Focusing on building materials rather than history`, `Measuring the buildings' energy efficiency`],
             correctAnswer: 0,
             explanation: `If Postmodernism is a reaction against Modernism, understanding the original movement is essential. This is a "reasoning beyond the text" question — applying the passage's logic.`
           },
           {
             question: `In the worked-example excerpt, the author's central claim about photography and painting is that:`,
-            options: [`Photography destroyed painting as predicted`, `Photography, by taking over realistic likeness, liberated painting to explore color, gesture, and perception`, `Painting and photography are essentially the same art form`, `The Impressionists failed to respond to photography`],
+            options: [`Photography destroyed painting, just as critics had predicted`, `By taking over likeness, photography freed painting`, `Painting and photography are essentially the same art form`, `The Impressionists failed to respond to photography`],
             correctAnswer: 1,
             explanation: `The passage overturns the "photography will kill painting" prophecy: "What looked like a threat functioned as a liberation." Painters, "freed from the duty of mere resemblance," turned to color and "the structure of seeing." Option A states the prophecy the author rejects.`
           },
           {
             question: `The author characterizes the Impressionists' style as "less a rejection of accuracy than a declaration of independence from it." This phrasing implies that the Impressionists:`,
-            options: [`Believed accurate representation was worthless`, `Chose to pursue aims other than literal accuracy, without necessarily condemning accuracy itself`, `Tried and failed to paint realistically`, `Opposed all previous painting traditions`],
+            options: [`Believed accurate representation was worthless`, `Pursued aims beyond accuracy without necessarily condemning it`, `Tried to paint realistically but lacked the skill to do so`, `Opposed every painting tradition that came before them`],
             correctAnswer: 1,
             explanation: `A "declaration of independence from" accuracy means moving beyond it, not denouncing it. The careful wording ("less a rejection... than a declaration of independence") guards against the overstatement in option A. This is precise tone/meaning analysis.`
           },
           {
             question: `The passage's treatment of photography's effect on painting best exemplifies which recurring theme in aesthetics passages?`,
-            options: [`Objective versus subjective standards of beauty`, `How a new technology reshapes an existing art form`, `Art for art's sake versus art as social commentary`, `The economic value of paintings`],
+            options: [`Objective versus subjective standards of beauty`, `How a new technology reshapes an existing art form`, `Art for art's sake versus art as social commentary`, `The changing economic value of paintings in the art market`],
             correctAnswer: 1,
             explanation: `The entire excerpt examines how the camera (a new technology) altered painting's purpose. This maps directly onto the "how technology changes art" theme flagged in the strategy section, not onto the beauty-standards or commentary debates.`
           }
@@ -92,19 +92,19 @@ These passages discuss:
         questions: [
           {
             question: `Applying the author's reasoning, what would most likely happen to portrait painting if a new technology perfectly automated realistic portraiture?`,
-            options: [`Portrait painters would abandon painting entirely`, `Portrait painting would be freed to pursue expressive or interpretive aims beyond literal likeness`, `Portrait painting would become identical to the new technology`, `Realistic accuracy would become the only goal of portrait painting`],
+            options: [`Portrait painters would abandon their craft entirely`, `Portrait painting would be freed to pursue aims beyond likeness`, `Portrait painting would become identical to the new technology`, `Realistic accuracy would become the only goal of portrait painting`],
             correctAnswer: 1,
             explanation: `The author's general principle is that when a new medium absorbs an art's utilitarian function (here, likeness), the older art is "freed" to pursue its distinctive aims. Extending this, portrait painting would turn toward expression and interpretation — a reasoning-beyond-the-text application.`
           },
           {
             question: `Which of the following, if true, would most WEAKEN the author's argument?`,
-            options: [`Historical records show that after photography spread, the number of working painters collapsed and surviving painters mostly imitated photographs rather than exploring new aims`, `Photography was invented in the nineteenth century`, `Some Impressionist paintings sold for high prices`, `Cameras were initially expensive and rare`],
+            options: [`After photography spread, painters dwindled and mostly copied photographs`, `Photography was invented and spread widely in the nineteenth century`, `Some Impressionist paintings later sold for very high prices at auction`, `Early cameras were expensive, bulky, and rare outside large cities`],
             correctAnswer: 0,
-            explanation: `The author claims photography liberated painting into new expressive territory rather than killing it. Evidence that painters instead collapsed in number and merely imitated photographs directly contradicts the "liberation" thesis. The other options are neutral background facts.`
+            explanation: `The author claims photography liberated painting into new expressive territory rather than killing it. Evidence that painters instead dwindled in number and mostly imitated photographs directly contradicts the "liberation" thesis. The other options are neutral background facts.`
           },
           {
             question: `The author writes that photography "did not compete with painting so much as relieve it of an obligation it had quietly resented." The phrase "quietly resented" most strongly implies that, in the author's view:`,
-            options: [`Painting had welcomed the duty of exact resemblance`, `The demand for literal accuracy was a constraint painting was glad to shed`, `Painters were openly hostile to photographers`, `Resemblance had never been a goal of painting`],
+            options: [`Painting had welcomed the duty of exact resemblance`, `Literal accuracy was a burden painting was glad to shed`, `Painters were openly hostile to the new photographers`, `Resemblance had never really been one of painting's goals`],
             correctAnswer: 1,
             explanation: `"Quietly resented" frames the obligation of resemblance as an unwanted burden, so being "relieved" of it is a release the medium welcomed — consistent with the passage's "liberation" thesis. Option A reverses the attitude; D contradicts the premise that painting once carried that duty.`
           }

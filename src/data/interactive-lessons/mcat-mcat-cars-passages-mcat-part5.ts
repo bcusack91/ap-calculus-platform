@@ -68,19 +68,19 @@ export const mcatCarsPsgPart5Data = {
           },
           {
             question: `In the worked-example excerpt, the critics' core objection to bedside utilitarianism is that:`,
-            options: [`Consequences are completely irrelevant to medical ethics`, `A person has an inherent standing that should not depend on her expected future well-being`, `Older patients always deserve priority over younger patients`, `Triage decisions should be made randomly`],
+            options: [`Consequences are completely irrelevant to medical ethics`, `A person's standing should not hinge on her expected well-being`, `Older patients always deserve priority over younger patients`, `Physicians are poorly trained to estimate patients' life expectancy`],
             correctAnswer: 1,
-            explanation: `The passage states the critics insist "a person is not merely a vessel of future well-being" and has "a standing that does not fluctuate with her actuarial prospects." This is the deontological idea of inherent worth — not a denial that consequences matter at all (the author explicitly rules that reading out).`
+            explanation: `The passage states the critics insist "a person is not merely a vessel of future well-being" and has "a standing that does not fluctuate with her actuarial prospects." This is the deontological idea of inherent worth — not a denial that consequences matter at all (the author explicitly rules that reading out). Nor is it a complaint that the estimates are unreliable: the deepest objection "is not that it miscalculates."`
           },
           {
             question: `Which ethical framework best describes the critics' position as the author characterizes it?`,
-            options: [`Utilitarianism`, `A deontological / rights-based view emphasizing the inherent worth of persons`, `Virtue ethics centered on the physician's character`, `Social contract theory`],
+            options: [`Utilitarianism applied to individual cases`, `A deontological, rights-based view of persons`, `Virtue ethics centered on the physician`, `A social contract view based on mutual agreement`],
             correctAnswer: 1,
             explanation: `Holding that a person possesses a "standing" independent of her usefulness or expected outcomes is the hallmark of Kantian deontology and rights-based ethics — persons have intrinsic, not merely instrumental, value.`
           },
           {
             question: `The author writes that the critics' "recoil is often misdescribed." This statement primarily functions to:`,
-            options: [`Dismiss the critics as confused`, `Clarify that the critics accept that consequences matter, narrowing the true point of disagreement`, `Prove that utilitarianism is correct`, `Argue that the critics secretly favor utilitarianism`],
+            options: [`Dismiss the critics as confused about what they believe`, `Clarify that the critics largely accept that consequences matter`, `Prove that utilitarianism is correct after all`, `Argue that the critics secretly favor utilitarianism`],
             correctAnswer: 1,
             explanation: `The author corrects a common misreading: the critics are "not... denying that consequences matter." This refinement sharpens the real dispute — whether calculation is "the whole of the moral question" — rather than dismissing or converting the critics.`
           }
@@ -95,19 +95,19 @@ export const mcatCarsPsgPart5Data = {
         questions: [
           {
             question: `Which scenario best illustrates the principle the critics defend?`,
-            options: [`A hospital ranks transplant candidates strictly by projected years of life gained`, `A clinician refuses to treat a patient as less worthy of care simply because she is elderly and statistically has fewer years left`, `A policy distributes vaccines to maximize total lives saved`, `An ethics board calculates the net well-being of each possible allocation`],
+            options: [`A hospital ranks transplant candidates strictly by projected years of life gained`, `A doctor won't value an elderly patient less for having fewer expected years`, `A policy distributes vaccines to maximize total lives saved`, `An ethics board calculates the net well-being of each possible allocation`],
             correctAnswer: 1,
             explanation: `The critics hold that a person's moral standing "does not fluctuate with her actuarial prospects." Refusing to downgrade the elderly patient's worth on the basis of her statistics directly enacts that principle. Options A, C, and D are all consequence-maximizing (utilitarian) approaches.`
           },
           {
             question: `Which statement, if added to the passage, would most directly CHALLENGE the author's framing of the debate?`,
-            options: [`Evidence that the critics, in practice, do reject any role for consequences and would never weigh expected outcomes at all`, `A reminder that ventilators are sometimes scarce`, `A note that utilitarianism was developed by Mill and Bentham`, `An observation that triage occurs in emergencies`],
+            options: [`Evidence that the critics actually reject any role for consequences`, `A reminder that ventilators are often scarce during a crisis`, `A note that utilitarianism was developed by Mill and Bentham`, `An observation that triage usually occurs under emergency conditions`],
             correctAnswer: 0,
             explanation: `The author's framing rests on the claim that the critics "are not... denying that consequences matter." If the critics in fact reject consequences entirely, the author has mischaracterized the dispute, and the "calculation is not the whole story" framing collapses. The other options are background detail.`
           },
           {
             question: `The passage's closing line — the deepest objection is "not that it miscalculates, but that calculation was never the whole of the moral question" — most strongly implies that the author believes:`,
-            options: [`Moral reasoning should ignore consequences altogether`, `Weighing consequences is a legitimate part of ethics, but it cannot be the entirety of moral evaluation`, `Triage decisions are impossible to make ethically`, `Utilitarianism and deontology are identical in practice`],
+            options: [`Moral reasoning should set consequences aside altogether`, `Consequences matter but cannot be the whole of moral evaluation`, `Triage decisions can never be made in a fully ethical way`, `Utilitarianism and deontology are identical in practice`],
             correctAnswer: 1,
             explanation: `By rejecting "miscalculates" and instead faulting the idea that calculation is "the whole," the author preserves a role for consequences while denying that they exhaust morality. Option A overshoots into rejecting consequences; the closing line specifically resists that extreme.`
           }
