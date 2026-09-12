@@ -3294,5 +3294,525 @@
       "Timing, Discipline & Elimination Traps",
       "Mixed Practice & Mastery Check"
     ]
+  },
+  {
+    "slug": "mcat-biochemistry-amino-acids-proteins-mcat",
+    "importPath": "./mcat-mcat-biochemistry-amino-acids-proteins-mcat",
+    "partTitles": [
+      "The 20 Amino Acids: Structure & Classification",
+      "Acid-Base Chemistry, pKa & Isoelectric Point",
+      "Protein Structure, Folding & Denaturation",
+      "Protein Purification, Analysis & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-biochemistry-bioenergetics-mcat",
+    "importPath": "./mcat-mcat-biochemistry-bioenergetics-mcat",
+    "partTitles": [
+      "Free Energy, ATP & Energy Coupling",
+      "Redox Carriers, PDH & the Citric Acid Cycle",
+      "Electron Transport & Oxidative Phosphorylation",
+      "ATP Accounting, Energy States & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-biochemistry-carbohydrate-metabolism-mcat",
+    "importPath": "./mcat-mcat-biochemistry-carbohydrate-metabolism-mcat",
+    "partTitles": [
+      "Glycolysis: Steps, Enzymes & Logic",
+      "Gluconeogenesis & Reciprocal Regulation",
+      "Glycogen Metabolism & the Pentose Phosphate Pathway",
+      "Hormonal Integration & MCAT-Style Experiments"
+    ]
+  },
+  {
+    "slug": "mcat-biochemistry-enzymes-kinetics-mcat",
+    "importPath": "./mcat-mcat-biochemistry-enzymes-kinetics-mcat",
+    "partTitles": [
+      "Enzyme Fundamentals: Catalysis & Specificity",
+      "Michaelis-Menten Kinetics",
+      "Enzyme Inhibition",
+      "Regulation, Allostery & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-biochemistry-lipid-metabolism-mcat",
+    "importPath": "./mcat-mcat-biochemistry-lipid-metabolism-mcat",
+    "partTitles": [
+      "Lipid Structures, Digestion & Lipoprotein Transport",
+      "The Carnitine Shuttle & Beta-Oxidation ATP Arithmetic",
+      "Ketogenesis & Ketone Body Metabolism",
+      "Fatty Acid Synthesis, Cholesterol & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-microbiology-antimicrobials-mcat",
+    "importPath": "./mcat-mcat-microbiology-antimicrobials-mcat",
+    "partTitles": [
+      "Selective Toxicity & Cell Wall Inhibitors",
+      "Protein Synthesis Inhibitors: 30S vs 50S",
+      "Nucleic Acid, Folate & Membrane Targets",
+      "Resistance Mechanisms & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-microbiology-bacteria-mcat",
+    "importPath": "./mcat-mcat-microbiology-bacteria-mcat",
+    "partTitles": [
+      "Prokaryotic Architecture & the Gram Stain",
+      "Growth, Metabolism & Culture",
+      "Bacterial Genetics: Transformation, Transduction & Conjugation",
+      "Pathogenesis, Toxins & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-microbiology-viruses-mcat",
+    "importPath": "./mcat-mcat-microbiology-viruses-mcat",
+    "partTitles": [
+      "Viral Architecture & the Infectious Cycle",
+      "Bacteriophages: Lytic & Lysogenic Cycles",
+      "Animal Virus Replication Strategies",
+      "Viral Evolution, Subviral Agents & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-cell-biology-cell-cycle-mcat",
+    "importPath": "./mcat-mcat-cell-biology-cell-cycle-mcat",
+    "partTitles": [
+      "Phases, Mitosis & Measuring the Cycle",
+      "Cyclins, CDKs & Checkpoint Machinery",
+      "p53, Apoptosis & Cancer",
+      "Experimental Methods & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-cell-biology-membrane-transport-mcat",
+    "importPath": "./mcat-mcat-cell-biology-membrane-transport-mcat",
+    "partTitles": [
+      "Membrane Architecture & Permeability",
+      "Passive Transport & Osmosis",
+      "Active Transport & the Na+/K+ ATPase",
+      "Vesicular Transport & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-cell-biology-organelles-mcat",
+    "importPath": "./mcat-mcat-cell-biology-organelles-mcat",
+    "partTitles": [
+      "The Compartment Map & How We Isolate It",
+      "Protein Sorting & the Secretory Pathway",
+      "Mitochondria, Lysosomes & Peroxisomes in Depth",
+      "The Nucleus, Organelle Dynamics & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-cell-biology-signaling-mcat",
+    "importPath": "./mcat-mcat-cell-biology-signaling-mcat",
+    "partTitles": [
+      "Signaling Logic & Receptor Classes",
+      "GPCRs & Second Messengers",
+      "RTKs, Ras-MAPK, PI3K & JAK-STAT",
+      "Termination, Toxins & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-molecular-biology-biotechnology-mcat",
+    "importPath": "./mcat-mcat-molecular-biology-biotechnology-mcat",
+    "partTitles": [
+      "Cutting, Pasting & Copying: Restriction Enzymes, Cloning & PCR",
+      "Reading DNA: Gels, Blots & Sequencing",
+      "Manipulating Genes in Cells & Organisms",
+      "Choosing the Right Tool: Protein Methods & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-molecular-biology-dna-replication-mcat",
+    "importPath": "./mcat-mcat-molecular-biology-dna-replication-mcat",
+    "partTitles": [
+      "DNA Structure & the Semiconservative Logic",
+      "The Replication Fork: Enzymes & Choreography",
+      "Fidelity, Telomeres & DNA Repair",
+      "Replication in Context: Cell Cycle, Drugs & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-molecular-biology-transcription-mcat",
+    "importPath": "./mcat-mcat-molecular-biology-transcription-mcat",
+    "partTitles": [
+      "From Gene to RNA: Polymerases, Promoters & Strands",
+      "Eukaryotic mRNA Processing",
+      "Regulation: Operons, Enhancers & Epigenetics",
+      "Reading Transcription Experiments & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-molecular-biology-translation-mcat",
+    "importPath": "./mcat-mcat-molecular-biology-translation-mcat",
+    "partTitles": [
+      "The Genetic Code & tRNA",
+      "Ribosome Mechanics: Initiation, Elongation, Termination",
+      "Mutations, Folding & Post-Translational Modification",
+      "Translational Control, Toxins & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-genetics-evolution-mendelian-mcat",
+    "importPath": "./mcat-mcat-genetics-evolution-mendelian-mcat",
+    "partTitles": [
+      "Mendel's Laws & the Probability Toolkit",
+      "Linkage, Recombination & Gene Mapping",
+      "Pedigrees & Human Inheritance Patterns",
+      "MCAT Integration: When Ratios Go Wrong"
+    ]
+  },
+  {
+    "slug": "mcat-genetics-evolution-natural-selection-mcat",
+    "importPath": "./mcat-mcat-genetics-evolution-natural-selection-mcat",
+    "partTitles": [
+      "Darwinian Fundamentals: Variation, Fitness & Adaptation",
+      "Modes of Selection, Sexual Selection & Altruism",
+      "Speciation, Reproductive Isolation & Phylogeny",
+      "MCAT Integration: Evidence, Experiments & Data Interpretation"
+    ]
+  },
+  {
+    "slug": "mcat-genetics-evolution-population-genetics-mcat",
+    "importPath": "./mcat-mcat-genetics-evolution-population-genetics-mcat",
+    "partTitles": [
+      "Allele Frequencies & Hardy-Weinberg Equilibrium",
+      "Breaking Equilibrium: Drift, Founder Effects & Gene Flow",
+      "Selection in Populations: Fitness, Selection Modes & Balancing Selection",
+      "MCAT Integration: X-Linked, Multi-Allele & Passage-Style H-W"
+    ]
+  },
+  {
+    "slug": "mcat-genetics-evolution-immunology-mcat",
+    "importPath": "./mcat-mcat-genetics-evolution-immunology-mcat",
+    "partTitles": [
+      "Innate Immunity: Barriers, Cells & Inflammation",
+      "Adaptive Immunity: T Cells, B Cells & MHC",
+      "Antibodies, Memory & Vaccination",
+      "MCAT Integration: Immune Dysfunction & Lab Techniques"
+    ]
+  },
+  {
+    "slug": "mcat-organ-systems-cardiovascular-mcat",
+    "importPath": "./mcat-mcat-organ-systems-cardiovascular-mcat",
+    "partTitles": [
+      "The Heart, the Cardiac Cycle & the ECG",
+      "Pressure, Flow & Resistance (Hemodynamics)",
+      "Starling Forces, Frank–Starling & Blood Pressure Regulation",
+      "MCAT-Style Integration: Loops, Pathology & Passage Skills"
+    ]
+  },
+  {
+    "slug": "mcat-organ-systems-renal-mcat",
+    "importPath": "./mcat-mcat-organ-systems-renal-mcat",
+    "partTitles": [
+      "Nephron Architecture & Glomerular Filtration",
+      "Tubular Transport & Renal Clearance",
+      "Concentrating Urine, RAAS/ADH & Acid–Base",
+      "MCAT-Style Integration: Diuretics as Probes, Pathology & Passage Skills"
+    ]
+  },
+  {
+    "slug": "mcat-organ-systems-respiratory-mcat",
+    "importPath": "./mcat-mcat-organ-systems-respiratory-mcat",
+    "partTitles": [
+      "Airway Structure & the Mechanics of Ventilation",
+      "Gas Exchange & Transport (O2, CO2 & Hemoglobin)",
+      "Control of Breathing, Acid–Base & Ventilation–Perfusion Matching",
+      "MCAT-Style Integration: Altitude, Exercise, Pathology & Passage Skills"
+    ]
+  },
+  {
+    "slug": "mcat-organic-chemistry-carbonyls-mcat",
+    "importPath": "./mcat-mcat-organic-chemistry-carbonyls-mcat",
+    "partTitles": [
+      "The Carbonyl Blueprint & Nucleophilic Addition",
+      "Nucleophilic Acyl Substitution: The Reactivity Ladder",
+      "Enols, Enolates & Alpha-Carbon Chemistry",
+      "Redox, Biochemical Carbonyls & MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-organic-chemistry-functional-groups-mcat",
+    "importPath": "./mcat-mcat-organic-chemistry-functional-groups-mcat",
+    "partTitles": [
+      "Recognition & Nomenclature",
+      "Physical Properties: Forces, Boiling Points & Solubility",
+      "Acidity, Basicity & Electronic Effects",
+      "Functional Groups in Biomolecules: MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-organic-chemistry-sn1-sn2-e1-e2-mcat",
+    "importPath": "./mcat-mcat-organic-chemistry-sn1-sn2-e1-e2-mcat",
+    "partTitles": [
+      "The Four Mechanisms: Core Concepts",
+      "Mechanisms & Energy Diagrams",
+      "Nucleophiles, Solvents & Stereochemical Outcomes",
+      "The Competition: MCAT Decision Framework"
+    ]
+  },
+  {
+    "slug": "mcat-organic-chemistry-spectroscopy-mcat",
+    "importPath": "./mcat-mcat-organic-chemistry-spectroscopy-mcat",
+    "partTitles": [
+      "IR Spectroscopy: Reading the Bands",
+      "Proton NMR: Shift, Integration & Splitting",
+      "Carbon-13 NMR, UV-Vis & Mass Spectrometry",
+      "Structure Elucidation: MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-organic-chemistry-stereochemistry-mcat",
+    "importPath": "./mcat-mcat-organic-chemistry-stereochemistry-mcat",
+    "partTitles": [
+      "Isomers & Chirality: Core Concepts",
+      "Assigning Configuration: R/S, Fischer & E/Z",
+      "Optical Activity & Reaction Stereochemistry",
+      "Biomolecular Stereochemistry: MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-organ-systems-endocrine-nervous-mcat",
+    "importPath": "./mcat-mcat-organ-systems-endocrine-nervous-mcat",
+    "partTitles": [
+      "Chemical Signaling: Hormone Classes, Axes & Feedback",
+      "Neurons, Action Potentials, Synapses & the Autonomic Division",
+      "The Major Hormone Systems in Action",
+      "MCAT Integration: Neuroendocrine Control, Disorder Logic & Passage Data"
+    ]
+  },
+  {
+    "slug": "mcat-anatomy-physiology-embryology-mcat",
+    "importPath": "./mcat-mcat-anatomy-physiology-embryology-mcat",
+    "partTitles": [
+      "Fertilization, Cleavage & Implantation",
+      "Gastrulation, Neurulation & Germ-Layer Derivatives",
+      "Organogenesis, Extraembryonic Membranes & Fetal Circulation",
+      "MCAT Integration: Potency, Induction & Experimental Embryology"
+    ]
+  },
+  {
+    "slug": "mcat-anatomy-physiology-musculoskeletal-mcat",
+    "importPath": "./mcat-mcat-anatomy-physiology-musculoskeletal-mcat",
+    "partTitles": [
+      "Bone, Cartilage & Calcium Homeostasis",
+      "The Sarcomere & Excitation-Contraction Coupling",
+      "Muscle Energetics, Fiber Types & the Three Muscle Tissues",
+      "MCAT Integration: Rigor Mortis, Disease Logic & Experimental Data"
+    ]
+  },
+  {
+    "slug": "mcat-anatomy-physiology-reproductive-mcat",
+    "importPath": "./mcat-mcat-anatomy-physiology-reproductive-mcat",
+    "partTitles": [
+      "Gametogenesis: Meiosis Applied",
+      "Anatomy & the HPG Axis",
+      "The Menstrual Cycle, Fertilization & Pregnancy",
+      "MCAT Integration: Hormonal Logic, Contraception & Passage Data"
+    ]
+  },
+  {
+    "slug": "mcat-anatomy-physiology-sensory-mcat",
+    "importPath": "./mcat-mcat-anatomy-physiology-sensory-mcat",
+    "partTitles": [
+      "Sensory Transduction Principles & Somatosensation",
+      "Vision: Optics & Phototransduction",
+      "Hearing & the Vestibular System",
+      "MCAT Integration: Chemical Senses & Sensory Passages"
+    ]
+  },
+  {
+    "slug": "mcat-sociology-structure-stratification-mcat",
+    "importPath": "./mcat-mcat-sociology-structure-stratification-mcat",
+    "partTitles": [
+      "Theoretical Paradigms: The Lenses Sociology Looks Through",
+      "Social Institutions: Family, Education, Religion, Government & Medicine",
+      "Stratification: Class, Capital, Mobility & Poverty",
+      "MCAT Integration: Demographics, Population Change & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-sociology-culture-socialization-mcat",
+    "importPath": "./mcat-mcat-sociology-culture-socialization-mcat",
+    "partTitles": [
+      "Culture: Norms, Values & Cultural Dynamics",
+      "Socialization: Building a Self from Social Material",
+      "Deviance, Stigma & Social Control",
+      "MCAT Integration: Identity, Collective Behavior & Reading Socialization Studies"
+    ]
+  },
+  {
+    "slug": "mcat-sociology-groups-interaction-mcat",
+    "importPath": "./mcat-mcat-sociology-groups-interaction-mcat",
+    "partTitles": [
+      "Statuses, Roles & the Anatomy of Groups",
+      "How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies",
+      "The Interaction Order: Dramaturgy, Networks & Bureaucracy",
+      "MCAT Integration: Prejudice, Discrimination & Reading Interaction Experiments"
+    ]
+  },
+  {
+    "slug": "mcat-sociology-health-disparities-mcat",
+    "importPath": "./mcat-mcat-sociology-health-disparities-mcat",
+    "partTitles": [
+      "Social Determinants & the Social Gradient in Health",
+      "Healthcare as an Institution: Access, Encounters & Unequal Treatment",
+      "Measuring Disparities: Epidemiologic Tools, Segregation & Discrimination as Exposure",
+      "MCAT Integration: Theories at the Bedside & the Disparities Passage Playbook"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-electrostatics-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-electrostatics-mcat",
+    "partTitles": [
+      "Charge & Field Concepts",
+      "The Quantitative Toolkit",
+      "Membranes & Electrophoresis",
+      "MCAT Integration"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-circuits-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-circuits-mcat",
+    "partTitles": [
+      "Current, Voltage & Resistance",
+      "Power, EMF & Real Batteries",
+      "Capacitors & Dielectrics",
+      "MCAT Integration: Complex Circuits & Bioelectricity"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-magnetism-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-magnetism-mcat",
+    "partTitles": [
+      "Magnetic Fields & Their Sources",
+      "Forces on Moving Charges",
+      "Wires, Velocity Selectors & the Mass Spectrometer",
+      "MCAT Integration: Induction, MRI & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-electrochemistry-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-electrochemistry-mcat",
+    "partTitles": [
+      "Galvanic Cells & Cell Potential",
+      "Electrolytic Cells & Faraday's Laws",
+      "Batteries, Concentration Cells & the Nernst Equation",
+      "MCAT Integration: Sign Conventions, Cell Diagrams & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-electricity-optics-mcat",
+    "importPath": "./mcat-mcat-physics-electricity-optics-mcat",
+    "partTitles": [
+      "Light, Reflection & Refraction",
+      "Mirrors & Image Formation",
+      "Thin Lenses, Diopters & the Eye",
+      "MCAT Integration: Wave Optics & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-kinematics-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-kinematics-mcat",
+    "partTitles": [
+      "Motion Concepts & Graphs",
+      "The Kinematic Equation Toolkit",
+      "Projectiles & Free Fall in Practice",
+      "MCAT Integration: Experiments, Estimation & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-forces-newton-laws-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-forces-newton-laws-mcat",
+    "partTitles": [
+      "Newton's Laws & Free-Body Diagrams",
+      "Friction & Inclined Planes",
+      "Tension, Apparent Weight & Circular Motion",
+      "MCAT Integration: Torque, Equilibrium & the Body as Levers"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-work-energy-power-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-work-energy-power-mcat",
+    "partTitles": [
+      "Work & the Work-Energy Theorem",
+      "Potential Energy & Conservation of Energy",
+      "Power, Efficiency & Simple Machines",
+      "MCAT Integration: Energy Accounting & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-momentum-collisions-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-momentum-collisions-mcat",
+    "partTitles": [
+      "Momentum & Impulse",
+      "Conservation of Momentum & Collision Types",
+      "Recoil, Explosions & the Ballistic Pendulum",
+      "MCAT Integration: Center of Mass, 2-D Collisions & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-physics-mechanics-fluids-waves-mcat",
+    "importPath": "./mcat-mcat-physics-mechanics-fluids-waves-mcat",
+    "partTitles": [
+      "Fluid Statics: Density, Pressure & Buoyancy",
+      "Fluid Dynamics: Continuity, Bernoulli & Viscosity",
+      "Waves & Sound: Standing Waves, Decibels & Doppler",
+      "MCAT Integration: Blood Flow, Ultrasound & Passage Strategy"
+    ]
+  },
+  {
+    "slug": "mcat-psychology-behavior-sensation-perception-mcat",
+    "importPath": "./mcat-mcat-psychology-behavior-sensation-perception-mcat",
+    "partTitles": [
+      "Thresholds, Weber's Law & Signal Detection",
+      "Vision & Hearing: From Transduction to Cortex",
+      "Body Senses, Gestalt Organization & Depth",
+      "MCAT Integration: Top-Down Perception, Streams & Reading Psychophysics Passages"
+    ]
+  },
+  {
+    "slug": "mcat-psychology-behavior-learning-memory-mcat",
+    "importPath": "./mcat-mcat-psychology-behavior-learning-memory-mcat",
+    "partTitles": [
+      "Classical Conditioning: Pavlovian Learning & Its Boundaries",
+      "Operant Conditioning: Consequences, Schedules & Learning Without Reinforcement",
+      "Memory: Encoding, Storage & Retrieval",
+      "MCAT Integration: Forgetting, Memory Errors & Reading Learning-Memory Studies"
+    ]
+  },
+  {
+    "slug": "mcat-psychology-behavior-cognition-language-mcat",
+    "importPath": "./mcat-mcat-psychology-behavior-cognition-language-mcat",
+    "partTitles": [
+      "Attention & Information Processing",
+      "Problem Solving, Decision Biases & Intelligence",
+      "Language: Structure, Acquisition & the Brain",
+      "MCAT Integration: Consciousness, Sleep & Reading Cognition Experiments"
+    ]
+  },
+  {
+    "slug": "mcat-psychology-behavior-development-mcat",
+    "importPath": "./mcat-mcat-psychology-behavior-development-mcat",
+    "partTitles": [
+      "Piaget's Stages & the Growing Mind",
+      "Attachment, Temperament, Parenting & Vygotsky",
+      "Erikson, Kohlberg & Identity Across the Lifespan",
+      "MCAT Integration: Nature-Nurture Designs & Reading Developmental Studies"
+    ]
+  },
+  {
+    "slug": "mcat-psychology-behavior-disorders-mcat",
+    "importPath": "./mcat-mcat-psychology-behavior-disorders-mcat",
+    "partTitles": [
+      "Classifying Disorders: DSM Logic, Anxiety, OCD & Trauma",
+      "Mood Disorders & Schizophrenia",
+      "Personality, Dissociative, Somatic & Neurocognitive Disorders",
+      "MCAT Integration: Etiology Models, Treatment Logic & Reading Clinical Studies"
+    ]
   }
 ]

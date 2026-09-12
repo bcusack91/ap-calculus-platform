@@ -3022,4 +3022,472 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[4]) },
     ],
   },
+  'mcat-biochemistry-amino-acids-proteins-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The 20 Amino Acids: Structure & Classification', loader: () => import('./mcat-mcat-biochemistry-amino-acids-proteins-mcat').then((m) => m.parts[0]) },
+      { title: 'Acid-Base Chemistry, pKa & Isoelectric Point', loader: () => import('./mcat-mcat-biochemistry-amino-acids-proteins-mcat').then((m) => m.parts[1]) },
+      { title: 'Protein Structure, Folding & Denaturation', loader: () => import('./mcat-mcat-biochemistry-amino-acids-proteins-mcat').then((m) => m.parts[2]) },
+      { title: 'Protein Purification, Analysis & MCAT Integration', loader: () => import('./mcat-mcat-biochemistry-amino-acids-proteins-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-biochemistry-bioenergetics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Free Energy, ATP & Energy Coupling', loader: () => import('./mcat-mcat-biochemistry-bioenergetics-mcat').then((m) => m.parts[0]) },
+      { title: 'Redox Carriers, PDH & the Citric Acid Cycle', loader: () => import('./mcat-mcat-biochemistry-bioenergetics-mcat').then((m) => m.parts[1]) },
+      { title: 'Electron Transport & Oxidative Phosphorylation', loader: () => import('./mcat-mcat-biochemistry-bioenergetics-mcat').then((m) => m.parts[2]) },
+      { title: 'ATP Accounting, Energy States & MCAT Integration', loader: () => import('./mcat-mcat-biochemistry-bioenergetics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-biochemistry-carbohydrate-metabolism-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Glycolysis: Steps, Enzymes & Logic', loader: () => import('./mcat-mcat-biochemistry-carbohydrate-metabolism-mcat').then((m) => m.parts[0]) },
+      { title: 'Gluconeogenesis & Reciprocal Regulation', loader: () => import('./mcat-mcat-biochemistry-carbohydrate-metabolism-mcat').then((m) => m.parts[1]) },
+      { title: 'Glycogen Metabolism & the Pentose Phosphate Pathway', loader: () => import('./mcat-mcat-biochemistry-carbohydrate-metabolism-mcat').then((m) => m.parts[2]) },
+      { title: 'Hormonal Integration & MCAT-Style Experiments', loader: () => import('./mcat-mcat-biochemistry-carbohydrate-metabolism-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-biochemistry-enzymes-kinetics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Enzyme Fundamentals: Catalysis & Specificity', loader: () => import('./mcat-mcat-biochemistry-enzymes-kinetics-mcat').then((m) => m.parts[0]) },
+      { title: 'Michaelis-Menten Kinetics', loader: () => import('./mcat-mcat-biochemistry-enzymes-kinetics-mcat').then((m) => m.parts[1]) },
+      { title: 'Enzyme Inhibition', loader: () => import('./mcat-mcat-biochemistry-enzymes-kinetics-mcat').then((m) => m.parts[2]) },
+      { title: 'Regulation, Allostery & MCAT Integration', loader: () => import('./mcat-mcat-biochemistry-enzymes-kinetics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-biochemistry-lipid-metabolism-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Lipid Structures, Digestion & Lipoprotein Transport', loader: () => import('./mcat-mcat-biochemistry-lipid-metabolism-mcat').then((m) => m.parts[0]) },
+      { title: 'The Carnitine Shuttle & Beta-Oxidation ATP Arithmetic', loader: () => import('./mcat-mcat-biochemistry-lipid-metabolism-mcat').then((m) => m.parts[1]) },
+      { title: 'Ketogenesis & Ketone Body Metabolism', loader: () => import('./mcat-mcat-biochemistry-lipid-metabolism-mcat').then((m) => m.parts[2]) },
+      { title: 'Fatty Acid Synthesis, Cholesterol & MCAT Integration', loader: () => import('./mcat-mcat-biochemistry-lipid-metabolism-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-microbiology-antimicrobials-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Selective Toxicity & Cell Wall Inhibitors', loader: () => import('./mcat-mcat-microbiology-antimicrobials-mcat').then((m) => m.parts[0]) },
+      { title: 'Protein Synthesis Inhibitors: 30S vs 50S', loader: () => import('./mcat-mcat-microbiology-antimicrobials-mcat').then((m) => m.parts[1]) },
+      { title: 'Nucleic Acid, Folate & Membrane Targets', loader: () => import('./mcat-mcat-microbiology-antimicrobials-mcat').then((m) => m.parts[2]) },
+      { title: 'Resistance Mechanisms & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-antimicrobials-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-microbiology-bacteria-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Prokaryotic Architecture & the Gram Stain', loader: () => import('./mcat-mcat-microbiology-bacteria-mcat').then((m) => m.parts[0]) },
+      { title: 'Growth, Metabolism & Culture', loader: () => import('./mcat-mcat-microbiology-bacteria-mcat').then((m) => m.parts[1]) },
+      { title: 'Bacterial Genetics: Transformation, Transduction & Conjugation', loader: () => import('./mcat-mcat-microbiology-bacteria-mcat').then((m) => m.parts[2]) },
+      { title: 'Pathogenesis, Toxins & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-bacteria-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-microbiology-viruses-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Viral Architecture & the Infectious Cycle', loader: () => import('./mcat-mcat-microbiology-viruses-mcat').then((m) => m.parts[0]) },
+      { title: 'Bacteriophages: Lytic & Lysogenic Cycles', loader: () => import('./mcat-mcat-microbiology-viruses-mcat').then((m) => m.parts[1]) },
+      { title: 'Animal Virus Replication Strategies', loader: () => import('./mcat-mcat-microbiology-viruses-mcat').then((m) => m.parts[2]) },
+      { title: 'Viral Evolution, Subviral Agents & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-viruses-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-cell-biology-cell-cycle-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Phases, Mitosis & Measuring the Cycle', loader: () => import('./mcat-mcat-cell-biology-cell-cycle-mcat').then((m) => m.parts[0]) },
+      { title: 'Cyclins, CDKs & Checkpoint Machinery', loader: () => import('./mcat-mcat-cell-biology-cell-cycle-mcat').then((m) => m.parts[1]) },
+      { title: 'p53, Apoptosis & Cancer', loader: () => import('./mcat-mcat-cell-biology-cell-cycle-mcat').then((m) => m.parts[2]) },
+      { title: 'Experimental Methods & MCAT Integration', loader: () => import('./mcat-mcat-cell-biology-cell-cycle-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-cell-biology-membrane-transport-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Membrane Architecture & Permeability', loader: () => import('./mcat-mcat-cell-biology-membrane-transport-mcat').then((m) => m.parts[0]) },
+      { title: 'Passive Transport & Osmosis', loader: () => import('./mcat-mcat-cell-biology-membrane-transport-mcat').then((m) => m.parts[1]) },
+      { title: 'Active Transport & the Na+/K+ ATPase', loader: () => import('./mcat-mcat-cell-biology-membrane-transport-mcat').then((m) => m.parts[2]) },
+      { title: 'Vesicular Transport & MCAT Integration', loader: () => import('./mcat-mcat-cell-biology-membrane-transport-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-cell-biology-organelles-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Compartment Map & How We Isolate It', loader: () => import('./mcat-mcat-cell-biology-organelles-mcat').then((m) => m.parts[0]) },
+      { title: 'Protein Sorting & the Secretory Pathway', loader: () => import('./mcat-mcat-cell-biology-organelles-mcat').then((m) => m.parts[1]) },
+      { title: 'Mitochondria, Lysosomes & Peroxisomes in Depth', loader: () => import('./mcat-mcat-cell-biology-organelles-mcat').then((m) => m.parts[2]) },
+      { title: 'The Nucleus, Organelle Dynamics & MCAT Integration', loader: () => import('./mcat-mcat-cell-biology-organelles-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-cell-biology-signaling-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Signaling Logic & Receptor Classes', loader: () => import('./mcat-mcat-cell-biology-signaling-mcat').then((m) => m.parts[0]) },
+      { title: 'GPCRs & Second Messengers', loader: () => import('./mcat-mcat-cell-biology-signaling-mcat').then((m) => m.parts[1]) },
+      { title: 'RTKs, Ras-MAPK, PI3K & JAK-STAT', loader: () => import('./mcat-mcat-cell-biology-signaling-mcat').then((m) => m.parts[2]) },
+      { title: 'Termination, Toxins & MCAT Integration', loader: () => import('./mcat-mcat-cell-biology-signaling-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-molecular-biology-biotechnology-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Cutting, Pasting & Copying: Restriction Enzymes, Cloning & PCR', loader: () => import('./mcat-mcat-molecular-biology-biotechnology-mcat').then((m) => m.parts[0]) },
+      { title: 'Reading DNA: Gels, Blots & Sequencing', loader: () => import('./mcat-mcat-molecular-biology-biotechnology-mcat').then((m) => m.parts[1]) },
+      { title: 'Manipulating Genes in Cells & Organisms', loader: () => import('./mcat-mcat-molecular-biology-biotechnology-mcat').then((m) => m.parts[2]) },
+      { title: 'Choosing the Right Tool: Protein Methods & MCAT Integration', loader: () => import('./mcat-mcat-molecular-biology-biotechnology-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-molecular-biology-dna-replication-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'DNA Structure & the Semiconservative Logic', loader: () => import('./mcat-mcat-molecular-biology-dna-replication-mcat').then((m) => m.parts[0]) },
+      { title: 'The Replication Fork: Enzymes & Choreography', loader: () => import('./mcat-mcat-molecular-biology-dna-replication-mcat').then((m) => m.parts[1]) },
+      { title: 'Fidelity, Telomeres & DNA Repair', loader: () => import('./mcat-mcat-molecular-biology-dna-replication-mcat').then((m) => m.parts[2]) },
+      { title: 'Replication in Context: Cell Cycle, Drugs & MCAT Integration', loader: () => import('./mcat-mcat-molecular-biology-dna-replication-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-molecular-biology-transcription-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'From Gene to RNA: Polymerases, Promoters & Strands', loader: () => import('./mcat-mcat-molecular-biology-transcription-mcat').then((m) => m.parts[0]) },
+      { title: 'Eukaryotic mRNA Processing', loader: () => import('./mcat-mcat-molecular-biology-transcription-mcat').then((m) => m.parts[1]) },
+      { title: 'Regulation: Operons, Enhancers & Epigenetics', loader: () => import('./mcat-mcat-molecular-biology-transcription-mcat').then((m) => m.parts[2]) },
+      { title: 'Reading Transcription Experiments & MCAT Integration', loader: () => import('./mcat-mcat-molecular-biology-transcription-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-molecular-biology-translation-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Genetic Code & tRNA', loader: () => import('./mcat-mcat-molecular-biology-translation-mcat').then((m) => m.parts[0]) },
+      { title: 'Ribosome Mechanics: Initiation, Elongation, Termination', loader: () => import('./mcat-mcat-molecular-biology-translation-mcat').then((m) => m.parts[1]) },
+      { title: 'Mutations, Folding & Post-Translational Modification', loader: () => import('./mcat-mcat-molecular-biology-translation-mcat').then((m) => m.parts[2]) },
+      { title: 'Translational Control, Toxins & MCAT Integration', loader: () => import('./mcat-mcat-molecular-biology-translation-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-genetics-evolution-mendelian-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Mendel\'s Laws & the Probability Toolkit', loader: () => import('./mcat-mcat-genetics-evolution-mendelian-mcat').then((m) => m.parts[0]) },
+      { title: 'Linkage, Recombination & Gene Mapping', loader: () => import('./mcat-mcat-genetics-evolution-mendelian-mcat').then((m) => m.parts[1]) },
+      { title: 'Pedigrees & Human Inheritance Patterns', loader: () => import('./mcat-mcat-genetics-evolution-mendelian-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: When Ratios Go Wrong', loader: () => import('./mcat-mcat-genetics-evolution-mendelian-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-genetics-evolution-natural-selection-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Darwinian Fundamentals: Variation, Fitness & Adaptation', loader: () => import('./mcat-mcat-genetics-evolution-natural-selection-mcat').then((m) => m.parts[0]) },
+      { title: 'Modes of Selection, Sexual Selection & Altruism', loader: () => import('./mcat-mcat-genetics-evolution-natural-selection-mcat').then((m) => m.parts[1]) },
+      { title: 'Speciation, Reproductive Isolation & Phylogeny', loader: () => import('./mcat-mcat-genetics-evolution-natural-selection-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Evidence, Experiments & Data Interpretation', loader: () => import('./mcat-mcat-genetics-evolution-natural-selection-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-genetics-evolution-population-genetics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Allele Frequencies & Hardy-Weinberg Equilibrium', loader: () => import('./mcat-mcat-genetics-evolution-population-genetics-mcat').then((m) => m.parts[0]) },
+      { title: 'Breaking Equilibrium: Drift, Founder Effects & Gene Flow', loader: () => import('./mcat-mcat-genetics-evolution-population-genetics-mcat').then((m) => m.parts[1]) },
+      { title: 'Selection in Populations: Fitness, Selection Modes & Balancing Selection', loader: () => import('./mcat-mcat-genetics-evolution-population-genetics-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: X-Linked, Multi-Allele & Passage-Style H-W', loader: () => import('./mcat-mcat-genetics-evolution-population-genetics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-genetics-evolution-immunology-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Innate Immunity: Barriers, Cells & Inflammation', loader: () => import('./mcat-mcat-genetics-evolution-immunology-mcat').then((m) => m.parts[0]) },
+      { title: 'Adaptive Immunity: T Cells, B Cells & MHC', loader: () => import('./mcat-mcat-genetics-evolution-immunology-mcat').then((m) => m.parts[1]) },
+      { title: 'Antibodies, Memory & Vaccination', loader: () => import('./mcat-mcat-genetics-evolution-immunology-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Immune Dysfunction & Lab Techniques', loader: () => import('./mcat-mcat-genetics-evolution-immunology-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organ-systems-cardiovascular-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Heart, the Cardiac Cycle & the ECG', loader: () => import('./mcat-mcat-organ-systems-cardiovascular-mcat').then((m) => m.parts[0]) },
+      { title: 'Pressure, Flow & Resistance (Hemodynamics)', loader: () => import('./mcat-mcat-organ-systems-cardiovascular-mcat').then((m) => m.parts[1]) },
+      { title: 'Starling Forces, Frank–Starling & Blood Pressure Regulation', loader: () => import('./mcat-mcat-organ-systems-cardiovascular-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT-Style Integration: Loops, Pathology & Passage Skills', loader: () => import('./mcat-mcat-organ-systems-cardiovascular-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organ-systems-renal-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Nephron Architecture & Glomerular Filtration', loader: () => import('./mcat-mcat-organ-systems-renal-mcat').then((m) => m.parts[0]) },
+      { title: 'Tubular Transport & Renal Clearance', loader: () => import('./mcat-mcat-organ-systems-renal-mcat').then((m) => m.parts[1]) },
+      { title: 'Concentrating Urine, RAAS/ADH & Acid–Base', loader: () => import('./mcat-mcat-organ-systems-renal-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT-Style Integration: Diuretics as Probes, Pathology & Passage Skills', loader: () => import('./mcat-mcat-organ-systems-renal-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organ-systems-respiratory-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Airway Structure & the Mechanics of Ventilation', loader: () => import('./mcat-mcat-organ-systems-respiratory-mcat').then((m) => m.parts[0]) },
+      { title: 'Gas Exchange & Transport (O2, CO2 & Hemoglobin)', loader: () => import('./mcat-mcat-organ-systems-respiratory-mcat').then((m) => m.parts[1]) },
+      { title: 'Control of Breathing, Acid–Base & Ventilation–Perfusion Matching', loader: () => import('./mcat-mcat-organ-systems-respiratory-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT-Style Integration: Altitude, Exercise, Pathology & Passage Skills', loader: () => import('./mcat-mcat-organ-systems-respiratory-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organic-chemistry-carbonyls-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Carbonyl Blueprint & Nucleophilic Addition', loader: () => import('./mcat-mcat-organic-chemistry-carbonyls-mcat').then((m) => m.parts[0]) },
+      { title: 'Nucleophilic Acyl Substitution: The Reactivity Ladder', loader: () => import('./mcat-mcat-organic-chemistry-carbonyls-mcat').then((m) => m.parts[1]) },
+      { title: 'Enols, Enolates & Alpha-Carbon Chemistry', loader: () => import('./mcat-mcat-organic-chemistry-carbonyls-mcat').then((m) => m.parts[2]) },
+      { title: 'Redox, Biochemical Carbonyls & MCAT Integration', loader: () => import('./mcat-mcat-organic-chemistry-carbonyls-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organic-chemistry-functional-groups-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Recognition & Nomenclature', loader: () => import('./mcat-mcat-organic-chemistry-functional-groups-mcat').then((m) => m.parts[0]) },
+      { title: 'Physical Properties: Forces, Boiling Points & Solubility', loader: () => import('./mcat-mcat-organic-chemistry-functional-groups-mcat').then((m) => m.parts[1]) },
+      { title: 'Acidity, Basicity & Electronic Effects', loader: () => import('./mcat-mcat-organic-chemistry-functional-groups-mcat').then((m) => m.parts[2]) },
+      { title: 'Functional Groups in Biomolecules: MCAT Integration', loader: () => import('./mcat-mcat-organic-chemistry-functional-groups-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organic-chemistry-sn1-sn2-e1-e2-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Four Mechanisms: Core Concepts', loader: () => import('./mcat-mcat-organic-chemistry-sn1-sn2-e1-e2-mcat').then((m) => m.parts[0]) },
+      { title: 'Mechanisms & Energy Diagrams', loader: () => import('./mcat-mcat-organic-chemistry-sn1-sn2-e1-e2-mcat').then((m) => m.parts[1]) },
+      { title: 'Nucleophiles, Solvents & Stereochemical Outcomes', loader: () => import('./mcat-mcat-organic-chemistry-sn1-sn2-e1-e2-mcat').then((m) => m.parts[2]) },
+      { title: 'The Competition: MCAT Decision Framework', loader: () => import('./mcat-mcat-organic-chemistry-sn1-sn2-e1-e2-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organic-chemistry-spectroscopy-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'IR Spectroscopy: Reading the Bands', loader: () => import('./mcat-mcat-organic-chemistry-spectroscopy-mcat').then((m) => m.parts[0]) },
+      { title: 'Proton NMR: Shift, Integration & Splitting', loader: () => import('./mcat-mcat-organic-chemistry-spectroscopy-mcat').then((m) => m.parts[1]) },
+      { title: 'Carbon-13 NMR, UV-Vis & Mass Spectrometry', loader: () => import('./mcat-mcat-organic-chemistry-spectroscopy-mcat').then((m) => m.parts[2]) },
+      { title: 'Structure Elucidation: MCAT Integration', loader: () => import('./mcat-mcat-organic-chemistry-spectroscopy-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organic-chemistry-stereochemistry-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Isomers & Chirality: Core Concepts', loader: () => import('./mcat-mcat-organic-chemistry-stereochemistry-mcat').then((m) => m.parts[0]) },
+      { title: 'Assigning Configuration: R/S, Fischer & E/Z', loader: () => import('./mcat-mcat-organic-chemistry-stereochemistry-mcat').then((m) => m.parts[1]) },
+      { title: 'Optical Activity & Reaction Stereochemistry', loader: () => import('./mcat-mcat-organic-chemistry-stereochemistry-mcat').then((m) => m.parts[2]) },
+      { title: 'Biomolecular Stereochemistry: MCAT Integration', loader: () => import('./mcat-mcat-organic-chemistry-stereochemistry-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-organ-systems-endocrine-nervous-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Chemical Signaling: Hormone Classes, Axes & Feedback', loader: () => import('./mcat-mcat-organ-systems-endocrine-nervous-mcat').then((m) => m.parts[0]) },
+      { title: 'Neurons, Action Potentials, Synapses & the Autonomic Division', loader: () => import('./mcat-mcat-organ-systems-endocrine-nervous-mcat').then((m) => m.parts[1]) },
+      { title: 'The Major Hormone Systems in Action', loader: () => import('./mcat-mcat-organ-systems-endocrine-nervous-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Neuroendocrine Control, Disorder Logic & Passage Data', loader: () => import('./mcat-mcat-organ-systems-endocrine-nervous-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-anatomy-physiology-embryology-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Fertilization, Cleavage & Implantation', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[0]) },
+      { title: 'Gastrulation, Neurulation & Germ-Layer Derivatives', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[1]) },
+      { title: 'Organogenesis, Extraembryonic Membranes & Fetal Circulation', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Potency, Induction & Experimental Embryology', loader: () => import('./mcat-mcat-anatomy-physiology-embryology-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-anatomy-physiology-musculoskeletal-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Bone, Cartilage & Calcium Homeostasis', loader: () => import('./mcat-mcat-anatomy-physiology-musculoskeletal-mcat').then((m) => m.parts[0]) },
+      { title: 'The Sarcomere & Excitation-Contraction Coupling', loader: () => import('./mcat-mcat-anatomy-physiology-musculoskeletal-mcat').then((m) => m.parts[1]) },
+      { title: 'Muscle Energetics, Fiber Types & the Three Muscle Tissues', loader: () => import('./mcat-mcat-anatomy-physiology-musculoskeletal-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Rigor Mortis, Disease Logic & Experimental Data', loader: () => import('./mcat-mcat-anatomy-physiology-musculoskeletal-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-anatomy-physiology-reproductive-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Gametogenesis: Meiosis Applied', loader: () => import('./mcat-mcat-anatomy-physiology-reproductive-mcat').then((m) => m.parts[0]) },
+      { title: 'Anatomy & the HPG Axis', loader: () => import('./mcat-mcat-anatomy-physiology-reproductive-mcat').then((m) => m.parts[1]) },
+      { title: 'The Menstrual Cycle, Fertilization & Pregnancy', loader: () => import('./mcat-mcat-anatomy-physiology-reproductive-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Hormonal Logic, Contraception & Passage Data', loader: () => import('./mcat-mcat-anatomy-physiology-reproductive-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-anatomy-physiology-sensory-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Sensory Transduction Principles & Somatosensation', loader: () => import('./mcat-mcat-anatomy-physiology-sensory-mcat').then((m) => m.parts[0]) },
+      { title: 'Vision: Optics & Phototransduction', loader: () => import('./mcat-mcat-anatomy-physiology-sensory-mcat').then((m) => m.parts[1]) },
+      { title: 'Hearing & the Vestibular System', loader: () => import('./mcat-mcat-anatomy-physiology-sensory-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Chemical Senses & Sensory Passages', loader: () => import('./mcat-mcat-anatomy-physiology-sensory-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-sociology-structure-stratification-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Theoretical Paradigms: The Lenses Sociology Looks Through', loader: () => import('./mcat-mcat-sociology-structure-stratification-mcat').then((m) => m.parts[0]) },
+      { title: 'Social Institutions: Family, Education, Religion, Government & Medicine', loader: () => import('./mcat-mcat-sociology-structure-stratification-mcat').then((m) => m.parts[1]) },
+      { title: 'Stratification: Class, Capital, Mobility & Poverty', loader: () => import('./mcat-mcat-sociology-structure-stratification-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Demographics, Population Change & Passage Strategy', loader: () => import('./mcat-mcat-sociology-structure-stratification-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-sociology-culture-socialization-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Culture: Norms, Values & Cultural Dynamics', loader: () => import('./mcat-mcat-sociology-culture-socialization-mcat').then((m) => m.parts[0]) },
+      { title: 'Socialization: Building a Self from Social Material', loader: () => import('./mcat-mcat-sociology-culture-socialization-mcat').then((m) => m.parts[1]) },
+      { title: 'Deviance, Stigma & Social Control', loader: () => import('./mcat-mcat-sociology-culture-socialization-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Identity, Collective Behavior & Reading Socialization Studies', loader: () => import('./mcat-mcat-sociology-culture-socialization-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-sociology-groups-interaction-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Statuses, Roles & the Anatomy of Groups', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[0]) },
+      { title: 'How Groups Bend Individuals: Conformity, Obedience & Group Decision Pathologies', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[1]) },
+      { title: 'The Interaction Order: Dramaturgy, Networks & Bureaucracy', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Prejudice, Discrimination & Reading Interaction Experiments', loader: () => import('./mcat-mcat-sociology-groups-interaction-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-sociology-health-disparities-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Social Determinants & the Social Gradient in Health', loader: () => import('./mcat-mcat-sociology-health-disparities-mcat').then((m) => m.parts[0]) },
+      { title: 'Healthcare as an Institution: Access, Encounters & Unequal Treatment', loader: () => import('./mcat-mcat-sociology-health-disparities-mcat').then((m) => m.parts[1]) },
+      { title: 'Measuring Disparities: Epidemiologic Tools, Segregation & Discrimination as Exposure', loader: () => import('./mcat-mcat-sociology-health-disparities-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Theories at the Bedside & the Disparities Passage Playbook', loader: () => import('./mcat-mcat-sociology-health-disparities-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-electrostatics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Charge & Field Concepts', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[0]) },
+      { title: 'The Quantitative Toolkit', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[1]) },
+      { title: 'Membranes & Electrophoresis', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration', loader: () => import('./mcat-mcat-physics-electricity-electrostatics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-circuits-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Current, Voltage & Resistance', loader: () => import('./mcat-mcat-physics-electricity-circuits-mcat').then((m) => m.parts[0]) },
+      { title: 'Power, EMF & Real Batteries', loader: () => import('./mcat-mcat-physics-electricity-circuits-mcat').then((m) => m.parts[1]) },
+      { title: 'Capacitors & Dielectrics', loader: () => import('./mcat-mcat-physics-electricity-circuits-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Complex Circuits & Bioelectricity', loader: () => import('./mcat-mcat-physics-electricity-circuits-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-magnetism-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Magnetic Fields & Their Sources', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[0]) },
+      { title: 'Forces on Moving Charges', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[1]) },
+      { title: 'Wires, Velocity Selectors & the Mass Spectrometer', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Induction, MRI & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-magnetism-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-electrochemistry-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Galvanic Cells & Cell Potential', loader: () => import('./mcat-mcat-physics-electricity-electrochemistry-mcat').then((m) => m.parts[0]) },
+      { title: 'Electrolytic Cells & Faraday\'s Laws', loader: () => import('./mcat-mcat-physics-electricity-electrochemistry-mcat').then((m) => m.parts[1]) },
+      { title: 'Batteries, Concentration Cells & the Nernst Equation', loader: () => import('./mcat-mcat-physics-electricity-electrochemistry-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Sign Conventions, Cell Diagrams & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-electrochemistry-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-electricity-optics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Light, Reflection & Refraction', loader: () => import('./mcat-mcat-physics-electricity-optics-mcat').then((m) => m.parts[0]) },
+      { title: 'Mirrors & Image Formation', loader: () => import('./mcat-mcat-physics-electricity-optics-mcat').then((m) => m.parts[1]) },
+      { title: 'Thin Lenses, Diopters & the Eye', loader: () => import('./mcat-mcat-physics-electricity-optics-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Wave Optics & Passage Strategy', loader: () => import('./mcat-mcat-physics-electricity-optics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-kinematics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Motion Concepts & Graphs', loader: () => import('./mcat-mcat-physics-mechanics-kinematics-mcat').then((m) => m.parts[0]) },
+      { title: 'The Kinematic Equation Toolkit', loader: () => import('./mcat-mcat-physics-mechanics-kinematics-mcat').then((m) => m.parts[1]) },
+      { title: 'Projectiles & Free Fall in Practice', loader: () => import('./mcat-mcat-physics-mechanics-kinematics-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Experiments, Estimation & Passage Strategy', loader: () => import('./mcat-mcat-physics-mechanics-kinematics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-forces-newton-laws-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Newton\'s Laws & Free-Body Diagrams', loader: () => import('./mcat-mcat-physics-mechanics-forces-newton-laws-mcat').then((m) => m.parts[0]) },
+      { title: 'Friction & Inclined Planes', loader: () => import('./mcat-mcat-physics-mechanics-forces-newton-laws-mcat').then((m) => m.parts[1]) },
+      { title: 'Tension, Apparent Weight & Circular Motion', loader: () => import('./mcat-mcat-physics-mechanics-forces-newton-laws-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Torque, Equilibrium & the Body as Levers', loader: () => import('./mcat-mcat-physics-mechanics-forces-newton-laws-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-work-energy-power-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Work & the Work-Energy Theorem', loader: () => import('./mcat-mcat-physics-mechanics-work-energy-power-mcat').then((m) => m.parts[0]) },
+      { title: 'Potential Energy & Conservation of Energy', loader: () => import('./mcat-mcat-physics-mechanics-work-energy-power-mcat').then((m) => m.parts[1]) },
+      { title: 'Power, Efficiency & Simple Machines', loader: () => import('./mcat-mcat-physics-mechanics-work-energy-power-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Energy Accounting & Passage Strategy', loader: () => import('./mcat-mcat-physics-mechanics-work-energy-power-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-momentum-collisions-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Momentum & Impulse', loader: () => import('./mcat-mcat-physics-mechanics-momentum-collisions-mcat').then((m) => m.parts[0]) },
+      { title: 'Conservation of Momentum & Collision Types', loader: () => import('./mcat-mcat-physics-mechanics-momentum-collisions-mcat').then((m) => m.parts[1]) },
+      { title: 'Recoil, Explosions & the Ballistic Pendulum', loader: () => import('./mcat-mcat-physics-mechanics-momentum-collisions-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Center of Mass, 2-D Collisions & Passage Strategy', loader: () => import('./mcat-mcat-physics-mechanics-momentum-collisions-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-physics-mechanics-fluids-waves-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Fluid Statics: Density, Pressure & Buoyancy', loader: () => import('./mcat-mcat-physics-mechanics-fluids-waves-mcat').then((m) => m.parts[0]) },
+      { title: 'Fluid Dynamics: Continuity, Bernoulli & Viscosity', loader: () => import('./mcat-mcat-physics-mechanics-fluids-waves-mcat').then((m) => m.parts[1]) },
+      { title: 'Waves & Sound: Standing Waves, Decibels & Doppler', loader: () => import('./mcat-mcat-physics-mechanics-fluids-waves-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Blood Flow, Ultrasound & Passage Strategy', loader: () => import('./mcat-mcat-physics-mechanics-fluids-waves-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-psychology-behavior-sensation-perception-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Thresholds, Weber\'s Law & Signal Detection', loader: () => import('./mcat-mcat-psychology-behavior-sensation-perception-mcat').then((m) => m.parts[0]) },
+      { title: 'Vision & Hearing: From Transduction to Cortex', loader: () => import('./mcat-mcat-psychology-behavior-sensation-perception-mcat').then((m) => m.parts[1]) },
+      { title: 'Body Senses, Gestalt Organization & Depth', loader: () => import('./mcat-mcat-psychology-behavior-sensation-perception-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Top-Down Perception, Streams & Reading Psychophysics Passages', loader: () => import('./mcat-mcat-psychology-behavior-sensation-perception-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-psychology-behavior-learning-memory-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Classical Conditioning: Pavlovian Learning & Its Boundaries', loader: () => import('./mcat-mcat-psychology-behavior-learning-memory-mcat').then((m) => m.parts[0]) },
+      { title: 'Operant Conditioning: Consequences, Schedules & Learning Without Reinforcement', loader: () => import('./mcat-mcat-psychology-behavior-learning-memory-mcat').then((m) => m.parts[1]) },
+      { title: 'Memory: Encoding, Storage & Retrieval', loader: () => import('./mcat-mcat-psychology-behavior-learning-memory-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Forgetting, Memory Errors & Reading Learning-Memory Studies', loader: () => import('./mcat-mcat-psychology-behavior-learning-memory-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-psychology-behavior-cognition-language-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Attention & Information Processing', loader: () => import('./mcat-mcat-psychology-behavior-cognition-language-mcat').then((m) => m.parts[0]) },
+      { title: 'Problem Solving, Decision Biases & Intelligence', loader: () => import('./mcat-mcat-psychology-behavior-cognition-language-mcat').then((m) => m.parts[1]) },
+      { title: 'Language: Structure, Acquisition & the Brain', loader: () => import('./mcat-mcat-psychology-behavior-cognition-language-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Consciousness, Sleep & Reading Cognition Experiments', loader: () => import('./mcat-mcat-psychology-behavior-cognition-language-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-psychology-behavior-development-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Piaget\'s Stages & the Growing Mind', loader: () => import('./mcat-mcat-psychology-behavior-development-mcat').then((m) => m.parts[0]) },
+      { title: 'Attachment, Temperament, Parenting & Vygotsky', loader: () => import('./mcat-mcat-psychology-behavior-development-mcat').then((m) => m.parts[1]) },
+      { title: 'Erikson, Kohlberg & Identity Across the Lifespan', loader: () => import('./mcat-mcat-psychology-behavior-development-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Nature-Nurture Designs & Reading Developmental Studies', loader: () => import('./mcat-mcat-psychology-behavior-development-mcat').then((m) => m.parts[3]) },
+    ],
+  },
+  'mcat-psychology-behavior-disorders-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Classifying Disorders: DSM Logic, Anxiety, OCD & Trauma', loader: () => import('./mcat-mcat-psychology-behavior-disorders-mcat').then((m) => m.parts[0]) },
+      { title: 'Mood Disorders & Schizophrenia', loader: () => import('./mcat-mcat-psychology-behavior-disorders-mcat').then((m) => m.parts[1]) },
+      { title: 'Personality, Dissociative, Somatic & Neurocognitive Disorders', loader: () => import('./mcat-mcat-psychology-behavior-disorders-mcat').then((m) => m.parts[2]) },
+      { title: 'MCAT Integration: Etiology Models, Treatment Logic & Reading Clinical Studies', loader: () => import('./mcat-mcat-psychology-behavior-disorders-mcat').then((m) => m.parts[3]) },
+    ],
+  },
 }
