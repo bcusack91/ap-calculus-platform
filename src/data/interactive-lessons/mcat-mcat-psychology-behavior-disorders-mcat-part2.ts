@@ -68,31 +68,31 @@ Timeline: **prodrome** (withdrawal, odd beliefs) → active phase → residual. 
         questions: [
           {
             question: `A patient has had two episodes of four days of expansive mood, racing thoughts, and feeling rested on three hours of sleep — during which she remained employed and was never psychotic — plus one prior two-month episode of major depression. Her diagnosis, and the feature that rules OUT the alternative, are:`,
-            options: [`Bipolar II — the elevated episodes are hypomanic (no marked impairment, psychosis, or hospitalization), which excludes the manic episode required for Bipolar I`, `Bipolar I, because depression occurred`, `Cyclothymia, because episodes were brief`, `Major depressive disorder with insomnia`],
+            options: [`Bipolar II; her elevated episodes are hypomanic, which excludes Bipolar I`, `Bipolar I, because a major depressive episode has occurred alongside elevated mood`, `Cyclothymia, because her elevated episodes lasted only four days each`, `Major depressive disorder with insomnia, since she slept only three hours`],
             correctAnswer: 0,
             explanation: `Four-day elevated episodes without severe impairment, psychosis, or hospitalization are hypomania; hypomania plus at least one major depressive episode defines Bipolar II. Bipolar I requires full mania (a week, or any duration with hospitalization/psychosis) and does NOT require depression. Her episodes exceed cyclothymia's subthreshold requirement, and feeling RESTED on little sleep is decreased need for sleep — the opposite of insomnia.`
           },
           {
             question: `Six months into treatment, a patient with schizophrenia no longer hears voices, but rarely speaks spontaneously, initiates no activities, and shows little facial expression. These residual features are classified as:`,
-            options: [`Positive symptoms responding slowly`, `Catatonia`, `Medication-induced parkinsonism`, `Negative symptoms — alogia, avolition, and flat affect, the deficit cluster that predicts functional outcome and responds least to D2 antagonists`],
+            options: [`Positive symptoms that are responding slowly to medication`, `Catatonia secondary to the underlying psychotic illness`, `Medication-induced parkinsonism from D2 blockade`, `Negative symptoms: alogia, avolition, and flat affect`],
             correctAnswer: 3,
             explanation: `Hallucinations and delusions are positive (added) phenomena; poverty of speech, loss of motivation, and blunted affect are negative (subtracted) phenomena. The dissociated treatment response is classic: D2 blockade quiets mesolimbic excess but does not restore mesocortical function. Parkinsonism would present with tremor and rigidity, and catatonia with posturing or stupor — neither is described.`
           },
           {
             question: `Two observations historically anchored the dopamine hypothesis of psychosis: clinical potency of early antipsychotics correlated with D2-receptor affinity, and:`,
-            options: [`Light therapy improved seasonal depression`, `High-dose amphetamine, which floods synapses with dopamine, induces paranoid psychosis in people without schizophrenia`, `Lithium stabilized mood in bipolar disorder`, `Benzodiazepines reduced anxiety via GABA`],
+            options: [`Light therapy improved seasonal depression by shifting circadian timing`, `High-dose amphetamine induces paranoid psychosis in people without schizophrenia`, `Lithium stabilized mood swings in patients with bipolar disorder`, `Benzodiazepines reduced anxiety by enhancing GABA-A receptor activity`],
             correctAnswer: 1,
             explanation: `The hypothesis rests on converging pharmacology: blocking D2 receptors relieves positive symptoms, and boosting dopamine (amphetamine, or L-DOPA in Parkinson's patients) can CREATE them. Together they bracket dopamine from both directions. The lithium, light-therapy, and GABA facts are true but belong to other disorders and carry no evidence about psychosis mechanisms.`
           },
           {
             question: `A patient reports two weeks of profound loss of interest in previously enjoyed activities, weight loss, insomnia, fatigue, worthlessness, and poor concentration, but insists his mood is "fine, just numb." Can he meet criteria for major depressive disorder?`,
-            options: [`No — depressed mood is mandatory for the diagnosis`, `No — he needs symptoms for six months`, `Yes — anhedonia can substitute for depressed mood as the required cardinal symptom, and he has five or more symptoms over two weeks`, `Only if psychotic features are present`],
+            options: [`No; depressed mood is a mandatory criterion that anhedonia cannot replace`, `No; he needs these symptoms to persist for at least six months`, `Yes; anhedonia can substitute for depressed mood as the cardinal symptom`, `Only if psychotic features, such as mood-congruent delusions, are present`],
             correctAnswer: 2,
             explanation: `MDD requires five of nine symptoms for two weeks, with at least ONE being depressed mood OR anhedonia — the two cardinal symptoms are alternatives, not co-requirements. His pervasive loss of interest satisfies the cardinal criterion, and he lists six symptoms total. The six-month duration belongs to GAD and schizophrenia, not MDD, and psychosis is a specifier, never a requirement.`
           },
           {
             question: `Adoption studies show that children of biological parents with schizophrenia raised in healthy adoptive homes develop the disorder at elevated rates — but far below 100% — and that rates climb further when the adoptive environment is highly dysfunctional. This pattern best supports:`,
-            options: [`The diathesis-stress model — inherited vulnerability that expresses as illness disproportionately under environmental adversity`, `A purely genetic account`, `A purely environmental account`, `The monoamine hypothesis of depression`],
+            options: [`The diathesis-stress model: inherited vulnerability plus environmental adversity`, `A purely genetic account, since biological parentage predicts the disorder`, `A purely environmental account, since dysfunctional rearing raises the rates`, `The monoamine hypothesis linking depression to neurotransmitter levels`],
             correctAnswer: 0,
             explanation: `Elevated risk following biological (not adoptive) parentage demonstrates a genetic diathesis; penetrance far below 100% plus amplification by adverse rearing demonstrates environmental modulation. Neither pure account survives both findings — the interaction IS the diathesis-stress model, and schizophrenia is its textbook showcase. The monoamine hypothesis concerns depression's neurochemistry, not schizophrenia's etiology.`
           }

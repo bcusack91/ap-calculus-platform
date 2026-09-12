@@ -72,31 +72,31 @@ Either verdict ("steal" or "don't steal") can be argued at ANY stage — items t
         questions: [
           {
             question: `A 16-year-old cycles through bands, clubs, political causes, and possible careers, telling her parents she is "figuring out who I actually am." Erikson locates her central developmental task as:`,
-            options: [`Industry versus inferiority`, `Intimacy versus isolation`, `Generativity versus stagnation`, `Identity versus role confusion — integrating roles and values into a coherent self during adolescence`],
+            options: [`Industry versus inferiority`, `Intimacy versus isolation`, `Generativity versus stagnation`, `Identity versus role confusion`],
             correctAnswer: 3,
             explanation: `Adolescence in Erikson's scheme centers on constructing a coherent identity across roles; her deliberate sampling of selves is that crisis in action (and, in Marcia's terms, moratorium). Industry precedes it in the school years, and intimacy — which Erikson argued REQUIRES a settled identity — is the young-adult crisis that follows.`
           },
           {
             question: `Two children judge a man who stole medicine for his dying wife. One says he was wrong "because stealing gets you put in jail"; the other says he was right "because saving a life matters more than any law, and he should accept his punishment." Kohlberg would score them as:`,
-            options: [`Both conventional, since both mention law`, `Preconventional (punishment avoidance) and postconventional (principle above law) respectively — the stage lies in the reasoning, not the verdict`, `Stage 3 and Stage 4 respectively`, `Unscorable because they reached opposite verdicts`],
+            options: [`Both conventional, since both mention the law`, `Preconventional and postconventional, respectively`, `Stage 3 and Stage 4, respectively`, `Unscorable, since their verdicts differ`],
             correctAnswer: 1,
             explanation: `Justification is everything: fear of jail is Stage 1 self-interest; ranking a universal principle (life) above legal rules while accepting consequences is postconventional. Opposite verdicts are fully scorable — any conclusion can be argued at any stage, which is precisely why conclusion-based options are traps.`
           },
           {
             question: `A college freshman announces he will be a cardiologist "because everyone in my family is one — I've never really considered anything else," and reports no distress about the choice. Marcia's identity-status framework classifies him as:`,
-            options: [`Foreclosure — commitment adopted without personal exploration`, `Identity diffusion`, `Moratorium`, `Identity achievement`],
+            options: [`Foreclosure, since he adopted his family's choice`, `Identity diffusion, since he reports no distress`, `Moratorium, since he is still a freshman`, `Identity achievement, since he has firmly committed`],
             correctAnswer: 0,
             explanation: `Marcia crosses exploration with commitment: this student is fully committed but the commitment was inherited, never examined — foreclosure. Diffusion lacks both exploration and commitment; moratorium is exploration without yet committing; achievement requires commitment FOLLOWING genuine exploration. Foreclosed identities are stable until challenged, then brittle.`
           },
           {
             question: `An infant whose caregivers respond promptly and predictably to distress comes to treat new situations and people as fundamentally safe. Erikson would say the infant has favorably resolved:`,
-            options: [`Autonomy versus shame and doubt`, `Trust versus mistrust — consistent, responsive care in the first year builds the basic sense that the world is dependable`, `Initiative versus guilt`, `Integrity versus despair`],
+            options: [`Autonomy versus shame and doubt in toddlerhood`, `Trust versus mistrust, the first-year crisis`, `Initiative versus guilt in the preschool years`, `Integrity versus despair in late adulthood`],
             correctAnswer: 1,
             explanation: `The first psychosocial crisis (birth to ~1 year) turns on whether care is reliable enough to ground basic trust — Erikson's psychosocial parallel to secure attachment. Autonomy is the toddler crisis (self-control, choice), initiative the preschool crisis, and integrity belongs to late life.`
           },
           {
             question: `A 17-year-old texts while driving, explaining that crashes "happen to other people — I know what I'm doing." Elkind's account of adolescent egocentrism labels this belief, and its standard developmental explanation, as:`,
-            options: [`The imaginary audience, caused by conventional moral reasoning`, `Identity diffusion, caused by authoritarian parenting`, `Object impermanence`, `The personal fable — a conviction of unique invulnerability, consistent with a late-maturing prefrontal control system lagging an earlier-maturing reward system`],
+            options: [`The imaginary audience, caused by conventional moral reasoning`, `Identity diffusion, caused by authoritarian parenting practices`, `Concrete operational thought, caused by early prefrontal maturation`, `The personal fable, linked to a lagging prefrontal control system`],
             correctAnswer: 3,
             explanation: `Believing one's own experience is so special that ordinary risks do not apply is the personal fable, the component of adolescent egocentrism tied to risk-taking. The imaginary audience is the separate belief that everyone is watching and judging. The neurodevelopmental account — limbic reward maturing ahead of prefrontal control — is the standard biological complement.`
           }

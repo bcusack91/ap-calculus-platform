@@ -66,33 +66,33 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
         questions: [
           {
             question: `Harlow's infant monkeys spent nearly all their time clinging to a terrycloth surrogate and visited a wire surrogate only to feed, and ran to the cloth figure when frightened. These findings were decisive against which prior claim?`,
-            options: [`That attachment derives from feeding — instead, contact comfort and a secure base proved primary`, `That monkeys cannot form attachments at all`, `That imprinting occurs in mammals`, `That temperament is biologically based`],
+            options: [`That attachment derives mainly from being fed`, `That monkeys cannot form attachments to any caregiver`, `That imprinting occurs only in birds, not mammals`, `That infant temperament is biologically based`],
             correctAnswer: 0,
             explanation: `The behaviorist/psychoanalytic consensus held that infants attach to whoever satisfies hunger. Feeding was assigned to the wire mother, yet attachment behaviors — clinging, fear-time refuge, secure-base exploration — all organized around the cloth mother, isolating contact comfort as the operative variable. The design's power is exactly that it unconfounded food from touch.`
           },
           {
             question: `In the Strange Situation, an infant plays with toys while her father is present, shows little reaction when he leaves, and turns away, avoiding eye contact, when he returns. Her classification is:`,
-            options: [`Secure`, `Disorganized`, `Insecure-resistant`, `Insecure-avoidant — minimal separation distress and active avoidance of the caregiver at reunion`],
+            options: [`Secure, given her calm play and low separation distress`, `Disorganized, given her contradictory behavior at reunion`, `Insecure-resistant, given her rejection of him at reunion`, `Insecure-avoidant, given her low distress and avoidance at reunion`],
             correctAnswer: 3,
             explanation: `Reunion behavior is the diagnostic window: turning away from the returning caregiver defines avoidant attachment. A secure infant may or may not cry at separation but greets and settles at reunion; a resistant infant is inconsolable and angrily clings; disorganized infants show contradictory or frozen behavior, which is absent here.`
           },
           {
             question: `A tutoring program succeeds by giving each child problems slightly beyond independent ability while a tutor supplies hints that are progressively withdrawn as skill grows. The program is a direct application of:`,
-            options: [`Piaget's stage-readiness principle, since children work alone`, `Baumrind's authoritative parenting`, `Vygotsky's zone of proximal development with scaffolding — supported performance inside the zone is internalized as the support fades`, `Harlow's contact comfort`],
+            options: [`Piaget's stage-readiness principle, since children work alone`, `Baumrind's authoritative parenting applied to tutoring`, `Vygotsky's zone of proximal development with scaffolding`, `Harlow's contact comfort as a basis for secure learning`],
             correctAnswer: 2,
             explanation: `Targeting the band between solo and assisted competence IS the ZPD, and calibrated, fading assistance IS scaffolding — Vygotsky's model of development as social-to-individual internalization. A strict Piagetian would wait for stage readiness and favor independent discovery, making the guided-interaction design the discriminating detail.`
           },
           {
             question: `Two families enforce a strict homework policy. Family A explains the reasons, invites discussion, and remains warm; Family B demands unquestioning compliance and punishes dissent coldly. Baumrind's framework classifies A and B respectively as:`,
-            options: [`Permissive and neglectful`, `Authoritative and authoritarian — both demanding, distinguished by responsiveness and reasoning versus power assertion`, `Authoritarian and permissive`, `Neglectful and authoritative`],
+            options: [`Permissive and neglectful`, `Authoritative and authoritarian`, `Authoritarian and permissive`, `Authoritarian and authoritative`],
             correctAnswer: 1,
             explanation: `Both families are high in demandingness; the axis separating them is responsiveness. Warmth plus explanation with firm limits = authoritative (best average outcomes); coercive, low-warmth obedience-focus = authoritarian. Permissive parents impose few demands, and neglectful parents are low on both axes — neither matches these vignettes.`
           },
           {
             question: `Infants classified at 4 months as highly reactive to novel stimuli disproportionately become behaviorally inhibited toddlers and, at 7, shyer children — across differing family environments. This continuity primarily supports the claim that:`,
-            options: [`Temperament is an early-appearing, biologically grounded disposition showing moderate stability across development`, `Parenting style fully determines child personality`, `Attachment classification is meaningless`, `Shyness results from failed conservation`],
+            options: [`Temperament is an early, biologically grounded disposition`, `Parenting style fully determines a child's eventual personality`, `Attachment classification is meaningless for predicting outcomes`, `Shyness is learned through modeling of anxious parents`],
             correctAnswer: 0,
-            explanation: `Kagan's high-reactive infants illustrate temperament: individual differences present before extensive socialization, persisting across settings and years — evidence for a constitutional contribution the child brings to every interaction (and one reason parenting-outcome correlations are bidirectional). Stability is moderate, not absolute, so environment still moderates outcomes; nothing here bears on Piagetian conservation.`
+            explanation: `Kagan's high-reactive infants illustrate temperament: individual differences present before extensive socialization, persisting across settings and years — evidence for a constitutional contribution the child brings to every interaction (and one reason parenting-outcome correlations are bidirectional). Stability is moderate, not absolute, so environment still moderates outcomes; and continuity across differing family environments argues against shyness being simply learned from anxious parents.`
           }
         ]
       }

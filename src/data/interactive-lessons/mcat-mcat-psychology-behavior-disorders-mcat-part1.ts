@@ -70,31 +70,31 @@ Duration boundary: symptoms **> 1 month** = PTSD; a similar picture lasting 3 da
         questions: [
           {
             question: `A man experiences sudden surges of palpitations, sweating, and fear of dying that peak within minutes, sometimes during calm activities. For the past two months he has restructured his life around avoiding another episode and worries about them daily. Distinguishing his DISORDER from his ATTACKS, the diagnosis of panic disorder rests on:`,
-            options: [`The intensity of the physical symptoms during episodes`, `Having more than two attacks in a lifetime`, `The recurrent unexpected attacks PLUS a month or more of persistent worry about attacks or maladaptive behavioral change between them`, `The presence of an identifiable trigger for each attack`],
+            options: [`The intensity of the physical symptoms during each episode, which must exceed a severity threshold`, `Having more than two attacks in a lifetime, regardless of what happens between them`, `Recurrent unexpected attacks plus a month or more of worry or behavioral change`, `The presence of an identifiable situational trigger preceding each attack`],
             correctAnswer: 2,
             explanation: `Panic attacks are events that occur across many disorders and in healthy people; panic DISORDER is defined by unexpected recurrence plus the inter-attack syndrome — anticipatory fear-of-the-fear and behavior change lasting at least a month. Identifiable triggers would point toward phobic disorders, and neither attack intensity nor a lifetime count defines the diagnosis.`
           },
           {
             question: `A woman spends two hours nightly checking that appliances are off. Intrusive images of her house burning cause mounting anxiety that only the checking relieves — briefly, until the images return. In learning terms, the checking persists because it is:`,
-            options: [`Positively punished by the lost time`, `Negatively reinforced — each ritual removes the obsession-driven anxiety, strengthening the ritual and completing the OCD maintenance cycle`, `Classically conditioned to the appliances`, `A tic, performed without any preceding mental content`],
+            options: [`Positively reinforced by the sense of accomplishment each check provides`, `Negatively reinforced, since each ritual removes the obsession-driven anxiety`, `Classically conditioned to the sight of the appliances themselves`, `A motor tic, performed without any preceding intrusive thought`],
             correctAnswer: 1,
             explanation: `The compulsion's consequence is the removal of an aversive internal state (anxiety), the definition of negative reinforcement — which is why the ritual strengthens despite its costs, and why exposure with response prevention (blocking the ritual so anxiety extinguishes) is the targeted treatment. The preceding intrusive images are obsessions, distinguishing this from a tic.`
           },
           {
             question: `Three weeks after a serious car accident, a patient has nightmares, avoids driving, feels detached, and startles at engine sounds. An identical picture in a second patient has persisted for three months. The correct diagnostic distinction is:`,
-            options: [`Both have PTSD`, `Both have adjustment disorder`, `The first has generalized anxiety disorder; the second has PTSD`, `The first meets acute stress disorder (3 days to 1 month post-trauma); the second, with symptoms beyond one month, meets PTSD`],
+            options: [`Both have PTSD, since the symptom clusters are identical`, `Both have adjustment disorder, since a car accident is a common stressor`, `The first has generalized anxiety disorder; the second has PTSD`, `The first has acute stress disorder; the second has PTSD`],
             correctAnswer: 3,
             explanation: `The symptom clusters (intrusion, avoidance, negative mood, hyperarousal) are shared; DURATION draws the line — up to one month after trauma is acute stress disorder, beyond one month is PTSD. Adjustment disorder requires a NON-catastrophic stressor, and GAD requires pervasive multi-domain worry, not trauma-locked symptoms.`
           },
           {
             question: `A political dissident is described by state media as mentally ill because her views are statistically rare and socially disruptive. Under the DSM's working definition of disorder, this attribution fails PRIMARILY because:`,
-            options: [`Deviance from social norms and statistical rarity do not constitute disorder absent internal dysfunction plus distress or impairment in the person's own functioning`, `Mental disorders cannot involve beliefs`, `Only biological tests can diagnose disorders`, `Her behavior is too common to be rare`],
+            options: [`Rarity and social deviance are not disorder absent dysfunction with distress or impairment`, `Mental disorders by definition cannot involve political or ideological beliefs`, `Only biological tests, such as brain imaging or blood markers, can establish a psychiatric diagnosis`, `Her views are held by too many people to count as statistically rare`],
             correctAnswer: 0,
             explanation: `The definitional core is harmful dysfunction WITHIN the individual — disturbed cognition, emotion regulation, or behavior — accompanied by distress or functional impairment. Socially deviant behavior or conflict between an individual and society is explicitly excluded unless it stems from such dysfunction. This boundary exists precisely to prevent diagnosis from being used as social control.`
           },
           {
             question: `One patient worries intensely for months about an upcoming licensing exam but functions well otherwise. A second worries most days, for over a year, about health, finances, work, and family simultaneously, cannot control the worry, and has muscle tension and insomnia. Only the second qualifies for generalized anxiety disorder because:`,
-            options: [`The first patient's worry is about something real`, `GAD cannot involve exam-related content`, `GAD requires excessive, hard-to-control worry across MULTIPLE domains, more days than not for at least six months, with somatic symptoms and impairment — breadth, duration, and uncontrollability, not topic, draw the line`, `The second patient is older`],
+            options: [`The first patient's worry concerns a real, identifiable event rather than an imagined one`, `GAD criteria exclude worry whose content concerns academic or exam performance`, `GAD requires uncontrollable worry across multiple domains for six months or more`, `The second patient's symptoms include insomnia, which alone establishes the diagnosis`],
             correctAnswer: 2,
             explanation: `Focused, time-limited, controllable worry about a genuine stressor — however intense — is normal-range anxiety. GAD's criteria demand pervasiveness (many domains), chronicity (six months or more, most days), uncontrollability, and accompanying somatic/functional symptoms. Real-world grounding does not exempt worry from GAD, and content topic is never the criterion.`
           }

@@ -65,31 +65,31 @@ export const mcatPsychDisordersPart4Data = {
         questions: [
           {
             question: `A therapist treats a flying phobia by teaching deep muscle relaxation, then pairing it with a graded hierarchy: photographs of planes, airport visits, sitting in a parked cabin, and finally a short flight. The technique and its learning-theory mechanism are:`,
-            options: [`Flooding, via operant punishment`, `Systematic desensitization — counterconditioning an incompatible relaxation response to the feared CS while extinction proceeds up the hierarchy`, `Token economy, via secondary reinforcement`, `Free association, via insight`],
+            options: [`Flooding, via operant punishment of the avoidance response`, `Systematic desensitization, via counterconditioning with relaxation`, `Token economy, via secondary reinforcement of approach behaviors`, `Free association, via insight into the phobia's unconscious origins`],
             correctAnswer: 1,
             explanation: `Graded exposure plus a trained incompatible response is systematic desensitization: the feared stimulus is repeatedly presented without catastrophe (classical extinction) while relaxation replaces fear (counterconditioning). Flooding would begin at maximum intensity with no hierarchy; token economies are operant institutional programs; free association belongs to the psychodynamic framework entirely.`
           },
           {
             question: `Patients with chronic pain enrolled in an uncontrolled trial "when symptoms became unbearable" improve markedly on a new supplement. Before crediting the supplement, the FIRST rival explanation a reader should raise is:`,
-            options: [`The supplement's dose was too low`, `Patients lied about their pain`, `The improvement proves pain was imaginary`, `Regression to the mean plus expectancy — people enroll at their symptom peak and drift back toward their average regardless of treatment, which only a placebo-controlled comparison can subtract`],
+            options: [`The supplement's dose was too low to produce a real effect`, `The supplement works only for patients with the most severe pain`, `The improvement proves the patients' pain was imaginary all along`, `Regression to the mean plus expectancy, given enrollment at peak symptoms`],
             correctAnswer: 3,
-            explanation: `Enrollment at an extreme guarantees average improvement by regression to the mean, and open-label treatment adds expectancy effects — together they can produce large "responses" to inert treatments. This is precisely what control arms exist to absorb. The other options either presume the conclusion, add unsupported accusations, or confuse improvement mechanisms with symptom reality.`
+            explanation: `Enrollment at an extreme guarantees average improvement by regression to the mean, and open-label treatment adds expectancy effects — together they can produce large "responses" to inert treatments. This is precisely what control arms exist to absorb. The other options either assume the supplement acted, posit a dosing problem that would not explain the improvement at all, or confuse improvement mechanisms with symptom reality.`
           },
           {
             question: `Match the first-line maintenance pharmacotherapy to the condition: recurrent cycling between manic and depressive episodes is most specifically treated with:`,
-            options: [`Lithium, a mood stabilizer — with the caution that antidepressant monotherapy can precipitate mania in bipolar patients`, `A benzodiazepine`, `A cholinesterase inhibitor`, `L-DOPA`],
+            options: [`Lithium, the prototype mood stabilizer`, `A benzodiazepine, such as lorazepam`, `A cholinesterase inhibitor, such as donepezil`, `L-DOPA, a dopamine precursor`],
             correctAnswer: 0,
             explanation: `Lithium is the prototype mood stabilizer for bipolar disorder, reducing both poles and suicide risk; the paired exam fact is that unopposed antidepressants risk switching a bipolar patient into mania. Benzodiazepines are short-term GABAergic anxiolytics, cholinesterase inhibitors target Alzheimer's cholinergic deficit, and L-DOPA replaces striatal dopamine in Parkinson's.`
           },
           {
             question: `In a drug trial, neither the patients nor the clinicians rating symptom severity know who receives active medication. The specific inferential threat this double-blind arrangement removes is:`,
-            options: [`Random assignment failure`, `Regression to the mean`, `Expectancy effects on BOTH sides — patients' placebo responses differing by belief, and raters unconsciously scoring treated patients as more improved`, `Attrition`],
+            options: [`Failure of random assignment to balance groups at baseline`, `Regression to the mean in patients enrolled at their worst`, `Expectancy effects in both patients and symptom raters`, `Attrition of participants who drop out before the endpoint`],
             correctAnswer: 2,
             explanation: `Blinding targets expectations: unblinded patients respond to the belief they are treated, and unblinded raters — like Rosenhan's staff reading normal behavior as pathological — bend judgment toward what they expect to see. Randomization (a separate procedure) handles baseline confounds; regression to the mean is handled by having a control group at all; attrition must be addressed analytically, e.g., intention-to-treat.`
           },
           {
             question: `A study reports that a treatment works for "pure" social anxiety disorder, excluding anyone with depression or substance use. A critic notes most real-world patients with social anxiety carry such comorbidity. The critic is questioning the study's:`,
-            options: [`Internal validity, because randomization failed`, `External validity (generalizability) — the screened sample differs systematically from the clinical population the conclusion will be applied to`, `Statistical significance`, `Blinding procedures`],
+            options: [`Internal validity, because randomization failed to balance groups`, `External validity, since the screened sample is unrepresentative`, `Statistical significance, because the sample was too small`, `Blinding procedures, because raters knew the diagnoses`],
             correctAnswer: 1,
             explanation: `Excluding comorbid patients strengthens internal validity (cleaner causal inference) at the price of external validity: results from an unrepresentative "pure" sample may not transfer to typical patients, since comorbidity is the rule in psychiatric populations. Nothing in the criticism concerns randomization, blinding, or the statistics computed within the sample — it concerns to WHOM the finding applies.`
           }

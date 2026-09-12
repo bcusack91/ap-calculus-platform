@@ -66,31 +66,31 @@ Personality disorders are **ego-syntonic** (experienced as "just how I am") — 
         questions: [
           {
             question: `A 30-year-old lifelong loner dresses eccentrically, believes he can sense "energy fields" that guide his decisions, reports occasional fleeting sensations of a presence nearby, but has never had frank hallucinations or fixed delusions and maintains reality testing. The best classification is:`,
-            options: [`Schizophrenia`, `Schizoid personality disorder`, `Obsessive-compulsive disorder`, `Schizotypal personality disorder — Cluster A eccentricity with magical thinking and perceptual oddities short of psychosis`],
+            options: [`Schizophrenia, given his magical beliefs and perceptual disturbances`, `Schizoid personality disorder, given his lifelong social detachment`, `Obsessive-compulsive disorder, given his ritualized decision-making`, `Schizotypal personality disorder, with cognitive oddities short of psychosis`],
             correctAnswer: 3,
             explanation: `Odd beliefs, unusual perceptual experiences, and social discomfort forming a stable personality pattern — without meeting psychosis criteria — define schizotypal personality disorder, the schizophrenia-spectrum member of Cluster A. Schizoid presents with indifference and flatness but WITHOUT the cognitive-perceptual oddities; schizophrenia requires frank delusions/hallucinations with functional collapse and duration criteria he does not meet.`
           },
           {
             question: `An accountant is proud of standards so exacting that projects stall and colleagues quit; he sees no problem — others are simply careless. Unlike a patient with OCD, he lacks:`,
-            options: [`Ego-dystonic intrusive obsessions and anxiety-driven compulsions — his perfectionism is a lifelong, ego-syntonic trait he endorses`, `Any impact on occupational functioning`, `Cluster C membership`, `The capacity for insight into anything`],
+            options: [`Ego-dystonic obsessions and the compulsions that relieve them`, `Any measurable impact of his traits on his occupational functioning`, `Membership in the anxious-fearful Cluster C of personality disorders`, `Any capacity for insight into his thoughts, motives, or behavior at all`],
             correctAnswer: 0,
             explanation: `The OCD/OCPD divide runs on two rails: symptom form (true obsessions and neutralizing rituals vs pervasive perfectionism and control) and the patient's stance (distressing and alien vs embraced as correct). His pattern harms functioning — via others' suffering and stalled work — so option two is false; OCPD is indeed Cluster C, and global lack of insight overstates the case.`
           },
           {
             question: `After a disaster, a woman is found in another city, unaware of how she traveled there and unable to recall her name or history; medical workup is negative. Weeks later her autobiographical memory returns. This episode is best described as:`,
-            options: [`Korsakoff syndrome`, `Anterograde amnesia from hippocampal damage`, `Dissociative amnesia with fugue — trauma-linked loss of autobiographical memory with unexpected travel, and reversibility that organic amnesia does not show`, `Malingering`],
+            options: [`Korsakoff syndrome from thiamine deficiency after the disaster`, `Anterograde amnesia from hippocampal injury sustained in the disaster`, `Dissociative amnesia with fugue, precipitated by the trauma`, `Malingering, feigning memory loss to escape the aftermath`],
             correctAnswer: 2,
             explanation: `Sudden, selective loss of autobiographical identity after trauma, unexplained travel, negative workup, and later full recovery compose dissociative amnesia with fugue. Organic amnesias (Korsakoff, hippocampal) impair NEW learning and do not selectively erase identity while sparing skills — nor do they remit wholesale. Malingering requires evidence of intentional production for external gain, which nothing here supports.`
           },
           {
             question: `A 79-year-old develops confusion over hours during a urinary tract infection: she is drowsy, cannot sustain attention, misidentifies staff, and her lucidity waxes and wanes through the day. The feature that most reliably distinguishes this state from dementia is:`,
-            options: [`Her age`, `The acute onset with fluctuating course and impaired attention/arousal, pointing to delirium from a medical cause rather than chronic progressive decline`, `The presence of memory difficulty`, `The misidentification of people`],
+            options: [`Her advanced age, which makes a dementing process the more likely cause`, `Acute onset with a fluctuating course and impaired attention`, `The presence of memory difficulty, which dementia always involves`, `The misidentification of people, which signals hallucination`],
             correctAnswer: 1,
             explanation: `Delirium is defined by rapid onset, fluctuation, and a primary disturbance of ATTENTION and arousal, typically precipitated by infection, drugs, or metabolic insult — and it is reversible with treatment of the cause. Dementia develops insidiously over years with attention relatively preserved early. Memory problems and misidentification occur in both, and age is common to both, so none of those discriminate.`
           },
           {
             question: `Match the pathology to the disease: amyloid-beta plaques and tau neurofibrillary tangles with early hippocampal atrophy versus Lewy bodies with degeneration of the substantia nigra. Respectively, these describe:`,
-            options: [`Parkinson's disease, then Alzheimer's disease`, `Alzheimer's disease and Parkinson's disease — with corresponding acetylcholine and dopamine deficits driving their treatment logic`, `Delirium, then Korsakoff syndrome`, `Conversion disorder, then schizotypal personality disorder`],
+            options: [`Parkinson's disease, then Alzheimer's disease`, `Alzheimer's disease, then Parkinson's disease`, `Delirium, then Korsakoff syndrome`, `Conversion disorder, then schizotypal personality disorder`],
             correctAnswer: 1,
             explanation: `Plaques, tangles, hippocampal-first atrophy, and cholinergic loss define Alzheimer's (hence cholinesterase inhibitors and anterograde-first memory failure); nigral degeneration with alpha-synuclein Lewy bodies and striatal dopamine deficit defines Parkinson's (hence L-DOPA and the motor triad). Keeping the transmitter-structure-treatment triplets paired is the highest-yield neurocognitive fact set on the exam.`
           }
