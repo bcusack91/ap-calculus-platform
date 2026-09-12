@@ -59,27 +59,27 @@ Three hypotheses were on the table:
         questions: [
           {
             question: `Analysis of a viral genome shows 32% adenine, 18% thymine, 24% guanine, and 26% cytosine. The best conclusion is that the genome is:`,
-            options: [`Double-stranded DNA with unusual base modifications`, `Single-stranded DNA, since A does not equal T and G does not equal C`, `Double-stranded RNA`, `Contaminated, since these percentages are chemically impossible`],
+            options: [`Double-stranded DNA carrying modified bases`, `Single-stranded DNA with no pairing constraint`, `A double-stranded RNA genome`, `Contaminated, as the numbers are impossible`],
             correctAnswer: 1,
             explanation: `Chargaff's equalities (%A = %T, %G = %C) are forced by complementary base pairing, so they hold ONLY for double-stranded nucleic acids. Violation means single-stranded material; the presence of thymine (not uracil) says DNA. Single strands have no pairing constraint, so any composition is possible — nothing is "impossible" about the numbers, and dsRNA would show A = U anyway.`
           },
           {
             question: `Two DNA duplexes of equal length are melted by gradual heating. Duplex 1 separates at a noticeably higher temperature than Duplex 2. The most direct explanation is that Duplex 1:`,
-            options: [`Has a higher GC content, since each GC pair contributes three hydrogen bonds versus two for AT`, `Contains more phosphodiester bonds`, `Is single-stranded`, `Has a higher AT content, since AT pairs stack more tightly`],
+            options: [`Has a higher GC content (3 H-bonds per pair)`, `Contains more phosphodiester bonds per strand`, `Has more nicks in its sugar-phosphate backbone`, `Has a higher AT content, since AT pairs stack more tightly`],
             correctAnswer: 0,
             explanation: `Melting separates the strands by disrupting hydrogen bonding and base stacking; GC pairs (3 H-bonds, stronger stacking) raise the melting temperature. Equal length means equal numbers of phosphodiester bonds — and those covalent backbone bonds are not broken by melting at all. This structure-to-thermodynamics link also predicts that replication origins tend to be AT-rich: easier to open.`
           },
           {
             question: `In the Meselson-Stahl experiment, the single intermediate-density band observed after one generation ruled out conservative replication but not dispersive. Which later observation eliminated the dispersive model?`,
-            options: [`The intermediate band grew progressively heavier over time`, `All DNA became heavy again when cells were returned to heavy medium`, `Generation 2 produced two discrete bands (hybrid and light) rather than one band of gradually decreasing density`, `The hybrid band disappeared entirely at generation 2`],
+            options: [`The intermediate band grew progressively heavier over time`, `All DNA became heavy again when cells were returned to heavy medium`, `Generation 2 showed two discrete bands, hybrid and light`, `The hybrid band disappeared entirely at generation 2`],
             correctAnswer: 2,
-            explanation: `Dispersive replication scatters old fragments through BOTH daughter strands, so every molecule in every generation would be a uniform blend — one band, drifting lighter each round. Semiconservative replication keeps each old strand intact, producing discrete classes: hybrid molecules (one old strand) and fully light molecules. Two clean bands at generation 2 is exactly the discreteness dispersive cannot produce; the hybrid band persists (it does not disappear), diluting to 1/4 of molecules.`
+            explanation: `Dispersive replication scatters old fragments through BOTH daughter strands, so every molecule in every generation would be a uniform blend — one band, drifting lighter each round. Semiconservative replication keeps each old strand intact, producing discrete classes: hybrid molecules (one old strand) and fully light molecules. Two clean bands at generation 2 is exactly the discreteness dispersive cannot produce; the hybrid band persists (it does not disappear), making up 1/2 of molecules at generation 2 and diluting to 1/4 at generation 3.`
           },
           {
             question: `A repair enzyme finds a uracil base in one strand of a cell's DNA. This uracil most likely arose from:`,
-            options: [`Normal incorporation, since uracil is a standard DNA base`, `Depurination of an adenine`, `Methylation of a thymine`, `Spontaneous deamination of cytosine, which repair systems can flag precisely because DNA normally uses thymine`],
+            options: [`Normal incorporation, since uracil is a standard DNA base`, `Depurination of an adenine residue`, `Methylation of a thymine base`, `Spontaneous deamination of a cytosine base`],
             correctAnswer: 3,
-            explanation: `Cytosine deaminates spontaneously to uracil, which would pair with adenine and fix a C-to-T mutation at the next replication. Because DNA uses thymine (5-methyluracil) as its standard base, any uracil in DNA is unambiguously damage — this is the accepted rationale for why DNA evolved thymine. Depurination removes a base leaving an abasic site (no uracil appears), and methylating thymine does not produce uracil; demethylation is not a typical spontaneous route.`
+            explanation: `Cytosine deaminates spontaneously to uracil, which would pair with adenine and fix a C-to-T mutation at the next replication. Because DNA uses thymine (5-methyluracil) as its standard base, any uracil in DNA is unambiguously damage — this is the accepted rationale for why DNA evolved thymine. Depurination removes a base leaving an abasic site (no uracil appears), and methylating thymine cannot produce uracil — thymine is already 5-methyluracil, and adding a methyl group never removes one.`
           },
           {
             question: `One strand of a duplex reads 5'-ATGCCG-3'. Its complementary strand, written in conventional 5' to 3' orientation, is:`,

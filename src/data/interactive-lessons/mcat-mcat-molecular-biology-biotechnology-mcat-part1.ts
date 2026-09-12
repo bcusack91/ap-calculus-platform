@@ -72,25 +72,25 @@ Each cycle, three temperature steps:
           },
           {
             question: `To produce functional human insulin in E. coli, researchers clone cDNA rather than the genomic insulin gene because:`,
-            options: [`cDNA includes stronger bacterial promoters`, `Genomic DNA is too chemically unstable to clone`, `Bacteria lack splicing machinery, and cDNA — copied from mature mRNA — is already intron-free`, `cDNA is double-stranded while genomic DNA is single-stranded`],
+            options: [`cDNA includes stronger bacterial promoters`, `Genomic DNA is too chemically unstable to clone`, `cDNA lacks introns, which bacteria cannot splice out`, `cDNA is double-stranded but genomic DNA is not`],
             correctAnswer: 2,
             explanation: `The eukaryotic gene is interrupted by introns that only a spliceosome can remove; E. coli would faithfully transcribe and translate the introns into nonsense. Reverse transcriptase run on mature mRNA (primed off the poly-A tail with oligo-dT) captures the post-splicing sequence — exactly the protein-coding information, nothing else. This single fact — cDNA = snapshot of the mature transcript — also explains why comparing cDNA to genomic DNA reveals where the introns were.`
           },
           {
             question: `In blue-white screening, colonies containing the desired recombinant plasmid appear white because:`,
-            options: [`The antibiotic-resistance gene produces a white pigment`, `White colonies failed to take up any plasmid`, `X-gal stains the insert DNA directly`, `The inserted DNA disrupts the lacZ gene, so the colony cannot cleave X-gal into its blue product`],
+            options: [`The antibiotic-resistance gene produces a white pigment`, `White colonies failed to take up any plasmid`, `X-gal stains the insert DNA directly`, `The insert disrupts lacZ, so X-gal is not cleaved`],
             correctAnswer: 3,
             explanation: `The multiple cloning site sits INSIDE lacZ by design: ligating an insert there breaks the beta-galactosidase reading frame, and no functional enzyme means no blue X-gal cleavage product — white signals success. Blue colonies carry re-circularized empty vector with lacZ intact. Cells with no plasmid at all never appear: ampicillin killed them (option B confuses the screen with the selection — keep those two steps distinct, as exam questions deliberately blur them).`
           },
           {
             question: `PCR uses Taq polymerase rather than ordinary E. coli DNA polymerase because Taq:`,
-            options: [`Remains active after the repeated ~95 C denaturation steps, so fresh enzyme need not be added every cycle`, `Requires no primers`, `Can synthesize DNA in the 3' to 5' direction`, `Proofreads more accurately than any other polymerase`],
+            options: [`Survives the repeated ~95 C denaturation steps`, `Requires no primers to begin synthesis`, `Can synthesize DNA in the 3' to 5' direction`, `Proofreads more accurately than any other polymerase`],
             correctAnswer: 0,
             explanation: `The thermostability of Thermus aquaticus polymerase is what made PCR automatable: mesophilic polymerases denature at the strand-separation temperature and originally had to be replenished each cycle by hand. Taq still obeys every polymerase law — 5' to 3' synthesis, absolute primer dependence (the reaction supplies synthetic primers precisely because of it) — and in fact LACKS 3' to 5' proofreading, which is why high-fidelity thermostable enzymes (Pfu) replaced it for cloning where sequence accuracy matters.`
           },
           {
             question: `Starting from 10 copies of a template, roughly how many double-stranded copies exist after 10 PCR cycles at perfect efficiency?`,
-            options: [`100`, `1,000`, `About 10,000 (10 times 2 to the 10th)`, `About 20 (10 plus 10)`],
+            options: [`About 100 (10 times 10 cycles)`, `About 1,000 (10 times 10 to the 2nd)`, `About 10,000 (10 times 2 to the 10th)`, `About 110 (10 plus 10 per cycle)`],
             correctAnswer: 2,
             explanation: `Each cycle doubles every existing copy: final = initial times 2 to the n. Ten cycles multiply by 2^10 = 1,024, so 10 templates become ~10,240. The MCAT rewards the estimate, not the exact integer — know 2^10 is about 10^3, so 30 cycles multiply by about 10^9 (2^30). Linear thinking (option D) is the planted error; amplification is exponential, which is also why single-molecule contamination ruins forensic PCR.`
           }

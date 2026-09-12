@@ -62,31 +62,31 @@ Replication achieves roughly one error per $10^9$-$10^{10}$ base pairs by stacki
         questions: [
           {
             question: `A mutant replicative polymerase retains normal synthesis activity but has lost its 3' to 5' exonuclease. The expected phenotype is:`,
-            options: [`Okazaki fragments accumulate without being joined`, `Replication cannot initiate at origins`, `An elevated spontaneous mutation rate, since misincorporated bases are extended rather than excised`, `Telomeres lengthen uncontrollably`],
+            options: [`Okazaki fragments accumulate without being joined`, `Replication cannot initiate at origins`, `A mutator phenotype with an elevated mutation rate`, `Telomeres lengthen uncontrollably`],
             correctAnswer: 2,
             explanation: `The 3' to 5' exonuclease is the proofreader: it removes the just-added wrong base before synthesis continues. Losing it leaves base-selection and mismatch repair as the only filters, raising the mutation rate ~100-fold — a "mutator" phenotype. Fragment joining (ligase), initiation (origins/helicase), and telomere length (telomerase) are separate machines. Keep the two exonuclease directions straight: 3' to 5' proofreads; 5' to 3' removes primers.`
           },
           {
             question: `In E. coli, mismatch repair excises the incorrect base from the newly synthesized strand rather than the template. The system identifies the new strand by:`,
-            options: [`Its transient lack of methylation at GATC sequences shortly after the fork passes`, `Its higher uracil content`, `The presence of RNA primers still attached to the template strand`, `Its association with ribosomes`],
+            options: [`Its transient lack of GATC adenine methylation`, `Its higher uracil content from dUTP misincorporation`, `RNA primers still attached to the template strand`, `Its association with translating ribosomes`],
             correctAnswer: 0,
             explanation: `Strand discrimination is the intellectual heart of MMR: a mismatch alone does not say which base is wrong. E. coli's Dam methylase marks GATC adenines, but methylation lags the fork — so for a few minutes the new strand is unmethylated, and MutH nicks that strand for excision. Repairing the template instead would FIX the mutation into both strands. Human MMR uses strand nicks rather than methylation, but the logic is identical (Lynch syndrome when it fails).`
           },
           {
             question: `Patients with xeroderma pigmentosum develop skin cancers in childhood upon minimal sun exposure. The defective process is:`,
-            options: [`Mismatch repair of replication errors`, `Nucleotide excision repair, which normally removes bulky UV-induced pyrimidine dimers`, `Nonhomologous end joining of double-strand breaks`, `Base excision repair of deaminated cytosines`],
+            options: [`Mismatch repair of replication errors`, `Nucleotide excision repair of pyrimidine dimers`, `End joining of double-strand breaks`, `Base excision repair of deaminated cytosines`],
             correctAnswer: 1,
             explanation: `UV crosslinks adjacent pyrimidines (thymine dimers), a bulky helix-distorting lesion — exactly NER's substrate: dual incisions flank the lesion, an oligonucleotide is removed, and the gap is filled. Without NER, dimers persist, stall polymerases, and force error-prone bypass, accumulating mutations in sun-exposed skin. BER handles small single-base chemistry, MMR handles copying errors, and NHEJ handles double-strand breaks — matching lesion type to pathway is the tested skill.`
           },
           {
             question: `Telomerase solves the end-replication problem by:`,
-            options: [`Ligating the two ends of each chromosome into a circle`, `Recruiting a special DNA polymerase that synthesizes 3' to 5'`, `Removing the need for RNA primers on the lagging strand`, `Using an internal RNA template to reverse-transcribe new repeats onto the chromosome's 3' overhang`],
+            options: [`Ligating the two ends of each chromosome into a circle`, `Recruiting a special DNA polymerase that synthesizes 3' to 5'`, `Removing the need for RNA primers on the lagging strand`, `Reverse-transcribing its RNA template onto the 3' overhang`],
             correctAnswer: 3,
             explanation: `Telomerase is a ribonucleoprotein reverse transcriptase: its built-in RNA is the template, the chromosome's 3' overhang is the primer, and it processively adds TTAGGG repeats. The lengthened overhang then supports conventional primase/polymerase synthesis of the complementary strand. No polymerase ever synthesizes 3' to 5', and eukaryotic chromosomes stay linear — circularization is a bacterial solution, and the trap option here.`
           },
           {
             question: `A tumor with inactivated BRCA1 cannot perform homologous recombination. Double-strand breaks in these cells during G2 are most likely to be:`,
-            options: [`Repaired perfectly using the sister chromatid`, `Converted to single-strand nicks by telomerase`, `Repaired by error-prone nonhomologous end joining, producing small insertions and deletions`, `Left permanently unrepaired with no cellular response`],
+            options: [`Repaired perfectly using the sister chromatid`, `Converted to single-strand nicks by telomerase`, `Repaired by error-prone nonhomologous end joining`, `Left permanently unrepaired with no cellular response`],
             correctAnswer: 2,
             explanation: `HR and NHEJ are the two double-strand-break pathways; HR copies the intact sister chromatid (S/G2 only, essentially error-free), while NHEJ trims and ligates ends directly, tolerating small indels. Remove HR (BRCA1/2 loss) and the cell falls back on mutagenic NHEJ — genomic instability that drives the cancer, and the vulnerability PARP inhibitors exploit (synthetic lethality). The cell does respond — checkpoints fire — so "no response" is wrong.`
           }

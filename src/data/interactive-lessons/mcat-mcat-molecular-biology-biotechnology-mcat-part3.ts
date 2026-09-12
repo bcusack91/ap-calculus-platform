@@ -61,31 +61,31 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
         questions: [
           {
             question: `CRISPR-Cas9 is retargeted to a new genomic site by:`,
-            options: [`Evolving a new Cas9 protein with different DNA-binding domains`, `Changing the ~20-nucleotide guide RNA sequence to base-pair with the new target`, `Methylating the old target site`, `Using a different restriction enzyme`],
+            options: [`Evolving a new Cas9 protein with different DNA-binding domains`, `Redesigning the ~20-nucleotide guide RNA sequence`, `Methylating the old target site to block binding`, `Swapping in a different restriction enzyme domain`],
             correctAnswer: 1,
             explanation: `Specificity lives in the guide RNA's Watson-Crick pairing with the target (plus the adjacent PAM); Cas9 is a constant cutting chassis. Reprogramming is therefore an oligonucleotide-design problem — cheap and fast — where earlier tools (zinc fingers, TALENs) required engineering a new PROTEIN for every site. This protein-vs-RNA recognition distinction is the conceptual heart of every CRISPR question; restriction enzymes, with fixed recognition sites, cannot be retargeted at all.`
           },
           {
             question: `After Cas9 creates a double-strand break in a gene, researchers who want a precise point-mutation knock-in must supply a homologous repair template and use dividing cells, because:`,
-            options: [`Cas9 itself writes the new sequence into the break`, `NHEJ requires a template to work`, `Precise editing uses homology-directed repair, which needs a template and is active mainly in S/G2 — otherwise error-prone NHEJ dominates and produces random indels`, `Non-dividing cells lack DNA entirely`],
+            options: [`Cas9 itself writes the new sequence into the break`, `NHEJ needs a donor template and works only in S/G2`, `Precise HDR needs a template and is active mainly in S/G2`, `Non-dividing cells cannot express Cas9 protein`],
             correctAnswer: 2,
             explanation: `Cas9 only cuts; the CELL repairs, and the repair pathway decides the product. NHEJ — templateless, active all cycle — glues ends with occasional indels (great for knockouts, useless for precision). HDR copies a provided donor template but essentially requires S/G2, when its machinery and (normally) a sister chromatid are available. This is the DNA-repair lesson operating as an engineering constraint: to control the edit, you must bias the pathway competition.`
           },
           {
             question: `A gene is essential for embryonic development, but its function in adult liver is unknown. The most appropriate strategy is:`,
-            options: [`A conditional knockout — loxP-flanked gene plus Cre recombinase expressed from a liver-specific (ideally inducible) promoter`, `A conventional whole-body knockout`, `Overexpressing the gene in all tissues`, `A transgenic mouse carrying a second copy of the gene`],
+            options: [`A liver-specific conditional (Cre-lox) knockout`, `A conventional whole-body germline knockout`, `Overexpressing the gene in all tissues`, `A transgenic mouse carrying a second copy of the gene`],
             correctAnswer: 0,
             explanation: `Constitutive deletion never yields an adult: the embryonic requirement kills first, hiding all later functions — the standard motivation for conditional systems. Floxing the gene and restricting Cre expression by promoter (liver) and timing (drug-inducible CreER) deletes the gene only where and when you choose. The generalizable exam skill: when a phenotype of interest is downstream of an earlier lethality, look for the answer that separates deletion in SPACE and TIME from deletion per se.`
           },
           {
             question: `In early gene-therapy trials using retroviral vectors, some treated SCID patients later developed leukemia. The mechanistic basis of this adverse outcome was:`,
-            options: [`The therapeutic gene product was directly oncogenic`, `Patients rejected the vector immunologically`, `The corrected T cells could not proliferate`, `Retroviral integration into the genome near a proto-oncogene activated it — insertional mutagenesis`],
+            options: [`The therapeutic gene product was directly oncogenic`, `Patients rejected the vector immunologically`, `The corrected T cells could not proliferate`, `Insertional mutagenesis activating a proto-oncogene`],
             correctAnswer: 3,
             explanation: `Integration is a double-edged sword: it makes correction permanent in dividing cells, but the insertion site is poorly controlled, and a strong viral promoter/enhancer landing beside a proto-oncogene (LMO2 in the actual trials) can drive it — a somatic gain-of-function event, connecting to the cancer framework of the cell-cycle lesson. Non-integrating vectors like AAV trade durability for this safety; expect questions weighing that exact trade-off. The therapy worked — cells proliferated all too well.`
           },
           {
             question: `A mouse line expresses GFP under the control of gene X's promoter (promoter-GFP, no X coding sequence). Green fluorescence appears only in kidney tubules. This experiment demonstrates:`,
-            options: [`That protein X localizes to the tubule cell membrane`, `Where and when gene X's promoter is transcriptionally active — kidney tubules — but nothing about protein X's localization or function`, `That GFP is required for kidney development`, `That gene X has been knocked out in all other tissues`],
+            options: [`That protein X localizes to the tubule cell membrane`, `That gene X's promoter is active in kidney tubules`, `That GFP is required for kidney development`, `That gene X has been knocked out in all other tissues`],
             correctAnswer: 1,
             explanation: `Construct anatomy determines the claim: promoter-GFP borrows only X's regulatory switch, so fluorescence maps promoter ACTIVITY (which cells transcribe X). To ask where protein X GOES, you need a FUSION of GFP to X's coding sequence — a different construct whose fluorescence follows the protein (its subcellular address, its trafficking). Confusing the two constructs is the designed trap whenever GFP appears in a passage; neither reports function, and no endogenous gene was altered.`
           }

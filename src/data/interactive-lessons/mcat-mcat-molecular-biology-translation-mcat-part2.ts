@@ -66,31 +66,31 @@ Order of assembly (both systems): small subunit + initiator tRNA find the start 
         questions: [
           {
             question: `During initiation, the initiator tRNA is unique among all tRNAs because it:`,
-            options: [`Carries no amino acid`, `Binds the A site with help from EF-Tu`, `Enters the P site directly, before the large subunit has even joined`, `Recognizes stop codons`],
+            options: [`Carries no amino acid until it binds the P site`, `Binds the A site with help from EF-Tu`, `Enters the P site directly, not via the A site`, `Pairs with stop codons instead of AUG`],
             correctAnswer: 2,
             explanation: `Every elongator tRNA is delivered into the A site and reaches the P site only by translocation; the initiator (fMet-tRNA in prokaryotes, Met-tRNAi in eukaryotes) instead assembles with the SMALL subunit at the start codon and occupies the P site from the outset — so the first incoming elongator finds codon 2 waiting in the A site. This P-site-first geometry is why the first peptide bond can form immediately after the large subunit docks.`
           },
           {
             question: `The Shine-Dalgarno sequence positions bacterial ribosomes by base-pairing with:`,
-            options: [`The 16S rRNA of the small ribosomal subunit`, `The initiator tRNA's anticodon`, `The 5' cap of the mRNA`, `The sigma factor of RNA polymerase`],
+            options: [`The 16S rRNA of the 30S subunit`, `The anticodon of the initiator tRNA`, `The 5' cap on the bacterial mRNA`, `The sigma factor of RNA polymerase`],
             correctAnswer: 0,
             explanation: `Bacterial start-site selection is an RNA-RNA handshake: the purine-rich Shine-Dalgarno element upstream of the AUG pairs with a complementary stretch of 16S rRNA, parking the 30S subunit so the proper AUG sits in the P site. Because each cistron of a polycistronic mRNA carries its own Shine-Dalgarno, ribosomes can initiate internally — impossible in the eukaryotic cap-and-scan system, which finds only the first AUG. Bacteria have no caps, and sigma belongs to transcription.`
           },
           {
             question: `Peptide bond formation on the ribosome is catalyzed by rRNA and consumes no GTP or ATP at that step. The energetic price of the bond was paid earlier, during:`,
-            options: [`Translocation by EF-G`, `mRNA capping`, `Ribosome assembly in the nucleolus`, `tRNA charging, which stored ~2 ATP equivalents in the aminoacyl-ester linkage`],
+            options: [`GTP hydrolysis by EF-Tu during tRNA delivery`, `Translocation by EF-G`, `Ribosome assembly in the nucleolus`, `Aminoacyl-tRNA charging by synthetases`],
             correctAnswer: 3,
             explanation: `The ester bond joining amino acid to tRNA is higher-energy than a peptide bond, so transfer of the chain onto the A-site amino group is thermodynamically downhill — the rRNA peptidyl transferase merely positions substrates. GTP spent by EF-Tu (delivery) and EF-G (translocation) buys accuracy and movement, not bond formation. Full audit for exam math: ~4 high-energy phosphate bonds per residue added (2 from charging + 2 GTP).`
           },
           {
             question: `Release factors terminate translation at stop codons. Structurally and functionally, they succeed because they:`,
-            options: [`Are special tRNAs charged with water`, `Are proteins that mimic tRNA shape, occupy the A site at stop codons, and redirect peptidyl transferase to hydrolyze the chain onto water`, `Degrade the mRNA at the stop codon`, `Remove the ribosome's E site`],
+            options: [`Are special tRNAs whose anticodons pair with stop codons`, `Are proteins that mimic tRNA and trigger hydrolysis`, `Degrade the mRNA at the stop codon to eject the ribosome`, `Occupy the E site and push the peptidyl-tRNA out`],
             correctAnswer: 1,
             explanation: `No tRNA reads UAA, UAG, or UGA; release factors are molecular mimics — proteins whose shape lets them dock in the A site where a tRNA would. Instead of donating an amino group, they position a water molecule, so peptidyl transferase hydrolyzes rather than aminolyzes the peptidyl-tRNA ester, freeing the finished protein. The mRNA itself is untouched and can be re-translated. Mimicry-as-mechanism recurs across biochemistry — recognize the pattern, not just this instance.`
           },
           {
             question: `In an electron micrograph, a single bacterial mRNA is being translated by eight ribosomes at once while RNA polymerase is still elongating the transcript's 3' end. Which statement about this image is correct?`,
-            options: [`This must be a eukaryotic cell, since polysomes exist only in eukaryotes`, `The image is impossible — translation requires a finished mRNA`, `The ribosome nearest the mRNA's 5' end initiated most recently, and coupled transcription-translation like this is possible only without a nuclear envelope`, `The eight ribosomes will produce one protein eight times longer than normal`],
+            options: [`This must be a eukaryotic cell, since polysomes exist only in eukaryotes`, `The image is impossible — translation requires a finished mRNA`, `The ribosome closest to the mRNA's 5' end loaded most recently`, `The eight ribosomes will produce one protein eight times longer than normal`],
             correctAnswer: 2,
             explanation: `Two testable ideas in one picture. Polysomes: ribosomes load at the fixed 5' start site and travel 3'-ward, so the 5'-most ribosome is the newest — spatial order encodes temporal order. Coupling: bacterial ribosomes engage nascent mRNA the moment a Shine-Dalgarno emerges, feasible only because no nuclear envelope separates the machineries (eukaryotes must finish processing and export first — Organelles Part 4 crossover). Each ribosome makes a complete, normal-length protein independently.`
           }

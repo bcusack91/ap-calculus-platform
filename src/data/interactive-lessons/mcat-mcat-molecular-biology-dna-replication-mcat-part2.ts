@@ -62,31 +62,31 @@ Because strands are antiparallel and the fork opens in one direction:
         questions: [
           {
             question: `DNA polymerases cannot initiate strand synthesis de novo because they strictly require:`,
-            options: [`A free 3'-hydroxyl group on an existing base-paired nucleotide to attack the incoming dNTP`, `A free 5'-phosphate on the template strand`, `Double-stranded DNA with no unwound regions`, `Simultaneous access to both the leading and lagging strands`],
+            options: [`A free 3'-hydroxyl on a base-paired primer strand`, `A free 5'-phosphate at the end of the template strand`, `Double-stranded DNA with no unwound regions`, `Simultaneous access to both the leading and lagging strands`],
             correctAnswer: 0,
             explanation: `The polymerase mechanism is a single reaction repeated: the primer's 3'-OH attacks the alpha-phosphate of the incoming dNTP, releasing pyrophosphate. No 3'-OH, no chemistry — hence primase, an RNA polymerase that CAN start de novo, must lay an RNA primer first. This one mechanistic fact explains 5'-to-3'-only synthesis, the need for primers, Okazaki fragments, and (in Part 3) the telomere end-replication problem.`
           },
           {
             question: `On the lagging strand, the correct order of events converting Okazaki fragments into a continuous strand is:`,
-            options: [`Ligation, then primer removal, then gap filling`, `Primer removal by 5' to 3' exonuclease activity, gap filling by DNA polymerase, then ligase seals the nick`, `Gap filling, then ligation, then primer removal`, `Helicase removes the primers as it unwinds, then ligase fills the gaps with nucleotides`],
+            options: [`Ligation, then primer removal, then gap filling`, `Primer removal, then gap filling, then ligation`, `Gap filling, then ligation, then primer removal`, `Helicase removes primers, then ligase fills the gaps`],
             correctAnswer: 1,
             explanation: `Each fragment starts with RNA; Pol I (5' to 3' exonuclease, or RNase H in eukaryotes) chews out the primer while polymerase activity fills the gap with DNA, leaving a single nick — one missing phosphodiester bond — that ligase seals. Ligase joins existing ends only; it cannot add nucleotides, and helicase only separates strands. Sequencing errors here are the most commonly tested detail of the entire fork.`
           },
           {
             question: `A eukaryotic cell line has a defective PCNA sliding clamp that cannot encircle DNA. The most direct consequence for replication is:`,
-            options: [`RNA primers can no longer be synthesized`, `Supercoils accumulate ahead of the fork`, `Polymerases dissociate after adding only short stretches — processivity collapses and S phase slows drastically`, `Okazaki fragments are joined prematurely`],
+            options: [`Primase can no longer synthesize RNA primers`, `Positive supercoils accumulate ahead of the fork`, `Polymerases dissociate after adding short stretches`, `Okazaki fragments are ligated before primer removal`],
             correctAnswer: 2,
             explanation: `The clamp is a topological tether: by ringing the duplex it converts a polymerase that falls off after tens of nucleotides into one that synthesizes tens of thousands per binding event. Losing it does not change what the polymerase CAN do chemically — priming (primase), unwinding (helicase), and torsion (topoisomerase) are separate machines — it changes how long the polymerase stays on. Distinguish catalytic defects from processivity defects.`
           },
           {
             question: `Compared with the single origin of an E. coli chromosome, eukaryotic chromosomes use thousands of replication origins. The primary reason is that:`,
-            options: [`Eukaryotic polymerases are much faster, so extra origins prevent collisions`, `Eukaryotic genomes are far larger (and their forks slower), so replication could not finish in a single S phase from one origin`, `Linear chromosomes cannot form replication bubbles`, `Eukaryotes lack helicase and must open DNA at many points passively`],
+            options: [`Eukaryotic polymerases are much faster, so extra origins prevent collisions`, `Eukaryotic genomes are far larger and their forks move more slowly`, `Linear chromosomes cannot form replication bubbles`, `Eukaryotes lack helicase and must open DNA at many points passively`],
             correctAnswer: 1,
             explanation: `It is an arithmetic argument the MCAT expects you to run: a human chromosome is hundreds of megabases, eukaryotic forks move roughly 50-fold slower than bacterial ones, and one origin would take weeks. Thousands of origins firing in parallel, each making a bidirectional bubble that merges with its neighbors, compress the job into hours. Eukaryotic polymerases are slower, not faster (nucleosomes in the way), and linear DNA forms bubbles perfectly well.`
           },
           {
             question: `Ciprofloxacin, a fluoroquinolone, inhibits bacterial DNA gyrase. Replication in treated bacteria fails because:`,
-            options: [`Primers can no longer be removed from Okazaki fragments`, `SSB proteins can no longer coat single strands`, `The polymerase active site is directly blocked by the drug`, `Positive supercoils generated by unwinding accumulate ahead of the fork until further unwinding becomes impossible`],
+            options: [`Primers can no longer be removed from Okazaki fragments`, `SSB proteins can no longer coat the single strands`, `The polymerase active site is directly blocked by the drug`, `Positive supercoils accumulate ahead of the fork`],
             correctAnswer: 3,
             explanation: `Every ten base pairs unwound injects one turn of overwinding downstream; gyrase (a type II topoisomerase) normally cuts both strands, passes the duplex through, and reseals to relieve it. Poisoned gyrase leaves torsional stress that stalls helicase — and trapped gyrase-DNA cleavage complexes become double-strand breaks. The drug's selectivity for the bacterial enzyme over human topoisomerases is the selective-toxicity principle from antimicrobials.`
           }

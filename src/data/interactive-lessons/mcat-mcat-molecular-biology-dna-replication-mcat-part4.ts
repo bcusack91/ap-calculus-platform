@@ -57,31 +57,31 @@ export const mcatDnaReplicationPart4Data = {
         questions: [
           {
             question: `Origin licensing (helicase loading) occurs only when CDK activity is low, while origin firing requires high CDK activity that also blocks new licensing. This arrangement guarantees that:`,
-            options: [`Replication can occur in every phase of the cell cycle`, `Each origin can fire at most once per cell cycle, preventing re-replication of any genome segment`, `The lagging strand is synthesized before the leading strand`, `Telomeres are replicated first`],
+            options: [`Replication can occur in any cell-cycle phase`, `Each origin fires no more than once in each cell cycle`, `Lagging strands are made before leading strands`, `Telomeres are always replicated first`],
             correctAnswer: 1,
             explanation: `Because loading and firing demand mutually exclusive CDK states, an origin that has fired cannot be reloaded until the next G1 — the cycle must pass through mitosis and CDK reset first. That is the whole point: once-and-only-once replication. The design generalizes: whenever a process must happen exactly once per cycle, look for two steps requiring opposite states of the same global signal.`
           },
           {
             question: `AZT (zidovudine) is a thymidine analog bearing an azide group in place of the 3'-hydroxyl. After conversion to its triphosphate, it inhibits HIV replication because:`,
-            options: [`It prevents the viral RNA genome from entering the nucleus`, `It methylates the viral genome into silence`, `Reverse transcriptase incorporates it into the growing DNA strand, where the missing 3'-OH makes further elongation impossible`, `It binds the ribosome and stops translation of viral proteins`],
+            options: [`It prevents the viral RNA genome from entering the nucleus`, `It methylates the proviral DNA, silencing its transcription`, `It is incorporated and terminates the growing DNA chain`, `It binds the ribosome and stops translation of viral proteins`],
             correctAnswer: 2,
             explanation: `Chain termination again: every polymerase, reverse transcriptase included, elongates only from a free 3'-OH. AZT-triphosphate competes with dTTP, and once incorporated the azide dead-ends the strand. Selectivity is kinetic — HIV reverse transcriptase incorporates the analog far more readily than host polymerases do (though mitochondrial polymerase gamma inhibition explains AZT toxicity). Link this chemistry to acyclovir and to Sanger dideoxy sequencing: one mechanism, three exam contexts.`
           },
           {
             question: `Etoposide traps human topoisomerase II after it has cut both DNA strands but before it reseals them. The lesion this creates, and the repair pathway a G2 cell would prefer for it, are:`,
-            options: [`A double-strand break; homologous recombination using the sister chromatid`, `A mismatched base pair; mismatch repair`, `A thymine dimer; nucleotide excision repair`, `An unsealed Okazaki fragment; DNA ligase alone`],
+            options: [`A double-strand break; homologous recombination`, `A mismatched base pair; post-replicative mismatch repair`, `A thymine dimer; nucleotide excision repair`, `An unsealed Okazaki fragment; DNA ligase alone`],
             correctAnswer: 0,
             explanation: `Topo II's normal catalytic intermediate is a transient double-strand break held by the enzyme; the poison makes it permanent. In G2 a sister chromatid exists, so HR can repair the break faithfully — which is also why HR-deficient (BRCA-mutant) cells are hypersensitive to such drugs. The other options mispair lesion and pathway; matching lesion type to repair pathway is among the most re-tested skills in this unit.`
           },
           {
             question: `Methotrexate inhibits dihydrofolate reductase, depleting the thymidylate (dTTP) supply. Bone marrow suppression and gut mucositis are predictable side effects because:`,
-            options: [`Methotrexate also poisons gyrase in gut bacteria`, `dTTP is required for RNA synthesis in all cells equally`, `Marrow and gut cells uniquely lack dihydrofolate reductase`, `These tissues divide continuously, so their S-phase demand for dNTPs makes them most sensitive to nucleotide starvation`],
+            options: [`Methotrexate also poisons gyrase in gut bacteria`, `dTTP is required for RNA synthesis in all cells equally`, `Marrow and gut cells uniquely lack dihydrofolate reductase`, `These tissues divide rapidly and so need the most dNTPs`],
             correctAnswer: 3,
             explanation: `Antimetabolites have no molecular selectivity for tumors — their only filter is replication rate. Any tissue in constant S phase (marrow, intestinal epithelium, hair follicles) starves alongside the cancer, producing the classic triad of myelosuppression, mucositis, and alopecia. dTTP is a DNA-only nucleotide (RNA uses uracil), and DHFR is present in all human cells. Expect passages to test whether you see side effects as the mechanism applied to normal tissue.`
           },
           {
             question: `A researcher finds that a new compound halts DNA synthesis in bacterial cells within seconds, while RNA synthesis continues for several minutes and protein synthesis even longer. The compound most likely directly targets:`,
-            options: [`RNA polymerase`, `A replication-specific enzyme such as the replicative polymerase or helicase, with transcription and translation failing only later as downstream consequences`, `The ribosome`, `The cell wall`],
+            options: [`Bacterial RNA polymerase`, `The DNA replication machinery`, `The 30S ribosomal subunit`, `Cell wall synthesis`],
             correctAnswer: 1,
             explanation: `Kinetics reveal the primary target: the process that dies FIRST is the one directly hit; processes using pre-existing machinery and templates coast before decaying. Immediate DNA-synthesis arrest with delayed transcription/translation decline points to the replication apparatus itself. If RNA synthesis had stopped first, you would suspect RNA polymerase (rifampin's profile). This order-of-shutdown logic is a standard experimental-design question across the molecular biology lessons.`
           }

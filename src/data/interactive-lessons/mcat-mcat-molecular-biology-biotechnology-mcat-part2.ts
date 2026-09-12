@@ -62,31 +62,31 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
         questions: [
           {
             question: `On an agarose gel, DNA fragments migrate toward the positive electrode with the smallest fragments traveling farthest because:`,
-            options: [`Small fragments carry more negative charge per base`, `DNA is uniformly negative from its phosphate backbone, and the gel matrix retards large fragments more than small ones`, `Large fragments are positively charged`, `Small fragments are denatured into single strands`],
+            options: [`Small fragments carry more negative charge per base`, `The gel matrix retards large fragments more`, `Large fragments carry a net positive charge`, `Small fragments are denatured into single strands`],
             correctAnswer: 1,
             explanation: `Charge-to-mass ratio is constant for DNA (one phosphate per nucleotide), so the field alone cannot separate sizes — the agarose mesh does, acting as a sieve that big molecules thread slowly. Distance tracks log(size), hence ladders for calibration. The same principle transfers to SDS-PAGE, where SDS must first impose the uniform charge that DNA has naturally. If a question removes the gel (free solution), size separation disappears — a favorite conceptual twist.`
           },
           {
             question: `A researcher wants to know whether a specific gene is transcribed in cardiac tissue. The most direct technique is:`,
-            options: [`A Southern blot of cardiac DNA`, `A western blot with an antibody to the gene's protein`, `A northern blot (or RT-qPCR) of cardiac RNA probed for that transcript`, `A restriction digest of the cloned gene`],
+            options: [`A Southern blot of cardiac genomic DNA`, `A western blot with an antibody to the gene's protein`, `A northern blot or RT-qPCR of cardiac RNA`, `A restriction digest of the cloned gene`],
             correctAnswer: 2,
             explanation: `Match the molecule to the question: transcription produces RNA, so measure RNA — northern blot or RT-qPCR. A Southern only reports the gene's presence in the genome (true of nearly every cell regardless of expression), and a western reports protein, which can diverge from transcription via translational control or protein turnover. The exam repeatedly tests whether you distinguish gene present / gene transcribed / protein made as three separate questions requiring three techniques (SNoW DRoP).`
           },
           {
             question: `In Sanger sequencing, dideoxynucleotides terminate chain elongation because they lack:`,
-            options: [`A 5' phosphate group needed to enter the active site`, `A nitrogenous base to pair with the template`, `The 2' hydroxyl found in RNA`, `The 3' hydroxyl to which the next nucleotide would be added`],
+            options: [`A 5' phosphate group needed to enter the active site`, `A nitrogenous base to pair with the template`, `The 2' hydroxyl needed for phosphodiester formation`, `The 3' hydroxyl needed to add the next nucleotide`],
             correctAnswer: 3,
             explanation: `Polymerization is a 3'-OH attacking the incoming dNTP's alpha-phosphate; remove that hydroxyl (di-deoxy: missing at both 2' AND 3') and the chain is a dead end. Because ddNTPs are a small minority, termination happens at random instances of each base, generating the nested fragment set whose lengths spell the sequence. Chemically identical logic underlies acyclovir and AZT (chain-terminating drugs) — one mechanism, three exam costumes. ddNTPs retain the triphosphate and base; those options test careless reading.`
           },
           {
             question: `The sickle cell mutation destroys an MstII restriction site in the beta-globin gene. On a Southern blot of MstII-digested DNA probed at that locus, a heterozygous carrier shows:`,
-            options: [`Both the two smaller normal-allele fragments and the single larger mutant-allele fragment`, `Only the larger mutant fragment`, `Only the two smaller normal fragments`, `No bands at all`],
+            options: [`Both the normal and the mutant band patterns`, `Only the single larger mutant fragment`, `Only the two smaller normal fragments`, `One intermediate-sized hybrid fragment`],
             correctAnswer: 0,
             explanation: `Each allele reports independently: the normal chromosome still carries the internal MstII site (two fragments), while the mutant chromosome, lacking it, yields one fused larger fragment — a heterozygote therefore displays the union of both patterns. This RFLP logic is direct genotyping: homozygotes show one pattern or the other, carriers show both. Generalize it — ANY mutation that adds or removes a cut site is detectable by fragment-size change, no sequencing required.`
           },
           {
             question: `Compared with a microarray, RNA-seq (sequencing all cDNA from a sample) has the key advantage that it:`,
-            options: [`Requires no reverse transcription step`, `Measures protein levels directly`, `Detects any transcript — including unknown ones and novel splice variants — without needing pre-designed probes, over a wider dynamic range`, `Works only for genes shorter than 1 kb`],
+            options: [`Requires no reverse transcription step at all`, `Measures protein levels in the sample directly`, `Detects transcripts without predesigned probes`, `Works only for genes shorter than 1 kb`],
             correctAnswer: 2,
             explanation: `A microarray can only interrogate sequences someone printed on the chip — hybridization to KNOWN probes — while sequencing reads whatever is there, revealing unannotated transcripts, fusion mRNAs, and exon-level splice differences, with counting-based quantification that does not saturate like hybridization signal. Both start from cDNA (reverse transcription still required — option A is false). Neither touches protein; that remains the western/mass-spec domain. Probe-dependent vs probe-free is the tested contrast.`
           }

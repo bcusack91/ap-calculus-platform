@@ -58,33 +58,33 @@ The primary transcript (pre-mRNA, hnRNA) is edited co-transcriptionally inside t
         questions: [
           {
             question: `The 5' cap of eukaryotic mRNA is distinctive because it is attached through:`,
-            options: [`A standard 3'-5' phosphodiester bond like every other linkage in the strand`, `A peptide bond to the first amino acid`, `Hydrogen bonds to the poly-A tail`, `An inverted 5'-to-5' triphosphate linkage joining 7-methylguanosine to the transcript's first nucleotide`],
+            options: [`A standard 3'-5' phosphodiester bond`, `A peptide bond to the first amino acid`, `Hydrogen bonds pairing it with the poly-A tail`, `An inverted 5'-to-5' triphosphate linkage`],
             correctAnswer: 3,
             explanation: `The cap is added "backwards": the 7-methylguanosine's 5' carbon connects through three phosphates to the 5' end of the mRNA — a 5'-to-5' bridge found nowhere else in the molecule. This odd geometry is functional: 5' exonucleases cannot engage it (stability), and the cap-binding initiation factor eIF4E recognizes it specifically to begin ribosome loading. Distractor A describes the backbone everywhere EXCEPT the cap.`
           },
           {
             question: `Poly-A polymerase adds roughly 200 adenosines to cleaved pre-mRNA. This synthesis is unusual among nucleic acid polymerizations because it:`,
-            options: [`Occurs in the cytoplasm before splicing`, `Uses no template — the tail is not encoded in the gene`, `Proceeds in the 3' to 5' direction`, `Requires a DNA primer`],
+            options: [`Occurs in the cytoplasm before splicing`, `Proceeds with no nucleic acid template`, `Proceeds in the 3' to 5' direction`, `Requires a short DNA primer`],
             correctAnswer: 1,
             explanation: `Search the gene for 200 consecutive T's and you will not find them: the tail is added untemplated after cleavage at the AAUAAA signal. (Synthesis is still chemically 5' to 3' — additions to a free 3'-OH.) Exam relevance is practical too: oligo-dT primers exploit the tail to reverse-transcribe mRNA selectively into cDNA, and tail shortening in the cytoplasm times mRNA decay. Processing happens in the nucleus, and histone mRNAs are the tail-less exception.`
           },
           {
             question: `During splicing, the intron is released as a lariat. The loop of the lariat forms when:`,
-            options: [`The branch-point adenosine's 2'-hydroxyl attacks the 5' splice site, creating an unusual 2'-5' linkage`, `The 5' cap attacks the poly-A tail`, `U1 snRNP covalently joins the two exons`, `DNA ligase circularizes the intron`],
+            options: [`The branch-point A's 2'-OH attacks the 5' splice site`, `Exon 1's free 3'-OH attacks the 3' splice site`, `A guanosine cofactor attacks the 5' splice site`, `DNA ligase circularizes the excised intron`],
             correctAnswer: 0,
-            explanation: `First transesterification: the branch A — using the 2'-OH that only RNA possesses — attacks the GU donor site, looping the intron's 5' end back onto the branch point via a 2'-5' phosphodiester bond. The second transesterification then joins the exons and releases the lariat. Note the chemistry lesson embedded here: RNA's "destabilizing" 2'-OH is precisely what makes splicing (and ribozymes generally) possible. snRNPs position substrates; they are not covalently incorporated.`
+            explanation: `First transesterification: the branch A — using the 2'-OH that only RNA possesses — attacks the GU donor site, looping the intron's 5' end back onto the branch point via a 2'-5' phosphodiester bond. The second transesterification then joins the exons and releases the lariat. Note the chemistry lesson embedded here: RNA's "destabilizing" 2'-OH is precisely what makes splicing (and ribozymes generally) possible. An exogenous guanosine attacking the 5' splice site is group I self-splicing, which releases a linear intron rather than a lariat, and exon 1's 3'-OH attacking the 3' splice site is the SECOND step, which joins exons rather than closing the loop.`
           },
           {
             question: `A single human gene produces one protein isoform in muscle and a different, shorter isoform in liver. Genomic DNA from both tissues is identical. The most likely mechanism is:`,
-            options: [`A somatic mutation present only in liver`, `Two different promoters transcribing two different genes`, `Alternative splicing, with tissue-specific factors directing inclusion or skipping of particular exons`, `Faster mRNA degradation in muscle`],
+            options: [`A somatic mutation present only in liver`, `Two different promoters transcribing two different genes`, `Alternative splicing of the same pre-mRNA`, `Faster mRNA degradation in muscle`],
             correctAnswer: 2,
             explanation: `Same DNA, different mature mRNAs is the definition of alternative splicing: regulatory proteins expressed differently in each tissue bind the pre-mRNA and shift splice-site choice, so the liver product simply omits exons the muscle product keeps. This is how ~20,000 genes yield a far larger proteome. A somatic mutation contradicts the identical-DNA finding, and degradation rates change protein AMOUNT, not length. (ApoB is the related but distinct RNA-editing example — a created stop codon, not exon skipping.)`
           },
           {
-            question: `A mutation deep inside an intron, 400 bases from either splice site, creates a new GU sequence followed by a strong downstream AG. Patient mRNA is longer than normal and contains a premature stop. The best mechanistic explanation is:`,
-            options: [`The mutation blocked the poly-A signal`, `A cryptic splice site was activated, causing part of the intron to be retained as if it were an exon`, `The promoter was moved into the intron`, `The mutation prevented capping of the transcript`],
+            question: `A mutation deep inside an intron, 400 bases from either splice site, creates a new AG sequence followed by a strong downstream GU. Patient mRNA is longer than normal and contains a premature stop. The best mechanistic explanation is:`,
+            options: [`The mutation blocked the poly-A signal`, `Intronic sequence was included as a pseudo-exon`, `The promoter was relocated into the intron`, `The mutation prevented 5' capping`],
             correctAnswer: 1,
-            explanation: `New splice-site consensus sequences arising within introns can compete with the real ones: the spliceosome pairs the authentic donor with the new cryptic acceptor (or vice versa), stitching a block of intron into the mature mRNA as a pseudo-exon. Extra sequence brings frameshifts and premature stops — typically triggering nonsense-mediated decay. The lesson generalizes: intron interiors are usually silent, EXCEPT where a mutation creates splicing signals; boundaries and branch points are always critical.`
+            explanation: `New splice-site consensus sequences arising within introns can compete with the real ones: a new acceptor AG with a new donor GU downstream of it outlines an exon-shaped block in mid-intron, so the spliceosome joins the authentic donor to the new AG and the new GU to the authentic acceptor, stitching that block into the mature mRNA as a pseudo-exon. Extra sequence brings frameshifts and premature stops — typically triggering nonsense-mediated decay. The lesson generalizes: intron interiors are usually silent, EXCEPT where a mutation creates splicing signals; boundaries and branch points are always critical.`
           }
         ]
       }

@@ -55,25 +55,25 @@ export const mcatTranslationPart1Data = {
         questions: [
           {
             question: `A point mutation changes a codon's third base, yet the protein is completely unchanged. The property of the genetic code responsible is:`,
-            options: [`Universality`, `Degeneracy — synonymous codons typically differ at the third (wobble) position`, `Unambiguity`, `Nonoverlapping reading`],
+            options: [`Universality of the code`, `Degeneracy of the code`, `Unambiguity of the code`, `Nonoverlapping reading frames`],
             correctAnswer: 1,
             explanation: `Multiple codons per amino acid (degeneracy) is organized so synonyms usually share their first two bases and differ at position 3, where wobble pairing lets one tRNA serve several codons. Third-position changes are therefore frequently silent. Unambiguity is the reverse guarantee (one codon, one meaning), universality says the dictionary is shared across organisms, and nonoverlap concerns how frames are read — each property maps to its own question type; keep the definitions crisp.`
           },
           {
             question: `In the classic Chapeville experiment, cysteine already attached to tRNA-Cys was chemically converted to alanine. In translation, this alanine was inserted at cysteine codons. The conclusion is that:`,
-            options: [`Alanine and cysteine share codons`, `The ribosome corrects mischarged tRNAs`, `Codon recognition depends only on the tRNA's anticodon — the ribosome never checks which amino acid the tRNA carries`, `Aminoacyl-tRNA synthetases are dispensable`],
+            options: [`Alanine and cysteine share the same set of codons`, `The ribosome proofreads the amino acid on each tRNA`, `Codon recognition depends only on the tRNA's anticodon`, `Aminoacyl-tRNA synthetases are not needed`],
             correctAnswer: 2,
             explanation: `The ribosome reads base pairing, not side chains: cargo swapped after charging rides the tRNA's anticodon straight into cysteine positions. Fidelity of the amino-acid-to-codon match therefore lives entirely upstream, in the synthetases' recognition and editing sites — which is why the experiment made them, not the ribosome, the "second genetic code." Expect this logic re-skinned: any manipulation after charging is invisible to the ribosome.`
           },
           {
             question: `Wobble base pairing explains why:`,
-            options: [`Stop codons are read by tRNAs`, `The code is ambiguous`, `Each codon requires its own dedicated tRNA, giving 61 tRNA species`, `Cells can translate all 61 sense codons with substantially fewer than 61 tRNA species`],
+            options: [`Stop codons are decoded by tRNAs lacking amino acids`, `One codon can specify two different amino acids`, `Each codon requires its own tRNA, giving 61 tRNA species`, `Fewer than 61 tRNA species can read all sense codons`],
             correctAnswer: 3,
             explanation: `Relaxed pairing rules at the codon's third position (the anticodon's 5' base) — G-U pairs, and inosine reading U, C, or A — let a single tRNA cover a family of synonymous codons, cutting the required tRNA count to roughly 40. Note wobble NEVER creates ambiguity in the protein: synonymous codons already encode the same amino acid, so loose reading among them is safe. Stop codons remain tRNA-free, read by protein release factors.`
           },
           {
             question: `Charging a tRNA with its amino acid consumes ATP with release and hydrolysis of pyrophosphate. The chemical purpose of this investment is to:`,
-            options: [`Create a high-energy aminoacyl-ester bond whose energy will later drive peptide bond formation on the ribosome`, `Power the tRNA's transport into the nucleus`, `Unwind mRNA secondary structure`, `Methylate the amino acid for recognition`],
+            options: [`Store energy in the aminoacyl-tRNA ester bond`, `Power the tRNA's transport into the nucleus`, `Unwind mRNA secondary structure before initiation`, `Methylate the amino acid for recognition`],
             correctAnswer: 0,
             explanation: `Peptide bond formation at the ribosome uses no ATP or GTP directly — the energy was banked in advance as the activated ester linking amino acid to tRNA (2 ATP equivalents, since pyrophosphate hydrolysis pulls the reaction). The ribosome's peptidyl transferase (a ribozyme) just transfers the chain onto the incoming amino group. Energy accounting questions hinge on this: charging is where the peptide bond is paid for.`
           },

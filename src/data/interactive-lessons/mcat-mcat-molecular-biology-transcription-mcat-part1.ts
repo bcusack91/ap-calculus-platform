@@ -71,25 +71,25 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
           },
           {
             question: `Unlike DNA polymerase, RNA polymerase requires no primer. The property that makes this acceptable for the cell is that:`,
-            options: [`RNA polymerase copies only short genes`, `Transcripts are temporary, many-copy products, so initiation errors are not heritable — whereas an unproofread DNA start would fix mutations permanently`, `RNA polymerase synthesizes in the 3' to 5' direction instead`, `The sigma factor performs proofreading for the polymerase`],
+            options: [`RNA polymerase transcribes only short genes`, `Transcripts are temporary, so their errors are not heritable`, `RNA polymerase synthesizes in the 3' to 5' direction instead`, `The sigma factor performs proofreading for the polymerase`],
             correctAnswer: 1,
             explanation: `The primer requirement of DNA polymerase is intimately tied to fidelity — extension from a base-paired 3'-OH allows proofreading of every addition. RNA polymerase trades that accuracy for the ability to start fresh, which is fine: a bad transcript is degraded and replaced, and each gene yields many transcripts. This cost-benefit logic also explains why primase leaves RNA (not DNA) primers — they are marked as temporary for later removal. All polymerases synthesize 5' to 3', and sigma finds promoters; it does not proofread.`
           },
           {
             question: `In eukaryotes, tRNA genes and protein-coding genes are transcribed by different enzymes. A toxin that selectively inactivates RNA polymerase II would directly halt synthesis of:`,
-            options: [`Both mRNA and tRNA equally`, `Ribosomal RNA in the nucleolus`, `tRNA only`, `mRNA, while rRNA (Pol I) and tRNA (Pol III) synthesis continue`],
+            options: [`Both mRNA and tRNA equally`, `Large rRNAs in the nucleolus`, `tRNA and 5S rRNA only`, `mRNA but not rRNA or tRNA`],
             correctAnswer: 3,
             explanation: `Division of labor: Pol I makes the large rRNAs in the nucleolus, Pol II makes all mRNA (plus most regulatory RNAs), Pol III makes tRNA and 5S rRNA. Alpha-amanitin is the real toxin with this profile — mRNA production collapses while the other polymerases, far less sensitive, continue. A passage showing new protein synthesis decaying as existing mRNAs are degraded, with ribosome assembly initially intact, is describing exactly this selectivity.`
           },
           {
             question: `A bacterial mutation changes the -10 promoter element of a single gene so that sigma factor binds it poorly. The expected result is:`,
-            options: [`Reduced transcription of that gene only, since promoters act on the adjacent gene rather than encoding product`, `A mutant protein with altered amino acid sequence`, `Reduced transcription of all genes in the genome`, `Normal transcript levels but failed translation`],
+            options: [`Reduced transcription of that gene only, with normal protein`, `A mutant protein with altered amino acid sequence`, `Reduced transcription of all genes in the genome`, `Normal transcript levels but failed translation`],
             correctAnswer: 0,
             explanation: `Promoter mutations are regulatory, cis-acting, and quantitative: the -10 box is a binding site upstream of the start site, not part of the mRNA or protein, so the product (when made) is normal — there is simply less of it, only from THIS gene. Contrast a sigma-factor mutation (trans-acting protein): that would depress many genes at once. Cis = the DNA element serves its own neighbor; trans = a diffusible product acts genome-wide. This distinction returns with force in the operon part.`
           },
           {
             question: `A patient presents with liver failure after eating wild mushrooms containing alpha-amanitin. At the cellular level, the earliest molecular deficit in hepatocytes is:`,
-            options: [`Failure of DNA replication at licensed origins`, `Loss of new mRNA synthesis, with protein levels falling as existing transcripts decay`, `Immediate cessation of all translation`, `Depletion of tRNA pools`],
+            options: [`Failure of DNA replication at licensed replication origins`, `Loss of new mRNA synthesis by RNA polymerase II`, `Immediate cessation of all translation`, `Depletion of tRNA pools from Pol III loss`],
             correctAnswer: 1,
             explanation: `Amanitin's target is Pol II, so mRNA production stops first; translation continues transiently on pre-existing transcripts and then declines at rates set by each mRNA's half-life — short-lived regulatory mRNAs disappear before stable ones. Replication, tRNA synthesis (Pol III), and ribosomes are not direct targets. The temporal cascade (transcription now, translation later) is the same order-of-shutdown reasoning used to identify unknown inhibitors in experiment passages.`
           }

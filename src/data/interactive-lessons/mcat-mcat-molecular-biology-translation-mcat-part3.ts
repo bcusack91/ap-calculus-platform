@@ -72,31 +72,31 @@ export const mcatTranslationPart3Data = {
         questions: [
           {
             question: `Sickle cell disease results from a GAG-to-GTG change converting glutamate 6 of beta-globin to valine. This mutation is classified as:`,
-            options: [`A nonsense mutation`, `A silent mutation`, `A nonconservative missense mutation — an acidic residue replaced by a hydrophobic one, creating a sticky surface patch`, `A frameshift mutation`],
+            options: [`A conservative missense mutation`, `A nonsense mutation causing truncation`, `A nonconservative missense mutation`, `A frameshift mutation in codon 6`],
             correctAnswer: 2,
             explanation: `One codon, one substituted amino acid, chain length unchanged: missense. It is NONconservative because the chemistry flips — negatively charged, water-loving glutamate becomes hydrophobic valine, whose surface exposure lets deoxygenated hemoglobin molecules polymerize into fibers that deform the cell. The classification vocabulary maps directly to consequence severity, and the exam expects you to justify "nonconservative" by side-chain chemistry, not memorization.`
           },
           {
             question: `Anfinsen showed that denatured ribonuclease spontaneously refolds into active enzyme when denaturant and reducing agent are removed. The principle established is that:`,
-            options: [`All proteins fold without ever needing chaperones`, `The amino acid sequence itself contains sufficient information to specify the native three-dimensional structure`, `Disulfide bonds form randomly`, `Folding requires ribosome contact`],
+            options: [`All proteins fold without needing chaperones`, `The primary sequence specifies the native fold`, `Disulfide bonds form at random`, `Folding requires contact with the ribosome`],
             correctAnswer: 1,
             explanation: `Refolding succeeded with no cellular machinery present — no ribosome, no chaperones, no template — so the tertiary structure must be encoded in the primary sequence (the thermodynamic hypothesis: the native state is the free-energy minimum). Chaperones remain important IN CELLS, but as aggregation-preventers and kinetics-helpers, not information sources; option A overreaches the finding. Correct disulfides reformed because the folded conformation brings the right cysteines together.`
           },
           {
             question: `A regulatory protein must be destroyed within minutes at a specific cell-cycle transition. The machinery responsible for this targeted, ATP-dependent destruction is:`,
-            options: [`Polyubiquitination followed by the 26S proteasome`, `Lysosomal acid hydrolases after autophagy`, `Extracellular proteases`, `Random cleavage by cytosolic trypsin`],
+            options: [`Polyubiquitination and the 26S proteasome`, `Lysosomal acid hydrolases after autophagy`, `Extracellular proteases after secretion`, `Calpain cleavage triggered by calcium`],
             correctAnswer: 0,
             explanation: `Selectivity and speed are the requirements, and only the ubiquitin-proteasome system offers both: an E3 ligase recognizes ONE substrate (often only after a phosphorylation mark), builds a polyubiquitin chain, and the proteasome unfolds and shreds that molecule while its neighbors are untouched — cyclin destruction at anaphase is the textbook case. Lysosomes handle bulk and vesicle-delivered cargo on slower timescales, with no per-molecule addressing. Match disposal system to precision required.`
           },
           {
             question: `Trypsin is synthesized in pancreatic acinar cells as inactive trypsinogen and activated by cleavage only upon reaching the intestine. The biological logic of this zymogen strategy is to:`,
-            options: [`Improve the enzyme's catalytic rate`, `Allow the enzyme to be translated faster`, `Make the protein small enough to secrete`, `Separate the site of synthesis from the site of activity, preventing the protease from digesting the very cell that makes it`],
+            options: [`Improve the enzyme's catalytic rate`, `Allow the enzyme to be translated faster`, `Make the protein small enough to secrete`, `Keep it from digesting the cell that makes it`],
             correctAnswer: 3,
             explanation: `Irreversible activation demands spatial control: the active site is built but conformationally masked until enteropeptidase cleaves trypsinogen in the duodenum — after which trypsin activates more trypsinogen and the other zymogens (autocatalytic cascade). Premature intrapancreatic activation is pancreatitis: self-digestion. The same synthesize-inactive-activate-on-site logic governs clotting factors, caspases, and insulin processing — cleavage as a one-way switch, contrasted with reversible phosphorylation.`
           },
           {
             question: `In prion diseases, the infectious agent contains no nucleic acid, yet the disease propagates and can be transmitted. The replication mechanism is:`,
-            options: [`Reverse transcription of a protein sequence into DNA`, `A hidden viral genome inside the prion particle`, `Misfolded PrP acting as a conformational template that converts normally folded PrP into the misfolded, aggregation-prone form`, `Mutation of the host's PrP gene by the incoming protein`],
+            options: [`Reverse transcription of a protein sequence into DNA`, `A hidden viral genome inside the prion particle`, `Misfolded PrP templating conversion of normal PrP`, `Mutation of the host's PrP gene by the incoming protein`],
             correctAnswer: 2,
             explanation: `Prions replicate SHAPE, not sequence: the pathological beta-sheet-rich conformer binds native alpha-helical PrP and catalyzes its conversion, and the growing aggregates fragment into new seeds — exponential, protein-only propagation that defies the DNA/RNA-based definitions of infectious agents. The host gene is untouched (though PrP mutations cause familial forms by easing conversion). Conceptually this is Anfinsen's exception: here two stable conformations exist, and kinetics — seeded templating — decides which wins.`
           }
