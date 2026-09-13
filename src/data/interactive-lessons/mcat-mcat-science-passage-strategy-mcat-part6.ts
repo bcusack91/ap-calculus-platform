@@ -68,21 +68,21 @@ export const mcatSciPassagePart6Data = {
         questions: [
           {
             question: `A passage shows a Western blot with a band present in wild-type but absent in a mutant strain. The most likely conclusion is:`,
-            options: [`The mutant strain does not express the target protein (gene knockout or loss of expression)`, `The mutant has MORE protein`, `The experiment failed`, `The antibody is nonspecific`],
+            options: [`The mutant does not express the target protein`, `The mutant has more of the protein than wild-type`, `The experiment failed, so no conclusion can be drawn`, `The antibody binds nonspecifically in both lanes`],
             correctAnswer: 0,
-            explanation: `In a Western blot, a missing band means the protein isn't expressed (or is too small/large to appear at expected position). In a passage context, this usually means the gene was knocked out, the promoter is mutated, or the protein is rapidly degraded.`
+            explanation: `In a Western blot, a missing band means the protein isn't expressed (or is too small/large to appear at expected position). In a passage context, this usually means the gene was knocked out, the promoter is mutated, or the protein is rapidly degraded. The wild-type band shows the blot and antibody worked, and more protein would give a stronger band, not a missing one.`
           },
           {
             question: `In the knockout worked example, the absence of phospho-Protein C in Kinase A knockouts indicates that Kinase A is:`,
-            options: [`Required for Protein C activation and acts upstream of Protein C`, `Downstream of Protein C in the pathway`, `Irrelevant to the pathway`, `An inhibitor of Protein C phosphorylation`],
+            options: [`Required for Protein C activation, acting upstream of it`, `Downstream of Protein C, acting after its activation`, `An inhibitor of Protein C phosphorylation in wild-type cells`, `Irrelevant, since Protein C activation continues without it`],
             correctAnswer: 0,
-            explanation: `Losing Kinase A eliminates the active form of Protein C, so Kinase A is necessary and lies upstream. If it were downstream or irrelevant, removing it would not block Protein C activation.`
+            explanation: `Losing Kinase A eliminates the active form of Protein C, so Kinase A is necessary and lies upstream. If it were downstream or irrelevant, removing it would not block Protein C activation, and removing an inhibitor would strengthen the band rather than abolish it.`
           },
           {
             question: `Because Kinase B knockout left the phospho-Protein C band strong, the best supported statement is that Kinase B:`,
-            options: [`Is not required for Protein C activation on this branch of the pathway`, `Directly phosphorylates Protein C`, `Is the most important kinase in the cell`, `Destroys Protein C`],
+            options: [`Is not required for Protein C activation on this branch`, `Directly phosphorylates Protein C in wild-type cells`, `Is the main kinase that phosphorylates Protein C in cells`, `Degrades Protein C once it has been phosphorylated`],
             correctAnswer: 0,
-            explanation: `No change upon removing Kinase B means it is not necessary for this activation step. It could act elsewhere, but the data only license the conclusion that it is dispensable for activating Protein C here.`
+            explanation: `No change upon removing Kinase B means it is not necessary for this activation step. It could act elsewhere, but the data only license the conclusion that it is dispensable for activating Protein C on this branch. If Kinase B were the enzyme phosphorylating or degrading Protein C, removing it would be expected to weaken or strengthen the band unless another kinase compensates, but the band stayed strong.`
           }
         ]
       }
@@ -95,7 +95,7 @@ export const mcatSciPassagePart6Data = {
         questions: [
           {
             question: `On a DNA gel, a sample's band migrates FARTHER from the well than a 500 bp marker. The sample fragment is most likely:`,
-            options: [`Smaller than 500 bp — shorter fragments migrate farther`, `Larger than 500 bp`, `Exactly 500 bp`, `Not DNA at all`],
+            options: [`Smaller than 500 bp`, `Larger than 500 bp`, `Exactly 500 base pairs`, `Not DNA at all`],
             correctAnswer: 0,
             explanation: `In gel electrophoresis, smaller fragments move faster and travel farther toward the positive electrode. A band that migrates beyond the 500 bp marker corresponds to a fragment smaller than 500 bp.`
           },
@@ -107,7 +107,7 @@ export const mcatSciPassagePart6Data = {
           },
           {
             question: `Before reading a passage's experimental results, the strongest habit is to:`,
-            options: [`Predict the expected outcome from the perturbation, then check whether the data match`, `Memorize every band intensity for later`, `Assume the result confirms the hypothesis`, `Skip the methods and read only the conclusion`],
+            options: [`Predict the expected result, then check it against the data`, `Memorize each band intensity so you can recall it later`, `Assume the results confirm the hypothesis the authors stated`, `Skip the methods and read only the authors' conclusion`],
             correctAnswer: 0,
             explanation: `Predicting the outcome turns data-reading into hypothesis-testing: when results match, you confirm understanding fast; when they don't, the surprise points you straight to the question's key insight.`
           }

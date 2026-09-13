@@ -58,15 +58,15 @@ export const mcatSciPassagePart3Data = {
         questions: [
           {
             question: `A study finds that coffee drinkers have lower rates of depression, but coffee drinkers also exercise more. Exercise is a:`,
-            options: [`Confounding variable — it could explain the association instead of coffee itself`, `Dependent variable`, `Independent variable`, `Control variable`],
+            options: [`confounding variable`, `moderating variable`, `dependent variable`, `controlled variable`],
             correctAnswer: 0,
-            explanation: `Exercise is a confounding variable because it's associated with both the exposure (coffee drinking) and the outcome (depression) and could be the real cause of the observed association. This limits internal validity.`
+            explanation: `Exercise is a confounding variable because it's associated with both the exposure (coffee drinking) and the outcome (depression) and could explain the observed association instead of coffee itself. This limits internal validity. A moderator would change the strength of the coffee-depression link, which nothing in the study describes; the outcome (depression) is the dependent variable, and a controlled variable is held constant by the researcher, which exercise was not.`
           },
           {
             question: `In the LDL worked example, the central design flaw is that:`,
-            options: [`Patients self-selected into groups, so confounders were not balanced (no randomization)`, `The sample size was far too small to detect any effect`, `LDL cannot be measured reliably in blood`, `Twelve weeks is too short for any cholesterol change`],
+            options: [`Patients self-selected, so confounders were not balanced`, `The sample was too small to detect any effect on LDL`, `LDL cannot be measured reliably from a blood sample`, `Twelve weeks is too short for cholesterol to change`],
             correctAnswer: 0,
-            explanation: `Self-selection means health-conscious behaviors could cluster in the drug group. Without random assignment, the groups differ in more than just the drug, undermining a causal conclusion.`
+            explanation: `Self-selection means health-conscious behaviors could cluster in the drug group. Without random assignment (no randomization), the groups differ in more than just the drug, undermining a causal conclusion.`
           },
           {
             question: `Which redesign would best justify the causal claim that the drug lowers LDL?`,
@@ -85,21 +85,21 @@ export const mcatSciPassagePart3Data = {
         questions: [
           {
             question: `A drug trial enrolls only healthy 20-year-old men. Its results may have limited:`,
-            options: [`External validity — generalizability to women, older adults, and people with comorbidities`, `Internal validity, because the sample is too uniform`, `Reliability, because young men give inconsistent data`, `Statistical power, regardless of effect size`],
+            options: [`External validity, since other groups were not represented`, `Internal validity, since a uniform sample cannot be randomized`, `Reliability, since young men give inconsistent measurements`, `Construct validity, since the outcome measure is poorly defined`],
             correctAnswer: 0,
-            explanation: `A narrow, homogeneous sample can have strong internal validity but poor external validity: you cannot confidently extend the findings to populations not represented in the study.`
+            explanation: `A narrow, homogeneous sample can have strong internal validity but poor external validity: you cannot confidently extend the findings to populations not represented in the study, such as women, older adults, and people with comorbidities. A uniform sample can still be randomized, and nothing in the stem concerns measurement consistency or how the outcome was defined.`
           },
           {
             question: `To study a rare disease, which design is generally most efficient?`,
-            options: [`Case-control study — start with people who have the disease and look backward at exposures`, `Randomized controlled trial assigning people to get the disease`, `Cross-sectional snapshot of the general population`, `A single case report`],
+            options: [`Case-control study — start with cases and look back at exposures`, `Cohort study — follow exposed and unexposed people forward in time`, `Cross-sectional survey — measure disease and exposure at one time`, `Case report — describe one patient's exposures in depth`],
             correctAnswer: 0,
-            explanation: `For rare outcomes, recruiting enough cases prospectively is impractical. A case-control study starts with existing cases and matched controls, then compares prior exposures — efficient for rare diseases.`
+            explanation: `For rare outcomes, recruiting enough cases prospectively is impractical. A case-control study starts with existing cases and matched controls, then compares prior exposures — efficient for rare diseases. A cohort would have to follow a huge population to accumulate a few cases, a cross-sectional survey captures very few cases at any moment, and a single case report has no comparison group.`
           },
           {
             question: `Repeating an assay three times yields nearly identical values each run. This demonstrates high:`,
-            options: [`Reliability (reproducibility)`, `External validity`, `Internal validity`, `Statistical significance`],
+            options: [`Reliability (reproducibility)`, `Accuracy (closeness to truth)`, `Validity (measuring the target)`, `Significance (a low p-value)`],
             correctAnswer: 0,
-            explanation: `Consistent, repeatable measurements indicate reliability. Reliability is necessary but not sufficient for validity — a measurement can be precisely reproducible yet still systematically biased.`
+            explanation: `Consistent, repeatable measurements indicate reliability. Reliability is necessary but not sufficient for validity — a measurement can be precisely reproducible yet still systematically biased, so identical repeat values say nothing about accuracy or validity, and no hypothesis test was run.`
           }
         ]
       }

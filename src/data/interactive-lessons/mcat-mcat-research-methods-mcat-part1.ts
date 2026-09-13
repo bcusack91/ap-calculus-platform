@@ -12,7 +12,7 @@ export const mcatResearchMethodsPart1Data = {
 
 | Variable Type | Definition | Example |
 |--------------|-----------|---------|
-| **Independent Variable (IV)** | What the researcher manipulates/measures | Drug dose, light exposure, temperature |
+| **Independent Variable (IV)** | What the researcher manipulates | Drug dose, light exposure, temperature |
 | **Dependent Variable (DV)** | What the researcher measures as an outcome | Patient recovery time, test score, enzyme activity |
 | **Confound Variable** | Unmeasured/uncontrolled variable affecting DV | Age, baseline health status, observer bias |
 
@@ -44,27 +44,27 @@ export const mcatResearchMethodsPart1Data = {
         questions: [
           {
             question: `A researcher tests: "Does caffeine improve memory?" Subjects consume caffeine or placebo, then complete a memory test. What is the IV?`,
-            options: [`Memory performance`, `Caffeine vs Placebo`, `Subject age`, `Test difficulty`],
+            options: [`Memory performance`, `Caffeine vs Placebo`, `Baseline memory`, `Test difficulty`],
             correctAnswer: 1,
             explanation: `The IV is what the researcher **manipulates** (caffeine vs placebo). The DV is the outcome measured (memory performance).`
           },
           {
             question: `A public health survey samples first 100 people entering a clinic. Which sampling bias is most likely?`,
-            options: [`Healthy volunteers (sampling bias)`, `Sicker patients may visit clinics (selection bias)`, `Observer rating errors`, `None; 100 is large`],
+            options: [`Recall bias, since patients misremember their health history`, `Selection bias, since clinic visitors tend to be sicker`, `Observer bias, since staff may misrate the patients`, `No bias, since a sample of 100 is large enough`],
             correctAnswer: 1,
-            explanation: `Convenience sampling (first 100 people) doesn't represent the population—sicker people seek clinics more. Systematic bias affects generalizability.`
+            explanation: `Convenience sampling (first 100 people) doesn't represent the population—sicker people seek clinics more. Systematic bias affects generalizability, and a larger sample does not fix it. Nothing involves staff rating patients or asking people to remember past health, and the problem is who gets sampled.`
           },
           {
             question: `An RCT randomly assigns patients to drug vs placebo. Randomization **most importantly** controls for:`,
-            options: [`Known confounds only`, `Unknown confounds`, `Both known and unknown confounds`, `Measurement error`],
+            options: [`Only measured confounders`, `Only unmeasured confounders`, `Known and unknown confounders`, `Outcome measurement error`],
             correctAnswer: 2,
-            explanation: `Random assignment balances **all** variables (known and unknown) across groups, preventing confounding.`
+            explanation: `Random assignment balances **all** variables (known and unknown) across groups, preventing confounding. It does not make the outcome measurement itself more accurate.`
           },
           {
             question: `A behavioral study observes teenagers' social media use and depression without intervention. This is which study type?`,
-            options: [`Experimental RCT`, `Quasi-experimental`, `Correlational/Observational`, `Case study`],
+            options: [`Randomized experiment`, `Quasi-experiment`, `Correlational study`, `Single-subject case study`],
             correctAnswer: 2,
-            explanation: `The researcher observes naturally occurring variables without manipulation (no random assignment). This is correlational/observational—causation cannot be inferred.`
+            explanation: `The researcher observes naturally occurring variables without manipulation (no random assignment). This is a correlational (observational) study—causation cannot be inferred. A quasi-experiment still involves a manipulation or intervention without random assignment, and a case study examines one individual in depth.`
           }
         ]
       }
@@ -74,7 +74,7 @@ export const mcatResearchMethodsPart1Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- **IV** = Independent Variable (what's manipulated/measured); **DV** = Outcome (what's measured)
+- **IV** = Independent Variable (what's manipulated); **DV** = Outcome (what's measured)
 - **Confound** = Unmeasured variable that could influence DV
 - **Random Assignment** ⟹ RCT ⟹ Strongest causation inference
 - **Convenience/Stratified Sampling** ⟹ Observational ⟹ Weaker causation inference

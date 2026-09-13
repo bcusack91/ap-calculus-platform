@@ -63,21 +63,21 @@ export const mcatSciPassagePart7Data = {
         questions: [
           {
             question: `A study on exercise and mood has $p = 0.03$. This means:`,
-            options: [`There is a 3% probability the results occurred by chance — the result is statistically significant`, `There is a 97% chance the hypothesis is true`, `The effect size is large`, `The study has high reliability`],
+            options: [`Results at least this extreme occur 3% of the time if the null holds`, `There is a 97% chance that the research hypothesis is correct`, `There is a 3% chance that the null hypothesis is actually true`, `The effect is large enough to matter clinically for patients`],
             correctAnswer: 0,
-            explanation: `$p < 0.05$ means statistically significant — there's less than a 5% chance the results are due to random chance. However, p-value does NOT tell you effect size, clinical significance, or the probability the hypothesis is true (common MCAT trap).`
+            explanation: `A p-value is the probability of getting results at least this extreme if the null hypothesis ($H_0$, no effect) were true. Because $0.03 < 0.05$, the result is statistically significant. The p-value does NOT give the probability that the null or the research hypothesis is true, and it says nothing about effect size or clinical importance (common MCAT traps).`
           },
           {
             question: `In the worked example, $r = -0.45$ is best described as:`,
-            options: [`A moderate negative correlation — as one variable rises, the other tends to fall`, `A strong positive correlation`, `No relationship at all`, `Proof that social media causes lower satisfaction`],
+            options: [`A moderate negative correlation`, `A moderate positive correlation`, `Essentially no relationship`, `Proof that social media lowers satisfaction`],
             correctAnswer: 0,
-            explanation: `The negative sign indicates an inverse relationship and the magnitude (0.45) indicates moderate strength. Correlation describes association and direction, not causation.`
+            explanation: `The negative sign indicates an inverse relationship (as one variable rises, the other tends to fall) and the magnitude (0.45) indicates moderate strength, well above zero. Correlation describes association and direction, not causation.`
           },
           {
             question: `Why does the passage's conclusion that "social media reduces satisfaction" overreach?`,
-            options: [`The study is correlational, so reverse causation or a confounder could explain the association`, `The p-value is too small to trust`, `A correlation of $-0.45$ is too strong to be real`, `Surveys can never measure satisfaction`],
+            options: [`Correlational data allow reverse causation or a confounder`, `The p-value is so small that the result is likely a false positive`, `An $r$ of $-0.45$ is too weak to count as any association`, `Surveys cannot measure an internal state like satisfaction`],
             correctAnswer: 0,
-            explanation: `Correlational designs cannot establish direction of causation. Less-satisfied people might use more social media (reverse causation), or a third variable could drive both. A significant correlation supports association, not a causal claim.`
+            explanation: `Correlational designs cannot establish direction of causation. Less-satisfied people might use more social media (reverse causation), or a third variable could drive both. A significant correlation supports association, not a causal claim. A small p-value makes a false positive less likely, not more, and a moderate $r$ is a real association.`
           }
         ]
       }
@@ -90,21 +90,21 @@ export const mcatSciPassagePart7Data = {
         questions: [
           {
             question: `Defining "stress" as a participant's score on a validated 10-item questionnaire is an example of:`,
-            options: [`Operationalization — turning an abstract construct into a measurable variable`, `Sampling bias`, `The Hawthorne effect`, `A confounding variable`],
+            options: [`Operationalization of a construct`, `Sampling bias in participant selection`, `The Hawthorne effect on self-report`, `A confounding variable in the design`],
             correctAnswer: 0,
-            explanation: `Operationalization specifies how an abstract concept (stress) is concretely measured (questionnaire score). It is essential for testing hypotheses and is frequently probed in Psych/Soc passages.`
+            explanation: `Operationalization turns an abstract construct into a measurable variable: it specifies how a concept (stress) is concretely measured (questionnaire score). It says nothing about who was sampled, observation effects, or a third variable. It is essential for testing hypotheses and is frequently probed in Psych/Soc passages.`
           },
           {
             question: `Workers increase their productivity simply because they know researchers are watching them. This illustrates:`,
-            options: [`The Hawthorne effect`, `Self-report bias`, `Operationalization`, `Random sampling`],
+            options: [`The Hawthorne effect`, `Self-report bias`, `The placebo effect`, `Observer bias in ratings`],
             correctAnswer: 0,
-            explanation: `The Hawthorne effect is a change in behavior that results from awareness of being observed, independent of any experimental manipulation. It threatens the validity of observational studies.`
+            explanation: `The Hawthorne effect is a change in behavior that results from awareness of being observed, independent of any experimental manipulation. It threatens the validity of observational studies. The placebo effect comes from expecting a treatment to work, and observer bias is a distortion in how researchers record behavior, not a change in the behavior itself.`
           },
           {
             question: `A phone survey conducted only on weekday mornings likely suffers from:`,
-            options: [`Sampling bias — the sample excludes people unavailable at that time (e.g., daytime workers)`, `The Hawthorne effect`, `High external validity`, `Operationalization error only`],
+            options: [`Sampling bias, since people who work mornings are left out`, `Attrition bias, since many people hang up partway through`, `Response bias, since morning answers are less honest`, `Low reliability, since call times vary from day to day`],
             correctAnswer: 0,
-            explanation: `Restricting calls to weekday mornings systematically misses people who work during those hours, so the sample is not representative of the broader population — a form of sampling bias that limits generalizability.`
+            explanation: `Restricting calls to weekday mornings systematically misses people who work during those hours, so the sample is not representative of the broader population — a form of sampling bias that limits generalizability. Attrition refers to participants dropping out of a study over time, and nothing suggests morning answers are less honest or that the measure itself is inconsistent.`
           }
         ]
       }

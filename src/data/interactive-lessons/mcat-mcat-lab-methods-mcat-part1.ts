@@ -40,21 +40,21 @@ $$R_f = \\frac{\\text{distance traveled by spot}}{\\text{distance traveled by so
         questions: [
           {
             question: `On a normal-phase TLC plate (polar silica), which compound travels the FARTHEST (highest $R_f$)?`,
-            options: [`A nonpolar hydrocarbon`, `A carboxylic acid`, `An alcohol`, `An amine`],
+            options: [`A nonpolar hydrocarbon`, `A polar carboxylic acid`, `A hydrogen-bonding alcohol`, `A basic amine`],
             correctAnswer: 0,
             explanation: `Normal-phase silica is polar, so polar analytes (acids, alcohols, amines) bind the plate and lag. A nonpolar hydrocarbon interacts little with the plate and is carried up with the mobile phase → highest $R_f$.`
           },
           {
             question: `In size-exclusion chromatography, the FIRST proteins to elute from the column are:`,
-            options: [`The largest proteins, which cannot enter the pores`, `The smallest proteins, which fit through gaps`, `The most positively charged proteins`, `The most hydrophobic proteins`],
+            options: [`The largest proteins, which cannot enter the pores`, `The smallest proteins, which slip through the pores`, `The densest proteins, which sink through the column`, `The most hydrophobic proteins, which avoid the beads`],
             correctAnswer: 0,
-            explanation: `Size-exclusion (gel filtration) beads have pores that trap small molecules, lengthening their path. Large molecules are excluded from the pores and take the short route around the beads → they elute FIRST. This is the counterintuitive point the MCAT tests.`
+            explanation: `Size-exclusion (gel filtration) beads have pores that trap small molecules, lengthening their path. Large molecules are excluded from the pores and take the short route around the beads → they elute FIRST. This is the counterintuitive point the MCAT tests. Separation depends on size, not on density or hydrophobicity.`
           },
           {
             question: `You want to purify a His-tagged recombinant protein in a single step from a cell lysate. The best technique is:`,
-            options: [`Affinity chromatography with a nickel column`, `Size-exclusion chromatography`, `Thin-layer chromatography`, `Gas chromatography`],
+            options: [`Affinity chromatography using a nickel-bound resin`, `Size-exclusion chromatography through porous beads`, `Ion-exchange chromatography on a charged resin`, `Reverse-phase HPLC on a hydrophobic column`],
             correctAnswer: 0,
-            explanation: `Affinity chromatography exploits a specific interaction — a His-tag binds immobilized $Ni^{2+}$ ions, while everything else washes through. Eluting with imidazole releases the pure protein. This single-step specificity is why affinity is the go-to for tagged recombinant proteins.`
+            explanation: `Affinity chromatography exploits a specific interaction — a His-tag binds immobilized $Ni^{2+}$ ions, while everything else washes through. Eluting with imidazole releases the pure protein. This single-step specificity is why affinity is the go-to for tagged recombinant proteins. Size, charge, and hydrophobicity methods separate by properties many lysate proteins share, so none of them isolates the tagged protein in one step.`
           }
         ]
       }

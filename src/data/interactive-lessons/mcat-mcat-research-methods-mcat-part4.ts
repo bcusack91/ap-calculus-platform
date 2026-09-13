@@ -60,47 +60,46 @@ Risk: Publication bias (only positive findings published)
           {
             question: `A medication trial finds no significant difference with 50 participants (p=0.10). What might improve the conclusion?`,
             options: [
-              `Larger sample size (would increase power)`,
-              `Lower α threshold`,
-              `Use one-tailed test instead of two-tailed`,
-              `A and C`
+              `Repeat the trial with a larger sample size`,
+              `Lower the alpha threshold to 0.01`,
+              `Switch to a one-tailed test after seeing the data`,
+              `Report that the drug has no effect at all`
             ],
-            correctAnswer: 3,
-            explanation: `Larger N increases power to detect effects (if they exist). One-tailed test increases power by directing p-value to one tail. These address Type II error (false negative).`
+            correctAnswer: 0,
+            explanation: `With only 50 participants, a non-significant result may be a Type II error (false negative). A larger sample increases power to detect a real effect if one exists. Lowering α to 0.01 makes significance harder to reach, switching to a one-tailed test after seeing the data is p-hacking that inflates Type I error, and a non-significant p-value is not evidence of no effect.`
           },
           {
             question: `A researcher wants to test a vaccine in vulnerable populations (homeless). Why must researchers include (not exclude) them?`,
             options: [
-              `Cost savings`,
-              `Justice principle: equitable access to potential benefits`,
-              `Easy recruitment`,
-              `IRB requirement`
+              `Beneficence: avoiding all risk to the vulnerable`,
+              `Justice: fair access to potential research benefits`,
+              `Autonomy: consent is easier to obtain from them`,
+              `Efficiency: recruitment is faster in these groups`
             ],
             correctAnswer: 1,
-            explanation: `Justice requires fair distribution of research benefits. Excluding vulnerable groups historically "protected" them but denied access to potential treatments—unethical.`
+            explanation: `Justice requires fair distribution of research benefits, so vulnerable groups should not be excluded without justification. Excluding vulnerable groups historically "protected" them but denied access to potential treatments—unethical. Avoiding all risk would argue for exclusion, and convenience of consent or recruitment is never an ethical justification for enrolling vulnerable people.`
           },
           {
             question: `A meta-analysis combines 20 depression studies (n=5000 total). One issue could be:`,
             options: [
-              `Too many studies`,
-              `Publication bias: negative studies less likely published, overestimating drug effect`,
-              `Sample size too large`,
-              `Cannot combine different study types`
+              `Pooling many studies lowers the overall statistical power`,
+              `Publication bias, which can inflate the pooled effect`,
+              `Recall bias, since pooled data rely on participant memory`,
+              `Different study designs can never be combined`
             ],
             correctAnswer: 1,
-            explanation: `Publication bias is a major meta-analysis limitation. If 80% of published studies show a drug works (but 40% of unpublished studies don't), the pooled effect is overestimated.`
+            explanation: `Publication bias is a major meta-analysis limitation: negative studies are less likely to be published, so the drug effect is overestimated. If 80% of published studies show a drug works (but 40% of unpublished studies don't), the pooled effect is overestimated. Pooling increases power rather than lowering it, meta-analyses use study results rather than participant memory, and different designs can be combined with appropriate methods.`
           },
           {
             question: `Informed consent requires subjects know: (Select all that apply)`,
             options: [
-              `Study purpose and procedures`,
-              `Risks and benefits`,
-              `Right to withdraw without penalty`,
-              `Confidentiality protections`,
-              `All of the above`
+              `Purpose, risks and benefits, right to withdraw, and confidentiality`,
+              `Purpose, risks and benefits, and right to withdraw, but not confidentiality`,
+              `Purpose, risks and benefits, confidentiality, and that consent is final`,
+              `Purpose, benefits only, right to withdraw, and confidentiality`
             ],
-            correctAnswer: 4,
-            explanation: `All four elements (purpose, risks/benefits, withdrawal rights, confidentiality) are essential for true informed consent and ethical research.`
+            correctAnswer: 0,
+            explanation: `Informed consent requires all four elements: the study's purpose and procedures, its risks and benefits, the right to withdraw at any time without penalty, and how confidentiality will be protected. Leaving out confidentiality, describing consent as final (it can be withdrawn), or disclosing benefits without risks each fails the standard for true informed consent and ethical research.`
           }
         ]
       }

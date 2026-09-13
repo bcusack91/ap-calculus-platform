@@ -73,19 +73,19 @@ A passage reports the effect of an inhibitor on reaction rate:
         questions: [
           {
             question: `A graph shows enzyme activity vs. substrate concentration with a plateau at high concentrations. The plateau indicates:`,
-            options: [`All enzyme active sites are saturated ($V_{max}$ reached)`, `The enzyme is denatured`, `Substrate is being consumed`, `The experiment failed`],
+            options: [`All of the enzyme's active sites are saturated`, `The enzyme has denatured at high substrate levels`, `The substrate has been depleted from the mixture`, `Rate has become first order in substrate`],
             correctAnswer: 0,
-            explanation: `At high substrate concentration, all enzyme active sites are occupied → increasing substrate further has no effect on rate → plateau at $V_{max}$. This is the classic Michaelis-Menten curve.`
+            explanation: `At high substrate concentration, all enzyme active sites are occupied → increasing substrate further has no effect on rate → plateau at $V_{max}$. This is the classic Michaelis-Menten curve. The plateau appears as substrate concentration keeps rising, so substrate is not running out, and in this region the rate is zero order (not first order) in substrate.`
           },
           {
             question: `Using the inhibitor table, the relationship between inhibitor concentration and reaction rate is best described as:`,
-            options: [`Inverse — rate decreases as inhibitor concentration increases`, `Direct — rate increases with inhibitor`, `Sigmoidal — cooperative`, `No relationship — rate is constant`],
+            options: [`Inverse — rate falls as inhibitor concentration rises`, `Direct — rate rises as inhibitor concentration rises`, `Sigmoidal — rate shows a cooperative S-shaped response`, `None — rate stays constant across concentrations`],
             correctAnswer: 0,
             explanation: `Rate falls steadily from 100 to 8 µmol/min as inhibitor rises from 0 to 40 µM. That is an inverse (negative) relationship, the expected signature of inhibition.`
           },
           {
             question: `From the table, approximately what fraction of the uninhibited rate remains at 20 µM inhibitor?`,
-            options: [`About 30% (rate falls from 100 to 30)`, `About 64%`, `About 82%`, `About 8%`],
+            options: [`About 30%`, `About 64%`, `About 82%`, `About 8%`],
             correctAnswer: 0,
             explanation: `The control rate is 100 µmol/min and the rate at 20 µM is 30 µmol/min, so $30/100 = 30\\%$ of activity remains. Anchoring every row to the $0\\ \\mu\\text{M}$ control makes these comparisons fast.`
           }
@@ -100,21 +100,21 @@ A passage reports the effect of an inhibitor on reaction rate:
         questions: [
           {
             question: `A passage reports a sigmoidal (S-shaped) curve of oxygen saturation vs. partial pressure. This shape most directly indicates:`,
-            options: [`Cooperative binding, as seen in hemoglobin`, `Simple linear diffusion`, `Enzyme denaturation`, `A first-order rate law`],
+            options: [`Cooperative binding, as seen in hemoglobin`, `A hyperbolic curve typical of single-site binding`, `Enzyme denaturation at high partial pressure`, `A first-order dependence on oxygen pressure`],
             correctAnswer: 0,
-            explanation: `A sigmoidal binding curve is the hallmark of positive cooperativity — binding of one ligand increases affinity for the next. Hemoglobin's $O_{2}$ binding is the canonical MCAT example; myoglobin, by contrast, gives a hyperbolic curve.`
+            explanation: `A sigmoidal binding curve is the hallmark of positive cooperativity — binding of one ligand increases affinity for the next. Hemoglobin's $O_{2}$ binding is the canonical MCAT example; myoglobin, by contrast, binds one $O_{2}$ per molecule and gives a hyperbolic curve, which is not what the passage shows.`
           },
           {
             question: `An answer choice gives a rate in mol/s, but the table reports µmol/min. Before selecting, you should:`,
-            options: [`Convert units so the table value and answer choice are directly comparable`, `Ignore units since the numbers are close`, `Assume the choice is wrong because units differ`, `Pick it anyway — units never affect MCAT answers`],
+            options: [`Convert units so the two values can be compared directly`, `Ignore the units, since the numbers look close enough`, `Rule the choice out, since its units differ from the table`, `Compare only the leading digits and ignore the exponents`],
             correctAnswer: 0,
-            explanation: `Mismatched units are a deliberate trap. Convert carefully ($1\\ \\mu\\text{mol/min} = \\frac{10^{-6}}{60}\\ \\text{mol/s}$) so the magnitude lines up. Many wrong choices are correct numbers with the wrong units.`
+            explanation: `Mismatched units are a deliberate trap. Convert carefully ($1\\ \\mu\\text{mol/min} = \\frac{10^{-6}}{60}\\ \\text{mol/s}$) so the magnitude lines up. Many wrong choices are correct numbers with the wrong units, and a correct answer can be written in different units than the table, so a unit mismatch alone does not rule a choice out.`
           },
           {
             question: `A passage shows that ice-cream sales and drowning deaths rise together over the year. The safest interpretation is:`,
-            options: [`The two are correlated, likely via a confounder such as hot weather — not causally linked`, `Ice cream causes drowning`, `Drowning causes ice-cream sales`, `One variable must be the control`],
+            options: [`They are correlated, likely via a confounder such as heat`, `Eating ice cream causes the rise in drowning deaths`, `Drowning deaths drive the rise in ice-cream sales`, `Ice-cream sales mediate the effect of heat on drowning`],
             correctAnswer: 0,
-            explanation: `Correlation $\\neq$ causation. A lurking variable (summer heat) drives both. The MCAT rewards recognizing confounders rather than asserting a direct causal link from co-movement alone.`
+            explanation: `Correlation $\\neq$ causation. A lurking variable (summer heat) drives both, so the two are not causally linked to each other. Heat is a confounder, not a pathway running through ice cream, so calling ice-cream sales a mediator also assumes a causal link that is not there. The MCAT rewards recognizing confounders rather than asserting a direct causal link from co-movement alone.`
           }
         ]
       }

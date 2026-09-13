@@ -55,12 +55,12 @@ Effect size quantifies **magnitude** of difference (independent of sample size).
             question: `A study reports: Mean hemoglobin = 14 g/dL (95% CI: 13.5–14.5). Interpret this.`,
             options: [
               `95% of patients have hemoglobin between 13.5–14.5 g/dL`,
-              `We're 95% confident the true population mean is between 13.5–14.5`,
-              `The sample mean will be 14 ± 0.5 g/dL`,
-              `Hemoglobin is definitely between these values`
+              `We are 95% confident the population mean is 13.5–14.5 g/dL`,
+              `Repeated samples will always have means of 13.5–14.5 g/dL`,
+              `The true mean is certainly between 13.5 and 14.5 g/dL`
             ],
             correctAnswer: 1,
-            explanation: `A 95% CI means: if we repeated this study 100 times, ~95 would capture the true population mean. It's about the population parameter, not individual values.`
+            explanation: `A 95% CI means: if we repeated this study 100 times, ~95 would capture the true population mean. It's about the population parameter, not individual values. A CI gives no certainty, and other samples' means can fall outside it.`
           },
           {
             question: `Study A reports: Mean weight loss = 5 lb (95% CI: 1–9 lb). Study B: Mean = 5 lb (95% CI: 4.9–5.1 lb). Which study has a more precise estimate?`,
@@ -87,13 +87,13 @@ Effect size quantifies **magnitude** of difference (independent of sample size).
           {
             question: `Which scenario represents a **meaningful** but **statistically insignificant** result?`,
             options: [
-              `Large effect size, high p-value (p=0.08)`,
-              `Small effect size, low p-value (p=0.001)`,
-              `Large CI, small sample size`,
-              `A and C`
+              `Large effect size with p = 0.08`,
+              `Small effect size with p = 0.001`,
+              `Small effect size with p = 0.40`,
+              `Large effect size with p = 0.001`
             ],
-            correctAnswer: 3,
-            explanation: `Large effect + high p-value occurs with small sample size (underpowered study). Both large effect and large CI indicate the result is clinically important but lacked statistical power.`
+            correctAnswer: 0,
+            explanation: `"Meaningful" refers to effect size and "statistically insignificant" to p > 0.05, so only a large effect with p = 0.08 fits both. This pattern typically comes from a small, underpowered study with a wide CI: the effect may be clinically important, but the study lacked power to confirm it. A large effect with p = 0.001 is meaningful and significant, a small effect with p = 0.001 is significant but trivial, and a small effect with p = 0.40 is neither.`
           }
         ]
       }

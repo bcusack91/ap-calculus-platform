@@ -56,15 +56,15 @@ $$A = -\\log_{10}(T) = -\\log_{10}\\!\\left(\\frac{I}{I_0}\\right)$$
           },
           {
             question: `Which spectroscopic method would BEST confirm the presence of a carbonyl (C=O) group?`,
-            options: [`IR spectroscopy (strong absorption near 1700 $cm^{-1}$)`, `UV-Vis spectroscopy`, `Size-exclusion chromatography`, `Mass spectrometry alone`],
+            options: [`IR spectroscopy (strong band near 1700 $cm^{-1}$)`, `UV-Vis spectroscopy (electronic transitions)`, `Mass spectrometry alone (molecular ion peak)`, `Size-exclusion chromatography (elution volume)`],
             correctAnswer: 0,
-            explanation: `IR detects bond vibrations; the C=O stretch gives a strong, characteristic band near 1700 $cm^{-1}$. UV-Vis reports electronic transitions/conjugation, not specific functional groups, and chromatography separates rather than identifies bonds.`
+            explanation: `IR detects bond vibrations; the C=O stretch gives a strong, characteristic band near 1700 $cm^{-1}$. UV-Vis reports electronic transitions/conjugation, not specific functional groups, chromatography separates rather than identifies bonds, and a molecular ion peak gives mass, not which functional groups are present.`
           },
           {
             question: `A purified nucleic-acid sample gives an $A_{260}/A_{280}$ ratio of 1.5. This most likely indicates:`,
-            options: [`Protein contamination of the sample`, `Pure double-stranded DNA`, `Pure RNA`, `An empty cuvette`],
+            options: [`Protein contamination of the sample`, `A pure, double-stranded DNA sample`, `RNA contamination of a DNA sample`, `A highly concentrated DNA sample`],
             correctAnswer: 0,
-            explanation: `Pure DNA gives $A_{260}/A_{280}$ ≈ 1.8 and pure RNA ≈ 2.0. Proteins absorb strongly at 280 nm (Trp/Tyr), so contamination raises $A_{280}$ and DROPS the ratio. A value of 1.5 signals significant protein contamination.`
+            explanation: `Pure DNA gives $A_{260}/A_{280}$ ≈ 1.8 and pure RNA ≈ 2.0. Proteins absorb strongly at 280 nm (Trp/Tyr), so contamination raises $A_{280}$ and DROPS the ratio. A value of 1.5 signals significant protein contamination. RNA would push the ratio up toward 2.0, and concentration changes both absorbances together, leaving the ratio unchanged.`
           }
         ]
       }

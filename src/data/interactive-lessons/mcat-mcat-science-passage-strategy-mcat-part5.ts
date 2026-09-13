@@ -68,21 +68,21 @@ A Chem/Phys passage gives initial-rate data for $A \\rightarrow \\text{products}
         questions: [
           {
             question: `What is the pH of a $5 \\times 10^{-4}$ M HCl solution? (Use $\\log(5) \\approx 0.7$)`,
-            options: [`3.3 ($-\\log(5 \\times 10^{-4}) = 4 - 0.7 = 3.3$)`, `4.0`, `3.7`, `2.3`],
+            options: [`3.3`, `4.0`, `3.7`, `2.3`],
             correctAnswer: 0,
             explanation: `$\\text{pH} = -\\log[\\text{H}^+] = -\\log(5 \\times 10^{-4}) = -(\\log 5 + \\log 10^{-4}) = -(0.7 - 4) = 3.3$. HCl is a strong acid (complete dissociation), so $[H^+] = 5 \\times 10^{-4}$ M directly.`
           },
           {
             question: `In the kinetics worked example, doubling $[A]$ quadrupled the rate. The reaction order in $A$ is:`,
-            options: [`Second order ($2^n = 4 \\Rightarrow n = 2$)`, `First order`, `Zero order`, `Third order`],
+            options: [`Second order`, `First order`, `Zero order`, `Third order`],
             correctAnswer: 0,
             explanation: `If doubling a reactant multiplies the rate by $2^n$, then a four-fold rate increase means $2^n = 4$, so $n = 2$. The reaction is second order in $A$.`
           },
           {
             question: `For that second-order reaction, the rate constant $k$ must carry units of:`,
-            options: [`$\\text{M}^{-1}\\text{s}^{-1}$`, `$\\text{s}^{-1}$`, `$\\text{M}\\,\\text{s}^{-1}$`, `dimensionless`],
+            options: [`$\\text{M}^{-1}\\text{s}^{-1}$`, `$\\text{s}^{-1}$`, `$\\text{M}\\,\\text{s}^{-1}$`, `$\\text{M}^{-2}\\text{s}^{-1}$`],
             correctAnswer: 0,
-            explanation: `Rate has units M/s and $[A]^2$ has units $M^{2}$. So $k = \\text{rate}/[A]^2$ has units $\\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$. Matching $k$'s units to the order is a quick error check.`
+            explanation: `Rate has units M/s and $[A]^2$ has units $M^{2}$. So $k = \\text{rate}/[A]^2$ has units $\\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$. Matching $k$'s units to the order is a quick error check: first order gives $\\text{s}^{-1}$, zero order gives $\\text{M}\\,\\text{s}^{-1}$, and third order gives $\\text{M}^{-2}\\text{s}^{-1}$.`
           }
         ]
       }
@@ -95,21 +95,21 @@ A Chem/Phys passage gives initial-rate data for $A \\rightarrow \\text{products}
         questions: [
           {
             question: `Approximate the pH of a $2 \\times 10^{-3}$ M strong acid using $\\log(2) \\approx 0.3$:`,
-            options: [`About 2.7 ($3 - 0.3$)`, `About 3.3`, `About 2.0`, `About 1.7`],
+            options: [`About 2.7`, `About 3.3`, `About 2.0`, `About 1.7`],
             correctAnswer: 0,
             explanation: `$\\text{pH} = -\\log(2 \\times 10^{-3}) = 3 - \\log 2 \\approx 3 - 0.3 = 2.7$. Knowing $\\log 2 \\approx 0.3$ lets you nail these without a calculator.`
           },
           {
             question: `A thermodynamics passage gives $\\Delta H = -40$ kJ/mol and $\\Delta S = +50$ J/(mol·K). At any positive temperature, the reaction is:`,
-            options: [`Spontaneous, because $\\Delta G = \\Delta H - T\\Delta S$ is negative for all $T > 0$`, `Never spontaneous`, `Spontaneous only at very low temperature`, `Impossible to evaluate without $\\Delta G$ given directly`],
+            options: [`Spontaneous, since $\\Delta G$ is negative at every temperature`, `Never spontaneous, since $\\Delta G$ is positive at every temperature`, `Spontaneous only at low temperature, where $\\Delta H$ dominates`, `Spontaneous only at high temperature, where $T\\Delta S$ dominates`],
             correctAnswer: 0,
-            explanation: `With $\\Delta H < 0$ and $\\Delta S > 0$, the term $-T\\Delta S$ is also negative for any $T > 0$, so $\\Delta G < 0$ at all temperatures. Such reactions are always spontaneous.`
+            explanation: `With $\\Delta H < 0$ and $\\Delta S > 0$, the term $-T\\Delta S$ is also negative for any $T > 0$, so $\\Delta G = \\Delta H - T\\Delta S < 0$ at all temperatures. Such reactions are always spontaneous. Temperature-dependent spontaneity arises only when $\\Delta H$ and $\\Delta S$ have the same sign: both negative favors low temperature, both positive favors high temperature.`
           },
           {
             question: `You compute a current of 5000 A flowing through a household resistor. The best response is to:`,
-            options: [`Sanity-check the work — a household current that large is physically unreasonable`, `Accept it, since the math gave that number`, `Convert it to milliamps and move on`, `Assume the resistor is broken`],
+            options: [`Recheck the setup, since that current is physically unreasonable`, `Accept it, since the calculation produced that value`, `Convert it to milliamps so it matches the answer choices`, `Conclude the resistor failed, since the current is so large`],
             correctAnswer: 0,
-            explanation: `A sanity check catches setup errors. Typical household currents are on the order of single amps; thousands of amps signal a misplaced exponent or wrong formula. Always ask whether the answer makes physical sense.`
+            explanation: `A sanity check catches setup errors. A household current of thousands of amps is physically unreasonable, and blaming the resistor or converting units does not fix a wrong calculation. Typical household currents are on the order of single amps; thousands of amps signal a misplaced exponent or wrong formula. Always ask whether the answer makes physical sense.`
           }
         ]
       }

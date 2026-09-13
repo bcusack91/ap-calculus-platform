@@ -59,21 +59,21 @@ after $n$ cycles (ideal doubling). Steps per cycle:
         questions: [
           {
             question: `A researcher wants to detect a SPECIFIC protein in a tissue lysate. The appropriate technique is:`,
-            options: [`Western blot (separate by SDS-PAGE, then probe with antibody)`, `Southern blot`, `Northern blot`, `PCR`],
+            options: [`Western blot, probed with a specific antibody`, `Southern blot, probed with a labeled DNA strand`, `Northern blot, probed with a labeled nucleic acid`, `PCR, amplified with gene-specific primers`],
             correctAnswer: 0,
             explanation: `Western blot detects PROTEINS: proteins are separated by SDS-PAGE, transferred to a membrane, and probed with a specific antibody. Southern = DNA, Northern = RNA, PCR amplifies DNA — none detect a protein directly (SNoW DRoP).`
           },
           {
             question: `Starting from 1000 copies of a target, how many copies exist after 5 ideal PCR cycles?`,
-            options: [`32,000`, `5000`, `10,000`, `2000`],
+            options: [`32,000`, `10,000`, `16,000`, `64,000`],
             correctAnswer: 0,
-            explanation: `PCR ideally doubles each cycle: copies = $N_0 \\times 2^n = 1000 \\times 2^5 = 1000 \\times 32 = 32{,}000$. The exponential factor $2^n$ is why PCR can amplify a tiny starting sample into a detectable amount in a few dozen cycles.`
+            explanation: `PCR ideally doubles each cycle: copies = $N_0 \\times 2^n = 1000 \\times 2^5 = 1000 \\times 32 = 32{,}000$. Stopping one doubling short gives 16,000 and adding an extra one gives 64,000, while 10,000 multiplies by $2 \\times 5$ instead of $2^5$. The exponential factor $2^n$ is why PCR can amplify a tiny starting sample into a detectable amount in a few dozen cycles.`
           },
           {
             question: `In a sandwich ELISA, the measured color intensity (absorbance) is proportional to:`,
-            options: [`The amount of antigen captured between the two antibodies`, `The number of PCR cycles run`, `The molecular weight of the antigen`, `The gel's pH gradient`],
+            options: [`The amount of antigen captured by the two antibodies`, `The molecular weight of the antigen being detected`, `The number of unbound detection antibodies washed away`, `The amount of capture antibody coated on the well`],
             correctAnswer: 0,
-            explanation: `In a sandwich ELISA, a capture antibody binds antigen, and an enzyme-linked detection antibody generates color via its substrate. More antigen → more bound detection antibody → more enzyme → more color, and absorbance (Beer's law) scales with antigen concentration, allowing quantitation.`
+            explanation: `In a sandwich ELISA, a capture antibody binds antigen, and an enzyme-linked detection antibody generates color via its substrate. More antigen → more bound detection antibody → more enzyme → more color, and absorbance (Beer's law) scales with antigen concentration, allowing quantitation. Unbound detection antibody is washed away and contributes no color, capture antibody is supplied in excess, and antigen size does not set the signal.`
           }
         ]
       }

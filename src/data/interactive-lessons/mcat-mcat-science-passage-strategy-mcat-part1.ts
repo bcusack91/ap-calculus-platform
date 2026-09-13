@@ -66,13 +66,13 @@ This four-step map — question, variables, comparison, bounded conclusion — a
         questions: [
           {
             question: `When reading a science passage with multiple experiments, the MOST important first step is:`,
-            options: [`Identify what each experiment is testing (IV, DV) and how they differ from each other`, `Memorize all the numbers in the data tables`, `Read every word carefully before looking at questions`, `Skip the passage and go straight to questions`],
+            options: [`Identify each experiment's variables and how the experiments differ`, `Memorize the values in each data table before reading the questions`, `Skip to the questions and search the passage only as each one requires`, `Read the conclusion paragraph first and assume the data agree with it`],
             correctAnswer: 0,
-            explanation: `Understanding the experimental design is the foundation. Once you know what's being tested (independent variable) and measured (dependent variable), you can answer most questions. Data tables can be referenced as needed — no need to memorize.`
+            explanation: `Understanding the experimental design is the foundation. Once you know what's being tested (independent variable) and measured (dependent variable), you can answer most questions. Data tables can be referenced as needed — no need to memorize them. Jumping straight to the questions leaves you hunting for structure on every item, and a stated conclusion is exactly what the data may fail to support.`
           },
           {
             question: `In the HSP70 worked example, what is the dependent variable?`,
-            options: [`The percentage of cells forming colonies (survival)`, `The presence or absence of HSP70`, `The incubation temperature of 42 °C`, `The exposure time of 30 minutes`],
+            options: [`The percentage of cells that formed colonies`, `The presence or absence of functional HSP70`, `The incubation temperature, held at 42 °C`, `The heat exposure time, held at 30 minutes`],
             correctAnswer: 0,
             explanation: `The dependent variable is what is measured in response to the manipulation — here, % survival. HSP70 status is the independent variable; temperature and time are held constant.`
           },
@@ -93,15 +93,15 @@ This four-step map — question, variables, comparison, bounded conclusion — a
         questions: [
           {
             question: `You encounter a dense paragraph describing a signaling cascade you've never seen. The smartest move is to:`,
-            options: [`Note its role and location, then move on — you can return if a question requires the detail`, `Re-read it five times until you fully memorize every protein`, `Skip the entire passage and guess on all its questions`, `Spend four minutes diagramming the full cascade before any question`],
+            options: [`Note its gist and location, and return only if a question needs it`, `Re-read it until you can reproduce every protein in the cascade`, `Skip this passage for now and guess on all of its questions`, `Spend four minutes diagramming the full cascade before any question`],
             correctAnswer: 0,
-            explanation: `MCAT passages deliberately include unfamiliar mechanisms. Capture the gist and the location, then let the questions tell you which details actually matter. Memorizing everything wastes time you need for the questions.`
+            explanation: `MCAT passages deliberately include unfamiliar mechanisms. Capture the gist and the location, then move on and let the questions tell you which details actually matter. Memorizing or diagramming everything wastes time you need for the questions, and abandoning the passage throws away points you could earn from the parts you do understand.`
           },
           {
             question: `A passage states a hypothesis and then describes two experiments. Recognizing the passage TYPE matters because:`,
-            options: [`A research-study passage means you should focus on how the experiments differ and what each one isolates`, `It tells you the exact answer to every question`, `Information-based passages never have questions`, `The passage type changes the scoring of the section`],
+            options: [`It tells you what to track, such as what each experiment isolates`, `It tells you which paragraphs you can skip without losing points`, `It signals that the questions will test only content recall`, `It determines how much each of its questions is worth`],
             correctAnswer: 0,
-            explanation: `Identifying it as a research-study (multi-experiment) passage tells you the key task: figure out what each experiment isolates and how they complement each other. That framing drives most of the reasoning questions.`
+            explanation: `Identifying it as a research-study (multi-experiment) passage tells you the key task: focus on how the experiments differ, what each one isolates, and how they complement each other. That framing drives most of the reasoning questions. Passage type does not change scoring, does not make any paragraph safe to skip, and does not limit the questions to recall.`
           },
           {
             question: `Roughly how long should you spend READING a typical six-question science passage before answering?`,

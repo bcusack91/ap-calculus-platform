@@ -62,21 +62,21 @@ Predicting first turns the answer choices into a confirmation step and makes tra
         questions: [
           {
             question: `An answer choice states "The mutation completely eliminates all enzyme function." This is likely wrong because:`,
-            options: [`Extreme language ("completely," "all") is usually wrong on the MCAT — most biological effects are partial`, `It contains scientific terminology`, `It is too short to be a real answer`, `Mutations can never affect enzyme function`],
+            options: [`Absolute words like "completely" and "all" are usually wrong`, `It uses technical terms, which correct answers tend to avoid`, `It restates the passage, and restated claims are usually traps`, `Mutations can never alter the function of an enzyme`],
             correctAnswer: 0,
-            explanation: `The MCAT loves nuance. Words like "completely," "always," "never," "all" are red flags. In biology, most mutations affect function partially (reduced activity) rather than eliminating it entirely. Moderate, qualified language is usually correct.`
+            explanation: `The MCAT loves nuance. Words like "completely," "always," "never," "all" are red flags. In biology, most mutations affect function partially (reduced activity) rather than eliminating it entirely. Moderate, qualified language is usually correct. Technical vocabulary and restating the passage are not warning signs, and mutations certainly can alter enzyme function.`
           },
           {
             question: `In the worked example, why does reduced substrate affinity increase $K_m$?`,
-            options: [`$K_m$ is inversely related to affinity — lower affinity means more substrate is needed to reach half-maximal velocity`, `$K_m$ measures the maximum reaction rate directly`, `Lower affinity always denatures the enzyme`, `$K_m$ and affinity are unrelated quantities`],
+            options: [`Lower affinity means more substrate is needed to reach half $V_{max}$`, `Lower affinity means less substrate is needed to reach half $V_{max}$`, `$K_m$ measures the maximum rate, which falls as affinity drops`, `$K_m$ and affinity are unrelated, so the rise reflects lost enzyme`],
             correctAnswer: 0,
-            explanation: `$K_m$ is the substrate concentration at half $V_{max}$. Weaker binding means the half-max point is reached only at higher substrate concentrations, so $K_m$ rises. Affinity and $K_m$ move in opposite directions.`
+            explanation: `$K_m$ is the substrate concentration at half $V_{max}$. Weaker binding means the half-max point is reached only at higher substrate concentrations, so $K_m$ rises. Affinity and $K_m$ move in opposite directions ($K_m$ is inversely related to affinity). $K_m$ is not a maximum rate — that is $V_{max}$ — and losing active enzyme lowers $V_{max}$ rather than raising $K_m$.`
           },
           {
             question: `A question asks specifically about $K_m$, but one tempting choice correctly states that $V_{max}$ is unchanged. That choice is a:`,
-            options: [`True-but-irrelevant trap — it may be accurate but does not answer what was asked`, `Correct answer, because any true statement scores`, `Extreme-language trap`, `Opposite-of-correct trap`],
+            options: [`true-but-irrelevant trap, since it ignores $K_m$`, `correct answer, since any true statement earns credit`, `strong-language trap, since it overstates the effect`, `reversal trap, since it states the opposite finding`],
             correctAnswer: 0,
-            explanation: `A statement can be factually true yet fail to address the question. The stem asked about $K_m$; an answer about $V_{max}$ is out of scope. Always match the answer to the exact question asked.`
+            explanation: `A statement can be factually true yet fail to address the question. The stem asked about $K_m$; an answer about $V_{max}$ is out of scope even if accurate. It uses no extreme wording and does not reverse any finding. Always match the answer to the exact question asked.`
           }
         ]
       }
@@ -89,7 +89,7 @@ Predicting first turns the answer choices into a confirmation step and makes tra
         questions: [
           {
             question: `A question says "According to paragraph 2, the catalyst used was…" This is a:`,
-            options: [`Recall question — the answer is stated directly in the passage`, `Reasoning question requiring data synthesis`, `Application question requiring outside knowledge`, `Discrete question independent of the passage`],
+            options: [`Recall question, answered directly by the passage text`, `Reasoning question, requiring synthesis of the data`, `Application question, requiring outside content knowledge`, `Discrete question, independent of the passage text`],
             correctAnswer: 0,
             explanation: `"According to the passage/paragraph" signals a recall question. The answer is explicitly stated — go back to the cited location and read it rather than relying on memory.`
           },
@@ -101,9 +101,9 @@ Predicting first turns the answer choices into a confirmation step and makes tra
           },
           {
             question: `Two remaining choices describe the same trend, but one adds "and this proves the mechanism is competitive inhibition." Without supporting data, that addition makes it:`,
-            options: [`Partially correct — the right trend but an unsupported extra claim`, `Fully correct, because more detail is always better`, `An out-of-scope statement unrelated to the trend`, `Identical to the other choice`],
+            options: [`Partially correct, since only the added claim is unsupported`, `Fully correct, because added detail makes a choice more precise`, `Out of scope, since it says nothing about the observed trend`, `Equivalent to the other choice, since both describe the same trend`],
             correctAnswer: 0,
-            explanation: `The trend portion may be right, but tacking on an unsupported mechanistic claim makes the whole choice wrong. The MCAT rewards the answer that stays within what the data actually support.`
+            explanation: `The trend portion may be right, but tacking on an unsupported mechanistic claim makes the whole choice wrong. The MCAT rewards the answer that stays within what the data actually support. The choice does describe the trend, so it is not out of scope, and the added claim makes it different from the other choice rather than equivalent.`
           }
         ]
       }

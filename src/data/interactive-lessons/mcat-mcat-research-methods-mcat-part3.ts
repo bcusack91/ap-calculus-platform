@@ -52,41 +52,41 @@ export const mcatResearchMethodsPart3Data = {
           {
             question: `A pain medication study is double-blind. Which statement is true?`,
             options: [
-              `Neither subjects nor researchers know treatment assignment`,
-              `Subjects see both drug and placebo bottles`,
-              `Researchers cannot observe participants`,
-              `Blinding occurs twice during the study`
+              `Neither subjects nor researchers know the assignments`,
+              `Only subjects are unaware of the assignments`,
+              `Only researchers are unaware of the assignments`,
+              `Assignments are concealed twice, at enrollment and analysis`
             ],
             correctAnswer: 0,
-            explanation: `Double-blind means both participants and researchers don't know who received drug vs placebo, minimizing bias and placebo effect.`
+            explanation: `Double-blind means both participants and researchers don't know who received drug vs placebo, minimizing bias and placebo effect. Blinding only the subjects is single-blind; "double" refers to the two parties kept unaware, not to blinding done twice.`
           },
           {
             question: `A sleep deprivation study tests whether lack of sleep impairs memory. What is the best control group?`,
             options: [
-              `Normal sleep (for comparison)`,
-              `Partial sleep deprivation`,
-              `No sleep at all (extreme condition)`,
-              `A and B`
+              `Participants who sleep a normal amount`,
+              `Participants who are partially sleep-deprived`,
+              `Participants who get no sleep at all`,
+              `Participants given extra sleep beforehand`
             ],
-            correctAnswer: 3,
-            explanation: `Normal sleep isolates the sleep-deprivation effect. Partial sleep deprivation tests dose-response. Combined, they show causation clearly.`
+            correctAnswer: 0,
+            explanation: `A control group should match the experimental group except for the manipulation, so participants with normal sleep provide the baseline that isolates the effect of deprivation. Partial deprivation is a second experimental level (useful for dose-response), not a control; no sleep at all is the deprivation condition itself; and extra sleep is a different manipulation, not a normal baseline.`
           },
           {
             question: `A study measures student exam performance under quiet vs loud conditions (same students, both conditions). What design is this?`,
-            options: [`Between-subjects`, `Within-subjects`, `Factorial`, `Longitudinal`],
+            options: [`Between-subjects`, `Within-subjects`, `Factorial design`, `Longitudinal`],
             correctAnswer: 1,
             explanation: `Within-subjects: same students tested in both conditions. Power is high because individual differences are controlled (students serve as their own control).`
           },
           {
             question: `In a depression medication trial, 40% of placebo group improve. What does this indicate?`,
             options: [
-              `The medication is ineffective`,
-              `Placebo effect and natural recovery account for 40% improvement`,
-              `The study has selection bias`,
-              `Sample size is too small`
+              `The medication is ineffective, since placebo also helps`,
+              `Placebo effects and natural recovery produce improvement`,
+              `Selection bias skewed who landed in the placebo arm`,
+              `The sample is too small to show any drug effect`
             ],
             correctAnswer: 1,
-            explanation: `Placebo response (and natural recovery/maturation) explain baseline improvement. If medication group shows >40% improvement, the drug has added benefit beyond placebo.`
+            explanation: `Placebo response (and natural recovery/maturation) explain baseline improvement. If medication group shows >40% improvement, the drug has added benefit beyond placebo, so the placebo rate alone cannot show the drug is ineffective. Nothing in the result points to biased assignment or an inadequate sample.`
           }
         ]
       }

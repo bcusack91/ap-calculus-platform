@@ -52,20 +52,20 @@ export const mcatResearchMethodsPart2Data = {
           },
           {
             question: `An RCT shows a medication is effective in a university hospital. Can we generalize to rural clinics?`,
-            options: [`Yes; randomization fixes all issues`, `Questionable; external validity threat (setting, patient demographics)`, `No; RCTs cannot generalize`, `Depends on p-value`],
+            options: [`Yes, since randomization makes results apply everywhere`, `Questionable, since rural settings and patients may differ`, `No, since an RCT's results never generalize beyond its site`, `Only if the trial's p-value was well below 0.05`],
             correctAnswer: 1,
-            explanation: `External validity concerns generalization to different settings/populations. Rural patients may differ (age, comorbidities, medication access), limiting generalizability.`
+            explanation: `External validity concerns generalization to different settings/populations. Rural patients may differ (age, comorbidities, medication access), limiting generalizability. Randomization protects internal validity, not generalizability; RCT results can extend to similar populations; and a smaller p-value says nothing about other settings.`
           },
           {
             question: `A weight-loss study: Motivated self-selected volunteers randomized to diet vs control. Why is internal validity stronger than external validity?`,
             options: [
-              `Randomization controls confounds (IV); volunteers ≠ general population (EV)`,
-              `External validity cannot be threatened if randomized`,
-              `Diet effect size is always generalizable`,
-              `Both are equally strong in RCTs`
+              `Randomization balances confounds, but volunteers are atypical`,
+              `External validity cannot be threatened once a study is randomized`,
+              `Self-selection biases the group comparison but not the sample`,
+              `Both are equally strong in any trial that uses randomization`
             ],
             correctAnswer: 0,
-            explanation: `Randomization balances confounds (strong internal validity), but volunteer samples aren't representative (weak external validity). Results may not generalize to non-motivated populations.`
+            explanation: `Randomization balances confounds (strong internal validity), but volunteer samples aren't representative (weak external validity). Results may not generalize to non-motivated populations. Self-selection shaped who entered the sample; random assignment afterward still kept the diet and control groups comparable.`
           },
           {
             question: `A study on antacid effectiveness finds dropout rate 2× higher in placebo group. What threat is this?`,

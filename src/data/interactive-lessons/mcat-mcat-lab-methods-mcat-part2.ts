@@ -44,21 +44,21 @@ $$\\text{At pH} = \\text{pI}, \\quad \\text{net charge} = 0 \\Rightarrow \\text{
         questions: [
           {
             question: `SDS-PAGE separates proteins essentially by size alone because SDS:`,
-            options: [`Coats proteins with a uniform negative charge proportional to length, masking native charge`, `Cleaves proteins into equal fragments`, `Binds only positively charged residues`, `Forms a pH gradient in the gel`],
+            options: [`Coats proteins in negative charge proportional to length`, `Cleaves each protein into fragments of equal length`, `Binds only the positively charged residues of each protein`, `Keeps each protein folded so shape sets its mobility`],
             correctAnswer: 0,
-            explanation: `SDS is an anionic detergent that denatures proteins and binds along the polypeptide in roughly constant ratio, giving every protein a similar charge-to-mass ratio. With charge effectively normalized, the gel sieves by SIZE only — smaller proteins migrate farther.`
+            explanation: `SDS is an anionic detergent that denatures proteins and binds along the polypeptide in roughly constant ratio, giving every protein a similar charge-to-mass ratio and masking its native charge. It does not cut the chain, and because it unfolds proteins, native shape no longer matters. With charge effectively normalized, the gel sieves by SIZE only — smaller proteins migrate farther.`
           },
           {
             question: `A protein with pI = 5.0 is placed in a gel buffered at pH 8.0. In an electric field it will:`,
-            options: [`Carry a net negative charge and migrate toward the anode (+)`, `Carry a net positive charge and migrate toward the cathode (−)`, `Have no net charge and stay put`, `Precipitate immediately`],
+            options: [`Carry a net negative charge and migrate toward the anode (+)`, `Carry a net positive charge and migrate toward the cathode (−)`, `Carry no net charge and remain at the well`, `Carry a net negative charge and move toward the cathode (−)`],
             correctAnswer: 0,
-            explanation: `When buffer pH (8.0) is ABOVE the pI (5.0), the protein is deprotonated overall → net negative → it migrates toward the positive electrode (anode). If pH were below pI it would be net positive and move to the cathode.`
+            explanation: `When buffer pH (8.0) is ABOVE the pI (5.0), the protein is deprotonated overall → net negative → it migrates toward the positive electrode (anode). Negative species always move toward the positive electrode, never the cathode. If pH were below pI it would be net positive and move to the cathode; only at pH = pI would it carry no net charge.`
           },
           {
             question: `In isoelectric focusing, each protein migrates until it reaches the point in the pH gradient where:`,
-            options: [`pH equals its pI and its net charge is zero`, `pH is maximally acidic`, `it is fully denatured`, `it binds SDS`],
+            options: [`pH equals its pI and its net charge is zero`, `pH equals its pKa and it is half protonated`, `the gel pores become too small for it to pass`, `pH is lowest and its charge is most positive`],
             correctAnswer: 0,
-            explanation: `IEF runs proteins through a stable pH gradient. A protein keeps moving as long as it is charged; once it reaches the pH equal to its pI, its net charge is zero, the electric force vanishes, and it focuses into a sharp band. This separates proteins by pI with very high resolution.`
+            explanation: `IEF runs proteins through a stable pH gradient. A protein keeps moving as long as it is charged; once it reaches the pH equal to its pI, its net charge is zero, the electric force vanishes, and it focuses into a sharp band. This separates proteins by pI with very high resolution. A single side chain's pKa is not the stopping point, IEF gels are not size-sieving, and at the most acidic end a protein would be strongly positive and still moving.`
           }
         ]
       }

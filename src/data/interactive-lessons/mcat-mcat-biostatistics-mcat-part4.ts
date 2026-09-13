@@ -67,46 +67,46 @@ RCT Gold Standard:
           {
             question: `A study finds r = −0.85 between exercise frequency and BMI. Which is correct?`,
             options: [
-              `Exercise causes low BMI (proven causation)`,
-              `Strong negative correlation exists, but causation not established`,
-              `85% of BMI is due to exercise`,
-              `Correlation coefficient proves the relationship`
+              `Exercise lowers BMI, as the strong correlation proves`,
+              `A strong negative correlation, but causation is unproven`,
+              `About 85% of the variation in BMI is due to exercise`,
+              `Exercise frequency explains almost none of BMI's variation`
             ],
             correctAnswer: 1,
-            explanation: `High |r| indicates strong correlation, NOT causation. Confounders (e.g., diet, genetics) may explain both exercise habits and BMI independently.`
+            explanation: `High |r| indicates strong correlation, NOT causation, and the negative sign means higher exercise frequency goes with lower BMI. The share of variance explained is $r^2 \\approx 0.72$, which is substantial but not 85%, and it would not show cause. Confounders (e.g., diet, genetics) may explain both exercise habits and BMI independently.`
           },
           {
             question: `Coffee consumption correlates with heart attack risk. Which scenario rules out confounding?`,
             options: [
-              `Matching coffee drinkers to non-drinkers by age/sex`,
-              `Randomizing people to coffee vs decaf in an RCT`,
-              `Controlling statistically for smoking status`,
-              `B and C`
+              `Matching drinkers to non-drinkers by age and sex`,
+              `Randomizing people to coffee or decaf in an RCT`,
+              `Adjusting statistically for smoking and diet`,
+              `Surveying a much larger sample of coffee drinkers`
             ],
-            correctAnswer: 3,
-            explanation: `RCT randomization balances unknown confounders. Statistical control addresses specific confounders. Matching without randomization doesn't control unknown confounders.`
+            correctAnswer: 1,
+            explanation: `RCT randomization balances confounders on average, both measured and unknown, across groups, so it is the only option that addresses confounding in general rather than strictly ruling it out. Statistical adjustment and matching address only the specific confounders chosen (smoking, diet, age, sex), leaving unknown confounders in place, and a larger sample reduces random error but not confounding.`
           },
           {
             question: `A cohort study follows 1000 patients taking medication X for 5 years. Why is this better than an observational cross-sectional study for inferring causation?`,
             options: [
-              `Larger sample size`,
-              `Temporal relationship: exposure precedes outcome (helps establish causation)`,
-              `No confounding possible`,
-              `Lower cost`
+              `Cohort studies always enroll larger samples`,
+              `Exposure is measured before the outcome occurs`,
+              `Following patients over time removes confounding`,
+              `Cohort studies are cheaper and faster to run`
             ],
             correctAnswer: 1,
-            explanation: `Cohort studies are prospective: exposure (medication X) is measured before outcome occurs. This temporal sequence strengthens causal inference compared to cross-sectional data.`
+            explanation: `Cohort studies are prospective: exposure (medication X) is measured before outcome occurs. This temporal relationship (exposure precedes outcome) strengthens causal inference compared to cross-sectional data. Cohorts are not necessarily larger, are usually slower and more costly, and remain vulnerable to confounding.`
           },
           {
             question: `A study reports: "Children watching violent TV shows are more aggressive." Which BEST explains the correlation?`,
             options: [
-              `TV causes aggression`,
-              `Aggression causes TV-watching preferences`,
-              `Parental supervision (confounder): low supervision → more TV + more aggression`,
-              `None; r=0 for this relationship`
+              `Violent TV must cause it, since viewing came first`,
+              `Aggression must drive viewing, since kids pick their shows`,
+              `A confounder, like low supervision, could drive both`,
+              `No link exists, since r = 0 for this relationship`
             ],
             correctAnswer: 2,
-            explanation: `A confounding variable (parental supervision) could drive both outcomes. Only an experiment (e.g., RCT with random TV assignment) could establish causation.`
+            explanation: `A confounding variable (parental supervision) could drive both outcomes: low supervision leads to more TV and more aggression. That explanation fits the reported association without claiming more than it shows. A correlational finding cannot establish either causal direction: the report gives no timing showing viewing came first, and no evidence that children's choices drive viewing, so neither "must" claim is supported. A reported association also means r is not 0. Only an experiment (e.g., RCT with random TV assignment) could establish causation.`
           }
         ]
       }

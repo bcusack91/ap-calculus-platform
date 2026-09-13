@@ -47,21 +47,21 @@ $$\\text{Low speed} \\to \\text{nuclei} \\to \\text{mitochondria} \\to \\text{mi
         questions: [
           {
             question: `In differential centrifugation of a cell homogenate, which organelle pellets FIRST (lowest speed)?`,
-            options: [`Nuclei`, `Ribosomes`, `Microsomes`, `Soluble cytosolic proteins`],
+            options: [`Nuclei`, `Ribosomes`, `Microsomes`, `Mitochondria`],
             correctAnswer: 0,
             explanation: `Sedimentation rate rises with size and density. Nuclei are the largest, densest organelles, so they pellet at the lowest centrifugal force. Successively higher speeds then pellet mitochondria, then microsomes, and finally ribosomes require an ultracentrifuge.`
           },
           {
             question: `A 50S and a 30S ribosomal subunit assemble into a complete prokaryotic ribosome of:`,
-            options: [`70S, because Svedberg units are not additive`, `80S`, `70S, by simple addition`, `40S`],
+            options: [`70S, since Svedberg units are not additive`, `80S, since Svedberg units are additive`, `40S, like the eukaryotic small subunit`, `60S, like the eukaryotic large subunit`],
             correctAnswer: 0,
-            explanation: `Svedberg units measure sedimentation behavior, which depends on shape, density, and mass together — they do NOT add arithmetically. The assembled prokaryotic ribosome is 70S even though 50 + 30 = 80, because the combined particle is more compact than the sum of its parts.`
+            explanation: `Svedberg units measure sedimentation behavior, which depends on shape, density, and mass together — they do NOT add arithmetically. The assembled prokaryotic ribosome is 70S even though 50 + 30 = 80, because the combined particle is more compact than the sum of its parts. The 40S and 60S values belong to eukaryotic subunits, which assemble into an 80S eukaryotic ribosome.`
           },
           {
             question: `In isopycnic (density-gradient) centrifugation, a particle migrates until it reaches the position where:`,
-            options: [`Its buoyant density equals the density of the surrounding medium`, `It hits the bottom of the tube`, `The medium is most viscous`, `Its size matches the gradient`],
+            options: [`Its buoyant density matches the density of the medium`, `It reaches the bottom, where centrifugal force is greatest`, `The medium is most viscous and friction halts its motion`, `Its size matches the local pore size of the gradient`],
             correctAnswer: 0,
-            explanation: `In a density gradient (e.g., CsCl), each particle moves until the medium's density equals the particle's own buoyant density. At that point the net sedimenting force is zero and the particle bands there — regardless of size. This is how DNA of different GC content or densities is resolved.`
+            explanation: `In a density gradient (e.g., CsCl), each particle moves until the density of the surrounding medium equals the particle's own buoyant density. At that point the net sedimenting force is zero and the particle bands there — regardless of size. This is how DNA of different GC content or densities is resolved.`
           }
         ]
       }
