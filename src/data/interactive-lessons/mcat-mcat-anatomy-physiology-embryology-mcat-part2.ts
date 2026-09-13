@@ -72,27 +72,27 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
         questions: [
           {
             question: `A tumor derived from adrenal medulla chromaffin cells traces back to which embryonic origin?`,
-            options: [`Neural crest (ectoderm)`, `Intermediate mesoderm`, `Endoderm of the gut tube`, `The notochord`],
+            options: [`Neural crest (ectoderm)`, `Intermediate mesoderm`, `Gut tube (endoderm)`, `Notochord (mesoderm)`],
             correctAnswer: 0,
             explanation: `The adrenal medulla is populated by migrating neural crest cells, making it ectodermal — it is essentially a modified sympathetic ganglion. Intermediate mesoderm is the origin of the adrenal CORTEX (the trap: one organ, two germ layers). The gland has no endodermal component, and the notochord is a signaling rod that becomes the nucleus pulposus.`
           },
           {
             question: `The lens of the eye develops from:`,
-            options: [`Neuroectoderm of the optic vesicle`, `Mesoderm, like other transparent connective tissues`, `Surface ectoderm induced by the underlying optic vesicle`, `Endoderm of the pharyngeal region`],
+            options: [`Neuroectoderm of the optic vesicle`, `Mesoderm, like other transparent connective tissues`, `Surface ectoderm over the optic vesicle`, `Endoderm of the pharyngeal pouches`],
             correctAnswer: 2,
             explanation: `The optic vesicle (an outgrowth of the brain, neuroectoderm) INDUCES the overlying surface ectoderm to thicken and pinch off as the lens. Students who remember "eye = brain outgrowth" wrongly pick neuroectoderm — that is true of the RETINA, not the lens. The lens is neither mesodermal nor endodermal.`
           },
           {
             question: `Which set contains ONLY endoderm derivatives?`,
-            options: [`Pancreas, dermis, thyroid`, `Epithelial lining of the lungs, liver, pancreas`, `Liver, adrenal cortex, bladder lining`, `Thyroid, epidermis, GI lining`],
+            options: [`Pancreas, dermis, thyroid`, `Lung epithelium, liver, pancreas`, `Liver, adrenal cortex, bladder lining`, `Thyroid, epidermis, GI lining`],
             correctAnswer: 1,
             explanation: `Lung lining, liver, and pancreas all bud from the endodermal gut tube. In the wrong choices: dermis and adrenal cortex are mesoderm, and epidermis is ectoderm. Note the precision the MCAT expects — endoderm gives the epithelial LININGS of gut and airway; the surrounding smooth muscle is mesodermal.`
           },
           {
             question: `In an experiment, the notochord is surgically removed from an early embryo before neurulation. The most likely direct consequence is:`,
-            options: [`The gut tube fails to form because its endodermal precursor is lost`, `Somites differentiate into neurons in place of muscle`, `The heart fails to loop`, `The overlying ectoderm fails to form a neural plate, disrupting CNS development`],
+            options: [`The gut tube fails to form because its endodermal precursor is lost`, `Somites differentiate into neurons in place of muscle`, `The limb buds fail to form their apical ridges`, `The overlying ectoderm fails to become neural plate tissue`],
             correctAnswer: 3,
-            explanation: `The notochord (mesoderm) is the inducer that signals the overlying ectoderm to become neural plate; without the signal, that ectoderm defaults toward epidermis and the neural tube does not form properly. The notochord is not the gut precursor (endoderm is), it does not convert somites into neurons, and cardiac looping is not its direct target.`
+            explanation: `The notochord (mesoderm) is the inducer that signals the overlying ectoderm to become neural plate; without the signal, that ectoderm defaults toward epidermis and the neural tube does not form properly, disrupting CNS development. The notochord is not the gut precursor (endoderm is), it does not convert somites into neurons, and the limb bud's apical ectodermal ridge is induced by the limb's own mesenchyme, not by the notochord.`
           },
           {
             question: `Which derivative pair correctly matches neural crest cells?`,

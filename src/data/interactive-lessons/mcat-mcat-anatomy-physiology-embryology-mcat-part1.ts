@@ -71,33 +71,33 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
         questions: [
           {
             question: `The slow block to polyspermy is best described as:`,
-            options: [`Depolarization of the oocyte plasma membrane immediately upon sperm binding`, `Completion of meiosis II by the oocyte`, `A calcium-triggered cortical reaction that hardens the zona pellucida into a fertilization envelope`, `Digestion of the zona pellucida by acrosomal enzymes`],
+            options: [`Depolarization of the oocyte membrane upon sperm binding`, `Completion of meiosis II by the fertilized oocyte`, `A calcium-triggered cortical reaction hardening the zona pellucida`, `Digestion of the zona pellucida by enzymes from the acrosome`],
             correctAnswer: 2,
             explanation: `The slow block is the cortical reaction: a Ca²⁺ wave causes cortical granules to exocytose enzymes that crosslink and harden the zona into an impenetrable fertilization envelope. Depolarization is the FAST block (transient, seconds). Completing meiosis II is triggered by fertilization but does not exclude sperm, and acrosomal digestion is how sperm get IN, not how they are kept out.`
           },
           {
             question: `Which statement about cleavage-stage divisions is correct?`,
-            options: [`Cell number increases while total embryo size stays roughly constant, so each blastomere's nuclear-to-cytoplasmic ratio rises`, `Each blastomere grows to full size before dividing, so the embryo enlarges steadily`, `Cleavage divisions are meiotic, halving the chromosome number each round`, `Cleavage cannot begin until after implantation`],
+            options: [`Cell number increases while total embryo size stays roughly constant`, `Each blastomere grows to full size before dividing, so the embryo enlarges steadily`, `Cleavage divisions are meiotic, halving the chromosome number each round`, `Cleavage begins only after the blastocyst has implanted`],
             correctAnswer: 0,
             explanation: `Cleavage is rapid mitosis WITHOUT growth: G1/G2 are minimal, cytoplasm is partitioned among more and more cells, so blastomeres shrink and the N:C ratio climbs. The divisions are mitotic (diploid throughout), and cleavage happens in the fallopian tube DURING transit — days before implantation.`
           },
           {
             question: `In the blastocyst, the inner cell mass and trophoblast give rise, respectively, to:`,
-            options: [`The placenta; the embryo proper`, `The zona pellucida; the endometrium`, `The corpus luteum; the chorion`, `The embryo proper; the fetal portion of the placenta and chorion`],
+            options: [`The chorion and fetal placenta; the embryo proper`, `The yolk sac and the amnion; the maternal decidua`, `The maternal decidua; the yolk sac and the amnion`, `The embryo proper; the chorion and fetal placenta`],
             correctAnswer: 3,
-            explanation: `The ICM becomes the embryo itself (plus amnion and yolk sac contributions), while the outer trophoblast becomes the chorion and the fetal side of the placenta and secretes hCG. Choice A reverses the two — the classic error. The zona pellucida is maternal-oocyte-derived coating that is shed, and the corpus luteum is an ovarian structure, not an embryonic one.`
+            explanation: `The ICM becomes the embryo itself (plus amnion and yolk sac contributions), while the outer trophoblast becomes the chorion and the fetal side of the placenta and secretes hCG. Reversing the two lineages is the classic error. The amnion and yolk sac come from the ICM, not the trophoblast, and the decidua is MATERNAL uterine tissue that neither embryonic lineage builds — the trophoblast invades it.`
           },
           {
             question: `Monozygotic twins are found to share a single chorion but have two separate amnions. Compared with monozygotic twins who have two chorions and two amnions, the single-chorion twins' embryo most likely split:`,
-            options: [`Earlier, before the blastocyst formed`, `Later, after the trophoblast/chorion lineage had already been established`, `At fertilization, when two sperm entered one egg`, `They must actually be dizygotic twins`],
+            options: [`Earlier, before the blastocyst had formed`, `Later, after the trophoblast lineage was set`, `At fertilization, when two sperm entered one egg`, `Never, since they must be dizygotic twins`],
             correctAnswer: 1,
             explanation: `The rule is: the later the split, the more extraembryonic structures are shared. Splitting after the blastocyst's trophoblast (chorion precursor) is set means both embryos sit inside ONE chorion; because they split before amnion formation, each still gets its own amnion. An earlier split gives fully separate membranes. Dizygotic twins always have two chorions, and dispermy produces a nonviable triploid, not twins.`
           },
           {
             question: `Home pregnancy tests detect hCG. Which cells produce this hormone, and what is its physiological role in early pregnancy?`,
-            options: [`The corpus luteum produces hCG to stimulate the trophoblast`, `The inner cell mass produces hCG to trigger implantation`, `The trophoblast produces hCG, which maintains the corpus luteum so progesterone secretion continues`, `The maternal hypothalamus produces hCG to suppress ovulation`],
+            options: [`The corpus luteum produces hCG to stimulate the trophoblast`, `The inner cell mass produces hCG to trigger implantation`, `The trophoblast produces hCG to maintain the corpus luteum`, `The maternal hypothalamus produces hCG to suppress ovulation`],
             correctAnswer: 2,
-            explanation: `hCG comes from the TROPHOBLAST (later the placenta) and acts like LH on the corpus luteum, rescuing it from degeneration so it keeps secreting progesterone and the endometrium is not shed. The corpus luteum is the TARGET of hCG, not its source — the reversal in choice A is the standard trap.`
+            explanation: `hCG comes from the TROPHOBLAST (later the placenta) and acts like LH on the corpus luteum, rescuing it from degeneration so it keeps secreting progesterone and the endometrium is not shed. The corpus luteum is the TARGET of hCG, not its source — reversing source and target is the standard trap. Neither the inner cell mass nor the maternal hypothalamus makes hCG.`
           }
         ]
       }

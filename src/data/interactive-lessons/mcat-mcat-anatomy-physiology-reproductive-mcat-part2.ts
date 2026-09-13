@@ -79,31 +79,31 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
             question: `Which structure do sperm pass through immediately after leaving the seminiferous tubules, and what happens there?`,
             options: [`The vas deferens, where they are stored until ejaculation`, `The epididymis, where they mature and gain motility`, `The prostate, where they acquire fructose`, `The ejaculatory duct, where capacitation occurs`],
             correctAnswer: 1,
-            explanation: `SEVEN UP: Seminiferous tubules → Epididymis → Vas deferens → Ejaculatory duct → Urethra → Penis. The epididymis is the maturation/storage site where sperm become motile. Fructose comes from the SEMINAL VESICLES (not the prostate), and capacitation happens later, inside the female tract.`
+            explanation: `SEVEN UP: Seminiferous tubules → Epididymis → Vas deferens → Ejaculatory duct → Urethra → Penis. (Strictly, sperm first cross the short rete testis and efferent ductules, which only conduct them; the epididymis is the first major duct and the first site of maturation.) The epididymis is the maturation/storage site where sperm become motile. Fructose comes from the SEMINAL VESICLES (not the prostate), and capacitation happens later, inside the female tract.`
           },
           {
             question: `In the ovarian two-cell model, estrogen synthesis requires both theca and granulosa cells because:`,
-            options: [`Theca cells make androgens under LH; granulosa cells aromatize them to estrogen under FSH`, `Granulosa cells make androgens under FSH; theca cells aromatize them under LH`, `Theca cells secrete GnRH that activates granulosa aromatase`, `Both cell types independently synthesize estrogen, and their products simply add`],
+            options: [`Theca cells make androgens under LH; granulosa cells aromatize them under FSH`, `Granulosa cells make androgens under FSH; theca cells aromatize them under LH`, `Theca cells make androgens under FSH; granulosa cells aromatize them under LH`, `Both cell types independently synthesize estrogen, and their products simply add`],
             correctAnswer: 0,
-            explanation: `LH drives theca cells to convert cholesterol to androgens; FSH induces aromatase in granulosa cells, which convert those androgens to estrogen. The reversed assignment (option B) is the standard trap. GnRH is hypothalamic, not ovarian, and neither cell type has the full pathway alone — that is exactly why the model exists.`
+            explanation: `LH drives theca cells to convert cholesterol to androgens; FSH induces aromatase in granulosa cells, which convert those androgens to estrogen. Reversing which cell makes androgens is the standard trap. Keeping the cells right but swapping the hormones also fails: theca cells are the LH target, and granulosa aromatase is induced by FSH. Neither cell type has the full pathway alone — that is exactly why the model exists.`
           },
           {
             question: `Fertilization most commonly occurs in the:`,
-            options: [`Uterine endometrium, just before implantation`, `Cervix, where sperm first encounter female-tract mucus`, `Ampulla of the fallopian tube`, `Surface of the ovary at the moment of ovulation`],
+            options: [`Uterine cavity, before implantation`, `Cervix, at the mucus barrier`, `Ampulla of the fallopian tube`, `Surface of the ovary at ovulation`],
             correctAnswer: 2,
             explanation: `The ovulated secondary oocyte is swept into the tube by the fimbriae and is typically fertilized in the ampulla, the wide upper portion. The EMBRYO then travels to the uterus and implants in the endometrium days later — implantation site is not fertilization site. Sperm meet cervical mucus early, but the gametes do not unite there.`
           },
           {
             question: `Inhibin, secreted by Sertoli cells (male) and granulosa cells (female), acts primarily to:`,
-            options: [`Stimulate GnRH release from the hypothalamus`, `Suppress LH secretion while sparing FSH`, `Stimulate aromatase activity in theca cells`, `Selectively suppress FSH secretion from the anterior pituitary`],
+            options: [`Stimulate hypothalamic GnRH release`, `Suppress LH secretion while sparing FSH`, `Stimulate aromatase activity in theca cells`, `Selectively suppress pituitary FSH secretion`],
             correctAnswer: 3,
-            explanation: `Inhibin's defining feature is SELECTIVE negative feedback on FSH, letting the gonad tune gamete-supporting drive separately from steroid drive (which testosterone/estrogen regulate mainly via GnRH and LH). Option B inverts the selectivity, and inhibin inhibits — it never stimulates the axis. Theca cells lack aromatase entirely.`
+            explanation: `Inhibin's defining feature is SELECTIVE negative feedback on FSH, letting the gonad tune gamete-supporting drive separately from steroid drive (which testosterone/estrogen regulate mainly via GnRH and LH). Suppressing LH while sparing FSH inverts the selectivity, and inhibin inhibits — it never stimulates the axis. Theca cells lack aromatase entirely.`
           },
           {
             question: `An embryo carries one X and one Y chromosome, but its Y chromosome bears a deletion of the SRY gene. The gonads will most likely:`,
-            options: [`Develop as testes, because the remaining Y genes suffice`, `Develop along the ovarian pathway, because SRY is required to initiate testis formation`, `Fail to form at all`, `Develop as one testis and one ovary`],
+            options: [`Develop as testes, because the other Y-linked genes are sufficient`, `Take the ovarian pathway, because SRY is required to form testes`, `Fail to form, because no gonad can develop without SRY`, `Develop as one testis and one ovary, as SRY acts on one side`],
             correctAnswer: 1,
-            explanation: `SRY is the master switch that commits the bipotential gonad to become a testis; without it, development follows the ovarian (default) pathway regardless of the rest of the Y chromosome. The gonad still forms — SRY directs its fate, it does not create it — and the switch acts on both gonads the same way.`
+            explanation: `SRY is the master switch that commits the bipotential gonad to become a testis; without it, development follows the ovarian (default) pathway regardless of the rest of the Y chromosome, whose other genes cannot substitute. The gonad still forms — SRY directs its fate, it does not create it — and the switch acts on both gonads the same way rather than on one side. In real XY SRY deletion (Swyer syndrome) development defaults to the female pathway, though the gonads typically end up as nonfunctional streak gonads rather than working ovaries.`
           }
         ]
       }

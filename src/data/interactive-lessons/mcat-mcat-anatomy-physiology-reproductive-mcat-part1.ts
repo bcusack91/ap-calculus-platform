@@ -77,27 +77,27 @@ Spermatogenesis is temperature-sensitive and requires the scrotum's 2-4 degrees 
         questions: [
           {
             question: `At what stage is the oocyte arrested at the moment of ovulation?`,
-            options: [`Prophase I`, `Anaphase I`, `Metaphase II`, `It has completed meiosis and is a mature ovum`],
+            options: [`Prophase I`, `Anaphase I`, `Metaphase II`, `Telophase II`],
             correctAnswer: 2,
-            explanation: `Primary oocytes arrest in prophase I from fetal life; the LH surge drives completion of meiosis I, and the resulting secondary oocyte arrests in METAPHASE II. It stays there until fertilization triggers completion of meiosis II. Prophase I is the pre-ovulation arrest, and calling the ovulated cell a finished ovum is the classic trap.`
+            explanation: `Primary oocytes arrest in prophase I from fetal life; the LH surge drives completion of meiosis I, and the resulting secondary oocyte arrests in METAPHASE II. It stays there until fertilization triggers completion of meiosis II. Prophase I is the pre-ovulation arrest; anaphase I would mean meiosis I is still under way, and telophase II would mean meiosis II has nearly finished, which happens only after fertilization.`
           },
           {
             question: `A cell in the seminiferous tubule is haploid but each of its chromosomes consists of two sister chromatids. This cell is a:`,
-            options: [`Secondary spermatocyte`, `Spermatogonium`, `Primary spermatocyte`, `Spermatid`],
+            options: [`Secondary spermatocyte`, `Type B spermatogonium`, `Primary spermatocyte`, `Round spermatid`],
             correctAnswer: 0,
-            explanation: `Meiosis I separates homologs, halving ploidy while leaving sister chromatids attached — that describes a secondary spermatocyte (n, 2c). A spermatogonium is 2n2c, a primary spermatocyte is 2n4c, and a spermatid is n1c after chromatids separate in meiosis II.`
+            explanation: `Meiosis I separates homologs, halving ploidy while leaving sister chromatids attached — that describes a secondary spermatocyte (n, 2c). A type B spermatogonium (the mitotic cell committed to meiosis) is still 2n2c, a primary spermatocyte is 2n4c, and a round spermatid is n1c after chromatids separate in meiosis II.`
           },
           {
             question: `Which cell type directly synthesizes testosterone in response to LH?`,
-            options: [`Sertoli cells within the seminiferous tubules`, `Spermatogonia`, `Anterior pituitary gonadotrophs`, `Leydig cells in the testicular interstitium`],
+            options: [`Sertoli cells within the seminiferous tubules`, `Spermatogonia along the basement membrane`, `Gonadotrophs of the anterior pituitary`, `Leydig cells in the testicular interstitium`],
             correctAnswer: 3,
             explanation: `Leydig (interstitial) cells carry LH receptors and make testosterone. Sertoli cells are the FSH targets that nurture sperm and secrete inhibin — swapping the two is the most common error. The pituitary makes LH itself, and spermatogonia are the stem cells being supported, not endocrine cells.`
           },
           {
             question: `One primary oocyte that is ovulated and fertilized ultimately gives rise to how many functional gametes, and why?`,
-            options: [`Four, because meiosis produces four haploid products`, `One, because unequal cytokinesis shunts nearly all cytoplasm into a single cell`, `Two, one from each meiotic division`, `One, because the other three products are diploid`],
+            options: [`Four, because meiosis yields four haploid products`, `One, because both divisions have unequal cytokinesis`, `Two, because each meiotic division yields one egg`, `One, because the other three products are diploid`],
             correctAnswer: 1,
-            explanation: `Both meiotic divisions in oogenesis are grossly asymmetric: the polar bodies receive chromosomes but almost no cytoplasm and degenerate, concentrating nutrients in one ovum. The "four products" logic applies to spermatogenesis. The polar bodies are haploid, not diploid — they are discarded for cytoplasm, not ploidy.`
+            explanation: `Both meiotic divisions in oogenesis are grossly asymmetric: the polar bodies receive chromosomes but almost no cytoplasm and degenerate, concentrating nutrients in one ovum. The "four products" logic applies to spermatogenesis, and neither division yields a separate egg — each sheds a polar body. The polar bodies are haploid, not diploid — they are discarded for cytoplasm, not ploidy.`
           },
           {
             question: `The midpiece of a mature spermatozoon is densely packed with mitochondria. The most direct functional reason is:`,

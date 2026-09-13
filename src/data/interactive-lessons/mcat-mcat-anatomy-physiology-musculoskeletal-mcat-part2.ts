@@ -91,25 +91,25 @@ Muscle action potential → travels down **T-tubules** deep into the fiber → v
             question: `In the cross-bridge cycle, the immediate role of ATP BINDING (before hydrolysis) is to:`,
             options: [`Trigger the power stroke`, `Expose the myosin-binding sites on actin`, `Cause myosin to detach from actin`, `Pump calcium back into the sarcoplasmic reticulum`],
             correctAnswer: 2,
-            explanation: `ATP binding releases the myosin head from actin; the subsequent HYDROLYSIS re-cocks the head, and Pi release later triggers the power stroke (choice A confuses these steps). Exposing actin's binding sites is calcium-troponin-tropomyosin business, and calcium pumping is SERCA's separate use of ATP. Binding-releases is why rigor mortis locks cross-bridges when ATP runs out.`
+            explanation: `ATP binding releases the myosin head from actin; the subsequent HYDROLYSIS re-cocks the head, and Pi release later triggers the power stroke (crediting ATP binding with the power stroke confuses these steps). Exposing actin's binding sites is calcium-troponin-tropomyosin business, and calcium pumping is SERCA's separate use of ATP. Binding-releases is why rigor mortis locks cross-bridges when ATP runs out.`
           },
           {
             question: `Calcium initiates contraction in skeletal muscle by binding to:`,
-            options: [`Tropomyosin, causing it to depolymerize`, `Troponin, shifting tropomyosin off the myosin-binding sites on actin`, `Myosin heads, cocking them into the high-energy state`, `The sarcolemma, opening ligand-gated sodium channels`],
+            options: [`Tropomyosin, rolling it directly off actin's groove`, `Troponin, shifting tropomyosin off the binding sites`, `Myosin heads, cocking them into a high-energy state`, `The sarcolemma, opening ligand-gated Na+ channels`],
             correctAnswer: 1,
-            explanation: `Ca binds troponin (the C subunit); the troponin complex then drags tropomyosin aside, exposing actin's myosin-binding sites. Calcium never binds tropomyosin directly (choice A), cocking the myosin head is done by ATP hydrolysis (choice C), and ligand-gated channels at the end plate are opened by ACh, not calcium (choice D).`
+            explanation: `Ca binds troponin (the C subunit); the troponin complex then drags tropomyosin aside, exposing actin's myosin-binding sites. Calcium never binds tropomyosin directly, cocking the myosin head is done by ATP hydrolysis rather than calcium, and ligand-gated channels at the end plate are opened by ACh, not calcium.`
           },
           {
             question: `Which sequence correctly orders excitation-contraction coupling after the muscle action potential fires?`,
-            options: [`SR calcium release → T-tubule depolarization → DHP receptor activation → troponin binding`, `DHP receptor activation → T-tubule depolarization → troponin binding → SR calcium release`, `Troponin binding → SR calcium release → T-tubule depolarization → cross-bridge cycling`, `T-tubule depolarization → DHP receptor conformational change → ryanodine receptor opening → SR calcium release → Ca binds troponin`],
+            options: [`SR calcium release → T-tubule depolarization → DHP receptor activation → troponin binding`, `DHP receptor activation → T-tubule depolarization → troponin binding → SR calcium release`, `Troponin binding → SR calcium release → T-tubule depolarization → cross-bridge cycling`, `T-tubule depolarization → DHP receptor activation → SR calcium release → troponin binding`],
             correctAnswer: 3,
-            explanation: `The action potential dives down the T-tubules; voltage-sensing DHP receptors there change shape and mechanically open SR ryanodine receptors, dumping stored calcium, which then binds troponin to permit cross-bridge cycling. Every other option places calcium release or troponin binding before the membrane events that cause them.`
+            explanation: `The action potential dives down the T-tubules; voltage-sensing DHP receptors there change shape and mechanically open SR ryanodine receptors, dumping stored calcium, which then binds troponin to permit cross-bridge cycling. Every other sequence puts an effect before its cause: calcium release before the T-tubule signal that triggers it, DHP activation before the depolarization that drives it, or troponin binding before calcium has been released.`
           },
           {
             question: `A toxin selectively inhibits the SERCA pump in a stimulated muscle fiber. The most direct consequence is:`,
             options: [`Failure of acetylcholine release at the neuromuscular junction`, `Inability to generate an end-plate potential`, `Prolonged contraction due to sustained high cytosolic calcium`, `Immediate relaxation because calcium cannot be released`],
             correctAnswer: 2,
-            explanation: `SERCA actively returns calcium to the SR; block it and cytosolic Ca stays elevated, so tropomyosin stays displaced and cross-bridge cycling continues — impaired RELAXATION, not impaired contraction. Choice D reverses the pump's direction (release goes through ryanodine receptors, not SERCA). The NMJ and end-plate potential are upstream and untouched.`
+            explanation: `SERCA actively returns calcium to the SR; block it and cytosolic Ca stays elevated, so tropomyosin stays displaced and cross-bridge cycling continues — impaired RELAXATION, not impaired contraction. Predicting immediate relaxation reverses the pump's direction (release goes through ryanodine receptors, not SERCA). The NMJ and end-plate potential are upstream and untouched.`
           }
         ]
       }

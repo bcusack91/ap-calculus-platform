@@ -70,25 +70,25 @@ Lower than the first-trimester peak: once the placenta assumes steroid synthesis
         questions: [
           {
             question: `The mid-cycle LH surge is triggered by:`,
-            options: [`Falling estrogen levels removing negative feedback`, `Progesterone secretion from the newly formed corpus luteum`, `A drop in FSH below threshold`, `Sustained high estrogen switching from negative to positive feedback on the hypothalamus and pituitary`],
+            options: [`Falling estrogen levels removing negative feedback`, `Progesterone secretion from the newly formed corpus luteum`, `A fall in FSH once a dominant follicle is selected`, `Sustained high estrogen switching to positive feedback`],
             correctAnswer: 3,
-            explanation: `Moderate estrogen suppresses LH, but the sustained high estrogen produced by a mature dominant follicle FLIPS the feedback to positive, unleashing the LH surge that causes ovulation. Falling estrogen (option A) describes menstruation's trigger logic, not the surge; the corpus luteum and its progesterone exist only AFTER ovulation.`
+            explanation: `Moderate estrogen suppresses LH, but the sustained high estrogen produced by a mature dominant follicle FLIPS the feedback to positive, unleashing the LH surge that causes ovulation. Falling estrogen describes menstruation's trigger logic, not the surge; the corpus luteum and its progesterone exist only AFTER ovulation. FSH does dip as a dominant follicle is selected, but that fall does not trigger the surge — FSH actually rises alongside LH at mid-cycle.`
           },
           {
             question: `The cortical reaction that follows sperm-egg fusion functions primarily to:`,
-            options: [`Complete the oocyte's first meiotic division`, `Harden the zona pellucida, blocking additional sperm from entering`, `Trigger the acrosome reaction in the fertilizing sperm`, `Initiate implantation of the zygote`],
+            options: [`Complete the oocyte's first meiotic division`, `Harden the zona pellucida against additional sperm`, `Trigger the acrosome reaction in the fertilizing sperm`, `Initiate implantation of the zygote in the uterine wall`],
             correctAnswer: 1,
             explanation: `Calcium release drives cortical granule exocytosis, which modifies and hardens the zona pellucida — the slow block to polyspermy. Meiosis I finished before ovulation (fertilization completes meiosis II, not I). The acrosome reaction PRECEDES fusion, and implantation is days away and involves the blastocyst, not the zygote.`
           },
           {
             question: `In a non-pregnant cycle, menstruation is most directly caused by:`,
-            options: [`Degeneration of the corpus luteum and the resulting fall in progesterone`, `The LH surge`, `Rising FSH at the start of the cycle`, `Peak estrogen levels damaging the endometrium`],
+            options: [`Corpus luteum regression and falling progesterone`, `The mid-cycle LH surge and ovulation`, `Rising FSH recruiting the next follicle cohort`, `Peak estrogen levels eroding the functional endometrium`],
             correctAnswer: 0,
             explanation: `The secretory endometrium is maintained by luteal progesterone. When the corpus luteum degenerates (~14 days after ovulation, absent hCG), progesterone collapses and the functional layer is shed. The LH surge causes ovulation, not menses; rising FSH recruits the next cohort; estrogen builds the endometrium rather than destroying it.`
           },
           {
             question: `hCG from the trophoblast prevents menstruation in early pregnancy by:`,
-            options: [`Directly stimulating the endometrium to proliferate`, `Suppressing FSH so no new follicles are recruited`, `Acting on LH receptors of the corpus luteum to sustain progesterone secretion`, `Stimulating the placenta to secrete progesterone during week 2`],
+            options: [`Directly stimulating the endometrium to proliferate and thicken`, `Suppressing FSH so that no new follicles are recruited`, `Acting on the corpus luteum to sustain its progesterone output`, `Stimulating the placenta to secrete progesterone during week 2`],
             correctAnswer: 2,
             explanation: `hCG is an LH analog: it rescues the corpus luteum, whose PROGESTERONE maintains the endometrium — hCG's effect on the lining is indirect. The placenta cannot supply steroids until it matures near the end of the first trimester, which is exactly why the rescue is needed. Gonadotropin suppression happens but is not what preserves the lining.`
           },

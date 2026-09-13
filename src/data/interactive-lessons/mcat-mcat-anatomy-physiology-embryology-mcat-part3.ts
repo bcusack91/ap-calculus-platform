@@ -95,7 +95,7 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
           },
           {
             question: `At birth, the foramen ovale closes primarily because:`,
-            options: [`Rising oxygen tension directly constricts its muscular wall`, `Prostaglandin levels rise sharply after delivery`, `Clamping the umbilical cord stops all blood flow to the heart`, `Lung inflation drops pulmonary resistance, so left atrial pressure rises above right atrial pressure and pushes the flap shut`],
+            options: [`Rising oxygen tension directly constricts its muscular wall`, `Prostaglandin levels rise sharply once the cord is clamped`, `Clamping the umbilical cord stops all blood flow to the heart`, `Left atrial pressure rises above right, pressing the flap shut`],
             correctAnswer: 3,
             explanation: `The foramen ovale is a one-way flap closed mechanically by a PRESSURE REVERSAL: the first breath opens the pulmonary circuit, venous return to the left atrium surges, and higher left-sided pressure presses the flap against the septum. Oxygen-and-prostaglandin chemistry is how the DUCTUS ARTERIOSUS closes (prostaglandins FALL, not rise). Cord clamping stops placental flow but does not itself shut the flap.`
           },

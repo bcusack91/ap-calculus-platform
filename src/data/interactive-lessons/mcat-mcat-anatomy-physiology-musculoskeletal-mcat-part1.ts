@@ -80,31 +80,31 @@ Serum calcium is tightly defended (nerve and muscle excitability depend on it):
             question: `Within an osteon, mature osteocytes reside in spaces called ______ and exchange nutrients through channels called ______.`,
             options: [`Canaliculi; lacunae`, `Lacunae; canaliculi`, `Trabeculae; lamellae`, `Haversian canals; trabeculae`],
             correctAnswer: 1,
-            explanation: `Osteocytes sit in lacunae (small cavities between lamellae) and communicate with the central Haversian canal and each other through canaliculi. Choice A reverses the two terms — a classic trap. Trabeculae are the struts of SPONGY bone (no osteons), and lamellae are the concentric matrix rings themselves, not cell housing.`
+            explanation: `Osteocytes sit in lacunae (small cavities between lamellae) and communicate with the central Haversian canal and each other through canaliculi. Swapping the two terms is a classic trap. Trabeculae are the struts of SPONGY bone (no osteons), and lamellae are the concentric matrix rings themselves, not cell housing.`
           },
           {
             question: `The femur increases in length during childhood primarily through:`,
-            options: [`Intramembranous ossification at the periosteum`, `Osteoclast resorption at the diaphysis`, `Cartilage proliferation and replacement at the epiphyseal plate (endochondral ossification)`, `Direct mitosis of osteocytes within lacunae`],
+            options: [`Intramembranous ossification at the periosteum`, `Osteoclast resorption and remodeling of the diaphysis`, `Endochondral ossification at the epiphyseal plate`, `Direct mitosis of osteocytes within lacunae`],
             correctAnswer: 2,
             explanation: `Long bones grow in length at the epiphyseal plate: chondrocytes divide on the epiphyseal side while cartilage is ossified on the diaphyseal side — endochondral ossification continuing after birth. Intramembranous ossification builds FLAT bones (and widens bones appositionally), resorption removes rather than adds bone, and osteocytes are post-mitotic cells locked in matrix.`
           },
           {
             question: `Why do injuries to the meniscus of the knee heal much more slowly than fractures of bone?`,
-            options: [`Cartilage is avascular, so nutrients and repair cells arrive only by slow diffusion`, `Chondrocytes are more metabolically active than osteoblasts`, `Bone lacks a blood supply, forcing cartilage to donate nutrients`, `Fibrocartilage contains no cells capable of synthesis`],
+            options: [`Cartilage is avascular, so repair relies on slow diffusion`, `Chondrocytes are more metabolically active than osteoblasts`, `Bone lacks a blood supply, forcing cartilage to donate nutrients`, `Fibrocartilage contains no cells capable of synthesis`],
             correctAnswer: 0,
-            explanation: `Cartilage (including the fibrocartilage menisci) has no blood vessels; everything reaches chondrocytes by diffusion through the matrix, so repair is slow. Bone, by contrast, is richly vascularized (Haversian canals) and heals comparatively fast. Choice C inverts reality, choice B would speed rather than slow healing, and fibrocartilage does contain chondrocytes.`
+            explanation: `Cartilage (including the fibrocartilage menisci) has no blood vessels; everything reaches chondrocytes by diffusion through the matrix, so repair is slow. Bone, by contrast, is richly vascularized (Haversian canals) and heals comparatively fast. Saying bone lacks a blood supply inverts reality, chondrocytes more active than osteoblasts would speed rather than slow healing, and fibrocartilage does contain chondrocytes.`
           },
           {
             question: `Parathyroid hormone raises serum calcium through all of the following actions EXCEPT:`,
-            options: [`Increasing osteoclast-mediated bone resorption`, `Increasing calcium reabsorption in the kidney`, `Promoting activation of vitamin D, enhancing intestinal calcium absorption`, `Directly stimulating osteoblasts to deposit calcium into bone matrix`],
+            options: [`Increasing osteoclast-mediated resorption of bone matrix`, `Increasing calcium reabsorption in the distal renal tubule`, `Promoting activation of vitamin D, enhancing intestinal calcium absorption`, `Directly stimulating osteoblasts to deposit calcium into bone matrix`],
             correctAnswer: 3,
             explanation: `Depositing calcium INTO bone would LOWER serum calcium — the opposite of PTH's job. PTH raises serum Ca via bone resorption (osteoclast activation), renal Ca reabsorption, and renal activation of vitamin D for gut absorption. (Nuance: PTH receptors sit on osteoblasts, which then signal osteoclasts — but the net PTH effect on sustained elevation is resorption, not deposition.)`
           },
           {
             question: `A postmenopausal woman's declining estrogen shifts bone remodeling balance. The expected skeletal consequence is:`,
-            options: [`Excess osteoblast activity causing abnormally dense bone`, `Closure of the epiphyseal plates and loss of height by shortening bones`, `Net resorption exceeding formation, thinning trabeculae — osteoporosis`, `Conversion of compact bone into cartilage`],
+            options: [`Excess osteoblast activity causing abnormally dense bone`, `Closure of the epiphyseal plates and loss of height by shortening bones`, `Net resorption exceeding formation, thinning the trabeculae`, `Conversion of compact bone back into hyaline cartilage`],
             correctAnswer: 2,
-            explanation: `Estrogen restrains osteoclasts; its decline lets resorption outpace formation, so trabecular struts thin and perforate — osteoporosis and fragility fractures. Abnormal densification (choice A) is the opposite process. Epiphyseal plates closed decades earlier at skeletal maturity (height loss in osteoporosis comes from vertebral compression, not bone shortening), and bone does not transform back into cartilage.`
+            explanation: `Estrogen restrains osteoclasts; its decline lets resorption outpace formation, so trabecular struts thin and perforate — osteoporosis and fragility fractures. Abnormal densification from excess osteoblast activity is the opposite process. Epiphyseal plates closed decades earlier at skeletal maturity (height loss in osteoporosis comes from vertebral compression, not bone shortening), and bone does not transform back into cartilage.`
           }
         ]
       }

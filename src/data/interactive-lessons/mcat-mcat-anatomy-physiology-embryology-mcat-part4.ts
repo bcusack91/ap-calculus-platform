@@ -94,25 +94,25 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
           },
           {
             question: `A cell that has committed to becoming muscle but has not yet produced muscle-specific proteins or changed shape is best described as:`,
-            options: [`Differentiated but not determined`, `Neither determined nor specified`, `Determined but not yet differentiated`, `Totipotent`],
+            options: [`Differentiated but not determined`, `Neither determined nor specified`, `Determined but not differentiated`, `Totipotent, like an early blastomere`],
             correctAnswer: 2,
-            explanation: `Determination is the invisible COMMITMENT step; differentiation is the later, observable construction of the specialized phenotype (contractile proteins, myotube morphology). Choice A reverses the order — differentiation cannot precede determination. A committed cell is far past specification and is certainly not totipotent.`
+            explanation: `Determination is the invisible COMMITMENT step; differentiation is the later, observable construction of the specialized phenotype (contractile proteins, myotube morphology). Differentiated-but-not-determined reverses the order — differentiation cannot precede determination. A committed cell is far past specification and is certainly not totipotent.`
           },
           {
             question: `In the Spemann-Mangold experiment, the observation that PROVED the dorsal lip acts by induction (rather than merely developing into its own fated structures) was that:`,
-            options: [`The secondary body axis was composed largely of HOST cells recruited at the graft site`, `The graft survived transplantation to the ventral side`, `The secondary axis was made entirely of donor cells`, `The host embryo died when the dorsal lip was removed`],
+            options: [`Recruited host cells made up most of the secondary axis`, `Grafted donor cells survived on the host's ventral side`, `Grafted donor cells made up the entire secondary axis`, `The host embryo died when the dorsal lip was removed`],
             correctAnswer: 0,
-            explanation: `Induction means directing NEIGHBORING cells' fates. Because the second axis was built mostly from host cells that would otherwise have made belly tissue, the graft must have signaled and re-programmed them — the definition of an organizer. An axis made entirely of donor cells (choice C) would show only self-differentiation, the opposite conclusion. Survival alone proves nothing, and the experiment's key arm was a transplant, not an ablation.`
+            explanation: `Induction means directing NEIGHBORING cells' fates. Because the second axis was built mostly from host cells that would otherwise have made belly tissue, the graft must have signaled and re-programmed them — the definition of an organizer. An axis made entirely of donor cells would show only self-differentiation, the opposite conclusion. Survival alone proves nothing, and the experiment's key arm was a transplant, not an ablation.`
           },
           {
             question: `A single secreted molecule patterns a tissue into three distinct cell types arranged in bands at increasing distance from the source. The most direct explanation is that the molecule acts as:`,
-            options: [`A binary on/off switch triggering one alternative fate`, `An intracellular transcription factor inherited by some daughter cells`, `A hormone acting equally on all cells through the bloodstream`, `A morphogen — cells adopt different fates at different threshold concentrations along its gradient`],
+            options: [`A binary on/off switch triggering one alternative fate`, `An intracellular transcription factor inherited by some daughter cells`, `A hormone acting equally on all cells through the bloodstream`, `A morphogen whose gradient sets fates by concentration thresholds`],
             correctAnswer: 3,
             explanation: `Multiple fates ordered by DISTANCE from a source is the signature of a morphogen gradient (the French-flag model; Shh and BMP are the name-level examples): high, medium, and low concentrations cross different thresholds. A binary switch yields only two states, a purely intracellular factor cannot pattern neighbors by distance, and a bloodborne hormone reaching all cells equally could not create position-dependent bands.`
           },
           {
             question: `A researcher wants to know what a particular blastomere ACTUALLY becomes during normal, undisturbed development. The appropriate technique — and a key limit on its conclusions — is:`,
-            options: [`Ablation; it shows what the cell would have become`, `Knockout of a candidate gene; it reveals the cell's descendants`, `Lineage tracing (label the cell, map labeled descendants); it reveals fate but NOT the cell's full potency`, `Transplantation to a new site; it reveals normal fate directly`],
+            options: [`Ablation; it shows necessity but not the cell's descendants`, `Gene knockout; it shows gene function but not cell fate`, `Lineage tracing; it follows fate but not the cell's potency`, `Transplantation to a new site; it shows potency but not lineage`],
             correctAnswer: 2,
             explanation: `Lineage tracing follows a labeled cell through NORMAL development, giving its actual fate — but says nothing about what the cell COULD become if challenged (potency), which requires transplantation to a new environment. Ablation tests necessity (and infers fate only indirectly from what is missing), knockouts test gene function, and transplantation deliberately perturbs the environment, so it probes potency and commitment rather than undisturbed fate.`
           }
