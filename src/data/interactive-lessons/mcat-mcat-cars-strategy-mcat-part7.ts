@@ -68,37 +68,37 @@ Doing passages without rigorous review is how scores plateau. The growth happens
         questions: [
           {
             question: `The single most effective way to improve CARS performance over 3 months is:`,
-            options: [`Daily practice with careful review of every wrong answer`, `Memorizing a list of CARS strategies`, `Reading only science passages`, `Spending all study time on CARS and ignoring other sections`],
+            options: [`Daily practice with careful review of every wrong answer`, `Memorizing a list of CARS strategies and tricks`, `Reading science journal articles in place of CARS passages`, `Spending all study time on CARS and ignoring other sections`],
             correctAnswer: 0,
             explanation: `CARS improvement comes from consistent, deliberate practice with thorough review. Understanding WHY you got questions wrong is more valuable than doing more passages. Quality > quantity.`
           },
           {
             question: `When reviewing a missed CARS question, the MOST important step is to:`,
-            options: [`Identify why the wrong answer tempted you and cite the exact text that supports the correct answer`, `Note the correct letter and move on`, `Count how many you missed in total`, `Assume the question was simply unfair`],
+            options: [`Diagnose why the trap tempted you and cite text for the right answer`, `Note the correct letter so you remember it, then move on`, `Count your total misses and compare that number with earlier sections`, `Judge whether the question was unfair and discard it if it was`],
             correctAnswer: 0,
             explanation: `Deep review means diagnosing the trap (e.g., too extreme, out of scope) and grounding the right answer in specific text. This turns each miss into a transferable lesson. Merely recording the correct letter teaches nothing for future passages.`
           },
           {
             question: `Keeping an "error log" that tallies your wrong answers by type is valuable because it:`,
-            options: [`Reveals recurring patterns, so you can target your highest-frequency mistake`, `Guarantees you never miss that question again`, `Replaces the need to read passages`, `Tracks how fast you read`],
+            options: [`Reveals patterns, so you can target your most frequent mistake`, `Guarantees you will never again miss a question of that same kind`, `Replaces the need to keep practicing full, timed passages`, `Tracks how fast you read each passage from week to week`],
             correctAnswer: 0,
             explanation: `Logging misses by category (extreme, opposite, out of scope, etc.) exposes patterns invisible in a single passage. If most errors share a type, fixing that habit yields the largest score gain. It is a diagnostic tool, not a guarantee.`
           },
           {
             question: `Why is reading dense non-fiction (philosophy, history, criticism) months before the test recommended?`,
-            options: [`It builds familiarity with complex prose, so MCAT-style passages feel less foreign`, `The MCAT reuses passages from those books`, `It lets you memorize facts that appear on CARS`, `It replaces the need for timed practice`],
+            options: [`It makes complex prose familiar, so CARS passages feel less foreign`, `The MCAT often reuses passages drawn from those same books`, `It lets you memorize facts that later show up in CARS passages`, `It can replace timed practice as the core of CARS preparation`],
             correctAnswer: 0,
             explanation: `Regular exposure to challenging argumentative prose trains the comprehension and stamina CARS demands, making dense passages feel routine. It does not supply memorizable content (CARS needs none) and complements, rather than replaces, timed practice.`
           },
           {
             question: `A student does 40 passages in a week but never reviews them, while another does 10 and reviews each thoroughly. Who is likely improving more, and why?`,
-            options: [`The second student — deliberate review of fewer passages builds skill faster than unreviewed volume`, `The first student — sheer volume always wins`, `Neither — practice has no effect on CARS`, `The first student — speed is the only thing that matters`],
+            options: [`The second — careful review builds more skill than raw volume`, `The first — sheer volume always outweighs time spent reviewing`, `Neither — practice of any kind has no effect on CARS scores`, `The first — reading speed is the only thing CARS truly rewards`],
             correctAnswer: 0,
             explanation: `Skill grows from understanding and correcting mistakes, not from raw repetition. Thorough review of ten passages produces more durable gains than racing through forty without reflection. On CARS, quality of practice beats quantity.`
           },
           {
             question: `One of the most common CARS errors is confusing the author's own view with a view the author merely reports. The best safeguard is to:`,
-            options: [`Track whose voice each claim belongs to, watching for attributions like "critics contend" or "advocates argue"`, `Assume every strong claim is the author's thesis`, `Ignore opposing viewpoints entirely`, `Pick the answer that quotes the passage most directly`],
+            options: [`Track who holds each view, noting phrases like "critics contend"`, `Assume every strongly worded claim states the author's thesis`, `Skip over opposing viewpoints so they cannot cause confusion`, `Pick the answer choice that quotes the passage most directly`],
             correctAnswer: 0,
             explanation: `Passages routinely embed opponents' positions, and attribution phrases ("critics contend," "advocates argue") signal that a claim is not the author's. Tracking voice prevents you from crediting the author with views they actually report or rebut, a frequent and costly mix-up.`
           }

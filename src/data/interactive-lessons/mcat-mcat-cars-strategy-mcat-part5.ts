@@ -66,37 +66,37 @@ Take one passage and four stems:
         questions: [
           {
             question: `A question asks: "Which of the following, if true, would most weaken the author's central argument?" To answer this, you should FIRST:`,
-            options: [`Clearly identify the author's central argument before evaluating any choice`, `Pick the choice with the strongest wording`, `Eliminate the shortest answer first`, `Recall outside facts about the topic`],
+            options: [`Clearly identify the author's central argument`, `Pick out the choice with the strongest wording`, `Eliminate the shortest answer choice first`, `Recall outside facts you know about the topic`],
             correctAnswer: 0,
             explanation: `You cannot weaken an argument you don't understand. First identify the core claim, then find the answer that most directly contradicts or undermines it.`
           },
           {
             question: `A stem reads, "According to the passage, the author defines justice as..." The best approach is to:`,
-            options: [`Return to the passage and locate the explicitly stated definition`, `Infer a definition from your own background knowledge`, `Choose the most philosophically sophisticated option`, `Pick the answer that uses the word "justice" most often`],
+            options: [`Return to the passage and locate the stated definition`, `Infer a definition from your own background knowledge`, `Choose the most philosophically sophisticated option`, `Pick the answer that uses the word "justice" most often`],
             correctAnswer: 0,
             explanation: `"According to the passage" marks a detail/retrieval question: the answer is stated in the text. Go back and find the explicit definition rather than relying on memory or outside knowledge. The correct choice closely paraphrases a specific line.`
           },
           {
             question: `For an inference question ("It can be inferred that..."), the correct answer is best characterized as:`,
-            options: [`Supported by the passage but not explicitly stated, requiring only a small logical step`, `A direct quotation from the passage`, `A bold conclusion that goes well beyond the text`, `Whatever matches your personal opinion`],
+            options: [`Supported by the passage but unstated, a small logical step away`, `A direct quotation or close paraphrase of a passage sentence`, `A bold conclusion that goes well beyond what the text says`, `A claim the passage explicitly attributes to another writer`],
             correctAnswer: 0,
-            explanation: `Inference answers are unstated yet forced by the text and stay close to it. The trap is the choice demanding a large leap or an outside assumption. Direct quotations belong to detail questions, not inference.`
+            explanation: `Inference answers are unstated yet forced by the text and stay close to it. The trap is the choice demanding a large leap or an outside assumption. Direct quotations, close paraphrases, and claims the passage explicitly attributes to others are stated material, which belongs to detail questions, not inference.`
           },
           {
             question: `Why does identifying the QUESTION TYPE before reading the choices improve accuracy?`,
-            options: [`Each type has a distinct failure mode, so naming it lets you apply the right anti-trap discipline`, `It lets you skip reading the passage`, `It guarantees the first choice is correct`, `Question types are all handled the same way`],
+            options: [`Each type has a distinct trap, so naming it loads the right caution`, `It lets you skip reading the passage and answer from the stem alone`, `It guarantees that the first choice listed will be the correct one`, `It confirms that all question types can be handled the same way`],
             correctAnswer: 0,
             explanation: `Main-idea questions fail on "too narrow," detail on "answered from memory," inference on "leaping too far," and application on "ignoring the author's principle." Knowing the type loads the appropriate caution before you evaluate options, sharpening elimination.`
           },
           {
             question: `An application stem says, "If a new discovery showed X, the author would most likely..." The key first step is to:`,
-            options: [`Identify the author's established principle, then apply it to the new scenario`, `Decide whether X is true in the real world`, `Choose the most surprising response`, `Ignore the author's prior views and judge X freshly`],
+            options: [`Identify the author's established principle, then apply it to X`, `Decide whether X is actually true based on real-world evidence`, `Pick the choice that repeats the passage's wording most closely`, `Set aside the author's prior views and judge X on its own merits`],
             correctAnswer: 0,
-            explanation: `Application questions test whether you can extend the author's stated stance to a novel case. Pin down the author's principle first, then predict how it applies to X. The real-world truth of X and your own judgment are irrelevant to the author's likely response.`
+            explanation: `Application questions test whether you can extend the author's stated stance to a novel case. Pin down the author's principle first, then predict how it applies to X. The real-world truth of X and your own judgment are irrelevant to the author's likely response, and a choice that merely echoes the passage's wording may not address the new scenario at all.`
           },
           {
             question: `For a main-idea question, an answer that is accurate but addresses only the third paragraph should be rejected because it is:`,
-            options: [`Too narrow — a main-idea answer must capture the whole passage, not a single section`, `Out of scope — it is unrelated to the passage`, `Opposite — it reverses the author's stance`, `Too extreme — it overstates the claim`],
+            options: [`Too narrow — main-idea answers must cover the whole passage`, `Out of scope — it goes beyond what the passage discusses`, `Opposite — it reverses the overall stance the author takes`, `Too extreme — it overstates the claim the paragraph makes`],
             correctAnswer: 0,
             explanation: `Main-idea answers must reflect the entire passage's thesis and the author's overall stance. A choice that is true of just one paragraph is "too narrow," even though it is factually supported — the classic trap for primary-purpose questions.`
           }

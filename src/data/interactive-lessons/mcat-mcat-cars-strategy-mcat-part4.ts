@@ -68,37 +68,37 @@ If you try to *understand every term*, you stall. Instead, extract the skeleton:
         questions: [
           {
             question: `You finish reading a dense philosophy passage and cannot state the main idea. The best next step is:`,
-            options: [`Start the questions — they will guide you to re-examine specific parts of the passage`, `Reread the entire passage from the beginning`, `Skip the passage entirely and move on`, `Guess on all questions immediately`],
+            options: [`Start the questions and let them guide you back to specific parts`, `Reread the whole passage slowly, twice if needed, before any question`, `Skip the passage and its questions entirely and move to the next one`, `Guess on all of its questions immediately, without attempting any`],
             correctAnswer: 0,
             explanation: `Questions point you to specific sections. Often, working through the questions helps you understand the passage structure better than a second full read. This is more time-efficient than rereading everything.`
           },
           {
             question: `When a passage is packed with unfamiliar jargon, the most efficient reading approach is to:`,
-            options: [`Follow the argument's structure and contrasts, decoding specific terms only when a question requires it`, `Stop and define every unfamiliar word before continuing`, `Memorize the difficult terms in order`, `Assume the passage is unanswerable and guess`],
+            options: [`Track structure and contrasts, decoding a term only when a question needs it`, `Stop and work out the meaning of every unfamiliar word before continuing`, `Memorize the difficult terms in order so you can recognize them later`, `Assume the passage is unanswerable and guess on all of its questions`],
             correctAnswer: 0,
             explanation: `Tracking structure — the subject-verb spine and "not...but/rather than" contrasts — lets you grasp the argument without translating all the jargon. You can decode an individual term on demand when a question points to it, which is far faster than front-loading every definition.`
           },
           {
             question: `In a dense sentence, which words are most useful for grasping the author's meaning quickly?`,
-            options: [`Contrast and structure words like "not...but," "rather than," and "however"`, `The most technical nouns`, `Proper names and dates`, `Adjectives describing minor details`],
+            options: [`Contrast words like "not...but," "rather than," and "however"`, `The most technical nouns, since they name the concepts under discussion`, `Proper names and dates, since they anchor the discussion`, `Adjectives that describe the passage's minor details`],
             correctAnswer: 0,
             explanation: `Contrast and structure words reveal the distinctions and turns that carry an argument's logic. Knowing that the author favors one side of a "not...but" or "rather than" contrast often answers the question, even when the technical nouns remain fuzzy.`
           },
           {
             question: `A history passage is crowded with dates and names. To stay oriented, you should primarily track:`,
-            options: [`The cause-and-effect relationships and the author's overall argument`, `Every date in chronological order`, `The spelling of each proper name`, `The number of paragraphs`],
+            options: [`The cause-and-effect links and the author's overall argument`, `Every date and name, memorized in strict chronological order`, `The exact spelling of every proper name mentioned in the passage`, `The number of paragraphs devoted to each time period`],
             correctAnswer: 0,
             explanation: `Dense factual passages are best handled by following causal links and the author's thesis rather than memorizing specifics. You can return for an exact date if a question demands it; the durable understanding comes from cause -> effect and the main argument.`
           },
           {
             question: `After one honest pass through an extremely hard passage, you still cannot grasp its structure. The most time-savvy move is to:`,
-            options: [`Flag its questions, answer any straightforward retrieval items, and move on to protect easier passages`, `Reread it three more times until it makes sense`, `Leave all its questions blank permanently`, `Spend your remaining time only on this passage`],
+            options: [`Flag its questions, answer any easy retrieval items, and move on`, `Reread it three more times until its structure finally makes sense`, `Leave all of its questions blank permanently to save time`, `Spend all remaining section time on this passage alone`],
             correctAnswer: 0,
             explanation: `Difficult passages should not consume time owed to easier ones. Flagging, banking any easy retrieval points, and moving on preserves your overall score. You can revisit with leftover time, and you should still guess on every item before the section ends.`
           },
           {
             question: `Why is it reassuring to remember that a CARS passage feels difficult to nearly everyone?`,
-            options: [`It reduces panic, helping you keep tracking structure instead of freezing`, `It means the questions will be scored more leniently`, `It guarantees you will get those questions right`, `It signals you should skip the rest of the section`],
+            options: [`It reduces panic, so you keep tracking structure instead of freezing`, `It means questions on that passage will be scored more leniently`, `It guarantees you will get that passage's questions right anyway`, `It signals that you should skip the rest of the section's passages`],
             correctAnswer: 0,
             explanation: `Hard passages are calibrated to challenge all test-takers, so a feeling of difficulty is normal, not a sign of personal failure. Recognizing this keeps you calm enough to keep mapping structure. It does not change scoring or guarantee correct answers.`
           }

@@ -68,19 +68,19 @@ The MCAT runs ~7.5 hours. Treat the day as an endurance event, not a sprint, and
         questions: [
           {
             question: `The MOST important thing to do during the 30-minute break after CARS is:`,
-            options: [`Eat a substantial snack and mentally reset for the second half`, `Review your CARS answers`, `Study flashcards for Bio/Biochem`, `Call a friend for reassurance`],
+            options: [`Eat a real snack and mentally reset for the second half`, `Review your CARS answers in your head to check for errors`, `Study Bio/Biochem flashcards to refresh high-yield facts`, `Call a friend for reassurance about how the first half went`],
             correctAnswer: 0,
             explanation: `The 30-minute break is crucial for physical AND mental recovery. Eat (your brain needs glucose!), move around, and mentally let go of CARS. Reviewing past answers creates anxiety and studying more content at this point has diminishing returns.`
           },
           {
             question: `Why is sleeping 7–8 hours nightly for TWO WEEKS before the exam better than just the night before?`,
-            options: [`Accumulated sleep debt can't be repaid by one good night; consistent sleep keeps cognition sharp`, `Sleeping the night before actually hurts performance`, `Two weeks of sleep eliminates the need to study`, `It changes how the score is scaled`],
+            options: [`One good night can't repay sleep debt built up over weeks`, `Sleeping well the night before actually hurts performance`, `Two weeks of good sleep removes the need for more study`, `Well-rested test takers have their scores scaled upward`],
             correctAnswer: 0,
             explanation: `A single night of good sleep cannot undo weeks of deficit. Consistent rest in the run-up protects memory consolidation and sustained attention—critical for a 7.5-hour exam.`
           },
           {
             question: `For the mid-exam snack, a peanut-butter sandwich plus nuts is preferable to candy because it:`,
-            options: [`Provides slower-release energy that stabilizes blood glucose, avoiding a sugar crash`, `Contains no calories`, `Tastes better under stress`, `Is the only food allowed in testing centers`],
+            options: [`Releases energy slowly, avoiding a blood-sugar crash`, `Contains fewer calories, keeping you from feeling sluggish`, `Tastes better and is more comforting under stress`, `Is the only kind of food allowed in testing centers`],
             correctAnswer: 0,
             explanation: `Protein and complex carbs release glucose gradually, sustaining brain energy through the late sections. Pure sugar spikes then crashes, which can produce careless errors when stamina already matters most.`
           }
@@ -95,19 +95,19 @@ The MCAT runs ~7.5 hours. Treat the day as an endurance event, not a sprint, and
         questions: [
           {
             question: `Which sections are most often decided by stamina rather than knowledge, and why?`,
-            options: [`Bio/Biochem and Psych/Soc, because they come late in a ~7.5-hour day when fatigue peaks`, `Chem/Phys, because it is first`, `CARS, because it has the fewest questions`, `None — fatigue never affects MCAT scores`],
+            options: [`Bio/Biochem and Psych/Soc, which come late as fatigue peaks`, `Chem/Phys, because it comes first, before test-day nerves settle`, `CARS, because it has the fewest questions of any section`, `None — fatigue does not meaningfully affect MCAT scores`],
             correctAnswer: 0,
             explanation: `The last two science sections fall after hours of testing, so performance there often reflects endurance and glucose management as much as content mastery. That is why break recovery and sleep prep matter.`
           },
           {
             question: `Regarding caffeine on test day, the best guidance is:`,
-            options: [`Keep it at your normal daily level — don't newly start or suddenly stop`, `Drink double your usual amount for extra focus`, `Quit caffeine entirely that morning`, `Switch to a new energy drink you've never tried`],
+            options: [`Stick with your normal daily amount, without changes`, `Drink double your usual amount for extra focus`, `Quit caffeine entirely that morning to avoid jitters`, `Switch to a stronger energy drink you haven't tried before`],
             correctAnswer: 0,
             explanation: `Test day is no time to change your routine. Quitting can cause withdrawal headaches; doubling can cause jitters and a later crash. Replicate your normal, familiar intake.`
           },
           {
             question: `A sudden wave of anxiety hits mid-section. The most effective in-the-moment reset is to:`,
-            options: [`Pause ~10 seconds, take three slow breaths, reframe the moment, then resume`, `Quit the section and request a restart`, `Recompute your projected score`, `Reread the entire passage from the top three times`],
+            options: [`Pause briefly, take three slow breaths, reframe, then resume`, `Stop working and ask the proctor whether you can restart the section`, `Recompute your projected score to see where you stand`, `Reread the entire passage from the top three times`],
             correctAnswer: 0,
             explanation: `A brief, structured reset (pause, slow breathing, a quick reframe such as "one hard passage is hard for everyone") lowers arousal fast and returns focus—without burning the time a full restart or rereading would cost.`
           }

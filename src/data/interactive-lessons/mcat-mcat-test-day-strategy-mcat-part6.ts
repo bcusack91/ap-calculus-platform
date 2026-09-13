@@ -77,19 +77,19 @@ After a full-length, a student tags every missed question by cause:
         questions: [
           {
             question: `You consistently get questions right when reviewing them calmly but miss them during timed practice. Your main issue is:`,
-            options: [`Time pressure and test anxiety — practice more under timed, simulated conditions`, `A content gap`, `Bad luck`, `The questions are unfair`],
+            options: [`Time pressure and test anxiety under timed conditions`, `A content gap in the topics those questions cover`, `Bad luck that will even out over more practice tests`, `Unfairly written questions that mislead under pressure`],
             correctAnswer: 0,
             explanation: `If you can answer correctly without time pressure, you have the knowledge. The issue is performance under pressure. The fix: more timed practice under real conditions, deep breathing strategies, and building familiarity with the time constraints.`
           },
           {
             question: `In the error-log example, time-pressure misses are the largest bucket (9 of 22). The best response is to:`,
-            options: [`Do timed passage drills and tighten pacing — not another round of content review`, `Re-read every textbook chapter`, `Conclude the practice exam was defective`, `Ignore it since you know the content`],
+            options: [`Do timed passage drills and tighten pacing checkpoints`, `Re-read every textbook chapter to shore up content`, `Conclude the practice exam's timing was defective`, `Ignore the bucket, since you already know the content`],
             correctAnswer: 0,
             explanation: `When pacing is the dominant failure mode, the fix is pacing practice, not content review. Matching the intervention to the actual error category is what moves the score.`
           },
           {
             question: `Why are "misread" and "careless" errors often the fastest points to recover?`,
-            options: [`The knowledge is already there; small habit changes (slowing on the stem, double-checking) fix them quickly`, `They require learning entirely new topics`, `They only occur on discrete questions`, `They cannot be fixed at all`],
+            options: [`The knowledge is there; small habit changes fix them fast`, `They require learning entirely new topics from scratch`, `They occur only on discrete questions, which are quicker`, `They can be removed simply by taking more full-lengths`],
             correctAnswer: 0,
             explanation: `These errors are execution failures, not knowledge gaps. Underlining what the stem asks and verifying unit conversions can convert them to points without weeks of new study.`
           }
@@ -104,19 +104,19 @@ After a full-length, a student tags every missed question by cause:
         questions: [
           {
             question: `The main reason to review questions you got RIGHT (not just wrong) is to:`,
-            options: [`Confirm your reasoning was sound, not lucky, and catch flawed logic that happened to land on the right answer`, `Pad your study log with more entries`, `Avoid reviewing wrong answers`, `Memorize the specific questions for the real test`],
+            options: [`Confirm your reasoning was sound rather than lucky`, `Add more entries to your study log to track volume`, `Spend less time on the questions you got wrong`, `Memorize those specific questions for the real test`],
             correctAnswer: 0,
             explanation: `A correct answer reached by faulty reasoning is a hidden weakness that will fail on a different question. Reviewing correct items verifies the process, not just the outcome.`
           },
           {
             question: `Your score has plateaued for three straight full-lengths. The most productive adjustment is to:`,
-            options: [`Target your weakest topics with focused passage practice and analyze recurring error patterns`, `Take the same easy questions repeatedly`, `Stop tracking errors`, `Switch your test date without changing your approach`],
+            options: [`Target weak topics and analyze your recurring error patterns`, `Retake the same easy question sets to rebuild confidence`, `Add more hours of the same passive rereading you already do`, `Push back your test date but keep the exact same study routine`],
             correctAnswer: 0,
             explanation: `Plateaus usually mean your current routine has stopped exposing new weaknesses. Concentrating on the weakest areas yields the biggest point gains, and pattern analysis reveals systematic mistakes to break.`
           },
           {
             question: `Tracking scores by TOPIC (e.g., "miss 60% of operon questions") rather than only by section helps because it:`,
-            options: [`Pinpoints specific content gaps so study time targets exactly what's costing points`, `Replaces the need to ever take full-lengths`, `Guarantees a 520`, `Makes the section scores irrelevant`],
+            options: [`Pinpoints specific content gaps so study time targets them`, `Replaces the need to ever take full-length practice exams`, `Guarantees a score of 520 or higher on test day`, `Makes your individual section scores irrelevant to planning`],
             correctAnswer: 0,
             explanation: `Section-level data tells you *where* you're weak; topic-level data tells you *what* to fix. Granular tracking directs limited study hours to the highest-yield gaps.`
           }

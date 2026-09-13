@@ -26,8 +26,8 @@ export const mcatCarsStratPart1Data = {
 ### The Three Question Types
 
 1. **Foundations of Comprehension** (~30%): What did the author say?
-2. **Reasoning Within the Text** (~30%): Why did the author say it? How does the argument work?
-3. **Reasoning Beyond the Text** (~40%): How does it apply? What can we infer?
+2. **Reasoning Within the Text** (~30%): Why did the author say it? How does the argument work? What can we infer from it?
+3. **Reasoning Beyond the Text** (~40%): How would these ideas apply to a new situation, or change given new information?
 
 ### Timing Strategy
 
@@ -61,37 +61,37 @@ Students lose CARS points less from misreading than from mismanaging the clock. 
         questions: [
           {
             question: `In CARS, when a question asks "Which of the following can be inferred from the passage?", it is testing:`,
-            options: [`Reasoning Beyond the Text — you must draw a conclusion not explicitly stated`, `Foundations of Comprehension — just find the answer in the text`, `Reasoning Within the Text — analyzing argument structure`, `Outside knowledge of the topic`],
+            options: [`Reasoning Within the Text — drawing an unstated conclusion the passage supports`, `Foundations of Comprehension — locating the answer stated directly in the text`, `Reasoning Beyond the Text — applying the passage's ideas to a new situation`, `Outside knowledge — recalling what experts know about the passage's topic`],
             correctAnswer: 0,
-            explanation: `Inference questions require you to go beyond what is explicitly stated and draw a logical conclusion. The answer is supported by the passage but not directly stated.`
+            explanation: `An inference asks for a conclusion that the passage supports but does not state outright. In the AAMC framework, working out what follows from the passage's own content is Reasoning Within the Text. Reasoning Beyond the Text instead applies the passage's ideas to a new situation or weighs new information, and Foundations of Comprehension retrieves what the text says directly.`
           },
           {
             question: `A student runs out of time on CARS with 8 questions remaining. The best strategy is:`,
-            options: [`Quickly guess on all 8 — there is no penalty for wrong answers`, `Leave them blank`, `Rush through the remaining passage`, `Go back and change previous answers`],
+            options: [`Guess on all 8 — wrong answers carry no penalty`, `Leave them blank so random guesses cannot lower the score`, `Start reading the remaining passage and answer only the items reached`, `Go back and change earlier answers that felt uncertain`],
             correctAnswer: 0,
-            explanation: `There is NO penalty for guessing on the MCAT. Always fill in an answer for every question. With 8 left, pick one letter and bubble them all — you should get ~2 right by chance.`
+            explanation: `There is NO penalty for guessing on the MCAT. Always fill in an answer for every question. With 8 left, select the same letter for each one — you should get ~2 right by chance.`
           },
           {
             question: `With 90 minutes for roughly 9 passages, about how much time should you budget per passage including its questions?`,
-            options: [`About 10 minutes per passage`, `About 5 minutes per passage`, `About 20 minutes per passage`, `As long as each passage takes — pacing does not matter`],
+            options: [`About 10 minutes per passage`, `About 5 minutes per passage`, `About 20 minutes per passage`, `As long as each passage takes`],
             correctAnswer: 0,
             explanation: `90 minutes divided by 9 passages is about 10 minutes each (roughly 4 minutes reading, 6 minutes on questions). Internalizing this budget prevents one hard passage from stealing time from later ones.`
           },
           {
             question: `A question asks, "According to the passage, the author defines 'modernism' as..." This is primarily a question of:`,
-            options: [`Foundations of Comprehension — the answer is stated in the text and must be located`, `Reasoning Beyond the Text — applying the idea to a new case`, `Reasoning Within the Text — analyzing why the author argues something`, `Outside literary knowledge`],
+            options: [`Foundations of Comprehension — locating what the text explicitly states`, `Reasoning Beyond the Text — applying the passage's idea to a new case`, `Reasoning Within the Text — analyzing why the author makes the argument`, `Outside knowledge — recalling how literary scholars define modernism`],
             correctAnswer: 0,
             explanation: `"According to the passage" with a definition signals a comprehension/retrieval question: the information is explicitly in the text. You should return to the passage and find the stated definition rather than infer or apply.`
           },
           {
             question: `Why is spending six extra minutes to perfect one difficult CARS question usually a poor trade?`,
-            options: [`Those minutes are taken from later passages, costing several questions you could otherwise answer`, `Difficult questions are worth fewer points than easy ones`, `There is a penalty for answering hard questions slowly`, `The hardest question is always unanswerable`],
+            options: [`The time comes out of later passages, costing questions you could have answered`, `Difficult questions are weighted less, so each earns fewer points than an easy one`, `The exam deducts points when a single question takes too long to answer`, `The hardest questions are designed so that no amount of time will solve them`],
             correctAnswer: 0,
             explanation: `All questions are worth the same, and time is fixed. Overinvesting in one item sacrifices time for multiple later items you might have gotten right. Flagging and moving on protects your overall score; questions are not weighted by difficulty.`
           },
           {
             question: `Which statement about CARS content is accurate?`,
-            options: [`CARS uses humanities and social-science passages and requires no outside subject knowledge — everything needed is in the text`, `CARS includes physics and chemistry passages requiring formulas`, `CARS rewards memorized facts about the passage topics`, `CARS allows reference materials during the exam`],
+            options: [`CARS uses humanities and social-science passages; everything needed is in the text`, `CARS includes physics and chemistry passages that require applying formulas`, `CARS rewards memorized facts about the topics its passages tend to cover`, `CARS lets test-takers consult reference materials during the section`],
             correctAnswer: 0,
             explanation: `CARS draws exclusively from the humanities and social sciences and is designed so that all required information is contained in the passage. Success comes from reading and reasoning skill, not recalled content or formulas, and no references are permitted.`
           }

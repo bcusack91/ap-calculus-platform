@@ -60,13 +60,13 @@ Same total, but admissions committees often scrutinize a section dipping near 12
         questions: [
           {
             question: `The total number of questions on the MCAT is:`,
-            options: [`230 questions across 4 sections`, `200 questions`, `300 questions`, `180 questions`],
+            options: [`230 questions across 4 sections`, `200 questions across 4 sections`, `300 questions across 4 sections`, `180 questions across 4 sections`],
             correctAnswer: 0,
             explanation: `CP: 59, CARS: 53, BB: 59, PS: 59 = 230 total questions. The exam takes about 7.5 hours including breaks. Knowing the structure reduces test-day anxiety.`
           },
           {
             question: `Why does the total MCAT scale run from 472 to 528?`,
-            options: [`Four sections, each scored 118–132, sum to a minimum of 472 and a maximum of 528`, `It is an arbitrary range with no relationship to the sections`, `Each section is scored 0–132`, `There are 528 total questions`],
+            options: [`Four sections scored 118–132 each sum to between 472 and 528`, `It is an arbitrary range with no relationship to the section scores`, `Each of the four sections is scored from 0 to 132 points`, `The exam has 528 questions, one point awarded for each`],
             correctAnswer: 0,
             explanation: `$4 \\times 118 = 472$ and $4 \\times 132 = 528$. The total is simply the sum of the four section scores, and the midpoint of 500 comes from $4 \\times 125$.`
           },
@@ -87,7 +87,7 @@ Same total, but admissions committees often scrutinize a section dipping near 12
         questions: [
           {
             question: `Which section gives you the FEWEST questions but the most time per question?`,
-            options: [`CARS — 53 questions in 90 minutes (~1.7 min each)`, `Chem/Phys — 59 questions in 95 minutes`, `Bio/Biochem — 59 questions in 95 minutes`, `Psych/Soc — 59 questions in 95 minutes`],
+            options: [`CARS — 53 questions in 90 minutes`, `Chem/Phys — 59 questions in 95 minutes`, `Bio/Biochem — 59 questions in 95 minutes`, `Psych/Soc — 59 questions in 95 minutes`],
             correctAnswer: 0,
             explanation: `CARS has 53 questions (fewer than the 59 in the science sections) but 90 minutes, giving ~1.7 minutes per question — slightly more than the ~1.6 minutes in the science sections, which suits its dense reading.`
           },
@@ -99,7 +99,7 @@ Same total, but admissions committees often scrutinize a section dipping near 12
           },
           {
             question: `Because MCAT scores are SCALED (equated across forms), it follows that:`,
-            options: [`A slightly harder test form may require fewer correct answers to reach the same scaled score`, `Your raw percent correct is reported directly as the score`, `Every test taker sees the exact same questions`, `Guessing is penalized to keep the scale fair`],
+            options: [`A harder form may need fewer correct answers for the same scaled score`, `Your raw percent correct is reported directly as your section score`, `Every test taker sees the exact same questions on the same test date`, `Guessing is penalized so that the scale stays fair across all forms`],
             correctAnswer: 0,
             explanation: `Equating adjusts for small differences in form difficulty, so the scaled score reflects ability rather than which form you happened to take. There is no guessing penalty, so you should always answer every question.`
           }

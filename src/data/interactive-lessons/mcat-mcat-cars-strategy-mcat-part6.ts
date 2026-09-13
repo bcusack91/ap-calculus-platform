@@ -67,37 +67,37 @@ The hard part of tone questions is *calibration*: not "is the author positive or
         questions: [
           {
             question: `An author writes: "While proponents celebrate the innovation, they conveniently overlook its devastating environmental consequences." The tone is:`,
-            options: [`Critical — "conveniently overlook" and "devastating" show disapproval`, `Neutral — the author presents both sides`, `Supportive of the innovation`, `Ambivalent`],
+            options: [`Critical — the author disapproves of what supporters ignore`, `Neutral — the author presents both sides without judgment`, `Supportive — the author joins proponents in celebrating the innovation`, `Ambivalent — the author weighs benefits and costs evenly`],
             correctAnswer: 0,
             explanation: `"Conveniently overlook" implies deliberate ignorance, and "devastating" is strongly negative. The author is criticizing both the innovation and its supporters.`
           },
           {
             question: `An author writes: "Smith's study is undeniably ambitious, yet one wonders whether so much was inferred from so little." The tone is best described as:`,
-            options: [`Admiring but skeptical — genuine praise tempered by measured doubt`, `Harshly contemptuous of Smith`, `Purely neutral and detached`, `Enthusiastically supportive without reservation`],
+            options: [`Admiring but skeptical — praise tempered by doubt`, `Harshly contemptuous of Smith and of his study`, `Purely neutral and detached, expressing no view`, `Enthusiastically supportive without any reservation`],
             correctAnswer: 0,
             explanation: `"Undeniably ambitious" is real praise; "one wonders whether so much was inferred from so little" is gentle doubt signaled by "yet." The blended, moderate tone is admiration with skepticism — not contempt, neutrality, or unqualified support.`
           },
           {
             question: `On CARS, why are extreme tone labels like "contemptuous" or "ecstatic" usually wrong?`,
-            options: [`Most passages adopt a moderate tone, so extreme labels overshoot unless the text is genuinely extreme`, `Extreme labels are always grammatically incorrect`, `Tone is never tested directly`, `Longer tone words are more likely to be right`],
+            options: [`CARS authors tend to write moderately, so extreme labels overshoot`, `Extreme tone labels are used only in science sections, never in CARS`, `Tone is never tested directly, so tone labels are always distractors`, `Strong tone words are always too vague to match a specific passage`],
             correctAnswer: 0,
             explanation: `CARS authors typically write with restraint, so moderate, blended tone words fit best. Reserve strong labels for passages with genuinely strong language. Defaulting to extremes is a common trap; the temperate choice usually wins.`
           },
           {
             question: `A passage praises a dataset's size but criticizes the conclusions drawn from it. A tone question is best answered by first identifying:`,
-            options: [`Exactly what the author's attitude is aimed at — the conclusions, not the dataset`, `The author's nationality`, `The number of sentences of praise versus criticism`, `Whether the topic is scientific`],
+            options: [`What the attitude is aimed at: the conclusions, not the data`, `The author's nationality and professional background`, `The count of sentences praising versus criticizing the study`, `Whether the study's subject is scientific or humanistic`],
             correctAnswer: 0,
             explanation: `Tone has a target. Here the author admires the data but doubts the inferences, so the attitude toward "the study's conclusions" differs from the attitude toward "the dataset." Pinning the target prevents you from mislabeling the overall tone.`
           },
           {
             question: `An author writes, "This so-called breakthrough merely repackages decades-old ideas." The words "so-called" and "merely" signal a tone that is:`,
-            options: [`Dismissive — minimizing the work's originality and importance`, `Admiring`, `Neutral and balanced`, `Ambivalent`],
+            options: [`Dismissive — minimizing the work's originality`, `Admiring — celebrating a genuine breakthrough`, `Neutral — reporting the claim without judgment`, `Ambivalent — weighing its merits and flaws`],
             correctAnswer: 0,
             explanation: `"So-called" casts doubt on the label "breakthrough," and "merely" trivializes the contribution as mere repackaging. Together they convey a dismissive attitude that downplays the work's significance, rather than admiration or neutrality.`
           },
           {
             question: `Why should you read the WHOLE passage before settling on a tone, rather than judging from one sentence?`,
-            options: [`A single positive or negative sentence may be a concession the author later qualifies or reverses`, `Tone is determined only by the final sentence`, `The first sentence always states the tone outright`, `Reading more never changes the tone`],
+            options: [`One sentence may be a concession the author later qualifies`, `Tone is determined only by the passage's final sentence`, `The first sentence always states the author's tone outright`, `Reading more of the passage never changes the tone you identify`],
             correctAnswer: 0,
             explanation: `Authors often concede a point ("Granted, X is impressive...") before pivoting against it, so an isolated sentence can mislead. Judging tone requires the whole arc of praise, concession, and critique. The overall attitude emerges from how these parts combine.`
           }

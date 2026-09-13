@@ -65,19 +65,19 @@ A science section has **95 minutes for 59 questions**.
         questions: [
           {
             question: `You've been stuck on a question for 2 minutes and can't decide between two answers. The best strategy is:`,
-            options: [`Pick your best guess, flag it, and move on — protecting time for remaining questions`, `Keep working until you figure it out`, `Skip it without answering`, `Close your eyes and pick randomly`],
+            options: [`Pick your best guess of the two, flag it, and move on`, `Keep working on it until you can settle the choice`, `Skip it without answering and plan to return later`, `Reread the whole passage to find support for either one`],
             correctAnswer: 0,
-            explanation: `Every question is worth the same amount. Spending 4+ minutes on one hard question costs you easy questions later. Always answer something (no penalty for guessing), flag it, and move on. Your first instinct is often correct.`
+            explanation: `Every question is worth the same amount. Spending 4+ minutes on one hard question costs you easy questions later. Always answer something (no penalty for guessing), flag it, and move on; you can revisit it during review if time allows.`
           },
           {
             question: `In a 95-minute, 59-question section, your approximate per-question budget is:`,
-            options: [`About 1.6 minutes (roughly 1 minute 36 seconds)`, `About 3 minutes`, `About 45 seconds`, `Exactly 2 minutes`],
+            options: [`About 1.6 minutes`, `About 3 minutes`, `About 45 seconds`, `Exactly 2 minutes`],
             correctAnswer: 0,
             explanation: `$95 \\div 59 \\approx 1.6$ minutes per question. Knowing this average lets you set checkpoints (e.g., ~Q30 by the 48-minute mark) and detect when you are falling behind.`
           },
           {
             question: `At the 48-minute mark you have completed 24 of 59 questions. The smartest reaction is to:`,
-            options: [`Recognize you are behind and trim time on the most expensive questions, flagging and guessing where needed`, `Slow down to be more careful`, `Skip directly to the last passage`, `Leave the rest blank to avoid mistakes`],
+            options: [`Trim time on the costliest questions, flagging and guessing`, `Slow down so that careful work prevents any further mistakes`, `Keep the same pace and hope later questions go faster`, `Leave the remaining questions blank to avoid wrong answers`],
             correctAnswer: 0,
             explanation: `You should be near Q30 by 48 minutes, so 24 means you are behind. Recover by capping time on costly questions (flag + best guess) to protect the many remaining questions, never by leaving items blank — there is no guessing penalty.`
           }
@@ -92,15 +92,15 @@ A science section has **95 minutes for 59 questions**.
         questions: [
           {
             question: `Which use of the flag feature is MOST effective?`,
-            options: [`Flag questions you narrowed to two plausible choices, so review time targets the highest-yield items`, `Flag every single question to be thorough`, `Never flag anything to save clicks`, `Flag only the easiest questions`],
+            options: [`Flag questions narrowed to two plausible choices`, `Flag every single question so none gets overlooked`, `Never flag anything, so no time is spent on clicks`, `Flag only the questions you answered confidently`],
             correctAnswer: 0,
             explanation: `Flagging is a triage tool. Marking questions where you got down to a 50/50 means your limited review time goes to items most likely to flip with a fresh look — not to items you already feel confident about.`
           },
           {
             question: `During end-of-section review you reach a flagged item. You should change your original answer only if:`,
-            options: [`You find a concrete reason — a misread stem or recalled fact — that your first choice was wrong`, `It just feels safer to switch`, `The original answer was choice C`, `You have time, regardless of any new reasoning`],
+            options: [`You find a concrete reason, like a misread stem, that it was wrong`, `Switching simply feels safer than staying with your first choice`, `The original answer was choice C, which you have picked too often`, `You have spare time, whether or not you have any new reasoning`],
             correctAnswer: 0,
-            explanation: `First instincts are correct more often than not. Change an answer only when you can identify a specific error or new information; switching on vague doubt tends to lower scores.`
+            explanation: `Change an answer when you can identify a specific error or new information, such as a misread stem or a recalled fact. Switching on a vague feeling, or just because time remains, swaps one guess for another instead of correcting a mistake.`
           },
           {
             question: `Ideally, you want to reach the last question of a section with:`,

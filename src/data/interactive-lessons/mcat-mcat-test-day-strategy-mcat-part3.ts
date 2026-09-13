@@ -67,19 +67,19 @@ A student has **12 weeks** and can study **25 hours/week**, for a total of $12 \
         questions: [
           {
             question: `The most effective way to identify weak areas in MCAT prep is:`,
-            options: [`Regular practice tests with thorough review of both correct AND incorrect answers`, `Reading textbooks cover to cover`, `Memorizing flashcards only`, `Studying the same topics repeatedly`],
+            options: [`Practice tests with review of both correct and incorrect answers`, `Reading every content review book cover to cover before testing yourself`, `Drilling flashcards as your only study method until test day`, `Repeatedly restudying the same topics you have already covered`],
             correctAnswer: 0,
             explanation: `Practice tests reveal what you actually know vs. what you think you know. Reviewing correct answers shows your reasoning was right. Reviewing incorrect answers identifies gaps. Both are equally important for improvement.`
           },
           {
             question: `Using the 40/30/30 split on a 300-hour plan, how many hours go to content review?`,
-            options: [`120 hours ($0.40 \\times 300$)`, `90 hours`, `150 hours`, `60 hours`],
+            options: [`120 hours`, `90 hours`, `150 hours`, `60 hours`],
             correctAnswer: 0,
             explanation: `$0.40 \\times 300 = 120$ hours for content review, with $90$ hours each for practice problems and full-length exams ($0.30 \\times 300$).`
           },
           {
             question: `If each full-length plus thorough review takes about 15 hours, a 90-hour full-length budget supports roughly:`,
-            options: [`6 fully reviewed full-length exams — within the recommended 5–8`, `1 full-length exam`, `15 full-length exams`, `25 full-length exams`],
+            options: [`6 full-length exams`, `1 full-length exam`, `15 full-length exams`, `25 full-length exams`],
             correctAnswer: 0,
             explanation: `$90 \\div 15 = 6$ full-lengths with review, comfortably inside the 5–8 range. Counting review time (not just test time) keeps the plan realistic.`
           }
@@ -94,19 +94,19 @@ A student has **12 weeks** and can study **25 hours/week**, for a total of $12 \
         questions: [
           {
             question: `In a well-sequenced plan, full-length exams should be concentrated:`,
-            options: [`In the final phase, so test-taking peaks close to the real exam`, `In the first week, before any content review`, `Spread evenly with one on day one`, `Only after the exam, for practice`],
+            options: [`In the final phase, so test-taking peaks near the real exam`, `In the first week, before any content review has begun`, `Crammed into the final few days right before test day`, `Scattered on whatever free days happen to open up in the calendar`],
             correctAnswer: 0,
-            explanation: `Phases overlap, but the center of gravity shifts: content review front-loads, practice problems sit in the middle, and full-lengths dominate the final weeks so stamina and pacing peak near test day.`
+            explanation: `Phases overlap, but the center of gravity shifts: content review front-loads, practice problems sit in the middle, and full-lengths dominate the final weeks so stamina and pacing peak near test day. Cramming them into the last few days leaves no time to review each one and invites burnout.`
           },
           {
             question: `Why does spaced repetition (reviewing at 1, 3, 7, 14-day intervals) outperform cramming?`,
-            options: [`Spacing reviews strengthens long-term retention by repeatedly reactivating memory just as it fades`, `It lets you avoid reviewing weak topics`, `It replaces the need for practice tests`, `It guarantees you will see the same questions on the MCAT`],
+            options: [`Reviewing just as memories fade strengthens long-term retention`, `It lets you stop reviewing weak topics once they feel familiar`, `It removes the need for timed practice tests and full-lengths`, `It guarantees you will see the same questions on the MCAT`],
             correctAnswer: 0,
             explanation: `Retrieving information at expanding intervals leverages the spacing effect, consolidating memories far better than massed cramming. It complements—does not replace—timed practice and full-lengths.`
           },
           {
             question: `A student studying part-time during the school year would most reasonably choose a timeline of about:`,
-            options: [`6 months, part-time alongside classes`, `2 weeks of cramming`, `3 months full-time during the semester`, `No fixed timeline`],
+            options: [`6 months, part-time alongside classes`, `2 weeks of cramming right before the exam`, `3 months full-time during the semester`, `No fixed timeline, studying when free`],
             correctAnswer: 0,
             explanation: `A ~6-month part-time plan fits study around coursework, whereas a 3-month intensive plan suits a summer or post-graduation block. Matching the timeline to your real availability prevents burnout.`
           }

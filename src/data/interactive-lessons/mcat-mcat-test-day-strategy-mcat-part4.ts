@@ -60,19 +60,19 @@ The MCAT has **no penalty for wrong answers**, so a blank and a wrong answer sco
         questions: [
           {
             question: `When choosing between two remaining answer choices on the MCAT, the BEST strategy is:`,
-            options: [`Re-read the question stem to see which answer actually addresses what was asked`, `Always pick C`, `Choose the longer answer`, `Pick the first one you read`],
+            options: [`Re-read the stem to see which choice answers what was asked`, `Pick C, since it is statistically the most common answer`, `Choose the longer, more detailed of the two remaining answers`, `Go with whichever of the two you happened to read first`],
             correctAnswer: 0,
             explanation: `Most 50/50 mistakes happen because you're answering the wrong question. Re-reading the question stem often reveals one answer addresses the actual question while the other is a true statement about a different concept.`
           },
           {
             question: `On a four-option question with no penalty for wrong answers, the expected value of a pure blind guess is:`,
-            options: [`About a 25% chance of a point — always better than leaving it blank`, `Zero, the same as a blank`, `Negative, because wrong answers are penalized`, `100%, because something must be right`],
+            options: [`About 0.25 points, more than the zero a blank earns`, `Zero points, exactly the same as leaving it blank`, `Negative, because wrong answers lose points`, `A full point, because one of the choices must be right`],
             correctAnswer: 0,
-            explanation: `With four choices, a random guess is correct ~25% of the time, and there is no penalty, so the expected value is positive. A blank scores zero, so you should never leave a question unanswered.`
+            explanation: `With four choices, a random guess is right about 25% of the time and a wrong guess costs nothing, so a guess is worth about 0.25 points on average (0.25 × 1 point + 0.75 × 0). A blank scores zero, so you should never leave a question unanswered.`
           },
           {
             question: `Eliminating two of the four choices before guessing changes your odds of a correct answer to about:`,
-            options: [`50% (a guess between the two remaining choices)`, `25%`, `33%`, `It does not change the odds`],
+            options: [`50%`, `25%`, `33%`, `67%`],
             correctAnswer: 0,
             explanation: `Removing two wrong options leaves two, so a guess is right ~50% of the time. Each elimination raises expected value: one out → ~33%, two out → 50%.`
           }
@@ -87,7 +87,7 @@ The MCAT has **no penalty for wrong answers**, so a blank and a wrong answer sco
         questions: [
           {
             question: `An answer reads "This process never occurs in eukaryotic cells." The absolute word "never" most likely signals:`,
-            options: [`An extreme-language trap — biological absolutes are usually wrong`, `A correct answer, because it is precise`, `An out-of-scope statement`, `A too-broad statement that is still correct`],
+            options: [`An extreme-language trap, since biology has many exceptions`, `A correct answer, because precise wording signals accuracy`, `An out-of-scope statement unrelated to the question`, `A too-broad statement that is nonetheless still correct`],
             correctAnswer: 0,
             explanation: `Absolutes like "never," "always," "all," and "none" rarely survive MCAT scrutiny because biology is full of exceptions. Favor qualified, nuanced wording unless the passage explicitly supports the absolute.`
           },
@@ -99,7 +99,7 @@ The MCAT has **no penalty for wrong answers**, so a blank and a wrong answer sco
           },
           {
             question: `Two answer choices state opposite cause-and-effect directions. The best defense against the "opposite" trap is to:`,
-            options: [`Re-check which variable drives which, confirming the direction against the passage or your knowledge`, `Pick whichever is listed first`, `Assume the longer one is right`, `Choose the more extreme wording`],
+            options: [`Confirm which variable drives which before choosing`, `Pick whichever of the two is listed first`, `Assume the longer, more detailed of the two is the right one`, `Choose the one whose wording sounds more extreme and certain`],
             correctAnswer: 0,
             explanation: `Opposite traps reverse a relationship to catch hasty readers. Verifying the causal direction (which variable is independent, which is dependent) against the source distinguishes the correct statement from its mirror image.`
           }

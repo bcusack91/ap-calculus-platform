@@ -73,19 +73,19 @@ It's the Bio/Biochem section. You hit a passage built on an unfamiliar enzyme as
         questions: [
           {
             question: `The night before the MCAT, the BEST strategy is:`,
-            options: [`No studying — relax, eat a good dinner, and go to bed early`, `Cram high-yield topics until midnight`, `Take a full practice exam`, `Review all your notes from the beginning`],
+            options: [`No studying — relax, eat dinner, and go to bed early`, `Cram high-yield topics until midnight to keep them fresh`, `Take one last full practice exam to confirm readiness`, `Review all your notes from the beginning one final time`],
             correctAnswer: 0,
             explanation: `Sleep is the single most important thing the night before. Your brain consolidates memories during sleep. Cramming the night before creates anxiety and exhaustion — neither helps performance. Trust your months of preparation.`
           },
           {
             question: `You hit a brutal, unfamiliar passage mid-section. The healthiest reframe is:`,
-            options: [`"If it's hard for me, it's hard for everyone, and the scaled score accounts for it"`, `"My whole score is ruined now"`, `"I should restart the section"`, `"I'll spend whatever time it takes to fully understand it"`],
+            options: [`"It's likely hard for others too; one passage won't sink me"`, `"My whole score is ruined now, so the rest barely matters"`, `"I should stop now and ask the proctor to restart this section"`, `"I'll spend whatever time it takes to fully understand it"`],
             correctAnswer: 0,
-            explanation: `Because the exam is equated across forms, a uniformly hard passage doesn't sink your score. Reframing prevents panic; pouring unlimited time into one passage starves the rest of the section.`
+            explanation: `A passage that feels brutal is usually hard for other test-takers too, and a few tough questions shift a scaled section score only slightly. Reframing this way prevents panic; pouring unlimited time into one passage starves the rest of the section.`
           },
           {
             question: `When a passage stumps you, the biggest threat to your score is usually:`,
-            options: [`Emotional spillover that hurts your performance on the next several passages`, `The two questions you might miss on that passage`, `The scoring algorithm penalizing hard passages`, `Running out of breaks`],
+            options: [`Emotional spillover that hurts your next several passages`, `The two or three questions you might miss on that passage`, `A scoring algorithm that penalizes hard passages extra`, `Running out of scheduled breaks later in the testing day`],
             correctAnswer: 0,
             explanation: `A couple of missed questions barely move a 230-question scaled score. The real damage comes from letting frustration degrade focus on subsequent passages — so contain it and move on.`
           }
@@ -100,21 +100,21 @@ It's the Bio/Biochem section. You hit a passage built on an unfamiliar enzyme as
         questions: [
           {
             question: `Why should you avoid a "post-mortem" analysis between sections?`,
-            options: [`You can't change submitted answers, and dwelling creates anxiety that harms upcoming sections`, `Reviewing past sections is against the rules and voids your score`, `It would reveal your score early`, `Earlier sections never affect your total`],
+            options: [`Answers are locked, and dwelling breeds anxiety for later sections`, `Reviewing past sections is against the rules and voids your score`, `Thinking back over a section would reveal your score early`, `Earlier sections are scored separately and never affect your total`],
             correctAnswer: 0,
             explanation: `Once a section is submitted, it's locked. Replaying it only fuels doubt heading into the next section. Stay present and forward-looking; use breaks to recover, not to re-litigate.`
           },
           {
             question: `In the final week, the recommended approach to studying is to:`,
-            options: [`Taper — light review of high-yield topics and flashcards, then no studying the day before`, `Increase to maximum intensity and add new content`, `Take a full-length every single day`, `Stop all activity a week out and do nothing`],
+            options: [`Taper with light high-yield review, then rest the day before`, `Ramp up to maximum intensity and add new content to cover gaps`, `Take a full-length practice exam every single day`, `Stop all activity a full week out and do nothing at all`],
             correctAnswer: 0,
             explanation: `A taper (last full-length ~7 days out, then progressively lighter review) preserves sharpness without burnout. Cramming new content late tends to raise anxiety more than scores; the day before should be rest.`
           },
           {
-            question: `Most examinees report that, compared to how they FELT during the test, their actual score was:`,
-            options: [`Better than expected — people commonly feel worse than they scored`, `Exactly as bad as they felt`, `Released the same day so feelings don't matter`, `Lowered if they felt confident`],
+            question: `Many examinees report that, compared to how they FELT during the test, their actual score was:`,
+            options: [`Often better than it felt; hard items loom large in memory`, `Exactly as bad as they felt when they walked out of the exam`, `Released the same day, so feelings about it did not matter`, `Predictable from how confident they felt during each section`],
             correctAnswer: 0,
-            explanation: `It's common to leave feeling defeated yet score well, partly because hard passages are memorable and equated. Scores arrive in about four weeks, so trust the process rather than your in-the-moment emotions.`
+            explanation: `Test-takers commonly leave feeling worse than their results turn out, partly because the hardest items loom largest in memory. How the exam felt is an unreliable gauge of the score, which arrives about a month later, so trust your preparation rather than in-the-moment emotions.`
           }
         ]
       }
