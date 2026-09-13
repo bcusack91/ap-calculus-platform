@@ -75,6 +75,9 @@ jobs:
       DIRECT_URL: "postgresql://postgres:postgres@localhost:5432/builddb"
       NEXTAUTH_SECRET: "ci-build-secret"
       NEXTAUTH_URL: "http://localhost:3000"
+      # next build exhausts Node's default ~4 GB heap on this codebase (same
+      # reason build:local exists); ubuntu-latest runners have 16 GB.
+      NODE_OPTIONS: "--max-old-space-size=12288"
     services:
       postgres:
         image: postgres:16
@@ -143,6 +146,7 @@ jobs:
       DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/testdb"
       NEXTAUTH_SECRET: "ci-e2e-secret"
       NEXTAUTH_URL: "http://localhost:3000"
+      NODE_OPTIONS: "--max-old-space-size=12288"
     services:
       postgres:
         image: postgres:16
