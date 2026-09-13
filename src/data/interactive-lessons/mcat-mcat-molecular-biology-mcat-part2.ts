@@ -61,19 +61,19 @@ $$\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{RNA} \\xrightarrow{\\t
         questions: [
           {
             question: `A mutation in the spliceosome would most directly cause:`,
-            options: [`Introns retained in mRNA leading to abnormal or nonfunctional protein`, `Failure of 5' capping`, `DNA replication errors at the replication fork`, `Ribosome malfunction during translation`],
+            options: [`Retention of introns in mRNA, yielding abnormal protein`, `Failure to add the 5' cap, leaving mRNA open to degradation`, `Failure to add the poly-A tail at the 3' end of the transcript`, `Mispairing of codons and anticodons at the ribosome A site`],
             correctAnswer: 0,
             explanation: `The spliceosome removes introns from pre-mRNA. If defective, introns stay in the mature mRNA, often introducing premature stop codons or frameshifts → nonfunctional protein. Splicing defects cause diseases like spinal muscular atrophy and some forms of retinitis pigmentosa.`
           },
           {
             question: `RNA polymerase II does NOT require a primer, unlike DNA polymerase III, because:`,
-            options: [`RNA Pol II can initiate synthesis de novo by forming the first phosphodiester bond without a free 3'-OH`, `RNA Pol II uses a DNA primer instead`, `The TATA box serves as a primer`, `Transcription factors provide the 3'-OH`],
+            options: [`It can form the first phosphodiester bond without a free 3'-OH`, `It uses a short DNA primer made by primase instead`, `The TATA box supplies the free 3'-OH needed to begin`, `Transcription factors such as TFIID supply the starting 3'-OH`],
             correctAnswer: 0,
             explanation: `RNA polymerases have the unique ability to join two free NTPs without an existing 3'-OH group. DNA polymerases cannot do this — they require a pre-existing primer with a free 3'-OH. This fundamental difference is why primase (an RNA polymerase) is needed to start DNA replication.`
           },
           {
             question: `In prokaryotes, transcription and translation are coupled. This means:`,
-            options: [`Ribosomes begin translating the mRNA while RNA polymerase is still transcribing it`, `Transcription occurs in the nucleus and translation in the cytoplasm simultaneously`, `The same enzyme performs both transcription and translation`, `mRNA must be fully processed before translation can begin`],
+            options: [`Ribosomes begin translating mRNA while RNA polymerase still transcribes it`, `Transcription occurs in the nucleus and translation in the cytoplasm simultaneously`, `A single enzyme complex carries out both transcription and translation`, `mRNA must be fully capped and spliced before translation can begin`],
             correctAnswer: 0,
             explanation: `Prokaryotes lack a nucleus, so mRNA is immediately accessible to ribosomes. Ribosomes bind the 5' end of mRNA and begin translation while the 3' end is still being transcribed. This is impossible in eukaryotes because the nuclear envelope separates the two processes, and mRNA must be processed first.`
           }
@@ -116,13 +116,13 @@ $$\\text{Transcription} \\to \\text{Processing (cap, tail, splice)} \\to \\text{
         questions: [
           {
             question: `Rifampin is an effective antibiotic for tuberculosis because it:`,
-            options: [`Inhibits bacterial RNA polymerase without affecting eukaryotic RNA polymerases`, `Blocks DNA replication in both bacteria and human cells`, `Prevents mRNA splicing in bacteria`, `Inhibits bacterial ribosome function`],
+            options: [`Blocks bacterial RNA polymerase but not the eukaryotic enzymes`, `Blocks DNA gyrase, halting DNA replication in bacterial cells`, `Binds the 30S ribosomal subunit and blocks aminoacyl-tRNA entry`, `Inhibits RNA polymerase equally in bacteria and in human cells`],
             correctAnswer: 0,
             explanation: `Rifampin specifically binds the beta subunit of bacterial RNA polymerase, blocking transcription. Eukaryotic RNA polymerases are structurally different and not affected → selective toxicity. This is the basis of rifampin's use in TB treatment (often combined with isoniazid, ethambutol, and pyrazinamide).`
           },
           {
             question: `Alternative splicing allows:`,
-            options: [`One gene to produce multiple different proteins by including different combinations of exons`, `Multiple genes to produce one protein`, `Introns to be translated into protein`, `The same mRNA to be translated by different ribosomes`],
+            options: [`One gene to yield several proteins from different exon sets`, `Several different genes to be joined into a single mRNA`, `One mRNA to be read in several different reading frames`, `One mRNA to be translated by several ribosomes at once`],
             correctAnswer: 0,
             explanation: `By selectively including or excluding certain exons during splicing, one pre-mRNA can generate multiple mature mRNAs → multiple protein isoforms. This is tissue-specific (e.g., the calcitonin gene produces calcitonin in thyroid cells but CGRP in neurons through alternative splicing).`
           }

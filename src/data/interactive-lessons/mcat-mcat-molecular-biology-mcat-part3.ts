@@ -64,21 +64,21 @@ The 3rd base of a codon has "relaxed" base-pairing rules:
         questions: [
           {
             question: `An antibiotic that specifically binds the 50S ribosomal subunit would selectively inhibit:`,
-            options: [`Bacterial translation — bacteria have 70S ribosomes (50S + 30S)`, `Human cell translation — humans have 80S ribosomes (60S + 40S)`, `Both bacterial and human translation equally`, `DNA replication in bacteria`],
+            options: [`Bacterial translation, since bacteria have 70S ribosomes`, `Human translation, since human ribosomes contain a 60S subunit`, `Bacterial and human translation to the same extent`, `Bacterial transcription by the RNA polymerase core enzyme`],
             correctAnswer: 0,
             explanation: `Bacterial ribosomes (70S = 50S + 30S) are structurally different from eukaryotic ribosomes (80S = 60S + 40S). Antibiotics targeting 50S (chloramphenicol, erythromycin, clindamycin, linezolid) affect only bacteria. Note: mitochondria also have 70S ribosomes, explaining some antibiotic side effects.`
           },
           {
             question: `The peptidyl transferase that catalyzes peptide bond formation is remarkable because:`,
-            options: [`It is made of rRNA, not protein — making the ribosome a ribozyme`, `It requires ATP for each peptide bond`, `It can only work at the A site`, `It is a protein enzyme encoded by a viral gene`],
+            options: [`It is rRNA, not protein, so the ribosome is a ribozyme`, `It is a protein enzyme encoded in the mitochondrial genome`, `It hydrolyzes GTP to power each new peptide bond`, `It is a small-subunit protein that also decodes the mRNA`],
             correctAnswer: 0,
             explanation: `The peptidyl transferase activity resides in the 23S rRNA (in bacteria) or 28S rRNA (in eukaryotes) of the large subunit. The ribosome is therefore a ribozyme — an RNA enzyme. This supports the "RNA World" hypothesis that RNA catalysts preceded protein enzymes.`
           },
           {
-            question: `A point mutation changes the anticodon of a tRNA from 3'-UAC-5' to 3'-UAU-5'. This tRNA will now:`,
-            options: [`Deliver its amino acid in response to a different mRNA codon, potentially causing a missense-like error`, `Be unable to bind any codon`, `Function normally because of wobble`, `Deliver a different amino acid`],
+            question: `A point mutation changes the anticodon of a tRNA from 3'-UAC-5' to 3'-UGC-5'. Assuming it is still charged with its usual amino acid, this tRNA will now:`,
+            options: [`Deliver its usual amino acid in response to a different codon`, `Carry a new amino acid that matches its altered anticodon`, `Be unable to pair with any mRNA codon at the A site`, `Cause a frameshift by pairing with only two codon bases`],
             correctAnswer: 0,
-            explanation: `The tRNA still carries the same amino acid (aminoacyl-tRNA synthetase recognizes the tRNA body, not just the anticodon). But the altered anticodon now recognizes a different mRNA codon → wrong amino acid at that position. This would cause a missense-like error at every instance of the new codon. Note: the amino acid loaded on the tRNA does NOT change.`
+            explanation: `As the stem specifies, the tRNA still carries its original amino acid. (In real cells, some synthetases, including the one for tRNA-Met, do read the anticodon, so such a mutation could also impair charging.) But the altered anticodon now recognizes a different mRNA codon → wrong amino acid at that position. This would cause a missense-like error at every instance of the new codon. Note: the amino acid loaded on the tRNA does NOT change.`
           }
         ]
       }
@@ -127,13 +127,13 @@ After translation, proteins must be properly modified and folded:
         questions: [
           {
             question: `Diphtheria toxin ADP-ribosylates EF-2 (eukaryotic elongation factor 2). This would:`,
-            options: [`Block translocation of the ribosome along mRNA, halting protein synthesis in human cells`, `Prevent tRNA charging`, `Block mRNA splicing`, `Inhibit DNA replication`],
+            options: [`Block ribosome translocation, halting translation in human cells`, `Block delivery of aminoacyl-tRNAs to the A site by EF-1`, `Prevent peptidyl transferase from forming peptide bonds`, `Block initiation by preventing small subunit binding to the cap`],
             correctAnswer: 0,
             explanation: `EF-2 (eukaryotic equivalent of prokaryotic EF-G) is essential for ribosome translocation along mRNA during elongation. ADP-ribosylation by diphtheria toxin inactivates EF-2 → translation stops → cell death. A single molecule of toxin can kill a cell because it catalytically modifies many EF-2 molecules.`
           },
           {
             question: `A researcher adds puromycin to a cell-free translation system. Puromycin structurally resembles aminoacyl-tRNA and enters the A site. The result is:`,
-            options: [`Premature chain termination — puromycin bonds to the peptide but cannot form the next peptide bond`, `Enhanced translation speed`, `Misreading of the genetic code`, `Blocking of initiation complex formation`],
+            options: [`Premature chain termination, releasing a truncated peptide`, `Readthrough of stop codons, producing lengthened proteins`, `Misreading of codons, inserting wrong amino acids into the chain`, `Blocking of initiation so no peptide bonds form at all`],
             correctAnswer: 0,
             explanation: `Puromycin mimics the aminoacyl end of tRNA. It enters the A site and forms a peptide bond with the growing chain. However, the resulting peptidyl-puromycin cannot undergo translocation or further elongation → premature release of a truncated polypeptide. Puromycin affects both prokaryotic and eukaryotic ribosomes.`
           }

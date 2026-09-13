@@ -55,19 +55,19 @@ Every cell has the same DNA, but a neuron looks and acts nothing like a liver ce
         questions: [
           {
             question: `In the lac operon, the presence of glucose AND lactose results in:`,
-            options: [`Low transcription — glucose keeps cAMP low, so CAP cannot fully activate the promoter`, `Maximum transcription of lac genes`, `Complete repression of lac genes`, `No effect from glucose on lac expression`],
+            options: [`Low transcription, because low cAMP leaves CAP inactive`, `Maximum transcription, because allolactose removes the repressor`, `No transcription, because the repressor stays bound to the operator`, `High transcription, because glucose raises cAMP levels`],
             correctAnswer: 0,
             explanation: `With lactose: repressor removed (allolactose binds it). But with glucose present: cAMP is LOW → CAP inactive → promoter only weakly active. Maximum expression requires: (1) lactose present (repressor off) AND (2) glucose absent (cAMP high → CAP-cAMP activates promoter). Glucose is the preferred carbon source.`
           },
           {
             question: `A drug that inhibits histone deacetylases (HDACs) would most likely cause:`,
-            options: [`Increased gene expression — DNA remains associated with acetylated (loose) histones`, `Decreased gene expression from tighter chromatin packaging`, `No effect on transcription`, `DNA methylation at CpG islands`],
+            options: [`Increased gene expression from more open, acetylated chromatin`, `Decreased gene expression from tighter chromatin packaging`, `Increased CpG methylation that silences nearby promoters`, `Decreased expression as histones gain positive charge`],
             correctAnswer: 0,
             explanation: `HDACs remove acetyl groups from histones → tighter chromatin → gene silencing. Inhibiting HDACs → histones stay acetylated → chromatin remains open (euchromatin) → increased transcription. HDAC inhibitors (e.g., vorinostat) are used as epigenetic cancer therapies to reactivate silenced tumor suppressor genes.`
           },
           {
             question: `The trp operon differs from the lac operon in that it is:`,
-            options: [`Repressible — it is normally ON and turned OFF when tryptophan accumulates`, `Inducible — it is normally OFF and turned ON by an inducer`, `Not regulated by a repressor protein`, `Only found in eukaryotic organisms`],
+            options: [`Repressible: normally ON, turned OFF when tryptophan builds up`, `Inducible: normally OFF, turned ON when tryptophan is present`, `Regulated only by CAP-cAMP activation, not by a repressor`, `Controlled by a repressor that is active without any corepressor`],
             correctAnswer: 0,
             explanation: `Trp operon is repressible: normally ON because the cell needs to make tryptophan. When trp accumulates, it acts as a corepressor — binding the inactive repressor, activating it, which then binds the operator to shut off transcription. Lac operon is inducible: normally OFF, turned ON by allolactose.`
           }
@@ -115,13 +115,13 @@ Every cell has the same DNA, but a neuron looks and acts nothing like a liver ce
         questions: [
           {
             question: `A female carrier of an X-linked recessive disorder shows mild symptoms in some tissues. This is best explained by:`,
-            options: [`Random X-inactivation — in some cells the normal X is inactivated, leaving only the mutant X active`, `The disorder is actually autosomal dominant`, `X-linked genes are expressed from both X chromosomes`, `The Y chromosome provides a backup copy`],
+            options: [`Random X-inactivation leaving only the mutant X active in some cells`, `Incomplete dominance of the mutant allele in every cell of the body`, `Both X chromosomes remaining active in all of her somatic cells`, `Inactivation of the mutant X in every cell during early development`],
             correctAnswer: 0,
             explanation: `X-inactivation is random in each cell. A female carrier has one normal and one mutant X. In cells where the normal X is inactivated (Barr body), only the mutant X is expressed → those cells show the disease phenotype. This mosaicism explains why some carriers have mild manifestations (manifesting carriers).`
           },
           {
             question: `Researchers find that a tumor suppressor gene has a normal DNA sequence but its promoter CpG island is heavily methylated. The gene is:`,
-            options: [`Epigenetically silenced — methylation blocks transcription without changing the DNA sequence`, `Mutated at the coding level`, `Overexpressed due to methylation enhancement`, `Deleted from the genome`],
+            options: [`Epigenetically silenced, with its DNA sequence left unchanged`, `Mutated in its coding sequence, producing a truncated protein`, `Overexpressed, since promoter methylation recruits activators`, `Silenced by deletion of the promoter region from the genome`],
             correctAnswer: 0,
             explanation: `This is epigenetic silencing: the DNA sequence is intact but methylation at the promoter prevents transcription factors from binding → gene is effectively "off." This is a common mechanism in cancer (e.g., BRCA1, MLH1 promoter methylation). Unlike mutations, epigenetic silencing is potentially reversible with demethylating agents (e.g., 5-azacytidine).`
           }

@@ -59,19 +59,19 @@ Prophase I is the longest and most complex phase:
         questions: [
           {
             question: `Crossing over occurs between:`,
-            options: [`Non-sister chromatids of homologous chromosomes during prophase I`, `Sister chromatids during prophase II`, `Homologous chromosomes during metaphase I`, `Non-homologous chromosomes during anaphase I`],
+            options: [`Non-sister chromatids of homologs during prophase I`, `Sister chromatids of one chromosome during prophase I`, `Non-sister chromatids of homologs during metaphase II`, `Non-homologous chromosomes paired during prophase I`],
             correctAnswer: 0,
             explanation: `Crossing over exchanges genetic material between non-sister chromatids of homologous chromosomes during prophase I, forming chiasmata. Sister chromatid exchange would not produce new combinations because sisters are genetically identical (before crossing over).`
           },
           {
             question: `After meiosis I but before meiosis II, a human cell contains:`,
-            options: [`23 chromosomes, each with 2 sister chromatids (1n, 2C)`, `46 chromosomes with 4C DNA content`, `23 chromosomes with 1C DNA content`, `46 chromosomes with 2C DNA content`],
+            options: [`23 chromosomes, 46 chromatids (1n, 2C)`, `46 chromosomes, 92 chromatids (2n, 4C)`, `23 chromosomes, 23 chromatids (1n, 1C)`, `46 chromosomes, 46 chromatids (2n, 2C)`],
             correctAnswer: 0,
             explanation: `Meiosis I is the reduction division: homologs separate, going from 2n to 1n. But sister chromatids are still joined, so each chromosome still has 2 chromatids (2C DNA). Meiosis II then separates sisters: 1n, 1C.`
           },
           {
             question: `Independent assortment generates diversity because:`,
-            options: [`Each bivalent orients randomly at metaphase I, giving $2^n$ possible gamete combinations`, `Chromosomes always segregate in the same pattern`, `Crossing over is required for it to work`, `It only occurs during meiosis II`],
+            options: [`Each homolog pair orients randomly at metaphase I`, `Homologs always segregate in the same fixed pattern`, `Crossing over at metaphase I swaps whole chromosomes`, `Linked genes on one chromosome always sort separately`],
             correctAnswer: 0,
             explanation: `At metaphase I, each bivalent (pair of homologs) independently chooses which pole to face. With 23 bivalents in humans: $2^{23} \\approx 8.4$ million possible combinations per gamete, even without crossing over. This is Mendel's Law of Independent Assortment.`
           }
@@ -121,13 +121,13 @@ The MCAT loves to test this:
         questions: [
           {
             question: `Nondisjunction during meiosis I produces:`,
-            options: [`Four abnormal gametes — all will have incorrect chromosome numbers`, `Two normal and two abnormal gametes`, `One abnormal gamete and three normal ones`, `No abnormal gametes if crossing over occurred`],
+            options: [`Four gametes, all with abnormal chromosome numbers`, `Two normal gametes and two with abnormal numbers`, `One gamete with an extra chromosome, three normal`, `Four normal gametes if crossing over has occurred`],
             correctAnswer: 0,
             explanation: `In meiosis I nondisjunction, both homologs go to one cell. After meiosis II: 2 gametes have an extra chromosome (n+1) and 2 are missing one (n-1). All 4 are abnormal. In meiosis II nondisjunction, only 2 of 4 gametes are affected.`
           },
           {
             question: `Female oocytes are arrested at prophase I until ovulation. This long arrest contributes to increased risk of aneuploidy in older mothers because:`,
-            options: [`Cohesin proteins holding sister chromatids together degrade over decades`, `DNA replication errors accumulate during the arrest`, `Spindle fibers become less elastic with age`, `The nuclear envelope becomes more permeable`],
+            options: [`Cohesin holding sister chromatids together degrades over time`, `DNA replication errors pile up during the long arrest`, `Spindle microtubules lose elasticity as the oocyte ages`, `The nuclear envelope grows leaky during decades of arrest`],
             correctAnswer: 0,
             explanation: `Oocytes can remain arrested in prophase I for 12-50+ years. During this time, cohesin complexes (which hold chromosomes together) gradually degrade. Weakened cohesion → increased chance of improper segregation → nondisjunction → aneuploid offspring (e.g., Down syndrome risk increases with maternal age).`
           }

@@ -61,21 +61,21 @@ $$\\text{Signal (ligand)} \\to \\text{Receptor} \\to \\text{Transduction (amplif
         questions: [
           {
             question: `Steroid hormones (like cortisol and testosterone) can directly activate genes because they:`,
-            options: [`Are lipid-soluble and cross the membrane to bind intracellular receptors that act as transcription factors`, `Bind to GPCRs and use cAMP as a second messenger`, `Activate receptor tyrosine kinases on the cell surface`, `Use IP$_3$ to release calcium from the ER`],
+            options: [`Diffuse in to bind receptors that act as transcription factors`, `Bind cell-surface GPCRs and use cAMP as a second messenger`, `Activate receptor tyrosine kinases at the plasma membrane`, `Enter through ion channels and bind DNA with no receptor`],
             correctAnswer: 0,
             explanation: `Steroids are derived from cholesterol (lipid-soluble). They diffuse through the membrane, bind cytoplasmic or nuclear receptors, and the hormone-receptor complex acts directly as a transcription factor. This is why steroid effects are slower (hours) but longer-lasting than peptide hormone effects.`
           },
           {
             question: `Cholera toxin permanently activates the G$_s$ subunit by preventing GTP hydrolysis. The primary cellular effect is:`,
-            options: [`Continuously elevated cAMP levels → excessive Cl$^-$ and water secretion into the intestine`, `Decreased cAMP and reduced secretion`, `Activation of phospholipase C and IP$_3$ production`, `Blocking of all G-protein signaling`],
+            options: [`Persistently high cAMP, driving Cl$^-$ and water secretion`, `Low cAMP from locked adenylyl cyclase, reducing secretion`, `Activation of phospholipase C, raising IP$_3$ and Ca$^{2+}$`, `Blocking of all G-protein signaling in intestinal cells`],
             correctAnswer: 0,
             explanation: `G$_s$ normally activates adenylyl cyclase, raising cAMP. Cholera toxin ADP-ribosylates G$_s\\alpha$, preventing GTP hydrolysis → G$_s$ stays permanently ON → cAMP stays high → CFTR chloride channels open → massive Cl$^-$ and water secretion → severe watery diarrhea. Pertussis toxin does the opposite: locks G$_i$ in the OFF state.`
           },
           {
             question: `Insulin binds to a receptor tyrosine kinase (RTK). The first step after ligand binding is:`,
-            options: [`Receptor dimerization and autophosphorylation of tyrosine residues`, `Activation of a G-protein`, `Opening of an ion channel`, `Release of cAMP from adenylyl cyclase`],
+            options: [`Tyrosine autophosphorylation within the receptor dimer`, `Activation of a heterotrimeric G-protein by GDP release`, `Opening of an ion channel within the receptor itself`, `Recruitment of IRS-1 before any tyrosines are phosphorylated`],
             correctAnswer: 0,
-            explanation: `RTK mechanism: ligand binding → receptor dimerization → each receptor phosphorylates the other's tyrosine residues (autophosphorylation). Phosphotyrosines recruit adapter proteins (like IRS-1 for insulin) → activate Ras → MAPK cascade → gene expression. RTKs do NOT use G-proteins.`
+            explanation: `RTK mechanism: ligand binding brings the kinase domains together. Most RTKs do this by dimerizing; the insulin receptor is already a disulfide-linked dimer, so insulin binding instead triggers a conformational change. Each half then phosphorylates the other's tyrosine residues (autophosphorylation). Phosphotyrosines recruit adapter proteins (like IRS-1 for insulin) → PI3K/Akt (GLUT4 translocation) and Ras → MAPK (gene expression). RTKs do NOT use heterotrimeric G-proteins.`
           }
         ]
       }
@@ -125,15 +125,15 @@ Cells can turn down signaling when overstimulated:
         questions: [
           {
             question: `Caffeine inhibits phosphodiesterase (PDE). This leads to:`,
-            options: [`Prolonged cAMP signaling because PDE normally breaks down cAMP`, `Decreased cAMP because PDE produces cAMP`, `Increased IP$_3$ signaling`, `Blocked G-protein activation`],
+            options: [`Prolonged cAMP signaling, since PDE normally degrades cAMP`, `Lower cAMP levels, since PDE is what synthesizes cAMP`, `Increased IP$_3$ signaling from activated phospholipase C`, `Reduced PKA activity as cAMP is hydrolyzed faster`],
             correctAnswer: 0,
-            explanation: `PDE breaks down cAMP → AMP (terminating the signal). When caffeine inhibits PDE, cAMP accumulates → PKA stays active longer → sustained fight-or-flight effects (increased heart rate, alertness). This is the same principle behind Viagra inhibiting PDE5 (cGMP accumulates → vasodilation).`
+            explanation: `PDE breaks down cAMP → AMP (terminating the signal). When caffeine inhibits PDE, cAMP accumulates → PKA stays active longer → sustained PKA signaling (at typical doses, caffeine's stimulant effect comes mainly from adenosine receptor antagonism). This is the same principle behind Viagra inhibiting PDE5 (cGMP accumulates → vasodilation).`
           },
           {
             question: `A mutation causes a receptor tyrosine kinase to dimerize and autophosphorylate even without ligand binding. This would most likely cause:`,
-            options: [`Uncontrolled cell growth — constitutive activation of growth signaling pathways`, `Cell death from excessive apoptosis signaling`, `No effect because the receptor still needs downstream proteins`, `Decreased sensitivity to growth factors`],
+            options: [`Uncontrolled cell growth from constant growth signaling`, `Cell death from excessive pro-apoptotic signaling`, `No effect, since downstream proteins still need the ligand`, `Decreased sensitivity to growth factors in the cell`],
             correctAnswer: 0,
-            explanation: `Constitutively active RTKs signal growth continuously, even without growth factor present. This is exactly what happens with oncogenic mutations in HER2 (breast cancer) and EGFR (lung cancer). Anti-cancer drugs like trastuzumab (Herceptin) and erlotinib target these overactive RTKs.`
+            explanation: `Constitutively active RTKs signal growth continuously, even without growth factor present. This is exactly what happens with HER2 gene amplification (breast cancer) and activating EGFR mutations (lung cancer). Anti-cancer drugs like trastuzumab (Herceptin) and erlotinib target these overactive RTKs.`
           }
         ]
       }

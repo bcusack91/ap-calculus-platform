@@ -53,19 +53,19 @@ Apoptosis is an **orderly, energy-requiring** process — fundamentally differen
         questions: [
           {
             question: `A cancer cell overexpresses Bcl-2 protein. The most direct effect is:`,
-            options: [`Resistance to apoptosis — Bcl-2 prevents cytochrome c release from mitochondria`, `Increased apoptosis due to enhanced caspase activity`, `Arrested cell cycle at G$_1$/S checkpoint`, `Increased sensitivity to death receptor ligands`],
+            options: [`Resistance to apoptosis by blocking cytochrome c release`, `Increased apoptosis from enhanced caspase-9 activation`, `Arrest of the cell cycle at the G$_1$/S checkpoint`, `Increased sensitivity to Fas death receptor ligands`],
             correctAnswer: 0,
             explanation: `Bcl-2 is anti-apoptotic — it stabilizes the outer mitochondrial membrane, preventing Bax/Bak from forming pores and blocking cytochrome c release. This blocks the intrinsic apoptotic pathway. Overexpression in follicular lymphoma (due to t(14;18) translocation) prevents B-cell apoptosis → lymphoma.`
           },
           {
             question: `During apoptosis, phosphatidylserine (PS) appears on the outer leaflet of the plasma membrane. The function of this is:`,
-            options: [`An "eat me" signal that marks the cell for phagocytic removal`, `To increase membrane fluidity for cell division`, `To activate intracellular caspases`, `To release cytochrome c from mitochondria`],
+            options: [`An "eat me" signal marking the cell for phagocytosis`, `A signal that recruits neutrophils to trigger inflammation`, `A trigger that activates intracellular caspases`, `A way to increase membrane fluidity for blebbing`],
             correctAnswer: 0,
             explanation: `PS is normally kept on the inner leaflet by flippases. During apoptosis, scramblases expose PS on the outer surface. Macrophages have PS receptors and recognize this as an "eat me" signal → phagocytosis of apoptotic bodies without inflammation. This is why apoptosis does not trigger an immune response.`
           },
           {
             question: `A researcher observes DNA fragmented into a distinct ladder pattern of ~180 bp repeats on gel electrophoresis. This indicates:`,
-            options: [`Apoptosis — endonucleases cut between nucleosomes at regular ~180 bp intervals`, `Necrosis — random DNA degradation`, `Normal DNA replication`, `Viral infection causing random DNA breaks`],
+            options: [`Apoptosis, with cuts between nucleosomes`, `Necrosis, with random DNA degradation`, `Viral infection causing random DNA breaks`, `Restriction enzyme cutting at specific sites`],
             correctAnswer: 0,
             explanation: `During apoptosis, caspase-activated DNase (CAD) cleaves DNA between nucleosomes. Since DNA wraps around nucleosomes every ~180 bp, this creates a characteristic "ladder" pattern on gel electrophoresis. Necrotic DNA degradation is random and appears as a continuous smear, not a ladder.`
           }
@@ -117,13 +117,13 @@ Autophagy is distinct from apoptosis — it is a **survival mechanism**, not a d
         questions: [
           {
             question: `A cell deprived of growth factors for an extended period activates the intrinsic apoptotic pathway. The key mitochondrial event that initiates the caspase cascade is:`,
-            options: [`Release of cytochrome c into the cytoplasm through Bax/Bak pores`, `ATP production ceases in the mitochondria`, `Mitochondrial DNA is degraded`, `The outer mitochondrial membrane fuses with the ER`],
+            options: [`Release of cytochrome c to the cytoplasm via Bax/Bak pores`, `Release of Bcl-2 into the cytoplasm to activate caspases`, `Loss of ATP synthesis, which directly activates caspases`, `Degradation of mitochondrial DNA by activated caspase-3`],
             correctAnswer: 0,
             explanation: `Without growth factor survival signals, pro-apoptotic Bax and Bak oligomerize in the outer mitochondrial membrane, forming pores. Cytochrome c (normally in the intermembrane space for the ETC) leaks out into the cytoplasm → binds Apaf-1 → forms the apoptosome → activates caspase-9 → caspase-3 → cell death.`
           },
           {
             question: `During T cell development in the thymus, T cells that strongly react to self-antigens undergo apoptosis. This process is called:`,
-            options: [`Negative selection — eliminating self-reactive T cells to prevent autoimmunity`, `Positive selection — choosing T cells that recognize self-MHC`, `Clonal expansion — proliferating antigen-specific cells`, `Anergy — rendering T cells unresponsive`],
+            options: [`Negative selection, eliminating self-reactive T cells`, `Positive selection, keeping T cells that recognize self-MHC`, `Clonal expansion, proliferating antigen-specific T cells`, `Peripheral anergy, leaving self-reactive cells unresponsive`],
             correctAnswer: 0,
             explanation: `Negative selection occurs in the thymic medulla: T cells that bind self-antigens too strongly are eliminated by apoptosis. This is clonal deletion — a key mechanism of central tolerance. Failure of negative selection → self-reactive T cells escape → autoimmune disease. Positive selection (in the cortex) eliminates T cells that cannot recognize self-MHC at all.`
           }

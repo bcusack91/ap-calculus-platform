@@ -71,19 +71,19 @@ export const mcatCellBioPart3Data = {
         questions: [
           {
             question: `A cell has 46 chromosomes in G$_1$. After S phase but before mitosis, it has:`,
-            options: [`46 chromosomes, each with 2 sister chromatids (92 chromatids, 4C DNA content)`, `92 chromosomes and 4C DNA content`, `23 chromosomes with 2C DNA content`, `46 chromosomes with 2C DNA content`],
+            options: [`46 chromosomes, 92 chromatids, 4C DNA content`, `92 chromosomes, 92 chromatids, 4C DNA content`, `46 chromosomes, 46 chromatids, 2C DNA content`, `23 chromosomes, 46 chromatids, 2C DNA content`],
             correctAnswer: 0,
             explanation: `DNA replicates in S phase, doubling DNA content (2C → 4C). However, sister chromatids are joined at the centromere, so chromosome count stays at 46. Each chromosome now consists of 2 identical sister chromatids = 92 total chromatids. They only become separate chromosomes when the centromere splits in anaphase.`
           },
           {
             question: `Loss of p53 function would most directly affect:`,
-            options: [`The G$_1$/S checkpoint — damaged DNA would not trigger cell cycle arrest or apoptosis`, `Chromosome condensation during prophase`, `Cytokinesis and cleavage furrow formation`, `Spindle fiber attachment to kinetochores`],
+            options: [`The G$_1$/S checkpoint response to DNA damage`, `Chromosome condensation during prophase`, `The spindle checkpoint at kinetochore attachment`, `Cytokinesis and cleavage furrow formation`],
             correctAnswer: 0,
             explanation: `p53 is the "guardian of the genome." When DNA damage is detected, p53 activates p21 (a CDK inhibitor) to arrest the cell at G$_1$/S. p53 can also trigger apoptosis if damage is irreparable. Loss of p53 → cells with damaged DNA continue dividing → accumulate mutations → cancer.`
           },
           {
             question: `Maturation Promoting Factor (MPF) consists of:`,
-            options: [`Cyclin B + CDK1 — it triggers entry into mitosis at the G$_2$/M checkpoint`, `Cyclin D + CDK4 — it responds to growth factors`, `p53 + p21 — they arrest the cell cycle`, `Cohesin + condensin — they organize chromosomes`],
+            options: [`Cyclin B + CDK1, triggering entry into mitosis`, `Cyclin D + CDK4, responding to growth factors in G$_1$`, `Cyclin E + CDK2, triggering entry into S phase`, `p53 + p21, arresting the cycle at G$_1$/S`],
             correctAnswer: 0,
             explanation: `MPF = Cyclin B + CDK1. As cyclin B accumulates during G$_2$, it activates CDK1, which phosphorylates proteins needed for mitotic entry: nuclear lamins (envelope breakdown), condensins (chromosome condensation), and histones. MPF activity peaks at metaphase and drops sharply when cyclin B is degraded by the APC/C complex.`
           }
@@ -127,13 +127,13 @@ This is one of the most tested MCAT topics in cell biology. Understand the analo
         questions: [
           {
             question: `A mutation in the Ras gene that prevents GTP hydrolysis would:`,
-            options: [`Keep Ras permanently active, continuously stimulating cell division (oncogene)`, `Permanently inactivate Ras`, `Have no effect because Ras is a tumor suppressor`, `Block DNA replication at the S phase`],
+            options: [`Keep Ras constantly active, driving continuous division`, `Lock Ras in the inactive GDP-bound state, halting growth`, `Have no effect, because Ras acts as a tumor suppressor`, `Keep Ras active only while growth factor stays bound`],
             correctAnswer: 0,
             explanation: `Ras is a G-protein that cycles between active (GTP-bound) and inactive (GDP-bound) states. If it cannot hydrolyze GTP, it stays permanently active → continuous growth signaling → uncontrolled cell division. This is a gain-of-function mutation making Ras an oncogene. Ras mutations are found in ~30% of all human cancers.`
           },
           {
             question: `According to the two-hit hypothesis, tumor suppressor genes require:`,
-            options: [`Both alleles to be inactivated before tumor suppression is lost`, `Only one allele to be mutated (dominant mutation)`, `Amplification of the gene`, `A point mutation in the promoter region only`],
+            options: [`Both alleles to be inactivated before suppression is lost`, `Only one mutant allele, since the mutation acts dominantly`, `Gene amplification that raises copy number in the cell`, `Two hits within the same allele before function is lost`],
             correctAnswer: 0,
             explanation: `Knudson's two-hit hypothesis: one functional copy of a tumor suppressor is sufficient to prevent cancer (haplosufficient). Both copies must be lost — by mutation, deletion, or epigenetic silencing. In hereditary cancers (e.g., retinoblastoma), one hit is inherited and only one somatic mutation is needed → earlier onset.`
           }

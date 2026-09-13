@@ -54,19 +54,19 @@ Each new double helix has one old strand and one new strand (proven by the **Mes
         questions: [
           {
             question: `DNA polymerase III requires a primer because it:`,
-            options: [`Can only add nucleotides to an existing 3'-OH group — it cannot initiate synthesis de novo`, `Needs a template strand to read the sequence`, `Can only work in the 3' to 5' direction`, `Uses exclusively RNA nucleotides for synthesis`],
+            options: [`Can only extend a pre-existing 3'-OH; it cannot start a chain`, `Can only synthesize in the 3' to 5' direction along the new strand`, `Cannot unwind the double helix until a primer is bound`, `Uses only ribonucleotides, so an RNA primer must supply them`],
             correctAnswer: 0,
             explanation: `DNA Pol III adds deoxyribonucleotides to the free 3'-OH of a pre-existing strand. Primase (an RNA polymerase) provides a short RNA primer with a free 3'-OH to initiate synthesis. Note: RNA polymerase does NOT need a primer — it can start de novo. This is a frequently tested distinction.`
           },
           {
             question: `Okazaki fragments are found on the lagging strand because:`,
-            options: [`DNA Pol III can only synthesize 5' to 3', but the lagging template runs 5' to 3' toward the fork`, `The leading strand replicates faster`, `Ligase only works on the lagging strand`, `Helicase unwinds DNA unevenly`],
+            options: [`Pol III builds only 5' to 3', which runs away from the fork on this strand`, `Helicase unwinds the lagging strand in short bursts, not continuously`, `Primase cannot bind the lagging strand, so Pol I fills short gaps`, `Ligase acts only on the lagging strand, cutting it into short pieces`],
             correctAnswer: 0,
             explanation: `DNA Pol III synthesizes only 5' → 3'. On the lagging strand, the template runs 5' → 3' pointing toward the fork, so synthesis must proceed AWAY from the fork in short fragments. Each fragment needs a new primer from primase. Ligase then joins adjacent Okazaki fragments after Pol I removes the primers.`
           },
           {
             question: `Fluoroquinolone antibiotics inhibit bacterial gyrase (a type II topoisomerase). This would:`,
-            options: [`Prevent relief of supercoiling ahead of the replication fork, stalling replication`, `Block RNA primer synthesis`, `Prevent Okazaki fragment joining`, `Inhibit base pairing between complementary strands`],
+            options: [`Prevent relief of supercoiling ahead of the fork, stalling replication`, `Block primase from laying down RNA primers on the lagging strand`, `Prevent ligase from sealing nicks between Okazaki fragments`, `Inhibit removal of RNA primers by the 5' to 3' exonuclease of Pol I`],
             correctAnswer: 0,
             explanation: `As helicase unwinds DNA, the unreplicated region ahead becomes overwound (positive supercoiling). Gyrase/topoisomerase relieves this by cutting, rotating, and rejoining the DNA. Without gyrase, supercoiling tension builds → fork cannot advance → replication stalls → bacterial death. Human topoisomerases are different enough to avoid toxicity.`
           }
@@ -112,13 +112,13 @@ Each new double helix has one old strand and one new strand (proven by the **Mes
         questions: [
           {
             question: `Telomerase is a reverse transcriptase. This means it:`,
-            options: [`Uses an RNA template to synthesize DNA, extending the 3' end of the chromosome`, `Synthesizes RNA from a DNA template`, `Repairs damaged telomere DNA using DNA as a template`, `Cleaves telomeric repeats from chromosome ends`],
+            options: [`Uses an RNA template to make DNA, extending the 3' overhang`, `Uses a DNA template to synthesize RNA repeats at telomeres`, `Uses the opposite DNA strand as a template to rebuild lost repeats`, `Removes RNA primers from chromosome ends and replaces them with DNA`],
             correctAnswer: 0,
             explanation: `Telomerase carries its own RNA template complementary to the telomeric repeat (TTAGGG). It reverse-transcribes this RNA → DNA, extending the 3' overhang. DNA polymerase can then fill in the complementary strand. Cancer cells reactivate telomerase to achieve immortality — this is a major chemotherapy target.`
           },
           {
             question: `AZT (azidothymidine) treats HIV by acting as a nucleoside analog. It terminates the growing DNA chain because:`,
-            options: [`It lacks a 3'-OH group, so no further nucleotides can be added`, `It is incorporated faster than normal nucleotides`, `It causes DNA strand breaks`, `It inhibits helicase from unwinding viral DNA`],
+            options: [`It lacks a 3'-OH, so no further nucleotides can be added`, `It is incorporated faster than thymidine and crowds it out`, `It crosslinks the two DNA strands so they cannot separate`, `It inhibits helicase so the viral DNA cannot be unwound`],
             correctAnswer: 0,
             explanation: `AZT is a thymidine analog with an azido group instead of 3'-OH. After incorporation by reverse transcriptase, there is no 3'-OH for the next nucleotide → chain termination. This specifically targets reverse transcriptase (HIV) and not human DNA polymerases, though mitochondrial DNA Pol gamma can be affected (side effects).`
           }

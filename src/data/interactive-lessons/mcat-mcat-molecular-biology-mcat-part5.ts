@@ -51,19 +51,19 @@ export const mcatMolBioPart5Data = {
         questions: [
           {
             question: `A single nucleotide deletion in the second codon of an mRNA would:`,
-            options: [`Cause a frameshift — every codon downstream is altered, likely producing a nonfunctional protein`, `Change only the second amino acid`, `Have no effect due to genetic code degeneracy`, `Only affect amino acids near the deletion`],
+            options: [`Shift the reading frame, altering every codon downstream`, `Alter only the codons within a few bases of the deletion`, `Have no effect, because the genetic code is degenerate`, `Remove one amino acid, leaving the rest of the protein intact`],
             correctAnswer: 0,
             explanation: `A single deletion (not a multiple of 3) shifts the reading frame by one nucleotide. Every triplet codon downstream is now read differently → every amino acid from that point on is wrong → almost certainly nonfunctional protein, often with a premature stop codon.`
           },
           {
             question: `In sickle cell disease, the mutation is GAG → GUG in the beta-globin gene. This is classified as a:`,
-            options: [`Non-conservative missense mutation — Glu (charged, hydrophilic) is replaced by Val (nonpolar, hydrophobic)`, `Conservative missense mutation`, `Nonsense mutation creating a premature stop codon`, `Silent mutation with no functional consequences`],
+            options: [`Non-conservative missense: charged Glu is replaced by nonpolar Val`, `Conservative missense: one nonpolar residue swapped for another`, `Nonsense mutation that creates a premature stop codon`, `Silent mutation, since both codons encode similar residues`],
             correctAnswer: 0,
             explanation: `Glu (glutamic acid) is negatively charged and hydrophilic. Val (valine) is nonpolar and hydrophobic. This dramatic chemical change causes hemoglobin S to polymerize under low O$_2$ conditions → sickle-shaped RBCs. This is the classic example of how a single amino acid change can cause devastating disease.`
           },
           {
             question: `A patient with xeroderma pigmentosum (XP) has extreme UV sensitivity because they lack:`,
-            options: [`Nucleotide excision repair (NER) — the pathway that fixes UV-induced thymine dimers`, `Mismatch repair ability`, `Proofreading by DNA polymerase`, `Base excision repair capacity`],
+            options: [`Nucleotide excision repair, which removes thymine dimers`, `Mismatch repair, which fixes errors missed by proofreading`, `Base excision repair, which removes single damaged bases`, `Proofreading by the 3' to 5' exonuclease of DNA polymerase`],
             correctAnswer: 0,
             explanation: `UV light causes cyclobutane thymine dimers (covalent links between adjacent thymines). NER normally excises a ~24-32 nucleotide patch around the dimer and resynthesizes the segment. Without NER, thymine dimers accumulate → replication errors → skin cancer at very young ages. XP patients must avoid all UV exposure.`
           }
@@ -117,13 +117,13 @@ p53 is the central hub connecting DNA damage to cell fate:
         questions: [
           {
             question: `The Ames test detects mutagens by measuring:`,
-            options: [`Reversion of his-minus bacteria to his-plus (ability to grow without histidine)`, `DNA damage visible on gel electrophoresis`, `Cell death rate in treated bacteria`, `Antibiotic resistance development`],
+            options: [`Reversion of his-minus bacteria to growth without histidine`, `Breakage of bacterial DNA seen as smears on an agarose gel`, `The death rate of bacteria exposed to the test compound`, `Emergence of antibiotic resistance in treated bacterial colonies`],
             correctAnswer: 0,
             explanation: `The Ames test uses Salmonella his$^-$ mutants that cannot grow without histidine. A mutagen causes reversion mutations (his$^-$ → his$^+$) → bacteria can now synthesize histidine → colony growth on histidine-free plates. More colonies = stronger mutagen. Results correlate strongly with carcinogenicity because most carcinogens are mutagens.`
           },
           {
             question: `Homologous recombination repair of double-strand breaks is more accurate than NHEJ because:`,
-            options: [`It uses the sister chromatid as a template, providing an error-free copy for repair`, `It is faster than NHEJ`, `It does not require any enzymatic activity`, `It only occurs during G$_1$ phase`],
+            options: [`It copies the intact sister chromatid as a repair template`, `It directly rejoins the broken ends without trimming them`, `It works mainly in G$_1$, before replication can add errors`, `It uses reverse transcriptase to rebuild the missing sequence`],
             correctAnswer: 0,
             explanation: `Homologous recombination (HR) uses the intact sister chromatid as a template to faithfully repair the break → high fidelity. NHEJ directly ligates the broken ends without a template → nucleotides may be lost or added → error-prone. HR is only available in S/G$_2$ phase (when a sister chromatid exists). BRCA1/BRCA2 are essential for HR — their loss forces reliance on error-prone NHEJ → genomic instability → cancer.`
           }

@@ -56,21 +56,21 @@ Southern = DNA, Northern = RNA, Western = Protein → **S**NoW **DR**o**P**
         questions: [
           {
             question: `After 20 cycles of PCR starting from one template molecule, approximately how many copies are produced?`,
-            options: [`About one million ($2^{20} \\approx 10^6$)`, `20 copies (one per cycle)`, `40 copies (two per cycle)`, `200 copies`],
+            options: [`About one million ($2^{20} \\approx 10^6$)`, `About 400 ($20^2$, squaring the cycle count)`, `About 40 (two new copies per cycle)`, `About one billion ($2^{30} \\approx 10^9$)`],
             correctAnswer: 0,
             explanation: `PCR doubles the target DNA each cycle: $2^{20} = 1{,}048{,}576 \\approx 10^6$ copies. This exponential amplification from even a single molecule is why PCR is used in forensics, paternity testing, viral detection, and ancient DNA analysis.`
           },
           {
             question: `A researcher wants to detect a specific mRNA in tissue samples. The appropriate technique is:`,
-            options: [`Northern blot — separates RNA by size and detects with a complementary probe`, `Southern blot — detects DNA`, `Western blot — detects protein`, `PCR — amplifies DNA, not RNA directly`],
+            options: [`Northern blot, which probes size-separated RNA`, `Southern blot, which probes size-separated DNA`, `Western blot, which probes proteins with antibodies`, `Standard PCR with Taq polymerase directly on the RNA`],
             correctAnswer: 0,
             explanation: `Northern blot: extract total RNA → separate by gel electrophoresis → transfer to membrane → hybridize with labeled probe complementary to the target mRNA. Southern = DNA, Northern = RNA, Western = Protein (SNoW DRoP). Note: RT-PCR could also detect mRNA by first converting to cDNA.`
           },
           {
             question: `Taq polymerase is used in PCR instead of human DNA polymerase because:`,
-            options: [`It is heat-stable and survives the 95°C denaturation step without denaturing`, `It is more accurate than human polymerase`, `It works at room temperature`, `It does not require primers`],
+            options: [`It is heat-stable and survives the 95°C denaturation step`, `It proofreads more accurately than human DNA polymerase`, `It works best at room temperature, simplifying the reaction`, `It can start new strands without needing any primers`],
             correctAnswer: 0,
-            explanation: `Taq polymerase is from *Thermus aquaticus*, a thermophilic bacterium from hot springs. It remains active at 95°C (the denaturation step). Human DNA polymerase would be denatured and destroyed at this temperature. Note: Taq LACKS proofreading (no 3'→5' exonuclease) → higher error rate. For high-fidelity PCR, Pfu polymerase (with proofreading) is used.`
+            explanation: `Taq polymerase is from *Thermus aquaticus*, a thermophilic bacterium from hot springs. It remains stable through repeated 95°C denaturation steps. Human DNA polymerase would be denatured and destroyed at this temperature. Note: Taq LACKS proofreading (no 3'→5' exonuclease) → higher error rate. For high-fidelity PCR, Pfu polymerase (with proofreading) is used.`
           }
         ]
       }
@@ -114,13 +114,13 @@ Southern = DNA, Northern = RNA, Western = Protein → **S**NoW **DR**o**P**
         questions: [
           {
             question: `Sanger DNA sequencing uses dideoxynucleotides (ddNTPs) because they:`,
-            options: [`Lack a 3'-OH group, causing chain termination at each position for fragment-length analysis`, `Are fluorescent and allow detection`, `Pair with any base for universal sequencing`, `Are more stable than normal nucleotides`],
+            options: [`Lack a 3'-OH, so each incorporation terminates the chain`, `Pair with any of the four bases, allowing universal reading`, `Are more stable than dNTPs at high sequencing temperatures`, `Cause polymerase to stall until a dNTP displaces them`],
             correctAnswer: 0,
             explanation: `ddNTPs lack the 3'-OH needed for the next phosphodiester bond → chain termination wherever a ddNTP is incorporated. By using all four ddNTPs (each labeled with a different fluorescent dye), you get fragments terminating at every position → gel electrophoresis separates by size → read the sequence from the gel pattern.`
           },
           {
             question: `A researcher wants to knock out a gene using CRISPR-Cas9. After Cas9 creates a double-strand break, the cell repairs it by NHEJ. This results in:`,
-            options: [`Insertions or deletions (indels) that disrupt the reading frame, inactivating the gene`, `Precise correction of the mutation`, `No change to the DNA sequence`, `Insertion of a new gene at the cut site`],
+            options: [`Small indels that often shift the frame and inactivate the gene`, `Precise correction of the mutation using the sister chromatid`, `Seamless rejoining that restores the original sequence every time`, `Insertion of a donor gene copied into the cut site`],
             correctAnswer: 0,
             explanation: `NHEJ is error-prone: it directly ligates broken ends, often inserting or deleting small numbers of nucleotides. If these indels are not multiples of 3, they cause a frameshift → premature stop codon → gene knockout. For precise editing (gene correction or insertion), homology-directed repair (HDR) with a donor template is used instead.`
           }

@@ -56,19 +56,19 @@ export const mcatCellBioPart7Data = {
         questions: [
           {
             question: `Cardiac muscle has intercalated discs primarily because they:`,
-            options: [`Contain gap junctions for electrical coupling, allowing synchronized heart contraction`, `Provide structural support to prevent cardiac hypertrophy`, `Store calcium for contraction`, `Allow the heart to regenerate damaged tissue`],
+            options: [`Contain gap junctions that electrically couple the cells`, `Contain tight junctions that seal the spaces between cells`, `Store calcium that is released to trigger contraction`, `Allow cardiac cells to divide and regenerate damaged tissue`],
             correctAnswer: 0,
             explanation: `Intercalated discs have gap junctions (allow ion flow for rapid electrical signal spread → synchronized contraction) and desmosomes (mechanical adhesion so cells don't pull apart). This makes the heart a functional syncytium — individual cells but acting as one coordinated unit.`
           },
           {
             question: `The alveoli of the lungs are lined with simple squamous epithelium because:`,
-            options: [`A single thin layer allows rapid gas exchange by diffusion`, `Multiple layers would provide better protection against infection`, `Columnar cells would be more efficient at gas exchange`, `Squamous cells can actively transport gases`],
+            options: [`A single thin layer allows rapid gas exchange by diffusion`, `Multiple layers would provide better protection against infection`, `Columnar cells would be more efficient at gas exchange`, `Squamous cells actively pump oxygen across the membrane`],
             correctAnswer: 0,
             explanation: `Gas exchange requires minimal distance for diffusion. Simple squamous epithelium is one cell thick and flat → shortest diffusion distance. This is also why capillaries have simple squamous endothelium. Fick's Law: diffusion rate is inversely proportional to membrane thickness.`
           },
           {
             question: `A patient with scurvy (vitamin C deficiency) has weakened connective tissue. This is because vitamin C is required for:`,
-            options: [`Hydroxylation of proline and lysine residues in collagen, which stabilizes the triple helix`, `Synthesis of elastin in blood vessel walls`, `Production of keratin in epithelial tissue`, `Assembly of actin microfilaments`],
+            options: [`Hydroxylation of proline and lysine residues in collagen`, `Cross-linking of elastin fibers in blood vessel walls`, `Glycosylation of collagen chains in the Golgi apparatus`, `Disulfide bonding of keratin in epithelial tissues`],
             correctAnswer: 0,
             explanation: `Collagen synthesis requires hydroxylation of proline → hydroxyproline and lysine → hydroxylysine (by prolyl and lysyl hydroxylase, which need vitamin C as a cofactor). Without hydroxylation, collagen cannot form stable triple helices → weak connective tissue → bleeding gums, poor wound healing, fragile blood vessels.`
           }
@@ -121,13 +121,13 @@ export const mcatCellBioPart7Data = {
         questions: [
           {
             question: `Tight junctions in intestinal epithelial cells function to:`,
-            options: [`Seal the space between cells, preventing paracellular leakage of gut contents into the blood`, `Allow electrical communication between adjacent cells`, `Anchor cells to the basement membrane`, `Provide mechanical strength to resist shearing forces`],
+            options: [`Seal the space between cells, blocking paracellular leakage`, `Allow ions to pass directly between adjacent cytoplasms`, `Anchor the basal surface of cells to the basement membrane`, `Provide mechanical strength to resist shearing forces`],
             correctAnswer: 0,
             explanation: `Tight junctions (claudins, occludins) form a seal near the apical surface of epithelial cells, creating a barrier that regulates what passes between cells (paracellular pathway). In the intestine, this prevents bacteria and undigested food from leaking into the blood. In the blood-brain barrier, tight junctions are exceptionally restrictive.`
           },
           {
             question: `Hematopoietic stem cells in bone marrow are classified as:`,
-            options: [`Multipotent — they can differentiate into all blood cell types but not non-blood cells`, `Totipotent — they can form any cell in the body`, `Pluripotent — they can form any of the three germ layers`, `Unipotent — they produce only one type of blood cell`],
+            options: [`Multipotent: they form all blood cell types but no others`, `Totipotent: they can form any cell, including placenta`, `Pluripotent: they can form cells of all three germ layers`, `Unipotent: they produce only one type of blood cell`],
             correctAnswer: 0,
             explanation: `Hematopoietic stem cells (HSCs) can differentiate into all blood cell lineages: RBCs, WBCs (neutrophils, lymphocytes, monocytes, etc.), and platelets. But they cannot become neurons, muscle, or other non-blood cells → multipotent. This is the basis of bone marrow transplants for leukemia treatment.`
           }

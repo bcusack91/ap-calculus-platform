@@ -70,31 +70,31 @@ Reverse transcriptase lacks proofreading ($3' \\to 5'$ exonuclease) activity, gi
         questions: [
           {
             question: `HIV is difficult to treat because:`,
-            options: [`Reverse transcriptase has no proofreading → high mutation rate → drug resistance`, `HIV has a DNA genome`, `Antibiotics kill HIV-infected cells`, `HIV only infects red blood cells`],
+            options: [`Error-prone reverse transcriptase lets drug resistance evolve fast`, `It has a double-stranded DNA genome that is hard to target`, `It infects only red blood cells, which lack drug transporters`, `Its protease is identical to human enzymes, so drugs are toxic`],
             correctAnswer: 0,
             explanation: `Reverse transcriptase lacks $3' \\to 5'$ exonuclease (proofreading) activity, producing a very high mutation rate. This lets HIV rapidly evolve resistance to single drugs, which is why combination therapy (HAART) is used.`
           },
           {
             question: `When cloning a human gene for expression in bacteria, researchers typically insert cDNA (made from mRNA) rather than the genomic DNA sequence. The main reason is that:`,
-            options: [`Bacteria lack the spliceosome, so they cannot remove introns present in genomic DNA — cDNA is already intron-free`, `Genomic DNA is too short to clone`, `cDNA replicates faster than genomic DNA`, `Bacteria destroy all double-stranded DNA`],
+            options: [`Bacteria cannot splice out introns, and cDNA lacks them`, `Genomic DNA is too short to insert into a plasmid vector`, `cDNA contains a bacterial promoter copied from the mRNA`, `Bacteria degrade genomic DNA but not DNA made from mRNA`],
             correctAnswer: 0,
             explanation: `Eukaryotic genes contain introns that must be spliced out, but bacteria have no spliceosome. cDNA is reverse-transcribed from mature, already-spliced mRNA, so it contains only exons (coding sequence) and yields functional protein in bacteria.`
           },
           {
             question: `Restriction enzymes that leave "sticky ends" are especially useful in molecular cloning because the single-stranded overhangs:`,
-            options: [`Are complementary, so an insert and vector cut with the same enzyme can base-pair and be ligated together`, `Prevent DNA ligase from acting`, `Permanently denature the DNA`, `Convert DNA into RNA`],
+            options: [`Are complementary, so ends cut by the same enzyme can anneal`, `Block DNA ligase, keeping insert and vector from rejoining`, `Are identical, so any two DNA fragments can pair with each other`, `Let the insert join the vector with no ligase needed at all`],
             correctAnswer: 0,
             explanation: `Sticky ends are short single-stranded overhangs. Cutting both the insert and the vector with the SAME enzyme generates complementary overhangs that base-pair by hydrogen bonding; DNA ligase then seals the backbone to create recombinant DNA.`
           },
           {
             question: `A bacteriophage integrates its DNA into the host chromosome and replicates passively along with the host genome for many generations without lysing the cell. This describes the:`,
-            options: [`Lysogenic cycle (the integrated viral DNA is a prophage)`, `Lytic cycle`, `Retroviral reverse transcription step`, `Prion conversion process`],
+            options: [`Lysogenic cycle (the integrated DNA is a prophage)`, `Lytic cycle (the phage DNA replicates independently)`, `Transduction (host genes are packaged into new phages)`, `Retroviral cycle (RNA is reverse-transcribed into DNA)`],
             correctAnswer: 0,
             explanation: `In the lysogenic cycle, viral DNA integrates into the host genome as a prophage and is copied with each host division without immediately killing the cell. Environmental stress can later trigger a switch to the lytic cycle (active replication and cell lysis).`
           },
           {
             question: `Prions are unique infectious agents because they:`,
-            options: [`Contain no nucleic acid — they are misfolded proteins that template the misfolding of normal proteins`, `Are a type of RNA virus`, `Replicate using reverse transcriptase`, `Are easily destroyed by routine autoclaving`],
+            options: [`Contain no nucleic acid and spread by templating misfolding`, `Are small RNA viruses that hide inside host protein coats`, `Carry DNA that they replicate using host reverse transcriptase`, `Are easily destroyed by routine autoclaving and alcohol`],
             correctAnswer: 0,
             explanation: `Prions are proteinaceous infectious particles with NO DNA or RNA. A misfolded prion protein induces normal copies of the same protein to misfold, propagating the pathogenic conformation. They are notoriously resistant to standard sterilization, unlike conventional pathogens.`
           }

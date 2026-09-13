@@ -53,19 +53,19 @@ Per ATP hydrolyzed: **3 Na$^+$ out, 2 K$^+$ in**
         questions: [
           {
             question: `A cell is placed in a hypertonic solution. The cell will:`,
-            options: [`Shrink (crenation) — water moves out by osmosis to the higher solute concentration`, `Swell and potentially lyse`, `Remain unchanged because the membrane is selectively permeable`, `Divide more rapidly due to osmotic stress`],
+            options: [`Shrink (crenate) as water moves out by osmosis`, `Swell and possibly lyse as water rushes in`, `Stay the same size, since only water can cross`, `Shrink as solutes flow out into the solution`],
             correctAnswer: 0,
             explanation: `Hypertonic = higher solute concentration outside. Water follows solute (moves out by osmosis) → cell shrinks. In RBCs this is called crenation. In plant cells, the membrane pulls away from the cell wall (plasmolysis).`
           },
           {
             question: `The Na$^+$/K$^+$ ATPase is considered electrogenic because:`,
-            options: [`It moves a net positive charge out of the cell (3 Na$^+$ out vs 2 K$^+$ in)`, `It requires ATP which carries electrical energy`, `It moves equal charges in both directions`, `It only transports positively charged ions`],
+            options: [`It moves net positive charge out (3 Na$^+$ out, 2 K$^+$ in)`, `It moves net positive charge in (2 Na$^+$ out, 3 K$^+$ in)`, `It moves equal charges in both directions per cycle`, `It moves net positive charge out (3 K$^+$ out, 2 Na$^+$ in)`],
             correctAnswer: 0,
             explanation: `3 Na$^+$ out, 2 K$^+$ in per ATP = net +1 charge moved outside per cycle. This contributes about $-$6 mV to the resting membrane potential. The remaining ~$-$64 mV comes mainly from K$^+$ leak channels (K$^+$ diffusing out down its concentration gradient).`
           },
           {
             question: `Glucose absorption in the small intestine uses Na$^+$-glucose symport (SGLT1). This is an example of:`,
-            options: [`Secondary active transport — glucose moves against its gradient using energy from the Na$^+$ gradient`, `Primary active transport using ATP directly`, `Simple diffusion through the membrane`, `Facilitated diffusion through a channel protein`],
+            options: [`Secondary active transport driven by the Na$^+$ gradient`, `Primary active transport powered by ATP hydrolysis at SGLT1`, `Facilitated diffusion, since glucose moves down its gradient`, `Antiport, since Na$^+$ and glucose move in opposite directions`],
             correctAnswer: 0,
             explanation: `SGLT1 is a symporter: Na$^+$ flows down its gradient (established by Na$^+$/K$^+$ ATPase) and glucose is co-transported against its gradient. The energy comes indirectly from ATP — hence "secondary" active transport. On the basolateral side, glucose exits via GLUT2 (facilitated diffusion).`
           }
@@ -114,13 +114,13 @@ $$E_{ion} = \\frac{61}{z} \\log \\frac{[ion]_{outside}}{[ion]_{inside}} \\text{ 
         questions: [
           {
             question: `A solution contains 300 mOsm of urea. A red blood cell (with normal intracellular osmolarity of 300 mOsm) is placed in this solution. The cell will:`,
-            options: [`Lyse — urea crosses the membrane, so it is effectively hypotonic`, `Crenate — the solution is hypertonic`, `Remain unchanged — the solution is isotonic`, `Initially shrink, then return to normal`],
+            options: [`Lyse, because urea enters so the solution acts hypotonic`, `Crenate, because the solution is hypertonic to the cell`, `Stay unchanged, because the solution is isosmotic to the cell`, `Shrink at first, then return to normal as urea enters`],
             correctAnswer: 0,
             explanation: `Urea freely crosses cell membranes, so it is a penetrating solute that does not contribute to tonicity. A 300 mOsm urea solution has an effective tonicity of 0 (hypotonic). Water enters the cell → hemolysis. This is why osmolarity and tonicity are NOT the same concept.`
           },
           {
             question: `In familial hypercholesterolemia, LDL receptor mutations lead to elevated blood cholesterol because:`,
-            options: [`Cells cannot internalize LDL via receptor-mediated endocytosis, so LDL accumulates in the blood`, `The liver produces excess cholesterol`, `LDL is converted to HDL at a slower rate`, `Bile acid synthesis is increased`],
+            options: [`Cells cannot take up LDL by receptor-mediated endocytosis`, `The liver secretes excess HDL that is converted into LDL`, `Mutant receptors convert LDL to HDL more slowly than normal`, `Cells take up LDL faster but release the cholesterol back`],
             correctAnswer: 0,
             explanation: `LDL receptors on cell surfaces normally bind LDL, triggering clathrin-mediated endocytosis. Without functional receptors, LDL cannot be cleared from the blood → deposits in arterial walls → atherosclerosis. This connects cell biology (endocytosis) to cardiovascular disease — a classic MCAT integration.`
           }

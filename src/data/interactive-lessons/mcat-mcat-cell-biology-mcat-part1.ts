@@ -71,19 +71,19 @@ Why mitochondria (and chloroplasts) were once free-living bacteria:
         questions: [
           {
             question: `A researcher treats cells with a drug that disrupts hydrogen ion pumps on lysosomes, raising lysosomal pH to 7. The most likely effect is:`,
-            options: [`Lysosomal enzymes become inactive — they require acidic pH to function`, `Lysosomes become more active at neutral pH`, `The cell compensates by producing more lysosomes`, `No significant effect on intracellular digestion`],
+            options: [`Lysosomal enzymes lose activity, since they need acidic pH`, `Lysosomal enzymes become more active at the neutral pH`, `The cell makes more lysosomes and fully restores digestion`, `Enzymes leak out and digest the cytoplasm at neutral pH`],
             correctAnswer: 0,
             explanation: `Lysosomal hydrolases are acid hydrolases — they function optimally at pH ~5. At pH 7, these enzymes denature or become inactive, preventing intracellular digestion. This design also protects the cytoplasm (pH ~7.4): if a lysosome ruptures, the enzymes are inactive at cytoplasmic pH.`
           },
           {
             question: `A protein is found to have a mannose-6-phosphate tag after passing through the Golgi. Its most likely destination is:`,
-            options: [`Lysosomes`, `The plasma membrane`, `The nucleus`, `Secretion outside the cell`],
+            options: [`The lysosome`, `The nucleus`, `The ER lumen`, `The cell surface`],
             correctAnswer: 0,
             explanation: `Mannose-6-phosphate (M6P) is the specific sorting signal that directs proteins from the trans-Golgi network to lysosomes. M6P receptors in the Golgi membrane recognize this tag and package the protein into vesicles bound for lysosomes. Defects in this pathway cause I-cell disease.`
           },
           {
             question: `A cell biologist observes that mitochondria in a cell line contain 70S ribosomes. This observation supports:`,
-            options: [`Endosymbiotic theory — mitochondria were once free-living bacteria with 70S ribosomes`, `Mitochondria evolved from the host cell nucleus`, `Mitochondria synthesize all their own proteins`, `70S ribosomes are more efficient than 80S`],
+            options: [`Endosymbiotic origin of mitochondria from free-living bacteria`, `Origin of mitochondria from membranes budding off the nucleus`, `Mitochondria synthesizing all of their proteins independently`, `Higher efficiency of 70S ribosomes compared with 80S ribosomes`],
             correctAnswer: 0,
             explanation: `Endosymbiotic theory: mitochondria were once free-living aerobic bacteria engulfed by an ancestral eukaryote. They retain bacterial features: circular DNA, 70S ribosomes, double membrane, binary fission. This is why some antibiotics (e.g., chloramphenicol) that target 70S ribosomes can have mitochondrial side effects.`
           }
@@ -119,13 +119,13 @@ MCAT passages often describe a disease and ask you to identify the organelle inv
         questions: [
           {
             question: `Colchicine, a drug that depolymerizes microtubules, would most directly inhibit:`,
-            options: [`Mitotic spindle formation, arresting cells in metaphase`, `Muscle contraction`, `mRNA transport from nucleus to cytoplasm`, `Protein folding in the ER`],
+            options: [`Mitotic spindle formation, arresting cells in metaphase`, `Skeletal muscle contraction by actin-myosin crossbridges`, `Cytokinesis by the contractile ring of actin filaments`, `Protein folding and glycosylation in the ER lumen`],
             correctAnswer: 0,
             explanation: `Microtubules form the mitotic spindle. Colchicine prevents tubulin polymerization, so chromosomes cannot be separated during mitosis. Taxol has the opposite mechanism — it stabilizes microtubules so they cannot depolymerize. Both arrest mitosis and are used in cancer treatment.`
           },
           {
             question: `A patient with Kartagener syndrome has immotile cilia. Which protein is most likely defective?`,
-            options: [`Dynein — the motor protein that drives ciliary beating`, `Actin — the microfilament protein`, `Keratin — an intermediate filament protein`, `Kinesin — a plus-end directed motor`],
+            options: [`Dynein, the motor protein that drives ciliary beating`, `Kinesin, the motor that bends the ciliary axoneme`, `Actin, the filament that forms the core of cilia`, `Keratin, the intermediate filament anchoring cilia`],
             correctAnswer: 0,
             explanation: `Ciliary motility depends on dynein arms connecting the outer microtubule doublets in the 9+2 arrangement. Defective dynein = immotile cilia → chronic respiratory infections (no mucociliary clearance), male infertility (immotile sperm), and situs inversus (reversed organ placement due to defective nodal cilia in embryo).`
           }
