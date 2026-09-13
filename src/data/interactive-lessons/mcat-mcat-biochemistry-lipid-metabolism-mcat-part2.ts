@@ -66,23 +66,23 @@ $$80 + 17.5 + 10.5 - 2 = 106\\ ATP$$
             question: `How many total ATP equivalents are produced by the complete oxidation of one palmitate (16:0) molecule, net of activation?`,
             options: [`96`, `108`, `106`, `129`],
             correctAnswer: 2,
-            explanation: `Seven cycles give 8 acetyl-CoA (times 10 = 80), 7 NADH (times 2.5 = 17.5), and 7 FADH$_2$ (times 1.5 = 10.5) for 108; activation to palmitoyl-CoA consumed ATP to AMP + 2 P$_i$ = 2 ATP equivalents, so the net is 106.`
+            explanation: `Using the modern P/O convention (2.5 ATP per NADH, 1.5 per FADH$_2$, 10 per acetyl-CoA): seven cycles give 8 acetyl-CoA (times 10 = 80), 7 NADH (times 2.5 = 17.5), and 7 FADH$_2$ (times 1.5 = 10.5) for 108; activation to palmitoyl-CoA consumed ATP to AMP + 2 P$_i$ = 2 ATP equivalents, so the net is 106.`
           },
           {
             question: `Malonyl-CoA inhibits carnitine palmitoyltransferase I. The physiological logic of this regulation is to:`,
-            options: [`Prevent newly synthesized fatty acids from being immediately re-oxidized in a futile cycle`, `Accelerate ketone body export during fasting`, `Block glucose entry into glycolysis when fat is abundant`, `Stimulate the carnitine shuttle when insulin is high`],
+            options: [`Prevent newly made fatty acids from being re-oxidized`, `Divert fatty acids toward ketogenesis during fasting`, `Block glucose entry into glycolysis when fat is abundant`, `Stimulate the carnitine shuttle when insulin is high`],
             correctAnswer: 0,
             explanation: `Malonyl-CoA marks active fatty acid synthesis (fed state). By shutting the mitochondrial import gate (CPT-I), it guarantees that synthesis and beta-oxidation never run simultaneously. Insulin raises malonyl-CoA, which INHIBITS, not stimulates, the shuttle.`
           },
           {
             question: `A child with medium-chain acyl-CoA dehydrogenase (MCAD) deficiency becomes hypoglycemic when fasting, with abnormally LOW ketones. Ketones are low because:`,
-            options: [`The liver overproduces malonyl-CoA during fasting`, `Gluconeogenesis consumes all available acetyl-CoA`, `Carnitine cannot enter the mitochondria`, `Beta-oxidation stalls, so the liver cannot generate the acetyl-CoA needed for ketogenesis`],
+            options: [`The liver overproduces malonyl-CoA during fasting`, `Gluconeogenesis consumes all available acetyl-CoA`, `The carnitine shuttle cannot import long-chain acyl groups`, `Beta-oxidation stalls, starving ketogenesis of acetyl-CoA`],
             correctAnswer: 3,
             explanation: `Ketone bodies are built from acetyl-CoA produced by hepatic beta-oxidation. If the dehydrogenase step fails at medium chain lengths, acetyl-CoA production collapses — hence hypoKETOTIC hypoglycemia (glucose is drained because tissues cannot switch to fat fuel). Acetyl-CoA cannot feed gluconeogenesis.`
           },
           {
             question: `Complete oxidation of the odd-chain fatty acid C17:0 differs from C16:0 in that it yields:`,
-            options: [`One extra FADH$_2$ per cycle`, `A terminal propionyl-CoA that is converted (via B12-dependent mutase) to succinyl-CoA`, `No acetyl-CoA at all`, `Two molecules of CO2 per cycle`],
+            options: [`One extra FADH$_2$ per cycle`, `A terminal propionyl-CoA that becomes succinyl-CoA`, `A terminal malonyl-CoA that becomes acetyl-CoA`, `A terminal pyruvate that enters gluconeogenesis`],
             correctAnswer: 1,
             explanation: `Odd chains end in a 3-carbon propionyl-CoA rather than a final acetyl-CoA. Propionyl-CoA carboxylase (biotin) and methylmalonyl-CoA mutase (vitamin B12) convert it to succinyl-CoA — a TCA intermediate that CAN supply net gluconeogenesis, unlike acetyl-CoA.`
           },

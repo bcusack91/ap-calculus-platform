@@ -64,7 +64,7 @@ Glutamate + NH$_3$ → glutamine has $\\Delta G^{\\circ\\prime} = +14$ kJ/mol. C
         questions: [
           {
             question: `A reaction has $\\Delta G^{\\circ\\prime} = +5$ kJ/mol yet proceeds forward continuously in cells. The best explanation is that:`,
-            options: [`An enzyme changes the reaction's equilibrium constant`, `The cell maintains a low product-to-reactant ratio, making the actual $\\Delta G$ negative`, `The reaction absorbs heat from the surroundings`, `$\\Delta G^{\\circ\\prime}$ was measured incorrectly`],
+            options: [`An enzyme changes the reaction's equilibrium constant`, `The cell keeps the product-to-reactant ratio low`, `The reaction absorbs heat from the surroundings`, `$\\Delta G^{\\circ\\prime}$ was measured incorrectly`],
             correctAnswer: 1,
             explanation: `$\\Delta G = \\Delta G^{\\circ\\prime} + RT\\ln Q$. If downstream enzymes constantly consume the product, $Q$ stays small, $RT\\ln Q$ is strongly negative, and actual $\\Delta G < 0$. Enzymes never alter $K_{eq}$.`
           },
@@ -78,17 +78,17 @@ Glutamate + NH$_3$ → glutamine has $\\Delta G^{\\circ\\prime} = +14$ kJ/mol. C
             question: `For a reaction at equilibrium inside a test tube, $\\Delta G$ equals:`,
             options: [`$\\Delta G^{\\circ\\prime}$`, `Zero`, `$-RT\\ln K_{eq}$`, `$+RT\\ln Q$`],
             correctAnswer: 1,
-            explanation: `At equilibrium there is no net driving force in either direction: $\\Delta G = 0$ (and $Q = K_{eq}$). $\\Delta G^{\\circ\\prime}$ is generally nonzero — it equals $-RT\\ln K_{eq}$ and describes standard conditions, not the equilibrium state itself.`
+            explanation: `At equilibrium there is no net driving force in either direction: $\\Delta G = 0$ (and $Q = K_{eq}$). $\\Delta G^{\\circ\\prime}$ is generally nonzero — $-RT\\ln K_{eq}$ is the formula for $\\Delta G^{\\circ\\prime}$ (standard conditions), not for the actual $\\Delta G$ at equilibrium, which is zero.`
           },
           {
             question: `ATP hydrolysis is strongly exergonic for all of the following reasons EXCEPT:`,
-            options: [`Relief of electrostatic repulsion between phosphate groups`, `Resonance stabilization of the released inorganic phosphate`, `Better solvation of the products than of ATP`, `Breaking the phosphoanhydride bond releases energy stored in the bond itself`],
+            options: [`Relief of electrostatic repulsion between phosphate groups`, `Resonance stabilization of the released inorganic phosphate`, `Better solvation of the products than of ATP`, `Energy released as the phosphoanhydride bond breaks`],
             correctAnswer: 3,
-            explanation: `Breaking any bond always REQUIRES energy; the net energy release comes from forming more stable, better-solvated, resonance-stabilized products with less charge repulsion. "Energy stored in the bond" is the classic misconception the MCAT tests.`
+            explanation: `Breaking any bond always REQUIRES energy; the net energy release comes from forming more stable, better-solvated, resonance-stabilized products with less charge repulsion. The idea that energy is "stored in the bond" and released when it breaks is the classic misconception the MCAT tests.`
           },
           {
             question: `During the first seconds of a sprint, muscle ATP levels barely drop even though ATP consumption spikes. The molecule most responsible is:`,
-            options: [`Creatine phosphate, which rephosphorylates ADP via creatine kinase`, `Glucose-6-phosphate`, `NADH`, `cAMP`],
+            options: [`Creatine phosphate via creatine kinase`, `Glucose-6-phosphate via hexokinase`, `NADH via the electron transport chain`, `cAMP via protein kinase A`],
             correctAnswer: 0,
             explanation: `Creatine phosphate's transfer potential (~−43 kJ/mol) exceeds ATP's, so creatine kinase rapidly transfers its phosphate to ADP, buffering ATP for the first several seconds until glycolysis and oxidative phosphorylation ramp up.`
           }

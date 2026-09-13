@@ -57,31 +57,31 @@ This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)
         questions: [
           {
             question: `FADH$_2$ yields less ATP than NADH because:`,
-            options: [`FADH$_2$ carries only one electron`, `Its electrons enter at Complex II, bypassing Complex I's proton pumping`, `It is oxidized in the cytosol`, `It binds ATP synthase directly`],
+            options: [`FADH$_2$ carries only one electron`, `Its electrons bypass Complex I's proton pumping`, `Its electrons bypass Complex III's proton pumping`, `Its electrons bypass Complex IV's proton pumping`],
             correctAnswer: 1,
-            explanation: `Complex II transfers succinate/FADH$_2$ electrons to CoQ without pumping protons, so fewer protons per electron pair cross the membrane — roughly 1.5 ATP versus 2.5 for NADH, which enters at the proton-pumping Complex I.`
+            explanation: `Complex II transfers succinate/FADH$_2$ electrons to CoQ without pumping protons, so fewer protons per electron pair cross the membrane — roughly 1.5 ATP versus 2.5 for NADH, which enters at the proton-pumping Complex I. FADH$_2$'s electrons still pass through Complexes III and IV, and like NADH it donates two electrons.`
           },
           {
             question: `Mitochondria treated with oligomycin stop consuming oxygen. Adding DNP to these same mitochondria will:`,
-            options: [`Further decrease oxygen consumption`, `Restore oxygen consumption without restoring ATP synthesis`, `Restore both oxygen consumption and ATP synthesis`, `Have no effect, because Complex IV is blocked`],
+            options: [`Further decrease oxygen consumption`, `Restore oxygen consumption but not ATP synthesis`, `Restore both oxygen consumption and ATP synthesis`, `Have no effect, because Complex IV is blocked`],
             correctAnswer: 1,
             explanation: `Oligomycin blocks the proton channel of ATP synthase; the gradient builds until pumping (and thus electron flow and O$_2$ use) stalls. DNP ferries protons across the membrane, collapsing the gradient — electron transport and O$_2$ consumption resume, but with no gradient, ATP synthase still makes no ATP. This classic experiment PROVES chemiosmotic coupling.`
           },
           {
             question: `Cyanide poisoning halts oxygen consumption entirely, while rotenone only reduces it. The difference is that rotenone:`,
-            options: [`Blocks Complex I, leaving the Complex II entry route for electrons intact`, `Is a weaker inhibitor of Complex IV`, `Only inhibits ATP synthase`, `Uncouples the membrane`],
+            options: [`Blocks Complex I, leaving Complex II entry intact`, `Is a partial, reversible inhibitor of Complex IV`, `Blocks Complex II, leaving Complex I entry intact`, `Blocks Complex III, downstream of both entry points`],
             correctAnswer: 0,
-            explanation: `Rotenone blocks only the NADH entry point (Complex I); succinate-derived FADH$_2$ electrons still enter at Complex II and reach O$_2$. Cyanide blocks Complex IV — the single final doorway to O$_2$ — so ALL electron flow stops.`
+            explanation: `Rotenone blocks only the NADH entry point (Complex I); succinate-derived FADH$_2$ electrons still enter at Complex II and reach O$_2$. Cyanide blocks Complex IV — the single final doorway to O$_2$ — so ALL electron flow stops. Rotenone does not act on Complex II, III, or IV; a Complex III block would sit downstream of both entry points and, like cyanide, stop all O$_2$ consumption.`
           },
           {
             question: `The proton-motive force that drives ATP synthase consists of:`,
-            options: [`Only a pH difference across the inner membrane`, `Only a membrane electrical potential`, `Both a pH gradient (matrix alkaline) and an electrical potential (matrix negative)`, `A sodium gradient across the outer membrane`],
+            options: [`Only a pH difference across the inner membrane`, `Only a membrane potential, with the matrix positive`, `Both a pH gradient and a membrane electrical potential`, `Both a pH gradient and potential across the outer membrane`],
             correctAnswer: 2,
             explanation: `Pumping H$^+$ into the intermembrane space makes the matrix relatively alkaline (chemical component) and negative (electrical component). Both contribute to the free energy released when protons re-enter through F$_o$. The outer membrane is porous and holds no gradient.`
           },
           {
             question: `In muscle using the glycerol-3-phosphate shuttle, each cytosolic NADH from glycolysis ultimately yields about:`,
-            options: [`2.5 ATP, the same as matrix NADH`, `1.5 ATP, because the electrons arrive at CoQ via FAD`, `Zero ATP`, `4 ATP`],
+            options: [`2.5 ATP`, `1.5 ATP`, `Zero ATP`, `4 ATP`],
             correctAnswer: 1,
             explanation: `The shuttle hands cytosolic NADH electrons to a membrane-bound FAD, producing FADH$_2$-level entry at CoQ — bypassing Complex I. The malate-aspartate shuttle (heart/liver) preserves the NADH level (~2.5 ATP); this difference is why glucose's total yield is a range.`
           }

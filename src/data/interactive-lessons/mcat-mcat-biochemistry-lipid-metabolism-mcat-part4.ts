@@ -47,31 +47,31 @@ Cytosolic acetyl-CoA → acetoacetyl-CoA → HMG-CoA → **(HMG-CoA reductase + 
         questions: [
           {
             question: `Acetyl-CoA generated in the mitochondrion reaches the cytosolic fatty-acid-synthesis machinery as:`,
-            options: [`Free acetate diffusing through the membrane`, `Citrate, which is exported and cleaved by ATP-citrate lyase`, `Acetyl-carnitine via CPT-I`, `Malonyl-CoA formed inside the matrix`],
+            options: [`Free acetate diffusing through the membrane`, `Citrate, cleaved in the cytosol by ATP-citrate lyase`, `Intact acetyl-CoA carried out by the carnitine shuttle`, `Malonyl-CoA made in the matrix by acetyl-CoA carboxylase`],
             correctAnswer: 1,
             explanation: `The inner membrane is impermeable to acetyl-CoA, so it condenses with oxaloacetate to citrate, exits on the tricarboxylate carrier, and ATP-citrate lyase regenerates acetyl-CoA + OAA in the cytosol. The carnitine system runs the OPPOSITE direction, importing long acyl groups for oxidation.`
           },
           {
             question: `A statin lowers plasma LDL primarily because reduced hepatic cholesterol synthesis leads to:`,
-            options: [`Direct inhibition of intestinal cholesterol absorption`, `Increased HDL secretion by the liver`, `Inhibition of lipoprotein lipase`, `Upregulation of hepatic LDL receptors, increasing clearance of circulating LDL`],
+            options: [`Direct inhibition of intestinal cholesterol absorption`, `Increased HDL secretion by the liver`, `Inhibition of lipoprotein lipase`, `Upregulation of hepatic LDL receptor expression`],
             correctAnswer: 3,
             explanation: `Statins competitively inhibit HMG-CoA reductase. The cholesterol-starved hepatocyte activates SREBP, transcribing more LDL receptors, so the liver pulls more LDL out of plasma. The drug's effect on the bloodstream is thus indirect — via receptor upregulation, not absorption or LPL.`
           },
           {
             question: `Which pair correctly matches a fatty-acid-synthesis feature against its beta-oxidation counterpart?`,
-            options: [`Synthesis: mitochondria / Oxidation: cytosol`, `Synthesis: NADH consumed / Oxidation: NADPH produced`, `Synthesis: NADPH consumed in the cytosol / Oxidation: FADH2 and NADH produced in the matrix`, `Synthesis: carrier is CoA / Oxidation: carrier is ACP`],
+            options: [`Synthesis: mitochondrial matrix / Oxidation: cytosol`, `Synthesis: NADH consumed / Oxidation: NADPH and FADH2 produced`, `Synthesis: NADPH consumed / Oxidation: NADH and FADH2 produced`, `Synthesis: acyl carrier is CoA / Oxidation: acyl carrier is ACP`],
             correctAnswer: 2,
-            explanation: `Synthesis is cytosolic and reductive (NADPH from the pentose phosphate pathway and malic enzyme); oxidation is mitochondrial and oxidative (FADH$_2$ + NADH captured for the ETC). The compartments and carriers in the other options are swapped.`
+            explanation: `Synthesis is cytosolic and reductive (NADPH from the pentose phosphate pathway and malic enzyme); oxidation is mitochondrial and oxidative (FADH$_2$ + NADH captured for the ETC). The other pairings swap the compartments, the reducing cofactors (NADPH belongs to synthesis, not oxidation), or the acyl carriers (ACP for synthesis, CoA for oxidation).`
           },
           {
             question: `AMPK is activated when cellular energy falls. Its coordinated effect on lipid metabolism is to:`,
-            options: [`Phosphorylate and inhibit both ACC and HMG-CoA reductase, shutting down ATP-expensive synthesis`, `Activate fatty acid synthase directly`, `Stimulate the citrate shuttle`, `Dephosphorylate hormone-sensitive lipase`],
+            options: [`Phosphorylate and inhibit both ACC and HMG-CoA reductase`, `Phosphorylate and activate both ACC and HMG-CoA reductase`, `Dephosphorylate and inhibit both ACC and HMG-CoA reductase`, `Dephosphorylate and activate ACC and HMG-CoA reductase`],
             correctAnswer: 0,
-            explanation: `AMPK is the low-energy alarm: it switches OFF anabolic, ATP-consuming pathways. Phosphorylating ACC (dropping malonyl-CoA, which also opens CPT-I for beta-oxidation) and HMG-CoA reductase kills both fatty acid and cholesterol synthesis at their rate-limiting steps.`
+            explanation: `AMPK is the low-energy alarm: it switches OFF anabolic, ATP-consuming pathways. It is a kinase, not a phosphatase, and for both enzymes phosphorylation means inhibition (insulin's dephosphorylation turns them back on). Phosphorylating ACC (dropping malonyl-CoA, which also opens CPT-I for beta-oxidation) and HMG-CoA reductase kills both fatty acid and cholesterol synthesis at their rate-limiting steps.`
           },
           {
             question: `Linoleic acid (18:2, omega-6) is essential in the human diet because human desaturases:`,
-            options: [`Cannot act on chains longer than 14 carbons`, `Require vitamin B12, which is often deficient`, `Only function in the mitochondria`, `Cannot introduce double bonds beyond carbon 9, where linoleate's second double bond lies`],
+            options: [`Cannot act on chains longer than 14 carbons`, `Require vitamin B12 as a cofactor`, `Function only in mitochondria, not the ER`, `Cannot introduce double bonds beyond carbon 9`],
             correctAnswer: 3,
             explanation: `Human ER desaturases install double bonds only at or before C9 (counting from the carboxyl end). Linoleate (double bonds at 9 and 12) and alpha-linolenate (9, 12, 15) therefore cannot be built and must be eaten — they are precursors of arachidonic acid and eicosanoids.`
           }

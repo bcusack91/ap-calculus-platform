@@ -74,33 +74,33 @@ Taste cells are modified epithelial cells (not neurons) in taste buds; all five 
         questions: [
           {
             question: `Which statement about the olfactory pathway is correct?`,
-            options: [`Olfactory signals relay through the lateral geniculate nucleus before reaching cortex`, `Olfactory receptor neurons project directly to the olfactory bulb, bypassing the thalamus en route to cortex`, `Each olfactory receptor neuron expresses hundreds of different receptor types`, `Olfactory transduction uses mechanically gated ion channels`],
+            options: [`Olfactory signals relay through the lateral geniculate nucleus before reaching cortex`, `Olfactory neurons synapse in the bulb, bypassing the thalamus en route to cortex`, `Each olfactory receptor neuron expresses hundreds of different receptor types`, `Olfactory transduction uses mechanically gated ion channels in the cilia`],
             correctAnswer: 1,
             explanation: `Olfaction is the lone thalamus-bypassing sense: receptor neurons synapse in the olfactory bulb, and information reaches olfactory/limbic cortex without a thalamic relay (the LGN is VISUAL). Each neuron expresses essentially ONE receptor type — the combinatorial code arises across neurons — and transduction is via GPCRs, not mechanogated channels.`
           },
           {
             question: `A drug blocks all taste-cell GPCR signaling but leaves ion channels untouched. Which tastes remain detectable?`,
-            options: [`Sweet and umami`, `Bitter only`, `Salty and sour`, `None — all five tastes require GPCRs`],
+            options: [`Sweet and umami`, `Bitter only`, `Salty and sour`, `None of the five`],
             correctAnswer: 2,
             explanation: `Salty (direct Na+ entry) and sour (H+ acting on proton-sensitive channels) are ION-CHANNEL tastes and survive. Sweet, umami (T1R family), and bitter (T2R family) are GPCR-mediated and are lost. The two-mechanism split is the single most tested gustation fact.`
           },
           {
             question: `Rubbing the skin around a stubbed toe reduces the pain. Gate control theory explains this as:`,
-            options: [`Rubbing depletes neurotransmitter in nociceptors`, `Mechanoreceptor activity destroys the local pain receptors`, `Touch input distracts the cortex, which stops attending to pain`, `Non-nociceptive mechanosensory afferents activate spinal inhibitory interneurons that suppress ascending pain transmission`],
+            options: [`Rubbing depletes neurotransmitter in nociceptors`, `Mechanoreceptor activity destroys the local pain receptors`, `Touch input distracts the cortex, which stops attending to pain`, `Touch afferents activate spinal inhibitory interneurons`],
             correctAnswer: 3,
             explanation: `The gate is in the SPINAL dorsal horn: large-fiber touch input drives inhibitory interneurons that dampen the pain-projection neurons — a circuit-level interaction, not transmitter depletion, receptor damage, or a purely cortical attention effect (descending modulation exists too, but gate control is the spinal mechanism).`
           },
           {
             question: `A patient with profound hearing loss from destroyed cochlear hair cells (but an intact auditory nerve) would be best helped by a cochlear implant rather than a hearing aid because the implant:`,
-            options: [`Electrically stimulates spiral ganglion neurons directly, at electrode positions mapped to frequency, bypassing the dead hair cells`, `Amplifies sound enough to activate the remaining hair cells`, `Regenerates hair cells by delivering growth factors`, `Transmits sound through the skull by bone conduction`],
+            options: [`Electrically stimulates spiral ganglion neurons directly`, `Amplifies sound enough to activate the remaining hair cells`, `Regenerates hair cells by delivering growth factors`, `Transmits sound through the skull by bone conduction`],
             correctAnswer: 0,
             explanation: `With hair cells gone, NO amount of amplification (hearing aid) or bone conduction can produce transduction — the transducers are dead. The implant substitutes for them, exciting the surviving nerve fibers along the tonotopic map so high-frequency electrodes stimulate basal positions. It exploits labeled lines; it does not repair biology.`
           },
           {
             question: `During cardiac ischemia, patients often feel pain in the left arm and jaw rather than the heart. The best explanation is that:`,
-            options: [`Cardiac nociceptors physically extend into the arm`, `Visceral and somatic afferents converge on shared spinal neurons, and the brain attributes the input to the more familiar somatic source`, `The heart lacks nociceptors, so the arm's receptors respond to circulating signals`, `Ischemia lowers the firing threshold of all body nociceptors equally`],
+            options: [`Cardiac nociceptors physically extend into the arm`, `Visceral and somatic afferents converge on shared spinal neurons`, `The heart lacks nociceptors, so arm receptors respond instead`, `Ischemia lowers the threshold of all nociceptors equally`],
             correctAnswer: 1,
-            explanation: `Referred pain is a convergence problem: cardiac afferents enter the same spinal segments as afferents from the left arm/jaw dermatomes, and the brain — accustomed to somatic input from those neurons — mislocalizes the pain. Cardiac nociceptors exist and stay in the heart; no diffuse threshold change or circulating factor is required.`
+            explanation: `Referred pain is a convergence problem: cardiac afferents enter the same spinal segments as afferents from the left arm/jaw dermatomes, and the brain — accustomed to somatic input from those neurons — mislocalizes the pain. Cardiac nociceptors exist and stay in the heart; arm receptors are not responding in their place, and no diffuse threshold change is required.`
           }
         ]
       }

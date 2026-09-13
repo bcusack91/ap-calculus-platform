@@ -41,9 +41,9 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
         questions: [
           {
             question: `The liver synthesizes ketone bodies but cannot oxidize them because hepatocytes lack:`,
-            options: [`HMG-CoA lyase`, `Carnitine palmitoyltransferase I`, `Mitochondria with an intact TCA cycle`, `Succinyl-CoA:acetoacetate-CoA transferase (thiophorase)`],
+            options: [`Mitochondrial beta-hydroxybutyrate dehydrogenase`, `Carnitine palmitoyltransferase I`, `Mitochondria with an intact TCA cycle`, `Succinyl-CoA:acetoacetate CoA-transferase`],
             correctAnswer: 3,
-            explanation: `Thiophorase (SCOT) transfers CoA from succinyl-CoA to acetoacetate, the obligatory activation step for ketone use. Its absence in liver makes ketones a one-way export. HMG-CoA lyase is a SYNTHESIS enzyme, which the liver clearly has.`
+            explanation: `Succinyl-CoA:acetoacetate CoA-transferase (thiophorase, SCOT) transfers CoA from succinyl-CoA to acetoacetate, the obligatory activation step for ketone use. Its absence in liver makes ketones a one-way export. Beta-hydroxybutyrate dehydrogenase is used by the liver to MAKE beta-hydroxybutyrate, so hepatocytes clearly have it; they also have CPT-I and a working TCA cycle.`
           },
           {
             question: `During starvation, ketogenesis accelerates in part because gluconeogenesis depletes a key TCA-cycle intermediate. That intermediate is:`,
@@ -53,7 +53,7 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
           },
           {
             question: `A patient's serum has a markedly elevated NADH/NAD$^+$ ratio after heavy ethanol use. The ketone body profile will shift toward:`,
-            options: [`Acetone, detected strongly on standard dipsticks`, `Beta-hydroxybutyrate, which the acetoacetate-based dipstick may underestimate`, `Acetoacetate, raising the measured ketone level`, `Acetyl-CoA, which appears directly in serum`],
+            options: [`Acetone, which nitroprusside dipsticks detect only weakly`, `Beta-hydroxybutyrate, which dipsticks may underestimate`, `Acetoacetate, raising the measured dipstick ketone level`, `Acetyl-CoA, which appears directly in serum`],
             correctAnswer: 1,
             explanation: `Beta-hydroxybutyrate dehydrogenase equilibrates the two ketoacids with the NADH/NAD$^+$ ratio: high NADH pushes acetoacetate toward beta-hydroxybutyrate. Nitroprusside reagents react with acetoacetate (and weakly acetone), so true ketosis can be masked. Acetyl-CoA never circulates free in serum.`
           },
@@ -65,9 +65,9 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
           },
           {
             question: `The rate-limiting, committed step of ketogenesis is catalyzed by:`,
-            options: [`Cytosolic HMG-CoA reductase`, `Mitochondrial HMG-CoA synthase`, `Hormone-sensitive lipase`, `Thiolase`],
+            options: [`Cytosolic HMG-CoA reductase`, `Mitochondrial HMG-CoA synthase`, `Hormone-sensitive lipase`, `Mitochondrial acetoacetyl-CoA thiolase`],
             correctAnswer: 1,
-            explanation: `Mitochondrial HMG-CoA synthase commits acetoacetyl-CoA plus acetyl-CoA to HMG-CoA destined for ketones. HMG-CoA reductase is the cytosolic, cholesterol-pathway enzyme (statin target) — the classic compartment trap. HSL supplies substrate upstream but is not part of ketogenesis proper.`
+            explanation: `Mitochondrial HMG-CoA synthase commits acetoacetyl-CoA plus acetyl-CoA to HMG-CoA destined for ketones. The thiolase condensation that precedes it is freely reversible (the reverse of beta-oxidation's final thiolysis), so it commits nothing. HMG-CoA reductase is the cytosolic, cholesterol-pathway enzyme (statin target) — the classic compartment trap. HSL supplies substrate upstream but is not part of ketogenesis proper.`
           }
         ]
       }

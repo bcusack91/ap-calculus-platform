@@ -65,25 +65,25 @@ Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NAD
           },
           {
             question: `Isolated mitochondria given malate consume little O$_2$ until ADP is added, after which respiration accelerates sharply. This observation demonstrates that:`,
-            options: [`Malate inhibits Complex I`, `Electron transport is coupled to — and normally limited by — ATP synthesis`, `ADP is an electron donor for the chain`, `Oxygen is not the final electron acceptor`],
+            options: [`ADP is an allosteric activator of Complex I`, `Electron transport is coupled to ATP synthesis`, `ADP is an electron donor for the chain`, `Oxygen is not the final electron acceptor`],
             correctAnswer: 1,
             explanation: `Without ADP, ATP synthase has no substrate; protons cannot re-enter, the gradient backs up, and electron flow (hence O$_2$ use) is restrained. Supplying ADP lets protons flow through the synthase, unleashing respiration — respiratory control, the hallmark of coupling.`
           },
           {
             question: `Adenylate kinase interconverts 2 ADP $\\rightleftharpoons$ ATP + AMP. Why is AMP a more sensitive indicator of energy stress than ADP?`,
-            options: [`AMP is present at much higher concentrations than ATP`, `Small fractional drops in ATP produce proportionally much larger fractional rises in AMP`, `AMP binds oxygen directly`, `AMP is membrane permeable`],
+            options: [`AMP is present at much higher concentrations than ATP`, `Small ATP drops cause far larger fractional AMP rises`, `Adenylate kinase converts AMP directly into cAMP`, `AMP changes by a smaller fraction than ADP does`],
             correctAnswer: 1,
             explanation: `Because cellular AMP levels are tiny compared to ATP, the adenylate kinase equilibrium amplifies changes: a small percentage fall in ATP shifts a comparatively huge percentage rise in AMP. AMPK exploits this amplified signal as the cell's fuel gauge.`
           },
           {
             question: `Mitochondria respiring on succinate show a lower P/O ratio than mitochondria respiring on malate because succinate-derived electrons:`,
-            options: [`Reduce oxygen incompletely`, `Enter the chain at Complex II, skipping the proton pumping of Complex I`, `Cannot reach cytochrome c`, `Generate more heat per electron`],
+            options: [`Reduce oxygen only partially, to superoxide`, `Enter at Complex II, skipping Complex I`, `Bypass Complex III and cytochrome c`, `Generate more heat per electron`],
             correctAnswer: 1,
             explanation: `Malate oxidation generates matrix NADH (enters at Complex I; ~2.5 ATP per pair of electrons), while succinate reduces FAD at Complex II (~1.5). Fewer protons pumped per electron pair = less ATP per oxygen atom consumed = lower P/O ratio.`
           },
           {
             question: `During early fasting, glucagon signaling inactivates liver PDH. The metabolic purpose is to:`,
-            options: [`Accelerate glucose oxidation in the liver`, `Preserve pyruvate and its precursors for gluconeogenesis rather than burning them as acetyl-CoA`, `Increase glycogen synthesis`, `Block fatty acid oxidation`],
+            options: [`Accelerate glucose oxidation in the liver`, `Preserve pyruvate carbons for gluconeogenesis`, `Divert pyruvate into hepatic fatty acid synthesis`, `Block fatty acid oxidation in the liver`],
             correctAnswer: 1,
             explanation: `Acetyl-CoA carbons cannot return to glucose (PDH is irreversible). Switching PDH off routes pyruvate, lactate, and alanine toward oxaloacetate and gluconeogenesis, while the liver burns fatty acids for its own ATP — the essence of fasting fuel logic.`
           }

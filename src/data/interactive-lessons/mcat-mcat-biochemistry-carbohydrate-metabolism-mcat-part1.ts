@@ -56,31 +56,31 @@ Two phases: an **investment phase** (2 ATP spent) and a **payoff phase** (4 ATP 
         questions: [
           {
             question: `The rate-limiting enzyme of glycolysis is:`,
-            options: [`Hexokinase`, `Phosphofructokinase-1`, `Pyruvate kinase`, `GAPDH`],
+            options: [`Hexokinase`, `Phosphofructokinase-1`, `Pyruvate kinase`, `Glyceraldehyde-3-phosphate dehydrogenase`],
             correctAnswer: 1,
             explanation: `PFK-1 catalyzes the first COMMITTED step (F6P → F1,6-BP; G6P can still go to glycogen or the PPP, but F1,6-BP has one destination) and is the pathway's main throttle — inhibited by ATP and citrate, activated by AMP and F2,6-BP.`
           },
           {
             question: `In vigorously exercising muscle, lactate dehydrogenase converts pyruvate to lactate primarily to:`,
-            options: [`Produce additional ATP directly`, `Regenerate NAD$^+$ so GAPDH — and glycolysis — can keep running`, `Lower muscle pH for better oxygen delivery`, `Store energy for later use`],
+            options: [`Produce additional ATP by substrate-level phosphorylation`, `Regenerate NAD$^+$ so glycolysis can continue`, `Lower muscle pH for better oxygen delivery`, `Supply extra NADH to the electron transport chain`],
             correctAnswer: 1,
             explanation: `Glycolysis stalls without NAD$^+$ for the GAPDH step. LDH oxidizes NADH back to NAD$^+$ while reducing pyruvate to lactate. The LDH reaction itself makes no ATP — it PERMITS the 2 ATP of glycolysis to keep flowing anaerobically.`
           },
           {
             question: `A liver cell exposed to glucagon shows decreased fructose-2,6-bisphosphate levels. The direct consequence for glycolysis is:`,
-            options: [`PFK-1 loses its most potent activator, so glycolysis slows`, `Pyruvate kinase is directly phosphorylated by F2,6-BP`, `Hexokinase is induced`, `Glycolysis accelerates because inhibition is removed`],
+            options: [`PFK-1 loses its main activator, so glycolysis slows`, `Pyruvate kinase is directly phosphorylated by F2,6-BP`, `Hexokinase is allosterically activated by F2,6-BP`, `Glycolysis accelerates because inhibition is removed`],
             correctAnswer: 0,
             explanation: `F2,6-BP is PFK-1's strongest allosteric activator. Glucagon → PKA phosphorylates the bifunctional enzyme, activating its phosphatase (FBPase-2) domain, dropping F2,6-BP, and releasing the brake on gluconeogenesis while slowing hepatic glycolysis. (PKA also phosphorylates pyruvate kinase, but that is a separate, parallel effect.)`
           },
           {
             question: `Mature red blood cells depend exclusively on glycolysis because they:`,
-            options: [`Lack the enzyme hexokinase`, `Lack mitochondria and therefore cannot run the TCA cycle or oxidative phosphorylation`, `Cannot import glucose`, `Contain no cytosol`],
+            options: [`Lack the enzyme hexokinase`, `Lack mitochondria for aerobic respiration`, `Cannot import glucose without insulin`, `Lack pentose phosphate pathway enzymes`],
             correctAnswer: 1,
             explanation: `RBCs extrude their mitochondria (and nucleus) during maturation. With no TCA cycle or ETC available, anaerobic glycolysis to lactate provides all their ATP, and the 2,3-BPG shunt doubles as a hemoglobin-regulation pathway.`
           },
           {
             question: `Compared with glucose, a large fructose load is converted to pyruvate (and fat) especially rapidly in the liver because fructose metabolism:`,
-            options: [`Uses a more efficient form of PFK-1`, `Enters glycolysis at the triose level, bypassing the PFK-1 control point`, `Generates twice as much NADH per carbon`, `Is coupled directly to the electron transport chain`],
+            options: [`Activates PFK-1 more strongly than glucose does`, `Enters glycolysis below the PFK-1 control point`, `Generates twice as much NADH per carbon`, `Is coupled directly to the electron transport chain`],
             correctAnswer: 1,
             explanation: `Fructokinase and aldolase B feed fructose carbons in as G3P/DHAP — below PFK-1. Without the ATP/citrate brake, flux runs unchecked into pyruvate and acetyl-CoA, one reason high fructose intake promotes hepatic lipogenesis.`
           }

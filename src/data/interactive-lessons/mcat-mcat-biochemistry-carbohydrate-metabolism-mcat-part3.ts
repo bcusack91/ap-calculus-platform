@@ -56,13 +56,13 @@ Cytosolic, parallel to glycolysis, **no ATP made or used**. Two products, two ph
         questions: [
           {
             question: `Glycogen phosphorylase releases glucose-1-phosphate using inorganic phosphate rather than water. An advantage of phosphorolysis over hydrolysis is that:`,
-            options: [`The product is already phosphorylated, so no ATP is spent trapping it in the cell`, `It works on $\\alpha$-1,6 bonds`, `It requires no cofactor`, `It can proceed only in lysosomes`],
+            options: [`The product is already phosphorylated, saving an ATP`, `It cleaves both $\\alpha$-1,4 and $\\alpha$-1,6 bonds`, `It needs no pyridoxal phosphate cofactor`, `It releases free glucose directly into the blood`],
             correctAnswer: 0,
-            explanation: `G1P converts to G6P without consuming ATP, saving one ATP per glucose compared with free glucose + hexokinase. (Phosphorylase needs pyridoxal phosphate and only cleaves $\\alpha$-1,4 bonds — the debrancher handles $\\alpha$-1,6.)`
+            explanation: `G1P converts to G6P without consuming ATP, and the charged sugar phosphate is already trapped in the cell — saving one ATP per glucose compared with free glucose + hexokinase. (Phosphorylase needs pyridoxal phosphate and only cleaves $\\alpha$-1,4 bonds — the debrancher handles $\\alpha$-1,6. Its product is G1P, not free glucose.)`
           },
           {
             question: `Epinephrine binding its hepatic receptor raises cAMP. The resulting phosphorylation events cause:`,
-            options: [`Activation of both glycogen synthase and phosphorylase`, `Activation of glycogen phosphorylase and inactivation of glycogen synthase`, `Inactivation of both enzymes`, `Activation of glycogen synthase only`],
+            options: [`Activation of both glycogen synthase and phosphorylase`, `Phosphorylase activation and synthase inactivation`, `Inactivation of both glycogen synthase and phosphorylase`, `Synthase activation and phosphorylase inactivation`],
             correctAnswer: 1,
             explanation: `PKA's phosphorylations are reciprocal: phosphorylase kinase → phosphorylase a (active), while glycogen synthase is directly phosphorylated to its inactive form. One second messenger flips the tissue into net glycogen breakdown with no futile cycle.`
           },
@@ -74,15 +74,15 @@ Cytosolic, parallel to glycolysis, **no ATP made or used**. Two products, two ph
           },
           {
             question: `The pentose phosphate pathway's oxidative phase is essential to red blood cells primarily because it:`,
-            options: [`Produces ribose-5-phosphate for RBC DNA synthesis`, `Generates ATP anaerobically`, `Supplies NADPH to keep glutathione reduced, protecting against oxidative damage`, `Produces 2,3-BPG`],
+            options: [`Produces ribose-5-phosphate for RBC DNA synthesis`, `Generates NADH to reduce methemoglobin`, `Supplies NADPH to keep glutathione reduced`, `Produces 2,3-BPG to lower hemoglobin's O$_2$ affinity`],
             correctAnswer: 2,
-            explanation: `Mature RBCs make no DNA and get ATP from glycolysis. Their constant O$_2$ exposure generates peroxides; glutathione peroxidase detoxifies them, and glutathione reductase needs NADPH — supplied only by the PPP in RBCs. Hence G6PD deficiency causes oxidant-triggered hemolysis.`
+            explanation: `Mature RBCs make no DNA, and their NADH (used by methemoglobin reductase) and 2,3-BPG both come from glycolysis, not the PPP. Their constant O$_2$ exposure generates peroxides; glutathione peroxidase detoxifies them, and glutathione reductase needs NADPH — supplied only by the PPP in RBCs. Hence G6PD deficiency causes oxidant-triggered hemolysis.`
           },
           {
             question: `A dividing cell needs ribose-5-phosphate for nucleotides but has ample NADPH. Which route best serves it?`,
-            options: [`Running the oxidative PPP phase at maximum`, `Running the nonoxidative phase in reverse: F6P and G3P from glycolysis are converted to ribose-5-P by transketolase/transaldolase`, `Synthesizing ribose from acetyl-CoA`, `Degrading glycogen branch points`],
+            options: [`Running the oxidative PPP phase at maximum`, `Running the nonoxidative phase in reverse from F6P and G3P`, `Synthesizing ribose from acetyl-CoA`, `Isomerizing glucose-6-phosphate directly to ribose-5-phosphate`],
             correctAnswer: 1,
-            explanation: `The nonoxidative phase is fully reversible, letting cells make ribose-5-P from glycolytic intermediates WITHOUT generating unwanted NADPH (which would feedback-inhibit G6PD anyway). The pathway's two products are independently dialable — a classic MCAT design question.`
+            explanation: `The nonoxidative phase (transketolase/transaldolase) is fully reversible, letting cells make ribose-5-P from the glycolytic intermediates F6P and G3P WITHOUT generating unwanted NADPH (which would feedback-inhibit G6PD anyway). The pathway's two products are independently dialable — a classic MCAT design question.`
           }
         ]
       }

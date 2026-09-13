@@ -75,9 +75,9 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
         questions: [
           {
             question: `Which sequence correctly orders the structures sound energy traverses?`,
-            options: [`Tympanic membrane → oval window → ossicles → basilar membrane → hair cells`, `Tympanic membrane → malleus → incus → stapes → oval window → basilar membrane → hair cells`, `Oval window → tympanic membrane → ossicles → cochlea → hair cells`, `Tympanic membrane → round window → ossicles → tectorial membrane → hair cells`],
+            options: [`Tympanic membrane → oval window → malleus → incus → stapes → basilar membrane → hair cells`, `Tympanic membrane → malleus → incus → stapes → oval window → basilar membrane → hair cells`, `Oval window → tympanic membrane → ossicles → cochlea → hair cells`, `Tympanic membrane → malleus → incus → stapes → round window → basilar membrane → hair cells`],
             correctAnswer: 1,
-            explanation: `Eardrum → the ossicular chain in order (malleus, incus, stapes) → the stapes footplate on the OVAL window → cochlear fluid → basilar membrane → hair cells. Option A skips the ossicles' position; the ROUND window is the pressure-relief outlet, not the entry point.`
+            explanation: `Eardrum → the ossicular chain in order (malleus, incus, stapes) → the stapes footplate on the OVAL window → cochlear fluid → basilar membrane → hair cells. The oval window comes AFTER the ossicles, not before them, and the tympanic membrane, not the oval window, receives sound first; the ROUND window is the pressure-relief outlet, not the entry point.`
           },
           {
             question: `A pure 8000 Hz tone maximally stimulates hair cells located:`,
@@ -87,21 +87,21 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
           },
           {
             question: `Hair cells depolarize when their stereocilia bend toward the tallest cilium because:`,
-            options: [`Voltage-gated Na+ channels open in the stereocilia`, `Ca2+ is pumped out of the cell`, `Cl- efflux depolarizes the membrane`, `Mechanically gated channels open and K+ flows IN from the K+-rich endolymph`],
+            options: [`Voltage-gated Na+ channels open in the stereocilia`, `Mechanically gated channels let K+ flow out to perilymph`, `Mechanically gated channels admit Na+ from Na+-rich endolymph`, `Mechanically gated channels let K+ flow in from endolymph`],
             correctAnswer: 3,
-            explanation: `The endolymph surrounding the stereocilia is unusually potassium-rich, so the electrochemical gradient drives K+ INTO the cell when tip-link-gated channels open — depolarization by K+ influx, the reverse of the usual neuronal role of K+. The channels are mechanically gated, not voltage-gated, and the trigger is not Na+.`
+            explanation: `The endolymph surrounding the stereocilia is unusually potassium-rich (and sodium-poor), so the electrochemical gradient drives K+ INTO the cell when tip-link-gated channels open — depolarization by K+ influx, the reverse of the usual neuronal role of K+. K+ flowing OUT would hyperpolarize, not depolarize. The channels are mechanically gated, not voltage-gated, and the trigger is not Na+.`
           },
           {
             question: `After spinning at constant velocity for 30 seconds, a dancer no longer feels rotation; when she abruptly stops, she feels she is spinning the opposite way. This is because the semicircular canals:`,
-            options: [`Detect only angular ACCELERATION — at constant velocity the endolymph catches up, and stopping deflects the cupula in the reverse direction`, `Detect linear acceleration via otoliths, which fatigue during spinning`, `Adapt because their otoliths dissolve with prolonged motion`, `Are disabled by high K+ in the endolymph during rotation`],
+            options: [`Detect only angular acceleration, via endolymph lagging the head`, `Use otoliths to sense linear motion, and these fatigue during spinning`, `Adapt because their otoliths dissolve with prolonged motion`, `Are disabled by high K+ in the endolymph during rotation`],
             correctAnswer: 0,
             explanation: `The canals work by endolymph INERTIA: fluid lags during acceleration, deflecting the cupula. At constant velocity the fluid reaches the head's speed and the signal fades; deceleration then makes the still-moving fluid push the cupula the OTHER way — a false reversed-rotation signal. Otoliths belong to the utricle/saccule (linear acceleration), and they do not dissolve.`
           },
           {
             question: `A patient hears a tuning fork better when it is pressed against the mastoid bone than when held next to the ear canal. This pattern indicates:`,
-            options: [`Sensorineural loss from hair cell damage`, `A lesion of the auditory cortex`, `Conductive hearing loss — the outer/middle ear path is impaired while the cochlea works`, `Normal hearing; bone conduction always exceeds air conduction`],
+            options: [`Sensorineural loss from hair cell damage`, `A unilateral lesion of the auditory cortex`, `Conductive hearing loss in the outer or middle ear`, `Normal hearing, since bone conduction always wins`],
             correctAnswer: 2,
-            explanation: `Bone conduction vibrates the skull and stimulates the cochlea directly, bypassing the eardrum and ossicles. Bone beating air means the cochlea is functional but the mechanical (conductive) route is blocked. In sensorineural loss BOTH routes are poor. In normal ears air conduction is the more efficient route, so option D is backwards.`
+            explanation: `Bone conduction vibrates the skull and stimulates the cochlea directly, bypassing the eardrum and ossicles. Bone beating air means the cochlea is functional but the mechanical (conductive) route through the outer/middle ear is blocked. In sensorineural loss BOTH routes are poor. In normal ears air conduction is the more efficient route, so the claim that bone conduction always wins is backwards.`
           }
         ]
       }

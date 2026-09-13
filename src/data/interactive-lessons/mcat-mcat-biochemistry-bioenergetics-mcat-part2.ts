@@ -66,15 +66,15 @@ Intermediates are siphoned for biosynthesis (citrate → fatty acids; $\\alpha$-
           },
           {
             question: `A patient with severe thiamine deficiency accumulates pyruvate and lactate in the blood. The enzyme complex most directly impaired is:`,
-            options: [`Citrate synthase`, `Pyruvate dehydrogenase`, `Lactate dehydrogenase`, `Pyruvate kinase`],
+            options: [`Pyruvate carboxylase`, `Pyruvate dehydrogenase`, `Lactate dehydrogenase`, `Pyruvate kinase`],
             correctAnswer: 1,
             explanation: `PDH requires TPP (thiamine pyrophosphate) for the initial decarboxylation of pyruvate. Without it, pyruvate cannot become acetyl-CoA; it backs up and is shunted to lactate. ($\\alpha$-KG dehydrogenase is also TPP-dependent, but the pyruvate/lactate pattern points to PDH.)`
           },
           {
             question: `The citric acid cycle slows dramatically in anaerobic conditions even though no cycle enzyme uses O$_2$. The reason is that:`,
-            options: [`CO$_2$ accumulates and inhibits citrate synthase`, `Without electron transport, NADH accumulates and NAD$^+$ becomes unavailable for the cycle's dehydrogenases`, `Oxygen is a substrate of succinate dehydrogenase`, `GTP cannot be made without oxygen`],
+            options: [`CO$_2$ accumulates and inhibits citrate synthase`, `NAD$^+$ is not regenerated without electron transport`, `Oxygen is a substrate of succinate dehydrogenase`, `Excess NAD$^+$ feedback-inhibits the cycle's dehydrogenases`],
             correctAnswer: 1,
-            explanation: `The cycle's three NAD$^+$-dependent dehydrogenases stall when NAD$^+$ is exhausted. Only the O$_2$-dependent ETC reoxidizes NADH (and FADH$_2$) in mitochondria, so oxygen limitation shuts the cycle down indirectly.`
+            explanation: `The cycle's three NAD$^+$-dependent dehydrogenases stall when NADH accumulates and NAD$^+$ is exhausted — the problem is too little NAD$^+$, not too much. Only the O$_2$-dependent ETC reoxidizes NADH (and FADH$_2$) in mitochondria, so oxygen limitation shuts the cycle down indirectly.`
           },
           {
             question: `Which molecule stimulates pyruvate dehydrogenase kinase, thereby turning PDH OFF?`,
@@ -84,9 +84,9 @@ Intermediates are siphoned for biosynthesis (citrate → fatty acids; $\\alpha$-
           },
           {
             question: `During rapid fatty acid synthesis, citrate is exported from mitochondria, depleting cycle intermediates. Which reaction best replenishes oxaloacetate?`,
-            options: [`Pyruvate + CO$_2$ + ATP → oxaloacetate (pyruvate carboxylase)`, `Acetyl-CoA + oxaloacetate → citrate`, `Glucose → 2 pyruvate`, `Succinate → fumarate`],
+            options: [`Pyruvate + CO$_2$ + ATP → oxaloacetate`, `Acetyl-CoA + oxaloacetate → citrate`, `Oxaloacetate + GTP → PEP + CO$_2$ + GDP`, `Oxaloacetate + NADH → malate + NAD$^+$`],
             correctAnswer: 0,
-            explanation: `Anaplerosis means refilling the intermediate pool. Pyruvate carboxylase (biotin-dependent, allosterically activated by acetyl-CoA) synthesizes new OAA. Citrate synthase CONSUMES OAA, and reactions within the cycle cannot produce a net increase in intermediates.`
+            explanation: `Anaplerosis means refilling the intermediate pool. Pyruvate carboxylase (biotin-dependent, allosterically activated by acetyl-CoA) synthesizes new OAA from pyruvate. Citrate synthase, PEPCK, and the reduction of OAA to malate all CONSUME oxaloacetate rather than adding to the pool.`
           }
         ]
       }

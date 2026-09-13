@@ -62,27 +62,27 @@ Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and O
           },
           {
             question: `Even-numbered fatty acids cannot support NET glucose synthesis because:`,
-            options: [`Fatty acids cannot enter mitochondria during fasting`, `Acetyl-CoA's two carbons are lost as two CO$_2$ molecules in the TCA cycle before oxaloacetate is regenerated`, `Beta-oxidation produces no usable energy`, `Acetyl-CoA inhibits pyruvate carboxylase`],
+            options: [`Fatty acids cannot enter mitochondria during fasting`, `Each turn loses two CO$_2$, so OAA shows no net gain`, `Fatty acid oxidation consumes more ATP than it yields`, `Acetyl-CoA allosterically inhibits pyruvate carboxylase`],
             correctAnswer: 1,
-            explanation: `Acetyl-CoA enters the TCA cycle by condensing with OAA, but one full turn releases 2 CO$_2$ — no NET gain of intermediates, so no net carbon flows to glucose. (Odd-chain fats are the exception via propionyl-CoA → succinyl-CoA.) Acetyl-CoA actually ACTIVATES pyruvate carboxylase.`
+            explanation: `Acetyl-CoA enters the TCA cycle by condensing with OAA, but one full turn releases 2 CO$_2$ — no NET gain of intermediates, so no net carbon flows to glucose. (The CO$_2$ carbons lost in a given turn are not literally the acetyl carbons just added; the point is net accounting: two carbons in, two out, OAA only regenerated.) (Odd-chain fats are the exception via propionyl-CoA → succinyl-CoA.) Acetyl-CoA actually ACTIVATES pyruvate carboxylase.`
           },
           {
             question: `The Cori cycle describes:`,
-            options: [`Glucose oxidation to CO$_2$ in muscle`, `Muscle/RBC lactate traveling to the liver for conversion back to glucose, which returns to the periphery`, `Alanine converting to pyruvate in muscle`, `Glycerol entering glycolysis at DHAP`],
+            options: [`Glucose oxidation to CO$_2$ in exercising muscle`, `Lactate recycled into glucose by the liver for the periphery`, `Muscle alanine carried to the liver and converted to glucose`, `Adipose glycerol converted to glucose via hepatic DHAP`],
             correctAnswer: 1,
-            explanation: `Anaerobic tissues export lactate; the liver spends 6 ATP-equivalents to remake glucose and ships it back. The energy cost is transferred to the liver — the cycle shifts the metabolic burden, it does not create energy.`
+            explanation: `Anaerobic tissues (muscle, RBCs) export lactate; the liver spends 6 ATP-equivalents to remake glucose and ships it back. The energy cost is transferred to the liver — the cycle shifts the metabolic burden, it does not create energy. The alanine route is the separate glucose-alanine cycle, and glycerol from adipose is a one-way gluconeogenic substrate, not a cycle.`
           },
           {
             question: `A high level of acetyl-CoA in a fasting hepatocyte simultaneously:`,
-            options: [`Activates PDH and inhibits pyruvate carboxylase`, `Inhibits PDH and activates pyruvate carboxylase`, `Activates both PDH and pyruvate carboxylase`, `Inhibits both enzymes`],
+            options: [`Activates PDH and inhibits pyruvate carboxylase`, `Inhibits PDH and activates pyruvate carboxylase`, `Activates both PDH and pyruvate carboxylase`, `Inhibits both PDH and pyruvate carboxylase`],
             correctAnswer: 1,
             explanation: `Acetyl-CoA (from fatty acid oxidation) signals that the liver has fuel: it inhibits PDH (sparing pyruvate from oxidation) and allosterically activates pyruvate carboxylase (committing pyruvate to gluconeogenesis) — a coordinated fork-in-the-road switch.`
           },
           {
             question: `A fasting patient presents with hypoglycemia after an alcohol binge. The most direct mechanism is that ethanol metabolism:`,
-            options: [`Raises the cytosolic NADH/NAD$^+$ ratio, diverting pyruvate to lactate and OAA to malate, depriving gluconeogenesis of substrates`, `Directly inhibits glucose-6-phosphatase`, `Blocks intestinal glucose absorption`, `Stimulates excessive insulin secretion`],
+            options: [`Raises the NADH/NAD$^+$ ratio, depleting pyruvate and OAA`, `Raises the NADH/NAD$^+$ ratio, sparing pyruvate and OAA`, `Lowers the NADH/NAD$^+$ ratio, sparing pyruvate and OAA`, `Lowers the NADH/NAD$^+$ ratio, depleting pyruvate and OAA`],
             correctAnswer: 0,
-            explanation: `Alcohol dehydrogenase and aldehyde dehydrogenase both reduce NAD$^+$ to NADH. High NADH pushes the LDH and malate dehydrogenase equilibria away from pyruvate and OAA — the two key gluconeogenic entry points — so a fasting liver (glycogen already depleted) cannot make glucose.`
+            explanation: `Alcohol dehydrogenase and aldehyde dehydrogenase both reduce NAD$^+$ to NADH, raising (not lowering) the cytosolic NADH/NAD$^+$ ratio, and that high NADH depletes rather than spares the gluconeogenic substrates. High NADH pushes the LDH and malate dehydrogenase equilibria away from pyruvate and OAA (toward lactate and malate) — the two key gluconeogenic entry points — so a fasting liver (glycogen already depleted) cannot make glucose.`
           }
         ]
       }

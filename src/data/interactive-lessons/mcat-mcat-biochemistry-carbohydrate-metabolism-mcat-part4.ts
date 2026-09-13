@@ -63,31 +63,31 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
         questions: [
           {
             question: `During intense exercise, skeletal muscle increases glucose uptake even in the absence of insulin because:`,
-            options: [`Muscle expresses glucagon receptors`, `Exercise itself stimulates GLUT4 translocation to the sarcolemma`, `GLUT2 has a high $K_m$`, `SGLT transporters are activated by lactate`],
+            options: [`Muscle expresses glucagon receptors that recruit GLUT4`, `Contraction itself triggers GLUT4 translocation`, `Muscle switches to high-$K_m$ GLUT2 during exercise`, `SGLT transporters are activated by lactate`],
             correctAnswer: 1,
             explanation: `Contraction (via AMPK and Ca$^{2+}$ signaling) recruits GLUT4 vesicles independently of insulin — the basis for exercise as therapy in type 2 diabetes. Muscle has no glucagon receptors, and GLUT2/SGLT are not muscle transporters.`
           },
           {
             question: `Pancreatic beta cells use GLUT2 and glucokinase — both with high $K_m$ values — rather than GLUT1 and hexokinase, because high-$K_m$ components:`,
-            options: [`Maximize glucose uptake at all concentrations`, `Let the rate of glucose metabolism rise proportionally with blood glucose across the physiological range, making insulin release dose-responsive`, `Prevent glucose from ever being phosphorylated`, `Are insulin-independent`],
+            options: [`Maximize glucose uptake at all concentrations`, `Let glucose metabolism track blood glucose levels`, `Saturate at fasting glucose to hold insulin steady`, `Are insulin-independent, unlike GLUT1 and hexokinase`],
             correctAnswer: 1,
             explanation: `Low-$K_m$ systems saturate at fasting glucose and cannot distinguish 5 mM from 10 mM. High-$K_m$ GLUT2/glucokinase keep flux — and therefore ATP production and insulin secretion — proportional to blood glucose. The sensor must not saturate.`
           },
           {
             question: `A patient with untreated type 1 diabetes has high blood glucose, yet adipose and muscle cells behave as if starved. The single best explanation is:`,
-            options: [`GLUT4 remains sequestered intracellularly without insulin, so insulin-dependent tissues cannot take up the abundant glucose`, `Glucose is toxic to these tissues`, `Glucagon blocks all glucose transporters`, `Hexokinase is absent in diabetes`],
+            options: [`GLUT4 stays intracellular without insulin`, `Glucose is toxic to these tissues`, `Glucagon blocks all glucose transporters`, `Insulin is needed to open GLUT1 channels`],
             correctAnswer: 0,
             explanation: `GLUT4 translocation requires insulin signaling. Without it, muscle and fat starve amid plenty ("starvation in the midst of abundance"), triggering lipolysis, ketogenesis, and muscle proteolysis while the liver adds MORE glucose via unopposed glucagon.`
           },
           {
             question: `Twenty hours into a fast, the majority of hepatic glucose output shifts from glycogenolysis to gluconeogenesis because:`,
-            options: [`Glucagon secretion stops`, `Liver glycogen stores are nearly depleted after roughly a day`, `Muscle glycogen takes over blood glucose maintenance`, `The brain stops using glucose entirely`],
+            options: [`Glucagon secretion falls as the fast lengthens`, `Liver glycogen stores are nearly exhausted`, `Muscle glycogen takes over blood glucose maintenance`, `The brain stops using glucose entirely`],
             correctAnswer: 1,
             explanation: `Liver glycogen (~100 g) supports blood glucose for about 12-24 hours. As it empties, gluconeogenesis from lactate, alanine, and glycerol ramps up. Muscle glycogen cannot export glucose (no G6Pase), and the brain still requires substantial glucose early in fasting.`
           },
           {
             question: `HbA1c reflects average blood glucose over ~3 months because glycation of hemoglobin is:`,
-            options: [`Catalyzed by a glucose-activated kinase`, `A nonenzymatic reaction whose extent depends on glucose exposure over the RBC's ~120-day lifespan`, `Reversed daily by phosphatases`, `Dependent on GLUT4`],
+            options: [`Catalyzed by a glucose-activated kinase`, `Nonenzymatic and persists for the RBC's lifespan`, `Reversed within days by erythrocyte phosphatases`, `Dependent on insulin-stimulated GLUT4 uptake`],
             correctAnswer: 1,
             explanation: `Glucose condenses nonenzymatically with hemoglobin amino groups; the modification is essentially irreversible for the cell's life. Since RBCs live ~120 days, the glycated fraction integrates glycemia over that window — no enzyme, no regulation, pure chemistry and time.`
           }

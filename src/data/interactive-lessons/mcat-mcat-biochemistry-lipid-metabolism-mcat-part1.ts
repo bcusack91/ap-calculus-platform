@@ -52,33 +52,33 @@ Fasting/epinephrine → PKA phosphorylates and activates **hormone-sensitive lip
         questions: [
           {
             question: `Gram for gram, triacylglycerols store far more energy than glycogen mainly because fat is:`,
-            options: [`More oxidized and stored with water`, `More reduced and stored without water`, `Less reduced but more compact`, `Bound to albumin`],
+            options: [`More oxidized and stored with water`, `More reduced and stored without water`, `Less reduced but more compact`, `More reduced but hydrated like glycogen`],
             correctAnswer: 1,
             explanation: `Fatty acid carbons are highly reduced (more electrons to harvest → ~9 kcal/g vs ~4) and TG droplets are anhydrous, while glycogen binds roughly 2 g of water per gram. Both factors compound to make fat ~6-fold denser as an energy store.`
           },
           {
             question: `A patient with a nonfunctional apoC-II has severe hypertriglyceridemia after meals. The defective step is:`,
-            options: [`Chylomicron assembly in enterocytes`, `Activation of lipoprotein lipase, which cannot hydrolyze chylomicron and VLDL triglycerides`, `LDL receptor endocytosis`, `Bile salt synthesis`],
+            options: [`Chylomicron assembly in enterocytes`, `Activation of capillary lipoprotein lipase`, `LDL receptor recognition of apoB-100`, `Pancreatic lipase hydrolysis of dietary TG`],
             correctAnswer: 1,
             explanation: `LPL on capillary walls requires apoC-II as an obligatory cofactor. Without it, TG-rich particles cannot unload their cargo and accumulate in plasma — biochemically identical in consequence to LPL deficiency itself (type I hyperlipoproteinemia).`
           },
           {
             question: `Dietary triglycerides reach systemic tissues BEFORE passing through the liver because chylomicrons:`,
-            options: [`Are secreted directly into the portal vein`, `Enter intestinal lymphatics (lacteals) and drain into venous blood via the thoracic duct`, `Are absorbed through the gastric mucosa`, `Are synthesized in hepatocytes`],
+            options: [`Are secreted into capillaries that drain to the portal vein`, `Enter lacteals and reach blood via the thoracic duct`, `Are absorbed through the gastric mucosa`, `Are synthesized in hepatocytes and secreted into plasma`],
             correctAnswer: 1,
             explanation: `Chylomicrons are too large for intestinal capillaries; they enter lacteals and bypass first-pass hepatic metabolism. Contrast with short- and medium-chain fatty acids, which are water-soluble enough to use the portal vein directly.`
           },
           {
             question: `Familial hypercholesterolemia results from LDL-receptor mutations. In heterozygotes, plasma LDL is roughly doubled because:`,
-            options: [`The liver secretes twice as much VLDL`, `Receptor-mediated clearance of LDL by the liver and other tissues is halved`, `HDL cannot be synthesized`, `Lipoprotein lipase is overactive`],
+            options: [`The liver secretes twice as much VLDL`, `Receptor-mediated LDL clearance is halved`, `HDL cannot remove tissue cholesterol`, `Lipoprotein lipase is overactive`],
             correctAnswer: 1,
             explanation: `LDL levels reflect a balance of production and receptor-mediated uptake (apoB-100 recognition, clathrin-coated endocytosis). Half the receptors means slower clearance, higher steady-state LDL, and cholesterol deposition in arteries and tendons (xanthomas).`
           },
           {
             question: `During a fast, adipocyte lipolysis accelerates because:`,
-            options: [`Insulin activates hormone-sensitive lipase`, `Falling insulin and rising catecholamines allow PKA to phosphorylate and activate hormone-sensitive lipase`, `Lipoprotein lipase moves into the adipocyte`, `Albumin enters the adipocyte to extract fatty acids`],
+            options: [`Insulin-stimulated dephosphorylation activates hormone-sensitive lipase`, `Low insulin and rising cAMP let PKA activate hormone-sensitive lipase`, `Lipoprotein lipase hydrolyzes the adipocyte's stored triglyceride`, `Albumin enters the adipocyte to extract fatty acids`],
             correctAnswer: 1,
-            explanation: `HSL is a PKA target: catecholamines (and glucagon's falling opposition, since insulin normally activates the phosphatase side) leave HSL phosphorylated and active. Released FFAs ride albumin to muscle and liver; glycerol goes to hepatic gluconeogenesis. LPL works on lipoprotein TG, not stored TG.`
+            explanation: `HSL is a PKA target: catecholamines (plus falling insulin, which normally activates the phosphatase side) leave HSL phosphorylated and active. Released FFAs ride albumin to muscle and liver; glycerol goes to hepatic gluconeogenesis. Insulin-driven dephosphorylation INACTIVATES HSL (the fed-state brake), and LPL works on lipoprotein TG in capillaries, not stored TG.`
           }
         ]
       }
