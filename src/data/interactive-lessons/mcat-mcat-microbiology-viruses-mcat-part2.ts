@@ -41,33 +41,33 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
         questions: [
           {
             question: `In the Hershey-Chase experiment, only 32P (not 35S) appeared inside infected bacteria because tailed phages:`,
-            options: [`Inject their nucleic acid while the protein capsid remains outside the cell`, `Contain no protein at all`, `Degrade their own capsid proteins upon entry`, `Enter cells whole and shed sulfur atoms`],
+            options: [`Inject their nucleic acid, leaving the capsid outside`, `Contain protein that lacks any sulfur-containing residues`, `Degrade their own capsid proteins upon entry`, `Enter cells whole and export their sulfur atoms`],
             correctAnswer: 0,
-            explanation: `The phage tail pierces the envelope and injects DNA (32P-labeled) like a syringe; the protein shell (35S-labeled) never enters and can be sheared off in a blender. Since only the injected component programmed progeny production, DNA had to be the genetic material.`
+            explanation: `The phage tail pierces the envelope and injects DNA (32P-labeled) like a syringe; the protein shell (35S-labeled through its sulfur-containing methionine and cysteine) never enters and can be sheared off in a blender. Since only the injected component programmed progeny production, DNA had to be the genetic material.`
           },
           {
             question: `A lysogen carrying prophage lambda is resistant to infection by additional lambda phage. The immunity is due to:`,
-            options: [`Loss of the lambda receptor from the cell surface`, `CRISPR spacers acquired from the prophage`, `The prophage-encoded repressor, present in the cytoplasm, silencing the lytic genes of any incoming lambda DNA`, `Restriction enzymes that cut only superinfecting DNA`],
+            options: [`Loss of the lambda receptor from the cell surface`, `CRISPR spacers the host acquired from the prophage`, `Prophage-made repressor silencing incoming lambda genes`, `Restriction enzymes that cut only superinfecting DNA`],
             correctAnswer: 2,
-            explanation: `The same diffusible repressor that keeps the resident prophage dormant immediately binds the operators of any newly injected lambda genome — superinfection immunity. It is phage-specific (a different phage with different operators infects normally), which distinguishes it from receptor loss or restriction.`
+            explanation: `The same diffusible repressor that keeps the resident prophage dormant is present in the cytoplasm and immediately binds the operators of any newly injected lambda genome, silencing its lytic genes — superinfection immunity. It is phage-specific (a different phage with different operators infects normally), which distinguishes it from receptor loss or restriction.`
           },
           {
             question: `UV irradiation of a lysogenic culture causes a burst of phage release. The mechanistic chain is:`,
-            options: [`UV directly excises the prophage by photolyase action`, `UV damage → SOS response → activated RecA promotes repressor cleavage → prophage excises and enters the lytic cycle`, `UV mutates tail-fiber genes, enabling escape`, `UV crosslinks the repressor to DNA, strengthening lysogeny`],
+            options: [`UV directly excises the prophage by photolyase action`, `UV activates RecA, which triggers repressor self-cleavage`, `UV mutates tail-fiber genes, enabling escape from the host`, `UV crosslinks the repressor to DNA, locking in lysogeny`],
             correctAnswer: 1,
             explanation: `DNA damage activates RecA (the SOS sensor), which stimulates autocleavage of the phage repressor. With the repressor destroyed, lytic genes fire, the prophage loops out via excisionase/integrase, and progeny lyse the doomed host — the phage abandons a sinking ship.`
           },
           {
             question: `A previously harmless bacterial strain begins producing a potent exotoxin after becoming a lysogen. Curing the strain of its prophage abolishes toxin production. This is an example of:`,
-            options: [`Generalized transduction`, `Conjugative transfer of a toxin plasmid`, `Transformation by environmental DNA`, `Lysogenic conversion`],
+            options: [`Generalized transduction of host genes`, `Conjugative transfer of a toxin plasmid`, `Transformation by environmental DNA`, `Lysogenic conversion by the prophage`],
             correctAnswer: 3,
             explanation: `The toxin gene resides IN the prophage and is expressed from it; phenotype tracks perfectly with prophage presence. Diphtheria, cholera, Shiga, and botulinum toxins follow this pattern. Generalized transduction moves random HOST genes and does not require an ongoing prophage.`
           },
           {
             question: `Conditions that favor a temperate phage choosing lysogeny over lysis include:`,
-            options: [`A rapidly growing host in rich medium at low phage density`, `A starved host cell and a high ratio of phage to bacteria`, `The absence of integrase activity`, `Prior UV irradiation of the host`],
+            options: [`A fast-growing host in rich medium at low phage density`, `A starved host and a high ratio of phage to bacteria`, `Loss of integrase activity in the infecting phage`, `Prior UV irradiation that damages host DNA`],
             correctAnswer: 1,
-            explanation: `Lysis pays off when a burst of progeny can find fresh hosts: rich conditions, plentiful bacteria. Starvation (poor burst prospects) and high multiplicity of infection (few uninfected hosts remain) both tip the decision circuitry toward quietly integrating and waiting. UV pushes the OPPOSITE way — induction.`
+            explanation: `Lysis pays off when a burst of progeny can find fresh hosts: rich conditions, plentiful bacteria. Starvation (poor burst prospects) and high multiplicity of infection (few uninfected hosts remain) both tip the decision circuitry toward quietly integrating and waiting. A phage without integrase cannot insert a prophage, so it cannot establish lysogeny, and UV-induced DNA damage pushes the OPPOSITE way — induction.`
           }
         ]
       }

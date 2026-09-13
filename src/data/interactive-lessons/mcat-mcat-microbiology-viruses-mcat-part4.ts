@@ -40,33 +40,33 @@ Any virus question yields to four sorted facts: **(1)** genome class → route t
         questions: [
           {
             question: `Influenza pandemics (as opposed to seasonal epidemics) arise from antigenic shift because shift:`,
-            options: [`Accumulates point mutations faster than drift`, `Introduces a wholly novel surface antigen via segment reassortment, leaving the population with no partial immunity`, `Occurs in non-segmented viruses by recombination`, `Increases the virus's replication rate`],
+            options: [`Accumulates point mutations far faster than drift does`, `Introduces a novel HA or NA by segment reassortment`, `Occurs in non-segmented viruses by RNA recombination`, `Increases the virus's replication rate in host airways`],
             correctAnswer: 1,
-            explanation: `Drift erodes immunity gradually — most people retain partial protection, so outbreaks stay seasonal. Shift swaps in an HA (or NA) segment from another host lineage in one step; essentially nobody has antibodies, and the virus sweeps globally. Segmentation is the structural prerequisite.`
+            explanation: `Drift erodes immunity gradually — most people retain partial protection, so outbreaks stay seasonal. Shift swaps in a wholly novel HA (or NA) segment from another host lineage in one step via reassortment; essentially nobody has even partial immunity, and the virus sweeps globally. Segmentation is the structural prerequisite.`
           },
           {
             question: `An infectious agent from brain tissue transmits disease after treatment with UV light, nucleases, and formaldehyde, but loses infectivity after harsh protein denaturation. The agent is most likely:`,
-            options: [`A defective retrovirus`, `A viroid`, `A prion`, `A naked DNA virus`],
+            options: [`A retrovirus`, `A viroid`, `A prion`, `A DNA virus`],
             correctAnswer: 2,
             explanation: `Resistance to UV and nucleases means no essential nucleic acid — that excludes every virus and viroid. Sensitivity to protein denaturation identifies the infectious moiety as protein: a prion, propagating by templated misfolding of PrP-C into protease-resistant PrP-Sc.`
           },
           {
             question: `Hepatitis D virus causes disease only in patients simultaneously or previously infected with hepatitis B, because HDV:`,
-            options: [`Is a satellite agent that requires HBV surface antigen to coat and package its own particles`, `Can only enter cells already lysed by HBV`, `Uses HBV's reverse transcriptase to copy its genome`, `Is a prion activated by HBV proteins`],
+            options: [`Needs HBV surface antigen to envelop its particles`, `Can only enter hepatocytes already damaged by HBV`, `Uses HBV's reverse transcriptase to copy its genome`, `Is a prion whose misfolding is triggered by HBV`],
             correctAnswer: 0,
             explanation: `HDV's tiny RNA genome encodes no envelope protein of its own; it parasitizes HBV's surface antigen (HBsAg) to build infectious particles — a satellite/defective agent needing a helper virus. Consequently, HBV vaccination also prevents hepatitis D.`
           },
           {
             question: `A live attenuated viral vaccine is contraindicated in a severely immunocompromised patient primarily because:`,
-            options: [`Attenuated strains contain endotoxin`, `The vaccine cannot stimulate any immune response in such patients`, `Inactivated vaccines are always more immunogenic`, `The weakened virus still replicates, and without immune control even attenuated replication can cause disseminated disease`],
+            options: [`Attenuated strains contain endotoxin that triggers shock`, `The vaccine cannot stimulate any immune response in such patients`, `Inactivated vaccines are always more immunogenic`, `The attenuated virus still replicates and can disseminate`],
             correctAnswer: 3,
             explanation: `Attenuation reduces, but does not eliminate, replication; safety depends on the host winning an easy fight. With T-cell immunity absent, the attenuated strain can replicate unchecked (and potentially revert). Killed or subunit vaccines, which cannot replicate, are the safe substitutes — though responses may be weaker.`
           },
           {
             question: `Several herpesviruses downregulate MHC class I on the cells they infect. The host's compensating defense is:`,
-            options: [`Increased antibody production against free virions`, `Natural killer cells, which kill cells displaying too little MHC I ('missing self')`, `Interferon-induced MHC II expression`, `Complement lysis of the latent episome`],
+            options: [`Increased antibody production against free virions`, `Natural killer cells, which kill cells low in MHC I`, `Interferon-induced MHC II display to CD8 T cells`, `Complement-mediated lysis of the latent episome`],
             correctAnswer: 1,
-            explanation: `Hiding peptides from cytotoxic T cells (which need MHC I) is a classic viral evasion — but NK cells are tuned oppositely: inhibitory receptors read normal MHC I as 'self,' so its ABSENCE releases NK killing. The paired surveillance closes the loophole; complement cannot attack intracellular DNA.`
+            explanation: `Hiding peptides from cytotoxic T cells (which need MHC I) is a classic viral evasion — but NK cells are tuned oppositely: inhibitory receptors read normal MHC I as 'self,' so its ABSENCE ('missing self') releases NK killing. The paired surveillance closes the loophole. MHC II presents to CD4 helper cells, not CD8 cells, and complement cannot attack intracellular DNA.`
           }
         ]
       }

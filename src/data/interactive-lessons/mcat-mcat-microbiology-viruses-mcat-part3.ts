@@ -43,15 +43,15 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
         questions: [
           {
             question: `Purified genomic RNA from poliovirus initiates a full infection when transfected into cells, but purified rabies virus RNA does not. The difference exists because:`,
-            options: [`Rabies RNA is degraded faster by host nucleases`, `Poliovirus (+) RNA is directly translatable mRNA, while rabies (−) RNA requires a viral RdRp that was packaged in the discarded virion`, `Poliovirus RNA is circular and more stable`, `Rabies replicates only in the nucleus`],
-            correctAnswer: 1,
-            explanation: `Ribosomes translate (+) sense RNA immediately — including making new RdRp — so the naked genome suffices. A (−) sense genome is untranslatable; without the virion's pre-packaged polymerase there is no way to produce mRNA, and host cells possess no RNA-dependent RNA polymerase to help.`
+            options: [`Rabies RNA is degraded faster by cytoplasmic host nucleases`, `Poliovirus RNA is circular and so resists nucleases`, `Polio RNA is (+) sense; rabies RNA needs packaged RdRp`, `Rabies needs the host nucleus to transcribe its RNA`],
+            correctAnswer: 2,
+            explanation: `Ribosomes translate (+) sense RNA immediately — including making new RdRp — so the naked poliovirus genome suffices. A (−) sense genome like rabies is untranslatable; without the RdRp packaged in the virion, which is discarded when only RNA is transfected, there is no way to produce mRNA, and host cells possess no RNA-dependent RNA polymerase to help. Poliovirus RNA is linear, and rabies replicates in the cytoplasm, not the nucleus.`
           },
           {
             question: `Antiretroviral therapy fully suppresses HIV replication for years, yet stopping the drugs allows the virus to rebound from the patient's own cells. The reservoir exists because:`,
-            options: [`Reverse transcriptase remains active in plasma`, `HIV survives extracellularly in bone`, `The envelope protects virions from drugs indefinitely`, `Integrated provirus persists in the genome of long-lived cells and is copied by normal cellular DNA replication`],
+            options: [`Reverse transcriptase remains active in plasma`, `Extracellular virions persist in bone marrow`, `The envelope protects virions from drugs indefinitely`, `Integrated provirus persists in long-lived cells`],
             correctAnswer: 3,
-            explanation: `Integrase writes the viral genome permanently into host chromosomes; resting memory T cells carry this provirus for decades, invisible to drugs that only block NEW infection events. Cell division faithfully copies the provirus like any other gene — the same persistence logic as a prophage.`
+            explanation: `Integrase writes the viral genome permanently into host chromosomes; resting memory T cells carry this provirus for decades, invisible to drugs that only block NEW infection events. Cell division faithfully copies the provirus like any other gene through normal cellular DNA replication — the same persistence logic as a prophage.`
           },
           {
             question: `A novel virus replicates entirely in the cytoplasm and its virions contain an RNA-dependent RNA polymerase. Its genome CANNOT be:`,
@@ -61,15 +61,15 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
           },
           {
             question: `Nucleoside analogs like AZT selectively inhibit HIV because, once phosphorylated, they are incorporated by reverse transcriptase and terminate the DNA chain. Selectivity over host DNA synthesis arises because:`,
-            options: [`Host cells cannot phosphorylate nucleosides`, `AZT enters only infected cells`, `Reverse transcriptase binds and incorporates the analog far more readily than host DNA polymerases, which also have proofreading`, `Host polymerases synthesize RNA, not DNA`],
+            options: [`Host kinases cannot phosphorylate AZT to its active form`, `AZT is taken up only by HIV-infected T cells`, `RT incorporates it far more readily than host polymerases`, `Host replicative polymerases synthesize RNA, not DNA`],
             correctAnswer: 2,
-            explanation: `Selectivity is quantitative: RT's active site is sloppier — it accepts the 3'-azido analog efficiently and, lacking 3'-to-5' exonuclease proofreading, cannot remove it. High-fidelity host replicases discriminate against and excise such analogs far better. (Mitochondrial polymerase gamma is the collateral target behind toxicity.)`
+            explanation: `Selectivity is quantitative: RT's active site is sloppier — it binds and incorporates the 3'-azido analog far more readily than host DNA polymerases do and, lacking 3'-to-5' exonuclease proofreading, cannot remove it. High-fidelity host replicases discriminate against and excise such analogs far better. Host kinases do phosphorylate AZT, and it enters uninfected cells too, so the selectivity must come from the polymerase. (Mitochondrial polymerase gamma is the collateral target behind toxicity.)`
           },
           {
             question: `Influenza virus, unusually for an RNA virus, replicates in the nucleus, and herpesvirus establishes lifelong latency in neurons WITHOUT integrating. Herpes latency is maintained as:`,
-            options: [`A linear genome inserted by viral integrase`, `A circular episome that persists in the nucleus, expressing few genes until reactivation`, `Continuous low-level lytic replication`, `A dsRNA intermediate hidden in the cytoplasm`],
+            options: [`A linear genome inserted by viral integrase`, `A circular episome persisting in the nucleus`, `Continuous low-level lytic replication`, `A dsRNA intermediate kept in the cytoplasm`],
             correctAnswer: 1,
-            explanation: `Herpesviral DNA circularizes and persists as a nonintegrated episome; latency-associated transcripts keep it quiet, and stress reactivates full lytic gene expression. Contrast the three persistence bookkeeping systems: prophage (integrated, phage), provirus (integrated, retrovirus), episome (not integrated, herpes).`
+            explanation: `Herpesviral DNA circularizes and persists as a nonintegrated episome in the nucleus; latency-associated transcripts keep it quiet, expressing few genes, and stress reactivates full lytic gene expression. Contrast the three persistence bookkeeping systems: prophage (integrated, phage), provirus (integrated, retrovirus), episome (not integrated, herpes).`
           }
         ]
       }

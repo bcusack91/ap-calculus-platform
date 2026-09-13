@@ -59,19 +59,19 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
         questions: [
           {
             question: `Hours into strenuous fasting exercise, blood glucose remains stable. Which hormone pattern maintains it?`,
-            options: [`High insulin and low glucagon, promoting glucose storage`, `Low insulin with elevated glucagon, epinephrine, and cortisol mobilizing hepatic glucose`, `High insulin and high glucagon acting synergistically on muscle`, `Suppressed epinephrine to conserve glycogen stores`],
+            options: [`Rising insulin that drives glucose uptake into working muscle`, `Low insulin with high glucagon, epinephrine, and cortisol`, `High insulin and high glucagon acting synergistically on muscle`, `Low glucagon with suppressed epinephrine to spare glycogen`],
             correctAnswer: 1,
-            explanation: `Fasting exercise is a mobilization state: insulin falls (sparing glucose for insulin-independent tissues like brain and working muscle), while glucagon and epinephrine drive hepatic glycogenolysis and gluconeogenesis, with cortisol supporting substrate supply. High insulin would push storage — exactly wrong. Four counter-regulatory hormones versus one storage hormone is the design.`
+            explanation: `Fasting exercise is a mobilization state: insulin falls (sparing glucose for insulin-independent tissues like brain and working muscle, whose contraction-stimulated GLUT4 uptake does not need insulin), while glucagon and epinephrine drive hepatic glycogenolysis and gluconeogenesis, with cortisol supporting substrate supply. Rising insulin would push storage and hypoglycemia — exactly wrong — and suppressing glucagon or epinephrine would remove the very signals that mobilize hepatic glucose. Four counter-regulatory hormones (glucagon, epinephrine, cortisol, plus growth hormone) versus one storage hormone is the design.`
           },
           {
             question: `A patient in a region with severely iodine-deficient soil develops a large goiter with LOW thyroid hormone levels. The gland enlarged because:`,
-            options: [`Excess T4 directly stimulated follicular growth`, `Calcitonin secretion from C cells expanded the gland`, `Without T4-mediated negative feedback, TSH rose and chronically overstimulated (trophic effect) the thyroid`, `Iodine deficiency triggers autoimmune destruction that swells the gland`],
+            options: [`Low T4 raised TRH, which directly stimulated follicular growth`, `Calcitonin secretion from C cells expanded the gland`, `Loss of T4 feedback raised TSH, which stimulated gland growth`, `Iodine deficiency triggers autoimmune destruction that swells the gland`],
             correctAnswer: 2,
-            explanation: `No iodine → no T4/T3 → the pituitary never receives its inhibitory feedback → TSH secretion climbs relentlessly. TSH is trophic as well as tropic: it drives both hormone synthesis (futile without iodine) and tissue growth — hence a big, underproducing gland. Feedback loops explain gland SIZE as reliably as they explain hormone levels.`
+            explanation: `No iodine → no T4/T3 → the pituitary never receives its inhibitory feedback → TSH secretion climbs relentlessly. TSH is trophic as well as tropic: it drives both hormone synthesis (futile without iodine) and tissue growth — hence a big, underproducing gland. TRH does rise too, but it acts on the pituitary thyrotrophs, not directly on thyroid follicles. Feedback loops explain gland SIZE as reliably as they explain hormone levels.`
           },
           {
             question: `During thyroid surgery, all four parathyroid glands are accidentally removed. Within days the patient develops muscle spasms and perioral tingling. The mechanism is:`,
-            options: [`Loss of calcitonin causing calcium to accumulate in neurons`, `Falling plasma calcium increasing neuronal sodium-channel excitability, producing tetany`, `Rising phosphate directly stimulating muscle contraction`, `Loss of PTH reducing potassium excretion, depolarizing muscle`],
+            options: [`Loss of calcitonin causing calcium to accumulate in neurons`, `Falling plasma calcium increasing nerve excitability (tetany)`, `Rising phosphate directly stimulating muscle contraction`, `Loss of PTH lowering potassium excretion, depolarizing muscle`],
             correctAnswer: 1,
             explanation: `Without PTH, bone resorption, renal calcium reclamation, and vitamin D activation all fade — plasma Ca$^{2+}$ falls. Extracellular calcium normally stabilizes voltage-gated Na$^+$ channels; hypocalcemia lowers their effective threshold, so nerves fire spontaneously: tingling, cramps, tetany. Calcitonin loss is clinically silent — PTH is the hormone that defends calcium.`
           }

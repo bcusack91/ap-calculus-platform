@@ -62,15 +62,15 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
         questions: [
           {
             question: `A toxin selectively prevents the inactivation of voltage-gated sodium channels. Its immediate effect on a neuron's action potential is:`,
-            options: [`Failure to reach threshold, silencing the neuron`, `Prolonged depolarization with failure to repolarize normally`, `Faster repolarization due to enhanced potassium efflux`, `Deeper hyperpolarization after each spike`],
+            options: [`Failure to reach threshold, silencing the neuron`, `Prolonged depolarization with impaired repolarization`, `Faster repolarization from enhanced potassium efflux`, `Deeper hyperpolarization following each spike`],
             correctAnswer: 1,
-            explanation: `Repolarization requires BOTH Na$^+$-channel inactivation (stopping the inward rush) and delayed K$^+$ efflux. If Na$^+$ channels stay open, inward current persists and the membrane lingers near the sodium equilibrium potential — a prolonged spike (this is how some shellfish and scorpion toxins work). The refractory period, which depends on inactivation, is also lost.`
+            explanation: `Repolarization requires BOTH Na$^+$-channel inactivation (stopping the inward rush) and delayed K$^+$ efflux. If Na$^+$ channels stay open, inward current persists and the membrane lingers near the sodium equilibrium potential — a prolonged spike (this is how batrachotoxin, brevetoxin and scorpion alpha-toxins work). The refractory period, which depends on inactivation, is also lost.`
           },
           {
             question: `An inhibitory synapse opens chloride channels on the postsynaptic dendrite. This inhibits firing because chloride entry:`,
-            options: [`Depolarizes the axon hillock directly`, `Blocks calcium channels in the presynaptic terminal`, `Holds the membrane at or below resting potential, so summed EPSPs are less likely to reach threshold at the hillock`, `Destroys excitatory neurotransmitter in the cleft`],
+            options: [`Depolarizes the axon hillock, inactivating its sodium channels`, `Blocks calcium channels in the presynaptic terminal`, `Holds the membrane near or below rest, opposing EPSPs`, `Destroys excitatory neurotransmitter in the cleft`],
             correctAnswer: 2,
-            explanation: `Cl$^-$ influx produces an IPSP — a graded hyperpolarization (or clamping near rest) that algebraically subtracts from concurrent EPSPs during spatial summation. The axon hillock's ledger determines firing; inhibition works by keeping that sum under the ~-55 mV threshold, not by acting on the presynaptic cell or the transmitter itself.`
+            explanation: `Cl$^-$ influx produces an IPSP — a graded hyperpolarization (or clamping near rest) that algebraically subtracts from concurrent EPSPs during spatial summation, so summed EPSPs are less likely to reach threshold. The axon hillock's ledger determines firing; inhibition works by keeping that sum under the ~-55 mV threshold, not by depolarizing the hillock, acting on the presynaptic cell, or destroying the transmitter itself.`
           },
           {
             question: `Both sympathetic and parasympathetic preganglionic neurons release the same neurotransmitter onto the same receptor type. That signal is:`,

@@ -61,21 +61,21 @@ Creatinine is produced by muscle at a constant rate and (approximately) only lea
         questions: [
           {
             question: `A substance is freely filtered at the glomerulus. Its measured clearance is 250 mL/min, while inulin clearance in the same patient is 125 mL/min. The substance must undergo:`,
-            options: [`Net reabsorption in the tubules`, `Net secretion into the tubules`, `Complete reabsorption followed by back-leak`, `Binding to plasma proteins that increases its filtration`],
+            options: [`Net reabsorption from the tubular fluid`, `Net secretion by the tubular epithelium`, `Filtration through a leakier glomerulus`, `Equal secretion and reabsorption`],
             correctAnswer: 1,
-            explanation: `Inulin clearance defines GFR — the plasma volume cleared by filtration alone. A clearance ABOVE GFR means the kidney removed more of the substance than filtration could deliver; the only route is tubular secretion (like PAH). Reabsorption produces clearance BELOW GFR, and protein binding would REDUCE filtration.`
+            explanation: `Inulin clearance defines GFR — the plasma volume cleared by filtration alone. A clearance ABOVE GFR means the kidney removed more of the substance than filtration could deliver; the only route is net tubular secretion (like PAH). Net reabsorption produces clearance BELOW GFR, and secretion balanced by equal reabsorption would leave clearance equal to GFR. A freely filtered substance already enters the filtrate at its plasma concentration, so a leakier glomerulus cannot push its clearance past GFR.`
           },
           {
             question: `The osmolarity of tubular fluid leaving the ascending limb of the loop of Henle, compared with the fluid that entered the descending limb, is:`,
-            options: [`Higher, because salt was added in the medulla`, `The same, because the loop only rearranges solutes`, `Lower, because the ascending limb pumps out NaCl while remaining impermeable to water`, `Lower, because the ascending limb reabsorbs large volumes of water`],
+            options: [`Higher, because the descending limb actively secretes NaCl`, `The same, because the loop only rearranges solutes`, `Lower, because the ascending limb removes salt but not water`, `Lower, because the ascending limb reabsorbs large volumes of water`],
             correctAnswer: 2,
-            explanation: `The ascending limb is the "diluting segment": its Na$^+$-K$^+$-2Cl$^-$ cotransporters extract salt while its water-tight epithelium traps the water in the tubule, so fluid exits HYPO-osmotic (~100–150 mOsm/L) relative to plasma. The removed salt is what makes the medulla salty — dilution of filtrate and concentration of the interstitium are the same event.`
+            explanation: `The ascending limb is the "diluting segment": its Na$^+$-K$^+$-2Cl$^-$ cotransporters extract salt while its water-tight epithelium traps the water in the tubule, so fluid exits HYPO-osmotic (~100–150 mOsm/L) relative to plasma. The descending limb concentrates fluid mainly by losing water, not by gaining salt, and the ascending limb then removes more solute than was ever concentrated; it reabsorbs no water. The removed salt is what makes the medulla salty — dilution of filtrate and concentration of the interstitium are the same event.`
           },
           {
             question: `A patient with untreated diabetes mellitus has a plasma glucose of 400 mg/dL and produces large volumes of glucose-containing urine. The polyuria occurs because:`,
-            options: [`High glucose damages ADH receptors in the collecting duct`, `Glucose directly inhibits the sodium-potassium ATPase in the proximal tubule`, `Insulin deficiency prevents water reabsorption in the loop of Henle`, `Filtered glucose exceeds the transport maximum, and the unreabsorbed glucose holds water in the tubule osmotically`],
+            options: [`High glucose desensitizes ADH receptors in the collecting duct`, `Glucose directly inhibits the sodium pump in the proximal tubule`, `Insulin deficiency prevents water reabsorption in the loop of Henle`, `Glucose above the transport maximum stays in the tubule, holding water`],
             correctAnswer: 3,
-            explanation: `At 400 mg/dL the filtered load far exceeds the SGLT carriers' $T_m$ (~375 mg/min); glucose remains in the lumen as an osmotically active solute, opposing water reabsorption along the nephron — an osmotic diuresis. The mechanism is saturation physics, not receptor damage; mannitol diuretics exploit the identical principle deliberately.`
+            explanation: `At 400 mg/dL the filtered load far exceeds the SGLT carriers' $T_m$ (~375 mg/min); the unreabsorbed glucose remains in the lumen as an osmotically active solute, opposing water reabsorption along the nephron — an osmotic diuresis. The mechanism is saturation physics, not ADH-receptor damage, sodium-pump inhibition, or a direct insulin effect on the loop; mannitol diuretics exploit the identical principle deliberately.`
           }
         ]
       }

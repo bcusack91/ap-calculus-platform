@@ -63,9 +63,9 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
           },
           {
             question: `A patient's central chemoreceptors are the dominant regulators of resting ventilation. These receptors directly detect:`,
-            options: [`Arterial oxygen partial pressure`, `Hydrogen ion concentration in the cerebrospinal fluid, derived from CO2 crossing the blood-brain barrier`, `Arterial hydrogen ions crossing into the medulla`, `Stretch of the carotid sinus wall`],
+            options: [`Falling arterial oxygen partial pressure`, `Hydrogen ions in CSF, produced from diffused CO2`, `Arterial hydrogen ions crossing into the medulla`, `Stretch of the carotid sinus and aortic arch walls`],
             correctAnswer: 1,
-            explanation: `Central chemoreceptors sense CSF pH. Charged H$^+$ crosses the blood-brain barrier poorly, but neutral CO2 diffuses freely and is hydrated (carbonic anhydrase) to carbonic acid in the CSF — so CSF H$^+$ is effectively a CO2 readout. They are blind to O2 (that is the peripheral carotid/aortic bodies' job), and carotid sinus stretch is the BAROreceptor, a blood-pressure sensor.`
+            explanation: `Central chemoreceptors sense CSF pH. Charged H$^+$ crosses the blood-brain barrier poorly, but neutral CO2 diffuses freely and is hydrated (carbonic anhydrase) to carbonic acid in the CSF — so CSF H$^+$ is effectively a CO2 readout. They are blind to O2 (falling arterial oxygen is sensed by the peripheral carotid/aortic bodies), and stretch of the carotid sinus and aortic arch is sensed by BAROreceptors, blood-pressure sensors.`
           },
           {
             question: `A pulmonary embolus completely blocks blood flow to a lung region that remains ventilated. That region now represents:`,

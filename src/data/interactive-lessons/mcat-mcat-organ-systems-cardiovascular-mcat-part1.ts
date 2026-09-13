@@ -79,15 +79,15 @@ The ECG records **electrical** events; contraction (mechanical) follows each dep
           },
           {
             question: `During isovolumetric contraction of the left ventricle:`,
-            options: [`The mitral valve is open and the aortic valve is closed`, `Both the mitral and aortic valves are closed`, `The aortic valve is open and blood is being ejected`, `Ventricular volume decreases while pressure stays constant`],
+            options: [`The mitral valve is open and the aortic valve is closed`, `Both the mitral and aortic valves are closed`, `The aortic valve is open and blood is ejected`, `Volume falls while pressure stays constant`],
             correctAnswer: 1,
             explanation: `In isovolumetric contraction the ventricle has just begun contracting: pressure has risen above atrial pressure (mitral valve slams shut — S1) but not yet above aortic pressure (aortic valve still closed). With all valves closed, volume cannot change — pressure rises at constant volume.`
           },
           {
             question: `A patient's ECG shows a normal P wave followed by an abnormally long PR interval. The structure most likely responsible for the delay is:`,
-            options: [`The SA node`, `The Purkinje fibers`, `The bundle of His`, `The AV node`],
+            options: [`The sinoatrial node`, `The Purkinje fiber network`, `The left and right bundle branches`, `The atrioventricular node`],
             correctAnswer: 3,
-            explanation: `The PR interval spans from the start of atrial depolarization to the start of ventricular depolarization — most of that time is the built-in AV-node delay. A prolonged PR interval (first-degree heart block) reflects slowed conduction through the AV node, the sole electrical gateway between atria and ventricles.`
+            explanation: `The PR interval spans from the start of atrial depolarization to the start of ventricular depolarization — most of that time is the built-in AV-node delay. A prolonged PR interval (first-degree heart block) reflects slowed conduction through the AV node, the sole electrical gateway between atria and ventricles. A normal P wave argues against the SA node, and slowed conduction in the bundle branches or Purkinje network widens the QRS complex rather than lengthening the PR interval.`
           }
         ]
       }

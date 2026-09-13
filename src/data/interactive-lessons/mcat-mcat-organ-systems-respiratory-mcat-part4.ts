@@ -56,21 +56,21 @@ $$\\text{Key ratio:} \\quad FEV_1 / FVC$$
         questions: [
           {
             question: `Two days after arriving at 4,000 m, a climber's arterial pH has returned toward normal from an initially alkalotic value. The mechanism is:`,
-            options: [`Ventilation has returned to sea-level rates, restoring CO2`, `Renal excretion of bicarbonate has compensated for the respiratory alkalosis`, `Increased 2,3-BPG has buffered the excess base in red cells`, `Erythropoietin has raised hematocrit, increasing blood buffering capacity`],
+            options: [`Ventilation has returned to sea-level rates, restoring CO2`, `The kidneys have excreted extra bicarbonate to lower pH`, `Increased 2,3-BPG has buffered the excess base in red cells`, `Erythropoietin has raised hematocrit and buffering capacity`],
             correctAnswer: 1,
             explanation: `Hypoxia-driven hyperventilation persists (it is the adaptation, not the problem), so low CO2 remains. The kidneys correct pH on the days timescale by dumping HCO3$^-$, rebalancing the ratio of bicarbonate to CO2. 2,3-BPG affects Hb-O2 affinity, not plasma pH, and EPO's effect is on O2 content, weeks later.`
           },
           {
             question: `A patient's spirometry shows FVC of 5.0 L with FEV1 of 2.5 L; total lung capacity is elevated. This pattern indicates:`,
-            options: [`Restrictive disease such as pulmonary fibrosis`, `Normal lungs with poor patient effort`, `Obstructive disease such as emphysema, with air trapping`, `Neuromuscular weakness of the diaphragm`],
+            options: [`Restrictive disease such as pulmonary fibrosis`, `Normal lungs with poor patient effort`, `Obstructive lung disease such as emphysema`, `Neuromuscular weakness of the diaphragm`],
             correctAnswer: 2,
             explanation: `$FEV_1/FVC = 2.5/5.0 = 0.5$, well below ~0.7 — airflow is slow relative to lung size, the obstructive signature. Elevated TLC (air trapping/hyperinflation) confirms it: floppy, recoil-poor airways collapse during forced exhalation. Restrictive disease and muscle weakness SHRINK volumes while keeping the ratio normal or high.`
           },
           {
             question: `During moderate steady-state exercise, a healthy subject's arterial oxygen and carbon dioxide partial pressures are measured. Compared with rest, they are:`,
-            options: [`Essentially unchanged, because ventilation rises in proportion to metabolic rate`, `O2 markedly decreased and CO2 increased, which is what drives the hyperpnea`, `Both increased due to greater gas exchange`, `O2 increased and CO2 decreased due to hyperventilation`],
+            options: [`Essentially unchanged, as ventilation tracks metabolism`, `O2 decreased and CO2 increased, driving the hyperpnea`, `Both increased, due to greater alveolar gas exchange`, `O2 increased and CO2 decreased due to hyperventilation`],
             correctAnswer: 0,
-            explanation: `Exercise ventilation is largely feedforward (motor cortex and limb receptors) and scales with CO2 production, so arterial gases stay near resting values — the mean arterial chemistry never becomes abnormal enough to be the driver. Marked hypoxemia during exercise signals pathology; true hyperventilation (CO2 falling) appears only near exhaustion.`
+            explanation: `Exercise ventilation is largely feedforward (motor cortex and limb receptors) and scales with CO2 production, so arterial gases stay near resting values — the mean arterial chemistry never becomes abnormal enough to be the driver. Any hypoxemia or CO2 retention during moderate exercise signals pathology; true hyperventilation (CO2 falling) appears only near exhaustion.`
           }
         ]
       }

@@ -61,13 +61,13 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
           },
           {
             question: `Unlike anterior pituitary hormones, the hormones released from the posterior pituitary are:`,
-            options: [`Steroids synthesized from cholesterol within the pituitary`, `Controlled by releasing factors carried in the hypophyseal portal blood`, `Tropic hormones that regulate other endocrine glands`, `Synthesized in hypothalamic neurons and transported down axons for release`],
+            options: [`Steroids synthesized from cholesterol within the pituitary`, `Governed by releasing factors in the hypophyseal portal blood`, `Tropic hormones that act mainly on other endocrine glands`, `Made in hypothalamic neurons and shipped down axons for release`],
             correctAnswer: 3,
             explanation: `The posterior pituitary is neural tissue — hypothalamic neurons make ADH and oxytocin in their cell bodies and ship them down axons for storage and release. The PORTAL system and releasing hormones govern the ANTERIOR pituitary, a genuine gland. Both posterior hormones are peptides, and both act on final targets (kidney, uterus/breast) rather than on other glands.`
           },
           {
             question: `A drug blocks all cytoplasmic and nuclear hormone receptors but leaves membrane receptors untouched. Which hormone's action would be LEAST affected?`,
-            options: [`Glucagon`, `Cortisol`, `Aldosterone`, `Thyroxine (T4)`],
+            options: [`Glucagon`, `Cortisol`, `Aldosterone`, `Thyroxine`],
             correctAnswer: 0,
             explanation: `Glucagon is a peptide — its receptor is on the cell surface (GPCR/cAMP), so intracellular receptor blockade is irrelevant to it. Cortisol and aldosterone are steroids, and thyroxine, despite being tyrosine-derived, uses nuclear receptors — all three depend on the blocked intracellular machinery. Sorting hormones by receptor location is the single most reusable endocrine skill.`
           }

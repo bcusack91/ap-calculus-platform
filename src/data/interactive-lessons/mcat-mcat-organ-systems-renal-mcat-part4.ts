@@ -54,21 +54,21 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
         questions: [
           {
             question: `A patient on a powerful loop diuretic becomes unable to produce concentrated urine even when severely dehydrated with maximal ADH levels. The best explanation is:`,
-            options: [`ADH receptors in the collecting duct are blocked by the drug`, `The drug has destroyed the aquaporin gene response`, `Inhibiting the ascending limb's NaCl transport has dissipated the medullary osmotic gradient that ADH-dependent concentration requires`, `The drug increases GFR so much that fluid moves too quickly to be concentrated`],
+            options: [`The drug blocks V2 ADH receptors on the collecting duct's principal cells`, `The drug prevents aquaporin-2 insertion into the apical membrane`, `Loss of ascending-limb NaCl transport has dissipated the medullary gradient`, `The drug increases GFR so much that fluid moves too quickly to be concentrated`],
             correctAnswer: 2,
-            explanation: `ADH only opens water channels — water then leaves the collecting duct ONLY if the surrounding medulla is hypertonic. Loop diuretics block the Na$^+$-K$^+$-2Cl$^-$ cotransporter that builds that gradient, so even wide-open aquaporins have nowhere to send water. Concentrating ability = ADH x gradient; either factor at zero gives dilute urine.`
+            explanation: `ADH only opens water channels — water then leaves the collecting duct ONLY if the surrounding medulla is hypertonic. Loop diuretics block the Na$^+$-K$^+$-2Cl$^-$ cotransporter of the ascending limb that builds that gradient, so even wide-open aquaporins have nowhere to send water; the drug does not act on V2 receptors or aquaporin trafficking. Concentrating ability = ADH x gradient; either factor at zero gives dilute urine.`
           },
           {
             question: `A dehydrated patient has very concentrated urine with almost no urinary sodium, and plasma creatinine is mildly elevated. This picture indicates:`,
-            options: [`Pre-renal azotemia — hypoperfused but intrinsically healthy kidneys conserving salt and water`, `Acute tubular necrosis with loss of reabsorptive function`, `Nephrogenic diabetes insipidus`, `Post-renal obstruction by a ureteral stone`],
+            options: [`Pre-renal azotemia from hypoperfusion of healthy kidneys`, `Acute tubular necrosis with loss of reabsorptive function`, `Nephrogenic diabetes insipidus with ADH resistance`, `Acute glomerulonephritis with red cell casts in urine`],
             correctAnswer: 0,
-            explanation: `Concentrated, sodium-poor urine is what a WORKING kidney produces under RAAS and ADH drive — the appropriate response to low perfusion. The creatinine bump reflects reduced GFR from low pressure, not nephron damage. Tubular necrosis would show dilute, sodium-wasting urine (broken transporters); DI would show dilute urine; obstruction shows neither signature.`
+            explanation: `Concentrated, sodium-poor urine is what a WORKING kidney produces under RAAS and ADH drive — the appropriate response to low perfusion, so the kidneys are hypoperfused but intrinsically healthy. The creatinine bump reflects reduced GFR from low pressure, not nephron damage. Tubular necrosis would show dilute, sodium-wasting urine (broken transporters); DI would show dilute urine; and glomerulonephritis would add hematuria and red cell casts.`
           },
           {
             question: `A researcher gives a drug that blocks aldosterone receptors. Compared with a loop diuretic, this drug's effect on potassium is different because:`,
-            options: [`It increases potassium secretion by raising distal sodium delivery`, `It blocks the principal cells' sodium reabsorption that normally drives potassium secretion, so potassium is retained`, `It stimulates the sodium-potassium ATPase throughout the nephron`, `It acidifies the urine, forcing potassium excretion`],
+            options: [`It increases potassium secretion by raising distal sodium delivery`, `It blocks principal-cell sodium uptake that drives potassium secretion`, `It stimulates the sodium-potassium ATPase throughout the nephron`, `It acidifies the urine, forcing extra potassium into the tubule`],
             correctAnswer: 1,
-            explanation: `Potassium secretion in the collecting duct is coupled to sodium reabsorption through principal cells (aldosterone's target). An aldosterone antagonist shuts that exchange down — potassium-SPARING. Loop diuretics do the opposite: they deliver a flood of sodium to those same principal cells, accelerating the exchange and wasting K$^+$. Same ion, opposite fates, depending on where in the nephron you act.`
+            explanation: `Potassium secretion in the collecting duct is coupled to sodium reabsorption through principal cells (aldosterone's target). An aldosterone antagonist shuts that exchange down, so potassium is retained — potassium-SPARING. It also reduces H$^+$ secretion, making the urine less acidic, not more. Loop diuretics do the opposite: they deliver a flood of sodium to those same principal cells, accelerating the exchange and wasting K$^+$. Same ion, opposite fates, depending on where in the nephron you act.`
           }
         ]
       }

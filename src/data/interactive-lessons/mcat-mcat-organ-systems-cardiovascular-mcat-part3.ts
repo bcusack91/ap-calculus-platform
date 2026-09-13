@@ -65,19 +65,19 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
         questions: [
           {
             question: `A patient with nephrotic syndrome loses large amounts of albumin in the urine and develops widespread edema. The primary Starling-force change is:`,
-            options: [`Increased capillary hydrostatic pressure`, `Decreased plasma oncotic pressure`, `Increased interstitial hydrostatic pressure`, `Decreased interstitial oncotic pressure`],
+            options: [`Increased capillary hydrostatic pressure`, `Decreased plasma colloid oncotic pressure`, `Increased interstitial hydrostatic pressure`, `Decreased interstitial oncotic pressure`],
             correctAnswer: 1,
             explanation: `Albumin is the chief generator of plasma oncotic pressure ($\\pi_c$), the main force pulling fluid back into capillaries. Losing albumin lowers $\\pi_c$, so filtration outweighs reabsorption along the whole capillary → interstitial fluid accumulates (edema). The same mechanism operates in liver failure (less albumin synthesis).`
           },
           {
             question: `A healthy subject stands up quickly; blood pools in the leg veins and arterial pressure transiently dips. The immediate compensatory response is:`,
-            options: [`Increased baroreceptor firing causing reflex bradycardia`, `Renin release raising blood volume within seconds`, `Decreased baroreceptor firing causing increased sympathetic outflow and tachycardia`, `Local metabolic vasodilation in skeletal muscle`],
+            options: [`Increased baroreceptor firing causing reflex bradycardia`, `Renin release expanding blood volume within seconds`, `Decreased baroreceptor firing, raising sympathetic outflow`, `Vagal activation slowing the heart to boost filling`],
             correctAnswer: 2,
-            explanation: `Venous pooling cuts venous return → preload → SV → MAP. Carotid/aortic baroreceptors stretch LESS and fire LESS, disinhibiting sympathetic output: HR and contractility rise and arterioles/veins constrict, restoring pressure within a couple of beats. Renin/volume mechanisms act over hours, not seconds — the classic short-term vs long-term control distinction.`
+            explanation: `Venous pooling cuts venous return → preload → SV → MAP. Carotid/aortic baroreceptors stretch LESS and fire LESS, disinhibiting sympathetic output and withdrawing (not raising) vagal tone: HR and contractility rise and arterioles/veins constrict, restoring pressure within a couple of beats. Renin/volume mechanisms act over hours, not seconds — the classic short-term vs long-term control distinction.`
           },
           {
             question: `An experiment increases venous return to an isolated heart while keeping hormones and nerves constant. Stroke volume rises. The best explanation is:`,
-            options: [`Greater sarcomere stretch at end-diastole enhances force generation (Frank–Starling)`, `Increased sympathetic stimulation of contractility`, `Decreased afterload on the ventricle`, `An increase in intrinsic heart rate`],
+            options: [`Frank–Starling: greater end-diastolic stretch`, `Increased sympathetic stimulation of contractility`, `Decreased afterload from lower aortic pressure`, `An increase in intrinsic heart rate`],
             correctAnswer: 0,
             explanation: `With nerves and hormones fixed, the only changed input is preload. The Frank–Starling mechanism is intrinsic to the myocardium: more filling stretches sarcomeres toward optimal overlap (and increases calcium sensitivity), producing a stronger contraction and larger SV — no autonomic input required.`
           }

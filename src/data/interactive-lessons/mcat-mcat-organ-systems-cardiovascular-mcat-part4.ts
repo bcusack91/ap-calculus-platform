@@ -74,9 +74,9 @@ where $C_a$ and $C_v$ are arterial and venous O$_2$ contents. Rearranged, this m
           },
           {
             question: `A patient in septic shock has warm, flushed skin, cardiac output of 8 L/min (elevated), and dangerously low blood pressure. The hemodynamic explanation is:`,
-            options: [`Profound systemic vasodilation has collapsed total peripheral resistance`, `Blood loss has decreased preload and stroke volume`, `Pump failure has decreased contractility`, `Increased blood viscosity has raised resistance to flow`],
+            options: [`Vasodilation has collapsed total peripheral resistance`, `Blood loss has decreased preload and stroke volume`, `Pump failure has depressed myocardial contractility`, `Increased blood viscosity has raised resistance to flow`],
             correctAnswer: 0,
-            explanation: `$MAP = CO \\times TPR$. With CO elevated, low MAP forces the conclusion that TPR has collapsed — inflammatory mediators (e.g., nitric oxide) dilate arterioles body-wide. Warm skin confirms dilated cutaneous beds. Hypovolemic and cardiogenic shock would instead show LOW output with cool, clamped-down skin.`
+            explanation: `$MAP = CO \\times TPR$. With CO elevated, low MAP forces the conclusion that TPR has collapsed — inflammatory mediators (e.g., nitric oxide) cause profound arteriolar dilation body-wide. Warm skin confirms dilated cutaneous beds. Hypovolemic and cardiogenic shock would instead show LOW output with cool, clamped-down skin, and raised viscosity would increase, not collapse, resistance.`
           }
         ]
       }

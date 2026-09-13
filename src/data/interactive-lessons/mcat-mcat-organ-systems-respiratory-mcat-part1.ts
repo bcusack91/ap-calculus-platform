@@ -74,21 +74,21 @@ Rapid shallow breathing wastes a larger fraction of each breath on dead space: 2
         questions: [
           {
             question: `During quiet inspiration, air enters the lungs because:`,
-            options: [`The diaphragm pushes air downward into the alveoli`, `Contraction of inspiratory muscles increases thoracic volume, dropping alveolar pressure below atmospheric`, `Atmospheric pressure rises above its usual value`, `Active transport proteins move air across the alveolar membrane`],
+            options: [`Diaphragm contraction pushes air downward into the alveoli`, `Thoracic expansion drops alveolar pressure below atmospheric`, `Elastic recoil of the lungs actively draws air into the alveoli`, `Active transport proteins move air across the alveolar membrane`],
             correctAnswer: 1,
-            explanation: `Breathing is Boyle's law: the diaphragm and external intercostals expand the thorax, alveolar pressure falls below atmospheric, and air flows passively down the pressure gradient. The muscles act on VOLUME; pressure and flow follow. Nothing about atmospheric pressure changes, and gases are never actively transported.`
+            explanation: `Breathing is Boyle's law: the diaphragm and external intercostals expand the thorax, alveolar pressure falls below atmospheric, and air flows passively down the pressure gradient. The muscles act on VOLUME, not by pushing air; pressure and flow follow. The lung's elastic recoil pulls inward and powers quiet expiration, not inspiration, and gases are never actively transported.`
           },
           {
             question: `A stab wound opens the right pleural cavity to the atmosphere. The right lung collapses because:`,
-            options: [`Atmospheric air compresses the lung from outside with positive pressure`, `The diaphragm can no longer contract on that side`, `Loss of negative intrapleural pressure allows the lung's elastic recoil to pull it inward`, `Surfactant escapes through the wound, raising surface tension`],
+            options: [`Air enters at positive pressure and squeezes the lung`, `The diaphragm on that side loses its ability to contract`, `Intrapleural pressure rises to atmospheric, freeing lung recoil`, `Surfactant escapes through the wound, raising surface tension`],
             correctAnswer: 2,
             explanation: `The lung is held expanded only by the negative (sub-alveolar) intrapleural pressure coupling it to the chest wall. Venting the pleural space to atmosphere abolishes that pressure difference, and the lung's own inward elastic recoil — always present — collapses it. The diaphragm and surfactant are untouched.`
           },
           {
             question: `Which measurement CANNOT be obtained from simple spirometry?`,
-            options: [`Tidal volume`, `Vital capacity`, `Inspiratory reserve volume`, `Functional residual capacity`],
+            options: [`Tidal volume`, `Forced expiratory volume in one second`, `Inspiratory reserve volume`, `Functional residual capacity`],
             correctAnswer: 3,
-            explanation: `FRC = ERV + RV, and residual volume can never be exhaled into a spirometer, so any capacity containing RV (FRC, TLC) requires helium-dilution or body-plethysmography methods. TV, IRV, ERV, and VC are all exhalable/inhalable air movements a spirometer records directly.`
+            explanation: `FRC = ERV + RV, and residual volume can never be exhaled into a spirometer, so any capacity containing RV (FRC, TLC) requires helium-dilution or body-plethysmography methods. TV, IRV, ERV, VC, and FEV1 are all exhalable/inhalable air movements a spirometer records directly.`
           }
         ]
       }

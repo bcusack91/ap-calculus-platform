@@ -71,7 +71,7 @@ Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 �
           },
           {
             question: `Blood moves most slowly through the capillaries because:`,
-            options: [`Individual capillaries have the smallest radius, so resistance is highest there`, `The total cross-sectional area of all capillaries is the largest in the circulation`, `Capillary walls absorb most of the pressure energy`, `Most blood volume is stored in the capillaries at rest`],
+            options: [`Capillaries' tiny radius makes resistance highest there`, `Their combined cross-sectional area is the largest anywhere`, `Capillary walls absorb most of the pressure energy`, `Most blood volume is stored in the capillaries at rest`],
             correctAnswer: 1,
             explanation: `By continuity, $v = Q/A_{total}$. Though each capillary is narrow, billions in parallel give the greatest TOTAL cross-sectional area, so velocity is lowest — ideal for exchange. (Most blood volume at rest is in the VEINS, not capillaries, and the largest pressure drop occurs in the arterioles.)`
           },

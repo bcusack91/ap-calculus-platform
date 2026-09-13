@@ -64,15 +64,15 @@ Every renal question is one of these four words. Reabsorption = tubule → blood
         questions: [
           {
             question: `A toxin selectively destroys podocytes and strips the negative charge from the glomerular basement membrane. The most likely urinary finding is:`,
-            options: [`Glucose in the urine`, `Red and white blood cells in the urine`, `Albumin in the urine`, `Elevated urea concentration in the urine`],
+            options: [`Large amounts of glucose in the urine`, `Many red and white blood cells in the urine`, `Large amounts of albumin in the urine`, `Markedly elevated urea concentration in the urine`],
             correctAnswer: 2,
             explanation: `The barrier excludes albumin by BOTH size (podocyte slit diaphragms) and charge (the anionic basement membrane repels negatively charged albumin). Damaging both lets albumin through — proteinuria, the hallmark of glomerular injury (nephrotic syndrome). Glucose and urea are freely filtered normally, and cells require far grosser structural damage to pass.`
           },
           {
             question: `Blood in the renal circulation passes through two capillary beds in series. The vessel connecting them is:`,
-            options: [`The efferent arteriole, which drains the glomerulus and feeds the peritubular capillaries`, `The renal vein, which redistributes blood to the tubules`, `The afferent arteriole, which supplies both beds simultaneously`, `The vasa recta, which connect the glomerulus directly to the loop of Henle`],
+            options: [`The efferent arteriole, leading to the peritubular capillaries`, `The renal vein, which redistributes blood to the tubules`, `The afferent arteriole, which supplies both beds simultaneously`, `The vasa recta, linking the glomerulus directly to the loop of Henle`],
             correctAnswer: 0,
-            explanation: `The renal portal arrangement runs afferent arteriole → glomerulus → EFFERENT ARTERIOLE → peritubular capillaries (and vasa recta for juxtamedullary nephrons). An arteriole downstream of a capillary bed is rare and is exactly what keeps glomerular pressure high and adjustable. The vasa recta are part of the second bed, not the connector.`
+            explanation: `The renal portal arrangement runs afferent arteriole → glomerulus → EFFERENT ARTERIOLE → peritubular capillaries (and vasa recta for juxtamedullary nephrons): the efferent arteriole drains the glomerulus and feeds the second bed. An arteriole downstream of a capillary bed is rare and is exactly what keeps glomerular pressure high and adjustable. The vasa recta are part of the second bed, not the connector.`
           },
           {
             question: `Compared with plasma, the fluid in Bowman's space of a healthy nephron contains:`,

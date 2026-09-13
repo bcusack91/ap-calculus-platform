@@ -56,19 +56,19 @@ The lungs adjust CO2 in minutes; the kidneys adjust HCO3$^-$ over days but can f
         questions: [
           {
             question: `A patient produces 10 L/day of very dilute urine. Water deprivation does not concentrate the urine, but injected ADH analog does. The diagnosis is:`,
-            options: [`Nephrogenic diabetes insipidus — collecting duct unresponsive to ADH`, `Central diabetes insipidus — insufficient ADH secretion from the posterior pituitary`, `Diabetes mellitus — osmotic diuresis from glucosuria`, `Primary polydipsia — excessive water drinking with intact ADH function`],
+            options: [`Nephrogenic diabetes insipidus — kidney unresponsive to ADH`, `Central diabetes insipidus — inadequate pituitary ADH release`, `Diabetes mellitus — osmotic diuresis from heavy glucosuria`, `Primary polydipsia — compulsive water drinking, intact ADH`],
             correctAnswer: 1,
             explanation: `Failure to concentrate despite dehydration shows the ADH SYSTEM is broken (dehydration should maximize ADH). Response to exogenous ADH localizes the lesion upstream: the kidney works, the hormone was missing — CENTRAL DI. Nephrogenic DI would ignore the injection; mellitus produces glucose-laden (osmotic) urine; primary polydipsia concentrates urine normally once water is withheld.`
           },
           {
             question: `Aldosterone increases sodium reabsorption in the collecting duct. Which additional finding is a direct consequence of aldosterone excess?`,
-            options: [`Increased plasma potassium`, `Large increases in plasma osmolarity`, `Decreased blood volume`, `Decreased plasma potassium`],
+            options: [`High plasma potassium (hyperkalemia)`, `Large increases in plasma osmolarity`, `Decreased circulating blood volume`, `Low plasma potassium (hypokalemia)`],
             correctAnswer: 3,
-            explanation: `Principal cells reabsorb Na$^+$ in exchange for secreting K$^+$ (the basolateral Na$^+$/K$^+$-ATPase and luminal electronegativity couple them), so aldosterone excess wastes potassium — hypokalemia (plus mild alkalosis from H$^+$ secretion). Osmolarity barely changes because water follows the reabsorbed salt; volume EXPANDS, raising blood pressure.`
+            explanation: `Principal cells reabsorb Na$^+$ in exchange for secreting K$^+$ (the basolateral Na$^+$/K$^+$-ATPase and luminal electronegativity couple them), so aldosterone excess wastes potassium — hypokalemia, not hyperkalemia (plus mild alkalosis from H$^+$ secretion). Osmolarity barely changes because water follows the reabsorbed salt; volume EXPANDS, raising blood pressure.`
           },
           {
             question: `The vasa recta preserve the medullary osmotic gradient because they:`,
-            options: [`Actively pump NaCl back into the medulla using ATP`, `Are impermeable to both water and solutes`, `Form hairpin loops in which passive exchange lets blood equilibrate on the way down and re-equilibrate on the way up`, `Carry blood only through the renal cortex, bypassing the medulla entirely`],
+            options: [`Actively pump NaCl back into the medullary interstitium using ATP`, `Are impermeable to water and solutes, so nothing is exchanged`, `Form passive countercurrent hairpins that exchange solute and water`, `Carry blood only through the cortex, bypassing the medulla entirely`],
             correctAnswer: 2,
             explanation: `The vasa recta are freely permeable capillaries arranged in countercurrent hairpins: descending blood gains solute and loses water, ascending blood reverses both, so blood exits only slightly hypertonic and the gradient is supplied with O2 without being washed out. The MULTIPLIER (active NaCl transport) is the ascending limb's job; the vasa recta are purely passive EXCHANGERS.`
           }
