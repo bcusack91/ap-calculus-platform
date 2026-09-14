@@ -26,7 +26,7 @@ export const mcatBiostatisticsPart2Data = {
 | Type I | Reject $H_{0}$ when it's true (False positive) | $\\alpha$ (significance level) |
 | Type II | Fail to reject $H_{0}$ when it's false (False negative) | $\\beta$ |
 
-**Critical:** α = 0.05 means 5% chance of Type I error (standard MCAT threshold)
+**Critical:** α = 0.05 means a 5% chance of a Type I error when $H_{0}$ is true, i.e., a 5% chance of rejecting a true null (standard MCAT threshold)
 
 ### p-value Interpretation
 
@@ -74,15 +74,15 @@ p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
             explanation: `α is both the significance level (the p-value threshold for rejecting $H_{0}$) and the maximum acceptable Type I error rate, the probability of incorrectly rejecting a true $H_{0}$. If p < 0.05, we reject $H_{0}$. α is set before the study, so it is not the obtained p-value; the Type II error rate is β; and neither gives the probability that caffeine has an effect.`
           },
           {
-            question: `A study of 50 patients finds a difference in pain scores (p=0.06), but a study of 500 patients on the same drug finds p=0.04. Why did power increase?`,
+            question: `Two trials of the same drug use identical designs and pain-score measures, except that one enrolls 50 patients and the other 500. They report p = 0.06 and p = 0.04, respectively. Why does the 500-patient trial have more statistical power?`,
             options: [
               `A larger sample gives more precise estimates of the effect`,
-              `The p-value fell by chance, which is what raises power`,
-              `Type II error became more likely with more patients`,
-              `The drug's true effect grew larger in the bigger study`
+              `Its smaller p-value is itself what gives it more power`,
+              `Type II error becomes more likely with more patients`,
+              `The drug's true effect grows larger in the bigger trial`
             ],
             correctAnswer: 0,
-            explanation: `Larger sample size (50 vs 500) increases **statistical power** (ability to detect real effects). More patients give more precise estimates (smaller standard error), increasing the ability to detect true effects, so the second study had more power, allowing detection of significance. The two p-values do not themselves demonstrate power; power is set by design features such as sample size, not by a chance p-value; more power means Type II error became less likely; and it is the same drug, so there is no reason its true effect changed.`
+            explanation: `The only design difference is sample size (50 vs 500), and a larger sample increases **statistical power** (the ability to detect a real effect). More patients give more precise estimates (a smaller standard error), so a true effect of a given size is more likely to reach significance. Power is a property of the design, fixed before any data come in, so an obtained p-value cannot be what gives a trial its power, and the two p-values alone do not show which trial had more. More power makes Type II error less likely, not more, and it is the same drug, so there is no reason its true effect changed.`
           },
           {
             question: `A study concludes "No significant difference" (p=0.10). Which error might have occurred?`,

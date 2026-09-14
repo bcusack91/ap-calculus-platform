@@ -76,7 +76,7 @@ RCT Gold Standard:
             explanation: `High |r| indicates strong correlation, NOT causation, and the negative sign means higher exercise frequency goes with lower BMI. The share of variance explained is $r^2 \\approx 0.72$, which is substantial but not 85%, and it would not show cause. Confounders (e.g., diet, genetics) may explain both exercise habits and BMI independently.`
           },
           {
-            question: `Coffee consumption correlates with heart attack risk. Which scenario rules out confounding?`,
+            question: `Coffee consumption correlates with heart attack risk. Which approach best controls for confounding?`,
             options: [
               `Matching drinkers to non-drinkers by age and sex`,
               `Randomizing people to coffee or decaf in an RCT`,
@@ -84,10 +84,10 @@ RCT Gold Standard:
               `Surveying a much larger sample of coffee drinkers`
             ],
             correctAnswer: 1,
-            explanation: `RCT randomization balances confounders on average, both measured and unknown, across groups, so it is the only option that addresses confounding in general rather than strictly ruling it out. Statistical adjustment and matching address only the specific confounders chosen (smoking, diet, age, sex), leaving unknown confounders in place, and a larger sample reduces random error but not confounding.`
+            explanation: `RCT randomization balances confounders on average, both measured and unknown, across groups, so it is the only option that addresses confounding in general; it does not guarantee zero confounding in any single trial, but it controls it better than the alternatives. Statistical adjustment and matching address only the specific confounders chosen (smoking, diet, age, sex), leaving unknown confounders in place, and a larger sample reduces random error but not confounding.`
           },
           {
-            question: `A cohort study follows 1000 patients taking medication X for 5 years. Why is this better than an observational cross-sectional study for inferring causation?`,
+            question: `A cohort study follows 1000 patients taking medication X for 5 years. Why is this better than a cross-sectional study for inferring causation?`,
             options: [
               `Cohort studies always enroll larger samples`,
               `Exposure is measured before the outcome occurs`,
@@ -95,7 +95,7 @@ RCT Gold Standard:
               `Cohort studies are cheaper and faster to run`
             ],
             correctAnswer: 1,
-            explanation: `Cohort studies are prospective: exposure (medication X) is measured before outcome occurs. This temporal relationship (exposure precedes outcome) strengthens causal inference compared to cross-sectional data. Cohorts are not necessarily larger, are usually slower and more costly, and remain vulnerable to confounding.`
+            explanation: `Both designs are observational, but this cohort is prospective: exposure (medication X) is measured before the outcome occurs, whereas a cross-sectional study measures both at one time point. This temporal relationship (exposure precedes outcome) strengthens causal inference compared to cross-sectional data. Cohorts are not necessarily larger, are usually slower and more costly, and remain vulnerable to confounding.`
           },
           {
             question: `A study reports: "Children watching violent TV shows are more aggressive." Which BEST explains the correlation?`,

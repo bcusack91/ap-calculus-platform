@@ -79,10 +79,10 @@ Negate it: *"The museum did not advertise the new hours."* The argument can stil
             explanation: `The conclusion jumps from "shorter commutes" to "better quality of life." That bridge requires that shorter commutes actually improve quality of life. Negate it — "shorter commutes do not improve quality of life" — and the conclusion no longer follows. The other choices are not required.`
           },
           {
-            question: `Apply the negation test. Argument: "Since the clinic adopted electronic records, billing errors dropped; therefore electronic records reduce billing errors." A proposed assumption is "No new billing staff were hired at the same time." Negating this assumption shows it is:`,
-            options: [`Necessary, since new staff would offer a rival cause of the drop`, `Not necessary, since the records still preceded the drop`, `Not necessary, since staffing is unrelated to billing errors`, `Necessary, since it restates the argument's conclusion`],
+            question: `Apply the negation test. Argument: "Since the clinic adopted electronic records, billing errors dropped; therefore electronic records reduce billing errors." A proposed assumption is "The drop was not caused entirely by new billing staff hired at the same time." Negating this assumption shows it is:`,
+            options: [`Necessary, since the staff would then explain the whole drop`, `Not necessary, since the records still preceded the drop`, `Not necessary, since staffing is unrelated to billing errors`, `Necessary, since it restates the argument's conclusion`],
             correctAnswer: 0,
-            explanation: `Negation gives "new billing staff WERE hired at the same time," which supplies a rival cause for the error reduction and breaks the causal conclusion. Because negating it destroys the argument, the statement is a necessary assumption.`
+            explanation: `Negate the statement: "The drop WAS caused entirely by new billing staff hired at the same time." Then the electronic records account for none of the drop, so the timing no longer supports the conclusion that they reduce billing errors, and the argument collapses. Because negating it destroys the argument, the statement is a necessary assumption. The records preceding the drop cannot save the argument once another cause explains all of it, staffing plainly can affect billing errors, and the statement is about a rival cause rather than a restatement of the conclusion.`
           },
           {
             question: `Which statement best distinguishes a NECESSARY assumption from a SUFFICIENT strengthener on CARS?`,

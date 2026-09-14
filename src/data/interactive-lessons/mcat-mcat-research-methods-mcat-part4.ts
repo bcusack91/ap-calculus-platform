@@ -69,7 +69,7 @@ Risk: Publication bias (only positive findings published)
             explanation: `With only 50 participants, a non-significant result may be a Type II error (false negative). A larger sample increases power to detect a real effect if one exists. Lowering α to 0.01 makes significance harder to reach, switching to a one-tailed test after seeing the data is p-hacking that inflates Type I error, and a non-significant p-value is not evidence of no effect.`
           },
           {
-            question: `A researcher wants to test a vaccine in vulnerable populations (homeless). Why must researchers include (not exclude) them?`,
+            question: `A researcher is testing a vaccine intended for use in homeless people, a vulnerable population. Why should such a group not be excluded from the trial without a sound reason?`,
             options: [
               `Beneficence: avoiding all risk to the vulnerable`,
               `Justice: fair access to potential research benefits`,
@@ -77,7 +77,7 @@ Risk: Publication bias (only positive findings published)
               `Efficiency: recruitment is faster in these groups`
             ],
             correctAnswer: 1,
-            explanation: `Justice requires fair distribution of research benefits, so vulnerable groups should not be excluded without justification. Excluding vulnerable groups historically "protected" them but denied access to potential treatments—unethical. Avoiding all risk would argue for exclusion, and convenience of consent or recruitment is never an ethical justification for enrolling vulnerable people.`
+            explanation: `Justice requires fair distribution of research benefits, so vulnerable groups should not be excluded without justification. Blanket exclusion "protects" a group but denies it access to potential treatments and to evidence about how they work for its members; inclusion still requires added safeguards. Avoiding all risk would argue for exclusion, and convenience of consent or recruitment is never an ethical justification for enrolling vulnerable people.`
           },
           {
             question: `A meta-analysis combines 20 depression studies (n=5000 total). One issue could be:`,
@@ -91,7 +91,7 @@ Risk: Publication bias (only positive findings published)
             explanation: `Publication bias is a major meta-analysis limitation: negative studies are less likely to be published, so the drug effect is overestimated. If 80% of published studies show a drug works (but 40% of unpublished studies don't), the pooled effect is overestimated. Pooling increases power rather than lowering it, meta-analyses use study results rather than participant memory, and different designs can be combined with appropriate methods.`
           },
           {
-            question: `Informed consent requires subjects know: (Select all that apply)`,
+            question: `Which list best summarizes what informed consent requires subjects to know?`,
             options: [
               `Purpose, risks and benefits, right to withdraw, and confidentiality`,
               `Purpose, risks and benefits, and right to withdraw, but not confidentiality`,

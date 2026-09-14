@@ -60,10 +60,10 @@ The MCAT rarely asks "SN1 or SN2?" naked. It hides the decision inside:
             explanation: `Best SN2: primary substrate + strong nucleophile + polar aprotic solvent + good leaving group. Methanol (protic) slows the nucleophile; the tertiary substrate cannot do SN2 at all; chloride is a worse leaving group than bromide.`
           },
           {
-            question: `S-Adenosylmethionine (SAM) transfers a methyl group to the nitrogen of norepinephrine in one concerted enzymatic step. This biological methylation is best described as:`,
-            options: [`SN1 via a methyl cation intermediate`, `SN2 at the methyl carbon`, `E2 across the methyl group`, `Radical transfer of the methyl group`],
+            question: `In S-adenosylmethionine (SAM), a methyl group is bonded to a positively charged sulfur. An enzyme uses SAM to transfer that methyl group to the amine nitrogen of norepinephrine, releasing neutral S-adenosylhomocysteine. This biological methylation is best described as:`,
+            options: [`SN1 via a methyl cation intermediate`, `SN2 attack at the methyl carbon`, `E2 across the methyl group`, `Radical transfer of the methyl group`],
             correctAnswer: 1,
-            explanation: `A methyl carbon can never form a stable cation (no SN1). The amine attacks the electrophilic methyl carbon while the neutral sulfide (S-adenosylhomocysteine) departs — a textbook biological SN2 with a positively charged sulfonium making an excellent leaving group. A methyl group has no beta-hydrogen, so E2 is impossible, and a concerted two-electron transfer is not a radical process.`
+            explanation: `Reason from the substrate and the leaving group. The carbon being attacked is a methyl carbon, which cannot form a stable cation, so SN1 is out. The positively charged sulfonium leaves as a neutral sulfide (S-adenosylhomocysteine), an excellent leaving group, while the amine nitrogen's lone pair attacks the unhindered methyl carbon from the back side: a textbook biological SN2. The methyl carbon has no neighboring carbon bearing a beta-hydrogen, so E2 is impossible, and a nitrogen lone pair donating two electrons to carbon is a polar process, not a radical one.`
           },
           {
             question: `A researcher needs to convert (R)-2-butanol into (S)-2-butanethiol (net inversion). The best route is:`,

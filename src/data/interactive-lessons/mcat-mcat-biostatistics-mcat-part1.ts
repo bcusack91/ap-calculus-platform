@@ -49,15 +49,15 @@ export const mcatBiostatisticsPart1Data = {
       exercise: {
         questions: [
           {
-            question: `A dataset of 7 patients has cholesterol values (mg/dL): 180, 195, 200, 205, 210, 215, 250. Which is the best measure of central tendency?`,
+            question: `A dataset of 7 patients has cholesterol values (mg/dL): 180, 195, 200, 205, 210, 215, 480. Which is the best measure of central tendency?`,
             options: [
-              `Mean (≈208), since it uses every value`,
+              `Mean (≈241), since it uses every value`,
               `Median (205), since it resists the outlier`,
               `Mode, since the most common value is typical`,
-              `Range (70), since it spans all the values`
+              `Range (300), since it spans all the values`
             ],
             correctAnswer: 1,
-            explanation: `The mean is heavily influenced by the outlier (250). The median (205) better represents the "typical" value—this is why median is preferred for skewed distributions. There is no repeated value, so there is no mode, and the range measures spread rather than central tendency.`
+            explanation: `The values sum to 1685, so the mean is 1685 ÷ 7 ≈ 241. The single extreme value (480) pulls the mean above six of the seven patients, so it does not describe a typical patient. The median is the 4th of the 7 ordered values, 205, and it would stay 205 no matter how extreme the top value became—this is why median is preferred for skewed distributions. There is no repeated value, so there is no mode, and the range measures spread rather than central tendency.`
           },
           {
             question: `If a drug concentration study has a mean of 10 μg/mL and SD of 2 μg/mL, what percentage of samples fall between 6 and 14 μg/mL?`,
