@@ -65,9 +65,9 @@ export const mcatMicroPart6Data = {
         questions: [
           {
             question: `A newborn has IgG antibodies acquired from its mother. This is an example of:`,
-            options: [`Passive immunity — antibodies were transferred, not produced by the baby's own immune system`, `Active immunity`, `Innate immunity`, `Cell-mediated immunity`],
+            options: [`Passive immunity`, `Active immunity`, `Innate immunity`, `Cell-mediated immunity`],
             correctAnswer: 0,
-            explanation: `Maternal IgG crosses the placenta, providing passive immunity. The baby did not mount its own immune response. This protection is immediate but temporary (it fades as maternal antibodies are degraded over months).`
+            explanation: `Maternal IgG crosses the placenta, providing passive immunity. The antibodies were transferred rather than made by the baby's own immune system. This protection is immediate but temporary (it fades as maternal antibodies are degraded over months).`
           },
           {
             question: `A virus-infected cell displays viral peptides on MHC class I. Which cell is responsible for recognizing and killing it?`,
@@ -83,21 +83,21 @@ export const mcatMicroPart6Data = {
           },
           {
             question: `A natural killer (NK) cell destroys a tumor cell that has downregulated its MHC class I molecules. NK cells are notable because they:`,
-            options: [`Kill abnormal cells without requiring antigen-specific recognition (part of innate immunity)`, `Require MHC II presentation to act`, `Produce antibodies`, `Only attack extracellular bacteria`],
+            options: [`Kill without antigen-specific receptors`, `Require MHC class II presentation before killing`, `Produce antibodies against tumor antigens`, `Attack only extracellular bacteria and fungi`],
             correctAnswer: 0,
-            explanation: `NK cells are innate lymphocytes that detect "missing self" — cells lacking normal MHC I (a trick viruses and tumors use to evade CD8+ T cells). They kill without prior sensitization or antigen-specific receptors.`
+            explanation: `NK cells are innate lymphocytes that detect "missing self" — cells lacking normal MHC I (a trick viruses and tumors use to evade CD8+ T cells). As part of innate immunity, they kill abnormal cells without prior sensitization or antigen-specific recognition. They do not need MHC II presentation, they do not make antibodies (plasma cells do), and their targets are host cells such as infected or tumor cells.`
           },
           {
             question: `A patient receives a tetanus vaccine containing inactivated toxoid. The protection generated is best described as:`,
-            options: [`Active immunity — the patient's own immune system forms memory cells`, `Passive immunity — pre-formed antibodies are supplied`, `Innate immunity only`, `No immunity, because the toxoid is inactivated`],
+            options: [`Active immunity, as the patient forms memory cells`, `Passive immunity, as pre-formed antibodies are supplied`, `Innate immunity, as no memory cells form`, `No immunity, as the toxoid is inactivated`],
             correctAnswer: 0,
-            explanation: `A vaccine exposes the immune system to antigen so it mounts its own response and forms memory B and T cells (active immunity) — delayed in onset but long-lasting. Receiving pre-made anti-tetanus antibodies (antiserum) would instead be passive immunity.`
+            explanation: `A vaccine exposes the immune system to antigen so it mounts its own response and forms memory B and T cells (active immunity) — delayed in onset but long-lasting. Receiving pre-made anti-tetanus antibodies (antiserum) would instead be passive immunity. An inactivated toxoid is still antigenic, which is exactly why it works as a vaccine.`
           },
           {
             question: `The complement protein cascade contributes to defense by all of the following EXCEPT:`,
-            options: [`Directly producing antigen-specific antibodies`, `Opsonizing pathogens to enhance phagocytosis`, `Forming the membrane attack complex (MAC) to lyse cells`, `Promoting inflammation`],
+            options: [`Producing antigen-specific antibodies`, `Opsonizing pathogens to enhance phagocytosis`, `Forming the membrane attack complex (MAC) to lyse cells`, `Promoting inflammation via anaphylatoxins`],
             correctAnswer: 0,
-            explanation: `Complement opsonizes (coats) pathogens, builds the MAC pore to lyse them, and amplifies inflammation. Antibodies, however, are produced by plasma cells (differentiated B cells) of the adaptive response, not by complement proteins.`
+            explanation: `Complement opsonizes (coats) pathogens, builds the MAC pore to lyse them, and amplifies inflammation through anaphylatoxins such as C3a and C5a. Antibodies, however, are produced by plasma cells (differentiated B cells) of the adaptive response, not by complement proteins.`
           }
         ]
       }

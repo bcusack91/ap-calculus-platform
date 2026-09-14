@@ -48,9 +48,9 @@ Purification tables track **total protein** (mg), **total activity** (units), an
         questions: [
           {
             question: `In size-exclusion chromatography, which protein elutes first?`,
-            options: [`The smallest protein, because it moves through pores quickly`, `The largest protein, because it is excluded from the beads' pores and takes the direct path`, `The protein with the highest pI`, `The most hydrophobic protein`],
+            options: [`The smallest, because it enters the pores fastest`, `The largest, because it is excluded from the bead pores`, `The one with the highest pI, as it binds beads least`, `The most hydrophobic, since it avoids polar beads`],
             correctAnswer: 1,
-            explanation: `Small proteins enter the porous beads and take a longer, tortuous path; large proteins are excluded from the pores and flow around the beads, eluting first. This inversion (big first) is a favorite MCAT trap.`
+            explanation: `Small proteins enter the porous beads and take a longer, tortuous path; large proteins are excluded from the pores and flow around the beads, eluting first. This inversion (big first) is a favorite MCAT trap. Size-exclusion beads separate by size alone, so charge (pI) and hydrophobicity do not set the elution order.`
           },
           {
             question: `A protein with pI 9.2 is loaded at pH 7 onto a column packed with negatively charged beads. This is an example of:`,
@@ -60,13 +60,13 @@ Purification tables track **total protein** (mg), **total activity** (units), an
           },
           {
             question: `On reducing SDS-PAGE, a purified protein shows two bands at 60 kDa and 40 kDa. On size-exclusion chromatography under native conditions it elutes as a single 200 kDa species. The most consistent structure is:`,
-            options: [`A monomeric 100 kDa protein`, `A heterotetramer containing two 60 kDa and two 40 kDa subunits`, `Two unrelated contaminating proteins`, `A 200 kDa single polypeptide cleaved by SDS`],
+            options: [`A monomeric 100 kDa protein`, `A heterotetramer of two 60 kDa and two 40 kDa subunits`, `Two unrelated proteins that copurified by chance`, `A 200 kDa single polypeptide cleaved by SDS`],
             correctAnswer: 1,
-            explanation: `SDS-PAGE reveals individual subunit sizes (60 + 40); native sizing shows the assembled complex (200 kDa). Two of each subunit: $2(60) + 2(40) = 200$ kDa — an $\\alpha_2\\beta_2$ heterotetramer. SDS does not cleave peptide bonds.`
+            explanation: `SDS-PAGE reveals individual subunit sizes (60 + 40); native sizing shows the assembled complex (200 kDa). Two of each subunit: $2(60) + 2(40) = 200$ kDa — an $\\alpha_2\\beta_2$ heterotetramer. SDS does not cleave peptide bonds, and two unrelated proteins would not travel together as one 200 kDa species under native conditions.`
           },
           {
             question: `Edman degradation of a peptide yields no signal, but mass spectrometry confirms plenty of intact peptide is present. A likely explanation is:`,
-            options: [`The N-terminus is chemically blocked (e.g., acetylated)`, `The peptide contains no aromatic residues`, `The peptide is too small for Edman chemistry`, `The C-terminus is amidated`],
+            options: [`The N-terminus is chemically blocked`, `The peptide contains no aromatic residues`, `The peptide is too small for Edman chemistry`, `The C-terminal carboxyl group is amidated`],
             correctAnswer: 0,
             explanation: `Edman chemistry requires a free N-terminal amine to react with phenylisothiocyanate. N-terminal modifications (acetylation, cyclization) block the first coupling step. C-terminal changes and aromatic content are irrelevant to Edman.`
           },

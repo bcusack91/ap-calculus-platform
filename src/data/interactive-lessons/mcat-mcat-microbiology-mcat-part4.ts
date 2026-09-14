@@ -62,21 +62,21 @@ export const mcatMicroPart4Data = {
         questions: [
           {
             question: `Enveloped viruses are generally more susceptible to disinfection because:`,
-            options: [`The lipid envelope is easily disrupted by detergents, alcohol, and desiccation`, `They have thicker capsids`, `They replicate more slowly`, `They lack nucleic acid`],
+            options: [`Their lipid envelope is easily disrupted`, `Their capsids are thinner than those of naked viruses`, `They carry RNA genomes that degrade quickly`, `Their capsid proteins denature at room temperature`],
             correctAnswer: 0,
-            explanation: `The lipid envelope is fragile — destroyed by soap, alcohol, heat, and drying. Without their envelope, these viruses cannot attach to host cells. Naked viruses (no envelope) are more resistant to environmental conditions.`
+            explanation: `The lipid envelope is fragile — destroyed by soap and other detergents, alcohol, heat, and drying. The capsid is not the weak point, and genome type is not the reason: enveloped viruses include DNA viruses such as herpesviruses. Without their envelope, these viruses cannot attach to host cells. Naked viruses (no envelope) are more resistant to environmental conditions.`
           },
           {
             question: `A (+)ssRNA virus can begin producing viral proteins immediately upon entering a host cell because its genome:`,
-            options: [`Can function directly as mRNA and be translated by host ribosomes`, `Is double-stranded and self-replicating`, `Integrates into the host genome first`, `Is read by host DNA polymerase`],
+            options: [`Serves directly as mRNA for host ribosomes`, `Is double-stranded and replicates on its own`, `Integrates into the host genome before translation`, `Is transcribed first by host RNA polymerase II`],
             correctAnswer: 0,
-            explanation: `A (+)ssRNA genome is already mRNA-sense, so host ribosomes can translate it directly. A (-)ssRNA virus must first transcribe its genome into (+) sense RNA using a packaged RNA-dependent RNA polymerase.`
+            explanation: `A (+)ssRNA genome is already mRNA-sense, so host ribosomes can translate it directly. A (-)ssRNA virus must first transcribe its genome into (+) sense RNA using a packaged RNA-dependent RNA polymerase. Host RNA polymerase II transcribes DNA templates, not RNA, and integration is a retrovirus step.`
           },
           {
             question: `HIV must carry the enzyme reverse transcriptase within its virion because it needs to:`,
-            options: [`Convert its RNA genome into DNA for integration into the host chromosome`, `Translate its RNA directly into protein`, `Replicate its RNA without a DNA intermediate`, `Degrade host DNA`],
+            options: [`Make DNA from its RNA genome for integration`, `Translate its RNA directly into protein`, `Replicate its RNA without a DNA intermediate`, `Degrade host DNA to free up nucleotides`],
             correctAnswer: 0,
-            explanation: `HIV is a retrovirus (Class VI). Host cells cannot make DNA from an RNA template, so HIV brings its own reverse transcriptase to synthesize DNA from its (+)ssRNA genome; that DNA is then integrated as a provirus by integrase.`
+            explanation: `HIV is a retrovirus (Class VI). Host cells have no enzyme that can copy a viral RNA genome into DNA, so HIV brings its own reverse transcriptase to synthesize DNA from its (+)ssRNA genome; that DNA is then integrated into the host chromosome as a provirus by integrase. Reverse transcriptase does not degrade host DNA, and replicating RNA without a DNA intermediate is the strategy of other RNA viruses.`
           },
           {
             question: `A bacteriophage's DNA integrates into the host bacterial chromosome as a prophage and is copied each time the cell divides, without immediately destroying the cell. This describes the:`,
@@ -86,13 +86,13 @@ export const mcatMicroPart4Data = {
           },
           {
             question: `A (-)ssRNA virus such as influenza must package which enzyme inside its virion to replicate?`,
-            options: [`RNA-dependent RNA polymerase (RdRp)`, `Reverse transcriptase`, `DNA gyrase`, `Host ribosome`],
+            options: [`RNA-dependent RNA polymerase`, `Reverse transcriptase`, `DNA-dependent RNA polymerase`, `DNA-dependent DNA polymerase`],
             correctAnswer: 0,
-            explanation: `Because host cells lack any enzyme that copies RNA from an RNA template, a (-)ssRNA virus must bring its own RdRp to transcribe its antisense genome into translatable (+) mRNA. Reverse transcriptase is used by retroviruses, not by (-)ssRNA viruses.`
+            explanation: `Because host cells lack any enzyme that copies RNA from an RNA template, a (-)ssRNA virus must bring its own RNA-dependent RNA polymerase (RdRp) to transcribe its antisense genome into translatable (+) mRNA. Reverse transcriptase is used by retroviruses, not by (-)ssRNA viruses, and DNA-dependent polymerases need a DNA template, which an RNA virus's genome does not provide.`
           },
           {
             question: `Which statement about viral structure is correct?`,
-            options: [`A virus contains either DNA or RNA, but never both, surrounded by a protein capsid`, `All viruses have a lipid envelope`, `Viruses contain both DNA and RNA simultaneously`, `Viruses possess 70S ribosomes for protein synthesis`],
+            options: [`Viruses have DNA or RNA, never both, in a protein capsid`, `All viruses wrap their capsid in a lipid envelope`, `Viruses contain both DNA and RNA simultaneously`, `Viruses possess 70S ribosomes for protein synthesis`],
             correctAnswer: 0,
             explanation: `A virion carries one type of nucleic acid (DNA or RNA) inside a protein capsid; some additionally have a host-derived lipid envelope. Viruses have no ribosomes of their own — they rely entirely on host ribosomes to translate viral proteins.`
           }

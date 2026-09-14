@@ -68,9 +68,9 @@ $N = (5 \\times 10^3) \\times 2^6 = (5 \\times 10^3) \\times 64 = 3.2 \\times 10
         questions: [
           {
             question: `Antibiotics are most effective during which growth phase?`,
-            options: [`Log (exponential) phase — bacteria are actively dividing and most vulnerable`, `Lag phase`, `Stationary phase`, `Death phase`],
+            options: [`Log phase`, `Lag phase`, `Stationary phase`, `Death phase`],
             correctAnswer: 0,
-            explanation: `During the log phase, bacteria are rapidly dividing. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.`
+            explanation: `During the log (exponential) phase, bacteria are actively dividing and most vulnerable. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.`
           },
           {
             question: `A culture of 1,000 cells with a 30-minute doubling time grows exponentially for 2 hours. Approximately how many cells result?`,
@@ -80,9 +80,9 @@ $N = (5 \\times 10^3) \\times 2^6 = (5 \\times 10^3) \\times 64 = 3.2 \\times 10
           },
           {
             question: `During the stationary phase of the growth curve, the number of viable cells stays roughly constant because:`,
-            options: [`The rate of cell division equals the rate of cell death`, `All cells have stopped metabolizing entirely`, `Binary fission has become impossible`, `Oxygen has been completely consumed`],
+            options: [`Cell division is balanced by cell death`, `All cells have stopped metabolizing entirely`, `Binary fission has stopped in every cell`, `Oxygen in the medium has been fully consumed`],
             correctAnswer: 0,
-            explanation: `In stationary phase, nutrient depletion and waste accumulation slow division until it just balances the death rate, so the net population plateaus. Cells are still alive and metabolizing, just not net-growing.`
+            explanation: `In stationary phase, nutrient depletion and waste accumulation slow division until it just balances the death rate, so the net population plateaus. The rate of cell division equals the rate of cell death. Cells are still alive, metabolizing, and some are still dividing, just not net-growing; exhaustion of one nutrient such as oxygen is not the general cause.`
           },
           {
             question: `An organism that uses light for energy and CO$_2$ as its carbon source is best classified as a:`,
@@ -98,9 +98,9 @@ $N = (5 \\times 10^3) \\times 2^6 = (5 \\times 10^3) \\times 64 = 3.2 \\times 10
           },
           {
             question: `Which statement about the lag phase is correct?`,
-            options: [`Cells are metabolically active and synthesizing enzymes but not yet dividing rapidly`, `Cells are dying faster than they divide`, `Cells are dividing at their maximum rate`, `No cellular activity occurs`],
+            options: [`Cells are making enzymes but not yet dividing rapidly`, `Cells are dying faster than they are dividing`, `Cells are dividing at their maximum exponential rate`, `Cells are dormant, with no metabolic activity`],
             correctAnswer: 0,
-            explanation: `In lag phase, the population size is roughly constant, but cells are far from dormant: they synthesize ribosomes, enzymes, and metabolites needed to adapt to the new medium before entering rapid (log-phase) division.`
+            explanation: `In lag phase, the population size is roughly constant, but cells are metabolically active and far from dormant: they synthesize ribosomes, enzymes, and metabolites needed to adapt to the new medium before entering rapid (log-phase) division. Division at the maximum rate is the log phase, and deaths outpacing divisions is the death phase.`
           }
         ]
       }

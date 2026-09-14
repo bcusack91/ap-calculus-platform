@@ -63,7 +63,7 @@ Hexokinase (most tissues) has a LOW $K_m$ — it works at full speed even at low
             question: `An enzyme has $K_m = 2$ mM and $V_{max} = 100$ $\\mu$mol/min. At $[S] = 2$ mM, the initial velocity is:`,
             options: [`100 $\\mu$mol/min`, `50 $\\mu$mol/min`, `25 $\\mu$mol/min`, `Cannot be determined without $k_{cat}$`],
             correctAnswer: 1,
-            explanation: `By definition, $K_m$ is the substrate concentration at which the enzyme runs at half of $V_{max}$. Plugging in: $v_0 = V_{max}(2)/(2+2) = V_{max}/2 = 50$ $\\mu$mol/min.`
+            explanation: `By definition, $K_m$ is the substrate concentration at which the enzyme runs at half of $V_{max}$. Plugging in: $v_0 = V_{max}(2)/(2+2) = V_{max}/2 = 50$ $\\mu$mol/min. Dividing $V_{max}$ by $(K_m + [S])$ while dropping $[S]$ from the numerator gives the 25 $\\mu$mol/min trap.`
           },
           {
             question: `Doubling the total enzyme concentration in an assay will:`,
@@ -85,7 +85,7 @@ Hexokinase (most tissues) has a LOW $K_m$ — it works at full speed even at low
           },
           {
             question: `At a substrate concentration 100-fold above $K_m$, an assay's velocity no longer responds to added substrate. The reaction is best described as:`,
-            options: [`First order in substrate`, `Second order in substrate`, `Zero order in substrate, because nearly all enzyme is in the ES form`, `At equilibrium`],
+            options: [`First order in substrate`, `Second order in substrate`, `Zero order in substrate`, `Near chemical equilibrium`],
             correctAnswer: 2,
             explanation: `At saturating substrate, essentially every active site is occupied, so rate = $V_{max}$ regardless of $[S]$: zero order in substrate. The reaction is far from equilibrium — it is simply running at the enzyme's maximum capacity. Saturating conditions are exactly how experimenters measure $V_{max}$.`
           }

@@ -62,9 +62,9 @@ Antibiotics DON'T work against viruses — viruses use host machinery!`
         questions: [
           {
             question: `A bacterium acquires antibiotic resistance after being infected by a bacteriophage carrying resistance genes from another bacterium. This is:`,
-            options: [`Transduction — phage-mediated DNA transfer between bacteria`, `Transformation`, `Conjugation`, `Mutation`],
+            options: [`Transduction`, `Transformation`, `Conjugation`, `Mutation`],
             correctAnswer: 0,
-            explanation: `Transduction = bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.`
+            explanation: `Transduction = phage-mediated DNA transfer between bacteria: a bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Transformation is uptake of free DNA, and conjugation uses a pilus between two bacteria. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.`
           },
           {
             question: `A non-pathogenic bacterium becomes virulent after taking up free DNA released by dead, lysed pathogenic cells in its environment. This process is:`,
@@ -74,9 +74,9 @@ Antibiotics DON'T work against viruses — viruses use host machinery!`
           },
           {
             question: `A clinical strain of E. coli produces $\\beta$-lactamase. How does this enzyme confer resistance to penicillin?`,
-            options: [`It hydrolyzes the $\\beta$-lactam ring, inactivating the drug before it can block cell wall synthesis`, `It pumps penicillin out of the cell`, `It mutates the ribosome so penicillin cannot bind`, `It thickens the outer membrane to exclude the drug`],
+            options: [`It hydrolyzes the $\\beta$-lactam ring`, `It pumps penicillin out through efflux channels`, `It alters the transpeptidase so penicillin cannot bind`, `It thickens the outer membrane to exclude the drug`],
             correctAnswer: 0,
-            explanation: `$\\beta$-lactamases cleave the four-membered $\\beta$-lactam ring that defines penicillins and cephalosporins. Once the ring is opened, the drug can no longer inhibit the transpeptidases that build the cell wall. This is enzymatic (degradative) resistance.`
+            explanation: `$\\beta$-lactamases cleave the four-membered $\\beta$-lactam ring that defines penicillins and cephalosporins. Once the ring is opened, the drug can no longer inhibit the transpeptidases that build the cell wall. The drug is inactivated before it can block cell wall synthesis. This is enzymatic (degradative) resistance, distinct from efflux pumps and from altered penicillin-binding transpeptidases, which leave the drug intact.`
           },
           {
             question: `Which antibiotic class targets DNA gyrase (a topoisomerase), preventing the relief of supercoiling during DNA replication?`,
@@ -86,9 +86,9 @@ Antibiotics DON'T work against viruses — viruses use host machinery!`
           },
           {
             question: `Why are conventional antibiotics ineffective against viral infections such as influenza?`,
-            options: [`Viruses replicate using host-cell machinery and lack the bacterial targets (cell wall, 70S ribosome) that antibiotics attack`, `Viruses have a thicker peptidoglycan layer`, `Viruses divide too slowly for antibiotics to act`, `Antibiotics are destroyed by the viral envelope`],
+            options: [`Viruses lack the targets antibiotics act on`, `Viruses have a peptidoglycan coat that blocks the drugs`, `Viruses divide too slowly for antibiotics to act`, `Antibiotics are inactivated by the lipid viral envelope`],
             correctAnswer: 0,
-            explanation: `Antibiotics target bacterial structures and pathways (peptidoglycan synthesis, the 70S ribosome, DNA gyrase, folate synthesis). Viruses have none of these; they hijack host enzymes and ribosomes, so antibiotics have nothing to bind. Antivirals, not antibiotics, are required.`
+            explanation: `Antibiotics target bacterial structures and pathways (peptidoglycan synthesis, the 70S ribosome, DNA gyrase, folate synthesis). Viruses have none of these; they hijack host enzymes and ribosomes, so antibiotics have nothing to bind. Viruses have no peptidoglycan at all, and many viruses have no envelope, so neither explains the failure. Antivirals, not antibiotics, are required.`
           },
           {
             question: `Resistance to tetracycline frequently arises from a membrane protein that actively exports the drug, keeping its intracellular concentration below an effective level. This mechanism is a(n):`,

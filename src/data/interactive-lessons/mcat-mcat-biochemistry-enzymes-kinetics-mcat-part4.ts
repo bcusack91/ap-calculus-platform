@@ -50,33 +50,33 @@ In a pathway $A \\rightarrow B \\rightarrow C \\rightarrow D$, the end product D
         questions: [
           {
             question: `An enzyme shows a sigmoidal plot of $v_0$ versus $[S]$. This most strongly suggests that the enzyme:`,
-            options: [`Obeys simple Michaelis-Menten kinetics`, `Has multiple subunits with cooperative substrate binding`, `Is covalently inhibited`, `Has an unusually low $K_m$`],
+            options: [`Obeys simple Michaelis-Menten kinetics`, `Binds substrate cooperatively`, `Is competitively inhibited by its product`, `Has a very low $K_m$ for substrate`],
             correctAnswer: 1,
-            explanation: `Sigmoidal kinetics indicate cooperativity: substrate binding to one subunit increases the others' affinity (T to R shift). Michaelis-Menten enzymes give hyperbolic curves regardless of their $K_m$.`
+            explanation: `Sigmoidal kinetics indicate cooperativity: substrate binding to one subunit increases the others' affinity (T to R shift). That points to an enzyme with multiple subunits and cooperative substrate binding. Michaelis-Menten enzymes give hyperbolic curves regardless of their $K_m$, and competitive product inhibition raises the apparent $K_m$ without turning the hyperbola into a sigmoid.`
           },
           {
             question: `Pancreatic proteases are synthesized as zymogens primarily to:`,
-            options: [`Increase their catalytic efficiency after secretion`, `Prevent them from digesting the pancreas itself before reaching the intestine`, `Allow allosteric regulation by ATP`, `Enable reversible switching between active and inactive forms`],
+            options: [`Increase their catalytic efficiency after secretion`, `Keep them from digesting the pancreas itself`, `Allow allosteric regulation by ATP`, `Enable reversible switching between active and inactive forms`],
             correctAnswer: 1,
-            explanation: `Zymogens are inactive precursors activated by proteolytic cleavage only at their site of action (e.g., trypsinogen activated by intestinal enteropeptidase). This protects the producing tissue — premature activation causes pancreatitis. Cleavage is irreversible, not a reversible switch.`
+            explanation: `Zymogens are inactive precursors, so the proteases stay inactive until they reach the intestine and cannot digest the pancreas itself on the way. They are activated by proteolytic cleavage only at their site of action (e.g., trypsinogen activated by intestinal enteropeptidase). This protects the producing tissue — premature activation causes pancreatitis. Cleavage is irreversible, not a reversible switch.`
           },
           {
             question: `In a biosynthetic pathway, the end product inhibits the first committed enzyme. Kinetic analysis shows the inhibitor binds a site distinct from the active site and shifts the enzyme toward its T state. This regulation is best described as:`,
-            options: [`Competitive inhibition`, `Heterotropic allosteric inhibition`, `Covalent modification`, `Homotropic activation`],
+            options: [`Homotropic allosteric activation`, `Heterotropic allosteric inhibition`, `Homotropic allosteric inhibition`, `Heterotropic allosteric activation`],
             correctAnswer: 1,
-            explanation: `A molecule other than the substrate (heterotropic effector) binding a regulatory site and stabilizing the low-affinity T state is allosteric feedback inhibition. It is not competitive (different site) and involves no covalent change.`
+            explanation: `A molecule other than the substrate (heterotropic effector) binding a regulatory site and stabilizing the low-affinity T state is allosteric feedback inhibition. It is heterotropic, not homotropic, because the end product is not the enzyme's own substrate. It is inhibition, not activation, because shifting the enzyme toward the low-affinity T state lowers its activity; an activator would shift it toward the R state.`
           },
           {
             question: `Glycogen phosphorylase is activated when a kinase phosphorylates it; glycogen synthase is inactivated by phosphorylation. A hormone that triggers this kinase cascade would cause the cell to:`,
-            options: [`Store glucose as glycogen`, `Break down glycogen and stop synthesizing it`, `Do both simultaneously at higher rates`, `Degrade both enzymes`],
+            options: [`Build glycogen and stop breaking it down`, `Break down glycogen and stop synthesizing it`, `Do both simultaneously at higher rates`, `Stop both glycogen synthesis and breakdown`],
             correctAnswer: 1,
-            explanation: `One phosphorylation signal flips the two opposing enzymes in opposite directions — reciprocal regulation. Phosphorylase ON plus synthase OFF means net glycogenolysis (the glucagon/epinephrine response), avoiding a futile cycle.`
+            explanation: `One phosphorylation signal flips the two opposing enzymes in opposite directions — reciprocal regulation. Phosphorylase ON plus synthase OFF means net glycogenolysis (the glucagon/epinephrine response), avoiding a futile cycle. Storing glycogen is the dephosphorylated (insulin) pattern, and neither running both pathways nor shutting both down fits one enzyme switched on and the other switched off.`
           },
           {
             question: `A student measures an intestinal enzyme's activity at pH 2 and finds almost none, though the enzyme is highly active at pH 8. The most likely explanation is that at pH 2:`,
-            options: [`The substrate is insoluble`, `Catalytic residues are in the wrong protonation state and the protein may begin to denature`, `The enzyme's $V_{max}$ increases`, `Water becomes limiting`],
+            options: [`The substrate is insoluble`, `Its catalytic residues are wrongly protonated`, `Its peptide bonds are hydrolyzed by the acid`, `Its disulfide bonds are reduced by the acid`],
             correctAnswer: 1,
-            explanation: `Each enzyme's mechanism requires specific ionization states (e.g., a deprotonated active-site base). Far from the pH optimum, those states are lost and extreme pH disrupts ionic interactions maintaining the fold. An intestinal enzyme like trypsin is optimized for ~pH 8, not stomach acid.`
+            explanation: `Each enzyme's mechanism requires specific ionization states (e.g., a deprotonated active-site base). Far from the pH optimum, those states are lost, and extreme pH also disrupts ionic interactions maintaining the fold, so the protein may begin to denature. That is denaturation, not hydrolysis: breaking peptide bonds with acid takes concentrated acid and prolonged heating, and protons do not reduce disulfide bonds. An intestinal enzyme like trypsin is optimized for ~pH 8, not stomach acid.`
           }
         ]
       }

@@ -67,9 +67,9 @@ export const mcatMicroPart7Data = {
         questions: [
           {
             question: `HIV primarily targets:`,
-            options: [`CD4+ helper T cells — leading to progressive immunodeficiency`, `CD8+ cytotoxic T cells`, `B cells directly`, `Neutrophils`],
+            options: [`CD4+ helper T cells`, `CD8+ cytotoxic T cells`, `Antibody-producing B cells`, `Natural killer cells`],
             correctAnswer: 0,
-            explanation: `HIV binds the CD4 receptor (on helper T cells) plus CCR5/CXCR4 co-receptors. As CD4+ T cells are destroyed, the immune system progressively fails. When the CD4 count drops below 200, susceptibility to opportunistic infections defines AIDS.`
+            explanation: `HIV binds the CD4 receptor (on helper T cells) plus CCR5/CXCR4 co-receptors. As CD4+ T cells are destroyed, the immune system progressively fails. A CD4 count below 200 cells per microliter, or an AIDS-defining opportunistic infection, defines AIDS.`
           },
           {
             question: `Which antibody class is the FIRST to be produced during a primary immune response and exists as a pentamer?`,
@@ -79,9 +79,9 @@ export const mcatMicroPart7Data = {
           },
           {
             question: `A patient with seasonal allergies experiences sneezing and itching after pollen exposure. This Type I hypersensitivity reaction is mediated by:`,
-            options: [`IgE binding to mast cells, triggering histamine release`, `IgG opsonizing pollen`, `Cytotoxic T cells attacking pollen`, `Complement lysing pollen grains`],
+            options: [`IgE on mast cells, triggering histamine release`, `IgG immune complexes deposited in tissues`, `Sensitized T cells releasing cytokines`, `IgM and complement lysing host cells`],
             correctAnswer: 0,
-            explanation: `In Type I hypersensitivity, allergen cross-links IgE bound to mast cells and basophils, triggering degranulation and histamine release — producing the classic allergic symptoms. IgE also defends against parasitic worms.`
+            explanation: `In Type I hypersensitivity, allergen cross-links IgE bound to mast cells and basophils, triggering degranulation and histamine release — producing the classic allergic symptoms. IgE also defends against parasitic worms. Antibody and complement destroying host cells is Type II, immune-complex deposition is Type III, and cytokine-releasing sensitized T cells drive delayed Type IV reactions.`
           },
           {
             question: `Which antibody class is most responsible for mucosal immunity and is found in saliva, tears, and breast milk?`,
@@ -97,9 +97,9 @@ export const mcatMicroPart7Data = {
           },
           {
             question: `An infant is born with no functional T cells OR B cells and suffers severe, recurrent infections from birth. This is characteristic of:`,
-            options: [`Severe combined immunodeficiency (SCID)`, `A Type I hypersensitivity`, `An autoimmune disease`, `Passive immunity`],
+            options: [`Severe combined immunodeficiency`, `A Type I hypersensitivity`, `An autoimmune disease`, `DiGeorge syndrome`],
             correctAnswer: 0,
-            explanation: `SCID is a primary immunodeficiency in which both T- and B-cell arms of adaptive immunity are absent or nonfunctional, leaving the infant unable to fight even normally trivial pathogens. This contrasts with autoimmunity (a loss of self-tolerance) and hypersensitivity (an over-reaction).`
+            explanation: `SCID is a primary immunodeficiency in which both T- and B-cell arms of adaptive immunity are absent or nonfunctional, leaving the infant unable to fight even normally trivial pathogens. DiGeorge syndrome (thymic aplasia) removes T-cell development but leaves B cells present. SCID also contrasts with autoimmunity (a loss of self-tolerance) and hypersensitivity (an over-reaction).`
           }
         ]
       }

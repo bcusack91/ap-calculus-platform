@@ -76,12 +76,12 @@ A titration curve for an amino acid shows one **buffering plateau per ionizable 
           },
           {
             question: `A protein with pI = 8.5 is placed in a buffer at pH 6.0 and subjected to electrophoresis. It will:`,
-            options: [`Migrate toward the cathode (negative electrode) because it is net positive`, `Migrate toward the anode because it is net negative`, `Not migrate, because pH is below pI`, `Precipitate immediately, because it is at its pI`],
+            options: [`Migrate toward the cathode, because it is net positive`, `Migrate toward the anode, because it is net negative`, `Not migrate, because pH is below pI`, `Precipitate immediately, because it is at its pI`],
             correctAnswer: 0,
             explanation: `At pH (6.0) below pI (8.5), the protein is more protonated than at its neutral point, giving a net POSITIVE charge; positive species migrate toward the negative electrode (cathode). It is not at its pI, so it does migrate.`
           },
           {
-            question: `Which pair functions as the best physiological buffer AT pH 7.4 inside a protein?`,
+            question: `Which group functions as the best physiological buffer AT pH 7.4 inside a protein?`,
             options: [`Aspartate side chains (pKa ~3.9)`, `Histidine side chains (pKa ~6.0)`, `Arginine side chains (pKa ~12.5)`, `Backbone carboxyl groups (pKa ~2)`],
             correctAnswer: 1,
             explanation: `Buffering is strongest within about one pH unit of the pKa. Histidine's imidazole (pKa ~6) is the only listed group near 7.4 — this is why hemoglobin's histidines buffer blood pH. The others are fully ionized (or fully protonated) at physiological pH.`

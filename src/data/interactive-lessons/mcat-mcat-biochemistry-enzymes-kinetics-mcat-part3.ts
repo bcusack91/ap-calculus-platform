@@ -69,9 +69,9 @@ Uncompetitive and mixed inhibitors are pharmacologically attractive: a competiti
           },
           {
             question: `After exposure to an organophosphate, a patient's acetylcholinesterase activity does not recover when the enzyme is extensively dialyzed. This is because the inhibitor:`,
-            options: [`Has an extremely low $K_m$`, `Covalently phosphorylated the active-site serine`, `Is trapped in the dialysis membrane`, `Binds cooperatively at four sites`],
+            options: [`Has an extremely low $K_m$`, `Covalently phosphorylated the active-site serine`, `Competitively blocks the acetylcholine site`, `Binds cooperatively at four sites`],
             correctAnswer: 1,
-            explanation: `Dialysis removes reversibly bound small molecules; failure to recover activity indicates a covalent modification. Organophosphates phosphorylate the catalytic serine of acetylcholinesterase, permanently inactivating each modified enzyme molecule.`
+            explanation: `Dialysis removes reversibly bound small molecules; failure to recover activity indicates a covalent modification. Organophosphates phosphorylate the catalytic serine of acetylcholinesterase, permanently inactivating each modified enzyme molecule. A merely competitive inhibitor holds the active site noncovalently, so dialysis would wash it out and restore activity.`
           },
           {
             question: `Methotrexate closely resembles dihydrofolate and inhibits dihydrofolate reductase. In cells treated with methotrexate, which change would MOST directly reduce the drug's effectiveness?`,

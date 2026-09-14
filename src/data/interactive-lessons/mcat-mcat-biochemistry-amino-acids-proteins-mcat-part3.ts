@@ -57,15 +57,15 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
         questions: [
           {
             question: `The planarity of the peptide bond results from:`,
-            options: [`Steric hindrance between adjacent side chains`, `Resonance delocalization giving the C-N bond partial double-bond character`, `Hydrogen bonding between backbone atoms`, `The tetrahedral geometry of the alpha-carbon`],
+            options: [`Steric hindrance between neighboring side chains`, `Partial double-bond character in the C-N bond`, `Hydrogen bonding between neighboring backbone atoms`, `The tetrahedral geometry around the alpha-carbon`],
             correctAnswer: 1,
-            explanation: `The amide nitrogen's lone pair delocalizes into the carbonyl, giving the C-N bond roughly 40% double-bond character. Rotation about it is restricted, forcing the six atoms of the peptide unit into a plane.`
+            explanation: `Resonance is the cause: the amide nitrogen's lone pair delocalizes into the carbonyl, giving the C-N bond roughly 40% double-bond character. Rotation about it is restricted, forcing the six atoms of the peptide unit into a plane.`
           },
           {
-            question: `Treating a protein with SDS and $\\beta$-mercaptoethanol, then removing both, sometimes allows full recovery of activity. This supports the conclusion that:`,
-            options: [`Quaternary structure is covalently maintained`, `The primary sequence contains the information needed to specify the native fold`, `Chaperones are required for all protein folding`, `Denaturation cleaves peptide bonds reversibly`],
+            question: `Treating a protein with urea and $\\beta$-mercaptoethanol, then removing both, sometimes allows full recovery of activity. This supports the conclusion that:`,
+            options: [`Quaternary structure is covalently maintained`, `The primary sequence encodes the native fold`, `Chaperones are required for all protein folding`, `Denaturation cleaves peptide bonds reversibly`],
             correctAnswer: 1,
-            explanation: `This is the logic of Anfinsen's experiment: if a fully denatured, reduced protein refolds spontaneously to an active conformation, the sequence itself must encode the tertiary structure. Denaturants do not break peptide bonds, and chaperones prevent aggregation rather than specify folds.`
+            explanation: `This is the logic of Anfinsen's experiment: if a fully denatured, reduced protein refolds spontaneously to an active conformation, the sequence itself must contain the information needed to specify the native fold. Denaturants do not break peptide bonds, and chaperones prevent aggregation rather than specify folds.`
           },
           {
             question: `Which interaction is disrupted by dithiothreitol (DTT) but NOT by urea?`,
@@ -75,9 +75,9 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
           },
           {
             question: `The principal thermodynamic driving force for the folding of a globular protein in water is:`,
-            options: [`The decrease in conformational entropy of the polypeptide`, `The increase in entropy of water released from around nonpolar side chains`, `Formation of peptide bonds`, `Binding of chaperone proteins`],
+            options: [`The decrease in conformational entropy of the polypeptide`, `The entropy gain of water freed from nonpolar surfaces`, `The enthalpy released by forming peptide bonds`, `Hydrogen bonding within the protein backbone`],
             correctAnswer: 1,
-            explanation: `Folding costs conformational entropy (unfavorable), but sequestering hydrophobic side chains frees ordered water shells, and that solvent entropy gain dominates. Peptide bonds already exist before folding; chaperones assist kinetically, not thermodynamically.`
+            explanation: `Folding costs conformational entropy (unfavorable), but sequestering hydrophobic side chains frees ordered water shells, and that solvent entropy gain dominates. Peptide bonds already exist before folding, so no bond-forming enthalpy is involved. Backbone hydrogen bonds largely replace hydrogen bonds those same groups already made with water, so their net contribution is small compared with the hydrophobic effect.`
           },
           {
             question: `Hemoglobin's cooperative oxygen binding depends on communication between its four subunits. Cooperativity is therefore a property of which structural level?`,

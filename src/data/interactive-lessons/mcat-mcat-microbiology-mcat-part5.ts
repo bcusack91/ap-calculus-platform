@@ -62,37 +62,37 @@ export const mcatMicroPart5Data = {
         questions: [
           {
             question: `Antifungal drugs target ergosterol because:`,
-            options: [`Ergosterol is in fungal membranes but not human membranes (humans use cholesterol)`, `Ergosterol is in all cell walls`, `It disrupts bacterial growth too`, `Ergosterol is the same as cholesterol`],
+            options: [`It is in fungal but not human membranes`, `It is the main sterol of bacterial membranes`, `It is identical to human cholesterol`, `It is the main component of fungal cell walls`],
             correctAnswer: 0,
-            explanation: `Fungal membranes use ergosterol instead of cholesterol. Drugs like amphotericin B bind ergosterol (creating pores) and azoles block ergosterol synthesis. Since humans use cholesterol, these drugs selectively target fungi.`
+            explanation: `Fungal membranes use ergosterol instead of cholesterol. Drugs like amphotericin B bind ergosterol (creating pores) and azoles block ergosterol synthesis. Since humans use cholesterol, these drugs selectively target fungi. Ergosterol is a membrane sterol distinct from cholesterol; it is not a wall component (fungal walls are chitin), and bacteria generally lack membrane sterols.`
           },
           {
             question: `Why is a $\\beta$-lactam antibiotic such as penicillin ineffective against a fungal infection?`,
-            options: [`Fungal cell walls are made of chitin, not the peptidoglycan that $\\beta$-lactams target`, `Fungi have no cell wall at all`, `Fungi lack ribosomes`, `Penicillin is degraded by ergosterol`],
+            options: [`Fungi build chitin walls lacking peptidoglycan`, `Fungi have no cell wall for the drug to act on`, `Fungi break penicillin down with ergosterol`, `Fungi pump penicillin out faster than it enters`],
             correctAnswer: 0,
-            explanation: `$\\beta$-lactams block peptidoglycan cross-linking in bacterial cell walls. Fungi build their walls from chitin and have no peptidoglycan, so penicillin has no target. Antifungals instead exploit ergosterol or chitin synthesis.`
+            explanation: `$\\beta$-lactams block peptidoglycan cross-linking in bacterial cell walls. Fungi build their walls from chitin and have no peptidoglycan, so penicillin has no target. Fungi do have a cell wall, ergosterol is a membrane sterol that does not degrade drugs, and efflux is not the reason: the drug simply has no target to act on. Antifungals instead exploit ergosterol or chitin synthesis.`
           },
           {
             question: `A patient develops malaria after a mosquito bite. The causative organism and vector are:`,
-            options: [`Plasmodium (a protozoan), transmitted by the Anopheles mosquito`, `Trypanosoma, transmitted by the tsetse fly`, `Giardia, transmitted by contaminated water`, `A tapeworm, transmitted by undercooked meat`],
+            options: [`Plasmodium, transmitted by the Anopheles mosquito`, `Trypanosoma, transmitted by the tsetse fly`, `Giardia, transmitted by contaminated water`, `A tapeworm, transmitted by undercooked meat`],
             correctAnswer: 0,
             explanation: `Malaria is caused by the protozoan Plasmodium, transmitted by the female Anopheles mosquito. Trypanosoma (tsetse fly) causes sleeping sickness; Giardia causes waterborne diarrhea; tapeworms are helminths from undercooked meat.`
           },
           {
             question: `Which feature distinguishes a prion from all other infectious agents (bacteria, viruses, fungi)?`,
-            options: [`It is composed of misfolded protein and contains no nucleic acid`, `It contains only RNA`, `It has a peptidoglycan cell wall`, `It reproduces by binary fission`],
+            options: [`It is misfolded protein with no nucleic acid`, `It replicates as a naked RNA circle`, `It has a peptidoglycan cell wall`, `It reproduces by binary fission`],
             correctAnswer: 0,
-            explanation: `Prions are infectious proteins (PrP$^{Sc}$) with no DNA or RNA. They propagate by templating the misfolding of normal PrP$^{C}$, which is why standard nucleic-acid-targeting sterilization cannot inactivate them.`
+            explanation: `Prions are infectious proteins (PrP$^{Sc}$) with no DNA or RNA. They propagate by templating the misfolding of normal PrP$^{C}$, which is why standard nucleic-acid-targeting sterilization cannot inactivate them. A naked circular RNA with no protein coat describes a viroid, the opposite composition.`
           },
           {
             question: `A dimorphic fungus is one that:`,
-            options: [`Can switch between yeast (unicellular) and mold (multicellular hyphal) forms, often depending on temperature`, `Has two nuclei per cell at all times`, `Reproduces only sexually`, `Lacks both chitin and ergosterol`],
+            options: [`Can switch between yeast and mold forms`, `Has two genetically distinct nuclei per cell`, `Grows only as hyphae at body temperature`, `Lacks both chitin walls and ergosterol membranes`],
             correctAnswer: 0,
-            explanation: `Dimorphic fungi (e.g., Histoplasma) grow as molds in the environment but convert to yeast forms at body temperature (37 °C). This temperature-dependent switch is a high-yield MCAT detail about fungal biology.`
+            explanation: `Dimorphic fungi (e.g., Histoplasma) switch between unicellular yeast and multicellular hyphal mold forms: they grow as molds in the environment but convert to yeast forms at body temperature (37 °C). This temperature-dependent switch is a high-yield MCAT detail about fungal biology. Two genetically distinct nuclei per cell describes a dikaryotic stage, not dimorphism, and like other fungi, dimorphic fungi have chitin walls and ergosterol membranes.`
           },
           {
             question: `An immunocompromised patient acquires a Toxoplasma gondii infection. The two classic routes of transmission are:`,
-            options: [`Exposure to cat feces and ingestion of undercooked meat`, `Mosquito bite and contaminated water`, `Tsetse fly bite and sexual contact`, `Airborne droplets and skin contact`],
+            options: [`Cat feces and undercooked meat`, `Mosquito bite and contaminated water`, `Tsetse fly bite and sexual contact`, `Airborne droplets and skin contact`],
             correctAnswer: 0,
             explanation: `Toxoplasma is acquired by ingesting oocysts from cat feces or tissue cysts in undercooked meat. It is especially dangerous in immunocompromised patients and during pregnancy (congenital toxoplasmosis).`
           }

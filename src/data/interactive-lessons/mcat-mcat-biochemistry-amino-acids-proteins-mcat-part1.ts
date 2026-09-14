@@ -52,9 +52,9 @@ In a water-soluble globular protein, nonpolar residues (V, L, I, F, M) cluster i
           },
           {
             question: `A transmembrane $\\alpha$-helix of a receptor is mutated so that a leucine is replaced by glutamate. The most likely consequence is:`,
-            options: [`Improved anchoring in the bilayer due to stronger interactions`, `No change, since both residues are similar in size`, `Destabilization of the helix within the membrane because a charged residue now faces the hydrophobic lipid tails`, `Formation of a new disulfide bond`],
+            options: [`Improved anchoring in the bilayer due to stronger interactions`, `No change, because both side chains are similar in size`, `Destabilization from a charge buried among lipid tails`, `Formation of a new disulfide bond with a neighboring helix`],
             correctAnswer: 2,
-            explanation: `Leucine is nonpolar and compatible with the hydrophobic bilayer core; glutamate carries a negative charge at pH 7. Burying a charge in the lipid environment is energetically very unfavorable and destabilizes the transmembrane segment. Disulfides require cysteine.`
+            explanation: `Leucine is nonpolar and compatible with the hydrophobic bilayer core; glutamate carries a negative charge at pH 7. Burying a charge in the lipid environment is energetically very unfavorable and destabilizes the helix within the membrane, because the charged residue now faces the hydrophobic lipid tails. Similar size does not make the residues interchangeable when their polarity differs, and disulfides require cysteine, not glutamate.`
           },
           {
             question: `Which residue's side chain has a pKa closest to physiological pH, allowing it to act as both proton donor and acceptor in enzyme active sites?`,
@@ -64,7 +64,7 @@ In a water-soluble globular protein, nonpolar residues (V, L, I, F, M) cluster i
           },
           {
             question: `Proline destabilizes $\\alpha$-helices primarily because it:`,
-            options: [`Is too hydrophilic for the helix interior`, `Has a rigid cyclic structure and its backbone nitrogen lacks the H needed for helix hydrogen bonding`, `Forms disulfide crosslinks that distort the helix`, `Is too large to fit within the helix`],
+            options: [`Is too hydrophilic for the helix interior`, `Has a rigid ring and lacks a backbone N-H to donate`, `Forms disulfide crosslinks that distort the helix`, `Is too large to fit within the helix`],
             correctAnswer: 1,
             explanation: `Proline's side chain bonds back to its backbone nitrogen, creating a rigid ring that restricts rotation, and the nitrogen (a secondary amine within the ring) has no N-H hydrogen to donate to the helix's i to i+4 hydrogen-bonding pattern.`
           },

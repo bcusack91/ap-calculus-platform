@@ -59,27 +59,27 @@ export const mcatMicroPart1Data = {
         questions: [
           {
             question: `A Gram-negative bacterium is more difficult to treat with certain antibiotics because:`,
-            options: [`The outer membrane acts as an additional barrier, blocking drug entry`, `It has a thicker peptidoglycan layer`, `It lacks a cell wall`, `It has no ribosomes`],
+            options: [`It has an outer membrane that blocks drug entry`, `It has a thicker peptidoglycan wall that drugs cannot cross`, `It lacks the peptidoglycan wall that drugs target`, `It has 80S rather than 70S ribosomes`],
             correctAnswer: 0,
-            explanation: `Gram-negative bacteria have an outer membrane (with LPS) that many antibiotics cannot penetrate. This is why Gram-negative infections (E. coli, Pseudomonas) are often harder to treat than Gram-positive.`
+            explanation: `Gram-negative bacteria have an outer membrane (with LPS) that many antibiotics cannot penetrate. This outer membrane acts as an additional barrier, and it is why Gram-negative infections (E. coli, Pseudomonas) are often harder to treat than Gram-positive. Their peptidoglycan layer is thinner than a Gram-positive wall, not thicker, but it is still present, and their ribosomes are bacterial 70S ribosomes, not 80S.`
           },
           {
             question: `A clinical isolate stains pink during a Gram stain. Which feature is most likely responsible for its pathology when the cells lyse?`,
-            options: [`Lipopolysaccharide (endotoxin) in the outer membrane`, `A thick peptidoglycan layer retaining crystal violet`, `Secreted exotoxin from a Gram-positive wall`, `Loss of the plasma membrane`],
+            options: [`Lipopolysaccharide (endotoxin) in the outer membrane`, `A thick peptidoglycan layer retaining crystal violet`, `Secreted exotoxin from a Gram-positive wall`, `Teichoic acids shed from the cell wall`],
             correctAnswer: 0,
-            explanation: `Pink staining indicates Gram-negative. Their outer membrane contains LPS (endotoxin). When the cells lyse, LPS is released and triggers fever, hypotension, and potentially septic shock and DIC.`
+            explanation: `Pink staining indicates Gram-negative. Their outer membrane contains LPS (endotoxin). When the cells lyse, LPS is released and triggers fever, hypotension, and potentially septic shock and DIC. A thick crystal-violet-retaining peptidoglycan layer and teichoic acids are Gram-positive features, and those cells stain purple.`
           },
           {
             question: `Bacterial ribosomes are 70S while human ribosomes are 80S. This difference is the basis for:`,
-            options: [`Selective toxicity of ribosome-targeting antibiotics`, `The Gram stain color difference`, `Bacterial resistance to all antibiotics`, `The presence of a nuclear membrane`],
+            options: [`Selective toxicity of ribosome-targeting drugs`, `The Gram stain color difference`, `Bacterial resistance to cell wall-targeting antibiotics`, `The presence of a nuclear membrane`],
             correctAnswer: 0,
-            explanation: `Because bacterial (70S; 30S + 50S) and eukaryotic (80S; 40S + 60S) ribosomes differ, drugs such as aminoglycosides (30S) and macrolides (50S) bind the bacterial ribosome selectively, sparing host translation.`
+            explanation: `Because bacterial (70S; 30S + 50S) and eukaryotic (80S; 40S + 60S) ribosomes differ, drugs such as aminoglycosides (30S) and macrolides (50S) bind the bacterial ribosome selectively, sparing host translation. Gram stain color reflects wall structure, and resistance to cell wall-targeting drugs has nothing to do with ribosome size.`
           },
           {
             question: `Which bacterial structure most directly allows a pathogen to evade phagocytosis by host immune cells?`,
-            options: [`The polysaccharide capsule`, `The 70S ribosome`, `The nucleoid`, `The flagellum`],
+            options: [`The polysaccharide capsule`, `The 70S ribosome`, `The peptidoglycan cell wall`, `The flagellum`],
             correctAnswer: 0,
-            explanation: `The capsule is a slippery polysaccharide layer that masks surface molecules and prevents phagocytes from engulfing the bacterium. Encapsulated organisms (e.g., Streptococcus pneumoniae) are more virulent; vaccines often target capsular antigens.`
+            explanation: `The capsule is a slippery polysaccharide layer that masks surface molecules and prevents phagocytes from engulfing the bacterium. Encapsulated organisms (e.g., Streptococcus pneumoniae) are more virulent; vaccines often target capsular antigens. The peptidoglycan wall gives shape and osmotic protection but does not hide the cell from phagocytes.`
           },
           {
             question: `A bacterium uses a long, hollow appendage to transfer a copy of a plasmid directly into a neighboring cell. This appendage is the:`,
@@ -89,9 +89,9 @@ export const mcatMicroPart1Data = {
           },
           {
             question: `Which feature is found in a typical bacterial cell but NOT in a human cell?`,
-            options: [`A peptidoglycan cell wall`, `A plasma membrane`, `Ribosomes`, `DNA`],
+            options: [`A peptidoglycan cell wall`, `A phospholipid membrane`, `Cytoplasmic ribosomes`, `A DNA genome`],
             correctAnswer: 0,
-            explanation: `Peptidoglycan is unique to bacteria (human cells have no cell wall at all). Both cell types have a plasma membrane, ribosomes (though different sizes), and DNA. The peptidoglycan wall is why $\\beta$-lactams are selectively toxic.`
+            explanation: `Peptidoglycan is unique to bacteria (human cells have no cell wall at all). Both cell types have a phospholipid plasma membrane, cytoplasmic ribosomes (though different sizes), and a DNA genome. The peptidoglycan wall is why $\\beta$-lactams are selectively toxic.`
           }
         ]
       }

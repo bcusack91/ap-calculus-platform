@@ -71,21 +71,21 @@ MCAT trap: **kinase** (transfers phosphate from ATP to substrate) vs. **phosphat
         questions: [
           {
             question: `An enzyme increases the rate of a reaction by a factor of $10^{6}$. Which quantity is unchanged by the enzyme?`,
-            options: [`The activation energy`, `The rate of the forward reaction`, `The equilibrium constant $K_{eq}$`, `The rate of formation of the transition state`],
+            options: [`The activation energy`, `The rate of the forward reaction`, `The equilibrium constant $K_{eq}$`, `The transition-state energy`],
             correctAnswer: 2,
             explanation: `Catalysts lower $E_a$ and accelerate forward AND reverse rates equally, so equilibrium position ($K_{eq}$, and $\\Delta G^{\\circ}$) is untouched. The enzyme changes how fast equilibrium is reached, never where it lies.`
           },
           {
             question: `Transition-state analogs are among the most potent enzyme inhibitors known because:`,
-            options: [`They covalently modify the active site`, `Enzymes bind the transition state more tightly than the substrate, so a stable mimic of it binds extremely tightly`, `They are always larger than the substrate`, `They shift the equilibrium of the reaction toward reactants`],
+            options: [`They form irreversible covalent bonds with active-site residues`, `They mimic the transition state that enzymes bind most tightly`, `They bind an allosteric site and lock the enzyme in its T state`, `They shift the equilibrium of the reaction toward reactants`],
             correctAnswer: 1,
-            explanation: `Catalysis works by complementing the transition state's geometry and charge. A stable molecule mimicking that state exploits the enzyme's tightest binding interactions, giving very low dissociation constants. No covalent chemistry is required.`
+            explanation: `Enzymes bind the transition state more tightly than the substrate itself, so a stable mimic of that state binds extremely tightly. Catalysis works by complementing the transition state's geometry and charge, and the analog exploits those tightest binding interactions, giving very low dissociation constants. No covalent chemistry is required, the analog occupies the active site rather than an allosteric site, and no inhibitor can shift an equilibrium position.`
           },
           {
             question: `A patient with severe thiamine (vitamin B1) deficiency shows impaired activity of pyruvate dehydrogenase. In this context, thiamine pyrophosphate is best described as a:`,
-            options: [`Substrate consumed by the reaction`, `Coenzyme required by the enzyme`, `Competitive inhibitor`, `Prosthetic heme group`],
+            options: [`Substrate consumed by the reaction`, `Coenzyme required by the enzyme`, `Competitive inhibitor of the enzyme`, `Tightly bound prosthetic heme group`],
             correctAnswer: 1,
-            explanation: `TPP is an organic, vitamin-derived helper molecule — a coenzyme. Without it the apoenzyme cannot function. It is regenerated each cycle (not consumed like a substrate) and it promotes, not inhibits, catalysis.`
+            explanation: `TPP is an organic, vitamin-derived helper molecule — a coenzyme. Without it the apoenzyme cannot function. It is regenerated each cycle (not consumed like a substrate) and it promotes, not inhibits, catalysis. It is also not a heme group: heme is an iron porphyrin, not a vitamin-B1 derivative.`
           },
           {
             question: `The enzyme that catalyzes glucose-6-phosphate to fructose-6-phosphate belongs to which enzyme class?`,
@@ -95,9 +95,9 @@ MCAT trap: **kinase** (transfers phosphate from ATP to substrate) vs. **phosphat
           },
           {
             question: `In chymotrypsin's catalytic triad (Ser-His-Asp), the role of histidine is to:`,
-            options: [`Form the covalent acyl-enzyme intermediate`, `Act as a general base, deprotonating serine so it can attack the substrate carbonyl`, `Bind the metal cofactor`, `Provide the oxyanion hole`],
+            options: [`Form the covalent acyl-enzyme intermediate`, `Act as a general base that deprotonates serine`, `Coordinate a zinc ion that polarizes the carbonyl`, `Form the oxyanion hole that stabilizes the intermediate`],
             correctAnswer: 1,
-            explanation: `His abstracts the proton from Ser's hydroxyl (general base catalysis), generating the strong serine nucleophile; Asp orients and stabilizes protonated His. Serine, not histidine, forms the covalent intermediate; backbone N-H groups form the oxyanion hole.`
+            explanation: `His abstracts the proton from Ser's hydroxyl (general base catalysis), generating the strong serine nucleophile that attacks the substrate carbonyl; Asp orients and stabilizes protonated His. Serine, not histidine, forms the covalent intermediate; backbone N-H groups form the oxyanion hole. Chymotrypsin uses no metal ion; zinc polarizing a substrate carbonyl belongs to metalloproteases such as carboxypeptidase A.`
           }
         ]
       }
