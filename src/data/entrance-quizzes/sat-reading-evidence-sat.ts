@@ -20,7 +20,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'The passage contrasts the old dismissal of plant communication with new evidence of underground fungal networks, making option B the central claim. The other options either contradict the passage or misrepresent its focus.',
+      'The passage contrasts the old dismissal of plant communication with new evidence of underground fungal networks, making "Trees use fungal networks to communicate, overturning prior scientific assumptions" the central claim. The other options either contradict the passage or misrepresent its focus.',
     partNumber: 1,
     partTitle: 'Main Idea',
   },
@@ -36,7 +36,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'The passage highlights two interrelated problems—range anxiety and inadequate infrastructure—as obstacles to EV adoption. Option C accurately captures both elements of this tension.',
+      'The passage highlights two interrelated problems—range anxiety and inadequate infrastructure—as obstacles to EV adoption. The statement about insufficient charging infrastructure and consumer fear accurately captures both elements of this tension.',
     partNumber: 1,
     partTitle: 'Main Idea',
   },
@@ -54,7 +54,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B directly connects natural environments to measurable mental-health outcomes (lower cortisol, reduced stress), directly supporting the claim. The other options discuss history or costs, not mental health benefits.',
+      'The cortisol quotation directly connects natural environments to measurable mental-health outcomes (lower cortisol, reduced stress), directly supporting the claim. The other options discuss history or costs, not mental health benefits.',
     partNumber: 2,
     partTitle: 'Supporting Evidence',
   },
@@ -88,7 +88,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'The phrase "inverts trends seen in most Western nations" implies that in the West the usual pattern is the opposite—urban turnout exceeds rural turnout. Option A is the direct inference.',
+      'The phrase "inverts trends seen in most Western nations" implies that in the West the usual pattern is the opposite—urban turnout exceeds rural turnout. That urban turnout tends to be higher than rural turnout in most Western nations is the direct inference.',
     partNumber: 3,
     partTitle: 'Inference Skills',
   },
@@ -190,7 +190,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B directly introduces a counterargument (disputing the conclusions) with a specific critique (sample size). The other options are factual details that do not constitute counterarguments.',
+      'The "sample size was too small" sentence directly introduces a counterargument (disputing the conclusions) with a specific critique (sample size). The other options are factual details that do not constitute counterarguments.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },

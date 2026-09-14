@@ -86,7 +86,7 @@ The best CARS students do not review by re-reading the answer key. They reconstr
             question: `Based on the worked-example passage, which statement best captures the author's main idea?`,
             options: [`Scientific breakthroughs are usually the work of a single brilliant individual`, `The "lone genius" idea is a myth that endures for narrative reasons`, `Collaboration has only recently become important in science`, `Memory is a reliable guide to how discovery actually works`],
             correctAnswer: 1,
-            explanation: `The author argues the lone-genius idea "persists despite a century of evidence against it," that breakthroughs "emerge from dense networks," and that the myth survives because "a story needs a protagonist." Option A is the view the author rejects; D is contradicted ("a convenience of memory, not a description").`
+            explanation: `The author argues the lone-genius idea "persists despite a century of evidence against it," that breakthroughs "emerge from dense networks," and that the myth survives because "a story needs a protagonist." The "single brilliant individual" option is the view the author rejects; "memory is a reliable guide" is contradicted ("a convenience of memory, not a description").`
           },
           {
             question: `A student's review log shows that, across ten passages, most misses are on questions asking what the author "implies" or "suggests," while detail-retrieval questions are nearly all correct. The most efficient next step is to:`,
@@ -107,7 +107,7 @@ The best CARS students do not review by re-reading the answer key. They reconstr
             question: `Which review habit is most consistent with the passage's claim that "the review process is more important than the practice itself"?`,
             options: [`Completing as many passages as possible without analyzing mistakes`, `For each miss, noting the support, the trap, and a preventive rule`, `Re-reading the answer key explanations once after each set`, `Tracking only the raw number of questions answered correctly`],
             correctAnswer: 1,
-            explanation: `The worked example models exactly this three-part diagnosis (textual basis, trap mechanism, preventive rule). Volume without analysis (A), passive re-reading (C), and score-only tracking (D) fail to convert mistakes into transferable lessons.`
+            explanation: `The worked example models exactly this three-part diagnosis (textual basis, trap mechanism, preventive rule). Volume without analysis, passive re-reading of the answer key, and score-only tracking fail to convert mistakes into transferable lessons.`
           },
           {
             question: `On the worked-example question, why is choice (A) — that the narrative "accurately reflects how discovery happens" — incorrect?`,

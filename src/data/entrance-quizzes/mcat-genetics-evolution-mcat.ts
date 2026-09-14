@@ -122,7 +122,7 @@ const questions: EntranceQuizQuestion[] = [
       'No selection pressure on any genotype.'
     ],
     correctIndex: 2,
-    explanation: 'Hardy-Weinberg equilibrium requires: random mating, large population, no mutation, no migration, no natural selection. Gene flow (migration) changes allele frequencies and violates HWE. Options A, B, and D describe conditions that maintain HWE.',
+    explanation: 'Hardy-Weinberg equilibrium requires: random mating, large population, no mutation, no migration, no natural selection. Gene flow (migration) changes allele frequencies and violates HWE. Random mating, a large population with no migration, and no selection pressure are conditions that maintain HWE.',
     partNumber: 4,
     partTitle: 'Population Genetics'
   },

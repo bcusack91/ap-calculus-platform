@@ -85,7 +85,7 @@ Three hypotheses were on the table:
             question: `One strand of a duplex reads 5'-ATGCCG-3'. Its complementary strand, written in conventional 5' to 3' orientation, is:`,
             options: [`5'-TACGGC-3'`, `5'-CGGCAT-3'`, `5'-GCCGTA-3'`, `5'-ATGCCG-3'`],
             correctAnswer: 1,
-            explanation: `Two operations, in order: complement each base (A-T, G-C) to get 3'-TACGGC-5', then reverse it to honor the 5' to 3' writing convention: 5'-CGGCAT-3'. Choice A is the complement WITHOUT reversal — the single most common error on this question type. Always do the reverse-complement as two explicit steps and label the ends before answering.`
+            explanation: `Two operations, in order: complement each base (A-T, G-C) to get 3'-TACGGC-5', then reverse it to honor the 5' to 3' writing convention: 5'-CGGCAT-3'. 5'-TACGGC-3' is the complement WITHOUT reversal — the single most common error on this question type. Always do the reverse-complement as two explicit steps and label the ends before answering.`
           }
         ]
       }

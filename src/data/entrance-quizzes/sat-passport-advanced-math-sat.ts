@@ -224,7 +224,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'In vertex form y = $(x - 3)^{2}$ − 4: a = 1 > 0 means opens upward; vertex is at (3, −4). Setting y = 0: $(x - 3)^{2}$ = 4 → x − 3 = $\\pm 2$ → x = 5 or x = 1. All of these features are captured in option B.',
+      'In vertex form y = $(x - 3)^{2}$ − 4: a = 1 > 0 means opens upward; vertex is at (3, −4). Setting y = 0: $(x - 3)^{2}$ = 4 → x − 3 = $\\pm 2$ → x = 5 or x = 1. All of these features are captured in the choice with vertex (3, −4) and x-intercepts at x = 1 and x = 5.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

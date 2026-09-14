@@ -159,13 +159,13 @@ Students often think $3d$ electrons (lower $n$) are removed before $4s$ when for
           {
             question: `A species has the electron configuration $1s^2\\, 2s^2\\, 2p^6\\, 3s^2\\, 3p^6$. Which of the following could it be?`,
             options: [
-              `$\\text{Ar}$ (neutral)`,
-              `$\\text{Cl}^-$`,
-              `$\\text{K}^+$`,
-              `Both B and C`
+              `$\\text{Na}^+$ or $\\text{F}^-$`,
+              `$\\text{S}$ or $\\text{Ca}$`,
+              `$\\text{Ne}$ or $\\text{Mg}^{2+}$`,
+              `$\\text{Cl}^-$ or $\\text{K}^+$`
             ],
             correctAnswer: 3,
-            explanation: `This configuration has 18 electrons. Neutral Ar has 18 electrons but this is also the configuration of $\\text{Cl}^-$ (17+1=18) and $\\text{K}^+$ (19−1=18). Both B and C have 18 electrons and the same configuration.`
+            explanation: `This configuration has 18 electrons, the same as neutral Ar. $\\text{Cl}^-$ (17+1=18) and $\\text{K}^+$ (19−1=18) both have 18 electrons and exactly this configuration. $\\text{Na}^+$, $\\text{F}^-$, $\\text{Ne}$, and $\\text{Mg}^{2+}$ have only 10 electrons; neutral S has 16 and neutral Ca has 20.`
           }
         ]
       }

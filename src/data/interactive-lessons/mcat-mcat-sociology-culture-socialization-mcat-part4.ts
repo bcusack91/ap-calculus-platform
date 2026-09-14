@@ -86,7 +86,7 @@ Sociology-of-culture passages lean on distinctive designs; know each one's chara
             question: `An ethnographer spends a year inside one hospital documenting how residents learn to mask emotion during codes. The MOST defensible criticism of generalizing her conclusions to "medical socialization" broadly is that:`,
             options: [`Ethnography cannot capture meaning or causal mechanism`, `A full year is too long for valid, unbiased observation`, `Emotion cannot be studied with scientific observation`, `One site limits generalizability and invites reactivity`],
             correctAnswer: 3,
-            explanation: `Ethnography's strengths are precisely meaning and mechanism (option A inverts them); its structural limits are generalizability from one case and reactivity — observed people behave differently (Hawthorne effect). Duration strengthens rather than weakens observation, and emotion norms are a standard, studiable sociological object (feeling rules).`
+            explanation: `Ethnography's strengths are precisely meaning and mechanism (saying it cannot capture them inverts this); its structural limits are generalizability from one case and reactivity — observed people behave differently (Hawthorne effect). Duration strengthens rather than weakens observation, and emotion norms are a standard, studiable sociological object (feeling rules).`
           },
           {
             question: `A study reports that teens who use a violent video game more hours per week commit more aggressive acts, concluding the game CAUSES aggression. The alternative explanation a careful reader should raise FIRST is:`,

@@ -121,7 +121,7 @@ An **amphiprotic** species can act as either an acid or a base:
               `$\\text{H}_2\\text{CO}_3 \\to \\text{H}^+ + \\text{HCO}_3^-$`
             ],
             correctAnswer: 1,
-            explanation: `A base **accepts** a proton. In option B, $\\text{HCO}_3^-$ accepts $\\text{H}^+$ to form $\\text{H}_2\\text{CO}_3$ — it is acting as a base. In option A, it donates $\\text{H}^+$ (acting as an acid).`
+            explanation: `A base **accepts** a proton. When $\\text{HCO}_3^-$ accepts $\\text{H}^+$ to form $\\text{H}_2\\text{CO}_3$, it is acting as a base. When it splits into $\\text{H}^+$ and $\\text{CO}_3^{2-}$, it donates $\\text{H}^+$ (acting as an acid).`
           }
         ]
       }

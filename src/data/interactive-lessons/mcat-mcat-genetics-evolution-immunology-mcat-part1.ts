@@ -87,13 +87,13 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
             question: `Toll-like receptors allow a macrophage to respond to a bacterial species it has never encountered because TLRs:`,
             options: [`Are randomly rearranged during development to cover all possible antigens`, `Bind antibodies already attached to the bacterium`, `Recognize conserved patterns shared by broad microbial classes`, `Detect the absence of MHC I on the bacterial surface`],
             correctAnswer: 2,
-            explanation: `PRRs like TLRs are germline-encoded and bind conserved PAMPs (LPS, flagellin, dsRNA) common to whole microbial classes — pattern-based, not pathogen-specific. Random rearrangement (choice A) describes B/T-cell receptors, the adaptive strategy. Antibody-dependent recognition would require prior adaptive response, and MHC I surveillance is the NK-cell mechanism for HOST cells, not bacteria.`
+            explanation: `PRRs like TLRs are germline-encoded and bind conserved PAMPs (LPS, flagellin, dsRNA) common to whole microbial classes — pattern-based, not pathogen-specific. Random rearrangement describes B/T-cell receptors, the adaptive strategy. Antibody-dependent recognition would require prior adaptive response, and MHC I surveillance is the NK-cell mechanism for HOST cells, not bacteria.`
           },
           {
             question: `Which set correctly lists the three major effector outcomes of complement activation?`,
             options: [`Opsonization, membrane attack complex, and inflammation`, `Antibody production, memory cell formation, and clonal expansion`, `Histamine release, fever induction, and interferon secretion`, `Neutralization, agglutination, and class switching`],
             correctAnswer: 0,
-            explanation: `Complement's three outcomes are C3b opsonization (tagging for phagocytosis), the MAC lytic pore, and anaphylatoxins (C3a/C5a) that amplify inflammation. Choice B lists adaptive B-cell events; choice C mixes mast-cell and cytokine effects that are not complement products; choice D lists antibody functions (and class switching is a B-cell process).`
+            explanation: `Complement's three outcomes are C3b opsonization (tagging for phagocytosis), the MAC lytic pore, and anaphylatoxins (C3a/C5a) that amplify inflammation. Antibody production, memory, and clonal expansion are adaptive B-cell events; histamine, fever, and interferon are mast-cell and cytokine effects that are not complement products; neutralization, agglutination, and class switching are antibody functions (and class switching is a B-cell process).`
           },
           {
             question: `During inflammation, the correct order of neutrophil events is:`,

@@ -115,7 +115,7 @@ Breaking bonds requires energy (+); forming bonds releases energy (−). This gi
               `$\\text{N}(g) + 3\\text{H}(g) \\to \\text{NH}_3(g)$`
             ],
             correctAnswer: 0,
-            explanation: `The standard enthalpy of formation is defined as the enthalpy change forming **1 mole** of a compound from its elements in their **standard states**. Only option A fits: $\\frac{1}{2}\\text{N}_2 + \\frac{3}{2}\\text{H}_2 \\to \\text{NH}_3$ (1 mol product, elements in standard form).`
+            explanation: `The standard enthalpy of formation is defined as the enthalpy change forming **1 mole** of a compound from its elements in their **standard states**. Only the equation forming 1 mol $\\text{NH}_3$ from $\\frac{1}{2}\\text{N}_2$ and $\\frac{3}{2}\\text{H}_2$ fits: $\\frac{1}{2}\\text{N}_2 + \\frac{3}{2}\\text{H}_2 \\to \\text{NH}_3$ (1 mol product, elements in standard form).`
           },
           {
             question: `A reaction at constant pressure absorbs 500 J of heat from the surroundings. Which statement is correct?`,

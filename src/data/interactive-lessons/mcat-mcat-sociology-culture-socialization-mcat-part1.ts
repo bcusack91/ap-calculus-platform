@@ -99,7 +99,7 @@ Language transmits culture across generations and, per the **Sapir-Whorf hypothe
             question: `Group A maintains distinctive religious dress and dietary rules while participating fully in national schools, employment, and politics. Group B arms itself, rejects the legitimacy of the state, and works to replace the constitutional order. Sociologically:`,
             options: [`Both are countercultures, since both differ`, `A is a counterculture; B is a subculture`, `A is a subculture; B is a counterculture`, `Both are subcultures, since both share norms`],
             correctAnswer: 2,
-            explanation: `The subculture/counterculture line is drawn at OPPOSITION, not distinctiveness: Group A layers distinctive practices atop participation in dominant institutions, while Group B's defining norms reject and seek to overturn the dominant order. Difference alone never makes a counterculture — that is the trap in option A.`
+            explanation: `The subculture/counterculture line is drawn at OPPOSITION, not distinctiveness: Group A layers distinctive practices atop participation in dominant institutions, while Group B's defining norms reject and seek to overturn the dominant order. Difference alone never makes a counterculture — that is the trap in calling both groups countercultures.`
           },
           {
             question: `A medical researcher initially dismisses a community's postpartum food restrictions as "ignorant superstition," then is instructed to instead document the practice's origins, internal logic, and effects before drawing conclusions. The instruction converts which stance into which?`,

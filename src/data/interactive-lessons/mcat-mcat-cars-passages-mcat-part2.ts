@@ -64,7 +64,7 @@ export const mcatCarsPsgPart2Data = {
             question: `In the worked-example excerpt, the author's central claim is best stated as:`,
             options: [`Mid-century downtowns declined mainly because their design was unappealing`, `Cheaper suburban commuting, not design, mainly drove downtown decline`, `Well-designed plazas will always revive struggling downtowns`, `Geography plays no role in where people choose to live or work`],
             correctAnswer: 1,
-            explanation: `The passage explicitly subordinates the design explanation ("a symptom mistaken for a cause") to the commuting-cost explanation. Option A states the very view the author rejects; C and D contradict the text.`
+            explanation: `The passage explicitly subordinates the design explanation ("a symptom mistaken for a cause") to the commuting-cost explanation. The "design was unappealing" option states the very view the author rejects; the "plazas will always revive" and "geography plays no role" options contradict the text.`
           },
           {
             question: `The author notes that cities "hemmed in by geography" retained downtown crowds even when those downtowns were "unlovely." This detail functions to:`,
@@ -97,7 +97,7 @@ export const mcatCarsPsgPart2Data = {
             question: `Which finding, if true, would most WEAKEN the author's argument?`,
             options: [`Hemmed-in cities lost downtown crowds as fast as sprawling ones`, `Suburban commuting became much cheaper after the postwar highway boom`, `Some of the new downtown plazas were poorly maintained and rarely used`, `Historians still debate exactly when the highway boom began in each city`],
             correctAnswer: 0,
-            explanation: `The author leaned on geographically constrained cities retaining crowds as proof that commuting cost, not design, mattered. If those cities declined just as fast, that comparative evidence disappears, the design explanation revives, and the commuting thesis weakens. Option B actually supports the author; C and D are minor.`
+            explanation: `The author leaned on geographically constrained cities retaining crowds as proof that commuting cost, not design, mattered. If those cities declined just as fast, that comparative evidence disappears, the design explanation revives, and the commuting thesis weakens. Cheaper postwar commuting actually supports the author; poorly maintained plazas and historians' dating debates are minor.`
           },
           {
             question: `The author's attitude toward the design-focused explanation favored by "urban planners" is best described as:`,

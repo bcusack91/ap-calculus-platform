@@ -127,12 +127,12 @@ This is how cells use ATP to drive energetically unfavorable biochemical reactio
             question: `If $\\Delta G° > 0$ for a reaction, which of the following is TRUE at standard conditions?`,
             options: [
               `The reaction cannot proceed in any direction`,
-              `The reaction is non-spontaneous as written, but $K < 1$ means reactants are favored`,
-              `The reaction has a negative cell potential in an electrochemical cell`,
-              `Both B and C are correct`
+              `$K > 1$, so products are favored at equilibrium`,
+              `The standard cell potential $E^\\circ_{\\text{cell}}$ is positive`,
+              `$K < 1$ and $E^\\circ_{\\text{cell}} < 0$, favoring reactants`
             ],
             correctAnswer: 3,
-            explanation: `$\\Delta G° > 0$ means: (1) non-spontaneous as written; (2) $K < 1$ (reactants favored); (3) $E°_{\\text{cell}} < 0$ (from $\\Delta G° = -nFE°_{\\text{cell}}$, positive $\\Delta G°$ gives negative $E°$). All of B and C are correct.`
+            explanation: `$\\Delta G° > 0$ means: (1) non-spontaneous as written; (2) $K < 1$ (reactants favored); (3) $E°_{\\text{cell}} < 0$ (from $\\Delta G° = -nFE°_{\\text{cell}}$, positive $\\Delta G°$ gives negative $E°$). So $K < 1$ with a negative cell potential is correct; $K > 1$ and a positive cell potential describe a spontaneous reaction, and a non-spontaneous reaction can still run in reverse.`
           }
         ]
       }

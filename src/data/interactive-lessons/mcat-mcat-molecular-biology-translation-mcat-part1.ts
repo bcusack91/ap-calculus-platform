@@ -81,7 +81,7 @@ export const mcatTranslationPart1Data = {
             question: `An mRNA codon reads 5'-GAU-3'. The anticodon of the tRNA that decodes it is:`,
             options: [`5'-GAU-3'`, `5'-CUA-3'`, `5'-AUC-3'`, `5'-UAG-3'`],
             correctAnswer: 2,
-            explanation: `Pairing is antiparallel and complementary: codon 5'-GAU-3' pairs anticodon 3'-CUA-5', which written in conventional 5' to 3' order is 5'-AUC-3'. Option B is the same bases left unreversed — the standard orientation trap (and note 5'-CUA-3' would pair UAG, a stop). Treat codon-anticodon problems exactly like strand problems: complement, then reverse, then double-check by aligning the two strands head-to-tail.`
+            explanation: `Pairing is antiparallel and complementary: codon 5'-GAU-3' pairs anticodon 3'-CUA-5', which written in conventional 5' to 3' order is 5'-AUC-3'. 5'-CUA-3' is the same bases left unreversed — the standard orientation trap (and note 5'-CUA-3' would pair UAG, a stop). Treat codon-anticodon problems exactly like strand problems: complement, then reverse, then double-check by aligning the two strands head-to-tail.`
           }
         ]
       }

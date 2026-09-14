@@ -71,7 +71,7 @@ After reading, you should be able to articulate:
             question: `In the worked-example excerpt, the author's central claim is that:`,
             options: [`Standardized tests should be abolished immediately`, `Objective scoring does not by itself make the tests fair`, `Teacher judgment is always superior to standardized testing`, `Standardized tests are administered inconsistently across schools`],
             correctAnswer: 1,
-            explanation: `The author distinguishes "objectivity in scoring" from "fairness in measurement," arguing the former does not guarantee the latter. Option A goes beyond the text; C is the opposite of the author's careful stance; D contradicts the author's concession that the test "surely is" uniformly administered.`
+            explanation: `The author distinguishes "objectivity in scoring" from "fairness in measurement," arguing the former does not guarantee the latter. Abolishing the tests immediately goes beyond the text; "teacher judgment is always superior" is the opposite of the author's careful stance; inconsistent administration contradicts the author's concession that the test "surely is" uniformly administered.`
           },
           {
             question: `The ruler analogy ("a ruler applied identically to every student is still useless if it measures the wrong thing") most directly serves to:`,
@@ -98,13 +98,13 @@ After reading, you should be able to articulate:
             question: `Which of the following, if true, would most STRENGTHEN the author's argument?`,
             options: [`Test scores correlate poorly with the competencies schools value`, `The test is graded by a computer with no human involvement`, `Students take the test in identical conditions nationwide`, `Most teachers say they support the use of standardized testing`],
             correctAnswer: 0,
-            explanation: `The author argues the test may measure the wrong trait. Evidence that scores correlate poorly with the valued competencies directly supports that the instrument lacks validity — the author's load-bearing point. Options B and C reinforce uniformity, which the author already grants and considers beside the point.`
+            explanation: `The author argues the test may measure the wrong trait. Evidence that scores correlate poorly with the valued competencies directly supports that the instrument lacks validity — the author's load-bearing point. Computer grading and identical testing conditions reinforce uniformity, which the author already grants and considers beside the point.`
           },
           {
             question: `Which of the following, if true, would most WEAKEN the author's argument?`,
             options: [`The scores strongly predict the skills educators value most`, `The test is administered in the same way to every student`, `Some critics dislike standardized testing on principle`, `The proponents have published several essays defending the test`],
             correctAnswer: 0,
-            explanation: `The author claims proponents have not shown the test captures "the trait we claim to value." Strong evidence that scores predict precisely those valued skills undercuts that claim and rescues the proponents' fairness argument. Option B addresses uniformity, which is not the contested issue.`
+            explanation: `The author claims proponents have not shown the test captures "the trait we claim to value." Strong evidence that scores predict precisely those valued skills undercuts that claim and rescues the proponents' fairness argument. Administering the test the same way to every student addresses uniformity, which is not the contested issue.`
           },
           {
             question: `Which choice best describes the overall structure of the worked-example passage?`,

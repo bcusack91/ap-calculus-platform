@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'The paragraph argues that social media harms teen mental health. Only option B provides direct evidence (a study with specific data) supporting that claim. The other options are factual but irrelevant to the argument being made.',
+      'The paragraph argues that social media harms teen mental health. Only the sentence citing the 2022 study provides direct evidence (specific data) supporting that claim. The other options are factual but irrelevant to the argument being made.',
     partNumber: 3,
     partTitle: 'Relevance & Purpose',
   },
@@ -122,7 +122,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B uses formal, precise vocabulary ("policymakers," "implement," "comprehensive strategies," "mitigate") appropriate for academic writing. The other options use informal language ("get their act together," "stuff," "totally," "folks") inconsistent with an academic register.',
+      'The "Policymakers must implement" sentence uses formal, precise vocabulary ("policymakers," "implement," "comprehensive strategies," "mitigate") appropriate for academic writing. The other options use informal language ("get their act together," "stuff," "totally," "folks") inconsistent with an academic register.',
     partNumber: 4,
     partTitle: 'Tone & Word Choice',
   },
@@ -190,7 +190,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'Option A reduces the sentence from 35 words to 16 while preserving formal register and exact meaning. Option B is informal; options C and D are not significantly more concise than the original or use awkward phrasing.',
+      '"Despite many available renewable energy sources..." reduces the sentence from 35 words to 16 while preserving formal register and exact meaning. The "out there" version is informal; the "exist and are available" and "In spite of renewables existing" versions are not significantly more concise than the original or use awkward phrasing.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -206,7 +206,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B adds a specific, quantified statistic directly supporting the affordability claim. The other options introduce vague affirmations, different topics (color, environment), or circular reasoning without providing concrete evidence.',
+      'The revision citing the 18% price drop adds a specific, quantified statistic directly supporting the affordability claim. The other options introduce vague affirmations, different topics (color, environment), or circular reasoning without providing concrete evidence.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },

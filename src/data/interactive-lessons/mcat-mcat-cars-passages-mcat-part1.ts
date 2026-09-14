@@ -66,7 +66,7 @@ Below is a short excerpt in the style of a CARS humanities passage. Read it once
             question: `Based on the worked-example excerpt, which statement best captures the author's main idea?`,
             options: [`The novel has no effect on a reader's moral sensibilities`, `The claim that novels teach empathy is partly true but overstated`, `Eighteenth-century readers were uniquely cruel compared to modern readers`, `Empathy is best cultivated through formal philosophy rather than fiction`],
             correctAnswer: 1,
-            explanation: `The closing line — "both true and dangerously incomplete" — signals a qualified position. The author concedes a kernel of truth while arguing the empathy claim is overstated. Options A and D push past what the text supports; C misreads a single example as the thesis.`
+            explanation: `The closing line — "both true and dangerously incomplete" — signals a qualified position. The author concedes a kernel of truth while arguing the empathy claim is overstated. The "no effect on moral sensibilities" and "formal philosophy rather than fiction" options push past what the text supports; the "uniquely cruel" option misreads a single example as the thesis.`
           },
           {
             question: `In the excerpt, the author calls the empathy claim "seductive." This word choice primarily functions to:`,
@@ -78,7 +78,7 @@ Below is a short excerpt in the style of a CARS humanities passage. Read it once
             question: `The author introduces eighteenth-century readers who were both "cultivated" and cruel. The function of this example is to:`,
             options: [`Complicate the assumed link between reading and empathy`, `Show that reading fiction tends to make readers crueler`, `Concede that the empathy claim is entirely correct`, `Shift the topic away from the novel toward history`],
             correctAnswer: 0,
-            explanation: `The example is counter-evidence: if fiction reliably produced empathy, these well-read individuals should not have been "efficient administrators of cruelty." It complicates — but does not reverse — the claim. Option B overstates causation the author never asserts.`
+            explanation: `The example is counter-evidence: if fiction reliably produced empathy, these well-read individuals should not have been "efficient administrators of cruelty." It complicates — but does not reverse — the claim. The "makes readers crueler" option overstates causation the author never asserts.`
           },
           {
             question: `A later paragraph (not shown) states: "Sympathy, like a muscle, may be trained toward some objects and left to atrophy toward others." This sentence most directly supports the passage's idea that:`,

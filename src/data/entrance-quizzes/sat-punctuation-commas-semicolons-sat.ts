@@ -36,7 +36,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'When a subordinate clause comes AFTER the main clause, a comma is generally not used before the subordinating conjunction. "The game was postponed because it rained heavily" should have no comma. Options A, C, and D correctly use a comma after an introductory subordinate clause.',
+      'When a subordinate clause comes AFTER the main clause, a comma is generally not used before the subordinating conjunction. "The game was postponed because it rained heavily" should have no comma. The sentences opening with "Because," "After," and "Although" correctly use a comma after an introductory subordinate clause.',
     partNumber: 1,
     partTitle: 'Comma Rules',
   },
@@ -54,7 +54,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'A comma splice occurs when two independent clauses are joined with only a comma. "I finished my homework" and "then I watched television" are both independent clauses—joining them with just a comma is incorrect. Options A, B, and D all fix this correctly.',
+      'A comma splice occurs when two independent clauses are joined with only a comma. "I finished my homework" and "then I watched television" are both independent clauses—joining them with just a comma is incorrect. The versions using ", and then," a semicolon, or "After finishing" all fix this correctly.',
     partNumber: 2,
     partTitle: 'Comma Splices',
   },
@@ -70,7 +70,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'The most direct fix for a comma splice is to replace the comma with a semicolon, which correctly joins two closely related independent clauses. Option B does this correctly.',
+      'The most direct fix for a comma splice is to replace the comma with a semicolon, which correctly joins two closely related independent clauses. "The report was due Monday; the team did not finish it in time" does this correctly.',
     partNumber: 2,
     partTitle: 'Comma Splices',
   },
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'In option B, the semicolon is used before a list that follows the word "topics." A colon (not a semicolon) should introduce a list after a complete clause: "The conference will cover three topics: climate change, renewable energy, and policy reform."',
+      'In the conference sentence, the semicolon is used before a list that follows the word "topics." A colon (not a semicolon) should introduce a list after a complete clause: "The conference will cover three topics: climate change, renewable energy, and policy reform."',
     partNumber: 3,
     partTitle: 'Semicolons',
   },
@@ -138,7 +138,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'A semicolon correctly joins two independent clauses. Option A is a comma splice, Option B is a run-on, and Option D incorrectly places a comma after the coordinating conjunction "and."',
+      'A semicolon correctly joins two independent clauses. "The storm intensified, it knocked out" is a comma splice, the version with no punctuation is a run-on, and "intensified, and, it" incorrectly places a comma after the coordinating conjunction "and."',
     partNumber: 4,
     partTitle: 'Independent Clauses',
   },
@@ -156,7 +156,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'When items in a list themselves contain commas (city, state), semicolons should be used between items to prevent confusion. Option B is the only one that correctly uses semicolons between the city-state pairs.',
+      'When items in a list themselves contain commas (city, state), semicolons should be used between items to prevent confusion. "Austin, Texas; Boston, Massachusetts; and Portland, Oregon" is the only version that correctly uses semicolons between the city-state pairs.',
     partNumber: 5,
     partTitle: 'Lists & Series',
   },
@@ -172,7 +172,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'In a simple series, commas separate each item. Option C includes the Oxford (serial) comma before "and," which is standard in formal writing and on the SAT. Option A has no commas; B omits the serial comma; D incorrectly places a comma after "for."',
+      'In a simple series, commas separate each item. "Sugar, salt, and flour" includes the Oxford (serial) comma before "and," which is standard in formal writing and on the SAT. The version "sugar salt and flour" has no commas; "sugar, salt and flour" omits the serial comma; "calls for, sugar" incorrectly places a comma after "for."',
     partNumber: 5,
     partTitle: 'Lists & Series',
   },
@@ -190,7 +190,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      '"Especially historical fiction" is a nonrestrictive phrase and should be set off with a comma. A semicolon then correctly joins the two independent clauses before "however," and a comma follows "however." Only option A places all punctuation correctly.',
+      '"Especially historical fiction" is a nonrestrictive phrase and should be set off with a comma. A semicolon then correctly joins the two independent clauses before "however," and a comma follows "however." Only "novels, especially historical fiction; however, I rarely" places all punctuation correctly.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -206,7 +206,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'Option A correctly uses a comma after the introductory adverbial phrase "After years of research" and a semicolon to join two related independent clauses. The other options misplace the comma, create a comma splice, or use a semicolon after an introductory phrase.',
+      '"After years of research, the cure was announced; it was hailed as a breakthrough" correctly uses a comma after the introductory adverbial phrase "After years of research" and a semicolon to join two related independent clauses. The other options misplace the comma, create a comma splice, or use a semicolon after an introductory phrase.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -224,7 +224,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      '"Two goals in mind" is a complete clause that introduces a list; a colon is the correct punctuation to introduce the listed items. A semicolon in option C would be wrong because what follows ("safety and efficiency") is not an independent clause.',
+      '"Two goals in mind" is a complete clause that introduces a list; a colon is the correct punctuation to introduce the listed items. A semicolon after "in mind" would be wrong because what follows ("safety and efficiency") is not an independent clause.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

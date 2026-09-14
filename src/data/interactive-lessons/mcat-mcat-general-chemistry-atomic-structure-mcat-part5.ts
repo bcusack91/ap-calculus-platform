@@ -148,7 +148,7 @@ $$E_n = -\\frac{13.6\\text{ eV}}{n^2}$$
               `$\\text{IE}_1(\\text{S}) > \\text{IE}_1(\\text{P})$ because S has a higher $Z_{eff}$`
             ],
             correctAnswer: 2,
-            explanation: `The Mg → Al exception: Mg ($3s^2$) has a full $3s$ subshell; Al ($3s^2\\, 3p^1$) removes a $3p$ electron that is shielded by the $3s$ pair and is slightly higher in energy than $3s$ → **lower IE for Al than Mg** despite higher Z. Option C correctly states this.`
+            explanation: `The Mg → Al exception: Mg ($3s^2$) has a full $3s$ subshell; Al ($3s^2\\, 3p^1$) removes a $3p$ electron that is shielded by the $3s$ pair and is slightly higher in energy than $3s$ → **lower IE for Al than Mg** despite higher Z. The statement $\\text{IE}_1(\\text{Mg}) > \\text{IE}_1(\\text{Al})$ correctly states this.`
           }
         ]
       }

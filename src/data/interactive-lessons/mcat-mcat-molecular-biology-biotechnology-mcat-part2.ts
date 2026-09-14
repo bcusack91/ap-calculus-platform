@@ -88,7 +88,7 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
             question: `Compared with a microarray, RNA-seq (sequencing all cDNA from a sample) has the key advantage that it:`,
             options: [`Requires no reverse transcription step at all`, `Measures protein levels in the sample directly`, `Detects transcripts without predesigned probes`, `Works only for genes shorter than 1 kb`],
             correctAnswer: 2,
-            explanation: `A microarray can only interrogate sequences someone printed on the chip — hybridization to KNOWN probes — while sequencing reads whatever is there, revealing unannotated transcripts, fusion mRNAs, and exon-level splice differences, with counting-based quantification that does not saturate like hybridization signal. Both start from cDNA (reverse transcription still required — option A is false). Neither touches protein; that remains the western/mass-spec domain. Probe-dependent vs probe-free is the tested contrast.`
+            explanation: `A microarray can only interrogate sequences someone printed on the chip — hybridization to KNOWN probes — while sequencing reads whatever is there, revealing unannotated transcripts, fusion mRNAs, and exon-level splice differences, with counting-based quantification that does not saturate like hybridization signal. Both start from cDNA (reverse transcription still required — the no-reverse-transcription claim is false). Neither touches protein; that remains the western/mass-spec domain. Probe-dependent vs probe-free is the tested contrast.`
           }
         ]
       }

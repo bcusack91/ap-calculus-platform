@@ -122,7 +122,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Correlation describes a tendency, not a guaranteed causal relationship. Option B correctly states that scores "tend to increase"—the language of correlation. Option A implies causation (not established by correlation), and Option C implies a perfectly linear relationship the scatter plot may not show.',
+      'Correlation describes a tendency, not a guaranteed causal relationship. The statement that scores "tend to increase" is correct—the language of correlation. "More hours studied causes higher test scores" implies causation (not established by correlation), and "adds exactly 5 points" implies a perfectly linear relationship the scatter plot may not show.',
     partNumber: 4,
     partTitle: 'Graphs & Models',
   },
@@ -156,7 +156,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'Mean = (4 + 7 + 7 + 9 + 13)/5 = 40/5 = 8. Median (middle value of ordered set): 7. Mode (most frequent): 7 (appears twice). All three values match option A.',
+      'Mean = (4 + 7 + 7 + 9 + 13)/5 = 40/5 = 8. Median (middle value of ordered set): 7. Mode (most frequent): 7 (appears twice). All three values match Mean = 8, Median = 7, Mode = 7.',
     partNumber: 5,
     partTitle: 'Statistical Measures',
   },

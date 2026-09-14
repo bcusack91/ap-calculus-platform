@@ -106,7 +106,7 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\to x\\te
               `$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\to 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$`
             ],
             correctAnswer: 2,
-            explanation: `$\\text{BaCl}_2 + \\text{Na}_2\\text{SO}_4 \\to \\text{BaSO}_4 + 2\\text{NaCl}$: Two ionic compounds exchange partners ($\\text{Ba}^{2+}$ and $\\text{Na}^+$ switch anions). This is a classic double displacement (precipitation) reaction. Option A is single displacement; B is decomposition; D is combustion.`
+            explanation: `$\\text{BaCl}_2 + \\text{Na}_2\\text{SO}_4 \\to \\text{BaSO}_4 + 2\\text{NaCl}$: Two ionic compounds exchange partners ($\\text{Ba}^{2+}$ and $\\text{Na}^+$ switch anions). This is a classic double displacement (precipitation) reaction. $\\text{Fe} + \\text{CuSO}_4$ is single displacement; breaking down $\\text{KClO}_3$ is decomposition; burning $\\text{C}_3\\text{H}_8$ is combustion.`
           }
         ]
       }

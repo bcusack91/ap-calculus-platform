@@ -54,7 +54,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'X-intercepts are where y = 0—literally where the graph crosses the x-axis. Using the "zero" or "root" function on a graphing calculator locates these points directly. A table of values can also help (option D) but is less direct than the built-in zero finder.',
+      'X-intercepts are where y = 0—literally where the graph crosses the x-axis. Using the "zero" or "root" function on a graphing calculator locates these points directly. A table of values at y = 0 can also help but is less direct than the built-in zero finder.',
     partNumber: 2,
     partTitle: 'Graphing Functions',
   },
@@ -81,14 +81,14 @@ const questions: EntranceQuizQuestion[] = [
     question:
       'To solve the equation $x^{3}$ − 3x = 2 using a graphing calculator, which strategy is most effective?',
     options: [
-      'Graph y = $x^{3}$ − 3x − 2 and find where it crosses the x-axis.',
-      'Graph y = $x^{3}$ and y = 3x + 2 and find their intersection.',
-      'Evaluate $x^{3}$ − 3x for x = 1, 2, 3 until you find 2.',
-      'Both A and B are equally valid strategies.',
+      'Graph y = $x^{3}$ − 3x − 2 and find every zero, even touch points.',
+      'Graph y = $x^{3}$ − 3x − 2 and keep only zeros where it crosses the axis.',
+      'Evaluate $x^{3}$ − 3x at x = 1, 2, 3 and stop once it equals 2.',
+      'Graph y = $x^{3}$ and y = 3x, then find where the graphs intersect.',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     explanation:
-      'Both strategies work: (A) graph f(x) = $x^{3}$ − 3x − 2 and find x-intercepts (zeros); or (B) graph y = $x^{3}$ − 3x and y = 2 and find where they intersect. Both give the same solutions. Option D correctly recognizes that either approach is valid.',
+      'Rewrite the equation as $x^{3}$ − 3x − 2 = 0, which factors as (x − 2)$(x + 1)^{2}$. Its zeros are x = 2, where the graph crosses the x-axis, and x = −1, a double root where the graph only touches the axis. Finding every zero, touch points included, gives both solutions. Keeping only sign-change crossings misses x = −1, testing x = 1, 2, 3 finds only x = 2, and intersecting y = $x^{3}$ with y = 3x solves a different equation.',
     partNumber: 3,
     partTitle: 'Solving Equations Graphically',
   },
@@ -156,7 +156,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 3,
     explanation:
-      'Substituting your answer back into the original problem is the most reliable check—it directly tests whether the answer satisfies all given conditions. Front-end estimation (option B) is also useful for quick sanity checks, but verification by substitution is the gold standard.',
+      'Substituting your answer back into the original problem is the most reliable check—it directly tests whether the answer satisfies all given conditions. Front-end estimation (rounding to leading digits) is also useful for quick sanity checks, but verification by substitution is the gold standard.',
     partNumber: 5,
     partTitle: 'Estimation Strategies',
   },

@@ -67,13 +67,13 @@ These passages discuss:
             question: `In the worked-example excerpt, the author's central claim about photography and painting is that:`,
             options: [`Photography destroyed painting, just as critics had predicted`, `By taking over likeness, photography freed painting`, `Painting and photography are essentially the same art form`, `The Impressionists failed to respond to photography`],
             correctAnswer: 1,
-            explanation: `The passage overturns the "photography will kill painting" prophecy: "What looked like a threat functioned as a liberation." Painters, "freed from the duty of mere resemblance," turned to color and "the structure of seeing." Option A states the prophecy the author rejects.`
+            explanation: `The passage overturns the "photography will kill painting" prophecy: "What looked like a threat functioned as a liberation." Painters, "freed from the duty of mere resemblance," turned to color and "the structure of seeing." The "photography destroyed painting" option states the prophecy the author rejects.`
           },
           {
             question: `The author characterizes the Impressionists' style as "less a rejection of accuracy than a declaration of independence from it." This phrasing implies that the Impressionists:`,
             options: [`Believed accurate representation was worthless`, `Pursued aims beyond accuracy without necessarily condemning it`, `Tried to paint realistically but lacked the skill to do so`, `Opposed every painting tradition that came before them`],
             correctAnswer: 1,
-            explanation: `A "declaration of independence from" accuracy means moving beyond it, not denouncing it. The careful wording ("less a rejection... than a declaration of independence") guards against the overstatement in option A. This is precise tone/meaning analysis.`
+            explanation: `A "declaration of independence from" accuracy means moving beyond it, not denouncing it. The careful wording ("less a rejection... than a declaration of independence") guards against the overstatement that they found accuracy worthless. This is precise tone/meaning analysis.`
           },
           {
             question: `The passage's treatment of photography's effect on painting best exemplifies which recurring theme in aesthetics passages?`,
@@ -106,7 +106,7 @@ These passages discuss:
             question: `The author writes that photography "did not compete with painting so much as relieve it of an obligation it had quietly resented." The phrase "quietly resented" most strongly implies that, in the author's view:`,
             options: [`Painting had welcomed the duty of exact resemblance`, `Literal accuracy was a burden painting was glad to shed`, `Painters were openly hostile to the new photographers`, `Resemblance had never really been one of painting's goals`],
             correctAnswer: 1,
-            explanation: `"Quietly resented" frames the obligation of resemblance as an unwanted burden, so being "relieved" of it is a release the medium welcomed — consistent with the passage's "liberation" thesis. Option A reverses the attitude; D contradicts the premise that painting once carried that duty.`
+            explanation: `"Quietly resented" frames the obligation of resemblance as an unwanted burden, so being "relieved" of it is a release the medium welcomed — consistent with the passage's "liberation" thesis. The "welcomed the duty" option reverses the attitude; the claim that resemblance was never a goal contradicts the premise that painting once carried that duty.`
           }
         ]
       }

@@ -67,7 +67,7 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
             question: `A gene's coding strand reads 5'-CATGTC-3'. The mRNA transcribed from this gene reads:`,
             options: [`5'-GACAUG-3'`, `5'-GUACAG-3'`, `5'-CAUGUC-3'`, `5'-CATGTC-3'`],
             correctAnswer: 2,
-            explanation: `The coding (sense) strand matches the mRNA exactly, with the single substitution of U for T — no complementing, no reversing: 5'-CAUGUC-3'. Students who reflexively take the complement produce wrong answers built from the template-strand procedure. Fix the vocabulary first: template = what polymerase reads (3' to 5'); coding = what the mRNA looks like. Option D is disqualified by containing T, a DNA-only base.`
+            explanation: `The coding (sense) strand matches the mRNA exactly, with the single substitution of U for T — no complementing, no reversing: 5'-CAUGUC-3'. Students who reflexively take the complement produce wrong answers built from the template-strand procedure. Fix the vocabulary first: template = what polymerase reads (3' to 5'); coding = what the mRNA looks like. 5'-CATGTC-3' is disqualified by containing T, a DNA-only base.`
           },
           {
             question: `Unlike DNA polymerase, RNA polymerase requires no primer. The property that makes this acceptable for the cell is that:`,

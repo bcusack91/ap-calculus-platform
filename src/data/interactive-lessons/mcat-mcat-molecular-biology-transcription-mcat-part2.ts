@@ -60,7 +60,7 @@ The primary transcript (pre-mRNA, hnRNA) is edited co-transcriptionally inside t
             question: `The 5' cap of eukaryotic mRNA is distinctive because it is attached through:`,
             options: [`A standard 3'-5' phosphodiester bond`, `A peptide bond to the first amino acid`, `Hydrogen bonds pairing it with the poly-A tail`, `An inverted 5'-to-5' triphosphate linkage`],
             correctAnswer: 3,
-            explanation: `The cap is added "backwards": the 7-methylguanosine's 5' carbon connects through three phosphates to the 5' end of the mRNA — a 5'-to-5' bridge found nowhere else in the molecule. This odd geometry is functional: 5' exonucleases cannot engage it (stability), and the cap-binding initiation factor eIF4E recognizes it specifically to begin ribosome loading. Distractor A describes the backbone everywhere EXCEPT the cap.`
+            explanation: `The cap is added "backwards": the 7-methylguanosine's 5' carbon connects through three phosphates to the 5' end of the mRNA — a 5'-to-5' bridge found nowhere else in the molecule. This odd geometry is functional: 5' exonucleases cannot engage it (stability), and the cap-binding initiation factor eIF4E recognizes it specifically to begin ribosome loading. The standard 3'-5' phosphodiester bond describes the backbone everywhere EXCEPT the cap.`
           },
           {
             question: `Poly-A polymerase adds roughly 200 adenosines to cleaved pre-mRNA. This synthesis is unusual among nucleic acid polymerizations because it:`,

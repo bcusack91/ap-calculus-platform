@@ -82,13 +82,13 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
             question: `A macrophage phagocytoses an extracellular bacterium. Peptides from the bacterium will primarily be displayed on:`,
             options: [`MHC I, to CD4+ helper T cells`, `MHC II, to CD8+ cytotoxic T cells`, `MHC II, to CD4+ helper T cells`, `MHC I, to CD8+ cytotoxic T cells`],
             correctAnswer: 2,
-            explanation: `Phagocytosed material is EXOGENOUS, so it enters the MHC II pathway, and MHC II presents to CD4+ helper T cells (recall 2 x 4 = 8: MHC II pairs with CD4, MHC I with CD8). Choices A and B scramble the pairings. MHC I (choice D) would display peptides synthesized in the macrophage's own cytosol, not endocytosed material.`
+            explanation: `Phagocytosed material is EXOGENOUS, so it enters the MHC II pathway, and MHC II presents to CD4+ helper T cells (recall 2 x 4 = 8: MHC II pairs with CD4, MHC I with CD8). MHC I with CD4+ and MHC II with CD8+ scramble the pairings. MHC I would display peptides synthesized in the macrophage's own cytosol, not endocytosed material.`
           },
           {
             question: `During thymic negative selection, T cells are deleted if they:`,
             options: [`Fail to bind self-MHC molecules at all`, `Bind self-peptide/MHC complexes too strongly`, `Express CD8 rather than CD4 on their surface`, `Have not yet encountered foreign antigen`],
             correctAnswer: 1,
-            explanation: `Negative selection deletes strongly self-reactive thymocytes, establishing central tolerance — its failure predisposes to autoimmunity. Failing to bind self-MHC at all causes death by neglect during POSITIVE selection (choice A confuses the two filters). CD8 expression is a normal fate, and no T cell has met foreign antigen in the thymus — naivety is expected, not punished.`
+            explanation: `Negative selection deletes strongly self-reactive thymocytes, establishing central tolerance — its failure predisposes to autoimmunity. Failing to bind self-MHC at all causes death by neglect during POSITIVE selection (so picking that option confuses the two filters). CD8 expression is a normal fate, and no T cell has met foreign antigen in the thymus — naivety is expected, not punished.`
           },
           {
             question: `Cytotoxic T cells eliminate virus-infected cells primarily by:`,
@@ -100,13 +100,13 @@ Why does the repertoire pre-exist? **V(D)J recombination**: during lymphocyte de
             question: `Compared with a T-dependent protein antigen, a T-independent bacterial capsular polysaccharide typically elicits:`,
             options: [`Stronger memory and extensive class switching to IgG`, `Activation of CD8+ T cells instead of B cells`, `No antibody response of any kind`, `Mostly IgM with little class switching or memory`],
             correctAnswer: 3,
-            explanation: `Repetitive polysaccharides cross-link many BCRs and activate B cells without T help, but the missing CD40L/cytokine signals mean little class switching or affinity maturation — mostly IgM and poor memory. Choice A describes the T-DEPENDENT outcome. Antibody is still made (so not choice C), and polysaccharide antigens do not redirect the response to CD8+ cells.`
+            explanation: `Repetitive polysaccharides cross-link many BCRs and activate B cells without T help, but the missing CD40L/cytokine signals mean little class switching or affinity maturation — mostly IgM and poor memory. Stronger memory with IgG class switching describes the T-DEPENDENT outcome. Antibody is still made (so not "no antibody response"), and polysaccharide antigens do not redirect the response to CD8+ cells.`
           },
           {
             question: `Which statement best explains why the immune system can respond to antigens that have never existed before in nature?`,
             options: [`Antigens serve as templates that instruct lymphocytes to fold matching receptors`, `Random V(D)J recombination creates a diverse repertoire before exposure`, `Each lymphocyte expresses thousands of different receptor specificities simultaneously`, `Toll-like receptors mutate rapidly upon infection to fit the new antigen`],
             correctAnswer: 1,
-            explanation: `Somatic recombination of V, (D), and J segments plus imprecise junctions builds billions of specificities BEFORE any exposure; antigen then selects and expands the rare matching clones (clonal selection). The "instructional" template model (choice A) is historically famous but wrong. Each lymphocyte carries essentially ONE specificity, and TLRs are fixed germline pattern receptors that do not mutate to fit antigens.`
+            explanation: `Somatic recombination of V, (D), and J segments plus imprecise junctions builds billions of specificities BEFORE any exposure; antigen then selects and expands the rare matching clones (clonal selection). The "instructional" template model is historically famous but wrong. Each lymphocyte carries essentially ONE specificity, and TLRs are fixed germline pattern receptors that do not mutate to fit antigens.`
           }
         ]
       }

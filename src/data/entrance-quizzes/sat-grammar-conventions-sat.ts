@@ -115,14 +115,14 @@ const questions: EntranceQuizQuestion[] = [
     question:
       'Which sentence contains a dangling modifier?',
     options: [
-      'Running through the park, the dog startled the children.',
+      'Running through the park, a loud noise startled the dog.',
       'Running through the park, the children startled the dog.',
       'Having finished the assignment, Maria submitted it online.',
       'Exhausted from the hike, the campers set up their tents.',
     ],
     correctIndex: 0,
     explanation:
-      'In option A, "Running through the park" should modify the subject that follows, but it illogically modifies "the dog"—dogs don\'t typically startle children while running. Option B is correct because the children are the ones running through the park.',
+      'In "Running through the park, a loud noise startled the dog," the phrase "Running through the park" should modify the subject that follows, but that subject is "a loud noise," which cannot run, so the modifier dangles. In the other sentences, the subject right after the comma (the children, Maria, the campers) can logically perform the action.',
     partNumber: 4,
     partTitle: 'Modifiers',
   },
@@ -138,7 +138,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      '"Almost" should be placed immediately before the word it modifies: "almost every day." Placing it before "drove" (option A) implies the speaker nearly drove but didn\'t, which changes the meaning. Option B is the only one that places "almost" correctly.',
+      '"Almost" should be placed immediately before the word it modifies: "almost every day." Placing it before "drove" ("I almost drove") implies the speaker nearly drove but didn\'t, which changes the meaning. "I drove my car to the store almost every day last week" is the only one that places "almost" correctly.',
     partNumber: 4,
     partTitle: 'Modifiers',
   },
@@ -156,7 +156,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Parallel structure requires that items in a series use the same grammatical form. In option B, all three items are infinitive phrases: "to lower," "create," and "improve" (the "to" is understood for the second and third). The other options mix forms inconsistently.',
+      'Parallel structure requires that items in a series use the same grammatical form. In "promised to lower taxes, create jobs, and improve education," all three items are infinitive phrases: "to lower," "create," and "improve" (the "to" is understood for the second and third). The other options mix forms inconsistently.',
     partNumber: 5,
     partTitle: 'Parallel Structure',
   },
@@ -172,7 +172,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B mixes adjectives ("thoughtful," "well-organized") with a verb phrase ("had good evidence"). The parallel version would be: "thoughtful, well-organized, and well-evidenced." The other options maintain consistent grammatical form throughout their series.',
+      'The sentence about the essay mixes adjectives ("thoughtful," "well-organized") with a verb phrase ("had good evidence"). The parallel version would be: "thoughtful, well-organized, and well-evidenced." The other options maintain consistent grammatical form throughout their series.',
     partNumber: 5,
     partTitle: 'Parallel Structure',
   },
@@ -206,7 +206,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      '"Everyone" is singular, so "his or her best" is the formally correct pronoun. However, "some players" is plural, so "their techniques" is correct for that clause. Option C makes both choices correctly. Option D incorrectly places a semicolon before "but."',
+      '"Everyone" is singular, so "his or her best" is the formally correct pronoun. However, "some players" is plural, so "their techniques" is correct for that clause. The version with "his or her best" and "their techniques" makes both choices correctly. The version with "their best; but" incorrectly places a semicolon before "but."',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -240,7 +240,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Option B correctly places the participle phrase "Having studied hard" next to its subject "Maria." In the other options, the participial phrase dangles or is misplaced—in A and D, it seems to modify "the exam," which cannot study.',
+      '"Having studied hard, Maria found the exam easy" correctly places the participle phrase "Having studied hard" next to its subject "Maria." In the other options, the participial phrase dangles or is misplaced—in "Having studied hard, the exam seemed easy to Maria" and "The exam seemed easy to Maria, having studied hard," it seems to modify "the exam," which cannot study.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

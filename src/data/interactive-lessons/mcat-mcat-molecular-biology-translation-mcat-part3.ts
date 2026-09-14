@@ -80,7 +80,7 @@ export const mcatTranslationPart3Data = {
             question: `Anfinsen showed that denatured ribonuclease spontaneously refolds into active enzyme when denaturant and reducing agent are removed. The principle established is that:`,
             options: [`All proteins fold without needing chaperones`, `The primary sequence specifies the native fold`, `Disulfide bonds form at random`, `Folding requires contact with the ribosome`],
             correctAnswer: 1,
-            explanation: `Refolding succeeded with no cellular machinery present — no ribosome, no chaperones, no template — so the tertiary structure must be encoded in the primary sequence (the thermodynamic hypothesis: the native state is the free-energy minimum). Chaperones remain important IN CELLS, but as aggregation-preventers and kinetics-helpers, not information sources; option A overreaches the finding. Correct disulfides reformed because the folded conformation brings the right cysteines together.`
+            explanation: `Refolding succeeded with no cellular machinery present — no ribosome, no chaperones, no template — so the tertiary structure must be encoded in the primary sequence (the thermodynamic hypothesis: the native state is the free-energy minimum). Chaperones remain important IN CELLS, but as aggregation-preventers and kinetics-helpers, not information sources; claiming all proteins fold without chaperones overreaches the finding. Correct disulfides reformed because the folded conformation brings the right cysteines together.`
           },
           {
             question: `A regulatory protein must be destroyed within minutes at a specific cell-cycle transition. The machinery responsible for this targeted, ATP-dependent destruction is:`,

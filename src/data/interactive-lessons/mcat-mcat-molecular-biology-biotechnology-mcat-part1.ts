@@ -80,7 +80,7 @@ Each cycle, three temperature steps:
             question: `In blue-white screening, colonies containing the desired recombinant plasmid appear white because:`,
             options: [`The antibiotic-resistance gene produces a white pigment`, `White colonies failed to take up any plasmid`, `X-gal stains the insert DNA directly`, `The insert disrupts lacZ, so X-gal is not cleaved`],
             correctAnswer: 3,
-            explanation: `The multiple cloning site sits INSIDE lacZ by design: ligating an insert there breaks the beta-galactosidase reading frame, and no functional enzyme means no blue X-gal cleavage product — white signals success. Blue colonies carry re-circularized empty vector with lacZ intact. Cells with no plasmid at all never appear: ampicillin killed them (option B confuses the screen with the selection — keep those two steps distinct, as exam questions deliberately blur them).`
+            explanation: `The multiple cloning site sits INSIDE lacZ by design: ligating an insert there breaks the beta-galactosidase reading frame, and no functional enzyme means no blue X-gal cleavage product — white signals success. Blue colonies carry re-circularized empty vector with lacZ intact. Cells with no plasmid at all never appear: ampicillin killed them (blaming failed plasmid uptake confuses the screen with the selection — keep those two steps distinct, as exam questions deliberately blur them).`
           },
           {
             question: `PCR uses Taq polymerase rather than ordinary E. coli DNA polymerase because Taq:`,
@@ -92,7 +92,7 @@ Each cycle, three temperature steps:
             question: `Starting from 10 copies of a template, roughly how many double-stranded copies exist after 10 PCR cycles at perfect efficiency?`,
             options: [`About 100 (10 times 10 cycles)`, `About 1,000 (10 times 10 to the 2nd)`, `About 10,000 (10 times 2 to the 10th)`, `About 110 (10 plus 10 per cycle)`],
             correctAnswer: 2,
-            explanation: `Each cycle doubles every existing copy: final = initial times 2 to the n. Ten cycles multiply by 2^10 = 1,024, so 10 templates become ~10,240. The MCAT rewards the estimate, not the exact integer — know 2^10 is about 10^3, so 30 cycles multiply by about 10^9 (2^30). Linear thinking (option D) is the planted error; amplification is exponential, which is also why single-molecule contamination ruins forensic PCR.`
+            explanation: `Each cycle doubles every existing copy: final = initial times 2 to the n. Ten cycles multiply by 2^10 = 1,024, so 10 templates become ~10,240. The MCAT rewards the estimate, not the exact integer — know 2^10 is about 10^3, so 30 cycles multiply by about 10^9 (2^30). Linear thinking (10 plus 10 per cycle) is the planted error; amplification is exponential, which is also why single-molecule contamination ruins forensic PCR.`
           }
         ]
       }

@@ -36,7 +36,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Let s = number of small candles and l = number of large candles. The total number of candles is s + l = 10. The total cost is 4s + 7l = 55. Option B correctly represents both constraints.',
+      'Let s = number of small candles and l = number of large candles. The total number of candles is s + l = 10. The total cost is 4s + 7l = 55. The system s + l = 10 and 4s + 7l = 55 correctly represents both constraints.',
     partNumber: 1,
     partTitle: 'Setting Up Equations',
   },

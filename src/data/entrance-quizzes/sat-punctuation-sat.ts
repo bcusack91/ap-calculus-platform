@@ -36,7 +36,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Omitting the Oxford comma before "and God" creates ambiguity—it could be read as saying the speaker\'s parents are Oprah Winfrey and God. Option B demonstrates how omitting the serial comma can introduce confusion.',
+      'Omitting the Oxford comma before "and God" creates ambiguity—it could be read as saying the speaker\'s parents are Oprah Winfrey and God. "My parents, Oprah Winfrey and God" demonstrates how omitting the serial comma can introduce confusion.',
     partNumber: 1,
     partTitle: 'Comma Usage',
   },
@@ -70,7 +70,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'A colon should be preceded by a complete independent clause. "You will need three things" is a complete clause, making option C correct. Options A, B, and D place a colon after a verb or incomplete construction, which is incorrect.',
+      'A colon should be preceded by a complete independent clause. "You will need three things" is a complete clause, making "You will need three things: flour, eggs, and butter" correct. The versions with a colon right after "requires," "are," or "need" place a colon after a verb or incomplete construction, which is incorrect.',
     partNumber: 2,
     partTitle: 'Semicolons & Colons',
   },
@@ -122,7 +122,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'Em dashes used as parenthetical insertions must come in pairs, one on each side of the interrupting phrase—just like parentheses. Option A correctly places an em dash both before and after the nonessential clause.',
+      'Em dashes used as parenthetical insertions must come in pairs, one on each side of the interrupting phrase—just like parentheses. The sentence with a dash on each side of "who had spent forty years in the field" correctly places an em dash both before and after the nonessential clause.',
     partNumber: 4,
     partTitle: 'Dashes & Parentheses',
   },
@@ -138,7 +138,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Parentheses should enclose supplementary, nonessential information that fits grammatically into the sentence when removed. Option B uses parentheses correctly to set off "as is commonly claimed" without disrupting the main clause.',
+      'Parentheses should enclose supplementary, nonessential information that fits grammatically into the sentence when removed. Enclosing only "as is commonly claimed" in parentheses correctly sets it off without disrupting the main clause.',
     partNumber: 4,
     partTitle: 'Dashes & Parentheses',
   },
@@ -206,7 +206,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      '"It\'s" = contraction of "it is" (correct here). "team\'s" = singular possessive. "its" = possessive pronoun (no apostrophe). "Friday\'s" = singular possessive. All four are correctly handled only in option C.',
+      '"It\'s" = contraction of "it is" (correct here). "team\'s" = singular possessive. "its" = possessive pronoun (no apostrophe). "Friday\'s" = singular possessive. All four are correctly handled only in "It\'s the team\'s responsibility to submit its report by Friday\'s deadline."',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -240,7 +240,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Two independent clauses joined by the conjunctive adverb "however" require a semicolon before "however" and a comma after it: [IC]; however, [IC]. Option B is the only choice with both marks correctly placed.',
+      'Two independent clauses joined by the conjunctive adverb "however" require a semicolon before "however" and a comma after it: [IC]; however, [IC]. The version reading "employees; however, managers" is the only choice with both marks correctly placed.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

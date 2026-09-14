@@ -97,7 +97,7 @@ export const mcatCarsPsgPart5Data = {
             question: `Which scenario best illustrates the principle the critics defend?`,
             options: [`A hospital ranks transplant candidates strictly by projected years of life gained`, `A doctor won't value an elderly patient less for having fewer expected years`, `A policy distributes vaccines to maximize total lives saved`, `An ethics board calculates the net well-being of each possible allocation`],
             correctAnswer: 1,
-            explanation: `The critics hold that a person's moral standing "does not fluctuate with her actuarial prospects." Refusing to downgrade the elderly patient's worth on the basis of her statistics directly enacts that principle. Options A, C, and D are all consequence-maximizing (utilitarian) approaches.`
+            explanation: `The critics hold that a person's moral standing "does not fluctuate with her actuarial prospects." Refusing to downgrade the elderly patient's worth on the basis of her statistics directly enacts that principle. Ranking by projected life-years, maximizing total lives saved, and calculating net well-being are all consequence-maximizing (utilitarian) approaches.`
           },
           {
             question: `Which statement, if added to the passage, would most directly CHALLENGE the author's framing of the debate?`,
@@ -109,7 +109,7 @@ export const mcatCarsPsgPart5Data = {
             question: `The passage's closing line — the deepest objection is "not that it miscalculates, but that calculation was never the whole of the moral question" — most strongly implies that the author believes:`,
             options: [`Moral reasoning should set consequences aside altogether`, `Consequences matter but cannot be the whole of moral evaluation`, `Triage decisions can never be made in a fully ethical way`, `Utilitarianism and deontology are identical in practice`],
             correctAnswer: 1,
-            explanation: `By rejecting "miscalculates" and instead faulting the idea that calculation is "the whole," the author preserves a role for consequences while denying that they exhaust morality. Option A overshoots into rejecting consequences; the closing line specifically resists that extreme.`
+            explanation: `By rejecting "miscalculates" and instead faulting the idea that calculation is "the whole," the author preserves a role for consequences while denying that they exhaust morality. The "set consequences aside altogether" option overshoots into rejecting consequences; the closing line specifically resists that extreme.`
           }
         ]
       }

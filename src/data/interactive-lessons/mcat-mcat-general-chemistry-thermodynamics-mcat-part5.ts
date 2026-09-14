@@ -52,7 +52,7 @@ export const mcatThermoPart5Data = {
               `$\\Delta H = +50$ kJ; $\\Delta S = -100$ J/K`
             ],
             correctAnswer: 2,
-            explanation: `$\\Delta G = \\Delta H - T\\Delta S$. When $\\Delta H < 0$ and $\\Delta S > 0$, both terms contribute to making $\\Delta G < 0$ regardless of $T$. Option C: $\\Delta G = -50{,}000 - T(+100)$ — always negative at any $T > 0$.`
+            explanation: `$\\Delta G = \\Delta H - T\\Delta S$. When $\\Delta H < 0$ and $\\Delta S > 0$, both terms contribute to making $\\Delta G < 0$ regardless of $T$. For $\\Delta H = -50$ kJ and $\\Delta S = +100$ J/K: $\\Delta G = -50{,}000 - T(+100)$ — always negative at any $T > 0$.`
           },
           {
             question: `How much heat must be removed to freeze 36.0 g of water at 0°C? ($\\Delta H_{\\text{fus}} = 6.01$ kJ/mol; $M_{\\text{H}_2\\text{O}} = 18.0$ g/mol)`,

@@ -102,7 +102,7 @@ A process is **spontaneous** if it can proceed without continuous external input
               `The enthalpy of a reaction must be negative for spontaneity`
             ],
             correctAnswer: 1,
-            explanation: `The **Second Law**: $\\Delta S_{\\text{universe}} > 0$ for spontaneous processes. Option A is the First Law; Option C is the Third Law; Option D is incorrect — spontaneity requires $\\Delta G < 0$, not just $\\Delta H < 0$.`
+            explanation: `The **Second Law**: $\\Delta S_{\\text{universe}} > 0$ for spontaneous processes. "Energy cannot be created or destroyed" is the First Law; zero entropy for a perfect crystal at 0 K is the Third Law; the negative-enthalpy requirement is incorrect — spontaneity requires $\\Delta G < 0$, not just $\\Delta H < 0$.`
           },
           {
             question: `Which process has $\\Delta S < 0$?`,
