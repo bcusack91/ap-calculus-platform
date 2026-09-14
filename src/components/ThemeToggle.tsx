@@ -15,7 +15,22 @@ export default function ThemeToggle() {
       setDark(isDark)
       document.documentElement.classList.toggle('dark', isDark)
     }, 0)
-    return () => clearTimeout(timeoutId)
+
+    // Follow live OS appearance changes (macOS auto night mode) until the
+    // student picks a theme here. The inline script in layout.tsx updates
+    // the class; this keeps the icon in step with it.
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    const onOsChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        setDark(e.matches)
+        document.documentElement.classList.toggle('dark', e.matches)
+      }
+    }
+    mq.addEventListener('change', onOsChange)
+    return () => {
+      clearTimeout(timeoutId)
+      mq.removeEventListener('change', onOsChange)
+    }
   }, [])
 
   const toggle = () => {

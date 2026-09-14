@@ -352,19 +352,19 @@ export default function FlashcardStudyPage() {
                 <span>🎯</span> Quick Navigation
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <Link href="/" className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
+                <Link href="/" className="text-center p-3 bg-card rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">🏠</div>
                   <div className="text-sm font-semibold">All Courses</div>
                 </Link>
-                <Link href={`/courses/${topic.category.course.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
+                <Link href={`/courses/${topic.category.course.slug}`} className="text-center p-3 bg-card rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📚</div>
                   <div className="text-sm font-semibold">{topic.category.course.name}</div>
                 </Link>
-                <Link href={`/categories/${topic.category.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
+                <Link href={`/categories/${topic.category.slug}`} className="text-center p-3 bg-card rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📂</div>
                   <div className="text-sm font-semibold">{topic.category.name}</div>
                 </Link>
-                <Link href={`/topics/${topic.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
+                <Link href={`/topics/${topic.slug}`} className="text-center p-3 bg-card rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📖</div>
                   <div className="text-sm font-semibold">Topic Page</div>
                 </Link>

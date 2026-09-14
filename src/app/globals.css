@@ -98,14 +98,19 @@
   --accent-ring: #a855f7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted-foreground: #9ca3af;
-    --card: #111827;
-    --card-border: #374151;
-  }
+/* The `.dark` class on <html> is the ONLY dark-mode switch. Don't key colors
+   off `@media (prefers-color-scheme: dark)`: it follows the OS, while the
+   `dark:` Tailwind variants follow the class. When the two disagree (OS in
+   night mode but the student chose light, or macOS switching appearance
+   while a page is open) tokens like --foreground go light-on-light over
+   hardcoded light surfaces such as the flashcard gradients. The inline script
+   in src/app/layout.tsx sets the class before first paint and keeps it in sync
+   with the OS when the student hasn't picked a theme. */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
 }
 
 /* ===== Ocean scheme (Sky/Cyan) ===== */
@@ -336,10 +341,8 @@ body {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:shadow-3xl {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 10px 20px -5px rgba(0, 0, 0, 0.3);
-  }
+.dark .dark\:shadow-3xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 10px 20px -5px rgba(0, 0, 0, 0.3);
 }
 
 /* Smooth scroll behavior */
@@ -476,21 +479,7 @@ a:focus-visible {
   background: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--accent-dark);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-hover);
-  }
-}
-
-/* Dark mode scrollbar override for manual theme toggle */
+/* Dark mode scrollbar (class-based, like every other dark rule) */
 .dark ::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
@@ -518,18 +507,6 @@ blockquote h2 {
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: var(--accent-dark);
-}
-
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 15%, transparent) 0%, color-mix(in srgb, var(--accent-secondary) 15%, transparent) 100%);
-    border-left: 4px solid var(--accent-hover);
-    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 20%, transparent);
-  }
-  
-  blockquote h2 {
-    color: var(--accent-muted);
-  }
 }
 
 .dark blockquote {

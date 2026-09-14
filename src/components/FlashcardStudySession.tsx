@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
+import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
 import { renderRichText } from '@/lib/render-rich-text'
 import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
@@ -47,10 +48,17 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   const [error, setError] = useState<string | null>(null)
   const [results, setResults] = useState<ReviewResult[]>([])
   const [sessionComplete, setSessionComplete] = useState(false)
+  // Cards rated into a minute-scale learning step (e.g. "Again" → 1m). They
+  // come back mid-session as soon as they're due, instead of after the batch.
+  const [pending, setPending] = useState<PendingCard<SessionCard>[]>([])
+  // Ratings now wait on the server's new schedule; block a second keypress
+  // or click from rating the same card twice meanwhile.
+  const submittingRef = useRef(false)
 
   const loadSession = useCallback(() => {
     setLoading(true)
     setError(null)
+    setPending([])
     const url = topicSlug
       ? `/api/flashcards/session?topicSlug=${encodeURIComponent(topicSlug)}`
       : `/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}`
@@ -71,27 +79,51 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   const handleRating = useCallback(
     async (rating: 'again' | 'hard' | 'good' | 'easy') => {
       const card = cards[currentIndex]
-      if (!card) return
+      if (!card || submittingRef.current) return
+      submittingRef.current = true
 
       setResults((prev) => [
         ...prev,
         { cardId: card.id, rating, wasCorrect: rating !== 'again' },
       ])
 
-      // Send review to API
+      // Send review to API; a card that lands on a learning step is held
+      // with its updated schedule so it can return later in this session.
+      let nextPending = pending
       try {
-        await fetch('/api/flashcards/review', {
+        const res = await fetch('/api/flashcards/review', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ flashcardId: card.id, rating, tzOffset: new Date().getTimezoneOffset() }),
         })
+        const result = res.ok ? await res.json().catch(() => null) : null
+        const p = result?.progress
+        if (p && returnsThisSession(p.isMinuteInterval, result.interval)) {
+          const updated: SessionCard = {
+            ...card,
+            progress: {
+              repetitions: p.repetitions,
+              easeFactor: p.easeFactor,
+              interval: p.interval,
+              isMinuteInterval: p.isMinuteInterval,
+            },
+          }
+          nextPending = scheduleReturn(pending, updated, result.interval, (c) => c.id)
+        }
       } catch {
         console.error('Failed to submit review')
+      } finally {
+        submittingRef.current = false
       }
+
+      // Slot in every held card that has come due right after this one.
+      const released = releaseDue(cards, currentIndex, nextPending, (c) => c.id)
+      setPending(released.pending)
+      setCards(released.queue)
 
       setFlipped(false)
 
-      if (currentIndex + 1 >= cards.length) {
+      if (currentIndex + 1 >= released.queue.length) {
         setSessionComplete(true)
         // Refresh stats so the completion screen's "come back later today"
         // count includes the cards just sent into learning steps.
@@ -105,7 +137,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         setCurrentIndex((i) => i + 1)
       }
     },
-    [cards, currentIndex, topicSlug]
+    [cards, currentIndex, topicSlug, pending]
   )
 
   // Keyboard shortcuts

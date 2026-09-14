@@ -13,6 +13,9 @@ import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { detectCloze } from '@/lib/cloze-utils'
 import { ClozeFlashcard } from '@/components/cloze-flashcard'
 import { formatTimeUntil } from '@/lib/format-due-time'
+import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
+
+const cardId = (c: FlashcardProgress) => c.flashcard.id
 
 interface Flashcard {
   id: string
@@ -59,6 +62,9 @@ export default function FlashcardReviewPage() {
   const [stats, setStats] = useState<ReviewStats | null>(null)
   const [reviewComplete, setReviewComplete] = useState(false)
   const [reviewing, setReviewing] = useState(false)
+  // Cards rated into a minute-scale learning step (e.g. "Again" → 1m). They
+  // come back mid-batch as soon as they're due, instead of after the batch.
+  const [pending, setPending] = useState<PendingCard<FlashcardProgress>[]>([])
 
   useEffect(() => {
     if (status === 'authenticated') {
@@ -74,6 +80,9 @@ export default function FlashcardReviewPage() {
       const data = await response.json()
       setCards(data.cards)
       setStats(data.stats)
+      // A fresh fetch already includes every card that is due now, and the
+      // server re-serves not-yet-due learning cards once they are.
+      setPending([])
       setCurrentIndex(0)
       setIsFlipped(false)
       setShowHint(false)
@@ -123,9 +132,31 @@ export default function FlashcardReviewPage() {
       })
 
       if (!response.ok) throw new Error('Failed to submit review')
+      const result = await response.json().catch(() => null)
+
+      // Hold a card that landed on a learning step, with its updated
+      // schedule, then slot in every held card that has come due so it's the
+      // very next card rather than waiting for the batch to finish.
+      let nextPending = pending
+      const p = result?.progress
+      if (p && returnsThisSession(p.isMinuteInterval, result.interval)) {
+        const updated: FlashcardProgress = {
+          ...currentCard,
+          easeFactor: p.easeFactor,
+          interval: p.interval,
+          repetitions: p.repetitions,
+          isMinuteInterval: p.isMinuteInterval,
+          reviewCount: p.reviewCount,
+          nextReview: p.nextReview,
+        }
+        nextPending = scheduleReturn(pending, updated, result.interval, cardId)
+      }
+      const released = releaseDue(cards, currentIndex, nextPending, cardId)
+      setPending(released.pending)
+      setCards(released.queue)
 
       // Move to next card
-      if (currentIndex < cards.length - 1) {
+      if (currentIndex < released.queue.length - 1) {
         setCurrentIndex(currentIndex + 1)
         setIsFlipped(false)
         setShowHint(false)
@@ -178,24 +209,24 @@ export default function FlashcardReviewPage() {
     return (
       <div className="container py-10">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-300 rounded-xl p-12">
+          <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950/40 dark:to-blue-950/40 border-2 border-green-300 dark:border-green-700 rounded-xl p-12">
             <div className="text-6xl mb-4">{moreToday > 0 ? '⏳' : '🎉'}</div>
-            <h1 className="text-3xl font-bold mb-4 text-gray-900">
+            <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
               {moreToday > 0 ? 'Done for now — but not for today!' : 'All Caught Up!'}
             </h1>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
               {moreToday > 0
                 ? 'You’ve cleared everything due right now. Spaced repetition brings cards back after a short wait — that second look is where the learning sticks.'
                 : 'You’ve reviewed all your due flashcards. Great work!'}
             </p>
 
             {moreToday > 0 && (
-              <div className="mb-8 rounded-xl border-2 border-amber-300 bg-amber-50 p-5 max-w-md mx-auto">
-                <div className="text-2xl font-bold text-amber-800">
+              <div className="mb-8 rounded-xl border-2 border-amber-300 dark:border-amber-600/60 bg-amber-50 dark:bg-amber-900/20 p-5 max-w-md mx-auto">
+                <div className="text-2xl font-bold text-amber-800 dark:text-amber-300">
                   {moreToday} card{moreToday === 1 ? '' : 's'} still due later today
                 </div>
                 {nextDueLabel && (
-                  <div className="mt-1 text-amber-800">
+                  <div className="mt-1 text-amber-800 dark:text-amber-300">
                     Next card {nextDueLabel} — this page will bring it up automatically.
                   </div>
                 )}
@@ -209,13 +240,13 @@ export default function FlashcardReviewPage() {
             )}
 
             {moreToday === 0 && nextDueLabel && (
-              <p className="mb-6 text-gray-700">
+              <p className="mb-6 text-gray-700 dark:text-gray-300">
                 Your next review is {nextDueLabel}.
               </p>
             )}
 
             {(stats?.reviewsBeyondLimit ?? 0) > 0 && (
-              <p className="mb-6 text-sm text-amber-800 bg-amber-50 border border-amber-300 rounded-lg px-4 py-3 max-w-md mx-auto">
+              <p className="mb-6 text-sm text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-600/60 rounded-lg px-4 py-3 max-w-md mx-auto">
                 {stats!.reviewsBeyondLimit} more review{stats!.reviewsBeyondLimit === 1 ? '' : 's'} waiting beyond today&apos;s limit — they&apos;re first in line tomorrow, or raise your daily limits on the{' '}
                 <Link href="/flashcards/review" className="underline font-semibold">review dashboard</Link>.
               </p>
@@ -223,13 +254,13 @@ export default function FlashcardReviewPage() {
 
             {stats && (
               <div className="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
-                <div className="bg-white rounded-lg p-4 border border-gray-200">
+                <div className="bg-card rounded-lg p-4 border border-card-border">
                   <div className="text-3xl font-bold text-accent">{stats.total}</div>
-                  <div className="text-sm text-gray-600">Total Cards</div>
+                  <div className="text-sm text-muted-foreground">Total Cards</div>
                 </div>
-                <div className="bg-white rounded-lg p-4 border border-gray-200">
-                  <div className="text-3xl font-bold text-green-600">{moreToday}</div>
-                  <div className="text-sm text-gray-600">Coming Up Today</div>
+                <div className="bg-card rounded-lg p-4 border border-card-border">
+                  <div className="text-3xl font-bold text-green-600 dark:text-green-400">{moreToday}</div>
+                  <div className="text-sm text-muted-foreground">Coming Up Today</div>
                 </div>
               </div>
             )}
@@ -243,7 +274,7 @@ export default function FlashcardReviewPage() {
               </Link>
               <Link
                 href="/topics"
-                className="px-6 py-3 bg-white border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
+                className="px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
               >
                 Continue Learning
               </Link>
@@ -274,7 +305,7 @@ export default function FlashcardReviewPage() {
 
         {/* Progress Bar */}
         <div className="mb-8">
-          <div className="w-full bg-gray-200 rounded-full h-3">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
             <div
               className="bg-gradient-to-r from-accent to-accent-secondary h-3 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
@@ -395,10 +426,10 @@ export default function FlashcardReviewPage() {
             currentCard.isMinuteInterval ?? false,
           )
           const buttons = [
-            { key: 'again' as const, label: 'Again', time: preview.again, cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900' },
-            { key: 'hard' as const, label: 'Hard', time: preview.hard, cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900' },
-            { key: 'good' as const, label: 'Good', time: preview.good, cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900' },
-            { key: 'easy' as const, label: 'Easy', time: preview.easy, cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900' },
+            { key: 'again' as const, label: 'Again', time: preview.again, cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900 dark:bg-red-950/50 dark:hover:bg-red-900/60 dark:border-red-700 dark:text-red-200' },
+            { key: 'hard' as const, label: 'Hard', time: preview.hard, cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900 dark:bg-orange-950/50 dark:hover:bg-orange-900/60 dark:border-orange-700 dark:text-orange-200' },
+            { key: 'good' as const, label: 'Good', time: preview.good, cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900 dark:bg-green-950/50 dark:hover:bg-green-900/60 dark:border-green-700 dark:text-green-200' },
+            { key: 'easy' as const, label: 'Easy', time: preview.easy, cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900 dark:bg-blue-950/50 dark:hover:bg-blue-900/60 dark:border-blue-700 dark:text-blue-200' },
           ]
           return (
             <div className="grid grid-cols-4 gap-3">
@@ -421,8 +452,8 @@ export default function FlashcardReviewPage() {
 
         {/* Instructions */}
         {!isFlipped && (
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-sm text-blue-900">
+          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-lg">
+            <p className="text-sm text-blue-900 dark:text-blue-200">
               <strong>How it works:</strong> Study the question, then click to reveal the answer. 
               Rate your recall — each answer schedules the card&apos;s next review at the right moment.
             </p>
@@ -430,11 +461,11 @@ export default function FlashcardReviewPage() {
         )}
 
         {isFlipped && (
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-sm text-blue-900">
+          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 rounded-lg">
+            <p className="text-sm text-blue-900 dark:text-blue-200">
               <strong>Rate your recall:</strong>
             </p>
-            <ul className="text-sm text-blue-900 mt-2 space-y-1 ml-4">
+            <ul className="text-sm text-blue-900 dark:text-blue-200 mt-2 space-y-1 ml-4">
               <li>• <strong>Again:</strong> Completely forgot - see it again soon</li>
               <li>• <strong>Hard:</strong> Remembered with difficulty</li>
               <li>• <strong>Good:</strong> Correct response with some thought</li>
@@ -444,19 +475,19 @@ export default function FlashcardReviewPage() {
         )}
 
         {/* Card Stats */}
-        <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+        <div className="mt-6 p-4 bg-card border border-card-border rounded-lg">
           <div className="grid grid-cols-3 gap-4 text-center text-sm">
             <div>
-              <div className="font-semibold text-gray-900">Reviews</div>
-              <div className="text-gray-600">{currentCard.reviewCount}</div>
+              <div className="font-semibold text-foreground">Reviews</div>
+              <div className="text-muted-foreground">{currentCard.reviewCount}</div>
             </div>
             <div>
-              <div className="font-semibold text-gray-900">Ease</div>
-              <div className="text-gray-600">{(currentCard.easeFactor * 100).toFixed(0)}%</div>
+              <div className="font-semibold text-foreground">Ease</div>
+              <div className="text-muted-foreground">{(currentCard.easeFactor * 100).toFixed(0)}%</div>
             </div>
             <div>
-              <div className="font-semibold text-gray-900">Interval</div>
-              <div className="text-gray-600">{formatIntervalShort(currentCard.interval, currentCard.isMinuteInterval ?? false)}</div>
+              <div className="font-semibold text-foreground">Interval</div>
+              <div className="text-muted-foreground">{formatIntervalShort(currentCard.interval, currentCard.isMinuteInterval ?? false)}</div>
             </div>
           </div>
         </div>

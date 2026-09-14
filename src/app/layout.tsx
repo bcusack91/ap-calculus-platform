@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 // KaTeX stylesheet must be global: FRQ pages, full exams, and the blog render
@@ -75,6 +75,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Declaring both schemes tells Chrome the site handles dark mode itself, so
+// its "auto dark mode for web contents" doesn't force-invert pages on top of
+// our own theme. The active scheme is set by `color-scheme` on :root / .dark
+// in globals.css.
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -100,17 +108,30 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
         />
-        {/* Prevent flash of wrong theme / color scheme */}
+        {/* Prevent flash of wrong theme / color scheme. The `.dark` class is
+            the single dark-mode switch (see globals.css). With no saved
+            choice it follows the OS — including LIVE, when macOS/Chrome flips
+            to night mode while a page is open; otherwise the class would go
+            stale and clash with the OS. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
                   var saved = localStorage.getItem('theme');
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (saved === 'dark' || (!saved && prefersDark)) {
+                  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+                  if (saved === 'dark' || (!saved && mq.matches)) {
                     document.documentElement.classList.add('dark');
                   }
+                  var onOsChange = function(e) {
+                    try {
+                      if (!localStorage.getItem('theme')) {
+                        document.documentElement.classList.toggle('dark', e.matches);
+                      }
+                    } catch (_) {}
+                  };
+                  if (mq.addEventListener) mq.addEventListener('change', onOsChange);
+                  else if (mq.addListener) mq.addListener(onOsChange);
                   var prefs = localStorage.getItem('user-preferences');
                   if (prefs) {
                     var p = JSON.parse(prefs);
