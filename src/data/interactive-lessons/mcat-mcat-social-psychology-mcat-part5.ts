@@ -51,21 +51,21 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
         questions: [
           {
             question: `A person collapses on a crowded subway, but no one helps because each rider assumes someone else will. This is best explained by:`,
-            options: [`Diffusion of responsibility (bystander effect)`, `Social facilitation`, `Group polarization`, `Stereotype threat`],
+            options: [`Diffusion of responsibility`, `Social facilitation`, `Group polarization`, `Fundamental attribution error`],
             correctAnswer: 0,
             explanation: `As the number of bystanders increases, responsibility to act is diffused across the group, so each individual feels less personally obligated — lowering the chance anyone helps. This diffusion of responsibility is the core of the bystander effect.`
           },
           {
             question: `A group of moderately pro-policy members discusses the issue together and emerges far MORE strongly in favor than any began. This is:`,
-            options: [`Group polarization`, `Groupthink`, `Social loafing`, `Deindividuation`],
+            options: [`Group polarization`, `Groupthink`, `Social facilitation`, `Deindividuation`],
             correctAnswer: 0,
             explanation: `Group polarization is the tendency for group discussion to STRENGTHEN the members' pre-existing average attitude — moderate views become more extreme in the same direction. Groupthink specifically concerns flawed decision-making driven by a desire for consensus, which is related but distinct.`
           },
           {
             question: `Hamilton's rule and kin selection predict that altruistic helping is MOST likely directed toward:`,
-            options: [`Close genetic relatives, because shared genes are propagated`, `Random strangers, to maximize reciprocity`, `Out-group members, to reduce prejudice`, `Anyone, equally, regardless of relatedness`],
+            options: [`Close relatives`, `Reciprocating non-relatives`, `Out-group members`, `Anyone, regardless of relatedness`],
             correctAnswer: 0,
-            explanation: `Kin selection (inclusive fitness) explains altruism toward genetic relatives: helping relatives propagates shared genes. Hamilton's rule states a behavior is favored when the benefit to the recipient, weighted by relatedness, exceeds the cost to the helper — predicting more help for closer kin.`
+            explanation: `Kin selection (inclusive fitness) explains altruism toward genetic relatives: helping relatives propagates shared genes. Hamilton's rule states a behavior is favored when the benefit to the recipient, weighted by relatedness, exceeds the cost to the helper — predicting more help for closer kin. Help toward reciprocating non-relatives is explained by reciprocal altruism, a separate theory from kin selection.`
           }
         ]
       }

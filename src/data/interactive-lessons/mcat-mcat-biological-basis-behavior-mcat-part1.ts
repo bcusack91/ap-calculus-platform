@@ -42,9 +42,9 @@ Set by the **$Na^{+}/K^{+}$-ATPase** (pumps 3 $Na^{+}$ out, 2 $K^{+}$ in) plus $
         questions: [
           {
             question: `The rising (depolarizing) phase of the action potential is driven primarily by:`,
-            options: [`Voltage-gated $Na^{+}$ channels opening and $Na^{+}$ rushing into the cell`, `$K^{+}$ leaving the cell`, `The $Na^{+}/K^{+}$-ATPase pumping ions`, `$Cl^{-}$ entering the cell`],
+            options: [`$Na^{+}$ entering through voltage-gated channels`, `$K^{+}$ leaving through voltage-gated channels`, `The $Na^{+}/K^{+}$-ATPase exchanging ions across the membrane`, `$K^{+}$ entering through leak channels`],
             correctAnswer: 0,
-            explanation: `When threshold (~ −55 mV) is reached, voltage-gated $Na^{+}$ channels open and $Na^{+}$ flows IN down its electrochemical gradient, rapidly depolarizing the membrane toward +30 mV. Repolarization is the later $K^{+}$-efflux phase; the ATPase restores gradients but does not drive the spike itself.`
+            explanation: `When threshold (~ −55 mV) is reached, voltage-gated $Na^{+}$ channels open and $Na^{+}$ flows IN down its electrochemical gradient, rapidly depolarizing the membrane toward +30 mV. Repolarization is the later $K^{+}$-efflux phase; the ATPase restores gradients but does not drive the spike itself; and $K^{+}$ moves OUT, not in, through leak channels, which set the resting potential rather than producing the spike.`
           },
           {
             question: `Because of the all-or-none principle, a neuron encodes the INTENSITY of a stimulus by:`,
@@ -54,7 +54,7 @@ Set by the **$Na^{+}/K^{+}$-ATPase** (pumps 3 $Na^{+}$ out, 2 $K^{+}$ in) plus $
           },
           {
             question: `In a demyelinating disease such as multiple sclerosis, conduction velocity decreases because:`,
-            options: [`Loss of myelin disrupts saltatory conduction, so the signal can no longer jump between nodes`, `Action potentials become larger`, `The $Na^{+}/K^{+}$-ATPase stops working`, `Threshold becomes more negative`],
+            options: [`Saltatory conduction between nodes is disrupted`, `Action potential amplitude increases at each node`, `The $Na^{+}/K^{+}$-ATPase stops working`, `Threshold becomes more negative along the axon`],
             correctAnswer: 0,
             explanation: `Myelin insulates the axon and confines voltage-gated channels to nodes of Ranvier, letting the AP "jump" node to node (saltatory conduction). Demyelination forces slow, continuous conduction and current leak, dramatically slowing or blocking signal transmission — the basis of MS symptoms.`
           }

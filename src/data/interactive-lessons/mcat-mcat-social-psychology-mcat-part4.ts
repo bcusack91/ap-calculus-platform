@@ -65,7 +65,7 @@ The **jigsaw classroom** is the canonical application (interdependent cooperatio
           },
           {
             question: `According to Allport's contact hypothesis, intergroup contact reduces prejudice MOST effectively when groups have:`,
-            options: [`Equal status, common goals, cooperation, and institutional support`, `Frequent competitive interaction`, `Unequal status but shared space`, `No shared goals but proximity`],
+            options: [`Equal status and cooperative goals`, `Unequal status and competitive goals`, `Unequal status and cooperative goals`, `Equal status and competitive goals`],
             correctAnswer: 0,
             explanation: `Mere contact is not enough — and can worsen prejudice if competitive. Allport specified that contact reduces prejudice when groups have EQUAL status, pursue COMMON goals through COOPERATION, and have the SUPPORT of authorities. The jigsaw classroom operationalizes these conditions.`
           }

@@ -79,9 +79,9 @@ Piaget argued that children build **schemas** (mental frameworks) and update the
         questions: [
           {
             question: `A 4-year-old child watches liquid poured from a short wide glass into a tall narrow glass and says there is now "more." This demonstrates:`,
-            options: ["Lack of conservation — a hallmark of Piaget's preoperational stage", "Object permanence failure", "Concrete operational thinking", "Formal operational thinking"],
+            options: [`Preoperational lack of conservation`, `Object permanence failure`, `Concrete operational decentration`, `Formal operational thinking`],
             correctAnswer: 0,
-            explanation: `Preoperational children (ages 2-7) lack conservation — they can't understand that quantity stays the same when appearance changes. They focus on ONE dimension (height) and ignore another (width — this perceptual tunnel vision is called *centration*). Object permanence (knowing a hidden object still exists) is mastered earlier, in the sensorimotor stage, so it is not the answer here.`
+            explanation: `Preoperational children (ages 2-7) lack conservation — they can't understand that quantity stays the same when appearance changes. They focus on ONE dimension (height) and ignore another (width — this perceptual tunnel vision is called *centration*). Object permanence (knowing a hidden object still exists) is mastered earlier, in the sensorimotor stage, so it is not the answer here. Decentration — attending to several dimensions at once — is a concrete-operational achievement this child has not yet reached, and formal operations (abstract reasoning) come later still.`
           },
           {
             question: `A toddler who has a "bird" schema (small flying animal) sees a butterfly for the first time and excitedly points and shouts "bird!" The child has NOT yet revised the schema to include insects. According to Piaget, this is an example of:`,

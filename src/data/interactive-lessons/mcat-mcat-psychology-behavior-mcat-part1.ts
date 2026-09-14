@@ -78,21 +78,21 @@ SDT separates *sensitivity* (how well you discriminate signal from noise, $d'$) 
         questions: [
           {
             question: `According to Weber's Law, if you can just barely notice the difference between 10 lbs and 11 lbs, the JND for a 50 lb weight would be:`,
-            options: [`5 lbs ($\\Delta I / I = 1/10$, so $\\Delta I = 50 \\times 1/10 = 5$)`, `1 lb`, `10 lbs`, `11 lbs`],
+            options: [`5 lbs`, `1 lb`, `10 lbs`, `11 lbs`],
             correctAnswer: 0,
             explanation: `Weber's Law: $\\Delta I / I = k$. From the 10 lb example, $k = 1/10$. For 50 lbs: $\\Delta I = 50 \\times 1/10 = 5$ lbs. The JND scales with stimulus intensity — this is why you can notice a candle in a dark room but not in sunlight.`
           },
           {
             question: `In a detection experiment, radiologists are told they will be rewarded for catching tumors and lightly penalized for false alarms. Their hit rate AND false-alarm rate both rise, while $d'$ is unchanged. This is best explained as:`,
-            options: [`A shift toward a more liberal response criterion`, `An increase in perceptual sensitivity`, `Sensory adaptation to the images`, `A change in the absolute threshold`],
+            options: [`A more liberal response criterion`, `An increase in perceptual sensitivity`, `Sensory adaptation to the images`, `A change in the absolute threshold`],
             correctAnswer: 0,
             explanation: `When hits and false alarms BOTH increase but $d'$ (sensitivity) is constant, the observer has not gotten better at discriminating — they have lowered their criterion (become more liberal), saying "yes" more often. Signal detection theory exists precisely to separate this response bias from true sensitivity.`
           },
           {
             question: `A patient reports a red afterimage after staring at a green object. Which theory best accounts for this?`,
-            options: [`Opponent-process theory`, `Trichromatic theory`, `Place theory`, `Weber's law`],
+            options: [`Opponent-process theory`, `Trichromatic theory`, `Gate control theory`, `Place theory`],
             correctAnswer: 0,
-            explanation: `Opponent-process theory posits paired channels (red–green, blue–yellow, black–white). Prolonged green stimulation fatigues the green side of the red–green channel, so when you look away the channel rebounds toward red → a red afterimage. Trichromatic theory explains cone-level color reception but not afterimages.`
+            explanation: `Opponent-process theory posits paired channels (red–green, blue–yellow, black–white). Prolonged green stimulation fatigues the green side of the red–green channel, so when you look away the channel rebounds toward red → a red afterimage. Trichromatic theory explains cone-level color reception but not afterimages; gate control theory concerns pain, and place theory concerns how pitch is coded along the basilar membrane.`
           }
         ]
       }

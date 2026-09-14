@@ -75,7 +75,7 @@ Every sense converts a physical stimulus into a receptor potential, then into ac
           },
           {
             question: `An infant initially turns toward a repeated tone, stops responding after many presentations, then responds again after a flash of light precedes the next tone. Because the response recovered after a novel stimulus, the initial decline is best classified as:`,
-            options: [`Habituation, a central and learned decrease in response`, `Sensory adaptation of the auditory receptors`, `A rise in the absolute threshold`, `A conservative shift in response criterion`],
+            options: [`Habituation of the orienting response`, `Sensory adaptation of the hair cells`, `A rise in the absolute threshold`, `A conservative shift in response criterion`],
             correctAnswer: 0,
             explanation: `Recovery of the response after an intervening novel stimulus is dishabituation — the defining evidence for habituation (a simple form of learning). Receptor-level sensory adaptation would not be reversed by an unrelated light flash. The stem deliberately supplies the disambiguating cue (dishabituation) because "adaptation vs. habituation" is a classic P/S trap.`
           }

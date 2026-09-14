@@ -65,9 +65,9 @@ export const mcatPsychBehavPart5Data = {
         questions: [
           {
             question: `A person who is extremely hostile unconsciously but acts overly friendly to everyone is demonstrating:`,
-            options: [`Reaction formation — acting opposite to true unconscious feelings`, `Projection`, `Sublimation`, `Displacement`],
+            options: [`Reaction formation`, `Projection`, `Sublimation`, `Rationalization`],
             correctAnswer: 0,
-            explanation: `Reaction formation involves behaving in the OPPOSITE way of one's true (threatening) feelings. Being overly kind when harboring hostility is the classic example. The trap is **projection**, where one would instead attribute the hostility to OTHERS ("everyone is so hostile to me"). Sublimation channels the impulse into an acceptable activity rather than masking it with its opposite.`
+            explanation: `Reaction formation involves behaving in the OPPOSITE way of one's true (threatening) feelings. Being overly kind when harboring hostility is the classic example. The trap is **projection**, where one would instead attribute the hostility to OTHERS ("everyone is so hostile to me"). Sublimation channels the impulse into an acceptable activity rather than masking it with its opposite, and rationalization offers acceptable-sounding excuses for a behavior rather than acting against the feeling.`
           },
           {
             question: `A clinician evaluates a patient who, for the past 8 months, has reported hearing voices commenting on his actions (a positive symptom) alongside markedly diminished emotional expression and near-total loss of motivation. Which diagnosis and which biological model best fit?`,
@@ -77,9 +77,9 @@ export const mcatPsychBehavPart5Data = {
           },
           {
             question: `In a study, participants high in an internal locus of control were more likely than those with an external locus to persist on a difficult task after early failures, attributing outcomes to their own effort. This construct is most central to which theoretical tradition?`,
-            options: [`Social-cognitive theory (Bandura/Rotter)`, `Psychoanalytic theory (Freud)`, `Humanistic theory (Maslow)`, `Biological/trait temperament theory`],
+            options: [`Social-cognitive theory (Rotter)`, `Psychodynamic theory (Freud/Adler)`, `Humanistic theory (Rogers/Maslow)`, `Biological/trait temperament theory`],
             correctAnswer: 0,
-            explanation: `**Locus of control** (and the related concept of **self-efficacy**) belongs to the **social-cognitive** tradition, which emphasizes how cognition and beliefs about one's control interact with behavior and environment (reciprocal determinism). The psychoanalytic trap centers on unconscious drives, not conscious attributions about personal control, so it does not fit this attribution-based finding.`
+            explanation: `**Locus of control** (and the related concept of **self-efficacy**) belongs to the **social-cognitive** tradition, which emphasizes how cognition and beliefs about one's control interact with behavior and environment (reciprocal determinism). The psychodynamic trap centers on unconscious drives, not conscious attributions about personal control, so it does not fit this attribution-based finding.`
           }
         ]
       }

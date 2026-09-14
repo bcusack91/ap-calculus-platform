@@ -45,7 +45,7 @@ We weigh three kinds of information to decide internal vs. external:
         questions: [
           {
             question: `A driver cuts you off and you immediately think "What a rude, reckless person!" without considering they might be rushing to an emergency. This illustrates the:`,
-            options: [`Fundamental attribution error`, `Self-serving bias`, `Just-world hypothesis`, `Actor–observer bias only`],
+            options: [`Fundamental attribution error`, `Mere exposure effect`, `Just-world hypothesis`, `Illusory correlation`],
             correctAnswer: 0,
             explanation: `The fundamental attribution error is the tendency to overattribute OTHERS' behavior to disposition (rude person) while underweighting situational causes (an emergency). It is the default error when explaining other people's actions.`
           },
@@ -57,7 +57,7 @@ We weigh three kinds of information to decide internal vs. external:
           },
           {
             question: `Using Kelley's covariation model: a behavior shows HIGH consensus, HIGH distinctiveness, and HIGH consistency. The most likely attribution is:`,
-            options: [`Situational (external)`, `Dispositional (internal)`, `Equally internal and external`, `Cannot be determined`],
+            options: [`Situational (external)`, `Dispositional (internal)`, `Equally internal and external`, `Cannot be determined from the data`],
             correctAnswer: 0,
             explanation: `High consensus (others do it too) + high distinctiveness (only in this situation) + high consistency points to the SITUATION as the cause. In contrast, LOW consensus + LOW distinctiveness + high consistency points to disposition.`
           }

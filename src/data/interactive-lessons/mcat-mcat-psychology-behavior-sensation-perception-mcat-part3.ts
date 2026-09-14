@@ -65,15 +65,15 @@ Founded by **Wertheimer, Köhler, and Koffka**; the umbrella law of **Prägnanz*
         questions: [
           {
             question: `A nurse rubs the skin around an injection site before inserting the needle, and the patient reports less pain. According to gate control theory, this works because:`,
-            options: [`Large-diameter touch fiber activity inhibits transmission from small pain fibers at a spinal gate`, `Rubbing causes sensory adaptation of the nociceptors themselves`, `Touch input raises the absolute threshold of pain receptors in the skin`, `The somatosensory cortex reassigns the pain signal to the touch homunculus`],
+            options: [`Large touch fibers inhibit pain-fiber transmission at a spinal gate`, `Rubbing causes sensory adaptation of the nociceptors themselves`, `Touch input raises the absolute threshold of pain receptors in the skin`, `The somatosensory cortex reassigns the pain signal to the touch homunculus`],
             correctAnswer: 0,
             explanation: `Melzack and Wall's gate control theory: A-beta (touch) fiber activity closes a spinal-cord gate on A-delta/C (pain) fiber transmission, so less nociceptive signal ascends. The modulation is central (spinal), not a change in the nociceptors — which distinguishes it from receptor adaptation.`
           },
           {
             question: `Odors are famously effective at triggering sudden, emotion-laden memories. The anatomical feature that best explains this is:`,
-            options: [`Olfactory signals project to limbic structures without first relaying through the thalamus`, `Olfactory receptors are the most numerous receptors in the body`, `The olfactory bulb lies within the hippocampus`, `Smell is processed bilaterally while other senses are lateralized`],
+            options: [`Olfactory signals reach limbic structures without a thalamic relay`, `Olfactory receptors are the most numerous receptors in the body`, `The olfactory bulb lies within the hippocampal formation`, `Smell is processed bilaterally while other senses are lateralized`],
             correctAnswer: 0,
-            explanation: `Olfaction is the only sense that bypasses the thalamic relay, projecting directly toward the piriform cortex, amygdala, and entorhinal/hippocampal region — an intimate limbic connection linking odors with emotion and memory. The olfactory bulb is near, but not inside, the hippocampus.`
+            explanation: `Olfaction is the only sense that bypasses the thalamic relay, projecting directly toward the piriform cortex, amygdala, and entorhinal/hippocampal region — an intimate limbic connection linking odors with emotion and memory. The olfactory bulb lies beneath the frontal lobe, well outside the hippocampal formation.`
           },
           {
             question: `Looking out a moving train's window, fence posts near the track streak past while distant mountains barely move. Because the passenger is using only one eye, this depth cue is best identified as:`,

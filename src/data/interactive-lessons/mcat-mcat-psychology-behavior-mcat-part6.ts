@@ -68,9 +68,9 @@ The neuron's resting membrane potential is about $-70\\text{ mV}$, maintained by
         questions: [
           {
             question: `A patient can understand speech perfectly but produces slow, labored, agrammatic output, aware that their speech is impaired. The damaged area is most likely:`,
-            options: ["Broca's area (frontal lobe) — responsible for speech PRODUCTION", "Wernicke's area (temporal lobe)", "Occipital lobe", "Cerebellum"],
+            options: [`Broca's area (frontal lobe)`, `Wernicke's area (temporal lobe)`, `Angular gyrus (parietal lobe)`, `Cerebellum (hindbrain)`],
             correctAnswer: 0,
-            explanation: `Broca's area damage = Broca's (nonfluent) aphasia: comprehension intact but speech production is slow, labored, and agrammatic, and patients are typically aware of the deficit. The trap is **Wernicke's area**, whose damage produces the OPPOSITE picture — FLUENT but nonsensical "word salad" with POOR comprehension and little awareness of the problem.`
+            explanation: `Broca's area damage = Broca's (nonfluent) aphasia: Broca's area is responsible for speech PRODUCTION, so comprehension is intact but speech is slow, labored, and agrammatic, and patients are typically aware of the deficit. The trap is **Wernicke's area**, whose damage produces the OPPOSITE picture — FLUENT but nonsensical "word salad" with POOR comprehension and little awareness of the problem. Angular gyrus damage disrupts reading and writing, and cerebellar damage causes uncoordinated, slurred articulation without agrammatism.`
           },
           {
             question: `A researcher wants to determine the precise MILLISECOND timing of cortical responses as a participant cycles through sleep stages overnight. Which technique is most appropriate, and why?`,
@@ -80,9 +80,9 @@ The neuron's resting membrane potential is about $-70\\text{ mV}$, maintained by
           },
           {
             question: `During a frightening event, a participant's heart rate spikes, pupils dilate, and digestion halts, mediated largely by epinephrine release from the adrenal medulla. Which division of the nervous system is responsible?`,
-            options: [`Sympathetic division of the autonomic nervous system`, `Parasympathetic division of the autonomic nervous system`, `Somatic nervous system`, `Central nervous system`],
+            options: [`Sympathetic division of the autonomic nervous system`, `Parasympathetic division of the autonomic nervous system`, `Somatic division of the peripheral nervous system`, `Enteric division of the autonomic nervous system`],
             correctAnswer: 0,
-            explanation: `Pupil dilation, increased heart rate, and inhibited digestion are the classic **fight-or-flight** profile of the **sympathetic** division, amplified by epinephrine from the adrenal medulla. The trap is the **parasympathetic** ("rest-and-digest") division, which does the OPPOSITE — constricting pupils, slowing the heart, and stimulating digestion via acetylcholine.`
+            explanation: `Pupil dilation, increased heart rate, and inhibited digestion are the classic **fight-or-flight** profile of the **sympathetic** division, amplified by epinephrine from the adrenal medulla. The trap is the **parasympathetic** ("rest-and-digest") division, which does the OPPOSITE — constricting pupils, slowing the heart, and stimulating digestion via acetylcholine. The somatic system controls voluntary muscle, and the enteric division is the gut's local network that sympathetic output suppresses.`
           }
         ]
       }

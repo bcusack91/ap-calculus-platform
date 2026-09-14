@@ -53,13 +53,13 @@ export const mcatBioBasisBehaviorPart3Data = {
         questions: [
           {
             question: `A stroke patient speaks fluently but produces grammatically jumbled, meaningless sentences and cannot understand speech. The damaged area is most likely:`,
-            options: [`Wernicke's area (temporal lobe)`, `Broca's area (frontal lobe)`, `The cerebellum`, `The occipital lobe`],
+            options: [`Wernicke's area (temporal lobe)`, `Broca's area (frontal lobe)`, `Cerebellum (hindbrain)`, `Primary motor cortex (frontal lobe)`],
             correctAnswer: 0,
             explanation: `Wernicke's aphasia features FLUENT but meaningless ("word salad") speech and IMPAIRED comprehension, localizing to Wernicke's area in the temporal lobe. Broca's aphasia is the opposite: halting, effortful speech with relatively preserved comprehension.`
           },
           {
             question: `Bilateral damage to the hippocampus would most directly impair the ability to:`,
-            options: [`Form new long-term explicit memories`, `Coordinate balance and movement`, `Regulate body temperature`, `Process visual input`],
+            options: [`Form new long-term explicit memories`, `Coordinate balance and movement`, `Regulate body temperature`, `Learn new motor skills`],
             correctAnswer: 0,
             explanation: `The hippocampus is essential for CONSOLIDATING new explicit (declarative) memories. Bilateral damage (as in patient H.M.) produces anterograde amnesia — an inability to form new conscious memories — while older memories and procedural learning are spared.`
           },

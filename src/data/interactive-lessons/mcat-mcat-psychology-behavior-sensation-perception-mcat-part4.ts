@@ -63,31 +63,31 @@ A patient who can describe an object but cannot reach for it accurately (or vice
         questions: [
           {
             question: `Participants told that "most trials contain a faint tone" report the tone more often than participants told tones are rare, on identical trial sets. Hit and false-alarm rates both rise in the first group, and $d'$ is equal across groups. The instruction manipulated the participants':`,
-            options: [`Auditory sensitivity, by amplifying cochlear output`, `Absolute threshold, by lowering the 50% detection point`, `Response criterion — expectation made them more liberal without changing discrimination`, `Rate of sensory adaptation to the tone`],
+            options: [`Auditory sensitivity, by amplifying cochlear output`, `Absolute threshold, by lowering the 50% detection point`, `Response criterion, by making them respond more liberally`, `Rate of sensory adaptation, by fatiguing hair cells`],
             correctAnswer: 2,
             explanation: `The joint rise of hits and false alarms with unchanged $d'$ is the fingerprint of a criterion shift. Expectations are a top-down, decision-stage variable; they cannot reach the cochlea, and a true threshold or sensitivity change would raise hits without a matching false-alarm rise.`
           },
           {
             question: `After a stroke, a patient names and describes objects accurately but consistently misreaches for them and cannot judge their motion. The lesion most likely lies in the:`,
-            options: [`Dorsal stream projecting from occipital to parietal cortex`, `Ventral stream projecting from occipital to temporal cortex`, `Optic chiasm`, `Primary auditory cortex`],
+            options: [`Dorsal stream, from occipital to parietal cortex`, `Ventral stream, from occipital to temporal cortex`, `Optic radiations, from thalamus to occipital cortex`, `Arcuate fasciculus, from temporal to frontal cortex`],
             correctAnswer: 0,
-            explanation: `Intact identification with impaired localization, reaching, and motion judgment dissociates the spared ventral "what" pathway from a damaged dorsal "where/how" pathway (occipital to parietal). A ventral lesion would produce the reverse — agnosia with preserved spatial guidance. A chiasm lesion produces visual-field cuts, not this dissociation.`
+            explanation: `Intact identification with impaired localization, reaching, and motion judgment dissociates the spared ventral "what" pathway from a damaged dorsal "where/how" pathway (occipital to parietal). A ventral lesion would produce the reverse — agnosia with preserved spatial guidance. An optic-radiation lesion produces visual-field cuts, and arcuate fasciculus damage causes conduction aphasia — neither produces this dissociation.`
           },
           {
             question: `A researcher wants to show that reduced responding to a repeated odor in adults reflects receptor-level sensory adaptation rather than a learned central process. The MOST diagnostic finding would be that responsiveness:`,
-            options: [`Recovers when an unexpected sound is presented`, `Depends on how meaningful the odor is to the participant`, `Declines faster when participants are paid to ignore the odor`, `Fails to recover after a novel intervening stimulus, and returns only once the odor itself is removed and receptors reset`],
+            options: [`Recovers when an unexpected sound is presented, even while the odor continues`, `Depends on how personally meaningful the odor is to the participant`, `Declines faster when participants are paid to ignore the odor`, `Returns only after the odor is removed, not after a novel stimulus`],
             correctAnswer: 3,
             explanation: `Dishabituation — recovery after an unrelated novel stimulus — is the marker of central, learned habituation; its ABSENCE, with recovery governed only by stimulus removal and receptor kinetics, points to peripheral adaptation. Meaningfulness and incentive effects would indicate top-down, central involvement, the opposite of the claim.`
           },
           {
             question: `Cochlear implants restore hearing by placing an electrode array along the cochlea and stimulating different positions to convey different pitches. This design depends most directly on:`,
-            options: [`Frequency theory, since electrodes fire at the tone's exact rate for all pitches`, `Place theory — basilar-membrane position codes frequency, with the base tuned to high frequencies and the apex to low`, `Gate control theory of the auditory pathway`, `Opponent-process channels in the cochlea`],
+            options: [`Frequency theory, since electrodes fire at the tone's exact rate for all pitches`, `Place theory, since each cochlear position codes a different frequency`, `Gate control theory, since spinal gates filter auditory input`, `Opponent-process theory, since paired channels code pitch`],
             correctAnswer: 1,
             explanation: `Mapping pitch onto electrode POSITION is place coding: each cochlear location (base = high frequency, apex = low) normally responds to its characteristic frequency, so stimulating that place evokes that pitch. Pure rate/frequency coding cannot cover high pitches (neurons cannot fire tens of thousands of times per second), and gate control and opponent processing belong to pain and color vision respectively.`
           },
           {
             question: `Two identical gray squares are judged very different in lightness when one is shown inside a depicted shadow. This illusion is best interpreted as evidence that:`,
-            options: [`Retinal photoreceptors respond differently to identical light`, `The participants have low visual acuity`, `Perception reports an inference about the object's surface after discounting illumination — a constancy computed top-down, not the raw receptor signal`, `The absolute threshold for gray differs across the visual field`],
+            options: [`Retinal photoreceptors respond differently to the identical light`, `The participants have low visual acuity for gray shades`, `Perception infers surface lightness after discounting illumination`, `The absolute threshold for gray differs across the visual field`],
             correctAnswer: 2,
             explanation: `The two patches send identical signals from the retina; the difference is constructed by the brain's lightness-constancy computation, which discounts the inferred shadow to estimate surface reflectance. That is the definitional divide between sensation (identical here) and perception (different here) — and the reason constancies are classified as top-down.`
           }

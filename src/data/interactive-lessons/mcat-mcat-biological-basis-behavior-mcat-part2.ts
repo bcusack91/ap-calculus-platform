@@ -50,21 +50,21 @@ $$\\text{AP at terminal} \\to \\text{voltage-gated } Ca^{2+} \\text{ IN} \\to \\
         questions: [
           {
             question: `The immediate trigger for neurotransmitter vesicle release at the axon terminal is the influx of:`,
-            options: [`$Ca^{2+}$ through voltage-gated calcium channels`, `$Na^{+}$ through leak channels`, `$K^{+}$ through voltage-gated channels`, `$Cl^{-}$ through ligand-gated channels`],
+            options: [`$Ca^{2+}$ through voltage-gated channels`, `$Na^{+}$ through voltage-gated channels`, `$Mg^{2+}$ through NMDA receptor channels`, `$Cl^{-}$ through GABA-A receptor channels`],
             correctAnswer: 0,
-            explanation: `When the action potential reaches the terminal, voltage-gated $Ca^{2+}$ channels open and $Ca^{2+}$ enters. The rise in intracellular $Ca^{2+}$ triggers synaptic vesicles to fuse with the membrane and release neurotransmitter by exocytosis. $Na^{+}$ drives the AP itself, but $Ca^{2+}$ couples it to release.`
+            explanation: `When the action potential reaches the terminal, voltage-gated $Ca^{2+}$ channels open and $Ca^{2+}$ enters. The rise in intracellular $Ca^{2+}$ triggers synaptic vesicles to fuse with the membrane and release neurotransmitter by exocytosis. $Na^{+}$ drives the AP itself, but $Ca^{2+}$ couples it to release. $Mg^{2+}$ normally blocks NMDA receptor channels rather than triggering exocytosis.`
           },
           {
             question: `An SSRI antidepressant blocks the serotonin reuptake transporter. The net effect at the synapse is:`,
-            options: [`Increased serotonin in the synaptic cleft, prolonging its action`, `Decreased serotonin release`, `Faster degradation of serotonin`, `Blockade of postsynaptic serotonin receptors`],
+            options: [`More serotonin stays in the cleft`, `Less serotonin is released presynaptically`, `Serotonin is broken down faster in the cleft`, `Postsynaptic serotonin receptors are blocked`],
             correctAnswer: 0,
             explanation: `Reuptake normally clears serotonin from the cleft back into the presynaptic neuron. Blocking the transporter leaves more serotonin in the cleft for longer, enhancing postsynaptic signaling — the mechanism by which SSRIs treat depression.`
           },
           {
             question: `Benzodiazepines enhance the effect of GABA, the brain's main inhibitory neurotransmitter. This produces:`,
-            options: [`Increased $Cl^{-}$ influx and hyperpolarization (sedation/anxiolysis)`, `Increased neuronal firing`, `Depolarization toward threshold`, `Blockade of glutamate receptors`],
+            options: [`Increased $Cl^{-}$ influx and hyperpolarization`, `Increased $Na^{+}$ influx and depolarization`, `Decreased $Na^{+}$ influx and hyperpolarization`, `Decreased $Cl^{-}$ influx and depolarization`],
             correctAnswer: 0,
-            explanation: `GABA-A receptors are $Cl^{-}$ channels; opening them lets $Cl^{-}$ in, hyperpolarizing the neuron (an IPSP) and reducing excitability. Benzodiazepines are positive modulators that enhance this $Cl^{-}$ influx, yielding sedation and anxiolysis — the opposite of an excitatory effect.`
+            explanation: `GABA-A receptors are $Cl^{-}$ channels; opening them lets $Cl^{-}$ in, hyperpolarizing the neuron (an IPSP) and reducing excitability. Benzodiazepines are positive modulators that enhance this $Cl^{-}$ influx, yielding sedation and anxiolysis — the opposite of an excitatory effect. They act on the GABA-A chloride channel, not on $Na^{+}$ channels, so options built on changes in $Na^{+}$ influx describe the wrong mechanism.`
           }
         ]
       }

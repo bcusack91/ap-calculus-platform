@@ -54,19 +54,19 @@ $$\\text{Phenotype} = \\text{Genotype} \\times \\text{Environment (gene–enviro
         questions: [
           {
             question: `Activation of the PARASYMPATHETIC nervous system would produce:`,
-            options: [`Decreased heart rate and increased digestive activity`, `Increased heart rate and pupil dilation`, `Increased blood glucose and sweating`, `Bronchodilation and inhibited digestion`],
+            options: [`Decreased heart rate and increased digestion`, `Increased heart rate and slowed digestion`, `Decreased heart rate and pupil dilation`, `Increased heart rate and pupil constriction`],
             correctAnswer: 0,
-            explanation: `The parasympathetic ("rest-and-digest") system slows the heart, stimulates digestion, and constricts pupils — the opposite of the sympathetic "fight-or-flight" response. Increased HR, pupil dilation, and raised glucose are all SYMPATHETIC effects.`
+            explanation: `The parasympathetic ("rest-and-digest") system slows the heart, stimulates digestion, and constricts pupils — the opposite of the sympathetic "fight-or-flight" response. Increased heart rate, slowed digestion, and pupil dilation are all SYMPATHETIC effects, so any option containing one of them is wrong.`
           },
           {
             question: `A trait shows much higher concordance in monozygotic than dizygotic twins, even when twins are raised apart. This pattern suggests:`,
-            options: [`A substantial genetic contribution to the trait`, `A purely environmental cause`, `No heritability`, `That the trait is entirely learned`],
+            options: [`A substantial genetic contribution to the trait`, `A strong shared-environment contribution to the trait`, `A negligible genetic contribution to the trait`, `A purely environmental contribution to the trait`],
             correctAnswer: 0,
             explanation: `Monozygotic twins share ~100% of genes versus ~50% for dizygotic twins. Higher MZ concordance — especially when reared apart, controlling for shared environment — implicates a substantial GENETIC contribution. Twin and adoption designs are how behavioral genetics separates nature from nurture.`
           },
           {
             question: `In the knee-jerk (patellar) reflex, the rapid response occurs because the reflex arc is:`,
-            options: [`Monosynaptic and processed at the spinal cord, bypassing the brain`, `Routed through the cerebral cortex for a decision`, `Dependent on the endocrine system`, `Mediated entirely by the sympathetic nervous system`],
+            options: [`Monosynaptic and processed in the spinal cord`, `Routed through the cerebral cortex for a decision`, `Polysynaptic, with interneurons in the brainstem`, `Mediated entirely by the sympathetic nervous system`],
             correctAnswer: 0,
             explanation: `The patellar reflex is a monosynaptic reflex: the sensory neuron synapses directly onto the motor neuron in the spinal cord, so the response is generated without involving the brain. Bypassing higher processing is what makes the reflex so fast and protective.`
           }

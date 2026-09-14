@@ -66,9 +66,9 @@ LTP — the cellular model of learning — is strengthening of synaptic transmis
         questions: [
           {
             question: `A child stops throwing tantrums when parents consistently ignore the behavior. This is:`,
-            options: [`Extinction of operant conditioning — removing reinforcement (attention) decreases behavior`, `Classical conditioning`, `Negative reinforcement`, `Positive punishment`],
+            options: [`Extinction of an operant response`, `Negative reinforcement of an operant response`, `Positive punishment of an operant response`, `Spontaneous recovery of an operant response`],
             correctAnswer: 0,
-            explanation: `The tantrums were maintained by attention (positive reinforcement). When attention is consistently withheld, the behavior extinguishes. This is a common MCAT scenario in behavioral psychology.`
+            explanation: `The tantrums were maintained by attention (positive reinforcement). When attention is consistently withheld, the behavior extinguishes — removing the reinforcer that maintained an operant behavior makes it decrease. Negative reinforcement would INCREASE a behavior, positive punishment requires adding an aversive consequence, and spontaneous recovery is the later RETURN of an extinguished response. This is a common MCAT scenario in behavioral psychology.`
           },
           {
             question: `A researcher finds that gamblers at slot machines show the most persistent behavior and the greatest resistance to extinction. Which reinforcement schedule explains this?`,
@@ -78,7 +78,7 @@ LTP — the cellular model of learning — is strengthening of synaptic transmis
           },
           {
             question: `Patient H.M. had his hippocampi removed and could no longer form new declarative memories, yet he improved at a mirror-tracing task across days without remembering having done it. This dissociation demonstrates that:`,
-            options: [`Implicit (procedural) memory is stored separately from explicit memory`, `The hippocampus stores all long-term memories`, `Procedural skills require an intact hippocampus`, `Short-term memory depends on the cerebellum`],
+            options: [`Implicit memory is stored separately from explicit memory`, `The hippocampus is the permanent store for all long-term memories`, `Procedural skills, like declarative memories, require the hippocampus`, `Short-term memory depends on the cerebellum`],
             correctAnswer: 0,
             explanation: `The hippocampus is required to consolidate new EXPLICIT (declarative) memories, but PROCEDURAL/implicit learning relies on the cerebellum and basal ganglia. H.M.'s improving motor skill with no conscious recall is the classic evidence these systems are anatomically distinct.`
           }

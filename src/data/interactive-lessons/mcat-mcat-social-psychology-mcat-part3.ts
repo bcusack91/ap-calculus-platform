@@ -48,7 +48,7 @@ These three are distinguished by the SOURCE of social influence.
         questions: [
           {
             question: `In Asch's line-judgment experiments, conformity to the incorrect majority dropped most dramatically when:`,
-            options: [`A single confederate broke from the majority and gave the correct answer`, `The group size increased beyond five`, `Participants answered out loud`, `The lines were made more similar`],
+            options: [`A single confederate gave the correct answer`, `The group size increased beyond five`, `Participants answered out loud`, `The lines were made more similar`],
             correctAnswer: 0,
             explanation: `The presence of even ONE ally who dissents shatters the unanimity of the majority and frees the participant to give the correct answer — conformity plummets. Unanimity is the critical ingredient; break it and normative pressure collapses.`
           },
@@ -60,7 +60,7 @@ These three are distinguished by the SOURCE of social influence.
           },
           {
             question: `A student looks to classmates to figure out the right answer on an ambiguous question and genuinely comes to believe their answer. This is:`,
-            options: [`Informational conformity`, `Normative conformity`, `Obedience`, `Reactance`],
+            options: [`Informational conformity`, `Normative conformity`, `Public compliance`, `Obedience to authority`],
             correctAnswer: 0,
             explanation: `Informational conformity occurs under UNCERTAINTY: the person uses others as a source of information to be CORRECT, and it produces genuine private acceptance. Normative conformity, by contrast, is driven by the desire to be liked and often yields only public compliance.`
           }

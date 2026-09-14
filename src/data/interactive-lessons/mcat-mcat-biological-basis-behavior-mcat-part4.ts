@@ -63,13 +63,13 @@ Prolonged stress depletes resources, increasing disease vulnerability.`
           },
           {
             question: `The immediate, rapid "fight-or-flight" surge (↑ heart rate, pupil dilation within seconds) is driven by:`,
-            options: [`The sympathetic nervous system stimulating the adrenal medulla to release epinephrine`, `The slow HPA axis releasing cortisol`, `Oxytocin from the posterior pituitary`, `Melatonin from the pineal gland`],
+            options: [`Sympathetic activation of the adrenal medulla`, `HPA axis activation of the adrenal cortex`, `Posterior pituitary release of oxytocin`, `Parasympathetic activation of the vagus`],
             correctAnswer: 0,
             explanation: `The fast stress response is the SAM axis: sympathetic activation triggers the adrenal MEDULLA to release epinephrine/norepinephrine within seconds, producing the acute fight-or-flight changes. The HPA axis (cortisol) is the slower, longer-lasting arm of the stress response.`
           },
           {
             question: `Chronically elevated cortisol from prolonged stress is associated with damage to which structure, impairing memory?`,
-            options: [`The hippocampus`, `The cerebellum`, `The occipital cortex`, `The adrenal medulla`],
+            options: [`The hippocampus`, `The medulla oblongata`, `The occipital cortex`, `The adrenal medulla`],
             correctAnswer: 0,
             explanation: `The hippocampus is rich in cortisol (glucocorticoid) receptors and is vulnerable to prolonged high cortisol, which can damage neurons and impair the formation of new explicit memories. This links chronic stress to memory deficits and is a frequently tested connection.`
           }

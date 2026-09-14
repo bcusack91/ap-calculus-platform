@@ -66,19 +66,19 @@ Sound path: pinna → auditory canal → **tympanic membrane** → ossicles (**m
         questions: [
           {
             question: `In darkness, retinal photoreceptors maintain a steady "dark current." When light strikes the retina, the immediate electrical consequence in the photoreceptor is:`,
-            options: [`Hyperpolarization, because falling cGMP closes Na⁺ channels`, `Depolarization, because cGMP-gated Na⁺ channels open`, `An action potential propagated down the optic nerve`, `Increased glutamate release onto bipolar cells`],
+            options: [`Hyperpolarization, as cGMP-gated Na⁺ channels close`, `Depolarization, as cGMP-gated Na⁺ channels open`, `An action potential, as cGMP-gated Na⁺ channels close`, `Increased glutamate release, as Ca²⁺ channels open`],
             correctAnswer: 0,
-            explanation: `Light → retinal isomerization → transducin → phosphodiesterase → cGMP falls → cGMP-gated channels close → hyperpolarization and REDUCED glutamate release. Photoreceptors are depolarized in the dark, and they signal with graded potentials, not action potentials — both classic reversals the MCAT loves.`
+            explanation: `Light → retinal isomerization → transducin → phosphodiesterase → cGMP falls → cGMP-gated Na⁺ channels close → hyperpolarization and REDUCED glutamate release. Photoreceptors are depolarized in the dark, and they signal with graded potentials, not action potentials — both classic reversals the MCAT loves.`
           },
           {
             question: `A patient staring at a yellow circle sees a blue afterimage when looking at a white wall. A researcher argues this specific phenomenon cannot be fully explained at the cone-receptor level. Which theory does the afterimage support, and at what stage does it operate?`,
-            options: [`Opponent-process theory, operating in post-receptor channels (ganglion/LGN)`, `Trichromatic theory, operating in the three cone types`, `Place theory, operating on the basilar membrane`, `Feature detection, operating in V1 orientation columns`],
+            options: [`Opponent-process theory, operating in ganglion cells`, `Trichromatic theory, operating in the three cone types`, `Place theory, operating along the basilar membrane`, `Feature detection, operating in V1 orientation columns`],
             correctAnswer: 0,
-            explanation: `Afterimages in the complementary color (yellow → blue) are the signature evidence for opponent-process channels (blue–yellow, red–green): fatiguing one pole causes rebound toward the other. Trichromatic theory is correct for cone-level reception but does not predict complementary afterimages.`
+            explanation: `Afterimages in the complementary color (yellow → blue) are the signature evidence for opponent-process channels (blue–yellow, red–green): fatiguing one pole causes rebound toward the other. These opponent channels are post-receptor — built in retinal ganglion cells and the LGN from cone inputs. Trichromatic theory is correct for cone-level reception but does not predict complementary afterimages; place theory concerns pitch, and V1 feature detectors code orientation, not color opponency.`
           },
           {
             question: `A pure 8,000 Hz tone is far above the maximum firing rate of any auditory neuron, yet listeners identify its pitch easily. The most complete explanation is that high-frequency pitch is coded by:`,
-            options: [`The place of maximal vibration near the base of the basilar membrane`, `Individual neurons firing 8,000 times per second`, `Rotational signals from the semicircular canals`, `The volley principle operating in single neurons`],
+            options: [`The place of maximal vibration along the basilar membrane`, `Single auditory neurons firing 8,000 times per second`, `Rotational signals from the semicircular canals`, `The volley principle operating within single neurons`],
             correctAnswer: 0,
             explanation: `Neurons cannot fire ~8,000 Hz (absolute refractory period caps rates near 1,000 Hz), so temporal/frequency coding fails; place theory takes over — high frequencies peak near the stiff base of the basilar membrane. The volley principle extends rate coding only to a few thousand Hz, and it is a property of neuron groups, not single cells.`
           }
