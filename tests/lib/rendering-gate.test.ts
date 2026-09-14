@@ -16,7 +16,10 @@ function runGate(fixture: string) {
   })
 }
 
-describe('content rendering gate', () => {
+// Each test spawns `npx tsx`, which compiles the audit script before running
+// it: ~2 s on an idle machine, but past vitest's 5 s default under load (a
+// parallel build or a busy CI runner), which made this suite flaky.
+describe('content rendering gate', { timeout: 60_000 }, () => {
   it('fails on planted rendering bugs, naming each error class', () => {
     const r = runGate('tests/fixtures/rendering-probe-bad.ts')
     expect(r.status).toBe(1)
