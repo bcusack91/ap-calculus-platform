@@ -75,7 +75,7 @@ Given two sets of residuals for the same data, the better model is the one whose
         'It is unreliable, because the model has a nonzero $V$-intercept'
       ],
       correctAnswer: 1,
-      explanation: `A line of best fit describes only the range of data it was built from. Predicting at $a = 15$ is extrapolation, and here the model returns $24800 - 2150(15) = -7450$ dollars — a negative resale value, which confirms the model has been pushed past where it means anything. The traps: the first and third options are both true statements about the model that do not address the range problem at all — the third is especially tempting because "value decreases with age" is genuinely correct; the fourth objects to the intercept, which is a normal feature of every such model.`
+      explanation: `A line of best fit describes only the range of data it was built from. Predicting at $a = 15$ is extrapolation, and here the model returns $24800 - 2150(15) = -7450$ dollars — a negative resale value, which confirms the model has been pushed past where it means anything. The traps: the linear-models and negative-slope options are both true statements about the model that do not address the range problem at all — the negative-slope option is especially tempting because "value decreases with age" is genuinely correct; the nonzero-intercept option objects to the intercept, which is a normal feature of every such model.`
     }
   ]
 }

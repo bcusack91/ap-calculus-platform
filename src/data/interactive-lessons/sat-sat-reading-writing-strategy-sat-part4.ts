@@ -116,7 +116,7 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
             question: 'Which is most concise? "The reason why the project failed was because of insufficient funding."',
             options: ['The project failed because of insufficient funding.', 'The reason the project failed was because of insufficient funding.', 'The reason why the project failed was due to the fact that funding was insufficient.', 'It was because of insufficient funding that the project failed.'],
             correctAnswer: 0,
-            explanation: '"The reason why…was because" is triply redundant. "Because" alone establishes the cause. Option A eliminates all wordiness while preserving meaning.'
+            explanation: '"The reason why…was because" is triply redundant. "Because" alone establishes the cause. The "project failed because of insufficient funding" option eliminates all wordiness while preserving meaning.'
           },
           {
             question: 'Which phrase is NOT redundant?',

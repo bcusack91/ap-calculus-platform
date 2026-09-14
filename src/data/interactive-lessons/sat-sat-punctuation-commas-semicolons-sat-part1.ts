@@ -107,7 +107,7 @@ Common introductory elements include:
               'She studied, hard and she passed the test.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — "She studied hard" and "she passed the test" are both independent clauses joined by "and," so a comma goes before the conjunction. Option C is wrong because "passed the test" by itself is not an independent clause.'
+            explanation: 'Correct — "She studied hard" and "she passed the test" are both independent clauses joined by "and," so a comma goes before the conjunction. The "hard, and passed the test" option is wrong because "passed the test" by itself is not an independent clause.'
           }
         ]
       }

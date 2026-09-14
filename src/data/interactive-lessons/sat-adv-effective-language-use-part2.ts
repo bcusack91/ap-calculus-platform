@@ -41,7 +41,7 @@ The student wants to emphasize the trade-off involved in adding dishes to an int
         `Combining signals from many small dishes yields extremely fine angular resolution.`
       ],
       correctAnswer: 1,
-      explanation: `A trade-off is an advantage set against its cost, and only the second option holds both in one sentence: sharper resolution bought with heavier computation. The fourth states the benefit alone and the third the cost alone — each is a half-sentence, and emphasis without the opposing pole is not a trade-off. The first explains how an interferometer works, accurate background that names neither a gain nor a price.`
+      explanation: `A trade-off is an advantage set against its cost, and only the resolution-versus-computing-load option holds both in one sentence: sharper resolution bought with heavier computation. The fine-resolution option states the benefit alone and the correlator-budget option the cost alone — each is a half-sentence, and emphasis without the opposing pole is not a trade-off. The one-giant-dish option explains how an interferometer works, accurate background that names neither a gain nor a price.`
     },
     {
       id: 'elu-adv-p2-q2',
@@ -61,7 +61,7 @@ The student wants to emphasize the advantage navigation apps hold over paper map
         `Navigation apps depend on phone batteries, which cold weather drains quickly.`
       ],
       correctAnswer: 2,
-      explanation: `Only one note gives apps an edge — live position — and the correct sentence pairs it against the paper map's inability to do the same. The first option is the impressive wrong-sider: vivid and concrete, but every word of it argues for paper maps, the opposite of the assigned goal. The last option states the apps' weakness, scoring against the side you were told to champion. The rangers' recommendation ranks neither tool, and a goal that says 'advantage over' requires a ranking.`
+      explanation: `Only one note gives apps an edge — live position — and the correct sentence pairs it against the paper map's inability to do the same. The no-power-source option is the impressive wrong-sider: vivid and concrete, but every word of it argues for paper maps, the opposite of the assigned goal. The battery-drain option states the apps' weakness, scoring against the side you were told to champion. The rangers' recommendation ranks neither tool, and a goal that says 'advantage over' requires a ranking.`
     },
     {
       id: 'elu-adv-p2-q3',
@@ -80,7 +80,7 @@ The student wants to emphasize the change in detections between the two surveys.
         `The whale's call, detected at just 12 of 40 stations in 2003, was picked up at 29 of those same stations two decades later.`
       ],
       correctAnswer: 3,
-      explanation: `A change between surveys requires both counts and both dates in one sentence, which only the last option supplies. The 29-of-40 option is the half-sentence trap — a strong figure with no baseline, so no change is visible. The shipping-lane option is true-but-off-goal: it offers a possible cause of the change rather than the change itself, a distinction the hard tier tests relentlessly. The call's 30-kilometer range is method-relevant background that measures nothing across time.`
+      explanation: `A change between surveys requires both counts and both dates in one sentence, which only the 12-to-29-stations option supplies. The 29-of-40 option is the half-sentence trap — a strong figure with no baseline, so no change is visible. The shipping-lane option is true-but-off-goal: it offers a possible cause of the change rather than the change itself, a distinction the hard tier tests relentlessly. The call's 30-kilometer range is method-relevant background that measures nothing across time.`
     }
   ]
 }

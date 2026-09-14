@@ -30,7 +30,7 @@ Which choice best states the main idea of the text?`,
         'The program\'s average benefit conceals that it helped least where losses were greatest, because its delivery depended on the coverage those farms lacked.'
       ],
       correctAnswer: 3,
-      explanation: `The turn is in the final sentence's semicolon: averaged, effective; separated, "effective precisely where the problem was smallest." Choice D carries the concession (losses fell where coverage was reliable), the limit (no change where it wasn't), and the mechanism (delivery depends on coverage). Choice B is the Hedge-Inflator: Danquah confirms the reduction on covered farms; the finding is about distribution, not existence. Choice A invents an increase — "did not change" is a null, not a harm. Choice C is the Motive-Inventor: farmers with intermittent coverage often never received the alerts; nothing in the text reports a choice to ignore them.`
+      explanation: `The turn is in the final sentence's semicolon: averaged, effective; separated, "effective precisely where the problem was smallest." The concealed-distribution choice carries the concession (losses fell where coverage was reliable), the limit (no change where it wasn't), and the mechanism (delivery depends on coverage). The does-not-reduce choice is the Hedge-Inflator: Danquah confirms the reduction on covered farms; the finding is about distribution, not existence. The losses-increased choice invents an increase — "did not change" is a null, not a harm. The chose-to-ignore choice is the Motive-Inventor: farmers with intermittent coverage often never received the alerts; nothing in the text reports a choice to ignore them.`
     },
     {
       id: 'advci3-q2',
@@ -47,7 +47,7 @@ Which choice does the text most strongly suggest about Odile?`,
         'She is angry that the case was moved without her permission.'
       ],
       correctAnswer: 1,
-      explanation: `Every staged detail points one way: the unlatched case, the deliberately absent morning ("where she could not hear"), the withheld question at dinner, and the immediate offer to teach ("bring it to the porch") the moment the quarter-inch turn proves the girl touched it. That's a test of the girl's initiative, arranged so it couldn't be performed for Odile's benefit. Choice A invents a motive for the refusals that no detail supports — the passage never evaluates the girl's ability. Choice C is refuted by the very precision the plot requires: only someone who knew the case's position to the quarter-inch could read the evidence. Choice D is the Motive-Inventor killed by the outcome — her response to the moved case is an invitation, not a reproach.`
+      explanation: `Every staged detail points one way: the unlatched case, the deliberately absent morning ("where she could not hear"), the withheld question at dinner, and the immediate offer to teach ("bring it to the porch") the moment the quarter-inch turn proves the girl touched it. That's a test of the girl's initiative, arranged so it couldn't be performed for Odile's benefit. The doubted-talent choice invents a motive for the refusals that no detail supports — the passage never evaluates the girl's ability. The forgotten-case choice is refuted by the very precision the plot requires: only someone who knew the case's position to the quarter-inch could read the evidence. The angry choice is the Motive-Inventor killed by the outcome — her response to the moved case is an invitation, not a reproach.`
     },
     {
       id: 'advci3-q3',
@@ -62,7 +62,7 @@ Which choice best states the main idea of the text?`,
         'Musical scores are more difficult to interpret than digital artworks.'
       ],
       correctAnswer: 2,
-      explanation: `The thesis is the reclassification — "better understood as part of the work" — plus its consequence, "a problem the museum must solve anew in every future decade," and choice C carries both. Choice B is the Hedge-Inflator: the score analogy points the opposite way — performers without period instruments still perform, so the problem is recurring interpretation, not impossibility. Choice A is the Prescriber, drawing acquisition advice from a passage that describes how to *understand* documents, and pointing against its spirit besides. Choice D borrows the analogy and turns it into a difficulty ranking the text never draws; the score appears to illuminate the specification's function, not to be compared for hardness.`
+      explanation: `The thesis is the reclassification — "better understood as part of the work" — plus its consequence, "a problem the museum must solve anew in every future decade," and the part-of-the-artwork choice carries both. The cannot-be-exhibited choice is the Hedge-Inflator: the score analogy points the opposite way — performers without period instruments still perform, so the problem is recurring interpretation, not impossibility. The decline-to-acquire choice is the Prescriber, drawing acquisition advice from a passage that describes how to *understand* documents, and pointing against its spirit besides. The musical-scores choice borrows the analogy and turns it into a difficulty ranking the text never draws; the score appears to illuminate the specification's function, not to be compared for hardness.`
     },
     {
       id: 'advci3-q4',
@@ -77,7 +77,7 @@ Which choice best states the main idea of the text?`,
         'Clinic-based reporting counts mild cases more completely than self-reporting does.'
       ],
       correctAnswer: 0,
-      explanation: `The final sentence is the thesis with its hedge: "may at last be measuring the same disease more fully, rather than measuring more disease," supported by two details — flat mortality under unchanged methods, and new cases clustering exactly where the old method "had always captured worst." Choice A preserves the hedge ("likely") and the mechanism. Choice B contradicts "stayed flat." Choice C adopts the commentators' reading, the appearance the passage was built to dismantle — and misplaces the cause besides, since a reporting channel cannot cause disease. Choice D reverses a detail: the mild range is where clinic-based reporting was *poorest*, which is why the self-reports concentrate there.`
+      explanation: `The final sentence is the thesis with its hedge: "may at last be measuring the same disease more fully, rather than measuring more disease," supported by two details — flat mortality under unchanged methods, and new cases clustering exactly where the old method "had always captured worst." The fuller-counting choice preserves the hedge ("likely") and the mechanism. The mortality-rose choice contradicts "stayed flat." The caused-an-epidemic choice adopts the commentators' reading, the appearance the passage was built to dismantle — and misplaces the cause besides, since a reporting channel cannot cause disease. The clinic-based-reporting choice reverses a detail: the mild range is where clinic-based reporting was *poorest*, which is why the self-reports concentrate there.`
     }
   ]
 }

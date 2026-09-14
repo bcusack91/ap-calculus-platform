@@ -103,7 +103,7 @@ From a graph, identify:
             question: 'A graph has asymptote $y = -3$ and passes through $(0, 1)$. Which function could it be?',
             options: ['$y = 4(2)^x - 3$', '$y = (2)^x + 1$', '$y = -3(2)^x$', '$y = 2^x - 3$'],
             correctAnswer: 0,
-            explanation: 'Asymptote $y = -3$ means $k = -3$. At $x = 0$: $a \\cdot 1 + (-3) = 1$, so $a = 4$. $y = 4(2)^x - 3$ ✓. Check option D: at $x=0$: $1 - 3 = -2 \\neq 1$ ✗.'
+            explanation: 'Asymptote $y = -3$ means $k = -3$. At $x = 0$: $a \\cdot 1 + (-3) = 1$, so $a = 4$. $y = 4(2)^x - 3$ ✓. Check $y = 2^x - 3$: at $x=0$: $1 - 3 = -2 \\neq 1$ ✗.'
           },
           {
             question: 'The function $y = 10(0.5)^x$ has what range?',

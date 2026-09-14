@@ -197,7 +197,7 @@ A \`final\` variable is a **constant** — its value cannot change after initial
               'int avg = (score1 + score2 + score3) / 3.0;'
             ],
             correctAnswer: 2,
-            explanation: 'Option C casts the sum to double before dividing, ensuring double division. Option A has order-of-operations error. Option B does integer division. Option D has a type mismatch.'
+            explanation: 'The (double) cast version casts the sum to double before dividing, ensuring double division. The unparenthesized version has an order-of-operations error. The version dividing the int sum by 3 does integer division. The int avg version has a type mismatch.'
           }
         ]
       }

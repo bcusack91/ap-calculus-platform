@@ -40,7 +40,7 @@ The student wants to emphasize the difference in the two cell types' longevity. 
         `Both perovskite and silicon cells convert sunlight directly into electricity, though the two are manufactured very differently.`
       ],
       correctAnswer: 1,
-      explanation: `The goal names a specific dimension — longevity — and demands both cell types on it, which only the 25-years-versus-months sentence delivers. The first option is the wrong-dimension trap: a genuine contrast, but on manufacturing, not lifespan. The third gives one lifespan with nothing to compare it to, so no difference is stated. The last emphasizes what the technologies share and waves at a difference without giving it.`
+      explanation: `The goal names a specific dimension — longevity — and demands both cell types on it, which only the 25-years-versus-months sentence delivers. The printing-versus-furnace option is the wrong-dimension trap: a genuine contrast, but on manufacturing, not lifespan. The quarter-century option gives one lifespan with nothing to compare it to, so no difference is stated. The both-convert-sunlight option emphasizes what the technologies share and waves at a difference without giving it.`
     },
     {
       id: 'elu-adv-p1-q2',
@@ -60,7 +60,7 @@ The student wants to introduce the camera obscura to an audience unfamiliar with
         `Modern experiments with room-sized chambers have reproduced the projections some painters may once have traced.`
       ],
       correctAnswer: 0,
-      explanation: `Introducing an unfamiliar device requires naming it and stating what it physically is and does, which only the first option accomplishes. The other three all mention the camera obscura or its projections while presupposing the reader already knows what the device is: the second defines it only by who described it, the third by who may have used it, and the fourth never names the device at all — the exact failure the audience specification is designed to catch.`
+      explanation: `Introducing an unfamiliar device requires naming it and stating what it physically is and does, which only the darkened-chamber option accomplishes. The other three all mention the camera obscura or its projections while presupposing the reader already knows what the device is: the Ibn al-Haytham option defines it only by who described it, the seventeenth-century-painters option by who may have used it, and the modern-experiments option never names the device at all — the exact failure the audience specification is designed to catch.`
     },
     {
       id: 'elu-adv-p1-q3',
@@ -79,7 +79,7 @@ The student wants to explain why smoke taint can go undetected until after ferme
         `Because smoke phenols bind to the fruit's sugars and turn tasteless, the taint stays hidden until fermentation breaks those bonds and releases the phenols into the wine.`
       ],
       correctAnswer: 3,
-      explanation: `An explanation of why the taint hides must run the causal chain end to end: binding makes the phenols tasteless, fermentation unbinds them, so detection comes late. Only the last option completes that chain. The first gives the chain's opening link, the third gives a middle link, and the second states the puzzling outcome without any mechanism — each is accurate, and each answers a question other than 'why.'`
+      explanation: `An explanation of why the taint hides must run the causal chain end to end: binding makes the phenols tasteless, fermentation unbinds them, so detection comes late. Only the option beginning "Because smoke phenols bind" completes that chain. The absorption option gives the chain's opening link, the fermentation option gives a middle link, and the acrid-wine option states the puzzling outcome without any mechanism — each is accurate, and each answers a question other than 'why.'`
     }
   ]
 }

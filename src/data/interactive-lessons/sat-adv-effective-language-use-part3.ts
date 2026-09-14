@@ -33,7 +33,7 @@ The student wants to present Demir's central finding to an audience already fami
         `GPS collars allowed the researchers to record each fox's position continuously throughout the study.`
       ],
       correctAnswer: 1,
-      explanation: `The central finding is what the tracking revealed — the crossing rate and its timing — and only the second option reports it. The study-scope option (60 foxes, two years) describes the investigation without any result, the classic scope-for-finding swap. The GPS option explains method, not outcome. The familiar-sight option supplies background the specified audience explicitly does not need, the familiarity mismatch in its purest form.`
+      explanation: `The central finding is what the tracking revealed — the crossing rate and its timing — and only the 14-roads-per-night option reports it. The study-scope option (60 foxes, two years) describes the investigation without any result, the classic scope-for-finding swap. The GPS option explains method, not outcome. The familiar-sight option supplies background the specified audience explicitly does not need, the familiarity mismatch in its purest form.`
     },
     {
       id: 'elu-adv-p3-q2',
@@ -71,7 +71,7 @@ The student wants to explain why switching to LEDs does not straightforwardly cu
         `LED grow lights emit far less heat than the sodium lamps they replaced.`
       ],
       correctAnswer: 0,
-      explanation: `Explaining why the savings fail to materialize requires the saving and the offsetting cost linked in one causal sentence, which only the first option provides. The 40-percent option gives the saving alone — the very fact the goal asks you to complicate. The gas-heater option gives the new cost with no connection to the lamps' lost heat, and the less-heat option supplies a middle link of the mechanism without ever reaching the cost. Three accurate fragments, one complete explanation.`
+      explanation: `Explaining why the savings fail to materialize requires the saving and the offsetting cost linked in one causal sentence, which only the offset-by-a-heating-bill option provides. The 40-percent option gives the saving alone — the very fact the goal asks you to complicate. The gas-heater option gives the new cost with no connection to the lamps' lost heat, and the less-heat option supplies a middle link of the mechanism without ever reaching the cost. Three accurate fragments, one complete explanation.`
     },
     {
       id: 'elu-adv-p3-q4',
@@ -90,7 +90,7 @@ The student wants to emphasize the disproportion between an individual krill's s
         `Though a single Antarctic krill is only about the length of a paper clip, the species' combined biomass — an estimated 400 million tonnes — ranks among the largest of any wild animal.`
       ],
       correctAnswer: 3,
-      explanation: `Disproportion is a relation between two quantities, so the tiny individual and the enormous total must share one sentence; only the last option pairs them. The 400-million-tonnes option is the half-sentence trap — a staggering figure that is disproportionate to nothing until the paper-clip comparison appears beside it. The swarm option is vivid but pairs the wrong quantities (swarm length, not species biomass), and the predators option shifts to ecological importance, a different claim entirely.`
+      explanation: `Disproportion is a relation between two quantities, so the tiny individual and the enormous total must share one sentence; only the paper-clip-and-biomass option pairs them. The 400-million-tonnes option is the half-sentence trap — a staggering figure that is disproportionate to nothing until the paper-clip comparison appears beside it. The swarm option is vivid but pairs the wrong quantities (swarm length, not species biomass), and the predators option shifts to ecological importance, a different claim entirely.`
     }
   ]
 }

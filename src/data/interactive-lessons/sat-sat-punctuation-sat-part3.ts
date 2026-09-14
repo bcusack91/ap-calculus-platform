@@ -100,7 +100,7 @@ A **colon (:)** follows an **independent clause** and introduces:
               'The experiment was successful: the results confirmed the hypothesis.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. Option D (colon) could also work since the second clause explains the first, but a semicolon is the standard fix and the best answer here.'
+            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. The colon version could also work since the second clause explains the first, but a semicolon is the standard fix and the best answer here.'
           },
           {
             question: 'Which sentence uses a colon INCORRECTLY?',

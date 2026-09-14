@@ -223,7 +223,7 @@ export const hgIntroGeographyPart7Data = {
               "The Sun Belt is a perceptual region only."
             ],
             correctAnswer: 1,
-            explanation: "Option B layers region type (formal), scale switch (regional → local), density vocabulary (physiological density), and accessibility — exactly the kind of multi-concept synthesis APHG rubrics reward."
+            explanation: "The Phoenix and rural Arizona response layers region type (formal), scale switch (regional → local), density vocabulary (physiological density), and accessibility — exactly the kind of multi-concept synthesis APHG rubrics reward."
           }
         ]
       }

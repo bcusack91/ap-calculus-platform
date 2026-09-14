@@ -107,7 +107,7 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
             question: 'Claim: "Deforestation is the primary driver of species extinction in the Amazon." Which quote is BEST evidence?',
             options: ['"Between 2000-2020, deforestation destroyed habitats for an estimated 10,000 species in the Amazon basin"', '"The Amazon rainforest covers approximately 5.5 million square kilometers"', '"Climate change also threatens biodiversity worldwide"', '"Brazil has implemented new logging regulations in recent years"'],
             correctAnswer: 0,
-            explanation: 'The claim is about deforestation driving extinction. Only A directly links deforestation to species impact (10,000 species affected). B is geography. C mentions a different threat. D discusses policy, not extinction.'
+            explanation: 'The claim is about deforestation driving extinction. Only the 10,000-species quote directly links deforestation to species impact (10,000 species affected). The 5.5-million-square-kilometers quote is geography. The climate-change quote mentions a different threat. The logging-regulations quote discusses policy, not extinction.'
           },
           {
             question: 'When evaluating evidence quotes, the biggest mistake students make is:',
@@ -119,7 +119,7 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
             question: 'Claim: "Bilingual children show enhanced executive function." Which is the WEAKEST evidence?',
             options: ['"Bilingual children learn two languages from birth"', '"Bilingual 5-year-olds outperformed monolinguals on task-switching tests by 23%"', '"MRI scans showed increased gray matter in bilingual children\'s prefrontal cortex"', '"Bilingual children scored higher on standardized measures of cognitive flexibility"'],
             correctAnswer: 0,
-            explanation: 'Quote A defines what bilingual means — it says nothing about executive function. Quotes B, C, and D all provide direct evidence of enhanced cognitive ability. A is true but doesn\'t support the claim.'
+            explanation: 'The learn-two-languages-from-birth quote defines what bilingual means — it says nothing about executive function. The task-switching, MRI, and cognitive-flexibility quotes all provide direct evidence of enhanced cognitive ability. The from-birth quote is true but doesn\'t support the claim.'
           }
         ]
       }

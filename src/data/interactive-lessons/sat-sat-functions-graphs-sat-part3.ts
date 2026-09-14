@@ -130,7 +130,7 @@ Apply transformations in this order:
             question: 'The graph of $y = (x - 3)^2 + 1$ is reflected over the y-axis. The equation is:',
             options: ['$y = (-x - 3)^2 + 1$', '$y = (x + 3)^2 + 1$', '$y = -(x - 3)^2 + 1$', '$y = (x - 3)^2 - 1$'],
             correctAnswer: 0,
-            explanation: 'Reflect over y-axis: replace $x$ with $-x$. $y = (-x - 3)^2 + 1$. Note: this equals $(x+3)^2 + 1$, so both A and B describe the same graph.'
+            explanation: 'Reflect over y-axis: replace $x$ with $-x$. $y = (-x - 3)^2 + 1$. Note: this equals $(x+3)^2 + 1$, so $y = (-x - 3)^2 + 1$ and $y = (x + 3)^2 + 1$ describe the same graph.'
           }
         ]
       }

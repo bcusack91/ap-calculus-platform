@@ -45,7 +45,7 @@ Which choice completes the text so that it conforms to the conventions of Standa
         `it was phonologists who benefited most from the archive Ramirez produced.`
       ],
       correctAnswer: 1,
-      explanation: `Only a person can have transcribed the interviews, so the main clause must open with 'Ramirez.' The first option leads with 'the archive's usefulness' — an abstract noun that transcribed nothing, with Ramirez demoted to a by-phrase. The third leads with 'the archive,' which is the product of the transcription, not the transcriber. The last leads with the placeholder 'it,' leaving the participle unattached. All four clauses are internally grammatical; the item turns entirely on the modified subject.`
+      explanation: `Only a person can have transcribed the interviews, so the main clause must open with 'Ramirez.' The usefulness option leads with 'the archive's usefulness' — an abstract noun that transcribed nothing, with Ramirez demoted to a by-phrase. The archive-subject option leads with 'the archive,' which is the product of the transcription, not the transcriber. The 'it was phonologists' option leads with the placeholder 'it,' leaving the participle unattached. All four clauses are internally grammatical; the item turns entirely on the modified subject.`
     },
     {
       id: 'ss-adv-p3-q3',

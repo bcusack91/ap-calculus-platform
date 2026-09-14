@@ -72,9 +72,9 @@ Center $= (4, -3)$, radius $= 6$. ✓
           },
           {
             question: 'What is the radius of $x^2 + y^2 = 81$?',
-            options: ['$81$', '$\\sqrt{81}$', '$9$', 'Both B and C'],
+            options: ['$81$', '$18$', '$40.5$', '$9$'],
             correctAnswer: 3,
-            explanation: '$r^2 = 81 \\implies r = \\sqrt{81} = 9$. B and C are the same value.'
+            explanation: '$r^2 = 81 \\implies r = \\sqrt{81} = 9$. $81$ is $r^2$ rather than $r$, $18$ is the diameter, and $40.5$ halves $r^2$ instead of taking its square root.'
           }
         ]
       }
@@ -171,7 +171,7 @@ No — $37 > 36$ means $(1,5)$ is **outside** the circle.
             question: 'After completing the square, $x^2 + y^2 + 2x - 14y + 25 = 0$ becomes $(x + 1)^2 + (y - 7)^2 = r^2$. What is $r$?',
             options: ['$3$', '$5$', '$25$', '$\\sqrt{25}$'],
             correctAnswer: 1,
-            explanation: '$r^2 = -25 + 1 + 49 = 25$. So $r = 5$. Choices B and D are equivalent.'
+            explanation: '$r^2 = -25 + 1 + 49 = 25$. So $r = 5$. Choices $5$ and $\\sqrt{25}$ are equivalent.'
           },
           {
             question: 'Which point lies INSIDE the circle $x^2 + y^2 = 100$?',

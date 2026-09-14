@@ -228,7 +228,7 @@ $n = 27$, $R\\text{-}sq = 48.0\\%$
           },
           {
             question: '$t = -4.2$, df $= 28$, two-sided $P < 0.001$. Which CI would NOT contain 0?',
-            options: ['90% CI', '95% CI', '99% CI', 'All of the above'],
+            options: ['Only the 90% CI', 'Only the 90% and 95% CIs', 'Only the 99% CI', 'The 90%, 95%, and 99% CIs'],
             correctAnswer: 3,
             explanation: '$P < 0.001$ means we reject at all common $\\alpha$ levels (0.10, 0.05, 0.01), so no CI at those levels contains 0.'
           },

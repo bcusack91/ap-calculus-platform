@@ -60,7 +60,7 @@ A percent answer must state its base. $\\frac{240}{510}$ and $\\frac{240}{450}$ 
         'Staff and graduate students are tied for the greatest proportion'
       ],
       correctAnswer: 2,
-      explanation: `Convert each to a rate within its own group: staff $\\frac{36}{150} = 24\\%$, undergraduates $\\frac{92}{350} \\approx 26.3\\%$, graduate students $\\frac{42}{150} = 28\\%$. Graduate students lead. The trap is undergraduates, who supply by far the most tea drinkers in raw count ($92$, more than double the graduate students' $42$) purely because that group is more than twice as large. The final option preys on staff and graduate students sharing the same group size of $150$ — same denominators, but $36$ and $42$ are different numerators.`
+      explanation: `Convert each to a rate within its own group: staff $\\frac{36}{150} = 24\\%$, undergraduates $\\frac{92}{350} \\approx 26.3\\%$, graduate students $\\frac{42}{150} = 28\\%$. Graduate students lead. The trap is undergraduates, who supply by far the most tea drinkers in raw count ($92$, more than double the graduate students' $42$) purely because that group is more than twice as large. The tied option preys on staff and graduate students sharing the same group size of $150$ — same denominators, but $36$ and $42$ are different numerators.`
     },
     {
       id: 'prob-adv-p2-q2',

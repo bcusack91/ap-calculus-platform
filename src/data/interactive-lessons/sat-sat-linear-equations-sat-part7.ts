@@ -123,7 +123,7 @@ export const satLinearEquationsPart7Data = {
             question: 'A system of two linear equations in $x$ and $y$ has the solution $(3, -2)$. If one equation is $x + 2y = -1$, which could be the other?',
             options: ['$2x - y = 8$', '$x + 2y = 5$', '$3x + 6y = -3$', '$x - y = 1$'],
             correctAnswer: 0,
-            explanation: 'Plug $(3, -2)$ into each. $2(3) - (-2) = 8$ ✓. Option C is a multiple of the first equation (infinite solutions, not unique). D: $3 - (-2) = 5 \\neq 1$.'
+            explanation: 'Plug $(3, -2)$ into each. $2(3) - (-2) = 8$ ✓. $3x + 6y = -3$ is a multiple of the first equation (infinite solutions, not unique). $x - y = 1$: $3 - (-2) = 5 \\neq 1$.'
           },
           {
             question: 'If $2|x - 3| - 4 = 6$, what is the sum of all possible values of $x$?',

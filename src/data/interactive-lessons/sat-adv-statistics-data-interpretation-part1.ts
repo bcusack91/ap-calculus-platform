@@ -80,7 +80,7 @@ You will never compute one. You will only **compare** two, and the rule is alway
         '$31$'
       ],
       correctAnswer: 2,
-      explanation: 'Nine values with mean 30 means a total of $9(30) = 270$. The eight known lengths sum to 242, so the missing length is $270 - 242 = 28$. Ordered, the nine values are 21, 24, 26, 28, 29, 31, 34, 37, 40, and the median is the fifth, which is 29. Choice A is 28, the missing value recovered in step one — the intermediate result, not the median. Choice B is the mean, chosen by assuming mean and median must agree. Choice D is the sixth value, an off-by-one slip in locating the middle of a nine-value list.'
+      explanation: 'Nine values with mean 30 means a total of $9(30) = 270$. The eight known lengths sum to 242, so the missing length is $270 - 242 = 28$. Ordered, the nine values are 21, 24, 26, 28, 29, 31, 34, 37, 40, and the median is the fifth, which is 29. The $28$ choice is the missing value recovered in step one — the intermediate result, not the median. The $30$ choice is the mean, chosen by assuming mean and median must agree. The $31$ choice is the sixth value, an off-by-one slip in locating the middle of a nine-value list.'
     },
     {
       id: 'sdi-adv-p1-q2',
@@ -93,7 +93,7 @@ You will never compute one. You will only **compare** two, and the rule is alway
         '$1.2$'
       ],
       correctAnswer: 3,
-      explanation: 'The actual mean is weighted: $\\frac{24(76) + 16(88)}{40} = \\frac{1824 + 1408}{40} = 80.8$. The newspaper computes $(76 + 88)/2 = 82$. The excess is $82 - 80.8 = 1.2$. Choice A is the true weighted mean and choice B is the newspaper’s unweighted value; both are intermediate values, and the question asked for the gap between them. Choice C is half the spread between the section means, $(88 - 76)/2$, which mistakes the distance between the groups for the size of the reporting error.'
+      explanation: 'The actual mean is weighted: $\\frac{24(76) + 16(88)}{40} = \\frac{1824 + 1408}{40} = 80.8$. The newspaper computes $(76 + 88)/2 = 82$. The excess is $82 - 80.8 = 1.2$. The $80.8$ choice is the true weighted mean and the $82$ choice is the newspaper’s unweighted value; both are intermediate values, and the question asked for the gap between them. The $6$ choice is half the spread between the section means, $(88 - 76)/2$, which mistakes the distance between the groups for the size of the reporting error.'
     },
     {
       id: 'sdi-adv-p1-q3',
@@ -106,7 +106,7 @@ You will never compute one. You will only **compare** two, and the rule is alway
         '2 to 1'
       ],
       correctAnswer: 0,
-      explanation: 'The combined mean of 46 sits 4 above Group A’s mean and 12 below Group B’s mean. Group sizes are proportional to the opposite distances, so A to B is $12 : 4 = 3 : 1$; the combined mean drifted toward 42 precisely because Group A is larger. Check with 3 and 1: $\\frac{3(42) + 1(58)}{4} = \\frac{184}{4} = 46$. Choice B is the distances in the order they were computed, $4 : 12$, the reversed-lever error, which would drag the combined mean up near 58. Choice C is the ratio of the two means, $42 : 58$, reduced. Choice D would give a combined mean of $\\frac{2(42) + 58}{3} = 47.3$.'
+      explanation: 'The combined mean of 46 sits 4 above Group A’s mean and 12 below Group B’s mean. Group sizes are proportional to the opposite distances, so A to B is $12 : 4 = 3 : 1$; the combined mean drifted toward 42 precisely because Group A is larger. Check with 3 and 1: $\\frac{3(42) + 1(58)}{4} = \\frac{184}{4} = 46$. The 1 to 3 choice is the distances in the order they were computed, $4 : 12$, the reversed-lever error, which would drag the combined mean up near 58. The 21 to 29 choice is the ratio of the two means, $42 : 58$, reduced. The 2 to 1 choice would give a combined mean of $\\frac{2(42) + 58}{3} = 47.3$.'
     }
   ]
 };

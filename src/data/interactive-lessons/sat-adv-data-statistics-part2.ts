@@ -84,7 +84,7 @@ Rates in these tables are usually clean-ish fractions. $105/400$ is a hair over 
         '2,400'
       ],
       correctAnswer: 1,
-      explanation: 'The population being estimated is rural households only, so the rate must be computed inside the Rural row: $70/160 = 0.4375$, and $0.4375(12{,}000) = 5{,}250$. Choice A uses $70/800 = 0.0875$, a rate computed over all three regions and then applied to a rural-only population — the mismatched-scaling trap, which badly underestimates because most of the sample is not rural. Choice C scales the Satellite column total, $142/800$, estimating satellite use across all regions. Choice D scales $160/800$, the rural share of the sample, which measures who was surveyed rather than what service they use.'
+      explanation: 'The population being estimated is rural households only, so the rate must be computed inside the Rural row: $70/160 = 0.4375$, and $0.4375(12{,}000) = 5{,}250$. The 1,050 choice uses $70/800 = 0.0875$, a rate computed over all three regions and then applied to a rural-only population — the mismatched-scaling trap, which badly underestimates because most of the sample is not rural. The 2,130 choice scales the Satellite column total, $142/800$, estimating satellite use across all regions. The 2,400 choice scales $160/800$, the rural share of the sample, which measures who was surveyed rather than what service they use.'
     },
     {
       id: 'ds-adv-p2-q2',
@@ -97,7 +97,7 @@ Rates in these tables are usually clean-ish fractions. $105/400$ is a hair over 
         'Clinic C had the lowest improvement rate, and that rate was less than half of Clinic A’s rate.'
       ],
       correctAnswer: 2,
-      explanation: 'Each rate uses its own row total: Clinic A is $156/260 = 60.0$ percent, Clinic B is $189/315 = 60.0$ percent, and Clinic C is $175/375 = 46.7$ percent. A and B tie exactly, even though B treated 55 more patients and therefore recorded 33 more improvements. Choice A is the count-instead-of-rate error: 189 is the largest count only because Clinic B is larger than Clinic A. Choice B computes $156/520 = 30$ percent, which is the Clinic A share of the improved column, then mislabels that reversed conditional as an improvement rate. Choice D correctly identifies Clinic C as lowest but the numeric claim fails: half of 60.0 percent is 30 percent, and 46.7 percent is well above that.'
+      explanation: 'Each rate uses its own row total: Clinic A is $156/260 = 60.0$ percent, Clinic B is $189/315 = 60.0$ percent, and Clinic C is $175/375 = 46.7$ percent. A and B tie exactly, even though B treated 55 more patients and therefore recorded 33 more improvements. The 189-patients choice is the count-instead-of-rate error: 189 is the largest count only because Clinic B is larger than Clinic A. The 30-percent choice computes $156/520 = 30$ percent, which is the Clinic A share of the improved column, then mislabels that reversed conditional as an improvement rate. The less-than-half choice correctly identifies Clinic C as lowest but the numeric claim fails: half of 60.0 percent is 30 percent, and 46.7 percent is well above that.'
     },
     {
       id: 'ds-adv-p2-q3',
@@ -110,7 +110,7 @@ Rates in these tables are usually clean-ish fractions. $105/400$ is a hair over 
         '$1.25$'
       ],
       correctAnswer: 2,
-      explanation: 'Line M: $36/400 = 0.09$. Line N: $15/500 = 0.03$. The ratio is $0.09/0.03 = 3.0$. Choice A divides the raw defect counts, $36/15 = 2.4$, which ignores that Line N inspected 100 more units; the size difference is exactly why the true ratio of rates is larger than the ratio of counts. Choice B inverts the comparison, reporting Line N relative to Line M. Choice D is the ratio of the line sizes, $500/400 = 1.25$, which compares how much was inspected rather than how often defects occurred.'
+      explanation: 'Line M: $36/400 = 0.09$. Line N: $15/500 = 0.03$. The ratio is $0.09/0.03 = 3.0$. The $2.4$ choice divides the raw defect counts, $36/15 = 2.4$, which ignores that Line N inspected 100 more units; the size difference is exactly why the true ratio of rates is larger than the ratio of counts. The $0.3$ choice inverts the comparison, reporting Line N relative to Line M. The $1.25$ choice is the ratio of the line sizes, $500/400 = 1.25$, which compares how much was inspected rather than how often defects occurred.'
     }
   ]
 };

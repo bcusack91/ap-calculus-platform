@@ -281,7 +281,7 @@ All conditions are met. We may proceed with the one-proportion $z$-interval.
           },
           {
             question: 'For the CLT to apply to $\\bar{x}$ with $n = 25$, we need:',
-            options: ['The population to be normal', 'The sample data to show no strong skewness or outliers', '$np \\geq 10$', 'Either A or B'],
+            options: ['Either a normal population or a sample with $np \\geq 10$', 'Either $np \\geq 10$ or no strong skew in the sample', 'Both a normal population and a sample with $np \\geq 10$', 'Either a normal population or no strong skew in the sample'],
             correctAnswer: 3,
             explanation: 'With $15 \\leq n < 30$, the CLT can apply if the sample shows no strong skewness or outliers. If the population is known to be normal, any $n$ works.'
           }

@@ -165,7 +165,7 @@ Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
         questions: [
           {
             question: 'If $f(x) = 2x + 1$ and $g(x) = \\frac{x-1}{2}$, which statement is true?',
-            options: ['$f$ and $g$ are inverse functions', '$f(g(x)) = x + 1$', '$g(f(x)) = 2x$', 'None of the above'],
+            options: ['$f$ and $g$ are inverse functions', '$f(g(x)) = x + 1$', '$g(f(x)) = 2x$', '$f(x) \\cdot g(x) = 1$'],
             correctAnswer: 0,
             explanation: '$f(g(x)) = 2 \\cdot \\frac{x-1}{2} + 1 = (x-1)+1 = x$. $g(f(x)) = \\frac{(2x+1)-1}{2} = x$. Since both equal $x$, they are inverses.'
           },

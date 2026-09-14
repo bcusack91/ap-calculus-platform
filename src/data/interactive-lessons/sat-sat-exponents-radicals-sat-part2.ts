@@ -130,9 +130,9 @@ The SAT often asks you to rewrite an expression. Know these equivalences:
           },
           {
             question: 'What is $\\frac{\\sqrt{32}}{\\sqrt{8}}$?',
-            options: ['$2$', '$4$', '$\\sqrt{4}$', 'Both A and C'],
+            options: ['$4$', '$\\sqrt{2}$', '$2\\sqrt{2}$', '$2$'],
             correctAnswer: 3,
-            explanation: '$\\frac{\\sqrt{32}}{\\sqrt{8}} = \\sqrt{32/8} = \\sqrt{4} = 2$. Both A and C equal 2.'
+            explanation: '$\\frac{\\sqrt{32}}{\\sqrt{8}} = \\sqrt{32/8} = \\sqrt{4} = 2$. The $4$ option forgets the square root: $32/8 = 4$, but $\\sqrt{4} = 2$.'
           }
         ]
       }

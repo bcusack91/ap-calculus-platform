@@ -39,7 +39,7 @@ If the statement had come out false, you would shade the other side instead.`
       question: 'Is the point $(0, 0)$ in the solution set of $y < x + 6$?',
       options: ['No, because $0$ is not less than $6$', 'Yes, because $0 < 6$ is true', 'It is on the boundary line', 'There is not enough information'],
       correctAnswer: 1,
-      explanation: 'The answer is yes. Put $x = 0$ and $y = 0$ into the inequality to get $0 < 0 + 6$, which is $0 < 6$. That statement is true, so the point $(0, 0)$ is inside the shaded region. Since $0$ really is smaller than $6$, the first choice states something that is not true.'
+      explanation: 'The answer is yes. Put $x = 0$ and $y = 0$ into the inequality to get $0 < 0 + 6$, which is $0 < 6$. That statement is true, so the point $(0, 0)$ is inside the shaded region. Since $0$ really is smaller than $6$, the "$0$ is not less than $6$" choice states something that is not true.'
     },
     {
       id: 'lig-core-p2-q2',

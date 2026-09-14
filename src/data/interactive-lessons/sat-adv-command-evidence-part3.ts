@@ -36,7 +36,7 @@ Which choice most effectively uses data from the table to support the student's 
         'Thirty percent of fans used the express lanes.'
       ],
       correctAnswer: 1,
-      explanation: `The conclusion is two-part — shortened for users AND lengthened for everyone else — so the evidence must show the express advantage and the general-lane before/after rise together, as B does. Choice A supports only the first half, and weakly: 4 minutes alone isn't even shown to be short without a comparison. Choice C supports only the second half; by itself the rise could reflect higher attendance, leaving the lanes uncredited and unblamed. Choice D is a base-rate fact that supports neither clause — it tells you how many fans got the benefit, not whether there was one.`
+      explanation: `The conclusion is two-part — shortened for users AND lengthened for everyone else — so the evidence must show the express advantage and the general-lane before/after rise together, as the choice pairing both comparisons does. The express-only choice supports only the first half, and weakly: 4 minutes alone isn't even shown to be short without a comparison. The general-lanes-only choice supports only the second half; by itself the rise could reflect higher attendance, leaving the lanes uncredited and unblamed. The thirty-percent choice is a base-rate fact that supports neither clause — it tells you how many fans got the benefit, not whether there was one.`
     },
     {
       id: 'advce3-q2',
@@ -51,7 +51,7 @@ Which quotation from Osei's essays most effectively illustrates the student's cl
         '"When a student\'s cylinders keep collapsing, I sit down at the next wheel and throw one, slowly, without saying that it is for them."'
       ],
       correctAnswer: 3,
-      explanation: `The claim requires the positive mechanism — arranged, wordless demonstration — not merely the rejection of words. Choice D shows the staging in detail: she positions herself "at the next wheel," slows the throw so it can be watched, and conceals the pedagogy ("without saying that it is for them") — demonstration deliberately arranged to be seen. Choice A is the trap for topic-matchers: it restates her denial that words teach, which is the *premise* the student's claim builds on, not the teaching practice the claim describes. Choice B describes her teacher's method and her resentment of it — wrong person, and the resentment even cuts against the claim's approving frame. Choice C is words about words: a verbal exchange, with no demonstration anywhere in it.`
+      explanation: `The claim requires the positive mechanism — arranged, wordless demonstration — not merely the rejection of words. The next-wheel quotation shows the staging in detail: she positions herself "at the next wheel," slows the throw so it can be watched, and conceals the pedagogy ("without saying that it is for them") — demonstration deliberately arranged to be seen. The center-clay quotation is the trap for topic-matchers: it restates her denial that words teach, which is the *premise* the student's claim builds on, not the teaching practice the claim describes. The silent-teacher quotation describes her teacher's method and her resentment of it — wrong person, and the resentment even cuts against the claim's approving frame. The no-rule quotation is words about words: a verbal exchange, with no demonstration anywhere in it.`
     },
     {
       id: 'advce3-q3',
@@ -66,7 +66,7 @@ Which finding, if true, most directly supports Reyhan's account?`,
         'A thin layer of ash covers the floors of two rooms near the main gate.'
       ],
       correctAnswer: 0,
-      explanation: `Choice A is a package of details each of which the assault account struggles with and the abandonment account predicts: assaults leave weapons and burning, not their absence; emptied storerooms mean residents left with time to pack; doorways bricked "from the outside" mean someone sealed the site and walked away. Choice B shows long occupation and maintenance — true under either account, since a fortress can be repaired for centuries and still fall in an afternoon. Choice C is a rival city's praise of the fortress's wealth, which if anything supplies a motive for assault. Choice D is the wrong-team finding: ash near the gate is the assault account's evidence, and a student citing it would be arguing against Reyhan.`
+      explanation: `The emptied-storerooms finding is a package of details each of which the assault account struggles with and the abandonment account predicts: assaults leave weapons and burning, not their absence; emptied storerooms mean residents left with time to pack; doorways bricked "from the outside" mean someone sealed the site and walked away. The repairs finding shows long occupation and maintenance — true under either account, since a fortress can be repaired for centuries and still fall in an afternoon. The chronicle finding is a rival city's praise of the fortress's wealth, which if anything supplies a motive for assault. The ash finding is the wrong-team finding: ash near the gate is the assault account's evidence, and a student citing it would be arguing against Reyhan.`
     },
     {
       id: 'advce3-q4',
@@ -85,7 +85,7 @@ Which choice most effectively uses data from the table to support the student's 
         'The 800 redeemers who were not loyalty members made no store visits in the prior year.'
       ],
       correctAnswer: 2,
-      explanation: `The conclusion says the discounts went mainly to people who were already customers, so the evidence must characterize who the redeemers were before the campaign — and C does it twice over: 7,400 of 8,200 already enrolled, with a median of 14 prior-year visits. Choice A is the pure headline count: 8,200 redemptions says the program was used, not by whom, and it's the number the chain's own press release would cite. Choice B, if anything, is the chain's evidence — new customers are exactly what the student's conclusion says the program mostly didn't win. Choice D is not in the table: the data give the non-members' count but say nothing about their visit history, and evidence you have to invent supports nothing.`
+      explanation: `The conclusion says the discounts went mainly to people who were already customers, so the evidence must characterize who the redeemers were before the campaign — and the loyalty-members choice does it twice over: 7,400 of 8,200 already enrolled, with a median of 14 prior-year visits. The 8,200-redeemed choice is the pure headline count: 8,200 redemptions says the program was used, not by whom, and it's the number the chain's own press release would cite. The never-shopped choice, if anything, is the chain's evidence — new customers are exactly what the student's conclusion says the program mostly didn't win. The 800-non-members choice is not in the table: the data give the non-members' count but say nothing about their visit history, and evidence you have to invent supports nothing.`
     }
   ]
 }

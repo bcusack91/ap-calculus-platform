@@ -80,7 +80,7 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
         'Section S has the greater median.'
       ],
       correctAnswer: 1,
-      explanation: 'Both distributions are symmetric about 10, which is why the centers match. Section R is piled up near the center: 6 students sit exactly at the mean and only 6 sit two points away. Section S is hollowed out at the center: 16 of its 24 students sit a full 2 points from the mean and none sit at 10. Since standard deviation measures typical distance from the mean, Section S is more spread out. Choice A reverses this by reading the taller center column as more variability. Choice C confuses center with spread — identical means and medians constrain location only. Choice D contradicts the stem, which states both medians are 10.'
+      explanation: 'Both distributions are symmetric about 10, which is why the centers match. Section R is piled up near the center: 6 students sit exactly at the mean and only 6 sit two points away. Section S is hollowed out at the center: 16 of its 24 students sit a full 2 points from the mean and none sit at 10. Since standard deviation measures typical distance from the mean, Section S is more spread out. The Section R choice reverses this by reading the taller center column as more variability. The equal-standard-deviations choice confuses center with spread — identical means and medians constrain location only. The greater-median choice contradicts the stem, which states both medians are 10.'
     },
     {
       id: 'sdi-adv-p2-q2',
@@ -93,7 +93,7 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
         '$87$'
       ],
       correctAnswer: 3,
-      explanation: 'Her total after 9 quizzes is $9(82.6) = 743.4$. To average at least 83.0 over 10 quizzes she needs a total of at least $10(83.0) = 830$, so the tenth score $s$ must satisfy $743.4 + s \\ge 830$, giving $s \\ge 86.6$. Because scores are whole numbers, the least one that works is 87. Choice C is 86.6, the value before rounding, and it is the most-picked wrong answer on this archetype. Choice B rounds 86.6 the wrong direction: at 86 the total is 829.4 and the mean is 82.94, just short of the goal. Choice A is the target mean itself, treated as a single score.'
+      explanation: 'Her total after 9 quizzes is $9(82.6) = 743.4$. To average at least 83.0 over 10 quizzes she needs a total of at least $10(83.0) = 830$, so the tenth score $s$ must satisfy $743.4 + s \\ge 830$, giving $s \\ge 86.6$. Because scores are whole numbers, the least one that works is 87. The $86.6$ choice is the value before rounding, and it is the most-picked wrong answer on this archetype. The $86$ choice rounds 86.6 the wrong direction: at 86 the total is 829.4 and the mean is 82.94, just short of the goal. The $83$ choice is the target mean itself, treated as a single score.'
     },
     {
       id: 'sdi-adv-p2-q3',
@@ -106,7 +106,7 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
         'Mean 38, median 32, standard deviation 5'
       ],
       correctAnswer: 0,
-      explanation: 'Under $x \\to 3x - 4$, both measures of center transform exactly like a data value: the mean becomes $3(14) - 4 = 38$ and the median becomes $3(12) - 4 = 32$. Standard deviation is a distance, so it is stretched by the factor 3 but untouched by the shift: $3(5) = 15$. Choice B subtracts the 4 from the standard deviation too, but shifting every value by the same amount moves the whole data set without changing how spread out it is. Choice C applies only the multiplication to the centers, dropping the $-4$. Choice D leaves the standard deviation alone, treating scaling like a shift.'
+      explanation: 'Under $x \\to 3x - 4$, both measures of center transform exactly like a data value: the mean becomes $3(14) - 4 = 38$ and the median becomes $3(12) - 4 = 32$. Standard deviation is a distance, so it is stretched by the factor 3 but untouched by the shift: $3(5) = 15$. The standard-deviation-11 choice subtracts the 4 from the standard deviation too, but shifting every value by the same amount moves the whole data set without changing how spread out it is. The mean-42 choice applies only the multiplication to the centers, dropping the $-4$. The standard-deviation-5 choice leaves the standard deviation alone, treating scaling like a shift.'
     }
   ]
 };

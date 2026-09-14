@@ -67,7 +67,7 @@ According to the passage, what happens to kelp in places where otters have disap
         `The kelp becomes food for otters instead of urchins.`
       ],
       correctAnswer: 0,
-      explanation: `This is a detail question, so the answer is written in the passage. Sentence three says that where otters are gone, urchins multiply and chew the kelp down to bare rock, which is exactly the first choice. The choice about kelp growing thicker describes what happens when otters ARE present, not when they are gone.`
+      explanation: `This is a detail question, so the answer is written in the passage. Sentence three says that where otters are gone, urchins multiply and chew the kelp down to bare rock, which is exactly the bare-rock choice. The choice about kelp growing thicker describes what happens when otters ARE present, not when they are gone.`
     },
     {
       id: 'central-core-p1-q3',

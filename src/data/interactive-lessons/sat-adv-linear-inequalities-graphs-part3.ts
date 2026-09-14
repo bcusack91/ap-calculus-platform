@@ -37,7 +37,7 @@ Start the clock.`
         '$b + w \\ge 60$, $5b + 8w \\le 400$, $w \\ge 15$'
       ],
       correctAnswer: 2,
-      explanation: '"At most 60 items" gives $b + w \\le 60$. Roses: $5$ per bouquet and $8$ per wreath with at most $400$ gives $5b + 8w \\le 400$ — the rate must attach to its own variable. "At least 15 wreaths" gives $w \\ge 15$. The first option swaps the rose rates between products; the second flips "at least" into $w \\le 15$; the fourth turns the item cap into a minimum. On system-translation items, check each option against ONE phrase at a time — a single reversed symbol is the entire question.'
+      explanation: '"At most 60 items" gives $b + w \\le 60$. Roses: $5$ per bouquet and $8$ per wreath with at most $400$ gives $5b + 8w \\le 400$ — the rate must attach to its own variable. "At least 15 wreaths" gives $w \\ge 15$. The $8b + 5w$ option swaps the rose rates between products; the $w \\le 15$ option flips "at least" into an upper bound; the $b + w \\ge 60$ option turns the item cap into a minimum. On system-translation items, check each option against ONE phrase at a time — a single reversed symbol is the entire question.'
     },
     {
       id: 'advlig3-q3',

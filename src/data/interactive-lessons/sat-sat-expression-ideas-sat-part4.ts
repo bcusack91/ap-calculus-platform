@@ -50,7 +50,7 @@ Trap answers combine the information correctly but **change the emphasis** or **
             question: 'Which best combines these sentences? "The Great Barrier Reef spans 2,300 kilometers. It is the world\'s largest coral reef system. It is visible from space."',
             options: ['The Great Barrier Reef, the world\'s largest coral reef system, spans 2,300 kilometers and is visible from space.', 'Spanning 2,300 kilometers, the Great Barrier Reef is large and visible from space, being the world\'s largest coral reef system.', 'The world\'s largest coral reef system is the Great Barrier Reef, which spans 2,300 kilometers, and it is visible from space.', 'The Great Barrier Reef spans 2,300 kilometers; it is the world\'s largest coral reef system; it is visible from space.'],
             correctAnswer: 0,
-            explanation: 'Option A uses an appositive cleanly, flows well, and preserves all three pieces of information. The other options are either wordy (B), structurally awkward (C), or just a list with semicolons (D).'
+            explanation: 'The "spans 2,300 kilometers and is visible from space" version uses an appositive cleanly, flows well, and preserves all three pieces of information. The other options are either wordy ("Spanning 2,300 kilometers"), structurally awkward ("which spans 2,300 kilometers, and it is"), or just a list with semicolons.'
           },
           {
             question: 'When combining sentences on the SAT, the most important factor is:',

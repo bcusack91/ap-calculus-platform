@@ -255,7 +255,7 @@ Before collecting data, researchers choose $n$ to achieve desired power (typical
           },
           {
             question: 'On the AP exam, you are expected to:',
-            options: ['Calculate power numerically', 'Understand how $n$, $\\alpha$, effect size, and $\\sigma$ affect power conceptually', 'Design studies with specified power', 'None of the above'],
+            options: ['Calculate power numerically for any significance test', 'Understand how $n$, $\\alpha$, effect size, and $\\sigma$ affect power conceptually', 'Design studies that reach a specified power level', 'Memorize power tables for the common significance tests'],
             correctAnswer: 1,
             explanation: 'The AP exam asks conceptual reasoning about power: which factors increase it and why.'
           }

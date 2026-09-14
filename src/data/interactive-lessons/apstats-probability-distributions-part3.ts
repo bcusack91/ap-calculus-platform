@@ -54,9 +54,9 @@ To find the z-score for a given percentile:
           },
           {
             question: '$P(Z > 2.0)$ equals:',
-            options: ['$P(Z < 2.0)$', '$1 - P(Z < 2.0)$', '$P(Z < -2.0)$', 'Both B and C'],
-            correctAnswer: 3,
-            explanation: '$P(Z > 2.0) = 1 - P(Z < 2.0)$, which by symmetry also equals $P(Z < -2.0)$.'
+            options: ['Both $P(Z < 2.0)$ and $1 - P(Z < -2.0)$', 'Both $1 - P(Z < 2.0)$ and $P(Z > -2.0)$', 'Both $1 - P(Z < 2.0)$ and $P(Z < -2.0)$', 'Both $P(Z < 2.0)$ and $P(Z < -2.0)$'],
+            correctAnswer: 2,
+            explanation: '$P(Z > 2.0) = 1 - P(Z < 2.0)$, which by symmetry also equals $P(Z < -2.0)$. Every other pair includes a quantity equal to $P(Z < 2.0) \\approx 0.977$ rather than $0.023$.'
           },
           {
             question: 'The z-score for the 75th percentile is approximately:',

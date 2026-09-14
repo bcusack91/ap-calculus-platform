@@ -50,7 +50,7 @@ A conclusion should:
             question: 'A paragraph discusses how composting reduces landfill waste and produces nutrient-rich soil. Which is the best concluding sentence?',
             options: ['By diverting organic waste from landfills and enriching soil, composting offers a practical solution to two environmental challenges simultaneously.', 'Recycling is another important environmental practice that people should consider.', 'The history of composting dates back thousands of years to ancient civilizations.', 'There are many types of composting bins available at hardware stores.'],
             correctAnswer: 0,
-            explanation: 'A good conclusion synthesizes the paragraph\'s two main points (waste reduction + soil enrichment). Option B introduces a new topic, C goes backward to history, and D introduces commercial information not discussed.'
+            explanation: 'A good conclusion synthesizes the paragraph\'s two main points (waste reduction + soil enrichment). The recycling option introduces a new topic, the ancient-civilizations option goes backward to history, and the hardware-store option introduces commercial information not discussed.'
           },
           {
             question: 'Which would be the best topic sentence for a paragraph about the decline of honeybee populations?',
@@ -105,7 +105,7 @@ A conclusion should:
             question: 'A paragraph discusses three advantages of electric vehicles: lower emissions, cheaper fuel costs, and reduced noise pollution. Which conclusion is best?',
             options: ['By reducing emissions, costs, and noise, electric vehicles offer practical benefits that extend beyond environmental impact.', 'Electric vehicles were first invented in the 1830s by Robert Anderson.', 'There are many types of electric vehicles available today.', 'In conclusion, electric vehicles are good.'],
             correctAnswer: 0,
-            explanation: 'A mentions all three benefits (synthesizes) and adds forward-looking significance. B introduces history (new info). C is vague. D is simplistic and uses the cliché "In conclusion."'
+            explanation: 'The emissions, costs, and noise option mentions all three benefits (synthesizes) and adds forward-looking significance. The 1830s option introduces history (new info). The many-types option is vague. The "electric vehicles are good" option is simplistic and uses the cliché "In conclusion."'
           },
           {
             question: 'A topic sentence for a paragraph about antibiotic resistance should:',

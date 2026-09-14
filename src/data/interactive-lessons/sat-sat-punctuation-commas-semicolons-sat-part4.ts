@@ -42,7 +42,7 @@ A **colon (:)** follows an **independent clause** and introduces:
               'The recipe requires: three, ingredients flour sugar, and eggs.'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "The recipe requires three ingredients" is a complete sentence. A colon introduces the list that follows. In option A, "The ingredients include" is NOT followed by a complete thought before the colon (though some style guides accept it, the SAT prefers a full independent clause).'
+            explanation: 'Correct — "The recipe requires three ingredients" is a complete sentence. A colon introduces the list that follows. In the "ingredients include:" option, "The ingredients include" is NOT followed by a complete thought before the colon (though some style guides accept it, the SAT prefers a full independent clause).'
           },
           {
             question: 'Which sentence correctly uses a colon to introduce an explanation?',

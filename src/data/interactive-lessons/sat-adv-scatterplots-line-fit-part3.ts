@@ -35,7 +35,7 @@ Before each answer:
         'The residual is $8.6$, and the point lies above the line of best fit'
       ],
       correctAnswer: 1,
-      explanation: `The predicted mass is $0.85(12) + 2.4 = 12.6$ grams. The residual is actual $-$ predicted $= 11.0 - 12.6 = -1.6$, and because the actual mass is less than predicted, the point sits BELOW the line. The traps: the first option has the right magnitude with both the sign and the position flipped; the third gets the sign right but then contradicts it, pairing a negative residual with "above" — a pairing that is never possible; the fourth computes $11.0 - 2.4$, subtracting the intercept instead of the full predicted value.`
+      explanation: `The predicted mass is $0.85(12) + 2.4 = 12.6$ grams. The residual is actual $-$ predicted $= 11.0 - 12.6 = -1.6$, and because the actual mass is less than predicted, the point sits BELOW the line. The traps: the $1.6$-above option has the right magnitude with both the sign and the position flipped; the $-1.6$-above option gets the sign right but then contradicts it, pairing a negative residual with "above" — a pairing that is never possible; the $8.6$ option computes $11.0 - 2.4$, subtracting the intercept instead of the full predicted value.`
     },
     {
       id: 'scat-adv-p3-q3',
@@ -48,7 +48,7 @@ Before each answer:
         'The plant operates about $46$ machines in a typical month'
       ],
       correctAnswer: 1,
-      explanation: `In $C = 46m + 890$, the slope $46$ is the predicted change in cost per one-machine increase, and the relationship is one of association. The traps: the first option interprets $46$ as the intercept, when the cost at $m = 0$ is $\\$890$; the third is nearly identical to the correct answer but asserts CAUSATION and the word "exactly" — a line of best fit supports neither; the fourth misreads a rate as a count, treating the slope as a typical value of $m$ itself.`
+      explanation: `In $C = 46m + 890$, the slope $46$ is the predicted change in cost per one-machine increase, and the relationship is one of association. The traps: the no-machines option interprets $46$ as the intercept, when the cost at $m = 0$ is $\\$890$; the causes-exactly option is nearly identical to the correct answer but asserts CAUSATION and the word "exactly" — a line of best fit supports neither; the 46-machines option misreads a rate as a count, treating the slope as a typical value of $m$ itself.`
     },
     {
       id: 'scat-adv-p3-q4',

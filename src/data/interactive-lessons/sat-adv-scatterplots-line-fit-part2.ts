@@ -57,7 +57,7 @@ Dividing by the *sum* of the slopes is a planted option, so check that you subtr
         'Model 1 fits the data better, because its residuals cover a wider range of values'
       ],
       correctAnswer: 1,
-      explanation: `Model 1's residuals run as large as $2.4$ in magnitude; Model 2's never exceed $1.2$. Smaller residuals mean the predictions sit closer to the actual data, so Model 2 is the better fit. The traps: the first option is a genuine arithmetic observation — Model 1's residuals really do sum to $0$ while Model 2's sum to $-0.2$ — but the signed sum of least-squares residuals is always about zero regardless of fit quality, so it distinguishes nothing; the third counts signs, which is equally uninformative; the fourth treats a wider spread of errors as a virtue when it is the definition of a worse fit.`
+      explanation: `Model 1's residuals run as large as $2.4$ in magnitude; Model 2's never exceed $1.2$. Smaller residuals mean the predictions sit closer to the actual data, so Model 2 is the better fit. The traps: the sum-to-zero option is a genuine arithmetic observation — Model 1's residuals really do sum to $0$ while Model 2's sum to $-0.2$ — but the signed sum of least-squares residuals is always about zero regardless of fit quality, so it distinguishes nothing; the equal-fit option counts signs, which is equally uninformative; the wider-range option treats a wider spread of errors as a virtue when it is the definition of a worse fit.`
     },
     {
       id: 'scat-adv-p2-q2',
@@ -70,7 +70,7 @@ Dividing by the *sum* of the slopes is a planted option, so check that you subtr
         'The slope becomes negative, because the new point breaks the positive association'
       ],
       correctAnswer: 1,
-      explanation: `A point at a typical $x$-value has almost no leverage to rotate the line — it sits at the balance point — so the slope barely moves. But it pulls the whole line upward to reduce its own large residual, which raises the intercept. The traps: the first option describes what a point at an EXTREME $x$-value would do (high leverage rotates the line); the third is the common intuition that one point in twenty-six is negligible, when in fact an outlier's influence is exactly what these items test; the fourth overstates the effect — one high point cannot reverse a strong positive association, though it does weaken the correlation.`
+      explanation: `A point at a typical $x$-value has almost no leverage to rotate the line — it sits at the balance point — so the slope barely moves. But it pulls the whole line upward to reduce its own large residual, which raises the intercept. The traps: the sharp-slope-increase option describes what a point at an EXTREME $x$-value would do (high leverage rotates the line); the both-unchanged option is the common intuition that one point in twenty-six is negligible, when in fact an outlier's influence is exactly what these items test; the negative-slope option overstates the effect — one high point cannot reverse a strong positive association, though it does weaken the correlation.`
     },
     {
       id: 'scat-adv-p2-q3',

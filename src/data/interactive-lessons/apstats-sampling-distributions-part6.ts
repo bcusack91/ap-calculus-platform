@@ -222,7 +222,7 @@ The mean household income in a city is $\\mu =$ \\$65,000 with $\\sigma =$ \\$15
             question: 'Which would produce the smallest SE for $\\bar{x}$?',
             options: ['$n = 25, \\sigma = 10$', '$n = 100, \\sigma = 10$', '$n = 25, \\sigma = 20$', '$n = 100, \\sigma = 20$'],
             correctAnswer: 1,
-            explanation: '$SE = \\sigma/\\sqrt{n}$. Option B: $10/10 = 1$. Option A: $10/5 = 2$. Option C: $20/5 = 4$. Option D: $20/10 = 2$. Smallest is 1.'
+            explanation: '$SE = \\sigma/\\sqrt{n}$. $n = 100, \\sigma = 10$: $10/10 = 1$. $n = 25, \\sigma = 10$: $10/5 = 2$. $n = 25, \\sigma = 20$: $20/5 = 4$. $n = 100, \\sigma = 20$: $20/10 = 2$. Smallest is 1.'
           },
           {
             question: 'A factory claims $p = 0.02$ defect rate. A sample of 1000 finds $\\hat{p} = 0.035$. The $z$-score is:',

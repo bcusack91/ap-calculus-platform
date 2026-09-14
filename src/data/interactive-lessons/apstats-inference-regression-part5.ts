@@ -210,9 +210,9 @@ $\\hat{y} = 50$ at $x^* = 10$. The CI for the mean is $(47, 53)$.
           },
           {
             question: 'The extra variability in a prediction interval comes from:',
-            options: ['Sampling error in $a$ and $b$', 'Individual scatter around the regression line ($S$)', 'Both A and B', 'Neither'],
-            correctAnswer: 2,
-            explanation: 'The PI includes both the uncertainty in the line AND the scatter of individuals. The CI for the mean only has the first.'
+            options: ['Sampling error in the estimates $a$ and $b$', 'Individual scatter around the regression line ($S$)', 'Measurement error in the explanatory variable $x$', 'The confidence level chosen for the interval'],
+            correctAnswer: 1,
+            explanation: 'The PI includes both the uncertainty in the line AND the scatter of individuals. The CI for the mean only has the first, so the extra variability in the PI comes from the individual scatter $S$.'
           },
           {
             question: 'At $x^* = \\bar{x}$, the CI for the mean is at its ___ and equals approximately:',

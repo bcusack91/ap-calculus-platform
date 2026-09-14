@@ -115,7 +115,7 @@ Here is the corrected passage:
               'The committee voted, to approve the budget and new park; however they rejected the parking garage proposal.'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "The committee voted to approve the budget and new park" is one independent clause. A semicolon precedes "however" (conjunctive adverb), which is followed by a comma. Option C is a comma splice.'
+            explanation: 'Correct — "The committee voted to approve the budget and new park" is one independent clause. A semicolon precedes "however" (conjunctive adverb), which is followed by a comma. The "budget and new park, however," version is a comma splice.'
           }
         ]
       }

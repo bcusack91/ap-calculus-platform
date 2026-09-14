@@ -70,7 +70,7 @@ The ACT includes several questions that test whether you know the difference bet
             question: '"_____ going to submit _____ applications before _____ deadline." Fill in the blanks with the correct words.',
             options: ['Their, they\'re, there', 'They\'re, their, the', 'There, their, they\'re', 'They\'re, there, their'],
             correctAnswer: 1,
-            explanation: '"They\'re" (they are) going to submit "their" (possessive) applications before "the" deadline. The sentence uses all forms correctly in option B.'
+            explanation: '"They\'re" (they are) going to submit "their" (possessive) applications before "the" deadline. The sentence uses all forms correctly in the "They\'re, their, the" option.'
           }
         ]
       }

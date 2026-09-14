@@ -61,7 +61,7 @@ A **fragment** is a group of words that looks like a sentence but is missing a s
             question: 'Which of the following is a complete sentence?',
             options: ['Although the weather was perfect for sailing.', 'Running along the riverbank at dawn.', 'The committee reviewed the proposal and voted unanimously.', 'Because the project, which had been delayed twice.'],
             correctAnswer: 2,
-            explanation: 'Option C has a clear subject ("The committee") and a complete predicate ("reviewed … and voted …"). The others are fragments — dependent clauses or phrases lacking a main clause.'
+            explanation: 'The sentence about the committee has a clear subject ("The committee") and a complete predicate ("reviewed … and voted …"). The others are fragments — dependent clauses or phrases lacking a main clause.'
           },
           {
             question: '"The concert was canceled, the band could not travel due to the storm." This is an example of a:',

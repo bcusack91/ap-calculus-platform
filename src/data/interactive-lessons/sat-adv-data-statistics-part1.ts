@@ -78,7 +78,7 @@ Four claims, each of which requires a different denominator or a count-versus-ra
         '$52.5$'
       ],
       correctAnswer: 2,
-      explanation: 'The phrase "of the moviegoers who prefer IMAX" restricts the group to the IMAX column, whose total is 240. Of those, 114 are ages 18 to 39, so the answer is $114/240 = 47.5$ percent. Choice B uses the row total 360, which answers the reversed conditional: what percent of 18-to-39-year-olds prefer IMAX. Choice A uses the grand total 900, answering what percent of all moviegoers are both 18 to 39 and prefer IMAX. Choice D is the complement, $126/240$, the percent of IMAX viewers outside that age group.'
+      explanation: 'The phrase "of the moviegoers who prefer IMAX" restricts the group to the IMAX column, whose total is 240. Of those, 114 are ages 18 to 39, so the answer is $114/240 = 47.5$ percent. The $31.7$ choice uses the row total 360, which answers the reversed conditional: what percent of 18-to-39-year-olds prefer IMAX. The $12.7$ choice uses the grand total 900, answering what percent of all moviegoers are both 18 to 39 and prefer IMAX. The $52.5$ choice is the complement, $126/240$, the percent of IMAX viewers outside that age group.'
     },
     {
       id: 'ds-adv-p1-q2',
@@ -91,7 +91,7 @@ Four claims, each of which requires a different denominator or a count-versus-ra
         '$12.0$'
       ],
       correctAnswer: 3,
-      explanation: 'Each rate uses its own row total. Sales: $168/300 = 56.0$ percent. Support: $154/350 = 44.0$ percent. The difference is $56.0 - 44.0 = 12.0$ percentage points. Choice A divides both counts by the grand total 1,000, giving 16.8 percent and 15.4 percent; a shared denominator turns the comparison of rates back into a comparison of counts, which is precisely what the question forbids. Choice B divides both by the Completed column total 511, which answers "of the employees who completed training, what share came from each department." Choice C is the Sales rate alone, the intermediate value.'
+      explanation: 'Each rate uses its own row total. Sales: $168/300 = 56.0$ percent. Support: $154/350 = 44.0$ percent. The difference is $56.0 - 44.0 = 12.0$ percentage points. The $1.4$ choice divides both counts by the grand total 1,000, giving 16.8 percent and 15.4 percent; a shared denominator turns the comparison of rates back into a comparison of counts, which is precisely what the question forbids. The $2.7$ choice divides both by the Completed column total 511, which answers "of the employees who completed training, what share came from each department." The $56.0$ choice is the Sales rate alone, the intermediate value.'
     },
     {
       id: 'ds-adv-p1-q3',
@@ -104,7 +104,7 @@ Four claims, each of which requires a different denominator or a count-versus-ra
         '$70.7$'
       ],
       correctAnswer: 0,
-      explanation: 'The Phone row has only one unknown, so the missing cell is $165 - 96 - 45 = 24$; it checks against the Cancelled column, $24 + 42 + 16 = 82$. The restriction is to cancelled orders, so the denominator is the column total 82: $24/82 = 29.3$ percent. Choice B uses the Phone row total 165, the reversed conditional — what percent of phone orders were cancelled. Choice C uses the grand total 740, answering what share of all orders were both by phone and cancelled. Choice D is the complement, the percent of cancelled orders placed through other channels.'
+      explanation: 'The Phone row has only one unknown, so the missing cell is $165 - 96 - 45 = 24$; it checks against the Cancelled column, $24 + 42 + 16 = 82$. The restriction is to cancelled orders, so the denominator is the column total 82: $24/82 = 29.3$ percent. The $14.5$ choice uses the Phone row total 165, the reversed conditional — what percent of phone orders were cancelled. The $3.2$ choice uses the grand total 740, answering what share of all orders were both by phone and cancelled. The $70.7$ choice is the complement, the percent of cancelled orders placed through other channels.'
     }
   ]
 };

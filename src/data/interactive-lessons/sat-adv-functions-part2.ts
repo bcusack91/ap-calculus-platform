@@ -106,7 +106,7 @@ And when a stem says **fewer than** or **more than**, the boundary is *not* the 
         'The additional revenue, in dollars, produced on day $30$ compared with day $12$'
       ],
       correctAnswer: 3,
-      explanation: '$n(30)$ and $n(12)$ are visitor counts; applying $r$ to each converts them to dollar amounts, and a difference of two dollar amounts is a difference in revenue. The traps: the first option stops one link early — that would be $n(30) - n(12)$, measured in visitors, not dollars. The second option is the signature distractor for this archetype: it would require $r$ and $n$ to be directly proportional, and the stem explicitly mentions a fixed daily credit, so $r(n(30)) - r(n(12))$ need not equal the revenue from $18$ visitors. The third option describes a quotient, not a difference.'
+      explanation: '$n(30)$ and $n(12)$ are visitor counts; applying $r$ to each converts them to dollar amounts, and a difference of two dollar amounts is a difference in revenue. The traps: the additional-visitors option stops one link early — that would be $n(30) - n(12)$, measured in visitors, not dollars. The 18-visitors option is the signature distractor for this archetype: it would require $r$ and $n$ to be directly proportional, and the stem explicitly mentions a fixed daily credit, so $r(n(30)) - r(n(12))$ need not equal the revenue from $18$ visitors. The average-revenue option describes a quotient, not a difference.'
     }
   ]
 };

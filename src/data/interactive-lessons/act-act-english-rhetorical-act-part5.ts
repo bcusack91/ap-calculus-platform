@@ -75,7 +75,7 @@ This turns "mathematician" and "19th century" into an appositive phrase, keeping
               'The volcano, Mount St. Helens, it erupted in 1980 and destroyed 230 square miles.'
             ],
             correctAnswer: 1,
-            explanation: 'Option B uses a participial phrase ("destroying 230 square miles") and puts the name up front, creating a concise sentence. Option A chains "and" awkwardly. C and D are grammatically clunky.'
+            explanation: 'The "Mount St. Helens erupted in 1980" version uses a participial phrase ("destroying 230 square miles") and puts the name up front, creating a concise sentence. The "and it destroyed... and it was" version chains "and" awkwardly. The "a volcano that was Mount St. Helens" and "Mount St. Helens, it erupted" versions are grammatically clunky.'
           },
           {
             question: 'Which revision best eliminates wordiness? "It is important to note that the experiment demonstrated the fact that the hypothesis was correct."',

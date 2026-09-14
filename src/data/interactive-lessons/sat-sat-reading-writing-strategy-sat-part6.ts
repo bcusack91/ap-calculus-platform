@@ -51,7 +51,7 @@ All four answer choices will use information from the notes. The trap is choosin
             question: 'Notes: Prairie dogs live in underground burrow systems called "towns." Some towns contain thousands of individuals. Prairie dogs use distinct alarm calls for different predators—one call for hawks, another for coyotes. Researchers believe this represents a sophisticated language system. Goal: "Emphasize the complexity of prairie dog communication."',
             options: ['"Prairie dogs use distinct alarm calls to differentiate between predators such as hawks and coyotes, which researchers consider a sophisticated language system."', '"Prairie dogs live in large underground burrow systems called towns that can contain thousands of individuals."', '"Researchers have studied prairie dogs to understand their underground living habitat and social behavior."', '"Prairie dogs, which live in underground towns, are found throughout the American Great Plains."'],
             correctAnswer: 0,
-            explanation: 'The goal is about communication complexity. Only option A discusses alarm calls and language sophistication. The other options focus on habitat (B, D) or are too general (C).'
+            explanation: 'The goal is about communication complexity. Only the alarm-call sentence discusses alarm calls and language sophistication. The burrow-towns and Great Plains sentences focus on habitat, and the researchers-have-studied sentence is too general.'
           },
           {
             question: 'When answering rhetorical synthesis questions, what should you do FIRST?',
@@ -119,7 +119,7 @@ All four answer choices will use information from the notes. The trap is choosin
             question: 'Notes: Octopuses have three hearts and blue blood. They can change color and texture in milliseconds. A 2021 study found octopuses throw debris at other octopuses they seem irritated with. Octopuses have been observed using coconut shells as portable shelters. Goal: "Present evidence of intelligent behavior."',
             options: ['"Octopuses demonstrate intelligence by using coconut shells as portable shelters and deliberately throwing debris at other octopuses."', '"With three hearts and blue blood, octopuses are among the most physiologically unique marine animals."', '"Octopuses can change color and texture in milliseconds, a remarkable camouflage ability."', '"A 2021 study documented several notable behaviors in octopuses, including debris throwing."'],
             correctAnswer: 0,
-            explanation: 'The goal is "evidence of intelligent behavior." Tool use (coconut shells) and deliberate social behavior (throwing debris) are intelligence indicators. B discusses physiology, C discusses camouflage, and D is too vague about intelligence.'
+            explanation: 'The goal is "evidence of intelligent behavior." Tool use (coconut shells) and deliberate social behavior (throwing debris) are intelligence indicators. The three-hearts option discusses physiology, the color-change option discusses camouflage, and the 2021-study option is too vague about intelligence.'
           },
           {
             question: 'A student is writing about solar energy. Notes mention cost decreases, efficiency improvements, environmental benefits, and land use concerns. Goal: "Acknowledge a limitation of solar energy." Which type of information should the answer focus on?',

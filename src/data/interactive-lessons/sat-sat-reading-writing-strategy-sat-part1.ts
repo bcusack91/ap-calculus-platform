@@ -49,7 +49,7 @@ Long sentences aren't automatically run-ons. A sentence can be 40+ words and sti
             question: 'Which correctly fixes this run-on? "The museum opened in 1923, it quickly became a cultural landmark."',
             options: ['The museum opened in 1923; it quickly became a cultural landmark.', 'The museum opened in 1923 it quickly became a cultural landmark.', 'The museum opened in 1923, becoming a cultural landmark quickly.', 'The museum, opened in 1923, it quickly became a cultural landmark.'],
             correctAnswer: 0,
-            explanation: 'A semicolon correctly joins two related independent clauses. The original is a comma splice (two independent clauses joined by just a comma). Option C changes the meaning, and D creates a new error.'
+            explanation: 'A semicolon correctly joins two related independent clauses. The original is a comma splice (two independent clauses joined by just a comma). The "becoming a cultural landmark quickly" option changes the meaning, and the "The museum, opened in 1923, it" option creates a new error.'
           },
           {
             question: 'Which is a sentence fragment? (A) "Although she studied for weeks." (B) "She studied for weeks." (C) "She studied for weeks and passed the exam."',

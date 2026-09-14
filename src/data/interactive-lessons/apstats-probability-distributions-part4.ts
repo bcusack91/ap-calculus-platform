@@ -57,7 +57,7 @@ A graph that plots each data value against its expected z-score if the data were
           },
           {
             question: 'The Central Limit Theorem says the sampling distribution is approximately Normal when:',
-            options: ['The population is Normal', '$n \\\\geq 30$', 'The data has no outliers', 'All of the above help'],
+            options: ['Only a Normal population matters; sample size does not', 'Only $n \\geq 30$ matters; population shape does not', 'Only the absence of outliers matters; $n$ does not', 'Normal population, large $n$, and no outliers all help'],
             correctAnswer: 3,
             explanation: 'Normal population (always), large $n$ (CLT), and no outliers (for small $n$) all support using Normal methods.'
           }

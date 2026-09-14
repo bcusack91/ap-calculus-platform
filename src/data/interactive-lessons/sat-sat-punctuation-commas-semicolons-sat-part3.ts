@@ -99,7 +99,7 @@ A **comma splice** is one of the most common errors tested on the SAT. It occurs
               'The students; were tired, they kept studying.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. Option B is also a comma splice (missing semicolon before "however"). Option C incorrectly combines a semicolon with "and."'
+            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. The "tired, however they" option is also a comma splice (missing semicolon before "however"). The "; and," option incorrectly combines a semicolon with "and."'
           },
           {
             question: 'Which sentence correctly uses a semicolon with a conjunctive adverb?',

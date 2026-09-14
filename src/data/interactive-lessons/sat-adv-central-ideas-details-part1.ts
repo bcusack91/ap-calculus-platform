@@ -37,7 +37,7 @@ Which choice best states the main idea of the text?`,
         'Satellite images are an unreliable way to measure a city\'s brightness.'
       ],
       correctAnswer: 1,
-      explanation: `Two-part main idea: the passage grants the funded outcome ("cut lighting energy use per fixture by half") and then supplies the limit and its mechanism ("total nighttime brightness unchanged" because savings bought new lighting). Only choice B carries both halves. Choice A inflates the limit into a failure the text denies — the per-fixture cut is confirmed in the first sentence. Choice C converts a described rebound effect into a recommendation the authors never make; noting that cheaper light meant more light is not advice to keep light expensive. Choice D attacks the instrument, but the passage treats the satellite record as the reliable evidence that revealed the result.`
+      explanation: `Two-part main idea: the passage grants the funded outcome ("cut lighting energy use per fixture by half") and then supplies the limit and its mechanism ("total nighttime brightness unchanged" because savings bought new lighting). Only the choice pairing the per-fixture cut with the savings-financed new lighting carries both halves. The failure choice inflates the limit into a failure the text denies — the per-fixture cut is confirmed in the first sentence. The should-not-convert choice converts a described rebound effect into a recommendation the authors never make; noting that cheaper light meant more light is not advice to keep light expensive. The satellite-unreliability choice attacks the instrument, but the passage treats the satellite record as the reliable evidence that revealed the result.`
     },
     {
       id: 'advci1-q2',
@@ -52,7 +52,7 @@ Which choice best states the main idea of the text?`,
         'Kimura argues that the apparent shift in flowering dates could reflect changes in when collectors arrived rather than only changes in the plants.'
       ],
       correctAnswer: 3,
-      explanation: `Hedge-preserver: the passage's last sentence keeps three possibilities open ("a change in the flowers, a change in the collectors, or some mixture"), and only choice D preserves that hedge ("could reflect... rather than only"). Choice A converts the hedge into the opposite absolute — Kimura shows the record is ambiguous, not that flowering is unchanged; that's the same overreach as choice C, just pointed the other way. Choice C states "the obvious reading" that the complication was introduced to unsettle. Choice B invents intent: the collectors' late arrivals came from rail and mule travel, a logistical fact, not a sampling preference.`
+      explanation: `Hedge-preserver: the passage's last sentence keeps three possibilities open ("a change in the flowers, a change in the collectors, or some mixture"), and only the collector-arrival choice preserves that hedge ("could reflect... rather than only"). The unchanged-since-1900 choice converts the hedge into the opposite absolute — Kimura shows the record is ambiguous, not that flowering is unchanged; that's the same overreach as the proves-warming choice, just pointed the other way. The proves-warming choice states "the obvious reading" that the complication was introduced to unsettle. The deliberately-avoided choice invents intent: the collectors' late arrivals came from rail and mule travel, a logistical fact, not a sampling preference.`
     },
     {
       id: 'advci1-q3',
@@ -67,7 +67,7 @@ Which choice best states the main idea of the text?`,
         'The port should extend the shore-power requirement to ships waiting at anchor.'
       ],
       correctAnswer: 0,
-      explanation: `Relocated-problem passage: the improvement is real but local ("monitors on the wharf recorded the expected drop"), while the exposure that matters persists because the emitting activity sits outside the rule's reach — and the closing sentence's dry phrasing ("where the compliance measurement was taken") signals that the gap between measured success and experienced air is the point. Choice B inflates the limit into a universal null that the wharf monitors refute. Choice C invents evasion: the queue lengthened because "traffic grew," and ships at anchor are waiting for berths, not dodging the rule. Choice D is the recommendation trap — the passage diagnoses a boundary problem without prescribing the fix.`
+      explanation: `Relocated-problem passage: the improvement is real but local ("monitors on the wharf recorded the expected drop"), while the exposure that matters persists because the emitting activity sits outside the rule's reach — and the closing sentence's dry phrasing ("where the compliance measurement was taken") signals that the gap between measured success and experienced air is the point. The no-effect choice inflates the limit into a universal null that the wharf monitors refute. The evade-the-regulation choice invents evasion: the queue lengthened because "traffic grew," and ships at anchor are waiting for berths, not dodging the rule. The extend-the-requirement choice is the recommendation trap — the passage diagnoses a boundary problem without prescribing the fix.`
     }
   ]
 }

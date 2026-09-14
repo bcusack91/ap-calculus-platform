@@ -28,7 +28,7 @@ Run this checklist on every item before you divide anything:
         'Cohort 1, 33.2 percent'
       ],
       correctAnswer: 1,
-      explanation: 'Remove the withdrawals from each row total first. Cohort 1: $180 - 30 = 150$ remaining, so $126/150 = 84.0$ percent. Cohort 2: $210 - 20 = 190$, so $133/190 = 70.0$ percent. Cohort 3: $210 - 30 = 180$, so $120/180 = 66.7$ percent. Cohort 1 is highest at 84.0 percent. Choice A finds the right cohort but divides by the full row total 180, keeping in the very students the question excluded. Choice C makes that same unadjusted-denominator error for Cohort 2, $133/210$. Choice D divides by the Passed column total 379, which answers "of all students who passed, what share were in Cohort 1."'
+      explanation: 'Remove the withdrawals from each row total first. Cohort 1: $180 - 30 = 150$ remaining, so $126/150 = 84.0$ percent. Cohort 2: $210 - 20 = 190$, so $133/190 = 70.0$ percent. Cohort 3: $210 - 30 = 180$, so $120/180 = 66.7$ percent. Cohort 1 is highest at 84.0 percent. The Cohort 1, 70.0 percent choice finds the right cohort but divides by the full row total 180, keeping in the very students the question excluded. The Cohort 2, 63.3 percent choice makes that same unadjusted-denominator error for Cohort 2, $133/210$. The 33.2 percent choice divides by the Passed column total 379, which answers "of all students who passed, what share were in Cohort 1."'
     },
     {
       id: 'ds-adv-p3-q2',
@@ -41,7 +41,7 @@ Run this checklist on every item before you divide anything:
         '$66.0$'
       ],
       correctAnswer: 2,
-      explanation: 'The first quantity restricts to seniors, so its denominator is the Seniors row total 300: $198/300 = 66.0$ percent. The second restricts to Yes responses, so its denominator is the Yes column total 450: $198/450 = 44.0$ percent. The difference is $66.0 - 44.0 = 22.0$ percentage points. The item exists because the two phrasings sound nearly identical while using different margins. Choice B replaces the second quantity with the grand-total share $198/850 = 23.3$ percent, giving $66.0 - 23.3$. Choice A makes that same substitution for the first quantity, giving $44.0 - 23.3$. Choice D is the first percentage alone, the intermediate value.'
+      explanation: 'The first quantity restricts to seniors, so its denominator is the Seniors row total 300: $198/300 = 66.0$ percent. The second restricts to Yes responses, so its denominator is the Yes column total 450: $198/450 = 44.0$ percent. The difference is $66.0 - 44.0 = 22.0$ percentage points. The item exists because the two phrasings sound nearly identical while using different margins. The $42.7$ choice replaces the second quantity with the grand-total share $198/850 = 23.3$ percent, giving $66.0 - 23.3$. The $20.7$ choice makes that same substitution for the first quantity, giving $44.0 - 23.3$. The $66.0$ choice is the first percentage alone, the intermediate value.'
     },
     {
       id: 'ds-adv-p3-q3',
@@ -54,7 +54,7 @@ Run this checklist on every item before you divide anything:
         '4,000'
       ],
       correctAnswer: 0,
-      explanation: 'The cell rate is $96/500 = 0.192$ of all riders. This year that is $0.192(40{,}000) = 7{,}680$ riders; next year it is $0.192(44{,}000) = 8{,}448$. The increase is $8{,}448 - 7{,}680 = 768$, which you can also get in one step as $0.192(4{,}000)$. Choice B is this year’s count and choice C is next year’s count; both are intermediate values, and the question asks for the change between them. Choice D is the growth in total ridership, never multiplied by the rate for this particular cell.'
+      explanation: 'The cell rate is $96/500 = 0.192$ of all riders. This year that is $0.192(40{,}000) = 7{,}680$ riders; next year it is $0.192(44{,}000) = 8{,}448$. The increase is $8{,}448 - 7{,}680 = 768$, which you can also get in one step as $0.192(4{,}000)$. The 7,680 choice is this year’s count and the 8,448 choice is next year’s count; both are intermediate values, and the question asks for the change between them. The 4,000 choice is the growth in total ridership, never multiplied by the rate for this particular cell.'
     },
     {
       id: 'ds-adv-p3-q4',
@@ -67,7 +67,7 @@ Run this checklist on every item before you divide anything:
         '372'
       ],
       correctAnswer: 1,
-      explanation: 'The question specifies the current Plus rate, computed inside the Plus row: $240/300 = 0.80$. Applying it to 500 members gives $0.80(500) = 400$. Choice A simply adds the two current renewal counts, $240 + 170 = 410$, which lets the former Elite members keep their own renewal behavior instead of adopting the Plus rate the question named. Choice C uses the Elite rate $170/200 = 0.85$, the rate of the group being moved rather than the group they are moving into. Choice D uses the overall rate $670/900 = 0.744$, which blends in the much weaker Basic tier.'
+      explanation: 'The question specifies the current Plus rate, computed inside the Plus row: $240/300 = 0.80$. Applying it to 500 members gives $0.80(500) = 400$. The 410 choice simply adds the two current renewal counts, $240 + 170 = 410$, which lets the former Elite members keep their own renewal behavior instead of adopting the Plus rate the question named. The 425 choice uses the Elite rate $170/200 = 0.85$, the rate of the group being moved rather than the group they are moving into. The 372 choice uses the overall rate $670/900 = 0.744$, which blends in the much weaker Basic tier.'
     },
     {
       id: 'ds-adv-p3-q5',
@@ -80,7 +80,7 @@ Run this checklist on every item before you divide anything:
         '$45.3$'
       ],
       correctAnswer: 3,
-      explanation: 'The Cotton row has one unknown, so the missing medium cotton count is $280 - 84 - 76 = 120$; it reconciles with the Medium column, $120 + 90 + 55 = 265$. (The second missing cell, $155 - 84 - 45 = 26$ small silk items, is never needed.) The restriction is to medium items, so the denominator is 265: $120/265 = 45.3$ percent. Choice A uses the Cotton row total 280, the reversed conditional — what percent of cotton items are medium. Choice B uses the grand total 600. Choice C is the complement, the percent of medium items that are not cotton.'
+      explanation: 'The Cotton row has one unknown, so the missing medium cotton count is $280 - 84 - 76 = 120$; it reconciles with the Medium column, $120 + 90 + 55 = 265$. (The second missing cell, $155 - 84 - 45 = 26$ small silk items, is never needed.) The restriction is to medium items, so the denominator is 265: $120/265 = 45.3$ percent. The $42.9$ choice uses the Cotton row total 280, the reversed conditional — what percent of cotton items are medium. The $20.0$ choice uses the grand total 600. The $54.7$ choice is the complement, the percent of medium items that are not cotton.'
     }
   ]
 };

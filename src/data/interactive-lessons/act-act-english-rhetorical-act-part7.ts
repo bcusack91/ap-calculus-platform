@@ -166,7 +166,7 @@ Answer each question with a single key term.
               'Honestly, climate change freaks me out a ton.'
             ],
             correctAnswer: 1,
-            explanation: 'Only option B matches a formal academic register. The other options use slang ("like," "totally," "freaks me out") or casual intensifiers that are inappropriate in academic writing.'
+            explanation: 'Only the sentence about implications across economic, social, and environmental domains matches a formal academic register. The other options use slang ("like," "totally," "freaks me out") or casual intensifiers that are inappropriate in academic writing.'
           }
         ]
       }

@@ -42,7 +42,7 @@ Wrong answers often restate a **supporting detail** as if it were the main idea.
             question: 'A passage discusses how ancient Roman aqueducts used gravity to transport water over long distances, then explains how modern engineers have adopted similar principles in sustainable water systems. Which best states the main idea?',
             options: ['Ancient Roman engineering principles remain relevant in modern sustainable water design', 'Roman aqueducts were more advanced than previously believed', 'Modern water systems are copies of Roman designs', 'Gravity-based water systems are the most efficient'],
             correctAnswer: 0,
-            explanation: 'The passage connects ancient Roman principles to modern applications—that connection IS the main idea. Options B, C, and D are either too narrow or make claims not supported by the passage.'
+            explanation: 'The passage connects ancient Roman principles to modern applications—that connection IS the main idea. The other three options are either too narrow or make claims not supported by the passage.'
           },
           {
             question: 'When a main idea answer choice uses the word "prove" or "definitively establish," you should:',
@@ -111,7 +111,7 @@ Now match your summary to the answer choices. The best match = correct answer.
             question: 'A passage discusses how traditional Indigenous fire management techniques are being adopted by modern wildfire agencies. Which is the best main idea?',
             options: ['Indigenous land management practices offer valuable approaches for modern wildfire prevention', 'Indigenous people used fire for thousands of years', 'Modern agencies have failed to prevent wildfires', 'Fire is a natural part of many ecosystems'],
             correctAnswer: 0,
-            explanation: 'The passage connects Indigenous techniques to modern adoption — that connection IS the main idea. B is too narrow (historical fact only). C makes a negative claim not warranted. D is too broad.'
+            explanation: 'The passage connects Indigenous techniques to modern adoption — that connection IS the main idea. The thousands-of-years option is too narrow (historical fact only). The failed-agencies option makes a negative claim not warranted. The natural-part-of-ecosystems option is too broad.'
           },
           {
             question: 'How can you tell a "supporting detail" answer from a "main idea" answer?',

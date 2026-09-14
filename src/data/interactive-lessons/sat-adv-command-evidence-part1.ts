@@ -41,7 +41,7 @@ Which choice most effectively uses data from the table to support the student's 
         'Teen borrowers more than doubled, from 3,100 to 6,800, while adult borrowers rose only about four percent, from 12,400 to 12,900.'
       ],
       correctAnswer: 3,
-      explanation: `"Concentrated among teens" is a comparative claim — it requires the teen gain AND the adult near-flatness in the same choice, which only D supplies. Choice A is the classic one-row trap: a teen increase alone cannot show concentration, because adults might have doubled too — the choice is true, on-topic, and shaped wrong. Choice B cites the wrong group and, alone, would suggest the policy helped adults. Choice C reports the total, which is the one number that *cannot* localize an effect in either group; totals are how concentration hides.`
+      explanation: `"Concentrated among teens" is a comparative claim — it requires the teen gain AND the adult near-flatness in the same choice, which only the choice pairing both groups supplies. The teen-only choice is the classic one-row trap: a teen increase alone cannot show concentration, because adults might have doubled too — the choice is true, on-topic, and shaped wrong. The adult-only choice cites the wrong group and, alone, would suggest the policy helped adults. The total-borrowers choice reports the total, which is the one number that *cannot* localize an effect in either group; totals are how concentration hides.`
     },
     {
       id: 'advce1-q2',
@@ -56,7 +56,7 @@ Which quotation from The Glass Orchard most effectively illustrates the student'
         '"Her neighbors had long since replaced their hedgerows with wire fencing."'
       ],
       correctAnswer: 1,
-      explanation: `The claim has two required parts: a real change AND a self-narration of continuity. Choice B contains both in one sentence — selling the orchard for new irrigation is the substantial change, and recording "as her mother would have... that the estate remained whole" is the continuity story she tells herself. Choice A is the trap for readers matching topic instead of shape: it shows genuine continuity, which *supports* Mireille's self-description rather than undercutting it. Choice C restates her general attitude with no change and no narration of one. Choice D describes the neighbors — change happening around her, not by her — so neither part of the claim is present.`
+      explanation: `The claim has two required parts: a real change AND a self-narration of continuity. The west-orchard quotation contains both in one sentence — selling the orchard for new irrigation is the substantial change, and recording "as her mother would have... that the estate remained whole" is the continuity story she tells herself. The French-ledgers quotation is the trap for readers matching topic instead of shape: it shows genuine continuity, which *supports* Mireille's self-description rather than undercutting it. The outlast-every-fashion quotation restates her general attitude with no change and no narration of one. The hedgerows quotation describes the neighbors — change happening around her, not by her — so neither part of the claim is present.`
     },
     {
       id: 'advce1-q3',
@@ -71,7 +71,7 @@ Which finding, if true, most directly supports the competition explanation?`,
         'The introduced bee\'s population in the region has grown every year since its arrival.'
       ],
       correctAnswer: 2,
-      explanation: `Choice C is the dissociation: pesticides without the competitor produce no decline, and the competitor without pesticides produces one. That pattern is predicted by the competition account and contradicts the pesticide account — it discriminates. Choice B is the sophisticated near-miss: it *weakens* the rival, but weakening one hypothesis is not positive evidence for the other (a third cause could be at work), and the student asked for support, not for absence of the alternative. Choice A documents the decline both explanations exist to explain. Choice D shows the proposed competitor thriving, which is consistent with competition but equally consistent with the introduced bee simply tolerating whatever else — including pesticides — killed the native.`
+      explanation: `The treated-versus-colonized-meadows finding is the dissociation: pesticides without the competitor produce no decline, and the competitor without pesticides produces one. That pattern is predicted by the competition account and contradicts the pesticide account — it discriminates. The low-pesticide-residue finding is the sophisticated near-miss: it *weakens* the rival, but weakening one hypothesis is not positive evidence for the other (a third cause could be at work), and the student asked for support, not for absence of the alternative. The eighty-percent finding documents the decline both explanations exist to explain. The growing-population finding shows the proposed competitor thriving, which is consistent with competition but equally consistent with the introduced bee simply tolerating whatever else — including pesticides — killed the native.`
     }
   ]
 }

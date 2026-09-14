@@ -46,7 +46,7 @@ Before choosing your answer on any Expression question:
             question: 'A passage about marine conservation uses formal language throughout. Which sentence best fits at the end of a paragraph about coral bleaching? "The implications of a 2°C ocean temperature rise _____."',
             options: ['could prove catastrophic for reef ecosystems that support approximately 25% of all marine species', 'would be really bad for all the fish and stuff living near coral', 'might possibly maybe cause some issues for ocean life', 'are worrisome, concerning, and deeply troubling to scientists and researchers worldwide'],
             correctAnswer: 0,
-            explanation: 'Option A is precise (2°C, 25%), formal, and specific. B is informal, C is hedging with redundant qualifiers, and D is redundant ("worrisome, concerning, and deeply troubling" all mean the same thing).'
+            explanation: 'The "could prove catastrophic" option is precise (2°C, 25%), formal, and specific. The "fish and stuff" option is informal, the "might possibly maybe" option is hedging with redundant qualifiers, and the "worrisome, concerning" option is redundant ("worrisome, concerning, and deeply troubling" all mean the same thing).'
           },
           {
             question: 'When asked "Which choice most effectively accomplishes the goal?" the key word is:',
@@ -102,7 +102,7 @@ Before choosing your answer on any Expression question:
             question: 'Notes: A study found that students who slept 8+ hours scored 15% higher. A study also found sleep-deprived students had 30% more errors. Goal: "emphasize the negative impact of insufficient sleep."',
             options: ['Sleep-deprived students made 30% more errors, underscoring the cognitive cost of insufficient rest.', 'Students who slept 8+ hours scored 15% higher on exams.', 'Two studies examined the relationship between sleep and academic performance.', 'Sleep is important for students.'],
             correctAnswer: 0,
-            explanation: 'The goal is to emphasize NEGATIVE impact. Only A focuses on the negative data (30% more errors) and frames it as a "cognitive cost." B emphasizes the positive. C and D are too general.'
+            explanation: 'The goal is to emphasize NEGATIVE impact. Only the 30%-more-errors sentence focuses on the negative data (30% more errors) and frames it as a "cognitive cost." The 8+ hours sentence emphasizes the positive. The two-studies and "Sleep is important" sentences are too general.'
           },
           {
             question: 'A paragraph about ocean acidification contains this sentence: "Many marine biologists enjoy scuba diving as a hobby." Should the writer keep it?',

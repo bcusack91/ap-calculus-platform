@@ -121,9 +121,9 @@ This is the **conjugate pattern** — the radical disappears!
           },
           {
             question: 'Simplify: $\\frac{\\sqrt{48}}{\\sqrt{3}}$',
-            options: ['$4$', '$\\sqrt{16}$', '$4\\sqrt{3}$', 'Both A and B'],
+            options: ['$16$', '$2$', '$4\\sqrt{3}$', '$4$'],
             correctAnswer: 3,
-            explanation: '$\\frac{\\sqrt{48}}{\\sqrt{3}} = \\sqrt{48/3} = \\sqrt{16} = 4$. Both A and B are correct.'
+            explanation: '$\\frac{\\sqrt{48}}{\\sqrt{3}} = \\sqrt{48/3} = \\sqrt{16} = 4$. The $16$ option forgets the square root: $48/3 = 16$, but $\\sqrt{16} = 4$.'
           },
           {
             question: 'Simplify: $\\frac{x^{1/3} \\cdot x^{1/3}}{x^{-1/3}}$',

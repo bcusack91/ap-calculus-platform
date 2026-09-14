@@ -174,7 +174,7 @@ DISPLAY shows **10**.
               "The DISPLAY statement is missing."
             ],
             correctAnswer: 0,
-            explanation: "The classic mistake is comparing the index variable to the target instead of list[i]. AP pseudocode lists are 1-indexed, ruling out option B."
+            explanation: "The classic mistake is comparing the index variable to the target instead of list[i]. AP pseudocode lists are 1-indexed, ruling out the 0-indexed explanation."
           },
           {
             question: "Two algorithms produce the same output for every input. Algorithm A uses one loop and runs in time proportional to n. Algorithm B uses two nested loops and runs in time proportional to $n^{2}$. For n = 1000, which statement is best supported?",

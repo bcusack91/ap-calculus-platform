@@ -73,9 +73,9 @@ export const satExponentsPart7Data = {
           },
           {
             question: 'Simplify: $\\frac{\\sqrt{50}}{\\sqrt{2}}$',
-            options: ['$5$', '$5\\sqrt{2}$', '$\\sqrt{25}$', 'Both A and C'],
+            options: ['$25$', '$5\\sqrt{2}$', '$\\sqrt{5}$', '$5$'],
             correctAnswer: 3,
-            explanation: '$\\frac{\\sqrt{50}}{\\sqrt{2}} = \\sqrt{50/2} = \\sqrt{25} = 5$. Both A and C are correct since $\\sqrt{25} = 5$.'
+            explanation: '$\\frac{\\sqrt{50}}{\\sqrt{2}} = \\sqrt{50/2} = \\sqrt{25} = 5$. The $25$ option forgets the square root: $50/2 = 25$, but $\\sqrt{25} = 5$.'
           }
         ]
       }

@@ -111,7 +111,7 @@ A **run-on sentence** fuses two independent clauses without proper punctuation:
               'The library, closed early we went to the café instead.'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — A semicolon correctly joins two independent clauses. Option B creates a comma splice. Options A and D place commas incorrectly.'
+            explanation: 'Correct — A semicolon correctly joins two independent clauses. The "closed early, we went" option creates a comma splice. The "we went, to the café" and "The library, closed early" options place commas incorrectly.'
           },
           {
             question: 'How many independent clauses are in this sentence? "Although it rained all morning, the game continued, and the fans stayed in their seats."',

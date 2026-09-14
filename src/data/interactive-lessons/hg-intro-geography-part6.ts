@@ -207,7 +207,7 @@ Use that skeleton on every "explain" prompt.
               "The U.S. has larger arable land than Vietnam."
             ],
             correctAnswer: 1,
-            explanation: "Only option B provides cause→effect: mechanization replaces labor → fewer farmers per arable $km^{2}$. Defining the term or stating a fact does not satisfy the *explain* verb."
+            explanation: "Only the mechanization response provides cause→effect: mechanization replaces labor → fewer farmers per arable $km^{2}$. Defining the term or stating a fact does not satisfy the *explain* verb."
           }
         ]
       }

@@ -89,7 +89,7 @@ So if $PA$ and $PB$ are tangent to a circle at $A$ and $B$, then $PA = PB$.
             question: 'A tangent segment from an external point to a circle has length $8$. The radius is $6$. What is the distance from the external point to the center?',
             options: ['$14$', '$2$', '$10$', '$\\sqrt{100}$'],
             correctAnswer: 2,
-            explanation: 'Right triangle with legs $8$ (tangent) and $6$ (radius): $d = \\sqrt{8^2 + 6^2} = \\sqrt{64+36} = \\sqrt{100} = 10$. Note that options C and D are the same value.'
+            explanation: 'Right triangle with legs $8$ (tangent) and $6$ (radius): $d = \\sqrt{8^2 + 6^2} = \\sqrt{64+36} = \\sqrt{100} = 10$. Note that $10$ and $\\sqrt{100}$ are the same value.'
           }
         ]
       }

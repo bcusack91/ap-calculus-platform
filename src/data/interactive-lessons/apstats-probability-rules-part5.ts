@@ -237,7 +237,7 @@ Since $P(\\text{Promoted}|\\text{Degree}) = P(\\text{Promoted}|\\text{No Degree}
           },
           {
             question: '$P(A) = 0.7$, events are independent. $P(A\\text{\' }) \\cdot P(B) =$',
-            options: ['$0.3 \\cdot P(B)$', '$0.7 \\cdot P(B)$', '$P(A\\text{\' } \\cap B)$', 'Both A and C'],
+            options: ['Both $0.7 \\cdot P(B)$ and $P(A \\cap B)$', 'Both $0.3 \\cdot P(B)$ and $P(A \\cap B)$', 'Both $0.7 \\cdot P(B)$ and $P(A\\text{\' } \\cap B)$', 'Both $0.3 \\cdot P(B)$ and $P(A\\text{\' } \\cap B)$'],
             correctAnswer: 3,
             explanation: '$P(A\\text{\' }) = 0.3$. Since $A$ and $B$ are independent, $A\\text{\' }$ and $B$ are also independent: $P(A\\text{\' } \\cap B) = P(A\\text{\' }) \\cdot P(B) = 0.3 \\cdot P(B)$.'
           },

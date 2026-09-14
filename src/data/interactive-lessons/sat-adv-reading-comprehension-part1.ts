@@ -39,7 +39,7 @@ Which choice best describes the function of the sentence "The doubling may be re
         'It summarizes the survey\'s note about how farms entered the study.'
       ],
       correctAnswer: 2,
-      explanation: `Strategic concession: by granting that the measured doubling may be genuine, the author narrows the coming objection to attribution — "whose work it is" — where it can't be answered by re-checking the data. The receipt is the next sentence, which attacks only "the survey's design." Choice A mistakes concession for retraction; "may be real" keeps the finding alive, which is the opposite of withdrawing it. Choice B overstates in the other direction — the passage questions whether the hedgerows *caused* the diversity, never whether they could. Choice D attaches the sentence to the wrong material: the volunteering note precedes it and is the objection's evidence, not what this sentence restates.`
+      explanation: `Strategic concession: by granting that the measured doubling may be genuine, the author narrows the coming objection to attribution — "whose work it is" — where it can't be answered by re-checking the data. The receipt is the next sentence, which attacks only "the survey's design." The retraction choice mistakes concession for retraction; "may be real" keeps the finding alive, which is the opposite of withdrawing it. The no-effect choice overstates in the other direction — the passage questions whether the hedgerows *caused* the diversity, never whether they could. The summary choice attaches the sentence to the wrong material: the volunteering note precedes it and is the objection's evidence, not what this sentence restates.`
     },
     {
       id: 'advrc1-q2',
@@ -58,7 +58,7 @@ Based on the texts, how would the author of Text 2 most likely respond to the ev
         'By claiming that drivers do not respond to prices.'
       ],
       correctAnswer: 0,
-      explanation: `Text 2 concedes the measured result in so many words ("The zone's clock improved") and objects to the measurement's boundary: the twenty percent excludes the 4 a.m. deliveries and the ring-road lengthening it may have created. That's the accept-the-data, question-the-boundary shape — choice A. Choice B is the reflex denial that hard cross-text items are built to punish; Text 2 never disputes the number. Choice D fails doubly: rerouted deliveries and thinned ride-hail trips *are* drivers responding to prices, so Text 2's own evidence assumes the responsiveness. Choice C converts a measurement critique into a policy verdict — Text 2 says the twenty percent doesn't contain the full answer, not that the answer is repeal.`
+      explanation: `Text 2 concedes the measured result in so many words ("The zone's clock improved") and objects to the measurement's boundary: the twenty percent excludes the 4 a.m. deliveries and the ring-road lengthening it may have created. That's the accept-the-data, question-the-boundary shape — the displaced-rather-than-eliminated choice. The delays-did-not-fall choice is the reflex denial that hard cross-text items are built to punish; Text 2 never disputes the number. The drivers-do-not-respond choice fails doubly: rerouted deliveries and thinned ride-hail trips *are* drivers responding to prices, so Text 2's own evidence assumes the responsiveness. The repeal choice converts a measurement critique into a policy verdict — Text 2 says the twenty percent doesn't contain the full answer, not that the answer is repeal.`
     },
     {
       id: 'advrc1-q3',
@@ -73,7 +73,7 @@ Which choice best describes the function of the sentence "The objection is arith
         'It explains the formula by which the index weights recent games.'
       ],
       correctAnswer: 1,
-      explanation: `Concede-and-redirect: the author gives the critics their arithmetic in full, which moves the disagreement to the only remaining ground — what the number is *for* — where the next sentences win it ("exists to forecast the next game, not to reward the last one"). The receipt is "It also mistakes," which tells you the concession was a setup. Choice A reads the concession as agreement with the critics' conclusion; the passage defends the index, so the trap reverses the author's side. Choice C concedes the wrong thing — forecasting is the capacity the passage asserts, not surrenders. Choice D mistakes a rhetorical move for exposition; no formula appears anywhere in the text.`
+      explanation: `Concede-and-redirect: the author gives the critics their arithmetic in full, which moves the disagreement to the only remaining ground — what the number is *for* — where the next sentences win it ("exists to forecast the next game, not to reward the last one"). The receipt is "It also mistakes," which tells you the concession was a setup. The should-be-revised choice reads the concession as agreement with the critics' conclusion; the passage defends the index, so the trap reverses the author's side. The cannot-forecast choice concedes the wrong thing — forecasting is the capacity the passage asserts, not surrenders. The formula choice mistakes a rhetorical move for exposition; no formula appears anywhere in the text.`
     }
   ]
 }
