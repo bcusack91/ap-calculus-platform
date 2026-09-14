@@ -89,10 +89,10 @@ If an MCAT answer choice pairs a migratory, far-flung derivative (pigment cell i
             explanation: `Lung lining, liver, and pancreas all bud from the endodermal gut tube. In the wrong choices: dermis and adrenal cortex are mesoderm, and epidermis is ectoderm. Note the precision the MCAT expects — endoderm gives the epithelial LININGS of gut and airway; the surrounding smooth muscle is mesodermal.`
           },
           {
-            question: `In an experiment, the notochord is surgically removed from an early embryo before neurulation. The most likely direct consequence is:`,
-            options: [`The gut tube fails to form because its endodermal precursor is lost`, `Somites differentiate into neurons in place of muscle`, `The limb buds fail to form their apical ridges`, `The overlying ectoderm fails to become neural plate tissue`],
+            question: `In a chick embryo, the notochord is removed at the early neural plate stage, after neural induction but before the neural tube closes. Which cell population of the developing neural tube is most likely to be missing?`,
+            options: [`Dorsal sensory interneurons, because roof-plate BMP signaling is lost`, `Neural crest cells, because the neural folds can no longer fuse`, `Roof plate cells, because the notochord is the source of dorsal BMP`, `Ventral motor neurons, because Shh no longer induces the floor plate`],
             correctAnswer: 3,
-            explanation: `The notochord (mesoderm) is the inducer that signals the overlying ectoderm to become neural plate; without the signal, that ectoderm defaults toward epidermis and the neural tube does not form properly, disrupting CNS development. The notochord is not the gut precursor (endoderm is), it does not convert somites into neurons, and the limb bud's apical ectodermal ridge is induced by the limb's own mesenchyme, not by the notochord.`
+            explanation: `The neural plate was already induced, so neural tissue still forms. What the notochord still supplies at this stage is Sonic hedgehog (Shh), which induces the floor plate at the ventral midline; the floor plate and graded Shh then specify ventral cell types such as motor neurons. Without the notochord, the tube lacks a floor plate and ventral motor neurons. The dorsal side is patterned by BMP from the overlying surface ectoderm, not the notochord, so the roof plate and the dorsal interneurons it helps specify are untouched. Neural crest arises from the dorsal neural folds independently of notochord Shh.`
           },
           {
             question: `Which derivative pair correctly matches neural crest cells?`,
