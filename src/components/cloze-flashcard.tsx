@@ -114,10 +114,10 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
       {isRevealed && (
         <div className="grid grid-cols-4 gap-3">
           {([
-            { key: 'again', label: 'Again', time: intervals?.again ?? '1m', cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900' },
-            { key: 'hard', label: 'Hard', time: intervals?.hard ?? '3m', cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900' },
-            { key: 'good', label: 'Good', time: intervals?.good ?? '5m', cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900' },
-            { key: 'easy', label: 'Easy', time: intervals?.easy ?? '1d', cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900' },
+            { key: 'again', label: 'Again', time: intervals?.again ?? '1m', cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900 dark:bg-red-950/50 dark:hover:bg-red-900/60 dark:border-red-700 dark:text-red-200' },
+            { key: 'hard', label: 'Hard', time: intervals?.hard ?? '3m', cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900 dark:bg-orange-950/50 dark:hover:bg-orange-900/60 dark:border-orange-700 dark:text-orange-200' },
+            { key: 'good', label: 'Good', time: intervals?.good ?? '5m', cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900 dark:bg-green-950/50 dark:hover:bg-green-900/60 dark:border-green-700 dark:text-green-200' },
+            { key: 'easy', label: 'Easy', time: intervals?.easy ?? '1d', cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900 dark:bg-blue-950/50 dark:hover:bg-blue-900/60 dark:border-blue-700 dark:text-blue-200' },
           ] as const).map((b) => (
             <button
               key={b.key}
