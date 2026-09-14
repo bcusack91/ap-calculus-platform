@@ -38,40 +38,40 @@ export const mcatOrgChemPart2Data = {
       exercise: {
         questions: [
           {
-            question: `A 3° alkyl halide treated with NaOH in water would most likely undergo:`,
-            options: [`SN1 and E1 (competing)`, `SN2`, `E2 only`, `No reaction`],
-            correctAnswer: 0,
-            explanation: `3° substrate blocks SN2 (too sterically hindered). Water is polar protic. NaOH is both nucleophile and base but not bulky. Both SN1 and E1 proceed through the same carbocation intermediate. Heat favors E1.`
+            question: `A 3° alkyl halide treated with concentrated NaOH in ethanol with heat would most likely undergo:`,
+            options: [`SN1 predominates`, `SN2 predominates`, `E2 predominates`, `E1 predominates`],
+            correctAnswer: 2,
+            explanation: `3° substrate blocks SN2 (too sterically hindered). Hydroxide is a STRONG base, and concentrated base in ethanol with heat removes a $\\beta$-hydrogen in a single concerted E2 step, faster than the substrate can ionize to the carbocation that SN1 and E1 both require. Contrast a 3° halide with only a weak base/nucleophile such as methanol, where no strong base is present and SN1/E1 competition through a carbocation is the expected answer.`
           },
           {
             question: `An SN2 reaction on a chiral substrate produces:`,
-            options: [`Inversion of configuration`, `Retention of configuration`, `Racemic mixture`, `Random configuration`],
+            options: [`Inversion of configuration`, `Retention of configuration`, `Complete racemization`, `Random configuration`],
             correctAnswer: 0,
             explanation: `SN2 proceeds through a single backside-attack step, giving 100% inversion of stereochemistry at the carbon center (Walden inversion).`
           },
           {
             question: `Which condition most strongly favors E2 over SN2 for a secondary alkyl halide?`,
-            options: [`Strong bulky base and heat`, `Weak nucleophile in polar protic solvent`, `Strong nucleophile in DMSO at low temperature`, `Dilute aqueous acid`],
+            options: [`Bulky strong base in t-BuOH with heat`, `Weak nucleophile in polar protic solvent`, `Strong nucleophile in DMSO at low temperature`, `Dilute aqueous acid at room temperature`],
             correctAnswer: 0,
             explanation: `Bulky strong base and heat strongly bias elimination, especially for secondary/tertiary substrates.`
           },
           {
             question: `The rate law $rate=k[substrate]$ is consistent with:`,
-            options: [`SN2 only`, `SN1 or E1`, `E2 only`, `No substitution/elimination mechanism`],
+            options: [`SN2 only`, `SN1 or E1`, `E2 only`, `SN2 or E2`],
             correctAnswer: 1,
-            explanation: `SN1 and E1 are unimolecular in the rate-determining step, so their rates depend only on substrate concentration.`
+            explanation: `SN1 and E1 are unimolecular in the rate-determining step, so their rates depend only on substrate concentration. SN2 and E2 are bimolecular: their rates also depend on the nucleophile or base concentration.`
           },
           {
             question: `Switching the solvent for an SN2 reaction from a polar protic solvent (e.g., water) to a polar aprotic solvent (e.g., DMSO) generally:`,
-            options: [`Speeds up the reaction by freeing the nucleophile from a solvation shell`, `Slows the reaction by stabilizing the carbocation`, `Has no effect on SN2 rate`, `Converts the mechanism to SN1`],
+            options: [`Speeds it up by leaving the nucleophile poorly solvated`, `Slows it by stabilizing a carbocation intermediate`, `Has no effect, because SN2 rates ignore the solvent`, `Slows it by caging the nucleophile in hydrogen bonds`],
             correctAnswer: 0,
-            explanation: `Polar protic solvents hydrogen-bond to (cage) the nucleophile, lowering its reactivity. Polar aprotic solvents solvate the cation but leave the nucleophile "naked" and far more reactive, accelerating SN2. This is why DMSO, DMF, and acetone favor SN2.`
+            explanation: `Polar protic solvents hydrogen-bond to (cage) the nucleophile, lowering its reactivity. Polar aprotic solvents solvate the cation but leave the nucleophile "naked" and far more reactive, accelerating SN2. This is why DMSO, DMF, and acetone favor SN2. An aprotic solvent has no O-H or N-H to hydrogen-bond with, and SN2 has no carbocation intermediate to stabilize.`
           },
           {
             question: `For an E2 elimination, the leaving group and the $\\beta$-hydrogen must be:`,
-            options: [`Anti-periplanar (180° dihedral angle) in the transition state`, `Syn (eclipsed) to each other`, `On the same carbon atom`, `Separated by at least three carbons`],
+            options: [`Anti-periplanar (180° dihedral)`, `Gauche to each other (60° dihedral)`, `On the same carbon atom (geminal)`, `Separated by at least three carbons`],
             correctAnswer: 0,
-            explanation: `E2 is concerted and requires anti-periplanar geometry so the developing $\\pi$ bond's orbitals align as the C-H and C-LG bonds break. In rigid systems (e.g., substituted cyclohexanes) both groups must be axial, which controls which alkene forms.`
+            explanation: `E2 is concerted and requires anti-periplanar geometry (a 180° dihedral angle in the transition state) so the developing $\\pi$ bond's orbitals align as the C-H and C-LG bonds break. A gauche arrangement does not align those orbitals, and the two groups must sit on ADJACENT carbons, since the new $\\pi$ bond forms between them. In rigid systems (e.g., substituted cyclohexanes) both groups must be axial, which controls which alkene forms.`
           }
         ]
       }
@@ -95,27 +95,27 @@ export const mcatOrgChemPart2Data = {
 <details>
 <summary><b>Example 1: Determine mechanism from substrate + reagent</b></summary>
 
-**Question:** Predict the main product(s) when (R)-2-bromopropane is treated with potassium ethoxide (KOEt) in ethanol at 75°C:
+**Question:** Predict the main product(s) when 2-bromopropane is treated with potassium ethoxide (KOEt) in ethanol at 75°C:
 <pre>
        $CH_{3}$
        |
-(R)-H-C-Br  + KOEt (excess) → ?
+    H-C-Br  + KOEt (excess) → ?
        |
        $CH_{3}$
 </pre>
 
 **Solution:**
 1. **Substrate class**: 2° (secondary) – can undergo SN2, E2, SN1, or E1
-2. **Nucleophile/Base**: KOEt is a **strong, bulky base**
-3. **Solvent**: Ethanol – polar protic but alkoxide is NOT solvated as well
+2. **Nucleophile/Base**: KOEt is a **strong base** (not bulky)
+3. **Solvent**: Ethanol – polar protic (the conjugate-acid solvent of the base)
 4. **Temperature**: 75°C – high temperature favors elimination
 
 **Decision**:
-- Strong bulky base + heat → **E2 mechanism** (elimination dominates)
-- SN2 is suppressed because KOEt is too bulky for backside attack
-- Product: Mainly **2-methylpropene (Hofmann/alkene product)** with R/S stereochemistry lost (now a C=C double bond)
+- Strong base + heat on a 2° substrate → **E2 mechanism** (elimination dominates)
+- SN2 is only a minor competitor, because heat and a strong base favor elimination at a 2° carbon
+- Product: Mainly **propene** (the only alkene this substrate can form)
 
-**MCAT Strategy**: The phrase "strong bulky base + heat" is shorthand for E2. Prioritize substrate class first, then base strength, bulk, and temperature.
+**MCAT Strategy**: A strong base plus heat on a 2° substrate is shorthand for E2, even when the base is not bulky; a bulky base (t-BuOK) pushes further toward elimination and the less-substituted (Hofmann) alkene. Prioritize substrate class first, then base strength, bulk, and temperature.
 </details>
 
 <details>
@@ -147,7 +147,7 @@ export const mcatOrgChemPart2Data = {
 </details>
 
 <details>
-<summary><b>Example 3: Why SN2 fails on bulky substrates</b></summary>
+<summary><b>Example 3: SN2 on a hindered 2° substrate</b></summary>
 
 **Question:** (1S,2S)-1-bromo-2-methylcyclohexane is treated with KCN (strong nucleophile) in DMSO. What happens?
 <pre>
@@ -159,15 +159,15 @@ export const mcatOrgChemPart2Data = {
 </pre>
 
 **Solution**:
-1. **Substrate**: 2° but IN A RING with bulky neighbors (gem-dimethyl effects from fused rings, methyl group on C2)
+1. **Substrate**: 2° but IN A RING, with a methyl group on the adjacent carbon (C2)
 2. **Nucleophile**: $CN^{-}$ – strong, small, polar aprotic solvent
 3. **Expected mechanism**: SN2 (good nucleophile + aprotic solvent)
 
-**BUT**: The ring + adjacent methyl makes backside attack difficult. **SN2 is heavily retarded**.
-- Minor: SN2 (nitrile product with config inversion, if it happens)
-- Major: **E2 or SN1** (ring structure forces competing pathways)
+**BUT**: The ring + adjacent methyl makes backside attack slower. **SN2 is retarded but still wins**, because $CN^{-}$ is a weak base and DMSO does not support a 2° carbocation.
+- Major: **SN2** (nitrile product with config inversion at C1)
+- Minor: E2 (competes more than on an unhindered substrate)
 
-**MCAT Strategy**: Even ideal SN2 conditions (strong nucleophile + aprotic) fail if substrate is too sterically hindered. Sometimes ring systems and bulky groups suppress SN2 entirely.
+**MCAT Strategy**: Steric hindrance strongly disfavors SN2 at 3° carbons and slows it at hindered 2° centers. With a strong, weakly basic nucleophile in a polar aprotic solvent, a hindered 2° substrate still reacts mainly by SN2.
 </details>
 
 <details>

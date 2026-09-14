@@ -69,25 +69,25 @@ Below the pKa the protonated form dominates; above it, the deprotonated form. At
           },
           {
             question: `Trifluoroacetic acid (pKa 0.2) is about 30,000 times more acidic than acetic acid (pKa 4.8) because:`,
-            options: [`Fluorine donates electrons by resonance`, `The three fluorines withdraw electron density inductively, stabilizing the carboxylate's negative charge`, `The C-F bonds ionize in water`, `Trifluoroacetate is aromatic`],
+            options: [`Fluorine donates lone-pair density by resonance`, `The fluorines withdraw electron density inductively`, `The C-F bonds are weaker than the C-H bonds they replace`, `Trifluoroacetate is stabilized by aromaticity`],
             correctAnswer: 1,
-            explanation: `Induction: highly electronegative fluorines pull density through the sigma framework, dispersing the conjugate base's charge. Fluorine's lone-pair donation is negligible here (no pi system adjacent to F), and the effect would fade if the fluorines were moved farther from the carboxylate — the distance dependence is a favorite follow-up question.`
+            explanation: `Induction: highly electronegative fluorines pull density through the sigma framework, dispersing the conjugate base's negative charge and stabilizing the carboxylate. Fluorine's lone-pair donation is negligible here (no pi system adjacent to F) and would destabilize the anion anyway, and the effect would fade if the fluorines were moved farther from the carboxylate — the distance dependence is a favorite follow-up question. C-F bonds are in fact stronger than C-H bonds and are not the bonds that ionize, and trifluoroacetate has no ring, so aromaticity cannot apply.`
           },
           {
             question: `The nitrogen of acetamide is far less basic than the nitrogen of ethylamine because:`,
-            options: [`Acetamide's nitrogen is more electronegative`, `Acetamide is sterically blocked`, `The amide lone pair is delocalized into the carbonyl and is not available for protonation`, `Ethylamine's nitrogen is sp hybridized`],
+            options: [`Acetamide's nitrogen is more electronegative`, `The acetyl group sterically blocks the nitrogen`, `The nitrogen lone pair is delocalized into the C=O`, `Ethylamine's lone pair is in an sp orbital`],
             correctAnswer: 2,
-            explanation: `Amide resonance ties up the nitrogen lone pair (the same delocalization that makes peptide bonds planar and hydrolysis slow). Protonating that nitrogen would cost the resonance energy, so amides protonate — weakly, and on oxygen — only in strong acid. Basicity = lone pair availability.`
+            explanation: `Amide resonance ties up the nitrogen lone pair (the same delocalization that makes peptide bonds planar and hydrolysis slow), so it is not available for protonation. Protonating that nitrogen would cost the resonance energy, so amides protonate — weakly, and on oxygen — only in strong acid. Basicity = lone pair availability. Any change in nitrogen's effective electronegativity is minor next to the resonance that ties up the lone pair, an acetyl group is too small to block protonation, and ethylamine's nitrogen is sp3 (an sp lone pair would make it LESS basic, not more).`
           },
           {
             question: `Pyrrole's nitrogen is essentially non-basic while pyridine's nitrogen is a reasonable base. The key difference is that:`,
-            options: [`Pyrrole's nitrogen lone pair is part of the aromatic sextet, so protonation would destroy aromaticity; pyridine's lone pair lies in the ring plane, outside the pi system`, `Pyridine has more nitrogen atoms`, `Pyrrole's nitrogen is sp3 hybridized`, `Pyridine is anti-aromatic`],
+            options: [`Pyrrole's lone pair is part of its aromatic sextet`, `Pyridine's lone pair sits in a p orbital perpendicular to the ring`, `Pyrrole's lone pair is held in an sp3 hybrid orbital`, `Pyrrole's lone pair is sterically shielded by ring H atoms`],
             correctAnswer: 0,
-            explanation: `Pyrrole needs its N lone pair to complete the 6 pi-electron aromatic count — using it for a proton wrecks the ring's stability. Pyridine's sextet is complete without the lone pair, which points outward in an sp2 orbital, free to grab a proton (conjugate acid pKa 5.2). Apply the same test to histidine's imidazole and the nucleobases.`
+            explanation: `Pyrrole needs its N lone pair to complete the 6 pi-electron aromatic count — using it for a proton would destroy aromaticity and wreck the ring's stability. Pyridine's sextet is complete without the lone pair, which points outward in an sp2 orbital in the ring plane, free to grab a proton (conjugate acid pKa 5.2) — not in a p orbital perpendicular to the ring. Pyrrole's nitrogen is sp2 with its lone pair in a p orbital (an sp3 lone pair would be basic, as in an amine), and a flat five-membered ring offers no steric shield. Apply the same test to histidine's imidazole and the nucleobases.`
           },
           {
             question: `At physiological pH 7.4, the side chain carboxyl of aspartate (pKa ~3.9) and the side chain amine of lysine (conjugate acid pKa ~10.5) exist predominantly as:`,
-            options: [`Both neutral`, `Carboxyl protonated (neutral); amine deprotonated (neutral)`, `Carboxylate anion and ammonium cation, respectively`, `Both positively charged`],
+            options: [`Aspartate: neutral COOH; lysine: neutral NH2`, `Aspartate: neutral COOH; lysine: NH3+ cation`, `Aspartate: COO- anion; lysine: NH3+ cation`, `Aspartate: COO- anion; lysine: neutral NH2`],
             correctAnswer: 2,
             explanation: `Henderson-Hasselbalch: pH 7.4 is ~3.5 units ABOVE aspartate's pKa (deprotonated, -1 charge) and ~3 units BELOW lysine's conjugate-acid pKa (protonated, +1 charge). Rule: pH above pKa = deprotonated form dominates, each unit of separation is a factor of ten.`
           }

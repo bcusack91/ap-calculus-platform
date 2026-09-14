@@ -64,15 +64,15 @@ Oxygen and sulfur are ignored. Each ring or pi bond counts once; a benzene ring 
           },
           {
             question: `Tert-butylamine, $(CH_3)_3C$-$NH_2$, is classified as:`,
-            options: [`A primary amine, because nitrogen bears exactly one carbon substituent`, `A tertiary amine, because the attached carbon is tertiary`, `A quaternary amine`, `A secondary amine`],
+            options: [`A primary amine, since nitrogen bears just one carbon`, `A tertiary amine, since the attached carbon is tertiary`, `A secondary amine, since nitrogen carries two hydrogens`, `A quaternary amine, since nitrogen has four electron groups`],
             correctAnswer: 0,
-            explanation: `Amine classification counts R groups ON NITROGEN: one here, so primary — even though that R group is a tertiary carbon. Alcohols and halides classify by the carbon instead. The MCAT plants this asymmetry deliberately.`
+            explanation: `Amine classification counts R groups ON NITROGEN: one here, so primary — even though that R group is a tertiary carbon. Alcohols and halides classify by the carbon instead. The MCAT plants this asymmetry deliberately. Hydrogens on nitrogen are not what is counted, and a lone pair is not a substituent — a quaternary ammonium ion needs four carbon groups on N.`
           },
           {
             question: `Which pair correctly distinguishes an ester from an ether?`,
-            options: [`Ester: C-O-C; ether: -CO-O-`, `Both contain a carbonyl; they differ in ring size`, `Ester: an oxygen flanked by a carbonyl carbon and an alkyl carbon; ether: an oxygen between two carbons with no adjacent C=O`, `Esters contain nitrogen; ethers do not`],
+            options: [`Ester: R-O-R; ether: R-CO-O-R`, `Ester: R-CO-NH-R; ether: R-O-R`, `Ester: R-CO-O-R; ether: R-O-R`, `Ester: R-CO-OH; ether: R-O-R`],
             correctAnswer: 2,
-            explanation: `The ester linkage is -C(=O)-O-C: one of the oxygen's neighbors is a carbonyl carbon. An ether's oxygen sits between two ordinary carbons. This single C=O changes reactivity (hydrolyzable vs inert), IR (1740 band), and NMR shifts.`
+            explanation: `The ester linkage is -C(=O)-O-C: one of the oxygen's neighbors is a carbonyl carbon and the other is a carbon. An ether's oxygen sits between two ordinary carbons. Assigning R-O-R to the ester swaps the two groups; R-CO-NH-R is an amide and R-CO-OH is a carboxylic acid. This single C=O changes reactivity (hydrolyzable vs inert), IR (1740 band), and NMR shifts.`
           },
           {
             question: `The degrees of unsaturation for $C_7H_7NO_2$ is:`,

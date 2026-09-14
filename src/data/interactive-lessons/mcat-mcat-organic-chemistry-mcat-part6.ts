@@ -49,19 +49,19 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
         questions: [
           {
             question: `A compound shows a strong, sharp IR absorption at 1715 cm$^{-1}$ and a broad absorption at 2500-3300 cm$^{-1}$. It is most likely a:`,
-            options: [`Carboxylic acid`, `Ketone`, `Alcohol`, `Amine`],
+            options: [`Carboxylic acid`, `Methyl ketone`, `Secondary alcohol`, `Primary amine`],
             correctAnswer: 0,
-            explanation: `1715 cm$^{-1}$ = C=O stretch. Broad 2500-3300 cm$^{-1}$ = O-H of carboxylic acid (characteristically very broad due to H-bonding). Together, these are diagnostic for -COOH.`
+            explanation: `1715 cm$^{-1}$ = C=O stretch. Broad 2500-3300 cm$^{-1}$ = O-H of carboxylic acid (characteristically very broad due to H-bonding). Together, these are diagnostic for -COOH. A ketone lacks the O-H band, an alcohol's O-H sits higher (3200-3600) with no C=O, and an amine shows N-H spikes near 3300-3500 with no C=O.`
           },
           {
             question: `In $^1$H NMR of $\\text{CH}_3\\text{CH}_2\\text{OH}$, the $\\text{CH}_2$ peak appears as a:`,
-            options: [`Quartet (3 neighbors from $\\text{CH}_3$)`, `Triplet`, `Singlet`, `Doublet`],
+            options: [`Quartet`, `Triplet`, `Singlet`, `Doublet`],
             correctAnswer: 0,
-            explanation: `The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. (The OH neighbor is often ignored due to rapid exchange).`
+            explanation: `The $\\text{CH}_2$ has 3 neighboring H atoms on the $\\text{CH}_3$. By the n+1 rule: $3 + 1 = 4$ peaks = quartet. The OH proton does not add splitting: in ordinary samples it exchanges rapidly (traces of acid or water), which averages away its coupling to the $\\text{CH}_2$. Only in a scrupulously dry, acid-free sample could that coupling appear.`
           },
           {
             question: `A molecular ion peak at m/z 78 in mass spectrometry most directly indicates:`,
-            options: [`Boiling point`, `Molecular weight`, `Number of hydrogens`, `Functional-group identity`],
+            options: [`Normal boiling point`, `Molecular weight`, `Number of hydrogens`, `Functional-group identity`],
             correctAnswer: 1,
             explanation: `The molecular ion peak (M+) gives the approximate molecular mass of the compound.`
           },
@@ -73,15 +73,15 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
           },
           {
             question: `In $^1$H NMR, the integration (relative area) of a signal is proportional to:`,
-            options: [`The number of equivalent protons giving rise to that signal`, `The number of neighboring protons`, `The chemical shift in ppm`, `The molecular weight of the compound`],
+            options: [`The number of protons giving that signal`, `The number of protons on adjacent atoms`, `The electronegativity of nearby atoms`, `The molecular weight of the compound`],
             correctAnswer: 0,
-            explanation: `Integration measures the relative number of protons in each environment (e.g., a 3:2 ratio suggests CH$_3$ vs CH$_2$). Splitting (the n+1 rule) reports neighbors, and chemical shift reports the electronic environment — three independent pieces of information.`
+            explanation: `Integration measures the relative number of protons in each environment (e.g., a 3:2 ratio suggests CH$_3$ vs CH$_2$). Splitting (the n+1 rule) reports neighbors on adjacent carbons, and chemical shift reports the electronic environment (such as nearby electronegative atoms) — three independent pieces of information. Molecular weight comes from mass spectrometry, not NMR integration.`
           },
           {
             question: `Distinguishing a ketone from a carboxylic acid by IR is easiest using which region, since both show a C=O stretch near 1700-1750 cm$^{-1}$?`,
-            options: [`The broad O-H stretch (2500-3300 cm$^{-1}$) present only in the carboxylic acid`, `The C=O stretch position alone`, `The fingerprint region below 600 cm$^{-1}$`, `The absence of any absorption`],
+            options: [`The broad O-H stretch at 2500-3300 cm$^{-1}$`, `The exact C=O stretch near 1700 cm$^{-1}$`, `The fingerprint region below 600 cm$^{-1}$`, `The C-H stretches just below 3000 cm$^{-1}$`],
             correctAnswer: 0,
-            explanation: `Both functional groups have a strong carbonyl band, so the carbonyl alone cannot separate them. The carboxylic acid additionally shows a very broad O-H stretch from ~2500-3300 cm$^{-1}$ (hydrogen-bonded dimer); a ketone has no such band, so its presence or absence is the deciding clue.`
+            explanation: `Both functional groups have a strong carbonyl band, so the carbonyl alone cannot separate them, and both show the same sp3 C-H stretches just below 3000. The carboxylic acid additionally shows a very broad O-H stretch from ~2500-3300 cm$^{-1}$ (hydrogen-bonded dimer); a ketone has no such band, so its presence or absence is the deciding clue.`
           }
         ]
       }

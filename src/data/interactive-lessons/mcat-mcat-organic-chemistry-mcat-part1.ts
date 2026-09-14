@@ -50,15 +50,15 @@ On the MCAT, many questions hide stereochemistry inside a passage about receptor
         questions: [
           {
             question: `A molecule with 2 chiral centers can have a maximum of how many stereoisomers?`,
-            options: [`4 (using $2^n$ rule)`, `2`, `3`, `8`],
+            options: [`4`, `2`, `3`, `8`],
             correctAnswer: 0,
             explanation: `Maximum stereoisomers = $2^n$ where $n$ = number of chiral centers. $2^2 = 4$. May be fewer if meso compounds exist.`
           },
           {
             question: `The peptide bond is an example of which functional group?`,
-            options: [`Amide`, `Amine`, `Ester`, `Carboxylic acid`],
+            options: [`Amide`, `Amine`, `Ester`, `Imine`],
             correctAnswer: 0,
-            explanation: `The peptide bond ($-CO-NH-$) is an amide bond formed between the carboxyl group of one amino acid and the amino group of another, with loss of water.`
+            explanation: `The peptide bond ($-CO-NH-$) is an amide bond formed between the carboxyl group of one amino acid and the amino group of another, with loss of water. An amine has no carbonyl, an ester links C=O to oxygen rather than nitrogen, and an imine is a C=N double bond.`
           },
           {
             question: `Two molecules differ at one chiral center but are not mirror images. They are:`,
@@ -74,15 +74,15 @@ On the MCAT, many questions hide stereochemistry inside a passage about receptor
           },
           {
             question: `When assigning R/S using Cahn-Ingold-Prelog rules, priority among the four substituents is determined primarily by:`,
-            options: [`Atomic number of the first atom bonded to the stereocenter (higher = higher priority)`, `Alphabetical order of the group names`, `The size (molecular weight) of each entire group`, `The number of hydrogens on each group`],
+            options: [`Atomic number of the directly attached atom`, `Alphabetical order of the group names`, `The molecular weight of each entire group`, `The number of hydrogens on each group`],
             correctAnswer: 0,
-            explanation: `CIP priority is set by atomic number of the directly attached atom; ties are broken at the next point of difference. After orienting the lowest priority away, a clockwise 1→2→3 path is R and counterclockwise is S.`
+            explanation: `CIP priority is set by atomic number of the first atom bonded to the stereocenter (higher atomic number = higher priority); ties are broken at the next point of difference. Names, total group mass and hydrogen counts do not set priority. After orienting the lowest priority away, a clockwise 1→2→3 path is R and counterclockwise is S.`
           },
           {
             question: `A drug is sold as a single enantiomer because only that form fits the target receptor. Compared with its enantiomer, this active form will have:`,
-            options: [`Identical melting point and solubility but opposite optical rotation`, `A completely different molecular formula`, `Different boiling and melting points`, `Different connectivity of atoms`],
+            options: [`The same melting point and opposite optical rotation`, `A different melting point and opposite optical rotation`, `A different melting point and the same optical rotation`, `The same melting point and the same optical rotation`],
             correctAnswer: 0,
-            explanation: `Enantiomers share all scalar physical properties (melting point, boiling point, solubility) and differ only in the sign of optical rotation and in interactions with other chiral entities, such as receptors and enzymes. This is why one enantiomer can be therapeutic while the other is inactive or harmful.`
+            explanation: `Enantiomers share all scalar physical properties (melting point, boiling point, solubility) and differ only in the sign of optical rotation (equal magnitude, opposite direction) and in interactions with other chiral entities, such as receptors and enzymes. This is why one enantiomer can be therapeutic while the other is inactive or harmful. A different melting point would signal diastereomers, not enantiomers.`
           }
         ]
       }

@@ -62,7 +62,7 @@ The sample is ionized (losing one electron gives the **molecular ion** $M^{+}$, 
           },
           {
             question: `1,3,5-Hexatriene absorbs at a longer wavelength than 1,3-butadiene because the additional conjugated double bond:`,
-            options: [`Increases the molecular weight`, `Raises the energy of every molecular orbital`, `Adds more sigma bonds that absorb light`, `Narrows the HOMO-LUMO gap, lowering the energy (and lengthening the wavelength) of the transition`],
+            options: [`Increases the molecular weight`, `Raises the energy of every molecular orbital`, `Adds more sigma bonds that absorb light`, `Narrows the gap between the HOMO and LUMO`],
             correctAnswer: 3,
             explanation: `Extending conjugation raises the HOMO and lowers the LUMO, shrinking the gap. Since $E = hc/\\lambda$, a smaller transition energy means a longer absorbed wavelength. This gap-narrowing trend is the single UV-Vis fact the MCAT tests most.`
           },
@@ -74,15 +74,15 @@ The sample is ionized (losing one electron gives the **molecular ion** $M^{+}$, 
           },
           {
             question: `An enzyme assay follows the reduction of $NAD^+$ to NADH by monitoring absorbance at:`,
-            options: [`260 nm, where nucleic acids absorb`, `210 nm, where peptide bonds absorb`, `340 nm, where NADH absorbs but $NAD^+$ does not`, `280 nm, where tryptophan absorbs`],
+            options: [`260 nm, where nucleic acid bases absorb`, `210 nm, where peptide bonds absorb`, `340 nm, where NADH but not $NAD^+$ absorbs`, `280 nm, where tryptophan and tyrosine absorb`],
             correctAnswer: 2,
             explanation: `NADH's reduced nicotinamide ring is more extensively conjugated in a way that gives a distinct 340 nm band absent in NAD+. Rising A340 = NADH being produced. 260 and 280 nm are the nucleic acid and aromatic-residue wavelengths — both molecules absorb there, so neither is diagnostic for the redox state.`
           },
           {
             question: `The mass spectrum of 2-butanone shows an intense fragment at m/z 43. This ion is best explained as:`,
-            options: [`Loss of water from the molecular ion`, `The acylium ion $CH_3CO^{+}$ formed by alpha cleavage`, `A doubly charged molecular ion`, `The $^{13}C$ isotope peak of a m/z 42 fragment`],
+            options: [`The ion left when $M^{+}$ loses $H_2O$`, `The acylium ion $CH_3CO^{+}$ from alpha cleavage`, `The doubly charged molecular ion $M^{2+}$`, `The $^{13}C$ isotope peak of a m/z 42 fragment`],
             correctAnswer: 1,
-            explanation: `Ketones cleave alpha to the carbonyl because the resulting acylium ion is resonance-stabilized ($CH_3C{\\equiv}O^{+}$). For 2-butanone (MW 72), losing the ethyl radical (29) leaves m/z 43. Fragmentation always favors the most stable cation — the same stability rules as carbocation chemistry.`
+            explanation: `Ketones cleave alpha to the carbonyl because the resulting acylium ion is resonance-stabilized ($CH_3C{\\equiv}O^{+}$). For 2-butanone (MW 72), losing the ethyl radical (29) leaves m/z 43. Losing water would give m/z 54 and a doubly charged molecular ion would appear at m/z 36, and an isotope peak is far weaker than an intense base fragment. Fragmentation always favors the most stable cation — the same stability rules as carbocation chemistry.`
           }
         ]
       }

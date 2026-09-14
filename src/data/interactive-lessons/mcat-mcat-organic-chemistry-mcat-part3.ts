@@ -47,15 +47,15 @@ Recognizing whether a leaving group is present is often enough to choose the mec
         questions: [
           {
             question: `Treatment of a carboxylic acid with $\\text{NaBH}_4$ gives:`,
-            options: [`No reaction (NaBH$_4$ is too mild)`, `A primary alcohol`, `An aldehyde`, `An ester`],
+            options: [`No reaction`, `A primary alcohol`, `An aldehyde`, `An ester`],
             correctAnswer: 0,
             explanation: `$\\text{NaBH}_4$ cannot reduce carboxylic acids or esters. You need $\\text{LiAlH}_4$ for those. NaBH$_4$ only reduces aldehydes and ketones.`
           },
           {
             question: `PCC (pyridinium chlorochromate) oxidation of a primary alcohol gives:`,
-            options: [`An aldehyde (mild oxidation stops here)`, `A carboxylic acid`, `A ketone`, `No reaction`],
+            options: [`An aldehyde`, `A carboxylic acid`, `A ketone`, `No reaction`],
             correctAnswer: 0,
-            explanation: `PCC is a mild oxidizing agent that converts 1° ROH to an aldehyde without over-oxidation. Jones reagent (CrO$_3$/H$_2$SO$_4$) would go all the way to carboxylic acid.`
+            explanation: `PCC is a mild oxidizing agent that converts 1° ROH to an aldehyde without over-oxidation — the oxidation stops there. Ketones come from secondary alcohols, not primary ones. Jones reagent (CrO$_3$/H$_2$SO$_4$) would go all the way to carboxylic acid.`
           },
           {
             question: `Which reagent most reliably reduces an ester to a primary alcohol?`,
@@ -65,21 +65,21 @@ Recognizing whether a leaving group is present is often enough to choose the mec
           },
           {
             question: `A ketone reacting with a nucleophile generally proceeds by:`,
-            options: [`Electrophilic aromatic substitution`, `Nucleophilic addition`, `Radical substitution`, `E2 elimination`],
+            options: [`Electrophilic aromatic substitution`, `Nucleophilic addition`, `Nucleophilic acyl substitution`, `Base-promoted E2 elimination`],
             correctAnswer: 1,
-            explanation: `Because ketones lack a leaving group on the carbonyl carbon, the dominant pattern is nucleophilic addition.`
+            explanation: `Because ketones lack a leaving group on the carbonyl carbon, nucleophilic acyl substitution is not available, and the dominant pattern is nucleophilic addition.`
           },
           {
             question: `In an aldol condensation, the nucleophile that attacks a second carbonyl is the:`,
-            options: [`Enolate, formed by removing an $\\alpha$-hydrogen`, `Carbonyl oxygen lone pair`, `A hydride from $\\text{NaBH}_4$`, `A halide ion`],
+            options: [`Enolate from $\\alpha$-deprotonation`, `Carbonyl oxygen's lone pair`, `Hydride from $\\text{NaBH}_4$`, `Carbocation at the $\\alpha$-carbon`],
             correctAnswer: 0,
-            explanation: `A base removes an acidic $\\alpha$-hydrogen (adjacent to C=O) to generate a resonance-stabilized enolate. The nucleophilic $\\alpha$-carbon then adds to the electrophilic carbonyl carbon of another molecule, forming a $\\beta$-hydroxy carbonyl that can dehydrate to an $\\alpha,\\beta$-unsaturated product.`
+            explanation: `A base removes an acidic $\\alpha$-hydrogen (adjacent to C=O) to generate a resonance-stabilized enolate. The nucleophilic $\\alpha$-carbon then adds to the electrophilic carbonyl carbon of another molecule, forming a $\\beta$-hydroxy carbonyl that can dehydrate to an $\\alpha,\\beta$-unsaturated product. No hydride reagent is involved, a carbocation is an electrophile rather than a nucleophile, and although the carbonyl oxygen has lone pairs, the new C-C bond is made by the enolate's carbon.`
           },
           {
             question: `An aldehyde and a ketone of similar size are each attacked by the same nucleophile. The aldehyde generally reacts faster because:`,
-            options: [`It is less sterically hindered and more electrophilic (only one alkyl group donates electron density)`, `It has a leaving group the ketone lacks`, `It is aromatic`, `Its carbonyl carbon is negatively charged`],
+            options: [`It is less hindered and more electrophilic`, `It has a leaving group the ketone lacks`, `It has more alkyl donors on the C=O`, `Its carbonyl carbon is negatively charged`],
             correctAnswer: 0,
-            explanation: `Aldehydes have one H and one R group on the carbonyl carbon, whereas ketones have two R groups. The extra alkyl group in a ketone both donates electron density (lowering electrophilicity) and adds steric hindrance, so aldehydes undergo nucleophilic addition more readily.`
+            explanation: `Aldehydes have one H and one R group on the carbonyl carbon, whereas ketones have two R groups. The extra alkyl group in a ketone both donates electron density (lowering electrophilicity) and adds steric hindrance, so aldehydes — with only one donating alkyl group — undergo nucleophilic addition more readily. Neither compound has a leaving group on the carbonyl carbon, and that carbon is partially positive, not negative.`
           }
         ]
       }
@@ -111,7 +111,7 @@ Recognizing whether a leaving group is present is often enough to choose the mec
 </pre>
 Which reagent should you use?
 
-**Options**: $NaBH_{4}$ / $LiAlH_{4}$ / $H_{2}SO_{4}$ / Zn/HCl
+**Options**: $NaBH_{4}$ / $LiAlH_{4}$ / $H_{2}SO_{4}$ / Zn(Hg)/HCl
 
 **Solution**:
 1. Identify functional groups: ketone (left C=O) and ester (right C=O with $OCH_{3}$)
@@ -119,7 +119,7 @@ Which reagent should you use?
 3. **$NaBH_{4}$**: Reduces aldehydes & ketones → leaves esters alone ✓
 4. **$LiAlH_{4}$**: Reduces BOTH ketones AND esters → not selective
 5. **$H_{2}SO_{4}$**: Catalyst for esterification, not reduction
-6. **Zn/HCl**: Wolff-Kishner reduction (specific for ketones to alkanes)
+6. **Zn(Hg)/HCl**: Clemmensen reduction (reduces the ketone C=O all the way to $CH_{2}$, not to an alcohol)
 
 **Answer**: **$NaBH_{4}$** (selective for ketone)
 

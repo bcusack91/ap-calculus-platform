@@ -56,9 +56,9 @@ Melting also rewards **crystal packing**: symmetric molecules pack well and melt
           },
           {
             question: `Diethyl ether and 1-butanol have identical molecular formulas ($C_4H_{10}O$), yet the alcohol boils about 83 degrees higher. Both, however, show similar modest solubility in water. Why the asymmetry?`,
-            options: [`The ether is more polar than the alcohol`, `The alcohol ionizes in water`, `Boiling point reflects forces with water; solubility reflects self-association`, `Boiling requires breaking the alcohol's self H-bonds, which the ether lacks; but in water BOTH can hydrogen bond with the solvent`],
+            options: [`The ether is more polar, so it binds water just as well as the alcohol`, `The alcohol partly ionizes in water, while the ether stays neutral`, `Boiling reflects forces with water; solubility reflects self-association`, `Only the alcohol self H-bonds, but both accept H-bonds from water`],
             correctAnswer: 3,
-            explanation: `Boiling point measures molecule-to-molecule attraction in the pure liquid: only the alcohol has a donor O-H, so only it self-associates. Solubility measures interaction with WATER, and water donates H-bonds to the ether's oxygen just fine. Acceptor-only groups behave differently in the two contexts — a classic discrimination question.`
+            explanation: `Boiling point measures molecule-to-molecule attraction in the pure liquid: only the alcohol has a donor O-H, so only it self-associates. Solubility measures interaction with WATER, and water donates H-bonds to the ether's oxygen just fine. Acceptor-only groups behave differently in the two contexts — a classic discrimination question. The ether is actually the less polar compound, neither compound ionizes appreciably in water, and the roles of the two properties are the other way around: boiling reflects self-association, solubility reflects interaction with water.`
           },
           {
             question: `Which compound is most soluble in water?`,
@@ -68,13 +68,13 @@ Melting also rewards **crystal packing**: symmetric molecules pack well and melt
           },
           {
             question: `A mixture of benzoic acid and neutral naphthalene in ether can be separated by shaking with aqueous NaHCO3 because:`,
-            options: [`Naphthalene reacts with bicarbonate`, `Bicarbonate deprotonates benzoic acid to the water-soluble benzoate ion, leaving naphthalene in the ether layer`, `Benzoic acid is destroyed by the base`, `Both compounds move to the aqueous layer at different rates`],
+            options: [`Bicarbonate deprotonates naphthalene, making it water-soluble`, `Bicarbonate deprotonates benzoic acid, making it water-soluble`, `Bicarbonate protonates benzoic acid, making it water-soluble`, `Bicarbonate hydrolyzes benzoic acid, making it water-soluble`],
             correctAnswer: 1,
-            explanation: `Carboxylic acids (pKa ~4-5) are deprotonated by bicarbonate (conjugate acid pKa ~6.3); the resulting carboxylate is ionic and partitions into water. The hydrocarbon stays in ether. Acidify the aqueous layer to recover the acid. Extraction questions are pKa questions wearing lab coats.`
+            explanation: `Carboxylic acids (pKa ~4-5) are deprotonated by bicarbonate (conjugate acid pKa ~6.3); the resulting benzoate ion is ionic and partitions into water. The hydrocarbon has no acidic proton, so naphthalene stays in ether. Bicarbonate acts here as a base, not a proton donor, and a carboxylic acid has no bond for it to hydrolyze. Acidify the aqueous layer to recover the acid. Extraction questions are pKa questions wearing lab coats.`
           },
           {
             question: `Cis-oleic acid melts at 13 C while its trans isomer (elaidic acid) melts at 45 C. The difference arises because:`,
-            options: [`The trans isomer forms stronger covalent bonds`, `The cis isomer has a higher molecular weight`, `Trans double bonds hydrogen bond with each other`, `The cis double bond kinks the chain, disrupting the tight packing that maximizes dispersion contact in the trans/straight-chain crystal`],
+            options: [`The trans isomer forms stronger covalent bonds`, `The cis isomer has a higher molecular weight`, `Trans double bonds hydrogen bond to each other`, `The cis kink prevents the chains from packing tightly`],
             correctAnswer: 3,
             explanation: `Same atoms, same forces available — the difference is geometry. Straight (trans) chains stack closely, maximizing dispersion contact; the cis kink spoils packing. The same physics sets membrane fluidity: unsaturated (cis) phospholipid tails keep bilayers fluid at low temperature.`
           }

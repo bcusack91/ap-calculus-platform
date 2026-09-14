@@ -52,15 +52,15 @@ Symmetry-equivalent protons give ONE signal. Examples: acetone gives one singlet
         questions: [
           {
             question: `A compound shows a 3H triplet at 1.2 ppm and a 2H quartet at 4.1 ppm. This pattern is most consistent with:`,
-            options: [`An isopropyl group attached to nitrogen`, `A methyl group attached directly to oxygen`, `An ethyl group whose $CH_2$ is bonded to oxygen`, `Two unrelated methyl singlets overlapping`],
+            options: [`An isopropyl group attached to a nitrogen atom`, `A methyl group attached to an oxygen atom`, `An ethyl group attached to an oxygen atom`, `A tert-butyl group attached to a carbon atom`],
             correctAnswer: 2,
-            explanation: `Triplet (3H) + quartet (2H) is the ethyl fingerprint: the CH3 sees 2 neighbors (n+1 = 3) and the CH2 sees 3 neighbors (n+1 = 4). The quartet at 4.1 ppm is strongly deshielded, placing that CH2 on oxygen — as in an ethyl ester. An isopropyl group would give a doublet + septet; a methyl on oxygen would be a 3H singlet near 3.3-3.9.`
+            explanation: `Triplet (3H) + quartet (2H) is the ethyl fingerprint: the CH3 sees 2 neighbors (n+1 = 3) and the CH2 sees 3 neighbors (n+1 = 4). The quartet at 4.1 ppm is strongly deshielded, placing that CH2 on oxygen — as in an ethyl ester. An isopropyl group would give a doublet + septet; a methyl on oxygen would be a 3H singlet near 3.3-3.9; a tert-butyl group would be a single 9H singlet near 1 ppm.`
           },
           {
             question: `The aldehyde proton of benzaldehyde appears near 10 ppm primarily because:`,
-            options: [`Deshielding by the electron-withdrawing carbonyl plus anisotropy of the C=O pi system`, `Hydrogen bonding to solvent`, `Rapid exchange with trace water`, `Coupling to the aromatic protons`],
+            options: [`Deshielding by the carbonyl and C=O anisotropy`, `Hydrogen bonding of the aldehyde H to solvent`, `Rapid exchange of the aldehyde H with water`, `Spin-spin coupling to the aromatic protons`],
             correctAnswer: 0,
-            explanation: `The aldehyde H sits directly on an electron-poor carbonyl carbon, and the C=O pi system's induced field (anisotropy) reinforces the applied field at that position — both effects push the signal far downfield. Exchange and H-bonding govern O-H/N-H behavior, not the C-H of an aldehyde.`
+            explanation: `The aldehyde H sits directly on an electron-poor carbonyl carbon, and the C=O pi system's induced field (anisotropy) reinforces the applied field at that position — both effects push the signal far downfield. Exchange and H-bonding govern O-H/N-H behavior, not the C-H of an aldehyde, and spin-spin coupling splits a signal into peaks without moving its chemical shift.`
           },
           {
             question: `A 1H NMR signal at 2.1 ppm vanishes after the sample is shaken with $D_2O$. The signal most likely belongs to:`,
@@ -76,7 +76,7 @@ Symmetry-equivalent protons give ONE signal. Examples: acetone gives one singlet
           },
           {
             question: `In 1,1,2-trichloroethane ($Cl_2CH$-$CH_2Cl$), the $CH_2$ protons appear as a doublet. Why a doublet rather than a triplet?`,
-            options: [`The chlorines decouple the protons`, `The CH2 protons split each other`, `The CH2 protons have exactly one neighboring proton, so n+1 = 2`, `Chlorine's quadrupole broadens the signal into two peaks`],
+            options: [`Adjacent chlorine atoms decouple the protons`, `The two equivalent CH2 protons split each other`, `The adjacent carbon carries only one proton`, `Chlorine's quadrupole splits the signal in two`],
             correctAnswer: 2,
             explanation: `Splitting counts protons on ADJACENT atoms: the CHCl2 carbon carries one H, so the CH2 signal is split into 1+1 = 2 peaks. Equivalent protons never split each other, and halogens do not add splitting in routine 1H NMR.`
           }

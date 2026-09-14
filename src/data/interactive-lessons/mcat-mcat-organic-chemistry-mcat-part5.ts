@@ -46,37 +46,37 @@ Must have: planar ring, conjugated $\\pi$ system, $4n + 2$ $\\pi$ electrons ($n 
         questions: [
           {
             question: `Nitration of toluene ($\\text{C}_6\\text{H}_5\\text{CH}_3$) primarily gives:`,
-            options: [`ortho- and para-nitrotoluene ($-CH_3$ is ortho/para director)`, `meta-nitrotoluene`, `Only para-nitrotoluene`, `No reaction — toluene is deactivated`],
+            options: [`ortho- and para-nitrotoluene`, `Mainly meta-nitrotoluene`, `Only para-nitrotoluene`, `No reaction — toluene is deactivated`],
             correctAnswer: 0,
             explanation: `Methyl ($-CH_3$) is an electron-donating group (activating, ortho/para director). You get a mixture of ortho and para products.`
           },
           {
             question: `A ring bearing a nitro group ($-NO_2$) will direct incoming electrophiles primarily to:`,
-            options: [`Ortho`, `Para`, `Meta`, `No substitution positions`],
+            options: [`Ortho positions`, `Para position`, `Meta positions`, `Ortho and para`],
             correctAnswer: 2,
-            explanation: `Strongly deactivating electron-withdrawing groups like nitro are meta directors in electrophilic aromatic substitution.`
+            explanation: `Strongly deactivating electron-withdrawing groups like nitro are meta directors in electrophilic aromatic substitution. Ortho/para direction belongs to electron donors (and halogens).`
           },
           {
             question: `For TLC on silica gel, the compound that travels the farthest generally is:`,
-            options: [`Most polar`, `Least polar`, `Highest molecular weight`, `Most aromatic`],
+            options: [`Most polar`, `Least polar`, `Most acidic`, `Most aromatic`],
             correctAnswer: 1,
             explanation: `Silica is polar, so less polar compounds interact less with the stationary phase and move farther with the mobile phase.`
           },
           {
             question: `Benzene satisfies Hückel's rule for aromaticity because it is planar, fully conjugated, and contains:`,
-            options: [`6 $\\pi$ electrons, fitting $4n+2$ with $n=1$`, `8 $\\pi$ electrons`, `4 $\\pi$ electrons`, `12 $\\sigma$ electrons`],
+            options: [`6 $\\pi$ electrons`, `8 $\\pi$ electrons`, `4 $\\pi$ electrons`, `12 $\\sigma$ electrons`],
             correctAnswer: 0,
             explanation: `Aromaticity requires a planar, cyclic, fully conjugated ring with $4n+2$ $\\pi$ electrons. Benzene has 6 $\\pi$ electrons ($n=1$). Cyclooctatetraene (8 $\\pi$ electrons) would be antiaromatic if planar, so it puckers to become nonaromatic.`
           },
           {
             question: `You need to separate two organic liquids whose boiling points differ by about 40 °C and which do not react. The best technique is:`,
-            options: [`Distillation (separation by boiling point)`, `Acid-base extraction`, `Recrystallization`, `Thin-layer chromatography`],
+            options: [`Simple distillation`, `Acid-base extraction`, `Recrystallization from water`, `Thin-layer chromatography`],
             correctAnswer: 0,
-            explanation: `Distillation separates miscible liquids by differences in boiling point; a ~40 °C gap is easily resolved by simple distillation. Extraction exploits solubility/acid-base differences, and recrystallization purifies solids — neither is ideal for separating two liquids.`
+            explanation: `Distillation separates miscible liquids by differences in boiling point; a ~40 °C gap is easily resolved by simple distillation, since the rule of thumb is that simple distillation suffices when boiling points differ by more than about 25 °C (closer boiling points call for fractional distillation). Extraction exploits solubility/acid-base differences, and recrystallization purifies solids — neither is ideal for separating two liquids.`
           },
           {
             question: `An amino (–NH$_2$) group on benzene is an ortho/para-directing activator. This is because the nitrogen lone pair:`,
-            options: [`Donates electron density into the ring, stabilizing the ortho/para sigma complex`, `Withdraws electron density, deactivating the ring`, `Has no electronic effect`, `Makes the ring antiaromatic`],
+            options: [`Donates electron density into the ring`, `Withdraws electron density, deactivating the ring`, `Has no electronic effect`, `Makes the ring antiaromatic`],
             correctAnswer: 0,
             explanation: `Lone-pair donors (–NH$_2$, –OH, –OR) push electron density into the ring through resonance, which best stabilizes the cationic intermediate when the electrophile adds ortho or para. This both activates the ring and directs ortho/para. Strong electron-withdrawing groups (–NO$_2$) do the opposite: deactivate and direct meta.`
           }

@@ -61,31 +61,31 @@ Everything below about $1500\\ \\text{cm}^{-1}$ is the **fingerprint region** �
         questions: [
           {
             question: `An IR spectrum shows a very broad absorption from 2500-3300 $\\text{cm}^{-1}$ overlapping the C-H stretches, plus a strong band at 1710 $\\text{cm}^{-1}$. The compound is most likely:`,
-            options: [`An alcohol`, `A carboxylic acid`, `An ester`, `A primary amine`],
+            options: [`An aliphatic alcohol`, `A carboxylic acid`, `A methyl ester`, `A primary amine`],
             correctAnswer: 1,
             explanation: `The combination is diagnostic: strongly hydrogen-bonded (dimeric) O-H gives the extremely broad 2500-3300 smear, and the C=O appears near 1710. An alcohol's O-H is broad but sits higher (3200-3550) and has no C=O; an ester has C=O but no O-H.`
           },
           {
             question: `Both an aldehyde and a ketone show strong absorption near 1715-1730 $\\text{cm}^{-1}$. The feature that identifies the aldehyde is:`,
-            options: [`A broad band at 3300 $\\text{cm}^{-1}$`, `A sharp band at 2250 $\\text{cm}^{-1}$`, `Two N-H spikes near 3400 $\\text{cm}^{-1}$`, `A pair of weak C-H bands near 2720 and 2850 $\\text{cm}^{-1}$`],
+            options: [`A broad O-H band at 3200-3550 $\\text{cm}^{-1}$`, `A sharp nitrile band near 2250 $\\text{cm}^{-1}$`, `Two N-H spikes at 3350 and 3450 $\\text{cm}^{-1}$`, `Weak C-H bands near 2720 and 2850 $\\text{cm}^{-1}$`],
             correctAnswer: 3,
-            explanation: `The aldehydic C-H stretch produces two characteristic weak bands (~2720 and ~2850), the lower one clear of other absorptions. Ketones have no C-H on the carbonyl carbon. 3300 broad = O-H; 2250 = nitrile; N-H spikes = amine/amide.`
+            explanation: `The aldehydic C-H stretch produces two characteristic weak bands (~2720 and ~2850), the lower one clear of other absorptions. Ketones have no C-H on the carbonyl carbon. A broad 3200-3550 band = alcohol O-H; a sharp 2250 band = nitrile; paired N-H spikes = primary amine/amide. None of these distinguishes an aldehyde from a ketone.`
           },
           {
             question: `A spectrum shows two sharp spikes of similar intensity at 3350 and 3420 $\\text{cm}^{-1}$ and no carbonyl band. This indicates:`,
-            options: [`A primary amine`, `A secondary amine`, `A carboxylic acid`, `An alcohol`],
+            options: [`A primary amine`, `A secondary amine`, `A carboxylic acid`, `An aliphatic alcohol`],
             correctAnswer: 0,
             explanation: `A primary amine's two N-H bonds give symmetric and asymmetric stretches — two spikes. A secondary amine (one N-H) gives a single band; an alcohol O-H is one broad rounded band; an acid would include a C=O.`
           },
           {
             question: `A compound shows a strong band at 1740 $\\text{cm}^{-1}$ and another strong band near 1200 $\\text{cm}^{-1}$, with no absorption above 3100 $\\text{cm}^{-1}$ other than C-H. It is most consistent with:`,
-            options: [`A ketone`, `A carboxylic acid`, `An ester`, `An amide`],
+            options: [`A saturated ketone`, `An aliphatic carboxylic acid`, `A saturated ester`, `An N,N-dialkyl amide`],
             correctAnswer: 2,
             explanation: `Esters combine a C=O at the high end (1735-1750) with a strong C-O stretch (1000-1300). A ketone lacks the strong C-O band; an acid would show the broad O-H; an amide's C=O sits much lower (1630-1690).`
           },
           {
             question: `2-Butyne shows essentially no absorption in the 2100-2260 $\\text{cm}^{-1}$ region even though it contains a triple bond, because:`,
-            options: [`Triple bonds do not absorb IR radiation`, `The symmetric alkyne stretch causes no change in dipole moment`, `The band is hidden under the C=O stretch`, `The triple bond is too strong to vibrate`],
+            options: [`Triple bonds do not absorb IR radiation`, `The symmetric stretch causes no dipole change`, `The band is hidden under the C=O stretch`, `The triple bond is too strong to vibrate`],
             correctAnswer: 1,
             explanation: `IR absorption requires a changing dipole. In a symmetric internal alkyne (CH3-C≡C-CH3) the stretch is symmetric about the bond's center, so the dipole change is essentially zero and the band vanishes. Terminal alkynes DO show C≡C plus the sharp ≡C-H at 3300.`
           }

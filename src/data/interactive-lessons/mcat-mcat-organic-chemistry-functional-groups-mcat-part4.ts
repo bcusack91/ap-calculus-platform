@@ -54,33 +54,33 @@ When a passage introduces an unfamiliar molecule (a drug, toxin, metabolite):
         questions: [
           {
             question: `Treatment of a triacylglycerol with hot aqueous NaOH, followed by treatment of sucrose with the same reagent, cleaves:`,
-            options: [`Both molecules' linkages`, `Only the triacylglycerol's ester bonds; sucrose's glycosidic (acetal) linkage is base-stable`, `Only sucrose's glycosidic bond`, `Neither molecule`],
+            options: [`Both the esters and the glycosidic bond`, `Only the triacylglycerol's ester bonds`, `Only sucrose's glycosidic acetal bond`, `Neither the esters nor the glycosidic bond`],
             correctAnswer: 1,
-            explanation: `Esters saponify in base (irreversibly, to carboxylates). Acetals have no carbonyl to attack and no acidic proton — they are cleaved by aqueous ACID or enzymes, not base. Matching each biological linkage to its cleavage conditions is a straight functional-group question.`
+            explanation: `Esters saponify in base (irreversibly, to carboxylates), so the triacylglycerol is cleaved. Sucrose's glycosidic (acetal) linkage is base-stable: acetals have no carbonyl to attack and no acidic proton — they are cleaved by aqueous ACID or enzymes, not base. Matching each biological linkage to its cleavage conditions is a straight functional-group question.`
           },
           {
             question: `N-ethylmaleimide (NEM), a Michael acceptor, abolishes the activity of an enzyme, and pretreatment with substrate protects it. The residue most likely modified is:`,
-            options: [`A phenylalanine in the hydrophobic core`, `A backbone amide nitrogen`, `An active-site cysteine, whose thiol adds to the electrophilic alkene`, `A glycine with no side chain`],
+            options: [`A phenylalanine in the hydrophobic core`, `A backbone amide nitrogen`, `An active-site cysteine's thiol`, `A glycine with no side chain`],
             correctAnswer: 2,
-            explanation: `Michael acceptors are trapped by soft nucleophiles, and the thiol(ate) of cysteine is the cell's premier soft nucleophile. Substrate protection localizes the modified residue to the active site. Backbone amides and aromatic/aliphatic side chains are non-nucleophilic.`
+            explanation: `Michael acceptors are trapped by soft nucleophiles, and the thiol(ate) of cysteine is the cell's premier soft nucleophile: it adds to NEM's electrophilic alkene. Substrate protection localizes the modified residue to the active site. Backbone amides and aromatic/aliphatic side chains are non-nucleophilic.`
           },
           {
             question: `Sucrose gives a negative Benedict's test, but its hydrolysate (glucose + fructose) gives a positive one. This is because hydrolysis:`,
-            options: [`Liberates free hemiacetal/hemiketal anomeric carbons that can open to oxidizable carbonyls`, `Converts the sugars to carboxylic acids`, `Removes the phosphate groups`, `Denatures an inhibitory protein`],
+            options: [`Frees hemiacetal and hemiketal anomeric carbons`, `Oxidizes both anomeric carbons to carboxylic acids`, `Removes phosphate groups blocking the anomeric carbons`, `Doubles the number of glycosidic acetal linkages`],
             correctAnswer: 0,
-            explanation: `In sucrose, BOTH anomeric carbons are tied into the glycosidic acetal — no ring can open, so nothing reduces the copper reagent. Hydrolysis frees each monosaccharide's anomeric center as a hemiacetal, restoring the open-chain equilibrium and the reactive carbonyl.`
+            explanation: `In sucrose, BOTH anomeric carbons are tied into the glycosidic acetal — no ring can open, so nothing reduces the copper reagent. Hydrolysis frees each monosaccharide's anomeric center as a hemiacetal (glucose) or hemiketal (fructose), restoring the open-chain equilibrium and the reactive, oxidizable carbonyl. Hydrolysis is not an oxidation (a sugar already oxidized to an acid could not reduce the reagent), sucrose carries no phosphate groups, and hydrolysis breaks the glycosidic linkage rather than adding more.`
           },
           {
             question: `The arginine side chain (guanidinium, pKa ~12.5) is ideally suited to bind DNA phosphates because it:`,
-            options: [`Is hydrophobic and intercalates between bases`, `Forms disulfide bonds with the backbone`, `Is neutral at physiological pH`, `Remains fully protonated at any physiological pH and delocalizes its positive charge over three nitrogens for multidentate ion pairing`],
+            options: [`Is hydrophobic and intercalates between bases`, `Forms disulfide bonds with the phosphate backbone`, `Loses its proton at physiological pH to become neutral`, `Stays protonated with a resonance-delocalized charge`],
             correctAnswer: 3,
-            explanation: `pKa 12.5 means the cation persists across every biological pH, and resonance spreads the charge so the group hydrogen-bonds a phosphate oxygen pair in a planar, bidentate clamp. This charge complementarity (with lysine) underlies histone-DNA packaging — electrostatics from Part 2 plus pKa logic from Part 3.`
+            explanation: `pKa 12.5 means the cation persists across every biological pH (far above pH 7.4, so it does not lose its proton), and resonance spreads the positive charge over three nitrogens so the group hydrogen-bonds a phosphate oxygen pair in a planar, bidentate clamp. The charged guanidinium is hydrophilic rather than an intercalator, and only cysteine thiols form disulfides. This charge complementarity (with lysine) underlies histone-DNA packaging — electrostatics from Part 2 plus pKa logic from Part 3.`
           },
           {
             question: `A prodrug contains an ester that must be cleaved to release the active carboxylic acid drug. Compared with an amide analog, the ester was chosen because it:`,
-            options: [`Is more resistant to hydrolysis than the amide`, `Hydrolyzes readily via serum esterases and chemical hydrolysis, while amides are too resonance-stabilized to release the drug on a useful timescale`, `Cannot cross membranes in either form`, `Ionizes at physiological pH`],
+            options: [`Is more resistant to hydrolysis than the amide`, `Is cleaved readily by esterases, unlike the amide`, `Carries a charge that blocks membrane crossing`, `Ionizes at physiological pH, like the free acid`],
             correctAnswer: 1,
-            explanation: `On the acyl-reactivity ladder, esters sit well above amides: less resonance donation, better leaving group. Esterases cleave them within minutes; amides need proteases with specific recognition or harsh conditions. Bonus: masking the acid as a neutral ester also improves membrane permeability before cleavage.`
+            explanation: `On the acyl-reactivity ladder, esters sit well above amides: less resonance donation, better leaving group. Esterases (and chemical hydrolysis) cleave them within minutes; amides are too resonance-stabilized to release the drug on a useful timescale and need proteases with specific recognition or harsh conditions. Bonus: masking the acid as a neutral ester — it has no ionizable proton and carries no charge — also improves membrane permeability before cleavage.`
           }
         ]
       }

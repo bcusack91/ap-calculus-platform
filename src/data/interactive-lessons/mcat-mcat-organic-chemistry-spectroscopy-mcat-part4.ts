@@ -53,9 +53,9 @@ Passages love "which spectral change confirms the product?" Answer with the band
         questions: [
           {
             question: `A student oxidizes benzyl alcohol with PCC and wants to confirm benzaldehyde formed. Which IR observation is most conclusive?`,
-            options: [`Disappearance of the broad 3200-3550 band together with new bands at ~1705 and the ~2720/2850 pair`, `Persistence of aromatic C-H above 3000`, `Appearance of a strong band at 1000-1300`, `A shift of the fingerprint region`],
+            options: [`No O-H band; new bands at ~1705 and ~2720/2850`, `O-H band still present; new band at 1000-1300`, `Aromatic C-H above 3000 persists; fingerprint pattern changes`, `A sharp new band near 2250`],
             correctAnswer: 0,
-            explanation: `Confirmation requires the features that CHANGE: the alcohol O-H must vanish and the aldehyde signature (conjugated C=O near 1705 plus the weak aldehydic C-H doublet at 2720/2850) must appear. Aromatic C-H persists in both compounds, and the fingerprint region is never interpreted band-by-band.`
+            explanation: `Confirmation requires the features that CHANGE: the broad alcohol O-H (3200-3550) must vanish and the aldehyde signature (conjugated C=O near 1705 plus the weak aldehydic C-H doublet at 2720/2850) must appear. A persisting O-H means alcohol remains, and a strong 1000-1300 C-O stretch belongs to the alcohol starting material rather than the aldehyde. Aromatic C-H persists in both compounds, the fingerprint region is never interpreted band-by-band, and a sharp band near 2250 would signal a nitrile, not an aldehyde.`
           },
           {
             question: `Which pair of compounds CANNOT be distinguished by any routine spectroscopic method (IR, NMR, UV-Vis, MS)?`,
@@ -65,19 +65,19 @@ Passages love "which spectral change confirms the product?" Answer with the band
           },
           {
             question: `An unknown has $M^{+}$ = 88, IR shows strong 1740 and 1200 bands with no O-H, and the 1H NMR shows a 3H singlet at 3.7 ppm. The compound class and one structural detail are:`,
-            options: [`A carboxylic acid with an alpha methyl`, `A ketone with a methoxy group`, `An ester with a methyl group on the ester oxygen`, `An ether with an acetyl group`],
+            options: [`A carboxylic acid with a methyl group on the alpha carbon`, `A ketone with a methyl group on the carbonyl carbon`, `An ester with a methyl group on the ester oxygen`, `An ether with a methyl group bonded to the oxygen`],
             correctAnswer: 2,
-            explanation: `C=O at 1740 + strong C-O + no O-H = ester. A 3H singlet at 3.7 ppm is a methyl on oxygen (O-CH3) with no neighbors — a methyl ester. MW 88 fits methyl propanoate (C4H8O2). An acid would show the O-H smear; a simple ketone would lack the strong C-O band and its alpha CH3 would sit near 2.1, not 3.7.`
+            explanation: `C=O at 1740 + strong C-O + no O-H = ester. A 3H singlet at 3.7 ppm is a methyl on oxygen (O-CH3) with no neighbors — a methyl ester. MW 88 fits methyl propanoate (C4H8O2). An acid would show the O-H smear; a methyl ketone would lack the strong C-O band and its CH3 would sit near 2.1, not 3.7; a simple ether has no C=O band at all.`
           },
           {
             question: `Two candidate structures for an unknown are 1-bromobutane and 2-bromo-2-methylpropane. The fastest spectroscopic discriminator is:`,
-            options: [`UV-Vis, because branching shifts the absorption maximum`, `$^1H$ NMR, because the tertiary isomer shows a single 9H singlet while the linear isomer shows four distinct signals`, `MS, because only one isomer shows an M+2 peak`, `IR, because only one isomer has C-H stretches`],
+            options: [`UV-Vis, because branching shifts the absorption maximum`, `$^1H$ NMR, because one isomer gives a lone 9H singlet`, `MS, because only one isomer shows an M+2 peak`, `IR, because only one isomer has C-H stretches`],
             correctAnswer: 1,
             explanation: `Both are C4H9Br: identical mass, identical Br isotope pattern, both saturated (no useful UV), both with sp3 C-H. Only the proton environments differ — tert-butyl bromide's nine equivalent H's give one singlet, unmistakable against 1-bromobutane's four-signal spectrum. When isomers share a formula, NMR is almost always the discriminator.`
           },
           {
             question: `A passage reports that after an esterification, the crude product's IR still shows a weak broad band at 2500-3300. The best interpretation is:`,
-            options: [`Residual unreacted carboxylic acid contaminates the product`, `The ester decomposed to an alkene`, `The band is the ester's own C=O overtone`, `Water of crystallization is present in all esters`],
+            options: [`Unreacted carboxylic acid remains in the product`, `The ester partly decomposed into an alkene`, `The band is the ester's own C=O overtone`, `All esters contain water of crystallization`],
             correctAnswer: 0,
             explanation: `The 2500-3300 smear is the hydrogen-bonded dimer O-H of a carboxylic acid — its persistence means starting acid remains. This is the classic "reaction completeness" application of IR. Esters themselves have no O-H, and product decomposition would show alkene features, not an acid O-H.`
           }

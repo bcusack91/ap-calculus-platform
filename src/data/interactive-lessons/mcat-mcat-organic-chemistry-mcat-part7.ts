@@ -60,39 +60,39 @@ export const mcatOrgChemPart7Data = {
         questions: [
           {
             question: `An amino acid at pH 7 has a positively charged side chain. It is most likely:`,
-            options: [`Lysine (pKa of side chain ~10.5)`, `Aspartate`, `Serine`, `Alanine`],
+            options: [`Lysine`, `Aspartate`, `Serine`, `Alanine`],
             correctAnswer: 0,
             explanation: `At pH 7, Lys side chain ($-NH_3^+$, pKa ~10.5) is protonated and positive. Arg (pKa ~12.5) and His (pKa ~6.0) are the other basic residues. His may or may not be protonated at pH 7.`
           },
           {
             question: `A passage describes a molecule with a chiral center that rotates plane-polarized light +15°. Its enantiomer rotates light:`,
-            options: [`$-15°$ (equal and opposite)`, `$+15°$`, `$0°$`, `$+30°$`],
+            options: [`-15°`, `+15°`, `+30°`, `-30°`],
             correctAnswer: 0,
             explanation: `Enantiomers rotate plane-polarized light by equal magnitude but opposite direction. If one is +15°, the other must be -15°.`
           },
           {
             question: `A tertiary alkyl bromide in methanol under heat is most likely to undergo:`,
-            options: [`SN2`, `SN1/E1 competition`, `E2 only`, `No reaction`],
+            options: [`SN2 only`, `SN1 and E1`, `E2 only`, `SN2 and E2`],
             correctAnswer: 1,
             explanation: `Tertiary substrate blocks SN2. Protic solvent and heat often give carbocation pathways with SN1/E1 competition.`
           },
           {
             question: `Which reagent pair most often indicates oxidation of a secondary alcohol to a ketone?`,
-            options: [`PCC or Jones reagent`, `LiAlH$_4$`, `NaBH$_4$`, `NaOH/heat`],
+            options: [`PCC or Jones reagent`, `LiAlH$_4$ or NaBH$_4$`, `H$_2$SO$_4$ or H$_3$PO$_4$ with heat`, `NaOEt or KOtBu with heat`],
             correctAnswer: 0,
-            explanation: `PCC and Jones are oxidizing reagents. Secondary alcohols are oxidized to ketones by either reagent.`
+            explanation: `PCC and Jones are oxidizing reagents. Secondary alcohols are oxidized to ketones by either reagent. LiAlH$_4$ and NaBH$_4$ are reducing agents (they convert ketones back to alcohols), hot H$_2$SO$_4$ or H$_3$PO$_4$ dehydrates an alcohol to an alkene, and ethoxide or tert-butoxide with heat is an elimination base, not an oxidant.`
           },
           {
             question: `At physiological pH 7.4, the side chain of glutamate (side-chain p$K_a \\approx 4.1$) is best described as:`,
-            options: [`Deprotonated and negatively charged ($-\\text{COO}^-$)`, `Protonated and positively charged`, `Neutral and nonpolar`, `Aromatic`],
+            options: [`Deprotonated and negatively charged`, `Protonated and positively charged`, `Protonated and electrically neutral`, `Zwitterionic with no net charge`],
             correctAnswer: 0,
-            explanation: `Because pH 7.4 is well above the side-chain p$K_a$ of ~4.1, the carboxylic acid is deprotonated to a carboxylate, giving glutamate a –1 charge at physiological pH. This is why Asp and Glu are the acidic, negatively charged residues.`
+            explanation: `Because pH 7.4 is well above the side-chain p$K_a$ of ~4.1, the carboxylic acid is deprotonated to a carboxylate ($-\\text{COO}^-$), giving glutamate a –1 charge at physiological pH. The neutral protonated $-\\text{COOH}$ form dominates only below pH ~4.1, a carboxyl group can never carry a positive charge, and a single side-chain group cannot be a zwitterion. This is why Asp and Glu are the acidic, negatively charged residues.`
           },
           {
             question: `A peptide bond linking two amino acids is chemically classified as which functional group, and why is it resistant to hydrolysis?`,
-            options: [`An amide; nitrogen lone-pair resonance lowers carbonyl reactivity and $\\text{NH}^-$ is a poor leaving group`, `An ester; oxygen makes it labile`, `An ether; it has no carbonyl`, `An anhydride; it has an excellent leaving group`],
+            options: [`An amide; N lone-pair resonance deactivates the C=O`, `An ester; its alkoxy leaving group is very poor`, `An ether; with no C=O it has nothing to attack`, `An anhydride; it has an excellent leaving group`],
             correctAnswer: 0,
-            explanation: `The peptide bond is an amide ($-\\text{CO-NH}-$). Amide resonance gives partial C–N double-bond character (reducing electrophilicity) and the would-be leaving group is a strongly basic amide anion, so peptide bonds are kinetically very stable and require enzymes (proteases) for efficient hydrolysis in the body.`
+            explanation: `The peptide bond is an amide ($-\\text{CO-NH}-$), not an ester, ether or anhydride. Amide resonance gives partial C–N double-bond character (reducing electrophilicity) and the would-be leaving group is a strongly basic amide anion, so peptide bonds are kinetically very stable and require enzymes (proteases) for efficient hydrolysis in the body.`
           }
         ]
       }
