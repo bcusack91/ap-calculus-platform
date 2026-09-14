@@ -133,12 +133,12 @@ $$pH = 14 - 2.79 = 11.21$$
             question: 'For 0.15 M $NH_3$, the ICE table gives $[OH^-]$. To find pH, you should:',
             options: [
               '$pH = -\\log[OH^-]$',
-              '$pH = 14 - (-\\log[OH^-])$',
-              '$pH = [OH^-]$',
+              '$pH = 14 - \\log[OH^-]$',
+              '$pH = 14 - [OH^-]$',
               '$pH = 14 + \\log[OH^-]$'
             ],
-            correctAnswer: 1,
-            explanation: 'First calculate $pOH = -\\log[OH^-]$, then $pH = 14 - pOH$. Note that the $14 - (-\\log[OH^-])$ and $14 + \\log[OH^-]$ choices are equivalent: $14 - (-\\log[OH^-]) = 14 + \\log[OH^-]$.'
+            correctAnswer: 3,
+            explanation: 'First calculate $pOH = -\\log[OH^-]$, then $pH = 14 - pOH = 14 - (-\\log[OH^-]) = 14 + \\log[OH^-]$. The expression $-\\log[OH^-]$ alone is the pOH, not the pH; $14 - \\log[OH^-]$ drops the negative sign in the pOH definition; and $14 - [OH^-]$ skips the logarithm entirely.'
           },
           {
             question: 'Which is the strongest weak base?',

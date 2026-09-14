@@ -243,10 +243,10 @@ $P(\\text{homozygous at A}) = \\frac{1}{2}\\times 1 = \\frac{1}{2}$
               '$\\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$',
               '$\\frac{1}{4} + \\frac{1}{4} - \\frac{1}{16} = \\frac{7}{16}$',
               '$\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}$',
-              '$1 - \\frac{9}{16} = \\frac{7}{16}$'
+              '$\\frac{1}{4} + \\frac{1}{4} - \\frac{2}{16} = \\frac{3}{8}$'
             ],
             correctAnswer: 1,
-            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. (The complement option reaches the same 7/16 via the complement of "dominant for both," 1 − 9/16, confirming the answer — but the plain 1/4 + 1/4 sum is the trap that forgets to subtract the overlap.)'
+            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. Check with the complement: P(dominant for both) = 3/4 × 3/4 = 9/16, and 1 − 9/16 = 7/16. The plain 1/4 + 1/4 sum forgets to subtract the overlap, subtracting 2/16 removes the overlap twice instead of once, and 1/4 × 1/4 = 1/16 is only the aabb overlap itself.'
           }
         ]
       }

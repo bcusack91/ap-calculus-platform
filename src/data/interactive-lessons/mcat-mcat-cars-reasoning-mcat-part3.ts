@@ -50,13 +50,17 @@ The negation test is the single most reliable tool for assumption questions. Her
 **Conclusion:** the evening hours *caused* the attendance increase.
 **Stated evidence:** the schedule was the *only* change.
 
-**Candidate assumption A:** "No outside factor (a popular new exhibit, a citywide tourism surge, free transit) independently boosted attendance."
+**Candidate assumption A:** "The rise was not caused entirely by some outside factor."
 
-Negate it: *"Some outside factor independently boosted attendance."* If that is true, the rise might have nothing to do with the hours — the argument **collapses**. So A is a **necessary assumption**. Good answer.
+Negate it: *"The rise WAS caused entirely by some outside factor"* (a popular new exhibit, a citywide tourism surge, free transit). Then the evening hours account for none of the increase, and the claim that they caused it **collapses**. So A is a **necessary assumption**. Good answer.
 
-**Candidate assumption B:** "The museum advertised the new hours widely."
+**Candidate assumption B:** "No outside factor contributed anything at all to the rise."
 
-Negate it: *"The museum did not advertise the new hours."* The argument can still stand — people might have discovered the hours by other means, and the conclusion (the hours caused the rise) is untouched. So B is **not necessary**. It might *strengthen* the argument, but the question asked for a required assumption. Trap.
+Negate it: *"Some outside factor contributed part of the rise."* The argument can still stand — the evening hours could have caused the rest of the increase. So B is **not necessary**. It would *strengthen* the argument by ruling out every rival contribution, but the argument does not require it. Trap: B sounds like A, but it demands far more than the argument needs.
+
+**Candidate assumption C:** "The museum advertised the new hours widely."
+
+Negate it: *"The museum did not advertise the new hours."* The argument can still stand — people might have discovered the hours by other means, and the conclusion (the hours caused the rise) is untouched. So C is **not necessary** either. It might make the conclusion more plausible, but the question asked for a required assumption. Trap.
 
 **The discipline:** Negate the choice and ask, "Does the argument now fall apart?" If yes → necessary assumption. If the argument survives the negation → reject the choice, no matter how relevant it sounds. Sufficient-but-not-necessary statements are the most common wrong answers on these items.`
     },

@@ -147,13 +147,13 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
           {
             question: 'A function $f$ has horizontal asymptotes at $y = 2$ and $y = -3$. Which could be $f$?',
             options: [
-              '$f(x) = \\frac{2x-3}{x+1}$',
-              '$f(x) = \\frac{2x}{\\sqrt{x^2+1}} - \\frac{x}{\\sqrt{x^2+4}}$',
               '$f(x) = \\frac{2x^2 - 3x}{x^2+1}$',
-              'No such function exists'
+              '$f(x) = \\frac{5x}{2\\sqrt{x^2+1}} - \\frac{1}{2}$',
+              '$f(x) = \\frac{2x}{\\sqrt{x^2+1}} - \\frac{3x}{\\sqrt{x^2+4}}$',
+              'No function can have two different horizontal asymptotes'
             ],
-            correctAnswer: 0,
-            explanation: 'Check: $\\frac{2x-3}{x+1} \\to 2$ as $x \\to \\infty$. As $x \\to -\\infty$, same: $\\frac{2x}{x} = 2$. This only gives one HA. Actually, functions like $\\frac{ax}{\\sqrt{x^2+b}}$ can give two different HAs. The key insight is that rational functions always have the same limit at $+\\infty$ and $-\\infty$, so we need a non-rational function for two different HAs. Among the options, $\\frac{2x-3}{x+1}$ gives $y=2$ only. The correct understanding is nuanced.'
+            correctAnswer: 1,
+            explanation: 'Use $\\sqrt{x^2+1} \\approx |x|$. As $x \\to \\infty$, $\\frac{5x}{2\\sqrt{x^2+1}} \\to \\frac{5}{2}$, so $f(x) \\to \\frac{5}{2} - \\frac{1}{2} = 2$. As $x \\to -\\infty$, $\\sqrt{x^2+1} \\approx -x$, so $\\frac{5x}{2\\sqrt{x^2+1}} \\to -\\frac{5}{2}$ and $f(x) \\to -\\frac{5}{2} - \\frac{1}{2} = -3$. A rational function has the same limit in both directions, so $\\frac{2x^2-3x}{x^2+1}$ approaches $2$ both ways. The other square-root function approaches $2 - 3 = -1$ as $x \\to \\infty$ and $-2 + 3 = 1$ as $x \\to -\\infty$, the wrong pair. Functions with two different horizontal asymptotes do exist, as this example shows.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{2\\sin(x) + 3x^2}{x^2 + \\cos(x)}$.',

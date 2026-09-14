@@ -125,13 +125,13 @@ $$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
           {
             question: 'A 1000 W motor runs for 1 hour. The energy delivered is:',
             options: [
-              '1000 J',
-              '60,000 J',
-              '3,600,000 J',
-              '1 kWh'
+              '$1.0 \\times 10^{3}$ J',
+              '$6.0 \\times 10^{4}$ J',
+              '$3.6 \\times 10^{6}$ J',
+              '$3.6 \\times 10^{5}$ J'
             ],
             correctAnswer: 2,
-            explanation: '$W = Pt = 1000 \\times 3600 = 3{,}600{,}000$ J $= 3.6$ MJ $= 1$ kWh. Both 3,600,000 J and 1 kWh are correct numerically, but 3,600,000 J is the answer in Joules.'
+            explanation: 'Convert the time to seconds: 1 hour = 3600 s. Then $W = Pt = (1000\\text{ W})(3600\\text{ s}) = 3.6 \\times 10^{6}$ J, which is also 1 kWh. Using 1 s gives $1.0 \\times 10^{3}$ J, treating an hour as 60 s gives $6.0 \\times 10^{4}$ J, and $3.6 \\times 10^{5}$ J is off by a factor of ten.'
           }
         ]
       }

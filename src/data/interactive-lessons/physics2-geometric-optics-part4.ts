@@ -89,13 +89,13 @@ export const physics2GeomOpticsPart4Data = {
           {
             question: 'You solve a problem and get $d_i = -12$ cm, $m = +0.4$ for a concave mirror with $f = 20$ cm. Is this reasonable?',
             options: [
-              'Yes — virtual, upright, reduced image',
-              'No — concave mirrors with $d_o > f$ always give real images. Check if $d_o < f$.',
-              'No — concave mirrors never give virtual images',
-              'Yes, but only if $d_i = -12$ means the image is 12 cm in front'
+              'Yes — a virtual, upright, reduced image is expected here',
+              'No — $m$ gives $d_o = 30$ cm $> f$, where the image is real',
+              'No — a concave mirror can never form a virtual image',
+              'Yes, if $d_i = -12$ means the image is 12 cm in front'
             ],
-            correctAnswer: 0,
-            explanation: 'This IS possible for a concave mirror — it happens when $d_o < f$. From $m = -d_i/d_o$: $d_o = -d_i/m = -(-12)/0.4 = 30$ cm. Wait, that gives $d_o = 30 > f = 20$. Let me recheck: $1/d_i = 1/20 - 1/30 = 1/60$, $d_i = 60 \\neq -12$. The answer is actually "No — check if $d_o < f$" — the numbers are inconsistent!'
+            correctAnswer: 1,
+            explanation: 'Check consistency. From $m = -d_i/d_o$: $d_o = -(-12)/0.4 = 30$ cm. But $d_o = 30$ cm $> f = 20$ cm, and the mirror equation then gives $1/d_i = 1/20 - 1/30 = 1/60$, so $d_i = +60$ cm, a real image, not $-12$ cm. The numbers are inconsistent. A concave mirror does form virtual images, but only when $d_o < f$, and those images are always enlarged ($m > 1$), so an upright, reduced virtual image cannot come from a concave mirror. A negative $d_i$ means the image is behind the mirror, not in front.'
           },
           {
             question: 'A convex mirror has $R = -50$ cm. What is $f$?',

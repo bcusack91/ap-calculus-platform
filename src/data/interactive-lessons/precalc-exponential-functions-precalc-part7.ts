@@ -210,10 +210,10 @@ $1.25 = (1.01184)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01184} \\approx \\fra
               '$1000e^{-1} \\approx 368\\text{ g}$',
               '$0.9 \\cdot 1000e^{-1} \\approx 331\\text{ g}$',
               '$1000e^{-1} - 100 \\approx 268\\text{ g}$',
-              '$0.9 \\cdot 1000e^{-0.05 \\cdot 20} \\approx 331\\text{ g}$'
+              '$0.1 \\cdot 1000e^{-1} \\approx 37\\text{ g}$'
             ],
-            correctAnswer: 3,
-            explanation: 'After $20$ years: $A(20) = 1000e^{-1} \\approx 367.9\\text{ g}$. Remove $10\\%$: keep $90\\% = 0.9 \\cdot 367.9 \\approx 331\\text{ g}$. Both $0.9 \\cdot 1000e^{-1}$ and $0.9 \\cdot 1000e^{-0.05 \\cdot 20}$ give the same answer, but $0.9 \\cdot 1000e^{-0.05 \\cdot 20}$ shows the complete calculation.'
+            correctAnswer: 1,
+            explanation: 'After $20$ years: $A(20) = 1000e^{-0.05 \\cdot 20} = 1000e^{-1} \\approx 367.9\\text{ g}$. Removing $10\\%$ keeps $90\\%$: $0.9 \\cdot 367.9 \\approx 331\\text{ g}$. Stopping at $368\\text{ g}$ ignores the removal, subtracting $100\\text{ g}$ takes $10\\%$ of the original $1000\\text{ g}$ instead of the current amount, and $0.1 \\cdot 1000e^{-1} \\approx 37\\text{ g}$ is the amount removed, not the amount remaining.'
           }
         ]
       }

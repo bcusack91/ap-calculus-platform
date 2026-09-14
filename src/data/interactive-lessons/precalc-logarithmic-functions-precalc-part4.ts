@@ -120,10 +120,10 @@ When you condense logs, you may expand the domain. The product $x(x-3)$ can be p
               '$x = 16$',
               '$x = 5$',
               '$x = 80$',
-              '$x = \\frac{20}{4} = 5$'
+              '$x = \\frac{1}{5}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\ln(4x) = \\ln 20 \\implies 4x = 20 \\implies x = 5$. Both $x = 5$ and $x = \\frac{20}{4} = 5$ give the same answer.'
+            explanation: 'By the product rule, $\\ln x + \\ln 4 = \\ln(4x)$, so $\\ln(4x) = \\ln 20 \\implies 4x = 20 \\implies x = 5$. Getting $16$ treats the sum as $\\ln(x + 4)$, $80$ multiplies instead of dividing, and $\\frac{1}{5}$ divides in the wrong order.'
           },
           {
             question: 'For $\\log_2(x) + \\log_2(x-6) = 4$, which solution is extraneous?',

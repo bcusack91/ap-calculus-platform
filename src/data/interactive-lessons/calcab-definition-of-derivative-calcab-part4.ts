@@ -84,9 +84,9 @@ $$s'(t) = v(t), \\qquad s''(t) = v'(t) = a(t)$$
           },
           {
             question: 'Which notation represents "the second derivative of $y$ with respect to $x$, evaluated at $x = 1$"?',
-            options: ['$f\'\'(1)$', '$\\frac{dy}{dx}\\bigg|_{x=1}$', '$f\'(1)$', '$\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$'],
+            options: ['$\\left.\\frac{dy^2}{dx^2}\\right|_{x=1}$', '$\\left.\\frac{dy^2}{d^2x}\\right|_{x=1}$', '$\\left.\\frac{d^2y}{d^2x}\\right|_{x=1}$', '$\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$'],
             correctAnswer: 3,
-            explanation: 'Leibniz for second derivative evaluated at a point: $\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$. $f\'\'(1)$ is also correct in Lagrange notation.'
+            explanation: 'In Leibniz notation the second derivative is $\\frac{d^2y}{dx^2}$: the numerator is $d^2y$ (the operator $d$ applied twice to $y$) and the denominator is $dx^2$, meaning $(dx)^2$. Writing $dy^2$ misplaces the exponent in the numerator, and writing $d^2x$ misplaces it in the denominator, so every other form is nonstandard. The bar with $x=1$ means evaluated at $x = 1$.'
           },
           {
             question: 'The operator notation $\\frac{d}{dx}[x^2 \\sin x]$ means:',

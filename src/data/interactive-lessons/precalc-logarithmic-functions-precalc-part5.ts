@@ -208,10 +208,10 @@ $$y = \\frac{\\ln x}{\\ln b}$$
               '$\\log_3 4$',
               '$4$',
               '$3$',
-              '$\\log_2 8$'
+              '$\\log_3 6$'
             ],
             correctAnswer: 2,
-            explanation: 'By change of base (in reverse): $\\frac{\\log_3 8}{\\log_3 2} = \\log_2 8 = 3$. So both $3$ and $\\log_2 8$ are correct representations, but $3$ is the simplified value.'
+            explanation: 'By change of base (in reverse): $\\frac{\\log_3 8}{\\log_3 2} = \\log_2 8 = 3$, since $2^3 = 8$. A quotient of logs is not the log of a quotient, so $\\log_3 4$ and $4$ both come from wrongly dividing $8$ by $2$, and $\\log_3 6$ comes from wrongly subtracting $2$ from $8$.'
           },
           {
             question: 'Solve $\\log_5 x = 2.5$ to the nearest integer.',

@@ -156,8 +156,8 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
               'A buffer with $[HF] > [F^-]$',
               'A solution with excess $NaOH$'
             ],
-            correctAnswer: 2,
-            explanation: 'Let volume = $V$. Mol $HF = 0.20V$, mol $OH^- = 0.10V$. After neutralization: $HF = 0.10V$, $F^- = 0.10V$. Wait — equal! So $[HF] = [F^-]$ at pH = $pK_a$. Actually, both have the same value, so the answer is the buffer with $[HF] = [F^-]$.'
+            correctAnswer: 1,
+            explanation: 'Let each volume be $V$. Mol $HF = 0.20V$ and mol $OH^- = 0.10V$. The $OH^-$ converts an equal amount of $HF$ into $F^-$, leaving $0.10V$ mol $HF$ and $0.10V$ mol $F^-$ in the same total volume, so $[HF] = [F^-]$ and $pH = pK_a$ (the half-equivalence point). $NaOH$ is the limiting reagent, so none is left over, and a buffer at $pH = pK_a$ of a weak acid is acidic, not neutral.'
           }
         ]
       }

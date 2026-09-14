@@ -140,13 +140,13 @@ What is the correct noble gas shorthand notation for phosphorus (P, Z = 15)?`,
           {
             question: 'Noble gas shorthand for P:',
             options: [
-              '[He] $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$',
+              '[Ne] $4s^{2}$ $4p^{3}$',
               '[Ne] $3s^{2}$ $3p^{3}$',
               '[Ne] $3s^{2}$ $3p^{5}$',
               '[Ar] $3s^{2}$ $3p^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core. The remaining 5 electrons: $3s^{2}$ $3p^{3}$. So the answer is [Ne] $3s^{2}$ $3p^{3}$. While the [He] $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$ form is technically correct, [Ne] is the most appropriate (closest) noble gas core.'
+            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core, the noble gas just before it. The remaining 5 electrons go into the third shell: $3s^{2}$ $3p^{3}$, giving [Ne] $3s^{2}$ $3p^{3}$. [Ne] $3s^{2}$ $3p^{5}$ has 17 electrons (chlorine), [Ar] already holds 18 electrons, more than phosphorus has, and [Ne] $4s^{2}$ $4p^{3}$ puts the valence electrons in the fourth shell even though phosphorus is in period 3.'
           }
         ]
       }

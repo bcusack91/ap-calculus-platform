@@ -94,12 +94,12 @@ Risk: Publication bias (only positive findings published)
             question: `Which list best summarizes what informed consent requires subjects to know?`,
             options: [
               `Purpose, risks and benefits, right to withdraw, and confidentiality`,
-              `Purpose, risks and benefits, and right to withdraw, but not confidentiality`,
-              `Purpose, risks and benefits, confidentiality, and that consent is final`,
-              `Purpose, benefits only, right to withdraw, and confidentiality`
+              `Purpose, risks and benefits, that signing is final, and that data are public`,
+              `Purpose, main benefits only, right to withdraw, and that data are public`,
+              `Purpose, main benefits only, that signing is final, and confidentiality`
             ],
             correctAnswer: 0,
-            explanation: `Informed consent requires all four elements: the study's purpose and procedures, its risks and benefits, the right to withdraw at any time without penalty, and how confidentiality will be protected. Leaving out confidentiality, describing consent as final (it can be withdrawn), or disclosing benefits without risks each fails the standard for true informed consent and ethical research.`
+            explanation: `Informed consent requires disclosure of the study's purpose and procedures, its risks and benefits, the right to withdraw at any time without penalty, and how confidentiality will be protected. Every other list includes at least one element that violates the standard: participants must hear the risks as well as the benefits, signing is never final because participants may withdraw at any time, and identifiable data must be kept confidential rather than made public.`
           }
         ]
       }
