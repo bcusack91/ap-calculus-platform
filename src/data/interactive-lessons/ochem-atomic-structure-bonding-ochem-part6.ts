@@ -61,7 +61,7 @@ Notice how every tool fed into the next: regions gave hybridization and geometry
               '$sp$ and $sp^3$'
             ],
             correctAnswer: 1,
-            explanation: 'The methyl carbon has 4 regions (3 C-H + 1 C-C) = $sp^3$; the nitrile carbon has 2 regions (one sigma to methyl, one sigma to N) = $sp$. The trap (option 1) treats both as $sp^3$, forgetting that the triple bond compresses the nitrile carbon to just two regions of density — a triple bond is ONE region, so that carbon is $sp$, not $sp^3$.'
+            explanation: 'The methyl carbon has 4 regions (3 C-H + 1 C-C) = $sp^3$; the nitrile carbon has 2 regions (one sigma to methyl, one sigma to N) = $sp$. The "$sp^3$ and $sp^3$" trap treats both as $sp^3$, forgetting that the triple bond compresses the nitrile carbon to just two regions of density — a triple bond is ONE region, so that carbon is $sp$, not $sp^3$.'
           },
           {
             question: 'How many total sigma and pi bonds are present in acetonitrile, $\\text{CH}_3\\text{C}\\!\\equiv\\!\\text{N}$?',
@@ -72,7 +72,7 @@ Notice how every tool fed into the next: regions gave hybridization and geometry
               '6 sigma and 1 pi'
             ],
             correctAnswer: 1,
-            explanation: 'Three C-H sigma + one C-C sigma + the C≡N (1 sigma + 2 pi) = 5 sigma and 2 pi. The trap (option 1) counts the triple bond as three sigma bonds; only its first bond is sigma, and the other two are pi. Always resolve each multiple bond into 1 sigma plus the rest pi.'
+            explanation: 'Three C-H sigma + one C-C sigma + the C≡N (1 sigma + 2 pi) = 5 sigma and 2 pi. The 7-sigma-0-pi trap counts the triple bond as three sigma bonds; only its first bond is sigma, and the other two are pi. Always resolve each multiple bond into 1 sigma plus the rest pi.'
           },
           {
             question: 'Is acetonitrile a polar molecule, and which end carries the partial negative charge?',
@@ -83,7 +83,7 @@ Notice how every tool fed into the next: regions gave hybridization and geometry
               'Nonpolar, because all atoms have equal electronegativity'
             ],
             correctAnswer: 1,
-            explanation: 'The strongly polar C≡N bond points its dipole toward the more electronegative nitrogen, and the linear nitrile geometry does not cancel it, so acetonitrile is polar with N as the $\\delta^-$ end. The trap (option 1) assumes the linear shape forces cancellation as in CO2 — but CO2 cancels because it has TWO opposing equal dipoles; acetonitrile has one dominant C≡N dipole with nothing to oppose it.'
+            explanation: 'The strongly polar C≡N bond points its dipole toward the more electronegative nitrogen, and the linear nitrile geometry does not cancel it, so acetonitrile is polar with N as the $\\delta^-$ end. The nonpolar-by-cancellation trap assumes the linear shape forces cancellation as in CO2 — but CO2 cancels because it has TWO opposing equal dipoles; acetonitrile has one dominant C≡N dipole with nothing to oppose it.'
           }
         ]
       }
@@ -122,7 +122,7 @@ Consider the carbonyl carbon in **acetone**, $(\\text{CH}_3)_2\\text{C=O}$ — t
               '$sp^3$, $120^\\circ$'
             ],
             correctAnswer: 1,
-            explanation: 'The carbonyl carbon has 3 regions of density (two C-C single bonds + one C=O double bond, counted as one region) = $sp^2$, trigonal planar, $120^\\circ$. The trap (option 1) counts the C=O as two regions, inflating the count to 4 and wrongly giving $sp^3$; the pi part of the double bond never adds a region.'
+            explanation: 'The carbonyl carbon has 3 regions of density (two C-C single bonds + one C=O double bond, counted as one region) = $sp^2$, trigonal planar, $120^\\circ$. The "$sp^3$, $109.5^\\circ$" trap counts the C=O as two regions, inflating the count to 4 and wrongly giving $sp^3$; the pi part of the double bond never adds a region.'
           },
           {
             question: 'In a carbonyl group (C=O), which atom is the electrophilic site that nucleophiles attack, and why?',
@@ -133,7 +133,7 @@ Consider the carbonyl carbon in **acetone**, $(\\text{CH}_3)_2\\text{C=O}$ — t
               'The carbon, because it is $\\delta^-$'
             ],
             correctAnswer: 1,
-            explanation: 'Oxygen is more electronegative and withdraws the C=O electrons, making oxygen $\\delta^-$ and the carbon $\\delta^+$ — the electron-poor carbon is where electron-rich nucleophiles attack. The trap (option 1) puts the positive charge on oxygen; it is the LESS electronegative carbon that ends up partially positive and electrophilic. This single fact underlies all carbonyl chemistry.'
+            explanation: 'Oxygen is more electronegative and withdraws the C=O electrons, making oxygen $\\delta^-$ and the carbon $\\delta^+$ — the electron-poor carbon is where electron-rich nucleophiles attack. The "oxygen is $\\delta^+$" trap puts the positive charge on oxygen; it is the LESS electronegative carbon that ends up partially positive and electrophilic. This single fact underlies all carbonyl chemistry.'
           },
           {
             question: 'A resonance contributor for acetone draws the carbonyl as $\\text{C}^+\\!-\\!\\text{O}^-$ with a C-O single bond, giving carbon only 6 electrons. How should this contributor be classified?',
@@ -144,7 +144,7 @@ Consider the carbonyl carbon in **acetone**, $(\\text{CH}_3)_2\\text{C=O}$ — t
               'It is equal in importance to the neutral C=O structure'
             ],
             correctAnswer: 1,
-            explanation: 'By the best-structure rules, the neutral full-octet C=O form dominates; the charge-separated form with a 6-electron carbon is minor. But it is not worthless — it is precisely the resonance picture that rationalizes why the carbonyl carbon is electrophilic. The trap (option 1) over-values formal charges, which are only the #2 criterion and never beat a complete octet.'
+            explanation: 'By the best-structure rules, the neutral full-octet C=O form dominates; the charge-separated form with a 6-electron carbon is minor. But it is not worthless — it is precisely the resonance picture that rationalizes why the carbonyl carbon is electrophilic. The dominant-contributor trap over-values formal charges, which are only the #2 criterion and never beat a complete octet.'
           }
         ]
       }
@@ -166,7 +166,7 @@ Consider the carbonyl carbon in **acetone**, $(\\text{CH}_3)_2\\text{C=O}$ — t
               '$sp^2$ carbon; but resonance does not affect the oxygens'
             ],
             correctAnswer: 1,
-            explanation: 'The carbon has 3 regions (C-H, C-O single, C=O) = $sp^2$, trigonal planar. The two resonance contributors (swapping which oxygen is double-bonded) make the real ion a hybrid: both C-O bonds are identical (between single and double), and the $-1$ charge is split equally over both oxygens. The trap (option 1) treats the single Lewis drawing as literal; resonance means the oxygens are equivalent, not fixed as one single and one double.'
+            explanation: 'The carbon has 3 regions (C-H, C-O single, C=O) = $sp^2$, trigonal planar. The two resonance contributors (swapping which oxygen is double-bonded) make the real ion a hybrid: both C-O bonds are identical (between single and double), and the $-1$ charge is split equally over both oxygens. The permanently-different-oxygens trap treats the single Lewis drawing as literal; resonance means the oxygens are equivalent, not fixed as one single and one double.'
           },
           {
             question: 'You are told a molecule has polar bonds but a measured net dipole moment of zero. Which conclusion is justified?',
@@ -177,7 +177,7 @@ Consider the carbonyl carbon in **acetone**, $(\\text{CH}_3)_2\\text{C=O}$ — t
               'The measurement is necessarily an error'
             ],
             correctAnswer: 1,
-            explanation: 'Polar bonds plus zero net dipole is the signature of a symmetric molecule whose bond-dipole vectors cancel — exactly the $\\text{CO}_2$ (linear) and $\\text{CCl}_4$ (tetrahedral) situations from Part 5. The trap (option 1) denies the bonds are polar, but the problem states they are; the resolution is geometric cancellation, not nonpolar bonds.'
+            explanation: 'Polar bonds plus zero net dipole is the signature of a symmetric molecule whose bond-dipole vectors cancel — exactly the $\\text{CO}_2$ (linear) and $\\text{CCl}_4$ (tetrahedral) situations from Part 5. The nonpolar-bonds trap denies the bonds are polar, but the problem states they are; the resolution is geometric cancellation, not nonpolar bonds.'
           }
         ]
       }

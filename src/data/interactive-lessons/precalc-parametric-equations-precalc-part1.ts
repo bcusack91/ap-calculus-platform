@@ -181,9 +181,9 @@ The domain of $t$ controls which **portion** of the curve is drawn:
         questions: [
           {
             question: 'Which parametrization traces the line $y = 2x + 1$ from right to left?',
-            options: ['$x = t, \\; y = 2t + 1$', '$x = -t, \\; y = -2t + 1$', '$x = 3 - t, \\; y = 7 - 2t$', 'Both B and C'],
-            correctAnswer: 3,
-            explanation: 'B: as $t$ increases, $x$ decreases (right to left), $y = 2(-t)+1 = -2t+1$ ✓. C: $y = 7-2t = 2(3-t)+1$ ✓, $x$ decreases. Both trace right to left.'
+            options: ['$x = t, \\; y = 2t + 1$', '$x = -t, \\; y = 2t + 1$', '$x = 3 - t, \\; y = 7 - 2t$', '$x = 3 + t, \\; y = 7 + 2t$'],
+            correctAnswer: 2,
+            explanation: 'For $x = 3 - t$: $y = 7-2t = 2(3-t)+1$ ✓, and $x$ decreases as $t$ increases, so it traces right to left. $x = 3 + t$ runs left to right, and $x = -t, \\; y = 2t + 1$ lies on $y = -2x + 1$ instead.'
           },
           {
             question: 'The curve $x = t^2 - 1, \\; y = t$ passes the vertical line test:',

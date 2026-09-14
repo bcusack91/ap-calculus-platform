@@ -193,7 +193,7 @@ A square coil has 80 turns, each with side length 10 cm. The coil sits in a unif
               'Flux changes by 3 Wb in 10 s'
             ],
             correctAnswer: 2,
-            explanation: 'EMF = $|\\Delta\\Phi/\\Delta t|$. (A) 0.5 V, (B) 2 V, (C) 5 V, (D) 0.3 V. Option C gives the largest EMF because the flux changes most rapidly.'
+            explanation: 'EMF = $|\\Delta\\Phi/\\Delta t|$. 2 Wb in 4 s: 0.5 V; 1 Wb in 0.5 s: 2 V; 0.5 Wb in 0.1 s: 5 V; 3 Wb in 10 s: 0.3 V. The 0.5 Wb in 0.1 s change gives the largest EMF because the flux changes most rapidly.'
           }
         ]
       }

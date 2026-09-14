@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Analyzing maps, graphs, and tables related to Rhetorical Situation in Writing is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Making evidence-based claims about Rhetorical Situation in Writing describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Using geographic thinking to analyze Rhetorical Situation in Writing is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'Memorization']
           }
         ],
         correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],

@@ -91,7 +91,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'One sigma bond and two pi bonds'
             ],
             correctAnswer: 1,
-            explanation: 'The first bond between the two carbons is a sigma (head-on overlap of hybrid orbitals); the second is a pi (side-on overlap of leftover p orbitals). So a double bond = 1 sigma + 1 pi. The trap (option 1, two sigmas) is impossible — only the FIRST bond between two atoms can be sigma; any additional bond must be pi.'
+            explanation: 'The first bond between the two carbons is a sigma (head-on overlap of hybrid orbitals); the second is a pi (side-on overlap of leftover p orbitals). So a double bond = 1 sigma + 1 pi. The two-sigma trap is impossible — only the FIRST bond between two atoms can be sigma; any additional bond must be pi.'
           },
           {
             question: 'Why can a single (sigma) C-C bond rotate freely at room temperature, while a C=C double bond cannot?',
@@ -102,7 +102,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'Single bonds contain a hidden pi component that lubricates rotation'
             ],
             correctAnswer: 1,
-            explanation: 'A sigma bond is cylindrically symmetric, so twisting one end keeps the overlap intact — free rotation. A pi bond depends on two p orbitals staying parallel; rotating to $90^\\circ$ kills the overlap, so the double bond is locked. The trap (option 1) imagines the sigma bond breaking during rotation — it does not; rotation is free precisely because no overlap is lost. This locked rotation is what creates cis/trans isomers.'
+            explanation: 'A sigma bond is cylindrically symmetric, so twisting one end keeps the overlap intact — free rotation. A pi bond depends on two p orbitals staying parallel; rotating to $90^\\circ$ kills the overlap, so the double bond is locked. The break-and-re-form trap imagines the sigma bond breaking during rotation — it does not; rotation is free precisely because no overlap is lost. This locked rotation is what creates cis/trans isomers.'
           },
           {
             question: 'In a bonding molecular orbital versus an antibonding molecular orbital, where is the electron density and how do the energies compare?',
@@ -113,7 +113,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'Antibonding orbitals do not exist for sigma bonds'
             ],
             correctAnswer: 0,
-            explanation: 'Constructive (in-phase) overlap builds the bonding MO: density piles up between the nuclei and the energy drops below the atomic orbitals. Destructive (out-of-phase) overlap builds the antibonding MO: a node forms between the nuclei and the energy rises. The trap (option 2) swaps the two — remember that "bonding" literally means electron density glues the nuclei together.'
+            explanation: 'Constructive (in-phase) overlap builds the bonding MO: density piles up between the nuclei and the energy drops below the atomic orbitals. Destructive (out-of-phase) overlap builds the antibonding MO: a node forms between the nuclei and the energy rises. The node-between-nuclei-for-bonding trap swaps the two — remember that "bonding" literally means electron density glues the nuclei together.'
           }
         ]
       }
@@ -135,7 +135,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               '2 sigma and 1 pi'
             ],
             correctAnswer: 1,
-            explanation: 'The H-C single bond = 1 sigma. The C≡N triple bond = 1 sigma + 2 pi. Total = 2 sigma + 2 pi. The trap (option 1) treats the triple bond as three sigma bonds; in reality a triple bond is 1 sigma + 2 pi, because only the first bond between C and N can be head-on.'
+            explanation: 'The H-C single bond = 1 sigma. The C≡N triple bond = 1 sigma + 2 pi. Total = 2 sigma + 2 pi. The 3-sigma-0-pi trap treats the triple bond as three sigma bonds; in reality a triple bond is 1 sigma + 2 pi, because only the first bond between C and N can be head-on.'
           },
           {
             question: 'Using bond order to compare, which has the shortest and strongest carbon-carbon bond: ethane (C-C), ethene (C=C), or ethyne (C≡C)?',
@@ -146,7 +146,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'Ethene, because it is in the middle'
             ],
             correctAnswer: 1,
-            explanation: 'Bond order rises 1 → 2 → 3 from single to double to triple, and higher bond order means more shared electron density pulling the nuclei together, hence shorter and stronger. Ethyne (bond order 3) wins. The trap (option 1) confuses "single bonds rotate freely / are common" with "single bonds are strongest" — bond strength tracks bond order, and triple beats single.'
+            explanation: 'Bond order rises 1 → 2 → 3 from single to double to triple, and higher bond order means more shared electron density pulling the nuclei together, hence shorter and stronger. Ethyne (bond order 3) wins. The ethane trap confuses "single bonds rotate freely / are common" with "single bonds are strongest" — bond strength tracks bond order, and triple beats single.'
           },
           {
             question: 'Molecular orbital theory predicts that $\\text{O}_2$ is paramagnetic (has unpaired electrons), a fact the simple Lewis structure $\\text{O=O}$ with all electrons paired cannot explain. What MO feature accounts for this?',
@@ -157,7 +157,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'Oxygen forms a triple bond in MO theory'
             ],
             correctAnswer: 1,
-            explanation: "Filling O2's MO diagram places the last two electrons into the two degenerate $\\pi^*$ antibonding orbitals, and Hund's rule spreads them singly with parallel spins — two unpaired electrons, hence paramagnetism. The Lewis structure pairs everything and misses this entirely. The trap (option 1) denies antibonding orbitals exist; they do, and partially filling them is exactly what gives O2 its unpaired electrons and a net bond order of 2."
+            explanation: "Filling O2's MO diagram places the last two electrons into the two degenerate $\\pi^*$ antibonding orbitals, and Hund's rule spreads them singly with parallel spins — two unpaired electrons, hence paramagnetism. The Lewis structure pairs everything and misses this entirely. The no-antibonding-orbitals trap denies antibonding orbitals exist; they do, and partially filling them is exactly what gives O2 its unpaired electrons and a net bond order of 2."
           }
         ]
       }
@@ -179,7 +179,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               'The pi bond allows free rotation, exposing the nucleus'
             ],
             correctAnswer: 1,
-            explanation: 'Pi electrons sit in exposed lobes off the bond axis and are bound less tightly than sigma electrons, making them an easy electron source for an electron-hungry electrophile — the basis of electrophilic addition. The trap (option 1) wrongly calls the pi bond stronger; it is actually WEAKER than the sigma, which is part of why it is the reactive site. (Option 4 is also false — pi bonds lock rotation.)'
+            explanation: 'Pi electrons sit in exposed lobes off the bond axis and are bound less tightly than sigma electrons, making them an easy electron source for an electron-hungry electrophile — the basis of electrophilic addition. The "pi bond is stronger" trap wrongly calls the pi bond stronger; it is actually WEAKER than the sigma, which is part of why it is the reactive site. (The free-rotation option is also false — pi bonds lock rotation.)'
           },
           {
             question: 'For a hypothetical diatomic species, an MO diagram shows 6 electrons in bonding MOs and 2 electrons in antibonding MOs. What is the bond order?',
@@ -190,7 +190,7 @@ For a triple bond like C≡C, bond order = 3 (one $\\sigma$ + two $\\pi$ = three
               '$1$'
             ],
             correctAnswer: 2,
-            explanation: 'Bond order = (bonding − antibonding)/2 = (6 − 2)/2 = 2. The antibonding electrons cancel an equal number of bonding electrons before you divide. The trap (option 1) adds the electrons (6 + 2)/... or forgets to subtract the antibonding contribution; the formula explicitly subtracts antibonding electrons because they destabilize the bond.'
+            explanation: 'Bond order = (bonding − antibonding)/2 = (6 − 2)/2 = 2. The antibonding electrons cancel an equal number of bonding electrons before you divide. The bond-order-4 trap adds the electrons (6 + 2)/... or forgets to subtract the antibonding contribution; the formula explicitly subtracts antibonding electrons because they destabilize the bond.'
           }
         ]
       }

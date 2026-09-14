@@ -93,7 +93,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'Three'
             ],
             correctAnswer: 2,
-            explanation: 'Two regions of density (one sigma to each neighbor) means $sp$ hybridization, which uses only the $s$ + one $p$. The other TWO p orbitals stay pure and form the two pi bonds of the triple bond. The trap (option 1) confuses the number of bonds with the number of leftover p orbitals — an $sp$ carbon has plenty of bonds, but exactly two unhybridized p orbitals.'
+            explanation: 'Two regions of density (one sigma to each neighbor) means $sp$ hybridization, which uses only the $s$ + one $p$. The other TWO p orbitals stay pure and form the two pi bonds of the triple bond. The "zero" trap confuses the number of bonds with the number of leftover p orbitals — an $sp$ carbon has plenty of bonds, but exactly two unhybridized p orbitals.'
           },
           {
             question: 'In a molecule, a nitrogen atom has two sigma bonds and one lone pair, and is part of a system with no double bond to it. Counting regions of electron density, what is its hybridization?',
@@ -104,7 +104,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'It cannot be determined'
             ],
             correctAnswer: 1,
-            explanation: 'Regions = sigma bonds + lone pairs = 2 + 1 = 3 regions, giving $sp^2$. The crucial habit is that LONE PAIRS count as regions just like sigma bonds. The trap (option 1) counts only the two bonds and forgets the lone pair, wrongly giving $sp$; geometry and hybridization always include lone pairs in the steric number.'
+            explanation: 'Regions = sigma bonds + lone pairs = 2 + 1 = 3 regions, giving $sp^2$. The crucial habit is that LONE PAIRS count as regions just like sigma bonds. The $sp$ trap counts only the two bonds and forgets the lone pair, wrongly giving $sp$; geometry and hybridization always include lone pairs in the steric number.'
           }
         ]
       }
@@ -126,7 +126,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'The alkyne carbon is more electronegative because it has more bonds'
             ],
             correctAnswer: 1,
-            explanation: 'Acidity here is governed by conjugate-base stability. The $sp$ carbanion holds its lone pair in a 50%-s orbital, close to the nucleus and low in energy, so it is far more stable than the 25%-s $sp^3$ carbanion. The trap (option 1) has the bond-length logic backwards — the $sp$ C-H is actually SHORTER and stronger; acidity is about stabilizing the anion AFTER the proton leaves, not bond strength alone.'
+            explanation: 'Acidity here is governed by conjugate-base stability. The $sp$ carbanion holds its lone pair in a 50%-s orbital, close to the nucleus and low in energy, so it is far more stable than the 25%-s $sp^3$ carbanion. The longer-weaker-bond trap has the bond-length logic backwards — the $sp$ C-H is actually SHORTER and stronger; acidity is about stabilizing the anion AFTER the proton leaves, not bond strength alone.'
           },
           {
             question: 'Rank the following C-H bonds from shortest to longest: ethyne ($sp$), ethane ($sp^3$), ethene ($sp^2$).',
@@ -137,7 +137,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'All three are equal in length'
             ],
             correctAnswer: 1,
-            explanation: 'More s-character pulls the bonding electrons closer to the nucleus, shortening the bond. Order of s-character is $sp$ (50%) > $sp^2$ (33%) > $sp^3$ (25%), so bond length is ethyne < ethene < ethane. The trap (option 1) reverses the trend by assuming more bonds = longer reach; in fact higher s-character means a tighter, shorter bond.'
+            explanation: 'More s-character pulls the bonding electrons closer to the nucleus, shortening the bond. Order of s-character is $sp$ (50%) > $sp^2$ (33%) > $sp^3$ (25%), so bond length is ethyne < ethene < ethane. The ethane < ethene < ethyne trap reverses the trend by assuming more bonds = longer reach; in fact higher s-character means a tighter, shorter bond.'
           },
           {
             question: 'An exam claims a particular carbon is $sp$ hybridized with a bond angle of $109.5^\\circ$. Why is this internally inconsistent?',
@@ -148,7 +148,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               '$109.5^\\circ$ only applies to nitrogen'
             ],
             correctAnswer: 1,
-            explanation: 'Each hybridization has a fixed geometry: $sp$ = linear ($180^\\circ$), $sp^2$ = trigonal planar ($120^\\circ$), $sp^3$ = tetrahedral ($109.5^\\circ$). An $sp$ carbon cannot be $109.5^\\circ$. The trap (option 1) swaps the $sp$/$sp^3$ angles; pairing the right angle to the right hybridization is exactly the bookkeeping being tested.'
+            explanation: 'Each hybridization has a fixed geometry: $sp$ = linear ($180^\\circ$), $sp^2$ = trigonal planar ($120^\\circ$), $sp^3$ = tetrahedral ($109.5^\\circ$). An $sp$ carbon cannot be $109.5^\\circ$. The "$sp$ carbons are tetrahedral" trap swaps the $sp$/$sp^3$ angles; pairing the right angle to the right hybridization is exactly the bookkeeping being tested.'
           }
         ]
       }
@@ -170,7 +170,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'Promotion converts carbon into a noble gas'
             ],
             correctAnswer: 1,
-            explanation: 'Promotion unlocks four singly-occupied orbitals, enabling four bonds instead of two; the energy of two extra bonds dwarfs the modest promotion cost, and hybridization makes the four orbitals equivalent and optimally oriented. The trap (option 1) denies that promotion costs energy — it does — but the bonding payoff makes the net process strongly favorable.'
+            explanation: 'Promotion unlocks four singly-occupied orbitals, enabling four bonds instead of two; the energy of two extra bonds dwarfs the modest promotion cost, and hybridization makes the four orbitals equivalent and optimally oriented. The "promotion releases energy" trap denies that promotion costs energy — it does — but the bonding payoff makes the net process strongly favorable.'
           },
           {
             question: 'Allene, $\\text{H}_2\\text{C=C=C}\\text{H}_2$, has a central carbon double-bonded to two different carbons. What is the hybridization of that CENTRAL carbon?',
@@ -181,7 +181,7 @@ A lower $\\text{p}K_a$ means a stronger acid. Terminal alkynes are dramatically 
               'It is unhybridized'
             ],
             correctAnswer: 2,
-            explanation: 'The central carbon has exactly two regions of electron density (a double bond to the left carbon and a double bond to the right carbon); each double bond is one region, so steric number = 2 = $sp$, linear. It needs two pure p orbitals to make one pi bond on each side. The trap (option 1) counts atoms or bonds instead of regions; the central allene carbon, despite two double bonds, is $sp$.'
+            explanation: 'The central carbon has exactly two regions of electron density (a double bond to the left carbon and a double bond to the right carbon); each double bond is one region, so steric number = 2 = $sp$, linear. It needs two pure p orbitals to make one pi bond on each side. The $sp^3$ trap counts atoms or bonds instead of regions; the central allene carbon, despite two double bonds, is $sp$.'
           }
         ]
       }

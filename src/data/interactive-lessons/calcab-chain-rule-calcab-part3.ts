@@ -136,9 +136,9 @@ $$\\boxed{\\text{Tangent line: } y - 2 = -\\frac{4}{5}(x - 1)}$$
         questions: [
           {
             question: 'Find $\\frac{dy}{dx}$ for $e^y = x^2 + 1$.',
-            options: ['$\\frac{2x}{e^y}$', '$\\frac{e^y}{2x}$', '$2xe^{-y}$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: 'Differentiate: $e^y \\cdot \\frac{dy}{dx} = 2x$. Solve: $\\frac{dy}{dx} = \\frac{2x}{e^y} = 2xe^{-y}$. Both A and C are equivalent.'
+            options: ['$\\frac{2x}{e^y}$', '$\\frac{e^y}{2x}$', '$2xe^{y}$', '$\\frac{2x}{y}$'],
+            correctAnswer: 0,
+            explanation: 'Differentiate: $e^y \\cdot \\frac{dy}{dx} = 2x$. Solve: $\\frac{dy}{dx} = \\frac{2x}{e^y} = 2xe^{-y}$. A sign slip in the exponent gives $2xe^{y}$ instead.'
           },
           {
             question: 'For $x^2 + y^2 = 25$, find the slope of the tangent at $(3, 4)$.',

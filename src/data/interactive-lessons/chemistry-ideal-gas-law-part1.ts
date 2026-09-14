@@ -243,14 +243,9 @@ Convert the following gas measurements:
         questions: [
           {
             question: 'Standard atmospheric pressure is equal to which of the following?',
-            options: [
-              '760 torr',
-              '101.325 kPa',
-              '1 atm',
-              'All of the above'
-            ],
-            correctAnswer: 3,
-            explanation: 'All three values represent the same standard atmospheric pressure: 1 atm = 760 torr = 101.325 kPa. These are all equivalent.'
+            options: ['760 torr', '76 torr', '101.325 atm', '1 kPa'],
+            correctAnswer: 0,
+            explanation: 'Standard atmospheric pressure is 1 atm = 760 torr = 101.325 kPa. The distractors misplace a decimal (76 torr) or attach the numbers to the wrong unit (101.325 atm, 1 kPa).'
           },
           {
             question: 'According to KMT, what happens when gas molecules collide with each other?',

@@ -63,7 +63,7 @@ This five-step routine — applied here to $\\text{C}_4\\text{H}_8\\text{O}$ —
               'Rings always require 4 degrees of unsaturation'
             ],
             correctAnswer: 1,
-            explanation: 'DoU = 1, and a C=O is itself one degree; once it is "spent" there is no remaining unsaturation budget for a ring. (Carbonyls and rings certainly can coexist in larger molecules with higher DoU — trap a is false — but not here.)'
+            explanation: 'DoU = 1, and a C=O is itself one degree; once it is "spent" there is no remaining unsaturation budget for a ring. (Carbonyls and rings certainly can coexist in larger molecules with higher DoU — the claim that they cannot coexist is false — but not here.)'
           },
           {
             question: 'In structure elucidation, what is the recommended FIRST quantitative step after writing down the molecular formula?',
@@ -140,7 +140,7 @@ This five-step routine — applied here to $\\text{C}_4\\text{H}_8\\text{O}$ —
               'Anisole, because it contains no oxygen'
             ],
             correctAnswer: 1,
-            explanation: 'Anisole is an ether (C–O–C) with no O–H, so it cannot donate hydrogen bonds to water and is more hydrophobic. Benzyl alcohol\'s –OH does hydrogen bond, raising its (still modest) water solubility. Anisole does contain oxygen (trap d is false); it just lacks an O–H.'
+            explanation: 'Anisole is an ether (C–O–C) with no O–H, so it cannot donate hydrogen bonds to water and is more hydrophobic. Benzyl alcohol\'s –OH does hydrogen bond, raising its (still modest) water solubility. Anisole does contain oxygen (so the "contains no oxygen" option is false); it just lacks an O–H.'
           },
           {
             question: 'A compound C5H10 is reported. You compute DoU = 1 and learn it decolorizes bromine (a test for C=C double bonds). What do you conclude?',
@@ -204,7 +204,7 @@ Every problem in this workshop used the same backbone. Internalize it as a check
               'It eliminates the need to count hydrogens'
             ],
             correctAnswer: 1,
-            explanation: 'The DoU sets the structural budget: it says how much unsaturation (rings + pi bonds) must be present, which immediately constrains the candidate structures. It never names the exact compound by itself (trap a), and you still verify by counting hydrogens at the end (trap d).'
+            explanation: 'The DoU sets the structural budget: it says how much unsaturation (rings + pi bonds) must be present, which immediately constrains the candidate structures. It never names the exact compound by itself (the exact-compound trap), and you still verify by counting hydrogens at the end (the no-hydrogen-counting trap).'
           }
         ]
       }

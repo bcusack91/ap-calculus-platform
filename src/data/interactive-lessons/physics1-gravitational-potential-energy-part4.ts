@@ -189,8 +189,8 @@ Use $g = 10$ $m/s^{2}$.
           },
           {
             label: 'A ball thrown downward at 5 m/s from 10 m hits the ground faster than one dropped from 10 m because:',
-            options: ['It has more PE', 'It has more initial KE', 'It has more total energy', 'Both B and C'],
-            correctIndex: 3,
+            options: ['It has more PE', 'It experiences less air resistance', 'It has more total energy', 'It accelerates faster as it falls'],
+            correctIndex: 2,
             explanation: 'Same PE (same height), but thrown ball has extra KE ($\\frac{1}{2}mv^2$). More total energy → more final KE → higher impact speed.'
           }
         ]

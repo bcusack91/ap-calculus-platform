@@ -171,9 +171,9 @@ For a rotating solid object (like a wheel):
           },
           {
             label: 'The units of angular velocity are:',
-            options: ['degrees/s', 'rad/s', 'rev/s', 'All of these can express angular velocity, but rad/s is the SI unit'],
-            correctIndex: 3,
-            explanation: 'Angular velocity can be expressed in any angular unit per time, but the SI unit is rad/s. Using rad/s makes $v = r\\omega$ work directly.'
+            options: ['m/s', 'rad/s', 'rad/s²', 'N·m'],
+            correctIndex: 1,
+            explanation: 'Angular velocity is an angle per unit time with SI unit rad/s (degrees/s or rev/s also work); m/s is linear speed, rad/s² is angular acceleration, and N·m is torque. Using rad/s makes $v = r\\omega$ work directly.'
           }
         ]
       }

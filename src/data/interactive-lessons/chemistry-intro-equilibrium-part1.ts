@@ -110,14 +110,9 @@ $$\\boxed{\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}}$$
           },
           {
             question: 'Which observation indicates a system has reached equilibrium?',
-            options: [
-              'All reactants have been consumed',
-              'The color of the solution stops changing',
-              'Bubbles stop forming',
-              'Both B and C could indicate equilibrium'
-            ],
-            correctAnswer: 3,
-            explanation: 'Any observable property (color, pressure, etc.) becoming constant over time can indicate equilibrium. Both a stable color and cessation of bubble formation (if gas is a product) could signal that concentrations are no longer changing.'
+            options: ['All reactants have been consumed', 'The color of the solution stops changing', 'The forward and reverse reactions stop', 'Reactant and product concentrations become equal'],
+            correctAnswer: 1,
+            explanation: 'Any observable property (color, pressure, etc.) becoming constant over time can indicate equilibrium. A stable color signals that concentrations are no longer changing; the forward and reverse reactions continue at equal rates, and concentrations need not be equal.'
           },
           {
             question: 'A sealed container holds $N_{2}O_{4}$ and $NO_{2}$ at equilibrium. If you could tag individual molecules, you would observe:',

@@ -148,8 +148,8 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
         dropdowns: [
           {
             label: 'S-curve, inflection at $(3, -1)$:',
-            options: ['$y = (x-3)^3-1$', '$y = (x+3)^3+1$', '$y = \\sqrt[3]{x-3}-1$', 'Either A or C'],
-            correctAnswer: 3
+            options: ['$y = (x-3)^3-1$', '$y = (x+3)^3+1$', '$y = (x-3)^3+1$', '$y = (x+3)^3-1$'],
+            correctAnswer: 0
           },
           {
             label: 'Step 1 in writing a graph equation:',
@@ -167,11 +167,11 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Either A or C', 'Identify the parent function', '$y = \\frac{1}{3}x^2-4$', 'One full cycle length'],
+        correctAnswers: ['$y = (x-3)^3-1$', 'Identify the parent function', '$y = \\frac{1}{3}x^2-4$', 'One full cycle length'],
         hint1: 'Cubic and cube root both pass through inflection point.',
         hint2: 'Always start by recognizing the shape.',
         hint3: '"Very wide" means $|a| < 1$.',
-        explanation: 'S-curve at $(3,-1)$: both cubic and cube root work. First step: identify parent. Wide parabola: $|a|<1$. Period = one full cycle.'
+        explanation: 'S-curve at $(3,-1)$: the cubic shifted right 3 and down 1. First step: identify parent. Wide parabola: $|a|<1$. Period = one full cycle.'
       }
     },
     {

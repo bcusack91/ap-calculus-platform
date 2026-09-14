@@ -65,14 +65,14 @@ Answer the following about angular momentum.
         dropdowns: [
           {
             label: "Angular Momentum is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
+            options: ["It is only needed for one exam question", "It is never tested on the exam", "It is central to many exam problems", "It replaces the need to learn torque"]
           },
           {
             label: "The best study strategy is:",
             options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
           }
         ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
+        correctAnswers: ["It is central to many exam problems","Practice problems regularly"],
         hint1: "Think about why we study this.",
         hint2: "Active practice is key.",
         explanation: "Angular Momentum builds on prior concepts and is frequently tested. Regular practice is the best study strategy."

@@ -60,7 +60,7 @@ Each observable is independent, and they constrain one another. A signal that is
               'A singlet can never be an aldehyde, so it must be O–H'
             ],
             correctAnswer: 1,
-            explanation: 'No single observable settles it — the combination does: a ~$9.7\\ \\text{ppm}$ position is in the aldehyde range, and a *sharp* singlet that survives the $\\text{D}_2\\text{O}$ shake excludes an exchangeable O–H (which is usually broad and disappears). Shift alone (option 1) or integration alone (option 3) is insufficient, and aldehydes commonly are singlets or small triplets (option 4 is false).'
+            explanation: 'No single observable settles it — the combination does: a ~$9.7\\ \\text{ppm}$ position is in the aldehyde range, and a *sharp* singlet that survives the $\\text{D}_2\\text{O}$ shake excludes an exchangeable O–H (which is usually broad and disappears). Shift alone or integration alone is insufficient, and aldehydes commonly are singlets or small triplets (so "a singlet can never be an aldehyde" is false).'
           }
         ]
       }
@@ -203,7 +203,7 @@ Pulling Parts 5–6 into one checklist you can run on any unknown:
               'Splitting patterns are decorative and can be ignored once the shifts are known'
             ],
             correctAnswer: 1,
-            explanation: 'Structure elucidation works by accumulating independent constraints — degrees of unsaturation, IR functional groups, and the four pieces of $^1\\text{H}$ information plus $^{13}\\text{C}$/DEPT — and converging on the one structure consistent with every observation. A lone shift is rarely decisive (option 1), routine $^{13}\\text{C}$ integration is unreliable (option 3), and splitting is essential connectivity data, never decorative (option 4).'
+            explanation: 'Structure elucidation works by accumulating independent constraints — degrees of unsaturation, IR functional groups, and the four pieces of $^1\\text{H}$ information plus $^{13}\\text{C}$/DEPT — and converging on the one structure consistent with every observation. A lone shift is rarely decisive, routine $^{13}\\text{C}$ integration is unreliable, and splitting is essential connectivity data, never decorative.'
           }
         ]
       }

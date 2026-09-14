@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Essential terms and definitions for Rhetorical Situation in Writing is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'The most frequent ways Rhetorical Situation in Writing is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'Approaches for answering Rhetorical Situation in Writing questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'Guessing']
           }
         ],
         correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],

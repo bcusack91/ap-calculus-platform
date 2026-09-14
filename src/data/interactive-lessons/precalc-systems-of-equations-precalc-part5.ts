@@ -154,7 +154,7 @@ $\\frac{7x+1}{(x+1)(x-2)} = \\frac{A}{x+1}+\\frac{B}{x-2}$
         dropdowns: [
           {
             label: 'Before decomposing, ensure:',
-            options: ['Numerator degree < denominator degree', 'Denominator is factored', 'Both A and B', 'Neither'],
+            options: ['Numerator is factored', 'Denominator has no repeated factors', 'Proper fraction and factored denominator', 'No preparation is needed'],
             correctAnswer: 2
           },
           {
@@ -173,7 +173,7 @@ $\\frac{7x+1}{(x+1)(x-2)} = \\frac{A}{x+1}+\\frac{B}{x-2}$
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Both A and B', 'Do long division first', 'Strategic substitution', 'Integration (calculus)'],
+        correctAnswers: ['Proper fraction and factored denominator', 'Do long division first', 'Strategic substitution', 'Integration (calculus)'],
         hint1: 'Must be proper fraction with factored denominator.',
         hint2: 'Long division makes it a proper fraction.',
         hint3: 'Plug in roots of the denominator.',

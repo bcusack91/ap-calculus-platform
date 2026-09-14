@@ -180,7 +180,7 @@ $T_1 = \\frac{200}{1+\\sqrt{3}} \\approx 73.2$ lb, $\\quad T_2 \\approx 89.7$ lb
             question: 'A boat motors at 10 knots heading north. Current flows east at 5 knots. The ground speed is:',
             options: ['$15$ knots', '$5\\sqrt{5}$ knots', '$5$ knots', '$\\sqrt{125}$ knots'],
             correctAnswer: 3,
-            explanation: 'Resultant $= \\langle 5, 10 \\rangle$. Speed $= \\sqrt{25+100} = \\sqrt{125} = 5\\sqrt{5}$ knots. Both B and D are the same value.'
+            explanation: 'Resultant $= \\langle 5, 10 \\rangle$. Speed $= \\sqrt{25+100} = \\sqrt{125} = 5\\sqrt{5}$ knots. Both $5\\sqrt{5}$ and $\\sqrt{125}$ knots are the same value.'
           },
           {
             question: 'Three forces $\\vec{F}_1 = \\langle 4, 0 \\rangle$, $\\vec{F}_2 = \\langle 0, 3 \\rangle$, $\\vec{F}_3 = \\langle a, b \\rangle$ are in equilibrium. Then $(a, b) =$',

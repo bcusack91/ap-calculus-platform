@@ -148,14 +148,9 @@ A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. T
           },
           {
             question: 'A Venturi meter shows a pressure difference of 0 between the wide and narrow sections. This means:',
-            options: [
-              'The fluid is not flowing',
-              'The pipe has equal diameters at both points',
-              'The fluid is compressible',
-              'Either A or B'
-            ],
-            correctAnswer: 3,
-            explanation: '$\\Delta P = \\frac{1}{2}\\rho(v_2^2 - v_1^2)$. $\\Delta P = 0$ means $v_1 = v_2$, which happens if the flow is zero OR if the areas are equal. Either explanation works.'
+            options: ['The fluid is not flowing', 'The narrow section has the faster flow', 'The fluid is compressible', 'The flow speed is very high'],
+            correctAnswer: 0,
+            explanation: '$\\Delta P = \\frac{1}{2}\\rho(v_2^2 - v_1^2)$. $\\Delta P = 0$ means $v_1 = v_2$, and since the wide and narrow sections have different areas, equal speeds are possible only if the fluid is not flowing.'
           }
         ]
       }

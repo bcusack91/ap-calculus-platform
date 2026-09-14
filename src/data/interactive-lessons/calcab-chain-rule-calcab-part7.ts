@@ -98,9 +98,9 @@ $$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
           },
           {
             question: 'Find $\\frac{d}{dx}[\\cos^2(x) - \\sin^2(x)]$.',
-            options: ['$-2\\sin(2x)$', '$-4\\sin(x)\\cos(x)$', '$2\\cos(2x)$', 'Both A and B'],
-            correctAnswer: 3,
-            explanation: '$-2\\cos x \\sin x - 2\\sin x \\cos x = -4\\sin x\\cos x = -2\\sin(2x)$. A and B are equivalent.'
+            options: ['$-2\\sin(2x)$', '$2\\sin(2x)$', '$2\\cos(2x)$', '$-\\sin(2x)$'],
+            correctAnswer: 0,
+            explanation: '$-2\\cos x \\sin x - 2\\sin x \\cos x = -4\\sin x\\cos x = -2\\sin(2x)$. Missing the chain factor $2$ gives $-\\sin(2x)$.'
           },
           {
             question: "A sphere's volume increases at $100$ cm$^3$/s. How fast is the radius increasing when $r = 5$?",
@@ -152,10 +152,10 @@ $$\\frac{d}{dx}\\int_{x}^{x^2} t^3\\,dt = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^
           },
           {
             label: '$\\frac{d}{dx}[e^{\\ln x}]$',
-            options: ['$e^{\\ln x} \\cdot \\frac{1}{x}$', '$1$', '$e^{\\ln x}$', 'Both A and B and C'],
-            correctAnswers: ['Both A and B and C'],
+            options: ['$\\frac{1}{x}$', '$1$', '$e^{\\ln x}$', '$0$'],
+            correctAnswers: ['$1$'],
             hints: ['$e^{\\ln x} = x$, so its derivative is $1$. But also by chain rule: $e^{\\ln x} \\cdot \\frac{1}{x} = x \\cdot \\frac{1}{x} = 1$.'],
-            explanation: '$e^{\\ln x} = x$, so $\\frac{d}{dx}x = 1$. All three expressions equal 1.'
+            explanation: '$e^{\\ln x} = x$, so $\\frac{d}{dx}x = 1$. Leaving $e^{\\ln x}$ undifferentiated gives $x$, not $1$.'
           }
         ]
       }

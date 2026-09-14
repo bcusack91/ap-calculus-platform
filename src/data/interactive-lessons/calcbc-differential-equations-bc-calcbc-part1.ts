@@ -80,9 +80,9 @@ Not all DEs are separable. For example, $y' = x + y$ is NOT separable. On the BC
         questions: [
           {
             question: 'Which DE is separable?',
-            options: ['$y\' = x^2 y^3$ (can write as $x^2 \\cdot y^3$)', '$y\' = x + y$', '$y\' = xy + x + y + 1$... wait, factor: $(x+1)(y+1)$. Both A and C are separable!', '$y\' = x^2 + y^2$'],
+            options: ['$y\' = x^2 y^3$', '$y\' = x + y$', '$y\' = xy + 1$', '$y\' = x^2 + y^2$'],
             correctAnswer: 0,
-            explanation: '$y\' = x^2 y^3$ is immediately separable: $g(x) = x^2$, $h(y) = y^3$. (C is also separable after factoring.)'
+            explanation: '$y\' = x^2 y^3$ is immediately separable: $g(x) = x^2$, $h(y) = y^3$. ($x + y$, $xy + 1$ and $x^2 + y^2$ cannot be factored that way.)'
           },
           {
             question: 'Solve $dy/dx = 3y$ with $y(0) = 5$:',

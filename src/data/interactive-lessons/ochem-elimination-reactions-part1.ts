@@ -70,7 +70,7 @@ This electron bookkeeping is identical in spirit for both mechanisms; what diffe
               'A carbon chain is lengthened by one carbon'
             ],
             correctAnswer: 0,
-            explanation: 'Elimination removes H and LG from adjacent carbons and uses those electrons to form a new C=C π-bond, increasing unsaturation. Option 3 describes substitution (the competing pathway), and option 2 describes the reverse process (addition).'
+            explanation: 'Elimination removes H and LG from adjacent carbons and uses those electrons to form a new C=C π-bond, increasing unsaturation. Replacing a leaving group with a nucleophile describes substitution (the competing pathway), and converting a π-bond into two σ-bonds describes the reverse process (addition).'
           },
           {
             question: '2-chloropentane (CH3CHClCH2CH2CH3) undergoes elimination. How many distinct β-carbons bear abstractable hydrogens?',

@@ -186,7 +186,7 @@ So the population doubles roughly every 10 years. If it instead grew at $r_{max}
               'Population B has a higher per-capita growth rate than Population A'
             ],
             correctAnswer: 2,
-            explanation: 'Because dN/dt = r_max × N, Population B (N = 5,000) adds 0.3 × 5000 = 1,500/day while A adds 0.3 × 50 = 15/day — exactly 100× faster. The trap "both add at the same rate" confuses the equal PER-CAPITA rate with the POPULATION growth rate; identical r does not mean identical dN/dt when N differs. The final option is also wrong: r_max is stated as identical, so neither has a higher per-capita rate.'
+            explanation: 'Because dN/dt = r_max × N, Population B (N = 5,000) adds 0.3 × 5000 = 1,500/day while A adds 0.3 × 50 = 15/day — exactly 100× faster. The trap "both add at the same rate" confuses the equal PER-CAPITA rate with the POPULATION growth rate; identical r does not mean identical dN/dt when N differs. The "higher per-capita growth rate" option is also wrong: r_max is stated as identical, so neither has a higher per-capita rate.'
           }
         ]
       }

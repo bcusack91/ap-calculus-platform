@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'How Argument Structure links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'Isolation']
           },
           {
             label: 'How Argument Structure operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'Isolation']
           },
           {
             label: 'How outcomes of Argument Structure can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'Isolation']
           }
         ],
         correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],

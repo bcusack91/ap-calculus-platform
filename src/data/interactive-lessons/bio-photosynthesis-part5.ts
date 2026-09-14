@@ -81,13 +81,8 @@ This is why C4 plants (which circumvent photorespiration) dominate in tropical g
         questions: [
           {
             question: 'A graph shows photosynthetic rate vs. light intensity reaching a plateau. What could you do to increase the rate beyond the plateau?',
-            options: [
-              'Increase light intensity further',
-              'Increase CO2 concentration or optimize temperature (change the limiting factor)',
-              'Decrease O2 concentration around the plant',
-              'Both B and C could potentially work'
-            ],
-            correctAnswer: 3,
+            options: ['Increase light intensity further', 'Increase CO2 concentration or reduce O2 around the plant', 'Lower the temperature well below the optimum', 'Move the plant into shade to prevent photoinhibition'],
+            correctAnswer: 1,
             explanation: 'At the light-saturation plateau, light is no longer limiting. Increasing CO2 would accelerate the Calvin cycle, and decreasing O2 would reduce photorespiration — both would increase the net rate. Increasing light further would not help and might cause photoinhibition.'
           },
           {

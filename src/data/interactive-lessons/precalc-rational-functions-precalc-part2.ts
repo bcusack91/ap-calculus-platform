@@ -132,7 +132,7 @@ $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
               '$\\frac{x^3 + 1}{x}$'
             ],
             correctAnswer: 2,
-            explanation: 'A slant asymptote occurs when $\\deg(p) = \\deg(q) + 1$. For $\\frac{x^2+1}{x-1}$: $\\deg(p) = 2 = 1 + 1 = \\deg(q) + 1$. Option D has $\\deg(p) = 3$ and $\\deg(q) = 1$, so $\\deg(p) = \\deg(q) + 2$ — that gives a parabolic asymptote, not slant.'
+            explanation: 'A slant asymptote occurs when $\\deg(p) = \\deg(q) + 1$. For $\\frac{x^2+1}{x-1}$: $\\deg(p) = 2 = 1 + 1 = \\deg(q) + 1$. $\\frac{x^3 + 1}{x}$ has $\\deg(p) = 3$ and $\\deg(q) = 1$, so $\\deg(p) = \\deg(q) + 2$ — that gives a parabolic asymptote, not slant.'
           }
         ]
       }

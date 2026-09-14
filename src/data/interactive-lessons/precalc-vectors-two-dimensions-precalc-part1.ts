@@ -172,11 +172,11 @@ $c\\langle a, b \\rangle = \\langle ca, cb \\rangle$
           },
           {
             label: 'Vectors are equal if they have:',
-            options: ['Same starting point', 'Same magnitude and direction', 'Same components', 'Both B and C'],
-            correctAnswer: 3
+            options: ['Same starting point', 'Same magnitude and direction', 'Same magnitude only', 'Same direction only'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['Zero vector', 'Opposite direction, double length', '$45°$', 'Both B and C'],
+        correctAnswers: ['Zero vector', 'Opposite direction, double length', '$45°$', 'Same magnitude and direction'],
         hint1: 'The zero vector $\\langle 0, 0 \\rangle$ has magnitude 0.',
         hint2: 'Negative scalar reverses direction; $|-2| = 2$ scales length.',
         hint3: '$\\tan^{-1}(1/1) = 45°$.',

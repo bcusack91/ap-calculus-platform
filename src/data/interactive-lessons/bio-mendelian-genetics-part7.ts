@@ -61,7 +61,7 @@ This final part synthesizes the unit, names the misconceptions that cost student
               'The conclusion is wrong; a true 3:1 ratio would require exactly 150:50'
             ],
             correctAnswer: 1,
-            explanation: 'A heterozygous × heterozygous monohybrid cross predicts a 3:1 phenotypic ratio. Out of 200 offspring, 3:1 predicts 150 purple : 50 white, and the observed 148:52 is essentially that — small deviations are expected from random sampling. Option D reflects a key misconception: real data are NEVER required to hit the expected ratio exactly; a chi-square test would confirm 148:52 is statistically consistent with 3:1.'
+            explanation: 'A heterozygous × heterozygous monohybrid cross predicts a 3:1 phenotypic ratio. Out of 200 offspring, 3:1 predicts 150 purple : 50 white, and the observed 148:52 is essentially that — small deviations are expected from random sampling. The "exactly 150:50" option reflects a key misconception: real data are NEVER required to hit the expected ratio exactly; a chi-square test would confirm 148:52 is statistically consistent with 3:1.'
           },
           {
             question: 'In dihybrid pea crosses, Mendel obtained the 9:3:3:1 ratio. A different pair of genes, studied later, consistently gave offspring in roughly a 3:1:1:3 pattern instead, with a large excess of parental phenotype combinations. What is the most likely explanation?',
@@ -72,7 +72,7 @@ This final part synthesizes the unit, names the misconceptions that cost student
               'The parents were not true-breeding'
             ],
             correctAnswer: 1,
-            explanation: 'The 9:3:3:1 ratio depends on independent assortment. When two genes are LINKED (physically close on the same chromosome), they tend to be inherited together, inflating the parental-type combinations and depleting the recombinant types — exactly the distortion described. Option A is wrong because mutation is far too rare to shift whole-population ratios this way; linkage, not mutation, explains a systematic excess of parental types.'
+            explanation: 'The 9:3:3:1 ratio depends on independent assortment. When two genes are LINKED (physically close on the same chromosome), they tend to be inherited together, inflating the parental-type combinations and depleting the recombinant types — exactly the distortion described. The high-mutation-rate option is wrong because mutation is far too rare to shift whole-population ratios this way; linkage, not mutation, explains a systematic excess of parental types.'
           }
         ]
       }
@@ -129,7 +129,7 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
               'The genes must be assorting independently'
             ],
             correctAnswer: 1,
-            explanation: 'Because $\\chi^{2}$ = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. Option A has the decision rule backwards: you fail to reject only when $\\chi^{2}$ is BELOW the critical value. Here the large $\\chi^{2}$ signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
+            explanation: 'Because $\\chi^{2}$ = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. The "fail to reject" option has the decision rule backwards: you fail to reject only when $\\chi^{2}$ is BELOW the critical value. Here the large $\\chi^{2}$ signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
           },
           {
             question: 'A pedigree shows a rare trait appearing in every generation, transmitted from affected parents to roughly half their children, with males and females affected equally. The trait never skips a generation. Which conclusion is best supported, and which common misconception does it correct?',
@@ -140,7 +140,7 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
               'The data are insufficient to determine inheritance mode'
             ],
             correctAnswer: 1,
-            explanation: 'A trait in every generation (no skipping), passed from affected parent to about half the offspring, with equal sex ratios, is the signature of autosomal dominant inheritance. Crucially, rarity has nothing to do with whether an allele is dominant or recessive — that is the misconception in options A and C. Many dominant disorders (e.g., Huntington\'s) are rare; frequency is governed by population genetics, not by the dominance relationship.'
+            explanation: 'A trait in every generation (no skipping), passed from affected parent to about half the offspring, with equal sex ratios, is the signature of autosomal dominant inheritance. Crucially, rarity has nothing to do with whether an allele is dominant or recessive — that is the misconception in the autosomal-recessive and X-linked-recessive options. Many dominant disorders (e.g., Huntington\'s) are rare; frequency is governed by population genetics, not by the dominance relationship.'
           },
           {
             question: 'Two parents heterozygous for an autosomal recessive disorder (Aa × Aa) have four children, and the disorder appears in NONE of them. A relative concludes "the gene must not be in this family after all." Which statement best corrects this reasoning?',
@@ -151,7 +151,7 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
               'The expected 3:1 ratio guarantees exactly one of four children is affected'
             ],
             correctAnswer: 1,
-            explanation: 'Each child of an Aa × Aa cross has a 1/4 chance of being affected and 3/4 unaffected, independently. The probability that all four are unaffected is $(3/4)^{4}$ ≈ 0.32 — about a 1-in-3 outcome, entirely consistent with both parents being carriers. Option D embodies the core misconception: the 3:1 ratio is a long-run expectation over many offspring, NOT a guarantee that a small sibship of four contains exactly one affected child. Small samples deviate from expected ratios all the time.'
+            explanation: 'Each child of an Aa × Aa cross has a 1/4 chance of being affected and 3/4 unaffected, independently. The probability that all four are unaffected is $(3/4)^{4}$ ≈ 0.32 — about a 1-in-3 outcome, entirely consistent with both parents being carriers. The "guarantees exactly one affected" option embodies the core misconception: the 3:1 ratio is a long-run expectation over many offspring, NOT a guarantee that a small sibship of four contains exactly one affected child. Small samples deviate from expected ratios all the time.'
           }
         ]
       }

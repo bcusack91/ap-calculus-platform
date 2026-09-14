@@ -57,7 +57,7 @@ The key mental move is that IMFs are *interactions between molecules*, distinct 
               'Sulfur or chlorine only'
             ],
             correctAnswer: 1,
-            explanation: 'Hydrogen bonding requires H bonded to the small, highly electronegative atoms N, O, or F. A C–H bond (option a) does NOT hydrogen bond — the single most common error. Larger halogens like Cl and Br are too big and diffuse to support true hydrogen bonding.'
+            explanation: 'Hydrogen bonding requires H bonded to the small, highly electronegative atoms N, O, or F. A C–H bond does NOT hydrogen bond — the single most common error. Larger halogens like Cl and Br are too big and diffuse to support true hydrogen bonding.'
           },
           {
             question: 'Looking only at a skeletal structure, how can you tell a molecule is capable of hydrogen bonding with itself?',
@@ -113,7 +113,7 @@ The key mental move is that IMFs are *interactions between molecules*, distinct 
               'They actually boil at the same temperature'
             ],
             correctAnswer: 1,
-            explanation: 'Both are C2H6O (same size, same number of carbons — so trap a is false), but only ethanol has an O–H to hydrogen bond. Stronger IMFs in ethanol mean a much higher boiling point. The structural difference (alcohol vs. ether) is read directly from the drawing.'
+            explanation: 'Both are C2H6O (same size, same number of carbons — so the more-carbons trap is false), but only ethanol has an O–H to hydrogen bond. Stronger IMFs in ethanol mean a much higher boiling point. The structural difference (alcohol vs. ether) is read directly from the drawing.'
           },
           {
             question: 'Which compound would you predict to be MOST soluble in water, based on structure?',
@@ -135,7 +135,7 @@ The key mental move is that IMFs are *interactions between molecules*, distinct 
               'Boiling point actually decreases down the series'
             ],
             correctAnswer: 1,
-            explanation: 'Alkanes are nonpolar and cannot hydrogen bond (trap a), so the only IMF is London dispersion, which grows with size/surface area. More carbons → stronger LDFs → higher boiling point. The trend is an increase (so trap d is false).'
+            explanation: 'Alkanes are nonpolar and cannot hydrogen bond (the hydrogen-bonding trap), so the only IMF is London dispersion, which grows with size/surface area. More carbons → stronger LDFs → higher boiling point. The trend is an increase (so the decreasing-trend trap is false).'
           },
           {
             question: 'Two alcohols have the same molecular formula, but one is a straight chain and the other is highly branched. Which generally has the LOWER boiling point, and why?',
@@ -146,7 +146,7 @@ The key mental move is that IMFs are *interactions between molecules*, distinct 
               'The branched one, because branching eliminates hydrogen bonding'
             ],
             correctAnswer: 0,
-            explanation: 'Both have the same –OH and hydrogen bond similarly, but the branched isomer is more spherical, with less surface area for dispersion contact, lowering its boiling point. Branching does not eliminate hydrogen bonding (trap d) — the –OH is still present.'
+            explanation: 'Both have the same –OH and hydrogen bond similarly, but the branched isomer is more spherical, with less surface area for dispersion contact, lowering its boiling point. Branching does not eliminate hydrogen bonding (contrary to the branching-eliminates-hydrogen-bonding trap) — the –OH is still present.'
           }
         ]
       }

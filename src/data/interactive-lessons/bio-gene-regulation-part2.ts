@@ -115,7 +115,7 @@ The lac operon integrates **two inputs** (is lactose present? is glucose present
               'High, because glucose increases cAMP and activates CAP'
             ],
             correctAnswer: 1,
-            explanation: 'With lactose present the repressor is released, but glucose keeps cAMP low, so CAP-cAMP cannot bind and the weak promoter yields only LOW transcription — this is catabolite repression. Option A is the trap: lactose alone is not sufficient for HIGH output; you also need glucose absent. Option C wrongly claims glucose acts through the repressor (glucose acts through cAMP/CAP). Option D inverts the cAMP relationship — glucose LOWERS cAMP.'
+            explanation: 'With lactose present the repressor is released, but glucose keeps cAMP low, so CAP-cAMP cannot bind and the weak promoter yields only LOW transcription — this is catabolite repression. The "high because lactose is present" option is the trap: lactose alone is not sufficient for HIGH output; you also need glucose absent. The "off because the repressor binds" option wrongly claims glucose acts through the repressor (glucose acts through cAMP/CAP). The "glucose increases cAMP" option inverts the cAMP relationship — glucose LOWERS cAMP.'
           },
           {
             question: 'In the lab, IPTG (a non-metabolizable lactose analog) is added to a wild-type lac culture growing on glucose. What happens, and what does this reveal?',
@@ -126,7 +126,7 @@ The lac operon integrates **two inputs** (is lactose present? is glucose present
               'The operon stays OFF because IPTG is not real lactose'
             ],
             correctAnswer: 1,
-            explanation: 'IPTG binds LacI and releases the operator (it mimics allolactose), so the negative switch flips — but the positive switch is still off because glucose is present and cAMP is low. Result: low transcription, demonstrating the two controls are separable. Option A is wrong because IPTG does not affect cAMP. Option D misunderstands induction: IPTG induces precisely because it binds the repressor without needing to be metabolized.'
+            explanation: 'IPTG binds LacI and releases the operator (it mimics allolactose), so the negative switch flips — but the positive switch is still off because glucose is present and cAMP is low. Result: low transcription, demonstrating the two controls are separable. The "turns fully ON" option is wrong because IPTG does not affect cAMP. The "IPTG is not real lactose" option misunderstands induction: IPTG induces precisely because it binds the repressor without needing to be metabolized.'
           },
           {
             question: 'Which condition produces the HIGHEST level of lac operon transcription in wild-type E. coli?',
@@ -188,7 +188,7 @@ The *trp* operon encodes enzymes that **synthesize** the amino acid tryptophan. 
               'Lactose increases cAMP while tryptophan decreases it'
             ],
             correctAnswer: 1,
-            explanation: 'Repressible vs. inducible logic accounts for the opposite responses: tryptophan (a corepressor of an anabolic pathway) switches trp OFF, while lactose-derived allolactose (an inducer of a catabolic pathway) switches lac ON. Option A is false — they act on different repressors. Option D conflates two unrelated mechanisms; tryptophan does not act through cAMP, and the trp/lac contrast is about repressor default state, not cAMP.'
+            explanation: 'Repressible vs. inducible logic accounts for the opposite responses: tryptophan (a corepressor of an anabolic pathway) switches trp OFF, while lactose-derived allolactose (an inducer of a catabolic pathway) switches lac ON. The "same regulatory protein" option is false — they act on different repressors. The cAMP option conflates two unrelated mechanisms; tryptophan does not act through cAMP, and the trp/lac contrast is about repressor default state, not cAMP.'
           },
           {
             question: 'A geneticist deletes the trpR gene (which encodes the trp repressor) in E. coli. What is the predicted effect on the trp operon when tryptophan is abundant?',
@@ -199,7 +199,7 @@ The *trp* operon encodes enzymes that **synthesize** the amino acid tryptophan. 
               'The operon will only express if glucose is also removed'
             ],
             correctAnswer: 1,
-            explanation: 'Tryptophan represses the trp operon only by acting as a corepressor for the TrpR repressor. With trpR deleted, there is no repressor to activate, so the operator is never blocked and the operon stays ON even when tryptophan is high — it is now constitutive. Option A is the trap: tryptophan does not bind DNA itself; it needs the repressor. Option D wrongly imports the lac/glucose-CAP system, which is irrelevant to trp.'
+            explanation: 'Tryptophan represses the trp operon only by acting as a corepressor for the TrpR repressor. With trpR deleted, there is no repressor to activate, so the operator is never blocked and the operon stays ON even when tryptophan is high — it is now constitutive. The "tryptophan still represses it directly" option is the trap: tryptophan does not bind DNA itself; it needs the repressor. The glucose-removal option wrongly imports the lac/glucose-CAP system, which is irrelevant to trp.'
           }
         ]
       }

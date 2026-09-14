@@ -125,12 +125,7 @@ $$\\sin \\alpha = \\frac{40(0.866)}{60.8} \\approx 0.570 \\implies \\alpha \\app
           },
           {
             question: 'A surveyor measures a baseline of 500 m. The angles to a tower from each end are 55° and 68°. Which law finds the distances to the tower?',
-            options: [
-              'Law of Cosines only',
-              'Law of Sines',
-              'Pythagorean theorem',
-              'None of the above'
-            ],
+            options: ['Law of Cosines only', 'Law of Sines', 'Pythagorean theorem', 'Right-triangle trigonometry only'],
             correctAnswer: 1,
             explanation: 'With ASA data (two angles + included side), use Law of Sines after finding the third angle.'
           }

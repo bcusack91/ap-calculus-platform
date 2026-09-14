@@ -102,7 +102,7 @@ The four products are $\\frac{9}{16}, \\frac{3}{16}, \\frac{3}{16}, \\frac{1}{16
               '16 types, one for each Punnett square cell'
             ],
             correctAnswer: 1,
-            explanation: 'RrYy is heterozygous for 2 genes, so it makes $2^{2}$ = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). Option A lists only the two "parental" combinations and misses the recombinant gametes Ry and rY, which independent assortment specifically produces. The 16 in option D is the number of grid CELLS (offspring outcomes), not gamete types.'
+            explanation: 'RrYy is heterozygous for 2 genes, so it makes $2^{2}$ = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). The "2 types" option lists only the two "parental" combinations and misses the recombinant gametes Ry and rY, which independent assortment specifically produces. The 16 in the "16 types" option is the number of grid CELLS (offspring outcomes), not gamete types.'
           },
           {
             question: 'In a RrYy × RrYy dihybrid cross, what fraction of the offspring are expected to show BOTH recessive phenotypes (wrinkled AND green)?',
@@ -113,7 +113,7 @@ The four products are $\\frac{9}{16}, \\frac{3}{16}, \\frac{3}{16}, \\frac{1}{16
               '$\\frac{1}{4}$'
             ],
             correctAnswer: 2,
-            explanation: 'Both recessive phenotypes require genotype rryy. Using the product rule: P(wrinkled) = 1/4 and P(green) = 1/4, so P(wrinkled and green) = 1/4 × 1/4 = 1/16. This is the single "1" in the 9:3:3:1 ratio. The trap answer 1/4 (option D) is the probability of just ONE recessive trait; forgetting to multiply the two independent 1/4 probabilities is the classic dihybrid error.'
+            explanation: 'Both recessive phenotypes require genotype rryy. Using the product rule: P(wrinkled) = 1/4 and P(green) = 1/4, so P(wrinkled and green) = 1/4 × 1/4 = 1/16. This is the single "1" in the 9:3:3:1 ratio. The trap answer 1/4 is the probability of just ONE recessive trait; forgetting to multiply the two independent 1/4 probabilities is the classic dihybrid error.'
           }
         ]
       }
@@ -161,7 +161,7 @@ Both methods agree: $\\frac{1}{8}$.
               '$\\frac{1}{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'P(Rr) = 1/2 and P(Yy) = 1/2, so P(RrYy) = 1/2 × 1/2 = 1/4 = 4/16, matching the four RrYy cells in the 16-cell grid. The trap is 9/16 (option A): that is the probability of the round-yellow PHENOTYPE, which lumps together RRYY, RRYy, RrYY, and RrYy. The question asks for the specific double-heterozygous genotype, a subset of the 9/16.'
+            explanation: 'P(Rr) = 1/2 and P(Yy) = 1/2, so P(RrYy) = 1/2 × 1/2 = 1/4 = 4/16, matching the four RrYy cells in the 16-cell grid. The trap is 9/16: that is the probability of the round-yellow PHENOTYPE, which lumps together RRYY, RRYy, RrYY, and RrYy. The question asks for the specific double-heterozygous genotype, a subset of the 9/16.'
           },
           {
             question: 'A dihybrid cross AaBb × AaBb is performed. A student needs to find the probability of offspring that are dominant for trait A but recessive for trait B (phenotype A_ bb). What is the fastest correct approach, and the answer?',
@@ -172,7 +172,7 @@ Both methods agree: $\\frac{1}{8}$.
               'Multiply P(AA) × P(bb) = $\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}$'
             ],
             correctAnswer: 1,
-            explanation: 'For two independent traits, multiply (product rule, the AND case): P(A dominant) = 3/4 and P(bb) = 1/4, giving 3/4 × 1/4 = 3/16. Option C wrongly ADDS the probabilities — the sum rule applies to mutually exclusive OR outcomes, not to two traits that must BOTH occur. Option D uses P(AA) = 1/4 instead of P(A_ ) = 3/4, undercounting by excluding the heterozygous Aa plants that also show the dominant A phenotype.'
+            explanation: 'For two independent traits, multiply (product rule, the AND case): P(A dominant) = 3/4 and P(bb) = 1/4, giving 3/4 × 1/4 = 3/16. The addition option wrongly ADDS the probabilities — the sum rule applies to mutually exclusive OR outcomes, not to two traits that must BOTH occur. The P(AA) × P(bb) option uses P(AA) = 1/4 instead of P(A_ ) = 3/4, undercounting by excluding the heterozygous Aa plants that also show the dominant A phenotype.'
           }
         ]
       }
@@ -223,7 +223,7 @@ That single multiplication replaces hunting through 64 boxes. The whole trihybri
               '16 gamete types; 16 cells'
             ],
             correctAnswer: 1,
-            explanation: 'There are 4 heterozygous gene pairs, so gamete types = $2^{4}$ = 16, and the full grid is 16 × 16 = 256 cells. Option A (8 and 64) is the trihybrid answer (n = 3) — a common off-by-one error when you miscount the number of heterozygous genes. The grid size is always $(gamete types)^{2}$, i.e. $4^{n}$, which is why hand-drawing it becomes hopeless past n = 2.'
+            explanation: 'There are 4 heterozygous gene pairs, so gamete types = $2^{4}$ = 16, and the full grid is 16 × 16 = 256 cells. The 8-gamete-types, 64-cells option is the trihybrid answer (n = 3) — a common off-by-one error when you miscount the number of heterozygous genes. The grid size is always $(gamete types)^{2}$, i.e. $4^{n}$, which is why hand-drawing it becomes hopeless past n = 2.'
           },
           {
             question: 'From the trihybrid cross AaBbCc × AaBbCc, what is the probability of an offspring that is homozygous dominant for ALL three genes (AABBCC)?',
@@ -234,7 +234,7 @@ That single multiplication replaces hunting through 64 boxes. The whole trihybri
               '$\\frac{3}{64}$'
             ],
             correctAnswer: 1,
-            explanation: 'Each gene independently gives P(homozygous dominant) = 1/4 (from Aa × Aa). By the product rule, P(AABBCC) = 1/4 × 1/4 × 1/4 = 1/64. The trap 27/64 (option A) is the probability of the dominant PHENOTYPE for all three genes (A_ B_ C_), which uses 3/4 per gene and includes heterozygotes. The specific all-homozygous-dominant GENOTYPE is just one of the 64 grid cells.'
+            explanation: 'Each gene independently gives P(homozygous dominant) = 1/4 (from Aa × Aa). By the product rule, P(AABBCC) = 1/4 × 1/4 × 1/4 = 1/64. The trap 27/64 is the probability of the dominant PHENOTYPE for all three genes (A_ B_ C_), which uses 3/4 per gene and includes heterozygotes. The specific all-homozygous-dominant GENOTYPE is just one of the 64 grid cells.'
           }
         ]
       }

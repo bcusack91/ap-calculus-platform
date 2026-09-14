@@ -51,7 +51,7 @@ Sexual selection is a **subset of natural selection** in the broad sense (it act
               'Stabilizing selection, because intermediate horn size is favored'
             ],
             correctAnswer: 1,
-            explanation: 'Horns used as WEAPONS in direct male-vs-male contests are the signature of INTRAsexual selection (competition WITHIN one sex). Option A is the trap: the scenario describes males fighting each other, not females CHOOSING males based on horn display, so it is intra-, not inter-sexual. Note also the sexual dimorphism (only males have horns), which is itself a hallmark of sexual selection rather than survival selection.'
+            explanation: 'Horns used as WEAPONS in direct male-vs-male contests are the signature of INTRAsexual selection (competition WITHIN one sex). The intersexual-selection option is the trap: the scenario describes males fighting each other, not females CHOOSING males based on horn display, so it is intra-, not inter-sexual. Note also the sexual dimorphism (only males have horns), which is itself a hallmark of sexual selection rather than survival selection.'
           },
           {
             question: 'Male bowerbirds build and decorate elaborate structures ("bowers") with colorful objects. Females visit multiple bowers and mate with the male whose bower they find most impressive; the bower has no role in survival. This is the clearest example of:',
@@ -62,7 +62,7 @@ Sexual selection is a **subset of natural selection** in the broad sense (it act
               'Gene flow between bowerbird populations'
             ],
             correctAnswer: 1,
-            explanation: 'Females evaluating and CHOOSING among males based on a displayed trait is INTERsexual selection (mate choice, "between the sexes"). Option A is the trap: there is no direct male–male fighting here — males compete indirectly by attracting choosy females, which is mate choice, not combat. The display has no survival function, ruling out ordinary natural selection.'
+            explanation: 'Females evaluating and CHOOSING among males based on a displayed trait is INTERsexual selection (mate choice, "between the sexes"). The male–male combat option is the trap: there is no direct male–male fighting here — males compete indirectly by attracting choosy females, which is mate choice, not combat. The display has no survival function, ruling out ordinary natural selection.'
           }
         ]
       }
@@ -125,7 +125,7 @@ The tail size we observe represents an **equilibrium** between these opposing pr
               'Long tails arose by genetic drift and have no effect on fitness'
             ],
             correctAnswer: 1,
-            explanation: 'The experiment shows long tails RAISE mating success via female choice (intersexual selection), and because fitness = reproductive success, the mating gain can outweigh the survival cost — so the trait spreads despite hurting survival. Option A is the trap: it directly contradicts the stated FACT that long tails REDUCE survival; the trait persists in spite of survival selection, not because of it.'
+            explanation: 'The experiment shows long tails RAISE mating success via female choice (intersexual selection), and because fitness = reproductive success, the mating gain can outweigh the survival cost — so the trait spreads despite hurting survival. The "long tails increase survival" option is the trap: it directly contradicts the stated FACT that long tails REDUCE survival; the trait persists in spite of survival selection, not because of it.'
           },
           {
             question: 'According to the handicap principle, why does a costly ornament like a heavy, conspicuous tail serve as a RELIABLE ("honest") signal of male quality to choosy females?',
@@ -136,7 +136,7 @@ The tail size we observe represents an **equilibrium** between these opposing pr
               'Because females cannot actually perceive the ornament, so it has no real effect'
             ],
             correctAnswer: 1,
-            explanation: 'The handicap principle states that the COST is what makes the signal honest: a low-quality male simply cannot afford a large ornament and survive, so only high-quality males display them, making the trait a reliable indicator of "good genes." Option C is the trap — it reverses the logic; the ornament is metabolically EXPENSIVE (a handicap), not energy-saving, and that very expense is what guarantees its honesty.'
+            explanation: 'The handicap principle states that the COST is what makes the signal honest: a low-quality male simply cannot afford a large ornament and survive, so only high-quality males display them, making the trait a reliable indicator of "good genes." The "reduces the male\'s metabolic rate" option is the trap — it reverses the logic; the ornament is metabolically EXPENSIVE (a handicap), not energy-saving, and that very expense is what guarantees its honesty.'
           }
         ]
       }
@@ -186,7 +186,7 @@ Now the survival cost dominates: the long tail yields *fewer* total offspring th
               'The trait is identical across all individuals and shows no variation'
             ],
             correctAnswer: 1,
-            explanation: 'A sexually dimorphic (one-sex), costly trait that LOWERS survival but RAISES mating success is the textbook profile of sexual selection — the survival cost rules out plain natural selection as the sole driver. Option C is the trap: a camouflage trait shared by both sexes that improves survival is a SURVIVAL (natural) selection trait, the opposite of a sexually selected ornament.'
+            explanation: 'A sexually dimorphic (one-sex), costly trait that LOWERS survival but RAISES mating success is the textbook profile of sexual selection — the survival cost rules out plain natural selection as the sole driver. The camouflage option is the trap: a camouflage trait shared by both sexes that improves survival is a SURVIVAL (natural) selection trait, the opposite of a sexually selected ornament.'
           },
           {
             question: 'A trait increases an individual\'s probability of surviving to old age but renders that individual completely sterile. From an evolutionary standpoint, how does sexual (and natural) selection treat this trait, and why?',
@@ -197,7 +197,7 @@ Now the survival cost dominates: the long tail yields *fewer* total offspring th
               'It is favored only by sexual selection but not by natural selection'
             ],
             correctAnswer: 1,
-            explanation: 'Fitness is measured by CONTRIBUTION OF OFFSPRING to the next generation. A trait causing sterility yields zero reproductive output, so its bearer\'s fitness is zero and the trait is selected AGAINST no matter how long the individual survives. Option A is the trap — it equates longevity with fitness, but survival matters ONLY insofar as it leads to reproduction, which sterility prevents entirely.'
+            explanation: 'Fitness is measured by CONTRIBUTION OF OFFSPRING to the next generation. A trait causing sterility yields zero reproductive output, so its bearer\'s fitness is zero and the trait is selected AGAINST no matter how long the individual survives. The "strongly favored" option is the trap — it equates longevity with fitness, but survival matters ONLY insofar as it leads to reproduction, which sterility prevents entirely.'
           }
         ]
       }

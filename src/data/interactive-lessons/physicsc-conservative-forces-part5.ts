@@ -107,7 +107,7 @@ $$U(x,y) = -x^2 y - 3x + y^2$$`
         '$\\vec{F} = (x+y)\\hat{x} + (x+y)\\hat{y}$'
       ],
       correctAnswer: 0,
-      explanation: 'Check each: (A) $\\partial(y)/\\partial y = 1$, $\\partial(2x)/\\partial x = 2$. $1 \\neq 2$ — non-conservative. (B) $0 = 0$ ✓. (C) $2y = 2y$ ✓. (D) $1 = 1$ ✓.'
+      explanation: 'Check each: For $y\\hat{x} + 2x\\hat{y}$: $\\partial(y)/\\partial y = 1$, $\\partial(2x)/\\partial x = 2$. $1 \\neq 2$ — non-conservative. For $2x\\hat{x} + 3y^2\\hat{y}$: $0 = 0$ ✓. For $y^2\\hat{x} + 2xy\\hat{y}$: $2y = 2y$ ✓. For $(x+y)\\hat{x} + (x+y)\\hat{y}$: $1 = 1$ ✓.'
     },
     {
       id: 'cf5-applications',

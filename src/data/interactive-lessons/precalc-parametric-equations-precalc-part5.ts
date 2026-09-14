@@ -94,9 +94,9 @@ Direction: $(3, 4)$. So $x = 2 + 3t, \\; y = 3 + 4t$ with $t \\in [0, 1]$ for th
           },
           {
             question: '$x = 1 + t^2, \\; y = 2 - t$. The Cartesian equation is:',
-            options: ['$x = 1 + (2-y)^2$', '$y = 2 - \\sqrt{x-1}$', '$x = y^2 - 4y + 5$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: '$t = 2 - y$, so $x = 1 + (2-y)^2 = 1 + y^2 - 4y + 4 = y^2 - 4y + 5$. Both A and C are equivalent.'
+            options: ['$x = 1 - (2-y)^2$', '$y = 2 - \\sqrt{x-1}$', '$x = y^2 - 4y + 5$', '$x = y^2 + 4y + 5$'],
+            correctAnswer: 2,
+            explanation: '$t = 2 - y$, so $x = 1 + (2-y)^2 = 1 + y^2 - 4y + 4 = y^2 - 4y + 5$. A sign slip in expanding $(2-y)^2$ gives $y^2 + 4y + 5$.'
           }
         ]
       }

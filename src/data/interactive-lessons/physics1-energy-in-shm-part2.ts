@@ -154,9 +154,9 @@ $$h_{\\text{max}} = L(1 - \\cos\\theta_{\\text{max}}) \\approx \\frac{L\\theta_{
           },
           {
             label: 'Which expression correctly gives the total energy of a mass-spring SHM system?',
-            options: ['$\\tfrac{1}{2} kA^{2}$', '$\\tfrac{1}{2} mv^{2}max$', '$\\tfrac{1}{2} m\\omega^{2}A^{2}$', 'all of these'],
-            correctIndex: 3,
-            explanation: 'The total energy can be expressed as $\\frac{1}{2}kA^2 = \\frac{1}{2}mv_{\\text{max}}^2 = \\frac{1}{2}m\\omega^2 A^2$. All three are equivalent.'
+            options: ['$\\tfrac{1}{2} kA^{2}$', '$kA^{2}$', '$\\tfrac{1}{2} kx^{2}$ at any position', '$\\tfrac{1}{2} mv^{2}$ at any position'],
+            correctIndex: 0,
+            explanation: 'The total energy can be expressed as $\\frac{1}{2}kA^2 = \\frac{1}{2}mv_{\\text{max}}^2 = \\frac{1}{2}m\\omega^2 A^2$. Using $\\frac{1}{2}kx^2$ or $\\frac{1}{2}mv^2$ at an arbitrary position gives only part of that energy.'
           }
         ]
       }

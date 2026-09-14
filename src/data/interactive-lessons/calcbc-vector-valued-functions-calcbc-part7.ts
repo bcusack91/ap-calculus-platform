@@ -60,7 +60,7 @@ export const calcbcVectorsPart7Data = {
           },
           {
             question: 'Which increases the total distance traveled?',
-            options: ['Higher speed over the interval', 'Higher acceleration', 'Starting farther from the origin', 'None of these necessarily'],
+            options: ['Higher speed over the interval', 'Higher acceleration', 'Starting farther from the origin', 'Moving in a straight line'],
             correctAnswer: 0,
             explanation: 'Distance $= \\int \\|\\vec{v}\\|\\,dt$. Higher speed (larger $\\|\\vec{v}\\|$) directly increases the integral.'
           }

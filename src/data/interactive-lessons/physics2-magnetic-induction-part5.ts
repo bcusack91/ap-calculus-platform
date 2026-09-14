@@ -104,9 +104,9 @@ $$I(t) = I_0 e^{-t/\\tau}$$
           },
           {
             question: 'An LR circuit has $L = 20$ mH and $R = 4$ Ω. Time constant:',
-            options: ['5 ms', '80 ms', '0.005 s', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: '$\\tau = L/R = 0.020/4 = 0.005$ s = 5 ms. Options A and C are the same value in different units.'
+            options: ['5 ms', '80 ms', '200 s', '0.5 ms'],
+            correctAnswer: 0,
+            explanation: '$\\tau = L/R = 0.020/4 = 0.005$ s = 5 ms. Multiplying instead of dividing gives 80 ms; inverting the ratio gives 200 s.'
           },
           {
             question: 'Just after closing the switch in an LR circuit, the inductor behaves like:',

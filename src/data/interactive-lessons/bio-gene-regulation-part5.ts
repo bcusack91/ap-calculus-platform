@@ -79,7 +79,7 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
               'Protein X increases, because miRNAs stabilize their target mRNAs'
             ],
             correctAnswer: 1,
-            explanation: 'A miRNA silences its target, so over-expressing it drives MORE silencing and LESS protein X. Option A inverts the logic and wrongly claims miRNA boosts transcription. Option C misplaces RNAi at the DNA level (it is post-transcriptional, acting on mRNA). Option D contradicts the repressive function — miRNAs destabilize or block their targets, they do not stabilize them.'
+            explanation: 'A miRNA silences its target, so over-expressing it drives MORE silencing and LESS protein X. The "more transcription of X" option inverts the logic and wrongly claims miRNA boosts transcription. The "act only on DNA" option misplaces RNAi at the DNA level (it is post-transcriptional, acting on mRNA). The "stabilize their target mRNAs" option contradicts the repressive function — miRNAs destabilize or block their targets, they do not stabilize them.'
           },
           {
             question: 'Conversely, gene Y is normally kept partly repressed by a miRNA. A knockout removes that miRNA entirely. What happens to protein Y, and why?',
@@ -90,7 +90,7 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
               'The Y gene is deleted along with the miRNA'
             ],
             correctAnswer: 1,
-            explanation: 'Removing a repressor (here, the miRNA) de-represses its target, so protein Y rises. Option A reverses the relationship (the miRNA represses, it is not required for translation). Option C is a trap: an intact gene can still be repressed or de-repressed — sequence intactness does not fix expression level. Option D confuses removing a regulatory RNA with deleting the target gene.'
+            explanation: 'Removing a repressor (here, the miRNA) de-represses its target, so protein Y rises. The "needed for translation" option reverses the relationship (the miRNA represses, it is not required for translation). The "gene sequence is intact" option is a trap: an intact gene can still be repressed or de-repressed — sequence intactness does not fix expression level. The gene-deletion option confuses removing a regulatory RNA with deleting the target gene.'
           },
           {
             question: 'An siRNA shows perfect complementarity to its target mRNA, whereas a particular miRNA shows only partial complementarity to its target. What is the expected difference in outcome?',
@@ -101,7 +101,7 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
               'Both stop transcription of the gene in the nucleus'
             ],
             correctAnswer: 0,
-            explanation: 'Degree of complementarity sets the route: perfect match (siRNA) → cleavage; partial match (miRNA) → translational repression — yet both lower protein. Option B wrongly has siRNA raising protein. Option C wrongly says siRNA does nothing. Option D is the post-transcriptional trap: RNAi acts on mRNA in the cytoplasm, not on transcription in the nucleus.'
+            explanation: 'Degree of complementarity sets the route: perfect match (siRNA) → cleavage; partial match (miRNA) → translational repression — yet both lower protein. The "siRNA increases protein" option wrongly has siRNA raising protein. The "only the miRNA reduces protein" option wrongly says siRNA does nothing. The "stop transcription" option is the post-transcriptional trap: RNAi acts on mRNA in the cytoplasm, not on transcription in the nucleus.'
           }
         ]
       }
@@ -177,7 +177,7 @@ RNAi occupies the **post-transcriptional** slot: the gene has been transcribed, 
               'Epigenetic regulation; the siRNA methylated the gene'
             ],
             correctAnswer: 1,
-            explanation: 'siRNA with good complementarity triggers mRNA cleavage and degradation — post-transcriptional control — and the intact sequence confirms no mutation occurred. Option A wrongly claims a sequence change. Option C is inconsistent with the observed mRNA drop (pure translational control would leave mRNA level unchanged). Option D misattributes the effect to DNA methylation rather than mRNA targeting.'
+            explanation: 'siRNA with good complementarity triggers mRNA cleavage and degradation — post-transcriptional control — and the intact sequence confirms no mutation occurred. The mutated-promoter option wrongly claims a sequence change. The translational-only option is inconsistent with the observed mRNA drop (pure translational control would leave mRNA level unchanged). The methylation option misattributes the effect to DNA methylation rather than mRNA targeting.'
           },
           {
             question: 'During normal development, a miRNA is needed to keep a certain "stem-cell" gene repressed so cells can differentiate. A mutation inactivates this miRNA. What is the most likely consequence?',
@@ -188,7 +188,7 @@ RNAi occupies the **post-transcriptional** slot: the gene has been transcribed, 
               'Transcription of all genes stops'
             ],
             correctAnswer: 1,
-            explanation: 'Losing a repressing miRNA de-represses its target, so the stem-cell gene is over-expressed, potentially blocking differentiation. Option A inverts the effect (removing a repressor cannot increase repression). Option C confuses regulation with mutation of the target. Option D wildly overstates the scope — one miRNA loss does not halt all transcription.'
+            explanation: 'Losing a repressing miRNA de-represses its target, so the stem-cell gene is over-expressed, potentially blocking differentiation. The "silenced even more strongly" option inverts the effect (removing a repressor cannot increase repression). The DNA-change option confuses regulation with mutation of the target. The "all transcription stops" option wildly overstates the scope — one miRNA loss does not halt all transcription.'
           }
         ]
       }

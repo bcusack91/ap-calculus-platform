@@ -84,12 +84,7 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
         questions: [
           {
             question: 'Which of the following changes will increase the molar solubility of $\\text{AgCl}(s)$ in water?',
-            options: [
-              'Adding NaCl to the solution',
-              'Adding $AgNO_{3}$ to the solution',
-              'Removing some solid AgCl from the container',
-              'Adding $NaNO_{3}$ (if it forms a complex with $Ag^{+}$ or is none of the above — actually none of these common choices increases solubility simply). The correct choice: Adding $NH_{3}$, which complexes $Ag^{+}$'
-            ],
+            options: ['Adding NaCl to the solution', 'Adding $AgNO_{3}$ to the solution', 'Removing some solid AgCl from the container', 'Adding $NH_{3}$ to the solution'],
             correctAnswer: 3,
             explanation: 'Adding NaCl or $AgNO_{3}$ introduces common ions, decreasing solubility. Removing solid doesn\'t change the equilibrium (as long as some solid remains). Adding $NH_{3}$ complexes $Ag^{+}$ (forming $\\text{Ag(NH}_3)_2^+$), removing it from solution and shifting equilibrium right, increasing solubility.'
           },

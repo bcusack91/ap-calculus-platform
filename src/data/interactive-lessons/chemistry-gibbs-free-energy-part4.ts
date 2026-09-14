@@ -191,7 +191,7 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
           },
           {
             label: 'The R in ΔG° = −RT ln K has the value',
-            options: ['0.0821 L·atm/(mol·K)', '8.314 J/(mol·K)', '1.987 cal/(mol·K)', 'any of these, with consistent units']
+            options: ['0.0821 J/(mol·K)', '8.314 J/(mol·K)', '1.987 J/(mol·K)', '8.314 L·atm/(mol·K)']
           },
           {
             label: 'ΔG° tells you about equilibrium, while ΔG tells you about',

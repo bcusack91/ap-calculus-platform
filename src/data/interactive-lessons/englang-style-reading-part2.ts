@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'The primary mechanism that drives patterns in Style Analysis in Reading is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            options: ['Process 1', 'Process 2', 'Cause and effect', 'Coincidence']
           },
           {
             label: 'A secondary process that shapes outcomes in Style Analysis in Reading describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            options: ['Process 1', 'Process 2', 'Cause and effect', 'Coincidence']
           },
           {
             label: 'The relationship between actions and outcomes in Style Analysis in Reading is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            options: ['Cause and effect', 'Process 1', 'Process 2', 'Coincidence']
           }
         ],
         correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],

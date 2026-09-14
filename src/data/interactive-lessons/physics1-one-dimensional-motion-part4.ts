@@ -100,12 +100,7 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
         questions: [
           {
             question: 'Which kinematic equation would you use to find displacement when you know initial velocity, final velocity, and acceleration but NOT time?',
-            options: [
-              '$v = v_0 + at$',
-              '$x = x_0 + v_0t + \\frac{1}{2}at^2$',
-              '$v^2 = v_0^2 + 2a\\Delta x$',
-              'None of these'
-            ],
+            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$x = vt$'],
             correctAnswer: 2,
             explanation: '$v^2 = v_0^2 + 2a\\Delta x$ is the equation that doesn\'t contain time. You can solve for $\\Delta x$ given $v$, $v_0$, and $a$.'
           },
@@ -165,13 +160,13 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
         dropdowns: [
           {
             label: 'To find final velocity given $v_0$, $a$, and $t$, use:',
-            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', 'none of these'],
+            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$x = vt$'],
             correctIndex: 0,
             explanation: '$v = v_0 + at$ directly gives the final velocity from initial velocity, acceleration, and time.'
           },
           {
             label: 'To find displacement without knowing the final velocity, use:',
-            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', 'none of these'],
+            options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$x = vt$'],
             correctIndex: 1,
             explanation: '$x = x_0 + v_0t + \\frac{1}{2}at^2$ relates displacement to initial velocity, acceleration, and time — no final velocity needed.'
           },

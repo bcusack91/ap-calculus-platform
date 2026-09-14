@@ -60,14 +60,9 @@ A 1 $m^{3}$ helium balloon can lift about 1 kg!
         questions: [
           {
             question: 'A precision scale reads slightly different for the same object at sea level vs. on a high mountain. One reason is:',
-            options: [
-              'Gravity changes with altitude',
-              'Air buoyancy decreases at altitude (less dense air → less buoyant force → higher reading)',
-              'Temperature affects the scale',
-              'Both A and B contribute'
-            ],
-            correctAnswer: 3,
-            explanation: 'Both effects are real! Gravity decreases slightly with altitude (lower reading), while decreased air buoyancy (thinner air) increases the apparent weight (higher reading). For precision measurements, both corrections are applied.'
+            options: ['Air pressure pushes down harder on it at sea level', 'Weaker air buoyancy at altitude raises the reading', 'The object\'s mass increases at higher altitude', 'Earth\'s magnetic field is stronger at sea level'],
+            correctAnswer: 1,
+            explanation: 'Thinner air at altitude gives less buoyant force, so the apparent weight reads higher. (Gravity also weakens slightly with altitude, lowering the reading; precision measurements correct for both.) Mass does not change.'
           },
           {
             question: 'A weather balloon rises. As it goes higher, the buoyant force:',

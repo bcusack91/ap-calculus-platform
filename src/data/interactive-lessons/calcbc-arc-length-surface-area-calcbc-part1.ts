@@ -85,10 +85,10 @@ $$L = \\int_1^e \\left(\\frac{x}{2} + \\frac{1}{2x}\\right)dx = \\left[\\frac{x^
           },
           {
             label: 'The differential of arc length is $ds = $',
-            options: ['$\\sqrt{1 + (dy/dx)^2}\\,dx$', '$(1 + dy/dx)\\,dx$', '$\\sqrt{dx^2 + dy^2}$', 'Both the first and third options'],
-            correctAnswers: ['Both the first and third options'],
+            options: ['$\\sqrt{1 + (dy/dx)^2}\\,dx$', '$(1 + dy/dx)\\,dx$', '$\\sqrt{1 + dy/dx}\\,dx$', '$\\sqrt{1 - (dy/dx)^2}\\,dx$'],
+            correctAnswers: ['$\\sqrt{1 + (dy/dx)^2}\\,dx$'],
             hints: ['$ds^2 = dx^2 + dy^2$.'],
-            explanation: '$ds = \\sqrt{dx^2 + dy^2} = \\sqrt{1 + (dy/dx)^2}\\,dx$. Both forms are equivalent and commonly used.'
+            explanation: '$ds = \\sqrt{dx^2 + dy^2} = \\sqrt{1 + (dy/dx)^2}\\,dx$. Forgetting to square $dy/dx$ is the most common slip.'
           }
         ]
       }

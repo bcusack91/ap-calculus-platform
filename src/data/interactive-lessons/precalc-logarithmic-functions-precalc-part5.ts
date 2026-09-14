@@ -211,7 +211,7 @@ $$y = \\frac{\\ln x}{\\ln b}$$
               '$\\log_2 8$'
             ],
             correctAnswer: 2,
-            explanation: 'By change of base (in reverse): $\\frac{\\log_3 8}{\\log_3 2} = \\log_2 8 = 3$. So both C and D are correct representations, but $3$ is the simplified value.'
+            explanation: 'By change of base (in reverse): $\\frac{\\log_3 8}{\\log_3 2} = \\log_2 8 = 3$. So both $3$ and $\\log_2 8$ are correct representations, but $3$ is the simplified value.'
           },
           {
             question: 'Solve $\\log_5 x = 2.5$ to the nearest integer.',

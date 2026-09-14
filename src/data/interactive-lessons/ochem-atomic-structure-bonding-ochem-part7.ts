@@ -82,7 +82,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'Changing the total number of valence electrons'
             ],
             correctAnswer: 1,
-            explanation: 'Resonance moves only electrons — pi bonds and lone pairs — never atoms, and it conserves the total electron count. The trap (option 1) moves an atom (a hydrogen); that produces a constitutional isomer or a tautomer, NOT a resonance structure. The litmus test: if any nucleus changed position, it is not resonance.'
+            explanation: 'Resonance moves only electrons — pi bonds and lone pairs — never atoms, and it conserves the total electron count. The move-a-hydrogen trap moves an atom (a hydrogen); that produces a constitutional isomer or a tautomer, NOT a resonance structure. The litmus test: if any nucleus changed position, it is not resonance.'
           },
           {
             question: 'The acetate ion ($\\text{CH}_3\\text{COO}^-$) is drawn with two resonance contributors. What does the real ion actually look like?',
@@ -93,7 +93,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'The two oxygens are permanently different, one single-bonded and one double-bonded'
             ],
             correctAnswer: 1,
-            explanation: 'The two contributors are equivalent, so the hybrid is their perfect average: both C-O bonds are identical (intermediate, order ~1.5) and the charge is split evenly ($-\\tfrac{1}{2}$ each). The trap (option 1) is the persistent "flickering" misconception — the ion never alternates; it IS the averaged hybrid at all times.'
+            explanation: 'The two contributors are equivalent, so the hybrid is their perfect average: both C-O bonds are identical (intermediate, order ~1.5) and the charge is split evenly ($-\\tfrac{1}{2}$ each). The rapid-alternation trap is the persistent "flickering" misconception — the ion never alternates; it IS the averaged hybrid at all times.'
           },
           {
             question: 'Why is acetic acid ($\\text{CH}_3\\text{COOH}$) much more acidic than ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$)?',
@@ -104,7 +104,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'Acetic acid is a larger molecule, which always increases acidity'
             ],
             correctAnswer: 1,
-            explanation: 'Acidity is governed by conjugate-base stability. Acetate spreads its $-1$ charge over two oxygens via resonance (a strongly stabilizing delocalization), whereas the ethoxide ion localizes the charge on one oxygen with no resonance — so acetate is far more stable and acetic acid far more acidic. The trap (option 1) hand-waves at bond strength; the real, specific cause is resonance delocalization of the carboxylate charge.'
+            explanation: 'Acidity is governed by conjugate-base stability. Acetate spreads its $-1$ charge over two oxygens via resonance (a strongly stabilizing delocalization), whereas the ethoxide ion localizes the charge on one oxygen with no resonance — so acetate is far more stable and acetic acid far more acidic. The weaker-O-H trap hand-waves at bond strength; the real, specific cause is resonance delocalization of the carboxylate charge.'
           }
         ]
       }
@@ -126,7 +126,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'Which one places positive charge on the most electronegative atom'
             ],
             correctAnswer: 1,
-            explanation: 'Complete octets are the top criterion; a contributor with a full octet on every second-row atom outweighs one with an electron-deficient carbon, even before considering formal charges. The trap (option 4) inverts a real rule — POSITIVE charge prefers the LESS electronegative atom (and negative prefers the more electronegative); putting positive charge on an electronegative atom makes a contributor worse, not better.'
+            explanation: 'Complete octets are the top criterion; a contributor with a full octet on every second-row atom outweighs one with an electron-deficient carbon, even before considering formal charges. The positive-charge-on-the-most-electronegative-atom trap inverts a real rule — POSITIVE charge prefers the LESS electronegative atom (and negative prefers the more electronegative); putting positive charge on an electronegative atom makes a contributor worse, not better.'
           },
           {
             question: 'An allylic carbocation ($\\text{CH}_2\\!=\\!\\text{CH}\\!-\\!\\text{CH}_2^+$) is more stable than a comparable non-allylic primary carbocation. What is the structural reason?',
@@ -137,7 +137,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'There is no real difference in stability'
             ],
             correctAnswer: 1,
-            explanation: 'In the allylic cation, the adjacent pi bond and the empty p orbital overlap, so the positive charge is shared (delocalized) over two carbons via resonance — delocalization is stabilizing, so the allylic cation is lower in energy. The trap (option 1) appeals to sigma-bond count, which is irrelevant here; it is the resonance delocalization of the POSITIVE charge that confers the extra stability.'
+            explanation: 'In the allylic cation, the adjacent pi bond and the empty p orbital overlap, so the positive charge is shared (delocalized) over two carbons via resonance — delocalization is stabilizing, so the allylic cation is lower in energy. The more-sigma-bonds trap appeals to sigma-bond count, which is irrelevant here; it is the resonance delocalization of the POSITIVE charge that confers the extra stability.'
           },
           {
             question: 'Benzene is far more stable than a hypothetical molecule with three isolated, non-interacting C=C double bonds. This "extra" stability is called:',
@@ -148,7 +148,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'Bond dissociation energy'
             ],
             correctAnswer: 1,
-            explanation: 'Benzene\'s six pi electrons are delocalized continuously around the ring rather than locked into three separate double bonds; that delocalization lowers the energy substantially, and the stabilization is the resonance (delocalization) energy. The trap (option 1) names hybridization energy, which is unrelated — the special stability of benzene comes specifically from pi-electron DELOCALIZATION, the aromatic version of resonance.'
+            explanation: 'Benzene\'s six pi electrons are delocalized continuously around the ring rather than locked into three separate double bonds; that delocalization lowers the energy substantially, and the stabilization is the resonance (delocalization) energy. The trap names hybridization energy, which is unrelated — the special stability of benzene comes specifically from pi-electron DELOCALIZATION, the aromatic version of resonance.'
           }
         ]
       }
@@ -170,7 +170,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'The carbon has a lone pair in its ground state'
             ],
             correctAnswer: 0,
-            explanation: 'The sp carbon (50% s-character) holds the resulting carbanion lone pair tightly and low in energy, stabilizing the conjugate base and making the alkyne acidic — a clean example of structure (hybridization) dictating a property (acidity), the unit\'s central theme. The trap (option 1) misassigns the terminal alkyne carbon as sp3; it is sp, and that high s-character is exactly the point.'
+            explanation: 'The sp carbon (50% s-character) holds the resulting carbanion lone pair tightly and low in energy, stabilizing the conjugate base and making the alkyne acidic — a clean example of structure (hybridization) dictating a property (acidity), the unit\'s central theme. The $sp^3$ trap misassigns the terminal alkyne carbon as sp3; it is sp, and that high s-character is exactly the point.'
           },
           {
             question: 'Two compounds, dimethyl ether ($\\text{CH}_3\\text{OCH}_3$) and ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$), have the same molecular formula ($\\text{C}_2\\text{H}_6\\text{O}$) but ethanol boils much higher. Using the unit\'s structure-to-property logic, why?',
@@ -181,7 +181,7 @@ The contributor highest on this list is the **major** contributor and dominates 
               'Ethanol is nonpolar and dimethyl ether is polar'
             ],
             correctAnswer: 1,
-            explanation: 'Same formula, different connectivity (structure): ethanol\'s O-H lets it form strong hydrogen bonds molecule-to-molecule; the ether, lacking an O-H, relies on weaker dipole-dipole and dispersion forces, so it boils lower. This is the unit thesis in action — bonding structure (here, the presence of an O-H) determines a physical property (boiling point). The trap (option 1) assumes identical formula means identical properties; connectivity and the resulting intermolecular forces are decisive.'
+            explanation: 'Same formula, different connectivity (structure): ethanol\'s O-H lets it form strong hydrogen bonds molecule-to-molecule; the ether, lacking an O-H, relies on weaker dipole-dipole and dispersion forces, so it boils lower. This is the unit thesis in action — bonding structure (here, the presence of an O-H) determines a physical property (boiling point). The same-boiling-point trap assumes identical formula means identical properties; connectivity and the resulting intermolecular forces are decisive.'
           }
         ]
       }

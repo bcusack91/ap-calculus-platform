@@ -113,12 +113,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
         questions: [
           {
             question: 'Balance in basic solution: $MnO_{4}^{-}$ + $CN^{-}$ → $MnO_{2}$ + $CNO^{-}$. After converting to basic, which species appear in the final equation?',
-            options: [
-              '$H^{+}$ and $H_{2}O$ only',
-              '$OH^{-}$ and $H_{2}O$ only',
-              '$H^{+}$, $OH^{-}$, and $H_{2}O$',
-              'None of these — only the redox species'
-            ],
+            options: ['$H^{+}$ and $H_{2}O$ only', '$OH^{-}$ and $H_{2}O$ only', '$H^{+}$, $OH^{-}$, and $H_{2}O$', '$OH^{-}$ only, with no $H_{2}O$'],
             correctAnswer: 1,
             explanation: 'In basic solution, after converting from acidic form, the equation contains $OH^{-}$ and $H_{2}O$ but NO $H^{+}$. All $H^{+}$ ions have been neutralized by adding $OH^{-}$.'
           },

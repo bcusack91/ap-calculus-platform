@@ -101,7 +101,7 @@ export const physics2GeomOpticsPart7Data = {
               'Plane mirror, virtual image, $m = -1$ (inverted, same size)'
             ],
             correctAnswer: 3,
-            explanation: 'Plane mirrors always give $m = +1$ (upright), never $m = -1$ (inverted). Options A (concave, $d_o$ between $C$ and $F$), B (any convex setup), and C (concave, $d_o < f$) are all physically realizable.'
+            explanation: 'Plane mirrors always give $m = +1$ (upright), never $m = -1$ (inverted). The concave $m = -3$ image ($d_o$ between $C$ and $F$), the convex $m = +0.5$ image (any convex setup), and the concave $m = +2$ image ($d_o < f$) are all physically realizable.'
           },
           {
             question: 'A concave mirror is used as a solar furnace. Where should the material to be heated be placed?',

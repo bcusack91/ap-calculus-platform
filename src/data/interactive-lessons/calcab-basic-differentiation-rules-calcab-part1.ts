@@ -147,9 +147,9 @@ $$\\frac{1}{x^n} = x^{-n} \\qquad \\sqrt[n]{x^m} = x^{m/n}$$
           },
           {
             question: 'Find $\\frac{d}{dx}(3\\sqrt[3]{x})$.',
-            options: ['$\\frac{3}{3x^{2/3}}$', '$\\frac{1}{x^{2/3}}$', '$\\frac{1}{\\sqrt[3]{x^2}}$', 'All of the above'],
-            correctAnswer: 3,
-            explanation: '$3x^{1/3} \\to 3 \\cdot \\frac{1}{3}x^{-2/3} = x^{-2/3} = \\frac{1}{x^{2/3}} = \\frac{1}{\\sqrt[3]{x^2}}$. All are equivalent forms.'
+            options: ['$\\frac{1}{3x^{2/3}}$', '$\\frac{1}{x^{2/3}}$', '$\\frac{3}{x^{2/3}}$', '$x^{4/3}$'],
+            correctAnswer: 1,
+            explanation: '$3x^{1/3} \\to 3 \\cdot \\frac{1}{3}x^{-2/3} = x^{-2/3} = \\frac{1}{x^{2/3}} = \\frac{1}{\\sqrt[3]{x^2}}$. Dropping the 3 gives $\\frac{1}{3x^{2/3}}$; dropping the $\\frac{1}{3}$ gives $\\frac{3}{x^{2/3}}$.'
           }
         ]
       }

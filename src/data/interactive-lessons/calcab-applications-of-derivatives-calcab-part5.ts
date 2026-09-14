@@ -70,7 +70,7 @@ MVT guarantees $f'(c) = \\frac{3}{2}$ for some $c \\in (0, 12)$.
           },
           {
             question: 'If $f$ is differentiable, $f(2) = 3$, and $f(5) = 15$, what does MVT guarantee?',
-            options: ['$f\'(c) = 4$ for some $c \\in (2,5)$', '$f\'(c) = 5$ for some $c \\in (2,5)$', '$f(c) = 9$ for some $c \\in (2,5)$', 'Both A and C'],
+            options: ['$f\'(c) = 4$ for some $c \\in (2,5)$', '$f\'(c) = 5$ for some $c \\in (2,5)$', '$f(c) = 20$ for some $c \\in (2,5)$', '$f\'(c) = 12$ for some $c \\in (2,5)$'],
             correctAnswer: 0,
             explanation: 'MVT: $f\'(c) = \\frac{15-3}{5-2} = \\frac{12}{3} = 4$ for some $c \\in (2,5)$.'
           },

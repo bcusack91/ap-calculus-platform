@@ -187,9 +187,9 @@ Let $f(x)=2x-1, g(x)=x+5$.
           },
           {
             question: 'Express $\\frac{1}{(x-2)^2}$ as $f(g(x))$:',
-            options: ['$f(x)=1/x^2, g(x)=x-2$', '$f(x)=x-2, g(x)=1/x^2$', '$f(x)=1/x, g(x)=(x-2)^2$', 'Both A and C work'],
-            correctAnswer: 3,
-            explanation: 'Both decompositions give $\\frac{1}{(x-2)^2}$.'
+            options: ['$f(x)=1/x^2, g(x)=x-2$', '$f(x)=x-2, g(x)=1/x^2$', '$f(x)=1/x^2, g(x)=x+2$', '$f(x)=(x-2)^2, g(x)=1/x$'],
+            correctAnswer: 0,
+            explanation: '$f(g(x)) = 1/(x-2)^2$ ✓. (Another valid split, not listed, is $f(x)=1/x$ with $g(x)=(x-2)^2$.)'
           }
         ]
       }

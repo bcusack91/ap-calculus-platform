@@ -185,7 +185,7 @@ Social psychology studies how people's thoughts, feelings, and behaviors are inf
               'Dispositional attribution applied to herself'
             ],
             correctAnswer: 1,
-            explanation: 'Sarah attributes her SUCCESS to internal factors (hard work, ability) — classic self-serving bias. Her teammate attributes his FAILURE to external factors (Sarah taking over) — also self-serving bias! Both are protecting self-esteem. While actor-observer bias (C) is tempting, the question specifically asks about SARAH\'s explanation. Sarah\'s pattern (success → internal attribution) is textbook self-serving bias.'
+            explanation: 'Sarah attributes her SUCCESS to internal factors (hard work, ability) — classic self-serving bias. Her teammate attributes his FAILURE to external factors (Sarah taking over) — also self-serving bias! Both are protecting self-esteem. While actor-observer bias is tempting, the question specifically asks about SARAH\'s explanation. Sarah\'s pattern (success → internal attribution) is textbook self-serving bias.'
           }
         ]
       }

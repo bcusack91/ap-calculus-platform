@@ -101,9 +101,9 @@ $F = -\\frac{dU}{dr} = \\frac{kq_1q_2}{r^2}$
           },
           {
             question: 'Work done by the electric force on a charge moving in a uniform field can be written as:',
-            options: ['$W = qEd$', '$W = -\\Delta U$', '$W = \\Delta KE$ (if only the electric force acts)', 'All of the above can be correct'],
-            correctAnswer: 3,
-            explanation: 'All three are valid expressions for the work done by the electric force in the appropriate setting.'
+            options: ['$W = qE/d$', '$W = -\\Delta U$', '$W = -\\Delta KE$ (if only the electric force acts)', '$W = +\\Delta U$'],
+            correctAnswer: 1,
+            explanation: 'The electric force is conservative, so its work is $-\\Delta U$ (and $+\\Delta KE$ if it acts alone). In a uniform field that work is $qEd$, not $qE/d$.'
           },
           {
             question: 'A proton ($q = +e$) is released from rest in a region where it moves through a potential energy drop of $3.2\\times10^{-17}\\,\\text{J}$. Its final kinetic energy is:',

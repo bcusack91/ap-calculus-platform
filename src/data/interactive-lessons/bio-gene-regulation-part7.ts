@@ -146,7 +146,7 @@ The exam loves to juxtapose two things that students blur together. Run these si
               'Yes — but only because inducer is secretly present'
             ],
             correctAnswer: 1,
-            explanation: 'The functional $Z^{+}$ is linked to $O^{c}$, a cis-acting operator that the repressor cannot bind, so that operon is constitutive and makes β-gal even without inducer. Option C is the key trap: although $I^{+}$ makes a good repressor, a cis-acting $O^{c}$ cannot be rescued in trans, so the repressor cannot silence the $O^{c}$ $Z^{+}$ operon. Option A ignores constitutivity, and option D invents an inducer not in the problem.'
+            explanation: 'The functional $Z^{+}$ is linked to $O^{c}$, a cis-acting operator that the repressor cannot bind, so that operon is constitutive and makes β-gal even without inducer. The "$I^{+}$ repressor shuts off both operons" option is the key trap: although $I^{+}$ makes a good repressor, a cis-acting $O^{c}$ cannot be rescued in trans, so the repressor cannot silence the $O^{c}$ $Z^{+}$ operon. The "cannot be expressed without inducer" option ignores constitutivity, and the "inducer is secretly present" option invents an inducer not in the problem.'
           },
           {
             question: 'A eukaryotic gene becomes heritably silenced in a cell lineage. Researchers find heavy DNA methylation of its promoter CpG island and deacetylated histones, but no change in its nucleotide sequence. Which statement is correct?',
@@ -157,7 +157,7 @@ The exam loves to juxtapose two things that students blur together. Run these si
               'This is RNA interference acting on the gene\'s DNA'
             ],
             correctAnswer: 1,
-            explanation: 'Heritable silencing with promoter methylation, deacetylated histones, and an intact sequence is the definition of epigenetic repression. Option A is the central trap — epigenetic changes are not mutations (no sequence change). Option C imports the prokaryotic trp operon, which does not apply to a eukaryotic gene. Option D misplaces RNAi: RNAi acts on mRNA post-transcriptionally, not on the gene\'s DNA.'
+            explanation: 'Heritable silencing with promoter methylation, deacetylated histones, and an intact sequence is the definition of epigenetic repression. The mutation option is the central trap — epigenetic changes are not mutations (no sequence change). The corepressor option imports the prokaryotic trp operon, which does not apply to a eukaryotic gene. The RNA-interference option misplaces RNAi: RNAi acts on mRNA post-transcriptionally, not on the gene\'s DNA.'
           },
           {
             question: 'Wild-type E. coli is shifted from glucose-only medium to medium with lactose but no glucose. Which sequence of events best explains the resulting strong induction of the lac operon?',
@@ -168,7 +168,7 @@ The exam loves to juxtapose two things that students blur together. Run these si
               'The operon was already maximally expressed on glucose alone'
             ],
             correctAnswer: 0,
-            explanation: 'Removing glucose raises cAMP (positive switch: CAP-cAMP recruits polymerase) while lactose-derived allolactose releases LacI (negative switch off) — both conditions for HIGH expression are met. Option B inverts the cAMP relationship and miscasts CAP as a repressor. Option C wrongly couples glucose to the repressor (glucose acts via cAMP/CAP, lactose acts via the repressor). Option D is false: with glucose present, catabolite repression held the operon low.'
+            explanation: 'Removing glucose raises cAMP (positive switch: CAP-cAMP recruits polymerase) while lactose-derived allolactose releases LacI (negative switch off) — both conditions for HIGH expression are met. The "lactose lowers cAMP" option inverts the cAMP relationship and miscasts CAP as a repressor. The "repressor falls off when glucose is lost" option wrongly couples glucose to the repressor (glucose acts via cAMP/CAP, lactose acts via the repressor). The "already maximally expressed" option is false: with glucose present, catabolite repression held the operon low.'
           }
         ]
       }

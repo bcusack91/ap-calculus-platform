@@ -59,9 +59,9 @@ $$\\boxed{\\frac{dy}{dt} = ky \\implies y(t) = y_0 e^{kt}}$$
         questions: [
           {
             question: 'Which DE is separable?',
-            options: ['$\\frac{dy}{dx} = \\frac{x}{y}$', '$\\frac{dy}{dx} = x + y$', '$\\frac{dy}{dx} = xy + x$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: 'A: $y\\,dy = x\\,dx$ \u2713. C: $\\frac{dy}{dx} = x(y+1)$ is also separable. B is NOT separable.'
+            options: ['$\\frac{dy}{dx} = \\frac{x}{y}$', '$\\frac{dy}{dx} = x + y$', '$\\frac{dy}{dx} = x^2 + y^2$', '$\\frac{dy}{dx} = \\sin(x + y)$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{dy}{dx} = \\frac{x}{y}$ rearranges to $y\\,dy = x\\,dx$ ✓. The right sides $x + y$, $x^2 + y^2$ and $\\sin(x+y)$ cannot be written as $g(x)h(y)$, so they are NOT separable.'
           },
           {
             question: 'A population doubles every 5 years. What is $k$?',

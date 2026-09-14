@@ -182,7 +182,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
               'Quadruple one charge, halve the distance'
             ],
             correctAnswer: 2,
-            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: (a) $3/(2^{2})$ = 3/4. (b) 2×2 = 4×. (d) $4/(0.5^{2})$ = 4/0.25 = 16×. Only (c) gives exactly 6×.'
+            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: tripling one charge and doubling the distance: $3/(2^{2})$ = 3/4. doubling both charges: 2×2 = 4×. quadrupling one charge and halving the distance: $4/(0.5^{2})$ = 4/0.25 = 16×. Only tripling one charge and doubling the other gives exactly 6×.'
           },
           {
             question: 'A conducting sphere has excess charge +Q. A cavity is carved inside (no charge in the cavity). What is the electric field inside the cavity?',

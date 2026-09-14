@@ -138,7 +138,7 @@ $$pH = 14 - 2.79 = 11.21$$
               '$pH = 14 + \\log[OH^-]$'
             ],
             correctAnswer: 1,
-            explanation: 'First calculate $pOH = -\\log[OH^-]$, then $pH = 14 - pOH$. Note that answer choices B and D are equivalent: $14 - (-\\log[OH^-]) = 14 + \\log[OH^-]$.'
+            explanation: 'First calculate $pOH = -\\log[OH^-]$, then $pH = 14 - pOH$. Note that the $14 - (-\\log[OH^-])$ and $14 + \\log[OH^-]$ choices are equivalent: $14 - (-\\log[OH^-]) = 14 + \\log[OH^-]$.'
           },
           {
             question: 'Which is the strongest weak base?',

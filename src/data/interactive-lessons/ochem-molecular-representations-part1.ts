@@ -80,7 +80,7 @@ A skeletal structure is a zig-zag of line segments. Four conventions let you rec
               'Oxygen and nitrogen always carry exactly one hydrogen'
             ],
             correctAnswer: 2,
-            explanation: 'The convention hides only C–H bonds, because carbon\'s fixed valence of 4 lets us reconstruct them. Once a heteroatom is drawn, its hydrogens are not implied by any such rule, so they must be written. Answer (d) is false — nitrogen and oxygen carry variable numbers of H.'
+            explanation: 'The convention hides only C–H bonds, because carbon\'s fixed valence of 4 lets us reconstruct them. Once a heteroatom is drawn, its hydrogens are not implied by any such rule, so they must be written. The "always exactly one hydrogen" answer is false — nitrogen and oxygen carry variable numbers of H.'
           }
         ]
       }
@@ -135,7 +135,7 @@ A **condensed formula** lists atoms in connection order and uses subscripts and 
               'CH3(CH2)4CH3'
             ],
             correctAnswer: 0,
-            explanation: 'A straight five-carbon chain is pentane: two terminal CH3 groups and three internal CH2 groups, written CH3CH2CH2CH2CH3. Option (b) is butane (4 C); (c) is a branched isomer; (d) is hexane (6 C). Count the vertices and ends carefully.'
+            explanation: 'A straight five-carbon chain is pentane: two terminal CH3 groups and three internal CH2 groups, written CH3CH2CH2CH2CH3. CH3CH2CH2CH3 is butane (4 C); (CH3)2CHCH2CH3 is a branched isomer; CH3(CH2)4CH3 is hexane (6 C). Count the vertices and ends carefully.'
           },
           {
             question: 'Which statement about the relationship among Lewis, condensed, and skeletal structures of one molecule is correct?',
@@ -146,7 +146,7 @@ A **condensed formula** lists atoms in connection order and uses subscripts and 
               'Skeletal structures can only represent rings, not chains'
             ],
             correctAnswer: 1,
-            explanation: 'All three are the same compound drawn with more or less explicit detail; connectivity is preserved in each. Option (a) describes isomers, a different relationship. The skeletal form encodes connectivity fully (that is the whole point) and handles chains and rings alike.'
+            explanation: 'All three are the same compound drawn with more or less explicit detail; connectivity is preserved in each. The "different molecules" option describes isomers, a different relationship. The skeletal form encodes connectivity fully (that is the whole point) and handles chains and rings alike.'
           }
         ]
       }
@@ -185,7 +185,7 @@ For a tetrahedral ($sp^3$) carbon, a common drawing shows two plain bonds in the
               'The bond is the longest chain in the molecule'
             ],
             correctAnswer: 1,
-            explanation: 'A solid wedge projects out of the page toward the viewer; a dashed wedge projects behind it. Wedges convey 3D geometry, not bond order — a double bond is shown with a second parallel line, which is the trap in option (a).'
+            explanation: 'A solid wedge projects out of the page toward the viewer; a dashed wedge projects behind it. Wedges convey 3D geometry, not bond order — a double bond is shown with a second parallel line, which is the double-bond trap.'
           },
           {
             question: 'You are told a molecule\'s skeletal drawing has 6 vertices/ends, no rings, no multiple bonds, and a single OH written on a terminal carbon. Before counting, what molecular formula family should you expect for the carbon-hydrogen part?',
@@ -196,7 +196,7 @@ For a tetrahedral ($sp^3$) carbon, a common drawing shows two plain bonds in the
               'The formula cannot be estimated without the exact drawing'
             ],
             correctAnswer: 1,
-            explanation: 'Six carbons with no rings or multiple bonds is a saturated chain (CnH2n+2 = C6H14); replacing one terminal H with OH gives C6H14O (an –OH swaps an H for an OH, not removing two H). Option (a) C6H6 is the highly unsaturated benzene; (c) wrongly assumes alcohols remove hydrogens. A trained eye estimates the family before exact counting.'
+            explanation: 'Six carbons with no rings or multiple bonds is a saturated chain (CnH2n+2 = C6H14); replacing one terminal H with OH gives C6H14O (an –OH swaps an H for an OH, not removing two H). The C6H6 option is the highly unsaturated benzene; the C6H12 option wrongly assumes alcohols remove hydrogens. A trained eye estimates the family before exact counting.'
           }
         ]
       }

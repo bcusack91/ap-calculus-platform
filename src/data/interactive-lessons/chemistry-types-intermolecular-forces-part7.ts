@@ -46,7 +46,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               'HF has stronger London Dispersion Forces than HCl'
             ],
             correctAnswer: 1,
-            explanation: 'HF has hydrogen bonding (H bonded to F), while HCl only has dipole-dipole forces (Cl is not N, O, or F). Hydrogen bonding is stronger than dipole-dipole forces, giving HF a higher boiling point. Note: HF actually has a LOWER molar mass than HCl, making option A incorrect.'
+            explanation: 'HF has hydrogen bonding (H bonded to F), while HCl only has dipole-dipole forces (Cl is not N, O, or F). Hydrogen bonding is stronger than dipole-dipole forces, giving HF a higher boiling point. Note: HF actually has a LOWER molar mass than HCl, making the higher-molar-mass option incorrect.'
           }
         ]
       }

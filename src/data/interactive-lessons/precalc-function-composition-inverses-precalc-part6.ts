@@ -143,8 +143,8 @@ $f(x)=2x+5, g(x)=\\frac{x-5}{2}$
         dropdowns: [
           {
             label: '$f(x) = -x$ is self-inverse because:',
-            options: ['$f(f(x)) = x$', '$f(x) = f^{-1}(x)$', 'Both A and B'],
-            correctAnswer: 2
+            options: ['$f(f(x)) = x$', '$f(x) = 1/f(x)$', '$f$ is increasing', '$f(x) = f(-x)$'],
+            correctAnswer: 0
           },
           {
             label: 'The inverse of "multiply by 3, then add 5" is:',
@@ -162,7 +162,7 @@ $f(x)=2x+5, g(x)=\\frac{x-5}{2}$
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Both A and B', 'Subtract 5, then divide by 3', 'Increasing', 'Complete the square'],
+        correctAnswers: ['$f(f(x)) = x$', 'Subtract 5, then divide by 3', 'Increasing', 'Complete the square'],
         hint1: 'Self-inverse means $f = f^{-1}$.',
         hint2: 'Undo in reverse order.',
         hint3: 'Increasing functions have increasing inverses.',

@@ -135,7 +135,7 @@ On the AP English Language exam, you will do BOTH.
         dropdowns: [
           {
             label: '"According to a Harvard study, students who read daily score 23% higher on standardized tests." This uses ___',
-            options: ['Logos (evidence and statistics)', 'Ethos (credibility)', 'Pathos (emotion)', 'None of the above']
+            options: ['Logos (evidence and statistics)', 'Ethos (credibility)', 'Pathos (emotion)', 'Kairos (timeliness)']
           },
           {
             label: '"As a board-certified physician with 15 years of experience..." This establishes ___',
@@ -143,7 +143,7 @@ On the AP English Language exam, you will do BOTH.
           },
           {
             label: '"Every day, thousands of families face the heartbreaking choice between food and medicine." This uses ___',
-            options: ['Pathos (emotional appeal)', 'Logos (statistical evidence)', 'Ethos (authority)', 'None of the above']
+            options: ['Pathos (emotional appeal)', 'Logos (statistical evidence)', 'Ethos (authority)', 'Kairos (timely moment)']
           }
         ],
         correctAnswers: ['Logos (evidence and statistics)', 'Ethos (speaker credibility)', 'Pathos (emotional appeal)'],

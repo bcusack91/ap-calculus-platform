@@ -169,7 +169,7 @@ $\\text{(CH}_3)_3\\text{C}{-}\\text{CHBr}{-}\\text{CH}_3$ — the leaving group 
               'Secondary substrate, sodium tert-butoxide, DMSO'
             ],
             correctAnswer: 1,
-            explanation: 'E1 needs an easily formed carbocation (3°), a weak base (so no strong base forces concerted E2), and a polar protic solvent to stabilize the ions; heat favors elimination over the competing SN1. Strong/bulky bases in aprotic solvents (options 1, 4) drive E2, and 1°/methyl substrates (options 1, 3) cannot form stable cations.'
+            explanation: 'E1 needs an easily formed carbocation (3°), a weak base (so no strong base forces concerted E2), and a polar protic solvent to stabilize the ions; heat favors elimination over the competing SN1. Strong/bulky bases in aprotic solvents (the bulky-base/aprotic and tert-butoxide/DMSO recipes) drive E2, and 1°/methyl substrates cannot form stable cations.'
           },
           {
             question: 'E1 and SN1 share which feature?',

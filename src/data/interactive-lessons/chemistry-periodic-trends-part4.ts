@@ -248,7 +248,7 @@ Full $s$ subshell ($ns^2$). An added electron would go into a higher-energy $p$ 
               'Nitrogen has a near-zero electron affinity due to its half-filled $2p$ subshell'
             ],
             correctAnswer: 2,
-            explanation: 'Statement C is incorrect. While EA generally becomes less negative going down a group, there are exceptions (e.g., Cl has a more negative EA than F). The trend down a group is less consistent than other periodic trends.'
+            explanation: 'The claim that EA always becomes more negative down a group is incorrect. While EA generally becomes less negative going down a group, there are exceptions (e.g., Cl has a more negative EA than F). The trend down a group is less consistent than other periodic trends.'
           },
           {
             question: 'Which element would you expect to have the most negative electron affinity?',

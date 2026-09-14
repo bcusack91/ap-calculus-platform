@@ -113,7 +113,7 @@ Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — ma
               '0.99'
             ],
             correctAnswer: 2,
-            explanation: '$q^{2}$ = 1/10,000 = 0.0001, so q = 0.01 and p = 0.99. Carrier frequency = 2pq = 2(0.99)(0.01) = 0.0198 (about 2%). Option B (0.01) is the trap — that is the ALLELE frequency q, not the carrier (heterozygote) frequency 2pq. Option A (0.0001) is $q^{2}$ (the affected frequency). The carrier frequency (~1 in 50) is far larger than the affected frequency (1 in 10,000).'
+            explanation: '$q^{2}$ = 1/10,000 = 0.0001, so q = 0.01 and p = 0.99. Carrier frequency = 2pq = 2(0.99)(0.01) = 0.0198 (about 2%). The 0.01 option is the trap — that is the ALLELE frequency q, not the carrier (heterozygote) frequency 2pq. The 0.0001 option is $q^{2}$ (the affected frequency). The carrier frequency (~1 in 50) is far larger than the affected frequency (1 in 10,000).'
           },
           {
             question: 'A population has q = 0.5 for a recessive allele, and the recessive homozygote is lethal before reproduction (w = 0). Using q\' = q/(1 + q), what is q after one generation of selection?',
@@ -124,7 +124,7 @@ Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — ma
               '0.00'
             ],
             correctAnswer: 1,
-            explanation: 'q\' = q/(1 + q) = 0.5/(1 + 0.5) = 0.5/1.5 ≈ 0.33. Option D (0.00) is the trap: even though every aa individual dies, the recessive allele is NOT eliminated in one generation because surviving heterozygotes (Aa) still carry it. Complete selection against the recessive homozygote reduces q but cannot drive it to zero in a single generation — heterozygotes shelter the allele.'
+            explanation: 'q\' = q/(1 + q) = 0.5/(1 + 0.5) = 0.5/1.5 ≈ 0.33. The 0.00 option is the trap: even though every aa individual dies, the recessive allele is NOT eliminated in one generation because surviving heterozygotes (Aa) still carry it. Complete selection against the recessive homozygote reduces q but cannot drive it to zero in a single generation — heterozygotes shelter the allele.'
           }
         ]
       }
@@ -194,7 +194,7 @@ Since $\\chi^2 = 74.2 \\gg 3.84$, we **REJECT** the null hypothesis of Hardy-Wei
               'Accept the null hypothesis as proven true'
             ],
             correctAnswer: 1,
-            explanation: 'Because $\\chi^{2}$ = 2.10 < 3.84 (critical value), we FAIL TO REJECT the null hypothesis — the observed counts are close enough to expected that the difference could be chance, consistent with equilibrium. Option D is the trap: we never "prove" or "accept" a null hypothesis as true; failing to reject means only that we lack evidence against it. Also note df = 3 genotypes − 2 alleles = 1, which is correct here.'
+            explanation: 'Because $\\chi^{2}$ = 2.10 < 3.84 (critical value), we FAIL TO REJECT the null hypothesis — the observed counts are close enough to expected that the difference could be chance, consistent with equilibrium. The "accept the null as proven" option is the trap: we never "prove" or "accept" a null hypothesis as true; failing to reject means only that we lack evidence against it. Also note df = 3 genotypes − 2 alleles = 1, which is correct here.'
           },
           {
             question: 'In a Hardy-Weinberg chi-square test with three genotype classes (AA, Aa, aa) where allele frequencies were estimated from the same sample, the correct number of degrees of freedom is:',
@@ -205,7 +205,7 @@ Since $\\chi^2 = 74.2 \\gg 3.84$, we **REJECT** the null hypothesis of Hardy-Wei
               '0 (no free parameters)'
             ],
             correctAnswer: 2,
-            explanation: 'For a Hardy-Weinberg goodness-of-fit test, df = (number of genotype classes) − (number of alleles) = 3 − 2 = 1, because estimating the allele frequency from the data costs an extra degree of freedom (p and q are linked by p + q = 1). Option B (2) is the trap: the usual "classes minus 1" rule does NOT apply directly here because we additionally estimated an allele frequency from the sample, removing one more degree of freedom.'
+            explanation: 'For a Hardy-Weinberg goodness-of-fit test, df = (number of genotype classes) − (number of alleles) = 3 − 2 = 1, because estimating the allele frequency from the data costs an extra degree of freedom (p and q are linked by p + q = 1). The "2 (classes minus 1)" option is the trap: the usual "classes minus 1" rule does NOT apply directly here because we additionally estimated an allele frequency from the sample, removing one more degree of freedom.'
           }
         ]
       }

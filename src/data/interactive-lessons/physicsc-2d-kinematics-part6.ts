@@ -30,7 +30,7 @@ This workshop focuses on solving challenging 2D kinematics problems at the AP Ph
         '$v_0^2\\sin(2\\theta)/g > d$'
       ],
       correctAnswer: 0,
-      explanation: 'At $x = d$: $t = d/(v_0\\cos\\theta)$. Then $y = d\\tan\\theta - \\frac{gd^2}{2v_0^2\\cos^2\\theta}$. The ball clears the wall if $y > h$. The second option checks max height vs. $h$ (necessary but not sufficient). The third neglects gravity.'
+      explanation: 'At $x = d$: $t = d/(v_0\\cos\\theta)$. Then $y = d\\tan\\theta - \\frac{gd^2}{2v_0^2\\cos^2\\theta}$. The ball clears the wall if $y > h$. The maximum-height inequality checks max height vs. $h$ (necessary but not sufficient). The inequality with no $g$ term neglects gravity.'
     },
     {
       id: '2dkin6-prob1',

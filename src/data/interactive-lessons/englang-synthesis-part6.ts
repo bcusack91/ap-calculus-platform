@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Analyzing maps, graphs, and tables related to Synthesis Skills is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Making evidence-based claims about Synthesis Skills describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Using geographic thinking to analyze Synthesis Skills is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'Memorization']
           }
         ],
         correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],

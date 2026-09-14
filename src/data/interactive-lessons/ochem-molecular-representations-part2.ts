@@ -58,7 +58,7 @@ Two structural ideas unify this list:
               'Ester'
             ],
             correctAnswer: 1,
-            explanation: 'A carbonyl flanked by two carbons is a ketone. An aldehyde (trap a) has the carbonyl at a chain terminus, bonded to at least one H. The acid and ester have an oxygen attached to the carbonyl carbon, which is absent here.'
+            explanation: 'A carbonyl flanked by two carbons is a ketone. An aldehyde (the trap) has the carbonyl at a chain terminus, bonded to at least one H. The acid and ester have an oxygen attached to the carbonyl carbon, which is absent here.'
           },
           {
             question: 'What single structural feature distinguishes a carboxylic acid (–COOH) from an aldehyde (–CHO)?',
@@ -69,7 +69,7 @@ Two structural ideas unify this list:
               'They are identical; the names are interchangeable'
             ],
             correctAnswer: 0,
-            explanation: 'Both contain a carbonyl. The acid carbonyl additionally bears an –OH on the same carbon (giving the acidic proton); the aldehyde carbonyl bears an H. Carbon never triple-bonds to oxygen in these groups (trap b), and neither contains nitrogen (trap c).'
+            explanation: 'Both contain a carbonyl. The acid carbonyl additionally bears an –OH on the same carbon (giving the acidic proton); the aldehyde carbonyl bears an H. Carbon never triple-bonds to oxygen in these groups (the triple-bond trap), and neither contains nitrogen (the nitrogen trap).'
           },
           {
             question: 'In a skeletal structure you see "–C(=O)–O–CH3" embedded in a molecule. Which functional group is this?',
@@ -157,7 +157,7 @@ Two structural ideas unify this list:
               'The chain length never affects any property'
             ],
             correctAnswer: 1,
-            explanation: 'The functional group sets reactivity, acidity/basicity, and hydrogen-bonding ability — the features that matter most. The chain is comparatively inert. (Chain length does subtly affect properties like boiling point, so option (d) overstates; but the group is the dominant predictor.)'
+            explanation: 'The functional group sets reactivity, acidity/basicity, and hydrogen-bonding ability — the features that matter most. The chain is comparatively inert. (Chain length does subtly affect properties like boiling point, so the "never affects any property" option overstates; but the group is the dominant predictor.)'
           }
         ]
       }

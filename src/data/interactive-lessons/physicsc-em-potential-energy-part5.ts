@@ -60,12 +60,7 @@ The logarithmic divergence is "cut off" by the finite wire radius.`
       id: 'pe5-mcq2',
       type: 'mcq' as const,
       question: 'The self-energy divergence of a line charge arises because:',
-      options: [
-        'Zero-thickness idealization means infinite charge density at the wire',
-        'The integral $\\int dr/r$ diverges',
-        'Coulomb\'s law breaks down at small distances',
-        'All of the above contribute'
-      ],
+      options: ['Zero-thickness idealization means infinite charge density at the wire', 'The field of a line charge falls off as $1/r^2$', 'Coulomb\'s law breaks down at small distances', 'The charge is quantized in units of $e$'],
       correctAnswer: 0,
       explanation: 'A one-dimensional charge distribution has infinite volume charge density (a delta function in the transverse directions). This causes the self-energy integral to diverge logarithmically.'
     },

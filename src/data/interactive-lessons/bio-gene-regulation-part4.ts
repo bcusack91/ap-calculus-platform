@@ -86,7 +86,7 @@ A "writer → effect" reference table (writers add marks; readers interpret them
               'cAMP rises and CAP activates the genes'
             ],
             correctAnswer: 1,
-            explanation: 'HDACs remove activating acetyl marks; inhibiting them leaves histones acetylated, loosening chromatin and reactivating genes. Option A inverts the logic (blocking deacetylation does not condense chromatin). Option C confuses an epigenetic effect with mutation. Option D wrongly imports the bacterial cAMP/CAP system into eukaryotic chromatin regulation.'
+            explanation: 'HDACs remove activating acetyl marks; inhibiting them leaves histones acetylated, loosening chromatin and reactivating genes. The "chromatin condenses further" option inverts the logic (blocking deacetylation does not condense chromatin). The mutation option confuses an epigenetic effect with mutation. The cAMP/CAP option wrongly imports the bacterial cAMP/CAP system into eukaryotic chromatin regulation.'
           },
           {
             question: 'Why are epigenetic marks described as "heritable through mitosis," and what makes this property biologically important?',
@@ -97,7 +97,7 @@ A "writer → effect" reference table (writers add marks; readers interpret them
               'They only exist in gametes, not somatic cells'
             ],
             correctAnswer: 1,
-            explanation: 'Maintenance methyltransferases copy the methylation pattern onto newly synthesized DNA, so daughter cells inherit the parent\'s expression state — this is how differentiated cells stay differentiated. Option A is the central trap: epigenetic inheritance does NOT involve sequence change. Option C contradicts heritability, and option D is false because somatic cells carry and transmit epigenetic marks during normal tissue maintenance.'
+            explanation: 'Maintenance methyltransferases copy the methylation pattern onto newly synthesized DNA, so daughter cells inherit the parent\'s expression state — this is how differentiated cells stay differentiated. The "change the DNA sequence" option is the central trap: epigenetic inheritance does NOT involve sequence change. The "randomly reset" option contradicts heritability, and the "only in gametes" option is false because somatic cells carry and transmit epigenetic marks during normal tissue maintenance.'
           }
         ]
       }
@@ -163,7 +163,7 @@ Both samples lose the protein, yet only Sample 2 is reversible *in principle* �
               'The color gene is part of an operon expressed differently in each patch'
             ],
             correctAnswer: 1,
-            explanation: 'X-inactivation randomly silences one X per cell early on, and the choice is clonally inherited, so the body becomes a patchwork expressing one allele or the other. Option A confuses an epigenetic switch with mutation. Option C is wrong because all cells carry the same genes (the difference is which X is active). Option D wrongly invokes a prokaryotic operon.'
+            explanation: 'X-inactivation randomly silences one X per cell early on, and the choice is clonally inherited, so the body becomes a patchwork expressing one allele or the other. The mutation option confuses an epigenetic switch with mutation. The "different genes in different cells" option is wrong because all cells carry the same genes (the difference is which X is active). The operon option wrongly invokes a prokaryotic operon.'
           },
           {
             question: 'Genetically identical mice are fed diets differing only in methyl-donor nutrients. The two groups develop different coat colors and disease risks, with no differences in their DNA sequences. This is best explained by:',
@@ -174,7 +174,7 @@ Both samples lose the protein, yet only Sample 2 is reversible *in principle* �
               'Changes in chromosome number'
             ],
             correctAnswer: 1,
-            explanation: 'Methyl-donor availability shifts DNA methylation, changing expression without altering the sequence — a textbook environment–epigenome link. Option A is the trap (an epigenetic effect mistaken for mutation). Options C and D are excluded because the mice are genetically identical with normal karyotypes; only the epigenetic marks differ.'
+            explanation: 'Methyl-donor availability shifts DNA methylation, changing expression without altering the sequence — a textbook environment–epigenome link. The diet-caused-mutation option is the trap (an epigenetic effect mistaken for mutation). The different-alleles and chromosome-number options are excluded because the mice are genetically identical with normal karyotypes; only the epigenetic marks differ.'
           }
         ]
       }

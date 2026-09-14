@@ -180,7 +180,7 @@ Integrated problems fail not because any single step is hard, but because a smal
               '$\\frac{1}{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Solve each gene as a test cross: Dd × dd gives P(tall, D_) = 1/2; Pp × pp gives P(pear, pp) = 1/2. By the product rule, P(D_ pp) = 1/2 × 1/2 = 1/4. The trap 3/16 (option C) comes from mistakenly using 3/4 for the tall probability — but that 3/4 is the value for a Dd × Dd cross, not the Dd × dd cross given here, where each gene splits 1:1.'
+            explanation: 'Solve each gene as a test cross: Dd × dd gives P(tall, D_) = 1/2; Pp × pp gives P(pear, pp) = 1/2. By the product rule, P(D_ pp) = 1/2 × 1/2 = 1/4. The trap 3/16 comes from mistakenly using 3/4 for the tall probability — but that 3/4 is the value for a Dd × Dd cross, not the Dd × dd cross given here, where each gene splits 1:1.'
           },
           {
             question: 'A woman\'s brother has an autosomal recessive disease (aa); the woman is unaffected, and her parents were both carriers. She marries a man who is a known carrier (Aa). What is the probability their first child is affected?',
@@ -191,7 +191,7 @@ Integrated problems fail not because any single step is hard, but because a smal
               '$\\frac{1}{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'The woman is an unaffected child of two carriers, so P(she is Aa) = 2/3 (conditioning out the aa case). For an affected child: P = P(woman is Aa) × P(she transmits a) × P(husband transmits a) = 2/3 × 1/2 × 1/2 = 1/6. The trap answer 1/4 (option A) wrongly assumes the woman is definitely a carrier; it omits the 2/3 factor that accounts for her uncertain carrier status.'
+            explanation: 'The woman is an unaffected child of two carriers, so P(she is Aa) = 2/3 (conditioning out the aa case). For an affected child: P = P(woman is Aa) × P(she transmits a) × P(husband transmits a) = 2/3 × 1/2 × 1/2 = 1/6. The trap answer 1/4 wrongly assumes the woman is definitely a carrier; it omits the 2/3 factor that accounts for her uncertain carrier status.'
           },
           {
             question: 'Two parents are AaBb × AaBb for two independent recessive disorders. They have 2 children. What is the probability that BOTH children are free of both disorders?',
@@ -202,7 +202,7 @@ Integrated problems fail not because any single step is hard, but because a smal
               '$\\frac{18}{16}$'
             ],
             correctAnswer: 1,
-            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. Option A (9/16) is the probability for just ONE child — it forgets to apply the product rule across the two children. Option D is impossible, since a probability can never exceed 1.'
+            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. The 9/16 option is the probability for just ONE child — it forgets to apply the product rule across the two children. The 18/16 option is impossible, since a probability can never exceed 1.'
           }
         ]
       }

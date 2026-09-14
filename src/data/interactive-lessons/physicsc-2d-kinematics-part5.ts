@@ -147,7 +147,7 @@ This confirms: the arc length of a quarter circle is $\\pi R/2$, as expected.
         '$\\int_0^1 \\sqrt{1 + 2t}\\,dt$'
       ],
       correctAnswer: 0,
-      explanation: '$v_x = 1$, $v_y = 2t$. Speed $= \\sqrt{1 + 4t^2}$. Distance $= \\int_0^1 \\sqrt{1 + 4t^2}\\,dt$. The second option gives displacement magnitude, not arc length.'
+      explanation: '$v_x = 1$, $v_y = 2t$. Speed $= \\sqrt{1 + 4t^2}$. Distance $= \\int_0^1 \\sqrt{1 + 4t^2}\\,dt$. The $\\sqrt{2}$ option gives displacement magnitude, not arc length.'
     }
   ]
 };

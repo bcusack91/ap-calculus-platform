@@ -118,12 +118,7 @@ This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
         questions: [
           {
             question: 'Which species acts as a Lewis acid in the reaction $AlCl_3 + Cl^- \\rightarrow AlCl_4^-$?',
-            options: [
-              '$Cl^-$',
-              '$AlCl_3$',
-              '$AlCl_4^-$',
-              'None of the above'
-            ],
+            options: ['$Cl^-$', '$AlCl_3$', '$AlCl_4^-$', 'No species here accepts an electron pair'],
             correctAnswer: 1,
             explanation: '$AlCl_3$ has an incomplete octet on Al (only 6 electrons). It accepts an electron pair from $Cl^-$, making it the Lewis acid. $Cl^-$ donates its lone pair, making it the Lewis base.'
           },

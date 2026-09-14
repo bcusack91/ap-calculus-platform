@@ -93,13 +93,8 @@ Don't forget to take the final reciprocal!
         questions: [
           {
             question: 'A student says: "Three $6 \\; \\mu$F capacitors in series give $18 \\; \\mu$F total." This is:',
-            options: [
-              'Correct',
-              'Incorrect — that rule is for capacitors in parallel',
-              'Incorrect — the answer should be 2 μF',
-              'Both B and C'
-            ],
-            correctAnswer: 3,
+            options: ['Correct — capacitances in series add', 'Incorrect — that is the parallel rule; series gives 2 μF', 'Incorrect — series capacitors give 6 μF total', 'Incorrect — series capacitors give 54 μF total'],
+            correctAnswer: 1,
             explanation: 'The student applied the parallel rule to a series combination. For series capacitors: $1/C = 1/6 + 1/6 + 1/6 = 3/6 = 1/2$, so $C = 2 \\; \\mu$F. The correct answer is 2 μF, and the student confused the rules.'
           },
           {

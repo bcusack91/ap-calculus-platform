@@ -62,9 +62,9 @@ export const calcbcArcLengthPart7Data = {
           },
           {
             question: 'Arc length is always:',
-            options: ['Non-negative', 'Greater than the net displacement', 'Equal to the integral of speed', 'All of the above'],
-            correctAnswer: 3,
-            explanation: 'Arc length $\\ge 0$ always, arc length $\\ge$ straight-line distance between endpoints, and $\\int \\|\\vec{v}\\|\\,dt = $ total distance = arc length of the path.'
+            options: ['Non-negative for every curve', 'Strictly greater than displacement', 'Equal to the net displacement', 'Equal to the area under the curve'],
+            correctAnswer: 0,
+            explanation: 'Arc length $\\ge 0$ always. It is $\\ge$ the straight-line distance between endpoints, with equality for a straight segment, so it is not strictly greater. It equals $\\int \\|\\vec{v}\\|\\,dt$ (total distance), not net displacement or area.'
           }
         ]
       }

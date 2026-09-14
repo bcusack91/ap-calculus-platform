@@ -154,7 +154,7 @@ Use $g = 10$ $m/s^{2}$.
               '$\\sqrt{106.7}$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$W_{\\text{push}} = 50(5) = 250$ J. $W_g = -mg d\\sin(37°) = -3(10)(5)(0.6) = -90$ J. $W_{\\text{net}} = 250 - 90 = 160$ J. Hmm, let me recalculate. $W_{\\text{net}} = \\frac{1}{2}(3)v^2 \\Rightarrow v^2 = 320/3 ≈ 106.7$. Actually the answer is $\\sqrt{106.7}$ m/s. Let me recheck: $W_{push} = 250$, $W_g = -90$, $W_{net} = 160$, $v^2 = 2(160)/3 ≈ 106.7$. So the answer is D.'
+            explanation: '$W_{\\text{push}} = 50(5) = 250$ J. $W_g = -mg d\\sin(37°) = -3(10)(5)(0.6) = -90$ J. $W_{\\text{net}} = 250 - 90 = 160$ J. Hmm, let me recalculate. $W_{\\text{net}} = \\frac{1}{2}(3)v^2 \\Rightarrow v^2 = 320/3 ≈ 106.7$. Actually the answer is $\\sqrt{106.7}$ m/s. Let me recheck: $W_{push} = 250$, $W_g = -90$, $W_{net} = 160$, $v^2 = 2(160)/3 ≈ 106.7$. So the answer is $\\sqrt{106.7}$ m/s.'
           },
           {
             question: 'A 2000 kg truck and a 1000 kg car both have 100 kJ of kinetic energy. Compared to the car, the truck\'s speed is:',

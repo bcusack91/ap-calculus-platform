@@ -146,7 +146,7 @@ What is the correct noble gas shorthand notation for phosphorus (P, Z = 15)?`,
               '[Ar] $3s^{2}$ $3p^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core. The remaining 5 electrons: $3s^{2}$ $3p^{3}$. So the answer is [Ne] $3s^{2}$ $3p^{3}$. While option A is technically correct, [Ne] is the most appropriate (closest) noble gas core.'
+            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core. The remaining 5 electrons: $3s^{2}$ $3p^{3}$. So the answer is [Ne] $3s^{2}$ $3p^{3}$. While the [He] $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$ form is technically correct, [Ne] is the most appropriate (closest) noble gas core.'
           }
         ]
       }

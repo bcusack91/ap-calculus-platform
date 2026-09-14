@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'A recurring structure within Claims & Evidence in Reading is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
           },
           {
             label: 'A specific real-world example that illustrates Claims & Evidence in Reading describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
           },
           {
             label: 'Analyzing similarities and differences across examples of Claims & Evidence in Reading is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'Footnote']
           }
         ],
         correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],

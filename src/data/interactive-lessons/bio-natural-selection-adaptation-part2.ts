@@ -56,7 +56,7 @@ The key analytical tools are the **mean** (where the peak of the curve sits) and
               'Stabilizing selection; variance increases'
             ],
             correctAnswer: 2,
-            explanation: 'Both extremes (small and large beaks) are favored while the intermediate is selected against — this is DISRUPTIVE (diversifying) selection, which INCREASES variance and can produce a bimodal distribution. Option B is the trap: stabilizing selection is the exact opposite — it favors the INTERMEDIATE and DECREASES variance. The bimodal outcome rules out stabilizing selection entirely.'
+            explanation: 'Both extremes (small and large beaks) are favored while the intermediate is selected against — this is DISRUPTIVE (diversifying) selection, which INCREASES variance and can produce a bimodal distribution. The "stabilizing selection; variance decreases" option is the trap: stabilizing selection is the exact opposite — it favors the INTERMEDIATE and DECREASES variance. The bimodal outcome rules out stabilizing selection entirely.'
           },
           {
             question: 'Human birth weight clusters tightly around ~3.4 kg. Babies that are much lighter or much heavier than this historically had lower survival rates. Across generations the mean birth weight has stayed roughly constant while the distribution remains narrow. This is the clearest example of:',
@@ -67,7 +67,7 @@ The key analytical tools are the **mean** (where the peak of the curve sits) and
               'Sexual selection, because parents choose intermediate-sized mates'
             ],
             correctAnswer: 1,
-            explanation: 'Selection AGAINST both extremes while favoring the INTERMEDIATE, with a stable mean and reduced variance, is the definition of STABILIZING selection. Option C is the trap (and the reverse of the truth): disruptive selection favors the extremes and selects against the middle, which would INCREASE the proportion of very small and very large babies — the opposite of what is observed.'
+            explanation: 'Selection AGAINST both extremes while favoring the INTERMEDIATE, with a stable mean and reduced variance, is the definition of STABILIZING selection. The disruptive-selection option is the trap (and the reverse of the truth): disruptive selection favors the extremes and selects against the middle, which would INCREASE the proportion of very small and very large babies — the opposite of what is observed.'
           }
         ]
       }
@@ -155,7 +155,7 @@ Because the three modes are defined by their effect on the **mean** and **varian
               '0.60'
             ],
             correctAnswer: 1,
-            explanation: 'Use allele-counting: the b allele count is 2(bb) + 1(Bb) = 2(80) + 240 = 400. Total alleles = 2N = 2(500) = 1000. So frequency of b = 400/1000 = 0.40. Option A (0.16) is the trap — that is the GENOTYPE frequency of bb (80/500 = 0.16, which equals $q^{2}$), not the ALLELE frequency q. Confusing $q^{2}$ with q is the most common error in the unit.'
+            explanation: 'Use allele-counting: the b allele count is 2(bb) + 1(Bb) = 2(80) + 240 = 400. Total alleles = 2N = 2(500) = 1000. So frequency of b = 400/1000 = 0.40. The 0.16 option is the trap — that is the GENOTYPE frequency of bb (80/500 = 0.16, which equals $q^{2}$), not the ALLELE frequency q. Confusing $q^{2}$ with q is the most common error in the unit.'
           },
           {
             question: 'In the same beetle population, directional selection acts so that bb individuals have relative fitness 0.0 (all die before reproducing) while BB and Bb have fitness 1.0. After one round of selection, which best describes the change in the B allele frequency?',
@@ -166,7 +166,7 @@ Because the three modes are defined by their effect on the **mean** and **varian
               'It drops the b allele to zero immediately because all bb individuals are removed'
             ],
             correctAnswer: 1,
-            explanation: 'Removing bb individuals removes ONLY b alleles (2 per bb individual), so the proportion of B alleles among survivors INCREASES. Option D is the trap: complete selection against the recessive homozygote does NOT eliminate b in one generation because heterozygous Bb survivors still carry and transmit b alleles — this is exactly why recessive alleles persist and selection against them slows dramatically as q gets small.'
+            explanation: 'Removing bb individuals removes ONLY b alleles (2 per bb individual), so the proportion of B alleles among survivors INCREASES. The "drops the b allele to zero" option is the trap: complete selection against the recessive homozygote does NOT eliminate b in one generation because heterozygous Bb survivors still carry and transmit b alleles — this is exactly why recessive alleles persist and selection against them slows dramatically as q gets small.'
           }
         ]
       }
@@ -202,7 +202,7 @@ Directional and stabilizing selection tend to *remove* variation. Yet real popul
               'The allele is neutral and its frequency is governed purely by genetic drift'
             ],
             correctAnswer: 1,
-            explanation: 'Heterozygote advantage (overdominance) means the heterozygote outperforms BOTH homozygotes, so balancing selection actively maintains both alleles at intermediate frequency. Option C is the trap: although heterozygotes are favored, two heterozygotes (Aa × Aa) do NOT "breed true" — Mendelian segregation regenerates both homozygotes every generation, which is precisely why both alleles, not just the heterozygote, persist in the gene pool.'
+            explanation: 'Heterozygote advantage (overdominance) means the heterozygote outperforms BOTH homozygotes, so balancing selection actively maintains both alleles at intermediate frequency. The "breed true" option is the trap: although heterozygotes are favored, two heterozygotes (Aa × Aa) do NOT "breed true" — Mendelian segregation regenerates both homozygotes every generation, which is precisely why both alleles, not just the heterozygote, persist in the gene pool.'
           },
           {
             question: 'A field of wildflowers is pollinated by bees that learn to recognize and preferentially visit whichever flower color is most abundant, ignoring rare colors. As a result, rare color variants set more seed than common ones. Over time, multiple color variants are maintained. This pattern is BEST described as:',
@@ -213,7 +213,7 @@ Directional and stabilizing selection tend to *remove* variation. Yet real popul
               'Disruptive selection producing two fixed color morphs'
             ],
             correctAnswer: 2,
-            explanation: 'When the FITNESS of a phenotype depends on how COMMON it is, and RARE types are favored, that is negative frequency-dependent selection — a mechanism that maintains multiple variants. Option A is the trap: there is no fixed "best" color toward which the mean shifts; the advantage flips to whichever color is currently rare, so no single sustained directional shift occurs. The selective pressure itself changes as frequencies change.'
+            explanation: 'When the FITNESS of a phenotype depends on how COMMON it is, and RARE types are favored, that is negative frequency-dependent selection — a mechanism that maintains multiple variants. The "directional selection toward the rarest color" option is the trap: there is no fixed "best" color toward which the mean shifts; the advantage flips to whichever color is currently rare, so no single sustained directional shift occurs. The selective pressure itself changes as frequencies change.'
           }
         ]
       }

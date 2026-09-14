@@ -97,7 +97,7 @@ These two ratios describe the *same* offspring but answer *different* questions.
               'All Bb'
             ],
             correctAnswer: 1,
-            explanation: 'A Bb × Bb cross yields genotypes in a 1:2:1 ratio (1 BB : 2 Bb : 1 bb). Option A (3:1) is the trap: that is the PHENOTYPIC ratio (3 black : 1 brown). The question explicitly asks for genotypes, so the three-class 1:2:1 answer is required, not the two-class phenotype ratio.'
+            explanation: 'A Bb × Bb cross yields genotypes in a 1:2:1 ratio (1 BB : 2 Bb : 1 bb). The 3 black : 1 brown option is the trap: that is the PHENOTYPIC ratio (3 black : 1 brown). The question explicitly asks for genotypes, so the three-class 1:2:1 answer is required, not the two-class phenotype ratio.'
           },
           {
             question: 'A monohybrid cross produces offspring in an approximate 1:1 phenotypic ratio (half dominant, half recessive). Which parental cross would produce this result?',
@@ -108,7 +108,7 @@ These two ratios describe the *same* offspring but answer *different* questions.
               'Tt × tt'
             ],
             correctAnswer: 3,
-            explanation: 'A 1:1 phenotypic ratio comes from a heterozygote crossed with a homozygous recessive (Tt × tt): the tt parent contributes only t, so offspring are 1/2 Tt (dominant) and 1/2 tt (recessive). Option B (Tt × Tt) gives 3:1, and option A (TT × tt) gives 100% dominant (all Tt) — neither produces the 1:1 split observed.'
+            explanation: 'A 1:1 phenotypic ratio comes from a heterozygote crossed with a homozygous recessive (Tt × tt): the tt parent contributes only t, so offspring are 1/2 Tt (dominant) and 1/2 tt (recessive). Tt × Tt gives 3:1, and TT × tt gives 100% dominant (all Tt) — neither produces the 1:1 split observed.'
           }
         ]
       }
@@ -186,7 +186,7 @@ A **back-cross** is any cross of an offspring back to one of its *parents* (or t
               'No conclusion is possible from a test cross'
             ],
             correctAnswer: 1,
-            explanation: 'In a test cross (× bb), a heterozygous Bb bull would be expected to produce about 50% red calves. Getting 25 black calves and zero red is overwhelmingly unlikely if the bull were Bb (it would require the recessive allele to lose the coin-flip 25 times in a row), so the bull is almost certainly homozygous BB. Option A is backwards — heterozygosity is what is ruled OUT by the absence of red calves.'
+            explanation: 'In a test cross (× bb), a heterozygous Bb bull would be expected to produce about 50% red calves. Getting 25 black calves and zero red is overwhelmingly unlikely if the bull were Bb (it would require the recessive allele to lose the coin-flip 25 times in a row), so the bull is almost certainly homozygous BB. The "definitely heterozygous" option is backwards — heterozygosity is what is ruled OUT by the absence of red calves.'
           },
           {
             question: 'In guinea pigs, short hair (S) is dominant to long hair (s). A short-haired guinea pig is crossed with a long-haired one, producing 6 short-haired and 5 long-haired offspring. Which statement is correct?',
@@ -197,7 +197,7 @@ A **back-cross** is any cross of an offspring back to one of its *parents* (or t
               'Long hair is actually the dominant trait'
             ],
             correctAnswer: 1,
-            explanation: 'The long-haired parent is ss, so this IS a test cross. Long-haired (ss) offspring appeared, which means each received an s allele from BOTH parents — so the short-haired parent must carry s and is therefore Ss. The roughly 1:1 ratio (6:5) confirms a Ss × ss cross. Option A is wrong because an SS parent could never produce long-haired offspring in this cross.'
+            explanation: 'The long-haired parent is ss, so this IS a test cross. Long-haired (ss) offspring appeared, which means each received an s allele from BOTH parents — so the short-haired parent must carry s and is therefore Ss. The roughly 1:1 ratio (6:5) confirms a Ss × ss cross. The homozygous (SS) option is wrong because an SS parent could never produce long-haired offspring in this cross.'
           }
         ]
       }

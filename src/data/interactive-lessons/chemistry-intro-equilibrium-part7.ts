@@ -127,14 +127,9 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
         questions: [
           {
             question: 'Given: $\\text{A} \\rightleftharpoons \\text{B}$, $K_1 = 0.50$. $\\text{B} \\rightleftharpoons \\text{C}$, $K_2 = 6.0$. What is $K$ for $\\text{C} \\rightleftharpoons \\text{A}$?',
-            options: [
-              '$3.0$',
-              '$0.33$',
-              '$1/3.0 = 0.33$',
-              'Both B and C are correct'
-            ],
-            correctAnswer: 3,
-            explanation: 'A ⇌ C: $K = K_1 \\times K_2 = 0.50 \\times 6.0 = 3.0$. C ⇌ A is the reverse: $K = 1/3.0 = 0.33$. Options B and C give the same answer.'
+            options: ['$3.0$', '$0.33$', '$-3.0$', '$0.083$'],
+            correctAnswer: 1,
+            explanation: 'A ⇌ C: $K = K_1 \\times K_2 = 0.50 \\times 6.0 = 3.0$. C ⇌ A is the reverse: $K = 1/3.0 = 0.33$. Dividing the constants ($0.083$) or negating $K$ ($-3.0$) is not valid.'
           },
           {
             question: 'For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $K_c = 500$ at temperature $T$. What is $K_c$ for $\\text{NH}_3(g) \\rightleftharpoons \\frac{1}{2}\\text{N}_2(g) + \\frac{3}{2}\\text{H}_2(g)$?',

@@ -79,7 +79,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'C-H bonds are ionic'
             ],
             correctAnswer: 0,
-            explanation: 'With $\\Delta\\text{EN}$ near 0.3, the electrons in a C-H bond are shared nearly equally, so there is little partial charge — the bond is effectively nonpolar. This is why hydrocarbons are greasy and water-insoluble. The trap (option 3) inverts the values; hydrogen is actually slightly LESS electronegative than carbon, but the real reason for nonpolarity is how CLOSE the two values are, not which is larger.'
+            explanation: 'With $\\Delta\\text{EN}$ near 0.3, the electrons in a C-H bond are shared nearly equally, so there is little partial charge — the bond is effectively nonpolar. This is why hydrocarbons are greasy and water-insoluble. The "hydrogen is far more electronegative" trap inverts the values; hydrogen is actually slightly LESS electronegative than carbon, but the real reason for nonpolarity is how CLOSE the two values are, not which is larger.'
           },
           {
             question: 'In a C-O bond, which atom bears the partial negative charge ($\\delta^-$), and what does this imply about the carbon?',
@@ -90,7 +90,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'Neither atom carries partial charge because the bond is covalent'
             ],
             correctAnswer: 1,
-            explanation: 'Oxygen is more electronegative, so it pulls electron density toward itself and becomes $\\delta^-$, leaving carbon $\\delta^+$. That electron-poor carbon is exactly where nucleophiles attack (e.g., at a carbonyl). The trap (option 4) assumes "covalent" means "no partial charge" — covalent bonds can be quite polar; it is the UNEQUAL sharing, not the presence of sharing, that sets the partial charges.'
+            explanation: 'Oxygen is more electronegative, so it pulls electron density toward itself and becomes $\\delta^-$, leaving carbon $\\delta^+$. That electron-poor carbon is exactly where nucleophiles attack (e.g., at a carbonyl). The no-partial-charge trap assumes "covalent" means "no partial charge" — covalent bonds can be quite polar; it is the UNEQUAL sharing, not the presence of sharing, that sets the partial charges.'
           },
           {
             question: 'Which bond is the most polar?',
@@ -101,7 +101,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'C-I'
             ],
             correctAnswer: 2,
-            explanation: 'Polarity scales with $\\Delta\\text{EN}$. Fluorine is the most electronegative element, so C-F has the largest electronegativity difference and is the most polar of these. The trap (option 4) might tempt you because iodine is a big atom, but size is not electronegativity — iodine is far down the group and only weakly electronegative, so C-I is much less polar than C-F.'
+            explanation: 'Polarity scales with $\\Delta\\text{EN}$. Fluorine is the most electronegative element, so C-F has the largest electronegativity difference and is the most polar of these. The C-I trap might tempt you because iodine is a big atom, but size is not electronegativity — iodine is far down the group and only weakly electronegative, so C-I is much less polar than C-F.'
           }
         ]
       }
@@ -123,7 +123,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'The molecule is bent, which cancels the dipoles'
             ],
             correctAnswer: 1,
-            explanation: 'Each C=O bond is very polar, but the linear ($sp$ carbon, $180^\\circ$) geometry makes the two dipole vectors antiparallel and equal, so they sum to zero. Net dipole = 0, nonpolar molecule. The trap (option 4) gets the cancellation right but the geometry wrong — a BENT triatomic (like water) would NOT cancel; it is precisely the LINEAR shape that produces the cancellation.'
+            explanation: 'Each C=O bond is very polar, but the linear ($sp$ carbon, $180^\\circ$) geometry makes the two dipole vectors antiparallel and equal, so they sum to zero. Net dipole = 0, nonpolar molecule. The bent-molecule trap gets the cancellation right but the geometry wrong — a BENT triatomic (like water) would NOT cancel; it is precisely the LINEAR shape that produces the cancellation.'
           },
           {
             question: 'Both $\\text{CCl}_4$ and $\\text{CHCl}_3$ contain polar C-Cl bonds. $\\text{CCl}_4$ is nonpolar but $\\text{CHCl}_3$ is polar. What accounts for the difference?',
@@ -134,7 +134,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               '$\\text{CCl}_4$ is bent and $\\text{CHCl}_3$ is linear'
             ],
             correctAnswer: 1,
-            explanation: 'Both are tetrahedral, but symmetry is the deciding factor. Four identical C-Cl dipoles in $\\text{CCl}_4$ sum to zero; swapping one Cl for a much less polar C-H bond in $\\text{CHCl}_3$ destroys the symmetric cancellation, leaving a net dipole. The trap (option 1) invents a difference in bond polarity — the C-Cl bonds are essentially the same in both; what changed is the molecular SYMMETRY.'
+            explanation: 'Both are tetrahedral, but symmetry is the deciding factor. Four identical C-Cl dipoles in $\\text{CCl}_4$ sum to zero; swapping one Cl for a much less polar C-H bond in $\\text{CHCl}_3$ destroys the symmetric cancellation, leaving a net dipole. The more-polar-bonds trap invents a difference in bond polarity — the C-Cl bonds are essentially the same in both; what changed is the molecular SYMMETRY.'
           },
           {
             question: 'Water is bent ($\\sim 104.5^\\circ$) rather than linear. How does this shape affect its polarity, and why is the molecule bent?',
@@ -145,7 +145,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'The bend has no effect on polarity'
             ],
             correctAnswer: 1,
-            explanation: 'Oxygen is $sp^3$ with two lone pairs; VSEPR repulsion bends the H-O-H angle to ~104.5 degrees. Because the molecule is bent (not linear), the two O-H bond dipoles do not oppose each other — they sum to a strong net dipole toward oxygen, making water highly polar. The trap (option 1) wrongly assumes any two dipoles cancel; cancellation requires the bonds to point OPPOSITE, which only a linear arrangement provides.'
+            explanation: 'Oxygen is $sp^3$ with two lone pairs; VSEPR repulsion bends the H-O-H angle to ~104.5 degrees. Because the molecule is bent (not linear), the two O-H bond dipoles do not oppose each other — they sum to a strong net dipole toward oxygen, making water highly polar. The dipoles-cancel trap wrongly assumes any two dipoles cancel; cancellation requires the bonds to point OPPOSITE, which only a linear arrangement provides.'
           }
         ]
       }
@@ -167,7 +167,7 @@ The lesson, in one line: **polar bonds + symmetric geometry $\\rightarrow$ nonpo
               'Polarity affects color but not boiling point'
             ],
             correctAnswer: 1,
-            explanation: 'A net molecular dipole creates dipole-dipole attractions (and enables hydrogen bonding when H is on N/O/F); these intermolecular forces are stronger than the dispersion-only forces between nonpolar molecules of similar mass, raising the boiling point. The trap (option 1) reverses the logic — nonpolar molecules of comparable size have WEAKER intermolecular forces, hence lower boiling points.'
+            explanation: 'A net molecular dipole creates dipole-dipole attractions (and enables hydrogen bonding when H is on N/O/F); these intermolecular forces are stronger than the dispersion-only forces between nonpolar molecules of similar mass, raising the boiling point. The "nonpolar attracts more strongly" trap reverses the logic — nonpolar molecules of comparable size have WEAKER intermolecular forces, hence lower boiling points.'
           },
           {
             question: 'A student concludes that because $\\text{BF}_3$ has three polar B-F bonds, the molecule must be polar. What is the flaw in this reasoning?',

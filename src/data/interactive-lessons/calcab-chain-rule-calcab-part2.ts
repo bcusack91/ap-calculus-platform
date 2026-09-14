@@ -83,9 +83,9 @@ $$\\boxed{\\frac{d}{dx}[f(g(h(x)))] = f'(g(h(x))) \\cdot g'(h(x)) \\cdot h'(x)}$
         questions: [
           {
             question: 'Find $\\frac{d}{dx}[\\cos(2x)]^3$.',
-            options: ['$3\\cos^2(2x) \\cdot (-\\sin(2x)) \\cdot 2$', '$3\\cos^2(2x)$', '$-6\\cos^2(2x)\\sin(2x)$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: 'Outer: $3u^2 = 3\\cos^2(2x)$. Middle: $-\\sin(2x)$. Inner: $2$. Product: $-6\\cos^2(2x)\\sin(2x)$. Options A and C are the same expression.'
+            options: ['$-3\\cos^2(2x)\\sin(2x)$', '$3\\cos^2(2x)$', '$-6\\cos^2(2x)\\sin(2x)$', '$6\\cos^2(2x)\\sin(2x)$'],
+            correctAnswer: 2,
+            explanation: 'Outer: $3u^2 = 3\\cos^2(2x)$. Middle: $-\\sin(2x)$. Inner: $2$. Product: $-6\\cos^2(2x)\\sin(2x)$. Dropping the inner factor $2$ gives $-3\\cos^2(2x)\\sin(2x)$.'
           },
           {
             question: 'Find $\\frac{d}{dx}e^{x^3}$.',

@@ -60,9 +60,9 @@ $$\\frac{d}{dx}\\left[\\frac{\\sin x}{e^x}\\right] = \\frac{d}{dx}[\\sin x \\cdo
           },
           {
             question: 'Find $\\frac{d}{dx}\\ln(\\cos x)$.',
-            options: ['$\\frac{1}{\\cos x}$', '$-\\tan x$', '$\\frac{-\\sin x}{\\cos x}$', 'Both B and C'],
-            correctAnswer: 3,
-            explanation: '$\\frac{d}{dx}\\ln(\\cos x) = \\frac{-\\sin x}{\\cos x} = -\\tan x$. B and C are the same.'
+            options: ['$\\frac{1}{\\cos x}$', '$-\\tan x$', '$\\tan x$', '$-\\cot x$'],
+            correctAnswer: 1,
+            explanation: '$\\frac{d}{dx}\\ln(\\cos x) = \\frac{-\\sin x}{\\cos x} = -\\tan x$. Dropping the chain factor $-\\sin x$ leaves $\\frac{1}{\\cos x}$.'
           },
           {
             question: 'Find $\\frac{d^2y}{dx^2}$ for $y = e^{-x}$.',

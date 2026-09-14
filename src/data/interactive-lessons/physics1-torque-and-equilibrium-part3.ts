@@ -142,9 +142,9 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
           },
           {
             label: 'The best place to choose a pivot for torque calculations is:',
-            options: ['at the center of mass', 'at one end', 'at a point where an unknown force acts', 'any of these — it does not matter'],
-            correctIndex: 3,
-            explanation: 'The pivot can be chosen anywhere. All choices give the same physical result, though some make the algebra easier.'
+            options: ['at the center of mass', 'at one end', 'at a point where an unknown force acts', 'wherever the largest known force acts'],
+            correctIndex: 2,
+            explanation: 'Any pivot gives the same physical result, but placing it where an unknown force acts removes that force from the torque equation, which makes the algebra easiest.'
           },
           {
             label: 'To balance a lighter person on a see-saw, a heavier person must sit:',

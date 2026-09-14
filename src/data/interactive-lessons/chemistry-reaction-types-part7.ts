@@ -200,7 +200,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
               '$\\text{CaCO}_3 + \\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$'
             ],
             correctAnswer: 0,
-            explanation: 'Limestone is $CaCO_{3}$. Thermal decomposition (heating) breaks it into CaO (quicklime) + $CO_{2}$. This is used industrially in cement production. Option B is the reverse (synthesis), and D is a double replacement with an acid.'
+            explanation: 'Limestone is $CaCO_{3}$. Thermal decomposition (heating) breaks it into CaO (quicklime) + $CO_{2}$. This is used industrially in cement production. Forming $\\text{CaCO}_3$ from CaO + $CO_{2}$ is the reverse (synthesis), and the HCl reaction is a double replacement with an acid.'
           }
         ]
       }

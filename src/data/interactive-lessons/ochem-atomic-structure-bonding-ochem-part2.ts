@@ -147,7 +147,7 @@ These same rules let you reject impossible structures (e.g., a carbon with only 
               'Neither is valid because resonance requires identical energy'
             ],
             correctAnswer: 1,
-            explanation: 'The octet rule is the top-priority criterion: a full octet on every second-row atom matters more than eliminating formal charges. Structure A (full octets) is the better contributor despite its charges. The trap (option 1) over-weights the formal-charge rule, which is genuinely #2 — but it never overrides an incomplete octet, especially an electron-deficient carbon.'
+            explanation: 'The octet rule is the top-priority criterion: a full octet on every second-row atom matters more than eliminating formal charges. Structure A (full octets) is the better contributor despite its charges. The structure-B trap over-weights the formal-charge rule, which is genuinely #2 — but it never overrides an incomplete octet, especially an electron-deficient carbon.'
           },
           {
             question: 'For an anion, a negative formal charge can be placed on either an oxygen or a carbon depending on which resonance contributor you draw. Which placement gives the more stable (more dominant) contributor?',
@@ -158,7 +158,7 @@ These same rules let you reject impossible structures (e.g., a carbon with only 
               'On whichever atom is drawn on the left'
             ],
             correctAnswer: 1,
-            explanation: 'Negative charge is most stable on the most electronegative atom, which can best accommodate the extra electron density. The oxygen-anion contributor therefore dominates and is the larger weight in the hybrid. The trap (option 1) confuses bonding capacity with charge stabilization; bond count does not determine where negative charge prefers to sit — electronegativity does.'
+            explanation: 'Negative charge is most stable on the most electronegative atom, which can best accommodate the extra electron density. The oxygen-anion contributor therefore dominates and is the larger weight in the hybrid. The negative-charge-on-carbon trap confuses bonding capacity with charge stabilization; bond count does not determine where negative charge prefers to sit — electronegativity does.'
           },
           {
             question: 'A student claims a carboxylate ion ($\\text{RCOO}^-$) "rapidly flips back and forth" between its two resonance structures. Why is this description wrong?',
@@ -191,7 +191,7 @@ These same rules let you reject impossible structures (e.g., a carbon with only 
               'C is $-1$, N is $+1$'
             ],
             correctAnswer: 1,
-            explanation: 'Carbon: 4 valence, 1 lone pair (2 e), 3 bonds (triple): $4 - 2 - 3 = -1$. Nitrogen: 5 valence, 1 lone pair, 3 bonds: $5 - 2 - 3 = 0$. Sum = $-1$, matching the ion. The trap is option 3, which puts the negative charge on nitrogen — but the math (and the carbon nucleophilicity of cyanide) shows the lone pair / negative charge sits on CARBON, which is why cyanide attacks through carbon.'
+            explanation: 'Carbon: 4 valence, 1 lone pair (2 e), 3 bonds (triple): $4 - 2 - 3 = -1$. Nitrogen: 5 valence, 1 lone pair, 3 bonds: $5 - 2 - 3 = 0$. Sum = $-1$, matching the ion. The trap is C $+1$, N $-1$, which puts the negative charge on nitrogen — but the math (and the carbon nucleophilicity of cyanide) shows the lone pair / negative charge sits on CARBON, which is why cyanide attacks through carbon.'
           },
           {
             question: 'Which of the following is the single most important first step that, if done wrong, guarantees an incorrect Lewis structure?',

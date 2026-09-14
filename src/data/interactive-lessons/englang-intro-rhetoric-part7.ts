@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Essential terms and definitions for Introduction to Rhetoric is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'The most frequent ways Introduction to Rhetoric is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'Approaches for answering Introduction to Rhetoric questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'Guessing']
           }
         ],
         correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],

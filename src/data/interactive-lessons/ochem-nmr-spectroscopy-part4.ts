@@ -129,7 +129,7 @@ Comparing a normal decoupled spectrum (which shows *all* carbons) with DEPT-135 
               'Because all carbons happen to have the same chemical shift'
             ],
             correctAnswer: 1,
-            explanation: 'Carbons are strongly coupled to their attached protons, but broadband decoupling irradiates all protons at once and collapses that coupling to a singlet; meanwhile $^{13}\\text{C}$–$^{13}\\text{C}$ coupling is unseen because two adjacent $^{13}\\text{C}$ in one molecule is a ~$0.01\\%$ event. $^{13}\\text{C}$ does couple (option 1), the result is from decoupling not a degenerate $n+1$ count (option 3), and the carbons have very different shifts (option 4).'
+            explanation: 'Carbons are strongly coupled to their attached protons, but broadband decoupling irradiates all protons at once and collapses that coupling to a singlet; meanwhile $^{13}\\text{C}$–$^{13}\\text{C}$ coupling is unseen because two adjacent $^{13}\\text{C}$ in one molecule is a ~$0.01\\%$ event. $^{13}\\text{C}$ does couple, the result is from decoupling not a degenerate $n+1$ count, and the carbons have very different shifts.'
           },
           {
             question: 'A carbon appears in the standard decoupled $^{13}\\text{C}$ spectrum but is absent from the DEPT-135 spectrum. What kind of carbon is it?',
@@ -151,7 +151,7 @@ Comparing a normal decoupled spectrum (which shows *all* carbons) with DEPT-135 
               'Because the field strength cancels the integral'
             ],
             correctAnswer: 1,
-            explanation: 'Broadband decoupling introduces an uneven nuclear Overhauser enhancement, and carbons (notably quaternary ones) relax slowly and unequally, so standard $^{13}\\text{C}$ intensities are not reliably proportional to carbon count. The peaks do have area (option 1), carbon environments differ (option 3), and field strength does not cancel integrals (option 4).'
+            explanation: 'Broadband decoupling introduces an uneven nuclear Overhauser enhancement, and carbons (notably quaternary ones) relax slowly and unequally, so standard $^{13}\\text{C}$ intensities are not reliably proportional to carbon count. The peaks do have area, carbon environments differ, and field strength does not cancel integrals.'
           }
         ]
       }
@@ -211,7 +211,7 @@ Two regions resolve ambiguities that proton NMR cannot:
               'Shows splitting patterns that count neighboring carbons by the $n+1$ rule'
             ],
             correctAnswer: 1,
-            explanation: 'Because it observes carbon directly, $^{13}\\text{C}$ NMR sees quaternary and carbonyl carbons that give no proton signal, and its ~$220\\ \\text{ppm}$ window resolves environments that overlap in $^1\\text{H}$. It is *less* sensitive, not more (option 3); routine integration is unreliable (option 1); and standard spectra are decoupled singlets, not $n+1$ multiplets (option 4).'
+            explanation: 'Because it observes carbon directly, $^{13}\\text{C}$ NMR sees quaternary and carbonyl carbons that give no proton signal, and its ~$220\\ \\text{ppm}$ window resolves environments that overlap in $^1\\text{H}$. It is *less* sensitive, not more; routine integration is unreliable; and standard spectra are decoupled singlets, not $n+1$ multiplets.'
           }
         ]
       }

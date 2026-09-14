@@ -70,7 +70,7 @@ Oxygen does not appear because adding an O (e.g., inserting it into a C–H or C
               'The oxygen must be a carbonyl because DoU counts oxygen'
             ],
             correctAnswer: 1,
-            explanation: 'A benzene ring is exactly 4 degrees of unsaturation (three $\\pi$ bonds + one ring), so DoU = 4 in a 7-carbon compound is the classic signature of an aromatic ring — confirm with aromatic $^1\\text{H}$ signals near $7\\ \\text{ppm}$. DoU = 4 rules out "fully saturated"; oxygen does not contribute to DoU at all (so option 4’s reasoning is wrong); two triple bonds would be 4 but is far less likely here than one ring.'
+            explanation: 'A benzene ring is exactly 4 degrees of unsaturation (three $\\pi$ bonds + one ring), so DoU = 4 in a 7-carbon compound is the classic signature of an aromatic ring — confirm with aromatic $^1\\text{H}$ signals near $7\\ \\text{ppm}$. DoU = 4 rules out "fully saturated"; oxygen does not contribute to DoU at all (so the carbonyl option’s reasoning is wrong); two triple bonds would be 4 but is far less likely here than one ring.'
           }
         ]
       }
@@ -210,7 +210,7 @@ Protons assigned: $5 + 2 + 3 = 10$, matching $\\text{H}_{10}$.
               'The order does not matter; any sequence gives the same effort'
             ],
             correctAnswer: 1,
-            explanation: 'Working from coarse to fine, DoU tells you how much unsaturation to expect and IR identifies the functional groups, so by the time you decode NMR splitting the candidate structures are already tightly limited. NMR splitting is essential, not unreliable (option 1); IR rarely gives full connectivity (option 3); and a disciplined order genuinely reduces effort and error (option 4).'
+            explanation: 'Working from coarse to fine, DoU tells you how much unsaturation to expect and IR identifies the functional groups, so by the time you decode NMR splitting the candidate structures are already tightly limited. NMR splitting is essential, not unreliable; IR rarely gives full connectivity; and a disciplined order genuinely reduces effort and error.'
           }
         ]
       }

@@ -157,7 +157,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
               'A solution with excess $NaOH$'
             ],
             correctAnswer: 2,
-            explanation: 'Let volume = $V$. Mol $HF = 0.20V$, mol $OH^- = 0.10V$. After neutralization: $HF = 0.10V$, $F^- = 0.10V$. Wait — equal! So $[HF] = [F^-]$ at pH = $pK_a$. Actually, both have the same value, so the answer is B.'
+            explanation: 'Let volume = $V$. Mol $HF = 0.20V$, mol $OH^- = 0.10V$. After neutralization: $HF = 0.10V$, $F^- = 0.10V$. Wait — equal! So $[HF] = [F^-]$ at pH = $pK_a$. Actually, both have the same value, so the answer is the buffer with $[HF] = [F^-]$.'
           }
         ]
       }

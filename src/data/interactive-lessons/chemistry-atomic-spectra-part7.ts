@@ -170,7 +170,7 @@ export const chemAtomicSpectraPart7Data = {
               '$n=2 \\to n=3$, visible red, ~656 nm'
             ],
             correctAnswer: 1,
-            explanation: 'H-α: $n=3 \\to n=2$ (Balmer series). Wavelength = 656 nm, in the red part of the visible spectrum. (Option D incorrectly reverses the transition direction.)'
+            explanation: 'H-α: $n=3 \\to n=2$ (Balmer series). Wavelength = 656 nm, in the red part of the visible spectrum. (The $n=2 \\to n=3$ option incorrectly reverses the transition direction.)'
           }
         ]
       }

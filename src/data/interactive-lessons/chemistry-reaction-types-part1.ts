@@ -160,7 +160,7 @@ These reactions are essentially **reverses** of each other. If a synthesis react
               '$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
-            explanation: '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$ is a synthesis reaction: two elements combine to form one compound. The first option is decomposition, the third is single replacement, and the fourth is combustion.'
+            explanation: '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$ is a synthesis reaction: two elements combine to form one compound. The $2\\text{KClO}_3$ reaction is decomposition, the $\\text{Zn} + \\text{CuSO}_4$ reaction is single replacement, and the $\\text{CH}_4$ reaction is combustion.'
           },
           {
             question: 'When calcium carbonate is heated, it decomposes. Which products form?',

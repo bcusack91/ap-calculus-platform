@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'How Claims & Evidence in Reading links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'Isolation']
           },
           {
             label: 'How Claims & Evidence in Reading operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'Isolation']
           },
           {
             label: 'How outcomes of Claims & Evidence in Reading can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'Isolation']
           }
         ],
         correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],

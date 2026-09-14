@@ -191,7 +191,7 @@ export const psychSocialInfluencePart7Data = {
               'Showing students Milgram\'s obedience study to make them aware of social pressure'
             ],
             correctAnswer: 1,
-            explanation: 'Asch found that conformity drops significantly when participants commit to an answer BEFORE hearing the group. Writing answers privately creates a public commitment to one\'s own opinion, reducing normative pressure. Option A would increase conformity (authority sharing first sets a norm). Option C would increase conformity (larger groups increase normative pressure up to a point) and social loafing. Option D is awareness-based but research shows that knowing about social influence doesn\'t make you immune to it — structural changes (like private answers first) are more effective.'
+            explanation: 'Asch found that conformity drops significantly when participants commit to an answer BEFORE hearing the group. Writing answers privately creates a public commitment to one\'s own opinion, reducing normative pressure. Having the teacher share first would increase conformity (authority sharing first sets a norm). Increasing class size would increase conformity (larger groups increase normative pressure up to a point) and social loafing. Showing Milgram\'s study is awareness-based but research shows that knowing about social influence doesn\'t make you immune to it — structural changes (like private answers first) are more effective.'
           }
         ]
       }

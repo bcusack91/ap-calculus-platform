@@ -169,9 +169,9 @@ More precisely: if $N$ is between $f(a)$ and $f(b)$, then there exists $c \\in (
         questions: [
           {
             question: 'If $f$ is continuous on $[1, 5]$, $f(1) = -3$, and $f(5) = 4$, which value is $f$ guaranteed to take?',
-            options: ['$-4$', '$0$', '$5$', 'All of the above'],
+            options: ['$-4$', '$0$', '$5$', '$4.5$'],
             correctAnswer: 1,
-            explanation: 'By IVT, $f$ takes every value between $-3$ and $4$. Since $0$ is in $[-3, 4]$, it is guaranteed. $-4$ and $5$ are outside this range.'
+            explanation: 'By IVT, $f$ takes every value between $-3$ and $4$. Since $0$ is in $[-3, 4]$, it is guaranteed. $-4$, $4.5$ and $5$ are outside this range.'
           },
           {
             question: 'Can we use IVT to conclude that $f(x) = \\frac{1}{x}$ takes the value 0 on $[-1, 1]$?',

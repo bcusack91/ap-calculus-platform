@@ -97,8 +97,8 @@ $$\\boxed{Q(t) = Q_0 + \\int_0^t [R_{in}(s) - R_{out}(s)]\\,ds}$$
           },
           {
             label: 'Average rate of change of $f$ on $[a,b]$ equals:',
-            options: ['$\\frac{f(b)-f(a)}{b-a}$', '$\\frac{1}{b-a}\\int_a^b f(x)\\,dx$', '$f\'(c)$ for some $c$', 'Both the first and third options'],
-            correctAnswers: ['Both the first and third options'],
+            options: ['$\\frac{f(b)-f(a)}{b-a}$', '$\\frac{1}{b-a}\\int_a^b f(x)\\,dx$', '$f\'(\\frac{a+b}{2})$', '$f(b) - f(a)$'],
+            correctAnswers: ['$\\frac{f(b)-f(a)}{b-a}$'],
             hints: ['Average rate of change uses the difference quotient. MVT guarantees $f\'(c)$ equals it.'],
             explanation: 'Average rate $= \\frac{f(b)-f(a)}{b-a} = f\'(c)$ by MVT.'
           }

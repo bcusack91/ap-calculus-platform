@@ -164,7 +164,7 @@ A single worked thread shows the concepts reinforcing one another.
               '$CH_4 + Cl_2 \\rightarrow CH_3Cl + HCl$ in one concerted step'
             ],
             correctAnswer: 1,
-            explanation: 'The two propagation steps are H-abstraction ($\\text{Cl}\\cdot + CH_4 \\rightarrow HCl + \\text{CH}_3\\cdot$) and product formation with regeneration of the carrier ($\\text{CH}_3\\cdot + Cl_2 \\rightarrow CH_3Cl + \\text{Cl}\\cdot$). Because Cl- is regenerated, the chain self-sustains. Option 1 mixes in initiation/termination; option 3 is termination; option 4 ignores the radical mechanism.'
+            explanation: 'The two propagation steps are H-abstraction ($\\text{Cl}\\cdot + CH_4 \\rightarrow HCl + \\text{CH}_3\\cdot$) and product formation with regeneration of the carrier ($\\text{CH}_3\\cdot + Cl_2 \\rightarrow CH_3Cl + \\text{Cl}\\cdot$). Because Cl- is regenerated, the chain self-sustains. The option starting with $Cl_2 \\rightarrow 2\\,\\text{Cl}\\cdot$ mixes in initiation/termination; methyl-radical coupling is termination; the one-concerted-step option ignores the radical mechanism.'
           },
           {
             question: 'Which single principle best unifies "anti beats gauche," "equatorial beats axial," and "3° halogenation beats 1° $(with Br_{2})$"?',

@@ -86,7 +86,7 @@ $$s'(t) = v(t), \\qquad s''(t) = v'(t) = a(t)$$
             question: 'Which notation represents "the second derivative of $y$ with respect to $x$, evaluated at $x = 1$"?',
             options: ['$f\'\'(1)$', '$\\frac{dy}{dx}\\bigg|_{x=1}$', '$f\'(1)$', '$\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$'],
             correctAnswer: 3,
-            explanation: 'Leibniz for second derivative evaluated at a point: $\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$. Option A is also correct in Lagrange notation.'
+            explanation: 'Leibniz for second derivative evaluated at a point: $\\left.\\frac{d^2y}{dx^2}\\right|_{x=1}$. $f\'\'(1)$ is also correct in Lagrange notation.'
           },
           {
             question: 'The operator notation $\\frac{d}{dx}[x^2 \\sin x]$ means:',

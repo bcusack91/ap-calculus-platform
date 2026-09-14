@@ -122,9 +122,9 @@ When balanced: galvanometer reads **zero** — no current through the bridge.
           },
           {
             question: 'Adding a resistor in parallel to a circuit always:',
-            options: ['Increases total resistance', 'Decreases total resistance', 'Increases total current from battery', 'Both B and C'],
-            correctAnswer: 3,
-            explanation: 'More parallel paths → lower $R_{total}$ → more current drawn from battery. Both B and C are correct.'
+            options: ['Increases total resistance', 'Decreases total resistance', 'Decreases total current from battery', 'Leaves total resistance unchanged'],
+            correctAnswer: 1,
+            explanation: 'More parallel paths → lower $R_{total}$ → more current drawn from battery. So the battery current rises; it does not fall.'
           }
         ]
       }

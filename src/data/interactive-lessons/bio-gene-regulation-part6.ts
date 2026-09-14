@@ -165,7 +165,7 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
               'Never made, because the promoter is broken'
             ],
             correctAnswer: 1,
-            explanation: '$O^{c}$ prevents the (perfectly good) repressor from binding, so transcription proceeds whether or not inducer is present — constitutive β-gal. Option A is the wild-type pattern, but a good repressor that cannot dock cannot impose inducibility. Option C describes the $I^{s}$ super-repressor phenotype, not $O^{c}$. Option D invents a promoter defect not present in the genotype.'
+            explanation: '$O^{c}$ prevents the (perfectly good) repressor from binding, so transcription proceeds whether or not inducer is present — constitutive β-gal. The inducible-only option is the wild-type pattern, but a good repressor that cannot dock cannot impose inducibility. The "repressor is permanently bound" option describes the $I^{s}$ super-repressor phenotype, not $O^{c}$. The broken-promoter option invents a promoter defect not present in the genotype.'
           },
           {
             question: 'In the partial diploid $I^{s}$ $O^{+}$ $Z^{+}$ / $I^{+}$ $O^{+}$ $Z^{+}$, what is the expected β-galactosidase phenotype, and what does it reveal about $I^{s}$?',
@@ -176,7 +176,7 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
               'Always OFF; but only the chromosomal operon is affected'
             ],
             correctAnswer: 2,
-            explanation: 'The $I^{s}$ super-repressor is a diffusible protein that clamps BOTH operators and cannot be removed by inducer, so the whole cell is OFF — demonstrating $I^{s}$ is dominant and trans. Option A wrongly calls it recessive (that is $I^{-}$). Option B inverts the mechanism (a super-repressor silences, it does not destroy repressors). Option D forgets that a trans-acting protein reaches both operons, not just one.'
+            explanation: 'The $I^{s}$ super-repressor is a diffusible protein that clamps BOTH operators and cannot be removed by inducer, so the whole cell is OFF — demonstrating $I^{s}$ is dominant and trans. The inducible option wrongly calls it recessive (that is $I^{-}$). The constitutive option inverts the mechanism (a super-repressor silences, it does not destroy repressors). The "only the chromosomal operon" option forgets that a trans-acting protein reaches both operons, not just one.'
           },
           {
             question: 'A partial diploid has genotype $I^{+}$ $O^{c}$ $Z^{-}$ / $I^{+}$ $O^{+}$ $Z^{+}$. Will functional β-galactosidase be produced WITHOUT inducer?',
@@ -187,7 +187,7 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
               'No — both operons are permanently silenced'
             ],
             correctAnswer: 1,
-            explanation: 'Track each operon separately. $O^{c}$ is cis-acting, so it makes its own operon constitutive — but that operon has $Z^{-}$, so no functional enzyme. The functional $Z^{+}$ sits on the $O^{+}$ operon, which the good repressor keeps OFF without inducer. Result: no β-gal without inducer. Option A forgets the $O^{c}$ copy is $Z^{-}$. Option C is false (repressor binds $O^{+}$ fine; $O^{c}$ is cis-only). Option D wrongly claims permanent silencing — the $O^{+}$ $Z^{+}$ operon is inducible.'
+            explanation: 'Track each operon separately. $O^{c}$ is cis-acting, so it makes its own operon constitutive — but that operon has $Z^{-}$, so no functional enzyme. The functional $Z^{+}$ sits on the $O^{+}$ operon, which the good repressor keeps OFF without inducer. Result: no β-gal without inducer. The option claiming the constitutive operon makes functional enzyme forgets the $O^{c}$ copy is $Z^{-}$. The "repressor cannot bind either operator" option is false (repressor binds $O^{+}$ fine; $O^{c}$ is cis-only). The "both permanently silenced" option wrongly claims permanent silencing — the $O^{+}$ $Z^{+}$ operon is inducible.'
           }
         ]
       }

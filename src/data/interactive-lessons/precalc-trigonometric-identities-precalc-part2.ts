@@ -97,14 +97,9 @@ $$\\frac{1}{\\cos\\theta} - \\cos\\theta = \\frac{1 - \\cos^2\\theta}{\\cos\\the
           },
           {
             question: 'Which expression equals $\\frac{1}{\\sin\\theta\\cos\\theta}$?',
-            options: [
-              '$\\tan\\theta + \\cot\\theta$',
-              '$\\sec\\theta + \\csc\\theta$',
-              '$\\sec\\theta \\cdot \\csc\\theta$',
-              'Both A and C'
-            ],
-            correctAnswer: 3,
-            explanation: '$\\tan\\theta + \\cot\\theta = \\frac{1}{\\sin\\theta\\cos\\theta}$ (shown in examples). Also $\\sec\\theta \\cdot \\csc\\theta = \\frac{1}{\\cos\\theta} \\cdot \\frac{1}{\\sin\\theta} = \\frac{1}{\\sin\\theta\\cos\\theta}$.'
+            options: ['$\\tan\\theta \\cdot \\cot\\theta$', '$\\sec\\theta + \\csc\\theta$', '$\\sec\\theta \\cdot \\csc\\theta$', '$\\csc\\theta - \\sec\\theta$'],
+            correctAnswer: 2,
+            explanation: '$\\sec\\theta \\cdot \\csc\\theta = \\frac{1}{\\cos\\theta} \\cdot \\frac{1}{\\sin\\theta} = \\frac{1}{\\sin\\theta\\cos\\theta}$. By contrast, $\\tan\\theta \\cdot \\cot\\theta = 1$ (it is the sum $\\tan\\theta + \\cot\\theta$ that matches).'
           },
           {
             question: 'Simplify: $\\cos\\theta \\cdot \\csc\\theta$',

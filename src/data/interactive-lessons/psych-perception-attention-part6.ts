@@ -199,7 +199,7 @@ A bank robbery occurs. The witness was texting when the robber entered (attentio
               'Perceptual constancy — products maintain their appearance despite grouping'
             ],
             correctAnswer: 0,
-            explanation: 'Proximity is the operative Gestalt principle here — objects near each other are automatically perceived as belonging to the same group, even without explicit borders. While closure (B) might seem tempting (perceiving invisible borders), the grouping effect is driven by SPATIAL NEARNESS, not gap-filling. No borders or containers are perceived — just groups based on proximity. This is why graphic designers use spacing as a primary tool for visual organization.'
+            explanation: 'Proximity is the operative Gestalt principle here — objects near each other are automatically perceived as belonging to the same group, even without explicit borders. While closure might seem tempting (perceiving invisible borders), the grouping effect is driven by SPATIAL NEARNESS, not gap-filling. No borders or containers are perceived — just groups based on proximity. This is why graphic designers use spacing as a primary tool for visual organization.'
           }
         ]
       }

@@ -68,7 +68,7 @@ The take-home idea, which Part 2 develops quantitatively: **electron density aro
               'Off-scale to the left, because shielding has no effect on chemical shift'
             ],
             correctAnswer: 1,
-            explanation: 'Circulating electrons generate an induced field that opposes $B_0$, lowering $B_{\\text{eff}}$ at the nucleus — this is shielding, and it moves the signal upfield (smaller $\\delta$). The trap in option 1 reverses the cause and effect: high electron density shields (not deshields). Only TMS sits at 0 ppm, and shielding most certainly does affect $\\delta$.'
+            explanation: 'Circulating electrons generate an induced field that opposes $B_0$, lowering $B_{\\text{eff}}$ at the nucleus — this is shielding, and it moves the signal upfield (smaller $\\delta$). The downfield trap reverses the cause and effect: high electron density shields (not deshields). Only TMS sits at 0 ppm, and shielding most certainly does affect $\\delta$.'
           }
         ]
       }
@@ -127,7 +127,7 @@ A quick operational test for any pair of H's on one carbon: replace each in turn
               '1 signal, because the whole ring is one conjugated system'
             ],
             correctAnswer: 2,
-            explanation: 'Symmetry makes the two methyl groups equivalent (one signal) and all four aromatic H\'s equivalent (one signal), for 2 signals total. Option 1 is the classic error of counting hydrogens (10) rather than environments. Conjugation does not merge inequivalent environments, so it is not 1 signal.'
+            explanation: 'Symmetry makes the two methyl groups equivalent (one signal) and all four aromatic H\'s equivalent (one signal), for 2 signals total. The 10-signal option is the classic error of counting hydrogens (10) rather than environments. Conjugation does not merge inequivalent environments, so it is not 1 signal.'
           },
           {
             question: 'Two hydrogens on the same $\\text{CH}_2$ carbon are described as "diastereotopic." What does this imply for their NMR behavior?',
@@ -138,7 +138,7 @@ A quick operational test for any pair of H's on one carbon: replace each in turn
               'They are inequivalent and may give separate signals, because no symmetry operation interchanges them'
             ],
             correctAnswer: 3,
-            explanation: 'Diastereotopic protons cannot be exchanged by any rotation or mirror plane, so they are genuinely inequivalent and can resonate separately — common next to a stereocenter or a double bond. Option 1 states the very misconception the concept overturns; protons do not "cancel," and field strength changes separation, not the underlying inequivalence.'
+            explanation: 'Diastereotopic protons cannot be exchanged by any rotation or mirror plane, so they are genuinely inequivalent and can resonate separately — common next to a stereocenter or a double bond. The "always equivalent" option states the very misconception the concept overturns; protons do not "cancel," and field strength changes separation, not the underlying inequivalence.'
           },
           {
             question: 'The number of signals in a $^1\\text{H}$ NMR spectrum is equal to:',
@@ -149,7 +149,7 @@ A quick operational test for any pair of H's on one carbon: replace each in turn
               'The molecular mass divided by the field strength'
             ],
             correctAnswer: 2,
-            explanation: 'Equivalent protons coalesce into one signal, so the count of signals equals the count of distinct environments. Acetone (6 H, 1 signal) and para-xylene (10 H, 2 signals) show why "number of hydrogens" (option 1) is wrong. The other options are unrelated to how environments are counted.'
+            explanation: 'Equivalent protons coalesce into one signal, so the count of signals equals the count of distinct environments. Acetone (6 H, 1 signal) and para-xylene (10 H, 2 signals) show why "number of hydrogens" is wrong. The other options are unrelated to how environments are counted.'
           }
         ]
       }
@@ -188,7 +188,7 @@ The reference compound is **tetramethylsilane**, $\\text{Si(CH}_3)_4$ (**TMS**),
               '$\\delta = 3\\ \\text{ppm}$ and 900 Hz, because nothing changes with field strength'
             ],
             correctAnswer: 1,
-            explanation: 'Chemical shift in ppm is defined to be field-independent, so $\\delta$ stays at $3\\ \\text{ppm}$. But the frequency offset in hertz equals $\\delta \\times \\nu_{\\text{spectrometer}} = 3 \\times 10^{-6} \\times 600\\ \\text{MHz} = 1800\\ \\text{Hz}$ — it doubles with the field. Option 1 wrongly scales $\\delta$; option 4 wrongly freezes the Hz offset.'
+            explanation: 'Chemical shift in ppm is defined to be field-independent, so $\\delta$ stays at $3\\ \\text{ppm}$. But the frequency offset in hertz equals $\\delta \\times \\nu_{\\text{spectrometer}} = 3 \\times 10^{-6} \\times 600\\ \\text{MHz} = 1800\\ \\text{Hz}$ — it doubles with the field. The 6 ppm option wrongly scales $\\delta$; the "nothing changes" option wrongly freezes the Hz offset.'
           },
           {
             question: 'Why is tetramethylsilane (TMS) chosen as the $\\delta = 0$ reference for $^1\\text{H}$ NMR?',
@@ -199,7 +199,7 @@ The reference compound is **tetramethylsilane**, $\\text{Si(CH}_3)_4$ (**TMS**),
               'It reacts with the sample to lock the frequency scale in place'
             ],
             correctAnswer: 2,
-            explanation: 'Electropositive silicon makes the 12 chemically equivalent TMS protons unusually shielded, so they give a single sharp signal upfield of essentially all organic protons — an ideal zero. Option 1 reverses the shielding; TMS has 12 H, not one (option 2); and a good internal reference must be inert, not reactive (option 4).'
+            explanation: 'Electropositive silicon makes the 12 chemically equivalent TMS protons unusually shielded, so they give a single sharp signal upfield of essentially all organic protons — an ideal zero. The strongly-deshielded option reverses the shielding; TMS has 12 H, not one; and a good internal reference must be inert, not reactive.'
           }
         ]
       }

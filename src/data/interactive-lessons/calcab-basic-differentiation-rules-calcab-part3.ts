@@ -64,15 +64,15 @@ $$\\frac{1 \\cdot (x+2) - x \\cdot 1}{(x+2)^2} = \\frac{x + 2 - x}{(x+2)^2} = \\
         questions: [
           {
             question: 'Find $\\frac{d}{dx}\\frac{x}{x+2}$.',
-            options: ['$\\frac{2}{(x+2)^2}$', '$\\frac{1}{(x+2)^2}$', '$\\frac{x+2-x}{(x+2)^2}$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: '$\\frac{1 \\cdot (x+2) - x \\cdot 1}{(x+2)^2} = \\frac{2}{(x+2)^2}$. Options A and C give the same result.'
+            options: ['$\\frac{2}{(x+2)^2}$', '$\\frac{1}{(x+2)^2}$', '$\\frac{-2}{(x+2)^2}$', '$\\frac{2x+2}{(x+2)^2}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{1 \\cdot (x+2) - x \\cdot 1}{(x+2)^2} = \\frac{2}{(x+2)^2}$. Reversing the numerator order gives the wrong sign, $\\frac{-2}{(x+2)^2}$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\frac{\\sin x}{x}$.',
-            options: ['$\\frac{x\\cos x - \\sin x}{x^2}$', '$\\frac{\\cos x}{x}$', '$\\cos x - \\frac{\\sin x}{x^2}$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: '$\\frac{\\cos x \\cdot x - \\sin x \\cdot 1}{x^2} = \\frac{x\\cos x - \\sin x}{x^2}$. This can be split as $\\frac{\\cos x}{x} - \\frac{\\sin x}{x^2}$.'
+            options: ['$\\frac{x\\cos x - \\sin x}{x^2}$', '$\\frac{\\cos x}{x}$', '$\\cos x - \\frac{\\sin x}{x^2}$', '$\\frac{\\sin x - x\\cos x}{x^2}$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{\\cos x \\cdot x - \\sin x \\cdot 1}{x^2} = \\frac{x\\cos x - \\sin x}{x^2}$. This splits as $\\frac{\\cos x}{x} - \\frac{\\sin x}{x^2}$, not $\\cos x - \\frac{\\sin x}{x^2}$.'
           }
         ]
       }

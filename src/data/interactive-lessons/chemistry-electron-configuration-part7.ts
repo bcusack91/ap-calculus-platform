@@ -190,7 +190,7 @@ These questions connect electron configuration to other chemistry concepts.`,
           },
           {
             label: 'Which species has the same electron configuration as Ne: $O^{2-}$, $F^{-}$, $Na^{+}$, or all of them?',
-            options: ['Only $O^{2-}$', 'Only $F^{-}$', 'Only $Na^{+}$', 'All of them'],
+            options: ['Only $O^{2-}$', 'Only $F^{-}$', 'Only $Na^{+}$', 'All three ions'],
             correctIndex: 3,
             explanation: 'Ne has 10 electrons: $1s^{2}$ $2s^{2}$ $2p^{6}$. $O^{2-}$ (8 + 2 = 10), $F^{-}$ (9 + 1 = 10), and $Na^{+}$ (11 − 1 = 10) all have 10 electrons. They are all isoelectronic with neon.'
           },

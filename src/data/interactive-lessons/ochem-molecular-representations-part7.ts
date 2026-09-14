@@ -75,7 +75,7 @@ The arc of the suite:
               'They are not really isomers'
             ],
             correctAnswer: 1,
-            explanation: 'Both share C2H4O2 (same atoms — trap a false) and DoU 1, but only the carboxylic acid has an O–H for strong hydrogen bonding, giving the higher boiling point. The ester, lacking O–H, has weaker IMFs. This single example ties together isomerism, functional groups, DoU, and IMFs.'
+            explanation: 'Both share C2H4O2 (same atoms — the more-atoms trap is false) and DoU 1, but only the carboxylic acid has an O–H for strong hydrogen bonding, giving the higher boiling point. The ester, lacking O–H, has weaker IMFs. This single example ties together isomerism, functional groups, DoU, and IMFs.'
           }
         ]
       }
@@ -154,7 +154,7 @@ Notice how a single structure simultaneously exercises drawing, formula determin
               'Three-dimensional shape is irrelevant to chemistry'
             ],
             correctAnswer: 1,
-            explanation: 'The suite\'s thesis is that a structure — not a bare formula — encodes the connectivity and functional groups that determine chemistry. Formulas are insufficient (isomers prove it, so trap a and c are false), and 3D shape (wedge-dash, stereochemistry) is highly relevant (trap d false).'
+            explanation: 'The suite\'s thesis is that a structure — not a bare formula — encodes the connectivity and functional groups that determine chemistry. Formulas are insufficient (isomers prove it, so the formulas-suffice and identical-isomers traps are false), and 3D shape (wedge-dash, stereochemistry) is highly relevant (the shape-is-irrelevant trap is false).'
           }
         ]
       }
@@ -203,7 +203,7 @@ With molecular representations mastered, you are ready for the chemistry that bu
               'Only three-dimensional shape matters, never connectivity'
             ],
             correctAnswer: 1,
-            explanation: 'The central lesson is that one formula hides many isomers (e.g. C2H6O = ethanol or dimethyl ether), each with distinct functional groups and behavior, so the structure is essential. Formulas remain useful for computing DoU and atom inventory (so trap c overstates), and connectivity certainly matters (trap d false).'
+            explanation: 'The central lesson is that one formula hides many isomers (e.g. C2H6O = ethanol or dimethyl ether), each with distinct functional groups and behavior, so the structure is essential. Formulas remain useful for computing DoU and atom inventory (so the "never useful" trap overstates), and connectivity certainly matters (the shape-only trap is false).'
           }
         ]
       }

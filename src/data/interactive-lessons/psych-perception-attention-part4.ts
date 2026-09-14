@@ -60,7 +60,7 @@ Attention is the gateway to perception — you can only perceive what you attend
               'Selective attention working correctly — participants successfully filtered out irrelevant information'
             ],
             correctAnswer: 2,
-            explanation: 'This is the classic demonstration of INATTENTIONAL blindness — when attention is focused on a specific task (counting passes), we can fail to notice fully visible, salient stimuli (a gorilla!) that we would normally notice immediately. It\'s NOT change blindness (nothing changed — the gorilla was always there). Option D is tempting but wrong because the gorilla was not "irrelevant noise" — it was a gorilla walking through the middle of the scene for 9 seconds!'
+            explanation: 'This is the classic demonstration of INATTENTIONAL blindness — when attention is focused on a specific task (counting passes), we can fail to notice fully visible, salient stimuli (a gorilla!) that we would normally notice immediately. It\'s NOT change blindness (nothing changed — the gorilla was always there). The "selective attention working correctly" option is tempting but wrong because the gorilla was not "irrelevant noise" — it was a gorilla walking through the middle of the scene for 9 seconds!'
           }
         ]
       }

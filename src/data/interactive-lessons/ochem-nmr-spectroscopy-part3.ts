@@ -68,7 +68,7 @@ The lesson: integration delivers a **ratio**, you reduce it to small whole numbe
               'Taller peaks always represent more protons, regardless of width'
             ],
             correctAnswer: 1,
-            explanation: 'Integration is meaningful only as a ratio between signals; you reduce it to small whole numbers and match the total to the formula. Absolute area is not a direct proton count (option 1). Integration measures area, not shift (option 3), and it is *area*, not peak height, that scales with proton number — a broad short peak can integrate for more than a tall sharp one (option 4).'
+            explanation: 'Integration is meaningful only as a ratio between signals; you reduce it to small whole numbers and match the total to the formula. Absolute area is not a direct proton count. Integration measures area, not shift, and it is *area*, not peak height, that scales with proton number — a broad short peak can integrate for more than a tall sharp one.'
           }
         ]
       }
@@ -160,7 +160,7 @@ The outer lines of a septet are only $1/20$ the height of the center line, so a 
               'Because the three methyl protons split each other into a triplet'
             ],
             correctAnswer: 1,
-            explanation: 'The $n+1$ rule counts *neighbors*, not the protons in the signal: the $\\text{CH}_3$ sees the two $\\text{CH}_2$ protons, so $n=2$ gives a triplet. Option 1 commits the classic error of counting the methyl’s own three protons; bromine has no proton to couple (option 3); and equivalent protons do not split each other (option 4).'
+            explanation: 'The $n+1$ rule counts *neighbors*, not the protons in the signal: the $\\text{CH}_3$ sees the two $\\text{CH}_2$ protons, so $n=2$ gives a triplet. The quartet option commits the classic error of counting the methyl’s own three protons; bromine has no proton to couple; and equivalent protons do not split each other.'
           },
           {
             question: 'A signal integrating for 1 H appears as a septet ($1:6:15:20:15:6:1$). What structural fragment does this most strongly suggest?',
@@ -230,7 +230,7 @@ The *trans* > *cis* relationship across a double bond is especially useful: a $J
               'Free rotation about a single bond, since $7\\text{–}8\\ \\text{Hz}$ is typical there'
             ],
             correctAnswer: 1,
-            explanation: 'Across a double bond, trans (E) protons couple more strongly ($12\\text{–}18\\ \\text{Hz}$) than cis (Z) protons ($6\\text{–}12\\ \\text{Hz}$), so $J = 16\\ \\text{Hz}$ signals a trans alkene. Option 1 reverses the cis/trans magnitude relationship; alkynes and free-rotation couplings give much smaller or different $J$ values.'
+            explanation: 'Across a double bond, trans (E) protons couple more strongly ($12\\text{–}18\\ \\text{Hz}$) than cis (Z) protons ($6\\text{–}12\\ \\text{Hz}$), so $J = 16\\ \\text{Hz}$ signals a trans alkene. The cis (Z) option reverses the cis/trans magnitude relationship; alkynes and free-rotation couplings give much smaller or different $J$ values.'
           },
           {
             question: 'On a 300 MHz instrument a multiplet shows lines spaced 7 Hz apart. The sample is re-run on a 600 MHz instrument. What happens to the coupling constant $J$ and to the multiplet’s width in ppm?',

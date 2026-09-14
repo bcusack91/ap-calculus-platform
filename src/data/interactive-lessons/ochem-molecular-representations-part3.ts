@@ -47,7 +47,7 @@ A crucial discipline: constitutional isomers must differ in *connectivity*, not 
               'Identical structures drawn from different angles'
             ],
             correctAnswer: 0,
-            explanation: 'Constitutional isomers share a molecular formula but differ in the order atoms are bonded (connectivity). Option (d) describes the same molecule redrawn — not an isomer. Differing formulas (b, c) means the substances are not isomers of each other at all.'
+            explanation: 'Constitutional isomers share a molecular formula but differ in the order atoms are bonded (connectivity). "Identical structures drawn from different angles" describes the same molecule redrawn — not an isomer. Differing formulas means the substances are not isomers of each other at all.'
           },
           {
             question: 'Why do n-butane and isobutane, both C4H10, have different boiling points?',
@@ -58,7 +58,7 @@ A crucial discipline: constitutional isomers must differ in *connectivity*, not 
               'They actually have the same boiling point'
             ],
             correctAnswer: 1,
-            explanation: 'Same atoms, different connectivity → different shape → different dispersion forces → different boiling point. The branched isobutane is more compact and boils lower. Both have 4 carbons (trap a) and both are saturated alkanes (trap c), so those cannot be the reason.'
+            explanation: 'Same atoms, different connectivity → different shape → different dispersion forces → different boiling point. The branched isobutane is more compact and boils lower. Both have 4 carbons (the carbon-count trap) and both are saturated alkanes (the alkene trap), so those cannot be the reason.'
           },
           {
             question: 'A student draws a four-carbon zig-zag, then redraws it flipped left-to-right and claims it is a new isomer of butane. What is the error?',
@@ -181,7 +181,7 @@ Each reacts differently, smells different, and serves a different purpose. Conne
               'Differ only in three-dimensional arrangement'
             ],
             correctAnswer: 1,
-            explanation: 'Rearranging the same atoms can produce different functional groups (aldehyde vs. ketone here), and therefore different reactivity and properties. Isomers need not share a family (a) or a boiling point (c). Differing in 3D arrangement only (d) describes stereoisomers, not constitutional isomers.'
+            explanation: 'Rearranging the same atoms can produce different functional groups (aldehyde vs. ketone here), and therefore different reactivity and properties. Isomers need not share a family or a boiling point. Differing in 3D arrangement only describes stereoisomers, not constitutional isomers.'
           },
           {
             question: 'A chemistry exam gives you only the molecular formula C6H14 and asks which specific compound it represents. What is the correct response?',
@@ -192,7 +192,7 @@ Each reacts differently, smells different, and serves a different purpose. Conne
               'No compound has that formula'
             ],
             correctAnswer: 1,
-            explanation: 'C6H14 is a saturated hexane with 5 constitutional isomers, so the formula alone cannot single out a compound — you need a structure. Benzene is C6H6 (trap c), a very different, unsaturated molecule. The formula is perfectly valid (trap d).'
+            explanation: 'C6H14 is a saturated hexane with 5 constitutional isomers, so the formula alone cannot single out a compound — you need a structure. Benzene is C6H6 (the benzene trap), a very different, unsaturated molecule. The formula is perfectly valid, so "no compound has that formula" is wrong too.'
           }
         ]
       }

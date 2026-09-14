@@ -51,7 +51,7 @@ A second consequence of the polarity is physical: aldehydes and ketones are **po
               'The pi bond donates electron density onto the carbon atom'
             ],
             correctAnswer: 1,
-            explanation: 'Oxygen is much more electronegative than carbon and pulls the shared (especially pi) electrons toward itself. This leaves the carbon electron-poor (delta+) and therefore electrophilic. Option 1 reverses the electronegativities; the carbonyl carbon is sp2, not sp3; and the pi electrons are withdrawn, not donated onto carbon.'
+            explanation: 'Oxygen is much more electronegative than carbon and pulls the shared (especially pi) electrons toward itself. This leaves the carbon electron-poor (delta+) and therefore electrophilic. The "carbon is more electronegative" option reverses the electronegativities; the carbonyl carbon is sp2, not sp3; and the pi electrons are withdrawn, not donated onto carbon.'
           },
           {
             question: 'A compound has the structure CH3-CO-CH2CH3. Which statement is correct?',

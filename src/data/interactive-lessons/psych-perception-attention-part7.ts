@@ -60,7 +60,7 @@ This connects to:
               'Sound waves are converted to neural signals in the cochlea'
             ],
             correctAnswer: 1,
-            explanation: 'Color constancy perfectly demonstrates constructive perception. Your retina receives BLUE light reflected from the shirt (physical reality), but your brain COMPUTES that the shirt is white by factoring out the blue illumination. This is active construction — your brain creates a perception that differs from the raw sensory data to give you a more useful representation of the world. Options A, C, and D describe SENSATION (passive detection), not perception (active interpretation).'
+            explanation: 'Color constancy perfectly demonstrates constructive perception. Your retina receives BLUE light reflected from the shirt (physical reality), but your brain COMPUTES that the shirt is white by factoring out the blue illumination. This is active construction — your brain creates a perception that differs from the raw sensory data to give you a more useful representation of the world. The retina, pupil, and cochlea options describe SENSATION (passive detection), not perception (active interpretation).'
           },
           {
             question: 'An AP Psychology FRQ asks: "Explain how TWO concepts from perception and attention relate to eyewitness testimony reliability." Which pair would earn the MOST credit?',
@@ -199,7 +199,7 @@ This connects to:
               'People from carpentered environments are more susceptible to certain illusions'
             ],
             correctAnswer: 1,
-            explanation: 'Newborn preferential looking for faces is the strongest evidence for INNATE perceptual organization because: (1) it occurs within hours of birth, leaving minimal time for learning, and (2) it shows organized pattern preference (faces over scrambled), not just detection. Option A actually shows cultural VARIATION (learned component). Option C demonstrates expertise (learned). Option D explicitly shows environmental influence (learned). Only the newborn face preference data points strongly to innate organizational tendencies.'
+            explanation: 'Newborn preferential looking for faces is the strongest evidence for INNATE perceptual organization because: (1) it occurs within hours of birth, leaving minimal time for learning, and (2) it shows organized pattern preference (faces over scrambled), not just detection. The Müller-Lyer option actually shows cultural VARIATION (learned component). The radiologist option demonstrates expertise (learned). The carpentered-environment option explicitly shows environmental influence (learned). Only the newborn face preference data points strongly to innate organizational tendencies.'
           }
         ]
       }

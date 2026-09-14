@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Essential terms and definitions for Reasoning & Organization in Reading is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'The most frequent ways Reasoning & Organization in Reading is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
           },
           {
             label: 'Approaches for answering Reasoning & Organization in Reading questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'Guessing']
           }
         ],
         correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],

@@ -141,9 +141,9 @@ $$\\boxed{y - f(c) = -\\frac{1}{f'(c)}(x - c)}$$
           },
           {
             question: 'Find the equation of the tangent line to $y = x^3 - 4x$ at $x = 2$.',
-            options: ['$y = 8x - 16$', '$y = 8x - 8$', '$y = 8(x-2)$', 'Both A and C'],
-            correctAnswer: 3,
-            explanation: '$y(2) = 8-8 = 0$. $y\'(x) = 3x^2-4$, $y\'(2) = 12-4 = 8$. Tangent: $y - 0 = 8(x-2)$, i.e., $y = 8x - 16$. Both A and C are equivalent.'
+            options: ['$y = 8x - 16$', '$y = 8x - 8$', '$y = 8x + 16$', '$y = 12x - 24$'],
+            correctAnswer: 0,
+            explanation: '$y(2) = 8-8 = 0$. $y\'(x) = 3x^2-4$, $y\'(2) = 12-4 = 8$. Tangent: $y - 0 = 8(x-2)$, i.e., $y = 8x - 16$. Forgetting the $-4$ in $y\'$ gives slope $12$, not $8$.'
           },
           {
             question: 'For $f(x) = x^2 + \\frac{2}{x}$, at what $x > 0$ does $f$ have a horizontal tangent?',

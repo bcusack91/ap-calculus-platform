@@ -112,7 +112,7 @@ Four degrees is the classic fingerprint of an aromatic (benzene) ring: 3 double 
               'DoU = 1; nitrogen is subtracted like a halogen'
             ],
             correctAnswer: 0,
-            explanation: 'DoU = (2·4 + 2 + 1 − 9)/2 = (8 + 2 + 1 − 9)/2 = 2/2 = 1. Trivalent nitrogen ADDS 1 to the numerator (it lets the molecule hold one extra H per N). Ignoring it (b) or subtracting it (c, d) are the standard mistakes.'
+            explanation: 'DoU = (2·4 + 2 + 1 − 9)/2 = (8 + 2 + 1 − 9)/2 = 2/2 = 1. Trivalent nitrogen ADDS 1 to the numerator (it lets the molecule hold one extra H per N). Ignoring it or subtracting it are the standard mistakes.'
           }
         ]
       }
@@ -177,7 +177,7 @@ Notice that a **triple bond contributes 2** degrees (it is two $\\pi$ bonds on t
               'The oxygen contributes the 4 degrees'
             ],
             correctAnswer: 1,
-            explanation: 'DoU = 4 is the signature of a benzene ring (3 C=C + 1 ring). With an O also present, a likely candidate is something like acetophenone (a benzene ring plus a C=O would actually give 5 — so here the 4 points squarely at the aromatic ring with the remaining unsaturation accounted for). A saturated molecule has DoU 0 (a), and oxygen contributes 0 degrees (d).'
+            explanation: 'DoU = 4 is the signature of a benzene ring (3 C=C + 1 ring). With an O also present, a likely candidate is something like acetophenone (a benzene ring plus a C=O would actually give 5 — so here the 4 points squarely at the aromatic ring with the remaining unsaturation accounted for). A saturated molecule has DoU 0, and oxygen contributes 0 degrees.'
           }
         ]
       }
@@ -226,7 +226,7 @@ The degree of unsaturation is the bridge between a molecular formula and a struc
               'The molecule is fully saturated and acyclic'
             ],
             correctAnswer: 1,
-            explanation: 'DoU = (2·5 + 2 − 10)/2 = 1. One degree means one ring OR one double bond; if spectra rule out a C=C, the degree is satisfied by a ring such as cyclopentane. A triple bond would require 2 degrees (c), and DoU = 1 is incompatible with a fully saturated acyclic structure (d).'
+            explanation: 'DoU = (2·5 + 2 − 10)/2 = 1. One degree means one ring OR one double bond; if spectra rule out a C=C, the degree is satisfied by a ring such as cyclopentane. A triple bond would require 2 degrees, and DoU = 1 is incompatible with a fully saturated acyclic structure.'
           }
         ]
       }

@@ -82,7 +82,7 @@ This distinction is the single most tested concept in operon genetics (Part 6). 
               'Permanently alter the DNA sequence of all target genes'
             ],
             correctAnswer: 1,
-            explanation: 'A trans-acting factor is a diffusible protein, so losing it removes regulation at all of its binding sites genome-wide. The trap (option A) describes a cis mutation, which is limited to the physically linked gene — exactly the contrast being tested. Option D confuses regulation with mutation: a missing repressor changes expression, not the sequence of its targets.'
+            explanation: 'A trans-acting factor is a diffusible protein, so losing it removes regulation at all of its binding sites genome-wide. The trap (affecting only the one adjacent gene) describes a cis mutation, which is limited to the physically linked gene — exactly the contrast being tested. The "permanently alter the DNA sequence" option confuses regulation with mutation: a missing repressor changes expression, not the sequence of its targets.'
           },
           {
             question: 'Why is transcriptional control described as the most energetically efficient level of gene regulation?',
@@ -93,7 +93,7 @@ This distinction is the single most tested concept in operon genetics (Part 6). 
               'Transcription factors require no ATP to function'
             ],
             correctAnswer: 1,
-            explanation: 'If the mRNA is never made, none of the downstream costs (splicing, export, ribosomes, amino acids, later degradation) are incurred — that is the efficiency argument. Option A is a trap: transcriptional control is often slower than post-translational control (e.g., phosphorylating an existing protein acts in seconds), so "fastest" is wrong. Other levels can also silence expression, so option C overstates the case.'
+            explanation: 'If the mRNA is never made, none of the downstream costs (splicing, export, ribosomes, amino acids, later degradation) are incurred — that is the efficiency argument. The "fastest possible way" option is a trap: transcriptional control is often slower than post-translational control (e.g., phosphorylating an existing protein acts in seconds), so "fastest" is wrong. Other levels can also silence expression, so the "only level that can completely silence a gene" option overstates the case.'
           }
         ]
       }
@@ -167,7 +167,7 @@ Notice what this loop accomplishes: **the genome never changes**, yet the *outpu
               'Differ in the number of chromosomes they contain'
             ],
             correctAnswer: 1,
-            explanation: 'Differentiation arises from differential gene expression: the same genome, different genes switched on. Option A is the classic trap — cells do not gain or lose genes during normal differentiation; they regulate which ones are active. Option C confuses regulation with mutation, and option D is false (somatic cells of one organism have the same chromosome number).'
+            explanation: 'Differentiation arises from differential gene expression: the same genome, different genes switched on. The "carry different genes" option is the classic trap — cells do not gain or lose genes during normal differentiation; they regulate which ones are active. The mutated-DNA option confuses regulation with mutation, and the chromosome-number option is false (somatic cells of one organism have the same chromosome number).'
           },
           {
             question: 'Which pairing correctly matches a regulatory player to its category?',

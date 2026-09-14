@@ -35,13 +35,8 @@ export const calcabDerivExpLogPart2Data = {
           },
           {
             "question": "$\\frac{d}{dx}[\\ln(x^3)] = $",
-            "options": [
-              "$3/x$",
-              "$1/x^3$",
-              "$3x^2/x^3$",
-              "Both A and C"
-            ],
-            "correctAnswer": 3,
+            "options": ["$3/x$", "$1/x^3$", "$3x^2$", "$\\frac{1}{3x}$"],
+            "correctAnswer": 0,
             "explanation": "$\\frac{3x^2}{x^3} = \\frac{3}{x}$. Alternatively: $\\ln(x^3) = 3\\ln x$, so derivative is $3/x$."
           },
           {

@@ -341,7 +341,7 @@ is **positive** for counter-clockwise vertices and **negative** for clockwise ve
               'Preserves distances and maps the origin to itself'
             ],
             correctAnswer: 1,
-            explanation: 'Rotations preserve distances and have a fixed point too (the center), so option A fits rotations as well. Option C describes glide reflections and reflections both. Only reflections have an entire **line** of fixed points (the mirror line) AND reverse orientation AND preserve distance.'
+            explanation: 'Rotations preserve distances and have a fixed point too (the center), so the "at least one fixed point" option fits rotations as well. The "preserves angles and reverses orientation" option describes glide reflections and reflections both. Only reflections have an entire **line** of fixed points (the mirror line) AND reverse orientation AND preserve distance.'
           },
           {
             question: 'A transformation maps $(0,0) \\to (1,1)$, $(1,0) \\to (1,2)$, and $(0,1) \\to (0,1)$. Identify it:',

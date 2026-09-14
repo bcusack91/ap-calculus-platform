@@ -101,7 +101,7 @@ So about 58% of offspring will display at least one recessive trait.
               '$\\frac{1}{8}$'
             ],
             correctAnswer: 1,
-            explanation: 'AAbb requires AA (probability 1/4 from Aa × Aa) AND bb (probability 1/4 from Bb × Bb). These are independent, so multiply: 1/4 × 1/4 = 1/16. The trap 3/16 (option C) would be P(A_ bb) — the dominant PHENOTYPE for A combined with bb. Here the question demands the specific homozygous AA genotype (probability 1/4), not the 3/4 dominant phenotype.'
+            explanation: 'AAbb requires AA (probability 1/4 from Aa × Aa) AND bb (probability 1/4 from Bb × Bb). These are independent, so multiply: 1/4 × 1/4 = 1/16. The trap 3/16 would be P(A_ bb) — the dominant PHENOTYPE for A combined with bb. Here the question demands the specific homozygous AA genotype (probability 1/4), not the 3/4 dominant phenotype.'
           },
           {
             question: 'A couple are both carriers for cystic fibrosis (Cc × Cc, where cc is affected). They plan to have 3 children. What is the probability that AT LEAST ONE child is affected (cc)?',
@@ -112,7 +112,7 @@ So about 58% of offspring will display at least one recessive trait.
               '$3 \\times \\frac{1}{4} = \\frac{3}{4}$'
             ],
             correctAnswer: 2,
-            explanation: 'Use the complement: P(at least one affected) = 1 − P(no affected children). Each child has P(unaffected) = 3/4, and the three children are independent, so P(none affected) = $(3/4)^{3}$ = 27/64. Thus the answer is 1 − 27/64 = 37/64. Option D (3 × 1/4) is invalid: you cannot simply multiply or add a per-child probability by the number of children — that ignores the cases of two or three affected and can even exceed 1 in other setups.'
+            explanation: 'Use the complement: P(at least one affected) = 1 − P(no affected children). Each child has P(unaffected) = 3/4, and the three children are independent, so P(none affected) = $(3/4)^{3}$ = 27/64. Thus the answer is 1 − 27/64 = 37/64. The 3 × 1/4 option is invalid: you cannot simply multiply or add a per-child probability by the number of children — that ignores the cases of two or three affected and can even exceed 1 in other setups.'
           }
         ]
       }
@@ -176,7 +176,7 @@ So $P(\\text{exactly 2 of 3 affected}) = \\frac{9}{64} \\approx 0.14$.
               '$\\left(\\frac{3}{4}\\right)^4 = \\frac{81}{256}$'
             ],
             correctAnswer: 1,
-            explanation: 'This is binomial with p = 1/4 (albino), q = 3/4, n = 4, k = 1: P = C(4,1)$(1/4)^{1}(3/4)^{3}$ = 4 × (1/4) × (27/64) = 108/256 = 27/64. Option A forgets both the C(4,1) coefficient AND the $(3/4)^{3}$ term for the three unaffected children. Option D, $(3/4)^{4}$, is the probability that NONE of the four children is albino — a different question.'
+            explanation: 'This is binomial with p = 1/4 (albino), q = 3/4, n = 4, k = 1: P = C(4,1)$(1/4)^{1}(3/4)^{3}$ = 4 × (1/4) × (27/64) = 108/256 = 27/64. The bare 1/4 option forgets both the C(4,1) coefficient AND the $(3/4)^{3}$ term for the three unaffected children. The $(3/4)^{4}$ option is the probability that NONE of the four children is albino — a different question.'
           },
           {
             question: 'A geneticist computes the probability of "exactly 2 affected out of 3 children" and gets the same numeric answer whether she uses the binomial formula or lists every birth order by hand and adds them. Why must these two methods always agree?',
@@ -187,7 +187,7 @@ So $P(\\text{exactly 2 of 3 affected}) = \\frac{9}{64} \\approx 0.14$.
               'Listing orders double-counts, so it should give twice the binomial answer'
             ],
             correctAnswer: 1,
-            explanation: 'Each specific birth order with k affected and (n−k) unaffected has identical probability $p^{k}$ $q^{n-k}$ (product rule). The number of such orders is exactly C(n,k). Adding the equal probabilities of all those mutually exclusive orders (sum rule) gives C(n,k) × $p^{k}$ $q^{n-k}$ — which IS the binomial formula. So the two approaches are the same computation, just written differently. Option D is wrong: enumerating distinct orders does not double-count, since each order is a unique, mutually exclusive sequence.'
+            explanation: 'Each specific birth order with k affected and (n−k) unaffected has identical probability $p^{k}$ $q^{n-k}$ (product rule). The number of such orders is exactly C(n,k). Adding the equal probabilities of all those mutually exclusive orders (sum rule) gives C(n,k) × $p^{k}$ $q^{n-k}$ — which IS the binomial formula. So the two approaches are the same computation, just written differently. The double-counting option is wrong: enumerating distinct orders does not double-count, since each order is a unique, mutually exclusive sequence.'
           }
         ]
       }
@@ -246,7 +246,7 @@ $P(\\text{homozygous at A}) = \\frac{1}{2}\\times 1 = \\frac{1}{2}$
               '$1 - \\frac{9}{16} = \\frac{7}{16}$'
             ],
             correctAnswer: 1,
-            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. (Option D reaches the same 7/16 via the complement of "dominant for both," 1 − 9/16, confirming the answer — but option A is the trap that forgets to subtract the overlap.)'
+            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. (The complement option reaches the same 7/16 via the complement of "dominant for both," 1 − 9/16, confirming the answer — but the plain 1/4 + 1/4 sum is the trap that forgets to subtract the overlap.)'
           }
         ]
       }

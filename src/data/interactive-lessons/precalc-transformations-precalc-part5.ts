@@ -114,9 +114,9 @@ $$y = \\frac{L}{1 + e^{-k(x-x_0)}}$$
           },
           {
             question: 'Which function is both even AND has range $[0, \\infty)$?',
-            options: ['$y = x^3$', '$y = x^2$', '$y = |x|$', 'Both B and C'],
-            correctAnswer: 3,
-            explanation: '$y=x^2$ and $y=|x|$ are both even and have range $[0,\\infty)$.'
+            options: ['$y = x^3$', '$y = x^2$', '$y = -|x|$', '$y = x^2 - 1$'],
+            correctAnswer: 1,
+            explanation: '$y=x^2$ is even with range $[0,\\infty)$; $y=-|x|$ has range $(-\\infty,0]$ and $y=x^2-1$ has range $[-1,\\infty)$.'
           }
         ]
       }

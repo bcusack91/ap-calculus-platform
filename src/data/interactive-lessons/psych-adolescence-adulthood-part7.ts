@@ -61,7 +61,7 @@ The Developmental Psychology unit accounts for approximately 7-9% of the AP Psyc
               'Late adulthood: formal operations, integrity vs. despair, fluid intelligence increase'
             ],
             correctAnswer: 1,
-            explanation: 'All three concepts correctly apply to adolescence: (1) Personal fable = belief in personal uniqueness/invulnerability (Elkind\'s adolescent egocentrism), (2) Identity vs. role confusion = Erikson\'s adolescent psychosocial crisis, (3) Prefrontal cortex still developing = explains risk-taking and impulsive behavior. Option A is wrong because postconventional reasoning is rare even in adults, not typical of adolescence.'
+            explanation: 'All three concepts correctly apply to adolescence: (1) Personal fable = belief in personal uniqueness/invulnerability (Elkind\'s adolescent egocentrism), (2) Identity vs. role confusion = Erikson\'s adolescent psychosocial crisis, (3) Prefrontal cortex still developing = explains risk-taking and impulsive behavior. The postconventional-reasoning combination is wrong because postconventional reasoning is rare even in adults, not typical of adolescence.'
           }
         ]
       }

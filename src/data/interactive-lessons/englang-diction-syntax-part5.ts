@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Aspects of Diction & Syntax that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            options: ['Continuity', 'Change', 'Trend', 'Audience']
           },
           {
             label: 'How Diction & Syntax has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            options: ['Continuity', 'Change', 'Trend', 'Audience']
           },
           {
             label: 'The direction of change in Diction & Syntax over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            options: ['Trend', 'Continuity', 'Change', 'Audience']
           }
         ],
         correctAnswers: ['Continuity', 'Change', 'Trend'],

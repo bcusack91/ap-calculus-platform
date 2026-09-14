@@ -114,7 +114,7 @@ Every unaffected child of an *aa* parent is an obligate carrier (*Aa*), because 
               'X-linked dominant'
             ],
             correctAnswer: 1,
-            explanation: 'Appearing in every generation with no skipping, affected children always having an affected parent, and equal sex ratios are the hallmarks of autosomal dominant inheritance (the affected father is likely Aa, giving the ~1:1 split with an aa mother). Autosomal recessive (option A) is ruled out because the trait does not skip generations. X-linked recessive (option C) is ruled out by the equal sex ratio — it would show a strong male bias.'
+            explanation: 'Appearing in every generation with no skipping, affected children always having an affected parent, and equal sex ratios are the hallmarks of autosomal dominant inheritance (the affected father is likely Aa, giving the ~1:1 split with an aa mother). Autosomal recessive is ruled out because the trait does not skip generations. X-linked recessive is ruled out by the equal sex ratio — it would show a strong male bias.'
           },
           {
             question: 'A pedigree shows a trait that affects 7 males and only 1 female across three generations. The single affected female has an affected father. Several unaffected mothers each have affected sons. What is the most likely mode of inheritance?',
@@ -125,7 +125,7 @@ Every unaffected child of an *aa* parent is an obligate carrier (*Aa*), because 
               'Y-linked'
             ],
             correctAnswer: 2,
-            explanation: 'The strong male bias plus transmission through unaffected (carrier) mothers to affected sons is the classic signature of X-linked recessive inheritance. The one affected female fits too: she is $X^{a}$ $X^{a}$, which requires an affected father (confirmed) and a carrier/affected mother. Y-linked (option D) is wrong because a female is affected — Y-linked traits pass strictly father-to-son and never appear in females.'
+            explanation: 'The strong male bias plus transmission through unaffected (carrier) mothers to affected sons is the classic signature of X-linked recessive inheritance. The one affected female fits too: she is $X^{a}$ $X^{a}$, which requires an affected father (confirmed) and a carrier/affected mother. Y-linked is wrong because a female is affected — Y-linked traits pass strictly father-to-son and never appear in females.'
           }
         ]
       }
@@ -166,7 +166,7 @@ where *O* is the observed count and *E* the expected count for each class. A lar
               '$\\frac{3}{4}$'
             ],
             correctAnswer: 1,
-            explanation: 'The Aa × Aa cross gives 1/4 AA : 1/2 Aa : 1/4 aa. Because the daughter is known to be unaffected, the aa outcome is eliminated, and we condition on the remaining genotypes: P(Aa | unaffected) = (1/2) / (1/4 + 1/2) = 2/3. The trap answer 1/2 (option A) is the UNconditional probability of Aa among all offspring; it forgets to remove the impossible aa case once we know she is unaffected.'
+            explanation: 'The Aa × Aa cross gives 1/4 AA : 1/2 Aa : 1/4 aa. Because the daughter is known to be unaffected, the aa outcome is eliminated, and we condition on the remaining genotypes: P(Aa | unaffected) = (1/2) / (1/4 + 1/2) = 2/3. The trap answer 1/2 is the UNconditional probability of Aa among all offspring; it forgets to remove the impossible aa case once we know she is unaffected.'
           },
           {
             question: 'A father is affected by an X-linked recessive disorder $(X^{a} Y)$ and the mother is a non-carrier $(X^{A} X^{A})$. What is true of their children?',
@@ -177,7 +177,7 @@ where *O* is the observed count and *E* the expected count for each class. A lar
               'No children will be affected, but all daughters will be carriers'
             ],
             correctAnswer: 3,
-            explanation: 'The father passes $X^{a}$ to every daughter (making them all $X^{A}$ $X^{a}$ carriers) and his Y to every son. The mother contributes only $X^{A}$. So daughters are $X^{A}$ $X^{a}$ (unaffected carriers) and sons are $X^{A}$ Y (unaffected) — no child is affected. Option A is the common trap: sons get their single X from the MOTHER (who is $X^{A}$ $X^{A}$ here), not from the affected father, so they cannot inherit his $X^{a}$ allele.'
+            explanation: 'The father passes $X^{a}$ to every daughter (making them all $X^{A}$ $X^{a}$ carriers) and his Y to every son. The mother contributes only $X^{A}$. So daughters are $X^{A}$ $X^{a}$ (unaffected carriers) and sons are $X^{A}$ Y (unaffected) — no child is affected. The "all sons will be affected" option is the common trap: sons get their single X from the MOTHER (who is $X^{A}$ $X^{A}$ here), not from the affected father, so they cannot inherit his $X^{a}$ allele.'
           }
         ]
       }
@@ -230,7 +230,7 @@ Beyond the big three, AP pedigrees occasionally feature two less common modes. K
               'Y-linked'
             ],
             correctAnswer: 1,
-            explanation: 'An affected father passing the trait to ALL his daughters but NONE of his sons, with the trait in every generation, is the hallmark of X-linked dominant inheritance: he gives his trait-carrying X to every daughter and his Y to every son. X-linked recessive (option A) is ruled out because the trait does not skip and affected fathers do not typically produce all-affected daughters. Y-linked (option D) is impossible here because daughters are affected — Y-linked traits never appear in females.'
+            explanation: 'An affected father passing the trait to ALL his daughters but NONE of his sons, with the trait in every generation, is the hallmark of X-linked dominant inheritance: he gives his trait-carrying X to every daughter and his Y to every son. X-linked recessive is ruled out because the trait does not skip and affected fathers do not typically produce all-affected daughters. Y-linked is impossible here because daughters are affected — Y-linked traits never appear in females.'
           },
           {
             question: 'A trait is observed only in males across four generations, and every affected man\'s sons are ALL affected while his daughters are never affected. What is the inheritance pattern, and what is the key reasoning?',
@@ -241,7 +241,7 @@ Beyond the big three, AP pedigrees occasionally feature two less common modes. K
               'X-linked dominant, because all sons are affected'
             ],
             correctAnswer: 1,
-            explanation: 'Strict father-to-son transmission with zero affected females is the unique signature of Y-linked (holandric) inheritance — the Y chromosome is passed from father to every son and never to a daughter. Option A (X-linked recessive) is wrong because X-linked recessive traits CAN appear in females $(X^{a} X^{a})$ and are inherited through carrier mothers, not strictly father-to-son. The all-sons-affected, no-daughters pattern specifically rules in the Y chromosome.'
+            explanation: 'Strict father-to-son transmission with zero affected females is the unique signature of Y-linked (holandric) inheritance — the Y chromosome is passed from father to every son and never to a daughter. The X-linked recessive option is wrong because X-linked recessive traits CAN appear in females $(X^{a} X^{a})$ and are inherited through carrier mothers, not strictly father-to-son. The all-sons-affected, no-daughters pattern specifically rules in the Y chromosome.'
           }
         ]
       }

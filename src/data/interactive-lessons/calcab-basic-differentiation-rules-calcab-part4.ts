@@ -81,8 +81,8 @@ $$\\boxed{\\frac{d}{dx}[\\sec x] = \\sec x \\tan x \\qquad \\frac{d}{dx}[\\csc x
           },
           {
             question: 'Find $\\frac{d}{dx}\\frac{\\cos x}{x^2}$.',
-            options: ['$\\frac{-x\\sin x - 2\\cos x}{x^3}$', '$\\frac{-x^2\\sin x - 2x\\cos x}{x^4}$', '$\\frac{-\\sin x}{x^2}$', 'Both A and B'],
-            correctAnswer: 3,
+            options: ['$\\frac{-x\\sin x - 2\\cos x}{x^3}$', '$\\frac{-x\\sin x + 2\\cos x}{x^3}$', '$\\frac{-\\sin x}{x^2}$', '$\\frac{-\\sin x}{2x}$'],
+            correctAnswer: 0,
             explanation: 'Quotient Rule: $\\frac{(-\\sin x)(x^2) - (\\cos x)(2x)}{(x^2)^2} = \\frac{-x^2\\sin x - 2x\\cos x}{x^4}$. Factor $x$: $\\frac{-x\\sin x - 2\\cos x}{x^3}$.'
           }
         ]

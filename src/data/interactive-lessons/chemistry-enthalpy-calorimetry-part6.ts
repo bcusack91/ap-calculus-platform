@@ -221,7 +221,7 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
               '2C(s) + $3H_{2}(g)$ → $2CH_{3}(g)$'
             ],
             correctAnswer: 0,
-            explanation: 'A formation reaction must: (1) start with elements in standard states (C(s,graphite) and $H_{2}(g)$ ✓), (2) produce exactly 1 mol of compound (1 mol $C_{2}H_{6}$ ✓). Option B is the reverse, C uses atoms not molecules, D produces 2 mol.'
+            explanation: 'A formation reaction must: (1) start with elements in standard states (C(s,graphite) and $H_{2}(g)$ ✓), (2) produce exactly 1 mol of compound (1 mol $C_{2}H_{6}$ ✓). The $C_{2}H_{6}(g)$ → 2C(s) + $3H_{2}(g)$ equation is the reverse, the C(s) + 3H(g) equation uses atoms not molecules, and the $2CH_{3}(g)$ equation produces 2 mol.'
           },
           {
             question: 'For the reaction 2Al(s) + $Fe_{2}O_{3}(s)$ → $Al_{2}O_{3}(s)$ + 2Fe(s), given $\\Delta H°_f$: $Al_{2}O_{3}$ = −1675.7, $Fe_{2}O_{3}$ = −824.2, Al = 0, Fe = 0, $\\Delta H°_{\\text{rxn}}$ is:',

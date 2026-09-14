@@ -72,7 +72,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
               'The gene lacks a promoter'
             ],
             correctAnswer: 1,
-            explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. Option A is a classic trap — eukaryotic genes are NOT in operons. Option C misdefines activators (they are trans-acting diffusible proteins, not cis elements). Option D is excluded because the gene is described as having intact enhancers and being normally transcribable elsewhere.'
+            explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. The operon option is a classic trap — eukaryotic genes are NOT in operons. The cis-element option misdefines activators (they are trans-acting diffusible proteins, not cis elements). The missing-promoter option is excluded because the gene is described as having intact enhancers and being normally transcribable elsewhere.'
           },
           {
             question: 'How can a relatively small number of transcription factors generate thousands of distinct cell-type-specific gene-expression patterns in a human body?',
@@ -83,7 +83,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
               'By bundling related genes into operons unique to each cell type'
             ],
             correctAnswer: 1,
-            explanation: 'Combinatorial control is the answer: a modest toolkit of factors, used in different combinations, specifies an enormous number of expression states. Option A is the differentiation trap — all body cells share the same genes. Option C contradicts combinatorial logic (one factor typically regulates many genes). Option D wrongly invokes operons, which are prokaryotic.'
+            explanation: 'Combinatorial control is the answer: a modest toolkit of factors, used in different combinations, specifies an enormous number of expression states. The "different set of genes" option is the differentiation trap — all body cells share the same genes. The "exactly one gene" option contradicts combinatorial logic (one factor typically regulates many genes). The operon option wrongly invokes operons, which are prokaryotic.'
           },
           {
             question: 'An enhancer for a gene is located 20,000 base pairs upstream of that gene\'s promoter. How does an activator bound at this distant enhancer stimulate transcription at the promoter?',
@@ -94,7 +94,7 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
               'Distant enhancers cannot affect transcription and must be ignored'
             ],
             correctAnswer: 1,
-            explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the promoter; Mediator relays the signal to RNA polymerase II and the general transcription factors. Option A misdescribes the mechanism (activators do not slide thousands of bp). Option C invents enhancer transcription as the mechanism, and option D contradicts the defining property of enhancers — they act at a distance.'
+            explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the promoter; Mediator relays the signal to RNA polymerase II and the general transcription factors. The sliding option misdescribes the mechanism (activators do not slide thousands of bp). The enhancer-mRNA option invents enhancer transcription as the mechanism, and the "cannot affect transcription" option contradicts the defining property of enhancers — they act at a distance.'
           }
         ]
       }
@@ -173,7 +173,7 @@ The gene fires strongly **only** when **both activators are present and the repr
               'Point mutations rewrite the gene in each tissue'
             ],
             correctAnswer: 1,
-            explanation: 'Alternative splicing of one pre-mRNA explains how a single gene yields tissue-specific protein isoforms. Option A is the differentiation trap (all tissues carry the same gene). Option C invokes operons, which are prokaryotic. Option D confuses regulated splicing with mutation — the DNA sequence is unchanged across tissues.'
+            explanation: 'Alternative splicing of one pre-mRNA explains how a single gene yields tissue-specific protein isoforms. The "different copy of the gene" option is the differentiation trap (all tissues carry the same gene). The operon option invokes operons, which are prokaryotic. The point-mutation option confuses regulated splicing with mutation — the DNA sequence is unchanged across tissues.'
           },
           {
             question: 'Two genes are transcribed at exactly the same rate in a cell, yet gene A produces far more protein than gene B. No difference is found in their promoters or splicing. The best explanation is a difference in:',
@@ -184,7 +184,7 @@ The gene fires strongly **only** when **both activators are present and the repr
               'cAMP levels in the cell'
             ],
             correctAnswer: 1,
-            explanation: 'Equal transcription but unequal protein output points to post-transcriptional control of mRNA stability: a longer-lived transcript is translated more often. Option A invokes operators/operons (prokaryotic) inappropriately. Option C is irrelevant to per-mRNA output. Option D imports the bacterial cAMP/CAP system, which does not govern eukaryotic mRNA half-life.'
+            explanation: 'Equal transcription but unequal protein output points to post-transcriptional control of mRNA stability: a longer-lived transcript is translated more often. The operator-count option invokes operators/operons (prokaryotic) inappropriately. The chromosome-count option is irrelevant to per-mRNA output. The cAMP option imports the bacterial cAMP/CAP system, which does not govern eukaryotic mRNA half-life.'
           }
         ]
       }

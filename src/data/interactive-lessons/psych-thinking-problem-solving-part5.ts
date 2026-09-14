@@ -208,7 +208,7 @@ What is creativity, and how does it work? Creativity involves generating novel, 
               'Have students always work in brainstorming groups, since groups produce more creative ideas than individuals'
             ],
             correctAnswer: 2,
-            explanation: 'This combines multiple research findings: (1) Creative environment — a safe space where failure is acceptable encourages risk-taking. (2) Expertise — you need a knowledge base (convergent) to be creative. (3) Intrinsic motivation — nurturing internal interest is more effective than external rewards (competitive grades could trigger overjustification). Option A adds extrinsic pressure. Option B ignores the need for expertise. Option D contradicts research showing individuals often outperform groups in idea generation.'
+            explanation: 'This combines multiple research findings: (1) Creative environment — a safe space where failure is acceptable encourages risk-taking. (2) Expertise — you need a knowledge base (convergent) to be creative. (3) Intrinsic motivation — nurturing internal interest is more effective than external rewards (competitive grades could trigger overjustification). Competitive grading adds extrinsic pressure. Teaching only divergent thinking ignores the need for expertise. Always brainstorming in groups contradicts research showing individuals often outperform groups in idea generation.'
           }
         ]
       }

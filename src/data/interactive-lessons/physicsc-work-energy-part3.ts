@@ -116,12 +116,7 @@ This is a restoring force (like a spring with $k = 10$ N/m).
         questions: [
           {
                     "question": "Which is a conservative force?",
-                    "options": [
-                              "Gravity",
-                              "Friction",
-                              "Air resistance",
-                              "All of these"
-                    ],
+                    "options": ["Gravity", "Friction", "Air resistance", "A hand pushing a box"],
                     "correctAnswer": 0,
                     "explanation": "Gravity is conservative — work depends only on height change, not path."
           }

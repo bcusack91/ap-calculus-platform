@@ -95,7 +95,7 @@ export const physics2GeomOpticsPart4Data = {
               'Yes, but only if $d_i = -12$ means the image is 12 cm in front'
             ],
             correctAnswer: 0,
-            explanation: 'This IS possible for a concave mirror — it happens when $d_o < f$. From $m = -d_i/d_o$: $d_o = -d_i/m = -(-12)/0.4 = 30$ cm. Wait, that gives $d_o = 30 > f = 20$. Let me recheck: $1/d_i = 1/20 - 1/30 = 1/60$, $d_i = 60 \\neq -12$. The answer is actually B — the numbers are inconsistent!'
+            explanation: 'This IS possible for a concave mirror — it happens when $d_o < f$. From $m = -d_i/d_o$: $d_o = -d_i/m = -(-12)/0.4 = 30$ cm. Wait, that gives $d_o = 30 > f = 20$. Let me recheck: $1/d_i = 1/20 - 1/30 = 1/60$, $d_i = 60 \\neq -12$. The answer is actually "No — check if $d_o < f$" — the numbers are inconsistent!'
           },
           {
             question: 'A convex mirror has $R = -50$ cm. What is $f$?',
@@ -117,7 +117,7 @@ export const physics2GeomOpticsPart4Data = {
               'Concave mirror, $d_i < 0$, $m > 0$'
             ],
             correctAnswer: 2,
-            explanation: 'A convex mirror ALWAYS produces $d_i < 0$ (virtual) and $m > 0$ (upright). Getting $d_i > 0$ (real) with $m < 0$ (inverted) from a convex mirror is impossible. Options A (concave, object beyond $F$) and D (concave, object inside $F$) are both valid scenarios.'
+            explanation: 'A convex mirror ALWAYS produces $d_i < 0$ (virtual) and $m > 0$ (upright). Getting $d_i > 0$ (real) with $m < 0$ (inverted) from a convex mirror is impossible. The concave $d_i > 0$, $m < 0$ case (object beyond $F$) and the concave $d_i < 0$, $m > 0$ case (object inside $F$) are both valid scenarios.'
           }
         ]
       }

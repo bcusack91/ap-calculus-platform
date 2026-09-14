@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'Analyzing maps, graphs, and tables related to Diction & Syntax is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Making evidence-based claims about Diction & Syntax describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
           },
           {
             label: 'Using geographic thinking to analyze Diction & Syntax is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'Memorization']
           }
         ],
         correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],

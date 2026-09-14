@@ -91,7 +91,7 @@ A population stays in **Hardy-Weinberg equilibrium** (allele frequencies constan
               'Stabilizing selection reducing variation'
             ],
             correctAnswer: 1,
-            explanation: 'A catastrophic crash in population size that randomly reduces genetic diversity and shifts allele frequencies by CHANCE is the BOTTLENECK EFFECT, a form of genetic drift. Option A is the trap: the allele is explicitly NEUTRAL and its rise is by CHANCE, so there is no differential fitness — selection requires a fitness difference, which is absent here. Random ≠ adaptive.'
+            explanation: 'A catastrophic crash in population size that randomly reduces genetic diversity and shifts allele frequencies by CHANCE is the BOTTLENECK EFFECT, a form of genetic drift. The directional-selection option is the trap: the allele is explicitly NEUTRAL and its rise is by CHANCE, so there is no differential fitness — selection requires a fitness difference, which is absent here. Random ≠ adaptive.'
           },
           {
             question: 'A botanist notes that in a particular plant species, self-pollination (a form of inbreeding) has become very common. Over several generations, the proportion of heterozygotes drops sharply while homozygotes increase, yet the overall frequencies of the two alleles (p and q) stay the same. Which force is responsible?',
@@ -102,7 +102,7 @@ A population stays in **Hardy-Weinberg equilibrium** (allele frequencies constan
               'Mutation, which is creating new homozygous genotypes'
             ],
             correctAnswer: 1,
-            explanation: 'Inbreeding is NON-RANDOM MATING: it redistributes existing alleles into more homozygous genotypes (fewer heterozygotes) WITHOUT changing the underlying allele frequencies p and q. Option A is the trap: drift changes ALLELE frequencies by chance, but here the allele frequencies are explicitly UNCHANGED — only the genotype proportions shift, which is the defining signature of non-random mating.'
+            explanation: 'Inbreeding is NON-RANDOM MATING: it redistributes existing alleles into more homozygous genotypes (fewer heterozygotes) WITHOUT changing the underlying allele frequencies p and q. The genetic-drift option is the trap: drift changes ALLELE frequencies by chance, but here the allele frequencies are explicitly UNCHANGED — only the genotype proportions shift, which is the defining signature of non-random mating.'
           }
         ]
       }
@@ -211,7 +211,7 @@ $p_{new} = (0.80)(0.30) + (0.20)(0.90) = 0.24 + 0.18 = 0.42$
               'Coevolution between the two species'
             ],
             correctAnswer: 1,
-            explanation: 'Similar FUNCTION (efficient swimming) arising INDEPENDENTLY in distantly related lineages under similar selective pressures = ANALOGOUS structures from CONVERGENT evolution. Option A is the trap: homologous structures share a common ANATOMICAL ORIGIN (divergent evolution), but dolphin and shark body forms evolved separately from different ancestral structures — they are analogous, not homologous, and do not indicate close relatedness.'
+            explanation: 'Similar FUNCTION (efficient swimming) arising INDEPENDENTLY in distantly related lineages under similar selective pressures = ANALOGOUS structures from CONVERGENT evolution. The homologous-structures option is the trap: homologous structures share a common ANATOMICAL ORIGIN (divergent evolution), but dolphin and shark body forms evolved separately from different ancestral structures — they are analogous, not homologous, and do not indicate close relatedness.'
           },
           {
             question: 'A mainland frog population has allele frequencies p = 0.6 and q = 0.4. Five frogs colonize a new pond; by chance their combined genotypes contribute 4 D alleles and 6 d alleles to the new gene pool. What is the d allele frequency in the founding population, and what process does the change illustrate?',
@@ -222,7 +222,7 @@ $p_{new} = (0.80)(0.30) + (0.20)(0.90) = 0.24 + 0.18 = 0.42$
               'q = 0.6; gene flow introduced new d alleles'
             ],
             correctAnswer: 1,
-            explanation: 'Total alleles = 2N = 10; the d count is 6, so q = 6/10 = 0.6, up from the mainland 0.4 (Δq = +0.2) purely because of the chance composition of the 5 founders — the FOUNDER EFFECT, a form of genetic drift. Option C is the trap: nothing in the scenario indicates a fitness advantage for d, so this is RANDOM drift, not selection; also q = 0.6, not 0.5.'
+            explanation: 'Total alleles = 2N = 10; the d count is 6, so q = 6/10 = 0.6, up from the mainland 0.4 (Δq = +0.2) purely because of the chance composition of the 5 founders — the FOUNDER EFFECT, a form of genetic drift. The natural-selection (q = 0.5) option is the trap: nothing in the scenario indicates a fitness advantage for d, so this is RANDOM drift, not selection; also q = 0.6, not 0.5.'
           }
         ]
       }

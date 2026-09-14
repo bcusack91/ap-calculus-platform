@@ -182,8 +182,8 @@ A ball is launched at $v_0 = 80$ ft/s at $\\alpha = 45°$ from ground level ($h_
           },
           {
             question: 'Which pairs of launch angles give equal ranges (level ground)?',
-            options: ['$20°$ and $70°$', '$25°$ and $75°$', '$30°$ and $60°$', 'All of the above'],
-            correctAnswer: 3,
+            options: ['$20^\\circ$ and $70^\\circ$', '$25^\\circ$ and $75^\\circ$', '$30^\\circ$ and $50^\\circ$', '$40^\\circ$ and $60^\\circ$'],
+            correctAnswer: 0,
             explanation: 'Complementary angles ($\\alpha$ and $90° - \\alpha$) give equal range since $\\sin 2\\alpha = \\sin 2(90°-\\alpha)$.'
           }
         ]

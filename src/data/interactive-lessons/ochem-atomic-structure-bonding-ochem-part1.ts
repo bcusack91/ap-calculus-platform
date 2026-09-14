@@ -98,7 +98,7 @@ Reading this literally, carbon should form only **2 bonds** (one per unpaired el
               'The number of electrons the orbital can hold'
             ],
             correctAnswer: 1,
-            explanation: 'The wavefunction itself ($\\psi$) has no direct physical meaning, but its square ($\\psi^2$) gives the probability density — the relative likelihood of finding the electron at each point. The trap is the planetary-orbit picture (option 1): orbitals are probability clouds, not trajectories. This is exactly why we speak of overlap and density rather than colliding particles when bonds form.'
+            explanation: 'The wavefunction itself ($\\psi$) has no direct physical meaning, but its square ($\\psi^2$) gives the probability density — the relative likelihood of finding the electron at each point. The trap is the planetary-orbit picture: orbitals are probability clouds, not trajectories. This is exactly why we speak of overlap and density rather than colliding particles when bonds form.'
           },
           {
             question: 'How many valence electrons does a neutral carbon atom have, and in which shell do they reside?',
@@ -109,7 +109,7 @@ Reading this literally, carbon should form only **2 bonds** (one per unpaired el
               '4 valence electrons in the n = 1 shell'
             ],
             correctAnswer: 2,
-            explanation: 'Carbon is $1s^2\\,2s^2\\,2p^2$. The valence shell is the highest principal level, $n = 2$, containing $2s^2\\,2p^2$ = 4 electrons. The trap is option 1, which counts ALL 6 electrons; the $1s^2$ pair is core, not valence, and is buried too deep to participate in bonding.'
+            explanation: 'Carbon is $1s^2\\,2s^2\\,2p^2$. The valence shell is the highest principal level, $n = 2$, containing $2s^2\\,2p^2$ = 4 electrons. The trap is 6 valence electrons, which counts ALL 6 electrons; the $1s^2$ pair is core, not valence, and is buried too deep to participate in bonding.'
           }
         ]
       }
@@ -149,7 +149,7 @@ Carbon reaching an octet with four single bonds (as in $\\text{CH}_4$) shares $4
               'Five bonds would violate the Aufbau principle'
             ],
             correctAnswer: 1,
-            explanation: 'Carbon has exactly four valence orbitals ($2s$ + three $2p$), capping it at 8 valence electrons = 4 bonds. A fifth bond would require a 5th orbital that does not exist in the n = 2 shell. The trap (option 1) confuses bonding TYPE with bonding CAPACITY — the issue is orbital count, not ionic vs. covalent.'
+            explanation: 'Carbon has exactly four valence orbitals ($2s$ + three $2p$), capping it at 8 valence electrons = 4 bonds. A fifth bond would require a 5th orbital that does not exist in the n = 2 shell. The ionic-bonding trap confuses bonding TYPE with bonding CAPACITY — the issue is orbital count, not ionic vs. covalent.'
           },
           {
             question: 'Neutral nitrogen has 5 valence electrons. In a neutral, octet-satisfied molecule like ammonia ($\\text{NH}_3$), how many bonds and lone pairs does nitrogen carry?',
@@ -171,7 +171,7 @@ Carbon reaching an octet with four single bonds (as in $\\text{CH}_4$) shares $4
               'Chlorine obeys the Aufbau principle but fluorine does not'
             ],
             correctAnswer: 1,
-            explanation: 'Both are halogens with 7 valence electrons, but chlorine (n = 3) has energetically accessible 3d orbitals to expand into, whereas fluorine (n = 2) is strictly limited to the four 2s/2p orbitals. The trap (option 3) is false — both have 7 valence electrons; the real distinction is the row and the availability of d orbitals, the same reason C/N/O/F can never expand their octets.'
+            explanation: 'Both are halogens with 7 valence electrons, but chlorine (n = 3) has energetically accessible 3d orbitals to expand into, whereas fluorine (n = 2) is strictly limited to the four 2s/2p orbitals. The "more valence electrons" trap is false — both have 7 valence electrons; the real distinction is the row and the availability of d orbitals, the same reason C/N/O/F can never expand their octets.'
           }
         ]
       }
@@ -193,7 +193,7 @@ Carbon reaching an octet with four single bonds (as in $\\text{CH}_4$) shares $4
               'Carbon can only truly form two bonds, and methane is an exception'
             ],
             correctAnswer: 1,
-            explanation: 'The ground-state count predicts only 2 bonds, but methane demonstrably has 4 equivalent bonds. The resolution (developed in Part 3) is promotion of a 2s electron into the empty 2p, then hybridization into four equivalent $sp^3$ orbitals. The trap (option 3) contradicts experiment — all four C-H bonds in methane are identical in length and strength, which is precisely the evidence that hybridization, not the raw ground-state picture, governs bonding.'
+            explanation: 'The ground-state count predicts only 2 bonds, but methane demonstrably has 4 equivalent bonds. The resolution (developed in Part 3) is promotion of a 2s electron into the empty 2p, then hybridization into four equivalent $sp^3$ orbitals. The "two weaker C-H bonds" trap contradicts experiment — all four C-H bonds in methane are identical in length and strength, which is precisely the evidence that hybridization, not the raw ground-state picture, governs bonding.'
           },
           {
             question: 'An element has the ground-state configuration $1s^2\\,2s^2\\,2p^4$. How many valence electrons does it have, and how many covalent bonds will it most commonly form when neutral?',
@@ -204,7 +204,7 @@ Carbon reaching an octet with four single bonds (as in $\\text{CH}_4$) shares $4
               '6 valence electrons, forming 6 bonds'
             ],
             correctAnswer: 1,
-            explanation: 'This is oxygen: $2s^2\\,2p^4$ = 6 valence electrons. To complete its octet it needs 2 more shared electrons, so it forms 2 bonds and carries 2 lone pairs (2 x 2 + 4 = 8). The trap (option 4) assumes electrons = bonds, but bond count is set by the ELECTRON DEFICIT to reach 8, not by the total valence count.'
+            explanation: 'This is oxygen: $2s^2\\,2p^4$ = 6 valence electrons. To complete its octet it needs 2 more shared electrons, so it forms 2 bonds and carries 2 lone pairs (2 x 2 + 4 = 8). The "6 bonds" trap assumes electrons = bonds, but bond count is set by the ELECTRON DEFICIT to reach 8, not by the total valence count.'
           }
         ]
       }

@@ -140,7 +140,7 @@ More electronegative neighbor $\\rightarrow$ larger $\\delta$. **Multiple** with
               'The proton exchanges rapidly with solvent, averaging its shift to a low value'
             ],
             correctAnswer: 1,
-            explanation: 'The cylindrical $\\pi$ system of the triple bond circulates around the molecular axis and places the axial $\\equiv\\text{C-H}$ in a region where the induced field opposes $B_0$ — a shielding cone — pulling it upfield despite the electronegative $sp$ carbon. sp carbon is in fact highly electronegative (so option 1 is false), alkynes have two $\\pi$ bonds (option 3 false), and the acetylenic C–H does not exchange like an O–H (option 4 false).'
+            explanation: 'The cylindrical $\\pi$ system of the triple bond circulates around the molecular axis and places the axial $\\equiv\\text{C-H}$ in a region where the induced field opposes $B_0$ — a shielding cone — pulling it upfield despite the electronegative $sp$ carbon. sp carbon is in fact highly electronegative (so the least-electronegative option is false), alkynes have two $\\pi$ bonds (so the no-$\\pi$-electrons option is false), and the acetylenic C–H does not exchange like an O–H (so the solvent-exchange option is false).'
           },
           {
             question: 'Aromatic protons resonate downfield at $6.5\\text{–}8\\ \\text{ppm}$ primarily because of:',
@@ -199,7 +199,7 @@ Protons on oxygen and nitrogen behave differently from C–H protons in three di
               'Chlorine’s anisotropy shields the nearest protons, putting them upfield'
             ],
             correctAnswer: 1,
-            explanation: 'Inductive withdrawal by chlorine is short-range, so the $\\alpha$-$\\text{CH}_2$ is most deshielded ($\\sim 3.5$), the $\\beta$-$\\text{CH}_2$ less so ($\\sim 1.8$), and the $\\gamma$-$\\text{CH}_3$ is nearly a normal alkyl value ($\\sim 1.0$). The effect is neither uniform along the chain (option 1) nor reversed by a chlorine "anisotropy" that does not dominate here (option 4); the far methyl is the least, not most, deshielded.'
+            explanation: 'Inductive withdrawal by chlorine is short-range, so the $\\alpha$-$\\text{CH}_2$ is most deshielded ($\\sim 3.5$), the $\\beta$-$\\text{CH}_2$ less so ($\\sim 1.8$), and the $\\gamma$-$\\text{CH}_3$ is nearly a normal alkyl value ($\\sim 1.0$). The effect is neither uniform along the chain nor reversed by a chlorine "anisotropy" that does not dominate here; the far methyl is the least, not most, deshielded.'
           }
         ]
       }

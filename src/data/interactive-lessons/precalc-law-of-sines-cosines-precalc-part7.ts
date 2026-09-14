@@ -189,14 +189,9 @@ $B = 180° - 72° - 44.6° = 63.4°$.
         questions: [
           {
             question: 'A triangle has sides 10, 10, and 12. The angle opposite the side of length 12 is:',
-            options: [
-              '$\\arccos(\\frac{56}{200}) \\approx 73.7°$',
-              '$\\arccos(\\frac{-56}{200}) \\approx 106.3°$',
-              '$\\arccos(0.28) \\approx 73.7°$',
-              'Both A and C'
-            ],
-            correctAnswer: 3,
-            explanation: '$\\cos C = \\frac{100 + 100 - 144}{200} = \\frac{56}{200} = 0.28$. $C = \\arccos(0.28) \\approx 73.7°$. A and C are the same answer.'
+            options: ['$\\arcsin(0.28) \\approx 16.3^\\circ$', '$\\arccos(\\frac{-56}{200}) \\approx 106.3°$', '$\\arccos(0.28) \\approx 73.7°$', '$\\arccos(\\frac{144}{200}) \\approx 43.9^\\circ$'],
+            correctAnswer: 2,
+            explanation: '$\\cos C = \\frac{100 + 100 - 144}{200} = \\frac{56}{200} = 0.28$. $C = \\arccos(0.28) \\approx 73.7°$. Using arcsine instead of arccosine gives about $16.3^\\circ$.'
           },
           {
             question: 'Two sides of a parallelogram are 7 and 11 with an included angle of 60°. The longer diagonal is:',

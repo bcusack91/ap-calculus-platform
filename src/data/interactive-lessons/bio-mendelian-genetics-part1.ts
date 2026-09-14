@@ -104,7 +104,7 @@ Mendel did not know about chromosomes, but his laws are a direct consequence of 
               'It cannot be determined from this information'
             ],
             correctAnswer: 1,
-            explanation: 'The white parent is pp (recessive phenotype requires two recessive alleles), so it contributes only p gametes. For half the offspring to be white (pp), the purple parent must contribute p to half its gametes — meaning it is Pp. A PP parent (the trap in option A) would give only P gametes, producing 100% purple offspring, not the observed 50/50 split.'
+            explanation: 'The white parent is pp (recessive phenotype requires two recessive alleles), so it contributes only p gametes. For half the offspring to be white (pp), the purple parent must contribute p to half its gametes — meaning it is Pp. A PP parent (the homozygous-dominant trap) would give only P gametes, producing 100% purple offspring, not the observed 50/50 split.'
           },
           {
             question: 'A student claims that because tall (T) is dominant to short (t) in pea plants, most pea plants in a wild population must be tall. Why is this reasoning flawed?',
@@ -115,7 +115,7 @@ Mendel did not know about chromosomes, but his laws are a direct consequence of 
               'Phenotype frequency cannot be measured in wild populations'
             ],
             correctAnswer: 1,
-            explanation: 'Dominance is a relationship between alleles within an individual — the dominant allele masks the recessive one in heterozygotes. It carries no information about allele frequency. If the t allele happened to be far more common in the population, short plants could easily outnumber tall ones. Option A overcorrects: dominant alleles are not "always rarer" either — frequency is simply independent of dominance.'
+            explanation: 'Dominance is a relationship between alleles within an individual — the dominant allele masks the recessive one in heterozygotes. It carries no information about allele frequency. If the t allele happened to be far more common in the population, short plants could easily outnumber tall ones. The "always rarer" option overcorrects: dominant alleles are not "always rarer" either — frequency is simply independent of dominance.'
           }
         ]
       }
@@ -171,7 +171,7 @@ This gives the **phenotypic ratio 3 : 1** — exactly what Mendel counted.
               'Metaphase II, when chromosomes line up at the equator'
             ],
             correctAnswer: 1,
-            explanation: 'The R and r alleles sit at the same locus on a pair of homologous chromosomes. Those homologs separate at anaphase I, sending R to one pole and r to the other — this physical event IS the law of segregation. Anaphase II (the trap in option C) separates sister chromatids, which carry identical copies of the same allele, so it does not separate R from r.'
+            explanation: 'The R and r alleles sit at the same locus on a pair of homologous chromosomes. Those homologs separate at anaphase I, sending R to one pole and r to the other — this physical event IS the law of segregation. Anaphase II (the trap) separates sister chromatids, which carry identical copies of the same allele, so it does not separate R from r.'
           },
           {
             question: 'Mendel\'s F1 plants from a tall × short cross were ALL tall, yet short plants reappeared in the F2 generation. Which combination of laws best explains this disappearance and reappearance?',
@@ -182,7 +182,7 @@ This gives the **phenotypic ratio 3 : 1** — exactly what Mendel counted.
               'The short allele was destroyed in F1 and a new short allele arose in F2'
             ],
             correctAnswer: 1,
-            explanation: 'The F1 are all Tt: the recessive t allele is present but masked by dominance (law of dominance). When the F1 self-cross, segregation produces t-carrying gametes from both parents, which can unite to form tt offspring — restoring the short phenotype in roughly 1/4 of the F2. Options C and D describe blending and mutation, which Mendel\'s data specifically refuted: the allele was never destroyed, merely hidden.'
+            explanation: 'The F1 are all Tt: the recessive t allele is present but masked by dominance (law of dominance). When the F1 self-cross, segregation produces t-carrying gametes from both parents, which can unite to form tt offspring — restoring the short phenotype in roughly 1/4 of the F2. The blending option and the "allele was destroyed" option describe blending and mutation, which Mendel\'s data specifically refuted: the allele was never destroyed, merely hidden.'
           }
         ]
       }
@@ -230,7 +230,7 @@ That is **1 red : 2 pink : 1 white** — a 1:2:1 *phenotypic* ratio, the visual 
               'Red and white blended permanently, disproving Mendel'
             ],
             correctAnswer: 0,
-            explanation: 'The pink heterozygote and the 1:2:1 phenotypic ratio are the signature of incomplete dominance — each genotype produces a distinct phenotype, so phenotype ratio equals genotype ratio. Segregation is NOT violated: the $C^{R}$ and $C^{W}$ alleles still separated into gametes normally, which is exactly why the F2 genotypes appear in the Mendelian 1:2:1 proportions. Option D misreads this as permanent blending — but the red and white phenotypes REAPPEAR cleanly in the F2, which blending could never explain.'
+            explanation: 'The pink heterozygote and the 1:2:1 phenotypic ratio are the signature of incomplete dominance — each genotype produces a distinct phenotype, so phenotype ratio equals genotype ratio. Segregation is NOT violated: the $C^{R}$ and $C^{W}$ alleles still separated into gametes normally, which is exactly why the F2 genotypes appear in the Mendelian 1:2:1 proportions. The "blended permanently" option misreads this as permanent blending — but the red and white phenotypes REAPPEAR cleanly in the F2, which blending could never explain.'
           },
           {
             question: 'A diploid organism is heterozygous Aa. Considering the chromosomal basis of Mendel\'s laws, which statement correctly links the cellular event to the genetic outcome?',
@@ -241,7 +241,7 @@ That is **1 red : 2 pink : 1 white** — a 1:2:1 *phenotypic* ratio, the visual 
               'The A and a alleles separate during mitosis, not meiosis'
             ],
             correctAnswer: 1,
-            explanation: 'In a heterozygote, the two different alleles (A and a) sit at the same locus on a pair of HOMOLOGOUS chromosomes. Homologs separate at anaphase I of meiosis, distributing A and a to different gametes — this is the cellular embodiment of the law of segregation. Option A confuses homologs with sister chromatids: sister chromatids (separated at anaphase II) carry IDENTICAL copies of the same allele, so they cannot separate A from a.'
+            explanation: 'In a heterozygote, the two different alleles (A and a) sit at the same locus on a pair of HOMOLOGOUS chromosomes. Homologs separate at anaphase I of meiosis, distributing A and a to different gametes — this is the cellular embodiment of the law of segregation. The sister-chromatid option confuses homologs with sister chromatids: sister chromatids (separated at anaphase II) carry IDENTICAL copies of the same allele, so they cannot separate A from a.'
           }
         ]
       }

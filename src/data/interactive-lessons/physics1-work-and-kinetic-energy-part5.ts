@@ -131,7 +131,7 @@ $$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
               '1 kWh'
             ],
             correctAnswer: 2,
-            explanation: '$W = Pt = 1000 \\times 3600 = 3{,}600{,}000$ J $= 3.6$ MJ $= 1$ kWh. Both C and D are correct numerically, but 3,600,000 J is the answer in Joules.'
+            explanation: '$W = Pt = 1000 \\times 3600 = 3{,}600{,}000$ J $= 3.6$ MJ $= 1$ kWh. Both 3,600,000 J and 1 kWh are correct numerically, but 3,600,000 J is the answer in Joules.'
           }
         ]
       }
@@ -169,9 +169,9 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'A person climbs stairs. To double their power output, they should climb:',
-            options: ['Twice as high', 'In half the time', 'With twice the mass', 'All of these work'],
-            correctIndex: 3,
-            explanation: '$P = mgh/t$. Doubling $h$, halving $t$, or doubling $m$ each doubles $P$.'
+            options: ['Twice as high in the same time', 'Twice as high in twice the time', 'At the same height in twice the time', 'With half the mass in the same time'],
+            correctIndex: 0,
+            explanation: '$P = mgh/t$. Doubling $h$, halving $t$, or doubling $m$ each doubles $P$, but doubling $h$ and $t$ together leaves $P$ unchanged.'
           },
           {
             label: 'Unit of energy commonly used in electricity bills:',

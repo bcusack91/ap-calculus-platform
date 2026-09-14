@@ -113,7 +113,7 @@ $= \\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$
             question: 'Which integral gives an inverse trig result?',
             options: ['$\\int \\frac{x}{\\sqrt{4-x^2}}\\,dx$', '$\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$', '$\\int \\frac{2x}{4+x^2}\\,dx$', '$\\int \\frac{x^2}{1+x^2}\\,dx$'],
             correctAnswer: 1,
-            explanation: 'Only option B has a constant numerator with the $\\sqrt{a^2-x^2}$ form: $5\\arcsin(x/2) + C$. The others have $x$ in the numerator or need algebraic rewriting.'
+            explanation: 'Only $\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$ has a constant numerator with the $\\sqrt{a^2-x^2}$ form: $5\\arcsin(x/2) + C$. The others have $x$ in the numerator or need algebraic rewriting.'
           }
         ]
       }

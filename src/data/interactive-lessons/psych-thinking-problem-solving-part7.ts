@@ -194,7 +194,7 @@ export const psychThinkingPart7Data = {
               'A person estimates the population of a city too high because they were given a high anchor number'
             ],
             correctAnswer: 1,
-            explanation: 'This combines BOTH errors: (1) Representativeness heuristic — the description ("quiet, organized, detail-oriented") matches the PROTOTYPE of an accountant, leading to a probability judgment based on similarity. (2) Base rate neglect — teachers outnumber accountants 10:1, so statistically, even a "quiet, organized" person is more likely to be a teacher. But the vivid description overrides this statistical fact. This is exactly the structure of the original "Tom W." and "Linda" problems by Tversky and Kahneman. Option A = availability. Option C = sunk cost. Option D = anchoring.'
+            explanation: 'This combines BOTH errors: (1) Representativeness heuristic — the description ("quiet, organized, detail-oriented") matches the PROTOTYPE of an accountant, leading to a probability judgment based on similarity. (2) Base rate neglect — teachers outnumber accountants 10:1, so statistically, even a "quiet, organized" person is more likely to be a teacher. But the vivid description overrides this statistical fact. This is exactly the structure of the original "Tom W." and "Linda" problems by Tversky and Kahneman. Fear of flying after a crash movie = availability. Holding the failing stock = sunk cost. The high city estimate = anchoring.'
           }
         ]
       }

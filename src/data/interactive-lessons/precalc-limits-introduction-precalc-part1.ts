@@ -111,8 +111,8 @@ $$h(x) = |x|/x$$
           },
           {
             question: 'A limit can exist at $x=c$ even if:',
-            options: ['$f(c)$ is undefined', '$f(c) \\neq L$', 'Both A and B', 'Neither'],
-            correctAnswer: 2,
+            options: ['$f(c)$ is undefined at that point', 'The left and right limits differ', '$f$ is unbounded near $c$', '$f$ oscillates infinitely near $c$'],
+            correctAnswer: 0,
             explanation: 'The limit only cares about what $f$ does NEAR $c$, not AT $c$.'
           },
           {

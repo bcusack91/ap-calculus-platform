@@ -75,7 +75,7 @@ Consider two implications that trap students:
               'Differential reproductive success — the claim denies that faster lizards reproduce more'
             ],
             correctAnswer: 1,
-            explanation: 'The "learned during their lives" claim describes a non-heritable, acquired change (like Lamarckian inheritance). Natural selection requires that the advantageous trait be HERITABLE (postulate 2) so it can be passed to offspring. Option D is the trap: the scenario explicitly states faster lizards DO reproduce more, so differential reproductive success is satisfied, not violated — the flaw in the skeptic\'s claim is specifically about heritability.'
+            explanation: 'The "learned during their lives" claim describes a non-heritable, acquired change (like Lamarckian inheritance). Natural selection requires that the advantageous trait be HERITABLE (postulate 2) so it can be passed to offspring. The differential-reproductive-success option is the trap: the scenario explicitly states faster lizards DO reproduce more, so differential reproductive success is satisfied, not violated — the flaw in the skeptic\'s claim is specifically about heritability.'
           },
           {
             question: 'Two male peacocks live in the same population. Male X is larger, healthier, and lives 3 years longer than Male Y. However, females never choose Male X to mate with, so he fathers no chicks, while Male Y fathers 8 chicks. Which male has higher Darwinian fitness, and why?',
@@ -86,7 +86,7 @@ Consider two implications that trap students:
               'They have equal fitness because fitness depends only on health, not on reproduction'
             ],
             correctAnswer: 2,
-            explanation: 'Fitness is RELATIVE REPRODUCTIVE SUCCESS — the number of surviving, reproducing offspring contributed to the next generation. Male Y (8 chicks) vastly outscores Male X (0 chicks). Options A and B embody the classic trap of equating fitness with size, health, or longevity; those traits matter ONLY if they translate into offspring, which they did not for Male X.'
+            explanation: 'Fitness is RELATIVE REPRODUCTIVE SUCCESS — the number of surviving, reproducing offspring contributed to the next generation. Male Y (8 chicks) vastly outscores Male X (0 chicks). The two "Male X" options embody the classic trap of equating fitness with size, health, or longevity; those traits matter ONLY if they translate into offspring, which they did not for Male X.'
           }
         ]
       }
@@ -134,7 +134,7 @@ Evolution is supported by multiple independent lines of evidence that converge o
               'Sexual selection driving morphological divergence'
             ],
             correctAnswer: 1,
-            explanation: 'Same underlying bone structure with different functions = HOMOLOGOUS structures, the hallmark of DIVERGENT evolution from a common ancestor. Option A is the trap: analogous structures have the SAME function but DIFFERENT underlying anatomy (e.g., bird wing vs. insect wing) and indicate convergent, not common, ancestry — the opposite pattern from what is described.'
+            explanation: 'Same underlying bone structure with different functions = HOMOLOGOUS structures, the hallmark of DIVERGENT evolution from a common ancestor. The analogous-structures option is the trap: analogous structures have the SAME function but DIFFERENT underlying anatomy (e.g., bird wing vs. insect wing) and indicate convergent, not common, ancestry — the opposite pattern from what is described.'
           },
           {
             question: 'A patient takes antibiotics, and over the course of treatment the bacterial infection becomes resistant. Which statement correctly describes what happened, consistent with natural selection?',
@@ -145,7 +145,7 @@ Evolution is supported by multiple independent lines of evidence that converge o
               'The bacteria evolved resistance in order to ensure the survival of their species'
             ],
             correctAnswer: 2,
-            explanation: 'Variation (resistant mutants) exists BEFORE the antibiotic is applied; selection then favors those pre-existing variants, raising the resistance allele frequency. Options A and B are the Lamarckian traps (the drug "causes" or bacteria "develop" resistance on demand). Option D is the teleology trap — evolution has no goal or foresight and does not act "in order to" benefit the species.'
+            explanation: 'Variation (resistant mutants) exists BEFORE the antibiotic is applied; selection then favors those pre-existing variants, raising the resistance allele frequency. The "antibiotic caused the mutation" and "developed resistance during their lifetimes" options are the Lamarckian traps (the drug "causes" or bacteria "develop" resistance on demand). The "in order to ensure survival" option is the teleology trap — evolution has no goal or foresight and does not act "in order to" benefit the species.'
           }
         ]
       }
@@ -185,7 +185,7 @@ An individual giraffe does not stretch its neck and pass on a longer neck. Inste
               'The strongest snake in each generation passed its acquired hunting skills to its offspring'
             ],
             correctAnswer: 1,
-            explanation: 'Evolution is a change in heritable ALLELE FREQUENCIES in a POPULATION over GENERATIONS, driven by differential reproductive success — exactly what option B states. Option A confuses individual growth with evolution; option C uses goal-directed (teleological) language ("needed"); option D invokes inheritance of acquired skills (Lamarckism). All three are classic traps.'
+            explanation: 'Evolution is a change in heritable ALLELE FREQUENCIES in a POPULATION over GENERATIONS, driven by differential reproductive success — exactly what the venom-allele-frequency option states. The individual-snake option confuses individual growth with evolution; the "needed a way to subdue prey" option uses goal-directed (teleological) language ("needed"); the acquired-hunting-skills option invokes inheritance of acquired skills (Lamarckism). All three are classic traps.'
           },
           {
             question: 'A biologist measures the average wing length in a population of flies before and after a 20-generation experiment and finds it has increased. Before concluding that natural selection occurred, which condition is MOST essential to verify?',
@@ -196,7 +196,7 @@ An individual giraffe does not stretch its neck and pass on a longer neck. Inste
               'That every individual fly increased its own wing length over time'
             ],
             correctAnswer: 1,
-            explanation: 'Natural selection produces EVOLUTION only when the selected variation is HERITABLE (Darwin\'s second postulate). If long wings resulted purely from better larval nutrition (an environmental, non-heritable cause), the change would not be transmitted genetically and would not constitute evolution. Option D is the trap — individuals do not change their own wing length; the population mean shifts because of differential reproduction among genetically different individuals.'
+            explanation: 'Natural selection produces EVOLUTION only when the selected variation is HERITABLE (Darwin\'s second postulate). If long wings resulted purely from better larval nutrition (an environmental, non-heritable cause), the change would not be transmitted genetically and would not constitute evolution. The "every individual fly increased its own wing length" option is the trap — individuals do not change their own wing length; the population mean shifts because of differential reproduction among genetically different individuals.'
           }
         ]
       }

@@ -102,15 +102,15 @@ Use the exact term from this part.
         dropdowns: [
           {
             label: 'A recurring structure within Logical Fallacies is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
           },
           {
             label: 'A specific real-world example that illustrates Logical Fallacies describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'Footnote']
           },
           {
             label: 'Analyzing similarities and differences across examples of Logical Fallacies is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'Footnote']
           }
         ],
         correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],

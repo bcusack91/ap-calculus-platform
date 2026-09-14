@@ -78,9 +78,9 @@ At $x = 0$: $f'(0) = e^0(1+0) = 1$. At $x = -1$: $f'(-1) = e^{-1}(0) = 0$ (this 
           },
           {
             question: 'Find $\\frac{d}{dx}[(2x+1)(x^2-3)]$.',
-            options: ['$2(x^2-3) + (2x+1)(2x)$', '$6x^2 + 2x - 6$', '$2 \\cdot 2x$', 'Both A and B'],
-            correctAnswer: 3,
-            explanation: 'Product Rule: $2(x^2-3) + (2x+1)(2x) = 2x^2-6+4x^2+2x = 6x^2+2x-6$. Both the unsimplified and simplified forms are equivalent.'
+            options: ['$6x^2 - 2x - 6$', '$6x^2 + 2x - 6$', '$2 \\cdot 2x$', '$6x^2 + 2x - 3$'],
+            correctAnswer: 1,
+            explanation: 'Product Rule: $2(x^2-3) + (2x+1)(2x) = 2x^2-6+4x^2+2x = 6x^2+2x-6$. Multiplying the separate derivatives, $2 \\cdot 2x$, is not the Product Rule.'
           }
         ]
       }
@@ -129,8 +129,8 @@ $$f'(2)g(2) + f(2)g'(2) = (-1)(4) + (3)(5) = -4 + 15 = 11$$
           },
           {
             question: 'Find $\\frac{d}{dx}[\\sin x \\cos x]$.',
-            options: ['$\\cos^2 x - \\sin^2 x$', '$-\\sin x \\cos x$', '$\\cos(2x)$', 'Both A and C'],
-            correctAnswer: 3,
+            options: ['$\\sin^2 x - \\cos^2 x$', '$-\\sin x \\cos x$', '$\\cos(2x)$', '$\\sin(2x)$'],
+            correctAnswer: 2,
             explanation: '$\\cos x \\cdot \\cos x + \\sin x \\cdot (-\\sin x) = \\cos^2 x - \\sin^2 x = \\cos(2x)$ by the double-angle identity.'
           }
         ]

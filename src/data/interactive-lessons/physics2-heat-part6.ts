@@ -128,13 +128,8 @@ Water's high specific heat means oceans absorb enormous amounts of energy with s
           },
           {
             question: 'A thermos bottle reduces convective heat loss primarily through:',
-            options: [
-              'Its silvered walls',
-              'Its vacuum between double walls',
-              'Its sealed lid',
-              'Both B and C'
-            ],
-            correctAnswer: 3,
+            options: ['Its silvered walls', 'Its vacuum gap and its sealed lid', 'Its thick plastic outer case', 'Its dark-colored exterior'],
+            correctAnswer: 1,
             explanation: 'Convection requires a fluid medium. The vacuum eliminates convection in the walls, and the sealed lid prevents warm air from escaping out the top. The silvered walls reduce radiation, not convection.'
           },
           {

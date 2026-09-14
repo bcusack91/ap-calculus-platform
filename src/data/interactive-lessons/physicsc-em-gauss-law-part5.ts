@@ -82,7 +82,7 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A Gaussian \"pillbox\" surface is used for","options":["Planar symmetry","Spherical symmetry","Cylindrical symmetry","No symmetry"]},{"label":"The field of an infinite plane does NOT depend on","options":["Distance from the plane","Surface charge density","The permittivity constant","Any of these"]}],
+        dropdowns: [{"label":"A Gaussian \"pillbox\" surface is used for","options":["Planar symmetry","Spherical symmetry","Cylindrical symmetry","No symmetry"]},{"label":"The field of an infinite plane does NOT depend on","options":["Distance from the plane", "Surface charge density", "The permittivity constant", "Coulomb's constant $k$"]}],
         correctAnswers: ["Planar symmetry","Distance from the plane"],
         hint1: "A thin flat cylinder (pillbox) matches a plane.",
         hint2: "$E = \\sigma/(2\\epsilon_0)$: no $r$ in the formula.",

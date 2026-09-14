@@ -153,7 +153,7 @@ $$\\lim_{u \\to 0}\\frac{1-\\cos u}{u}=0 \\qquad \\lim_{u \\to 0}\\frac{e^u-1}{u
               'No such function exists'
             ],
             correctAnswer: 0,
-            explanation: 'Check: $\\frac{2x-3}{x+1} \\to 2$ as $x \\to \\infty$. As $x \\to -\\infty$, same: $\\frac{2x}{x} = 2$. This only gives one HA. Actually, functions like $\\frac{ax}{\\sqrt{x^2+b}}$ can give two different HAs. The key insight is that rational functions always have the same limit at $+\\infty$ and $-\\infty$, so we need a non-rational function for two different HAs. Among the options, option A gives $y=2$ only. The correct understanding is nuanced.'
+            explanation: 'Check: $\\frac{2x-3}{x+1} \\to 2$ as $x \\to \\infty$. As $x \\to -\\infty$, same: $\\frac{2x}{x} = 2$. This only gives one HA. Actually, functions like $\\frac{ax}{\\sqrt{x^2+b}}$ can give two different HAs. The key insight is that rational functions always have the same limit at $+\\infty$ and $-\\infty$, so we need a non-rational function for two different HAs. Among the options, $\\frac{2x-3}{x+1}$ gives $y=2$ only. The correct understanding is nuanced.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{2\\sin(x) + 3x^2}{x^2 + \\cos(x)}$.',
