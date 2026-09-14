@@ -102,7 +102,7 @@ The submerged fraction IS the specific gravity. Moved to oil ($SG = 0.8$), the s
           },
           {
             question: `A stone is held fully submerged, displacing $0.002\\;\\text{m}^3$ of water ($g = 10\\;\\text{m/s}^2$). If it is lowered twice as deep (still submerged), the buoyant force on it:`,
-            options: [`Doubles`, `Stays at $20\\;\\text{N}$`, `Halves`, `Drops to zero`],
+            options: [`Doubles to $40\\;\\text{N}$`, `Stays at $20\\;\\text{N}$`, `Halves to $10\\;\\text{N}$`, `Falls to exactly $0\\;\\text{N}$`],
             correctAnswer: 1,
             explanation: `$F_B = \\rho_{fluid}V_{sub}g = (1000)(0.002)(10) = 20\\;\\text{N}$, and it depends only on displaced volume and fluid density. Water is incompressible, so depth changes the surrounding pressure but not the buoyant force.`
           }

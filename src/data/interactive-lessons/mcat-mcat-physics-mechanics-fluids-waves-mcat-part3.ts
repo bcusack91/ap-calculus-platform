@@ -90,7 +90,7 @@ Approach, so the answer must exceed $600$ — the minus sign in the denominator 
           },
           {
             question: `An ambulance drives toward a stationary observer with its siren on. Compared with the emitted frequency, the observer hears:`,
-            options: [`A lower frequency, because the waves stretch out`, `A higher frequency, because wavefronts ahead of the source are compressed`, `The same frequency, but louder`, `A higher frequency, because the sound travels faster`],
+            options: [`A lower frequency, because the waves stretch out`, `A higher frequency, because the wavefronts ahead are compressed`, `The same frequency, but louder as the ambulance nears`, `A higher frequency, because the moving source makes the sound travel faster`],
             correctAnswer: 1,
             explanation: `The moving source chases its own wavefronts, shortening the wavelength ahead; with $v$ fixed by the air, $f = v/\\lambda$ rises. The speed of sound itself does not change — that distractor is the tested misconception.`
           },
@@ -102,7 +102,7 @@ Approach, so the answer must exceed $600$ — the minus sign in the denominator 
           },
           {
             question: `When a sound wave passes from air into water, the quantity that remains unchanged is its:`,
-            options: [`Wavelength`, `Frequency`, `Speed`, `Both speed and wavelength`],
+            options: [`Wavelength`, `Frequency`, `Wave speed`, `Both speed and wavelength`],
             correctAnswer: 1,
             explanation: `Frequency is set by the source and cannot change at a boundary (wavefronts would pile up). Sound speeds up in water, so $\\lambda = v/f$ stretches proportionally.`
           }

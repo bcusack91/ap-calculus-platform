@@ -63,7 +63,7 @@ A carotid ultrasound shows peak systolic velocity jumping from $60\\;\\text{cm/s
         questions: [
           {
             question: `Blood moves far more slowly through the capillaries than through the aorta primarily because:`,
-            options: [`Blood viscosity is higher in capillaries`, `Capillary blood pressure is higher`, `The TOTAL cross-sectional area of the capillary bed far exceeds the aorta's`, `Gravity opposes capillary flow`],
+            options: [`Blood viscosity is far higher inside the narrow capillaries`, `Capillary blood pressure is higher than aortic pressure`, `Their total cross-sectional area far exceeds the aorta's`, `Gravity opposes flow through the capillary beds`],
             correctAnswer: 2,
             explanation: `Continuity with the summed area of all parallel capillaries: $v = Q/A_{total}$, and $A_{total}$ is hundreds of times the aortic area. The single-narrow-tube intuition (narrow = fast) is exactly the trap this physiology defeats.`
           },
