@@ -75,7 +75,7 @@ When you see an underlined portion on the SAT, run through these checks:
       exercise: {
         questions: [
           {
-            question: 'The team of researchers <u>have</u> published their findings in a prestigious journal. \nWhich correction, if any, should be made?',
+            question: 'The team of researchers <u>have</u> published <u>their</u> findings in a prestigious journal. \nWhich correction, if any, should be made?',
             options: ['Change "have" to "has" but keep "their"', 'Change "their" to "its" but keep "have"', 'Change "have" to "has" and "their" to "its"', 'No change is needed to the verb or pronoun'],
             correctAnswer: 2,
             explanation: '"Team" is singular: "The team…has published its findings." Both the verb and the pronoun should be singular to match the collective noun.'

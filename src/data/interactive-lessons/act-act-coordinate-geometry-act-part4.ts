@@ -169,9 +169,9 @@ No — $37 > 36$ means $(1,5)$ is **outside** the circle.
         questions: [
           {
             question: 'After completing the square, $x^2 + y^2 + 2x - 14y + 25 = 0$ becomes $(x + 1)^2 + (y - 7)^2 = r^2$. What is $r$?',
-            options: ['$3$', '$5$', '$25$', '$\\sqrt{25}$'],
+            options: ['$3$', '$5$', '$25$', '$5\\sqrt{3}$'],
             correctAnswer: 1,
-            explanation: '$r^2 = -25 + 1 + 49 = 25$. So $r = 5$. Choices $5$ and $\\sqrt{25}$ are equivalent.'
+            explanation: '$r^2 = -25 + 1 + 49 = 25$. So $r = 5$. $5\\sqrt{3}$ moves the $25$ to the right side without changing its sign ($25 + 1 + 49 = 75$), and $25$ is $r^2$ rather than $r$.'
           },
           {
             question: 'Which point lies INSIDE the circle $x^2 + y^2 = 100$?',

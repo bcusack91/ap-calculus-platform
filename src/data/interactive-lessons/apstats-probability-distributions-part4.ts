@@ -57,9 +57,9 @@ A graph that plots each data value against its expected z-score if the data were
           },
           {
             question: 'The Central Limit Theorem says the sampling distribution is approximately Normal when:',
-            options: ['Only a Normal population matters; sample size does not', 'Only $n \\geq 30$ matters; population shape does not', 'Only the absence of outliers matters; $n$ does not', 'Normal population, large $n$, and no outliers all help'],
+            options: ['The population is strongly skewed and $n$ is small', 'The data in each individual sample look Normal', 'The population is large, whatever the sample size', '$n$ is large, whatever the population\'s shape'],
             correctAnswer: 3,
-            explanation: 'Normal population (always), large $n$ (CLT), and no outliers (for small $n$) all support using Normal methods.'
+            explanation: 'The CLT is about sample size: for large $n$ (often $n \\geq 30$), the sampling distribution of $\\bar{x}$ is approximately Normal whatever the population\'s shape. A Normal population makes it Normal for any $n$, but that is a separate fact, not the CLT. The population\'s size does not matter, and individual samples need not look Normal.'
           }
         ]
       }
