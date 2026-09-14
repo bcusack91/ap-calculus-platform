@@ -10,6 +10,7 @@ import { matchSubtopic } from './subtopic-map'
 import { CARS_PASSAGES, SECTION_PASSAGES } from '../mcat/passages'
 import type { MCATFigureSpec, MCATPassage } from '../mcat/types'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
+import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -380,7 +381,9 @@ function selectPassageQuestions(allQuestions: MCATDiagnosticQuestion[], question
   for (const group of shuffle(Array.from(groups.values()))) {
     if (selected.length >= questionCount) break
     if (selected.length + group.length > questionCount) continue
-    selected.push(...shuffle(group))
+    // Keep the passage's questions whole and in authored order; the final
+    // ordering (arrangeInPassageBlocks) sorts each block by authored index.
+    selected.push(...group)
   }
 
   return selected
@@ -959,8 +962,12 @@ function buildCarsSupplementQuestions(domainId: string, sourceSlug: string): MCA
 
   const questions: MCATDiagnosticQuestion[] = []
 
-  for (let i = 0; i < 160; i += 1) {
-    const ctx = contexts[i % contexts.length]
+  // One question per (context, variant). This used to loop 160 times over the
+  // same 20 combinations, producing identical questions under different ids:
+  // they slipped past the id-based "already seen" exclusion and could appear
+  // twice in one test.
+  for (let i = 0; i < contexts.length * 4; i += 1) {
+    const ctx = contexts[Math.floor(i / 4)]
     const variant = i % 4
 
     if (variant === 0) {
@@ -1479,6 +1486,28 @@ function buildFeedbackLoopSubBank(): Record<string, MCATDiagnosticQuestion[]> {
   return byDomain
 }
 
+/** Normalized question text, for spotting the same stem under different ids. */
+function questionStem(question: MCATDiagnosticQuestion): string {
+  return question.question.replace(/\s+/g, ' ').trim().toLowerCase()
+}
+
+/**
+ * Keep one standalone question per stem. Templated figure and feedback items
+ * reuse a stem across data sets, and a student reads two of them as the same
+ * question. Passage questions are exempt: a generic stem ("The author's
+ * primary purpose is…") under a different passage is a different question.
+ */
+function dedupeStandaloneByStem(questions: MCATDiagnosticQuestion[]): MCATDiagnosticQuestion[] {
+  const seen = new Set<string>()
+  return questions.filter((q) => {
+    if (q.passage) return true
+    const stem = questionStem(q)
+    if (seen.has(stem)) return false
+    seen.add(stem)
+    return true
+  })
+}
+
 function dedupeQuestions(questions: MCATDiagnosticQuestion[]): MCATDiagnosticQuestion[] {
   const byId = new Map<string, MCATDiagnosticQuestion>()
   questions.forEach((q) => {
@@ -1504,9 +1533,11 @@ export async function generateMCATDiagnosticTest(
   const questions: MCATDiagnosticQuestion[] = []
   const domainPools = new Map<string, MCATDiagnosticQuestion[]>()
 
+  // Pass 1: build every domain's full candidate pool.
+  const mergedByDomain = new Map<string, MCATDiagnosticQuestion[]>()
   for (const domain of DIAGNOSTIC_DOMAINS) {
     const questionsPerSlug = Math.max(Math.ceil((domain.questionCount + 8) / domain.slugs.length), 16)
-    let domainQuestions: MCATDiagnosticQuestion[] = []
+    const domainQuestions: MCATDiagnosticQuestion[] = []
 
     for (const slug of domain.slugs) {
       try {
@@ -1551,24 +1582,75 @@ export async function generateMCATDiagnosticTest(
       family: inferQuestionFamily(question),
       promptType: inferPromptType(question),
     }))
+    mergedByDomain.set(domain.id, merged)
+  }
 
-    const unseen = merged.filter((q) => !excludeQuestionIds.has(q.id))
-    const poolToSample = unseen.length >= domain.questionCount ? unseen : merged
-    domainPools.set(domain.id, poolToSample)
+  // Standalone question text the student has already seen, under any id.
+  // Id-based exclusion alone let the same templated stem return on the next
+  // attempt under a different id.
+  const seenStems = new Set(
+    [...mergedByDomain.values()]
+      .flat()
+      .filter((q) => !q.passage && excludeQuestionIds.has(q.id))
+      .map(questionStem),
+  )
+  // Standalone stems already placed in THIS test, across domains.
+  const usedStems = new Set<string>()
 
-    const selectedPassageQuestions = selectPassageQuestions(poolToSample, Math.min(domain.minPassageQuestions ?? 0, domain.questionCount))
-    const selectedPassageIds = new Set(selectedPassageQuestions.map((q) => q.id))
-    const nonSelectedQuestions = poolToSample.filter((q) => !selectedPassageIds.has(q.id))
+  // Pass 2: select each domain's questions.
+  for (const domain of DIAGNOSTIC_DOMAINS) {
+    // Shuffle before the stem dedupe so repeated attempts see different data
+    // sets for a templated stem, not always the first one.
+    const merged = dedupeStandaloneByStem(shuffle(mergedByDomain.get(domain.id) ?? []))
+    const fresh = merged.filter((q) => q.passage || !usedStems.has(questionStem(q)))
+    const unseen = fresh.filter(
+      (q) => !excludeQuestionIds.has(q.id) && (q.passage || !seenStems.has(questionStem(q))),
+    )
+    domainPools.set(domain.id, unseen.some((q) => !q.passage) ? unseen : fresh)
+
+    // Passage block: a passage whose whole window is unseen first, else any
+    // whole window (the student has seen them all). Filtering seen questions
+    // out of a window question by question would leave partial groups, and
+    // two half-passages could then fill one block.
+    const passageTarget = Math.min(domain.minPassageQuestions ?? 0, domain.questionCount)
+    const freshPassageQuestions = fresh.filter((q) => q.passage)
+    const partlySeenPassages = new Set(
+      freshPassageQuestions.filter((q) => excludeQuestionIds.has(q.id)).map((q) => q.passage!.id),
+    )
+    let selectedPassageQuestions = selectPassageQuestions(
+      freshPassageQuestions.filter((q) => !partlySeenPassages.has(q.passage!.id)),
+      passageTarget,
+    )
+    if (selectedPassageQuestions.length < passageTarget) {
+      selectedPassageQuestions = selectPassageQuestions(freshPassageQuestions, passageTarget)
+    }
+
+    // Standalone questions fill the rest. Passage questions are served only as
+    // whole blocks above, never as stray fill-ins: picking them one at a time
+    // left partial passages (2 of 4 questions) scattered through the test.
+    // Unseen first, topped up from already-seen questions when the unseen
+    // standalone pool runs short, so the test never comes up short.
     const remainingCount = domain.questionCount - selectedPassageQuestions.length
-    const selectedRemainder = selectQuestionsByDifficulty(nonSelectedQuestions, remainingCount, domain.difficultyMix)
+    const selectedRemainder = selectQuestionsByDifficulty(
+      unseen.filter((q) => !q.passage),
+      remainingCount,
+      domain.difficultyMix,
+    )
+    if (selectedRemainder.length < remainingCount) {
+      const takenIds = new Set(selectedRemainder.map((q) => q.id))
+      const takenStems = new Set(selectedRemainder.map(questionStem))
+      const topUp = fresh.filter((q) => !q.passage && !takenIds.has(q.id) && !takenStems.has(questionStem(q)))
+      selectedRemainder.push(...pickRandom(topUp, remainingCount - selectedRemainder.length))
+    }
 
-    domainQuestions = shuffle([...selectedPassageQuestions, ...selectedRemainder]).slice(0, domain.questionCount).map((question) => ({
+    const domainQuestions = [...selectedPassageQuestions, ...selectedRemainder].slice(0, domain.questionCount).map((question) => ({
       ...question,
       difficulty: inferQuestionDifficulty(question),
       family: inferQuestionFamily(question),
       promptType: inferPromptType(question),
     }))
 
+    for (const q of domainQuestions) if (!q.passage) usedStems.add(questionStem(q))
     questions.push(...domainQuestions)
   }
 
@@ -1594,7 +1676,10 @@ export async function generateMCATDiagnosticTest(
       const nonFigureCandidates = domainPool.filter(
         (candidate) =>
           (candidate.promptType ?? inferPromptType(candidate)) !== 'figure' &&
-          !usedInDomain.has(candidate.id),
+          // A lone passage question would be a partial passage block.
+          !candidate.passage &&
+          !usedInDomain.has(candidate.id) &&
+          !usedStems.has(questionStem(candidate)),
       )
 
       if (nonFigureCandidates.length === 0) continue
@@ -1604,6 +1689,8 @@ export async function generateMCATDiagnosticTest(
 
       usedInDomain.delete(question.id)
       usedInDomain.add(replacement.id)
+      usedStems.delete(questionStem(question))
+      usedStems.add(questionStem(replacement))
       selectedQuestions[index] = replacement
       excessFigureCount -= 1
     }
@@ -1628,16 +1715,21 @@ export async function generateMCATDiagnosticTest(
 
     for (const candidate of feedbackCandidates) {
       if (needed <= 0) break
+      // Two candidates can share a stem; never place the same question twice.
+      if (usedStems.has(questionStem(candidate))) continue
 
+      // Never swap out a passage question: that would shorten its passage
+      // block and leave an unrelated question in its place.
       let replaceIndex = selectedQuestions.findIndex(
         (question) =>
           question.domain === candidate.domain &&
+          !question.passage &&
           (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
       )
 
       if (replaceIndex < 0) {
         replaceIndex = selectedQuestions.findIndex(
-          (question) => (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
+          (question) => !question.passage && (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
         )
       }
 
@@ -1647,6 +1739,8 @@ export async function generateMCATDiagnosticTest(
       selectedQuestions[replaceIndex] = candidate
 
       usedIds.add(candidate.id)
+      usedStems.delete(questionStem(replaced))
+      usedStems.add(questionStem(candidate))
       selectedByDomain.get(replaced.domain)?.delete(replaced.id)
       selectedByDomain.get(candidate.domain)?.add(candidate.id)
 
@@ -1667,7 +1761,10 @@ export async function generateMCATDiagnosticTest(
   }
 
   return {
-    questions: shuffle(selectedQuestions),
+    // Shuffle whole units, never individual questions: each passage's
+    // questions stay one consecutive block in authored order, as on the real
+    // MCAT, while block and standalone positions still vary between tests.
+    questions: arrangeInPassageBlocks(selectedQuestions, shuffle),
     domains: DIAGNOSTIC_DOMAINS,
     totalQuestions: selectedQuestions.length,
     timeLimitMinutes: 55,

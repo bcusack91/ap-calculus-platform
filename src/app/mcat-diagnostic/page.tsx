@@ -16,6 +16,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import { MathText } from '@/components/MathText'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 
 const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
 
@@ -393,6 +394,10 @@ export default function MCATDiagnosticPage() {
       if (r.ok) {
         const d = await r.json()
         const data = d.diagnostic.testData as Awaited<ReturnType<typeof generateMCATDiagnosticTest>>
+        // Assignments frozen before passage blocks existed stored a scattered
+        // order; regroup so each passage's questions are consecutive. Scoring
+        // and the saved review both use this displayed order, so it's safe.
+        data.questions = arrangeInPassageBlocks(data.questions)
         // Option order still shuffles per student; the QUESTIONS are identical.
         data.questions.forEach((q) => {
           const s = shuffleOptions(q.options, q.correctAnswer, q.question)
@@ -432,6 +437,9 @@ export default function MCATDiagnosticPage() {
       const updatedSeen = Array.from(new Set([...seenQuestionIds, ...data.questions.map((q) => q.id)]))
       window.localStorage.setItem(MCAT_DIAGNOSTIC_SEEN_KEY, JSON.stringify(updatedSeen.slice(-4000)))
     }
+
+    // The generator already emits passage blocks; this is a cheap idempotent guard.
+    data.questions = arrangeInPassageBlocks(data.questions)
 
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -564,9 +572,17 @@ export default function MCATDiagnosticPage() {
   // Testing phase
   if (phase === 'testing' && testData) {
     const q = testData.questions[currentIndex]
+    // The passage stays beside EVERY question in its set, as on test day.
+    // (It used to hide when the previous question shared the passage, which
+    // only worked because the old shuffle rarely put two in a row.)
     const currentPassageId = q.passage?.id ?? null
-    const previousPassageId = currentIndex > 0 ? testData.questions[currentIndex - 1]?.passage?.id ?? null : null
-    const showPassage = !!q.passage && currentPassageId !== previousPassageId
+    const showPassage = !!q.passage
+    let blockStart = currentIndex
+    let blockEnd = currentIndex
+    if (currentPassageId) {
+      while (blockStart > 0 && testData.questions[blockStart - 1]?.passage?.id === currentPassageId) blockStart -= 1
+      while (blockEnd < testData.questions.length - 1 && testData.questions[blockEnd + 1]?.passage?.id === currentPassageId) blockEnd += 1
+    }
     const answeredCount = answers.filter(a => a !== null).length
 
     return (
@@ -616,7 +632,14 @@ export default function MCATDiagnosticPage() {
             <div className={showPassage && q.passage ? 'lg:grid lg:grid-cols-2 lg:gap-6 lg:items-start' : ''}>
             {showPassage && q.passage && (
               <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto dark:border-cyan-800 dark:bg-cyan-900/20">
-                <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">Passage Set</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">
+                  Passage Set
+                  {blockEnd > blockStart && (
+                    <span className="ml-2 normal-case tracking-normal font-medium">
+                      · Questions {blockStart + 1}–{blockEnd + 1} refer to this passage
+                    </span>
+                  )}
+                </p>
                 <h3 className="mt-1 text-lg font-bold text-gray-900 dark:text-white">{q.passage.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
                   {q.passage.body}
