@@ -7,9 +7,14 @@ import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { detectCloze, mathizeClozeAnswer } from '@/lib/cloze-utils'
 
+// `prose` sets its own text color (slate-700), which beats the parent's
+// text-foreground. In dark mode that left cloze sentences dark gray on dark
+// cards (1.85:1), so dark mode inverts the typography colors and uses the
+// near-white foreground token, matching the other flashcard text. Light mode
+// is unchanged.
 function InlineMarkdown({ text }: { text: string }) {
   return (
-    <span className="prose prose-purple max-w-none inline [&_p]:inline [&_p]:m-0">
+    <span className="prose prose-purple dark:prose-invert dark:text-foreground max-w-none inline [&_p]:inline [&_p]:m-0">
       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
         {escapeCurrencyMath(formatFlashcardContent(text))}
       </ReactMarkdown>
@@ -37,7 +42,7 @@ export function ClozeText({ text, revealed }: { text: string; revealed: boolean 
         }
         if (revealed) {
           return (
-            <span key={index} className="font-bold text-green-700 bg-green-100 px-2 py-1 rounded">
+            <span key={index} className="font-bold text-green-700 bg-green-100 dark:text-green-200 dark:bg-green-900/50 px-2 py-1 rounded">
               <InlineMarkdown text={mathizeClozeAnswer(part.text)} />
             </span>
           )

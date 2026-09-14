@@ -235,9 +235,9 @@ export default function FlashcardStudyPage() {
                     }}
                   >
                     <div className="border-2 border-green-300 dark:border-green-700 rounded-lg p-8 bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-950/40 dark:to-teal-950/40 min-h-[300px] flex flex-col justify-center">
-                      <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
+                      <div className="text-sm text-green-900 dark:text-green-300 font-semibold mb-4">ANSWER</div>
                       {isClozeCard && (
-                        <div className="text-base text-foreground leading-relaxed mb-4 pb-4 border-b border-green-200">
+                        <div className="text-base text-foreground leading-relaxed mb-4 pb-4 border-b border-green-200 dark:border-green-800">
                           <ClozeText text={currentCard.front} revealed={true} />
                         </div>
                       )}
@@ -266,7 +266,7 @@ export default function FlashcardStudyPage() {
                     </button>
                   ) : (
                     <div className="p-4 bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-                      <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
+                      <div className="text-sm text-yellow-900 dark:text-yellow-200 font-semibold mb-2">💡 HINT</div>
                       <div className="text-sm prose dark:prose-invert prose-yellow max-w-none text-foreground">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(currentCard.hint)}
