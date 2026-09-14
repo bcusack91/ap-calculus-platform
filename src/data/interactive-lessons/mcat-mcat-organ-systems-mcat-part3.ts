@@ -79,10 +79,10 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
             explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → $B_{12}$ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed mainly in the duodenum, not the ileum; most macronutrient absorption occurs in the jejunum; and the ileum does not absorb all vitamins.`
           },
           {
-            question: `A patient takes a proton-pump inhibitor that strongly suppresses parietal-cell HCl secretion. By negative feedback, blood levels of which hormone would RISE, and what downstream effect is impaired?`,
-            options: [`Gastrin rises; pepsinogen activation is impaired by low acid`, `Secretin rises; pancreatic bicarbonate secretion is impaired`, `CCK rises; gallbladder contraction and bile release are impaired`, `Gastrin falls; gastric acid secretion increases in compensation`],
+            question: `A patient takes a proton-pump inhibitor that strongly suppresses parietal-cell HCl secretion. Which hormone level rises, and which digestive process does the drug impair?`,
+            options: [`Gastrin rises; conversion of pepsinogen to pepsin is impaired`, `Somatostatin rises; pancreatic lipase secretion is impaired`, `Secretin rises; bile-salt emulsification of fat is impaired`, `Gastrin falls; parietal-cell intrinsic factor secretion is impaired`],
             correctAnswer: 0,
-            explanation: `Acid normally suppresses gastrin (negative feedback). Blocking acid removes that inhibition, so G cells release MORE gastrin (hypergastrinemia). Low gastric acid impairs pepsin activation (pepsinogen needs acid) and reduces nonheme iron and $B_{12}$ availability. Secretin and CCK respond to duodenal acid/fat, not directly to parietal-cell blockade; a falling gastrin reverses the feedback logic.`
+            explanation: `Acid normally suppresses gastrin, partly by stimulating somatostatin release from D cells. Blocking acid removes that brake: somatostatin FALLS and G cells release MORE gastrin (hypergastrinemia), so a falling gastrin reverses the feedback logic. The drug's low gastric acid impairs conversion of pepsinogen to active pepsin, which needs an acidic pH. Less acid reaches the duodenum, so secretin falls rather than rises. Pancreatic lipase and bile-salt emulsification depend on CCK and the gallbladder, not on gastric acid, and PPIs do not block intrinsic factor secretion.`
           }
         ]
       }

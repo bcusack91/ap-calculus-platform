@@ -52,7 +52,7 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
             explanation: `Oxaloacetate is pulled toward phosphoenolpyruvate (via PEPCK) for glucose synthesis. With OAA scarce, citrate synthase cannot condense the incoming acetyl-CoA, which is instead diverted into acetoacetate and beta-hydroxybutyrate.`
           },
           {
-            question: `A patient's serum has a markedly elevated NADH/NAD$^+$ ratio after heavy ethanol use. The ketone body profile will shift toward:`,
+            question: `After heavy ethanol use, a patient's hepatocytes have a markedly elevated NADH/NAD$^+$ ratio. The ketone body profile will shift toward:`,
             options: [`Acetone, which nitroprusside dipsticks detect only weakly`, `Beta-hydroxybutyrate, which dipsticks may underestimate`, `Acetoacetate, raising the measured dipstick ketone level`, `Acetyl-CoA, which appears directly in serum`],
             correctAnswer: 1,
             explanation: `Beta-hydroxybutyrate dehydrogenase equilibrates the two ketoacids with the NADH/NAD$^+$ ratio: high NADH pushes acetoacetate toward beta-hydroxybutyrate. Nitroprusside reagents react with acetoacetate (and weakly acetone), so true ketosis can be masked. Acetyl-CoA never circulates free in serum.`

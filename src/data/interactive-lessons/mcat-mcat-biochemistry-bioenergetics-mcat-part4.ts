@@ -82,10 +82,10 @@ Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NAD
             explanation: `Malate oxidation generates matrix NADH (enters at Complex I; ~2.5 ATP per pair of electrons), while succinate reduces FAD at Complex II (~1.5). Fewer protons pumped per electron pair = less ATP per oxygen atom consumed = lower P/O ratio.`
           },
           {
-            question: `During early fasting, glucagon signaling inactivates liver PDH. The metabolic purpose is to:`,
+            question: `During fasting, liver PDH is largely switched off as PDH kinase is induced and PDH's own products, acetyl-CoA and NADH, build up. The metabolic purpose is to:`,
             options: [`Accelerate glucose oxidation in the liver`, `Preserve pyruvate carbons for gluconeogenesis`, `Divert pyruvate into hepatic fatty acid synthesis`, `Block fatty acid oxidation in the liver`],
             correctAnswer: 1,
-            explanation: `Acetyl-CoA carbons cannot return to glucose (PDH is irreversible). Switching PDH off routes pyruvate, lactate, and alanine toward oxaloacetate and gluconeogenesis, while the liver burns fatty acids for its own ATP — the essence of fasting fuel logic.`
+            explanation: `The fasting hormonal state acts on PDH only indirectly: it induces PDH kinase (PDK4), and fatty-acid oxidation supplies acetyl-CoA and NADH that further inhibit the complex. Acetyl-CoA carbons cannot return to glucose (PDH is irreversible). Switching PDH off routes pyruvate, lactate, and alanine toward oxaloacetate and gluconeogenesis, while the liver burns fatty acids for its own ATP — the essence of fasting fuel logic.`
           }
         ]
       }

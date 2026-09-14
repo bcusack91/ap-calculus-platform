@@ -90,10 +90,10 @@ The universal strategy: place the lesion ON THE CHAIN — neuron → ACh release
             explanation: `The skeletal response depends on exposure PATTERN: continuous elevation keeps osteoclast-driven resorption switched on (serum calcium defended at bone's expense), while short pulses favor the anabolic osteoblast response before resorption ramps up. PTH receptors are on osteoblasts either way, so an osteoclast-only injected form is false; the renal and intestinal actions occur in both settings, so a kidney-versus-intestine split fails; and calcitonin OPPOSES resorption rather than causing it.`
           },
           {
-            question: `In an isolated-muscle experiment, a drug produces these results: single twitches have normal amplitude, but between closely spaced stimuli the force never returns to baseline, and relaxation after a tetanus takes minutes. The drug most likely inhibits:`,
-            options: [`Acetylcholine release at the motor terminal`, `Voltage-gated sodium channels in the sarcolemma`, `The SERCA pump of the sarcoplasmic reticulum`, `The ryanodine receptor calcium-release channel`],
-            correctAnswer: 2,
-            explanation: `Normal twitch generation shows the entire excitation-release-contraction chain is intact; the selective defect is in RELAXATION, which depends on SERCA pumping calcium back into the SR. Blocking ACh release or sodium channels would abolish or shrink the twitch itself, and blocking ryanodine receptors would prevent calcium release — weak or absent contraction, the opposite finding.`
+            question: `Compared with a motor unit in the quadriceps, a motor unit in a hand muscle that controls precise finger movements has:`,
+            options: [`Larger individual fibers, so each unit's twitch is stronger and steadier`, `Only fast glycolytic fibers, so its force can be changed very quickly`, `Several motor neurons per fiber, so each fiber's force is finely graded`, `Fewer muscle fibers, so each added unit raises the force only slightly`],
+            correctAnswer: 3,
+            explanation: `A motor unit is one motor neuron plus every fiber it innervates. Precision muscles have small units, so recruiting one more adds only a small force increment and force can be graded finely; power muscles like the quadriceps have huge units that add large increments. Fiber size is not what grades force finely; the number of fibers per unit is, and larger, stronger twitches would make each step coarser, not finer. Small units are typically slow, fatigue-resistant fibers rather than fast glycolytic ones, and each skeletal fiber is innervated by a single motor neuron.`
           }
         ]
       }

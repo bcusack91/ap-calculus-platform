@@ -76,10 +76,10 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
             explanation: `Venous pooling cuts venous return → preload → SV → MAP. Carotid/aortic baroreceptors stretch LESS and fire LESS, disinhibiting sympathetic output and withdrawing (not raising) vagal tone: HR and contractility rise and arterioles/veins constrict, restoring pressure within a couple of beats. Renin/volume mechanisms act over hours, not seconds — the classic short-term vs long-term control distinction.`
           },
           {
-            question: `An experiment increases venous return to an isolated heart while keeping hormones and nerves constant. Stroke volume rises. The best explanation is:`,
-            options: [`Frank–Starling: greater end-diastolic stretch`, `Increased sympathetic stimulation of contractility`, `Decreased afterload from lower aortic pressure`, `An increase in intrinsic heart rate`],
+            question: `An experiment increases venous return to an isolated heart with no nerve supply, and stroke volume rises within a few beats. Which mechanism best explains the rise?`,
+            options: [`Filling stretches sarcomeres toward optimal overlap, adding cross-bridges`, `A larger ventricle has lower wall stress, so the afterload it faces falls`, `Atrial stretch speeds SA-node firing, so each beat ejects more blood`, `Stretch opens more fast sodium channels, enlarging each action potential`],
             correctAnswer: 0,
-            explanation: `With nerves and hormones fixed, the only changed input is preload. The Frank–Starling mechanism is intrinsic to the myocardium: more filling stretches sarcomeres toward optimal overlap (and increases calcium sensitivity), producing a stronger contraction and larger SV — no autonomic input required.`
+            explanation: `The Frank–Starling mechanism is intrinsic to the myocardium: more filling stretches sarcomeres toward optimal actin–myosin overlap (and raises troponin calcium sensitivity), so more cross-bridges form and the contraction is stronger — no autonomic input required. By the law of Laplace a larger ventricle has HIGHER wall stress, so afterload rises rather than falls. A faster rate shortens filling time and does not raise stroke volume. The action potential is all-or-none, so stretch does not strengthen contraction by enlarging it; the extra force comes from the sarcomeres themselves.`
           }
         ]
       }

@@ -54,7 +54,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'mos-ent-2b',
-    question: 'During inspiration, the diaphragm contracts and moves downward. This causes intrathoracic pressure to:',
+    question: 'During inspiration, the diaphragm contracts and moves downward. This causes alveolar (intrapulmonary) pressure to:',
     options: [
       'Increase above atmospheric pressure, pushing air out.',
       'Decrease below atmospheric pressure, drawing air in.',
@@ -62,7 +62,7 @@ const questions: EntranceQuizQuestion[] = [
       'Rise briefly, then fall sharply during the same breath.'
     ],
     correctIndex: 1,
-    explanation: 'Diaphragm contraction increases thoracic volume, and by Boyle\'s Law ($P_{1}V_{1}$ = $P_{2}V_{2}$) the added volume drops intrathoracic pressure below atmospheric. That gradient drives bulk flow of air into the lungs. Pressure rises above atmospheric only during expiration, and if it never changed there would be no gradient and no airflow at all.',
+    explanation: 'Diaphragm contraction enlarges the thorax and makes intrapleural pressure more negative, so the lungs expand. By Boyle\'s Law ($P_{1}V_{1}$ = $P_{2}V_{2}$) the larger lung volume drops alveolar pressure below atmospheric, and that gradient drives bulk flow of air into the lungs. Alveolar pressure rises above atmospheric only during expiration, and if it never changed there would be no gradient and no airflow at all.',
     partNumber: 2,
     partTitle: 'Respiratory System'
   },

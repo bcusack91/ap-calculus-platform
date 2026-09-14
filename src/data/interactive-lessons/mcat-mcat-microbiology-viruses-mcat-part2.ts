@@ -53,9 +53,9 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
           },
           {
             question: `UV irradiation of a lysogenic culture causes a burst of phage release. The mechanistic chain is:`,
-            options: [`UV directly excises the prophage by photolyase action`, `UV activates RecA, which triggers repressor self-cleavage`, `UV mutates tail-fiber genes, enabling escape from the host`, `UV crosslinks the repressor to DNA, locking in lysogeny`],
+            options: [`UV activates photolyase, which cuts the prophage out of the chromosome`, `UV activates RecA, which triggers self-cleavage of the phage repressor`, `UV mutates tail-fiber genes, which lets assembled phages escape the host`, `UV damages the host envelope, which frees phage particles stored inside`],
             correctAnswer: 1,
-            explanation: `DNA damage activates RecA (the SOS sensor), which stimulates autocleavage of the phage repressor. With the repressor destroyed, lytic genes fire, the prophage loops out via excisionase/integrase, and progeny lyse the doomed host — the phage abandons a sinking ship.`
+            explanation: `DNA damage activates RecA (the SOS sensor), which stimulates autocleavage of the phage repressor. With the repressor destroyed, lytic genes fire, the prophage loops out via excisionase/integrase, and progeny lyse the doomed host — the phage abandons a sinking ship. Photolyase repairs pyrimidine dimers and never excises prophage; a lysogen holds no assembled phages, only integrated prophage DNA, so there are no stored particles to free and no tail-fiber escape step to unlock.`
           },
           {
             question: `A previously harmless bacterial strain begins producing a potent exotoxin after becoming a lysogen. Curing the strain of its prophage abolishes toxin production. This is an example of:`,

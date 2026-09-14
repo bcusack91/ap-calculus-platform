@@ -178,10 +178,10 @@ const questionPool: MCATQuizQuestion[] = [
     subtopicSlug: 'mcat-biochemistry-enzymes-kinetics-mcat',
   },
   {
-    question: 'If malate dehydrogenase were strongly inhibited, which TCA intermediate would accumulate immediately upstream?',
-    options: ['Citrate', 'Succinate', 'Malate', 'Fumarate'],
+    question: 'If malate dehydrogenase were strongly inhibited, which TCA-cycle enzyme would be the first to slow for lack of its substrate?',
+    options: ['Fumarase', 'Isocitrate dehydrogenase', 'Citrate synthase', 'Succinate dehydrogenase'],
     correctAnswer: 2,
-    explanation: 'Malate dehydrogenase converts malate to oxaloacetate, so malate accumulates when the enzyme is inhibited.',
+    explanation: 'Malate dehydrogenase regenerates oxaloacetate from malate. Inhibiting it lets malate build up and drains oxaloacetate, the substrate citrate synthase condenses with acetyl-CoA, so citrate synthase slows first. Isocitrate dehydrogenase slows only later, once citrate and isocitrate run low. Fumarase and succinate dehydrogenase sit upstream of the block, so their substrates are not depleted (accumulating malate backs up fumarase, but not for lack of fumarate).',
     difficulty: 'hard',
     subtopicSlug: 'mcat-biochemistry-bioenergetics-mcat',
   },

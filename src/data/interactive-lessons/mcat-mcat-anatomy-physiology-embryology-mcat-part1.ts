@@ -94,10 +94,10 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
             explanation: `The rule is: the later the split, the more extraembryonic structures are shared. Splitting after the blastocyst's trophoblast (chorion precursor) is set means both embryos sit inside ONE chorion; because they split before amnion formation, each still gets its own amnion. An earlier split gives fully separate membranes. Dizygotic twins always have two chorions, and dispermy produces a nonviable triploid, not twins.`
           },
           {
-            question: `Home pregnancy tests detect hCG. Which cells produce this hormone, and what is its physiological role in early pregnancy?`,
-            options: [`The corpus luteum produces hCG to stimulate the trophoblast`, `The inner cell mass produces hCG to trigger implantation`, `The trophoblast produces hCG to maintain the corpus luteum`, `The maternal hypothalamus produces hCG to suppress ovulation`],
+            question: `A human blastocyst reaches the uterus on schedule and develops normally, but it cannot hatch from its zona pellucida. The most likely consequence is:`,
+            options: [`Normal implantation, because the zona itself adheres to the endometrium`, `Polyspermy, because the zona can no longer exclude late-arriving sperm`, `Failed implantation, because the trophoblast cannot contact the endometrium`, `Implantation in the fallopian tube, because the trapped embryo stalls there`],
             correctAnswer: 2,
-            explanation: `hCG comes from the TROPHOBLAST (later the placenta) and acts like LH on the corpus luteum, rescuing it from degeneration so it keeps secreting progesterone and the endometrium is not shed. The corpus luteum is the TARGET of hCG, not its source — reversing source and target is the standard trap. Neither the inner cell mass nor the maternal hypothalamus makes hCG.`
+            explanation: `The zona pellucida surrounds the embryo through cleavage and the morula stage, and its non-adhesive coat keeps the embryo from implanting too early. Around days 5-6 the blastocyst must hatch so its outer trophoblast can attach to and invade the endometrium (implantation, about days 6-10). A blastocyst still trapped in its zona cannot implant. The zona does not adhere to the endometrium; polyspermy is irrelevant because fertilization finished days earlier; and an embryo already in the uterus cannot implant back in the tube.`
           }
         ]
       }

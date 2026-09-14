@@ -76,10 +76,10 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
       exercise: {
         questions: [
           {
-            question: `Which structure do sperm pass through immediately after leaving the seminiferous tubules, and what happens there?`,
+            question: `After leaving the seminiferous tubules and crossing the rete testis and efferent ductules, sperm next enter which structure, and what happens there?`,
             options: [`The vas deferens, where they are stored until ejaculation`, `The epididymis, where they mature and gain motility`, `The prostate, where they acquire fructose`, `The ejaculatory duct, where capacitation occurs`],
             correctAnswer: 1,
-            explanation: `SEVEN UP: Seminiferous tubules → Epididymis → Vas deferens → Ejaculatory duct → Urethra → Penis. (Strictly, sperm first cross the short rete testis and efferent ductules, which only conduct them; the epididymis is the first major duct and the first site of maturation.) The epididymis is the maturation/storage site where sperm become motile. Fructose comes from the SEMINAL VESICLES (not the prostate), and capacitation happens later, inside the female tract.`
+            explanation: `SEVEN UP: Seminiferous tubules → Epididymis → Vas deferens → Ejaculatory duct → (Nothing) → Urethra → Penis. (The short rete testis and efferent ductules only conduct sperm; the epididymis is the first major duct and the first site of maturation.) The epididymis is the maturation/storage site where sperm become motile. Fructose comes from the SEMINAL VESICLES (not the prostate), and capacitation happens later, inside the female tract.`
           },
           {
             question: `In the ovarian two-cell model, estrogen synthesis requires both theca and granulosa cells because:`,

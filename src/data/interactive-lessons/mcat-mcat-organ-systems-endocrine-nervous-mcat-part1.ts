@@ -54,10 +54,10 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
       exercise: {
         questions: [
           {
-            question: `A hormone acts within seconds by binding a cell-surface receptor and raising intracellular cAMP. This hormone is most likely a:`,
-            options: [`Steroid hormone acting through a nuclear receptor`, `Peptide hormone acting through a G-protein-coupled receptor`, `Thyroid hormone acting through gene transcription`, `Lipid-soluble hormone bound to a plasma carrier protein`],
+            question: `A hormone's effect on its target cell appears within seconds and is abolished when adenylyl cyclase is blocked. Which hormone-receptor pairing fits best?`,
+            options: [`Cortisol acting through a nuclear receptor`, `Glucagon acting through a Gs-coupled receptor`, `Insulin acting through a receptor tyrosine kinase`, `Epinephrine acting through a Gq-coupled alpha-1 receptor`],
             correctAnswer: 1,
-            explanation: `Water-soluble peptides cannot cross the membrane, so they act via surface receptors and second messengers — the Gs → adenylyl cyclase → cAMP cascade is the archetype, and its enzymatic steps explain both the speed and the amplification. Steroids and thyroid hormone act in hours-to-days by changing transcription, not seconds.`
+            explanation: `Gs-coupled receptors activate adenylyl cyclase to make cAMP, and glucagon on hepatocytes is the archetype — its enzymatic steps explain both the speed and the amplification. Insulin also binds a surface receptor, but its tyrosine kinase signals through phosphorylation cascades, not cAMP. Epinephrine at alpha-1 receptors acts in seconds too, yet through Gq, phospholipase C, IP3 and DAG. Cortisol changes transcription over hours, not seconds.`
           },
           {
             question: `Unlike anterior pituitary hormones, the hormones released from the posterior pituitary are:`,
@@ -66,10 +66,10 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
             explanation: `The posterior pituitary is neural tissue — hypothalamic neurons make ADH and oxytocin in their cell bodies and ship them down axons for storage and release. The PORTAL system and releasing hormones govern the ANTERIOR pituitary, a genuine gland. Both posterior hormones are peptides, and both act on final targets (kidney, uterus/breast) rather than on other glands.`
           },
           {
-            question: `A drug blocks all cytoplasmic and nuclear hormone receptors but leaves membrane receptors untouched. Which hormone's action would be LEAST affected?`,
-            options: [`Glucagon`, `Cortisol`, `Aldosterone`, `Thyroxine`],
+            question: `A woman starting oral estrogen makes more thyroxine-binding globulin. Weeks later her total T4 is high, but her free T4 and TSH are normal and she has no hyperthyroid symptoms. The best explanation is:`,
+            options: [`Only unbound T4 acts on target tissues and feeds back on the pituitary`, `Bound T4 is converted to inactive reverse T3 before reaching tissues`, `Target cells downregulate their nuclear receptors to offset excess T4`, `The kidneys clear the extra T4 before it can reach target tissues`],
             correctAnswer: 0,
-            explanation: `Glucagon is a peptide — its receptor is on the cell surface (GPCR/cAMP), so intracellular receptor blockade is irrelevant to it. Cortisol and aldosterone are steroids, and thyroxine, despite being tyrosine-derived, uses nuclear receptors — all three depend on the blocked intracellular machinery. Sorting hormones by receptor location is the single most reusable endocrine skill.`
+            explanation: `Carrier-bound hormone is a reservoir: only the small free fraction enters cells, binds receptors, and is sensed by the hypothalamus and pituitary. More binding globulin briefly lowers free T4, TSH rises until the thyroid restores free T4 to normal, and total T4 stays high with no change in hormone action. Bound T4 is not diverted to reverse T3, receptor downregulation would not explain a normal free T4 and TSH, and T4 is protein-bound rather than rapidly cleared by the kidney.`
           }
         ]
       }

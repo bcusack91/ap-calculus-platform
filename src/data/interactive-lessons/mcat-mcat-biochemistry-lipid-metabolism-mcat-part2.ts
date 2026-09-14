@@ -63,10 +63,10 @@ $$80 + 17.5 + 10.5 - 2 = 106\\ ATP$$
       exercise: {
         questions: [
           {
-            question: `How many total ATP equivalents are produced by the complete oxidation of one palmitate (16:0) molecule, net of activation?`,
-            options: [`96`, `108`, `106`, `129`],
+            question: `Counting 2.5 ATP per NADH and 1.5 ATP per FADH$_2$, how many total ATP equivalents are produced by the complete oxidation of one palmitate (16:0) molecule, net of activation?`,
+            options: [`96`, `108`, `106`, `104`],
             correctAnswer: 2,
-            explanation: `Using the modern P/O convention (2.5 ATP per NADH, 1.5 per FADH$_2$, 10 per acetyl-CoA): seven cycles give 8 acetyl-CoA (times 10 = 80), 7 NADH (times 2.5 = 17.5), and 7 FADH$_2$ (times 1.5 = 10.5) for 108; activation to palmitoyl-CoA consumed ATP to AMP + 2 P$_i$ = 2 ATP equivalents, so the net is 106.`
+            explanation: `Using the stated P/O convention (2.5 ATP per NADH, 1.5 per FADH$_2$, 10 per acetyl-CoA): seven cycles give 8 acetyl-CoA (times 10 = 80), 7 NADH (times 2.5 = 17.5), and 7 FADH$_2$ (times 1.5 = 10.5) for 108; activation to palmitoyl-CoA consumed ATP to AMP + 2 P$_i$ = 2 ATP equivalents, so the net is 106. Forgetting activation gives 108, and charging activation as 4 ATP equivalents gives 104.`
           },
           {
             question: `Malonyl-CoA inhibits carnitine palmitoyltransferase I. The physiological logic of this regulation is to:`,
