@@ -176,13 +176,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'te-ent-6b',
     question: 'What is the best way to increase power without changing α?',
     options: [
-      'Use a different test statistic',
-      'Increase the sample size',
-      'Change from two-tailed to one-tailed (only if justified)',
-      'Both B and C can increase power without changing α'
+      'Rerun the same test on the same data',
+      'Collect a larger sample from the population',
+      'Switch from a one-tailed to a two-tailed test',
+      'Recompute the P-value using the same data'
     ],
-    correctIndex: 3,
-    explanation: 'Increasing sample size is the most common way to increase power without changing α. Switching to a one-tailed test (if scientifically justified) also increases power for that direction.',
+    correctIndex: 1,
+    explanation: 'Increasing the sample size shrinks the standard error, so a real effect is detected more often without changing α. Switching from a one-tailed to a two-tailed test splits α across both tails and lowers power in the direction of interest, and rerunning or recomputing on the same data adds no new information.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },

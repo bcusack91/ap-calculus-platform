@@ -61,16 +61,16 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'sei-ent-2b',
     question:
-      'Which underlined phrase should be deleted because it is redundant?\n"The new innovation [A] revolutionized manufacturing. Each individual [B] worker saw their output increase. The end result [C] was higher profit. The final conclusion [D] was widely celebrated."',
+      'Which words in this passage should be deleted because they are redundant?\n"The new innovation revolutionized manufacturing. Each individual worker saw their output increase. The end result was higher profit. The final conclusion was widely celebrated."',
     options: [
-      'new (in "new innovation")',
-      '"Each individual" — should just be "Each"',
-      '"end" (in "end result")',
-      'All of the above phrases are redundant.',
+      'Only "new," since the other words add meaning',
+      'Only "individual" and "end"; the others add meaning',
+      'None of the words; each one adds useful emphasis',
+      'All four: "new," "individual," "end," and "final"',
     ],
     correctIndex: 3,
     explanation:
-      'All four phrases are redundant: "innovation" is inherently new; "individual" is implied by "each"; "result" is inherently an end; "conclusion" is inherently final. On the SAT, identifying and eliminating redundancy is a key conciseness skill.',
+      'All four words are redundant: "innovation" is inherently new; "individual" is implied by "each"; "result" is inherently an end; "conclusion" is inherently final. On the SAT, identifying and eliminating redundancy is a key conciseness skill.',
     partNumber: 2,
     partTitle: 'Conciseness',
   },

@@ -144,13 +144,13 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
           {
             question: `Which change does NOT affect the value of $K$ for a reaction at constant temperature?`,
             options: [
-              `Adding a catalyst`,
-              `Increasing temperature`,
-              `Decreasing temperature`,
-              `Both A, B, and C are correct`
+              `Adding a catalyst to the reaction mixture`,
+              `Doubling every coefficient in the equation`,
+              `Halving every coefficient in the equation`,
+              `Writing the equation in the reverse direction`
             ],
             correctAnswer: 0,
-            explanation: `A catalyst speeds up both forward and reverse reactions equally, reaching equilibrium faster — but $K$ **does not change**. Only temperature changes $K$. Adding reactants, products, or changing pressure shift the position of equilibrium but not $K$.`
+            explanation: `A catalyst speeds up both forward and reverse reactions equally, reaching equilibrium faster — but $K$ **does not change**. Rewriting the equation does change $K$ even at constant temperature: doubling every coefficient squares $K$, halving them takes its square root, and reversing the equation gives $1/K$. Adding reactants, products, or changing pressure shift the position of equilibrium but not $K$.`
           },
           {
             question: `$K_{sp}$ of $\\text{Ca}_3(\\text{PO}_4)_2 = 2.1 \\times 10^{-33}$. The dissolution is $\\text{Ca}_3(\\text{PO}_4)_2 \\rightleftharpoons 3\\text{Ca}^{2+} + 2\\text{PO}_4^{3-}$. If $s$ is the molar solubility, which expression equals $K_{sp}$?`,

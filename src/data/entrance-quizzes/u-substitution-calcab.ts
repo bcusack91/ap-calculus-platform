@@ -100,8 +100,8 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'us-ent-5b',
     question: '$\\int \\tan x\\,dx =$',
-    options: ['$\\ln|\\sec x| + C$', '$\\sec^2 x + C$', '$-\\ln|\\cos x| + C$', 'Both A and C'],
-    correctIndex: 3,
+    options: ['$\\ln|\\sec x| + C$', '$\\sec^2 x + C$', '$\\ln|\\cos x| + C$', '$\\ln|\\sin x| + C$'],
+    correctIndex: 0,
     explanation: '$\\int \\frac{\\sin x}{\\cos x}\\,dx = -\\ln|\\cos x| + C = \\ln|\\sec x| + C$.',
     partNumber: 5,
     partTitle: 'Common Patterns',

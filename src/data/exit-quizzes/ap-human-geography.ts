@@ -74,9 +74,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
   },
   {
     question: 'Scale in geography refers to:',
-    options: ['The weight of geographic instruments', 'The relationship between distance on a map and distance on Earth\'s surface', 'The size of a geographic study area relative to the detail of data used', 'Both B and C'],
+    options: ['The weight of field instruments and the precision of their readings', 'A map\'s distance ratio alone, never the extent of an analysis', 'The extent of an analysis alone, never a map\'s distance ratio', 'Both a map\'s distance ratio and the extent of an analysis'],
     correctAnswer: 3,
-    explanation: 'Scale has two meanings in geography: map scale (the ratio of map distance to real distance) and scale of analysis (local, regional, national, global). Both are correct.',
+    explanation: 'Scale has two meanings in geography: map scale (the ratio of map distance to real distance) and scale of analysis (local, regional, national, global). Both meanings apply, so a definition limited to either one is incomplete.',
     difficulty: 'medium',
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',

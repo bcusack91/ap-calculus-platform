@@ -3417,10 +3417,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   {
     question: 'For a polar curve, the formula for area is $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$ because:',
     options: [
-      'It sums the areas of infinitesimally thin circular sectors',
+      'It sums the areas of infinitely thin circular sectors',
       'It is derived from the rectangular formula $\\int y\\,dx$',
-      'The $r^2$ accounts for the Jacobian of the transform',
-      'All of the above are valid reasons'
+      'It treats each slice as a thin rectangle of width $d\\theta$',
+      'It measures the arc length traced out as $\\theta$ increases'
     ],
     correctAnswer: 0,
     explanation: 'The polar area formula comes from summing thin sectors of angle dθ, each with area $(1/2)r^{2}d\\theta$.',
@@ -3563,9 +3563,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Use the Maclaurin series for $e^x$ to write the series for $e^{-x^2}$.',
-    options: ['$\\sum \\dfrac{(-1)^n x^{2n}}{n!}$', '$\\sum \\dfrac{x^{2n}}{n!}$', '$\\sum \\dfrac{(-x^2)^n}{n!}$ which equals option A', 'Both A and C'],
-    correctAnswer: 3,
-    explanation: 'Substitute $x \\mapsto -x^2$ in $\\sum x^n/n!$.',
+    options: ['$\\sum \\dfrac{(-1)^n x^{2n}}{n!}$', '$\\sum \\dfrac{x^{2n}}{n!}$', '$\\sum \\dfrac{(-1)^n x^{n}}{n!}$', '$\\sum \\dfrac{(-1)^n x^{2n}}{(2n)!}$'],
+    correctAnswer: 0,
+    explanation: 'Substitute $x \\mapsto -x^2$ in $\\sum x^n/n!$ to get $\\sum (-x^2)^n/n! = \\sum (-1)^n x^{2n}/n!$. The series with $(2n)!$ is $\\cos x$, and the one with $x^n$ is $e^{-x}$.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
   {
@@ -3605,9 +3605,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Approximate $\\sin(0.5)$ using $T_3(x) = x - x^3/6$:',
-    options: ['$0.5 - 0.125/6 \\approx 0.4792$', '$0.5$', '$0.4794$ (exact)', 'Both A and C are very close'],
-    correctAnswer: 3,
-    explanation: '$0.5 - 0.125/6 \\approx 0.4792$, very close to actual $0.4794$.',
+    options: ['$0.5 - 0.125/6 \\approx 0.4792$', '$0.5 - 0.25/6 \\approx 0.4583$', '$0.5 + 0.125/6 \\approx 0.5208$', '$0.5 - 0.125/2 \\approx 0.4375$'],
+    correctAnswer: 0,
+    explanation: '$T_3(0.5) = 0.5 - (0.5)^3/6 = 0.5 - 0.125/6 \\approx 0.4792$, very close to the actual $\\sin(0.5) \\approx 0.4794$.',
     difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
 

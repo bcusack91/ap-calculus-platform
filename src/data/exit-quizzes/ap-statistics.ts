@@ -2059,8 +2059,8 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'Switching x and y in a regression equation will generally:',
-    options: ['Give the same line', 'Give a different line', 'Not change r', 'Both B and C'],
-    correctAnswer: 3,
+    options: ['Give the same line and the same r', 'Give a different line but the same r', 'Give the same line but a different r', 'Give a different line and a different r'],
+    correctAnswer: 1,
     explanation: 'The LSRL changes when you swap x and y (different slope/intercept), but r stays the same because correlation is symmetric.',
     difficulty: 'medium',
     domain: 'regression',
@@ -2412,7 +2412,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'To decrease the width of a confidence interval, you can:',
-    options: ['Increase the confidence level', 'Decrease the sample size', 'Increase the sample size', 'Both A and B'],
+    options: ['Increase the confidence level', 'Decrease the sample size', 'Increase the sample size', 'Use a bigger critical value'],
     correctAnswer: 2,
     explanation: 'Larger samples reduce SE and thus the margin of error, making the interval narrower.',
     difficulty: 'easy',
@@ -2721,10 +2721,10 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'If a 95% CI for μ is (100, 120), which of the following sample means is possible?',
-    options: ['95', '110', '125', 'All of the above'],
+    question: 'If a 95% CI for μ is (100, 120), which of the following must be the sample mean?',
+    options: ['95', '110', '125', '120'],
     correctAnswer: 1,
-    explanation: 'The sample mean is the center of the CI: (100+120)/2 = 110.',
+    explanation: 'A confidence interval for μ is centered at the sample mean, so the sample mean must be the midpoint (100+120)/2 = 110. No other listed value is the midpoint.',
     difficulty: 'easy',
     domain: 'confidence-intervals',
     topicSlug: 'interpreting-ci',
@@ -2855,7 +2855,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'Which of the following increases the power of a test?',
-    options: ['Decreasing the sample size', 'Increasing α', 'Decreasing the effect size', 'All of the above'],
+    options: ['Using a smaller sample size', 'Raising the significance level α', 'Shrinking the true effect size', 'Lowering the significance level α'],
     correctAnswer: 1,
     explanation: 'Increasing α (being more willing to reject $H_{0}$) increases power. Also: increasing n, increasing effect size, decreasing σ.',
     difficulty: 'medium',

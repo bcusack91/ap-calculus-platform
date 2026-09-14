@@ -531,8 +531,8 @@ export const apPsychQuestionPool: APPsychQuestion[] = [
   // ══════════════════════════════════════════════════════════════════
   {
     question: 'According to Maslow\'s hierarchy, which need must be met before a person can focus on self-actualization?',
-    options: ['Physiological needs', 'Esteem needs', 'Safety needs', 'All of the above'],
-    correctAnswer: 3,
+    options: ['Physiological and safety needs, but not esteem', 'Esteem needs only, the level directly below it', 'All lower levels, from physiological up to esteem', 'No prior needs; any level can be pursued first'],
+    correctAnswer: 2,
     explanation: 'Maslow\'s hierarchy proposes that lower-level needs (physiological, safety, belongingness, esteem) must be satisfied before a person can pursue self-actualization.',
     difficulty: 'easy',
     domain: 'motivation-emotion',

@@ -702,7 +702,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A spring-mass system has U = $\\tfrac{1}{2} kx^{2}$ and K = $\\tfrac{1}{2} mv^{2}$. What is the total mechanical energy at maximum displacement A?',
-    options: ['$\\tfrac{1}{2} kA^{2}$', '$\\tfrac{1}{2} mv^{2}_{max}$', 'Both A and B — they are equal', '0'],
+    options: ['$\\tfrac{1}{2} kA^{2} + \\tfrac{1}{2} mv^{2}_{max}$', '$kA^{2}$, twice the maximum kinetic energy', '$\\tfrac{1}{2} kA^{2}$, which equals $\\tfrac{1}{2} mv^{2}_{max}$', '0, since the mass is momentarily at rest'],
     correctAnswer: 2,
     explanation: 'At x = A: E = $\\tfrac{1}{2} kA^{2}$ (all potential). At x = 0: E = $\\tfrac{1}{2} mv^{2}_{max}$ (all kinetic). They are the same total energy.',
     difficulty: 'medium',

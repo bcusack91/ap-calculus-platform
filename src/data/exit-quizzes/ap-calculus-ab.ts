@@ -3935,7 +3935,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'Which discontinuity type can be "fixed" by redefining one point?',
-    options: ['Jump', 'Infinite', 'Removable', 'All of the above'],
+    options: ['Jump discontinuity', 'Infinite discontinuity', 'Removable discontinuity', 'Oscillating discontinuity'],
     correctAnswer: 2,
     explanation: 'Only removable discontinuities can be patched (limit exists finitely).',
     difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
