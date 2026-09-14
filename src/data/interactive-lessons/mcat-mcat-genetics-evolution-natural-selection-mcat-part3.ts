@@ -103,7 +103,7 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
           },
           {
             question: `On a cladogram, a monophyletic group (clade) is defined as:`,
-            options: [`A common ancestor together with ALL of its descendant taxa`, `Any taxa drawn next to each other at the tree's tips`, `All taxa that share a similar overall body plan`, `The taxa with the greatest number of derived characters`],
+            options: [`A common ancestor together with all of its descendant taxa`, `Any taxa drawn next to each other at the tree's tips`, `All taxa that share a similar overall body plan`, `The taxa with the greatest number of derived characters`],
             correctAnswer: 0,
             explanation: `A clade is an ancestor plus every one of its descendants — omit any descendant and the group is paraphyletic (e.g., "reptiles" without birds). Tip adjacency is meaningless because branches can rotate freely around nodes, and overall similarity fails whenever convergence (homoplasy) makes unrelated taxa look alike.`
           }
