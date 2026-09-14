@@ -71,7 +71,7 @@ This matches the $9{:}3{:}3{:}1$ ratio: the "tall, wrinkled" class (A\\_bb-style
           },
           {
             question: `A test cross reveals half the offspring are recessive. The tested parent must be:`,
-            options: [`Heterozygous (Aa)`, `Homozygous dominant (AA)`, `Homozygous recessive (aa)`, `Cannot determine`],
+            options: [`Heterozygous (Aa)`, `Homozygous dominant (AA)`, `Homozygous recessive (aa)`, `Cannot be determined`],
             correctAnswer: 0,
             explanation: `Test cross = unknown $\\times$ aa. If Aa $\\times$ aa → 1/2 Aa (dominant) : 1/2 aa (recessive). If AA $\\times$ aa → all Aa (all dominant). Since half are recessive, the parent is Aa.`
           },
@@ -83,15 +83,15 @@ This matches the $9{:}3{:}3{:}1$ ratio: the "tall, wrinkled" class (A\\_bb-style
           },
           {
             question: `Mendel's Law of Independent Assortment is best explained at the cellular level by which event in meiosis?`,
-            options: [`Random orientation of homologous chromosome pairs at metaphase I`, `Sister chromatids separating in anaphase II`, `DNA replication during S phase`, `Crossing over during prophase I`],
+            options: [`Random orientation of homolog pairs at metaphase I`, `Sister chromatids separating at anaphase II`, `DNA replication during the S phase of interphase`, `Crossing over between homologs at prophase I`],
             correctAnswer: 0,
-            explanation: `Independent assortment results from the random alignment of each homologous pair on the metaphase I plate — each pair orients independently, so alleles on different chromosomes are distributed into gametes independently. (Crossing over creates new combinations of LINKED alleles, but is not the basis of the law itself.)`
+            explanation: `Independent assortment results from the random alignment of each homologous pair on the metaphase I plate — each pair orients independently, so alleles on different chromosomes are distributed into gametes independently. (Crossing over creates new combinations of LINKED alleles, but is not the basis of the law itself. Sister chromatid separation in anaphase II and DNA replication in S phase do not sort different chromosomes relative to one another.)`
           },
           {
             question: `Two heterozygous parents (Aa $\\times$ Aa) have one offspring that is homozygous recessive (aa). What is the probability that their NEXT child is also aa?`,
-            options: [`1/4 — each fertilization is an independent event`, `1/16, because two recessive children in a row is less likely`, `0, because they already used their recessive allele`, `1/2`],
+            options: [`1/4, because each fertilization is an independent event`, `1/16, because two recessive children in a row is less likely`, `0, because they already used their recessive allele`, `1/2, because each parent passes a with probability 1/2`],
             correctAnswer: 0,
-            explanation: `Each fertilization is independent — prior outcomes do not change future probabilities. $P(aa) = \\tfrac{1}{4}$ for every child regardless of previous children. The probability of TWO aa children in a row (computed in advance) would be $\\tfrac{1}{4}\\times\\tfrac{1}{4}=\\tfrac{1}{16}$, but that is a different question.`
+            explanation: `Each fertilization is independent — prior outcomes do not change future probabilities. $P(aa) = \\tfrac{1}{4}$ for every child regardless of previous children. The probability of TWO aa children in a row (computed in advance) would be $\\tfrac{1}{4}\\times\\tfrac{1}{4}=\\tfrac{1}{16}$, but that is a different question. Each parent does pass the a allele with probability 1/2, but both must do so, so the two halves multiply to 1/4 rather than staying at 1/2.`
           }
         ]
       }

@@ -91,9 +91,9 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
           },
           {
             question: `A diploid plant lineage produces a tetraploid individual through a meiotic error. The tetraploid can self-fertilize, but its crosses with the parental diploids yield sterile triploids. This scenario illustrates:`,
-            options: [`Allopatric speciation driven by a geographic barrier`, `Adaptive radiation into open niches`, `Hybrid breakdown in the second generation`, `Sympatric speciation by polyploidy — reproductive isolation arising in a single generation`],
+            options: [`Allopatric speciation driven by a geographic barrier`, `Adaptive radiation into open niches`, `Hybrid breakdown in the second generation`, `Sympatric speciation by polyploidy`],
             correctAnswer: 3,
-            explanation: `Polyploidy isolates the new lineage instantly and requires no geographic separation — the hallmark sympatric mechanism, common in plants (a large fraction of flowering plant species have polyploid ancestry). No physical barrier exists, so it is not allopatric; the sterile triploid is the isolating MECHANISM here, not multigenerational hybrid breakdown.`
+            explanation: `Polyploidy isolates the new lineage instantly, within a single generation, and requires no geographic separation — the hallmark sympatric mechanism, common in plants (a large fraction of flowering plant species have polyploid ancestry). No physical barrier exists, so it is not allopatric; the sterile triploid is the isolating MECHANISM here, not multigenerational hybrid breakdown.`
           },
           {
             question: `The wings of bats and the wings of insects both generate lift for flight but develop from entirely different ancestral structures. These wings are best described as:`,
@@ -103,7 +103,7 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
           },
           {
             question: `On a cladogram, a monophyletic group (clade) is defined as:`,
-            options: [`A common ancestor together with ALL of its descendant taxa`, `Any set of taxa drawn next to each other at the tips of the tree`, `All taxa that share a similar overall body plan`, `The taxa with the greatest number of derived characters`],
+            options: [`A common ancestor together with ALL of its descendant taxa`, `Any taxa drawn next to each other at the tree's tips`, `All taxa that share a similar overall body plan`, `The taxa with the greatest number of derived characters`],
             correctAnswer: 0,
             explanation: `A clade is an ancestor plus every one of its descendants — omit any descendant and the group is paraphyletic (e.g., "reptiles" without birds). Tip adjacency is meaningless because branches can rotate freely around nodes, and overall similarity fails whenever convergence (homoplasy) makes unrelated taxa look alike.`
           }

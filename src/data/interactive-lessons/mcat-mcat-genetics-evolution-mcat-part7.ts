@@ -65,21 +65,21 @@ Sickle cell carriers (HbAS) are resistant to malaria, which explains the high fr
         questions: [
           {
             question: `Sickle cell disease persists at high frequency in malaria-endemic regions because:`,
-            options: [`Heterozygote advantage — carriers (HbAS) have malaria resistance without severe disease`, `Sickle cell is dominant`, `There is no selective pressure against it`, `The mutation is beneficial in all individuals`],
+            options: [`Carriers are protected against malaria`, `The sickle allele is dominant`, `No selection acts against it`, `The allele benefits every genotype`],
             correctAnswer: 0,
-            explanation: `HbAS carriers have mild sickling that kills malaria parasites in RBCs but lack the severe complications of HbSS. This heterozygote advantage (a form of balancing selection) maintains the allele at substantial frequency in affected regions.`
+            explanation: `HbAS carriers have mild sickling that kills malaria parasites in RBCs but lack the severe complications of HbSS. This heterozygote advantage (a form of balancing selection) maintains the allele at substantial frequency in affected regions. The allele is not simply dominant, it is strongly selected against in HbSS homozygotes, and it harms rather than benefits those individuals.`
           },
           {
             question: `Huntington's disease is autosomal dominant with onset typically after age 40. Why does the disease allele persist in the population despite being harmful?`,
-            options: [`Symptoms usually appear after reproductive age, so carriers often pass on the allele before being affected`, `The allele is recessive and hidden in carriers`, `Huntington's improves fitness`, `The allele constantly arises from new mutations only`],
+            options: [`Symptoms usually begin after reproductive age`, `The allele is recessive, hidden in carriers`, `Heterozygotes resist an infectious disease`, `The allele arises only from new mutations`],
             correctAnswer: 0,
-            explanation: `Because Huntington's is late-onset, affected individuals frequently have children before symptoms appear. Natural selection cannot efficiently remove an allele whose harm comes after reproduction, so the dominant allele persists across generations.`
+            explanation: `Because Huntington's is late-onset, affected individuals frequently have children before symptoms appear. Natural selection cannot efficiently remove an allele whose harm comes after reproduction, so the dominant allele persists across generations. The allele is dominant, not recessive, no heterozygote advantage is known to maintain it, and most cases are inherited from an affected parent rather than arising anew.`
           },
           {
             question: `A karyotype shows 45 chromosomes with a single X and no Y (45,X). This describes:`,
-            options: [`Turner syndrome — a phenotypic female with short stature and infertility`, `Klinefelter syndrome (47,XXY)`, `Down syndrome (trisomy 21)`, `A normal male karyotype`],
+            options: [`Turner syndrome`, `Klinefelter syndrome`, `Down syndrome`, `Edwards syndrome`],
             correctAnswer: 0,
-            explanation: `45,X is monosomy X, characteristic of Turner syndrome: affected individuals are phenotypically female, typically short, and usually infertile (streak gonads). It is the only viable human monosomy.`
+            explanation: `45,X is monosomy X, characteristic of Turner syndrome: affected individuals are phenotypically female, typically short, and usually infertile (streak gonads). It is the only viable human monosomy. Klinefelter syndrome is 47,XXY, Down syndrome is trisomy 21, and Edwards syndrome is trisomy 18; all have 47 chromosomes.`
           },
           {
             question: `Cystic fibrosis is autosomal recessive. Two unaffected parents already have a child with CF. What is the probability that their NEXT child is an unaffected CARRIER?`,
@@ -89,7 +89,7 @@ Sickle cell carriers (HbAS) are resistant to malaria, which explains the high fr
           },
           {
             question: `Klinefelter syndrome (47,XXY) most commonly results from:`,
-            options: [`Nondisjunction during meiosis, producing a gamete with an extra sex chromosome`, `A single point mutation in an X-linked gene`, `Deletion of part of the Y chromosome`, `Mitochondrial inheritance from the mother`],
+            options: [`Meiotic nondisjunction of sex chromosomes`, `A point mutation in an X-linked gene`, `Deletion of part of the Y chromosome`, `Mitochondrial inheritance from the mother`],
             correctAnswer: 0,
             explanation: `47,XXY is an aneuploidy caused by nondisjunction in meiosis (either an XX egg fertilized by a Y sperm, or an X egg fertilized by an XY sperm). It is a whole-chromosome number error, not a point mutation or deletion.`
           }

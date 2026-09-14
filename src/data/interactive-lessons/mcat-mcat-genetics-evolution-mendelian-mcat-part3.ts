@@ -81,25 +81,25 @@ $P(\\text{child has CF}) = \\frac{2}{3} \\times \\frac{1}{25} \\times \\frac{1}{
           },
           {
             question: `A man with hemophilia A (X-linked recessive) and a woman who is homozygous normal have children. Which statement is correct?`,
-            options: [`All daughters are carriers and all sons are unaffected non-carriers`, `Half the sons will have hemophilia`, `All daughters will have hemophilia`, `Sons have a 25% risk of hemophilia`],
+            options: [`All daughters will be carriers`, `Half the sons will have hemophilia`, `All daughters will have hemophilia`, `Sons have a 25% risk of hemophilia`],
             correctAnswer: 0,
             explanation: `The father gives his single mutant X to every daughter (all obligate carriers) and his Y to every son. Since the mother contributes only normal X chromosomes, no child is affected and sons carry no disease allele. Affected sons would require a carrier or affected mother.`
           },
           {
             question: `In a pedigree, an affected woman has four children (two sons, two daughters) — ALL affected. Her affected brother's three children are ALL unaffected. The most consistent inheritance pattern is:`,
-            options: [`Autosomal dominant with reduced penetrance`, `X-linked dominant`, `Mitochondrial inheritance`, `Autosomal recessive`],
+            options: [`Autosomal dominant, reduced penetrance`, `X-linked dominant`, `Mitochondrial inheritance`, `Autosomal recessive`],
             correctAnswer: 2,
             explanation: `Mitochondria pass exclusively through the egg: an affected mother transmits to ALL children, an affected father to NONE. That exact asymmetry is shown here. X-linked dominant fails because an affected father would pass the trait to all his daughters.`
           },
           {
             question: `Huntington disease is autosomal dominant with onset typically after age 40. A 25-year-old whose parent has Huntington disease asks for his risk of eventually developing it (assume the affected parent is heterozygous). The risk is:`,
-            options: [`1/4`, `2/3`, `Nearly 0 because he is currently symptom-free`, `1/2`],
+            options: [`1/4`, `2/3`, `Near 0`, `1/2`],
             correctAnswer: 3,
             explanation: `$Hh \\times hh$ → half the children inherit the dominant allele, and dominant means one copy suffices: risk $= 1/2$. Being symptom-free at 25 provides almost no information because onset is late — this distinguishes late-onset dominant conditions from the 2/3 conditioning logic used for recessive traits.`
           },
           {
             question: `Which observation would definitively EXCLUDE autosomal recessive inheritance for a trait in a pedigree?`,
-            options: [`An affected child born to two affected parents`, `An affected child whose parents are both unaffected`, `Two affected parents producing an unaffected child`, `The trait appearing more often in males in one family`],
+            options: [`An affected child born to two affected parents`, `An affected child of two unaffected parents`, `Two affected parents producing an unaffected child`, `The trait appearing more often in males`],
             correctAnswer: 2,
             explanation: `If the trait is autosomal recessive, affected parents are both $aa$ and can transmit only $a$ — every child must be $aa$ (affected). An unaffected child therefore excludes the model. Unaffected-parents-with-affected-child is the SIGNATURE of recessive inheritance, and modest sex bias can occur by chance.`
           }

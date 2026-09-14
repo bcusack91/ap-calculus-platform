@@ -69,9 +69,9 @@ Key patterns to recognize:
         questions: [
           {
             question: `A trait appears in a grandfather and his grandson through his daughter (who is unaffected). This is most consistent with:`,
-            options: [`X-linked recessive — the daughter is a carrier`, `Autosomal dominant`, `Autosomal recessive`, `Mitochondrial inheritance`],
+            options: [`X-linked recessive`, `Y-linked inheritance`, `Autosomal recessive`, `Mitochondrial inheritance`],
             correctAnswer: 0,
-            explanation: `Grandfather ($X^aY$) → Daughter ($X^AX^a$, carrier) → Grandson ($X^aY$, affected). The trait skips the daughter because she has a normal X to compensate. This classic "skip a generation through a carrier daughter" pattern = X-linked recessive.`
+            explanation: `Grandfather ($X^aY$) → Daughter ($X^AX^a$, carrier) → Grandson ($X^aY$, affected). The trait skips the daughter because she has a normal X to compensate. This classic "skip a generation through a carrier daughter" pattern = X-linked recessive. A Y-linked trait could never pass through a daughter, and mitochondrial traits are inherited only from the mother, so the grandfather could not transmit one.`
           },
           {
             question: `In a pedigree, an affected father has only affected daughters and only unaffected sons; every daughter is affected. This pattern is characteristic of:`,
@@ -81,21 +81,21 @@ Key patterns to recognize:
           },
           {
             question: `Which single observation, if present in a pedigree, immediately RULES OUT X-linked recessive inheritance?`,
-            options: [`An affected father with an affected son (male-to-male transmission)`, `An affected mother with an affected son`, `A trait that skips a generation`, `More affected males than females`],
+            options: [`An affected father passing the trait to his son`, `An affected mother passing the trait to her son`, `A trait that skips a generation`, `More affected males than females`],
             correctAnswer: 0,
-            explanation: `Fathers give their X only to daughters; sons get the Y. So an affected father cannot transmit an X-linked allele to a son. Observing father-to-son transmission of the trait rules out ALL X-linked patterns and points toward autosomal (or Y-linked) inheritance.`
+            explanation: `Fathers give their X only to daughters; sons get the Y. So an affected father cannot transmit an X-linked allele to a son: X-linked alleles are never passed father to son. (An affected father who merely HAS an affected son does not rule it out, because that son could have inherited the allele from a carrier mother; mother-to-son transmission is the typical X-linked recessive route.) Observing father-to-son transmission of the trait rules out ALL X-linked patterns and points toward autosomal (or Y-linked) inheritance.`
           },
           {
             question: `Two unaffected parents have a daughter with an autosomal recessive disease. What are the parents' genotypes, and what is the recurrence risk for their next child?`,
-            options: [`Both parents are carriers (Aa); recurrence risk = 1/4`, `Both parents are aa; recurrence risk = 1`, `One parent is AA, one is aa; recurrence risk = 0`, `Both parents are Aa; recurrence risk = 1/2`],
+            options: [`Both parents are Aa; recurrence risk = 1/4`, `Both parents are aa; recurrence risk = 1`, `One parent is AA, one is aa; recurrence risk = 0`, `Both parents are Aa; recurrence risk = 1/2`],
             correctAnswer: 0,
             explanation: `An affected (aa) child must inherit one recessive allele from each parent, and since both parents are unaffected they must each be heterozygous carriers (Aa). $Aa \\times Aa$ gives a 1/4 chance of an affected (aa) child for each pregnancy.`
           },
           {
             question: `Why are X-linked recessive conditions such as color blindness far more common in males than in females?`,
-            options: [`Males are hemizygous — a single recessive allele on their one X is sufficient to produce the phenotype`, `The Y chromosome carries a duplicate disease allele`, `Females cannot inherit X-linked alleles`, `The conditions are actually autosomal in males only`],
+            options: [`Males have one X, so one recessive allele is expressed`, `The Y chromosome carries a duplicate disease allele`, `Females inactivate the X with the recessive allele`, `Males inherit their single X from their father`],
             correctAnswer: 0,
-            explanation: `A male has only one X, so any recessive allele on it is expressed (he is hemizygous). A female needs the recessive allele on BOTH X chromosomes to be affected, which is far less likely. Hence the strong male predominance of X-linked recessive disorders.`
+            explanation: `A male has only one X, so any recessive allele on it is expressed (he is hemizygous). A female needs the recessive allele on BOTH X chromosomes to be affected, which is far less likely. Hence the strong male predominance of X-linked recessive disorders. The Y chromosome carries no copy of these X-linked genes, a male's single X comes from his mother (his father supplies the Y), and X-inactivation in females is random rather than targeted at the recessive allele.`
           }
         ]
       }

@@ -82,23 +82,23 @@ Fitness components compete for the same energy budget: bright coloration attract
             question: `Which statement describes giraffe neck evolution in correct Darwinian (rather than Lamarckian) terms?`,
             options: [`Ancestral giraffes stretched their necks reaching for high leaves, and the lengthened necks were passed to offspring`, `Ancestral populations contained heritable variation in neck length, and longer-necked individuals left more offspring`, `Giraffes developed long necks because they needed to reach higher food`, `Every giraffe gradually grew a longer neck over its own lifetime as the species evolved`],
             correctAnswer: 1,
-            explanation: `Darwinian change requires pre-existing heritable variation plus differential reproduction. The first and fourth options describe inheritance of acquired characteristics (Lamarck), and the third invokes need-driven change — selection has no foresight and cannot create variation on demand.`
+            explanation: `Darwinian change requires pre-existing heritable variation plus differential reproduction. Necks stretched by reaching and then passed on, or necks that lengthen within each giraffe's own lifetime, describe inheritance of acquired characteristics (Lamarck), and developing long necks because they were needed invokes need-driven change — selection has no foresight and cannot create variation on demand.`
           },
           {
             question: `Natural selection acts directly on ______, while evolutionary change is measured in ______.`,
-            options: [`phenotypes of individuals; allele frequencies of populations`, `genotypes of individuals; phenotypes of individuals`, `allele frequencies of populations; phenotypes of individuals`, `mutations; individual organisms`],
+            options: [`phenotypes of individuals; allele frequencies of populations`, `genotypes of individuals; phenotypes of individuals`, `allele frequencies of populations; phenotypes of individuals`, `genotypes of individuals; allele frequencies of populations`],
             correctAnswer: 0,
             explanation: `Predators, climates, and mates interact with an organism's PHENOTYPE; genotypes are screened only indirectly, through the phenotypes they help produce. The response — evolution — is a shift in allele frequencies across generations in the population. Individuals cannot evolve because their genotypes are fixed at fertilization.`
           },
           {
             question: `Feathers appear in the fossil record on non-flying dinosaurs, where they likely functioned in insulation and display, and were only later used in flight. Feathers used for flight are therefore an example of:`,
-            options: [`Convergent evolution`, `An acquired characteristic`, `Exaptation — a trait co-opted for a new function`, `Directed mutation in response to the need to fly`],
+            options: [`Convergent evolution`, `An acquired characteristic`, `Exaptation`, `Directed mutation`],
             correctAnswer: 2,
-            explanation: `A trait that evolved under selection for one role and was later recruited for a different role is an exaptation. This dissolves the "what good is half a wing?" objection: intermediate feathered forms were already useful for insulation and display. Convergence involves separate lineages independently evolving similar traits, and mutations are never directed by need.`
+            explanation: `A trait that evolved under selection for one role and was later recruited for a different role is an exaptation: a trait co-opted for a new function. This dissolves the "what good is half a wing?" objection: intermediate feathered forms were already useful for insulation and display. Convergence involves separate lineages independently evolving similar traits, mutations are never directed by the need to fly, and feathers are heritable, not characteristics acquired during an individual's life.`
           },
           {
             question: `Which process is the ultimate source of entirely NEW alleles in a population?`,
-            options: [`Crossing over during prophase I`, `Mutation`, `Independent assortment of chromosomes`, `Random fertilization`],
+            options: [`Crossing over`, `Mutation`, `Independent assortment`, `Random fertilization`],
             correctAnswer: 1,
             explanation: `Only mutation writes new sequence variants. Crossing over, independent assortment, and random fertilization are enormously important generators of new COMBINATIONS, but they can only shuffle alleles that mutation already created.`
           }

@@ -76,9 +76,9 @@ So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
           },
           {
             question: `The HbS (sickle) allele remains at frequencies above 10% in regions where malaria is endemic, despite HbS/HbS causing severe disease. The best explanation is:`,
-            options: [`Heterozygote advantage — HbA/HbS individuals resist malaria and outreproduce both homozygotes`, `A high recurrent mutation rate from HbA to HbS`, `Genetic drift in large African and South Asian populations`, `The HbS allele is dominant, so selection cannot act against it`],
+            options: [`Heterozygotes resist malaria and outreproduce homozygotes`, `A high recurrent mutation rate from HbA to HbS`, `Genetic drift in large tropical populations`, `The HbS allele is dominant, shielding it from selection`],
             correctAnswer: 0,
-            explanation: `This is the textbook balanced polymorphism: where malaria kills HbA/HbA individuals, the heterozygote has the highest fitness, and overdominance holds both alleles in the population. Mutation rates (about $10^{-5}$ per generation or less) are far too small, drift is weak in large populations and would not track malaria geography, and HbS is not dominant for the disease phenotype.`
+            explanation: `This is the textbook balanced polymorphism: where malaria kills HbA/HbA individuals, the heterozygote resists malaria and has the highest fitness, outreproducing both homozygotes, and this heterozygote advantage (overdominance) holds both alleles in the population. Mutation rates (about $10^{-5}$ per generation or less) are far too small, drift is weak in large populations and would not track malaria geography, and HbS is not dominant for the disease phenotype.`
           },
           {
             question: `A population of songbirds experiences strong selection in which intermediate-sized individuals survive best. After many generations, the expected population-genetic outcome is:`,
@@ -88,15 +88,15 @@ So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
           },
           {
             question: `In a population with no selection, mutation, migration, or drift, several generations of intense inbreeding will:`,
-            options: [`Decrease the frequency of the recessive allele`, `Increase homozygosity while leaving allele frequencies unchanged`, `Increase the frequency of the dominant allele`, `Increase heterozygosity above 2pq`],
+            options: [`Raise heterozygosity but leave allele frequencies unchanged`, `Raise homozygosity but leave allele frequencies unchanged`, `Raise homozygosity and lower the recessive allele frequency`, `Raise heterozygosity and lower the recessive allele frequency`],
             correctAnswer: 1,
-            explanation: `Inbreeding is nonrandom mating: it reshuffles alleles into more homozygous GENOTYPES — heterozygosity falls to $2pq(1-F)$ — but no allele copies are added or removed, so $p$ and $q$ are untouched. Allele frequencies only change afterward if the newly exposed recessive homozygotes suffer reduced fitness (inbreeding depression), which is a separate, selective step.`
+            explanation: `Inbreeding is nonrandom mating: it reshuffles alleles into more homozygous GENOTYPES — heterozygosity falls to $2pq(1-F)$ — but no allele copies are added or removed, so $p$ and $q$ are untouched. Allele frequencies only change afterward if the newly exposed recessive homozygotes suffer reduced fitness (inbreeding depression), which is a separate, selective step, excluded here by the absence of selection. Heterozygosity drops rather than rises, and the recessive allele frequency does not fall without selection.`
           },
           {
             question: `A fully penetrant lethal recessive allele is at frequency q = 0.01. Selection against it is extremely slow because:`,
-            options: [`The mutation rate back to the normal allele is high`, `Lethal alleles are protected by heterozygote advantage`, `Almost all copies of the allele are carried by phenotypically normal heterozygotes, invisible to selection`, `Selection cannot act on alleles rarer than 5%`],
+            options: [`The mutation rate back to the normal allele is high`, `Lethal alleles are protected by heterozygote advantage`, `Nearly all copies are in unaffected carriers`, `Selection cannot act on alleles rarer than 5%`],
             correctAnswer: 2,
-            explanation: `At $q = 0.01$, homozygotes are $q^2 = 0.0001$ of the population while carriers are about $2q = 0.02$ — roughly 200 carriers for every affected individual. Selection removes only the $q^2$ class each generation, so the decline is glacial. Nothing in the problem invokes back-mutation or overdominance, and there is no 5% threshold below which selection stops acting.`
+            explanation: `At $q = 0.01$, homozygotes are $q^2 = 0.0001$ of the population while carriers are about $2q = 0.02$ — roughly 200 carriers for every affected individual. Carriers are phenotypically normal, so the allele copies they hold are invisible to selection, which removes only the $q^2$ class each generation; the decline is glacial. Nothing in the problem invokes back-mutation or overdominance, and there is no 5% threshold below which selection stops acting.`
           }
         ]
       }

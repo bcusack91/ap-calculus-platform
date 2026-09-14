@@ -102,9 +102,9 @@ Carriers $= 0.1128 \\times 10000 = 1128$ people.
           },
           {
             question: `Which situation still satisfies Hardy-Weinberg assumptions?`,
-            options: [`Individuals preferentially mate with phenotypically similar partners`, `A small island population of 30 breeding adults`, `A very large population in which every genotype survives and reproduces equally well, with no migration or new mutations`, `Steady one-way migration from a neighboring population each generation`],
+            options: [`Individuals preferentially mate with phenotypically similar partners`, `A small island population of 30 breeding adults`, `A huge, closed population with equal fitness and no mutation`, `Steady one-way migration from a neighboring population each generation`],
             correctAnswer: 2,
-            explanation: `H-W requires all five conditions at once: no selection, no mutation, no migration, random mating, and large population size. Assortative mating violates random mating, 30 adults invites drift, and one-way migration is gene flow.`
+            explanation: `A huge population whose genotypes survive and reproduce equally well, with no migration in or out and no new mutations, violates none of the stated assumptions, unlike every other option. H-W requires all five conditions at once: no selection, no mutation, no migration, random mating, and large population size. Assortative mating violates random mating, 30 adults invites drift, and one-way migration is gene flow.`
           },
           {
             question: `In a Hardy-Weinberg population, 64% of individuals display the dominant phenotype. What fraction of the population is heterozygous?`,
@@ -114,9 +114,9 @@ Carriers $= 0.1128 \\times 10000 = 1128$ people.
           },
           {
             question: `Why must the Hardy-Weinberg solving process begin with the recessive phenotype frequency rather than the dominant one?`,
-            options: [`Recessive alleles are more common than dominant alleles`, `Dominant phenotypes cannot be counted accurately in the field`, `The recessive allele frequency is always 0.5`, `The recessive phenotype corresponds to exactly one genotype ($q^2$), while the dominant phenotype pools two genotypes ($p^2 + 2pq$)`],
+            options: [`Recessive alleles are more common than dominant alleles`, `Dominant phenotypes cannot be counted accurately in the field`, `The recessive allele frequency is always exactly 0.5`, `Only the recessive phenotype has a single genotype`],
             correctAnswer: 3,
-            explanation: `Only the recessive class maps one-to-one onto a genotype, so only it yields an allele frequency by a simple square root. Dominance says nothing about how COMMON an allele is — dominant alleles can be rare (e.g., Huntington), which eliminates the first distractor.`
+            explanation: `The recessive phenotype corresponds to exactly one genotype ($q^2$), while the dominant phenotype pools two genotypes ($p^2 + 2pq$). Only the recessive class maps one-to-one onto a genotype, so only it yields an allele frequency by a simple square root. Dominance says nothing about how COMMON an allele is (dominant alleles can be rare, e.g., Huntington), so recessive alleles are not generally more common, and no allele frequency is fixed at 0.5. Dominant phenotypes can be counted just as easily; the problem is that their count cannot be square-rooted.`
           }
         ]
       }

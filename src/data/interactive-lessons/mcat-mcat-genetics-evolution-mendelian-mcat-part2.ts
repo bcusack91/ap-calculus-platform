@@ -78,9 +78,9 @@ $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
         questions: [
           {
             question: `Two genes show a recombination frequency of 50% in a test cross. Which conclusion is best supported?`,
-            options: [`The genes are exactly 50 nucleotides apart`, `The genes assort as if independent — they are on different chromosomes or very far apart on the same one`, `The genes are tightly linked`, `Crossing over never occurs between them`],
+            options: [`The genes are exactly 50 nucleotides apart`, `The genes behave as if unlinked`, `The genes lie close together on one chromosome`, `Crossing over never occurs between them`],
             correctAnswer: 1,
-            explanation: `RF saturates at 50%, the value expected for independent assortment. A 50% RF therefore cannot distinguish "different chromosomes" from "same chromosome but very far apart." Tightly linked genes would show RF near 0%, not 50%.`
+            explanation: `RF saturates at 50%, the value expected for independent assortment. A 50% RF therefore cannot distinguish "different chromosomes" from "same chromosome but very far apart." The genes assort as if independent: they are on different chromosomes or very far apart on the same one. Tightly linked genes lying close together would show RF near 0%, not 50%.`
           },
           {
             question: `In a test cross of a dihybrid, the four offspring classes appear at 44%, 44%, 6%, and 6%. The recombination frequency between the genes is:`,
@@ -90,19 +90,19 @@ $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
           },
           {
             question: `A test cross of a dihybrid fly yields mostly $Ab$ and $aB$ offspring gamete types, with few $AB$ and $ab$. The heterozygous parent's chromosome configuration was:`,
-            options: [`Trans (repulsion): A with b on one homolog, a with B on the other`, `Cis (coupling): A with B on one homolog`, `The genes are unlinked`, `The parent was homozygous at both loci`],
+            options: [`Trans, with A and b on one homolog`, `Cis, with A and B on one homolog`, `Unlinked, on separate chromosomes`, `Homozygous at both loci`],
             correctAnswer: 0,
-            explanation: `Parental classes are the most frequent, and here they are $Ab$ and $aB$ — so those combinations sat together on the parent's homologs: $Ab/aB$, the trans (repulsion) arrangement. Cis would have made $AB$ and $ab$ the majority classes.`
+            explanation: `Parental classes are the most frequent, and here they are $Ab$ and $aB$ — so those combinations sat together on the parent's homologs: $Ab/aB$, the trans (repulsion) arrangement. With A and b on one homolog, a and B sit on the other. Cis (coupling) would have made $AB$ and $ab$ the majority classes, unlinked genes would give four roughly equal classes, and a parent homozygous at both loci would produce only one gamete type.`
           },
           {
             question: `Why can recombination frequency never exceed 50%, even for genes at opposite ends of a long chromosome?`,
-            options: [`Crossing over occurs in at most 50% of meioses`, `Each crossover involves only two of the four chromatids, so even guaranteed (or multiple) crossovers leave on average half the products parental`, `Natural selection removes recombinant gametes`, `Genes more than 50 cM apart cannot recombine`],
+            options: [`Crossing over occurs in at most half of all meioses`, `Each crossover involves only two of the four chromatids`, `Natural selection removes recombinant gametes`, `Genes more than 50 cM apart cannot recombine`],
             correctAnswer: 1,
-            explanation: `A single crossover involves 2 of the 4 chromatids of a tetrad, yielding 2 recombinant + 2 parental products (50% recombinant for that meiosis). Multiple crossovers can restore parental arrangements, so averaged over many meioses the recombinant fraction approaches but never exceeds 50%.`
+            explanation: `A single crossover involves 2 of the 4 chromatids of a tetrad, yielding 2 recombinant + 2 parental products (50% recombinant for that meiosis). Multiple crossovers can restore parental arrangements, so averaged over many meioses the recombinant fraction approaches but never exceeds 50%, even when crossing over is guaranteed. Crossing over occurs in most meioses along a long chromosome, selection does not remove recombinant gametes, and genes more than 50 cM apart recombine freely.`
           },
           {
             question: `Reciprocal crosses (mother's and father's phenotypes swapped) give clearly different F1 results for a particular trait. This is evidence that the trait is:`,
-            options: [`Autosomal dominant`, `Autosomal recessive`, `Controlled by two unlinked genes`, `Sex-linked (or otherwise dependent on parental origin)`],
+            options: [`Autosomal dominant`, `Autosomal recessive`, `Controlled by two unlinked genes`, `Sex-linked`],
             correctAnswer: 3,
             explanation: `For autosomal genes, reciprocal crosses give identical results because each parent contributes one autosomal allele either way. X-linked genes break this symmetry: sons get their only X from the mother, so swapping the parents changes son phenotypes. (Mitochondrial and imprinted genes also give reciprocal-cross differences.)`
           }

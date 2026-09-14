@@ -64,7 +64,7 @@ export const mcatGeneticsPart2Data = {
         questions: [
           {
             question: `A mother with blood type A (genotype $I^Ai$) and a father with blood type B (genotype $I^Bi$) can have children with which blood types?`,
-            options: [`A, B, AB, or O — all four are possible`, `Only A or B`, `Only AB`, `Only A, B, or AB`],
+            options: [`A, B, AB, or O`, `A or B only`, `AB only`, `AB or O only`],
             correctAnswer: 0,
             explanation: `Cross $I^Ai \\times I^Bi$: offspring can be $I^AI^B$ (AB), $I^Ai$ (A), $I^Bi$ (B), or ii (O). All four blood types are possible — a classic MCAT genetics question.`
           },
@@ -76,19 +76,19 @@ export const mcatGeneticsPart2Data = {
           },
           {
             question: `What is the key difference between incomplete dominance and codominance?`,
-            options: [`In incomplete dominance the heterozygote shows a blended intermediate; in codominance BOTH alleles are fully and separately expressed`, `Incomplete dominance involves multiple alleles; codominance does not`, `Codominance always produces a 3:1 ratio`, `They are two names for the same phenomenon`],
+            options: [`Heterozygotes are intermediate in incomplete dominance but express both alleles in codominance`, `Heterozygotes express both alleles in incomplete dominance but are intermediate in codominance`, `Heterozygotes are intermediate in both; codominance simply involves more than two alleles`, `Heterozygotes express both alleles in both; incomplete dominance simply involves more alleles`],
             correctAnswer: 0,
-            explanation: `Incomplete dominance = a new intermediate phenotype (red + white → pink). Codominance = both phenotypes appear simultaneously and distinctly (type AB blood shows BOTH A and B antigens; roan cattle show both red and white hairs).`
+            explanation: `Incomplete dominance = a new intermediate phenotype (red + white → pink). Codominance = both phenotypes appear simultaneously and distinctly (type AB blood shows BOTH A and B antigens; roan cattle show both red and white hairs). Swapping the two definitions gets both backward, and the number of alleles is not what separates them: ABO blood type has three alleles yet its A and B alleles are codominant, while snapdragon flower color has only two alleles and shows incomplete dominance.`
           },
           {
             question: `A person with type O blood receives a transfusion of type A blood. What is the immediate immunological problem?`,
-            options: [`The recipient's anti-A antibodies attack the donor A antigens, causing agglutination`, `The donor's anti-B antibodies attack the recipient's cells`, `The recipient lacks antibodies, so nothing happens`, `The A antigen converts the recipient's cells to type A`],
+            options: [`The recipient's anti-A antibodies agglutinate the donor's red cells`, `The donor's anti-B antibodies agglutinate the recipient's red cells`, `The recipient's anti-B antibodies agglutinate the donor's red cells`, `The recipient's anti-O antibodies agglutinate the donor's red cells`],
             correctAnswer: 0,
-            explanation: `Type O plasma contains BOTH anti-A and anti-B antibodies. Transfused type A red cells carry A antigen, so the recipient's anti-A antibodies bind and agglutinate them → a dangerous transfusion reaction. This is why type O individuals can only receive type O blood (they are universal DONORS, not universal recipients).`
+            explanation: `Type O plasma contains BOTH anti-A and anti-B antibodies. Transfused type A red cells carry A antigen, so the recipient's anti-A antibodies bind and agglutinate them → a dangerous transfusion reaction. This is why type O individuals can only receive type O blood (they are universal DONORS, not universal recipients). Anti-B antibodies have no target here: type A donor cells carry no B antigen, and type O recipient cells carry neither A nor B antigen for the donor's anti-B to bind. There is no anti-O antibody, because type O cells lack A and B antigens rather than carrying an O antigen.`
           },
           {
             question: `In Labrador retrievers, the B gene controls pigment (B = black, b = brown) but a second gene E controls whether ANY pigment is deposited (ee = yellow regardless of B genotype). A yellow lab that is "ee" appears yellow even if it carries BB. This is an example of:`,
-            options: [`Epistasis — the E gene masks the expression of the B gene`, `Incomplete dominance`, `Pleiotropy`, `Codominance`],
+            options: [`Epistasis`, `Incomplete dominance`, `Pleiotropy`, `Codominance`],
             correctAnswer: 0,
             explanation: `Epistasis occurs when one gene (E) masks or modifies the phenotypic effect of another gene (B) at a different locus. An ee genotype blocks pigment deposition entirely, so the dog is yellow no matter what alleles are present at the B locus. Contrast with pleiotropy, where ONE gene affects MANY traits.`
           }

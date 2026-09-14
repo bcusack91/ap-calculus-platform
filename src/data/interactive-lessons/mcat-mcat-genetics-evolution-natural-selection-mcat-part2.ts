@@ -84,9 +84,9 @@ Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, t
           },
           {
             question: `A peacock's enormous train increases his predation risk. Its persistence over evolutionary time is best explained by the fact that:`,
-            options: [`Traits that harm survival cannot actually be heritable`, `Fitness includes mating success — females preferentially mate with elaborate-trained males, and the ornament can signal male condition`, `The train protects peacocks from predators by startling them, so it raises survival overall`, `Peahens are forced to mate with the nearest male regardless of his train`],
+            options: [`Traits that harm survival cannot actually be heritable`, `Females prefer elaborate trains, raising mating success`, `The train startles predators, so it raises survival overall`, `Peahens must mate with the nearest male regardless of train`],
             correctAnswer: 1,
-            explanation: `This is intersexual selection: a survival cost can be outweighed by a mating-success benefit, and an honest-indicator (handicap) logic explains why choice for the ornament persists — only high-condition males can afford it. The startle idea contradicts the premise that the train raises predation risk, and denying heritability contradicts the trait's evolutionary elaboration.`
+            explanation: `Fitness includes mating success, and females preferentially mate with elaborate-trained males. This is intersexual selection: a survival cost can be outweighed by a mating-success benefit, and an honest-indicator (handicap) logic explains why choice for the ornament persists — only high-condition males can afford it. The startle idea contradicts the premise that the train raises predation risk, denying heritability contradicts the trait's evolutionary elaboration, and forced mating with the nearest male would remove any selection on the train at all.`
           },
           {
             question: `An individual can perform an act that costs it C = 2 offspring-equivalents and gives a full sibling (r = 0.5) a benefit of B = 6 offspring-equivalents. According to Hamilton's rule, the act:`,
@@ -96,9 +96,9 @@ Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, t
           },
           {
             question: `In African seedcrackers, birds with large bills efficiently crack hard seeds and birds with small bills efficiently process soft seeds, while intermediate-billed birds handle both poorly. Continued selection of this kind, combined with a tendency of birds to mate with similar-billed partners, would most likely produce:`,
-            options: [`A single intermediate bill size with reduced variance`, `A steady increase in mean bill size`, `A bimodal bill-size distribution — a possible first step toward sympatric speciation`, `No evolutionary change, since both extremes are favored equally`],
+            options: [`A single intermediate bill size with reduced variance`, `A steady increase in the mean bill size`, `A bimodal distribution of bill sizes`, `No evolutionary change, since both extremes are favored equally`],
             correctAnswer: 2,
-            explanation: `Favoring both extremes over the middle is disruptive selection, which inflates variance and can split the distribution into two modes. Adding assortative mating restricts gene flow between the modes — the recipe for sympatric divergence. Reduced variance around the middle would be stabilizing selection, and a steady mean increase would be directional; "no change" is wrong because the intermediate class is actively being removed.`
+            explanation: `Favoring both extremes over the middle is disruptive selection, which inflates variance and can split the distribution into two modes. Adding assortative mating restricts gene flow between the modes — the recipe for sympatric divergence, so the bimodal outcome is a possible first step toward sympatric speciation. Reduced variance around the middle would be stabilizing selection, and a steady mean increase would be directional; "no change" is wrong because the intermediate class is actively being removed.`
           }
         ]
       }

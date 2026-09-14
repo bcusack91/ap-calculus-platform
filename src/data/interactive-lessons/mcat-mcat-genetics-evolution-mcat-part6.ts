@@ -67,9 +67,9 @@ export const mcatGeneticsPart6Data = {
         questions: [
           {
             question: `Two species of frogs live in the same pond but breed in different months. This is an example of:`,
-            options: [`Temporal (seasonal) isolation — a prezygotic barrier`, `Postzygotic isolation`, `Allopatric speciation`, `Hybrid sterility`],
+            options: [`Temporal isolation`, `Postzygotic isolation`, `Allopatric speciation`, `Mechanical isolation`],
             correctAnswer: 0,
-            explanation: `Temporal isolation means the two species breed at different times, preventing interbreeding. It is prezygotic because it prevents mating (and thus fertilization) from occurring in the first place.`
+            explanation: `Temporal isolation means the two species breed at different times, preventing interbreeding. It is prezygotic because it prevents mating (and thus fertilization) from occurring in the first place. Mechanical isolation is also prezygotic, but it involves incompatible reproductive structures, not different breeding times; allopatric speciation requires geographic separation, which the shared pond rules out.`
           },
           {
             question: `A mule (horse $\\times$ donkey) is robust and healthy but cannot produce offspring. This represents which type of reproductive barrier?`,
@@ -91,7 +91,7 @@ export const mcatGeneticsPart6Data = {
           },
           {
             question: `According to the model of punctuated equilibrium, the fossil record should typically show:`,
-            options: [`Long periods of little morphological change interrupted by brief bursts of rapid change`, `A smooth, continuous gradient of change at a constant rate`, `No change at all over geologic time`, `Change only in response to gene flow`],
+            options: [`Long stasis interrupted by brief bursts of rapid change`, `Slow, continuous change at a constant rate`, `No change at all over geologic time`, `Change only in response to gene flow`],
             correctAnswer: 0,
             explanation: `Punctuated equilibrium proposes that species remain morphologically stable (stasis) for long stretches, then change rapidly during short intervals (often associated with speciation events). This contrasts with gradualism, which predicts slow, steady, continuous change.`
           }

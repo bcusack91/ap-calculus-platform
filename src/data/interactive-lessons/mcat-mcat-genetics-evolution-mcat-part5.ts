@@ -70,9 +70,9 @@ Fitness is **not** about being the strongest or living the longest — it is abo
         questions: [
           {
             question: `After a hurricane destroys 90% of a lizard population, the surviving 10% have different allele frequencies than the original population. This is:`,
-            options: [`Bottleneck effect (genetic drift) — random survivors, not selected by fitness`, `Natural selection`, `Gene flow`, `Directional selection`],
+            options: [`Bottleneck effect`, `Natural selection`, `Gene flow`, `Directional selection`],
             correctAnswer: 0,
-            explanation: `A bottleneck drastically reduces population size at random. Survivors aren't necessarily more fit — they were just lucky. Their allele frequencies may differ from the original population purely by chance.`
+            explanation: `A bottleneck drastically reduces population size at random. Survivors aren't necessarily more fit — they were just lucky. Their allele frequencies may differ from the original population purely by chance. This is a form of genetic drift, not selection (which requires survival tied to heritable fitness differences) and not gene flow (no migrants are involved).`
           },
           {
             question: `A population of bacteria is exposed to an antibiotic. Over time, the mean resistance of the population steadily increases as resistant cells out-reproduce susceptible ones. This is an example of:`,
@@ -82,15 +82,15 @@ Fitness is **not** about being the strongest or living the longest — it is abo
           },
           {
             question: `On the MCAT, "evolutionary fitness" is BEST defined as:`,
-            options: [`An organism's relative reproductive success — the number of viable, fertile offspring it contributes to the next generation`, `The physical strength and endurance of an organism`, `The longest lifespan within a population`, `The total body size of an organism`],
+            options: [`An organism's reproductive success relative to others in the population`, `An organism's physical strength relative to others in the population`, `An organism's body size relative to others in the population`, `An organism's survival rate relative to others in the population`],
             correctAnswer: 0,
-            explanation: `Fitness is reproductive success relative to others in the population, NOT strength or longevity. An organism that survives long but never reproduces has zero fitness, while a short-lived organism that leaves many fertile offspring has high fitness.`
+            explanation: `Fitness is reproductive success relative to others in the population, measured by the viable, fertile offspring an organism contributes to the next generation, NOT strength, size, or survival. An organism that survives long but never reproduces has zero fitness, while a short-lived organism that leaves many fertile offspring has high fitness.`
           },
           {
             question: `A peacock's elaborate tail makes it more visible to predators yet persists in the population. The best explanation is:`,
-            options: [`Intersexual selection — peahens preferentially mate with males bearing larger tails, so the mating advantage outweighs the survival cost`, `Genetic drift in a small population`, `Stabilizing selection on tail size`, `Gene flow from a neighboring population`],
+            options: [`Intersexual selection through mate choice`, `Intrasexual selection by male combat`, `Stabilizing selection on tail size`, `Genetic drift in a small population`],
             correctAnswer: 0,
-            explanation: `This is sexual selection, specifically intersexual selection (mate choice). The trait reduces survival but increases mating success enough that its net effect on fitness is positive, so the alleles for large tails spread despite the predation cost.`
+            explanation: `This is sexual selection, specifically intersexual selection (mate choice). The trait reduces survival but increases mating success enough that its net effect on fitness is positive, so the alleles for large tails spread despite the predation cost: peahens preferentially mate with males bearing larger tails. The tail is an ornament judged by females, not a weapon used in male-male combat (intrasexual selection), and a trait maintained by a consistent mating advantage is not explained by random drift or by selection favoring average tail size.`
           },
           {
             question: `Two previously separated populations begin exchanging migrants each generation. Holding everything else constant, the expected effect of this gene flow is to:`,

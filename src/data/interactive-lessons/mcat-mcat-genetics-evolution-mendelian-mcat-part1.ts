@@ -75,7 +75,7 @@ $P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$
         questions: [
           {
             question: `Which meiotic event is the physical basis of Mendel's Law of Segregation?`,
-            options: [`Crossing over in prophase I`, `Separation of homologous chromosomes in anaphase I`, `Separation of sister chromatids in anaphase II`, `Alignment of chromosomes in metaphase II`],
+            options: [`Crossing over between homologs in prophase I`, `Separation of homologous chromosomes in anaphase I`, `Separation of sister chromatids in anaphase II`, `Alignment of chromosomes in metaphase II`],
             correctAnswer: 1,
             explanation: `The two alleles of a gene sit on the two homologous chromosomes. When homologs separate in anaphase I, the alleles segregate into different cells — the Law of Segregation. (Metaphase I ORIENTATION underlies independent assortment; anaphase II separates identical sister chromatids.)`
           },
@@ -93,13 +93,13 @@ $P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$
           },
           {
             question: `Two parents are both Aa. What is the probability that at least one of their three children is homozygous recessive (aa)?`,
-            options: [`$1 - (3/4)^3 = 37/64$`, `$(1/4)^3 = 1/64$`, `$3/4$`, `$3 \\times 1/4 = 3/4$`],
+            options: [`$37/64$`, `$1/64$`, `$3/4$`, `$27/64$`],
             correctAnswer: 0,
-            explanation: `Use the complement: $P(\\text{no aa child}) = \\left(\\tfrac{3}{4}\\right)^3 = \\tfrac{27}{64}$, so $P(\\text{at least one}) = 1 - \\tfrac{27}{64} = \\tfrac{37}{64}$. Adding $\\tfrac{1}{4}$ three times double-counts families with multiple aa children.`
+            explanation: `Use the complement: $P(\\text{no aa child}) = \\left(\\tfrac{3}{4}\\right)^3 = \\tfrac{27}{64}$, so $P(\\text{at least one}) = 1 - \\tfrac{27}{64} = \\tfrac{37}{64}$. Adding $\\tfrac{1}{4}$ three times gives 3/4 and double-counts families with multiple aa children. 1/64 is the chance that ALL three children are aa, and 27/64 is the chance that NONE is.`
           },
           {
             question: `A researcher test-crosses a purple-flowered plant of unknown genotype and obtains 62 purple and 58 white offspring. The best conclusion is that the tested plant was:`,
-            options: [`Homozygous dominant (PP)`, `Heterozygous (Pp)`, `Homozygous recessive (pp)`, `Impossible to determine without a larger sample`],
+            options: [`Homozygous dominant (PP)`, `Heterozygous (Pp)`, `Homozygous recessive (pp)`, `Impossible to determine from these data`],
             correctAnswer: 1,
             explanation: `A test cross is unknown $\\times$ pp. The observed ratio is very close to $1:1$, the signature of $Pp \\times pp$ ($\\tfrac{1}{2}$ purple, $\\tfrac{1}{2}$ white). PP would give all purple offspring, and a pp plant would have white flowers itself. With 120 offspring, the $1:1$ result is statistically convincing.`
           }

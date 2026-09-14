@@ -71,15 +71,15 @@ The **effective population size** $N_e$ is the size of an idealized population t
           },
           {
             question: `Ellis-van Creveld syndrome (autosomal recessive) is far more common among the Old Order Amish, descended from about 200 founders, than in the general population. The elevated frequency is best explained by:`,
-            options: [`Higher mutation rates in the Amish population`, `The founder effect — chance over-representation of the allele among a small founding group`, `Natural selection favoring the allele in farming environments`, `Gene flow from neighboring communities`],
+            options: [`Higher mutation rates in the Amish population`, `The founder effect, a form of genetic drift`, `Natural selection favoring the allele in farming environments`, `Gene flow from neighboring non-Amish communities`],
             correctAnswer: 1,
-            explanation: `A small founding group is a random sample of the source gene pool; if one founder happened to carry a rare allele, its frequency in the new population starts far above the source frequency. Endogamy then preserves the difference. There is no evidence of a fitness advantage, and gene flow would DILUTE the difference, not create it.`
+            explanation: `A small founding group is a random sample of the source gene pool; if one founder happened to carry a rare allele, its frequency in the new population starts far above the source frequency. Endogamy then preserves the difference. This chance over-representation of the allele among a small founding group is the founder effect, a form of genetic drift. There is no evidence of a fitness advantage or of an elevated mutation rate, and gene flow would DILUTE the difference, not create it.`
           },
           {
             question: `A neutral allele is currently at frequency 0.2 in a small, isolated population with no mutation. The probability that this allele eventually becomes fixed is:`,
-            options: [`0.5, because fixation and loss are equally likely`, `0.2`, `0, because rare alleles are always lost`, `1, because drift eventually fixes every allele`],
+            options: [`0.5, since both outcomes are equally likely`, `0.2, equal to its current frequency`, `0, since rare alleles are always lost`, `1, since drift eventually fixes every allele`],
             correctAnswer: 1,
-            explanation: `For a neutral allele, the probability of eventual fixation equals its current frequency (each of the population's allele copies is equally likely to be the ultimate ancestor, and this allele is 20% of the copies). Drift guarantees fixation OR loss, but the two outcomes are not equally likely unless the frequency is 0.5.`
+            explanation: `For a neutral allele, the probability of eventual fixation equals its current frequency (each of the population's allele copies is equally likely to be the ultimate ancestor, and this allele is 20% of the copies). Drift guarantees fixation OR loss, but the two outcomes are not equally likely unless the frequency is 0.5. Rare neutral alleles are usually but not always lost, and drift fixes only one allele at a locus, so it cannot fix every allele.`
           },
           {
             question: `Two isolated island populations of the same species have drifted to very different allele frequencies. A bridge now allows individuals to move and interbreed freely between the islands. Over time, gene flow should:`,
@@ -89,9 +89,9 @@ The **effective population size** $N_e$ is the size of an idealized population t
           },
           {
             question: `In a drift experiment with many small replicate populations starting at allele frequency 0.5, which observation would argue for SELECTION rather than drift acting on the allele?`,
-            options: [`Half the populations fix the allele and half lose it`, `Frequencies scatter widely in both directions across replicates`, `Nearly all replicate populations shift in the same direction, and larger replicates shift just as consistently`, `Within-population heterozygosity declines over generations`],
+            options: [`Half the replicates fix it and half lose it`, `Frequencies scatter both ways across replicates`, `Replicates shift the same way regardless of size`, `Heterozygosity declines within each population`],
             correctAnswer: 2,
-            explanation: `Drift is directionless: replicates scatter both ways, and the effect weakens with size. A consistent, size-independent shift in one direction across replicates means genotypes differ in fitness — selection. Declining heterozygosity and symmetric fixation/loss are exactly what drift predicts.`
+            explanation: `Drift is directionless: replicates scatter both ways, and the effect weakens with size. Nearly all replicates shifting in the same direction, with larger replicates shifting just as consistently, means genotypes differ in fitness — selection. Declining heterozygosity and symmetric fixation/loss are exactly what drift predicts.`
           }
         ]
       }

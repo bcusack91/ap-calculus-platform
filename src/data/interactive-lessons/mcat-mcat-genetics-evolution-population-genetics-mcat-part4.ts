@@ -105,9 +105,9 @@ Twelve to thirteen affected males for every affected female — the hallmark of 
           },
           {
             question: `Researchers genotype a wide sample drawn from across an island and find significantly FEWER heterozygotes than H-W predicts, though allele frequencies are stable across generations. The most likely explanation is:`,
-            options: [`Inbreeding, assortative mating, or the unrecognized pooling of distinct subpopulations (Wahlund effect)`, `Heterozygote advantage at this locus`, `A high mutation rate at this locus`, `Strong directional selection against the recessive allele`],
+            options: [`Nonrandom mating or pooled subpopulations`, `Heterozygote advantage or balancing selection`, `A high mutation rate at this locus`, `Strong directional selection against the recessive allele`],
             correctAnswer: 0,
-            explanation: `A heterozygote deficit with unchanged allele frequencies is the signature of nonrandom mating or hidden substructure — pooling two H-W subpopulations with different allele frequencies mimics inbreeding in the combined sample. Heterozygote advantage would produce an EXCESS of heterozygotes, and selection or recurrent mutation would shift allele frequencies over time, which was ruled out.`
+            explanation: `A heterozygote deficit with unchanged allele frequencies is the signature of nonrandom mating or hidden substructure — pooling two H-W subpopulations with different allele frequencies mimics inbreeding in the combined sample. Inbreeding, assortative mating, or the unrecognized pooling of distinct subpopulations (the Wahlund effect) all fit. Heterozygote advantage, a form of balancing selection, would produce an EXCESS of heterozygotes, and selection or recurrent mutation would shift allele frequencies over time, which was ruled out.`
           },
           {
             question: `A chi-square test compares observed AA/Aa/aa counts to H-W expectations, with the allele frequency estimated from the same sample. The appropriate degrees of freedom is:`,
@@ -119,7 +119,7 @@ Twelve to thirteen affected males for every affected female — the hallmark of 
             question: `An autosomal recessive disease affects 1 in 10,000 people. A healthy man whose brother has the disease (both parents unaffected) marries an unrelated woman from the general population. The approximate probability their first child is affected is:`,
             options: [`1/600`, `1/300`, `1/150`, `1/10,000`],
             correctAnswer: 1,
-            explanation: `The man: his parents are obligate carriers, and given he is unaffected, he is Aa with probability $2/3$. The woman: $q^2 = 10^{-4}$ gives $q = 0.01$, so her carrier probability is about $2q = 1/50$. Child affected: $\\tfrac{2}{3} \\times \\tfrac{1}{50} \\times \\tfrac{1}{4} = \\tfrac{1}{300}$. Using $1/2$ instead of $2/3$ for the brother (forgetting to condition on his being unaffected) gives the 1/400-ish trap; forgetting the final $\\tfrac{1}{4}$ cross gives answers near 1/75.`
+            explanation: `The man: his parents are obligate carriers, and given he is unaffected, he is Aa with probability $2/3$. The woman: $q^2 = 10^{-4}$ gives $q = 0.01$, so her carrier probability is about $2q = 1/50$. Child affected: $\\tfrac{2}{3} \\times \\tfrac{1}{50} \\times \\tfrac{1}{4} = \\tfrac{1}{300}$. Using $1/3$ for the man's carrier probability (confusing it with his chance of being AA) gives 1/600; using $1/2$ instead of $1/4$ for the final Aa x Aa cross gives 1/150; and 1/10,000 is the general population risk, which ignores the family history.`
           }
         ]
       }

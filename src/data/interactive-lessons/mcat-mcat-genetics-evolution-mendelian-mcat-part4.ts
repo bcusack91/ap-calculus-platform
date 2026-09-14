@@ -73,9 +73,9 @@ So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-
         questions: [
           {
             question: `A cross of two yellow-coated mice yields 62 yellow and 31 non-yellow pups ($2:1$). Repeated crosses never produce a true-breeding yellow line. The best explanation is:`,
-            options: [`Yellow is recessive`, `Yellow allele is dominant for coat color but homozygous lethal`, `Incomplete penetrance of the yellow allele`, `The yellow allele is X-linked`],
+            options: [`Yellow is recessive to non-yellow`, `Yellow is dominant but homozygous lethal`, `Incomplete penetrance of yellow`, `Yellow is X-linked and dominant`],
             correctAnswer: 1,
-            explanation: `Expected $3:1$ becomes $2:1$ when the homozygous $A^YA^Y$ class dies in utero: survivors are $2\\ A^Ya$ (yellow) $: 1\\ aa$ (non-yellow). The absence of true-breeding yellows confirms that all yellow mice are heterozygotes. This is the classic recessive-lethal/dominant-visible allele.`
+            explanation: `Expected $3:1$ becomes $2:1$ when the homozygous $A^YA^Y$ class dies in utero: survivors are $2\\ A^Ya$ (yellow) $: 1\\ aa$ (non-yellow). The absence of true-breeding yellows confirms that all yellow mice are heterozygotes. This is the classic recessive-lethal/dominant-visible allele: dominant for coat color but lethal when homozygous. A recessive yellow allele would make every yellow $\\times$ yellow pup yellow, incomplete penetrance would not prevent true-breeding yellow lines or produce a steady $2:1$ ratio, and an X-linked dominant allele would still allow true-breeding yellow lines.`
           },
           {
             question: `In snapdragons, a red $\\times$ white cross gives all pink F1, and pink $\\times$ pink gives 1 red : 2 pink : 1 white. If instead each heterozygote had displayed BOTH red and white patches, the allele relationship would be called:`,
@@ -91,13 +91,13 @@ So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-
           },
           {
             question: `A dihybrid F2 shows 9 agouti : 3 black : 4 albino mice. The albino class combines what would have been the "3" and "1" categories. This pattern indicates:`,
-            options: [`Recessive epistasis — cc blocks pigment production regardless of the agouti/black genotype`, `Independent assortment with a recessive lethal`, `Codominance between the agouti and albino alleles`, `X-linked inheritance of coat color`],
+            options: [`Recessive epistasis`, `Homozygous lethality`, `Codominance at the albino locus`, `Dominant epistasis`],
             correctAnswer: 0,
-            explanation: `$9:3:4$ is the signature of recessive epistasis: homozygous $cc$ (no pigment at all) masks whatever the second locus (agouti vs. black) specifies, merging the $ccB\\_$ (3) and $ccbb$ (1) classes into one albino class of 4. The pigment-production gene is epistatic to the pigment-pattern gene.`
+            explanation: `$9:3:4$ is the signature of recessive epistasis: homozygous $cc$ (no pigment at all) masks whatever the second locus (agouti vs. black) specifies, merging the $ccB\\_$ (3) and $ccbb$ (1) classes into one albino class of 4. The pigment-production gene is epistatic to the pigment-pattern gene: cc blocks pigment production regardless of the agouti/black genotype. Dominant epistasis gives $12:3:1$ instead, a homozygous lethal would remove a class rather than merge two, and codominance at a single locus cannot merge dihybrid classes.`
           },
           {
             question: `A researcher hypothesizes a $9:3:3:1$ ratio for 320 F2 offspring (expected 180:60:60:20) but observes 152:88:62:18, giving a large chi-square value with p below 0.01. The most appropriate conclusion is:`,
-            options: [`The data confirm independent assortment`, `The expected ratio should be recalculated with more degrees of freedom`, `Reject the 9:3:3:1 hypothesis and test an alternative such as linkage between the two genes`, `The sample size is too small to conclude anything`],
+            options: [`The data confirm independent assortment`, `The test needs more degrees of freedom`, `The 9:3:3:1 hypothesis should be rejected`, `The sample size is too small to conclude anything`],
             correctAnswer: 2,
             explanation: `A significant chi-square means the observed data are unlikely under the hypothesized ratio — reject $9:3:3:1$. The statistic does not identify the true model; the sensible next step is a specific alternative hypothesis (here, an excess of two classes suggests linkage) tested with a new cross. With n = 320, sample size is ample; df is fixed at $4 - 1 = 3$ by the number of classes.`
           }
