@@ -71,7 +71,7 @@ Enantiomers behave identically in every achiral environment. They differ only to
           },
           {
             question: `Two pure enantiomers of the same compound will differ in which property?`,
-            options: [`Boiling point`, `Direction of rotation of plane-polarized light`, `Solubility in water`, `Melting point`],
+            options: [`Boiling point`, `Sign of optical rotation`, `Solubility in water`, `Melting point`],
             correctAnswer: 1,
             explanation: `Enantiomers have identical physical properties in any achiral environment — same mp, bp, solubility, density. They differ only in the SIGN of optical rotation (equal magnitude, opposite direction) and in interactions with other chiral entities.`
           },
@@ -83,9 +83,9 @@ Enantiomers behave identically in every achiral environment. They differ only to
           },
           {
             question: `meso-Tartaric acid contains two stereocenters yet is optically inactive because:`,
-            options: [`The two stereocenters rotate light in the same direction`, `An internal mirror plane makes the molecule superimposable on its mirror image`, `It rapidly interconverts with its enantiomer at room temperature`, `Tartaric acid is a racemic mixture`],
+            options: [`The two stereocenters rotate light in the same direction`, `It has an internal mirror plane, so it is its own mirror image`, `It rapidly interconverts with its enantiomer at room temperature`, `It is a 50:50 mixture of the (R,R) and (S,S) forms`],
             correctAnswer: 1,
-            explanation: `A meso compound is achiral despite having stereocenters: an internal mirror plane means the molecule IS its own mirror image. The rotations of the two halves cancel internally. It is a single compound, not a mixture.`
+            explanation: `A meso compound is achiral despite having stereocenters: an internal mirror plane means the molecule IS its own mirror image. The rotations of the two halves cancel internally. It is a single compound, not a 50:50 mixture of (R,R) and (S,S) — that would be racemic tartaric acid.`
           },
           {
             question: `Which molecule contains a chirality center?`,

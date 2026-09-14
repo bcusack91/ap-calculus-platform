@@ -52,15 +52,15 @@ Directionality is crucial: polymerases synthesize nucleic acid in the 5' to 3' d
           },
           {
             question: `DNA polymerase requires:`,
-            options: [`A free $3\`-OH$ group to add nucleotides (needs a primer!)`, `A $5\`-OH$ group`, `No primer — it can start de novo`, `Only single-stranded DNA`],
+            options: [`A primer with a free $3'-OH$ group`, `A 5' triphosphate on the template strand`, `No primer — it can start de novo`, `Only single-stranded DNA`],
             correctAnswer: 0,
-            explanation: `DNA polymerase can only add nucleotides to an existing $3'-OH$ group. This is why primase must first lay down an RNA primer. RNA polymerase, in contrast, can start de novo.`
+            explanation: `DNA polymerase can only add nucleotides to an existing $3'-OH$ group. This is why primase must first lay down an RNA primer. RNA polymerase, in contrast, can start de novo. The 5' triphosphate that powers each addition belongs to the incoming nucleotide, not the template strand.`
           },
           {
             question: `Higher GC content usually increases DNA melting temperature because:`,
-            options: [`GC bases are larger`, `GC pairs have three hydrogen bonds`, `GC pairs are uncharged`, `GC prevents base stacking`],
+            options: [`GC bases are larger than AT bases`, `GC pairs have three hydrogen bonds`, `GC pairs are uncharged, unlike AT`, `GC pairs weaken base stacking`],
             correctAnswer: 1,
-            explanation: `G-C pairs form three hydrogen bonds versus two for A-T, increasing duplex stability.`
+            explanation: `G-C pairs form three hydrogen bonds versus two for A-T, increasing duplex stability. Both pair types are one purine plus one pyrimidine, so they are the same size; neither base pair carries a charge; and GC stacking is stronger, not weaker. The H-bond count is the MCAT-standard reason, but it is not the whole story: stronger base stacking in GC-rich DNA actually contributes more to duplex stability than the extra hydrogen bond.`
           },
           {
             question: `During replication, DNA polymerase reads the template strand in which direction?`,

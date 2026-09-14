@@ -61,27 +61,27 @@ The MCAT rarely asks "SN1 or SN2?" naked. It hides the decision inside:
           },
           {
             question: `S-Adenosylmethionine (SAM) transfers a methyl group to the nitrogen of norepinephrine in one concerted enzymatic step. This biological methylation is best described as:`,
-            options: [`SN1 at a stabilized methyl cation`, `SN2 with the amine as nucleophile and the sulfonium sulfur compound as leaving group`, `E2 across the methyl group`, `Radical substitution`],
+            options: [`SN1 via a methyl cation intermediate`, `SN2 at the methyl carbon`, `E2 across the methyl group`, `Radical transfer of the methyl group`],
             correctAnswer: 1,
-            explanation: `A methyl carbon can never form a stable cation (no SN1). The amine attacks the electrophilic methyl carbon while the neutral sulfide (S-adenosylhomocysteine) departs — a textbook biological SN2 with a positively charged sulfonium making an excellent leaving group.`
+            explanation: `A methyl carbon can never form a stable cation (no SN1). The amine attacks the electrophilic methyl carbon while the neutral sulfide (S-adenosylhomocysteine) departs — a textbook biological SN2 with a positively charged sulfonium making an excellent leaving group. A methyl group has no beta-hydrogen, so E2 is impossible, and a concerted two-electron transfer is not a radical process.`
           },
           {
             question: `A researcher needs to convert (R)-2-butanol into (S)-2-butanethiol (net inversion). The best route is:`,
-            options: [`Treat the alcohol directly with $H_2S$`, `Convert to the tosylate (retention), then displace with $HS^-$ in DMF (inversion)`, `Treat with HBr then water`, `Deprotonate with NaH, then add $HS^-$`],
+            options: [`Treat the alcohol directly with $H_2S$`, `Tosylate the alcohol, then add $HS^-$ in DMF`, `Treat with HBr, then add $HS^-$ in DMF`, `Deprotonate with NaH, then add $HS^-$ in DMF`],
             correctAnswer: 1,
-            explanation: `OH is a poor leaving group, so direct displacement fails. Tosylation does not touch the C-O bond (configuration retained); the subsequent SN2 by thiolate inverts. Net result: single inversion, exactly one stereochemical flip.`
+            explanation: `OH is a poor leaving group, so direct displacement fails. Tosylation does not touch the C-O bond (configuration retained); the subsequent SN2 by thiolate inverts. Net result: single inversion, exactly one stereochemical flip. HBr followed by thiolate risks two inversions (net retention) or racemization through a carbocation, and NaH makes an alkoxide, an even worse leaving group than OH.`
           },
           {
             question: `2-Bromopropane is treated with sodium ethoxide in ethanol at 25 °C, and separately at 70 °C. The expected trend is:`,
-            options: [`More SN2 ether at higher temperature`, `More E2 propene at higher temperature`, `A switch from E2 to E1 at higher temperature`, `No change — temperature does not affect product ratios`],
+            options: [`More SN2 ether product at higher temperature`, `More E2 propene at higher temperature`, `A switch from E2 to E1 at higher temperature`, `No change — temperature does not affect product ratios`],
             correctAnswer: 1,
             explanation: `Ethoxide (strong base/strong Nu) on a secondary halide gives a mix of SN2 and E2; heating shifts the ratio toward elimination because of elimination's more favorable entropy term. The mechanism stays E2 (strong base is present).`
           },
           {
             question: `Rate data for hydrolysis of an alkyl chloride shows first-order kinetics, and the product alcohol is racemic even though the starting material was a single enantiomer. A consistent additional observation would be:`,
-            options: [`The rate doubles when the water concentration doubles`, `The rate is unchanged when a small amount of the better nucleophile azide is added, but some alkyl azide product appears`, `The product shows complete inversion`, `The reaction fails in polar protic solvents`],
+            options: [`The rate doubles when the water concentration is doubled`, `A little added azide yields alkyl azide, rate unchanged`, `The product shows complete inversion of configuration`, `The reaction slows sharply in polar protic solvents`],
             correctAnswer: 1,
-            explanation: `First-order kinetics + racemization = SN1. Because the nucleophile enters AFTER the rate-determining ionization, adding azide does not change the rate but azide can intercept the carbocation and appear in the products — a classic SN1 diagnostic experiment.`
+            explanation: `First-order kinetics + racemization = SN1. Because the nucleophile enters AFTER the rate-determining ionization, adding a small amount of azide, a better nucleophile, does not change the rate but azide can intercept the carbocation and appear in the products — a classic SN1 diagnostic experiment.`
           },
           {
             question: `Which substrate/condition pair yields an alkene as the MAJOR product?`,

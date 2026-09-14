@@ -61,25 +61,25 @@ Receptors and enzymes are chiral, so enantiomers can be different drugs:
           },
           {
             question: `Alpha-D-glucopyranose and beta-D-glucopyranose differ at:`,
-            options: [`C4, the reference carbon`, `The anomeric carbon — the hemiacetal carbon derived from the open-chain carbonyl`, `Every stereocenter`, `The CH2OH group at C6`],
+            options: [`C5, the D/L reference carbon`, `C1, the anomeric carbon`, `Every stereocenter in the ring`, `C6, the primary CH2OH carbon`],
             correctAnswer: 1,
-            explanation: `Ring closure converts the planar C1 aldehyde into a NEW stereocenter (the hemiacetal/anomeric carbon), which can form with OH in either orientation. Anomers = epimers at that carbon only.`
+            explanation: `Ring closure converts the planar C1 aldehyde into a NEW stereocenter (the hemiacetal/anomeric carbon), which can form with OH in either orientation. Anomers = epimers at that carbon only; C5 (the D/L reference) and every other center are unchanged, and C6 is not a stereocenter.`
           },
           {
             question: `L-Cysteine is (R) while nearly all other L-amino acids are (S) because:`,
-            options: [`Cysteine's Fischer projection is drawn differently`, `Sulfur in the CH2SH side chain gives it higher CIP priority than the COOH group, reordering ranks 2 and 3`, `Cysteine is achiral`, `The thiol group hydrogen-bonds to the amino group`],
+            options: [`Cysteine's Fischer projection is drawn differently`, `Its CH2SH group outranks COOH in CIP priority`, `In proteins, cysteine is actually the D enantiomer`, `The thiol group hydrogen-bonds to the amino group`],
             correctAnswer: 1,
-            explanation: `At the first point of difference, CH2SH presents S (Z = 16) while COOH presents O (Z = 8) — sulfur wins, so the side chain outranks the carboxyl. The spatial arrangement is unchanged (still L); only the priority bookkeeping, and hence the letter, flips.`
+            explanation: `At the first point of difference, CH2SH presents S (Z = 16) while COOH presents O (Z = 8) — sulfur wins, so the side chain outranks the carboxyl, reordering ranks 2 and 3. The spatial arrangement is unchanged (still L); only the priority bookkeeping, and hence the letter, flips.`
           },
           {
             question: `A freshly prepared solution of pure alpha-D-glucose shows a specific rotation that gradually changes over hours before stabilizing. This is because:`,
-            options: [`The glucose is slowly oxidized by air`, `The ring opens and recloses, interconverting alpha and beta anomers until equilibrium (mutarotation)`, `Glucose epimerizes to galactose in water`, `The solution racemizes to L-glucose`],
+            options: [`The glucose is slowly oxidized by air`, `Ring opening lets alpha and beta anomers interconvert`, `Glucose epimerizes to galactose in water`, `The solution racemizes to L-glucose`],
             correctAnswer: 1,
             explanation: `Mutarotation: the hemiacetal ring opens to the open-chain aldehyde and recloses on either face, so alpha and beta anomers equilibrate (final mix roughly one-third alpha, two-thirds beta for glucose). No oxidation, epimerization at other centers, or racemization occurs.`
           },
           {
             question: `The beta-2 receptor binds (R)-albuterol (levalbuterol) tightly but its enantiomer weakly. The most accurate structural explanation is:`,
-            options: [`The enantiomers have different bond strengths`, `The (S) form is a different constitutional isomer`, `The chiral binding pocket makes simultaneous three-point contact possible for only one enantiomer`, `The (R) form is more water-soluble`],
+            options: [`The two enantiomers differ in their covalent bond strengths`, `The (S) form is a different constitutional isomer`, `The chiral pocket allows three-point fit for one enantiomer`, `The (R) form is more water-soluble in plasma`],
             correctAnswer: 2,
             explanation: `Enantiomers have identical internal bonding and achiral-environment properties. A chiral pocket requiring three simultaneous contacts can be satisfied by only one hand — the mirror form can align at most two of the three groups at once.`
           },

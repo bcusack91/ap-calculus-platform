@@ -43,15 +43,15 @@ Chemiosmosis links ETC to ATP synthase: proton-motive force (electrochemical gra
         questions: [
           {
             question: `Cyanide poisoning inhibits Complex IV. The IMMEDIATE effect is:`,
-            options: [`NADH accumulates, ETC stops, no proton gradient, no ATP synthesis`, `Only Complex IV stops, others continue normally`, `ATP synthase runs in reverse`, `Glycolysis is inhibited`],
+            options: [`The whole chain stalls and ATP synthesis falls`, `Only Complex IV stops; the others continue normally`, `Oxygen consumption rises to compensate for the block`, `Glycolysis is directly inhibited by the cyanide`],
             correctAnswer: 0,
-            explanation: `If Complex IV is blocked, electrons cannot pass to O$_2$. All upstream complexes become fully reduced and stop. No proton pumping → no gradient → no oxidative phosphorylation. NADH and FADH$_2$ accumulate.`
+            explanation: `If Complex IV is blocked, electrons cannot pass to O$_2$. All upstream complexes become fully reduced and stop. No proton pumping → no gradient → no oxidative phosphorylation. NADH and FADH$_2$ accumulate. Oxygen consumption falls rather than rises, and glycolysis is not inhibited — it speeds up as the cell turns to anaerobic ATP production.`
           },
           {
             question: `FADH$_2$ produces fewer ATP than NADH because:`,
-            options: [`FADH$_2$ enters at Complex II, bypassing Complex I (fewer protons pumped)`, `FADH$_2$ has less energy than NADH`, `FADH$_2$ cannot cross the membrane`, `$FADH_2$ is used only in the TCA cycle`],
+            options: [`FADH$_2$ enters at Complex II, skipping Complex I`, `FADH$_2$ passes electrons straight to Complex IV`, `FADH$_2$ transfers one electron, not two`, `FADH$_2$ is consumed within the TCA cycle itself`],
             correctAnswer: 0,
-            explanation: `FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair).`
+            explanation: `FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair). FADH$_2$ still carries two electrons, passes them to CoQ and Complex III rather than straight to Complex IV, and is not consumed by the TCA cycle.`
           },
           {
             question: `The final electron acceptor in the ETC is:`,
@@ -61,9 +61,9 @@ Chemiosmosis links ETC to ATP synthase: proton-motive force (electrochemical gra
           },
           {
             question: `An uncoupler primarily causes which immediate effect?`,
-            options: [`Increased proton gradient`, `Reduced oxygen consumption`, `Dissipation of proton gradient with less ATP synthesis`, `Direct inhibition of glycolysis`],
+            options: [`Increased proton gradient`, `Reduced oxygen consumption`, `Dissipation of the proton gradient`, `Direct inhibition of glycolysis`],
             correctAnswer: 2,
-            explanation: `Uncouplers allow protons to re-enter matrix without ATP synthase, reducing ATP yield despite ongoing electron transport.`
+            explanation: `Uncouplers allow protons to re-enter matrix without ATP synthase, dissipating the gradient and reducing ATP yield despite ongoing electron transport.`
           }
         ]
       }

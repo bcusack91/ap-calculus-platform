@@ -42,15 +42,15 @@ Gluconeogenesis bypasses the three irreversible glycolysis steps using pyruvate 
         questions: [
           {
             question: `A cell is exposed to high levels of ATP and citrate. The DIRECT effect on glycolysis is:`,
-            options: [`PFK-1 is inhibited, slowing glycolysis`, `Hexokinase is activated`, `Pyruvate kinase is activated`, `Glycolysis speeds up`],
+            options: [`PFK-1 is inhibited`, `Hexokinase is activated`, `Pyruvate kinase is activated`, `Glycolysis speeds up`],
             correctAnswer: 0,
-            explanation: `Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme. This signals that the cell has plenty of energy and TCA intermediates.`
+            explanation: `Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme, so glycolysis slows. This signals that the cell has plenty of energy and TCA intermediates.`
           },
           {
             question: `During vigorous exercise, muscle cells produce lactate primarily to:`,
-            options: [`Regenerate NAD$^+$ to continue glycolysis`, `Produce more ATP`, `Feed into the TCA cycle`, `Prevent acidosis`],
+            options: [`Regenerate NAD$^+$ for glycolysis`, `Produce ATP directly from pyruvate`, `Feed carbon into the TCA cycle`, `Lower blood glucose during exercise`],
             correctAnswer: 0,
-            explanation: `Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically.`
+            explanation: `Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically. The lactate step itself makes no ATP, diverts pyruvate away from the TCA cycle, and lowering blood glucose is not its purpose.`
           },
           {
             question: `The primary rate-limiting enzyme of glycolysis is:`,

@@ -70,21 +70,21 @@ Step 2 (fast): a weak base removes a beta-H, forming the alkene
           },
           {
             question: `The E2 elimination of a substituted cyclohexyl bromide occurs only from the conformation in which the bromine is:`,
-            options: [`Equatorial`, `Axial, with an axial beta-H on an adjacent carbon`, `In the plane of the ring`, `Equatorial, with an equatorial beta-H`],
+            options: [`Equatorial, with an axial beta-H`, `Axial, with an axial beta-H`, `Axial, with an equatorial beta-H`, `Equatorial, with an equatorial beta-H`],
             correctAnswer: 1,
-            explanation: `E2 requires anti-periplanar geometry. In a cyclohexane chair, only trans-diaxial H and LG achieve a 180° dihedral. If the Br is locked equatorial, the molecule must flip (or cannot eliminate toward that carbon).`
+            explanation: `E2 requires anti-periplanar geometry. In a cyclohexane chair, only trans-diaxial H and LG (both axial, on adjacent carbons) achieve a 180° dihedral; any pairing that involves an equatorial position is gauche, not anti-periplanar. If the Br is locked equatorial, the molecule must flip (or cannot eliminate toward that carbon).`
           },
           {
             question: `2-Bromo-3-methylbutane reacts under SN1 conditions and gives mostly products derived from a tertiary carbocation. This is best explained by:`,
-            options: [`A 1,2-hydride shift converting the initial secondary cation to a tertiary cation`, `Direct backside attack at the tertiary carbon`, `An E2 elimination followed by re-addition`, `Deprotonation of the secondary cation by bromide`],
+            options: [`A 1,2-hydride shift to a tertiary carbocation`, `Direct backside attack at the tertiary carbon`, `An E2 elimination followed by re-addition`, `Deprotonation of the secondary cation by bromide`],
             correctAnswer: 0,
             explanation: `SN1 forms a secondary carbocation first; a hydride on the adjacent carbon shifts with its bonding pair, generating the more stable tertiary cation. Rearranged products are a hallmark of carbocation (SN1/E1) mechanisms — SN2/E2 never rearrange.`
           },
           {
             question: `E2 reaction of 2-bromo-2-methylbutane with sodium ethoxide gives mainly 2-methyl-2-butene, while potassium tert-butoxide gives mainly 2-methyl-1-butene. The difference arises because:`,
-            options: [`tert-Butoxide is a stronger nucleophile`, `The bulky tert-butoxide removes the more accessible, less hindered beta-H (Hofmann)`, `Ethoxide promotes an SN1 pathway`, `tert-Butoxide stabilizes the more substituted alkene`],
+            options: [`tert-Butoxide is a stronger nucleophile`, `Bulky tert-butoxide removes the less hindered beta-H`, `Ethoxide reacts by E1, giving the Zaitsev alkene`, `tert-Butoxide stabilizes the more substituted alkene`],
             correctAnswer: 1,
-            explanation: `Small strong bases give the Zaitsev (more substituted) alkene; bulky bases like tert-butoxide can only reach sterically accessible beta-hydrogens, giving the Hofmann (less substituted) alkene.`
+            explanation: `Small strong bases give the Zaitsev (more substituted) alkene; bulky bases like tert-butoxide can only reach sterically accessible beta-hydrogens, giving the Hofmann (less substituted) alkene. Ethoxide is a strong base, so it reacts by E2, not E1.`
           },
           {
             question: `According to the Hammond postulate, the transition state for the endothermic ionization step of an SN1 reaction most closely resembles:`,
@@ -94,7 +94,7 @@ Step 2 (fast): a weak base removes a beta-H, forming the alkene
           },
           {
             question: `Which observation would rule OUT a concerted (SN2/E2) mechanism?`,
-            options: [`Second-order kinetics`, `Inversion of configuration`, `A rearranged carbon skeleton in the product`, `Faster reaction with a better leaving group`],
+            options: [`Second-order kinetics`, `Inversion of configuration`, `A rearranged carbon skeleton in the product`, `Faster rate with a better leaving group`],
             correctAnswer: 2,
             explanation: `Skeletal rearrangement requires a discrete carbocation that can undergo hydride/alkyl shifts — impossible in a one-step concerted mechanism. The other observations are consistent with (or expected for) concerted pathways.`
           }

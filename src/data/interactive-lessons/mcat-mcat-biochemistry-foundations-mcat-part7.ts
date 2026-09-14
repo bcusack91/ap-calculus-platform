@@ -44,19 +44,19 @@ Integrated MCAT passages often ask you to infer dominant pathways from hormone s
           },
           {
             question: `Insulin deficiency (Type 1 diabetes) leads to ketoacidosis because:`,
-            options: [`Uncontrolled lipolysis floods the liver with fatty acids, producing excess ketone bodies`, `The liver cannot perform glycolysis`, `Excess glucose is converted to ketones`, `Muscle cells produce too much lactate`],
+            options: [`Unchecked lipolysis drives hepatic ketogenesis`, `The liver cannot perform glycolysis`, `Excess blood glucose is converted into ketones`, `Muscle cells release excess lactic acid`],
             correctAnswer: 0,
-            explanation: `Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH.`
+            explanation: `Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH. The ketones come from fatty acids, not from glucose, and lactate is not the driver of DKA.`
           },
           {
             question: `In the fed state, high insulin most directly promotes:`,
-            options: [`Glycogenolysis`, `Gluconeogenesis`, `Glycogenesis and lipogenesis`, `Ketogenesis`],
+            options: [`Glycogenolysis and lipolysis`, `Glycogenesis and lipolysis`, `Glycogenesis and lipogenesis`, `Glycogenolysis and lipogenesis`],
             correctAnswer: 2,
-            explanation: `Insulin signals nutrient abundance and promotes storage/anabolic pathways like glycogenesis and fatty acid synthesis.`
+            explanation: `Insulin signals nutrient abundance and promotes storage/anabolic pathways like glycogenesis and fatty acid synthesis (lipogenesis), while suppressing the mobilizing pathways glycogenolysis and lipolysis.`
           },
           {
             question: `High hepatic malonyl-CoA is most consistent with:`,
-            options: [`Active beta-oxidation`, `Inhibited CPT-I and reduced mitochondrial fatty acid entry`, `Low fatty acid synthesis`, `Fasting glucagon dominance`],
+            options: [`Active beta-oxidation`, `Reduced fatty acid entry via CPT-I`, `Low fatty acid synthesis`, `Fasting glucagon dominance`],
             correctAnswer: 1,
             explanation: `Malonyl-CoA inhibits CPT-I, suppressing long-chain fatty acid entry into mitochondria and reducing beta-oxidation.`
           }

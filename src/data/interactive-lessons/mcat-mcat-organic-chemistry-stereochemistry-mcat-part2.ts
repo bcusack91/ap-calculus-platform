@@ -61,7 +61,7 @@ cis/trans works only when each carbon has one H; E/Z always works. Beware: cis d
           },
           {
             question: `Which group has higher CIP priority: $-CHO$ or $-CH_2OH$?`,
-            options: [`$-CH_2OH$, because it has more atoms`, `$-CHO$, because the double-bonded O is counted twice, giving (O,O,H) vs (O,H,H)`, `$-CH_2OH$, because its oxygen bears an H`, `They are identical in priority`],
+            options: [`$-CH_2OH$, because it has more atoms`, `$-CHO$, because its C=O oxygen is counted twice`, `$-CH_2OH$, because its oxygen also bears an H`, `Neither; each carbon bears one O`],
             correctAnswer: 1,
             explanation: `Both first atoms are carbon — tie. Duplicate the C=O: the CHO carbon "sees" (O,O,H), while the CH2OH carbon sees (O,H,H). At the first point of difference O beats H, so CHO wins. This exact comparison decides R/S in sugars.`
           },
@@ -79,13 +79,13 @@ cis/trans works only when each carbon has one H; E/Z always works. Beware: cis d
           },
           {
             question: `An alkene has Br and Cl on one sp2 carbon, and CH3 and H on the other. In the Z isomer, bromine is on the same side as:`,
-            options: [`H, because Z pairs the largest with the smallest group`, `CH3, because Br and CH3 are the higher-priority groups on their respective carbons`, `Cl, because halogens group together`, `Either — Z is ambiguous here`],
+            options: [`H, because Z pairs the largest with the smallest group`, `CH3, because Br and CH3 each win on their carbon`, `Cl, because Z groups the two halogens together`, `Neither, since Z requires one H on each alkene carbon`],
             correctAnswer: 1,
-            explanation: `Rank each carbon separately: Br > Cl on the first (atomic number 35 vs 17); CH3 > H on the second. Z means the two winners (Br and CH3) are cis to each other.`
+            explanation: `Rank each carbon separately: Br > Cl on the first (atomic number 35 vs 17); CH3 > H on the second. Z means the two winners (Br and CH3) are cis to each other. E/Z needs no H on either carbon — only cis/trans naming does.`
           },
           {
             question: `Rotating a Fischer projection by 90° within the plane of the page produces:`,
-            options: [`The same compound`, `The enantiomer (all centers inverted)`, `A diastereomer`, `A constitutional isomer`],
+            options: [`The same compound`, `Its enantiomer`, `One of its diastereomers`, `A constitutional isomer`],
             correctAnswer: 1,
             explanation: `A 90° rotation moves horizontal (toward-viewer) bonds onto vertical (away) positions, silently inverting every depicted center — you get the enantiomer of what you meant. Only 180° in-plane rotation is a legal move.`
           }

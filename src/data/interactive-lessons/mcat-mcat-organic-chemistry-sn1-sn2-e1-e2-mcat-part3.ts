@@ -48,31 +48,31 @@ Heat favors **elimination** over substitution. Elimination creates more particle
         questions: [
           {
             question: `Switching the solvent for an SN2 reaction from ethanol to DMSO dramatically increases the rate because DMSO:`,
-            options: [`Stabilizes the carbocation intermediate`, `Cannot hydrogen-bond to the nucleophile, leaving it unsolvated and highly reactive`, `Acts as a stronger nucleophile itself`, `Protonates the leaving group`],
+            options: [`Stabilizes the carbocation intermediate`, `Does not hydrogen-bond to the nucleophile`, `Acts as a stronger nucleophile itself`, `Protonates the leaving group`],
             correctAnswer: 1,
-            explanation: `Polar aprotic solvents (DMSO, DMF, acetone) dissolve the salt but do not H-bond to the anion. The "naked" nucleophile is far more reactive. There is no carbocation in SN2.`
+            explanation: `Polar aprotic solvents (DMSO, DMF, acetone) dissolve the salt but do not H-bond to the anion. The "naked," unsolvated nucleophile is far more reactive. There is no carbocation in SN2, and DMSO has no acidic O-H or N-H to protonate anything.`
           },
           {
             question: `(R)-2-bromobutane reacts with sodium cyanide in DMF. The product is:`,
-            options: [`(S)-2-methylbutanenitrile with inverted configuration at the stereocenter`, `A racemic mixture of nitriles`, `(R)-product with retention`, `Mostly 1-butene from elimination`],
+            options: [`(S)-2-methylbutanenitrile, by inversion`, `Racemic 2-methylbutanenitrile, by racemization`, `(R)-2-methylbutanenitrile, by retention`, `Mostly butenes, by E2 elimination`],
             correctAnswer: 0,
-            explanation: `Secondary substrate + strong unhindered nucleophile + polar aprotic solvent = SN2 → clean inversion (backside attack). Racemization would indicate SN1; cyanide is a good nucleophile but a relatively weak base, so elimination is minor.`
+            explanation: `Secondary substrate + strong unhindered nucleophile + polar aprotic solvent = SN2 → clean inversion (backside attack). CN outranks ethyl just as Br did, so the inverted product is labeled (S). Racemization would indicate SN1; cyanide is a good nucleophile but a relatively weak base, so elimination is minor.`
           },
           {
             question: `In water, iodide is a better nucleophile than fluoride. The primary reason is that:`,
-            options: [`Iodide is a stronger base`, `Fluoride is tightly solvated by hydrogen bonds, while large polarizable iodide is relatively free to attack`, `Iodide has a higher charge density`, `Fluoride is a better leaving group`],
+            options: [`Iodide is the stronger base in water`, `Water H-bonds fluoride far more tightly`, `Iodide has a higher charge density than fluoride`, `Fluoride is a better leaving group`],
             correctAnswer: 1,
             explanation: `In protic solvents, small high-charge-density anions like fluoride are caged by H-bonding. Iodide is weakly solvated and highly polarizable, so it attacks faster — even though fluoride is the stronger base.`
           },
           {
             question: `(S)-3-bromo-3-methylhexane dissolved in warm methanol gives the methyl ether product as:`,
-            options: [`Pure S enantiomer`, `Pure R enantiomer`, `A nearly racemic mixture of R and S`, `A meso compound`],
+            options: [`Pure S enantiomer`, `Pure R enantiomer`, `A nearly racemic mixture`, `A meso compound`],
             correctAnswer: 2,
             explanation: `Tertiary substrate + weak nucleophile + protic solvent = SN1 (solvolysis). The planar carbocation is attacked from both faces, giving near-racemization (often with a small excess of inversion from ion pairing).`
           },
           {
             question: `Raising the temperature of a reaction between 2-bromopropane and sodium ethoxide shifts the product mixture toward propene. This occurs because:`,
-            options: [`Elimination has a more positive entropy change, so higher T favors it thermodynamically and kinetically`, `Heat converts ethoxide into a nucleophile`, `The SN2 transition state is destabilized by heat only`, `Propene is more stable than the ether at all temperatures`],
+            options: [`Elimination has the more positive entropy change`, `Heat converts ethoxide into a nucleophile`, `The SN2 transition state is destabilized by heat only`, `Propene is more stable than the ether at all temperatures`],
             correctAnswer: 0,
             explanation: `Elimination generates more independent particles (alkene + alcohol + halide), so its entropy change is more positive. As T increases, the $-T\\Delta S$ contribution increasingly favors E2 over SN2 — "heat favors elimination."`
           }

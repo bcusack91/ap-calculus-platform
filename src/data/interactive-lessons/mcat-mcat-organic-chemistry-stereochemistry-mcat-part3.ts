@@ -59,31 +59,31 @@ The last row is a law of nature worth internalizing: **you cannot create optical
           },
           {
             question: `A compound is determined to be (S) by CIP analysis. Its optical rotation is:`,
-            options: [`Necessarily levorotatory (−)`, `Necessarily dextrorotatory (+)`, `Zero`, `Not predictable from the configuration — it must be measured`],
+            options: [`Necessarily levorotatory (−)`, `Necessarily dextrorotatory (+)`, `Identical to that of the (R) enantiomer`, `Not predictable from R/S`],
             correctAnswer: 3,
-            explanation: `R/S is a paper convention based on atomic-number priorities; (+)/(−) is an experimental measurement. There is no correlation. (S)-alanine is (+), while (S)-glyceraldehyde is (−).`
+            explanation: `R/S is a paper convention based on atomic-number priorities; (+)/(−) is an experimental measurement. There is no correlation, so the sign must be measured. (S)-alanine is (+), while (S)-glyceraldehyde is (−). The (R) enantiomer would rotate light by the same magnitude in the opposite direction, not identically.`
           },
           {
             question: `A solution containing equal amounts of (R)- and (S)-2-butanol shows zero optical rotation because:`,
-            options: [`2-Butanol is achiral`, `Each enantiomer's rotation is exactly canceled by the other's`, `The stereocenter racemizes in solution`, `Optical rotation requires a meso compound`],
+            options: [`2-Butanol is achiral`, `The two enantiomers' rotations cancel`, `The stereocenter racemizes in solution`, `Optical rotation requires a meso compound`],
             correctAnswer: 1,
             explanation: `A racemic mixture is optically inactive by external compensation: equal and opposite rotations sum to zero. Each individual molecule is still chiral, and 2-butanol does not racemize on its own (no mechanism to break bonds at the stereocenter).`
           },
           {
             question: `To separate a racemic carboxylic acid into its enantiomers, a chemist adds a single enantiomer of a chiral amine. This works because:`,
-            options: [`The amine reacts with only one enantiomer of the acid`, `The resulting salts are diastereomers with different solubilities`, `The amine catalyzes racemization`, `The salts are enantiomers and crystallize separately`],
+            options: [`The amine reacts with only one enantiomer of the acid`, `The salts are diastereomers with different solubilities`, `The amine catalyzes racemization`, `The salts are enantiomers and crystallize separately`],
             correctAnswer: 1,
             explanation: `Both acid enantiomers form salts, but (R-acid)(S-amine) and (S-acid)(S-amine) are DIASTEREOMERIC — different physical properties, so one crystallizes preferentially. Classic resolution. The salts are not enantiomers of each other.`
           },
           {
             question: `NaBH4 (achiral) reduces 2-butanone to 2-butanol. The product is:`,
-            options: [`Optically active (R)-2-butanol`, `Optically active (S)-2-butanol`, `A racemic, optically inactive mixture`, `A meso compound`],
+            options: [`Optically active (R)-2-butanol`, `Optically active (S)-2-butanol`, `A racemic mixture`, `A single meso stereoisomer`],
             correctAnswer: 2,
-            explanation: `The ketone carbonyl is planar; achiral hydride attacks both faces with equal probability, creating the new stereocenter as a 50:50 racemate. Optical activity can never arise from exclusively achiral starting materials and reagents.`
+            explanation: `The ketone carbonyl is planar; achiral hydride attacks both faces with equal probability, creating the new stereocenter as a 50:50 racemate, which is optically inactive. With only one stereocenter, 2-butanol cannot be meso. Optical activity can never arise from exclusively achiral starting materials and reagents.`
           },
           {
             question: `In the liver, only one enantiomer of a racemic drug is metabolized rapidly. The most fundamental explanation is:`,
-            options: [`The enantiomers have different solubilities in blood`, `The enzyme's chiral active site binds the two enantiomers differently`, `One enantiomer is more thermodynamically stable`, `The enantiomers have different pKa values`],
+            options: [`The enantiomers have different solubilities in blood`, `The enzyme's chiral active site tells them apart`, `One enantiomer is more thermodynamically stable`, `The enantiomers have different pKa values`],
             correctAnswer: 1,
             explanation: `Enantiomers behave identically in achiral environments (same solubility, stability, pKa). An enzyme is a chiral environment — its active site forms diastereomeric binding complexes with the two enantiomers, which can differ enormously in fit and rate.`
           }

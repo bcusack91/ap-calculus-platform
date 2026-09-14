@@ -85,15 +85,15 @@ On the MCAT, an alcohol + strong acid (HBr, H2SO4) passage is a signal that the 
           },
           {
             question: `A benzylic carbocation is unusually stable compared to an ordinary primary carbocation because of:`,
-            options: [`Resonance delocalization into the aromatic ring`, `Stronger C-H bonds`, `Aromaticity of the cation itself`, `Hydrogen bonding with the solvent`],
+            options: [`Resonance delocalization into the ring`, `Stronger C-H bonds`, `Aromaticity of the cation itself`, `Hydrogen bonding with the solvent`],
             correctAnswer: 0,
             explanation: `Benzylic (and allylic) cations delocalize the positive charge by resonance into the adjacent pi system. This is why benzylic/allylic substrates can undergo SN1 even when they are formally primary.`
           },
           {
             question: `Why does an alcohol fail to undergo substitution with NaBr alone, but react when HBr is used?`,
-            options: [`$HO^-$ is a poor leaving group; protonation converts it to water, a good (neutral) leaving group`, `HBr is a stronger nucleophile than $Br^-$`, `NaBr cannot dissolve in alcohols`, `HBr deprotonates the alcohol, activating it toward attack`],
+            options: [`Protonated $-OH$ leaves as neutral water`, `HBr is a stronger nucleophile than $Br^-$`, `NaBr cannot dissolve in alcohols`, `HBr deprotonates the alcohol, activating it toward attack`],
             correctAnswer: 0,
-            explanation: `Hydroxide is far too strong a base to leave. Protonation by HBr converts -OH into $-OH_2^+$, which departs as neutral water — one of the most common MCAT setups for substitution on alcohols.`
+            explanation: `$HO^-$ is a poor leaving group — far too strong a base to leave. Protonation by HBr converts -OH into $-OH_2^+$, which departs as neutral water — one of the most common MCAT setups for substitution on alcohols.`
           },
           {
             question: `In a reaction where methoxide ($CH_3O^-$) removes a beta-hydrogen from an alkyl halide, methoxide is functioning as a:`,

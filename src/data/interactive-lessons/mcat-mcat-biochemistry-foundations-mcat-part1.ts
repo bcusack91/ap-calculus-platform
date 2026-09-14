@@ -45,15 +45,15 @@ This is heavily tested in electrophoresis and separation contexts.`
         questions: [
           {
             question: `Proline is unique among amino acids because it:`,
-            options: [`Has a cyclic side chain bonded to the backbone nitrogen, creating rigidity`, `Is the only nonpolar amino acid`, `Has the smallest side chain`, `Can form disulfide bonds`],
+            options: [`Has a ring that includes its backbone N`, `Is the only amino acid lacking a chiral alpha carbon`, `Has the smallest and most flexible side chain`, `Can form disulfide bonds with cysteine residues`],
             correctAnswer: 0,
-            explanation: `Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices.`
+            explanation: `Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices. Lacking a chiral alpha carbon and having the smallest, most flexible side chain both describe glycine, and only cysteine forms disulfide bonds.`
           },
           {
             question: `$\\alpha$-helices are stabilized primarily by:`,
-            options: [`Hydrogen bonds between backbone C=O and N-H groups 4 residues apart`, `Disulfide bonds`, `Hydrophobic interactions`, `Ionic bonds between side chains`],
+            options: [`Backbone C=O to N-H hydrogen bonds`, `Disulfide bonds between cysteines`, `Hydrophobic interactions`, `Ionic bonds between side chains`],
             correctAnswer: 0,
-            explanation: `$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure.`
+            explanation: `$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure. Disulfide bonds, hydrophobic interactions, and ionic side-chain bonds stabilize tertiary structure instead.`
           },
           {
             question: `At pH well above its isoelectric point, a protein will usually have net:`,

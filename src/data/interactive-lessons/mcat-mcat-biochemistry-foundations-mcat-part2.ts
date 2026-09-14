@@ -61,7 +61,7 @@ Catalytic efficiency is often summarized by $k_{cat}/K_m$, useful for comparing 
           },
           {
             question: `At $[S]=K_m$, reaction velocity equals:`,
-            options: [`$V_{max}$`, `$V_{max}/2$`, `$2V_{max}$`, `0`],
+            options: [`$V_{max}$`, `$V_{max}/2$`, `$2V_{max}$`, `$V_{max}/4$`],
             correctAnswer: 1,
             explanation: `By definition of Michaelis-Menten kinetics, $K_m$ is the substrate concentration at half-maximal velocity.`
           }
@@ -184,7 +184,7 @@ Identify the inhibitor types.
 
 2. **Plot 1 (Inhibitor A)**:
    - y-intercept unchanged → $V_{max}$ unchanged
-   - x-intercept changes (-0.25 → -0.2) → $K_m$ increases (becomes $-1/0.2 = -5$ mM, vs. -0.25 → 4 mM before)
+   - x-intercept changes (-0.25 → -0.2) → $K_m$ increases (from $-1/(-0.25) = 4$ mM to $-1/(-0.2) = 5$ mM)
    - **Diagnosis**: **Competitive inhibition** ✓
    - Lines converge on y-axis (characteristic pattern)
 
