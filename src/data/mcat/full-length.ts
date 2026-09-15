@@ -150,25 +150,69 @@ function interleaveEven<T>(base: T[], inserts: T[]): T[] {
 }
 
 /**
- * Pack a science section to its official count: include whole passages greedily
- * up to the target (with the current banks all 10 fit), de-clustered and ordered
- * per form, then fill the remainder with a rotated, binned, interleaved discrete
- * window. Falls short only if the banks can't supply enough (reported via count).
+ * Real-exam split for a 59-question science section: about 10 passages carrying
+ * ~44 questions, plus ~15 discrete questions (roughly 75/25). The assembler
+ * used to pack whole passages up to the full 59, which left only 2–4 discretes.
+ */
+const SCIENCE_PASSAGE_QUESTION_TARGET = 44
+/** Stop adding passages once within this many questions of the target. */
+const PASSAGE_TARGET_SLACK = 2
+
+/**
+ * Split a pool into two DISJOINT halves by a fixed (form-independent) order, so
+ * Form 1 and Form 2 never share an item. Returns this form's half.
+ */
+function formHalf<T extends { id: string }>(pool: T[], form: number): T[] {
+  const fixed = [...pool].sort((a, b) => stableHash(a.id, 0) - stableHash(b.id, 0))
+  return fixed.filter((_, i) => i % 2 === form - 1)
+}
+
+/**
+ * Pack a science section to its official count with the real-exam balance:
+ * whole passages from this form's half of the bank until ~44 passage questions,
+ * de-clustered and ordered per form, then fill the rest of the 59 with this
+ * form's half of the discrete pool, binned and interleaved among the passages.
+ * If this form's discrete half is too small, it tops up from the full pool
+ * (rotated), so the section never comes up short.
  */
 function packScienceSection(section: ScienceSection, form: number): { passages: MCATPassage[]; count: number } {
   const target = MCAT_SECTION_META[section].questions
   const chosen: MCATPassage[] = []
   let count = 0
-  for (const p of orderPassagesForForm(SECTION_PASSAGES[section], form)) {
-    if (count + p.questions.length <= target) {
-      chosen.push(declusterPassage(p, form))
+  const pool = orderPassagesForForm(formHalf(SECTION_PASSAGES[section], form), form)
+  const maxPassageQs = SCIENCE_PASSAGE_QUESTION_TARGET + PASSAGE_TARGET_SLACK
+  const picked: MCATPassage[] = []
+  for (const p of pool) {
+    if (count >= SCIENCE_PASSAGE_QUESTION_TARGET) break
+    if (count + p.questions.length <= maxPassageQs) {
+      picked.push(p)
       count += p.questions.length
     }
   }
+  // Passages hold 5–6 questions, so greedy packing can stall at 43. Swap a
+  // shorter chosen passage for a longer unused one until the section reaches
+  // the target: 44+ passage questions keeps the discrete remainder at 15 or
+  // fewer, within this form's disjoint half of the discrete pool.
+  for (const unused of pool.filter((p) => !picked.includes(p))) {
+    if (count >= SCIENCE_PASSAGE_QUESTION_TARGET) break
+    const swapIndex = picked.findIndex((p) => {
+      const next = count - p.questions.length + unused.questions.length
+      return next > count && next <= maxPassageQs
+    })
+    if (swapIndex >= 0) {
+      count += unused.questions.length - picked[swapIndex].questions.length
+      picked[swapIndex] = unused
+    }
+  }
+  for (const p of picked) chosen.push(declusterPassage(p, form))
   let bins: MCATPassage[] = []
   const remainder = target - count
   if (remainder > 0) {
-    const window = rotateWindow(SECTION_DISCRETES[section], form, remainder)
+    const half = formHalf(SECTION_DISCRETES[section], form)
+    const window =
+      half.length >= remainder
+        ? rotateWindow(half, form, remainder)
+        : rotateWindow(SECTION_DISCRETES[section], form, remainder)
     bins = buildDiscreteBins(section, window, form)
     count += window.length
   }
@@ -182,7 +226,8 @@ function packCars(form: number): { passages: MCATPassage[]; count: number } {
   const target = MCAT_SECTION_META.cars.questions
   const out: MCATPassage[] = []
   let count = 0
-  for (const p of orderPassagesForForm(CARS_PASSAGES, form)) {
+  // Disjoint halves of the CARS bank, so the two forms share no passage.
+  for (const p of orderPassagesForForm(formHalf(CARS_PASSAGES, form), form)) {
     if (count >= target) break
     out.push(declusterPassage(p, form))
     count += p.questions.length

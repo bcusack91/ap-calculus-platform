@@ -10,21 +10,27 @@ import { describe, it, expect } from 'vitest'
 import { generateMCATDiagnosticTest, type MCATDiagnosticQuestion } from '@/data/mcat-practice/diagnostic-generator'
 import { authoredQuestionIndex } from '@/lib/mcat-diagnostic-order'
 
-// CARS is all passages (3 × 4-question sets); Psych/Soc gave up one question
-// to keep the total at 45.
-const DOMAIN_COUNTS: Record<string, number> = {
-  'gen-chem': 3,
-  'org-chem': 3,
-  physics: 3,
-  'biochem-cp': 2,
-  cars: 12,
-  'cell-mol-bio': 4,
-  'organ-systems': 4,
-  genetics: 3,
-  'psych-soc': 11,
+// Passage sets are chosen per section and credited to domains by discipline,
+// so per-domain counts vary; section totals and block shapes are fixed.
+const SECTION_OF: Record<string, string> = {
+  'gen-chem': 'chem-phys',
+  'org-chem': 'chem-phys',
+  physics: 'chem-phys',
+  'biochem-cp': 'chem-phys',
+  cars: 'cars',
+  'cell-mol-bio': 'bio-biochem',
+  'organ-systems': 'bio-biochem',
+  genetics: 'bio-biochem',
+  'psych-soc': 'psych-soc',
 }
-/** Questions served per passage block (the domain's passage window). */
-const PASSAGE_WINDOW: Record<string, number> = { cars: 4, physics: 2, 'cell-mol-bio': 2, 'psych-soc': 4 }
+const SECTION_COUNTS: Record<string, number> = { 'chem-phys': 11, cars: 12, 'bio-biochem': 11, 'psych-soc': 11 }
+/** Passage sets per section and questions per set. */
+const SECTION_BLOCKS: Record<string, { sets: number; size: number }> = {
+  'chem-phys': { sets: 2, size: 3 },
+  cars: { sets: 3, size: 4 },
+  'bio-biochem': { sets: 2, size: 3 },
+  'psych-soc': { sets: 2, size: 3 },
+}
 
 const stem = (q: MCATDiagnosticQuestion) => q.question.replace(/\s+/g, ' ').trim().toLowerCase()
 
@@ -40,9 +46,15 @@ describe('generateMCATDiagnosticTest', { timeout: 120_000 }, () => {
       const qs = test.questions
 
       expect(qs).toHaveLength(45)
-      const counts: Record<string, number> = {}
-      for (const q of qs) counts[q.domain] = (counts[q.domain] ?? 0) + 1
-      expect(counts).toEqual(DOMAIN_COUNTS)
+      const sectionCounts: Record<string, number> = {}
+      const domainCounts: Record<string, number> = {}
+      for (const q of qs) {
+        sectionCounts[SECTION_OF[q.domain]] = (sectionCounts[SECTION_OF[q.domain]] ?? 0) + 1
+        domainCounts[q.domain] = (domainCounts[q.domain] ?? 0) + 1
+      }
+      expect(sectionCounts).toEqual(SECTION_COUNTS)
+      // Every content area is still measured.
+      for (const domain of Object.keys(SECTION_OF)) expect(domainCounts[domain] ?? 0, `${domain} count`).toBeGreaterThanOrEqual(1)
 
       const positions = new Map<string, number[]>()
       qs.forEach((q, i) => {
@@ -59,7 +71,15 @@ describe('generateMCATDiagnosticTest', { timeout: 120_000 }, () => {
         const order = block.map((q) => authoredQuestionIndex(q.id))
         expect(order).toEqual([...order].sort((a, b) => a - b))
         // Complete window, not a partial passage.
-        expect(block.length, `passage ${passageId} size`).toBe(PASSAGE_WINDOW[block[0].domain])
+        expect(block.length, `passage ${passageId} size`).toBe(SECTION_BLOCKS[SECTION_OF[block[0].domain]].size)
+      }
+      const setsPerSection: Record<string, number> = {}
+      for (const p of positions.values()) {
+        const section = SECTION_OF[qs[p[0]].domain]
+        setsPerSection[section] = (setsPerSection[section] ?? 0) + 1
+      }
+      for (const [section, { sets }] of Object.entries(SECTION_BLOCKS)) {
+        expect(setsPerSection[section] ?? 0, `${section} passage sets`).toBe(sets)
       }
 
       const standaloneStems = qs.filter((q) => !q.passage).map(stem)

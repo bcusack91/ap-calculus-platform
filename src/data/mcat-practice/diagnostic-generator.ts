@@ -215,7 +215,6 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     section: 'chem-phys',
     slugs: ['mcat-physics-mechanics', 'mcat-physics-electricity'],
     questionCount: 3,
-    minPassageQuestions: 2,
     difficultyMix: { easy: 1, medium: 1, hard: 1 },
   },
   {
@@ -233,7 +232,6 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     section: 'cars',
     slugs: ['mcat-cars'],
     questionCount: 12,
-    minPassageQuestions: 12,
   },
   // Bio/Biochem
   {
@@ -242,7 +240,6 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     section: 'bio-biochem',
     slugs: ['mcat-biology'],
     questionCount: 4,
-    minPassageQuestions: 2,
     difficultyMix: { easy: 1, medium: 2, hard: 1 },
   },
   {
@@ -280,7 +277,6 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     section: 'psych-soc',
     slugs: ['mcat-psychology-sociology'],
     questionCount: 11,
-    minPassageQuestions: 4,
     difficultyMix: { easy: 2, medium: 5, hard: 4 },
   },
 ]
@@ -394,29 +390,6 @@ function selectQuestionsByDifficulty(
   }
 
   return pickRandom(dedupeQuestions(selected), questionCount)
-}
-
-function selectPassageQuestions(allQuestions: MCATDiagnosticQuestion[], questionCount: number): MCATDiagnosticQuestion[] {
-  if (questionCount <= 0) return []
-
-  const groups = new Map<string, MCATDiagnosticQuestion[]>()
-  for (const question of allQuestions) {
-    const passageId = question.passage?.id
-    if (!passageId) continue
-    if (!groups.has(passageId)) groups.set(passageId, [])
-    groups.get(passageId)?.push(question)
-  }
-
-  const selected: MCATDiagnosticQuestion[] = []
-  for (const group of shuffle(Array.from(groups.values()))) {
-    if (selected.length >= questionCount) break
-    if (selected.length + group.length > questionCount) continue
-    // Keep the passage's questions whole and in authored order; the final
-    // ordering (arrangeInPassageBlocks) sorts each block by authored index.
-    selected.push(...group)
-  }
-
-  return selected
 }
 
 function resolveFigurePresentation(context: FigureContext): FigurePresentation {
@@ -1108,51 +1081,89 @@ function buildCarsSupplementQuestions(domainId: string, sourceSlug: string): MCA
 /** Request size that returns an exit-quiz bank in full (largest MCAT bank is ~500). */
 const FULL_EXIT_BANK = 100_000
 
-/** Cap on candidate passages per domain fed to the (shuffled) selector. */
-const MAX_AUTHORED_CANDIDATES = 6
+/** Candidate passages per section fed to the block selector (tier order preserved). */
+const MAX_AUTHORED_CANDIDATES = 10
 
-interface AuthoredDomainConfig {
-  domainId: string
-  /** Contiguous questions to serve per passage = the domain's passage quota. */
+/**
+ * Passage sets per section, served like the real exam's passage blocks:
+ * CARS 3 × 4 questions, and each science section 2 × 3. The science sections
+ * used to serve a single 2–4 question set, which made them ~80% discrete; the
+ * real exam is ~75% passage-based. Two short sets (6 of 11) keep a 45-question
+ * diagnostic broad while moving it well toward the real balance.
+ */
+const SECTION_PASSAGE_BLOCKS: Record<string, number> = { cars: 3, 'chem-phys': 2, 'bio-biochem': 2, 'psych-soc': 2 }
+
+interface AuthoredSectionConfig {
+  /** Bank key: the section id. */
+  key: string
+  /** Contiguous questions served per passage set. */
   windowSize: number
   passages: MCATPassage[]
   family: string
+  /** Diagnostic domain credited for a passage's questions, by discipline. */
+  domainFor: (passage: MCATPassage) => string
   sourceSlugFor: (passage: MCATPassage) => string
 }
 
-function authoredDomainConfigs(): AuthoredDomainConfig[] {
+function authoredDomainConfigs(): AuthoredSectionConfig[] {
+  const chemPhysDomain = (p: MCATPassage) =>
+    p.discipline === 'physics'
+      ? 'physics'
+      : p.discipline === 'organic chemistry'
+      ? 'org-chem'
+      : p.discipline === 'biochemistry'
+      ? 'biochem-cp'
+      : 'gen-chem'
+  const bioDomain = (p: MCATPassage) =>
+    p.discipline === 'physiology' || p.discipline === 'immunology'
+      ? 'organ-systems'
+      : p.discipline === 'genetics'
+      ? 'genetics'
+      : 'cell-mol-bio'
+  const chemPhysSlug = (p: MCATPassage) => {
+    const domain = chemPhysDomain(p)
+    if (domain === 'physics') {
+      return /circuit|current|voltage|resist|electro|capacit|charge|magnet/i.test(p.passageText)
+        ? 'mcat-physics-electricity'
+        : 'mcat-physics-mechanics'
+    }
+    return domain === 'org-chem' ? 'mcat-organic-chemistry' : domain === 'biochem-cp' ? 'mcat-biochemistry' : 'mcat-general-chemistry'
+  }
+  const bioSlug = (p: MCATPassage) => {
+    const domain = bioDomain(p)
+    return domain === 'organ-systems' ? 'mcat-organ-systems' : domain === 'genetics' ? 'mcat-genetics-evolution' : 'mcat-biology'
+  }
   return [
     {
-      domainId: 'cars',
+      key: 'cars',
       windowSize: 4,
       passages: CARS_PASSAGES,
       family: 'cars-passage-reasoning',
+      domainFor: () => 'cars',
       sourceSlugFor: () => 'mcat-cars',
     },
     {
-      domainId: 'physics',
-      windowSize: 2,
-      passages: SECTION_PASSAGES['chem-phys'].filter((p) => p.discipline === 'physics'),
+      key: 'chem-phys',
+      windowSize: 3,
+      passages: SECTION_PASSAGES['chem-phys'],
       family: 'passage-data-interpretation',
-      sourceSlugFor: (p) =>
-        /circuit|current|voltage|resist|electro|capacit|charge|magnet/i.test(p.passageText)
-          ? 'mcat-physics-electricity'
-          : 'mcat-physics-mechanics',
+      domainFor: chemPhysDomain,
+      sourceSlugFor: chemPhysSlug,
     },
     {
-      domainId: 'cell-mol-bio',
-      windowSize: 2,
-      passages: SECTION_PASSAGES['bio-biochem'].filter((p) =>
-        ['molecular biology', 'cell biology', 'microbiology'].includes(p.discipline),
-      ),
+      key: 'bio-biochem',
+      windowSize: 3,
+      passages: SECTION_PASSAGES['bio-biochem'],
       family: 'passage-data-interpretation',
-      sourceSlugFor: () => 'mcat-biology',
+      domainFor: bioDomain,
+      sourceSlugFor: bioSlug,
     },
     {
-      domainId: 'psych-soc',
-      windowSize: 4,
+      key: 'psych-soc',
+      windowSize: 3,
       passages: SECTION_PASSAGES['psych-soc'],
       family: 'passage-data-interpretation',
+      domainFor: () => 'psych-soc',
       sourceSlugFor: () => 'mcat-psychology-sociology',
     },
   ]
@@ -1164,7 +1175,7 @@ function authoredDomainConfigs(): AuthoredDomainConfig[] {
  * conditions on a bar chart) are numbered 1..N and decoded by a plain-text
  * legend appended to the passage body, so no data is lost.
  */
-function chartToPassageBlocks(chart: MCATFigureSpec): {
+export function chartToPassageBlocks(chart: MCATFigureSpec): {
   dataTable: NonNullable<NonNullable<MCATDiagnosticQuestion['passage']>['dataTable']>
   figure: NonNullable<NonNullable<MCATDiagnosticQuestion['passage']>['figure']>
   legend: string | null
@@ -1237,10 +1248,11 @@ function chooseAuthoredWindow(
 }
 
 function authoredWindowToQuestions(
-  config: AuthoredDomainConfig,
+  config: AuthoredSectionConfig,
   passage: MCATPassage,
   start: number,
 ): MCATDiagnosticQuestion[] {
+  const domainId = config.domainFor(passage)
   const blocks = passage.chart ? chartToPassageBlocks(passage.chart) : null
   const body = blocks?.legend ? `${passage.passageText}\n\n${blocks.legend}` : passage.passageText
   const passageBlock = {
@@ -1254,12 +1266,14 @@ function authoredWindowToQuestions(
   return passage.questions.slice(start, start + config.windowSize).map((q, offset) => {
     const questionIndex = start + offset
     return {
-      id: authoredQuestionId(config.domainId, passage, questionIndex),
+      // Id prefix is the credited domain, so passages that were already served
+      // under a domain keep the same ids and the student's seen history.
+      id: authoredQuestionId(domainId, passage, questionIndex),
       question: q.question,
       options: [...q.options],
       correctAnswer: q.correctAnswer,
       explanation: q.explanation,
-      domain: config.domainId,
+      domain: domainId,
       sourceSlug: config.sourceSlugFor(passage),
       difficulty: 'hard' as const,
       family: config.family,
@@ -1274,16 +1288,19 @@ function authoredWindowToQuestions(
 function buildPassageQuestionBank(excludeQuestionIds: Set<string>): {
   bank: Record<string, MCATDiagnosticQuestion[]>
   passageMeta: Map<string, MCATDiagnosticPassageSource>
+  /** Preference tier per served passage id (0 = never seen, reviewed). */
+  passageTier: Map<string, number>
 } {
   const bank: Record<string, MCATDiagnosticQuestion[]> = {}
   const passageMeta = new Map<string, MCATDiagnosticPassageSource>()
+  const passageTier = new Map<string, number>()
 
   for (const config of authoredDomainConfigs()) {
     const annotated = config.passages
       .filter((p) => isServablePassage(p, config.windowSize))
       .map((p) => ({
         passage: p,
-        window: chooseAuthoredWindow(p, config.windowSize, excludeQuestionIds, config.domainId),
+        window: chooseAuthoredWindow(p, config.windowSize, excludeQuestionIds, config.domainFor(p)),
       }))
 
     const fullyUnseen = annotated.filter((a) => a.window.unseen === config.windowSize)
@@ -1291,7 +1308,7 @@ function buildPassageQuestionBank(excludeQuestionIds: Set<string>): {
     // fresh window of questions. Re-serving a seen passage with its next
     // window repeats the same passage text, which reads as a repeat.
     const neverSeen = fullyUnseen.filter(
-      (a) => !a.passage.questions.some((_, i) => excludeQuestionIds.has(authoredQuestionId(config.domainId, a.passage, i))),
+      (a) => !a.passage.questions.some((_, i) => excludeQuestionIds.has(authoredQuestionId(config.domainFor(a.passage), a.passage, i))),
     )
     const reviewed = (list: typeof annotated) => list.filter((a) => !a.passage.needsReview)
     const drafts = (list: typeof annotated) => list.filter((a) => a.passage.needsReview)
@@ -1307,24 +1324,112 @@ function buildPassageQuestionBank(excludeQuestionIds: Set<string>): {
       reviewed(annotated),
       annotated,
     ]
-    const pool = tiers.find((tier) => tier.length > 0) ?? []
-    if (pool.length === 0) continue
+    // Candidates in tier order (shuffled within a tier), so a section that
+    // needs two sets can take the second from the next tier when the best tier
+    // holds only one passage.
+    const placed = new Set<string>()
+    const ordered: Array<{ a: (typeof annotated)[number]; tier: number }> = []
+    tiers.forEach((tier, t) => {
+      for (const a of shuffle(tier)) {
+        if (placed.has(a.passage.id)) continue
+        placed.add(a.passage.id)
+        ordered.push({ a, tier: t })
+      }
+    })
+    const candidates = ordered.slice(0, MAX_AUTHORED_CANDIDATES)
+    if (candidates.length === 0) continue
 
-    const candidates = pickRandom(pool, MAX_AUTHORED_CANDIDATES)
-    bank[config.domainId] = candidates.flatMap((a) =>
-      authoredWindowToQuestions(config, a.passage, a.window.start),
-    )
-    for (const a of candidates) {
+    bank[config.key] = candidates.flatMap(({ a }) => authoredWindowToQuestions(config, a.passage, a.window.start))
+    for (const { a, tier } of candidates) {
+      passageTier.set(`authored-${a.passage.id}`, tier)
       passageMeta.set(`authored-${a.passage.id}`, {
         passageId: a.passage.id,
         title: a.passage.title,
-        domainId: config.domainId,
+        domainId: config.domainFor(a.passage),
         needsReview: Boolean(a.passage.needsReview) || a.window.flagged > 0,
       })
     }
   }
 
-  return { bank, passageMeta }
+  return { bank, passageMeta, passageTier }
+}
+
+/**
+ * Pick `blockCount` whole passage sets from a section's tiered candidates.
+ * Earlier (less-seen) tiers are used first; within a tier, sets from
+ * different domains are preferred so one attempt covers more content areas.
+ */
+function selectPassageBlocks(
+  candidates: MCATDiagnosticQuestion[],
+  blockCount: number,
+  passageTier: Map<string, number>,
+): MCATDiagnosticQuestion[] {
+  const groups: MCATDiagnosticQuestion[][] = []
+  const indexById = new Map<string, number>()
+  for (const q of candidates) {
+    const id = q.passage!.id
+    let index = indexById.get(id)
+    if (index === undefined) {
+      index = groups.length
+      indexById.set(id, index)
+      groups.push([])
+    }
+    groups[index].push(q)
+  }
+  const tierOf = (g: MCATDiagnosticQuestion[]) => passageTier.get(g[0].passage!.id) ?? 0
+  const picked: MCATDiagnosticQuestion[][] = []
+  for (const tier of [...new Set(groups.map(tierOf))].sort((a, b) => a - b)) {
+    const inTier = groups.filter((g) => tierOf(g) === tier)
+    const usedDomains = new Set(picked.map((g) => g[0].domain))
+    for (const g of inTier) {
+      if (picked.length >= blockCount) break
+      if (usedDomains.has(g[0].domain)) continue
+      picked.push(g)
+      usedDomains.add(g[0].domain)
+    }
+    for (const g of inTier) {
+      if (picked.length >= blockCount) break
+      if (!picked.includes(g)) picked.push(g)
+    }
+    if (picked.length >= blockCount) break
+  }
+  return picked.flat()
+}
+
+/**
+ * Standalone questions per domain once a section's passage sets are placed.
+ * Each section still totals its domains' questionCount. A domain credited with
+ * passage questions needs fewer standalones; a domain with none keeps at least
+ * one, so every content area is still measured.
+ */
+function allocateStandaloneQuota(passageCountByDomain: Map<string, number>): Map<string, number> {
+  const quota = new Map<string, number>()
+  for (const section of [...new Set(DIAGNOSTIC_DOMAINS.map((d) => d.section))]) {
+    const domains = DIAGNOSTIC_DOMAINS.filter((d) => d.section === section)
+    const total = domains.reduce((n, d) => n + d.questionCount, 0)
+    const passageQs = domains.reduce((n, d) => n + (passageCountByDomain.get(d.id) ?? 0), 0)
+    const need = Math.max(0, total - passageQs)
+    const floor = (id: string) => ((passageCountByDomain.get(id) ?? 0) > 0 ? 0 : Math.min(1, need))
+    const alloc = new Map(
+      domains.map((d) => [d.id, Math.max(floor(d.id), d.questionCount - (passageCountByDomain.get(d.id) ?? 0))]),
+    )
+    const sum = () => [...alloc.values()].reduce((a, b) => a + b, 0)
+    while (sum() > need) {
+      const over = domains
+        .filter((d) => alloc.get(d.id)! > floor(d.id))
+        .sort((a, b) => alloc.get(b.id)! - alloc.get(a.id)!)[0]
+      if (!over) break
+      alloc.set(over.id, alloc.get(over.id)! - 1)
+    }
+    while (sum() < need) {
+      const under = [...domains].sort(
+        (a, b) => b.questionCount - alloc.get(b.id)! - (a.questionCount - alloc.get(a.id)!),
+      )[0]
+      alloc.set(under.id, alloc.get(under.id)! + 1)
+    }
+    for (const [id, n] of alloc) quota.set(id, n)
+  }
+  return quota
 }
 
 function buildSupplementalDomainBank(): Record<string, MCATDiagnosticQuestion[]> {
@@ -1568,7 +1673,7 @@ export async function generateMCATDiagnosticTest(
   const excludeQuestionIds = options.excludeQuestionIds ?? new Set<string>()
   const supplementalBank = buildSupplementalDomainBank()
   const feedbackLoopBank = buildFeedbackLoopSubBank()
-  const { bank: passageBank, passageMeta } = buildPassageQuestionBank(excludeQuestionIds)
+  const { bank: passageBank, passageMeta, passageTier } = buildPassageQuestionBank(excludeQuestionIds)
   const questions: MCATDiagnosticQuestion[] = []
   const domainPools = new Map<string, MCATDiagnosticQuestion[]>()
 
@@ -1616,8 +1721,8 @@ export async function generateMCATDiagnosticTest(
 
     const supplemental = supplementalBank[domain.id] ?? []
     const feedbackLoopQuestions = feedbackLoopBank[domain.id] ?? []
-    const passageQuestions = passageBank[domain.id] ?? []
-    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...feedbackLoopQuestions, ...passageQuestions]).map((question) => ({
+    // Passage sets are chosen per section below, not from domain pools.
+    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...feedbackLoopQuestions]).map((question) => ({
       ...question,
       difficulty: inferQuestionDifficulty(question),
       family: inferQuestionFamily(question),
@@ -1638,7 +1743,24 @@ export async function generateMCATDiagnosticTest(
   // Standalone stems already placed in THIS test, across domains.
   const usedStems = new Set<string>()
 
-  // Pass 2: select each domain's questions.
+  // Passage sets per SECTION, like the real exam's blocks, credited to the
+  // domain matching each passage's discipline.
+  const passageCountByDomain = new Map<string, number>()
+  for (const [key, blockCount] of Object.entries(SECTION_PASSAGE_BLOCKS)) {
+    const candidates = (passageBank[key] ?? []).map((question) => ({
+      ...question,
+      difficulty: inferQuestionDifficulty(question),
+      family: inferQuestionFamily(question),
+      promptType: inferPromptType(question),
+    }))
+    for (const q of selectPassageBlocks(candidates, blockCount, passageTier)) {
+      questions.push(q)
+      passageCountByDomain.set(q.domain, (passageCountByDomain.get(q.domain) ?? 0) + 1)
+    }
+  }
+  const standaloneQuota = allocateStandaloneQuota(passageCountByDomain)
+
+  // Pass 2: select each domain's standalone questions.
   for (const domain of DIAGNOSTIC_DOMAINS) {
     // Shuffle before the stem dedupe so repeated attempts see different data
     // sets for a templated stem, not always the first one.
@@ -1649,29 +1771,10 @@ export async function generateMCATDiagnosticTest(
     )
     domainPools.set(domain.id, unseen.some((q) => !q.passage) ? unseen : fresh)
 
-    // Passage block: a passage whose whole window is unseen first, else any
-    // whole window (the student has seen them all). Filtering seen questions
-    // out of a window question by question would leave partial groups, and
-    // two half-passages could then fill one block.
-    const passageTarget = Math.min(domain.minPassageQuestions ?? 0, domain.questionCount)
-    const freshPassageQuestions = fresh.filter((q) => q.passage)
-    const partlySeenPassages = new Set(
-      freshPassageQuestions.filter((q) => excludeQuestionIds.has(q.id)).map((q) => q.passage!.id),
-    )
-    let selectedPassageQuestions = selectPassageQuestions(
-      freshPassageQuestions.filter((q) => !partlySeenPassages.has(q.passage!.id)),
-      passageTarget,
-    )
-    if (selectedPassageQuestions.length < passageTarget) {
-      selectedPassageQuestions = selectPassageQuestions(freshPassageQuestions, passageTarget)
-    }
-
-    // Standalone questions fill the rest. Passage questions are served only as
-    // whole blocks above, never as stray fill-ins: picking them one at a time
-    // left partial passages (2 of 4 questions) scattered through the test.
-    // Unseen first, topped up from already-seen questions when the unseen
+    // Standalone questions fill the domain's quota after the section passage
+    // sets. Unseen first, topped up from already-seen questions when the unseen
     // standalone pool runs short, so the test never comes up short.
-    const remainingCount = domain.questionCount - selectedPassageQuestions.length
+    const remainingCount = standaloneQuota.get(domain.id) ?? 0
     const selectedRemainder = selectQuestionsByDifficulty(
       unseen.filter((q) => !q.passage),
       remainingCount,
@@ -1684,7 +1787,7 @@ export async function generateMCATDiagnosticTest(
       selectedRemainder.push(...pickRandom(topUp, remainingCount - selectedRemainder.length))
     }
 
-    const domainQuestions = [...selectedPassageQuestions, ...selectedRemainder].slice(0, domain.questionCount).map((question) => ({
+    const domainQuestions = selectedRemainder.slice(0, remainingCount).map((question) => ({
       ...question,
       difficulty: inferQuestionDifficulty(question),
       family: inferQuestionFamily(question),
@@ -1769,8 +1872,16 @@ export async function generateMCATDiagnosticTest(
       )
 
       if (replaceIndex < 0) {
+        // Fallback swap: same SECTION only (section totals are fixed), and
+        // never a domain's last question (every content area stays measured).
+        const sectionOf = (domainId: string) => DIAGNOSTIC_DOMAINS.find((d) => d.id === domainId)?.section
+        const domainCount = (domainId: string) => selectedQuestions.filter((q) => q.domain === domainId).length
         replaceIndex = selectedQuestions.findIndex(
-          (question) => !question.passage && (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
+          (question) =>
+            sectionOf(question.domain) === sectionOf(candidate.domain) &&
+            domainCount(question.domain) > 1 &&
+            !question.passage &&
+            (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
         )
       }
 

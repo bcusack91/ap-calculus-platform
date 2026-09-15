@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { MathText } from '@/components/MathText'
+import { DiagnosticPassageContent } from '@/components/MCATDiagnosticVisuals'
 import {
   MCAT_SECTIONS,
   generateSectionTest,
@@ -300,6 +301,15 @@ export default function MCATractricePage() {
                           : 'border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-900/20'
                       }`}
                     >
+                      {/* Show each passage once, at the first question of its set. */}
+                      {q.passage && q.passage.id !== activeTest.questions[i - 1]?.passage?.id && (
+                        <details className="mb-3 rounded-lg border border-cyan-200 bg-white p-3 dark:border-cyan-800 dark:bg-gray-900/40">
+                          <summary className="cursor-pointer text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">
+                            Passage · <span className="normal-case tracking-normal">{q.passage.title}</span>
+                          </summary>
+                          <DiagnosticPassageContent passage={q.passage} />
+                        </details>
+                      )}
                       <div className="flex items-start justify-between mb-2">
                         <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
                           Q{i + 1}: <MathText inline text={truncateMathSafe(q.question, 120)} />
@@ -382,11 +392,20 @@ export default function MCATractricePage() {
   if (activeTest && !showResults) {
     const q = activeTest.questions[currentIndex]
     const answeredCount = answers.filter(a => a !== null).length
+    // Passage questions come in consecutive sets; the passage stays beside
+    // every question in its set, labeled with the set's question range.
+    const passageId = q.passage?.id
+    let blockStart = currentIndex
+    let blockEnd = currentIndex
+    if (passageId) {
+      while (blockStart > 0 && activeTest.questions[blockStart - 1]?.passage?.id === passageId) blockStart -= 1
+      while (blockEnd < activeTest.questions.length - 1 && activeTest.questions[blockEnd + 1]?.passage?.id === passageId) blockEnd += 1
+    }
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container">
-          <div className="mx-auto max-w-3xl">
+          <div className={`mx-auto ${q.passage ? 'max-w-6xl' : 'max-w-3xl'}`}>
             {/* Progress Bar */}
             <div className="mb-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -419,6 +438,23 @@ export default function MCATractricePage() {
                 {activeTest.section.name}
               </span>
             </div>
+
+            {/* Two-pane on large screens when a passage is present (test-day layout) */}
+            <div className={q.passage ? 'lg:grid lg:grid-cols-2 lg:gap-6 lg:items-start' : ''}>
+            {q.passage && (
+              <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto dark:border-cyan-800 dark:bg-cyan-900/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">
+                  Passage
+                  {blockEnd > blockStart && (
+                    <span className="ml-2 normal-case tracking-normal font-medium">
+                      · Questions {blockStart + 1}–{blockEnd + 1} refer to this passage
+                    </span>
+                  )}
+                </p>
+                <h3 className="mt-1 text-lg font-bold text-gray-900 dark:text-white">{q.passage.title}</h3>
+                <DiagnosticPassageContent passage={q.passage} />
+              </div>
+            )}
 
             {/* Question */}
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -453,6 +489,7 @@ export default function MCATractricePage() {
                   )
                 })}
               </div>
+            </div>
             </div>
 
             {/* Navigation */}
@@ -509,7 +546,7 @@ export default function MCATractricePage() {
               MCAT Section Practice
             </h1>
             <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
-              Practice each MCAT section with timed, passage-style questions and detailed scoring.
+              Practice each MCAT section with timed sets built like the real exam: passage-based question sets plus discrete questions, with detailed scoring.
             </p>
           </div>
 

@@ -8,6 +8,10 @@
 import { generateExitQuiz } from '../exit-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
+import { CARS_PASSAGES, SECTION_PASSAGES } from '../mcat/passages'
+import type { MCATPassage } from '../mcat/types'
+import { chartToPassageBlocks } from './diagnostic-generator'
+import type { DiagnosticPassage } from '@/components/MCATDiagnosticVisuals'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -43,6 +47,8 @@ export interface MCATTestQuestion {
   topicSlug: string
   sectionId: string
   difficulty: 'easy' | 'medium' | 'hard'
+  /** Present on passage-based questions; the passage is shown beside each question in its set. */
+  passage?: DiagnosticPassage
 }
 
 /**
@@ -183,8 +189,9 @@ export const MCAT_SECTIONS: MCATSection[] = [
     id: 'cars',
     name: 'Critical Analysis and Reasoning Skills',
     shortName: 'CARS',
-    questionCount: 15,
-    timeLimitMinutes: 30,
+    // All passages, as on the real CARS section: 3 whole 6-question passages.
+    questionCount: 18,
+    timeLimitMinutes: 32,
     slugs: ['mcat-cars'],
     description: 'Reading comprehension, reasoning, and argument analysis',
   },
@@ -216,6 +223,118 @@ export const MCAT_SECTIONS: MCATSection[] = [
 /* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/*  Passage sets                                                       */
+/*                                                                     */
+/*  The real MCAT is mostly passage-based: each science section is     */
+/*  ~75% passage questions (10 passages) and ~25% discretes, and CARS  */
+/*  is all passages. Section practice used to be 100% discrete exit-   */
+/*  quiz items. Each test now draws whole authored passages up to a    */
+/*  target and fills the rest with difficulty-balanced discretes       */
+/*  placed between the passage sets.                                   */
+/* ------------------------------------------------------------------ */
+
+interface PassagePlan {
+  /** Eligible authored passages for this test. */
+  pool: () => MCATPassage[]
+  /** Passage questions to aim for (whole passages only; may land up to 2 over). */
+  target: number
+}
+
+const byDiscipline = (section: keyof typeof SECTION_PASSAGES, disciplines: string[]) => () =>
+  SECTION_PASSAGES[section].filter((p) => disciplines.includes(p.discipline))
+
+const PASSAGE_PLANS: Record<string, PassagePlan> = {
+  'gen-chem-comprehensive': { pool: byDiscipline('chem-phys', ['general chemistry', 'thermodynamics']), target: 11 },
+  'organic-comprehensive': { pool: byDiscipline('chem-phys', ['organic chemistry']), target: 11 },
+  'physics-comprehensive': { pool: byDiscipline('chem-phys', ['physics']), target: 16 },
+  'biochem-comprehensive': {
+    pool: () => [
+      ...byDiscipline('chem-phys', ['biochemistry'])(),
+      ...byDiscipline('bio-biochem', ['biochemistry', 'metabolism'])(),
+    ],
+    target: 11,
+  },
+  'chem-phys': { pool: () => SECTION_PASSAGES['chem-phys'], target: 22 },
+  cars: { pool: () => CARS_PASSAGES, target: 18 },
+  'bio-biochem': { pool: () => SECTION_PASSAGES['bio-biochem'], target: 22 },
+  'psych-soc': { pool: () => SECTION_PASSAGES['psych-soc'], target: 15 },
+}
+
+/** Topic module a passage question attributes to (drives "Recommended Learning Modules" links). */
+function topicSlugForPassage(p: MCATPassage): string {
+  const d = p.discipline
+  if (p.section === 'cars') return 'mcat-cars-strategy-mcat'
+  if (d === 'physics') {
+    return /circuit|current|voltage|resist|electro|capacit|charge|magnet|optic|lens/i.test(p.passageText)
+      ? 'mcat-physics-electricity-mcat'
+      : 'mcat-physics-mechanics-mcat'
+  }
+  if (d === 'general chemistry' || d === 'thermodynamics') return 'mcat-general-chemistry-mcat'
+  if (d === 'organic chemistry') return 'mcat-organic-chemistry-mcat'
+  if (d === 'biochemistry' || d === 'metabolism') return 'mcat-biochemistry-foundations-mcat'
+  if (d === 'molecular biology') return 'mcat-molecular-biology-mcat'
+  if (d === 'cell biology') return 'mcat-cell-biology-mcat'
+  if (d === 'microbiology') return 'mcat-microbiology-mcat'
+  if (d === 'genetics' || d === 'immunology') return 'mcat-genetics-evolution-mcat'
+  if (d === 'physiology') return 'mcat-organ-systems-mcat'
+  if (d === 'sociology') return 'mcat-sociology-mcat'
+  return 'mcat-psychology-behavior-mcat'
+}
+
+function toTestPassage(p: MCATPassage): DiagnosticPassage {
+  const blocks = p.chart ? chartToPassageBlocks(p.chart) : null
+  return {
+    id: `authored-${p.id}`,
+    title: p.title,
+    body: blocks?.legend ? `${p.passageText}\n\n${blocks.legend}` : p.passageText,
+    ...(p.figure ? { figureMarkdown: p.figure } : {}),
+    ...(blocks ? { dataTable: blocks.dataTable, figure: blocks.figure } : {}),
+  }
+}
+
+/** Whole random passages until the plan's target, each as a block of questions in authored order. */
+function pickPassageBlocks(plan: PassagePlan, sectionId: string): MCATTestQuestion[][] {
+  const blocks: MCATTestQuestion[][] = []
+  let count = 0
+  for (const p of shuffleArray(plan.pool())) {
+    if (count >= plan.target - 1) break
+    // Passages hold 5–6 questions, so allow landing up to 2 over the target;
+    // with only +1, two 6-question passages (12) could strand a 15-question
+    // target well short.
+    if (count + p.questions.length > plan.target + 2) continue
+    const passage = toTestPassage(p)
+    const topicSlug = topicSlugForPassage(p)
+    blocks.push(
+      p.questions.map((q) => ({
+        question: q.question,
+        options: [...q.options],
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+        topicSlug,
+        sectionId,
+        difficulty: 'medium' as const,
+        passage,
+      })),
+    )
+    count += p.questions.length
+  }
+  return blocks
+}
+
+/** Passage sets in random order with the discretes spread evenly after them. */
+function interleaveDiscretes(blocks: MCATTestQuestion[][], discretes: MCATTestQuestion[]): MCATTestQuestion[] {
+  if (blocks.length === 0) return discretes
+  const perGap = Math.ceil(discretes.length / blocks.length)
+  const out: MCATTestQuestion[] = []
+  let next = 0
+  for (const block of shuffleArray(blocks)) {
+    out.push(...block, ...discretes.slice(next, next + perGap))
+    next += perGap
+  }
+  return out
+}
 
 export async function generateSectionTest(sectionId: string): Promise<MCATSectionTest> {
   const section = MCAT_SECTIONS.find(s => s.id === sectionId)
@@ -250,16 +369,25 @@ export async function generateSectionTest(sectionId: string): Promise<MCATSectio
     }
   }
 
-  // Shuffle and cap
-  const selected = section.difficultyMix
-    ? selectQuestionsByDifficulty(allQuestions, section.questionCount, section.difficultyMix)
-    : shuffleArray(allQuestions).slice(0, section.questionCount)
+  // Passage sets first, then discretes for the rest of the section's count.
+  const plan = PASSAGE_PLANS[section.id]
+  const blocks = plan ? pickPassageBlocks(plan, section.id) : []
+  const passageCount = blocks.reduce((n, b) => n + b.length, 0)
+  const discreteCount = Math.max(0, section.questionCount - passageCount)
+  const discretes =
+    discreteCount === 0
+      ? []
+      : section.difficultyMix
+      ? selectQuestionsByDifficulty(allQuestions, discreteCount, section.difficultyMix)
+      : shuffleArray(allQuestions).slice(0, discreteCount)
+  const selected = interleaveDiscretes(blocks, discretes)
 
   // Shuffle each question's options so the correct answer isn't stuck at a
   // fixed position (the authored bank stores correctAnswer: 0 throughout).
   // correctAnswer is remapped to the shuffled index here, so scoring, the
   // review screen, and the submit payload — which all read from this test
-  // object — stay consistent automatically.
+  // object — stay consistent automatically. Passage explanations reference
+  // options by content, so shuffling them is safe too.
   const questions = selected.map(q => {
     const s = shuffleOptions(q.options, q.correctAnswer, q.question)
     return { ...q, options: s.options, correctAnswer: s.correctIndex }

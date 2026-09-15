@@ -19,11 +19,16 @@ import { CARS_LANGUAGE_ED_PASSAGES } from './cars-language-education'
 import { CHEM_PHYS_PASSAGES, CHEM_PHYS_DISCRETES } from './chem-phys'
 import { CHEM_PHYS_PASSAGES_2 } from './chem-phys-2'
 import { CHEM_PHYS_PASSAGES_3 } from './chem-phys-3'
+import { CHEM_PHYS_DISCRETES_2 } from './chem-phys-discretes-2'
 import { BIO_BIOCHEM_PASSAGES, BIO_BIOCHEM_DISCRETES } from './bio-biochem'
 import { BIO_BIOCHEM_PASSAGES_2 } from './bio-biochem-2'
 import { BIO_BIOCHEM_PASSAGES_3 } from './bio-biochem-3'
+import { BIO_BIOCHEM_DISCRETES_2 } from './bio-biochem-discretes-2'
+import { BIO_BIOCHEM_PASSAGES_4 } from './bio-biochem-4'
 import { PSYCH_SOC_PASSAGES, PSYCH_SOC_DISCRETES } from './psych-soc'
 import { PSYCH_SOC_PASSAGES_2 } from './psych-soc-2'
+import { PSYCH_SOC_DISCRETES_2 } from './psych-soc-discretes-2'
+import { PSYCH_SOC_PASSAGES_3 } from './psych-soc-3'
 
 export const CARS_PASSAGES: MCATPassage[] = [
   ...CARS_HUMANITIES_PASSAGES,
@@ -42,14 +47,14 @@ export const CARS_PASSAGES: MCATPassage[] = [
 
 export const SECTION_PASSAGES: Record<Exclude<MCATSection, 'cars'>, MCATPassage[]> = {
   'chem-phys': [...CHEM_PHYS_PASSAGES, ...CHEM_PHYS_PASSAGES_2, ...CHEM_PHYS_PASSAGES_3],
-  'bio-biochem': [...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2, ...BIO_BIOCHEM_PASSAGES_3],
-  'psych-soc': [...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2],
+  'bio-biochem': [...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2, ...BIO_BIOCHEM_PASSAGES_3, ...BIO_BIOCHEM_PASSAGES_4],
+  'psych-soc': [...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2, ...PSYCH_SOC_PASSAGES_3],
 }
 
 export const SECTION_DISCRETES: Record<Exclude<MCATSection, 'cars'>, MCATDiscreteQuestion[]> = {
-  'chem-phys': CHEM_PHYS_DISCRETES,
-  'bio-biochem': BIO_BIOCHEM_DISCRETES,
-  'psych-soc': PSYCH_SOC_DISCRETES,
+  'chem-phys': [...CHEM_PHYS_DISCRETES, ...CHEM_PHYS_DISCRETES_2],
+  'bio-biochem': [...BIO_BIOCHEM_DISCRETES, ...BIO_BIOCHEM_DISCRETES_2],
+  'psych-soc': [...PSYCH_SOC_DISCRETES, ...PSYCH_SOC_DISCRETES_2],
 }
 
 /**
@@ -72,6 +77,8 @@ export const ALL_MCAT_PASSAGES: MCATPassage[] = [
   ...BIO_BIOCHEM_PASSAGES,
   ...BIO_BIOCHEM_PASSAGES_2,
   ...BIO_BIOCHEM_PASSAGES_3,
+  ...BIO_BIOCHEM_PASSAGES_4,
   ...PSYCH_SOC_PASSAGES,
   ...PSYCH_SOC_PASSAGES_2,
+  ...PSYCH_SOC_PASSAGES_3,
 ]
