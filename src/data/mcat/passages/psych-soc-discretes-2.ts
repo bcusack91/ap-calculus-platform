@@ -185,11 +185,11 @@ export const PSYCH_SOC_DISCRETES_2: MCATDiscreteQuestion[] = [
     section: 'psych-soc',
     discipline: 'personality-and-disorders',
     question:
-      'A therapist explains that a client’s anxiety stems from the gap between who she is and the self she believes she must become to earn her parents’ approval. The therapist accepts and supports the client without judgment, whatever she says. This approach reflects which perspective on personality?',
+      'A therapist explains that a client’s anxiety stems from the gap between who she is and the self she believes she must become to earn her parents’ approval. This explanation reflects which perspective on personality?',
     options: ['Psychoanalytic', 'Behaviorist', 'Trait', 'Humanistic'],
     correctAnswer: 3,
     explanation:
-      'Incongruence between the real self and an ideal self shaped by conditions of worth, treated with unconditional positive regard, is Carl Rogers’s person-centered approach, a humanistic perspective. The psychoanalytic perspective attributes anxiety to unconscious conflicts among id, ego, and superego and relies on techniques such as free association and interpretation, not unconditional positive regard. The behaviorist perspective explains personality as learned responses shaped by reinforcement and would treat the anxiety with conditioning techniques. Trait theory describes stable dispositions, such as the Big Five, and offers no account of a gap between real and ideal selves.',
+      'Incongruence between the real self and an ideal self shaped by conditions of worth (approval that depends on meeting others’ standards) is Carl Rogers’s account of anxiety, a humanistic perspective. The mention of parents can suggest a psychoanalytic account, but that perspective attributes anxiety to unconscious conflicts among id, ego, and superego rooted in early drives, not to a consciously experienced gap between real and ideal selves. The behaviorist perspective explains personality as learned responses shaped by reinforcement and would treat the anxiety with conditioning techniques. Trait theory describes stable dispositions, such as the Big Five, and offers no account of a gap between real and ideal selves.',
     skill: 'which-theory',
   },
   {

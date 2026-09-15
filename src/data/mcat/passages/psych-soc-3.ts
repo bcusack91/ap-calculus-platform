@@ -496,15 +496,15 @@ export const PSYCH_SOC_PASSAGES_3: MCATPassage[] = [
         "skill": "research-design"
       },
       {
-        "question": "According to gate control theory, same-arm vibration reduced pain mainly by activating:",
+        "question": "Which explanation for the pain relief produced by same-arm vibration is most consistent with the full pattern of vibration results in Figure 1?",
         "options": [
-          "C fibers that release endorphins into the heated patch of skin",
-          "Aδ fibers that silence the nociceptors at the site of heating",
-          "Aβ fibers that excite inhibitory interneurons in the dorsal horn",
-          "ventral-horn motor neurons that relax the forearm muscles"
+          "Attention drawn away from the heat by the noise and feel of the vibrating device",
+          "Endorphins released into the bloodstream that dampen pain throughout the body",
+          "Touch signals that inhibit pain relay where they enter the same spinal segment",
+          "Fatigue of the heat-sensitive receptors in the skin that the vibrator touched"
         ],
         "correctAnswer": 2,
-        "explanation": "The passage describes vibration as activating large-diameter Aβ fibers, which excite inhibitory interneurons in the dorsal horn and reduce the relay of pain signals to ascending neurons. C fibers and Aδ fibers are the pain-carrying fibers whose input the gate restricts, not the fibers that close it, and gating occurs in the spinal cord rather than at the skin. Ventral-horn motor neurons control muscles and play no role in gate control.",
+        "explanation": "Only a segmental spinal mechanism fits both results: same-arm vibration lowered intensity from 6.6 to 4.2, while opposite-arm vibration barely helped (6.1). Under gate control theory, vibration activates large-diameter Aβ touch fibers that excite inhibitory interneurons in the dorsal horn at their own entry level, reducing the relay of pain signals from that same side and segment. Attention cannot explain the pattern, because the vibrator was equally audible and felt in both vibration conditions. Circulating endorphins would dampen pain no matter which arm was vibrated. Receptor fatigue fails because the heated skin itself was not vibrated; the vibrator sat 3 cm away.",
         "skill": "apply-a-theory"
       },
       {
