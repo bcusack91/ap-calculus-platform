@@ -18,8 +18,10 @@ import { CARS_CULTURE_PASSAGES } from './cars-culture'
 import { CARS_LANGUAGE_ED_PASSAGES } from './cars-language-education'
 import { CHEM_PHYS_PASSAGES, CHEM_PHYS_DISCRETES } from './chem-phys'
 import { CHEM_PHYS_PASSAGES_2 } from './chem-phys-2'
+import { CHEM_PHYS_PASSAGES_3 } from './chem-phys-3'
 import { BIO_BIOCHEM_PASSAGES, BIO_BIOCHEM_DISCRETES } from './bio-biochem'
 import { BIO_BIOCHEM_PASSAGES_2 } from './bio-biochem-2'
+import { BIO_BIOCHEM_PASSAGES_3 } from './bio-biochem-3'
 import { PSYCH_SOC_PASSAGES, PSYCH_SOC_DISCRETES } from './psych-soc'
 import { PSYCH_SOC_PASSAGES_2 } from './psych-soc-2'
 
@@ -39,8 +41,8 @@ export const CARS_PASSAGES: MCATPassage[] = [
 ]
 
 export const SECTION_PASSAGES: Record<Exclude<MCATSection, 'cars'>, MCATPassage[]> = {
-  'chem-phys': [...CHEM_PHYS_PASSAGES, ...CHEM_PHYS_PASSAGES_2],
-  'bio-biochem': [...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2],
+  'chem-phys': [...CHEM_PHYS_PASSAGES, ...CHEM_PHYS_PASSAGES_2, ...CHEM_PHYS_PASSAGES_3],
+  'bio-biochem': [...BIO_BIOCHEM_PASSAGES, ...BIO_BIOCHEM_PASSAGES_2, ...BIO_BIOCHEM_PASSAGES_3],
   'psych-soc': [...PSYCH_SOC_PASSAGES, ...PSYCH_SOC_PASSAGES_2],
 }
 
@@ -66,8 +68,10 @@ export const ALL_MCAT_PASSAGES: MCATPassage[] = [
   ...CARS_PASSAGES,
   ...CHEM_PHYS_PASSAGES,
   ...CHEM_PHYS_PASSAGES_2,
+  ...CHEM_PHYS_PASSAGES_3,
   ...BIO_BIOCHEM_PASSAGES,
   ...BIO_BIOCHEM_PASSAGES_2,
+  ...BIO_BIOCHEM_PASSAGES_3,
   ...PSYCH_SOC_PASSAGES,
   ...PSYCH_SOC_PASSAGES_2,
 ]

@@ -10,16 +10,18 @@ import { describe, it, expect } from 'vitest'
 import { generateMCATDiagnosticTest, type MCATDiagnosticQuestion } from '@/data/mcat-practice/diagnostic-generator'
 import { authoredQuestionIndex } from '@/lib/mcat-diagnostic-order'
 
+// CARS is all passages (3 × 4-question sets); Psych/Soc gave up one question
+// to keep the total at 45.
 const DOMAIN_COUNTS: Record<string, number> = {
   'gen-chem': 3,
   'org-chem': 3,
   physics: 3,
   'biochem-cp': 2,
-  cars: 11,
+  cars: 12,
   'cell-mol-bio': 4,
   'organ-systems': 4,
   genetics: 3,
-  'psych-soc': 12,
+  'psych-soc': 11,
 }
 /** Questions served per passage block (the domain's passage window). */
 const PASSAGE_WINDOW: Record<string, number> = { cars: 4, physics: 2, 'cell-mol-bio': 2, 'psych-soc': 4 }
@@ -29,6 +31,8 @@ const stem = (q: MCATDiagnosticQuestion) => q.question.replace(/\s+/g, ' ').trim
 describe('generateMCATDiagnosticTest', { timeout: 120_000 }, () => {
   it('keeps passages in consecutive, complete, authored-order blocks with no duplicate questions', async () => {
     const seen = new Set<string>()
+    const seenStems = new Set<string>()
+    const seenPassages = new Set<string>()
     // 15 back-to-back attempts: past ~6 the unseen pools run dry, which is
     // where partial passages and short tests used to appear.
     for (let attempt = 0; attempt < 15; attempt++) {
@@ -61,7 +65,23 @@ describe('generateMCATDiagnosticTest', { timeout: 120_000 }, () => {
       const standaloneStems = qs.filter((q) => !q.passage).map(stem)
       expect(new Set(standaloneStems).size, 'duplicate standalone question text').toBe(standaloneStems.length)
 
-      for (const q of qs) seen.add(q.id)
+      // No question repeats across 15 back-to-back attempts, by id or by
+      // standalone question text.
+      const repeatedIds = qs.filter((q) => seen.has(q.id)).map((q) => q.id)
+      expect(repeatedIds, `attempt ${attempt + 1} repeated questions`).toEqual([])
+      const repeatedStems = qs.filter((q) => !q.passage && seenStems.has(stem(q))).map((q) => q.id)
+      expect(repeatedStems, `attempt ${attempt + 1} repeated question text`).toEqual([])
+
+      // Nor does a passage: re-serving a seen passage with its next window of
+      // questions still repeats the passage text.
+      const repeatedPassages = [...positions.keys()].filter((id) => seenPassages.has(id))
+      expect(repeatedPassages, `attempt ${attempt + 1} repeated passages`).toEqual([])
+
+      for (const q of qs) {
+        seen.add(q.id)
+        if (!q.passage) seenStems.add(stem(q))
+        else seenPassages.add(q.passage.id)
+      }
     }
   })
 })

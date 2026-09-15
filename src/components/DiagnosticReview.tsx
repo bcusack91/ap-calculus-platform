@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { InArticleAd } from '@/components/ad-banner'
+import {
+  DataVisual,
+  DiagnosticPassageContent,
+  type DiagnosticDataTable,
+  type DiagnosticFigure,
+  type DiagnosticPassage,
+} from '@/components/MCATDiagnosticVisuals'
 
 function renderLatex(text: string): string {
   return renderRichText(text)
@@ -16,6 +23,14 @@ export interface ReviewQuestion {
   correctIndex?: number
   explanation: string
   domain: string
+  /**
+   * MCAT passage questions carry their passage object, which the review shows
+   * with each question. Other diagnostics (e.g. SAT) store a plain-string
+   * passage; that shape isn't rendered here, so their review is unchanged.
+   */
+  passage?: DiagnosticPassage | string
+  /** MCAT figure-analysis questions carry the chart/table they ask about. */
+  visual?: { dataTable?: DiagnosticDataTable; figure?: DiagnosticFigure }
 }
 
 function getCorrectAnswer(q: ReviewQuestion): number {
@@ -177,6 +192,22 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
                 {/* Expanded details */}
                 {isExpanded && (
                   <div className="border-t border-gray-100 px-4 pb-4 pt-3 dark:border-gray-700">
+                    {/* The passage (and any figure) the question depends on;
+                        without it a passage question can't be reviewed. */}
+                    {q.passage && typeof q.passage === 'object' && (
+                      <details open className="mb-3 rounded-lg border border-cyan-200 bg-cyan-50 p-3 dark:border-cyan-800 dark:bg-cyan-900/20">
+                        <summary className="cursor-pointer text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">
+                          Passage · <span className="normal-case tracking-normal">{q.passage.title}</span>
+                        </summary>
+                        <DiagnosticPassageContent passage={q.passage} />
+                      </details>
+                    )}
+                    {q.visual && (q.visual.figure || q.visual.dataTable) && (
+                      <div className="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3 dark:border-emerald-800 dark:bg-emerald-900/20">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Figure</p>
+                        <DataVisual data={q.visual} />
+                      </div>
+                    )}
                     <div className="space-y-1.5">
                       {q.options.map((opt, oi) => {
                         const isStudentChoice = studentAnswer === oi

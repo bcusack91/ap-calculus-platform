@@ -68,6 +68,8 @@ export interface MCATDiagnosticQuestion {
     id: string
     title: string
     body: string
+    /** Authored markdown figure/data block (may hold a pipe table and $…$ math); render as rich text. */
+    figureMarkdown?: string
     dataTable?: {
       title: string
       xLabel: string
@@ -102,7 +104,14 @@ export interface MCATDiagnosticDomain {
   id: string
   name: string
   section: 'chem-phys' | 'cars' | 'bio-biochem' | 'psych-soc'
+  /** The domain's primary topic slugs: question banks AND study recommendations. */
   slugs: string[]
+  /**
+   * Extra exit-quiz banks drawn for questions only, never recommended as
+   * domain-level topics. Recommending all of them would let one weak domain
+   * fill every recommendation slot.
+   */
+  bankSlugs?: string[]
   questionCount: number
   minPassageQuestions?: number
   difficultyMix?: {
@@ -169,9 +178,19 @@ export interface MCATDiagnosticResults {
 /* ------------------------------------------------------------------ */
 
 // Section totals mirror the real exam's equal weighting (25% per section):
-// Chem/Phys 11, CARS 11, Bio/Biochem 11, Psych/Soc 12 of 45. The old layout
+// Chem/Phys 11, CARS 12, Bio/Biochem 11, Psych/Soc 11 of 45. The old layout
 // gave Chem/Phys 40% and Psych/Soc 13%, which made the CARS and Psych/Soc
 // scaled-score estimates swing ~2.3 points per single item.
+//
+// CARS is all passages (3 × 4-question sets), like the real section. The
+// standalone CARS pool was only ~43 unique questions, far short of the 105
+// that 15 back-to-back attempts need, while the authored CARS bank holds 76
+// passages.
+//
+// `bankSlugs` add every other exit-quiz bank for a domain. The organ systems
+// and genetics parent banks hold only 16 and 15 questions; their subtopic banks
+// bring the unique pools to ~147 and ~91, enough for 15 attempts with no
+// repeats.
 const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
   // Chem/Phys
   {
@@ -213,9 +232,8 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Critical Analysis & Reasoning',
     section: 'cars',
     slugs: ['mcat-cars'],
-    questionCount: 11,
-    minPassageQuestions: 4,
-    difficultyMix: { easy: 2, medium: 5, hard: 4 },
+    questionCount: 12,
+    minPassageQuestions: 12,
   },
   // Bio/Biochem
   {
@@ -232,6 +250,12 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Organ Systems & Physiology',
     section: 'bio-biochem',
     slugs: ['mcat-organ-systems'],
+    bankSlugs: [
+      'mcat-organ-systems-cardiovascular-mcat',
+      'mcat-organ-systems-endocrine-nervous-mcat',
+      'mcat-organ-systems-renal-mcat',
+      'mcat-organ-systems-respiratory-mcat',
+    ],
     questionCount: 4,
     difficultyMix: { easy: 1, medium: 2, hard: 1 },
   },
@@ -240,6 +264,12 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Genetics & Evolution',
     section: 'bio-biochem',
     slugs: ['mcat-genetics-evolution'],
+    bankSlugs: [
+      'mcat-genetics-evolution-mcat',
+      'mcat-genetics-evolution-mendelian-mcat',
+      'mcat-genetics-evolution-natural-selection-mcat',
+      'mcat-genetics-evolution-population-genetics-mcat',
+    ],
     questionCount: 3,
     difficultyMix: { easy: 0, medium: 2, hard: 1 },
   },
@@ -249,9 +279,9 @@ const DIAGNOSTIC_DOMAINS: MCATDiagnosticDomain[] = [
     name: 'Psychology & Sociology',
     section: 'psych-soc',
     slugs: ['mcat-psychology-sociology'],
-    questionCount: 12,
+    questionCount: 11,
     minPassageQuestions: 4,
-    difficultyMix: { easy: 2, medium: 5, hard: 5 },
+    difficultyMix: { easy: 2, medium: 5, hard: 4 },
   },
 ]
 
@@ -1075,8 +1105,8 @@ function buildCarsSupplementQuestions(domainId: string, sourceSlug: string): MCA
 /*  MCATDiagnosticTestData.passageSources.                             */
 /* ------------------------------------------------------------------ */
 
-/** Passages whose prose embeds a markdown table can't render in the plain-text passage pane. */
-const MARKDOWN_TABLE_RE = /\n\s*\|.*\|/
+/** Request size that returns an exit-quiz bank in full (largest MCAT bank is ~500). */
+const FULL_EXIT_BANK = 100_000
 
 /** Cap on candidate passages per domain fed to the (shuffled) selector. */
 const MAX_AUTHORED_CANDIDATES = 6
@@ -1165,16 +1195,14 @@ function chartToPassageBlocks(chart: MCATFigureSpec): {
 }
 
 /**
- * A passage is servable when its whole presentation survives the diagnostic's
- * plain-text passage pane: no prose/markdown `figure` block, no markdown table
- * embedded in the body, and enough questions to fill the domain's window.
+ * A passage is servable when it has enough questions to fill the domain's
+ * window. The diagnostic renders passage bodies and markdown `figure` blocks
+ * as rich text (pipe tables and $…$ math), like the full-length exam, so
+ * passages with figures or tables are no longer excluded. Excluding them used
+ * to drop 4 of 10 physics and 6 of 11 cell-biology passages.
  */
 function isServablePassage(passage: MCATPassage, windowSize: number): boolean {
-  return (
-    !passage.figure &&
-    !MARKDOWN_TABLE_RE.test(passage.passageText) &&
-    passage.questions.length >= windowSize
-  )
+  return passage.questions.length >= windowSize
 }
 
 function authoredQuestionId(domainId: string, passage: MCATPassage, questionIndex: number): string {
@@ -1219,6 +1247,7 @@ function authoredWindowToQuestions(
     id: `authored-${passage.id}`,
     title: passage.title,
     body,
+    ...(passage.figure ? { figureMarkdown: passage.figure } : {}),
     ...(blocks ? { dataTable: blocks.dataTable, figure: blocks.figure } : {}),
   }
 
@@ -1258,17 +1287,27 @@ function buildPassageQuestionBank(excludeQuestionIds: Set<string>): {
       }))
 
     const fullyUnseen = annotated.filter((a) => a.window.unseen === config.windowSize)
-    const reviewedUnseen = fullyUnseen.filter((a) => !a.passage.needsReview)
-    const draftUnseen = fullyUnseen.filter((a) => a.passage.needsReview)
-    const reviewedAny = annotated.filter((a) => !a.passage.needsReview)
+    // A passage the student has never seen at all, not merely one with a
+    // fresh window of questions. Re-serving a seen passage with its next
+    // window repeats the same passage text, which reads as a repeat.
+    const neverSeen = fullyUnseen.filter(
+      (a) => !a.passage.questions.some((_, i) => excludeQuestionIds.has(authoredQuestionId(config.domainId, a.passage, i))),
+    )
+    const reviewed = (list: typeof annotated) => list.filter((a) => !a.passage.needsReview)
+    const drafts = (list: typeof annotated) => list.filter((a) => a.passage.needsReview)
 
-    // Reviewed passages first; drafts only when the reviewed pool has run dry
-    // (none authored for this domain, or the student has seen them all). When
-    // literally everything is seen, recycle reviewed passages before drafts.
-    let pool = reviewedUnseen
-    if (pool.length === 0) pool = draftUnseen
-    if (pool.length === 0) pool = reviewedAny
-    if (pool.length === 0) pool = annotated
+    // Order: never-seen passages, then a fresh window of an already-seen
+    // passage, then anything. Within each tier, reviewed passages come before
+    // drafts, so drafts are used only when the reviewed pool has run dry.
+    const tiers = [
+      reviewed(neverSeen),
+      drafts(neverSeen),
+      reviewed(fullyUnseen),
+      drafts(fullyUnseen),
+      reviewed(annotated),
+      annotated,
+    ]
+    const pool = tiers.find((tier) => tier.length > 0) ?? []
     if (pool.length === 0) continue
 
     const candidates = pickRandom(pool, MAX_AUTHORED_CANDIDATES)
@@ -1536,12 +1575,14 @@ export async function generateMCATDiagnosticTest(
   // Pass 1: build every domain's full candidate pool.
   const mergedByDomain = new Map<string, MCATDiagnosticQuestion[]>()
   for (const domain of DIAGNOSTIC_DOMAINS) {
-    const questionsPerSlug = Math.max(Math.ceil((domain.questionCount + 8) / domain.slugs.length), 16)
     const domainQuestions: MCATDiagnosticQuestion[] = []
 
-    for (const slug of domain.slugs) {
+    for (const slug of [...domain.slugs, ...(domain.bankSlugs ?? [])]) {
       try {
-        const pool = await generateExitQuiz(slug, questionsPerSlug + 2)
+        // Load the WHOLE bank, not a random ~18. The "already seen" exclusion
+        // runs after this, so a small random sample kept re-drawing questions
+        // the student had seen while most of the bank went unused.
+        const pool = await generateExitQuiz(slug, FULL_EXIT_BANK)
         const tagged: MCATDiagnosticQuestion[] = pool.map(q => {
           const raw = q as unknown as Record<string, unknown>
           const correctAnswer = (raw.correctAnswer ?? raw.correctIndex ?? 0) as number
