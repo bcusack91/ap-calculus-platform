@@ -38,10 +38,28 @@ function pm(n: number): string {
   return n < 0 ? `- ${Math.abs(n)}` : `+ ${n}`
 }
 
+/**
+ * Tidy generated math the way a textbook writes it: a coefficient of 1 is
+ * dropped ("1x" → "x", "-1x" → "-x") and a zero term is removed ("2x + 0" →
+ * "2x", "|x - 0|" → "|x|"). Applied only inside $…$ spans, so prose and
+ * currency are untouched.
+ */
+function tidyMath(text: string): string {
+  return text.replace(/\$[^$]+\$/g, (span) =>
+    span
+      .replace(/(^|[^\d.\\])1(?=[a-z](?![a-z]))/g, '$1')
+      .replace(/ [+-] 0(?![\d.])/g, ''),
+  )
+}
+
+function tidyQuestion(q: ExitQuizQuestion): ExitQuizQuestion {
+  return { ...q, question: tidyMath(q.question), options: q.options.map(tidyMath), explanation: tidyMath(q.explanation) }
+}
+
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
-  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
-  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
+  // Tidy before de-duplicating, so options that differ only as "1x" vs "x" collapse.
+  correct = tidyMath(correct)
+  const unique = [...new Set(others.map(tidyMath))].filter(o => o !== correct).slice(0, 3)
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -52,8 +70,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Slope-Intercept Inequalities',
     difficulty: 'easy',
     generate() {
-      const m = randInt(1, 5)
-      const b = randInt(-8, 8)
+      // Slope 2+ and a nonzero intercept, so the expression never prints "1x" or "+ 0".
+      const m = randInt(2, 5)
+      const b = randInt(1, 8) * (Math.random() < 0.5 ? -1 : 1)
       const correct = `$y \\le ${m}x ${pm(b)}$`
       return { id: this.id, category: this.category, question: `A line has slope $${m}$ and y-intercept $${b}$. Which inequality represents all points on or below the line?`, ...makeStringOptions(correct, [`$y \\ge ${m}x ${pm(b)}$`, `$y > ${m}x ${pm(b)}$`, `$y = ${m}x ${pm(b)}$`]), explanation: `The line is $y = ${m}x ${pm(b)}$. "On or below" includes the boundary, so use $y \\le ${m}x ${pm(b)}$.` }
     }
@@ -79,8 +98,8 @@ const questionPool: QuestionTemplate[] = [
       const x = randInt(0, 6)
       const boundary = m * x + b
       const testY = boundary + randInt(1, 5)
-      const correct = 'Above the line (it satisfies $y > mx + b$)'
-      return { id: this.id, category: this.category, question: `Does the point $(${x}, ${testY})$ satisfy $y > ${m}x ${pm(b)}$? The boundary value at $x = ${x}$ is $${boundary}$.`, ...makeStringOptions(correct, ['Below the line', 'On the line exactly', 'Cannot be determined']), explanation: `At $x = ${x}$, $mx + b = ${boundary}$. Since $${testY} > ${boundary}$, the point is above the line.` }
+      const correct = 'Yes — it lies above the boundary line'
+      return { id: this.id, category: this.category, question: `Does the point $(${x}, ${testY})$ satisfy $y > ${m}x ${pm(b)}$? The boundary value at $x = ${x}$ is $${boundary}$.`, ...makeStringOptions(correct, ['No — it lies below the boundary line', 'No — it lies on the boundary line', 'Yes — it lies on the boundary line']), explanation: `At $x = ${x}$, $mx + b = ${boundary}$. Since $${testY} > ${boundary}$, the point is above the line, so it satisfies the inequality.` }
     }
   },
   {
@@ -90,8 +109,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 4)
       const b = randInt(-6, 6)
-      const correct = 'Dashed (strict inequality excludes boundary)'
-      return { id: this.id, category: this.category, question: `When graphing $y < ${m}x ${pm(b)}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Solid line', 'Dotted then solid', 'No boundary line']), explanation: 'Strict inequalities ($<$ or $>$) use dashed lines because points on the line are NOT included.' }
+      const correct = 'Dashed line'
+      return { id: this.id, category: this.category, question: `When graphing $y < ${m}x ${pm(b)}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Solid line', 'Double line', 'No boundary line']), explanation: 'Strict inequalities ($<$ or $>$) use dashed lines because points on the line are NOT included.' }
     }
   },
   {
@@ -101,8 +120,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 3)
       const b = randInt(1, 8)
-      const correct = 'Solid (includes boundary points)'
-      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'No boundary', 'Double line']), explanation: 'Non-strict inequalities ($\\le$ or $\\ge$) use solid lines because boundary points ARE included.' }
+      const correct = 'Solid line'
+      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'Double line', 'No boundary line']), explanation: 'Non-strict inequalities ($\\le$ or $\\ge$) use solid lines because boundary points ARE included.' }
     }
   },
   {
@@ -110,8 +129,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Slope-Intercept Inequalities',
     difficulty: 'medium',
     generate() {
-      const a = randInt(1, 4)
-      const b = randInt(1, 6)
+      // Prices of $2 or more, so the model never prints "1x" or "1y".
+      const a = randInt(2, 4)
+      const b = randInt(2, 6)
       const total = randInt(20, 50)
       const correct = `$${a}x + ${b}y \\le ${total}$`
       return { id: this.id, category: this.category, question: `A store sells item A for $\\$${a}$ and item B for $\\$${b}$. A customer has $\\$${total}$. Which inequality models the possible purchase combinations?`, ...makeStringOptions(correct, [`$${a}x + ${b}y \\ge ${total}$`, `$${a}x + ${b}y = ${total}$`, `$${a}x - ${b}y \\le ${total}$`]), explanation: `The total cost $${a}x + ${b}y$ must not exceed the budget $${total}$, so we use $\\le$.` }
@@ -136,7 +156,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(1, 3)
       const b = randInt(0, 5)
       const correct = 'The half-plane below the line, not including the line'
-      return { id: this.id, category: this.category, question: `Describe the solution set of $y < ${m}x + ${b}$.`, ...makeStringOptions(correct, ['The half-plane above the line', 'Only points on the line', 'The entire coordinate plane']), explanation: '$y < mx + b$ represents all points strictly below the boundary line.' }
+      return { id: this.id, category: this.category, question: `Describe the solution set of $y < ${m}x + ${b}$.`, ...makeStringOptions(correct, ['The half-plane above the line, excluding the line', 'The half-plane below the line, including the line', 'Only the points that lie on the line itself']), explanation: '$y < mx + b$ represents all points strictly below the boundary line.' }
     }
   },
   {
@@ -147,7 +167,7 @@ const questionPool: QuestionTemplate[] = [
       const m1 = randInt(1, 3); const b1 = randInt(0, 5)
       const m2 = randInt(-3, -1); const b2 = randInt(1, 8)
       const correct = 'The overlapping shaded region of both inequalities'
-      return { id: this.id, category: this.category, question: `What does the solution set of $y \\le ${m1}x + ${b1}$ AND $y \\ge ${m2}x + ${b2}$ represent?`, ...makeStringOptions(correct, ['The union of both regions', 'Only the boundary lines', 'No solution exists']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
+      return { id: this.id, category: this.category, question: `What does the solution set of $y \\le ${m1}x + ${b1}$ AND $y \\ge ${m2}x + ${b2}$ represent?`, ...makeStringOptions(correct, ['Every point shaded by at least one inequality', 'Only the points lying on both boundary lines', 'The region that neither inequality shades']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
     }
   },
   {
@@ -157,7 +177,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(2, 5); const b = randInt(2, 5); const c = randInt(20, 40)
       const correct = `$${a}x + ${b}y \\le ${c}$, $x \\ge 0$, $y \\ge 0$`
-      return { id: this.id, category: this.category, question: `A factory uses $${a}$ units of resource A and $${b}$ units of resource B per product. With $${c}$ total resource units and non-negative production, which system applies?`, ...makeStringOptions(correct, [`$${a}x + ${b}y \\ge ${c}$`, `$${a}x + ${b}y = ${c}$`, `$${a}x - ${b}y \\le ${c}$`]), explanation: `Resource constraints use $\\le$ together with the non-negativity constraints $x \\ge 0$, $y \\ge 0$.` }
+      return { id: this.id, category: this.category, question: `A factory uses $${a}$ units of resource A and $${b}$ units of resource B per product. With $${c}$ total resource units and non-negative production, which system applies?`, ...makeStringOptions(correct, [`$${a}x + ${b}y \\ge ${c}$, $x \\ge 0$, $y \\ge 0$`, `$${a}x + ${b}y \\le ${c}$, $x \\le 0$, $y \\le 0$`, `$${a}x + ${b}y = ${c}$, $x \\ge 0$, $y \\ge 0$`]), explanation: `Resource constraints use $\\le$ together with the non-negativity constraints $x \\ge 0$, $y \\ge 0$.` }
     }
   },
   {
@@ -166,7 +186,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const correct = 'Yes — it satisfies both inequalities'
-      return { id: this.id, category: this.category, question: 'Is the point $(2, 3)$ in the solution set of the system $y > x$ and $y < 2x + 1$?', ...makeStringOptions(correct, ['No — it fails $y > x$', 'No — it fails $y < 2x + 1$', 'Only if the boundaries are included']), explanation: 'Check BOTH: $3 > 2$ ✓ and $3 < 5$ ✓ — the point satisfies every inequality, so it is in the solution set.' }
+      return { id: this.id, category: this.category, question: 'Is the point $(2, 3)$ in the solution set of the system $y > x$ and $y < 2x + 1$?', ...makeStringOptions(correct, ['No — it fails the inequality $y > x$', 'No — the point fails $y < 2x + 1$', 'No — it lies on a boundary line']), explanation: 'Check BOTH: $3 > 2$ ✓ and $3 < 5$ ✓ — the point satisfies every inequality, so it is in the solution set.' }
     }
   },
   {
@@ -174,11 +194,17 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'medium',
     generate() {
-      const x = randInt(1, 5); const y = randInt(1, 5)
+      const x = randInt(1, 8); const y = randInt(1, 8)
       const sum = x + y; const diff = x - y
       const satA = sum <= 10; const satB = diff >= 0
-      const correct = (satA && satB) ? 'Yes, it satisfies both inequalities' : 'No, it fails at least one inequality'
-      return { id: this.id, category: this.category, question: `Is $(${x}, ${y})$ in the solution set of $x + y \\le 10$ AND $x - y \\ge 0$? Check: $${x} + ${y} = ${sum}$ and $${x} - ${y} = ${diff}$.`, ...makeStringOptions(correct, ['Yes, it satisfies the first one only', 'No, it fails both', 'Cannot be determined from the given info']), explanation: `$x + y = ${sum} ${satA ? '\\le' : '>'} 10$ and $x - y = ${diff} ${satB ? '\\ge' : '<'} 0$. The point must satisfy both.` }
+      const states = {
+        both: 'Yes — it satisfies both inequalities',
+        first: 'No — it fails only the first inequality',
+        second: 'No — it fails only the second inequality',
+        neither: 'No — it fails both of the inequalities',
+      }
+      const correct = satA && satB ? states.both : !satA && satB ? states.first : satA && !satB ? states.second : states.neither
+      return { id: this.id, category: this.category, question: `Is $(${x}, ${y})$ in the solution set of $x + y \\le 10$ AND $x - y \\ge 0$? Check: $${x} + ${y} = ${sum}$ and $${x} - ${y} = ${diff}$.`, ...makeStringOptions(correct, Object.values(states)), explanation: `$x + y = ${sum} ${satA ? '\\le' : '>'} 10$, so the first inequality ${satA ? 'holds' : 'fails'}; $x - y = ${diff} ${satB ? '\\ge' : '<'} 0$, so the second ${satB ? 'holds' : 'fails'}. The point is in the solution set only if both hold.` }
     }
   },
   {
@@ -187,7 +213,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'No solution — the shaded regions do not overlap'
-      return { id: this.id, category: this.category, question: 'If the graphs of two linear inequalities have no overlapping shaded region, what is the solution?', ...makeStringOptions(correct, ['Infinite solutions', 'Exactly one solution', 'The union of both regions']), explanation: 'When shaded regions do not overlap, the system has no solution (empty intersection).' }
+      return { id: this.id, category: this.category, question: 'If the graphs of two linear inequalities have no overlapping shaded region, what is the solution?', ...makeStringOptions(correct, ['Infinitely many solutions — every shaded point works', 'Exactly one solution — where the boundary lines meet', 'The union of both shaded regions is the solution']), explanation: 'When shaded regions do not overlap, the system has no solution (empty intersection).' }
     }
   },
   {
@@ -196,8 +222,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'hard',
     generate() {
       const c = randInt(5, 15)
-      const correct = 'A triangular or polygonal region in the first quadrant'
-      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: $x \\ge 0$, $y \\ge 0$, $x + y \\le ${c}$.`, ...makeStringOptions(correct, ['A line segment', 'The entire first quadrant', 'A single point']), explanation: `These three inequalities form a triangle with vertices at $(0, 0)$, $(${c}, 0)$, and $(0, ${c})$.` }
+      const correct = 'A triangle in the first quadrant'
+      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: $x \\ge 0$, $y \\ge 0$, $x + y \\le ${c}$.`, ...makeStringOptions(correct, [`A line segment on the line $x + y = ${c}$`, 'The entire first quadrant and its axes', 'A triangle in the fourth quadrant']), explanation: `These three inequalities form a triangle with vertices at $(0, 0)$, $(${c}, 0)$, and $(0, ${c})$.` }
     }
   },
   {
@@ -208,7 +234,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 6); const b = randInt(2, 6)
       const budget = a * 3 + b * 2 + randInt(5, 15)
       const correct = `$(3, 2)$`
-      return { id: this.id, category: this.category, question: `Which point is a feasible solution of $${a}x + ${b}y \\le ${budget}$ with $x \\ge 1$ and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, 0)$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(3) + ${b}(2) = ${a * 3 + b * 2} \\le ${budget}$, and $3 \\ge 1$, $2 \\ge 1$. Each other point violates at least one constraint.` }
+      return { id: this.id, category: this.category, question: `Which point is a feasible solution of $${a}x + ${b}y \\le ${budget}$ with $x \\ge 1$ and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, ${Math.ceil(budget / b)})$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(3) + ${b}(2) = ${a * 3 + b * 2} \\le ${budget}$, and $3 \\ge 1$, $2 \\ge 1$. Each other point violates at least one constraint.` }
     }
   },
   {
@@ -217,7 +243,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'At a vertex (corner point) of the feasible region'
-      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center of the region', 'On any edge of the region', 'At the origin always']), explanation: 'The optimal value of a linear objective function occurs at a vertex of the feasible region (Corner Point Theorem).' }
+      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center point of the feasible region', 'At the origin, whatever the region looks like', 'At any interior point of the feasible region']), explanation: 'The optimal value of a linear objective function occurs at a vertex of the feasible region (Corner Point Theorem).' }
     }
   },
   {
@@ -227,7 +253,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 4); const b = randInt(-5, 5)
       const correct = `Shade below the line $y = ${m}x ${pm(b)}$`
-      return { id: this.id, category: this.category, question: `To graph $y < ${m}x ${pm(b)}$, after drawing a dashed line, where do you shade?`, ...makeStringOptions(correct, ['Shade above the line', 'Shade both sides', 'Do not shade']), explanation: 'For $y < mx + b$, shade the region below the boundary line.' }
+      return { id: this.id, category: this.category, question: `To graph $y < ${m}x ${pm(b)}$, after drawing a dashed line, where do you shade?`, ...makeStringOptions(correct, [`Shade above and on the line $y = ${m}x ${pm(b)}$`, `Shade only on the line $y = ${m}x ${pm(b)}$`, `Shade right of the line $y = ${m}x ${pm(b)}$`]), explanation: 'For $y < mx + b$, shade the region below the boundary line.' }
     }
   },
   {
@@ -248,8 +274,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Inequalities',
     difficulty: 'easy',
     generate() {
-      const correct = 'Test the point $(0, 0)$ — if it satisfies the inequality, shade toward the origin; otherwise shade away'
-      return { id: this.id, category: this.category, question: 'What is the test-point method for determining which side to shade?', ...makeStringOptions(correct, ['Always shade above the line', 'Always shade toward the origin', 'Shade the side with the larger area']), explanation: 'Substitute a test point (usually the origin) into the inequality. If true, shade that side; if false, shade the opposite side.' }
+      const correct = 'Test a point like $(0, 0)$ and shade the side where it is true'
+      return { id: this.id, category: this.category, question: 'What is the test-point method for determining which side to shade?', ...makeStringOptions(correct, ['Always shade above the line, whatever the inequality says', 'Always shade the side that contains the origin $(0, 0)$', 'Shade the side with the larger area in the viewing window']), explanation: 'Substitute a test point (usually the origin) into the inequality. If true, shade that side; if false, shade the opposite side.' }
     }
   },
   {
@@ -258,8 +284,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const m = randInt(1, 3); const b = randInt(1, 6)
-      const correct = 'Solid boundary line with shading below/on the line'
-      return { id: this.id, category: this.category, question: `How would you graph $y \\le ${m}x + ${b}$?`, ...makeStringOptions(correct, ['Dashed line with shading above', 'Solid line with shading above', 'Dashed line with shading below']), explanation: '$\\le$ means a solid line (boundary included) and shading below (y values less than or equal).' }
+      const correct = 'Solid line, shading below'
+      return { id: this.id, category: this.category, question: `How would you graph $y \\le ${m}x + ${b}$?`, ...makeStringOptions(correct, ['Dashed line, shading above', 'Solid line, shading above', 'Dashed line, shading below']), explanation: '$\\le$ means a solid line (boundary included) and shading below (y values less than or equal).' }
     }
   },
   {
@@ -269,7 +295,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const k = randInt(1, 8)
       const correct = `A vertical line at $x = ${k}$ with shading to the right`
-      return { id: this.id, category: this.category, question: `How is $x \\ge ${k}$ graphed on the coordinate plane?`, ...makeStringOptions(correct, ['A horizontal line with shading above', `A vertical line at $x = ${k}$ with shading left`, 'A diagonal line']), explanation: `$x \\ge ${k}$ is a solid vertical line at $x = ${k}$ with shading to the right (larger $x$ values).` }
+      return { id: this.id, category: this.category, question: `How is $x \\ge ${k}$ graphed on the coordinate plane?`, ...makeStringOptions(correct, [`A horizontal line at $y = ${k}$ with shading above`, `A vertical line at $x = ${k}$ with shading to the left`, `A dashed vertical line at $x = ${k}$, shading right`]), explanation: `$x \\ge ${k}$ is a solid vertical line at $x = ${k}$ with shading to the right (larger $x$ values).` }
     }
   },
   {
@@ -279,7 +305,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const k = randInt(-5, -1)
       const correct = `$y > ${k}$: horizontal dashed line, shade above`
-      return { id: this.id, category: this.category, question: `Describe the graph of $y > ${k}$.`, ...makeStringOptions(correct, [`$y > ${k}$: horizontal solid line, shade below`, `$y > ${k}$: vertical line, shade right`, `No graph possible for a constant inequality`]), explanation: `$y > ${k}$ is a horizontal dashed line at $y = ${k}$ with shading above.` }
+      return { id: this.id, category: this.category, question: `Describe the graph of $y > ${k}$.`, ...makeStringOptions(correct, [`$y > ${k}$: horizontal solid line, shading above`, `$y > ${k}$: horizontal dashed line, shading below`, `$y > ${k}$: vertical dashed line, shading to the right`]), explanation: `$y > ${k}$ is a horizontal dashed line at $y = ${k}$ with shading above.` }
     }
   },
   {
@@ -289,7 +315,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(-3, -1); const b = randInt(2, 8)
       const correct = 'The slope is negative, so the line goes down from left to right'
-      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, describe the boundary line direction.`, ...makeStringOptions(correct, ['The line goes up from left to right', 'The line is horizontal', 'The line is vertical']), explanation: `A negative slope ($m = ${m}$) means the line descends from left to right.` }
+      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, describe the boundary line direction.`, ...makeStringOptions(correct, ['The slope is positive, so the line goes up from left to right', 'The slope is zero, so the line is horizontal across the plane', 'The slope is undefined, so the line is perfectly vertical']), explanation: `A negative slope ($m = ${m}$) means the line descends from left to right.` }
     }
   },
   {
@@ -298,8 +324,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const m = randInt(1, 3); const b = randInt(0, 4)
-      const correct = 'The y-intercept is where the boundary line crosses the y-axis'
-      return { id: this.id, category: this.category, question: `In $y < ${m}x + ${b}$, what role does $${b}$ play in the graph?`, ...makeStringOptions(correct, ['It determines the shading direction', 'It sets the slope', 'It determines line type (solid vs dashed)']), explanation: `The constant $${b}$ is the y-intercept — the point $(0, ${b})$ where the boundary line crosses the y-axis.` }
+      const correct = 'It is the y-intercept of the boundary line'
+      return { id: this.id, category: this.category, question: `In $y < ${m}x + ${b}$, what role does $${b}$ play in the graph?`, ...makeStringOptions(correct, ['It is the slope of the boundary line', 'It sets which side of the line is shaded', 'It sets if the line is solid or dashed']), explanation: `The constant $${b}$ is the y-intercept — the point $(0, ${b})$ where the boundary line crosses the y-axis.` }
     }
   },
   {
@@ -309,7 +335,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(2, 8)
       const correct = `$x > ${a}$ or $x < -${a}$`
-      return { id: this.id, category: this.category, question: `Solve $|x| > ${a}$.`, ...makeStringOptions(correct, [`$-${a} < x < ${a}$`, `$x = ${a}$`, `$x > ${a}$`]), explanation: `$|x| > ${a}$ splits into $x > ${a}$ OR $x < -${a}$ (values far from zero).` }
+      return { id: this.id, category: this.category, question: `Solve $|x| > ${a}$.`, ...makeStringOptions(correct, [`$-${a} < x < ${a}$`, `$x > ${a}$ or $x > -${a}$`, `$x < ${a}$ or $x > -${a}$`]), explanation: `$|x| > ${a}$ splits into $x > ${a}$ OR $x < -${a}$ (values far from zero).` }
     }
   },
   {
@@ -362,8 +388,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Absolute Value Inequalities',
     difficulty: 'medium',
     generate() {
-      const correct = 'No solution — absolute value is always non-negative'
-      return { id: this.id, category: this.category, question: 'What is the solution to $|x + 3| < -2$?', ...makeStringOptions(correct, ['$-5 < x < -1$', '$x = -3$', 'All real numbers']), explanation: 'Absolute value is always $\\ge 0$, so it can never be less than a negative number. No solution.' }
+      const correct = 'No solution'
+      return { id: this.id, category: this.category, question: 'What is the solution to $|x + 3| < -2$?', ...makeStringOptions(correct, ['$-5 < x < -1$', '$x = -3$ only', 'All real numbers']), explanation: 'Absolute value is always $\\ge 0$, so it can never be less than a negative number. No solution.' }
     }
   },
   {
@@ -371,8 +397,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Absolute Value Inequalities',
     difficulty: 'medium',
     generate() {
-      const correct = 'All real numbers — absolute value is always $\\ge 0$'
-      return { id: this.id, category: this.category, question: 'What is the solution to $|2x - 1| \\ge -5$?', ...makeStringOptions(correct, ['No solution', '$x = 1/2$ only', '$x > -5$']), explanation: 'Since $|2x - 1| \\ge 0 > -5$ for all $x$, every real number is a solution.' }
+      const correct = 'All real numbers'
+      return { id: this.id, category: this.category, question: 'What is the solution to $|2x - 1| \\ge -5$?', ...makeStringOptions(correct, ['No solution', '$x \\ge -2$ only', '$-2 \\le x \\le 3$']), explanation: 'Since $|2x - 1| \\ge 0 > -5$ for all $x$, every real number is a solution.' }
     }
   },
   {
@@ -381,8 +407,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const h = randInt(1, 5); const k = randInt(1, 5)
-      const correct = `The open interval $(${h - k}, ${h + k})$ — all points within $${k}$ units of $${h}$`
-      return { id: this.id, category: this.category, question: `Describe the graph of $|x - ${h}| < ${k}$ on a number line.`, ...makeStringOptions(correct, ['Two separate rays', 'A single point', 'The entire number line']), explanation: `$|x - ${h}| < ${k}$ represents an open interval centered at $${h}$ with radius $${k}$: $(${h - k}, ${h + k})$.` }
+      const correct = `An open interval from $${h - k}$ to $${h + k}$`
+      return { id: this.id, category: this.category, question: `Describe the graph of $|x - ${h}| < ${k}$ on a number line.`, ...makeStringOptions(correct, [`A closed interval from $${h - k}$ to $${h + k}$`, `Two rays: $x < ${h - k}$ or $x > ${h + k}$`, `A single point at $x = ${h}$`]), explanation: `$|x - ${h}| < ${k}$ represents an open interval centered at $${h}$ with radius $${k}$: $(${h - k}, ${h + k})$.` }
     }
   },
   {
@@ -438,10 +464,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Word Problems',
     difficulty: 'hard',
     generate() {
-      const speed1 = randInt(40, 60); const speed2 = randInt(50, 70)
+      const speed1 = randInt(40, 60); let speed2 = randInt(50, 70)
+      while (speed2 === speed1) speed2 = randInt(50, 70)
       const minDist = randInt(200, 400)
       const correct = `$${speed1}t + ${speed2}t \\ge ${minDist}$`
-      return { id: this.id, category: this.category, question: `Two cars leave the same point traveling in opposite directions at $${speed1}$ mph and $${speed2}$ mph. After how many hours $t$ will they be at least $${minDist}$ miles apart? Write the inequality.`, ...makeStringOptions(correct, [`$${speed1}t - ${speed2}t \\ge ${minDist}$`, `$${speed1} + ${speed2} > ${minDist}$`, `$t \\ge ${minDist}$`]), explanation: `Traveling in opposite directions, the separation is $(${speed1} + ${speed2})t$. Need $(${speed1 + speed2})t \\ge ${minDist}$.` }
+      return { id: this.id, category: this.category, question: `Two cars leave the same point traveling in opposite directions at $${speed1}$ mph and $${speed2}$ mph. After how many hours $t$ will they be at least $${minDist}$ miles apart? Write the inequality.`, ...makeStringOptions(correct, [`$${speed1}t - ${speed2}t \\ge ${minDist}$`, `$${speed1}t + ${speed2}t \\le ${minDist}$`, `$${speed2}t - ${speed1}t \\ge ${minDist}$`]), explanation: `Traveling in opposite directions, the separation is $(${speed1} + ${speed2})t$. Need $(${speed1 + speed2})t \\ge ${minDist}$.` }
     }
   },
   {
@@ -449,8 +476,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Word Problems',
     difficulty: 'easy',
     generate() {
-      const correct = 'Identify the variable, set up the inequality from constraints, solve, and check the direction'
-      return { id: this.id, category: this.category, question: 'What is the general strategy for solving inequality word problems?', ...makeStringOptions(correct, ['Guess and check with numbers', 'Always use equations instead', 'Multiply everything by -1 first']), explanation: 'Define variables, translate word constraints into mathematical inequalities, solve algebraically, and verify the inequality direction matches the context.' }
+      const correct = 'Define a variable, write the inequality, solve, and check'
+      return { id: this.id, category: this.category, question: 'What is the general strategy for solving inequality word problems?', ...makeStringOptions(correct, ['Use an equation instead and never check the answer', 'Guess and check numbers until one seems to work', 'Multiply both sides by $-1$ before doing anything else']), explanation: 'Define variables, translate word constraints into mathematical inequalities, solve algebraically, and verify the inequality direction matches the context.' }
     }
   },
   {
@@ -461,7 +488,7 @@ const questionPool: QuestionTemplate[] = [
       const n = randInt(3, 6); const perAdult = randInt(12, 20); const perChild = randInt(6, 10)
       const budget = randInt(50, 100)
       const correct = `$${perAdult}a + ${perChild}c \\le ${budget}$ where $a + c = ${n}$`
-      return { id: this.id, category: this.category, question: `A group of $${n}$ people (adults $\\$${perAdult}$, children $\\$${perChild}$) has $\\$${budget}$. Write the system constraint.`, ...makeStringOptions(correct, [`$${perAdult}a + ${perChild}c \\ge ${budget}$`, `$${perAdult}a - ${perChild}c \\le ${budget}$`, `$a + c \\le ${budget}$`]), explanation: `Total people: $a + c = ${n}$. Budget constraint: $${perAdult}a + ${perChild}c \\le ${budget}$.` }
+      return { id: this.id, category: this.category, question: `A group of $${n}$ people (adults $\\$${perAdult}$, children $\\$${perChild}$) has $\\$${budget}$. Write the system constraint.`, ...makeStringOptions(correct, [`$${perAdult}a + ${perChild}c \\ge ${budget}$ where $a + c = ${n}$`, `$${perAdult}a + ${perChild}c \\le ${budget}$ where $a - c = ${n}$`, `$${perChild}a + ${perAdult}c \\le ${budget}$ where $a + c = ${n}$`]), explanation: `Total people: $a + c = ${n}$. Budget constraint: $${perAdult}a + ${perChild}c \\le ${budget}$.` }
     }
   },
   {
@@ -472,13 +499,19 @@ const questionPool: QuestionTemplate[] = [
       const minGrade = randInt(70, 85); const n = randInt(4, 6)
       const needed = minGrade * n
       const correct = `The sum of all $${n}$ scores must be $\\ge ${needed}$`
-      return { id: this.id, category: this.category, question: `To earn at least a $${minGrade}$ average across $${n}$ assignments, what must the total points be?`, ...makeStringOptions(correct, [`Each score must be exactly $${minGrade}$`, `At least one score $\\ge ${minGrade}$`, `The total must equal $${needed}$`]), explanation: `Average $= \\frac{\\text{total}}{${n}} \\ge ${minGrade}$, so total $\\ge ${minGrade} \\times ${n} = ${needed}$.` }
+      return { id: this.id, category: this.category, question: `To earn at least a $${minGrade}$ average across $${n}$ assignments, what must the total points be?`, ...makeStringOptions(correct, [`The sum of all $${n}$ scores must be $\\le ${needed}$`, `The sum of all $${n}$ scores must be $\\ge ${minGrade}$`, `The sum of all $${n}$ scores must equal $${needed}$`]), explanation: `Average $= \\frac{\\text{total}}{${n}} \\ge ${minGrade}$, so total $\\ge ${minGrade} \\times ${n} = ${needed}$.` }
     }
   },
 ]
 
 type Tier = 'easy' | 'medium' | 'hard'
 const tierFallback: Record<Tier, Tier[]> = { easy: ['medium', 'hard'], medium: ['easy', 'hard'], hard: ['medium', 'easy'] }
+
+// Every template's output goes through tidyQuestion (stems and explanations too).
+for (const t of questionPool) {
+  const generate = t.generate.bind(t)
+  t.generate = () => tidyQuestion(generate())
+}
 
 export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
   if (difficulty) {

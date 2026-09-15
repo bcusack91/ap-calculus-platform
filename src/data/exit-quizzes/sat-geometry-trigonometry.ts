@@ -10,7 +10,7 @@ function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length -
 function gcd(a: number, b: number): number { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b] } return a }
 // Reduced fraction (or integer) in LaTeX.
 function fmtFrac(num: number, den: number): string { if (den < 0) { num = -num; den = -den } const g = gcd(num, den) || 1; const n = num / g, d = den / g; if (d === 1) return `${n}`; return n < 0 ? `-\\frac{${-n}}{${d}}` : `\\frac{${n}}{${d}}` }
-function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const fillers = ['None of the above', 'Cannot be determined', 'None of these']; for (const f of fillers) { if (u.length >= 3) break; if (f !== c && !u.includes(f)) u.push(f) } const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
+function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
 function makeOptions(c: number, s = 3, min?: number) { const d = new Set<number>(); while (d.size < 3) { const v = c + randInt(-s * 2, s * 2); if (v !== c && (min === undefined || v >= min)) d.add(v) }; const all = shuffle([c, ...d]); return { options: all.map(String), correctIndex: all.indexOf(c) } }
 // π-coefficient options with value-level dedupe so no distractor equals the key.
 function makePiOptions(correct: number, cands: number[]) { const seen = new Set<number>([correct]); const ds: string[] = []; for (const v of cands) { if (ds.length >= 3) break; if (!seen.has(v)) { seen.add(v); ds.push(`$${v}\\pi$`) } } return makeStringOptions(`$${correct}\\pi$`, ds) }

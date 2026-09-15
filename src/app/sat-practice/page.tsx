@@ -223,11 +223,6 @@ export default function SATPracticePage() {
                           {pt.description}
                         </p>
                       </div>
-                      {pt.difficulty === 'Hard' && (
-                        <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700 dark:bg-red-900/40 dark:text-red-400">
-                          Hard
-                        </span>
-                      )}
                     </div>
 
                     {bestScore !== null && (

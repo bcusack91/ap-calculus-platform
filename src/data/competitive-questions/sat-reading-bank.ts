@@ -16,7 +16,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 1,
     question: 'What is the primary purpose of a thesis statement in an essay?',
-    options: ['To present the main argument or claim', 'To introduce background information', 'To provide evidence', 'To summarize the conclusion'],
+    options: ['To present the main argument or claim', 'To introduce background information', 'To provide supporting evidence', 'To summarize the essay\'s conclusion'],
     correctAnswer: 0,
     explanation: 'A thesis statement presents the central claim or argument that the essay will support.',
     difficulty: 'easy',
@@ -24,7 +24,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 2,
     question: 'Which word is a synonym for "benevolent"?',
-    options: ['Kind', 'Hostile', 'Indifferent', 'Cautious'],
+    options: ['Kind and well-meaning', 'Hostile and unfriendly', 'Indifferent and detached', 'Cautious and wary'],
     correctAnswer: 0,
     explanation: 'Benevolent means well-meaning and kindly.',
     difficulty: 'easy',
@@ -32,7 +32,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 3,
     question: '"The wind howled through the trees." This is an example of:',
-    options: ['Personification', 'Simile', 'Alliteration', 'Hyperbole'],
+    options: ['Personification', 'Understatement', 'Alliteration', 'Hyperbole'],
     correctAnswer: 0,
     explanation: 'Personification gives human qualities (howling) to a non-human thing (the wind).',
     difficulty: 'easy',
@@ -40,7 +40,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 4,
     question: 'What does the word "ambiguous" mean?',
-    options: ['Open to more than one interpretation', 'Completely clear', 'Very long', 'Highly detailed'],
+    options: ['Open to more than one interpretation', 'Completely clear, with only one possible meaning', 'Extremely long and wordy in its phrasing', 'Highly detailed and precise in every part'],
     correctAnswer: 0,
     explanation: 'Ambiguous means having multiple possible meanings or unclear.',
     difficulty: 'easy',
@@ -48,7 +48,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 5,
     question: 'Which sentence uses a transition word correctly?',
-    options: ['He was tired; however, he continued working.', 'He was tired however he continued working.', 'He was tired, however he continued working.', 'He was tired however, he continued working.'],
+    options: ['He was tired; however, he continued working.', 'He was tired however he continued working.', 'He was tired, however, he continued working.', 'He was tired, and however, he continued working.'],
     correctAnswer: 0,
     explanation: 'A semicolon before "however" and a comma after correctly joins two independent clauses.',
     difficulty: 'easy',
@@ -56,7 +56,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 6,
     question: 'What is an author\'s "tone"?',
-    options: ['The attitude conveyed through word choice', 'The main idea of the passage', 'The chronological order of events', 'The factual accuracy of statements'],
+    options: ['The attitude conveyed through word choice', 'The central idea developed across the passage', 'The chronological order of the events', 'The factual accuracy of the statements'],
     correctAnswer: 0,
     explanation: 'Tone is the author\'s attitude toward the subject, conveyed through diction and style.',
     difficulty: 'easy',
@@ -64,7 +64,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 7,
     question: 'What is the difference between "affect" and "effect"?',
-    options: ['"Affect" is usually a verb; "effect" is usually a noun', 'They mean the same thing', '"Effect" is a verb; "affect" is a noun', 'Neither is correct in formal writing'],
+    options: ['"Affect" is usually a verb; "effect" is usually a noun', 'They mean the same thing and can be used interchangeably', '"Effect" is usually a verb; "affect" is usually a noun', '"Affect" and "effect" are both incorrect in formal writing'],
     correctAnswer: 0,
     explanation: '"Affect" is typically used as a verb (to influence), while "effect" is typically a noun (a result).',
     difficulty: 'easy',
@@ -72,7 +72,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 8,
     question: 'Which best describes a "counterargument"?',
-    options: ['An opposing viewpoint the author addresses', 'The main claim of the essay', 'Evidence supporting the thesis', 'A concluding statement'],
+    options: ['An opposing viewpoint the author addresses', 'The central claim the author makes in the essay', 'Evidence the author uses to support the thesis', 'A concluding statement that restates the thesis'],
     correctAnswer: 0,
     explanation: 'A counterargument presents an opposing perspective that the author then refutes to strengthen their argument.',
     difficulty: 'easy',
@@ -89,7 +89,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 10,
     question: 'What is an "unreliable narrator"?',
-    options: ['A narrator whose account cannot be fully trusted', 'A narrator who tells the story in third person', 'A narrator who is omniscient', 'A narrator who speaks directly to the reader'],
+    options: ['A narrator whose account cannot be fully trusted', 'A narrator who tells the story in third person', 'A narrator who knows all characters\' thoughts', 'A narrator who speaks directly to the reader'],
     correctAnswer: 0,
     explanation: 'An unreliable narrator provides a biased or inaccurate account due to limited knowledge, personal bias, or deception.',
     difficulty: 'medium',
@@ -97,7 +97,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 11,
     question: 'The word "ostentatious" most nearly means:',
-    options: ['Designed to attract attention or impress', 'Quiet and humble', 'Extremely cautious', 'Lacking in taste'],
+    options: ['Designed to attract attention or impress', 'Quiet, modest, and humble in manner', 'Extremely cautious about taking any risks', 'Easily offended by small slights'],
     correctAnswer: 0,
     explanation: 'Ostentatious means showy, designed to impress or attract notice.',
     difficulty: 'medium',
@@ -105,7 +105,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 12,
     question: 'What is the purpose of a rhetorical question?',
-    options: ['To make a point rather than get an answer', 'To confuse the reader', 'To request specific information', 'To introduce a new character'],
+    options: ['To make a point rather than get an answer', 'To confuse the reader about the argument', 'To request information from the reader', 'To introduce a new character or scene'],
     correctAnswer: 0,
     explanation: 'Rhetorical questions are asked for effect — to make the reader think rather than to elicit a direct answer.',
     difficulty: 'medium',
@@ -121,7 +121,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 14,
     question: 'What does "juxtaposition" mean in literature?',
-    options: ['Placing contrasting elements side by side', 'Using excessive exaggeration', 'Repeating the first word in successive clauses', 'Referring to a historical event indirectly'],
+    options: ['Placing contrasting elements side by side', 'Using excessive exaggeration for dramatic effect', 'Repeating the first word in successive clauses', 'Referring to a historical event indirectly'],
     correctAnswer: 0,
     explanation: 'Juxtaposition places two contrasting ideas, characters, or settings close together for comparison or emphasis.',
     difficulty: 'medium',
@@ -129,7 +129,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 15,
     question: 'An argument that uses ethos relies on:',
-    options: ['The credibility of the speaker', 'Emotional appeal', 'Logical reasoning', 'Repetition'],
+    options: ['The credibility of the speaker', 'The emotions of the audience', 'The logic of the evidence presented', 'The repetition of key phrases'],
     correctAnswer: 0,
     explanation: 'Ethos is an appeal to the speaker\'s credibility, expertise, or trustworthiness.',
     difficulty: 'medium',
@@ -137,7 +137,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 16,
     question: 'What is "diction" in the context of writing?',
-    options: ['Word choice', 'Sentence structure', 'Paragraph organization', 'Font selection'],
+    options: ['The specific words an author chooses', 'The length and structure of sentences', 'The order of paragraphs in a text', 'The font and layout of the page'],
     correctAnswer: 0,
     explanation: 'Diction refers to the specific words an author chooses, which affect tone, mood, and meaning.',
     difficulty: 'medium',
@@ -146,7 +146,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 17,
     question: 'What is "litotes"?',
-    options: ['Understatement using double negatives (e.g., "not bad")', 'Extreme exaggeration', 'A comparison using "like" or "as"', 'Repetition of vowel sounds'],
+    options: ['Understatement by denying the opposite (e.g., "not bad")', 'Extreme exaggeration (e.g., "a million times")', 'A comparison using "like" or "as" (e.g., "brave as a lion")', 'Repetition of vowel sounds (e.g., "fleet feet sweep")'],
     correctAnswer: 0,
     explanation: 'Litotes is a figure of speech using understatement, often with double negatives, to affirm something (e.g., "not uncommon" = common).',
     difficulty: 'hard',
@@ -154,7 +154,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 18,
     question: 'In SAT reading, "the author would most likely agree with which statement" questions require you to:',
-    options: ['Infer the author\'s position from evidence in the passage', 'State your personal opinion', 'Choose the most extreme answer', 'Look for directly quoted statements only'],
+    options: ['Infer the author\'s position from evidence in the passage', 'State your personal opinion on the topic of the passage', 'Choose the most extreme answer the author could hold', 'Look only for statements the author quotes directly'],
     correctAnswer: 0,
     explanation: 'These inference questions require synthesizing textual evidence to determine what the author would support.',
     difficulty: 'hard',
@@ -162,7 +162,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 19,
     question: 'What is a "non sequitur" logical fallacy?',
-    options: ['A conclusion that does not follow from the premises', 'An attack on a person rather than their argument', 'Appealing to popularity', 'Using a false comparison'],
+    options: ['A conclusion that does not follow from the premises', 'An attack on a person rather than on their argument', 'An appeal to popularity as proof that a claim is true', 'A false comparison between two unlike situations'],
     correctAnswer: 0,
     explanation: 'Non sequitur (Latin: "it does not follow") is when the conclusion is not logically connected to the evidence presented.',
     difficulty: 'hard',
@@ -170,7 +170,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 20,
     question: 'The word "equivocate" most nearly means:',
-    options: ['To use ambiguous language to mislead', 'To speak loudly and clearly', 'To agree wholeheartedly', 'To distribute equally'],
+    options: ['To use ambiguous language to mislead', 'To speak loudly and clearly to a crowd', 'To agree wholeheartedly with another person', 'To distribute something in equal portions'],
     correctAnswer: 0,
     explanation: 'Equivocate means to use deliberately vague or ambiguous language to deceive or avoid commitment.',
     difficulty: 'hard',
@@ -178,7 +178,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 21,
     question: 'What distinguishes a "claim" from "evidence" in an argument?',
-    options: ['A claim is an assertion; evidence is support for that assertion', 'They are interchangeable terms', 'Evidence comes first; claims come last', 'Claims are always factual; evidence is opinion-based'],
+    options: ['A claim is an assertion; evidence supports that assertion', 'Claim and evidence are interchangeable terms for one idea', 'Evidence always comes first; the claim always comes last', 'A claim is always factual; evidence is always based on opinion'],
     correctAnswer: 0,
     explanation: 'A claim is the point being argued; evidence consists of facts, data, or examples that support the claim.',
     difficulty: 'hard',
@@ -186,7 +186,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 22,
     question: 'What is "synecdoche"?',
-    options: ['A part representing the whole (or vice versa)', 'A comparison without "like" or "as"', 'Addressing an absent person as if present', 'Repetition of consonant sounds'],
+    options: ['A part representing the whole (or vice versa)', 'A direct comparison made without "like" or "as"', 'Addressing an absent person as if they were present', 'Repetition of consonant sounds at the start of words'],
     correctAnswer: 0,
     explanation: 'Synecdoche uses a part to represent the whole (e.g., "all hands on deck" — hands = sailors).',
     difficulty: 'hard',
@@ -194,7 +194,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 23,
     question: 'In paired passages on the SAT, questions asking how one author would respond to the other require:',
-    options: ['Understanding both authors\' positions and finding points of agreement or conflict', 'Only reading the second passage', 'Choosing the longer answer', 'Ignoring tone differences'],
+    options: ['Understanding both authors\' positions and where they agree or conflict', 'Reading only the second passage closely, since it responds to the first', 'Focusing on the first author\'s evidence and setting aside the second author\'s view', 'Comparing the passages\' tone while ignoring each author\'s actual claims'],
     correctAnswer: 0,
     explanation: 'Cross-passage questions require comparing the perspectives, evidence, and reasoning of both authors.',
     difficulty: 'hard',
@@ -210,7 +210,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 25,
     question: 'What is the "straw man" fallacy?',
-    options: ['Misrepresenting someone\'s argument to make it easier to attack', 'Appealing to tradition', 'Using circular reasoning', 'Drawing a false analogy'],
+    options: ['Misrepresenting someone\'s argument to make it easier to attack', 'Appealing to tradition as proof that a practice is correct', 'Using circular reasoning that assumes its own conclusion', 'Drawing a false analogy between two unlike situations'],
     correctAnswer: 0,
     explanation: 'A straw man fallacy distorts or oversimplifies an opponent\'s argument, then refutes the distorted version.',
     difficulty: 'hard',
@@ -219,7 +219,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 26,
     question: 'As used in the following sentence, "lucid" most nearly means: "The scientist\'s explanation was so lucid that even beginners understood it immediately."',
-    options: ['Confusing', 'Clear', 'Lengthy', 'Quiet'],
+    options: ['Confusing and hard to follow', 'Clear and easy to follow', 'Lengthy and detailed', 'Quiet and soft-spoken'],
     correctAnswer: 1,
     explanation: '"Lucid" means clear and easy to follow, which fits an explanation that beginners understood immediately.',
     difficulty: 'easy',
@@ -227,7 +227,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 27,
     question: 'Which choice best states the main idea? "Bees are vital pollinators. Without them, many crops that feed people would fail to produce fruit."',
-    options: ['Bees are essential to producing much of our food.', 'Bees are dangerous insects to avoid.', 'Most crops grow without any pollination.', 'People generally dislike bees.'],
+    options: ['Bees are essential to producing much of our food.', 'Bees are dangerous insects that people should avoid.', 'Most crops grow well without any pollination by bees.', 'People generally dislike bees despite their usefulness.'],
     correctAnswer: 0,
     explanation: 'The passage stresses that bees pollinate the crops people rely on, so its central idea is that bees are essential to food production.',
     difficulty: 'easy',
@@ -243,7 +243,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 29,
     question: 'Based on the sentence, what can most reasonably be inferred? "The streets were wet and puddles dotted the sidewalk, though the sky was now clear."',
-    options: ['It had rained recently.', 'It was snowing heavily.', 'The area was in a severe drought.', 'The sun had never come out.'],
+    options: ['It had rained recently and then stopped.', 'It was snowing heavily at that moment.', 'The area was in a severe drought.', 'The sun had never come out that day.'],
     correctAnswer: 0,
     explanation: 'Wet streets and puddles under a now-clear sky indicate that rain fell recently and has since stopped.',
     difficulty: 'easy',
@@ -251,7 +251,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 30,
     question: 'As used in the sentence, "novel" most nearly means: "The critic praised the film\'s novel approach, noting that nothing like it had been made before."',
-    options: ['Fictional', 'Lengthy', 'Boring', 'New and original'],
+    options: ['Written as fiction', 'Long and drawn out', 'Dull and predictable', 'New and original'],
     correctAnswer: 3,
     explanation: 'Because nothing like it existed before, "novel" here means new and original rather than the book meaning.',
     difficulty: 'easy',
@@ -259,7 +259,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 31,
     question: 'What is the main point? "Regular exercise strengthens the heart, improves mood, and increases energy levels."',
-    options: ['Exercise offers several health benefits.', 'Exercise is only about losing weight.', 'The heart is the most important organ.', 'Energy levels cannot be changed.'],
+    options: ['Exercise offers several health benefits.', 'Exercise is mainly useful for losing weight.', 'The heart is the most important organ to exercise.', 'Energy levels cannot be changed by exercise.'],
     correctAnswer: 0,
     explanation: 'The sentence lists multiple positive effects of exercise, so its main point is that exercise provides several health benefits.',
     difficulty: 'easy',
@@ -275,7 +275,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 33,
     question: 'A writer claims that the town library is underused. Which finding, if true, would best support that claim?',
-    options: ['Only 5 percent of residents hold a library card.', 'The library recently expanded its weekend hours.', 'The library owns thousands of books.', 'The library hired a new head librarian.'],
+    options: ['Only 5 percent of residents hold a library card.', 'The library recently expanded its hours on weekends.', 'The library owns thousands of books.', 'The library hired a new head librarian this year.'],
     correctAnswer: 0,
     explanation: 'Very low card ownership is direct evidence that few residents use the library, supporting the claim that it is underused.',
     difficulty: 'easy',
@@ -283,7 +283,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 34,
     question: 'As used in the sentence, "concise" most nearly means: "The instructions were concise, fitting on a single index card."',
-    options: ['Confusing', 'Detailed', 'Brief', 'Colorful'],
+    options: ['Confusing and unclear', 'Detailed and thorough', 'Brief and to the point', 'Colorful and decorative'],
     correctAnswer: 2,
     explanation: '"Concise" means brief and to the point, which is why the instructions fit on one index card.',
     difficulty: 'easy',
@@ -291,7 +291,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 35,
     question: 'What can be inferred? "Maria packed sunscreen, a hat, and a beach towel before leaving."',
-    options: ['Maria planned to spend time in the sun.', 'Maria was going skiing.', 'Maria disliked being outdoors.', 'Maria decided to stay home.'],
+    options: ['Maria planned to spend time in the sun.', 'Maria was going skiing that day.', 'Maria disliked spending time outdoors.', 'Maria decided to stay home all day.'],
     correctAnswer: 0,
     explanation: 'Sunscreen, a hat, and a beach towel are items for sunny outdoor time, so Maria planned to be in the sun.',
     difficulty: 'easy',
@@ -299,7 +299,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 36,
     question: 'As used in the sentence, "diligent" most nearly means: "The volunteers were diligent, checking every detail before the event."',
-    options: ['Lazy', 'Cheerful', 'Forgetful', 'Careful and hardworking'],
+    options: ['Lazy and unmotivated', 'Cheerful and friendly', 'Forgetful and careless', 'Careful and hardworking'],
     correctAnswer: 3,
     explanation: '"Diligent" means careful and hardworking, consistent with checking every detail.',
     difficulty: 'easy',
@@ -307,7 +307,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 37,
     question: 'What is the main idea? "Recycling reduces waste, conserves resources, and lowers pollution."',
-    options: ['Recycling provides several environmental benefits.', 'Recycling is too expensive for most towns.', 'Recycling is difficult to do correctly.', 'Recycling is widely unpopular.'],
+    options: ['Recycling provides several environmental benefits.', 'Recycling is too expensive for most towns.', 'Recycling is difficult to do correctly at home.', 'Recycling is widely unpopular with the public.'],
     correctAnswer: 0,
     explanation: 'The sentence names three positive environmental effects, so the main idea is that recycling has several benefits.',
     difficulty: 'easy',
@@ -323,7 +323,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 39,
     question: 'What can be inferred? "Despite studying for hours, Jordan felt unprepared as the exam began."',
-    options: ['Jordan lacked confidence about the exam.', 'Jordan had not studied at all.', 'Jordan was eager to start.', 'Jordan skipped the exam.'],
+    options: ['Jordan lacked confidence about the exam.', 'Jordan had not studied for the exam at all.', 'Jordan was eager for the exam to start.', 'Jordan chose to skip the exam entirely.'],
     correctAnswer: 0,
     explanation: 'Feeling unprepared despite studying shows Jordan lacked confidence, not that Jordan failed to study or skipped the exam.',
     difficulty: 'easy',
@@ -332,7 +332,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 40,
     question: 'As used in the sentence, "vague" most nearly means: "The senator\'s remarks were deliberately vague, letting supporters and critics alike hear what they wished."',
-    options: ['Unclear and open to interpretation', 'Brief and to the point', 'Hostile and aggressive', 'Humorous and lighthearted'],
+    options: ['Unclear and open to interpretation', 'Brief and to the point in wording', 'Hostile and aggressive in tone', 'Humorous and lighthearted in tone'],
     correctAnswer: 0,
     explanation: 'Remarks that let different groups hear what they wish are unclear and open to interpretation.',
     difficulty: 'medium',
@@ -340,7 +340,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 41,
     question: 'A writer begins an article with a surprising statistic about ocean plastic. The most likely purpose of this opening is to:',
-    options: ['Restate the article\'s conclusion in advance', 'Capture attention and signal the topic\'s urgency', 'Present an opposing point of view', 'Define a technical term for readers'],
+    options: ['Restate the article\'s conclusion before any evidence', 'Capture attention and signal the topic\'s urgency', 'Present an opposing point of view on ocean plastic', 'Define a technical term that readers may not know'],
     correctAnswer: 1,
     explanation: 'A striking opening statistic is used to grab the reader and convey the importance of the issue.',
     difficulty: 'medium',
@@ -356,7 +356,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 43,
     question: 'A researcher hypothesizes that access to city parks improves residents\' well-being. Which result would most strongly support this hypothesis?',
-    options: ['Residents living near parks report lower stress than those living far from them.', 'City parks are costly to maintain.', 'Most large cities contain at least one park.', 'Parks often attract tourists.'],
+    options: ['Residents near parks report lower stress than those far from parks.', 'City parks cost cities a great deal of money to maintain each year.', 'Most large cities contain at least one park open to all residents.', 'Parks near residential areas often attract large numbers of tourists.'],
     correctAnswer: 0,
     explanation: 'Lower reported stress among residents near parks directly links park access to improved well-being.',
     difficulty: 'medium',
@@ -364,7 +364,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 44,
     question: 'What can most reasonably be inferred? "The cafe was empty at noon, yet by evening a line stretched out the door. The owner had changed nothing except the sign outside."',
-    options: ['The food had suddenly improved.', 'The cafe had closed for repairs.', 'Prices had been raised sharply.', 'The new sign helped attract customers.'],
+    options: ['The food had suddenly improved in quality.', 'The cafe had closed that morning for repairs.', 'Prices had been raised sharply that afternoon.', 'The new sign helped attract customers.'],
     correctAnswer: 3,
     explanation: 'Since the only change was the sign, the surge in customers can reasonably be attributed to it.',
     difficulty: 'medium',
@@ -372,7 +372,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 45,
     question: 'As used in the sentence, "compelling" most nearly means: "The evidence was compelling, leaving the jury little room for doubt."',
-    options: ['Confusing', 'Convincing', 'Lengthy', 'Unlawful'],
+    options: ['Confusing', 'Convincing', 'Lengthy', 'Inadmissible'],
     correctAnswer: 1,
     explanation: 'Evidence that leaves little room for doubt is convincing.',
     difficulty: 'medium',
@@ -380,7 +380,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 46,
     question: 'What is the main idea? "While solar power was once prohibitively expensive, falling costs have made it competitive with fossil fuels in many regions."',
-    options: ['Solar power has become far more affordable and competitive.', 'Solar power remains too costly to use.', 'Solar power performs worse than fossil fuels everywhere.', 'Solar power is unavailable in most regions.'],
+    options: ['Solar power has become far more affordable and competitive.', 'Solar power remains too expensive to be widely used.', 'Solar power performs worse than fossil fuels everywhere.', 'Solar power is unavailable in most regions of the world.'],
     correctAnswer: 0,
     explanation: 'The sentence contrasts past expense with present affordability, so the main idea is that solar power is now competitive.',
     difficulty: 'medium',
@@ -388,7 +388,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 47,
     question: 'In one paragraph, a writer admits that critics raise valid concerns before explaining why her plan should still proceed. This move mainly serves to:',
-    options: ['Strengthen her argument by addressing opposing views', 'Abandon her original claim', 'Introduce an unrelated subject', 'Simply summarize the passage'],
+    options: ['Strengthen her argument by addressing opposing views', 'Abandon her original claim in favor of the critics\' view', 'Introduce a new, unrelated subject for later discussion', 'Summarize the critics\' concerns without taking a side'],
     correctAnswer: 0,
     explanation: 'Acknowledging and then answering objections is a concession that strengthens an argument.',
     difficulty: 'medium',
@@ -404,7 +404,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 49,
     question: 'A passage argues that reading fiction builds empathy. Which finding, if true, would most weaken this argument?',
-    options: ['A large study found no difference in empathy between fiction readers and nonreaders.', 'Fiction book sales have risen in recent years.', 'Many people say they enjoy reading fiction.', 'Public libraries keep large fiction collections.'],
+    options: ['A large study found fiction readers no more empathetic than nonreaders.', 'Fiction book sales have risen steadily in recent years, according to publishers.', 'Many people say they enjoy reading fiction more than reading nonfiction.', 'Public libraries keep large fiction collections that circulate widely.'],
     correctAnswer: 0,
     explanation: 'Evidence of no empathy difference between readers and nonreaders undercuts the claim that fiction builds empathy.',
     difficulty: 'medium',
@@ -412,7 +412,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 50,
     question: 'As used in the sentence, "impasse" most nearly means: "The negotiations reached an impasse, with neither side willing to compromise."',
-    options: ['A quick agreement', 'A deadlock', 'A celebration', 'A brief pause before progress'],
+    options: ['A quick agreement between the sides', 'A deadlock with no progress made', 'A celebration after a deal is reached', 'A brief pause before progress'],
     correctAnswer: 1,
     explanation: 'An "impasse" is a deadlock in which no progress can be made; here neither side would move.',
     difficulty: 'medium',
@@ -420,7 +420,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 51,
     question: 'What does the narrator most likely suggest? "The novel\'s hero repeatedly ignores warnings and rushes into danger, only to escape by luck each time."',
-    options: ['The hero is reckless.', 'The hero is wise and cautious.', 'The hero is cowardly.', 'The hero is lazy.'],
+    options: ['The hero is reckless and depends on luck.', 'The hero is wise and heeds the warnings.', 'The hero is cowardly and avoids danger.', 'The hero is lucky because he plans carefully.'],
     correctAnswer: 0,
     explanation: 'Ignoring warnings and relying on luck rather than judgment characterizes the hero as reckless.',
     difficulty: 'medium',
@@ -428,9 +428,9 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 52,
     question: 'What is the main point? "Although the committee praised the proposal\'s goals, it rejected the plan, citing a lack of funding."',
-    options: ['The committee backed the aims but declined the plan for financial reasons.', 'The committee fully approved the plan.', 'The committee disliked the proposal\'s goals.', 'The committee increased the budget for the plan.'],
+    options: ['The committee liked the goals but rejected the plan over funding.', 'The committee fully approved the plan and praised its goals.', 'The committee rejected the plan because it disagreed with its goals.', 'The committee increased the budget so the plan could go forward.'],
     correctAnswer: 0,
-    explanation: 'The sentence shows approval of the goals but rejection of the plan due to funding, matching the first choice.',
+    explanation: 'The sentence shows approval of the goals but rejection of the plan due to funding: the committee liked the aims but turned the plan down for financial reasons.',
     difficulty: 'medium',
   },
   {
@@ -445,7 +445,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 54,
     question: 'Text 1 argues that remote work boosts productivity by eliminating commutes. Text 2 counters that remote work weakens collaboration and slows innovation. Based on both texts, the authors would most likely agree that:',
-    options: ['Remote work significantly affects how employees work.', 'Remote work is entirely beneficial.', 'Remote work should be banned outright.', 'Commuting improves collaboration.'],
+    options: ['Remote work significantly affects how employees work.', 'Remote work is entirely beneficial for employees.', 'Remote work should be banned outright by employers.', 'Commuting improves collaboration between employees.'],
     correctAnswer: 0,
     explanation: 'Though they disagree about the effect, both authors treat remote work as having a significant impact on how people work.',
     difficulty: 'hard',
@@ -453,7 +453,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 55,
     question: 'As used in the sentence, "measured" most nearly means: "The historian\'s account was measured, avoiding both uncritical praise and harsh condemnation."',
-    options: ['Precisely counted', 'Restrained and balanced', 'Openly hostile', 'Extremely lengthy'],
+    options: ['Precisely counted and recorded', 'Restrained and balanced', 'Openly hostile', 'Extremely lengthy and detailed'],
     correctAnswer: 1,
     explanation: 'Avoiding both extremes signals a restrained, balanced tone; the literal "counted" meaning does not fit.',
     difficulty: 'hard',
@@ -461,7 +461,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 56,
     question: 'A survey found that students who slept at least eight hours scored higher on tests than those who slept less, even when study time was held equal. Which statement is most strongly supported?',
-    options: ['Sleep may contribute to test performance independently of study time.', 'Study time has no effect on test scores.', 'Students should stop studying altogether.', 'Eight hours of sleep guarantees a perfect score.'],
+    options: ['Sleep may contribute to test performance independently of study time.', 'Study time has no effect at all on how students score on tests.', 'Students should stop studying and simply sleep more before tests.', 'Eight hours of sleep guarantees that a student earns a high score.'],
     correctAnswer: 0,
     explanation: 'Because study time was equal, the score difference points to sleep as a contributing factor; the other options overstate the data.',
     difficulty: 'hard',
@@ -469,7 +469,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 57,
     question: 'Text 1 credits an invention\'s success to a single brilliant inventor. Text 2 emphasizes the contributions of an overlooked team of collaborators. The relationship between the texts is best described as:',
-    options: ['Text 2 fully agrees with Text 1.', 'Both texts deny the invention occurred.', 'Text 2 complicates the lone-genius narrative of Text 1.', 'Text 1 was written as a direct reply to Text 2.'],
+    options: ['Text 2 fully agrees with Text 1\'s account.', 'Both texts deny that the invention was ever successful.', 'Text 2 complicates the lone-genius narrative of Text 1.', 'Text 1 was written as a direct reply to Text 2.'],
     correctAnswer: 2,
     explanation: 'By highlighting a team, Text 2 challenges and complicates Text 1\'s single-inventor account.',
     difficulty: 'hard',
@@ -477,7 +477,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 58,
     question: 'As used in the sentence, "panacea" most nearly means: "Far from being a panacea, the medication treated only one symptom and caused several side effects."',
-    options: ['A poison', 'A placebo', 'A vaccine', 'A cure-all'],
+    options: ['A painkiller', 'A placebo', 'A vaccine', 'A cure-all'],
     correctAnswer: 3,
     explanation: 'A "panacea" is a cure-all; the sentence stresses that the medication was not one.',
     difficulty: 'hard',
@@ -485,7 +485,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 59,
     question: 'Claim: The town\'s economy depends heavily on tourism. Which quotation would best support this claim?',
-    options: ['"Nearly two-thirds of local jobs are tied to visitors and hospitality."', '"The town was founded in 1802."', '"Winters here are mild and pleasant."', '"The mayor was reelected last spring."'],
+    options: ['"Nearly two-thirds of local jobs are tied to visitors and hospitality."', '"The town was founded in 1802 by settlers from the eastern coast."', '"Winters here are mild and pleasant, with little snow each year."', '"The mayor was reelected last spring after a campaign focused on schools."'],
     correctAnswer: 0,
     explanation: 'A statistic tying most local jobs to visitors directly supports the claim of economic dependence on tourism.',
     difficulty: 'hard',
@@ -493,7 +493,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 60,
     question: 'As used in the sentence, "tempered" most nearly means: "The reviewer\'s praise was tempered by an awareness of the project\'s flaws."',
-    options: ['Hardened like steel', 'Moderated', 'Made angry', 'Completely removed'],
+    options: ['Hardened like steel', 'Moderated or softened', 'Made angry or bitter', 'Completely removed'],
     correctAnswer: 1,
     explanation: 'Here "tempered" means moderated or softened; awareness of flaws held the praise back rather than eliminating it.',
     difficulty: 'hard',
@@ -501,7 +501,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 61,
     question: 'What does the contrast most strongly suggest? "The memoir lingers over childhood summers in vivid detail but turns terse and evasive when describing the author\'s later career."',
-    options: ['The author is more comfortable recounting early life than the later career.', 'The author had no career at all.', 'The author has forgotten the childhood summers.', 'The author disliked the act of writing.'],
+    options: ['The author is more comfortable describing youth than career.', 'The author never actually had a career after childhood.', 'The author has forgotten most details of the childhood summers.', 'The author found the childhood summers dull and uneventful.'],
     correctAnswer: 0,
     explanation: 'Vivid detail about early life versus terse evasiveness about the career suggests greater comfort with the former.',
     difficulty: 'hard',
@@ -509,15 +509,15 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 62,
     question: 'Text 1 claims that zoos endanger animal welfare. Text 2 argues that accredited zoos aid conservation and species survival. A supporter of Text 2 would most likely respond to Text 1 by:',
-    options: ['Noting that well-run zoos can protect animals while supporting conservation.', 'Agreeing that all zoos harm animals.', 'Calling for every zoo to close immediately.', 'Denying that conservation has any value.'],
+    options: ['Noting that well-run zoos can protect animals and support conservation.', 'Agreeing that zoos harm animals more than they help species survival efforts.', 'Calling for zoos to close so animals can be returned to the wild.', 'Arguing that conservation matters less than animal welfare.'],
     correctAnswer: 0,
-    explanation: 'A Text 2 supporter would distinguish accredited, well-run zoos that both protect animals and advance conservation.',
+    explanation: 'A Text 2 supporter would distinguish accredited, well-run zoos from poorly run ones, noting that such zoos both protect animals and advance conservation.',
     difficulty: 'hard',
   },
   {
     id: 63,
     question: 'As used in the sentence, "derivative" most nearly means: "The critic dismissed the sequel as derivative, borrowing its plot and style from far better films."',
-    options: ['Highly original', 'Mathematical', 'Very expensive', 'Unoriginal'],
+    options: ['Highly original and fresh', 'Mathematical in nature', 'Very expensive to produce', 'Unoriginal and imitative'],
     correctAnswer: 3,
     explanation: 'Borrowing plot and style from other films makes the sequel unoriginal; the math meaning does not apply.',
     difficulty: 'hard',
@@ -525,7 +525,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 64,
     question: 'Archaeologists found identical pottery styles at two sites hundreds of miles apart and dated to the same century. This finding most strongly supports which idea?',
-    options: ['The two communities may have been connected through trade or contact.', 'The same individual personally built both sites.', 'Pottery was invented at both sites in the very same hour.', 'The two sites are of modern origin.'],
+    options: ['The two communities may have been connected through trade or contact.', 'A single potter may have personally made all the pottery at both sites.', 'Pottery may have been invented separately at both sites that same year.', 'One site\'s pottery may date to centuries after the other site\'s pottery.'],
     correctAnswer: 0,
     explanation: 'Matching styles across distant, contemporary sites most plausibly indicate contact or trade between the communities.',
     difficulty: 'hard',
@@ -533,7 +533,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 65,
     question: 'As used in the sentence, "ambiguous" most nearly means: "Her book resists easy classification, blending memoir, history, and fiction into an ambiguous whole."',
-    options: ['Poorly written', 'Not fitting a single clear category', 'Strictly autobiographical', 'Very brief'],
+    options: ['Poorly written and carelessly edited', 'Not fitting a single clear category', 'Strictly autobiographical in content', 'Very brief compared with other histories'],
     correctAnswer: 1,
     explanation: 'A work that blends genres and resists classification is ambiguous in the sense of not fitting one clear category.',
     difficulty: 'hard',
@@ -541,7 +541,7 @@ const allQuestions: SatReadingQuestion[] = [
   {
     id: 66,
     question: 'Text 1 presents data showing that coral reefs recover when water temperatures stabilize. Text 2 warns that ocean temperatures are rising ever faster. Considering both texts, one could reasonably conclude that:',
-    options: ['Reef recovery depends on halting the temperature rise described in Text 2.', 'Coral reefs are unaffected by water temperature.', 'Text 2 disproves the data in Text 1.', 'Coral reefs can never recover under any conditions.'],
+    options: ['Reef recovery depends on stopping the warming Text 2 describes.', 'Coral reefs are unaffected by the water temperatures described in Text 1.', 'Text 2\'s warning disproves the recovery data that Text 1 presents.', 'Coral reefs can never recover, even when temperatures stabilize.'],
     correctAnswer: 0,
     explanation: 'Combining the texts, recovery (Text 1) requires stopping the accelerating warming (Text 2).',
     difficulty: 'hard',

@@ -6,12 +6,13 @@
  * Deliberately does NOT import `@/data/sat-passages` (the full ~83 KB bank) —
  * it receives a lightweight summary list as serialized props from the server
  * page and fetches one full passage on demand from /api/sat-passages?id=…
- * when the student opens it. react-markdown was dropped entirely: the passage
- * bank contains no markdown syntax (verified — plain prose only), so the text
- * is rendered as plain paragraphs.
+ * when the student opens it. react-markdown was dropped entirely: passages are
+ * prose plus the occasional markdown data table, so each blank-line-separated
+ * block goes through the shared renderRichText (tables become styled HTML).
  */
 
 import { useState } from 'react'
+import { renderRichText } from '@/lib/render-rich-text'
 
 export interface PassageSummary {
   id: string
@@ -95,11 +96,12 @@ export function PassageBrowser({ passages }: { passages: PassageSummary[] }) {
 
         <div className="mb-8 rounded-xl border border-gray-200 bg-white p-6 leading-relaxed text-gray-800 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
           <div className="prose prose-sm max-w-none dark:prose-invert">
+            {/* Split on blank lines, not every newline, so a table's rows stay in one block. */}
             {active.text
-              .split(/\n+/)
-              .filter((para) => para.trim().length > 0)
-              .map((para, i) => (
-                <p key={i}>{para}</p>
+              .split(/\n\s*\n/)
+              .filter((block) => block.trim().length > 0)
+              .map((block, i) => (
+                <div key={i} className="mb-4 last:mb-0" dangerouslySetInnerHTML={{ __html: renderRichText(block.trim()) }} />
               ))}
           </div>
         </div>

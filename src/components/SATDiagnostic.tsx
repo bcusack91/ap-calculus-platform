@@ -46,7 +46,7 @@ export default function DiagnosticTest({
   const [phase, setPhase] = useState<'intro' | 'testing' | 'section-break' | 'complete'>('intro')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<
-    { questionIndex: number; selectedIndex: number | null }[]
+    { questionIndex: number; selectedIndex: number | null; textValue?: string }[]
   >(testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })))
   const [eliminatedOptions, setEliminatedOptions] = useState<Map<number, Set<number>>>(new Map())
   const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
@@ -63,7 +63,7 @@ export default function DiagnosticTest({
 
   const currentQuestion = testData.questions[currentIndex]
   const currentAnswer = answers[currentIndex]
-  const answeredCount = answers.filter(a => a.selectedIndex !== null).length
+  const answeredCount = answers.filter(a => a.selectedIndex !== null || !!a.textValue?.trim()).length
   const currentSection = currentQuestion?.section ?? 'reading-writing'
   const isRW = currentSection === 'reading-writing'
 
@@ -71,7 +71,7 @@ export default function DiagnosticTest({
   const sectionStart = isRW ? 0 : rwCount
   const sectionTotal = isRW ? rwCount : mathCount
   const sectionIndex = currentIndex - sectionStart
-  const sectionAnswered = answers.slice(sectionStart, sectionStart + sectionTotal).filter(a => a.selectedIndex !== null).length
+  const sectionAnswered = answers.slice(sectionStart, sectionStart + sectionTotal).filter(a => a.selectedIndex !== null || !!a.textValue?.trim()).length
 
   // Timer
   useEffect(() => {
@@ -141,15 +141,40 @@ export default function DiagnosticTest({
     [answers],
   )
 
+  /** Typed response for a grid-in (student-produced response) question. */
+  const setTextAnswer = useCallback(
+    (value: string) => {
+      setAnswers(prev => {
+        const next = [...prev]
+        next[currentIndex] = { ...next[currentIndex], textValue: value }
+        return next
+      })
+    },
+    [currentIndex],
+  )
+
   const handleSubmit = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current)
 
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { analyzeDiagnosticResults } = require('@/data/sat-practice/diagnostic-generator')
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { gradeGridIn } = require('@/data/sat-grid-in')
     const results = analyzeDiagnosticResults(testData.questions, answers, testData.band ?? 'regular')
 
     setPhase('complete')
-    onComplete(results, answers.map(a => a.selectedIndex))
+    // Review compares each raw answer with the key's correctIndex. A grid-in's
+    // correctIndex is -1, so a correct typed answer maps to -1, a wrong one to
+    // -2 (answered, incorrect) and a blank to null (skipped).
+    onComplete(
+      results,
+      answers.map((a, i) => {
+        const q = testData.questions[i]
+        if (!q?.gridIn) return a.selectedIndex
+        if (!a.textValue?.trim()) return null
+        return gradeGridIn(q.gridIn, a.textValue) ? -1 : -2
+      }),
+    )
   }, [testData.questions, testData.band, answers, onComplete])
 
   // ----------------------------------------------------------------
@@ -224,7 +249,7 @@ export default function DiagnosticTest({
   //  Section Break (R&W → Math)
   // ----------------------------------------------------------------
   if (phase === 'section-break') {
-    const rwAnswered = answers.slice(0, rwCount).filter(a => a.selectedIndex !== null).length
+    const rwAnswered = answers.slice(0, rwCount).filter(a => a.selectedIndex !== null || !!a.textValue?.trim()).length
     return (
       <div className="mx-auto max-w-2xl">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
@@ -341,9 +366,10 @@ export default function DiagnosticTest({
           {currentQuestion.passage && (
             <div className="mb-4 rounded-xl border border-blue-200 bg-blue-50/50 p-4 dark:border-blue-800 dark:bg-blue-900/20">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Read the passage below, then answer the question.</p>
-              <div className="prose prose-sm max-w-none text-gray-800 dark:prose-invert dark:text-gray-200">
-                <p>{currentQuestion.passage}</p>
-              </div>
+              <div
+                className="prose prose-sm max-w-none text-gray-800 dark:prose-invert dark:text-gray-200"
+                dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.passage) }}
+              />
             </div>
           )}
           <div
@@ -351,6 +377,26 @@ export default function DiagnosticTest({
             dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.question) }}
           />
         </div>
+
+        {currentQuestion.gridIn && (
+          <div className="mb-6">
+            <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
+              Enter your answer
+            </label>
+            <input
+              type="text"
+              inputMode="text"
+              autoComplete="off"
+              value={currentAnswer?.textValue ?? ''}
+              onChange={e => setTextAnswer(e.target.value)}
+              placeholder="e.g. 12, 3.5, or 3/4"
+              className="w-full max-w-xs rounded-xl border-2 border-gray-300 bg-white px-4 py-3 text-lg font-semibold text-gray-900 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200 dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:focus:ring-green-900/40"
+            />
+            <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+              Student-produced response — type a number. Fractions (like 3/4) and decimals are accepted.
+            </p>
+          </div>
+        )}
 
         <div className="mb-6 space-y-3">
           {currentQuestion.options.map((option, idx) => {

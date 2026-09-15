@@ -20,6 +20,7 @@
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
 import { satSectionScaled, projectionRange, type ScoreRange } from '@/lib/sat-scoring'
+import { gradeGridIn } from '../sat-grid-in'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -29,7 +30,15 @@ export interface DiagnosticQuestion extends ExitQuizQuestion {
   domain: string
   sourceSlug: string
   passage?: string
+  /** Authored passage id, so a passage's questions stay one consecutive set. */
+  passageId?: string
   section: 'reading-writing' | 'math'
+  /** Student-produced response (grid-in): typed numeric answer, no options. */
+  gridIn?: {
+    correctAnswer: number
+    acceptableAnswers: number[]
+    tolerance: number
+  }
 }
 
 export interface DiagnosticDomain {
@@ -289,51 +298,106 @@ export function rebuildRecommendedTopics(
 
 /* Composition targets — see the module header. 36 questions at ~50s each
  * keeps the diagnostic at 30 minutes. */
-const RW_PASSAGE_QUESTION_TARGET = 10
-const RW_HARD_COUNT = 5
-const RW_DISCRETE_COUNT = 3
-// Math: 13 regular (DIAGNOSTIC_DOMAINS questionCounts) + 5 hard (1 per domain)
+/*
+ * Composition, weighted to the College Board blueprint while keeping the hard
+ * share (~28%) the score curve was calibrated on:
+ *   R&W 18 = 5 passage questions (Information & Ideas) + 8 regular discretes
+ *            (3 Craft & Structure, 3 Conventions, 2 Expression) + 5 hard
+ *            (2 C&S, 1 I&I, 1 Conventions, 1 Expression)
+ *            → I&I ~33%, C&S ~28%, Conventions ~22%, Expression ~17%
+ *            (was ~63% I&I and ~6% C&S).
+ *   Math 18 = 9 multiple-choice + 4 grid-ins (student-produced response, ~22%)
+ *            + 5 hard (one per domain) → Algebra 6, Advanced 6, PSDA 3, Geo 3.
+ * Calibration note: grid-ins can't be guessed, so percent-correct on this mix
+ * runs slightly below the all-multiple-choice mix the curve was anchored on;
+ * recalibrate once new ground-truth score pairs arrive.
+ */
+const RW_PASSAGE_QUESTION_TARGET = 5
 const DIAGNOSTIC_TIME_LIMIT_MINUTES = 30
 
-/**
- * R&W hard-tier slugs available in SAT_HARD_TIER. Hard R&W items embed their
- * own mini-passage in the stem, so they are real reading tasks, not drills.
- */
-const RW_HARD_SLUGS = [
-  'sat-central-ideas-details',
-  'sat-command-evidence',
-  'sat-vocabulary-context',
-  'sat-reading-comprehension',
-  'sat-punctuation',
-  'sat-sentence-structure',
-  'sat-transitions-organization',
-  'sat-effective-language-use',
+/** Regular R&W discretes by diagnostic domain (medium tier). */
+const RW_DISCRETE_PLAN: { domain: string; slugs: string[]; count: number }[] = [
+  { domain: 'vocabulary', slugs: ['sat-vocabulary-context'], count: 3 },
+  { domain: 'grammar', slugs: ['sat-grammar-usage', 'sat-subject-verb-agreement', 'sat-grammar-conventions'], count: 2 },
+  { domain: 'punctuation', slugs: ['sat-sentence-structure', 'sat-punctuation-commas-semicolons', 'sat-punctuation'], count: 1 },
+  // Meta-strategy pools ABOUT the SAT stay excluded; these measure the skill.
+  { domain: 'expression', slugs: ['sat-conciseness-redundancy', 'sat-effective-language-use'], count: 2 },
 ]
 
 /**
- * Real-skill discrete pools per writing domain, in preference order. Pools of
- * meta-strategy questions ABOUT the SAT (command-evidence, finding-textual-
- * evidence, the "what do transitions signal?" style items) are excluded — the
- * diagnostic must measure the skill, not familiarity with our lesson copy.
+ * R&W hard-tier draws. Hard R&W items embed their own mini-passage in the
+ * stem, so they are real reading tasks, not drills.
  */
-const RW_DISCRETE_POOLS: { domain: string; slugs: string[] }[] = [
-  { domain: 'grammar', slugs: ['sat-grammar-usage', 'sat-subject-verb-agreement', 'sat-grammar-conventions'] },
-  { domain: 'punctuation', slugs: ['sat-sentence-structure', 'sat-punctuation-commas-semicolons', 'sat-punctuation'] },
-  { domain: 'expression', slugs: ['sat-conciseness-redundancy', 'sat-effective-language-use'] },
+const RW_HARD_PLAN: { slugs: string[]; count: number }[] = [
+  { slugs: ['sat-vocabulary-context'], count: 2 },
+  { slugs: ['sat-central-ideas-details', 'sat-command-evidence', 'sat-reading-comprehension'], count: 1 },
+  { slugs: ['sat-punctuation', 'sat-sentence-structure'], count: 1 },
+  { slugs: ['sat-transitions-organization', 'sat-effective-language-use'], count: 1 },
 ]
+
+/** Regular multiple-choice Math items per diagnostic domain. */
+const MATH_MCQ_COUNTS: Record<string, number> = {
+  algebra: 3,
+  'advanced-math': 1,
+  functions: 2,
+  'problem-solving': 1,
+  geometry: 2,
+}
+
+/** Grid-ins by diagnostic domain and the grid-in generator categories that feed it. */
+const MATH_GRID_IN_PLAN: { domain: string; categories: string[]; count: number }[] = [
+  { domain: 'algebra', categories: ['Algebra'], count: 2 },
+  { domain: 'advanced-math', categories: ['Advanced Math'], count: 1 },
+  { domain: 'problem-solving', categories: ['Problem Solving', 'Statistics'], count: 1 },
+]
+
+const stemOf = (text: string) => text.replace(/\s+/g, ' ').trim().toLowerCase()
+
+/** Short, stable fingerprint of a question's text (FNV-1a, base 36). */
+function stemKey(text: string): string {
+  let h = 2166136261
+  const s = stemOf(text)
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i)
+    h = Math.imul(h, 16777619)
+  }
+  return `stem:${(h >>> 0).toString(36)}`
+}
+
+/**
+ * Keys to remember a question by across diagnostic attempts: its id AND a
+ * fingerprint of its text. Some pools serve the same question text under
+ * different ids (e.g. different option sets), which id-only tracking missed.
+ * Passage prompts are generic ("Which choice best states the main idea of the
+ * text?"), so a passage question is fingerprinted with its passage.
+ */
+export function seenKeysForQuestion(q: { id?: string; question: string; passage?: string }): string[] {
+  return [...(q.id ? [q.id] : []), stemKey(q.passage ? `${q.passage}|${q.question}` : q.question)]
+}
+
+const isSeen = (exclude: Set<string>, q: { id?: string; question: string; passage?: string }) =>
+  seenKeysForQuestion(q).some((key) => exclude.has(key))
 
 /** Map a passage-bank skill tag to a diagnostic domain id. */
 function passageSkillToDomain(skill: string): string {
   if (skill === 'evidence') return 'evidence'
-  if (skill === 'vocabulary-context' || skill === 'vocabulary-in-context') return 'vocabulary'
-  return 'comprehension' // central-ideas, inference, craft-and-structure
+  // Craft & Structure (words in context, text structure, cross-text) all count
+  // toward the one C&S domain the diagnostic has, so the blueprint weights hold.
+  if (skill === 'vocabulary-context' || skill === 'vocabulary-in-context' || skill === 'craft-and-structure') return 'vocabulary'
+  return 'comprehension' // central-ideas, inference
 }
 
-/** Draw `count` hard-tier items, one per slug, cycling if slugs run short. */
+/**
+ * Draw `count` hard-tier items, cycling through slugs. Items the student has
+ * already seen (by id) or that are already in this test (by stem) are skipped
+ * while unseen ones remain.
+ */
 async function drawHardTierItems(
   slugs: string[],
   count: number,
   section: 'reading-writing' | 'math',
+  exclude: Set<string> = new Set(),
+  usedStems: Set<string> = new Set(),
 ): Promise<DiagnosticQuestion[]> {
   const { hardTierFor } = await import('../exit-quizzes/sat-hard-tier')
   const out: DiagnosticQuestion[] = []
@@ -341,9 +405,12 @@ async function drawHardTierItems(
   for (let pass = 0; out.length < count && pass < 3; pass++) {
     for (const slug of ordered) {
       if (out.length >= count) break
-      const tier = hardTierFor(slug)
+      const tier = hardTierFor(slug).filter((item) => !usedStems.has(stemOf(item.question)))
       if (tier.length === 0) continue
-      const q = tier[Math.floor(Math.random() * tier.length)]
+      const unseen = tier.filter((item) => !isSeen(exclude, item))
+      const source = unseen.length > 0 ? unseen : tier
+      const q = source[Math.floor(Math.random() * source.length)]
+      usedStems.add(stemOf(q.question))
       if (out.some(existing => existing.question === q.question)) continue
       out.push({
         ...q,
@@ -356,92 +423,162 @@ async function drawHardTierItems(
   return out
 }
 
-export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
+export async function generateDiagnosticTest(
+  options: { excludeQuestionIds?: Set<string> } = {},
+): Promise<DiagnosticTestData> {
+  // Question ids the student has already seen on earlier diagnostics. Unseen
+  // items are always preferred; seen ones are used only when a pool runs dry.
+  const exclude = options.excludeQuestionIds ?? new Set<string>()
+  const usedStems = new Set<string>()
   const rwQuestions: DiagnosticQuestion[] = []
   const mathQuestions: DiagnosticQuestion[] = []
 
-  /* ---- R&W: passage-based majority ------------------------------------ */
-  // The passage bank (~80 KB of prose) is dynamically imported here so it is
-  // code-split out of the client bundle for /sat-diagnostic and only fetched
-  // when the diagnostic is actually generated. Passages carry 1-2 questions
-  // each, so over-draw and stop once the target is met (~6-9 passages).
-  const { getBalancedPassages } = await import('../sat-passages')
-  const passages = getBalancedPassages(RW_PASSAGE_QUESTION_TARGET)
-  for (const p of passages) {
+  /** An unseen, not-yet-used item from a slug's pool at an explicit tier. */
+  const drawOne = async (slug: string, tier: 'easy' | 'medium'): Promise<ExitQuizQuestion | null> => {
+    try {
+      // An explicit tier bypasses the exit-quiz hard-tier blend, so the hard
+      // share stays at the ~28% the score curve assumes.
+      const pool = (await generateExitQuiz(slug, 40, tier)).filter(
+        (q) => q.difficulty !== 'hard' && !usedStems.has(stemOf(q.question)),
+      )
+      const pick = pool.find((q) => !isSeen(exclude, q)) ?? pool[0]
+      if (pick) usedStems.add(stemOf(pick.question))
+      return pick ?? null
+    } catch {
+      return null
+    }
+  }
+
+  /* ---- R&W: passage sets ---------------------------------------------- */
+  // The passage bank (~80 KB of prose) is dynamically imported so it is
+  // code-split out of the /sat-diagnostic bundle. Whole passages only, and
+  // passages the student has never seen come first.
+  const { SAT_PASSAGES } = await import('../sat-passages')
+  const passageQuestionId = (passageId: string, index: number) => `diag-passage-${passageId}-q${index}`
+  const neverSeen = SAT_PASSAGES.filter((p) => !p.questions.some((_, i) => exclude.has(passageQuestionId(p.id, i))))
+  const passageOrder = [...shuffle(neverSeen), ...shuffle(SAT_PASSAGES.filter((p) => !neverSeen.includes(p)))]
+  // Passage slots are mostly Information & Ideas with one Craft & Structure
+  // slot: C&S already gets the vocabulary discretes, so an unrestricted draw
+  // over-weights it (C&S 5–9, I&I 2–6) and breaks the blueprint.
+  const RW_CS_PASSAGE_QUESTIONS = 1
+  const passageCap = { 'craft-structure': RW_CS_PASSAGE_QUESTIONS, 'information-ideas': RW_PASSAGE_QUESTION_TARGET - RW_CS_PASSAGE_QUESTIONS }
+  const passageTaken = { 'craft-structure': 0, 'information-ideas': 0 }
+  for (const p of passageOrder) {
     if (rwQuestions.length >= RW_PASSAGE_QUESTION_TARGET) break
-    for (const q of p.questions) {
-      if (rwQuestions.length >= RW_PASSAGE_QUESTION_TARGET) break
+    if (rwQuestions.length + p.questions.length > RW_PASSAGE_QUESTION_TARGET) continue
+    // The whole passage takes its first question's domain (as in the full
+    // tests), so the slot it fills is the domain its questions are scored in.
+    const passageDomain = passageSkillToDomain(p.questions[0]?.skill ?? '')
+    const bucket = passageDomain === 'vocabulary' ? 'craft-structure' : 'information-ideas'
+    if (passageTaken[bucket] + p.questions.length > passageCap[bucket]) continue
+    passageTaken[bucket] += p.questions.length
+    p.questions.forEach((q, i) => {
+      usedStems.add(stemOf(q.question))
       rwQuestions.push({
-        id: `diag-passage-${p.genre}-${q.question.slice(0, 20).replace(/\W/g, '')}`,
+        id: passageQuestionId(p.id, i),
         question: q.question,
         options: q.options,
         correctIndex: q.correctAnswer,
         explanation: q.explanation,
         category: `passage-${p.genre}`,
-        domain: passageSkillToDomain(q.skill),
+        domain: passageDomain,
         sourceSlug: `passage-${p.genre}`,
         passage: p.text,
+        passageId: p.id,
         section: 'reading-writing',
       })
-    }
+    })
+  }
+  // Rare shortfall (no passage fits the last slot): top up with a comprehension item.
+  while (rwQuestions.length < RW_PASSAGE_QUESTION_TARGET) {
+    const q = await drawOne('sat-central-ideas-details', 'medium')
+    if (!q) break
+    rwQuestions.push({ ...q, domain: 'comprehension', sourceSlug: 'sat-central-ideas-details', section: 'reading-writing' })
   }
 
-  /* ---- R&W: writing-skill discretes ----------------------------------- */
-  // One real convention/expression item per writing domain, at the medium
-  // tier (easy/medium fallback lives in the pool generator; 'medium' also
-  // skips the exit-quiz hard-tier blend so the hard share stays controlled).
-  for (const pool of shuffle(RW_DISCRETE_POOLS).slice(0, RW_DISCRETE_COUNT)) {
-    for (const slug of shuffle(pool.slugs)) {
-      try {
-        const [q] = await generateExitQuiz(slug, 1, 'medium')
-        if (!q) continue
-        rwQuestions.push({ ...q, domain: pool.domain, sourceSlug: slug, section: 'reading-writing' })
+  /* ---- R&W: regular discretes ----------------------------------------- */
+  for (const plan of RW_DISCRETE_PLAN) {
+    const slugs = shuffle(plan.slugs)
+    for (let k = 0; k < plan.count; k++) {
+      for (let s = 0; s < slugs.length; s++) {
+        const slug = slugs[(k + s) % slugs.length]
+        const drawn = await drawOne(slug, 'medium')
+        if (!drawn) continue
+        // sourceSlug is the topic slug the item came from (recommendations use it).
+        rwQuestions.push({ ...drawn, domain: plan.domain, sourceSlug: slug, section: 'reading-writing' })
         break
-      } catch {
-        // Pool unavailable — try the next slug for this domain
       }
     }
   }
 
   /* ---- R&W: hard tier -------------------------------------------------- */
-  rwQuestions.push(...await drawHardTierItems(RW_HARD_SLUGS, RW_HARD_COUNT, 'reading-writing'))
+  for (const plan of RW_HARD_PLAN) {
+    rwQuestions.push(...await drawHardTierItems(plan.slugs, plan.count, 'reading-writing', exclude, usedStems))
+  }
 
-  /* ---- Math: regular tier across all five domains ---------------------- */
-  // One easy + one medium draw per slug. Requesting an explicit tier bypasses
-  // the exit-quiz generator's automatic ~25% hard-tier blend, so the hard
-  // share stays at the ~28% the score curve assumes — added explicitly below,
-  // not leaked here.
+  /* ---- Math: regular multiple choice ----------------------------------- */
   for (const domain of DIAGNOSTIC_DOMAINS) {
     if (domain.section !== 'math') continue
-    const domainQuestions: DiagnosticQuestion[] = []
-    for (const slug of shuffle(domain.slugs)) {
-      for (const tier of ['easy', 'medium'] as const) {
-        try {
-          const [q] = await generateExitQuiz(slug, 1, tier)
-          if (q) domainQuestions.push({ ...q, domain: domain.id, sourceSlug: slug, section: 'math' })
-        } catch {
-          // Skip unavailable pools
-        }
+    const want = MATH_MCQ_COUNTS[domain.id] ?? 0
+    const slugs = shuffle(domain.slugs)
+    for (let k = 0; k < want; k++) {
+      for (let s = 0; s < slugs.length * 2; s++) {
+        const slug = slugs[(k + s) % slugs.length]
+        const drawn = await drawOne(slug, (k + s) % 2 === 0 ? 'easy' : 'medium')
+        if (!drawn) continue
+        mathQuestions.push({ ...drawn, domain: domain.id, sourceSlug: slug, section: 'math' })
+        break
       }
     }
-    // Drop any hard item a thin pool's tier-fallback let through, unless we
-    // need it to fill the domain's count.
-    const nonHard = shuffle(domainQuestions.filter(q => q.difficulty !== 'hard'))
-    const hardLeftovers = shuffle(domainQuestions.filter(q => q.difficulty === 'hard'))
-    mathQuestions.push(...[...nonHard, ...hardLeftovers].slice(0, domain.questionCount))
   }
 
   /* ---- Math: hard tier, one item per domain ---------------------------- */
   for (const domain of DIAGNOSTIC_DOMAINS) {
     if (domain.section !== 'math') continue
-    const drawn = await drawHardTierItems(shuffle(domain.slugs), 1, 'math')
-    for (const q of drawn) {
-      if (!mathQuestions.some(existing => existing.question === q.question)) mathQuestions.push(q)
+    mathQuestions.push(...await drawHardTierItems(shuffle(domain.slugs), 1, 'math', exclude, usedStems))
+  }
+
+  /* ---- Math: grid-ins (student-produced response) ---------------------- */
+  // Procedural values, so they never repeat verbatim; easy/medium only.
+  const { generateGridInProblems } = await import('../sat-grid-in')
+  const gridPool = shuffle(generateGridInProblems(60).filter((p) => p.difficulty !== 'hard'))
+  const gridIns: DiagnosticQuestion[] = []
+  for (const plan of MATH_GRID_IN_PLAN) {
+    for (const p of gridPool.filter((g) => plan.categories.includes(g.category)).slice(0, plan.count)) {
+      gridIns.push({
+        id: `diag-gridin-${gridIns.length}-${stemOf(p.question).slice(0, 24)}`,
+        question: p.question,
+        options: [],
+        correctIndex: -1,
+        explanation: p.explanation,
+        category: p.category,
+        difficulty: p.difficulty,
+        domain: plan.domain,
+        sourceSlug: `grid-in-${p.category.toLowerCase().replace(/\s+/g, '-')}`,
+        section: 'math',
+        gridIn: { correctAnswer: p.correctAnswer, acceptableAnswers: p.acceptableAnswers, tolerance: p.tolerance },
+      })
     }
   }
 
-  // R&W first, then Math — each section shuffled internally
-  const questions = [...shuffle(rwQuestions), ...shuffle(mathQuestions)]
+  // R&W: shuffle whole units so each passage's questions stay consecutive and
+  // in authored order. Math: multiple choice shuffled, grid-ins at the end.
+  const rwUnits: DiagnosticQuestion[][] = []
+  const unitByPassage = new Map<string, DiagnosticQuestion[]>()
+  for (const q of rwQuestions) {
+    if (!q.passageId) {
+      rwUnits.push([q])
+      continue
+    }
+    let unit = unitByPassage.get(q.passageId)
+    if (!unit) {
+      unit = []
+      unitByPassage.set(q.passageId, unit)
+      rwUnits.push(unit)
+    }
+    unit.push(q)
+  }
+  const questions = [...shuffle(rwUnits).flat(), ...shuffle(mathQuestions), ...gridIns]
 
   return {
     questions,
@@ -499,7 +636,7 @@ const SECTION_BANDS: Record<Exclude<DiagnosticBand, 'regular'>, { base: number; 
 
 export function analyzeDiagnosticResults(
   questions: DiagnosticQuestion[],
-  answers: { questionIndex: number; selectedIndex: number | null }[],
+  answers: { questionIndex: number; selectedIndex: number | null; textValue?: string }[],
   /** Which item tier the questions came from, which decides how a raw
    *  percentage maps onto the 200-800 section scale. See SECTION_BANDS. */
   band: DiagnosticBand = 'regular',
@@ -510,7 +647,10 @@ export function analyzeDiagnosticResults(
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i]
     const ans = answers.find(a => a.questionIndex === i)
-    const isCorrect = ans?.selectedIndex === q.correctIndex
+    // Grid-ins are graded on the typed value; everything else on the choice.
+    const isCorrect = q.gridIn
+      ? gradeGridIn(q.gridIn, ans?.textValue ?? '')
+      : ans?.selectedIndex === q.correctIndex
 
     const entry = domainScores.get(q.domain) ?? { correct: 0, total: 0 }
     entry.total++

@@ -18,7 +18,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'She packed shirts, pants, and shoes.',
       'She packed shirts pants, and shoes.',
       'She packed, shirts pants and shoes.',
-      'She packed shirts, pants and, shoes.'
+      'She packed shirts pants and shoes.'
     ],
     correctAnswer: 0,
     explanation: 'Items in a series are separated by commas: shirts, pants, and shoes.',
@@ -133,10 +133,10 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 10,
     question: 'Choose the correctly punctuated version: "The experiment failed ___ the team decided to start over."',
     options: [
-      'The experiment failed, the team decided to start over.',
+      'The experiment failed, then the team decided to start over.',
       'The experiment failed; the team decided to start over.',
-      'The experiment failed the team decided to start over.',
-      'The experiment failed: the team decided to start over.'
+      'The experiment failed, the team, decided to start over.',
+      'The experiment failed, so, the team decided to start over.'
     ],
     correctAnswer: 1,
     explanation: 'Two independent clauses without a conjunction must be joined by a semicolon (or period), not a comma.',
@@ -244,7 +244,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'The orchestra, which had been rehearsing for months, performed brilliantly, the audience gave a standing ovation.'
     ],
     correctAnswer: 2,
-    explanation: '"Which had been rehearsing for months" is nonessential (paired commas). The two main clauses are joined by a semicolon. Option D is a comma splice.',
+    explanation: '"Which had been rehearsing for months" is nonessential (paired commas). The two main clauses are joined by a semicolon. Using a comma between "brilliantly" and "the audience" would create a comma splice.',
     difficulty: 'hard',
   },
   {
@@ -304,12 +304,12 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which option correctly fixes this sentence? "The report concluded that, the new policy would reduce costs, it would also improve efficiency."',
     options: [
       'Remove the comma after "that" and change the comma after "costs" to a semicolon.',
-      'Remove the comma after "that" and add "and" after the comma.',
+      'Remove the comma after "that" and delete the comma after "costs" with no replacement.',
       'Keep the comma after "that" and change the comma after "costs" to a period.',
-      'Both A and B would create correct sentences.'
+      'Keep the comma after "that" and add "and" after the comma following "costs."'
     ],
-    correctAnswer: 3,
-    explanation: 'The comma after "that" is always wrong (no comma between verb and "that" clause). The comma after "costs" creates a comma splice. Fix A: semicolon between the clauses. Fix B: "and" makes a compound predicate. Both work.',
+    correctAnswer: 0,
+    explanation: 'The comma after "that" is wrong (no comma between a verb and its "that" clause), so any fix that keeps it fails. The comma after "costs" creates a comma splice; changing it to a semicolon correctly joins the two independent clauses. Simply deleting that comma leaves a run-on sentence.',
     difficulty: 'hard',
   },
   {
@@ -330,12 +330,12 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'The principal explained the new policy to the students ___ it would take effect immediately. Which punctuation correctly fills the blank?',
     options: [
       ', (comma)',
-      ': (colon)',
       '; (semicolon)',
-      'Both B and C are correct.'
+      'No punctuation',
+      ', however, (commas around "however")'
     ],
-    correctAnswer: 3,
-    explanation: 'Both a colon (introducing an explanation) and a semicolon (joining two independent clauses) work here. The colon emphasizes that the second clause explains the policy; the semicolon simply links two related ideas.',
+    correctAnswer: 1,
+    explanation: 'Both parts are independent clauses, so a semicolon correctly joins them. A comma alone creates a comma splice, no punctuation creates a run-on, and setting "however" off with commas still leaves two independent clauses joined only by a comma (a comma splice).',
     difficulty: 'hard',
   },
   // ─── EASY (added) ──────────────────────────────────────────────────
@@ -346,7 +346,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'We bought apples oranges, and pears.',
       'We bought apples, oranges, and pears.',
       'We bought, apples oranges and pears.',
-      'We bought apples, oranges and, pears.'
+      'We bought apples oranges and pears.'
     ],
     correctAnswer: 1,
     explanation: 'Items in a series are separated by commas: apples, oranges, and pears.',
@@ -382,7 +382,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 29,
     question: 'Which sentence uses a semicolon correctly?',
     options: [
-      'The results; were clear the treatment worked.',
+      'The results; were clear, the treatment worked.',
       'The results were clear; but the treatment worked.',
       'The results were, clear; the treatment worked.',
       'The results were clear; the treatment worked.'
@@ -475,7 +475,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'I need pens, paper, and glue.',
       'I need pens paper and glue.',
-      'I need pens, paper and, glue.',
+      'I need pens paper, and glue.',
       'I, need pens paper and glue.'
     ],
     correctAnswer: 0,
@@ -527,7 +527,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence correctly uses a semicolon with "moreover"?',
     options: [
       'The plan was risky; moreover, it was expensive.',
-      'The plan was risky, moreover, it was expensive.',
+      'The plan was risky, moreover it was expensive.',
       'The plan was risky moreover; it was expensive.',
       'The plan was risky; moreover it was expensive.'
     ],
@@ -566,9 +566,9 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence uses a colon correctly?',
     options: [
       'She had one goal: to win the championship.',
-      'She had one goal; to win the championship.',
-      'She had one goal to win the championship.',
-      'She had one, goal to win the championship.'
+      'She had one goal; namely to win the championship.',
+      'She had one goal, to win, the championship.',
+      'She had one, goal, to win the championship.'
     ],
     correctAnswer: 0,
     explanation: 'A colon follows a complete clause to introduce an explanation. "To win the championship" is not independent, so a semicolon is wrong.',
@@ -657,12 +657,12 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence uses commas correctly?',
     options: [
       'For the trip we need tickets, passports, and luggage.',
-      'For the trip we need tickets, passports and, luggage.',
-      'For the trip, we need tickets passports, and luggage.',
+      'For the trip we need tickets passports and luggage.',
+      'For the trip, we need tickets passports and luggage.',
       'For the trip we need, tickets passports and luggage.'
     ],
     correctAnswer: 0,
-    explanation: 'The three series items are separated by commas: tickets, passports, and luggage.',
+    explanation: 'The three series items are separated by commas: tickets, passports, and luggage. The comma after the short introductory phrase "For the trip" is optional; the other sentences are wrong because they omit the series commas (and one misplaces a comma after "need").',
     difficulty: 'medium',
   },
   {
@@ -751,7 +751,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'Although she was tired she finished the race, and she set a personal record.',
       'Although she was tired, she finished the race, she set a personal record.',
       'Although she was tired, she finished the race, and she set a personal record.',
-      'Although she was tired, she finished the race and, she set a personal record.'
+      'Although she was tired, she finished the race and she set a personal record.'
     ],
     correctAnswer: 2,
     explanation: 'The introductory clause takes a comma, and the two independent clauses joined by "and" also take a comma before the conjunction.',
@@ -787,13 +787,13 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 60,
     question: 'Which sentence is punctuated correctly?',
     options: [
-      'I wanted to help, however, I had no time.',
+      'I wanted to help however I had no time.',
       'I wanted to help; however, I had no time.',
       'I wanted to help however; I had no time.',
       'I wanted to help, however I had no time.'
     ],
     correctAnswer: 1,
-    explanation: 'The conjunctive adverb "however" between two independent clauses takes a semicolon before and a comma after; the comma-only versions are splices.',
+    explanation: 'The conjunctive adverb "however" between two independent clauses takes a semicolon before and a comma after; the comma-only version is a splice and the unpunctuated one is a run-on.',
     difficulty: 'hard',
   },
   {
@@ -841,8 +841,8 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'Because the flight was delayed, we missed our connection; the airline offered vouchers.',
       'Because the flight was delayed we missed our connection; the airline offered vouchers.',
-      'Because the flight was delayed, we missed our connection, the airline offered vouchers.',
-      'Because the flight was delayed; we missed our connection, the airline offered vouchers.'
+      'Because the flight was delayed, we missed our connection the airline offered vouchers.',
+      'Because the flight was delayed; we missed our connection the airline offered vouchers.'
     ],
     correctAnswer: 0,
     explanation: 'The introductory clause needs a comma after "delayed," and the comma splice before "the airline" must become a semicolon.',

@@ -333,8 +333,14 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
       if (nextIdx >= 0) {
         const tier = module2Tier(result.correct, result.total)
         const used = new Set<string>()
-        for (const sec of test.sections) for (const q of sec.questions) used.add(q.question)
-        regenerateModule2(test.sections[nextIdx], tier, used)
+        const usedPassageIds = new Set<string>()
+        test.sections.forEach((sec, idx) => {
+          for (const q of sec.questions) used.add(q.question)
+          // Passages from every OTHER module are off limits, so the rebuilt
+          // Module 2 never repeats a passage the student already read.
+          if (idx !== nextIdx) for (const q of sec.questions) if (q.passage) usedPassageIds.add(q.passage.id)
+        })
+        regenerateModule2(test.sections[nextIdx], tier, used, usedPassageIds, test.testNumber)
           .then((rebuilt) => {
             setTest((prev) => {
               const sections = [...prev.sections]
@@ -824,6 +830,19 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
 
       {/* Question Card */}
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8 dark:border-gray-700 dark:bg-gray-800">
+        {/* Passage — passage-based R&W questions can't be answered without it.
+            It used to be generated but never rendered here. */}
+        {currentQuestion.passage && (
+          <div className="mb-6 rounded-xl border border-blue-200 bg-blue-50/60 p-4 dark:border-blue-800 dark:bg-blue-900/20">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-300">
+              {currentQuestion.passage.title}
+            </p>
+            <div
+              className="text-base leading-relaxed text-gray-800 dark:text-gray-200"
+              dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.passage.text) }}
+            />
+          </div>
+        )}
         {/* Question Text */}
         <div className="mb-6">
           <div className="mb-2 flex items-center gap-2">

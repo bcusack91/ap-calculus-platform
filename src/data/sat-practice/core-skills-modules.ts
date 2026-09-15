@@ -195,21 +195,33 @@ async function drawEasy(
   const pools = await Promise.all(
     ordered.map(async (slug) => {
       try {
-        const pool = await generateExitQuiz(slug, 60, 'easy', moduleNumber * 7919)
-        // Genuinely easy items first, so a module leans on them and only tops
-        // up with light-medium when a topic's easy pool runs short.
-        return {
-          slug,
-          items: [...pool].sort((a, b) => Number(b.difficulty === 'easy') - Number(a.difficulty === 'easy')),
-        }
+        // Same fixed seed for every module, so each topic's pool is one stable
+        // ordering that the twelve modules slice without overlap.
+        const pool = await generateExitQuiz(slug, 240, 'easy', 7919)
+        // The pool generator falls back across tiers when a topic's easy pool
+        // is thin, so hard items must be filtered out here: a Core Skills
+        // module never serves one. Easy items lead; light-medium tops up.
+        const seen = new Set<string>()
+        const items = [...pool]
+          .filter((q) => q.difficulty !== 'hard')
+          .filter((q) => {
+            const stem = q.question.trim().toLowerCase()
+            if (seen.has(stem)) return false
+            seen.add(stem)
+            return true
+          })
+          .sort((a, b) => Number(b.difficulty === 'easy') - Number(a.difficulty === 'easy'))
+        return { slug, items }
       } catch {
         return { slug, items: [] as ExitQuizQuestion[] }
       }
     }),
   )
 
-  // Round-robin across topics so every module spans the domain map, stepping by
-  // module number so the twelve modules are near-disjoint.
+  // Round-robin across topics so every module spans the domain map. Each module
+  // takes its own slice of each topic's pool (index ≡ module-1 mod 12), so the
+  // twelve modules never share an item as long as a pool holds 12+ items; only
+  // thinner pools wrap.
   for (let pass = 0; pass < 8 && out.length < count; pass++) {
     for (const { slug, items } of pools) {
       if (out.length >= count) break

@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { generateDiagnosticTest, rebuildRecommendedTopics, listDiagnosticDomains } from '@/data/sat-practice/diagnostic-generator'
+import { generateDiagnosticTest, rebuildRecommendedTopics, listDiagnosticDomains, seenKeysForQuestion } from '@/data/sat-practice/diagnostic-generator'
 import { generateHardModule, HARD_MODULE_CATEGORY, HARD_MODULE_COUNT } from '@/data/sat-practice/hard-modules'
 import { generateCoreModule, CORE_MODULE_CATEGORY, CORE_MODULE_COUNT, CORE_MODULE_MINUTES, CORE_SKILLS_GRADUATION_SCORE } from '@/data/sat-practice/core-skills-modules'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
@@ -242,10 +242,31 @@ export default function SATDiagnosticPage() {
           if (r.ok) return (await r.json()).diagnostic.testData as DiagnosticTestData
           // Assignment unavailable — fall back to a normal generated test.
         }
-        return generateDiagnosticTest()
+        // Regular diagnostic: prefer questions this student hasn't seen on an
+        // earlier attempt (ids remembered per browser, capped at 4000).
+        const SEEN_KEY = 'sat-diagnostic-seen-v1'
+        let seen = new Set<string>()
+        try {
+          const raw = window.localStorage.getItem(SEEN_KEY)
+          const parsed = raw ? JSON.parse(raw) : []
+          if (Array.isArray(parsed)) seen = new Set(parsed.filter((v): v is string => typeof v === 'string'))
+        } catch {
+          // Unavailable or malformed storage: generate without exclusions.
+        }
+        const generated = await generateDiagnosticTest({ excludeQuestionIds: seen })
+        try {
+          // Ids plus text fingerprints: some pools reuse a question's text under a new id.
+          const keys = generated.questions.flatMap(q => seenKeysForQuestion(q))
+          window.localStorage.setItem(SEEN_KEY, JSON.stringify([...new Set([...seen, ...keys])].slice(-6000)))
+        } catch {
+          // Storage full or blocked: exclusions just won't persist.
+        }
+        return generated
       }
       loadTest().then(data => {
         data.questions.forEach(q => {
+          // Grid-ins have no options to shuffle.
+          if (q.gridIn || q.options.length === 0) return
           const s = shuffleOptions(q.options, q.correctIndex, q.question)
           q.options = s.options
           q.correctIndex = s.correctIndex

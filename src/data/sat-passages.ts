@@ -5,6 +5,9 @@
  * Covers literary fiction, social science, natural science, and historical documents.
  */
 
+import { SAT_PASSAGES_2 } from './sat-passages-2'
+import { SAT_PASSAGES_3 } from './sat-passages-3'
+
 export interface PassageQuestion {
   question: string
   options: string[]
@@ -23,7 +26,7 @@ export interface ReadingPassage {
   questions: PassageQuestion[]
 }
 
-export const SAT_PASSAGES: ReadingPassage[] = [
+const CORE_PASSAGES: ReadingPassage[] = [
   {
     id: 'lit-01',
     title: 'The Garden Wall',
@@ -33,8 +36,8 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The narrator suggests that Maria’s understanding of the wall’s purpose differs from its literal function in that the wall primarily serves to',
         options: [
-          'protect the family from dangerous plants',
-          'contain the emotional weight of loss and decline',
+          'protect the family from the brambles overtaking the garden',
+          'hold in the sadness of loss and decline',
           'prevent Maria from exploring forbidden territory',
           'mark a legal property boundary between neighbors'
         ],
@@ -45,9 +48,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'As used in the passage, “reclaimed” (the brambles slowly reclaimed the footpaths) most nearly means',
         options: [
-          'legally repossessed',
+          'legally repossessed from the owner',
           'gradually overgrew and covered',
-          'cleaned and restored',
+          'cleaned up and restored to order',
           'formally demanded the return of'
         ],
         correctAnswer: 1,
@@ -65,10 +68,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Based on the passage, James’s response to the letter is best described as',
         options: [
-          'relieved by the positive news about his father',
+          'relieved by the reassuring news about his father’s health',
           'resigned to an unspoken reality behind polite language',
           'angry at his sister for withholding information',
-          'confused about the meaning of his sister’s words'
+          'confused about what his sister’s phrase was meant to convey'
         ],
         correctAnswer: 1,
         explanation: 'James has learned to decode the euphemism, showing resignation rather than confusion or relief.',
@@ -78,7 +81,7 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         question: 'The simile comparing the words to “sediment in a glass of water” most directly emphasizes that the letter’s meaning',
         options: [
           'becomes clearer and more settled with each rereading',
-          'shifts and resettles differently each time James reads it',
+          'resettles in a new way with each reading',
           'is deliberately obscured by his sister’s word choice',
           'grows more upsetting the longer James considers it'
         ],
@@ -97,9 +100,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The primary purpose of the passage is to',
         options: [
-          'describe the engineering of a pedestrian bridge',
-          'illustrate how habituation can lead to a loss of awareness',
-          'criticize Elena’s careless commuting habits',
+          'describe the engineering of the pedestrian bridge Elena crosses',
+          'show how habituation can dull a person’s awareness',
+          'criticize Elena’s careless habit of reading while walking',
           'explain why bridges sway in windy conditions'
         ],
         correctAnswer: 1,
@@ -117,10 +120,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Mrs. Okafor’s teaching method primarily emphasizes',
         options: [
-          'technical precision and accuracy',
-          'the importance of regular practice',
-          'emotional connection as the foundation of musical expression',
-          'memorizing music rather than reading sheet music'
+          'technical precision and accuracy in hitting every note',
+          'the value of long hours of regular, disciplined practice',
+          'drawing on personal feeling to give music meaning',
+          'memorizing music rather than reading from sheet music'
         ],
         correctAnswer: 2,
         explanation: 'Mrs. Okafor tells Daniel he plays the notes but not the music and asks him to think of someone he misses, showing emotional connection transforms technical playing into true musical expression.',
@@ -137,9 +140,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage suggests that Amara’s grandfather intended the workshop to represent',
         options: [
-          'a financial safety net for emergencies',
+          'a financial safety net Amara could sell off in an emergency',
           'a continuation of craft and purpose rather than monetary wealth',
-          'an obligation to maintain the family property',
+          'an obligation to maintain and repair the family property',
           'a reminder of his disappointment in his other grandchildren'
         ],
         correctAnswer: 1,
@@ -157,9 +160,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The phrase “her cathedral” most nearly suggests that Rosa regards her morning solitude as',
         options: [
-          'a religious obligation',
+          'a religious obligation she observes each day',
           'a sacred and essential personal space',
-          'an architectural interest',
+          'an interest in the architecture of churches',
           'an escape from her unhappy family'
         ],
         correctAnswer: 1,
@@ -177,10 +180,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The detail that the grandmother’s avoidance was “deliberate, practiced ease” most strongly implies that',
         options: [
-          'the grandmother had simply forgotten the woman',
-          'the unknown woman was a casual acquaintance',
-          'the grandmother was hiding a significant personal connection',
-          'the photographs were taken by accident'
+          'the grandmother had simply forgotten who the woman was',
+          'the unknown woman was only a casual acquaintance of the family',
+          'the grandmother was concealing an important relationship',
+          'the photographs were taken by accident at a party'
         ],
         correctAnswer: 2,
         explanation: 'Practiced, deliberate avoidance combined with carefully preserved and separately stored photos suggests a significant hidden relationship.',
@@ -197,10 +200,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The daughter’s reaction to her mother’s statement suggests she',
         options: [
-          'is too young to understand the danger',
-          'recognizes that surviving and being lucky are not the same thing',
-          'is angry at her mother for being dismissive',
-          'wants to replant the tree immediately'
+          'is too young to understand how close the danger came',
+          'senses that the family’s loss complicates calling it luck',
+          'is angry at her mother for dismissing how frightening the storm was',
+          'wants to replant the fallen oak tree in the same spot'
         ],
         correctAnswer: 1,
         explanation: 'The daughter’s doubt about lucky suggests she grasps that the loss of the oak tree, which held four generations of memories, complicates a simple claim of good fortune.',
@@ -217,9 +220,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage primarily conveys the idea that',
         options: [
-          'bilingual children have academic advantages',
-          'language ability can mask the burden of adult responsibilities placed on children',
-          'Fatima’s teacher is insensitive to immigrant families',
+          'bilingual children gain lasting academic advantages over their peers',
+          'advanced language can conceal a child’s adult-sized burdens',
+          'Fatima’s teacher is insensitive to the needs of immigrant families',
           'translating for parents is a rewarding family role'
         ],
         correctAnswer: 1,
@@ -237,10 +240,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Marcus’s reaction to the studio’s closure reveals that he',
         options: [
-          'is relieved he never wasted time on pottery',
-          'regrets never pursuing an interest he repeatedly deferred',
+          'is relieved he never wasted his evenings learning pottery',
+          'regrets never pursuing an interest he kept putting off',
           'is upset about losing a convenient landmark on his commute',
-          'plans to find another pottery studio nearby'
+          'plans to look for another pottery studio in a nearby town'
         ],
         correctAnswer: 1,
         explanation: 'Sitting in his car feeling a door close that he had never quite opened conveys regret — the opportunity he always deferred is now permanently gone.',
@@ -277,10 +280,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The comparison between Leo and a poet suggests that the author views mechanical expertise as',
         options: [
-          'inferior to academic engineering knowledge',
+          'inferior to the formal engineering knowledge of his daughter',
           'a form of intuitive mastery gained through prolonged experience',
-          'an outdated skill in the age of technology',
-          'something that cannot be taught in schools'
+          'an outdated skill in an age of computerized diagnostics',
+          'a talent that engineering schools are unable to teach'
         ],
         correctAnswer: 1,
         explanation: 'Comparing Leo’s mechanical knowledge to a poet’s relationship with language emphasizes intuitive mastery through intimate, physical attention rather than formal analysis.',
@@ -297,10 +300,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Marco’s action of sitting in the empty chair functions in the passage as',
         options: [
-          'a disrespectful intrusion on family tradition',
-          'an innocent gesture that breaks a grief ritual the adults could not',
-          'a deliberate attempt to replace his grandfather',
-          'evidence that children do not understand death'
+          'a disrespectful intrusion on a cherished family tradition',
+          'an innocent act that breaks a ritual of grief',
+          'a deliberate attempt to take his grandfather’s place',
+          'evidence that young children do not understand death'
         ],
         correctAnswer: 1,
         explanation: 'Marco’s innocent observation that the chair looked lonely breaks the family’s unspoken grief ritual. His grandmother’s mixed laugh-sob shows relief and emotion, not anger.',
@@ -317,9 +320,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The handshake metaphor primarily serves to illustrate',
         options: [
-          'Nadia’s view that opening pages establish a trust-based relationship between reader and author',
-          'the physical experience of holding a book',
-          'Nadia’s shyness around meeting new people',
+          'Nadia’s view that a first page builds trust with the reader',
+          'the physical experience of holding a book and turning its pages',
+          'Nadia’s shyness when introducing herself to strangers',
           'the importance of buying books rather than borrowing them'
         ],
         correctAnswer: 0,
@@ -337,9 +340,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The recurring motif of the first snow primarily symbolizes',
         options: [
-          'Thomas’s fear of winter weather',
-          'a persistent connection to his brother that endures beyond death',
-          'David’s career as a meteorologist',
+          'Thomas’s fear of winter weather since childhood',
+          'Thomas’s lasting bond with his late brother',
+          'David’s career as a meteorologist who studied clouds',
           'the literal scientific process of crystallization'
         ],
         correctAnswer: 1,
@@ -357,9 +360,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The primary purpose of the roulette wheel experiment is to illustrate that',
         options: [
-          'people are poor at estimating geographic facts',
-          'unrelated numerical information systematically distorts subsequent judgments',
-          'gambling influences political opinions',
+          'people are poor at estimating geographic facts about Africa',
+          'arbitrary numbers can skew later estimates',
+          'gambling can influence people’s political opinions',
           'Tversky and Kahneman were interested in games of chance'
         ],
         correctAnswer: 1,
@@ -377,9 +380,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Based on the passage, the Pirahã research most directly supports which version of the Sapir-Whorf hypothesis?',
         options: [
-          'strong linguistic determinism',
+          'the strong version, linguistic determinism',
           'the complete rejection of linguistic influence',
-          'weak linguistic relativity',
+          'the weaker version, linguistic relativity',
           'the idea that all languages are equally expressive'
         ],
         correctAnswer: 2,
@@ -397,9 +400,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'According to the passage, the bystander effect is most accurately explained by',
         options: [
-          'people’s indifference to others’ suffering',
-          'the assumption that another person in the group will take responsibility',
-          'poor hearing in group settings',
+          'people’s growing indifference to the suffering of strangers',
+          'each person assuming that someone else will act',
+          'difficulty hearing clearly in group settings',
           'cultural norms that discourage intervention'
         ],
         correctAnswer: 1,
@@ -417,10 +420,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage suggests that praising children for ability rather than effort can',
         options: [
-          'increase their motivation on all tasks',
+          'increase their motivation and persistence on challenging tasks',
           'lead them to interpret failure as evidence of fixed limitations',
-          'have no measurable impact on behavior',
-          'improve performance only on easy tasks'
+          'have no measurable impact on how they respond to setbacks',
+          'improve their performance, though only on easier tasks'
         ],
         correctAnswer: 1,
         explanation: 'Students praised for ability were more likely to give up, viewing the setback as proof of limited ability.',
@@ -437,10 +440,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The central argument of the Dunning-Kruger research is that',
         options: [
-          'all people are poor judges of their abilities',
+          'people generally judge their own abilities accurately',
           'incompetence impairs the ability to recognize incompetence',
-          'overconfidence always leads to failure',
-          'top performers are excessively modest'
+          'overconfidence leads people to fail on reasoning tests',
+          'top performers are excessively modest about their skills'
         ],
         correctAnswer: 1,
         explanation: 'The key insight is that competence provides the metacognitive skills needed to evaluate performance.',
@@ -457,10 +460,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The 2018 replication study most significantly challenges the original marshmallow test by suggesting that',
         options: [
-          'children cannot delay gratification at all',
-          'the original results were fabricated',
-          'economic environment, not innate self-control, largely explains the observed differences',
-          'marshmallows are not an effective motivator for children'
+          'children at that age are unable to delay gratification at all',
+          'the original results were fabricated by Mischel’s team',
+          'family wealth, more than self-control, explained the results',
+          'marshmallows are not an effective reward for most preschoolers'
         ],
         correctAnswer: 2,
         explanation: 'The 2018 study found correlations disappeared after controlling for family background, suggesting socioeconomic environment drove the differences.',
@@ -477,9 +480,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'According to the passage, stereotype threat impairs performance primarily through',
         options: [
-          'reducing motivation to succeed',
+          'reducing students’ motivation to succeed on the test',
           'consuming working memory resources through anxiety',
-          'causing physical illness during tests',
+          'causing physical illness in students during tests',
           'lowering the difficulty of questions students attempt'
         ],
         correctAnswer: 1,
@@ -497,10 +500,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The neuroscience research mentioned in the passage suggests that confirmation bias is',
         options: [
-          'easily corrected through education',
+          'easily corrected through education about common biases',
           'a deliberate strategy people adopt consciously',
           'reinforced by neurological reward and threat responses',
-          'limited to discussions about capital punishment'
+          'limited to debates about capital punishment and crime'
         ],
         correctAnswer: 2,
         explanation: 'Confirming information activates reward circuits while disconfirming evidence triggers threat responses, indicating neurological reinforcement.',
@@ -517,10 +520,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The researchers cautioned against assuming causation because',
         options: [
-          'the sample size was too small to draw conclusions',
-          'the direction of the relationship between social media use and loneliness is uncertain',
-          'participants lied about their social media usage',
-          'loneliness cannot be measured accurately'
+          'the sample of 1,787 young adults was too small to draw conclusions',
+          'loneliness might drive social media use rather than result from it',
+          'participants misreported how much time they spent on social media',
+          'loneliness cannot be measured accurately with a survey'
         ],
         correctAnswer: 1,
         explanation: 'The passage notes uncertainty about whether social media causes loneliness or lonely people gravitate to social media.',
@@ -537,10 +540,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Ostrom’s research challenged Hardin’s framework primarily by showing that',
         options: [
-          'privatization is the only solution to resource depletion',
-          'shared resources never become depleted',
-          'communities can self-organize to manage shared resources without external control',
-          'government regulation is always superior to community management'
+          'privatization is the most reliable solution to resource depletion',
+          'shared resources rarely become depleted when many people use them',
+          'communities can create their own rules to manage shared resources',
+          'government regulation outperforms community management of resources'
         ],
         correctAnswer: 2,
         explanation: 'Ostrom demonstrated that communities develop self-governing institutions to manage shared resources sustainably.',
@@ -557,10 +560,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The 2019 meta-analysis weakens the IAT as a tool by demonstrating that',
         options: [
-          'no one has implicit biases',
-          'IAT scores poorly predict actual discriminatory behavior and fluctuate across sessions',
-          'the test takes too long to administer',
-          'only Americans show implicit bias'
+          'most people do not actually hold implicit biases',
+          'scores weakly predict behavior and vary between sessions',
+          'the test takes too long to administer to large groups of people',
+          'implicit bias appears only among American participants'
         ],
         correctAnswer: 1,
         explanation: 'The meta-analysis found IAT scores only weakly predicted discriminatory behavior and can vary significantly across sessions.',
@@ -577,10 +580,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The critics mentioned in the passage would most likely argue that the rational addiction model is flawed because',
         options: [
-          'cigarette taxes do not reduce smoking',
-          'addiction involves neurological compulsion that contradicts the assumption of rational choice',
-          'economists should not study health behaviors',
-          'all smokers eventually quit voluntarily'
+          'higher cigarette taxes do not actually reduce smoking rates',
+          'addiction is driven by compulsion, not free choice',
+          'economists are not qualified to study health behaviors',
+          'most smokers eventually quit voluntarily when prices rise'
         ],
         correctAnswer: 1,
         explanation: 'Critics argue addiction involves compulsive behavior driven by altered brain chemistry, undermining the assumption of rational choice.',
@@ -597,9 +600,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage presents the Flynn Effect as primarily caused by',
         options: [
-          'genetic evolution over the twentieth century',
-          'environmental improvements such as nutrition, education, and technology',
-          'changes in IQ test scoring methods',
+          'genetic evolution during the twentieth century',
+          'environmental factors like better nutrition and schooling',
+          'changes in the methods used to score IQ tests',
           'increased immigration to industrialized nations'
         ],
         correctAnswer: 1,
@@ -612,15 +615,15 @@ export const SAT_PASSAGES: ReadingPassage[] = [
     id: 'soc-14',
     title: 'Prospect Theory',
     genre: 'social-science',
-    text: `Kahneman and Tversky’s prospect theory, published in 1979, challenged the classical economic assumption that people evaluate outcomes rationally. Their research demonstrated that people feel the pain of a loss roughly twice as strongly as the pleasure of an equivalent gain — a phenomenon called loss aversion. A person who loses \\$100, for example, experiences more distress than the satisfaction they would derive from finding \\$100. Prospect theory also showed that people tend to be risk-averse when facing gains but risk-seeking when facing losses.`,
+    text: `Kahneman and Tversky’s prospect theory, published in 1979, challenged the classical economic assumption that people evaluate outcomes rationally. Their research demonstrated that people feel the pain of a loss roughly twice as strongly as the pleasure of an equivalent gain — a phenomenon called loss aversion. A person who loses 100 dollars, for example, experiences more distress than the satisfaction they would derive from finding the same amount. Prospect theory also showed that people tend to be risk-averse when facing gains but risk-seeking when facing losses.`,
     questions: [
       {
         question: 'According to prospect theory, a person holding a stock that has lost 20% of its value would most likely',
         options: [
-          'sell immediately to prevent further losses',
-          'hold or take greater risks to try to recover the loss',
-          'feel neutral because the loss is unrealized',
-          'buy more stock because it is now cheaper'
+          'sell immediately to prevent any further losses',
+          'hold on or take risks to win back the loss',
+          'feel neutral because the loss has not yet been realized',
+          'switch to safer investments such as government bonds'
         ],
         correctAnswer: 1,
         explanation: 'Prospect theory states people are risk-seeking when facing losses, so they tend to hold on or gamble to try to get back to their reference point.',
@@ -637,10 +640,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage suggests the main challenge in evaluating broken windows policing is',
         options: [
-          'crime rates did not actually decline in the 1990s',
-          'isolating the effect of policing from other factors that also reduced crime',
-          'researchers disagree about what constitutes a broken window',
-          'Wilson and Kelling later retracted their theory'
+          'crime rates did not actually decline in New York in the 1990s',
+          'separating policing’s effect from other causes of the drop',
+          'researchers disagree about what counts as a broken window',
+          'Wilson and Kelling later retracted their original theory'
         ],
         correctAnswer: 1,
         explanation: 'The decline in crime coincided with economic growth, demographic shifts, and the decline of the crack epidemic, making it difficult to isolate the policing effect.',
@@ -657,10 +660,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage characterizes forests as more cooperative than competitive primarily based on evidence that',
         options: [
-          'trees compete for sunlight in the canopy',
-          'dying trees increase resource transfer to nearby seedlings through fungal networks',
-          'all trees share resources equally',
-          'mycorrhizal fungi are parasitic on tree roots'
+          'trees compete fiercely for sunlight in the canopy',
+          'dying trees send more resources to nearby seedlings',
+          'every tree in a forest shares resources equally',
+          'mycorrhizal fungi are parasites that feed on tree roots'
         ],
         correctAnswer: 1,
         explanation: 'Mother trees preferentially send carbon and defense signals to their seedlings and increase transfers when dying — evidence of cooperative behavior.',
@@ -677,10 +680,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The primary ethical concern about germline editing mentioned in the passage is that',
         options: [
-          'the technology is too expensive for widespread use',
-          'modifications to germline cells are inherited by future generations',
-          'CRISPR only works on bacterial DNA',
-          'guide RNA molecules are difficult to synthesize'
+          'the technology is too expensive for widespread medical use',
+          'germline changes would be passed to future generations',
+          'CRISPR has been shown to work only on bacterial DNA',
+          'guide RNA molecules are difficult and costly to synthesize'
         ],
         correctAnswer: 1,
         explanation: 'The passage identifies the concern about editing germline cells, which would pass modifications to future generations.',
@@ -697,10 +700,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage indicates that ocean acidification particularly threatens organisms that',
         options: [
-          'live in deep water',
-          'depend on calcium carbonate for structural formation',
-          'are warm-blooded marine mammals',
-          'migrate long distances annually'
+          'live in deep water far below the surface',
+          'build shells or skeletons from calcium carbonate',
+          'are warm-blooded marine mammals like whales',
+          'migrate long distances across oceans each year'
         ],
         correctAnswer: 1,
         explanation: 'Acidification threatens organisms that build shells or skeletons from calcium carbonate because higher acidity makes it dissolve more readily.',
@@ -717,10 +720,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The mouse transplant experiment most directly supports the claim that the microbiome',
         options: [
-          'is the sole cause of obesity',
-          'has a causal, not merely correlational, effect on metabolism',
+          'is the sole cause of obesity in mammals',
+          'can directly cause changes in weight',
           'is larger than the human genome',
-          'cannot be modified after birth'
+          'cannot be changed once an animal is born'
         ],
         correctAnswer: 1,
         explanation: 'Transplanting gut bacteria from obese to lean mice caused weight gain on identical diets, demonstrating a causal mechanism.',
@@ -737,9 +740,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage states that MOND is considered an incomplete alternative to dark matter because it',
         options: [
-          'has never been tested experimentally',
-          'contradicts Newtonian physics entirely',
-          'fails to account for observations at the galaxy cluster scale',
+          'has never been tested against real astronomical data',
+          'contradicts the basic principles of Newtonian physics',
+          'cannot explain what is observed in galaxy clusters',
           'requires the existence of even more unseen matter'
         ],
         correctAnswer: 2,
@@ -757,10 +760,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The Dutch Hunger Winter research is significant because it provides evidence that',
         options: [
-          'DNA mutations caused by starvation are always harmful',
-          'environmental conditions can produce heritable changes in gene expression across generations',
-          'famine only affects children, not adults',
-          'epigenetic changes are always reversible'
+          'starvation causes permanent mutations in the DNA sequence',
+          'environment can alter gene expression in heritable ways',
+          'famine harms the health of children but not of adults',
+          'epigenetic changes disappear within a single lifetime'
         ],
         correctAnswer: 1,
         explanation: 'Effects appearing in the next generation demonstrate that environmental experiences can create heritable epigenetic changes.',
@@ -777,10 +780,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The comparison between taxi and bus drivers most directly demonstrates that',
         options: [
-          'taxi drivers are born with larger hippocampi',
-          'sustained cognitive demands cause measurable physical changes in brain structure',
-          'bus drivers have inferior memory abilities',
-          'the hippocampus is the largest region of the brain'
+          'taxi drivers are born with larger hippocampi than others',
+          'sustained mental demands can physically reshape the brain',
+          'bus drivers have weaker memory abilities than taxi drivers',
+          'the hippocampus is the largest region of the adult brain'
         ],
         correctAnswer: 1,
         explanation: 'Hippocampal enlargement correlated with years of experience, supporting environmental cognitive demands reshaping brain structure.',
@@ -797,10 +800,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Horizontal gene transfer contributes to antibiotic resistance by',
         options: [
-          'killing susceptible bacteria more quickly',
-          'allowing bacteria to share resistance genes across species',
-          'preventing mutations from occurring',
-          'making antibiotics more effective over time'
+          'killing susceptible bacteria more quickly than antibiotics do',
+          'letting bacteria pass resistance genes between species',
+          'preventing new mutations from occurring in bacterial DNA',
+          'making antibiotics more effective against bacteria over time'
         ],
         correctAnswer: 1,
         explanation: 'Horizontal gene transfer enables bacteria to share genetic material through plasmids, spreading resistance genes between species.',
@@ -817,10 +820,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The scientific community’s initial rejection of Wegener’s theory was primarily due to',
         options: [
-          'lack of fossil evidence',
+          'a lack of fossil evidence from the separated continents',
           'the absence of a plausible mechanism for continental movement',
-          'Wegener’s lack of scientific credentials',
-          'coastlines that did not match'
+          'Wegener’s lack of formal scientific credentials in geology',
+          'coastlines that did not match when continents were compared'
         ],
         correctAnswer: 1,
         explanation: 'Despite compelling evidence, Wegener could not explain the mechanism for continental movement, making the theory unacceptable until seafloor spreading provided the answer.',
@@ -839,7 +842,7 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         options: [
           'damaging photosensitive cells in the retina',
           'signaling the SCN to suppress melatonin production',
-          'raising body temperature before sleep',
+          'raising body temperature in the hours before bed',
           'increasing cortisol levels throughout the day'
         ],
         correctAnswer: 1,
@@ -857,10 +860,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage addresses the concern about DNA alteration by noting that mRNA',
         options: [
-          'is identical to DNA in structure and function',
-          'integrates permanently into chromosomes',
-          'degrades within days and never enters the cell nucleus',
-          'requires a viral vector to reach cells'
+          'is identical to DNA in both structure and function',
+          'integrates permanently into the cell’s chromosomes',
+          'breaks down quickly and stays outside the nucleus',
+          'requires a weakened viral vector to reach human cells'
         ],
         correctAnswer: 2,
         explanation: 'The passage states mRNA degrades within days and never enters the cell nucleus, so it cannot alter DNA.',
@@ -877,10 +880,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'According to the passage, a key limitation of natural photosynthesis is that',
         options: [
-          'plants cannot absorb any sunlight',
-          'the enzyme RuBisCO operates too slowly for efficient carbon fixation',
-          'glucose is not a useful form of chemical energy',
-          'photosynthesis only occurs in artificial systems'
+          'plants cannot absorb red or blue wavelengths of sunlight',
+          'the enzyme RuBisCO fixes carbon at a relatively slow rate',
+          'glucose is not a useful form of stored chemical energy',
+          'photosynthesis occurs only in engineered artificial systems'
         ],
         correctAnswer: 1,
         explanation: 'The passage identifies RuBisCO’s slow catalytic rate as one of several factors reducing photosynthesis efficiency.',
@@ -898,9 +901,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         question: 'The passage resolves the apparent conflict between entanglement and relativity by explaining that',
         options: [
           'entanglement has never been experimentally confirmed',
-          'Einstein was wrong about the speed of light',
-          'entanglement does not transmit usable information faster than light',
-          'measurement outcomes are predetermined, not random'
+          'Einstein was mistaken about the speed of light as a limit',
+          'entanglement cannot send usable information faster than light',
+          'measurement outcomes are predetermined rather than random'
         ],
         correctAnswer: 2,
         explanation: 'Entanglement does not violate relativity because measurement outcomes appear random and meaningful data extraction requires classical communication.',
@@ -917,9 +920,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Coral bleaching is most accurately described as',
         options: [
-          'the natural aging process of coral reefs',
-          'a stress response in which corals expel symbiotic algae due to elevated temperatures',
-          'a disease caused by bacterial infection',
+          'the natural aging process that all coral reefs undergo',
+          'a heat-stress response in which corals expel their algae',
+          'a disease caused by bacteria infecting coral tissue',
           'the effect of ocean acidification on coral pigmentation'
         ],
         correctAnswer: 1,
@@ -937,10 +940,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage clarifies that Mitochondrial Eve was NOT the only woman alive at the time because',
         options: [
-          'mitochondrial DNA can be inherited from fathers',
-          'other women contributed nuclear DNA, but their mtDNA lineages ended when descendants had only sons',
-          'Mitochondrial Eve lived before modern humans evolved',
-          'researchers found multiple distinct mtDNA origins'
+          'mitochondrial DNA can sometimes be inherited from fathers',
+          'other women’s mtDNA lines ended when descendants had only sons',
+          'Mitochondrial Eve lived before modern humans had evolved',
+          'researchers found several distinct origins for human mtDNA'
         ],
         correctAnswer: 1,
         explanation: 'Other women contributed nuclear DNA but their mtDNA lineages died out when a descendant had only sons, since mtDNA passes only through mothers.',
@@ -957,10 +960,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'According to Douglass, the enslaver’s opposition to his education was significant because it',
         options: [
-          'proved that enslavers were universally uneducated',
+          'proved that enslavers themselves were largely uneducated people',
           'revealed that literacy threatened the institution of slavery itself',
           'showed that reading was an impractical skill for enslaved people',
-          'reflected the enslaver’s concern for Douglass’s well-being'
+          'reflected the enslaver’s concern for Douglass’s safety and well-being'
         ],
         correctAnswer: 1,
         explanation: 'The prohibition confirmed literacy’s power: if reading made one unfit for slavery, then it was a tool of liberation, threatening the institution.',
@@ -977,10 +980,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Madison’s central argument in Federalist No. 10 is that a large republic controls factions by',
         options: [
-          'eliminating all political differences',
-          'making it harder for any single majority to form due to the diversity of interests',
-          'concentrating power in a single leader',
-          'preventing citizens from forming groups'
+          'eliminating the political differences that give rise to factions',
+          'making a single majority less likely amid diverse interests',
+          'concentrating power in a single strong national leader',
+          'preventing citizens from forming political groups'
         ],
         correctAnswer: 1,
         explanation: 'Madison argues that a large republic’s diversity of interests makes it less probable that a majority will have a common motive to invade others’ rights.',
@@ -998,12 +1001,12 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         question: 'The chemical industry’s response to Silent Spring primarily involved',
         options: [
           'acknowledging the risks and voluntarily reducing DDT production',
-          'attacking Carson’s credibility and motivations rather than addressing her evidence',
-          'funding independent research to test her claims',
-          'supporting the creation of the EPA'
+          'trying to discredit both Carson and her book',
+          'funding independent research to test Carson’s claims',
+          'supporting the creation of the Environmental Protection Agency'
         ],
         correctAnswer: 1,
-        explanation: 'The industry mounted an aggressive campaign to discredit both the book and its author, relying on ad hominem attacks rather than scientific refutation.',
+        explanation: 'The passage says the industry mounted an aggressive campaign to discredit both the book and its author.',
         skill: 'evidence'
       }
     ]
@@ -1017,10 +1020,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'By echoing the Declaration of Independence, the authors of the Declaration of Sentiments primarily sought to',
         options: [
-          'replace the Declaration of Independence with a new document',
-          'expose the contradiction between America’s founding ideals and the exclusion of women',
-          'argue that the founding fathers intended to include women',
-          'demonstrate superior writing ability'
+          'replace the Declaration of Independence with a new founding document',
+          'expose the gap between national ideals and women’s exclusion',
+          'argue that the founders originally meant to include women',
+          'demonstrate their superior skill as political writers'
         ],
         correctAnswer: 1,
         explanation: 'Using the same language forced readers to confront the gap between American ideals and American practice.',
@@ -1037,10 +1040,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Lincoln argues in this passage that the relationship between labor and capital is one in which',
         options: [
-          'capital and labor are equally valuable',
-          'labor precedes and is superior to capital, which depends on labor for its existence',
-          'capital should be abolished',
-          'laborers should never become capitalists'
+          'capital and labor are equally valuable to the economy',
+          'labor comes first, and capital exists only because of it',
+          'capital should be abolished so that laborers can prosper',
+          'laborers should be prevented from ever becoming capitalists'
         ],
         correctAnswer: 1,
         explanation: 'Lincoln states labor is prior to and independent of capital and deserves much the higher consideration.',
@@ -1057,10 +1060,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Truth’s rhetorical strategy primarily works by',
         options: [
-          'citing scientific evidence about gender differences',
-          'contrasting her lived experience with the idealized assumptions used to deny women rights',
-          'appealing to religious authority about gender roles',
-          'arguing that all women are physically equal to men'
+          'citing scientific evidence about differences between the sexes',
+          'contrasting her own life with idealized notions of women',
+          'appealing to religious authority about proper gender roles',
+          'arguing that women are physically equal to men in every way'
         ],
         correctAnswer: 1,
         explanation: 'Truth uses her personal experience of physical labor and hardship to expose how arguments about women’s nature served to protect privilege.',
@@ -1077,9 +1080,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage suggests that Roosevelt characterized the Depression as a crisis of fear primarily in order to',
         options: [
-          'minimize the severity of the economic problems',
-          'justify bold government intervention by framing inaction as the true danger',
-          'blame the public for causing the Depression',
+          'minimize the severity of the country’s economic problems',
+          'justify bold government action by framing inaction as the danger',
+          'blame the American public for having caused the Depression',
           'discourage legislation that would increase government spending'
         ],
         correctAnswer: 1,
@@ -1097,10 +1100,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'King argues that the white moderate is a greater obstacle than overt racial hostility because the moderate',
         options: [
-          'openly supports segregation',
-          'prefers maintaining order over pursuing justice, thereby delaying necessary change',
-          'violently opposes civil rights demonstrations',
-          'refuses to acknowledge that racial inequality exists'
+          'openly supports keeping segregation laws in place',
+          'values order over justice, which postpones needed change',
+          'violently opposes civil rights demonstrations in the South',
+          'refuses to acknowledge that racial inequality exists at all'
         ],
         correctAnswer: 1,
         explanation: 'The white moderate’s preference for order to justice and for gradual change indefinitely deferred justice.',
@@ -1117,10 +1120,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Hamilton argued that government support for manufacturing was necessary because',
         options: [
-          'agriculture was inherently unprofitable',
-          'European nations subsidized their own industries, creating an uneven playing field',
-          'Jefferson had already endorsed the same position',
-          'manufacturing was the only source of employment for men'
+          'agriculture was an inherently unprofitable way of life',
+          'European nations subsidized their own industries',
+          'Jefferson had already endorsed the same economic position',
+          'manufacturing would be the only source of jobs for most men'
         ],
         correctAnswer: 1,
         explanation: 'Since European nations subsidized their own industries, American manufacturers needed government support to compete on an uneven playing field.',
@@ -1137,10 +1140,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Thoreau rejects majority rule as a path to justice because he believes the majority prevails based on',
         options: [
-          'superior moral reasoning',
+          'superior moral reasoning about what is just and right',
           'greater physical strength rather than moral correctness',
-          'democratic legitimacy derived from elections',
-          'guidance from constitutional law'
+          'democratic legitimacy that comes from elections',
+          'guidance drawn from constitutional law and precedent'
         ],
         correctAnswer: 1,
         explanation: 'Thoreau argues the majority rules not because they are most likely to be in the right but because they are physically the strongest.',
@@ -1157,10 +1160,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'John Adams’s response to Abigail’s request most directly reveals',
         options: [
-          'his genuine inability to understand her argument',
-          'that even revolutionary leaders who championed liberty could dismiss its application to women',
-          'his plan to include women in the new Constitution',
-          'that Abigail lacked political knowledge'
+          'his genuine inability to follow the logic of her argument',
+          'that leaders who championed liberty could deny it to women',
+          'his private plan to include women in the new Constitution',
+          'that Abigail lacked knowledge of political affairs'
         ],
         correctAnswer: 1,
         explanation: 'Adams dismissed women’s inclusion despite championing liberty from British rule, revealing that revolutionary principles were selectively applied.',
@@ -1177,10 +1180,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'Du Bois’s primary objection to Washington’s approach was that',
         options: [
-          'economic advancement was unimportant',
-          'surrendering political rights left economic gains vulnerable to being revoked',
-          'Washington’s educational model was too expensive',
-          'protest was the only effective strategy for any cause'
+          'economic advancement was unimportant for African Americans',
+          'giving up political rights left economic gains fragile',
+          'Washington’s industrial education model was too costly',
+          'public protest was the only effective strategy for change'
         ],
         correctAnswer: 1,
         explanation: 'Du Bois argued that without political rights, economic advancement would remain fragile and dependent on white goodwill.',
@@ -1197,10 +1200,10 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The passage notes an irony in the Monroe Doctrine in that',
         options: [
-          'Monroe lacked support from Congress to issue the declaration',
-          'a policy originally opposing foreign intervention later justified US intervention in the same region',
-          'European powers eagerly complied with the doctrine',
-          'Britain opposed the doctrine from the beginning'
+          'Monroe lacked the support of Congress when he issued the declaration',
+          'a policy against foreign intervention later justified US intervention',
+          'European powers eagerly complied with the doctrine from the start',
+          'Britain opposed the doctrine and worked to undermine it'
         ],
         correctAnswer: 1,
         explanation: 'The doctrine shifted from a defensive position into a justification for US intervention, the opposite of its original anti-intervention purpose.',
@@ -1217,9 +1220,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
       {
         question: 'The decision not to collect Anthony’s fine was strategically significant because it',
         options: [
-          'showed the court sympathized with her cause',
-          'prevented her from appealing to the Supreme Court, where she might have established legal precedent for women’s suffrage',
-          'confirmed that the 14th Amendment already protected women’s right to vote',
+          'showed the court privately sympathized with her cause',
+          'kept her from appealing to the Supreme Court to set precedent',
+          'confirmed that the 14th Amendment already protected women’s voting',
           'allowed Anthony to continue voting in subsequent elections'
         ],
         correctAnswer: 1,
@@ -1238,9 +1241,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         question: 'Eisenhower’s warning was considered especially credible because',
         options: [
           'he was a popular president with high approval ratings',
-          'as a career military leader, he had no reason to unfairly criticize the military establishment',
-          'the defense budget was at its historical low point',
-          'other presidents had made identical warnings'
+          'a career soldier could not be dismissed as anti-military',
+          'the defense budget was at its lowest point in history',
+          'other presidents had made nearly identical warnings'
         ],
         correctAnswer: 1,
         explanation: 'The warning coming from a career military leader gave it credibility, as he could not be accused of anti-military bias.',
@@ -1249,6 +1252,9 @@ export const SAT_PASSAGES: ReadingPassage[] = [
     ]
   }
 ]
+
+/** Every passage: the original set plus the Craft & Structure and Information & Ideas batches. */
+export const SAT_PASSAGES: ReadingPassage[] = [...CORE_PASSAGES, ...SAT_PASSAGES_2, ...SAT_PASSAGES_3]
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */

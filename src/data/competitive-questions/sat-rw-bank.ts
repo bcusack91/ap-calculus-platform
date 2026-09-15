@@ -26,10 +26,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 1,
     "question": "The following is a short passage.\n\n\"The Sahara Desert was not always a sea of sand. Roughly 8,000 years ago, monsoon rains fed vast lakes and grasslands across North Africa, supporting hippos, elephants, and human settlements. A gradual shift in the region's climate eventually dried these landscapes into the desert seen today.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
-      "Hippos once outnumbered elephants in North Africa.",
+      "Hippos and elephants once outnumbered the human settlements that spread across North Africa.",
       "The Sahara was once a green, water-rich region before climate change turned it to desert.",
-      "Human settlements caused the Sahara to dry out.",
-      "Monsoon rains still reach the Sahara each year."
+      "Human settlements drained the Sahara's lakes and grasslands, turning the region into desert.",
+      "Monsoon rains still reach the Sahara each year, feeding lakes much like those of 8,000 years ago."
     ],
     "correctAnswer": 1,
     "explanation": "The passage's central point is that the once-green, wet Sahara later dried into desert due to a climate shift.",
@@ -56,9 +56,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 3,
     "question": "The following is a short passage.\n\n\"Ada Lovelace, working in the 1840s, wrote what many consider the first computer algorithm—a set of instructions intended for Charles Babbage's proposed Analytical Engine. Though the machine was never built in her lifetime, her notes anticipated that such devices could do far more than calculate numbers.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
-      "Lovelace built the first working computer.",
-      "Babbage disagreed with Lovelace's ideas.",
-      "The Analytical Engine was widely used in the 1840s.",
+      "Lovelace built the first working computer, which Babbage then used to run her algorithm.",
+      "Babbage rejected Lovelace's notes because he believed machines could only calculate numbers.",
+      "The Analytical Engine was completed in the 1840s and widely used to carry out Lovelace's instructions.",
       "Lovelace wrote an early algorithm and foresaw the broader potential of computing machines."
     ],
     "correctAnswer": 3,
@@ -87,9 +87,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"The Great Wall of China is often described as a single continuous structure, but it is actually a network of walls, trenches, and natural barriers built by different dynasties over many centuries. Sections vary widely in construction, from packed earth to cut stone.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
       "The Great Wall is a varied network built over centuries, not one continuous structure.",
-      "The Great Wall is made entirely of cut stone.",
-      "One dynasty completed the Great Wall in a single century.",
-      "The Great Wall was built to connect cities for trade."
+      "The Great Wall is made entirely of cut stone laid by a single dynasty.",
+      "One dynasty completed the Great Wall as a single continuous structure within one century.",
+      "The Great Wall was built mainly as a road to connect distant cities for trade."
     ],
     "correctAnswer": 0,
     "explanation": "The passage corrects the common view by presenting the wall as a varied, multi-dynasty network.",
@@ -116,10 +116,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 7,
     "question": "The following is a short passage.\n\n\"Coral reefs cover less than one percent of the ocean floor, yet they provide habitat for roughly a quarter of all marine species. This concentration of life makes reefs one of the planet's most biologically diverse ecosystems.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
-      "Coral reefs are found on most of the ocean floor.",
-      "Marine species avoid coral reefs.",
+      "Coral reefs cover most of the ocean floor and host most marine species.",
+      "Most marine species avoid coral reefs despite the habitat the reefs offer.",
       "Despite their small area, coral reefs host a large share of marine life.",
-      "Coral reefs contain no plant life."
+      "Coral reefs are diverse mainly because they contain no plant life."
     ],
     "correctAnswer": 2,
     "explanation": "The passage contrasts the reefs' tiny area with the large fraction of marine species they support.",
@@ -131,9 +131,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 8,
     "question": "The following is a short passage.\n\n\"The printing press introduced by Johannes Gutenberg around 1440 allowed books to be produced far more quickly than by hand-copying. As printed texts became cheaper and more plentiful, literacy spread beyond the small circle of scholars who had previously controlled written knowledge.\"\n\nAccording to the passage, one effect of the printing press was that",
     "options": [
-      "scholars stopped reading books.",
-      "hand-copying became more common.",
-      "books became rarer and more expensive.",
+      "scholars largely stopped reading hand-copied books.",
+      "hand-copying became more common than printing.",
+      "books became rarer and more expensive to produce.",
       "literacy spread beyond a small group of scholars."
     ],
     "correctAnswer": 3,
@@ -146,10 +146,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 9,
     "question": "The following is a short passage.\n\n\"Tardigrades, sometimes called 'water bears,' are microscopic animals famous for their toughness. They can survive extreme cold, intense radiation, and even the vacuum of space by entering a dried-out, dormant state called cryptobiosis.\"\n\nAccording to the passage, tardigrades survive extreme conditions by",
     "options": [
-      "growing much larger.",
+      "growing a much larger, tougher outer shell.",
       "entering a dormant, dried-out state.",
-      "living only in warm water.",
-      "moving quickly to safety."
+      "living only in warm, sheltered water.",
+      "moving quickly away from danger to safety."
     ],
     "correctAnswer": 1,
     "explanation": "The passage explicitly attributes their survival to cryptobiosis, a dried-out dormant state.",
@@ -162,8 +162,8 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"Rosalind Franklin's X-ray images of DNA were crucial to revealing its double-helix structure. Although her contribution was long overlooked, historians now recognize that her precise photographs provided key evidence for one of biology's most important discoveries.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
       "Franklin's overlooked X-ray images were key evidence for the discovery of DNA's structure.",
-      "Franklin discovered a new element using X-rays.",
-      "Historians have never studied Franklin's work.",
+      "Franklin used X-rays to discover a new element that later explained DNA's structure.",
+      "Historians have long credited Franklin, though her photographs played little role in the discovery.",
       "The double-helix structure was known before Franklin's photographs."
     ],
     "correctAnswer": 0,
@@ -176,10 +176,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 11,
     "question": "The following is a short passage.\n\n\"Some plants, such as the resurrection fern, can lose up to three-quarters of their water content and appear completely dead. Yet within hours of rainfall, they rehydrate and resume normal growth. Researchers studying drought-resistant crops are increasingly interested in the chemistry behind this recovery.\"\n\nWhich quotation from the passage best supports the claim that the resurrection fern's ability has practical scientific value?",
     "options": [
-      "\"can lose up to three-quarters of their water content\"",
+      "\"Some plants, such as the resurrection fern, can lose up to three-quarters of their water content and appear completely dead.\"",
       "\"appear completely dead\"",
       "\"Researchers studying drought-resistant crops are increasingly interested in the chemistry behind this recovery.\"",
-      "\"within hours of rainfall, they rehydrate\""
+      "\"Yet within hours of rainfall, they rehydrate and resume normal growth.\""
     ],
     "correctAnswer": 2,
     "explanation": "The claim is about practical scientific value; the quotation about drought-resistant crop researchers directly supports that.",
@@ -191,9 +191,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 12,
     "question": "The following is a short passage.\n\n\"City planner Maria Ortiz argued that adding bike lanes would not reduce car traffic unless the lanes formed a connected network. Isolated stretches, she warned, leave riders stranded and discourage cycling.\"\n\nWhich choice best describes Ortiz's view of isolated bike lanes?",
     "options": [
-      "They are the fastest way to reduce car traffic.",
+      "They are the fastest way to reduce car traffic, even without a connected network.",
       "They are ineffective because they do not connect into a usable network.",
-      "They are preferred by most cyclists.",
+      "They are preferred by most cyclists because riders can use them anywhere.",
       "They should replace all car lanes."
     ],
     "correctAnswer": 1,
@@ -206,8 +206,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 13,
     "question": "The following is a short passage.\n\n\"A researcher measured reaction times of participants after different amounts of sleep. Those who slept eight hours averaged a reaction time of 220 milliseconds, while those who slept only four hours averaged 310 milliseconds. Longer reaction times indicate slower responses.\"\n\nWhich choice best uses the data to complete the claim that sleep loss slows responses?\n\nParticipants who slept only four hours",
     "options": [
-      "responded faster than those who slept eight hours.",
-      "had reaction times of 220 milliseconds.",
+      "responded faster, averaging 310 milliseconds compared with 220.",
+      "had reaction times averaging 220 milliseconds, the same as the eight-hour group.",
       "had slower reaction times, averaging 310 milliseconds.",
       "showed no change in reaction time."
     ],
@@ -221,10 +221,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 14,
     "question": "The following is a short passage.\n\n\"The novelist described the harbor town not through grand descriptions but through small, repeated details: the smell of salt, gulls circling a fishmonger's stall, the creak of moored boats. These recurring images gradually build the reader's sense of place.\"\n\nWhich choice best supports the idea that the author creates atmosphere through accumulation rather than direct description?",
     "options": [
-      "\"the novelist described the harbor town\"",
-      "\"grand descriptions\"",
-      "\"the creak of moored boats\"",
-      "\"These recurring images gradually build the reader's sense of place.\""
+      "\"The novelist described the harbor town\"",
+      "\"not through grand descriptions\"",
+      "\"gulls circling a fishmonger's stall, the creak of moored boats\"",
+      "\"recurring images gradually build the reader's sense of place\""
     ],
     "correctAnswer": 3,
     "explanation": "The claim is about building atmosphere through accumulation; the sentence about recurring images gradually building a sense of place directly supports it.",
@@ -237,9 +237,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"Archaeologists uncovered a 3,000-year-old kitchen with grinding stones, storage jars still holding grain residue, and a clay oven. The variety and quantity of tools suggest that food preparation here was not for a single household but for a larger group.\"\n\nWhich choice, if true, would most strengthen the archaeologists' conclusion?",
     "options": [
       "The site also contained many large serving vessels sized for dozens of people.",
-      "The grinding stones were made of common local rock.",
-      "The oven was similar in shape to modern ovens.",
-      "The grain residue came from a single type of wheat."
+      "The grinding stones were made of common local rock found near the kitchen.",
+      "The clay oven was similar in shape and size to ovens used in modern homes.",
+      "The grain residue in the storage jars came from a single type of locally grown wheat."
     ],
     "correctAnswer": 0,
     "explanation": "Serving vessels sized for dozens directly supports the conclusion that food was prepared for a larger group.",
@@ -251,10 +251,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 16,
     "question": "The following is a short passage.\n\n\"In a survey of commuters, 68% who used a new express train said they arrived at work less stressed, compared with 41% of those who continued driving. The transit agency cited these figures when proposing to expand the express line.\"\n\nWhich choice best uses the data to support the agency's proposal?",
     "options": [
-      "Driving commuters reported less stress than express-train users.",
+      "Driving commuters reported less stress than express-train users, 68 percent to 41 percent.",
       "A larger share of express-train users reported arriving less stressed than driving commuters did.",
-      "Equal shares of both groups reported less stress.",
-      "Most express-train users reported more stress after switching."
+      "Equal shares of express-train users and driving commuters reported arriving less stressed.",
+      "Most express-train users reported feeling more stressed at work after they switched from driving to the train."
     ],
     "correctAnswer": 1,
     "explanation": "68% versus 41% shows a larger share of express-train users felt less stressed, supporting expansion.",
@@ -266,8 +266,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 17,
     "question": "The following is a short passage.\n\n\"During the 1920s, radio transformed how Americans experienced news and music. For the first time, families in distant regions could hear the same broadcast on the same evening, sharing a common cultural moment despite the miles between them.\"\n\nWhich choice best supports the claim that radio fostered a sense of shared national experience?",
     "options": [
-      "\"radio transformed how Americans experienced news and music\"",
-      "\"During the 1920s\"",
+      "\"During the 1920s, radio transformed how Americans experienced news and music.\"",
+      "\"despite the miles between them\"",
       "\"families in distant regions could hear the same broadcast on the same evening\"",
       "\"news and music\""
     ],
@@ -281,9 +281,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 18,
     "question": "The following is a short passage.\n\n\"A biologist noted that a certain frog species calls loudly only after rainfall. When the biologist played recordings of rain, the frogs began calling even though no actual rain fell. This suggests the frogs respond to the sound of rain itself as a cue.\"\n\nWhich choice best supports the biologist's conclusion?",
     "options": [
-      "The frogs are a certain species.",
+      "The frogs belong to a certain species that calls loudly only after rainfall.",
       "The frogs began calling in response to rain recordings when no rain fell.",
-      "The frogs call loudly after rainfall.",
+      "The frogs call loudly only after rainfall, as the biologist first noted.",
       "The biologist studied frogs."
     ],
     "correctAnswer": 1,
@@ -296,10 +296,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 19,
     "question": "The following is a short passage.\n\n\"Two lakes were tested for a pollutant. Lake A, near a factory, showed a concentration of 45 parts per billion, while Lake B, far from any industry, showed 6 parts per billion. Safe levels are considered below 10 parts per billion.\"\n\nWhich choice best uses the data to support the claim that proximity to industry is associated with higher pollution?",
     "options": [
-      "Lake B exceeded safe levels while Lake A did not.",
-      "Both lakes had identical pollutant levels.",
+      "Lake B, far from any industry, exceeded safe levels while Lake A, near the factory, did not.",
+      "Both lakes, despite their different locations, had nearly identical pollutant levels.",
       "Lake A, near the factory, had a far higher concentration than Lake B, far from industry.",
-      "Neither lake exceeded the safe level of 10 parts per billion."
+      "Neither lake exceeded the safe level of 10 parts per billion for the pollutant."
     ],
     "correctAnswer": 2,
     "explanation": "Lake A near industry (45 ppb) far exceeded distant Lake B (6 ppb), supporting the association with industry.",
@@ -311,8 +311,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 20,
     "question": "The following is a short passage.\n\n\"The poet revised the same eight-line poem more than forty times over two decades, her notebooks show. Each version trims a word or shifts a line break, yet the poem's core image remains unchanged.\"\n\nWhich choice best supports the idea that the poet valued precision over reinvention?",
     "options": [
-      "\"more than forty times over two decades\"",
-      "\"Each version trims a word or shifts a line break, yet the poem's core image remains unchanged.\"",
+      "\"The poet revised the same eight-line poem more than forty times over two decades\"",
+      "\"trims a word or shifts a line break, yet the poem's core image remains unchanged\"",
       "\"her notebooks show\"",
       "\"the same eight-line poem\""
     ],
@@ -326,8 +326,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 21,
     "question": "The following is a short passage.\n\n\"Researchers observed that a species of ant farms fungus for food, but the fungus can only grow if kept free of a particular mold. The ants secrete a substance that suppresses the mold. Colonies whose members were prevented from producing this secretion saw their fungus gardens overtaken and collapse.\"\n\nWhich choice best supports the inference that the ants' secretion is essential to their food supply?",
     "options": [
-      "The ants farm fungus for food.",
-      "The fungus grows in gardens.",
+      "The ants farm a fungus that can only grow if kept free of a particular mold.",
+      "Researchers observed the ant species farming fungus for food.",
       "The mold is a particular type.",
       "Colonies unable to produce the secretion lost their fungus gardens to mold."
     ],
@@ -342,8 +342,8 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"A historian noted that a medieval town's tax records list far more bakers than the town's population would seem to require. She also found that the same records show large shipments of bread leaving the town gates each week.\"\n\nWhich inference is best supported by connecting these two observations?",
     "options": [
       "The town produced bread not only for itself but for export to other places.",
-      "The town's population was undercounted in the records.",
-      "Bakers in the town were unusually wealthy.",
+      "The town's population was undercounted in the records, so it needed far more bakers.",
+      "Bakers in the town grew unusually wealthy from selling bread within the town gates.",
       "The town imported most of its bread from elsewhere."
     ],
     "correctAnswer": 0,
@@ -356,10 +356,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 23,
     "question": "The following is a short passage.\n\n\"In a memory study, participants recalled 30% of a word list when tested in the same room where they learned it, but only 18% when tested in a different room. A separate group that learned and were tested in the same room while listening to identical background music recalled 34%.\"\n\nWhich choice best completes the inference that context supports recall?\n\nBecause recall was higher when the testing setting matched the learning setting, the data suggest that",
     "options": [
-      "background music always harms memory.",
-      "recall is unaffected by where testing occurs.",
+      "background music always harms memory during testing.",
+      "recall is largely unaffected by the room where testing occurs.",
       "matching environmental context tends to improve recall.",
-      "changing rooms improves memory the most."
+      "changing rooms between learning and testing improves memory."
     ],
     "correctAnswer": 2,
     "explanation": "Higher recall in matched settings (30% and 34%) versus a changed room (18%) supports that matching context improves recall.",
@@ -371,10 +371,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 24,
     "question": "The following is a short passage.\n\n\"An economist compared two neighborhoods. In one, a new grocery store opened and, over the next year, reported theft of fresh produce dropped 22% at nearby corner shops. In the other, where no store opened, such theft rose 5%. The economist argued that improved access to affordable food can reduce certain petty crimes.\"\n\nWhich choice best uses the data to support the economist's argument?",
     "options": [
-      "Produce theft rose in the neighborhood that gained a grocery store.",
+      "Produce theft rose in the neighborhood that gained a grocery store and fell in the other.",
       "Produce theft changed by the same amount in both neighborhoods.",
       "Where a grocery store opened, produce theft fell, while it rose where none opened.",
-      "The grocery store had no measurable effect on theft."
+      "The grocery store had no measurable effect on produce theft at nearby corner shops."
     ],
     "correctAnswer": 2,
     "explanation": "A 22% drop where the store opened versus a 5% rise where none did supports the link between food access and reduced theft.",
@@ -386,10 +386,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 25,
     "question": "The following is a short passage.\n\n\"A literary critic observed that in the author's novels, characters who narrate their own stories consistently misjudge others' motives, while events narrated by an outside voice are reported accurately. The critic suggested this pattern is deliberate.\"\n\nWhich inference about the author's technique is best supported?",
     "options": [
-      "The author uses unreliable first-person narrators to signal characters' limited understanding.",
-      "The author avoids using any narrators.",
-      "The author believes outside narrators are always dishonest.",
-      "The author writes only nonfiction."
+      "The author uses unreliable narrators to signal characters' limited understanding.",
+      "The author avoids first-person narrators so that events are always reported accurately.",
+      "The author believes outside narrators are always dishonest about characters' motives.",
+      "The author writes only nonfiction, reporting real people's misjudgments of one another."
     ],
     "correctAnswer": 0,
     "explanation": "First-person narrators misjudging motives while outside voices are accurate implies deliberate use of unreliable narration to signal limited understanding.",
@@ -401,10 +401,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 26,
     "question": "The following is a short passage.\n\n\"Two groups of seedlings were grown under identical light and water. One group's soil was inoculated with a common fungus that attaches to roots; the other's was not. After eight weeks, the inoculated seedlings averaged 24 centimeters tall, while the others averaged 15 centimeters. The fungus takes sugars from the plant but delivers extra nutrients from the soil.\"\n\nWhich choice best supports the inference that the fungus benefits the plants despite taking their sugars?",
     "options": [
-      "Both groups received identical light and water.",
-      "The fungus attaches to roots.",
+      "Both groups of seedlings received identical amounts of light and water for eight weeks.",
+      "The fungus attaches to the roots of seedlings in inoculated soil.",
       "Inoculated seedlings grew taller on average than those without the fungus.",
-      "The fungus takes sugars from the plant."
+      "The fungus takes sugars from the plant it attaches to."
     ],
     "correctAnswer": 2,
     "explanation": "Greater average height in inoculated seedlings shows a net benefit, supporting the inference despite the sugar cost.",
@@ -416,10 +416,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 27,
     "question": "The following is a short passage.\n\n\"A geologist studying a canyon found a layer of volcanic ash sandwiched between two rock layers. The ash can be precisely dated, and any fossil found below it must be older than the ash, while any found above must be younger.\"\n\nWhich inference is best supported by the passage?",
     "options": [
-      "The ash layer can help establish whether nearby fossils are older or younger than a known date.",
-      "All fossils in the canyon are the same age.",
-      "Volcanic ash cannot be dated accurately.",
-      "Fossils above the ash are older than those below it."
+      "The ash layer can show whether nearby fossils are older or younger than a known date.",
+      "All fossils in the canyon are the same age as the volcanic ash layer.",
+      "Volcanic ash cannot be dated precisely enough to help establish the ages of nearby fossils.",
+      "Fossils found above the ash layer must be older than those found below it."
     ],
     "correctAnswer": 0,
     "explanation": "Because the ash is precisely datable and separates older-below from younger-above fossils, it can establish relative fossil ages against a known date.",
@@ -431,10 +431,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 28,
     "question": "The following is a short passage.\n\n\"A public-health team tracked handwashing at two hospitals. At Hospital X, which installed sinks at every doorway, staff washed their hands an average of 12 times per shift and infection rates fell 30%. At Hospital Y, where sinks remained clustered in a few rooms, staff averaged 5 washes per shift and infections were unchanged.\"\n\nWhich choice best supports the inference that convenient sink placement encouraged handwashing?",
     "options": [
-      "Infection rates were unchanged at both hospitals.",
-      "Staff at both hospitals washed their hands equally often.",
-      "Where sinks were placed at every doorway, staff washed their hands far more often than where sinks were clustered.",
-      "Hospital Y installed sinks at every doorway."
+      "Infection rates fell by the same amount at both hospitals, regardless of where sinks were placed.",
+      "Staff at both hospitals washed their hands equally often, about 12 times per shift, wherever the sinks were placed.",
+      "Where sinks stood at every doorway, staff washed their hands far more often than where sinks were clustered.",
+      "Hospital Y installed sinks at every doorway, yet its staff averaged only 5 washes per shift."
     ],
     "correctAnswer": 2,
     "explanation": "More frequent washing where sinks were conveniently placed at every doorway supports the inference about placement.",
@@ -446,10 +446,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 29,
     "question": "The following is a short passage.\n\n\"An analyst reviewed a company's decade of records. In years when it spent more on employee training, its product-defect rate was consistently lower, and in the two years it cut training sharply, defects spiked the following year. The analyst concluded that training investment and product quality are closely linked.\"\n\nWhich choice best uses the described data to support the analyst's conclusion?",
     "options": [
-      "Defect rates were unrelated to training in every year.",
-      "Higher training spending coincided with lower defect rates, and cuts to training were followed by spikes in defects.",
-      "The company never changed its training spending.",
-      "Defects were highest in years of greatest training spending."
+      "Defect rates were unrelated to training spending, rising and falling at random across the decade.",
+      "Higher training spending coincided with lower defect rates, and training cuts were followed by defect spikes.",
+      "The company never changed its training spending, so defect rates stayed steady over the decade.",
+      "Defects were highest in the years of greatest training spending and dropped sharply the year after training was cut."
     ],
     "correctAnswer": 1,
     "explanation": "The pattern of lower defects with more training and spikes after cuts supports the claimed link between training and quality.",
@@ -461,10 +461,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 30,
     "question": "The following is a short passage.\n\n\"A team studying language learning found that adults who practiced a new language for 20 minutes daily retained 15% more vocabulary after a month than those who practiced 140 minutes once a week, despite both groups practicing the same total time. The researchers proposed that spacing practice out aids retention.\"\n\nWhich choice best supports the researchers' proposal?",
     "options": [
-      "Both groups practiced for the same total amount of time, yet daily practice yielded higher retention.",
-      "The weekly group practiced for less total time overall.",
-      "Daily practice and weekly practice produced identical retention.",
-      "Neither group retained any vocabulary after a month."
+      "Though both groups practiced the same total time, daily practice yielded higher retention.",
+      "The weekly group practiced for less total time overall, which explains its lower retention.",
+      "Daily practice and weekly practice produced identical retention despite the equal total time.",
+      "Neither group retained any vocabulary after a month, whether practice was daily or weekly."
     ],
     "correctAnswer": 0,
     "explanation": "With total time held equal, higher retention for the daily (spaced) group supports the claim that spacing aids retention.",
@@ -491,10 +491,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 32,
     "question": "The following is a short passage.\n\n\"In 1804, Meriwether Lewis and William Clark set out to map territories newly claimed by the United States. Their expedition relied heavily on Sacagawea, a Shoshone woman whose knowledge of the land and of several Native languages helped the party navigate difficult country and negotiate with the nations they met.\"\n\nAccording to the passage, Sacagawea contributed to the expedition primarily by",
     "options": [
-      "providing knowledge of the land and languages that aided navigation and negotiation.",
-      "supplying the money needed to fund the journey.",
-      "drawing the first detailed maps of the western territories.",
-      "persuading the United States to claim new land."
+      "providing knowledge of land and languages that aided navigation and negotiation.",
+      "supplying the money and supplies needed to fund the journey across the territories.",
+      "drawing the first detailed maps of the western territories for Lewis and Clark.",
+      "persuading the United States to claim the new western land that she knew so well."
     ],
     "correctAnswer": 0,
     "explanation": "The passage states her knowledge of the land and languages helped the party navigate and negotiate. The other choices describe roles the passage never assigns to her.",
@@ -521,10 +521,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 34,
     "question": "The following is a short passage.\n\n\"A study measured the average daily water absorbed by four common houseplants. Ferns absorbed 250 milliliters per day, peace lilies 180 milliliters, snake plants 60 milliliters, and succulents 40 milliliters.\"\n\nWhich choice best uses data from the study to compare the plants' water needs?",
     "options": [
-      "Succulents absorbed more water each day than snake plants did.",
+      "Succulents absorbed more water each day than snake plants did, 60 milliliters to 40.",
       "Ferns absorbed the most water per day, more than six times the amount succulents absorbed.",
-      "Peace lilies and snake plants absorbed nearly identical amounts of water.",
-      "Snake plants required the most water of the four plants studied."
+      "Peace lilies and snake plants absorbed nearly identical amounts of water each day.",
+      "Snake plants required the most water of the four plants, absorbing 250 milliliters per day."
     ],
     "correctAnswer": 1,
     "explanation": "Ferns' 250 mL is more than six times succulents' 40 mL, and it is the largest value. The distractors reverse or misstate the figures (succulents 40 < snake plants 60; peace lilies 180 is far from snake plants' 60; snake plants are not the highest).",
@@ -538,8 +538,8 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "The coastal town likely holds memories Eleanor prefers not to revisit aloud.",
       "Eleanor intends to return to the coastal town in the near future.",
-      "Eleanor's children have never once seen the ocean.",
-      "Eleanor finds the cries of gulls physically painful to hear."
+      "Eleanor's children have never once seen the ocean or the coastal town.",
+      "Eleanor finds the cries of gulls physically painful to hear, so she avoids the sea."
     ],
     "correctAnswer": 0,
     "explanation": "Her silence, the kept sand, and her children's learned caution together suggest the town carries feelings she avoids discussing. The other options add plans, facts, or reactions the passage does not establish.",
@@ -552,7 +552,7 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"Botanists hypothesized that a certain orchid attracts pollinators by mimicking the scent of a female bee rather than by offering nectar. To test the idea, they recorded which insects visited the orchid and how those insects behaved.\"\n\nWhich finding, if true, would most directly support the botanists' hypothesis?",
     "options": [
       "The orchid produced noticeably more flowers in warmer growing seasons.",
-      "The orchid's petals were a vivid, uniform shade of yellow.",
+      "The orchid's petals were a vivid, uniform shade of yellow that bees can easily see.",
       "Male bees repeatedly landed on the orchid and attempted to mate with its flowers.",
       "Female bees consistently avoided the orchid and never landed on it."
     ],
@@ -596,9 +596,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 39,
     "question": "The following is a short passage.\n\n\"A city tracked how residents commuted over a decade. In 2013, 60 percent drove alone, 25 percent used public transit, and 15 percent biked or walked. By 2023, driving alone had fallen to 45 percent and biking or walking had risen to 30 percent, while transit stayed at 25 percent.\"\n\nWhich choice best uses data from the passage to describe the change over the decade?",
     "options": [
-      "Public transit use climbed sharply between 2013 and 2023.",
+      "Public transit use climbed sharply between 2013 and 2023 as driving alone declined.",
       "The share of residents who biked or walked doubled while driving alone declined.",
-      "Driving alone remained the choice of most residents in 2023.",
+      "Driving alone remained the choice of a majority of residents in 2023.",
       "Biking or walking became the most common way to commute by 2023."
     ],
     "correctAnswer": 1,
@@ -671,10 +671,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 44,
     "question": "The following is a short passage.\n\n\"During the 1870s, refrigerated railcars let Chicago meatpackers ship dressed beef across the country. Before this, cattle had been shipped live and slaughtered near their destination, so butchers in distant cities had faced little competition and largely set their own prices.\"\n\nWhich choice is most strongly supported by the passage?",
     "options": [
-      "Live cattle were generally unable to survive long train journeys.",
-      "Refrigerated railcars likely increased the competition faced by butchers in distant cities.",
-      "Chicago meatpackers eventually abandoned the use of refrigerated railcars.",
-      "Butchers in distant cities welcomed the arrival of Chicago beef."
+      "Live cattle were generally unable to survive the long train journeys to distant cities.",
+      "Refrigerated railcars likely increased competition for butchers in distant cities.",
+      "Chicago meatpackers eventually abandoned the use of refrigerated railcars for shipping beef.",
+      "Butchers in distant cities welcomed the arrival of cheaper dressed beef from Chicago."
     ],
     "correctAnswer": 1,
     "explanation": "Distant butchers previously faced little competition; the arrival of shipped Chicago beef implies new competitors, so competition likely rose. The other options add claims about cattle survival, later abandonment, or butchers' attitudes that the passage does not support.",
@@ -686,10 +686,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 45,
     "question": "The following is a short passage.\n\n\"The translator's task is often described as carrying meaning intact from one language into another. Yet some theorists contend that because every language divides experience differently, no translation can be a perfect mirror; the translator inevitably makes choices that reshape the text even while striving to remain faithful to it.\"\n\nWhich choice best states the main idea of the passage?",
     "options": [
-      "Translation unavoidably involves interpretive choices that reshape a text, even when the translator aims for fidelity.",
-      "Translators should take care never to change a text's meaning in any respect.",
-      "Certain languages are simply impossible to translate into any other language.",
-      "Faithful translation is only achievable between closely related languages."
+      "Translation unavoidably involves choices that reshape a text, even when the translator aims for fidelity.",
+      "Translators should take care never to change a text's meaning in any respect, however small or subtle the change.",
+      "Certain languages divide experience so differently that they cannot be translated into any other language.",
+      "Faithful translation is achievable only between closely related languages that divide human experience alike."
     ],
     "correctAnswer": 0,
     "explanation": "The passage's central claim is that faithful translation still requires reshaping choices because languages differ. The distractors give advice or absolute assertions the passage does not make.",
@@ -702,9 +702,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"A survey recorded how many hours teenagers and adults spent on four media types in a typical week. Teenagers spent 20 hours on streaming video, 8 on music, 15 on social media, and 3 on news. Adults spent 12 hours on streaming video, 6 on music, 9 on social media, and 10 on news.\"\n\nWhich choice best uses data from the survey?",
     "options": [
       "Teenagers and adults spent an equal number of hours on music each week.",
-      "Adults spent more time on social media than teenagers did.",
-      "News was the only one of the four media types on which adults spent more time than teenagers.",
-      "Teenagers spent less time on streaming video than adults did."
+      "Adults spent more time on social media than teenagers did, 15 hours to 9.",
+      "News was the only media type on which adults spent more time than teenagers.",
+      "Teenagers spent less time on streaming video than adults did each week."
     ],
     "correctAnswer": 2,
     "explanation": "Adults exceeded teenagers only on news (10 vs. 3); teens led on video (20 vs. 12), music (8 vs. 6), and social media (15 vs. 9). The distractors misread these figures.",
@@ -716,10 +716,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 47,
     "question": "The following is a short passage.\n\n\"A sociologist claimed that community gardens strengthen neighborhoods not chiefly by producing food but by creating regular occasions for neighbors who would otherwise never interact to meet and work side by side.\"\n\nWhich finding, if true, would most directly support the sociologist's specific claim?",
     "options": [
-      "Residents who joined a community garden reported forming friendships with neighbors they had never spoken to before.",
-      "Community gardens produced a substantial harvest of fresh vegetables each season.",
-      "Property values rose noticeably in neighborhoods that established community gardens.",
-      "Community gardens required volunteers to water the plants nearly every day."
+      "Residents who joined a community garden befriended neighbors they had never spoken to before.",
+      "Community gardens produced a substantial harvest of fresh vegetables that residents took home each season.",
+      "Property values rose noticeably in neighborhoods that established community gardens on vacant lots.",
+      "Community gardens required volunteers to water the plants nearly every day throughout the growing season."
     ],
     "correctAnswer": 0,
     "explanation": "The specific claim is about social interaction, so new friendships among previously unacquainted neighbors supports it directly. Harvest size, property values, and watering logistics are on topic for gardens but not for the interaction claim.",
@@ -746,10 +746,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 49,
     "question": "The following is a short passage.\n\n\"Archaeologists uncovered pottery of an identical style at two ancient settlements separated by a rugged mountain range. One team proposed that the two communities traded with each other directly, rather than each having invented the same style independently.\"\n\nWhich finding, if true, would most strongly support the trade hypothesis?",
     "options": [
-      "Each settlement sat near clay deposits with very similar mineral content.",
-      "A worn footpath scattered with broken pottery of the same style ran across the mountains between the sites.",
-      "The pottery at the two sites was consistently made in slightly different sizes.",
-      "The two communities spoke languages that were entirely unrelated."
+      "Each settlement sat near clay deposits with very similar mineral content and color.",
+      "A worn path across the mountains linking the sites was littered with shards of that pottery.",
+      "The pottery at the two sites was consistently made in slightly different sizes and thicknesses.",
+      "The two communities spoke entirely unrelated languages and left no record of each other."
     ],
     "correctAnswer": 1,
     "explanation": "A path between the sites littered with that same pottery is direct evidence of contact and exchange, supporting trade. Similar clay actually favors independent invention, and size differences or unrelated languages do not support direct trade.",
@@ -761,10 +761,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 50,
     "question": "The following is a short passage.\n\n\"A laboratory tested how quickly a new adhesive set at several temperatures. At 10 degrees Celsius it set in 40 minutes, at 20 degrees in 25 minutes, at 30 degrees in 15 minutes, and at 40 degrees in 12 minutes.\"\n\nWhich choice best uses data from the test to describe the relationship between temperature and setting time?",
     "options": [
-      "As temperature rose, setting time decreased, but the decreases grew smaller at higher temperatures.",
-      "As temperature rose, setting time increased at a steady rate.",
-      "Setting time was shortest at the lowest temperature the lab tested.",
-      "Temperature had no measurable effect on the adhesive's setting time."
+      "As temperature rose, setting time fell, but the decreases grew smaller at higher temperatures.",
+      "As temperature rose, setting time increased at a steady rate of roughly ten minutes for each step.",
+      "Setting time was shortest at the lowest temperature tested and longest at the highest.",
+      "Temperature had no measurable effect, since setting times stayed within a few minutes."
     ],
     "correctAnswer": 0,
     "explanation": "Setting time fell from 40 to 25 to 15 to 12 minutes as temperature rose, and the drops (15, 10, 3 minutes) shrank, matching the correct choice. The distractors reverse the trend, misidentify the shortest time, or deny any effect.",
@@ -806,9 +806,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 53,
     "question": "The following is a short passage.\n\n\"In the novel, Mara keeps a locked drawer of unsent letters, each addressed to a person she has quarreled with over the years. She rereads them on sleepless nights, editing lines she will never mail. The narrator observes that Mara finds it far easier to perfect an apology than to deliver one.\"\n\nWhich choice best states the main idea of the text?\n",
     "options": [
-      "Mara enjoys writing letters purely as a creative hobby.",
+      "Mara enjoys writing letters purely as a creative hobby on sleepless nights.",
       "Mara has permanently lost touch with everyone she once knew.",
-      "Mara intends to mail all of her stored letters very soon.",
+      "Mara intends to mail all of her stored letters to the people she quarreled with.",
       "Mara privately rehearses reconciliations she cannot bring herself to complete."
     ],
     "correctAnswer": 3,
@@ -836,13 +836,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 55,
     "question": "The following is a short passage.\n\n\"For decades, biologists assumed that the octopus's remarkable camouflage was directed entirely by its brain. Recent work, however, has revealed that octopus skin contains light-sensitive proteins of the same kind found in eyes. This finding suggests that the skin itself may detect light and adjust color locally, without waiting for instructions from the central nervous system.\"\n\nWhich choice best states the main idea of the text?\n",
     "options": [
-      "Octopuses have sharper eyesight than most other marine animals.",
-      "New findings suggest octopus skin may sense light and change color on its own, revising an earlier assumption.",
-      "Camouflage in octopuses is now known to be controlled solely by the brain.",
-      "Light-sensitive proteins occur only in the eyes of animals, never elsewhere."
+      "Octopuses have sharper eyesight than other marine animals, which lets them match their surroundings.",
+      "New findings suggest octopus skin may sense light and change color on its own, revising an older view.",
+      "Camouflage in octopuses is now known to be controlled solely by the brain, confirming the older view.",
+      "Light-sensitive proteins occur only in the eyes of animals, so octopus skin cannot detect light."
     ],
     "correctAnswer": 1,
-    "explanation": "The passage contrasts the old assumption (brain-directed camouflage) with new evidence that skin may sense light locally. Choice C restates the discredited view, while the others are unsupported or contradicted by the finding.",
+    "explanation": "The passage contrasts the old assumption (brain-directed camouflage) with new evidence that skin may sense light locally. The option saying camouflage is controlled solely by the brain restates the discredited view, while the others are unsupported or contradicted by the finding.",
     "difficulty": "hard",
     "domain": "information-ideas",
     "skill": "Central Ideas and Details"
@@ -851,10 +851,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 56,
     "question": "The following is a short passage.\n\n\"The naturalist John Muir spent months alone in the Sierra Nevada, filling notebooks with careful observations. He later wrote that the mountains restored him, describing the wilderness as more nourishing to him than any comfort a city could offer.\"\n\nA student claims that Muir regarded time in the wilderness as beneficial to his own well-being. Which detail from the text best supports the student's claim?\n",
     "options": [
-      "Muir spent months alone in the Sierra Nevada.",
-      "Muir filled his notebooks with careful observations.",
+      "Muir spent months alone in the Sierra Nevada, far from any city.",
+      "Muir filled his notebooks with careful observations of the wilderness.",
       "Muir described the wilderness as more nourishing to him than any city comfort.",
-      "Muir traveled into the mountains to make his observations."
+      "Muir later wrote about traveling into the mountains to make his observations."
     ],
     "correctAnswer": 2,
     "explanation": "The claim is about wilderness benefiting Muir's well-being; calling it more nourishing than any city comfort directly supports that. The other details describe what he did, not how it affected him.",
@@ -867,9 +867,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"A team testing a new drought-resistant wheat grew it alongside a standard variety during an unusually dry season. At harvest, they recorded each type's grain yield, water use, and root depth. The researchers hoped to show that the new wheat could maintain its yield even under water stress.\"\n\nWhich finding from the study, if true, would most directly support the researchers' hope?\n",
     "options": [
       "The new wheat produced nearly the same yield as the standard variety while using less water.",
-      "The standard wheat grew slightly taller than the new wheat.",
-      "Both varieties were planted in the field on the same day.",
-      "The new wheat developed shallower roots than the standard variety."
+      "The standard wheat grew slightly taller than the new wheat during the dry season.",
+      "Both varieties were planted on the same day and harvested at the same time.",
+      "The new wheat developed noticeably shallower roots than the standard variety under water stress."
     ],
     "correctAnswer": 0,
     "explanation": "The hope is that the new wheat maintains yield under water stress; matching yield while using less water directly supports that. Plant height, planting date, and root depth do not speak to maintained yield under stress.",
@@ -882,9 +882,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following is a short passage.\n\n\"An economist argues that remote work has reshaped small towns by drawing professionals who once clustered in cities. She contends that these newcomers bring spending power that revives struggling local businesses. To test this idea, she examined several towns that gained remote workers between 2019 and 2023.\"\n\nWhich finding would most directly support the economist's argument that remote workers revive local businesses?\n",
     "options": [
       "Remote workers often reported feeling isolated after moving to small towns.",
-      "The towns generally had lower housing costs than the nearby cities.",
-      "Towns that gained remote workers saw rising revenue at their local shops and restaurants.",
-      "Some remote workers chose to move back to cities after about a year."
+      "The towns generally had lower housing costs than the nearby cities the workers left.",
+      "Towns that gained remote workers saw rising revenue at local shops and restaurants.",
+      "Some remote workers chose to move back to cities after about a year in the small towns."
     ],
     "correctAnswer": 2,
     "explanation": "Her argument is that newcomers' spending revives local businesses; rising revenue at local shops and restaurants is the direct evidence. The other findings concern well-being, housing costs, or turnover, none of which shows business revival.",
@@ -896,13 +896,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 59,
     "question": "The following is a short passage.\n\n\"A biologist measured how quickly a lizard's body temperature rose when it moved from shade into sunlight. While in the shade, the lizard's temperature held steady at 22 degrees Celsius. After 5 minutes in sunlight it reached 28 degrees, and after 10 minutes it reached 34 degrees.\"\n\nWhich choice most effectively uses data from the measurements to illustrate how sunlight affected the lizard's body temperature?\n",
     "options": [
-      "The lizard's temperature rose from 22 degrees in the shade to 34 degrees after 10 minutes in sunlight.",
-      "The lizard appeared to prefer resting in the shade rather than the sun.",
-      "The lizard's temperature stayed at 22 degrees for the entire observation.",
-      "The biologist observed the lizard for well over an hour."
+      "The lizard's temperature rose from 22 degrees in shade to 34 degrees after 10 minutes in sun.",
+      "The lizard appeared to prefer resting in the shade, where its temperature held at 22 degrees.",
+      "The lizard's temperature stayed at 22 degrees for the entire time it spent in the sunlight.",
+      "The biologist observed the lizard for well over an hour, recording its temperature throughout."
     ],
     "correctAnswer": 0,
-    "explanation": "The rise from 22 degrees in shade to 34 degrees after 10 minutes in sun directly illustrates sunlight's warming effect. Choice C contradicts the data, and the others introduce claims the measurements do not report.",
+    "explanation": "The rise from 22 degrees in shade to 34 degrees after 10 minutes in sun directly illustrates sunlight's warming effect. The claim that the temperature stayed at 22 degrees in sunlight contradicts the data, and the others introduce claims (a preference for shade, an hour-long observation) the measurements do not report.",
     "difficulty": "medium",
     "domain": "information-ideas",
     "skill": "Command of Evidence"
@@ -911,13 +911,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 60,
     "question": "The following is a short passage.\n\n\"A survey asked residents of three neighborhoods how satisfied they were with local public transit. In Neighborhood A, 70 percent were satisfied; in Neighborhood B, 45 percent; and in Neighborhood C, 30 percent. Neighborhood A had the most frequent bus service, while Neighborhood C had the least.\"\n\nA city planner claims that more frequent bus service is associated with higher rider satisfaction. Which choice most effectively uses data from the survey to support the planner's claim?\n",
     "options": [
-      "Neighborhood B, in the middle of the range, reported a satisfaction rate of 45 percent.",
-      "Residents of all three neighborhoods reported at least some satisfaction with transit.",
-      "Residents of Neighborhood C reported that they rarely rode the bus at all.",
-      "Neighborhood A, with the most frequent service, had the highest satisfaction at 70 percent, while Neighborhood C, with the least, had the lowest at 30 percent."
+      "Neighborhood B, whose satisfaction fell between those of the other two neighborhoods, reported 45 percent.",
+      "Residents of all three neighborhoods, regardless of how often buses ran, reported at least some satisfaction with local transit.",
+      "Residents of Neighborhood C, which had the least frequent service, reported that they rarely rode the bus at all.",
+      "Satisfaction was 70 percent in Neighborhood A, which had the most frequent service, but 30 percent in C, which had the least."
     ],
     "correctAnswer": 3,
-    "explanation": "The claim links more frequent service to higher satisfaction; pairing A (most service, 70 percent) against C (least service, 30 percent) shows that association. Choice B cites one figure without the link, and C states ridership the survey never reports.",
+    "explanation": "The claim links more frequent service to higher satisfaction; pairing Neighborhood A (most service, 70 percent) with Neighborhood C (least service, 30 percent) shows that association. The Neighborhood B figure stands alone without any link to service, the \"some satisfaction\" statement ignores service levels, and the ridership claim is something the survey never reports.",
     "difficulty": "hard",
     "domain": "information-ideas",
     "skill": "Command of Evidence"
@@ -926,13 +926,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 61,
     "question": "The following is a short passage.\n\n\"Researchers compared two protective coatings for solar panels. Panels with Coating X retained 95 percent of their original efficiency after one year, while panels with Coating Y retained only 80 percent. Uncoated panels retained just 68 percent over the same period.\"\n\nThe researchers concluded that Coating X best preserves panel efficiency over time. Which choice most effectively uses data from the study to support this conclusion?\n",
     "options": [
-      "Coating X panels retained 95 percent of their efficiency after one year, more than Coating Y panels (80 percent) or uncoated panels (68 percent).",
-      "Uncoated panels retained 68 percent of their original efficiency over the year.",
-      "Coating Y panels ended the year performing better than the Coating X panels did.",
-      "All of the panels lost at least some efficiency over the course of the year."
+      "Coating X panels kept 95 percent of their efficiency, compared with 80 percent for Coating Y and 68 percent for uncoated panels.",
+      "Uncoated panels retained 68 percent of their original efficiency, the lowest share of any group over the year.",
+      "Coating Y panels retained 80 percent of their efficiency after one year, ending up performing better than the Coating X panels.",
+      "All of the panels lost at least some efficiency over the course of the year, whether coated or uncoated."
     ],
     "correctAnswer": 0,
-    "explanation": "Supporting that Coating X best preserves efficiency requires showing it retained the most, 95 percent versus 80 and 68 percent. Choice C contradicts the data, B reports only one value, and D is true but does not single out Coating X.",
+    "explanation": "Supporting that Coating X best preserves efficiency requires showing it retained the most, 95 percent versus 80 and 68 percent. The claim that Coating Y outperformed Coating X contradicts the data, the uncoated figure reports only one group, and the statement that all panels lost efficiency is true but does not single out Coating X.",
     "difficulty": "hard",
     "domain": "information-ideas",
     "skill": "Command of Evidence"
@@ -962,7 +962,7 @@ const allQuestions: SatRwQuestion[] = [
       "keeping their leaf pores wide open throughout the afternoon."
     ],
     "correctAnswer": 2,
-    "explanation": "Sealing pores by day, after taking in carbon at night, serves to limit water loss in dry daytime air, the logical benefit. Choices B and D contradict the described sealed-pore behavior, and A is unsupported.",
+    "explanation": "Sealing pores by day, after taking in carbon at night, serves to limit water loss in dry daytime air, the logical benefit. Releasing the stored carbon dioxide and keeping the pores open both contradict the described sealed-pore behavior, and absorbing water through the leaves is unsupported.",
     "difficulty": "hard",
     "domain": "information-ideas",
     "skill": "Inferences"
@@ -977,7 +977,7 @@ const allQuestions: SatRwQuestion[] = [
       "has forgotten that his wife is no longer living."
     ],
     "correctAnswer": 1,
-    "explanation": "Setting and pouring out a second cup each day, knowing he lives alone, suggests he keeps his wife present in habit. He clearly knows she has passed (ruling out D), and a guest or tea dislike is unsupported.",
+    "explanation": "Setting and pouring out a second cup each day, knowing he lives alone, suggests he keeps his wife present in habit. He clearly knows she has passed (ruling out the idea that he has forgotten), and a guest or tea dislike is unsupported.",
     "difficulty": "medium",
     "domain": "information-ideas",
     "skill": "Inferences"
@@ -1007,7 +1007,7 @@ const allQuestions: SatRwQuestion[] = [
       "detect the dim light generated by other living organisms."
     ],
     "correctAnswer": 3,
-    "explanation": "Since the only light at those depths comes from organisms' own glow, large eyes would logically be adapted to detect that faint biological light. Choices A and C assume light the passage says is absent, and B swaps sight for temperature sensing.",
+    "explanation": "Since the only light at those depths comes from organisms' own glow, large eyes would logically be adapted to detect that faint biological light. Seeing by filtered sunlight and distinguishing colors under bright conditions both assume light the passage says is absent, and sensing water temperature swaps sight for a different sense.",
     "difficulty": "hard",
     "domain": "information-ideas",
     "skill": "Inferences"
@@ -1271,8 +1271,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 84,
     "question": "The following text is from a nature essay.\n\nWe tend to picture glaciers as permanent, immovable features of the landscape. Yet a glacier is really a river of ice, creeping downhill grain by grain, grinding valleys into new shapes over centuries.\n\nWhat is the main rhetorical purpose of the second sentence?",
     "options": [
-      "To provide statistical evidence about glacier speed",
-      "To argue that glaciers should be protected",
+      "To provide statistical evidence about how fast glaciers move",
+      "To argue that glaciers should be protected from human activity",
       "To define an unfamiliar scientific term for the reader",
       "To correct a common misconception introduced in the first sentence"
     ],
@@ -1287,8 +1287,8 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The following text is from a literary review.\n\nThe memoir's first half, all sunlit childhood and easy laughter, lulls the reader into comfort. Then, without warning, the tone darkens, and the same house that felt safe becomes a place of dread.\n\nWhich choice best describes the function of the word \"Then\" in the text?",
     "options": [
       "It signals a shift from one emotional register to a contrasting one",
-      "It introduces a summary of the memoir's plot",
-      "It concedes a weakness in the memoir",
+      "It introduces a summary of the memoir's plot and its main events",
+      "It concedes a weakness in the memoir's otherwise comforting first half",
       "It provides a specific example of the author's style"
     ],
     "correctAnswer": 0,
@@ -1301,8 +1301,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 86,
     "question": "The following text is from an article about urban design.\n\nCity planners once assumed that wider roads would ease congestion. In practice, though, added lanes often invite more drivers, and traffic swells to fill the new space—a phenomenon researchers call \"induced demand.\"\n\nWhat is the main purpose of the text?",
     "options": [
-      "To recommend that cities stop building roads entirely",
-      "To describe the daily experience of commuters",
+      "To recommend that cities stop building roads and invest in transit instead",
+      "To describe the daily frustrations commuters face on congested roads",
       "To introduce a counterintuitive effect that challenges an old assumption",
       "To celebrate the achievements of modern city planners"
     ],
@@ -1316,10 +1316,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 87,
     "question": "The following text is from an essay on translation.\n\nA translator, we like to imagine, is a pane of glass: the truest one is the one we notice least. But this ideal of invisibility conceals a quiet paradox, for every choice to disappear is itself a choice, an act of shaping as decisive as any the original author made.\n\nWhat is the main rhetorical purpose of the text?",
     "options": [
-      "To praise translators who render texts word for word",
-      "To question an idealized view of translation by exposing a tension within it",
-      "To provide instructions for aspiring literary translators",
-      "To compare translation with the craft of glassmaking"
+      "To praise translators who render texts word for word and stay invisible",
+      "To question an idealized view of translation by exposing a tension in it",
+      "To provide practical instructions for aspiring literary translators",
+      "To compare the work of a translator with the craft of making panes of glass"
     ],
     "correctAnswer": 1,
     "explanation": "The passage names the ideal of the invisible translator, then reveals its \"paradox\"—invisibility is still an active choice. The purpose is to complicate that ideal by exposing an internal tension, not to praise literalism, instruct, or seriously compare glassmaking.",
@@ -1331,10 +1331,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 88,
     "question": "The following text is from a novel.\n\nHe had rehearsed the apology a hundred times—each word weighed, each pause placed. But standing at last on her doorstep, he found the careful speech dissolving, and what came out instead was a single, graceless \"I'm sorry.\"\n\nWhich choice best describes the function of the second sentence in the text?",
     "options": [
-      "It reinforces the impression of control established in the first sentence",
-      "It provides background about the characters' history",
-      "It summarizes the novel's central conflict",
-      "It undercuts the careful preparation of the first sentence with an unplanned outcome"
+      "It reinforces the impression of careful control established in the first sentence",
+      "It provides background about the characters' history before the apology",
+      "It summarizes the novel's central conflict between the two characters",
+      "It undercuts the first sentence's careful preparation with an unplanned outcome"
     ],
     "correctAnswer": 3,
     "explanation": "The first sentence stresses meticulous rehearsal; the second (\"But…\") shows the plan collapsing into an unrehearsed apology. Its function is to undercut that preparation with an unplanned result, not to reinforce control, give backstory, or summarize the plot.",
@@ -1346,10 +1346,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 89,
     "question": "The following text is from a critical essay.\n\nThe painting rewards the patient viewer. At a glance it is merely a bowl of fruit; linger, however, and the bruised pear, the fly on the rind, and the light already fading from the window begin to whisper that all this abundance is only borrowed time.\n\nWhat is the main purpose of the text?",
     "options": [
-      "To catalog the objects a still-life painter typically includes",
-      "To argue that still-life painting is superior to portraiture",
-      "To suggest that the painting's meaning emerges only through sustained attention",
-      "To explain the techniques used to paint realistic fruit"
+      "To catalog the familiar objects that still-life painters typically include",
+      "To argue that still-life painting is superior to both portraiture and landscape",
+      "To suggest that the painting's meaning emerges only with sustained attention",
+      "To explain the techniques used to paint realistic fruit and fading light"
     ],
     "correctAnswer": 2,
     "explanation": "The essay contrasts the casual \"glance\" with what the patient viewer discovers, arguing the deeper meaning (mortality, \"borrowed time\") surfaces only through lingering. It is not a mere catalog, a ranking of genres, or a technique guide.",
@@ -1376,10 +1376,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 91,
     "question": "Text 1\nCommunity gardens are a clear good for cities. They give neighbors fresh vegetables, turn empty lots into green space, and bring people together around a shared project.\n\nText 2\nCommunity gardens sound lovely, but they use land that a growing city badly needs for housing. A single garden may serve a few dozen families; the apartments that could stand there would serve hundreds.\n\nHow would the author of Text 2 most likely respond to the view expressed in Text 1?",
     "options": [
-      "By agreeing that gardens should replace all new housing",
-      "By denying that gardens provide any fresh vegetables",
-      "By suggesting that empty lots should remain empty",
-      "By arguing that the benefits of gardens are outweighed by the city's need for housing"
+      "By agreeing that gardens should replace all new housing in growing cities",
+      "By denying that gardens provide any fresh vegetables or green space",
+      "By suggesting that the city's empty lots should remain empty rather than become gardens",
+      "By arguing that the city's need for housing outweighs the benefits of gardens"
     ],
     "correctAnswer": 3,
     "explanation": "Text 2 concedes that gardens \"sound lovely\" but insists housing serves far more people, so its author would say the benefits are outweighed by the housing need. The other options misstate Text 2's position.",
@@ -1406,10 +1406,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 93,
     "question": "Text 1\nZoos play a vital role in conservation. Breeding programs have saved species that were nearly extinct in the wild, and no documentary can match the way a live animal sparks a child's wonder.\n\nText 2\nWe grant that a few breeding programs have succeeded. Still, most zoo animals belong to species in no danger at all, kept in enclosures far too small, chiefly to draw ticket-buying crowds.\n\nHow does Text 2 respond to Text 1?",
     "options": [
-      "It rejects Text 1's conservation claim entirely as false",
-      "It offers additional examples that strengthen Text 1's argument",
+      "It rejects Text 1's conservation claim entirely, denying any breeding success",
+      "It offers additional examples of breeding success that strengthen Text 1's argument",
       "It concedes a limited point from Text 1 while disputing its broader defense of zoos",
-      "It shifts the discussion to an unrelated topic"
+      "It shifts the discussion to an unrelated topic, the cost of zoo tickets"
     ],
     "correctAnswer": 2,
     "explanation": "Text 2 grants (\"We grant\") that some breeding programs work—a concession—then argues most zoo animals are not endangered and are kept for profit, disputing the broad defense. It neither rejects everything nor supports Text 1.",
@@ -1422,8 +1422,8 @@ const allQuestions: SatRwQuestion[] = [
     "question": "Text 1\nThe new remote-work policy is a triumph. Employees save hours of commuting, report higher satisfaction, and can live wherever they choose.\n\nText 2\nRemote work suits seasoned employees well. But newcomers, denied the casual mentorship that happens in a shared office, often flounder—learning the unwritten rules of a job is far harder over video calls.\n\nWhich choice best states how the author of Text 2 would likely regard Text 1's assessment?",
     "options": [
       "As correct for experienced workers but incomplete regarding newcomers",
-      "As entirely mistaken about the value of remote work",
-      "As too pessimistic about employee satisfaction",
+      "As entirely mistaken about the value of remote work for any employee",
+      "As too pessimistic about employee satisfaction and commuting",
       "As focused too narrowly on commuting times alone"
     ],
     "correctAnswer": 0,
@@ -1436,9 +1436,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 95,
     "question": "Text 1\nHistorians should strive for objectivity, setting aside their own sympathies to reconstruct the past as it actually was. Only such discipline separates history from mere opinion.\n\nText 2\nThe dream of the wholly neutral historian is a fond illusion. Every choice—what to include, whether to call an uprising a \"rebellion\" or a \"revolution\"—smuggles in a judgment. Better to name one's commitments openly than to hide behind a false neutrality.\n\nHow would the author of Text 2 most likely characterize the ideal described in Text 1?",
     "options": [
-      "As a worthy standard that historians easily achieve",
+      "As a worthy standard that most careful historians achieve with ease",
       "As dangerous because it makes history indistinguishable from opinion",
-      "As irrelevant to how history is actually written today",
+      "As irrelevant to how history is actually written by historians today",
       "As unattainable, since interpretation inevitably shapes even word choice"
     ],
     "correctAnswer": 3,
@@ -1451,10 +1451,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 96,
     "question": "Text 1\nGreat inventions are the work of great individuals. Edison, Bell, the Wright brothers—history advances by the flashes of genius that visit singular minds.\n\nText 2\nEvery \"lone genius\" stood atop a scaffold others built. Edison's lab employed dozens; the Wrights drew on decades of prior aeronautics. The spark may strike one person, but the tinder is always collective.\n\nWhich choice best describes the relationship between the two texts?",
     "options": [
-      "Text 2 dismisses the individuals Text 1 names as unimportant",
-      "Text 2 reframes Text 1's examples to emphasize the collective contributions behind individual achievement",
-      "Text 2 provides statistical proof that Text 1 is correct",
-      "Text 2 and Text 1 reach the same conclusion by different routes"
+      "Text 2 dismisses the individuals Text 1 names as unimportant to the history of invention",
+      "Text 2 reframes Text 1's examples to stress the collective work behind individual achievement",
+      "Text 2 provides statistical proof that Text 1's account of individual genius is correct",
+      "Text 2 and Text 1 reach the same conclusion about genius by different routes and examples"
     ],
     "correctAnswer": 1,
     "explanation": "Text 2 takes Text 1's own examples (Edison, the Wrights) and recasts them—labs of dozens, decades of prior work—to stress collective foundations. It reframes rather than dismisses the individuals and reaches a different conclusion from Text 1.",
@@ -1481,13 +1481,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 98,
     "question": "Although the recipe seemed intimidating at first glance, the chef reassured the students that its steps were actually quite ____ once they understood the basic technique.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
-      "costly",
+      "time-consuming",
       "manageable",
       "dangerous",
       "famous"
     ],
     "correctAnswer": 1,
-    "explanation": "The contrast with \"intimidating\" calls for a word meaning easy to handle—\"manageable.\" \"Costly,\" \"dangerous,\" and \"famous\" do not oppose \"intimidating\" the way the sentence requires.",
+    "explanation": "The contrast with \"intimidating\" calls for a word meaning easy to handle—\"manageable.\" \"Time-consuming,\" \"dangerous,\" and \"famous\" do not oppose \"intimidating\" the way the sentence requires.",
     "difficulty": "easy",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1498,11 +1498,11 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "careless",
       "brief",
-      "quiet",
+      "halfhearted",
       "relentless"
     ],
     "correctAnswer": 3,
-    "explanation": "\"Not a single player stopped hustling\" describes sustained, determined effort—\"relentless.\" \"Brief\" is the opposite, \"careless\" adds an unsupported negative, and \"quiet\" is irrelevant.",
+    "explanation": "\"Not a single player stopped hustling\" describes sustained, determined effort—\"relentless.\" \"Brief\" and \"halfhearted\" contradict the nonstop hustle, and \"careless\" adds an unsupported negative.",
     "difficulty": "easy",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1543,11 +1543,11 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "blunt",
       "vague",
-      "sparse",
+      "cursory",
       "tactful"
     ],
     "correctAnswer": 3,
-    "explanation": "Criticism that is \"never wounding\" and leaves writers grateful is delivered with care—\"tactful.\" \"Blunt\" is the opposite in tone, while \"vague\" and \"sparse\" describe clarity or amount, not diplomacy.",
+    "explanation": "Criticism that is \"never wounding\" and leaves writers grateful is delivered with care—\"tactful.\" \"Blunt\" is the opposite in tone, while \"vague\" and \"cursory\" describe clarity or thoroughness, not diplomacy.",
     "difficulty": "medium",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1559,10 +1559,10 @@ const allQuestions: SatRwQuestion[] = [
       "callous",
       "indifferent",
       "dispassionate",
-      "effusive"
+      "melodramatic"
     ],
     "correctAnswer": 2,
-    "explanation": "Reporting painful events 'calmly' and 'without...self-pity' describes composure, not coldness—'dispassionate' means free of distorting emotion while still engaged with the material. 'Callous' and 'indifferent' wrongly imply she does not care about the setbacks, and 'effusive' means gushing with emotion, the opposite of the restrained, unsentimental tone the passage praises.",
+    "explanation": "Reporting painful events 'calmly' and 'without...self-pity' describes composure, not coldness—'dispassionate' means free of distorting emotion while still engaged with the material. 'Callous' and 'indifferent' wrongly imply she does not care about the setbacks, and 'melodramatic' means exaggeratedly emotional, the opposite of the restrained, unsentimental tone the passage praises.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1607,7 +1607,7 @@ const allQuestions: SatRwQuestion[] = [
       "It defines a scientific term introduced earlier in the passage."
     ],
     "correctAnswer": 0,
-    "explanation": "The second sentence pivots with \"More recently, though\" from beauty and biodiversity to economic value, framing the rest of the passage. Choice B describes the third sentence's dollar figure, not the second; choices C and D name functions the sentence never performs.",
+    "explanation": "The second sentence pivots with \"More recently, though\" from beauty and biodiversity to economic value, framing the rest of the passage. The dollar figure belongs to the third sentence, not the second, and questioning the reefs' importance or defining a term are functions the sentence never performs.",
     "difficulty": "medium",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1622,7 +1622,7 @@ const allQuestions: SatRwQuestion[] = [
       "To propose a new method for measuring worker productivity"
     ],
     "correctAnswer": 1,
-    "explanation": "The final sentence urges \"caution in drawing firm conclusions\" until better trials exist—restraint about the evidence. It does not reject the workweek itself (A), report what the studies found (C), or offer a new measurement method (D).",
+    "explanation": "The final sentence urges \"caution in drawing firm conclusions\" until better trials exist—restraint about the evidence. It does not dismiss the workweek itself, report what the studies found, or offer a new measurement method.",
     "difficulty": "medium",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1634,10 +1634,10 @@ const allQuestions: SatRwQuestion[] = [
       "It concedes that the painter's reputation is entirely undeserved.",
       "It resolves the passage's tension by endorsing the traditional account.",
       "It reframes the preceding evidence as a correction to a simplified story.",
-      "It introduces a rival painter for comparison."
+      "It introduces a rival painter whose work offers a point of comparison."
     ],
     "correctAnswer": 2,
-    "explanation": "By saying the \"legend of a clean break...tidies a messier truth,\" the final sentence casts the infrared evidence as a correction to the tidy pioneer narrative. Choice A overstates the point (her reputation is complicated, not erased), B reverses it, and D adds a comparison the passage never makes.",
+    "explanation": "By saying the \"legend of a clean break...tidies a messier truth,\" the final sentence casts the infrared evidence as a correction to the tidy pioneer narrative. Calling her reputation entirely undeserved overstates the point (it is complicated, not erased), endorsing the traditional account reverses it, and no rival painter or comparison ever appears.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1647,12 +1647,12 @@ const allQuestions: SatRwQuestion[] = [
     "question": "Skeptics of vertical farming stress its steep energy costs: stacking crops indoors means replacing free sunlight with electric lighting. Proponents counter that vertical farms use a fraction of the water and land conventional agriculture demands. Neither figure, however, means much in isolation—the honest comparison depends on which resource a given region can least afford to squander.\n\nWhat is the main rhetorical purpose of the final sentence?",
     "options": [
       "It declares vertical farming clearly superior to conventional agriculture.",
-      "It offers a compromise by proposing a hybrid farming method.",
-      "It restates the skeptics' objection in stronger terms.",
+      "It offers a compromise by proposing a hybrid of indoor and outdoor farming.",
+      "It restates the skeptics' objection about energy costs in stronger terms.",
       "It suggests the debate cannot be settled by either side's favored statistic alone."
     ],
     "correctAnswer": 3,
-    "explanation": "The final sentence says \"neither figure...means much in isolation,\" making the comparison depend on regional priorities—so no single statistic resolves it. It does not crown a winner (A), propose a hybrid method (B), or merely amplify the skeptics' point (C), since it balances both sides.",
+    "explanation": "The final sentence says \"neither figure...means much in isolation,\" making the comparison depend on regional priorities—so no single statistic resolves it. It does not crown a winner, propose a hybrid method, or merely amplify the skeptics' point, since it balances both sides.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1664,10 +1664,10 @@ const allQuestions: SatRwQuestion[] = [
       "It offers a firsthand counterpoint that complicates the guidebooks' portrayal.",
       "It concedes that the guidebooks' description is essentially accurate.",
       "It provides statistical evidence about the neighborhood's economy.",
-      "It predicts that the old quarter will soon be demolished."
+      "It predicts that the old quarter will soon be demolished to make room for tourists."
     ],
     "correctAnswer": 0,
-    "explanation": "The second sentence introduces the residents' contrasting account of rising rents and lost shops, complicating the guidebooks' \"quaint and unchanging\" image. It contradicts rather than concedes that image (B), gives concrete examples rather than statistics (C), and makes no prediction of demolition (D).",
+    "explanation": "The second sentence introduces the residents' contrasting account of rising rents and lost shops, complicating the guidebooks' \"quaint and unchanging\" image. It contradicts rather than concedes that image, gives concrete examples rather than statistics, and makes no prediction of demolition.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1677,12 +1677,12 @@ const allQuestions: SatRwQuestion[] = [
     "question": "The study's authors are careful to note what their data cannot show. Their surveys captured how often people reported feeling lonely, but not why—whether from isolation, from crowds that felt impersonal, or from causes the questionnaire never named. This caveat, the authors add, does not weaken their findings so much as mark the boundary of what those findings can claim.\n\nWhat is the main rhetorical purpose of the final sentence?",
     "options": [
       "To acknowledge a limitation while affirming the study's core value",
-      "To retract the study's central conclusion",
-      "To fault the authors for a poorly designed survey",
-      "To introduce an unrelated line of future research"
+      "To retract the study's central conclusion about how often people felt lonely",
+      "To fault the authors for a poorly designed and incomplete survey",
+      "To introduce an unrelated line of research for future studies"
     ],
     "correctAnswer": 0,
-    "explanation": "The final sentence frames the caveat as one that \"does not weaken their findings so much as mark the boundary\" of their claims—conceding a limit while preserving the study's worth. It does not withdraw the conclusion (B), attack the design, which the authors raise neutrally (C), or launch a new research topic (D).",
+    "explanation": "The final sentence frames the caveat as one that \"does not weaken their findings so much as mark the boundary\" of their claims—conceding a limit while preserving the study's worth. It does not withdraw the conclusion, fault the design (the authors raise the caveat themselves, neutrally), or launch an unrelated line of research.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Text Structure and Purpose"
@@ -1693,11 +1693,11 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "By agreeing that homework carries no academic value whatsoever",
       "By noting that homework's benefits reach some students far more than others",
-      "By recommending that classroom instruction time be shortened",
-      "By denying that practice can improve memory at all"
+      "By recommending that classroom instruction time be shortened to allow more homework",
+      "By denying that practice at home can improve memory at all"
     ],
     "correctAnswer": 1,
-    "explanation": "Text 2 does not reject practice outright; it argues the benefits Text 1 describes accrue mainly to students with home support. That makes B the fit. A overstates Text 2's position, C is unrelated, and D contradicts nothing Text 2 actually disputes.",
+    "explanation": "Text 2 does not reject practice outright; it argues the benefits Text 1 describes accrue mainly to students with home support, so noting that the benefits reach some students far more than others fits. Saying homework has no value overstates Text 2's position, shortening class time is unrelated, and denying that practice aids memory disputes something Text 2 never questions.",
     "difficulty": "medium",
     "domain": "craft-structure",
     "skill": "Cross-Text Connections"
@@ -1706,13 +1706,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 113,
     "question": "Text 1\nThe biographer treats the inventor's famous notebooks as reliable records of discovery, quoting their dated entries to establish exactly when each breakthrough occurred.\n\nText 2\nRecent archival work complicates any such use of the notebooks. The inventor, it turns out, often rewrote earlier pages years later, backdating ideas to strengthen his position in patent disputes. The dates on the page cannot be taken at face value.\n\nBased on the texts, how would the author of Text 2 most likely respond to the biographer's method described in Text 1?",
     "options": [
-      "By endorsing the notebooks as a precise timeline of discovery",
-      "By arguing that the inventor deserves no credit for any of his inventions",
-      "By cautioning that the notebooks' dates are unreliable and cannot pin down when breakthroughs occurred",
+      "By endorsing the notebooks as a precise and trustworthy timeline of the inventor's discoveries",
+      "By arguing that the inventor deserves no credit for any of the inventions his notebooks record",
+      "By cautioning that the notebooks' dates are unreliable guides to when breakthroughs occurred",
       "By claiming that the patent disputes are the most important part of the inventor's legacy"
     ],
     "correctAnswer": 2,
-    "explanation": "Text 2 shows the inventor backdated entries, so its author would warn that the dated evidence the biographer trusts cannot fix the timing of discoveries. A reverses that view, B overreaches beyond anything Text 2 claims, and D mistakes a supporting detail (the disputes) for a judgment about his legacy.",
+    "explanation": "Text 2 shows the inventor backdated entries, so its author would warn that the dated evidence the biographer trusts cannot fix the timing of discoveries. Endorsing the notebooks reverses that view, denying him all credit overreaches beyond anything Text 2 claims, and elevating the patent disputes mistakes a supporting detail for a judgment about his legacy.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Cross-Text Connections"
@@ -1722,12 +1722,12 @@ const allQuestions: SatRwQuestion[] = [
     "question": "Text 1\nEcologists restoring the wetland favor removing the non-native reeds entirely. Native plants, they argue, cannot recover while the aggressive newcomers monopolize sunlight and soil.\n\nText 2\nOther researchers urge caution. In this particular marsh, the non-native reeds have for decades provided the only stable nesting cover for several declining bird species. Stripping them out all at once could doom those birds before native plants mature enough to replace that shelter.\n\nBased on the texts, how would the author of Text 2 most likely respond to the removal strategy proposed in Text 1?",
     "options": [
       "By denying that the non-native reeds compete with native plants at all",
-      "By recommending that the wetland be left entirely undisturbed",
+      "By recommending that the wetland be left entirely undisturbed by restoration crews",
       "By warning that removing the reeds all at once could endanger birds that depend on them",
-      "By agreeing that immediate, total removal is the safest course"
+      "By agreeing that immediate, total removal is the safest course for the nesting birds"
     ],
     "correctAnswer": 2,
-    "explanation": "Text 2 accepts that the reeds cause problems but warns that abrupt, total removal could doom birds that nest in them—choice C. It never denies the competition Text 1 cites (A), never calls for leaving the marsh untouched (B), and directly opposes immediate total removal (D).",
+    "explanation": "Text 2 accepts that the reeds cause problems but warns that abrupt, total removal could doom birds that nest in them. It never denies the competition Text 1 cites, never calls for leaving the marsh untouched, and directly opposes, rather than endorses, immediate total removal.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Cross-Text Connections"
@@ -1736,13 +1736,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 115,
     "question": "Text 1\nThe economist credits the city's falling crime rate to its expanded police force, observing that arrests rose in the same years crime declined.\n\nText 2\nCorrelation of this kind is easy to misread. Over the same period the city also saw rising employment, an aging population, and new streetlights on once-dark blocks—each independently linked to lower crime. Isolating the effect of policing alone would require ruling such factors out, which the available data do not.\n\nBased on the texts, how would the author of Text 2 most likely respond to the economist's explanation in Text 1?",
     "options": [
-      "By denying that the city's crime rate fell at all",
-      "By conceding that policing was certainly the sole cause of the decline",
-      "By insisting that crime rates cannot be measured reliably",
-      "By noting that other simultaneous changes could account for the drop, making the causal claim premature"
+      "By denying that the city's crime rate fell at all during those years",
+      "By conceding that policing was certainly the sole cause of the decline in crime",
+      "By insisting that crime rates cannot be measured reliably with the available data",
+      "By noting that other changes at the time could explain the drop, making the causal claim premature"
     ],
     "correctAnswer": 3,
-    "explanation": "Text 2 lists confounding factors—employment, age, lighting—that the data cannot rule out, so its author would call the economist's single-cause claim premature (D). It does not dispute that crime fell (A), affirm policing as the sole cause (B, the opposite), or argue that crime is unmeasurable (C).",
+    "explanation": "Text 2 lists confounding factors—employment, age, lighting—that the data cannot rule out, so its author would call the economist's single-cause claim premature. It does not dispute that crime fell, affirm policing as the sole cause (the opposite of its view), or argue that crime is unmeasurable.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Cross-Text Connections"
@@ -1751,13 +1751,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 116,
     "question": "Text 1\nProponents of open-plan offices claim they foster collaboration: with no walls between desks, employees speak more freely and ideas spread faster.\n\nText 2\nObservation tells a subtler story. When one firm's partitions came down, workers did interact more—but mostly in brief, superficial exchanges. Substantive conversations, the kind that actually generate ideas, dropped sharply as employees retreated behind headphones to escape the constant interruptions.\n\nBased on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that open-plan offices make ideas spread faster?",
     "options": [
-      "By agreeing fully and adding that written communication improved as well",
+      "By agreeing fully and adding that written communication between employees improved as well",
       "By granting that casual interaction rose while disputing that meaningful, idea-generating exchange did",
       "By denying that removing the walls changed how often employees spoke at all",
-      "By concluding that collaboration does not matter to a firm's success"
+      "By concluding that collaboration does not matter much to a firm's long-term success"
     ],
     "correctAnswer": 1,
-    "explanation": "Text 2 concedes that workers interacted more but reports that substantive, idea-generating talk fell—so its author would challenge the \"ideas spread faster\" claim while accepting the rise in casual contact (B). A overstates agreement, C contradicts Text 2's own concession that interaction rose, and D dismisses collaboration in a way Text 2 never does.",
+    "explanation": "Text 2 concedes that workers interacted more but reports that substantive, idea-generating talk fell—so its author would challenge the \"ideas spread faster\" claim while accepting the rise in casual contact. Agreeing fully overstates Text 2's agreement, denying any change in how often employees spoke contradicts its concession that interaction rose, and dismissing collaboration goes beyond anything Text 2 says.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Cross-Text Connections"
@@ -1796,10 +1796,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 119,
     "question": "Which choice best states the main purpose of the text?\n\nSea otters spend much of their day grooming their fur. Unlike most marine mammals, otters have no blubber to keep warm. Instead, they rely on a dense coat that traps a layer of air against the skin. Keeping that coat clean and full of air is a matter of survival, not vanity.",
     "options": [
-      "To compare the diets of sea otters and other marine mammals",
-      "To argue that sea otters are the cleanest animals in the ocean",
-      "To describe the process by which blubber keeps animals warm",
-      "To explain why a particular animal behavior is essential rather than merely cosmetic"
+      "To compare the diets of sea otters with those of other marine mammals",
+      "To argue that sea otters are the cleanest of all animals in the ocean",
+      "To describe the process by which blubber keeps most marine mammals warm",
+      "To explain why a particular animal behavior is essential rather than cosmetic"
     ],
     "correctAnswer": 3,
     "explanation": "The text presents otter grooming and ends by stressing it is \"survival, not vanity,\" so its purpose is to show the behavior is necessary. Diet, cleanliness rankings, and blubber are not the focus.",
@@ -1829,10 +1829,10 @@ const allQuestions: SatRwQuestion[] = [
       "reinforced",
       "complicated",
       "ignored",
-      "predicted"
+      "anticipated"
     ],
     "correctAnswer": 1,
-    "explanation": "\"But\" marks a shift away from the dismissive view, and evidence of deliberate planning undermines it, so the scholarship has \"complicated\" (challenged) that view. \"Reinforced\" is the opposite; \"ignored\" and \"predicted\" do not fit.",
+    "explanation": "\"But\" marks a shift away from the dismissive view, and evidence of deliberate planning undermines it, so the scholarship has \"complicated\" (challenged) that view. \"Reinforced\" is the opposite; \"ignored\" and \"anticipated\" do not fit.",
     "difficulty": "medium",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1857,9 +1857,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "Which choice best describes the function of the underlined sentence in the text as a whole?\n\nFor decades, engineers assumed that adding more sensors to a bridge would always improve safety monitoring. A 2019 study challenged this assumption. It found that beyond a certain point, extra sensors produced so much conflicting data that inspectors actually missed warning signs they would otherwise have caught.\n\nUnderlined sentence: \"A 2019 study challenged this assumption.\"",
     "options": [
       "It provides statistical evidence supporting the engineers' original view.",
-      "It offers a personal anecdote to lighten a technical discussion.",
-      "It defines a term that the rest of the text goes on to illustrate.",
-      "It introduces a finding that reverses the expectation described in the previous sentence."
+      "It offers a personal anecdote to lighten an otherwise technical discussion.",
+      "It defines a term that the rest of the text goes on to illustrate with examples.",
+      "It introduces a finding that reverses the expectation in the previous sentence."
     ],
     "correctAnswer": 3,
     "explanation": "The sentence pivots from the long-held assumption to a study that undercuts it, setting up the contrary finding that follows. It supplies no statistics, anecdote, or definition.",
@@ -1872,9 +1872,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "Which choice best describes the overall structure of the text?\n\nThe idea sounds appealing: plant a trillion trees and offset the world's carbon emissions. And it is true that forests absorb carbon. Yet the math is less reassuring. Even under ideal conditions, newly planted trees would take decades to mature, and the land required exceeds what is realistically available.",
     "options": [
       "A proposal is presented, partly conceded, and then qualified by practical objections.",
-      "A historical trend is traced from its origins to the present day.",
+      "A historical trend in tree planting is traced from its origins to the present day.",
       "Two competing scientific theories are described and then reconciled.",
-      "A personal experience is recounted and used to justify a policy."
+      "A personal experience of planting trees is recounted and used to justify a policy."
     ],
     "correctAnswer": 0,
     "explanation": "The text states the tree-planting proposal, grants that forests absorb carbon (\"it is true\"), then raises objections about time and land. It is not a history, a reconciliation of theories, or a personal narrative.",
@@ -1888,8 +1888,8 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "By denying that remote workers are ever more productive than office workers",
       "By insisting that long commutes have no effect on employee satisfaction",
-      "By granting that measured output can improve while arguing that harder-to-measure benefits are lost",
-      "By recommending that companies eliminate all in-person meetings"
+      "By granting that measured output can rise while arguing that less measurable benefits are lost",
+      "By recommending that companies eliminate all in-person meetings and office space"
     ],
     "correctAnswer": 2,
     "explanation": "Text 2 concedes that \"efficiency metrics may rise\" but warns that mentorship \"quietly disappears,\" so it accepts the productivity gain while stressing an unmeasured loss. The other options overstate or contradict Text 2.",
@@ -1918,11 +1918,11 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "reckless",
       "reluctant",
-      "forgetful",
+      "absent-minded",
       "deliberate"
     ],
     "correctAnswer": 3,
-    "explanation": "\"Choosing which memories to preserve\" describes intentional selection, set against \"passive recorder,\" so \"deliberate\" fits. \"Reckless,\" \"reluctant,\" and \"forgetful\" all contradict purposeful curation.",
+    "explanation": "\"Choosing which memories to preserve\" describes intentional selection, set against \"passive recorder,\" so \"deliberate\" fits. \"Reckless,\" \"reluctant,\" and \"absent-minded\" all contradict purposeful curation.",
     "difficulty": "hard",
     "domain": "craft-structure",
     "skill": "Words in Context"
@@ -1961,10 +1961,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 130,
     "question": "Text 1\nZoos, defenders maintain, have become arks for endangered species. Captive breeding programs have restored animals like the California condor to the wild, achievements that would have been impossible without the resources and expertise that zoos concentrate in one place.\n\nText 2\nNo breeding program can substitute for the thing a wild animal actually needs: habitat. Every dollar and hour devoted to maintaining a species in captivity is one not spent protecting the forests and wetlands where it might otherwise live freely—and to which, if those places vanish, it can never return.\n\nWhich choice best describes how Text 2 responds to the argument in Text 1?",
     "options": [
-      "It denies that any species has ever been restored to the wild",
-      "It claims that zoos lack the expertise to run breeding programs",
-      "It agrees that habitat protection should be abandoned in favor of captivity",
-      "It grants that captive breeding may work but argues it draws resources away from a more fundamental need"
+      "It denies that any species, including the condor, has ever been restored to the wild",
+      "It claims that zoos lack the resources and expertise needed to run breeding programs",
+      "It agrees that habitat protection should be abandoned in favor of captive breeding",
+      "It grants that captive breeding may work but argues it diverts resources from a more basic need"
     ],
     "correctAnswer": 3,
     "explanation": "Text 2 does not dispute the condor-style successes; it argues that captivity consumes money and time that habitat protection—\"the thing a wild animal actually needs\"—requires. The other options contradict Text 2's actual claims.",
@@ -1976,10 +1976,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 131,
     "question": "Text 1\nThe value of a liberal-arts education, its champions say, lies precisely in its impracticality. Studying philosophy or literature teaches students how to think, not merely what to do—a flexible capacity that outlasts any particular job skill.\n\nText 2\nEmployers today report that they can teach new hires the specific tools of a trade in weeks. What they cannot easily supply is the ability to reason through an unfamiliar problem, weigh competing arguments, and write clearly. Ironically, these \"impractical\" habits of mind have become the most practical qualifications of all.\n\nWhich choice best describes the relationship between the two texts?",
     "options": [
-      "Text 2 rejects the central claim that Text 1 advances",
+      "Text 2 rejects the central claim that Text 1 advances about liberal-arts study",
       "Text 2 reframes as practical the very quality that Text 1 defends as impractical",
       "Text 2 provides a historical origin for the trend Text 1 describes",
-      "Text 2 dismisses liberal-arts education as outdated"
+      "Text 2 dismisses liberal-arts education as outdated for today's employers"
     ],
     "correctAnswer": 1,
     "explanation": "Text 1 praises liberal arts for teaching thinking over job skills, calling it impractical; Text 2 argues those same \"impractical\" habits are now the most practical qualifications. Text 2 recasts, rather than rejects, Text 1's point.",
@@ -1991,10 +1991,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 132,
     "question": "Text 1\nStandardized tests, whatever their flaws, offer one thing that grades cannot: a common yardstick. A student's A in one school may reflect work that would earn a C in another, but a test score means the same thing everywhere.\n\nText 2\nThe apparent objectivity of a test score is an illusion. Scores track family income almost as faithfully as they track ability, because wealthier families can buy tutoring, test prep, and repeated attempts. A \"common yardstick\" that measures privilege is not common at all.\n\nHow would the author of Text 1 most likely respond to the argument made in Text 2?",
     "options": [
-      "By agreeing that standardized tests should be eliminated entirely",
-      "By denying that family income has any relationship to test scores",
-      "By conceding that scores are influenced by wealth while maintaining that grades vary even more unpredictably across schools",
-      "By arguing that grades are a more objective measure than test scores"
+      "By agreeing that standardized tests should be eliminated because they measure privilege",
+      "By denying that family income has any relationship to test scores or test preparation",
+      "By conceding that wealth influences scores while maintaining that grades vary even more across schools",
+      "By arguing that grades are a more objective measure than test scores across schools"
     ],
     "correctAnswer": 2,
     "explanation": "Text 1's case rests on tests being more comparable than grades, not on their being perfectly fair, so its author could accept the point about wealth yet still hold that grades are even less consistent. The other options abandon or contradict Text 1's position.",
@@ -2246,13 +2246,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 149,
     "question": "A student is writing about a scientific concept and took the following notes:\n- Bioluminescence is the production of light by living organisms.\n- Fireflies use bioluminescence to attract mates.\n- Many deep-sea creatures are bioluminescent.\n- The light is produced by a chemical reaction inside the organism.\n\nThe student wants to introduce the concept to an audience unfamiliar with the term. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Fireflies use bioluminescence to attract mates.",
-      "Bioluminescence, the production of light by living organisms, is found in fireflies and many deep-sea creatures.",
+      "Fireflies use bioluminescence to attract mates, and many deep-sea creatures are bioluminescent too.",
+      "Bioluminescence, or light produced by living organisms, is found in fireflies and many deep-sea creatures.",
       "The light of bioluminescence is produced by a chemical reaction inside the organism.",
-      "Many deep-sea creatures are bioluminescent, as are fireflies."
+      "Bioluminescent fireflies and deep-sea creatures produce their light through internal chemical reactions."
     ],
     "correctAnswer": 1,
-    "explanation": "Introducing the term to an unfamiliar audience requires defining it. Only the choice that defines bioluminescence as the production of light by living organisms does so; the others assume the reader already knows the term.",
+    "explanation": "Introducing the term to an unfamiliar audience requires defining it. Only the choice that defines bioluminescence as light produced by living organisms does so; the others assume the reader already knows the term.",
     "difficulty": "medium",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2261,13 +2261,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 150,
     "question": "A student took the following notes about two composers:\n- Bach composed during the Baroque period.\n- Stravinsky composed during the 20th century.\n- Bach's music is known for its intricate counterpoint.\n- Stravinsky's music is known for its bold, driving rhythms.\n\nThe student wants to emphasize a difference between the two composers' musical styles. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Bach composed during the Baroque period, and Stravinsky composed during the 20th century.",
-      "Both Bach and Stravinsky are celebrated composers.",
-      "Whereas Bach's music is known for its intricate counterpoint, Stravinsky's is known for its bold, driving rhythms.",
-      "Bach's music features intricate counterpoint."
+      "Bach composed during the Baroque period, whereas Stravinsky composed during the 20th century.",
+      "Stravinsky, who composed during the 20th century, is known for bold, driving rhythms.",
+      "Whereas Bach's music is known for intricate counterpoint, Stravinsky's is known for bold, driving rhythms.",
+      "Bach's music is known for its intricate counterpoint, a hallmark of the Baroque period."
     ],
     "correctAnswer": 2,
-    "explanation": "The goal is a difference in musical style. Only the choice contrasting counterpoint with driving rhythms addresses style; the first contrasts time periods, not style, and the others state a similarity or single fact.",
+    "explanation": "The goal is a difference in musical style. Only the choice contrasting counterpoint with driving rhythms addresses style; the choice contrasting the Baroque period with the 20th century addresses era, not style, and the others describe just one composer.",
     "difficulty": "medium",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2276,10 +2276,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 151,
     "question": "A student took the following notes about a research study:\n- Ecologists studied a coral reef off the coast of Australia.\n- The study lasted five years.\n- The goal was to understand how rising ocean temperatures affect coral.\n- The team measured coral bleaching each year.\n\nThe student wants to explain the purpose of the study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "The five-year study took place off the coast of Australia.",
-      "Each year, the team measured coral bleaching on the reef.",
+      "The five-year study of coral took place on a reef off the coast of Australia.",
+      "Each year for five years, the team measured coral bleaching on the reef.",
       "Ecologists conducted the study to understand how rising ocean temperatures affect coral.",
-      "Ecologists studied a coral reef for five years."
+      "Ecologists studied a coral reef off the coast of Australia for five years."
     ],
     "correctAnswer": 2,
     "explanation": "The purpose is the study's goal. Only the choice stating that the study aimed to understand how rising temperatures affect coral explains its purpose; the others describe location, method, or duration.",
@@ -2368,8 +2368,8 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "Both the fennec fox and the jackrabbit are active mainly at night.",
       "The fennec fox and the jackrabbit both have large ears that help release body heat.",
-      "The fennec fox lives in a hot desert environment.",
-      "The jackrabbit is active at night and lives in the desert."
+      "The fennec fox lives in a hot desert environment, as the jackrabbit does.",
+      "The jackrabbit is active mainly at night and lives in hot desert environments."
     ],
     "correctAnswer": 1,
     "explanation": "The goal is a shared physical trait. Only the choice noting that both have large heat-releasing ears identifies a physical feature; the others describe behavior or habitat.",
@@ -2381,10 +2381,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 158,
     "question": "A student took the following notes:\n- Some plants can survive extreme conditions.\n- The resurrection plant can lose 95 percent of its water and revive.\n- It curls into a dry brown ball during droughts.\n- When water returns, it unfurls and turns green within hours.\n\nThe student wants to present the resurrection plant as an example of a plant that survives extreme conditions. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "During droughts, the resurrection plant curls into a dry brown ball.",
+      "During droughts, the resurrection plant curls into a dry brown ball, then turns green when water returns.",
       "The resurrection plant unfurls and turns green within hours when water returns.",
       "The resurrection plant, which can lose 95 percent of its water and revive, is one plant that survives extreme conditions.",
-      "Some plants, such as the resurrection plant, can turn green quickly."
+      "Some plants, such as the resurrection plant, can unfurl and turn green within hours of watering."
     ],
     "correctAnswer": 2,
     "explanation": "The goal is to present the plant as an example of the general claim about surviving extreme conditions. Only the choice that ties its water loss and revival directly to that claim does so; the others give isolated details.",
@@ -2396,10 +2396,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 159,
     "question": "A student took the following notes about an experiment:\n- Researchers tested whether background music improves memory.\n- They expected music to help participants recall word lists.\n- Participants who studied in silence actually recalled more words.\n- The silence advantage was strongest with instrumental music playing.\n\nThe student wants to emphasize the surprising outcome of the experiment. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Researchers tested whether background music improves memory.",
-      "The silence advantage was strongest when instrumental music was playing.",
+      "Researchers tested whether background music improves memory for word lists.",
+      "The silence advantage over music was strongest when instrumental music was playing.",
       "Although the researchers expected music to aid recall, participants who studied in silence remembered more words.",
-      "The researchers expected background music to help participants recall word lists."
+      "The researchers expected background music to help participants recall word lists better than silence."
     ],
     "correctAnswer": 2,
     "explanation": "The surprise lies in the gap between expectation and result. Only the choice contrasting the expectation with the opposite finding emphasizes the surprising outcome; the others state the setup or a detail.",
@@ -2411,13 +2411,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 160,
     "question": "A student took the following notes:\n- In the 1930s, poor farming practices stripped the Great Plains of native grasses.\n- A severe drought then struck the region.\n- Without deep roots to hold the soil, winds lifted it into massive dust storms.\n- The period became known as the Dust Bowl.\n\nThe student wants to emphasize what caused the dust storms. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "The 1930s Dust Bowl was a period of massive dust storms on the Great Plains.",
-      "A severe drought struck the Great Plains during the 1930s.",
-      "Because poor farming had stripped away the native grasses that held the soil, winds were able to lift it into massive dust storms.",
+      "A severe drought struck the Great Plains during the 1930s, a period later known as the Dust Bowl.",
+      "The Great Plains lost much of its native grass cover in the 1930s because of poor farming practices.",
+      "Because poor farming had stripped away the grasses that held the soil, winds could lift it into massive dust storms.",
       "The Great Plains lost much of its native grass cover in the 1930s."
     ],
     "correctAnswer": 2,
-    "explanation": "The goal is to emphasize the cause of the storms. Only the choice using \"Because\" to link the loss of soil-anchoring grasses to the storms conveys causation; the others state facts without connecting cause and effect.",
+    "explanation": "The goal is to emphasize the cause of the storms. Only the choice using \"Because\" to link the loss of soil-anchoring grasses to the storms conveys that causation. The drought statement never connects to the storms, and the two grass-cover statements never mention the storms, even the one that explains why the grass disappeared.",
     "difficulty": "hard",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2442,9 +2442,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "A student took the following notes about the human body:\n- The kidneys are two bean-shaped organs.\n- They are located just below the rib cage.\n- They filter waste products out of the blood.\n- The filtered waste leaves the body as urine.\n\nThe student wants to explain the primary function of the kidneys. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The kidneys are two bean-shaped organs located just below the rib cage.",
-      "The kidneys filter waste products out of the blood, which then leaves the body as urine.",
-      "The kidneys are located just below the rib cage.",
-      "Waste eventually leaves the body as urine."
+      "The kidneys filter waste out of the blood, and that waste leaves the body as urine.",
+      "The kidneys, located just below the rib cage, are shaped like two beans.",
+      "Waste products eventually leave the body in the form of urine."
     ],
     "correctAnswer": 1,
     "explanation": "The primary function is filtering waste from the blood. Only the choice describing that filtering process explains what the kidneys do; the others describe shape, location, or a downstream detail.",
@@ -2624,7 +2624,7 @@ const allQuestions: SatRwQuestion[] = [
       "Some baobabs live for more than 1,000 years, and local communities use the tree's fruit, bark, and leaves.",
       "The baobab stores water in its trunk, one of many adaptations that trees have evolved over time.",
       "The baobab, a long-lived tree native to Africa, Madagascar, and Australia, can store up to 120,000 liters of water in its trunk.",
-      "Because it can store up to 120,000 liters of water, the baobab is native to three continents."
+      "Because it can store up to 120,000 liters of water in its trunk, the baobab is native to three continents."
     ],
     "correctAnswer": 2,
     "explanation": "The goal is to introduce the tree to people unfamiliar with it, so the best choice identifies what it is and where it grows and adds a striking fact. The other choices assume familiarity, add an unsupported claim, or invent a false cause.",
@@ -2651,9 +2651,9 @@ const allQuestions: SatRwQuestion[] = [
     "id": 176,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Boiling water kills most microorganisms by heating it to 100 degrees Celsius.\n- Boiling requires a heat source and fuel.\n- Chlorination adds small amounts of chlorine to water.\n- Chlorination leaves a residual that keeps water safe during storage.\n- Both methods are widely used to make water drinkable.\n\nThe student wants to emphasize a distinction between the two methods. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Both boiling and chlorination are widely used methods for making water drinkable.",
-      "Boiling water kills most microorganisms, and adding chlorine to water does the same.",
-      "Chlorination adds chlorine to water, which keeps the water safe even after it has been boiled.",
+      "Both boiling and chlorination are widely used methods for making water safe and drinkable.",
+      "Boiling water kills most microorganisms at 100 degrees Celsius, and adding chlorine to water does the same.",
+      "Chlorination adds small amounts of chlorine to water, which keeps the water safe even after it has been boiled.",
       "Unlike boiling, which requires fuel and offers no lasting protection, chlorination leaves a residual that keeps stored water safe."
     ],
     "correctAnswer": 3,
@@ -2682,9 +2682,9 @@ const allQuestions: SatRwQuestion[] = [
     "question": "While researching a topic, a student has taken the following notes:\n\n- Tardigrades are microscopic animals often called water bears.\n- Scientists long assumed that complex animals could not survive the vacuum of space.\n- In a 2007 experiment, tardigrades were exposed to open space for 10 days.\n- Many of the tardigrades survived and later reproduced.\n- Most were also exposed to high levels of solar radiation.\n\nThe student wants to emphasize why the 2007 result surprised researchers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Tardigrades, microscopic animals often called water bears, were exposed to open space for 10 days in 2007.",
-      "After being exposed to open space for 10 days, many of the tardigrades survived and later reproduced.",
-      "Because scientists had assumed that complex animals could not survive the vacuum of space, the tardigrades' survival after 10 days in open space was unexpected.",
-      "The tardigrades were exposed both to the vacuum of space and to high levels of solar radiation."
+      "After being exposed to open space for 10 days in 2007, many of the tardigrades survived and later reproduced.",
+      "Because scientists had assumed complex animals could not survive the vacuum of space, the tardigrades' survival was unexpected.",
+      "The tardigrades were exposed both to the vacuum of space and to high levels of solar radiation for 10 days in 2007."
     ],
     "correctAnswer": 2,
     "explanation": "The result surprised researchers because it defied a prior assumption, so the best choice pairs that assumption with the survival. The others report the event or the conditions without explaining why it was unexpected.",
@@ -2696,8 +2696,8 @@ const allQuestions: SatRwQuestion[] = [
     "id": 179,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Dendrochronology is the study of tree rings to date past events.\n- Each ring represents one year of a tree's growth.\n- Ring width varies with rainfall and temperature.\n- Researchers used dendrochronology to date the timbers in a medieval cathedral.\n- The timbers were felled around the year 1230.\n\nThe student wants to introduce dendrochronology to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "Dendrochronology, the study of the annual rings that trees form as they grow, lets researchers date past events, such as the felling of a medieval cathedral's timbers.",
-      "The timbers of the medieval cathedral were felled around the year 1230.",
+      "Dendrochronology, the study of tree rings to date past events, has been used to date a medieval cathedral's timbers.",
+      "The timbers of a medieval cathedral, dated using tree rings, were felled around the year 1230.",
       "Because ring width varies with rainfall and temperature, each ring represents a single year of a tree's growth.",
       "Researchers used dendrochronology to date the timbers of a medieval cathedral to around the year 1230."
     ],
@@ -2713,7 +2713,7 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "Both Hokusai and Hiroshige made Japanese woodblock prints that influenced later European painters.",
       "Hokusai and Hiroshige were both active in the 19th century, when Japanese woodblock printing flourished.",
-      "Hiroshige, like Hokusai, exaggerated natural forms for dramatic effect in his prints.",
+      "Hiroshige, like Hokusai, often exaggerated natural forms for dramatic effect in his woodblock prints.",
       "Whereas Hokusai often exaggerated natural forms for dramatic effect, Hiroshige favored calm, atmospheric depictions of everyday scenes."
     ],
     "correctAnswer": 3,
@@ -2741,10 +2741,10 @@ const allQuestions: SatRwQuestion[] = [
     "id": 182,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Engineers tested a new self-healing concrete containing dormant bacteria.\n- When cracks let in water, the bacteria activate and produce limestone.\n- The limestone seals the cracks before they can widen.\n- In trials, treated samples sealed cracks up to 0.8 millimeters wide.\n- Untreated concrete cracks often require costly manual repair.\n\nThe student wants to emphasize the significance of the finding for future construction. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
-      "By sealing cracks on its own, the self-healing concrete could reduce the costly manual repairs that ordinary concrete requires, making it promising for future construction.",
+      "By sealing its own cracks, self-healing concrete could reduce costly manual repairs, making it promising for future construction.",
       "The self-healing concrete contains dormant bacteria that activate when cracks let water into the material.",
-      "In trials, the treated samples sealed cracks that were up to 0.8 millimeters wide.",
-      "Untreated concrete cracks often require repairs that must be done by hand."
+      "In trials, the treated samples of self-healing concrete sealed cracks that were up to 0.8 millimeters wide.",
+      "Untreated concrete cracks often require manual repairs, which can be costly for builders."
     ],
     "correctAnswer": 0,
     "explanation": "The goal is to emphasize significance for future construction, and only this choice ties the self-sealing property to reduced repair costs. The others describe the mechanism, report a trial result, or provide background.",
@@ -2787,12 +2787,12 @@ const allQuestions: SatRwQuestion[] = [
     "question": "While studying two species of frogs, a student took these notes:\n- The red-eyed tree frog is active mainly at night.\n- The poison dart frog is active mainly during the day.\n- Both species live in tropical rainforests.\n\nThe student wants to emphasize a difference between the two frog species. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
       "Both the red-eyed tree frog and the poison dart frog live in tropical rainforests.",
-      "The poison dart frog is active mainly during the day.",
-      "The red-eyed tree frog and the poison dart frog are both frogs.",
+      "The poison dart frog is active mainly during the day in tropical rainforests.",
+      "The red-eyed tree frog and the poison dart frog are both frogs that live in rainforests.",
       "The red-eyed tree frog is active mainly at night, whereas the poison dart frog is active mainly during the day."
     ],
     "correctAnswer": 3,
-    "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts one frog's nighttime activity with the other's daytime activity. The first states a similarity, the second gives a single fact, and the third is a generic similarity.",
+    "explanation": "The goal is to emphasize a DIFFERENCE; only the choice using \"whereas\" contrasts one frog's nighttime activity with the other's daytime activity. The shared-rainforest statement is a similarity, the poison dart frog sentence gives a single fact, and the \"both frogs\" statement is a generic similarity.",
     "difficulty": "easy",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2847,12 +2847,12 @@ const allQuestions: SatRwQuestion[] = [
     "question": "A student researching two lakes took these notes:\n- Lake Baikal is located in Russia.\n- Lake Tanganyika is located in Africa.\n- Both lakes are among the deepest freshwater lakes on Earth.\n- Both lakes are home to species found nowhere else.\n\nThe student wants to emphasize a similarity between the two lakes. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
       "Lake Baikal is located in Russia, while Lake Tanganyika is located in Africa.",
-      "Lake Baikal is located in Russia.",
+      "Lake Baikal, one of the deepest freshwater lakes, is located in Russia.",
       "Like Lake Baikal, Lake Tanganyika is home to species found nowhere else on Earth.",
       "Lake Tanganyika, unlike Lake Baikal, is located in Africa."
     ],
     "correctAnswer": 2,
-    "explanation": "The goal is to emphasize a SIMILARITY; only the third choice presents a shared trait, using 'Like' to link both lakes' unique species. The first and fourth stress differences in location, and the second states a single fact.",
+    "explanation": "The goal is to emphasize a SIMILARITY; only the choice using 'Like' presents a shared trait, linking both lakes' unique species. The two statements about Russia and Africa stress a difference in location, and the Lake Baikal sentence states facts about a single lake.",
     "difficulty": "medium",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2861,13 +2861,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 190,
     "question": "A student took these notes about a recent study:\n- Researchers studied how sleep affects memory.\n- Participants who slept eight hours recalled 40 percent more words than those who stayed awake.\n- The study was published in 2022.\n\nThe student wants to present the study's main finding to an audience unfamiliar with the research. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
-      "A 2022 study found that participants who slept eight hours recalled 40 percent more words than those who stayed awake.",
-      "The study was published in 2022.",
-      "Researchers studied how sleep affects memory.",
-      "Some participants stayed awake instead of sleeping."
+      "A 2022 study found that people who slept eight hours recalled 40 percent more words than those who stayed awake.",
+      "The study, which examined how sleep affects memory, was published in 2022.",
+      "Researchers studied how sleep affects memory by testing participants' recall of words.",
+      "Some participants stayed awake instead of sleeping eight hours before the recall test."
     ],
     "correctAnswer": 0,
-    "explanation": "To present the finding to an unfamiliar audience, the choice must state the actual result clearly; the first choice reports the 40 percent difference. The second gives only the date, the third names the topic without the finding, and the fourth is an incidental detail.",
+    "explanation": "To present the finding to an unfamiliar audience, the choice must state the actual result clearly; only the choice reporting the 40 percent difference does so. The publication-date statement gives only the topic and year, the description of the research names the topic and method without the finding, and the note about participants staying awake is an incidental detail.",
     "difficulty": "medium",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2876,13 +2876,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 191,
     "question": "While researching how glass bottles are recycled, a student took these notes:\n- Collected bottles are first sorted by color.\n- The sorted glass is then crushed into small pieces called cullet.\n- The cullet is melted in a furnace.\n- The molten glass is shaped into new bottles.\n\nThe student wants to describe what happens to the glass immediately after it is sorted by color. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
-      "The glass is melted in a furnace and shaped into new bottles.",
+      "After being sorted, the glass is melted in a furnace and shaped into new bottles.",
       "After being sorted by color, the glass is crushed into small pieces called cullet.",
-      "Collected bottles are first sorted by color.",
-      "The molten glass is shaped into new bottles."
+      "Collected bottles are first sorted by color before any other step.",
+      "The molten glass from the furnace is shaped into new bottles."
     ],
     "correctAnswer": 1,
-    "explanation": "The goal asks for the step immediately after sorting; the notes show that sorted glass is next crushed into cullet, which the second choice states. The first and fourth describe later steps, and the third restates the sorting step itself.",
+    "explanation": "The goal asks for the step immediately after sorting; the notes show that sorted glass is next crushed into cullet, which only the cullet choice states. Melting and shaping are later steps (skipping the crushing), and the sorting statement restates the sorting step itself.",
     "difficulty": "medium",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2936,13 +2936,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 195,
     "question": "A student studying renewable energy took these notes:\n- Wind farms generate electricity without burning fuel.\n- Solar arrays generate electricity without burning fuel.\n- Hydroelectric dams generate electricity without burning fuel.\n\nThe student wants to make a generalization about these three energy sources. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
-      "Wind farms generate electricity without burning fuel.",
+      "Wind farms and solar arrays generate electricity without burning fuel.",
       "Wind, solar, and hydroelectric power all generate electricity without burning fuel.",
-      "Hydroelectric dams rely on flowing water to spin turbines.",
-      "Solar arrays generate electricity without burning fuel."
+      "Hydroelectric dams rely on flowing water, not burning fuel, to spin turbines.",
+      "Solar arrays generate electricity without burning fuel, unlike some other sources."
     ],
     "correctAnswer": 1,
-    "explanation": "A generalization must draw one broad statement covering all three sources; the second choice unites them under the shared trait of generating power without burning fuel. The first and fourth describe only a single source, and the third adds a detail not in the notes.",
+    "explanation": "A generalization must draw one broad statement covering all three sources; only the choice naming wind, solar, and hydroelectric power unites them under the shared trait of generating power without burning fuel. The others cover only one or two sources, and the turbine detail is not in the notes.",
     "difficulty": "hard",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2951,13 +2951,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 196,
     "question": "While researching a coastal town, a student took these notes:\n- The town's population grew rapidly between 2000 and 2020.\n- A large technology company opened its headquarters there in 2001.\n- The company employs more than ten thousand workers.\n- Many workers moved to the town to be near their jobs.\n\nThe student wants to explain why the town's population grew. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
-      "The town's population grew rapidly between 2000 and 2020.",
-      "A large technology company in the town employs more than ten thousand workers.",
-      "The town's population grew rapidly because a technology company opened its headquarters there, drawing thousands of workers to the area.",
-      "The town is located on the coast."
+      "The coastal town's population grew rapidly in the two decades between 2000 and 2020.",
+      "A large technology company that employs more than ten thousand workers opened its headquarters in the town in 2001.",
+      "The town's population grew rapidly because a technology company opened its headquarters there, drawing thousands of workers.",
+      "The town, located on the coast, is home to many workers who live near their jobs."
     ],
     "correctAnswer": 2,
-    "explanation": "To explain the cause, the choice must link the growth to a reason; the third connects the population increase to the company that drew workers in. The first states the effect without a cause, the second gives a fact without linking it to growth, and the fourth is irrelevant.",
+    "explanation": "To explain the cause, the choice must link the growth to a reason; only the choice using \"because\" connects the population increase to the company that drew workers in. The growth statement gives the effect without a cause, the company statement gives facts without linking them to growth, and the coastal-location statement never mentions growth.",
     "difficulty": "hard",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2968,11 +2968,11 @@ const allQuestions: SatRwQuestion[] = [
     "options": [
       "Both Egyptian hieroglyphs and cuneiform were used more than three thousand years ago.",
       "Both writing systems have eventually been deciphered by modern scholars.",
-      "Egyptian hieroglyphs and cuneiform are both ancient writing systems.",
+      "Egyptian hieroglyphs and cuneiform are both ancient writing systems deciphered by modern scholars.",
       "Whereas Egyptian hieroglyphs used pictorial symbols, cuneiform was formed by pressing a wedge-shaped stylus into clay."
     ],
     "correctAnswer": 3,
-    "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts the pictorial symbols of hieroglyphs with the wedge-pressed technique of cuneiform. The first three all state similarities shared by both systems.",
+    "explanation": "The goal is to emphasize a DIFFERENCE; only the choice using \"Whereas\" contrasts the pictorial symbols of hieroglyphs with the wedge-pressed technique of cuneiform. The other three all state similarities shared by both systems.",
     "difficulty": "hard",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"
@@ -2981,13 +2981,13 @@ const allQuestions: SatRwQuestion[] = [
     "id": 198,
     "question": "A student took these notes about an experiment:\n- Biologists tested whether background music affects plant growth.\n- One group of bean plants was exposed to classical music for six hours a day.\n- A second group grew in silence.\n- After eight weeks, the two groups showed no measurable difference in height.\n\nThe student wants to present the experiment's conclusion to readers unfamiliar with it. Which choice most effectively uses the notes to accomplish this goal?",
     "options": [
-      "In an experiment testing whether background music affects plant growth, bean plants exposed to classical music grew no taller than those grown in silence.",
-      "Biologists tested whether background music affects plant growth.",
+      "In an experiment on whether music affects plant growth, bean plants exposed to classical music grew no taller than those grown in silence.",
+      "Biologists tested whether background music such as classical music affects the growth of bean plants.",
       "One group of bean plants was exposed to classical music for six hours a day.",
-      "The experiment lasted eight weeks."
+      "The experiment lasted eight weeks, after which the heights of the two groups of bean plants were measured."
     ],
     "correctAnswer": 0,
-    "explanation": "To present the conclusion to an unfamiliar audience, the choice must state the outcome; the first reports that the music-exposed plants grew no taller than the silent ones. The second gives only the question, the third a setup detail, and the fourth a minor fact.",
+    "explanation": "To present the conclusion to an unfamiliar audience, the choice must state the outcome; only the choice reporting that the music-exposed plants grew no taller than the silent ones does so. The others give only the research question, a setup detail, or the timeline.",
     "difficulty": "hard",
     "domain": "expression",
     "skill": "Rhetorical Synthesis"

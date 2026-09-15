@@ -53,8 +53,6 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
   const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
-  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
-  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -543,10 +541,16 @@ const questionPool: QuestionTemplate[] = [
       // Conditional reasoning from a two-way table, asked in words (the SAT's
       // form) — replaced an independent-events product question per the
       // 2026-08-17 congruence audit (SAT-CONTENT-AUDIT.md).
-      const a = randInt(12, 24)
-      const b = randInt(6, 18)
-      const c = randInt(8, 16)
-      const d = randInt(12, 24)
+      // Resample until all four fractions differ in VALUE: when b*c === a*d the
+      // "passed overall" distractor equals the conditional answer, and b === a
+      // made two options identical.
+      let a = 0, b = 0, c = 0, d = 0
+      for (;;) {
+        a = randInt(12, 24); b = randInt(6, 18); c = randInt(8, 16); d = randInt(12, 24)
+        const t = a + b + c + d
+        const vals = [a / (a + b), a / t, (a + c) / t, b / (a + b)]
+        if (new Set(vals.map(v => v.toFixed(9))).size === 4) break
+      }
       const correct = `$\\frac{${a}}{${a + b}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$\\frac{${a}}{${a + b + c + d}}$`,

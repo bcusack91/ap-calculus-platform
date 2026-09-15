@@ -31,6 +31,8 @@ export interface ReviewQuestion {
   passage?: DiagnosticPassage | string
   /** MCAT figure-analysis questions carry the chart/table they ask about. */
   visual?: { dataTable?: DiagnosticDataTable; figure?: DiagnosticFigure }
+  /** SAT grid-in (typed numeric answer) key; such questions have no options. */
+  gridIn?: { correctAnswer: number; acceptableAnswers?: number[] }
 }
 
 function getCorrectAnswer(q: ReviewQuestion): number {
@@ -202,6 +204,18 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
                         <DiagnosticPassageContent passage={q.passage} />
                       </details>
                     )}
+                    {/* SAT diagnostics store the passage as plain text. */}
+                    {typeof q.passage === 'string' && q.passage.trim() && (
+                      <details open className="mb-3 rounded-lg border border-cyan-200 bg-cyan-50 p-3 dark:border-cyan-800 dark:bg-cyan-900/20">
+                        <summary className="cursor-pointer text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">
+                          Passage
+                        </summary>
+                        <p
+                          className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200"
+                          dangerouslySetInnerHTML={{ __html: katexReady ? renderLatex(q.passage) : q.passage }}
+                        />
+                      </details>
+                    )}
                     {q.visual && (q.visual.figure || q.visual.dataTable) && (
                       <div className="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3 dark:border-emerald-800 dark:bg-emerald-900/20">
                         <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Figure</p>
@@ -239,6 +253,12 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
                         )
                       })}
                     </div>
+
+                    {q.gridIn && (
+                      <p className="mt-2 rounded-lg border border-green-300 bg-green-50 px-3 py-2 text-sm text-green-800 dark:border-green-700 dark:bg-green-900/30 dark:text-green-300">
+                        Grid-in · correct answer: <span className="font-semibold">{q.gridIn.correctAnswer}</span>
+                      </p>
+                    )}
 
                     {/* Explanation */}
                     <div className="mt-3 rounded-lg bg-blue-50 p-3 dark:bg-blue-900/20">

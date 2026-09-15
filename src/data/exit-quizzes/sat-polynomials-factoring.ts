@@ -7,7 +7,7 @@ interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 
 function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
 function randNonZero(a: number, b: number) { let v = 0; while (v === 0) v = randInt(a, b); return v }
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const fillers = ['None of the above', 'Cannot be determined', 'None of these']; for (const f of fillers) { if (u.length >= 3) break; if (f !== c && !u.includes(f)) u.push(f) } const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
+function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
 function makeOptions(c: number, s = 3, min?: number) { const d = new Set<number>(); while (d.size < 3) { const v = c + randInt(-s * 2, s * 2); if (v !== c && (min === undefined || v >= min)) d.add(v) }; const all = shuffle([c, ...d]); return { options: all.map(String), correctIndex: all.indexOf(c) } }
 function sign(n: number) { return n >= 0 ? `+ ${n}` : `- ${Math.abs(n)}` }
 function coefStr(n: number) { return n === 1 ? '' : n === -1 ? '-' : `${n}` }

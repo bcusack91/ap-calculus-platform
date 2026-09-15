@@ -50,8 +50,6 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
   const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
-  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
-  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -95,7 +93,7 @@ const questionPool: QuestionTemplate[] = [
       while (fillerVals.size < 3) { const v = randInt(1, 30); if (v !== mode) fillerVals.add(v) }
       const vals = [mode, mode, mode, ...fillerVals]
       const correct = `${mode}`
-      return { id: this.id, category: this.category, question: `Find the mode of: $${shuffle(vals).join(', ')}$.`, ...makeStringOptions(correct, [`${mode + 1}`, `${mode - 2}`, 'No mode']), explanation: `$${mode}$ appears 3 times (most frequent), so the mode is $${mode}$.` }
+      return { id: this.id, category: this.category, question: `Find the mode of: $${shuffle(vals).join(', ')}$.`, ...makeStringOptions(correct, [`${mode + 2}`, `${mode - 1}`, '3']), explanation: `$${mode}$ appears 3 times (most frequent), so the mode is $${mode}$.` }
     }
   },
   {
@@ -135,7 +133,7 @@ const questionPool: QuestionTemplate[] = [
       do { vals = Array.from({ length: 6 }, () => randInt(5, 25)).sort((a, b) => a - b) } while (vals[2] === vals[3])
       const median = (vals[2] + vals[3]) / 2
       const correct = `${median}`
-      return { id: this.id, category: this.category, question: `Find the median of this even-count set: $${vals.join(', ')}$.`, ...makeStringOptions(correct, [`${vals[2]}`, `${vals[3]}`, `${vals[2] - 1}`]), explanation: `For an even count, the median is the average of the two middle values: $\\frac{${vals[2]} + ${vals[3]}}{2} = ${median}$.` }
+      return { id: this.id, category: this.category, question: `Find the median of this even-count set: $${vals.join(', ')}$.`, ...makeStringOptions(correct, [median + 1, vals[2], median - 1, vals[3], median + 2, median - 2].map(String)), explanation: `For an even count, the median is the average of the two middle values: $\\frac{${vals[2]} + ${vals[3]}}{2} = ${median}$.` }
     }
   },
   {
@@ -145,7 +143,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const vals = [10, 20, 30, 40, 50, 200]
       const correct = 'The median is more resistant to outliers than the mean'
-      return { id: this.id, category: this.category, question: `Data: $${vals.join(', ')}$. The mean is $58.3$ but the median is $35$. Why the big difference?`, ...makeStringOptions(correct, ['The data set is too small', 'Mean and median always differ', 'The mode affects both']), explanation: 'The outlier (200) pulls the mean up significantly but barely affects the median.' }
+      return { id: this.id, category: this.category, question: `Data: $${vals.join(', ')}$. The mean is $58.3$ but the median is $35$. Why the big difference?`, ...makeStringOptions(correct, ['The data set is too small for the mean to be accurate', 'Mean and median always differ by a large amount', 'The mode pulls the mean and the median apart']), explanation: 'The outlier (200) pulls the mean up significantly but barely affects the median.' }
     }
   },
   {
@@ -164,8 +162,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'easy',
     generate() {
-      const correct = 'It measures the average distance of data points from the mean'
-      return { id: this.id, category: this.category, question: 'What does standard deviation measure?', ...makeStringOptions(correct, ['The maximum value in the data', 'The most frequent value', 'The range of the data']), explanation: 'Standard deviation quantifies how spread out data is from the mean.' }
+      const correct = 'How spread out the values are from the mean'
+      return { id: this.id, category: this.category, question: 'What does standard deviation measure?', ...makeStringOptions(correct, ['The most frequently occurring data value', 'The gap between the maximum and minimum', 'The middle value of the ordered data']), explanation: 'Standard deviation quantifies how spread out data is from the mean.' }
     }
   },
   {
@@ -173,8 +171,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'Set B (values more spread out from mean)'
-      return { id: this.id, category: this.category, question: 'Set A: $\\{48, 50, 52\\}$. Set B: $\\{30, 50, 70\\}$. Which has greater standard deviation?', ...makeStringOptions(correct, ['Set A', 'They are equal', 'Cannot determine']), explanation: 'Set B has values farther from the mean (50), so its standard deviation is larger.' }
+      const correct = 'Set B, whose values are farther from 50'
+      return { id: this.id, category: this.category, question: 'Set A: $\\{48, 50, 52\\}$. Set B: $\\{30, 50, 70\\}$. Which has greater standard deviation?', ...makeStringOptions(correct, ['Set A, whose values are closer to 50', 'Neither, since both have mean 50', 'Neither, since both have 3 values']), explanation: 'Set B has values farther from the mean (50), so its standard deviation is larger.' }
     }
   },
   {
@@ -193,8 +191,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'Adding the same constant to every value does NOT change the standard deviation'
-      return { id: this.id, category: this.category, question: 'If 10 is added to every data point, what happens to the standard deviation?', ...makeStringOptions(correct, ['It increases by 10', 'It doubles', 'It becomes 0']), explanation: 'Adding a constant shifts all values equally, so spread (standard deviation) stays the same.' }
+      const correct = 'It stays the same'
+      return { id: this.id, category: this.category, question: 'If 10 is added to every data point, what happens to the standard deviation?', ...makeStringOptions(correct, ['It increases by 10', 'It is multiplied by 10', 'It increases by 100']), explanation: 'Adding a constant shifts all values equally, so spread (standard deviation) stays the same.' }
     }
   },
   {
@@ -203,8 +201,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const k = randInt(2, 5)
-      const correct = `The standard deviation is multiplied by ${k}`
-      return { id: this.id, category: this.category, question: `If every data value is multiplied by $${k}$, what happens to the standard deviation?`, ...makeStringOptions(correct, ['It stays the same', `It is multiplied by ${k * k}`, 'It becomes 0']), explanation: `Multiplying all values by $${k}$ multiplies the SD by $|${k}| = ${k}$.` }
+      const correct = `It is multiplied by ${k}`
+      return { id: this.id, category: this.category, question: `If every data value is multiplied by $${k}$, what happens to the standard deviation?`, ...makeStringOptions(correct, ['It stays exactly the same', `It is multiplied by ${k} squared`, `It increases by ${k} units`]), explanation: `Multiplying all values by $${k}$ multiplies the SD by $|${k}| = ${k}$.` }
     }
   },
   {
@@ -212,8 +210,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'Class A — its scores are more spread out from the mean'
-      return { id: this.id, category: this.category, question: 'Two classes took the same test and had the same mean score. Class A\'s scores ranged from 55 to 98; Class B\'s ranged from 74 to 82. Which class has the larger standard deviation?', ...makeStringOptions(correct, ['Class B — its range is smaller', 'Both are the same because the means are equal', 'It cannot be determined without the scores']), explanation: 'Standard deviation measures spread around the mean. A wider spread of scores (55–98 vs 74–82) means a larger standard deviation.' }
+      const correct = 'Class A — its scores are more spread out'
+      return { id: this.id, category: this.category, question: 'Two classes took the same test and had the same mean score. Class A\'s scores ranged from 55 to 98; Class B\'s ranged from 74 to 82. Which class has the larger standard deviation?', ...makeStringOptions(correct, ['Class B — its scores are more tightly clustered', 'Neither — equal means give equal standard deviations', 'Class B — its scores have the smaller range']), explanation: 'Standard deviation measures spread around the mean. A wider spread of scores (55–98 vs 74–82) means a larger standard deviation.' }
     }
   },
   {
@@ -231,8 +229,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'The standard deviation decreases — values cluster closer to the mean'
-      return { id: this.id, category: this.category, question: 'A data set is $10, 20, 30, 40, 50$. Each value is replaced so the set becomes $28, 29, 30, 31, 32$ (same mean). What happens to the standard deviation?', ...makeStringOptions(correct, ['It increases', 'It stays the same because the mean is unchanged', 'It cannot be compared without computing it']), explanation: 'The empirical rule: about 68% of data lies within 1 SD of the mean, 95% within 2 SDs, and 99.7% within 3 SDs.' }
+      const correct = 'It decreases, since values cluster near the mean'
+      return { id: this.id, category: this.category, question: 'A data set is $10, 20, 30, 40, 50$. Each value is replaced so the set becomes $28, 29, 30, 31, 32$ (same mean). What happens to the standard deviation?', ...makeStringOptions(correct, ['It increases, since the values are closer together', 'It stays the same, since the mean has not changed', 'It stays the same, since there are still 5 values']), explanation: 'The new values all lie within 2 of the mean 30, while the original values were up to 20 away. Less spread around the mean means a smaller standard deviation; an unchanged mean or count does not keep the spread the same.' }
     }
   },
   {
@@ -279,7 +277,7 @@ const questionPool: QuestionTemplate[] = [
       // Replaced independence-formula item per 2026-08-17 congruence audit —
       // the SAT asks conditional/joint questions in words from tables.
       const correct = 'Divide club-member seniors by the total number of seniors'
-      return { id: this.id, category: this.category, question: 'A two-way table shows class year (junior/senior) versus club membership. To find the probability that a randomly selected SENIOR is a club member, you should:', ...makeStringOptions(correct, ['Divide club-member seniors by the total of ALL students', 'Add the senior total and the club total', 'Divide the club total by the junior total']), explanation: 'The condition "a senior is selected" restricts you to the senior row: club-member seniors over total seniors.' }
+      return { id: this.id, category: this.category, question: 'A two-way table shows class year (junior/senior) versus club membership. To find the probability that a randomly selected SENIOR is a club member, you should:', ...makeStringOptions(correct, ['Divide club-member seniors by the total of ALL students', 'Divide club-member seniors by all club members', 'Divide the club total by the total number of seniors']), explanation: 'The condition "a senior is selected" restricts you to the senior row: club-member seniors over total seniors.' }
     }
   },
   {
@@ -324,8 +322,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       // Replaced expected-value item (not on the SAT) with margin of error
       // (which is) per 2026-08-17 congruence audit.
-      const correct = 'An interval of plausible values for the true population percentage'
-      return { id: this.id, category: this.category, question: 'A poll based on a random sample reports 54% support with a margin of error of 3 percentage points. The margin of error describes:', ...makeStringOptions(correct, ['The percentage of people who answered incorrectly', 'Proof that support is exactly 54%', 'The percentage of the population that was not surveyed']), explanation: 'Margin of error gives the plausible range for the population value — here, roughly 51% to 57%.' }
+      const correct = 'A range of plausible values for the population percentage'
+      return { id: this.id, category: this.category, question: 'A poll based on a random sample reports 54% support with a margin of error of 3 percentage points. The margin of error describes:', ...makeStringOptions(correct, ['The percentage of the sample who answered incorrectly', 'A guarantee that support is between 51% and 57%', 'The share of the population the poll did not survey']), explanation: 'Margin of error gives the plausible range for the population value — here, roughly 51% to 57%.' }
     }
   },
   {
@@ -334,7 +332,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const correct = 'Positive linear — as x increases, y also increases'
-      return { id: this.id, category: this.category, question: 'A scatterplot shows points rising from left to right in a roughly straight pattern. Describe the association.', ...makeStringOptions(correct, ['Negative linear', 'No association', 'Quadratic']), explanation: 'Points rising left to right indicate a positive linear association.' }
+      return { id: this.id, category: this.category, question: 'A scatterplot shows points rising from left to right in a roughly straight pattern. Describe the association.', ...makeStringOptions(correct, ['Negative linear — as x increases, y decreases', 'No association — y does not change with x', 'Nonlinear — y rises, then falls as x increases']), explanation: 'Points rising left to right indicate a positive linear association.' }
     }
   },
   {
@@ -356,7 +354,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const r = randInt(85, 98) / 100
       const correct = 'Strong positive correlation'
-      return { id: this.id, category: this.category, question: `$r = ${r}$. Describe the correlation.`, ...makeStringOptions(correct, ['Weak positive', 'Strong negative', 'No correlation']), explanation: `$r$ close to 1 ($${r}$) indicates strong positive correlation.` }
+      return { id: this.id, category: this.category, question: `$r = ${r}$. Describe the correlation.`, ...makeStringOptions(correct, ['A fairly weak positive correlation', 'A strong negative correlation', 'No correlation at all between them']), explanation: `$r$ close to 1 ($${r}$) indicates strong positive correlation.` }
     }
   },
   {
@@ -364,8 +362,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = '$r^2$ tells the percentage of variation in $y$ explained by $x$'
-      return { id: this.id, category: this.category, question: 'What does the coefficient of determination ($r^2$) represent?', ...makeStringOptions(correct, ['The slope of the regression line', 'The y-intercept', 'The number of data points']), explanation: '$r^2$ indicates what fraction of the dependent variable variation is explained by the model.' }
+      const correct = 'The share of variation in $y$ explained by $x$'
+      return { id: this.id, category: this.category, question: 'What does the coefficient of determination ($r^2$) represent?', ...makeStringOptions(correct, ['The slope of the fitted regression line', 'The predicted value of $y$ when $x$ is zero', 'The number of data points used in the model']), explanation: '$r^2$ indicates what fraction of the dependent variable variation is explained by the model.' }
     }
   },
   {
@@ -385,7 +383,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const correct = 'It is an outlier — far from the general pattern'
-      return { id: this.id, category: this.category, question: 'A point in a scatterplot is very far from the line of best fit. What is this point called?', ...makeStringOptions(correct, ['The y-intercept', 'The slope', 'A normal point']), explanation: 'Points far from the regression line are outliers or influential points.' }
+      return { id: this.id, category: this.category, question: 'A point in a scatterplot is very far from the line of best fit. What is this point called?', ...makeStringOptions(correct, ['It is the y-intercept of the line of best fit', 'It is a point with a residual of zero', 'It is the median point of the scatterplot']), explanation: 'Points far from the regression line are outliers or influential points.' }
     }
   },
   {
@@ -393,8 +391,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = 'Extrapolation — predicting beyond the range of the data — is unreliable'
-      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['Because the line is always wrong', 'Because r = 0 outside the data', 'Because the slope changes sign']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
+      const correct = 'The pattern may not continue outside the observed data'
+      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['The line is always wrong far from the origin', 'The correlation $r$ is zero outside the data range', 'The slope reverses sign outside the observed data']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
     }
   },
   {
@@ -402,8 +400,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = 'The slope represents the predicted change in $y$ for each 1-unit increase in $x$'
-      return { id: this.id, category: this.category, question: 'In a regression equation $y = mx + b$, what does the slope $m$ represent in context?', ...makeStringOptions(correct, ['The starting value of y', 'The total of all y-values', 'The average of x and y']), explanation: 'The slope is the rate of change — for every 1-unit increase in $x$, $y$ changes by $m$ units on average.' }
+      const correct = 'The predicted change in $y$ per 1-unit increase in $x$'
+      return { id: this.id, category: this.category, question: 'In a regression equation $y = mx + b$, what does the slope $m$ represent in context?', ...makeStringOptions(correct, ['The predicted value of $y$ when $x$ equals zero', 'The predicted change in $x$ per unit change in $y$', 'The average of all the $x$ and $y$ values']), explanation: 'The slope is the rate of change — for every 1-unit increase in $x$, $y$ changes by $m$ units on average.' }
     }
   },
   {
@@ -450,7 +448,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'hard',
     generate() {
       const correct = 'No — both groups ordered coffee at the same 50% rate'
-      return { id: this.id, category: this.category, question: 'A table shows 30 of 60 morning customers and 45 of 90 evening customers ordered coffee. Do the data suggest an association between time of day and ordering coffee?', ...makeStringOptions(correct, ['Yes — more evening customers ordered coffee', 'Yes — the evening total is larger', 'Cannot be determined from a table']), explanation: 'Compare the RATES: morning 30/60 = 50%, evening 45/90 = 50%. Equal rates suggest NO association — raw counts alone mislead.' }
+      return { id: this.id, category: this.category, question: 'A table shows 30 of 60 morning customers and 45 of 90 evening customers ordered coffee. Do the data suggest an association between time of day and ordering coffee?', ...makeStringOptions(correct, ['Yes — more evening customers than morning ones ordered coffee', 'Yes — the evening group is larger than the morning group', 'No — a two-way table can never reveal any association']), explanation: 'Compare the RATES: morning 30/60 = 50%, evening 45/90 = 50%. Equal rates suggest NO association — raw counts alone mislead.' }
     }
   },
   {
@@ -472,7 +470,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const correct = '$\\frac{18}{120} = 15\\%$'
-      return { id: this.id, category: this.category, question: 'In a survey table, 18 of the 120 respondents are seniors who bike to school. What is the relative frequency of senior bikers among ALL respondents?', ...makeStringOptions(correct, ['$\\frac{18}{120} = 15\\%$ of the senior row only', '$18$', '$\\frac{120}{18}$']), explanation: 'Relative frequency among ALL respondents = cell over grand total: $\\frac{18}{120} = 15\\%$.' }
+      return { id: this.id, category: this.category, question: 'In a survey table, 18 of the 120 respondents are seniors who bike to school. What is the relative frequency of senior bikers among ALL respondents?', ...makeStringOptions(correct, ['$\\frac{18}{100} = 18\\%$', '$\\frac{18}{120} = 1.5\\%$', '$\\frac{12}{120} = 10\\%$']), explanation: 'Relative frequency among ALL respondents = cell over grand total: $\\frac{18}{120} = 15\\%$.' }
     }
   },
   {
@@ -480,13 +478,23 @@ const questionPool: QuestionTemplate[] = [
     category: 'Two-way Tables',
     difficulty: 'hard',
     generate() {
-      const a = randInt(10, 30); const b = randInt(10, 30); const c = randInt(10, 30); const d = randInt(10, 30)
-      const rowA = a + b; const rowB = c + d
-      const pAgivenRow1 = Math.round(a / rowA * 100)
-      const pAgivenRow2 = Math.round(c / rowB * 100)
-      const isAssoc = Math.abs(pAgivenRow1 - pAgivenRow2) > 10
-      const correct = isAssoc ? 'Yes, conditional probabilities differ significantly' : 'Possibly not — conditional probabilities are similar'
-      return { id: this.id, category: this.category, question: `In Row 1, ${pAgivenRow1}% of entries fall in Column 1; in Row 2, ${pAgivenRow2}% do. Do the data suggest an association between row and column?`, ...makeStringOptions(correct, ['No difference at all', 'Impossible to compare', 'Only with a chi-square test']), explanation: `A difference of $${Math.abs(pAgivenRow1 - pAgivenRow2)}$ percentage points ${isAssoc ? 'suggests' : 'may not strongly suggest'} an association.` }
+      // Only clear-cut gaps (>= 20 points or <= 3 points) so exactly one
+      // answer is defensible.
+      let pAgivenRow1 = 0; let pAgivenRow2 = 0; let gap = 0
+      do {
+        const a = randInt(10, 30); const b = randInt(10, 30); const c = randInt(10, 30); const d = randInt(10, 30)
+        pAgivenRow1 = Math.round(a / (a + b) * 100)
+        pAgivenRow2 = Math.round(c / (c + d) * 100)
+        gap = Math.abs(pAgivenRow1 - pAgivenRow2)
+      } while (!(gap >= 20 || gap <= 3))
+      const isAssoc = gap >= 20
+      const yesKey = 'Yes — the two row percentages are far apart'
+      const noKey = 'No — the two row percentages are nearly equal'
+      const correct = isAssoc ? yesKey : noKey
+      const others = isAssoc
+        ? [noKey, 'No — percentages cannot reveal an association', 'No — only raw counts can show an association']
+        : [yesKey, 'Yes — any gap in percentages proves an association', 'Yes — each row has a different number of entries']
+      return { id: this.id, category: this.category, question: `In Row 1, ${pAgivenRow1}% of entries fall in Column 1; in Row 2, ${pAgivenRow2}% do. Do the data suggest an association between row and column?`, ...makeStringOptions(correct, others), explanation: `Compare the row percentages: ${pAgivenRow1}% vs. ${pAgivenRow2}%, a gap of $${gap}$ percentage points. ${isAssoc ? 'A gap this large suggests an association.' : 'A gap this small suggests no association; row sizes and tiny differences do not change that.'}` }
     }
   },
   {
