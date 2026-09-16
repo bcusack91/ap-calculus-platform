@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { getActiveStudyContext } from '@/lib/study-context'
+import { PERSONAL_CONTEXT, resolveUnlockContexts } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { effectiveDailyLimits } from '@/lib/flashcard-daily-limits'
@@ -32,8 +32,9 @@ const LOCKED: FlashcardUnlockResult = {
  *
  * Nothing else unlocks cards: not diagnostic results, not partial lesson
  * progress. Call after exit-quiz submits and lesson-completion progress saves —
- * whichever half completes the pair fires the unlock. Idempotent; cards land in
- * the ACTIVE study context (class deck for class students).
+ * whichever half completes the pair fires the unlock. Idempotent; cards land
+ * in the decks `unlockTargetContexts` picks — personal, the topic's own course
+ * mode, and an active class deck — never another course's study mode.
  */
 export async function maybeUnlockFlashcards(
   userId: string,
@@ -119,31 +120,17 @@ export async function maybeUnlockFlashcards(
   }
   if (cardIds.length === 0) return LOCKED
 
-  const [context, user] = await Promise.all([
-    getActiveStudyContext(userId),
+  const courseSlug = topic.category?.course?.slug ?? null
+  // Which decks these cards belong in: always personal, the topic's OWN course
+  // mode when the student has it, plus an active class deck. Never a different
+  // course's mode — that mixed SAT cards into the MCAT deck and vice versa.
+  const [{ contexts, activeContext }, user] = await Promise.all([
+    resolveUnlockContexts(userId, courseSlug),
     prisma.user.findUnique({
       where: { id: userId },
-      select: { studyContext: true, flashcardNewPerDay: true },
+      select: { flashcardNewPerDay: true },
     }),
   ])
-
-  // Unlock into the active mode — and ALSO into the topic's course study mode
-  // when the student already has one (owner report: passed the SAT grammar
-  // exit quiz in Personal mode, then opened their "SAT Prep" course mode and
-  // found nothing — the unlock had landed only in the mode active at submit).
-  // A course mode "exists" if it's their stored mode or already holds cards.
-  const contexts = new Set([context])
-  const courseSlug = topic.category?.course?.slug
-  if (courseSlug) {
-    const courseKey = `course:${courseSlug}`
-    if (!contexts.has(courseKey)) {
-      const inUse = await prisma.flashcardProgress.findFirst({
-        where: { userId, context: courseKey },
-        select: { id: true },
-      })
-      if (user?.studyContext === courseKey || inUse) contexts.add(courseKey)
-    }
-  }
 
   const now = new Date()
   // New-card throttle: a topic unlock used to schedule its whole deck (often
@@ -158,6 +145,14 @@ export async function maybeUnlockFlashcards(
   // the normal SRS schedule.
   const { newPerDay } = effectiveDailyLimits(user)
   const DAY_MS = 24 * 60 * 60 * 1000
+  // The toast counts the deck the student will actually find these cards in:
+  // the active one when it's a target, else the topic's course deck.
+  const courseKey = courseSlug ? `course:${courseSlug}` : null
+  const reportContext = contexts.includes(activeContext)
+    ? activeContext
+    : courseKey && contexts.includes(courseKey)
+      ? courseKey
+      : PERSONAL_CONTEXT
   let newInActive = 0
   for (const ctx of contexts) {
     const res = await prisma.flashcardProgress.createMany({
@@ -174,11 +169,11 @@ export async function maybeUnlockFlashcards(
       })),
       skipDuplicates: true,
     })
-    // The result (toast copy etc.) describes the ACTIVE deck only.
-    if (ctx === context) newInActive = res.count
+    // The result (toast copy etc.) describes one deck — see reportContext.
+    if (ctx === reportContext) newInActive = res.count
   }
   const totalActive = await prisma.flashcardProgress.count({
-    where: { userId, context, flashcard: { topicId: topic.id } },
+    where: { userId, context: reportContext, flashcard: { topicId: topic.id } },
   })
 
   return {

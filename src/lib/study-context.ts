@@ -68,6 +68,64 @@ export async function validateContext(userId: string, key: string): Promise<bool
   return false
 }
 
+/** The course slug behind a `course:<slug>` key (null for other kinds). */
+export function courseSlugOfContext(key: string): string | null {
+  return isCourseContext(key) ? key.slice('course:'.length) || null : null
+}
+
+/**
+ * Which decks a topic's cards belong in.
+ *
+ * A `course:<slug>` deck holds ONLY that course's cards: studying SAT while
+ * "MCAT Prep" was the active mode used to file SAT cards into the MCAT deck
+ * (and vice versa), because the unlock wrote into whatever mode was active.
+ * The rules now:
+ *   - `personal` ALWAYS — it is the "everything" deck (owner decision).
+ *   - the topic's OWN course mode, when the student has that mode.
+ *   - the active deck when it is a class deck (a classroom may legitimately
+ *     span courses) — never a different course's mode.
+ */
+export function unlockTargetContexts(opts: {
+  activeContext: string
+  topicCourseSlug?: string | null
+  hasTopicCourseMode?: boolean
+}): string[] {
+  const { activeContext, topicCourseSlug, hasTopicCourseMode } = opts
+  const targets = new Set<string>([PERSONAL_CONTEXT])
+  const topicCourseKey = topicCourseSlug ? `course:${topicCourseSlug}` : null
+  if (topicCourseKey && (hasTopicCourseMode || activeContext === topicCourseKey)) {
+    targets.add(topicCourseKey)
+  }
+  if (isClassContext(activeContext)) targets.add(activeContext)
+  return [...targets]
+}
+
+/**
+ * `unlockTargetContexts` with the two DB lookups it needs: the student's
+ * active mode, and whether they already have the topic's course mode (stored
+ * as their mode, or holding cards already).
+ */
+export async function resolveUnlockContexts(
+  userId: string,
+  topicCourseSlug: string | null | undefined,
+): Promise<{ contexts: string[]; activeContext: string }> {
+  const [activeContext, user] = await Promise.all([
+    getActiveStudyContext(userId),
+    prisma.user.findUnique({ where: { id: userId }, select: { studyContext: true } }),
+  ])
+  let hasTopicCourseMode = false
+  if (topicCourseSlug) {
+    const key = `course:${topicCourseSlug}`
+    hasTopicCourseMode =
+      user?.studyContext === key ||
+      (await prisma.flashcardProgress.findFirst({ where: { userId, context: key }, select: { id: true } })) !== null
+  }
+  return {
+    contexts: unlockTargetContexts({ activeContext, topicCourseSlug, hasTopicCourseMode }),
+    activeContext,
+  }
+}
+
 export interface StudyContextOption {
   key: string
   label: string

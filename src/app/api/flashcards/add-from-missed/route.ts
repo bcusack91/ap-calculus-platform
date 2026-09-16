@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
-import { getActiveStudyContext } from '@/lib/study-context'
+import { resolveUnlockContexts } from '@/lib/study-context'
 
 /**
  * POST /api/flashcards/add-from-missed
@@ -114,35 +114,52 @@ export async function POST(request: Request) {
     let totalAdded = 0
 
     if (flashcardIds.length > 0) {
-      // Fetch all existing progress rows for this user/flashcard set in one
-      // query, then batch-create only the missing ones.
-      // Cards join the deck of the ACTIVE study mode — a diagnostic taken in
-      // MCAT class mode feeds the MCAT deck, not the personal one.
-      const context = await getActiveStudyContext(session.user.id)
+      // Each card joins the decks ITS OWN course feeds (personal, that
+      // course's study mode, an active class deck) — never another course's
+      // mode, which mixed SAT cards into the MCAT deck and vice versa. Cards
+      // here can span courses, so route them per course.
+      const cards = await prisma.flashcard.findMany({
+        where: { id: { in: flashcardIds } },
+        select: { id: true, topic: { select: { category: { select: { course: { select: { slug: true } } } } } } },
+      })
+      const idsByCourse = new Map<string | null, string[]>()
+      for (const card of cards) {
+        const slug = card.topic?.category?.course?.slug ?? null
+        idsByCourse.set(slug, [...(idsByCourse.get(slug) ?? []), card.id])
+      }
+      const contextsByCourse = new Map<string | null, string[]>()
+      for (const slug of idsByCourse.keys()) {
+        const { contexts } = await resolveUnlockContexts(session.user.id, slug)
+        contextsByCourse.set(slug, contexts)
+      }
+
       const existing = await prisma.flashcardProgress.findMany({
         where: {
           userId: session.user.id,
-          context,
           flashcardId: { in: flashcardIds },
         },
-        select: { flashcardId: true },
+        select: { flashcardId: true, context: true },
       })
-      const existingIds = new Set(existing.map(p => p.flashcardId))
+      const existingKeys = new Set(existing.map(p => `${p.context}|${p.flashcardId}`))
 
       const now = new Date()
-      const progressToCreate = flashcardIds
-        .filter(id => !existingIds.has(id))
-        .map(flashcardId => ({
-          userId: session.user.id,
-          flashcardId,
-          context,
-          easeFactor: 2.5,
-          interval: 0,
-          repetitions: 0,
-          nextReview: now,
-          lastReviewed: now,
-          reviewCount: 0,
-        }))
+      const progressToCreate = [...idsByCourse].flatMap(([slug, ids]) =>
+        (contextsByCourse.get(slug) ?? []).flatMap(context =>
+          ids
+            .filter(id => !existingKeys.has(`${context}|${id}`))
+            .map(flashcardId => ({
+              userId: session.user.id,
+              flashcardId,
+              context,
+              easeFactor: 2.5,
+              interval: 0,
+              repetitions: 0,
+              nextReview: now,
+              lastReviewed: now,
+              reviewCount: 0,
+            })),
+        ),
+      )
 
       if (progressToCreate.length > 0) {
         const result = await prisma.flashcardProgress.createMany({

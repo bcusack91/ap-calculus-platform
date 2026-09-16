@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { getActiveStudyContext } from '@/lib/study-context'
+import { resolveUnlockContexts } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 
 /**
@@ -30,15 +30,13 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Progress lands in the ACTIVE study mode's deck.
-    const context = await getActiveStudyContext(session.user.id)
-
     // Get the topic with its content
     const topic = await prisma.topic.findUnique({
       where: { id: topicId },
       include: {
         flashcards: true,
         exampleProblems: true,
+        category: { select: { course: { select: { slug: true } } } },
       }
     })
 
@@ -49,31 +47,40 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Progress lands in the decks this topic belongs to — personal, its own
+    // course mode, an active class deck — never another course's study mode.
+    const { contexts } = await resolveUnlockContexts(
+      session.user.id,
+      topic.category?.course?.slug ?? null,
+    )
+
     // Check if flashcards already exist for this topic
     if (topic.flashcards.length > 0) {
       // Initialize progress for existing flashcards
       for (const flashcard of topic.flashcards) {
-        await prisma.flashcardProgress.upsert({
-          where: {
-            userId_flashcardId_context: {
+        for (const context of contexts) {
+          await prisma.flashcardProgress.upsert({
+            where: {
+              userId_flashcardId_context: {
+                userId: session.user.id,
+                flashcardId: flashcard.id,
+                context
+              }
+            },
+            create: {
               userId: session.user.id,
               flashcardId: flashcard.id,
-              context
-            }
-          },
-          create: {
-            userId: session.user.id,
-            flashcardId: flashcard.id,
-            context,
-            easeFactor: 2.5,
-            interval: 0,
-            repetitions: 0,
-            nextReview: new Date(),
-            lastReviewed: new Date(),
-            reviewCount: 0
-          },
-          update: {} // Don't overwrite if already exists
-        })
+              context,
+              easeFactor: 2.5,
+              interval: 0,
+              repetitions: 0,
+              nextReview: new Date(),
+              lastReviewed: new Date(),
+              reviewCount: 0
+            },
+            update: {} // Don't overwrite if already exists
+          })
+        }
       }
 
       return NextResponse.json({
@@ -112,9 +119,9 @@ export async function POST(req: NextRequest) {
           }
         })
 
-        // Initialize progress for the user
-        await prisma.flashcardProgress.create({
-          data: {
+        // Initialize progress for the user, in every deck this topic feeds.
+        await prisma.flashcardProgress.createMany({
+          data: contexts.map((context) => ({
             userId: session.user.id,
             flashcardId: flashcard.id,
             context,
@@ -124,7 +131,8 @@ export async function POST(req: NextRequest) {
             nextReview: new Date(),
             lastReviewed: new Date(),
             reviewCount: 0
-          }
+          })),
+          skipDuplicates: true,
         })
 
         return flashcard
