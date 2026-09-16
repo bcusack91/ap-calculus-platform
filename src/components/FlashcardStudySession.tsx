@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
 import { renderRichText } from '@/lib/render-rich-text'
+import { formatFlashcardContent } from '@/lib/format-flashcard-content'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
 import { formatTimeUntil } from '@/lib/format-due-time'
@@ -54,6 +56,8 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   // Ratings now wait on the server's new schedule; block a second keypress
   // or click from rating the same card twice meanwhile.
   const submittingRef = useRef(false)
+  // Re-render trigger for lazily loaded KaTeX (read indirectly via cardHtml).
+  const [katexReady, setKatexReady] = useState(false)
 
   const loadSession = useCallback(() => {
     setLoading(true)
@@ -75,6 +79,15 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
 
   // eslint-disable-next-line react-hooks/set-state-in-effect -- async fetch callback, not synchronous
   useEffect(() => { loadSession() }, [loadSession])
+
+  // KaTeX is lazily loaded and renderRichText falls back to the raw expression
+  // until it resolves; this re-render swaps in the real math, the same way
+  // MathText and the exam runners do it.
+  useEffect(() => {
+    let mounted = true
+    preloadKatex().then(() => { if (mounted) setKatexReady(true) })
+    return () => { mounted = false }
+  }, [])
 
   const handleRating = useCallback(
     async (rating: 'again' | 'hard' | 'good' | 'easy') => {
@@ -261,11 +274,19 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   // print the answer), and on the answer side show the completed sentence
   // before the explanation.
   const isClozeCard = detectCloze(card.front).isCloze
+  // Same content pipeline as the three dedicated flashcard surfaces
+  // (/flashcards/[slug], /flashcards/review/start and ClozeText): normalize
+  // legacy plain-text equations with formatFlashcardContent first, then render
+  // markdown + math. renderRichText stays the renderer here because the cloze
+  // reveal hands it an HTML string, and it now covers the same markdown bold /
+  // italic that remark does on those surfaces.
+  void katexReady // re-render dependency: KaTeX loads after first paint
+  const renderCard = (text: string) => renderRichText(formatFlashcardContent(text))
   const cardHtml = flipped
     ? isClozeCard
-      ? `${renderRichText(revealClozeText(card.front, true))}<br><br>${renderRichText(card.back)}`
-      : renderRichText(card.back)
-    : renderRichText(maskClozeText(card.front))
+      ? `${renderCard(revealClozeText(card.front, true))}<br><br>${renderCard(card.back)}`
+      : renderCard(card.back)
+    : renderCard(maskClozeText(card.front))
 
   return (
     <div className="max-w-lg mx-auto p-6">

@@ -38,7 +38,14 @@ interface PlanTopic {
   flashcardCount?: number
   flashcardsPath?: string
   entranceSatisfied?: boolean
+  exitQuizRequired?: boolean
 }
+
+/**
+ * How many of this topic's cards we bother counting. The session endpoint
+ * `take`s this many per bucket, so a bigger deck reads as "N+".
+ */
+const CARD_PROBE_LIMIT = 50
 
 interface PanelData {
   topics: PlanTopic[]
@@ -58,6 +65,10 @@ interface StudyPlanNextUpProps {
 
 export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: StudyPlanNextUpProps) {
   const [data, setData] = useState<PanelData | null>(null)
+  // Cards still owed on THIS topic today; null = unknown (not unlocked, or the
+  // count couldn't be fetched), which degrades to "nothing is being withheld".
+  const [cardsRemaining, setCardsRemaining] = useState<number | null>(null)
+  const [cardsChecked, setCardsChecked] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -107,6 +118,45 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: S
     }
   }, [topicSlug])
 
+  // Owner's rule: finish THIS topic's cards, then the next lesson. Count what's
+  // still due on this topic (existing per-topic session endpoint — no new API)
+  // so the panel can hold the "next up" invitation back until they're cleared.
+  useEffect(() => {
+    if (!data) return
+    const topic = data.topics.find((t) => t.slug === topicSlug)
+    if (!topic) return
+    const unlocked =
+      completion === 'lesson' || quizPassed === true || topic.entranceSatisfied === true
+    if (!unlocked) {
+      setCardsChecked(true)
+      return
+    }
+    let cancelled = false
+    const loadCards = async () => {
+      try {
+        const res = await fetch(
+          `/api/flashcards/session?topicSlug=${encodeURIComponent(topicSlug)}&limit=${CARD_PROBE_LIMIT}`,
+        )
+        if (res.ok) {
+          const body = await res.json()
+          const due = Number(body?.stats?.dueCount)
+          const fresh = Number(body?.stats?.newCount)
+          if (!cancelled && (Number.isFinite(due) || Number.isFinite(fresh))) {
+            setCardsRemaining((Number.isFinite(due) ? due : 0) + (Number.isFinite(fresh) ? fresh : 0))
+          }
+        }
+      } catch {
+        // leave cardsRemaining null — never trap a student behind a failed fetch
+      } finally {
+        if (!cancelled) setCardsChecked(true)
+      }
+    }
+    loadCards()
+    return () => {
+      cancelled = true
+    }
+  }, [data, topicSlug, completion, quizPassed])
+
   if (!data) return null
 
   const completedTopic = data.topics.find((t) => t.slug === topicSlug)
@@ -126,7 +176,9 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: S
   //   has none, so this lesson finish completes the pair.
   // - Quiz surface: a pass sets MASTERED (counts as the lesson), and a failed
   //   attempt still unlocks when the lesson side was already done
-  //   (entranceSatisfied, known for MCAT-enriched topics).
+  //   (entranceSatisfied = aced the ENTRANCE quiz, for MCAT-enriched topics;
+  //   merely finishing the lesson parts no longer counts — same narrowing as
+  //   the server rule).
   const flashcardsUnlocked =
     completion === 'lesson' || quizPassed === true || completedTopic.entranceSatisfied === true
   const flashcardCount =
@@ -135,30 +187,70 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: S
       : null
   const flashcardsPath = completedTopic.flashcardsPath || `/flashcards/${topicSlug}`
 
+  // Cards owed on this topic today. Unknown (fetch failed, or the topic has no
+  // unlock) reads as "none owed" so the panel never strands a student.
+  const cardsDue = cardsRemaining ?? 0
+  const cardsDueLabel = cardsDue >= CARD_PROBE_LIMIT ? `${CARD_PROBE_LIMIT}+` : `${cardsDue}`
+  const topicCardsPending = flashcardsUnlocked && cardsDue > 0
+  // Hold the whole "what's next" invitation until this topic's cards are done
+  // for the day — and until we know, so it can't flash on screen first.
+  const showWhatsNext = cardsChecked && !topicCardsPending
+
   const nextLessonPath = next?.hasLesson && next.lessonPath ? next.lessonPath : null
   const nextQuizPath = next?.hasExitQuiz && next.exitQuizPath ? next.exitQuizPath : null
   const nextTopicPath = next?.topicPath || (next ? `/topics/${next.slug}` : null)
 
   return (
     <div className="mt-6 space-y-4 text-left">
-      {/* Flashcards-unlocked notice */}
+      {/* Flashcards: what's actually left to do on THIS topic today. */}
       {flashcardsUnlocked && (
         <Link
           href={flashcardsPath}
-          className="flex items-center gap-3 rounded-xl border border-accent-light dark:border-accent/30 bg-accent-subtle dark:bg-accent-light/20 p-4 hover:bg-accent-light dark:hover:bg-accent-light/30 transition-colors"
+          className={
+            topicCardsPending
+              ? 'flex items-center gap-3 rounded-xl border-2 border-accent-light dark:border-accent/40 bg-accent-subtle dark:bg-accent-light/20 p-4 hover:bg-accent-light dark:hover:bg-accent-light/30 transition-colors'
+              : 'flex items-center gap-3 rounded-xl border border-accent-light dark:border-accent/30 bg-accent-subtle dark:bg-accent-light/20 p-4 hover:bg-accent-light dark:hover:bg-accent-light/30 transition-colors'
+          }
         >
           <Layers className="w-5 h-5 shrink-0 text-accent-hover dark:text-accent-muted" aria-hidden="true" />
           <span className="text-sm text-gray-800 dark:text-gray-200">
-            🎴 {flashcardCount !== null ? `${flashcardCount} flashcards` : 'Flashcards'} unlocked for this
-            topic —{' '}
-            <span className="font-semibold text-accent-hover dark:text-accent-muted underline underline-offset-2">
-              study them now
-            </span>
+            {topicCardsPending ? (
+              <>
+                🎴 <span className="font-semibold">{cardsDueLabel} card{cardsDue === 1 ? '' : 's'} left</span> in
+                this topic today —{' '}
+                <span className="font-semibold text-accent-hover dark:text-accent-muted underline underline-offset-2">
+                  rate them now
+                </span>
+                {next ? ', then your next lesson opens up' : ''}
+              </>
+            ) : cardsChecked && cardsRemaining === 0 ? (
+              <>
+                ✅ This topic&apos;s cards are done for today —{' '}
+                <span className="font-semibold text-accent-hover dark:text-accent-muted underline underline-offset-2">
+                  review them again
+                </span>{' '}
+                any time
+              </>
+            ) : (
+              <>
+                🎴 {flashcardCount !== null ? `${flashcardCount} flashcards` : 'Flashcards'} unlocked for this
+                topic —{' '}
+                <span className="font-semibold text-accent-hover dark:text-accent-muted underline underline-offset-2">
+                  study them now
+                </span>
+              </>
+            )}
           </span>
         </Link>
       )}
 
-      {next ? (
+      {topicCardsPending && next && (
+        <p className="px-1 text-xs text-gray-500 dark:text-gray-400">
+          Next up after that: {next.name}
+        </p>
+      )}
+
+      {!showWhatsNext ? null : next ? (
         /* Next pending recommendation */
         <div className="rounded-2xl border-2 border-accent-light dark:border-accent/40 bg-gradient-to-r from-accent-subtle to-pink-50 dark:from-accent-light/20 dark:to-pink-900/20 p-5">
           <p className="text-xs font-semibold uppercase tracking-wide text-accent-hover dark:text-accent-muted">
@@ -188,7 +280,8 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: S
                 }
               >
                 <ClipboardList className="w-4 h-4" aria-hidden="true" />
-                Practice Quiz
+                {/* This links ?exitQuiz=1 — the GRADED exit quiz, not practice. */}
+                Take Exit Quiz
                 {!nextLessonPath && <ArrowRight className="w-4 h-4" aria-hidden="true" />}
               </Link>
             )}
@@ -204,6 +297,9 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed }: S
           </div>
           <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
             {done} of {total} sections complete
+            {next.exitQuizRequired
+              ? ' — a section clears when you pass its exit quiz, not when the lesson ends'
+              : ''}
           </p>
         </div>
       ) : (

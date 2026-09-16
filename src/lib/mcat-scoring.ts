@@ -107,9 +107,9 @@ export function scoreMCAT(rawBySection: Record<MCATSection, { correct: number; t
 export type EvidenceLevel = 'low' | 'medium' | 'high'
 
 const RANGE_HALF_WIDTH: Record<EvidenceLevel, number> = {
-  high: 2,
-  medium: 3,
-  low: 4,
+  high: 4,
+  medium: 6,
+  low: 8,
 }
 
 export interface ScoreRange {
@@ -118,10 +118,17 @@ export interface ScoreRange {
 }
 
 /**
- * A projection range around a 472-528 total: ±3 by default, tightening to ±2
- * with high evidence and widening to ±4 with low. Clamped to the valid scale.
- * Unequated practice items simply cannot resolve an MCAT total more finely
- * than this, and displaying a range says so.
+ * A projection range around a 472-528 total: ±6 by default, tightening to ±4
+ * with high evidence (several sittings average out) and widening to ±8 with
+ * low. Clamped to the valid scale.
+ *
+ * Widened from ±2/3/4 (Sept 2026) after measuring the real thing: a simulated
+ * student of FIXED ability, re-sitting the 45-question diagnostic 24 times,
+ * scored 481-506 — a 25-point spread, sd 5.5. The old ±3 band contained just
+ * 38% of those sittings, so it read as precision the test cannot deliver and
+ * made ordinary noise look like week-over-week progress or regression.
+ * Unequated practice items cannot resolve an MCAT total more finely than this,
+ * and displaying an honest range says so.
  */
 export function projectionRange(total: number, evidence: EvidenceLevel = 'medium'): ScoreRange {
   const half = RANGE_HALF_WIDTH[evidence]

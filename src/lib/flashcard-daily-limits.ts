@@ -21,7 +21,15 @@
 
 /** Owner decision (Sept 2026): baseline new cards/day is 100, not Anki's 20. */
 export const DEFAULT_NEW_PER_DAY = 100
-export const DEFAULT_MAX_REVIEWS_PER_DAY = 200
+/**
+ * Raised 200 -> 500 (Sept 2026) for the MCAT course: a student clearing the 5
+ * topics the retake gate demands each week needs ~450 review ratings/day by
+ * week 4 and ~600 by week 8. At 200 the cap began refusing work on day 10 and
+ * built a ~1,500-card backlog by week 8 — and because overdue cards get
+ * forgotten and lapse, the shortfall fed itself. This is a ceiling, not a
+ * target: students only ever see what is actually due.
+ */
+export const DEFAULT_MAX_REVIEWS_PER_DAY = 500
 
 export const NEW_PER_DAY_MIN = 1
 export const NEW_PER_DAY_MAX = 500

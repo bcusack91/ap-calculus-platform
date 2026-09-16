@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 import { HARD_MODULE_CATEGORY } from '@/data/sat-practice/hard-modules'
 import {
   CORE_MODULE_CATEGORY,
@@ -179,7 +181,7 @@ export async function GET() {
     const [progressRows, exitAttempts] = await Promise.all([
       prisma.topicProgress.findMany({
         where: { userId: session.user.id, topicId: { in: topics.map((t) => t.id) } },
-        select: { topicId: true, masteryLevel: true },
+        select: { topicId: true, masteryLevel: true, masteredParts: true },
       }),
       prisma.exitQuizAttempt.findMany({
         where: { userId: session.user.id, topicSlug: { in: topicSlugs } },
@@ -188,10 +190,10 @@ export async function GET() {
       }),
     ])
 
-    const progressBySlug = new Map<string, number>()
+    const progressBySlug = new Map<string, { masteryLevel: number; masteredParts: unknown }>()
     progressRows.forEach((row) => {
       const slug = topicIdToSlug.get(row.topicId)
-      if (slug) progressBySlug.set(slug, row.masteryLevel)
+      if (slug) progressBySlug.set(slug, { masteryLevel: row.masteryLevel, masteredParts: row.masteredParts })
     })
 
     const bestExitBySlug = new Map<string, { scorePercent: number; score: number; totalQuestions: number; completedAt: Date }>()
@@ -207,11 +209,22 @@ export async function GET() {
     const requiredScorePercent = 80
 
     const recommendedWithStatus = recommendedTopics.map((topic) => {
-      const masteryLevel = progressBySlug.get(topic.slug) ?? 0
+      const progress = progressBySlug.get(topic.slug)
+      const masteryLevel = progress?.masteryLevel ?? 0
       const bestExit = bestExitBySlug.get(topic.slug)
-      const entranceSatisfied = masteryLevel >= 1
+      // An entrance-quiz test-out clears a topic without its exit quiz;
+      // finishing the lesson does NOT (it also reaches masteryLevel 1, which
+      // is the hole that let students skip the quiz entirely).
+      const entranceSatisfied = isEntranceMastery({
+        topicSlug: topic.slug,
+        masteryLevel,
+        masteredParts: progress?.masteredParts,
+      })
       const exitSatisfied = (bestExit?.scorePercent ?? 0) >= requiredScorePercent
-      const isSatisfied = entranceSatisfied || exitSatisfied
+      // Topics with no exit quiz mapped can never produce an attempt, so the
+      // lesson alone has to clear them or the plan can never be completed.
+      const lessonSatisfiedWithoutQuiz = !hasExitQuiz(topic.slug) && masteryLevel >= 1
+      const isSatisfied = entranceSatisfied || exitSatisfied || lessonSatisfiedWithoutQuiz
       return {
         ...topic,
         topicPath: `/topics/${topic.slug}`,

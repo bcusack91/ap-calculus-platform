@@ -20,6 +20,45 @@ import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 import { DataVisual, DiagnosticPassageContent } from '@/components/MCATDiagnosticVisuals'
 
 const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
+/**
+ * In-progress sitting, so a refresh or a closed tab does not destroy a
+ * 55-minute attempt (the questions are already burned as "seen" the moment a
+ * test is generated, so a lost attempt cost the student those items too).
+ */
+const MCAT_DIAGNOSTIC_RESUME_KEY = 'mcat-diagnostic-inprogress-v1'
+/** Abandon a saved sitting after this long — a stale clock is worse than none. */
+const RESUME_MAX_AGE_MS = 12 * 60 * 60 * 1000
+
+interface ResumeState {
+  testData: MCATDiagnosticTestData
+  answers: (number | null)[]
+  currentIndex: number
+  timeRemaining: number
+  assignedId: string | null
+  savedAt: number
+}
+
+function readResumeState(): ResumeState | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = window.localStorage.getItem(MCAT_DIAGNOSTIC_RESUME_KEY)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as ResumeState
+    if (!parsed?.testData?.questions?.length) return null
+    if (Date.now() - parsed.savedAt > RESUME_MAX_AGE_MS || parsed.timeRemaining <= 0) {
+      window.localStorage.removeItem(MCAT_DIAGNOSTIC_RESUME_KEY)
+      return null
+    }
+    return parsed
+  } catch {
+    return null
+  }
+}
+
+function clearResumeState() {
+  if (typeof window === 'undefined') return
+  try { window.localStorage.removeItem(MCAT_DIAGNOSTIC_RESUME_KEY) } catch { /* quota/private mode */ }
+}
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -140,6 +179,11 @@ export default function MCATDiagnosticPage() {
   // Assigned class diagnostic: load the teacher's frozen test instead of
   // generating, so the whole class answers identical questions.
   const assignedId = searchParams.get('assigned')
+  // A teacher-assigned diagnostic overrides the personal remediation gate:
+  // the class takes it on the teacher's schedule, and blocking it stranded
+  // every student who hadn't cleared all 5 recommended modules that week.
+  const gateBlocks = (planStatus: PlanStatus | null) =>
+    !assignedId && !!planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic
   // MCAT has a single form — challengeForm not used
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
@@ -150,6 +194,14 @@ export default function MCATDiagnosticPage() {
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  // The countdown is started once per sitting, so it would capture the
+  // handleFinish built when every answer was still null — a timeout then
+  // submitted a BLANK sheet (0/45, a 472, recommendations from nothing) while
+  // manual submits worked. The timer calls through this ref instead, which
+  // every render keeps pointed at the current handler.
+  const submitRef = useRef<() => void>(() => {})
+  const submittedRef = useRef(false)
+  const [resumable, setResumable] = useState<ResumeState | null>(null)
   const [history, setHistory] = useState<
     { id: string; category: string; results: string; createdAt: string }[]
   >([])
@@ -177,22 +229,67 @@ export default function MCATDiagnosticPage() {
     }
   }, [status])
 
-  // Timer
+  // Timer — the tick only counts down. Submitting from inside the state
+  // updater ran the side effect more than once (React may re-invoke an
+  // updater), so expiry is handled in its own effect below.
   useEffect(() => {
     if (phase !== 'testing') return
     timerRef.current = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) {
-          clearInterval(timerRef.current!)
-          handleFinish()
-          return 0
-        }
-        return prev - 1
-      })
+      setTimeRemaining(prev => (prev <= 1 ? 0 : prev - 1))
     }, 1000)
     return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
+
+  // An unfinished sitting from a refresh/closed tab. localStorage is an
+  // external store, so read it in a callback rather than synchronously in the
+  // effect body, and listen for `storage` so finishing or discarding the
+  // sitting in another tab clears this offer too.
+  useEffect(() => {
+    if (phase !== 'menu') return
+    let cancelled = false
+    const read = () => { if (!cancelled) setResumable(readResumeState()) }
+    queueMicrotask(read)
+    window.addEventListener('storage', read)
+    return () => {
+      cancelled = true
+      window.removeEventListener('storage', read)
+    }
+  }, [phase])
+
+  // Persist the sitting as the student works. The frozen test is ~136 KB, so
+  // this writes the whole payload only while a test is actually open.
+  useEffect(() => {
+    if (phase !== 'testing' || !testData) return
+    try {
+      window.localStorage.setItem(
+        MCAT_DIAGNOSTIC_RESUME_KEY,
+        JSON.stringify({ testData, answers, currentIndex, timeRemaining, assignedId, savedAt: Date.now() }),
+      )
+    } catch {
+      // Private mode or quota — resume is a convenience, never a requirement.
+    }
+  }, [phase, testData, answers, currentIndex, timeRemaining, assignedId])
+
+  const resumeTest = useCallback(() => {
+    const saved = readResumeState()
+    if (!saved) { setResumable(null); return }
+    setTestData(saved.testData)
+    setAnswers(saved.answers)
+    setEliminatedOptions(saved.testData.questions.map(() => new Set<number>()))
+    setCurrentIndex(saved.currentIndex)
+    setTimeRemaining(saved.timeRemaining)
+    setChallengeSubmitted(false)
+    submittedRef.current = false
+    setPhase('testing')
+  }, [])
+
+  // Time's up: grade what the student actually answered, exactly once.
+  useEffect(() => {
+    if (phase !== 'testing' || timeRemaining > 0 || submittedRef.current) return
+    submittedRef.current = true
+    if (timerRef.current) clearInterval(timerRef.current)
+    submitRef.current()
+  }, [phase, timeRemaining])
 
   const startTest = useCallback(async () => {
     if (assignedId) {
@@ -216,6 +313,8 @@ export default function MCATDiagnosticPage() {
         setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
         setTimeRemaining(data.timeLimitMinutes * 60)
         setChallengeSubmitted(false)
+        submittedRef.current = false
+        clearResumeState()
         setPhase('testing')
         return
       }
@@ -259,6 +358,8 @@ export default function MCATDiagnosticPage() {
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
     setChallengeSubmitted(false)
+    submittedRef.current = false
+    clearResumeState()
     setPhase('testing')
   }, [assignedId])
 
@@ -287,6 +388,8 @@ export default function MCATDiagnosticPage() {
       }
     })
     setResults(diagnosticResults)
+    clearResumeState()
+    setResumable(null)
     setPhase('results')
 
     trackCustomEvent('mcat_diagnostic_complete', {
@@ -314,7 +417,7 @@ export default function MCATDiagnosticPage() {
             totalQuestions: diagnosticResults.totalQuestions,
             percentage: diagnosticResults.percentage,
             estimatedScore: diagnosticResults.estimatedScore,
-            // Additive: honest ±3 band around the estimate (one short
+            // Additive: honest ±6 band around the estimate (one short
             // diagnostic = medium evidence). estimatedScore semantics are
             // unchanged — trend rows keep reading it as the point estimate.
             scoreRange: projectionRange(diagnosticResults.estimatedScore, 'medium'),
@@ -360,6 +463,12 @@ export default function MCATDiagnosticPage() {
       // Silent fail
     }
   }, [testData, answers, challengeToken, assignedId])
+
+  // Point the timer's escape hatch at the latest handleFinish every render, so
+  // a timeout submits the answers the student actually gave.
+  useEffect(() => {
+    submitRef.current = handleFinish
+  }, [handleFinish])
 
   // Loading state
   if (status === 'loading') {
@@ -413,7 +522,14 @@ export default function MCATDiagnosticPage() {
                   ⏱ {formatTime(timeRemaining)}
                 </span>
                 <button
-                  onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
+                  onClick={() => {
+                    if (!window.confirm('Leave this diagnostic? Your answers so far will be discarded.')) return
+                    if (timerRef.current) clearInterval(timerRef.current)
+                    clearResumeState()
+                    setResumable(null)
+                    setPhase('menu')
+                    setTestData(null)
+                  }}
                   className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
                 >
                   Exit
@@ -600,7 +716,7 @@ export default function MCATDiagnosticPage() {
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Total</p>
                 {(() => {
-                  // One short diagnostic = medium evidence -> honest ±3 band;
+                  // One short diagnostic = medium evidence -> honest ±6 band;
                   // the point estimate is de-emphasized below it.
                   const range = projectionRange(results.estimatedScore, 'medium')
                   return (
@@ -765,7 +881,7 @@ export default function MCATDiagnosticPage() {
 
             {/* Actions */}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {planStatus?.canRetakeDiagnostic ? (
+              {planStatus?.canRetakeDiagnostic || assignedId ? (
                 <button
                   onClick={() => { setResults(null); setTestData(null); setPhase('testing'); startTest() }}
                   className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
@@ -806,7 +922,7 @@ export default function MCATDiagnosticPage() {
                   Next diagnostic is locked until remediation is complete
                 </h4>
                 <p className="mb-3 text-xs text-amber-800 dark:text-amber-300">
-                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s practice quiz clears its requirement (finishing its lesson does too).
+                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s exit quiz clears its requirement.
                 </p>
                 <div className="space-y-2">
                   {planStatus.pendingTopics.slice(0, 6).map((topic) => (
@@ -957,7 +1073,33 @@ export default function MCATDiagnosticPage() {
               </li>
             </ul>
 
-            {planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic ? (
+            {resumable ? (
+              <div className="mb-3 rounded-xl border border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
+                <p className="text-sm font-semibold text-emerald-900 dark:text-emerald-200">
+                  You have a diagnostic in progress
+                </p>
+                <p className="mt-1 text-xs text-emerald-800 dark:text-emerald-300">
+                  {resumable.answers.filter(a => a !== null).length} of {resumable.testData.questions.length} answered ·{' '}
+                  {Math.ceil(resumable.timeRemaining / 60)} min left
+                </p>
+                <div className="mt-3 flex gap-2">
+                  <button
+                    onClick={resumeTest}
+                    className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  >
+                    Resume
+                  </button>
+                  <button
+                    onClick={() => { clearResumeState(); setResumable(null) }}
+                    className="rounded-lg border border-emerald-300 px-4 py-2 text-sm font-medium text-emerald-800 transition hover:bg-emerald-100 dark:border-emerald-700 dark:text-emerald-200 dark:hover:bg-emerald-900/40"
+                  >
+                    Discard
+                  </button>
+                </div>
+              </div>
+            ) : null}
+
+            {gateBlocks(planStatus) ? (
               <button
                 disabled
                 className="w-full cursor-not-allowed rounded-xl bg-gray-300 px-6 py-3 font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-300"
@@ -969,19 +1111,26 @@ export default function MCATDiagnosticPage() {
                 onClick={startTest}
                 className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
               >
-                {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
+                {assignedId
+                  ? 'Start Assigned Diagnostic'
+                  : lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
               </button>
             )}
+            {assignedId && planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic ? (
+              <p className="mt-2 text-center text-xs text-gray-600 dark:text-gray-400">
+                Your teacher assigned this one, so it&apos;s open now even with modules still pending.
+              </p>
+            ) : null}
             <Link href="/mcat-score-predictor" className="mt-3 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Prefer a quick estimate? Open the MCAT Score Predictor</Link>
             <Link href="/mcat-daily-question" className="mt-1 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Need a warm-up first? Try today&apos;s MCAT question</Link>
 
-            {planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic && planStatus.pendingTopics.length > 0 ? (
+            {planStatus && gateBlocks(planStatus) && planStatus.pendingTopics.length > 0 ? (
               <div className="mt-5 rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20">
                 <p className="text-sm font-semibold text-amber-900 dark:text-amber-200">
                   Complete your recommended modules before the next diagnostic.
                 </p>
                 <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">
-                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s practice quiz clears its requirement (finishing its lesson does too).
+                  Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s exit quiz clears its requirement.
                 </p>
                 <div className="mt-3 space-y-2">
                   {planStatus.pendingTopics.slice(0, 5).map((topic) => (

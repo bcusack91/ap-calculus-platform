@@ -1,5 +1,11 @@
 import { renderKatexSync } from '@/lib/katex-lazy'
 
+/** An emphasis tag this renderer injected in step 1. */
+const EMPHASIS_TAG = /<\/?(?:strong|em)>/
+
+/** A markdown table's `| --- | --- |` separator line. */
+const TABLE_SEPARATOR = /^\s*\|?\s*[-:]+[-:|  ]+\s*$/m
+
 /**
  * Convert markdown pipe-table syntax to HTML <table>.
  * Handles tables embedded in longer text (table can be preceded/followed by text).
@@ -132,24 +138,99 @@ function looksLikeCurrencyProse(span: string): boolean {
   return /\s[a-z]/.test(span) || (/^[\d.,\s]+$/.test(span) && /,\s*$/.test(span))
 }
 
-export function renderRichText(text: string): string {
-  // Step 1: Convert markdown tables to HTML
-  let result = renderMarkdownTables(text)
+/**
+ * Markdown emphasis → HTML, for the inline subset authored content actually
+ * uses: `**bold**` and `*italic*`. Without this every `**Explanation:**` and
+ * `**Figure 1.**` printed its asterisks literally — 462 of the 1,386 strings
+ * each MCAT full-length form hands this renderer.
+ *
+ * Runs FIRST, on the raw markdown — before any tag exists — and before KaTeX,
+ * so `**Answer: $x$**` bolds the whole span and no rule ever touches KaTeX's
+ * own HTML. The content classes are what keep it safe:
+ *
+ *  - neither may contain a newline, so a span can never cross a line break and
+ *    interleave with the `<br>` markup the later steps generate. When the text
+ *    holds a pipe table, `|` is excluded too, so a span cannot straddle a cell
+ *    boundary; elsewhere `|` is allowed, since absolute-value bold
+ *    (`**$\ln|x| + C$**`) is far more common in this content than stray pipes.
+ *  - bold allows `$` and `<`, so `**$2 < t < 4$**` bolds and still renders as
+ *    math.
+ *  - italic excludes `$`, so a lone `*` inside a math span (`z^*`, `t^*` — 171
+ *    authored strings) can never pair with another asterisk across the math
+ *    delimiters and swallow the text between them.
+ *  - italic delimiters follow CommonMark flanking: the opener may not sit
+ *    after a word character nor before whitespace, the closer may not sit
+ *    after whitespace nor before a word character. That leaves multiplication
+ *    (`x = x * 2`), compound assignment (`x *= 2`), critical values (`z*`) and
+ *    `* ` bullet lines literal, which is what they should be.
+ */
+function renderEmphasis(text: string, inTable: boolean): string {
+  if (!text.includes('*')) return text
+  const bold = inTable ? /\*\*([^*\n|]+?)\*\*/g : /\*\*([^*\n]+?)\*\*/g
+  const italic = inTable
+    ? /(?<![\w*])\*(?!\s)([^*$\n|]+?)(?<!\s)\*(?![\w*])/g
+    : /(?<![\w*])\*(?!\s)([^*$\n]+?)(?<!\s)\*(?![\w*])/g
+  return text.replace(bold, '<strong>$1</strong>').replace(italic, '<em>$1</em>')
+}
 
-  // Step 2: Convert newlines to <br> for non-table content
+/**
+ * Did the emphasis survive KaTeX intact? Every tag opened must still be closed,
+ * and none may have been swallowed into a math span — KaTeX escapes what it
+ * cannot parse, so a `&lt;strong&gt;` in the output means the tag became
+ * visible text.
+ */
+function emphasisIntact(html: string): boolean {
+  return (
+    (html.match(/<strong>/g) || []).length === (html.match(/<\/strong>/g) || []).length &&
+    (html.match(/<em>/g) || []).length === (html.match(/<\/em>/g) || []).length &&
+    !/&lt;\/?(?:strong|em)&gt;/.test(html)
+  )
+}
+
+export function renderRichText(text: string): string {
+  const html = renderPipeline(text, true)
+  // Safety net: in a handful of authored strings a bare currency `$` pairs with
+  // a real math `$`, and the span between them swallows an emphasis tag into
+  // the KaTeX input ("→ **\$14,450**" after "$1000 at 8%"). Rather than emit
+  // half a tag, fall back to the pre-emphasis rendering for that string — it
+  // shows literal asterisks, exactly as it did before bold support existed.
+  return emphasisIntact(html) ? html : renderPipeline(text, false)
+}
+
+function renderPipeline(text: string, emphasis: boolean): string {
+  // Step 1: Markdown emphasis (bold/italic) — on raw text, before any markup
+  let result = emphasis ? renderEmphasis(text, TABLE_SEPARATOR.test(text)) : text
+
+  // Step 2: Convert markdown tables to HTML
+  result = renderMarkdownTables(result)
+
+  // Step 3: Convert newlines to <br> for non-table content
   result = result.replace(/\n/g, '<br>')
 
-  // Step 3: Render LaTeX
-  result = result.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
+  // Step 4: Render LaTeX
+  result = result.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (match, latex) => {
+    if (EMPHASIS_TAG.test(latex)) return match
     try { return renderKatexSync(latex.trim(), { displayMode: true }) }
     catch { return latex }
   })
   result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (match, latex) => {
     // Leave currency/prose ("$2 and a notebook costs $5") literal — not math.
     if (looksLikeCurrencyProse(latex)) return match
+    // A span that swallowed an emphasis tag is a bare currency `$` pairing with
+    // a real one ("**\$10 million**" … "so $\$1$M"), not math: feeding it to
+    // KaTeX would escape the tag into visible `&lt;strong&gt;` text.
+    if (EMPHASIS_TAG.test(latex)) return match
     try { return renderKatexSync(latex.trim(), { displayMode: false }) }
     catch { return latex }
   })
+
+  // Step 5: honor the CommonMark `\$` escape, the way remark does on the
+  // ReactMarkdown surfaces. Authors escape prose currency (`\$40,000`) because
+  // the content gate requires it — bare pairs are treated as math delimiters
+  // elsewhere — and without this step the backslash printed on screen
+  // ("between \$40,000 and \$80,000"). Runs AFTER the math steps, so every
+  // remaining `\$` is outside a math span by construction.
+  result = result.replace(/\\\$/g, '$')
 
   return result
 }

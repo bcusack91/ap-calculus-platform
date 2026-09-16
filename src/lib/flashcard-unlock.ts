@@ -2,7 +2,64 @@ import { prisma } from '@/lib/prisma'
 import { PERSONAL_CONTEXT, resolveUnlockContexts } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 import { effectiveDailyLimits } from '@/lib/flashcard-daily-limits'
+
+/** A topic at or above this masteryLevel is "mastered" (progress/save sets MASTERED here too). */
+export const MASTERY_THRESHOLD = 0.9
+
+/** TopicProgress.masteredParts is Json — read it defensively. */
+export function parseMasteredParts(value: unknown): number[] {
+  if (!Array.isArray(value)) return []
+  return value.filter(
+    (n): n is number => typeof n === 'number' && Number.isFinite(n) && n >= 1,
+  )
+}
+
+/**
+ * Did this topic's mastery come from the ENTRANCE quiz rather than from
+ * grinding through lesson parts?
+ *
+ * Why the distinction matters (bug, Sept 2026): `calculatePartMastery` in
+ * InteractiveLessonRenderer reaches 1.0 the moment the LAST part's sections are
+ * all marked complete, and the 3-section batch save / 60s autosave /
+ * beforeunload beacon can all fire that while the exit-quiz overlay is still
+ * open. TopicProgress flips to MASTERED, and a blanket "mastered ⇒ waive the
+ * exit quiz" rule then handed out flashcards and cleared the diagnostic retake
+ * gate for a student who never submitted the quiz. Lesson completion alone must
+ * NOT satisfy either gate.
+ *
+ * The waiver exists for a genuinely different case (owner decision 2026-09-09):
+ * a student who ACED the entrance quiz tests out of every part, so no
+ * ExitQuizAttempt would ever exist and their cards would be locked forever.
+ * That path — and only that path — writes TopicProgress.masteredParts (see
+ * InteractiveLessonRenderer.handleEntranceQuizComplete), so the stored part
+ * list is the distinguishing evidence. No schema change needed.
+ *
+ * "Aced" = every part of the lesson was tested out of. A partial test-out
+ * (some parts mastered, the rest studied) is lesson work and still owes the
+ * exit quiz. Authored entrance quizzes sometimes number parts beyond the
+ * lesson's own part count (prod has masteredParts [1..7] on a 4-part lesson),
+ * so coverage is checked as "parts 1..totalParts are all present", not by size.
+ */
+export function isEntranceMastery(input: {
+  topicSlug: string
+  masteryLevel?: number | null
+  masteredParts?: unknown
+}): boolean {
+  if ((input.masteryLevel ?? 0) < MASTERY_THRESHOLD) return false
+  const parts = new Set(parseMasteredParts(input.masteredParts))
+  if (parts.size === 0) return false
+  // Unknown lesson shape (no registered interactive lesson): a non-empty
+  // masteredParts still means an entrance-quiz test-out, which is the case the
+  // waiver is for — never lock those students out over a missing registry row.
+  const totalParts = getInteractiveTopicConfig(input.topicSlug)?.parts.length ?? 0
+  if (totalParts === 0) return true
+  for (let part = 1; part <= totalParts; part++) {
+    if (!parts.has(part)) return false
+  }
+  return true
+}
 
 export interface FlashcardUnlockResult {
   unlocked: boolean
@@ -31,7 +88,9 @@ const LOCKED: FlashcardUnlockResult = {
  *       pass also satisfies (a) — demonstrated mastery counts as the lesson).
  *
  * Nothing else unlocks cards: not diagnostic results, not partial lesson
- * progress. Call after exit-quiz submits and lesson-completion progress saves —
+ * progress, and (since Sept 2026) not finishing the lesson's last part while
+ * the exit quiz sits unsubmitted — see isEntranceMastery for the one waiver.
+ * Call after exit-quiz submits and lesson-completion progress saves —
  * whichever half completes the pair fires the unlock. Idempotent; cards land
  * in the decks `unlockTargetContexts` picks — personal, the topic's own course
  * mode, and an active class deck — never another course's study mode.
@@ -61,15 +120,17 @@ export async function maybeUnlockFlashcards(
   // the lesson check in (a).
   const progress = await prisma.topicProgress.findUnique({
     where: { userId_topicId: { userId, topicId: topic.id } },
-    select: { status: true, masteryLevel: true },
+    select: { status: true, masteryLevel: true, masteredParts: true },
   })
 
-  // Entrance-mastery waiver (owner decision 2026-09-09): a student who aced the
-  // entrance quiz (masteryLevel >= 0.9 => MASTERED) has demonstrated the topic
-  // and is routed past the lesson/exit-quiz pair entirely — on a
-  // diagnostic-recommended topic that satisfied the section with no
-  // ExitQuizAttempt ever existing, which permanently locked their cards.
-  const entranceMastered = (progress?.masteryLevel ?? 0) >= 0.9
+  // Entrance-mastery waiver (owner decision 2026-09-09), NARROWED Sept 2026:
+  // only a student who aced the ENTRANCE quiz skips the exit quiz. Mastery that
+  // merely came from finishing lesson parts does not — see isEntranceMastery.
+  const entranceMastered = isEntranceMastery({
+    topicSlug,
+    masteryLevel: progress?.masteryLevel,
+    masteredParts: progress?.masteredParts,
+  })
 
   if (hasExitQuiz(topicSlug) && !entranceMastered) {
     const quizAttempt = await prisma.exitQuizAttempt.findFirst({

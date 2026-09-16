@@ -4,10 +4,12 @@ import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/Dia
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
-import type {
-  DiagnosticTestData,
-  DiagnosticResults,
+import {
+  analyzeDiagnosticResults,
+  type DiagnosticTestData,
+  type DiagnosticResults,
 } from '@/data/sat-practice/diagnostic-generator'
+import { gradeGridIn } from '@/data/sat-grid-in'
 import ScratchPad from '@/components/ScratchPad'
 
 /* ------------------------------------------------------------------ */
@@ -51,6 +53,12 @@ export default function DiagnosticTest({
   const [eliminatedOptions, setEliminatedOptions] = useState<Map<number, Set<number>>>(new Map())
   const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  // The countdown starts once per sitting, so calling handleSubmit directly
+  // captured the version built when every answer was still blank — a timeout
+  // submitted an EMPTY sheet while manual submits worked. Go through a ref the
+  // effect below keeps pointed at the current handler.
+  const submitRef = useRef<() => void>(() => {})
+  const submittedRef = useRef(false)
   const [katexReady, setKatexReady] = useState(false)
 
   // Pre-load KaTeX lazily on mount
@@ -73,24 +81,26 @@ export default function DiagnosticTest({
   const sectionIndex = currentIndex - sectionStart
   const sectionAnswered = answers.slice(sectionStart, sectionStart + sectionTotal).filter(a => a.selectedIndex !== null || !!a.textValue?.trim()).length
 
-  // Timer
+  // Timer — the tick only counts down. Submitting from inside the state
+  // updater ran the side effect more than once (React may re-invoke an
+  // updater), so expiry is handled in its own effect below.
   useEffect(() => {
     if (phase !== 'testing') return
     timerRef.current = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) {
-          if (timerRef.current) clearInterval(timerRef.current)
-          handleSubmit()
-          return 0
-        }
-        return prev - 1
-      })
+      setTimeRemaining(prev => (prev <= 1 ? 0 : prev - 1))
     }, 1000)
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
+
+  // Time's up: grade what the student actually answered, exactly once.
+  useEffect(() => {
+    if (phase !== 'testing' || timeRemaining > 0 || submittedRef.current) return
+    submittedRef.current = true
+    if (timerRef.current) clearInterval(timerRef.current)
+    submitRef.current()
+  }, [phase, timeRemaining])
 
   // Handle advancing to next question, with section break
   const handleNext = useCallback(() => {
@@ -156,10 +166,6 @@ export default function DiagnosticTest({
   const handleSubmit = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current)
 
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { analyzeDiagnosticResults } = require('@/data/sat-practice/diagnostic-generator')
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { gradeGridIn } = require('@/data/sat-grid-in')
     const results = analyzeDiagnosticResults(testData.questions, answers, testData.band ?? 'regular')
 
     setPhase('complete')
@@ -176,6 +182,12 @@ export default function DiagnosticTest({
       }),
     )
   }, [testData.questions, testData.band, answers, onComplete])
+
+  // Keep the timer's submit pointed at the latest handler, so running out of
+  // time grades the answers the student actually gave.
+  useEffect(() => {
+    submitRef.current = handleSubmit
+  }, [handleSubmit])
 
   // ----------------------------------------------------------------
   //  Intro

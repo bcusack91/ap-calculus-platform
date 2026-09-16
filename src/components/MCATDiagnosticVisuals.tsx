@@ -57,11 +57,10 @@ export function RichTextBlock({ text, className }: { text: string; className?: s
       mounted = false
     }
   }, [])
-  // renderRichText turns newlines into <br> and pipe tables into <table>, but
-  // leaves markdown bold as literal asterisks. Authored figure captions use
-  // `**Figure 1. …**`.
+  // renderRichText handles newlines, pipe tables, markdown bold/italic and
+  // KaTeX — authored figure captions use `**Figure 1. …**`.
   const html = useMemo(
-    () => renderRichText(text).replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>'),
+    () => renderRichText(text),
     [text, ready], // eslint-disable-line react-hooks/exhaustive-deps
   )
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />

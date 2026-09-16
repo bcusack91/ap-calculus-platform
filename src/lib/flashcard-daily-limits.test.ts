@@ -14,7 +14,7 @@ describe('effectiveDailyLimits', () => {
     })
     expect(effectiveDailyLimits({ flashcardNewPerDay: null, flashcardMaxReviewsPerDay: null })).toEqual({
       newPerDay: 100,
-      maxReviewsPerDay: 200,
+      maxReviewsPerDay: 500,
     })
   })
 

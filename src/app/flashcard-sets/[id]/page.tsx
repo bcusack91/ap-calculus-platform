@@ -2,6 +2,9 @@
 
 import { Suspense, useEffect, useState, useCallback } from 'react'
 import { useParams, useSearchParams } from 'next/navigation'
+import { renderRichText } from '@/lib/render-rich-text'
+import { formatFlashcardContent } from '@/lib/format-flashcard-content'
+import { preloadKatex } from '@/lib/katex-lazy'
 
 interface Card {
   id: string
@@ -41,6 +44,15 @@ function FlashcardSetViewerInner() {
       setMarked('error')
     }
   }
+
+  // KaTeX loads lazily; re-render once it is ready so the fallback raw text is
+  // replaced by real math (same pattern as MathText and the exam runners).
+  const [katexReady, setKatexReady] = useState(false)
+  useEffect(() => {
+    let mounted = true
+    preloadKatex().then(() => { if (mounted) setKatexReady(true) })
+    return () => { mounted = false }
+  }, [])
 
   useEffect(() => {
     fetch(`/api/flashcard-sets/${id}`)
@@ -87,7 +99,12 @@ function FlashcardSetViewerInner() {
     )
   }
 
+  // Card text is authored markdown + LaTeX — a teacher's MCAT set is full of
+  // `**bold**` and `$…$` — so it goes through the same pipeline as the other
+  // flashcard surfaces (normalize, then render) instead of being printed raw.
+  void katexReady // re-render dependency: KaTeX loads after first paint
   const card = set.cards[index]
+  const cardHtml = renderRichText(formatFlashcardContent(flipped ? card.back : card.front))
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
@@ -109,9 +126,10 @@ function FlashcardSetViewerInner() {
           <span className="text-xs uppercase tracking-wide text-gray-400 mb-3">
             {flipped ? 'Answer' : 'Term'}
           </span>
-          <span className="text-lg sm:text-xl font-medium text-gray-900 dark:text-white whitespace-pre-wrap">
-            {flipped ? card.back : card.front}
-          </span>
+          <span
+            className="text-lg sm:text-xl font-medium text-gray-900 dark:text-white"
+            dangerouslySetInnerHTML={{ __html: cardHtml }}
+          />
           <span className="text-xs text-gray-400 mt-4">Tap or press space to flip</span>
         </button>
 

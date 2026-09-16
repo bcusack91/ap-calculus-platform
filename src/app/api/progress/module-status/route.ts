@@ -1,13 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 
 /**
  * GET /api/progress/module-status?slugs=a,b,c
  *
  * Per-topic "cleared" status for the CALLER, using the SAME module-cleared
- * rule as the class plan / MCAT retake gate: entrance-quiz mastery
- * (masteryLevel >= 1) OR a best exit-quiz score >= 80%. Powers the dashboard
+ * rule as the class plan / MCAT retake gate: an entrance-quiz TEST-OUT (not a
+ * merely finished lesson, which also reaches masteryLevel 1) OR a best
+ * exit-quiz score >= 80%. Powers the dashboard
  * study-plan "Done" badges so students can see which recommended sections
  * they've already worked through.
  */
@@ -40,7 +43,7 @@ export async function GET(req: NextRequest) {
 
   const progressRows = topics.length === 0 ? [] : await prisma.topicProgress.findMany({
     where: { userId, topicId: { in: topics.map((t) => t.id) } },
-    select: { topicId: true, masteryLevel: true },
+    select: { topicId: true, masteryLevel: true, masteredParts: true },
   })
   const slugById = new Map(topics.map((t) => [t.id, t.slug]))
 
@@ -48,7 +51,14 @@ export async function GET(req: NextRequest) {
   for (const s of slugs) cleared[s] = false
   for (const r of progressRows) {
     const slug = slugById.get(r.topicId)
-    if (slug && r.masteryLevel >= 1) cleared[slug] = true
+    if (!slug) continue
+    const testedOut = isEntranceMastery({
+      topicSlug: slug,
+      masteryLevel: r.masteryLevel,
+      masteredParts: r.masteredParts,
+    })
+    // A quiz-less topic can only ever be cleared by its lesson.
+    if (testedOut || (!hasExitQuiz(slug) && r.masteryLevel >= 1)) cleared[slug] = true
   }
   for (const r of exitRows) {
     if (r.totalQuestions > 0 && r.score / r.totalQuestions >= REQUIRED_EXIT_FRACTION) {

@@ -37,6 +37,12 @@ interface ExitQuizProps {
   seed?: number // generation seed — lets the server regenerate + regrade this exact quiz
   difficulty?: 'easy' | 'medium' | 'hard' // tier the quiz was generated at
   onPracticeAtDifficulty?: (difficulty: 'easy' | 'medium' | 'hard') => void // re-open as tiered practice
+  /**
+   * Start a NEW graded attempt right away (fresh draw). Surfaces that can
+   * redraw pass this; without it the results screen offers "Back to the
+   * lesson" instead of promising a retake it cannot deliver.
+   */
+  onRetake?: (score: number, totalQuestions: number) => void | Promise<void>
 }
 
 // Render text with markdown tables and KaTeX math
@@ -57,7 +63,8 @@ export default function ExitQuiz({
   variant,
   seed,
   difficulty,
-  onPracticeAtDifficulty
+  onPracticeAtDifficulty,
+  onRetake
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -355,12 +362,21 @@ export default function ExitQuiz({
               >
                 📚 Review This Section
               </button>
+            ) : onRetake ? (
+              <button
+                onClick={() => { onRetake(score, totalQuestions) }}
+                disabled={!submitSettled}
+                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg disabled:opacity-60"
+              >
+                🔄 Retake Quiz Now
+              </button>
             ) : (
+              /* No redraw available on this surface — say what the button does. */
               <button
                 onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs, wrongPartNumbers)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg"
               >
-                🔄 Retake Quiz
+                ← Back to the Lesson
               </button>
             )}
           </div>

@@ -6,7 +6,7 @@
  */
 
 import { generateExitQuiz } from '../exit-quizzes'
-import { matchSubtopic } from './subtopic-map'
+import { matchSubtopic, MCAT_SUBTOPIC_MAP } from './subtopic-map'
 import { CARS_PASSAGES, SECTION_PASSAGES } from '../mcat/passages'
 import type { MCATFigureSpec, MCATPassage } from '../mcat/types'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
@@ -1928,6 +1928,177 @@ export async function generateMCATDiagnosticTest(
 /*  Scoring                                                            */
 /* ------------------------------------------------------------------ */
 
+// Domain slugs are category-level labels, not real Topic records — map them to
+// the canonical `-mcat` topic slugs so recommendation links resolve to live
+// lesson pages (same pattern as the SAT diagnostic's CANONICAL_SLUG_MAP).
+const CANONICAL_TOPIC_MAP: Record<string, string> = {
+  'mcat-general-chemistry': 'mcat-general-chemistry-mcat',
+  'mcat-organic-chemistry': 'mcat-organic-chemistry-mcat',
+  'mcat-physics-mechanics': 'mcat-physics-mechanics-mcat',
+  'mcat-physics-electricity': 'mcat-physics-electricity-mcat',
+  'mcat-biochemistry': 'mcat-biochemistry-foundations-mcat',
+  'mcat-cars': 'mcat-cars-strategy-mcat',
+  'mcat-biology': 'mcat-cell-biology-mcat',
+  'mcat-organ-systems': 'mcat-organ-systems-mcat',
+  'mcat-genetics-evolution': 'mcat-genetics-evolution-mcat',
+  'mcat-psychology-sociology': 'mcat-psychology-behavior-mcat',
+}
+const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
+
+export type PlanTopicCandidate = { slug: string; name: string; priority: 'high' | 'medium' | 'low' }
+/** The slice of a domain result the plan-building helpers need. */
+export type PlanDomainResult = Pick<MCATDomainResult, 'domainId' | 'domainName' | 'level'>
+
+function weakestFirst(domains: PlanDomainResult[]): PlanDomainResult[] {
+  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(dom => dom.id === id)?.questionCount ?? 0
+  return domains
+    .filter(d => d.level === 'weak' || d.level === 'moderate')
+    .slice()
+    .sort((a, b) => {
+      if (a.level !== b.level) return a.level === 'weak' ? -1 : 1
+      return examWeight(b.domainId) - examWeight(a.domainId)
+    })
+}
+
+/** Domain-level ("work on Chemistry") candidates, weakest domain first. */
+function domainLevelTopics(domains: PlanDomainResult[]): PlanTopicCandidate[] {
+  return weakestFirst(domains).flatMap(d => {
+    const domain = DIAGNOSTIC_DOMAINS.find(dom => dom.id === d.domainId)
+    return (domain?.slugs ?? []).map(slug => ({
+      slug: canonicalizeTopicSlug(slug),
+      name: d.domainName,
+      priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
+    }))
+  })
+}
+
+/**
+ * Replacement study topics for a diagnostic cycle, drawn from the SAME
+ * universe the scorer recommends from: the per-domain subtopic map first
+ * (specific, e.g. "Thermodynamics" — every slug there is a real Topic with a
+ * working exit quiz), then the broad domain-level slugs. Weakest domains
+ * first. DB-free and pure, so it runs in the browser scorer or a route.
+ */
+export function planCandidatePool(domains: PlanDomainResult[]): PlanTopicCandidate[] {
+  const weak = weakestFirst(domains)
+  const subtopics: PlanTopicCandidate[] = weak.flatMap(d =>
+    (MCAT_SUBTOPIC_MAP[d.domainId] ?? []).map(rule => ({
+      slug: rule.slug,
+      name: rule.title,
+      priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
+    })),
+  )
+  const pool = [...subtopics, ...domainLevelTopics(weak)]
+  return pool.filter((t, i, arr) => arr.findIndex(x => x.slug === t.slug) === i)
+}
+
+/** slug → the domain whose subtopic list it belongs to (first listing wins). */
+const SUBTOPIC_DOMAIN_OF = new Map<string, string>(
+  Object.entries(MCAT_SUBTOPIC_MAP).flatMap(([domainId, rules]) =>
+    rules.map(rule => [rule.slug, domainId] as const),
+  ),
+)
+
+/** Sibling subtopics of `slug` — same domain in the subtopic map, `slug` aside. */
+function subtopicSiblings(slug: string, priority: PlanTopicCandidate['priority']): PlanTopicCandidate[] {
+  const domainId = SUBTOPIC_DOMAIN_OF.get(slug)
+  if (!domainId) return []
+  return (MCAT_SUBTOPIC_MAP[domainId] ?? [])
+    .filter(rule => rule.slug !== slug)
+    .map(rule => ({ slug: rule.slug, name: rule.title, priority }))
+}
+
+/**
+ * Every slug selectPlanTopics could possibly return for this cycle.
+ *
+ * Callers that need DB facts about the candidates (does the Topic exist? has
+ * the student cleared it?) must load them for THIS list, not just the stored
+ * recommendations — a substitute nobody looked up would read as a missing topic
+ * and be waved through by the drift safety valve.
+ */
+export function planCandidateUniverse({
+  recommended,
+  domains,
+}: {
+  recommended: PlanTopicCandidate[]
+  domains: PlanDomainResult[]
+}): string[] {
+  return Array.from(
+    new Set([
+      ...recommended.map(topic => topic.slug),
+      ...recommended.flatMap(topic => subtopicSiblings(topic.slug, topic.priority).map(s => s.slug)),
+      ...planCandidatePool(domains).map(candidate => candidate.slug),
+    ]),
+  )
+}
+
+/**
+ * Fill a diagnostic cycle's study-plan slots, PREFERRING topics the student has
+ * not already cleared.
+ *
+ * Why (bug, Sept 2026): the scorer rebuilds recommendations from the new
+ * attempt's misses with no notion of what the student already mastered, so
+ * cycle 2 could re-recommend the five topics cycle 1 had just cleared. Every
+ * slot was then satisfied on arrival, pendingTopics hit 0, and the next
+ * diagnostic unlocked for free without a minute of study.
+ *
+ * `isStale(slug)` answers "was this already cleared BEFORE this diagnostic was
+ * taken?" — deliberately not "is it cleared now", so clearing a topic during
+ * the cycle marks it done instead of swapping it out for a fresh one (that
+ * would be a treadmill the plan could never finish).
+ *
+ * Guarantees: never returns fewer than `limit` while any candidate exists
+ * (already-cleared recommendations are appended last rather than dropped), and
+ * never empties the plan when a student has mastered everything — an all-stale
+ * plan is simply satisfied, which keeps the retake gate from deadlocking.
+ */
+export function selectPlanTopics({
+  recommended,
+  domains,
+  isStale,
+  limit = 5,
+}: {
+  recommended: PlanTopicCandidate[]
+  domains: PlanDomainResult[]
+  isStale: (slug: string) => boolean
+  limit?: number
+}): PlanTopicCandidate[] {
+  const seen = new Set<string>()
+  const fresh: PlanTopicCandidate[] = []
+  const stale: PlanTopicCandidate[] = []
+  for (const topic of recommended) {
+    if (!topic?.slug || seen.has(topic.slug)) continue
+    seen.add(topic.slug)
+    ;(isStale(topic.slug) ? stale : fresh).push(topic)
+  }
+  if (fresh.length >= limit) return fresh.slice(0, limit)
+
+  const selected = [...fresh]
+  const consider = (candidate: PlanTopicCandidate) => {
+    if (selected.length >= limit) return
+    if (seen.has(candidate.slug) || isStale(candidate.slug)) return
+    seen.add(candidate.slug)
+    selected.push(candidate)
+  }
+  // Nearest substitute first: a SIBLING subtopic of the cleared recommendation
+  // (same domain, new material). This is the only backfill available when the
+  // student missed a question in a domain they otherwise scored strong in —
+  // no domain is weak/moderate, so the pool below is empty, and without this a
+  // repeat cycle of already-cleared topics would unlock the retake for free.
+  for (const topic of stale) {
+    for (const sibling of subtopicSiblings(topic.slug, topic.priority)) consider(sibling)
+  }
+  for (const candidate of planCandidatePool(domains)) consider(candidate)
+  // Last resort: rather than hand back a short plan, restore the already-
+  // cleared recommendations. They read as satisfied, so they neither block the
+  // student nor (on their own) unlock anything new.
+  for (const topic of stale) {
+    if (selected.length >= limit) break
+    selected.push(topic)
+  }
+  return selected.slice(0, limit)
+}
+
 export function scoreMCATDiagnostic(
   questions: MCATDiagnosticQuestion[],
   answers: Record<number, number>,
@@ -1985,22 +2156,6 @@ export function scoreMCATDiagnostic(
 
   // Prioritize by exam weight (questionCount) so highest-impact topics surface first.
   const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(dom => dom.id === id)?.questionCount ?? 0
-  // Domain slugs are category-level labels, not real Topic records — map them to
-  // the canonical `-mcat` topic slugs so recommendation links resolve to live
-  // lesson pages (same pattern as the SAT diagnostic's CANONICAL_SLUG_MAP).
-  const CANONICAL_TOPIC_MAP: Record<string, string> = {
-    'mcat-general-chemistry': 'mcat-general-chemistry-mcat',
-    'mcat-organic-chemistry': 'mcat-organic-chemistry-mcat',
-    'mcat-physics-mechanics': 'mcat-physics-mechanics-mcat',
-    'mcat-physics-electricity': 'mcat-physics-electricity-mcat',
-    'mcat-biochemistry': 'mcat-biochemistry-foundations-mcat',
-    'mcat-cars': 'mcat-cars-strategy-mcat',
-    'mcat-biology': 'mcat-cell-biology-mcat',
-    'mcat-organ-systems': 'mcat-organ-systems-mcat',
-    'mcat-genetics-evolution': 'mcat-genetics-evolution-mcat',
-    'mcat-psychology-sociology': 'mcat-psychology-behavior-mcat',
-  }
-  const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
 
   // SPECIFIC recommendations first: attribute each missed question to a
   // concrete curriculum topic ("Thermodynamics", "Membrane Transport") via
@@ -2039,20 +2194,7 @@ export function scoreMCATDiagnostic(
 
   // Domain-level fallback (previous behavior) fills any remaining slots —
   // never wrong, just less specific than a direct miss attribution.
-  const domainTopics = domainResults
-    .filter(d => d.level === 'weak' || d.level === 'moderate')
-    .sort((a, b) => {
-      if (a.level !== b.level) return a.level === 'weak' ? -1 : 1
-      return examWeight(b.domainId) - examWeight(a.domainId)
-    })
-    .flatMap(d => {
-      const domain = DIAGNOSTIC_DOMAINS.find(dom => dom.id === d.domainId)
-      return (domain?.slugs ?? []).map(slug => ({
-        slug: canonicalizeTopicSlug(slug),
-        name: d.domainName,
-        priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
-      }))
-    })
+  const domainTopics = domainLevelTopics(domainResults)
 
   const recommendedTopics = [...specificTopics, ...domainTopics]
     // Dedupe: multiple sources can produce the same topic.

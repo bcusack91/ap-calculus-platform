@@ -5,11 +5,98 @@
 
 export function formatFlashcardContent(content: string): string {
   if (!content) return content
-  
+
   // If content already has LaTeX delimiters, return as-is
   if (content.includes('$') || content.includes('\\[') || content.includes('\\(')) {
     return content
   }
+
+  // A `$$…$$` span cannot be closed across a blank line — remark-math ends the
+  // math node at the paragraph break, so the opener renders as a red KaTeX
+  // error and the rest of the card spills out as raw LaTeX with a trailing
+  // `$$`. Five MCAT physics cards lost their answer that way ("**14.7 N**\n\n
+  // fk = μk × N = …" wrapped whole). Format each paragraph on its own and put
+  // the blank lines back.
+  return content
+    .split(/\n[ \t]*\n/)
+    .map(formatBlock)
+    .join('\n\n')
+}
+
+/** Markdown emphasis / inline code: prose by definition, never math. */
+const EMPHASIS_RUN = /(\*\*[^*\n]+\*\*|`[^`\n]+`)/
+
+/** Math emitted into markdown must live on ONE line to stay closable. */
+function flattenMath(eq: string): string {
+  return eq.trim().replace(/\s*\n\s*/g, ' ')
+}
+
+/**
+ * Wrap a part that reads as a standalone equation, keeping markdown emphasis
+ * and any lead-in words OUT of the math span. `$$**14.7 N**` is not LaTeX: it
+ * renders as a red KaTeX error and takes the card's answer with it.
+ *
+ * The prose/equation decision is made by the caller on the WHOLE sentence —
+ * splitting first would drop the word count below the prose threshold and
+ * start typesetting things like "gambling/slot" as a fraction.
+ */
+function wrapEquation(part: string, display: boolean): string {
+  if (EMPHASIS_RUN.test(part)) {
+    return part
+      .split(EMPHASIS_RUN)
+      .map((seg, i) => {
+        if (i % 2 === 1) return seg // **bold** / `code` stays verbatim
+        // What is left of the sentence is only math if it still holds an `=`.
+        return seg.trim() && seg.includes('=') ? wrapEquation(seg, display) : seg
+      })
+      .join('')
+  }
+  // A part can hold several equations on their own lines ("12 ÷ 4 = 3\n(-12) ÷
+  // (-4) = 3"). Wrap each line on its own: one span per line stays closable and
+  // keeps the lines apart, where a single flattened span ran them together.
+  if (part.trim().includes('\n')) {
+    return part
+      .split('\n')
+      .map((line) => (line.trim() && line.includes('=') ? wrapEquation(line, display) : line))
+      .join('\n')
+  }
+  const open = display ? '\n\n$$' : '$'
+  const close = display ? '$$\n\n' : '$'
+  // An inline span keeps a space between the lead-in words and the math.
+  const gap = display ? '' : ' '
+  // Keep a lead-in phrase ("Current I = E/(R+r) = …") outside the math — words
+  // typeset as math come out as spaced-out italic identifiers. The equation
+  // starts at the FIRST identifier that an `=` follows, and the lead is only
+  // taken when it is whole words ending at a space: without that guard the
+  // split lands mid-expression ("1/" + "$$R_total = 1/6 + …$$").
+  const eqStart = part.search(/[A-Za-z_][A-Za-z0-9_]*\s*=/)
+  const lead = eqStart > 0 ? part.slice(0, eqStart) : ''
+  if (/^\s*[A-Za-z][A-Za-z\s,:;'"()-]*\s$/.test(lead)) {
+    return lead.trim() + gap + open + convertToLatex(flattenMath(part.slice(eqStart))) + close
+  }
+  // Same idea for a labelled equation ("Lens equation: 1/f = 1/do + …"), whose
+  // formula starts with a number so the identifier scan can't find the edge.
+  // The formula must start on a symbol, so a qualifier stays out of the math:
+  // "Earth's field: ~0.5 G = 5×10⁻⁵ T" would lose its `~` (a non-breaking
+  // space in LaTeX, so it renders as nothing at all).
+  const labelled = part.match(/^(\s*[A-Za-z][A-Za-z\s,;'"()-]*:\s+)([A-Za-z0-9([][\s\S]*)$/)
+  if (labelled) {
+    return labelled[1].trim() + gap + open + convertToLatex(flattenMath(labelled[2])) + close
+  }
+  // Last resort for an inline span: the original, looser lead split. It can cut
+  // mid-token ("(Δ" | "T = 0"), but that has been the rendering for a year and
+  // keeping it here means this fix changes nothing it doesn't have to.
+  if (!display) {
+    const eqMatch = part.match(/^(.*?)(\b[A-Za-z_][A-Za-z0-9_]*\s*=\s*.+)$/)
+    if (eqMatch && eqMatch[1].trim()) {
+      return eqMatch[1].trim() + ' $' + convertToLatex(flattenMath(eqMatch[2])) + '$'
+    }
+  }
+  return open + convertToLatex(flattenMath(part)) + close
+}
+
+function formatBlock(content: string): string {
+  if (!content.trim()) return content
 
   // Split content into sentences and process each
   // This prevents equations from being broken across sentence boundaries
@@ -48,8 +135,11 @@ export function formatFlashcardContent(content: string): string {
           // arithmetic in prose carries a ×, ÷, +, −, * or = as well.
           if (!/[×÷+*=\-]/.test(run)) return run
           // Sentence punctuation trailing the arithmetic ("= 20,") belongs to
-          // the prose, not the math span.
-          const m = run.match(/^(.*?)([.,]*)$/) as RegExpMatchArray
+          // the prose, not the math span. `[\s\S]` not `.`: an arithmetic run
+          // can contain a newline (`\s` in the pattern above), and with `.`
+          // this match returned null and THREW — one prod card ("Replace x
+          // with (x - 2)…") crashed every flashcard surface that formats it.
+          const m = run.match(/^([\s\S]*?)([.,]*)$/) as RegExpMatchArray
           return '$' + convertToLatex(m[1].trim()) + '$' + m[2]
         }
       )
@@ -57,19 +147,12 @@ export function formatFlashcardContent(content: string): string {
 
     // If it looks like a standalone equation (multiple = or = with math notation), wrap as display equation
     if (equalsCount >= 2 && (hasMathChars || hasBrackets || hasFractions)) {
-      // Convert the equation to proper LaTeX
-      return '\n\n$$' + convertToLatex(part.trim()) + '$$\n\n'
+      return wrapEquation(part, true)
     }
 
     // Single equation with math notation
     if (equalsCount >= 1 && (hasMathChars || hasBrackets || hasFractions || hasExponents)) {
-      // Check if there's surrounding text
-      const eqMatch = part.match(/^(.*?)(\b[A-Za-z_][A-Za-z0-9_]*\s*=\s*.+)$/)
-      if (eqMatch && eqMatch[1].trim()) {
-        // Text before equation + equation
-        return eqMatch[1].trim() + ' $' + convertToLatex(eqMatch[2].trim()) + '$'
-      }
-      return '$' + convertToLatex(part.trim()) + '$'
+      return wrapEquation(part, false)
     }
 
     // Fallback: use the regex-based approach for simpler patterns

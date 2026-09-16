@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { hasExitQuiz } from '@/data/exit-quizzes'
 import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-config'
 
 /**
@@ -77,7 +79,7 @@ export async function GET() {
       prisma.topic.findMany({ where: { slug: { in: allSlugs } }, select: { id: true, slug: true } }),
       prisma.topicProgress.findMany({
         where: { userId, topic: { slug: { in: allSlugs } } },
-        select: { masteryLevel: true, topic: { select: { slug: true } } },
+        select: { masteryLevel: true, masteredParts: true, topic: { select: { slug: true } } },
       }),
       prisma.exitQuizAttempt.findMany({
         where: { userId, topicSlug: { in: allSlugs } },
@@ -86,7 +88,7 @@ export async function GET() {
     ])
 
     const known = new Set(topicRows.map((t) => t.slug))
-    const mastery = new Map(progressRows.map((p) => [p.topic.slug, p.masteryLevel]))
+    const progressBySlug = new Map(progressRows.map((p) => [p.topic.slug, p]))
     const bestExit = new Map<string, number>()
     for (const a of exitRows) {
       if (!a.totalQuestions) continue
@@ -98,7 +100,15 @@ export async function GET() {
       const plan = perCourse.get(course.key)
       if (!plan) return []
       const topics = plan.topics.map((t) => {
-        const satisfied = (mastery.get(t.slug) ?? 0) >= 1 || (bestExit.get(t.slug) ?? 0) >= REQUIRED_SCORE_PERCENT
+        // Cleared by an entrance-quiz TEST-OUT (a finished lesson also reaches
+        // masteryLevel 1, and must not skip the exit quiz), by scoring on the
+        // exit quiz, or — for topics with no quiz mapped — by the lesson.
+        const progress = progressBySlug.get(t.slug)
+        const masteryLevel = progress?.masteryLevel ?? 0
+        const satisfied =
+          isEntranceMastery({ topicSlug: t.slug, masteryLevel, masteredParts: progress?.masteredParts }) ||
+          (bestExit.get(t.slug) ?? 0) >= REQUIRED_SCORE_PERCENT ||
+          (!hasExitQuiz(t.slug) && masteryLevel >= 1)
         return {
           ...t,
           topicPath: `/topics/${t.slug}`,

@@ -551,7 +551,39 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     lastScore: number | null
     mustRedoUnit: boolean
   }>({ totalAttempts: 0, hasPassed: false, lastScore: null, mustRedoUnit: false })
+  // Bumped once per quiz OPENING and used as the ExitQuiz `key`, so every fresh
+  // draw gets a new component instance. Without it, re-opening the overlay
+  // (retake, tiered practice) swapped the `questions` prop underneath a mounted
+  // ExitQuiz that still held the finished run's answers and results screen.
+  const [exitQuizRun, setExitQuizRun] = useState(0)
   const topicHasExitQuiz = hasExitQuiz(topicSlug)
+
+  /**
+   * Single entry point for showing the exit-quiz overlay: draws a fresh quiz at
+   * a new seed (so a retake really is a new draw wherever the pool has more
+   * than 10 items) and remounts the overlay. Returns false when the topic's
+   * pool yields nothing, so callers can stay on the lesson.
+   */
+  const openExitQuiz = useCallback(
+    async (difficulty?: 'easy' | 'medium' | 'hard'): Promise<boolean> => {
+      const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+      let questions: ExitQuizQuestion[] = []
+      try {
+        questions = await generateExitQuiz(topicSlug, 10, difficulty, seed)
+      } catch {
+        return false // topic without a usable quiz pool
+      }
+      if (questions.length === 0) return false
+      setExitQuizSeed(seed)
+      setExitQuizDifficulty(difficulty)
+      setExitQuizQuestions(questions)
+      setExitQuizRun((run) => run + 1)
+      setShowExitQuiz(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return true
+    },
+    [topicSlug],
+  )
 
   // Entrance quiz state (topic-level, e.g. moles-molar-mass). When no authored
   // entrance quiz exists (roughly half the interactive library — all of
@@ -855,18 +887,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     if (typeof window === 'undefined') return
     if (!new URLSearchParams(window.location.search).has('exitQuiz')) return
     exitQuizDeepLinkFired.current = true
-    const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
-    generateExitQuiz(topicSlug, 10, undefined, seed)
-      .then((questions) => {
-        if (questions.length === 0) return
-        setExitQuizSeed(seed)
-        setExitQuizDifficulty(undefined)
-        setExitQuizQuestions(questions)
-        setShowExitQuiz(true)
-        window.scrollTo({ top: 0 })
-      })
-      .catch(() => { /* topic without a quiz pool — stay on the lesson */ })
-  }, [topicHasExitQuiz, topicSlug, session?.user])
+    // Deferred off the effect body so the overlay's state lands in a later
+    // tick (and never cancelled on re-run: the ref guard fires exactly once, so
+    // a cleanup could otherwise drop the quiz the student was sent to take).
+    // Resolves false for a topic with no usable pool — stay on the lesson.
+    void Promise.resolve().then(() => openExitQuiz())
+  }, [topicHasExitQuiz, session?.user, openExitQuiz])
 
   const sections = lessonData?.sections ?? []
   const currentSection = sections?.[currentSectionIndex]
@@ -924,24 +950,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
           // No more unmastered parts — show exit quiz
-          const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
-          const questions = await generateExitQuiz(topicSlug, 10, undefined, seed)
-          setExitQuizSeed(seed)
-          setExitQuizDifficulty(undefined)
-          setExitQuizQuestions(questions)
-          setShowExitQuiz(true)
-          window.scrollTo({ top: 0, behavior: 'smooth' })
+          await openExitQuiz()
           return
         }
       } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
         // Show exit quiz regardless of completion destination
-        const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
-        const questions = await generateExitQuiz(topicSlug, 10, undefined, seed)
-        setExitQuizSeed(seed)
-        setExitQuizDifficulty(undefined)
-        setExitQuizQuestions(questions)
-        setShowExitQuiz(true)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        await openExitQuiz()
         return
       } else if (entersCompetitiveModeOnComplete) {
         // On final section, save full mastery then move to competitive mode
@@ -1013,13 +1027,26 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Re-open the exit quiz as a tiered PRACTICE run (fresh seed, chosen tier).
   // Does not gate mastery — it's for "study where you are" drilling.
   const startExitQuizPractice = async (difficulty: 'easy' | 'medium' | 'hard') => {
-    const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
-    const questions = await generateExitQuiz(topicSlug, 10, difficulty, seed)
-    setExitQuizSeed(seed)
-    setExitQuizDifficulty(difficulty)
-    setExitQuizQuestions(questions)
-    setShowExitQuiz(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    await openExitQuiz(difficulty)
+  }
+
+  /**
+   * Real retake: a NEW graded attempt at the same tier, not a dismissal. The
+   * results screen's retake button used to call onComplete, which merely closed
+   * the overlay (and, on multi-variant topics, kicked the student back through
+   * lesson parts) — so "🔄 Retake Quiz" never actually retook anything.
+   * The finished attempt has already been submitted and scored server-side, so
+   * all that is left here is to fold it into the local status and redraw.
+   */
+  const handleExitQuizRetake = async (score: number) => {
+    setExitQuizStatus(prev => ({
+      ...prev,
+      totalAttempts: prev.totalAttempts + 1,
+      lastScore: score,
+      mustRedoUnit: false,
+    }))
+    const reopened = await openExitQuiz(exitQuizDifficulty)
+    if (!reopened) setShowExitQuiz(false) // pool gone — fall back to the lesson
   }
 
   const handleExitQuizComplete = (score: number, total: number, passed: boolean, mustRedoUnit: boolean, _wrongTopicSlugs?: string[], wrongPartNumbers?: number[]) => {
@@ -1273,6 +1300,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   if (showExitQuiz && exitQuizQuestions.length > 0) {
     return (
       <ExitQuiz
+        // New instance per draw — otherwise a retake/practice redraw lands on
+        // the previous run's finished results screen.
+        key={exitQuizRun}
         topicSlug={topicSlug}
         topicTitle={lessonTitle}
         courseSlug={courseSlug}
@@ -1280,6 +1310,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         seed={exitQuizSeed}
         difficulty={exitQuizDifficulty}
         onPracticeAtDifficulty={startExitQuizPractice}
+        onRetake={handleExitQuizRetake}
         onComplete={handleExitQuizComplete}
         onCancel={() => setShowExitQuiz(false)}
         previousAttempts={exitQuizStatus.totalAttempts}

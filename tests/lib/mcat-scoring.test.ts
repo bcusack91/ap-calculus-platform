@@ -150,17 +150,26 @@ describe('scoreMCAT', () => {
 })
 
 describe('projectionRange (evidence-keyed ±band on the 472-528 total)', () => {
-  it('is ±3 at the default medium evidence', () => {
-    expect(projectionRange(500)).toEqual({ low: 497, high: 503 })
+  // Widened Sept 2026: a fixed-ability student re-sitting the 45-question
+  // diagnostic scored 481-506 (sd 5.5), so the old ±3 held only 38% of
+  // sittings and dressed up noise as progress.
+  it('is ±6 at the default medium evidence', () => {
+    expect(projectionRange(500)).toEqual({ low: 494, high: 506 })
   })
 
-  it('tightens to ±2 with high evidence and widens to ±4 with low', () => {
-    expect(projectionRange(500, 'high')).toEqual({ low: 498, high: 502 })
-    expect(projectionRange(500, 'low')).toEqual({ low: 496, high: 504 })
+  it('tightens to ±4 with high evidence and widens to ±8 with low', () => {
+    expect(projectionRange(500, 'high')).toEqual({ low: 496, high: 504 })
+    expect(projectionRange(500, 'low')).toEqual({ low: 492, high: 508 })
+  })
+
+  it('stays at least as wide as the measured single-sitting spread', () => {
+    // sd 5.5 => a band narrower than ±5 would understate the test's own noise.
+    const { low, high } = projectionRange(500)
+    expect(high - low).toBeGreaterThanOrEqual(10)
   })
 
   it('clamps to the 472-528 scale at both ends', () => {
-    expect(projectionRange(473, 'low')).toEqual({ low: 472, high: 477 })
-    expect(projectionRange(527, 'low')).toEqual({ low: 523, high: 528 })
+    expect(projectionRange(473, 'low')).toEqual({ low: 472, high: 481 })
+    expect(projectionRange(527, 'low')).toEqual({ low: 519, high: 528 })
   })
 })

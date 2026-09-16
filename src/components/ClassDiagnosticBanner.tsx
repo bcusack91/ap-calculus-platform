@@ -7,6 +7,37 @@ import Link from 'next/link'
 interface PendingDiag { id: string; title: string; courseKey: string; dueDate: string | null; classroomName: string; href: string }
 
 /**
+ * Due dates are DAYS, and work is due at the END of the day.
+ *
+ * A date-only value (`<input type="date">` → `new Date('2026-09-18')`) is
+ * stored as UTC midnight, the FIRST instant of the day. Rendering that instant
+ * in ET printed "9/17" and flipped the banner to "Overdue" at 8pm the evening
+ * BEFORE the date the teacher picked. New assignments store a real end-of-day
+ * instant, and these two helpers also repair rows frozen at UTC midnight
+ * before that fix, so nothing has to be migrated.
+ *
+ * Exported so ClassDiagnosticsPanel renders the same date the student sees.
+ */
+export function isDateOnly(iso: string | Date): boolean {
+  const d = typeof iso === 'string' ? new Date(iso) : iso
+  return !isNaN(d.getTime()) && d.getTime() % 86_400_000 === 0
+}
+
+/** The instant the assignment actually becomes late, in the viewer's timezone. */
+export function dueDeadline(iso: string | Date): Date {
+  const d = typeof iso === 'string' ? new Date(iso) : iso
+  if (!isDateOnly(d)) return d
+  return new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), 23, 59, 59, 999)
+}
+
+/** The calendar date to show — the day the teacher picked, not a shifted one. */
+export function formatDueDate(iso: string | Date): string {
+  const d = typeof iso === 'string' ? new Date(iso) : iso
+  if (isNaN(d.getTime())) return ''
+  return dueDeadline(d).toLocaleDateString()
+}
+
+/**
  * "Your class has a diagnostic due" banner. Self-contained — renders nothing
  * when there's nothing pending; disappears as soon as the student submits.
  */
@@ -31,7 +62,7 @@ export default function ClassDiagnosticBanner() {
   return (
     <div className="mb-6 space-y-2">
       {pending.map(p => {
-        const overdue = p.dueDate && new Date(p.dueDate).getTime() < now
+        const overdue = p.dueDate && dueDeadline(p.dueDate).getTime() < now
         return (
           <Link
             key={p.id}
@@ -47,8 +78,8 @@ export default function ClassDiagnosticBanner() {
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {p.dueDate
                     ? overdue
-                      ? <span className="font-medium text-red-600 dark:text-red-400">Overdue — was due {new Date(p.dueDate).toLocaleDateString()}</span>
-                      : `Due ${new Date(p.dueDate).toLocaleDateString()}`
+                      ? <span className="font-medium text-red-600 dark:text-red-400">Overdue — was due {formatDueDate(p.dueDate)}</span>
+                      : `Due end of day ${formatDueDate(p.dueDate)}`
                     : 'Take it before your next class meeting'}
                 </p>
               </div>
