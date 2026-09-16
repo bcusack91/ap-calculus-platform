@@ -31,7 +31,11 @@ export async function GET(request: Request) {
           where: { lastAccessed: { gte: oneWeekAgo } },
           select: { timeSpent: true, completedAt: true, masteryLevel: true },
         },
-        flashcardProgress: { where: { lastReviewed: { gte: oneWeekAgo } }, select: { id: true } },
+        // Rated this week only (rows are stamped lastReviewed at creation), once per card.
+        flashcardProgress: {
+          where: { lastReviewed: { gte: oneWeekAgo }, reviewCount: { gt: 0 } },
+          select: { flashcardId: true },
+        },
         exitQuizAttempts: { where: { completedAt: { gte: oneWeekAgo } }, select: { id: true } },
         dailyStreak: { select: { currentStreak: true } },
       },
@@ -72,7 +76,7 @@ export async function GET(request: Request) {
           : 0,
         currentStreak: student.dailyStreak?.currentStreak ?? 0,
         minutesStudied: Math.round(tp.reduce((sum, t) => sum + t.timeSpent, 0) / 60),
-        flashcardsReviewed: student.flashcardProgress.length,
+        flashcardsReviewed: new Set(student.flashcardProgress.map((f) => f.flashcardId)).size,
         quizzesTaken: student.exitQuizAttempts.length,
       }
 

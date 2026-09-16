@@ -103,10 +103,13 @@ export async function GET(
         where: { userId: { in: studentIds } },
         select: { userId: true, status: true, masteryLevel: true },
       }),
-      prisma.flashcardProgress.groupBy({
-        by: ['userId'],
-        where: { userId: { in: studentIds } },
-        _count: true,
+      // "Studied" = cards the student has rated, counted once per card. Rows
+      // are pre-seeded on unlock and duplicated per study mode, so a plain row
+      // count credited untouched (and doubled) decks.
+      prisma.flashcardProgress.findMany({
+        where: { userId: { in: studentIds }, reviewCount: { gt: 0 } },
+        select: { userId: true, flashcardId: true },
+        distinct: ['userId', 'flashcardId'],
       }),
       prisma.dailyStreak.findMany({
         where: { userId: { in: studentIds } },
@@ -120,7 +123,8 @@ export async function GET(
       if (!progressByUser.has(p.userId)) progressByUser.set(p.userId, [])
       progressByUser.get(p.userId)!.push(p)
     }
-    const fcCountByUser = new Map(flashcardCounts.map((f) => [f.userId, f._count]))
+    const fcCountByUser = new Map<string, number>()
+    for (const f of flashcardCounts) fcCountByUser.set(f.userId, (fcCountByUser.get(f.userId) ?? 0) + 1)
     const streakByUser = new Map(allStreaks.map((s) => [s.userId, s.currentStreak]))
 
     const studentPerformance = classroom.members.map((member) => {

@@ -121,3 +121,35 @@ describe('renderRichText emphasis', () => {
     expect(html).toContain('$10')
   })
 })
+
+describe('nested emphasis', () => {
+  it('renders italic nested inside bold, as authored citations do', () => {
+    const out = renderRichText('**Du Bois, *The Souls of Black Folk* (1903), excerpt:**')
+    expect(out).toBe('<strong>Du Bois, <em>The Souls of Black Folk</em> (1903), excerpt:</strong>')
+  })
+
+  it('still renders plain bold and plain italic side by side', () => {
+    expect(renderRichText('**bold** and *italic*')).toBe('<strong>bold</strong> and <em>italic</em>')
+  })
+
+  it('renders a triple-asterisk run as bold italic', () => {
+    expect(renderRichText('***Tarikh al-Sudan***')).toBe('<strong><em>Tarikh al-Sudan</em></strong>')
+  })
+
+  it('renders bold that ends with an italic title', () => {
+    expect(renderRichText('**2013 *Shelby County v. Holder***')).toBe('<strong>2013 <em>Shelby County v. Holder</em></strong>')
+  })
+
+  it('renders bold that starts with an italic title', () => {
+    expect(renderRichText('***Souls* of Black Folk (1903)**')).toBe('<strong><em>Souls</em> of Black Folk (1903)</strong>')
+  })
+
+  it('keeps a stray asterisk pair literal when nothing pairs cleanly', () => {
+    expect(renderRichText('rate ** unknown and 2 * 3 * 4')).toBe('rate ** unknown and 2 * 3 * 4')
+  })
+
+  it('bolds a title inside a table cell', () => {
+    const out = renderRichText('| Event | Note |\n|---|---|\n| **2019 *1619 Project* (Hannah-Jones)** | Reframes founding. |')
+    expect(out).toContain('<td><strong>2019 <em>1619 Project</em> (Hannah-Jones)</strong></td>')
+  })
+})

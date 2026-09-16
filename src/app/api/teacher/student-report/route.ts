@@ -74,7 +74,7 @@ export async function GET(req: NextRequest) {
     // Flashcard progress
     prisma.flashcardProgress.findMany({
       where: { userId: studentId },
-      select: { easeFactor: true, interval: true, repetitions: true, nextReview: true },
+      select: { flashcardId: true, easeFactor: true, interval: true, repetitions: true, nextReview: true },
     }),
     // Streak
     prisma.dailyStreak.findUnique({ where: { userId: studentId } }),
@@ -144,9 +144,19 @@ export async function GET(req: NextRequest) {
       )
     : null
 
-  const flashcardTotal = flashcardStats.length
-  const flashcardMastered = flashcardStats.filter((f) => f.interval >= 21).length
-  const flashcardDue = flashcardStats.filter((f) => new Date(f.nextReview) <= new Date()).length
+  // One row per (card, study mode): collapse to the card, keeping its best
+  // interval and soonest due date, so a student in a course mode isn't shown
+  // a doubled deck.
+  const byCard = new Map<string, { interval: number; nextReview: Date }>()
+  for (const f of flashcardStats) {
+    const cur = byCard.get(f.flashcardId)
+    const next = new Date(f.nextReview)
+    if (!cur) byCard.set(f.flashcardId, { interval: f.interval, nextReview: next })
+    else byCard.set(f.flashcardId, { interval: Math.max(cur.interval, f.interval), nextReview: next < cur.nextReview ? next : cur.nextReview })
+  }
+  const flashcardTotal = byCard.size
+  const flashcardMastered = [...byCard.values()].filter((f) => f.interval >= 21).length
+  const flashcardDue = [...byCard.values()].filter((f) => f.nextReview <= new Date()).length
 
   const totalStudyMinutes = progress.reduce((sum, p) => sum + Math.round(p.timeSpent / 60), 0)
 

@@ -33,9 +33,13 @@ export async function GET(request: Request) {
           where: { lastAccessed: { gte: oneWeekAgo } },
           select: { timeSpent: true },
         },
+        // reviewCount > 0: a progress row is stamped lastReviewed at CREATION
+        // (unlocks, deck backfills), so without this a week's fresh unlocks read
+        // as reviews the student never did. Distinct by card: the same card
+        // holds one row per study mode (personal + course deck).
         flashcardProgress: {
-          where: { lastReviewed: { gte: oneWeekAgo } },
-          select: { id: true },
+          where: { lastReviewed: { gte: oneWeekAgo }, reviewCount: { gt: 0 } },
+          select: { flashcardId: true },
         },
         // QuizAttempt is a dead table (never written); ExitQuizAttempt is the
         // only real quiz activity.
@@ -66,7 +70,7 @@ export async function GET(request: Request) {
 
       const stats = {
         lessonsCompleted: user.topicProgress.length,
-        flashcardsReviewed: user.flashcardProgress.length,
+        flashcardsReviewed: new Set(user.flashcardProgress.map((f) => f.flashcardId)).size,
         quizzesTaken: user.exitQuizAttempts.length,
         streak: user.dailyStreak?.currentStreak ?? 0,
         minutesStudied: Math.round(

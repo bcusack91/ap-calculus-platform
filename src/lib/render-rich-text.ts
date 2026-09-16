@@ -170,7 +170,27 @@ function renderEmphasis(text: string, inTable: boolean): string {
   const italic = inTable
     ? /(?<![\w*])\*(?!\s)([^*$\n|]+?)(?<!\s)\*(?![\w*])/g
     : /(?<![\w*])\*(?!\s)([^*$\n]+?)(?<!\s)\*(?![\w*])/g
-  return text.replace(bold, '<strong>$1</strong>').replace(italic, '<em>$1</em>')
+  // Italic FIRST: authored citations nest it inside bold — `**Du Bois, *The
+  // Souls of Black Folk* (1903)**` — and bold's content class excludes `*`, so
+  // bold-first left the outer pair literal around a rendered <em>. Converting
+  // the inner italic to a tag (no asterisks) lets the outer bold match. The
+  // italic pattern cannot consume `**bold**` itself: its opener may not be
+  // followed by `*` and its content may not contain one.
+  // Runs of three asterisks are bold+italic in CommonMark, and citations put
+  // the italic at either edge of a bold span — `***Tarikh al-Sudan***`,
+  // `**2013 *Shelby County v. Holder***`, `***Souls* of Black Folk**`. The
+  // flanking rule above cannot pair an italic closer that is immediately
+  // followed by `*`, so resolve these three shapes first, innermost tag out.
+  const cell = inTable ? '[^*\\n|]' : '[^*\\n]'
+  const triple = new RegExp(`\\*\\*\\*(${cell}+?)\\*\\*\\*`, 'g')
+  const boldEndingItalic = new RegExp(`\\*\\*(${cell}+?)\\*(${cell}+?)\\*\\*\\*`, 'g')
+  const boldStartingItalic = new RegExp(`\\*\\*\\*(${cell}+?)\\*(${cell}+?)\\*\\*`, 'g')
+  return text
+    .replace(triple, '<strong><em>$1</em></strong>')
+    .replace(boldEndingItalic, '<strong>$1<em>$2</em></strong>')
+    .replace(boldStartingItalic, '<strong><em>$1</em>$2</strong>')
+    .replace(italic, '<em>$1</em>')
+    .replace(bold, '<strong>$1</strong>')
 }
 
 /**

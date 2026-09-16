@@ -66,11 +66,12 @@ async function buildDashboard(userId: string) {
         orderBy: { lastAccessed: 'desc' },
       }),
 
-      // Flashcard review stats
-      prisma.flashcardProgress.groupBy({
-        by: ['userId'],
+      // Flashcard review stats — one row per (card, study mode), so count
+      // distinct cards or a student in a course mode sees their deck doubled.
+      prisma.flashcardProgress.findMany({
         where: { userId },
-        _count: true,
+        select: { flashcardId: true },
+        distinct: ['flashcardId'],
       }),
 
       // Streak data
@@ -162,7 +163,7 @@ async function buildDashboard(userId: string) {
         topicsMastered,
         topicsInProgress,
         totalTimeSpentMinutes: Math.round(totalTimeSpent / 60),
-        totalFlashcards: flashcardStats[0]?._count ?? 0,
+        totalFlashcards: flashcardStats.length,
         dueFlashcards,
       },
       streak: streakData

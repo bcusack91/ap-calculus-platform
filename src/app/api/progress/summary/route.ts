@@ -62,7 +62,7 @@ export async function GET() {
         }),
         prisma.flashcardProgress.findMany({
           where: { userId },
-          select: { repetitions: true, nextReview: true },
+          select: { flashcardId: true, repetitions: true, nextReview: true },
         }),
       ])
 
@@ -79,7 +79,9 @@ export async function GET() {
       : null
 
     const now = new Date()
-    const dueCards = flashcards.filter((f) => !f.nextReview || f.nextReview <= now).length
+    // One row per (card, study mode) — count cards, not rows.
+    const dueCards = new Set(flashcards.filter((f) => !f.nextReview || f.nextReview <= now).map((f) => f.flashcardId)).size
+    const learnedCards = new Set(flashcards.filter((f) => f.repetitions > 0).map((f) => f.flashcardId)).size
 
     // ── Per-course rollup (only courses the student has touched) ─────
     const byCourse = new Map<string, { name: string; slug: string; touched: number; mastered: number }>()
@@ -147,7 +149,7 @@ export async function GET() {
         bestSat: satTests.length ? Math.max(...satTests.map((t) => t.totalScore)) : null,
         mcatSections: mcatTests.length,
         dailyChallenges: dailyResults.length,
-        flashcardsLearned: flashcards.filter((f) => f.repetitions > 0).length,
+        flashcardsLearned: learnedCards,
         flashcardsDue: dueCards,
         currentStreak: streak?.currentStreak ?? 0,
         longestStreak: streak?.longestStreak ?? 0,
