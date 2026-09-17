@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: HubPageProps): Promise<Metadata> {
   const { slug } = await params
   const hub = topicHubBySlug[slug]
-  if (!hub) return {}
+  // Real 404 for a missing slug (see the topic page's generateMetadata).
+  if (!hub) notFound()
 
   return {
     title: `${hub.title} | Study Mondo Topic Hub`,

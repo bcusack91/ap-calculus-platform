@@ -39,9 +39,8 @@ export async function generateMetadata(props: InteractivePageProps): Promise<Met
     select: { title: true, description: true, slug: true, textContent: true }
   })
 
-  if (!topic) {
-    return {}
-  }
+  // Real 404 for a missing slug (see the topic page's generateMetadata).
+  if (!topic) notFound()
 
   // Check if this topic has actual interactive content
   const hasLesson = hasInteractiveLesson(topic.slug)

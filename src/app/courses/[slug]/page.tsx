@@ -51,9 +51,8 @@ export async function generateMetadata(props: CoursePageProps): Promise<Metadata
     select: { name: true, slug: true, _count: { select: { categories: true } } }
   })
 
-  if (!course) {
-    return {}
-  }
+  // Real 404 for a missing slug (see the topic page's generateMetadata).
+  if (!course) notFound()
 
   // Noindex courses with no categories (empty shells)
   if (course._count.categories === 0) {

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { isLegacyTopicSlug } from '@/lib/legacy-topic-redirects'
 import { prisma } from '@/lib/prisma'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import fs from 'fs'
@@ -63,12 +64,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.6,
     },
-    {
-      url: `${baseUrl}/competitive`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
+    // /competitive redirects signed-out visitors (Googlebot) to /auth/signin —
+    // a "Page with redirect" entry, so it is not submitted.
     // NOTE: /competitive/* sub-pages are auth-walled by middleware. Submitting
     // them in the sitemap causes Google to crawl the signin redirect, which
     // generates many "discovered/excluded by noindex" entries. Keep them out.
@@ -347,6 +344,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   })
 
   const topicPages: MetadataRoute.Sitemap = topics
+    // Redirected legacy slugs still exist as Topic rows; never submit a URL
+    // that answers 308 (Search Console: "Page with redirect").
+    .filter((topic) => !isLegacyTopicSlug(topic.slug))
     // Exclude genuinely thin topics — these are noindexed in the page metadata,
     // so submitting them would create "submitted but excluded by noindex"
     // warnings. Keep this rule in sync with generateMetadata in
@@ -367,14 +367,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Category pages
   const categories = await prisma.category.findMany({
-    select: { slug: true, updatedAt: true },
+    select: { slug: true, updatedAt: true, _count: { select: { topics: true } } },
     orderBy: { order: 'asc' },
   }).catch((error) => {
     console.warn('Sitemap: categories unavailable, continuing with static pages only.', error)
     return []
   })
 
-  const categoryPages: MetadataRoute.Sitemap = categories.map((category) => ({
+  // Empty categories are noindexed by their page metadata ("Excluded by
+  // noindex" if submitted).
+  const categoryPages: MetadataRoute.Sitemap = categories
+    .filter((category) => category._count.topics > 0)
+    .map((category) => ({
     url: `${baseUrl}/categories/${category.slug}`,
     lastModified: category.updatedAt,
     changeFrequency: 'weekly',
@@ -394,6 +398,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // hasInteractiveLesson (which resolveSlug-normalizes) keeps only the ones
   // that actually resolve to a registered, indexable interactive lesson.
   const interactivePages: MetadataRoute.Sitemap = topics
+    .filter((topic) => !isLegacyTopicSlug(topic.slug))
     .filter((topic) => hasInteractiveLesson(topic.slug))
     .map((topic) => ({
       url: `${baseUrl}/topics/${topic.slug}/interactive`,

@@ -64,9 +64,12 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
     }
   })
 
-  if (!topic) {
-    return {}
-  }
+  // notFound() here, not only in the page body: every content route has a
+  // loading.tsx, so the body streams behind a 200 shell and a late notFound()
+  // cannot change the status. generateMetadata runs first, so this is what
+  // makes a missing slug a real 404 instead of a soft 404 (200 + noindex)
+  // that Search Console files under "Excluded by noindex".
+  if (!topic) notFound()
 
   const canonicalUrl = `https://www.studymondo.com/topics/${topic.slug}`
 

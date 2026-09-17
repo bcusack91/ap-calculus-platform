@@ -36,9 +36,8 @@ export async function generateMetadata(props: CategoryPageProps): Promise<Metada
     select: { name: true, description: true, slug: true, _count: { select: { topics: true } } }
   })
 
-  if (!category) {
-    return {}
-  }
+  // Real 404 for a missing slug (see the topic page's generateMetadata).
+  if (!category) notFound()
 
   // Noindex categories with no topics (empty shells)
   if (category._count.topics === 0) {
