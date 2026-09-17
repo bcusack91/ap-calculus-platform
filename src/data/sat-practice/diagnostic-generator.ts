@@ -539,14 +539,25 @@ export async function generateDiagnosticTest(
   }
 
   /* ---- Math: grid-ins (student-produced response) ---------------------- */
-  // Procedural values, so they never repeat verbatim; easy/medium only.
+  // Easy/medium only. The values are procedural but the templates are few, so
+  // a second attempt re-served the same problem about one time in four
+  // (found by the cross-device no-repeat test); prefer problems whose text the
+  // student has not seen, falling back to seen ones only if a category's pool
+  // runs dry.
   const { generateGridInProblems } = await import('../sat-grid-in')
   const gridPool = shuffle(generateGridInProblems(60).filter((p) => p.difficulty !== 'hard'))
   const gridIns: DiagnosticQuestion[] = []
   for (const plan of MATH_GRID_IN_PLAN) {
-    for (const p of gridPool.filter((g) => plan.categories.includes(g.category)).slice(0, plan.count)) {
+    const inCategory = gridPool.filter((g) => plan.categories.includes(g.category))
+    const unseen = inCategory.filter((g) => !isSeen(exclude, { question: g.question }))
+    const picks = [...unseen, ...inCategory.filter((g) => !unseen.includes(g))].slice(0, plan.count)
+    for (const p of picks) {
       gridIns.push({
-        id: `diag-gridin-${gridIns.length}-${stemOf(p.question).slice(0, 24)}`,
+        // Fingerprint of the FULL text: a 24-character prefix collided across
+        // different values of one template ("In an arithmetic sequence, the
+        // first term is 3…" vs "…is 2…"), so seen-tracking treated distinct
+        // problems as one and the no-repeat test flaked.
+        id: `diag-gridin-${stemKey(p.question).slice('stem:'.length)}`,
         question: p.question,
         options: [],
         correctIndex: -1,
