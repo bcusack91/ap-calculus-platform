@@ -18,8 +18,8 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 import { DataVisual, DiagnosticPassageContent } from '@/components/MCATDiagnosticVisuals'
+import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 
-const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
  * 55-minute attempt (the questions are already burned as "seen" the moment a
@@ -257,14 +257,22 @@ export default function MCATDiagnosticPage() {
   }, [phase])
 
   // Persist the sitting as the student works. The frozen test is ~136 KB, so
-  // this writes the whole payload only while a test is actually open.
+  // an answer or a page change is saved at once, but a tick of the clock alone
+  // is saved at most every 15 s — serialising the whole payload every second
+  // for 55 minutes was 3,300 writes (and stalled the browser walkthrough).
+  const lastPersistRef = useRef<{ answers: unknown; currentIndex: number; at: number }>({ answers: null, currentIndex: -1, at: 0 })
   useEffect(() => {
     if (phase !== 'testing' || !testData) return
+    const now = Date.now()
+    const last = lastPersistRef.current
+    const structural = last.answers !== answers || last.currentIndex !== currentIndex
+    if (!structural && now - last.at < 15_000) return
     try {
       window.localStorage.setItem(
         MCAT_DIAGNOSTIC_RESUME_KEY,
-        JSON.stringify({ testData, answers, currentIndex, timeRemaining, assignedId, savedAt: Date.now() }),
+        JSON.stringify({ testData, answers, currentIndex, timeRemaining, assignedId, savedAt: now }),
       )
+      lastPersistRef.current = { answers, currentIndex, at: now }
     } catch {
       // Private mode or quota — resume is a convenience, never a requirement.
     }
@@ -321,27 +329,16 @@ export default function MCATDiagnosticPage() {
       // Assignment unavailable (deleted / not enrolled) — fall through to a
       // normal generated diagnostic rather than dead-ending the student.
     }
-    let seenQuestionIds = new Set<string>()
-    if (typeof window !== 'undefined') {
-      try {
-        const raw = window.localStorage.getItem(MCAT_DIAGNOSTIC_SEEN_KEY)
-        if (raw) {
-          const parsed = JSON.parse(raw)
-          if (Array.isArray(parsed)) {
-            seenQuestionIds = new Set(parsed.filter((value): value is string => typeof value === 'string'))
-          }
-        }
-      } catch {
-        // Ignore malformed local cache and proceed.
-      }
-    }
+    // Ids this student has been served on ANY device: the browser's record
+    // merged with the ids recovered from their submitted attempts.
+    const seenQuestionIds = await loadSeenKeys('mcat')
 
     const data = await generateMCATDiagnosticTest({ excludeQuestionIds: seenQuestionIds })
 
-    if (typeof window !== 'undefined') {
-      const updatedSeen = Array.from(new Set([...seenQuestionIds, ...data.questions.map((q) => q.id)]))
-      window.localStorage.setItem(MCAT_DIAGNOSTIC_SEEN_KEY, JSON.stringify(updatedSeen.slice(-4000)))
-    }
+    // Burn the served ids now (browser immediately, server best-effort) so a
+    // sitting abandoned before submit is still not re-served here. Not
+    // awaited: the network leg must never delay the start.
+    void recordSeenKeys('mcat', data.questions.map((q) => q.id))
 
     // The generator already emits passage blocks; this is a cheap idempotent guard.
     data.questions = arrangeInPassageBlocks(data.questions)

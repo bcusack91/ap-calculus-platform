@@ -42,6 +42,10 @@ const TAG_ALIASES: Record<string, string> = {
   'mcat-biology-cell-cycle-mcat': 'mcat-cell-biology-cell-cycle-mcat',
   'mcat-biology-cell-structure-mcat': 'mcat-cell-biology-organelles-mcat',
   'mcat-genetics-mendelian-mcat': 'mcat-genetics-evolution-mendelian-mcat',
+  // The bank split the curriculum's combined fluids-waves topic into two
+  // (AAMC 4B/4D; see src/lib/mcat-topic-map.ts) — both belong to that exit quiz.
+  'mcat-physics-mechanics-fluids-mcat': 'mcat-physics-mechanics-fluids-waves-mcat',
+  'mcat-physics-waves-sound-mcat': 'mcat-physics-mechanics-fluids-waves-mcat',
   'mcat-psych-sensation-perception-mcat': 'mcat-psychology-behavior-sensation-perception-mcat',
   'mcat-psych-learning-memory-mcat': 'mcat-psychology-behavior-learning-memory-mcat',
   'mcat-psych-cognition-language-mcat': 'mcat-psychology-behavior-cognition-language-mcat',

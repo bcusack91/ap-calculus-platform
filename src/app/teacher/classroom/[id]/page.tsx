@@ -15,6 +15,7 @@ import ClassEngagement from '@/components/ClassEngagement'
 import StudentReportModal from '@/components/StudentReportModal'
 import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import GroupsPanel from '@/components/teacher/GroupsPanel'
+import ClassFlashcardLimits from '@/components/teacher/ClassFlashcardLimits'
 import ImportRosterModal from '@/components/teacher/ImportRosterModal'
 import AssignmentModal, {
   ASSIGNMENT_TYPES,
@@ -1666,7 +1667,13 @@ export default function ClassroomDetailPage() {
 
         {activeView === 'classplan' && <ClassPlan classroomId={classroomId} />}
 
-        {activeView === 'engagement' && <ClassEngagement classroomId={classroomId} />}
+        {/* Insights › Engagement — plus the class-wide flashcard daily-limit control */}
+        {activeView === 'engagement' && (
+          <div className="space-y-6">
+            <ClassEngagement classroomId={classroomId} />
+            <ClassFlashcardLimits classroomId={classroomId} />
+          </div>
+        )}
 
         {/* Work › Announcements */}
         {activeView === 'announcements' && (

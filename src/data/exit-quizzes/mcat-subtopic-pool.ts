@@ -21,6 +21,13 @@ interface AreaQuestion {
 }
 
 const MIN_MATCHED = 3
+/**
+ * Keyword-derived tiers must be able to fill a real quiz. A handful of strays
+ * (a signaling slug picking up two antibiotic items that mention "receptor")
+ * would otherwise displace the relevance fallback with a 4-question quiz whose
+ * pass bar is 3/4 and whose retries repeat the same items.
+ */
+const MIN_KEYWORD = 10
 
 export function mcatSubtopicPool<T extends AreaQuestion>(
   pool: T[],
@@ -44,7 +51,7 @@ export function mcatSubtopicPool<T extends AreaQuestion>(
     ) strong.push(q)
     else if (textMatchesSlug(q.options.join(' '), topicSlug)) weak.push(q)
   }
-  if (strong.length >= MIN_MATCHED) return strong
-  if (strong.length + weak.length >= MIN_MATCHED) return [...strong, ...weak]
+  if (strong.length >= MIN_KEYWORD) return strong
+  if (strong.length + weak.length >= MIN_KEYWORD) return [...strong, ...weak]
   return relevantPool(pool, topicSlug)
 }

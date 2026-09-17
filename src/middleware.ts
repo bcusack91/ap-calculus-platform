@@ -106,18 +106,31 @@ export async function middleware(request: NextRequest) {
       nextUrl.pathname.startsWith('/api/competitive/') ||
       nextUrl.pathname.startsWith('/api/live-sessions/') ||
       nextUrl.pathname.startsWith('/api/teacher/lobby/')
-    if (isHighFrequency && gameRatelimit) {
+    // A signed-in user is limited as themselves; only anonymous traffic is
+    // keyed by IP. A whole classroom sits behind one school IP, and the general
+    // API budget (60/min) is what ~15 students each loading a diagnostic page
+    // (4 calls apiece) would exhaust together — every student in the room
+    // would then see 429s at once. The strict auth limiter below stays per IP
+    // because it exists to slow password guessing.
+    const subjectKey = async (): Promise<string> => {
       try {
         const secureCookie = nextUrl.protocol === 'https:'
         const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
-        const gameToken = await getToken({
+        const token = await getToken({
           req: request,
           secret: process.env.AUTH_SECRET,
           secureCookie,
           cookieName,
           salt: cookieName,
         })
-        const key = gameToken?.sub ? `user:${gameToken.sub}` : `ip:${ip}`
+        return token?.sub ? `user:${token.sub}` : `ip:${ip}`
+      } catch {
+        return `ip:${ip}`
+      }
+    }
+    if (isHighFrequency && gameRatelimit) {
+      try {
+        const key = await subjectKey()
         const { success, limit, reset } = await gameRatelimit.limit(key)
         if (!success) {
           return NextResponse.json(
@@ -151,11 +164,12 @@ export async function middleware(request: NextRequest) {
     const isNextAuthInternal =
       !isCredentialsCallback &&
       /^\/api\/auth\/(callback|session|csrf|providers)/.test(nextUrl.pathname)
-    const limiter = (isAuthEndpoint && !isNextAuthInternal) ? authRatelimit : apiRatelimit
-
+    const strictAuth = isAuthEndpoint && !isNextAuthInternal
+    const limiter = strictAuth ? authRatelimit : apiRatelimit
     if (limiter) {
       try {
-        const { success, limit, remaining, reset } = await limiter.limit(ip)
+        const key = strictAuth ? ip : await subjectKey()
+        const { success, limit, remaining, reset } = await limiter.limit(key)
 
         if (!success) {
           return NextResponse.json(

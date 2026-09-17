@@ -50,3 +50,7 @@ scripts/_*
 /all_potential_slugs.txt
 /ap_calc_ab_targets.txt
 /mapped_slugs.txt
+
+# Playwright HTML reports (local runs)
+playwright-report/
+test-results/

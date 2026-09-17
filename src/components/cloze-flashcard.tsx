@@ -1,26 +1,35 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
-import { detectCloze } from '@/lib/cloze-utils'
+import { clozeRevealOrder, detectCloze } from '@/lib/cloze-utils'
 import { ClozeText } from '@/components/cloze-text'
+
+type Rating = 'again' | 'hard' | 'good' | 'easy'
 
 interface ClozeFlashcardProps {
   front: string
   back: string
   hint?: string
   topicTitle: string
-  onRate: (rating: 'again' | 'hard' | 'good' | 'easy') => void
+  onRate: (rating: Rating) => void
   intervals?: { again: string; hard: string; good: string; easy: string }
   reviewing: boolean
 }
 
+// Same rating keys as FlashcardStudySession.
+const RATING_KEYS: Partial<Record<string, Rating>> = { '1': 'again', '2': 'hard', '3': 'good', '4': 'easy' }
+
 export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewing, intervals }: ClozeFlashcardProps) {
-  const [isRevealed, setIsRevealed] = useState(false)
+  // Multi-blank cards reveal one deletion group at a time so the student
+  // recalls each blank before seeing it. `revealedSteps` counts groups shown
+  // so far; the rating stays per CARD (one SRS row per card), so the buttons
+  // only appear once every group is out.
+  const [revealedSteps, setRevealedSteps] = useState(0)
   const [showHint, setShowHint] = useState(false)
 
   // Per-card state must reset when the parent swaps in the next card. The
@@ -30,45 +39,97 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
   const [prevFront, setPrevFront] = useState(front)
   if (prevFront !== front) {
     setPrevFront(front)
-    setIsRevealed(false)
+    setRevealedSteps(0)
     setShowHint(false)
   }
 
   const clozeData = detectCloze(front)
-  
+  const order = clozeRevealOrder(clozeData.parts)
+  // The underscore "Fill in the blank" form parses to no deletions; it still
+  // needs one step to expose the explanation.
+  const totalSteps = Math.max(1, order.length)
+  const isMultiStep = totalSteps > 1
+  const isRevealed = revealedSteps >= totalSteps
+  const revealedIndexes = new Set(order.slice(0, revealedSteps))
+  const activeIndex = order[revealedSteps]
+
+  const revealNext = () => setRevealedSteps((n) => Math.min(n + 1, totalSteps))
+
+  // Keyboard: Space/Enter reveals the next blank; 1–4 rate once everything is
+  // shown. Events aimed at a focused control are left to it — a Space on the
+  // focused Show button already clicks it natively, so handling it here too
+  // would reveal two blanks per press. Auto-repeat is ignored so holding
+  // Space can't blow through every blank.
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.repeat || e.metaKey || e.ctrlKey || e.altKey) return
+      const target = e.target
+      if (
+        target instanceof HTMLElement &&
+        target.closest('button, a, input, textarea, select, [contenteditable="true"]')
+      ) {
+        return
+      }
+      if (e.key === ' ' || e.key === 'Enter') {
+        if (isRevealed) return
+        e.preventDefault()
+        setRevealedSteps((n) => Math.min(n + 1, totalSteps))
+        return
+      }
+      const rating = RATING_KEYS[e.key]
+      if (rating && isRevealed && !reviewing) onRate(rating)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [isRevealed, reviewing, onRate, totalSteps])
+
   if (!clozeData.isCloze) {
     // Not a cloze card, shouldn't happen
     return null
   }
-  
-  // Render cloze with blanks or revealed answers (ClozeText renders revealed
-  // deletions through the math pipeline — deletions may hold LaTeX)
-  const renderCloze = () => (
-    <div className="text-xl text-foreground leading-relaxed">
-      <ClozeText text={front} revealed={isRevealed} />
-    </div>
-  )
-  
+
   return (
     <div className="max-w-3xl mx-auto">
       {/* Cloze Card */}
       <div className="mb-8">
         <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 min-h-[350px] flex flex-col justify-center">
-          <div className="text-sm text-accent-dark font-semibold mb-6">COMPLETE THE SENTENCE</div>
-          
-          {renderCloze()}
-          
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <div className="text-sm text-accent-dark font-semibold">COMPLETE THE SENTENCE</div>
+            {isMultiStep && (
+              <div
+                className="text-xs font-semibold text-muted-foreground tabular-nums whitespace-nowrap"
+                aria-live="polite"
+              >
+                {revealedSteps} of {totalSteps} revealed
+              </div>
+            )}
+          </div>
+
+          {/* ClozeText renders revealed deletions through the math pipeline —
+              deletions may hold LaTeX */}
+          <div className="text-xl text-foreground leading-relaxed">
+            <ClozeText
+              text={front}
+              revealed={isRevealed}
+              revealedIndexes={revealedIndexes}
+              activeIndex={activeIndex}
+            />
+          </div>
+
           {!isRevealed && (
             <div className="mt-8 text-center">
               <button
-                onClick={() => setIsRevealed(true)}
+                onClick={revealNext}
                 className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover transition-colors"
               >
-                Show Answer
+                {isMultiStep && revealedSteps < totalSteps - 1 ? `Show Blank ${revealedSteps + 1}` : 'Show Answer'}
               </button>
+              <div className="hidden sm:block mt-3 text-xs text-muted-foreground">
+                Space or Enter to reveal · 1–4 to rate
+              </div>
             </div>
           )}
-          
+
           {isRevealed && (
             <div className="mt-8 p-4 bg-card border border-green-300 dark:border-green-700 rounded-lg">
               <div className="text-sm text-green-900 dark:text-green-300 font-semibold mb-2">EXPLANATION</div>
@@ -79,7 +140,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
               </div>
             </div>
           )}
-          
+
           <div className="mt-4 text-sm text-muted-foreground text-center">
             <span className="font-semibold">Topic:</span> {topicTitle}
           </div>

@@ -81,15 +81,21 @@ export async function GET() {
       where: { userId: session.user.id },
     })
 
-    const topicProgressCount = await prisma.topicProgress.count({
-      where: { userId: session.user.id },
-    })
+    const [topicProgressCount, activeClassMemberships] = await Promise.all([
+      prisma.topicProgress.count({ where: { userId: session.user.id } }),
+      prisma.classroomMember.count({ where: { userId: session.user.id, isActive: true } }),
+    ])
 
     return NextResponse.json({
       // A LearningPath ROW exists for every account (created at signup) — only a
       // path with a chosen course (currentTopic set) counts as onboarded. Prior
       // study activity also counts, so existing users are never forced back in.
-      hasCompletedOnboarding: !!learningPath?.currentTopic || topicProgressCount > 0,
+      // A student in a class is onboarded by their teacher: the dashboard sends
+      // anyone else to /onboarding, whose "Skip for now" merely links back to
+      // the dashboard — a loop that hid the class's assigned diagnostic from
+      // every brand-new student until they finished consumer onboarding.
+      hasCompletedOnboarding:
+        !!learningPath?.currentTopic || topicProgressCount > 0 || activeClassMemberships > 0,
       learningPath: learningPath
         ? {
             currentTopic: learningPath.currentTopic,

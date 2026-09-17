@@ -22,6 +22,22 @@ function InlineMarkdown({ text }: { text: string }) {
   )
 }
 
+interface ClozeTextProps {
+  text: string
+  /** Show every deletion (answer side). */
+  revealed: boolean
+  /**
+   * Progressive reveal: deletions whose `clozeIndex` is in this set render as
+   * answers while the rest stay blank. Redundant when `revealed` is true.
+   */
+  revealedIndexes?: ReadonlySet<number>
+  /**
+   * The deletion group the student is recalling right now — its blanks get a
+   * solid accent underline so a multi-blank card shows which one is up.
+   */
+  activeIndex?: number
+}
+
 /**
  * Cloze-aware text for ReactMarkdown/KaTeX surfaces. Hidden deletions render
  * as constant-width blanks (length must not telegraph the answer); revealed
@@ -29,7 +45,7 @@ function InlineMarkdown({ text }: { text: string }) {
  * hold LaTeX. Falls back to plain markdown for non-cloze text, so it is safe
  * to use unconditionally.
  */
-export function ClozeText({ text, revealed }: { text: string; revealed: boolean }) {
+export function ClozeText({ text, revealed, revealedIndexes, activeIndex }: ClozeTextProps) {
   const clozeData = detectCloze(text)
   if (!clozeData.isCloze || !clozeData.parts) {
     return <InlineMarkdown text={text} />
@@ -40,17 +56,30 @@ export function ClozeText({ text, revealed }: { text: string; revealed: boolean 
         if (!part.isCloze) {
           return <InlineMarkdown key={index} text={part.text} />
         }
-        if (revealed) {
+        const isShown =
+          revealed || (part.clozeIndex !== undefined && revealedIndexes?.has(part.clozeIndex) === true)
+        if (isShown) {
           return (
-            <span key={index} className="font-bold text-green-700 bg-green-100 dark:text-green-200 dark:bg-green-900/50 px-2 py-1 rounded">
+            <span
+              key={index}
+              data-cloze="revealed"
+              data-cloze-index={part.clozeIndex}
+              className="font-bold text-green-700 bg-green-100 dark:text-green-200 dark:bg-green-900/50 px-2 py-1 rounded"
+            >
               <InlineMarkdown text={mathizeClozeAnswer(part.text)} />
             </span>
           )
         }
+        const isActive = part.clozeIndex !== undefined && part.clozeIndex === activeIndex
         return (
           <span
             key={index}
-            className="inline-block border-b-2 border-dashed border-accent-muted mx-1 align-baseline"
+            data-cloze="hidden"
+            data-cloze-index={part.clozeIndex}
+            data-cloze-active={isActive || undefined}
+            className={`inline-block border-b-2 mx-1 align-baseline ${
+              isActive ? 'border-solid border-accent bg-accent/10 rounded-t' : 'border-dashed border-accent-muted'
+            }`}
             style={{ minWidth: '90px', height: '1.5rem' }}
           />
         )

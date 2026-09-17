@@ -30,10 +30,35 @@ function formatTime(seconds: number): string {
 /*  Props                                                              */
 /* ------------------------------------------------------------------ */
 
+export interface DiagnosticAnswer {
+  questionIndex: number
+  selectedIndex: number | null
+  /** Typed response for a grid-in question. */
+  textValue?: string
+}
+
+/**
+ * Everything a sitting needs to pick up where it left off after a refresh or
+ * a closed tab. The page persists it and hands it back as `initialState`;
+ * this component never touches storage itself.
+ */
+export interface DiagnosticSittingState {
+  phase: 'testing' | 'section-break'
+  answers: DiagnosticAnswer[]
+  currentIndex: number
+  timeRemaining: number
+  /** Eliminated option indexes per question index (a Map, serialised for JSON). */
+  eliminated: Record<number, number[]>
+}
+
 interface DiagnosticTestProps {
   testData: DiagnosticTestData
   onComplete: (results: DiagnosticResults, rawAnswers: (number | null)[]) => void
   onCancel: () => void
+  /** A saved sitting to resume: skips the intro and restores answers, position and clock. */
+  initialState?: DiagnosticSittingState | null
+  /** Reports the sitting's state whenever it changes while a test is open. */
+  onStateChange?: (state: DiagnosticSittingState) => void
 }
 
 /* ------------------------------------------------------------------ */
@@ -44,14 +69,20 @@ export default function DiagnosticTest({
   testData,
   onComplete,
   onCancel,
+  initialState,
+  onStateChange,
 }: DiagnosticTestProps) {
-  const [phase, setPhase] = useState<'intro' | 'testing' | 'section-break' | 'complete'>('intro')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [answers, setAnswers] = useState<
-    { questionIndex: number; selectedIndex: number | null; textValue?: string }[]
-  >(testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })))
-  const [eliminatedOptions, setEliminatedOptions] = useState<Map<number, Set<number>>>(new Map())
-  const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
+  // A resumed sitting skips the intro and starts on the question (or section
+  // break) the student was on, with their answers and remaining time.
+  const [phase, setPhase] = useState<'intro' | 'testing' | 'section-break' | 'complete'>(initialState?.phase ?? 'intro')
+  const [currentIndex, setCurrentIndex] = useState(initialState?.currentIndex ?? 0)
+  const [answers, setAnswers] = useState<DiagnosticAnswer[]>(
+    () => initialState?.answers ?? testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })),
+  )
+  const [eliminatedOptions, setEliminatedOptions] = useState<Map<number, Set<number>>>(
+    () => new Map(Object.entries(initialState?.eliminated ?? {}).map(([q, opts]) => [Number(q), new Set(opts)])),
+  )
+  const [timeRemaining, setTimeRemaining] = useState(initialState?.timeRemaining ?? testData.timeLimitMinutes * 60)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   // The countdown starts once per sitting, so calling handleSubmit directly
   // captured the version built when every answer was still blank — a timeout
@@ -93,6 +124,20 @@ export default function DiagnosticTest({
       if (timerRef.current) clearInterval(timerRef.current)
     }
   }, [phase])
+
+  // Report the sitting while a test is open (a question or the section break)
+  // so the page can persist it for resume. Declared before the expiry effect:
+  // when the clock hits zero this write lands first, then submit clears it.
+  useEffect(() => {
+    if (!onStateChange || (phase !== 'testing' && phase !== 'section-break')) return
+    onStateChange({
+      phase,
+      answers,
+      currentIndex,
+      timeRemaining,
+      eliminated: Object.fromEntries([...eliminatedOptions].map(([q, opts]) => [q, [...opts]])),
+    })
+  }, [onStateChange, phase, answers, currentIndex, timeRemaining, eliminatedOptions])
 
   // Time's up: grade what the student actually answered, exactly once.
   useEffect(() => {
@@ -330,16 +375,31 @@ export default function DiagnosticTest({
             Question {sectionIndex + 1} of {sectionTotal} &middot; {sectionAnswered}/{sectionTotal} answered
           </p>
         </div>
-        <div
-          className={`rounded-lg px-4 py-2 font-mono text-lg font-bold ${
-            timeCritical
-              ? 'animate-pulse bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400'
-              : timeWarning
-                ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
-                : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
-          }`}
-        >
-          {formatTime(timeRemaining)}
+        <div className="flex items-center gap-3">
+          <div
+            className={`rounded-lg px-4 py-2 font-mono text-lg font-bold ${
+              timeCritical
+                ? 'animate-pulse bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400'
+                : timeWarning
+                  ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
+                  : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+            }`}
+          >
+            {formatTime(timeRemaining)}
+          </div>
+          {/* A deliberate exit discards the sitting (the page clears the saved
+              copy); a refresh or closed tab does not, so confirm first. */}
+          <button
+            type="button"
+            onClick={() => {
+              if (!window.confirm('Leave this diagnostic? Your answers so far will be discarded.')) return
+              if (timerRef.current) clearInterval(timerRef.current)
+              onCancel()
+            }}
+            className="text-sm text-gray-500 transition hover:text-red-500 dark:text-gray-400"
+          >
+            Exit
+          </button>
         </div>
       </div>
 

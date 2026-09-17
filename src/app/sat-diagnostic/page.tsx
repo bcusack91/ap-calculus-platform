@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -9,11 +9,117 @@ import { generateDiagnosticTest, rebuildRecommendedTopics, listDiagnosticDomains
 import { generateHardModule, HARD_MODULE_CATEGORY, HARD_MODULE_COUNT } from '@/data/sat-practice/hard-modules'
 import { generateCoreModule, CORE_MODULE_CATEGORY, CORE_MODULE_COUNT, CORE_MODULE_MINUTES, CORE_SKILLS_GRADUATION_SCORE } from '@/data/sat-practice/core-skills-modules'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
+import type { DiagnosticSittingState } from '@/components/SATDiagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
+
+/**
+ * In-progress sitting, so a refresh or a closed tab does not destroy a
+ * 30-minute attempt (the questions are burned as "seen" the moment a test is
+ * generated, so a lost attempt cost the student those items too).
+ */
+const SAT_DIAGNOSTIC_RESUME_KEY = 'sat-diagnostic-inprogress-v1'
+/** Abandon a saved sitting after this long — a stale clock is worse than none. */
+const RESUME_MAX_AGE_MS = 12 * 60 * 60 * 1000
+
+/** The component's sitting state plus what the page needs to submit it. */
+interface SavedSitting extends DiagnosticSittingState {
+  testData: DiagnosticTestData
+  assignedId: string | null
+  hardModuleNumber: number | null
+  coreModuleNumber: number | null
+  savedAt: number
+}
+
+function readResumeState(): SavedSitting | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = window.localStorage.getItem(SAT_DIAGNOSTIC_RESUME_KEY)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as Partial<SavedSitting> | null
+    if (!parsed) return null
+    const questions = parsed.testData?.questions
+    const shapeOk =
+      Array.isArray(questions) && questions.length > 0 &&
+      Array.isArray(parsed.answers) && parsed.answers.length === questions.length &&
+      (parsed.phase === 'testing' || parsed.phase === 'section-break') &&
+      typeof parsed.currentIndex === 'number' &&
+      typeof parsed.timeRemaining === 'number' &&
+      typeof parsed.savedAt === 'number'
+    if (!shapeOk) return null
+    const saved = parsed as SavedSitting
+    if (saved.timeRemaining <= 0 || Date.now() - saved.savedAt > RESUME_MAX_AGE_MS) {
+      window.localStorage.removeItem(SAT_DIAGNOSTIC_RESUME_KEY)
+      return null
+    }
+    return saved
+  } catch {
+    return null
+  }
+}
+
+function clearResumeState() {
+  if (typeof window === 'undefined') return
+  try { window.localStorage.removeItem(SAT_DIAGNOSTIC_RESUME_KEY) } catch { /* quota/private mode */ }
+}
+
+function countAnswered(answers: DiagnosticSittingState['answers']): number {
+  return answers.filter(a => a.selectedIndex !== null || !!a.textValue?.trim()).length
+}
+
+/**
+ * The test for a fresh sitting: the teacher's frozen assigned test when
+ * ?assigned= is present, a track module when one is chosen, a freshly
+ * generated diagnostic otherwise.
+ */
+async function loadTest(opts: {
+  assignedId: string | null
+  hardModuleNumber: number | null
+  coreModuleNumber: number | null
+}): Promise<DiagnosticTestData> {
+  // Hard track: a 20-question all-hard-tier module instead of the
+  // 36-question mid-level screen.
+  if (opts.hardModuleNumber) {
+    const mod = await generateHardModule(opts.hardModuleNumber)
+    return {
+      questions: mod.questions,
+      // Real domain list so scoring and the review's domain labels work.
+      domains: listDiagnosticDomains(),
+      totalQuestions: mod.totalQuestions,
+      timeLimitMinutes: mod.timeLimitMinutes,
+      band: 'hard',
+    }
+  }
+  // Core Skills track: a 20-question all-easy-tier module, scored on the
+  // compressed 'easy' band so the reported number stays honest.
+  if (opts.coreModuleNumber) {
+    const mod = await generateCoreModule(opts.coreModuleNumber)
+    return {
+      questions: mod.questions,
+      domains: listDiagnosticDomains(),
+      totalQuestions: mod.totalQuestions,
+      timeLimitMinutes: mod.timeLimitMinutes,
+      band: 'easy',
+    }
+  }
+  if (opts.assignedId) {
+    const r = await fetch(`/api/class-diagnostics/${opts.assignedId}`, { cache: 'no-store' })
+    if (r.ok) return (await r.json()).diagnostic.testData as DiagnosticTestData
+    // Assignment unavailable — fall back to a normal generated test.
+  }
+  // Regular diagnostic: prefer questions this student hasn't seen on an
+  // earlier attempt. The seen set is shared across devices (browser copy
+  // merged with the server's) by the diagnostic-seen helper.
+  const seen = await loadSeenKeys('sat')
+  const generated = await generateDiagnosticTest({ excludeQuestionIds: seen })
+  // Ids plus text fingerprints: some pools reuse a question's text under a new id.
+  void recordSeenKeys('sat', generated.questions.flatMap(q => seenKeysForQuestion(q)))
+  return generated
+}
 
 // Heavy (~660-line) interactive component — only rendered once the user starts the
 // test or views results, so code-split it out of the initial page bundle.
@@ -69,6 +175,13 @@ export default function SATDiagnosticPage() {
   } | null>(null)
   const [pendingLessons, setPendingLessons] = useState(0)
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
+  // An unfinished sitting offered on the menu, and the one being resumed
+  // (seeds the test component; null for a fresh sitting).
+  const [resumable, setResumable] = useState<SavedSitting | null>(null)
+  const [resumeSeed, setResumeSeed] = useState<SavedSitting | null>(null)
+  // A resumed sitting keeps the assignment it was started under, even if the
+  // student came back without the ?assigned= link.
+  const sittingAssignedId = resumeSeed ? resumeSeed.assignedId : assignedId
 
   // Reconstruct full DiagnosticResults from a stored history entry
   const reconstructResults = useCallback(
@@ -131,8 +244,101 @@ export default function SATDiagnosticPage() {
     }
   }, [status])
 
+  // An unfinished sitting from a refresh/closed tab. localStorage is an
+  // external store, so read it in a callback rather than synchronously in the
+  // effect body, and listen for `storage` so finishing or discarding the
+  // sitting in another tab clears this offer too.
+  useEffect(() => {
+    if (phase !== 'menu') return
+    let cancelled = false
+    const read = () => { if (!cancelled) setResumable(readResumeState()) }
+    queueMicrotask(read)
+    window.addEventListener('storage', read)
+    return () => {
+      cancelled = true
+      window.removeEventListener('storage', read)
+    }
+  }, [phase])
+
+  // Load the test for a fresh sitting once the student starts one. A resumed
+  // sitting already has its testData, so this never regenerates it.
+  useEffect(() => {
+    if (phase !== 'testing' || testData) return
+    let cancelled = false
+    loadTest({ assignedId, hardModuleNumber, coreModuleNumber })
+      .then(data => {
+        if (cancelled) return
+        data.questions.forEach(q => {
+          // Grid-ins have no options to shuffle.
+          if (q.gridIn || q.options.length === 0) return
+          const s = shuffleOptions(q.options, q.correctIndex, q.question)
+          q.options = s.options
+          q.correctIndex = s.correctIndex
+        })
+        setTestData(data)
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [phase, testData, assignedId, hardModuleNumber, coreModuleNumber])
+
+  // Persist the sitting as the student works, so a refresh can resume it.
+  // Written by the test component's state-change callback while a question
+  // or the section break is open; cleared on finish, exit, or discard.
+  // An answer, a page change or a section change is saved at once; a tick of
+  // the clock alone at most every 15 s — the payload carries the whole test,
+  // and serialising it every second for 64 minutes was ~3,800 writes.
+  const lastPersistRef = useRef<{ answers: unknown; currentIndex: number; phase: string; at: number }>({ answers: null, currentIndex: -1, phase: '', at: 0 })
+  const persistSitting = useCallback(
+    (state: DiagnosticSittingState) => {
+      if (!testData) return
+      const now = Date.now()
+      const last = lastPersistRef.current
+      const structural = last.answers !== state.answers || last.currentIndex !== state.currentIndex || last.phase !== state.phase
+      if (!structural && now - last.at < 15_000) return
+      lastPersistRef.current = { answers: state.answers, currentIndex: state.currentIndex, phase: state.phase, at: now }
+      try {
+        const saved: SavedSitting = {
+          ...state,
+          testData,
+          assignedId: sittingAssignedId,
+          hardModuleNumber,
+          coreModuleNumber,
+          savedAt: Date.now(),
+        }
+        window.localStorage.setItem(SAT_DIAGNOSTIC_RESUME_KEY, JSON.stringify(saved))
+      } catch {
+        // Private mode or quota — resume is a convenience, never a requirement.
+      }
+    },
+    [testData, sittingAssignedId, hardModuleNumber, coreModuleNumber],
+  )
+
+  const resumeTest = useCallback(() => {
+    const saved = readResumeState()
+    if (!saved) { setResumable(null); return }
+    setResumeSeed(saved)
+    setTestData(saved.testData)
+    setHardModuleNumber(saved.hardModuleNumber)
+    setCoreModuleNumber(saved.coreModuleNumber)
+    setResults(null)
+    setChallengeSubmitted(false)
+    setPhase('testing')
+  }, [])
+
+  // A deliberate exit (the component confirms first) or the intro's Cancel.
+  const leaveTest = useCallback(() => {
+    clearResumeState()
+    setResumable(null)
+    setResumeSeed(null)
+    setPhase('menu')
+    setTestData(null)
+  }, [])
+
   const handleComplete = useCallback(
     async (diagnosticResults: DiagnosticResults, answers: (number | null)[]) => {
+      clearResumeState()
+      setResumable(null)
+      setResumeSeed(null)
       setResults(diagnosticResults)
       setRawAnswers(answers)
       setPhase('results')
@@ -148,7 +354,7 @@ export default function SATDiagnosticPage() {
               : coreModuleNumber
                 ? `${CORE_MODULE_CATEGORY}-${coreModuleNumber}`
                 : 'sat-full-diagnostic',
-            classDiagnosticId: (hardModuleNumber || coreModuleNumber) ? undefined : (assignedId || undefined),
+            classDiagnosticId: (hardModuleNumber || coreModuleNumber) ? undefined : (sittingAssignedId || undefined),
             results: JSON.stringify({
               review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
@@ -191,7 +397,7 @@ export default function SATDiagnosticPage() {
         // Silent fail
       }
     },
-    [challengeToken, testData, assignedId, hardModuleNumber, coreModuleNumber],
+    [challengeToken, testData, sittingAssignedId, hardModuleNumber, coreModuleNumber],
   )
 
   if (status === 'loading') {
@@ -209,70 +415,7 @@ export default function SATDiagnosticPage() {
 
   if (phase === 'testing') {
     if (!testData) {
-      // Load test data asynchronously — the teacher's frozen assigned test
-      // when ?assigned= is present, a fresh generated one otherwise.
-      const loadTest = async (): Promise<DiagnosticTestData> => {
-        // Hard track: a 20-question all-hard-tier module instead of the
-        // 36-question mid-level screen.
-        if (hardModuleNumber) {
-          const mod = await generateHardModule(hardModuleNumber)
-          return {
-            questions: mod.questions,
-            // Real domain list so scoring and the review's domain labels work.
-            domains: listDiagnosticDomains(),
-            totalQuestions: mod.totalQuestions,
-            timeLimitMinutes: mod.timeLimitMinutes,
-            band: 'hard',
-          }
-        }
-        // Core Skills track: a 20-question all-easy-tier module, scored on the
-        // compressed 'easy' band so the reported number stays honest.
-        if (coreModuleNumber) {
-          const mod = await generateCoreModule(coreModuleNumber)
-          return {
-            questions: mod.questions,
-            domains: listDiagnosticDomains(),
-            totalQuestions: mod.totalQuestions,
-            timeLimitMinutes: mod.timeLimitMinutes,
-            band: 'easy',
-          }
-        }
-        if (assignedId) {
-          const r = await fetch(`/api/class-diagnostics/${assignedId}`, { cache: 'no-store' })
-          if (r.ok) return (await r.json()).diagnostic.testData as DiagnosticTestData
-          // Assignment unavailable — fall back to a normal generated test.
-        }
-        // Regular diagnostic: prefer questions this student hasn't seen on an
-        // earlier attempt (ids remembered per browser, capped at 4000).
-        const SEEN_KEY = 'sat-diagnostic-seen-v1'
-        let seen = new Set<string>()
-        try {
-          const raw = window.localStorage.getItem(SEEN_KEY)
-          const parsed = raw ? JSON.parse(raw) : []
-          if (Array.isArray(parsed)) seen = new Set(parsed.filter((v): v is string => typeof v === 'string'))
-        } catch {
-          // Unavailable or malformed storage: generate without exclusions.
-        }
-        const generated = await generateDiagnosticTest({ excludeQuestionIds: seen })
-        try {
-          // Ids plus text fingerprints: some pools reuse a question's text under a new id.
-          const keys = generated.questions.flatMap(q => seenKeysForQuestion(q))
-          window.localStorage.setItem(SEEN_KEY, JSON.stringify([...new Set([...seen, ...keys])].slice(-6000)))
-        } catch {
-          // Storage full or blocked: exclusions just won't persist.
-        }
-        return generated
-      }
-      loadTest().then(data => {
-        data.questions.forEach(q => {
-          // Grid-ins have no options to shuffle.
-          if (q.gridIn || q.options.length === 0) return
-          const s = shuffleOptions(q.options, q.correctIndex, q.question)
-          q.options = s.options
-          q.correctIndex = s.correctIndex
-        })
-        setTestData(data)
-      })
+      // The load effect above is fetching or generating the test.
       return (
         <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
           <div className="container py-12">
@@ -290,7 +433,9 @@ export default function SATDiagnosticPage() {
           <DiagnosticTest
             testData={testData}
             onComplete={handleComplete}
-            onCancel={() => { setPhase('menu'); setTestData(null) }}
+            onCancel={leaveTest}
+            initialState={resumeSeed}
+            onStateChange={persistSitting}
           />
         </div>
       </div>
@@ -527,6 +672,32 @@ export default function SATDiagnosticPage() {
                 Personalized topic recommendations based on results
               </li>
             </ul>
+
+            {resumable ? (
+              <div className="mb-4 rounded-xl border border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
+                <p className="text-sm font-semibold text-emerald-900 dark:text-emerald-200">
+                  You have a diagnostic in progress
+                </p>
+                <p className="mt-1 text-xs text-emerald-800 dark:text-emerald-300">
+                  {countAnswered(resumable.answers)} of {resumable.testData.questions.length} answered ·{' '}
+                  {Math.ceil(resumable.timeRemaining / 60)} min left
+                </p>
+                <div className="mt-3 flex gap-2">
+                  <button
+                    onClick={resumeTest}
+                    className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  >
+                    Resume
+                  </button>
+                  <button
+                    onClick={() => { clearResumeState(); setResumable(null) }}
+                    className="rounded-lg border border-emerald-300 px-4 py-2 text-sm font-medium text-emerald-800 transition hover:bg-emerald-100 dark:border-emerald-700 dark:text-emerald-200 dark:hover:bg-emerald-900/40"
+                  >
+                    Discard
+                  </button>
+                </div>
+              </div>
+            ) : null}
 
             {/* Core Skills track: the mirror of the hard track at the other end.
                 A student near 400 gets short modules on easy-tier items instead
