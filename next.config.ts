@@ -165,6 +165,10 @@ const nextConfig: NextConfig = {
       permanent: true
       has?: { type: 'host'; value: string }[]
     }[] = [
+      // There is no /courses index (course pages live at /courses/[slug]); the
+      // course listing is /topics. Google reported /courses as a 404 and two
+      // internal pages linked to it.
+      { source: '/courses', destination: '/topics', permanent: true },
       // Canonical-host redirect as a permanent 308. The live apex currently
       // answers with a 307 (temporary), which tells Google both hosts are real
       // and splits ranking signals. If Vercel's dashboard-level domain redirect

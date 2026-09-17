@@ -86,11 +86,11 @@ function getActionUrl(a: AssignmentItem): string {
   // with a specific unit deep-links to it; without one the student picks.
   if (a.type === 'UNIT_TEST') {
     const route = unitTestRouteFor(a.courseSlug)
-    if (!route) return '/courses'
+    if (!route) return '/topics'
     return a.unitId ? `${route}?unit=${encodeURIComponent(a.unitId)}` : route
   }
   if (a.type === 'FRQ_PRACTICE') {
-    return frqRouteFor(a.courseSlug) ?? '/courses'
+    return frqRouteFor(a.courseSlug) ?? '/topics'
   }
   // Multi-topic assignments must advance: send the student to the first topic
   // they have NOT cleared, not always to the first topic in the list.
@@ -367,7 +367,7 @@ export default function StudentAssignmentsPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/courses"
+                  href="/topics"
                   className="inline-block px-5 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent-hover transition-colors"
                 >
                   Pick a course

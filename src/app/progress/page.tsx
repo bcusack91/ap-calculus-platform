@@ -94,7 +94,7 @@ export default function ProgressPage() {
           <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-8 text-center">
             <p className="text-gray-700 dark:text-gray-300 font-medium mb-1">Nothing tracked yet</p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Study a topic, take a quiz, or review flashcards and it’ll show up here.</p>
-            <Link href="/courses" className="inline-flex items-center gap-1.5 text-accent font-medium hover:underline"><BookOpen className="w-4 h-4" aria-hidden /> Browse courses</Link>
+            <Link href="/topics" className="inline-flex items-center gap-1.5 text-accent font-medium hover:underline"><BookOpen className="w-4 h-4" aria-hidden /> Browse courses</Link>
           </div>
         ) : (
           <>
