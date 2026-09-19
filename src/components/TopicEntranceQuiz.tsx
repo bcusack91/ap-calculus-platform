@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
+import { isSatMathTopic } from '@/lib/sat-math-topics'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
@@ -238,6 +240,7 @@ export default function TopicEntranceQuiz({
               </button>
             )}
             <ScratchPad storageKey={`entrance-quiz-${topicSlug}`} />
+            {isSatMathTopic(topicSlug) && <DesmosCalculatorLink />}
           </div>
           <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />
 

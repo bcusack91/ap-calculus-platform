@@ -11,6 +11,7 @@ import {
 } from '@/data/sat-practice/diagnostic-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
 import ScratchPad from '@/components/ScratchPad'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -418,6 +419,8 @@ export default function DiagnosticTest({
       {/* Tools */}
       <div className="flex items-center justify-end gap-2 mb-4">
         <ScratchPad storageKey={`diagnostic-${isRW ? 'rw' : 'math'}`} />
+        {/* The real SAT supplies Desmos on Math only. */}
+        {!isRW && <DesmosCalculatorLink />}
       </div>
 
       {/* Question */}

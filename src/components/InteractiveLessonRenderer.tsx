@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
+import { isSatMathTopic } from '@/lib/sat-math-topics'
 import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
@@ -1536,6 +1538,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         <TextToSpeech text={currentSection.content || ''} />
         <MarkForReview cardId={`${topicSlug}-part${lessonPart}-section${currentSectionIndex}`} />
         <ScratchPad storageKey={`${topicSlug}-part${lessonPart}`} />
+        {isSatMathTopic(topicSlug) && <DesmosCalculatorLink />}
         {courseSlug && hasReferenceSheet(courseSlug) && (
           <button
             onClick={() => setShowReference(true)}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { MathText } from '@/components/MathText'
@@ -118,6 +119,12 @@ function SATDailyQuestionPageInner() {
 
                   {/* Question Body */}
                   <div className="p-6">
+                    {/* Digital SAT supplies Desmos on Math only. */}
+                    {sec === 'math' && (
+                      <div className="mb-4 flex justify-end">
+                        <DesmosCalculatorLink />
+                      </div>
+                    )}
                     <MathText text={q.question.question} className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
 
                     {/* Options */}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
@@ -100,7 +101,6 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   const [completedSections, setCompletedSections] = useState<SectionResult[]>([])
   const [showNav, setShowNav] = useState(false)
   const [submitting, _setSubmitting] = useState(false)
-  const [showCalculator, setShowCalculator] = useState(false)
   // Strikethrough tracker: sectionId -> questionIndex -> Set of option indices
   const [strikethroughs, setStrikethroughs] = useState<Map<string, Map<number, Set<number>>>>(new Map())
   const [strikethroughMode, setStrikethroughMode] = useState(false)
@@ -711,21 +711,9 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
               {flaggedCount} flagged
             </span>
           )}
-          {/* Bluebook Tools */}
+          {/* Bluebook tools — the real exam supplies Desmos on Math only. */}
           {currentSection.name.toLowerCase().includes('math') && (
-            <button
-              onClick={() => setShowCalculator(c => !c)}
-              title="Desmos Calculator"
-              className={`rounded-lg border px-3 py-2 text-sm font-medium transition ${
-                showCalculator
-                  ? 'border-blue-400 bg-blue-50 text-blue-700 dark:border-blue-500 dark:bg-blue-900/30 dark:text-blue-400'
-                  : 'border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700'
-              }`}
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </button>
+            <DesmosCalculatorLink size="md" />
           )}
           {/* Strikethrough only applies to multiple-choice options */}
           {!currentQuestion.gridIn && (
@@ -746,29 +734,6 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           )}
         </div>
       </div>
-
-      {/* Desmos Calculator Embed */}
-      {showCalculator && currentSection.name.toLowerCase().includes('math') && (
-        <div className="mb-4 overflow-hidden rounded-xl border border-blue-200 shadow-lg dark:border-blue-700">
-          <div className="flex items-center justify-between bg-blue-50 px-4 py-2 dark:bg-blue-900/30">
-            <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">Desmos Graphing Calculator</span>
-            <button
-              onClick={() => setShowCalculator(false)}
-              className="text-blue-500 hover:text-blue-700 dark:text-blue-400"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <iframe
-            src="https://www.desmos.com/calculator"
-            className="h-80 w-full border-0 sm:h-96"
-            title="Desmos Calculator"
-            sandbox="allow-scripts allow-same-origin"
-          />
-        </div>
-      )}
 
       {/* Question Navigator Overlay */}
       {showNav && (

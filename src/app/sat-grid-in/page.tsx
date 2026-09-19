@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import Link from 'next/link'
 import type { GridInProblem } from '@/data/sat-grid-in'
 
@@ -138,6 +139,8 @@ export default function SATGridInPage() {
               >
                 {current.difficulty}
               </span>
+              {/* Grid-ins are Math, where the real exam supplies Desmos. */}
+              <DesmosCalculatorLink className="ml-auto" />
             </div>
 
             {/* Question */}

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
+import { isSatMathDomain } from '@/lib/sat-math-topics'
 import Link from 'next/link'
 import {
   generateUnitTest,
@@ -308,8 +310,12 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
             </div>
 
             <div className="mb-2 flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-400">
-              <span>
-                {activeUnit.icon} {activeUnit.shortName} · Variation {activeVariant}
+              <span className="flex items-center gap-2">
+                <span>{activeUnit.icon} {activeUnit.shortName} · Variation {activeVariant}</span>
+                {/* Digital SAT supplies Desmos on Math domains only. */}
+                {config.courseSlug === 'sat-prep' && isSatMathDomain(activeUnit.id) && (
+                  <DesmosCalculatorLink label="Calculator" />
+                )}
               </span>
               <span>
                 Question {currentIndex + 1} of {testData.questions.length}

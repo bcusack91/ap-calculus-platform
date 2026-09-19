@@ -9,8 +9,10 @@ import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { isSatMathTopic } from '@/lib/sat-math-topics'
 
 interface ExitQuizQuestion {
   id: string
@@ -471,6 +473,7 @@ export default function ExitQuiz({
             </button>
           )}
           <ScratchPad storageKey={`exit-quiz-${topicSlug}`} />
+          {isSatMathTopic(topicSlug) && <DesmosCalculatorLink />}
         </div>
         <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={resolvedCourseSlug} topicSlug={topicSlug} />
 
