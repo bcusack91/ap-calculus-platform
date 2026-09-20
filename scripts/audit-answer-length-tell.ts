@@ -9,7 +9,10 @@
  *
  * Usage: npx tsx scripts/audit-answer-length-tell.ts <file|dir>...
  * Reports per file: item count, % where the correct option is strictly the
- * longest, and the mean length ratio of correct option : mean distractor.
+ * longest, % where it is strictly the shortest, and the mean length ratio of
+ * correct option : mean distractor. Both percentages matter: a rebalance that
+ * trims keys until they are usually the SHORTEST option just hands guessers a
+ * different rule ("eliminate the longest"), so the target is ~25% on each.
  *
  * Static (AST) rather than runtime import, so it also sees question pools that
  * are module-local and never exported.
@@ -51,17 +54,26 @@ function itemsInFile(file: string): Item[] {
 
 function stats(items: Item[]) {
   let strictLongest = 0
+  let strictShortest = 0
   let ratioSum = 0
   for (const it of items) {
     const lens = it.options.map((s) => s.length)
     const c = lens[it.correct]
     const others = lens.filter((_, i) => i !== it.correct)
     if (others.every((l) => l < c)) strictLongest++
+    if (others.every((l) => l > c)) strictShortest++
     const meanOther = others.reduce((a, b) => a + b, 0) / (others.length || 1)
     ratioSum += meanOther ? c / meanOther : 1
   }
   const n = items.length
-  return { n, strictLongest, pct: n ? Math.round((strictLongest / n) * 100) : 0, ratio: n ? (ratioSum / n).toFixed(2) : '0' }
+  return {
+    n,
+    strictLongest,
+    strictShortest,
+    pct: n ? Math.round((strictLongest / n) * 100) : 0,
+    shortestPct: n ? Math.round((strictShortest / n) * 100) : 0,
+    ratio: n ? (ratioSum / n).toFixed(2) : '0',
+  }
 }
 
 const roots = process.argv.slice(2)
@@ -83,10 +95,21 @@ for (const f of files) {
 }
 rows.sort((a, b) => b[1].pct - a[1].pct)
 
-console.log('file'.padEnd(56), 'items'.padStart(6), 'longest%'.padStart(9), 'ratio'.padStart(7))
+console.log('file'.padEnd(56), 'items'.padStart(6), 'longest%'.padStart(9), 'shortest%'.padStart(10), 'ratio'.padStart(7))
 for (const [f, s] of rows) {
-  console.log(path.basename(f).padEnd(56), String(s.n).padStart(6), String(s.pct).padStart(9), String(s.ratio).padStart(7))
+  console.log(
+    path.basename(f).padEnd(56),
+    String(s.n).padStart(6),
+    String(s.pct).padStart(9),
+    String(s.shortestPct).padStart(10),
+    String(s.ratio).padStart(7),
+  )
 }
 const t = stats(all)
-console.log('\nTOTAL items:', t.n, '| strictly-longest-is-correct:', t.strictLongest, `(${t.pct}%)`, '| mean ratio', t.ratio)
-console.log('(chance for 4 options = 25%)')
+console.log(
+  '\nTOTAL items:', t.n,
+  '| strictly-longest-is-correct:', t.strictLongest, `(${t.pct}%)`,
+  '| strictly-shortest-is-correct:', t.strictShortest, `(${t.shortestPct}%)`,
+  '| mean ratio', t.ratio,
+)
+console.log('(chance for 4 options = 25% on each; a bank is balanced when BOTH sit near 25%)')
