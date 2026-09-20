@@ -108,6 +108,20 @@ const TELLS: Record<string, (key: string, distractors: string[], question: strin
   },
   'throwaway distractors': (k, d) => words(k) >= 4 && d.every((s) => words(s) <= 2),
   'stem echo': (k, d, q) => stemEcho(q, k, d),
+  'only hedged': (k, d) => {
+    // The key is the only option that hedges ("primarily", "usually", "though
+    // not always") while every distractor is absolute. Test-wise students
+    // know the hedged option is the safe pick.
+    const hedge = /\b(primarily|generally|usually|often|mostly|typically|largely|mainly|sometimes|not always|not exclusively|in most|partly|partially|though not)\b/i
+    const absolute = /\b(always|never|only|exclusively|entirely|purely|solely|every|all|none|no|cannot|must|fixed|permanent(ly)?|impossible|perfect(ly)?|identical(ly)?|equally)\b/i
+    return hedge.test(k) && !d.some((s) => hedge.test(s)) && d.filter((s) => absolute.test(s)).length >= 2
+  },
+  'only composite': (k, d) => {
+    // "Both X and Y" / "X and Y together" as the only option that combines
+    // two things reads as the synthesis answer.
+    const comp = /^(both|all|either)\b|\b(plus|as well as|together with|along with|combined with)\b/i
+    return comp.test(k) && !d.some((s) => comp.test(s))
+  },
   'pair template': (k, d) => {
     // The key and exactly one distractor open the same way ("Generally
     // increases" / "Generally decreases") while the other two do not: the
@@ -178,5 +192,5 @@ for (const [f, r] of [...perFile].sort((a, b) => b[1].any / b[1].n - a[1].any / 
 }
 console.log(`\nTOTAL items: ${all.length} | with at least one format tell: ${anyTotal} (${Math.round((100 * anyTotal) / (all.length || 1))}%)`)
 for (const t of tellNames) console.log(`  ${String(totalByTell[t]).padStart(5)}  ${t}`)
-console.log('\nColumns: parenthet = parenthetical, colon, dash, list, justifyin = justifying clause, throwaway = 4+ word key vs 1-2 word distractors, stem = stem echo (key alone repeats a distinctive stem word; heuristic — a few hits are legitimate, e.g. the tested term must appear), pair = key shares its two-word opener with exactly one distractor')
+console.log('\nColumns: parenthet = parenthetical, colon, dash, list, justifyin = justifying clause, throwaway = 4+ word key vs 1-2 word distractors, stem = stem echo (key alone repeats a distinctive stem word; heuristic — a few hits are legitimate, e.g. the tested term must appear), pair = key shares its two-word opener with exactly one distractor, hedged = key is the only hedged option against 2+ absolute distractors, composite = key is the only Both/All/plus option')
 if (exampleLines.length) console.log('\nEXAMPLES\n' + exampleLines.join('\n'))
