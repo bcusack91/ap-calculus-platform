@@ -7,7 +7,9 @@
  * the key is the only option carrying a parenthetical gloss ("Implicit
  * (non-declarative) memory"), a colon or dash explainer, a multi-item list,
  * or a justifying clause — while the distractors are one- or two-word
- * throwaways. All of these survive option shuffling, so they reach students.
+ * throwaways — and, found by the blind re-solve of the first rebalanced
+ * files, the key alone repeats a distinctive word from the stem. All of these
+ * survive option shuffling, so they reach students.
  *
  * Usage: npx tsx scripts/audit-format-tells.ts [--examples N] <file|dir>...
  * A feature counts as a tell only when the KEY has it and NO distractor does
@@ -57,8 +59,42 @@ function itemsInFile(file: string): Item[] {
 
 const words = (s: string) => s.trim().split(/\s+/).length
 
+/**
+ * Stem echo: a distinctive stem word that only the key repeats. Words are
+ * compared on their first five letters so "medicalization" in the stem catches
+ * "medical" in an option and "bystanders" catches "bystander". Short and
+ * function words are ignored; the stem's own question words are too.
+ */
+const STOP = new Set([
+  'which', 'about', 'these', 'those', 'their', 'there', 'would', 'could', 'should', 'after',
+  'before', 'between', 'during', 'following', 'describes', 'statement', 'example', 'primarily',
+  'because', 'occurs', 'through', 'where', 'while', 'being', 'often', 'usually', 'always', 'never',
+  'other', 'first', 'second', 'third', 'least', 'likely', 'result', 'results', 'process', 'system',
+  'called', 'known', 'refers', 'means', 'best', 'most', 'except', 'true', 'false', 'correct',
+])
+const stemsOf = (s: string) =>
+  new Set(
+    s
+      .toLowerCase()
+      .replace(/\$[^$]*\$/g, ' ')
+      .replace(/[^a-z\s-]/g, ' ')
+      .split(/[\s-]+/)
+      .filter((w) => w.length >= 5 && !STOP.has(w))
+      .map((w) => w.slice(0, 5)),
+  )
+function stemEcho(question: string, key: string, distractors: string[]): boolean {
+  const q = stemsOf(question)
+  if (!q.size) return false
+  const k = stemsOf(key)
+  const d = distractors.map(stemsOf)
+  for (const w of k) {
+    if (q.has(w) && !d.some((set) => set.has(w))) return true
+  }
+  return false
+}
+
 /** Each tell: does the item's option shape give the key away in this way? */
-const TELLS: Record<string, (key: string, distractors: string[]) => boolean> = {
+const TELLS: Record<string, (key: string, distractors: string[], question: string) => boolean> = {
   'parenthetical': (k, d) => /\([^)]*\)/.test(k) && !d.some((s) => /\([^)]*\)/.test(s)),
   'colon explainer': (k, d) => /:\s/.test(k) && !d.some((s) => /:\s/.test(s)),
   'dash explainer': (k, d) => /\s[—–-]\s/.test(k) && !d.some((s) => /\s[—–-]\s/.test(s)),
@@ -71,6 +107,17 @@ const TELLS: Record<string, (key: string, distractors: string[]) => boolean> = {
     return re.test(k) && !d.some((s) => re.test(s))
   },
   'throwaway distractors': (k, d) => words(k) >= 4 && d.every((s) => words(s) <= 2),
+  'stem echo': (k, d, q) => stemEcho(q, k, d),
+  'pair template': (k, d) => {
+    // The key and exactly one distractor open the same way ("Generally
+    // increases" / "Generally decreases") while the other two do not: the
+    // matched pair reads as "the real choice" and the rest as filler.
+    if ([k, ...d].some((s) => /\$|^\s*[\d-]/.test(s))) return false // numeric / formula items: every option shares the shape
+    const opener = (s: string) => s.toLowerCase().replace(/[^a-z\s]/g, ' ').trim().split(/\s+/).slice(0, 2).join(' ')
+    const ko = opener(k)
+    if (ko.split(' ').length < 2 || ko.split(' ').some((w) => w.length < 3)) return false
+    return d.filter((s) => opener(s) === ko).length === 1
+  },
 }
 
 const args = process.argv.slice(2)
@@ -105,7 +152,7 @@ for (const f of files) {
     const distractors = it.options.filter((_, i) => i !== it.correct)
     let hit = false
     for (const t of tellNames) {
-      if (!TELLS[t](key, distractors)) continue
+      if (!TELLS[t](key, distractors, it.question)) continue
       hit = true
       row.byTell[t]++
       totalByTell[t]++
@@ -131,5 +178,5 @@ for (const [f, r] of [...perFile].sort((a, b) => b[1].any / b[1].n - a[1].any / 
 }
 console.log(`\nTOTAL items: ${all.length} | with at least one format tell: ${anyTotal} (${Math.round((100 * anyTotal) / (all.length || 1))}%)`)
 for (const t of tellNames) console.log(`  ${String(totalByTell[t]).padStart(5)}  ${t}`)
-console.log('\nColumns: parenthet = parenthetical, colon, dash, list, justifyin = justifying clause, throwaway = 4+ word key vs 1-2 word distractors')
+console.log('\nColumns: parenthet = parenthetical, colon, dash, list, justifyin = justifying clause, throwaway = 4+ word key vs 1-2 word distractors, stem = stem echo (key alone repeats a distinctive stem word; heuristic — a few hits are legitimate, e.g. the tested term must appear), pair = key shares its two-word opener with exactly one distractor')
 if (exampleLines.length) console.log('\nEXAMPLES\n' + exampleLines.join('\n'))
