@@ -73,6 +73,15 @@ function checkMath(file: string, line: number, text: string, where: string) {
 }
 
 for (const file of process.argv.slice(2)) {
+  // createSourceFile parses leniently: an unterminated string literal still
+  // yields a tree, so item checks can pass on a file tsc would reject. One
+  // batch lost every `$'` sequence to shell quoting and the AST scan simply
+  // saw six fewer items. Surface the parse diagnostics first.
+  const program = ts.createProgram([file], { noEmit: true, allowJs: false, skipLibCheck: true })
+  for (const d of program.getSyntacticDiagnostics(program.getSourceFile(file))) {
+    const { line } = d.file!.getLineAndCharacterOfPosition(d.start ?? 0)
+    fail(file, line + 1, `syntax: ${ts.flattenDiagnosticMessageText(d.messageText, ' ')}`)
+  }
   const items = itemsInFile(file)
   const stems = new Map<string, number>()
   for (const it of items) {
