@@ -25,13 +25,13 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "The monoamine hypothesis attributes depression to:",
     "options": [
-      "Excess dopamine in the mesolimbic pathway",
-      "Overactive GABA transmission",
-      "Deficient serotonin and norepinephrine signaling",
+      "Excess dopamine and serotonin in the striatum",
+      "Overactive GABA and glycine transmission",
+      "Low serotonin and norepinephrine signaling",
       "Elevated acetylcholine in the hippocampus"
     ],
     "correctAnswer": 2,
-    "explanation": "The monoamine hypothesis holds that depression involves reduced serotonin and norepinephrine activity, which is why reuptake inhibitors help. Excess mesolimbic dopamine is the classic account of schizophrenia's positive symptoms, not depression.",
+    "explanation": "The monoamine hypothesis holds that depression involves reduced serotonin and norepinephrine signaling, which is why reuptake inhibitors help. Excess dopamine is the classic account of schizophrenia's positive symptoms, and no monoamine theory of depression rests on elevated hippocampal acetylcholine.",
     "difficulty": "medium"
   },
   {
@@ -39,25 +39,25 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Epidemiologically, major depressive disorder is diagnosed:",
     "options": [
       "About twice as often in women as in men",
-      "Equally in both sexes",
       "About twice as often in men",
-      "Almost exclusively in older adults"
+      "About twice as often in the elderly",
+      "About equally often in men and women"
     ],
     "correctAnswer": 0,
-    "explanation": "MDD shows a roughly 2:1 female-to-male prevalence ratio beginning in adolescence. Equal prevalence between the sexes better describes bipolar disorder, not major depression.",
+    "explanation": "MDD shows a roughly 2:1 female-to-male prevalence ratio beginning in adolescence. Prevalence is not doubled in the elderly, and equal rates between the sexes better describe bipolar disorder.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "SSRIs block serotonin reuptake within hours, yet mood improves only after weeks. This delay suggests their benefit depends on:",
     "options": [
-      "Immediate serotonin depletion",
-      "Placebo effects alone",
-      "Direct dopamine blockade",
-      "Slower downstream receptor and neuroplastic changes"
+      "Immediate depletion of synaptic serotonin",
+      "Placebo response and expectancy effects",
+      "Direct blockade of dopamine D2 receptors",
+      "Gradual receptor and neuroplastic adaptation"
     ],
     "correctAnswer": 3,
-    "explanation": "The therapeutic lag implies that adaptive changes such as receptor downregulation and increased neurogenesis, not the acute rise in synaptic serotonin, drive improvement. Serotonin is elevated, not depleted, so immediate depletion contradicts the drug's mechanism.",
+    "explanation": "The therapeutic lag implies that slow adaptive changes such as receptor downregulation and increased neurogenesis, not the acute rise in synaptic serotonin, drive improvement. Serotonin is elevated, not depleted, so immediate depletion contradicts the drug's mechanism.",
     "difficulty": "hard"
   },
   {
@@ -77,7 +77,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A patient has had episodes of elevated mood and energy lasting several days that never required hospitalization, plus a past major depressive episode. The most likely diagnosis is:",
     "options": [
-      "Bipolar I disorder",
+      "Bipolar type I disorder",
       "Cyclothymic disorder",
       "Bipolar II disorder",
       "Major depressive disorder"
@@ -90,65 +90,65 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Which sleep finding is most characteristic of a manic episode?",
     "options": [
-      "Decreased need for sleep with sustained energy",
-      "Insomnia with daytime fatigue",
-      "Hypersomnia",
-      "Normal sleep with vivid dreams"
+      "Decreased need for sleep",
+      "Insomnia with fatigue",
+      "Nightly hypersomnia",
+      "Normal sleep and dreams"
     ],
     "correctAnswer": 0,
-    "explanation": "Manic patients feel rested and energetic after little sleep, which distinguishes mania from insomnia, where the person wants sleep and feels exhausted without it.",
+    "explanation": "Manic patients feel rested and energetic after only a few hours of sleep, which distinguishes mania from insomnia, where the person wants sleep and feels exhausted without it.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Which of the following is a positive symptom of schizophrenia?",
     "options": [
-      "Flat affect",
-      "Avolition",
+      "Flattened emotion",
+      "Diminished motivation",
       "Poverty of speech",
       "Auditory hallucinations"
     ],
     "correctAnswer": 3,
-    "explanation": "Positive symptoms are additions to normal experience, such as hallucinations and delusions. Flat affect, avolition, and poverty of speech are negative symptoms, reflecting a loss of normal function.",
+    "explanation": "Positive symptoms are additions to normal experience, such as hallucinations and delusions. Flattened emotion, diminished motivation, and poverty of speech are negative symptoms, reflecting a loss of normal function.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Negative symptoms of schizophrenia include:",
     "options": [
-      "Delusions of grandeur",
-      "Flat affect and lack of motivation",
-      "Disorganized speech",
-      "Hallucinations"
+      "Delusions and hallucinations",
+      "Flat affect and avolition",
+      "Disorganized speech and behavior",
+      "Grandiosity and pressured speech"
     ],
     "correctAnswer": 1,
-    "explanation": "Negative symptoms represent diminished normal functions: blunted emotion, avolition, and social withdrawal. Delusions, hallucinations, and disorganized speech are positive symptoms because they add abnormal experiences.",
+    "explanation": "Negative symptoms represent diminished normal functions: blunted emotion, avolition, and social withdrawal. Delusions, hallucinations, and disorganized speech add abnormal experiences, so they count as positive symptoms.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "The dopamine hypothesis links the positive symptoms of schizophrenia to:",
     "options": [
-      "Excess dopamine activity in the mesolimbic pathway",
+      "Excess dopamine in the mesolimbic pathway",
+      "Dopamine loss in the nigrostriatal tract",
       "Serotonin deficiency in the raphe nuclei",
-      "GABA excess in the cortex",
-      "Acetylcholine loss in the basal forebrain"
+      "Acetylcholine loss in the forebrain"
     ],
     "correctAnswer": 0,
-    "explanation": "Overactive mesolimbic dopamine transmission is the classic explanation for hallucinations and delusions, supported by the efficacy of dopamine-blocking antipsychotics. Acetylcholine loss in the basal forebrain is associated with Alzheimer disease, not psychosis.",
+    "explanation": "Overactive mesolimbic dopamine transmission is the classic explanation for hallucinations and delusions, supported by the efficacy of dopamine-blocking antipsychotics. Dopamine loss in the nigrostriatal tract produces Parkinson disease, and forebrain acetylcholine loss is associated with Alzheimer disease.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Negative and cognitive symptoms of schizophrenia are best explained by:",
     "options": [
-      "Excess dopamine throughout the brain",
-      "Cerebellar degeneration",
-      "Reduced dopamine activity in the mesocortical (prefrontal) pathway",
-      "Overactive amygdala firing"
+      "High dopamine activity throughout the brain",
+      "Degeneration of cerebellar Purkinje cells",
+      "Low dopamine activity in the mesocortical pathway",
+      "Overactive firing in the amygdala and insula"
     ],
     "correctAnswer": 2,
-    "explanation": "The refined dopamine hypothesis pairs mesolimbic hyperactivity (positive symptoms) with mesocortical hypoactivity (negative and cognitive symptoms). Globally excessive dopamine cannot explain why D2 blockers help positive symptoms but do little for negative ones.",
+    "explanation": "The refined dopamine hypothesis pairs mesolimbic hyperactivity, which drives positive symptoms, with mesocortical (prefrontal) hypoactivity, which drives negative and cognitive symptoms. Globally excessive dopamine cannot explain why D2 blockers help positive symptoms but do little for negative ones.",
     "difficulty": "hard"
   },
   {
@@ -157,11 +157,11 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "options": [
       "Enhancing serotonin release",
       "Blocking dopamine D2 receptors",
-      "Activating GABA receptors",
+      "Blocking serotonin 5-HT2A receptors",
       "Inhibiting norepinephrine reuptake"
     ],
     "correctAnswer": 1,
-    "explanation": "First-generation agents like haloperidol antagonize D2 receptors, which relieves positive symptoms but produces motor side effects via the nigrostriatal pathway. Serotonin action is a feature added by atypical antipsychotics, not the core mechanism of typicals.",
+    "explanation": "First-generation agents like haloperidol antagonize D2 receptors, which relieves positive symptoms but produces motor side effects via the nigrostriatal pathway. Blockade of 5-HT2A receptors is the feature added by atypical antipsychotics, not the core mechanism of typicals.",
     "difficulty": "medium"
   },
   {
@@ -171,7 +171,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "2 weeks",
       "1 month",
       "6 months",
-      "2 years"
+      "12 months"
     ],
     "correctAnswer": 2,
     "explanation": "GAD requires uncontrollable, wide-ranging worry on most days for 6 months or more. The 1-month marker belongs to panic disorder's worry-about-attacks criterion, and 2 weeks defines a major depressive episode.",
@@ -182,25 +182,25 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "A patient has recurrent unexpected panic attacks and a month of persistent worry about having more attacks. The diagnosis is:",
     "options": [
       "Panic disorder",
-      "Generalized anxiety disorder",
-      "Specific phobia",
-      "Social anxiety disorder"
+      "Specific phobia of enclosed spaces",
+      "Social anxiety disorder",
+      "Anxiety disorder due to hyperthyroidism"
     ],
     "correctAnswer": 0,
-    "explanation": "Recurrent unexpected attacks plus a month of anticipatory worry or behavior change defines panic disorder. GAD involves broad chronic worry, not discrete attacks arising out of the blue.",
+    "explanation": "Recurrent unexpected attacks plus a month of anticipatory worry or behavior change defines panic disorder. Hyperthyroidism can mimic the attacks but would show thyroid signs and abnormal labs, and a phobia's attacks are cued by one feared object rather than arriving out of the blue.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A student avoids class presentations because he fears others will judge him harshly. This fear of scrutiny is most characteristic of:",
     "options": [
-      "Specific phobia",
-      "Panic disorder",
+      "Specific phobia of heights",
       "Agoraphobia",
+      "Generalized anxiety disorder",
       "Social anxiety disorder"
     ],
     "correctAnswer": 3,
-    "explanation": "Social anxiety disorder centers on fear of negative evaluation in social or performance situations. A specific phobia targets a particular object or situation (heights, spiders), not judgment by other people.",
+    "explanation": "Social anxiety disorder centers on fear of negative evaluation in social or performance situations. A specific phobia targets a particular object or place rather than judgment by other people, and generalized anxiety spreads across many unrelated domains.",
     "difficulty": "medium"
   },
   {
@@ -220,78 +220,78 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "In obsessive-compulsive disorder, compulsions are best described as:",
     "options": [
-      "Repetitive behaviors performed to reduce anxiety from obsessions",
-      "Intrusive unwanted thoughts",
-      "Pleasant habits",
-      "Delusional beliefs"
+      "Repetitive acts that relieve anxiety",
+      "Intrusive thoughts that provoke anxiety",
+      "Pleasurable habits that relieve boredom",
+      "Fixed false beliefs held with total conviction"
     ],
     "correctAnswer": 0,
-    "explanation": "Compulsions are rituals (checking, washing, counting) that temporarily relieve the distress of obsessions, which are the intrusive thoughts themselves. The relief-driven, unwanted quality distinguishes compulsions from pleasant habits.",
+    "explanation": "Compulsions are rituals such as checking, washing, or counting that temporarily relieve the distress created by obsessions, which are the intrusive thoughts themselves. The unwanted, relief-driven quality separates them from pleasurable habits.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A patient spends hours daily preoccupied with a facial flaw that others say is minimal or unobservable. The most likely diagnosis is:",
     "options": [
-      "Anorexia nervosa",
-      "Delusional disorder",
+      "Anorexia nervosa, restricting type",
+      "Delusional disorder, somatic type",
       "Body dysmorphic disorder",
       "Social anxiety disorder"
     ],
     "correctAnswer": 2,
-    "explanation": "Body dysmorphic disorder involves preoccupation with a perceived appearance defect plus repetitive behaviors like mirror checking, and it is classified with the obsessive-compulsive disorders. Anorexia requires the concern to center on body weight and involve restricted intake.",
+    "explanation": "Body dysmorphic disorder involves preoccupation with a perceived appearance defect plus repetitive behaviors like mirror checking, and it is classified with the obsessive-compulsive disorders. Anorexia requires the concern to center on body weight and involve restricted intake, and delusional disorder requires the belief to be held without any insight.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Neuroimaging in OCD most consistently shows hyperactivity in the:",
     "options": [
-      "Occipital cortex",
-      "Cerebellum",
-      "Hippocampus",
+      "Occipital cortex and geniculate nucleus",
+      "Hippocampus and entorhinal cortex",
+      "Cerebellum and inferior olivary nucleus",
       "Orbitofrontal cortex and caudate nucleus"
     ],
     "correctAnswer": 3,
-    "explanation": "OCD is linked to an overactive cortico-striato-thalamo-cortical loop involving the orbitofrontal cortex and caudate. The hippocampus is a tempting distractor because it is central to memory disorders and depression findings, not the OCD circuit.",
+    "explanation": "OCD is linked to an overactive cortico-striato-thalamo-cortical loop running through the orbitofrontal cortex and caudate. The hippocampal and entorhinal pair serves memory and the occipital pair serves vision, so neither belongs to the OCD circuit.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Trauma-related symptoms lasting three weeks after a car accident, then resolving, would be diagnosed as:",
     "options": [
-      "PTSD",
+      "Post-traumatic stress disorder",
       "Acute stress disorder",
       "Adjustment disorder with anxiety",
       "Panic disorder"
     ],
     "correctAnswer": 1,
-    "explanation": "Trauma symptoms lasting 3 days to 1 month define acute stress disorder; PTSD requires the symptoms to persist beyond one month. The duration, not the symptom content, separates the two diagnoses.",
+    "explanation": "Trauma symptoms lasting 3 days to 1 month define acute stress disorder; post-traumatic stress disorder requires the symptoms to persist beyond one month. The duration, not the symptom content, separates the two diagnoses.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Which symptom cluster is characteristic of PTSD?",
     "options": [
-      "Intrusive re-experiencing, avoidance, and hyperarousal",
-      "Compulsions and obsessions",
-      "Mania alternating with depression",
-      "Hallucinations with flat affect"
+      "Re-experiencing, avoidance, and hyperarousal",
+      "Obsessions, compulsions, and ritual checking",
+      "Mania, depression, and euthymia",
+      "Hallucinations, delusions, and flat affect"
     ],
     "correctAnswer": 0,
-    "explanation": "PTSD combines intrusions (flashbacks, nightmares), avoidance of reminders, negative mood changes, and hyperarousal such as exaggerated startle. Obsessions and compulsions belong to OCD, which is no longer grouped with trauma disorders.",
+    "explanation": "PTSD combines intrusions such as flashbacks and nightmares, avoidance of reminders, negative mood changes, and hyperarousal such as exaggerated startle. Obsessions with compulsions belong to OCD, and hallucinations with flat affect point to schizophrenia.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A patient with minimal physical symptoms is consumed by fear that she has a serious undiagnosed disease despite repeated normal workups. This best fits:",
     "options": [
-      "Somatic symptom disorder",
-      "Conversion disorder",
+      "Somatic symptom disorder with pain",
+      "Functional neurological disorder",
       "Illness anxiety disorder",
       "Factitious disorder"
     ],
     "correctAnswer": 2,
-    "explanation": "Illness anxiety disorder is defined by preoccupation with having a disease when somatic symptoms are absent or mild. Somatic symptom disorder is the closer trap, but it requires distressing physical symptoms to be actually present and prominent.",
+    "explanation": "Illness anxiety disorder is defined by preoccupation with having a disease when somatic symptoms are absent or mild. Somatic symptom disorder is the closer trap, but it requires distressing physical symptoms to be actually present and prominent, and factitious disorder requires deliberate deception.",
     "difficulty": "hard"
   },
   {
@@ -299,12 +299,12 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "After witnessing a violent event, a patient develops sudden blindness, yet ophthalmologic exams and reflexes are normal. The most likely diagnosis is:",
     "options": [
       "Malingering",
-      "Conversion disorder (functional neurological symptom disorder)",
+      "Conversion disorder",
       "Illness anxiety disorder",
-      "Schizophrenia"
+      "Factitious disorder"
     ],
     "correctAnswer": 1,
-    "explanation": "Conversion disorder features neurological symptoms such as blindness or paralysis that are incompatible with recognized pathology, often following a stressor and produced without conscious intent. Malingering requires deliberate faking for external gain, which is not indicated here.",
+    "explanation": "Conversion disorder (functional neurological symptom disorder) features neurological symptoms such as blindness or paralysis that are incompatible with recognized pathology, often following a stressor and produced without conscious intent. Malingering means deliberate faking for external gain and factitious disorder means deliberate faking to occupy the sick role, so neither fits symptoms produced unintentionally.",
     "difficulty": "hard"
   },
   {
@@ -313,11 +313,11 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "options": [
       "Adult-onset head trauma",
       "High socioeconomic status",
-      "Genetic dopamine mutations",
-      "Severe, chronic childhood trauma"
+      "Inherited dopamine receptor mutations",
+      "Severe childhood trauma"
     ],
     "correctAnswer": 3,
-    "explanation": "The presence of two or more distinct personality states with memory gaps is understood as a dissociative response to overwhelming early trauma. Head trauma causes amnesia through tissue damage, not the distinct identity states seen in this disorder.",
+    "explanation": "The presence of two or more distinct personality states with memory gaps is understood as a dissociative response to overwhelming early trauma, usually chronic abuse. Head trauma causes amnesia through tissue damage, not the distinct identity states seen in this disorder.",
     "difficulty": "medium"
   },
   {
@@ -325,12 +325,12 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "A patient describes feeling detached from his own body, as if watching himself in a movie, while knowing the experience is not real. This describes:",
     "options": [
       "Depersonalization",
-      "A delusion",
-      "A hallucination",
-      "Dissociative amnesia"
+      "Derealization",
+      "Dissociative amnesia",
+      "Delusional misidentification"
     ],
     "correctAnswer": 0,
-    "explanation": "Depersonalization is a feeling of detachment from oneself with intact reality testing, which is exactly why it is not a delusion; a delusional patient would believe the distorted experience is literally true. Derealization is the parallel detachment from surroundings.",
+    "explanation": "Depersonalization is a feeling of detachment from oneself with intact reality testing, and derealization is the parallel detachment from one's surroundings. Because reality testing stays intact, the experience is not a delusion; a delusional patient would believe the distortion is literally true.",
     "difficulty": "medium"
   },
   {
@@ -340,23 +340,23 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "Borderline, antisocial, and histrionic",
       "Avoidant, dependent, and obsessive-compulsive",
       "Paranoid, schizoid, and schizotypal",
-      "Narcissistic and borderline only"
+      "Narcissistic, histrionic, and dependent"
     ],
     "correctAnswer": 2,
-    "explanation": "The odd/eccentric cluster contains paranoid (distrust), schizoid (detachment), and schizotypal (odd beliefs) personality disorders. Borderline, antisocial, and histrionic belong to the dramatic/erratic cluster, defined by emotional and impulsive behavior.",
+    "explanation": "The odd/eccentric cluster contains paranoid (distrust), schizoid (detachment), and schizotypal (odd beliefs) personality disorders. Borderline, antisocial, and histrionic belong to the dramatic/erratic cluster, and avoidant with dependent belongs to the anxious/fearful cluster.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Antisocial, borderline, histrionic, and narcissistic personality disorders share which cluster theme?",
     "options": [
-      "Anxious and fearful behavior",
+      "Anxious, inhibited, and fearful behavior",
       "Dramatic, emotional, and erratic behavior",
-      "Odd and eccentric behavior",
-      "Psychotic behavior"
+      "Odd, eccentric, and suspicious behavior",
+      "Rigid and perfectionistic behavior"
     ],
     "correctAnswer": 1,
-    "explanation": "These four form the dramatic/erratic cluster, marked by emotional volatility and impulsivity. Anxious/fearful describes the cluster containing avoidant, dependent, and obsessive-compulsive personality disorders, whose members are inhibited rather than erratic.",
+    "explanation": "These four form the dramatic/erratic cluster, marked by emotional volatility and impulsivity. Anxious and inhibited describes the cluster holding avoidant, dependent, and obsessive-compulsive personality disorders, and odd or suspicious describes the paranoid-schizoid-schizotypal cluster.",
     "difficulty": "medium"
   },
   {
@@ -376,39 +376,39 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Both prefer solitude, but a person with avoidant personality disorder differs from one with schizoid personality disorder in that the avoidant person:",
     "options": [
-      "Desires relationships but fears rejection",
-      "Genuinely prefers to be alone",
-      "Has odd magical beliefs",
-      "Lacks empathy for others"
+      "Wants closeness but fears criticism",
+      "Feels no desire for close relationships",
+      "Holds odd beliefs and magical thinking",
+      "Feels entitled to special treatment"
     ],
     "correctAnswer": 0,
-    "explanation": "Avoidant individuals long for connection but withdraw out of fear of criticism, whereas schizoid individuals are indifferent to relationships and truly prefer solitude. Odd magical thinking points to schizotypal personality disorder, a different diagnosis in the odd/eccentric group.",
+    "explanation": "Avoidant individuals long for connection but withdraw out of fear of criticism, whereas schizoid individuals feel no desire for closeness and are content alone. Odd beliefs and magical thinking point to schizotypal personality disorder, and entitlement points to narcissistic.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Which feature distinguishes anorexia nervosa from bulimia nervosa?",
     "options": [
-      "Binge eating",
-      "Fear of weight gain",
+      "Binge eating episodes",
+      "Intense fear of weight gain",
       "Significantly low body weight",
-      "Purging behavior"
+      "Self-induced vomiting"
     ],
     "correctAnswer": 2,
-    "explanation": "Only anorexia requires significantly low body weight; patients with bulimia are typically normal weight or above. Fear of weight gain, bingeing, and purging can appear in both disorders, so they do not separate the diagnoses.",
+    "explanation": "Only anorexia requires significantly low body weight; patients with bulimia are typically normal weight or above. Fear of weight gain, bingeing, and purging can appear in both disorders, so none of them separates the diagnoses.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A normal-weight patient with recurrent binge eating and self-induced vomiting is most at risk for which lab finding?",
     "options": [
-      "High blood glucose",
-      "Low potassium (hypokalemia)",
-      "High hemoglobin",
-      "Low sodium only"
+      "Low serum sodium",
+      "Low serum potassium",
+      "High serum chloride",
+      "Low serum glucose"
     ],
     "correctAnswer": 1,
-    "explanation": "Repeated vomiting in bulimia nervosa causes potassium loss and metabolic alkalosis, and hypokalemia can trigger dangerous arrhythmias. Blood glucose elevation is not a feature of purging; it distracts toward diabetes.",
+    "explanation": "Repeated vomiting in bulimia nervosa causes potassium loss along with metabolic alkalosis, and the resulting hypokalemia can trigger dangerous arrhythmias. Chloride is lost with the gastric acid, so it falls rather than rises, and sodium and glucose shifts are not the characteristic purging findings.",
     "difficulty": "hard"
   },
   {
@@ -416,48 +416,48 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Recurrent episodes of eating unusually large amounts with a sense of loss of control, but WITHOUT vomiting, fasting, or excessive exercise, defines:",
     "options": [
       "Bulimia nervosa",
+      "Night eating syndrome",
       "Anorexia nervosa, binge-purge type",
-      "Pica",
       "Binge-eating disorder"
     ],
     "correctAnswer": 3,
-    "explanation": "Binge-eating disorder involves binges without compensatory behaviors, which is exactly what separates it from bulimia nervosa, where compensation such as purging or fasting is required.",
+    "explanation": "Binge-eating disorder involves binges without compensatory behaviors, which is exactly what separates it from bulimia nervosa, where compensation such as purging or fasting is required. Night eating syndrome involves excessive evening intake without the loss-of-control binges.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "A diagnosis of ADHD requires that symptoms of inattention or hyperactivity:",
     "options": [
-      "Appear in two or more settings, such as home and school",
-      "Occur only at school",
-      "Begin after age 18",
-      "Include hallucinations"
+      "Appear in two or more settings",
+      "Appear in the school setting alone",
+      "Begin after the eighteenth birthday",
+      "Include hallucinations or delusions"
     ],
     "correctAnswer": 0,
-    "explanation": "ADHD symptoms must be present in multiple settings and begin before age 12, ruling out problems confined to a single environment. Symptoms appearing only at school suggest a situational or academic issue rather than a pervasive disorder.",
+    "explanation": "ADHD symptoms must be present in multiple settings, such as home and school, and must begin before age 12. Symptoms confined to the classroom suggest a situational or academic problem, and psychotic symptoms are not part of the disorder.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "The two core diagnostic domains of autism spectrum disorder are:",
     "options": [
-      "Hallucinations and delusions",
-      "Inattention and impulsivity",
-      "Social communication deficits and restricted, repetitive behaviors",
-      "Mood swings and sleep problems"
+      "Hallucinations and delusional beliefs",
+      "Inattention and hyperactive impulsivity",
+      "Social deficits and repetitive behaviors",
+      "Mood instability and disturbed sleep"
     ],
     "correctAnswer": 2,
-    "explanation": "Autism spectrum disorder requires persistent deficits in social communication plus restricted, repetitive patterns of behavior or interests, with onset in early development. Inattention and impulsivity are the core of ADHD, a frequent comorbid but distinct diagnosis.",
+    "explanation": "Autism spectrum disorder requires persistent deficits in social communication and interaction plus restricted, repetitive patterns of behavior or interests, with onset in early development. Inattention with hyperactive impulsivity is the core of ADHD, a frequent comorbid but distinct diagnosis.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Which finding reflects the HPA-axis abnormality commonly seen in major depression?",
     "options": [
-      "Chronically low cortisol",
-      "Elevated cortisol that fails to suppress with dexamethasone",
-      "Absent ACTH",
-      "Elevated insulin"
+      "Cortisol that suppresses fully with dexamethasone",
+      "Cortisol that fails to suppress with dexamethasone",
+      "Cortisol that peaks at midnight instead of dawn",
+      "Cortisol that suppresses more deeply than normal with dexamethasone"
     ],
     "correctAnswer": 1,
     "explanation": "Many depressed patients show cortisol hypersecretion and non-suppression on the dexamethasone test, indicating impaired negative feedback in the HPA axis. Chronically low cortisol is the pattern more often reported in PTSD, making it the reversed trap.",
@@ -467,26 +467,26 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Reduced hippocampal volume has been reported in patients with chronic PTSD and depression. A proposed mechanism is:",
     "options": [
-      "Excess dopamine release",
-      "Demyelination",
-      "Cerebellar compensation",
-      "Prolonged stress hormone (glucocorticoid) exposure damaging hippocampal neurons"
+      "Excess dopamine in the hippocampal formation",
+      "Demyelination of hippocampal white matter tracts",
+      "Cerebellar compensation for cortical injury",
+      "Prolonged glucocorticoid exposure damaging neurons"
     ],
     "correctAnswer": 3,
-    "explanation": "Sustained glucocorticoid elevation is neurotoxic to the hippocampus, linking chronic stress to the volume loss seen on imaging. Demyelination is the mechanism of disorders like multiple sclerosis, not stress-related hippocampal atrophy.",
+    "explanation": "Sustained glucocorticoid (stress hormone) elevation is neurotoxic to hippocampal neurons, linking chronic stress to the volume loss seen on imaging. Demyelination is the mechanism of disorders such as multiple sclerosis, not of stress-related atrophy.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "Benzodiazepines reduce anxiety by:",
     "options": [
-      "Enhancing GABA's inhibitory effect at GABA-A receptors",
-      "Blocking dopamine receptors",
+      "Enhancing GABA-A receptor inhibition",
+      "Blocking NMDA-receptor channels",
       "Increasing serotonin synthesis",
       "Stimulating norepinephrine release"
     ],
     "correctAnswer": 0,
-    "explanation": "Benzodiazepines potentiate GABA-A receptor chloride influx, increasing neural inhibition and calming arousal. Stimulating norepinephrine would do the opposite, amplifying the sympathetic symptoms of anxiety.",
+    "explanation": "Benzodiazepines potentiate chloride influx through GABA-A receptors, increasing neural inhibition and calming arousal. Stimulating norepinephrine would do the opposite, amplifying the sympathetic symptoms of anxiety.",
     "difficulty": "medium"
   },
   {
@@ -507,22 +507,22 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Cognitive behavioral therapy treats depression primarily by:",
     "options": [
       "Uncovering repressed childhood memories",
-      "Identifying and restructuring maladaptive thought patterns",
-      "Blocking serotonin reuptake",
-      "Providing unconditional positive regard alone"
+      "Restructuring maladaptive thought patterns",
+      "Blocking reuptake at the synapse",
+      "Providing unconditional positive regard"
     ],
     "correctAnswer": 1,
-    "explanation": "CBT targets distorted automatic thoughts and the behaviors that maintain them, combining cognitive restructuring with behavioral activation. Uncovering repressed memories is the psychodynamic approach, which works from a different theory of symptom origin.",
+    "explanation": "CBT targets distorted automatic thoughts and the behaviors that maintain them, combining cognitive restructuring with behavioral activation. Uncovering repressed memories is the psychodynamic approach and unconditional positive regard is the humanistic one, each working from a different theory of symptom origin.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-psych-disorders-mcat",
     "question": "At the synapse, SSRIs increase serotonin signaling by:",
     "options": [
-      "Increasing serotonin synthesis in the raphe nuclei",
+      "Increasing serotonin synthesis in the raphe",
       "Blocking postsynaptic serotonin receptors",
-      "Inhibiting the presynaptic serotonin reuptake transporter",
-      "Inhibiting monoamine oxidase"
+      "Blocking the presynaptic serotonin transporter",
+      "Inhibiting monoamine oxidase in the terminal"
     ],
     "correctAnswer": 2,
     "explanation": "SSRIs block the presynaptic transporter (SERT), leaving more serotonin in the cleft to act on receptors. Inhibiting monoamine oxidase is the mechanism of MAOIs, which raise monoamines by preventing their breakdown rather than their reuptake.",
@@ -532,26 +532,26 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "Taking $g = 10\\ \\text{m/s}^2$ and water density $1000\\ \\text{kg/m}^3$, the gauge pressure at the bottom of a 10 m deep freshwater pool is:",
     "options": [
-      "1 kPa",
       "10 kPa",
       "50 kPa",
+      "200 kPa",
       "100 kPa"
     ],
     "correctAnswer": 3,
-    "explanation": "Gauge pressure is $P = \\rho g h = 1000 \\times 10 \\times 10 = 100{,}000$ Pa = 100 kPa. Forgetting one factor of 10 gives 10 kPa; 1 kPa and 50 kPa come from unit slips.",
+    "explanation": "Gauge pressure is $P = \\rho g h = 1000 \\times 10 \\times 10 = 100{,}000$ Pa = 100 kPa. Adding atmospheric pressure gives the 200 kPa absolute value, and 10 kPa drops a factor of ten.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "A blood pressure reading of 120 mmHg is best interpreted as:",
     "options": [
-      "An absolute pressure",
+      "A pressure measured from vacuum",
       "A gauge pressure above atmospheric",
       "A pressure below atmospheric",
-      "Equivalent to 120 pascals"
+      "A pressure equal to 120 pascals"
     ],
     "correctAnswer": 1,
-    "explanation": "Clinical pressures are gauge pressures — measured relative to atmospheric pressure, not absolute. 120 mmHg is about 16 kPa, far more than 120 Pa.",
+    "explanation": "Clinical pressures are gauge pressures, read relative to atmospheric pressure rather than from vacuum, so the absolute value here would be roughly 880 mmHg. 120 mmHg is about 16 kPa, far more than 120 Pa.",
     "difficulty": "easy"
   },
   {
@@ -662,13 +662,13 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "A hydraulic press has input piston area $1\\ \\text{cm}^2$ and output piston area $50\\ \\text{cm}^2$. A 20 N input force produces an output force of:",
     "options": [
-      "20 N",
+      "0.40 N",
       "100 N",
       "500 N",
       "1000 N"
     ],
     "correctAnswer": 3,
-    "explanation": "Pascal's principle: pressure is transmitted equally, so $F_{out} = F_{in} \\times (A_{out}/A_{in}) = 20 \\times 50 = 1000$ N. The 20 N trap ignores the area ratio; 500 N uses a ratio of 25.",
+    "explanation": "Pascal's principle: pressure is transmitted equally, so $F_{out} = F_{in} \\times (A_{out}/A_{in}) = 20 \\times 50 = 1000$ N. The 0.40 N trap inverts the area ratio; 500 N uses a ratio of 25.",
     "difficulty": "medium"
   },
   {
@@ -678,7 +678,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "Smaller",
       "Equal",
       "Larger",
-      "Zero"
+      "Exactly zero"
     ],
     "correctAnswer": 1,
     "explanation": "Energy is conserved: the output force is larger but the output piston moves proportionally less, so work in equals work out. A hydraulic lift multiplies force, never energy.",
@@ -714,23 +714,23 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "A stenotic (narrowed) heart valve produces an audible murmur primarily because:",
     "options": [
-      "Flow through the narrowing becomes fast and turbulent",
-      "Blood viscosity increases in the narrowing",
+      "Flow through the narrowing turns turbulent",
+      "Blood viscosity rises in the narrowing",
       "Pressure rises inside the narrowing",
-      "Flow momentarily stops at the valve"
+      "Flow briefly stops at the narrowed valve"
     ],
     "correctAnswer": 0,
-    "explanation": "The narrowing raises flow speed, pushing the Reynolds number past the turbulence threshold; turbulent flow is noisy. Bernoulli's principle says pressure FALLS in the fast segment, and viscosity is a fluid property that the geometry doesn't change.",
+    "explanation": "The narrowing raises flow speed, pushing the Reynolds number past the turbulence threshold, and turbulent flow is noisy. Bernoulli's principle says pressure FALLS in the fast segment, and viscosity is a property of the fluid that the geometry does not change.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "Which combination most favors turbulent flow?",
     "options": [
-      "Large vessel diameter and high flow speed",
-      "High viscosity and low speed",
-      "Small diameter and low speed",
-      "Low fluid density and low speed"
+      "Large diameter and high flow speed",
+      "High viscosity and high flow speed",
+      "Small diameter and low flow speed",
+      "Low density and low flow speed"
     ],
     "correctAnswer": 0,
     "explanation": "Reynolds number scales with density, speed, and diameter and inversely with viscosity; turbulence appears when it is large. High viscosity and low speed both push the flow toward laminar.",
@@ -740,7 +740,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "A sphere falling through a viscous fluid at terminal speed has an acceleration of:",
     "options": [
-      "Zero",
+      "Exactly zero",
       "g downward",
       "g upward",
       "A steadily increasing value"
@@ -779,13 +779,13 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-mechanics-fluids-mcat",
     "question": "A rock is fully submerged and then lowered twice as deep in a lake (water is essentially incompressible). The buoyant force on it:",
     "options": [
-      "Doubles",
-      "Is essentially unchanged",
       "Halves",
-      "Falls to zero"
+      "Stays the same",
+      "Falls to zero",
+      "Increases steadily with depth"
     ],
     "correctAnswer": 1,
-    "explanation": "Buoyant force equals the weight of displaced water, which depends on the rock's volume and the water's density — neither changes with depth in an incompressible fluid. Pressure rises with depth, but the pressure DIFFERENCE across the rock is what lifts it.",
+    "explanation": "Buoyant force equals the weight of displaced water, which depends on the rock's volume and the water's density — neither changes with depth in an incompressible fluid. Pressure rises with depth, but the pressure DIFFERENCE across the rock does not.",
     "difficulty": "medium"
   },
   {
@@ -834,7 +834,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "6 m/s",
       "12 m/s",
       "18 m/s",
-      "36 m/s"
+      "9 m/s"
     ],
     "correctAnswer": 0,
     "explanation": "$v = \\sqrt{2gh} = \\sqrt{2 \\times 10 \\times 1.8} = \\sqrt{36} = 6$ m/s. The 36 trap is $2gh$ before taking the square root.",
@@ -873,10 +873,10 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "1/16",
       "1/8",
       "1/4",
-      "1/2"
+      "1/32"
     ],
     "correctAnswer": 0,
-    "explanation": "24 hours is four half-lives, so $(1/2)^4 = 1/16$ remains. Counting only three half-lives gives the 1/8 trap.",
+    "explanation": "24 hours is four half-lives, so $(1/2)^4 = 1/16$ remains. Counting three half-lives gives 1/8 and counting five gives 1/32.",
     "difficulty": "medium"
   },
   {
@@ -899,7 +899,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "8 days",
       "16 days",
       "20 days",
-      "32 days"
+      "12 days"
     ],
     "correctAnswer": 2,
     "explanation": "$1/32 = (1/2)^5$, so five half-lives have passed: $5 \\times 4 = 20$ days. The 32-day trap multiplies half-life by the denominator's value rather than the number of halvings.",
@@ -935,39 +935,39 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Positron emission converts a proton into a neutron. The daughter nuclide has:",
     "options": [
-      "Z one higher",
-      "A one lower",
+      "Z one higher with A unchanged",
+      "A one lower with Z unchanged",
       "Z one lower with A unchanged",
-      "A one higher"
+      "Z unchanged with A one lower"
     ],
     "correctAnswer": 2,
-    "explanation": "Losing a proton's charge (as a positron) lowers Z by one; the proton becomes a neutron so A is unchanged. Raising Z describes beta-minus decay instead.",
+    "explanation": "Losing a proton's charge as a positron lowers the atomic number by one; the proton becomes a neutron, so the mass number is unchanged. Raising the atomic number with mass fixed describes beta-minus decay instead.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Electron capture changes a nuclide's Z and A the same way as:",
     "options": [
-      "Alpha decay",
-      "Beta-minus decay",
+      "Alpha particle emission",
+      "Gamma ray emission",
       "Positron emission",
-      "Gamma emission"
+      "Beta-minus emission"
     ],
     "correctAnswer": 2,
-    "explanation": "Capturing an inner-shell electron converts a proton to a neutron — exactly the positron-emission result (Z down one, A unchanged), just without emitting antimatter.",
+    "explanation": "Capturing an inner-shell electron converts a proton to a neutron — exactly the positron-emission result (atomic number down one, mass number unchanged), just without emitting antimatter.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Gamma emission changes the parent's atomic and mass numbers how?",
     "options": [
-      "Z decreases by 1",
-      "A decreases by 4",
-      "Z increases by 1",
-      "Neither Z nor A changes"
+      "Z decreases by 1 with A fixed",
+      "A decreases by 4 with Z fixed",
+      "Z increases by 1 with A fixed",
+      "Z unchanged with A unchanged"
     ],
     "correctAnswer": 3,
-    "explanation": "A gamma ray is a high-energy photon released as an excited nucleus relaxes — no particles leave, so both Z and A are untouched.",
+    "explanation": "A gamma ray is a high-energy photon released as an excited nucleus relaxes — no particles leave, so both the atomic number and the mass number stay exactly where they were.",
     "difficulty": "easy"
   },
   {
@@ -988,46 +988,46 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Carbon-14 decays to nitrogen-14. The emitted particle is:",
     "options": [
       "An alpha particle",
-      "A beta-minus particle (electron)",
-      "A positron",
-      "A proton"
+      "A beta-minus particle",
+      "A positron-neutrino pair",
+      "A free proton"
     ],
     "correctAnswer": 1,
-    "explanation": "A stays at 14 while Z rises from 6 to 7 — a neutron became a proton, emitting an electron (beta-minus) and an antineutrino. Positron emission would lower Z.",
+    "explanation": "The mass number stays at 14 while the atomic number rises from 6 to 7 — a neutron became a proton, emitting an electron (a beta-minus particle) and an antineutrino. A positron with its neutrino would lower the atomic number instead.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "In PET imaging, the annihilation of an emitted positron with an electron produces:",
     "options": [
-      "Two 511 keV photons traveling in opposite directions",
-      "One 1022 keV photon",
-      "A pair of neutrons",
-      "Low-energy X-rays only"
+      "Two 511 keV photons emitted back-to-back",
+      "One 1022 keV photon in one direction",
+      "A pair of neutrons emitted back-to-back",
+      "Low-energy X-rays in all directions"
     ],
     "correctAnswer": 0,
-    "explanation": "The pair's rest mass converts entirely to two 511 keV gamma photons emitted back-to-back (conserving momentum); detecting them in coincidence localizes the tracer. A single photon could not conserve momentum.",
+    "explanation": "The pair's rest mass converts entirely to two 511 keV gamma photons emitted in opposite directions, which conserves momentum; detecting them in coincidence localizes the tracer. A single photon could not conserve momentum.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "A key advantage of short-half-life isotopes like fluorine-18 for diagnostic imaging is that they:",
     "options": [
-      "Emit only alpha particles",
-      "Persist for months in tissue",
-      "Are chemically inert",
-      "Limit the patient's radiation dose by decaying away quickly"
+      "Emit alpha particles, not positrons",
+      "Persist in tissue for months",
+      "Remain chemically inert inside the body",
+      "Deliver a lower cumulative radiation dose"
     ],
     "correctAnswer": 3,
-    "explanation": "Activity that decays within hours delivers its signal during the scan and then largely disappears, minimizing cumulative dose. Persistence would be a disadvantage, and F-18 is a positron emitter, not an alpha emitter.",
+    "explanation": "Activity that decays within hours delivers its signal during the scan and then largely disappears, minimizing the dose the patient absorbs. Persistence would be a disadvantage, and fluorine-18 is a positron emitter, not an alpha emitter.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "The binding energy of a nucleus corresponds to:",
     "options": [
-      "The mass difference between the separated nucleons and the nucleus, via $E = mc^2$",
-      "The kinetic energy of its orbiting electrons",
+      "The energy equivalent of the mass defect",
+      "The energy of its orbiting electrons",
       "The Coulomb repulsion among its protons",
       "The energy of its most recent gamma emission"
     ],
@@ -1040,25 +1040,25 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Energy is released by fusing nuclei LIGHTER than iron and by splitting nuclei HEAVIER than iron because:",
     "options": [
       "Iron is the most abundant element",
-      "All nuclear reactions release energy",
-      "Coulomb repulsion vanishes at iron",
-      "Binding energy per nucleon peaks near iron"
+      "Every nuclear reaction releases energy",
+      "Coulomb repulsion vanishes near iron",
+      "Binding energy per nucleon peaks at iron"
     ],
     "correctAnswer": 3,
-    "explanation": "Reactions that move nuclei toward the binding-energy-per-nucleon maximum (around iron-56) release the difference. Moving away from the peak in either direction costs energy instead.",
+    "explanation": "Reactions that move nuclei toward the binding-energy-per-nucleon maximum, around iron-56, release the difference. Moving away from the peak in either direction costs energy instead.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Nuclear fission is best described as:",
     "options": [
-      "Two light nuclei merging into one",
-      "A heavy nucleus splitting into smaller nuclei, releasing energy and neutrons",
-      "A nucleus emitting a single photon",
-      "Electron capture by a heavy nucleus"
+      "Two light nuclei merging into a heavier one",
+      "A heavy nucleus splitting into smaller nuclei",
+      "A nucleus shedding a high-energy photon",
+      "A heavy nucleus capturing an electron"
     ],
     "correctAnswer": 1,
-    "explanation": "Fission splits a heavy nucleus (like uranium-235) into fragments plus free neutrons — those neutrons can trigger further fissions, enabling a chain reaction. Merging light nuclei is fusion.",
+    "explanation": "Fission splits a heavy nucleus such as uranium-235 into fragments plus free neutrons, releasing energy; those neutrons can trigger further fissions in a chain reaction. Merging light nuclei is fusion, and shedding a photon is gamma decay.",
     "difficulty": "easy"
   },
   {
@@ -1094,36 +1094,36 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "A meter of concrete",
       "Several centimeters of lead",
       "A few millimeters of aluminum",
-      "A sheet of paper or the outer layer of skin"
+      "A sheet of paper"
     ],
     "correctAnswer": 3,
-    "explanation": "Alpha particles are heavy and doubly charged, so they ionize densely and exhaust their energy within micrometers of solid material — paper suffices. Lead and concrete are for gamma shielding.",
+    "explanation": "Alpha particles are heavy and doubly charged, so they ionize densely and exhaust their energy within micrometers of solid material — a sheet of paper or the dead outer layer of skin stops them. Aluminium is used against beta particles, and lead or concrete against gamma rays.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Although easily shielded, alpha emitters are especially dangerous when inhaled or ingested because alpha particles:",
     "options": [
-      "Travel far inside the body",
-      "Convert tissue into radioactive material",
-      "Deposit intense ionization over a very short range in living tissue",
-      "Pass through tissue without interacting"
+      "Travel many centimeters through soft tissue",
+      "Convert tissue into radioactive atoms",
+      "Deposit dense ionization over a short range",
+      "Pass through cells without interacting"
     ],
     "correctAnswer": 2,
-    "explanation": "Internally there is no dead skin layer to absorb them: the alpha's large charge and mass produce dense local ionization, concentrating damage in a small volume of living cells. Their range is short, not long — that is exactly the problem.",
+    "explanation": "Internally there is no dead skin layer to absorb them: the large charge and mass produce dense local ionization, concentrating damage in a small volume of living cells. Their range is short rather than long — that is exactly the problem.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Isotopes of an element share the same:",
     "options": [
-      "Mass number",
+      "Number of nucleons",
       "Number of neutrons",
-      "Half-life",
+      "Radioactive half-life",
       "Number of protons"
     ],
     "correctAnswer": 3,
-    "explanation": "Isotopes have identical atomic number (protons) — hence identical chemistry — but different neutron counts and thus different mass numbers, and generally different nuclear stability.",
+    "explanation": "Isotopes have identical atomic number — hence identical chemistry — but different neutron counts, and therefore different mass numbers and generally different nuclear stability.",
     "difficulty": "easy"
   },
   {
@@ -1131,12 +1131,12 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "The mass number A of a nuclide equals:",
     "options": [
       "Protons plus neutrons",
-      "Protons only",
-      "Neutrons only",
-      "Protons plus electrons"
+      "Protons plus electrons",
+      "Protons plus neutrons plus electrons",
+      "Neutrons and electrons"
     ],
     "correctAnswer": 0,
-    "explanation": "A counts all nucleons. Protons alone define Z, the atomic number; electrons contribute negligibly to mass and are not counted.",
+    "explanation": "The mass number counts all nucleons. Protons alone define the atomic number, and electrons contribute negligibly to mass, so they are never counted.",
     "difficulty": "easy"
   },
   {
@@ -1156,39 +1156,39 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "In the Bohr model, an atom emits a photon when an electron:",
     "options": [
-      "Absorbs thermal energy",
-      "Drops from a higher to a lower energy level, releasing exactly the level difference",
-      "Escapes the atom entirely",
-      "Moves to a larger orbit"
+      "Absorbs a photon and climbs to a higher level",
+      "Drops from a higher to a lower energy level",
+      "Jumps to a higher energy level",
+      "Escapes the atom entirely"
     ],
     "correctAnswer": 1,
-    "explanation": "Emission accompanies a downward transition; the photon energy equals the gap between levels, which is why emission lines are discrete. Moving up or escaping requires ABSORBING energy.",
+    "explanation": "Emission accompanies a downward transition, and the photon energy equals the gap between the two levels, which is why emission lines are discrete. Jumping upward or escaping the atom requires ABSORBING energy.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "The dark lines in a star's absorption spectrum occur at the same wavelengths as the element's emission lines because:",
     "options": [
-      "Both correspond to the same energy-level differences",
-      "The star re-emits all absorbed light forward",
-      "Absorption shifts wavelengths to the red",
-      "The lines are instrumental artifacts"
+      "The two processes use the same energy-level gaps",
+      "The star re-emits absorbed light forward",
+      "Absorption shifts wavelengths toward the red",
+      "The dark lines are instrumental artifacts"
     ],
     "correctAnswer": 0,
-    "explanation": "A transition absorbs exactly the photon energy it would emit going the other way — the level spacing is the same in both directions, so the line positions coincide.",
+    "explanation": "A transition absorbs exactly the photon energy it would emit going the other way — the level spacing is identical in both directions, so the line positions coincide.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "If a photon's frequency doubles, its energy:",
     "options": [
-      "Halves",
+      "Halves as the period doubles",
       "Is unchanged",
       "Doubles",
       "Quadruples"
     ],
     "correctAnswer": 2,
-    "explanation": "$E = hf$ is linear in frequency, so double the frequency means double the energy. Quadrupling would require energy to scale with the square of frequency.",
+    "explanation": "$E = hf$ is linear in frequency, so double the frequency means double the energy. The period halves rather than doubles, and quadrupling would require energy to scale with the square of frequency.",
     "difficulty": "easy"
   },
   {
@@ -1208,13 +1208,13 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Light below a metal's threshold frequency ejects no photoelectrons no matter how intense it is because:",
     "options": [
-      "No single photon carries enough energy to overcome the work function",
-      "The metal reflects all low-frequency light",
-      "Electrons cannot absorb multiple photons simultaneously in this regime, and each photon is individually insufficient",
-      "Intensity controls photon energy"
+      "No photon carries enough energy to free an electron",
+      "The metal reflects every low-frequency photon",
+      "Intensity sets the energy carried by each photon",
+      "Electrons need time to accumulate energy"
     ],
     "correctAnswer": 0,
-    "explanation": "Ejection is a one-photon, one-electron event: each photon must individually supply at least the work function. Intensity sets the photon COUNT, not the energy per photon — the observation that forced the quantum picture of light.",
+    "explanation": "Ejection is a one-photon, one-electron event: each photon must individually supply at least the work function. Intensity sets the photon COUNT rather than the energy per photon, and electrons do not accumulate energy over time — the observation that forced the quantum picture of light.",
     "difficulty": "medium"
   },
   {
@@ -1234,26 +1234,26 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "For light already above the threshold frequency, increasing the INTENSITY causes:",
     "options": [
-      "More electrons ejected per second, with the same maximum kinetic energy",
-      "Faster electrons with the same current",
+      "More electrons ejected per second",
+      "Faster electrons but no more of them",
       "Both more and faster electrons",
-      "No change at all"
+      "No change in the ejected current"
     ],
     "correctAnswer": 0,
-    "explanation": "More intensity means more photons, hence more one-photon ejection events — but each photon's energy (and so the electrons' maximum KE) is set by frequency alone.",
+    "explanation": "More intensity means more photons, hence more one-photon ejection events each second — but each photon's energy, and so the maximum kinetic energy of the electrons, is set by frequency alone.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "A metal's work function is:",
     "options": [
-      "The kinetic energy of its conduction electrons",
-      "The energy of its most intense emission line",
-      "The minimum energy needed to eject an electron from its surface",
-      "The total binding energy of the atom"
+      "The energy of its conduction electrons",
+      "The energy of its brightest emission line",
+      "The energy needed to free a surface electron",
+      "The total binding energy of the whole atom"
     ],
     "correctAnswer": 2,
-    "explanation": "The work function is the escape cost for the least-bound surface electron; photon energy beyond it appears as the electron's kinetic energy.",
+    "explanation": "The work function is the minimum escape cost for the least-bound electron at the surface; photon energy beyond it appears as the electron's kinetic energy.",
     "difficulty": "easy"
   },
   {
@@ -1300,21 +1300,21 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Heating a radioactive sample or binding it into a different chemical compound changes its half-life:",
     "options": [
       "Not at all",
-      "Dramatically, in proportion to temperature",
-      "Only for beta emitters",
-      "Only at very high pressure"
+      "In proportion to the absolute temperature",
+      "Modestly, for beta emitters",
+      "Sharply under high pressure"
     ],
     "correctAnswer": 0,
-    "explanation": "Decay is a nuclear process; temperature, pressure, and chemical bonding perturb electrons, not the nucleus, so the half-life is essentially invariant (electron capture shows only minuscule chemical effects).",
+    "explanation": "Decay is a nuclear process; temperature, pressure, and chemical bonding perturb electrons rather than the nucleus, so the half-life is essentially invariant (electron capture shows only minuscule chemical effects).",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "The activity of a radioactive sample, measured in becquerels, is:",
     "options": [
-      "The energy released per decay",
-      "The number of decays per second",
-      "The number of radioactive atoms present",
+      "The number of joules per decay",
+      "The number of nuclear decays per second",
+      "The number of radioactive atoms",
       "The half-life expressed in seconds"
     ],
     "correctAnswer": 1,
@@ -1351,26 +1351,26 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "Iodine-131 therapy destroys overactive thyroid tissue while largely sparing other organs because:",
     "options": [
-      "Gamma rays target the thyroid specifically",
-      "I-131 is chemically inert elsewhere",
-      "Its alpha particles cannot leave the gland",
-      "The thyroid concentrates iodine, and the short-range beta particles deposit their dose locally"
+      "Gamma rays are aimed at the thyroid by the scanner",
+      "Iodine is chemically inert in every other tissue",
+      "Alpha particles cannot escape the gland's capsule",
+      "Thyroid uptake concentrates the short-range beta dose"
     ],
     "correctAnswer": 3,
-    "explanation": "Physiological iodine uptake concentrates the isotope in the thyroid, and beta particles travel only millimeters in tissue, confining damage to the gland. Gamma rays are emitted too but carry a small fraction of the dose and are not targeted.",
+    "explanation": "Physiological iodine uptake concentrates the isotope in the gland, and beta particles travel only millimeters in tissue, so the dose is deposited locally. Gamma rays are emitted as well but are not aimed at anything, and I-131 emits no alpha particles.",
     "difficulty": "hard"
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
     "question": "A positron differs from an electron in that it has:",
     "options": [
-      "Greater mass",
-      "Lesser mass",
-      "The same charge",
-      "The same mass but opposite (positive) charge"
+      "The same charge but a greater mass",
+      "The same charge but a smaller mass",
+      "The same mass and the same charge",
+      "The same mass but opposite charge"
     ],
     "correctAnswer": 3,
-    "explanation": "The positron is the electron's antiparticle: identical mass and spin, opposite charge — which is why the pair can annihilate into two 511 keV photons.",
+    "explanation": "The positron is the electron's antiparticle: identical mass and spin, with a charge of the same magnitude but positive sign — which is why the pair can annihilate into two 511 keV photons.",
     "difficulty": "easy"
   },
   {
@@ -1393,10 +1393,10 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "0.004 s",
       "0.04 s",
       "0.25 s",
-      "4 s"
+      "0.0004 s"
     ],
     "correctAnswer": 0,
-    "explanation": "Period is the reciprocal of frequency: $T = 1/f = 1/250 = 0.004$ s.",
+    "explanation": "Period is the reciprocal of frequency: $T = 1/f = 1/250 = 0.004$ s. 0.04 s and 0.0004 s are decimal-place slips; 0.25 s is the period of a 4 Hz vibration.",
     "difficulty": "easy"
   },
   {
@@ -1471,23 +1471,23 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "Higher than the source frequency",
       "Lower than the source frequency",
       "Equal to the source frequency",
-      "Doubled"
+      "Double the source frequency"
     ],
     "correctAnswer": 1,
-    "explanation": "A receding observer crosses wavefronts less often per second, so the observed frequency drops.",
+    "explanation": "A receding observer crosses wavefronts less often each second, so the observed frequency drops below the emitted one.",
     "difficulty": "medium"
   },
   {
     "subtopicSlug": "mcat-physics-waves-sound-mcat",
     "question": "A source recedes from a stationary observer at speed $u$; separately, an observer recedes from a stationary source at the same $u$. The two frequency shifts are:",
     "options": [
-      "Both downward, but unequal in general",
-      "Both downward and always exactly equal",
-      "Downward for the source case, upward for the observer case",
-      "Upward for the source case, downward for the observer case"
+      "Downward in both cases, but unequal in general",
+      "Equal in magnitude and both downward",
+      "Downward for the source, upward for the observer",
+      "Upward for the source, downward for the observer"
     ],
     "correctAnswer": 0,
-    "explanation": "Both cases lower the observed frequency, but the Doppler formulas differ: a receding observer's frequency reaches zero at $u = v$, while a receding source's does not. The shifts agree only approximately when $u \\ll v$.",
+    "explanation": "Recession lowers the observed frequency either way, but the two Doppler formulas differ: a receding observer's frequency reaches zero at $u = v$, while a receding source's never does. The shifts agree only approximately when $u \\ll v$.",
     "difficulty": "hard"
   },
   {
@@ -1520,26 +1520,26 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "subtopicSlug": "mcat-physics-waves-sound-mcat",
     "question": "An increase of 30 dB corresponds to an intensity increase by a factor of:",
     "options": [
-      "3",
       "30",
       "300",
+      "10,000",
       "1000"
     ],
     "correctAnswer": 3,
-    "explanation": "Each 10 dB is a factor of 10 in intensity, so 30 dB is $10^{3} = 1000$.",
+    "explanation": "Each 10 dB is a factor of 10 in intensity, so 30 dB is $10^{3} = 1000$; $10^{4}$ would be a 40 dB increase.",
     "difficulty": "easy"
   },
   {
     "subtopicSlug": "mcat-physics-waves-sound-mcat",
     "question": "A 60 dB sound is how many times more intense than a 40 dB sound?",
     "options": [
-      "2",
       "10",
       "20",
+      "1000",
       "100"
     ],
     "correctAnswer": 3,
-    "explanation": "The difference is 20 dB, and each 10 dB is a factor of 10 in intensity: $10^{2} = 100$.",
+    "explanation": "The difference is 20 dB, and each 10 dB is a factor of 10 in intensity: $10^{2} = 100$. A factor of 1000 would need a 30 dB gap.",
     "difficulty": "hard"
   },
   {
@@ -1586,12 +1586,12 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "In a transverse wave, particles of the medium oscillate:",
     "options": [
       "Parallel to the direction of travel",
-      "In closed circles",
+      "Randomly in all directions at once",
       "Perpendicular to the direction of travel",
-      "Not at all"
+      "In circles around the travel direction"
     ],
     "correctAnswer": 2,
-    "explanation": "Transverse motion is perpendicular to propagation, as on a shaken string; longitudinal motion is parallel, as in sound.",
+    "explanation": "Transverse motion is perpendicular to propagation, as on a shaken string; parallel motion is longitudinal, as in sound. Circular paths belong to surface water waves rather than to a simple transverse wave on a string.",
     "difficulty": "easy"
   },
   {
@@ -1599,7 +1599,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Which of the following can be polarized?",
     "options": [
       "Sound waves in air",
-      "Light waves",
+      "Light waves in air",
       "All longitudinal waves",
       "Any wave in a fluid"
     ],
@@ -1626,8 +1626,8 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "options": [
       "In phase — constructive interference",
       "Out of phase — destructive interference",
-      "A quarter cycle apart",
-      "With different frequencies"
+      "A quarter cycle apart — partial loss",
+      "At different frequencies — beats"
     ],
     "correctAnswer": 1,
     "explanation": "A path difference of a half-integer number of wavelengths ($\\lambda/2, 3\\lambda/2, \\ldots$) puts the waves $180°$ out of phase, so they cancel.",
@@ -1638,8 +1638,8 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Raising the frequency of an ultrasound probe used on tissue:",
     "options": [
       "Improves both resolution and penetration",
-      "Improves resolution but reduces penetration depth",
-      "Reduces resolution but penetrates deeper",
+      "Improves resolution but reduces penetration",
+      "Reduces resolution but improves penetration",
       "Changes neither resolution nor penetration"
     ],
     "correctAnswer": 1,
@@ -1651,12 +1651,12 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "A sonic boom is produced when a source:",
     "options": [
       "Travels faster than sound in the medium",
-      "Accelerates rapidly",
+      "Accelerates faster than the air can respond",
       "Emits a very high frequency",
       "Passes directly overhead"
     ],
     "correctAnswer": 0,
-    "explanation": "A supersonic source outruns its own wavefronts, which pile up into a cone-shaped shock wave heard as a boom.",
+    "explanation": "A supersonic source outruns its own wavefronts, which pile up into a cone-shaped shock wave heard as a boom. Speed relative to the wave, not acceleration or pitch, is what matters.",
     "difficulty": "medium"
   },
   {
@@ -1677,7 +1677,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
     "question": "Taking the speed of sound as 340 m/s, the wavelength at the 20 kHz upper limit of human hearing is about:",
     "options": [
       "1.7 cm",
-      "17 cm",
+      "0.17 cm",
       "1.7 m",
       "17 m"
     ],
