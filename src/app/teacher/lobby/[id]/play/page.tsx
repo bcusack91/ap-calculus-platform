@@ -6,6 +6,19 @@ import { useSession } from 'next-auth/react'
 import 'katex/dist/katex.min.css'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import {
+  useChaosNow,
+  PowerUpBar,
+  InkSplatOverlay,
+  DarkOverlay,
+  StormOverlay,
+  FrostOverlay,
+  TimeWarpOverlay,
+  ChaosToasts,
+  type ChaosToast,
+} from '@/components/ChaosMode'
+import { activeEffects, POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups'
+import type { LobbyInventoryItem } from '@/lib/lobby-chaos'
 
 interface PlayQuestion {
   id: number | string
@@ -14,10 +27,22 @@ interface PlayQuestion {
   topicSlug?: string
 }
 
+interface LobbyChaosState {
+  intensity: string
+  inventory: LobbyInventoryItem[]
+  effects: ActiveEffect[]
+  shield?: boolean
+  reflect?: boolean
+  doubleNext?: boolean
+  fiftyFifty?: { questionIndex: number; eliminated: number[] }
+}
+
 interface PlayState {
   status: 'OPEN' | 'IN_PROGRESS' | 'CLOSED'
   endsAt?: string
   durationSec?: number
+  gameMode?: string
+  chaos?: LobbyChaosState | null
   questions?: PlayQuestion[]
   myProgress?: {
     score: number
@@ -46,8 +71,14 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   const [questionsCorrect, setQuestionsCorrect] = useState(0)
   const [questionsAnswered, setQuestionsAnswered] = useState(0)
   const [now, setNow] = useState(() => Date.now())
+  const [chaos, setChaos] = useState<LobbyChaosState | null>(null)
+  const [toasts, setToasts] = useState<ChaosToast[]>([])
+  const [firing, setFiring] = useState(false)
 
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Effects already announced, so re-polling the same active attack does not
+  // re-toast it every two seconds.
+  const seenEffects = useRef<Set<string>>(new Set())
 
   // Auth gate
   useEffect(() => {
@@ -70,6 +101,24 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
         return
       }
       setState(json)
+      if (json.chaos) {
+        setChaos(json.chaos)
+        // Tell the victim who hit them — ActiveEffect.from carries the
+        // attacker's display name.
+        const fresh = (json.chaos.effects as ActiveEffect[]).filter(
+          (e) => !seenEffects.current.has(e.id) && e.type !== 'time-warp'
+        )
+        if (fresh.length) {
+          for (const e of fresh) seenEffects.current.add(e.id)
+          setToasts((prev) => [
+            ...prev,
+            ...fresh.map((e) => ({
+              id: e.id,
+              text: `${e.from} hit you with ${POWER_UPS[e.type].name}!`,
+            })),
+          ])
+        }
+      }
       if (json.myProgress) {
         setScore(json.myProgress.score)
         setQuestionsCorrect(json.myProgress.questionsCorrect)
@@ -89,13 +138,15 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   useEffect(() => {
     if (authStatus !== 'authenticated') return
     void load()
-    // Poll every 5s while waiting; once IN_PROGRESS we stop polling (questions are already loaded).
+    // Poll every 5s while waiting. Normally polling stops once IN_PROGRESS
+    // because the questions are already loaded — but in Chaos Mode this GET is
+    // how an incoming attack reaches its victim, so keep a faster poll running.
     const t = setInterval(() => {
       setState(s => {
-        if (!s || s.status !== 'IN_PROGRESS') void load()
+        if (!s || s.status !== 'IN_PROGRESS' || s.gameMode === 'CHAOS') void load()
         return s
       })
-    }, 5000)
+    }, 2000)
     return () => clearInterval(t)
   }, [authStatus, load])
 
@@ -120,6 +171,10 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
     }
   }, [expired, state?.status, load])
 
+  // Ticks only while an effect is running, so overlays animate without
+  // re-rendering the page the rest of the time.
+  const chaosNow = useChaosNow(chaos?.effects)
+
   const currentQuestion: PlayQuestion | null = useMemo(() => {
     const qs = state?.questions ?? []
     return qs[questionIndex] ?? null
@@ -127,6 +182,11 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   async function submitAnswer(chosen: number) {
     if (submitting || feedback || expired || !currentQuestion) return
+    // Freeze blocks answering outright — dimming the buttons is not enough,
+    // since a keyboard user can still reach them.
+    if (activeEffects(chaos?.effects, Date.now()).some(
+      (e) => e.type === 'freeze' || e.type === 'chaos-storm'
+    )) return
     setSubmitting(true)
     setSelected(chosen)
     try {
@@ -151,6 +211,14 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
       setScore(json.score)
       setQuestionsAnswered(json.questionsAnswered)
       setQuestionsCorrect(json.questionsCorrect)
+      if (json.powerUps) setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+      if (json.droppedPowerUp) {
+        const def = POWER_UPS[json.droppedPowerUp as PowerUpId]
+        setToasts((prev) => [
+          ...prev,
+          { id: `drop-${Date.now()}`, text: `You found ${def.icon} ${def.name}!` },
+        ])
+      }
       // Auto-advance after a brief pause so the student sees the feedback color
       advanceTimer.current = setTimeout(() => {
         setSelected(null)
@@ -164,6 +232,47 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
       setSubmitting(false)
     }
   }
+
+  async function firePowerUp(powerUpId: PowerUpId) {
+    if (firing || expired) return
+    setFiring(true)
+    try {
+      const res = await fetch(`/api/teacher/lobby/${id}/powerup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ powerUpId, questionIndex }),
+      })
+      const json = await res.json()
+      if (json.powerUps) setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+      if (!res.ok || json.ok === false) {
+        setToasts((prev) => [
+          ...prev,
+          { id: `err-${Date.now()}`, text: json.error || 'That did not land' },
+        ])
+        return
+      }
+      const def = POWER_UPS[powerUpId]
+      const blurb =
+        json.scope === 'team'
+          ? `${def.icon} ${def.name} hit all ${json.targets} of them!`
+          : json.scope === 'self'
+            ? `${def.icon} ${def.name} ready`
+            : `${def.icon} ${def.name} sent!`
+      const extra = json.blocked ? ` (${json.blocked} blocked)` : json.reflected ? ' — reflected back!' : ''
+      setToasts((prev) => [...prev, { id: `use-${Date.now()}`, text: blurb + extra }])
+    } catch {
+      setToasts((prev) => [...prev, { id: `err-${Date.now()}`, text: 'That did not land' }])
+    } finally {
+      setFiring(false)
+    }
+  }
+
+  // Toasts are transient; drop each one a few seconds after it appears.
+  useEffect(() => {
+    if (toasts.length === 0) return
+    const t = setTimeout(() => setToasts((prev) => prev.slice(1)), 3200)
+    return () => clearTimeout(t)
+  }, [toasts])
 
   useEffect(() => {
     return () => {
@@ -237,6 +346,13 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   }
 
   // IN_PROGRESS — render the question
+  // Chaos: an attack is "live" only while its window is open, so drive the
+  // overlays off the server clock rather than off arrival time.
+  const live = activeEffects(chaos?.effects, chaosNow)
+  const frozen = live.some((e) => e.type === 'freeze' || e.type === 'chaos-storm')
+  const eliminated =
+    chaos?.fiftyFifty?.questionIndex === questionIndex ? chaos.fiftyFifty.eliminated : []
+
   const totalSec = remainingMs !== null ? Math.max(0, Math.ceil(remainingMs / 1000)) : 0
   const mm = Math.floor(totalSec / 60).toString().padStart(2, '0')
   const ss = (totalSec % 60).toString().padStart(2, '0')
@@ -245,6 +361,27 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white p-4 sm:p-6 text-gray-900">
+      {live.map((e) =>
+        e.type === 'ink-splat' ? <InkSplatOverlay key={e.id} effect={e} now={chaosNow} /> :
+        e.type === 'blackout' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} /> :
+        e.type === 'chaos-storm' ? <StormOverlay key={e.id} effect={e} now={chaosNow} /> :
+        e.type === 'freeze' ? <FrostOverlay key={e.id} effect={e} now={chaosNow} /> :
+        e.type === 'fog' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} intensity={0.35} /> :
+        e.type === 'time-warp' ? <TimeWarpOverlay key={e.id} effect={e} now={chaosNow} /> :
+        null
+      )}
+      <ChaosToasts toasts={toasts} />
+      {chaos && (
+        <PowerUpBar
+          inventory={chaos.inventory.map((i) => i.id)}
+          scopes={chaos.inventory.map((i) => i.scope)}
+          shield={chaos.shield}
+          reflect={chaos.reflect}
+          doubleNext={chaos.doubleNext}
+          disabled={firing || expired || frozen}
+          onUse={firePowerUp}
+        />
+      )}
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <div className="text-sm text-gray-600">
@@ -298,10 +435,13 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
                 } else if (isSelected) {
                   btnClass = 'border-indigo-500 bg-indigo-50'
                 }
+                // 50/50 struck this option out for this question only.
+                const struck = eliminated.includes(i)
+                if (struck && !feedback) btnClass = 'border-gray-200 bg-gray-100 opacity-40 line-through'
                 return (
                   <button
                     key={i}
-                    disabled={submitting || !!feedback || expired}
+                    disabled={submitting || !!feedback || expired || frozen || struck}
                     onClick={() => submitAnswer(i)}
                     className={`w-full text-left rounded-lg border-2 px-4 py-3 transition-colors ${btnClass} disabled:cursor-not-allowed`}
                   >

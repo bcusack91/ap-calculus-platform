@@ -67,6 +67,9 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
   const data: Record<string, unknown> = {}
   if (typeof body.name === 'string') data.name = body.name.trim() || lobby.name
   if (typeof body.gameMode === 'string') data.gameMode = body.gameMode
+  if (body.chaosIntensity === 'full' || body.chaosIntensity === 'gentle') {
+    data.chaosIntensity = body.chaosIntensity
+  }
   if (typeof body.numTeams === 'number') {
     data.numTeams = Math.max(2, Math.min(8, Math.floor(body.numTeams)))
   }

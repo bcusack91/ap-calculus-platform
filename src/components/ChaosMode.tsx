@@ -88,6 +88,7 @@ export function PowerUpBar({
   doubleNext,
   disabled,
   onUse,
+  scopes,
 }: {
   inventory: PowerUpId[];
   shield?: boolean;
@@ -95,6 +96,14 @@ export function PowerUpBar({
   doubleNext?: boolean;
   disabled?: boolean;
   onUse: (id: PowerUpId) => void;
+  /**
+   * Optional, parallel to `inventory`. Class lobbies drop two blast radii —
+   * a shell that hits one opponent and a rare lightning that hits a whole team
+   * — and the holder has to be able to tell them apart BEFORE firing, or the
+   * rare one stops feeling rare. 1v1 has only ever had one radius, so it omits
+   * this and nothing changes.
+   */
+  scopes?: Array<'single' | 'team'>;
 }) {
   if (inventory.length === 0 && !shield && !reflect && !doubleNext) return null;
   const armed = shield || reflect || doubleNext;
@@ -124,16 +133,31 @@ export function PowerUpBar({
           const cls = def.super
             ? 'w-11 h-11 rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-600 border-2 border-fuchsia-300 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed chaos-super-glow motion-reduce:animate-none'
             : 'w-11 h-11 rounded-full bg-gradient-to-br from-accent-light to-blue-100 dark:from-accent-light/50 dark:to-blue-900/50 border-2 border-accent-muted dark:border-accent-hover text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed';
+          const teamWide = scopes?.[i] === 'team';
           return (
-            <button
-              key={`${id}-${i}`}
-              onClick={() => onUse(id)}
-              disabled={disabled}
-              title={`${def.name}: ${def.description}`}
-              className={cls}
-            >
-              {def.icon}
-            </button>
+            <span key={`${id}-${i}`} className="relative inline-flex">
+              <button
+                onClick={() => onUse(id)}
+                disabled={disabled}
+                title={
+                  teamWide
+                    ? `${def.name} (TEAM-WIDE): hits everyone on the leading team.`
+                    : `${def.name}: ${def.description}`
+                }
+                className={cls}
+              >
+                {def.icon}
+              </button>
+              {teamWide && (
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-1 -right-1 rounded-full bg-amber-400 px-1 text-[10px] font-bold leading-4 text-amber-950 shadow"
+                >
+                  ⚡
+                </span>
+              )}
+              {teamWide && <span className="sr-only">Team-wide</span>}
+            </span>
           );
         })}
       </div>

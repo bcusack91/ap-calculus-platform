@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import {
+  emptyLobbyChaos,
+  rollLobbyDrop,
+  LOBBY_MAX_INVENTORY,
+  type ChaosIntensity,
+  type LobbyPlayerChaos,
+} from '@/lib/lobby-chaos'
+import { pruneEffects } from '@/lib/chaos-powerups'
+import type { Prisma } from '@prisma/client'
 
 interface Ctx { params: Promise<{ id: string }> }
 
 // POST /api/teacher/lobby/[id]/answer
 //   Body: { questionIndex: number, selectedIndex: number }
-//   Returns: { correct: boolean, correctAnswer: number, score, questionsAnswered, questionsCorrect }
+//   Returns: { correct, correctAnswer, score, questionsAnswered, questionsCorrect }
+//   In CHAOS lobbies also returns { droppedPowerUp } and applies Double Points.
 export async function POST(req: NextRequest, { params }: Ctx) {
   const { id } = await params
   const session = await auth()
@@ -30,6 +40,8 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       status: true,
       endsAt: true,
       questionPool: true,
+      gameMode: true,
+      chaosIntensity: true,
     },
   })
   if (!lobby) return NextResponse.json({ error: 'Not found' }, { status: 404 })
@@ -65,8 +77,58 @@ export async function POST(req: NextRequest, { params }: Ctx) {
   }
 
   const correct = selectedIndex === q.correctAnswer
+  const isChaos = lobby.gameMode === 'CHAOS'
+
+  // Chaos bookkeeping happens on this participant's own row, so simultaneous
+  // answers from 30 students never contend on a shared blob.
+  const chaos: LobbyPlayerChaos | null = isChaos
+    ? { ...emptyLobbyChaos(), ...((participant.powerUps as LobbyPlayerChaos | null) ?? {}) }
+    : null
+  if (chaos) chaos.effects = pruneEffects(chaos.effects, Date.now())
+
+  // Double Points (one-shot) and an active Time Warp both double a correct
+  // answer, mirroring the 1v1 rules at lobby scale (+200 instead of +100).
+  let doubled = false
+  if (chaos && correct) {
+    const timeWarpActive = chaos.effects.some(
+      (e) => e.type === 'time-warp' && e.startedAt + e.durationMs > Date.now()
+    )
+    if (chaos.doubleNext || timeWarpActive) {
+      doubled = true
+      chaos.doubleNext = false
+    }
+  }
+
   // +100 for correct, -50 for wrong (discourages random guessing).
-  const scoreDelta = correct ? 100 : -50
+  const scoreDelta = correct ? (doubled ? 200 : 100) : -50
+
+  // Rubber-banding needs the gap to the LEADING team, so tally team totals
+  // before writing. Scores are per-participant, so sum them per team.
+  let droppedPowerUp: string | null = null
+  if (chaos) {
+    const roster = await prisma.teacherLobbyParticipant.findMany({
+      where: { lobbyId: id },
+      select: { team: true, score: true },
+    })
+    const totals = new Map<number, number>()
+    for (const r of roster) {
+      if (r.team === null) continue
+      totals.set(r.team, (totals.get(r.team) ?? 0) + r.score)
+    }
+    const myTeamScore = participant.team === null ? participant.score : (totals.get(participant.team) ?? 0)
+    const leading = Math.max(myTeamScore, ...totals.values())
+    if (chaos.inventory.length < LOBBY_MAX_INVENTORY) {
+      const drop = rollLobbyDrop({
+        pointDeficit: leading - myTeamScore,
+        intensity: (lobby.chaosIntensity as ChaosIntensity) ?? 'gentle',
+      })
+      if (drop) {
+        chaos.inventory.push(drop)
+        droppedPowerUp = drop.id
+      }
+    }
+  }
+
   const updated = await prisma.teacherLobbyParticipant.update({
     where: { id: participant.id },
     data: {
@@ -74,6 +136,7 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       questionsCorrect: correct ? { increment: 1 } : undefined,
       score: { increment: scoreDelta },
       lastQuestionIndex: questionIndex + 1,
+      ...(chaos ? { powerUps: chaos as unknown as Prisma.InputJsonValue } : {}),
     },
   })
 
@@ -84,5 +147,6 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     questionsAnswered: updated.questionsAnswered,
     questionsCorrect: updated.questionsCorrect,
     scoreDelta,
+    ...(isChaos ? { droppedPowerUp, doubled, powerUps: chaos } : {}),
   })
 }

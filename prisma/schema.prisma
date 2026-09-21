@@ -9,54 +9,54 @@ datasource db {
 }
 
 model User {
-  id                     String                        @id @default(cuid())
-  name                   String?
-  email                  String?                       @unique
-  emailVerified          DateTime?
-  image                  String?
-  password               String?
-  role                   UserRole                      @default(FREE)
-  studyContext           String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
-  satTrackOverride       String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
+  id                        String                        @id @default(cuid())
+  name                      String?
+  email                     String?                       @unique
+  emailVerified             DateTime?
+  image                     String?
+  password                  String?
+  role                      UserRole                      @default(FREE)
+  studyContext              String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
+  satTrackOverride          String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
   // Teacher "allow retake now" override for the MCAT diagnostic retake gate.
   // ONE-SHOT semantics: the gate opens while this timestamp is NEWER than the
   // student's latest mcat-full-diagnostic attempt; taking the retake consumes
   // the waiver naturally (the new attempt is then newer than the waiver).
   // Honored in src/app/api/mcat-diagnostic/plan-status/route.ts; set by
   // POST /api/teacher/classrooms/[id]/class-diagnostics/waive-gate.
-  diagnosticGateWaivedAt DateTime?
+  diagnosticGateWaivedAt    DateTime?
   // Anki-style flashcard daily limits (null = code defaults, see
   // src/lib/flashcard-daily-limits.ts: 100 new/day, 200 reviews/day).
   flashcardNewPerDay        Int? // new cards introduced per day (bounds 1-500)
   flashcardMaxReviewsPerDay Int? // max due-card reviews per day (bounds 10-1000)
-  stripeCustomerId       String?                       @unique
-  stripeSubscriptionId   String?                       @unique
-  stripePriceId          String?
-  stripeCurrentPeriodEnd DateTime?
-  avatarData             Json? // Custom avatar configuration
-  birthYear              Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
-  guardianEmail          String? // Optional parent/guardian address for weekly progress emails (opt-out via EmailSubscriber)
-  createdAt              DateTime                      @default(now())
-  updatedAt              DateTime                      @updatedAt
-  schoolId               String?
-  classCode              String?
-  accounts               Account[]
-  diagnosticTests        DiagnosticTest[]
-  flashcardProgress      FlashcardProgress[]
-  flashcardDailyActivity FlashcardDailyActivity[]
-  learningPath           LearningPath?
-  sessions               Session[]
-  topicProgress          TopicProgress[]
-  school                 School?                       @relation(fields: [schoolId], references: [id])
-  dailyStreak            DailyStreak?
-  competitiveProfile     CompetitiveProfile?
-  matchesAsPlayer1       CompetitiveMatch[]            @relation("Player1Matches")
-  matchesAsPlayer2       CompetitiveMatch[]            @relation("Player2Matches")
-  mmrHistory             MMRHistory[]
-  matchmakingEntry       MatchmakingQueue?
-  factoringMetrics       FactoringPerformanceMetrics[]
-  sixSigmaMetrics        SixSigmaMetrics[]
-  learningInsights       LearningInsights[]
+  stripeCustomerId          String?                       @unique
+  stripeSubscriptionId      String?                       @unique
+  stripePriceId             String?
+  stripeCurrentPeriodEnd    DateTime?
+  avatarData                Json? // Custom avatar configuration
+  birthYear                 Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
+  guardianEmail             String? // Optional parent/guardian address for weekly progress emails (opt-out via EmailSubscriber)
+  createdAt                 DateTime                      @default(now())
+  updatedAt                 DateTime                      @updatedAt
+  schoolId                  String?
+  classCode                 String?
+  accounts                  Account[]
+  diagnosticTests           DiagnosticTest[]
+  flashcardProgress         FlashcardProgress[]
+  flashcardDailyActivity    FlashcardDailyActivity[]
+  learningPath              LearningPath?
+  sessions                  Session[]
+  topicProgress             TopicProgress[]
+  school                    School?                       @relation(fields: [schoolId], references: [id])
+  dailyStreak               DailyStreak?
+  competitiveProfile        CompetitiveProfile?
+  matchesAsPlayer1          CompetitiveMatch[]            @relation("Player1Matches")
+  matchesAsPlayer2          CompetitiveMatch[]            @relation("Player2Matches")
+  mmrHistory                MMRHistory[]
+  matchmakingEntry          MatchmakingQueue?
+  factoringMetrics          FactoringPerformanceMetrics[]
+  sixSigmaMetrics           SixSigmaMetrics[]
+  learningInsights          LearningInsights[]
 
   // Teacher dashboard relations
   ownedClassrooms            Classroom[]                @relation("ClassroomTeacher")
@@ -832,6 +832,11 @@ model TeacherLobby {
   endsAt         DateTime?
   questionPool   Json?
   gameMode       String             @default("competitive")
+  // gameMode "CHAOS" turns on power-ups (src/lib/lobby-chaos.ts). Intensity
+  // defaults to "gentle", which bans the shake/flash/blackout effects: a class
+  // of 30 can include photosensitive or vestibular-sensitive students, so a
+  // teacher opts into "full" knowingly rather than discovering it mid-lesson.
+  chaosIntensity String             @default("gentle")
   numTeams       Int                @default(2)
   // Student-hosted open lobbies run on this same engine: the host is a student
   // (teacherId holds their id), plays as a participant, and the lobby can be
@@ -870,6 +875,11 @@ model TeacherLobbyParticipant {
   questionsAnswered Int      @default(0)
   questionsCorrect  Int      @default(0)
   lastQuestionIndex Int      @default(0)
+  // LobbyPlayerChaos: this student's power-up inventory and the attack effects
+  // currently landed on them. Per-participant rather than one lobby-level blob
+  // so 30 students answering at once each write their OWN row instead of
+  // queueing behind a single row lock.
+  powerUps          Json?
 
   lobby TeacherLobby @relation(fields: [lobbyId], references: [id], onDelete: Cascade)
   user  User         @relation("TeacherLobbyParticipantUser", fields: [userId], references: [id], onDelete: Cascade)
@@ -1173,8 +1183,8 @@ model ClassroomGroup {
   name        String
   createdAt   DateTime @default(now())
 
-  classroom Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  members   ClassroomGroupMember[]
+  classroom   Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  members     ClassroomGroupMember[]
   // Assignments targeted at this group (Assignment.groupId). SetNull on the
   // assignment side: deleting a group widens its assignments to the whole
   // class rather than orphaning or destroying them.

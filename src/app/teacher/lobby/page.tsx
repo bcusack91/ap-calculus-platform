@@ -24,7 +24,7 @@ export default function TeacherLobbiesPage() {
   const [lobbies, setLobbies] = useState<LobbySummary[]>([])
   const [loading, setLoading] = useState(true)
   const [showCreate, setShowCreate] = useState(false)
-  const [newLobby, setNewLobby] = useState({ name: '', numTeams: 2 })
+  const [newLobby, setNewLobby] = useState({ name: '', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
   const [creating, setCreating] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -64,12 +64,14 @@ export default function TeacherLobbiesPage() {
         body: JSON.stringify({
           name: newLobby.name || 'Class Match',
           numTeams: newLobby.numTeams,
+          gameMode: newLobby.gameMode,
+          chaosIntensity: newLobby.chaosIntensity,
         }),
       })
       const json = await res.json()
       if (!res.ok) throw new Error(json.error || 'Failed to create lobby')
       setShowCreate(false)
-      setNewLobby({ name: '', numTeams: 2 })
+      setNewLobby({ name: '', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
       router.push(`/teacher/lobby/${json.lobby.id}`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed')
@@ -126,6 +128,67 @@ export default function TeacherLobbiesPage() {
                 />
               </label>
             </div>
+            <fieldset className="mt-4">
+              <legend className="text-sm text-gray-600 mb-1">Game mode</legend>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { key: 'competitive', icon: '🏆', title: 'Competitive', desc: 'Straight scoring — highest team total wins.' },
+                  { key: 'CHAOS', icon: '🎲', title: 'Chaos Mode', desc: 'Power-ups drop as students answer. Teams that fall behind draw more often.' },
+                ].map(m => (
+                  <button
+                    key={m.key}
+                    type="button"
+                    onClick={() => setNewLobby({ ...newLobby, gameMode: m.key })}
+                    aria-pressed={newLobby.gameMode === m.key}
+                    className={`rounded-lg border p-3 text-left transition-colors ${
+                      newLobby.gameMode === m.key
+                        ? 'border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600'
+                        : 'border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    <div className="font-medium text-sm text-gray-900">{m.icon} {m.title}</div>
+                    <div className="mt-0.5 text-xs text-gray-600">{m.desc}</div>
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+            {newLobby.gameMode === 'CHAOS' && (
+              <fieldset className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3">
+                <legend className="px-1 text-sm font-medium text-amber-900">Effect intensity</legend>
+                <div className="space-y-2">
+                  <label className="flex gap-2 text-sm text-amber-900">
+                    <input
+                      type="radio"
+                      name="chaosIntensity"
+                      className="mt-1"
+                      checked={newLobby.chaosIntensity === 'gentle'}
+                      onChange={() => setNewLobby({ ...newLobby, chaosIntensity: 'gentle' })}
+                    />
+                    <span>
+                      <strong>Gentle</strong> — blur, sliding answers and a frost freeze.
+                      No screen shake, flashing or blackout.
+                    </span>
+                  </label>
+                  <label className="flex gap-2 text-sm text-amber-900">
+                    <input
+                      type="radio"
+                      name="chaosIntensity"
+                      className="mt-1"
+                      checked={newLobby.chaosIntensity === 'full'}
+                      onChange={() => setNewLobby({ ...newLobby, chaosIntensity: 'full' })}
+                    />
+                    <span>
+                      <strong>Full chaos</strong> — adds screen shake, blackout, flip and the
+                      lightning storm.
+                    </span>
+                  </label>
+                </div>
+                <p className="mt-2 text-xs text-amber-800">
+                  Full chaos shakes and darkens the screen. If any student has photosensitivity
+                  or gets motion sick, stay on gentle.
+                </p>
+              </fieldset>
+            )}
             <p className="mt-3 text-xs text-gray-500">You&apos;ll pick the course, topics, and timer on the next screen.</p>
             <div className="mt-4 flex gap-2">
               <button

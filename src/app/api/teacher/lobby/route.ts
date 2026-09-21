@@ -28,7 +28,11 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json().catch(() => ({}))
   const name = (typeof body?.name === 'string' && body.name.trim()) || 'Class Match'
-  const gameMode = (typeof body?.gameMode === 'string' && body.gameMode) || 'competitive'
+  const gameMode = body?.gameMode === 'CHAOS' ? 'CHAOS' : 'competitive'
+  // Gentle is the default on purpose: it bans the shake/flash/blackout effects,
+  // which are a real photosensitivity and vestibular risk in a class of 30. A
+  // teacher opts into full chaos knowingly rather than discovering it mid-lesson.
+  const chaosIntensity = body?.chaosIntensity === 'full' ? 'full' : 'gentle'
   const numTeams = Math.max(2, Math.min(8, Number(body?.numTeams) || 2))
   const classroomId = typeof body?.classroomId === 'string' && body.classroomId ? body.classroomId : null
   const courseSlug = typeof body?.courseSlug === 'string' && body.courseSlug ? body.courseSlug : null
@@ -62,6 +66,7 @@ export async function POST(req: NextRequest) {
       topicSlugs,
       durationSec,
       gameMode,
+      chaosIntensity,
       numTeams,
       status: 'OPEN',
     },

@@ -22,6 +22,7 @@ interface LobbyDetail {
   name: string
   topicSlug: string | null
   gameMode: string
+  chaosIntensity?: string
   numTeams: number
   status: 'OPEN' | 'IN_PROGRESS' | 'CLOSED'
   createdAt: string
@@ -301,6 +302,14 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
               {lobby.courseSlug ? ` · ${lobby.courseSlug}` : ''}
               {lobby.topicSlugs?.length ? ` · ${lobby.topicSlugs.length} topics` : ''}
             </p>
+            {lobby.gameMode === 'CHAOS' && (
+              <p className="mt-1 text-sm font-medium text-fuchsia-700">
+                🎲 Chaos Mode ·{' '}
+                {lobby.chaosIntensity === 'full'
+                  ? 'Full effects (screen shake, blackout, flip)'
+                  : 'Gentle effects (no shake, flash or blackout)'}
+              </p>
+            )}
           </div>
           <span
             className={
