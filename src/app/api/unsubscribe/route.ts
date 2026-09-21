@@ -19,6 +19,20 @@ ${body}
 }
 
 /**
+ * Most account holders have no EmailSubscriber row, so an update alone would
+ * silently do nothing for them. Upsert so every unsubscribe is recorded; the
+ * broadcast scripts and digests read this table as the blocklist.
+ */
+async function recordUnsubscribe(email: string) {
+  const key = email.toLowerCase()
+  await prisma.emailSubscriber.upsert({
+    where: { email: key },
+    update: { unsubscribed: true },
+    create: { email: key, source: 'unsubscribe', unsubscribed: true },
+  })
+}
+
+/**
  * GET /api/unsubscribe?token=<base64url(email)>.<hmac-sha256-signature>
  * Marks the subscriber as unsubscribed. The token is signed (HMAC-SHA256 with
  * AUTH_SECRET) so only links we generated can unsubscribe an address.
@@ -47,10 +61,7 @@ export async function GET(request: Request) {
   const email = verified.email
 
   try {
-    await prisma.emailSubscriber.updateMany({
-      where: { email: email.toLowerCase() },
-      data: { unsubscribed: true },
-    })
+    await recordUnsubscribe(email)
 
     // Return a simple HTML page so the user sees confirmation
     return new NextResponse(
@@ -68,6 +79,26 @@ a{color:#7c3aed;text-decoration:none;font-weight:600}</style></head>
     )
   } catch (error) {
     console.error('Unsubscribe error:', error)
+    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
+  }
+}
+
+/**
+ * POST /api/unsubscribe?token=...  (RFC 8058 one-click unsubscribe)
+ * Mail clients such as Gmail call this directly from their own "Unsubscribe"
+ * button, advertised by the List-Unsubscribe-Post header. No page is shown,
+ * so it just records the unsubscribe and returns 200.
+ */
+export async function POST(request: Request) {
+  const token = new URL(request.url).searchParams.get('token')
+  if (!token) return NextResponse.json({ error: 'Missing token' }, { status: 400 })
+  const verified = verifyUnsubscribeToken(token)
+  if (!verified.ok) return NextResponse.json({ error: 'Invalid token' }, { status: 400 })
+  try {
+    await recordUnsubscribe(verified.email)
+    return NextResponse.json({ ok: true })
+  } catch (error) {
+    console.error('One-click unsubscribe error:', error)
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
   }
 }

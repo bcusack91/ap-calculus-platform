@@ -447,6 +447,18 @@ const BTS_SECTION_ORDER: Record<BackToSchoolTrack, BtsSection['key'][]> = {
   college: ['college', 'ap', 'sat', 'hs-math', 'teacher'],
 }
 
+const BTS_CAMPAIGN = 'back-to-school-2026'
+
+/** Tag a site link so visits from this email show up in Google/Vercel Analytics. */
+function btsTrack(url: string, content: string): string {
+  const u = new URL(url)
+  u.searchParams.set('utm_source', 'email')
+  u.searchParams.set('utm_medium', 'email')
+  u.searchParams.set('utm_campaign', BTS_CAMPAIGN)
+  u.searchParams.set('utm_content', content)
+  return u.toString()
+}
+
 /** "Last spring" / "This summer" / "Recently", from when the account was made. */
 function btsWhen(signedUpAt: Date, now = new Date()): string {
   const juneFirst = new Date(now.getFullYear(), 5, 1)
@@ -473,9 +485,9 @@ function btsOpening(ctx: BackToSchoolContext | undefined): { html: string; cours
   }
   const hub = EXAM_HUB[ctx.track]
   const courseLink = hub
-    ? { label: `Pick up ${hub.label} where you left off`, url: `${APP_URL}${hub.path}` }
+    ? { label: `Pick up ${hub.label} where you left off`, url: btsTrack(`${APP_URL}${hub.path}`, 'course-link') }
     : ctx.courseSlug && course
-      ? { label: `Pick up ${course} where you left off`, url: `${APP_URL}/courses/${ctx.courseSlug}` }
+      ? { label: `Pick up ${course} where you left off`, url: btsTrack(`${APP_URL}/courses/${ctx.courseSlug}`, 'course-link') }
       : null
 
   switch (ctx.track) {
@@ -524,7 +536,8 @@ export function buildBackToSchoolEmail(email: string, name: string | null, conte
   const unsubscribeUrl = unsubscribeToken
     ? `${APP_URL}/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`
     : `${APP_URL}/settings`
-  const coursesUrl = `${APP_URL}/courses`
+  // /courses 308-redirects to /topics; link the destination directly.
+  const coursesUrl = btsTrack(`${APP_URL}/topics`, 'pick-your-course')
   const opening = btsOpening(context)
   const sections = BTS_SECTION_ORDER[context?.track ?? 'none'].map((k) => BTS_SECTIONS.find((s) => s.key === k)!)
   const intro =
@@ -551,6 +564,15 @@ export function buildBackToSchoolEmail(email: string, name: string | null, conte
     from: FROM_ADDRESS,
     to: email,
     subject: btsSubject(context?.track),
+    // RFC 8058 one-click unsubscribe: Gmail/Yahoo show an "Unsubscribe" button
+    // beside the sender and POST to the link, which keeps people from reaching
+    // for "Report spam" instead.
+    headers: unsubscribeToken
+      ? {
+          'List-Unsubscribe': `<${unsubscribeUrl}>`,
+          'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        }
+      : undefined,
     text: `${greeting}
 
 ${btsPlain(opening.html)}${opening.courseLink ? `\n${opening.courseLink.label}: ${opening.courseLink.url}` : ''}

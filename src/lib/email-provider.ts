@@ -9,6 +9,7 @@ type EmailMessage = {
   text: string
   html: string
   bcc?: EmailRecipient
+  headers?: Record<string, string>
 }
 
 function asArray(value: EmailRecipient | undefined): string[] | undefined {
@@ -41,6 +42,7 @@ export async function sendEmail(message: EmailMessage) {
         subject: message.subject,
         text: message.text,
         html: message.html,
+        headers: message.headers,
       }),
     })
   } catch (err) {
