@@ -53,8 +53,10 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
 // Mutating endpoints that are intentionally called without a browser Origin
 // (webhooks, cron) and authenticate via signature / Bearer secret instead of
 // session cookies — so they are inherently immune to CSRF and exempt from the
-// Origin check below.
-const CSRF_EXEMPT_PREFIXES = ['/api/stripe/webhook', '/api/cron/']
+// Origin check below. /api/unsubscribe is authorized by the HMAC token in its
+// URL (no cookies), and mail providers POST to it server-side for RFC 8058
+// one-click unsubscribe, with no Origin header.
+const CSRF_EXEMPT_PREFIXES = ['/api/stripe/webhook', '/api/cron/', '/api/unsubscribe']
 
 function getClientIp(request: NextRequest): string {
   return (

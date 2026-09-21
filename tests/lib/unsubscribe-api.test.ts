@@ -84,3 +84,14 @@ describe('POST /api/unsubscribe (one-click)', () => {
     expect(upsert).not.toHaveBeenCalled()
   })
 })
+
+describe('one-click unsubscribe reaches the route', () => {
+  it('is exempt from the middleware Origin check', async () => {
+    // Gmail and Yahoo POST from their servers with no Origin header; without
+    // the exemption the middleware answers 403 and the unsubscribe is lost.
+    const fs = await import('fs')
+    const middleware = fs.readFileSync('src/middleware.ts', 'utf8')
+    const exempt = middleware.match(/CSRF_EXEMPT_PREFIXES = \[([^\]]*)\]/)?.[1] ?? ''
+    expect(exempt).toContain("'/api/unsubscribe'")
+  })
+})
