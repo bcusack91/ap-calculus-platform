@@ -10,6 +10,7 @@ import {
   type DiagnosticDataTable,
   type DiagnosticFigure,
   type DiagnosticPassage,
+  FigureStudy,
 } from '@/components/MCATDiagnosticVisuals'
 
 function renderLatex(text: string): string {
@@ -30,7 +31,7 @@ export interface ReviewQuestion {
    */
   passage?: DiagnosticPassage | string
   /** MCAT figure-analysis questions carry the chart/table they ask about. */
-  visual?: { dataTable?: DiagnosticDataTable; figure?: DiagnosticFigure }
+  visual?: { study?: { title: string; body: string }; dataTable?: DiagnosticDataTable; figure?: DiagnosticFigure }
   /** SAT grid-in (typed numeric answer) key; such questions have no options. */
   gridIn?: { correctAnswer: number; acceptableAnswers?: number[] }
 }
@@ -218,7 +219,8 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
                     )}
                     {q.visual && (q.visual.figure || q.visual.dataTable) && (
                       <div className="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3 dark:border-emerald-800 dark:bg-emerald-900/20">
-                        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Figure</p>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Study</p>
+                        {q.visual.study && <FigureStudy study={q.visual.study} />}
                         <DataVisual data={q.visual} />
                       </div>
                     )}

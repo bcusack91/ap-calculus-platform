@@ -17,7 +17,7 @@ import { MathText } from '@/components/MathText'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
-import { DataVisual, DiagnosticPassageContent } from '@/components/MCATDiagnosticVisuals'
+import { DataVisual, DiagnosticPassageContent, FigureStudy } from '@/components/MCATDiagnosticVisuals'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 
 /**
@@ -570,7 +570,8 @@ export default function MCATDiagnosticPage() {
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
               {q.promptType === 'figure' && q.visual && (
                 <div className="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-800 dark:bg-emerald-900/20">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Figure Analysis</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Study</p>
+                  {q.visual.study && <FigureStudy study={q.visual.study} />}
                   <DataVisual data={q.visual} />
                 </div>
               )}

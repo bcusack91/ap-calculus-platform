@@ -16,6 +16,8 @@ type Series = { label: string; yValues: number[] }
 
 export interface DiagnosticDataTable {
   title: string
+  /** Header for the x-level column ("Group", "Time point"); defaults to "Condition". */
+  pointLabel?: string
   xLabel: string
   yLabel: string
   xValues: number[]
@@ -145,7 +147,7 @@ export function DataVisual({
               <thead>
                 <tr>
                   <th className="rounded-tl-lg border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
-                    Condition
+                    {table.pointLabel ?? 'Condition'}
                   </th>
                   <th className="border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
                     {table.xLabel} ({table.xUnit})
@@ -277,6 +279,20 @@ export function DataVisual({
           </div>
         </div>
       )}
+    </div>
+  )
+}
+
+/**
+ * The study a generated figure comes from. The real MCAT never shows a figure
+ * on its own — it always sits in a passage saying what was done — so a figure
+ * item leads with this before the data.
+ */
+export function FigureStudy({ study }: { study: { title: string; body: string } }) {
+  return (
+    <div className="mb-4">
+      <h3 className="text-base font-bold text-gray-900 dark:text-white">{study.title}</h3>
+      <p className="mt-1 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{study.body}</p>
     </div>
   )
 }
