@@ -2,12 +2,16 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import TrackedLink from '@/components/TrackedLink'
 import { topicHubs, topicHubBySlug } from '@/data/topic-hubs'
+import HubTopics from '@/components/HubTopics'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
 import { notFound } from 'next/navigation'
 
 interface HubPageProps {
   params: Promise<{ slug: string }>
 }
+
+// ISR: the lesson list below is read from the database.
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   return topicHubs.map((hub) => ({ slug: hub.slug }))
@@ -84,6 +88,8 @@ export default async function TopicHubPage({ params }: HubPageProps) {
             ))}
           </div>
         </section>
+
+        <HubTopics hub={hub} />
 
         {similar.length > 0 && (
           <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900">
