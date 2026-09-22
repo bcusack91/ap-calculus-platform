@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import DiagnosticAbout from '@/components/DiagnosticAbout'
 
 const canonical = 'https://www.studymondo.com/ap-us-history-diagnostic'
+
+// ISR: the About section below reads course units from the database.
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'AP US History Diagnostic Test | Study Mondo',
@@ -23,6 +27,7 @@ export default function APUSHistoryDiagnosticLayout({ children }: { children: Re
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
       {children}
+      <DiagnosticAbout slug="ap-us-history-diagnostic" />
     </>
   )
 }

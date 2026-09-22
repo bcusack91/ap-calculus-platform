@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import DiagnosticAbout from '@/components/DiagnosticAbout'
 
 const canonical = 'https://www.studymondo.com/ap-enviro-diagnostic'
+
+// ISR: the About section below reads course units from the database.
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'AP Environmental Science Diagnostic Test | Study Mondo',
@@ -23,6 +27,7 @@ export default function APEnviroDiagnosticLayout({ children }: { children: React
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
       {children}
+      <DiagnosticAbout slug="ap-enviro-diagnostic" />
     </>
   )
 }

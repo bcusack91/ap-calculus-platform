@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import { toolMetadata } from '@/lib/tool-metadata'
+import DiagnosticAbout from '@/components/DiagnosticAbout'
+
+// ISR: the About section below reads course units from the database.
+export const revalidate = 3600
 
 export const metadata: Metadata = toolMetadata({
   title: "Grade 8 Math Diagnostic Test | Study Mondo",
@@ -21,6 +25,7 @@ export default function Grade8MathDiagnosticLayout({ children }: { children: Rea
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
       {children}
+      <DiagnosticAbout slug="grade8-math-diagnostic" />
     </>
   )
 }
