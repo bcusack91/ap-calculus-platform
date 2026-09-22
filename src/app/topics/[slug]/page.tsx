@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
 import { EmailCapture } from '@/components/email-capture'
 import { generateTopicFaqs } from '@/lib/topic-faqs'
+import { isDuplicateTopic } from '@/lib/duplicate-topics'
 import { faqJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { MarkdownCallout } from '@/components/MarkdownCallout'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
@@ -82,13 +83,17 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
     topic._count.exampleProblems === 0 &&
     topic._count.subtopics === 0
 
+  // A concept taught twice in one course: keep the fuller lesson in the index
+  // so the two pages stop competing for the same query.
+  const isDuplicate = isDuplicateTopic(topic.slug)
+
   return {
     title: `${topic.title} | Study Mondo`,
     description: topic.description,
     alternates: {
       canonical: canonicalUrl,
     },
-    ...(isThin ? { robots: { index: false, follow: true } } : {}),
+    ...(isThin || isDuplicate ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: topic.title,
       description: topic.description,

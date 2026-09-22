@@ -8,6 +8,7 @@ import ClientLessonRenderer from '@/components/ClientLessonRenderer'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
+import { isDuplicateTopic } from '@/lib/duplicate-topics'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
 import { getBuildTimeTopicSlugs } from '@/lib/static-topic-params'
@@ -46,8 +47,10 @@ export async function generateMetadata(props: InteractivePageProps): Promise<Met
   const hasLesson = hasInteractiveLesson(topic.slug)
   const hasDynamic = !hasLesson && !!topic.textContent?.trim() && !isPlaceholderContent(topic.textContent)
 
-  // Noindex pages with no interactive content
-  if (!hasLesson && !hasDynamic) {
+  // Noindex pages with no interactive content, and the weaker twin of a
+  // concept taught twice in one course (its lesson competes with the fuller
+  // one exactly as the topic pages do).
+  if ((!hasLesson && !hasDynamic) || isDuplicateTopic(topic.slug)) {
     return {
       title: `${topic.title} - Interactive Lesson | Study Mondo`,
       robots: { index: false, follow: false },

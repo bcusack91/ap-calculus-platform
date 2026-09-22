@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { isLegacyTopicSlug } from '@/lib/legacy-topic-redirects'
 import { prisma } from '@/lib/prisma'
+import { isDuplicateTopic } from '@/lib/duplicate-topics'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import fs from 'fs'
 import path from 'path'
@@ -347,6 +348,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Redirected legacy slugs still exist as Topic rows; never submit a URL
     // that answers 308 (Search Console: "Page with redirect").
     .filter((topic) => !isLegacyTopicSlug(topic.slug))
+    // The weaker twin of a duplicated concept is noindexed by its page.
+    .filter((topic) => !isDuplicateTopic(topic.slug))
     // Exclude genuinely thin topics — these are noindexed in the page metadata,
     // so submitting them would create "submitted but excluded by noindex"
     // warnings. Keep this rule in sync with generateMetadata in
@@ -399,6 +402,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // that actually resolve to a registered, indexable interactive lesson.
   const interactivePages: MetadataRoute.Sitemap = topics
     .filter((topic) => !isLegacyTopicSlug(topic.slug))
+    .filter((topic) => !isDuplicateTopic(topic.slug))
     .filter((topic) => hasInteractiveLesson(topic.slug))
     .map((topic) => ({
       url: `${baseUrl}/topics/${topic.slug}/interactive`,
