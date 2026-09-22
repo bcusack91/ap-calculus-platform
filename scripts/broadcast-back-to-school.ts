@@ -10,7 +10,8 @@
  *   reports/back-to-school-sent.log
  * and reruns skip anything already there, so day 2 is the same command
  * (and a crash mid-run loses nothing). `--limit` caps sends per run, which
- * is how the list is split across days to stay well under Gmail's daily cap.
+ * is how the list is split across days to stay well under Gmail's cap, which
+ * is a ROLLING 24 hours: start each batch at least 24h after the last one ended.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -92,6 +93,14 @@ async function main() {
           ok = true
         } catch (err) {
           const msg = err instanceof Error ? err.message : String(err)
+          // Gmail's cap is a rolling 24 hours, not a calendar day. Once it trips,
+          // every further attempt fails too, so stop and resume the next day.
+          if (/5\.4\.5|sending limit exceeded/i.test(msg)) {
+            console.error(`Gmail sending limit reached: stopping. Rerun 24h after the previous batch finished.`)
+            transporter.close()
+            console.log(`\nStopped. Sent ${sent}. Remaining: ${remaining.length - sent}`)
+            return
+          }
           const lockout = /Too many login attempts|454-?4\.7\.0/i.test(msg)
           const transient = /rate|timeout|421|451|454|throttl|ECONNRESET|ETIMEDOUT/i.test(msg)
           if (attempt <= MAX_RETRIES && (lockout || transient)) {
