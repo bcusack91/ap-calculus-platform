@@ -1,0 +1,200 @@
+[
+ {
+  "front": "A diagnosis of schizophrenia requires continuous signs of disturbance persisting for at least {{c1::six months}}, including at least one month of active-phase symptoms.",
+  "fp": "abcdc76063a4",
+  "yield": "MEDIUM",
+  "why": "Duration criterion; schizophrenia core but 6-month cutoff is DSM detail a passage would supply"
+ },
+ {
+  "front": "A major depressive episode requires symptoms to be present nearly every day for at least {{c1::two weeks}}.",
+  "fp": "bcf8e9dc7763",
+  "yield": "MEDIUM",
+  "why": "MDE two-week criterion; commonly reviewed, secondary to core symptom definition"
+ },
+ {
+  "front": "Anorexia nervosa requires significantly {{c1::low body weight}}, whereas people with bulimia nervosa are typically of normal weight or overweight.",
+  "fp": "298fbfbe4c27",
+  "yield": "MEDIUM",
+  "why": "Eating disorders not on 7A outline but anorexia/bulimia discriminator is a plausible passage step"
+ },
+ {
+  "front": "Both PTSD and chronic major depression are associated with reduced volume of the {{c1::hippocampus}}.",
+  "fp": "1fc2636d1144",
+  "yield": "MEDIUM",
+  "why": "Bio basis of depression/PTSD; hippocampal atrophy is a plausible stress-cortisol passage link"
+ },
+ {
+  "front": "Cluster {{c1::B}} personality disorders are described as dramatic, emotional, or erratic, and include antisocial, borderline, histrionic, and narcissistic personality disorders.",
+  "fp": "5c7c9a7ba971",
+  "yield": "HIGH",
+  "why": "Personality disorder clusters are AAMC core; Cluster B exemplars are a classic discrete"
+ },
+ {
+  "front": "Generalized anxiety disorder involves excessive, difficult-to-control worry about multiple areas of life occurring more days than not for at least {{c1::six months}}.",
+  "fp": "452ad4ce8978",
+  "yield": "MEDIUM",
+  "why": "GAD defining feature; 6-month duration is secondary detail"
+ },
+ {
+  "front": "How does a manic episode differ from a hypomanic episode?",
+  "fp": "2de75cb2998c",
+  "yield": "MEDIUM",
+  "why": "Supports bipolar I vs II distinction; severity/impairment line is the second step"
+ },
+ {
+  "front": "How does OCD differ from obsessive-compulsive personality disorder (OCPD)?",
+  "fp": "f6bacd7d88fd",
+  "yield": "MEDIUM",
+  "why": "OCD vs OCPD ego-dystonic/ego-syntonic distinction is a standard prep contrast"
+ },
+ {
+  "front": "How is schizoaffective disorder distinguished from schizophrenia with mood symptoms?",
+  "fp": "058073c696da",
+  "yield": "LOW",
+  "why": "Schizoaffective two-week-without-mood criterion is DSM minutiae beyond the outline"
+ },
+ {
+  "front": "In OCD, what is the difference between obsessions and compulsions?",
+  "fp": "e92793a4737f",
+  "yield": "HIGH",
+  "why": "Obsession vs compulsion with negative-reinforcement maintenance is core OCD content"
+ },
+ {
+  "front": "Name the major dissociative disorders and their defining features.",
+  "fp": "b38f2e7c294e",
+  "yield": "HIGH",
+  "why": "Dissociative disorders are explicitly on the 7A outline; defining features tested"
+ },
+ {
+  "front": "Negative and cognitive symptoms of schizophrenia are associated with reduced dopamine activity in the {{c1::mesocortical}} pathway to the prefrontal cortex.",
+  "fp": "daf009c5608e",
+  "yield": "MEDIUM",
+  "why": "Mesocortical hypoactivity is supporting detail on the dopamine hypothesis"
+ },
+ {
+  "front": "PTSD is diagnosed only when symptoms persist for more than {{c1::one month}} after trauma; a similar shorter-lasting presentation is called acute stress disorder.",
+  "fp": "ccc353424209",
+  "yield": "MEDIUM",
+  "why": "PTSD vs acute stress disorder timing; plausible second step"
+ },
+ {
+  "front": "SSRIs treat depression and anxiety by blocking presynaptic reuptake of {{c1::serotonin}}, increasing its availability in the synaptic cleft.",
+  "fp": "7c04ec5977d6",
+  "yield": "HIGH",
+  "why": "SSRI mechanism is the standard bio-basis-of-depression discrete"
+ },
+ {
+  "front": "Systematic desensitization treats phobias by pairing relaxation with gradual exposure to feared stimuli, a counterconditioning technique grounded in {{c1::classical conditioning}}.",
+  "fp": "b188057941a3",
+  "yield": "MEDIUM",
+  "why": "Treatment-to-learning crossover; classical conditioning basis of desensitization"
+ },
+ {
+  "front": "The dopamine hypothesis attributes the positive symptoms of schizophrenia to excess dopamine activity in the {{c1::mesolimbic}} pathway.",
+  "fp": "4f4f10b69ee2",
+  "yield": "HIGH",
+  "why": "Dopamine hypothesis of schizophrenia is named AAMC content"
+ },
+ {
+  "front": "Typical antipsychotic drugs reduce positive symptoms of schizophrenia primarily by blocking {{c1::D2 dopamine}} receptors.",
+  "fp": "4da25f5bd2d7",
+  "yield": "MEDIUM",
+  "why": "D2 blockade supports the dopamine hypothesis card; second-tier evidence"
+ },
+ {
+  "front": "What are the four symptom clusters of PTSD?",
+  "fp": "0b19a92300d1",
+  "yield": "MEDIUM",
+  "why": "PTSD defining features; four-cluster list is DSM structure"
+ },
+ {
+  "front": "What are the positive symptoms of schizophrenia?",
+  "fp": "931dcfdab81e",
+  "yield": "HIGH",
+  "why": "Positive vs negative symptoms of schizophrenia is a high-frequency distinction"
+ },
+ {
+  "front": "What are the two core diagnostic domains of autism spectrum disorder?",
+  "fp": "3e4db624e3ae",
+  "yield": "LOW",
+  "why": "Autism not among the 7A disorder categories; outside section scope"
+ },
+ {
+  "front": "What are the two core symptom domains of ADHD, and when must symptoms appear?",
+  "fp": "e6dffd8d9d0d",
+  "yield": "LOW",
+  "why": "ADHD not on the 7A outline; age-12 onset rule is DSM trivia"
+ },
+ {
+  "front": "What are the two core symptoms of major depressive disorder, at least one of which must be present?",
+  "fp": "b0ea82dbaefd",
+  "yield": "HIGH",
+  "why": "Depressed mood/anhedonia core criteria are the defining features of MDD"
+ },
+ {
+  "front": "What defines panic disorder beyond simply having panic attacks?",
+  "fp": "6c2377c978b5",
+  "yield": "MEDIUM",
+  "why": "Panic disorder definition; anticipatory-worry criterion is a plausible passage step"
+ },
+ {
+  "front": "What distinguishes bipolar I disorder from bipolar II disorder?",
+  "fp": "4d461435efef",
+  "yield": "HIGH",
+  "why": "Bipolar I vs II hinges on mania; classic discrete"
+ },
+ {
+  "front": "What does the monoamine hypothesis of depression propose?",
+  "fp": "75c1e8c50510",
+  "yield": "HIGH",
+  "why": "Monoamine hypothesis is named bio basis of depression"
+ },
+ {
+  "front": "What is a specific phobia, and what is the most effective treatment approach?",
+  "fp": "254f74852da8",
+  "yield": "MEDIUM",
+  "why": "Specific phobia definition plus exposure treatment; useful but rarely the point"
+ },
+ {
+  "front": "What is conversion disorder (functional neurological symptom disorder)?",
+  "fp": "c8ff0c50c0e1",
+  "yield": "MEDIUM",
+  "why": "Conversion disorder is the standard somatic symptom exemplar"
+ },
+ {
+  "front": "What is cyclothymic disorder?",
+  "fp": "e72a9104225d",
+  "yield": "LOW",
+  "why": "Cyclothymia is a one-line DSM subtype; two-year criterion is trivia-grade"
+ },
+ {
+  "front": "What is persistent depressive disorder (dysthymia)?",
+  "fp": "19ebe8ead5db",
+  "yield": "MEDIUM",
+  "why": "Dysthymia is a listed depressive disorder in prep; chronic-duration contrast with MDE"
+ },
+ {
+  "front": "What is the core fear in social anxiety disorder?",
+  "fp": "c6ac441b3212",
+  "yield": "MEDIUM",
+  "why": "Social anxiety core fear; definition useful for understanding, rarely asked itself"
+ },
+ {
+  "front": "What is the core mechanism of cognitive behavioral therapy (CBT)?",
+  "fp": "ce56b1e21114",
+  "yield": "MEDIUM",
+  "why": "CBT mechanism is treatment context a passage could use"
+ },
+ {
+  "front": "Which personality disorders make up Cluster A, and what is their shared theme?",
+  "fp": "f971b4997967",
+  "yield": "HIGH",
+  "why": "Cluster A odd/eccentric with paranoid/schizoid/schizotypal is classic MCAT"
+ },
+ {
+  "front": "Why are panic attacks frequently mistaken for heart attacks?",
+  "fp": "30e44e42c27f",
+  "yield": "LOW",
+  "why": "Clinical flavor restating panic attack symptoms already covered; sympathetic surge lives elsewhere"
+ }
+]

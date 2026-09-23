@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::DNMT1}} maintains methylation by copying the pattern onto the new strand at hemimethylated CpGs, while DNMT3 enzymes methylate {{c2::de novo}}.",
+  "fp": "f13ad2b556d5",
+  "yield": "LOW",
+  "why": "DNMT1/DNMT3 enzyme names; heritable methylation concept covered by the CpG island card"
+ },
+ {
+  "front": "{{c1::Photolyase}} uses visible-light energy to directly reverse pyrimidine dimers — and humans lack it.",
+  "fp": "c7cc5863ff35",
+  "yield": "LOW",
+  "why": "Photolyase is absent in humans; trivia beside the NER card"
+ },
+ {
+  "front": "A {{c1::nonsense}} mutation converts a sense codon into a premature stop codon.",
+  "fp": "fd31b5f82ab8",
+  "yield": "HIGH",
+  "why": "Nonsense mutation is a core mutation-type definition"
+ },
+ {
+  "front": "A {{c1::transition}} swaps purine for purine (or pyrimidine for pyrimidine); a transversion swaps a purine for a pyrimidine.",
+  "fp": "1f1d725eaf73",
+  "yield": "HIGH",
+  "why": "Transition vs transversion is a high-frequency mutation distinction"
+ },
+ {
+  "front": "A nucleosome core is ~147 bp of DNA wrapped around an octamer of two copies each of {{c1::H2A, H2B, H3, and H4}}.",
+  "fp": "ed7c5395c382",
+  "yield": "HIGH",
+  "why": "Nucleosome octamer composition is core chromatin structure"
+ },
+ {
+  "front": "About 2 meters of DNA fits in a nucleus 6 micrometers across, a compaction near {{c1::10,000}}-fold achieved by histones and higher-order folding.",
+  "fp": "ceb2bf546566",
+  "yield": "LOW",
+  "why": "Compaction-fold number is trivia; chromatin levels covered elsewhere"
+ },
+ {
+  "front": "Alternative splicing allows one gene to:",
+  "fp": "ac286f33ee45",
+  "yield": "HIGH",
+  "why": "Alternative splicing yielding isoforms is core; also belongs in the transcription topic"
+ },
+ {
+  "front": "Ataxia-telangiectasia patients are extraordinarily sensitive to ionizing radiation. Which gene is defective, and what is the mechanistic link?",
+  "fp": "5883cfccce95",
+  "yield": "LOW",
+  "why": "ATM/ataxia-telangiectasia clinical gene detail beyond the outline"
+ },
+ {
+  "front": "Base excision repair begins when a {{c1::DNA glycosylase}} flips out and removes the damaged base, leaving an AP site.",
+  "fp": "ba8a30ec137c",
+  "yield": "MEDIUM",
+  "why": "BER mechanism step; DNA repair is tested at pathway level"
+ },
+ {
+  "front": "Bases attach to the sugar via a {{c1::beta-N-glycosidic}} bond at C1' of the (deoxy)ribose.",
+  "fp": "0d501b1663e2",
+  "yield": "MEDIUM",
+  "why": "Nucleotide structure detail supporting DNA/RNA structure questions"
+ },
+ {
+  "front": "Bulky, helix-distorting lesions such as UV-induced {{c1::pyrimidine (thymine) dimers}} are removed by nucleotide excision repair.",
+  "fp": "c3847c3c251e",
+  "yield": "HIGH",
+  "why": "UV thymine dimers repaired by NER is a classic tested pairing"
+ },
+ {
+  "front": "Chemically, why does histone acetylation open chromatin, and which enzymes write and erase it?",
+  "fp": "651acb7a3f5e",
+  "yield": "HIGH",
+  "why": "Acetylation neutralizing lysine charge; HAT/HDAC is core epigenetics"
+ },
+ {
+  "front": "Contrast NHEJ and homologous recombination for double-strand break repair.",
+  "fp": "eb021ad51bcc",
+  "yield": "MEDIUM",
+  "why": "NHEJ vs HR is a secondary but plausible repair distinction"
+ },
+ {
+  "front": "Defects in which repair pathway cause Lynch syndrome, and what is the genomic signature?",
+  "fp": "45d471717a01",
+  "yield": "MEDIUM",
+  "why": "Mismatch repair is tested; Lynch/microsatellite instability is clinical flavor"
+ },
+ {
+  "front": "Denaturing DNA increases its UV absorbance at 260 nm — the {{c1::hyperchromic}} effect.",
+  "fp": "571e4b3107c5",
+  "yield": "MEDIUM",
+  "why": "Hyperchromic effect supports DNA denaturation/melting questions"
+ },
+ {
+  "front": "Describe DNA base pairing and its bonding.",
+  "fp": "69845799c7b4",
+  "yield": "HIGH",
+  "why": "Base pairing and H-bond count is foundational"
+ },
+ {
+  "front": "Describe the sequence and end-structure of human telomeres.",
+  "fp": "fa98531ab92e",
+  "yield": "LOW",
+  "why": "TTAGGG sequence, t-loop, shelterin are trivia-grade telomere detail"
+ },
+ {
+  "front": "Digesting chromatin with micrococcal nuclease gives a ladder of fragments in multiples of about {{c1::200}} base pairs, the nucleosome repeat length.",
+  "fp": "428325982541",
+  "yield": "LOW",
+  "why": "Micrococcal nuclease ladder restates nucleosome size with a numeric detail"
+ },
+ {
+  "front": "Distinguish constitutive from facultative heterochromatin with an example of each.",
+  "fp": "a840424e105b",
+  "yield": "MEDIUM",
+  "why": "Heterochromatin subtype distinction; secondary to euchromatin/heterochromatin"
+ },
+ {
+  "front": "Distinguish silent, missense, nonsense, and frameshift mutations.",
+  "fp": "8a867c95d057",
+  "yield": "HIGH",
+  "why": "Mutation classes are core central-dogma content"
+ },
+ {
+  "front": "DNA methylation at promoter {{c1::CpG islands}} silences transcription, and the pattern is copied through cell division.",
+  "fp": "596dfb7c30a6",
+  "yield": "HIGH",
+  "why": "CpG methylation silencing is core epigenetic regulation"
+ },
+ {
+  "front": "Gap junctions permit:",
+  "fp": "8c95695f9c44",
+  "yield": "LOW",
+  "why": "Gap junctions are cell biology, outside this topic's category"
+ },
+ {
+  "front": "Genomic DNA is normally {{c1::negatively}} supercoiled, storing torsional energy that makes the strands easier to {{c2::separate}}.",
+  "fp": "0c5a7699220b",
+  "yield": "MEDIUM",
+  "why": "Supercoiling supports replication/topoisomerase reasoning"
+ },
+ {
+  "front": "Give one identifying feature each for A-form, B-form, and Z-form DNA.",
+  "fp": "f670d17786f0",
+  "yield": "LOW",
+  "why": "A/B/Z-form DNA is trivia beyond the standard double helix"
+ },
+ {
+  "front": "Globin genes are DNase I hypersensitive in erythroid precursors but resistant in fibroblasts. What is the assay reporting?",
+  "fp": "73bd9e46dee5",
+  "yield": "MEDIUM",
+  "why": "DNase hypersensitivity is a plausible passage experiment on chromatin accessibility"
+ },
+ {
+  "front": "H3K4 methylation marks {{c1::active}} chromatin, while H3K9 and H3K27 methylation mark repression.",
+  "fp": "dfa89160b68e",
+  "yield": "LOW",
+  "why": "Specific histone methylation marks are black-box detail a passage would supply"
+ },
+ {
+  "front": "Histone marks are read by protein modules: {{c1::bromodomains}} bind acetylated lysine and {{c2::chromodomains}} bind methylated lysine.",
+  "fp": "b961db1fb3bc",
+  "yield": "LOW",
+  "why": "Bromodomain/chromodomain reader names are trivia"
+ },
+ {
+  "front": "Histone tails are rich in {{c1::lysine and arginine}}, whose positive charges grip the DNA phosphate backbone.",
+  "fp": "8036d488b824",
+  "yield": "HIGH",
+  "why": "Basic histone tails binding phosphate backbone is a classic question"
+ },
+ {
+  "front": "Homologous chromosomes differ from sister chromatids in that homologs:",
+  "fp": "618c72a1f173",
+  "yield": "LOW",
+  "why": "Homologs vs sister chromatids is genetics/cell cycle, not this topic"
+ },
+ {
+  "front": "How can a synonymous, so-called silent mutation still cause disease?",
+  "fp": "c0fb3bfcce70",
+  "yield": "MEDIUM",
+  "why": "Silent mutations affecting splicing is a second-step nuance"
+ },
+ {
+  "front": "How do tautomeric shifts of bases cause mutations?",
+  "fp": "17b997a76fbb",
+  "yield": "MEDIUM",
+  "why": "Tautomeric shifts are a secondary spontaneous mutation mechanism"
+ },
+ {
+  "front": "How is O6-methylguanine repaired, and why is the mechanism unusual?",
+  "fp": "2560428e7186",
+  "yield": "LOW",
+  "why": "MGMT suicide enzyme is trivia-grade repair detail"
+ },
+ {
+  "front": "How is the lac operon controlled?",
+  "fp": "c8f0f1a3a88c",
+  "yield": "HIGH",
+  "why": "lac operon control is core; belongs in the transcription topic"
+ },
+ {
+  "front": "If a double-stranded DNA sample is 30 percent adenine, thymine is {{c1::30}} percent and guanine and cytosine are {{c2::20}} percent each.",
+  "fp": "e32fb8250a35",
+  "yield": "HIGH",
+  "why": "Chargaff percentage calculation is a discrete question staple"
+ },
+ {
+  "front": "In E. coli mismatch repair, the new strand is identified by its transient lack of {{c1::methylation}} at GATC sites.",
+  "fp": "24a0ebeca66e",
+  "yield": "MEDIUM",
+  "why": "Strand discrimination by methylation is a classic mismatch-repair detail"
+ },
+ {
+  "front": "In the Ames test, why must the Salmonella be histidine-requiring, and why is rat liver extract added?",
+  "fp": "0c52e070533d",
+  "yield": "MEDIUM",
+  "why": "Ames test is a plausible passage experimental design"
+ },
+ {
+  "front": "Match each agent to its repair pathway: UV light, ionizing radiation, and an alkylating agent.",
+  "fp": "647180caf370",
+  "yield": "HIGH",
+  "why": "Matching damage type to repair pathway is core"
+ },
+ {
+  "front": "Order the secretory pathway correctly:",
+  "fp": "fd76ee0c7b46",
+  "yield": "LOW",
+  "why": "Secretory pathway is cell biology, outside this topic"
+ },
+ {
+  "front": "Prokaryotes lack:",
+  "fp": "5a96582bbbba",
+  "yield": "LOW",
+  "why": "Prokaryotes lacking a nucleus is cell biology, outside this topic"
+ },
+ {
+  "front": "Remodelers such as {{c1::SWI/SNF}} spend ATP to slide or eject nucleosomes, while HATs and HDACs instead modify histones {{c2::covalently}}.",
+  "fp": "5ccc4e3e8b07",
+  "yield": "LOW",
+  "why": "SWI/SNF remodeler name is black-box detail"
+ },
+ {
+  "front": "Rett syndrome results from MECP2 mutation. Why does losing a methyl-CpG reader cause disease?",
+  "fp": "c7ab1bce0979",
+  "yield": "LOW",
+  "why": "Rett/MECP2 clinical gene detail beyond the outline"
+ },
+ {
+  "front": "RNA is alkali-labile because its {{c1::2'-OH}} attacks the adjacent phosphodiester bond under basic conditions.",
+  "fp": "960d8278a09a",
+  "yield": "MEDIUM",
+  "why": "2'-OH lability explains DNA vs RNA stability, a plausible discrete"
+ },
+ {
+  "front": "Roughly how much spontaneous DNA damage does a human cell sustain each day, and what does that number imply?",
+  "fp": "7417f57f954d",
+  "yield": "LOW",
+  "why": "Daily lesion count is trivia"
+ },
+ {
+  "front": "Spontaneous deamination of cytosine yields {{c1::uracil}}, which is recognized as foreign and excised, explaining why DNA uses thymine instead of uracil.",
+  "fp": "8232ef167fa9",
+  "yield": "MEDIUM",
+  "why": "Deamination detail supporting the plainer thymine-vs-uracil card"
+ },
+ {
+  "front": "Sporadic colon cancers with microsatellite instability often have a normal MLH1 coding sequence. What silenced the gene?",
+  "fp": "63be38d032e2",
+  "yield": "MEDIUM",
+  "why": "Promoter hypermethylation silencing illustrates a tested mechanism"
+ },
+ {
+  "front": "State the central dogma.",
+  "fp": "154436c4251e",
+  "yield": "HIGH",
+  "why": "Central dogma is foundational"
+ },
+ {
+  "front": "Telomerase is a {{c1::reverse transcriptase}} that carries its own RNA template.",
+  "fp": "3bb7f62920bf",
+  "yield": "HIGH",
+  "why": "Telomerase as a reverse transcriptase with RNA template is core"
+ },
+ {
+  "front": "The human genome holds about {{c1::3.2 billion}} base pairs and roughly {{c2::20,000}} protein-coding genes, only 1-2 percent of the sequence.",
+  "fp": "891db8ad4259",
+  "yield": "LOW",
+  "why": "Genome size and gene count numbers are trivia"
+ },
+ {
+  "front": "The human germline mutation rate is roughly {{c1::$10^{-8}$}} per base pair per generation, giving about {{c2::70}} new mutations per zygote.",
+  "fp": "9de011ea189f",
+  "yield": "LOW",
+  "why": "Germline mutation rate numbers are trivia"
+ },
+ {
+  "front": "What are introns and exons?",
+  "fp": "d280227aaebc",
+  "yield": "HIGH",
+  "why": "Intron/exon definition is foundational"
+ },
+ {
+  "front": "What does antiparallel mean for DNA strands?",
+  "fp": "fa3328a8f7b5",
+  "yield": "HIGH",
+  "why": "Antiparallel strands is foundational"
+ },
+ {
+  "front": "What is epigenetic regulation?",
+  "fp": "6ca8a40f08d5",
+  "yield": "HIGH",
+  "why": "Epigenetic regulation definition is core"
+ },
+ {
+  "front": "What is the Barr body, and what problem does it solve?",
+  "fp": "9a7160fa77b7",
+  "yield": "HIGH",
+  "why": "Barr body/X inactivation is a tested chromatin concept"
+ },
+ {
+  "front": "What is the role of linker histone H1?",
+  "fp": "163944682eb1",
+  "yield": "MEDIUM",
+  "why": "Linker histone H1 is supporting chromatin detail"
+ },
+ {
+  "front": "What makes a missense mutation conservative rather than nonconservative?",
+  "fp": "9f865ae397c9",
+  "yield": "MEDIUM",
+  "why": "Conservative vs nonconservative missense is a secondary distinction"
+ },
+ {
+  "front": "What mutation class underlies Huntington disease and fragile X, and what is anticipation?",
+  "fp": "9b9cbef30b0c",
+  "yield": "MEDIUM",
+  "why": "Repeat expansion and anticipation is a tested mutation class, genetics-flavored"
+ },
+ {
+  "front": "Where do sequence-specific proteins usually read DNA without unwinding it?",
+  "fp": "95723dbea877",
+  "yield": "MEDIUM",
+  "why": "Major-groove recognition is supporting detail for TF binding"
+ },
+ {
+  "front": "Which antibiotic targets the bacterial 30S ribosomal subunit?",
+  "fp": "7d443a3be405",
+  "yield": "LOW",
+  "why": "Tetracycline/30S is translation pharmacology, outside this topic"
+ },
+ {
+  "front": "Which base pair has three hydrogen bonds, and how does that affect melting temperature?",
+  "fp": "cc76a67d05aa",
+  "yield": "MEDIUM",
+  "why": "GC content and Tm restates the base-pairing card with a stacking nuance"
+ },
+ {
+  "front": "Which chromatin type replicates late in S phase, and why does timing correlate with activity?",
+  "fp": "16ef60222032",
+  "yield": "LOW",
+  "why": "Replication timing of heterochromatin is trivia"
+ },
+ {
+  "front": "Which disease results from defective nucleotide excision repair, and what is its hallmark?",
+  "fp": "2da1f3ed1d2c",
+  "yield": "HIGH",
+  "why": "Xeroderma pigmentosum from NER defect is a classic tested link"
+ },
+ {
+  "front": "Which human cells express telomerase, and what is the Hayflick limit?",
+  "fp": "158ad2b0a93e",
+  "yield": "MEDIUM",
+  "why": "Telomerase-expressing cells and Hayflick limit are secondary"
+ },
+ {
+  "front": "Which lesion types are handled by base excision repair?",
+  "fp": "72b35b82c433",
+  "yield": "MEDIUM",
+  "why": "BER lesion list supports the repair-pathway matching card"
+ },
+ {
+  "front": "Which membrane is impermeable to most ions, creating the proton gradient?",
+  "fp": "1130ce7c51d5",
+  "yield": "LOW",
+  "why": "Inner mitochondrial membrane is biochemistry/cell biology, outside this topic"
+ },
+ {
+  "front": "Why do linear chromosome ends shorten each division without telomerase?",
+  "fp": "e6f4ccb3ae02",
+  "yield": "HIGH",
+  "why": "End-replication problem is core"
+ },
+ {
+  "front": "Why do many mutations at a codon's third position produce no amino acid change?",
+  "fp": "31138cb6b699",
+  "yield": "MEDIUM",
+  "why": "Wobble explanation supports the plainer degenerate-code card"
+ },
+ {
+  "front": "Why does DNA use thymine while RNA uses uracil?",
+  "fp": "cb95fb8bd8bd",
+  "yield": "HIGH",
+  "why": "Thymine vs uracil reasoning is a classic discrete"
+ },
+ {
+  "front": "Why is an insertion of 3 nucleotides usually less severe than an insertion of 1?",
+  "fp": "061b0280079d",
+  "yield": "HIGH",
+  "why": "Frameshift vs in-frame indel reasoning is core"
+ },
+ {
+  "front": "Why is the genetic code called degenerate?",
+  "fp": "0417e69c96ca",
+  "yield": "HIGH",
+  "why": "Degenerate code definition is foundational"
+ }
+]

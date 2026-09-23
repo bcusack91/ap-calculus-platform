@@ -1,0 +1,380 @@
+[
+ {
+  "front": "{{c1::Ruffini}} endings are slowly adapting deep receptors that signal sustained skin stretch and finger position.",
+  "fp": "7445b3e956ba",
+  "yield": "MEDIUM",
+  "why": "Ruffini = slowly adapting stretch receptor; receptor-type detail, tonic vs phasic is the tested idea"
+ },
+ {
+  "front": "A positive Romberg sign, falling only when the eyes close, localizes to the {{c1::dorsal columns}} or proprioceptive input rather than the cerebellum.",
+  "fp": "277585718d6a",
+  "yield": "LOW",
+  "why": "Romberg sign is a clinical neuro exam finding, not on the 6A outline"
+ },
+ {
+  "front": "Activated rhodopsin stimulates the retinal G protein {{c1::transducin}}, whose alpha subunit activates cGMP phosphodiesterase.",
+  "fp": "5aa1dd5dd98d",
+  "yield": "MEDIUM",
+  "why": "Transducin step of phototransduction; supports the HIGH cascade card"
+ },
+ {
+  "front": "Aminoglycosides and high-dose loop diuretics damage hearing by injuring cochlear {{c1::hair cells}} and the stria vascularis.",
+  "fp": "65ccd32fcf2a",
+  "yield": "LOW",
+  "why": "Drug ototoxicity (aminoglycosides, loop diuretics) is pharm trivia outside the outline"
+ },
+ {
+  "front": "At the optic chiasm, which fibers cross, and what visual field defect follows chiasm compression?",
+  "fp": "2f65ca02090d",
+  "yield": "HIGH",
+  "why": "Chiasm decussation and bitemporal hemianopsia is a classic discrete question"
+ },
+ {
+  "front": "Beyond being all-cone, what two structural features make the fovea the acuity peak?",
+  "fp": "a56634c784de",
+  "yield": "MEDIUM",
+  "why": "Foveal low convergence supports acuity reasoning; midget-cell wiring is secondary"
+ },
+ {
+  "front": "Cardiac pain is felt in the left arm because visceral and somatic afferents {{c1::converge}} on the same spinal cord neurons.",
+  "fp": "aed082dd69ca",
+  "yield": "MEDIUM",
+  "why": "Referred pain via convergence is a plausible passage mechanism"
+ },
+ {
+  "front": "Cochlear tonotopy: the stiff, narrow basilar membrane at the {{c1::base}} resonates with high frequencies; the wide, floppy apex encodes low frequencies.",
+  "fp": "9ac5723bb879",
+  "yield": "LOW",
+  "why": "Restates the plainer pitch/place-coding card (a30643d61de6); keep one visible"
+ },
+ {
+  "front": "Compare rods and cones.",
+  "fp": "6d761d79a29c",
+  "yield": "HIGH",
+  "why": "Rod vs cone comparison is core tested vision content"
+ },
+ {
+  "front": "Contrast endolymph and perilymph in composition, location, and source.",
+  "fp": "0542bc5607c9",
+  "yield": "MEDIUM",
+  "why": "High-K+ endolymph explains hair-cell depolarization; +80 mV value is secondary"
+ },
+ {
+  "front": "Contrast muscle spindles and Golgi tendon organs in arrangement, stimulus, and reflex role.",
+  "fp": "868f052c3d75",
+  "yield": "HIGH",
+  "why": "Spindle vs GTO and the stretch reflex is a named, frequently tested contrast"
+ },
+ {
+  "front": "Displaced otoconia entering a semicircular canal cause positional vertigo by making the {{c1::cupula}} respond to gravity.",
+  "fp": "c97337d42a6d",
+  "yield": "MEDIUM",
+  "why": "BPPV is clinical flavor illustrating the cupula/rotation mechanism"
+ },
+ {
+  "front": "Distinguish Merkel discs from Meissner corpuscles by adaptation, depth, and best stimulus.",
+  "fp": "3a6ec3dfad9a",
+  "yield": "MEDIUM",
+  "why": "Merkel vs Meissner adaptation and depth; receptor-type detail"
+ },
+ {
+  "front": "Explain motion sickness as a sensory conflict problem.",
+  "fp": "3e038aaf2755",
+  "yield": "LOW",
+  "why": "Motion sickness explanation is illustrative; area postrema detail not needed"
+ },
+ {
+  "front": "Filamentous {{c1::tip links}} connect adjacent stereocilia and directly gate hair-cell mechanotransduction channels.",
+  "fp": "9edaf3dee4a4",
+  "yield": "MEDIUM",
+  "why": "Tip-link direct mechanical gating; cadherin names are trivia but the concept is tested"
+ },
+ {
+  "front": "Fine touch (DCML) decussates in the {{c1::medulla}}; pain and temperature (spinothalamic) cross in the {{c2::spinal cord}} within 1-2 levels of entry.",
+  "fp": "0a0ad5cd7148",
+  "yield": "MEDIUM",
+  "why": "DCML vs spinothalamic decussation level; sensory pathway detail a passage could use"
+ },
+ {
+  "front": "Full dark adaptation takes about {{c1::20 to 30}} minutes, limited by the slow regeneration of rhodopsin from 11-cis-retinal.",
+  "fp": "96bbb6b13104",
+  "yield": "MEDIUM",
+  "why": "Dark adaptation timing and rhodopsin regeneration; secondary but askable"
+ },
+ {
+  "front": "Glaucoma and macular degeneration both blind, but which part of the visual field is lost first in each?",
+  "fp": "721872e29e65",
+  "yield": "LOW",
+  "why": "Glaucoma vs macular degeneration field loss is clinical ophthalmology trivia"
+ },
+ {
+  "front": "How do salty and sour taste transduction mechanisms differ from sweet, bitter, and umami?",
+  "fp": "6149af4f45ce",
+  "yield": "MEDIUM",
+  "why": "Ion-channel vs GPCR taste transduction; labeled-line idea is the tested piece"
+ },
+ {
+  "front": "How do the somatosensory and gustatory systems encode intensity?",
+  "fp": "41e1701a2c2a",
+  "yield": "HIGH",
+  "why": "Intensity coded by firing frequency and recruitment; all-or-none is core"
+ },
+ {
+  "front": "How does light change glutamate release from a photoreceptor, and by what terminal mechanism?",
+  "fp": "fdf03462d2e7",
+  "yield": "HIGH",
+  "why": "Light decreases photoreceptor glutamate release; classic inverted-signal question"
+ },
+ {
+  "front": "How does rod-to-ganglion convergence trade acuity for sensitivity?",
+  "fp": "1da410e5bbe6",
+  "yield": "HIGH",
+  "why": "Rod convergence trades acuity for sensitivity; core vision reasoning"
+ },
+ {
+  "front": "How is pitch encoded in the cochlea?",
+  "fp": "a30643d61de6",
+  "yield": "HIGH",
+  "why": "Place coding of pitch along the basilar membrane is core cochlea content"
+ },
+ {
+  "front": "In darkness, {{c1::cGMP}}-gated cation channels in the photoreceptor outer segment stay open, producing the depolarizing dark current.",
+  "fp": "0d486af7a367",
+  "yield": "HIGH",
+  "why": "cGMP-gated channels and the dark current are the center of phototransduction"
+ },
+ {
+  "front": "In myopia the image focuses {{c1::in front of}} the retina, corrected with a diverging (concave, negative-diopter) lens.",
+  "fp": "7fa2bc86f114",
+  "yield": "HIGH",
+  "why": "Myopia focus and diverging-lens correction; bio-physics crossover calculation"
+ },
+ {
+  "front": "Lateral inhibition sharpens edges by having an excited receptor {{c1::suppress}} its neighbors, producing illusions such as Mach bands.",
+  "fp": "3b7cd4df7c73",
+  "yield": "MEDIUM",
+  "why": "Lateral inhibition and edge enhancement; commonly used but secondary"
+ },
+ {
+  "front": "Light in one eye constricts both pupils: the afferent limb is cranial nerve {{c1::II}} and the efferent limb is cranial nerve {{c2::III}}.",
+  "fp": "8232e546337b",
+  "yield": "MEDIUM",
+  "why": "Pupillary reflex CN II afferent/CN III efferent; supporting pathway detail"
+ },
+ {
+  "front": "List the ascending auditory relays from cochlear nuclei to cortex, and the clinical consequence of their bilaterality.",
+  "fp": "a74ce9a54741",
+  "yield": "MEDIUM",
+  "why": "Auditory relay sequence is encyclopedic, but bilaterality point is passage-usable"
+ },
+ {
+  "front": "Olfaction is the only sense whose pathway reaches cortex without first relaying in the {{c1::thalamus}}.",
+  "fp": "aaa341aa1958",
+  "yield": "HIGH",
+  "why": "Olfaction bypassing the thalamus is a classic discrete fact"
+ },
+ {
+  "front": "ON-center bipolar cells depolarize in light because their {{c1::mGluR6}} receptor is sign-inverting: less glutamate means less inhibition.",
+  "fp": "4b36a66ed765",
+  "yield": "LOW",
+  "why": "mGluR6/TRPM1 sign-inverting bipolar detail is trivia-grade specificity"
+ },
+ {
+  "front": "Order the light-activated phototransduction steps from photon capture to membrane voltage change.",
+  "fp": "d0daf9b9ac48",
+  "yield": "HIGH",
+  "why": "Ordered phototransduction cascade is the core vision mechanism"
+ },
+ {
+  "front": "Otolith organs: the {{c1::utricle}} senses horizontal linear acceleration and head tilt; the {{c2::saccule}} senses vertical linear acceleration.",
+  "fp": "5b378ec7c817",
+  "yield": "MEDIUM",
+  "why": "Utricle vs saccule orientation; supporting detail on otolith organs"
+ },
+ {
+  "front": "Outer hair cells use the motor protein {{c1::prestin}} to change length, actively amplifying basilar-membrane motion.",
+  "fp": "9995f4d11b9f",
+  "yield": "LOW",
+  "why": "Prestin and outer-hair-cell electromotility are named-protein trivia"
+ },
+ {
+  "front": "Outline olfactory transduction from odorant binding to depolarization.",
+  "fp": "375075558c51",
+  "yield": "MEDIUM",
+  "why": "Olfactory GPCR/cAMP transduction and one-receptor-per-ORN; secondary mechanism"
+ },
+ {
+  "front": "Peak absorbances: rhodopsin ~{{c1::498}} nm; S cones ~420 nm; M cones ~530 nm; L cones ~560 nm.",
+  "fp": "80d491cd175c",
+  "yield": "LOW",
+  "why": "Exact peak absorbance wavelengths are numeric trivia not on the outline"
+ },
+ {
+  "front": "Presbyopia, cataract, and glaucoma: which involves lens stiffening, lens clouding, and optic nerve damage?",
+  "fp": "c796406840c7",
+  "yield": "MEDIUM",
+  "why": "Presbyopia ties to accommodation; cataract/glaucoma are clinical flavor"
+ },
+ {
+  "front": "Red-green color blindness is {{c1::X-linked}} recessive because the L and M opsin genes sit adjacent on the X chromosome.",
+  "fp": "dd17549cab43",
+  "yield": "MEDIUM",
+  "why": "X-linked color blindness links vision to genetics; plausible second step"
+ },
+ {
+  "front": "The {{c1::Pacinian}} corpuscle's lamellated capsule filters sustained pressure, making it a rapidly adapting deep receptor tuned near 250 Hz.",
+  "fp": "48780dc78c4d",
+  "yield": "MEDIUM",
+  "why": "Pacinian rapidly adapting vibration receptor; receptor-type detail"
+ },
+ {
+  "front": "The {{c1::superior olivary complex}} is the first auditory station with binaural input, computing interaural time and intensity differences.",
+  "fp": "7f97563af4d5",
+  "yield": "MEDIUM",
+  "why": "Superior olive binaural comparison underlies sound localization; secondary"
+ },
+ {
+  "front": "The decibel scale is logarithmic: every {{c1::10}} dB multiplies sound intensity by ten, so 60 dB carries 1000 times the intensity of 30 dB.",
+  "fp": "968667b99cea",
+  "yield": "HIGH",
+  "why": "Decibel log scale is a formula used in calculation"
+ },
+ {
+  "front": "The enteric nervous system is notable for:",
+  "fp": "dd8c2a3d6fff",
+  "yield": "MEDIUM",
+  "why": "Enteric NS autonomy is a basic autonomic fact; misfiled into sensory deck"
+ },
+ {
+  "front": "The sympathetic nervous system produces:",
+  "fp": "76877a88e360",
+  "yield": "MEDIUM",
+  "why": "Sympathetic fight-or-flight is core but belongs to the nervous-system deck"
+ },
+ {
+  "front": "The vagus nerve is primarily:",
+  "fp": "3effab8fcfed",
+  "yield": "MEDIUM",
+  "why": "Vagus = parasympathetic; basic autonomic fact misfiled into sensory deck"
+ },
+ {
+  "front": "To focus on a near object the ciliary muscle {{c1::contracts}}, slackening the zonular fibers so the lens becomes more spherical.",
+  "fp": "6bc4d7fbde88",
+  "yield": "HIGH",
+  "why": "Ciliary contraction for near focus is a classic counterintuitive question"
+ },
+ {
+  "front": "Trace hair-cell transduction from stereocilia deflection to transmitter release.",
+  "fp": "653251559d1e",
+  "yield": "HIGH",
+  "why": "Hair-cell transduction sequence is the core hearing mechanism"
+ },
+ {
+  "front": "Trace sound through the ear.",
+  "fp": "48895bfa4807",
+  "yield": "HIGH",
+  "why": "Sound path through the ear is core tested sequence"
+ },
+ {
+  "front": "Trace the path of light through the eye.",
+  "fp": "e4ea7eabd4f1",
+  "yield": "HIGH",
+  "why": "Light path through the eye is core tested sequence"
+ },
+ {
+  "front": "What cascade property gives a rod single-photon sensitivity?",
+  "fp": "1daa85cedccd",
+  "yield": "MEDIUM",
+  "why": "Cascade amplification explains rod sensitivity; supporting detail"
+ },
+ {
+  "front": "What impedance-matching problem does the middle ear solve, and how?",
+  "fp": "e4d68aa76215",
+  "yield": "MEDIUM",
+  "why": "Ossicular impedance matching; mechanism askable, 17:1 ratio is secondary"
+ },
+ {
+  "front": "What is sensory transduction?",
+  "fp": "3424c52c2114",
+  "yield": "HIGH",
+  "why": "Definition of transduction that all sensory questions build on"
+ },
+ {
+  "front": "What is shared versus different among the four human photopigments?",
+  "fp": "8ae6373efdb9",
+  "yield": "MEDIUM",
+  "why": "Shared 11-cis-retinal chromophore and vitamin A link; supporting detail"
+ },
+ {
+  "front": "What is the absolute vs. difference threshold?",
+  "fp": "974da3dd6fb8",
+  "yield": "HIGH",
+  "why": "Absolute vs difference threshold and Weber's law are named tested concepts"
+ },
+ {
+  "front": "What stimulus does each semicircular canal detect, and through which structure?",
+  "fp": "398c30d98ae7",
+  "yield": "MEDIUM",
+  "why": "Cupula/endolymph-lag mechanism supports the plainer balance-structures card"
+ },
+ {
+  "front": "Which structure relays sensory information to the cortex?",
+  "fp": "99b0d54b0cfe",
+  "yield": "HIGH",
+  "why": "Thalamic relay of sensory input is core pathway knowledge"
+ },
+ {
+  "front": "Which structures sense balance?",
+  "fp": "6f1839051ff0",
+  "yield": "HIGH",
+  "why": "Canals = rotation, otoliths = linear/tilt; core balance fact"
+ },
+ {
+  "front": "Which theory of color vision explains negative afterimages and the impossibility of a reddish green?",
+  "fp": "748fe64e38d3",
+  "yield": "MEDIUM",
+  "why": "Opponent-process vs trichromatic theory; psych-side color vision detail"
+ },
+ {
+  "front": "Which TRP channels transduce painful heat vs cooling in free nerve endings, and what chemicals co-activate them?",
+  "fp": "0c2c405116e4",
+  "yield": "LOW",
+  "why": "TRPV1/TRPM8 channel names and capsaicin/menthol are trivia-grade"
+ },
+ {
+  "front": "Which two proteins terminate signaling by activated rhodopsin?",
+  "fp": "1eccff037b00",
+  "yield": "LOW",
+  "why": "Rhodopsin kinase and arrestin shutoff is beyond-outline molecular detail"
+ },
+ {
+  "front": "Why do aging and noise exposure take {{c1::high}} frequencies first?",
+  "fp": "bf8e89d844fd",
+  "yield": "MEDIUM",
+  "why": "Applies tonotopy to explain high-frequency loss; plausible passage step"
+ },
+ {
+  "front": "Why do maculae respond to static tilt but cupulae do not?",
+  "fp": "ae75605e26e1",
+  "yield": "MEDIUM",
+  "why": "Otoconia vs cupula density explains tilt vs rotation sensing; supporting"
+ },
+ {
+  "front": "Why does falling intracellular $Ca^{2+}$ speed photoreceptor recovery and drive light adaptation?",
+  "fp": "81f16cd32e12",
+  "yield": "LOW",
+  "why": "Ca2+/GCAP light-adaptation feedback is molecular detail not needed"
+ },
+ {
+  "front": "Why does rubbing a stubbed toe reduce the pain?",
+  "fp": "f5c923ea7002",
+  "yield": "HIGH",
+  "why": "Gate control theory of pain is a named, tested concept"
+ },
+ {
+  "front": "Why is the round window essential for cochlear mechanics?",
+  "fp": "45d4b7ccbc4f",
+  "yield": "MEDIUM",
+  "why": "Round window pressure relief; supporting cochlear mechanics"
+ }
+]

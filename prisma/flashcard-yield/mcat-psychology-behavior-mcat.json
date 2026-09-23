@@ -1,0 +1,434 @@
+[
+ {
+  "front": "{{c1::Anorexia nervosa}} requires significantly low body weight; {{c2::bulimia nervosa}} involves binge-purge cycles usually at normal or above-normal weight.",
+  "fp": "53f35444dc87",
+  "yield": "MEDIUM",
+  "why": "Eating disorders are on the 7A disorder list but lightly tested; weight/binge-purge split is the askable bit"
+ },
+ {
+  "front": "{{c1::Freud}} split a dream into manifest storyline and latent wish content; {{c2::Hobson and McCarley}} answered with activation-synthesis theory.",
+  "fp": "be4dd369b5e0",
+  "yield": "MEDIUM",
+  "why": "Dream theories are listed under consciousness; activation-synthesis is an occasional discrete item"
+ },
+ {
+  "front": "{{c1::Lazarus}} held that cognitive appraisal precedes emotion; {{c2::Zajonc}} argued affect can occur before or without cognition.",
+  "fp": "1220d61f24af",
+  "yield": "MEDIUM",
+  "why": "Cognitive-appraisal vs affect-first debate supports emotion theory items but is second-tier"
+ },
+ {
+  "front": "{{c1::Maslow}} split motives into deficiency needs, which drive behavior only while unmet, and {{c2::growth (being)}} needs, which grow as pursued.",
+  "fp": "599d6a079e03",
+  "yield": "MEDIUM",
+  "why": "Deficiency vs growth needs is supporting detail on Maslow; plain hierarchy card carries the point"
+ },
+ {
+  "front": "{{c1::Repression}} keeps a threatening memory out of awareness unconsciously; {{c2::suppression}} is the conscious, deliberate choice not to think about it.",
+  "fp": "83061e90f54d",
+  "yield": "HIGH",
+  "why": "Defense mechanisms are frequently tested; repression vs suppression is a classic distinction"
+ },
+ {
+  "front": "A {{c1::hallucination}} is a percept with no external stimulus; a {{c2::delusion}} is a fixed false belief held despite contrary evidence.",
+  "fp": "175ea7ed8564",
+  "yield": "HIGH",
+  "why": "Hallucination vs delusion is a high-frequency positive-symptom distinction"
+ },
+ {
+  "front": "A patient shows flat affect, poverty of speech, and no initiative, with no voices or delusions. Classify these symptoms and the treatment implication.",
+  "fp": "e79eaa463abb",
+  "yield": "HIGH",
+  "why": "Negative symptoms of schizophrenia are core 7A content and appear in stems"
+ },
+ {
+  "front": "A patient told he needs dialysis recites survival statistics with no visible emotion. Name the defense, and contrast it with rationalization.",
+  "fp": "75ad16c58216",
+  "yield": "MEDIUM",
+  "why": "Intellectualization vs rationalization: second-tier defense pair, still passage-plausible"
+ },
+ {
+  "front": "A student accepted to a top program far from family is both drawn to and repelled by the same option. Name this conflict type and its two siblings.",
+  "fp": "e18b05b4b78c",
+  "yield": "MEDIUM",
+  "why": "Approach-avoidance conflict types are prep-book motivation content; passage-plausible, secondary"
+ },
+ {
+  "front": "A surgeon berated by his chief goes home and snaps at his spouse; a hostile colleague insists everyone else is out to get him. Name each defense.",
+  "fp": "b49728285978",
+  "yield": "HIGH",
+  "why": "Displacement and projection are the most-tested defense mechanisms"
+ },
+ {
+  "front": "After several nights of restricted sleep, a resident's first full night shows a disproportionate surge of REM. Name this and its implication.",
+  "fp": "d3ba7426b82f",
+  "yield": "MEDIUM",
+  "why": "REM rebound illustrates homeostatic sleep regulation; occasional passage support"
+ },
+ {
+  "front": "Among the Big Five, {{c1::conscientiousness}} best predicts job performance and longevity, while {{c2::neuroticism}} predicts risk for psychopathology.",
+  "fp": "52d5784a13e8",
+  "yield": "MEDIUM",
+  "why": "Big Five is tested; which trait predicts what is supporting detail"
+ },
+ {
+  "front": "An 80-year-old inpatient becomes confused overnight with fluctuating attention. Why is this delirium rather than dementia, and what does it demand?",
+  "fp": "d6f061780fc6",
+  "yield": "LOW",
+  "why": "Delirium vs dementia is clinical medicine, not on the AAMC psych outline"
+ },
+ {
+  "front": "At the GABA-A receptor, how do benzodiazepines, barbiturates, and alcohol differ in mechanism and danger?",
+  "fp": "f6afcc6dd29d",
+  "yield": "MEDIUM",
+  "why": "Depressants at GABA-A are outline drugs; frequency-vs-duration split is pharm detail"
+ },
+ {
+  "front": "Bandura's {{c1::reciprocal determinism}}: behavior, personal factors, and environment influence one another; {{c2::self-efficacy}} is task-specific confidence.",
+  "fp": "b237976aa3fb",
+  "yield": "MEDIUM",
+  "why": "Social-cognitive perspective is tested; reciprocal determinism is second to the self-efficacy card"
+ },
+ {
+  "front": "Bipolar I requires {{c1::one manic episode}} (7 days or hospitalization); Bipolar II pairs {{c2::hypomania with major depression}} and no full mania.",
+  "fp": "799fe1797587",
+  "yield": "HIGH",
+  "why": "Bipolar I vs II is a high-frequency diagnostic distinction"
+ },
+ {
+  "front": "Circadian pathway: retinal light input entrains the {{c1::suprachiasmatic nucleus}}, which gates pineal release of {{c2::melatonin}} in darkness.",
+  "fp": "1e807d9c0ccd",
+  "yield": "MEDIUM",
+  "why": "SCN/melatonin circadian pathway is standard consciousness content, secondary here"
+ },
+ {
+  "front": "Contrast the two stress axes: sympathoadrenomedullary (SAM) versus HPA.",
+  "fp": "392c2e79861f",
+  "yield": "HIGH",
+  "why": "SAM vs HPA stress axes are the core stress physiology the section tests"
+ },
+ {
+  "front": "Define the four operant conditioning consequences.",
+  "fp": "e8a2f46db2c4",
+  "yield": "MEDIUM",
+  "why": "Operant conditioning belongs to the learning-memory deck, which covers it; misfi [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "Distinguish classical from operant conditioning.",
+  "fp": "f8b9fd6d545d",
+  "yield": "MEDIUM",
+  "why": "Classical vs operant belongs to the learning-memory deck, which covers it; misfi [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "Distinguish generalized anxiety disorder, panic disorder, and specific phobia by their core features.",
+  "fp": "95f0ffebf877",
+  "yield": "MEDIUM",
+  "why": "Anxiety disorder features are 7A content, better placed in the disorders deck"
+ },
+ {
+  "front": "Distinguish key psychological disorder categories (DSM).",
+  "fp": "474bf9a8071d",
+  "yield": "MEDIUM",
+  "why": "Broad DSM category survey; useful orientation, rarely a point by itself"
+ },
+ {
+  "front": "Distinguish schizoid, schizotypal, and avoidant personality disorders.",
+  "fp": "40ebdf7418d7",
+  "yield": "MEDIUM",
+  "why": "Personality disorder distinctions are tested; schizoid/schizotypal/avoidant is a real trio"
+ },
+ {
+  "front": "Distinguish somatic symptom disorder, illness anxiety disorder, and conversion (functional neurological) disorder.",
+  "fp": "f4f621f0b32a",
+  "yield": "MEDIUM",
+  "why": "Somatic symptom family is on the outline; distinctions are second-tier"
+ },
+ {
+  "front": "Distinguish the defense mechanisms reaction formation and sublimation.",
+  "fp": "0f5c8bbbc94e",
+  "yield": "HIGH",
+  "why": "Reaction formation and sublimation are staple defense-mechanism items"
+ },
+ {
+  "front": "Distinguish the major psychological perspectives.",
+  "fp": "e20e98e323e5",
+  "yield": "MEDIUM",
+  "why": "Perspective survey (psychoanalytic/behaviorist/humanistic) supports personality items"
+ },
+ {
+  "front": "Distinguish the major theories of intelligence.",
+  "fp": "ff099a1d9640",
+  "yield": "MEDIUM",
+  "why": "Intelligence theories belong to the cognition-language deck (6B); misfiled here [rescued: misfiled, not served elsewhere"
+ },
+ {
+  "front": "Distinguish tolerance, physical dependence, and addiction in a patient on long-term opioid therapy.",
+  "fp": "6797c0603ba2",
+  "yield": "MEDIUM",
+  "why": "Tolerance vs dependence vs addiction is a real, askable drug distinction"
+ },
+ {
+  "front": "Dopamine hypothesis of schizophrenia: {{c1::mesolimbic}} hyperactivity drives positive symptoms; {{c2::mesocortical}} hypoactivity drives negative symptoms.",
+  "fp": "cb3a0eda1d0e",
+  "yield": "MEDIUM",
+  "why": "Dopamine hypothesis is tested; mesolimbic vs mesocortical split is supporting detail"
+ },
+ {
+  "front": "How did Eysenck explain the introversion-extraversion dimension biologically?",
+  "fp": "daef84064cd3",
+  "yield": "LOW",
+  "why": "Eysenck arousal account of extraversion is trivia-grade; rarely asked on AAMC"
+ },
+ {
+  "front": "How do cocaine and amphetamine differ in mechanism, and what final pathway do all addictive drugs share?",
+  "fp": "8b02561c7ec9",
+  "yield": "MEDIUM",
+  "why": "Stimulant mechanisms plus the mesolimbic reward pathway are askable drug content"
+ },
+ {
+  "front": "How do N3 and REM distribute across a night's sleep, and what is each stage linked to?",
+  "fp": "cc37bc7ba5e8",
+  "yield": "MEDIUM",
+  "why": "N3 early / REM late distribution is supporting sleep detail"
+ },
+ {
+  "front": "How do schizophrenia, schizophreniform disorder, and brief psychotic disorder differ by duration?",
+  "fp": "719ce64b08f0",
+  "yield": "LOW",
+  "why": "Duration cutoffs (1 mo / 6 mo) are DSM clinical trivia beyond the AAMC outline"
+ },
+ {
+  "front": "How does opponent-process theory explain drug tolerance and withdrawal?",
+  "fp": "e5458a3fd3b5",
+  "yield": "MEDIUM",
+  "why": "Opponent-process account of tolerance is a named theory with reasoning content; second-tier"
+ },
+ {
+  "front": "In OCD, what does 'ego-dystonic' mean, and which brain circuit is implicated?",
+  "fp": "0a45739a5b96",
+  "yield": "MEDIUM",
+  "why": "Ego-dystonic obsessions and negative-reinforcement maintenance are askable OCD points"
+ },
+ {
+  "front": "In operant conditioning, negative reinforcement:",
+  "fp": "3b3bf0389da3",
+  "yield": "MEDIUM",
+  "why": "Restates the operant card and belongs to the learning-memory deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "James-Lange theory: emotion is the perception of one's {{c1::bodily response}} to a stimulus; we feel afraid because we tremble and flee.",
+  "fp": "086eda7e8fe6",
+  "yield": "HIGH",
+  "why": "James-Lange is a core emotion theory tested directly"
+ },
+ {
+  "front": "Key diagnostic facts: antisocial versus borderline personality disorder.",
+  "fp": "1577d77ed2e6",
+  "yield": "MEDIUM",
+  "why": "Antisocial vs borderline is tested; age rules are supporting detail"
+ },
+ {
+  "front": "Lazarus's appraisals: {{c1::primary}} asks 'is this irrelevant, benign, or a harm/threat/challenge?'; {{c2::secondary}} asks 'do I have resources to cope?'",
+  "fp": "9d7bd85299e2",
+  "yield": "HIGH",
+  "why": "Primary vs secondary appraisal is core stress content on the 6C outline"
+ },
+ {
+  "front": "List the major theories of emotion.",
+  "fp": "94a7a960de0e",
+  "yield": "HIGH",
+  "why": "The emotion-theory roster is the single most tested item in this topic"
+ },
+ {
+  "front": "Match night terrors, sleepwalking, nightmares, and narcolepsy to their sleep stage or mechanism.",
+  "fp": "e3fac996e1bc",
+  "yield": "MEDIUM",
+  "why": "Sleep disorders and their stages are outline content; secondary here"
+ },
+ {
+  "front": "Match Piaget, Vygotsky, Erikson, and Kohlberg to the developmental theory each is known for.",
+  "fp": "641b1bdb8c63",
+  "yield": "MEDIUM",
+  "why": "Developmental theorists belong to the development deck; misfiled here [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Match to theorist: self-efficacy and locus of control. How does each differ from self-esteem?",
+  "fp": "b99cfa829897",
+  "yield": "HIGH",
+  "why": "Self-efficacy vs locus of control vs self-esteem is a high-frequency distinction"
+ },
+ {
+  "front": "Men interviewed on a swaying suspension bridge rated the interviewer more attractive and called her more often. What does this demonstrate?",
+  "fp": "390d8ab14996",
+  "yield": "MEDIUM",
+  "why": "Misattribution of arousal: classic support for two-factor theory, passage-style"
+ },
+ {
+  "front": "Name the primary receptor targets of LSD, nicotine, and THC.",
+  "fp": "2089c6634ec2",
+  "yield": "LOW",
+  "why": "Specific receptor targets (5-HT2A, CB1) are pharm trivia beyond the drug-class outline"
+ },
+ {
+  "front": "One patient falsifies symptoms with no external reward; another fakes back pain to obtain disability payments. Name each and why the split matters.",
+  "fp": "b2776e732ab4",
+  "yield": "MEDIUM",
+  "why": "Factitious vs malingering is a reasoning-based split that shows up in prep and passages"
+ },
+ {
+  "front": "Opioids act as agonists at {{c1::mu}} receptors, mimicking endorphins; overdose kills by {{c2::respiratory depression}} and is reversed by naloxone.",
+  "fp": "8f317db7b286",
+  "yield": "MEDIUM",
+  "why": "Opioids and mu receptors are on the drug list; naloxone/respiratory detail is secondary"
+ },
+ {
+  "front": "Personality disorder clusters: A = {{c1::odd/eccentric}} (paranoid, schizoid, schizotypal); B = {{c2::dramatic/erratic}}; C = {{c3::anxious/fearful}}.",
+  "fp": "61911a16690f",
+  "yield": "HIGH",
+  "why": "Personality disorder clusters A/B/C are a frequently tested classification"
+ },
+ {
+  "front": "Rogers: distress stems from {{c1::incongruence}} between the real and ideal self; therapy supplies {{c2::unconditional positive regard}}.",
+  "fp": "6e2a23d07e54",
+  "yield": "HIGH",
+  "why": "Rogers' incongruence and unconditional positive regard are core humanistic content"
+ },
+ {
+  "front": "Self-determination theory's three innate psychological needs: {{c1::autonomy}}, {{c2::competence}}, and relatedness.",
+  "fp": "9fdcc3c054f1",
+  "yield": "MEDIUM",
+  "why": "Self-determination theory is a secondary motivation theory; needs list is askable"
+ },
+ {
+  "front": "Selye's GAS stages: {{c1::alarm}} (sympathetic surge), {{c2::resistance}} (cortisol sustains coping), then {{c3::exhaustion}} (resources depleted).",
+  "fp": "cd245c84f419",
+  "yield": "HIGH",
+  "why": "Selye's GAS stages are core stress content"
+ },
+ {
+  "front": "Sleep EEG signatures: N1 shows {{c1::theta}} waves; N2 adds {{c2::sleep spindles and K-complexes}}; N3 shows {{c3::delta}} waves.",
+  "fp": "7325adfad7ba",
+  "yield": "LOW",
+  "why": "Restates the sleep-stages card (59) which already lists theta/spindles/delta"
+ },
+ {
+  "front": "The {{c1::diathesis-stress}} model holds that disorder appears when an inherited or acquired vulnerability meets sufficient {{c2::environmental stress}}.",
+  "fp": "8f6662500740",
+  "yield": "HIGH",
+  "why": "Diathesis-stress is a core 7A model tested directly"
+ },
+ {
+  "front": "The {{c1::facial feedback}} hypothesis: facial muscle activity feeds back to influence the emotion felt.",
+  "fp": "613e64b54985",
+  "yield": "MEDIUM",
+  "why": "Facial feedback hypothesis supports James-Lange; occasional discrete item"
+ },
+ {
+  "front": "Trauma symptoms lasting 3 days to 1 month define {{c1::acute stress disorder}}; the same picture persisting beyond 1 month defines {{c2::PTSD}}.",
+  "fp": "d79ba8678e93",
+  "yield": "MEDIUM",
+  "why": "PTSD is tested; the 1-month acute-stress boundary is supporting detail"
+ },
+ {
+  "front": "What are Piaget's four stages of cognitive development?",
+  "fp": "718991f42ce4",
+  "yield": "MEDIUM",
+  "why": "Piaget stages belong to the development deck; misfiled here [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "What are the components of attitude and how do attitudes change?",
+  "fp": "a65d712a02fb",
+  "yield": "HIGH",
+  "why": "Attitude components and ELM routes are core attitude content for this topic"
+ },
+ {
+  "front": "What are the effects of chronically elevated cortisol?",
+  "fp": "673c9de480cd",
+  "yield": "HIGH",
+  "why": "Chronic cortisol effects are the stress-physiology consequence the exam asks about"
+ },
+ {
+  "front": "What are the primacy and recency effects, the spacing effect, and the two types of interference?",
+  "fp": "f1a82b13058c",
+  "yield": "MEDIUM",
+  "why": "Memory effects belong to the learning-memory deck; misfiled here [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "What are the stages of sleep and their key features?",
+  "fp": "452cb3828e28",
+  "yield": "HIGH",
+  "why": "Sleep stages and EEG features are frequently tested consciousness content"
+ },
+ {
+  "front": "What are the three memory stores and the three memory processes?",
+  "fp": "219cc75f4d15",
+  "yield": "MEDIUM",
+  "why": "Memory stores/processes belong to the learning-memory deck; misfiled here [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "What did Schachter and Singer's epinephrine study show?",
+  "fp": "0bd84557d275",
+  "yield": "HIGH",
+  "why": "Schachter-Singer two-factor theory and its classic study are directly tested"
+ },
+ {
+  "front": "What does drive-reduction theory fail to explain, and what does incentive theory add?",
+  "fp": "c39d0b64131d",
+  "yield": "HIGH",
+  "why": "Drive-reduction vs incentive theory is core motivation content"
+ },
+ {
+  "front": "What is Maslow's hierarchy of needs (bottom to top)?",
+  "fp": "f25abd66bc8b",
+  "yield": "HIGH",
+  "why": "Maslow's hierarchy is a core motivation theory asked directly"
+ },
+ {
+  "front": "What is the diagnostic core of major depressive disorder, and which biological findings accompany it?",
+  "fp": "136e534a90fc",
+  "yield": "MEDIUM",
+  "why": "MDD biological findings are 7A content, better placed in the disorders deck"
+ },
+ {
+  "front": "What was Mischel's situationist critique of trait theory, and how was it resolved?",
+  "fp": "6dc961393421",
+  "yield": "LOW",
+  "why": "Person-situation debate and the personality coefficient are trivia-grade"
+ },
+ {
+  "front": "What were Cannon's criticisms of James-Lange, and what does Cannon-Bard propose instead?",
+  "fp": "520a44e452bd",
+  "yield": "MEDIUM",
+  "why": "Cannon's critique adds reasoning to the Cannon-Bard entry; roster card carries the point"
+ },
+ {
+  "front": "When is emotion-focused coping more adaptive than problem-focused coping?",
+  "fp": "34eae242a47a",
+  "yield": "HIGH",
+  "why": "Problem- vs emotion-focused coping is on the 6C outline and commonly asked"
+ },
+ {
+  "front": "Which component of the Type A pattern actually predicts coronary heart disease, and what buffers stress physiologically?",
+  "fp": "d689892c42b1",
+  "yield": "MEDIUM",
+  "why": "Type A hostility and social-support buffering are second-tier stress facts"
+ },
+ {
+  "front": "Which emotions did Ekman identify as universal, and what limits their expression across cultures?",
+  "fp": "4c154946bb9d",
+  "yield": "HIGH",
+  "why": "Universal emotions and display rules are named on the 6C outline"
+ },
+ {
+  "front": "Which reinforcement schedule produces the most resistant behavior?",
+  "fp": "0a456d69c478",
+  "yield": "MEDIUM",
+  "why": "Reinforcement schedules belong to the learning-memory deck; misfiled here [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Yerkes-Dodson law: performance peaks at {{c1::moderate}} arousal, and the optimum shifts {{c2::lower}} as task difficulty increases.",
+  "fp": "9c1c57a88771",
+  "yield": "HIGH",
+  "why": "Yerkes-Dodson inverted U is a core arousal/motivation item"
+ }
+]

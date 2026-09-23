@@ -1,0 +1,392 @@
+[
+ {
+  "front": "$K_d$ is the ligand concentration that occupies {{c1::half the receptors}}, so a lower $K_d$ means {{c2::higher affinity}}.",
+  "fp": "9e2971fb2d45",
+  "yield": "HIGH",
+  "why": "Kd/affinity relationship is a core binding concept used in calculation questions"
+ },
+ {
+  "front": "A colon cancer with an activating KRAS mutation does not respond to an anti-EGFR antibody. Why?",
+  "fp": "d94966be9756",
+  "yield": "MEDIUM",
+  "why": "Pathway epistasis reasoning: plausible passage step, not a discrete fact"
+ },
+ {
+  "front": "A mutant cell makes no cAMP after hormone treatment but responds normally to forskolin. Where is the defect?",
+  "fp": "af612a91998e",
+  "yield": "MEDIUM",
+  "why": "Bypass-experiment localization is a common passage reasoning step"
+ },
+ {
+  "front": "Adrenergic coupling: beta receptors use {{c1::Gs}}, alpha-1 uses {{c2::Gq}}, and alpha-2 uses Gi.",
+  "fp": "acf626bb5c51",
+  "yield": "MEDIUM",
+  "why": "Receptor-to-G-protein mapping supports tested cAMP/IP3 logic; secondary detail"
+ },
+ {
+  "front": "After PIP2 cleavage, how do IP3 and DAG converge to activate protein kinase C?",
+  "fp": "23895b4b27a4",
+  "yield": "HIGH",
+  "why": "IP3/DAG/Ca2+ convergence on PKC is core second-messenger content"
+ },
+ {
+  "front": "Alternative splicing allows one gene to:",
+  "fp": "ac286f33ee45",
+  "yield": "LOW",
+  "why": "Misfiled: alternative splicing is gene expression (1B), not signaling"
+ },
+ {
+  "front": "Amplification: one bound receptor activates many G proteins, each cyclase makes many {{c1::cAMP}}, and each kinase phosphorylates many substrates.",
+  "fp": "6f4346a66876",
+  "yield": "HIGH",
+  "why": "Signal amplification tiers are explicitly tested"
+ },
+ {
+  "front": "An activated GPCR acts as a {{c1::guanine nucleotide exchange factor (GEF)}}, causing G-alpha to swap {{c2::GDP for GTP}} and separate from beta-gamma.",
+  "fp": "dad8e0086087",
+  "yield": "HIGH",
+  "why": "GPCR GEF action and GDP/GTP swap is the core G-protein mechanism"
+ },
+ {
+  "front": "cAMP activates PKA by binding its {{c1::regulatory}} subunits, releasing the two {{c2::catalytic}} subunits.",
+  "fp": "4e193682673c",
+  "yield": "HIGH",
+  "why": "cAMP-PKA regulatory/catalytic subunit activation is core"
+ },
+ {
+  "front": "cAMP is degraded to AMP by {{c1::phosphodiesterases}}; methylxanthines like caffeine inhibit them, prolonging the signal.",
+  "fp": "e423b0cd13c3",
+  "yield": "HIGH",
+  "why": "PDE termination of cAMP is a favorite exam manipulation"
+ },
+ {
+  "front": "cGMP is hydrolyzed by phosphodiesterases; the ANP receptor is a membrane-bound {{c1::receptor guanylyl cyclase}} that makes cGMP with no G protein.",
+  "fp": "4c11bcd88340",
+  "yield": "MEDIUM",
+  "why": "cGMP/receptor guanylyl cyclase is secondary to the cAMP pathway"
+ },
+ {
+  "front": "Contrast autocrine, paracrine, and endocrine signaling.",
+  "fp": "2cb02eee8e7b",
+  "yield": "HIGH",
+  "why": "Autocrine/paracrine/endocrine distinction is a high-frequency discrete"
+ },
+ {
+  "front": "Contrast the effectors of G-alpha-s, G-alpha-i, and G-alpha-q.",
+  "fp": "2d8b85b17f69",
+  "yield": "HIGH",
+  "why": "Gs/Gi/Gq effector contrast is core tested content"
+ },
+ {
+  "front": "Cytosolic free Ca2+ is held near {{c1::$10^{-7}$}} M (vs about $10^{-3}$ M outside) by SERCA, the plasma membrane Ca2+ ATPase, and {{c2::NCX}}.",
+  "fp": "2dc80a9b08eb",
+  "yield": "MEDIUM",
+  "why": "Ca2+ gradient concept is useful; exact molar values are beyond the outline"
+ },
+ {
+  "front": "Describe the G-protein coupled receptor cascade.",
+  "fp": "f2158766ca36",
+  "yield": "HIGH",
+  "why": "Full GPCR cascade is the backbone of this category"
+ },
+ {
+  "front": "Epinephrine raises cAMP in both cardiac muscle and bronchial smooth muscle, yet one contracts harder and the other relaxes. How?",
+  "fp": "01d00408b5bc",
+  "yield": "MEDIUM",
+  "why": "Cell-type specificity via PKA substrates illustrates a tested principle"
+ },
+ {
+  "front": "Expressing a kinase-dead receptor tyrosine kinase suppresses signaling by the normal receptor in the same cell. Explain the dominant negative effect.",
+  "fp": "3fa62d7b8ec6",
+  "yield": "MEDIUM",
+  "why": "Dominant-negative reasoning is a plausible passage inference step"
+ },
+ {
+  "front": "G-alpha-q activates {{c1::phospholipase C-beta}}, which cleaves PIP2 into {{c2::IP3}} and DAG.",
+  "fp": "f1063d834c2a",
+  "yield": "HIGH",
+  "why": "Gq-PLC-PIP2 cleavage to IP3 and DAG is core"
+ },
+ {
+  "front": "Gap junctions permit:",
+  "fp": "8c95695f9c44",
+  "yield": "MEDIUM",
+  "why": "Gap junctions are 2A cell-junction content; relevant but secondary to signaling"
+ },
+ {
+  "front": "Homologous chromosomes differ from sister chromatids in that homologs:",
+  "fp": "618c72a1f173",
+  "yield": "LOW",
+  "why": "Misfiled: homologs vs sister chromatids belongs to cell division/heredity (2C)"
+ },
+ {
+  "front": "How do cholera and pertussis toxins each freeze G-protein signaling?",
+  "fp": "c444d3763798",
+  "yield": "MEDIUM",
+  "why": "Cholera/pertussis toxins are classic examples illustrating G-alpha locking"
+ },
+ {
+  "front": "How do cytokine receptors signal despite lacking intrinsic kinase activity?",
+  "fp": "ed82025b895b",
+  "yield": "MEDIUM",
+  "why": "JAK-STAT is a second-tier receptor class; passages supply it as context"
+ },
+ {
+  "front": "How do steroid and peptide hormones signal differently?",
+  "fp": "d56be9f63045",
+  "yield": "HIGH",
+  "why": "Steroid vs peptide hormone signaling is a high-frequency distinction"
+ },
+ {
+  "front": "How does a cAMP signal reach the genome?",
+  "fp": "850699ffd7eb",
+  "yield": "MEDIUM",
+  "why": "CREB/CBP transcriptional endpoint is supporting detail on the cAMP pathway"
+ },
+ {
+  "front": "How does calmodulin convert a Ca2+ spike into enzyme activity?",
+  "fp": "d189267c825a",
+  "yield": "MEDIUM",
+  "why": "Calmodulin as Ca2+ sensor is supporting detail; EF-hand specifics rarely asked"
+ },
+ {
+  "front": "How does the insulin receptor deviate from the standard RTK model, and what are its two major output branches?",
+  "fp": "2c92fa30d783",
+  "yield": "MEDIUM",
+  "why": "Insulin receptor as a preformed dimer with IRS/PI3K branches is secondary"
+ },
+ {
+  "front": "How does the thyroid hormone receptor differ from the classic cytosolic steroid receptor model?",
+  "fp": "bcd04fe247b1",
+  "yield": "LOW",
+  "why": "Thyroid receptor corepressor/coactivator swap is beyond the outline"
+ },
+ {
+  "front": "How is a signaling cascade terminated?",
+  "fp": "f6dd0a9b7053",
+  "yield": "HIGH",
+  "why": "Signal termination mechanisms are explicitly tested"
+ },
+ {
+  "front": "In insulin resistance, inflammatory kinases phosphorylate IRS-1 on {{c1::serine}} residues, blocking the {{c2::tyrosine}} phosphorylation that recruits PI3K.",
+  "fp": "e0a6d10412ee",
+  "yield": "LOW",
+  "why": "IRS-1 serine vs tyrosine phosphorylation is molecular trivia beyond the outline"
+ },
+ {
+  "front": "Insulin receptor signaling is terminated in part by {{c1::PTP1B}} removing the receptor's activating phosphotyrosines.",
+  "fp": "93e4d2bed215",
+  "yield": "LOW",
+  "why": "PTP1B naming is trivia; termination is covered by plainer cards"
+ },
+ {
+  "front": "Ligand-gated ion channels respond within {{c1::milliseconds}} — the nicotinic ACh receptor opens its cation pore after binding {{c2::two}} ACh molecules.",
+  "fp": "40b8290f3669",
+  "yield": "HIGH",
+  "why": "Ligand-gated ion channels as the fast receptor class is core"
+ },
+ {
+  "front": "Liver epinephrine: beta receptor -> Gs -> cAMP -> PKA -> phosphorylase kinase -> glycogen {{c1::phosphorylase}}; PKA also inhibits glycogen {{c2::synthase}}.",
+  "fp": "ac9e45855234",
+  "yield": "HIGH",
+  "why": "Liver epinephrine-glycogen cascade is the template cascade for exam questions"
+ },
+ {
+  "front": "Name the common second messengers.",
+  "fp": "576d25159713",
+  "yield": "HIGH",
+  "why": "Naming the second messengers is core"
+ },
+ {
+  "front": "Name the three-tier kinase cascade downstream of Ras and its cellular endpoint.",
+  "fp": "9c2927190ec4",
+  "yield": "MEDIUM",
+  "why": "Raf/MEK/ERK tiers: Ras-MAPK concept is tested, tier names are secondary"
+ },
+ {
+  "front": "Neurofibromin, product of the tumor suppressor {{c1::NF1}}, is a GTPase-activating protein for Ras, so losing it leaves Ras {{c2::hyperactive}}.",
+  "fp": "283e9aedb25b",
+  "yield": "LOW",
+  "why": "NF1/neurofibromin is a clinical gene-name detail beyond the outline"
+ },
+ {
+  "front": "NF-kB is held in the cytosol by {{c1::IkB}}; once IKK phosphorylates IkB it is ubiquitinated and destroyed, freeing NF-kB to enter the nucleus.",
+  "fp": "a9808fb29fa7",
+  "yield": "LOW",
+  "why": "NF-kB/IkB is not on the outline; passages define it when used"
+ },
+ {
+  "front": "Nuclear MAPK phosphorylates factors such as Elk-1, inducing the immediate early genes {{c1::FOS and JUN}}, whose products form {{c2::AP-1}}.",
+  "fp": "b85ce839d45a",
+  "yield": "LOW",
+  "why": "FOS/JUN/AP-1 immediate early gene names are trivia-grade"
+ },
+ {
+  "front": "One antagonist shifts a dose-response curve right without lowering the maximum; another lowers the maximum. Classify each.",
+  "fp": "c71491240ebf",
+  "yield": "HIGH",
+  "why": "Competitive vs noncompetitive antagonist dose-response curves are tested"
+ },
+ {
+  "front": "Order the secretory pathway correctly:",
+  "fp": "fd76ee0c7b46",
+  "yield": "HIGH",
+  "why": "Secretory pathway order is core 2A cell biology"
+ },
+ {
+  "front": "Outline homologous desensitization of a GPCR.",
+  "fp": "14a46b9d7c32",
+  "yield": "MEDIUM",
+  "why": "GRK/arrestin desensitization is a second-tier termination mechanism"
+ },
+ {
+  "front": "PI3K phosphorylates PIP2 to {{c1::PIP3}}, recruiting Akt to the membrane; the tumor suppressor {{c2::PTEN}} reverses this step.",
+  "fp": "55e916a2f1ab",
+  "yield": "MEDIUM",
+  "why": "PI3K/Akt/PTEN is a common passage pathway; secondary to GPCR/RTK basics"
+ },
+ {
+  "front": "Prokaryotes lack:",
+  "fp": "5a96582bbbba",
+  "yield": "HIGH",
+  "why": "Prokaryote vs eukaryote structure is core 2A"
+ },
+ {
+  "front": "Pseudohypoparathyroidism and McCune-Albright syndrome involve the same G protein subunit. How do their mutations differ?",
+  "fp": "f25df22c6942",
+  "yield": "LOW",
+  "why": "Pseudohypoparathyroidism/McCune-Albright is clinical trivia"
+ },
+ {
+  "front": "Rising cytosolic Ca2+ usually acts through calmodulin, but in smooth muscle the decisive target is {{c1::myosin light chain kinase}}.",
+  "fp": "f048b62234ca",
+  "yield": "MEDIUM",
+  "why": "Ca2+ sensor identity (MLCK vs troponin) is a tested muscle distinction"
+ },
+ {
+  "front": "RTK activation: ligand induces receptor {{c1::dimerization}}, enabling trans-{{c2::autophosphorylation}} of cytoplasmic tyrosines.",
+  "fp": "a1259283416d",
+  "yield": "HIGH",
+  "why": "RTK dimerization and trans-autophosphorylation is the core RTK mechanism"
+ },
+ {
+  "front": "Signals must switch off. Name termination mechanisms at the ligand, receptor, transducer, and second-messenger levels.",
+  "fp": "10732008ec37",
+  "yield": "MEDIUM",
+  "why": "Fuller version of termination card; supporting detail on a HIGH concept"
+ },
+ {
+  "front": "Steroid hormone receptors are ligand-activated {{c1::transcription factors}} that bind DNA at {{c2::hormone response elements}}.",
+  "fp": "cc42c2ceab2f",
+  "yield": "HIGH",
+  "why": "Steroid receptors as ligand-activated transcription factors is core"
+ },
+ {
+  "front": "The Grb2-bound protein {{c1::SOS}} is the GEF that loads {{c2::GTP}} onto membrane-anchored Ras.",
+  "fp": "7932311a0d59",
+  "yield": "LOW",
+  "why": "Grb2/SOS adaptor names are beyond the outline; SH2 card covers the concept"
+ },
+ {
+  "front": "Trace nitric oxide signaling from endothelium to smooth muscle relaxation.",
+  "fp": "bcd56fd1749b",
+  "yield": "MEDIUM",
+  "why": "NO-cGMP vasodilation is a tested mechanism in 3B; secondary here"
+ },
+ {
+  "front": "What do receptor tyrosine kinases do?",
+  "fp": "9057192a8f8a",
+  "yield": "HIGH",
+  "why": "Plain statement of what RTKs do is core"
+ },
+ {
+  "front": "What do SH2 domains recognize, and how does the adaptor Grb2 use them?",
+  "fp": "8b4a1d7e6a8d",
+  "yield": "MEDIUM",
+  "why": "SH2/phosphotyrosine docking is a common passage detail"
+ },
+ {
+  "front": "What is apoptosis and how does it differ from necrosis?",
+  "fp": "05532933a01d",
+  "yield": "HIGH",
+  "why": "Apoptosis vs necrosis is a high-frequency distinction"
+ },
+ {
+  "front": "What is signal amplification?",
+  "fp": "60a6079e9169",
+  "yield": "HIGH",
+  "why": "Plain amplification definition is core"
+ },
+ {
+  "front": "What limits how long G-alpha stays active, and what do RGS proteins add?",
+  "fp": "1e474e93a52f",
+  "yield": "MEDIUM",
+  "why": "Intrinsic GTPase is core; RGS proteins are supporting detail"
+ },
+ {
+  "front": "Where does the unliganded glucocorticoid receptor reside, and what does cortisol binding change?",
+  "fp": "28eb915c5589",
+  "yield": "MEDIUM",
+  "why": "HSP90 masking is supporting detail on the tested cytosolic receptor model"
+ },
+ {
+  "front": "Which antibiotic targets the bacterial 30S ribosomal subunit?",
+  "fp": "7d443a3be405",
+  "yield": "LOW",
+  "why": "Misfiled: antibiotic ribosome targets belong to microbiology (2B); drug trivia"
+ },
+ {
+  "front": "Which membrane is impermeable to most ions, creating the proton gradient?",
+  "fp": "1130ce7c51d5",
+  "yield": "HIGH",
+  "why": "Inner mitochondrial membrane impermeability underlies the proton gradient; core"
+ },
+ {
+  "front": "Which receptor family signals through SMAD proteins, and how?",
+  "fp": "4ae4a6c203e2",
+  "yield": "LOW",
+  "why": "TGF-beta/SMAD pathway is not on the outline"
+ },
+ {
+  "front": "Why are phosphatases as essential to signaling as kinases? Name the major Ser/Thr and Tyr examples.",
+  "fp": "a907d7f1eb72",
+  "yield": "MEDIUM",
+  "why": "Phosphatase reversibility is tested; specific PP1/PP2A names are secondary"
+ },
+ {
+  "front": "Why can combining a nitrate with a PDE5 inhibitor cause life-threatening hypotension?",
+  "fp": "82e238be104f",
+  "yield": "LOW",
+  "why": "Nitrate + PDE5 drug interaction is pharmacology; concept covered by PDE cards"
+ },
+ {
+  "front": "Why do steroid hormone effects take hours while epinephrine acts within seconds?",
+  "fp": "74143c345721",
+  "yield": "MEDIUM",
+  "why": "Timing rationale supports the steroid vs peptide distinction"
+ },
+ {
+  "front": "Why do steroid hormones persist in circulation for hours while epinephrine is cleared in minutes?",
+  "fp": "a8aa7cdc6487",
+  "yield": "MEDIUM",
+  "why": "Carrier-protein binding of steroids is a tested endocrine concept"
+ },
+ {
+  "front": "Why does the Ras G12V mutation cause constitutive signaling even though GEFs are unaffected?",
+  "fp": "8820eebe40bf",
+  "yield": "MEDIUM",
+  "why": "Ras GTPase-dead mutation is a frequent passage scenario"
+ },
+ {
+  "front": "Why is Ca2+ signaling spatially confined, and how do cells exploit these microdomains?",
+  "fp": "1a5f2dcfc014",
+  "yield": "LOW",
+  "why": "Ca2+ microdomains and synaptotagmin are encyclopedia detail"
+ },
+ {
+  "front": "Without Wnt, a destruction complex containing {{c1::APC}} and GSK-3 marks beta-catenin for degradation; Wnt blocks this so beta-catenin enters the nucleus.",
+  "fp": "16f238814b25",
+  "yield": "LOW",
+  "why": "Wnt/APC/beta-catenin is not on the outline; colon cancer trivia"
+ }
+]

@@ -1,0 +1,428 @@
+[
+ {
+  "front": "{{c1::Anterograde}} amnesia blocks forming new memories after the injury; {{c2::retrograde}} amnesia erases memories from before it, sparing the oldest.",
+  "fp": "817a505130d3",
+  "yield": "HIGH",
+  "why": "Anterograde vs retrograde amnesia is core memory-dysfunction content"
+ },
+ {
+  "front": "{{c1::Context-dependent}} memory matches the external setting at encoding and test; {{c2::state-dependent}} memory matches the internal physiological state.",
+  "fp": "6ffb0f363b0d",
+  "yield": "HIGH",
+  "why": "Context- vs state-dependent memory is a high-frequency distinction"
+ },
+ {
+  "front": "{{c1::Negative reinforcement}} removes an aversive stimulus and increases behavior; {{c2::punishment}} decreases behavior. Both can involve removal.",
+  "fp": "af60162c726d",
+  "yield": "LOW",
+  "why": "Near-restatement of the plainer negative reinforcement vs punishment cloze"
+ },
+ {
+  "front": "{{c1::Proactive}} interference: old learning impairs new material; {{c2::retroactive}} interference: new learning disrupts older memories.",
+  "fp": "d7ff8392d62a",
+  "yield": "HIGH",
+  "why": "Proactive vs retroactive interference is a classic discrete"
+ },
+ {
+  "front": "{{c1::Thorndike}} used the puzzle box and the law of effect; {{c2::Skinner}} used the operant chamber and formalized reinforcement schedules.",
+  "fp": "f9128a04212e",
+  "yield": "MEDIUM",
+  "why": "Law of effect is tested; who-used-which-box pairing is secondary"
+ },
+ {
+  "front": "A {{c1::fixed-interval}} schedule produces a {{c2::scalloped}} cumulative response pattern — pausing after reward, then accelerating as reward time nears.",
+  "fp": "09fd10a2fb58",
+  "yield": "HIGH",
+  "why": "Schedule response patterns (FI scallop) are AAMC core"
+ },
+ {
+  "front": "A {{c1::variable-ratio}} schedule yields the highest, steadiest response rate and the greatest resistance to extinction.",
+  "fp": "2ed8edeecf7f",
+  "yield": "HIGH",
+  "why": "Variable-ratio rate and extinction resistance is a standard discrete"
+ },
+ {
+  "front": "A child buckles his seat belt to stop the car's chime. Classify the contingency, and contrast it with taking a toy away for hitting.",
+  "fp": "f938b53c4871",
+  "yield": "MEDIUM",
+  "why": "Application example of a HIGH contingency distinction"
+ },
+ {
+  "front": "A clinic gives vouchers for every negative urine screen and abstinence rises sharply. Name the technique and the principle it applies.",
+  "fp": "c2d5d9e5608c",
+  "yield": "MEDIUM",
+  "why": "Token economy/contingency management as clinical application of operant principles"
+ },
+ {
+  "front": "A patient recites his regimen accurately but keeps forgetting the evening dose. Which memory system is failing, and what intervention fits?",
+  "fp": "ba68b9d6830c",
+  "yield": "LOW",
+  "why": "Prospective memory is not on the AAMC outline; niche subtype"
+ },
+ {
+  "front": "A phobic patient improves after exposure therapy but relapses in a new setting. Which conditioning phenomena explain this?",
+  "fp": "5d19b5f2e4d8",
+  "yield": "MEDIUM",
+  "why": "Renewal/reinstatement are second-tier extinction phenomena; supports spontaneous recovery"
+ },
+ {
+  "front": "A student recognizes the right answer instantly but could not produce it on a blank page. Which memory stage failed, and what evidence supports that?",
+  "fp": "3e39e40d838f",
+  "yield": "MEDIUM",
+  "why": "Recall vs recognition and retrieval failure; second step on a listed concept"
+ },
+ {
+  "front": "A tone conditioned to predict food is later paired with a light until the light alone elicits salivation. What is this called?",
+  "fp": "ef59687139e7",
+  "yield": "MEDIUM",
+  "why": "Second-order conditioning is a plausible passage setup"
+ },
+ {
+  "front": "Adding a 30-second delay before free recall abolishes the {{c1::recency}} effect but spares the {{c2::primacy}} effect.",
+  "fp": "a5d330ab55f5",
+  "yield": "MEDIUM",
+  "why": "Serial position dissociation detail; supports STM/LTM distinction"
+ },
+ {
+  "front": "After bilateral medial temporal resection, patient H.M. improved daily at mirror tracing while denying ever doing the task. What does this dissociation show?",
+  "fp": "242822339643",
+  "yield": "MEDIUM",
+  "why": "H.M. illustrates explicit/implicit dissociation; supporting detail"
+ },
+ {
+  "front": "After extinction and a rest period, the CR reappears weakly to the CS — a phenomenon called {{c1::spontaneous recovery}}.",
+  "fp": "e61b3c7f7a03",
+  "yield": "HIGH",
+  "why": "Spontaneous recovery is core classical conditioning vocabulary with reasoning"
+ },
+ {
+  "front": "Are flashbulb memories more accurate than ordinary memories? What actually distinguishes them?",
+  "fp": "39b0b7e2b550",
+  "yield": "MEDIUM",
+  "why": "Flashbulb memory confidence-accuracy dissociation is plausible passage context"
+ },
+ {
+  "front": "Bandura's four requirements for observational learning: {{c1::attention}}, {{c2::retention}}, motor reproduction, and motivation.",
+  "fp": "a0f571b66488",
+  "yield": "HIGH",
+  "why": "Bandura's four requirements for observational learning are named AAMC content"
+ },
+ {
+  "front": "Both escape and avoidance learning use negative reinforcement. What distinguishes them?",
+  "fp": "21c463dbfa09",
+  "yield": "HIGH",
+  "why": "Escape vs avoidance learning is explicitly on the outline"
+ },
+ {
+  "front": "Classical conditioning acts on {{c1::involuntary, elicited}} responses; operant conditioning acts on {{c2::voluntary, emitted}} behavior via consequences.",
+  "fp": "3c20bc9e69cc",
+  "yield": "HIGH",
+  "why": "Classical vs operant is the foundational distinction of the section"
+ },
+ {
+  "front": "Contrast explicit and implicit memory.",
+  "fp": "4ed896e9358c",
+  "yield": "HIGH",
+  "why": "Explicit vs implicit memory types are core"
+ },
+ {
+  "front": "Contrast proactive and retroactive interference.",
+  "fp": "8d16c7a611a5",
+  "yield": "LOW",
+  "why": "Restates the proactive/retroactive cloze card in the same deck"
+ },
+ {
+  "front": "Contrast systematic desensitization, flooding, and aversive conditioning as clinical applications of conditioning.",
+  "fp": "96c9cacc9884",
+  "yield": "MEDIUM",
+  "why": "Clinical applications of conditioning; plausible passage context"
+ },
+ {
+  "front": "Define the four terms of classical conditioning.",
+  "fp": "fb0be3c34f0a",
+  "yield": "HIGH",
+  "why": "UCS/UCR/CS/CR terms underpin every classical conditioning question"
+ },
+ {
+  "front": "Distinguish negative reinforcement from punishment.",
+  "fp": "bedc6eeb155b",
+  "yield": "MEDIUM",
+  "why": "Overlaps the plainer cloze but adds positive/negative punishment split"
+ },
+ {
+  "front": "Ebbinghaus's forgetting curve: loss is steepest {{c1::immediately after learning}}, then levels off; {{c2::spaced}} practice flattens the curve.",
+  "fp": "3c44dd33cc7e",
+  "yield": "HIGH",
+  "why": "Ebbinghaus curve and spaced practice; decay is listed on the outline"
+ },
+ {
+  "front": "How does chunking let short-term memory exceed Miller's 7 plus-or-minus 2 items?",
+  "fp": "7e619447b86d",
+  "yield": "HIGH",
+  "why": "Chunking and 7 plus-or-minus 2 are standard STM discretes"
+ },
+ {
+  "front": "How does Garcia's conditioned taste aversion violate two classic 'rules' of conditioning?",
+  "fp": "cd2a94e101dc",
+  "yield": "HIGH",
+  "why": "Taste aversion/biological preparedness is listed biological constraint on learning"
+ },
+ {
+  "front": "How does shaping produce a behavior the animal has never performed?",
+  "fp": "9972609b5b3c",
+  "yield": "HIGH",
+  "why": "Shaping by successive approximations is core operant content"
+ },
+ {
+  "front": "In Baddeley's model, the {{c1::phonological loop}} rehearses verbal material; the {{c2::visuospatial sketchpad}} maintains images and locations.",
+  "fp": "10e4a01d3442",
+  "yield": "MEDIUM",
+  "why": "Working memory components are Kaplan-level supporting detail"
+ },
+ {
+  "front": "In Bandura's Bobo doll studies, what did the vicarious punishment condition reveal about learning versus performance?",
+  "fp": "b0d2bfc80297",
+  "yield": "MEDIUM",
+  "why": "Bobo doll learning-vs-performance detail supports observational learning"
+ },
+ {
+  "front": "In classical conditioning, the neutral stimulus becomes a:",
+  "fp": "23155019d89a",
+  "yield": "LOW",
+  "why": "Restates the four-terms classical conditioning card"
+ },
+ {
+  "front": "In early Alzheimer's disease, which brain region and neurotransmitter system decline first, and which memory type suffers earliest?",
+  "fp": "08666d389f0a",
+  "yield": "HIGH",
+  "why": "Bio basis of Alzheimer's (hippocampus, ACh, plaques/tangles) is named 6B content"
+ },
+ {
+  "front": "In Godden and Baddeley's diver study, when was word recall best?",
+  "fp": "2b5c611d6e1a",
+  "yield": "LOW",
+  "why": "Named study restating the context-dependent memory card"
+ },
+ {
+  "front": "In Kamin's blocking effect, why does a new light added to a trained tone fail to become a CS?",
+  "fp": "86f26a78ada8",
+  "yield": "LOW",
+  "why": "Kamin blocking and Rescorla-Wagner are beyond the AAMC outline"
+ },
+ {
+  "front": "In LTP, strong depolarization expels the {{c1::Mg2+}} block from {{c2::NMDA}} receptors, admitting Ca2+ that drives insertion of additional AMPA receptors.",
+  "fp": "33ed9d886535",
+  "yield": "MEDIUM",
+  "why": "LTP receptor mechanism is second-step detail on a listed concept"
+ },
+ {
+  "front": "In operant conditioning, {{c1::negative reinforcement}} removes an aversive stimulus to INCREASE a behavior, while {{c2::punishment}} decreases behavior.",
+  "fp": "77dc71775c21",
+  "yield": "HIGH",
+  "why": "Plainest negative reinforcement vs punishment card; core distinction"
+ },
+ {
+  "front": "Korsakoff syndrome: cause, hallmark memory symptom, and the characteristic behavior of filling gaps.",
+  "fp": "94a71d90d78d",
+  "yield": "HIGH",
+  "why": "Korsakoff syndrome is explicitly listed under memory dysfunction"
+ },
+ {
+  "front": "Latent learning demonstrates that:",
+  "fp": "d26c6b0aa360",
+  "yield": "HIGH",
+  "why": "Latent learning is core; plainest version in the deck"
+ },
+ {
+  "front": "Learned helplessness results from:",
+  "fp": "30ae47dd0286",
+  "yield": "HIGH",
+  "why": "Learned helplessness definition and depression link; plainest version"
+ },
+ {
+  "front": "Little Albert's fear spreading to rabbits and fur coats is stimulus {{c1::generalization}}; responding only to the trained CS is {{c2::discrimination}}.",
+  "fp": "9b0af4f5e7a6",
+  "yield": "HIGH",
+  "why": "Generalization vs discrimination with Little Albert is a classic discrete"
+ },
+ {
+  "front": "Loftus's 'smashed' vs 'hit' wording altered speed estimates and glass memories — the {{c1::misinformation}} effect, a failure of {{c2::source monitoring}}.",
+  "fp": "a3587a82c66e",
+  "yield": "HIGH",
+  "why": "Misinformation effect and source monitoring are named outline items"
+ },
+ {
+  "front": "Match the implicit memory type to its key structure: conditioned eyeblink, conditioned fear, and motor skills.",
+  "fp": "1579b756fb19",
+  "yield": "MEDIUM",
+  "why": "Structure mapping for implicit memory types; second-tier neuro detail"
+ },
+ {
+  "front": "Money and grades are {{c1::secondary (conditioned)}} reinforcers, acquiring value through association with {{c2::primary}} reinforcers.",
+  "fp": "4703351be0a5",
+  "yield": "HIGH",
+  "why": "Primary vs secondary reinforcers is a standard discrete"
+ },
+ {
+  "front": "Name the three memory stages.",
+  "fp": "e79e4ca864af",
+  "yield": "HIGH",
+  "why": "Encoding/storage/retrieval frame the memory section"
+ },
+ {
+  "front": "Rank recall, recognition, and relearning by sensitivity to residual memory, citing Ebbinghaus.",
+  "fp": "31ae6e725b0a",
+  "yield": "HIGH",
+  "why": "Recall/recognition/relearning are listed retrieval measures"
+ },
+ {
+  "front": "Recalling a memory briefly returns it to a labile state before it is stored again. Name this process and its clinical implication.",
+  "fp": "7d7c662b0ff2",
+  "yield": "MEDIUM",
+  "why": "Reconsolidation is plausible passage material with clinical tie-in"
+ },
+ {
+  "front": "Repeated gentle touch weakens an Aplysia gill withdrawal, but a tail shock strengthens responding to that same touch. Name each process.",
+  "fp": "077466f8eba6",
+  "yield": "MEDIUM",
+  "why": "Habituation/sensitization are core but framed through Aplysia specifics"
+ },
+ {
+  "front": "Rescorla gave one group tone-shock pairings only, and another the same pairings plus extra shocks without the tone. Why did the second group learn little?",
+  "fp": "b1d926326606",
+  "yield": "MEDIUM",
+  "why": "Contingency vs contiguity is a plausible passage reasoning step"
+ },
+ {
+  "front": "Seligman's dogs that received inescapable shock later failed to escape avoidable shock. Name the phenomenon and its clinical model.",
+  "fp": "7a22a6d740b4",
+  "yield": "LOW",
+  "why": "Restates the learned helplessness card with Seligman study detail"
+ },
+ {
+  "front": "Short-term memory is a passive {{c1::store}}; working memory adds active {{c2::manipulation}} under the central executive.",
+  "fp": "30c394677378",
+  "yield": "MEDIUM",
+  "why": "STM vs working memory distinction; supporting detail"
+ },
+ {
+  "front": "Sperling's partial report showed {{c1::iconic}} memory holds nearly the whole display for under a second; {{c2::echoic}} memory lasts about 3-4 seconds.",
+  "fp": "935ac1c0fb0b",
+  "yield": "MEDIUM",
+  "why": "Sensory memory durations; Sperling detail is second-tier"
+ },
+ {
+  "front": "State the Premack principle and give an everyday application.",
+  "fp": "c39db5f6c42a",
+  "yield": "MEDIUM",
+  "why": "Premack principle is a plausible discrete but secondary"
+ },
+ {
+  "front": "Stimulus generalization means:",
+  "fp": "78776819005b",
+  "yield": "LOW",
+  "why": "Restates the generalization/discrimination cloze card"
+ },
+ {
+  "front": "Subjects who slept after learning forgot far less than those awake the same hours. Which theory of forgetting does this favor, and what confound remains?",
+  "fp": "53dad8320dfd",
+  "yield": "MEDIUM",
+  "why": "Decay vs interference design reasoning fits AAMC experimental questions"
+ },
+ {
+  "front": "The Brelands' trained raccoons began 'washing' coins instead of depositing them. What does this instinctive drift demonstrate?",
+  "fp": "39e788e735f8",
+  "yield": "MEDIUM",
+  "why": "Instinctive drift is a listed biological constraint; secondary example"
+ },
+ {
+  "front": "The partial reinforcement extinction effect: behavior reinforced {{c1::intermittently}} extinguishes more slowly than continuously reinforced behavior.",
+  "fp": "6c1f772dd3cb",
+  "yield": "MEDIUM",
+  "why": "Partial reinforcement extinction effect supports the schedule cards"
+ },
+ {
+  "front": "The testing effect shows that:",
+  "fp": "d399b2d02a49",
+  "yield": "LOW",
+  "why": "Testing effect is learning-science advice not on the AAMC outline"
+ },
+ {
+  "front": "Tolman's unrewarded rats suddenly matched rewarded rats once food appeared — {{c1::latent}} learning, revealing an internal cognitive {{c2::map}}.",
+  "fp": "affcedda3ef7",
+  "yield": "LOW",
+  "why": "Restates the latent learning card with Tolman study detail"
+ },
+ {
+  "front": "Tulving split explicit memory into which two systems? Give an example distinguishing them.",
+  "fp": "07969dadba00",
+  "yield": "HIGH",
+  "why": "Episodic vs semantic memory is a core distinction"
+ },
+ {
+  "front": "Tulving's encoding specificity principle: retrieval succeeds when cues at test match the {{c1::encoding context}}.",
+  "fp": "9bc3d109900b",
+  "yield": "MEDIUM",
+  "why": "Encoding specificity generalizes the context/state-dependent card"
+ },
+ {
+  "front": "What are mirror neurons, and which learning process are they proposed to support?",
+  "fp": "92849c5ea8b2",
+  "yield": "HIGH",
+  "why": "Mirror neurons are explicitly listed under observational learning"
+ },
+ {
+  "front": "What does hippocampal damage cause?",
+  "fp": "7156d284cbad",
+  "yield": "MEDIUM",
+  "why": "Hippocampus-anterograde link; plainer companion to the amnesia cloze"
+ },
+ {
+  "front": "What is long-term potentiation?",
+  "fp": "b4a97e2d9c5c",
+  "yield": "HIGH",
+  "why": "LTP definition is named neural plasticity content"
+ },
+ {
+  "front": "What is systems consolidation, and what role does sleep play in it?",
+  "fp": "be0cb77eb81a",
+  "yield": "MEDIUM",
+  "why": "Systems consolidation and sleep; second step on retrograde sparing"
+ },
+ {
+  "front": "What is the self-reference effect, and what does it imply about encoding depth?",
+  "fp": "cc3babc31bf7",
+  "yield": "HIGH",
+  "why": "Self-reference effect is explicitly listed as an encoding aid"
+ },
+ {
+  "front": "What response pattern characterizes a fixed-ratio schedule?",
+  "fp": "9e47772db20b",
+  "yield": "HIGH",
+  "why": "Fixed-ratio response pattern is core schedule content"
+ },
+ {
+  "front": "Which CS-US timing arrangement produces the strongest classical conditioning?",
+  "fp": "9e55910d994b",
+  "yield": "MEDIUM",
+  "why": "CS-US timing arrangements are secondary conditioning detail"
+ },
+ {
+  "front": "Which of the following best describes spontaneous recovery?",
+  "fp": "0daeacbc465c",
+  "yield": "LOW",
+  "why": "Restates the spontaneous recovery cloze card"
+ },
+ {
+  "front": "Which reinforcement schedule is most resistant to extinction?",
+  "fp": "3f65b969f582",
+  "yield": "LOW",
+  "why": "Restates the variable-ratio card"
+ },
+ {
+  "front": "Why does elaborative rehearsal outperform maintenance rehearsal for long-term retention?",
+  "fp": "6507d3c69995",
+  "yield": "HIGH",
+  "why": "Elaborative vs maintenance rehearsal and levels of processing are listed"
+ }
+]

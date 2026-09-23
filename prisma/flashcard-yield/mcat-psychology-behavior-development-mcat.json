@@ -1,0 +1,434 @@
+[
+ {
+  "front": "'I won't cheat because if everyone broke rules, order would collapse and rules would mean nothing.' Which Kohlberg stage is this?",
+  "fp": "cd6011a8dfd7",
+  "yield": "HIGH",
+  "why": "Kohlberg stage identification from a scenario is how AAMC tests it"
+ },
+ {
+  "front": "{{c1::Anxious-ambivalent (resistant)}} infants are extremely distressed by separation yet resist soothing at reunion, both clinging and pushing away.",
+  "fp": "fd5889788a09",
+  "yield": "HIGH",
+  "why": "Anxious-ambivalent is one of the core Strange Situation types"
+ },
+ {
+  "front": "{{c1::Disorganized}} attachment, with contradictory freezing or approach-avoid behavior, is most linked to {{c2::abuse or frightening caregiving}}.",
+  "fp": "4bf44e144563",
+  "yield": "HIGH",
+  "why": "Disorganized attachment is the fourth standard type and its cause"
+ },
+ {
+  "front": "{{c1::Kubler-Ross}} described denial, anger, bargaining, depression, and acceptance in the dying; the key criticism is that they are not {{c2::sequential}}.",
+  "fp": "d3a8b4e73e3d",
+  "yield": "MEDIUM",
+  "why": "Kubler-Ross stages are common in prep; not on the AAMC outline"
+ },
+ {
+  "front": "{{c1::Menopause}} is cessation of menses with falling estrogen and rising FSH and LH; male reproductive aging is instead a {{c2::gradual}} testosterone decline.",
+  "fp": "14917709a1e5",
+  "yield": "MEDIUM",
+  "why": "Menopause hormone physiology belongs to the reproductive biology topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "{{c1::Primary}} sex characteristics are the reproductive organs; {{c2::secondary}} ones such as facial hair and breast development appear at puberty.",
+  "fp": "b71a63591ea9",
+  "yield": "LOW",
+  "why": "Primary/secondary sex characteristics are biology, not P/S development"
+ },
+ {
+  "front": "A 3-year-old says Sally will look where the marble actually is, not where she left it; by age 4 or 5 children answer correctly. Name the milestone.",
+  "fp": "6597207c6286",
+  "yield": "MEDIUM",
+  "why": "Theory of mind/false belief is a common secondary milestone"
+ },
+ {
+  "front": "A cross-sectional study finds 70-year-olds score lower on a reasoning test than 30-year-olds. Why might this not demonstrate decline with age?",
+  "fp": "4ce2ee96452b",
+  "yield": "MEDIUM",
+  "why": "Cohort effects are tested, but belong to research methods"
+ },
+ {
+  "front": "A kitten with one eye sutured shut early in life remains functionally blind in that eye after it is opened. What principle does this establish?",
+  "fp": "63cb398c3aff",
+  "yield": "LOW",
+  "why": "Monocular deprivation critical period is sensory neuroscience trivia here"
+ },
+ {
+  "front": "According to Piaget, the stage during which children develop object permanence is:",
+  "fp": "33b4ccd02634",
+  "yield": "HIGH",
+  "why": "Object permanence in the sensorimotor stage is core Piaget"
+ },
+ {
+  "front": "Ainsworth's caregiver {{c1::sensitivity}} hypothesis: secure attachment develops when caregivers respond promptly and consistently to infant signals.",
+  "fp": "0f903af1093f",
+  "yield": "MEDIUM",
+  "why": "Caregiver sensitivity is supporting detail on attachment types"
+ },
+ {
+  "front": "An aging pianist plays fewer pieces, practices them far more, and slows the passage before a fast one. Name the model of successful aging this illustrates.",
+  "fp": "bf61dc3e1f08",
+  "yield": "LOW",
+  "why": "Baltes SOC model of aging is not on the AAMC outline"
+ },
+ {
+  "front": "Arnett's {{c1::emerging adulthood}}, roughly ages 18 to 25, brings identity exploration and instability and is a {{c2::culturally}} produced stage.",
+  "fp": "d6058a08516d",
+  "yield": "LOW",
+  "why": "Arnett emerging adulthood is not on the AAMC outline"
+ },
+ {
+  "front": "Assimilation vs. accommodation in Piaget means:",
+  "fp": "99769d1d57b0",
+  "yield": "HIGH",
+  "why": "Assimilation vs accommodation is core Piaget"
+ },
+ {
+  "front": "Baumrind: {{c1::authoritative}} parenting is high demand plus high warmth and predicts the best outcomes; {{c2::authoritarian}} is high demand with low warmth.",
+  "fp": "6b289ddd7f13",
+  "yield": "MEDIUM",
+  "why": "Baumrind parenting styles are common secondary content"
+ },
+ {
+  "front": "Collective behavior differs from social movements in being:",
+  "fp": "d01f0a51ebcd",
+  "yield": "MEDIUM",
+  "why": "Collective behavior is sociology content misfiled in development [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Compare the three theories of emotion.",
+  "fp": "d24ce4fc8514",
+  "yield": "MEDIUM",
+  "why": "Theories of emotion are high-yield but belong to the emotion topic"
+ },
+ {
+  "front": "Deindividuation involves:",
+  "fp": "6ca4171f3094",
+  "yield": "MEDIUM",
+  "why": "Deindividuation is social psychology misfiled in development [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Describe Kohlberg's levels of moral development.",
+  "fp": "3f19b944025a",
+  "yield": "HIGH",
+  "why": "Kohlberg's three levels are core tested content"
+ },
+ {
+  "front": "Describe the psychoanalytic structures of personality.",
+  "fp": "0afe8aed5205",
+  "yield": "HIGH",
+  "why": "Id/ego/superego is core psychoanalytic personality theory"
+ },
+ {
+  "front": "Elkind's adolescent egocentrism: the {{c1::imaginary audience}} (everyone is watching me) and the {{c2::personal fable}} (I am unique and invulnerable).",
+  "fp": "61ae62c77533",
+  "yield": "MEDIUM",
+  "why": "Imaginary audience/personal fable are secondary adolescent concepts"
+ },
+ {
+  "front": "Erikson stage 1 (birth to 1 year): {{c1::trust vs mistrust}}, resolved through reliable caregiving; the resulting virtue is {{c2::hope}}.",
+  "fp": "56f2893e222c",
+  "yield": "HIGH",
+  "why": "Erikson stage 1 is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson stage 2 (1-3 years): {{c1::autonomy vs shame and doubt}}, centered on toddler self-control such as toileting and making choices.",
+  "fp": "db53b7470681",
+  "yield": "HIGH",
+  "why": "Erikson stage 2 is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson stage 3 (3-6 years): {{c1::initiative vs guilt}}, resolved by planning and leading play; virtue = {{c2::purpose}}.",
+  "fp": "12491ff4043e",
+  "yield": "HIGH",
+  "why": "Erikson stage 3 is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson stage 4 (6-12 years): {{c1::industry vs inferiority}}, driven by school achievement and peer comparison; virtue = competence.",
+  "fp": "8e638e24793a",
+  "yield": "HIGH",
+  "why": "Erikson stage 4 is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson's late adulthood conflict is {{c1::integrity vs despair}}: a life review that yields the virtue of {{c2::wisdom}} if the life is accepted as meaningful.",
+  "fp": "2653a3c6dea0",
+  "yield": "HIGH",
+  "why": "Erikson integrity vs despair is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson's middle adulthood conflict is {{c1::generativity vs stagnation}}: contributing to the next generation through work, parenting, or mentoring.",
+  "fp": "90be69b18f8f",
+  "yield": "HIGH",
+  "why": "Erikson generativity vs stagnation is core; stages are frequently tested"
+ },
+ {
+  "front": "Erikson's stage of young adulthood is:",
+  "fp": "74a92133de45",
+  "yield": "HIGH",
+  "why": "Erikson intimacy vs isolation is core; stages are frequently tested"
+ },
+ {
+  "front": "For {{c1::Piaget}}, development precedes learning (stage readiness); for {{c2::Vygotsky}}, social learning drives development.",
+  "fp": "7de9ae21efce",
+  "yield": "MEDIUM",
+  "why": "Piaget vs Vygotsky ordering of learning/development is a secondary contrast"
+ },
+ {
+  "front": "Freud's psychosexual stages: {{c1::oral}}, anal, {{c2::phallic}} (Oedipal conflict), latency, genital, with fixation from over- or under-gratification.",
+  "fp": "1f535f623ee7",
+  "yield": "HIGH",
+  "why": "Freud's psychosexual stages are on the AAMC identity outline"
+ },
+ {
+  "front": "Gene-environment {{c1::correlation}}: genotype shapes which environments one meets. Gene-environment {{c2::interaction}}: genotypes differ in response.",
+  "fp": "0b82223ae854",
+  "yield": "MEDIUM",
+  "why": "Gene-environment correlation vs interaction is a plausible passage step"
+ },
+ {
+  "front": "Generativity vs. stagnation occurs during:",
+  "fp": "dab0d8718888",
+  "yield": "LOW",
+  "why": "Restatement of the generativity vs stagnation card"
+ },
+ {
+  "front": "Give Maslow's hierarchy in order.",
+  "fp": "b629b717f42a",
+  "yield": "MEDIUM",
+  "why": "Maslow's hierarchy is high-yield but belongs to motivation/humanistic"
+ },
+ {
+  "front": "Heinz dilemma: 'He shouldn't steal, he'll be jailed' vs 'the right to life outweighs property law.' Which Kohlberg stages do these show?",
+  "fp": "ebda5bc6a6ca",
+  "yield": "HIGH",
+  "why": "Heinz dilemma stage scoring is the classic Kohlberg application"
+ },
+ {
+  "front": "How do Piaget and Vygotsky each interpret a child talking aloud to herself while solving a puzzle?",
+  "fp": "7f21973285b6",
+  "yield": "MEDIUM",
+  "why": "Private speech contrast is supporting detail on Piaget vs Vygotsky"
+ },
+ {
+  "front": "How does Bowlby's account of human attachment differ from Lorenz's imprinting?",
+  "fp": "aae43aed1a7b",
+  "yield": "MEDIUM",
+  "why": "Bowlby vs Lorenz imprinting is a plausible secondary contrast"
+ },
+ {
+  "front": "How does Bowlby's internal working model explain continuity between infant attachment and adult relationships?",
+  "fp": "6ae79d380c62",
+  "yield": "MEDIUM",
+  "why": "Internal working model is supporting detail on attachment"
+ },
+ {
+  "front": "How does the habituation-dishabituation paradigm let researchers ask what a preverbal infant can discriminate?",
+  "fp": "13c3ce47ee60",
+  "yield": "MEDIUM",
+  "why": "Habituation paradigm is a common infant-research method in passages"
+ },
+ {
+  "front": "How is temperament distinguished from personality?",
+  "fp": "5773f1a3d64f",
+  "yield": "MEDIUM",
+  "why": "Temperament vs personality distinction is useful secondary content"
+ },
+ {
+  "front": "In Harlow's studies, what happened when frightened monkeys had access to the cloth surrogate, and what were the effects of total isolation?",
+  "fp": "cf804a968f41",
+  "yield": "MEDIUM",
+  "why": "Secure-base and isolation findings extend the main Harlow card"
+ },
+ {
+  "front": "In Marcia's identity-status model, what distinguishes foreclosure from moratorium?",
+  "fp": "263807e8b2c9",
+  "yield": "MEDIUM",
+  "why": "Marcia identity statuses are common secondary identity content"
+ },
+ {
+  "front": "In normal aging, which memory abilities decline and which are preserved?",
+  "fp": "7ced39b8b5d2",
+  "yield": "MEDIUM",
+  "why": "Aging memory profile is a plausible passage question"
+ },
+ {
+  "front": "In the Strange Situation, {{c1::secure}} infants (about 60-65%) protest separation but are quickly comforted at reunion and return to exploring.",
+  "fp": "49c0fc505e8f",
+  "yield": "HIGH",
+  "why": "Secure attachment reunion behavior is core Strange Situation content"
+ },
+ {
+  "front": "In the Strange Situation, how does an avoidant infant respond when the caregiver returns?",
+  "fp": "652f46fa1ce0",
+  "yield": "HIGH",
+  "why": "Avoidant attachment reunion behavior is core Strange Situation content"
+ },
+ {
+  "front": "In Werner's Kauai longitudinal study, about a third of high-risk children became competent, successful adults. What did they have in common?",
+  "fp": "ac637dc57830",
+  "yield": "LOW",
+  "why": "Named longitudinal study; resilience trivia not on the outline"
+ },
+ {
+  "front": "Infants of 4 months look longer at a screen that appears to pass through a hidden block. What does this challenge, and what is the reasoning?",
+  "fp": "c1b32a66fe12",
+  "yield": "MEDIUM",
+  "why": "Looking-time critique of Piaget is a plausible passage argument"
+ },
+ {
+  "front": "Intellectual disability requires deficits in intellectual functioning (IQ near {{c1::70}} or below) AND {{c2::adaptive functioning}}, with onset in development.",
+  "fp": "b581285d8020",
+  "yield": "MEDIUM",
+  "why": "Intellectual disability criteria are secondary variation-in-ability content"
+ },
+ {
+  "front": "Kohlberg's conventional level: stage 3 seeks {{c1::interpersonal approval (good boy/girl)}}, stage 4 upholds {{c2::law and order}}.",
+  "fp": "026a0ad8a2c7",
+  "yield": "HIGH",
+  "why": "Kohlberg conventional stages 3-4 are core"
+ },
+ {
+  "front": "Kohlberg's postconventional level: stage 5 reasons from the {{c1::social contract}}, stage 6 from {{c2::universal ethical principles}}.",
+  "fp": "392a9ac88c76",
+  "yield": "HIGH",
+  "why": "Kohlberg postconventional stages 5-6 are core"
+ },
+ {
+  "front": "Kohlberg's preconventional level: stage 1 reasons from {{c1::punishment avoidance}}, stage 2 from {{c2::self-interest and instrumental exchange}}.",
+  "fp": "54f44c31c8e3",
+  "yield": "HIGH",
+  "why": "Kohlberg preconventional stages 1-2 are core"
+ },
+ {
+  "front": "Motor development proceeds {{c1::cephalocaudal}}, from head to toe, and {{c2::proximodistal}}, from the body center outward.",
+  "fp": "98939a8a09bf",
+  "yield": "LOW",
+  "why": "Motor development gradients are not P/S outline content"
+ },
+ {
+  "front": "Name Erikson's first five psychosocial conflicts, in order.",
+  "fp": "634d48db2bcc",
+  "yield": "HIGH",
+  "why": "Erikson stage sequence is core tested content"
+ },
+ {
+  "front": "Name the Big Five personality traits.",
+  "fp": "b735b8e03b2b",
+  "yield": "HIGH",
+  "why": "Big Five traits are core personality content"
+ },
+ {
+  "front": "Preoperational children fail {{c1::conservation}} tasks because of {{c2::centration}}, fixating on one dimension such as the height of the liquid.",
+  "fp": "dfbc423f4a89",
+  "yield": "HIGH",
+  "why": "Conservation failure via centration is core preoperational content"
+ },
+ {
+  "front": "Thomas and Chess temperament types: {{c1::easy}} (about 40%), {{c2::difficult}} (about 10%), and slow-to-warm-up (about 15%).",
+  "fp": "6475457e8b07",
+  "yield": "MEDIUM",
+  "why": "Thomas and Chess types are common; percentages are secondary"
+ },
+ {
+  "front": "Vygotsky's {{c1::zone of proximal development}} is the gap between what a child can do alone and what the child can do with guidance.",
+  "fp": "750156297eae",
+  "yield": "HIGH",
+  "why": "Zone of proximal development is core Vygotsky"
+ },
+ {
+  "front": "What are the two core diagnostic features of autism spectrum disorder?",
+  "fp": "ef6b22bc2cf8",
+  "yield": "MEDIUM",
+  "why": "ASD criteria are tested but belong to psychological disorders"
+ },
+ {
+  "front": "What did Harlow's wire-mother versus cloth-mother experiment demonstrate?",
+  "fp": "05a7016775b3",
+  "yield": "HIGH",
+  "why": "Harlow contact comfort is the classic attachment finding"
+ },
+ {
+  "front": "What did Kagan find about behaviorally inhibited (high-reactive) infants?",
+  "fp": "4a67d01363de",
+  "yield": "LOW",
+  "why": "Kagan inhibited-infant findings are named-researcher detail"
+ },
+ {
+  "front": "What does 'goodness of fit' mean in temperament research?",
+  "fp": "d4f64127cdc6",
+  "yield": "MEDIUM",
+  "why": "Goodness of fit is secondary temperament content"
+ },
+ {
+  "front": "What does socioemotional selectivity theory claim about aging?",
+  "fp": "b4108c5b6791",
+  "yield": "LOW",
+  "why": "Socioemotional selectivity theory is not on the AAMC outline"
+ },
+ {
+  "front": "What is scaffolding, and what should happen to it as the learner improves?",
+  "fp": "327231999a3c",
+  "yield": "HIGH",
+  "why": "Scaffolding is core Vygotsky"
+ },
+ {
+  "front": "What is the A-not-B error, and which Piagetian stage does it characterize?",
+  "fp": "438f892a61cb",
+  "yield": "MEDIUM",
+  "why": "A-not-B error is supporting detail on object permanence"
+ },
+ {
+  "front": "What is the overjustification effect?",
+  "fp": "076705ec0d3e",
+  "yield": "MEDIUM",
+  "why": "Overjustification effect is tested but belongs to motivation"
+ },
+ {
+  "front": "What is the Yerkes–Dodson law?",
+  "fp": "d699a1179a3f",
+  "yield": "MEDIUM",
+  "why": "Yerkes-Dodson is tested but belongs to motivation/arousal"
+ },
+ {
+  "front": "What was Gilligan's criticism of Kohlberg's moral development theory?",
+  "fp": "799df6e4d2f7",
+  "yield": "MEDIUM",
+  "why": "Gilligan's care-orientation critique is a common Kohlberg follow-up"
+ },
+ {
+  "front": "Which brain maturation mismatch explains heightened adolescent risk-taking?",
+  "fp": "60a3006f4e61",
+  "yield": "MEDIUM",
+  "why": "Limbic/prefrontal mismatch is a plausible adolescent passage point"
+ },
+ {
+  "front": "Which Eriksonian conflict defines adolescence, and what does failure to resolve it look like?",
+  "fp": "767da1d3fdf0",
+  "yield": "HIGH",
+  "why": "Identity vs role confusion is the core adolescent Erikson stage"
+ },
+ {
+  "front": "Which stage of Piaget features egocentrism and lack of conservation?",
+  "fp": "6e959cb5be2a",
+  "yield": "HIGH",
+  "why": "Preoperational egocentrism/lack of conservation is core Piaget"
+ },
+ {
+  "front": "Why does a persisting Moro or plantar Babinski reflex at 18 months concern a pediatrician?",
+  "fp": "6cf8b0918350",
+  "yield": "LOW",
+  "why": "Primitive reflex persistence is clinical pediatrics beyond the MCAT"
+ },
+ {
+  "front": "Why is the embryonic period, roughly weeks 3 to 8, the most vulnerable window for structural birth defects?",
+  "fp": "4af62f94a516",
+  "yield": "MEDIUM",
+  "why": "Teratogen timing belongs to embryology, not P/S development [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "With normal aging, {{c1::fluid}} intelligence declines from midlife while {{c2::crystallized}} intelligence stays stable or grows into the 60s and beyond.",
+  "fp": "57f135825ff7",
+  "yield": "MEDIUM",
+  "why": "Fluid/crystallized aging; also covered in the cognition topic"
+ }
+]

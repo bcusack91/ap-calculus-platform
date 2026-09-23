@@ -1,0 +1,398 @@
+[
+ {
+  "front": "{{c1::Cyclin E-CDK2}} completes Rb hyperphosphorylation at the G1/S transition, fully releasing E2F.",
+  "fp": "9092bda45ed0",
+  "yield": "MEDIUM",
+  "why": "Cyclin E-CDK2 completing Rb release; supporting detail on the Rb/E2F restriction-point concept"
+ },
+ {
+  "front": "{{c1::Quiescence}} (G0) is reversible when growth factors return, whereas {{c2::senescence}} is a permanent arrest enforced by p16 and p53.",
+  "fp": "ee430c043a49",
+  "yield": "MEDIUM",
+  "why": "G0 quiescence vs permanent senescence; useful distinction, rarely the point itself"
+ },
+ {
+  "front": "{{c1::Wee1}} kinase holds CDK1 inactive by adding inhibitory phosphates, keeping MPF off until G2 ends.",
+  "fp": "b919c1036511",
+  "yield": "LOW",
+  "why": "Wee1 kinase is beyond AAMC's conceptual-level cyclin/CDK coverage"
+ },
+ {
+  "front": "A cell in $G_2$ has how many chromatids per chromosome?",
+  "fp": "904829804e3b",
+  "yield": "HIGH",
+  "why": "Chromatid count per phase is a core discrete-question fact"
+ },
+ {
+  "front": "A compound makes cells pile up at 4N DNA content with no increase in the region between peaks. What does it block?",
+  "fp": "d1d9595dc431",
+  "yield": "MEDIUM",
+  "why": "Flow-cytometry 4N pile-up reasoning; plausible passage data interpretation"
+ },
+ {
+  "front": "A patient has 45,X in half her cells and 46,XX in the rest. Was the error meiotic or mitotic, and how can you tell?",
+  "fp": "0f8151f4e362",
+  "yield": "MEDIUM",
+  "why": "Mosaicism as evidence of a post-zygotic mitotic error; second-step reasoning"
+ },
+ {
+  "front": "A trisomic individual whose extra chromosome carries two different parental alleles indicates nondisjunction in meiosis {{c1::I}}.",
+  "fp": "a7b28c8891a0",
+  "yield": "MEDIUM",
+  "why": "Allele pattern distinguishing MI vs MII nondisjunction; passage-level inference"
+ },
+ {
+  "front": "An oncogene differs from a tumor suppressor in that an oncogene is:",
+  "fp": "27859d001685",
+  "yield": "HIGH",
+  "why": "Oncogene vs tumor suppressor gain/loss-of-function is core tested content"
+ },
+ {
+  "front": "Aneuploid daughters implicate the {{c1::spindle assembly}} checkpoint; mutations accumulating after radiation implicate the {{c2::DNA damage}} checkpoints.",
+  "fp": "44ad0f6e0b03",
+  "yield": "HIGH",
+  "why": "Matching a failure phenotype to the responsible checkpoint is classic exam reasoning"
+ },
+ {
+  "front": "At anaphase onset, APC/C-Cdc20 ubiquitinates {{c1::securin}}, freeing separase.",
+  "fp": "1a3b6d5469ca",
+  "yield": "MEDIUM",
+  "why": "APC/C-securin-separase is the anaphase trigger mechanism; names are secondary"
+ },
+ {
+  "front": "BRCA1 and BRCA2: oncogenes or tumor suppressors, and what pathway do they serve?",
+  "fp": "a9f9596cafb0",
+  "yield": "MEDIUM",
+  "why": "BRCA as tumor suppressors in DSB repair; common passage context"
+ },
+ {
+  "front": "Cells in S phase are identified by incorporating {{c1::BrdU or tritiated thymidine}}, because thymidine is used for DNA but not RNA.",
+  "fp": "308e10792265",
+  "yield": "MEDIUM",
+  "why": "BrdU/3H-thymidine S-phase labeling is a standard experimental technique in passages"
+ },
+ {
+  "front": "Classify Myc, HER2, and Bcr-Abl, and give each one's mechanism in a phrase.",
+  "fp": "eb1641e56bdc",
+  "yield": "LOW",
+  "why": "Specific oncogene names (Myc, HER2, Bcr-Abl) are beyond the AAMC outline"
+ },
+ {
+  "front": "Classify neurons, hepatocytes, and intestinal crypt cells with respect to G0, and connect this to healing.",
+  "fp": "5800392f0251",
+  "yield": "MEDIUM",
+  "why": "Labile/stable/permanent tissues connect G0 to healing; secondary concept"
+ },
+ {
+  "front": "Colchicine disrupts mitosis by:",
+  "fp": "581d4b682285",
+  "yield": "HIGH",
+  "why": "Colchicine/taxol microtubule action is a high-frequency discrete fact"
+ },
+ {
+  "front": "Contrast the two families of CDK inhibitors: INK4 vs Cip/Kip.",
+  "fp": "ec135bde7b19",
+  "yield": "LOW",
+  "why": "INK4 vs Cip/Kip inhibitor families are trivia-grade for the MCAT"
+ },
+ {
+  "front": "Crossing over occurs during {{c1::pachytene}} of prophase I, when the synaptonemal complex fully joins homologs.",
+  "fp": "cd06bf3bd6b5",
+  "yield": "LOW",
+  "why": "Prophase I substage naming; crossing over in prophase I is covered by a plainer card"
+ },
+ {
+  "front": "DNA damage is sensed by the kinases {{c1::ATM and ATR}}, which then phosphorylate the checkpoint kinases Chk2 and Chk1.",
+  "fp": "d502ce56f6b4",
+  "yield": "LOW",
+  "why": "ATM/ATR and Chk1/Chk2 kinase names exceed conceptual-level checkpoint coverage"
+ },
+ {
+  "front": "DNA replication occurs during which phase?",
+  "fp": "0ac755ccd545",
+  "yield": "HIGH",
+  "why": "DNA replication in S phase is core"
+ },
+ {
+  "front": "During $G_1$, the cell primarily:",
+  "fp": "1d3df09a1dbe",
+  "yield": "HIGH",
+  "why": "G1 vs G2 roles is core phase content"
+ },
+ {
+  "front": "Fusing an S-phase cell with a G1 cell makes the G1 nucleus begin replicating. What did such fusion experiments establish?",
+  "fp": "d0b7e4e7ff82",
+  "yield": "MEDIUM",
+  "why": "Cell-fusion experiments as evidence for cytoplasmic cycle drivers; experimental-reasoning context"
+ },
+ {
+  "front": "High-risk HPV causes cancer because E6 drives degradation of {{c1::p53}} while E7 inactivates {{c2::Rb}}, releasing E2F.",
+  "fp": "453f366df61e",
+  "yield": "MEDIUM",
+  "why": "HPV E6/E7 illustrates p53/Rb loss; classic clinical flavor of tumor suppressor mechanism"
+ },
+ {
+  "front": "How do cyclins and CDKs drive the cycle?",
+  "fp": "20961cfd589c",
+  "yield": "HIGH",
+  "why": "Cyclin/CDK oscillation is the core conceptual mechanism AAMC tests"
+ },
+ {
+  "front": "How does decades-long meiotic arrest explain the maternal age effect in trisomy 21?",
+  "fp": "ff9465b4e276",
+  "yield": "MEDIUM",
+  "why": "Cohesin decay explains maternal age effect; secondary but passage-plausible"
+ },
+ {
+  "front": "How does meiosis differ from mitosis?",
+  "fp": "e3a8a27d6cdf",
+  "yield": "HIGH",
+  "why": "Mitosis vs meiosis outcomes is core"
+ },
+ {
+  "front": "How does the cell exit mitosis after chromatids separate?",
+  "fp": "5c8b5de062f5",
+  "yield": "MEDIUM",
+  "why": "Cyclin B destruction inactivating CDK1 for mitotic exit; second-step detail"
+ },
+ {
+  "front": "Human oocytes arrest in {{c1::prophase I}} from fetal life until ovulation, then arrest again in {{c2::metaphase II}} until fertilization.",
+  "fp": "ed81c1e4b87d",
+  "yield": "HIGH",
+  "why": "Oocyte arrest at prophase I and metaphase II is a frequently tested fact"
+ },
+ {
+  "front": "Hydroxyurea and nocodazole are both used to synchronize cultures. Where does each arrest cells, and by what mechanism?",
+  "fp": "5cfdd53714de",
+  "yield": "MEDIUM",
+  "why": "Synchronization drug logic (dNTP starvation vs spindle); borderline, drug names are secondary"
+ },
+ {
+  "front": "If nondisjunction occurs in meiosis I, what is the gamete outcome?",
+  "fp": "5d51305119f7",
+  "yield": "HIGH",
+  "why": "MI nondisjunction gamete outcome is a classic discrete question"
+ },
+ {
+  "front": "In a 24-hour cycle, G1 lasts about {{c1::11}} hours, S about 8, G2 about 4, and M about {{c2::1}} hour.",
+  "fp": "359f30ae78f4",
+  "yield": "LOW",
+  "why": "Exact phase durations in hours are not on the AAMC outline"
+ },
+ {
+  "front": "In a flow cytometry DNA histogram, what do the 2N and 4N peaks represent, and what lies between them?",
+  "fp": "e4573744d5d5",
+  "yield": "MEDIUM",
+  "why": "DNA-content histogram interpretation is a common passage figure"
+ },
+ {
+  "front": "In a trisomy case, what allele pattern implicates meiosis II nondisjunction?",
+  "fp": "57c79253a88f",
+  "yield": "MEDIUM",
+  "why": "MII allele signature; complements the MI card at passage level"
+ },
+ {
+  "front": "In G1, hypophosphorylated {{c1::Rb}} binds E2F transcription factors, blocking transcription of S-phase genes.",
+  "fp": "af84498b95b2",
+  "yield": "MEDIUM",
+  "why": "Rb sequestering E2F is the restriction-point brake; supporting mechanism"
+ },
+ {
+  "front": "In meiosis I, {{c1::shugoshin}} protects centromeric cohesin from separase, so only arm cohesin is cleaved.",
+  "fp": "527bf753e416",
+  "yield": "LOW",
+  "why": "Shugoshin is trivia-grade specificity"
+ },
+ {
+  "front": "In unstressed cells, p53 is kept at low levels by {{c1::MDM2}}, an E3 ubiquitin ligase.",
+  "fp": "4c7dbf9a2046",
+  "yield": "LOW",
+  "why": "MDM2 regulation of p53 exceeds conceptual-level tumor suppressor coverage"
+ },
+ {
+  "front": "Independent assortment of 23 chromosome pairs alone yields {{c1::$2^{23}$}} (about 8.4 million) possible gametes, before crossing over is counted.",
+  "fp": "07ae1aafa3c3",
+  "yield": "HIGH",
+  "why": "2^n gamete combinations is a standard calculation"
+ },
+ {
+  "front": "Li-Fraumeni syndrome is caused by an inherited mutation in {{c1::TP53 (p53)}}.",
+  "fp": "1e836dcc993f",
+  "yield": "LOW",
+  "why": "Li-Fraumeni is a clinical syndrome name; two-hit concept covered by the Knudson card"
+ },
+ {
+  "front": "List the phases of the cell cycle.",
+  "fp": "5e28c0e3f811",
+  "yield": "HIGH",
+  "why": "Phases of the cell cycle are core"
+ },
+ {
+  "front": "Maturation promoting factor (MPF) consists of:",
+  "fp": "37044b23dcc6",
+  "yield": "MEDIUM",
+  "why": "MPF = cyclin B/CDK1 driving mitotic entry; classic supporting fact"
+ },
+ {
+  "front": "Mechanistically, how do Chk1/Chk2 impose G2 arrest after DNA damage?",
+  "fp": "00b2c3cc46f2",
+  "yield": "LOW",
+  "why": "Chk1/Chk2-Cdc25 mechanism is beyond conceptual checkpoint coverage"
+ },
+ {
+  "front": "Methotrexate blocks {{c1::dihydrofolate reductase}} and 5-fluorouracil blocks {{c2::thymidylate synthase}}, so both starve S phase of dTMP.",
+  "fp": "3eae18881b18",
+  "yield": "MEDIUM",
+  "why": "Methotrexate/5-FU targets belong to nucleotide metabolism; drug-name specificity [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "Name two structural substrates MPF phosphorylates to remodel the cell for mitosis.",
+  "fp": "e2e379e50541",
+  "yield": "MEDIUM",
+  "why": "Lamin/condensin phosphorylation explains envelope breakdown; supporting detail"
+ },
+ {
+  "front": "Oncogenic {{c1::Ras}} mutations impair GTP hydrolysis, locking the protein in its active GTP-bound state.",
+  "fp": "a8e4d8e43e64",
+  "yield": "MEDIUM",
+  "why": "Ras GTP-locked oncogene is a classic signaling/oncogene example"
+ },
+ {
+  "front": "Oncogenic mutations act {{c1::dominantly — one mutant allele suffices}}, while tumor suppressors require loss of both alleles.",
+  "fp": "f4a71dcfb016",
+  "yield": "MEDIUM",
+  "why": "Dominant oncogene vs two-hit suppressor; overlaps the plainer oncogene card"
+ },
+ {
+  "front": "Order the five substages of meiotic prophase I.",
+  "fp": "a4cfe38712d2",
+  "yield": "LOW",
+  "why": "Five prophase I substages are trivia-grade vocabulary"
+ },
+ {
+  "front": "p53 arrests the cell cycle by inducing transcription of {{c1::p21}}, a broad CDK inhibitor.",
+  "fp": "36c6f4661ac2",
+  "yield": "MEDIUM",
+  "why": "p53 inducing p21 to arrest the cycle; supporting mechanism of a HIGH concept"
+ },
+ {
+  "front": "State Knudson's two-hit hypothesis using retinoblastoma as the example.",
+  "fp": "5efde443813d",
+  "yield": "HIGH",
+  "why": "Knudson two-hit hypothesis with retinoblastoma is classic tested content"
+ },
+ {
+  "front": "The phosphatase {{c1::Cdc25}} removes inhibitory phosphates from CDK1, switching on MPF and triggering mitotic entry.",
+  "fp": "91cd58fbb5a4",
+  "yield": "LOW",
+  "why": "Cdc25 phosphatase is beyond conceptual-level CDK regulation"
+ },
+ {
+  "front": "The Rb pathway is disrupted in nearly every human cancer. How can a tumor achieve that without mutating RB1 itself?",
+  "fp": "03473ad449bc",
+  "yield": "MEDIUM",
+  "why": "Applying Rb pathway logic to alternate lesions; good reasoning, secondary"
+ },
+ {
+  "front": "What are chiasmata, and what mechanical job do they perform?",
+  "fp": "b059cbb45c6a",
+  "yield": "MEDIUM",
+  "why": "Chiasmata as crossover sites linking homologs; supporting detail"
+ },
+ {
+  "front": "What do cell cycle checkpoints verify?",
+  "fp": "46481409e476",
+  "yield": "HIGH",
+  "why": "What each checkpoint verifies is core"
+ },
+ {
+  "front": "What does cyclin A-CDK2 do during S phase?",
+  "fp": "99100fe8fe44",
+  "yield": "LOW",
+  "why": "Cyclin A-CDK2 origin licensing is trivia-grade"
+ },
+ {
+  "front": "What does the spindle assembly checkpoint monitor, and through which proteins does it signal?",
+  "fp": "d780646291f4",
+  "yield": "MEDIUM",
+  "why": "Spindle checkpoint monitors attachment; Mad2/BubR1 names are extra"
+ },
+ {
+  "front": "What exactly does separase cleave to trigger anaphase?",
+  "fp": "21138a7cfe63",
+  "yield": "LOW",
+  "why": "Kleisin/Scc1 cohesin subunit is trivia-grade"
+ },
+ {
+  "front": "What happens at the G₁/S (restriction) checkpoint?",
+  "fp": "4b80c2c08e8d",
+  "yield": "HIGH",
+  "why": "G1/S restriction checkpoint criteria is core"
+ },
+ {
+  "front": "What happens in each mitotic stage?",
+  "fp": "568ccf161241",
+  "yield": "HIGH",
+  "why": "Mitotic stages are core"
+ },
+ {
+  "front": "What is nondisjunction?",
+  "fp": "d79ed1638473",
+  "yield": "HIGH",
+  "why": "Nondisjunction definition and aneuploidy is core"
+ },
+ {
+  "front": "What is the immediate result of failed cytokinesis after an otherwise normal mitosis, and how would you detect it?",
+  "fp": "1df85641a754",
+  "yield": "MEDIUM",
+  "why": "Cytokinesis failure producing tetraploidy; passage-plausible reasoning"
+ },
+ {
+  "front": "What separates at anaphase I vs anaphase II vs mitotic anaphase?",
+  "fp": "66ef9c82e551",
+  "yield": "LOW",
+  "why": "Near-restatement of the plainer anaphase I vs II card"
+ },
+ {
+  "front": "What separates in anaphase I vs. anaphase II?",
+  "fp": "0d4f3021bc29",
+  "yield": "HIGH",
+  "why": "Anaphase I vs II is a high-frequency distinction"
+ },
+ {
+  "front": "What two proteins make up MPF, and what transition does it drive?",
+  "fp": "d3c024e212c6",
+  "yield": "LOW",
+  "why": "Near-restatement of the MPF composition card"
+ },
+ {
+  "front": "When damage is irreparable, which pro-apoptotic genes does p53 transactivate?",
+  "fp": "ea860165b929",
+  "yield": "MEDIUM",
+  "why": "p53 driving Bax/PUMA links checkpoint failure to apoptosis; secondary"
+ },
+ {
+  "front": "When do crossing over and independent assortment occur?",
+  "fp": "58da277596d5",
+  "yield": "HIGH",
+  "why": "Timing of crossing over and independent assortment is core"
+ },
+ {
+  "front": "Which cyclin-CDK complex begins phosphorylating Rb in mid-G1 in response to growth-factor signaling?",
+  "fp": "032c24d7800e",
+  "yield": "MEDIUM",
+  "why": "Cyclin D-CDK4/6 linking growth factors to restriction point; supporting mechanism"
+ },
+ {
+  "front": "Why does conventional chemotherapy predictably cause myelosuppression, mucositis, and hair loss?",
+  "fp": "b29233f09575",
+  "yield": "MEDIUM",
+  "why": "Clinical flavor illustrating proliferation-rate targeting"
+ },
+ {
+  "front": "Why must centromeric cohesion survive anaphase I?",
+  "fp": "d9ca84ba83a0",
+  "yield": "MEDIUM",
+  "why": "Why centromeric cohesion persists through MI; second-step reasoning"
+ }
+]

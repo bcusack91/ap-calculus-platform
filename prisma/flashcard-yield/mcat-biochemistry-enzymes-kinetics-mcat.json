@@ -1,0 +1,428 @@
+[
+ {
+  "front": "$V_{max} = k_{cat}[E]_{total}$: doubling enzyme concentration {{c1::doubles $V_{max}$}} but leaves {{c2::$K_m$}} unchanged.",
+  "fp": "3638a06f4855",
+  "yield": "HIGH",
+  "why": "Vmax scales with [E], Km does not: core data-interpretation distinction"
+ },
+ {
+  "front": "5-fluorouracil forms a covalent dead-end complex with {{c1::thymidylate synthase}}, the textbook example of {{c2::suicide}} inhibition.",
+  "fp": "a03bc5175289",
+  "yield": "LOW",
+  "why": "Specific drug/target pair; suicide inhibition concept covered by the generic card"
+ },
+ {
+  "front": "A competitive inhibitor {{c1::increases}} Km and {{c2::does not change}} Vmax.",
+  "fp": "d933aaaf38e1",
+  "yield": "HIGH",
+  "why": "Competitive inhibition Km/Vmax: most-tested enzyme fact"
+ },
+ {
+  "front": "A mutase, which relocates a group within one molecule, is an {{c1::isomerase}}; a decarboxylase is a {{c2::lyase}}.",
+  "fp": "d5107792d045",
+  "yield": "MEDIUM",
+  "why": "Subclass-to-class mapping; second-tier example of enzyme classification"
+ },
+ {
+  "front": "A noncompetitive inhibitor {{c1::does not change}} Km and {{c2::decreases}} Vmax.",
+  "fp": "fbd7d6449ace",
+  "yield": "HIGH",
+  "why": "Noncompetitive inhibition Km/Vmax: core"
+ },
+ {
+  "front": "A rate curve that rises, peaks, and then DECLINES as $[S]$ keeps increasing indicates what phenomenon?",
+  "fp": "949512452b7c",
+  "yield": "MEDIUM",
+  "why": "Substrate inhibition curve shape; plausible passage-figure question"
+ },
+ {
+  "front": "A sigmoidal $v$ vs $[S]$ curve indicates what, and which constant replaces $K_m$?",
+  "fp": "127a325d8d93",
+  "yield": "MEDIUM",
+  "why": "Adds K0.5 to the sigmoidal/cooperativity concept covered by the plainer card"
+ },
+ {
+  "front": "Allopurinol lowers urate by inhibiting {{c1::xanthine oxidase}}, so patients excrete the more soluble {{c2::hypoxanthine and xanthine}} instead.",
+  "fp": "e900d059a8c1",
+  "yield": "LOW",
+  "why": "Drug-specific (allopurinol/xanthine oxidase); purine catabolism detail, not kinetics core"
+ },
+ {
+  "front": "An uncompetitive inhibitor produces {{c1::parallel}} lines on a Lineweaver-Burk plot.",
+  "fp": "2e73188a0bd8",
+  "yield": "HIGH",
+  "why": "Uncompetitive = parallel Lineweaver-Burk lines: core"
+ },
+ {
+  "front": "Apoenzyme + cofactor = {{c1::holoenzyme}}; a tightly or covalently bound cofactor is called a {{c2::prosthetic group}}.",
+  "fp": "c3887fe432ef",
+  "yield": "MEDIUM",
+  "why": "Holoenzyme/prosthetic-group terms; the combined definitions card is the primary one"
+ },
+ {
+  "front": "Aspartate transcarbamoylase (ATCase) is feedback-inhibited by {{c1::CTP}} and activated by {{c2::ATP}}.",
+  "fp": "77007990a127",
+  "yield": "MEDIUM",
+  "why": "ATCase is the textbook allosteric example; passage would supply it"
+ },
+ {
+  "front": "At $[S] = 10K_m$, what fraction of $V_{max}$ is achieved?",
+  "fp": "1f857b224ff3",
+  "yield": "HIGH",
+  "why": "Michaelis-Menten fraction calculation at a multiple of Km"
+ },
+ {
+  "front": "At which substrate concentrations is an uncompetitive inhibitor most effective?",
+  "fp": "0c9256d7e475",
+  "yield": "MEDIUM",
+  "why": "Uncompetitive inhibitors act at high [S]; second-step reasoning on a HIGH concept"
+ },
+ {
+  "front": "Both irreversible and pure noncompetitive inhibitors lower apparent $V_{max}$. How do you distinguish them experimentally?",
+  "fp": "92a29cd3b9c0",
+  "yield": "MEDIUM",
+  "why": "Dialysis to distinguish reversible/irreversible: plausible experimental-design item"
+ },
+ {
+  "front": "Carbonic anhydrase uses a {{c1::$Zn^{2+}$}} ion to activate a water molecule and is inhibited by the drug {{c2::acetazolamide}}.",
+  "fp": "ab57beaa3327",
+  "yield": "LOW",
+  "why": "Zn cofactor and acetazolamide are drug/enzyme trivia"
+ },
+ {
+  "front": "Cofactor vs coenzyme, and the vitamin connection.",
+  "fp": "a3ad3be0eda6",
+  "yield": "MEDIUM",
+  "why": "Cofactor vs coenzyme and vitamin origins; supporting detail"
+ },
+ {
+  "front": "Contrast the concerted (MWC) and sequential (KNF) models of allostery.",
+  "fp": "243eeba4dc32",
+  "yield": "MEDIUM",
+  "why": "MWC vs KNF models; secondary but in prep books"
+ },
+ {
+  "front": "Digestive pH optima: pepsin works near pH {{c1::2}}, while pancreatic trypsin and chymotrypsin work near pH {{c2::8}}.",
+  "fp": "3471930c46b9",
+  "yield": "MEDIUM",
+  "why": "Digestive pH optima: classic example of pH effect"
+ },
+ {
+  "front": "Distinguish cofactors, coenzymes, prosthetic groups, apoenzyme, holoenzyme.",
+  "fp": "2146057ca9d6",
+  "yield": "HIGH",
+  "why": "Cofactor/coenzyme/prosthetic/apo/holo definitions: AAMC-listed terms"
+ },
+ {
+  "front": "Enzyme classes: a kinase is a {{c1::transferase}}; a phosphatase is a {{c2::hydrolase}}.",
+  "fp": "0fdc6ecf6929",
+  "yield": "HIGH",
+  "why": "Kinase = transferase, phosphatase = hydrolase: high-frequency classification"
+ },
+ {
+  "front": "Enzyme X has $k_{cat}/K_m = 10^7$ for substrate A and $10^5$ for substrate B. What does this mean?",
+  "fp": "2058cfbe1046",
+  "yield": "HIGH",
+  "why": "kcat/Km as specificity constant; comparison-type question"
+ },
+ {
+  "front": "Hill coefficient: $n_H > 1$ means {{c1::positive cooperativity}}; $n_H < 1$ means {{c2::negative cooperativity}}; hemoglobin's is about {{c3::2.8}}.",
+  "fp": "2d350dc9b67c",
+  "yield": "MEDIUM",
+  "why": "Hill coefficient interpretation; Hb value is secondary"
+ },
+ {
+  "front": "Homotropic vs heterotropic allosteric effectors — what distinguishes them?",
+  "fp": "960fbb59437e",
+  "yield": "MEDIUM",
+  "why": "Homotropic vs heterotropic effectors; definition rarely asked itself"
+ },
+ {
+  "front": "How do temperature and pH affect enzyme activity?",
+  "fp": "dd1f512324d8",
+  "yield": "HIGH",
+  "why": "Temperature and pH effects on activity: outline core"
+ },
+ {
+  "front": "How does a COMPETITIVE inhibitor affect $K_m$ and $V_{max}$?",
+  "fp": "33169631ff9f",
+  "yield": "LOW",
+  "why": "Restates the competitive-inhibitor cloze card"
+ },
+ {
+  "front": "How does a MIXED inhibitor affect kinetics?",
+  "fp": "944684902d54",
+  "yield": "HIGH",
+  "why": "Mixed inhibition Vmax down, Km either way: core"
+ },
+ {
+  "front": "How does a NONCOMPETITIVE inhibitor affect $K_m$ and $V_{max}$?",
+  "fp": "ec5ac1423976",
+  "yield": "LOW",
+  "why": "Restates the noncompetitive-inhibitor cloze card"
+ },
+ {
+  "front": "How does an enzyme speed up a reaction, and what does it NOT change?",
+  "fp": "484fac54d4e5",
+  "yield": "HIGH",
+  "why": "Enzymes lower Ea, do not change dG or Keq: core"
+ },
+ {
+  "front": "How does an irreversible inhibitor like aspirin (on cyclooxygenase) appear kinetically?",
+  "fp": "b5a990248d91",
+  "yield": "MEDIUM",
+  "why": "Irreversible inhibitor mimics noncompetitive kinetics; supporting application"
+ },
+ {
+  "front": "How does an UNCOMPETITIVE inhibitor affect $K_m$ and $V_{max}$?",
+  "fp": "08d28638fbe8",
+  "yield": "HIGH",
+  "why": "Uncompetitive inhibition Km and Vmax both fall: core"
+ },
+ {
+  "front": "How does the Lineweaver-Burk plot linearize Michaelis-Menten kinetics?",
+  "fp": "737845cb4444",
+  "yield": "MEDIUM",
+  "why": "LB equation derivation; the intercept/slope cloze card is the primary one"
+ },
+ {
+  "front": "In a purification table, total activity {{c1::falls}} at every step while specific activity ({{c2::units per mg protein}}) rises.",
+  "fp": "3a1098d6b308",
+  "yield": "MEDIUM",
+  "why": "Purification table / specific activity: plausible passage data step"
+ },
+ {
+  "front": "In methanol or ethylene glycol poisoning, {{c1::fomepizole}} acts as a competitive inhibitor of {{c2::alcohol dehydrogenase}}.",
+  "fp": "82514eee7f65",
+  "yield": "LOW",
+  "why": "Drug-specific antidote (fomepizole); clinical detail"
+ },
+ {
+  "front": "LDH isozymes are tetramers of H and M subunits: {{c1::LDH-1}} dominates in heart, {{c2::LDH-5}} in liver and skeletal muscle.",
+  "fp": "cc0c541817d8",
+  "yield": "LOW",
+  "why": "LDH isozyme tissue distribution is clinical trivia"
+ },
+ {
+  "front": "Ligase vs lyase — the classic naming trap.",
+  "fp": "abb45bd7fbed",
+  "yield": "HIGH",
+  "why": "Ligase vs lyase distinction: enzyme classes are outline core"
+ },
+ {
+  "front": "Lineweaver-Burk plot: y-intercept = {{c1::$1/V_{max}$}}, x-intercept = {{c2::$-1/K_m$}}, slope = {{c3::$K_m/V_{max}$}}.",
+  "fp": "9466bc569d0c",
+  "yield": "HIGH",
+  "why": "Lineweaver-Burk intercepts and slope: core"
+ },
+ {
+  "front": "Mechanistically, how does phosphorylation change an enzyme's activity?",
+  "fp": "a03f49ac1ff9",
+  "yield": "MEDIUM",
+  "why": "Mechanism of phosphorylation-based regulation; supporting detail"
+ },
+ {
+  "front": "Methotrexate is a {{c1::competitive}} inhibitor of {{c2::dihydrofolate reductase}}; leucovorin rescues normal cells by supplying reduced folate downstream.",
+  "fp": "27d48d8c5737",
+  "yield": "LOW",
+  "why": "Drug-specific (methotrexate/DHFR); competitive inhibition covered generically"
+ },
+ {
+  "front": "Michaelis-Menten analysis assumes the {{c1::steady-state}} approximation for $[ES]$, initial-rate conditions, and $[S] \\gg [E]$.",
+  "fp": "62307260d36a",
+  "yield": "MEDIUM",
+  "why": "Michaelis-Menten assumptions; plausible discrete question"
+ },
+ {
+  "front": "Mixed inhibition: what happens to $V_{max}$ and $K_m$?",
+  "fp": "59607e6c1c8a",
+  "yield": "LOW",
+  "why": "Restates the mixed-inhibitor card"
+ },
+ {
+  "front": "NADH and NADPH absorb at {{c1::340}} nm while the oxidized forms do not, so a falling $A_{340}$ reports {{c2::oxidation}} of NADH.",
+  "fp": "555f2b307472",
+  "yield": "MEDIUM",
+  "why": "A340 NADH assay appears in passages; belongs more to lab techniques"
+ },
+ {
+  "front": "Name the catalytic triad of chymotrypsin and each residue's role.",
+  "fp": "cc7a1a6e78f4",
+  "yield": "MEDIUM",
+  "why": "Chymotrypsin catalytic triad: classic passage mechanism"
+ },
+ {
+  "front": "Name the chemical strategies enzymes use to accelerate a reaction.",
+  "fp": "9a10238fb187",
+  "yield": "MEDIUM",
+  "why": "Catalytic strategies overview; supporting detail on transition-state stabilization"
+ },
+ {
+  "front": "Not every biological catalyst is a protein: {{c1::ribozymes}} are catalytic RNA, and the peptidyl transferase center of the {{c2::ribosome}} is one.",
+  "fp": "dda852a5c835",
+  "yield": "MEDIUM",
+  "why": "Ribozymes: real but secondary; overlaps nucleic-acid topic"
+ },
+ {
+  "front": "On a Lineweaver-Burk plot, competitive inhibitor lines intersect on the {{c1::y}}-axis; pure noncompetitive lines intersect on the {{c2::x}}-axis.",
+  "fp": "759763dbc5d0",
+  "yield": "HIGH",
+  "why": "LB intersection point identifies inhibitor type: core"
+ },
+ {
+  "front": "On an Eadie-Hofstee plot of $v$ against $v/[S]$, the slope is {{c1::$-K_m$}} and the y-intercept is {{c2::$V_{max}$}}.",
+  "fp": "e50b68ba8655",
+  "yield": "LOW",
+  "why": "Eadie-Hofstee plot is not on the AAMC outline"
+ },
+ {
+  "front": "Organophosphates phosphorylate the active-site serine of {{c1::acetylcholinesterase}}; {{c2::pralidoxime}} can regenerate the enzyme before aging occurs.",
+  "fp": "11452a6dce3b",
+  "yield": "LOW",
+  "why": "Organophosphate/pralidoxime clinical pharmacology"
+ },
+ {
+  "front": "Penicillin inhibits bacterial transpeptidase {{c1::irreversibly}}, so its effect cannot be relieved by {{c2::dilution or excess substrate}}.",
+  "fp": "32d4bc184f58",
+  "yield": "MEDIUM",
+  "why": "Penicillin as irreversible inhibitor; illustrates a tested mechanism"
+ },
+ {
+  "front": "Reciprocal control: phosphorylation {{c1::activates}} glycogen phosphorylase but {{c2::inactivates}} glycogen synthase.",
+  "fp": "7cae887fbad6",
+  "yield": "MEDIUM",
+  "why": "Reciprocal phosphorylation control; belongs to glycogen metabolism but illustrates regulation"
+ },
+ {
+  "front": "Serine proteases are irreversibly inhibited by {{c1::DIPF}}, which covalently modifies the active-site {{c2::serine}}.",
+  "fp": "fa6c2c0d7fd5",
+  "yield": "LOW",
+  "why": "DIPF reagent name is trivia; irreversible serine modification covered elsewhere"
+ },
+ {
+  "front": "State the Michaelis-Menten equation and define its terms.",
+  "fp": "024a228964d1",
+  "yield": "HIGH",
+  "why": "Michaelis-Menten equation and terms: core"
+ },
+ {
+  "front": "Synthase vs synthetase: what is the difference?",
+  "fp": "aabfb6e3f1cd",
+  "yield": "MEDIUM",
+  "why": "Synthase vs synthetase naming; secondary distinction"
+ },
+ {
+  "front": "The six classic enzyme classes are {{c1::oxidoreductase, transferase, hydrolase, lyase, isomerase, and ligase}}.",
+  "fp": "c5cb8aad02fd",
+  "yield": "HIGH",
+  "why": "Six enzyme classes: outline core"
+ },
+ {
+  "front": "To which enzyme class do dehydrogenases belong, and what do they require?",
+  "fp": "99ceb4deebcc",
+  "yield": "HIGH",
+  "why": "Dehydrogenase = oxidoreductase with NAD/FAD: high-frequency"
+ },
+ {
+  "front": "What distinguishes allosteric (cooperative) enzymes kinetically?",
+  "fp": "64db79a6587c",
+  "yield": "HIGH",
+  "why": "Sigmoidal kinetics of allosteric enzymes: core"
+ },
+ {
+  "front": "What does $K_m$ represent and what does a low $K_m$ mean?",
+  "fp": "6a83db3876e4",
+  "yield": "HIGH",
+  "why": "Km definition and affinity meaning: core"
+ },
+ {
+  "front": "What does a low $K_i$ tell you about an inhibitor?",
+  "fp": "3066a3aabd2c",
+  "yield": "MEDIUM",
+  "why": "Ki interpretation; supporting detail"
+ },
+ {
+  "front": "What is $k_{cat}$ (turnover number) and the catalytic efficiency?",
+  "fp": "90702f97e318",
+  "yield": "HIGH",
+  "why": "kcat and catalytic efficiency: core definitions"
+ },
+ {
+  "front": "What is a suicide (mechanism-based) inhibitor? Give an example.",
+  "fp": "9272ada668c2",
+  "yield": "MEDIUM",
+  "why": "Suicide inhibitor definition; secondary inhibition type"
+ },
+ {
+  "front": "What is a zymogen, and why are digestive proteases made as zymogens?",
+  "fp": "bd3d41f98cef",
+  "yield": "HIGH",
+  "why": "Zymogens: named on the AAMC outline"
+ },
+ {
+  "front": "What is feedback inhibition?",
+  "fp": "70538cc72b23",
+  "yield": "HIGH",
+  "why": "Feedback inhibition: core regulation concept"
+ },
+ {
+  "front": "What is the difference between zero-order and first-order regions of an enzyme curve?",
+  "fp": "d3b7610698dc",
+  "yield": "HIGH",
+  "why": "First-order vs zero-order regions of the curve: core"
+ },
+ {
+  "front": "What is the reaction order with respect to substrate when $[S] \\ll K_m$? When $[S] \\gg K_m$?",
+  "fp": "8c15ac6b0b30",
+  "yield": "LOW",
+  "why": "Restates the zero/first-order card"
+ },
+ {
+  "front": "Where in a pathway do allosteric regulators typically act, and why there?",
+  "fp": "f8fda04e43c6",
+  "yield": "MEDIUM",
+  "why": "Regulation at committed step; supporting reasoning"
+ },
+ {
+  "front": "Which serum markers rise after myocardial infarction, and which is the most specific?",
+  "fp": "b87edded3c16",
+  "yield": "LOW",
+  "why": "MI serum markers are clinical medicine, outside 1A"
+ },
+ {
+  "front": "Why are transition-state analogs often far more potent inhibitors than substrate analogs?",
+  "fp": "b6d836087ef0",
+  "yield": "MEDIUM",
+  "why": "Transition-state analog potency; supporting reasoning"
+ },
+ {
+  "front": "Why does an uncompetitive inhibitor DECREASE the apparent $K_m$?",
+  "fp": "35abfc3f4418",
+  "yield": "MEDIUM",
+  "why": "Why uncompetitive lowers Km; second step on a HIGH concept"
+ },
+ {
+  "front": "Why does blood alcohol fall at a constant rate per hour rather than exponentially?",
+  "fp": "2ac33358e85b",
+  "yield": "MEDIUM",
+  "why": "Zero-order ethanol elimination: nice application of saturation"
+ },
+ {
+  "front": "Why does enzyme activity fall on both sides of the optimal pH?",
+  "fp": "7dfb70c1e148",
+  "yield": "MEDIUM",
+  "why": "pH mechanism; supporting detail on the pH-effect card"
+ },
+ {
+  "front": "Why is histidine the residue most often found performing general acid-base catalysis?",
+  "fp": "e44f5b19326c",
+  "yield": "MEDIUM",
+  "why": "Histidine pKa in acid-base catalysis; supporting detail"
+ },
+ {
+  "front": "With a competitive inhibitor, the apparent $K_m$ becomes {{c1::$K_m(1 + [I]/K_i)$}}.",
+  "fp": "dc80c1993d03",
+  "yield": "MEDIUM",
+  "why": "Apparent Km formula with Ki; secondary quantitative relation"
+ }
+]

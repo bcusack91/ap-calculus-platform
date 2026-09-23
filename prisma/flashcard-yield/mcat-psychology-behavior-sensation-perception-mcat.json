@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Pacinian}} corpuscles sense deep pressure/vibration; {{c2::Meissner}} corpuscles light touch; Merkel discs texture; Ruffini endings stretch.",
+  "fp": "9f967c87a803",
+  "yield": "MEDIUM",
+  "why": "Mechanoreceptor roster is prep-book somatosensation; AAMC outline only names pain explicitly"
+ },
+ {
+  "front": "{{c1::Presbyopia}} is age-related loss of lens accommodation for near vision; {{c2::presbycusis}} is age-related high-frequency sensorineural hearing loss.",
+  "fp": "0da7b7df1ba1",
+  "yield": "LOW",
+  "why": "Age-related presbyopia/presbycusis is clinical vocabulary beyond the 6A outline"
+ },
+ {
+  "front": "{{c1::Size constancy}} holds perceived size steady as distance changes the retinal image; {{c2::shape constancy}} holds perceived shape steady as slant changes.",
+  "fp": "9f83eda98994",
+  "yield": "HIGH",
+  "why": "Perceptual constancies are named on the 6A outline and asked directly"
+ },
+ {
+  "front": "A patient with V1 destruction denies seeing anything yet reliably points to lights in the blind field. Name this and its anatomical explanation.",
+  "fp": "9eb9a4aabd68",
+  "yield": "LOW",
+  "why": "Blindsight is neuroscience trivia; a passage would define it if used"
+ },
+ {
+  "front": "A person consistently experiences the numeral 7 as green. Name the phenomenon and the leading neural account.",
+  "fp": "9c9e906775c8",
+  "yield": "LOW",
+  "why": "Synesthesia and its cross-activation account are trivia-grade for the MCAT"
+ },
+ {
+  "front": "A radiologist told 'never miss a tumor' shifts to a liberal criterion. What happens to hits and false alarms?",
+  "fp": "0d9986cd8f21",
+  "yield": "HIGH",
+  "why": "Criterion shift reasoning (hits and false alarms both rise) is the classic SDT question"
+ },
+ {
+  "front": "A retinal ganglion cell with an {{c1::on-center, off-surround}} receptive field is nearly silent under diffuse light because of {{c2::lateral inhibition}}.",
+  "fp": "8c803571f703",
+  "yield": "MEDIUM",
+  "why": "Center-surround fields support lateral inhibition; the Mach-band card is the plainer version"
+ },
+ {
+  "front": "A subject notices 2 g added to a 100 g weight. Per Weber's law, how much must be added to 500 g to be noticed?",
+  "fp": "8a5615e6224f",
+  "yield": "HIGH",
+  "why": "Weber's law calculation is the formula item for this topic"
+ },
+ {
+  "front": "After staring at a green square, a viewer sees a red patch on white paper. Which theory of color vision does this support, and by what mechanism?",
+  "fp": "edd8bf9a3990",
+  "yield": "HIGH",
+  "why": "Afterimages via opponent-process is the standard color-vision question"
+ },
+ {
+  "front": "An amputee feels burning in a missing hand and reports hand sensations when his cheek is touched. What explains both findings?",
+  "fp": "a8191d619da9",
+  "yield": "LOW",
+  "why": "Phantom limb cortical remapping is neuroplasticity trivia outside 6A core"
+ },
+ {
+  "front": "At the optic chiasm, fibers from the {{c1::nasal}} halves of each retina cross, so each hemisphere processes the {{c2::contralateral}} visual field.",
+  "fp": "d1c7f0f12d39",
+  "yield": "HIGH",
+  "why": "Optic chiasm nasal crossing and contralateral fields are a frequently tested pathway fact"
+ },
+ {
+  "front": "Cochlear hair cells depolarize when tip links pull open channels admitting {{c1::potassium (K+)}}, which is unusually concentrated in the {{c2::endolymph}}.",
+  "fp": "8e1dd430544c",
+  "yield": "LOW",
+  "why": "K+-rich endolymph transduction detail is physiology beyond the AAMC psych outline"
+ },
+ {
+  "front": "Conductive hearing loss results from:",
+  "fp": "333e344f7b8e",
+  "yield": "MEDIUM",
+  "why": "Conductive vs sensorineural loss is a common second-step distinction in hearing items"
+ },
+ {
+  "front": "Contrast bottom-up and top-down processing.",
+  "fp": "10d2db299a4f",
+  "yield": "HIGH",
+  "why": "Bottom-up vs top-down processing is named on the outline and asked directly"
+ },
+ {
+  "front": "Describe the time course of dark adaptation and the 'rod-cone break'.",
+  "fp": "d38e8d3f0641",
+  "yield": "LOW",
+  "why": "Dark-adaptation minute values and rod-cone break are numeric trivia not on the outline"
+ },
+ {
+  "front": "Distinguish proprioception, kinesthesia, and the vestibular sense, and name the receptors for each.",
+  "fp": "a75c2713e611",
+  "yield": "MEDIUM",
+  "why": "Kinesthetic and vestibular senses are outline items; receptor roster is supporting detail"
+ },
+ {
+  "front": "Distinguish sensation from perception.",
+  "fp": "f58ceb923f3b",
+  "yield": "MEDIUM",
+  "why": "Sensation vs perception is a definition needed for understanding, rarely a point itself"
+ },
+ {
+  "front": "Distinguish sensory adaptation from habituation, including where each occurs.",
+  "fp": "a32e452ebdc7",
+  "yield": "HIGH",
+  "why": "Sensory adaptation vs habituation is a high-frequency distinction"
+ },
+ {
+  "front": "Fechner's law: sensation grows {{c1::logarithmically}} with stimulus intensity; Stevens' law instead uses a {{c2::power}} function.",
+  "fp": "86d914b7ebeb",
+  "yield": "MEDIUM",
+  "why": "Fechner log vs Stevens power law is second-tier psychophysics"
+ },
+ {
+  "front": "Gestalt: {{c1::closure}} makes us perceive incomplete figures as whole, and {{c2::pragnanz}} says perception defaults to the simplest stable organization.",
+  "fp": "cadeab01e63f",
+  "yield": "MEDIUM",
+  "why": "Closure and pragnanz are secondary Gestalt principles; the roster card is primary"
+ },
+ {
+  "front": "Give two unusual properties of olfactory receptor neurons compared with most neurons.",
+  "fp": "c1874c674343",
+  "yield": "LOW",
+  "why": "Olfactory neuron regeneration and one-receptor-per-neuron are trivia beyond the outline"
+ },
+ {
+  "front": "How does the volley principle rescue frequency theory above ~1000 Hz?",
+  "fp": "e934421192cd",
+  "yield": "MEDIUM",
+  "why": "Volley principle is a second step behind place vs frequency theory"
+ },
+ {
+  "front": "How is the absolute threshold operationally defined in psychophysics?",
+  "fp": "e56b1115dd1e",
+  "yield": "HIGH",
+  "why": "Absolute threshold as 50% detection is core threshold content"
+ },
+ {
+  "front": "In {{c1::myopia}} the image focuses in front of the retina and needs a diverging lens; in {{c2::hyperopia}} it focuses behind and needs a converging lens.",
+  "fp": "a0756a2dea1d",
+  "yield": "MEDIUM",
+  "why": "Myopia/hyperopia lens correction is askable but mostly tested via C/P optics"
+ },
+ {
+  "front": "In Rubin's vase, the image flips between a vase and two faces. Which gestalt principle is at work, and why does the flip occur?",
+  "fp": "a9cf84c43cd3",
+  "yield": "MEDIUM",
+  "why": "Figure-ground via Rubin's vase is a standard Gestalt illustration"
+ },
+ {
+  "front": "In signal detection terms, screening {{c1::sensitivity}} is the hit rate and {{c2::specificity}} is the correct-rejection rate.",
+  "fp": "6925323528f7",
+  "yield": "MEDIUM",
+  "why": "Mapping sensitivity/specificity onto SDT is a useful cross-section second step"
+ },
+ {
+  "front": "In signal detection theory, {{c1::d-prime (d')}} indexes sensitivity, while the {{c2::criterion}} reflects response bias — the strategy for saying yes.",
+  "fp": "ad71e893c4c2",
+  "yield": "HIGH",
+  "why": "d-prime vs criterion is the core signal-detection distinction"
+ },
+ {
+  "front": "Motion parallax: as you move, near objects appear to sweep {{c1::opposite}} to your motion while distant objects seem to move {{c2::with}} you.",
+  "fp": "3045eb0df5b7",
+  "yield": "MEDIUM",
+  "why": "Motion parallax is a named monocular cue; secondary to the cue-family card"
+ },
+ {
+  "front": "Name the main Gestalt principles.",
+  "fp": "f567cc0436ab",
+  "yield": "HIGH",
+  "why": "Gestalt principle roster is asked directly"
+ },
+ {
+  "front": "Name the two binocular depth cues and state which one dominates at very close range.",
+  "fp": "d8cdfb7a4c91",
+  "yield": "MEDIUM",
+  "why": "Retinal disparity vs convergence is supporting detail on the binocular cue card"
+ },
+ {
+  "front": "Olfaction is the only sense that bypasses the {{c1::thalamus}}, projecting from the olfactory bulb directly to {{c2::limbic}} structures.",
+  "fp": "18e9928b413a",
+  "yield": "HIGH",
+  "why": "Olfaction bypassing the thalamus is a classic discrete item"
+ },
+ {
+  "front": "Opponent-process theory explains:",
+  "fp": "d2e418b082fb",
+  "yield": "LOW",
+  "why": "Restates the afterimage/opponent-process card (8), which carries the mechanism"
+ },
+ {
+  "front": "People from non-carpentered, rural societies are less fooled by the Muller-Lyer illusion. What does this cross-cultural result imply about perception?",
+  "fp": "ba63a9a200c1",
+  "yield": "MEDIUM",
+  "why": "Muller-Lyer cross-cultural result illustrates top-down/cultural influence in passages"
+ },
+ {
+  "front": "Per Melzack and Wall's gate control theory, why does rubbing an injury reduce pain?",
+  "fp": "e486da179ca8",
+  "yield": "HIGH",
+  "why": "Gate control theory is the named pain-perception mechanism on the outline"
+ },
+ {
+  "front": "Place theory best explains perception of:",
+  "fp": "5a9d32ec937f",
+  "yield": "HIGH",
+  "why": "Place vs frequency theory of pitch is asked directly"
+ },
+ {
+  "front": "Radiologists told a chest film came from a smoker report more nodules than those given no history. Name the effect and the processing it illustrates.",
+  "fp": "81a53d35a3d4",
+  "yield": "MEDIUM",
+  "why": "Radiology expectancy scenario illustrates perceptual set; plain definition card exists"
+ },
+ {
+  "front": "Railroad tracks seem to meet in the distance. Which monocular cue is this, and how does interposition differ?",
+  "fp": "d39b600bd753",
+  "yield": "MEDIUM",
+  "why": "Linear perspective vs interposition are named monocular cues; secondary to the family card"
+ },
+ {
+  "front": "Red-green color deficiency is {{c1::X-linked recessive}} and far more common in {{c2::males}}; blue-yellow (tritan) defects are rare and not sex-linked.",
+  "fp": "d8c5a8785ce8",
+  "yield": "LOW",
+  "why": "X-linked inheritance of color blindness is genetics content, not 6A perception"
+ },
+ {
+  "front": "Signal detection: on a noise-only trial the subject reports a signal. What outcome is this?",
+  "fp": "8deee882a3dd",
+  "yield": "HIGH",
+  "why": "The SDT 2x2 outcome matrix is asked directly"
+ },
+ {
+  "front": "Signal detection: the signal is present but the subject says no. Name the outcome and the criterion shift that makes it more common.",
+  "fp": "be80502c1f3a",
+  "yield": "MEDIUM",
+  "why": "Miss plus conservative-criterion shift is the mirror of the liberal-criterion card"
+ },
+ {
+  "front": "Sound localization relies primarily on:",
+  "fp": "20aa8afcb398",
+  "yield": "MEDIUM",
+  "why": "Interaural time/intensity cues are askable auditory localization content"
+ },
+ {
+  "front": "State Weber's law.",
+  "fp": "89fa3828d925",
+  "yield": "HIGH",
+  "why": "Weber's law statement is core psychophysics"
+ },
+ {
+  "front": "Subliminal primes reliably shift a nearby rating slightly but do not make people buy things they do not want. What does this show about thresholds?",
+  "fp": "e03c0339994b",
+  "yield": "MEDIUM",
+  "why": "Subliminal processing below threshold is an outline point; passage-flavored here"
+ },
+ {
+  "front": "Sweet, umami, and bitter tastes are transduced by {{c1::G protein-coupled receptors}}; salty and sour by {{c2::ion channels}}.",
+  "fp": "3f0e44cd6756",
+  "yield": "MEDIUM",
+  "why": "Taste transduction split (GPCR vs channel) is supporting detail on gustation"
+ },
+ {
+  "front": "The {{c1::magnocellular}} pathway carries motion and depth with high temporal resolution; the {{c2::parvocellular}} pathway carries color and fine detail.",
+  "fp": "e666528cffec",
+  "yield": "MEDIUM",
+  "why": "Magno/parvo pathways support the parallel-processing item; prep-book depth"
+ },
+ {
+  "front": "The {{c1::parasympathetic}} nervous system constricts pupils; the {{c2::sympathetic}} system dilates them.",
+  "fp": "0255f6b5f1ca",
+  "yield": "MEDIUM",
+  "why": "Autonomic pupil control is simple and askable, though it sits closer to nervous-system content"
+ },
+ {
+  "front": "The {{c1::ventral}} 'what' stream runs to the temporal lobe for object identity; the {{c2::dorsal}} 'where and how' stream runs to the parietal lobe.",
+  "fp": "d4bdd4c42ae6",
+  "yield": "MEDIUM",
+  "why": "Ventral/dorsal streams appear in passages; secondary to core visual pathway"
+ },
+ {
+  "front": "The rod pigment {{c1::rhodopsin}} is the protein opsin bound to {{c2::retinal}}, a vitamin A derivative that changes shape when it absorbs light.",
+  "fp": "f8db49fdf804",
+  "yield": "MEDIUM",
+  "why": "Rhodopsin/retinal and vitamin A night blindness is supporting phototransduction detail"
+ },
+ {
+  "front": "Tonotopy: the {{c1::base}} of the cochlea (narrow, stiff) transduces high frequencies, while the {{c2::apex}} (wide, floppy) transduces low frequencies.",
+  "fp": "3873cc37583e",
+  "yield": "MEDIUM",
+  "why": "Tonotopy base/apex is supporting detail on place theory"
+ },
+ {
+  "front": "Trace the main visual pathway from optic chiasm to cortex, naming the thalamic relay.",
+  "fp": "922801451492",
+  "yield": "HIGH",
+  "why": "Retina to LGN to V1 pathway is a core visual processing item"
+ },
+ {
+  "front": "Vestibular sense: contrast what the semicircular canals detect versus the otolith organs.",
+  "fp": "90d154b990a4",
+  "yield": "MEDIUM",
+  "why": "Canals vs otoliths is the askable vestibular distinction"
+ },
+ {
+  "front": "Weber's law: the just noticeable difference is a {{c1::constant proportion}} of the original stimulus intensity, called the {{c2::Weber fraction}}.",
+  "fp": "ad5e7c9581bc",
+  "yield": "LOW",
+  "why": "Restates the plain Weber's law card (41)"
+ },
+ {
+  "front": "What are monocular vs. binocular depth cues?",
+  "fp": "ad65f4f23ad7",
+  "yield": "HIGH",
+  "why": "Monocular vs binocular depth cues are asked directly"
+ },
+ {
+  "front": "What did Hubel and Wiesel discover by recording from cat visual cortex?",
+  "fp": "c155073ea51b",
+  "yield": "MEDIUM",
+  "why": "Feature detectors are on the outline; Hubel and Wiesel history is secondary"
+ },
+ {
+  "front": "What does signal detection theory add to threshold models?",
+  "fp": "8a7ec0f83af6",
+  "yield": "MEDIUM",
+  "why": "Conceptual framing of SDT; the d-prime/criterion card carries the point"
+ },
+ {
+  "front": "What happens electrically to a rod photoreceptor when light strikes it?",
+  "fp": "4c1f7d342a1f",
+  "yield": "MEDIUM",
+  "why": "Rod hyperpolarization in light is a classic trick fact; supporting phototransduction"
+ },
+ {
+  "front": "What is parallel processing in vision, and why does it make perception fast?",
+  "fp": "e8894df5175c",
+  "yield": "MEDIUM",
+  "why": "Parallel processing is named on the outline; conceptual card"
+ },
+ {
+  "front": "What is sensory adaptation?",
+  "fp": "064223b6c2f9",
+  "yield": "MEDIUM",
+  "why": "Plain sensory adaptation definition; the adaptation vs habituation card is primary"
+ },
+ {
+  "front": "Which cells transmit visual signals from the retina to the brain?",
+  "fp": "c695a282d41f",
+  "yield": "HIGH",
+  "why": "Retinal cell order and ganglion cells forming the optic nerve is asked directly"
+ },
+ {
+  "front": "Which lobes process vision, hearing, and touch?",
+  "fp": "81ac99c07ee2",
+  "yield": "MEDIUM",
+  "why": "Lobe-to-sense mapping is basic and askable"
+ },
+ {
+  "front": "Which of the following best describes perceptual set?",
+  "fp": "f79b5af0db0a",
+  "yield": "MEDIUM",
+  "why": "Perceptual set definition supports top-down processing items"
+ },
+ {
+  "front": "Which receptors serve kinesthesia, and what does each monitor?",
+  "fp": "b8065256a78f",
+  "yield": "LOW",
+  "why": "Restates the proprioception/kinesthesia receptor card (15)"
+ },
+ {
+  "front": "Which two interaural cues localize sound, and which brainstem structure first compares them?",
+  "fp": "e9fe3258b51f",
+  "yield": "LOW",
+  "why": "Restates the sound-localization card (40); superior olive is trivia"
+ },
+ {
+  "front": "Why are rods more sensitive in dim light but poorer at acuity than cones?",
+  "fp": "d935779e0549",
+  "yield": "HIGH",
+  "why": "Rod vs cone sensitivity/acuity via convergence is a core vision item"
+ },
+ {
+  "front": "Why do the borders between adjacent gray bands look exaggerated, and which retinal cells produce this?",
+  "fp": "d1f3731b33a2",
+  "yield": "MEDIUM",
+  "why": "Lateral inhibition and Mach bands are a common passage mechanism"
+ },
+ {
+  "front": "Why does stubbing a toe produce sharp then dull pain? Name the fiber types.",
+  "fp": "964d224e235b",
+  "yield": "MEDIUM",
+  "why": "A-delta vs C fiber pain is supporting somatosensation detail"
+ },
+ {
+  "front": "Why does the fovea have the highest visual acuity?",
+  "fp": "302d6819adcf",
+  "yield": "MEDIUM",
+  "why": "Fovea acuity restates the rod/cone convergence idea with the fovea as example"
+ },
+ {
+  "front": "Why is the two-point threshold tiny on fingertips but huge on the back?",
+  "fp": "b89b5d645a74",
+  "yield": "MEDIUM",
+  "why": "Two-point threshold and receptor density is passage-plausible reasoning"
+ },
+ {
+  "front": "You group an array of dots into columns because dots in each column share a color. Which gestalt principle — and which one would grouping by nearness be?",
+  "fp": "38b77599014e",
+  "yield": "MEDIUM",
+  "why": "Similarity vs proximity is a worked example of the Gestalt roster"
+ }
+]

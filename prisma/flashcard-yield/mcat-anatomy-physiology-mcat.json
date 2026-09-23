@@ -1,0 +1,416 @@
+[
+ {
+  "front": "A healing wound first lays down type {{c1::III}} collagen, later remodeled into stronger type I, reaching only about 80 percent of original strength.",
+  "fp": "fd615d88a70c",
+  "yield": "LOW",
+  "why": "Collagen type III vs I and 80% figure are wound-healing trivia beyond the AAMC outline"
+ },
+ {
+  "front": "A reflex arc can bypass the brain because:",
+  "fp": "83a9d064162d",
+  "yield": "HIGH",
+  "why": "Spinal reflex arc integration is core nervous-system content"
+ },
+ {
+  "front": "ABO antibodies are preformed {{c1::IgM}}, but anti-Rh antibodies are IgG produced only after sensitization.",
+  "fp": "41011b13ff6c",
+  "yield": "MEDIUM",
+  "why": "Blood groups are tested; the IgM vs IgG antibody-class detail is second tier"
+ },
+ {
+  "front": "After marrow-suppressing chemotherapy, which blood cell line falls first, and what does that reveal about circulating lifespans?",
+  "fp": "27a28d3dc293",
+  "yield": "LOW",
+  "why": "Chemo nadir timing is clinical trivia; cell lifespans appear on other cards"
+ },
+ {
+  "front": "All blood cells descend from one {{c1::hematopoietic stem cell}} in bone marrow, which splits into myeloid and lymphoid lineages.",
+  "fp": "7da0e7d6912f",
+  "yield": "HIGH",
+  "why": "Hematopoietic stem cell and myeloid/lymphoid lineages are core blood composition"
+ },
+ {
+  "front": "An anemia workup starts with mean corpuscular volume: microcytic means a {{c1::hemoglobin synthesis}} problem, macrocytic a DNA synthesis problem.",
+  "fp": "153360c3f813",
+  "yield": "LOW",
+  "why": "MCV-based anemia workup is med-school classification, not AAMC content"
+ },
+ {
+  "front": "At rest tissues extract about {{c1::25}} percent of arterial oxygen; maximal exercise pushes extraction toward 75 percent.",
+  "fp": "a906ffcf59c2",
+  "yield": "LOW",
+  "why": "Exact 25% O2 extraction figure is not on the outline"
+ },
+ {
+  "front": "Atherosclerosis increases cardiac workload by:",
+  "fp": "b7b10534750b",
+  "yield": "MEDIUM",
+  "why": "Resistance and Poiseuille are tested; atherosclerosis is an applied example"
+ },
+ {
+  "front": "ATP is required in muscle to:",
+  "fp": "636aad216fa7",
+  "yield": "HIGH",
+  "why": "ATP-dependent myosin detachment is core muscle physiology (belongs in MSK deck)"
+ },
+ {
+  "front": "B12 and folate deficiency both cause megaloblastic anemia, but only B12 deficiency causes {{c1::neurologic}} damage.",
+  "fp": "55fc9b789a5a",
+  "yield": "LOW",
+  "why": "B12 vs folate neurologic distinction is clinical detail beyond the outline"
+ },
+ {
+  "front": "Body water is about {{c1::60}} percent of body mass: two-thirds intracellular, one-third extracellular, and one-quarter of the extracellular fluid is plasma.",
+  "fp": "8ee1226e333d",
+  "yield": "MEDIUM",
+  "why": "Fluid compartment fractions are standard prep-book support for plasma volume regulation"
+ },
+ {
+  "front": "Compare the three muscle types.",
+  "fp": "cb81b024b773",
+  "yield": "HIGH",
+  "why": "Skeletal/cardiac/smooth comparison is explicitly on the outline"
+ },
+ {
+  "front": "Dietary fats absorbed as chylomicrons enter {{c1::lacteals (lymphatic vessels)}} and reach blood via the thoracic duct, bypassing the liver.",
+  "fp": "6f45bf031769",
+  "yield": "HIGH",
+  "why": "Chylomicrons entering lacteals and bypassing the liver is a classic absorption-site question"
+ },
+ {
+  "front": "During exercise, early stroke-volume gains plateau, so further increases in cardiac output come mainly from {{c1::heart rate}}.",
+  "fp": "01ac5923e369",
+  "yield": "MEDIUM",
+  "why": "Cardiac output response to exercise is a plausible passage second step"
+ },
+ {
+  "front": "Epidermal mitosis occurs only in the {{c1::stratum basale}}; cells die as they migrate outward toward the stratum corneum.",
+  "fp": "0bc002ea9bef",
+  "yield": "MEDIUM",
+  "why": "Epidermal strata and basal mitosis support the tested skin-layer concept"
+ },
+ {
+  "front": "Epithelium is avascular: it is nourished by diffusion from underlying connective tissue across the {{c1::basement membrane}}.",
+  "fp": "0083478aecc4",
+  "yield": "MEDIUM",
+  "why": "Avascular epithelium on a basement membrane is useful tissue-level context"
+ },
+ {
+  "front": "Erythropoietin is secreted by the {{c1::kidney}} in response to low oxygen delivery, stimulating red blood cell production.",
+  "fp": "fe085bd43c5d",
+  "yield": "HIGH",
+  "why": "Kidney EPO in response to hypoxia is a core homeostatic axis"
+ },
+ {
+  "front": "Exercising muscle steals blood flow because local metabolites ({{c1::adenosine, CO2, H+, K+}}) dilate its arterioles, overriding sympathetic tone.",
+  "fp": "8967d76d74c0",
+  "yield": "MEDIUM",
+  "why": "Local metabolic vasodilation supports blood-flow regulation questions"
+ },
+ {
+  "front": "Explain the four cardinal signs of acute inflammation mechanistically.",
+  "fp": "1a191a522285",
+  "yield": "MEDIUM",
+  "why": "Inflammation signs illustrate tested histamine/permeability mechanisms"
+ },
+ {
+  "front": "Fatty acids cannot become glucose because {{c1::acetyl-CoA cannot be converted back to pyruvate}}; pyruvate dehydrogenase is irreversible.",
+  "fp": "52b9f3205d83",
+  "yield": "HIGH",
+  "why": "Irreversible PDH step blocking fat-to-glucose is a classic biochem question"
+ },
+ {
+  "front": "Gas exchange occurs across the:",
+  "fp": "acd7d509bd33",
+  "yield": "HIGH",
+  "why": "Alveolar gas exchange is core respiratory content"
+ },
+ {
+  "front": "Give an example of positive feedback in physiology.",
+  "fp": "28069538344b",
+  "yield": "HIGH",
+  "why": "Positive feedback examples (oxytocin, clotting) are a staple homeostasis question"
+ },
+ {
+  "front": "Heat exhaustion versus heat stroke: which one is still sweating, and what defines the emergency?",
+  "fp": "9fcfa5b585b4",
+  "yield": "LOW",
+  "why": "Heat exhaustion vs heat stroke is clinical triage, not tested thermoregulation"
+ },
+ {
+  "front": "Hemolysis raises reticulocytes, lactate dehydrogenase, and indirect bilirubin while {{c1::haptoglobin}} falls.",
+  "fp": "19d62195b7c7",
+  "yield": "LOW",
+  "why": "Hemolysis lab panel (haptoglobin, LDH) is clinical trivia"
+ },
+ {
+  "front": "Hepatic glycogen sustains blood glucose for roughly {{c1::12-24 hours}} of fasting; after that, gluconeogenesis dominates.",
+  "fp": "4a5cf370e194",
+  "yield": "MEDIUM",
+  "why": "Glycogen depletion timeline supports tested fasting-state metabolism"
+ },
+ {
+  "front": "How do sebaceous glands secrete, and what does sebum accomplish?",
+  "fp": "60502a587ea8",
+  "yield": "LOW",
+  "why": "Holocrine secretion and sebum are gland trivia beyond the outline"
+ },
+ {
+  "front": "How does the lymphatic system support circulation?",
+  "fp": "2e6fcdda3f95",
+  "yield": "HIGH",
+  "why": "Lymphatic functions (fluid return, fats, immunity) are core and plainly stated"
+ },
+ {
+  "front": "In exercising muscle the O2-hemoglobin curve shifts {{c1::right}} — high CO2, H+, temperature, and 2,3-BPG all favor O2 unloading.",
+  "fp": "0ff529027923",
+  "yield": "HIGH",
+  "why": "Right shift from CO2/H+/temperature/2,3-BPG is a high-frequency Bohr-effect question"
+ },
+ {
+  "front": "In prolonged starvation the brain derives much of its energy from {{c1::ketone bodies}}, sparing muscle protein.",
+  "fp": "07e89b86ab48",
+  "yield": "HIGH",
+  "why": "Brain use of ketones in starvation is a core metabolic-state fact"
+ },
+ {
+  "front": "Iron deficiency versus anemia of chronic disease: contrast ferritin, transferrin, and total iron-binding capacity.",
+  "fp": "322d9b7b361e",
+  "yield": "LOW",
+  "why": "Ferritin/TIBC interpretation is clinical lab minutiae"
+ },
+ {
+  "front": "Menopause is characterized by:",
+  "fp": "81bad2d70c8e",
+  "yield": "HIGH",
+  "why": "Menopause with loss of negative feedback raising FSH/LH is tested"
+ },
+ {
+  "front": "Monocytes circulate briefly, then enter tissues and differentiate into {{c1::macrophages}} and related dendritic cells.",
+  "fp": "e0fbc03b86cd",
+  "yield": "HIGH",
+  "why": "Monocyte to macrophage differentiation is core immune content"
+ },
+ {
+  "front": "Name the three main gluconeogenic substrates during fasting and their tissue sources.",
+  "fp": "6154dff4e456",
+  "yield": "HIGH",
+  "why": "Lactate, alanine and glycerol as gluconeogenic substrates are frequently tested"
+ },
+ {
+  "front": "Name the two dermal layers, and what does the dermis contain that the epidermis lacks?",
+  "fp": "2c97300890d4",
+  "yield": "LOW",
+  "why": "Papillary vs reticular dermis is histology trivia; dermis contents covered elsewhere"
+ },
+ {
+  "front": "Natural killer cells target:",
+  "fp": "1c3ab7ecf4c5",
+  "yield": "HIGH",
+  "why": "NK cells targeting low MHC I is a high-frequency immune distinction"
+ },
+ {
+  "front": "Normal hemoglobin is about {{c1::15}} g/dL in men and 13.5 g/dL in women, with hematocrit roughly three times the hemoglobin value.",
+  "fp": "c95df35713fc",
+  "yield": "LOW",
+  "why": "Exact hemoglobin/hematocrit numbers are not on the outline"
+ },
+ {
+  "front": "Platelets are anucleate cytoplasmic fragments budded from marrow {{c1::megakaryocytes}}.",
+  "fp": "2ad6bb09e77c",
+  "yield": "MEDIUM",
+  "why": "Platelets from megakaryocytes is standard supporting blood-composition detail"
+ },
+ {
+  "front": "Predict the fluid, temperature, and infection consequences of losing a large area of skin to a burn.",
+  "fp": "23130cb89f82",
+  "yield": "MEDIUM",
+  "why": "Burn consequences apply tested skin functions (barrier, thermoregulation)"
+ },
+ {
+  "front": "Predict where infused isotonic saline, 5 percent dextrose in water, and hypertonic saline each distribute.",
+  "fp": "3959e533721f",
+  "yield": "MEDIUM",
+  "why": "Fluid distribution of infusions applies osmosis and compartments"
+ },
+ {
+  "front": "Rank the leukocytes by abundance, and name the first responder to bacterial infection.",
+  "fp": "148350e2706d",
+  "yield": "MEDIUM",
+  "why": "Neutrophils as first responders is tested; abundance ranking is second tier"
+ },
+ {
+  "front": "Sequence the energy systems powering the first minutes of intense exercise.",
+  "fp": "95d3f0da65f4",
+  "yield": "MEDIUM",
+  "why": "Creatine phosphate then glycolysis then oxidative sequence supports muscle energetics"
+ },
+ {
+  "front": "Skin cools the body mainly by {{c1::evaporation of eccrine sweat}} plus dilation of dermal blood vessels.",
+  "fp": "99a571cb72a0",
+  "yield": "HIGH",
+  "why": "Evaporative cooling and vasodilation are core thermoregulation"
+ },
+ {
+  "front": "The fasted hormone signature: insulin {{c1::low}}, glucagon high — unleashing hormone-sensitive lipase in adipose tissue.",
+  "fp": "29dc6706f1c9",
+  "yield": "HIGH",
+  "why": "Low insulin/high glucagon activating HSL is core fasted-state signaling"
+ },
+ {
+  "front": "The primitive streak marks:",
+  "fp": "ed5fff36515e",
+  "yield": "MEDIUM",
+  "why": "Primitive streak supports tested gastrulation content"
+ },
+ {
+  "front": "The spleen's {{c1::red pulp}} filters aged RBCs, while its white pulp is lymphoid tissue surveilling the blood.",
+  "fp": "e81c44125c62",
+  "yield": "MEDIUM",
+  "why": "Spleen filtering RBCs is tested; red/white pulp detail is second tier"
+ },
+ {
+  "front": "The trachea and bronchi are lined by {{c1::pseudostratified ciliated columnar}} epithelium with goblet cells (the mucociliary escalator).",
+  "fp": "896fe293acf9",
+  "yield": "MEDIUM",
+  "why": "Mucociliary escalator is tested; epithelium name is supporting detail"
+ },
+ {
+  "front": "The two excitable tissue types, capable of firing action potentials, are {{c1::muscle and nervous tissue}}.",
+  "fp": "92a9d5370ad9",
+  "yield": "MEDIUM",
+  "why": "Excitable-tissue classification is useful context, rarely asked itself"
+ },
+ {
+  "front": "Trace why autoimmune destruction of gastric parietal cells causes anemia only years later.",
+  "fp": "ba64232db69f",
+  "yield": "HIGH",
+  "why": "Parietal cells, intrinsic factor and ileal B12 absorption are core absorption-site facts"
+ },
+ {
+  "front": "UV light in skin converts {{c1::7-dehydrocholesterol}} into vitamin D3 (cholecalciferol), the first step of vitamin D synthesis.",
+  "fp": "6c6f16323721",
+  "yield": "MEDIUM",
+  "why": "Skin vitamin D synthesis is tested; precursor name is supporting detail"
+ },
+ {
+  "front": "What are exocrine vs. endocrine glands?",
+  "fp": "94718269e81a",
+  "yield": "HIGH",
+  "why": "Exocrine vs endocrine gland distinction is basic tested content"
+ },
+ {
+  "front": "What are the four primary tissue types?",
+  "fp": "82d06db82908",
+  "yield": "HIGH",
+  "why": "Four primary tissue types are basic tested content"
+ },
+ {
+  "front": "What are the layers of the skin?",
+  "fp": "cbf51f1b058c",
+  "yield": "HIGH",
+  "why": "Epidermis/dermis/hypodermis layers are explicitly on the outline"
+ },
+ {
+  "front": "What are the three core functions of the lymphatic system?",
+  "fp": "e6cd921bb641",
+  "yield": "LOW",
+  "why": "Near-restatement of the plainer lymphatic-functions card"
+ },
+ {
+  "front": "What defines connective tissue histologically, and which cell secretes its protein fibers?",
+  "fp": "045f48053795",
+  "yield": "MEDIUM",
+  "why": "Connective tissue ECM and fibroblast collagen is useful tissue context"
+ },
+ {
+  "front": "What does the Cori cycle accomplish during exercise, and what is its energetic cost?",
+  "fp": "7965ff3e27ea",
+  "yield": "HIGH",
+  "why": "Cori cycle and its 6-vs-2 ATP cost is a classic question"
+ },
+ {
+  "front": "What does the liver do metabolically?",
+  "fp": "70f7719103f3",
+  "yield": "HIGH",
+  "why": "Liver metabolic functions are core digestive-system content"
+ },
+ {
+  "front": "What happens in lymph node germinal centers during an infection?",
+  "fp": "d51d47461192",
+  "yield": "MEDIUM",
+  "why": "Germinal center affinity maturation is second-tier immune detail"
+ },
+ {
+  "front": "What is a reticulocyte, and what does its count tell you about an anemia?",
+  "fp": "1e62a00ea4d6",
+  "yield": "MEDIUM",
+  "why": "Reticulocytes as immature RBCs support erythropoiesis passages"
+ },
+ {
+  "front": "What is homeostasis and its usual control mechanism?",
+  "fp": "79af31b79351",
+  "yield": "HIGH",
+  "why": "Homeostasis via negative feedback is the central concept of this topic"
+ },
+ {
+  "front": "Which tissues remain obligate glucose users even in deep starvation, and why?",
+  "fp": "fd9b6f338c1c",
+  "yield": "HIGH",
+  "why": "RBCs as obligate glucose users (no mitochondria) is frequently tested"
+ },
+ {
+  "front": "Why can a marathon runner who drinks only plain water become hyponatremic?",
+  "fp": "f1105bffa73f",
+  "yield": "MEDIUM",
+  "why": "Exercise hyponatremia applies osmoregulation and ADH"
+ },
+ {
+  "front": "Why can a red blood cell not use the oxygen it carries?",
+  "fp": "0ba646e71561",
+  "yield": "HIGH",
+  "why": "Anucleate RBCs lacking mitochondria is a classic question"
+ },
+ {
+  "front": "Why can the liver make ketone bodies but not consume them?",
+  "fp": "bb1a2f2ded86",
+  "yield": "MEDIUM",
+  "why": "Liver exporting but not using ketones is standard biochem support"
+ },
+ {
+  "front": "Why do arterial PO2 and PCO2 stay nearly constant during moderate exercise?",
+  "fp": "6ef9944c2dc4",
+  "yield": "MEDIUM",
+  "why": "Ventilation matching metabolism in exercise is plausible passage context"
+ },
+ {
+  "front": "Why do people of very different skin tones have similar numbers of melanocytes?",
+  "fp": "34a1edecfa37",
+  "yield": "LOW",
+  "why": "Melanocyte count vs melanin amount is skin trivia"
+ },
+ {
+  "front": "Why does hemolytic disease of the newborn usually spare the first Rh-positive pregnancy?",
+  "fp": "c6f81d2b893f",
+  "yield": "MEDIUM",
+  "why": "Rh sensitization timing illustrates the tested Rh/IgG mechanism"
+ },
+ {
+  "front": "Why does low plasma albumin (liver failure, malnutrition) cause edema?",
+  "fp": "665846892bf3",
+  "yield": "HIGH",
+  "why": "Albumin oncotic pressure and Starling forces are core edema questions"
+ },
+ {
+  "front": "Why does vitamin C deficiency cause bleeding gums and wounds that reopen?",
+  "fp": "0920e2cd2ab1",
+  "yield": "MEDIUM",
+  "why": "Vitamin C as hydroxylase cofactor is a standard scurvy biochem question"
+ },
+ {
+  "front": "Why is simple squamous epithelium found in alveoli and capillaries, while stratified squamous lines skin and esophagus?",
+  "fp": "4b5b15ed1f09",
+  "yield": "MEDIUM",
+  "why": "Epithelium form-follows-function is useful supporting tissue content"
+ }
+]

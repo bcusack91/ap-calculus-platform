@@ -1,0 +1,410 @@
+[
+ {
+  "front": "{{c1::Puromycin}} resembles an aminoacyl-tRNA, enters the A site, and causes premature release of the peptide attached to it.",
+  "fp": "2fa57ccc2b5a",
+  "yield": "LOW",
+  "why": "Puromycin is a lab reagent; drug-specific A-site trivia AAMC does not test"
+ },
+ {
+  "front": "A {{c1::K48-linked polyubiquitin}} chain attached to lysine residues targets a protein for destruction by the 26S proteasome.",
+  "fp": "784db8d0af25",
+  "yield": "MEDIUM",
+  "why": "Ubiquitin-proteasome tagging is tested; K48 linkage specificity is supporting detail"
+ },
+ {
+  "front": "A {{c1::K63}}-linked polyubiquitin chain serves as a signaling and trafficking tag, unlike the {{c2::K48}} chain that sends a protein to the proteasome.",
+  "fp": "3d950a14a52b",
+  "yield": "LOW",
+  "why": "K63 vs K48 linkage codes are trivia; restates the proteasome-tag card"
+ },
+ {
+  "front": "A nonsense mutation results in:",
+  "fp": "cd3d9c2e1232",
+  "yield": "HIGH",
+  "why": "Nonsense = premature stop; core mutation-type distinction"
+ },
+ {
+  "front": "A protein bound for the mitochondrial matrix versus one bound for secretion — where is each synthesized?",
+  "fp": "e431ebc8e92f",
+  "yield": "HIGH",
+  "why": "Free vs ER-bound ribosome targeting is a core AAMC distinction"
+ },
+ {
+  "front": "A silent mutation:",
+  "fp": "5854514f37eb",
+  "yield": "HIGH",
+  "why": "Silent mutation and codon degeneracy; core mutation-type distinction"
+ },
+ {
+  "front": "After peptide bond formation and translocation, the now-deacylated tRNA is ejected from the {{c1::E (exit)}} site.",
+  "fp": "810af4f860f4",
+  "yield": "HIGH",
+  "why": "E site and A-P-E tRNA movement; ribosome stages core"
+ },
+ {
+  "front": "After SRP docks at its ER receptor (GTP-dependent), translation resumes and the chain threads through the {{c1::Sec61 translocon}} into the ER lumen.",
+  "fp": "9cfe5d84c700",
+  "yield": "MEDIUM",
+  "why": "Co-translational ER entry is core; Sec61 name and GTP handoff are detail"
+ },
+ {
+  "front": "After stress, a sucrose gradient shows ribosomes shifted out of heavy polysome fractions into the monosome peak. What step was inhibited?",
+  "fp": "65816399b0e6",
+  "yield": "MEDIUM",
+  "why": "Polysome-profile reasoning is passage-style experimental logic"
+ },
+ {
+  "front": "Alpha-1 antitrypsin deficiency damages both liver and lung. How does one misfolded protein produce two different mechanisms?",
+  "fp": "a95b428d6aea",
+  "yield": "LOW",
+  "why": "Disease-specific clinical detail (A1AT); not translation content"
+ },
+ {
+  "front": "Aminoglycosides cause mRNA misreading and tetracyclines block A-site tRNA entry; both target the bacterial {{c1::30S}} subunit.",
+  "fp": "0f3040c6bf36",
+  "yield": "MEDIUM",
+  "why": "Antibiotic selectivity via 30S/70S is tested; drug-class mapping is second tier"
+ },
+ {
+  "front": "Autophagy involves:",
+  "fp": "3186ec7eb2e1",
+  "yield": "MEDIUM",
+  "why": "Autophagy is a protein-degradation concept; secondary to proteasome"
+ },
+ {
+  "front": "Because the released PPi is hydrolyzed, charging one tRNA costs the cell {{c1::2}} ATP equivalents.",
+  "fp": "eed8857b1722",
+  "yield": "MEDIUM",
+  "why": "Charging cost of 2 ATP equivalents supports energy-accounting questions"
+ },
+ {
+  "front": "Cap-dependent initiation is controlled by mTOR, which phosphorylates {{c1::4E-BP1}} to release {{c2::eIF4E}} and switch on growth-related translation.",
+  "fp": "4afb4ea24103",
+  "yield": "LOW",
+  "why": "mTOR/4E-BP1 factor names are beyond the outline's translation scope"
+ },
+ {
+  "front": "Compare prokaryotic and eukaryotic ribosomes.",
+  "fp": "23dde849a2f0",
+  "yield": "HIGH",
+  "why": "70S vs 80S ribosome subunits; classic discrete question"
+ },
+ {
+  "front": "Count the high-energy phosphate bonds spent per amino acid added during elongation.",
+  "fp": "a27321f08c3b",
+  "yield": "MEDIUM",
+  "why": "Energy per residue is a known calculation; second-step detail"
+ },
+ {
+  "front": "Covalent lipid attachment — prenylation, myristoylation, palmitoylation — serves to {{c1::anchor proteins to membranes}}.",
+  "fp": "68f6d27ceb14",
+  "yield": "MEDIUM",
+  "why": "Lipid anchoring as a PTM; supporting detail on modifications"
+ },
+ {
+  "front": "Cycloheximide stops cytosolic protein synthesis while a few mitochondrial proteins are still made; chloramphenicol does the reverse. Explain.",
+  "fp": "f2217b28c053",
+  "yield": "MEDIUM",
+  "why": "Cycloheximide/chloramphenicol contrast is classic passage experimental logic"
+ },
+ {
+  "front": "Distinguish N-linked from O-linked glycosylation by residue, cellular location, and consensus sequence.",
+  "fp": "2873f3f7061b",
+  "yield": "MEDIUM",
+  "why": "N- vs O-linked glycosylation location/residue; supporting PTM detail"
+ },
+ {
+  "front": "During elongation, the incoming aminoacyl-tRNA (delivered by EF-Tu) first enters the ribosome's {{c1::A (aminoacyl)}} site.",
+  "fp": "c80d6791760e",
+  "yield": "HIGH",
+  "why": "A site receives aminoacyl-tRNA via EF-Tu; elongation core"
+ },
+ {
+  "front": "Epigenetic regulation includes:",
+  "fp": "d367edc3070b",
+  "yield": "MEDIUM",
+  "why": "Epigenetics is 1B core but belongs to a gene-regulation deck"
+ },
+ {
+  "front": "Eukaryotic initiation begins when {{c1::eIF4E}} binds the 5' 7-methylguanosine cap, after which the 43S complex scans 5' to 3' for the first AUG.",
+  "fp": "74b23467847c",
+  "yield": "HIGH",
+  "why": "Cap binding and 5'-3' scanning to first AUG; eukaryotic initiation core"
+ },
+ {
+  "front": "Heat or a load of misfolded protein activates the transcription factor {{c1::HSF1}}, which induces chaperone genes such as Hsp70.",
+  "fp": "782bd2833798",
+  "yield": "LOW",
+  "why": "HSF1 name is trivia; chaperone concept is what matters"
+ },
+ {
+  "front": "How do synthetases avoid mischarging chemically similar amino acids such as valine onto tRNA-Ile?",
+  "fp": "a4d0cf27af5e",
+  "yield": "MEDIUM",
+  "why": "Synthetase editing explains fidelity; supporting mechanism"
+ },
+ {
+  "front": "How does EF-Tu improve translational fidelity beyond simply escorting aminoacyl-tRNAs to the ribosome?",
+  "fp": "50419ed8a9c7",
+  "yield": "MEDIUM",
+  "why": "Kinetic proofreading by EF-Tu; supporting fidelity mechanism"
+ },
+ {
+  "front": "How does HIV produce Gag and Gag-Pol from one mRNA in a fixed ratio?",
+  "fp": "6f75faa4691e",
+  "yield": "LOW",
+  "why": "HIV-specific programmed frameshift; virus trivia beyond outline"
+ },
+ {
+  "front": "How does tRNA ensure fidelity?",
+  "fp": "7823d7b80550",
+  "yield": "HIGH",
+  "why": "tRNA anticodon pairing plus synthetase charging; translation core"
+ },
+ {
+  "front": "In peptide bond formation, which direction is the transfer: P-site peptide onto the A-site amino acid, or the reverse?",
+  "fp": "50cfcb190186",
+  "yield": "HIGH",
+  "why": "Direction of peptidyl transfer and N-to-C growth; core mechanism"
+ },
+ {
+  "front": "In prokaryotic initiation, what are the distinct jobs of IF1, IF2, and IF3?",
+  "fp": "19ab43a7acbe",
+  "yield": "LOW",
+  "why": "IF1/IF2/IF3 individual jobs are factor-level trivia"
+ },
+ {
+  "front": "In wobble pairing, which anticodon position pairs loosely, and with which codon position?",
+  "fp": "929b6ac221ec",
+  "yield": "HIGH",
+  "why": "Wobble pairs anticodon 5' base with codon 3' base; core"
+ },
+ {
+  "front": "Iron controls ferritin and transferrin receptor expression through the same iron-response elements. How can one signal give opposite outcomes?",
+  "fp": "083c86e8a50e",
+  "yield": "MEDIUM",
+  "why": "IRE/IRP is the classic translational-control passage example"
+ },
+ {
+  "front": "Irreversible activation by {{c1::proteolytic cleavage}} converts zymogens like trypsinogen and prothrombin into their active enzymes.",
+  "fp": "3e41191cd1fb",
+  "yield": "HIGH",
+  "why": "Zymogen activation by proteolytic cleavage; PTM core"
+ },
+ {
+  "front": "Kinases add phosphate from ATP onto the hydroxyl side chains of {{c1::serine, threonine, and tyrosine}}.",
+  "fp": "5bee182c4097",
+  "yield": "HIGH",
+  "why": "Phosphorylation on Ser/Thr/Tyr; the dominant tested PTM"
+ },
+ {
+  "front": "Name the three stop codons.",
+  "fp": "e36f9fff7b60",
+  "yield": "HIGH",
+  "why": "UAA/UAG/UGA stop codons; core recall"
+ },
+ {
+  "front": "On the 50S subunit, which antibiotic class blocks the exit tunnel and which drug inhibits peptidyl transferase — and why can they cause human toxicity?",
+  "fp": "46d3da8bdef6",
+  "yield": "MEDIUM",
+  "why": "50S antibiotic targets and mitochondrial toxicity; second-tier"
+ },
+ {
+  "front": "One mRNA is usually read by many ribosomes at once, spaced roughly every {{c1::80}} nucleotides, forming a {{c2::polysome}}.",
+  "fp": "213818698113",
+  "yield": "MEDIUM",
+  "why": "Polysome concept useful; the 80-nt spacing is trivia"
+ },
+ {
+  "front": "Outline the two chemical steps by which an aminoacyl-tRNA synthetase charges its tRNA.",
+  "fp": "aad9241e09aa",
+  "yield": "MEDIUM",
+  "why": "Two-step aminoacylation chemistry; supporting detail on charging"
+ },
+ {
+  "front": "Peptide bond formation is catalyzed by {{c1::23S rRNA acting as a ribozyme}}, not by a ribosomal protein.",
+  "fp": "d11d983499c4",
+  "yield": "MEDIUM",
+  "why": "Ribozyme detail (23S/28S) on the peptidyl transferase card kept as HIGH"
+ },
+ {
+  "front": "Poliovirus shuts off host protein synthesis by cleaving {{c1::eIF4G}}, yet its own RNA is still translated because it carries an {{c2::IRES}}.",
+  "fp": "79d47e5a2181",
+  "yield": "LOW",
+  "why": "Poliovirus eIF4G cleavage/IRES is virus-specific trivia"
+ },
+ {
+  "front": "Polyglutamine diseases such as Huntington arise when a CAG expansion makes a protein prone to {{c1::misfolding and aggregation}}, a toxic gain of function.",
+  "fp": "b05dde07cee5",
+  "yield": "MEDIUM",
+  "why": "Toxic gain-of-function misfolding; clinical flavor on a tested idea"
+ },
+ {
+  "front": "Ribosomal translocation advances the mRNA exactly {{c1::3 nucleotides (one codon)}} and requires EF-G (prokaryotes) or eEF2 (eukaryotes) plus GTP.",
+  "fp": "7f5e28dc7156",
+  "yield": "HIGH",
+  "why": "Translocation by one codon with EF-G/eEF2 and GTP; elongation core"
+ },
+ {
+  "front": "Ricin and Shiga toxin are N-glycosidases that depurinate the large-subunit {{c1::rRNA}}, permanently blocking elongation factor binding.",
+  "fp": "65aa7064c1f2",
+  "yield": "LOW",
+  "why": "Ricin/Shiga toxin mechanism is toxin-specific trivia"
+ },
+ {
+  "front": "State the wobble pairing options for G and for U when each sits at the 5' position of the anticodon.",
+  "fp": "464aba1f7feb",
+  "yield": "MEDIUM",
+  "why": "Specific G/U wobble pairing options; second step past the wobble rule"
+ },
+ {
+  "front": "Stop codons are read by protein release factors, and the finished chain is cleaved from its tRNA by {{c1::a water molecule}} in the peptidyl transferase center.",
+  "fp": "04b7f7d33b17",
+  "yield": "HIGH",
+  "why": "Release factors and hydrolysis of peptidyl-tRNA; termination core"
+ },
+ {
+  "front": "The amino acid is esterified to the 2'- or 3'-OH of the terminal adenosine of the universal {{c1::CCA-3'}} end of tRNA.",
+  "fp": "f43b6c7f8023",
+  "yield": "HIGH",
+  "why": "CCA-3' acceptor end of tRNA; tRNA structure core"
+ },
+ {
+  "front": "The modified base {{c1::inosine}} at the anticodon wobble position can pair with U, C, or A.",
+  "fp": "853b94e7ce14",
+  "yield": "MEDIUM",
+  "why": "Inosine wobble range; supporting detail on wobble"
+ },
+ {
+  "front": "The prokaryotic initiator methionine is formylated {{c1::after the tRNA is already charged}}, by a transformylase acting on Met-tRNA(fMet).",
+  "fp": "aab7d37f9f2a",
+  "yield": "LOW",
+  "why": "Timing of fMet formylation is trivia-grade"
+ },
+ {
+  "front": "The Shine-Dalgarno sequence, a purine-rich element about 8 nt upstream of AUG, base-pairs with the 3' end of the {{c1::16S rRNA}}.",
+  "fp": "8c9d06830fa5",
+  "yield": "HIGH",
+  "why": "Shine-Dalgarno pairing with 16S rRNA; prokaryotic initiation core"
+ },
+ {
+  "front": "The wobble hypothesis explains why:",
+  "fp": "8e425cde4325",
+  "yield": "HIGH",
+  "why": "Wobble lets fewer tRNAs read all codons; core concept"
+ },
+ {
+  "front": "Transcription and translation are coupled in:",
+  "fp": "35871df2d39c",
+  "yield": "HIGH",
+  "why": "Coupled transcription-translation in prokaryotes; high-frequency distinction"
+ },
+ {
+  "front": "Translation misincorporates about one amino acid in $10^{4}$, far worse than DNA replication. Why is that tolerable?",
+  "fp": "fdc76fcc0623",
+  "yield": "MEDIUM",
+  "why": "Error-rate reasoning vs replication; plausible passage inference"
+ },
+ {
+  "front": "Translation runs at about {{c1::15-20}} amino acids per second in bacteria but only about {{c2::2-6}} per second in eukaryotes.",
+  "fp": "8b67bb6308c2",
+  "yield": "LOW",
+  "why": "Elongation speed figures are numeric trivia"
+ },
+ {
+  "front": "What are common post-translational modifications?",
+  "fp": "0e392959c7eb",
+  "yield": "HIGH",
+  "why": "Catalog of major PTMs; directly on the outline"
+ },
+ {
+  "front": "What are the three ribosomal binding sites?",
+  "fp": "620b0c82e0ed",
+  "yield": "HIGH",
+  "why": "A, P, E site definitions; ribosome structure core"
+ },
+ {
+  "front": "What catalyzes peptide bond formation?",
+  "fp": "84cae09a78f4",
+  "yield": "HIGH",
+  "why": "Peptidyl transferase is an rRNA ribozyme; classic discrete"
+ },
+ {
+  "front": "What does eIF2 deliver to the ribosome, and how does phosphorylation of eIF2-alpha regulate it during cellular stress?",
+  "fp": "e029f16208a4",
+  "yield": "MEDIUM",
+  "why": "eIF2 delivers Met-tRNAi; stress phosphorylation is second-tier"
+ },
+ {
+  "front": "What does the signal recognition particle (SRP) bind, and what immediate effect does binding have on the ribosome?",
+  "fp": "c78623a009ef",
+  "yield": "HIGH",
+  "why": "SRP binds signal sequence and pauses elongation; targeting core"
+ },
+ {
+  "front": "What is a signal sequence?",
+  "fp": "686c0264513e",
+  "yield": "HIGH",
+  "why": "Signal sequence definition; targeting core"
+ },
+ {
+  "front": "What is the start codon and what does it encode?",
+  "fp": "6add2da4d5aa",
+  "yield": "HIGH",
+  "why": "AUG start codon and Met/fMet; core recall"
+ },
+ {
+  "front": "Which post-translational modification lets clotting factors II, VII, IX, and X chelate calcium, and which vitamin does it require?",
+  "fp": "3d840a130a68",
+  "yield": "MEDIUM",
+  "why": "Gamma-carboxylation/vitamin K as a PTM; clinical flavor"
+ },
+ {
+  "front": "Which ribosomal site holds the tRNA carrying the growing polypeptide, and which tRNA is the only one to enter that site directly?",
+  "fp": "f74a35475d18",
+  "yield": "HIGH",
+  "why": "P site holds peptidyl-tRNA; initiator enters directly; core"
+ },
+ {
+  "front": "Which type of RNA carries amino acids to the ribosome during translation?",
+  "fp": "f6b5c9ff86e2",
+  "yield": "HIGH",
+  "why": "tRNA carries amino acids; basic core recall"
+ },
+ {
+  "front": "Why does acetylation of histone tail lysines increase transcription?",
+  "fp": "c65aec282b02",
+  "yield": "MEDIUM",
+  "why": "Histone acetylation is 1B core but belongs to a gene-regulation deck"
+ },
+ {
+  "front": "Why does measuring C-peptide distinguish an insulinoma from surreptitious insulin injection?",
+  "fp": "89e73051f99c",
+  "yield": "LOW",
+  "why": "C-peptide/insulinoma is endocrine clinical trivia"
+ },
+ {
+  "front": "Why is the common CFTR mutation delta F508 a folding problem rather than a channel problem?",
+  "fp": "609f944f3ae6",
+  "yield": "MEDIUM",
+  "why": "ER quality control/ERAD via CFTR; classic misfolding example"
+ },
+ {
+  "front": "Why might a human protein expressed in E. coli be inactive even though its amino acid sequence is correct?",
+  "fp": "602a5f2e5332",
+  "yield": "MEDIUM",
+  "why": "Bacteria lack eukaryotic PTM machinery; common passage reasoning"
+ },
+ {
+  "front": "Within the Kozak consensus (gccRccAUGG), which two positions most strongly determine whether a eukaryotic AUG is used as the start?",
+  "fp": "90df1e4bb6a2",
+  "yield": "LOW",
+  "why": "Kozak -3/+4 positions are trivia-grade specificity"
+ },
+ {
+  "front": "Wobble explains how roughly {{c1::40}} distinct tRNAs suffice to read all 61 sense codons.",
+  "fp": "d49f12ae868e",
+  "yield": "LOW",
+  "why": "Restates the wobble card with a numeric (40 tRNAs) detail"
+ }
+]

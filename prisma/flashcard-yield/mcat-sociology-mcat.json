@@ -1,0 +1,404 @@
+[
+ {
+  "front": "{{c1::Conflict theory}} explains rising drug prices as firms and elites protecting profit; rooted in Marx's view of competition over scarce resources.",
+  "fp": "6eafbd27c36b",
+  "yield": "HIGH",
+  "why": "Conflict theory is a core 9A paradigm"
+ },
+ {
+  "front": "{{c1::Demographic transition}} theory: industrializing societies shift from high birth and death rates to low ones, with rapid growth in stage 2.",
+  "fp": "cfbaf8eb4f40",
+  "yield": "HIGH",
+  "why": "Demographic transition is core 9B"
+ },
+ {
+  "front": "{{c1::Differential association}} theory (Sutherland): deviance is learned through interaction with others whose attitudes favor norm violation.",
+  "fp": "6745e63e612b",
+  "yield": "HIGH",
+  "why": "Differential association is a named deviance theory"
+ },
+ {
+  "front": "{{c1::Endogamy}} is marriage within one's own group and {{c2::exogamy}} is marriage outside it; both are social norms rather than biological rules.",
+  "fp": "bc30b8f09a05",
+  "yield": "MEDIUM",
+  "why": "Endogamy/exogamy is supporting family-institution vocabulary"
+ },
+ {
+  "front": "{{c1::Fecundity}} is the biological potential for reproduction; {{c2::fertility}} is the number of births actually occurring.",
+  "fp": "7736bf2e7f27",
+  "yield": "MEDIUM",
+  "why": "Fertility tested; fecundity distinction is second-tier"
+ },
+ {
+  "front": "{{c1::Functionalism}} views society as interdependent parts maintaining stability; Durkheim showed how religion builds collective conscience and cohesion.",
+  "fp": "26996dba3a7c",
+  "yield": "HIGH",
+  "why": "Functionalism is a core 9A paradigm"
+ },
+ {
+  "front": "{{c1::Labeling theory}} holds deviance results from society's reaction to an act; secondary deviance follows internalizing the deviant label.",
+  "fp": "8ec59a402a30",
+  "yield": "HIGH",
+  "why": "Labeling theory and secondary deviance are tested"
+ },
+ {
+  "front": "{{c1::Power}} is the ability to impose one's will despite resistance; {{c2::authority}} is power accepted as legitimate; coercion is power without legitimacy.",
+  "fp": "6b3a072526c0",
+  "yield": "MEDIUM",
+  "why": "Power vs authority vs coercion supports Weber authority card"
+ },
+ {
+  "front": "{{c1::Social institutions}} are enduring structures meeting core needs: family, education, religion, government, economy, and medicine.",
+  "fp": "83f3993954c5",
+  "yield": "HIGH",
+  "why": "Social institutions list is core 9A"
+ },
+ {
+  "front": "{{c1::Symbolic interactionism}} is the micro paradigm asking how meanings (e.g., what counts as 'sick') are created and revised in everyday interaction.",
+  "fp": "60f521b5a34b",
+  "yield": "HIGH",
+  "why": "Symbolic interactionism is a core 9A paradigm"
+ },
+ {
+  "front": "{{c1::Tracking}} sorts students into ability groups, while {{c2::credentialism}} requires degrees beyond a job's actual skill demands.",
+  "fp": "f93aa89e8a75",
+  "yield": "MEDIUM",
+  "why": "Education institution; tracking/credentialism are conflict-view detail"
+ },
+ {
+  "front": "A {{c1::population pyramid}} with a wide base signals high fertility and a young, growing population, typical of developing nations.",
+  "fp": "e4cba3e293eb",
+  "yield": "HIGH",
+  "why": "Population pyramid reading is a common figure question"
+ },
+ {
+  "front": "A hospital measures satisfaction by surveying only patients who return for follow-up. Name the bias and its likely direction.",
+  "fp": "872659db8ce0",
+  "yield": "MEDIUM",
+  "why": "Selection bias is tested but belongs to research methods"
+ },
+ {
+  "front": "A society's {{c1::dependency ratio}} compares those under 15 and over 64 with the working-age population; population {{c2::aging}} raises it.",
+  "fp": "536a1f3beeb0",
+  "yield": "MEDIUM",
+  "why": "Dependency ratio is secondary demography vocabulary"
+ },
+ {
+  "front": "Aberle's types: {{c1::alternative}} and redemptive movements target individuals, while {{c2::reformative}} and revolutionary movements target society.",
+  "fp": "21708ce14ff2",
+  "yield": "LOW",
+  "why": "Aberle's four-type movement typology is not on the AAMC outline"
+ },
+ {
+  "front": "According to differential association, why is who you spend time with predictive of deviance?",
+  "fp": "682932a8a039",
+  "yield": "LOW",
+  "why": "Restates differential association card (2)"
+ },
+ {
+  "front": "Contrast relative deprivation theory and resource mobilization theory as explanations for why social movements arise.",
+  "fp": "84f6eab0c44a",
+  "yield": "HIGH",
+  "why": "Relative deprivation vs resource mobilization is core movement theory"
+ },
+ {
+  "front": "Crude birth rate counts live births per {{c1::1,000}} people per year; total fertility rate is average children per woman over her lifetime.",
+  "fp": "563d1edc8c7b",
+  "yield": "MEDIUM",
+  "why": "Crude birth rate per 1,000; TFR covered by card 56"
+ },
+ {
+  "front": "Define immigration, emigration, and net migration rate.",
+  "fp": "66de33fde79e",
+  "yield": "LOW",
+  "why": "Pure vocabulary; push/pull card carries the migration reasoning"
+ },
+ {
+  "front": "Delta waves characterize:",
+  "fp": "4d8b7ec20421",
+  "yield": "MEDIUM",
+  "why": "Delta waves/sleep stages belong to a different topic (6B) [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Distinguish achieved, ascribed, and master status.",
+  "fp": "7ff6b6b83691",
+  "yield": "HIGH",
+  "why": "Status types are core 8C (misfiled from groups topic)"
+ },
+ {
+  "front": "Distinguish church, sect, and cult (new religious movement).",
+  "fp": "d9e00989b586",
+  "yield": "MEDIUM",
+  "why": "Church/sect/cult is supporting religion-institution vocabulary"
+ },
+ {
+  "front": "Distinguish manifest from latent functions.",
+  "fp": "b47994d6dd98",
+  "yield": "HIGH",
+  "why": "Manifest vs latent function is a high-frequency distinction"
+ },
+ {
+  "front": "Distinguish prejudice, discrimination, and stereotypes.",
+  "fp": "926da6c1cfe3",
+  "yield": "HIGH",
+  "why": "Stereotype/prejudice/discrimination distinction is tested (misfiled)"
+ },
+ {
+  "front": "Distinguish primary from secondary groups.",
+  "fp": "29a309ddea7a",
+  "yield": "HIGH",
+  "why": "Primary/secondary groups core 8C (misfiled from groups topic)"
+ },
+ {
+  "front": "Distinguish social stratification systems: caste vs. class.",
+  "fp": "027ae1075e8d",
+  "yield": "HIGH",
+  "why": "Caste vs class stratification is tested (10A)"
+ },
+ {
+  "front": "Distinguish socioeconomic status, poverty types, and social capital.",
+  "fp": "ca73b3ac4870",
+  "yield": "HIGH",
+  "why": "SES, absolute/relative poverty, social capital are tested (10A)"
+ },
+ {
+  "front": "Distinguish types of social mobility.",
+  "fp": "6ff548a87dd4",
+  "yield": "HIGH",
+  "why": "Inter/intragenerational and vertical/horizontal mobility tested (10A)"
+ },
+ {
+  "front": "Durkheim's {{c1::anomie}} is normlessness arising when rapid change weakens shared norms; he tied it to elevated suicide rates.",
+  "fp": "49402b458040",
+  "yield": "HIGH",
+  "why": "Anomie and Durkheim suicide are core"
+ },
+ {
+  "front": "For functionalists, what core functions does the family serve?",
+  "fp": "23cb9d8794a8",
+  "yield": "MEDIUM",
+  "why": "Family functions are supporting institution detail"
+ },
+ {
+  "front": "Hazardous waste facilities are sited disproportionately near low-income and minority communities. Name the concept and the two competing explanations.",
+  "fp": "cf2c38f11f31",
+  "yield": "MEDIUM",
+  "why": "Environmental justice is on outline; explanations are second step"
+ },
+ {
+  "front": "How can deviance be functional for society, per Durkheim?",
+  "fp": "e56c86196453",
+  "yield": "MEDIUM",
+  "why": "Functions of deviance support the functionalism card"
+ },
+ {
+  "front": "How do peer groups differ from family as agents of socialization?",
+  "fp": "ffa52ba0ed78",
+  "yield": "LOW",
+  "why": "Elaboration of the agents-of-socialization card (52)"
+ },
+ {
+  "front": "How do sociologists characterize globalization, and what is meant by cultural imperialism?",
+  "fp": "9c6119c624b5",
+  "yield": "MEDIUM",
+  "why": "Globalization is on 9B; cultural imperialism is supporting term"
+ },
+ {
+  "front": "How do the three paradigms differ in analyzing the economy as an institution?",
+  "fp": "facfc18d23c5",
+  "yield": "LOW",
+  "why": "Encyclopedic paradigm-by-institution restatement of card 55"
+ },
+ {
+  "front": "How would a conflict theorist interpret standardized testing in schools?",
+  "fp": "113800db5e58",
+  "yield": "MEDIUM",
+  "why": "Conflict-theory application to schooling"
+ },
+ {
+  "front": "How would a symbolic interactionist study doctor-patient encounters?",
+  "fp": "f03c81a61eb4",
+  "yield": "MEDIUM",
+  "why": "Interactionist application to clinical encounter"
+ },
+ {
+  "front": "In labeling theory, what distinguishes primary from secondary deviance (Lemert)?",
+  "fp": "55498948fb14",
+  "yield": "LOW",
+  "why": "Restates primary/secondary deviance from labeling card (6)"
+ },
+ {
+  "front": "In Merton's strain theory, an {{c1::innovator}} accepts cultural goals but uses illegitimate means, e.g., dealing drugs to attain wealth.",
+  "fp": "adb52c29fc40",
+  "yield": "HIGH",
+  "why": "Merton innovator is the classic strain-theory example"
+ },
+ {
+  "front": "In Merton's strain theory, how does a rebel differ from a retreatist?",
+  "fp": "4da66bb13414",
+  "yield": "LOW",
+  "why": "Restates rebel/retreatist from cards 40 and 57"
+ },
+ {
+  "front": "In Merton's typology, a {{c1::ritualist}} abandons the goals but clings to the rules; a {{c2::retreatist}} rejects both goals and means.",
+  "fp": "9c5d5a2d9666",
+  "yield": "MEDIUM",
+  "why": "Ritualist/retreatist supporting detail; card 57 lists all five"
+ },
+ {
+  "front": "Inferring about individuals from group-level data is the {{c1::ecological fallacy}}; inferring about groups from cases is the {{c2::reductionist}} fallacy.",
+  "fp": "617fb42da7cb",
+  "yield": "MEDIUM",
+  "why": "Ecological fallacy is a plausible reasoning stem, methods flavor"
+ },
+ {
+  "front": "List the major agents of socialization across the life course.",
+  "fp": "5d6392db5b57",
+  "yield": "LOW",
+  "why": "Restates agents-of-socialization card (52)"
+ },
+ {
+  "front": "Longtime residents face rising rents and displacement as wealthier residents move into their neighborhood. Name the process and a health consequence.",
+  "fp": "9e15e16db613",
+  "yield": "MEDIUM",
+  "why": "Gentrification is supporting urbanization content"
+ },
+ {
+  "front": "Match theorist to claim: deviance is learned in intimate groups; deviance occurs when social bonds weaken; deviance is created by society's reaction.",
+  "fp": "6afc2c766a2b",
+  "yield": "MEDIUM",
+  "why": "Adds Hirschi social control theory to the deviance set"
+ },
+ {
+  "front": "Merton: {{c1::manifest}} functions are intended and recognized; {{c2::latent}} functions are unintended, e.g., schools fostering mate selection.",
+  "fp": "95011c9c33f7",
+  "yield": "LOW",
+  "why": "Restates manifest/latent card (22)"
+ },
+ {
+  "front": "Neighborhoods with more fast-food outlets have higher obesity rates. Name three explanations other than 'outlets cause obesity'.",
+  "fp": "76629651b270",
+  "yield": "MEDIUM",
+  "why": "Causal reasoning on ecological data; plausible passage question"
+ },
+ {
+  "front": "Sensational reporting on a rare drug produces sweeping new laws far out of proportion to the actual harm. Name the phenomenon and the actors involved.",
+  "fp": "d5aecaf5d2d6",
+  "yield": "MEDIUM",
+  "why": "Moral panic is supporting deviance construction content"
+ },
+ {
+  "front": "The {{c1::family}} is the earliest and most influential agent of socialization, transmitting language, norms, and class-linked values.",
+  "fp": "88eba7aec524",
+  "yield": "LOW",
+  "why": "Restates the family-as-first-agent point from card 52"
+ },
+ {
+  "front": "The {{c1::hidden curriculum}} is schooling's unspoken lessons — obedience, punctuality, competition — taught alongside formal academics.",
+  "fp": "06bbcef5523e",
+  "yield": "HIGH",
+  "why": "Hidden curriculum is named on the outline"
+ },
+ {
+  "front": "Weber's three types of authority: {{c1::traditional}} (custom and inheritance), {{c2::charismatic}} (personal devotion), and rational-legal (rules and office).",
+  "fp": "b8c31447a98d",
+  "yield": "HIGH",
+  "why": "Weber's three authority types are tested"
+ },
+ {
+  "front": "What are push and pull factors in migration?",
+  "fp": "c13403aff841",
+  "yield": "HIGH",
+  "why": "Push/pull migration factors are a common discrete"
+ },
+ {
+  "front": "What are the agents of socialization?",
+  "fp": "7d8e27067b61",
+  "yield": "HIGH",
+  "why": "Agents plus primary/secondary socialization are core 7B"
+ },
+ {
+  "front": "What are the major social institutions and their roles?",
+  "fp": "274e2c0754d3",
+  "yield": "MEDIUM",
+  "why": "Fuller restatement of the institutions card (8)"
+ },
+ {
+  "front": "What are the sociological theories of deviance?",
+  "fp": "a20362348c79",
+  "yield": "MEDIUM",
+  "why": "Summary of three deviance theories each carded individually"
+ },
+ {
+  "front": "What are the three major sociological theoretical paradigms?",
+  "fp": "6b6cbd1105ca",
+  "yield": "HIGH",
+  "why": "Plainest summary of the three paradigms"
+ },
+ {
+  "front": "What are total fertility rate, crude mortality rate, and replacement-level fertility?",
+  "fp": "516c525ca738",
+  "yield": "HIGH",
+  "why": "TFR, crude mortality, replacement 2.1 are tested demography"
+ },
+ {
+  "front": "What creates strain in Merton's strain theory?",
+  "fp": "3881ada5acbd",
+  "yield": "HIGH",
+  "why": "Strain theory and five adaptations are core"
+ },
+ {
+  "front": "What is a social fact, per Durkheim?",
+  "fp": "e17723020fe7",
+  "yield": "MEDIUM",
+  "why": "Social fact is Durkheim background, rarely asked itself"
+ },
+ {
+  "front": "What is Malthusian theory, and what are positive checks?",
+  "fp": "49878eadcf03",
+  "yield": "MEDIUM",
+  "why": "Malthus is secondary population theory in prep books"
+ },
+ {
+  "front": "What is secularization?",
+  "fp": "5f6c744105a0",
+  "yield": "MEDIUM",
+  "why": "Secularization is supporting religion content"
+ },
+ {
+  "front": "What is social control, and how do formal and informal sanctions differ?",
+  "fp": "4b6c7dbe600a",
+  "yield": "HIGH",
+  "why": "Social control and formal/informal sanctions are on the 7B outline"
+ },
+ {
+  "front": "What is stigma (Goffman), and how does it connect to labeling theory?",
+  "fp": "3adb125bfd99",
+  "yield": "MEDIUM",
+  "why": "Stigma-labeling link is supporting; stigma carded elsewhere"
+ },
+ {
+  "front": "What is the demographic transition model?",
+  "fp": "dfd2add09b74",
+  "yield": "MEDIUM",
+  "why": "Stage list supports the demographic transition card (1)"
+ },
+ {
+  "front": "What socialization role does mass media play?",
+  "fp": "38c493c565e6",
+  "yield": "LOW",
+  "why": "Elaboration of media as an agent of socialization"
+ },
+ {
+  "front": "Which method best captures how ICU nurses actually negotiate authority with physicians, and what is its main tradeoff?",
+  "fp": "c95604a1d76c",
+  "yield": "MEDIUM",
+  "why": "Ethnography tradeoffs are tested but belong to research methods"
+ },
+ {
+  "front": "Which paradigm best explains how a hospital's division of roles (surgeon, nurse, tech) keeps patient care running smoothly?",
+  "fp": "b79002afd4c1",
+  "yield": "MEDIUM",
+  "why": "Functionalism application to hospital roles"
+ }
+]

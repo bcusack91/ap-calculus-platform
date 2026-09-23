@@ -1,0 +1,380 @@
+[
+ {
+  "front": "A colony grows on complete medium but not on minimal medium lacking leucine. What is it and how is this used?",
+  "fp": "c3fc67232d11",
+  "yield": "MEDIUM",
+  "why": "Auxotroph selection is the standard passage tool for bacterial genetics experiments"
+ },
+ {
+  "front": "A composite transposon consists of cargo genes flanked by two {{c1::insertion sequences (IS elements)}}.",
+  "fp": "1e457a5f34b3",
+  "yield": "MEDIUM",
+  "why": "Composite transposon structure; supporting detail on how resistance cargo moves"
+ },
+ {
+  "front": "A gene is inactivated by a large insertion that also confers kanamycin resistance. What element is responsible?",
+  "fp": "c317c225f7e2",
+  "yield": "MEDIUM",
+  "why": "Applied recognition of a transposon by its two signatures: gene knockout plus resistance"
+ },
+ {
+  "front": "A silent mutation:",
+  "fp": "5854514f37eb",
+  "yield": "MEDIUM",
+  "why": "Core 1C mutation type, but misfiled here; belongs with genetic code / mutation deck"
+ },
+ {
+  "front": "A Western blot of a mutant shows a band far smaller than wild type. Which mutation class fits best?",
+  "fp": "4336f5726778",
+  "yield": "MEDIUM",
+  "why": "MCAT-style data interpretation: truncated protein implies nonsense or frameshift"
+ },
+ {
+  "front": "Adding DNase to the culture medium blocks gene transfer between two strains. Which mechanism was responsible?",
+  "fp": "d6a570f9f98a",
+  "yield": "HIGH",
+  "why": "DNase sensitivity is THE discriminating experiment for transformation"
+ },
+ {
+  "front": "After an F+ x F- mating, the recipient becomes {{c1::F+}}, but chromosomal genes are almost never transferred.",
+  "fp": "f8df21608df5",
+  "yield": "HIGH",
+  "why": "F+ vs Hfr outcome is the core conjugation distinction AAMC tests"
+ },
+ {
+  "front": "Artificial competence is induced with {{c1::calcium chloride plus heat shock}} or by electroporation.",
+  "fp": "6275cc8031c3",
+  "yield": "MEDIUM",
+  "why": "Lab-technique detail; plausible passage context in a cloning experiment"
+ },
+ {
+  "front": "Beyond making the pilus, list the mechanical steps of F-plasmid conjugation.",
+  "fp": "061e7a5f1a9e",
+  "yield": "LOW",
+  "why": "Relaxase/oriT/mating-bridge mechanics: enzyme-level detail AAMC treats as a black box"
+ },
+ {
+  "front": "Conjugation is resistant to {{c1::DNase}} added to the medium, because DNA passes through a protected mating bridge.",
+  "fp": "64df7865681a",
+  "yield": "LOW",
+  "why": "Restates the DNase logic already carried by the transformation and contact cards"
+ },
+ {
+  "front": "Conjugation requires {{c1::direct cell contact}}, so a filter between donor and recipient abolishes it while phage-borne transfer passes.",
+  "fp": "69507fcf5d64",
+  "yield": "HIGH",
+  "why": "Contact dependence (filter test) is the defining feature of conjugation"
+ },
+ {
+  "front": "Contrast generalized and specialized transduction.",
+  "fp": "63130ef75673",
+  "yield": "HIGH",
+  "why": "Generalized vs specialized transduction is a named, directly asked distinction"
+ },
+ {
+  "front": "CRISPR-Cas is a bacterial adaptive immune system that stores fragments of past invaders as {{c1::spacers}}.",
+  "fp": "c826ce13b5b7",
+  "yield": "LOW",
+  "why": "Near-restatement of the 'What is CRISPR natively?' card in this deck"
+ },
+ {
+  "front": "Different Hfr strains transfer different genes first, in different orders. What did this reveal about the E. coli chromosome?",
+  "fp": "59160f7c3003",
+  "yield": "MEDIUM",
+  "why": "Classic reasoning that Hfr maps prove a circular chromosome; plausible passage step"
+ },
+ {
+  "front": "Distinguish a selectable marker from a screenable marker in cloning.",
+  "fp": "3cf3d72281bd",
+  "yield": "MEDIUM",
+  "why": "Selectable vs screenable marker is common recombinant-DNA passage context"
+ },
+ {
+  "front": "Distinguish conservative (cut-and-paste) from replicative transposition.",
+  "fp": "e6b2d586f11c",
+  "yield": "LOW",
+  "why": "Cointegrate/resolvase mechanism is beyond AAMC scope for transposons"
+ },
+ {
+  "front": "During meiosis, crossing over occurs in:",
+  "fp": "282695984735",
+  "yield": "MEDIUM",
+  "why": "Meiosis fact misfiled in microbial genetics; covered by the meiosis deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "During natural transformation, what happens to the two strands of the incoming DNA fragment?",
+  "fp": "a97aca813016",
+  "yield": "LOW",
+  "why": "Single-strand uptake mechanics is molecular detail AAMC does not test"
+ },
+ {
+  "front": "Gene transfer between two strains persists when DNase is added to the medium. Transformation is ruled out because {{c1::naked DNA}} would be degraded.",
+  "fp": "b09538e986ee",
+  "yield": "LOW",
+  "why": "Restates the DNase-blocks-transformation card from the opposite direction"
+ },
+ {
+  "front": "Give three genetic consequences of a transposon inserting into or near a bacterial gene.",
+  "fp": "0f51d41cf577",
+  "yield": "MEDIUM",
+  "why": "Consequences of insertion (knockout, resistance mobilization) support the transposon core"
+ },
+ {
+  "front": "How did Avery, MacLeod, and McCarty identify the transforming principle chemically?",
+  "fp": "1dc0611ada51",
+  "yield": "MEDIUM",
+  "why": "Canonical experiment; the DNase logic is the same as the transformation discriminator"
+ },
+ {
+  "front": "How did phage co-infection experiments (rII-style) map mutation positions within a single gene?",
+  "fp": "54076bd98f51",
+  "yield": "LOW",
+  "why": "Benzer rII fine-structure mapping is history/trivia, not tested"
+ },
+ {
+  "front": "How do bacteria acquire antibiotic resistance genetically?",
+  "fp": "33ed98d8c752",
+  "yield": "HIGH",
+  "why": "How resistance spreads (mutation + three HGT routes) is the category's core question"
+ },
+ {
+  "front": "How do complementation and recombination differ as explanations for wild-type progeny from two mutants?",
+  "fp": "e00f04b4ae69",
+  "yield": "MEDIUM",
+  "why": "Second-step reasoning distinguishing complementation from recombination"
+ },
+ {
+  "front": "How does a restriction-modification system destroy phage DNA without cutting the bacterium's own chromosome?",
+  "fp": "13b5f54ed87e",
+  "yield": "MEDIUM",
+  "why": "Restriction enzymes are 1C-tested; origin/self-protection is useful passage context"
+ },
+ {
+  "front": "How does an F' plasmid form, and what genetic condition does it create in a recipient?",
+  "fp": "ca9bd4f97a54",
+  "yield": "MEDIUM",
+  "why": "F' and merodiploid support Hfr/F+ core and lac-operon cis/trans questions"
+ },
+ {
+  "front": "How does an F+ cell become Hfr, and what sequence elements make this possible?",
+  "fp": "3eb252026492",
+  "yield": "MEDIUM",
+  "why": "How Hfr arises supports the core Hfr concept; IS-mediated integration is secondary"
+ },
+ {
+  "front": "How does an integron accumulate and express multiple resistance genes?",
+  "fp": "024ae23597d3",
+  "yield": "LOW",
+  "why": "Integrons/attI/integrase are beyond the AAMC outline"
+ },
+ {
+  "front": "How does replica plating demonstrate that antibiotic-resistant mutants were not induced by the drug?",
+  "fp": "641d3e6ed76b",
+  "yield": "MEDIUM",
+  "why": "Replica plating reasoning (mutations precede selection) appears in passages"
+ },
+ {
+  "front": "If two recessive mutations fail to complement in trans, they are almost certainly in the {{c1::same gene}}.",
+  "fp": "72aaa82c11ac",
+  "yield": "MEDIUM",
+  "why": "Core complementation inference: no complementation implies same gene"
+ },
+ {
+  "front": "In a cis-trans test, why must the cis configuration always be checked as a control?",
+  "fp": "360107774cbd",
+  "yield": "LOW",
+  "why": "Cis-control nuance of the cis-trans test is beyond what AAMC asks"
+ },
+ {
+  "front": "In a phage cross, wild-type recombinants appear at $0.001$ of total progeny. What map distance separates the mutations?",
+  "fp": "106ba44a73b0",
+  "yield": "LOW",
+  "why": "Phage fine-structure map-unit doubling is trivia-grade specificity"
+ },
+ {
+  "front": "In a U-tube with a filter separating two strains, gene transfer still occurs. What does this identify, and what does it rule out?",
+  "fp": "c9b0c5ea6338",
+  "yield": "MEDIUM",
+  "why": "U-tube filter experiment identifies transduction; plausible passage design question"
+ },
+ {
+  "front": "In an uninterrupted Hfr cross, why do genes near the origin of transfer appear in more recombinants than distal genes?",
+  "fp": "1c1c6e23e59e",
+  "yield": "LOW",
+  "why": "Gradient-of-transfer mapping is secondary to interrupted mating, rarely asked"
+ },
+ {
+  "front": "In generalized transduction, a high co-transduction frequency for two genes means they are {{c1::physically close together}}.",
+  "fp": "638247324111",
+  "yield": "MEDIUM",
+  "why": "Co-transduction as a proximity measure is a plausible second-step passage inference"
+ },
+ {
+  "front": "In interrupted mating, the time at which each donor gene first appears in recombinants gives the {{c1::gene order and map distance in minutes}}.",
+  "fp": "81cb5ae217a2",
+  "yield": "MEDIUM",
+  "why": "Interrupted mating giving order in minutes is the standard Hfr mapping concept"
+ },
+ {
+  "front": "Interrupted-mating experiments transfer genes in a fixed time order because {{c1::the chromosome enters linearly}} from the Hfr origin.",
+  "fp": "cecfd36c9f16",
+  "yield": "LOW",
+  "why": "Near-restatement of the interrupted-mating card"
+ },
+ {
+  "front": "Mutants 1 and 2 complement, 2 and 3 complement, but 1 and 3 do not. How many genes are represented?",
+  "fp": "31dc2d8361b4",
+  "yield": "MEDIUM",
+  "why": "Worked complementation-group example; the reasoning pattern AAMC uses"
+ },
+ {
+  "front": "Natural transformation requires the recipient to be {{c1::competent}}, expressing dedicated DNA-uptake machinery.",
+  "fp": "25be11f56311",
+  "yield": "LOW",
+  "why": "Near-restatement of the 'What is competence?' card"
+ },
+ {
+  "front": "On X-gal plates, colonies carrying an insert in the polylinker appear {{c1::white}} rather than blue.",
+  "fp": "3cf65bceed1d",
+  "yield": "MEDIUM",
+  "why": "Blue/white screening is standard cloning context in 1C passages"
+ },
+ {
+  "front": "R plasmids are dangerous because they combine {{c1::multiple resistance genes with conjugative transfer genes}} on one element.",
+  "fp": "38e112b42550",
+  "yield": "HIGH",
+  "why": "R plasmids combining resistance and transfer genes is the core 'how resistance moves' fact"
+ },
+ {
+  "front": "Rolling-circle conjugation transfers a {{c1::single strand}} of DNA; both donor and recipient then synthesize the complement.",
+  "fp": "42af436c3128",
+  "yield": "MEDIUM",
+  "why": "Single-strand transfer explains why donor stays F+; supporting conjugation detail"
+ },
+ {
+  "front": "The Ames test scores {{c1::reversion}} of a histidine auxotroph to prototrophy on histidine-free plates.",
+  "fp": "44d75bc62b6c",
+  "yield": "MEDIUM",
+  "why": "Ames test reversion of an auxotroph is a commonly referenced assay"
+ },
+ {
+  "front": "The genetic code is described as degenerate because:",
+  "fp": "0c92984d8887",
+  "yield": "MEDIUM",
+  "why": "Core genetic-code fact but misfiled; belongs in the genetic code deck"
+ },
+ {
+  "front": "The Luria-Delbruck fluctuation test showed resistant mutants arise {{c1::before}} exposure to the selective agent.",
+  "fp": "1606d6f5608c",
+  "yield": "MEDIUM",
+  "why": "Luria-Delbruck logic (mutations precede selection) is classic passage material"
+ },
+ {
+  "front": "The number of complementation groups in a mutant screen equals the number of {{c1::genes}} identified in the pathway.",
+  "fp": "aadc66ccfb03",
+  "yield": "LOW",
+  "why": "Restates the complementation-group cards already in the deck"
+ },
+ {
+  "front": "Transduction moves resistance genes without cell contact; transformation moves them via {{c1::free DNA released from lysed cells}}.",
+  "fp": "91d1528b6f68",
+  "yield": "MEDIUM",
+  "why": "Summary contrast of transduction vs transformation as resistance routes"
+ },
+ {
+  "front": "Transposable elements were first discovered by {{c1::Barbara McClintock}}, in maize, before their bacterial roles were known.",
+  "fp": "afac69ee554e",
+  "yield": "LOW",
+  "why": "Discovery/history fact; who found transposons is never tested"
+ },
+ {
+  "front": "Two recessive mutants with the same phenotype are combined in one cell and the phenotype is wild-type. What do you conclude?",
+  "fp": "9483debc1f48",
+  "yield": "HIGH",
+  "why": "Basic complementation inference: wild-type in trans means different genes"
+ },
+ {
+  "front": "What are transposons?",
+  "fp": "01f7b4e254c6",
+  "yield": "HIGH",
+  "why": "Definition of transposons is named core content for this category"
+ },
+ {
+  "front": "What did Griffith's experiment show when heat-killed smooth (S) pneumococci were mixed with live rough (R) cells?",
+  "fp": "9e8ac2366985",
+  "yield": "MEDIUM",
+  "why": "Griffith's experiment is the canonical transformation example in passages"
+ },
+ {
+  "front": "What DNA sequence features mark the two ends of a transposon and the site where it landed?",
+  "fp": "c6e579c41a73",
+  "yield": "LOW",
+  "why": "Inverted repeats / target-site duplication is structural detail beyond AAMC"
+ },
+ {
+  "front": "What does a high co-transformation frequency for two markers imply, and why?",
+  "fp": "74521deaa67d",
+  "yield": "LOW",
+  "why": "Duplicates the co-transduction proximity logic for a rarer method"
+ },
+ {
+  "front": "What is an F plasmid?",
+  "fp": "9b0aa1653dde",
+  "yield": "HIGH",
+  "why": "F plasmid definition is core conjugation content"
+ },
+ {
+  "front": "What is an Hfr cell?",
+  "fp": "a0c8c2ec61ee",
+  "yield": "HIGH",
+  "why": "Hfr definition is core; Hfr vs F+ is directly tested"
+ },
+ {
+  "front": "What is competence in bacteria?",
+  "fp": "78b676d55bf1",
+  "yield": "HIGH",
+  "why": "Competence is the named prerequisite for transformation"
+ },
+ {
+  "front": "What is the CRISPR system natively?",
+  "fp": "20e51ab79db0",
+  "yield": "MEDIUM",
+  "why": "CRISPR as bacterial adaptive immunity is plausible passage context"
+ },
+ {
+  "front": "Why do R plasmids spread multidrug resistance faster than chromosomal mutation ever could?",
+  "fp": "3cd8331c7ca4",
+  "yield": "MEDIUM",
+  "why": "Why plasmid transfer spreads multidrug resistance; supports the R plasmid core"
+ },
+ {
+  "front": "Why does horizontal gene transfer complicate bacterial phylogeny?",
+  "fp": "03b993525c91",
+  "yield": "MEDIUM",
+  "why": "Phylogeny consequence of HGT is outside this category's focus [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Why does horizontal transfer, especially conjugation, outpace spontaneous mutation in spreading resistance?",
+  "fp": "9b221862f0b1",
+  "yield": "LOW",
+  "why": "Near-restatement of the R-plasmid-spread card"
+ },
+ {
+  "front": "Why does the recipient in an Hfr x F- cross usually remain F- even after receiving many donor genes?",
+  "fp": "b182654b404b",
+  "yield": "HIGH",
+  "why": "Why Hfr recipients stay F- is the classic Hfr vs F+ discriminator"
+ },
+ {
+  "front": "Why is a complementation test uninterpretable for a dominant mutation?",
+  "fp": "cec1c24fd7b0",
+  "yield": "LOW",
+  "why": "Dominant-mutation caveat to complementation is beyond AAMC scope"
+ },
+ {
+  "front": "Why were F' merodiploids essential for analyzing the lac operon?",
+  "fp": "370b1373b118",
+  "yield": "MEDIUM",
+  "why": "F' merodiploids underpin lac operon cis/trans reasoning, which is tested"
+ }
+]

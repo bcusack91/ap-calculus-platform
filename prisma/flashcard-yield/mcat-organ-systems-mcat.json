@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Colipase}} anchors pancreatic lipase to the fat droplet surface, preventing its displacement by bile salts.",
+  "fp": "3d78a989b3c7",
+  "yield": "LOW",
+  "why": "Colipase is a named cofactor AAMC folds into \"pancreatic lipase + bile\"; not needed for a point"
+ },
+ {
+  "front": "{{c1::Secretin}} from duodenal S cells responds to acid by driving pancreatic bicarbonate secretion.",
+  "fp": "3530c7c29a41",
+  "yield": "HIGH",
+  "why": "Secretin/S cells/bicarbonate is core hormonal control of digestion"
+ },
+ {
+  "front": "A gastrin-secreting tumor causes duodenal ulcers plus {{c1::steatorrhea}}, because excess acid inactivates pancreatic lipase in the small intestine.",
+  "fp": "3dc4ceb810a3",
+  "yield": "MEDIUM",
+  "why": "Clinical illustration of lipase pH dependence; the mechanism is tested, the tumor is not"
+ },
+ {
+  "front": "About 95 percent of secreted bile salts are reclaimed in the {{c1::terminal ileum}} and returned to the liver.",
+  "fp": "8c189b8fb12e",
+  "yield": "MEDIUM",
+  "why": "Enterohepatic recycling in the ileum is useful context; the 95% figure is not asked"
+ },
+ {
+  "front": "Acute hemorrhage: baroreceptor firing {{c1::falls}}, releasing the medullary vasomotor center from inhibition and raising sympathetic outflow in seconds.",
+  "fp": "7011f4b81caf",
+  "yield": "MEDIUM",
+  "why": "Baroreceptor reflex is core cardio, tested there; here it is cross-system integration"
+ },
+ {
+  "front": "Aldosterone primarily promotes:",
+  "fp": "131c7e11bbc6",
+  "yield": "HIGH",
+  "why": "Aldosterone Na+ retention/K+ excretion is a top-frequency hormone fact"
+ },
+ {
+  "front": "Antral pH below about 3 triggers {{c1::somatostatin}} release, which shuts off gastrin secretion.",
+  "fp": "c9ae5605ebdb",
+  "yield": "MEDIUM",
+  "why": "Somatostatin negative feedback on gastrin is supporting detail on acid control"
+ },
+ {
+  "front": "Atrial natriuretic peptide (ANP) is released in response to:",
+  "fp": "a21ebd754329",
+  "yield": "MEDIUM",
+  "why": "ANP as RAAS antagonist is a plausible second-step in volume passages"
+ },
+ {
+  "front": "Beyond sympathetic reflexes, name the three slower systems that restore blood volume after hemorrhage.",
+  "fp": "6aa58ef341b5",
+  "yield": "MEDIUM",
+  "why": "Integration of RAAS/ADH/capillary refill; good synthesis, rarely a discrete point"
+ },
+ {
+  "front": "Compare the primary and secondary antibody responses in latency, isotype, and affinity.",
+  "fp": "d8461f148b4b",
+  "yield": "HIGH",
+  "why": "Primary vs secondary response (IgM to IgG, memory, affinity) is core immunology"
+ },
+ {
+  "front": "Contrast the sympathetic and parasympathetic systems.",
+  "fp": "9316abece9d4",
+  "yield": "HIGH",
+  "why": "Sympathetic vs parasympathetic effects is a high-frequency distinction"
+ },
+ {
+  "front": "Dietary fat packaged as chylomicrons enters {{c1::lacteals (intestinal lymphatics)}}, bypassing the hepatic portal system.",
+  "fp": "b23c8cebd449",
+  "yield": "HIGH",
+  "why": "Chylomicron entry via lacteals ties lymphatic and digestive systems; on the outline"
+ },
+ {
+  "front": "Distinguish micelles from chylomicrons in fat absorption.",
+  "fp": "b46131b84de9",
+  "yield": "HIGH",
+  "why": "Micelle vs chylomicron roles in fat absorption is a classic discrete"
+ },
+ {
+  "front": "Duodenal brush-border {{c1::enteropeptidase (enterokinase)}} activates trypsinogen; trypsin then activates the other pancreatic zymogens.",
+  "fp": "adc523db0437",
+  "yield": "HIGH",
+  "why": "Enteropeptidase/trypsin zymogen cascade is a named, tested activation mechanism"
+ },
+ {
+  "front": "Estrogen surge before ovulation causes:",
+  "fp": "577cf41145a4",
+  "yield": "HIGH",
+  "why": "Estrogen positive feedback driving the LH surge is a top-frequency endocrine fact"
+ },
+ {
+  "front": "Fever raises the hypothalamic set point via {{c1::prostaglandin E2 (PGE2)}}; aspirin reduces fever by blocking its synthesis.",
+  "fp": "339078364a8c",
+  "yield": "MEDIUM",
+  "why": "PGE2 set-point mechanism supports thermoregulation questions; aspirin link is flavor"
+ },
+ {
+  "front": "Glucose and galactose enter enterocytes by {{c1::secondary active transport (Na+-coupled SGLT1)}}, while fructose uses facilitated diffusion via GLUT5.",
+  "fp": "6353b9e6fbec",
+  "yield": "HIGH",
+  "why": "SGLT1 secondary active vs GLUT5 facilitated transport is a classic tested contrast"
+ },
+ {
+  "front": "Hemolysis versus bile duct obstruction: which bilirubin fraction rises, and what happens to urine and stool?",
+  "fp": "7c8b312846b1",
+  "yield": "MEDIUM",
+  "why": "Conjugated vs unconjugated bilirubin is passage-level liver detail, rarely a discrete"
+ },
+ {
+  "front": "Hemorrhage versus pure water loss: how do plasma osmolarity and hematocrit differ in the first hours?",
+  "fp": "c88baa757421",
+  "yield": "MEDIUM",
+  "why": "Osmolarity/hematocrit reasoning after fluid loss is a plausible passage second step"
+ },
+ {
+  "front": "How do cutaneous arteriovenous shunts serve thermoregulation?",
+  "fp": "c448caffe128",
+  "yield": "HIGH",
+  "why": "Skin vasoconstriction/dilation for thermoregulation is explicitly on the outline"
+ },
+ {
+  "front": "How do NSAIDs cause gastric ulcers even when acid secretion is normal?",
+  "fp": "ec51265046ca",
+  "yield": "MEDIUM",
+  "why": "Prostaglandin mucosal defense illustrates gastric protection; drug angle is flavor"
+ },
+ {
+  "front": "How does countercurrent heat exchange in the limbs conserve core temperature?",
+  "fp": "a7d9f9827c28",
+  "yield": "MEDIUM",
+  "why": "Countercurrent heat exchange is a second-tier thermoregulation mechanism"
+ },
+ {
+  "front": "How does gastrin increase acid secretion by two routes?",
+  "fp": "9fefce8d3929",
+  "yield": "HIGH",
+  "why": "Gastrin/histamine/parietal cell acid control is core digestive regulation"
+ },
+ {
+  "front": "How is pepsinogen activated, and why is the process autocatalytic?",
+  "fp": "663cc7034264",
+  "yield": "HIGH",
+  "why": "Pepsinogen activation by HCl and its pH optimum is a standard discrete"
+ },
+ {
+  "front": "In control-system terms, why does fever cause shivering and chills even though body temperature is already elevated?",
+  "fp": "ad9e8ff35cf6",
+  "yield": "MEDIUM",
+  "why": "Set-point reasoning about fever is a good feedback-control example; supports PGE2 card"
+ },
+ {
+  "front": "In untreated type 1 diabetes, glucose above the renal threshold causes {{c1::osmotic diuresis}}, explaining polyuria, volume depletion, and thirst.",
+  "fp": "9c6c77eb3ce4",
+  "yield": "MEDIUM",
+  "why": "Osmotic diuresis in diabetes is a common passage bridge to renal handling"
+ },
+ {
+  "front": "Innate versus adaptive immunity: contrast speed, specificity, and memory.",
+  "fp": "66ac8a0d53c1",
+  "yield": "HIGH",
+  "why": "Innate vs adaptive immunity contrast is core lymphatic/immune content"
+ },
+ {
+  "front": "Insulin and glucagon exemplify {{c1::antagonistic}} control, where paired effectors push a variable in opposite directions.",
+  "fp": "fad08215274c",
+  "yield": "MEDIUM",
+  "why": "Antagonistic control is a useful framing term; the insulin/glucagon fact is tested elsewhere"
+ },
+ {
+  "front": "Insulin deficiency unleashes {{c1::hormone-sensitive lipase}}, flooding the liver with fatty acids that become ketoacids and widen the anion gap.",
+  "fp": "310a6d6c0737",
+  "yield": "MEDIUM",
+  "why": "DKA mechanism is a metabolism passage staple; HSL name and anion gap are second-tier"
+ },
+ {
+  "front": "Lactase deficiency causes {{c1::osmotic}} diarrhea with bloating, because undigested lactose reaches colonic bacteria for fermentation.",
+  "fp": "feda7e3f2fa0",
+  "yield": "MEDIUM",
+  "why": "Lactase deficiency osmotic diarrhea illustrates brush-border digestion; clinical flavor"
+ },
+ {
+  "front": "MHC class I presents {{c1::cytosolic}} peptides to CD8 T cells, while MHC class II presents endocytosed peptides to CD4 T cells.",
+  "fp": "e3921ace6fcb",
+  "yield": "HIGH",
+  "why": "MHC I vs II and CD8 vs CD4 pairing is a high-frequency immunology distinction"
+ },
+ {
+  "front": "Nonshivering thermogenesis in brown fat uses {{c1::UCP1 (thermogenin)}} to uncouple the proton gradient from ATP synthesis.",
+  "fp": "e2d8db3f9932",
+  "yield": "MEDIUM",
+  "why": "Uncoupling in brown fat is tested in biochem; UCP1 name is supporting detail here"
+ },
+ {
+  "front": "Passive immunity means receiving preformed {{c1::antibodies}}, giving immediate but temporary protection and no memory.",
+  "fp": "2f23d7bc45bd",
+  "yield": "HIGH",
+  "why": "Passive vs active immunity (preformed antibody, no memory) is a standard discrete"
+ },
+ {
+  "front": "Salivary amylase (pH optimum near 7) is inactivated by {{c1::stomach acid}}, while lingual and gastric lipases stay active at acidic pH.",
+  "fp": "98f50e33c248",
+  "yield": "MEDIUM",
+  "why": "Enzyme pH optima across digestive compartments is supporting detail"
+ },
+ {
+  "front": "Septic versus hemorrhagic shock: predict cardiac output and total peripheral resistance in each.",
+  "fp": "74a85c5f9d4b",
+  "yield": "LOW",
+  "why": "Septic vs hemorrhagic shock hemodynamics is clinical medicine beyond the AAMC outline"
+ },
+ {
+  "front": "Shivering: what actually generates the heat, and which pathway commands it?",
+  "fp": "f65e48e3f19e",
+  "yield": "MEDIUM",
+  "why": "Shivering as somatic-motor thermogenesis is second-tier thermoregulation"
+ },
+ {
+  "front": "State the classic absorption sites for iron, folate, and vitamin B12.",
+  "fp": "183dd4d2536b",
+  "yield": "MEDIUM",
+  "why": "B12/intrinsic factor in the ileum is asked occasionally; iron and folate sites are flavor"
+ },
+ {
+  "front": "Sustained high estrogen switches its effect on the hypothalamic-pituitary axis from negative to {{c1::positive}} feedback, producing the LH surge.",
+  "fp": "4b8c7e25bb3f",
+  "yield": "LOW",
+  "why": "Restatement of the estrogen positive-feedback/LH-surge card; the plainer one stays visible"
+ },
+ {
+  "front": "The anion gap, $Na^+ - (Cl^- + HCO_3^-)$, is normally about {{c1::8 to 12}} mEq/L and widens when an unmeasured acid accumulates.",
+  "fp": "daf8f7c6aa83",
+  "yield": "LOW",
+  "why": "Anion gap normal range is a clinical numeric value not on the AAMC outline"
+ },
+ {
+  "front": "The cephalic phase of digestion is {{c1::feed-forward}} control: vagal signals trigger gastric secretion before food reaches the stomach.",
+  "fp": "efe595e3ecc3",
+  "yield": "MEDIUM",
+  "why": "Cephalic phase as feed-forward control is a useful regulation example, rarely a point"
+ },
+ {
+  "front": "The hypothalamus links the nervous and endocrine systems by controlling:",
+  "fp": "56fc40c27605",
+  "yield": "HIGH",
+  "why": "Hypothalamus-pituitary link is a top-frequency endocrine/nervous fact"
+ },
+ {
+  "front": "The incretin {{c1::GIP}} explains why oral glucose evokes more insulin release than the same glucose given intravenously.",
+  "fp": "f08ec1b24ae6",
+  "yield": "LOW",
+  "why": "GIP and the incretin effect are beyond the outline; AAMC treats insulin release as a black box"
+ },
+ {
+  "front": "The liver conjugates bilirubin with {{c1::glucuronic acid}}, making it water-soluble for biliary excretion.",
+  "fp": "2aa805c3b9f5",
+  "yield": "MEDIUM",
+  "why": "Glucuronidation for bilirubin excretion is passage-level liver detail"
+ },
+ {
+  "front": "The liver detoxifies ammonia from amino acid catabolism by converting it to {{c1::urea}} for renal excretion.",
+  "fp": "b8d3c4314d2d",
+  "yield": "LOW",
+  "why": "Restatement of the \"main nitrogenous waste is urea, made in the liver\" card in this deck"
+ },
+ {
+  "front": "The myelin sheath in the peripheral nervous system is formed by:",
+  "fp": "23fd226679db",
+  "yield": "HIGH",
+  "why": "Schwann vs oligodendrocyte myelination is a high-frequency nervous-system discrete"
+ },
+ {
+  "front": "The parasympathetic nervous system uses which neurotransmitter at its target organs?",
+  "fp": "7c47c95c6b41",
+  "yield": "HIGH",
+  "why": "ACh vs NE at autonomic targets is a classic discrete question"
+ },
+ {
+  "front": "The somatic nervous system controls:",
+  "fp": "2d115554aca4",
+  "yield": "MEDIUM",
+  "why": "Somatic vs autonomic division is basic and usually implied rather than asked"
+ },
+ {
+  "front": "Trace blood flow through the heart.",
+  "fp": "ba8984ad1f6a",
+  "yield": "HIGH",
+  "why": "Path of blood through the heart is core circulatory content"
+ },
+ {
+  "front": "Vomiting versus diarrhea: which acid-base disturbance does each produce, and why?",
+  "fp": "8004ec24285f",
+  "yield": "MEDIUM",
+  "why": "Vomiting alkalosis vs diarrhea acidosis is a plausible passage second step"
+ },
+ {
+  "front": "What are the three germ layers and a derivative of each?",
+  "fp": "b55403cb40ab",
+  "yield": "HIGH",
+  "why": "Germ layers and derivatives is a top-frequency embryology discrete"
+ },
+ {
+  "front": "What does the 'gain' of a negative feedback system measure?",
+  "fp": "8e9984a0ee32",
+  "yield": "LOW",
+  "why": "Feedback \"gain\" is control-theory vocabulary not used on the MCAT"
+ },
+ {
+  "front": "What is cardiac output, and what is its formula?",
+  "fp": "35fd0900b0d7",
+  "yield": "HIGH",
+  "why": "CO = HR x SV is a formula used in calculation"
+ },
+ {
+  "front": "What is the cardiac conduction pathway?",
+  "fp": "cd28da109da3",
+  "yield": "HIGH",
+  "why": "SA-AV-His-Purkinje conduction pathway is a standard discrete"
+ },
+ {
+  "front": "What is the functional unit of the kidney and its segments?",
+  "fp": "65d0a357ff2d",
+  "yield": "HIGH",
+  "why": "Nephron as functional unit and its segments is core renal content"
+ },
+ {
+  "front": "What is the main nitrogenous waste in humans and where is it made?",
+  "fp": "268b13833117",
+  "yield": "HIGH",
+  "why": "Urea from the hepatic urea cycle is a standard liver-function discrete"
+ },
+ {
+  "front": "What triggers CCK release, and what three coordinated effects deliver bile and enzymes to dietary fat?",
+  "fp": "072aedc907ee",
+  "yield": "HIGH",
+  "why": "CCK triggers and effects (gallbladder, pancreatic enzymes) is core hormonal control"
+ },
+ {
+  "front": "When ambient temperature exceeds body temperature, {{c1::evaporation (sweating)}} is the only mechanism of heat loss.",
+  "fp": "fe3a7aeec259",
+  "yield": "HIGH",
+  "why": "Evaporation as the only heat loss above body temperature is a classic reasoning item"
+ },
+ {
+  "front": "Where are disaccharides finally digested, and how do the resulting monosaccharides enter the enterocyte?",
+  "fp": "6e0785bd331f",
+  "yield": "MEDIUM",
+  "why": "Brush-border disaccharidases plus entry transporters; overlaps the SGLT1/GLUT5 card"
+ },
+ {
+  "front": "Where does most nutrient absorption occur and why?",
+  "fp": "c26f7aaab2bc",
+  "yield": "HIGH",
+  "why": "Small intestine villi/microvilli surface area is a basic tested fact"
+ },
+ {
+  "front": "Which major class of plasma proteins does the liver NOT make?",
+  "fp": "4c5faf573943",
+  "yield": "MEDIUM",
+  "why": "Liver makes albumin and clotting factors but not antibodies; supporting liver detail"
+ },
+ {
+  "front": "Why are sweat glands the classic exception to sympathetic neurotransmission rules?",
+  "fp": "a637407e2c96",
+  "yield": "MEDIUM",
+  "why": "Sympathetic cholinergic sweat glands is a known exception, occasionally asked"
+ },
+ {
+  "front": "Why can the liver, but not skeletal muscle, release free glucose into the blood?",
+  "fp": "c66c481e03fe",
+  "yield": "HIGH",
+  "why": "Glucose-6-phosphatase liver vs muscle is a high-frequency metabolism distinction"
+ },
+ {
+  "front": "Why do orally absorbed drugs and nutrients reach the liver before the systemic circulation?",
+  "fp": "15a97d51bfef",
+  "yield": "HIGH",
+  "why": "Hepatic portal system and first-pass metabolism is core digestive/liver content"
+ },
+ {
+  "front": "Why do pancreatic amylase and lipase depend on secretin signaling to function?",
+  "fp": "c883a553e812",
+  "yield": "MEDIUM",
+  "why": "Extends the secretin card with enzyme pH optima; supporting reasoning"
+ },
+ {
+  "front": "Why does CCK slow gastric emptying?",
+  "fp": "13f69f5e9e08",
+  "yield": "MEDIUM",
+  "why": "CCK slowing gastric emptying is supporting detail on the CCK card"
+ },
+ {
+  "front": "Why does complete biliary obstruction cause steatorrhea and a bleeding tendency together?",
+  "fp": "ecec55dbd79f",
+  "yield": "MEDIUM",
+  "why": "Fat-soluble vitamin K malabsorption is a plausible passage inference"
+ },
+ {
+  "front": "Why does pancreatic insufficiency cause steatorrhea even when bile secretion is normal?",
+  "fp": "489b1d2cb0d2",
+  "yield": "MEDIUM",
+  "why": "Reinforces lipase vs bile roles; clinical restatement of micelle mechanics"
+ },
+ {
+  "front": "Why don't physiologic positive feedback loops (clotting, parturition, the LH surge) spiral indefinitely?",
+  "fp": "c3cc1c89e2b7",
+  "yield": "MEDIUM",
+  "why": "How positive feedback loops terminate is a useful framing, rarely a discrete"
+ },
+ {
+  "front": "Why is epinephrine the drug for anaphylaxis? Name the receptor action that reverses each problem.",
+  "fp": "2d6aba00fd64",
+  "yield": "LOW",
+  "why": "Alpha/beta receptor pharmacology of epinephrine is drug detail beyond the outline"
+ }
+]

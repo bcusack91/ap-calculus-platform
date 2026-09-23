@@ -1,0 +1,392 @@
+[
+ {
+  "front": "A patient relapses after therapy, yet the recovered isolate has the same MIC as before. Resistance or tolerance?",
+  "fp": "e8c46dc675e3",
+  "yield": "MEDIUM",
+  "why": "Tolerance vs resistance via MIC is a plausible passage inference, secondary to core mechanisms"
+ },
+ {
+  "front": "A patient's pneumonia fails to respond to penicillin because the pathogen is Mycoplasma. Why is this failure predictable?",
+  "fp": "fbe6b3eb8710",
+  "yield": "MEDIUM",
+  "why": "Intrinsic resistance from a missing target; organism-specific but illustrates the target logic"
+ },
+ {
+  "front": "A virulence factor is:",
+  "fp": "3d77bca63b1d",
+  "yield": "MEDIUM",
+  "why": "Virulence-factor definition supports pathogenesis passages (belongs to bacteria topic)"
+ },
+ {
+  "front": "Acyclovir is activated only in infected cells because the first phosphorylation requires {{c1::viral thymidine kinase}}.",
+  "fp": "1a3404d69576",
+  "yield": "MEDIUM",
+  "why": "Prodrug activation by a viral enzyme is the classic selective-toxicity example for antivirals"
+ },
+ {
+  "front": "Adding a beta-lactam makes an aminoglycoside far more effective against enterococci. Explain the synergy.",
+  "fp": "410dd249d069",
+  "yield": "LOW",
+  "why": "Clinical synergy detail for enterococci; pharmacology beyond AAMC scope"
+ },
+ {
+  "front": "Aminoglycosides bind the {{c1::30S}} subunit, causing misreading of mRNA, and are bactericidal.",
+  "fp": "361ba026b03b",
+  "yield": "HIGH",
+  "why": "30S target of aminoglycosides is core antibiotic-class-by-target content"
+ },
+ {
+  "front": "Aminoglycosides cause nephrotoxicity and ototoxicity despite targeting the 30S subunit. Reconcile this.",
+  "fp": "1e76e2df3cee",
+  "yield": "LOW",
+  "why": "Organ toxicity detail; the mitochondrial-ribosome point is covered by another card"
+ },
+ {
+  "front": "Amphotericin B binds {{c1::ergosterol}} and forms membrane pores that leak ions from fungal cells.",
+  "fp": "8a53e45dc9a8",
+  "yield": "MEDIUM",
+  "why": "Ergosterol vs cholesterol is the standard antifungal selective-toxicity contrast"
+ },
+ {
+  "front": "Amphotericin B binds ergosterol directly while azoles inhibit its {{c1::synthesis}} at a fungal cytochrome P450 step.",
+  "fp": "d45a84304712",
+  "yield": "MEDIUM",
+  "why": "Binds-ergosterol vs blocks-synthesis contrast is a useful second-tier antifungal distinction"
+ },
+ {
+  "front": "An isolate is resistant to amoxicillin but susceptible to amoxicillin-clavulanate. What mechanism is present?",
+  "fp": "6c6e0cf9e0a7",
+  "yield": "MEDIUM",
+  "why": "Applying the clavulanate rule to infer beta-lactamase is a plausible passage step"
+ },
+ {
+  "front": "Beta-lactam efficacy tracks {{c1::time above MIC}}, whereas aminoglycoside efficacy tracks peak concentration.",
+  "fp": "8441d3b8cce2",
+  "yield": "LOW",
+  "why": "PK/PD dosing strategy (time above MIC vs peak) is clinical pharmacology, not tested"
+ },
+ {
+  "front": "By what enzymatic strategy do many organisms resist aminoglycosides?",
+  "fp": "491d4c9c2de1",
+  "yield": "MEDIUM",
+  "why": "Drug-modifying enzymes are the second example of enzymatic inactivation after beta-lactamase"
+ },
+ {
+  "front": "Chloramphenicol inhibits the {{c1::peptidyl transferase}} center of the 50S subunit.",
+  "fp": "21c0c6d780ad",
+  "yield": "MEDIUM",
+  "why": "Peptidyl transferase target on 50S; second-tier ribosome-inhibitor example"
+ },
+ {
+  "front": "Contrast bactericidal and bacteriostatic drugs.",
+  "fp": "c289c53e37e6",
+  "yield": "HIGH",
+  "why": "Bactericidal vs bacteriostatic is a high-frequency distinction"
+ },
+ {
+  "front": "Define bacteriostatic versus bactericidal, and name settings where a cidal drug is essential.",
+  "fp": "863c93409f6e",
+  "yield": "LOW",
+  "why": "Restates the cidal/static card plus clinical settings covered elsewhere"
+ },
+ {
+  "front": "During log phase, population growth is:",
+  "fp": "36eda9ce18e1",
+  "yield": "HIGH",
+  "why": "Log-phase exponential growth is core growth-curve content (bacteria topic)"
+ },
+ {
+  "front": "Echinocandins inhibit beta-1,3-glucan synthase. Why does this offer better selectivity than most antifungals?",
+  "fp": "f5eab1da87ce",
+  "yield": "LOW",
+  "why": "Echinocandin class detail; selective-toxicity concept already covered by wall/ergosterol cards"
+ },
+ {
+  "front": "Empiric therapy starts broad and is narrowed once culture returns, a practice called {{c1::de-escalation}}.",
+  "fp": "95d4fb77b5bf",
+  "yield": "LOW",
+  "why": "Clinical practice term (de-escalation); no MCAT reasoning content"
+ },
+ {
+  "front": "erm-mediated macrolide resistance works by {{c1::methylation of 23S rRNA}} in the 50S subunit.",
+  "fp": "00f93223d43c",
+  "yield": "MEDIUM",
+  "why": "rRNA methylation is the standard target-modification example for ribosome drugs"
+ },
+ {
+  "front": "For a bacteriostatic drug, the MBC is far {{c1::higher}} than the MIC.",
+  "fp": "96fac56961d0",
+  "yield": "LOW",
+  "why": "Restates the MIC/MBC relationship stated on the plainer MIC/MBC card"
+ },
+ {
+  "front": "Horizontal gene transfer contributes to antibiotic resistance because it:",
+  "fp": "11ec1636a739",
+  "yield": "HIGH",
+  "why": "Horizontal gene transfer spreading resistance is explicitly on the AAMC outline"
+ },
+ {
+  "front": "How do beta-lactamases destroy penicillins, and how do clavulanate combinations restore activity?",
+  "fp": "67312a71699e",
+  "yield": "HIGH",
+  "why": "Beta-lactamase hydrolysis plus inhibitor rescue is core resistance mechanism content"
+ },
+ {
+  "front": "How do beta-lactams (penicillins) kill bacteria?",
+  "fp": "36012e5b2f68",
+  "yield": "HIGH",
+  "why": "Beta-lactam mechanism (transpeptidase, cell wall) is core"
+ },
+ {
+  "front": "How do efflux pumps confer resistance, and why can one pump defeat several drug classes?",
+  "fp": "e83074120038",
+  "yield": "HIGH",
+  "why": "Efflux pumps are one of the named resistance mechanisms"
+ },
+ {
+  "front": "How do sulfonamides exploit their structural resemblance to PABA?",
+  "fp": "02ee06c122ff",
+  "yield": "HIGH",
+  "why": "PABA analog competitive inhibition of folate synthesis is a classic enzyme-kinetics tie-in"
+ },
+ {
+  "front": "How do vancomycin-resistant enterococci (VRE) modify the drug's binding site?",
+  "fp": "c5fb70537729",
+  "yield": "MEDIUM",
+  "why": "VRE D-Ala-D-Lac is the standard target-modification example for vancomycin"
+ },
+ {
+  "front": "How does oseltamivir limit influenza spread within a host?",
+  "fp": "8bc2cdaf9e1f",
+  "yield": "LOW",
+  "why": "Specific antiviral drug mechanism (neuraminidase); virus release is a black box on the exam"
+ },
+ {
+  "front": "How does porin loss protect Gram-negative bacteria from hydrophilic antibiotics?",
+  "fp": "accd198b8817",
+  "yield": "MEDIUM",
+  "why": "Reduced permeability via porin loss is a named resistance route"
+ },
+ {
+  "front": "If resistance to each of three HIV drugs arises at $10^{-5}$ per replication, why does triple therapy work?",
+  "fp": "c461190ec513",
+  "yield": "LOW",
+  "why": "Restates the combination-therapy probability card with numbers"
+ },
+ {
+  "front": "In Kirby-Bauer disk diffusion, a larger zone of inhibition does not directly mean a more potent drug. Why?",
+  "fp": "d25bd6c9defc",
+  "yield": "MEDIUM",
+  "why": "Zone-of-inhibition interpretation is plausible experimental-design passage material"
+ },
+ {
+  "front": "Low-level resistance to several structurally unrelated antibiotics at once points to an upregulated {{c1::efflux pump}}.",
+  "fp": "191cf7844c48",
+  "yield": "LOW",
+  "why": "Restates the efflux-pump cross-resistance card"
+ },
+ {
+  "front": "MRSA resists all classic beta-lactams via {{c1::an altered penicillin-binding protein (PBP2a, encoded by mecA)}}.",
+  "fp": "f26455715f5b",
+  "yield": "MEDIUM",
+  "why": "PBP2a target modification is the canonical MRSA example"
+ },
+ {
+  "front": "MRSA resists every beta-lactam because it acquired {{c1::PBP2a}}, an altered penicillin-binding protein.",
+  "fp": "f6ec69b238e6",
+  "yield": "LOW",
+  "why": "Near-verbatim restatement of the MRSA PBP2a card"
+ },
+ {
+  "front": "Name the main mechanisms of antibiotic resistance.",
+  "fp": "d7fbfd9b0537",
+  "yield": "HIGH",
+  "why": "The four resistance mechanisms are core outline content"
+ },
+ {
+  "front": "NNRTIs inhibit reverse transcriptase by binding an {{c1::allosteric pocket}} rather than the active site.",
+  "fp": "2d07e72942db",
+  "yield": "LOW",
+  "why": "NNRTI allosteric pocket is drug-specific detail beyond the outline"
+ },
+ {
+  "front": "NRTIs are selective for reverse transcriptase, yet cause mitochondrial side effects. Explain both facts.",
+  "fp": "5f258e887f1b",
+  "yield": "LOW",
+  "why": "NRTI mitochondrial polymerase toxicity is clinical pharmacology detail"
+ },
+ {
+  "front": "Pairing a bacteriostatic drug with a beta-lactam can be {{c1::antagonistic}} because cell-wall agents require active growth.",
+  "fp": "3269ce3afffa",
+  "yield": "MEDIUM",
+  "why": "Static-cidal antagonism is a plausible passage reasoning step"
+ },
+ {
+  "front": "Ribosome-targeted antibiotics are selective because bacteria use 70S ribosomes, yet still cause toxicity. Why?",
+  "fp": "762b0dc5cebb",
+  "yield": "MEDIUM",
+  "why": "Endosymbiotic-origin explanation of ribosome-drug toxicity supports the plainer 70S/80S card"
+ },
+ {
+  "front": "Rifampin inhibits bacterial {{c1::DNA-dependent RNA polymerase}}, blocking transcription initiation.",
+  "fp": "01eb9d160830",
+  "yield": "MEDIUM",
+  "why": "Rifampin RNA polymerase target covers the transcription-inhibitor class"
+ },
+ {
+  "front": "Tetracyclines block the ribosomal {{c1::A site}}, preventing aminoacyl-tRNA binding on the 30S subunit.",
+  "fp": "a93f76f12a9b",
+  "yield": "HIGH",
+  "why": "Tetracycline blocking the 30S A site is core class-by-target content"
+ },
+ {
+  "front": "The four general resistance strategies: drug {{c1::inactivation}}, target modification, efflux, and reduced uptake or target bypass.",
+  "fp": "c8be33288f88",
+  "yield": "LOW",
+  "why": "Restates the main-resistance-mechanisms card with extra examples"
+ },
+ {
+  "front": "The lowest drug concentration preventing visible growth is the {{c1::MIC}}; the MBC is the lowest killing 99.9 percent of the inoculum.",
+  "fp": "b550df927343",
+  "yield": "MEDIUM",
+  "why": "MIC and MBC definitions together support the cidal/static distinction"
+ },
+ {
+  "front": "The normal microbiota benefits the host by:",
+  "fp": "2a77c1c5a73a",
+  "yield": "MEDIUM",
+  "why": "Normal microbiota benefit is testable context (belongs to bacteria topic)"
+ },
+ {
+  "front": "Trimethoprim inhibits bacterial {{c1::dihydrofolate reductase}}; pairing it with a sulfonamide gives sequential blockade.",
+  "fp": "dffe8a07774f",
+  "yield": "MEDIUM",
+  "why": "DHFR inhibition and sequential blockade support the folate-pathway card"
+ },
+ {
+  "front": "Vancomycin blocks wall cross-linking by binding the {{c1::D-Ala-D-Ala}} terminus of peptidoglycan precursors.",
+  "fp": "9eb057a5f16b",
+  "yield": "HIGH",
+  "why": "Vancomycin binding D-Ala-D-Ala is core cell-wall inhibitor content"
+ },
+ {
+  "front": "Vancomycin-resistant enterococci replace the D-Ala-D-Ala terminus with D-Ala-D-Lac. Why is that so effective?",
+  "fp": "b6db2392e0fa",
+  "yield": "LOW",
+  "why": "Restates the VRE D-Ala-D-Lac card"
+ },
+ {
+  "front": "What does MIC mean?",
+  "fp": "840496b8c3d8",
+  "yield": "HIGH",
+  "why": "MIC definition is a basic term used in any susceptibility passage"
+ },
+ {
+  "front": "What enzymatic step do beta-lactams (penicillins, cephalosporins) block, and why does killing require growing cells?",
+  "fp": "4d3dc239a642",
+  "yield": "MEDIUM",
+  "why": "Beta-lactams needing growing cells supports the mechanism card"
+ },
+ {
+  "front": "What enzyme do azole antifungals inhibit, and what accumulates as a result?",
+  "fp": "d8e8171fbf84",
+  "yield": "LOW",
+  "why": "Lanosterol demethylase enzyme name is trivia; azole synthesis block is covered elsewhere"
+ },
+ {
+  "front": "What step do HIV protease inhibitors ('-navir' drugs) block, and what particles result?",
+  "fp": "0c9c696b9e03",
+  "yield": "MEDIUM",
+  "why": "Protease inhibitors blocking polyprotein cleavage ties into the HIV life cycle"
+ },
+ {
+  "front": "What two enzymes do fluoroquinolones inhibit, and what cellular catastrophe results?",
+  "fp": "37e71d83a3e6",
+  "yield": "HIGH",
+  "why": "Fluoroquinolone gyrase/topoisomerase IV target is core DNA-target content"
+ },
+ {
+  "front": "Where do macrolides such as erythromycin act, and what step of elongation do they disrupt?",
+  "fp": "faa6b7463ada",
+  "yield": "HIGH",
+  "why": "Macrolide 50S target is core class-by-target content"
+ },
+ {
+  "front": "Why are antibiotics ineffective against viruses?",
+  "fp": "3218b002361e",
+  "yield": "HIGH",
+  "why": "Why antibiotics fail against viruses is a high-frequency discrete question"
+ },
+ {
+  "front": "Why are cell-wall synthesis inhibitors among the most selectively toxic antibiotics?",
+  "fp": "0b1f18cdab2d",
+  "yield": "HIGH",
+  "why": "Cell-wall selective toxicity is the central selective-toxicity principle"
+ },
+ {
+  "front": "Why can adding tetracycline antagonize the killing effect of a beta-lactam given simultaneously?",
+  "fp": "ba4de1a745c6",
+  "yield": "LOW",
+  "why": "Restates the static-cidal antagonism card"
+ },
+ {
+  "front": "Why do incomplete antibiotic courses promote resistance?",
+  "fp": "112f485e13de",
+  "yield": "HIGH",
+  "why": "Incomplete courses selecting resistant variants is core selection reasoning"
+ },
+ {
+  "front": "Why do many antibiotics target the ribosome selectively?",
+  "fp": "1266a88bddae",
+  "yield": "HIGH",
+  "why": "70S vs 80S ribosome selectivity is core"
+ },
+ {
+  "front": "Why do sulfonamides and trimethoprim harm bacteria but not humans, and why are they combined?",
+  "fp": "07e23a87ba95",
+  "yield": "HIGH",
+  "why": "Folate pathway selectivity and synergy is core selective-toxicity content"
+ },
+ {
+  "front": "Why does a bacterium need DNA gyrase during replication, making it a good drug target?",
+  "fp": "927cd2d4e67b",
+  "yield": "MEDIUM",
+  "why": "Gyrase relieving supercoiling supports the fluoroquinolone card and DNA replication"
+ },
+ {
+  "front": "Why does combination antiretroviral therapy (multiple drug targets at once) suppress resistance?",
+  "fp": "5212abb4dab1",
+  "yield": "MEDIUM",
+  "why": "Combination therapy suppressing resistance is plausible probability reasoning"
+ },
+ {
+  "front": "Why does resistance sometimes decline in a hospital after an antibiotic is withdrawn from the formulary?",
+  "fp": "6332403545e6",
+  "yield": "MEDIUM",
+  "why": "Fitness cost of resistance is natural-selection reasoning a passage could test"
+ },
+ {
+  "front": "Why does the folate pathway offer selective toxicity even though humans also require folate?",
+  "fp": "4a12d246ed52",
+  "yield": "LOW",
+  "why": "Restates the folate selectivity card"
+ },
+ {
+  "front": "Why does zidovudine (an NRTI) terminate reverse transcription after being incorporated?",
+  "fp": "a7f8e3bb7139",
+  "yield": "MEDIUM",
+  "why": "Missing 3-prime OH chain termination is a nucleic-acid chemistry concept"
+ },
+ {
+  "front": "Why is a bactericidal agent required in endocarditis, meningitis, and febrile neutropenia?",
+  "fp": "7b76a17bce33",
+  "yield": "LOW",
+  "why": "Clinical settings requiring cidal therapy are beyond scope"
+ },
+ {
+  "front": "Why is combination therapy used for tuberculosis?",
+  "fp": "ad3a178464f9",
+  "yield": "MEDIUM",
+  "why": "TB combination therapy illustrates resistance-probability reasoning"
+ }
+]

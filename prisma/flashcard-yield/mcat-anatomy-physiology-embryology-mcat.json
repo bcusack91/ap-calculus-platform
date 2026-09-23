@@ -1,0 +1,398 @@
+[
+ {
+  "front": "A cell is {{c1::determined}} once its fate stays fixed even after transplantation to a new region, a commitment preceding visible differentiation.",
+  "fp": "d41717e5a89b",
+  "yield": "HIGH",
+  "why": "Determination (fixed fate after transplant) is a named outline concept in cell specialization"
+ },
+ {
+  "front": "A congenital diaphragmatic hernia kills mainly through {{c1::pulmonary hypoplasia}}, not through the displaced bowel itself.",
+  "fp": "986cab7e53c6",
+  "yield": "LOW",
+  "why": "Congenital diaphragmatic hernia outcome is clinical/USMLE detail outside AAMC embryology"
+ },
+ {
+  "front": "A persistent {{c1::vitelline}} duct leaves a Meckel diverticulum on the ileum, sometimes lined with ectopic gastric mucosa.",
+  "fp": "4f81a10b03d0",
+  "yield": "LOW",
+  "why": "Meckel diverticulum is clinical anatomy trivia; vitelline duct remnants not on MCAT outline"
+ },
+ {
+  "front": "A ventricular septal defect shunts {{c1::left to right}} at first because pulmonary vascular resistance is lower than systemic resistance.",
+  "fp": "125673ed305c",
+  "yield": "MEDIUM",
+  "why": "Shunt direction follows resistance/pressure reasoning a passage could pose; disease itself secondary"
+ },
+ {
+  "front": "Around week 6 the midgut normally herniates into the umbilical cord and returns by week {{c1::10}} after rotating 270 degrees.",
+  "fp": "d51893f49b4b",
+  "yield": "LOW",
+  "why": "Midgut herniation week and 270-degree rotation are numeric trivia beyond the outline"
+ },
+ {
+  "front": "Bilateral renal agenesis causes {{c1::oligohydramnios}}, which then compresses the fetus and prevents lung development.",
+  "fp": "706b169281ff",
+  "yield": "LOW",
+  "why": "Potter sequence is clinical/USMLE detail; not AAMC embryology content"
+ },
+ {
+  "front": "Cleavage divisions multiply cells without growth, so each blastomere's {{c1::nuclear-to-cytoplasmic}} ratio rises toward adult values.",
+  "fp": "21d75908a6c3",
+  "yield": "MEDIUM",
+  "why": "N:C ratio is supporting detail on cleavage; plainer cleavage card carries the core fact"
+ },
+ {
+  "front": "Cleavage is characterized by:",
+  "fp": "1ad487439652",
+  "yield": "HIGH",
+  "why": "Cleavage = rapid division without growth is core early-development content"
+ },
+ {
+  "front": "Cleft lip versus cleft palate: which fusion failure produces each?",
+  "fp": "27edaa1d3458",
+  "yield": "LOW",
+  "why": "Cleft lip vs palate fusion failures are clinical anatomy detail outside the outline"
+ },
+ {
+  "front": "Conjoined twins result from:",
+  "fp": "b75cdbdbe7ef",
+  "yield": "MEDIUM",
+  "why": "Late splitting -> conjoined twins; twinning is on the outline, this is the extreme case"
+ },
+ {
+  "front": "Define determination vs. differentiation.",
+  "fp": "a6d97fb8273a",
+  "yield": "HIGH",
+  "why": "Determination vs differentiation is explicitly named in the topic's tested content"
+ },
+ {
+  "front": "Define induction and competence, and give a classic inductive pair.",
+  "fp": "196b93143d3a",
+  "yield": "HIGH",
+  "why": "Induction with the optic vesicle/lens example is the canonical outline concept"
+ },
+ {
+  "front": "Describe the week-2 bilaminar disc and the two cavities flanking it.",
+  "fp": "da48f727b951",
+  "yield": "MEDIUM",
+  "why": "Bilaminar disc epiblast/hypoblast is second-step detail between blastocyst and gastrulation"
+ },
+ {
+  "front": "DiGeorge syndrome deletes structures derived from pharyngeal pouches {{c1::3 and 4}}, causing T cell deficiency and hypocalcemia.",
+  "fp": "98a6e848739e",
+  "yield": "LOW",
+  "why": "DiGeorge pouch numbers are USMLE trivia; pharyngeal pouch derivatives not on outline"
+ },
+ {
+  "front": "Endoderm builds more than gut lining. List its high-yield organ derivatives.",
+  "fp": "a7d9062a902e",
+  "yield": "HIGH",
+  "why": "Endoderm organ derivatives are directly tested germ-layer content"
+ },
+ {
+  "front": "Fetal surfactant becomes adequate near week {{c1::34}}, and a lecithin-to-sphingomyelin ratio above 2 predicts lung maturity.",
+  "fp": "00b2471ad3d7",
+  "yield": "LOW",
+  "why": "Week 34 and L/S ratio are numeric clinical trivia not on the AAMC outline"
+ },
+ {
+  "front": "Give the day-by-day sequence from fertilization to the start of implantation.",
+  "fp": "e1768b7202f5",
+  "yield": "HIGH",
+  "why": "Fertilization -> cleavage -> blastocyst -> implantation sequence is core tested content"
+ },
+ {
+  "front": "Give the neurulation timeline and the defects caused by failure of each neuropore to close.",
+  "fp": "e29e2583d3d8",
+  "yield": "HIGH",
+  "why": "Neurulation and neuropore-closure defects (anencephaly, spina bifida) are outline content"
+ },
+ {
+  "front": "Give the signature defects of thalidomide, isotretinoin, alcohol, and ACE inhibitors.",
+  "fp": "a2fcedaa3bd6",
+  "yield": "LOW",
+  "why": "Drug-specific teratogen signatures are pharm trivia; AAMC treats teratogens as a black box"
+ },
+ {
+  "front": "Hirschsprung disease reflects failed {{c1::neural crest}} migration, leaving a distal colon segment without enteric ganglia.",
+  "fp": "4bade865abe2",
+  "yield": "MEDIUM",
+  "why": "Clinical illustration of neural crest migration, a tested mechanism"
+ },
+ {
+  "front": "How can one morphogen gradient specify several distinct cell types?",
+  "fp": "d27fa5de86ae",
+  "yield": "HIGH",
+  "why": "Morphogen gradients / French flag model is how the outline frames cell specialization"
+ },
+ {
+  "front": "How does the placenta exchange gases and nutrients without mixing maternal and fetal blood?",
+  "fp": "9e0cbae00355",
+  "yield": "HIGH",
+  "why": "Placental exchange without blood mixing is core placental structure/function"
+ },
+ {
+  "front": "Hypospadias, a urethral opening on the ventral penis, reflects failed fusion of the {{c1::urethral folds}}, a DHT-dependent step.",
+  "fp": "d30830fd1f67",
+  "yield": "LOW",
+  "why": "Hypospadias is clinical urology trivia; DHT role is covered in the reproductive deck"
+ },
+ {
+  "front": "Indomethacin closes a patent ductus arteriosus by blocking {{c1::prostaglandin}} synthesis, while prostaglandin E1 holds it open.",
+  "fp": "a5fbf580def4",
+  "yield": "LOW",
+  "why": "Indomethacin/PGE1 on the ductus is pharmacology beyond MCAT scope"
+ },
+ {
+  "front": "Interdigital webbing is removed by programmed cell death, so failed {{c1::apoptosis}} leaves syndactyly.",
+  "fp": "e0f337b13ba4",
+  "yield": "MEDIUM",
+  "why": "Syndactyly illustrates developmental apoptosis; plainer apoptosis card carries the concept"
+ },
+ {
+  "front": "Maternal serum alpha-fetoprotein runs {{c1::high}} with open neural tube defects and low with trisomy 21.",
+  "fp": "13558e9c6b5d",
+  "yield": "LOW",
+  "why": "Maternal AFP screening pattern is clinical obstetrics trivia"
+ },
+ {
+  "front": "Monozygotic splitting at days {{c1::4-8}} (inner cell mass stage) yields monochorionic-diamniotic twins, the most common MZ arrangement.",
+  "fp": "2a66dca5388b",
+  "yield": "LOW",
+  "why": "Near-restatement of the full MZ twin timing map card; exact day window is trivia"
+ },
+ {
+  "front": "MZ twin timing map: split at days 0-4 gives di-di; days 4-8 mono-di; days 8-13 mono-{{c1::amniotic}}; after day 13 {{c2::conjoined}} twins.",
+  "fp": "c001d1f326de",
+  "yield": "MEDIUM",
+  "why": "Twinning membrane arrangement by split timing is second-tier but appears in prep"
+ },
+ {
+  "front": "Name derivatives of each germ layer.",
+  "fp": "2a52a539518a",
+  "yield": "HIGH",
+  "why": "Germ layer derivatives are the most-tested embryology fact"
+ },
+ {
+  "front": "Neural crest forms PNS ganglia, Schwann cells, melanocytes, adrenal medulla, facial skeleton, thyroid {{c1::C cells}}, and the {{c2::aorticopulmonary}} septum.",
+  "fp": "6ef9044e6dea",
+  "yield": "HIGH",
+  "why": "Neural crest derivative list is high-frequency tested content"
+ },
+ {
+  "front": "Neural tube patterning: {{c1::SHH}} from the notochord and floor plate ventralizes (motor); {{c2::BMPs}} from the roof plate dorsalize (sensory).",
+  "fp": "5541fa2dbf6c",
+  "yield": "MEDIUM",
+  "why": "SHH/BMP dorsoventral patterning is a second-tier morphogen example"
+ },
+ {
+  "front": "Pluripotent stem cells can form:",
+  "fp": "eaabbb46855d",
+  "yield": "MEDIUM",
+  "why": "Restates the potency-levels card; pluripotent definition kept visible as support"
+ },
+ {
+  "front": "Put early development stages in order.",
+  "fp": "ecdcee264665",
+  "yield": "HIGH",
+  "why": "Ordered stages of early development is a core discrete question"
+ },
+ {
+  "front": "Rank the potency of a zygote, an inner cell mass cell, and a hematopoietic stem cell.",
+  "fp": "ffd4242fbfdf",
+  "yield": "HIGH",
+  "why": "Applying totipotent/pluripotent/multipotent to real cell types is a classic question"
+ },
+ {
+  "front": "Spemann's organizer (dorsal blastopore lip) induces a second body axis when transplanted, secreting BMP antagonists such as {{c1::noggin}} and chordin.",
+  "fp": "a8ef31f06cae",
+  "yield": "MEDIUM",
+  "why": "Spemann organizer is the classic induction experiment; noggin/chordin names are extra"
+ },
+ {
+  "front": "Split the high-yield ectoderm derivatives between surface ectoderm and neuroectoderm.",
+  "fp": "be5c641cf712",
+  "yield": "HIGH",
+  "why": "Surface ectoderm vs neuroectoderm derivative split is frequently tested"
+ },
+ {
+  "front": "The {{c1::allantois}} becomes the urachus; when this duct stays patent, urine leaks from the umbilicus.",
+  "fp": "d0043249b285",
+  "yield": "LOW",
+  "why": "Allantois/urachus remnant is clinical anatomy trivia outside the outline"
+ },
+ {
+  "front": "The {{c1::notochord}} induces overlying ectoderm to form the neural plate and persists in adults only as the nucleus pulposus.",
+  "fp": "3f1753a34832",
+  "yield": "MEDIUM",
+  "why": "Supports the plainer notochord-induction card; nucleus pulposus remnant is extra detail"
+ },
+ {
+  "front": "The {{c1::yolk sac}} is the first site of hematopoiesis and the origin of primordial germ cells, which migrate to the gonadal ridge.",
+  "fp": "89a43db330ba",
+  "yield": "MEDIUM",
+  "why": "Yolk sac hematopoiesis and PGC origin are supporting detail"
+ },
+ {
+  "front": "The adrenal {{c1::cortex}} is mesodermal, while the adrenal {{c2::medulla}} arises from neural crest chromaffin precursors.",
+  "fp": "e31b0ddb80af",
+  "yield": "HIGH",
+  "why": "Adrenal cortex (mesoderm) vs medulla (neural crest) is a classic germ-layer question"
+ },
+ {
+  "front": "The inner cell mass of the blastocyst becomes:",
+  "fp": "10f0567623f1",
+  "yield": "HIGH",
+  "why": "ICM -> embryo, trophoblast -> placenta is core blastocyst content"
+ },
+ {
+  "front": "The invasive {{c1::syncytiotrophoblast}} erodes the endometrium and secretes hCG; the cytotrophoblast is the mitotic inner layer that feeds it cells.",
+  "fp": "e7d39f7f7f0e",
+  "yield": "HIGH",
+  "why": "Syncytiotrophoblast invasion and hCG secretion are tested implantation facts"
+ },
+ {
+  "front": "The notochord induces:",
+  "fp": "59b50d44a268",
+  "yield": "HIGH",
+  "why": "Notochord inducing the neural plate is the canonical induction example"
+ },
+ {
+  "front": "The pituitary has dual origin: the anterior lobe from {{c1::Rathke's pouch}} (oral ectoderm), the posterior lobe from a downgrowth of the diencephalon.",
+  "fp": "8b6b4e7d4e1f",
+  "yield": "MEDIUM",
+  "why": "Pituitary dual origin is second-tier derivative detail"
+ },
+ {
+  "front": "The primitive streak marks:",
+  "fp": "ed5fff36515e",
+  "yield": "HIGH",
+  "why": "Primitive streak marks gastrulation; core tested content"
+ },
+ {
+  "front": "The switch from fetal hemoglobin to HbA finishes around {{c1::6 months}} of age, which is why sickle cell disease is silent in early infancy.",
+  "fp": "67ca2c25aad1",
+  "yield": "LOW",
+  "why": "HbF->HbA switch age and sickle cell timing are numeric clinical trivia"
+ },
+ {
+  "front": "The thyroid begins at the {{c1::foramen cecum}} of the tongue and descends through the neck, trailing the thyroglossal duct.",
+  "fp": "68d0bbaad0f7",
+  "yield": "LOW",
+  "why": "Thyroid descent/thyroglossal duct is clinical anatomy trivia"
+ },
+ {
+  "front": "Weeks {{c1::3-8}} of development (organogenesis) are the window of peak teratogen susceptibility; weeks 1-2 follow the all-or-none rule.",
+  "fp": "4a8232f3952d",
+  "yield": "MEDIUM",
+  "why": "Organogenesis teratogen window (weeks 3-8) appears in prep as supporting detail"
+ },
+ {
+  "front": "What are stem cell potency levels?",
+  "fp": "247e15832ff4",
+  "yield": "HIGH",
+  "why": "Stem cell potency levels are directly on the outline"
+ },
+ {
+  "front": "What are the fetal circulatory shunts?",
+  "fp": "88bfb9eee395",
+  "yield": "HIGH",
+  "why": "Fetal circulatory shunts are explicitly tested"
+ },
+ {
+  "front": "What are the functions of the amnion, and what is its fluid made of over time?",
+  "fp": "1e35a4e70718",
+  "yield": "MEDIUM",
+  "why": "Amnion function and fluid source are supporting extraembryonic-membrane detail"
+ },
+ {
+  "front": "What does each somite compartment become?",
+  "fp": "e2c7eee46c36",
+  "yield": "MEDIUM",
+  "why": "Somite compartments are second-tier mesoderm derivative detail"
+ },
+ {
+  "front": "What happens during gastrulation?",
+  "fp": "29faf4998669",
+  "yield": "HIGH",
+  "why": "Gastrulation forming three germ layers is core content"
+ },
+ {
+  "front": "What is compaction, when does it occur, and which adhesion molecule drives it?",
+  "fp": "7c660d605521",
+  "yield": "MEDIUM",
+  "why": "Compaction/E-cadherin is a plausible passage detail; not needed for discretes"
+ },
+ {
+  "front": "What is induction in development?",
+  "fp": "3427f329d4af",
+  "yield": "HIGH",
+  "why": "Induction definition is explicitly named tested content"
+ },
+ {
+  "front": "What is the chorion made of, and which prenatal test samples it?",
+  "fp": "bc2886ba019a",
+  "yield": "MEDIUM",
+  "why": "Chorion composition and CVS are supporting placental detail"
+ },
+ {
+  "front": "What is the role of apoptosis in development?",
+  "fp": "d8e7fac082a3",
+  "yield": "HIGH",
+  "why": "Apoptosis in development is on the outline; this is the plain statement"
+ },
+ {
+  "front": "Which germ layer forms the nervous system?",
+  "fp": "430d823d08e1",
+  "yield": "HIGH",
+  "why": "Ectoderm -> nervous system is the highest-frequency germ layer fact"
+ },
+ {
+  "front": "Which mesoderm subdivision yields kidneys and gonads, and what do the other two subdivisions form?",
+  "fp": "b635214b5da4",
+  "yield": "MEDIUM",
+  "why": "Mesoderm subdivisions are second-tier detail beyond the basic derivative list"
+ },
+ {
+  "front": "Why are dizygotic twins always dichorionic and diamniotic?",
+  "fp": "fa5c67183036",
+  "yield": "MEDIUM",
+  "why": "DZ vs MZ twin membranes is supporting twinning detail"
+ },
+ {
+  "front": "Why does an undescended testis impair sperm production but not testosterone production?",
+  "fp": "48033390f750",
+  "yield": "MEDIUM",
+  "why": "Misfiled reproductive content; duplicates the reproductive deck's testis-tempera [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "Why does esophageal atresia cause polyhydramnios?",
+  "fp": "caa877fbb422",
+  "yield": "LOW",
+  "why": "Esophageal atresia/polyhydramnios is clinical obstetrics trivia"
+ },
+ {
+  "front": "Why is tetralogy of Fallot cyanotic while an isolated septal defect is not?",
+  "fp": "5dce9c30cc2c",
+  "yield": "LOW",
+  "why": "Tetralogy of Fallot hemodynamics is named-disease clinical detail beyond scope"
+ },
+ {
+  "front": "Why is the neural crest nicknamed the fourth germ layer, and what happens when it fails?",
+  "fp": "47914167b2ce",
+  "yield": "MEDIUM",
+  "why": "Neural crest EMT/migration concept supports the derivative card"
+ },
+ {
+  "front": "Why must folate supplementation begin before conception rather than at the first missed period?",
+  "fp": "f123584a8054",
+  "yield": "MEDIUM",
+  "why": "Neural tube closure timing with clinical flavor; supports neurulation card"
+ },
+ {
+  "front": "Why must the conceptus secrete hCG, and what hormonal handoff follows?",
+  "fp": "5656c60c0a82",
+  "yield": "HIGH",
+  "why": "hCG rescue of corpus luteum and luteal-placental shift are tested pregnancy hormones"
+ }
+]

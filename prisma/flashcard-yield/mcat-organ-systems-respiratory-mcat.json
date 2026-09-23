@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Functional residual capacity (FRC)}} is the lung volume where inward lung recoil exactly balances outward chest wall recoil.",
+  "fp": "25749b93a625",
+  "yield": "MEDIUM",
+  "why": "FRC as recoil equilibrium: lung-volume concept, secondary to TV/VC/RV"
+ },
+ {
+  "front": "$P_{50}$, normally about {{c1::27}} mmHg, rises with a right shift of the O2-hemoglobin curve.",
+  "fp": "b763285775bd",
+  "yield": "MEDIUM",
+  "why": "P50 as index of affinity supports right/left shift; exact 27 mmHg is detail"
+ },
+ {
+  "front": "A pulmonary embolus creates alveoli that are ventilated but not perfused, that is, {{c1::dead space}} with V/Q approaching infinity.",
+  "fp": "471e7337e484",
+  "yield": "MEDIUM",
+  "why": "Dead space (V/Q -> infinity) illustrated by PE; clinical flavor on a tested concept"
+ },
+ {
+  "front": "A voluntary breath-hold ends because rising {{c1::$PCO_2$}} reaches the breakpoint, not because $PO_2$ has fallen dangerously low.",
+  "fp": "54002cc7fff6",
+  "yield": "MEDIUM",
+  "why": "CO2 as the dominant ventilatory drive, illustrated by breath-hold"
+ },
+ {
+  "front": "Arterial oxygen content is about $1.34 \\times [Hb] \\times SaO_2$ plus dissolved gas. In anemia, which term falls?",
+  "fp": "9681ffeb913c",
+  "yield": "MEDIUM",
+  "why": "O2 content vs PaO2 in anemia: second-step reasoning on O2 transport"
+ },
+ {
+  "front": "At altitude, air is still about 21 percent O2; hypoxemia occurs because low {{c1::barometric pressure}} lowers alveolar $PO_2$.",
+  "fp": "2d903a7ed644",
+  "yield": "HIGH",
+  "why": "Partial pressure = fraction x barometric pressure; altitude hypoxemia is core"
+ },
+ {
+  "front": "Beyond blood changes, what tissue-level adaptations support long-term altitude acclimatization?",
+  "fp": "b1f57656136c",
+  "yield": "LOW",
+  "why": "Capillary density/mitochondrial acclimatization is encyclopedia detail"
+ },
+ {
+  "front": "By Fick's law of diffusion, gas transfer rises with surface area and falls with membrane {{c1::thickness}}.",
+  "fp": "59f7aa5bdff1",
+  "yield": "HIGH",
+  "why": "Fick's law of diffusion: area, thickness, gradient drive gas exchange"
+ },
+ {
+  "front": "By Laplace's law ($P = 2T/r$), small alveoli would empty into large ones without {{c1::surfactant}}, which lowers surface tension most at low volumes.",
+  "fp": "0664e90ef2e3",
+  "yield": "HIGH",
+  "why": "Laplace's law and surfactant preventing small-alveolus collapse"
+ },
+ {
+  "front": "By the alveolar gas equation, alveolar $PO_2$ falls whenever alveolar {{c1::$PCO_2$}} rises, since $P_AO_2 = P_IO_2 - PCO_2/R$.",
+  "fp": "ba22117a45b7",
+  "yield": "HIGH",
+  "why": "Alveolar gas equation; hypoventilation causes hypoxemia"
+ },
+ {
+  "front": "Carbon monoxide, fetal hemoglobin, hypothermia, and low 2,3-BPG all shift the O2-Hb curve to the {{c1::left}}.",
+  "fp": "5d8588e5df82",
+  "yield": "HIGH",
+  "why": "Left-shift factors (CO, HbF, cold, low 2,3-BPG) are core O2-Hb curve content"
+ },
+ {
+  "front": "Carotid body afferents travel in cranial nerve {{c1::IX (glossopharyngeal)}}; aortic body afferents travel in the vagus.",
+  "fp": "cccd5d80b171",
+  "yield": "LOW",
+  "why": "Cranial nerve carrying chemoreceptor afferents is anatomy trivia for MCAT"
+ },
+ {
+  "front": "Central chemoreceptors sense {{c1::CSF H+}} generated from CO2 that crosses the blood-brain barrier — plasma H+ itself cannot cross.",
+  "fp": "76a3e58ae5ce",
+  "yield": "HIGH",
+  "why": "Central chemoreceptors sense CSF H+ from CO2; plasma H+ excluded"
+ },
+ {
+  "front": "Chronic hypoxia stimulates renal {{c1::erythropoietin (EPO)}} release, driving polycythemia over weeks.",
+  "fp": "c85be6b7ac91",
+  "yield": "HIGH",
+  "why": "Hypoxia -> renal EPO -> polycythemia is core altitude/blood physiology"
+ },
+ {
+  "front": "Chronic respiratory acidosis is compensated by a {{c1::rise}} in plasma bicarbonate as the kidney retains $HCO_3^-$ and excretes $NH_4^+$.",
+  "fp": "8e4cb73d8d9d",
+  "yield": "HIGH",
+  "why": "Renal bicarbonate retention compensating respiratory acidosis is core acid-base"
+ },
+ {
+  "front": "Compliance is volume change per pressure change: contrast emphysema and fibrosis and the consequence of each.",
+  "fp": "db0a4828165e",
+  "yield": "MEDIUM",
+  "why": "Compliance contrast (emphysema vs fibrosis): supporting detail on mechanics"
+ },
+ {
+  "front": "Define tidal volume, vital capacity, and residual volume.",
+  "fp": "dface804f7ad",
+  "yield": "HIGH",
+  "why": "TV, VC, RV definitions are core lung-volume content"
+ },
+ {
+  "front": "Describe the Bohr effect.",
+  "fp": "2e1c3f628c80",
+  "yield": "HIGH",
+  "why": "Bohr effect is core"
+ },
+ {
+  "front": "Emphysema destroys alveolar walls, raising compliance and lowering {{c1::elastic recoil}}, which collapses small airways during expiration.",
+  "fp": "6fe7a7e13730",
+  "yield": "MEDIUM",
+  "why": "Emphysema recoil loss: clinical illustration of compliance/recoil"
+ },
+ {
+  "front": "Given a blood gas, how do you name the primary disturbance and judge whether compensation has occurred?",
+  "fp": "9f2dec539095",
+  "yield": "HIGH",
+  "why": "Reading a blood gas: primary disturbance and compensation is core"
+ },
+ {
+  "front": "Haldane effect: why does deoxygenated blood carry more CO2 at any given $PCO_2$?",
+  "fp": "db278de83318",
+  "yield": "HIGH",
+  "why": "Haldane effect is core CO2 transport"
+ },
+ {
+  "front": "How does 2,3-BPG contribute to altitude acclimatization?",
+  "fp": "acad7d26747b",
+  "yield": "MEDIUM",
+  "why": "2,3-BPG right shift as altitude adaptation: supporting detail"
+ },
+ {
+  "front": "How does exercise change V/Q matching across the lung?",
+  "fp": "80dbfdfb7b7d",
+  "yield": "LOW",
+  "why": "Apical capillary recruitment during exercise is beyond MCAT depth"
+ },
+ {
+  "front": "How does inhalation occur mechanically?",
+  "fp": "ad23539d2b2f",
+  "yield": "MEDIUM",
+  "why": "Plain inhalation mechanics; Boyle's-law card carries the tested framing"
+ },
+ {
+  "front": "How does the respiratory system compensate for acid-base disturbances?",
+  "fp": "b6f689005992",
+  "yield": "HIGH",
+  "why": "Respiratory compensation of acid-base disturbances is core"
+ },
+ {
+  "front": "How is most $CO_{2}$ carried in blood?",
+  "fp": "11685db4eeda",
+  "yield": "HIGH",
+  "why": "CO2 carried mainly as bicarbonate via carbonic anhydrase is core"
+ },
+ {
+  "front": "Hyperventilation causes:",
+  "fp": "f35f5a67a426",
+  "yield": "HIGH",
+  "why": "Hyperventilation -> respiratory alkalosis is core"
+ },
+ {
+  "front": "Hypoxemia with a normal A-a gradient means {{c1::hypoventilation or altitude}}; a widened gradient means shunt, V/Q mismatch, or a diffusion barrier.",
+  "fp": "962029029dbf",
+  "yield": "MEDIUM",
+  "why": "A-a gradient reasoning: plausible passage second step, not core outline"
+ },
+ {
+  "front": "Hypoxic pulmonary {{c1::vasoconstriction}} diverts blood away from poorly ventilated alveoli — the opposite of systemic vessels' response to hypoxia.",
+  "fp": "0b8341511c66",
+  "yield": "HIGH",
+  "why": "Hypoxic pulmonary vasoconstriction (opposite of systemic) is a classic tested fact"
+ },
+ {
+  "front": "In chronic CO2 retention, CSF buffering blunts the central chemoreceptors, leaving {{c1::hypoxic drive}} via peripheral receptors.",
+  "fp": "f4125286a413",
+  "yield": "MEDIUM",
+  "why": "Hypoxic drive in chronic CO2 retainers: clinical extension of chemoreceptor control"
+ },
+ {
+  "front": "In the bicarbonate buffer system, pH depends on the ratio of $HCO_3^-$ to {{c1::$PCO_2$}}, with $pK_a$ 6.1.",
+  "fp": "cda8bb532c24",
+  "yield": "HIGH",
+  "why": "Henderson-Hasselbalch for bicarbonate buffer (pKa 6.1, 20:1) is core"
+ },
+ {
+  "front": "In what three forms is CO2 carried in blood, and in what proportions?",
+  "fp": "af0c71788ec1",
+  "yield": "LOW",
+  "why": "Near-restatement of the plainer CO2 transport card with finer percentages"
+ },
+ {
+  "front": "Inspiration follows Boyle's law: diaphragm contraction expands the thorax, making alveolar pressure {{c1::lower than atmospheric}} so air flows in.",
+  "fp": "3ee586d754f2",
+  "yield": "HIGH",
+  "why": "Boyle's law explanation of inspiration is the tested framing"
+ },
+ {
+  "front": "Normal arterial blood gas: pH {{c1::7.35 to 7.45}}, $PCO_2$ {{c2::40}} mmHg, $PO_2$ about 100 mmHg, and $HCO_3^-$ about 24 mEq/L.",
+  "fp": "baa61eb7a6fb",
+  "yield": "HIGH",
+  "why": "Normal ABG values (pH 7.35-7.45, PCO2 40) are needed to read any gas table"
+ },
+ {
+  "front": "Obstructive versus restrictive disease: what happens to the $FEV_1/FVC$ ratio and to total lung capacity in each?",
+  "fp": "3825da263b1d",
+  "yield": "MEDIUM",
+  "why": "FEV1/FVC obstructive vs restrictive: clinical, plausible passage context"
+ },
+ {
+  "front": "Over days at altitude the kidneys excrete {{c1::bicarbonate}}, correcting the alkalosis so ventilation can rise further.",
+  "fp": "55b9ae58873f",
+  "yield": "HIGH",
+  "why": "Renal bicarbonate excretion compensating altitude alkalosis is core"
+ },
+ {
+  "front": "Oxygen transfer in a healthy lung is {{c1::perfusion}}-limited, whereas carbon monoxide transfer is diffusion-limited.",
+  "fp": "ffeafb4c6bcc",
+  "yield": "LOW",
+  "why": "Perfusion- vs diffusion-limited transfer is USMLE-level detail"
+ },
+ {
+  "front": "Predict what voluntary hyperventilation does to arterial $PCO_2$, blood pH, and cerebral blood flow.",
+  "fp": "b525b0015009",
+  "yield": "MEDIUM",
+  "why": "Hyperventilation effects incl. cerebral vasoconstriction: second-step reasoning"
+ },
+ {
+  "front": "Quiet expiration is {{c1::passive}}, driven by elastic recoil; forced expiration recruits abdominal muscles and internal intercostals.",
+  "fp": "b51c3bf016ba",
+  "yield": "HIGH",
+  "why": "Passive quiet expiration vs active forced expiration is core mechanics"
+ },
+ {
+  "front": "The chloride shift: as RBC carbonic anhydrase generates $HCO_3^-$, the anion exchanger exports it in exchange for {{c1::chloride}} entering the cell.",
+  "fp": "30c52f234b3c",
+  "yield": "HIGH",
+  "why": "Chloride shift is core CO2 transport"
+ },
+ {
+  "front": "The countercurrent multiplier system in the loop of Henle creates:",
+  "fp": "07b1fd49141c",
+  "yield": "MEDIUM",
+  "why": "Renal countercurrent multiplier: misfiled, belongs to the renal topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "The renin–angiotensin–aldosterone system is activated by:",
+  "fp": "123dc7f6fa86",
+  "yield": "MEDIUM",
+  "why": "RAAS activation: misfiled, belongs to renal/endocrine topics [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "The respiratory rate is set by which brain region?",
+  "fp": "f7a3c171e4c9",
+  "yield": "HIGH",
+  "why": "Medulla/pons set respiratory rhythm: core control of breathing"
+ },
+ {
+  "front": "The somatic nervous system controls:",
+  "fp": "2d115554aca4",
+  "yield": "LOW",
+  "why": "Somatic nervous system: misfiled, belongs to the nervous system topic"
+ },
+ {
+  "front": "Type I pneumocytes in the lungs are specialized for:",
+  "fp": "1b2547374a17",
+  "yield": "MEDIUM",
+  "why": "Type I vs Type II pneumocytes: supporting histology detail"
+ },
+ {
+  "front": "Typical values: tidal volume {{c1::500}} mL, anatomic dead space {{c2::150}} mL, vital capacity about 4800 mL, total lung capacity about 6000 mL.",
+  "fp": "29b10d58e832",
+  "yield": "MEDIUM",
+  "why": "Typical volumes plus alveolar ventilation calculation: supporting numbers"
+ },
+ {
+  "front": "V/Q is highest at the lung {{c1::apex}} (about 3) and lowest at the base, because gravity steepens perfusion more than ventilation.",
+  "fp": "7b11ec2176e2",
+  "yield": "MEDIUM",
+  "why": "V/Q apex vs base gradient: supporting detail on V/Q matching"
+ },
+ {
+  "front": "What cell secretes surfactant, what is its principal component, and why do premature infants develop respiratory distress?",
+  "fp": "e9a2d9db1a22",
+  "yield": "MEDIUM",
+  "why": "Type II pneumocytes, surfactant, prematurity: supports the plainer surfactant card"
+ },
+ {
+  "front": "What do the V/Q extremes of zero and infinity represent physiologically?",
+  "fp": "2006302d8b2c",
+  "yield": "MEDIUM",
+  "why": "Shunt vs dead space extremes: supporting detail on V/Q"
+ },
+ {
+  "front": "What is the immediate ventilatory response to altitude, and what acid-base problem does it create?",
+  "fp": "17e9e3f1d2ea",
+  "yield": "HIGH",
+  "why": "Altitude hyperventilation -> respiratory alkalosis is core"
+ },
+ {
+  "front": "What is the role of surfactant?",
+  "fp": "97e270a3b755",
+  "yield": "HIGH",
+  "why": "Surfactant lowers surface tension; NRDS is core"
+ },
+ {
+  "front": "What maladaptive circulatory change can chronic altitude exposure produce?",
+  "fp": "c14c3a18fc04",
+  "yield": "LOW",
+  "why": "Chronic altitude pulmonary hypertension/RVH is clinical detail"
+ },
+ {
+  "front": "What primarily drives respiratory rate?",
+  "fp": "eef0340086ac",
+  "yield": "HIGH",
+  "why": "CO2/pH as primary ventilatory drive is core"
+ },
+ {
+  "front": "Where does gas exchange occur and why is it efficient?",
+  "fp": "785add039297",
+  "yield": "HIGH",
+  "why": "Alveolar structure enabling efficient exchange is core"
+ },
+ {
+  "front": "Which chemoreceptors alone detect hypoxemia, and below what $PO_2$ do they fire strongly?",
+  "fp": "cc2cbbb4ac3f",
+  "yield": "HIGH",
+  "why": "Peripheral chemoreceptors alone sense hypoxemia (<60 mmHg) is core"
+ },
+ {
+  "front": "Which four factors right-shift the O2-hemoglobin curve, and what single physiologic state produces all of them?",
+  "fp": "3a4a8096dd30",
+  "yield": "HIGH",
+  "why": "Right-shift factors and exercise is core"
+ },
+ {
+  "front": "Why are venous red blood cells slightly swollen compared with arterial ones?",
+  "fp": "4efe55398e3f",
+  "yield": "LOW",
+  "why": "Venous RBC swelling from chloride shift is trivia"
+ },
+ {
+  "front": "Why can even 100 percent O2 fail to restore sea-level oxygenation at extreme altitude?",
+  "fp": "53e498ca7ff4",
+  "yield": "LOW",
+  "why": "Why 100% O2 fails at extreme altitude is trivia-grade extension"
+ },
+ {
+  "front": "Why can spirometry never measure residual volume, functional residual capacity, or total lung capacity?",
+  "fp": "4caadaef4d1b",
+  "yield": "MEDIUM",
+  "why": "Spirometry cannot measure RV/FRC/TLC: commonly asked supporting fact"
+ },
+ {
+  "front": "Why do anemia and CO poisoning fail to stimulate the peripheral chemoreceptors?",
+  "fp": "10f3f6b151c8",
+  "yield": "MEDIUM",
+  "why": "Chemoreceptors sense PO2 not content: reinforces the anemia content card"
+ },
+ {
+  "front": "Why do inhaled beta-2 agonists relieve an asthma attack far faster than inhaled corticosteroids?",
+  "fp": "d3f33295fe80",
+  "yield": "LOW",
+  "why": "Asthma drug pharmacology is outside this content category"
+ },
+ {
+  "front": "Why does a pneumothorax collapse the lung while the chest wall springs outward?",
+  "fp": "7a9ed99db4ec",
+  "yield": "MEDIUM",
+  "why": "Pneumothorax illustrates negative intrapleural pressure and recoil"
+ },
+ {
+  "front": "Why does a right shift help tissue O2 delivery without meaningfully hurting loading in the lungs?",
+  "fp": "73bc3081c14a",
+  "yield": "MEDIUM",
+  "why": "Plateau vs steep segment reasoning: supporting detail on right shift"
+ },
+ {
+  "front": "Why does metabolic acidosis drive Kussmaul hyperventilation mainly through peripheral rather than central chemoreceptors at first?",
+  "fp": "f2bea8604e3b",
+  "yield": "MEDIUM",
+  "why": "Kussmaul breathing via peripheral chemoreceptors: second-step on BBB/H+ logic"
+ },
+ {
+  "front": "Why does pulmonary edema lower arterial $PO_2$ well before it raises arterial $PCO_2$?",
+  "fp": "10c4d6b0f3dd",
+  "yield": "MEDIUM",
+  "why": "CO2 20x more soluble than O2 explains hypoxemia before hypercapnia"
+ },
+ {
+  "front": "Why does rapid shallow breathing reduce alveolar ventilation even when total minute ventilation is unchanged?",
+  "fp": "69232c5b5097",
+  "yield": "MEDIUM",
+  "why": "Dead space and alveolar ventilation reasoning: supporting calculation"
+ },
+ {
+  "front": "Why does supplemental O2 correct hypoxemia from hypoventilation but not from a true shunt?",
+  "fp": "fb0d4fa9329f",
+  "yield": "MEDIUM",
+  "why": "Shunt vs hypoventilation response to O2: second-step V/Q reasoning"
+ },
+ {
+  "front": "Why does the base of the upright lung receive more ventilation per unit volume than the apex?",
+  "fp": "8eab01701de5",
+  "yield": "LOW",
+  "why": "Regional ventilation by pleural-pressure gradient is beyond MCAT depth"
+ },
+ {
+  "front": "Why is fetal hemoglobin different?",
+  "fp": "9654c6cabf81",
+  "yield": "HIGH",
+  "why": "HbF higher affinity/left shift is core"
+ }
+]

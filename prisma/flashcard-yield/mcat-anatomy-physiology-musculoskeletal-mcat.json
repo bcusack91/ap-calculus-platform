@@ -1,0 +1,404 @@
+[
+ {
+  "front": "A motor unit consists of:",
+  "fp": "ad96956eb6af",
+  "yield": "HIGH",
+  "why": "Motor unit definition is core tested content"
+ },
+ {
+  "front": "Alpha-gamma coactivation keeps the {{c1::muscle spindle}} taut during shortening, so it can still detect unexpected stretch.",
+  "fp": "20b1e9883508",
+  "yield": "MEDIUM",
+  "why": "Gamma coactivation of spindles is second-tier reflex detail"
+ },
+ {
+  "front": "ATP hydrolysis to ADP + Pi {{c1::re-cocks (energizes)}} the detached myosin head into its high-energy conformation before it rebinds actin.",
+  "fp": "5d326857f382",
+  "yield": "HIGH",
+  "why": "ATP hydrolysis cocking the myosin head is a core cross-bridge step"
+ },
+ {
+  "front": "By what two-part chemical attack does an osteoclast dissolve bone?",
+  "fp": "18360ac1ea7c",
+  "yield": "MEDIUM",
+  "why": "Acid plus protease resorption supports osteoclast function; cathepsin K is detail"
+ },
+ {
+  "front": "Cardiac excitation-contraction coupling uses {{c1::calcium-induced calcium release}}: L-type channel Ca2+ entry triggers RyR2 opening.",
+  "fp": "9b43e804fd1f",
+  "yield": "HIGH",
+  "why": "Calcium-induced calcium release contrasts cardiac and skeletal EC coupling"
+ },
+ {
+  "front": "Compare slow-twitch and fast-twitch fibers.",
+  "fp": "285ca0db776c",
+  "yield": "HIGH",
+  "why": "Slow vs fast twitch fiber types are explicitly tested"
+ },
+ {
+  "front": "Contrast compact and spongy bone.",
+  "fp": "bbf5c84cc35d",
+  "yield": "HIGH",
+  "why": "Compact vs spongy bone is explicitly tested"
+ },
+ {
+  "front": "Contrast the roles of calcitriol and mechanical loading in maintaining bone.",
+  "fp": "551ae40f0ed6",
+  "yield": "MEDIUM",
+  "why": "Calcitriol and loading effects support tested bone maintenance"
+ },
+ {
+  "front": "Describe the sliding filament model.",
+  "fp": "e68dad886556",
+  "yield": "HIGH",
+  "why": "Sliding filament model is the core mechanism of this topic"
+ },
+ {
+  "front": "Distinguish isometric, concentric, and eccentric contractions.",
+  "fp": "d21c51bbf44d",
+  "yield": "MEDIUM",
+  "why": "Contraction types are plausible passage context"
+ },
+ {
+  "front": "Distinguish tendons and ligaments.",
+  "fp": "c3155d1df1f8",
+  "yield": "HIGH",
+  "why": "Tendons and ligaments are on the outline"
+ },
+ {
+  "front": "Distinguish treppe from wave summation and tetanus.",
+  "fp": "c07a0d687212",
+  "yield": "MEDIUM",
+  "why": "Summation and tetanus are tested; treppe is second tier"
+ },
+ {
+  "front": "Duchenne muscular dystrophy destroys {{c1::dystrophin}}, the protein linking the sarcomere cytoskeleton to the extracellular matrix.",
+  "fp": "fd02d4430ca6",
+  "yield": "MEDIUM",
+  "why": "Dystrophin illustrates sarcolemma-cytoskeleton linkage in passages"
+ },
+ {
+  "front": "During contraction the {{c1::A band}} stays constant in width while the H zone and I band narrow.",
+  "fp": "f11a35e7f7ed",
+  "yield": "HIGH",
+  "why": "A band constant while H zone and I band shrink is a classic question"
+ },
+ {
+  "front": "During muscle contraction, which ion is released from the sarcoplasmic reticulum?",
+  "fp": "b89e2a9816d6",
+  "yield": "HIGH",
+  "why": "SR calcium release binding troponin is the core Ca2+/troponin fact"
+ },
+ {
+  "front": "Erythropoietin is produced by the ___ in response to ___:",
+  "fp": "6a8fd4784d05",
+  "yield": "HIGH",
+  "why": "Kidney EPO in response to hypoxia is core (belongs in blood/renal deck)"
+ },
+ {
+  "front": "Extraocular motor units contain a few fibers, while gastrocnemius units contain {{c1::hundreds to thousands}}, trading precision for power.",
+  "fp": "efbd9b6e452a",
+  "yield": "LOW",
+  "why": "Restates motor-unit size vs fine control already on the motor unit card"
+ },
+ {
+  "front": "Gout results from deposition of {{c1::monosodium urate}} crystals in cool peripheral joints, classically the first metatarsophalangeal joint.",
+  "fp": "7406c272e4e3",
+  "yield": "LOW",
+  "why": "Gout crystal pathology is clinical, not on the outline"
+ },
+ {
+  "front": "High-intensity muscle fatigue is caused mainly by accumulated {{c1::inorganic phosphate}} and $H^+$, not by running out of ATP.",
+  "fp": "b01611d93637",
+  "yield": "MEDIUM",
+  "why": "Pi/H+ fatigue mechanism is plausible passage context"
+ },
+ {
+  "front": "How does autonomic innervation of smooth muscle differ structurally from the neuromuscular junction?",
+  "fp": "3fbf3f1c2f11",
+  "yield": "MEDIUM",
+  "why": "Varicosity innervation supports tested smooth muscle autonomic control"
+ },
+ {
+  "front": "How does smooth muscle relax, and why do cAMP-raising drugs relax it?",
+  "fp": "d28f2dc0f610",
+  "yield": "MEDIUM",
+  "why": "MLCP and cAMP relaxation is second-tier smooth muscle regulation"
+ },
+ {
+  "front": "In an osteon, osteocytes trapped in lacunae communicate through {{c1::canaliculi}} radiating around the central Haversian canal.",
+  "fp": "b58500c24570",
+  "yield": "MEDIUM",
+  "why": "Osteon and canaliculi structure supports tested compact bone content"
+ },
+ {
+  "front": "In skeletal muscle the T-tubule DHP receptor is {{c1::mechanically (physically) coupled}} to the SR ryanodine receptor — no Ca2+ entry needed.",
+  "fp": "d57946d326a4",
+  "yield": "MEDIUM",
+  "why": "Mechanical DHP-RyR coupling is a second-tier skeletal vs cardiac contrast"
+ },
+ {
+  "front": "In the cross-bridge cycle, myosin detaches from actin only when {{c1::a fresh ATP binds}} the myosin head.",
+  "fp": "67c63e183b94",
+  "yield": "HIGH",
+  "why": "ATP binding (not hydrolysis) releasing myosin is a tested distinction"
+ },
+ {
+  "front": "In the force-velocity relationship, shortening velocity is maximal at {{c1::zero}} load and falls to zero in a maximal isometric contraction.",
+  "fp": "298eb1344c3e",
+  "yield": "LOW",
+  "why": "Force-velocity curve and peak-power load are beyond the outline"
+ },
+ {
+  "front": "Long bones lengthen by {{c1::endochondral}} ossification at the epiphyseal plate; flat skull bones form by intramembranous ossification.",
+  "fp": "b891cc2db618",
+  "yield": "HIGH",
+  "why": "Endochondral vs intramembranous ossification is on the outline"
+ },
+ {
+  "front": "Most limb joints are {{c1::third}}-class levers: effort applied between fulcrum and load, sacrificing force for speed and range of motion.",
+  "fp": "55ad3abd76fe",
+  "yield": "MEDIUM",
+  "why": "Third-class lever classification supports tested musculoskeletal mechanics"
+ },
+ {
+  "front": "Muscle relaxation is active: {{c1::SERCA}} pumps Ca2+ back into the SR at ATP cost, where calsequestrin buffers it.",
+  "fp": "9d76a1fa34f0",
+  "yield": "HIGH",
+  "why": "SERCA-driven active relaxation is core muscle physiology"
+ },
+ {
+  "front": "Order the stages of fracture healing from hematoma to remodeled bone.",
+  "fp": "b4e619d44531",
+  "yield": "LOW",
+  "why": "Fracture healing stages are clinical, not on the outline"
+ },
+ {
+  "front": "Osteoarthritis versus rheumatoid arthritis: contrast the underlying process and the joint pattern.",
+  "fp": "4b131b9ce238",
+  "yield": "LOW",
+  "why": "OA vs RA is clinical pathology, not on the outline"
+ },
+ {
+  "front": "Osteoblast-derived {{c1::osteoprotegerin (OPG)}} is a decoy receptor that binds RANKL and blocks osteoclast activation.",
+  "fp": "821cf07ee375",
+  "yield": "LOW",
+  "why": "RANKL/OPG signaling is molecular detail AAMC treats as a black box"
+ },
+ {
+  "front": "Osteoblasts derive from {{c1::mesenchymal}} stem cells; osteoclasts derive from the monocyte/macrophage (hematopoietic) lineage.",
+  "fp": "615b53f56d47",
+  "yield": "MEDIUM",
+  "why": "Osteoblast vs osteoclast lineage supports cellular composition of bone"
+ },
+ {
+  "front": "Osteomalacia versus osteoporosis: which is a mineralization defect and which is a loss of bone mass?",
+  "fp": "24d3c5fb3aed",
+  "yield": "MEDIUM",
+  "why": "Vitamin D mineralization defect vs bone loss illustrates tested Ca2+ regulation"
+ },
+ {
+  "front": "Postmenopausal osteoporosis follows the loss of {{c1::estrogen}}, which normally restrains osteoclasts (partly by boosting OPG).",
+  "fp": "6aa3b33387a6",
+  "yield": "MEDIUM",
+  "why": "Estrogen restraint of osteoclasts supports menopause bone loss"
+ },
+ {
+  "front": "Predict the potassium, calcium, and renal consequences of massive muscle breakdown.",
+  "fp": "a9630e76eb03",
+  "yield": "LOW",
+  "why": "Rhabdomyolysis consequences are clinical detail"
+ },
+ {
+  "front": "Resistance training enlarges muscle mainly by {{c1::hypertrophy}}, adding myofibrils in parallel, with new nuclei donated by satellite cells.",
+  "fp": "fe349a5ee708",
+  "yield": "MEDIUM",
+  "why": "Hypertrophy via satellite cells is plausible passage context"
+ },
+ {
+  "front": "Single-unit (visceral) smooth muscle contracts as a sheet because cells are electrically coupled through {{c1::gap junctions}}.",
+  "fp": "f885a19594eb",
+  "yield": "MEDIUM",
+  "why": "Gap-junction coupling of single-unit smooth muscle is standard support"
+ },
+ {
+  "front": "Skeletal fibers are long and multinucleate because they form by {{c1::fusion of myoblasts}}; cardiac cells stay mono- or binuclear and branched.",
+  "fp": "d27eb6915c7d",
+  "yield": "HIGH",
+  "why": "Multinucleate skeletal vs branched cardiac cells is a tested comparison"
+ },
+ {
+  "front": "Smooth muscle has no troponin: contraction begins when Ca2+-calmodulin activates {{c1::myosin light-chain kinase (MLCK)}}.",
+  "fp": "df73385678a3",
+  "yield": "HIGH",
+  "why": "Smooth muscle MLCK/calmodulin without troponin is a tested distinction"
+ },
+ {
+  "front": "Succinylcholine paralyzes by {{c1::persistent depolarization}} of the end plate, unlike curare, which competitively blocks nicotinic receptors.",
+  "fp": "d45f3d3e2662",
+  "yield": "LOW",
+  "why": "Succinylcholine vs curare is drug pharmacology beyond the outline"
+ },
+ {
+  "front": "The cardiac action potential plateau reflects sustained {{c1::L-type Ca2+}} influx balancing K+ efflux.",
+  "fp": "0c981b01276d",
+  "yield": "HIGH",
+  "why": "L-type Ca2+ plateau of the cardiac action potential is core"
+ },
+ {
+  "front": "The myometrium is composed of:",
+  "fp": "490923cdc87c",
+  "yield": "MEDIUM",
+  "why": "Myometrium smooth muscle is reproductive context (belongs in repro deck)"
+ },
+ {
+  "front": "The power stroke is triggered by release of {{c1::inorganic phosphate (Pi)}} from the myosin head; ADP release then restores the rigor state.",
+  "fp": "832f8008e3ee",
+  "yield": "MEDIUM",
+  "why": "Pi release timing of the power stroke is second-tier cross-bridge detail"
+ },
+ {
+  "front": "The size principle: motor units are recruited smallest first, so {{c1::slow type I}} units fire before large fast-glycolytic units.",
+  "fp": "be106bddac26",
+  "yield": "MEDIUM",
+  "why": "Size principle recruitment is standard prep-book support"
+ },
+ {
+  "front": "Total serum calcium is about {{c1::8.5 to 10.5}} mg/dL, of which roughly half is free ionized calcium and most of the rest is albumin-bound.",
+  "fp": "bebedeb4bdf2",
+  "yield": "LOW",
+  "why": "Exact serum calcium range is not on the outline"
+ },
+ {
+  "front": "Type I fibers are slow {{c1::oxidative}}: myoglobin- and mitochondria-rich, red, fatigue-resistant, dominant in postural muscles.",
+  "fp": "271278c47840",
+  "yield": "MEDIUM",
+  "why": "Type I detail adds IIa/postural context to the plainer fiber-type card"
+ },
+ {
+  "front": "Volatile anesthetics trigger malignant hyperthermia in patients with mutant {{c1::ryanodine receptors}}, causing uncontrolled SR calcium release.",
+  "fp": "3780d4fa0931",
+  "yield": "LOW",
+  "why": "Malignant hyperthermia is clinical pharmacology"
+ },
+ {
+  "front": "What are the two key components of cardiac intercalated discs and their functions?",
+  "fp": "6930d245939e",
+  "yield": "HIGH",
+  "why": "Intercalated disc gap junctions and desmosomes are core cardiac muscle"
+ },
+ {
+  "front": "What do osteoblasts and osteoclasts do?",
+  "fp": "6b99f61abc76",
+  "yield": "HIGH",
+  "why": "Osteoblast/osteoclast roles with PTH and calcitonin are core Ca2+ regulation"
+ },
+ {
+  "front": "What does titin contribute to the sarcomere?",
+  "fp": "2eb132427fb3",
+  "yield": "MEDIUM",
+  "why": "Titin as passive elastic element is second-tier sarcomere detail"
+ },
+ {
+  "front": "What happens at the neuromuscular junction?",
+  "fp": "1484cf1ccd70",
+  "yield": "HIGH",
+  "why": "Neuromuscular junction sequence is core"
+ },
+ {
+  "front": "What is the role of calcium in contraction?",
+  "fp": "5a119fcddec5",
+  "yield": "LOW",
+  "why": "Restates the plainer SR calcium release card"
+ },
+ {
+  "front": "What is the smooth muscle latch state, and why is it energetically economical?",
+  "fp": "dfc0366be7e9",
+  "yield": "LOW",
+  "why": "Latch state is advanced smooth muscle physiology beyond the outline"
+ },
+ {
+  "front": "What physically prevents cross-bridge formation at rest, and how does Ca2+ remove the block?",
+  "fp": "5729f2330635",
+  "yield": "MEDIUM",
+  "why": "Tropomyosin block mechanism supports the core Ca2+/troponin card"
+ },
+ {
+  "front": "Where is spongy (cancellous) bone found, and what fills its spaces?",
+  "fp": "cd4595227c32",
+  "yield": "MEDIUM",
+  "why": "Spongy bone housing red marrow supports the compact vs spongy card"
+ },
+ {
+  "front": "Which muscles are used in forced expiration?",
+  "fp": "d9962e048847",
+  "yield": "HIGH",
+  "why": "Forced expiration muscles are core breathing mechanics (belongs in respiratory deck)"
+ },
+ {
+  "front": "Which tissue does NOT require insulin for glucose uptake?",
+  "fp": "33dd6ecf0f01",
+  "yield": "HIGH",
+  "why": "Insulin-independent brain glucose uptake is core (belongs in endocrine deck)"
+ },
+ {
+  "front": "Why are T-tubules essential in large-diameter skeletal muscle fibers?",
+  "fp": "477833cafb91",
+  "yield": "HIGH",
+  "why": "T-tubules carrying the action potential inward is core"
+ },
+ {
+  "front": "Why can cardiac muscle not undergo tetanus?",
+  "fp": "1a88a9fd1180",
+  "yield": "HIGH",
+  "why": "Cardiac refractory period preventing tetanus is a classic question"
+ },
+ {
+  "front": "Why does cartilage heal so poorly compared with bone?",
+  "fp": "09737ff36b14",
+  "yield": "MEDIUM",
+  "why": "Avascular cartilage healing supports tested cartilage structure"
+ },
+ {
+  "front": "Why does continuously high PTH resorb bone while intermittent PTH can build it?",
+  "fp": "540518b6a083",
+  "yield": "LOW",
+  "why": "Continuous vs intermittent PTH effects are pharmacology beyond the outline"
+ },
+ {
+  "front": "Why does death produce rigor mortis, and why does the stiffness eventually resolve?",
+  "fp": "e2a49a75f534",
+  "yield": "LOW",
+  "why": "Rigor mortis restates the ATP-detachment cards; resolution timing is trivia"
+ },
+ {
+  "front": "Why does every motor neuron action potential produce a muscle action potential, unlike most central synapses?",
+  "fp": "2c5b0477a451",
+  "yield": "MEDIUM",
+  "why": "NMJ safety factor and myasthenia are plausible passage context"
+ },
+ {
+  "front": "Why does tension fall when a sarcomere is either overstretched or over-shortened?",
+  "fp": "f383d5dd03b2",
+  "yield": "HIGH",
+  "why": "Length-tension relationship is a classic question"
+ },
+ {
+  "front": "Why is ATP required to RELAX muscle?",
+  "fp": "ea85517d86c6",
+  "yield": "HIGH",
+  "why": "ATP needed for relaxation is core and plainly stated"
+ },
+ {
+  "front": "Why is cardiac troponin, rather than creatine kinase, the marker of choice for myocardial injury?",
+  "fp": "38c597a601df",
+  "yield": "LOW",
+  "why": "Cardiac troponin as clinical marker is lab minutiae"
+ },
+ {
+  "front": "Why must the biceps generate far more force than the weight actually held in the hand?",
+  "fp": "4d30ef358433",
+  "yield": "MEDIUM",
+  "why": "Biceps torque balance applies tested lever mechanics"
+ }
+]

@@ -1,0 +1,404 @@
+[
+ {
+  "front": "{{c1::R plasmids}} carry antibiotic-resistance genes plus conjugation machinery, spreading resistance across species in a single mating.",
+  "fp": "9874ea3835f0",
+  "yield": "MEDIUM",
+  "why": "R plasmids stacking resistance genes supports the plainer plasmid card"
+ },
+ {
+  "front": "A motile bacterium swims up a nutrient gradient by biasing {{c1::tumbling frequency}}, not by steering.",
+  "fp": "b1e717b83b2f",
+  "yield": "MEDIUM",
+  "why": "Chemotaxis by biased random walk is listed on the AAMC outline"
+ },
+ {
+  "front": "A plasmid that can reversibly integrate into the bacterial chromosome, like the F factor, is called an {{c1::episome}}.",
+  "fp": "1674b5e26027",
+  "yield": "MEDIUM",
+  "why": "Episome/F factor term is useful context for conjugation passages"
+ },
+ {
+  "front": "A polysaccharide capsule blocks phagocytosis, so vaccines against encapsulated bacteria are made as {{c1::conjugates}}.",
+  "fp": "b12145f8c238",
+  "yield": "MEDIUM",
+  "why": "Conjugate vaccine immunology belongs to the immune-system topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "A selective medium is designed to:",
+  "fp": "c0ec53e0a04d",
+  "yield": "MEDIUM",
+  "why": "Selective vs differential media is plausible experimental-design context"
+ },
+ {
+  "front": "A wound isolate is a Gram-positive coccus in clusters, catalase positive and coagulase positive. What does the phenotype indicate?",
+  "fp": "3268aa265997",
+  "yield": "LOW",
+  "why": "Catalase/coagulase identification of S. aureus is clinical micro trivia"
+ },
+ {
+  "front": "Aerotolerant organisms such as {{c1::Lactobacillus}} ferment exclusively yet survive in air — typically SOD-positive but catalase-negative.",
+  "fp": "a262a707f0c4",
+  "yield": "MEDIUM",
+  "why": "Aerotolerant class completes the oxygen-requirement classification"
+ },
+ {
+  "front": "After an F+ x F- conjugation, what is the recipient's status, and why does the donor lose nothing?",
+  "fp": "177277636b19",
+  "yield": "HIGH",
+  "why": "F+ x F- conjugation with replicative transfer is explicit outline content"
+ },
+ {
+  "front": "An Hfr donor transfers {{c1::chromosomal}} genes in a fixed order, yet the recipient almost never becomes F+.",
+  "fp": "e384a3cb2e2c",
+  "yield": "MEDIUM",
+  "why": "Hfr chromosomal transfer is a second-tier conjugation detail"
+ },
+ {
+  "front": "Bacteria coordinate virulence gene expression with population density using {{c1::quorum sensing}} autoinducers.",
+  "fp": "0816c0f01d23",
+  "yield": "LOW",
+  "why": "Restates the plainer quorum-sensing card"
+ },
+ {
+  "front": "Bacterial flagella rotate powered by:",
+  "fp": "f2ee9cbf3dee",
+  "yield": "HIGH",
+  "why": "Proton-driven flagellar rotation is a core prokaryote vs eukaryote distinction"
+ },
+ {
+  "front": "Bacterial ribosomes are {{c1::70S}} while cytosolic human ribosomes are 80S, giving translation inhibitors selective toxicity.",
+  "fp": "4daac2bff468",
+  "yield": "HIGH",
+  "why": "70S vs 80S ribosomes is a core structural distinction"
+ },
+ {
+  "front": "Binary fission yields clones — name the three horizontal routes by which bacteria still acquire new genes.",
+  "fp": "8468ddf79548",
+  "yield": "LOW",
+  "why": "Restates the three-modes-of-genetic-transfer card"
+ },
+ {
+  "front": "Catheter infections often relapse despite drug levels above the MIC. What structure explains this?",
+  "fp": "c13139aa3f85",
+  "yield": "MEDIUM",
+  "why": "Biofilm tolerance is plausible passage context for persistent infection"
+ },
+ {
+  "front": "Cholera toxin ADP-ribosylates {{c1::the Gs alpha subunit}}, locking adenylyl cyclase on.",
+  "fp": "51aff66ee52d",
+  "yield": "MEDIUM",
+  "why": "Cholera toxin locking Gs illustrates tested G-protein signaling"
+ },
+ {
+  "front": "Cholera toxin causes massive watery diarrhea without invading the mucosa. Trace the mechanism.",
+  "fp": "bc6eca529e8d",
+  "yield": "LOW",
+  "why": "Restates the cholera toxin Gs card"
+ },
+ {
+  "front": "Contrast exotoxins and endotoxins.",
+  "fp": "eaa3bbb775b5",
+  "yield": "HIGH",
+  "why": "Exotoxin vs endotoxin is a high-frequency distinction"
+ },
+ {
+  "front": "Contrast generalized and specialized transduction by phage life cycle and by the DNA transferred.",
+  "fp": "d0dac1c4613c",
+  "yield": "HIGH",
+  "why": "Generalized vs specialized transduction ties lytic/lysogenic cycles to gene transfer"
+ },
+ {
+  "front": "Diphtheria toxin (and Pseudomonas exotoxin A) ADP-ribosylates {{c1::elongation factor eEF2}}, freezing host protein synthesis.",
+  "fp": "d5b4e12de3fd",
+  "yield": "MEDIUM",
+  "why": "EF-2 ADP-ribosylation illustrates translation elongation as a toxin target"
+ },
+ {
+  "front": "Diphtheria toxin and Pseudomonas exotoxin A both kill cells by ADP-ribosylating {{c1::elongation factor 2}}.",
+  "fp": "cc558f4c29f0",
+  "yield": "LOW",
+  "why": "Restates the diphtheria toxin EF-2 card"
+ },
+ {
+  "front": "During binary fission, the chromosome replicates {{c1::bidirectionally from a single origin (oriC)}}, and the FtsZ ring constricts to build the septum.",
+  "fp": "6d9af2c0787d",
+  "yield": "MEDIUM",
+  "why": "Bidirectional replication from oriC supports binary fission; FtsZ is extra detail"
+ },
+ {
+  "front": "Endospore formation is essentially confined to the gram-positive rods {{c1::Bacillus and Clostridium}} and is triggered by nutrient starvation.",
+  "fp": "48e62ade2f67",
+  "yield": "HIGH",
+  "why": "Endospore-forming genera and starvation trigger are core outline content"
+ },
+ {
+  "front": "Endospore resistance depends on dipicolinic acid, calcium, and dehydration. What are two clinical consequences?",
+  "fp": "003e955623b8",
+  "yield": "LOW",
+  "why": "Hand-gel and canning consequences are clinical/practical detail"
+ },
+ {
+  "front": "Endotoxin is a structural {{c1::lipopolysaccharide}} of Gram-negative outer membrane, whereas exotoxins are secreted proteins.",
+  "fp": "811345140403",
+  "yield": "MEDIUM",
+  "why": "LPS endotoxin vs protein exotoxin supports the plainer contrast card"
+ },
+ {
+  "front": "Endotoxin is the {{c1::lipid A}} portion of gram-negative LPS, released mainly when the cell lyses.",
+  "fp": "0d371b677688",
+  "yield": "LOW",
+  "why": "Lipid A / TLR4 detail restates the endotoxin card"
+ },
+ {
+  "front": "Exotoxins are secreted {{c1::proteins}} — heat-labile, extremely potent, strongly antigenic, and convertible into toxoid vaccines.",
+  "fp": "2cef826d7c6e",
+  "yield": "LOW",
+  "why": "Restates the exotoxin properties covered by the contrast cards"
+ },
+ {
+  "front": "Explain the two growth phases and the pause of a diauxic curve on glucose plus lactose.",
+  "fp": "f3992da96ec5",
+  "yield": "MEDIUM",
+  "why": "Diauxic growth is the classic catabolite-repression graph"
+ },
+ {
+  "front": "Flagellin and lipopolysaccharide are recognized by different pattern-recognition receptors. Why does the host bother?",
+  "fp": "65242d39ee45",
+  "yield": "MEDIUM",
+  "why": "PAMP/TLR recognition belongs to the immune-system topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Fungal reproduction can be:",
+  "fp": "d5734adac4fa",
+  "yield": "MEDIUM",
+  "why": "Fungal reproduction is 2B content but belongs to a fungi topic"
+ },
+ {
+  "front": "Gram-positive bacteria stain purple because they have:",
+  "fp": "30b01948c681",
+  "yield": "HIGH",
+  "why": "Gram stain and peptidoglycan thickness is core"
+ },
+ {
+  "front": "Helicobacter pylori survives gastric acid using {{c1::urease}}, which hydrolyzes urea to ammonia and $CO_2$ to buffer its local microenvironment.",
+  "fp": "3bff7a816269",
+  "yield": "LOW",
+  "why": "H. pylori urease is organism-specific trivia"
+ },
+ {
+  "front": "How do bacteria reproduce?",
+  "fp": "71356130b655",
+  "yield": "HIGH",
+  "why": "Binary fission is core reproduction content"
+ },
+ {
+  "front": "How does a facultative anaerobe like E. coli choose its metabolism when oxygen is available?",
+  "fp": "8d34b4d939cb",
+  "yield": "HIGH",
+  "why": "Facultative anaerobe metabolism choice is core oxygen-class content"
+ },
+ {
+  "front": "How does a superantigen produce shock while a conventional antigen does not?",
+  "fp": "5c41be3ddb19",
+  "yield": "MEDIUM",
+  "why": "Superantigen MHC-TCR crosslink is immunology flavor a passage could supply"
+ },
+ {
+  "front": "How does the trp operon differ from the lac operon?",
+  "fp": "bd450f89864d",
+  "yield": "HIGH",
+  "why": "Inducible lac vs repressible trp is core operon content"
+ },
+ {
+  "front": "In an A-B exotoxin, what do the A and B subunits each do?",
+  "fp": "c285709ef6b7",
+  "yield": "MEDIUM",
+  "why": "A-B toxin architecture supports the exotoxin cards"
+ },
+ {
+  "front": "Mycobacterium tuberculosis survives inside macrophages by blocking {{c1::phagolysosome fusion}}.",
+  "fp": "9a0240d1c766",
+  "yield": "LOW",
+  "why": "M. tuberculosis intracellular survival is organism-specific detail"
+ },
+ {
+  "front": "Name the classic toxins acquired by lysogenic conversion — encoded on a prophage rather than the bacterial chromosome.",
+  "fp": "99b74e9b02ce",
+  "yield": "MEDIUM",
+  "why": "Lysogenic conversion links prophage to toxigenicity; the toxin list is secondary"
+ },
+ {
+  "front": "Obligate aerobes require oxygen as final electron acceptor and carry both {{c1::superoxide dismutase and catalase}} to detoxify reactive oxygen species.",
+  "fp": "2be88834cab3",
+  "yield": "HIGH",
+  "why": "Obligate aerobes with SOD and catalase is core oxygen-class content"
+ },
+ {
+  "front": "Obligate anaerobes like Clostridium and Bacteroides die in air because they lack {{c1::superoxide dismutase and catalase}}.",
+  "fp": "4d7a9992a6ea",
+  "yield": "HIGH",
+  "why": "Obligate anaerobes lacking SOD/catalase is core oxygen-class content"
+ },
+ {
+  "front": "Predict lac expression in a lacI-null mutant versus an operator (Oc) mutant, and how a merodiploid distinguishes them.",
+  "fp": "4d4e4b784b4a",
+  "yield": "HIGH",
+  "why": "lacI vs Oc cis/trans merodiploid reasoning is classic MCAT passage material"
+ },
+ {
+  "front": "State the general rule linking pathway type to operon logic, using lac and trp as the models.",
+  "fp": "01830cbaba98",
+  "yield": "MEDIUM",
+  "why": "Catabolic-inducible vs anabolic-repressible rule supports the lac/trp card"
+ },
+ {
+  "front": "Superantigens like TSST-1 bypass normal antigen processing by crosslinking {{c1::MHC class II and T-cell receptors}} nonspecifically.",
+  "fp": "1b21ae48c5d9",
+  "yield": "LOW",
+  "why": "Restates the superantigen card"
+ },
+ {
+  "front": "Tetanus and botulinum toxins are both SNARE-cleaving proteases — why do they cause opposite forms of paralysis?",
+  "fp": "7f1c3442bc35",
+  "yield": "MEDIUM",
+  "why": "SNARE cleavage with opposite paralysis ties into neurotransmitter release"
+ },
+ {
+  "front": "Tetanus toxin and botulinum toxin both cleave SNARE proteins, yet cause opposite paralysis. Why?",
+  "fp": "3d29cd7646a4",
+  "yield": "LOW",
+  "why": "Restates the tetanus vs botulinum card"
+ },
+ {
+  "front": "The endospore core is dehydrated and packed with {{c1::calcium dipicolinate}}, wrapped in a keratin-like protein coat.",
+  "fp": "6a9eb0ee5462",
+  "yield": "MEDIUM",
+  "why": "Calcium dipicolinate core supports endospore resistance"
+ },
+ {
+  "front": "The lac operon is induced when:",
+  "fp": "c6d1883552ad",
+  "yield": "HIGH",
+  "why": "Conditions for lac induction is core operon content"
+ },
+ {
+  "front": "The lac operon's structural genes share one polycistronic mRNA: lacZ (beta-galactosidase), lacY ({{c1::lactose permease}}), and lacA (transacetylase).",
+  "fp": "5a025631419a",
+  "yield": "MEDIUM",
+  "why": "lacZ/lacY/lacA gene products are supporting operon detail"
+ },
+ {
+  "front": "The lag phase of bacterial growth involves:",
+  "fp": "a88830b4da8e",
+  "yield": "HIGH",
+  "why": "Lag phase is core growth-curve content"
+ },
+ {
+  "front": "The trp repressor is inactive until {{c1::tryptophan itself, acting as corepressor}}, binds and activates it.",
+  "fp": "e3124b20408c",
+  "yield": "MEDIUM",
+  "why": "Trp as corepressor supports the repressible-operon card"
+ },
+ {
+  "front": "The true physiological inducer of the lac operon is {{c1::allolactose}}, which binds the LacI repressor and releases it from the operator.",
+  "fp": "6b30771aa9f4",
+  "yield": "MEDIUM",
+  "why": "Allolactose as true inducer and IPTG are supporting operon detail"
+ },
+ {
+  "front": "trp attenuation hinges on a leader peptide with two tandem {{c1::tryptophan codons}}: scarce Trp stalls the ribosome, allowing the antiterminator hairpin.",
+  "fp": "5f24f75c52b5",
+  "yield": "MEDIUM",
+  "why": "Attenuation leader-peptide mechanism is second-tier operon regulation"
+ },
+ {
+  "front": "What are plasmids and why are they clinically important?",
+  "fp": "4f30ffe3fb49",
+  "yield": "HIGH",
+  "why": "Plasmids carrying resistance genes is explicit outline content"
+ },
+ {
+  "front": "What are the three modes of bacterial genetic transfer?",
+  "fp": "b9a9a8469dcb",
+  "yield": "HIGH",
+  "why": "Transformation/transduction/conjugation is core outline content"
+ },
+ {
+  "front": "What is an operon?",
+  "fp": "3ca31ac3c033",
+  "yield": "HIGH",
+  "why": "Operon definition is core"
+ },
+ {
+  "front": "What is quorum sensing?",
+  "fp": "ec5420790d9c",
+  "yield": "MEDIUM",
+  "why": "Quorum-sensing definition is plausible passage context"
+ },
+ {
+  "front": "What is the function of a bacterial capsule?",
+  "fp": "e2a9c0b54301",
+  "yield": "HIGH",
+  "why": "Capsule anti-phagocytic function is core structure/virulence content"
+ },
+ {
+  "front": "When glucose falls, cAMP rises and the cAMP-{{c1::CAP (catabolite activator protein)}} complex binds upstream of the lac promoter, recruiting RNA polymerase.",
+  "fp": "94e3c61547de",
+  "yield": "HIGH",
+  "why": "cAMP-CAP positive control is core operon content"
+ },
+ {
+  "front": "Which stain identifies Mycobacterium species?",
+  "fp": "c453fa906a3e",
+  "yield": "MEDIUM",
+  "why": "Acid-fast stain for Mycobacterium is a common second-tier staining fact"
+ },
+ {
+  "front": "Why are asplenic patients specifically at risk from encapsulated organisms?",
+  "fp": "6ae1072116d3",
+  "yield": "MEDIUM",
+  "why": "Asplenia risk belongs to the immune-system topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Why are many large antibiotics active against Gram-positives but useless against Gram-negatives?",
+  "fp": "09c5d5fc50cb",
+  "yield": "MEDIUM",
+  "why": "Outer-membrane permeability barrier explains Gram-negative intrinsic resistance"
+ },
+ {
+  "front": "Why does M. tuberculosis preferentially infect the lung apices, and which culture and stain features identify it?",
+  "fp": "861e0f054212",
+  "yield": "LOW",
+  "why": "M. tuberculosis lung-apex and culture detail is organism-specific trivia"
+ },
+ {
+  "front": "Why does normal flora protect the host, and what happens when broad-spectrum antibiotics eliminate it?",
+  "fp": "40ca8063b3da",
+  "yield": "MEDIUM",
+  "why": "Colonization resistance is plausible passage context"
+ },
+ {
+  "front": "Why is attenuation mechanistically impossible in eukaryotes?",
+  "fp": "fa13163a4592",
+  "yield": "MEDIUM",
+  "why": "Coupled transcription-translation explaining attenuation is a tested prokaryote feature"
+ },
+ {
+  "front": "Why must surgical instruments be autoclaved rather than boiled, framed in terms of spores?",
+  "fp": "753614664be8",
+  "yield": "LOW",
+  "why": "Autoclaving detail restates spore heat resistance"
+ },
+ {
+  "front": "With a 20-minute doubling time, one E. coli cell becomes {{c1::$2^6 = 64$}} cells after 2 hours.",
+  "fp": "edbcfe5fd214",
+  "yield": "HIGH",
+  "why": "Doubling-time exponential growth formula is used in calculation"
+ },
+ {
+  "front": "Write the reactions catalyzed by superoxide dismutase and by catalase.",
+  "fp": "2203f7372a9b",
+  "yield": "MEDIUM",
+  "why": "SOD and catalase reactions support the oxygen-class cards"
+ }
+]

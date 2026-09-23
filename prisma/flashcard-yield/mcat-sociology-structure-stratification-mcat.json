@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Absolute}} deprivation is lacking the resources for survival; {{c2::relative}} deprivation is perceiving less than a reference group believes it deserves.",
+  "fp": "e5752188f5d2",
+  "yield": "MEDIUM",
+  "why": "Relative deprivation is tested (social movements); secondary to the poverty pair"
+ },
+ {
+  "front": "{{c1::Absolute}} poverty is lacking basic survival needs (food, shelter); {{c2::relative}} poverty is deprivation compared to one's society's standards.",
+  "fp": "e01529b057b8",
+  "yield": "HIGH",
+  "why": "Absolute vs relative poverty is named on the AAMC 10A outline"
+ },
+ {
+  "front": "{{c1::Cultural capital}} (Bourdieu): nonfinancial assets — tastes, manners, credentials, speech — conferring status advantage, transmitted by family and school.",
+  "fp": "335b90292342",
+  "yield": "HIGH",
+  "why": "Cultural capital is an AAMC-listed aspect of stratification"
+ },
+ {
+  "front": "{{c1::De jure}} segregation is imposed by law; {{c2::de facto}} segregation persists in practice through housing markets, lending, and school assignment.",
+  "fp": "2970dbefee18",
+  "yield": "MEDIUM",
+  "why": "De jure/de facto segregation supports residential segregation (10A) as context"
+ },
+ {
+  "front": "{{c1::Horizontal}} mobility is movement between positions of roughly equal rank, e.g., a nurse becoming a respiratory therapist.",
+  "fp": "6ca8cffeb7a5",
+  "yield": "LOW",
+  "why": "Restates the vertical vs horizontal mobility card; keep the fuller contrast"
+ },
+ {
+  "front": "{{c1::Institutional}} discrimination yields unequal outcomes through policy, not prejudice; {{c2::individual}} discrimination is one person's act.",
+  "fp": "3be15290702f",
+  "yield": "HIGH",
+  "why": "Individual vs institutional discrimination is a core tested distinction"
+ },
+ {
+  "front": "{{c1::Intergenerational}} mobility compares your class position to your parents'; {{c2::intragenerational}} mobility is movement within your own lifetime.",
+  "fp": "5b4ada88ef09",
+  "yield": "HIGH",
+  "why": "Intergenerational vs intragenerational mobility is on the AAMC outline"
+ },
+ {
+  "front": "{{c1::Intersectionality}} (Crenshaw): race, class, and gender form interlocking systems of disadvantage that cannot be understood one axis at a time.",
+  "fp": "95942c7de1e0",
+  "yield": "HIGH",
+  "why": "Intersectionality is a named tested concept"
+ },
+ {
+  "front": "{{c1::Mills}}'s power elite thesis says a small corporate, military, and political network makes key decisions; {{c2::pluralism}} says power is dispersed.",
+  "fp": "ac17e9604cab",
+  "yield": "MEDIUM",
+  "why": "Power elite vs pluralism is second-tier theory; useful passage context"
+ },
+ {
+  "front": "{{c1::Race}} is a socially assigned category based on perceived physical traits; {{c2::ethnicity}} is shared culture, ancestry, and language.",
+  "fp": "b9aa8b3ca466",
+  "yield": "HIGH",
+  "why": "Race as social construct vs ethnicity is a high-frequency distinction"
+ },
+ {
+  "front": "{{c1::Social capital}} is advantage derived from networks and connections — who you know and the resources those ties can mobilize.",
+  "fp": "1a05864da21a",
+  "yield": "HIGH",
+  "why": "Social capital is AAMC-listed"
+ },
+ {
+  "front": "{{c1::Social reproduction}} is the transmission of class position across generations via schooling, cultural capital, and inherited wealth.",
+  "fp": "596a8f5668ad",
+  "yield": "HIGH",
+  "why": "Social reproduction is AAMC-listed"
+ },
+ {
+  "front": "{{c1::Structural}} mobility comes from economy-wide change — factory automation, tech booms — moving whole groups regardless of individual effort.",
+  "fp": "cb4daa56b43b",
+  "yield": "HIGH",
+  "why": "Structural mobility is a tested mobility pattern"
+ },
+ {
+  "front": "{{c1::World-systems}} theory (Wallerstein): core nations extract profit from periphery nations, with a semi-periphery in between.",
+  "fp": "df3e0972212f",
+  "yield": "HIGH",
+  "why": "World-systems core/periphery is the standard global-inequality theory tested"
+ },
+ {
+  "front": "A {{c1::caste}} system is closed — status ascribed at birth, endogamy enforced, no mobility; a {{c2::class}} system is open, mixing ascription with achievement.",
+  "fp": "82c0445c4d42",
+  "yield": "HIGH",
+  "why": "Caste vs class (closed vs open) is core stratification content"
+ },
+ {
+  "front": "A reference group is one that:",
+  "fp": "bac12c1317cf",
+  "yield": "MEDIUM",
+  "why": "Reference group is tested but belongs to the groups/self topic"
+ },
+ {
+  "front": "A surgeon's son becomes a struggling artist. Classify the mobility.",
+  "fp": "2b99ac59ff49",
+  "yield": "MEDIUM",
+  "why": "Application of the intergenerational/vertical card; second step reasoning"
+ },
+ {
+  "front": "Automation eliminates factory jobs and forces many workers into service work. Is this exchange mobility or structural mobility?",
+  "fp": "234b662c20a2",
+  "yield": "MEDIUM",
+  "why": "Applies structural mobility; exchange mobility is a plausible contrast"
+ },
+ {
+  "front": "Beyond income, which markers do sociologists use to place a household in a social class?",
+  "fp": "b09bf60d48b0",
+  "yield": "MEDIUM",
+  "why": "Supporting detail on how class is placed beyond SES components"
+ },
+ {
+  "front": "Bourdieu's {{c1::habitus}} is the durable set of dispositions, tastes, and bodily habits instilled by one's class position and carried into every setting.",
+  "fp": "d97964a46ada",
+  "yield": "LOW",
+  "why": "Habitus is not on the AAMC outline; cultural capital card covers the mechanism"
+ },
+ {
+  "front": "Compare the three major sociological perspectives.",
+  "fp": "00a09ab29932",
+  "yield": "HIGH",
+  "why": "Three perspectives are core tested (though a theory-topic card)"
+ },
+ {
+  "front": "Contrast absolute and relative poverty.",
+  "fp": "a48e540ed018",
+  "yield": "LOW",
+  "why": "Restates the absolute/relative poverty cloze card in the same deck"
+ },
+ {
+  "front": "Contrast class, caste, and meritocracy systems.",
+  "fp": "4af0d42c5d6e",
+  "yield": "MEDIUM",
+  "why": "Adds meritocracy to the caste/class contrast already covered"
+ },
+ {
+  "front": "Contrast modernization theory and dependency theory of global inequality.",
+  "fp": "baff745c8979",
+  "yield": "MEDIUM",
+  "why": "Modernization vs dependency is second-tier global inequality theory"
+ },
+ {
+  "front": "Davis and Moore argued that stratification is functional. State their claim and Tumin's central criticism.",
+  "fp": "fa671651aa11",
+  "yield": "MEDIUM",
+  "why": "Davis-Moore functionalist stratification is prep-book standard; Tumin is detail"
+ },
+ {
+  "front": "Define ascribed vs. achieved status, and master status.",
+  "fp": "4e5611f2cf24",
+  "yield": "HIGH",
+  "why": "Ascribed/achieved/master status is core tested vocabulary"
+ },
+ {
+  "front": "Distinguish class consciousness from false consciousness (Marx).",
+  "fp": "e70c9260a4ea",
+  "yield": "HIGH",
+  "why": "Class vs false consciousness is AAMC-listed"
+ },
+ {
+  "front": "Distinguish role strain from role conflict.",
+  "fp": "843392d46dfc",
+  "yield": "HIGH",
+  "why": "Role strain vs role conflict is a high-frequency distinction"
+ },
+ {
+  "front": "Distinguish vertical from horizontal social mobility with examples.",
+  "fp": "daf7d431c32f",
+  "yield": "HIGH",
+  "why": "Vertical vs horizontal mobility is on the AAMC outline"
+ },
+ {
+  "front": "Education is the strongest individual lever for upward mobility, yet US mobility trails much of Europe. Reconcile these two facts.",
+  "fp": "ddbc23ccb1be",
+  "yield": "LOW",
+  "why": "US-vs-Europe mobility essay; opportunity hoarding detail not on outline"
+ },
+ {
+  "front": "How can relative poverty damage health even in wealthy nations?",
+  "fp": "ee37149068ef",
+  "yield": "MEDIUM",
+  "why": "Links relative poverty to health disparities (10A); Wilkinson is flavor"
+ },
+ {
+  "front": "How does cultural capital shape medical school admissions?",
+  "fp": "51da4e5bcdb7",
+  "yield": "LOW",
+  "why": "Application restating the cultural capital card"
+ },
+ {
+  "front": "How does intersectionality explain the pay gap for Black women?",
+  "fp": "39064b762ba6",
+  "yield": "MEDIUM",
+  "why": "Applies intersectionality with a concrete non-additive example"
+ },
+ {
+  "front": "How does the social model of disability differ from the medical model?",
+  "fp": "35ceed82817b",
+  "yield": "MEDIUM",
+  "why": "Medical vs social model of disability is tested but belongs to health topic"
+ },
+ {
+  "front": "How is occupational prestige measured, and what pattern emerges?",
+  "fp": "52f611696c7a",
+  "yield": "LOW",
+  "why": "How prestige surveys are conducted is measurement trivia"
+ },
+ {
+  "front": "How would Weber analyze a lottery winner who is snubbed by old-money elites?",
+  "fp": "773e7fe3bd0e",
+  "yield": "LOW",
+  "why": "Restates the status inconsistency cloze card"
+ },
+ {
+  "front": "Identical resumes with white-sounding names drew about 50 percent more callbacks than those with Black-sounding names. Why is this design strong evidence?",
+  "fp": "73d6e0c28ef3",
+  "yield": "LOW",
+  "why": "Named audit study; the design point is research methods, not stratification"
+ },
+ {
+  "front": "In world-systems terms, classify Germany, Brazil, and a raw-material-exporting low-income nation.",
+  "fp": "526ed209dc2a",
+  "yield": "LOW",
+  "why": "Restates the world-systems card with country examples"
+ },
+ {
+  "front": "Manifest vs. latent functions are:",
+  "fp": "4f416d8e70cc",
+  "yield": "HIGH",
+  "why": "Manifest vs latent function is core tested (theory-topic card)"
+ },
+ {
+  "front": "Marx: the {{c1::bourgeoisie}} own the means of production; the {{c2::proletariat}} sell labor power; their conflict drives historical change.",
+  "fp": "6687e7d33a8e",
+  "yield": "HIGH",
+  "why": "Marx bourgeoisie/proletariat is core conflict theory"
+ },
+ {
+  "front": "SES is conventionally measured by three components: {{c1::income}}, {{c2::education}}, and occupational prestige.",
+  "fp": "2351da214d2c",
+  "yield": "HIGH",
+  "why": "SES components (income, education, occupation) are core"
+ },
+ {
+  "front": "The {{c1::feminization of poverty}}: women — especially single mothers and elderly women — are disproportionately represented among the poor.",
+  "fp": "0f246691e493",
+  "yield": "MEDIUM",
+  "why": "Feminization of poverty is a named pattern; secondary"
+ },
+ {
+  "front": "The {{c1::Gini coefficient}} summarizes income inequality from 0 (perfect equality) to 1 (one person has everything).",
+  "fp": "b95193c0b77f",
+  "yield": "MEDIUM",
+  "why": "Gini coefficient plausible as passage data; exact values are trivia"
+ },
+ {
+  "front": "The {{c1::glass ceiling}} blocks promotion to top positions; the {{c2::glass escalator}} speeds men upward in female-dominated fields such as nursing.",
+  "fp": "899f5a6090aa",
+  "yield": "MEDIUM",
+  "why": "Glass ceiling/escalator are tested gender stratification terms"
+ },
+ {
+  "front": "The sick role (Parsons) includes the obligation to:",
+  "fp": "2edc2e600c5a",
+  "yield": "HIGH",
+  "why": "Sick role is a high-frequency tested concept (health topic card)"
+ },
+ {
+  "front": "Weber applied: a professor is high in {{c1::prestige}} but modest in property; a kingpin is rich but scorned — {{c2::status inconsistency}}.",
+  "fp": "80d4cf3c03be",
+  "yield": "MEDIUM",
+  "why": "Status inconsistency illustrates Weber's multidimensional view"
+ },
+ {
+  "front": "Weber's {{c1::life chances}} are the opportunities to obtain valued goods, including {{c2::health}} and longevity, determined largely by market position.",
+  "fp": "6f6e1d1e361c",
+  "yield": "MEDIUM",
+  "why": "Life chances ties class to health; supporting detail on Weber"
+ },
+ {
+  "front": "Weber's three components of stratification are {{c1::class, status, and party (power)}}.",
+  "fp": "a2baa3a7ae99",
+  "yield": "HIGH",
+  "why": "Weber's class/status/party is core stratification theory"
+ },
+ {
+  "front": "What are the core principles of social stratification as a concept?",
+  "fp": "49c788fef9d2",
+  "yield": "LOW",
+  "why": "Textbook list of stratification principles; no reasoning payoff"
+ },
+ {
+  "front": "What are the principal systems of stratification across history?",
+  "fp": "c79e7514e9cb",
+  "yield": "MEDIUM",
+  "why": "Slavery/caste/estate/class systems are a second-tier survey"
+ },
+ {
+  "front": "What does social reproduction mean?",
+  "fp": "744dea50c02a",
+  "yield": "LOW",
+  "why": "Restates the social reproduction cloze card"
+ },
+ {
+  "front": "What is a status group in Weber's sense, and how does it differ from class?",
+  "fp": "4d02c454863c",
+  "yield": "LOW",
+  "why": "Restates Weber's status dimension already covered by two cards"
+ },
+ {
+  "front": "What is an official poverty line, and what are its main critiques?",
+  "fp": "36d1ddf6f953",
+  "yield": "LOW",
+  "why": "US poverty-line history and critiques are policy minutiae"
+ },
+ {
+  "front": "What is intersectionality?",
+  "fp": "7f0d8bc290e8",
+  "yield": "LOW",
+  "why": "Restates the intersectionality cloze card"
+ },
+ {
+  "front": "What is opportunity hoarding, and how does it undercut meritocracy claims?",
+  "fp": "beb594cf5a84",
+  "yield": "LOW",
+  "why": "Opportunity hoarding is not on the AAMC outline"
+ },
+ {
+  "front": "What is social capital?",
+  "fp": "1935d3ae939c",
+  "yield": "LOW",
+  "why": "Restates the social capital cloze card"
+ },
+ {
+  "front": "What is social exclusion?",
+  "fp": "f1bbfb88d02d",
+  "yield": "HIGH",
+  "why": "Social exclusion is named on the AAMC 10A outline under poverty"
+ },
+ {
+  "front": "What is the 'culture of poverty' thesis, and why is it criticized?",
+  "fp": "7115388b233f",
+  "yield": "MEDIUM",
+  "why": "Culture of poverty is a prep-book standard; critique is useful context"
+ },
+ {
+  "front": "What is the meritocracy paradox in education?",
+  "fp": "b29c482064c5",
+  "yield": "MEDIUM",
+  "why": "Meritocracy is on the outline; this frames it as ideology"
+ },
+ {
+  "front": "What mechanisms keep caste systems closed?",
+  "fp": "f24bcd882c00",
+  "yield": "LOW",
+  "why": "Mechanisms of caste closure are detail beyond the caste/class contrast"
+ },
+ {
+  "front": "Which of the following best describes cultural transmission?",
+  "fp": "40d419e8d71e",
+  "yield": "MEDIUM",
+  "why": "Cultural transmission is tested but belongs to the culture topic"
+ },
+ {
+  "front": "Which sociological perspective views society as interdependent parts serving functions?",
+  "fp": "25a48296a0a6",
+  "yield": "LOW",
+  "why": "Restates the three-perspectives card"
+ },
+ {
+  "front": "Why can a numerical majority still be a sociological minority group?",
+  "fp": "fe95460548be",
+  "yield": "MEDIUM",
+  "why": "Minority group defined by power not headcount is a plausible stem"
+ },
+ {
+  "front": "Why do sociologists prefer the Human Development Index to GDP per capita when comparing countries?",
+  "fp": "402dd18e3fcd",
+  "yield": "LOW",
+  "why": "HDI vs GDP is not on the AAMC outline"
+ },
+ {
+  "front": "Why do wealth gaps exceed income gaps, and why does the distinction matter?",
+  "fp": "d55fa70df5e8",
+  "yield": "MEDIUM",
+  "why": "Wealth vs income gap is plausible passage reasoning on inequality"
+ },
+ {
+  "front": "Why does the Black-white wealth gap remain far larger than the income gap even among households with equal education?",
+  "fp": "50bb5b9dbaa0",
+  "yield": "LOW",
+  "why": "Restates the wealth-vs-income card with US policy history"
+ },
+ {
+  "front": "Why was apartheid South Africa described as a caste-like system?",
+  "fp": "9f1b341e7ca3",
+  "yield": "LOW",
+  "why": "Restates the caste card's apartheid example"
+ },
+ {
+  "front": "William Julius Wilson linked deindustrialization and out-migration to concentrated inner-city poverty. Name the two mechanisms he emphasized.",
+  "fp": "a5ad1dea707b",
+  "yield": "LOW",
+  "why": "Named scholar's specific mechanisms; trivia-grade"
+ },
+ {
+  "front": "World systems theory divides nations into:",
+  "fp": "1d4c0ea603b2",
+  "yield": "LOW",
+  "why": "Restates the world-systems cloze card"
+ }
+]

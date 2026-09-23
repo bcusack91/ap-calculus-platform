@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Anoikis}} is the apoptosis triggered when a cell loses integrin-mediated attachment to its extracellular matrix.",
+  "fp": "e0e097bb06a8",
+  "yield": "LOW",
+  "why": "Anoikis is vocabulary with little reasoning payoff"
+ },
+ {
+  "front": "{{c1::Cytochalasin D}} caps actin filaments and blocks polymerization, while {{c2::phalloidin}} stabilizes F-actin and prevents disassembly.",
+  "fp": "2782b4af192a",
+  "yield": "LOW",
+  "why": "Cytochalasin/phalloidin drug names; a passage would supply their action"
+ },
+ {
+  "front": "A drug leaves dividing cells with fully separated chromosomes but a cleavage furrow that never completes. Which cytoskeletal system is targeted?",
+  "fp": "ed257aacd1c1",
+  "yield": "HIGH",
+  "why": "Actin contractile ring vs spindle microtubules is classic reasoning"
+ },
+ {
+  "front": "A light microscope resolves to about {{c1::200 nm}}, so a mitochondrion is visible but a ribosome (about 25 nm) needs {{c2::electron microscopy}}.",
+  "fp": "3441c66d25de",
+  "yield": "LOW",
+  "why": "Microscope resolution and size numerics not on the AAMC outline"
+ },
+ {
+  "front": "Alternative splicing allows one gene to:",
+  "fp": "ac286f33ee45",
+  "yield": "MEDIUM",
+  "why": "Alternative splicing is core but belongs to gene expression, not this topic"
+ },
+ {
+  "front": "An assay labels cells that expose phosphatidylserine yet still exclude a membrane-impermeant dye. What is being measured, and why is it not necrosis?",
+  "fp": "864e80d337cc",
+  "yield": "MEDIUM",
+  "why": "Annexin V assay reasoning distinguishes early apoptosis from necrosis in passages"
+ },
+ {
+  "front": "Anti-apoptotic {{c1::Bcl-2 and Bcl-xL}} restrain the pore-forming proteins {{c2::Bax and Bak}}; BH3-only proteins tip the balance toward death.",
+  "fp": "360f2e18088d",
+  "yield": "MEDIUM",
+  "why": "Bcl-2 family balance is supporting apoptosis mechanism"
+ },
+ {
+  "front": "Apoptosis uses {{c1::initiator}} caspases (8, 9) that cleave and activate {{c2::executioner}} caspases (3, 6, 7), which dismantle the cell.",
+  "fp": "23ddd262d4cf",
+  "yield": "MEDIUM",
+  "why": "Initiator vs executioner caspases; supporting detail on apoptosis"
+ },
+ {
+  "front": "Basement membranes are built on type {{c1::IV}} collagen plus laminin; autoantibodies against that collagen cause {{c2::Goodpasture syndrome}}.",
+  "fp": "8b7e9a2a7ed1",
+  "yield": "LOW",
+  "why": "Type IV collagen numbering and Goodpasture are clinical trivia"
+ },
+ {
+  "front": "Beyond circular vs linear shape, how do prokaryotic and eukaryotic genomes differ in packaging and gene structure?",
+  "fp": "2f49a3757af7",
+  "yield": "HIGH",
+  "why": "Prokaryote vs eukaryote genome organization is core"
+ },
+ {
+  "front": "Blood vessels are lined by {{c1::simple squamous}} epithelium (endothelium); the epidermis is {{c2::stratified squamous keratinized}} epithelium.",
+  "fp": "733a335d6ac1",
+  "yield": "MEDIUM",
+  "why": "Epithelial types by location; secondary tissue-level detail"
+ },
+ {
+  "front": "Colchicine and paclitaxel act oppositely on microtubules, yet both arrest mitosis. Explain.",
+  "fp": "f11400828b2a",
+  "yield": "HIGH",
+  "why": "Colchicine vs paclitaxel on dynamic microtubules is a classic question"
+ },
+ {
+  "front": "Collagen has {{c1::glycine}} at every third residue; proline and lysine hydroxylation requires {{c2::vitamin C}}, explaining scurvy.",
+  "fp": "e629e7a5ba4e",
+  "yield": "MEDIUM",
+  "why": "Collagen Gly repeat and vitamin C hydroxylation; scurvy is a common example"
+ },
+ {
+  "front": "Compare adherens junctions and desmosomes: adhesion molecule and cytoskeletal partner for each.",
+  "fp": "a385cdb07bfb",
+  "yield": "MEDIUM",
+  "why": "Adherens vs desmosome partners; supporting junction detail"
+ },
+ {
+  "front": "Compare kinesin and dynein: direction of travel along microtubules and one task for each.",
+  "fp": "ffd9630dd1cb",
+  "yield": "HIGH",
+  "why": "Kinesin vs dynein direction is a high-frequency distinction"
+ },
+ {
+  "front": "Compare the three cytoskeletal filaments.",
+  "fp": "a6f4a7b66baf",
+  "yield": "HIGH",
+  "why": "Three cytoskeletal filaments and roles are core"
+ },
+ {
+  "front": "Describe actin treadmilling.",
+  "fp": "19362dfb9e27",
+  "yield": "MEDIUM",
+  "why": "Actin treadmilling; supporting cytoskeleton mechanism"
+ },
+ {
+  "front": "Doubling a spherical cell's radius multiplies surface area by {{c1::4}} and volume by {{c2::8}}, so the surface-to-volume ratio is halved.",
+  "fp": "899743b9afd8",
+  "yield": "HIGH",
+  "why": "Surface-to-volume scaling is a standard calculation"
+ },
+ {
+  "front": "Drugs cross most capillaries easily but not into brain. What structural feature blocks them, and which drugs still get in?",
+  "fp": "05089a5c7551",
+  "yield": "MEDIUM",
+  "why": "Blood-brain barrier tight junctions; applied junction concept"
+ },
+ {
+  "front": "Epidermolysis bullosa simplex comes from mutations in {{c1::keratin 5 and keratin 14}}, so basal keratinocytes shear apart under mild friction.",
+  "fp": "39806480e640",
+  "yield": "LOW",
+  "why": "Keratin 5/14 disease genetics is trivia-grade"
+ },
+ {
+  "front": "Gap junctions permit:",
+  "fp": "8c95695f9c44",
+  "yield": "HIGH",
+  "why": "Gap junction function is core"
+ },
+ {
+  "front": "Give three hallmarks that distinguish apoptosis from necrosis.",
+  "fp": "6b88d44978cd",
+  "yield": "HIGH",
+  "why": "Apoptosis vs necrosis hallmarks are core"
+ },
+ {
+  "front": "Gram-positive bacteria have a thick {{c1::peptidoglycan}} wall; gram-negative bacteria add an outer membrane containing {{c2::lipopolysaccharide (LPS)}}.",
+  "fp": "f2ac14833572",
+  "yield": "HIGH",
+  "why": "Gram-positive vs negative wall is core, though it belongs to microbiology"
+ },
+ {
+  "front": "Homologous chromosomes differ from sister chromatids in that homologs:",
+  "fp": "618c72a1f173",
+  "yield": "HIGH",
+  "why": "Homolog vs sister chromatid is core, though it belongs to cell cycle/genetics"
+ },
+ {
+  "front": "How do gap junctions form, and what passes through them?",
+  "fp": "af6fdad76566",
+  "yield": "MEDIUM",
+  "why": "Connexin structure and size cutoff; supporting detail on gap junctions"
+ },
+ {
+  "front": "How does asymmetric division let a tissue both keep its stem cells and produce differentiated cells?",
+  "fp": "0f613ff39185",
+  "yield": "MEDIUM",
+  "why": "Asymmetric stem cell division; secondary concept"
+ },
+ {
+  "front": "How does dystrophin explain why Duchenne muscular dystrophy damages muscle specifically during contraction?",
+  "fp": "4ae948126332",
+  "yield": "LOW",
+  "why": "Dystrophin/DMD is clinical trivia for this topic"
+ },
+ {
+  "front": "How does elastin's architecture differ from collagen's, and where does elastic recoil come from?",
+  "fp": "540405776bdd",
+  "yield": "MEDIUM",
+  "why": "Elastin vs collagen mechanics; ECM secondary detail"
+ },
+ {
+  "front": "In osteogenesis imperfecta, why does one mutant COL1A1 allele substituting a bulkier residue for glycine cause severe disease?",
+  "fp": "10929a6c9133",
+  "yield": "MEDIUM",
+  "why": "Dominant-negative reasoning via collagen trimer; useful genetics second step"
+ },
+ {
+  "front": "In primary ciliary dyskinesia (Kartagener syndrome), what protein is defective and why does it cause infertility and sinus infections?",
+  "fp": "7ed6cacd772b",
+  "yield": "MEDIUM",
+  "why": "Kartagener as classic dynein/cilia illustration"
+ },
+ {
+  "front": "In prokaryotes, where do the electron transport chain and ATP synthase operate, given the absence of mitochondria?",
+  "fp": "862eba9a6c78",
+  "yield": "HIGH",
+  "why": "Prokaryotic ETC on the plasma membrane is a frequently tested distinction"
+ },
+ {
+  "front": "In the extracellular matrix, collagen resists {{c1::tensile}} (stretching) force while hydrated proteoglycan aggregates resist {{c2::compressive}} force.",
+  "fp": "940e63da9e4a",
+  "yield": "MEDIUM",
+  "why": "Collagen tensile vs proteoglycan compressive; ECM supporting detail"
+ },
+ {
+  "front": "Integrins link the ECM to the cytoskeleton: focal adhesions connect to {{c1::actin}}, while hemidesmosomes connect to {{c2::keratin intermediate filaments}}.",
+  "fp": "3aad2069b125",
+  "yield": "MEDIUM",
+  "why": "Integrin links to actin vs keratin; supporting ECM-cytoskeleton detail"
+ },
+ {
+  "front": "Intermediate filament typing: {{c1::keratins}} in epithelia, {{c2::vimentin}} in mesenchymal cells, desmin in muscle, GFAP in astrocytes, lamins in the nucleus.",
+  "fp": "4a207a5f70d7",
+  "yield": "LOW",
+  "why": "Intermediate filament typing by tissue is trivia-grade naming"
+ },
+ {
+  "front": "Intrinsic apoptosis: mitochondrial release of {{c1::cytochrome c}} drives apoptosome assembly with {{c2::Apaf-1}}, activating caspase-9.",
+  "fp": "875bf8d62eb5",
+  "yield": "MEDIUM",
+  "why": "Cytochrome c/Apaf-1 apoptosome; supporting intrinsic apoptosis mechanism"
+ },
+ {
+  "front": "Marfan syndrome versus vascular Ehlers-Danlos: which extracellular protein fails in each, and how do the vascular complications differ?",
+  "fp": "a3048aa36d76",
+  "yield": "LOW",
+  "why": "Marfan vs vascular EDS is clinical trivia"
+ },
+ {
+  "front": "Microtubule minus ends are anchored at the {{c1::centrosome (MTOC)}}; the dynamic {{c2::plus}} ends probe the cell periphery.",
+  "fp": "307900358f92",
+  "yield": "MEDIUM",
+  "why": "Microtubule polarity at the MTOC; supporting cytoskeleton concept"
+ },
+ {
+  "front": "Motile cilia and flagella have a {{c1::9+2}} axoneme; centrioles and basal bodies show a {{c2::9-triplet, no central pair}} arrangement.",
+  "fp": "70a14b2d9fe6",
+  "yield": "MEDIUM",
+  "why": "9+2 vs centriole triplets; extends the plainer 9+2 card"
+ },
+ {
+  "front": "Motile cilia have a {{c1::9+2}} axoneme, whereas the solitary {{c2::primary cilium}} on most cells is 9+0, nonmotile, and purely sensory.",
+  "fp": "1282f2922c81",
+  "yield": "LOW",
+  "why": "Near-restatement of the 9+2 cards plus primary cilium trivia"
+ },
+ {
+  "front": "Normal fibroblasts stop dividing at confluence and cannot grow in soft agar; transformed cells do both. Which two properties were lost?",
+  "fp": "3acc2bfbf089",
+  "yield": "MEDIUM",
+  "why": "Contact inhibition and anchorage dependence; classic transformation criteria"
+ },
+ {
+  "front": "Order the secretory pathway correctly:",
+  "fp": "fd76ee0c7b46",
+  "yield": "HIGH",
+  "why": "Secretory pathway order is core, though it belongs to organelles"
+ },
+ {
+  "front": "Outline the extrinsic (death receptor) apoptosis pathway.",
+  "fp": "3f0cfe476063",
+  "yield": "MEDIUM",
+  "why": "Extrinsic apoptosis pathway; supporting mechanism"
+ },
+ {
+  "front": "Pemphigus vulgaris and bullous pemphigoid both blister skin. Which junction does each attack, and how does blister depth differ?",
+  "fp": "603c38450a57",
+  "yield": "LOW",
+  "why": "Pemphigus vs pemphigoid is clinical dermatology trivia"
+ },
+ {
+  "front": "Potency: {{c1::totipotent}} cells (zygote, early blastomeres) form embryo plus {{c2::extraembryonic}} tissue; pluripotent cells form only the three germ layers.",
+  "fp": "e662b6ed3514",
+  "yield": "HIGH",
+  "why": "Totipotent vs pluripotent is core, though it belongs to embryology"
+ },
+ {
+  "front": "Prokaryotes couple transcription and translation because they lack a {{c1::nuclear envelope}} and their mRNAs need no {{c2::processing (cap, splicing)}}.",
+  "fp": "4a98029e0f74",
+  "yield": "HIGH",
+  "why": "Coupled transcription-translation in prokaryotes is core"
+ },
+ {
+  "front": "Prokaryotes lack:",
+  "fp": "5a96582bbbba",
+  "yield": "HIGH",
+  "why": "Prokaryotes lack a nucleus is core"
+ },
+ {
+  "front": "Prokaryotic ribosomes are {{c1::70S}} (30S + 50S subunits); eukaryotic cytosolic ribosomes are {{c2::80S}} (40S + 60S).",
+  "fp": "fd2b91463745",
+  "yield": "HIGH",
+  "why": "70S vs 80S ribosomes is a high-frequency distinction"
+ },
+ {
+  "front": "Simple cuboidal vs simple columnar epithelium: typical locations and jobs?",
+  "fp": "6a633e422ce3",
+  "yield": "MEDIUM",
+  "why": "Cuboidal vs columnar epithelium; secondary tissue detail"
+ },
+ {
+  "front": "Tight junctions, built from {{c1::claudins and occludins}}, seal the paracellular path and fence apical proteins from the {{c2::basolateral}} domain.",
+  "fp": "84ac636d31fc",
+  "yield": "MEDIUM",
+  "why": "Tight junction function is core; claudin/occludin names are extra"
+ },
+ {
+  "front": "What are induced pluripotent stem cells, and how are they generated?",
+  "fp": "a0972c329ac1",
+  "yield": "LOW",
+  "why": "Yamanaka factor names are trivia-grade"
+ },
+ {
+  "front": "What do nuclear lamins do, and how does phosphorylation regulate them during mitosis?",
+  "fp": "fdf55feb0f17",
+  "yield": "MEDIUM",
+  "why": "Lamin phosphorylation and envelope breakdown; supporting detail"
+ },
+ {
+  "front": "What do peroxisomes do?",
+  "fp": "c965639f1126",
+  "yield": "HIGH",
+  "why": "Peroxisome function is core, though it belongs to organelles"
+ },
+ {
+  "front": "What does the Golgi apparatus do?",
+  "fp": "7bd3bb2de329",
+  "yield": "HIGH",
+  "why": "Golgi function is core, though it belongs to organelles"
+ },
+ {
+  "front": "What evidence supports endosymbiotic theory?",
+  "fp": "0e9906357f18",
+  "yield": "HIGH",
+  "why": "Endosymbiotic evidence is core, though it belongs to organelles"
+ },
+ {
+  "front": "What is dynamic instability of microtubules, and which nucleotide state controls it?",
+  "fp": "e6b0e8569110",
+  "yield": "MEDIUM",
+  "why": "Dynamic instability and GTP cap; supporting microtubule mechanism"
+ },
+ {
+  "front": "What is the 9+2 arrangement?",
+  "fp": "222abed8bf34",
+  "yield": "HIGH",
+  "why": "9+2 axoneme is a standard discrete fact"
+ },
+ {
+  "front": "What is the role of the rough vs. smooth ER?",
+  "fp": "f168fad7795c",
+  "yield": "HIGH",
+  "why": "Rough vs smooth ER is core, though it belongs to organelles"
+ },
+ {
+  "front": "What is transitional epithelium, and why is it suited to the urinary tract?",
+  "fp": "f5937cdc5dcf",
+  "yield": "MEDIUM",
+  "why": "Transitional epithelium; secondary tissue detail"
+ },
+ {
+  "front": "What roles do fibronectin and laminin play in the extracellular matrix?",
+  "fp": "565fdc540487",
+  "yield": "MEDIUM",
+  "why": "Fibronectin and laminin as integrin ligands; ECM supporting detail"
+ },
+ {
+  "front": "Where is pseudostratified ciliated columnar epithelium found, and what makes it pseudo-stratified?",
+  "fp": "83830c73098e",
+  "yield": "MEDIUM",
+  "why": "Pseudostratified epithelium; secondary tissue detail"
+ },
+ {
+  "front": "Which antibiotic targets the bacterial 30S ribosomal subunit?",
+  "fp": "7d443a3be405",
+  "yield": "MEDIUM",
+  "why": "Tetracycline 30S target is tested but belongs to antimicrobials"
+ },
+ {
+  "front": "Which cytoskeletal filament has no polarity and no motor proteins, and what does it do instead?",
+  "fp": "1ab9f207922f",
+  "yield": "MEDIUM",
+  "why": "Intermediate filaments apolar with no motors; supporting distinction"
+ },
+ {
+  "front": "Which membrane is impermeable to most ions, creating the proton gradient?",
+  "fp": "1130ce7c51d5",
+  "yield": "HIGH",
+  "why": "Inner mitochondrial membrane impermeability is core, though it belongs to organelles"
+ },
+ {
+  "front": "Which organelles have a double membrane?",
+  "fp": "b9598f3ce05d",
+  "yield": "HIGH",
+  "why": "Double-membrane organelles is a standard discrete fact"
+ },
+ {
+  "front": "Why can aminoglycoside antibiotics cause mitochondria-linked side effects such as ototoxicity?",
+  "fp": "4abe25126d4d",
+  "yield": "LOW",
+  "why": "Aminoglycoside ototoxicity is clinical flavor; 70S similarity covered elsewhere"
+ },
+ {
+  "front": "Why do lysosomes require an acidic interior?",
+  "fp": "ce43a98700a2",
+  "yield": "HIGH",
+  "why": "Lysosome acidic pH is core, though it belongs to organelles"
+ },
+ {
+  "front": "Why do phagocytes clear apoptotic cells without triggering inflammation?",
+  "fp": "5f9c47438b85",
+  "yield": "MEDIUM",
+  "why": "Phosphatidylserine eat-me signal; supporting apoptosis detail"
+ },
+ {
+  "front": "Why does gap junction coupling make cardiac muscle a functional syncytium, and what happens to that coupling during ischemia?",
+  "fp": "db01aeff7a87",
+  "yield": "MEDIUM",
+  "why": "Cardiac syncytium via gap junctions; clinical flavor of a HIGH concept"
+ },
+ {
+  "front": "Why does loss of E-cadherin promote metastasis?",
+  "fp": "2f042a5a431b",
+  "yield": "MEDIUM",
+  "why": "E-cadherin loss and metastasis; applied junction concept"
+ }
+]

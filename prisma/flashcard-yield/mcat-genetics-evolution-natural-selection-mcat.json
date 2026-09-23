@@ -1,0 +1,404 @@
+[
+ {
+  "front": "A finch population's mean beak size increases steadily across drought years. Classify the selection and describe the graph change.",
+  "fp": "97ceb16b449a",
+  "yield": "HIGH",
+  "why": "Applying directional selection to a scenario and its distribution shift is core 1C"
+ },
+ {
+  "front": "A mule (horse x donkey) is healthy but sterile. Classify this reproductive barrier precisely.",
+  "fp": "74703ba7e394",
+  "yield": "HIGH",
+  "why": "Hybrid sterility as a postzygotic barrier is the canonical example asked directly"
+ },
+ {
+  "front": "Adaptation requires {{c1::preexisting}} heritable variation; environments do not induce the mutations they favor.",
+  "fp": "61c96f5fb651",
+  "yield": "HIGH",
+  "why": "Selection sorts preexisting variation; core principle behind resistance questions"
+ },
+ {
+  "front": "An allele rises in frequency in all ten replicate populations under one condition. Selection or drift?",
+  "fp": "a83b1c479b03",
+  "yield": "MEDIUM",
+  "why": "Selection vs drift via replicate experiments; passage-reasoning skill, second-tier"
+ },
+ {
+  "front": "Antibiotic resistance spreading through a hospital population is an example of {{c1::directional}} selection observed in real time.",
+  "fp": "2d37a44a4a8d",
+  "yield": "MEDIUM",
+  "why": "Antibiotic resistance as directional selection; standard example supporting mode cards"
+ },
+ {
+  "front": "Apple maggot flies diverging on hawthorn vs apple hosts exemplify {{c1::sympatric speciation in progress via host (habitat) isolation}}.",
+  "fp": "7f0a48dea1f0",
+  "yield": "LOW",
+  "why": "Specific organism example of sympatric speciation; concept card covers it"
+ },
+ {
+  "front": "Artificial selection differs from natural selection in that humans:",
+  "fp": "16c9b7f8f5be",
+  "yield": "MEDIUM",
+  "why": "Artificial vs natural selection distinction; plausible discrete but secondary"
+ },
+ {
+  "front": "Biogeographic evidence: why do oceanic islands host endemic species that resemble the nearest mainland forms?",
+  "fp": "9782f8bd8914",
+  "yield": "MEDIUM",
+  "why": "Biogeographic evidence for evolution; supporting detail under evidence for evolution"
+ },
+ {
+  "front": "Character displacement: two species differ MORE where their ranges overlap than where they live apart. Why?",
+  "fp": "8b3a002e11f1",
+  "yield": "LOW",
+  "why": "Character displacement is ecology detail not on the AAMC outline; a passage would define it"
+ },
+ {
+  "front": "Coefficient of relatedness: full siblings r = 1/2; first cousins r = {{c1::1/8}}.",
+  "fp": "dfc87883304a",
+  "yield": "MEDIUM",
+  "why": "Relatedness values feed Hamilton's rule questions; supporting detail on kin selection"
+ },
+ {
+  "front": "Contrast allopatric and sympatric speciation.",
+  "fp": "b07506560e28",
+  "yield": "HIGH",
+  "why": "Allopatric vs sympatric speciation is a core tested distinction"
+ },
+ {
+  "front": "Contrast gradualism and punctuated equilibrium.",
+  "fp": "751a434ed280",
+  "yield": "HIGH",
+  "why": "Gradualism vs punctuated equilibrium is explicitly on the topic list"
+ },
+ {
+  "front": "Contrast the reproductive strategies favored in unstable versus saturated environments.",
+  "fp": "8af1ed464f9a",
+  "yield": "MEDIUM",
+  "why": "r/K strategies are borderline ecology; appear in prep books but not the AAMC outline"
+ },
+ {
+  "front": "Convergent vs divergent evolution: classify dolphin/shark body forms versus Darwin's finches.",
+  "fp": "2911920f21d1",
+  "yield": "HIGH",
+  "why": "Convergent vs divergent evolution classification is a standard discrete question"
+ },
+ {
+  "front": "Direct observational evidence of evolution includes {{c1::antibiotic and pesticide resistance evolving within human lifetimes}}.",
+  "fp": "bdf062e34857",
+  "yield": "LOW",
+  "why": "Restates the antibiotic-resistance cards and adds named studies (Grants, Lenski)"
+ },
+ {
+  "front": "Distinguish homologous and analogous structures.",
+  "fp": "593835a1605f",
+  "yield": "HIGH",
+  "why": "Homologous vs analogous structures is a high-frequency distinction"
+ },
+ {
+  "front": "Evolutionary fitness is defined by {{c1::relative reproductive success}}, not by survival, size, or strength.",
+  "fp": "5d0e19188574",
+  "yield": "MEDIUM",
+  "why": "Fitness definition with contrast; supporting restatement of the plainer fitness card"
+ },
+ {
+  "front": "Evolutionary fitness is defined strictly as {{c1::relative reproductive success — allele contribution to the next generation}}.",
+  "fp": "65db0c348a7e",
+  "yield": "LOW",
+  "why": "Near-verbatim restatement of the fitness-definition cards"
+ },
+ {
+  "front": "Female fireflies respond only to their own species' flash pattern. This prezygotic barrier is {{c1::behavioral isolation}}.",
+  "fp": "09c1b3ea0c08",
+  "yield": "HIGH",
+  "why": "Classifying a prezygotic barrier from a scenario is directly tested"
+ },
+ {
+  "front": "Frequency-dependent selection means fitness depends on:",
+  "fp": "51c6c5c07164",
+  "yield": "MEDIUM",
+  "why": "Frequency-dependent selection; secondary balancing-selection mechanism"
+ },
+ {
+  "front": "Group selection is controversial because:",
+  "fp": "04a74ecc475d",
+  "yield": "MEDIUM",
+  "why": "Group selection is on the AAMC outline; why it is weak is a plausible reasoning question"
+ },
+ {
+  "front": "Hamilton's rule states that altruism is favored when {{c1::$rB > C$}}.",
+  "fp": "d341b964d9a0",
+  "yield": "MEDIUM",
+  "why": "Hamilton's rule formula; supports kin selection but rarely calculated on the exam"
+ },
+ {
+  "front": "Hardy-Weinberg equilibrium requires all of the following EXCEPT:",
+  "fp": "cb500d9cfc71",
+  "yield": "HIGH",
+  "why": "Hardy-Weinberg assumptions are core (belongs in population genetics deck)"
+ },
+ {
+  "front": "How can a costly ornament like a peacock's tail be an honest signal of quality?",
+  "fp": "6cd82603f3fb",
+  "yield": "LOW",
+  "why": "Handicap principle is beyond MCAT scope; cloze twin kept instead"
+ },
+ {
+  "front": "How does artificial selection differ mechanistically from natural selection?",
+  "fp": "86bed36eae1d",
+  "yield": "LOW",
+  "why": "Restates the artificial vs natural selection card with Darwin history"
+ },
+ {
+  "front": "How does phyletic gradualism differ from punctuated equilibrium in what each predicts of the fossil record?",
+  "fp": "2e8d6da574ec",
+  "yield": "MEDIUM",
+  "why": "Fossil-record predictions add supporting detail to the gradualism/punctuated card"
+ },
+ {
+  "front": "Hybrid breakdown differs from other postzygotic barriers because {{c1::the F1 is viable and fertile, but F2 or backcross generations fail}}.",
+  "fp": "243f2c50a170",
+  "yield": "MEDIUM",
+  "why": "Hybrid breakdown is the third postzygotic barrier type in standard prep"
+ },
+ {
+  "front": "If AA leaves 100 offspring and aa leaves 80, then aa has relative fitness $0.8$ and selection coefficient {{c1::$s = 0.2$}}.",
+  "fp": "83d7abb657b3",
+  "yield": "MEDIUM",
+  "why": "Worked relative-fitness / selection-coefficient calculation; plausible second step"
+ },
+ {
+  "front": "Inclusive fitness equals direct fitness from one's own offspring plus {{c1::indirect fitness through relatives' reproduction}}, weighted by relatedness.",
+  "fp": "5eaf3202a289",
+  "yield": "LOW",
+  "why": "Restates the inclusive fitness / kin selection card"
+ },
+ {
+  "front": "Intersexual vs intrasexual selection: in each, who does the choosing or the competing?",
+  "fp": "a775404bc9a9",
+  "yield": "MEDIUM",
+  "why": "Intersexual vs intrasexual selection; supporting detail on sexual selection"
+ },
+ {
+  "front": "Male deer fighting for access to females is {{c1::intrasexual}} selection, while peahen choice of tail displays is intersexual.",
+  "fp": "26439867060f",
+  "yield": "LOW",
+  "why": "Example restatement of the intersexual/intrasexual card"
+ },
+ {
+  "front": "Mechanical isolation means {{c1::reproductive structures are physically incompatible}} — mismatched genitalia or flower architectures.",
+  "fp": "b927496e7783",
+  "yield": "MEDIUM",
+  "why": "Mechanical isolation is one of the standard prezygotic barrier types"
+ },
+ {
+  "front": "Peacock trains persist despite predation costs because sexual selection maximizes {{c1::reproductive success, even at the expense of survival}}.",
+  "fp": "b57f3a8119f9",
+  "yield": "LOW",
+  "why": "Restates sexual selection opposing survival and the fitness-as-reproduction cards"
+ },
+ {
+  "front": "Punctuated equilibrium describes {{c1::long morphological stasis interrupted by rapid speciation events}} in the fossil record.",
+  "fp": "bb0339396736",
+  "yield": "LOW",
+  "why": "Restates the gradualism/punctuated card and adds Eldredge and Gould names"
+ },
+ {
+  "front": "Rapid diversification of a single lineage into many niche-specialized species is {{c1::adaptive radiation}}.",
+  "fp": "f416f888ca14",
+  "yield": "HIGH",
+  "why": "Adaptive radiation is explicitly on the topic list"
+ },
+ {
+  "front": "Reinforcement predicts that prezygotic barriers become {{c1::stronger in sympatry than in allopatry}}.",
+  "fp": "9aa21e4537cb",
+  "yield": "LOW",
+  "why": "Reinforcement is beyond MCAT scope; a passage would supply it"
+ },
+ {
+  "front": "Relative fitness w and the selection coefficient s are related by {{c1::$s = 1 - w$}}.",
+  "fp": "6c5d2168c30e",
+  "yield": "MEDIUM",
+  "why": "s = 1 - w relation; occasionally needed as a second step in fitness passages"
+ },
+ {
+  "front": "Resistant bacteria often decline once the antibiotic is removed. What does this reveal about fitness?",
+  "fp": "d269ce93051d",
+  "yield": "MEDIUM",
+  "why": "Fitness is environment-dependent; typical passage reasoning on resistance cost"
+ },
+ {
+  "front": "Sea urchin species broadcast gametes into the same water, yet hybrids are rare. Which reproductive barrier explains this?",
+  "fp": "caf40e0bcd7c",
+  "yield": "MEDIUM",
+  "why": "Gametic isolation is a standard prezygotic barrier type"
+ },
+ {
+  "front": "Sickle cell in malarial regions is the standard example of which selection mode, and what is its signature?",
+  "fp": "846ef932e8cb",
+  "yield": "HIGH",
+  "why": "Sickle cell heterozygote advantage / balancing selection is a classic discrete"
+ },
+ {
+  "front": "Speciation without geographic separation is {{c1::sympatric speciation}} — via polyploidy, host or habitat shifts, or strong sexual selection.",
+  "fp": "928742a2bf49",
+  "yield": "MEDIUM",
+  "why": "Sympatric speciation mechanisms; supporting detail on the allopatric/sympatric card"
+ },
+ {
+  "front": "Sympatric speciation occurs:",
+  "fp": "4c2c3c238a69",
+  "yield": "LOW",
+  "why": "Restates the allopatric vs sympatric contrast card"
+ },
+ {
+  "front": "The biological species concept defines species by {{c1::reproductive isolation}} — a criterion inapplicable to asexual taxa and fossils.",
+  "fp": "23bf6c24923a",
+  "yield": "HIGH",
+  "why": "Biological species concept by reproductive isolation is core to speciation"
+ },
+ {
+  "front": "The handicap principle holds that costly ornaments are honest signals because {{c1::only high-quality males can survive while bearing the cost}}.",
+  "fp": "693337910a2e",
+  "yield": "MEDIUM",
+  "why": "Handicap principle cloze kept as the single visible sexual-selection signal card"
+ },
+ {
+  "front": "The molecular clock infers divergence times from {{c1::the roughly constant accumulation rate of neutral sequence differences}}.",
+  "fp": "37e09a8ee3be",
+  "yield": "HIGH",
+  "why": "Molecular clock matches the outline's 'evolutionary time by random genomic change'"
+ },
+ {
+  "front": "The selection mode that produces a bimodal (two-peaked) trait distribution is {{c1::disruptive selection}}.",
+  "fp": "90e728b37e4e",
+  "yield": "MEDIUM",
+  "why": "Bimodal graph to disruptive selection; supports the plainer disruptive card"
+ },
+ {
+  "front": "The selection mode whose graph keeps the same mean but narrows the curve is {{c1::stabilizing selection}}.",
+  "fp": "63beefcedb50",
+  "yield": "HIGH",
+  "why": "Stabilizing selection graph signature is directly tested"
+ },
+ {
+  "front": "The selection mode whose trait-distribution graph shows the peak shifting toward one extreme over generations is {{c1::directional selection}}.",
+  "fp": "dc75e803eba4",
+  "yield": "HIGH",
+  "why": "Directional selection graph signature is directly tested"
+ },
+ {
+  "front": "Two frog species share a pond, but one breeds in early spring and the other in midsummer. Name the barrier type.",
+  "fp": "f47b5b671c20",
+  "yield": "HIGH",
+  "why": "Temporal isolation classification from a scenario is directly tested"
+ },
+ {
+  "front": "Under negative frequency-dependent selection, an allele's fitness {{c1::decreases}} as it becomes common.",
+  "fp": "e2659d3e3178",
+  "yield": "LOW",
+  "why": "Restates the frequency-dependent selection card with extra examples"
+ },
+ {
+  "front": "Vampire bats share blood with unrelated roostmates who previously fed them. Kin selection or reciprocal altruism?",
+  "fp": "7642f3c448ce",
+  "yield": "MEDIUM",
+  "why": "Kin selection vs reciprocal altruism distinction; plausible P/S or bio reasoning"
+ },
+ {
+  "front": "Vestigial structures like the whale pelvis argue for evolution because {{c1::they are reduced remnants of functional ancestral structures}}.",
+  "fp": "8531c7146afc",
+  "yield": "MEDIUM",
+  "why": "Vestigial structures as evidence for evolution; supporting detail"
+ },
+ {
+  "front": "What are prezygotic vs. postzygotic isolating mechanisms?",
+  "fp": "15db3eb06a0d",
+  "yield": "HIGH",
+  "why": "Prezygotic vs postzygotic mechanisms is core speciation content"
+ },
+ {
+  "front": "What does fitness mean in evolutionary terms?",
+  "fp": "08f7bd10fb92",
+  "yield": "HIGH",
+  "why": "Plainest fitness-definition card; fitness concept is core 1C"
+ },
+ {
+  "front": "What initiating event does allopatric speciation require?",
+  "fp": "901464f56215",
+  "yield": "MEDIUM",
+  "why": "Allopatric speciation mechanism; supporting detail on the contrast card"
+ },
+ {
+  "front": "What is inclusive fitness / kin selection?",
+  "fp": "f9ecc17597f9",
+  "yield": "HIGH",
+  "why": "Inclusive fitness / kin selection with Hamilton's rule and r values in one card"
+ },
+ {
+  "front": "What is sexual selection?",
+  "fp": "523257565ad8",
+  "yield": "HIGH",
+  "why": "Sexual selection definition with inter/intrasexual split is core"
+ },
+ {
+  "front": "What long-term advantage does sexual reproduction provide despite its twofold cost?",
+  "fp": "9a25d0318e80",
+  "yield": "LOW",
+  "why": "Muller's ratchet and twofold cost are beyond MCAT scope"
+ },
+ {
+  "front": "Which selection mode can serve as the first step toward sympatric speciation, and why?",
+  "fp": "fcbb3957d875",
+  "yield": "MEDIUM",
+  "why": "Disruptive selection to sympatric speciation link; supporting detail"
+ },
+ {
+  "front": "Which type of selection favors individuals at both extremes of a trait distribution?",
+  "fp": "948a3190be72",
+  "yield": "HIGH",
+  "why": "Plainest disruptive selection card; selection types are core"
+ },
+ {
+  "front": "Why do biologists reject naive group selection explanations such as animals limiting births for the good of the species?",
+  "fp": "3ad28c6bfa84",
+  "yield": "LOW",
+  "why": "Restates the group-selection card"
+ },
+ {
+  "front": "Why do ground squirrels give alarm calls that raise their own risk of predation?",
+  "fp": "a99bfa6b4543",
+  "yield": "MEDIUM",
+  "why": "Alarm calls illustrate kin selection; second-tier example"
+ },
+ {
+  "front": "Why do recessive deleterious alleles persist in populations?",
+  "fp": "90c2d65766c8",
+  "yield": "HIGH",
+  "why": "Recessive alleles hidden in heterozygotes is a high-frequency reasoning point"
+ },
+ {
+  "front": "Why does haplodiploidy in bees and ants favor sterile worker castes?",
+  "fp": "77199500bff2",
+  "yield": "LOW",
+  "why": "Haplodiploidy 0.75 relatedness is trivia-grade specificity"
+ },
+ {
+  "front": "Why does polyploidy produce essentially instantaneous speciation in plants?",
+  "fp": "9266c350a2b5",
+  "yield": "MEDIUM",
+  "why": "Polyploid speciation mechanism; supporting detail on sympatric speciation"
+ },
+ {
+  "front": "Why does selection act on phenotypes yet only heritable variation produces evolutionary change?",
+  "fp": "fd8de0215980",
+  "yield": "MEDIUM",
+  "why": "Selection on phenotype vs heritable change; useful conceptual support"
+ },
+ {
+  "front": "Why is antibiotic resistance a demonstration of natural selection?",
+  "fp": "a962f35139e6",
+  "yield": "MEDIUM",
+  "why": "Plain antibiotic-resistance-as-selection card; supports the core variation card"
+ }
+]

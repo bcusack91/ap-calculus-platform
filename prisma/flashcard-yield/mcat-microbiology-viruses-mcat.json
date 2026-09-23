@@ -1,0 +1,416 @@
+[
+ {
+  "front": "A {{c1::negative}}-sense RNA genome is not infectious on its own, because the virion must carry in its own polymerase.",
+  "fp": "c32ec091779b",
+  "yield": "HIGH",
+  "why": "Negative-sense RNA must carry its polymerase: core +/- sense distinction"
+ },
+ {
+  "front": "A {{c1::prion}} is an infectious agent with no nucleic acid, surviving autoclaving, nucleases, and formalin.",
+  "fp": "ada280481baa",
+  "yield": "MEDIUM",
+  "why": "Prion resistance to sterilization supports the core prion card"
+ },
+ {
+  "front": "A generalized transducing particle injects DNA but never lyses the recipient. Why, and what must happen for the trait to be inherited?",
+  "fp": "c287773c9e70",
+  "yield": "MEDIUM",
+  "why": "Generalized transducing particle reasoning: second step on transduction"
+ },
+ {
+  "front": "A live attenuated vaccine replicates in host cells, so it uniquely induces strong {{c1::cytotoxic T cell}} immunity.",
+  "fp": "29f6e8e4d4c7",
+  "yield": "MEDIUM",
+  "why": "Live vaccine and CTL priming: immunology flavor of viral replication"
+ },
+ {
+  "front": "A patient is anti-HBs positive but anti-HBc negative. Vaccinated or recovered from infection?",
+  "fp": "efb602ec8fd0",
+  "yield": "LOW",
+  "why": "HBV serology interpretation is clinical trivia outside the outline"
+ },
+ {
+  "front": "A phage plaque is turbid rather than clear. What does that indicate about the phage's life cycle?",
+  "fp": "b4050bc6ada8",
+  "yield": "MEDIUM",
+  "why": "Turbid plaque reasoning applies lysogeny to an experimental readout"
+ },
+ {
+  "front": "A plaque assay of a $10^{-5}$ dilution gives 60 plaques from $0.2$ mL. What is the titer in PFU/mL?",
+  "fp": "12a3b245555f",
+  "yield": "MEDIUM",
+  "why": "Plaque titer arithmetic is passage-plausible second-step math"
+ },
+ {
+  "front": "A positive-sense ssRNA genome can be directly translated because it functions as {{c1::mRNA}} upon entry.",
+  "fp": "977f044d8beb",
+  "yield": "HIGH",
+  "why": "Positive-sense RNA acts as mRNA: core viral genome distinction"
+ },
+ {
+  "front": "A virus transmitted fecal-orally is almost certainly {{c1::non-enveloped (naked)}}.",
+  "fp": "c0b047205bb5",
+  "yield": "LOW",
+  "why": "Restates the enveloped vs naked stability/transmission contrast card"
+ },
+ {
+  "front": "An acutely infected patient tests HIV antibody negative but nucleic acid positive. Explain the discrepancy.",
+  "fp": "fd97db04adb8",
+  "yield": "LOW",
+  "why": "HIV window-period diagnostics is clinical detail outside the outline"
+ },
+ {
+  "front": "An enveloped virus is inactivated by soap and detergents, whereas naked viruses like norovirus are not. Why?",
+  "fp": "d45b8f37d215",
+  "yield": "MEDIUM",
+  "why": "Envelope destroyed by detergent: applied enveloped vs naked reasoning"
+ },
+ {
+  "front": "An infected cell secretes type I {{c1::interferon}}, which protects neighboring cells before they are infected.",
+  "fp": "0ddb81ea9850",
+  "yield": "MEDIUM",
+  "why": "Interferon paracrine defense is plausible immunology context"
+ },
+ {
+  "front": "Bacterial conjugation transfers DNA via:",
+  "fp": "d08d2d450de9",
+  "yield": "MEDIUM",
+  "why": "Misfiled: conjugation belongs to the bacterial genetics deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "By what mechanism does a prion propagate without any nucleic acid?",
+  "fp": "b569124b7678",
+  "yield": "HIGH",
+  "why": "Conformational templating is the tested prion mechanism"
+ },
+ {
+  "front": "Contrast environmental stability and transmission routes of enveloped versus naked viruses.",
+  "fp": "dc466f3c90ab",
+  "yield": "MEDIUM",
+  "why": "Enveloped vs naked stability and transmission routes: tested contrast"
+ },
+ {
+  "front": "Contrast herpes simplex latency with HIV latency as reservoirs.",
+  "fp": "2f1b1460ebe9",
+  "yield": "LOW",
+  "why": "HSV vs HIV latency sites is clinical specificity beyond the outline"
+ },
+ {
+  "front": "Contrast the lytic and lysogenic cycles.",
+  "fp": "5d16f5e236f0",
+  "yield": "HIGH",
+  "why": "Lytic vs lysogenic cycles is core outline content"
+ },
+ {
+  "front": "Describe the packaging error that produces a generalized transducing particle.",
+  "fp": "702408f82f61",
+  "yield": "MEDIUM",
+  "why": "Packaging-error origin of generalized transduction"
+ },
+ {
+  "front": "Diphtheria, cholera, and Shiga toxins are encoded by {{c1::prophages}} rather than by core bacterial genes.",
+  "fp": "25b9a00074ae",
+  "yield": "LOW",
+  "why": "Restates the phage conversion card with toxin examples"
+ },
+ {
+  "front": "DNA damage activates {{c1::RecA}}, which promotes autocleavage of the phage repressor and induces the prophage.",
+  "fp": "bcbbebece3cd",
+  "yield": "MEDIUM",
+  "why": "RecA/SOS prophage induction is a plausible passage mechanism"
+ },
+ {
+  "front": "dsRNA viruses transcribe their genome {{c1::inside the capsid core}}, using a packaged polymerase.",
+  "fp": "7d960cc97138",
+  "yield": "LOW",
+  "why": "dsRNA transcription inside the core is fine-grained genome-class detail"
+ },
+ {
+  "front": "Enveloped viruses acquire their envelope by {{c1::budding}} through a host membrane pre-loaded with viral glycoproteins.",
+  "fp": "898fce88063d",
+  "yield": "HIGH",
+  "why": "Envelope acquisition by budding is core viral structure/release"
+ },
+ {
+  "front": "How do entry mechanisms differ between enveloped and naked viruses at the membrane level?",
+  "fp": "f85a4a4e2baa",
+  "yield": "MEDIUM",
+  "why": "Fusion vs endosomal entry supports the enveloped/naked distinction"
+ },
+ {
+  "front": "How do HPV proteins E6 and E7 transform cells, and what does the vaccine prevent?",
+  "fp": "e47edd86ec47",
+  "yield": "MEDIUM",
+  "why": "HPV E6/E7 on p53/Rb illustrates tested oncogenesis"
+ },
+ {
+  "front": "How does a lambda-type repressor maintain lysogeny, and what does it give the host cell?",
+  "fp": "2b416dbff480",
+  "yield": "MEDIUM",
+  "why": "Repressor-maintained lysogeny and superinfection immunity: second-tier"
+ },
+ {
+  "front": "How does a retrovirus replicate?",
+  "fp": "1e6c102bc8ac",
+  "yield": "HIGH",
+  "why": "Retrovirus RT-then-integrase replication is core"
+ },
+ {
+  "front": "In a one-step growth curve, the {{c1::eclipse}} period is the interval when no infectious virus is detectable even inside cells.",
+  "fp": "506b9ac0beff",
+  "yield": "LOW",
+  "why": "Eclipse vs latent period of one-step growth curve is not on the outline"
+ },
+ {
+  "front": "Influenza antigenic {{c1::shift}} is reassortment of whole genome segments, whereas drift is point mutation.",
+  "fp": "5830001f871d",
+  "yield": "HIGH",
+  "why": "Antigenic shift vs drift is a high-frequency distinction"
+ },
+ {
+  "front": "Most dsDNA viruses replicate in the nucleus using host enzymes. What is the notable exception, and what must it carry?",
+  "fp": "489c4e357cf2",
+  "yield": "LOW",
+  "why": "Poxvirus cytoplasmic replication is family-specific trivia"
+ },
+ {
+  "front": "Naked genomic RNA purified from a {{c1::positive-sense ssRNA}} virus is infectious when transfected into a cell.",
+  "fp": "ed2cbd535340",
+  "yield": "MEDIUM",
+  "why": "Naked +RNA infectivity: experimental corollary of the +/- sense card"
+ },
+ {
+  "front": "Not all envelopes come from the plasma membrane. Where do herpesviruses first acquire an envelope?",
+  "fp": "c71442680c57",
+  "yield": "LOW",
+  "why": "Herpesvirus nuclear-membrane envelope source is family-specific trivia"
+ },
+ {
+  "front": "Operons are characteristic of:",
+  "fp": "e2f8f4e003de",
+  "yield": "MEDIUM",
+  "why": "Misfiled: operons are gene expression, not virology [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Order the early retroviral DNA-synthesis events after entry, starting from genomic RNA.",
+  "fp": "60afd96aa1dd",
+  "yield": "MEDIUM",
+  "why": "Order of reverse transcription steps: second-tier retrovirus detail"
+ },
+ {
+  "front": "Phage (lysogenic) conversion: genes carried on a {{c1::prophage}} give the bacterium a new phenotype such as toxin production.",
+  "fp": "e74c74d5d78c",
+  "yield": "MEDIUM",
+  "why": "Phage conversion giving toxin phenotype is tested lysogeny consequence"
+ },
+ {
+  "front": "Prions resist proteases and standard autoclaving because PrPSc forms dense {{c1::beta-sheet}} aggregates.",
+  "fp": "67780e758dd4",
+  "yield": "MEDIUM",
+  "why": "Alpha-to-beta-sheet basis of prion protease resistance"
+ },
+ {
+  "front": "Reassortment requires a {{c1::segmented}} genome, while recombination can occur in any virus during coinfection.",
+  "fp": "6647eb9dabdd",
+  "yield": "MEDIUM",
+  "why": "Reassortment needs segmented genome vs recombination: tested distinction"
+ },
+ {
+  "front": "Retroviral integration is {{c1::permanent}}: the provirus is copied with the chromosome for the life of the cell lineage.",
+  "fp": "8bb7450c1fd8",
+  "yield": "MEDIUM",
+  "why": "Permanence of provirus integration explains latency and lifelong infection"
+ },
+ {
+  "front": "Retroviral virions are effectively diploid. What advantage does packaging two genome copies confer?",
+  "fp": "1f05589384d7",
+  "yield": "LOW",
+  "why": "Diploid retroviral genome and template switching is fine detail"
+ },
+ {
+  "front": "Reverse transcriptase copies RNA with high error rates because it lacks {{c1::3' to 5' exonuclease proofreading}}.",
+  "fp": "143c6e15052d",
+  "yield": "HIGH",
+  "why": "RT lacks proofreading: core reason for retroviral mutation rate"
+ },
+ {
+  "front": "Segmented genomes permit {{c1::reassortment}} when two strains co-infect one cell, producing antigenic shift.",
+  "fp": "c135a5a24903",
+  "yield": "LOW",
+  "why": "Restates the shift/drift and segmented-reassortment cards"
+ },
+ {
+  "front": "Specialized transduction requires the {{c1::lysogenic}} cycle; generalized transduction arises from the lytic cycle.",
+  "fp": "a12d64a49391",
+  "yield": "MEDIUM",
+  "why": "Specialized needs lysogeny, generalized needs lysis: tested contrast"
+ },
+ {
+  "front": "The central dogma describes flow of information as:",
+  "fp": "45beb86b28b2",
+  "yield": "MEDIUM",
+  "why": "Central dogma with retroviral exception; core but from gene expression"
+ },
+ {
+  "front": "The lysogenic viral cycle differs from lytic because the virus:",
+  "fp": "02f12053939d",
+  "yield": "LOW",
+  "why": "Restates the lytic vs lysogenic contrast card"
+ },
+ {
+  "front": "The RNase H domain of reverse transcriptase degrades {{c1::the RNA strand of the RNA:DNA hybrid}}.",
+  "fp": "3a9409b18196",
+  "yield": "LOW",
+  "why": "RNase H step restates the reverse transcription order card"
+ },
+ {
+  "front": "Viral capsid symmetry is commonly:",
+  "fp": "bb4b4e1e8e83",
+  "yield": "MEDIUM",
+  "why": "Helical vs icosahedral capsid symmetry is basic structure vocabulary"
+ },
+ {
+  "front": "Viroids differ from viruses in that viroids:",
+  "fp": "ff0417906345",
+  "yield": "MEDIUM",
+  "why": "Viroid as naked RNA is a standard non-cellular agent contrast"
+ },
+ {
+  "front": "What are prions?",
+  "fp": "d1302c3871d1",
+  "yield": "HIGH",
+  "why": "Prion definition (protein-only infectious agent) is core"
+ },
+ {
+  "front": "What does retroviral integrase do, and what is the chemical outcome for the host genome?",
+  "fp": "22f3b7f14319",
+  "yield": "MEDIUM",
+  "why": "Integrase covalent insertion supports the retrovirus replication card"
+ },
+ {
+  "front": "What is a bacteriophage?",
+  "fp": "139aed23ecd4",
+  "yield": "HIGH",
+  "why": "Bacteriophage definition is core outline content"
+ },
+ {
+  "front": "What is the basic structure of a virus?",
+  "fp": "4b411263cb06",
+  "yield": "HIGH",
+  "why": "Basic virus structure (genome, capsid, optional envelope) is core"
+ },
+ {
+  "front": "What is the difference between a $+$ssRNA and $-$ssRNA virus?",
+  "fp": "69873725cebb",
+  "yield": "HIGH",
+  "why": "+ssRNA vs -ssRNA translation difference is core"
+ },
+ {
+  "front": "What structural features define a viroid, and what organisms do viroids infect?",
+  "fp": "2e1471a4ad9d",
+  "yield": "LOW",
+  "why": "Viroid circular-RNA/ribozyme structural detail is beyond the outline"
+ },
+ {
+  "front": "What two jobs do envelope glycoprotein spikes perform, and what property of the virus do they determine?",
+  "fp": "4d76b0af2618",
+  "yield": "MEDIUM",
+  "why": "Spike glycoproteins determine tropism: plausible passage reasoning"
+ },
+ {
+  "front": "Which host conditions bias a temperate phage toward lysogeny rather than immediate lysis?",
+  "fp": "5e20d89f7b9b",
+  "yield": "MEDIUM",
+  "why": "Host conditions favoring lysogeny: second-tier lytic/lysogenic reasoning"
+ },
+ {
+  "front": "Which vaccine class is contraindicated in a patient on high-dose immunosuppressants, and why?",
+  "fp": "754248e30a58",
+  "yield": "LOW",
+  "why": "Vaccine contraindication in immunosuppression is clinical policy detail"
+ },
+ {
+  "front": "Which viral genome type must carry its own polymerase into the cell?",
+  "fp": "4d41932eb81d",
+  "yield": "HIGH",
+  "why": "Negative-sense ssRNA must carry polymerase: core discrete fact"
+ },
+ {
+  "front": "Why are viruses not considered alive?",
+  "fp": "52f215cb8d47",
+  "yield": "HIGH",
+  "why": "Why viruses are not alive is a classic discrete question"
+ },
+ {
+  "front": "Why can hepatitis D virus replicate only in cells co-infected with hepatitis B?",
+  "fp": "0a5ec8f50243",
+  "yield": "LOW",
+  "why": "Hepatitis D satellite dependence is organism-specific trivia"
+ },
+ {
+  "front": "Why can NK cells kill a virus-infected cell that cytotoxic T cells ignore?",
+  "fp": "b12d367ae651",
+  "yield": "MEDIUM",
+  "why": "NK missing-self vs CTL: tested immunology of viral MHC I evasion"
+ },
+ {
+  "front": "Why can specialized transduction move only a few specific host genes?",
+  "fp": "f7ef0681a577",
+  "yield": "MEDIUM",
+  "why": "Why specialized transduction moves only flanking genes"
+ },
+ {
+  "front": "Why do retroviral protease inhibitors yield virions that are released but noninfectious?",
+  "fp": "9a51ab37f51c",
+  "yield": "LOW",
+  "why": "Protease inhibitor maturation defect is drug-mechanism detail"
+ },
+ {
+  "front": "Why do RNA viruses mutate rapidly?",
+  "fp": "2ebc9e48c48b",
+  "yield": "HIGH",
+  "why": "RNA polymerase lacks proofreading: core reason for rapid mutation"
+ },
+ {
+  "front": "Why do small DNA tumor viruses push resting host cells into S phase?",
+  "fp": "4b4345f04323",
+  "yield": "MEDIUM",
+  "why": "DNA tumor viruses forcing S phase links to Rb/p53 oncogenesis"
+ },
+ {
+  "front": "Why does antigenic variation of envelope glycoproteins (e.g., influenza HA) defeat prior immunity?",
+  "fp": "999b9cad3a27",
+  "yield": "MEDIUM",
+  "why": "Surface-epitope drift escaping neutralizing antibody: supports shift/drift"
+ },
+ {
+  "front": "Why does antiretroviral therapy suppress HIV but never cure it?",
+  "fp": "8e563494c9fe",
+  "yield": "LOW",
+  "why": "ART-vs-cure clinical framing restates permanent integration card"
+ },
+ {
+  "front": "Why does UV irradiation, which readily inactivates viruses, fail to inactivate prions?",
+  "fp": "901df203fd3e",
+  "yield": "LOW",
+  "why": "UV-resistance of prions restates the no-nucleic-acid prion definition"
+ },
+ {
+  "front": "Why is purified negative-sense RNA genome noninfectious even though intact virions of the same virus are highly infectious?",
+  "fp": "a9832698222f",
+  "yield": "LOW",
+  "why": "Restates the negative-sense genome noninfectious card"
+ },
+ {
+  "front": "Why must negative-sense ssRNA viruses package an RNA-dependent RNA polymerase inside the virion?",
+  "fp": "29e0ceb22bd5",
+  "yield": "LOW",
+  "why": "Restates the packaged-polymerase negative-sense card"
+ },
+ {
+  "front": "Why must reverse transcriptase be carried inside the retroviral virion rather than translated after entry?",
+  "fp": "c1a184645d73",
+  "yield": "MEDIUM",
+  "why": "RT must be prepackaged: reasoning corollary of retrovirus replication"
+ }
+]

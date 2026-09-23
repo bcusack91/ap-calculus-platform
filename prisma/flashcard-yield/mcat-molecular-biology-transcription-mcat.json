@@ -1,0 +1,416 @@
+[
+ {
+  "front": "{{c1::Enhancers}} stimulate transcription regardless of their orientation or distance from the promoter.",
+  "fp": "7071df1b5aa2",
+  "yield": "HIGH",
+  "why": "Enhancer orientation/distance independence is core"
+ },
+ {
+  "front": "{{c1::Rifampin}} inhibits the beta subunit of bacterial RNA polymerase, while alpha-amanitin inhibits eukaryotic RNA Pol {{c2::II}}.",
+  "fp": "0786443df0af",
+  "yield": "LOW",
+  "why": "Rifampin/alpha-amanitin drug targets are trivia"
+ },
+ {
+  "front": "A 5' deletion series loses promoter activity only when the region from -110 to -100 is removed. What has that identified?",
+  "fp": "ad1433d700cb",
+  "yield": "MEDIUM",
+  "why": "Deletion mapping necessary-vs-sufficient reasoning is passage-typical"
+ },
+ {
+  "front": "A nuclear run-on shows unchanged transcription of a gene whose mRNA level has tripled. What explains the increase?",
+  "fp": "cd3edaecf274",
+  "yield": "MEDIUM",
+  "why": "Run-on vs steady-state mRNA is a plausible passage inference"
+ },
+ {
+  "front": "A poly(A) tail begins near {{c1::200}} adenines, and progressive {{c2::deadenylation}} is usually the first and rate-limiting step of mRNA decay.",
+  "fp": "a533ed6f3358",
+  "yield": "MEDIUM",
+  "why": "Poly-A tail length and deadenylation support mRNA stability questions"
+ },
+ {
+  "front": "A transcription factor binds:",
+  "fp": "2e63903f11d7",
+  "yield": "HIGH",
+  "why": "Transcription factor definition is foundational"
+ },
+ {
+  "front": "After Dicer, the guide strand loads into RISC, whose catalytic slicer protein is {{c1::Argonaute}}.",
+  "fp": "0006075a124d",
+  "yield": "LOW",
+  "why": "Argonaute name is black-box RNAi detail"
+ },
+ {
+  "front": "Alpha-amanitin most potently inhibits RNA Pol {{c1::II}}; Pol III is moderately sensitive and Pol I essentially resistant.",
+  "fp": "638f5ebda8af",
+  "yield": "LOW",
+  "why": "Alpha-amanitin sensitivity ranking is trivia"
+ },
+ {
+  "front": "Alternative splicing allows one gene to:",
+  "fp": "ac286f33ee45",
+  "yield": "HIGH",
+  "why": "Alternative splicing producing isoforms is core"
+ },
+ {
+  "front": "Alternative splicing lets roughly 20,000 human genes encode a far larger proteome; the most common pattern is {{c1::exon skipping}}.",
+  "fp": "4ef1a1ba9da6",
+  "yield": "MEDIUM",
+  "why": "Splicing patterns add detail to the plainer alternative-splicing card"
+ },
+ {
+  "front": "B cells switch membrane IgM to secreted IgM using a different {{c1::polyadenylation}} site, dropping the exons that encode the {{c2::transmembrane}} anchor.",
+  "fp": "691f6a54127f",
+  "yield": "MEDIUM",
+  "why": "IgM alternative polyadenylation is a classic illustrative example"
+ },
+ {
+  "front": "Bacterial promoters carry consensus elements at {{c1::-10 (TATAAT, the Pribnow box) and -35}}, read by the sigma factor.",
+  "fp": "c8a8306aa000",
+  "yield": "MEDIUM",
+  "why": "-10/-35 promoter elements are secondary prokaryotic detail"
+ },
+ {
+  "front": "Beyond mRNA, which RNAs does Pol II produce?",
+  "fp": "1933f8c2e5c6",
+  "yield": "LOW",
+  "why": "Pol II making snRNA/pri-miRNA is trivia"
+ },
+ {
+  "front": "Chromatin immunoprecipitation enriches one promoter fragment 50-fold. What does that show that a gel shift cannot?",
+  "fp": "de1ccf515dfb",
+  "yield": "MEDIUM",
+  "why": "ChIP vs gel shift is plausible experimental reasoning"
+ },
+ {
+  "front": "Describe the two transesterification steps of splicing in order.",
+  "fp": "04895a5c6a34",
+  "yield": "MEDIUM",
+  "why": "Transesterification steps are supporting splicing mechanism"
+ },
+ {
+  "front": "Distinguish general transcription factors from specific (regulatory) transcription factors.",
+  "fp": "4301a764ba61",
+  "yield": "HIGH",
+  "why": "General vs specific transcription factors is core"
+ },
+ {
+  "front": "Eukaryotic mRNA gets a {{c1::5' cap}}, a {{c2::poly-A tail}}, and has its {{c3::introns}} spliced out.",
+  "fp": "753e6015082e",
+  "yield": "HIGH",
+  "why": "Cap, poly-A, splicing is core mRNA processing"
+ },
+ {
+  "front": "Fusing a candidate promoter to a reporter such as {{c1::luciferase or GFP}} works because the cell makes {{c2::none}} of that product on its own.",
+  "fp": "aa06611feb96",
+  "yield": "MEDIUM",
+  "why": "Reporter gene logic is plausible experimental reasoning"
+ },
+ {
+  "front": "How do bacteria redirect transcription globally during stress such as heat shock?",
+  "fp": "6997c6a03dff",
+  "yield": "LOW",
+  "why": "Alternative sigma factor names are trivia"
+ },
+ {
+  "front": "How do cells make tissue-specific splicing decisions from the same pre-mRNA?",
+  "fp": "c1435d8bd2d4",
+  "yield": "LOW",
+  "why": "SR/hnRNP protein names are black-box detail"
+ },
+ {
+  "front": "How do enhancers differ from promoters?",
+  "fp": "c6f6a563bd20",
+  "yield": "HIGH",
+  "why": "Enhancer vs promoter distinction is core"
+ },
+ {
+  "front": "How does alternative splicing expand the proteome?",
+  "fp": "8d7eccae5e9c",
+  "yield": "LOW",
+  "why": "Restates the alternative-splicing isoform card"
+ },
+ {
+  "front": "How does one APOB gene yield full-length ApoB-100 in liver but truncated ApoB-48 in intestine?",
+  "fp": "319096ebec49",
+  "yield": "MEDIUM",
+  "why": "APOB RNA editing is a classic secondary example"
+ },
+ {
+  "front": "How does target-pairing extent decide the fate of an mRNA bound by RISC?",
+  "fp": "1c06cc693fba",
+  "yield": "MEDIUM",
+  "why": "siRNA vs miRNA fate by pairing extent is a plausible second step"
+ },
+ {
+  "front": "How does the pre-miRNA hairpin reach the cytoplasm?",
+  "fp": "02d1b1392f27",
+  "yield": "LOW",
+  "why": "Exportin-5 is trivia-grade miRNA biogenesis detail"
+ },
+ {
+  "front": "How does transcription of a eukaryotic Pol II gene actually end?",
+  "fp": "5959a95fb6f5",
+  "yield": "LOW",
+  "why": "Torpedo termination model is trivia"
+ },
+ {
+  "front": "How would you measure an mRNA's half-life using actinomycin D?",
+  "fp": "17b0e530ee40",
+  "yield": "MEDIUM",
+  "why": "Actinomycin D chase for half-life is plausible experimental reasoning"
+ },
+ {
+  "front": "In a gel shift assay, labeled DNA migrates more slowly once nuclear extract is added. What is concluded, and what does adding antibody do?",
+  "fp": "d5b65ae3034c",
+  "yield": "MEDIUM",
+  "why": "Gel shift/supershift interpretation is passage-typical"
+ },
+ {
+  "front": "In DNase I footprinting, a bound protein {{c1::protects}} its site from cleavage, leaving a blank gap in the ladder of fragments.",
+  "fp": "ba70f4721c16",
+  "yield": "MEDIUM",
+  "why": "DNase footprinting interpretation is passage-typical"
+ },
+ {
+  "front": "In the nucleus, the pri-miRNA is cropped by {{c1::Drosha}} (with DGCR8) into the ~70 nt hairpin pre-miRNA.",
+  "fp": "7c26e7f6a0eb",
+  "yield": "LOW",
+  "why": "Drosha/DGCR8 names are black-box miRNA detail"
+ },
+ {
+  "front": "Insulator elements bound by {{c1::CTCF}} prevent an enhancer from activating the wrong promoter.",
+  "fp": "f9fb1cac125b",
+  "yield": "LOW",
+  "why": "CTCF insulator detail beyond the outline"
+ },
+ {
+  "front": "Intrinsic bacterial termination requires a {{c1::GC-rich hairpin followed by a run of U residues}}; Rho-dependent termination uses an ATP-driven helicase.",
+  "fp": "b12e477a61b0",
+  "yield": "MEDIUM",
+  "why": "Prokaryotic termination modes are secondary detail"
+ },
+ {
+  "front": "Introns are:",
+  "fp": "c6aa8a5655c5",
+  "yield": "HIGH",
+  "why": "Intron definition is foundational"
+ },
+ {
+  "front": "Introns begin with {{c1::GU}} at the 5' splice site and end with AG at the 3' splice site.",
+  "fp": "3e003c0c3923",
+  "yield": "HIGH",
+  "why": "GU-AG splice site rule is commonly tested"
+ },
+ {
+  "front": "List the three eukaryotic mRNA processing steps.",
+  "fp": "fff8155972e2",
+  "yield": "LOW",
+  "why": "Restates the cap/poly-A/splicing card"
+ },
+ {
+  "front": "Many stress and immune genes hold Pol II paused just downstream of the promoter. What advantage does promoter-proximal pausing provide?",
+  "fp": "e8c6047674f1",
+  "yield": "LOW",
+  "why": "Promoter-proximal pausing/P-TEFb is trivia"
+ },
+ {
+  "front": "Name four common DNA-binding motifs found in transcription factors.",
+  "fp": "915aec50d21e",
+  "yield": "MEDIUM",
+  "why": "DNA-binding motif names appear in passages and prep books"
+ },
+ {
+  "front": "Pol II elongates at roughly 40-80 nucleotides per second. What does that mean for the 2.2 Mb dystrophin gene?",
+  "fp": "0e0dfd4a15fe",
+  "yield": "LOW",
+  "why": "Pol II speed and dystrophin numbers are trivia"
+ },
+ {
+  "front": "Ribosomal RNA is about {{c1::80}} percent of cellular RNA while mRNA is only a few percent, which is why {{c2::Pol I}} accounts for most transcription.",
+  "fp": "9d6a4acc560d",
+  "yield": "MEDIUM",
+  "why": "rRNA abundance is a commonly cited fact"
+ },
+ {
+  "front": "RNA interference silences genes by:",
+  "fp": "3b326e634b7b",
+  "yield": "HIGH",
+  "why": "RNAi mechanism is core non-coding RNA content"
+ },
+ {
+  "front": "RNA Pol {{c1::III}} synthesizes tRNAs, 5S rRNA, and other small RNAs — and some of its promoters lie inside the gene.",
+  "fp": "82a6ce867572",
+  "yield": "MEDIUM",
+  "why": "Pol III products support polymerase assignment questions"
+ },
+ {
+  "front": "RNA polymerase errs about once per {{c1::$10^{4}$}} nucleotides, far more often than replication, because transcripts are {{c2::disposable}}.",
+  "fp": "3429c53876b8",
+  "yield": "MEDIUM",
+  "why": "Transcription lacking proofreading vs replication is a plausible contrast"
+ },
+ {
+  "front": "Some beta-thalassemia alleles have a normal coding sequence but create a new splice site inside an intron. Why is that pathogenic?",
+  "fp": "20b2b9ae490e",
+  "yield": "MEDIUM",
+  "why": "Thalassemia cryptic splice site illustrates the tested splice-mutation concept"
+ },
+ {
+  "front": "TFIIH supplies two enzyme activities at initiation: {{c1::helicase (promoter melting) and CTD kinase}}.",
+  "fp": "c515fc94a2d3",
+  "yield": "LOW",
+  "why": "TFIIH activities are black-box general TF detail"
+ },
+ {
+  "front": "The 5' cap is 7-methylguanosine joined by an unusual {{c1::5'-to-5' triphosphate}} bridge, leaving no free 5' end for exonucleases.",
+  "fp": "d41001b555e3",
+  "yield": "MEDIUM",
+  "why": "Cap structure detail supports the plainer cap-function card"
+ },
+ {
+  "front": "The eukaryotic TATA box sits about {{c1::25}} bp upstream of the start site and is bound by TBP within TFIID.",
+  "fp": "3f29e8a03af6",
+  "yield": "HIGH",
+  "why": "TATA box position and TBP binding is core"
+ },
+ {
+  "front": "The lac operon is an example of:",
+  "fp": "2399f148ff79",
+  "yield": "HIGH",
+  "why": "lac operon dual regulation is core"
+ },
+ {
+  "front": "The lariat forms when the branch-point adenosine's {{c1::2'-OH}} attacks the 5' splice site, creating a rare 2'-5' phosphodiester bond.",
+  "fp": "d218e5d7f274",
+  "yield": "MEDIUM",
+  "why": "Lariat chemistry supports the fuller transesterification card"
+ },
+ {
+  "front": "The restriction point in $G_1$ commits a cell to:",
+  "fp": "d537d59ca329",
+  "yield": "MEDIUM",
+  "why": "Restriction point is cell cycle, outside this topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "U1 snRNP base-pairs with the 5' splice site, while {{c1::U2}} base-pairs with the branch-point sequence.",
+  "fp": "fda45c6ec55b",
+  "yield": "MEDIUM",
+  "why": "U1/U2 roles are supporting spliceosome detail"
+ },
+ {
+  "front": "What are group I and group II self-splicing introns, and why are group II introns evolutionarily interesting?",
+  "fp": "f68da6fdd796",
+  "yield": "LOW",
+  "why": "Self-splicing intron evolution is trivia"
+ },
+ {
+  "front": "What are silencer elements, and how do they act?",
+  "fp": "b563b58524d4",
+  "yield": "MEDIUM",
+  "why": "Silencers are the secondary counterpart to enhancers"
+ },
+ {
+  "front": "What are snRNPs made of, and what does the catalysis of splicing?",
+  "fp": "aaf045ec7c1d",
+  "yield": "MEDIUM",
+  "why": "snRNP composition and RNA catalysis is supporting detail"
+ },
+ {
+  "front": "What does RNA Pol I transcribe, and where?",
+  "fp": "c0a7cf4ac62c",
+  "yield": "MEDIUM",
+  "why": "Pol I/rRNA/nucleolus supports polymerase assignment"
+ },
+ {
+  "front": "What does the 5' cap accomplish?",
+  "fp": "b249f5fff0bf",
+  "yield": "HIGH",
+  "why": "5' cap functions is core"
+ },
+ {
+  "front": "What does the bacterial sigma factor do, and what happens to it after initiation?",
+  "fp": "2dbd855d19c5",
+  "yield": "MEDIUM",
+  "why": "Sigma factor role is secondary prokaryotic detail"
+ },
+ {
+  "front": "What does the U4/U6-U5 tri-snRNP contribute to spliceosome assembly?",
+  "fp": "8faac4cca3cf",
+  "yield": "LOW",
+  "why": "Tri-snRNP rearrangement is trivia"
+ },
+ {
+  "front": "What enzyme performs transcription and where does it bind?",
+  "fp": "57e9bbe6d3cf",
+  "yield": "HIGH",
+  "why": "RNA polymerase binding the promoter is foundational"
+ },
+ {
+  "front": "What is structurally unusual about how TBP binds the TATA box?",
+  "fp": "f78f168861b5",
+  "yield": "LOW",
+  "why": "TBP minor-groove binding is trivia"
+ },
+ {
+  "front": "What role does the Mediator complex play at Pol II genes?",
+  "fp": "52b15e9a8dd2",
+  "yield": "LOW",
+  "why": "Mediator complex is black-box detail"
+ },
+ {
+  "front": "What two functional domains does a typical activator protein contain?",
+  "fp": "cb34bdd0ca8b",
+  "yield": "MEDIUM",
+  "why": "Modular activator domains is plausible passage reasoning"
+ },
+ {
+  "front": "Where on an mRNA do animal miRNAs usually bind, and which part of the miRNA does the recognizing?",
+  "fp": "c97acf7cb1a4",
+  "yield": "MEDIUM",
+  "why": "miRNA 3' UTR binding is plausible; seed numbers are detail"
+ },
+ {
+  "front": "Which DNA strand is read, and what is the resulting RNA identical to?",
+  "fp": "696c223bd6fd",
+  "yield": "HIGH",
+  "why": "Template vs coding strand is core"
+ },
+ {
+  "front": "Which eukaryotic mRNAs famously lack a poly(A) tail, and what replaces it?",
+  "fp": "8ac133f2541d",
+  "yield": "LOW",
+  "why": "Histone mRNA stem-loop exception is trivia"
+ },
+ {
+  "front": "Which sequences does the spliceosome recognize, and what intermediate does splicing form?",
+  "fp": "d2efe695c5f9",
+  "yield": "HIGH",
+  "why": "Splice signals and lariat are core splicing"
+ },
+ {
+  "front": "Why are splice-site mutations frequently pathogenic even though they don't change a codon?",
+  "fp": "8f7000f5478e",
+  "yield": "HIGH",
+  "why": "Splice-site mutation consequences are tested reasoning"
+ },
+ {
+  "front": "Why do prokaryotes lack mRNA processing?",
+  "fp": "af50f366b69b",
+  "yield": "HIGH",
+  "why": "Coupled transcription/translation in prokaryotes is classic"
+ },
+ {
+  "front": "Why does a nonsense mutation in exon 3 of a 20-exon gene often yield no truncated protein at all?",
+  "fp": "334f016cf723",
+  "yield": "MEDIUM",
+  "why": "NMD concept is plausible; EJC mechanism is detail"
+ },
+ {
+  "front": "Why does phosphorylation of the Pol II CTD matter for mRNA processing?",
+  "fp": "0a0b36c348b3",
+  "yield": "LOW",
+  "why": "CTD phosphorylation coupling is trivia"
+ }
+]

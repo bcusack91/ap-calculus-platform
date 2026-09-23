@@ -1,0 +1,392 @@
+[
+ {
+  "front": "8 percent of males are color blind (X-linked recessive). Expected frequency of affected females = {{c1::$q^2 = 0.0064$, about 0.64 percent}}.",
+  "fp": "a4f82e222c6e",
+  "yield": "HIGH",
+  "why": "X-linked male incidence = q, female = q^2 is a classic calculation"
+ },
+ {
+  "front": "A eugenic program stops all affected (recessive) individuals from reproducing. Why does the allele frequency decline only slowly?",
+  "fp": "e36c07f5b05a",
+  "yield": "LOW",
+  "why": "Restates the slow-removal-of-recessives cards with a q/(1+q) formula beyond scope"
+ },
+ {
+  "front": "A fitness landscape represents:",
+  "fp": "bc6bb5abb289",
+  "yield": "LOW",
+  "why": "Fitness landscapes are not MCAT content"
+ },
+ {
+  "front": "A genotype survey gives 60 AA, 20 Aa, 20 aa in 100 individuals. Is the population in Hardy-Weinberg equilibrium?",
+  "fp": "6ddd51fd03d0",
+  "yield": "HIGH",
+  "why": "Full Hardy-Weinberg test from genotype counts is a core calculation"
+ },
+ {
+  "front": "A new neutral mutation in a diploid population of size $N$ has fixation probability {{c1::$1/(2N)$}}.",
+  "fp": "a3e5bea83a36",
+  "yield": "LOW",
+  "why": "1/(2N) neutral fixation probability is population-genetics theory beyond the outline"
+ },
+ {
+  "front": "A population crashes from 100,000 to 50 individuals and later re-expands. Name the drift phenomenon and its lasting genetic signature.",
+  "fp": "f993d202e2ef",
+  "yield": "HIGH",
+  "why": "Bottleneck effect and its diversity-loss signature are core"
+ },
+ {
+  "front": "A population is in Hardy-Weinberg equilibrium at every locus but is evolving. How is that possible?",
+  "fp": "da842a2412c6",
+  "yield": "MEDIUM",
+  "why": "HW within a generation vs across generations; conceptual nuance, secondary"
+ },
+ {
+  "front": "A recessive disease has incidence $q^2 = 1/2500$ (like cystic fibrosis). Estimate q and the carrier frequency.",
+  "fp": "6d8b93e3fa00",
+  "yield": "HIGH",
+  "why": "Carrier frequency from disease incidence is the archetypal HW calculation"
+ },
+ {
+  "front": "An autosomal recessive disease affects 1 in 10,000. Under Hardy-Weinberg, the carrier frequency is approximately {{c1::1/50}}.",
+  "fp": "49be902b3231",
+  "yield": "MEDIUM",
+  "why": "Second worked carrier-frequency example; supports the CF card"
+ },
+ {
+  "front": "An excess of homozygotes over Hardy-Weinberg expectation suggests {{c1::inbreeding or pooled population substructure}}.",
+  "fp": "a81ec792e22c",
+  "yield": "MEDIUM",
+  "why": "Homozygote excess implies inbreeding or substructure; plausible passage inference"
+ },
+ {
+  "front": "An unaffected sibling of a child with an autosomal recessive disease has a {{c1::2/3}} chance of being a carrier.",
+  "fp": "348c9734de4c",
+  "yield": "HIGH",
+  "why": "2/3 carrier probability for an unaffected sibling is a classic (Mendelian) question"
+ },
+ {
+  "front": "An X-linked recessive disease affects 1 in 10000 males. What is the expected frequency in females?",
+  "fp": "944e253c97ef",
+  "yield": "MEDIUM",
+  "why": "X-linked female incidence worked example; supports the color-blindness card"
+ },
+ {
+  "front": "Assortative mating changes genotype frequencies but leaves {{c1::allele}} frequencies unchanged.",
+  "fp": "75677359e31d",
+  "yield": "MEDIUM",
+  "why": "Assortative mating changes genotype not allele frequencies; supporting detail"
+ },
+ {
+  "front": "At an overdominant locus, what happens to allele frequencies over time, and why is neither allele lost?",
+  "fp": "994fe6c4dbbc",
+  "yield": "MEDIUM",
+  "why": "Overdominance equilibrium dynamics; supports the heterozygote-advantage cards"
+ },
+ {
+  "front": "Besides sickle cell, which human variants are maintained at high frequency by carrier resistance to malaria?",
+  "fp": "26d265e5689e",
+  "yield": "LOW",
+  "why": "G6PD/thalassemia/HbC malaria list is trivia beyond the sickle example"
+ },
+ {
+  "front": "Bottleneck vs founder effect: what distinguishes them if both are forms of genetic drift?",
+  "fp": "bd4885a2d612",
+  "yield": "LOW",
+  "why": "Restates the plainer founder-vs-bottleneck contrast card"
+ },
+ {
+  "front": "CFTR alleles stay common despite lethal homozygosity; the hypothesized carrier advantage is resistance to {{c1::secretory diarrheas (cholera/typhoid)}}.",
+  "fp": "9a020d006453",
+  "yield": "LOW",
+  "why": "CFTR cholera-resistance hypothesis is speculative trivia"
+ },
+ {
+  "front": "Continuous migration from a large mainland population prevents a small island population from {{c1::diverging by drift or local adaptation}}.",
+  "fp": "45ee01df2e6c",
+  "yield": "MEDIUM",
+  "why": "Gene flow preventing island divergence; supporting detail on gene flow"
+ },
+ {
+  "front": "Contrast the founder effect and a population bottleneck.",
+  "fp": "cd9e996b8b4a",
+  "yield": "HIGH",
+  "why": "Plain founder effect vs bottleneck contrast is core"
+ },
+ {
+  "front": "Distinguish stabilizing, directional, and disruptive selection.",
+  "fp": "0b8ef8671f24",
+  "yield": "HIGH",
+  "why": "Three selection modes are core (belongs in the natural selection deck)"
+ },
+ {
+  "front": "Drift and inbreeding scale with {{c1::effective}} population size, which is usually far below the census count.",
+  "fp": "ff2ffe89c9bb",
+  "yield": "MEDIUM",
+  "why": "Effective population size concept; secondary to drift itself"
+ },
+ {
+  "front": "Effective population size $N_e$ is usually below census size because {{c1::unequal sex ratios, offspring-number variance, and size fluctuations}} shrink it.",
+  "fp": "70656f33c9af",
+  "yield": "LOW",
+  "why": "Restates the effective-size card and adds harmonic-mean detail"
+ },
+ {
+  "front": "For a rare allele, carriers outnumber affected individuals by roughly {{c1::$2/q$}}.",
+  "fp": "3d833c96bd74",
+  "yield": "MEDIUM",
+  "why": "Carrier-to-affected ratio 2/q; second-step derivation in HW problems"
+ },
+ {
+  "front": "For a rare autosomal DOMINANT disease, incidence approximately equals {{c1::$2p$}}, the heterozygote frequency.",
+  "fp": "56640c6897f7",
+  "yield": "MEDIUM",
+  "why": "Rare dominant incidence approximately 2p; plausible second-tier calculation"
+ },
+ {
+  "front": "For a rare recessive allele, a phenotypically normal person's carrier probability is approximately {{c1::$2q$}} (formally $2pq/(1-q^2)$).",
+  "fp": "da546ada395e",
+  "yield": "LOW",
+  "why": "Restates the 2q carrier shortcut with a formal formula students do not need"
+ },
+ {
+  "front": "For a recessive lethal allele, mutation-selection balance predicts $q = $ {{c1::$\\sqrt{\\mu/s}$}}.",
+  "fp": "18dc77de403f",
+  "yield": "LOW",
+  "why": "Mutation-selection balance formulas are beyond MCAT scope"
+ },
+ {
+  "front": "For X-linked recessive conditions, why does the affected-male frequency read out the allele frequency q directly?",
+  "fp": "82d4821517fb",
+  "yield": "MEDIUM",
+  "why": "Explains why male X-linked incidence equals q; supports the calculation cards"
+ },
+ {
+  "front": "Genetic drift changes allele frequencies {{c1::randomly, with larger swings in smaller populations}}.",
+  "fp": "10caf44164a7",
+  "yield": "MEDIUM",
+  "why": "Drift definition with size dependence; supports the plainer drift card"
+ },
+ {
+  "front": "Genetic drift has the largest effect in:",
+  "fp": "cf7bebdf8570",
+  "yield": "LOW",
+  "why": "Restates the plainer 'what is genetic drift' card"
+ },
+ {
+  "front": "Give the Hardy–Weinberg equations.",
+  "fp": "9c55e243c1ee",
+  "yield": "HIGH",
+  "why": "Hardy-Weinberg equations are the topic's core formulas"
+ },
+ {
+  "front": "Given genotype counts in N diploid individuals, state the direct (gene-counting) formula for allele frequency p.",
+  "fp": "f38ec5b1c854",
+  "yield": "HIGH",
+  "why": "Gene-counting allele frequency formula is a core calculation"
+ },
+ {
+  "front": "Hardy-Weinberg describes {{c1::genotype}} frequencies; allele frequencies are unchanged by random mating alone.",
+  "fp": "0ad8d058fbda",
+  "yield": "MEDIUM",
+  "why": "HW gives genotype frequencies; random mating alone does not change alleles"
+ },
+ {
+  "front": "Hardy-Weinberg equilibrium requires all of the following EXCEPT:",
+  "fp": "cb500d9cfc71",
+  "yield": "MEDIUM",
+  "why": "Restates HW assumptions and equations as MC; the list card is the primary"
+ },
+ {
+  "front": "Hardy-Weinberg: allele frequencies satisfy p + q = {{c1::1}} and genotypes satisfy {{c2::p² + 2pq + q²}} = 1.",
+  "fp": "dc559e77978c",
+  "yield": "LOW",
+  "why": "Restates the HW equations and assumptions cards in one cloze"
+ },
+ {
+  "front": "Heterozygosity $2pq$ is maximized when {{c1::$p = q = 0.5$}}, giving 50 percent heterozygotes.",
+  "fp": "0c14bc75911b",
+  "yield": "MEDIUM",
+  "why": "Heterozygosity maximum at p = q = 0.5; occasional passage second step"
+ },
+ {
+  "front": "How do you test whether a population is in Hardy-Weinberg equilibrium from raw genotype counts?",
+  "fp": "885a4689c542",
+  "yield": "MEDIUM",
+  "why": "HW test procedure; supporting detail on the worked chi-square card"
+ },
+ {
+  "front": "How does gene flow affect populations?",
+  "fp": "2863b7169e08",
+  "yield": "HIGH",
+  "why": "Gene flow effect on populations is core"
+ },
+ {
+  "front": "How does positive assortative mating (like pairing with like) affect a population's genetics?",
+  "fp": "58dbad21ced3",
+  "yield": "LOW",
+  "why": "Restates the assortative mating card with disassortative detail"
+ },
+ {
+  "front": "If $q^{2} = 0.04$, what fraction are carriers?",
+  "fp": "3137762e22ed",
+  "yield": "HIGH",
+  "why": "Carrier fraction from q^2 is a core calculation"
+ },
+ {
+  "front": "If 16% of a population is homozygous recessive, what is $q$?",
+  "fp": "ac520ab1bb48",
+  "yield": "HIGH",
+  "why": "q from homozygous recessive fraction is the most basic HW calculation"
+ },
+ {
+  "front": "Inbreeding shifts genotype frequencies toward {{c1::excess homozygotes and a heterozygote deficit}}; allele frequencies stay constant.",
+  "fp": "f913bafdd67d",
+  "yield": "HIGH",
+  "why": "Inbreeding effect on genotype vs allele frequencies is core"
+ },
+ {
+  "front": "List the five Hardy–Weinberg assumptions.",
+  "fp": "62fe165ff8ab",
+  "yield": "HIGH",
+  "why": "Five HW assumptions are core"
+ },
+ {
+  "front": "Offspring of a first-cousin mating have inbreeding coefficient F = {{c1::1/16}}.",
+  "fp": "ff79bcf13e84",
+  "yield": "LOW",
+  "why": "F = 1/16 for cousin matings is trivia-grade specificity"
+ },
+ {
+  "front": "Persistence of the sickle cell allele in malarial regions is the textbook case of {{c1::heterozygote advantage (overdominance)}}.",
+  "fp": "1a7e382cdbca",
+  "yield": "MEDIUM",
+  "why": "Sickle cell as heterozygote advantage; supports the plainer definition card"
+ },
+ {
+  "front": "Pooling two subpopulations with different allele frequencies produces a heterozygote deficit called the {{c1::Wahlund effect}}.",
+  "fp": "79583b1a015a",
+  "yield": "LOW",
+  "why": "Wahlund effect is a named concept beyond MCAT scope"
+ },
+ {
+  "front": "Tay-Sachs in Ashkenazi Jews and porphyria variegata in Afrikaners are elevated mainly because of {{c1::founder effects}} in small source groups.",
+  "fp": "0645da3ba443",
+  "yield": "MEDIUM",
+  "why": "Founder-effect clinical examples illustrate a tested mechanism"
+ },
+ {
+  "front": "The founder effect occurs when:",
+  "fp": "d9024aa52b97",
+  "yield": "HIGH",
+  "why": "Founder effect definition is core"
+ },
+ {
+  "front": "The inbreeding coefficient F is the probability that an individual's two alleles at a locus are {{c1::identical by descent}}.",
+  "fp": "2d66b5d1586b",
+  "yield": "MEDIUM",
+  "why": "Inbreeding coefficient definition; supporting detail on inbreeding"
+ },
+ {
+  "front": "The neutral theory of molecular evolution proposes that most variation is:",
+  "fp": "1bc667ce3b28",
+  "yield": "MEDIUM",
+  "why": "Neutral theory links drift to the molecular clock; secondary"
+ },
+ {
+  "front": "Two mechanisms of balancing selection preserve polymorphism: heterozygote advantage and {{c1::negative frequency-dependent selection}}.",
+  "fp": "d0552094f117",
+  "yield": "MEDIUM",
+  "why": "Two balancing-selection mechanisms; supporting detail"
+ },
+ {
+  "front": "What directional effect does gene flow have on the allele frequencies of two diverging populations?",
+  "fp": "d7b8bbf3b779",
+  "yield": "LOW",
+  "why": "Restates the gene flow card"
+ },
+ {
+  "front": "What is genetic drift and when does it dominate?",
+  "fp": "e3ecf913b35d",
+  "yield": "HIGH",
+  "why": "Plainest genetic drift card; drift is core"
+ },
+ {
+  "front": "What is heterozygote advantage?",
+  "fp": "b82ad648ee43",
+  "yield": "HIGH",
+  "why": "Plainest heterozygote advantage card; core"
+ },
+ {
+  "front": "What is linkage disequilibrium, and why does it make genome-wide association studies possible?",
+  "fp": "c2e76b8aacf2",
+  "yield": "MEDIUM",
+  "why": "Linkage disequilibrium and GWAS are outside this topic and beyond scope [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "What is the directional effect over generations of selection against a recessive phenotype on the allele frequency q?",
+  "fp": "ec4f3dd72ad1",
+  "yield": "MEDIUM",
+  "why": "Directional effect of selecting against recessives; supports the mechanism card"
+ },
+ {
+  "front": "What is the long-term effect of drift alone on a finite population's heterozygosity?",
+  "fp": "d0078a20a307",
+  "yield": "LOW",
+  "why": "1/(2Ne) heterozygosity decay formula is beyond scope"
+ },
+ {
+  "front": "Which evolutionary forces change allele frequencies, and which change only how alleles are packaged into genotypes?",
+  "fp": "89bd5ef6a518",
+  "yield": "MEDIUM",
+  "why": "Forces changing allele vs genotype frequencies; twin of the plainer violation card"
+ },
+ {
+  "front": "Which Hardy-Weinberg violation changes genotype frequencies while leaving allele frequencies unchanged?",
+  "fp": "9790d09685ec",
+  "yield": "HIGH",
+  "why": "Nonrandom mating changes genotype not allele frequencies; high-frequency distinction"
+ },
+ {
+  "front": "Why do Tay-Sachs and Ellis-van Creveld reach unusual frequencies in specific human populations?",
+  "fp": "1857fa3bad42",
+  "yield": "LOW",
+  "why": "Restates the Tay-Sachs founder-effect card"
+ },
+ {
+  "front": "Why does inbreeding depression occur, mechanistically?",
+  "fp": "5b51615980de",
+  "yield": "MEDIUM",
+  "why": "Inbreeding depression mechanism; supporting detail"
+ },
+ {
+  "front": "Why does selection remove a deleterious recessive allele very slowly once it becomes rare?",
+  "fp": "d5fdbc9cde16",
+  "yield": "HIGH",
+  "why": "Why rare recessives resist selection is a high-frequency reasoning point"
+ },
+ {
+  "front": "Why is carrier frequency approximately $2q$ (rather than exactly $2pq$) a safe shortcut for rare recessive alleles?",
+  "fp": "2725fa49f5e1",
+  "yield": "MEDIUM",
+  "why": "2q approximation justification; useful calculation shortcut"
+ },
+ {
+  "front": "Why is the sickle allele common in malarial regions despite killing homozygotes?",
+  "fp": "02a8b195f972",
+  "yield": "LOW",
+  "why": "Restates the sickle cell heterozygote advantage cards"
+ },
+ {
+  "front": "With disease-allele frequency $q = 0.2$ under Hardy-Weinberg, compute all three genotype frequencies.",
+  "fp": "4742f8759cd5",
+  "yield": "MEDIUM",
+  "why": "Worked all-three-genotype calculation; supports the carrier card"
+ },
+ {
+  "front": "With inbreeding coefficient $F$, the frequency of recessive homozygotes becomes $q^2 + Fpq$. Interpret the extra term.",
+  "fp": "198efefffcd9",
+  "yield": "LOW",
+  "why": "q^2 + Fpq formula is beyond MCAT scope"
+ }
+]

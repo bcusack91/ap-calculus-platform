@@ -1,0 +1,398 @@
+[
+ {
+  "front": "150 mM NaCl has an osmolarity of about {{c1::300}} mOsm/L (van 't Hoff factor 2), roughly isotonic to plasma.",
+  "fp": "96f3a1de21a5",
+  "yield": "HIGH",
+  "why": "Osmolarity calc with van 't Hoff factor; classic discrete"
+ },
+ {
+  "front": "A cell rests at Vm = -70 mV and has $E_{Cl} = -70$ mV. What is the net Cl- flux through open Cl- channels?",
+  "fp": "1e00a8802a74",
+  "yield": "HIGH",
+  "why": "Driving force Vm - E_ion = 0 means no net flux; core reasoning"
+ },
+ {
+  "front": "A drug that blocks a cardiac K+ channel prolongs the QT interval. Which phase is affected, and why is that dangerous?",
+  "fp": "fb4afe01497f",
+  "yield": "MEDIUM",
+  "why": "Cardiac AP phase 3/torsades/hERG is clinical detail outside this topic [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "A patient with dilute urine fails to concentrate it after desmopressin. Is the lesion central or nephrogenic, and where does it sit?",
+  "fp": "caf6cefea732",
+  "yield": "MEDIUM",
+  "why": "Central vs nephrogenic DI illustrates ADH/AQP2 mechanism; clinical flavor"
+ },
+ {
+  "front": "An open ion channel passes about {{c1::$10^{7}$}} ions per second, while a carrier turns over only about {{c2::$10^{3}$}} solutes per second.",
+  "fp": "adf510879010",
+  "yield": "LOW",
+  "why": "Exact ion/s turnover numbers are trivia; channel-vs-carrier idea covered by kinetics card"
+ },
+ {
+  "front": "ATP-dependent {{c1::flippases}} keep phosphatidylserine on the inner leaflet; in apoptosis a Ca2+-activated {{c2::scramblase}} exposes it outward.",
+  "fp": "1be7c7ec1522",
+  "yield": "MEDIUM",
+  "why": "Membrane asymmetry and PS exposure as apoptosis signal; passage context"
+ },
+ {
+  "front": "Bartter syndrome mimics a {{c1::loop}} diuretic by disabling NKCC2; Gitelman mimics a {{c2::thiazide}} by disabling the distal NaCl cotransporter.",
+  "fp": "455bae5e67f5",
+  "yield": "LOW",
+  "why": "Bartter/Gitelman are named renal syndromes; USMLE-level, not AAMC"
+ },
+ {
+  "front": "Cholera causes massive watery diarrhea, yet oral rehydration solution containing glucose and salt works. What transport logic explains both?",
+  "fp": "ac45415b5554",
+  "yield": "MEDIUM",
+  "why": "Applied SGLT1 reasoning (cholera + ORS); classic passage scenario"
+ },
+ {
+  "front": "Cholesterol buffers fluidity: above the transition temperature it {{c1::decreases}} fluidity, and below it, it {{c2::prevents tight packing}}.",
+  "fp": "6e0f9b4cb00d",
+  "yield": "HIGH",
+  "why": "Cholesterol's dual effect on fluidity is a core tested fact"
+ },
+ {
+  "front": "Compare SGLT1 and SGLT2 in stoichiometry, location, and clinical relevance.",
+  "fp": "74707b4d40fe",
+  "yield": "LOW",
+  "why": "SGLT1 vs SGLT2 stoichiometry/percentages/drugs is trivia; SGLT1 core covered elsewhere"
+ },
+ {
+  "front": "Contrast simple diffusion, facilitated diffusion, and active transport.",
+  "fp": "917e4ea4e088",
+  "yield": "HIGH",
+  "why": "Simple vs facilitated vs active transport; the foundational distinction"
+ },
+ {
+  "front": "Define the driving force on an ion and use it to predict Ca2+ movement through an open channel at rest.",
+  "fp": "8a9b55aa68c3",
+  "yield": "HIGH",
+  "why": "Driving force definition and predicting ion movement; core"
+ },
+ {
+  "front": "Depolarization means Vm becomes {{c1::less negative}}; opening Cl- channels near rest mainly {{c2::stabilizes}} Vm rather than changing it.",
+  "fp": "e1a396eeefdd",
+  "yield": "HIGH",
+  "why": "Depolarization definition; Cl- shunting is a common neuro reasoning point"
+ },
+ {
+  "front": "Describe the fluid mosaic model.",
+  "fp": "aed2ba49ef3f",
+  "yield": "HIGH",
+  "why": "Fluid mosaic model; named core concept"
+ },
+ {
+  "front": "Distinguish P-type, V-type, and F-type ATPases with an example of each.",
+  "fp": "5699c904fd1b",
+  "yield": "MEDIUM",
+  "why": "P/V/F ATPase classes; V-type lysosome and F-type synthase are tested contexts"
+ },
+ {
+  "front": "Distinguish primary and secondary active transport.",
+  "fp": "88f4cfb46868",
+  "yield": "HIGH",
+  "why": "Primary vs secondary active transport; core distinction"
+ },
+ {
+  "front": "During oxidative phosphorylation, the final electron acceptor in the electron transport chain is:",
+  "fp": "55e23be079ef",
+  "yield": "HIGH",
+  "why": "O2 as final electron acceptor is core (belongs to ox-phos topic)"
+ },
+ {
+  "front": "Fusing a mouse and a human cell gave a heterokaryon whose labeled surface proteins fully intermixed within about {{c1::40 minutes}}.",
+  "fp": "48a545351e05",
+  "yield": "LOW",
+  "why": "Frye-Edidin named experiment and 40-minute figure are discovery history"
+ },
+ {
+  "front": "Gastric parietal cells secrete acid with the {{c1::H+/K+ ATPase}}, a P-type primary pump and the target of proton pump inhibitors.",
+  "fp": "636aec94f630",
+  "yield": "MEDIUM",
+  "why": "H+/K+ ATPase as primary active pump; gastric acid and PPIs are common context"
+ },
+ {
+  "front": "GLUT{{c1::4}} is the insulin-responsive transporter of muscle and adipose; GLUT{{c2::2}} is the high-Km glucose sensor of liver and pancreatic beta cells.",
+  "fp": "4e8490a86ac1",
+  "yield": "HIGH",
+  "why": "GLUT4 insulin-responsive vs GLUT2 sensor; high-frequency distinction"
+ },
+ {
+  "front": "How do endocytosis and exocytosis differ?",
+  "fp": "9e1919da8ee6",
+  "yield": "HIGH",
+  "why": "Endocytosis vs exocytosis; named core process"
+ },
+ {
+  "front": "How do ionophores like valinomycin and uncouplers like DNP dissipate gradients differently?",
+  "fp": "e8166580b0a3",
+  "yield": "MEDIUM",
+  "why": "DNP uncoupling and ionophores appear in ETC and membrane passages"
+ },
+ {
+  "front": "How do the kinetics of carrier-mediated (facilitated) transport differ from simple diffusion?",
+  "fp": "ee95e2f4cde2",
+  "yield": "HIGH",
+  "why": "Saturable carrier kinetics vs linear diffusion; classic graph question"
+ },
+ {
+  "front": "How does the $Na^{+}/K^{+}$ ATPase work?",
+  "fp": "4ceb4559aa33",
+  "yield": "HIGH",
+  "why": "Na+/K+ ATPase 3:2 electrogenic; the single most tested pump"
+ },
+ {
+  "front": "How does the thyroid concentrate iodide?",
+  "fp": "cce1ac9bf11d",
+  "yield": "MEDIUM",
+  "why": "NIS as secondary active transport example; second-tier example"
+ },
+ {
+  "front": "Hyperkalemia {{c1::depolarizes}} the resting membrane because raising extracellular K+ makes $E_{K}$ {{c2::less negative}}.",
+  "fp": "ffcfffd87756",
+  "yield": "HIGH",
+  "why": "Hyperkalemia depolarizes via E_K; classic Nernst reasoning"
+ },
+ {
+  "front": "In a FRAP experiment the bleached spot recovers only 60 percent of its fluorescence. What does the missing 40 percent represent?",
+  "fp": "91606d4f8f54",
+  "yield": "MEDIUM",
+  "why": "FRAP data interpretation; experimental-passage reasoning"
+ },
+ {
+  "front": "In Goldman (GHK) terms, what happens to Vm when ACh opens nicotinic channels permeable to both Na+ and K+?",
+  "fp": "b896acb894b1",
+  "yield": "MEDIUM",
+  "why": "GHK weighted-permeability logic at the end plate; second-step reasoning"
+ },
+ {
+  "front": "In the renal collecting duct, {{c1::vasopressin (ADH)}} raises water permeability by driving {{c2::aquaporin-2}} insertion into the apical membrane.",
+  "fp": "decc5157391b",
+  "yield": "HIGH",
+  "why": "ADH drives AQP2 insertion; tested hormone-transport mechanism"
+ },
+ {
+  "front": "Integral membrane proteins are characterized by:",
+  "fp": "9675067b0a12",
+  "yield": "HIGH",
+  "why": "Integral vs peripheral membrane proteins; core"
+ },
+ {
+  "front": "Liddle syndrome is a gain-of-function mutation of the epithelial Na+ channel {{c1::ENaC}}, giving hypertension, hypokalemia, and {{c2::low}} aldosterone.",
+  "fp": "cb8900ab12b2",
+  "yield": "LOW",
+  "why": "Liddle syndrome is a named clinical syndrome; trivia for MCAT"
+ },
+ {
+  "front": "Lipid rafts are ordered microdomains enriched in {{c1::cholesterol and sphingolipids}} that concentrate particular receptors and GPI-anchored proteins.",
+  "fp": "daf7ad28177a",
+  "yield": "MEDIUM",
+  "why": "Lipid rafts; supporting detail on membrane organization"
+ },
+ {
+  "front": "Osmolarity differs from tonicity because tonicity considers:",
+  "fp": "dc3b780f2901",
+  "yield": "HIGH",
+  "why": "Tonicity counts only non-penetrating solutes; high-frequency distinction"
+ },
+ {
+  "front": "Osmotic pressure is colligative. What does $\\pi = iMRT$ imply when comparing solutions across a membrane?",
+  "fp": "0c674af98dba",
+  "yield": "HIGH",
+  "why": "pi = iMRT applied to comparing solutions; formula used in calculation"
+ },
+ {
+  "front": "Predict red cell shape in 100 mM NaCl versus 400 mM NaCl, and name each response.",
+  "fp": "427587f090e6",
+  "yield": "MEDIUM",
+  "why": "Worked RBC tonicity example; supports the plainer hypertonic/hypotonic card"
+ },
+ {
+  "front": "Rank O2, water, glucose, and Na+ by permeability through a pure lipid bilayer, and state what sets the order.",
+  "fp": "8684e7842bd2",
+  "yield": "HIGH",
+  "why": "Ranking bilayer permeability by size/polarity/charge; classic"
+ },
+ {
+  "front": "Resting membrane potential lies closest to $E_{K}$ because the resting membrane is most permeable to {{c1::K+}} through leak channels.",
+  "fp": "d09d26523277",
+  "yield": "HIGH",
+  "why": "Resting potential near E_K due to K+ leak; core"
+ },
+ {
+  "front": "SGLT1 moves glucose {{c1::against}} its gradient by coupling it to {{c2::Na+}} flowing downhill — apical membrane of intestine and proximal tubule.",
+  "fp": "e6883587be23",
+  "yield": "HIGH",
+  "why": "SGLT1 Na+-coupled uphill glucose; the canonical secondary active example"
+ },
+ {
+  "front": "Single-channel patch clamp shows square, all-or-none current steps rather than a smoothly graded current. What does that reveal?",
+  "fp": "449a83ca1b25",
+  "yield": "MEDIUM",
+  "why": "Single-channel patch clamp interpretation; passage technique"
+ },
+ {
+  "front": "The endosymbiotic theory proposes that mitochondria evolved from:",
+  "fp": "729bd9d4a40d",
+  "yield": "HIGH",
+  "why": "Endosymbiotic theory; core (belongs to organelles topic)"
+ },
+ {
+  "front": "The glycocalyx functions in:",
+  "fp": "bc830154b5c6",
+  "yield": "MEDIUM",
+  "why": "Glycocalyx function; definition-level, occasionally asked"
+ },
+ {
+  "front": "The Na+/H+ exchanger (NHE) is an electroneutral antiporter regulating intracellular {{c1::pH}} and reabsorbing Na+ in the {{c2::proximal tubule}}.",
+  "fp": "ffe435bf1827",
+  "yield": "MEDIUM",
+  "why": "NHE antiporter example; pH regulation and proximal tubule context"
+ },
+ {
+  "front": "The Na+/K+ ATPase consumes roughly {{c1::20-30 percent}} of a typical cell's ATP, and as much as {{c2::70 percent}} in neurons.",
+  "fp": "55ca26f0e773",
+  "yield": "LOW",
+  "why": "Percent-of-ATP figures are exact numbers not on the AAMC outline"
+ },
+ {
+  "front": "The thick ascending limb reabsorbs salt via the {{c1::Na+-K+-2Cl- (NKCC2)}} symporter, target of {{c2::loop}} diuretics.",
+  "fp": "b1b7217e6548",
+  "yield": "MEDIUM",
+  "why": "NKCC2 and loop diuretics; renal transport context that passages use"
+ },
+ {
+  "front": "Trace transcellular glucose absorption across an enterocyte, naming the transporter and energetics at each membrane.",
+  "fp": "77564f50b262",
+  "yield": "HIGH",
+  "why": "Transcellular glucose absorption with polarized transporters; classic"
+ },
+ {
+  "front": "Transporter classes: {{c1::uniporters}} move one solute (GLUT1); {{c2::symporters}} couple two in the same direction (SGLT1); antiporters swap them (NCX).",
+  "fp": "cc17fd640552",
+  "yield": "HIGH",
+  "why": "Uniport/symport/antiport vocabulary with canonical examples; core"
+ },
+ {
+  "front": "Two membranes share head groups but differ in melting behavior. Which acyl chain features predict the more fluid one?",
+  "fp": "e49fc650ecec",
+  "yield": "HIGH",
+  "why": "Unsaturation and chain length set fluidity; core tested relationship"
+ },
+ {
+  "front": "Typical gradients: K+ is about {{c1::140}} mM inside versus 4 mM outside, while Na+ is about 145 mM outside versus {{c2::12}} mM inside.",
+  "fp": "ae8f08de6c6b",
+  "yield": "MEDIUM",
+  "why": "Typical ion gradients; used as given values in Nernst-style problems"
+ },
+ {
+  "front": "Typical neuronal equilibrium potentials: $E_{K} \\approx$ {{c1::-90}} mV and $E_{Na} \\approx$ {{c2::+60}} mV.",
+  "fp": "5e6a8a16c50e",
+  "yield": "HIGH",
+  "why": "E_K and E_Na values are used constantly in neuro questions"
+ },
+ {
+  "front": "What are tight junctions, desmosomes, and gap junctions?",
+  "fp": "faf671428ad8",
+  "yield": "HIGH",
+  "why": "Cell junction types; core (belongs to cell junctions topic)"
+ },
+ {
+  "front": "What distinguishes primary from secondary active transport? Give an example of each.",
+  "fp": "6261689c9e98",
+  "yield": "MEDIUM",
+  "why": "Adds examples to the primary/secondary distinction; supporting detail"
+ },
+ {
+  "front": "What do ABC transporters do? Name two medically important members with different mechanisms.",
+  "fp": "dafc54abcbcc",
+  "yield": "MEDIUM",
+  "why": "ABC transporters; CFTR and P-glycoprotein appear in passages"
+ },
+ {
+  "front": "What happens to a cell in hypertonic vs. hypotonic solution?",
+  "fp": "ec68aaabd76c",
+  "yield": "HIGH",
+  "why": "Cell response to hypertonic/hypotonic solution; core"
+ },
+ {
+  "front": "What is osmotic pressure?",
+  "fp": "f634abbb4518",
+  "yield": "HIGH",
+  "why": "Osmotic pressure definition and formula; core"
+ },
+ {
+  "front": "What is the chloride shift, and which transporter performs it?",
+  "fp": "053a4040d768",
+  "yield": "MEDIUM",
+  "why": "Chloride shift via AE1; respiratory transport context, tested occasionally"
+ },
+ {
+  "front": "What is transcytosis, and where is it physiologically important?",
+  "fp": "c17234d53986",
+  "yield": "MEDIUM",
+  "why": "Transcytosis definition; useful for understanding, FcRn detail is secondary"
+ },
+ {
+  "front": "What makes a transporter electrogenic versus electroneutral? Classify NCX, NHE, and AE1.",
+  "fp": "1db2fe895b2b",
+  "yield": "MEDIUM",
+  "why": "Electrogenic vs electroneutral classification; second-step reasoning"
+ },
+ {
+  "front": "Which describes secondary active transport?",
+  "fp": "6908d9e49376",
+  "yield": "LOW",
+  "why": "Near-restatement of the primary/secondary and SGLT1 cards"
+ },
+ {
+  "front": "Which membrane is impermeable to most ions, creating the proton gradient?",
+  "fp": "1130ce7c51d5",
+  "yield": "HIGH",
+  "why": "Inner mitochondrial membrane impermeability sets up the proton gradient; core"
+ },
+ {
+  "front": "Why do red blood cells and the blood-brain barrier rely on GLUT1?",
+  "fp": "56f9d026de79",
+  "yield": "MEDIUM",
+  "why": "GLUT1 low Km reasoning; supports the GLUT distinction card"
+ },
+ {
+  "front": "Why do severe liver disease and nephrotic syndrome cause edema, in Starling terms?",
+  "fp": "54ca1ab0ba23",
+  "yield": "MEDIUM",
+  "why": "Starling oncotic pressure and edema; cardiovascular context, tested"
+ },
+ {
+  "front": "Why does a tenfold Ca2+ gradient produce only about 30 mV of equilibrium potential while the same Na+ gradient gives about 61 mV?",
+  "fp": "ea7456627047",
+  "yield": "MEDIUM",
+  "why": "Nernst valence term; second-step calculation reasoning"
+ },
+ {
+  "front": "Why does inhibiting the Na+/K+ ATPase eventually make cells swell and lyse?",
+  "fp": "269d9bc7ba9f",
+  "yield": "MEDIUM",
+  "why": "Why pump loss causes swelling; reasoning on pump-leak balance"
+ },
+ {
+  "front": "Why does ouabain poisoning stop secondary active transport, even though those transporters use no ATP?",
+  "fp": "1949682f53d4",
+  "yield": "HIGH",
+  "why": "Ouabain blocks the pump so all Na+-coupled transport fails; classic reasoning"
+ },
+ {
+  "front": "Why is 300 mM urea isosmotic yet hypotonic to a red blood cell?",
+  "fp": "005fdc2aae16",
+  "yield": "HIGH",
+  "why": "Urea isosmotic yet hypotonic; the canonical tonicity question"
+ },
+ {
+  "front": "Why is sweat chloride high in cystic fibrosis when CFTR failure elsewhere produces thick, dehydrated secretions?",
+  "fp": "5560cc6d7974",
+  "yield": "MEDIUM",
+  "why": "CF sweat vs airway shows transport direction is tissue-specific; clinical flavor"
+ }
+]

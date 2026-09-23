@@ -1,0 +1,422 @@
+[
+ {
+  "front": "{{c1::Deindividuation}} = anonymity plus arousal and diffused responsibility, producing reduced self-awareness and disinhibited, group-norm-driven behavior.",
+  "fp": "e0fabec8e3d7",
+  "yield": "HIGH",
+  "why": "Deindividuation is a named 7B group-process concept; discrete-question staple"
+ },
+ {
+  "front": "{{c1::Kin selection}} explains helping relatives through inclusive fitness; {{c2::reciprocal altruism}} (Trivers) explains helping nonkin who can repay later.",
+  "fp": "a228c64695bb",
+  "yield": "HIGH",
+  "why": "Kin selection/inclusive fitness and reciprocal altruism are the AAMC altruism mechanisms"
+ },
+ {
+  "front": "{{c1::Lowballing}} secures commitment and then raises the cost; {{c2::foot-in-the-door}} escalates from a small request via self-perception.",
+  "fp": "4d7f689ac9c5",
+  "yield": "HIGH",
+  "why": "Compliance techniques (foot-in-the-door, lowball) are core 7B attitude/behavior change"
+ },
+ {
+  "front": "{{c1::Self-handicapping}} means creating an obstacle in advance so that failure can be attributed {{c2::externally}} while success is credited doubly.",
+  "fp": "924dcc825f66",
+  "yield": "MEDIUM",
+  "why": "Self-handicapping is a secondary self-presentation concept; plausible but rarely decisive"
+ },
+ {
+  "front": "{{c1::Social exchange}} theory says relationships persist when rewards exceed costs; {{c2::equity}} theory adds that being over-benefited also distresses.",
+  "fp": "cd2bd962f9e4",
+  "yield": "HIGH",
+  "why": "Social exchange theory is on the AAMC outline; equity is its tested extension"
+ },
+ {
+  "front": "A {{c1::stereotype}} is the cognitive belief about a group, {{c2::prejudice}} is the affective evaluation, and discrimination is the behavior.",
+  "fp": "18fee8dbe155",
+  "yield": "HIGH",
+  "why": "Stereotype/prejudice/discrimination cognition-affect-behavior split is a high-frequency item"
+ },
+ {
+  "front": "A cancer patient who compares herself with sicker patients feels better; comparing with healthier ones motivates but distresses. Name the theory.",
+  "fp": "fb5c08168234",
+  "yield": "MEDIUM",
+  "why": "Social comparison (up/down) is plausible passage context; not a frequent discrete point"
+ },
+ {
+  "front": "A clinician reports egalitarian views yet shows faster pairing of one race with negative words on the IAT. What does this show, and what is the caveat?",
+  "fp": "14e9a2b5d6e5",
+  "yield": "MEDIUM",
+  "why": "Implicit vs explicit attitudes is tested; IAT psychometric caveat is second-step detail"
+ },
+ {
+  "front": "A fundraiser first asks for a 500 dollar gift, is refused, then asks for 50 and gets it. Name the technique and its two mechanisms.",
+  "fp": "30f287680da8",
+  "yield": "HIGH",
+  "why": "Door-in-the-face with reciprocal concession is a core compliance technique"
+ },
+ {
+  "front": "A patient told firmly that he must quit smoking becomes more insistent on his right to smoke. Name the phenomenon and the counseling implication.",
+  "fp": "b71d223cec4a",
+  "yield": "MEDIUM",
+  "why": "Reactance is a secondary persuasion concept; clinical framing is illustrative"
+ },
+ {
+  "front": "Allport's contact hypothesis names four conditions under which contact reduces prejudice. What are they?",
+  "fp": "36d89c3555b9",
+  "yield": "MEDIUM",
+  "why": "Contact hypothesis is testable; the four Allport conditions are supporting detail"
+ },
+ {
+  "front": "Asch's effect was mostly {{c1::normative}} influence (public compliance, private disbelief); Sherif's autokinetic norms show {{c2::informational}} influence.",
+  "fp": "2b0e7a99c1a9",
+  "yield": "HIGH",
+  "why": "Normative vs informational social influence is a high-frequency distinction"
+ },
+ {
+  "front": "At Robbers Cave, hostility between two boys' camps fell only when they had to repair a shared water supply. What theory and remedy does this illustrate?",
+  "fp": "408ad0dc462b",
+  "yield": "MEDIUM",
+  "why": "Realistic conflict theory/superordinate goals are plausible; Robbers Cave is flavor"
+ },
+ {
+  "front": "Berkowitz's revision: frustration causes aggression only via {{c1::negative affect}}, and aggressive cues such as guns ({{c2::the weapons effect}}) amplify it.",
+  "fp": "333a846e690e",
+  "yield": "MEDIUM",
+  "why": "Frustration-aggression is tested; Berkowitz revision and weapons effect are secondary"
+ },
+ {
+  "front": "Boys assigned to groups by a coin flip still allocated more money to their own group. Name the paradigm and the theory it supports.",
+  "fp": "46abe72b8f65",
+  "yield": "HIGH",
+  "why": "Minimal group paradigm underpins social identity theory and in-group favoritism"
+ },
+ {
+  "front": "Central-route persuasion requires both {{c1::motivation}} and {{c2::ability}} to elaborate, and it produces durable, behavior-predictive attitude change.",
+  "fp": "dff5e435d90a",
+  "yield": "HIGH",
+  "why": "ELM central vs peripheral route is a core 7B attitude-change model"
+ },
+ {
+  "front": "Cialdini's six principles of influence: reciprocity, commitment and consistency, {{c1::social proof}}, authority, liking, and {{c2::scarcity}}.",
+  "fp": "68e3ddd27385",
+  "yield": "MEDIUM",
+  "why": "Cialdini's six principles are prep-book material, not AAMC outline; useful map"
+ },
+ {
+  "front": "Dissonance can be reduced by changing the {{c1::behavior}}, changing or adding {{c2::cognitions}}, or trivializing the inconsistency.",
+  "fp": "dc408bd0b485",
+  "yield": "MEDIUM",
+  "why": "Dissonance-reduction routes are supporting detail on the core dissonance card"
+ },
+ {
+  "front": "Distinguish conformity, compliance, and obedience.",
+  "fp": "63dbfe46ebb9",
+  "yield": "HIGH",
+  "why": "Conformity vs compliance vs obedience is a high-frequency distinction"
+ },
+ {
+  "front": "Distinguish discrimination, prejudice, and ethnocentrism in social terms.",
+  "fp": "0b473deb641c",
+  "yield": "HIGH",
+  "why": "Prejudice/discrimination/ethnocentrism/relativism are core 8B definitions"
+ },
+ {
+  "front": "Distinguish dispositional from situational attribution and the self-serving bias.",
+  "fp": "4b6c9a64ef2f",
+  "yield": "HIGH",
+  "why": "Dispositional vs situational attribution and self-serving bias are core 8B"
+ },
+ {
+  "front": "Distinguish social facilitation from social loafing.",
+  "fp": "d4f2eddb5d68",
+  "yield": "HIGH",
+  "why": "Social facilitation vs social loafing is a core 7B distinction"
+ },
+ {
+  "front": "Festinger and Carlsmith (1959): what was the design, and which group changed its attitude?",
+  "fp": "bea900f22213",
+  "yield": "MEDIUM",
+  "why": "Insufficient justification ($1 vs $20) is plausible passage material; study detail"
+ },
+ {
+  "front": "Group polarization works through {{c1::persuasive arguments}} (hearing novel points favoring the lean) and {{c2::social comparison}} (outdoing the group norm).",
+  "fp": "72078b083248",
+  "yield": "MEDIUM",
+  "why": "Mechanisms of group polarization are second-step detail on a HIGH concept"
+ },
+ {
+  "front": "Hamilton's rule: altruism toward kin evolves when {{c1::rB > C}}, the benefit weighted by genetic relatedness exceeding the cost to the helper.",
+  "fp": "194401591027",
+  "yield": "MEDIUM",
+  "why": "Hamilton's rule is supporting detail on kin selection; formula itself rarely asked"
+ },
+ {
+  "front": "How does Batson's empathy-altruism hypothesis differ from egoistic accounts of helping?",
+  "fp": "130aff414600",
+  "yield": "MEDIUM",
+  "why": "Empathy-altruism vs egoistic helping is a plausible passage contrast; secondary"
+ },
+ {
+  "front": "In Asch's variations, what most sharply reduced conformity?",
+  "fp": "09e1645943db",
+  "yield": "MEDIUM",
+  "why": "Dissenter and group-size effects on conformity are plausible second-step points"
+ },
+ {
+  "front": "In Bandura's 1965 follow-up, what did vicarious punishment change, and what did incentives reveal?",
+  "fp": "6eaa43adf4df",
+  "yield": "MEDIUM",
+  "why": "Learning vs performance in observational learning is testable; study detail"
+ },
+ {
+  "front": "In ELM experiments, what variable flips people from peripheral to central processing?",
+  "fp": "9e14c77431b0",
+  "yield": "LOW",
+  "why": "Restates the ELM card: personal relevance is just the 'motivation' condition"
+ },
+ {
+  "front": "In the {{c1::sleeper}} effect, a message from a discredited source gains influence over time because {{c2::source memory}} fades faster than the message.",
+  "fp": "357a1aabe17d",
+  "yield": "LOW",
+  "why": "Sleeper effect is not on the AAMC outline; named effect with little reasoning use"
+ },
+ {
+  "front": "Kelley's covariation model: high {{c1::consensus}}, high {{c2::distinctiveness}}, and high consistency point to a situational (external) attribution.",
+  "fp": "91fffc5afe07",
+  "yield": "MEDIUM",
+  "why": "Kelley's covariation model appears in prep and practice items; secondary to FAE"
+ },
+ {
+  "front": "Latane and Darley's helping sequence: notice the event, {{c1::interpret it as an emergency}}, {{c2::take responsibility}}, know how to help, then act.",
+  "fp": "861bea61296c",
+  "yield": "MEDIUM",
+  "why": "Five-step helping model and pluralistic ignorance are second-step bystander detail"
+ },
+ {
+  "front": "Milgram obedience fell to about {{c1::30}}% with touch proximity and about {{c2::20}}% when the experimenter gave orders by phone.",
+  "fp": "d6521c312239",
+  "yield": "LOW",
+  "why": "Exact obedience percentages by variation are trivia; proximity effect suffices"
+ },
+ {
+  "front": "Repeated, unreinforced exposure to a stimulus increases liking, an effect named {{c1::mere exposure}} and demonstrated by {{c2::Zajonc}}.",
+  "fp": "1d4fb62969e9",
+  "yield": "HIGH",
+  "why": "Mere exposure effect is a core attraction/persuasion mechanism"
+ },
+ {
+  "front": "Same crowd, opposite effects: when does the presence of others improve versus worsen your performance?",
+  "fp": "014f43a8d06c",
+  "yield": "LOW",
+  "why": "Near-restatement of the facilitation/loafing and dominant-response cards"
+ },
+ {
+  "front": "Stereotype threat impairs performance by loading {{c1::working memory}} with anxiety and monitoring; reduced by {{c2::self-affirmation}} and role models.",
+  "fp": "72f6316aff36",
+  "yield": "MEDIUM",
+  "why": "Stereotype threat mechanism/remedies are supporting detail on the core card"
+ },
+ {
+  "front": "Subjects who guess a study's hypothesis behave so as to confirm it. Name this threat and the design features that control it.",
+  "fp": "4fe28631c97c",
+  "yield": "MEDIUM",
+  "why": "Demand characteristics are tested research-methods content; misfiled here"
+ },
+ {
+  "front": "Teachers told that certain randomly chosen students were late bloomers saw those students gain more on later testing. Name the effect and its mediator.",
+  "fp": "dbbf4a740753",
+  "yield": "LOW",
+  "why": "Restates the self-fulfilling prophecy card, which already names Pygmalion"
+ },
+ {
+  "front": "The {{c1::actor-observer}} bias: we attribute our own behavior to the situation but others' identical behavior to their disposition.",
+  "fp": "c3806b85c56a",
+  "yield": "HIGH",
+  "why": "Actor-observer bias is a high-frequency attribution distinction"
+ },
+ {
+  "front": "The {{c1::halo}} effect spreads one positive trait to unrelated judgments; its mirror image is the {{c2::horns}} effect.",
+  "fp": "137a4c689ac2",
+  "yield": "HIGH",
+  "why": "Halo effect is a frequently tested impression-formation bias"
+ },
+ {
+  "front": "The {{c1::ultimate attribution error}} extends the FAE to groups: outgroup failures reflect disposition, outgroup successes reflect luck or special advantage.",
+  "fp": "48798b1644af",
+  "yield": "MEDIUM",
+  "why": "Ultimate attribution error is a prep-book extension of FAE; secondary"
+ },
+ {
+  "front": "The tendency to attribute others' behavior to disposition while excusing our own as situational is the {{c1::fundamental attribution error}} (with the {{c2::actor-observer}} asymmetry).",
+  "fp": "dd3728bfe468",
+  "yield": "LOW",
+  "why": "Restates the FAE card and the actor-observer card in one cloze"
+ },
+ {
+  "front": "What are classic peripheral cues in persuasion, and when do they dominate?",
+  "fp": "12e3158e7e7c",
+  "yield": "MEDIUM",
+  "why": "Peripheral cues and when they dominate are supporting ELM detail"
+ },
+ {
+  "front": "What are stereotype threat and the self-fulfilling prophecy?",
+  "fp": "622cccb0882c",
+  "yield": "HIGH",
+  "why": "Stereotype threat and self-fulfilling prophecy are core 8B concepts"
+ },
+ {
+  "front": "What are the antecedents and hallmark symptoms of groupthink (Janis)?",
+  "fp": "851ea2b56a23",
+  "yield": "MEDIUM",
+  "why": "Groupthink antecedents/symptoms are supporting detail on the core groupthink card"
+ },
+ {
+  "front": "What are the key numbers from Asch's line-judgment conformity study?",
+  "fp": "30ce85b0e1c2",
+  "yield": "LOW",
+  "why": "Exact Asch percentages are trivia; the finding is on the plain Asch card"
+ },
+ {
+  "front": "What are the main criticisms of Milgram's obedience studies?",
+  "fp": "f226af16fb6d",
+  "yield": "LOW",
+  "why": "Criticisms of Milgram and the Burger replication are discovery-history detail"
+ },
+ {
+  "front": "What behavioral consequence does the just-world hypothesis predict?",
+  "fp": "56cbe5a1f302",
+  "yield": "HIGH",
+  "why": "Just-world hypothesis and victim blaming is a common discrete item"
+ },
+ {
+  "front": "What biological correlates accompany aggression, and how do hostile and instrumental aggression differ?",
+  "fp": "7e8fbbe17595",
+  "yield": "MEDIUM",
+  "why": "Biological correlates and hostile vs instrumental aggression are plausible passage points"
+ },
+ {
+  "front": "What did Asch's conformity study demonstrate?",
+  "fp": "7480eea9c5af",
+  "yield": "HIGH",
+  "why": "Asch conformity/normative influence is core 7B"
+ },
+ {
+  "front": "What did LaPiere's 1934 study show, and when do attitudes actually predict behavior?",
+  "fp": "968317df68de",
+  "yield": "MEDIUM",
+  "why": "Attitude-behavior consistency conditions are testable; LaPiere is flavor"
+ },
+ {
+  "front": "What did Milgram's obedience study show?",
+  "fp": "a6c83ba1339d",
+  "yield": "HIGH",
+  "why": "Milgram obedience to authority is core 7B"
+ },
+ {
+  "front": "What did Steele and Aronson's 1995 stereotype threat experiments show?",
+  "fp": "917a5a60cb42",
+  "yield": "LOW",
+  "why": "Study-history restatement of stereotype threat, already covered twice"
+ },
+ {
+  "front": "What did Zimbardo's Stanford Prison Experiment illustrate?",
+  "fp": "949e83699a07",
+  "yield": "HIGH",
+  "why": "Stanford Prison Experiment: social roles and situational power, core 7B"
+ },
+ {
+  "front": "What factors increase interpersonal attraction?",
+  "fp": "a9a3c1ce608f",
+  "yield": "HIGH",
+  "why": "Proximity, similarity, attractiveness, reciprocity are the tested attraction factors"
+ },
+ {
+  "front": "What happened in the Stanford Prison Experiment, and why is it now heavily criticized?",
+  "fp": "fd3cc837c4a5",
+  "yield": "LOW",
+  "why": "SPE criticisms are discovery-history detail; the finding is on the plain SPE card"
+ },
+ {
+  "front": "What is cognitive dissonance and how is it resolved?",
+  "fp": "8466fa232370",
+  "yield": "HIGH",
+  "why": "Cognitive dissonance is core 7B attitude change"
+ },
+ {
+  "front": "What is effort justification, and what is the classic evidence for it?",
+  "fp": "39a7d0adc6e5",
+  "yield": "MEDIUM",
+  "why": "Effort justification is a plausible dissonance application; Aronson-Mills is flavor"
+ },
+ {
+  "front": "What is group polarization and groupthink?",
+  "fp": "cd8905f34b3a",
+  "yield": "HIGH",
+  "why": "Group polarization and groupthink are core 7B group concepts"
+ },
+ {
+  "front": "What is the bystander effect and diffusion of responsibility?",
+  "fp": "3bb5e3d5492d",
+  "yield": "HIGH",
+  "why": "Bystander effect and diffusion of responsibility are core 7B"
+ },
+ {
+  "front": "What is the difference between an in-group and out-group, and in-group bias?",
+  "fp": "773254732b49",
+  "yield": "HIGH",
+  "why": "In-group/out-group bias and out-group homogeneity are core 8B"
+ },
+ {
+  "front": "What is the fundamental attribution error?",
+  "fp": "236b87fb07b5",
+  "yield": "HIGH",
+  "why": "Fundamental attribution error is the most-tested attribution concept"
+ },
+ {
+  "front": "What is the pattern and function of the self-serving bias, and when does it reverse?",
+  "fp": "1583f6e9b2ec",
+  "yield": "MEDIUM",
+  "why": "Self-serving bias reversal in depression/collectivist cultures is second-step detail"
+ },
+ {
+  "front": "What is the Ringelmann rope-pulling effect, and what conditions eliminate it?",
+  "fp": "63a3f595d5f1",
+  "yield": "LOW",
+  "why": "Ringelmann effect restates social loafing with cultural/gender trivia"
+ },
+ {
+  "front": "What were Milgram's baseline obedience findings?",
+  "fp": "54886d177ba7",
+  "yield": "MEDIUM",
+  "why": "The 65% headline figure is widely cited; supporting detail on the Milgram card"
+ },
+ {
+  "front": "What were the key numbers in Darley and Latane's seizure (bystander) study?",
+  "fp": "63ac06cfe58f",
+  "yield": "LOW",
+  "why": "Exact seizure-study percentages are trivia; bystander effect card covers it"
+ },
+ {
+  "front": "What were the outcomes of Bandura's 1961 Bobo doll experiment?",
+  "fp": "993abbc8f4d1",
+  "yield": "MEDIUM",
+  "why": "Bobo doll observational learning of aggression is testable; details are secondary"
+ },
+ {
+  "front": "When does Bem's self-perception theory explain attitude change better than dissonance theory?",
+  "fp": "4693536950cb",
+  "yield": "MEDIUM",
+  "why": "Self-perception vs dissonance boundary is a plausible second-step item"
+ },
+ {
+  "front": "Which situational factors increase helping, and what did the Good Samaritan seminary study show?",
+  "fp": "b8e709217f20",
+  "yield": "MEDIUM",
+  "why": "Situational helping factors are plausible passage context; Good Samaritan is flavor"
+ },
+ {
+  "front": "Zajonc: an audience strengthens the {{c1::dominant}} response, improving {{c2::easy or well-learned}} tasks and impairing difficult ones.",
+  "fp": "570b655ab3d3",
+  "yield": "HIGH",
+  "why": "Dominant-response mechanism of social facilitation is the tested explanation"
+ }
+]
