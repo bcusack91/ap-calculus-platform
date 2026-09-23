@@ -29,6 +29,9 @@ model User {
   // src/lib/flashcard-daily-limits.ts: 100 new/day, 200 reviews/day).
   flashcardNewPerDay        Int? // new cards introduced per day (bounds 1-500)
   flashcardMaxReviewsPerDay Int? // max due-card reviews per day (bounds 10-1000)
+  // Low-yield cards are hidden from study queues by default; this opts a
+  // student back in. Their FlashcardProgress rows are never deleted.
+  flashcardIncludeLowYield  Boolean                       @default(false)
   stripeCustomerId          String?                       @unique
   stripeSubscriptionId      String?                       @unique
   stripePriceId             String?
@@ -386,12 +389,16 @@ model Flashcard {
   hint       String?
   lessonPart Int? // Which lesson part this flashcard relates to (1, 2, 3, etc.)
   isPremium  Boolean             @default(false)
+  // AAMC exam yield. NULL = never judged, which every non-MCAT card is, and
+  // unlabeled cards are always served (see src/lib/flashcard-yield.ts).
+  examYield  ExamYield?
   createdAt  DateTime            @default(now())
   updatedAt  DateTime            @updatedAt
   topic      Topic               @relation(fields: [topicId], references: [id], onDelete: Cascade)
   progress   FlashcardProgress[]
 
   @@index([topicId])
+  @@index([topicId, examYield])
 }
 
 model FlashcardProgress {
@@ -644,6 +651,13 @@ enum Difficulty {
   MEDIUM
   HARD
   EXPERT
+}
+
+/// Declaration order is the sort order: HIGH first.
+enum ExamYield {
+  HIGH
+  MEDIUM
+  LOW
 }
 
 enum ProgressStatus {

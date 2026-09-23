@@ -56,6 +56,8 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
   const [values, setValues] = useState<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState(false)
+  // MCAT low-yield cards are hidden from the queue unless opted in.
+  const [includeLowYield, setIncludeLowYield] = useState(false)
   // Last server-confirmed values, for reverting a failed optimistic save.
   const confirmed = useRef<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
   const savedTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -72,6 +74,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
         }
         confirmed.current = loaded
         setValues(loaded)
+        setIncludeLowYield(!!data.includeLowYield)
       })
       .catch(() => {})
     return () => {
@@ -79,6 +82,30 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
       if (savedTimer.current) clearTimeout(savedTimer.current)
     }
   }, [])
+
+  async function toggleLowYield(next: boolean) {
+    // Optimistic, like the limits: the checkbox already shows the new state.
+    setIncludeLowYield(next)
+    setError(null)
+    try {
+      const res = await fetch('/api/flashcards/settings', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ includeLowYield: next }),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => null)
+        throw new Error(data?.error || 'Failed to save')
+      }
+      setSaved(true)
+      if (savedTimer.current) clearTimeout(savedTimer.current)
+      savedTimer.current = setTimeout(() => setSaved(false), 2500)
+      onChanged?.()
+    } catch (e) {
+      setIncludeLowYield(!next)
+      setError(e instanceof Error ? e.message : 'Failed to save — please try again.')
+    }
+  }
 
   async function commit(field: FieldKey) {
     const spec = FIELDS.find((f) => f.key === field)!
@@ -165,6 +192,22 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
         ))}
       </div>
 
+      <label className="mt-4 flex items-start gap-3 text-sm text-gray-900">
+        <input
+          id="daily-limit-includeLowYield"
+          type="checkbox"
+          checked={includeLowYield}
+          onChange={(e) => toggleLowYield(e.target.checked)}
+          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
+        />
+        <span>
+          <span className="font-semibold">Include low-yield cards</span>
+          <span className="block text-xs text-gray-500">
+            MCAT decks label each card by exam yield. Off, your queue holds only high- and
+            medium-yield cards; on, every card in the deck. Your review history is kept either way.
+          </span>
+        </span>
+      </label>
       {error && (
         <p role="alert" className="mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
           {error}

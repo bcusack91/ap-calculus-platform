@@ -8,6 +8,8 @@ import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
+import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
+import { includeLowYieldFor } from '@/lib/flashcard-yield-prefs'
 
 /**
  * POST /api/flashcards/review
@@ -181,6 +183,9 @@ export async function GET(req: NextRequest) {
 
     // The review queue shows only the ACTIVE study mode's deck.
     const context = await getActiveStudyContext(session.user.id)
+    // Low-yield cards stay out of every queue query below unless opted in.
+    const includeLow = await includeLowYieldFor(session.user.id)
+    const yieldWhere = servedProgressWhere(includeLow)
 
     // Build query
     const now = new Date()
@@ -193,6 +198,7 @@ export async function GET(req: NextRequest) {
     // pages to show "N SAT flashcards due now"-style banners).
     const courseSlug = searchParams.get('courseSlug')
     const flashcardFilter: Prisma.FlashcardWhereInput = {
+      ...servedFlashcardWhere(includeLow),
       ...(topicId ? { topicId } : {}),
       ...(courseSlug ? { topic: { category: { course: { slug: courseSlug } } } } : {}),
     }
@@ -231,7 +237,7 @@ export async function GET(req: NextRequest) {
       const [reviewRows, totalCards, dueLaterToday, nextUpcoming] = await Promise.all([
         dailyState.reviewsToday > 0
           ? prisma.flashcardProgress.findMany({
-              where: { userId: session.user.id, context, reviewCount: { gt: 0 }, nextReview: { lte: now } },
+              where: { userId: session.user.id, context, reviewCount: { gt: 0 }, nextReview: { lte: now }, ...yieldWhere },
               include: cardInclude,
               orderBy: { nextReview: 'asc' },
               take: Math.min(BATCH_SIZE, dailyState.reviewsToday),
@@ -241,6 +247,7 @@ export async function GET(req: NextRequest) {
           where: {
             userId: session.user.id,
             context,
+            ...yieldWhere,
           },
         }),
         // Cards that come back LATER TODAY (learning-step returns). Only
@@ -252,6 +259,7 @@ export async function GET(req: NextRequest) {
             context,
             reviewCount: { gt: 0 },
             nextReview: { gt: now, lte: endOfStudentDay },
+            ...yieldWhere,
           },
         }),
         // The very next REVIEW card to come due, for "next card in 5 minutes"
@@ -262,6 +270,7 @@ export async function GET(req: NextRequest) {
             context,
             reviewCount: { gt: 0 },
             nextReview: { gt: now },
+            ...yieldWhere,
           },
           orderBy: { nextReview: 'asc' },
           select: { nextReview: true },
@@ -272,7 +281,7 @@ export async function GET(req: NextRequest) {
       const newTake = Math.min(BATCH_SIZE - reviewRows.length, dailyState.newToday)
       const newRows = newTake > 0
         ? await prisma.flashcardProgress.findMany({
-            where: { userId: session.user.id, context, reviewCount: 0 },
+            where: { userId: session.user.id, context, reviewCount: 0, ...yieldWhere },
             include: cardInclude,
             orderBy: { nextReview: 'asc' },
             take: newTake,
@@ -324,7 +333,8 @@ export async function GET(req: NextRequest) {
       prisma.flashcardProgress.count({
         where: {
           userId: session.user.id,
-          context
+          context,
+          ...yieldWhere,
         }
       }),
       prisma.flashcardProgress.count({ where }),

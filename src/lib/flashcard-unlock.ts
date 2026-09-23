@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { compareByYield } from '@/lib/flashcard-yield'
 import { PERSONAL_CONTEXT, resolveUnlockContexts } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { hasExitQuiz } from '@/data/exit-quizzes'
@@ -105,7 +106,7 @@ export async function maybeUnlockFlashcards(
       id: true,
       title: true,
       textContent: true,
-      flashcards: { select: { id: true } },
+      flashcards: { select: { id: true, examYield: true, createdAt: true } },
       exampleProblems: { select: { question: true, solution: true } },
       category: { select: { course: { select: { slug: true } } } },
     },
@@ -154,8 +155,8 @@ export async function maybeUnlockFlashcards(
 
   // Ensure the topic has cards (legacy topics without authored cards get
   // auto-generated ones, same generation the old paths used).
-  let cardIds = topic.flashcards.map((f) => f.id)
-  if (cardIds.length === 0) {
+  let cards = topic.flashcards
+  if (cards.length === 0) {
     const candidates = generateFlashcardsFromContent(topic.textContent)
     const problemText = topic.exampleProblems
       .map((p) => `${p.question}\n${p.solution}`)
@@ -172,14 +173,19 @@ export async function maybeUnlockFlashcards(
           isPremium: false,
         })),
       })
-      const created = await prisma.flashcard.findMany({
+      cards = await prisma.flashcard.findMany({
         where: { topicId: topic.id },
-        select: { id: true },
+        select: { id: true, examYield: true, createdAt: true },
       })
-      cardIds = created.map((f) => f.id)
     }
   }
-  if (cardIds.length === 0) return LOCKED
+  if (cards.length === 0) return LOCKED
+  // The drip below schedules by array index, and this query has no ORDER BY,
+  // so the order used to be whatever Postgres returned. Now: high-yield cards
+  // first, low-yield last (they are still enrolled, so opting in later needs
+  // no backfill), and a deterministic tiebreak.
+  const cardIds = [...cards].sort(compareByYield).map((f) => f.id)
+  const servedCount = cards.filter((f) => f.examYield !== 'LOW').length
 
   const courseSlug = topic.category?.course?.slug ?? null
   // Which decks these cards belong in: always personal, the topic's OWN course
@@ -241,7 +247,8 @@ export async function maybeUnlockFlashcards(
     unlocked: true,
     newCards: newInActive,
     totalActive,
-    totalCards: cardIds.length,
+    // What the student will actually find: low-yield cards are hidden by default.
+    totalCards: servedCount,
     topicTitle: topic.title,
   }
 }

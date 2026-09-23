@@ -3,6 +3,8 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
+import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
+import { includeLowYieldFor } from '@/lib/flashcard-yield-prefs'
 
 /**
  * GET /api/flashcards/session?topicSlug=xxx&limit=20
@@ -23,6 +25,13 @@ export async function GET(req: NextRequest) {
     // Sessions are scoped to the active study mode: a card mastered in the
     // personal deck is NEW again inside a fresh class/course mode.
     const context = await getActiveStudyContext(userId)
+    // Low-yield cards are hidden unless the student opted in. A topic drill may
+    // also ask for them explicitly (?includeLowYield=1) without changing the
+    // daily-limit numbers, which this branch never composes anyway.
+    const includeLow =
+      (await includeLowYieldFor(userId)) ||
+      (!!topicSlug && req.nextUrl.searchParams.get('includeLowYield') === '1')
+    const yieldWhere = servedProgressWhere(includeLow)
 
     // UNSCOPED (the dashboard widget): serve only the user's own deck — cards
     // already unlocked into the active study context. The old query served
@@ -53,7 +62,7 @@ export async function GET(req: NextRequest) {
       const [reviewRows, dueLaterToday, nextUpcoming] = await Promise.all([
         dailyState.reviewsToday > 0
           ? prisma.flashcardProgress.findMany({
-              where: { userId, context, reviewCount: { gt: 0 }, nextReview: { lte: now } },
+              where: { userId, context, reviewCount: { gt: 0 }, nextReview: { lte: now }, ...yieldWhere },
               include: cardInclude,
               orderBy: { nextReview: 'asc' },
               take: Math.min(limit, dailyState.reviewsToday),
@@ -62,10 +71,10 @@ export async function GET(req: NextRequest) {
         // Learning-step returns later today (reviewCount > 0 only — new-card
         // drip dates don't gate availability anymore, the allowance does).
         prisma.flashcardProgress.count({
-          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now, lte: endOfStudentDay } },
+          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now, lte: endOfStudentDay }, ...yieldWhere },
         }),
         prisma.flashcardProgress.findFirst({
-          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now } },
+          where: { userId, context, reviewCount: { gt: 0 }, nextReview: { gt: now }, ...yieldWhere },
           orderBy: { nextReview: 'asc' },
           select: { nextReview: true },
         }),
@@ -74,7 +83,7 @@ export async function GET(req: NextRequest) {
       const newTake = Math.min(limit - reviewRows.length, dailyState.newToday)
       const newRows = newTake > 0
         ? await prisma.flashcardProgress.findMany({
-            where: { userId, context, reviewCount: 0 },
+            where: { userId, context, reviewCount: 0, ...yieldWhere },
             include: cardInclude,
             orderBy: { nextReview: 'asc' },
             take: newTake,
@@ -112,7 +121,7 @@ export async function GET(req: NextRequest) {
 
     // TOPIC-SCOPED: deliberate practice of one topic — due cards first, then
     // cards never seen in this context (browse-style access to that topic).
-    const topicFilter = { topic: { slug: topicSlug } }
+    const topicFilter = { topic: { slug: topicSlug }, ...servedFlashcardWhere(includeLow) }
 
     // Query due cards and new cards directly from DB instead of fetching all and filtering in JS
     const [dueCards, newCards] = await Promise.all([

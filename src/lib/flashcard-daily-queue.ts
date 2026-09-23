@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { servedProgressWhere } from '@/lib/flashcard-yield'
 import {
   composeDailyQueues,
   effectiveDailyLimits,
@@ -26,6 +27,8 @@ export interface DailyQueueState extends DailyQueueComposition {
   reviewsDoneToday: number
   dueReviewCount: number
   newAvailableCount: number
+  /** The student's low-yield opt-in, so callers need not re-read the user. */
+  includeLow: boolean
 }
 
 /** Today's UTC-day Date, matching the raw CURRENT_DATE used by the rollup. */
@@ -38,6 +41,14 @@ export async function getDailyQueueState(
   context: string,
   now: Date = new Date(),
 ): Promise<DailyQueueState> {
+  // Low-yield cards are hidden unless the student opted in. Both counts below
+  // must honor that, or the dashboard promises cards the session never serves.
+  const pref = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { flashcardIncludeLowYield: true },
+  })
+  const includeLow = pref?.flashcardIncludeLowYield ?? false
+  const yieldWhere = servedProgressWhere(includeLow)
   const [user, activity, dueReviewCount, newAvailableCount] = await Promise.all([
     prisma.user.findUnique({
       where: { id: userId },
@@ -49,12 +60,12 @@ export async function getDailyQueueState(
     }),
     // Genuinely-due review cards (seen at least once).
     prisma.flashcardProgress.count({
-      where: { userId, context, reviewCount: { gt: 0 }, nextReview: { lte: now } },
+      where: { userId, context, reviewCount: { gt: 0 }, nextReview: { lte: now }, ...yieldWhere },
     }),
     // ALL never-reviewed cards — future-dated drip-backlog rows included,
     // since the session builder pulls them forward up to today's allowance.
     prisma.flashcardProgress.count({
-      where: { userId, context, reviewCount: 0 },
+      where: { userId, context, reviewCount: 0, ...yieldWhere },
     }),
   ])
 
@@ -79,5 +90,6 @@ export async function getDailyQueueState(
     reviewsDoneToday,
     dueReviewCount,
     newAvailableCount,
+    includeLow,
   }
 }

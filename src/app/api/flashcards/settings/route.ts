@@ -24,10 +24,13 @@ import {
 function settingsPayload(user: {
   flashcardNewPerDay: number | null
   flashcardMaxReviewsPerDay: number | null
+  flashcardIncludeLowYield: boolean
 }) {
   return {
     newPerDay: user.flashcardNewPerDay,
     maxReviewsPerDay: user.flashcardMaxReviewsPerDay,
+    // Low-yield cards (MCAT exam-yield labels) are hidden unless opted in.
+    includeLowYield: user.flashcardIncludeLowYield,
     effective: effectiveDailyLimits(user),
     defaults: { newPerDay: DEFAULT_NEW_PER_DAY, maxReviewsPerDay: DEFAULT_MAX_REVIEWS_PER_DAY },
     bounds: {
@@ -44,7 +47,7 @@ export async function GET() {
   }
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true },
+    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeLowYield: true },
   })
   if (!user) {
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
@@ -80,7 +83,11 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 })
   }
 
-  const data: { flashcardNewPerDay?: number | null; flashcardMaxReviewsPerDay?: number | null } = {}
+  const data: {
+    flashcardNewPerDay?: number | null
+    flashcardMaxReviewsPerDay?: number | null
+    flashcardIncludeLowYield?: boolean
+  } = {}
 
   if ('newPerDay' in body) {
     const parsed = parseLimit(body.newPerDay, NEW_PER_DAY_MIN, NEW_PER_DAY_MAX, 'New cards per day')
@@ -98,6 +105,13 @@ export async function PATCH(request: Request) {
     data.flashcardMaxReviewsPerDay = parsed.value
   }
 
+  if ('includeLowYield' in body) {
+    // Strict boolean: "yes", 1 or null would otherwise silently flip a queue.
+    if (typeof body.includeLowYield !== 'boolean') {
+      return NextResponse.json({ error: 'includeLowYield must be true or false' }, { status: 400 })
+    }
+    data.flashcardIncludeLowYield = body.includeLowYield
+  }
   if (Object.keys(data).length === 0) {
     return NextResponse.json({ error: 'Nothing to update' }, { status: 400 })
   }
@@ -105,7 +119,7 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: session.user.id },
     data,
-    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true },
+    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeLowYield: true },
   })
   return NextResponse.json(settingsPayload(user))
 }

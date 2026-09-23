@@ -27,15 +27,16 @@ export async function GET(
           }
         },
         flashcards: {
+          // Browse mode shows the whole deck, low-yield included — this is
+          // where a hidden card stays reachable. The label lets the UI badge it.
           select: {
             id: true,
             front: true,
             back: true,
             hint: true,
+            examYield: true,
           },
-          orderBy: {
-            createdAt: 'asc'
-          }
+          orderBy: [{ examYield: { sort: 'asc', nulls: 'last' } }, { createdAt: 'asc' }],
         },
       },
     })
