@@ -95,6 +95,9 @@ export default function TeacherDashboard() {
     score: number | null; feedback: string | null
   } | null>(null)
   const [loading, setLoading] = useState(true)
+  // Needs Attention rows the teacher just marked as seen, kept for Undo.
+  const [cleared, setCleared] = useState<DashboardData['needsAttention'] | null>(null)
+  const [attentionError, setAttentionError] = useState<string | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
   const [showCreateModal, setShowCreateModal] = useState(false)
   const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', section: '', description: '', schoolId: '' })
@@ -126,6 +129,52 @@ export default function TeacherDashboard() {
       setLoading(false)
     }
   }, [router])
+
+  // Mark Needs Attention rows as seen. Optimistic: rows leave the list at
+  // once; a failed save puts them back. The server remembers each reason, so
+  // the same problem stays cleared on reload and a new one still shows.
+  const sendAttention = async (method: 'POST' | 'DELETE', rows: DashboardData['needsAttention']) => {
+    const results = await Promise.all(
+      rows.map((r) =>
+        fetch('/api/teacher/attention/dismiss', {
+          method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ studentId: r.studentId, reasons: r.reasons }),
+        }).then((res) => res.ok, () => false),
+      ),
+    )
+    return results.every(Boolean)
+  }
+
+  const clearAttention = async (rows: DashboardData['needsAttention']) => {
+    if (!data || rows.length === 0) return
+    const ids = new Set(rows.map((r) => r.studentId))
+    const previous = data
+    setAttentionError(null)
+    setData({
+      ...data,
+      needsAttention: data.needsAttention.filter((n) => !ids.has(n.studentId)),
+      stats: { ...data.stats, needsAttentionCount: Math.max(0, data.stats.needsAttentionCount - rows.length) },
+    })
+    setCleared(rows)
+    if (!(await sendAttention('POST', rows))) {
+      setData(previous)
+      setCleared(null)
+      setAttentionError('Could not mark that as seen. Please try again.')
+    }
+  }
+
+  const undoClear = async () => {
+    if (!cleared) return
+    const rows = cleared
+    setCleared(null)
+    if (await sendAttention('DELETE', rows)) {
+      await loadDashboard()
+    } else {
+      setAttentionError('Could not undo. Please refresh the page.')
+    }
+  }
+
 
   useEffect(() => {
     if (session) loadDashboard()
@@ -278,6 +327,24 @@ export default function TeacherDashboard() {
 
         {/* Needs attention — the dashboard's answer to "what do I do today".
             Always rendered (a positive note when empty) so the layout doesn't jump. */}
+        {(cleared || attentionError) && (
+          <div
+            role="status"
+            className="mb-3 flex items-center justify-between gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-2 text-sm"
+          >
+            <span className={attentionError ? 'text-red-700 dark:text-red-400' : 'text-gray-700 dark:text-gray-300'}>
+              {attentionError ??
+                (cleared!.length === 1
+                  ? `Marked ${cleared![0].studentName} as seen.`
+                  : `Marked ${cleared!.length} students as seen.`)}
+            </span>
+            {cleared && !attentionError && (
+              <button onClick={undoClear} className="font-semibold text-accent hover:underline">
+                Undo
+              </button>
+            )}
+          </div>
+        )}
         {data.needsAttention.length === 0 ? (
           <div id="needs-attention" className="mb-8 scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg px-6 py-4 border border-green-100 dark:border-green-900/30 flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5 shrink-0 text-green-600" aria-hidden />
@@ -287,11 +354,19 @@ export default function TeacherDashboard() {
           </div>
         ) : (
           <div id="needs-attention" className="mb-8 scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-amber-200 dark:border-amber-800">
-            <h2 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
-              <AlertTriangle className="inline w-5 h-5 mr-1.5 -mt-1 text-amber-500" aria-hidden /> Needs attention
-            </h2>
+            <div className="flex items-start justify-between gap-3 mb-1">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                <AlertTriangle className="inline w-5 h-5 mr-1.5 -mt-1 text-amber-500" aria-hidden /> Needs attention
+              </h2>
+              <button
+                onClick={() => clearAttention(data.needsAttention)}
+                className="shrink-0 text-xs font-semibold text-gray-600 dark:text-gray-400 hover:text-accent hover:underline"
+              >
+                Mark all as seen
+              </button>
+            </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-              Sorted by urgency. Open a student&apos;s report to see the details, or jump straight into their class.
+              Sorted by urgency. Mark a student as seen once you&apos;ve followed up; they come back only if something new comes up.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[...data.needsAttention]
@@ -338,6 +413,13 @@ export default function TeacherDashboard() {
                         >
                           Open class →
                         </Link>
+                        <button
+                          onClick={() => clearAttention([n])}
+                          className="ml-auto inline-flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400"
+                          aria-label={`Mark ${n.studentName} as seen`}
+                        >
+                          <Check className="w-3.5 h-3.5" aria-hidden /> Mark as seen
+                        </button>
                       </div>
                     </div>
                   )

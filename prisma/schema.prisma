@@ -65,6 +65,8 @@ model User {
   ownedClassrooms            Classroom[]                @relation("ClassroomTeacher")
   classroomMemberships       ClassroomMember[]
   coTeaching                 ClassroomCoTeacher[]       @relation("CoTeaching")
+  attentionDismissals        AttentionDismissal[]       @relation("AttentionDismissedBy")
+  attentionDismissedFor      AttentionDismissal[]       @relation("AttentionDismissedFor")
   assignmentSubmissions      AssignmentSubmission[]
   createdAssignments         Assignment[]               @relation("AssignmentCreator")
   flashcardSets              FlashcardSet[]             @relation("TeacherFlashcardSets")
@@ -1122,6 +1124,26 @@ model ClassroomCourse {
 // Co-teachers: teachers (other than the owner) granted access to a classroom.
 // Kept in a SEPARATE table from ClassroomMember so it never pollutes the
 // student-centric member queries (rosters, analytics, gradebook, counts).
+/// A teacher's "seen it" on one Needs Attention reason for one student. The
+/// dashboard recomputes the list from live data on every load, so without
+/// this a cleared item would simply reappear. Keyed by the reason text, which
+/// already names the assignment ("scored below target on \"Unit 3 Quiz\""),
+/// so a NEW problem still surfaces. Inactivity reasons stop counting as
+/// dismissed once the student is active again after dismissedAt.
+model AttentionDismissal {
+  id          String   @id @default(cuid())
+  teacherId   String
+  studentId   String
+  reason      String
+  dismissedAt DateTime @default(now())
+
+  teacher User @relation("AttentionDismissedBy", fields: [teacherId], references: [id], onDelete: Cascade)
+  student User @relation("AttentionDismissedFor", fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([teacherId, studentId, reason])
+  @@index([teacherId])
+}
+
 model ClassroomCoTeacher {
   id          String   @id @default(cuid())
   classroomId String

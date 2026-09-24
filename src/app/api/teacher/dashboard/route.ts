@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher } from '@/lib/teacher-auth'
+import { applyDismissals, INACTIVITY_REASON, type AttentionEntry } from '@/lib/attention-dismissals'
 
 /**
  * GET /api/teacher/dashboard — teacher dashboard overview
@@ -143,20 +144,15 @@ export async function GET() {
     }),
   ])
 
-  type Attention = {
-    studentId: string; studentName: string; classroomId: string
-    reasons: string[]; severity: number
-  }
-  const attention = new Map<string, Attention>()
+  const attention = new Map<string, AttentionEntry>()
   const noteAttention = (
     studentId: string, studentName: string, classroomId: string, reason: string, weight: number
   ) => {
     const prev = attention.get(studentId)
     if (prev) {
-      if (!prev.reasons.includes(reason)) prev.reasons.push(reason)
-      prev.severity += weight
+      if (!prev.items.some((i) => i.reason === reason)) prev.items.push({ reason, weight })
     } else {
-      attention.set(studentId, { studentId, studentName, classroomId, reasons: [reason], severity: weight })
+      attention.set(studentId, { studentId, studentName, classroomId, items: [{ reason, weight }] })
     }
   }
 
@@ -203,11 +199,28 @@ export async function GET() {
   )
   for (const m of allMembers) {
     if (everActive.has(m.userId) && !activeRecently.has(m.userId)) {
-      noteAttention(m.userId, studentNameById.get(m.userId) ?? 'Student', m.classroomId, 'no activity in 14 days', 1)
+      noteAttention(m.userId, studentNameById.get(m.userId) ?? 'Student', m.classroomId, INACTIVITY_REASON, 1)
     }
   }
 
-  const needsAttention = [...attention.values()]
+  // Drop what this teacher has already marked as seen (see
+  // src/lib/attention-dismissals.ts). Filter BEFORE the cap, or cleared rows
+  // would still use up slots and hide students behind them.
+  const [dismissals, lastActivity] = await Promise.all([
+    prisma.attentionDismissal.findMany({
+      where: { teacherId, studentId: { in: [...attention.keys()] } },
+      select: { studentId: true, reason: true, dismissedAt: true },
+    }),
+    prisma.topicProgress.groupBy({
+      by: ['userId'],
+      where: { userId: { in: [...attention.keys()] } },
+      _max: { lastAccessed: true },
+    }),
+  ])
+  const lastActivityByStudent = new Map(
+    lastActivity.filter((r) => r._max.lastAccessed).map((r) => [r.userId, r._max.lastAccessed as Date]),
+  )
+  const needsAttention = applyDismissals([...attention.values()], dismissals, lastActivityByStudent)
     .sort((a, b) => b.severity - a.severity)
     .slice(0, 12)
 
