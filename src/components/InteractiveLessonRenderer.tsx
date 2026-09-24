@@ -15,6 +15,7 @@ import { competitiveHrefForCourse } from '@/lib/competitive-course-map'
 import { useSession } from 'next-auth/react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { splitInlineMath } from '@/lib/inline-math-parts'
 import { latexToPlain } from '@/lib/latex-to-plain'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
@@ -97,82 +98,31 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
     return <span className={className}>{formatInlineMarkers(text)}</span>
   }
 
-  // Normalize \(...\) delimiters to $...$ before processing
-  const normalizedText = text.replace(/\\\(([^)]*?)\\\)/g, '$$$1$$')
-
-  // Protect escaped dollar signs (\$) from being treated as LaTeX delimiters
-  const ESCAPED_DOLLAR = '\u0000DOLLAR\u0000'
-  const processed = normalizedText.replace(/\\\$/g, ESCAPED_DOLLAR)
-
-  // If no unescaped $ remains, just restore and return plain text
-  if (!processed.includes('$')) {
-    return <span className={className}>{formatInlineMarkers(normalizedText.replace(/\\\$/g, '$'))}</span>
-  }
-
-  // Split on LaTeX delimiters: $$...$$ (display) and $...$ (inline)
-  const parts: { type: 'text' | 'latex'; content: string; display: boolean }[] = []
-  let remaining = processed
-  
-  while (remaining.length > 0) {
-    // Check for display math $$...$$ first
-    const displayMatch = remaining.match(/\$\$([^$]+?)\$\$/)
-    // Check for inline math $...$
-    const inlineMatch = remaining.match(/\$([^$]+?)\$/)
-    
-    // Find which comes first
-    const displayIndex = displayMatch ? remaining.indexOf(displayMatch[0]) : -1
-    const inlineIndex = inlineMatch ? remaining.indexOf(inlineMatch[0]) : -1
-    
-    let firstMatch: RegExpMatchArray | null = null
-    let firstIndex = -1
-    let isDisplay = false
-    
-    if (displayIndex >= 0 && (inlineIndex < 0 || displayIndex <= inlineIndex)) {
-      firstMatch = displayMatch
-      firstIndex = displayIndex
-      isDisplay = true
-    } else if (inlineIndex >= 0) {
-      firstMatch = inlineMatch
-      firstIndex = inlineIndex
-      isDisplay = false
-    }
-    
-    if (!firstMatch || firstIndex < 0) {
-      // No more LaTeX, push remaining text
-      if (remaining) parts.push({ type: 'text', content: remaining, display: false })
-      break
-    }
-    
-    // Push text before the match
-    if (firstIndex > 0) {
-      parts.push({ type: 'text', content: remaining.slice(0, firstIndex), display: false })
-    }
-    
-    // Push the LaTeX part
-    parts.push({ type: 'latex', content: firstMatch[1], display: isDisplay })
-    
-    // Move past the match
-    remaining = remaining.slice(firstIndex + firstMatch[0].length)
+  // Split on $...$ / $$...$$, honoring the `\$` currency escape on both
+  // the prose side (literal $) and the KaTeX side (`\$`).
+  const parts = splitInlineMath(text)
+  if (parts.every((p) => p.type === 'text')) {
+    return <span className={className}>{formatInlineMarkers(parts.map((p) => p.content).join(''))}</span>
   }
 
   return (
     <span className={className}>
       {parts.map((part, i) => {
         if (part.type === 'text') {
-          const restored = part.content.replace(/\u0000DOLLAR\u0000/g, '$')
           // If text contains HTML tags (other than the <u> marker, which
           // formatInlineMarkers renders safely), render as HTML
-          if (/<[a-z][\s\S]*>/i.test(restored.replace(/<u>[\s\S]+?<\/u>/g, ''))) {
-            return <span key={i} dangerouslySetInnerHTML={{ __html: restored }} />
+          if (/<[a-z][\s\S]*>/i.test(part.content.replace(/<u>[\s\S]+?<\/u>/g, ''))) {
+            return <span key={i} dangerouslySetInnerHTML={{ __html: part.content }} />
           }
-          return <span key={i}>{formatInlineMarkers(restored)}</span>
+          return <span key={i}>{formatInlineMarkers(part.content)}</span>
         }
+        const latex = part.content
         try {
           return (
             <span
               key={i}
               dangerouslySetInnerHTML={{
-                __html: renderKatexSync(part.content, {
+                __html: renderKatexSync(latex, {
                   throwOnError: false,
                   displayMode: part.display,
                 })
@@ -180,7 +130,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
             />
           )
         } catch {
-          return <span key={i}>{part.content}</span>
+          return <span key={i}>{latex}</span>
         }
       })}
     </span>
