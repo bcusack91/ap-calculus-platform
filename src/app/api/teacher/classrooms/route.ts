@@ -15,7 +15,8 @@ export async function GET() {
     const classrooms = await prisma.classroom.findMany({
       where: { teacherId: result.user!.id },
       include: {
-        _count: { select: { members: true, assignments: true, competitions: true } },
+        // Active members only: a student who left keeps an inactive row.
+        _count: { select: { members: { where: { isActive: true } }, assignments: true, competitions: true } },
       },
       orderBy: { createdAt: 'desc' },
     })
@@ -69,7 +70,7 @@ export async function POST(req: NextRequest) {
       joinCode,
     },
     include: {
-      _count: { select: { members: true } },
+      _count: { select: { members: { where: { isActive: true } } } },
     },
   })
 

@@ -58,7 +58,7 @@ export async function GET(
           include: { user: { select: { id: true, name: true, email: true } } },
           orderBy: { addedAt: 'asc' },
         },
-        _count: { select: { members: true } },
+        _count: { select: { members: { where: { isActive: true } } } },
       },
     })
 

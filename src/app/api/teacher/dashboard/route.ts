@@ -22,7 +22,10 @@ export async function GET() {
       OR: [{ teacherId }, { coTeachers: { some: { userId: teacherId } } }],
     },
     include: {
-      _count: { select: { members: true, assignments: true, competitions: true } },
+      // A student who left keeps an inactive membership row, so count only
+      // the active ones — the section page lists active members and the
+      // two must agree.
+      _count: { select: { members: { where: { isActive: true } }, assignments: true, competitions: true } },
     },
     orderBy: { createdAt: 'desc' },
   })
