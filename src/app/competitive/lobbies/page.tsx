@@ -273,6 +273,10 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
   const [raceSelected, setRaceSelected] = useState<string[]>([])
   const [durationMin, setDurationMin] = useState(5)
   const [ffaMax, setFfaMax] = useState(8)
+  // Races and 2v2s run on the class-lobby engine, which already has Chaos —
+  // it just was never offered here.
+  const [raceMode, setRaceMode] = useState<'competitive' | 'CHAOS'>('competitive')
+  const [raceIntensity, setRaceIntensity] = useState<'gentle' | 'full'>('gentle')
 
   useEffect(() => {
     if (!open) return
@@ -308,6 +312,8 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
               topicSlugs: raceSelected,
               durationSec: durationMin * 60,
               difficulty,
+              gameMode: raceMode,
+              chaosIntensity: raceIntensity,
               ...(format === 'RACE_FFA' ? { maxPlayers: ffaMax } : {}),
             }
       const res = await fetch('/api/competitive/open-lobbies', {
@@ -461,6 +467,51 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                 ? 'Starts when 4 players have joined — teams are balanced by MMR automatically.'
                 : 'You choose when to start once at least 2 players are in.'}
             </p>
+
+            <div>
+              <p className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Mode</p>
+              <div className="flex flex-wrap gap-2">
+                {([['competitive', '🏆 Competitive'], ['CHAOS', '🌀 Chaos']] as const).map(([id, label]) => (
+                  <button
+                    key={id}
+                    onClick={() => setRaceMode(id)}
+                    className={`rounded-xl border-2 px-4 py-2 text-sm font-semibold transition ${
+                      raceMode === id
+                        ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                        : 'border-gray-200 dark:border-gray-700'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              {raceMode === 'CHAOS' ? (
+                <div className="mt-2 space-y-1.5 rounded-xl border border-amber-200 bg-amber-50 p-3 dark:border-amber-800 dark:bg-amber-900/20">
+                  {([
+                    ['gentle', 'Gentle', 'blur, sliding answers and a frost freeze — no shake, flash or blackout'],
+                    ['full', 'Full chaos', 'adds screen shake, blackout, flip and the lightning storm'],
+                  ] as const).map(([id, label, desc]) => (
+                    <label key={id} className="flex gap-2 text-xs text-amber-900 dark:text-amber-200">
+                      <input
+                        type="radio"
+                        name="raceIntensity"
+                        className="mt-0.5"
+                        checked={raceIntensity === id}
+                        onChange={() => setRaceIntensity(id)}
+                      />
+                      <span><strong>{label}</strong> — {desc}</span>
+                    </label>
+                  ))}
+                  <p className="text-[11px] text-amber-800 dark:text-amber-300">
+                    Power-ups drop as you answer; whoever falls behind draws more often. Skip full chaos if anyone gets motion sick or is sensitive to flashing.
+                  </p>
+                </div>
+              ) : (
+                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                  Straight scoring — {format === 'TEAM_2V2' ? 'highest team total' : 'highest score'} wins.
+                </p>
+              )}
+            </div>
           </>
         )}
 

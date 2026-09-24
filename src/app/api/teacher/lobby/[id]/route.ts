@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher, requireLobbyHost } from '@/lib/teacher-auth'
+import { closeIfTimeIsUp } from '@/lib/lobby-expiry'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -11,7 +12,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   const session = await auth()
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  const lobby = await prisma.teacherLobby.findUnique({
+  const stored = await prisma.teacherLobby.findUnique({
     where: { id },
     include: {
       teacher: { select: { id: true, name: true, email: true } },
@@ -22,7 +23,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       },
     },
   })
-  if (!lobby) return NextResponse.json({ error: 'Lobby not found' }, { status: 404 })
+  if (!stored) return NextResponse.json({ error: 'Lobby not found' }, { status: 404 })
+  // A match whose timer has run out is over, whether or not the host clicked End.
+  const lobby = await closeIfTimeIsUp(stored)
 
   const isTeacher = lobby.teacherId === session.user.id
   const isParticipant = lobby.participants.some(p => p.userId === session.user.id)
@@ -72,6 +75,9 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
   }
   if (typeof body.numTeams === 'number') {
     data.numTeams = Math.max(2, Math.min(8, Math.floor(body.numTeams)))
+  }
+  if (body.format === 'RACE_FFA' || body.format === null) {
+    data.format = body.format
   }
   if (typeof body.courseSlug === 'string' || body.courseSlug === null) {
     data.courseSlug = body.courseSlug || null

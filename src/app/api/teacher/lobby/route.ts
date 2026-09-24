@@ -33,7 +33,11 @@ export async function POST(req: NextRequest) {
   // which are a real photosensitivity and vestibular risk in a class of 30. A
   // teacher opts into full chaos knowingly rather than discovering it mid-lesson.
   const chaosIntensity = body?.chaosIntensity === 'full' ? 'full' : 'gentle'
-  const numTeams = Math.max(2, Math.min(8, Number(body?.numTeams) || 2))
+  // Free-for-all: every player is their own side, assigned at start (the
+  // start route sets numTeams to the player count). Anything else is a team
+  // game with 2-8 MMR-drafted sides.
+  const format = body?.format === 'RACE_FFA' ? 'RACE_FFA' : null
+  const numTeams = format ? 2 : Math.max(2, Math.min(8, Number(body?.numTeams) || 2))
   const classroomId = typeof body?.classroomId === 'string' && body.classroomId ? body.classroomId : null
   const courseSlug = typeof body?.courseSlug === 'string' && body.courseSlug ? body.courseSlug : null
   const topicSlugs = Array.isArray(body?.topicSlugs)
@@ -68,6 +72,7 @@ export async function POST(req: NextRequest) {
       gameMode,
       chaosIntensity,
       numTeams,
+      format,
       status: 'OPEN',
     },
   })

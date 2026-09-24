@@ -97,9 +97,13 @@ describe('the delivery channel stays open', () => {
 
   it('never ships another student’s inventory to the client', () => {
     const play = repoFile('src/app/api/teacher/lobby/[id]/play/route.ts')
-    // Only the caller's own participant row is selected, so there is no other
-    // inventory in scope to leak.
-    expect(play).toContain('where: { userId: session.user.id }')
+    // The roster is loaded for the standings, but powerUps is read in a
+    // separate query scoped to the caller's own row — no other inventory is
+    // ever in scope to leak, and the roster payload carries names only.
+    const rosterSelect = play.slice(play.indexOf('participants: {'), play.indexOf('user: { select: { name: true } }'))
+    expect(rosterSelect).not.toContain('powerUps')
+    expect(play).toContain('where: { id: me.id },\n      select: { powerUps: true },')
+    expect(play).not.toContain('email: true')
   })
 })
 

@@ -32,15 +32,17 @@ export async function POST(_req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: 'No participants in lobby.' }, { status: 400 })
   }
 
-  // Student-hosted open lobbies assign teams automatically at start — there is
-  // no separate "balance" step for a student host to forget.
+  // Sides are assigned automatically at start for every format but the
+  // teacher's classic team game — there is no separate "balance" step for a
+  // host to forget.
   //   RACE_FFA  — every player is their own team (an individual leaderboard),
-  //               so numTeams becomes the player count. Needs 2+ players.
+  //               so numTeams becomes the player count. Teacher-hosted or
+  //               student-hosted alike; a student race needs 2+ players.
   //   TEAM_2V2  — exactly 4 players, split 2v2 by the same MMR snake-draft the
   //               teacher flow uses, so the ranked ladder still makes casual
   //               teams fair.
-  if (lobby.studentHosted && lobby.format === 'RACE_FFA') {
-    if (lobby.participants.length < 2) {
+  if (lobby.format === 'RACE_FFA') {
+    if (lobby.studentHosted && lobby.participants.length < 2) {
       return NextResponse.json({ error: 'Need at least 2 players to start a race.' }, { status: 400 })
     }
     await Promise.all(

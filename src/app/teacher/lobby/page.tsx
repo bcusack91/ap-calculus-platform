@@ -12,6 +12,7 @@ interface LobbySummary {
   topicSlug: string | null
   gameMode: string
   numTeams: number
+  format?: string | null
   status: 'OPEN' | 'IN_PROGRESS' | 'CLOSED'
   createdAt: string
   classroom: { id: string; name: string } | null
@@ -24,7 +25,7 @@ export default function TeacherLobbiesPage() {
   const [lobbies, setLobbies] = useState<LobbySummary[]>([])
   const [loading, setLoading] = useState(true)
   const [showCreate, setShowCreate] = useState(false)
-  const [newLobby, setNewLobby] = useState({ name: '', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
+  const [newLobby, setNewLobby] = useState({ name: '', format: 'TEAMS', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
   const [creating, setCreating] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -63,6 +64,7 @@ export default function TeacherLobbiesPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: newLobby.name || 'Class Match',
+          format: newLobby.format === 'RACE_FFA' ? 'RACE_FFA' : null,
           numTeams: newLobby.numTeams,
           gameMode: newLobby.gameMode,
           chaosIntensity: newLobby.chaosIntensity,
@@ -71,7 +73,7 @@ export default function TeacherLobbiesPage() {
       const json = await res.json()
       if (!res.ok) throw new Error(json.error || 'Failed to create lobby')
       setShowCreate(false)
-      setNewLobby({ name: '', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
+      setNewLobby({ name: '', format: 'TEAMS', numTeams: 2, gameMode: 'competitive', chaosIntensity: 'gentle' })
       router.push(`/teacher/lobby/${json.lobby.id}`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed')
@@ -91,7 +93,7 @@ export default function TeacherLobbiesPage() {
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Class Lobbies</h1>
             <p className="text-gray-600 mt-1">
-              Create a lobby, share the code with students, then split them into MMR-balanced teams.
+              Create a lobby, share the code with students, then play as MMR-balanced teams or a free-for-all.
             </p>
           </div>
           <button
@@ -116,24 +118,62 @@ export default function TeacherLobbiesPage() {
                   placeholder="Period 4 Calculus"
                 />
               </label>
-              <label className="text-sm">
-                <span className="block text-gray-600 mb-1">Number of teams</span>
-                <input
-                  type="number"
-                  min={2}
-                  max={8}
-                  className="w-full rounded border-gray-300"
-                  value={newLobby.numTeams}
-                  onChange={e => setNewLobby({ ...newLobby, numTeams: Math.max(2, Math.min(8, Number(e.target.value) || 2)) })}
-                />
-              </label>
+              {newLobby.format === 'TEAMS' && (
+                <label className="text-sm">
+                  <span className="block text-gray-600 mb-1">Number of teams</span>
+                  <input
+                    type="number"
+                    min={2}
+                    max={8}
+                    className="w-full rounded border-gray-300"
+                    value={newLobby.numTeams}
+                    onChange={e => setNewLobby({ ...newLobby, numTeams: Math.max(2, Math.min(8, Number(e.target.value) || 2)) })}
+                  />
+                </label>
+              )}
             </div>
+            <fieldset className="mt-4">
+              <legend className="text-sm text-gray-600 mb-1">Format</legend>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { key: 'TEAMS', icon: '👥', title: 'Teams', desc: 'Split the class into MMR-balanced teams. Highest team total wins.' },
+                  { key: 'RACE_FFA', icon: '🏁', title: 'Free-for-all', desc: 'Everyone plays for themselves on one leaderboard. No teams to balance.' },
+                ].map(f => (
+                  <button
+                    key={f.key}
+                    type="button"
+                    onClick={() => setNewLobby({ ...newLobby, format: f.key })}
+                    aria-pressed={newLobby.format === f.key}
+                    className={`rounded-lg border p-3 text-left transition-colors ${
+                      newLobby.format === f.key
+                        ? 'border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600'
+                        : 'border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    <div className="font-medium text-sm text-gray-900">{f.icon} {f.title}</div>
+                    <div className="mt-0.5 text-xs text-gray-600">{f.desc}</div>
+                  </button>
+                ))}
+              </div>
+            </fieldset>
             <fieldset className="mt-4">
               <legend className="text-sm text-gray-600 mb-1">Game mode</legend>
               <div className="grid grid-cols-2 gap-2">
                 {[
-                  { key: 'competitive', icon: '🏆', title: 'Competitive', desc: 'Straight scoring — highest team total wins.' },
-                  { key: 'CHAOS', icon: '🎲', title: 'Chaos Mode', desc: 'Power-ups drop as students answer. Teams that fall behind draw more often.' },
+                  {
+                    key: 'competitive',
+                    icon: '🏆',
+                    title: 'Competitive',
+                    desc: newLobby.format === 'RACE_FFA' ? 'Straight scoring — highest score wins.' : 'Straight scoring — highest team total wins.',
+                  },
+                  {
+                    key: 'CHAOS',
+                    icon: '🎲',
+                    title: 'Chaos Mode',
+                    desc: newLobby.format === 'RACE_FFA'
+                      ? 'Power-ups drop as students answer. Whoever falls behind draws more often.'
+                      : 'Power-ups drop as students answer. Teams that fall behind draw more often.',
+                  },
                 ].map(m => (
                   <button
                     key={m.key}
@@ -228,7 +268,7 @@ export default function TeacherLobbiesPage() {
                       {' · '}
                       {l._count.participants} participants
                       {' · '}
-                      {l.numTeams} teams
+                      {l.format === 'RACE_FFA' ? 'Free-for-all' : `${l.numTeams} teams`}
                       {l.classroom ? ` · ${l.classroom.name}` : ''}
                     </div>
                   </div>

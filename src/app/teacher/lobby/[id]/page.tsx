@@ -3,6 +3,7 @@
 import { use, useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import { isFreeForAll, lobbyTimeIsUp, rankPlayers } from '@/lib/lobby-standings'
 
 interface Participant {
   id: string
@@ -137,10 +138,17 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
   useEffect(() => {
     // A student host plays their own game — unlike a teacher, who referees
     // from this control view, they follow everyone else into /play on start.
-    if (lobby?.status === 'IN_PROGRESS' && (!isTeacher || lobby.studentHosted)) {
+    // Once the timer has run out the match is over even if the stored status
+    // has not caught up yet, and this page IS the leaderboard — bouncing a
+    // player back into /play here is what hid the final scores.
+    if (
+      lobby?.status === 'IN_PROGRESS' &&
+      !lobbyTimeIsUp(lobby) &&
+      (!isTeacher || lobby.studentHosted)
+    ) {
       router.replace(`/teacher/lobby/${id}/play`)
     }
-  }, [lobby?.status, lobby?.studentHosted, isTeacher, router, id])
+  }, [lobby?.status, lobby?.endsAt, lobby?.studentHosted, isTeacher, router, id, lobby])
 
   // Initialize settings UI from lobby once loaded
   useEffect(() => {
@@ -285,6 +293,23 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
     return <div className="p-8 text-gray-600">{error || 'Loading…'}</div>
   }
 
+  // Free-for-all: no sides, no balancing, one leaderboard. (Each player still
+  // gets a team index at start so the Chaos engine's targeting works.)
+  const isFfa = isFreeForAll(lobby)
+  const ranked = rankPlayers(
+    lobby.participants.map(p => ({
+      id: p.id,
+      name: p.user.name || p.user.email || 'Anonymous',
+      team: p.team,
+      score: p.score || 0,
+      questionsCorrect: p.questionsCorrect || 0,
+      questionsAnswered: p.questionsAnswered || 0,
+    })),
+  )
+  // A student host auto-drafts at start (2v2) or plays free-for-all, so only
+  // the teacher's classic team game still needs everyone placed first.
+  const needsBalancing = !isFfa && !lobby.studentHosted
+
   const endsAtMs = lobby.endsAt ? new Date(lobby.endsAt).getTime() : null
   const remainingSec = endsAtMs ? Math.max(0, Math.floor((endsAtMs - now) / 1000)) : null
   const remainingMin = remainingSec !== null ? Math.floor(remainingSec / 60) : null
@@ -298,7 +323,7 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
             <h1 className="text-2xl font-bold text-gray-900">{lobby.name}</h1>
             <p className="text-sm text-gray-500">
               {lobby.classroom ? `${lobby.classroom.name} · ` : ''}
-              {lobby.numTeams} teams · {lobby.participants.length} participants
+              {isFfa ? 'Free-for-all' : `${lobby.numTeams} teams`} · {lobby.participants.length} participants
               {lobby.courseSlug ? ` · ${lobby.courseSlug}` : ''}
               {lobby.topicSlugs?.length ? ` · ${lobby.topicSlugs.length} topics` : ''}
             </p>
@@ -442,16 +467,18 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
 
         {isTeacher && lobby.status === 'OPEN' && (
           <div className="mb-5 flex flex-wrap gap-2">
-            <button
-              onClick={balance}
-              disabled={busy || lobby.participants.length < lobby.numTeams}
-              className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
-            >
-              Balance teams (snake-draft by MMR)
-            </button>
+            {!isFfa && (
+              <button
+                onClick={balance}
+                disabled={busy || lobby.participants.length < lobby.numTeams}
+                className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
+              >
+                Balance teams (snake-draft by MMR)
+              </button>
+            )}
             <button
               onClick={start}
-              disabled={busy || unassigned.length > 0 || lobby.participants.length === 0 || !selCourse || selTopics.length === 0}
+              disabled={busy || (needsBalancing && unassigned.length > 0) || lobby.participants.length === 0 || !selCourse || selTopics.length === 0}
               className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-50"
             >
               Start match
@@ -504,7 +531,32 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
           </div>
         )}
 
-        {(lobby.status === 'IN_PROGRESS' || lobby.status === 'CLOSED') && (
+        {(lobby.status === 'IN_PROGRESS' || lobby.status === 'CLOSED') && isFfa && (
+          <>
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+              {lobby.status === 'CLOSED' ? 'Final leaderboard' : 'Leaderboard'}
+            </h2>
+            <ul className="rounded-lg border border-gray-200 bg-white divide-y mb-6">
+              {ranked.map(p => (
+                <li key={p.id} className="flex justify-between items-center p-3 text-sm">
+                  <span>
+                    <span className="font-mono text-gray-400 mr-2">#{p.rank}</span>
+                    {p.rank === 1 && lobby.status === 'CLOSED' && <span className="mr-1">🏆</span>}
+                    {p.name}
+                  </span>
+                  <span className="font-mono">
+                    <span className="font-bold">{p.score}</span>
+                    <span className="text-xs text-gray-500 ml-2">
+                      {p.questionsCorrect}/{p.questionsAnswered}
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {(lobby.status === 'IN_PROGRESS' || lobby.status === 'CLOSED') && !isFfa && (
           <>
             <h2 className="text-lg font-semibold text-gray-900 mb-2">Team scoreboard</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
@@ -552,7 +604,29 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
           </>
         )}
 
-        {lobby.status === 'OPEN' && (
+        {lobby.status === 'OPEN' && isFfa && (
+          <>
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+              Players ({lobby.participants.length}{lobby.maxPlayers ? `/${lobby.maxPlayers}` : ''})
+            </h2>
+            <ul className="rounded-lg border border-gray-200 bg-white divide-y mb-6">
+              {lobby.participants.map(p => (
+                <li key={p.id} className="flex justify-between p-3 text-sm">
+                  <span>{p.user.name || p.user.email || 'Anonymous'}</span>
+                  <span className="font-mono text-gray-500">MMR {p.mmrAtJoin}</span>
+                </li>
+              ))}
+              {lobby.participants.length === 0 && (
+                <li className="p-3 text-sm italic text-gray-500">No players yet</li>
+              )}
+            </ul>
+            <p className="mb-6 text-xs text-gray-500">
+              Everyone plays for themselves — the leaderboard appears once the match starts.
+            </p>
+          </>
+        )}
+
+        {lobby.status === 'OPEN' && !isFfa && (
           <>
             <h2 className="text-lg font-semibold text-gray-900 mb-2">Teams</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">

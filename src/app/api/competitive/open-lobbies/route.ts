@@ -25,8 +25,8 @@ import { getCourseEntry } from '@/lib/teacher-lobby-courses'
  *               their own team. Casual.
  *
  * GET  — list public joinable lobbies (both kinds), pruning stale ones.
- * POST — create one: { format, topicSlug?, gameMode?, courseSlug?, topicSlugs?,
- *        durationSec?, name?, maxPlayers? }
+ * POST — create one: { format, topicSlug?, gameMode?, chaosIntensity?, courseSlug?,
+ *        topicSlugs?, durationSec?, name?, maxPlayers? }
  */
 
 const STALE_MS = 2 * 60 * 60 * 1000 // absolute backstop: lobbies this old are pruned regardless
@@ -121,6 +121,7 @@ export async function GET() {
         courseName: r.courseSlug ? (getCourseEntry(r.courseSlug)?.name ?? r.courseSlug) : null,
         topicSlugs: Array.isArray(r.topicSlugs) ? (r.topicSlugs as string[]) : [],
         difficulty: r.difficulty,
+        gameMode: r.gameMode,
         durationSec: r.durationSec,
         players: r.participants.length,
         maxPlayers: r.maxPlayers ?? 8,
@@ -187,6 +188,11 @@ export async function POST(req: NextRequest) {
     const name =
       (typeof body?.name === 'string' && body.name.trim().slice(0, 60)) ||
       (format === 'TEAM_2V2' ? '2v2 Team Battle' : 'Free-for-All Race')
+    // Chaos runs on the same lobby engine for races and 2v2s as it does for
+    // class lobbies. Gentle by default for the same reason the teacher route
+    // defaults to it: the shake/flash/blackout effects are an opt-in.
+    const gameMode = body?.gameMode === 'CHAOS' ? 'CHAOS' : 'competitive'
+    const chaosIntensity = body?.chaosIntensity === 'full' ? 'full' : 'gentle'
 
     let joinCode = generateTeacherLobbyCode()
     for (let i = 0; i < 5; i++) {
@@ -211,7 +217,8 @@ export async function POST(req: NextRequest) {
         courseSlug,
         topicSlugs,
         durationSec,
-        gameMode: 'competitive',
+        gameMode,
+        chaosIntensity,
         numTeams: 2,
         studentHosted: true,
         isPublic: true,

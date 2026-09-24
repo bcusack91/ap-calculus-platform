@@ -19,6 +19,7 @@ import {
 } from '@/components/ChaosMode'
 import { activeEffects, POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups'
 import type { LobbyInventoryItem } from '@/lib/lobby-chaos'
+import { isFreeForAll, resultHeadline, type RankedPlayer, type TeamTotal } from '@/lib/lobby-standings'
 
 interface PlayQuestion {
   id: number | string
@@ -42,8 +43,14 @@ interface PlayState {
   endsAt?: string
   durationSec?: number
   gameMode?: string
+  format?: string | null
+  numTeams?: number
   chaos?: LobbyChaosState | null
   questions?: PlayQuestion[]
+  // Everyone's score, ranked, so a player can see where they stand without
+  // leaving the match. Team totals are empty in a free-for-all.
+  standings?: RankedPlayer[]
+  teamTotals?: TeamTotal[]
   myProgress?: {
     score: number
     questionsAnswered: number
@@ -54,6 +61,88 @@ interface PlayState {
 }
 
 const TEAM_COLORS = ['Team 1', 'Team 2', 'Team 3', 'Team 4', 'Team 5', 'Team 6', 'Team 7', 'Team 8']
+
+const TEAM_TINTS = [
+  'bg-rose-50 border-rose-200 text-rose-900',
+  'bg-sky-50 border-sky-200 text-sky-900',
+  'bg-emerald-50 border-emerald-200 text-emerald-900',
+  'bg-amber-50 border-amber-200 text-amber-900',
+  'bg-violet-50 border-violet-200 text-violet-900',
+  'bg-orange-50 border-orange-200 text-orange-900',
+  'bg-teal-50 border-teal-200 text-teal-900',
+  'bg-pink-50 border-pink-200 text-pink-900',
+]
+
+/**
+ * Live standings. Team games lead with the team totals (that is what wins);
+ * a free-for-all is one ranked list. `limit` keeps the in-match panel short —
+ * the top few plus the caller's own row if they are further down.
+ */
+function Standings({
+  ffa,
+  standings,
+  teamTotals,
+  limit,
+  final,
+}: {
+  ffa: boolean
+  standings: RankedPlayer[]
+  teamTotals: TeamTotal[]
+  limit?: number
+  final?: boolean
+}) {
+  const me = standings.find((p) => p.isMe)
+  const shown = limit ? standings.slice(0, limit) : standings
+  const meHidden = !!me && !shown.some((p) => p.isMe)
+  const rows = meHidden && me ? [...shown, me] : shown
+  return (
+    <div className="text-left">
+      {!ffa && teamTotals.length > 0 && (
+        <div className="grid grid-cols-2 gap-2 mb-3 sm:grid-cols-3">
+          {teamTotals.map((t) => (
+            <div
+              key={t.team}
+              className={`rounded-lg border px-3 py-2 ${TEAM_TINTS[t.team % TEAM_TINTS.length]} ${t.isMine ? 'ring-2 ring-indigo-500' : ''}`}
+            >
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-bold">
+                  {TEAM_COLORS[t.team] ?? `Team ${t.team + 1}`}
+                  {t.isMine && <span className="ml-1 text-[10px] font-semibold uppercase tracking-wide opacity-70">you</span>}
+                </span>
+                <span className="text-lg font-bold tabular-nums">{t.score}</span>
+              </div>
+              <div className="text-[11px] opacity-70">{t.players} players · {t.answered} answered</div>
+            </div>
+          ))}
+        </div>
+      )}
+      {rows.length > 0 && (
+        <ul className="divide-y rounded-lg border border-gray-200 bg-white">
+          {rows.map((p) => (
+            <li
+              key={p.id}
+              className={`flex items-center justify-between px-3 py-1.5 text-sm ${p.isMe ? 'bg-indigo-50 font-semibold' : ''}`}
+            >
+              <span className="min-w-0 truncate">
+                <span className="mr-2 font-mono text-gray-400">#{p.rank}</span>
+                {final && p.rank === 1 && <span className="mr-1">🏆</span>}
+                {p.name}
+                {p.isMe && <span className="ml-1 text-xs font-normal text-indigo-600">(you)</span>}
+                {!ffa && p.team !== null && (
+                  <span className="ml-2 text-xs font-normal text-gray-500">{TEAM_COLORS[p.team] ?? `Team ${p.team + 1}`}</span>
+                )}
+              </span>
+              <span className="ml-3 shrink-0 font-mono">
+                <span className="font-bold">{p.score}</span>
+                <span className="ml-2 text-xs text-gray-500">{p.questionsCorrect}/{p.questionsAnswered}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -76,6 +165,11 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   const [firing, setFiring] = useState(false)
 
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Once the question bank is loaded, later polls ask for the light payload
+  // (standings + chaos, no questions) — a 30-player room polling every few
+  // seconds should not re-download 200 questions each time.
+  const haveQuestions = useRef(false)
+  const pollTick = useRef(0)
   // Effects already announced, so re-polling the same active attack does not
   // re-toast it every two seconds.
   const seenEffects = useRef<Set<string>>(new Set())
@@ -94,13 +188,14 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   const load = useCallback(async () => {
     try {
-      const res = await fetch(`/api/teacher/lobby/${id}/play`)
+      const res = await fetch(`/api/teacher/lobby/${id}/play${haveQuestions.current ? '?light=1' : ''}`)
       const json = await res.json()
       if (!res.ok) {
         setError(json.error || 'Failed to load match')
         return
       }
-      setState(json)
+      if (Array.isArray(json.questions)) haveQuestions.current = true
+      setState((prev) => ({ ...json, questions: json.questions ?? prev?.questions }))
       if (json.chaos) {
         setChaos(json.chaos)
         // Tell the victim who hit them — ActiveEffect.from carries the
@@ -138,12 +233,14 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   useEffect(() => {
     if (authStatus !== 'authenticated') return
     void load()
-    // Poll every 5s while waiting. Normally polling stops once IN_PROGRESS
-    // because the questions are already loaded — but in Chaos Mode this GET is
-    // how an incoming attack reaches its victim, so keep a faster poll running.
+    // Poll while waiting and during the match: standings update live, and in
+    // Chaos Mode this GET is how an incoming attack reaches its victim, so
+    // chaos polls every 2s and everything else every 4s (light payload).
     const t = setInterval(() => {
+      pollTick.current += 1
       setState(s => {
-        if (!s || s.status !== 'IN_PROGRESS' || s.gameMode === 'CHAOS') void load()
+        const chaosPace = !s || s.status !== 'IN_PROGRESS' || s.gameMode === 'CHAOS'
+        if (chaosPace || pollTick.current % 2 === 0) void load()
         return s
       })
     }, 2000)
@@ -290,9 +387,9 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
       <div className="min-h-screen flex items-center justify-center bg-indigo-50 text-gray-900">
         <div className="rounded-lg bg-white p-8 shadow text-center max-w-md">
           <div className="text-5xl mb-3">⏳</div>
-          <h1 className="text-2xl font-bold mb-2">Waiting for the teacher…</h1>
+          <h1 className="text-2xl font-bold mb-2">Waiting for the host…</h1>
           <p className="text-gray-600 mb-4">
-            The match hasn&apos;t started yet. Once your teacher hits &ldquo;Start match&rdquo;, the timer
+            The match hasn&apos;t started yet. Once the host hits &ldquo;Start match&rdquo;, the timer
             will begin and questions will appear here.
           </p>
           <button
@@ -306,16 +403,27 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
     )
   }
 
+  const ffa = isFreeForAll(state)
+  const standings = state.standings ?? []
+  const totals = state.teamTotals ?? []
+
   // Post-game
   if (state.status === 'CLOSED' || expired) {
     const accuracy =
       questionsAnswered > 0 ? Math.round((questionsCorrect / questionsAnswered) * 100) : 0
+    const mine = standings.find((p) => p.isMe)
+    const headline = resultHeadline({ ffa, ranked: standings, teams: totals, myTeam: state.myProgress?.team })
     return (
       <div className="min-h-screen flex items-center justify-center bg-indigo-50 p-4 text-gray-900">
-        <div className="rounded-lg bg-white p-8 shadow text-center max-w-md">
+        <div className="rounded-lg bg-white p-8 shadow text-center w-full max-w-lg">
           <div className="text-5xl mb-3">🏁</div>
-          <h1 className="text-2xl font-bold mb-2">Match over!</h1>
-          {state.myProgress?.team !== null && state.myProgress?.team !== undefined && (
+          <h1 className="text-2xl font-bold mb-1">{headline}</h1>
+          {ffa && mine && (
+            <p className="text-sm text-gray-500 mb-4">
+              You finished <strong>#{mine.rank}</strong> of {standings.length}
+            </p>
+          )}
+          {!ffa && state.myProgress?.team !== null && state.myProgress?.team !== undefined && (
             <p className="text-sm text-gray-500 mb-4">
               You played for <strong>{TEAM_COLORS[state.myProgress.team] ?? `Team ${state.myProgress.team + 1}`}</strong>
             </p>
@@ -334,11 +442,19 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
               <div className="text-xs text-gray-600">Accuracy</div>
             </div>
           </div>
+          {standings.length > 0 && (
+            <div className="my-4">
+              <h2 className="mb-2 text-left text-sm font-semibold uppercase tracking-wide text-gray-500">
+                {ffa ? 'Final leaderboard' : 'Final scores'}
+              </h2>
+              <Standings ffa={ffa} standings={standings} teamTotals={totals} final />
+            </div>
+          )}
           <button
             onClick={() => router.push(`/teacher/lobby/${id}`)}
             className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
           >
-            Back to lobby (see leaderboard)
+            Back to lobby
           </button>
         </div>
       </div>
@@ -455,6 +571,15 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
                 )
               })}
             </div>
+          </div>
+        )}
+
+        {standings.length > 1 && (
+          <div className="mt-4">
+            <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+              {ffa ? 'Leaderboard' : 'Standings'}
+            </h2>
+            <Standings ffa={ffa} standings={standings} teamTotals={totals} limit={5} />
           </div>
         )}
 
