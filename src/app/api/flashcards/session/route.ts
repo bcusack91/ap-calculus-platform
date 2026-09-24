@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
-import { includeLowYieldFor } from '@/lib/flashcard-yield-prefs'
+import { yieldPrefsFor } from '@/lib/flashcard-yield-prefs'
 
 /**
  * GET /api/flashcards/session?topicSlug=xxx&limit=20
@@ -28,10 +28,9 @@ export async function GET(req: NextRequest) {
     // Low-yield cards are hidden unless the student opted in. A topic drill may
     // also ask for them explicitly (?includeLowYield=1) without changing the
     // daily-limit numbers, which this branch never composes anyway.
-    const includeLow =
-      (await includeLowYieldFor(userId)) ||
-      (!!topicSlug && req.nextUrl.searchParams.get('includeLowYield') === '1')
-    const yieldWhere = servedProgressWhere(includeLow)
+    const drillEverything = !!topicSlug && req.nextUrl.searchParams.get('includeLowYield') === '1'
+    const prefs = drillEverything ? { includeMedium: true, includeLow: true } : await yieldPrefsFor(userId)
+    const yieldWhere = servedProgressWhere(prefs)
 
     // UNSCOPED (the dashboard widget): serve only the user's own deck — cards
     // already unlocked into the active study context. The old query served
@@ -121,7 +120,7 @@ export async function GET(req: NextRequest) {
 
     // TOPIC-SCOPED: deliberate practice of one topic — due cards first, then
     // cards never seen in this context (browse-style access to that topic).
-    const topicFilter = { topic: { slug: topicSlug }, ...servedFlashcardWhere(includeLow) }
+    const topicFilter = { topic: { slug: topicSlug }, ...servedFlashcardWhere(prefs) }
 
     // Query due cards and new cards directly from DB instead of fetching all and filtering in JS
     const [dueCards, newCards] = await Promise.all([

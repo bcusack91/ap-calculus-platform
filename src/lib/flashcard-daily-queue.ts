@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { servedProgressWhere } from '@/lib/flashcard-yield'
+import { servedProgressWhere, type YieldPrefs } from '@/lib/flashcard-yield'
 import {
   composeDailyQueues,
   effectiveDailyLimits,
@@ -27,8 +27,8 @@ export interface DailyQueueState extends DailyQueueComposition {
   reviewsDoneToday: number
   dueReviewCount: number
   newAvailableCount: number
-  /** The student's low-yield opt-in, so callers need not re-read the user. */
-  includeLow: boolean
+  /** The student's yield opt-ins, so callers need not re-read the user. */
+  yieldPrefs: YieldPrefs
 }
 
 /** Today's UTC-day Date, matching the raw CURRENT_DATE used by the rollup. */
@@ -41,14 +41,17 @@ export async function getDailyQueueState(
   context: string,
   now: Date = new Date(),
 ): Promise<DailyQueueState> {
-  // Low-yield cards are hidden unless the student opted in. Both counts below
-  // must honor that, or the dashboard promises cards the session never serves.
+  // Only opted-in yield tiers count. Both counts below must honor that, or
+  // the dashboard promises cards the session never serves.
   const pref = await prisma.user.findUnique({
     where: { id: userId },
-    select: { flashcardIncludeLowYield: true },
+    select: { flashcardIncludeMediumYield: true, flashcardIncludeLowYield: true },
   })
-  const includeLow = pref?.flashcardIncludeLowYield ?? false
-  const yieldWhere = servedProgressWhere(includeLow)
+  const yieldPrefs: YieldPrefs = {
+    includeMedium: pref?.flashcardIncludeMediumYield ?? true,
+    includeLow: pref?.flashcardIncludeLowYield ?? false,
+  }
+  const yieldWhere = servedProgressWhere(yieldPrefs)
   const [user, activity, dueReviewCount, newAvailableCount] = await Promise.all([
     prisma.user.findUnique({
       where: { id: userId },
@@ -90,6 +93,6 @@ export async function getDailyQueueState(
     reviewsDoneToday,
     dueReviewCount,
     newAvailableCount,
-    includeLow,
+    yieldPrefs,
   }
 }

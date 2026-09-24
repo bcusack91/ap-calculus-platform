@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { compareByYield } from '@/lib/flashcard-yield'
+import { DEFAULT_YIELD_PREFS, compareByYield, servedYields } from '@/lib/flashcard-yield'
 import { PERSONAL_CONTEXT, resolveUnlockContexts } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { hasExitQuiz } from '@/data/exit-quizzes'
@@ -185,7 +185,8 @@ export async function maybeUnlockFlashcards(
   // first, low-yield last (they are still enrolled, so opting in later needs
   // no backfill), and a deterministic tiebreak.
   const cardIds = [...cards].sort(compareByYield).map((f) => f.id)
-  const servedCount = cards.filter((f) => f.examYield !== 'LOW').length
+  const defaultTiers = new Set<string>(servedYields(DEFAULT_YIELD_PREFS))
+  const servedCount = cards.filter((f) => f.examYield === null || defaultTiers.has(f.examYield)).length
 
   const courseSlug = topic.category?.course?.slug ?? null
   // Which decks these cards belong in: always personal, the topic's OWN course

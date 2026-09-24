@@ -44,7 +44,8 @@ async function main() {
 
   let drift = 0
   let changed = 0
-  const totals = { before: { HIGH: 0, MEDIUM: 0, LOW: 0, NULL: 0 }, after: { HIGH: 0, MEDIUM: 0, LOW: 0, NULL: 0 } }
+  const zero = () => ({ ULTRA_HIGH: 0, HIGH: 0, MEDIUM: 0, LOW: 0, NULL: 0 })
+  const totals = { before: zero(), after: zero() }
 
   for (const [topic, entries] of [...artifactByTopic.entries()].sort()) {
     const live = await prisma.flashcard.findMany({
@@ -58,9 +59,9 @@ async function main() {
     }
     const wanted = new Map(entries.map((e) => [e.fp, e.yield as ExamYield]))
 
-    const before = { HIGH: 0, MEDIUM: 0, LOW: 0, NULL: 0 }
-    const after = { HIGH: 0, MEDIUM: 0, LOW: 0, NULL: 0 }
-    const updates: Record<ExamYield, string[]> = { HIGH: [], MEDIUM: [], LOW: [] }
+    const before = zero()
+    const after = zero()
+    const updates: Record<ExamYield, string[]> = { ULTRA_HIGH: [], HIGH: [], MEDIUM: [], LOW: [] }
 
     for (const entry of entries) {
       if (!liveByFp.has(entry.fp)) {
@@ -85,14 +86,14 @@ async function main() {
 
     const n = YIELD_VALUES.reduce((s, y) => s + updates[y].length, 0)
     changed += n
-    for (const k of ['HIGH', 'MEDIUM', 'LOW', 'NULL'] as const) {
+    for (const k of ['ULTRA_HIGH', 'HIGH', 'MEDIUM', 'LOW', 'NULL'] as const) {
       totals.before[k] += before[k]
       totals.after[k] += after[k]
     }
     console.log(
       `${topic.padEnd(50)} ${live.length.toString().padStart(3)} cards  ` +
-        `before H${before.HIGH}/M${before.MEDIUM}/L${before.LOW}/∅${before.NULL} -> ` +
-        `after H${after.HIGH}/M${after.MEDIUM}/L${after.LOW}/∅${after.NULL}  (changes ${n})`,
+        `before U${before.ULTRA_HIGH}/H${before.HIGH}/M${before.MEDIUM}/L${before.LOW}/∅${before.NULL} -> ` +
+        `after U${after.ULTRA_HIGH}/H${after.HIGH}/M${after.MEDIUM}/L${after.LOW}/∅${after.NULL}  (changes ${n})`,
     )
 
     if (APPLY && n > 0) {
@@ -122,8 +123,8 @@ async function main() {
   })
 
   console.log(
-    `\nTOTAL before H${totals.before.HIGH}/M${totals.before.MEDIUM}/L${totals.before.LOW}/∅${totals.before.NULL}` +
-      ` -> after H${totals.after.HIGH}/M${totals.after.MEDIUM}/L${totals.after.LOW}/∅${totals.after.NULL}` +
+    `\nTOTAL before U${totals.before.ULTRA_HIGH}/H${totals.before.HIGH}/M${totals.before.MEDIUM}/L${totals.before.LOW}/∅${totals.before.NULL}` +
+      ` -> after U${totals.after.ULTRA_HIGH}/H${totals.after.HIGH}/M${totals.after.MEDIUM}/L${totals.after.LOW}/∅${totals.after.NULL}` +
       `  (${APPLY ? 'applied' : 'would change'} ${changed})`,
   )
   console.log(`labeled cards outside scope: ${stray} (must be 0)`)

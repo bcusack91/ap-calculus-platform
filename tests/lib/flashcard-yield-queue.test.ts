@@ -10,6 +10,7 @@ import { NextRequest } from 'next/server'
 
 type Call = { model: string; op: string; args: Record<string, unknown> }
 const calls: Call[] = []
+let includeMediumPref = true
 let includeLowPref = false
 
 const record = (model: string, op: string, result: unknown) =>
@@ -25,7 +26,12 @@ vi.mock('@/lib/prisma', () => ({
     user: {
       findUnique: vi.fn(async (args: Record<string, unknown>) => {
         calls.push({ model: 'user', op: 'findUnique', args })
-        return { flashcardIncludeLowYield: includeLowPref, flashcardNewPerDay: null, flashcardMaxReviewsPerDay: null }
+        return {
+          flashcardIncludeMediumYield: includeMediumPref,
+          flashcardIncludeLowYield: includeLowPref,
+          flashcardNewPerDay: null,
+          flashcardMaxReviewsPerDay: null,
+        }
       }),
     },
     flashcardDailyActivity: { findUnique: record('flashcardDailyActivity', 'findUnique', null) },
@@ -40,7 +46,7 @@ vi.mock('@/lib/prisma', () => ({
   },
 }))
 
-const SERVED = { OR: [{ examYield: null }, { examYield: { in: ['HIGH', 'MEDIUM'] } }] }
+const SERVED = { OR: [{ examYield: null }, { examYield: { in: ['ULTRA_HIGH', 'HIGH', 'MEDIUM'] } }] }
 
 /** The predicate, wherever it belongs for that model. */
 function carriesPredicate(call: Call): boolean {
@@ -56,6 +62,7 @@ function queueCalls() {
 
 beforeEach(() => {
   calls.length = 0
+  includeMediumPref = true
   includeLowPref = false
   delete process.env.FLASHCARD_HIDE_LOW_YIELD
 })
@@ -79,7 +86,7 @@ describe('GET /api/flashcards/review', () => {
     for (const c of qs) expect(carriesPredicate(c), `${c.model}.${c.op} leaks low-yield cards`).toBe(true)
   })
 
-  it('applies no yield filter when the student opted in', async () => {
+  it('applies no yield filter when the student opted into every tier', async () => {
     includeLowPref = true
     const { GET } = await import('@/app/api/flashcards/review/route')
     await GET(new NextRequest('http://localhost/api/flashcards/review'))

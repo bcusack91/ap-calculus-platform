@@ -56,7 +56,9 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
   const [values, setValues] = useState<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState(false)
-  // MCAT low-yield cards are hidden from the queue unless opted in.
+  // MCAT exam-yield tiers: ultra-high and high are always in the queue;
+  // medium (default on) and low (default off) are the student's choice.
+  const [includeMediumYield, setIncludeMediumYield] = useState(true)
   const [includeLowYield, setIncludeLowYield] = useState(false)
   // Last server-confirmed values, for reverting a failed optimistic save.
   const confirmed = useRef<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
@@ -74,6 +76,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
         }
         confirmed.current = loaded
         setValues(loaded)
+        setIncludeMediumYield(data.includeMediumYield !== false)
         setIncludeLowYield(!!data.includeLowYield)
       })
       .catch(() => {})
@@ -83,15 +86,16 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
     }
   }, [])
 
-  async function toggleLowYield(next: boolean) {
+  async function toggleYield(tier: 'includeMediumYield' | 'includeLowYield', next: boolean) {
     // Optimistic, like the limits: the checkbox already shows the new state.
-    setIncludeLowYield(next)
+    const set = tier === 'includeMediumYield' ? setIncludeMediumYield : setIncludeLowYield
+    set(next)
     setError(null)
     try {
       const res = await fetch('/api/flashcards/settings', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ includeLowYield: next }),
+        body: JSON.stringify({ [tier]: next }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null)
@@ -102,7 +106,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
       savedTimer.current = setTimeout(() => setSaved(false), 2500)
       onChanged?.()
     } catch (e) {
-      setIncludeLowYield(!next)
+      set(!next)
       setError(e instanceof Error ? e.message : 'Failed to save — please try again.')
     }
   }
@@ -192,20 +196,34 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
         ))}
       </div>
 
-      <label className="mt-4 flex items-start gap-3 text-sm text-gray-900">
+      <p className="mt-4 text-xs text-gray-500">
+        MCAT decks label every card by exam yield. Ultra-high and high-yield cards are always in
+        your queue; choose whether to add the rest. Your review history is kept either way.
+      </p>
+      <label className="mt-2 flex items-start gap-3 text-sm text-gray-900">
+        <input
+          id="daily-limit-includeMediumYield"
+          type="checkbox"
+          checked={includeMediumYield}
+          onChange={(e) => toggleYield('includeMediumYield', e.target.checked)}
+          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
+        />
+        <span>
+          <span className="font-semibold">Include medium-yield cards</span>
+          <span className="block text-xs text-gray-500">Plausible but secondary material. On by default.</span>
+        </span>
+      </label>
+      <label className="mt-2 flex items-start gap-3 text-sm text-gray-900">
         <input
           id="daily-limit-includeLowYield"
           type="checkbox"
           checked={includeLowYield}
-          onChange={(e) => toggleLowYield(e.target.checked)}
+          onChange={(e) => toggleYield('includeLowYield', e.target.checked)}
           className="mt-0.5 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
         />
         <span>
           <span className="font-semibold">Include low-yield cards</span>
-          <span className="block text-xs text-gray-500">
-            MCAT decks label each card by exam yield. Off, your queue holds only high- and
-            medium-yield cards; on, every card in the deck. Your review history is kept either way.
-          </span>
+          <span className="block text-xs text-gray-500">Detail most students will not need. Off by default.</span>
         </span>
       </label>
       {error && (

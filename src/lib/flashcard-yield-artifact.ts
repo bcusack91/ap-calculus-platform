@@ -13,21 +13,19 @@ import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
 
-export const YIELD_VALUES = ['HIGH', 'MEDIUM', 'LOW'] as const
+export const YIELD_VALUES = ['ULTRA_HIGH', 'HIGH', 'MEDIUM', 'LOW'] as const
 export type YieldValue = (typeof YIELD_VALUES)[number]
 
 export const ARTIFACT_DIR = path.join(process.cwd(), 'prisma', 'flashcard-yield')
 export const EXPORT_DIR = path.join(process.cwd(), 'prisma', 'flashcard-exports', 'mcat-prep')
 
-/**
- * Which cards are in scope, by export file. The biochemistry topics sit in
- * the Chem/Phys export despite being biology in substance, so that file is
- * filtered by slug rather than taken whole.
- */
+/** Which cards are in scope, by export file: the whole MCAT course. */
 export const SCOPE: Record<string, (topicSlug: string) => boolean> = {
   'mcat-bio-biochem-foundations.json': () => true,
   'mcat-psych-soc-foundations.json': () => true,
-  'mcat-chem-phys-foundations.json': (slug) => slug.startsWith('mcat-biochemistry-'),
+  'mcat-chem-phys-foundations.json': () => true,
+  'mcat-cars.json': () => true,
+  'mcat-strategy.json': () => true,
 }
 
 export type ExportedCard = { topicSlug: string; front: string; back: string }
@@ -91,7 +89,7 @@ export function checkArtifacts(
 ): CheckResult {
   const errors: string[] = []
   const perTopic: TopicReport[] = []
-  const totals = { cards: 0, labeled: 0, counts: { HIGH: 0, MEDIUM: 0, LOW: 0 } as Record<YieldValue, number> }
+  const totals = { cards: 0, labeled: 0, counts: { ULTRA_HIGH: 0, HIGH: 0, MEDIUM: 0, LOW: 0 } as Record<YieldValue, number> }
 
   for (const topic of artifactByTopic.keys()) {
     if (!exportByTopic.has(topic)) errors.push(`${topic}: artifact for a topic that is not in scope`)
@@ -103,7 +101,7 @@ export function checkArtifacts(
       topic,
       cards: cards.length,
       labeled: 0,
-      counts: { HIGH: 0, MEDIUM: 0, LOW: 0 },
+      counts: { ULTRA_HIGH: 0, HIGH: 0, MEDIUM: 0, LOW: 0 },
       suspect: [],
     }
     perTopic.push(report)
@@ -170,6 +168,7 @@ export function formatReport(result: CheckResult): string {
     const pct = (n: number) => (r.labeled ? `${Math.round((100 * n) / r.labeled)}%` : '-')
     lines.push(
       `${r.topic.padEnd(50)} ${String(r.labeled).padStart(3)}/${String(r.cards).padEnd(3)} ` +
+        `U ${String(r.counts.ULTRA_HIGH).padStart(3)} (${pct(r.counts.ULTRA_HIGH).padStart(3)})  ` +
         `H ${String(r.counts.HIGH).padStart(3)} (${pct(r.counts.HIGH).padStart(3)})  ` +
         `M ${String(r.counts.MEDIUM).padStart(3)} (${pct(r.counts.MEDIUM).padStart(3)})  ` +
         `L ${String(r.counts.LOW).padStart(3)} (${pct(r.counts.LOW).padStart(3)})` +
@@ -179,7 +178,7 @@ export function formatReport(result: CheckResult): string {
   const t = result.totals
   lines.push('')
   lines.push(
-    `TOTAL labeled ${t.labeled}/${t.cards}: HIGH ${t.counts.HIGH}, MEDIUM ${t.counts.MEDIUM}, LOW ${t.counts.LOW}` +
+    `TOTAL labeled ${t.labeled}/${t.cards}: ULTRA_HIGH ${t.counts.ULTRA_HIGH}, HIGH ${t.counts.HIGH}, MEDIUM ${t.counts.MEDIUM}, LOW ${t.counts.LOW}` +
       (t.labeled ? ` (LOW ${Math.round((100 * t.counts.LOW) / t.labeled)}%)` : ''),
   )
   return lines.join('\n')

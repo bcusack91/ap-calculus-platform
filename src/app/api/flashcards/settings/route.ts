@@ -24,12 +24,14 @@ import {
 function settingsPayload(user: {
   flashcardNewPerDay: number | null
   flashcardMaxReviewsPerDay: number | null
+  flashcardIncludeMediumYield: boolean
   flashcardIncludeLowYield: boolean
 }) {
   return {
     newPerDay: user.flashcardNewPerDay,
     maxReviewsPerDay: user.flashcardMaxReviewsPerDay,
-    // Low-yield cards (MCAT exam-yield labels) are hidden unless opted in.
+    // MCAT exam-yield tiers: ultra-high and high always; medium and low opt-in.
+    includeMediumYield: user.flashcardIncludeMediumYield,
     includeLowYield: user.flashcardIncludeLowYield,
     effective: effectiveDailyLimits(user),
     defaults: { newPerDay: DEFAULT_NEW_PER_DAY, maxReviewsPerDay: DEFAULT_MAX_REVIEWS_PER_DAY },
@@ -47,7 +49,7 @@ export async function GET() {
   }
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeLowYield: true },
+    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeMediumYield: true, flashcardIncludeLowYield: true },
   })
   if (!user) {
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
@@ -86,6 +88,7 @@ export async function PATCH(request: Request) {
   const data: {
     flashcardNewPerDay?: number | null
     flashcardMaxReviewsPerDay?: number | null
+    flashcardIncludeMediumYield?: boolean
     flashcardIncludeLowYield?: boolean
   } = {}
 
@@ -105,6 +108,12 @@ export async function PATCH(request: Request) {
     data.flashcardMaxReviewsPerDay = parsed.value
   }
 
+  if ('includeMediumYield' in body) {
+    if (typeof body.includeMediumYield !== 'boolean') {
+      return NextResponse.json({ error: 'includeMediumYield must be true or false' }, { status: 400 })
+    }
+    data.flashcardIncludeMediumYield = body.includeMediumYield
+  }
   if ('includeLowYield' in body) {
     // Strict boolean: "yes", 1 or null would otherwise silently flip a queue.
     if (typeof body.includeLowYield !== 'boolean') {
@@ -119,7 +128,7 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: session.user.id },
     data,
-    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeLowYield: true },
+    select: { flashcardNewPerDay: true, flashcardMaxReviewsPerDay: true, flashcardIncludeMediumYield: true, flashcardIncludeLowYield: true },
   })
   return NextResponse.json(settingsPayload(user))
 }

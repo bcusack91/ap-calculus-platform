@@ -19,7 +19,7 @@ vi.mock('@/lib/prisma', () => ({
     user: { findUnique: vi.fn().mockResolvedValue({ flashcardNewPerDay: 2 }) },
     flashcardProgress: {
       createMany: (...a: unknown[]) => mockCreateMany(...a),
-      count: vi.fn().mockResolvedValue(5),
+      count: vi.fn().mockResolvedValue(6),
     },
     flashcard: { createMany: vi.fn(), findMany: vi.fn() },
   },
@@ -38,6 +38,7 @@ const CARDS = [
   { id: 'high-new', examYield: 'HIGH', createdAt: t('2026-01-05') },
   { id: 'unlabeled', examYield: null, createdAt: t('2026-01-02') },
   { id: 'high-old', examYield: 'HIGH', createdAt: t('2026-01-04') },
+  { id: 'ultra', examYield: 'ULTRA_HIGH', createdAt: t('2026-01-06') },
 ]
 
 beforeEach(() => {
@@ -50,7 +51,7 @@ beforeEach(() => {
     exampleProblems: [],
     category: { course: { slug: 'mcat-prep' } },
   })
-  mockCreateMany.mockResolvedValue({ count: 5 })
+  mockCreateMany.mockResolvedValue({ count: 6 })
 })
 
 describe('maybeUnlockFlashcards ordering', () => {
@@ -60,19 +61,19 @@ describe('maybeUnlockFlashcards ordering', () => {
     expect(result.unlocked).toBe(true)
 
     const rows = mockCreateMany.mock.calls[0][0].data as { flashcardId: string; nextReview: Date }[]
-    expect(rows.map((r) => r.flashcardId)).toEqual(['high-old', 'high-new', 'unlabeled', 'med', 'low-old'])
+    expect(rows.map((r) => r.flashcardId)).toEqual(['ultra', 'high-old', 'high-new', 'unlabeled', 'med', 'low-old'])
 
-    // newPerDay = 2: wave 1 is the two HIGH cards, wave 2 unlabeled + medium,
-    // wave 3 the low card. Nothing is dropped.
+    // newPerDay = 2: wave 1 ultra + high-old, wave 2 high-new + unlabeled,
+    // wave 3 medium + low. Nothing is dropped.
     const day = (r: { nextReview: Date }) => Math.round((r.nextReview.getTime() - rows[0].nextReview.getTime()) / 86_400_000)
-    expect(rows.map(day)).toEqual([0, 0, 1, 1, 2])
+    expect(rows.map(day)).toEqual([0, 0, 1, 1, 2, 2])
     expect(rows).toHaveLength(CARDS.length)
   })
 
   it('counts only the cards the student will be served', async () => {
     const { maybeUnlockFlashcards } = await import('@/lib/flashcard-unlock')
     const result = await maybeUnlockFlashcards('user-1', 'mcat-organ-systems-renal-mcat')
-    // 5 cards, 1 LOW: "4 cards unlocked", not a promise of 5.
-    expect(result.unlocked && result.totalCards).toBe(4)
+    // 6 cards, 1 LOW: "5 cards unlocked", not a promise of 6.
+    expect(result.unlocked && result.totalCards).toBe(5)
   })
 })

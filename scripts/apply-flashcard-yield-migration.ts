@@ -1,5 +1,6 @@
 /**
- * Idempotent prod migration: Flashcard.examYield + User.flashcardIncludeLowYield.
+ * Idempotent prod migration: Flashcard.examYield (four tiers) + the two
+ * User yield preferences.
  *
  * Deploys do NOT migrate the production database (CI's migrate step hits a
  * throwaway DB), so this applies the same DDL as
@@ -17,7 +18,14 @@ async function main() {
     DO $$ BEGIN
       CREATE TYPE "ExamYield" AS ENUM ('HIGH', 'MEDIUM', 'LOW');
     EXCEPTION WHEN duplicate_object THEN NULL; END $$`)
+  // Four-tier pass (2026-09-24): ULTRA_HIGH ahead of HIGH so enum order stays
+  // the sort order; ADD VALUE cannot run inside a transaction, and $executeRawUnsafe
+  // sends it as its own statement.
+  await prisma.$executeRawUnsafe(`ALTER TYPE "ExamYield" ADD VALUE IF NOT EXISTS 'ULTRA_HIGH' BEFORE 'HIGH'`)
   await prisma.$executeRawUnsafe(`ALTER TABLE "Flashcard" ADD COLUMN IF NOT EXISTS "examYield" "ExamYield"`)
+  await prisma.$executeRawUnsafe(
+    `ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "flashcardIncludeMediumYield" BOOLEAN NOT NULL DEFAULT true`,
+  )
   await prisma.$executeRawUnsafe(
     `ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "flashcardIncludeLowYield" BOOLEAN NOT NULL DEFAULT false`,
   )

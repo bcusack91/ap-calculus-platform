@@ -13,7 +13,7 @@ import { config } from 'dotenv'
 config({ path: process.env.PROD ? '.env' : '.env.local', override: true })
 import { PrismaClient } from '@prisma/client'
 import { loadScopedExport } from '../src/lib/flashcard-yield-artifact'
-import { servedProgressWhere } from '../src/lib/flashcard-yield'
+import { DEFAULT_YIELD_PREFS, servedProgressWhere } from '../src/lib/flashcard-yield'
 
 async function main() {
   const prisma = new PrismaClient()
@@ -32,11 +32,11 @@ async function main() {
     byTopic.set(r.slug, rec)
   }
   let unlabeledInScope = 0
-  console.log('per-topic labels (H/M/L/unlabeled):')
+  console.log('per-topic labels (U/H/M/L/unlabeled):')
   for (const slug of scoped.sort()) {
     const c = byTopic.get(slug) ?? {}
     unlabeledInScope += c.NULL ?? 0
-    console.log(`  ${slug.padEnd(50)} ${c.HIGH ?? 0}/${c.MEDIUM ?? 0}/${c.LOW ?? 0}/${c.NULL ?? 0}`)
+    console.log(`  ${slug.padEnd(50)} ${c.ULTRA_HIGH ?? 0}/${c.HIGH ?? 0}/${c.MEDIUM ?? 0}/${c.LOW ?? 0}/${c.NULL ?? 0}`)
   }
 
   const stray = await prisma.flashcard.count({
@@ -58,10 +58,10 @@ async function main() {
     const [dueAll, dueServed, newAll, newServed, learnedLow] = await Promise.all([
       prisma.flashcardProgress.count({ where: { ...base, reviewCount: { gt: 0 }, nextReview: { lte: now } } }),
       prisma.flashcardProgress.count({
-        where: { ...base, reviewCount: { gt: 0 }, nextReview: { lte: now }, ...servedProgressWhere(false) },
+        where: { ...base, reviewCount: { gt: 0 }, nextReview: { lte: now }, ...servedProgressWhere(DEFAULT_YIELD_PREFS) },
       }),
       prisma.flashcardProgress.count({ where: { ...base, reviewCount: 0 } }),
-      prisma.flashcardProgress.count({ where: { ...base, reviewCount: 0, ...servedProgressWhere(false) } }),
+      prisma.flashcardProgress.count({ where: { ...base, reviewCount: 0, ...servedProgressWhere(DEFAULT_YIELD_PREFS) } }),
       prisma.flashcardProgress.count({ where: { ...base, reviewCount: { gt: 0 }, flashcard: { examYield: 'LOW' } } }),
     ])
     console.log(

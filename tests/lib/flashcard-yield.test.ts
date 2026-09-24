@@ -7,9 +7,11 @@ import { describe, it, expect, afterEach } from 'vitest'
 import {
   servedFlashcardWhere,
   servedProgressWhere,
+  servedYields,
   yieldRank,
   compareByYield,
   lowYieldHiddenByDefault,
+  DEFAULT_YIELD_PREFS,
 } from '@/lib/flashcard-yield'
 
 afterEach(() => {
@@ -17,37 +19,45 @@ afterEach(() => {
 })
 
 describe('the served-card predicate', () => {
-  it('spells out the NULL case so unlabeled cards are never hidden', () => {
-    const where = servedFlashcardWhere(false)
-    // `examYield: { not: 'LOW' }` drops NULL rows in SQL. This shape is the
-    // one that keeps every non-MCAT card visible; do not "simplify" it.
-    expect(where).toEqual({ OR: [{ examYield: null }, { examYield: { in: ['HIGH', 'MEDIUM'] } }] })
+  it('always serves ultra-high and high; medium on and low off by default', () => {
+    expect(servedYields(DEFAULT_YIELD_PREFS)).toEqual(['ULTRA_HIGH', 'HIGH', 'MEDIUM'])
+    expect(servedYields({ includeMedium: false, includeLow: false })).toEqual(['ULTRA_HIGH', 'HIGH'])
+    expect(servedYields({ includeMedium: false, includeLow: true })).toEqual(['ULTRA_HIGH', 'HIGH', 'LOW'])
   })
 
-  it('applies no filter at all when the student opts into low-yield cards', () => {
-    expect(servedFlashcardWhere(true)).toEqual({})
-    expect(servedProgressWhere(true)).toEqual({})
+  it('spells out the NULL case so unlabeled cards are never hidden', () => {
+    // `examYield: { notIn: [...] }` drops NULL rows in SQL. This shape is the
+    // one that keeps every non-MCAT card visible; do not "simplify" it.
+    expect(servedFlashcardWhere(DEFAULT_YIELD_PREFS)).toEqual({
+      OR: [{ examYield: null }, { examYield: { in: ['ULTRA_HIGH', 'HIGH', 'MEDIUM'] } }],
+    })
+  })
+
+  it('applies no filter at all when every tier is opted in', () => {
+    const all = { includeMedium: true, includeLow: true }
+    expect(servedFlashcardWhere(all)).toEqual({})
+    expect(servedProgressWhere(all)).toEqual({})
   })
 
   it('wraps the same rule one relation up for progress rows', () => {
-    expect(servedProgressWhere(false)).toEqual({ flashcard: servedFlashcardWhere(false) })
+    expect(servedProgressWhere(DEFAULT_YIELD_PREFS)).toEqual({ flashcard: servedFlashcardWhere(DEFAULT_YIELD_PREFS) })
   })
 
   it('serves everything when the kill switch is thrown', () => {
     process.env.FLASHCARD_HIDE_LOW_YIELD = '0'
     expect(lowYieldHiddenByDefault()).toBe(false)
-    expect(servedFlashcardWhere(false)).toEqual({})
-    expect(servedProgressWhere(false)).toEqual({})
+    expect(servedFlashcardWhere({ includeMedium: false, includeLow: false })).toEqual({})
   })
 })
 
 describe('yield ordering', () => {
-  it('ranks HIGH first, unlabeled with MEDIUM, LOW last', () => {
-    expect(yieldRank('HIGH')).toBe(0)
-    expect(yieldRank('MEDIUM')).toBe(1)
-    expect(yieldRank(null)).toBe(1)
-    expect(yieldRank(undefined)).toBe(1)
-    expect(yieldRank('LOW')).toBe(2)
+  it('ranks ULTRA_HIGH, HIGH, then unlabeled with MEDIUM, then LOW', () => {
+    expect(yieldRank('ULTRA_HIGH')).toBe(0)
+    expect(yieldRank('HIGH')).toBe(1)
+    expect(yieldRank('MEDIUM')).toBe(2)
+    expect(yieldRank(null)).toBe(2)
+    expect(yieldRank(undefined)).toBe(2)
+    expect(yieldRank('LOW')).toBe(3)
   })
 
   it('is a total order with deterministic tiebreaks', () => {
@@ -58,9 +68,9 @@ describe('yield ordering', () => {
       { id: 'b', examYield: null, createdAt: t1 },
       { id: 'a', examYield: null, createdAt: t0 },
       { id: 'd', examYield: 'HIGH' as const, createdAt: t1 },
+      { id: 'e', examYield: 'ULTRA_HIGH' as const, createdAt: t1 },
     ]
-    expect([...cards].sort(compareByYield).map((c) => c.id)).toEqual(['d', 'a', 'b', 'c'])
-    // Same input, same output, whatever order Postgres handed it over in.
-    expect([...cards].reverse().sort(compareByYield).map((c) => c.id)).toEqual(['d', 'a', 'b', 'c'])
+    expect([...cards].sort(compareByYield).map((c) => c.id)).toEqual(['e', 'd', 'a', 'b', 'c'])
+    expect([...cards].reverse().sort(compareByYield).map((c) => c.id)).toEqual(['e', 'd', 'a', 'b', 'c'])
   })
 })

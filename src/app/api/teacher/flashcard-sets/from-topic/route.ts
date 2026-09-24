@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { servedFlashcardWhere } from '@/lib/flashcard-yield'
+import { DEFAULT_YIELD_PREFS, servedFlashcardWhere } from '@/lib/flashcard-yield'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher } from '@/lib/teacher-auth'
 
@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
           // A teacher assigning "the topic deck" gets the curated deck: the
           // low-yield tail stays out, as it does for self-study. Copies are
           // frozen text, so this is the only place to keep it out.
-          where: servedFlashcardWhere(false),
+          where: servedFlashcardWhere(DEFAULT_YIELD_PREFS),
           // Deck order: exam yield first (nulls with medium), then lesson-part
           // sequence (nulls trail), then creation order — the reading order
           // the topic deck was authored in.

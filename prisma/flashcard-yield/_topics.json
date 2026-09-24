@@ -310,5 +310,333 @@
       "10A"
     ],
     "tested": "Social class and mobility, capital types, poverty, stratification theories, intersectionality."
+  },
+  "mcat-general-chemistry-acid-base-equilibrium-mcat": {
+    "aamc": [
+      "5A",
+      "5B"
+    ],
+    "tested": "pH/pKa and Henderson-Hasselbalch, buffers, titration curves, Ka/Kb, equilibrium constants and Le Chatelier."
+  },
+  "mcat-general-chemistry-atomic-structure-mcat": {
+    "aamc": [
+      "4E"
+    ],
+    "tested": "Electron configuration, quantum numbers, periodic trends (radius, ionization energy, electronegativity), bonding types, VSEPR."
+  },
+  "mcat-general-chemistry-kinetics-mcat": {
+    "aamc": [
+      "5E"
+    ],
+    "tested": "Rate laws and orders from data, Arrhenius/activation energy, catalysts, rate-determining step, half-life for first order."
+  },
+  "mcat-general-chemistry-mcat": {
+    "aamc": [
+      "4E",
+      "5A",
+      "5B",
+      "5E"
+    ],
+    "tested": "Catch-all general chemistry: solutions and colligative properties, gases, redox basics, phase diagrams."
+  },
+  "mcat-general-chemistry-stoichiometry-mcat": {
+    "aamc": [
+      "4E",
+      "5A"
+    ],
+    "tested": "Moles and limiting reagent, percent yield, balancing including redox, oxidation states, reaction types."
+  },
+  "mcat-general-chemistry-thermodynamics-mcat": {
+    "aamc": [
+      "5E"
+    ],
+    "tested": "Enthalpy, entropy, Gibbs free energy and spontaneity, Hess's law, heat capacity/calorimetry, state functions."
+  },
+  "mcat-lab-methods-mcat": {
+    "aamc": [
+      "5C"
+    ],
+    "tested": "Separations (extraction, distillation, chromatography, electrophoresis), purification, safety; interpretation more than procedure."
+  },
+  "mcat-organic-chemistry-carbonyls-mcat": {
+    "aamc": [
+      "5D"
+    ],
+    "tested": "Nucleophilic addition to aldehydes/ketones, alpha-carbon chemistry, aldol, carboxylic acid derivatives and their reactivity order."
+  },
+  "mcat-organic-chemistry-functional-groups-mcat": {
+    "aamc": [
+      "5D"
+    ],
+    "tested": "Recognizing functional groups, IUPAC naming basics, acidity of alcohols/phenols/carboxylic acids, alcohol reactions."
+  },
+  "mcat-organic-chemistry-mcat": {
+    "aamc": [
+      "5D"
+    ],
+    "tested": "Catch-all organic: bonding/hybridization, resonance, acid-base, amino-acid-adjacent organic chemistry."
+  },
+  "mcat-organic-chemistry-sn1-sn2-e1-e2-mcat": {
+    "aamc": [
+      "5D"
+    ],
+    "tested": "SN1/SN2/E1/E2 mechanisms, substrate/nucleophile/solvent effects, stereochemical outcome, carbocation stability."
+  },
+  "mcat-organic-chemistry-spectroscopy-mcat": {
+    "aamc": [
+      "5C",
+      "5D"
+    ],
+    "tested": "IR characteristic peaks, 1H NMR (shift, splitting, integration), mass spec basics, UV-Vis conjugation."
+  },
+  "mcat-organic-chemistry-stereochemistry-mcat": {
+    "aamc": [
+      "5D"
+    ],
+    "tested": "Chirality and R/S, enantiomers vs diastereomers, meso, optical activity, E/Z, conformations."
+  },
+  "mcat-physics-electricity-circuits-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Ohm's law, series/parallel resistors and capacitors, power, Kirchhoff's rules, RC qualitative behavior."
+  },
+  "mcat-physics-electricity-electrochemistry-mcat": {
+    "aamc": [
+      "4C",
+      "5A"
+    ],
+    "tested": "Galvanic vs electrolytic cells, standard reduction potentials and cell EMF, Nernst qualitatively, Faraday's law."
+  },
+  "mcat-physics-electricity-electrostatics-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Coulomb's law, electric field and potential, work in fields, capacitors and dielectrics, equipotentials."
+  },
+  "mcat-physics-electricity-magnetism-mcat": {
+    "aamc": [
+      "4C"
+    ],
+    "tested": "Magnetic force on moving charges and wires (F = qvB), right-hand rules, induction qualitatively."
+  },
+  "mcat-physics-electricity-mcat": {
+    "aamc": [
+      "4C",
+      "4D"
+    ],
+    "tested": "Catch-all electricity and light: current, resistance, EM spectrum, wave basics."
+  },
+  "mcat-physics-electricity-optics-mcat": {
+    "aamc": [
+      "4D"
+    ],
+    "tested": "Snell's law and total internal reflection, thin lenses and mirrors (1/f equation, sign conventions), magnification, diffraction/polarization basics."
+  },
+  "mcat-physics-mechanics-fluids-waves-mcat": {
+    "aamc": [
+      "4B",
+      "4D"
+    ],
+    "tested": "Density and pressure, buoyancy, continuity and Bernoulli, Poiseuille qualitatively; wave properties, sound intensity and Doppler, standing waves."
+  },
+  "mcat-physics-mechanics-forces-newton-laws-mcat": {
+    "aamc": [
+      "4A"
+    ],
+    "tested": "Newton's laws, free-body diagrams, friction, inclined planes, tension, circular motion, torque and equilibrium."
+  },
+  "mcat-physics-mechanics-kinematics-mcat": {
+    "aamc": [
+      "4A"
+    ],
+    "tested": "Kinematic equations, vectors, projectile motion, graphs of motion, free fall."
+  },
+  "mcat-physics-mechanics-mcat": {
+    "aamc": [
+      "4A",
+      "4B"
+    ],
+    "tested": "Catch-all mechanics: units and dimensional analysis, vectors, basic energy and force problems."
+  },
+  "mcat-physics-mechanics-momentum-collisions-mcat": {
+    "aamc": [
+      "4A"
+    ],
+    "tested": "Momentum conservation, impulse, elastic vs inelastic collisions, center of mass."
+  },
+  "mcat-physics-mechanics-work-energy-power-mcat": {
+    "aamc": [
+      "4A"
+    ],
+    "tested": "Work, kinetic and potential energy, conservation of energy, power, work-energy theorem, simple machines/mechanical advantage."
+  },
+  "mcat-cars-passages-comparative-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: comparative passages."
+  },
+  "mcat-cars-passages-ethics-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: ethics/philosophy passages."
+  },
+  "mcat-cars-passages-humanities-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: humanities passages."
+  },
+  "mcat-cars-passages-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: passage types overview."
+  },
+  "mcat-cars-passages-social-science-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: social-science passages."
+  },
+  "mcat-cars-reasoning-argument-structure-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: argument structure."
+  },
+  "mcat-cars-reasoning-assumptions-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: assumptions and implications."
+  },
+  "mcat-cars-reasoning-fallacies-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: logical fallacies."
+  },
+  "mcat-cars-reasoning-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: logical reasoning overview."
+  },
+  "mcat-cars-reasoning-strengthen-weaken-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: strengthen/weaken questions."
+  },
+  "mcat-cars-strategy-active-reading-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: active reading."
+  },
+  "mcat-cars-strategy-elimination-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: answer elimination."
+  },
+  "mcat-cars-strategy-main-idea-inference-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: main idea and inference questions."
+  },
+  "mcat-cars-strategy-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: overall strategy."
+  },
+  "mcat-cars-strategy-timing-mcat": {
+    "aamc": [
+      "CARS"
+    ],
+    "tested": "CARS is a reasoning skill, not content. Cards here are strategy: how a passage-based question type is recognized and attacked. Judge by whether the tactic is used on nearly every passage (ULTRA_HIGH/HIGH) versus a niche question type or generic advice (MEDIUM/LOW). This deck: timing and pacing."
+  },
+  "mcat-biostatistics-mcat": {
+    "aamc": [
+      "Stats"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: biostatistics."
+  },
+  "mcat-quantitative-skills-mcat": {
+    "aamc": [
+      "Stats"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: quantitative/data skills."
+  },
+  "mcat-research-methods-mcat": {
+    "aamc": [
+      "Methods"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: research methods and study design."
+  },
+  "mcat-science-passage-strategy-discrete-questions-mcat": {
+    "aamc": [
+      "Strategy"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: discrete question tactics."
+  },
+  "mcat-science-passage-strategy-experimental-design-mcat": {
+    "aamc": [
+      "Methods"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: experimental design logic."
+  },
+  "mcat-science-passage-strategy-figures-mcat": {
+    "aamc": [
+      "Stats"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: figure and table analysis."
+  },
+  "mcat-science-passage-strategy-mcat": {
+    "aamc": [
+      "Strategy"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: science passage strategy overview."
+  },
+  "mcat-science-passage-strategy-reading-mcat": {
+    "aamc": [
+      "Strategy"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: science passage reading."
+  },
+  "mcat-test-day-strategy-format-scoring-mcat": {
+    "aamc": [
+      "Logistics"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: format and scoring."
+  },
+  "mcat-test-day-strategy-mcat": {
+    "aamc": [
+      "Strategy"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: test-day strategy overview."
+  },
+  "mcat-test-day-strategy-section-specific-mcat": {
+    "aamc": [
+      "Strategy"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: section-specific strategy."
+  },
+  "mcat-test-day-strategy-study-planning-mcat": {
+    "aamc": [
+      "Logistics"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: study planning."
+  },
+  "mcat-test-day-strategy-test-day-logistics-mcat": {
+    "aamc": [
+      "Logistics"
+    ],
+    "tested": "Test-strategy deck, not content. Tactics used on every exam section and the research-methods/statistics concepts that ARE directly tested (study design, bias, p-values, correlation, basic stats) rank high; logistics, scheduling and generic advice rank low. This deck: test-day logistics."
   }
 }

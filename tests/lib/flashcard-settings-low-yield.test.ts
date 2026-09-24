@@ -18,7 +18,12 @@ vi.mock('@/lib/prisma', () => ({
   },
 }))
 
-const stored = { flashcardNewPerDay: null, flashcardMaxReviewsPerDay: null, flashcardIncludeLowYield: false }
+const stored = {
+  flashcardNewPerDay: null,
+  flashcardMaxReviewsPerDay: null,
+  flashcardIncludeMediumYield: true,
+  flashcardIncludeLowYield: false,
+}
 
 beforeEach(() => {
   vi.clearAllMocks()
@@ -36,7 +41,9 @@ describe('GET /api/flashcards/settings', () => {
     const { GET } = await import('@/app/api/flashcards/settings/route')
     const res = await GET()
     expect(res.status).toBe(200)
-    expect((await res.json()).includeLowYield).toBe(false)
+    const json = await res.json()
+    expect(json.includeLowYield).toBe(false)
+    expect(json.includeMediumYield).toBe(true)
   })
 })
 
@@ -56,6 +63,13 @@ describe('PATCH /api/flashcards/settings includeLowYield', () => {
     const res = await patch({ includeLowYield: value })
     expect(res.status).toBe(400)
     expect(mockUpdate).not.toHaveBeenCalled()
+  })
+
+  it('accepts the medium-yield opt-out as a strict boolean too', async () => {
+    const res = await patch({ includeMediumYield: false })
+    expect(res.status).toBe(200)
+    expect(mockUpdate).toHaveBeenLastCalledWith(expect.objectContaining({ data: { flashcardIncludeMediumYield: false } }))
+    expect((await patch({ includeMediumYield: 'no' })).status).toBe(400)
   })
 
   it('leaves the opt-in alone when the field is omitted', async () => {

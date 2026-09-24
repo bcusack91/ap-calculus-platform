@@ -9,7 +9,7 @@ import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
-import { includeLowYieldFor } from '@/lib/flashcard-yield-prefs'
+import { yieldPrefsFor } from '@/lib/flashcard-yield-prefs'
 
 /**
  * POST /api/flashcards/review
@@ -183,9 +183,9 @@ export async function GET(req: NextRequest) {
 
     // The review queue shows only the ACTIVE study mode's deck.
     const context = await getActiveStudyContext(session.user.id)
-    // Low-yield cards stay out of every queue query below unless opted in.
-    const includeLow = await includeLowYieldFor(session.user.id)
-    const yieldWhere = servedProgressWhere(includeLow)
+    // Only the yield tiers this student opted into reach any queue query below.
+    const prefs = await yieldPrefsFor(session.user.id)
+    const yieldWhere = servedProgressWhere(prefs)
 
     // Build query
     const now = new Date()
@@ -198,7 +198,7 @@ export async function GET(req: NextRequest) {
     // pages to show "N SAT flashcards due now"-style banners).
     const courseSlug = searchParams.get('courseSlug')
     const flashcardFilter: Prisma.FlashcardWhereInput = {
-      ...servedFlashcardWhere(includeLow),
+      ...servedFlashcardWhere(prefs),
       ...(topicId ? { topicId } : {}),
       ...(courseSlug ? { topic: { category: { course: { slug: courseSlug } } } } : {}),
     }

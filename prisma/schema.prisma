@@ -9,57 +9,58 @@ datasource db {
 }
 
 model User {
-  id                        String                        @id @default(cuid())
-  name                      String?
-  email                     String?                       @unique
-  emailVerified             DateTime?
-  image                     String?
-  password                  String?
-  role                      UserRole                      @default(FREE)
-  studyContext              String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
-  satTrackOverride          String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
+  id                          String                        @id @default(cuid())
+  name                        String?
+  email                       String?                       @unique
+  emailVerified               DateTime?
+  image                       String?
+  password                    String?
+  role                        UserRole                      @default(FREE)
+  studyContext                String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
+  satTrackOverride            String? // teacher placement for the SAT Core Skills track: 'core-skills' | 'regular'; null = automatic from the diagnostic score
   // Teacher "allow retake now" override for the MCAT diagnostic retake gate.
   // ONE-SHOT semantics: the gate opens while this timestamp is NEWER than the
   // student's latest mcat-full-diagnostic attempt; taking the retake consumes
   // the waiver naturally (the new attempt is then newer than the waiver).
   // Honored in src/app/api/mcat-diagnostic/plan-status/route.ts; set by
   // POST /api/teacher/classrooms/[id]/class-diagnostics/waive-gate.
-  diagnosticGateWaivedAt    DateTime?
+  diagnosticGateWaivedAt      DateTime?
   // Anki-style flashcard daily limits (null = code defaults, see
   // src/lib/flashcard-daily-limits.ts: 100 new/day, 200 reviews/day).
-  flashcardNewPerDay        Int? // new cards introduced per day (bounds 1-500)
-  flashcardMaxReviewsPerDay Int? // max due-card reviews per day (bounds 10-1000)
-  // Low-yield cards are hidden from study queues by default; this opts a
-  // student back in. Their FlashcardProgress rows are never deleted.
-  flashcardIncludeLowYield  Boolean                       @default(false)
-  stripeCustomerId          String?                       @unique
-  stripeSubscriptionId      String?                       @unique
-  stripePriceId             String?
-  stripeCurrentPeriodEnd    DateTime?
-  avatarData                Json? // Custom avatar configuration
-  birthYear                 Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
-  guardianEmail             String? // Optional parent/guardian address for weekly progress emails (opt-out via EmailSubscriber)
-  createdAt                 DateTime                      @default(now())
-  updatedAt                 DateTime                      @updatedAt
-  schoolId                  String?
-  classCode                 String?
-  accounts                  Account[]
-  diagnosticTests           DiagnosticTest[]
-  flashcardProgress         FlashcardProgress[]
-  flashcardDailyActivity    FlashcardDailyActivity[]
-  learningPath              LearningPath?
-  sessions                  Session[]
-  topicProgress             TopicProgress[]
-  school                    School?                       @relation(fields: [schoolId], references: [id])
-  dailyStreak               DailyStreak?
-  competitiveProfile        CompetitiveProfile?
-  matchesAsPlayer1          CompetitiveMatch[]            @relation("Player1Matches")
-  matchesAsPlayer2          CompetitiveMatch[]            @relation("Player2Matches")
-  mmrHistory                MMRHistory[]
-  matchmakingEntry          MatchmakingQueue?
-  factoringMetrics          FactoringPerformanceMetrics[]
-  sixSigmaMetrics           SixSigmaMetrics[]
-  learningInsights          LearningInsights[]
+  flashcardNewPerDay          Int? // new cards introduced per day (bounds 1-500)
+  flashcardMaxReviewsPerDay   Int? // max due-card reviews per day (bounds 10-1000)
+  // Exam-yield tiers a student's queue serves beyond the always-on
+  // ULTRA_HIGH + HIGH. Progress rows for hidden cards are never deleted.
+  flashcardIncludeMediumYield Boolean                       @default(true)
+  flashcardIncludeLowYield    Boolean                       @default(false)
+  stripeCustomerId            String?                       @unique
+  stripeSubscriptionId        String?                       @unique
+  stripePriceId               String?
+  stripeCurrentPeriodEnd      DateTime?
+  avatarData                  Json? // Custom avatar configuration
+  birthYear                   Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
+  guardianEmail               String? // Optional parent/guardian address for weekly progress emails (opt-out via EmailSubscriber)
+  createdAt                   DateTime                      @default(now())
+  updatedAt                   DateTime                      @updatedAt
+  schoolId                    String?
+  classCode                   String?
+  accounts                    Account[]
+  diagnosticTests             DiagnosticTest[]
+  flashcardProgress           FlashcardProgress[]
+  flashcardDailyActivity      FlashcardDailyActivity[]
+  learningPath                LearningPath?
+  sessions                    Session[]
+  topicProgress               TopicProgress[]
+  school                      School?                       @relation(fields: [schoolId], references: [id])
+  dailyStreak                 DailyStreak?
+  competitiveProfile          CompetitiveProfile?
+  matchesAsPlayer1            CompetitiveMatch[]            @relation("Player1Matches")
+  matchesAsPlayer2            CompetitiveMatch[]            @relation("Player2Matches")
+  mmrHistory                  MMRHistory[]
+  matchmakingEntry            MatchmakingQueue?
+  factoringMetrics            FactoringPerformanceMetrics[]
+  sixSigmaMetrics             SixSigmaMetrics[]
+  learningInsights            LearningInsights[]
 
   // Teacher dashboard relations
   ownedClassrooms            Classroom[]                @relation("ClassroomTeacher")
@@ -655,8 +656,10 @@ enum Difficulty {
   EXPERT
 }
 
-/// Declaration order is the sort order: HIGH first.
+/// Declaration order is the sort order: ULTRA_HIGH first. ULTRA_HIGH and
+/// HIGH are always served; MEDIUM and LOW are per-student opt-ins.
 enum ExamYield {
+  ULTRA_HIGH
   HIGH
   MEDIUM
   LOW

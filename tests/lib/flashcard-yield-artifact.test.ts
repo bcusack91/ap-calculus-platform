@@ -11,9 +11,9 @@ describe('exam-yield artifact integrity', () => {
   const exportByTopic = loadScopedExport()
   const result = checkArtifacts(exportByTopic, loadArtifacts())
 
-  it('covers the intended scope: 49 topics, 3,286 cards', () => {
-    expect(exportByTopic.size).toBe(49)
-    expect(result.totals.cards).toBe(3286)
+  it('covers the whole MCAT deck: 102 topics, 5,169 cards', () => {
+    expect(exportByTopic.size).toBe(102)
+    expect(result.totals.cards).toBe(5169)
   })
 
   it('labels every in-scope card exactly once with a valid value', () => {
