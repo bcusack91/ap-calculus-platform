@@ -1,0 +1,362 @@
+[
+ {
+  "front": "A ball is tossed straight up from a cart rolling at constant velocity. Where does it land?",
+  "fp": "606acedc0902",
+  "yield": "HIGH",
+  "why": "Ball tossed from a moving cart lands in the hand; classic independence-of-components question"
+ },
+ {
+  "front": "A ball thrown upward returns to its launch height with speed:",
+  "fp": "b8feeab6c456",
+  "yield": "HIGH",
+  "why": "Symmetric vertical throw returns at equal speed; commonly tested free-fall fact"
+ },
+ {
+  "front": "A boat aims straight across a flowing river. What sets its crossing time and landing point?",
+  "fp": "d4110af3a0f2",
+  "yield": "HIGH",
+  "why": "River crossing time set only by the perpendicular component is a common vector problem"
+ },
+ {
+  "front": "A bullet fired horizontally and one dropped from the same height: which lands first?",
+  "fp": "0ae5632c808b",
+  "yield": "ULTRA_HIGH",
+  "why": "Fired vs dropped bullet landing together is the classic test of independent components"
+ },
+ {
+  "front": "A long jumper leaves the ground at 8 m/s and 30 degrees. Estimate the jump distance.",
+  "fp": "2036b5b52625",
+  "yield": "MEDIUM",
+  "why": "Range calculation applied to a long jump; worked example of the range formula"
+ },
+ {
+  "front": "A person falls 2 m onto the floor. Estimate impact speed and fall time using $g = 10$.",
+  "fp": "99dff5aeaa5b",
+  "yield": "HIGH",
+  "why": "v = sqrt(2gh) and t = v/g estimate is a commonly used free-fall calculation"
+ },
+ {
+  "front": "A projectile is launched at 30° above the horizontal at 20 m/s. What is the horizontal component of its initial velocity?",
+  "fp": "c8662ddfd4ba",
+  "yield": "ULTRA_HIGH",
+  "why": "Resolving v0 cos(theta) is a calculation done on essentially every exam"
+ },
+ {
+  "front": "A runner completes a 400 m lap in 50 s. Compare average speed with average velocity.",
+  "fp": "3389515b6b25",
+  "yield": "HIGH",
+  "why": "Average speed vs average velocity on a closed lap is a common discrete"
+ },
+ {
+  "front": "A skydiver at terminal velocity opens a parachute. Describe the motion that follows.",
+  "fp": "4ee2bced72fa",
+  "yield": "MEDIUM",
+  "why": "Parachute opening reverses acceleration direction; plausible but secondary scenario"
+ },
+ {
+  "front": "A sprinter's v-t curve rises steeply and then flattens at 11 m/s. Where is acceleration greatest, and what does the plateau mean?",
+  "fp": "7302f9f8e1c0",
+  "yield": "MEDIUM",
+  "why": "Reading acceleration off a sprinter's v-t curve; graph reading is covered by higher cards"
+ },
+ {
+  "front": "A stone dropped from a cliff hits water after 3 s ($g=10$). Cliff height?",
+  "fp": "5b508475b61d",
+  "yield": "ULTRA_HIGH",
+  "why": "d = 1/2 g t^2 free-fall calculation appears on essentially every exam"
+ },
+ {
+  "front": "A velocity-time graph crosses zero and changes sign. What is physically happening?",
+  "fp": "808b3547d963",
+  "yield": "HIGH",
+  "why": "v-t graph crossing zero means reversal; commonly tested graph interpretation"
+ },
+ {
+  "front": "Air resistance causes a falling object to:",
+  "fp": "479c8c43652a",
+  "yield": "MEDIUM",
+  "why": "Air resistance leading to terminal velocity; the definition card is higher, this restates it"
+ },
+ {
+  "front": "An elevator moving upward begins to slow. What is the direction of its acceleration?",
+  "fp": "65b1bc049612",
+  "yield": "HIGH",
+  "why": "Slowing elevator has acceleration opposite motion; common conceptual question"
+ },
+ {
+  "front": "An object dropped from rest covers what distances in successive equal time intervals?",
+  "fp": "19ccaba46080",
+  "yield": "MEDIUM",
+  "why": "The 1:3:5:7 ratio is a neat consequence of t^2 scaling but rarely the tested point"
+ },
+ {
+  "front": "An object has negative velocity and positive acceleration. Describe its motion.",
+  "fp": "b44879508b9d",
+  "yield": "HIGH",
+  "why": "Negative velocity with positive acceleration means slowing; common sign-reasoning question"
+ },
+ {
+  "front": "Area under a velocity-time graph gives {{c1::displacement}}; area under an acceleration-time graph gives {{c1::change in velocity}}.",
+  "fp": "4040b38cd462",
+  "yield": "ULTRA_HIGH",
+  "why": "Area under v-t is displacement, under a-t is change in velocity; tested every year"
+ },
+ {
+  "front": "At 30 m/s, roughly how far does a car travel during a 0.7 s reaction time?",
+  "fp": "77026f854af4",
+  "yield": "LOW",
+  "why": "Reaction-distance numeric example is illustrative, not outline content"
+ },
+ {
+  "front": "At the top of a vertical throw, velocity is {{c1::zero}} but acceleration is {{c1::still g downward}}.",
+  "fp": "6496be729639",
+  "yield": "ULTRA_HIGH",
+  "why": "Zero velocity but acceleration g at the apex is tested on nearly every exam"
+ },
+ {
+  "front": "Average velocity is {{c1::displacement over time}}, and equals $(v_0 + v)/2$ only if {{c1::acceleration is constant}}.",
+  "fp": "9b97f255b542",
+  "yield": "ULTRA_HIGH",
+  "why": "Average velocity as displacement/time and the constant-acceleration shortcut are foundational"
+ },
+ {
+  "front": "Deceleration means {{c1::speed is decreasing}}, which requires acceleration to {{c1::oppose velocity}}, not merely to be negative.",
+  "fp": "b75fa3e9b900",
+  "yield": "HIGH",
+  "why": "Deceleration means acceleration opposes velocity, not merely negative; common sign question"
+ },
+ {
+  "front": "Displacement is a {{c1::vector}} while distance is a {{c1::scalar}}, so a round trip has zero displacement.",
+  "fp": "3929c232be24",
+  "yield": "ULTRA_HIGH",
+  "why": "Vector displacement vs scalar distance is a foundational distinction tested every year"
+ },
+ {
+  "front": "Doubling launch speed at fixed angle multiplies range by {{c1::4}} and maximum height by {{c1::4}}.",
+  "fp": "61b375323b89",
+  "yield": "HIGH",
+  "why": "Range and height scale with v0^2; commonly tested proportional reasoning"
+ },
+ {
+  "front": "Doubling the height of a free fall changes impact speed by a factor of:",
+  "fp": "4251409fc34f",
+  "yield": "HIGH",
+  "why": "Impact speed scales with sqrt(h); commonly tested proportionality"
+ },
+ {
+  "front": "For a distance formula, $at^2$ carries units of {{c1::meters}}, while $vt^2$ carries {{c1::meters times seconds}} and cannot be a distance.",
+  "fp": "20804d906a7c",
+  "yield": "LOW",
+  "why": "Unit-checking at^2 vs vt^2 is generic dimensional advice"
+ },
+ {
+  "front": "For a symmetric projectile flight, time up equals {{c1::time down}} and landing speed equals {{c1::launch speed}}.",
+  "fp": "c57282e51be2",
+  "yield": "HIGH",
+  "why": "Time up equals time down and speed symmetry are commonly tested projectile facts"
+ },
+ {
+  "front": "For projectiles, horizontal velocity is {{c1::constant}}, and vertical acceleration is {{c2::-g (downward)}}.",
+  "fp": "95bb983cd06a",
+  "yield": "ULTRA_HIGH",
+  "why": "Constant horizontal velocity with vertical acceleration -g is the core projectile model"
+ },
+ {
+  "front": "From a velocity-time graph, how do you find position at a later time?",
+  "fp": "9bbbe36f3d05",
+  "yield": "LOW",
+  "why": "Finding position from a v-t graph restates the area-under-curve card"
+ },
+ {
+  "front": "How do you choose which Big 5 kinematic equation to use?",
+  "fp": "f1163491f70a",
+  "yield": "MEDIUM",
+  "why": "Choosing a Big 5 equation by the missing variable is strategy supporting the equations card"
+ },
+ {
+  "front": "How do you get a projectile's maximum height without first finding time?",
+  "fp": "5ac0a8d33bf0",
+  "yield": "HIGH",
+  "why": "h = v0y^2/(2g) for max height is a commonly used calculation shortcut"
+ },
+ {
+  "front": "How does acceleration evolve during a fall with air resistance?",
+  "fp": "6016116b2df4",
+  "yield": "MEDIUM",
+  "why": "Acceleration decaying to zero during a fall with drag; secondary graph-shape detail"
+ },
+ {
+  "front": "How does launch angle change range at a fixed launch speed?",
+  "fp": "2d48ffbe397d",
+  "yield": "MEDIUM",
+  "why": "45 degrees maximizing range restates the range-formula card in this deck"
+ },
+ {
+  "front": "How should you estimate free-fall numbers quickly on the exam?",
+  "fp": "bdf6e582a0ab",
+  "yield": "MEDIUM",
+  "why": "Using g = 10 for quick free-fall numbers is useful estimation advice"
+ },
+ {
+  "front": "In free fall the a-t graph is a horizontal line, so the v-t graph is {{c1::a straight line}} and the x-t graph is {{c1::a parabola}}.",
+  "fp": "96d404ef8347",
+  "yield": "HIGH",
+  "why": "Constant a gives linear v-t and parabolic x-t; commonly tested graph shapes"
+ },
+ {
+  "front": "Launch components: horizontal is {{c1::$v_0\\cos\\theta$}} and vertical is {{c1::$v_0\\sin\\theta$}}.",
+  "fp": "dacea50b0eac",
+  "yield": "ULTRA_HIGH",
+  "why": "Launch components v0 cos and v0 sin are used in calculations every year"
+ },
+ {
+  "front": "On a frictionless incline, acceleration along the surface is {{c1::$g\\sin\\theta$}}.",
+  "fp": "04095a6235f5",
+  "yield": "ULTRA_HIGH",
+  "why": "Acceleration g sin(theta) on a frictionless incline is a calculation used on essentially every exam"
+ },
+ {
+  "front": "On a position-time graph the slope is {{c1::velocity}}; on a velocity-time graph the slope is {{c1::acceleration}}.",
+  "fp": "f0b2b4a03602",
+  "yield": "ULTRA_HIGH",
+  "why": "Slope of x-t is velocity and slope of v-t is acceleration; tested every year"
+ },
+ {
+  "front": "On a position-time graph, concave up means {{c1::positive acceleration}} while any straight line means {{c1::zero acceleration}}.",
+  "fp": "659964d13596",
+  "yield": "HIGH",
+  "why": "Concavity on an x-t graph signals acceleration sign; commonly tested graph reading"
+ },
+ {
+  "front": "On a velocity-time graph, area below the axis counts as {{c1::negative displacement}}, so total distance needs {{c1::areas added as magnitudes}}.",
+  "fp": "32f2ad88f4d4",
+  "yield": "MEDIUM",
+  "why": "Signed area below the axis vs total distance restates the area card with more nuance"
+ },
+ {
+  "front": "On the MCAT, what value of $g$ should you use, and who falls faster — heavy or light objects?",
+  "fp": "ea2f6835b751",
+  "yield": "LOW",
+  "why": "g = 10 advice plus all objects fall alike restates other cards in this deck"
+ },
+ {
+  "front": "Projectile motion: what determines hang time?",
+  "fp": "f137cc7de075",
+  "yield": "ULTRA_HIGH",
+  "why": "Hang time set by the vertical component, t = 2 v0 sin(theta)/g; tested every year"
+ },
+ {
+  "front": "Projectile range: formula, and which launch angle maximizes it?",
+  "fp": "40c233717eec",
+  "yield": "ULTRA_HIGH",
+  "why": "Range formula with 45-degree maximum and complementary angles is tested every year"
+ },
+ {
+  "front": "State the Big 5 kinematic equations and how to pick between them.",
+  "fp": "969714050e8f",
+  "yield": "ULTRA_HIGH",
+  "why": "The Big 5 kinematic equations are the foundation of every kinematics calculation"
+ },
+ {
+  "front": "Strobe images of a falling ball spaced farther apart each flash indicate {{c1::constant downward acceleration}}.",
+  "fp": "7f2b1325e7b3",
+  "yield": "MEDIUM",
+  "why": "Strobe spacing as evidence of constant acceleration is a plausible passage figure question"
+ },
+ {
+  "front": "Terminal velocity occurs when {{c1::drag equals weight}}, making acceleration {{c1::zero}}.",
+  "fp": "74021c9b5746",
+  "yield": "ULTRA_HIGH",
+  "why": "Terminal velocity when drag equals weight, a = 0, is tested on nearly every exam"
+ },
+ {
+  "front": "The horizontal and vertical motions of a projectile are linked only through {{c1::the time of flight}}.",
+  "fp": "64366573f493",
+  "yield": "HIGH",
+  "why": "Horizontal and vertical motions linked only by time; commonly needed setup step"
+ },
+ {
+  "front": "The unit $m/s^2$ reads as {{c1::meters per second, per second}}.",
+  "fp": "1f1c9e42b5c7",
+  "yield": "LOW",
+  "why": "Reading m/s^2 as meters per second per second is generic unit advice"
+ },
+ {
+  "front": "The velocity of A relative to B equals {{c1::$v_A - v_B$}}.",
+  "fp": "501bc8a637e3",
+  "yield": "HIGH",
+  "why": "Relative velocity v_A - v_B is a common vector question"
+ },
+ {
+  "front": "Total stopping distance splits into a reaction part scaling with {{c1::$v$}} and a braking part scaling with {{c1::$v^2$}}.",
+  "fp": "eac79c55c751",
+  "yield": "MEDIUM",
+  "why": "Reaction distance scaling with v and braking with v^2; secondary proportional reasoning"
+ },
+ {
+  "front": "Two cars travel at 60 and 40 km/h. What relative speed does each measure?",
+  "fp": "b7c83a32348b",
+  "yield": "LOW",
+  "why": "Two-car relative speed example restates the relative-velocity card"
+ },
+ {
+  "front": "Two sprinters have identical average speed over 100 m but different acceleration profiles. What is equal on their v-t graphs?",
+  "fp": "c8a3678fa233",
+  "yield": "MEDIUM",
+  "why": "Equal areas under v-t curves for equal displacement; secondary graph reasoning"
+ },
+ {
+  "front": "Two velocity-time lines cross. Do the two objects meet at that instant?",
+  "fp": "e3e83136e568",
+  "yield": "MEDIUM",
+  "why": "Crossing v-t lines mean equal speeds not meeting; plausible but second-tier graph question"
+ },
+ {
+  "front": "What implicit values do \"dropped\", \"comes to rest\", \"at the peak\", and \"constant velocity\" give you?",
+  "fp": "6744ed316af0",
+  "yield": "HIGH",
+  "why": "Implicit values from wording like dropped or at the peak are needed on most kinematics problems"
+ },
+ {
+  "front": "What is the acceleration of a projectile at its highest point?",
+  "fp": "3b05f9824a98",
+  "yield": "LOW",
+  "why": "Acceleration g at the highest point restates the apex card in this deck"
+ },
+ {
+  "front": "What is the FIRST step in any kinematics problem?",
+  "fp": "bd4b40b3ff85",
+  "yield": "LOW",
+  "why": "Generic first-step problem-solving advice"
+ },
+ {
+  "front": "When are the standard kinematic equations valid at all?",
+  "fp": "557714568b60",
+  "yield": "HIGH",
+  "why": "Kinematic equations valid only for constant acceleration is a commonly tested condition"
+ },
+ {
+  "front": "Which quantity is a vector?",
+  "fp": "47b35568a5d5",
+  "yield": "LOW",
+  "why": "Velocity as a vector restates the displacement/distance vector card"
+ },
+ {
+  "front": "Why do a heavy and a light block slide down a frictionless incline together?",
+  "fp": "3834844d180d",
+  "yield": "MEDIUM",
+  "why": "Mass independence on an incline supports the g sin(theta) card"
+ },
+ {
+  "front": "Why is a projectile's path parabolic?",
+  "fp": "9e67df8c10ff",
+  "yield": "MEDIUM",
+  "why": "Why the path is parabolic is useful understanding but rarely the tested point"
+ },
+ {
+  "front": "Why is instantaneous velocity a tangent slope while average velocity is a chord slope?",
+  "fp": "388089cc819e",
+  "yield": "MEDIUM",
+  "why": "Tangent vs chord slope for instantaneous vs average velocity; supporting graph concept"
+ }
+]

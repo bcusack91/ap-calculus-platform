@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you handle a passage about an artwork you have never seen?",
+  "fp": "5a6de8d6e471",
+  "yield": "HIGH",
+  "why": "Claim-over-object focus is used on every art/literature passage"
+ },
+ {
+  "front": "How do you handle figurative or metaphorical language?",
+  "fp": "ba8bd95b6d6d",
+  "yield": "HIGH",
+  "why": "Figurative-language translation is tested frequently in humanities passages"
+ },
+ {
+  "front": "How should you treat quoted material in a humanities passage?",
+  "fp": "f803411ec679",
+  "yield": "MEDIUM",
+  "why": "Why-the-quote questions occur but are a secondary question type"
+ },
+ {
+  "front": "What if a philosophy passage uses a term in a specialized way?",
+  "fp": "87e78fb2cafe",
+  "yield": "HIGH",
+  "why": "Stipulated-definition questions are common; accept the author's usage"
+ },
+ {
+  "front": "What is a common structure in art/literary criticism passages?",
+  "fp": "956a9e251134",
+  "yield": "MEDIUM",
+  "why": "Common structure, but a helpful heuristic rather than a tested step"
+ },
+ {
+  "front": "What makes humanities passages challenging?",
+  "fp": "0331b853aa01",
+  "yield": "LOW",
+  "why": "Generic description of difficulty; no tactic"
+ },
+ {
+  "front": "What subjects fall under humanities CARS passages?",
+  "fp": "ce5226d6b9c7",
+  "yield": "LOW",
+  "why": "Subject list is logistics, not a skill"
+ },
+ {
+  "front": "What tone is most common in humanities passages?",
+  "fp": "f62106e521ed",
+  "yield": "MEDIUM",
+  "why": "Tone tendency is useful context; tone itself is tested via the active-reading deck"
+ }
+]

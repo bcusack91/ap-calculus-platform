@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you find the passage author's own view in a comparative piece?",
+  "fp": "f9b20fd7056f",
+  "yield": "HIGH",
+  "why": "Locating the author's own view is asked on nearly every multi-view passage"
+ },
+ {
+  "front": "How do you handle a question asking what both authors would accept?",
+  "fp": "0903890a5a22",
+  "yield": "MEDIUM",
+  "why": "Both-would-accept is a niche question type; overlap tactic is a second step"
+ },
+ {
+  "front": "How should you annotate a comparative passage?",
+  "fp": "49c1c7e55bb2",
+  "yield": "MEDIUM",
+  "why": "Annotation habit helps but is not itself a tested skill"
+ },
+ {
+  "front": "What if the author appears neutral between two positions?",
+  "fp": "bc7f02e1b6c0",
+  "yield": "MEDIUM",
+  "why": "Neutral-author case is uncommon; secondary scope check"
+ },
+ {
+  "front": "What is a comparative CARS passage?",
+  "fp": "1bd2d49c3557",
+  "yield": "LOW",
+  "why": "Definition of the passage type; no tactic, trivia-grade"
+ },
+ {
+  "front": "What is a frequent trap in comparative passages?",
+  "fp": "40cbc0db098b",
+  "yield": "ULTRA_HIGH",
+  "why": "Misattributing a view to the wrong thinker/author is the core CARS trap, tested every year"
+ },
+ {
+  "front": "What question type is most common here?",
+  "fp": "46aec587424f",
+  "yield": "MEDIUM",
+  "why": "Analogy/application is one question type among several; niche framing"
+ },
+ {
+  "front": "What should you track most carefully in a comparative passage?",
+  "fp": "a444f6141735",
+  "yield": "HIGH",
+  "why": "Agree/diverge boundary drives most comparative-passage questions"
+ }
+]

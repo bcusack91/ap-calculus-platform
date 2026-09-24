@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you find an assumption bridging a gap?",
+  "fp": "12f2bec73868",
+  "yield": "HIGH",
+  "why": "Gap-bridging term search is the standard way to find assumptions"
+ },
+ {
+  "front": "How does an assumption differ from an implication?",
+  "fp": "0a29f99ad8bf",
+  "yield": "HIGH",
+  "why": "Assumption vs implication distinction separates two frequent question types"
+ },
+ {
+  "front": "What assumption underlies generalizing from a sample?",
+  "fp": "64b624464dc3",
+  "yield": "HIGH",
+  "why": "Representative-sample assumption is directly tested research reasoning"
+ },
+ {
+  "front": "What is an assumption in argumentative terms?",
+  "fp": "012515e987d7",
+  "yield": "ULTRA_HIGH",
+  "why": "Definition of assumption underlies weaken/strengthen/assumption questions every year"
+ },
+ {
+  "front": "What is the difference between an assumption and a fact stated in the passage?",
+  "fp": "5cc8ce6133a0",
+  "yield": "MEDIUM",
+  "why": "Restates the definition card; stated = premise"
+ },
+ {
+  "front": "What is the most common assumption in causal arguments?",
+  "fp": "47aa0e86d467",
+  "yield": "HIGH",
+  "why": "No-alternative-explanation assumption drives causal weaken questions"
+ },
+ {
+  "front": "What is the negation test?",
+  "fp": "4ab67500471e",
+  "yield": "ULTRA_HIGH",
+  "why": "Negation test is the core check on every assumption question"
+ },
+ {
+  "front": "Why are assumption answers often the least \"interesting\" choice?",
+  "fp": "9942dead49f3",
+  "yield": "MEDIUM",
+  "why": "Heuristic about answer feel; supporting insight, not a tested step"
+ }
+]

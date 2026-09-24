@@ -1,0 +1,410 @@
+[
+ {
+  "front": "$E1$ and $S_N1$ share the same rate-determining step. What is the practical consequence?",
+  "fp": "3ee11b80da7f",
+  "yield": "HIGH",
+  "why": "SN1/E1 sharing the carbocation step explains product mixtures; commonly tested"
+ },
+ {
+  "front": "$E2$ demands that the beta hydrogen and the leaving group be {{c1::anti-periplanar}}, at a dihedral angle of 180 degrees.",
+  "fp": "c4eb217148a8",
+  "yield": "ULTRA_HIGH",
+  "why": "Anti-periplanar E2 requirement is tested every year"
+ },
+ {
+  "front": "$S_N1$ at a stereocenter gives {{c1::racemization with a slight excess of inversion}}.",
+  "fp": "26e332b585e8",
+  "yield": "HIGH",
+  "why": "Slight excess of inversion in SN1 is the standard nuance beyond racemization"
+ },
+ {
+  "front": "$S_N2$ always inverts the spatial arrangement, but whether R becomes S depends on {{c1::the CIP priorities of nucleophile versus leaving group}}.",
+  "fp": "11a5a5508216",
+  "yield": "HIGH",
+  "why": "Inversion vs R/S label change is a classic stereochemistry trap"
+ },
+ {
+  "front": "A 1,2-hydride shift happens only when {{c1::it converts a less stable carbocation into a more stable one}}.",
+  "fp": "1c91e0e41b75",
+  "yield": "HIGH",
+  "why": "Condition for hydride shifts is the required reasoning step behind rearrangements"
+ },
+ {
+  "front": "A benzylic or allylic {{c1::primary}} halide can still react by $S_N1$. Why?",
+  "fp": "e52f1bd02190",
+  "yield": "MEDIUM",
+  "why": "Restates the allylic/benzylic cation card from the substrate angle"
+ },
+ {
+  "front": "A bulky base such as potassium tert-butoxide steers elimination toward the {{c1::Hofmann (less substituted)}} alkene.",
+  "fp": "55ff8c4c5ad6",
+  "yield": "ULTRA_HIGH",
+  "why": "Bulky base gives Hofmann product; asked nearly every administration"
+ },
+ {
+  "front": "A carbocation rearrangement occurs to:",
+  "fp": "32e7c91a8bd5",
+  "yield": "ULTRA_HIGH",
+  "why": "Carbocation rearrangement only in SN1/E1 is a foundational distinction"
+ },
+ {
+  "front": "A primary alkyl halide treated with potassium tert-butoxide gives mostly {{c1::alkene via $E2$}}, not ether.",
+  "fp": "ddac44d770c5",
+  "yield": "HIGH",
+  "why": "Primary halide plus t-BuOK giving E2 is a standard predict-the-product item"
+ },
+ {
+  "front": "A secondary halide with a strong bulky base gives mostly {{c1::E2}}; with a weak base in polar protic solvent it shifts toward {{c2::$S_N1$ and E1}}.",
+  "fp": "f9ada7209463",
+  "yield": "ULTRA_HIGH",
+  "why": "Secondary substrate decided by base/solvent is the central mechanism-choice question"
+ },
+ {
+  "front": "A strong, non-bulky base acting on a secondary alkyl halide gives predominantly {{c1::$E2$}}.",
+  "fp": "47b6ed3842a0",
+  "yield": "MEDIUM",
+  "why": "Near-restatement of the secondary-halide decision card"
+ },
+ {
+  "front": "A tertiary alcohol reacts with HCl at room temperature, but a primary alcohol needs $ZnCl_2$ and heat. Why?",
+  "fp": "8c5dd2e94576",
+  "yield": "MEDIUM",
+  "why": "Lucas-type reactivity difference is second-tier application"
+ },
+ {
+  "front": "A tertiary bridgehead halide in a bicyclic cage undergoes neither $S_N1$ nor $S_N2$. Why?",
+  "fp": "f9cd9ea08f91",
+  "yield": "MEDIUM",
+  "why": "Bridgehead inertness is a second-tier example of cation planarity"
+ },
+ {
+  "front": "Adding $AgNO_3$ to an alkyl halide accelerates ionization because {{c1::silver precipitates the halide}}.",
+  "fp": "575a800fe30b",
+  "yield": "LOW",
+  "why": "AgNO3 ionization test is off-outline lab detail"
+ },
+ {
+  "front": "Allylic and benzylic carbocations survive because the empty p orbital is {{c1::conjugated with an adjacent pi system}}.",
+  "fp": "f2c54c86f9a2",
+  "yield": "HIGH",
+  "why": "Resonance stabilization of allylic/benzylic cations is a standard stability question"
+ },
+ {
+  "front": "An alcohol is dehydrated in hot concentrated $H_2SO_4$. Which mechanism, and what evidence would confirm it?",
+  "fp": "9c38cb3ac377",
+  "yield": "HIGH",
+  "why": "Acid-catalyzed alcohol dehydration as E1 is a standard mechanism item"
+ },
+ {
+  "front": "An SN2 reaction is favored by which combination of conditions?",
+  "fp": "02564fefa493",
+  "yield": "ULTRA_HIGH",
+  "why": "SN2 favoring conditions are tested on essentially every exam"
+ },
+ {
+  "front": "Base opens an epoxide at the {{c1::less}} substituted carbon, while acid opens it at the {{c2::more}} substituted carbon.",
+  "fp": "8db91f50d8cb",
+  "yield": "ULTRA_HIGH",
+  "why": "Epoxide opening regiochemistry under acid vs base is a classic every-year item"
+ },
+ {
+  "front": "Both E1 and E2 usually give the {{c1::Zaitsev}} alkene; the exceptions come from {{c2::a bulky base}} or a locked ring geometry.",
+  "fp": "2d77e46dd0fe",
+  "yield": "MEDIUM",
+  "why": "Restates Zaitsev default and bulky-base exception"
+ },
+ {
+  "front": "Carbocation stability rises with alkyl substitution thanks to {{c1::hyperconjugation and inductive donation}}.",
+  "fp": "520689498854",
+  "yield": "ULTRA_HIGH",
+  "why": "Carbocation stability order and hyperconjugation is foundational"
+ },
+ {
+  "front": "Contrast SN1 and SN2 rate laws.",
+  "fp": "b522f75a38fd",
+  "yield": "LOW",
+  "why": "Near-restatement of the rate-law cloze card"
+ },
+ {
+  "front": "Contrast the energy diagrams: $S_N2$ has {{c1::one concerted step through a trigonal bipyramidal carbon}}; $S_N1$ has {{c2::two steps through a planar cation}}.",
+  "fp": "a4222717e08e",
+  "yield": "ULTRA_HIGH",
+  "why": "One-step vs two-step energy diagrams are tested every year"
+ },
+ {
+  "front": "Contrast Zaitsev and Hofmann products.",
+  "fp": "782f73787a3a",
+  "yield": "LOW",
+  "why": "Near-restatement of the Zaitsev and bulky-base cards"
+ },
+ {
+  "front": "Converting an alcohol into a tosylate proceeds with {{c1::retention}} of configuration at carbon.",
+  "fp": "57fe1e54141b",
+  "yield": "HIGH",
+  "why": "Tosylation with retention then SN2 inversion is a standard stereo-sequence question"
+ },
+ {
+  "front": "Distinguish E1 from E1cb by intermediate and by substrate.",
+  "fp": "e7051d145c07",
+  "yield": "MEDIUM",
+  "why": "E1 vs E1cb distinction is prep-book detail beyond the outline"
+ },
+ {
+  "front": "Doubling nucleophile concentration doubles the rate of one substitution mechanism and changes nothing for the other. Which is which?",
+  "fp": "e33cb1e0191f",
+  "yield": "ULTRA_HIGH",
+  "why": "Effect of nucleophile concentration on rate is the classic rate-law question"
+ },
+ {
+  "front": "E1cb runs through {{c1::a carbanion or enolate}} intermediate, so it needs an acidic beta proton and typically {{c2::a poor leaving group such as OH}}.",
+  "fp": "c82bd00992e0",
+  "yield": "MEDIUM",
+  "why": "E1cb intermediate details are second-tier mechanism content"
+ },
+ {
+  "front": "E2 requires which geometry?",
+  "fp": "49f0564dad93",
+  "yield": "LOW",
+  "why": "Near-restatement of the anti-periplanar E2 card"
+ },
+ {
+  "front": "Elimination beats substitution at high temperature because elimination {{c1::increases particle count, giving a positive $\\Delta S$}}.",
+  "fp": "392a0332d150",
+  "yield": "HIGH",
+  "why": "Entropy explanation for heat favoring elimination is commonly tested"
+ },
+ {
+  "front": "Enolase converts 2-phosphoglycerate to PEP by {{c1::E1cb-type dehydration}}, removing an acidic proton before hydroxide leaves.",
+  "fp": "4e8a46041280",
+  "yield": "LOW",
+  "why": "Enolase as E1cb is off-outline mechanism trivia"
+ },
+ {
+  "front": "Fumarase adds water across fumarate's double bond. What is the stereochemical course?",
+  "fp": "32b727bf0ceb",
+  "yield": "LOW",
+  "why": "Fumarase stereochemical course is trivia-grade detail"
+ },
+ {
+  "front": "How do solvents steer the mechanism?",
+  "fp": "dd4f72afc908",
+  "yield": "ULTRA_HIGH",
+  "why": "Protic vs aprotic solvent effect on mechanism is tested every year"
+ },
+ {
+  "front": "Hydroxide, alkoxide, and amide anions never leave directly. How is an alcohol activated for substitution?",
+  "fp": "30ba4badf046",
+  "yield": "HIGH",
+  "why": "Activating OH as a leaving group is a standard required step"
+ },
+ {
+  "front": "In biology the leaving group is almost always {{c1::a phosphate or pyrophosphate}}, because its conjugate acid is strong and its charge is delocalized.",
+  "fp": "a1969fee647c",
+  "yield": "MEDIUM",
+  "why": "Phosphate as the biological leaving group is supporting biochem context"
+ },
+ {
+  "front": "In elimination, the leaving group departs from the {{c1::alpha}} carbon and the proton is removed from the {{c2::beta}} carbon.",
+  "fp": "432b2da79da0",
+  "yield": "HIGH",
+  "why": "Alpha/beta carbon definitions and no-beta-H rule are needed to read elimination items"
+ },
+ {
+  "front": "In protic solvent halide nucleophilicity runs $I^- > Br^- > Cl^- > F^-$; in aprotic solvent that order {{c1::reverses}}.",
+  "fp": "e614e2162318",
+  "yield": "ULTRA_HIGH",
+  "why": "Halide nucleophilicity reversal between solvents is a classic every-year question"
+ },
+ {
+  "front": "Intramolecular substitution outruns intermolecular when it closes a {{c1::three-, five-, or six-membered}} ring.",
+  "fp": "ede8852b79b4",
+  "yield": "MEDIUM",
+  "why": "Intramolecular ring-closure preference is second-tier detail"
+ },
+ {
+  "front": "Leaving group ability tracks {{c1::how weak a base the leaving group is}}, which means {{c2::a low $pK_a$ for its conjugate acid}}.",
+  "fp": "469981ade9ea",
+  "yield": "HIGH",
+  "why": "Leaving-group ability via conjugate-acid pKa is the reasoning behind rankings"
+ },
+ {
+  "front": "Neopentyl bromide is primary yet nearly inert to $S_N2$ because of {{c1::beta-branching at the adjacent quaternary carbon}}.",
+  "fp": "ff2787a79a0f",
+  "yield": "MEDIUM",
+  "why": "Neopentyl beta-branching is a second-tier steric example"
+ },
+ {
+  "front": "Nucleophilicity is a {{c1::kinetic}} property while basicity is a {{c2::thermodynamic}} one.",
+  "fp": "59befc935d37",
+  "yield": "ULTRA_HIGH",
+  "why": "Nucleophilicity (kinetic) vs basicity (thermodynamic) is foundational"
+ },
+ {
+  "front": "On a cyclohexane ring, $E2$ requires the leaving group and beta hydrogen to be {{c1::trans-diaxial}}.",
+  "fp": "4e3bd58fb95f",
+  "yield": "HIGH",
+  "why": "Trans-diaxial E2 on cyclohexane is a common ring-elimination question"
+ },
+ {
+  "front": "Polar aprotic solvents (DMSO, acetone) favor:",
+  "fp": "27ec725340c1",
+  "yield": "LOW",
+  "why": "Near-restatement of the solvent-effect card"
+ },
+ {
+  "front": "Predict the major products: tert-butyl bromide heated in ethanol.",
+  "fp": "976b8d77be40",
+  "yield": "HIGH",
+  "why": "Tertiary halide solvolysis mixture is a standard predict-the-product item"
+ },
+ {
+  "front": "Predict: 1-bromobutane treated with NaOH in DMSO.",
+  "fp": "8001caebb182",
+  "yield": "MEDIUM",
+  "why": "Application restating SN2 conditions"
+ },
+ {
+  "front": "Predict: 2-bromopropane with sodium ethoxide versus with sodium ethanethiolate.",
+  "fp": "4b4af1b6cad8",
+  "yield": "HIGH",
+  "why": "Ethoxide vs thiolate on a secondary halide tests basicity vs nucleophilicity directly"
+ },
+ {
+  "front": "Predict: neopentyl tosylate treated with NaCN in DMSO.",
+  "fp": "b0458a95fe3a",
+  "yield": "LOW",
+  "why": "Near-restatement of the neopentyl card"
+ },
+ {
+  "front": "S-adenosylmethionine methylates DNA and norepinephrine by which mechanism?",
+  "fp": "d33ebc7419e4",
+  "yield": "MEDIUM",
+  "why": "SAM methylation as SN2 is supporting biochem context"
+ },
+ {
+  "front": "Solvolysis, where the solvent is also the nucleophile, strongly favors {{c1::$S_N1$}}.",
+  "fp": "6f49e2096fcd",
+  "yield": "HIGH",
+  "why": "Solvolysis favoring SN1 is a standard condition-recognition item"
+ },
+ {
+  "front": "Substitution wins over elimination when the reagent is a strong nucleophile that is a {{c1::weak}} base.",
+  "fp": "2e5a4a2f8a95",
+  "yield": "ULTRA_HIGH",
+  "why": "Strong nucleophile/weak base favoring substitution is central mechanism choice"
+ },
+ {
+  "front": "Sulfur nucleophiles beat oxygen nucleophiles in $S_N2$ because sulfur is {{c1::larger and more polarizable}}, even though it is {{c2::the weaker base}}.",
+  "fp": "02fd68109f7f",
+  "yield": "HIGH",
+  "why": "Polarizability making sulfur a better nucleophile is a standard comparison"
+ },
+ {
+  "front": "The $S_N1$ rate law is {{c1::rate = k[substrate]}} while the $S_N2$ rate law is {{c2::rate = k[substrate][nucleophile]}}.",
+  "fp": "14f2fd8746ac",
+  "yield": "ULTRA_HIGH",
+  "why": "SN1 vs SN2 rate laws are tested every year"
+ },
+ {
+  "front": "Vinyl and aryl halides resist both $S_N1$ and $S_N2$. Why?",
+  "fp": "bae954cb4f96",
+  "yield": "MEDIUM",
+  "why": "Vinyl/aryl halide inertness is a second-tier substrate example"
+ },
+ {
+  "front": "Water is an excellent ionizing solvent yet a poor nucleophile. Explain both halves.",
+  "fp": "b44117df4da9",
+  "yield": "MEDIUM",
+  "why": "Water as ionizing solvent but poor nucleophile is supporting reasoning"
+ },
+ {
+  "front": "What distinguishes a good leaving group, and rank common ones.",
+  "fp": "1d462df22e8d",
+  "yield": "ULTRA_HIGH",
+  "why": "Leaving-group definition and ranking is tested every administration"
+ },
+ {
+  "front": "What geometry does E2 require?",
+  "fp": "7f2c3ba86727",
+  "yield": "LOW",
+  "why": "Near-restatement of the anti-periplanar E2 card"
+ },
+ {
+  "front": "What makes a good leaving group?",
+  "fp": "3490bb38fa7e",
+  "yield": "LOW",
+  "why": "Near-restatement of the leaving-group ranking card"
+ },
+ {
+  "front": "What stereochemistry does each substitution give?",
+  "fp": "7d6f24dd5a56",
+  "yield": "ULTRA_HIGH",
+  "why": "SN2 inversion vs SN1 racemization is tested every year"
+ },
+ {
+  "front": "Which conditions favor elimination over substitution?",
+  "fp": "7b1cb304e061",
+  "yield": "ULTRA_HIGH",
+  "why": "Conditions favoring elimination over substitution is a core every-year question"
+ },
+ {
+  "front": "Which mechanism shows a kinetic isotope effect when the beta hydrogen is replaced with deuterium?",
+  "fp": "112e4b8f6d82",
+  "yield": "MEDIUM",
+  "why": "Kinetic isotope effect is second-tier evidence detail"
+ },
+ {
+  "front": "Which solvent best promotes SN1?",
+  "fp": "93ca7a948336",
+  "yield": "LOW",
+  "why": "Near-restatement of the solvent-effect card"
+ },
+ {
+  "front": "Which substrates favor SN2 vs SN1?",
+  "fp": "9e262ae46403",
+  "yield": "ULTRA_HIGH",
+  "why": "Substrate preference for SN1 vs SN2 is foundational"
+ },
+ {
+  "front": "Which two conditions together make $E1$ the likely pathway?",
+  "fp": "8e4daeac9df0",
+  "yield": "HIGH",
+  "why": "E1 conditions are a standard mechanism-selection item"
+ },
+ {
+  "front": "Why can $E2$ on a ring give the less substituted alkene even with a small base?",
+  "fp": "8f76e44adf22",
+  "yield": "MEDIUM",
+  "why": "Ring E2 giving anti-Zaitsev product is a second-tier geometric case"
+ },
+ {
+  "front": "Why does $S_N2$ reactivity fall sharply from methyl to primary to secondary substrates?",
+  "fp": "69a4a89fd10b",
+  "yield": "HIGH",
+  "why": "Steric basis of the methyl > 1 > 2 SN2 trend is the required reasoning step"
+ },
+ {
+  "front": "Why does ATP supply such a good leaving group in kinase reactions?",
+  "fp": "234ecea38e9c",
+  "yield": "MEDIUM",
+  "why": "ATP leaving-group reasoning is supporting biochem context"
+ },
+ {
+  "front": "Why is the dehydration step of an aldol condensation E1cb rather than E1?",
+  "fp": "8e7ae3f5ea2c",
+  "yield": "MEDIUM",
+  "why": "Aldol dehydration as E1cb is second-tier mechanism detail"
+ },
+ {
+  "front": "You isolate a substitution product whose carbon skeleton differs from the substrate's. What does that prove?",
+  "fp": "68f5afb1207f",
+  "yield": "HIGH",
+  "why": "Skeletal rearrangement proving a carbocation is a common passage inference"
+ },
+ {
+  "front": "Zaitsev's rule predicts the {{c1::more substituted}} alkene, favored because {{c2::alkyl groups stabilize the pi bond by hyperconjugation}}.",
+  "fp": "97e6c4ec5ae0",
+  "yield": "ULTRA_HIGH",
+  "why": "Zaitsev rule is tested nearly every administration"
+ }
+]

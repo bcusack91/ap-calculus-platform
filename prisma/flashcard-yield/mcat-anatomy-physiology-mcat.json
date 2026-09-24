@@ -9,7 +9,7 @@
   "front": "A reflex arc can bypass the brain because:",
   "fp": "83a9d064162d",
   "yield": "HIGH",
-  "why": "Spinal reflex arc integration is core nervous-system content"
+  "why": "Spinal reflex arc integration is core nervous-system content; commonly tested"
  },
  {
   "front": "ABO antibodies are preformed {{c1::IgM}}, but anti-Rh antibodies are IgG produced only after sensitization.",
@@ -50,8 +50,8 @@
  {
   "front": "ATP is required in muscle to:",
   "fp": "636aad216fa7",
-  "yield": "HIGH",
-  "why": "ATP-dependent myosin detachment is core muscle physiology (belongs in MSK deck)"
+  "yield": "ULTRA_HIGH",
+  "why": "ATP releasing the myosin head (rigor mortis) is asked on essentially every exam"
  },
  {
   "front": "B12 and folate deficiency both cause megaloblastic anemia, but only B12 deficiency causes {{c1::neurologic}} damage.",
@@ -62,20 +62,20 @@
  {
   "front": "Body water is about {{c1::60}} percent of body mass: two-thirds intracellular, one-third extracellular, and one-quarter of the extracellular fluid is plasma.",
   "fp": "8ee1226e333d",
-  "yield": "MEDIUM",
-  "why": "Fluid compartment fractions are standard prep-book support for plasma volume regulation"
+  "yield": "HIGH",
+  "why": "Body water compartments (60/40/20) are a standard calculation basis for fluid questions"
  },
  {
   "front": "Compare the three muscle types.",
   "fp": "cb81b024b773",
-  "yield": "HIGH",
-  "why": "Skeletal/cardiac/smooth comparison is explicitly on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Skeletal/cardiac/smooth muscle comparison is explicitly on the outline and asked every year"
  },
  {
   "front": "Dietary fats absorbed as chylomicrons enter {{c1::lacteals (lymphatic vessels)}} and reach blood via the thoracic duct, bypassing the liver.",
   "fp": "6f45bf031769",
-  "yield": "HIGH",
-  "why": "Chylomicrons entering lacteals and bypassing the liver is a classic absorption-site question"
+  "yield": "ULTRA_HIGH",
+  "why": "Chylomicrons entering lacteals and bypassing the liver is a perennial absorption-site question"
  },
  {
   "front": "During exercise, early stroke-volume gains plateau, so further increases in cardiac output come mainly from {{c1::heart rate}}.",
@@ -92,14 +92,14 @@
  {
   "front": "Epithelium is avascular: it is nourished by diffusion from underlying connective tissue across the {{c1::basement membrane}}.",
   "fp": "0083478aecc4",
-  "yield": "MEDIUM",
-  "why": "Avascular epithelium on a basement membrane is useful tissue-level context"
+  "yield": "HIGH",
+  "why": "Avascular epithelium fed by diffusion across the basement membrane is a commonly tested tissue fact"
  },
  {
   "front": "Erythropoietin is secreted by the {{c1::kidney}} in response to low oxygen delivery, stimulating red blood cell production.",
   "fp": "fe085bd43c5d",
-  "yield": "HIGH",
-  "why": "Kidney EPO in response to hypoxia is a core homeostatic axis"
+  "yield": "ULTRA_HIGH",
+  "why": "Kidney EPO in response to hypoxia is a homeostatic axis asked on essentially every exam"
  },
  {
   "front": "Exercising muscle steals blood flow because local metabolites ({{c1::adenosine, CO2, H+, K+}}) dilate its arterioles, overriding sympathetic tone.",
@@ -116,19 +116,19 @@
  {
   "front": "Fatty acids cannot become glucose because {{c1::acetyl-CoA cannot be converted back to pyruvate}}; pyruvate dehydrogenase is irreversible.",
   "fp": "52b9f3205d83",
-  "yield": "HIGH",
-  "why": "Irreversible PDH step blocking fat-to-glucose is a classic biochem question"
+  "yield": "ULTRA_HIGH",
+  "why": "Irreversible PDH step blocking fat-to-glucose conversion is a classic asked every year"
  },
  {
   "front": "Gas exchange occurs across the:",
   "fp": "acd7d509bd33",
-  "yield": "HIGH",
-  "why": "Alveolar gas exchange is core respiratory content"
+  "yield": "ULTRA_HIGH",
+  "why": "Alveolar gas exchange is core respiratory content asked every year"
  },
  {
   "front": "Give an example of positive feedback in physiology.",
   "fp": "28069538344b",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Positive feedback examples (oxytocin, clotting) are a staple homeostasis question"
  },
  {
@@ -159,19 +159,19 @@
   "front": "How does the lymphatic system support circulation?",
   "fp": "2e6fcdda3f95",
   "yield": "HIGH",
-  "why": "Lymphatic functions (fluid return, fats, immunity) are core and plainly stated"
+  "why": "Lymphatic functions (fluid return, fats, immunity) are outline content, commonly tested"
  },
  {
   "front": "In exercising muscle the O2-hemoglobin curve shifts {{c1::right}} — high CO2, H+, temperature, and 2,3-BPG all favor O2 unloading.",
   "fp": "0ff529027923",
-  "yield": "HIGH",
-  "why": "Right shift from CO2/H+/temperature/2,3-BPG is a high-frequency Bohr-effect question"
+  "yield": "ULTRA_HIGH",
+  "why": "Right shift from CO2/H+/temperature/2,3-BPG is a Bohr-effect question asked every year"
  },
  {
   "front": "In prolonged starvation the brain derives much of its energy from {{c1::ketone bodies}}, sparing muscle protein.",
   "fp": "07e89b86ab48",
-  "yield": "HIGH",
-  "why": "Brain use of ketones in starvation is a core metabolic-state fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Brain use of ketones in prolonged starvation is a core metabolic-state fact asked every year"
  },
  {
   "front": "Iron deficiency versus anemia of chronic disease: contrast ferritin, transferrin, and total iron-binding capacity.",
@@ -183,7 +183,7 @@
   "front": "Menopause is characterized by:",
   "fp": "81bad2d70c8e",
   "yield": "HIGH",
-  "why": "Menopause with loss of negative feedback raising FSH/LH is tested"
+  "why": "Menopause with loss of negative feedback raising FSH/LH is commonly tested"
  },
  {
   "front": "Monocytes circulate briefly, then enter tissues and differentiate into {{c1::macrophages}} and related dendritic cells.",
@@ -206,8 +206,8 @@
  {
   "front": "Natural killer cells target:",
   "fp": "1c3ab7ecf4c5",
-  "yield": "HIGH",
-  "why": "NK cells targeting low MHC I is a high-frequency immune distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "NK cells targeting low MHC I is a high-frequency immune distinction asked every year"
  },
  {
   "front": "Normal hemoglobin is about {{c1::15}} g/dL in men and 13.5 g/dL in women, with hematocrit roughly three times the hemoglobin value.",
@@ -218,8 +218,8 @@
  {
   "front": "Platelets are anucleate cytoplasmic fragments budded from marrow {{c1::megakaryocytes}}.",
   "fp": "2ad6bb09e77c",
-  "yield": "MEDIUM",
-  "why": "Platelets from megakaryocytes is standard supporting blood-composition detail"
+  "yield": "HIGH",
+  "why": "Platelets as megakaryocyte fragments is a commonly tested blood-composition fact"
  },
  {
   "front": "Predict the fluid, temperature, and infection consequences of losing a large area of skin to a burn.",
@@ -236,8 +236,8 @@
  {
   "front": "Rank the leukocytes by abundance, and name the first responder to bacterial infection.",
   "fp": "148350e2706d",
-  "yield": "MEDIUM",
-  "why": "Neutrophils as first responders is tested; abundance ranking is second tier"
+  "yield": "HIGH",
+  "why": "Neutrophils as most abundant first responders is commonly tested; full ranking is extra"
  },
  {
   "front": "Sequence the energy systems powering the first minutes of intense exercise.",
@@ -248,32 +248,32 @@
  {
   "front": "Skin cools the body mainly by {{c1::evaporation of eccrine sweat}} plus dilation of dermal blood vessels.",
   "fp": "99a571cb72a0",
-  "yield": "HIGH",
-  "why": "Evaporative cooling and vasodilation are core thermoregulation"
+  "yield": "ULTRA_HIGH",
+  "why": "Evaporative cooling and dermal vasodilation are the core thermoregulation facts, asked every year"
  },
  {
   "front": "The fasted hormone signature: insulin {{c1::low}}, glucagon high — unleashing hormone-sensitive lipase in adipose tissue.",
   "fp": "29dc6706f1c9",
-  "yield": "HIGH",
-  "why": "Low insulin/high glucagon activating HSL is core fasted-state signaling"
+  "yield": "ULTRA_HIGH",
+  "why": "Low insulin/high glucagon activating HSL is core fasted-state signaling asked every year"
  },
  {
   "front": "The primitive streak marks:",
   "fp": "ed5fff36515e",
   "yield": "MEDIUM",
-  "why": "Primitive streak supports tested gastrulation content"
+  "why": "Primitive streak duplicates the embryology deck, where it is served as core"
  },
  {
   "front": "The spleen's {{c1::red pulp}} filters aged RBCs, while its white pulp is lymphoid tissue surveilling the blood.",
   "fp": "e81c44125c62",
-  "yield": "MEDIUM",
-  "why": "Spleen filtering RBCs is tested; red/white pulp detail is second tier"
+  "yield": "HIGH",
+  "why": "Spleen filtering aged RBCs is commonly tested; red/white pulp names are extra"
  },
  {
   "front": "The trachea and bronchi are lined by {{c1::pseudostratified ciliated columnar}} epithelium with goblet cells (the mucociliary escalator).",
   "fp": "896fe293acf9",
-  "yield": "MEDIUM",
-  "why": "Mucociliary escalator is tested; epithelium name is supporting detail"
+  "yield": "HIGH",
+  "why": "Mucociliary escalator is commonly tested; the epithelium name is supporting detail"
  },
  {
   "front": "The two excitable tissue types, capable of firing action potentials, are {{c1::muscle and nervous tissue}}.",
@@ -284,20 +284,20 @@
  {
   "front": "Trace why autoimmune destruction of gastric parietal cells causes anemia only years later.",
   "fp": "ba64232db69f",
-  "yield": "HIGH",
-  "why": "Parietal cells, intrinsic factor and ileal B12 absorption are core absorption-site facts"
+  "yield": "ULTRA_HIGH",
+  "why": "Parietal cells, intrinsic factor and ileal B12 absorption are asked on essentially every exam"
  },
  {
   "front": "UV light in skin converts {{c1::7-dehydrocholesterol}} into vitamin D3 (cholecalciferol), the first step of vitamin D synthesis.",
   "fp": "6c6f16323721",
-  "yield": "MEDIUM",
-  "why": "Skin vitamin D synthesis is tested; precursor name is supporting detail"
+  "yield": "HIGH",
+  "why": "Skin vitamin D synthesis is commonly tested; the precursor name is supporting detail"
  },
  {
   "front": "What are exocrine vs. endocrine glands?",
   "fp": "94718269e81a",
-  "yield": "HIGH",
-  "why": "Exocrine vs endocrine gland distinction is basic tested content"
+  "yield": "ULTRA_HIGH",
+  "why": "Exocrine vs endocrine gland distinction is basic content asked every year"
  },
  {
   "front": "What are the four primary tissue types?",
@@ -308,8 +308,8 @@
  {
   "front": "What are the layers of the skin?",
   "fp": "cbf51f1b058c",
-  "yield": "HIGH",
-  "why": "Epidermis/dermis/hypodermis layers are explicitly on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Epidermis/dermis/hypodermis layers are explicitly on the outline and asked every year"
  },
  {
   "front": "What are the three core functions of the lymphatic system?",
@@ -326,14 +326,14 @@
  {
   "front": "What does the Cori cycle accomplish during exercise, and what is its energetic cost?",
   "fp": "7965ff3e27ea",
-  "yield": "HIGH",
-  "why": "Cori cycle and its 6-vs-2 ATP cost is a classic question"
+  "yield": "ULTRA_HIGH",
+  "why": "Cori cycle and its 6-vs-2 ATP cost is a classic asked every year"
  },
  {
   "front": "What does the liver do metabolically?",
   "fp": "70f7719103f3",
-  "yield": "HIGH",
-  "why": "Liver metabolic functions are core digestive-system content"
+  "yield": "ULTRA_HIGH",
+  "why": "Liver metabolic functions are core digestive-system content asked every year"
  },
  {
   "front": "What happens in lymph node germinal centers during an infection?",
@@ -350,8 +350,8 @@
  {
   "front": "What is homeostasis and its usual control mechanism?",
   "fp": "79af31b79351",
-  "yield": "HIGH",
-  "why": "Homeostasis via negative feedback is the central concept of this topic"
+  "yield": "ULTRA_HIGH",
+  "why": "Homeostasis via negative feedback is the central concept of the section"
  },
  {
   "front": "Which tissues remain obligate glucose users even in deep starvation, and why?",
@@ -368,14 +368,14 @@
  {
   "front": "Why can a red blood cell not use the oxygen it carries?",
   "fp": "0ba646e71561",
-  "yield": "HIGH",
-  "why": "Anucleate RBCs lacking mitochondria is a classic question"
+  "yield": "ULTRA_HIGH",
+  "why": "Anucleate RBCs lacking mitochondria is a classic asked every year"
  },
  {
   "front": "Why can the liver make ketone bodies but not consume them?",
   "fp": "bb1a2f2ded86",
-  "yield": "MEDIUM",
-  "why": "Liver exporting but not using ketones is standard biochem support"
+  "yield": "HIGH",
+  "why": "Liver exporting but not oxidizing ketones is a commonly tested biochem discrete"
  },
  {
   "front": "Why do arterial PO2 and PCO2 stay nearly constant during moderate exercise?",
@@ -398,19 +398,19 @@
  {
   "front": "Why does low plasma albumin (liver failure, malnutrition) cause edema?",
   "fp": "665846892bf3",
-  "yield": "HIGH",
-  "why": "Albumin oncotic pressure and Starling forces are core edema questions"
+  "yield": "ULTRA_HIGH",
+  "why": "Albumin oncotic pressure and Starling forces are edema questions asked every year"
  },
  {
   "front": "Why does vitamin C deficiency cause bleeding gums and wounds that reopen?",
   "fp": "0920e2cd2ab1",
-  "yield": "MEDIUM",
-  "why": "Vitamin C as hydroxylase cofactor is a standard scurvy biochem question"
+  "yield": "HIGH",
+  "why": "Vitamin C as hydroxylase cofactor for collagen is a standard scurvy biochem question"
  },
  {
   "front": "Why is simple squamous epithelium found in alveoli and capillaries, while stratified squamous lines skin and esophagus?",
   "fp": "4b5b15ed1f09",
-  "yield": "MEDIUM",
-  "why": "Epithelium form-follows-function is useful supporting tissue content"
+  "yield": "HIGH",
+  "why": "Epithelium form-follows-function (simple vs stratified squamous) is commonly tested"
  }
 ]

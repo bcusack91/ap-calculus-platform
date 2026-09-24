@@ -1,0 +1,380 @@
+[
+ {
+  "front": "$\\Delta G^{\\circ} = -nFE^{\\circ}$, so a positive cell potential corresponds to a {{c1::negative}} $\\Delta G$ and a spontaneous reaction.",
+  "fp": "6c72db0f33aa",
+  "yield": "ULTRA_HIGH",
+  "why": "Delta G = -nFE is the bridge equation tested every year"
+ },
+ {
+  "front": "$E^{\\circ}_{cell} = E^{\\circ}_{cathode} - E^{\\circ}_{anode}$, using {{c1::reduction}} potentials for both half-cells.",
+  "fp": "45c4112ee401",
+  "yield": "ULTRA_HIGH",
+  "why": "E cell = E cathode - E anode is used in every cell potential calculation"
+ },
+ {
+  "front": "A 12 V battery with internal resistance $0.5\\ \\Omega$ delivers 4 A. What is its terminal voltage?",
+  "fp": "050ec895e008",
+  "yield": "MEDIUM",
+  "why": "Terminal voltage belongs to the circuits deck and is covered there [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "A half-reaction is multiplied by 3 to balance electrons. What happens to its $E^{\\circ}$?",
+  "fp": "d4e68636b3cc",
+  "yield": "HIGH",
+  "why": "E is intensive, unchanged by coefficients; common trap"
+ },
+ {
+  "front": "A neuron's membrane is essentially a {{c1::concentration cell}}: its voltage comes from an ion gradient, with $E^{\\circ} = 0$.",
+  "fp": "ecd24e883006",
+  "yield": "HIGH",
+  "why": "Neuron membrane as a concentration cell is a recurring crossover"
+ },
+ {
+  "front": "A pH electrode is a Nernst device: its potential shifts about {{c1::59 mV}} per pH unit at $25$ degrees C.",
+  "fp": "448cfc2cdbec",
+  "yield": "MEDIUM",
+  "why": "pH electrode slope is instrumentation detail"
+ },
+ {
+  "front": "A rechargeable battery operates as:",
+  "fp": "0567acfb9694",
+  "yield": "HIGH",
+  "why": "Rechargeable battery mode switch is commonly asked"
+ },
+ {
+  "front": "All coefficients in a balanced cell reaction are doubled. What happens to $\\Delta G^{\\circ}$, $K$, and $E^{\\circ}$?",
+  "fp": "d1c61e302ebc",
+  "yield": "MEDIUM",
+  "why": "Extends the intensive-E card to K; second-step detail"
+ },
+ {
+  "front": "At body temperature the Nernst potential for a monovalent ion is about {{c1::61 mV}} times $\\log([X]_{out}/[X]_{in})$.",
+  "fp": "dbe43dbbccb9",
+  "yield": "HIGH",
+  "why": "61 mV Nernst prefactor for membrane potentials is commonly needed"
+ },
+ {
+  "front": "Cathodic protection attaches a metal such as Zn or Mg that is {{c1::more easily oxidized}} than iron, making it a sacrificial anode.",
+  "fp": "7e5251b65fd9",
+  "yield": "HIGH",
+  "why": "Sacrificial anode / cathodic protection is a stock question"
+ },
+ {
+  "front": "Cell notation is anode | anode solution || cathode solution | cathode, where the double bar denotes the {{c1::salt bridge}}.",
+  "fp": "26a86212f819",
+  "yield": "HIGH",
+  "why": "Cell notation reading is commonly tested"
+ },
+ {
+  "front": "Cells wired in series add their {{c1::voltages}}, while cells in parallel keep one cell's voltage but supply current for longer.",
+  "fp": "ec40e01b2e7b",
+  "yield": "MEDIUM",
+  "why": "Cells in series/parallel is secondary battery content"
+ },
+ {
+  "front": "Contrast galvanic and electrolytic cells.",
+  "fp": "9ffd2f4c974e",
+  "yield": "ULTRA_HIGH",
+  "why": "Galvanic vs electrolytic contrast is tested every year"
+ },
+ {
+  "front": "Depositing one mole of $Al^{3+}$ requires {{c1::3}} faradays of charge, versus $2$ for $Cu^{2+}$ and $1$ for $Ag^+$.",
+  "fp": "4019aecdc670",
+  "yield": "ULTRA_HIGH",
+  "why": "Electrons per ion in Faraday's law calculations is required every year"
+ },
+ {
+  "front": "Electrical power delivered is $P = IV$, which for a resistor also equals {{c1::$I^2R$}} or $V^2/R$.",
+  "fp": "ea5eb789be62",
+  "yield": "MEDIUM",
+  "why": "Power formulas belong to the circuits deck and are covered there [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Electrolysis of water yields hydrogen at the cathode and oxygen at the anode in a {{c1::2:1}} volume ratio.",
+  "fp": "fa020ce0478f",
+  "yield": "MEDIUM",
+  "why": "Water electrolysis 2:1 ratio is a second-tier example"
+ },
+ {
+  "front": "Electrons falling from NADH ($-0.32$ V) to oxygen ($+0.82$ V) traverse {{c1::1.14 V}}, releasing about $220$ kJ/mol.",
+  "fp": "404e39982f7e",
+  "yield": "MEDIUM",
+  "why": "NADH to O2 potential drop is a biochem crossover application"
+ },
+ {
+  "front": "Electroplating deposits metal at the:",
+  "fp": "e8f92a458e63",
+  "yield": "LOW",
+  "why": "Restates the electrolytic plating at cathode card"
+ },
+ {
+  "front": "Faraday's constant is about {{c1::96,485 C}} per mole of electrons, so moles of electrons passed equals {{c2::$It/F$}}.",
+  "fp": "6b8590a83771",
+  "yield": "ULTRA_HIGH",
+  "why": "Faraday's constant and moles e = It/F is a calculation equation"
+ },
+ {
+  "front": "For the cell $Zn|Zn^{2+}||Cu^{2+}|Cu$, why does one electrode lose mass while the other gains mass?",
+  "fp": "6cbba810dfa3",
+  "yield": "HIGH",
+  "why": "Electrode mass change reporting half-reaction direction is a common question"
+ },
+ {
+  "front": "Give the Nernst equation.",
+  "fp": "a087e81c957e",
+  "yield": "ULTRA_HIGH",
+  "why": "Nernst equation is tested every year, at least qualitatively"
+ },
+ {
+  "front": "Given $\\Delta G^{\\circ} = -nFE^{\\circ}$ and $\\Delta G^{\\circ} = -RT\\ln K$, how do $E^{\\circ}$ and $K$ relate?",
+  "fp": "9a6d87c1181c",
+  "yield": "ULTRA_HIGH",
+  "why": "E and K relationship is a required thermodynamic link"
+ },
+ {
+  "front": "Given two half-cells, how do you predict which species is oxidized without memorizing the table?",
+  "fp": "945f3b1441b7",
+  "yield": "ULTRA_HIGH",
+  "why": "Picking cathode by higher reduction potential is the core reasoning step"
+ },
+ {
+  "front": "How does a fuel cell differ from an ordinary battery?",
+  "fp": "68b47c1c9741",
+  "yield": "MEDIUM",
+  "why": "Fuel cell vs battery is a second-tier distinction"
+ },
+ {
+  "front": "How does an amperometric glucose meter convert blood glucose into a number?",
+  "fp": "93ab606c7efd",
+  "yield": "LOW",
+  "why": "Glucose meter mechanism is off-outline instrumentation"
+ },
+ {
+  "front": "How does conventional current relate to electron flow in the external wire of a galvanic cell?",
+  "fp": "7d7acb11522d",
+  "yield": "HIGH",
+  "why": "Conventional current vs electron flow is a common trap"
+ },
+ {
+  "front": "How does raising the concentration of a reactant in the cathode compartment affect $E_{cell}$?",
+  "fp": "01d21f06c1f2",
+  "yield": "ULTRA_HIGH",
+  "why": "Qualitative Nernst: concentration shifts E; appears nearly every year"
+ },
+ {
+  "front": "How long does it take to plate 0.10 mol of Cu from $Cu^{2+}$ at 2.0 A?",
+  "fp": "17b2f4ea3325",
+  "yield": "MEDIUM",
+  "why": "Second worked Faraday calculation; the silver plating card covers the setup"
+ },
+ {
+  "front": "How many grams of silver plate out when $1.5$ A flows for $10$ minutes through $Ag^+$ solution? ($M = 108$ g/mol)",
+  "fp": "bbffdecf8c2b",
+  "yield": "HIGH",
+  "why": "Electroplating mass calculation is a standard discrete"
+ },
+ {
+  "front": "In a concentration cell $E^{\\circ} = 0$, and the {{c1::dilute}} half-cell serves as the anode.",
+  "fp": "b744f2cd827b",
+  "yield": "HIGH",
+  "why": "Concentration cell with dilute side as anode is commonly asked"
+ },
+ {
+  "front": "In a galvanic cell the anode is labeled {{c1::negative}}; in an electrolytic cell the anode is labeled {{c2::positive}}.",
+  "fp": "b0c8be797300",
+  "yield": "ULTRA_HIGH",
+  "why": "Anode sign flip between galvanic and electrolytic is tested every year"
+ },
+ {
+  "front": "In a galvanic cell, electrons flow through the external circuit from:",
+  "fp": "3761869d26a8",
+  "yield": "ULTRA_HIGH",
+  "why": "Electron flow anode to cathode is a foundational fact"
+ },
+ {
+  "front": "In a table of standard reduction potentials, which entry marks the strongest oxidizing agent?",
+  "fp": "882b8504a689",
+  "yield": "ULTRA_HIGH",
+  "why": "Reading a reduction potential table for oxidizing strength is tested every year"
+ },
+ {
+  "front": "In an electrochemical cell, which statement is always true for a spontaneous galvanic reaction?",
+  "fp": "2f52cb09c4eb",
+  "yield": "LOW",
+  "why": "Restates the galvanic definition and An Ox Red Cat cards"
+ },
+ {
+  "front": "In an electrolytic cell, metal plating occurs at the {{c1::cathode}}, since reduction of the metal cation happens there.",
+  "fp": "ca5d19c27fe1",
+  "yield": "HIGH",
+  "why": "Plating at cathode in electrolysis is commonly tested"
+ },
+ {
+  "front": "In both cell types electrons travel through the external wire from {{c1::anode to cathode}}, while in solution cations migrate toward the {{c2::cathode}}.",
+  "fp": "b43324bb15ad",
+  "yield": "HIGH",
+  "why": "Ion migration in solution complements electron flow; salt-bridge questions"
+ },
+ {
+  "front": "In electrolysis of aqueous NaCl rather than molten NaCl, why is sodium metal not produced?",
+  "fp": "9add4cdeff3e",
+  "yield": "MEDIUM",
+  "why": "Aqueous vs molten electrolysis product is a second-step subtlety"
+ },
+ {
+  "front": "Increasing product concentration in a galvanic cell causes $E$ to:",
+  "fp": "ff29f0dfd418",
+  "yield": "HIGH",
+  "why": "Product increase lowers E; qualitative Nernst application"
+ },
+ {
+  "front": "Overpotential refers to:",
+  "fp": "1d43c595e5f3",
+  "yield": "MEDIUM",
+  "why": "Overpotential is named in prep books but is secondary"
+ },
+ {
+  "front": "Relate cell potential to free energy.",
+  "fp": "788efab1252b",
+  "yield": "LOW",
+  "why": "Restates the Delta G = -nFE card"
+ },
+ {
+  "front": "The anode in a galvanic cell carries what sign?",
+  "fp": "f621fb4f5750",
+  "yield": "LOW",
+  "why": "Restates the anode sign card"
+ },
+ {
+  "front": "The species that is oxidized is the {{c1::reducing agent}}, and its oxidation number {{c2::increases}}.",
+  "fp": "a1e04eabc86c",
+  "yield": "ULTRA_HIGH",
+  "why": "Oxidized species is the reducing agent; foundational redox vocabulary"
+ },
+ {
+  "front": "The standard hydrogen electrode is assigned a potential of exactly {{c1::0 V}}, making every tabulated reduction potential a relative value.",
+  "fp": "014633a976b2",
+  "yield": "ULTRA_HIGH",
+  "why": "SHE at 0 V makes reduction potentials relative; commonly tested"
+ },
+ {
+  "front": "What distinguishes a primary from a secondary battery in electrochemical terms?",
+  "fp": "f91e94b89c46",
+  "yield": "MEDIUM",
+  "why": "Primary vs secondary battery is secondary detail"
+ },
+ {
+  "front": "What does a high standard reduction potential indicate?",
+  "fp": "e8f44b925747",
+  "yield": "LOW",
+  "why": "Restates the strongest-oxidizing-agent card"
+ },
+ {
+  "front": "What happens to $E_{cell}$ as a battery discharges?",
+  "fp": "f8dc04ea5079",
+  "yield": "HIGH",
+  "why": "Dead battery at Q = K, E = 0 is a common conceptual question"
+ },
+ {
+  "front": "What is $E_{cell}$ for a concentration cell once the two compartments reach equal concentration?",
+  "fp": "8e42c4a2ad65",
+  "yield": "MEDIUM",
+  "why": "Concentration cell at equilibrium restates the E = 0 idea"
+ },
+ {
+  "front": "What is the role of the salt bridge?",
+  "fp": "1c65f004d132",
+  "yield": "ULTRA_HIGH",
+  "why": "Salt bridge function is asked nearly every year"
+ },
+ {
+  "front": "When iron is in electrical contact with copper in a wet environment, which metal corrodes?",
+  "fp": "3b8907110f0e",
+  "yield": "MEDIUM",
+  "why": "Galvanic corrosion example; the sacrificial-anode card carries the rule"
+ },
+ {
+  "front": "Where do oxidation and reduction occur in any cell?",
+  "fp": "ceb1380702d4",
+  "yield": "ULTRA_HIGH",
+  "why": "An Ox Red Cat holds in both cell types; foundational"
+ },
+ {
+  "front": "Which direction do electrons flow in the electron transport chain?",
+  "fp": "10c238d22b33",
+  "yield": "HIGH",
+  "why": "ETC electron direction by reduction potential is a frequent biochem crossover"
+ },
+ {
+  "front": "While recharging, a lead-acid battery operates as an {{c1::electrolytic}} cell, driven by an external source.",
+  "fp": "bd3b1f6a041d",
+  "yield": "LOW",
+  "why": "Restates the rechargeable battery mode card"
+ },
+ {
+  "front": "Why are Ag/AgCl electrodes standard for ECG and other biopotential recordings?",
+  "fp": "b97abcbebd95",
+  "yield": "LOW",
+  "why": "Ag/AgCl electrode detail is off-outline instrumentation"
+ },
+ {
+  "front": "Why are lithium cells chosen for implanted pacemakers?",
+  "fp": "ff401802f582",
+  "yield": "LOW",
+  "why": "Pacemaker battery choice is trivia"
+ },
+ {
+  "front": "Why does $E^{\\circ}_{cell}$ tell you nothing about how fast a cell reaction proceeds?",
+  "fp": "fb49f64778c8",
+  "yield": "MEDIUM",
+  "why": "Thermodynamics vs kinetics distinction is supporting reasoning"
+ },
+ {
+  "front": "Why does a battery hold roughly constant voltage through most of its life, then drop sharply?",
+  "fp": "224a4d403a60",
+  "yield": "MEDIUM",
+  "why": "Battery discharge curve shape is a passage-level detail"
+ },
+ {
+  "front": "Why does a cell's voltage not depend on electrode size while the current it can deliver does?",
+  "fp": "4dcff88274cd",
+  "yield": "HIGH",
+  "why": "Voltage intensive, current depends on size; commonly tested"
+ },
+ {
+  "front": "Why does an oxide layer protect aluminum but not iron?",
+  "fp": "be05e473889d",
+  "yield": "LOW",
+  "why": "Passivation of aluminum vs iron is off-outline detail"
+ },
+ {
+  "front": "Why does electrolysis require an applied voltage larger than the magnitude of $E^{\\circ}_{cell}$?",
+  "fp": "64904f410499",
+  "yield": "MEDIUM",
+  "why": "Applied voltage exceeding E for electrolysis is a second-step idea"
+ },
+ {
+  "front": "Why does resting membrane potential sit near $E_K$ rather than near $E_{Na}$ of about $+60$ mV?",
+  "fp": "d7290be50a36",
+  "yield": "MEDIUM",
+  "why": "Resting potential near E_K belongs to neuro and is covered there"
+ },
+ {
+  "front": "Why is a KCl salt bridge preferred for connecting two half-cells?",
+  "fp": "ef871d8ea9f6",
+  "yield": "LOW",
+  "why": "KCl salt bridge choice is trivia"
+ },
+ {
+  "front": "Why is an inert Pt electrode used in a half-cell such as $Fe^{3+}/Fe^{2+}$?",
+  "fp": "b8f73c7d2f04",
+  "yield": "HIGH",
+  "why": "Inert Pt electrode use is a stock discrete"
+ },
+ {
+  "front": "With $K^+$ at $5$ mM outside and $140$ mM inside, $E_K = 61\\log(5/140) \\approx$ {{c1::$-90$ mV}}.",
+  "fp": "17dfd3a95676",
+  "yield": "HIGH",
+  "why": "E_K Nernst calculation is a frequent crossover"
+ }
+]

@@ -1,0 +1,416 @@
+[
+ {
+  "front": "(R)- and (S)-carvone smell like spearmint and caraway respectively. What does that demonstrate?",
+  "fp": "0b4819952156",
+  "yield": "MEDIUM",
+  "why": "Second example of enantiomer bioactivity; thalidomide card and enzyme-discrimination card carry it"
+ },
+ {
+  "front": "{{c1::Diastereotopic}} protons are chemically inequivalent and give separate NMR signals, while {{c2::enantiotopic}} protons give one signal.",
+  "fp": "dddca11aea1c",
+  "yield": "LOW",
+  "why": "Diastereotopic/enantiotopic NMR protons is beyond the outline's NMR scope"
+ },
+ {
+  "front": "A chirality center needs {{c1::four different}} substituents, so an $sp^3$ carbon with two identical groups {{c2::is not one}}.",
+  "fp": "5f58e9ebb50e",
+  "yield": "ULTRA_HIGH",
+  "why": "Definition of a chirality center; every stereo question starts by counting stereocenters"
+ },
+ {
+  "front": "A meso compound holds stereocenters yet is {{c1::achiral and optically inactive}} thanks to {{c2::an internal mirror plane}}.",
+  "fp": "557932b30439",
+  "yield": "ULTRA_HIGH",
+  "why": "Meso: stereocenters yet achiral via internal mirror plane, tested every administration"
+ },
+ {
+  "front": "A mixture that is 70 percent R and 30 percent S has an enantiomeric excess of {{c1::40}} percent.",
+  "fp": "4a6ff974f8d7",
+  "yield": "HIGH",
+  "why": "ee calculation from a stated mixture is a common discrete"
+ },
+ {
+  "front": "A molecule with n stereocenters has at most {{c1::$2^n$}} stereoisomers; the total drops when {{c2::meso forms exist}}.",
+  "fp": "e60cb3e4aa4c",
+  "yield": "ULTRA_HIGH",
+  "why": "2^n stereoisomer count with the meso exception appears nearly every year"
+ },
+ {
+  "front": "A racemic mixture can be separated by:",
+  "fp": "bcd0b1663edc",
+  "yield": "MEDIUM",
+  "why": "Short restatement of the classical-resolution card"
+ },
+ {
+  "front": "A sample reads $[\\alpha] = +15$ where the pure enantiomer is $+30$. What is its optical purity and composition?",
+  "fp": "d9c7891bdc91",
+  "yield": "MEDIUM",
+  "why": "Optical purity = ee, a second worked ee example; the 50% ee card covers the composition step"
+ },
+ {
+  "front": "A solution with 50% enantiomeric excess contains:",
+  "fp": "0131b1b8cde6",
+  "yield": "HIGH",
+  "why": "ee to enantiomer composition is a standard calculation"
+ },
+ {
+  "front": "A sugar is D when the hydroxyl on the {{c1::bottom-most (highest-numbered) stereocenter}} points {{c2::right}} in a Fischer projection.",
+  "fp": "895e7fd5e5bb",
+  "yield": "HIGH",
+  "why": "D/L Fischer rule for sugars is a recurring biochem crossover"
+ },
+ {
+  "front": "Alkene geometric isomers are configurational rather than conformational isomers. What follows from that?",
+  "fp": "06f292f34a61",
+  "yield": "HIGH",
+  "why": "Configurational vs conformational: pi bond must break, so cis/trans are isolable"
+ },
+ {
+  "front": "An $S_N2$ at a stereocenter is {{c1::stereospecific}}, while nucleophilic attack on a planar carbonyl by an achiral reagent gives {{c2::a racemic mixture}}.",
+  "fp": "74325641f220",
+  "yield": "HIGH",
+  "why": "SN2 stereospecific vs racemic carbonyl attack is a common reasoning step"
+ },
+ {
+  "front": "An $S_N2$ reaction always inverts spatial arrangement, yet it does not always change the {{c1::R/S label}}.",
+  "fp": "2662e10824dd",
+  "yield": "HIGH",
+  "why": "Classic trap: inversion of geometry need not flip the R/S letter"
+ },
+ {
+  "front": "An enzyme converts UDP-galactose to UDP-glucose. Is that racemization or epimerization, and is the product still optically active?",
+  "fp": "30d84f321e06",
+  "yield": "MEDIUM",
+  "why": "Applied epimerization example; the racemization-vs-epimerization card carries the rule"
+ },
+ {
+  "front": "An optically inactive sample falls into which three categories?",
+  "fp": "de62f88cc0ab",
+  "yield": "ULTRA_HIGH",
+  "why": "Three sources of a zero polarimeter reading is asked almost every year"
+ },
+ {
+  "front": "Anomers are a special case of:",
+  "fp": "5d3d141e240e",
+  "yield": "MEDIUM",
+  "why": "Restates the epimer/anomer definition card"
+ },
+ {
+  "front": "Between deuterium and ordinary hydrogen, which takes higher CIP priority?",
+  "fp": "8898c7198476",
+  "yield": "MEDIUM",
+  "why": "Isotope CIP tiebreaker is rare but plausible in a labeling passage"
+ },
+ {
+  "front": "Can you predict from an (R) label whether a compound rotates plane-polarized light clockwise?",
+  "fp": "0e4bf5664e7f",
+  "yield": "ULTRA_HIGH",
+  "why": "R/S never predicts sign of rotation; the single most repeated stereochem fact"
+ },
+ {
+  "front": "CIP priority is settled at the {{c1::first point of difference}} moving outward, not by summing atomic numbers.",
+  "fp": "b9d1e8b8413d",
+  "yield": "ULTRA_HIGH",
+  "why": "First point of difference is the core CIP rule needed for every R/S assignment"
+ },
+ {
+  "front": "cis-1,2-dimethylcyclohexane has two stereocenters yet is achiral. Why?",
+  "fp": "3b92eda7c520",
+  "yield": "HIGH",
+  "why": "Ring meso compound is a frequent trap on cyclic stereochemistry"
+ },
+ {
+  "front": "Conformational isomers such as staggered and eclipsed ethane are {{c1::not separable at room temperature}}.",
+  "fp": "6138cc053dea",
+  "yield": "HIGH",
+  "why": "Conformers interconvert at RT; conformations are on the outline"
+ },
+ {
+  "front": "Constitutional isomers differ in {{c1::connectivity}}; stereoisomers share connectivity and differ in {{c2::spatial arrangement}}.",
+  "fp": "1867dd52d95b",
+  "yield": "ULTRA_HIGH",
+  "why": "Constitutional vs stereoisomer is the first split on any isomer question"
+ },
+ {
+  "front": "Define enantiomers vs. diastereomers.",
+  "fp": "61e00010d536",
+  "yield": "ULTRA_HIGH",
+  "why": "Enantiomer vs diastereomer definitions underlie every stereo question"
+ },
+ {
+  "front": "Define epimers and anomers.",
+  "fp": "b2915976b169",
+  "yield": "ULTRA_HIGH",
+  "why": "Epimer and anomer definitions are tested every year via sugars"
+ },
+ {
+  "front": "Differentiate stereospecific from stereoselective.",
+  "fp": "6957e7ce6e98",
+  "yield": "MEDIUM",
+  "why": "Stereospecific vs stereoselective is a secondary distinction"
+ },
+ {
+  "front": "Distinguish diastereomer, epimer, and anomer as nested categories.",
+  "fp": "12f52b6ab0f7",
+  "yield": "MEDIUM",
+  "why": "Nested restatement of the epimer/anomer card"
+ },
+ {
+  "front": "Does the D/L system correlate reliably with R/S?",
+  "fp": "0fb7220a6302",
+  "yield": "HIGH",
+  "why": "D/L vs R/S independence is commonly tested with the cysteine example"
+ },
+ {
+  "front": "Doubling the concentration of a chiral solution doubles observed rotation but leaves {{c1::specific rotation}} unchanged.",
+  "fp": "6e04a20494b4",
+  "yield": "HIGH",
+  "why": "Observed vs specific rotation scaling is a frequent discrete"
+ },
+ {
+  "front": "Enantiomers share melting and boiling point, differing only in {{c1::the sign of optical rotation}} and in {{c2::reactions with chiral species}}.",
+  "fp": "382ff77c0ab9",
+  "yield": "ULTRA_HIGH",
+  "why": "Enantiomers share scalar properties, differ only in rotation and chiral interactions"
+ },
+ {
+  "front": "Every standard amino acid is L, which equals {{c1::(S)}} for all of them except {{c2::cysteine}}, which is (R).",
+  "fp": "349772c8a519",
+  "yield": "HIGH",
+  "why": "All L amino acids are S except cysteine; frequent biochem crossover"
+ },
+ {
+  "front": "Free amino acids racemize slowly over geologic time. What is the chemistry?",
+  "fp": "7f640a969110",
+  "yield": "LOW",
+  "why": "Geologic racemization dating is trivia; the enolate mechanism card covers the chemistry"
+ },
+ {
+  "front": "Glucose and mannose differ at C2 only, making them:",
+  "fp": "831f74201f24",
+  "yield": "HIGH",
+  "why": "Glucose/mannose C2 epimers is a stock example question"
+ },
+ {
+  "front": "How does classical resolution separate a pair of enantiomers?",
+  "fp": "870ab0d68244",
+  "yield": "HIGH",
+  "why": "Resolution via diastereomeric salts is a classic lab-technique question"
+ },
+ {
+  "front": "How does NMR reveal whether two compounds are enantiomers or diastereomers?",
+  "fp": "79bb7680a4f8",
+  "yield": "MEDIUM",
+  "why": "NMR distinction of enantiomers vs diastereomers is a plausible second step"
+ },
+ {
+  "front": "How many stereoisomers can $n$ stereocenters produce?",
+  "fp": "27bc75cba4a2",
+  "yield": "LOW",
+  "why": "Near-restatement of the 2^n cloze card"
+ },
+ {
+  "front": "How many stereoisomers has a compound with three stereocenters and no internal symmetry, and how many enantiomeric pairs?",
+  "fp": "002d3a8cad94",
+  "yield": "HIGH",
+  "why": "Applied stereoisomer count with enantiomeric pairs"
+ },
+ {
+  "front": "If the lowest-priority group points toward the viewer, assign the rotation as drawn and then {{c1::reverse it}}.",
+  "fp": "73f51478c503",
+  "yield": "ULTRA_HIGH",
+  "why": "Reversing R/S when lowest priority faces the viewer is needed on nearly every assignment"
+ },
+ {
+  "front": "In a Fischer projection, horizontal bonds point {{c1::toward the viewer}} and vertical bonds point {{c2::away}}.",
+  "fp": "ad9aa23e7d5d",
+  "yield": "ULTRA_HIGH",
+  "why": "Fischer projection conventions are used every year in biochem and orgo"
+ },
+ {
+  "front": "In E/Z nomenclature, Z means the {{c1::higher-priority}} group on each alkene carbon lies {{c2::on the same side}}.",
+  "fp": "6cebd30b40be",
+  "yield": "ULTRA_HIGH",
+  "why": "E/Z assignment is a stock discrete"
+ },
+ {
+  "front": "On a Fischer projection with the lowest-priority group on a horizontal bond, R/S assignment requires {{c1::reversing the observed rotation}}.",
+  "fp": "438a4456f60a",
+  "yield": "HIGH",
+  "why": "Fischer-specific application of the reverse-when-toward-viewer rule"
+ },
+ {
+  "front": "Optical rotation of a racemic mixture is:",
+  "fp": "7119ebb62e8d",
+  "yield": "LOW",
+  "why": "Restates the racemic mixture definition card"
+ },
+ {
+  "front": "Pure alpha-D-glucose reads $[\\alpha] = +112$ and the beta anomer $+19$; both drift to {{c1::+52.7}} by {{c2::mutarotation}}.",
+  "fp": "916565e234cb",
+  "yield": "MEDIUM",
+  "why": "Mutarotation concept is useful; the specific rotation numbers are trivia"
+ },
+ {
+  "front": "Racemization at an amino acid alpha carbon proceeds through which intermediate?",
+  "fp": "835090a48d08",
+  "yield": "MEDIUM",
+  "why": "Amino-acid-specific instance of the planar enolate racemization card"
+ },
+ {
+  "front": "Racemization inverts {{c1::the molecule's only or every stereocenter}} to give an inactive mixture; epimerization inverts {{c2::just one of several}}.",
+  "fp": "c094a3a20f10",
+  "yield": "HIGH",
+  "why": "Racemization vs epimerization distinction is commonly tested"
+ },
+ {
+  "front": "Reactions through a planar intermediate such as a {{c1::carbocation}} or an enol give {{c2::racemic}} product at that carbon.",
+  "fp": "d26004cda981",
+  "yield": "ULTRA_HIGH",
+  "why": "SN1/enol planar intermediate gives racemic product; tested every year"
+ },
+ {
+  "front": "Rotating a Fischer projection 180 degrees in the plane {{c1::preserves}} configuration, but 90 degrees {{c2::inverts}} it.",
+  "fp": "a2a9a69b2dba",
+  "yield": "ULTRA_HIGH",
+  "why": "Fischer manipulation rules (180 ok, 90 inverts, swap inverts) are needed constantly"
+ },
+ {
+  "front": "Specific rotation is $[\\alpha] = \\alpha/(l \\cdot c)$, with path length in {{c1::dm}} and concentration in {{c2::g/mL}}.",
+  "fp": "9a9b260344f8",
+  "yield": "ULTRA_HIGH",
+  "why": "Specific rotation equation is used in optical activity calculations"
+ },
+ {
+  "front": "Sugars differing at exactly one carbon are {{c1::epimers}}; if that carbon is the anomeric carbon they are {{c2::anomers}}.",
+  "fp": "7f911e898f0c",
+  "yield": "HIGH",
+  "why": "Epimer vs anomer applied to sugars"
+ },
+ {
+  "front": "Summarize the Cahn–Ingold–Prelog priority rules.",
+  "fp": "1a2e7c8fd8c5",
+  "yield": "ULTRA_HIGH",
+  "why": "CIP rules and R/S assignment is the core skill of the section"
+ },
+ {
+  "front": "Thalidomide is the classic illustration of which stereochemical principle?",
+  "fp": "3b4db5b31446",
+  "yield": "MEDIUM",
+  "why": "Thalidomide is the textbook example; the principle is on the enzyme-discrimination card"
+ },
+ {
+  "front": "Treating a ketone with acid or base can scramble an alpha stereocenter because enolization makes that carbon {{c1::planar and $sp^2$}}.",
+  "fp": "9ca4dd7df06b",
+  "yield": "HIGH",
+  "why": "Alpha-carbon enolization scrambling a stereocenter is a common passage step"
+ },
+ {
+  "front": "Two groups that a chiral environment can distinguish even though the molecule itself is achiral are called {{c1::prochiral}}.",
+  "fp": "cbab40a4716e",
+  "yield": "MEDIUM",
+  "why": "Prochirality is supporting concept for enzyme stereoselectivity"
+ },
+ {
+  "front": "Two stereocenters that are {{c1::identical in substitution}} can make a molecule meso, dropping the isomer count from four to {{c2::three}}.",
+  "fp": "3364a39c4211",
+  "yield": "HIGH",
+  "why": "Tartaric acid meso count is a classic worked example"
+ },
+ {
+  "front": "Two stereoisomers differ at exactly one of their three stereocenters. What is their relationship?",
+  "fp": "7cd9af606bb2",
+  "yield": "HIGH",
+  "why": "Partial inversion gives diastereomers, a common relationship question"
+ },
+ {
+  "front": "Two sugars are drawn as Fischer projections. How do you decide instantly whether they are enantiomers?",
+  "fp": "66bd6043a9fa",
+  "yield": "HIGH",
+  "why": "Rapid enantiomer test on Fischer sugars is a frequent biochem crossover"
+ },
+ {
+  "front": "Under CIP rules, a doubly bonded atom counts as {{c1::two duplicate single-bonded copies}} of that atom.",
+  "fp": "1586f65e3932",
+  "yield": "HIGH",
+  "why": "Double-bond duplication rule is needed for many CIP rankings"
+ },
+ {
+  "front": "What configuration do biological amino acids have?",
+  "fp": "853c09420a85",
+  "yield": "ULTRA_HIGH",
+  "why": "All proteinogenic amino acids are L; tested every year"
+ },
+ {
+  "front": "What is a meso compound?",
+  "fp": "be6192a3ed12",
+  "yield": "LOW",
+  "why": "Restates the meso cloze card"
+ },
+ {
+  "front": "What is a racemic mixture?",
+  "fp": "b2fdf4897d14",
+  "yield": "ULTRA_HIGH",
+  "why": "Racemic mixture definition is asked every year"
+ },
+ {
+  "front": "What is the relationship between (R)-2-bromobutane and (S)-2-bromobutane?",
+  "fp": "44b6398ee0c0",
+  "yield": "MEDIUM",
+  "why": "Trivial application of the enantiomer definition"
+ },
+ {
+  "front": "What separates relative configuration from absolute configuration?",
+  "fp": "25ae6aeca06b",
+  "yield": "HIGH",
+  "why": "Absolute vs relative configuration is named on the outline"
+ },
+ {
+  "front": "Which is true of meso compounds?",
+  "fp": "4f05bb416320",
+  "yield": "LOW",
+  "why": "Restates the meso definition card"
+ },
+ {
+  "front": "Why can aconitase tell apart the two seemingly identical $CH_2COO^-$ arms of citrate?",
+  "fp": "0caed459f318",
+  "yield": "LOW",
+  "why": "Aconitase/citrate prochirality is off-outline biochem detail"
+ },
+ {
+  "front": "Why can diastereomers be separated by distillation or ordinary chromatography while enantiomers cannot?",
+  "fp": "cfd4d150e847",
+  "yield": "ULTRA_HIGH",
+  "why": "Diastereomers separable, enantiomers not: reasoning step behind resolution questions"
+ },
+ {
+  "front": "Why do diastereomers separate more easily than enantiomers?",
+  "fp": "9e0c153cefec",
+  "yield": "LOW",
+  "why": "Near-restatement of the fuller diastereomer-separation card"
+ },
+ {
+  "front": "Why do enzymes and receptors discriminate between enantiomers?",
+  "fp": "819fbcc37ce6",
+  "yield": "HIGH",
+  "why": "Chiral binding sites discriminate enantiomers; frequent pharm passage step"
+ },
+ {
+  "front": "Why does cis/trans nomenclature fail for an alkene bearing four different substituents?",
+  "fp": "49ba8dc984ee",
+  "yield": "HIGH",
+  "why": "Why E/Z supersedes cis/trans is commonly asked"
+ },
+ {
+  "front": "Why is a racemic mixture optically inactive, and how does that differ from a meso compound?",
+  "fp": "193b54f22a9d",
+  "yield": "MEDIUM",
+  "why": "Racemic vs meso inactivity contrast; supporting reasoning for the three-categories card"
+ },
+ {
+  "front": "Why is L-cysteine (R) when every other L-amino acid is (S)?",
+  "fp": "303c37069ad9",
+  "yield": "LOW",
+  "why": "Restates the cysteine-is-R exception already on two cards"
+ }
+]

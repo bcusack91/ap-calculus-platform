@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How many full-length practice tests are recommended?",
+  "fp": "fe7647325660",
+  "yield": "LOW",
+  "why": "Study-planning advice on practice test count"
+ },
+ {
+  "front": "How should study time shift over a prep period?",
+  "fp": "09752a42bd43",
+  "yield": "LOW",
+  "why": "Study-planning advice on content-to-practice shift"
+ },
+ {
+  "front": "How should you use a content review book?",
+  "fp": "3126fdb68602",
+  "yield": "LOW",
+  "why": "Study advice on using review books"
+ },
+ {
+  "front": "What is a typical MCAT preparation timeline?",
+  "fp": "4c2033b20dd0",
+  "yield": "LOW",
+  "why": "Prep timeline scheduling advice"
+ },
+ {
+  "front": "What is the purpose of a diagnostic test?",
+  "fp": "3ddff93bfa32",
+  "yield": "LOW",
+  "why": "Study-planning advice on diagnostics"
+ },
+ {
+  "front": "What is the single most valuable prep activity?",
+  "fp": "2d9c5aac07ae",
+  "yield": "LOW",
+  "why": "Generic study advice on reviewing practice questions"
+ },
+ {
+  "front": "Why is spaced repetition effective for MCAT content?",
+  "fp": "033db85795d9",
+  "yield": "LOW",
+  "why": "Study advice on spaced repetition"
+ },
+ {
+  "front": "Why should you avoid studying new content the last few days?",
+  "fp": "57b54c017eb8",
+  "yield": "LOW",
+  "why": "Final-days scheduling advice"
+ }
+]

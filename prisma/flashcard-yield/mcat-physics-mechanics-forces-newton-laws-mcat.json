@@ -1,0 +1,398 @@
+[
+ {
+  "front": "A 10 kg block on a frictionless surface feels 50 N. Acceleration?",
+  "fp": "2bceb8d15747",
+  "yield": "ULTRA_HIGH",
+  "why": "F=ma calculation; appears every year"
+ },
+ {
+  "front": "A 1000 kg car accelerates from 0 to 30 m/s in 6 seconds. What is the average net force?",
+  "fp": "5d06b5091943",
+  "yield": "HIGH",
+  "why": "Net force from kinematics then F=ma; standard two-step calculation"
+ },
+ {
+  "front": "A 2 m beam has a 100 N weight 0.5 m from the pivot. Torque?",
+  "fp": "ab440a805fce",
+  "yield": "ULTRA_HIGH",
+  "why": "Torque tau=rF calculation; tested every year"
+ },
+ {
+  "front": "A 5 kg box is pushed across a floor with a coefficient of kinetic friction of 0.3. What is the frictional force? (g = 9.8 $m/s^{2}$)",
+  "fp": "566b4c1c0d5d",
+  "yield": "ULTRA_HIGH",
+  "why": "Kinetic friction f=mu*N calculation; appears every year"
+ },
+ {
+  "front": "A block just begins to slide on an incline when {{c1::$\\tan\\theta = \\mu_s$}}.",
+  "fp": "478b9f3315e2",
+  "yield": "HIGH",
+  "why": "tan(theta)=mu_s slip condition; restated by the Q&A card"
+ },
+ {
+  "front": "A box is pressed horizontally against a wall hard enough to stay up. Which force supports its weight?",
+  "fp": "066f7ceeaa97",
+  "yield": "MEDIUM",
+  "why": "Box on wall supported by static friction; secondary conceptual"
+ },
+ {
+  "front": "A car's maximum acceleration on level ground is {{c1::$\\mu_s g$}}, independent of {{c1::its mass}}.",
+  "fp": "9e88456c9c45",
+  "yield": "HIGH",
+  "why": "Max acceleration mu_s*g, mass-independent; common friction reasoning"
+ },
+ {
+  "front": "A centrifuge separates blood because denser particles require {{c1::more centripetal force}} than the plasma can supply.",
+  "fp": "9b59e0ebb6d0",
+  "yield": "MEDIUM",
+  "why": "Centrifuge centripetal reasoning; plausible passage context"
+ },
+ {
+  "front": "A coefficient of friction is {{c1::dimensionless}}, so 0.4 is a plausible value but {{c1::0.4 N}} is not.",
+  "fp": "6b02b0ae2b3a",
+  "yield": "MEDIUM",
+  "why": "Coefficient dimensionless; useful answer-choice check"
+ },
+ {
+  "front": "A crate sits unsecured in a truck bed. What accelerates it, and how hard can the truck accelerate before it slides?",
+  "fp": "10f82c832b3a",
+  "yield": "MEDIUM",
+  "why": "Crate in truck restates the mu_s*g maximum-acceleration card"
+ },
+ {
+  "front": "A force applied at the pivot produces torque of:",
+  "fp": "a178d3e06577",
+  "yield": "HIGH",
+  "why": "Force at pivot gives zero torque; common torque discrete"
+ },
+ {
+  "front": "A patient stands on a scale in an elevator accelerating upward at $a$. The scale reads {{c1::$N = m(g + a)$}}.",
+  "fp": "458165c8dec0",
+  "yield": "ULTRA_HIGH",
+  "why": "Elevator apparent weight N=m(g+a); tested every year"
+ },
+ {
+  "front": "A plot of friction force versus applied force rises along $y = x$, peaks, drops slightly, then flattens. Explain each region.",
+  "fp": "672d83e98397",
+  "yield": "HIGH",
+  "why": "Friction vs applied force graph regions; standard static-to-kinetic reasoning"
+ },
+ {
+  "front": "A plot of net force versus acceleration for one object is a line through the origin with slope {{c1::the mass}}.",
+  "fp": "cbc9c996e9db",
+  "yield": "MEDIUM",
+  "why": "Slope of F vs a plot equals mass; data-figure reading, secondary"
+ },
+ {
+  "front": "A rope pulls a sled carrying a child. What force actually accelerates the child?",
+  "fp": "0dee111750de",
+  "yield": "MEDIUM",
+  "why": "Sled and child: friction accelerates the child; secondary system-isolation puzzle"
+ },
+ {
+  "front": "A scale under a patient in an elevator moving upward at constant velocity reads {{c1::$mg$}}.",
+  "fp": "644fe7134b8a",
+  "yield": "HIGH",
+  "why": "Constant velocity elevator reads true weight; common discrete"
+ },
+ {
+  "front": "A sign hangs from two ropes. What happens to the tension as the ropes are pulled closer to horizontal?",
+  "fp": "be4f38aa8c1d",
+  "yield": "HIGH",
+  "why": "Rope tension rises as ropes approach horizontal; common tension conceptual"
+ },
+ {
+  "front": "A system is in translational equilibrium when:",
+  "fp": "354f45998c69",
+  "yield": "ULTRA_HIGH",
+  "why": "Translational equilibrium sum F=0 with rotational sum tau=0; foundational"
+ },
+ {
+  "front": "An object in uniform circular motion has constant speed but {{c1::nonzero acceleration}}.",
+  "fp": "fc1e72155428",
+  "yield": "ULTRA_HIGH",
+  "why": "Uniform circular motion has centripetal acceleration v^2/r; tested every year"
+ },
+ {
+  "front": "An object lurches forward the instant it breaks free because {{c1::$\\mu_k < \\mu_s$}}.",
+  "fp": "61bb4739c3df",
+  "yield": "HIGH",
+  "why": "mu_k < mu_s explains lurch when breaking free; common discrete"
+ },
+ {
+  "front": "An orbiting astronaut is apparently weightless. How could you still measure her mass?",
+  "fp": "4977288427bb",
+  "yield": "LOW",
+  "why": "Measuring mass in orbit via spring period is a thought-experiment aside"
+ },
+ {
+  "front": "Apparent weight of a person in a freely falling elevator is {{c1::zero}}.",
+  "fp": "23745ff50375",
+  "yield": "HIGH",
+  "why": "Free-fall apparent weight zero; standard apparent-weight case"
+ },
+ {
+  "front": "As an incline gets steeper, the friction force available {{c1::decreases}}.",
+  "fp": "bb27f3832983",
+  "yield": "HIGH",
+  "why": "Steeper incline reduces N and available friction; common incline reasoning"
+ },
+ {
+  "front": "At constant applied force, a plot of acceleration versus $1/m$ is a straight line whose slope is {{c1::the applied force}}.",
+  "fp": "94a53c76d4b8",
+  "yield": "LOW",
+  "why": "Linearizing a vs 1/m is graph-reading trivia"
+ },
+ {
+  "front": "At what incline angle does a block just begin to slide?",
+  "fp": "7decd7a2df9c",
+  "yield": "ULTRA_HIGH",
+  "why": "Incline slip angle tan(theta)=mu_s; classic derivation asked every year"
+ },
+ {
+  "front": "Atwood machine acceleration is {{c1::$a = (m_1 - m_2)g/(m_1 + m_2)$}}.",
+  "fp": "7149bc861d56",
+  "yield": "HIGH",
+  "why": "Atwood machine acceleration; common pulley problem"
+ },
+ {
+  "front": "Centripetal force is {{c1::not a separate force}}; it is the net inward component of real forces.",
+  "fp": "72f3efd7053b",
+  "yield": "HIGH",
+  "why": "Centripetal force is net inward real force, not separate; classic FBD point"
+ },
+ {
+  "front": "Does zero net force mean an object is at rest?",
+  "fp": "f03b5433d20e",
+  "yield": "ULTRA_HIGH",
+  "why": "Zero net force means constant velocity, not rest; Newton's first law tested every year"
+ },
+ {
+  "front": "Estimate the friction force acting on a 1000 kg car during a 0.5 g emergency stop.",
+  "fp": "4734b8fe5895",
+  "yield": "MEDIUM",
+  "why": "Order-of-magnitude braking friction estimate; plausibility check"
+ },
+ {
+  "front": "For a rope with significant mass, tension is greatest {{c1::at the end being pulled}}.",
+  "fp": "7b4af341e47f",
+  "yield": "LOW",
+  "why": "Tension gradient in a massive rope is off-outline"
+ },
+ {
+  "front": "How do mass and weight differ for an astronaut on the Moon?",
+  "fp": "5f4fca13d34c",
+  "yield": "HIGH",
+  "why": "Mass unchanged, weight scales with g on the Moon; common discrete"
+ },
+ {
+  "front": "How do you calculate friction force, and how do static and kinetic friction differ?",
+  "fp": "807329633c14",
+  "yield": "ULTRA_HIGH",
+  "why": "Static vs kinetic friction with f_s <= mu_s N; core friction model"
+ },
+ {
+  "front": "In an elevator accelerating downward at $a$, a hanging mass has rope tension {{c1::$m(g - a)$}}.",
+  "fp": "40168fb829af",
+  "yield": "HIGH",
+  "why": "Downward-accelerating elevator tension m(g-a); standard apparent-weight case"
+ },
+ {
+  "front": "In limb traction, how is the net therapeutic force found from two angled cables?",
+  "fp": "032c5d73bef6",
+  "yield": "MEDIUM",
+  "why": "Traction vector addition; plausible clinical passage step"
+ },
+ {
+  "front": "In skin traction the therapeutic force equals {{c1::the hanging weight}}, while the patient's body must supply {{c1::countertraction}}.",
+  "fp": "16657c678f77",
+  "yield": "MEDIUM",
+  "why": "Pulley redirects tension in skin traction; clinical application"
+ },
+ {
+  "front": "In the standard friction model, friction is independent of which two variables?",
+  "fp": "4b5f2e364935",
+  "yield": "MEDIUM",
+  "why": "Friction independent of area and speed; secondary model assumption"
+ },
+ {
+  "front": "Inertia depends on:",
+  "fp": "cfc841c484ad",
+  "yield": "HIGH",
+  "why": "Inertia depends on mass; common discrete"
+ },
+ {
+  "front": "Inertia is measured by {{c1::mass}} alone, momentum also requires {{c1::velocity}}, and force requires {{c1::acceleration}}.",
+  "fp": "8185211db869",
+  "yield": "MEDIUM",
+  "why": "Inertia vs momentum vs force distinctions; restates the inertia card"
+ },
+ {
+  "front": "Is acceleration always in the direction of motion?",
+  "fp": "69a1abab10bb",
+  "yield": "HIGH",
+  "why": "Acceleration follows net force, not motion; common conceptual"
+ },
+ {
+  "front": "Joint reaction forces are typically {{c1::several times body weight}} because muscles act on {{c1::short lever arms}}.",
+  "fp": "d420e787efb7",
+  "yield": "LOW",
+  "why": "Joint reaction force magnitudes are biomechanics trivia"
+ },
+ {
+  "front": "Mass $m_1$ on a table with friction is pulled by a hanging mass $m_2$. What is the acceleration?",
+  "fp": "7f2c10f883d2",
+  "yield": "MEDIUM",
+  "why": "Table mass pulled by hanging mass with friction; second-tier system problem"
+ },
+ {
+  "front": "Minimum speed to keep contact at the top of a vertical circle is the square root of {{c1::$gr$}}.",
+  "fp": "b067c00ab172",
+  "yield": "HIGH",
+  "why": "Minimum speed at top of vertical circle sqrt(gr); common circular-motion problem"
+ },
+ {
+  "front": "On a frictionless banked curve the design speed satisfies {{c1::$\\tan\\theta = v^2/(rg)$}}.",
+  "fp": "af525dd5bfd4",
+  "yield": "MEDIUM",
+  "why": "Banked curve tan(theta)=v^2/(rg); less common than flat-curve friction case"
+ },
+ {
+  "front": "On an incline of angle $\\theta$, weight resolves into which two components?",
+  "fp": "2cfcf31a3913",
+  "yield": "ULTRA_HIGH",
+  "why": "Weight components on an incline mg sin/cos; used in every incline problem"
+ },
+ {
+  "front": "State Newton's second law and what it says about net force and acceleration.",
+  "fp": "053ad4010df0",
+  "yield": "ULTRA_HIGH",
+  "why": "Newton's second law F=ma statement; foundational"
+ },
+ {
+  "front": "The normal force does {{c1::zero}} work on a block sliding down an incline.",
+  "fp": "024b08364a97",
+  "yield": "HIGH",
+  "why": "Normal force does zero work on an incline; common work-energy crossover"
+ },
+ {
+  "front": "The normal force on a book and the book's weight are {{c1::not a Newton's third-law pair}}.",
+  "fp": "58338ee71581",
+  "yield": "ULTRA_HIGH",
+  "why": "Normal force and weight are not a third-law pair; tested nearly every year"
+ },
+ {
+  "front": "The SI unit of force is equivalent to:",
+  "fp": "e24b71bb7b6c",
+  "yield": "ULTRA_HIGH",
+  "why": "Newton in SI base units; discrete asked every year"
+ },
+ {
+  "front": "Two blocks in contact are pushed across a table by force $F$. How do you find the contact force between them?",
+  "fp": "3e88cf4617d2",
+  "yield": "MEDIUM",
+  "why": "Two blocks in contact force; second-tier system isolation problem"
+ },
+ {
+  "front": "Two ropes at 60 degrees from vertical hold a 20 kg sign. Estimate the tension in each rope.",
+  "fp": "d0402dbb9463",
+  "yield": "HIGH",
+  "why": "Two-rope tension calculation at 60 degrees; common static-equilibrium item"
+ },
+ {
+  "front": "Weight vs. mass?",
+  "fp": "15f47ad67380",
+  "yield": "ULTRA_HIGH",
+  "why": "Weight W=mg vs mass; foundational distinction"
+ },
+ {
+  "front": "What defines terminal velocity, and what is the acceleration there?",
+  "fp": "6471ff0596ec",
+  "yield": "ULTRA_HIGH",
+  "why": "Terminal velocity: drag balances weight, zero acceleration; tested every year"
+ },
+ {
+  "front": "What external force propels a walking person forward?",
+  "fp": "3667bd5bc1d9",
+  "yield": "HIGH",
+  "why": "Static friction propels walking; classic third-law application"
+ },
+ {
+  "front": "What features must a Newton's third-law force pair share?",
+  "fp": "f07d3e0e308a",
+  "yield": "ULTRA_HIGH",
+  "why": "Third-law pair properties on different objects; tested every year"
+ },
+ {
+  "front": "What is true of tension throughout an ideal massless rope over a frictionless pulley?",
+  "fp": "833a12c75c47",
+  "yield": "ULTRA_HIGH",
+  "why": "Ideal rope tension uniform over frictionless pulley; needed in every pulley problem"
+ },
+ {
+  "front": "What must be excluded from a correct free-body diagram?",
+  "fp": "378949ce4fb4",
+  "yield": "HIGH",
+  "why": "What to exclude from a free-body diagram; common FBD conceptual"
+ },
+ {
+  "front": "What sets the maximum speed of a car rounding a flat curve of radius $r$?",
+  "fp": "02ad87d520e6",
+  "yield": "ULTRA_HIGH",
+  "why": "Flat-curve max speed sqrt(mu_s g r); classic circular-motion calculation"
+ },
+ {
+  "front": "When does the normal force on a horizontal floor NOT equal $mg$?",
+  "fp": "633646f45d01",
+  "yield": "HIGH",
+  "why": "When normal force differs from mg; common trap"
+ },
+ {
+  "front": "Whiplash in a rear-end collision is a demonstration of {{c1::Newton's first law}}.",
+  "fp": "1ce7d08ddc9b",
+  "yield": "MEDIUM",
+  "why": "Whiplash as Newton's first law; passage context"
+ },
+ {
+  "front": "Why do knee ligaments experience forces several times body weight during a stiff-legged landing?",
+  "fp": "860f1fc35ec7",
+  "yield": "LOW",
+  "why": "Knee ligament landing forces are biomechanics trivia"
+ },
+ {
+  "front": "Why do two blocks of different mass slide down a frictionless incline together?",
+  "fp": "b138d6912360",
+  "yield": "ULTRA_HIGH",
+  "why": "Frictionless incline a=g sin(theta), mass cancels; tested every year"
+ },
+ {
+  "front": "Why does a rider feel heaviest at the bottom of a loop?",
+  "fp": "020a0e8b0a41",
+  "yield": "HIGH",
+  "why": "Apparent weight at bottom of loop N=m(g+v^2/r); common circular-motion item"
+ },
+ {
+  "front": "Why does an occupant feel pressed back into the seat when a car accelerates?",
+  "fp": "d9b4907ec3d9",
+  "yield": "LOW",
+  "why": "Restates inertia and normal-force reasoning from the seat example"
+ },
+ {
+  "front": "Why does pulling a suitcase by a handle angled upward reduce friction?",
+  "fp": "49303c78496c",
+  "yield": "HIGH",
+  "why": "Angled pull reduces normal force and friction; common friction conceptual"
+ },
+ {
+  "front": "Why is $f_s = \\mu_s N$ wrong as a general statement?",
+  "fp": "3bdc57e851d0",
+  "yield": "MEDIUM",
+  "why": "f_s <= mu_s N restates the static-vs-kinetic friction card"
+ },
+ {
+  "front": "Why is a lawnmower harder to push at a downward angle than to pull at an upward angle?",
+  "fp": "7984aea8d232",
+  "yield": "LOW",
+  "why": "Lawnmower push vs pull restates the angled-pull card"
+ }
+]

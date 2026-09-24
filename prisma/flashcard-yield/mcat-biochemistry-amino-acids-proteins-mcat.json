@@ -3,25 +3,25 @@
   "front": "A chaperone protein functions to:",
   "fp": "647db6700a6f",
   "yield": "MEDIUM",
-  "why": "Chaperones assist folding: definition useful, rarely asked itself"
+  "why": "Chaperones assist folding: useful definition, rarely a point by itself"
  },
  {
   "front": "A protein runs at 50 kDa on SDS-PAGE without $\\beta$-ME but at 25 kDa with it. Interpretation?",
   "fp": "dba926c2f386",
-  "yield": "MEDIUM",
-  "why": "Reducing vs nonreducing SDS-PAGE interpretation: plausible passage step"
+  "yield": "HIGH",
+  "why": "Reducing vs nonreducing SDS-PAGE revealing a disulfide dimer: recurring passage step"
  },
  {
   "front": "A titration curve of an unknown amino acid shows three buffering plateaus. What does that tell you?",
   "fp": "412c8f0bff1b",
   "yield": "HIGH",
-  "why": "Titration plateaus = ionizable groups; pI between flanking pKa values is core"
+  "why": "Titration plateaus = ionizable groups; pI between flanking pKa: commonly tested"
  },
  {
   "front": "A Western blot detects {{c1::protein}} using a labeled {{c2::antibody}}; Southern detects {{c3::DNA}} and Northern detects RNA.",
   "fp": "0ab000b24f38",
-  "yield": "HIGH",
-  "why": "Western/Southern/Northern distinction is frequently tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Western/Southern/Northern distinction appears on essentially every exam"
  },
  {
   "front": "Alpha-1-antitrypsin deficiency causes emphysema via {{c1::unopposed neutrophil elastase}} and liver disease via {{c2::polymer retention}} in hepatocytes.",
@@ -33,7 +33,7 @@
   "front": "An essential amino acid is one that:",
   "fp": "0085a90aea85",
   "yield": "MEDIUM",
-  "why": "Essential amino acid definition: useful but rarely a point by itself"
+  "why": "Essential amino acid definition: rarely a point by itself"
  },
  {
   "front": "Antiparallel vs parallel $\\beta$-sheets: which is more stable, and why?",
@@ -45,37 +45,37 @@
   "front": "Are asparagine and glutamine charged at physiological pH?",
   "fp": "d430e58340ae",
   "yield": "HIGH",
-  "why": "Asn/Gln uncharged vs Asp/Glu: high-frequency distinction"
+  "why": "Asn/Gln uncharged vs Asp/Glu charged: high-frequency trap"
  },
  {
   "front": "AST and ALT are {{c1::transaminases}} requiring {{c2::pyridoxal phosphate}}; their appearance in serum signals {{c3::hepatocyte}} injury.",
   "fp": "8256787ca499",
   "yield": "MEDIUM",
-  "why": "AST/ALT clinical enzymology belongs to metabolism/clinical, not 1A [rescued: misfiled, not served elsewhere]"
+  "why": "AST/ALT clinical enzymology is off-topic for 1A; kept as context"
  },
  {
   "front": "At pH 7.4, what is the net charge of free glycine, and why?",
   "fp": "1df89c56990d",
-  "yield": "MEDIUM",
-  "why": "Glycine net charge reasoning supports the plainer zwitterion card"
+  "yield": "HIGH",
+  "why": "Net charge of an amino acid at a given pH is asked nearly every year"
  },
  {
   "front": "At physiological pH (7.4), a typical amino acid exists as a:",
   "fp": "c5ec5bf5dee9",
-  "yield": "HIGH",
-  "why": "Zwitterion at physiological pH is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Zwitterion at physiological pH is foundational"
  },
  {
   "front": "Cation-exchange chromatography: which proteins bind the resin, and how are they eluted?",
   "fp": "5def319eb94d",
-  "yield": "HIGH",
-  "why": "Ion-exchange chromatography binding/elution is core separation technique"
+  "yield": "ULTRA_HIGH",
+  "why": "Ion-exchange binding/elution by pI is the most-tested separation reasoning"
  },
  {
   "front": "Cleavage specificity: trypsin cuts after {{c1::lysine and arginine}}, chymotrypsin after {{c2::aromatic}} residues, elastase after small residues.",
   "fp": "732c3e6eefe0",
   "yield": "HIGH",
-  "why": "Trypsin (K/R) and chymotrypsin (aromatic) cleavage is frequently tested"
+  "why": "Trypsin K/R and chymotrypsin aromatic cleavage: commonly tested"
  },
  {
   "front": "Collagen is a triple helix with {{c1::glycine}} at every third position in its Gly-X-Y repeat (X often proline).",
@@ -87,19 +87,19 @@
   "front": "Elevated homocysteine arises either from {{c1::cystathionine beta-synthase}} deficiency or from dietary lack of {{c2::B6, B12, or folate}}.",
   "fp": "1c01cfd01c7d",
   "yield": "MEDIUM",
-  "why": "Homocystinuria/B-vitamin detail belongs to metabolism; clinical trivia here [rescued: misfiled, not served elsewhere]"
+  "why": "Homocystinuria/B-vitamin detail belongs to metabolism; clinical context"
  },
  {
   "front": "Estimate the pI of lysine given $pK_a$ values 2.2 ($\\alpha$-COOH), 9.0 ($\\alpha$-NH$_3^+$), and 10.5 (side chain).",
   "fp": "347c75f4bcac",
-  "yield": "HIGH",
-  "why": "pI of a basic amino acid: worked calculation is core"
+  "yield": "ULTRA_HIGH",
+  "why": "pI calculation for a basic amino acid is tested every year"
  },
  {
   "front": "For a free amino acid, the $\\alpha$-carboxyl $pK_a$ is about {{c1::2}} and the $\\alpha$-amino $pK_a$ about {{c2::9-10}}.",
   "fp": "5848c421ecb5",
-  "yield": "HIGH",
-  "why": "Backbone pKa ~2 and ~9-10 anchor every pI calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "Backbone pKa ~2 and ~9-10 anchor every charge and pI question"
  },
  {
   "front": "How do molecular chaperones such as Hsp60/GroEL assist protein folding?",
@@ -110,20 +110,20 @@
  {
   "front": "How do you calculate the pI of an acidic amino acid such as glutamate?",
   "fp": "466e972489b7",
-  "yield": "HIGH",
-  "why": "pI of an acidic amino acid: worked calculation is core"
+  "yield": "ULTRA_HIGH",
+  "why": "pI calculation for an acidic amino acid is tested every year"
  },
  {
   "front": "How does affinity chromatography purify a His-tagged protein, and how is it eluted?",
   "fp": "a345ef6a9a4c",
-  "yield": "MEDIUM",
-  "why": "Affinity chromatography (His-tag/imidazole): supporting detail on a tested technique"
+  "yield": "HIGH",
+  "why": "Affinity chromatography with competitive elution: commonly tested technique"
  },
  {
   "front": "Hyperammonemia with HIGH urinary orotic acid and low BUN points to deficiency of which urea cycle enzyme?",
   "fp": "18ea43c6694c",
   "yield": "MEDIUM",
-  "why": "OTC deficiency/orotic acid is clinical urea-cycle trivia, misfiled from metaboli [rescued: misfiled, not served elsewher"
+  "why": "OTC deficiency/orotic acid is urea-cycle clinical detail; context only"
  },
  {
   "front": "In 2D gel electrophoresis, what property separates proteins in each dimension?",
@@ -134,8 +134,8 @@
  {
   "front": "In isoelectric focusing, a protein stops migrating where the gel's pH equals its {{c1::pI}}, the pH of net charge {{c2::zero}}.",
   "fp": "0f246ae44580",
-  "yield": "HIGH",
-  "why": "Isoelectric focusing stops at pH = pI is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Isoelectric focusing stops at pH = pI: foundational"
  },
  {
   "front": "In peptide mapping, {{c1::cyanogen bromide}} cleaves on the C-terminal side of {{c2::methionine}} residues.",
@@ -147,49 +147,49 @@
   "front": "In prion disease, PrP converts from an {{c1::$\\alpha$-helical}} conformation to a {{c2::$\\beta$-sheet}}-rich one that aggregates.",
   "fp": "4decf9d62f68",
   "yield": "MEDIUM",
-  "why": "Prion alpha->beta misfolding: clinical flavor illustrating conformational change"
+  "why": "Prion alpha-to-beta misfolding: illustrative, secondary"
  },
  {
   "front": "In size-exclusion chromatography, {{c1::large}} proteins elute first because they are excluded from the bead pores.",
   "fp": "a48248258f0f",
-  "yield": "HIGH",
-  "why": "Size-exclusion: large elutes first is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Size-exclusion large-elutes-first is tested on essentially every exam"
  },
  {
   "front": "Kinases phosphorylate the hydroxyl-bearing residues {{c1::serine, threonine, and tyrosine}}.",
   "fp": "aabd4cf73265",
   "yield": "HIGH",
-  "why": "Ser/Thr/Tyr as phosphorylation sites is core"
+  "why": "Ser/Thr/Tyr as phosphorylation sites: commonly tested"
  },
  {
   "front": "Maple syrup urine disease is loss of the {{c1::branched-chain alpha-keto acid dehydrogenase}} complex, which depends on {{c2::thiamine}} pyrophosphate.",
   "fp": "903166fabc6b",
   "yield": "MEDIUM",
-  "why": "MSUD/thiamine is clinical metabolism trivia, misfiled from metabolism [rescued: misfiled, not served elsewhere]"
+  "why": "MSUD/thiamine is clinical metabolism detail; context only"
  },
  {
   "front": "Myoglobin vs hemoglobin: which shows hyperbolic $O_2$ binding, and what structural feature explains the difference?",
   "fp": "2b52df85af7a",
-  "yield": "HIGH",
-  "why": "Myoglobin hyperbolic vs hemoglobin sigmoidal cooperativity is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Myoglobin hyperbolic vs hemoglobin sigmoidal cooperativity: every year"
  },
  {
   "front": "N-linked glycosylation attaches sugars to {{c1::asparagine}}; O-linked glycosylation uses {{c2::serine/threonine}} hydroxyls.",
   "fp": "0b368fdb1b8e",
-  "yield": "MEDIUM",
-  "why": "N-linked Asn vs O-linked Ser/Thr: supporting post-translational detail"
+  "yield": "HIGH",
+  "why": "N-linked Asn vs O-linked Ser/Thr: commonly tested modification"
  },
  {
   "front": "Native PAGE vs SDS-PAGE: what does each separate by, and which preserves quaternary structure?",
   "fp": "883f6268dab6",
   "yield": "HIGH",
-  "why": "Native vs SDS-PAGE and quaternary structure is core"
+  "why": "Native vs SDS-PAGE and preserved quaternary structure: commonly tested"
  },
  {
   "front": "On gel electrophoresis at pH 8.6, why does HbS migrate more slowly toward the anode than HbA?",
   "fp": "2d96e49fb2f8",
-  "yield": "MEDIUM",
-  "why": "HbS electrophoresis charge reasoning: plausible passage step"
+  "yield": "HIGH",
+  "why": "HbS charge-based electrophoresis reasoning: classic passage step"
  },
  {
   "front": "One-letter codes for the aromatic residues: phenylalanine = {{c1::F}}, tyrosine = {{c2::Y}}, tryptophan = {{c3::W}}.",
@@ -200,8 +200,8 @@
  {
   "front": "One-letter codes for the basic residues: lysine = {{c1::K}}, arginine = {{c2::R}}, histidine = {{c3::H}}.",
   "fp": "77fc6b9a8556",
-  "yield": "MEDIUM",
-  "why": "K/R/H letters matter for trypsin sites and passages"
+  "yield": "HIGH",
+  "why": "K/R/H letters needed to read trypsin sites and sequences in passages"
  },
  {
   "front": "One-letter codes: aspartate = {{c1::D}}, glutamate = {{c2::E}}, asparagine = {{c3::N}}, glutamine = {{c4::Q}}.",
@@ -213,91 +213,91 @@
   "front": "Phenylketonuria: {{c1::phenylalanine hydroxylase}} deficiency blocks conversion of Phe to {{c2::tyrosine}}, which then becomes an essential amino acid.",
   "fp": "08b2678baf3e",
   "yield": "MEDIUM",
-  "why": "PKU Phe->Tyr block: classic example, primarily metabolism"
+  "why": "PKU Phe->Tyr block: classic but primarily metabolism"
  },
  {
   "front": "Sickle cell disease: {{c1::glutamate}} is replaced by {{c2::valine}} at position 6 of the {{c3::beta}}-globin chain.",
   "fp": "bd9e1d8c1e71",
-  "yield": "HIGH",
-  "why": "Sickle Glu6Val beta-globin is a classic tested fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Sickle Glu6Val beta-globin appears on essentially every exam"
  },
  {
   "front": "Side-chain $pK_a$ values: aspartate {{c1::~3.9}}, glutamate {{c2::~4.2}} — both fully deprotonated at physiological pH.",
   "fp": "b2d9ebf3e3c8",
   "yield": "MEDIUM",
-  "why": "Asp/Glu side-chain pKa values: numeric support for the acidic-residue card"
+  "why": "Asp/Glu side-chain pKa numbers: support for the acidic-residue card"
  },
  {
   "front": "The $\\alpha$-helix has {{c1::3.6}} residues per turn, with H-bonds from the C=O of residue $n$ to the N-H of residue {{c2::$n+4$}}.",
   "fp": "c0892e6297cc",
-  "yield": "MEDIUM",
-  "why": "3.6 residues/turn and n+4 H-bonds: supporting helix detail"
+  "yield": "HIGH",
+  "why": "3.6 residues/turn and n+4 H-bonds: commonly asked helix facts"
  },
  {
   "front": "The cysteine thiol has a side-chain $pK_a$ of {{c1::~8.3}}; the tyrosine hydroxyl, {{c2::~10.5}}.",
   "fp": "e7cbfcd339bb",
   "yield": "MEDIUM",
-  "why": "Cys/Tyr side-chain pKa: numeric support; Cys ~8 is occasionally asked"
+  "why": "Cys/Tyr side-chain pKa numbers: supporting detail"
  },
  {
   "front": "The dominant driving force of protein folding is the {{c1::hydrophobic effect}}, powered thermodynamically by {{c2::increased entropy of released water}}.",
   "fp": "68aa4904687d",
-  "yield": "HIGH",
-  "why": "Hydrophobic effect / water entropy drives folding is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Hydrophobic effect and water entropy drive folding: foundational"
  },
  {
   "front": "The only achiral amino acid is {{c1::glycine}}, and the amino acid with a secondary amine (imino acid) is {{c2::proline}}.",
   "fp": "e884b5810c44",
-  "yield": "HIGH",
-  "why": "Glycine achiral, proline imino acid is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Glycine achiral, proline imino acid: foundational"
  },
  {
   "front": "The only purely ketogenic amino acids are {{c1::leucine}} and {{c2::lysine}}; every other amino acid is at least partly {{c3::glucogenic}}.",
   "fp": "9d704b34afc9",
-  "yield": "MEDIUM",
-  "why": "Ketogenic Leu/Lys: well-known fact but belongs to metabolism (1D)"
+  "yield": "HIGH",
+  "why": "Ketogenic Leu/Lys: well-known metabolism fact, commonly tested"
  },
  {
   "front": "The positively charged (basic) amino acids at physiological pH are {{c1::lysine, arginine, and histidine}}.",
   "fp": "e401a3cf2169",
-  "yield": "HIGH",
-  "why": "Basic amino acids Lys/Arg/His is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Basic residues Lys/Arg/His: foundational side-chain class"
  },
  {
   "front": "The rate-limiting urea cycle enzyme is {{c1::carbamoyl phosphate synthetase I}}, absolutely dependent on the activator {{c2::N-acetylglutamate}}.",
   "fp": "81c47385ae4d",
   "yield": "MEDIUM",
-  "why": "CPS I / N-acetylglutamate regulation is urea-cycle detail, misfiled from metabol [rescued: misfiled, not served elsewher"
+  "why": "CPS I / N-acetylglutamate is urea-cycle detail; context only"
  },
  {
   "front": "The side-chain imidazole of histidine has a $pK_a$ of about {{c1::6.0}}, the closest of any side chain to physiological pH.",
   "fp": "f2237a382603",
-  "yield": "HIGH",
-  "why": "Histidine imidazole pKa ~6 is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Histidine imidazole pKa ~6 is tested every year"
  },
  {
   "front": "Urea vs $\\beta$-mercaptoethanol as denaturants: what does each disrupt?",
   "fp": "1ee51b4fa712",
-  "yield": "HIGH",
-  "why": "Urea vs beta-ME denaturant targets is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Urea vs beta-ME denaturant targets is a recurring distinction"
  },
  {
   "front": "What are the 4 levels of protein structure?",
   "fp": "f4e830545573",
-  "yield": "HIGH",
-  "why": "Four levels of protein structure is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Four levels of protein structure: foundational"
  },
  {
   "front": "What defines quaternary structure, and what forces typically hold the subunits together?",
   "fp": "c1ae7088f774",
-  "yield": "MEDIUM",
-  "why": "Quaternary structure detail supports the four-levels card"
+  "yield": "HIGH",
+  "why": "Quaternary structure and its forces: commonly tested"
  },
  {
   "front": "What did Anfinsen's ribonuclease refolding experiment establish?",
   "fp": "f1d9edeeaba6",
-  "yield": "MEDIUM",
-  "why": "Anfinsen: named study, but sequence-determines-fold conclusion is core"
+  "yield": "HIGH",
+  "why": "Sequence determines fold (Anfinsen) is commonly tested reasoning"
  },
  {
   "front": "What does a Ramachandran plot display?",
@@ -308,8 +308,8 @@
  {
   "front": "What does a sandwich ELISA measure, and what generates its readout?",
   "fp": "7b7dbc4188cb",
-  "yield": "MEDIUM",
-  "why": "Sandwich ELISA mechanism: supporting detail on a tested technique"
+  "yield": "HIGH",
+  "why": "ELISA mechanism appears in many experimental passages"
  },
  {
   "front": "What does Edman degradation accomplish, and what is its practical limit?",
@@ -320,26 +320,26 @@
  {
   "front": "What is a salt bridge in a protein, and which residues typically form one?",
   "fp": "abf79e30ab75",
-  "yield": "MEDIUM",
-  "why": "Salt bridge definition supports tertiary-structure forces"
+  "yield": "HIGH",
+  "why": "Salt bridges as pH-sensitive tertiary forces: commonly tested"
  },
  {
   "front": "What is the isoelectric point (pI)?",
   "fp": "ff4fc40f9c54",
-  "yield": "HIGH",
-  "why": "pI definition and calculation rules are core"
+  "yield": "ULTRA_HIGH",
+  "why": "pI definition and calculation rules: foundational"
  },
  {
   "front": "What is the peptide bond?",
   "fp": "176650c05efe",
-  "yield": "HIGH",
-  "why": "Peptide bond formation, planarity, trans preference is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Peptide bond formation, planarity, trans: foundational"
  },
  {
   "front": "Which amino acid contains a thiol (-SH) group and can form disulfide bonds?",
   "fp": "379a6ab8bbc4",
-  "yield": "HIGH",
-  "why": "Cysteine thiol and disulfide bonds is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Cysteine thiol and disulfide bonds: foundational"
  },
  {
   "front": "Which amino acid is an imino acid with a cyclic side chain?",
@@ -350,20 +350,20 @@
  {
   "front": "Which amino acid one-letter codes are NOT just the first letter of the name?",
   "fp": "dacb113761fb",
-  "yield": "MEDIUM",
-  "why": "Combined one-letter-code exceptions: passages use letters"
+  "yield": "HIGH",
+  "why": "One-letter code exceptions are needed to read passage sequences"
  },
  {
   "front": "Which amino acids are aromatic?",
   "fp": "9fc1d142c5df",
-  "yield": "HIGH",
-  "why": "Aromatic residues and 280 nm absorbance is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Aromatic residues and 280 nm absorbance: foundational"
  },
  {
   "front": "Which amino acids are negatively charged (acidic) at pH 7?",
   "fp": "8b3194bbfe75",
-  "yield": "HIGH",
-  "why": "Acidic residues Asp/Glu is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Acidic residues Asp/Glu: foundational side-chain class"
  },
  {
   "front": "Which amino acids are positively charged (basic) at pH 7?",
@@ -374,55 +374,55 @@
  {
   "front": "Which amino acids have nonpolar, aliphatic side chains?",
   "fp": "d91ce84b341f",
-  "yield": "HIGH",
-  "why": "Nonpolar aliphatic side chains and hydrophobic packing is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Nonpolar aliphatic side chains and hydrophobic packing: foundational"
  },
  {
   "front": "Which interactions define secondary structure vs tertiary structure?",
   "fp": "a9be56ecc9fb",
-  "yield": "HIGH",
-  "why": "Backbone H-bonds (secondary) vs side-chain forces (tertiary) is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Backbone H-bonds (secondary) vs side-chain forces (tertiary): foundational"
  },
  {
   "front": "Which two amino acids contain sulfur, and which one can form disulfide bonds?",
   "fp": "e6d16b4f6450",
-  "yield": "MEDIUM",
-  "why": "Cys vs Met sulfur: supporting detail on the disulfide card"
+  "yield": "HIGH",
+  "why": "Cys vs Met sulfur and disulfide capability: commonly tested distinction"
  },
  {
   "front": "Why are disulfide bonds common in secreted proteins but rare in cytosolic ones?",
   "fp": "1ecaaa8acc01",
   "yield": "MEDIUM",
-  "why": "Reducing cytosol vs oxidizing ER/extracellular: supporting reasoning"
+  "why": "Reducing cytosol vs oxidizing ER: supporting reasoning"
  },
  {
   "front": "Why do proline and glycine both destabilize an $\\alpha$-helix, for opposite reasons?",
   "fp": "ca6ca8b2909e",
-  "yield": "MEDIUM",
-  "why": "Pro/Gly helix breakers: supporting secondary-structure detail"
+  "yield": "HIGH",
+  "why": "Pro/Gly helix breakers: commonly tested secondary-structure fact"
  },
  {
   "front": "Why does SDS-PAGE separate proteins by size alone?",
   "fp": "253ec20e56ed",
-  "yield": "HIGH",
-  "why": "SDS-PAGE separates by size alone is core"
+  "yield": "ULTRA_HIGH",
+  "why": "SDS-PAGE separates by size alone: foundational"
  },
  {
   "front": "Why does vitamin C deficiency (scurvy) produce weak collagen?",
   "fp": "ba9038dc5e5d",
   "yield": "MEDIUM",
-  "why": "Scurvy/prolyl hydroxylase: clinical flavor on collagen stability"
+  "why": "Scurvy/prolyl hydroxylase: clinical flavor on collagen"
  },
  {
   "front": "Why is a Bradford assay preferred over $A_{280}$ when the sample contains nucleic acids?",
   "fp": "8ddf05d2e541",
   "yield": "MEDIUM",
-  "why": "Bradford vs A280 with nucleic acids: second-step on protein quantification"
+  "why": "Bradford vs A280 with nucleic acids: second-step on quantification"
  },
  {
   "front": "Why is absorbance at 280 nm used to estimate protein concentration, and what is its limitation?",
   "fp": "cc05796acdd7",
-  "yield": "MEDIUM",
-  "why": "A280 from Trp/Tyr: supporting detail on aromatic residues"
+  "yield": "HIGH",
+  "why": "A280 from Trp/Tyr and its limitation: commonly tested"
  }
 ]

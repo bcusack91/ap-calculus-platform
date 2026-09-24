@@ -1,0 +1,410 @@
+[
+ {
+  "front": "A membrane's equilibrium potential is $E = (61/z)\\log([ion]_{out}/[ion]_{in})$ mV at 37 degrees C. Apply it to $K^{+}$.",
+  "fp": "ff824ebc3ee3",
+  "yield": "HIGH",
+  "why": "Nernst applied to K+ equilibrium potential; membrane-potential calcs recur in bio passages"
+ },
+ {
+  "front": "A molecule with polar bonds is still nonpolar overall if {{c1::the bond dipoles cancel by symmetry}}.",
+  "fp": "b851df35ae5f",
+  "yield": "ULTRA_HIGH",
+  "why": "Molecular polarity from symmetry (CO2, CCl4 vs H2O, NH3) tested essentially every exam"
+ },
+ {
+  "front": "A spectrophotometer readout obeys $A = \\varepsilon lc$. What does that buy you in an assay, and where does it break down?",
+  "fp": "a580d19d55cc",
+  "yield": "HIGH",
+  "why": "Beer-Lambert A=elc underlies spectrophotometric assays in many passages"
+ },
+ {
+  "front": "Across a period atomic radius {{c1::decreases}} because effective nuclear charge {{c2::rises}} while electrons enter the same shell.",
+  "fp": "b6f86ada0010",
+  "yield": "ULTRA_HIGH",
+  "why": "Atomic radius trend and Zeff reasoning is core periodic-table content, tested every year"
+ },
+ {
+  "front": "As bond order increases, bond length {{c1::decreases}} and bond energy {{c2::increases}}.",
+  "fp": "cc04fddb876d",
+  "yield": "HIGH",
+  "why": "Bond order vs length/strength is a standard discrete and passage reasoning step"
+ },
+ {
+  "front": "At 25 degrees C the Nernst shortcut is $E = E^{\\circ} - (0.0592/n)\\log Q$, so each factor of 10 in Q costs about {{c1::59 mV per electron}}.",
+  "fp": "c2da4f4bd88c",
+  "yield": "HIGH",
+  "why": "Nernst 0.0592/n shortcut is the calculation form used on the exam"
+ },
+ {
+  "front": "At a given temperature all gases share the same average {{c1::kinetic energy}}, so a heavier gas must have a {{c2::lower}} average speed.",
+  "fp": "de2b56dd707a",
+  "yield": "ULTRA_HIGH",
+  "why": "Same average KE at same T, heavier gas slower: kinetic theory staple, tested every year"
+ },
+ {
+  "front": "Clinical osmolarity anchors: plasma is about {{c1::285 to 295 mOsm/L}} and isotonic saline is {{c2::0.9 percent NaCl}}.",
+  "fp": "b0cb5c8a1f41",
+  "yield": "MEDIUM",
+  "why": "Clinical osmolarity/saline anchors: useful physiology context, rarely the point scored"
+ },
+ {
+  "front": "Colligative properties depend on {{c1::the number of dissolved particles}}; the van 't Hoff factor for $NaCl$ is {{c2::2}}.",
+  "fp": "f9498d4071b9",
+  "yield": "ULTRA_HIGH",
+  "why": "Colligative particle count and van t Hoff factor are tested on essentially every exam"
+ },
+ {
+  "front": "Distinguish electron geometry from molecular geometry.",
+  "fp": "e3bd50f84a01",
+  "yield": "HIGH",
+  "why": "Electron vs molecular geometry distinction is a common VSEPR discrete"
+ },
+ {
+  "front": "During a strong acid titrated by strong base with conductivity monitoring, why does the reading fall and then rise?",
+  "fp": "cd4af27c32c7",
+  "yield": "MEDIUM",
+  "why": "Conductometric titration V-shape is a plausible passage figure but niche"
+ },
+ {
+  "front": "Electronegativity increases {{c1::up and to the right}}, peaking at {{c2::fluorine}}; noble gases are excluded.",
+  "fp": "927b5a75ad0b",
+  "yield": "ULTRA_HIGH",
+  "why": "Electronegativity trend is foundational periodic-table content, tested every year"
+ },
+ {
+  "front": "Electroplating math: Faraday's constant is {{c1::96,485 C per mole of electrons}} and total charge is {{c2::current times time}}.",
+  "fp": "0c198ba6a1c2",
+  "yield": "HIGH",
+  "why": "Faraday charge-to-moles chain is a common electrochem calculation"
+ },
+ {
+  "front": "Estimation anchors: at body temperature $RT$ is about {{c1::2.6 kJ/mol}}, and $2.303RT$ is about {{c2::5.9 kJ/mol}}.",
+  "fp": "4ca450a6616f",
+  "yield": "MEDIUM",
+  "why": "RT and 2.303RT estimation anchors help with dG/K estimates but are secondary"
+ },
+ {
+  "front": "First ionization energy is LOWEST for:",
+  "fp": "3a6d690a4a9a",
+  "yield": "MEDIUM",
+  "why": "Cs lowest IE is a direct application of the trend card; second-tier example"
+ },
+ {
+  "front": "For calculator-free logs, memorize $\\log 2 \\approx {{c1::0.3}}$ and $\\log 3 \\approx {{c2::0.48}}$.",
+  "fp": "982c991b768f",
+  "yield": "HIGH",
+  "why": "log 2 and log 3 shortcuts are needed for calculator-free pH and Nernst work"
+ },
+ {
+  "front": "Galvanic vs electrolytic cell: how do $E^{\\circ}_{cell}$, $\\Delta G$, and the sign of the anode differ?",
+  "fp": "9a0f4536dfcc",
+  "yield": "ULTRA_HIGH",
+  "why": "Galvanic vs electrolytic signs of E, dG, anode polarity: asked essentially every exam"
+ },
+ {
+  "front": "Henry's law: the concentration of a dissolved gas is proportional to {{c1::its partial pressure above the liquid}}.",
+  "fp": "50a1f4c4321e",
+  "yield": "HIGH",
+  "why": "Henry law gas solubility vs partial pressure is commonly tested, incl. diving/alveolus"
+ },
+ {
+  "front": "How are $\\Delta G°$ and cell potential $E°$ related?",
+  "fp": "c38fef78015c",
+  "yield": "ULTRA_HIGH",
+  "why": "dG = -nFE links thermo and electrochem; a core equation used in calculations"
+ },
+ {
+  "front": "How do atomic radius and electronegativity trend across the periodic table?",
+  "fp": "c38a87f916f3",
+  "yield": "ULTRA_HIGH",
+  "why": "Summary of all periodic trends; foundational and tested every administration"
+ },
+ {
+  "front": "How do the four quantum numbers describe an electron?",
+  "fp": "50e776f55d7a",
+  "yield": "MEDIUM",
+  "why": "Quantum numbers belong to atomic structure and are covered in that deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "How do the signs of $\\Delta G$, $\\Delta H$, and $\\Delta S$ relate to spontaneity?",
+  "fp": "797181999166",
+  "yield": "LOW",
+  "why": "Gibbs sign/spontaneity duplicates the thermodynamics deck, where it is ULTRA_HIGH"
+ },
+ {
+  "front": "How does a catalyst affect a reaction, and what does it NOT change?",
+  "fp": "bc20323649b2",
+  "yield": "MEDIUM",
+  "why": "Catalyst effects belong to kinetics and are covered at length in that deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "How does a nonvolatile solute change vapor pressure, boiling point, and freezing point?",
+  "fp": "d83f18212f43",
+  "yield": "ULTRA_HIGH",
+  "why": "Vapor pressure lowering, bp elevation, fp depression mechanism is core colligative content"
+ },
+ {
+  "front": "How does formal charge decide between competing Lewis structures?",
+  "fp": "ec7221220559",
+  "yield": "HIGH",
+  "why": "Formal charge to pick the best Lewis structure is a standard discrete"
+ },
+ {
+  "front": "How many sigma and pi bonds are in a single, double, and triple bond?",
+  "fp": "5e25eecaf3da",
+  "yield": "HIGH",
+  "why": "Sigma/pi counts and steric number feed hybridization questions every year"
+ },
+ {
+  "front": "Hydrogen bonding needs H bonded to {{c1::N, O, or F}} plus {{c2::a lone pair}} on a nearby electronegative atom.",
+  "fp": "325685979c73",
+  "yield": "ULTRA_HIGH",
+  "why": "H-bond requirements (N, O, F + lone pair) underlie water, protein, DNA questions every exam"
+ },
+ {
+  "front": "In a concentration cell, $E^{\\circ}$ equals {{c1::0}} yet current flows because {{c2::the two half-cells differ in concentration}}.",
+  "fp": "9fa727775ac5",
+  "yield": "MEDIUM",
+  "why": "Concentration cells appear occasionally; secondary to the standard galvanic cell"
+ },
+ {
+  "front": "In a galvanic (voltaic) cell, where do oxidation and reduction occur, and which way do electrons flow?",
+  "fp": "52c2ae008dd8",
+  "yield": "ULTRA_HIGH",
+  "why": "Anode oxidation, cathode reduction, electron flow, E cell formula: tested every exam"
+ },
+ {
+  "front": "In a trigonal bipyramidal arrangement, lone pairs always take {{c1::equatorial}} positions.",
+  "fp": "379137531e1e",
+  "yield": "MEDIUM",
+  "why": "Equatorial lone-pair placement in TBP is a detail beyond typical MCAT VSEPR items"
+ },
+ {
+  "front": "In the van der Waals equation, what do the a and b corrections account for?",
+  "fp": "28d2ab039bbf",
+  "yield": "HIGH",
+  "why": "van der Waals a and b corrections are outline content and a common discrete"
+ },
+ {
+  "front": "Like dissolves like: dissolving is favorable when {{c1::solute-solvent}} attractions replace the solute-solute and solvent-solvent ones broken.",
+  "fp": "68515ca2f10e",
+  "yield": "HIGH",
+  "why": "Like dissolves like via solute-solvent interactions is a frequent solubility question"
+ },
+ {
+  "front": "Lone pairs compress bond angles because {{c1::they spread out more than bonding pairs do}}.",
+  "fp": "86efaf8eec1d",
+  "yield": "HIGH",
+  "why": "Lone pairs compressing angles (107, 104.5) is a classic VSEPR discrete"
+ },
+ {
+  "front": "Magnitude anchor: a hydrogen bond is roughly {{c1::20 kJ/mol}} while a typical covalent bond is roughly {{c2::400 kJ/mol}}.",
+  "fp": "1606950f1706",
+  "yield": "MEDIUM",
+  "why": "H-bond vs covalent energy magnitudes are useful context, rarely scored directly"
+ },
+ {
+  "front": "Match R to the problem: use {{c1::8.314 J/mol K}} for energy work and {{c2::0.0821 L atm/mol K}} for gas law work.",
+  "fp": "14fb7479bfef",
+  "yield": "MEDIUM",
+  "why": "Choosing R by units is a practical calculation habit rather than tested content"
+ },
+ {
+  "front": "Metallic character increases {{c1::down}} a group and {{c2::to the left}} across a period.",
+  "fp": "d452e8f6798b",
+  "yield": "HIGH",
+  "why": "Metallic character trend and cation/basic-oxide prediction is common outline content"
+ },
+ {
+  "front": "On a phase diagram the {{c1::triple point}} is where all three phases coexist, and past the {{c2::critical point}} liquid and gas merge.",
+  "fp": "6f932484692c",
+  "yield": "ULTRA_HIGH",
+  "why": "Triple point and critical point on a phase diagram are tested essentially every exam"
+ },
+ {
+  "front": "On a solubility-versus-temperature plot, gases {{c1::decrease}} in solubility as temperature rises while most solids {{c2::increase}}.",
+  "fp": "e056d55fd903",
+  "yield": "HIGH",
+  "why": "Gas solubility falling with temperature is a common Le Chatelier/solubility item"
+ },
+ {
+  "front": "On a table of standard reduction potentials, the strongest oxidizing agent is the species with the {{c1::most positive $E^{\\circ}_{red}$}}.",
+  "fp": "fcf2839f3225",
+  "yield": "ULTRA_HIGH",
+  "why": "Most positive E red = strongest oxidizer; reading a potentials table is asked every exam"
+ },
+ {
+  "front": "Pressure anchors: 1 atm equals {{c1::760 mmHg}} (760 torr) and about {{c2::101.3 kPa}}.",
+  "fp": "52eb36b77ac1",
+  "yield": "HIGH",
+  "why": "1 atm = 760 mmHg = 101.3 kPa conversion is needed for gas-law and physiology items"
+ },
+ {
+  "front": "Rank $HClO_4$, $HClO_3$, $HClO_2$, and $HClO$ in acidity and explain the pattern.",
+  "fp": "79ab449a20d9",
+  "yield": "MEDIUM",
+  "why": "Oxyacid acidity ranking belongs to the acid-base deck, which covers it [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Rank an isoelectronic series such as $N^{3-}$, $O^{2-}$, $F^{-}$, $Ne$, $Na^{+}$, $Mg^{2+}$ by size.",
+  "fp": "33ee5d910233",
+  "yield": "HIGH",
+  "why": "Isoelectronic size ranking is a favorite periodic-trend trap"
+ },
+ {
+  "front": "Rank the intermolecular forces from strongest to weakest.",
+  "fp": "9ff6613bcaf5",
+  "yield": "ULTRA_HIGH",
+  "why": "IMF strength ranking is foundational and tested on essentially every exam"
+ },
+ {
+  "front": "Real gases deviate most from ideality at {{c1::high pressure}} and {{c2::low temperature}}.",
+  "fp": "60b2054f6534",
+  "yield": "ULTRA_HIGH",
+  "why": "Real gases deviate at high P and low T; tested essentially every exam"
+ },
+ {
+  "front": "Sig figs: multiplication keeps the fewest {{c1::significant figures}}, addition keeps the fewest {{c2::decimal places}}.",
+  "fp": "b2de9af45257",
+  "yield": "LOW",
+  "why": "Significant-figure rules are generic and not scored on the MCAT"
+ },
+ {
+  "front": "State Le Chatelier's principle and how the equilibrium responds to stress.",
+  "fp": "d997955bdb5f",
+  "yield": "ULTRA_HIGH",
+  "why": "Le Chatelier shifts are tested on essentially every exam; no dedicated twin elsewhere"
+ },
+ {
+  "front": "Steric number 2 gives {{c1::sp}} hybridization, SN 3 gives {{c2::$sp^2$}}, and SN 4 gives {{c3::$sp^3$}}.",
+  "fp": "7ad01aa5ed3e",
+  "yield": "ULTRA_HIGH",
+  "why": "Steric number to sp/sp2/sp3 hybridization is asked essentially every exam"
+ },
+ {
+  "front": "Trial results cluster tightly but sit far from the true value. The data are {{c1::precise}} but {{c2::inaccurate}}.",
+  "fp": "acb88439e506",
+  "yield": "MEDIUM",
+  "why": "Precision vs accuracy and systematic error is a secondary research-methods point"
+ },
+ {
+  "front": "Vapor pressure varies {{c1::inversely}} with intermolecular force strength, while boiling point and viscosity vary {{c2::directly}}.",
+  "fp": "43ef0bb857fc",
+  "yield": "HIGH",
+  "why": "Vapor pressure/boiling point vs IMF strength is a frequent passage inference"
+ },
+ {
+  "front": "What are the colligative properties and how do they depend on solute?",
+  "fp": "30bdb1e29c43",
+  "yield": "ULTRA_HIGH",
+  "why": "Colligative equations (iKbm, iKfm, iMRT) are core calculation content"
+ },
+ {
+  "front": "What are the relationships between Ka, pKa, and acid strength?",
+  "fp": "d609a177df2c",
+  "yield": "LOW",
+  "why": "Ka/pKa relationship duplicates the acid-base deck, where it is core"
+ },
+ {
+  "front": "What does resonance predict about the three C-O bonds in carbonate, $CO_3^{2-}$?",
+  "fp": "624fccc1c838",
+  "yield": "MEDIUM",
+  "why": "Carbonate resonance bond order is a supporting bonding example"
+ },
+ {
+  "front": "What is a coordinate (dative) covalent bond?",
+  "fp": "561b2432685a",
+  "yield": "MEDIUM",
+  "why": "Coordinate covalent bonds appear as Lewis acid-base context, rarely scored alone"
+ },
+ {
+  "front": "What is Ksp and how does the common-ion effect alter solubility?",
+  "fp": "d165564e38f0",
+  "yield": "ULTRA_HIGH",
+  "why": "Ksp and common-ion effect on solubility are tested essentially every exam"
+ },
+ {
+  "front": "What is the Bronsted-Lowry definition of acids and bases, and what is a conjugate base?",
+  "fp": "8716b4264e3f",
+  "yield": "LOW",
+  "why": "Bronsted-Lowry definitions duplicate the acid-base deck, where they are core"
+ },
+ {
+  "front": "What is the Henderson-Hasselbalch equation and when is a buffer most effective?",
+  "fp": "068d30244cea",
+  "yield": "LOW",
+  "why": "Henderson-Hasselbalch duplicates the acid-base deck, where it is ULTRA_HIGH"
+ },
+ {
+  "front": "What is the relationship between $\\Delta G°$ and the equilibrium constant K?",
+  "fp": "af78354aa331",
+  "yield": "LOW",
+  "why": "dG = -RT ln K duplicates the thermodynamics deck, where it is ULTRA_HIGH"
+ },
+ {
+  "front": "When a gas is collected over water, why must the water vapor pressure be subtracted?",
+  "fp": "df50389d7850",
+  "yield": "HIGH",
+  "why": "Dalton law correction for gas collected over water is a common gas-law item"
+ },
+ {
+  "front": "Which common ionic compounds are SOLUBLE (general solubility rules)?",
+  "fp": "2f74540c5a44",
+  "yield": "HIGH",
+  "why": "Solubility rules for common ions come up in precipitation and net-ionic questions"
+ },
+ {
+  "front": "Which concentration unit do freezing point depression and boiling point elevation use, and why?",
+  "fp": "bd82cb0a5434",
+  "yield": "HIGH",
+  "why": "Molality in colligative equations and its temperature independence is a common discrete"
+ },
+ {
+  "front": "Which properties of water follow directly from its hydrogen-bonding network?",
+  "fp": "1eb11a86cd6f",
+  "yield": "MEDIUM",
+  "why": "Water properties from H-bonding are supporting context for the H-bond card"
+ },
+ {
+  "front": "Why do atomic radii change so little across the transition metals?",
+  "fp": "f19f1b934a5f",
+  "yield": "LOW",
+  "why": "Transition-metal radius constancy is trivia-grade detail"
+ },
+ {
+  "front": "Why does binary acid strength rise down a group ($HF < HCl < HBr < HI$) even though F is most electronegative?",
+  "fp": "2d219453d2f3",
+  "yield": "MEDIUM",
+  "why": "Binary acid strength down a group is acid-base content; a secondary trend"
+ },
+ {
+  "front": "Why does n-pentane boil higher than neopentane despite the identical molecular formula?",
+  "fp": "516ae132f8de",
+  "yield": "MEDIUM",
+  "why": "Branching lowers boiling point: a second-tier IMF application"
+ },
+ {
+  "front": "Why does the solid-liquid line on water's phase diagram slope backward?",
+  "fp": "4c9689f9bcda",
+  "yield": "HIGH",
+  "why": "Backward solid-liquid line of water and CO2 sublimation are common phase-diagram items"
+ },
+ {
+  "front": "Why is a cation usually far smaller than its parent atom, while an anion is larger?",
+  "fp": "6465d3256dc2",
+  "yield": "HIGH",
+  "why": "Cation smaller, anion larger than parent atom is a standard periodic-trend discrete"
+ },
+ {
+  "front": "Why is a terminal alkyne C-H more acidic than an alkene or alkane C-H?",
+  "fp": "9354a4a28b9b",
+  "yield": "LOW",
+  "why": "Alkyne C-H acidity is organic chemistry content covered in the organic decks"
+ },
+ {
+  "front": "Write osmotic pressure and state which way water moves.",
+  "fp": "1c683922be61",
+  "yield": "ULTRA_HIGH",
+  "why": "Osmotic pressure Pi = iMRT and water movement direction are tested every exam"
+ }
+]

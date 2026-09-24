@@ -1,0 +1,362 @@
+[
+ {
+  "front": "$R_f$ equals the distance traveled by the {{c1::spot}} divided by the distance traveled by the {{c2::solvent front}}, always between 0 and 1.",
+  "fp": "5e6cca7b02ae",
+  "yield": "HIGH",
+  "why": "Rf definition is the standard TLC discrete"
+ },
+ {
+  "front": "A carboxylic acid streaks badly on a silica TLC plate. What causes it and what fixes it?",
+  "fp": "c67b720a5615",
+  "yield": "LOW",
+  "why": "Streaking fix is bench procedure, not tested"
+ },
+ {
+  "front": "A protein with pI 5.0 is loaded in pH 7.0 buffer. Which ion exchanger binds it, and how do you elute it?",
+  "fp": "9f2a8bfee4de",
+  "yield": "ULTRA_HIGH",
+  "why": "Ion exchanger choice from pI vs pH is asked nearly every exam"
+ },
+ {
+  "front": "Acid-base extraction works because the {{c1::charged}} form of a compound is water soluble while the {{c2::neutral}} form prefers the organic layer.",
+  "fp": "cd5abd28ab7b",
+  "yield": "ULTRA_HIGH",
+  "why": "Charged-in-water, neutral-in-organic is the whole basis of extraction questions"
+ },
+ {
+  "front": "Affinity chromatography separates by {{c1::specific binding}} to an immobilized ligand, as when a His-tagged protein binds a {{c2::nickel}} column.",
+  "fp": "f2a076bf3155",
+  "yield": "HIGH",
+  "why": "Affinity/His-tag columns appear in many protein-purification passages"
+ },
+ {
+  "front": "After extraction the organic layer is dried over {{c1::anhydrous $MgSO_4$ or $Na_2SO_4$}}, then concentrated by {{c2::rotary evaporation}}.",
+  "fp": "4c7c421c0c1c",
+  "yield": "MEDIUM",
+  "why": "Drying agent and rotovap are workup context a passage may mention"
+ },
+ {
+  "front": "After the acid wash, {{c1::NaHCO3}} removes the carboxylic acid and then {{c2::NaOH}} removes the phenol, leaving the hydrocarbon behind.",
+  "fp": "36fb52aa7706",
+  "yield": "HIGH",
+  "why": "Sequential bicarbonate then hydroxide wash is the classic extraction problem"
+ },
+ {
+  "front": "All chromatography relies on differential partitioning between a {{c1::mobile}} phase and a {{c2::stationary}} phase.",
+  "fp": "df6a89afcc90",
+  "yield": "ULTRA_HIGH",
+  "why": "Mobile vs stationary phase partitioning underlies every chromatography question"
+ },
+ {
+  "front": "Ammonium sulfate precipitates proteins by {{c1::salting out}}, competing for the water that hydrates them.",
+  "fp": "53757319fafa",
+  "yield": "MEDIUM",
+  "why": "Salting out shows up as passage context, rarely as the tested step"
+ },
+ {
+  "front": "An ether solution holds benzoic acid, aniline, phenol, and naphthalene. What is the first wash, and what does it remove?",
+  "fp": "7426cf32cd84",
+  "yield": "HIGH",
+  "why": "Four-component extraction application; first wash choice is a common item"
+ },
+ {
+  "front": "An organic layer contains an amine and a neutral compound. How do you separate them?",
+  "fp": "b07ec5de16f6",
+  "yield": "HIGH",
+  "why": "Acid wash pulling amines into water is a staple extraction item"
+ },
+ {
+  "front": "Choose GC when the analyte is {{c1::volatile and thermally stable}}; choose HPLC when it is {{c2::nonvolatile or heat sensitive}}.",
+  "fp": "b1873d89b33e",
+  "yield": "MEDIUM",
+  "why": "GC vs HPLC choice is a second-tier method-selection question"
+ },
+ {
+  "front": "Density-gradient (isopycnic) centrifugation separates particles by {{c1::buoyant density}}, each band settling where its density matches the medium.",
+  "fp": "1247343f8d1d",
+  "yield": "MEDIUM",
+  "why": "Density-gradient centrifugation mainly appears via Meselson-Stahl context"
+ },
+ {
+  "front": "Distinguish Southern, Northern, and Western blots.",
+  "fp": "4d3ad9d9341f",
+  "yield": "ULTRA_HIGH",
+  "why": "Southern/Northern/Western blot targets are tested on nearly every exam"
+ },
+ {
+  "front": "Gas chromatography separates volatile compounds primarily by what property?",
+  "fp": "bdd0552145ad",
+  "yield": "MEDIUM",
+  "why": "GC by boiling point is a secondary method detail"
+ },
+ {
+  "front": "How do you determine experimentally which layer in a separatory funnel is aqueous?",
+  "fp": "6dbe183b5622",
+  "yield": "LOW",
+  "why": "Water-drop layer test is bench procedure trivia"
+ },
+ {
+  "front": "How does a sandwich ELISA generate a quantitative signal?",
+  "fp": "f4636dde3c7b",
+  "yield": "HIGH",
+  "why": "ELISA mechanism is common in immunology and assay passages"
+ },
+ {
+  "front": "How does affinity chromatography work?",
+  "fp": "878b555d8e16",
+  "yield": "LOW",
+  "why": "Restates the affinity chromatography card"
+ },
+ {
+  "front": "How does an impurity affect a solid's melting point, and why is that diagnostic?",
+  "fp": "0e31362de5c2",
+  "yield": "HIGH",
+  "why": "Melting-point depression as a purity check is a frequent discrete"
+ },
+ {
+  "front": "How does ion-exchange chromatography separate proteins, and how are bound proteins released?",
+  "fp": "e3ec6f9c88c0",
+  "yield": "ULTRA_HIGH",
+  "why": "Ion exchange by charge and salt/pH elution is core protein purification"
+ },
+ {
+  "front": "How does isoelectric focusing separate proteins?",
+  "fp": "55ed7a21bfd2",
+  "yield": "ULTRA_HIGH",
+  "why": "Isoelectric focusing at pI with zero net charge is tested every year"
+ },
+ {
+  "front": "In a separatory funnel, diethyl ether forms the {{c1::upper}} layer over water while dichloromethane forms the {{c2::lower}} layer.",
+  "fp": "328fabde09e0",
+  "yield": "MEDIUM",
+  "why": "Ether over water vs DCM under is a secondary density detail"
+ },
+ {
+  "front": "In an assay, a {{c1::negative}} control contains everything except the variable of interest and should produce no signal.",
+  "fp": "cf1223b9f40f",
+  "yield": "ULTRA_HIGH",
+  "why": "Negative vs positive controls are tested on essentially every exam"
+ },
+ {
+  "front": "In differential centrifugation, in what order do cellular components pellet as speed is increased?",
+  "fp": "4abfa5c50c93",
+  "yield": "MEDIUM",
+  "why": "Differential centrifugation order is second-tier cell fractionation detail"
+ },
+ {
+  "front": "In DNA gel electrophoresis, why do all fragments migrate toward the anode regardless of sequence?",
+  "fp": "ba053eca2dfd",
+  "yield": "ULTRA_HIGH",
+  "why": "DNA size separation and migration toward the anode is core electrophoresis"
+ },
+ {
+  "front": "In IR, a strong sharp band near {{c1::1700}} cm$^{-1}$ signals a C=O, while a broad band across 3200-3600 signals {{c2::O-H}}.",
+  "fp": "232dbfa93d08",
+  "yield": "ULTRA_HIGH",
+  "why": "C=O at 1700 and broad O-H at 3200-3600 are the IR facts tested every year"
+ },
+ {
+  "front": "In isoelectric focusing a protein migrates through a pH gradient until the pH equals its {{c1::pI}}, where its net charge is {{c2::zero}}.",
+  "fp": "0b1c6f07b288",
+  "yield": "LOW",
+  "why": "Restates the isoelectric focusing card"
+ },
+ {
+  "front": "In mass spectrometry the molecular ion peak gives the {{c1::molecular weight}}, and an M+2 peak nearly equal in height indicates {{c2::bromine}}.",
+  "fp": "4fe4c0a836a3",
+  "yield": "LOW",
+  "why": "Mass-spec isotope patterns are off-outline trivia for the MCAT"
+ },
+ {
+  "front": "In reverse-phase HPLC, which compounds elute first and why?",
+  "fp": "ffee650dd765",
+  "yield": "HIGH",
+  "why": "Reverse-phase elution order is a common chromatography reasoning item"
+ },
+ {
+  "front": "On a normal-phase silica TLC plate, how does a more polar compound behave?",
+  "fp": "7cfc3ed1c89e",
+  "yield": "ULTRA_HIGH",
+  "why": "Polar compounds low Rf on silica is the standard TLC question"
+ },
+ {
+  "front": "Raising mobile-phase polarity on a normal-phase TLC plate {{c1::raises}} $R_f$, because the solvent competes for {{c2::the polar silica surface}}.",
+  "fp": "cb19cae07509",
+  "yield": "HIGH",
+  "why": "Effect of eluent polarity on Rf is a common TLC follow-up"
+ },
+ {
+  "front": "Recrystallization exploits the fact that solubility {{c1::increases with temperature}}: dissolve in hot solvent, then cool slowly to grow pure crystals.",
+  "fp": "0f3a0e9d7da0",
+  "yield": "HIGH",
+  "why": "Recrystallization principle is standard purification content"
+ },
+ {
+  "front": "SDS-PAGE separates proteins by {{c1::molecular mass}} alone, because SDS denatures them and coats them with {{c2::uniform negative}} charge.",
+  "fp": "65aecd904095",
+  "yield": "ULTRA_HIGH",
+  "why": "SDS-PAGE separating by mass alone is tested every year"
+ },
+ {
+  "front": "Size-exclusion (gel-filtration) chromatography elutes {{c1::large}} molecules first, because they cannot enter the pores of the beads.",
+  "fp": "b57723e35171",
+  "yield": "ULTRA_HIGH",
+  "why": "Size exclusion large-first is a perennial discrete"
+ },
+ {
+  "front": "Size-exclusion chromatography also serves to {{c1::desalt}} a protein, since small ions enter the beads and elute {{c2::last}}.",
+  "fp": "67e7edc09a90",
+  "yield": "MEDIUM",
+  "why": "Desalting use of size exclusion is a secondary application"
+ },
+ {
+  "front": "Southern blotting detects {{c1::DNA}}, Northern blotting detects {{c2::RNA}}, and Western blotting detects protein using antibodies.",
+  "fp": "d954223f8dfd",
+  "yield": "LOW",
+  "why": "Restates the blot card"
+ },
+ {
+  "front": "State Beer's law.",
+  "fp": "b6130fa8a66c",
+  "yield": "ULTRA_HIGH",
+  "why": "Beer's law is the calculation equation for absorbance questions"
+ },
+ {
+  "front": "To pull a carboxylic acid out of an ether layer while leaving a phenol behind, wash with {{c1::aqueous NaHCO$_3$}}.",
+  "fp": "ff8f9c261ec1",
+  "yield": "ULTRA_HIGH",
+  "why": "Bicarbonate pulls the acid but not the phenol; tested every year"
+ },
+ {
+  "front": "To recover an extracted amine as its free base, {{c1::basify}} the aqueous layer and then re-extract into fresh organic solvent.",
+  "fp": "c75b7637a8b7",
+  "yield": "MEDIUM",
+  "why": "Recovering the free amine is a second step after the extraction concept"
+ },
+ {
+  "front": "Two-dimensional gel electrophoresis separates first by {{c1::pI, using isoelectric focusing}} and then by {{c2::mass, using SDS-PAGE}}.",
+  "fp": "c339f7eaf7ac",
+  "yield": "HIGH",
+  "why": "2D gel order (IEF then SDS-PAGE) is a common proteomics item"
+ },
+ {
+  "front": "UV-Vis absorbance is most informative about what structural feature, and what law quantifies it?",
+  "fp": "4f3a2cb07db1",
+  "yield": "HIGH",
+  "why": "Conjugation shifting UV absorbance and Beer's law appear regularly"
+ },
+ {
+  "front": "Vacuum distillation lowers ambient pressure so a compound boils at a {{c1::lower}} temperature, protecting {{c2::heat-sensitive}} compounds from decomposing.",
+  "fp": "800074c67dd4",
+  "yield": "HIGH",
+  "why": "Vacuum distillation for heat-sensitive compounds is a frequent discrete"
+ },
+ {
+  "front": "What does a standard curve accomplish in a quantitative assay, and what is its limitation?",
+  "fp": "1e3d37033dfc",
+  "yield": "MEDIUM",
+  "why": "Standard curve and linear range are secondary assay reasoning"
+ },
+ {
+  "front": "What does gel electrophoresis separate by, and which way does DNA move?",
+  "fp": "14d4616f2424",
+  "yield": "LOW",
+  "why": "Restates the DNA electrophoresis card"
+ },
+ {
+  "front": "What does SDS-PAGE separate by?",
+  "fp": "1fd6c08bf83a",
+  "yield": "LOW",
+  "why": "Restates the SDS-PAGE card"
+ },
+ {
+  "front": "What is an azeotrope and why does it limit distillation?",
+  "fp": "67c2fbc48e32",
+  "yield": "MEDIUM",
+  "why": "Azeotropes are a second-tier distillation limitation"
+ },
+ {
+  "front": "What is the principle of size-exclusion chromatography?",
+  "fp": "d36e0692da4e",
+  "yield": "LOW",
+  "why": "Restates the size-exclusion card"
+ },
+ {
+  "front": "What key reagent makes PCR possible?",
+  "fp": "4a92e84452e7",
+  "yield": "HIGH",
+  "why": "Taq's heat stability is a common PCR item"
+ },
+ {
+  "front": "What three pieces of information does a proton NMR spectrum provide?",
+  "fp": "2b28330b1351",
+  "yield": "HIGH",
+  "why": "Shift, integration, splitting are the NMR basics the outline names"
+ },
+ {
+  "front": "When is fractional distillation required rather than simple distillation?",
+  "fp": "327eeb8a75a3",
+  "yield": "ULTRA_HIGH",
+  "why": "Fractional vs simple distillation threshold is the classic distillation discrete"
+ },
+ {
+  "front": "Which purification method suits a solid product contaminated with a small amount of a similar impurity?",
+  "fp": "4c00bbf43c72",
+  "yield": "MEDIUM",
+  "why": "Method selection overlaps the recrystallization card"
+ },
+ {
+  "front": "Which single property does each exploit: distillation, recrystallization, dialysis, electrophoresis?",
+  "fp": "9639f06d9099",
+  "yield": "HIGH",
+  "why": "Property exploited by each technique is exactly the interpretation the exam wants"
+ },
+ {
+  "front": "Which technique separates enantiomers, and why do the usual methods fail?",
+  "fp": "4c99bf89cbe6",
+  "yield": "HIGH",
+  "why": "Enantiomers needing a chiral environment is a classic separation item"
+ },
+ {
+  "front": "Why are three small extractions more efficient than one large extraction using the same total solvent volume?",
+  "fp": "c6c652eff5b8",
+  "yield": "MEDIUM",
+  "why": "Multiple small extractions is secondary partition reasoning"
+ },
+ {
+  "front": "Why choose NaHCO3 over NaOH to extract a carboxylic acid from a mixture that also contains an ester?",
+  "fp": "a7aeec4f04d7",
+  "yield": "MEDIUM",
+  "why": "Ester saponification nuance on the bicarbonate choice"
+ },
+ {
+  "front": "Why does a protein purification scheme run ion exchange before size exclusion?",
+  "fp": "0fbd5eaa40a5",
+  "yield": "LOW",
+  "why": "Purification scheme ordering is procedural design detail"
+ },
+ {
+  "front": "Why does washing with brine (saturated NaCl) help during an aqueous workup?",
+  "fp": "bb11913cfe9a",
+  "yield": "LOW",
+  "why": "Brine wash is bench procedure trivia"
+ },
+ {
+  "front": "Why is a co-spot lane run on a TLC plate?",
+  "fp": "6a44a7c9c1d1",
+  "yield": "LOW",
+  "why": "Co-spot lanes are TLC procedure detail"
+ },
+ {
+  "front": "Why is the sedimentation coefficient in Svedberg units not additive?",
+  "fp": "45f46b9eb653",
+  "yield": "MEDIUM",
+  "why": "Non-additive Svedberg units is a known trap but secondary"
+ },
+ {
+  "front": "Why must a spectrophotometer be blanked before a sample's absorbance is measured?",
+  "fp": "fe9adddb1931",
+  "yield": "MEDIUM",
+  "why": "Blanking is supporting reasoning for absorbance questions"
+ }
+]

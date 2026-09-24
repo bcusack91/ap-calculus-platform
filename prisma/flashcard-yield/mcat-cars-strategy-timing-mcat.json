@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you decide when to abandon a question?",
+  "fp": "03804b9338d0",
+  "yield": "MEDIUM",
+  "why": "When to abandon is pacing advice with section-level value"
+ },
+ {
+  "front": "How should you pace within a passage?",
+  "fp": "9abff8488fb7",
+  "yield": "MEDIUM",
+  "why": "Within-passage pacing is a useful benchmark, not a tested skill"
+ },
+ {
+  "front": "Should you review flagged questions if time remains?",
+  "fp": "0c21b4011a95",
+  "yield": "MEDIUM",
+  "why": "Flag-review rule is secondary pacing advice"
+ },
+ {
+  "front": "What is the best way to build CARS timing?",
+  "fp": "a928e97c344d",
+  "yield": "LOW",
+  "why": "Practice-full-sections is generic study advice"
+ },
+ {
+  "front": "What is the CARS section structure and timing?",
+  "fp": "6c1f17bb5a52",
+  "yield": "LOW",
+  "why": "Section structure numbers are logistics"
+ },
+ {
+  "front": "What is the risk of spending 15 minutes on a hard passage?",
+  "fp": "d79c49ffd780",
+  "yield": "MEDIUM",
+  "why": "Sunk-cost warning is pacing advice with some value"
+ },
+ {
+  "front": "What should you do if you fall behind on time?",
+  "fp": "0ad9bb18e9a6",
+  "yield": "MEDIUM",
+  "why": "Triage plan is a niche fallback"
+ },
+ {
+  "front": "Why is rushing the reading counterproductive?",
+  "fp": "b0fb99c58192",
+  "yield": "HIGH",
+  "why": "Careful-read-beats-rush principle applies to every passage"
+ }
+]

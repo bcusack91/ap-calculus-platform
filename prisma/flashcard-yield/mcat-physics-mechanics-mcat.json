@@ -1,0 +1,410 @@
+[
+ {
+  "front": "A 1000 kg car accelerates from 0 to 30 m/s in 6 seconds. What is the average net force?",
+  "fp": "5d06b5091943",
+  "yield": "ULTRA_HIGH",
+  "why": "F = ma with a = dv/dt is the core mechanics calculation on every exam"
+ },
+ {
+  "front": "A 2 kg ball at 5 m/s has momentum of:",
+  "fp": "57155472d492",
+  "yield": "ULTRA_HIGH",
+  "why": "p = mv definition; tested every administration"
+ },
+ {
+  "front": "A 70 kg adult weighs about {{c1::700 N}}, so each foot carries roughly {{c1::350 N}} in quiet standing.",
+  "fp": "dfed05b49686",
+  "yield": "LOW",
+  "why": "Estimation anchor for body weight; sanity-check trivia, not a tested concept"
+ },
+ {
+  "front": "A ball on a string swings in a horizontal circle (conical pendulum). What does each component of tension do?",
+  "fp": "f3d39fd389ab",
+  "yield": "MEDIUM",
+  "why": "Conical pendulum is a niche setup; component reasoning is covered by tension/circular cards"
+ },
+ {
+  "front": "A ball rolls without slipping. What links $v$ and $\\omega$, and does static friction do work?",
+  "fp": "e47d08c3b10e",
+  "yield": "LOW",
+  "why": "Rolling without slipping and v = wr are off the AAMC outline"
+ },
+ {
+  "front": "A block hangs from two symmetric ropes. How does rope angle affect tension?",
+  "fp": "cbe6bf5f1262",
+  "yield": "HIGH",
+  "why": "Two-rope tension with angle is a classic component problem"
+ },
+ {
+  "front": "A book rests on a table. The reaction force to its weight (per the third law) acts on:",
+  "fp": "1fff0bfdb0ad",
+  "yield": "HIGH",
+  "why": "Applied third-law pair identification; frequently tested trap"
+ },
+ {
+  "front": "A cart is released from height $h$ and runs a vertical loop of radius $R$. Which two relations must be combined?",
+  "fp": "24085bce9406",
+  "yield": "MEDIUM",
+  "why": "Loop-the-loop from a height combines energy and circular motion; secondary to each alone"
+ },
+ {
+  "front": "A centrifuge rotor of radius 4 cm spins at 3000 rpm. Roughly how many g does the sample experience?",
+  "fp": "5830aa3ed178",
+  "yield": "MEDIUM",
+  "why": "Centrifuge g-force calculation; lab-relevant but a second-step passage item"
+ },
+ {
+  "front": "A diver tucks mid-somersault. What is conserved, and what happens to spin rate and rotational kinetic energy?",
+  "fp": "d8a19f8ba752",
+  "yield": "LOW",
+  "why": "Angular momentum conservation and rotational KE are off the MCAT outline"
+ },
+ {
+  "front": "A machine can reduce the required {{c1::force}} but never the required {{c1::work}}.",
+  "fp": "3d3ad796c40d",
+  "yield": "ULTRA_HIGH",
+  "why": "Machines reduce force, never work; the core simple-machine principle"
+ },
+ {
+  "front": "A patient carries a heavy suitcase in the right hand. Why does a cane in the LEFT hand reduce right hip joint force?",
+  "fp": "dbfab5c60c02",
+  "yield": "MEDIUM",
+  "why": "Hip-cane torque application; plausible biomechanics passage, second step"
+ },
+ {
+  "front": "A projectile is launched at 30° above the horizontal at 20 m/s. What is the horizontal component of its initial velocity?",
+  "fp": "c8662ddfd4ba",
+  "yield": "ULTRA_HIGH",
+  "why": "Projectile velocity component calculation shows up on essentially every exam"
+ },
+ {
+  "front": "A uniform beam rests on two supports. Where does its weight act in the torque equation?",
+  "fp": "6afec71642b1",
+  "yield": "HIGH",
+  "why": "Beam weight acts at center of mass; needed for standard torque problems"
+ },
+ {
+  "front": "An inclined plane's ideal mechanical advantage equals {{c1::incline length divided by height}}.",
+  "fp": "d30544d7d326",
+  "yield": "HIGH",
+  "why": "Inclined-plane MA = length/height; simple machines are on the outline"
+ },
+ {
+  "front": "At fixed mass and radius, a plot of centripetal force versus $v^2$ is a straight line of slope {{c1::$m/r$}}.",
+  "fp": "84d449e93365",
+  "yield": "MEDIUM",
+  "why": "Graph-reading of F_c vs v^2; useful data-interpretation skill, secondary"
+ },
+ {
+  "front": "Center of mass versus center of gravity: when do they differ?",
+  "fp": "3d06e4061f38",
+  "yield": "LOW",
+  "why": "COM vs COG distinction never matters on the MCAT (uniform g assumed)"
+ },
+ {
+  "front": "Centripetal acceleration equals {{c1::$v^2/r$}} and always points {{c1::toward the center}}.",
+  "fp": "bb3a2a9c377f",
+  "yield": "ULTRA_HIGH",
+  "why": "a_c = v^2/r toward the center; tested every year"
+ },
+ {
+  "front": "Centripetal acceleration must carry units of m/s$^2$, so of $v^2/r$ and $v/r^2$ only {{c1::$v^2/r$}} is possible.",
+  "fp": "eddecf98039c",
+  "yield": "MEDIUM",
+  "why": "Dimensional-analysis screening of a_c; units reasoning is tested but restates the v^2/r card"
+ },
+ {
+  "front": "Compare static and kinetic friction.",
+  "fp": "92c90e903d1d",
+  "yield": "ULTRA_HIGH",
+  "why": "f = uN with static > kinetic friction is tested every administration"
+ },
+ {
+  "front": "Define torque and when it is maximized.",
+  "fp": "e2273604e9e2",
+  "yield": "HIGH",
+  "why": "Torque definition and maximization; duplicates the cloze torque card so ranks below it"
+ },
+ {
+  "front": "Equilibrium requires:",
+  "fp": "707878388fe7",
+  "yield": "HIGH",
+  "why": "Net force and net torque zero for equilibrium; duplicates the cloze equilibrium card"
+ },
+ {
+  "front": "Fixed pulley versus movable pulley: what does each accomplish?",
+  "fp": "18236e6db00b",
+  "yield": "HIGH",
+  "why": "Fixed vs movable pulley MA; pulleys are a common discrete"
+ },
+ {
+  "front": "For a satellite in circular orbit, what supplies centripetal force and what follows?",
+  "fp": "3f31b7d20970",
+  "yield": "MEDIUM",
+  "why": "Orbital speed from gravity as centripetal force; secondary gravitation result"
+ },
+ {
+  "front": "For a vector at angle theta from the x-axis, $V_x =$ {{c1::$V\\cos\\theta$}} and $V_y =$ {{c1::$V\\sin\\theta$}}.",
+  "fp": "469a44655564",
+  "yield": "ULTRA_HIGH",
+  "why": "Vector components Vcos/Vsin underlie every force and projectile problem"
+ },
+ {
+  "front": "Give centripetal acceleration and force.",
+  "fp": "58ad40787446",
+  "yield": "HIGH",
+  "why": "Centripetal acceleration and force formulas; restates the cloze a_c card"
+ },
+ {
+  "front": "Give the components of gravity on an incline of angle $\\theta$.",
+  "fp": "517a03a9bfc0",
+  "yield": "ULTRA_HIGH",
+  "why": "mg sin/mg cos incline components are used on essentially every exam"
+ },
+ {
+  "front": "Gravitation: {{c1::$F = Gm_1m_2/r^2$}}, where $r$ is measured {{c1::center to center}}.",
+  "fp": "93ad0534b402",
+  "yield": "HIGH",
+  "why": "Universal gravitation inverse-square law; on outline, commonly tested"
+ },
+ {
+  "front": "How should you choose the pivot point in a static equilibrium problem?",
+  "fp": "0254f14a0545",
+  "yield": "HIGH",
+  "why": "Choosing the pivot at an unknown force is the key torque-problem technique"
+ },
+ {
+  "front": "If Earth's radius doubled with mass unchanged, what happens to surface g?",
+  "fp": "8b84ccfa0ac1",
+  "yield": "HIGH",
+  "why": "Inverse-square proportional reasoning for g; common discrete"
+ },
+ {
+  "front": "In uniform circular motion, speed is constant but {{c1::velocity and acceleration}} constantly change direction.",
+  "fp": "7d8cd2421f41",
+  "yield": "HIGH",
+  "why": "Uniform circular motion: constant speed, changing velocity and acceleration"
+ },
+ {
+  "front": "Is an astronaut orbiting Earth actually weightless?",
+  "fp": "171556b778e4",
+  "yield": "LOW",
+  "why": "Weightlessness in orbit restates the apparent-weight/free-fall card"
+ },
+ {
+  "front": "Is the outward push you feel on a spinning ride a real force?",
+  "fp": "50dfce703c1b",
+  "yield": "LOW",
+  "why": "Centrifugal force as fictitious restates the centripetal card's back"
+ },
+ {
+  "front": "Kinetic energy equals:",
+  "fp": "e3bd8fbaf7e5",
+  "yield": "ULTRA_HIGH",
+  "why": "KE = 1/2 mv^2 is tested every year"
+ },
+ {
+  "front": "List the main kinematic equations.",
+  "fp": "c0059a6a0718",
+  "yield": "ULTRA_HIGH",
+  "why": "Kinematic equations are the base of every motion calculation"
+ },
+ {
+  "front": "Mechanical advantage equals {{c1::$F_{out}/F_{in}$}}; for a lever it equals {{c1::the ratio of lever arms}}.",
+  "fp": "47ec737ab87d",
+  "yield": "ULTRA_HIGH",
+  "why": "Mechanical advantage definition and lever-arm ratio; core outline content"
+ },
+ {
+  "front": "Near a surface gravitational PE is {{c1::$mgh$}}, but at astronomical distances it is {{c1::$-GMm/r$}}.",
+  "fp": "b67ccaabfd50",
+  "yield": "HIGH",
+  "why": "mgh vs -GMm/r; mgh is core, the general form is secondary"
+ },
+ {
+  "front": "Newton's third-law pairs always act on {{c1::two different objects}} and are {{c1::equal and opposite}}.",
+  "fp": "02adf75a8132",
+  "yield": "ULTRA_HIGH",
+  "why": "Third-law pairs act on different objects; tested every administration"
+ },
+ {
+  "front": "On an incline, which weight component drives sliding and which sets the normal force?",
+  "fp": "526b1ede9a38",
+  "yield": "HIGH",
+  "why": "Incline weight components and normal force; duplicates the components card"
+ },
+ {
+  "front": "Over exactly one full revolution, average velocity is {{c1::zero}} while average speed is {{c1::$2\\pi r/T$}}.",
+  "fp": "7aa62e6579fd",
+  "yield": "HIGH",
+  "why": "Average velocity vs average speed over a loop; common displacement/distance discrete"
+ },
+ {
+  "front": "Relative centrifugal force compares {{c1::$\\omega^2 r$}} with {{c1::$g$}}, so it is reported in multiples of gravity.",
+  "fp": "87396c23dd6a",
+  "yield": "LOW",
+  "why": "Relative centrifugal force restates the centrifuge g-force card"
+ },
+ {
+  "front": "Rising onto tiptoe makes the foot a {{c1::second-class}} lever with the pivot at {{c1::the toes}} and the load at the ankle.",
+  "fp": "a2475b15b865",
+  "yield": "MEDIUM",
+  "why": "Tiptoe as second-class lever; biomechanics example of lever classes"
+ },
+ {
+  "front": "Tension in an ideal massless rope over a frictionless pulley is {{c1::the same everywhere}}.",
+  "fp": "54d40a2e29a0",
+  "yield": "HIGH",
+  "why": "Uniform tension in ideal rope is the assumption behind every pulley problem"
+ },
+ {
+  "front": "The center of mass of a two-mass system lies {{c1::closer to the heavier mass}}.",
+  "fp": "3ea0d6606a97",
+  "yield": "HIGH",
+  "why": "Center of mass formula and location; on outline, tested regularly"
+ },
+ {
+  "front": "The centripetal force does {{c1::zero}} work in uniform circular motion.",
+  "fp": "a536801b7fe9",
+  "yield": "HIGH",
+  "why": "Centripetal force does zero work; common conceptual question"
+ },
+ {
+  "front": "Torque equals {{c1::$rF\\sin\\theta$}}, with $r$ measured from {{c1::the pivot to the point where the force acts}}.",
+  "fp": "a680a31fa126",
+  "yield": "ULTRA_HIGH",
+  "why": "Torque = rF sin(theta) is used on every exam"
+ },
+ {
+  "front": "Torque has units of {{c1::N$\\cdot$m}}, so of $Fr$, $F/r$, and $Fr^2$ only {{c1::$Fr$}} can be a torque.",
+  "fp": "8ba46b04f056",
+  "yield": "MEDIUM",
+  "why": "Torque units and dimensional screening; supporting units skill"
+ },
+ {
+  "front": "Torque plotted against the angle between $r$ and $F$ peaks at {{c1::90 degrees}} and falls to zero at {{c1::0 and 180 degrees}}.",
+  "fp": "b26e8940aefd",
+  "yield": "LOW",
+  "why": "Torque vs angle sine plot restates the torque definition card"
+ },
+ {
+  "front": "Translational equilibrium means {{c1::$\\Sigma F = 0$}}; rotational equilibrium means {{c1::$\\Sigma \\tau = 0$}}.",
+  "fp": "ef2f4aee9d0f",
+  "yield": "ULTRA_HIGH",
+  "why": "Translational and rotational equilibrium conditions; tested every year"
+ },
+ {
+  "front": "True weight is {{c1::$mg$}}, while apparent weight equals {{c1::the normal force}}.",
+  "fp": "56db700a3817",
+  "yield": "ULTRA_HIGH",
+  "why": "Apparent weight = normal force in elevators is a yearly discrete"
+ },
+ {
+  "front": "Two objects have equal kinetic energy but different masses. The heavier one has:",
+  "fp": "40c01bdb3a88",
+  "yield": "HIGH",
+  "why": "p = sqrt(2mKE) relation between KE and momentum; common comparison question"
+ },
+ {
+  "front": "Two perpendicular vectors of equal magnitude $V$ give a resultant of {{c1::$V\\sqrt{2}$}}.",
+  "fp": "367459394684",
+  "yield": "HIGH",
+  "why": "Perpendicular vector addition by Pythagoras; frequent quick calculation"
+ },
+ {
+  "front": "What are the conditions for full equilibrium?",
+  "fp": "454fdcaf312b",
+  "yield": "LOW",
+  "why": "Near-restatement of the equilibrium conditions cards"
+ },
+ {
+  "front": "What condition keeps an object from tipping over?",
+  "fp": "e61138a1d484",
+  "yield": "MEDIUM",
+  "why": "Tipping condition from center of mass over base; plausible balance passage item"
+ },
+ {
+  "front": "What is terminal velocity?",
+  "fp": "cbcf0f4db615",
+  "yield": "HIGH",
+  "why": "Terminal velocity when drag equals weight; regularly tested"
+ },
+ {
+  "front": "What is the minimum speed at the top of a vertical loop to maintain contact?",
+  "fp": "75c6f8d03d94",
+  "yield": "HIGH",
+  "why": "Minimum loop speed sqrt(gr); classic circular-motion problem"
+ },
+ {
+  "front": "What sets the maximum speed for a car rounding a flat curve?",
+  "fp": "095b7c25744f",
+  "yield": "HIGH",
+  "why": "Max curve speed sqrt(u g r) from friction as centripetal force; classic"
+ },
+ {
+  "front": "When may force magnitudes be added directly instead of by components?",
+  "fp": "fd49cd6ecb71",
+  "yield": "LOW",
+  "why": "Generic advice on when to add forces directly"
+ },
+ {
+  "front": "Which lever class has the fulcrum in the middle, and which always has MA below 1?",
+  "fp": "54dcb0d260db",
+  "yield": "HIGH",
+  "why": "Lever classes and MA below 1 for third-class levers; tested in biomechanics"
+ },
+ {
+  "front": "Why can molars generate far more bite force than incisors?",
+  "fp": "19ca90d31e62",
+  "yield": "MEDIUM",
+  "why": "Jaw lever-arm reasoning for bite force; plausible passage application"
+ },
+ {
+  "front": "Why do horizontally launched and dropped objects land together?",
+  "fp": "d63767ae0903",
+  "yield": "ULTRA_HIGH",
+  "why": "Independence of horizontal and vertical motion; tested every year"
+ },
+ {
+  "front": "Why do muscles insert close to joints if that demands more force?",
+  "fp": "0380fef698aa",
+  "yield": "MEDIUM",
+  "why": "Why muscles insert near joints; speed vs force trade-off in body levers"
+ },
+ {
+  "front": "Why does a two-pan balance read the same on the Moon while a spring scale does not?",
+  "fp": "317df7ed7638",
+  "yield": "LOW",
+  "why": "Balance vs spring scale on the Moon is mass/weight trivia"
+ },
+ {
+  "front": "Why does friction on the drive tires point forward for an accelerating car?",
+  "fp": "a108beaba689",
+  "yield": "MEDIUM",
+  "why": "Static friction pushing a car forward; conceptual third-law application"
+ },
+ {
+  "front": "Why does lifting a box with a rounded back produce enormous compressive force on the lumbar spine?",
+  "fp": "41c3a67ac271",
+  "yield": "MEDIUM",
+  "why": "Lumbar torque during lifting; biomechanics passage application"
+ },
+ {
+  "front": "Why does mass distribution change how fast an object rolls down a ramp?",
+  "fp": "2377a3d70e3e",
+  "yield": "LOW",
+  "why": "Moment of inertia and rolling races are off the MCAT outline"
+ },
+ {
+  "front": "Why is a car at constant speed on a circular track not in equilibrium?",
+  "fp": "ca2a9905bddb",
+  "yield": "HIGH",
+  "why": "Constant speed on a circle is not equilibrium; common conceptual trap"
+ },
+ {
+  "front": "Why is the biceps force so much larger than the weight held in the hand?",
+  "fp": "8112e0db49f3",
+  "yield": "HIGH",
+  "why": "Biceps torque balance is the classic body-lever calculation"
+ }
+]

@@ -3,19 +3,19 @@
   "front": "A familial hypercholesterolemia allele encodes a receptor that binds LDL normally but is never internalized. What is defective?",
   "fp": "b9a33abb0c98",
   "yield": "MEDIUM",
-  "why": "LDL receptor internalization signal; classic endocytosis experiment reasoning"
+  "why": "Passage-style application of clathrin sorting-signal logic; skippable when time-pressed"
  },
  {
   "front": "A secreted protein's gene is altered to delete its N-terminal signal sequence. Where does the protein end up, and why?",
   "fp": "45494be99e06",
-  "yield": "HIGH",
-  "why": "Deleting the signal sequence leaves the protein cytosolic; classic question"
+  "yield": "ULTRA_HIGH",
+  "why": "Signal-sequence deletion/addition experiment is the classic protein-targeting question"
  },
  {
   "front": "Autophagy involves:",
   "fp": "3186ec7eb2e1",
   "yield": "HIGH",
-  "why": "Autophagy as lysosomal self-digestion; core lysosome function"
+  "why": "Autophagy as lysosomal self-digestion is standard organelle function content"
  },
  {
   "front": "Brefeldin A makes the Golgi disperse and its contents redistribute into the ER. Which step is blocked?",
@@ -27,37 +27,37 @@
   "front": "Chloroquine and ammonium chloride are weak bases that accumulate in lysosomes and {{c1::raise the internal pH}}, inactivating acid hydrolases.",
   "fp": "b035cd4da49f",
   "yield": "MEDIUM",
-  "why": "Weak bases raising lysosomal pH; reasoning on pH-dependent hydrolases"
+  "why": "Lysosomotropic weak bases: useful reasoning about pH dependence, not outline content"
  },
  {
   "front": "Compare lysosomes and peroxisomes.",
   "fp": "3b364dfdeef8",
-  "yield": "HIGH",
-  "why": "Lysosome vs peroxisome comparison; core tested distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Lysosome vs peroxisome function is tested on essentially every exam"
  },
  {
   "front": "Define heteroplasmy and the threshold effect in mitochondrial disease.",
   "fp": "000f8255a753",
   "yield": "MEDIUM",
-  "why": "Heteroplasmy and threshold effect; mitochondrial inheritance context"
+  "why": "Heteroplasmy/threshold explains mtDNA disease variability; second-step passage content"
  },
  {
   "front": "Describe ER-associated degradation (ERAD).",
   "fp": "65dc6b3d31ed",
   "yield": "MEDIUM",
-  "why": "ERAD links misfolding to the proteasome; secondary mechanism"
+  "why": "ERAD retrotranslocation is named-machinery detail beyond the outline"
  },
  {
   "front": "Distinguish constitutive from regulated secretion, and give a cell that depends on each.",
   "fp": "66cc0581fa22",
-  "yield": "MEDIUM",
-  "why": "Constitutive vs regulated secretion; second-tier distinction"
+  "yield": "HIGH",
+  "why": "Constitutive vs Ca2+-triggered regulated secretion is commonly required in physiology items"
  },
  {
   "front": "Distinguish rough vs. smooth endoplasmic reticulum.",
   "fp": "28e41e7ce5b1",
-  "yield": "HIGH",
-  "why": "Rough vs smooth ER functions; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Rough vs smooth ER functions are foundational, tested every administration"
  },
  {
   "front": "Early endosomes sit near pH {{c1::6.5}} and recycle receptors, while late endosomes acidify toward pH {{c2::5.5}} and commit cargo to lysosomes.",
@@ -68,8 +68,8 @@
  {
   "front": "Endosymbiosis evidence: mitochondria have double membranes, {{c1::70S-like ribosomes}}, circular DNA, and replicate by {{c2::fission}}.",
   "fp": "8b3a42be038a",
-  "yield": "HIGH",
-  "why": "Endosymbiosis evidence; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Endosymbiosis evidence (double membrane, circular DNA, 70S ribosomes) tested every year"
  },
  {
   "front": "Fabry disease breaks the usual inheritance pattern of lysosomal storage diseases. How, and what accumulates?",
@@ -87,13 +87,13 @@
   "front": "Golgi processing is polarized: mannose is phosphorylated in the {{c1::cis}} cisternae, while galactose and sialic acid are added in the {{c2::trans}} cisternae.",
   "fp": "41dacb45f824",
   "yield": "MEDIUM",
-  "why": "Cis-to-trans Golgi polarity; which sugar where is supporting detail"
+  "why": "Cis/trans Golgi enzyme polarity is detail beyond the sorting/modification basics"
  },
  {
   "front": "How are nucleus-encoded proteins imported into the mitochondrial matrix?",
   "fp": "55c346016521",
   "yield": "MEDIUM",
-  "why": "Mitochondrial import via cleaved presequence; TOM/TIM names are secondary"
+  "why": "TOM/TIM presequence import is named machinery the outline does not require"
  },
  {
   "front": "How does PERK reduce the ER's folding load during the unfolded protein response?",
@@ -111,7 +111,7 @@
   "front": "How does the KDEL sequence keep soluble resident proteins in the ER despite constant vesicular traffic?",
   "fp": "e11827202785",
   "yield": "MEDIUM",
-  "why": "KDEL retrieval; appears in ER-retention questions"
+  "why": "KDEL retrieval: useful trafficking logic, secondary to the main pathway"
  },
  {
   "front": "How does the Ran-GTP gradient give nuclear transport its direction?",
@@ -122,8 +122,8 @@
  {
   "front": "How is a protein marked for proteasomal degradation, and which linkage is decisive?",
   "fp": "a2d37f308865",
-  "yield": "MEDIUM",
-  "why": "Ubiquitin E1/E2/E3 tagging for the proteasome; K48 detail secondary"
+  "yield": "HIGH",
+  "why": "Ubiquitin-E3-proteasome tagging appears often as discrete or passage step"
  },
  {
   "front": "Human mtDNA is a {{c1::circular}} genome encoding {{c2::13}} proteins plus 22 tRNAs and 2 rRNAs.",
@@ -140,26 +140,26 @@
  {
   "front": "In I-cell disease (mucolipidosis II), why do lysosomal enzymes appear in the blood?",
   "fp": "1c7ed647242f",
-  "yield": "MEDIUM",
-  "why": "I-cell disease is the classic proof of M6P sorting; passage-style reasoning"
+  "yield": "HIGH",
+  "why": "I-cell disease is the canonical test of mannose-6-phosphate sorting logic"
  },
  {
   "front": "Lysosomal hydrolases are tagged with {{c1::mannose-6-phosphate}} in the cis-Golgi and sorted by M6P receptors in the {{c2::trans}}-Golgi network.",
   "fp": "756b59a4dfa1",
   "yield": "HIGH",
-  "why": "Mannose-6-phosphate lysosomal sorting tag; tested"
+  "why": "M6P tagging of lysosomal hydrolases is commonly tested trafficking content"
  },
  {
   "front": "Match mitochondrial compartments to contents: matrix vs intermembrane space.",
   "fp": "a7b9bea026d3",
-  "yield": "HIGH",
-  "why": "Matrix vs intermembrane space contents; core mitochondrial anatomy"
+  "yield": "ULTRA_HIGH",
+  "why": "Matrix vs intermembrane space contents underpin every ETC/oxphos question"
  },
  {
   "front": "N-linked glycosylation begins in the {{c1::ER}} with transfer of a preassembled oligosaccharide onto {{c2::asparagine}}; O-linked sugars are added in the Golgi.",
   "fp": "3beb9923fbc4",
   "yield": "HIGH",
-  "why": "N-linked in ER on Asn vs O-linked in Golgi; high-frequency distinction"
+  "why": "N-linked in ER vs O-linked in Golgi is a common glycosylation discrete"
  },
  {
   "front": "Name two synthetic (anabolic) contributions of peroxisomes.",
@@ -170,26 +170,26 @@
  {
   "front": "Nuclear localization signals are short stretches rich in {{c1::basic residues (Lys/Arg)}}, are never cleaved, and are read by {{c2::importins}}.",
   "fp": "91314c7e40b1",
-  "yield": "MEDIUM",
-  "why": "NLS features and importins; supports the nuclear pore card"
+  "yield": "HIGH",
+  "why": "NLS basic residues read by importins; standard nuclear-transport fact"
  },
  {
   "front": "Nuclear pore complexes permit passive diffusion only below roughly {{c1::40 kDa}}; larger cargo requires signal-mediated transport.",
   "fp": "28fe2ae0cdec",
   "yield": "MEDIUM",
-  "why": "Size cutoff for passive pore diffusion; supporting detail"
+  "why": "Pore size cutoff is a number a passage would supply"
  },
  {
   "front": "Nuclear pores regulate:",
   "fp": "a04427a71b33",
-  "yield": "HIGH",
-  "why": "Nuclear pore function; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Nuclear pore regulation of RNA/protein traffic is a foundational nucleus fact"
  },
  {
   "front": "Palade pulse-labeled pancreatic acinar cells with radioactive amino acids. Where did label appear over time, and what did that prove?",
   "fp": "8d3bedc627c8",
-  "yield": "MEDIUM",
-  "why": "Pulse-chase logic of the secretory pathway; classic passage design"
+  "yield": "HIGH",
+  "why": "Palade pulse-chase is the classic experimental-design question on the secretory pathway"
  },
  {
   "front": "Peroxisomal matrix proteins carry the C-terminal tripeptide {{c1::Ser-Lys-Leu (SKL)}} and are imported {{c2::already folded}}.",
@@ -200,8 +200,8 @@
  {
   "front": "Peroxisomes perform {{c1::beta-oxidation of very-long-chain fatty acids}} and destroy the resulting H2O2 with {{c2::catalase}}.",
   "fp": "a5da76a9a640",
-  "yield": "MEDIUM",
-  "why": "Peroxisome VLCFA oxidation and catalase; supports the compare card"
+  "yield": "HIGH",
+  "why": "Peroxisome VLCFA oxidation and catalase are named in the topic's tested content"
  },
  {
   "front": "Pompe disease traps glycogen inside {{c1::lysosomes}} because acid maltase is missing, while McArdle disease blocks {{c2::cytosolic}} glycogen breakdown.",
@@ -218,20 +218,20 @@
  {
   "front": "Proteins destined for secretion are synthesized on the {{c1::rough ER}}, then modified and sorted in the {{c2::Golgi apparatus}}.",
   "fp": "d5018d6804cd",
-  "yield": "MEDIUM",
-  "why": "Cloze restatement of the secretory pathway trace card"
+  "yield": "HIGH",
+  "why": "Secretory pathway order; restates the ultra-high trace card"
  },
  {
   "front": "Receptor-mediated endocytosis is characterized by:",
   "fp": "75f0075992b7",
-  "yield": "HIGH",
-  "why": "Receptor-mediated endocytosis via clathrin pits; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Receptor-mediated endocytosis via clathrin pits is tested every year"
  },
  {
   "front": "State the general logic of a lysosomal storage disease, using Tay-Sachs as the example.",
   "fp": "a1c8682d9ebd",
   "yield": "MEDIUM",
-  "why": "General lysosomal storage logic with Tay-Sachs; illustrates tested mechanism"
+  "why": "Lysosomal storage logic with Tay-Sachs; passage would supply the enzyme"
  },
  {
   "front": "Tay-Sachs and Niemann-Pick both show a cherry-red macula, but only {{c1::Niemann-Pick}} adds hepatosplenomegaly.",
@@ -242,32 +242,32 @@
  {
   "front": "The {{c1::signal recognition particle (SRP)}} binds a nascent signal sequence, pauses translation, and docks the ribosome at the ER's {{c2::SRP receptor}}.",
   "fp": "9cdd1d15cabe",
-  "yield": "HIGH",
-  "why": "SRP mechanism; core of co-translational targeting"
+  "yield": "ULTRA_HIGH",
+  "why": "SRP pausing translation and docking at the ER is a core targeting mechanism"
  },
  {
   "front": "The GTPase {{c1::dynamin}} assembles as a collar around the neck of a clathrin-coated pit and pinches the vesicle free of the membrane.",
   "fp": "3b56ee72dec9",
   "yield": "MEDIUM",
-  "why": "Dynamin scission; supporting detail on endocytosis"
+  "why": "Dynamin scission is named machinery beyond the outline"
  },
  {
   "front": "The lysosomal lumen is held at pH {{c1::4.5-5.0}} by the {{c2::V-type H+ ATPase}}.",
   "fp": "d83000f30c53",
   "yield": "HIGH",
-  "why": "Lysosomal pH and V-ATPase; core"
+  "why": "Lysosomal pH and V-ATPase acidification are commonly tested"
  },
  {
   "front": "The nucleolus is the site of:",
   "fp": "e706ef855eeb",
-  "yield": "HIGH",
-  "why": "Nucleolus function; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Nucleolus as site of rRNA synthesis/ribosome assembly is a perennial discrete"
  },
  {
   "front": "The proteasome and the lysosome both destroy proteins. Give three ways they differ.",
   "fp": "db1393631cc1",
   "yield": "HIGH",
-  "why": "Proteasome vs lysosome degradation; commonly tested distinction"
+  "why": "Proteasome vs lysosome contrast is a common protein-degradation question"
  },
  {
   "front": "The unfolded protein response is initiated by three ER membrane sensors: {{c1::PERK}}, {{c2::IRE1}}, and ATF6.",
@@ -278,32 +278,32 @@
  {
   "front": "Trace a secreted protein from synthesis to release (which organelles, in order).",
   "fp": "0d701004f5b0",
-  "yield": "HIGH",
-  "why": "Secretory pathway in order; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Tracing a secreted protein through organelles is tested on essentially every exam"
  },
  {
   "front": "Vesicle coats: {{c1::COPII}} carries ER-to-Golgi cargo, {{c2::COPI}} runs Golgi-to-ER retrograde, and clathrin serves endocytosis plus trans-Golgi exit.",
   "fp": "153ef7ea0419",
-  "yield": "MEDIUM",
-  "why": "COPII/COPI/clathrin coats; second-tier trafficking detail"
+  "yield": "HIGH",
+  "why": "COPII/COPI/clathrin coat directions are commonly used in trafficking passages"
  },
  {
   "front": "Vesicle fusion requires a v-SNARE pairing with a t-SNARE; {{c1::botulinum and tetanus}} toxins are proteases that cleave these SNARE proteins.",
   "fp": "cd4cf6d70a19",
-  "yield": "MEDIUM",
-  "why": "SNARE fusion and botulinum/tetanus; common passage context"
+  "yield": "HIGH",
+  "why": "SNARE fusion and botulinum/tetanus cleavage are common passage-level content"
  },
  {
   "front": "What determines whether a ribosome ends up free in the cytosol or bound to the ER?",
   "fp": "aa5e1ed66b1f",
-  "yield": "HIGH",
-  "why": "Signal sequence decides free vs ER-bound ribosome; classic"
+  "yield": "ULTRA_HIGH",
+  "why": "Free vs bound ribosomes decided by signal sequence is foundational"
  },
  {
   "front": "What distinguishes prokaryotic from eukaryotic cells?",
   "fp": "7e12965e7bfe",
-  "yield": "HIGH",
-  "why": "Prokaryote vs eukaryote cell features; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Prokaryote vs eukaryote distinctions are tested every administration"
  },
  {
   "front": "What do mitochondrial fusion and fission each accomplish?",
@@ -314,8 +314,8 @@
  {
   "front": "What does the Golgi apparatus do?",
   "fp": "5fbc1370ec59",
-  "yield": "HIGH",
-  "why": "Golgi function; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Golgi modification, sorting and packaging is a core organelle function"
  },
  {
   "front": "What does the nucleolus do, and what accumulates there?",
@@ -333,7 +333,7 @@
   "front": "What happens to the ER signal sequence once translocation begins, and how do membrane proteins differ?",
   "fp": "e086b65315be",
   "yield": "MEDIUM",
-  "why": "Signal peptidase cleavage vs signal-anchor; supporting detail"
+  "why": "Signal peptidase cleavage and signal-anchor detail; second-tier targeting content"
  },
  {
   "front": "What is BiP's dual role in the endoplasmic reticulum?",
@@ -345,49 +345,49 @@
   "front": "What is macroautophagy, and how is it switched on by starvation?",
   "fp": "e3ce267a5bc8",
   "yield": "MEDIUM",
-  "why": "Autophagy mechanism and mTOR switch; supports the plainer autophagy card"
+  "why": "Autophagosome/mTORC1/ULK1 machinery is beyond the autophagy basics"
  },
  {
   "front": "What is the function of the mitochondrion and why is it unusual?",
   "fp": "6385d65631b5",
-  "yield": "HIGH",
-  "why": "Mitochondrion function and unusual features; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Mitochondrial function plus its own DNA/maternal inheritance is tested every year"
  },
  {
   "front": "What is the role of the cytoskeleton components?",
   "fp": "05aeb72c54ff",
-  "yield": "HIGH",
-  "why": "Cytoskeleton components; core (belongs to cytoskeleton topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Cytoskeleton component roles are tested on essentially every exam"
  },
  {
   "front": "Which organelle detoxifies drugs in liver cells?",
   "fp": "174f00c8a6b8",
-  "yield": "MEDIUM",
-  "why": "Smooth ER detox; likely discrete but restates the RER/SER card"
+  "yield": "HIGH",
+  "why": "Smooth ER detoxification via P450 is a common discrete"
  },
  {
   "front": "Which organelle is the site of protein synthesis?",
   "fp": "628225aeff4e",
-  "yield": "HIGH",
-  "why": "Ribosome as site of protein synthesis; basic core"
+  "yield": "ULTRA_HIGH",
+  "why": "Ribosome as site of protein synthesis, free vs ER-bound, is foundational"
  },
  {
   "front": "Which organelles import their proteins post-translationally, and what does mitochondrial import specifically require in the cytosol?",
   "fp": "2b05c42e4c7c",
-  "yield": "MEDIUM",
-  "why": "Post-translational vs co-translational import; tested distinction"
+  "yield": "HIGH",
+  "why": "Post-translational import into nucleus/mitochondria/peroxisomes is a common discrete"
  },
  {
   "front": "Why are hepatocytes and adrenal cortex cells especially rich in smooth ER?",
   "fp": "ef70e48a8032",
   "yield": "MEDIUM",
-  "why": "SER-rich cells reasoning (steroids, detox); supporting detail"
+  "why": "Tissue-specific SER abundance restates the smooth ER function card"
  },
  {
   "front": "Why are mitochondrial DNA diseases maternally inherited?",
   "fp": "9539f3758df8",
-  "yield": "HIGH",
-  "why": "Maternal mtDNA inheritance; tested in genetics"
+  "yield": "ULTRA_HIGH",
+  "why": "Maternal inheritance of mtDNA is tested every year in genetics and cell biology"
  },
  {
   "front": "Why does phenobarbital treatment enlarge hepatocyte smooth ER, and what is the clinical consequence?",
@@ -405,6 +405,6 @@
   "front": "Why is a small lysosomal leak not immediately catastrophic for the cytosol?",
   "fp": "357af4e3f36d",
   "yield": "MEDIUM",
-  "why": "pH-optimum reasoning for lysosomal leaks; useful reasoning card"
+  "why": "pH-optimum reasoning about lysosomal leak; supporting logic for the pH card"
  }
 ]

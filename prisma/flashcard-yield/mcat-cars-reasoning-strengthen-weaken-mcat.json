@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you handle \"EXCEPT\" versions of these questions?",
+  "fp": "887086c2c1cd",
+  "yield": "MEDIUM",
+  "why": "EXCEPT variants are a niche question format"
+ },
+ {
+  "front": "How does attacking the sample weaken a study-based argument?",
+  "fp": "0bb9114b7fee",
+  "yield": "HIGH",
+  "why": "Attacking the sample is a directly tested research-reasoning move"
+ },
+ {
+  "front": "How should you treat the new information introduced in a strengthen or weaken answer choice?",
+  "fp": "8263262f0c78",
+  "yield": "HIGH",
+  "why": "Accept-new-info-as-true is required on every strengthen/weaken question"
+ },
+ {
+  "front": "What does a \"strengthen\" answer typically do?",
+  "fp": "306eec667054",
+  "yield": "HIGH",
+  "why": "What a strengthen answer does; asked on many passages"
+ },
+ {
+  "front": "What does a \"weaken\" answer typically do?",
+  "fp": "5a659f56e883",
+  "yield": "ULTRA_HIGH",
+  "why": "Weaken-by-undermining-assumption is asked on nearly every passage"
+ },
+ {
+  "front": "What is the best way to weaken a causal claim?",
+  "fp": "ce599fadc751",
+  "yield": "ULTRA_HIGH",
+  "why": "Confounder/reverse causation is the tested way to weaken causal claims every year"
+ },
+ {
+  "front": "What is the difference between weakening and contradicting?",
+  "fp": "fd12c24b78da",
+  "yield": "MEDIUM",
+  "why": "Weaken vs contradict is a secondary distinction"
+ },
+ {
+  "front": "Why are irrelevant answers common traps here?",
+  "fp": "7fd79f4af60b",
+  "yield": "MEDIUM",
+  "why": "Irrelevant-choice trap is a supporting elimination note"
+ }
+]

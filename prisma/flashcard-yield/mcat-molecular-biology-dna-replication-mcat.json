@@ -20,8 +20,8 @@
  {
   "front": "A retrovirus such as HIV uses which enzyme?",
   "fp": "f99746195546",
-  "yield": "MEDIUM",
-  "why": "MISFILED: retrovirus reverse transcriptase belongs to viruses (2B) [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "Retrovirus RNA->DNA via reverse transcriptase is tested often; misfiled here but not served elsewhere"
  },
  {
   "front": "An E. coli fork moves about {{c1::1000}} nucleotides per second, while a eukaryotic fork manages only about {{c2::50}}.",
@@ -33,13 +33,13 @@
   "front": "Assign the eukaryotic polymerases: who primes, who copies each strand, and who replicates mitochondrial DNA?",
   "fp": "cc23f74b8a3e",
   "yield": "MEDIUM",
-  "why": "Eukaryotic pol alpha/delta/epsilon/gamma roles: secondary but prep-standard"
+  "why": "Eukaryotic pol alpha/delta/epsilon/gamma assignments: prep-standard named machinery, skippable"
  },
  {
   "front": "Bacterial conjugation transfers DNA via:",
   "fp": "d08d2d450de9",
-  "yield": "MEDIUM",
-  "why": "MISFILED: bacterial conjugation is microbiology genetics (2B/1C) [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "Conjugation vs transduction vs transformation is a common discrete; misfiled but only served here"
  },
  {
   "front": "Base selection alone gives an error rate near $10^{-5}$; the {{c1::3'-to-5' proofreading exonuclease}} improves it to about $10^{-7}$.",
@@ -50,38 +50,38 @@
  {
   "front": "Briefly pulse-labeling replicating E. coli yields mostly short DNA pieces, and in a ligase mutant they accumulate. What did this show?",
   "fp": "988e0600d057",
-  "yield": "MEDIUM",
-  "why": "Pulse-label/ligase-mutant experiment: MCAT-style experimental reasoning"
+  "yield": "HIGH",
+  "why": "Pulse-label/ligase-mutant proof of Okazaki fragments: classic MCAT experimental-reasoning item"
  },
  {
   "front": "Cancer cells characteristically show:",
   "fp": "e21a78c7706f",
-  "yield": "MEDIUM",
-  "why": "MISFILED: cancer hallmarks belong to cell cycle (2C) [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "Loss of contact inhibition/checkpoint control and telomerase reactivation are commonly tested cancer facts"
  },
  {
   "front": "Compare the exonuclease activities of E. coli Pol I and Pol III.",
   "fp": "5c3682fd7ed5",
   "yield": "MEDIUM",
-  "why": "Pol I 5'->3' exo vs Pol III: supporting detail on prokaryotic polymerases"
+  "why": "Pol I vs Pol III exonuclease comparison: named-machinery detail (owner: MEDIUM)"
  },
  {
   "front": "Contrast the leading and lagging strands.",
   "fp": "e71de66ddefe",
-  "yield": "HIGH",
-  "why": "Leading vs lagging strand: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Leading vs lagging strand is the foundational replication distinction, tested every year"
  },
  {
   "front": "Define polymerase processivity.",
   "fp": "e1ebe92af973",
   "yield": "MEDIUM",
-  "why": "Processivity definition: useful for clamp/polymerase passages"
+  "why": "Processivity definition: useful vocabulary for clamp passages, rarely the point"
  },
  {
   "front": "DNA polymerase synthesizes {{c1::5' to 3'}}, and the lagging strand is built as {{c2::Okazaki fragments}}.",
   "fp": "c5c7325ec5c5",
-  "yield": "HIGH",
-  "why": "5'->3' synthesis and Okazaki fragments: core"
+  "yield": "ULTRA_HIGH",
+  "why": "5'->3' synthesis forcing Okazaki fragments: the mechanism every replication question rests on"
  },
  {
   "front": "E. coli copies 4.6 million base pairs in about 40 minutes using two forks. Use those numbers to show why humans need many origins.",
@@ -99,13 +99,13 @@
   "front": "E. coli Pol {{c1::III}} is the replicative polymerase; Pol I is reserved for primer removal and gap filling.",
   "fp": "5b624835297a",
   "yield": "HIGH",
-  "why": "Pol III replicates, Pol I removes primers: standard prokaryotic distinction"
+  "why": "Pol III replicates, Pol I removes primers: standard prokaryotic polymerase distinction"
  },
  {
   "front": "E. coli replication proceeds {{c1::bidirectionally from a single origin}}, producing the classic theta intermediate.",
   "fp": "b1f5581fc7e1",
-  "yield": "MEDIUM",
-  "why": "Bidirectional from single origin / theta: secondary prokaryotic detail"
+  "yield": "HIGH",
+  "why": "Bidirectional replication from a single prokaryotic origin is commonly tested; theta name is secondary"
  },
  {
   "front": "Each cycle, the lagging polymerase must {{c1::release its clamp and re-engage at a fresh primer}}, while the leading polymerase stays engaged.",
@@ -123,7 +123,7 @@
   "front": "HIV reverse transcriptase has no proofreading. Connect that fact to why HIV is treated with three drugs simultaneously.",
   "fp": "8fa883348744",
   "yield": "MEDIUM",
-  "why": "HIV RT lacks proofreading -> combination therapy: clinical flavor on tested mechanism"
+  "why": "HIV RT lacks proofreading -> combination therapy: clinical flavor on a mechanism covered by the proofreading card"
  },
  {
   "front": "How does a fork get past a damaged template base it cannot copy?",
@@ -140,14 +140,14 @@
  {
   "front": "How does DNA polymerase proofread?",
   "fp": "674918585ed4",
-  "yield": "HIGH",
-  "why": "3'->5' exonuclease proofreading: core"
+  "yield": "ULTRA_HIGH",
+  "why": "3'->5' exonuclease proofreading is asked on essentially every administration"
  },
  {
   "front": "How does E. coli remove RNA primers and replace them with DNA?",
   "fp": "5cd1b3fd422c",
   "yield": "MEDIUM",
-  "why": "Pol I nick translation removes primers: supporting detail"
+  "why": "Pol I nick translation mechanics: supporting detail on the Pol I primer-removal card"
  },
  {
   "front": "How does replication terminate in E. coli?",
@@ -176,14 +176,14 @@
  {
   "front": "In Meselson-Stahl, after one round in light medium all DNA banded at {{c1::intermediate}} density, which ruled out {{c2::conservative}} replication.",
   "fp": "f72e05918e60",
-  "yield": "HIGH",
-  "why": "Meselson-Stahl first generation rules out conservative: classic experiment"
+  "yield": "ULTRA_HIGH",
+  "why": "Meselson-Stahl one-generation hybrid band is the classic experiment behind semiconservative replication"
  },
  {
   "front": "In which direction does DNA polymerase synthesize?",
   "fp": "9d1704cf97c5",
-  "yield": "HIGH",
-  "why": "Polymerase synthesizes only 5'->3': core"
+  "yield": "ULTRA_HIGH",
+  "why": "Polymerase synthesizes only 5'->3': foundational, tested every year"
  },
  {
   "front": "Interlinked daughter chromosomes (catenanes) in bacteria are unlinked by {{c1::topoisomerase IV}}.",
@@ -195,13 +195,13 @@
   "front": "List the core components of the E. coli replisome.",
   "fp": "f31909ab25a8",
   "yield": "MEDIUM",
-  "why": "Replisome component list: names the enzymes the exam expects"
+  "why": "Replisome component list: named machinery (owner: MEDIUM)"
  },
  {
   "front": "Mitochondrial DNA is copied by DNA polymerase {{c1::gamma}}, and its replication is {{c2::not}} restricted to S phase.",
   "fp": "6c7992964e3b",
   "yield": "MEDIUM",
-  "why": "mtDNA replication outside S phase is plausible passage context; Pol gamma trivia"
+  "why": "mtDNA replication outside S phase is plausible passage context; Pol gamma is trivia"
  },
  {
   "front": "Name a chemotherapy agent that poisons human topoisomerase II, and the shared logic of topo poisons.",
@@ -212,8 +212,8 @@
  {
   "front": "Name the major DNA repair mechanisms.",
   "fp": "36ebce03d004",
-  "yield": "HIGH",
-  "why": "Mismatch, NER, BER: repair mechanisms named on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Mismatch, NER, BER are the outline's named repair mechanisms and appear essentially every exam"
  },
  {
   "front": "Name three requirements of replication in vivo that PCR eliminates, and what substitutes for each.",
@@ -224,8 +224,8 @@
  {
   "front": "Okazaki fragments are joined by:",
   "fp": "eb7f4f32be88",
-  "yield": "HIGH",
-  "why": "Okazaki fragments joined by ligase: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Ligase joins Okazaki fragments: perennial discrete"
  },
  {
   "front": "Okazaki fragments run about {{c1::1000-2000}} nucleotides in bacteria but only about {{c2::100-200}} in eukaryotes, roughly one nucleosome's worth.",
@@ -236,8 +236,8 @@
  {
   "front": "Order the enzymatic events that complete one lagging-strand fragment after the fork passes.",
   "fp": "585d990c0c71",
-  "yield": "HIGH",
-  "why": "Order of lagging-strand events (prime, extend, remove, fill, ligate): core"
+  "yield": "ULTRA_HIGH",
+  "why": "Prime, extend, remove primer, fill, ligate: the lagging-strand sequence is asked year after year"
  },
  {
   "front": "Origin licensing: {{c1::ORC}} marks eukaryotic origins, and MCM helicases are loaded in G1 — but firing waits until S phase.",
@@ -255,13 +255,13 @@
   "front": "The energy for each phosphodiester bond in replication comes from hydrolyzing the incoming {{c1::dNTP}} itself, releasing pyrophosphate.",
   "fp": "46a792ab0cd7",
   "yield": "HIGH",
-  "why": "Energy from dNTP triphosphate, PPi release: tested biochem principle"
+  "why": "Energy from the incoming dNTP with PPi release: commonly tested biochem principle"
  },
  {
   "front": "The eukaryotic sliding clamp {{c1::PCNA}} encircles DNA and tethers the polymerase, massively boosting processivity.",
   "fp": "c0608d7bb3a4",
   "yield": "MEDIUM",
-  "why": "PCNA sliding clamp boosts processivity: prep-standard supporting detail"
+  "why": "PCNA sliding clamp: named replisome machinery (owner: MEDIUM)"
  },
  {
   "front": "The lagging-strand template loops back through the replisome — the {{c1::trombone}} model — so both polymerases travel with one fork.",
@@ -272,8 +272,8 @@
  {
   "front": "To label DNA specifically use radioactive {{c1::thymidine}}; to label RNA specifically use {{c2::uridine}}.",
   "fp": "cb840c6c8a87",
-  "yield": "MEDIUM",
-  "why": "Thymidine vs uridine labeling: classic experimental-design reasoning"
+  "yield": "HIGH",
+  "why": "Thymidine labels DNA, uridine labels RNA: classic experimental-design item in passages"
  },
  {
   "front": "Tumors with a mutated proofreading exonuclease domain of POLE carry enormous mutation burdens. Why, and what is the therapeutic upshot?",
@@ -284,20 +284,20 @@
  {
   "front": "Type {{c1::I}} topoisomerases nick one strand and relax supercoils without ATP; type II enzymes cut both strands and require ATP.",
   "fp": "17bb8d8a9ece",
-  "yield": "MEDIUM",
-  "why": "Type I vs II topoisomerase: supporting detail on tested topoisomerase role"
+  "yield": "HIGH",
+  "why": "Type I (no ATP, one strand) vs type II (ATP, both strands) topoisomerase is a common discrete"
  },
  {
   "front": "What are telomeres and telomerase?",
   "fp": "5472823ea83a",
-  "yield": "HIGH",
-  "why": "Telomeres and telomerase: named on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Telomeres shorten, telomerase rebuilds in stem/cancer cells: on every exam"
  },
  {
   "front": "What do helicase, primase, and ligase each do?",
   "fp": "639645631cec",
-  "yield": "HIGH",
-  "why": "Helicase/primase/ligase roles: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Helicase/primase/ligase roles are foundational and tested every year"
  },
  {
   "front": "What do SSB (bacteria) and RPA (eukaryotes) do at the fork?",
@@ -315,49 +315,49 @@
   "front": "What happens if DNA ligase fails to seal lagging-strand nicks?",
   "fp": "2be0d54c2e1e",
   "yield": "MEDIUM",
-  "why": "Unsealed nicks -> double-strand breaks: plausible passage reasoning"
+  "why": "Unsealed nicks -> double-strand breaks: plausible passage reasoning, skippable"
  },
  {
   "front": "What happens to nucleosomes when a replication fork passes, and why does that matter for epigenetics?",
   "fp": "d7ee8a9a4b4d",
   "yield": "MEDIUM",
-  "why": "Histone inheritance at the fork: epigenetics angle is plausible context"
+  "why": "Histone inheritance at the fork: epigenetics context, rarely a point"
  },
  {
   "front": "What is DNA gyrase, and which antibiotic class targets it?",
   "fp": "26bde11f238d",
-  "yield": "MEDIUM",
-  "why": "Gyrase negative supercoiling + fluoroquinolones: common passage tie-in"
+  "yield": "HIGH",
+  "why": "Gyrase negative supercoiling and fluoroquinolone targeting: common passage tie-in"
  },
  {
   "front": "What is the role of single-strand binding proteins and topoisomerase?",
   "fp": "04e90106a271",
-  "yield": "HIGH",
-  "why": "SSB and topoisomerase roles at the fork: core"
+  "yield": "ULTRA_HIGH",
+  "why": "SSB and topoisomerase roles at the fork: foundational, tested every year"
  },
  {
   "front": "What prevents any eukaryotic origin from firing twice in one cell cycle?",
   "fp": "e0a8e9c6c69a",
   "yield": "MEDIUM",
-  "why": "Once-per-cycle origin firing via CDK: ties to tested cell-cycle control"
+  "why": "Once-per-cycle origin firing via CDK: second-step cell-cycle reasoning"
  },
  {
   "front": "What sequence features mark the E. coli origin oriC?",
   "fp": "5928b76058be",
   "yield": "MEDIUM",
-  "why": "AT-rich origin melts easily: reasoning is askable; bp/DnaA-box specifics are not"
+  "why": "oriC sequence features: named-origin detail (owner: MEDIUM); AT-rich melting is the askable bit"
  },
  {
   "front": "Which enzyme relieves supercoiling ahead of the replication fork?",
   "fp": "ad2b5222f633",
   "yield": "HIGH",
-  "why": "Topoisomerase relieves supercoiling ahead of the fork: core"
+  "why": "Topoisomerase relieves supercoiling ahead of the fork; restates part of the SSB/topoisomerase card"
  },
  {
   "front": "Which phase of the cell cycle is characterized by DNA replication?",
   "fp": "9773381064f8",
-  "yield": "HIGH",
-  "why": "Replication occurs in S phase: basic tested fact"
+  "yield": "ULTRA_HIGH",
+  "why": "DNA replication in S phase: basic fact asked on every exam"
  },
  {
   "front": "Why are Fanconi anemia cells hypersensitive to cisplatin and mitomycin C?",
@@ -374,37 +374,37 @@
  {
   "front": "Why did the second generation of Meselson-Stahl rule out dispersive replication?",
   "fp": "70efb5b6501c",
-  "yield": "MEDIUM",
-  "why": "Meselson-Stahl second generation vs dispersive: second-step of the classic experiment"
+  "yield": "HIGH",
+  "why": "Meselson-Stahl second generation ruling out dispersive: commonly tested follow-up"
  },
  {
   "front": "Why do eukaryotic chromosomes need thousands of origins when E. coli manages with one?",
   "fp": "4feb627946e0",
   "yield": "HIGH",
-  "why": "Multiple eukaryotic origins vs one prokaryotic: standard distinction"
+  "why": "Many eukaryotic origins vs one prokaryotic origin: standard distinction"
  },
  {
   "front": "Why does helicase activity at a replication fork demand a topoisomerase working ahead of it?",
   "fp": "a26dc0d8ce5d",
-  "yield": "MEDIUM",
-  "why": "Why unwinding needs topoisomerase: supporting reasoning"
+  "yield": "HIGH",
+  "why": "Positive supercoils build ahead of the fork: the reasoning behind why topoisomerase is needed"
  },
  {
   "front": "Why does the proofreading exonuclease work 3'-to-5' specifically?",
   "fp": "7c8931616ad7",
   "yield": "MEDIUM",
-  "why": "Why proofreading is 3'->5': supporting reasoning on the core card"
+  "why": "Why proofreading runs 3'->5': supporting reasoning on the core proofreading card"
  },
  {
   "front": "Why is DNA replication called semiconservative?",
   "fp": "2a7a35567a5d",
-  "yield": "HIGH",
-  "why": "Semiconservative definition: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Semiconservative definition is foundational and appears every year"
  },
  {
   "front": "Why is primase needed at all — what can it do that DNA polymerases cannot?",
   "fp": "9ad6ea90392f",
-  "yield": "HIGH",
-  "why": "Primase initiates de novo; polymerases only extend: high-frequency"
+  "yield": "ULTRA_HIGH",
+  "why": "Polymerases only extend a 3'-OH; primase starts de novo: tested every year"
  }
 ]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How does predicting an answer help elimination?",
+  "fp": "61494b6fe5f7",
+  "yield": "HIGH",
+  "why": "Predict-then-match is a core tactic on most questions"
+ },
+ {
+  "front": "How should you treat answers containing \"only\" or \"solely\"?",
+  "fp": "f319cd9feecd",
+  "yield": "HIGH",
+  "why": "Exclusivity words flag the too-extreme trap; frequent"
+ },
+ {
+  "front": "Is the longest or most detailed answer usually right?",
+  "fp": "a830e5e6f754",
+  "yield": "LOW",
+  "why": "Answer-length myth is generic test-taking advice"
+ },
+ {
+  "front": "Name the four common CARS wrong-answer types.",
+  "fp": "419ac65b0498",
+  "yield": "ULTRA_HIGH",
+  "why": "The four wrong-answer types are the elimination framework used on every question"
+ },
+ {
+  "front": "What is the fastest way to eliminate a CARS answer?",
+  "fp": "a2efc123be66",
+  "yield": "HIGH",
+  "why": "Scope check is the fastest and most common elimination"
+ },
+ {
+  "front": "What is the value of process of elimination over selection?",
+  "fp": "8969a62c3762",
+  "yield": "HIGH",
+  "why": "Least-wrong mindset is used on nearly every CARS question"
+ },
+ {
+  "front": "What should you do when all four choices seem wrong?",
+  "fp": "7713e399992f",
+  "yield": "MEDIUM",
+  "why": "All-wrong recovery is a niche situation"
+ },
+ {
+  "front": "Why are \"half-right\" answers dangerous?",
+  "fp": "56042d1dc225",
+  "yield": "HIGH",
+  "why": "Half-right/half-wrong is one of the most common trap types"
+ }
+]

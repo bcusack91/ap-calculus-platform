@@ -1,0 +1,386 @@
+[
+ {
+  "front": "$R_1$ and $R_2$ are in series across a battery and a capacitor is wired in parallel with $R_2$. What charge does it hold at steady state?",
+  "fp": "a46786f0542f",
+  "yield": "HIGH",
+  "why": "Capacitor in parallel with a divider resistor at steady state is a common circuit puzzle"
+ },
+ {
+  "front": "A $12$ V battery, a $2$ k$\\Omega$ resistor, and an uncharged $10\\ \\mu$F capacitor sit in series. What is the current the instant the switch closes?",
+  "fp": "0161c3178fed",
+  "yield": "HIGH",
+  "why": "Initial RC current calculation is a standard discrete"
+ },
+ {
+  "front": "A $6\\,\\Omega$ and a $3\\,\\Omega$ resistor are connected in parallel. What is the equivalent resistance?",
+  "fp": "59abc3835491",
+  "yield": "HIGH",
+  "why": "Product-over-sum parallel calculation is asked constantly"
+ },
+ {
+  "front": "A $60$ W and a $100$ W bulb rated for the same line voltage are wired in series. Which is brighter?",
+  "fp": "ae8f23df2750",
+  "yield": "ULTRA_HIGH",
+  "why": "Series bulb brightness by rating is a classic every-year reasoning question"
+ },
+ {
+  "front": "A 12 V battery with internal resistance 1.0 Ω is connected to an external 5.0 Ω resistor. What is the terminal voltage?",
+  "fp": "77ab86d7ca45",
+  "yield": "ULTRA_HIGH",
+  "why": "Terminal voltage V = emf - Ir is a calculation equation"
+ },
+ {
+  "front": "A battery of emf $12$ V and internal resistance $0.5\\,\\Omega$ delivers $4$ A. What is its terminal voltage?",
+  "fp": "d0b1082fb025",
+  "yield": "LOW",
+  "why": "Near-restatement of the terminal voltage calculation card"
+ },
+ {
+  "front": "A defibrillator must deliver $200$ J from a $100\\,\\mu$F capacitor. What principle sets the charging voltage?",
+  "fp": "1b7447a5861e",
+  "yield": "MEDIUM",
+  "why": "Rearranged restatement of the U = 1/2 CV^2 defibrillator card"
+ },
+ {
+  "front": "A defibrillator's $100\\ \\mu$F capacitor charged to $2000$ V stores $U = \\frac12 CV^2 =$ {{c1::$200$ J}}.",
+  "fp": "10f493ebfe8f",
+  "yield": "ULTRA_HIGH",
+  "why": "Capacitor energy U = 1/2 CV^2 is a calculation equation"
+ },
+ {
+  "front": "A fuse protects a circuit by:",
+  "fp": "f632d9941f90",
+  "yield": "LOW",
+  "why": "Fuse function is generic household detail"
+ },
+ {
+  "front": "A neuron's membrane time constant is $\\tau = R_mC_m$, so a longer $\\tau$ produces {{c1::greater temporal summation}} of successive inputs.",
+  "fp": "19d132d4d7b9",
+  "yield": "MEDIUM",
+  "why": "Membrane time constant is a plausible neuro passage step"
+ },
+ {
+  "front": "A new resistor is added in parallel with an existing element. What happens to total current from the battery?",
+  "fp": "8d721b2e1e16",
+  "yield": "HIGH",
+  "why": "Adding a parallel branch raises total current; common qualitative question"
+ },
+ {
+  "front": "A resistanceless wire is connected across one resistor in a series chain. What happens?",
+  "fp": "07e14865e378",
+  "yield": "HIGH",
+  "why": "Short across a series resistor is a frequent circuit-change question"
+ },
+ {
+  "front": "A short circuit is dangerous because:",
+  "fp": "be9f70f73c99",
+  "yield": "LOW",
+  "why": "Generic safety statement"
+ },
+ {
+  "front": "A third identical bulb is added in series to two bulbs already in series. What happens to the original two?",
+  "fp": "a1cc6644bc4e",
+  "yield": "HIGH",
+  "why": "Adding a series bulb dims all; classic qualitative question"
+ },
+ {
+  "front": "A voltmeter is placed {{c1::in parallel}} with the element and must have very high resistance.",
+  "fp": "24c3016a19ab",
+  "yield": "HIGH",
+  "why": "Voltmeter in parallel, high resistance is a stock discrete"
+ },
+ {
+  "front": "Adding another parallel branch raises total current, so the internal $Ir$ drop grows and terminal voltage {{c1::falls}}.",
+  "fp": "2d868dc3a416",
+  "yield": "MEDIUM",
+  "why": "Internal resistance sag under added load is a second-step application"
+ },
+ {
+  "front": "After a long time in a DC circuit, current through a capacitor is:",
+  "fp": "bd76c74930aa",
+  "yield": "LOW",
+  "why": "Restates the capacitor wire-then-open card"
+ },
+ {
+  "front": "After one time constant, what fraction of its final charge does a charging capacitor hold?",
+  "fp": "f3236366c0f3",
+  "yield": "HIGH",
+  "why": "63% after one time constant is commonly asked"
+ },
+ {
+  "front": "An ammeter is placed {{c1::in series}} and must have very low resistance so it barely perturbs the circuit.",
+  "fp": "24aebc296808",
+  "yield": "HIGH",
+  "why": "Ammeter in series, low resistance is a stock discrete"
+ },
+ {
+  "front": "At steady state a capacitor in series with a resistor passes {{c1::zero}} current, so the full battery voltage sits across the capacitor.",
+  "fp": "52315d6c5958",
+  "yield": "HIGH",
+  "why": "Steady-state series RC with Q = CV is a common calculation"
+ },
+ {
+  "front": "At the instant an uncharged capacitor is connected, it behaves like:",
+  "fp": "bbbba86f63cd",
+  "yield": "LOW",
+  "why": "Restates the capacitor wire-then-open card"
+ },
+ {
+  "front": "Capacitors in parallel add directly: $C_{eq} = {{c1::C_1 + C_2}}$.",
+  "fp": "6ba2d0c7132d",
+  "yield": "ULTRA_HIGH",
+  "why": "Parallel capacitor addition rule is used in calculations every year"
+ },
+ {
+  "front": "Capacitors in parallel:",
+  "fp": "b20070c5ade8",
+  "yield": "LOW",
+  "why": "Restates the parallel capacitor cloze card"
+ },
+ {
+  "front": "Capacitors in series combine like resistors in parallel: $1/C_{eq} = {{c1::1/C_1 + 1/C_2}}$.",
+  "fp": "b588baf16441",
+  "yield": "ULTRA_HIGH",
+  "why": "Series capacitor reciprocal rule is used in calculations every year"
+ },
+ {
+  "front": "Distinguish the kilowatt-hour from the watt.",
+  "fp": "05ab60016c63",
+  "yield": "MEDIUM",
+  "why": "kWh vs W unit distinction is secondary"
+ },
+ {
+  "front": "Doubling $R$ in a charging RC circuit changes what, and what stays the same?",
+  "fp": "4f2a736898bf",
+  "yield": "HIGH",
+  "why": "RC parameter change reasoning is commonly asked"
+ },
+ {
+  "front": "During discharge, capacitor charge decays {{c1::exponentially}}, following $Q = Q_0e^{-t/\\tau}$.",
+  "fp": "8d63c55db35d",
+  "yield": "HIGH",
+  "why": "Exponential discharge form is on the outline"
+ },
+ {
+  "front": "EMF is not a force; it is the {{c1::energy per unit charge}} supplied by a source, measured in volts.",
+  "fp": "be8e11d2ddbe",
+  "yield": "HIGH",
+  "why": "EMF as energy per charge is commonly tested"
+ },
+ {
+  "front": "For elements in series, compare power with $P = {{c1::I^2R}}$, so the larger resistor dissipates more.",
+  "fp": "e07952b01829",
+  "yield": "ULTRA_HIGH",
+  "why": "Choosing I^2R for series comparisons is a required step nearly every year"
+ },
+ {
+  "front": "For household AC, $V_{rms} = {{c1::V_{peak}/\\sqrt{2}}}$, so a $120$ V outlet actually peaks near $170$ V.",
+  "fp": "c50ec4601bea",
+  "yield": "MEDIUM",
+  "why": "rms voltage is on the outline but rarely tested"
+ },
+ {
+  "front": "How does raising the temperature of a metal conductor affect its resistance?",
+  "fp": "1679a794a64d",
+  "yield": "MEDIUM",
+  "why": "Temperature dependence of resistance is secondary outline content"
+ },
+ {
+  "front": "How is total power delivered by a battery related to power dissipated in the resistors?",
+  "fp": "ffbe5bb01217",
+  "yield": "MEDIUM",
+  "why": "Power balance is supporting reasoning"
+ },
+ {
+  "front": "If one of two identical bulbs wired in series burns out, {{c1::both go dark}}, because the single current path is broken.",
+  "fp": "2e859df12057",
+  "yield": "HIGH",
+  "why": "Series break kills the circuit; common qualitative question"
+ },
+ {
+  "front": "In a charging RC circuit, when is the current largest?",
+  "fp": "6886c93d4381",
+  "yield": "MEDIUM",
+  "why": "Restates the capacitor-as-wire-at-t=0 card"
+ },
+ {
+  "front": "In a series circuit with a 12 V battery and three 4 Ω resistors, what is the current?",
+  "fp": "fcd83bc80fc9",
+  "yield": "MEDIUM",
+  "why": "Trivial series calculation; the formula card carries it"
+ },
+ {
+  "front": "In an RC circuit an uncharged capacitor acts like a {{c1::wire}} at $t = 0$ and like an open switch at steady state.",
+  "fp": "c0c8a5f7ad5b",
+  "yield": "ULTRA_HIGH",
+  "why": "Capacitor as wire at t=0 and open at steady state is asked every year"
+ },
+ {
+  "front": "In series, {{c1::current}} is the same through all components; in parallel, {{c2::voltage}} is the same across all branches.",
+  "fp": "850492042130",
+  "yield": "ULTRA_HIGH",
+  "why": "Same current in series, same voltage in parallel is the foundation of circuit analysis"
+ },
+ {
+  "front": "Kirchhoff's junction rule is based on conservation of:",
+  "fp": "4400e3d7ac36",
+  "yield": "ULTRA_HIGH",
+  "why": "Junction rule = charge conservation is a stock discrete"
+ },
+ {
+  "front": "Kirchhoff's loop rule says potential changes around a closed loop sum to zero, expressing {{c1::energy conservation}}.",
+  "fp": "e889e23f20e0",
+  "yield": "ULTRA_HIGH",
+  "why": "Loop rule = energy conservation is a stock discrete"
+ },
+ {
+  "front": "Myelin raises membrane resistance, lengthening the axon's length constant, so a passive signal decays {{c1::less}} with distance.",
+  "fp": "97ba3ab55cda",
+  "yield": "MEDIUM",
+  "why": "Myelin and length constant is a neuro passage crossover"
+ },
+ {
+  "front": "One bulb is in series with a parallel pair of identical bulbs. Which bulb is brightest?",
+  "fp": "a15180c95a24",
+  "yield": "HIGH",
+  "why": "Series bulb vs parallel pair brightness is a classic reasoning question"
+ },
+ {
+  "front": "Physically, why does putting capacitors in series lower the total capacitance?",
+  "fp": "65f7ffbf36aa",
+  "yield": "MEDIUM",
+  "why": "Physical picture behind series capacitors; supporting reasoning"
+ },
+ {
+  "front": "Placing $N$ identical resistors of resistance $R$ in parallel gives an equivalent resistance of {{c1::$R/N$}}.",
+  "fp": "5676156500b3",
+  "yield": "HIGH",
+  "why": "R/N identical parallel shortcut is used constantly"
+ },
+ {
+  "front": "Resistors in series vs. parallel?",
+  "fp": "4561ef2ac5a6",
+  "yield": "ULTRA_HIGH",
+  "why": "Series/parallel resistor formulas are used in calculations every year"
+ },
+ {
+  "front": "State Ohm's law and identify what each variable means.",
+  "fp": "16dc5eed2360",
+  "yield": "ULTRA_HIGH",
+  "why": "Ohm's law is the foundational equation of the section"
+ },
+ {
+  "front": "That $2000$ V defibrillator discharges through a $50\\ \\Omega$ thorax. Estimate the peak current and the pulse duration.",
+  "fp": "bd6f286b73c5",
+  "yield": "MEDIUM",
+  "why": "Defibrillator pulse estimate is a passage-style application"
+ },
+ {
+  "front": "The equivalent resistance of a parallel combination is always less than {{c1::the smallest individual resistor}}.",
+  "fp": "76580303aadc",
+  "yield": "ULTRA_HIGH",
+  "why": "Parallel equivalent less than smallest resistor is a required sanity check"
+ },
+ {
+  "front": "The power dissipated by a 100 Ω resistor carrying 0.5 A of current is:",
+  "fp": "3f9b139a37b1",
+  "yield": "MEDIUM",
+  "why": "Trivial P = I^2R calculation; the formula card carries it"
+ },
+ {
+  "front": "The RC time constant is $\\tau = {{c1::RC}}$ and carries units of seconds.",
+  "fp": "cb39c0547f73",
+  "yield": "ULTRA_HIGH",
+  "why": "tau = RC is a calculation equation and appears every year"
+ },
+ {
+  "front": "Three resistors of 6 Ω each are connected in parallel. What is the total resistance?",
+  "fp": "570b337b4886",
+  "yield": "MEDIUM",
+  "why": "Restates the R/N parallel shortcut with numbers"
+ },
+ {
+  "front": "Traversing a resistor in the same direction as the current, what is the sign of the potential change?",
+  "fp": "dac8fd4563f6",
+  "yield": "HIGH",
+  "why": "Sign conventions for loop-rule traversal are a common step"
+ },
+ {
+  "front": "Two 6 Ω resistors in series give:",
+  "fp": "ded127fb9df5",
+  "yield": "LOW",
+  "why": "Restates the series addition formula"
+ },
+ {
+  "front": "Two identical bulbs are in parallel across a battery and one burns out. What happens to the other bulb and to the total current?",
+  "fp": "f26eb82f8968",
+  "yield": "HIGH",
+  "why": "Parallel bulb burns out, other unchanged; classic qualitative question"
+ },
+ {
+  "front": "Two identical capacitors are connected across the same battery, first in parallel and then in series. Which arrangement stores more energy?",
+  "fp": "481c7854f9cd",
+  "yield": "HIGH",
+  "why": "Series vs parallel capacitor energy comparison is a common calculation"
+ },
+ {
+  "front": "What are the equivalent expressions for power dissipated by a resistor?",
+  "fp": "5afcc789ab57",
+  "yield": "ULTRA_HIGH",
+  "why": "Power expressions P = IV = I^2R = V^2/R are used every year"
+ },
+ {
+  "front": "What condition trips a GFCI outlet, and why does an ordinary fuse not protect against the same hazard?",
+  "fp": "03ba968279e3",
+  "yield": "LOW",
+  "why": "GFCI mechanism is off-outline detail"
+ },
+ {
+  "front": "What error appears when a real voltmeter with finite resistance is placed across a large resistor?",
+  "fp": "d0626469d7fc",
+  "yield": "MEDIUM",
+  "why": "Meter loading is a plausible experimental passage point"
+ },
+ {
+  "front": "When is a battery's terminal voltage greater than its emf?",
+  "fp": "0c9ee661a73d",
+  "yield": "MEDIUM",
+  "why": "Terminal voltage above emf during charging is secondary"
+ },
+ {
+  "front": "Why do car headlights dim when the starter motor engages?",
+  "fp": "a7d02f29f5a0",
+  "yield": "LOW",
+  "why": "Restates the internal-resistance sag card"
+ },
+ {
+  "front": "Why do series capacitors carry equal charge while parallel capacitors carry equal voltage?",
+  "fp": "265341d6ce41",
+  "yield": "MEDIUM",
+  "why": "Why series capacitors share charge is supporting reasoning"
+ },
+ {
+  "front": "Why is an axon membrane modeled as a resistor and capacitor in parallel?",
+  "fp": "93e74df56033",
+  "yield": "MEDIUM",
+  "why": "Axon as RC circuit is a neuro passage crossover"
+ },
+ {
+  "front": "Why is current, not voltage, the quantity that determines the severity of electrical injury?",
+  "fp": "da711490d295",
+  "yield": "LOW",
+  "why": "Electrical injury detail is off-outline"
+ },
+ {
+  "front": "Why is household wiring parallel rather than series?",
+  "fp": "c110e75b536a",
+  "yield": "LOW",
+  "why": "Household wiring rationale is generic"
+ },
+ {
+  "front": "Wire resistance is $R = {{c1::\\rho L/A}}$, so doubling the radius cuts resistance to one fourth.",
+  "fp": "d5431d6f22ff",
+  "yield": "ULTRA_HIGH",
+  "why": "R = rho L/A is a calculation equation tested every year"
+ }
+]

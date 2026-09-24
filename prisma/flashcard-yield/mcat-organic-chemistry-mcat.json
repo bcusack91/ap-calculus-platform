@@ -1,0 +1,416 @@
+[
+ {
+  "front": "$NaBH_4$ reduces aldehydes and ketones but not esters or acids, whereas $LiAlH_4$ {{c1::reduces all of them}}.",
+  "fp": "455c3cfb0418",
+  "yield": "ULTRA_HIGH",
+  "why": "NaBH4 vs LiAlH4 selectivity is asked on nearly every organic/biochem reagent question"
+ },
+ {
+  "front": "$NAD^+$ oxidizes an alcohol by accepting {{c1::a hydride}} at {{c2::C4 of the nicotinamide ring}}.",
+  "fp": "e0a80a27d738",
+  "yield": "HIGH",
+  "why": "NAD+ accepts a hydride is core biochem redox; the C4 position is the tested detail behind 340 nm"
+ },
+ {
+  "front": "A chlorine raises carboxylic acid acidity most when it sits {{c1::closest to the carboxyl group}}, and the effect decays sharply with distance.",
+  "fp": "1a4d89811f3a",
+  "yield": "HIGH",
+  "why": "Inductive effect falls with distance: standard acidity-ranking question"
+ },
+ {
+  "front": "A cyclohexane ring flip turns every axial group equatorial. Does it change the molecule's configuration?",
+  "fp": "516806074bc5",
+  "yield": "HIGH",
+  "why": "Conformational vs configurational change is a classic stereochemistry trap"
+ },
+ {
+  "front": "A free cysteine thiol has $pK_a \\approx 8.3$, but becomes a potent nucleophile when an enzyme {{c1::lowers its $pK_a$ so it exists as thiolate}}.",
+  "fp": "8b83e3196731",
+  "yield": "MEDIUM",
+  "why": "Enzyme lowering cysteine pKa to thiolate is supporting catalysis context"
+ },
+ {
+  "front": "A glycosidic bond is an {{c1::acetal}}, so it is inert to {{c2::base}} but cleaved by aqueous acid or by glycosidases.",
+  "fp": "3eb904b5401f",
+  "yield": "HIGH",
+  "why": "Glycosidic bond as acetal, acid-labile/base-stable, underpins reducing-sugar questions"
+ },
+ {
+  "front": "A Grignard reagent adds twice to an ester but only once to a ketone. Why?",
+  "fp": "18f5eb0b39b2",
+  "yield": "MEDIUM",
+  "why": "Grignard double addition to esters is off the current outline; useful reasoning only"
+ },
+ {
+  "front": "A mass spectrum showing M and M+2 peaks of nearly equal height indicates {{c1::bromine}}.",
+  "fp": "c5fb8fa3c5b0",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "A peptide bond is planar and strongly prefers the {{c1::trans}} arrangement; the main exception is the bond preceding {{c2::proline}}.",
+  "fp": "ef069536379d",
+  "yield": "HIGH",
+  "why": "Trans peptide bond with proline exception is standard protein-structure content"
+ },
+ {
+  "front": "A racemic mixture:",
+  "fp": "1fa23e623a19",
+  "yield": "ULTRA_HIGH",
+  "why": "Racemic mixture = optically inactive is tested on essentially every administration"
+ },
+ {
+  "front": "A strong IR band near {{c1::1700}} cm$^{-1}$ marks a C=O; a broad band near {{c2::3300}} cm$^{-1}$ marks an O-H.",
+  "fp": "cfbc874f2770",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "A substituent on cyclohexane prefers the {{c1::equatorial}} position to escape {{c2::1,3-diaxial}} strain.",
+  "fp": "46da08bdbe34",
+  "yield": "ULTRA_HIGH",
+  "why": "Equatorial preference / 1,3-diaxial strain is the every-year chair question"
+ },
+ {
+  "front": "An ester results from a carboxylic acid plus:",
+  "fp": "f42c7965a3d0",
+  "yield": "HIGH",
+  "why": "Fischer esterification is a standard carboxylic-acid reaction"
+ },
+ {
+  "front": "An SN2 reaction is favored by which combination of conditions?",
+  "fp": "02564fefa493",
+  "yield": "LOW",
+  "why": "Duplicate of the SN1/SN2/E1/E2 deck card on SN2 conditions"
+ },
+ {
+  "front": "Approximate $^1$H NMR shifts: an aldehyde proton near {{c1::9-10}} ppm, an aromatic proton near {{c2::7}} ppm.",
+  "fp": "6ca0c6a1dbd1",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "As a prefix, a ketone is named {{c1::oxo-}} and an alcohol is named {{c2::hydroxy-}}.",
+  "fp": "816442600513",
+  "yield": "MEDIUM",
+  "why": "Oxo-/hydroxy- prefixes are nomenclature detail; rarely the tested step"
+ },
+ {
+  "front": "Beta-oxidation repeats which four organic steps, in order?",
+  "fp": "41c55dd6c28a",
+  "yield": "MEDIUM",
+  "why": "Beta-oxidation as organic steps belongs to metabolism; useful cross-link only"
+ },
+ {
+  "front": "Conjugating a carbonyl with an alkene or ring shifts its IR stretch to {{c1::lower}} wavenumber.",
+  "fp": "d477f02df7af",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Curved arrows in a mechanism always run from {{c1::electron density}} toward {{c2::the electron-poor site}}.",
+  "fp": "f7a6693270cd",
+  "yield": "ULTRA_HIGH",
+  "why": "Curved-arrow convention is needed to read every mechanism passage"
+ },
+ {
+  "front": "Cycloheptatriene loses hydride to give the {{c1::tropylium}} cation, aromatic with {{c2::6}} pi electrons.",
+  "fp": "087c779b30a1",
+  "yield": "MEDIUM",
+  "why": "Tropylium cation is a second-tier aromaticity example"
+ },
+ {
+  "front": "Cyclopentadiene has $pK_a \\approx 16$, extraordinarily acidic for a hydrocarbon. Why?",
+  "fp": "a033c7b95ec7",
+  "yield": "HIGH",
+  "why": "Cyclopentadiene acidity via aromatic conjugate base is a classic Huckel application"
+ },
+ {
+  "front": "Cyclopropane stores strain from both {{c1::angle strain at 60-degree bonds}} and {{c2::torsional strain from eclipsed hydrogens}}.",
+  "fp": "2d3175f10f1e",
+  "yield": "MEDIUM",
+  "why": "Cyclopropane strain sources are useful-for-understanding detail"
+ },
+ {
+  "front": "Degrees of unsaturation, $DoU = (2C + 2 + N - H - X)/2$, counts each ring or each $\\pi$ bond as {{c1::one}}.",
+  "fp": "ffb6a9a0cb4d",
+  "yield": "ULTRA_HIGH",
+  "why": "Degrees of unsaturation formula is used in calculations every year"
+ },
+ {
+  "front": "Distinguish general base catalysis from nucleophilic (covalent) catalysis in an enzyme.",
+  "fp": "e7707aeb2ce6",
+  "yield": "MEDIUM",
+  "why": "General base vs nucleophilic catalysis is supporting enzyme-mechanism context"
+ },
+ {
+  "front": "Every carbon-carbon bond in benzene measures 1.39 angstroms. What does that tell you about the structure?",
+  "fp": "2e4156b4a129",
+  "yield": "HIGH",
+  "why": "Benzene equal bond lengths = delocalization; standard resonance reasoning"
+ },
+ {
+  "front": "Extending conjugation shifts UV-Vis absorption to {{c1::longer}} wavelength because {{c2::the HOMO-LUMO gap narrows}}.",
+  "fp": "4fde6bce1516",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "For a 1,4-disubstituted cyclohexane, which isomer can place both substituents equatorial?",
+  "fp": "a270d152662e",
+  "yield": "HIGH",
+  "why": "Cis/trans diequatorial rule for disubstituted cyclohexanes is commonly tested"
+ },
+ {
+  "front": "How many $^{1}H$ NMR signals does benzene produce?",
+  "fp": "a08600c9ec87",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Huckel's rule: aromatic systems are cyclic, planar, fully conjugated, and hold {{c1::4n+2}} pi electrons.",
+  "fp": "350a109b3136",
+  "yield": "ULTRA_HIGH",
+  "why": "Huckel 4n+2 rule is foundational and tested every year"
+ },
+ {
+  "front": "In $^1$H NMR, n equivalent neighboring protons split a signal into {{c1::n+1}} peaks.",
+  "fp": "be2cdb1dd2bf",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "In a bond-line (skeletal) structure, what is assumed at every unlabeled vertex and line terminus?",
+  "fp": "75a08b39b634",
+  "yield": "HIGH",
+  "why": "Bond-line convention is assumed on every structure shown in passages"
+ },
+ {
+  "front": "In butane the anti conformer sits about {{c1::0.9}} kcal/mol below gauche because gauche suffers {{c2::steric (van der Waals) strain}}.",
+  "fp": "7110e312c47a",
+  "yield": "HIGH",
+  "why": "Anti vs gauche butane is the standard conformational-energy question"
+ },
+ {
+  "front": "In column chromatography with silica gel, which compound elutes FIRST?",
+  "fp": "c571bfaf7214",
+  "yield": "HIGH",
+  "why": "Elution order on polar silica is a frequent separations question"
+ },
+ {
+  "front": "In transamination, what does PLP become after it accepts the amino group?",
+  "fp": "84f7c6e793e2",
+  "yield": "MEDIUM",
+  "why": "PLP to PMP naming is a detail of transamination; the mechanism card carries the concept"
+ },
+ {
+  "front": "Markovnikov's rule states that in HX addition to an alkene:",
+  "fp": "d731445af4f7",
+  "yield": "HIGH",
+  "why": "Markovnikov regiochemistry still appears in alkene-addition items"
+ },
+ {
+  "front": "Mutarotation of glucose proceeds through the {{c1::open-chain aldehyde}}, which lets the anomeric OH close back as either alpha or beta.",
+  "fp": "99d23928367d",
+  "yield": "HIGH",
+  "why": "Mutarotation via open-chain aldehyde is standard carbohydrate chemistry"
+ },
+ {
+  "front": "Nucleophilic acyl substitution reactivity falls from acid chloride to anhydride to ester to {{c1::amide}}.",
+  "fp": "7bc459a86cbc",
+  "yield": "ULTRA_HIGH",
+  "why": "Acyl derivative reactivity order is tested nearly every administration"
+ },
+ {
+  "front": "Oxidation of carbon means {{c1::gaining bonds to heteroatoms}} or {{c2::losing bonds to hydrogen}}.",
+  "fp": "5fcd35871562",
+  "yield": "ULTRA_HIGH",
+  "why": "Definition of carbon oxidation is a foundational every-year concept"
+ },
+ {
+  "front": "PCC oxidizes a primary alcohol only to the {{c1::aldehyde}}, while aqueous chromic acid goes to the {{c2::carboxylic acid}}.",
+  "fp": "8240fd041e58",
+  "yield": "HIGH",
+  "why": "PCC vs aqueous Cr(VI) oxidation stopping point is a standard reagent question"
+ },
+ {
+  "front": "Phenol ($pK_a \\approx 10$) beats cyclohexanol ($pK_a \\approx 16$) in acidity because phenoxide {{c1::delocalizes charge into the ring}}.",
+  "fp": "6c4b1250fb2f",
+  "yield": "ULTRA_HIGH",
+  "why": "Phenol vs alcohol acidity via resonance is a core acid-base comparison"
+ },
+ {
+  "front": "PLP works by first forming {{c1::an imine (aldimine) with the substrate amine}}, then using {{c2::its protonated pyridine ring as an electron sink}}.",
+  "fp": "6847ae5e9de9",
+  "yield": "MEDIUM",
+  "why": "PLP electron-sink mechanism is supporting biochem detail"
+ },
+ {
+  "front": "Pyridine is basic but pyrrole is not, because pyrrole's nitrogen lone pair {{c1::is part of the aromatic sextet}}.",
+  "fp": "2c2dab863871",
+  "yield": "ULTRA_HIGH",
+  "why": "Pyridine vs pyrrole basicity is a classic aromaticity/lone-pair question"
+ },
+ {
+  "front": "Rank carboxylic acid derivative reactivity.",
+  "fp": "f27a0dfd05e8",
+  "yield": "LOW",
+  "why": "Near-restatement of the acyl-derivative reactivity card"
+ },
+ {
+  "front": "Rare {{c1::enol or imino}} tautomers of DNA bases cause mispairing during replication.",
+  "fp": "57f23b523f42",
+  "yield": "HIGH",
+  "why": "Tautomer mispairing links keto-enol tautomerism to mutation; commonly tested"
+ },
+ {
+  "front": "Resonance delocalization requires the participating orbitals to be {{c1::parallel p orbitals in a roughly planar, conjugated array}}.",
+  "fp": "9d82ca2f22a6",
+  "yield": "ULTRA_HIGH",
+  "why": "Requirement for parallel p orbitals is the foundation of resonance reasoning"
+ },
+ {
+  "front": "SAM is such a powerful methyl donor because its methyl group sits on a {{c1::positively charged sulfonium}}.",
+  "fp": "46a35f446325",
+  "yield": "MEDIUM",
+  "why": "SAM sulfonium methyl donor is supporting biochem context"
+ },
+ {
+  "front": "Suffix priority runs carboxylic acid, then ester, amide, aldehyde, ketone, alcohol, and finally {{c1::amine}}.",
+  "fp": "a4a46aa20c30",
+  "yield": "HIGH",
+  "why": "Suffix priority order is standard nomenclature content"
+ },
+ {
+  "front": "The amide C-N bond has partial double-bond character, leaving the nitrogen {{c1::planar and essentially non-basic}}.",
+  "fp": "63d7729d39fe",
+  "yield": "ULTRA_HIGH",
+  "why": "Amide resonance and planar, non-basic N is tested every year via the peptide bond"
+ },
+ {
+  "front": "The IUPAC parent chain must contain the {{c1::highest-priority characteristic group}}, not merely the longest carbon chain.",
+  "fp": "f6470212c24f",
+  "yield": "MEDIUM",
+  "why": "Parent-chain rule is nomenclature detail rarely the tested step"
+ },
+ {
+  "front": "Trifluoroacetic acid has $pK_a \\approx 0.5$ versus 4.8 for acetic acid. What single effect explains the gap?",
+  "fp": "92265be3b74e",
+  "yield": "HIGH",
+  "why": "Inductive effect of fluorines on acidity is a standard acid-base comparison"
+ },
+ {
+  "front": "Vitamin E halts lipid peroxidation by donating {{c1::a hydrogen atom}}, leaving a radical stabilized by {{c2::its phenol ring}}.",
+  "fp": "a6e87470974e",
+  "yield": "LOW",
+  "why": "Vitamin E radical mechanism is off-outline detail"
+ },
+ {
+  "front": "What does oxidation of a primary alcohol give?",
+  "fp": "83d6f23af33a",
+  "yield": "LOW",
+  "why": "Near-restatement of the PCC vs chromic acid card"
+ },
+ {
+  "front": "What is the difference between constitutional isomers and stereoisomers?",
+  "fp": "01cc1893ed9e",
+  "yield": "ULTRA_HIGH",
+  "why": "Constitutional vs stereoisomer distinction is foundational and tested every year"
+ },
+ {
+  "front": "What makes carboxylic acids unusually acidic?",
+  "fp": "9796a5a28676",
+  "yield": "LOW",
+  "why": "Near-restatement of the acetic acid vs ethanol acidity card"
+ },
+ {
+  "front": "When every resonance contributor has complete octets, which one is the major contributor?",
+  "fp": "4a1a2e4ab5aa",
+  "yield": "ULTRA_HIGH",
+  "why": "Ranking resonance contributors is core structure reasoning"
+ },
+ {
+  "front": "Where do C=O, O–H, and N–H stretches appear in an IR spectrum?",
+  "fp": "aca240a125be",
+  "yield": "MEDIUM",
+  "why": "Belongs to spectroscopy and is covered in the spectroscopy deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Which cyclohexane conformation is the ring-flip transition state, and which is the energy minimum?",
+  "fp": "efd79bfdc7b6",
+  "yield": "MEDIUM",
+  "why": "Half-chair transition state is second-tier conformational detail"
+ },
+ {
+  "front": "Which reaction involves anti-periplanar geometry of the leaving group and the β-hydrogen?",
+  "fp": "5cc914b990ff",
+  "yield": "LOW",
+  "why": "Duplicate of the SN1/SN2/E1/E2 deck card on E2 geometry"
+ },
+ {
+  "front": "Which reagent selectively reduces aldehydes/ketones but not esters?",
+  "fp": "cf5aab35560d",
+  "yield": "LOW",
+  "why": "Near-restatement of the NaBH4 vs LiAlH4 card"
+ },
+ {
+  "front": "Why are polyunsaturated fatty acids the first lipids to undergo oxidation?",
+  "fp": "c362c790e7ec",
+  "yield": "LOW",
+  "why": "Bis-allylic radical detail of lipid peroxidation is off-outline"
+ },
+ {
+  "front": "Why can a Grignard reagent never share a flask with an alcohol, water, or terminal alkyne?",
+  "fp": "2d88d7dd5bb9",
+  "yield": "LOW",
+  "why": "Grignard incompatibility is off the current outline"
+ },
+ {
+  "front": "Why can a peptide bond not rotate, and which backbone angles remain free?",
+  "fp": "ce9ea0efbd70",
+  "yield": "MEDIUM",
+  "why": "Restates amide planarity; phi/psi angle names are secondary detail"
+ },
+ {
+  "front": "Why can FAD do one-electron chemistry while $NAD^+$ cannot?",
+  "fp": "f59eb8434b53",
+  "yield": "MEDIUM",
+  "why": "FAD one-electron chemistry is supporting biochem reasoning"
+ },
+ {
+  "front": "Why do alcohols boil higher than ethers of similar mass?",
+  "fp": "20f6c3c35bda",
+  "yield": "ULTRA_HIGH",
+  "why": "H-bonding and boiling point comparison appears on nearly every exam"
+ },
+ {
+  "front": "Why do RNA phosphodiester bonds hydrolyze far faster than DNA's under basic conditions?",
+  "fp": "54981c0bd2ba",
+  "yield": "MEDIUM",
+  "why": "RNA 2-OH hydrolysis is useful cross-topic reasoning, rarely a point"
+ },
+ {
+  "front": "Why does beta-D-glucopyranose dominate at equilibrium (about 64 percent)?",
+  "fp": "d91b880d48a8",
+  "yield": "MEDIUM",
+  "why": "Beta-glucose equatorial preference is a second-tier carbohydrate detail"
+ },
+ {
+  "front": "Why is a histidine side chain uniquely suited to act as both acid and base at pH 7.4?",
+  "fp": "d01505ceb19d",
+  "yield": "ULTRA_HIGH",
+  "why": "Histidine pKa near physiological pH is a biochem staple every year"
+ },
+ {
+  "front": "Why is acetic acid ($pK_a \\approx 4.8$) about eleven orders of magnitude more acidic than ethanol ($pK_a \\approx 16$)?",
+  "fp": "cd6519492937",
+  "yield": "ULTRA_HIGH",
+  "why": "Carboxylate resonance vs alkoxide is the foundational acidity comparison"
+ },
+ {
+  "front": "Why is an amide the least reactive acyl derivative?",
+  "fp": "aadca1b8081a",
+  "yield": "LOW",
+  "why": "Near-restatement of the acyl-reactivity and amide-resonance cards"
+ }
+]

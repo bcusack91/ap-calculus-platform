@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you compare two curves on one plot?",
+  "fp": "a4578811dbde",
+  "yield": "HIGH",
+  "why": "Comparing curves and crossover points is a frequent figure question"
+ },
+ {
+  "front": "How do you interpret a graph quickly?",
+  "fp": "9a4946364212",
+  "yield": "MEDIUM",
+  "why": "Generic graph-reading heuristic; supports the axis-first card"
+ },
+ {
+  "front": "How should you handle error bars?",
+  "fp": "7933c9ef1bea",
+  "yield": "HIGH",
+  "why": "Overlapping error bars = likely non-significant is a commonly tested data step"
+ },
+ {
+  "front": "What does a logarithmic axis imply?",
+  "fp": "5760496eed52",
+  "yield": "HIGH",
+  "why": "Log-axis interpretation recurs in kinetics, pH and dose-response figures"
+ },
+ {
+  "front": "What is the first question to ask of a data table?",
+  "fp": "2cf763db3c2f",
+  "yield": "MEDIUM",
+  "why": "Table orientation tactic; helpful but rarely where a point is lost"
+ },
+ {
+  "front": "What should you do when a figure has an unfamiliar technique?",
+  "fp": "0d55184278b7",
+  "yield": "MEDIUM",
+  "why": "Unfamiliar-technique reassurance; secondary tactic"
+ },
+ {
+  "front": "What should you read first on any figure?",
+  "fp": "e545f66e8b1d",
+  "yield": "ULTRA_HIGH",
+  "why": "Reading axis labels and units first applies to every figure on every section"
+ },
+ {
+  "front": "Why should you read the figure caption?",
+  "fp": "7443cf4ec8ac",
+  "yield": "MEDIUM",
+  "why": "Captions supply conditions; useful second-step habit"
+ }
+]

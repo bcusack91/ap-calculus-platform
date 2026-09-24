@@ -1,0 +1,398 @@
+[
+ {
+  "front": "A 10 mL sample of 1.0 M stock diluted to 100 mL total becomes {{c1::0.10 M}}, a {{c2::10-fold}} dilution.",
+  "fp": "32b054ef9819",
+  "yield": "HIGH",
+  "why": "Dilution factor from final total volume is a common calculation trap"
+ },
+ {
+  "front": "A drug is dosed at 5 mg/kg to a 70 kg adult. Set up the calculation and the conversion you will need next.",
+  "fp": "600bac6b59f0",
+  "yield": "MEDIUM",
+  "why": "Weight-based dosing is dimensional analysis practice; plausible passage context"
+ },
+ {
+  "front": "A hydrate is heated to constant mass and loses water. What does the mass lost let you calculate?",
+  "fp": "27b41e005654",
+  "yield": "MEDIUM",
+  "why": "Hydrate water loss calculations are secondary lab-stoichiometry content"
+ },
+ {
+  "front": "A serum glucose of 90 mg/dL equals about {{c1::5 mM}}, using a molar mass of {{c2::180 g/mol}}.",
+  "fp": "ef276d2510f5",
+  "yield": "HIGH",
+  "why": "mg/dL to mM conversion shows up throughout biochemistry passages"
+ },
+ {
+  "front": "A table lists moles of both reactants. Which one must you never use to compute theoretical yield?",
+  "fp": "0859b56a68b7",
+  "yield": "HIGH",
+  "why": "Using the excess reagent is the classic wrong answer in yield problems"
+ },
+ {
+  "front": "A weak acid titrated with strong base reaches equivalence at pH {{c1::above 7}} because {{c2::the conjugate base hydrolyzes water}}.",
+  "fp": "b1dc47c8d9b8",
+  "yield": "MEDIUM",
+  "why": "Equivalence pH above 7 is a titration concept covered in the acid-base deck"
+ },
+ {
+  "front": "An empirical formula comes from {{c1::mole ratios}}: divide each mass percent by {{c2::the atomic mass}}, then by the smallest result.",
+  "fp": "790b4e770fce",
+  "yield": "HIGH",
+  "why": "Empirical formula from mass percent is a standard outline calculation"
+ },
+ {
+  "front": "At the equivalence point of a titration, what quantity is equal on the two sides?",
+  "fp": "acaaa33d3b5a",
+  "yield": "HIGH",
+  "why": "Moles H+ equal moles OH- at equivalence, distinct from pH 7, is a common item"
+ },
+ {
+  "front": "Away from STP you must use {{c1::$n = PV/RT$}}; the 22.4 L per mole shortcut is valid only at {{c2::STP}}.",
+  "fp": "2fffc5eb67bd",
+  "yield": "ULTRA_HIGH",
+  "why": "n = PV/RT with correct units is a calculation used on essentially every exam"
+ },
+ {
+  "front": "Balanced glucose combustion is $C_6H_{12}O_6 + 6O_2 \\to 6CO_2 + 6H_2O$, so the respiratory quotient is {{c1::1.0}}.",
+  "fp": "3d21f62284ab",
+  "yield": "MEDIUM",
+  "why": "RQ from balanced combustion is a secondary physiology application"
+ },
+ {
+  "front": "Balancing is bookkeeping for {{c1::conservation of mass}} and, in ionic equations, {{c2::conservation of charge}}.",
+  "fp": "7de771cc082c",
+  "yield": "HIGH",
+  "why": "Balancing as conservation of mass and charge is a foundational skill"
+ },
+ {
+  "front": "Combusting 1 mol propane ($C_{3}H_{8}$) completely requires how many mol $O_{2}$?",
+  "fp": "d66f96cd6e37",
+  "yield": "HIGH",
+  "why": "Balancing a hydrocarbon combustion is a standard quick discrete"
+ },
+ {
+  "front": "Define mole fraction and name where it shows up on the MCAT.",
+  "fp": "01e11c4d7cd9",
+  "yield": "ULTRA_HIGH",
+  "why": "Mole fraction feeds Dalton partial pressures, tested essentially every exam"
+ },
+ {
+  "front": "Define normality and say when it differs from molarity.",
+  "fp": "473e010aa81d",
+  "yield": "HIGH",
+  "why": "Normality and equivalents are outline content for polyprotic titrations"
+ },
+ {
+  "front": "Dissolving 0.5 mol $CaCl_2$ in 1 L gives {{c1::0.5 M}} formula units but {{c2::1.5 M}} total ions.",
+  "fp": "b44d639077c0",
+  "yield": "HIGH",
+  "why": "Counting total ions from a formula unit is needed for colligative and conductivity items"
+ },
+ {
+  "front": "Distinguish a spectator ion from a participant in a net ionic equation.",
+  "fp": "8404ada82ec1",
+  "yield": "HIGH",
+  "why": "Net ionic equations and spectator ions are a common reaction-type discrete"
+ },
+ {
+  "front": "Distinguish percent yield, percent purity, and percent composition.",
+  "fp": "aa2ab9091c2f",
+  "yield": "MEDIUM",
+  "why": "Yield vs purity vs composition distinctions are supporting definitions"
+ },
+ {
+  "front": "Energy density anchors: carbohydrate and protein give about {{c1::4 kcal/g}} while fat gives about {{c2::9 kcal/g}}.",
+  "fp": "4758f7980c8f",
+  "yield": "LOW",
+  "why": "kcal/g energy density is nutrition/biochem content covered elsewhere"
+ },
+ {
+  "front": "For gases at the same temperature and pressure, volume ratios equal {{c1::mole ratios}}.",
+  "fp": "7a5af2fb2d4d",
+  "yield": "HIGH",
+  "why": "Avogadro law: gas volume ratios as mole ratios is a common shortcut"
+ },
+ {
+  "front": "Four successive 1:10 serial dilutions leave the sample at {{c1::$10^{-4}$}} of the original concentration.",
+  "fp": "6ee700afda42",
+  "yield": "HIGH",
+  "why": "Serial dilution arithmetic appears in lab and microbiology passages"
+ },
+ {
+  "front": "Give the ideal gas law and its constant.",
+  "fp": "3c9e9388070f",
+  "yield": "ULTRA_HIGH",
+  "why": "PV = nRT with R values is a core equation used in calculations every exam"
+ },
+ {
+  "front": "Give the percent yield formula.",
+  "fp": "05ca3fc37b38",
+  "yield": "LOW",
+  "why": "Restates the percent-yield cloze card in this deck"
+ },
+ {
+  "front": "Half-reactions are scaled so that {{c1::electrons lost equal electrons gained}}.",
+  "fp": "9a5b04573a03",
+  "yield": "HIGH",
+  "why": "Scaling half-reactions to equalize electrons is a required redox-balancing step"
+ },
+ {
+  "front": "How do you assign oxidation states quickly?",
+  "fp": "b539ad04946d",
+  "yield": "LOW",
+  "why": "Restates the fuller oxidation-number rules card in this deck"
+ },
+ {
+  "front": "How do you find an empirical formula from percent composition?",
+  "fp": "7616c1db168c",
+  "yield": "LOW",
+  "why": "Restates the empirical-formula cloze card in this deck"
+ },
+ {
+  "front": "How do you find the concentration when two solutions of the same solute are mixed?",
+  "fp": "e68793781500",
+  "yield": "HIGH",
+  "why": "Total moles over total volume when mixing solutions is a common calculation"
+ },
+ {
+  "front": "How do you get an unknown acid's concentration from a titration curve?",
+  "fp": "5478ec51d4b6",
+  "yield": "ULTRA_HIGH",
+  "why": "Reading the equivalence volume to find an unknown concentration is asked every exam"
+ },
+ {
+  "front": "How do you identify the limiting reagent?",
+  "fp": "f77d27409c51",
+  "yield": "ULTRA_HIGH",
+  "why": "Limiting reagent by moles over coefficient is tested essentially every exam"
+ },
+ {
+  "front": "How do you use density to enter a stoichiometry problem given a liquid reagent's volume?",
+  "fp": "165d14c95dc6",
+  "yield": "MEDIUM",
+  "why": "Density to moles bridge is a supporting calculation step"
+ },
+ {
+  "front": "How does sample impurity change a stoichiometric calculation?",
+  "fp": "b9833478ab1d",
+  "yield": "MEDIUM",
+  "why": "Purity correction is a secondary calculation twist"
+ },
+ {
+  "front": "How does the ideal gas law give an unknown gas's molar mass?",
+  "fp": "9969dd01ecd5",
+  "yield": "HIGH",
+  "why": "Molar mass from gas density via M = dRT/P is a common gas-law calculation"
+ },
+ {
+  "front": "How many equivalence points does a diprotic acid titration show, and how do the volumes relate?",
+  "fp": "36cf4ff00ffb",
+  "yield": "HIGH",
+  "why": "Diprotic titration with two equivalence points at 1:2 volumes is a common figure item"
+ },
+ {
+  "front": "How many grams of $O_{2}$ are needed to burn 16 g of $CH_{4}$ ($M=16$)?",
+  "fp": "90e7b2eb99fb",
+  "yield": "HIGH",
+  "why": "Mass-to-mass stoichiometry through a balanced equation is a core calculation"
+ },
+ {
+  "front": "In a plot of product formed versus moles of reactant A added, what does the plateau mean?",
+  "fp": "6ffa52a58a48",
+  "yield": "MEDIUM",
+  "why": "Product vs reactant plot plateau interpretation is a secondary figure skill"
+ },
+ {
+  "front": "In a redox reaction, the oxidizing agent:",
+  "fp": "0609a7310ec1",
+  "yield": "ULTRA_HIGH",
+  "why": "Oxidizing agent is itself reduced: tested essentially every exam"
+ },
+ {
+  "front": "In an electrochemical cell, which process occurs at the cathode?",
+  "fp": "b9f968811b62",
+  "yield": "MEDIUM",
+  "why": "Cathode = reduction belongs to electrochemistry and is covered in that deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "In assigning oxidation numbers, O is normally {{c1::$-2$}} but $-1$ in peroxides, and H is {{c2::$+1$}} but $-1$ in metal hydrides.",
+  "fp": "fa5f909d56f0",
+  "yield": "ULTRA_HIGH",
+  "why": "Oxidation-number rules with peroxide/hydride exceptions are asked essentially every exam"
+ },
+ {
+  "front": "In combustion analysis, how do you get the C, H, and O content of a sample?",
+  "fp": "e3a70e7bdde5",
+  "yield": "MEDIUM",
+  "why": "Combustion analysis by difference is a secondary lab calculation"
+ },
+ {
+  "front": "In dilute aqueous solution, 1 ppm equals {{c1::1 mg/L}}.",
+  "fp": "13664dab7e15",
+  "yield": "LOW",
+  "why": "ppm = mg/L is trivia-grade unit detail"
+ },
+ {
+  "front": "Milliequivalents: 1 mmol of $Ca^{2+}$ is {{c1::2 mEq}}, because equivalents count {{c2::charge}} rather than particles.",
+  "fp": "c97955169b0c",
+  "yield": "LOW",
+  "why": "Milliequivalents are clinical unit detail beyond the outline"
+ },
+ {
+  "front": "Molality differs from molarity because it uses:",
+  "fp": "d2c304e99620",
+  "yield": "LOW",
+  "why": "Restates the molarity vs molality cloze card in this deck"
+ },
+ {
+  "front": "Molarity is moles of solute per {{c1::liter of solution}}; molality is moles per {{c2::kilogram of solvent}}.",
+  "fp": "f8e9f9420030",
+  "yield": "ULTRA_HIGH",
+  "why": "Molarity vs molality definitions are foundational and used every exam"
+ },
+ {
+  "front": "Neutralization stoichiometry is {{c1::$n_aM_aV_a = n_bM_bV_b$}}, where n counts {{c2::protons donated or accepted}}.",
+  "fp": "546d71646a8c",
+  "yield": "ULTRA_HIGH",
+  "why": "n M V = n M V neutralization with polyprotic n is a calculation asked every exam"
+ },
+ {
+  "front": "On a plot of gas evolved versus time, the plateau height is set by {{c1::the limiting reagent}} and the initial slope by {{c2::the rate}}.",
+  "fp": "20c455766d93",
+  "yield": "HIGH",
+  "why": "Separating plateau (yield) from slope (rate) is a classic passage figure"
+ },
+ {
+  "front": "One hemoglobin tetramer binds {{c1::4}} $O_2$ molecules, so one mole of Hb carries {{c2::4 moles}} of oxygen.",
+  "fp": "4ac3865b211a",
+  "yield": "LOW",
+  "why": "Hb binds 4 O2 is respiratory physiology covered in that deck"
+ },
+ {
+  "front": "Outline a gravimetric analysis calculation.",
+  "fp": "440a891e016d",
+  "yield": "MEDIUM",
+  "why": "Gravimetric analysis outline is secondary lab-methods content"
+ },
+ {
+  "front": "Outline balancing a redox half-reaction in acidic solution.",
+  "fp": "84387edb1a17",
+  "yield": "HIGH",
+  "why": "Half-reaction balancing in acid is the standard redox-balancing procedure"
+ },
+ {
+  "front": "Oxidation is {{c1::loss of electrons}} and appears as {{c2::an increase in oxidation number}}.",
+  "fp": "13674cbe67b1",
+  "yield": "ULTRA_HIGH",
+  "why": "Oxidation as electron loss / rising oxidation number is tested every exam"
+ },
+ {
+  "front": "Percent yield is {{c1::actual over theoretical yield}} times 100, and the theoretical yield always comes from {{c2::the limiting reagent}}.",
+  "fp": "783718cdda24",
+  "yield": "ULTRA_HIGH",
+  "why": "Percent yield from the limiting reagent is a core calculation every exam"
+ },
+ {
+  "front": "State the dilution equation.",
+  "fp": "f4067208dc70",
+  "yield": "ULTRA_HIGH",
+  "why": "M1V1 = M2V2 dilution is used on essentially every exam"
+ },
+ {
+  "front": "The 22.4 L per mole shortcut holds only at {{c1::STP}}; at body temperature one mole of gas occupies about {{c2::25.4 L}}.",
+  "fp": "875f4cd7180a",
+  "yield": "HIGH",
+  "why": "Non-STP molar volume (25.4 L at 37 C) is a frequent trap"
+ },
+ {
+  "front": "The limiting reagent sets {{c1::the theoretical yield}}; leftover excess equals {{c2::initial moles minus moles consumed}}.",
+  "fp": "bac3d021893a",
+  "yield": "ULTRA_HIGH",
+  "why": "Limiting reagent sets yield; excess leftover calc is tested every exam"
+ },
+ {
+  "front": "To convert an acid-balanced equation to basic conditions, add {{c1::hydroxide}} to both sides to neutralize $H^{+}$, forming {{c2::water}}.",
+  "fp": "5e1579886a79",
+  "yield": "MEDIUM",
+  "why": "Converting to basic conditions is a secondary redox-balancing step"
+ },
+ {
+  "front": "Water anchors: one liter of water is {{c1::1 kg}} and about {{c2::55.5 mol}}.",
+  "fp": "5aa8bd4fec3a",
+  "yield": "MEDIUM",
+  "why": "1 L water = 1 kg = 55.5 mol are helpful anchors, rarely scored directly"
+ },
+ {
+  "front": "What does percent mass per volume mean in a clinical passage?",
+  "fp": "cf2696f8be96",
+  "yield": "HIGH",
+  "why": "Percent mass/volume to molarity (0.9 percent saline) appears in clinical passages"
+ },
+ {
+  "front": "What estimation habit keeps stoichiometry fast on test day?",
+  "fp": "e814ae2e273b",
+  "yield": "LOW",
+  "why": "Generic estimation advice, not tested content"
+ },
+ {
+  "front": "What is a back titration and when is it used?",
+  "fp": "b56de2b71126",
+  "yield": "MEDIUM",
+  "why": "Back titration is a plausible but secondary lab-passage technique"
+ },
+ {
+  "front": "What is the difference between molarity and molality?",
+  "fp": "54faef2555f2",
+  "yield": "LOW",
+  "why": "Restates the molarity vs molality cloze card in this deck"
+ },
+ {
+  "front": "What is the mass percent of oxygen in water ($M=18$)?",
+  "fp": "64bc9ad00630",
+  "yield": "MEDIUM",
+  "why": "Mass percent composition worked example; supporting practice"
+ },
+ {
+  "front": "What is the molar volume of an ideal gas at STP?",
+  "fp": "63a3df43ee17",
+  "yield": "ULTRA_HIGH",
+  "why": "22.4 L/mol at STP is a foundational number used in gas calculations"
+ },
+ {
+  "front": "What is the overall yield of a three-step synthesis with yields of 80, 50, and 50 percent?",
+  "fp": "f5ef27491d21",
+  "yield": "MEDIUM",
+  "why": "Multiplying multistep yields is a secondary synthesis calculation"
+ },
+ {
+  "front": "Which gas law combines all four variables?",
+  "fp": "8d8f5c41b7d0",
+  "yield": "LOW",
+  "why": "Restates the ideal gas law card in this deck"
+ },
+ {
+  "front": "Which numbers in a calculation never limit significant figures?",
+  "fp": "91e554e9a011",
+  "yield": "LOW",
+  "why": "Significant-figure rules are not scored on the MCAT"
+ },
+ {
+  "front": "Why does making a molar solution require filling to a volumetric mark rather than adding a set solvent volume?",
+  "fp": "dffda637c1a5",
+  "yield": "LOW",
+  "why": "Volumetric-flask rationale is lab detail behind the molarity definition card"
+ },
+ {
+  "front": "Why is the dilution relation $M_1V_1 = M_2V_2$ valid?",
+  "fp": "6fe3fa80582f",
+  "yield": "MEDIUM",
+  "why": "Why M1V1 = M2V2 holds is supporting reasoning for the dilution card"
+ },
+ {
+  "front": "Why must a titrant be standardized against a primary standard?",
+  "fp": "84292bbf42f3",
+  "yield": "MEDIUM",
+  "why": "Standardizing titrant against a primary standard is secondary lab-methods content"
+ }
+]

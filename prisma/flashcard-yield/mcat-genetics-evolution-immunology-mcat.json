@@ -15,37 +15,37 @@
   "front": "A child with congenital heart defects, hypocalcemia, and recurrent fungal and viral infections lacks a {{c1::thymus}}.",
   "fp": "110a8a452b45",
   "yield": "MEDIUM",
-  "why": "DiGeorge illustrates thymus-dependent T cell maturation; clinical flavor"
+  "why": "DiGeorge as thymus-absence example; passage-level application"
  },
  {
   "front": "A silent mutation:",
   "fp": "60314b931193",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1B mutation type) but deck slug names genetics; kept visible"
+  "yield": "ULTRA_HIGH",
+  "why": "Silent mutation definition is 1C content tested every year"
  },
  {
   "front": "A SNP is:",
   "fp": "b2f537872179",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1C variation) but deck slug names genetics; kept visible"
+  "yield": "HIGH",
+  "why": "SNP definition is a common genetics discrete"
  },
  {
   "front": "A transfusion reaction from IgM antibody against donor red cell antigens is which hypersensitivity type?",
   "fp": "fed164c8e2fa",
-  "yield": "MEDIUM",
-  "why": "Type II example illustrating the tested hypersensitivity definition"
+  "yield": "HIGH",
+  "why": "Transfusion reaction as type II is a standard hypersensitivity application"
  },
  {
   "front": "A tuberculin skin test induration peaks at 48 to 72 hours because it is mediated by {{c1::T cells}}, not antibody.",
   "fp": "62fd44764c90",
   "yield": "MEDIUM",
-  "why": "Type IV timing example; supporting detail on a tested mechanism"
+  "why": "Tuberculin timing restates the type IV card"
  },
  {
   "front": "Affinity maturation improves antibodies through {{c1::somatic hypermutation plus selection in germinal centers}}.",
   "fp": "9d9f8120fa66",
   "yield": "MEDIUM",
-  "why": "Affinity maturation is secondary to primary/secondary response basics"
+  "why": "Affinity maturation/somatic hypermutation is second-tier germinal-center detail"
  },
  {
   "front": "An infant has no T or B cell function and dies from live vaccines and opportunistic organisms.",
@@ -56,14 +56,14 @@
  {
   "front": "Analogous structures are evidence of:",
   "fp": "346eb31420fd",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1C evolution) but deck slug names evolution; kept visible"
+  "yield": "ULTRA_HIGH",
+  "why": "Analogous structures and convergent evolution are tested every year"
  },
  {
   "front": "Antivenom and rabies immune globulin provide {{c1::passive artificial}} immunity. What is the tradeoff?",
   "fp": "2f5ec682369f",
-  "yield": "MEDIUM",
-  "why": "Passive artificial immunity tradeoff is a useful second step"
+  "yield": "HIGH",
+  "why": "Passive artificial immunity tradeoff is commonly tested"
  },
  {
   "front": "Antivenom and RhoGAM confer {{c1::passive}} immunity, which acts immediately but leaves no memory.",
@@ -75,43 +75,43 @@
   "front": "Autoimmunity can arise when a microbial epitope resembles a host protein, a mechanism called {{c1::molecular mimicry}}.",
   "fp": "af181eb90fff",
   "yield": "MEDIUM",
-  "why": "Molecular mimicry illustrates tested self vs nonself failure"
+  "why": "Molecular mimicry is a plausible passage mechanism, not outline content"
  },
  {
   "front": "CD8+ cytotoxic T cells kill targets via {{c1::perforin pores plus granzyme-triggered apoptosis}} (and the Fas-FasL pathway).",
   "fp": "0c62c30731fe",
-  "yield": "HIGH",
-  "why": "CD8 killing via perforin/granzyme is core cell-mediated immunity"
+  "yield": "ULTRA_HIGH",
+  "why": "CD8 killing via perforin/granzyme is the core cell-mediated mechanism"
  },
  {
   "front": "Class switch recombination changes an antibody's {{c1::heavy-chain constant region only}} — antigen specificity is preserved.",
   "fp": "30863bb73663",
-  "yield": "MEDIUM",
-  "why": "Class switching preserves specificity; secondary to antibody structure basics"
+  "yield": "HIGH",
+  "why": "Class switching changes constant region only; common discrete"
  },
  {
   "front": "Clonal selection theory: antigen encounters a {{c1::pre-existing lymphocyte bearing a randomly generated matching receptor}} and expands it.",
   "fp": "f1de94c30d1f",
-  "yield": "MEDIUM",
-  "why": "Fuller variant of the clonal selection card; supporting nuance"
+  "yield": "HIGH",
+  "why": "Clonal selection theory; restates the ultra-high clonal selection card"
  },
  {
   "front": "Compare MHC class I and class II.",
   "fp": "abe4e0210ca0",
-  "yield": "HIGH",
-  "why": "MHC I vs II comparison is core tested content"
+  "yield": "ULTRA_HIGH",
+  "why": "MHC I vs II is foundational and tested every year"
  },
  {
   "front": "Compare primary and secondary antibody responses on lag time, magnitude, and dominant isotype.",
   "fp": "421d496200da",
-  "yield": "HIGH",
-  "why": "Primary vs secondary response is core; basis of vaccination questions"
+  "yield": "ULTRA_HIGH",
+  "why": "Primary vs secondary response kinetics is tested every year"
  },
  {
   "front": "Contrast innate and adaptive immunity.",
   "fp": "3fe173409c6b",
-  "yield": "HIGH",
-  "why": "Innate vs adaptive contrast is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Innate vs adaptive contrast is the foundation of the immunology section"
  },
  {
   "front": "Cross-presentation allows dendritic cells to display {{c1::exogenous antigen on MHC class I}} to prime CD8+ T cells.",
@@ -122,92 +122,92 @@
  {
   "front": "Describe antibody structure.",
   "fp": "ea437ea372fd",
-  "yield": "HIGH",
-  "why": "Antibody structure is explicitly on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Antibody structure is foundational, tested every year"
  },
  {
   "front": "Distinguish active and passive immunity.",
   "fp": "ebabf72a8317",
-  "yield": "HIGH",
-  "why": "Active vs passive immunity is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Active vs passive immunity is tested every year"
  },
  {
   "front": "Fever, rash, arthralgia, and glomerulonephritis a week after antiserum treatment reflect which mechanism?",
   "fp": "30537eed1594",
   "yield": "MEDIUM",
-  "why": "Serum sickness illustrates type III; clinical flavor on a tested mechanism"
+  "why": "Serum sickness as type III; restates the type III card"
  },
  {
   "front": "Genetic drift has the largest effect in:",
   "fp": "cf7bebdf8570",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1C drift) but deck slug names evolution; kept visible"
+  "yield": "ULTRA_HIGH",
+  "why": "Drift strongest in small populations is 1C content tested every year"
  },
  {
   "front": "How do lymphocytes generate millions of distinct receptor specificities from a limited set of genes?",
   "fp": "53c0ceb72912",
-  "yield": "MEDIUM",
-  "why": "V(D)J recombination is a common passage detail supporting clonal selection"
+  "yield": "HIGH",
+  "why": "V(D)J recombination generating diversity is commonly tested"
  },
  {
   "front": "How do vaccines produce protection?",
   "fp": "17456fc398f0",
-  "yield": "HIGH",
-  "why": "Vaccination mechanism is core"
+  "yield": "ULTRA_HIGH",
+  "why": "How vaccines confer memory is tested every year"
  },
  {
   "front": "Humoral vs cell-mediated immunity: match each arm to its principal pathogen targets.",
   "fp": "910b3727aef6",
-  "yield": "HIGH",
-  "why": "Humoral vs cell-mediated targets is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Humoral vs cell-mediated targets is foundational"
  },
  {
   "front": "If a pathogen has $R_0 = 5$, what fraction of the population must be immune to stop sustained transmission?",
   "fp": "9c68bd2bb8fb",
   "yield": "MEDIUM",
-  "why": "Herd immunity threshold calculation is a plausible passage step"
+  "why": "Herd immunity threshold calculation is a plausible but secondary passage step"
  },
  {
   "front": "IgE has two signature roles: {{c1::immediate (type I) hypersensitivity and antiparasitic defense}}.",
   "fp": "da38217de7d6",
-  "yield": "MEDIUM",
-  "why": "IgE roles are supporting detail on type I hypersensitivity"
+  "yield": "HIGH",
+  "why": "IgE roles in allergy and parasites is a common discrete"
  },
  {
   "front": "In a sandwich ELISA, color intensity is proportional to {{c1::antigen concentration}} in the sample.",
   "fp": "a59099870177",
-  "yield": "MEDIUM",
-  "why": "ELISA principle appears often in passages; secondary to immune mechanisms"
+  "yield": "HIGH",
+  "why": "Sandwich ELISA interpretation appears often in experimental passages"
  },
  {
   "front": "Innate immunity responds within {{c1::minutes to hours, without antigen specificity or memory}}.",
   "fp": "c1bbefbe89a0",
-  "yield": "MEDIUM",
-  "why": "Supporting detail on the innate vs adaptive contrast"
+  "yield": "HIGH",
+  "why": "Innate timing/nonspecificity; restates the innate vs adaptive card"
  },
  {
   "front": "Maternal IgG crossing the placenta and IgA in breast milk exemplify {{c1::passive natural}} immunity.",
   "fp": "575b6177cb3c",
-  "yield": "MEDIUM",
-  "why": "Passive natural classification; useful second step on active/passive"
+  "yield": "HIGH",
+  "why": "Maternal IgG/IgA as passive natural immunity is commonly tested"
  },
  {
   "front": "MHC class II presents peptides derived from {{c1::endocytosed (exogenous) antigens}} degraded in acidified vesicles.",
   "fp": "2ac74dd5e370",
   "yield": "MEDIUM",
-  "why": "MHC II antigen source is core; invariant chain is supporting detail"
+  "why": "MHC II exogenous loading detail; restates the MHC I vs II card"
  },
  {
   "front": "Name the three main protective outcomes of complement activation.",
   "fp": "35d15fe6b6f0",
-  "yield": "MEDIUM",
-  "why": "Complement outcomes are secondary to B/T cell basics"
+  "yield": "HIGH",
+  "why": "Complement outcomes (opsonization, chemotaxis, MAC) are commonly tested"
  },
  {
   "front": "Neutrophils vs macrophages as phagocytes: what is the key functional distinction?",
   "fp": "db494f07058b",
-  "yield": "MEDIUM",
-  "why": "Neutrophil vs macrophage roles are supporting innate-immunity detail"
+  "yield": "HIGH",
+  "why": "Neutrophil vs macrophage roles is a common discrete"
  },
  {
   "front": "Newborns receive {{c1::IgG}} across the placenta and secretory IgA through breast milk.",
@@ -218,26 +218,26 @@
  {
   "front": "NK cells kill host cells that {{c1::have downregulated MHC class I}} — the 'missing self' signal.",
   "fp": "9a3791021e16",
-  "yield": "MEDIUM",
-  "why": "NK missing-self recognition is a common passage concept"
+  "yield": "HIGH",
+  "why": "NK missing-self recognition is commonly tested"
  },
  {
   "front": "Pathogen-specific {{c1::IgM}} without IgG indicates an acute primary infection rather than past exposure.",
   "fp": "a053c76fe6b3",
-  "yield": "MEDIUM",
-  "why": "IgM vs IgG serology is a plausible data-interpretation step"
+  "yield": "HIGH",
+  "why": "IgM-only serology indicating acute infection is a common passage inference"
  },
  {
   "front": "Peanut exposure causes airway swelling within minutes, mediated by {{c1::IgE}} bound to mast cells.",
   "fp": "1679d904b67e",
   "yield": "MEDIUM",
-  "why": "Clinical example of type I; the definition card is the primary one"
+  "why": "Peanut anaphylaxis example restates the type I card"
  },
  {
   "front": "Poison ivy contact dermatitis is type {{c1::IV — delayed, T-cell mediated}} hypersensitivity via haptenized self proteins.",
   "fp": "bc36a3b3c14d",
-  "yield": "MEDIUM",
-  "why": "Hapten concept and type IV example; supporting detail"
+  "yield": "HIGH",
+  "why": "Poison ivy as type IV hapten-mediated is a standard hypersensitivity example"
  },
  {
   "front": "Recovering from measles infection confers {{c1::active natural}} immunity.",
@@ -249,25 +249,25 @@
   "front": "Rh disease threatens the SECOND Rh+ fetus of an Rh- mother because {{c1::first-delivery sensitization yields placenta-crossing anti-Rh IgG}}.",
   "fp": "48e015ad0d98",
   "yield": "MEDIUM",
-  "why": "Rh disease mechanism is a classic type II application"
+  "why": "Rh disease sensitization logic is a passage-level application"
  },
  {
   "front": "State the 'rule of 8' that matches MHC class to T-cell co-receptor.",
   "fp": "8a4abf6f182e",
   "yield": "MEDIUM",
-  "why": "Mnemonic restating the MHC I/II comparison; useful ordering aid"
+  "why": "Rule-of-8 mnemonic restates the MHC I vs II card"
  },
  {
   "front": "T lymphocytes complete maturation and selection in the {{c1::thymus}}, whereas B cells mature in the bone marrow.",
   "fp": "3f00b31cebd5",
-  "yield": "HIGH",
-  "why": "T cells mature in thymus, B cells in bone marrow is core"
+  "yield": "ULTRA_HIGH",
+  "why": "T cells mature in thymus, B cells in bone marrow is tested every year"
  },
  {
   "front": "T-dependent B cell activation requires which two signals from a helper T cell?",
   "fp": "89fecc07b40e",
   "yield": "MEDIUM",
-  "why": "CD40L/cytokine two-signal detail is secondary"
+  "why": "CD40L plus cytokine two-signal detail is second-tier"
  },
  {
   "front": "Th1 vs Th2 helper subsets: name each one's principal target cell and signature cytokine.",
@@ -278,14 +278,14 @@
  {
   "front": "The antibody class dominating mucosal secretions and breast milk is {{c1::secretory IgA, a dimer}}.",
   "fp": "8eeed0ac2478",
-  "yield": "MEDIUM",
-  "why": "Secretory IgA dimer is supporting antibody-class detail"
+  "yield": "HIGH",
+  "why": "Secretory IgA as mucosal dimer is a common isotype discrete"
  },
  {
   "front": "The first antibody class secreted in any primary response is {{c1::IgM}} — a pentamer and the strongest complement activator.",
   "fp": "489aba07f4e4",
-  "yield": "MEDIUM",
-  "why": "IgM pentamer first in primary response is supporting detail"
+  "yield": "ULTRA_HIGH",
+  "why": "IgM as first isotype, pentamer, strongest complement activator is core isotype content"
  },
  {
   "front": "The neutral theory of molecular evolution proposes that most variation is:",
@@ -296,80 +296,80 @@
  {
   "front": "The only antibody class that crosses the placenta is {{c1::IgG}}, providing passive immunity to the fetus.",
   "fp": "a47a763cbc33",
-  "yield": "HIGH",
-  "why": "IgG placental transfer is a high-frequency discrete fact"
+  "yield": "ULTRA_HIGH",
+  "why": "IgG as the only placenta-crossing isotype is tested every year"
  },
  {
   "front": "Thymic negative selection deletes T cells that {{c1::bind self-antigen on self-MHC too strongly}} — the basis of central tolerance.",
   "fp": "b1344dda2654",
-  "yield": "MEDIUM",
-  "why": "Central tolerance mechanism supports tested self vs nonself recognition"
+  "yield": "HIGH",
+  "why": "Negative selection as central tolerance is commonly tested"
  },
  {
   "front": "Thymic positive selection tests whether a developing T cell {{c1::binds self-MHC with moderate (useful) affinity}}; failures die by neglect.",
   "fp": "d9aff34c8e10",
   "yield": "MEDIUM",
-  "why": "Positive selection/MHC restriction is supporting detail on tolerance"
+  "why": "Positive selection/MHC restriction is second-tier thymic detail"
  },
  {
   "front": "Type I hypersensitivity in one line: {{c1::IgE-armed mast cells degranulate when allergen crosslinks their receptors}}.",
   "fp": "380f49deba98",
-  "yield": "HIGH",
-  "why": "Type I hypersensitivity definition is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Type I hypersensitivity mechanism is tested every year"
  },
  {
   "front": "Type II hypersensitivity involves {{c1::IgG or IgM binding fixed cell-surface antigens}} — e.g., transfusion reactions, hemolytic disease of the newborn.",
   "fp": "84f3f50b415a",
-  "yield": "HIGH",
-  "why": "Type II hypersensitivity definition is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Type II hypersensitivity with transfusion/HDN examples is core content"
  },
  {
   "front": "Type III hypersensitivity results from {{c1::deposition of circulating antigen-antibody complexes}} in vessels, joints, and glomeruli.",
   "fp": "857c78b8b47e",
   "yield": "HIGH",
-  "why": "Type III hypersensitivity definition is core"
+  "why": "Type III immune-complex deposition is commonly tested"
  },
  {
   "front": "Type O individuals are universal red cell donors but can receive only type O. Explain both halves.",
   "fp": "fcf1a9665e2a",
-  "yield": "HIGH",
-  "why": "ABO blood typing reasoning is core"
+  "yield": "ULTRA_HIGH",
+  "why": "ABO donor/recipient logic is tested every year"
  },
  {
   "front": "Vaccination confers {{c1::active artificial}} immunity — slow to develop but memory-forming.",
   "fp": "0d55e633a172",
-  "yield": "MEDIUM",
-  "why": "Active artificial classification; supporting detail on vaccination"
+  "yield": "HIGH",
+  "why": "Vaccination as active artificial immunity; restates the active/passive card"
  },
  {
   "front": "What causes autoimmune disease?",
   "fp": "c4857b930253",
   "yield": "HIGH",
-  "why": "Autoimmunity as failure of self-tolerance is core"
+  "why": "Autoimmunity as failed self-tolerance is a common discrete"
  },
  {
   "front": "What do B cells and T cells each do?",
   "fp": "a871e058ea47",
-  "yield": "HIGH",
-  "why": "B vs T cell roles is core"
+  "yield": "ULTRA_HIGH",
+  "why": "B vs T cell roles is foundational"
  },
  {
   "front": "What is clonal selection?",
   "fp": "85f9c0904e4a",
-  "yield": "HIGH",
-  "why": "Plain clonal selection definition is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Clonal selection is foundational adaptive-immunity content"
  },
  {
   "front": "Which best defines an evolutionary bottleneck's genetic consequence?",
   "fp": "36d46abeb057",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1C bottleneck) but deck slug names evolution; kept visible"
+  "yield": "HIGH",
+  "why": "Bottleneck reducing diversity is a common 1C discrete"
  },
  {
   "front": "Which mechanism of evolution acts randomly rather than adaptively?",
   "fp": "58387bde70db",
-  "yield": "MEDIUM",
-  "why": "Outside the 3B row (1C drift) but deck slug names evolution; kept visible"
+  "yield": "HIGH",
+  "why": "Drift as the random mechanism; restates the small-population card"
  },
  {
   "front": "Which single infection pattern points specifically to a terminal complement (C5 through C9) deficiency?",
@@ -381,13 +381,13 @@
   "front": "Why can a secondary immune response begin before symptoms even appear?",
   "fp": "05254dfda9a2",
   "yield": "MEDIUM",
-  "why": "Mechanistic supporting detail on the secondary response"
+  "why": "Why memory responds faster; supporting reasoning for the primary/secondary card"
  },
  {
   "front": "Why is a Western blot used to confirm a positive HIV ELISA rather than replacing it?",
   "fp": "380080c59fe1",
-  "yield": "MEDIUM",
-  "why": "Sensitivity vs specificity screening logic is a plausible passage step"
+  "yield": "HIGH",
+  "why": "Screening vs confirmatory test sensitivity/specificity logic is commonly tested"
  },
  {
   "front": "Why is an Rh-negative mother's first Rh-positive pregnancy usually unaffected while the second is at risk?",

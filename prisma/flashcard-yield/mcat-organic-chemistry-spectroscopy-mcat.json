@@ -1,0 +1,410 @@
+[
+ {
+  "front": "$C_3H_6O_2$: IR broad 2500-3300 plus 1710; NMR 11.8 (1H, s), 2.4 (2H, q), 1.2 (3H, t). Identify it.",
+  "fp": "426c478b5b72",
+  "yield": "HIGH",
+  "why": "Integrated acid identification exercises the core IR and NMR signatures"
+ },
+ {
+  "front": "$C_4H_8O$: IR 1715 cm$^{-1}$; NMR 1.05 (3H, t), 2.14 (3H, s), 2.45 (2H, q). Identify it.",
+  "fp": "49beec8e688c",
+  "yield": "HIGH",
+  "why": "Ketone identification from IR plus ethyl/methyl patterns mirrors passage questions"
+ },
+ {
+  "front": "$C_7H_8O$: 5H multiplet at 7.3, 2H singlet at 4.6, 1H broad singlet that vanishes after a $D_2O$ shake. Identify it.",
+  "fp": "e5b1495f2b48",
+  "yield": "MEDIUM",
+  "why": "Benzyl alcohol identification is a second-tier integrated example"
+ },
+ {
+  "front": "A {{c1::sharp}} IR band at 3300 plus a weak band near 2100 means a terminal alkyne; an internal alkyne shows {{c2::a weak or absent}} 2100 band.",
+  "fp": "c3028b7cf515",
+  "yield": "HIGH",
+  "why": "Sharp 3300 alkyne C-H vs broad O-H is a common IR trap"
+ },
+ {
+  "front": "A loss of {{c1::15}} mass units from M+ means a methyl group; a loss of {{c1::18}} means water.",
+  "fp": "5d019b781633",
+  "yield": "HIGH",
+  "why": "Loss of 15 and 18 are the most-cited mass-spec fragment losses"
+ },
+ {
+  "front": "A mass spectrum shows M+ at 122 with an M+2 peak about one third as tall. Which halogen is present?",
+  "fp": "836d4880e324",
+  "yield": "ULTRA_HIGH",
+  "why": "Chlorine 3:1 M/M+2 pattern is tested nearly every year"
+ },
+ {
+  "front": "A methyl ketone typically fragments by alpha cleavage to an acylium ion at m/z {{c1::43}}.",
+  "fp": "496f6df7290b",
+  "yield": "MEDIUM",
+  "why": "Acylium m/z 43 is second-tier fragmentation detail"
+ },
+ {
+  "front": "A proton with two nonequivalent neighboring protons appears as {{c1::a doublet of doublets}}, not a triplet.",
+  "fp": "249c4aa33bb1",
+  "yield": "MEDIUM",
+  "why": "Doublet of doublets is beyond the basic n+1 rule"
+ },
+ {
+  "front": "A saturated acyclic $C_nH_{2n+2}$ has {{c1::0}} degrees of unsaturation; each ring or pi bond {{c1::adds one}}.",
+  "fp": "18b6fb2bb1fa",
+  "yield": "HIGH",
+  "why": "Zero-DoU baseline and per-ring/pi-bond count supports the formula card"
+ },
+ {
+  "front": "A sharp narrow peak near {{c1::2250}} $cm^{-1}$ indicates a {{c1::nitrile, $C\\equiv N$}}.",
+  "fp": "3764a180e278",
+  "yield": "MEDIUM",
+  "why": "Nitrile 2250 band is a second-tier IR peak"
+ },
+ {
+  "front": "A signal split into $n+1$ lines means {{c1::n equivalent protons on adjacent carbons}}.",
+  "fp": "3fcf456a0363",
+  "yield": "LOW",
+  "why": "Near-restatement of the n+1 rule card"
+ },
+ {
+  "front": "Alcohol O-H stretches near {{c1::3200-3600}} $cm^{-1}$; carboxylic acid O-H spans {{c1::2500-3300}} $cm^{-1}$.",
+  "fp": "fa5c69c08449",
+  "yield": "ULTRA_HIGH",
+  "why": "Alcohol vs carboxylic acid O-H bands are tested every year"
+ },
+ {
+  "front": "An aldehyde is confirmed in IR by two weak C-H bands near {{c1::2720 and 2820}} cm$^{-1}$, which ketones lack.",
+  "fp": "e539dd14030a",
+  "yield": "HIGH",
+  "why": "Aldehyde C-H doublet is the standard aldehyde-vs-ketone IR discriminator"
+ },
+ {
+  "front": "An ethyl ester's $OCH_2$ quartet sits near {{c1::4.1}} ppm; an ethyl ketone's $CH_2$ quartet near {{c1::2.4}} ppm.",
+  "fp": "ff8f1475337b",
+  "yield": "HIGH",
+  "why": "OCH2 at 4.1 vs CH2 at 2.4 is a common ester-vs-ketone NMR decision"
+ },
+ {
+  "front": "Carbonyl carbons resonate at {{c1::160-220}} ppm in C-13 NMR.",
+  "fp": "2c389659e635",
+  "yield": "MEDIUM",
+  "why": "C-13 carbonyl range is secondary; MCAT emphasizes proton NMR"
+ },
+ {
+  "front": "Conjugation {{c1::lowers}} a carbonyl's IR frequency; small-ring strain {{c1::raises}} it.",
+  "fp": "575025a45bc9",
+  "yield": "HIGH",
+  "why": "Conjugation lowering and ring strain raising C=O frequency is commonly tested"
+ },
+ {
+  "front": "Converting a carboxylic acid to its salt removes the 1710 band and adds a pair near {{c1::1600 and 1400}} cm$^{-1}$.",
+  "fp": "6799bd629ddc",
+  "yield": "LOW",
+  "why": "Carboxylate 1600/1400 pair is trivia-grade IR detail"
+ },
+ {
+  "front": "Degrees of unsaturation of {{c1::4}} combined with proton signals near 7 ppm almost always mean {{c2::a benzene ring}}.",
+  "fp": "4b9d908a0b58",
+  "yield": "ULTRA_HIGH",
+  "why": "DoU 4 plus 7 ppm signals meaning benzene is the standard aromatic-ring inference"
+ },
+ {
+  "front": "Deuterated solvents such as $CDCl_3$ are used because {{c1::deuterium does not appear in the proton spectrum}}.",
+  "fp": "3575c2070a4d",
+  "yield": "LOW",
+  "why": "Deuterated solvent rationale is instrument trivia"
+ },
+ {
+  "front": "DoU 5; IR 1685 cm$^{-1}$; NMR 7.9 (2H), 7.5 (3H), 2.6 (3H, s). Identify it.",
+  "fp": "75613269c896",
+  "yield": "MEDIUM",
+  "why": "Acetophenone identification is a second-tier integrated example"
+ },
+ {
+  "front": "Ethyl acetate and methyl propanoate are both $C_4H_8O_2$. How does proton NMR tell them apart?",
+  "fp": "13f122bec410",
+  "yield": "HIGH",
+  "why": "Ester regiochemistry by NMR shift is a common structure-elucidation question"
+ },
+ {
+  "front": "How do you predict the number of H-NMR signals a molecule gives?",
+  "fp": "f6c49e23c5cd",
+  "yield": "ULTRA_HIGH",
+  "why": "Counting equivalent proton sets is required on nearly every NMR item"
+ },
+ {
+  "front": "How do you spot O-H and N-H protons in an H-NMR spectrum?",
+  "fp": "1f76e87d5f3e",
+  "yield": "ULTRA_HIGH",
+  "why": "D2O exchange and broad O-H/N-H peaks are tested every year"
+ },
+ {
+  "front": "How does a coupling constant distinguish cis from trans protons across a double bond?",
+  "fp": "f0e522de8506",
+  "yield": "MEDIUM",
+  "why": "Cis/trans coupling constants are second-tier NMR detail"
+ },
+ {
+  "front": "How does IR alone separate benzaldehyde from benzyl alcohol?",
+  "fp": "b3b67bdb7a26",
+  "yield": "HIGH",
+  "why": "Presence/absence of C=O vs O-H bands is a standard IR discrimination"
+ },
+ {
+  "front": "How does IR separate an ester, a ketone, and an amide?",
+  "fp": "2e4a0aeb3d32",
+  "yield": "ULTRA_HIGH",
+  "why": "Ester/ketone/amide C=O positions are the core IR carbonyl distinctions"
+ },
+ {
+  "front": "How does NMR distinguish ortho, meta, and para disubstituted benzenes?",
+  "fp": "0b020780bfa5",
+  "yield": "HIGH",
+  "why": "Para symmetry giving two doublets is a common substitution-pattern question"
+ },
+ {
+  "front": "How does the degree of unsaturation (index of hydrogen deficiency) help interpret spectra?",
+  "fp": "64b94f92bf3a",
+  "yield": "ULTRA_HIGH",
+  "why": "IHD formula is used in calculations every year"
+ },
+ {
+  "front": "In ¹H NMR, what does the chemical shift (ppm) tell you?",
+  "fp": "6e3b37c9d82a",
+  "yield": "ULTRA_HIGH",
+  "why": "Chemical shift meaning and the standard shift table are foundational"
+ },
+ {
+  "front": "In H-NMR, {{c1::integration}} gives relative proton counts and {{c1::splitting}} gives neighbor counts.",
+  "fp": "36e7e28c67d8",
+  "yield": "ULTRA_HIGH",
+  "why": "Integration = proton count, splitting = neighbor count is the core NMR triad"
+ },
+ {
+  "front": "In mass spec the tallest peak is the {{c1::base peak}} and the intact-ion peak is the {{c1::molecular ion, M+}}.",
+  "fp": "51208ff573a1",
+  "yield": "HIGH",
+  "why": "Base peak vs molecular ion distinction is standard mass-spec content"
+ },
+ {
+  "front": "Integration gives {{c1::relative}} proton counts, so a 3:2:1 pattern in a 12-hydrogen molecule means {{c2::6H, 4H, and 2H}}.",
+  "fp": "e4a9cea34af6",
+  "yield": "HIGH",
+  "why": "Scaling integration ratios to the formula is a common calculation step"
+ },
+ {
+  "front": "IR 1735 $cm^{-1}$; H-NMR 3H triplet, 2H quartet at 4.1 ppm, 3H singlet at 2.0 ppm. What is it?",
+  "fp": "0e48012b2fc3",
+  "yield": "MEDIUM",
+  "why": "Ethyl acetate identification restates the ester shift card as an example"
+ },
+ {
+  "front": "IR shows 1710 $cm^{-1}$ with no O-H; H-NMR is a single 6H singlet at 2.1 ppm. Identify it.",
+  "fp": "fbba5221cde7",
+  "yield": "MEDIUM",
+  "why": "Acetone identification is a second-tier symmetry example"
+ },
+ {
+  "front": "Losses of 17, 45, and 31 mass units from M+ suggest which fragments?",
+  "fp": "3d0034c75c6d",
+  "yield": "MEDIUM",
+  "why": "Losses of 17/45/31 are second-tier fragment values"
+ },
+ {
+  "front": "M and M+2 peaks of nearly {{c1::equal}} height indicate {{c1::bromine}}.",
+  "fp": "1c61c45c28c0",
+  "yield": "ULTRA_HIGH",
+  "why": "Bromine 1:1 M/M+2 pattern is tested nearly every year"
+ },
+ {
+  "front": "More conjugation shifts UV-Vis absorption toward {{c1::longer wavelength (lower energy)}}.",
+  "fp": "8baa87e804ed",
+  "yield": "ULTRA_HIGH",
+  "why": "Conjugation shifting UV-Vis to longer wavelength is the core UV-Vis fact"
+ },
+ {
+  "front": "On what basis does a mass spectrometer separate ions?",
+  "fp": "fd6bee9fa354",
+  "yield": "HIGH",
+  "why": "Separation by m/z is the basic mass-spec principle"
+ },
+ {
+  "front": "Protons on a carbon bearing oxygen appear near {{c1::3.5-4.5}} ppm.",
+  "fp": "3fad3a63683f",
+  "yield": "ULTRA_HIGH",
+  "why": "3.5-4.5 ppm for protons on oxygen-bearing carbon is a shift tested every year"
+ },
+ {
+  "front": "State the n+1 rule for NMR spin-spin splitting.",
+  "fp": "475fb488f14e",
+  "yield": "ULTRA_HIGH",
+  "why": "The n+1 splitting rule is tested on essentially every NMR item"
+ },
+ {
+  "front": "The number of carbon-13 signals equals the count of {{c1::chemically distinct carbons}}, so para-xylene gives only {{c2::3}} signals.",
+  "fp": "73a2d2bbe5c9",
+  "yield": "HIGH",
+  "why": "Symmetry collapsing C-13 signals is a common signal-count question"
+ },
+ {
+  "front": "TMS is defined as {{c1::0}} ppm, and shifts in ppm are {{c1::independent of spectrometer field strength}}.",
+  "fp": "cdca77c7ee80",
+  "yield": "MEDIUM",
+  "why": "Field-independence of ppm is supporting NMR theory"
+ },
+ {
+  "front": "Two candidates for $C_3H_6O$ are acetone and propanal. Which single NMR feature settles it?",
+  "fp": "140927b92c25",
+  "yield": "HIGH",
+  "why": "Aldehyde proton near 9.7 vs acetone singlet is a standard discriminator"
+ },
+ {
+  "front": "Two sharp peaks near 3300 $cm^{-1}$ - what functional group?",
+  "fp": "7dda7d29e44f",
+  "yield": "LOW",
+  "why": "Near-restatement of the N-H IR card"
+ },
+ {
+  "front": "What are the H-NMR signatures of ethyl, isopropyl, and tert-butyl groups?",
+  "fp": "281648f1bcac",
+  "yield": "ULTRA_HIGH",
+  "why": "Ethyl/isopropyl/tert-butyl NMR patterns are recognized on nearly every spectrum"
+ },
+ {
+  "front": "What does an M+2 peak roughly equal to M⁺ indicate in mass spec?",
+  "fp": "c8adc59c51c1",
+  "yield": "LOW",
+  "why": "Near-restatement of the bromine and chlorine isotope-pattern cards"
+ },
+ {
+  "front": "What does an odd-numbered molecular ion mass suggest?",
+  "fp": "2caf8b3c3996",
+  "yield": "HIGH",
+  "why": "Nitrogen rule is a common quick mass-spec inference"
+ },
+ {
+  "front": "What does Beer's law let you extract from a UV-Vis reading?",
+  "fp": "c837f23ede22",
+  "yield": "ULTRA_HIGH",
+  "why": "Beer law A = elc is a calculation equation used every year"
+ },
+ {
+  "front": "What does C-13 NMR reveal that H-NMR cannot?",
+  "fp": "78d49dc56d73",
+  "yield": "MEDIUM",
+  "why": "C-13 advantages are supporting detail"
+ },
+ {
+  "front": "What does NMR signal integration measure?",
+  "fp": "43509676e4c8",
+  "yield": "LOW",
+  "why": "Near-restatement of the integration card"
+ },
+ {
+  "front": "What does the IR peak just above ~3000 $\\text{cm}^{-1}$ indicate?",
+  "fp": "01524c768e52",
+  "yield": "HIGH",
+  "why": "sp2 vs sp3 C-H on either side of 3000 is a standard IR check"
+ },
+ {
+  "front": "What does the molecular ion peak (M⁺) tell you in mass spectrometry?",
+  "fp": "086c2b7b9651",
+  "yield": "ULTRA_HIGH",
+  "why": "Molecular ion giving molecular weight is the foundational mass-spec fact"
+ },
+ {
+  "front": "What does UV-Vis spectroscopy detect, and which compounds absorb?",
+  "fp": "d50688b1f867",
+  "yield": "MEDIUM",
+  "why": "Restates the conjugation and 280/260 nm cards"
+ },
+ {
+  "front": "What IR region is the \"fingerprint region\" and why is it useful?",
+  "fp": "a4450a76314e",
+  "yield": "MEDIUM",
+  "why": "Fingerprint region is supporting IR context"
+ },
+ {
+  "front": "What is a common diagnostic fragment loss of m/z 15 or 29 in mass spec?",
+  "fp": "47a03e5d1579",
+  "yield": "LOW",
+  "why": "Near-restatement of the fragment-loss card"
+ },
+ {
+  "front": "What is the IR absorption for a carbonyl (C=O) and why is it diagnostic?",
+  "fp": "d0d1d4254d69",
+  "yield": "ULTRA_HIGH",
+  "why": "C=O near 1700 is the single most-tested IR peak"
+ },
+ {
+  "front": "What is the IR absorption for an N–H bond?",
+  "fp": "fec3c39ce0bd",
+  "yield": "HIGH",
+  "why": "One vs two N-H peaks for amine class is standard IR content"
+ },
+ {
+  "front": "What is the IR signature of an O–H bond (alcohol vs. carboxylic acid)?",
+  "fp": "f28c6021c5e6",
+  "yield": "LOW",
+  "why": "Near-restatement of the alcohol vs acid O-H card"
+ },
+ {
+  "front": "What physically sets an IR stretching frequency?",
+  "fp": "605a381aaa93",
+  "yield": "MEDIUM",
+  "why": "Spring model of IR frequency is supporting theory"
+ },
+ {
+  "front": "What relationship must two protons have for spin-spin splitting to occur?",
+  "fp": "2fbd2e549e58",
+  "yield": "HIGH",
+  "why": "Nonequivalent coupled protons requirement underlies splitting questions"
+ },
+ {
+  "front": "Where do aromatic, vinyl, aldehyde, and carboxylic acid protons appear?",
+  "fp": "46e34b8fe5ec",
+  "yield": "ULTRA_HIGH",
+  "why": "Aromatic/vinyl/aldehyde/acid shift values are tested every year"
+ },
+ {
+  "front": "Which IR features separate an alkene from an aromatic ring?",
+  "fp": "1eb840e15db9",
+  "yield": "MEDIUM",
+  "why": "Alkene vs aromatic IR features are second-tier"
+ },
+ {
+  "front": "Which protons typically appear as broad, variable singlets in ¹H NMR?",
+  "fp": "387b0fabaafe",
+  "yield": "LOW",
+  "why": "Near-restatement of the D2O-exchangeable protons card"
+ },
+ {
+  "front": "Which technique gives formula, which gives connectivity, and which gives functional groups?",
+  "fp": "a094e0c645f0",
+  "yield": "ULTRA_HIGH",
+  "why": "Which technique gives formula, connectivity or functional group is a foundational map"
+ },
+ {
+  "front": "Why are aromatic protons shifted further downfield than electronegativity alone predicts?",
+  "fp": "ad769b7077a5",
+  "yield": "MEDIUM",
+  "why": "Ring current explanation is supporting theory"
+ },
+ {
+  "front": "Why can a symmetric alkene show no C=C absorption in IR?",
+  "fp": "16960957e377",
+  "yield": "MEDIUM",
+  "why": "IR dipole-change requirement is supporting theory"
+ },
+ {
+  "front": "Why do proteins absorb at 280 nm and nucleic acids at 260 nm?",
+  "fp": "ebcc286d7222",
+  "yield": "HIGH",
+  "why": "280 nm protein and 260 nm nucleic acid absorbance is commonly tested"
+ },
+ {
+  "front": "Why is $^{13}C$ NMR less sensitive than $^{1}H$?",
+  "fp": "5b5869398592",
+  "yield": "LOW",
+  "why": "C-13 natural abundance is instrument trivia"
+ }
+]

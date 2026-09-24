@@ -2,8 +2,8 @@
  {
   "front": "Acetazolamide inhibits {{c1::carbonic anhydrase}} in the proximal tubule, causing a bicarbonate diuresis and a metabolic acidosis.",
   "fp": "ef13d59ecb00",
-  "yield": "MEDIUM",
-  "why": "Carbonic anhydrase bicarbonate reclamation is tested; drug name is passage flavor"
+  "yield": "HIGH",
+  "why": "Carbonic anhydrase-dependent bicarbonate reclamation in the PCT is commonly tested; drug is flavor"
  },
  {
   "front": "Addison disease mirrors Conn syndrome: aldosterone deficiency causes hyperkalemia, {{c1::metabolic acidosis}}, hyponatremia, and hypotension.",
@@ -14,8 +14,8 @@
  {
   "front": "ADH increases water reabsorption by inserting:",
   "fp": "a9d548dc6823",
-  "yield": "HIGH",
-  "why": "ADH inserting aquaporins in the collecting duct is a top-frequency fact"
+  "yield": "ULTRA_HIGH",
+  "why": "ADH inserting aquaporins in the collecting duct is tested on essentially every exam"
  },
  {
   "front": "ADH inserts {{c1::aquaporin-2}} channels into the apical membrane of collecting duct principal cells via V2 receptors and cAMP.",
@@ -26,8 +26,8 @@
  {
   "front": "Aldosterone acts by {{c1::transcription}}, upregulating ENaC and Na+/K+-ATPase in principal cells, so its effect takes hours.",
   "fp": "e8ea10875b1e",
-  "yield": "MEDIUM",
-  "why": "Steroid transcriptional mechanism explains aldosterone timing; second step in passages"
+  "yield": "HIGH",
+  "why": "Steroid hormone acting via transcription (slow onset) is a commonly tested principle"
  },
  {
   "front": "At steady state, plasma creatinine varies {{c1::inversely}} with GFR, so a doubled creatinine implies GFR has roughly halved.",
@@ -44,20 +44,20 @@
  {
   "front": "Clearance (UV/P) equals GFR only for a freely filtered substance that is neither reabsorbed nor secreted — the gold standard is {{c1::inulin}}.",
   "fp": "7ca59fc7963d",
-  "yield": "HIGH",
-  "why": "Inulin clearance = GFR is a core clearance concept used in calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "Inulin clearance = GFR is the clearance concept used in calculation every year"
  },
  {
   "front": "Contrast the two cell types of the collecting duct.",
   "fp": "556b421e39cd",
-  "yield": "MEDIUM",
-  "why": "Principal vs intercalated cells is useful for aldosterone/acid-base reasoning"
+  "yield": "HIGH",
+  "why": "Principal (Na+/K+, ADH/aldosterone targets) vs intercalated (H+) cells is a commonly needed distinction"
  },
  {
   "front": "Describe the renin-angiotensin-aldosterone system (RAAS).",
   "fp": "7b442c012033",
-  "yield": "HIGH",
-  "why": "RAAS cascade is core renal/endocrine content"
+  "yield": "ULTRA_HIGH",
+  "why": "RAAS cascade is core renal/endocrine content tested on essentially every exam"
  },
  {
   "front": "Filtration fraction is GFR divided by renal plasma flow, normally about {{c1::20}} percent (125 of 600 mL/min).",
@@ -74,32 +74,32 @@
  {
   "front": "How do the afferent and efferent arterioles control GFR?",
   "fp": "8ad8397a981c",
-  "yield": "HIGH",
-  "why": "Afferent vs efferent arteriole effects on GFR is a classic discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Afferent vs efferent arteriole effects on GFR is a classic discrete tested every year"
  },
  {
   "front": "How do the kidneys regulate blood pH?",
   "fp": "0641dfb1f3e0",
-  "yield": "HIGH",
-  "why": "Renal H+ secretion and bicarbonate reabsorption is core acid-base handling"
+  "yield": "ULTRA_HIGH",
+  "why": "Renal H+ secretion and bicarbonate reabsorption is core acid-base handling every year"
  },
  {
   "front": "How do the limbs of the loop of Henle differ in permeability?",
   "fp": "4c11883f0dbd",
-  "yield": "HIGH",
-  "why": "Descending vs ascending limb permeability is core loop-of-Henle content"
+  "yield": "ULTRA_HIGH",
+  "why": "Descending vs ascending limb permeability is the reasoning step in every renal passage"
  },
  {
   "front": "How does atrial natriuretic peptide oppose the RAAS at the kidney?",
   "fp": "872ff638654c",
-  "yield": "MEDIUM",
-  "why": "ANP opposing RAAS is a plausible second step in volume-regulation passages"
+  "yield": "HIGH",
+  "why": "ANP opposing RAAS is commonly tested in volume-regulation questions"
  },
  {
   "front": "How does filtrate osmolarity change along the nephron?",
   "fp": "cfd2210c9043",
-  "yield": "HIGH",
-  "why": "Osmolarity changes along the nephron is a standard tested sequence"
+  "yield": "ULTRA_HIGH",
+  "why": "Osmolarity changes along the nephron is a standard tested sequence every year"
  },
  {
   "front": "How does the desmopressin response distinguish central from nephrogenic diabetes insipidus?",
@@ -110,8 +110,8 @@
  {
   "front": "How does the kidney compensate for chronic respiratory acidosis?",
   "fp": "61c46b29a3b2",
-  "yield": "MEDIUM",
-  "why": "Renal compensation for respiratory acidosis is a plausible passage second step"
+  "yield": "HIGH",
+  "why": "Renal compensation for respiratory acidosis is a commonly required acid-base step"
  },
  {
   "front": "How does the thick ascending limb reabsorb Mg2+ and Ca2+ without dedicated apical pumps?",
@@ -152,8 +152,8 @@
  {
   "front": "List the four classic consequences of chronic kidney disease and the lost renal function behind each.",
   "fp": "9283af567bf3",
-  "yield": "MEDIUM",
-  "why": "EPO and calcitriol as renal functions are on the outline; CKD framing is flavor"
+  "yield": "HIGH",
+  "why": "Kidney as source of EPO and active vitamin D is outline content; CKD framing is flavor"
  },
  {
   "front": "Loop diuretics cause {{c1::isosthenuria}} — urine near plasma osmolarity — by dismantling the medullary gradient.",
@@ -164,14 +164,14 @@
  {
   "front": "Mannitol is freely filtered but not {{c1::reabsorbed}}, so it holds water in the tubule and produces an osmotic diuresis.",
   "fp": "879dbef86c9c",
-  "yield": "MEDIUM",
-  "why": "Osmotic diuresis principle is tested; mannitol is the illustration"
+  "yield": "HIGH",
+  "why": "Osmotic diuresis principle (unreabsorbed solute holds water) is commonly tested; mannitol is flavor"
  },
  {
   "front": "Name the three basic processes of urine formation.",
   "fp": "1f267e9b5855",
-  "yield": "HIGH",
-  "why": "Filtration, reabsorption, secretion is the foundation of the whole topic"
+  "yield": "ULTRA_HIGH",
+  "why": "Filtration, reabsorption, secretion is the foundation of the topic, tested every year"
  },
  {
   "front": "Name the three triggers of renin release from juxtaglomerular cells.",
@@ -206,8 +206,8 @@
  {
   "front": "Predict the potassium, pH, and blood pressure findings in primary hyperaldosteronism.",
   "fp": "1f9d83848e40",
-  "yield": "MEDIUM",
-  "why": "Hyperaldosteronism findings illustrate aldosterone effects; clinical flavor"
+  "yield": "HIGH",
+  "why": "Predicting hypokalemia/alkalosis/hypertension from aldosterone excess is a classic passage item"
  },
  {
   "front": "Pressure natriuresis makes the {{c1::kidney}} the long-term controller of blood pressure: any pressure rise increases sodium and water excretion.",
@@ -218,26 +218,26 @@
  {
   "front": "Renin cleaves angiotensinogen (made by the {{c1::liver}}) to angiotensin I; ACE on pulmonary endothelium then yields angiotensin II.",
   "fp": "e23dcec8e1cf",
-  "yield": "MEDIUM",
-  "why": "Organ localization of RAAS steps supports the main RAAS card"
+  "yield": "HIGH",
+  "why": "Angiotensinogen from liver and ACE in lungs is a commonly asked RAAS localization"
  },
  {
   "front": "Respiratory compensation for acid-base disturbances acts in {{c1::minutes}}; renal compensation takes days but can generate new bicarbonate.",
   "fp": "e0751dd0fd2b",
-  "yield": "HIGH",
-  "why": "Respiratory (minutes) vs renal (days) compensation is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Respiratory (minutes) vs renal (days) compensation is tested on essentially every exam"
  },
  {
   "front": "The {{c1::proximal tubule}} reabsorbs most filtered solutes, while the {{c2::collecting duct}} fine-tunes water via ADH.",
   "fp": "5ab2ed5e23fa",
-  "yield": "MEDIUM",
-  "why": "Summary of PCT bulk vs CD fine-tuning; overlaps the PCT and ADH cards"
+  "yield": "HIGH",
+  "why": "PCT bulk reabsorption vs collecting duct ADH fine-tuning is core, overlapping the PCT/ADH cards"
  },
  {
   "front": "The loop of Henle is the countercurrent {{c1::multiplier}}; the vasa recta are the countercurrent exchanger.",
   "fp": "29f0844f1c94",
-  "yield": "HIGH",
-  "why": "Loop as multiplier vs vasa recta as exchanger is a named tested distinction"
+  "yield": "MEDIUM",
+  "why": "Multiplier vs exchanger naming is second-tier; the multiplier mechanism card carries the point"
  },
  {
   "front": "The proximal tubule performs {{c1::ammoniagenesis}} from glutamine, generating new bicarbonate while exporting NH4+.",
@@ -248,8 +248,8 @@
  {
   "front": "The thick ascending limb reabsorbs Na+, K+, and Cl- via {{c1::NKCC2}} while remaining water-impermeable — the diluting segment.",
   "fp": "c7041a624391",
-  "yield": "HIGH",
-  "why": "NKCC2 in the water-impermeable thick ascending limb is core loop physiology"
+  "yield": "ULTRA_HIGH",
+  "why": "Water-impermeable thick ascending limb pumping NaCl is the reasoning step in every loop question"
  },
  {
   "front": "The thin descending limb of Henle is permeable to {{c1::water but not solute}}, so filtrate concentrates as it descends.",
@@ -272,20 +272,20 @@
  {
   "front": "What determines whether a molecule is filtered at the glomerulus?",
   "fp": "06a4a1b1d875",
-  "yield": "HIGH",
-  "why": "Size and charge selectivity of glomerular filtration is a core discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Size and charge selectivity of glomerular filtration is a core discrete tested every year"
  },
  {
   "front": "What does ADH (vasopressin) do and where?",
   "fp": "e785ad3d3594",
-  "yield": "HIGH",
-  "why": "ADH source, trigger and collecting-duct action is top-frequency content"
+  "yield": "ULTRA_HIGH",
+  "why": "ADH source, trigger and collecting-duct action is tested on essentially every exam"
  },
  {
   "front": "What does aldosterone do vs. ADH?",
   "fp": "6bf1de57a24d",
-  "yield": "HIGH",
-  "why": "Aldosterone vs ADH contrast is a classic discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Aldosterone vs ADH contrast is a classic discrete tested every year"
  },
  {
   "front": "What does it mean if a substance's clearance is below GFR? Above GFR?",
@@ -296,26 +296,26 @@
  {
   "front": "What is glomerular filtration rate (GFR) and renal clearance?",
   "fp": "b231e0c78813",
-  "yield": "HIGH",
-  "why": "GFR definition and clearance formula UV/P are used in calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "GFR definition and clearance formula UV/P are used in calculation every year"
  },
  {
   "front": "What is reabsorbed in the proximal convoluted tubule (PCT)?",
   "fp": "a26a1b270c09",
-  "yield": "HIGH",
-  "why": "PCT bulk reabsorption of Na+, water, glucose, amino acids is core content"
+  "yield": "ULTRA_HIGH",
+  "why": "PCT bulk reabsorption of Na+, water, glucose, amino acids is tested every year"
  },
  {
   "front": "What is the countercurrent multiplier system?",
   "fp": "0031a87034c1",
-  "yield": "HIGH",
-  "why": "Countercurrent multiplier and medullary gradient is core renal content"
+  "yield": "ULTRA_HIGH",
+  "why": "Countercurrent multiplier and medullary gradient is core renal content tested every year"
  },
  {
   "front": "What is the order of structures in the nephron?",
   "fp": "cb29f099e04a",
-  "yield": "HIGH",
-  "why": "Order of nephron structures is a standard discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Order of nephron structures is a standard discrete tested every year"
  },
  {
   "front": "What three layers form the glomerular filtration barrier, and what property excludes albumin?",
@@ -350,14 +350,14 @@
  {
   "front": "Why does glucosuria appear at plasma glucose around 200 mg/dL even though transport maximum is higher?",
   "fp": "d21680b068db",
-  "yield": "MEDIUM",
-  "why": "Renal threshold for glucose is a common passage fact; splay is second-tier"
+  "yield": "HIGH",
+  "why": "Renal threshold and transport maximum for glucose is a commonly tested passage fact"
  },
  {
   "front": "Why does heavy albuminuria produce both edema and hypercholesterolemia?",
   "fp": "bcae6317f1c9",
-  "yield": "MEDIUM",
-  "why": "Oncotic pressure loss causing edema is tested Starling reasoning; lipid part is flavor"
+  "yield": "HIGH",
+  "why": "Oncotic pressure loss causing edema is commonly tested Starling reasoning; lipid part is flavor"
  },
  {
   "front": "Why does hyperkalemia make cardiac muscle less excitable even though it depolarizes the resting membrane?",
@@ -387,7 +387,7 @@
   "front": "Why does SIADH cause hyponatremia together with inappropriately concentrated urine?",
   "fp": "31f3db35d0a3",
   "yield": "MEDIUM",
-  "why": "SIADH illustrates unregulated ADH; clinical flavor on a HIGH mechanism"
+  "why": "SIADH illustrates unregulated ADH; clinical flavor on a core mechanism"
  },
  {
   "front": "Why is ammonium excretion, rather than titratable acid, the adaptable arm of renal acid excretion?",
@@ -398,8 +398,8 @@
  {
   "front": "Why is creatinine clearance used to estimate GFR, and why does it slightly overestimate the true value?",
   "fp": "09eacd282f2c",
-  "yield": "MEDIUM",
-  "why": "Creatinine as GFR estimate supports the inulin/clearance cards"
+  "yield": "HIGH",
+  "why": "Creatinine clearance as the clinical GFR estimate is a common passage device"
  },
  {
   "front": "Why must blood flow through the vasa recta be slow?",

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do discrete questions differ in Psych/Soc?",
+  "fp": "8e9084c29aea",
+  "yield": "MEDIUM",
+  "why": "Section-specific observation about P/S discretes; secondary tactic"
+ },
+ {
+  "front": "How should you pace discrete questions?",
+  "fp": "0f7ca497310b",
+  "yield": "HIGH",
+  "why": "Pacing discretes fast to bank passage time is used on every science section"
+ },
+ {
+  "front": "Should you do discrete questions first?",
+  "fp": "941deb14ce19",
+  "yield": "MEDIUM",
+  "why": "Ordering tactic; answering in place is the default so rarely changes outcomes"
+ },
+ {
+  "front": "What are discrete questions?",
+  "fp": "fc56fce8d118",
+  "yield": "MEDIUM",
+  "why": "Format fact about discretes; useful orientation, not a scoring tactic"
+ },
+ {
+  "front": "What content is most common in discrete questions?",
+  "fp": "1c37b4bb3d91",
+  "yield": "LOW",
+  "why": "Generic list of common content; restates what content review already covers"
+ },
+ {
+  "front": "What is the biggest risk on discrete questions?",
+  "fp": "d96223b6711e",
+  "yield": "HIGH",
+  "why": "Not overthinking discretes is a tactic applied on every section"
+ },
+ {
+  "front": "What should you do if you do not know a discrete question?",
+  "fp": "ae408e8c4f2a",
+  "yield": "HIGH",
+  "why": "Eliminate, guess, move on applies to every unknown discrete on every section"
+ },
+ {
+  "front": "Why are discrete questions strategically valuable?",
+  "fp": "386269730fd9",
+  "yield": "LOW",
+  "why": "Motivational framing; no actionable tactic beyond the other cards"
+ }
+]

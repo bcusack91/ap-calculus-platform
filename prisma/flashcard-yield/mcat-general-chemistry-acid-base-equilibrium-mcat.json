@@ -1,0 +1,374 @@
+[
+ {
+  "front": "A buffer is 0.20 M acetate and 0.10 M acetic acid ($pK_a$ 4.76). Estimate its pH.",
+  "fp": "6fe7930c985c",
+  "yield": "ULTRA_HIGH",
+  "why": "Henderson-Hasselbalch buffer pH calculation with log 2; appears on essentially every exam"
+ },
+ {
+  "front": "A buffer works effectively only within about {{c1::1 pH unit}} of its $pK_a$, i.e. base-to-acid ratios from 1:10 to 10:1.",
+  "fp": "53aef17b039e",
+  "yield": "HIGH",
+  "why": "Buffer effective range pKa +/- 1; standard buffer-design reasoning step"
+ },
+ {
+  "front": "A monoprotic unknown needs 25 mL of 0.10 M NaOH to reach equivalence. What does that tell you, and what does it not?",
+  "fp": "30b16f1f94da",
+  "yield": "MEDIUM",
+  "why": "Equivalence volume gives moles not strength; secondary titration reasoning"
+ },
+ {
+  "front": "A panicking patient hyperventilates. Using the $CO_2$ and bicarbonate equilibrium, predict the change in blood pH.",
+  "fp": "b5fda54e2768",
+  "yield": "ULTRA_HIGH",
+  "why": "Hyperventilation -> respiratory alkalosis via bicarbonate equilibrium; tested every year"
+ },
+ {
+  "front": "A precipitate forms when the ion product $Q$ is {{c1::greater than}} $K_{sp}$, and the solution is unsaturated when $Q$ is below $K_{sp}$.",
+  "fp": "0868687c602a",
+  "yield": "HIGH",
+  "why": "Q vs Ksp precipitation criterion; common solubility question"
+ },
+ {
+  "front": "A saturated solution of $Mg(OH)_2$ is treated with strong acid. Predict the effect on dissolved $[Mg^{2+}]$.",
+  "fp": "ec6b04c7aca3",
+  "yield": "MEDIUM",
+  "why": "Acid raising Mg(OH)2 solubility; application of the conjugate-base solubility rule on another card"
+ },
+ {
+  "front": "A titration curve is steepest at the {{c1::equivalence point}} and flattest at the {{c2::half-equivalence point}}.",
+  "fp": "8c808f97ac1a",
+  "yield": "ULTRA_HIGH",
+  "why": "Titration curve anatomy: steepest at equivalence, flattest at half-equivalence; core every year"
+ },
+ {
+  "front": "Adding 0.5 equivalents of strong base to a weak acid gives a buffer whose pH equals {{c1::the $pK_a$}}.",
+  "fp": "b957d159ac79",
+  "yield": "MEDIUM",
+  "why": "Half-neutralization gives pH = pKa; alternate framing of the half-equivalence card"
+ },
+ {
+  "front": "Adding a common ion shifts weak-acid ionization {{c1::left}}, decreasing percent dissociation while $K_a$ stays {{c2::unchanged}}.",
+  "fp": "bdbb7bd49eef",
+  "yield": "ULTRA_HIGH",
+  "why": "Common ion shifts ionization, Ka unchanged; Le Chatelier vs constant is a perennial discrete"
+ },
+ {
+  "front": "Adding a common ion to a saturated solution:",
+  "fp": "bf6318cbe500",
+  "yield": "HIGH",
+  "why": "Common ion effect lowers solubility; standard Ksp/Le Chatelier item"
+ },
+ {
+  "front": "Adding an inert gas at constant volume:",
+  "fp": "fba8686fb800",
+  "yield": "HIGH",
+  "why": "Inert gas at constant volume does not shift equilibrium; classic Le Chatelier trap"
+ },
+ {
+  "front": "Amino acid anchors: the alpha carboxyl $pK_a$ is about {{c1::2}} and the alpha amino $pK_a$ is about {{c2::9.5}}.",
+  "fp": "52e43154e706",
+  "yield": "HIGH",
+  "why": "Alpha carboxyl/amino pKa anchors set amino-acid charge states; used constantly in biochem passages"
+ },
+ {
+  "front": "Ammonium has $pK_a = 9.25$. What is the $pK_b$ of ammonia, and is 0.1 M ammonia basic?",
+  "fp": "d328eef45a7a",
+  "yield": "HIGH",
+  "why": "pKa + pKb = 14 conversion applied to ammonia; routine calculation"
+ },
+ {
+  "front": "An amphiprotic species can both donate and accept a proton. Which ones does the MCAT reuse constantly?",
+  "fp": "e335d18b1bc0",
+  "yield": "HIGH",
+  "why": "Amphiprotic species pH = average of flanking pKas; recurring reasoning step"
+ },
+ {
+  "front": "An aqueous $NH_4Cl$ solution is {{c1::acidic}} and an aqueous sodium acetate solution is {{c2::basic}}, by salt hydrolysis.",
+  "fp": "9c29278c39b3",
+  "yield": "ULTRA_HIGH",
+  "why": "Salt hydrolysis: NH4Cl acidic, NaOAc basic, NaCl neutral; tested every administration"
+ },
+ {
+  "front": "Arrhenius, Bronsted-Lowry, and Lewis definitions of an acid: how do they nest?",
+  "fp": "58b65066dd8d",
+  "yield": "HIGH",
+  "why": "Arrhenius/Bronsted/Lewis definitions nest; common discrete"
+ },
+ {
+  "front": "Aspirin overdose is treated by alkalinizing the urine. What is the underlying chemistry?",
+  "fp": "77dab07d83ed",
+  "yield": "MEDIUM",
+  "why": "Aspirin overdose urine alkalinization; clinical example of ion trapping covered on another card"
+ },
+ {
+  "front": "At the first equivalence point of a diprotic acid the dominant species is amphoteric. How do you estimate that pH?",
+  "fp": "b8f246a67996",
+  "yield": "HIGH",
+  "why": "pH at first equivalence of a diprotic acid; recurring polyprotic titration step"
+ },
+ {
+  "front": "At the half-equivalence point of a weak acid titration, pH = {{c1::pKa}}.",
+  "fp": "33ce9affe9ce",
+  "yield": "ULTRA_HIGH",
+  "why": "Half-equivalence pH = pKa; the single most tested titration fact"
+ },
+ {
+  "front": "Autoionization of water produces:",
+  "fp": "938e341d301e",
+  "yield": "MEDIUM",
+  "why": "Water autoionization products; foundational but too basic to cost a point"
+ },
+ {
+  "front": "Blood buffer numbers: $pK_a$ about {{c1::6.1}}, bicarbonate about {{c2::24 mM}}, and dissolved $CO_2$ about 1.2 mM.",
+  "fp": "e58b2aca1c81",
+  "yield": "MEDIUM",
+  "why": "Blood buffer concentrations 24 mM / 1.2 mM; numeric detail beyond the 20:1 idea"
+ },
+ {
+  "front": "Buffer capacity peaks when $[A^-] = [HA]$, that is when pH equals {{c1::$pK_a$}}, and it rises with the {{c2::total concentration}} of the pair.",
+  "fp": "8f9407335bc4",
+  "yield": "HIGH",
+  "why": "Buffer capacity maximal at pH = pKa and rises with concentration; commonly tested"
+ },
+ {
+  "front": "Can you rank the solubility of two salts just by comparing their $K_{sp}$ values?",
+  "fp": "02c709708e6d",
+  "yield": "HIGH",
+  "why": "Ksp comparison valid only for equal stoichiometry; frequent solubility trap"
+ },
+ {
+  "front": "Choose an indicator whose $pK_a$ is near the {{c1::pH at the equivalence point}}, since its color change spans about $pK_a \\pm 1$.",
+  "fp": "6c5059ea4a4e",
+  "yield": "HIGH",
+  "why": "Indicator pKa near equivalence pH; standard titration design question"
+ },
+ {
+  "front": "Complex ion formation is a Lewis acid-base reaction where the metal is the {{c1::Lewis acid}} and the ligand is the {{c2::Lewis base}}.",
+  "fp": "9b4ff4a182e1",
+  "yield": "MEDIUM",
+  "why": "Complex ion formation as Lewis acid-base; secondary outline content"
+ },
+ {
+  "front": "Describe the blood bicarbonate buffer.",
+  "fp": "a5575f388ec5",
+  "yield": "ULTRA_HIGH",
+  "why": "Bicarbonate buffer equation; the reasoning backbone of every acid-base physiology item"
+ },
+ {
+  "front": "Distinguish the endpoint of a titration from the equivalence point.",
+  "fp": "f53270a17bd6",
+  "yield": "MEDIUM",
+  "why": "Endpoint vs equivalence point; useful definition rarely costing a point"
+ },
+ {
+  "front": "For a polyprotic acid, $K_{a1}$ exceeds $K_{a2}$ by {{c1::several orders of magnitude}} because pulling a proton off an anion is far harder.",
+  "fp": "26c333abd41c",
+  "yield": "HIGH",
+  "why": "Ka1 >> Ka2 for polyprotic acids; commonly needed to read titration curves"
+ },
+ {
+  "front": "For a salt $AB_2$ with molar solubility $s$, $K_{sp} = {{c1::4s^3}}$.",
+  "fp": "e936dc7b57a6",
+  "yield": "ULTRA_HIGH",
+  "why": "Ksp = 4s^3 for AB2 salts; molar solubility calculation appears every year"
+ },
+ {
+  "front": "For a weak monoprotic acid at concentration $C$, what is the fast estimate of $[H^+]$?",
+  "fp": "161f5b284d74",
+  "yield": "ULTRA_HIGH",
+  "why": "[H+] = sqrt(KaC) weak-acid shortcut; core calculation used on essentially every exam"
+ },
+ {
+  "front": "For any conjugate pair, $K_a \\times K_b = {{c1::K_w}}$, so $pK_a + pK_b = {{c2::14}}$ at 25 degrees C.",
+  "fp": "00b4c60ee3be",
+  "yield": "ULTRA_HIGH",
+  "why": "Ka x Kb = Kw, pKa + pKb = 14; foundational conjugate-pair relation"
+ },
+ {
+  "front": "From the starting pH alone, before any titrant is added, how do you tell a strong acid from a weak one?",
+  "fp": "1edf77700ab2",
+  "yield": "HIGH",
+  "why": "Reading strong vs weak acid from initial pH and curve shape; common curve-interpretation step"
+ },
+ {
+  "front": "Give the Henderson–Hasselbalch equation.",
+  "fp": "dfa485867315",
+  "yield": "ULTRA_HIGH",
+  "why": "Henderson-Hasselbalch equation itself; tested every administration"
+ },
+ {
+  "front": "How do $pH$ and $[H^{+}]$ relate?",
+  "fp": "047de4462cc9",
+  "yield": "ULTRA_HIGH",
+  "why": "pH = -log[H+] and pH + pOH = 14; the foundational definitions"
+ },
+ {
+  "front": "How do you predict the direction of shift using $Q$ and $K$?",
+  "fp": "0623ba0746cf",
+  "yield": "ULTRA_HIGH",
+  "why": "Q vs K predicts direction of shift; core equilibrium reasoning every year"
+ },
+ {
+  "front": "How does adding excess $NH_3$ dissolve solid $AgCl$?",
+  "fp": "2a936001684d",
+  "yield": "MEDIUM",
+  "why": "AgCl dissolved by NH3 via Kf; secondary complex-ion example"
+ },
+ {
+  "front": "How does temperature affect $K_w$ and the pH of pure water at 37 degrees C?",
+  "fp": "ddcbdfcf7671",
+  "yield": "MEDIUM",
+  "why": "Kw rises with temperature, neutral pH 6.8 at 37 C; occasional AAMC trick"
+ },
+ {
+  "front": "How many equivalence points and buffer regions does a diprotic acid titration curve show?",
+  "fp": "333c9b5bbfa3",
+  "yield": "HIGH",
+  "why": "Diprotic titration has two buffer regions and two equivalence points; common curve question"
+ },
+ {
+  "front": "In a solution of an acid and its conjugate base, the {{c1::conjugate base}} predominates whenever the pH is above the $pK_a$.",
+  "fp": "52b5068b8ad4",
+  "yield": "ULTRA_HIGH",
+  "why": "Conjugate base predominates above pKa; the charge-state rule behind drugs, amino acids, buffers"
+ },
+ {
+  "front": "Ion trapping: why does a weakly basic drug accumulate in the acidic stomach lumen?",
+  "fp": "cfc44cc13101",
+  "yield": "HIGH",
+  "why": "Ion trapping by pH-dependent charge state; frequent passage reasoning step"
+ },
+ {
+  "front": "Leveling effect: in water the strongest acid that can exist is {{c1::$H_3O^{+}$}} and the strongest base is {{c2::$OH^{-}$}}.",
+  "fp": "f23d04c3d42d",
+  "yield": "LOW",
+  "why": "Leveling effect and hydronium/water pKa values; off-outline detail"
+ },
+ {
+  "front": "One pH unit above a weak acid's $pK_a$ leaves it about {{c1::91 percent}} ionized, and two units above about {{c2::99 percent}}.",
+  "fp": "e5adcc734e2f",
+  "yield": "LOW",
+  "why": "91%/99% ionization one and two units above pKa; derivable restatement of the ratio rule"
+ },
+ {
+  "front": "Physiological $pK_a$ anchors: carbonic acid {{c1::6.1}}, dihydrogen phosphate {{c2::6.8}}, and ammonium 9.25.",
+  "fp": "4c07839810d6",
+  "yield": "MEDIUM",
+  "why": "Physiological pKa anchors (phosphate 6.8, ammonium 9.25); supporting numbers"
+ },
+ {
+  "front": "Respiratory acid-base disorders begin with a change in {{c1::$pCO_2$}}; metabolic ones begin with a change in {{c2::$HCO_3^{-}$}}.",
+  "fp": "548a006d28e0",
+  "yield": "HIGH",
+  "why": "Respiratory vs metabolic disorder defined by pCO2 vs HCO3-; commonly tested physiology link"
+ },
+ {
+  "front": "State the common ion effect.",
+  "fp": "c1249695c7d8",
+  "yield": "LOW",
+  "why": "Restates the common ion effect card"
+ },
+ {
+  "front": "Strong acid is added to a buffer. What is the correct order of operations to find the new pH?",
+  "fp": "2f0bc37b91bb",
+  "yield": "HIGH",
+  "why": "Stoichiometry before Henderson-Hasselbalch when strong acid added; standard buffer calculation"
+ },
+ {
+  "front": "Strong vs concentrated: which word describes dissociation and which describes amount?",
+  "fp": "8c4ded4783cb",
+  "yield": "MEDIUM",
+  "why": "Strong vs concentrated distinction; useful vocabulary, rarely costs a point"
+ },
+ {
+  "front": "The isoelectric point is {{c1::the average of the two $pK_a$ values flanking the neutral species}}.",
+  "fp": "d073ab270848",
+  "yield": "HIGH",
+  "why": "Isoelectric point as average of flanking pKas; recurring amino-acid calculation"
+ },
+ {
+  "front": "Two buffers have the same pH but one is 1.0 M and the other 0.01 M. How do they differ?",
+  "fp": "e3f49bb5cbda",
+  "yield": "MEDIUM",
+  "why": "Same-pH buffers differ in capacity; restates the capacity-vs-ratio idea of other cards"
+ },
+ {
+  "front": "What does a lower $pK_a$ indicate?",
+  "fp": "cd10b7b92800",
+  "yield": "ULTRA_HIGH",
+  "why": "Lower pKa means stronger acid; foundational relation used every year"
+ },
+ {
+  "front": "What is the pH at the equivalence point of a weak acid–strong base titration?",
+  "fp": "910eec2ea9de",
+  "yield": "ULTRA_HIGH",
+  "why": "Weak acid-strong base equivalence pH > 7; tested every year"
+ },
+ {
+  "front": "What is the pH of a 0.01 M HCl solution?",
+  "fp": "9280a15277da",
+  "yield": "HIGH",
+  "why": "pH of 0.01 M strong acid = 2; routine calculation"
+ },
+ {
+  "front": "What is true at the half-equivalence point?",
+  "fp": "8e05d359a131",
+  "yield": "LOW",
+  "why": "Restates the half-equivalence pH = pKa card"
+ },
+ {
+  "front": "When does the 'x is small' approximation in a weak-acid ICE table break down?",
+  "fp": "afd74ad91816",
+  "yield": "LOW",
+  "why": "5% rule for the x-is-small approximation; the MCAT never requires the quadratic"
+ },
+ {
+  "front": "Which amino acid side chain has a $pK_a$ near physiological pH, and why does that matter so much?",
+  "fp": "bee10b70984a",
+  "yield": "MEDIUM",
+  "why": "Histidine imidazole pKa near 6; biochem content covered in amino-acid decks"
+ },
+ {
+  "front": "Which is a strong acid?",
+  "fp": "3e44b37f0595",
+  "yield": "HIGH",
+  "why": "The six strong acids; must-know list, usually a step rather than a question"
+ },
+ {
+  "front": "Which is the stronger acid: one with $K_a = 1.8 \\times 10^{-5}$ or one with $pK_a = 3.2$?",
+  "fp": "a07c42edd95a",
+  "yield": "MEDIUM",
+  "why": "Comparing Ka vs pKa; worked application of the lower-pKa rule"
+ },
+ {
+  "front": "Which is the strongest conjugate base?",
+  "fp": "c3a7cb9f1eab",
+  "yield": "HIGH",
+  "why": "Weaker acid gives stronger conjugate base; common discrete"
+ },
+ {
+  "front": "Why does diluting a buffer with water leave its pH essentially unchanged?",
+  "fp": "b87980a853f9",
+  "yield": "HIGH",
+  "why": "Diluting a buffer holds pH but drops capacity; favorite AAMC distinction"
+ },
+ {
+  "front": "Why does diluting a weak acid raise its pH yet increase its percent dissociation?",
+  "fp": "cefd672be585",
+  "yield": "MEDIUM",
+  "why": "Dilution raises weak-acid pH yet increases percent dissociation; second-tier reasoning"
+ },
+ {
+  "front": "Why is $CaCO_3$ far more soluble in acid while $NaCl$ solubility is pH-independent?",
+  "fp": "6e337a4ea194",
+  "yield": "HIGH",
+  "why": "Solubility pH-dependent only for conjugate bases of weak acids; common solubility reasoning"
+ },
+ {
+  "front": "Why is the vertical jump at equivalence smaller for a weak acid than for a strong acid at the same concentration?",
+  "fp": "aea09e12f0d2",
+  "yield": "MEDIUM",
+  "why": "Smaller equivalence jump for weak acids; curve detail rarely costing a point"
+ }
+]

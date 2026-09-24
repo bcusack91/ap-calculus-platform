@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How much math is required on the MCAT?",
+  "fp": "0f82c215cee9",
+  "yield": "MEDIUM",
+  "why": "Math scope orientation; supports the quantitative-skills deck"
+ },
+ {
+  "front": "How should you approach Chem/Phys passages?",
+  "fp": "437eb1fbe369",
+  "yield": "HIGH",
+  "why": "Ratio-reasoning approach applies to most C/P passages"
+ },
+ {
+  "front": "How should you handle experiment-based science passages?",
+  "fp": "019e66a40b22",
+  "yield": "HIGH",
+  "why": "Hypothesis/IV/DV/control-first is the approach for every experiment passage"
+ },
+ {
+  "front": "What is the key strategy difference for CARS vs. science sections?",
+  "fp": "c26d73caa3fa",
+  "yield": "HIGH",
+  "why": "CARS vs science mindset difference governs approach in every section"
+ },
+ {
+  "front": "What is the most efficient Bio/Biochem approach?",
+  "fp": "7cabc4c500b4",
+  "yield": "HIGH",
+  "why": "Recognize the system then use passage data applies to most B/B passages"
+ },
+ {
+  "front": "What makes Psych/Soc distinctive?",
+  "fp": "0afd611f694e",
+  "yield": "MEDIUM",
+  "why": "P/S is terminology-driven; orientation fact more than a tactic"
+ },
+ {
+  "front": "Which section benefits most from flashcards?",
+  "fp": "1e2a252e843c",
+  "yield": "LOW",
+  "why": "Study-method advice about flashcards"
+ },
+ {
+  "front": "Why is content review alone insufficient?",
+  "fp": "605e17c8d0ed",
+  "yield": "LOW",
+  "why": "Generic study advice about practice vs review"
+ }
+]

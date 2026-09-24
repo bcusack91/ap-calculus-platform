@@ -1,0 +1,92 @@
+[
+ {
+  "front": "A CARS answer choice that is \"too strong\" typically:",
+  "fp": "298d0e6a494c",
+  "yield": "ULTRA_HIGH",
+  "why": "Too-strong/absolute wording is the most frequent wrong-answer type"
+ },
+ {
+  "front": "How do you separate the author's voice from cited views?",
+  "fp": "df8894e841bc",
+  "yield": "HIGH",
+  "why": "Contrast keywords separate author from cited views on most passages"
+ },
+ {
+  "front": "How should you handle unfamiliar CARS subject matter?",
+  "fp": "de743fd31cab",
+  "yield": "HIGH",
+  "why": "Track-the-argument on unfamiliar topics is applied every section"
+ },
+ {
+  "front": "In a passage about the ethics of genetic engineering, the author writes: \"We must ask not whether we can, but whether we should.\" This rhetorical strategy is:",
+  "fp": "132afc7f2713",
+  "yield": "MEDIUM",
+  "why": "Reframing example is one rhetorical strategy among many"
+ },
+ {
+  "front": "In CARS passages, when \"some scholars\" or \"critics\" are referenced without specific citation, the author is most likely:",
+  "fp": "33465c73ae06",
+  "yield": "HIGH",
+  "why": "Vague 'some scholars' setup is a very common structure to recognize"
+ },
+ {
+  "front": "Should you read the questions before the passage?",
+  "fp": "54da3bcc8aac",
+  "yield": "MEDIUM",
+  "why": "Read-questions-first is generic approach advice"
+ },
+ {
+  "front": "What is the ideal time allocation per CARS passage?",
+  "fp": "8307e735c9bb",
+  "yield": "LOW",
+  "why": "Time allocation is logistics; timing deck covers it"
+ },
+ {
+  "front": "What is the single rule governing every CARS answer?",
+  "fp": "98a56a05f480",
+  "yield": "ULTRA_HIGH",
+  "why": "Passage-support rule governs every CARS answer"
+ },
+ {
+  "front": "What should you do when stuck between two answers?",
+  "fp": "ad8c06ce5f23",
+  "yield": "HIGH",
+  "why": "Down-to-two recovery is used on most questions"
+ },
+ {
+  "front": "What should you note while reading a CARS passage?",
+  "fp": "df565aaffe3c",
+  "yield": "HIGH",
+  "why": "Claim, tone and other-views tracking is the every-passage reading checklist"
+ },
+ {
+  "front": "When a question asks what a word \"most nearly means,\" you should rely on:",
+  "fp": "5bb1d2faaadb",
+  "yield": "HIGH",
+  "why": "Most-nearly-means questions are common on most administrations"
+ },
+ {
+  "front": "When two paragraphs present opposing views and the third begins \"Both accounts overlook,\" the author is:",
+  "fp": "4f098ca211d7",
+  "yield": "HIGH",
+  "why": "Two-views-then-author structure is very common; recognizing it is a core move"
+ },
+ {
+  "front": "Which is a hallmark of a correct CARS answer?",
+  "fp": "13efe12594c1",
+  "yield": "ULTRA_HIGH",
+  "why": "Traceable passage support is the single rule behind every correct CARS answer"
+ },
+ {
+  "front": "Which is the best first step after reading a CARS passage?",
+  "fp": "9d1a9004a96a",
+  "yield": "HIGH",
+  "why": "Summarize-first is the standard post-read step used every passage"
+ },
+ {
+  "front": "Why should you never leave an MCAT question blank?",
+  "fp": "42b201168205",
+  "yield": "LOW",
+  "why": "No-blank rule is exam logistics, not a CARS skill"
+ }
+]

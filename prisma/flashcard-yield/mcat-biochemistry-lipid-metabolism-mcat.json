@@ -2,20 +2,20 @@
  {
   "front": "{{c1::Malonyl-CoA}} inhibits {{c2::carnitine palmitoyltransferase 1 (CPT-1)}}, preventing simultaneous fatty acid synthesis and oxidation.",
   "fp": "bdc3d10722e5",
-  "yield": "HIGH",
-  "why": "Malonyl-CoA inhibition of CPT-1 is the master synthesis/oxidation interlock"
+  "yield": "ULTRA_HIGH",
+  "why": "Malonyl-CoA inhibition of CPT-1: the synthesis/oxidation interlock, tested every year"
  },
  {
   "front": "{{c1::Phospholipase $A_2$}} frees arachidonate; {{c2::COX}} yields prostaglandins/thromboxanes, {{c3::lipoxygenase}} yields leukotrienes.",
   "fp": "872674652bbb",
   "yield": "MEDIUM",
-  "why": "Eicosanoid branches (COX vs lipoxygenase) are common passage context"
+  "why": "Eicosanoid branches (COX vs lipoxygenase): common passage context"
  },
  {
   "front": "A fasting child has hypoketotic hypoglycemia and elevated C8-C10 acylcarnitines. What enzyme is deficient and why is glucose consumption paradoxically high?",
   "fp": "18e998b3fbaf",
   "yield": "MEDIUM",
-  "why": "MCAD vignette teaches hypoketotic hypoglycemia reasoning; enzyme name is detail"
+  "why": "MCAD vignette hypoketotic hypoglycemia reasoning: enzyme name is detail"
  },
  {
   "front": "Abetalipoproteinemia is loss of {{c1::microsomal triglyceride transfer protein}}, so neither {{c2::chylomicrons}} nor VLDL can be assembled.",
@@ -27,25 +27,25 @@
   "front": "Acetyl-CoA carboxylase (biotin) is activated by {{c1::citrate}} and insulin, and inhibited by {{c2::palmitoyl-CoA}} and phosphorylation by {{c3::AMPK}} and PKA.",
   "fp": "d3860d6993f6",
   "yield": "HIGH",
-  "why": "ACC regulation by citrate, palmitoyl-CoA and AMPK/PKA is core"
+  "why": "ACC regulation by citrate, palmitoyl-CoA and AMPK/PKA: commonly tested"
  },
  {
   "front": "Aspirin inhibits cyclooxygenase {{c1::irreversibly}} by acetylation, which silences {{c2::platelets}} for their entire lifespan.",
   "fp": "08c125c952d6",
   "yield": "MEDIUM",
-  "why": "Aspirin irreversible COX inhibition is pharmacology flavor on a tested enzyme concept"
+  "why": "Aspirin irreversible COX acetylation: pharmacology flavor on a tested enzyme concept"
  },
  {
   "front": "Besides CPT-1, how is flux through beta-oxidation itself throttled when the ETC is already saturated?",
   "fp": "14e3092ca8a8",
   "yield": "MEDIUM",
-  "why": "Product inhibition of beta-oxidation by NADH/acetyl-CoA; supporting regulation"
+  "why": "Product inhibition of beta-oxidation by NADH/acetyl-CoA: supporting regulation"
  },
  {
   "front": "Beta oxidation produces how much ATP per cycle (approximate)?",
   "fp": "b5d4fcf33667",
   "yield": "HIGH",
-  "why": "ATP per beta-oxidation cycle is used in yield calculations"
+  "why": "ATP per beta-oxidation cycle: used in yield calculations"
  },
  {
   "front": "Beta-oxidation of fatty acids produces:",
@@ -57,25 +57,25 @@
   "front": "Bile acid synthesis is rate-limited by {{c1::7-alpha-hydroxylase}}, and the acids are conjugated with {{c2::glycine or taurine}} to lower their pKa.",
   "fp": "f23f6fd1bdd8",
   "yield": "MEDIUM",
-  "why": "7-alpha-hydroxylase and bile acid conjugation; secondary cholesterol excretion detail"
+  "why": "7-alpha-hydroxylase and bile acid conjugation: secondary cholesterol excretion detail"
  },
  {
   "front": "Carnitine shuttle order: {{c1::CPT-1}} (outer membrane), {{c2::translocase}}, then {{c3::CPT-2}} regenerating acyl-CoA in the matrix.",
   "fp": "a562f70652eb",
-  "yield": "HIGH",
-  "why": "Carnitine shuttle steps and compartment are core beta-oxidation content"
+  "yield": "ULTRA_HIGH",
+  "why": "Carnitine shuttle CPT-1/translocase/CPT-2: asked on essentially every exam"
  },
  {
   "front": "Cholesterol in the plasma membrane:",
   "fp": "606cce6f3724",
-  "yield": "HIGH",
-  "why": "Cholesterol buffering membrane fluidity is a high-frequency discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Cholesterol buffers membrane fluidity: perennial discrete"
  },
  {
   "front": "Chylomicrons: {{c1::apoB-48}} structural, {{c2::apoC-II}} activates LPL, {{c3::apoE}} mediates remnant uptake.",
   "fp": "5e5f56a0d08d",
-  "yield": "MEDIUM",
-  "why": "Apolipoprotein roles on chylomicrons; secondary lipoprotein detail"
+  "yield": "HIGH",
+  "why": "Chylomicron apoB-48, apoC-II, apoE roles: commonly tested lipoprotein facts"
  },
  {
   "front": "Contrast familial chylomicronemia with familial hypercholesterolemia in what accumulates and what it causes.",
@@ -87,43 +87,43 @@
   "front": "Dietary triglyceride is digested by pancreatic {{c1::lipase}}, which needs {{c2::colipase}} to work on bile-salt micelles and is blocked by {{c3::orlistat}}.",
   "fp": "9d4c8f84e920",
   "yield": "MEDIUM",
-  "why": "Pancreatic lipase/colipase digestion is plausible context; orlistat is drug flavor"
+  "why": "Pancreatic lipase/colipase digestion: plausible context, orlistat is drug flavor"
  },
  {
   "front": "Distinguish diabetic ketoacidosis from starvation ketosis.",
   "fp": "276ea34e8470",
   "yield": "MEDIUM",
-  "why": "DKA vs starvation ketosis illustrates insulin's cap on ketogenesis"
+  "why": "DKA vs starvation ketosis: illustrates insulin cap on ketogenesis, secondary"
  },
  {
   "front": "During prolonged fasting, which tissue cannot directly use fatty acids as its major fuel and instead relies heavily on glucose/ketones?",
   "fp": "f1ce24e785a9",
-  "yield": "HIGH",
-  "why": "Brain fuel use in fasting (glucose then ketones) is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Brain cannot burn fatty acids, uses glucose then ketones: tested every year"
  },
  {
   "front": "Essential fatty acids: {{c1::linoleic (omega-6)}} and {{c2::alpha-linolenic (omega-3)}}; {{c3::arachidonic}} is conditionally essential.",
   "fp": "fb5ddca92aff",
-  "yield": "MEDIUM",
-  "why": "Essential fatty acids; secondary nutrition/structure fact"
+  "yield": "HIGH",
+  "why": "Essential fatty acids linoleic/alpha-linolenic: commonly asked discrete"
  },
  {
   "front": "FA synthesis: {{c1::cytosol}}, {{c2::NADPH}}, ACP carrier; beta-oxidation: {{c3::mitochondria}}, FAD/$NAD^+$, CoA carrier.",
   "fp": "fc7eba2ad18b",
-  "yield": "HIGH",
-  "why": "Synthesis vs oxidation compartment/carrier/redox contrast is a discrete staple"
+  "yield": "ULTRA_HIGH",
+  "why": "FA synthesis vs beta-oxidation compartment/carrier/redox contrast: tested every year"
  },
  {
   "front": "Fat yields about {{c1::9}} kcal/g versus about {{c2::4}} for carbohydrate and protein, and fat is stored {{c3::anhydrous}} while glycogen is hydrated.",
   "fp": "acabb7fa5fca",
-  "yield": "HIGH",
-  "why": "9 vs 4 kcal/g and anhydrous storage is a classic reasoning fact"
+  "yield": "ULTRA_HIGH",
+  "why": "9 vs 4 kcal/g and anhydrous fat storage: reasoning fact asked every year"
  },
  {
   "front": "Fatty acid notation: {{c1::delta}} numbering counts from the carboxyl carbon, while {{c2::omega}} numbering counts from the methyl end.",
   "fp": "b30768c4a3de",
-  "yield": "MEDIUM",
-  "why": "Delta vs omega numbering; useful for reading passage nomenclature"
+  "yield": "HIGH",
+  "why": "Delta vs omega numbering: needed to read fatty acid nomenclature in passages"
  },
  {
   "front": "Glucocorticoids block eicosanoids upstream by inhibiting {{c1::phospholipase $A_2$}}, shutting down {{c2::both prostaglandin and leukotriene}} branches.",
@@ -134,8 +134,8 @@
  {
   "front": "HMG-CoA reductase uses {{c1::2 NADPH}} to make {{c2::mevalonate}}; inhibited by AMPK, sterols, and {{c3::statins}}.",
   "fp": "f30017455621",
-  "yield": "HIGH",
-  "why": "HMG-CoA reductase as rate-limiting step with statin inhibition is core"
+  "yield": "ULTRA_HIGH",
+  "why": "HMG-CoA reductase rate-limiting with statin inhibition: tested every year"
  },
  {
   "front": "How does a bile acid sequestrant such as cholestyramine lower plasma LDL?",
@@ -147,7 +147,7 @@
   "front": "How does chronic alcohol use produce a fatty liver?",
   "fp": "f336d265bddf",
   "yield": "MEDIUM",
-  "why": "Alcohol fatty liver via NADH is classic redox reasoning"
+  "why": "Alcohol fatty liver via NADH: classic redox reasoning, secondary here"
  },
  {
   "front": "How does the SREBP-SCAP-Insig system sense cholesterol levels?",
@@ -159,67 +159,67 @@
   "front": "How many ATP from a 16-carbon fatty acid (palmitate)?",
   "fp": "eb584198202b",
   "yield": "HIGH",
-  "why": "Palmitate ATP yield is a standard calculation"
+  "why": "Palmitate ATP yield: standard calculation"
  },
  {
   "front": "In HDL, {{c1::LCAT}} (apoA-I-activated) esterifies cholesterol; {{c2::CETP}} trades cholesteryl esters to apoB particles.",
   "fp": "c333b3d1b196",
   "yield": "MEDIUM",
-  "why": "LCAT/CETP in HDL maturation; secondary lipoprotein detail"
+  "why": "LCAT/CETP in HDL maturation: secondary lipoprotein detail"
  },
  {
   "front": "Insulin {{c1::upregulates}} lipoprotein lipase in adipose capillaries, and LPL absolutely requires the cofactor {{c2::apoC-II}} on its substrate particle.",
   "fp": "28fdcd2fc14b",
   "yield": "MEDIUM",
-  "why": "Insulin induction of adipose LPL and apoC-II; supporting detail on the plainer LPL/HSL card"
+  "why": "Insulin induction of adipose LPL and apoC-II: supporting detail on LPL/HSL card"
  },
  {
   "front": "Insulin promotes lipid storage by:",
   "fp": "ca45c3a1568a",
-  "yield": "HIGH",
-  "why": "Insulin activating LPL and inhibiting HSL is core hormonal control"
+  "yield": "ULTRA_HIGH",
+  "why": "Insulin activates LPL and inhibits HSL: core hormonal control tested every year"
  },
  {
   "front": "Ketogenesis occurs only in {{c1::liver mitochondria}}, with {{c2::mitochondrial HMG-CoA synthase}} as the rate-limiting enzyme.",
   "fp": "c338b2a1ee7a",
-  "yield": "HIGH",
-  "why": "Ketogenesis site and rate-limiting HMG-CoA synthase are core"
+  "yield": "MEDIUM",
+  "why": "Mitochondrial HMG-CoA synthase as rate-limiting: named machinery behind ketone cards"
  },
  {
   "front": "Ketone use requires {{c1::thiophorase}} (succinyl-CoA:acetoacetate CoA transferase), which the {{c2::liver}} lacks.",
   "fp": "5d0e10cac159",
   "yield": "HIGH",
-  "why": "Liver lacking thiophorase explains ketone export; classic"
+  "why": "Liver lacks thiophorase so it exports ketones: classic"
  },
  {
   "front": "Lipolysis: {{c1::ATGL}} initiates, HSL continues under {{c2::PKA}} control, and {{c3::insulin}} suppresses it.",
   "fp": "9cb041d77a39",
   "yield": "HIGH",
-  "why": "Lipolysis control by PKA vs insulin is core hormonal regulation"
+  "why": "Lipolysis control by PKA (HSL/perilipin) vs insulin: core hormonal regulation"
  },
  {
   "front": "Mechanistically, why does fasting (or diabetic) liver divert acetyl-CoA into ketones rather than the TCA cycle?",
   "fp": "4ee87c6252a6",
-  "yield": "HIGH",
-  "why": "OAA depletion diverting acetyl-CoA to ketones is core fasting logic"
+  "yield": "ULTRA_HIGH",
+  "why": "OAA depletion diverting acetyl-CoA to ketones: the fasting reasoning step every year"
  },
  {
   "front": "Mitochondrial acetyl-CoA reaches the cytosol for fatty acid synthesis as {{c1::citrate}}, cleaved there by {{c2::ATP-citrate lyase}}.",
   "fp": "676422c8d4a7",
   "yield": "HIGH",
-  "why": "Citrate shuttle/ATP-citrate lyase moving acetyl-CoA to cytosol is core"
+  "why": "Citrate shuttle and ATP-citrate lyase moving acetyl-CoA to cytosol: commonly tested"
  },
  {
   "front": "Odd-chain FAs: propionyl-CoA is carboxylated ({{c1::biotin}}), then a {{c2::B12}}-dependent mutase yields {{c3::succinyl-CoA}}.",
   "fp": "16ac28af3319",
-  "yield": "MEDIUM",
-  "why": "Odd-chain propionyl-CoA to succinyl-CoA; secondary but gluconeogenic exception"
+  "yield": "HIGH",
+  "why": "Odd-chain propionyl-CoA to succinyl-CoA: the gluconeogenic exception, commonly tested"
  },
  {
   "front": "One beta-oxidation cycle: oxidation by {{c1::FAD}}, hydration, oxidation by {{c2::$NAD^+$}}, then {{c3::thiolysis}} releasing acetyl-CoA.",
   "fp": "10d51b183724",
-  "yield": "HIGH",
-  "why": "The four beta-oxidation steps and their cofactors are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Four beta-oxidation steps and cofactors: tested every year"
  },
  {
   "front": "PCSK9 raises plasma LDL because it marks the {{c1::LDL receptor}} for {{c2::lysosomal degradation}} rather than recycling.",
@@ -231,25 +231,25 @@
   "front": "Per 2-carbon addition, fatty acid synthase uses one malonyl-CoA and how many NADPH? What is the released terminal product?",
   "fp": "56efc93413f1",
   "yield": "HIGH",
-  "why": "NADPH per elongation and palmitate as FAS product feed standard calculations"
+  "why": "NADPH per elongation and palmitate as FAS product: feed standard calculations"
  },
  {
   "front": "Phospholipids are amphipathic, meaning they have:",
   "fp": "4e659b583736",
-  "yield": "MEDIUM",
-  "why": "Amphipathic phospholipids is foundations content; basic but frequently seen"
+  "yield": "HIGH",
+  "why": "Amphipathic phospholipids forming bilayers: basic fact seen on most exams"
  },
  {
   "front": "Sphingolipids share a {{c1::ceramide}} core: + phosphocholine = {{c2::sphingomyelin}}; + sialylated sugars = {{c3::gangliosides}}.",
   "fp": "aa941d51f1ae",
   "yield": "MEDIUM",
-  "why": "Sphingolipid classes; secondary lipid structure detail"
+  "why": "Sphingolipid classes on a ceramide core: secondary lipid structure detail"
  },
  {
   "front": "Statins raise {{c1::SREBP-2}} activity in hepatocytes, upregulating {{c2::LDL receptors}} — the main mechanism lowering plasma LDL.",
   "fp": "5489cbb9eaac",
   "yield": "MEDIUM",
-  "why": "Statin LDL-receptor upregulation is common passage context"
+  "why": "Statin LDL-receptor upregulation via SREBP-2: common passage context"
  },
  {
   "front": "Steroid hormone synthesis is rate-limited by cholesterol import into the mitochondrion via {{c1::StAR}}, followed by side-chain cleavage by {{c2::desmolase}}.",
@@ -260,8 +260,8 @@
  {
   "front": "Summarize insulin's coordinated lipid actions in the fed state versus the counter-regulatory fasting pattern.",
   "fp": "c0e68d6dbcaf",
-  "yield": "HIGH",
-  "why": "Fed vs fasting coordination of lipid pathways is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Fed vs fasting coordination of lipid pathways: integration asked every year"
  },
  {
   "front": "Tay-Sachs disease is a deficiency of {{c1::hexosaminidase A}} accumulating {{c2::GM2 ganglioside}}; Gaucher disease lacks {{c3::glucocerebrosidase}}.",
@@ -273,13 +273,13 @@
   "front": "The {{c1::beta-hydroxybutyrate}}/acetoacetate ratio mirrors mitochondrial {{c2::NADH}}; {{c3::acetone}} is exhaled unmetabolized.",
   "fp": "a06e6f400773",
   "yield": "MEDIUM",
-  "why": "BHB/acetoacetate ratio as NADH readout; supporting ketone detail"
+  "why": "BHB/acetoacetate ratio as NADH readout: supporting ketone detail"
  },
  {
   "front": "The cholesterol ring cannot be degraded for energy. What are its three major metabolic fates, and which is quantitatively dominant?",
   "fp": "78ddb6100503",
   "yield": "MEDIUM",
-  "why": "Cholesterol cannot be catabolized; its fates are useful secondary knowledge"
+  "why": "Cholesterol cannot be catabolized; its fates: useful secondary knowledge"
  },
  {
   "front": "The Friedewald estimate is LDL = total cholesterol - HDL - {{c1::triglycerides}}/5, and it fails once triglycerides exceed about {{c2::400}} mg/dL.",
@@ -297,7 +297,7 @@
   "front": "Trace the VLDL to LDL conversion: what is removed, what remains, and which apolipoprotein persists throughout?",
   "fp": "66a8da73b691",
   "yield": "HIGH",
-  "why": "VLDL to IDL to LDL with persistent apoB-100 is core lipoprotein transport"
+  "why": "VLDL to IDL to LDL with persistent apoB-100: core lipoprotein transport"
  },
  {
   "front": "Trans fats are harmful partly because they:",
@@ -309,43 +309,43 @@
   "front": "Vitamin D activation: skin converts {{c1::7-dehydrocholesterol}} under UV light, the liver adds a hydroxyl at {{c2::25}}, and the kidney adds one at {{c3::1}}.",
   "fp": "3879dd77b1f4",
   "yield": "MEDIUM",
-  "why": "Vitamin D 25- and 1-hydroxylation is endocrine flavor a passage may use"
+  "why": "Vitamin D 25- and 1-hydroxylation: endocrine flavor a passage may use"
  },
  {
   "front": "What are ketone bodies?",
   "fp": "a630381f13f0",
-  "yield": "HIGH",
-  "why": "Ketone bodies identity, origin and users is a discrete staple"
+  "yield": "ULTRA_HIGH",
+  "why": "Ketone body identity, origin and users: discrete staple every year"
  },
  {
   "front": "What are the two cytosolic sources of NADPH for fatty acid synthesis?",
   "fp": "4989b0d057bb",
   "yield": "MEDIUM",
-  "why": "Malic enzyme as second NADPH source; supporting detail on the PPP card"
+  "why": "Malic enzyme as second NADPH source: supporting detail on the PPP card"
  },
  {
   "front": "What happens after LDL binds its receptor, and how does familial hypercholesterolemia break this pathway?",
   "fp": "b1647116be60",
   "yield": "HIGH",
-  "why": "LDL receptor-mediated endocytosis and FH is a classic"
+  "why": "LDL receptor-mediated endocytosis and FH: classic"
  },
  {
   "front": "What is β-oxidation?",
   "fp": "163b9552d1c5",
-  "yield": "HIGH",
-  "why": "Beta-oxidation definition, products and location is a discrete staple"
+  "yield": "ULTRA_HIGH",
+  "why": "Beta-oxidation definition, products and location: discrete staple every year"
  },
  {
   "front": "What two extra enzymes are needed to beta-oxidize unsaturated fatty acids, and what is the energetic consequence?",
   "fp": "a3f8e81e42c4",
   "yield": "MEDIUM",
-  "why": "Unsaturated FA oxidation losing one FADH2; plausible calculation second step"
+  "why": "Unsaturated FA oxidation losing one FADH2: plausible calculation second step"
  },
  {
   "front": "Where do elongation and desaturation of palmitate occur, and what is the key limit of human desaturases?",
   "fp": "dd2d381c3744",
   "yield": "MEDIUM",
-  "why": "Smooth ER elongation/desaturation and the delta-9 limit; secondary detail"
+  "why": "Smooth ER elongation/desaturation and delta-9 limit: secondary detail"
  },
  {
   "front": "Where does plasmalogen (ether lipid) synthesis begin, and why does that localization matter clinically?",
@@ -356,8 +356,8 @@
  {
   "front": "Which cofactor does fatty acid synthesis use as reducing power?",
   "fp": "bddcc780028e",
-  "yield": "HIGH",
-  "why": "NADPH as reducing power for FA synthesis is a discrete staple"
+  "yield": "ULTRA_HIGH",
+  "why": "NADPH as reducing power for FA synthesis: discrete staple every year"
  },
  {
   "front": "Which phospholipid dominates pulmonary surfactant, and what ratio marks fetal lung maturity?",
@@ -368,8 +368,8 @@
  {
   "front": "Which vitamins are fat-soluble?",
   "fp": "549895077de8",
-  "yield": "HIGH",
-  "why": "Fat-soluble vitamins ADEK is a high-frequency discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Fat-soluble vitamins ADEK: perennial discrete"
  },
  {
   "front": "Why can a urine ketone dipstick understate the severity of early DKA?",
@@ -380,20 +380,20 @@
  {
   "front": "Why can fatty acids not yield net glucose, and what are the narrow exceptions?",
   "fp": "71477d403236",
-  "yield": "HIGH",
-  "why": "Why even-chain fat cannot make net glucose is core reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "Why even-chain fat cannot make net glucose: core reasoning tested every year"
  },
  {
   "front": "Why do carnitine deficiency and CPT deficiencies present with hypoketotic hypoglycemia during fasting?",
   "fp": "c911023ea8c6",
   "yield": "MEDIUM",
-  "why": "Carnitine/CPT deficiency reasoning; overlaps the MCAD vignette"
+  "why": "Carnitine/CPT deficiency reasoning: overlaps the MCAD vignette"
  },
  {
   "front": "Why do pancreatic insufficiency and biliary obstruction cause deficiency of vitamins A, D, E, and K?",
   "fp": "1a5bca0c8a32",
   "yield": "MEDIUM",
-  "why": "Fat malabsorption causing ADEK deficiency; digestion flavor on a tested fact"
+  "why": "Fat malabsorption causing ADEK deficiency: digestion flavor on a tested fact"
  },
  {
   "front": "Why is complete oxidation of palmitate worth roughly 106 ATP, and what activation cost is already subtracted?",
@@ -405,6 +405,6 @@
   "front": "Why must adipose tissue obtain glycerol 3-phosphate from glucose (or glyceroneogenesis) to re-esterify fatty acids?",
   "fp": "b8c87b31054f",
   "yield": "MEDIUM",
-  "why": "Adipose lacking glycerol kinase is a classic secondary fact"
+  "why": "Adipose lacking glycerol kinase: classic secondary fact"
  }
 ]

@@ -1,0 +1,92 @@
+[
+ {
+  "front": "A \"weaken the argument\" question asks you to find the choice that:",
+  "fp": "dcefb6a75fcf",
+  "yield": "ULTRA_HIGH",
+  "why": "Weaken-by-attacking-the-assumption is asked on nearly every passage"
+ },
+ {
+  "front": "A CARS answer choice that is \"too strong\" typically:",
+  "fp": "298d0e6a494c",
+  "yield": "ULTRA_HIGH",
+  "why": "Too-strong/absolute wording is the most frequent wrong-answer type"
+ },
+ {
+  "front": "An author describes two conflicting theories and then states \"the truth likely lies somewhere between these extremes.\" This approach is best characterized as:",
+  "fp": "5b8e57bbb40c",
+  "yield": "LOW",
+  "why": "Naming the golden mean vs dialectical synthesis is off-outline jargon"
+ },
+ {
+  "front": "How do you identify a conclusion?",
+  "fp": "76ae9a4b2cef",
+  "yield": "HIGH",
+  "why": "Locating the conclusion is a required step on most questions"
+ },
+ {
+  "front": "How does a counterexample function?",
+  "fp": "ac5c26bc6589",
+  "yield": "HIGH",
+  "why": "Counterexample against universal claims is a common weaken pattern"
+ },
+ {
+  "front": "How should you evaluate analogical reasoning?",
+  "fp": "40648fbab5ad",
+  "yield": "HIGH",
+  "why": "Analogy evaluation underlies frequent application/analogy questions"
+ },
+ {
+  "front": "What are the components of an argument?",
+  "fp": "28d9f554bf5c",
+  "yield": "HIGH",
+  "why": "Premise/conclusion/assumption vocabulary is needed for every reasoning question"
+ },
+ {
+  "front": "What is a necessary vs. sufficient condition?",
+  "fp": "4c9ad51358dc",
+  "yield": "HIGH",
+  "why": "Necessary vs sufficient confusion is a commonly tested flaw"
+ },
+ {
+  "front": "What is circular reasoning?",
+  "fp": "b3b11a5b1aa3",
+  "yield": "MEDIUM",
+  "why": "Circular reasoning is a recognizable but infrequent flaw"
+ },
+ {
+  "front": "What is the difference between deductive and inductive reasoning?",
+  "fp": "bf527b73daf3",
+  "yield": "MEDIUM",
+  "why": "Deductive vs inductive is logic vocabulary, rarely the tested point"
+ },
+ {
+  "front": "What is the function of a passage's first paragraph most often?",
+  "fp": "37151feb6827",
+  "yield": "MEDIUM",
+  "why": "First-paragraph tendency is a reading note, not a tested step"
+ },
+ {
+  "front": "What makes an argument valid but unsound?",
+  "fp": "5e39d466712d",
+  "yield": "MEDIUM",
+  "why": "Valid-but-unsound is formal-logic jargon rarely needed on CARS"
+ },
+ {
+  "front": "When a question asks what the author \"most likely means\" by a phrase, you should:",
+  "fp": "bdb2ae6d5fa5",
+  "yield": "HIGH",
+  "why": "Contextual meaning questions are common on most administrations"
+ },
+ {
+  "front": "Which is a hallmark of a correct CARS answer?",
+  "fp": "13efe12594c1",
+  "yield": "ULTRA_HIGH",
+  "why": "Traceable passage support is the single rule behind every correct CARS answer"
+ },
+ {
+  "front": "Which is the strongest sign an answer choice is a CARS trap?",
+  "fp": "f069f210ac85",
+  "yield": "ULTRA_HIGH",
+  "why": "True-but-unsupported is the classic trap on every passage"
+ }
+]

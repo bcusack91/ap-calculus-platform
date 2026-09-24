@@ -3,7 +3,7 @@
   "front": "A prolonged PT with a normal PTT points to the {{c1::extrinsic}} pathway and factor VII, the factor lost first in vitamin K deficiency or warfarin therapy.",
   "fp": "04fc7667ba10",
   "yield": "MEDIUM",
-  "why": "PT/PTT pathway mapping; clinical-lab flavor on hemostasis"
+  "why": "PT/PTT pathway mapping is clinical-lab flavor a time-pressed student could skip"
  },
  {
   "front": "After a myocardial infarction, which blood marker is most specific, and why does the subendocardium die first?",
@@ -15,7 +15,7 @@
   "front": "At the first breath, falling pulmonary resistance raises left atrial pressure above right, closing the {{c1::foramen ovale}} flap.",
   "fp": "a54fd1641fa3",
   "yield": "MEDIUM",
-  "why": "Foramen ovale closure mechanism; supporting fetal-circulation detail"
+  "why": "Foramen ovale closure mechanism is supporting fetal-circulation detail"
  },
  {
   "front": "Blood moves slowest in capillaries because they have the greatest total {{c1::cross-sectional area}}, maximizing exchange time.",
@@ -26,20 +26,20 @@
  {
   "front": "Blood pressure is highest in the {{c1::aorta}} and drops most steeply across the {{c2::arterioles}}.",
   "fp": "aa8c367738e7",
-  "yield": "HIGH",
-  "why": "Aortic pressure and arteriolar drop; blood pressure core"
+  "yield": "ULTRA_HIGH",
+  "why": "Highest pressure in aorta, largest drop across arterioles is tested every year"
  },
  {
   "front": "By which two membrane effects does vagal acetylcholine slow the SA node?",
   "fp": "331886d52ee5",
   "yield": "MEDIUM",
-  "why": "Ionic mechanism of vagal slowing; second step past ANS control"
+  "why": "Ionic mechanism of vagal slowing is a second step past ANS control"
  },
  {
   "front": "Cardiac output equals heart rate times stroke volume: about {{c1::70}} beats/min times {{c2::70}} mL gives roughly 5 L/min at rest.",
   "fp": "656c3fa52662",
-  "yield": "MEDIUM",
-  "why": "Typical HR/SV numbers; supporting detail on the CO equation card"
+  "yield": "HIGH",
+  "why": "HR 70 x SV 70 = 5 L/min are the numbers hemodynamics calculations start from"
  },
  {
   "front": "Carotid sinus baroreceptors report through cranial nerve {{c1::IX}} and aortic arch baroreceptors through cranial nerve {{c2::X}}.",
@@ -50,158 +50,158 @@
  {
   "front": "Define preload and afterload.",
   "fp": "7b8b53f85f46",
-  "yield": "HIGH",
-  "why": "Preload and afterload definitions; hemodynamics core"
+  "yield": "ULTRA_HIGH",
+  "why": "Preload and afterload definitions are tested every year"
  },
  {
   "front": "Define systole and diastole and the \"lub-dub\" heart sounds.",
   "fp": "c91a76d50d30",
-  "yield": "HIGH",
-  "why": "Systole/diastole and S1/S2 valve closure; cardiac cycle core"
+  "yield": "ULTRA_HIGH",
+  "why": "Systole/diastole and S1/S2 valve closures are tested every year"
  },
  {
   "front": "During {{c1::isovolumetric contraction}}, both AV and semilunar valves are closed while ventricular pressure rises at constant volume.",
   "fp": "bd02757bb200",
-  "yield": "HIGH",
-  "why": "Isovolumetric contraction with both valves closed; cardiac cycle core"
+  "yield": "ULTRA_HIGH",
+  "why": "Isovolumetric contraction with both valves closed is core cardiac-cycle reasoning"
  },
  {
   "front": "Ejection fraction (SV/EDV) is normally about {{c1::55 to 70}} percent; it falls in systolic failure even when dilation preserves stroke volume.",
   "fp": "a88b5e7a98f5",
-  "yield": "MEDIUM",
-  "why": "Ejection fraction formula and normal range; supporting detail"
+  "yield": "HIGH",
+  "why": "Ejection fraction = SV/EDV with normal range is commonly tested"
  },
  {
   "front": "Explain edema in heart failure versus liver failure using Starling forces.",
   "fp": "484ffbed886e",
-  "yield": "MEDIUM",
-  "why": "Edema via Starling forces; clinical application of a core concept"
+  "yield": "HIGH",
+  "why": "Edema from hydrostatic vs oncotic changes is a frequent Starling application"
  },
  {
   "front": "Fetal hemoglobin ($\\alpha_2\\gamma_2$) binds 2,3-BPG {{c1::poorly}}, shifting its curve left so it extracts O2 from maternal blood.",
   "fp": "de82c142f268",
-  "yield": "HIGH",
-  "why": "HbF binds 2,3-BPG poorly, left shift; classic fetal Hb question"
+  "yield": "ULTRA_HIGH",
+  "why": "HbF binding 2,3-BPG poorly and its left shift is tested every year"
  },
  {
   "front": "Histamine causes local edema by increasing capillary {{c1::permeability}}, letting leaked protein raise interstitial oncotic pressure.",
   "fp": "402d59feffe5",
   "yield": "MEDIUM",
-  "why": "Permeability edema; applies capillary exchange to inflammation"
+  "why": "Permeability edema via histamine is an applied example a student could skip"
  },
  {
   "front": "How do pacemaker and ventricular action potentials differ in their phase 0 depolarizing current?",
   "fp": "34a89d93cbd0",
-  "yield": "MEDIUM",
-  "why": "Ca2+ upstroke in pacemaker vs Na+ in myocytes; supporting detail"
+  "yield": "HIGH",
+  "why": "Ca2+ upstroke in pacemaker vs Na+ in myocytes is commonly tested"
  },
  {
   "front": "How do pressures compare across the systemic circulation?",
   "fp": "d73fdb41e7de",
-  "yield": "MEDIUM",
-  "why": "Pressure gradient across circulation; expands the aorta/arteriole card"
+  "yield": "HIGH",
+  "why": "Pressure gradient across the circulation is commonly tested; expands the aorta card"
  },
  {
   "front": "How does the autonomic nervous system regulate heart rate?",
   "fp": "cf154442014d",
-  "yield": "HIGH",
-  "why": "Sympathetic vs parasympathetic control of HR; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Sympathetic vs parasympathetic control of heart rate is tested every year"
  },
  {
   "front": "How is a fibrin clot eventually removed once the vessel heals?",
   "fp": "340752ac21f4",
-  "yield": "MEDIUM",
-  "why": "Fibrinolysis by plasmin; supporting hemostasis detail"
+  "yield": "HIGH",
+  "why": "Fibrinolysis by plasmin/tPA is commonly tested hemostasis endpoint"
  },
  {
   "front": "How is most CO₂ transported in the blood?",
   "fp": "33ba76054414",
-  "yield": "HIGH",
-  "why": "CO2 as bicarbonate via carbonic anhydrase; gas transport core"
+  "yield": "ULTRA_HIGH",
+  "why": "CO2 carried as bicarbonate via carbonic anhydrase is tested every year"
  },
  {
   "front": "How is oxygen transported in blood, and what shifts the hemoglobin curve right?",
   "fp": "6165a4098d57",
-  "yield": "HIGH",
-  "why": "Hb curve and right-shift factors; oxygen transport core"
+  "yield": "ULTRA_HIGH",
+  "why": "Hb curve and right-shift factors (Bohr, 2,3-BPG, temp) are tested every year"
  },
  {
   "front": "In Poiseuille's law, resistance varies with the {{c1::fourth}} power of radius, so halving a vessel's radius multiplies resistance by 16.",
   "fp": "01ac0455a07d",
-  "yield": "HIGH",
-  "why": "Poiseuille r^4 dependence; flow/resistance calculation core"
+  "yield": "ULTRA_HIGH",
+  "why": "Poiseuille r^4 dependence is a calculation tested every year"
  },
  {
   "front": "In primary hemostasis, {{c1::von Willebrand factor}} bridges exposed collagen to platelet GPIb receptors.",
   "fp": "476953c64e47",
   "yield": "MEDIUM",
-  "why": "vWF-collagen-GPIb adhesion; supporting hemostasis detail"
+  "why": "vWF-collagen-GPIb adhesion is supporting hemostasis detail"
  },
  {
   "front": "In the Bohr effect, H+ and CO2 stabilize the {{c1::T (tense)}} state of hemoglobin, lowering O2 affinity where metabolism is highest.",
   "fp": "1584f5764caa",
-  "yield": "MEDIUM",
-  "why": "T-state mechanism behind the Bohr effect; supports the curve card"
+  "yield": "HIGH",
+  "why": "T-state stabilization behind the Bohr effect is commonly tested mechanism"
  },
  {
   "front": "In the Starling filtration balance, which forces push fluid out of a capillary and which pull it back in?",
   "fp": "3e05c1d702da",
-  "yield": "MEDIUM",
-  "why": "Full four-force Starling balance; expands the plainer Starling card"
+  "yield": "HIGH",
+  "why": "Full four-force Starling balance is commonly needed for exchange questions"
  },
  {
   "front": "Left coronary blood flow occurs mainly during {{c1::diastole}}, which is why tachycardia worsens myocardial ischemia.",
   "fp": "f1ab4ca85fcf",
   "yield": "MEDIUM",
-  "why": "Coronary flow in diastole; clinical flavor on the cardiac cycle"
+  "why": "Coronary flow in diastole is clinical flavor on the cardiac cycle"
  },
  {
   "front": "Left-sided failure backs blood up into the {{c1::pulmonary}} circulation, while right-sided failure backs it up into the systemic veins.",
   "fp": "eeae8d368456",
   "yield": "MEDIUM",
-  "why": "Left vs right failure backup; clinical flavor on circulation"
+  "why": "Left vs right failure backup is clinical flavor a student could skip"
  },
  {
   "front": "Mean arterial pressure is estimated as diastolic pressure plus {{c1::one-third}} of the pulse pressure, about 93 mmHg for a 120/80 reading.",
   "fp": "0b108e62b2b5",
   "yield": "HIGH",
-  "why": "MAP = DP + PP/3; a formula used in calculation"
+  "why": "MAP = DP + PP/3 is a formula used in calculations"
  },
  {
   "front": "Name the three fetal shunts and what each one bypasses.",
   "fp": "22a9b942f4ec",
   "yield": "HIGH",
-  "why": "Three fetal shunts and what each bypasses; on the outline"
+  "why": "Three fetal shunts and what each bypasses is commonly tested"
  },
  {
   "front": "Net filtration dominates at the {{c1::arteriolar}} end of a capillary and reabsorption at the venular end.",
   "fp": "cf4773427586",
-  "yield": "MEDIUM",
-  "why": "Filtration vs reabsorption ends; supporting detail on Starling"
+  "yield": "HIGH",
+  "why": "Filtration at the arteriolar end vs reabsorption at the venular end is commonly tested"
  },
  {
   "front": "On a ventricular pressure-volume loop, what do the loop's width and enclosed area represent?",
   "fp": "fc79aabab87e",
-  "yield": "MEDIUM",
-  "why": "PV loop width and area; passage-figure interpretation"
+  "yield": "HIGH",
+  "why": "PV loop width = SV and area = stroke work is common figure interpretation"
  },
  {
   "front": "Predict how nitroglycerin relieves angina, in terms of preload, wall stress, and myocardial oxygen demand.",
   "fp": "b6d33b01a0b4",
   "yield": "MEDIUM",
-  "why": "Nitrate preload reasoning; clinical flavor on preload/wall stress"
+  "why": "Nitrate preload reasoning is clinical application a student could skip"
  },
  {
   "front": "Predict how polycythemia at altitude affects blood viscosity, vascular resistance, and cardiac work.",
   "fp": "a2e18681ea7f",
   "yield": "MEDIUM",
-  "why": "Viscosity in Poiseuille's law; applied reasoning"
+  "why": "Polycythemia viscosity effect is applied Poiseuille reasoning, skippable"
  },
  {
   "front": "Predict the effect of a beta-1 blocker on heart rate, contractility, stroke volume, and renin release.",
   "fp": "b85843da1504",
   "yield": "MEDIUM",
-  "why": "Beta-1 blockade effects; applies receptor physiology"
+  "why": "Beta-1 blocker prediction is applied pharmacology a student could skip"
  },
  {
   "front": "Roughly {{c1::80}} percent of ventricular filling is passive; the atrial kick matters most when diastole shortens at high heart rates.",
@@ -212,8 +212,8 @@
  {
   "front": "State the Frank-Starling mechanism.",
   "fp": "c07d714f2241",
-  "yield": "HIGH",
-  "why": "Frank-Starling mechanism; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Frank-Starling mechanism is tested every year"
  },
  {
   "front": "Systolic versus diastolic heart failure: which lowers ejection fraction, and what is the primary defect in each?",
@@ -225,7 +225,7 @@
   "front": "The {{c1::dicrotic notch}} on the aortic pressure tracing marks aortic valve closure and the start of isovolumetric relaxation.",
   "fp": "cc56b277554d",
   "yield": "MEDIUM",
-  "why": "Dicrotic notch marks aortic closure; pressure-trace detail"
+  "why": "Dicrotic notch is pressure-trace detail"
  },
  {
   "front": "The {{c1::QT}} interval spans ventricular depolarization plus repolarization, approximating ventricular action potential duration.",
@@ -237,25 +237,25 @@
   "front": "The ductus arteriosus is held open by {{c1::prostaglandins}} and closes as $PO_2$ rises after birth.",
   "fp": "bf2cdddcb58c",
   "yield": "MEDIUM",
-  "why": "Prostaglandins keep ductus open; supporting fetal detail"
+  "why": "Prostaglandins keeping the ductus open is supporting fetal detail"
  },
  {
   "front": "The extrinsic pathway begins when vascular injury exposes {{c1::tissue factor (factor III)}}, which activates factor VII.",
   "fp": "9887bfdb6d89",
-  "yield": "MEDIUM",
-  "why": "Tissue factor starts the extrinsic pathway; supporting detail"
+  "yield": "HIGH",
+  "why": "Tissue factor activating factor VII starts the extrinsic pathway; commonly tested"
  },
  {
   "front": "The Fick principle computes cardiac output as oxygen consumption divided by the {{c1::arteriovenous oxygen difference}}.",
   "fp": "8d2b64a5a519",
-  "yield": "MEDIUM",
-  "why": "Fick principle for CO; plausible calculation second step"
+  "yield": "HIGH",
+  "why": "Fick principle CO = VO2 / a-v O2 difference is a tested calculation"
  },
  {
   "front": "The intrinsic and extrinsic clotting pathways converge on activation of factor {{c1::X}}, which with factor Va converts prothrombin to thrombin.",
   "fp": "5dd491054edd",
-  "yield": "HIGH",
-  "why": "Common pathway: factor X, prothrombin to thrombin, fibrin; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Common pathway: factor X, prothrombin to thrombin, fibrin is tested every year"
  },
  {
   "front": "The PR interval represents conduction through the {{c1::AV node}}; its fixed prolongation defines first-degree heart block.",
@@ -272,8 +272,8 @@
  {
   "front": "Trace the path of blood through the heart and circulation.",
   "fp": "33fe308883ba",
-  "yield": "HIGH",
-  "why": "Path of blood through the heart; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Path of blood through the heart is tested every year"
  },
  {
   "front": "Von Willebrand disease versus hemophilia A: contrast the bleeding pattern and the laboratory findings.",
@@ -285,19 +285,19 @@
   "front": "What determines the moment the aortic valve opens, and why does hypertension reduce stroke volume?",
   "fp": "18b00abe3160",
   "yield": "MEDIUM",
-  "why": "Aortic valve opening threshold and afterload; applied reasoning"
+  "why": "Aortic valve opening threshold and afterload effect is applied reasoning"
  },
  {
   "front": "What does each ECG wave represent?",
   "fp": "e258e443e4ac",
-  "yield": "HIGH",
-  "why": "P, QRS, T wave meanings; ECG core"
+  "yield": "ULTRA_HIGH",
+  "why": "P, QRS, T wave meanings are tested every year"
  },
  {
   "front": "What does thrombin do beyond cleaving fibrinogen to fibrin?",
   "fp": "3a007194ac0c",
   "yield": "MEDIUM",
-  "why": "Thrombin's amplification roles; supporting hemostasis detail"
+  "why": "Thrombin's factor XIII and amplification roles are supporting detail"
  },
  {
   "front": "What events produce the S3 and S4 heart sounds, and when in diastole does each occur?",
@@ -308,56 +308,56 @@
  {
   "front": "What governs capillary fluid exchange (Starling forces)?",
   "fp": "8bf343a13db9",
-  "yield": "HIGH",
-  "why": "Starling forces governing capillary exchange; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Starling forces governing capillary exchange are tested every year"
  },
  {
   "front": "What is cardiac output and its equation?",
   "fp": "a4e57c377f05",
-  "yield": "HIGH",
-  "why": "CO = HR x SV and SV = EDV - ESV; formula core"
+  "yield": "ULTRA_HIGH",
+  "why": "CO = HR x SV and SV = EDV - ESV are tested every year"
  },
  {
   "front": "What is the cardiac conduction pathway?",
   "fp": "5483e5ef6ed4",
-  "yield": "HIGH",
-  "why": "SA to Purkinje conduction pathway; core"
+  "yield": "ULTRA_HIGH",
+  "why": "SA to Purkinje conduction pathway is tested every year"
  },
  {
   "front": "What is unique about the cardiac action potential (plateau phase)?",
   "fp": "d04d37e0741e",
-  "yield": "HIGH",
-  "why": "Plateau phase via Ca2+ prevents tetanus; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Plateau phase via Ca2+ preventing tetanus is tested every year"
  },
  {
   "front": "Where does 2,3-BPG bind hemoglobin, and in what settings does it rise?",
   "fp": "c6ac8456a642",
-  "yield": "MEDIUM",
-  "why": "2,3-BPG binding site and when it rises; supporting Hb detail"
+  "yield": "HIGH",
+  "why": "2,3-BPG binding deoxy-Hb and rising in hypoxia/altitude is commonly tested"
  },
  {
   "front": "Where does the largest pressure drop occur in the circulation, and where does most blood volume sit?",
   "fp": "d87a5568e377",
-  "yield": "MEDIUM",
-  "why": "Arteriolar drop and venous volume reservoir; supporting detail"
+  "yield": "HIGH",
+  "why": "Arteriolar resistance and veins as the volume reservoir are commonly tested"
  },
  {
   "front": "Where is blood flow slowest and why is that functionally important?",
   "fp": "95195d002172",
-  "yield": "HIGH",
-  "why": "Capillaries slowest via total cross-sectional area; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Slowest flow in capillaries via total cross-sectional area is tested every year"
  },
  {
   "front": "Where is cardiac conduction slowest and fastest, and why does the slow point matter?",
   "fp": "586d098baa4c",
   "yield": "HIGH",
-  "why": "AV node delay and Purkinje speed; conduction core"
+  "why": "AV node slowest (delay) and Purkinje fastest is commonly tested conduction"
  },
  {
   "front": "Which fetal vessel carries the most oxygenated blood, and where does that blood go first?",
   "fp": "3772f66ec5d6",
-  "yield": "MEDIUM",
-  "why": "Umbilical vein carries oxygenated blood; supporting fetal detail"
+  "yield": "HIGH",
+  "why": "Umbilical vein carrying the most oxygenated blood is a common fetal question"
  },
  {
   "front": "Why does aortic stiffening in aging raise systolic pressure while diastolic pressure may fall?",
@@ -369,36 +369,36 @@
   "front": "Why does lymphatic obstruction produce especially protein-rich edema?",
   "fp": "9c3d90442932",
   "yield": "MEDIUM",
-  "why": "Lymphatics return filtered protein; supporting capillary-exchange detail"
+  "why": "Lymphatic obstruction edema is supporting capillary-exchange detail"
  },
  {
   "front": "Why does vitamin K deficiency (or warfarin) impair coagulation?",
   "fp": "450d7e3aef75",
-  "yield": "MEDIUM",
-  "why": "Vitamin K carboxylation of clotting factors; supporting detail"
+  "yield": "HIGH",
+  "why": "Vitamin K carboxylation of II, VII, IX, X is commonly tested"
  },
  {
   "front": "Why is atrial repolarization invisible on a normal ECG?",
   "fp": "9da44213e276",
   "yield": "MEDIUM",
-  "why": "Atrial repolarization hidden in QRS; common ECG question"
+  "why": "Atrial repolarization hidden in QRS is already on the ECG card"
  },
  {
   "front": "Why is carbon monoxide poisoning worse than an equivalent anemia?",
   "fp": "7dc4f752ab83",
-  "yield": "MEDIUM",
-  "why": "CO left shift vs anemia; applies the Hb curve"
+  "yield": "HIGH",
+  "why": "CO poisoning left shift vs anemia is a common Hb-curve application"
  },
  {
   "front": "Why is fetal blood flow right-to-left across both the foramen ovale and ductus arteriosus?",
   "fp": "bf35e118c2de",
   "yield": "MEDIUM",
-  "why": "Why fetal shunts run right-to-left; supporting fetal detail"
+  "why": "Why fetal shunts run right-to-left is supporting fetal detail"
  },
  {
   "front": "Why is the hemoglobin-O2 curve sigmoidal while myoglobin's is hyperbolic?",
   "fp": "e109da66e8d2",
-  "yield": "HIGH",
-  "why": "Cooperativity gives sigmoidal Hb vs hyperbolic Mb; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Cooperativity giving sigmoidal Hb vs hyperbolic Mb is tested every year"
  }
 ]

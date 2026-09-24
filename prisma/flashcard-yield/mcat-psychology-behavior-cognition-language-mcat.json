@@ -2,8 +2,8 @@
  {
   "front": "{{c1::Automatic}} processing is fast, parallel, and resistant to load after practice; {{c2::controlled}} processing is slow, serial, and capacity-limited.",
   "fp": "d21441fb20ad",
-  "yield": "HIGH",
-  "why": "Automatic vs controlled processing is core attention/information-processing content"
+  "yield": "ULTRA_HIGH",
+  "why": "Automatic vs controlled processing: foundational attention distinction, every year"
  },
  {
   "front": "{{c1::Broca's}} aphasia: nonfluent, agrammatic speech, intact comprehension; {{c2::Wernicke's}}: fluent but meaningless speech, poor comprehension.",
@@ -15,19 +15,19 @@
   "front": "{{c1::Deductive}} reasoning moves from general premises to a certain conclusion; {{c2::inductive}} reasoning generalizes from cases to a probable rule.",
   "fp": "8803ec754eed",
   "yield": "MEDIUM",
-  "why": "Deductive vs inductive reasoning is a secondary problem-solving distinction"
+  "why": "Deductive vs inductive reasoning: secondary problem-solving distinction"
  },
  {
   "front": "{{c1::Divergent}} thinking generates many possible solutions and underlies creativity; {{c2::convergent}} thinking narrows toward the single best answer.",
   "fp": "99504995a1f5",
   "yield": "MEDIUM",
-  "why": "Divergent/convergent thinking is a second-tier creativity distinction"
+  "why": "Divergent/convergent thinking: second-tier creativity distinction"
  },
  {
   "front": "{{c1::Inattentional blindness}} is missing an unexpected object while attending elsewhere; {{c2::change blindness}} is missing an alteration between two views.",
   "fp": "7a5ef6b151f5",
-  "yield": "MEDIUM",
-  "why": "Inattentional vs change blindness is a common attention distinction"
+  "yield": "HIGH",
+  "why": "Inattentional vs change blindness: commonly tested attention pair"
  },
  {
   "front": "{{c1::Prototype}} models compare an item with an averaged category ideal; {{c2::exemplar}} models compare it with stored individual instances.",
@@ -38,44 +38,44 @@
  {
   "front": "A 5-year-old says a tall thin glass holds more after water is poured from a short wide one. Which two preoperational limits does this show?",
   "fp": "50fa8769be4c",
-  "yield": "HIGH",
-  "why": "Conservation and centration are the classic tested preoperational limits"
+  "yield": "ULTRA_HIGH",
+  "why": "Conservation failure and centration: classic preoperational item every year"
  },
  {
   "front": "A child who once said 'went' now says 'goed' — {{c1::overregularization}}, evidence children extract grammatical {{c2::rules}}, not just imitations.",
   "fp": "8bfb547b37f4",
-  "yield": "MEDIUM",
-  "why": "Overregularization is standard evidence for rule learning in language development"
+  "yield": "HIGH",
+  "why": "Overregularization as rule-learning evidence: commonly tested language milestone"
  },
  {
   "front": "A child with normal grammar and vocabulary cannot take turns, read sarcasm, or adjust tone to a listener. Which language component is impaired?",
   "fp": "b9d667e157d8",
   "yield": "MEDIUM",
-  "why": "Pragmatics is a language component; secondary to phoneme/morpheme/syntax"
+  "why": "Pragmatics: language component secondary to phoneme/morpheme/syntax"
  },
  {
   "front": "A mental set is:",
   "fp": "f95548ed41ad",
   "yield": "HIGH",
-  "why": "Mental set is an AAMC-listed barrier to problem solving"
+  "why": "Mental set: AAMC-listed barrier to problem solving"
  },
  {
   "front": "A patient speaks fluently and comprehends well but cannot repeat phrases. Name the aphasia and the damaged tract.",
   "fp": "a0fb51419911",
-  "yield": "MEDIUM",
-  "why": "Conduction aphasia/arcuate fasciculus is second-tier beyond Broca and Wernicke"
+  "yield": "HIGH",
+  "why": "Conduction aphasia/arcuate fasciculus completes the aphasia triad"
  },
  {
   "front": "A patient with dorsolateral prefrontal damage keeps sorting by color after the rule silently switches to shape. Name the error and the function lost.",
   "fp": "c83e5903e961",
   "yield": "MEDIUM",
-  "why": "Prefrontal perseveration illustrates executive function; WCST detail is secondary"
+  "why": "WCST perseveration illustrates executive function; task detail secondary"
  },
  {
   "front": "A scale reads five pounds heavy every single time. It is {{c1::reliable}} but not {{c2::valid}}, showing reliability is necessary but not sufficient.",
   "fp": "b0de7eeb8cfd",
-  "yield": "MEDIUM",
-  "why": "Reliability vs validity is tested, but belongs to research methods, not 6B"
+  "yield": "HIGH",
+  "why": "Reliable-but-not-valid scale: tested every year even though it is research methods"
  },
  {
   "front": "A stroke patient's speech is slurred but grammatically intact, and her writing is normal. Is this aphasia, dysarthria, or apraxia of speech?",
@@ -86,38 +86,38 @@
  {
   "front": "A toddler calls a zebra 'horse' — {{c1::assimilation}} into an existing schema; revising the schema to add zebras is {{c2::accommodation}}.",
   "fp": "864865d617ae",
-  "yield": "HIGH",
-  "why": "Assimilation vs accommodation is core Piaget"
+  "yield": "ULTRA_HIGH",
+  "why": "Assimilation vs accommodation: foundational Piaget, every year"
  },
  {
   "front": "After an election, people claim they 'knew it all along'. Name the bias and its danger for evaluating decisions.",
   "fp": "1ec10186f6f6",
-  "yield": "MEDIUM",
-  "why": "Hindsight bias is a commonly tested secondary bias"
+  "yield": "HIGH",
+  "why": "Hindsight bias: commonly tested bias"
  },
  {
   "front": "After five reds at roulette, one bettor expects black is 'due'; another bets red for the 'streak'. Name each error.",
   "fp": "d02a992b7204",
   "yield": "MEDIUM",
-  "why": "Gambler's fallacy is a plausible passage bias, not AAMC-listed"
+  "why": "Gambler's fallacy: plausible passage bias, not AAMC-listed"
  },
  {
   "front": "After heavy news coverage of a plane crash, people overestimate flying risk. Which heuristic, and what actually drives the estimate?",
   "fp": "57000bf9f113",
-  "yield": "HIGH",
-  "why": "Availability heuristic applied to a scenario, the way AAMC asks it"
+  "yield": "ULTRA_HIGH",
+  "why": "Availability heuristic in scenario form: the way AAMC asks it, every year"
  },
  {
   "front": "An 8-month-old searches at location A after watching a toy hidden at B. Name the error and its Piagetian stage.",
   "fp": "87409fbfb079",
   "yield": "MEDIUM",
-  "why": "A-not-B error is supporting detail on object permanence"
+  "why": "A-not-B error: supporting detail on object permanence"
  },
  {
   "front": "Belief perseverance is:",
   "fp": "ab5b05f9370f",
   "yield": "HIGH",
-  "why": "Belief perseverance is explicitly named on the AAMC outline"
+  "why": "Belief perseverance: explicitly named on the AAMC outline"
  },
  {
   "front": "Broca's area damage produces:",
@@ -129,19 +129,19 @@
   "front": "Cattell: {{c1::fluid}} intelligence (novel reasoning) declines with age, while {{c2::crystallized}} intelligence (accumulated knowledge) holds steady or grows.",
   "fp": "c9e0b60f67e9",
   "yield": "MEDIUM",
-  "why": "Fluid/crystallized with Cattell attribution; the plain contrast card covers it"
+  "why": "Cattell attribution; the plain fluid/crystallized card carries the core"
  },
  {
   "front": "Chomsky's poverty of the stimulus argument: what does it claim, and what mechanism did he propose?",
   "fp": "dc78645719e1",
   "yield": "HIGH",
-  "why": "Chomsky nativist LAD is a core language-development theory"
+  "why": "Chomsky poverty of stimulus and LAD: core nativist theory"
  },
  {
   "front": "Continuing a failing project because 'we've already invested so much' — name the fallacy and the normative rule it violates.",
   "fp": "11a9b37e05d5",
   "yield": "MEDIUM",
-  "why": "Sunk cost fallacy is a plausible secondary decision-making bias"
+  "why": "Sunk cost fallacy: secondary decision-making bias"
  },
  {
   "front": "Contrast algorithms and heuristics in problem solving, and name the heuristic of reducing distance to the goal stepwise.",
@@ -152,14 +152,14 @@
  {
   "front": "Contrast Broca's and Wernicke's aphasia.",
   "fp": "4f0f9bf2a0f2",
-  "yield": "HIGH",
-  "why": "Broca vs Wernicke aphasia is the core tested brain-language fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Broca vs Wernicke aphasia: tested on essentially every administration"
  },
  {
   "front": "Contrast fluid and crystallized intelligence.",
   "fp": "a542c2f7c526",
-  "yield": "HIGH",
-  "why": "Fluid vs crystallized intelligence is core and frequently tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Fluid vs crystallized intelligence: tested every year"
  },
  {
   "front": "Crystallized intelligence tends to:",
@@ -176,14 +176,14 @@
  {
   "front": "Define the availability and representativeness heuristics.",
   "fp": "f67b5db71bef",
-  "yield": "HIGH",
-  "why": "Availability and representativeness are the two core AAMC heuristics"
+  "yield": "ULTRA_HIGH",
+  "why": "Availability and representativeness definitions: the two core AAMC heuristics"
  },
  {
   "front": "Distinguish confirmation bias from belief perseverance.",
   "fp": "320c74d7d5eb",
   "yield": "MEDIUM",
-  "why": "Useful distinction between two separately covered biases"
+  "why": "Confirmation bias vs belief perseverance: useful distinction of two covered biases"
  },
  {
   "front": "Duncker's candle problem demonstrates {{c1::functional fixedness}}; Luchins's water-jar problems demonstrate {{c2::mental set}} (Einstellung).",
@@ -194,8 +194,8 @@
  {
   "front": "Even after spinning an obviously random wheel, people's estimates of unrelated quantities track the wheel's number. Name and explain the bias.",
   "fp": "44b74eb1145f",
-  "yield": "MEDIUM",
-  "why": "Anchoring is a commonly tested secondary heuristic"
+  "yield": "HIGH",
+  "why": "Anchoring and adjustment: commonly tested heuristic"
  },
  {
   "front": "Gardner's theory proposes:",
@@ -206,20 +206,20 @@
  {
   "front": "How do Vygotsky's zone of proximal development and scaffolding challenge Piaget's picture of development?",
   "fp": "682c9d4b9d5d",
-  "yield": "HIGH",
-  "why": "Vygotsky ZPD/scaffolding vs Piaget is core cognitive development"
+  "yield": "ULTRA_HIGH",
+  "why": "Vygotsky ZPD/scaffolding vs Piaget: foundational cognitive-development contrast"
  },
  {
   "front": "How does hearing your own name in an unattended conversation challenge Broadbent's filter model, and what did Treisman propose instead?",
   "fp": "56ec713924e4",
-  "yield": "MEDIUM",
-  "why": "Cocktail party effect and attenuation model are standard selective attention"
+  "yield": "HIGH",
+  "why": "Cocktail party effect and Broadbent/Treisman models: outline selective-attention content"
  },
  {
   "front": "In dichotic listening with shadowing, what do subjects retain from the unattended ear?",
   "fp": "ce0fb28ab65f",
   "yield": "MEDIUM",
-  "why": "Dichotic listening finding supports selective attention; secondary detail"
+  "why": "Dichotic listening finding: secondary selective-attention detail"
  },
  {
   "front": "In Simons and Chabris's study, half the viewers counting basketball passes missed a person in a gorilla suit. Name the phenomenon and its cousin.",
@@ -231,79 +231,79 @@
   "front": "In the Linda problem, why is 'feminist bank teller' judged likelier than 'bank teller', and what fallacy is this?",
   "fp": "30e2a59ab547",
   "yield": "MEDIUM",
-  "why": "Conjunction fallacy is a secondary representativeness example"
+  "why": "Conjunction fallacy: secondary representativeness example"
  },
  {
   "front": "IQ heritability is about 0.5-0.8 in adults. Why can't this explain average differences between groups?",
   "fp": "37b9b4adb72c",
   "yield": "MEDIUM",
-  "why": "Heritability within vs between groups is a plausible reasoning question"
+  "why": "Heritability within vs between groups: plausible reasoning step"
  },
  {
   "front": "Judging category membership by resemblance while ignoring category frequency — {{c1::base rate neglect}}, via the {{c2::representativeness}} heuristic.",
   "fp": "538f3e8ab8f1",
-  "yield": "HIGH",
-  "why": "Base rate neglect via representativeness is a high-frequency item"
+  "yield": "ULTRA_HIGH",
+  "why": "Base rate neglect via representativeness: every-year heuristic item"
  },
  {
   "front": "List Piaget's four stages of cognitive development, in order.",
   "fp": "7e6c44eef724",
-  "yield": "HIGH",
-  "why": "Piaget's four stages are core tested content"
+  "yield": "ULTRA_HIGH",
+  "why": "Piaget four stages: foundational, tested every year"
  },
  {
   "front": "Match to theorist: a general factor g; eight relatively independent intelligences; analytical, creative, and practical intelligence.",
   "fp": "54b05671c011",
   "yield": "HIGH",
-  "why": "Spearman/Gardner/Sternberg theories of intelligence are on the outline"
+  "why": "Spearman/Gardner/Sternberg intelligence theories: on the outline"
  },
  {
   "front": "Match to theorist: language is shaped by reinforcement; language rests on an innate acquisition device; language emerges from scaffolded social interaction.",
   "fp": "4401a6a40da4",
-  "yield": "HIGH",
-  "why": "Skinner/Chomsky/interactionist language theories are on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Skinner/Chomsky/interactionist language theories: tested every year"
  },
  {
   "front": "Modern IQ scores are set to a mean of {{c1::100}} and a standard deviation of {{c2::15}}, so roughly 68 percent of people fall between 85 and 115.",
   "fp": "43b98bc37527",
-  "yield": "MEDIUM",
-  "why": "IQ mean 100/SD 15 is used in normal-distribution reasoning"
+  "yield": "HIGH",
+  "why": "IQ mean 100/SD 15: normal-distribution reasoning appears often"
  },
  {
   "front": "Name and briefly define the three intelligences in Sternberg's triarchic theory.",
   "fp": "4514ca60f902",
   "yield": "MEDIUM",
-  "why": "Triarchic components are supporting detail on Sternberg"
+  "why": "Triarchic components: supporting detail on Sternberg"
  },
  {
   "front": "Physicians who report 90 percent certainty in a diagnosis are correct far less often. Name the bias and one strategy that actually reduces it.",
   "fp": "0cb62eb2baad",
   "yield": "HIGH",
-  "why": "Overconfidence is explicitly named on the AAMC outline"
+  "why": "Overconfidence: explicitly named on the AAMC outline"
  },
  {
   "front": "Piaget's {{c1::formal operational}} stage (about 12+) brings abstract, hypothetical-deductive reasoning, classically tested with the {{c2::pendulum}} task.",
   "fp": "c092226e03e3",
-  "yield": "MEDIUM",
-  "why": "Formal operational detail; the four-stages card carries the core"
+  "yield": "HIGH",
+  "why": "Formal operational abstract reasoning: commonly tested stage marker"
  },
  {
   "front": "Piaget's {{c1::sensorimotor}} stage (0-2 yrs) culminates in {{c2::object permanence}} and the onset of mental representation.",
   "fp": "0c3f747880af",
-  "yield": "MEDIUM",
-  "why": "Sensorimotor detail; the four-stages card carries the core"
+  "yield": "HIGH",
+  "why": "Sensorimotor object permanence: commonly tested stage marker"
  },
  {
   "front": "Prospect theory: losses loom larger than equivalent gains ({{c1::loss aversion}}), so choices reverse under different {{c2::framing}} of the same outcomes.",
   "fp": "f4dcd63bc207",
-  "yield": "HIGH",
-  "why": "Loss aversion and framing are core decision-making content"
+  "yield": "ULTRA_HIGH",
+  "why": "Loss aversion and framing (prospect theory): every-year decision content"
  },
  {
   "front": "Reading the word 'nurse' speeds recognition of 'doctor' but not of 'butter'. Name the effect and the memory model it supports.",
   "fp": "5c50c6a39c3d",
   "yield": "MEDIUM",
-  "why": "Semantic priming/spreading activation is tested but belongs to memory"
+  "why": "Semantic priming/spreading activation: belongs to memory"
  },
  {
   "front": "Stern's ratio IQ = ({{c1::mental age}} / chronological age) x 100; modern tests instead use {{c2::deviation}} IQ normed to mean 100, SD 15.",
@@ -326,14 +326,14 @@
  {
   "front": "The {{c1::Whorf (linguistic relativity)}} hypothesis says language shapes thought; evidence supports only the {{c2::weak}} version.",
   "fp": "08fb68a4a3e0",
-  "yield": "HIGH",
-  "why": "Whorf linguistic relativity is explicitly on the AAMC outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Whorf linguistic relativity, weak version: asked nearly every year"
  },
  {
   "front": "The Flynn effect describes:",
   "fp": "97386745af94",
   "yield": "MEDIUM",
-  "why": "Flynn effect is a plausible secondary intelligence fact"
+  "why": "Flynn effect: secondary intelligence fact"
  },
  {
   "front": "The same policy described as '200 saved' versus '400 will die' flips people from risk-averse to risk-seeking. Name the effect and the theory behind it.",
@@ -344,26 +344,26 @@
  {
   "front": "The smallest unit of sound is a {{c1::phoneme}}; the smallest unit of meaning is a {{c2::morpheme}}.",
   "fp": "9d143cd0edc5",
-  "yield": "HIGH",
-  "why": "Phoneme vs morpheme is a high-frequency language component distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Phoneme vs morpheme: foundational language-component distinction"
  },
  {
   "front": "The Stroop task: why is naming the ink color of the word RED printed in blue so slow?",
   "fp": "2c51d82fbb60",
-  "yield": "MEDIUM",
-  "why": "Stroop illustrates the automatic/controlled processing card"
+  "yield": "HIGH",
+  "why": "Stroop interference: standard automatic-vs-controlled example"
  },
  {
   "front": "The three mountains task reveals {{c1::egocentrism}} in Piaget's {{c2::preoperational}} stage (about 2-7 years).",
   "fp": "050e86ed112c",
-  "yield": "MEDIUM",
-  "why": "Egocentrism detail; the four-stages card carries the core"
+  "yield": "HIGH",
+  "why": "Egocentrism/three mountains: classic preoperational marker"
  },
  {
   "front": "Trace the language timeline: cooing, babbling, first words, telegraphic speech — and what happens to babbling around 9-10 months?",
   "fp": "a1bcbcfcc48e",
   "yield": "HIGH",
-  "why": "Language milestone timeline is frequently tested"
+  "why": "Language milestone timeline: commonly tested"
  },
  {
   "front": "What can a concrete operational child (7-11) do that a preoperational child cannot, and what remains beyond them?",
@@ -380,43 +380,43 @@
  {
   "front": "What does the case of Genie suggest about language acquisition, and what is the key interpretive caveat?",
   "fp": "cc4358ff1a62",
-  "yield": "MEDIUM",
-  "why": "Genie is the standard critical-period example"
+  "yield": "HIGH",
+  "why": "Genie critical-period case: standard language-acquisition evidence"
  },
  {
   "front": "What evidence led Spearman to propose general intelligence (g)?",
   "fp": "ec6259edb073",
   "yield": "MEDIUM",
-  "why": "Spearman g evidence is supporting detail on the theorist card"
+  "why": "Spearman g evidence: supporting detail on the theorist card"
  },
  {
   "front": "What is a heuristic and how does it differ from an algorithm?",
   "fp": "3dede3524993",
-  "yield": "HIGH",
-  "why": "Heuristic vs algorithm is a core problem-solving distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Heuristic vs algorithm: foundational problem-solving distinction"
  },
  {
   "front": "What is confirmation bias?",
   "fp": "0c153b6cd9fb",
-  "yield": "HIGH",
-  "why": "Confirmation bias is a core tested bias"
+  "yield": "ULTRA_HIGH",
+  "why": "Confirmation bias: tested every year"
  },
  {
   "front": "What is dual-process theory?",
   "fp": "be62c45231a7",
-  "yield": "HIGH",
-  "why": "Dual-process System 1/2 is core decision-making content"
+  "yield": "ULTRA_HIGH",
+  "why": "Dual-process System 1/2: foundational decision-making content"
  },
  {
   "front": "What is functional fixedness?",
   "fp": "490f884a6daa",
   "yield": "HIGH",
-  "why": "Functional fixedness is an AAMC-listed barrier to problem solving"
+  "why": "Functional fixedness: AAMC-listed barrier to problem solving"
  },
  {
   "front": "Which of the following best describes syntax?",
   "fp": "c08b728ce7c1",
   "yield": "MEDIUM",
-  "why": "Syntax definition; supporting detail on language components"
+  "why": "Syntax definition: supporting detail on language components"
  }
 ]

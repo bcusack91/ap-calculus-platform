@@ -3,7 +3,7 @@
   "front": "'Multiple alleles' is a population-level property. How many alleles at that locus does one diploid individual carry?",
   "fp": "b1e87db591c2",
   "yield": "MEDIUM",
-  "why": "Multiple alleles population-wide vs two per individual; definitional but a real distinction"
+  "why": "Two alleles per diploid individual is a supporting clarification, rarely scored"
  },
  {
   "front": "A 15:1 dihybrid ratio arises from {{c1::duplicate gene action}} — a dominant allele at EITHER locus produces the phenotype.",
@@ -15,13 +15,13 @@
   "front": "A 9:3:4 dihybrid ratio indicates {{c1::recessive epistasis}} — the $aa$ genotype masks the second locus.",
   "fp": "e6ec4fdf368d",
   "yield": "HIGH",
-  "why": "Recessive epistasis 9:3:4 (Labrador) is the classic tested modified ratio"
+  "why": "9:3:4 recessive epistasis (Labrador) is the classic modified ratio commonly tested"
  },
  {
   "front": "A 9:7 dihybrid ratio signals {{c1::duplicate recessive (complementary gene) epistasis}} — homozygous recessive at either locus blocks the phenotype.",
   "fp": "ebcba9b6686d",
   "yield": "MEDIUM",
-  "why": "9:7 complementary gene action; second-tier epistasis ratio"
+  "why": "9:7 complementary gene action is a secondary modified ratio"
  },
  {
   "front": "A dihybrid cross yields a 9:3:4 phenotypic ratio. What does the collapsed class indicate?",
@@ -33,19 +33,19 @@
   "front": "A dihybrid testcross gives parentals at 42%+42% and recombinants at 8%+8%. Conclusion: the genes are {{c1::linked, 16 map units apart}}.",
   "fp": "2c2e2d4e70db",
   "yield": "HIGH",
-  "why": "Computing map distance from testcross recombinant frequency is a tested calculation"
+  "why": "Converting testcross recombinant % to map units is a common calculation"
  },
  {
   "front": "A monohybrid cross of two heterozygotes gives a {{c1::3:1}} phenotypic ratio and a {{c2::1:2:1}} genotypic ratio.",
   "fp": "a755aa2e20f6",
-  "yield": "HIGH",
-  "why": "Monohybrid 3:1 phenotypic and 1:2:1 genotypic ratios are foundational"
+  "yield": "ULTRA_HIGH",
+  "why": "Monohybrid 3:1 and 1:2:1 ratios are foundational, tested every year"
  },
  {
   "front": "A testcross of a dominant-phenotype plant yields 50 dominant : 50 recessive offspring. The tested parent is {{c1::heterozygous ($Aa$)}}.",
   "fp": "20f9c71c5540",
   "yield": "HIGH",
-  "why": "1:1 testcross ratio identifies a heterozygote; standard inference"
+  "why": "Reading a 1:1 testcross as heterozygous is a common applied question"
  },
  {
   "front": "A testcross predicts 1:1:1:1 but yields 40:10:10:40. What does this show and what is the map distance?",
@@ -56,68 +56,68 @@
  {
   "front": "A trait affecting almost only males, passed from unaffected carrier mothers to sons, is {{c1::X-linked recessive}}.",
   "fp": "486b0b58fec4",
-  "yield": "HIGH",
-  "why": "X-linked recessive pedigree signature is core"
+  "yield": "ULTRA_HIGH",
+  "why": "X-linked recessive pedigree recognition is tested every administration"
  },
  {
   "front": "A trait passed to all children of affected mothers and to none of an affected father's children is {{c1::mitochondrial}}.",
   "fp": "bbce682c479f",
-  "yield": "HIGH",
-  "why": "Mitochondrial pedigree pattern is a standard discriminator"
+  "yield": "ULTRA_HIGH",
+  "why": "Mitochondrial pedigree pattern is a core inheritance mode tested yearly"
  },
  {
   "front": "A trait present in every generation, in both sexes, with every affected child having an affected parent, is {{c1::autosomal dominant}}.",
   "fp": "ec70beffe7dd",
-  "yield": "HIGH",
-  "why": "Autosomal dominant pedigree signature is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Autosomal dominant pedigree recognition is tested every administration"
  },
  {
   "front": "A trait that skips generations, affects both sexes equally, and clusters in consanguineous families is {{c1::autosomal recessive}}.",
   "fp": "b68384085e5a",
-  "yield": "HIGH",
-  "why": "Autosomal recessive pedigree signature with consanguinity is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Autosomal recessive pedigree recognition is tested every administration"
  },
  {
   "front": "A trisomy 21 child has three distinct alleles at a chromosome 21 marker. Did nondisjunction occur in meiosis I or II?",
   "fp": "c8aa8574ecfc",
-  "yield": "MEDIUM",
-  "why": "Meiosis I vs II nondisjunction from marker alleles; plausible passage reasoning"
+  "yield": "HIGH",
+  "why": "Meiosis I vs II nondisjunction from allele count is a common passage reasoning step"
  },
  {
   "front": "A type O child is born to a type A mother and a type B father. What must the parents' genotypes be?",
   "fp": "e419fca855c8",
-  "yield": "HIGH",
-  "why": "ABO parent genotypes from a type O child is a classic problem"
+  "yield": "ULTRA_HIGH",
+  "why": "ABO parental genotype deduction is a perennial discrete"
  },
  {
   "front": "AB blood type is {{c1::codominance}} because both alleles produce detectable antigen, not a blend.",
   "fp": "d0ad75371f92",
   "yield": "MEDIUM",
-  "why": "AB codominance example; supports the plainer dominance-types card"
+  "why": "Near-restatement of the ABO codominance and dominance-types cards"
  },
  {
   "front": "An affected mother passes an X-linked recessive trait to ALL sons only if she is {{c1::homozygous affected}}; a carrier affects half her sons.",
   "fp": "a66ec4319fec",
-  "yield": "MEDIUM",
-  "why": "Son risk from carrier vs affected mother; second-step X-linked calculation"
+  "yield": "HIGH",
+  "why": "Son risk from carrier vs affected mother is a common X-linked probability"
  },
  {
   "front": "An obligate carrier in a dominant pedigree shows no phenotype yet has affected children. This is {{c1::incomplete penetrance}}.",
   "fp": "73594f2c04a8",
   "yield": "HIGH",
-  "why": "Incomplete penetrance from an obligate carrier is a classic pedigree trap"
+  "why": "Incomplete penetrance in a dominant pedigree is a standard twist"
  },
  {
   "front": "Cross $AaBb \\times Aabb$: what is the probability of an $aabb$ offspring?",
   "fp": "cf6743b13e47",
-  "yield": "HIGH",
-  "why": "Product-rule dihybrid probability is exactly how the exam tests crosses"
+  "yield": "ULTRA_HIGH",
+  "why": "Product rule for mixed-locus crosses is used on essentially every exam"
  },
  {
   "front": "Crossing two yellow mice yields 2 yellow : 1 non-yellow instead of 3:1 because {{c1::the homozygous $A^Y A^Y$ genotype is embryonic lethal}}.",
   "fp": "a77f566bbc98",
   "yield": "HIGH",
-  "why": "Recessive lethal 2:1 ratio (yellow mice) is a classic tested deviation"
+  "why": "Recessive lethal 2:1 ratio is a commonly tested ratio distortion"
  },
  {
   "front": "Distinguish codominance from incomplete dominance at the phenotype level.",
@@ -128,32 +128,32 @@
  {
   "front": "Distinguish complete dominance, incomplete dominance, and codominance.",
   "fp": "d6966d094402",
-  "yield": "HIGH",
-  "why": "Complete vs incomplete dominance vs codominance is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Complete/incomplete/codominance is a foundational every-year distinction"
  },
  {
   "front": "Distinguish incomplete penetrance from variable expressivity.",
   "fp": "72bd76773839",
-  "yield": "HIGH",
-  "why": "Penetrance vs expressivity is explicitly on the AAMC outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Penetrance vs expressivity is tested essentially every year"
  },
  {
   "front": "Distinguish nondisjunction, aneuploidy, and give an example.",
   "fp": "07d48c47583e",
-  "yield": "HIGH",
-  "why": "Nondisjunction, aneuploidy and Down/Turner/Klinefelter are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Nondisjunction and aneuploidy examples are foundational, tested every year"
  },
  {
   "front": "Distinguish point mutations: silent, missense, nonsense.",
   "fp": "d553dd2fbda8",
-  "yield": "HIGH",
-  "why": "Silent/missense/nonsense mutation types are core (belongs in mutation topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Silent/missense/nonsense mutation types are tested every administration"
  },
  {
   "front": "Distinguish the sources of genetic variation in meiosis.",
   "fp": "c4ad2367cb80",
   "yield": "HIGH",
-  "why": "Crossing over, independent assortment, random fertilization are core meiosis content"
+  "why": "Sources of meiotic variation are commonly tested"
  },
  {
   "front": "For a monohybrid testcross of 100 offspring, a chi-square test uses {{c1::1}} degree of freedom.",
@@ -164,14 +164,14 @@
  {
   "front": "For an autosomal recessive disease, the unaffected sibling of an affected child is a carrier with probability {{c1::2/3}}.",
   "fp": "6bd00e0adabd",
-  "yield": "HIGH",
-  "why": "2/3 conditional carrier probability is a classic trap question"
+  "yield": "ULTRA_HIGH",
+  "why": "The 2/3 carrier conditional is a classic every-year trap"
  },
  {
   "front": "From $AaBb \\times AaBb$, what fraction of offspring shows the dominant A phenotype but the recessive b phenotype?",
   "fp": "b3cc42f16d3a",
   "yield": "HIGH",
-  "why": "3/16 via product rule is the standard dihybrid calculation"
+  "why": "Dihybrid 3/16 by product rule is a common application; the mixed-cross card is the anchor"
  },
  {
   "front": "How do you determine whether an organism with a dominant phenotype is homozygous or heterozygous?",
@@ -189,85 +189,85 @@
   "front": "How is autosomal recessive inheritance recognized in a pedigree?",
   "fp": "ebc3b98ce1a0",
   "yield": "MEDIUM",
-  "why": "AR recognition with disease examples; supports the plainer AR signature card"
+  "why": "Restates the autosomal recessive pedigree card with examples"
  },
  {
   "front": "How is X-linked recessive inheritance recognized?",
   "fp": "8f77a2503750",
   "yield": "MEDIUM",
-  "why": "X-linked recessive recognition with examples; supports the plainer XR signature card"
+  "why": "Restates the X-linked recessive pedigree cards with examples"
  },
  {
   "front": "If 1 in 10,000 people has an autosomal recessive disease, what is the carrier frequency?",
   "fp": "d0fd7f7175cb",
-  "yield": "HIGH",
-  "why": "Carrier frequency from disease incidence is the standard HW calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "Carrier frequency from disease incidence is the core HW calculation"
  },
  {
   "front": "In a dihybrid cross $AaBb \\times AaBb$, the fraction of offspring recessive for BOTH traits is {{c1::$1/16$}}.",
   "fp": "db61d78f271c",
   "yield": "HIGH",
-  "why": "1/16 double recessive via product rule is core"
+  "why": "Double recessive 1/16 is a common product-rule application"
  },
  {
   "front": "In a dihybrid testcross $AaBb \\times aabb$, what offspring ratio shows the two genes assort independently?",
   "fp": "74497e1cdb67",
-  "yield": "MEDIUM",
-  "why": "Dihybrid testcross 1:1:1:1 vs linkage skew; supporting to the map-distance card"
+  "yield": "HIGH",
+  "why": "1:1:1:1 dihybrid testcross as the independent-assortment baseline is commonly needed"
  },
  {
   "front": "In ABO blood groups, $I^A$ and $I^B$ are {{c1::codominant}} with each other, while both are completely dominant over $i$.",
   "fp": "2e36ce85c128",
-  "yield": "HIGH",
-  "why": "ABO shows codominance and complete dominance in one system; frequently asked"
+  "yield": "ULTRA_HIGH",
+  "why": "ABO codominance plus dominance over i is a foundational every-year fact"
  },
  {
   "front": "In X-linked recessive pedigrees, an affected father transmits the trait to {{c1::no sons, but all daughters become carriers}}.",
   "fp": "cac440599d41",
-  "yield": "HIGH",
-  "why": "Affected father -> all daughters carriers, no sons is the key X-linked recessive rule"
+  "yield": "ULTRA_HIGH",
+  "why": "Affected father -> carrier daughters, unaffected sons is core X-linked logic"
  },
  {
   "front": "Man's brother has an AR disease; partner's carrier risk is 1/50. P(affected child) = {{c1::$2/3 \\times 1/50 \\times 1/4 = 1/300$}}.",
   "fp": "b497c89ed689",
-  "yield": "MEDIUM",
-  "why": "Chained product-rule risk calculation; worked example of a HIGH concept"
+  "yield": "HIGH",
+  "why": "Chained carrier-risk product problems are commonly tested"
  },
  {
   "front": "Marfan syndrome affects skeleton, lens, and aorta via one fibrillin-1 mutation. What inheritance concept does this illustrate?",
   "fp": "6fd036c60daf",
   "yield": "MEDIUM",
-  "why": "Marfan as pleiotropy; clinical flavor on a tested concept"
+  "why": "Marfan is a secondary pleiotropy example; the definition card carries the content"
  },
  {
   "front": "One gene influencing many distinct phenotypes is {{c1::pleiotropy}} — e.g., the sickle allele causing anemia, splenomegaly, and malaria resistance.",
   "fp": "9a2fd8feb995",
   "yield": "HIGH",
-  "why": "Pleiotropy with sickle allele example is core"
+  "why": "Pleiotropy with the sickle example is commonly tested"
  },
  {
   "front": "Only 60 percent of people with a dominant allele show the trait, and those who do vary in severity.",
   "fp": "763f1fc35d0b",
   "yield": "MEDIUM",
-  "why": "Scenario combining penetrance and expressivity; supporting to the definition card"
+  "why": "Restates the penetrance vs expressivity card"
  },
  {
   "front": "Parents $I^A i \\times I^B i$: which blood types can appear among their children?",
   "fp": "f479dfec842e",
-  "yield": "MEDIUM",
-  "why": "IAi x IBi giving all four types; secondary ABO cross"
+  "yield": "HIGH",
+  "why": "IAi x IBi giving all four blood types is a common ABO question"
  },
  {
   "front": "Pattern baldness is dominant in males but recessive in females — a {{c1::sex-influenced}} trait, unlike sex-limited traits expressed in one sex only.",
   "fp": "1a692eb8d49d",
   "yield": "MEDIUM",
-  "why": "Sex-influenced (baldness) vs sex-limited is a second-tier distinction"
+  "why": "Sex-influenced vs sex-limited is secondary detail"
  },
  {
   "front": "Pedigree clue: an affected father has ALL affected daughters and NO affected sons. Mode = {{c1::X-linked dominant}}.",
   "fp": "a99379cd1fab",
   "yield": "HIGH",
-  "why": "X-linked dominant all-daughters/no-sons pattern is a tested discriminator"
+  "why": "X-linked dominant father -> all daughters is a commonly tested pedigree clue"
  },
  {
   "front": "Pedigree clue: an affected mother transmits the trait to ALL her children, but an affected father transmits it to none. Mode?",
@@ -291,49 +291,49 @@
   "front": "Red $\\times$ white snapdragons give an all-pink $F_1$; the $F_2$ shows {{c1::1 red : 2 pink : 1 white}} — incomplete dominance.",
   "fp": "5affd073524c",
   "yield": "HIGH",
-  "why": "Snapdragon 1:2:1 incomplete dominance ratio is the classic example"
+  "why": "Snapdragon 1:2:1 incomplete dominance is a standard example"
  },
  {
   "front": "Sickle cell allele behavior depends on the level of analysis. Explain the apparent contradiction.",
   "fp": "01a5becd083b",
   "yield": "MEDIUM",
-  "why": "Dominance depends on phenotype level; nuanced but plausible passage point"
+  "why": "Level-of-analysis dominance nuance is secondary"
  },
  {
   "front": "State Mendel's law of segregation and law of independent assortment.",
   "fp": "8a53881a3705",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Mendel's laws of segregation and independent assortment are foundational"
  },
  {
   "front": "State the Hardy-Weinberg equations and conditions.",
   "fp": "9d2b94b1478f",
-  "yield": "HIGH",
-  "why": "Hardy-Weinberg equations and assumptions are core (belongs in population genetics)"
+  "yield": "ULTRA_HIGH",
+  "why": "Hardy-Weinberg equations and assumptions are tested every administration"
  },
  {
   "front": "The Bombay phenotype types as O despite $I^A$ or $I^B$ alleles because {{c1::homozygous $hh$ blocks H antigen synthesis}}.",
   "fp": "5af790b1ae4b",
   "yield": "MEDIUM",
-  "why": "Bombay phenotype is the standard human epistasis example"
+  "why": "Bombay phenotype is a secondary epistasis example"
  },
  {
   "front": "The maximum recombination frequency between two loci is {{c1::50 percent}}, which is indistinguishable from independent assortment.",
   "fp": "52a623a94ade",
   "yield": "HIGH",
-  "why": "RF cap at 50% = independent assortment is commonly tested"
+  "why": "RF cap at 50% equals independent assortment is a common conceptual question"
  },
  {
   "front": "The same chromosome 15 deletion causes Prader-Willi if paternal and Angelman if maternal. What explains this?",
   "fp": "c331a53c67ac",
   "yield": "MEDIUM",
-  "why": "Prader-Willi/Angelman is the standard imprinting example"
+  "why": "Prader-Willi/Angelman imprinting is the standard example but secondary"
  },
  {
   "front": "The single most decisive pedigree feature excluding X-linkage is {{c1::male-to-male transmission}}.",
   "fp": "b24b4fa81c70",
-  "yield": "HIGH",
-  "why": "Male-to-male transmission excluding X-linkage is the first pedigree check"
+  "yield": "ULTRA_HIGH",
+  "why": "Male-to-male transmission excluding X-linkage is core pedigree logic"
  },
  {
   "front": "Two known carriers plan a child. What is P(child is a carrier GIVEN the child is unaffected)?",
@@ -345,60 +345,60 @@
   "front": "Two unaffected parents have a child with cystic fibrosis. What are the parents' genotypes and the recurrence risk?",
   "fp": "4c44edb17f4b",
   "yield": "HIGH",
-  "why": "CF obligate carriers, 1/4 recurrence and independence of births is core"
+  "why": "Obligate carrier parents and independent 1/4 risk is a common counseling question"
  },
  {
   "front": "What is a frameshift mutation and why is it often severe?",
   "fp": "792cb803a892",
-  "yield": "HIGH",
-  "why": "Frameshift mutations are core (belongs in mutation topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Frameshift mutations are tested every administration"
  },
  {
   "front": "What is a test cross and what is its purpose?",
   "fp": "2fc67d15749b",
-  "yield": "HIGH",
-  "why": "Test cross definition and purpose is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Test cross definition and purpose is foundational, tested every year"
  },
  {
   "front": "What is genetic linkage and how does recombination frequency relate to distance?",
   "fp": "af7d2bbed97d",
-  "yield": "HIGH",
-  "why": "Linkage, RF vs distance and 1 cM = 1% is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Linkage and RF as map distance is core, used in calculations every year"
  },
  {
   "front": "What is pleiotropy vs. polygenic inheritance vs. epistasis?",
   "fp": "8efdf651044a",
-  "yield": "HIGH",
-  "why": "Pleiotropy vs polygenic vs epistasis is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Pleiotropy/polygenic/epistasis distinction is a perennial discrete"
  },
  {
   "front": "What is the expected phenotypic ratio of a monohybrid and a dihybrid cross (heterozygous parents)?",
   "fp": "983e36f858de",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Monohybrid 3:1 and dihybrid 9:3:3:1 ratios are foundational"
  },
  {
   "front": "Why do some carrier females show mild Duchenne muscular dystrophy or hemophilia symptoms?",
   "fp": "471e7d77435a",
   "yield": "MEDIUM",
-  "why": "Manifesting carriers via skewed X-inactivation; supporting detail"
+  "why": "Manifesting carrier via skewed X-inactivation is second-tier detail"
  },
  {
   "front": "Why does a testcross use a homozygous recessive partner rather than a homozygous dominant one?",
   "fp": "093949404947",
   "yield": "MEDIUM",
-  "why": "Why testcross uses the recessive partner; supporting detail on the test cross card"
+  "why": "Why a testcross uses a recessive tester supports the test cross card"
  },
  {
   "front": "Why does consanguinity (e.g., first-cousin mating) specifically raise autosomal recessive disease risk?",
   "fp": "2ec6db0a2b06",
-  "yield": "MEDIUM",
-  "why": "Consanguinity raising AR risk (1/8 shared); plausible second-step reasoning"
+  "yield": "HIGH",
+  "why": "Consanguinity raising recessive risk is a common reasoning question"
  },
  {
   "front": "Why has selection not eliminated the Huntington disease allele despite complete penetrance and lethality?",
   "fp": "55010c92483e",
   "yield": "MEDIUM",
-  "why": "Late-onset Huntington and anticipation; plausible passage concept"
+  "why": "Huntington late onset and anticipation is secondary context"
  }
 ]

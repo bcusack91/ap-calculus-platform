@@ -1,0 +1,374 @@
+[
+ {
+  "front": "A charge accelerated from rest through potential difference $V$ reaches a speed proportional to {{c1::the square root of $V$}}.",
+  "fp": "38abae605160",
+  "yield": "ULTRA_HIGH",
+  "why": "qV = 1/2 mv^2 energy conservation; scaling with sqrt(V) is a standard discrete"
+ },
+ {
+  "front": "A charge is carried in a circle around a fixed point charge at constant radius. How much work is done?",
+  "fp": "057978d44759",
+  "yield": "ULTRA_HIGH",
+  "why": "Equipotentials and zero work: tested nearly every administration"
+ },
+ {
+  "front": "A charged particle enters a uniform field moving perpendicular to it. Describe its trajectory.",
+  "fp": "0f2548a4330a",
+  "yield": "HIGH",
+  "why": "Parabolic path in uniform E field is a common projectile-analogy question"
+ },
+ {
+  "front": "A dipole in a uniform field feels zero net force but a torque $\\tau = {{c1::pE\\sin\\theta}}$.",
+  "fp": "e6aac1932413",
+  "yield": "MEDIUM",
+  "why": "Dipole torque formula is prep-book detail; alignment behavior is what gets tested"
+ },
+ {
+  "front": "A resting membrane potential of $-70$ mV means the {{c1::inside}} of the cell is negative relative to the outside.",
+  "fp": "b447d3931988",
+  "yield": "MEDIUM",
+  "why": "Membrane potential sign convention belongs to neuro and is covered there"
+ },
+ {
+  "front": "Along the perpendicular bisector of a dipole, the electric potential is {{c1::zero}} but the field is not.",
+  "fp": "716171d90b22",
+  "yield": "MEDIUM",
+  "why": "Dipole bisector scalar-vs-vector point is a second-step subtlety"
+ },
+ {
+  "front": "An electric dipole moment points from:",
+  "fp": "f993ef60f9f2",
+  "yield": "HIGH",
+  "why": "Dipole moment direction convention is a classic physics-vs-chemistry trap"
+ },
+ {
+  "front": "An electron is placed in an electric field pointing east. Which way does it accelerate and why?",
+  "fp": "cf1d9c2bbc43",
+  "yield": "ULTRA_HIGH",
+  "why": "F = qE direction for a negative charge is asked on essentially every exam"
+ },
+ {
+  "front": "Because Coulomb's law is an inverse-square law, halving the separation multiplies the force by {{c1::4}}.",
+  "fp": "6deae9958628",
+  "yield": "ULTRA_HIGH",
+  "why": "Inverse-square scaling of Coulomb force is a perennial calculation step"
+ },
+ {
+  "front": "Between large parallel plates the field is {{c1::uniform}}, so a test charge feels the same force near either plate.",
+  "fp": "59d6ad469fc7",
+  "yield": "ULTRA_HIGH",
+  "why": "Uniform field between plates and E = V/d underlie many passage questions"
+ },
+ {
+  "front": "By Gauss-law reasoning, the net electric flux through a closed surface depends only on the {{c1::enclosed charge}}.",
+  "fp": "ddf39cd38c0c",
+  "yield": "LOW",
+  "why": "Gauss law flux is off the MCAT outline"
+ },
+ {
+  "front": "Capacitance of a parallel-plate capacitor increases when:",
+  "fp": "496ba0f9cfe5",
+  "yield": "ULTRA_HIGH",
+  "why": "C = k e0 A/d and dielectric effect are core outline content"
+ },
+ {
+  "front": "Charge concentrates most at what part of an irregular conductor?",
+  "fp": "a9e877a93026",
+  "yield": "MEDIUM",
+  "why": "Charge at sharp points is a supporting conductor fact"
+ },
+ {
+  "front": "Charge is always:",
+  "fp": "e41cbcb05218",
+  "yield": "HIGH",
+  "why": "Charge conservation and quantization are outline fundamentals"
+ },
+ {
+  "front": "Compare Coulomb's law with Newton's law of gravitation.",
+  "fp": "0c6a09c40be5",
+  "yield": "MEDIUM",
+  "why": "Coulomb vs gravity comparison is useful context, rarely a point"
+ },
+ {
+  "front": "Coulomb's constant is $k = 1/(4\\pi\\epsilon_0) = 9\\times 10^9$, with permittivity of free space $\\epsilon_0 = {{c1::8.85\\times 10^{-12}}}$ in SI units.",
+  "fp": "8bb8f30aa175",
+  "yield": "LOW",
+  "why": "Numeric value of epsilon_0 is trivia; the exam supplies k"
+ },
+ {
+  "front": "Define the electric dipole moment and give its magnitude for charges $\\pm q$ separated by $d$.",
+  "fp": "7774c6d64c7c",
+  "yield": "HIGH",
+  "why": "p = qd definition and direction are outline dipole content"
+ },
+ {
+  "front": "Does a charged particle always travel along an electric field line?",
+  "fp": "5bb68faa4cfe",
+  "yield": "MEDIUM",
+  "why": "Field-line-vs-trajectory nuance is secondary reasoning"
+ },
+ {
+  "front": "Does establishing a resting potential require moving a large fraction of the cell's ions?",
+  "fp": "7b958004c9c0",
+  "yield": "MEDIUM",
+  "why": "Few ions set the resting potential; neuro nuance, plausible passage step"
+ },
+ {
+  "front": "Each ECG lead records the {{c1::projection}} of the heart's dipole vector onto that lead's axis, so a deflection inverts when the vector points away.",
+  "fp": "3d4db2afcf7e",
+  "yield": "MEDIUM",
+  "why": "ECG lead projection is passage context, not outline"
+ },
+ {
+  "front": "Electric field lines never:",
+  "fp": "6213ac90dfe2",
+  "yield": "HIGH",
+  "why": "Field lines never cross is a standard field-line rule"
+ },
+ {
+  "front": "Excess charge on an isolated conductor resides:",
+  "fp": "0b94b1401696",
+  "yield": "HIGH",
+  "why": "Excess charge on conductor surface is a common conductor discrete"
+ },
+ {
+  "front": "How do field lines look between two large, oppositely charged parallel plates?",
+  "fp": "d03e5f54fec2",
+  "yield": "HIGH",
+  "why": "Parallel-plate field-line picture supports E = V/d questions"
+ },
+ {
+  "front": "How does a dipole's field fall off with distance compared with a point charge's?",
+  "fp": "64c3cdbb8729",
+  "yield": "LOW",
+  "why": "Dipole 1/r^3 falloff is off-outline detail"
+ },
+ {
+  "front": "How does electrospray ionization use an electric field to prepare a sample for mass spectrometry?",
+  "fp": "3fbea797ed3b",
+  "yield": "LOW",
+  "why": "Electrospray ionization is off-outline; a passage would explain it"
+ },
+ {
+  "front": "How does field magnitude vary with distance for a long charged line versus a large charged sheet?",
+  "fp": "47344777aa7b",
+  "yield": "LOW",
+  "why": "Line and sheet field falloff require Gauss law; off outline"
+ },
+ {
+  "front": "How does the field outside a uniformly charged sphere compare with that of a point charge?",
+  "fp": "62dbdbd458cd",
+  "yield": "MEDIUM",
+  "why": "Sphere-as-point-charge equivalence is a secondary reasoning step"
+ },
+ {
+  "front": "How is electric field defined, and what field does a point charge produce?",
+  "fp": "7491f205015a",
+  "yield": "ULTRA_HIGH",
+  "why": "E = F/q and E = kQ/r^2 are the core field equations"
+ },
+ {
+  "front": "How much energy does it take to move one $Na^+$ ion across a $70$ mV membrane?",
+  "fp": "5df39b1adc12",
+  "yield": "HIGH",
+  "why": "W = qV across a membrane with eV conversion is a common calculation"
+ },
+ {
+  "front": "How much work does the field do moving charge $q$ a distance $d$ along a uniform field $E$?",
+  "fp": "ac6c33cf0359",
+  "yield": "ULTRA_HIGH",
+  "why": "W = qEd = q dV is the core work-in-field equation"
+ },
+ {
+  "front": "If one charge has three times the magnitude of another, it has {{c1::three times}} as many field lines drawn on it.",
+  "fp": "50534ee5ef5b",
+  "yield": "MEDIUM",
+  "why": "Field-line count proportional to charge is a diagram convention"
+ },
+ {
+  "front": "In a voltage clamp experiment, why does the recorded current directly report channel opening?",
+  "fp": "dde55c97760e",
+  "yield": "LOW",
+  "why": "Voltage clamp is an experimental technique a passage would supply"
+ },
+ {
+  "front": "In isoelectric focusing a protein stops migrating where the pH equals its {{c1::pI}}, because net charge and therefore $F = qE$ go to zero.",
+  "fp": "51b86588dc79",
+  "yield": "HIGH",
+  "why": "Isoelectric focusing via F = qE at pI is frequently tested"
+ },
+ {
+  "front": "Like charges ___ and opposite charges ___:",
+  "fp": "f13865d56075",
+  "yield": "ULTRA_HIGH",
+  "why": "Like repel, opposite attract: the foundational electrostatics fact"
+ },
+ {
+  "front": "Moving membrane potential from $-70$ mV toward $0$ is {{c1::depolarization}}, while going more negative is hyperpolarization.",
+  "fp": "8fc9684a7c31",
+  "yield": "MEDIUM",
+  "why": "Depolarization vs hyperpolarization belongs to neuro and is covered there"
+ },
+ {
+  "front": "Myelin increases the effective separation between the conducting fluids. What does that do to membrane capacitance?",
+  "fp": "c97deef4b591",
+  "yield": "MEDIUM",
+  "why": "Myelin lowering capacitance is a physics-bio bridge, secondary"
+ },
+ {
+  "front": "Myelin speeds conduction largely by {{c1::decreasing membrane capacitance}} and increasing membrane resistance.",
+  "fp": "3417ceeee116",
+  "yield": "LOW",
+  "why": "Near-restatement of the myelin capacitance card"
+ },
+ {
+  "front": "One charge is tripled and the separation is doubled. By what factor does the Coulomb force change?",
+  "fp": "149c1801ecd6",
+  "yield": "ULTRA_HIGH",
+  "why": "Combined charge and distance scaling of Coulomb force is a classic discrete"
+ },
+ {
+  "front": "Only potential {{c1::differences}} are physically measurable; the location where $V = 0$ is a chosen reference.",
+  "fp": "68efed9794b0",
+  "yield": "MEDIUM",
+  "why": "Potential reference point is a useful-for-understanding idea"
+ },
+ {
+  "front": "State Coulomb's law and what it predicts about the force between two charges.",
+  "fp": "27ee72165dba",
+  "yield": "ULTRA_HIGH",
+  "why": "Coulomb law is the foundational equation of the topic"
+ },
+ {
+  "front": "The electric field between two parallel plates separated by 2 cm with a potential difference of 200 V is:",
+  "fp": "0ab552bba830",
+  "yield": "ULTRA_HIGH",
+  "why": "E = V/d numeric calculation appears on essentially every exam"
+ },
+ {
+  "front": "The electric field everywhere inside a uniformly charged spherical shell is {{c1::zero}}.",
+  "fp": "df0cdadd7f38",
+  "yield": "HIGH",
+  "why": "Zero field inside a charged shell is a common conductor/shell discrete"
+ },
+ {
+  "front": "The electric force is conservative, so the work it does moving a charge between two points is {{c1::independent of path}}.",
+  "fp": "1621e2816721",
+  "yield": "HIGH",
+  "why": "Conservative force and path independence underpin potential energy"
+ },
+ {
+  "front": "The field just outside a conductor is proportional to the local {{c1::surface charge density}}, which peaks where the surface curves most sharply.",
+  "fp": "dbcbe38691e6",
+  "yield": "LOW",
+  "why": "Near-restatement of the sharp-points charge card"
+ },
+ {
+  "front": "The field of a point charge is $E = {{c1::kQ/r^2}}$, with units written either N/C or V/m.",
+  "fp": "7b44a2b26240",
+  "yield": "HIGH",
+  "why": "Cloze restatement of the point-charge field; concept is core"
+ },
+ {
+  "front": "Two $1$ C charges sit $1$ m apart. What force results, and what does the answer teach you?",
+  "fp": "9f2c3f42650d",
+  "yield": "HIGH",
+  "why": "Coulomb calculation that teaches the scale of a coulomb"
+ },
+ {
+  "front": "Two equal positive charges sit $10$ cm apart. What is the electric field at the midpoint?",
+  "fp": "512875cbae49",
+  "yield": "ULTRA_HIGH",
+  "why": "Vector cancellation of fields vs scalar potential at midpoint is a classic"
+ },
+ {
+  "front": "Two fields of $300$ N/C each act at right angles at a point. What is the net field?",
+  "fp": "6ff1a780052c",
+  "yield": "HIGH",
+  "why": "Vector superposition of perpendicular fields is a common calculation"
+ },
+ {
+  "front": "Two point charges of +2 μC and -4 μC are separated by 0.3 m. Is the force attractive or repulsive, and what is its magnitude? (k = $9 \\times 10^{9}$ $N\\cdot m^{2}/C^{2}$)",
+  "fp": "1287083616e6",
+  "yield": "ULTRA_HIGH",
+  "why": "Full Coulomb law numeric calculation with sign reasoning"
+ },
+ {
+  "front": "Water's dielectric constant of about {{c1::80}} weakens the Coulomb attraction between dissolved ions by roughly that factor.",
+  "fp": "82325c13fd3d",
+  "yield": "MEDIUM",
+  "why": "Water dielectric constant is supporting context for solvation"
+ },
+ {
+  "front": "What do the starting points, ending points, and spacing of field lines tell you?",
+  "fp": "96649d0fb1c9",
+  "yield": "HIGH",
+  "why": "Field-line start, end and density rules are standard"
+ },
+ {
+  "front": "What does the Nernst equilibrium potential for an ion represent?",
+  "fp": "68dbe9b88027",
+  "yield": "MEDIUM",
+  "why": "Nernst potential meaning belongs to bio/electrochem and is covered there"
+ },
+ {
+  "front": "What is the electric potential energy of two point charges, and what does its sign mean?",
+  "fp": "be126adc35f4",
+  "yield": "ULTRA_HIGH",
+  "why": "U = kq1q2/r and its sign is a core equation, 1/r vs 1/r^2 trap"
+ },
+ {
+  "front": "What is the energy stored in a 10 μF capacitor charged to 100 V?",
+  "fp": "88eb3103916f",
+  "yield": "ULTRA_HIGH",
+  "why": "U = 1/2 CV^2 capacitor energy calculation is core"
+ },
+ {
+  "front": "Why are defibrillator paddles large and pressed firmly against gel-coated skin?",
+  "fp": "87873a185566",
+  "yield": "LOW",
+  "why": "Defibrillator paddle design is applied detail a passage would supply"
+ },
+ {
+  "front": "Why do ions cross the membrane through protein channels rather than dissolving through the lipid bilayer?",
+  "fp": "42a23529532b",
+  "yield": "MEDIUM",
+  "why": "Low-dielectric bilayer reasoning is a plausible passage step"
+ },
+ {
+  "front": "Why does a dipole feel a net force in a nonuniform field but not in a uniform one?",
+  "fp": "6872eb149335",
+  "yield": "MEDIUM",
+  "why": "Dipole net force in nonuniform field is a secondary distinction"
+ },
+ {
+  "front": "Why does a larger axon diameter increase conduction velocity?",
+  "fp": "17a2d09a2af4",
+  "yield": "MEDIUM",
+  "why": "Axon diameter and R = rho L/A is a bridge to circuits, secondary"
+ },
+ {
+  "front": "Why does a salt bridge buried in a protein's core stabilize the fold more than the same pair on the surface?",
+  "fp": "595a3078e00d",
+  "yield": "MEDIUM",
+  "why": "Buried salt bridge dielectric detail belongs to biochem [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Why does SDS-PAGE separate proteins essentially by size alone?",
+  "fp": "25dee105512f",
+  "yield": "MEDIUM",
+  "why": "SDS-PAGE mechanism belongs to biochem and is covered there [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Why is the electric field across a neuron's membrane enormous despite only $70$ mV?",
+  "fp": "49c09d94d6b5",
+  "yield": "HIGH",
+  "why": "E = V/d applied to the membrane is a classic calculation"
+ },
+ {
+  "front": "Why is the peptide bond described as having a dipole, and what does that mean physically?",
+  "fp": "75c6ac9043ca",
+  "yield": "MEDIUM",
+  "why": "Peptide bond dipole belongs to biochem, not electrostatics [rescued: misfiled, not served elsewhere]"
+ }
+]

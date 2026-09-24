@@ -1,0 +1,356 @@
+[
+ {
+  "front": "A 70 kg person lands from a 1 m fall. Compare the average force when stopping in 1 cm versus 50 cm.",
+  "fp": "765032f0d177",
+  "yield": "HIGH",
+  "why": "Stopping distance vs average force is a classic impulse/work-energy calculation"
+ },
+ {
+  "front": "A ball bounces elastically off a massive wall at speed $v$. What is its momentum change?",
+  "fp": "f2bf2a01b14f",
+  "yield": "ULTRA_HIGH",
+  "why": "Delta p = 2mv for an elastic bounce is a yearly discrete"
+ },
+ {
+  "front": "A ball bounces off the floor and reverses direction. Momentum is conserved only for {{c1::the ball-plus-Earth system}}.",
+  "fp": "84485556a230",
+  "yield": "MEDIUM",
+  "why": "System choice for conservation; conceptual second step behind the conservation card"
+ },
+ {
+  "front": "A ball that bounces back delivers a {{c1::greater}} impulse than an identical ball that sticks.",
+  "fp": "8a3491e67c9b",
+  "yield": "ULTRA_HIGH",
+  "why": "Bouncing delivers more impulse than sticking; tested nearly every year"
+ },
+ {
+  "front": "A bullet embeds in a block that then slides across a rough floor. Which principle governs each stage?",
+  "fp": "a340a11e164e",
+  "yield": "HIGH",
+  "why": "Two-stage bullet-block problem: momentum through impact, work-energy for the slide"
+ },
+ {
+  "front": "A cart strikes an identical stationary cart. Contrast the outcome if the collision is elastic versus perfectly inelastic.",
+  "fp": "690b272f0cb1",
+  "yield": "HIGH",
+  "why": "Elastic vs perfectly inelastic outcomes for identical carts; standard comparison"
+ },
+ {
+  "front": "A collision's force-versus-time curve is a tall narrow spike. What do its peak height and its area each tell you?",
+  "fp": "908ca475c494",
+  "yield": "MEDIUM",
+  "why": "Peak vs area on an F-t curve; graph reading that restates impulse = area"
+ },
+ {
+  "front": "A moving mass $m$ sticks to an identical mass at rest. What is the final speed and energy loss?",
+  "fp": "e8dcfe4a6e0f",
+  "yield": "ULTRA_HIGH",
+  "why": "Equal-mass stick: v/2 and half the KE lost is a standard MCAT benchmark"
+ },
+ {
+  "front": "A moving railcar couples to two identical stationary railcars. Find the final speed and the fraction of kinetic energy lost.",
+  "fp": "d71993ba7f11",
+  "yield": "MEDIUM",
+  "why": "Three-car coupling extends the equal-mass benchmark; second-tier example"
+ },
+ {
+  "front": "A projectile explodes in midair; its center of mass continues on {{c1::the original parabolic path}}.",
+  "fp": "f504fe38cdc8",
+  "yield": "HIGH",
+  "why": "Center of mass keeps its trajectory through an explosion; classic outline result"
+ },
+ {
+  "front": "A racket drives a ball faster when the swing follows through, because impulse grows with {{c1::contact time}}.",
+  "fp": "448970aa2039",
+  "yield": "MEDIUM",
+  "why": "Follow-through as longer contact time; application restating impulse = F dt"
+ },
+ {
+  "front": "A rifle of mass $M$ fires a bullet of mass $m$ at speed $v$; the recoil speed is {{c1::$mv/M$}}.",
+  "fp": "a4432a49bbdb",
+  "yield": "ULTRA_HIGH",
+  "why": "Recoil speed mv/M is the standard momentum-conservation calculation"
+ },
+ {
+  "front": "A stationary object explodes into two fragments. What is true of their momenta and total energy?",
+  "fp": "5a92de22c8a7",
+  "yield": "HIGH",
+  "why": "Explosion: opposite momenta and KE gained from stored energy"
+ },
+ {
+  "front": "Angular velocity relates to linear velocity by:",
+  "fp": "6e748ce92053",
+  "yield": "LOW",
+  "why": "Angular kinematics v = r omega is off the AAMC outline"
+ },
+ {
+  "front": "At a fixed landing speed, average stopping force scales as {{c1::one over stopping distance}} and as {{c1::one over stopping time}}.",
+  "fp": "8cde031e5a3b",
+  "yield": "HIGH",
+  "why": "Force scales as 1/d and 1/dt at fixed impact speed; core proportional reasoning"
+ },
+ {
+  "front": "Bending your knees on landing reduces the {{c1::force}} on your joints without changing the impulse.",
+  "fp": "230f28c6ff5d",
+  "yield": "MEDIUM",
+  "why": "Bending knees lowers force, not impulse; restates the airbag card"
+ },
+ {
+  "front": "Can a perfectly inelastic collision convert all kinetic energy to other forms?",
+  "fp": "42fe0037c42b",
+  "yield": "MEDIUM",
+  "why": "All KE lost only when total momentum is zero; conceptual edge case"
+ },
+ {
+  "front": "Coefficient of restitution from drop and bounce heights is {{c1::the square root of $h_f/h_i$}}, equal to 1 when {{c1::perfectly elastic}}.",
+  "fp": "7082596cc824",
+  "yield": "LOW",
+  "why": "Coefficient of restitution is off the outline"
+ },
+ {
+  "front": "Define momentum and impulse.",
+  "fp": "57b78b9674de",
+  "yield": "ULTRA_HIGH",
+  "why": "Definitions of momentum and impulse are tested every administration"
+ },
+ {
+  "front": "Do internal forces change the velocity of a system's center of mass?",
+  "fp": "f3a3ec40fd7a",
+  "yield": "MEDIUM",
+  "why": "Internal forces cannot accelerate the center of mass; restates the isolated-COM card"
+ },
+ {
+  "front": "Does a larger collision force always mean a larger momentum change?",
+  "fp": "e96913053669",
+  "yield": "MEDIUM",
+  "why": "Force vs momentum change depends on duration; conceptual restatement of impulse"
+ },
+ {
+  "front": "During a brief collision, why can outside influences such as gravity and friction be ignored?",
+  "fp": "c71b7bdc8060",
+  "yield": "MEDIUM",
+  "why": "Why external impulses are ignored during a brief collision; supporting reasoning"
+ },
+ {
+  "front": "How can bounce height classify a collision?",
+  "fp": "04ef4af8e355",
+  "yield": "MEDIUM",
+  "why": "Classifying a collision by rebound height; useful passage reasoning"
+ },
+ {
+  "front": "How do airbags and crumple zones reduce injury?",
+  "fp": "c5b4b9c63b89",
+  "yield": "ULTRA_HIGH",
+  "why": "Airbags and crumple zones lengthen dt to cut force; asked essentially every year"
+ },
+ {
+  "front": "How does a heavy object's velocity change compare with a light one's in the same collision?",
+  "fp": "524638dbc824",
+  "yield": "HIGH",
+  "why": "Equal impulses, unequal velocity changes by mass; common collision question"
+ },
+ {
+  "front": "How does the center of mass of an isolated system move?",
+  "fp": "b9f6e9c56732",
+  "yield": "HIGH",
+  "why": "Isolated-system center of mass moves at constant velocity; on outline"
+ },
+ {
+  "front": "How is a two-dimensional collision analyzed?",
+  "fp": "2cbc8ced03c2",
+  "yield": "MEDIUM",
+  "why": "Component-wise momentum conservation in 2D; rarely required on the exam"
+ },
+ {
+  "front": "How is the force of a fluid jet striking a surface calculated?",
+  "fp": "858c10012ee0",
+  "yield": "MEDIUM",
+  "why": "Force from a fluid jet as momentum flux; occasional passage application"
+ },
+ {
+  "front": "Impulse equals {{c1::the area under a force-versus-time graph}}.",
+  "fp": "fa23e6cc3960",
+  "yield": "ULTRA_HIGH",
+  "why": "Impulse as area under an F-t graph; tested every year"
+ },
+ {
+  "front": "In a 1D elastic collision, the relative speed of approach {{c1::equals the relative speed of separation}}.",
+  "fp": "c363afb76b5d",
+  "yield": "MEDIUM",
+  "why": "Approach equals separation speed shortcut; useful but not outline-named"
+ },
+ {
+  "front": "In a Fosbury flop the athlete's center of mass can pass {{c1::below the bar}} even as the whole body clears it.",
+  "fp": "fb4bfaeb7358",
+  "yield": "LOW",
+  "why": "Fosbury flop center-of-mass trivia"
+ },
+ {
+  "front": "In a head-on elastic collision between equal masses, they:",
+  "fp": "d5441a6ec5de",
+  "yield": "ULTRA_HIGH",
+  "why": "Equal-mass elastic collision exchanges velocities; yearly discrete"
+ },
+ {
+  "front": "In a perfectly inelastic collision the objects {{c1::stick together and move with one common velocity}}.",
+  "fp": "7c18f005e46a",
+  "yield": "ULTRA_HIGH",
+  "why": "Perfectly inelastic definition: stick and share one velocity"
+ },
+ {
+  "front": "In a perfectly inelastic collision, how do you find final velocity?",
+  "fp": "ecb12d2779f6",
+  "yield": "ULTRA_HIGH",
+  "why": "Perfectly inelastic final velocity formula is the standard calculation"
+ },
+ {
+  "front": "In an elastic collision of a very heavy object with a light stationary one, the light object leaves at about {{c1::twice the heavy object's speed}}.",
+  "fp": "f859212df551",
+  "yield": "MEDIUM",
+  "why": "Heavy-on-light elastic collision gives about 2v; secondary special case"
+ },
+ {
+  "front": "In an explosion or recoil that starts from rest, how do the two fragments' momenta compare?",
+  "fp": "e609a0b53460",
+  "yield": "ULTRA_HIGH",
+  "why": "Explosion from rest: equal and opposite momenta; tested every year"
+ },
+ {
+  "front": "In an explosion or recoil, which fragment carries more kinetic energy?",
+  "fp": "cae7481abd47",
+  "yield": "HIGH",
+  "why": "Lighter fragment carries more KE via p^2/2m; common follow-up question"
+ },
+ {
+  "front": "In its most general form, Newton's second law sets net force equal to {{c1::the rate of change of momentum}}.",
+  "fp": "66c1bd8a3f7a",
+  "yield": "HIGH",
+  "why": "F = dp/dt general form of the second law; on outline"
+ },
+ {
+  "front": "Moment of inertia depends on:",
+  "fp": "1b50a7db5ca3",
+  "yield": "LOW",
+  "why": "Moment of inertia is off the AAMC outline"
+ },
+ {
+  "front": "Momentum can be written {{c1::kg m/s}} or equivalently {{c1::N s}}, but never as a joule-second.",
+  "fp": "d5deb49cb17f",
+  "yield": "MEDIUM",
+  "why": "Momentum unit equivalences with J s distractor; restates the units card"
+ },
+ {
+  "front": "Momentum units are:",
+  "fp": "fe4af221a7cf",
+  "yield": "HIGH",
+  "why": "Momentum units kg m/s = N s; quick discrete"
+ },
+ {
+  "front": "Relate momentum to kinetic energy.",
+  "fp": "75341dbf5c41",
+  "yield": "HIGH",
+  "why": "p = sqrt(2m KE) links momentum and kinetic energy; common comparison"
+ },
+ {
+  "front": "The impulse-momentum theorem states {{c1::$F\\Delta t = \\Delta p$}}.",
+  "fp": "b90cdf343eeb",
+  "yield": "ULTRA_HIGH",
+  "why": "Impulse-momentum theorem F dt = dp is used on every exam"
+ },
+ {
+  "front": "The slope of a momentum-versus-time graph equals {{c1::the net force}}.",
+  "fp": "b5b5dde5969f",
+  "yield": "HIGH",
+  "why": "Slope of p-t graph equals net force; standard graph reading"
+ },
+ {
+  "front": "Two carts collide on a frictionless air track. What must be equal before and after?",
+  "fp": "d90ad1760a82",
+  "yield": "MEDIUM",
+  "why": "Air-track collision as an application of momentum conservation; restates the rule"
+ },
+ {
+  "front": "Two equal masses collide head-on elastically. What happens to their velocities?",
+  "fp": "2d98dd822ba6",
+  "yield": "HIGH",
+  "why": "Equal-mass elastic exchange of velocities; restates the discrete card"
+ },
+ {
+  "front": "Two identical carts roll toward each other at equal speeds. Is the total momentum zero, and is the system motionless?",
+  "fp": "5ca8254a8af1",
+  "yield": "HIGH",
+  "why": "Zero total momentum with nonzero KE; vector vs scalar trap"
+ },
+ {
+  "front": "Two identical objects collide elastically, one at rest; their outgoing paths separate by {{c1::90 degrees}}.",
+  "fp": "ca8d036769fd",
+  "yield": "LOW",
+  "why": "90-degree separation in 2D equal-mass collisions is off-outline trivia"
+ },
+ {
+  "front": "Two objects collide and stick together. This is an example of:",
+  "fp": "1f3d44646447",
+  "yield": "LOW",
+  "why": "Near-restatement of the perfectly inelastic definition card"
+ },
+ {
+  "front": "Two objects have equal kinetic energy but different masses. The heavier one has:",
+  "fp": "40c01bdb3a88",
+  "yield": "HIGH",
+  "why": "Equal KE, heavier has more momentum; common comparison discrete"
+ },
+ {
+  "front": "What is conserved in elastic vs. inelastic collisions?",
+  "fp": "1b8250feca45",
+  "yield": "ULTRA_HIGH",
+  "why": "What is conserved in elastic vs inelastic collisions; tested every year"
+ },
+ {
+  "front": "When is angular momentum conserved?",
+  "fp": "d1834477f6ef",
+  "yield": "LOW",
+  "why": "Angular momentum conservation is off the AAMC outline"
+ },
+ {
+  "front": "When is momentum conserved?",
+  "fp": "9b68c0a1b542",
+  "yield": "ULTRA_HIGH",
+  "why": "Momentum conserved when no net external force; foundational"
+ },
+ {
+  "front": "Which conservation law applies to each phase of a ballistic pendulum?",
+  "fp": "b99a7424c415",
+  "yield": "HIGH",
+  "why": "Ballistic pendulum: momentum through impact, energy on the swing; classic"
+ },
+ {
+  "front": "Which has larger moment of inertia for the same mass and radius?",
+  "fp": "5601ca111dcd",
+  "yield": "LOW",
+  "why": "Hoop vs cylinder moment of inertia is off the outline"
+ },
+ {
+  "front": "Which quantity is conserved in every isolated collision, and which is not?",
+  "fp": "fe19af789e3b",
+  "yield": "LOW",
+  "why": "Near-restatement of the elastic vs inelastic conservation card"
+ },
+ {
+  "front": "Why can't energy conservation be used through the collision of a ballistic pendulum?",
+  "fp": "69ebfab84b97",
+  "yield": "MEDIUM",
+  "why": "Why energy cannot be used through the embedding; restates the ballistic pendulum card"
+ },
+ {
+  "front": "Why does a helmet reduce injury if it cannot change the head's total momentum change?",
+  "fp": "8f7e8899b50e",
+  "yield": "LOW",
+  "why": "Helmet example restates the airbag/stopping-time card"
+ },
+ {
+  "front": "Why is momentum, rather than force, the useful quantity for analyzing collisions?",
+  "fp": "971d9f00f4ba",
+  "yield": "MEDIUM",
+  "why": "Why momentum rather than force is used for collisions; conceptual framing"
+ }
+]

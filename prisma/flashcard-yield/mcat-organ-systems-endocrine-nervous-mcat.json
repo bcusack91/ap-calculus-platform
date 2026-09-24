@@ -3,25 +3,25 @@
   "front": "A child with high growth hormone but low IGF-1 and poor growth most likely has defective hepatic {{c1::GH receptors}}.",
   "fp": "313a394bc98f",
   "yield": "MEDIUM",
-  "why": "High GH/low IGF-1 receptor-resistance reasoning; feedback application"
+  "why": "High GH/low IGF-1 receptor-resistance reasoning is a feedback application; skippable"
  },
  {
   "front": "A low free T4 with a {{c1::high}} TSH indicates primary hypothyroidism; low T4 with a low or normal TSH indicates pituitary failure.",
   "fp": "b1dd5f840ac0",
-  "yield": "HIGH",
-  "why": "Reading TSH against T4 to localize primary vs central disease is classic"
+  "yield": "ULTRA_HIGH",
+  "why": "Reading TSH against T4 to localize primary vs central disease is tested every year"
  },
  {
   "front": "ALL autonomic preganglionic fibers, sympathetic and parasympathetic alike, release ACh onto {{c1::nicotinic}} receptors in ganglia.",
   "fp": "01c19f1f718e",
-  "yield": "HIGH",
-  "why": "All preganglionic fibers are cholinergic onto nicotinic receptors; core autonomic"
+  "yield": "ULTRA_HIGH",
+  "why": "All preganglionic fibers cholinergic onto nicotinic receptors is core autonomic tested every year"
  },
  {
   "front": "Alpha-2 receptors are {{c1::Gi-coupled presynaptic autoreceptors}} that inhibit further norepinephrine release.",
   "fp": "5ea56d63a703",
   "yield": "MEDIUM",
-  "why": "Alpha-2 presynaptic Gi feedback; receptor-subtype detail"
+  "why": "Alpha-2 presynaptic Gi feedback is receptor-subtype detail"
  },
  {
   "front": "Beyond lowering glucose, insulin drives K+ {{c1::into cells}}, which is why insulin plus glucose is a treatment for hyperkalemia.",
@@ -33,31 +33,31 @@
   "front": "Beyond raising basal metabolic rate, why is thyroid hormone indispensable in infancy?",
   "fp": "9c0c3d7656fb",
   "yield": "MEDIUM",
-  "why": "Thyroid hormone in neural development; secondary effect"
+  "why": "Thyroid hormone in neural development is a secondary effect"
  },
  {
   "front": "By what two ionic mechanisms do Gi-coupled opioid receptors inhibit pain transmission?",
   "fp": "22ba7deb0190",
   "yield": "MEDIUM",
-  "why": "Gi opioid receptors closing Ca2+ and opening K+ channels; generic GPCR reasoning"
+  "why": "Gi opioid receptors closing Ca2+ and opening K+ channels is generic GPCR reasoning"
  },
  {
   "front": "Compare where atropine, curare, and organophosphates act on cholinergic transmission.",
   "fp": "3fba4676a4a3",
-  "yield": "MEDIUM",
-  "why": "Atropine/curare/organophosphate sites are standard cholinergic passage tools"
+  "yield": "HIGH",
+  "why": "Atropine/curare/organophosphate sites are commonly used cholinergic passage tools"
  },
  {
   "front": "Contrast beta-1 and beta-2 receptor locations and effects, including the renin connection.",
   "fp": "6987a6b22609",
-  "yield": "MEDIUM",
-  "why": "Beta-1 vs beta-2 locations; supporting adrenergic detail"
+  "yield": "HIGH",
+  "why": "Beta-1 vs beta-2 locations and effects are commonly tested adrenergic content"
  },
  {
   "front": "Contrast peptide and steroid hormones (mechanism of action).",
   "fp": "3540758d9e2b",
-  "yield": "HIGH",
-  "why": "Peptide vs steroid hormone mechanism is the core hormone-class contrast"
+  "yield": "ULTRA_HIGH",
+  "why": "Peptide vs steroid hormone mechanism is the core hormone-class contrast tested every year"
  },
  {
   "front": "Episodic headache, palpitations, sweating, and hypertension suggest a catecholamine-secreting tumor of the {{c1::adrenal medulla}}.",
@@ -68,26 +68,26 @@
  {
   "front": "Glucagon signals through a {{c1::Gs-coupled GPCR (cAMP/PKA)}}, activating glycogen phosphorylase while inhibiting glycogen synthase.",
   "fp": "00cf8494e96f",
-  "yield": "HIGH",
-  "why": "Glucagon Gs/cAMP/PKA reciprocal glycogen control is a core signaling example"
+  "yield": "ULTRA_HIGH",
+  "why": "Glucagon Gs/cAMP/PKA reciprocal glycogen control is a signaling example tested every year"
  },
  {
   "front": "GnRH must be released {{c1::in pulses}}; continuous GnRH exposure paradoxically suppresses LH and FSH.",
   "fp": "183549f66e12",
   "yield": "MEDIUM",
-  "why": "Pulsatile vs continuous GnRH paradox; secondary but passage-usable"
+  "why": "Pulsatile vs continuous GnRH paradox is secondary but passage-usable"
  },
  {
   "front": "Graves disease is caused by an antibody that {{c1::stimulates}} the TSH receptor, so thyroid hormone runs high while TSH is suppressed.",
   "fp": "fc1938658f89",
-  "yield": "MEDIUM",
-  "why": "Graves stimulating antibody as a feedback twist; clinical flavor"
+  "yield": "HIGH",
+  "why": "Graves stimulating antibody escaping feedback is a commonly tested feedback twist"
  },
  {
   "front": "Growth hormone excess before epiphyseal closure causes gigantism; after closure it causes {{c1::acromegaly}}, thickening acral and soft tissues.",
   "fp": "e67b58cb374f",
   "yield": "MEDIUM",
-  "why": "Gigantism vs acromegaly by epiphyseal closure; second-tier example"
+  "why": "Gigantism vs acromegaly by epiphyseal closure is a second-tier example"
  },
  {
   "front": "How do benzodiazepines and barbiturates differ in their action at the GABA-A receptor?",
@@ -98,14 +98,14 @@
  {
   "front": "How does growth hormone produce most of its growth effects, and why is GH excess diabetogenic?",
   "fp": "42e78592ddc3",
-  "yield": "MEDIUM",
-  "why": "GH acts via IGF-1 and is counter-regulatory; supporting detail"
+  "yield": "HIGH",
+  "why": "GH acting via IGF-1 and being counter-regulatory is commonly tested"
  },
  {
   "front": "How does negative feedback control hormone levels (HPA axis example)?",
   "fp": "3ce6412dd05d",
-  "yield": "HIGH",
-  "why": "HPA axis negative feedback is the model axis the section is built on"
+  "yield": "ULTRA_HIGH",
+  "why": "HPA axis negative feedback is the model axis the section is built on; tested every year"
  },
  {
   "front": "How does PTH activate osteoclasts if osteoclasts lack PTH receptors?",
@@ -116,14 +116,14 @@
  {
   "front": "How is blood calcium regulated (PTH vs. calcitonin)?",
   "fp": "8b6827e3c3ca",
-  "yield": "HIGH",
-  "why": "PTH vs calcitonin calcium regulation is core endocrine content"
+  "yield": "ULTRA_HIGH",
+  "why": "PTH vs calcitonin calcium regulation is core endocrine content tested every year"
  },
  {
   "front": "In a patient with high cortisol, a {{c1::low}} plasma ACTH points to an adrenal tumor or exogenous steroid rather than a pituitary source.",
   "fp": "1bb8a0e0c77f",
-  "yield": "MEDIUM",
-  "why": "Using ACTH to localize cortisol excess; feedback application"
+  "yield": "HIGH",
+  "why": "Using ACTH to localize cortisol excess is commonly tested feedback reasoning"
  },
  {
   "front": "In the HPA axis, cortisol exerts negative feedback at {{c1::both the hypothalamus (CRH) and anterior pituitary (ACTH)}}.",
@@ -134,14 +134,14 @@
  {
   "front": "In the HPG axis, which feedback sign does estradiol usually have, and when does it flip?",
   "fp": "3ee98a9a19be",
-  "yield": "HIGH",
-  "why": "Estradiol negative-to-positive feedback flip driving the LH surge is classic"
+  "yield": "ULTRA_HIGH",
+  "why": "Estradiol negative-to-positive feedback flip driving the LH surge is tested every year"
  },
  {
   "front": "Most circulating thyroid hormone is T4, but the more active T3 is generated in target tissues by {{c1::deiodinases}}.",
   "fp": "53e88ef2f824",
   "yield": "MEDIUM",
-  "why": "Peripheral T4 to T3 conversion by deiodinases; supporting detail"
+  "why": "Peripheral T4 to T3 conversion by deiodinases is supporting detail"
  },
  {
   "front": "Multiple sclerosis demyelinates in the {{c1::central}} nervous system, while Guillain-Barre syndrome attacks peripheral myelin made by Schwann cells.",
@@ -158,92 +158,92 @@
  {
   "front": "Myelin speeds conduction by forcing {{c1::saltatory}} conduction: APs regenerate only at nodes of Ranvier, where Na+ channels cluster.",
   "fp": "bd8442070900",
-  "yield": "HIGH",
-  "why": "Saltatory conduction and nodes of Ranvier are core neuron physiology"
+  "yield": "ULTRA_HIGH",
+  "why": "Saltatory conduction and nodes of Ranvier are core neuron physiology tested every year"
  },
  {
   "front": "Neurotransmitter release requires Ca2+ influx through {{c1::voltage-gated calcium channels}} in the presynaptic terminal.",
   "fp": "9554e1ca7687",
-  "yield": "HIGH",
-  "why": "Ca2+ influx triggering vesicle release is core synaptic transmission"
+  "yield": "ULTRA_HIGH",
+  "why": "Ca2+ influx triggering vesicle release is core synaptic transmission tested every year"
  },
  {
   "front": "Parkinson's motor symptoms reflect dopamine loss in the {{c1::nigrostriatal}} pathway; reward and psychosis involve the mesolimbic pathway.",
   "fp": "285e36a437a9",
   "yield": "MEDIUM",
-  "why": "Nigrostriatal dopamine loss in Parkinson's; pathway names are secondary"
+  "why": "Nigrostriatal dopamine loss in Parkinson; pathway names are secondary"
  },
  {
   "front": "Predict the effect of a muscarinic antagonist on pupil, salivary glands, heart rate, and bladder.",
   "fp": "58b9a613bbbe",
-  "yield": "MEDIUM",
-  "why": "Predicting muscarinic blockade effects; autonomic reasoning application"
+  "yield": "HIGH",
+  "why": "Predicting muscarinic blockade effects is commonly tested autonomic reasoning"
  },
  {
   "front": "Predict the glucose, blood pressure, muscle, and immune findings in chronic cortisol excess.",
   "fp": "1a01b6d00c00",
-  "yield": "MEDIUM",
-  "why": "Chronic cortisol excess findings; supporting detail on glucocorticoid effects"
+  "yield": "HIGH",
+  "why": "Chronic cortisol effects (hyperglycemia, immunosuppression) are commonly tested"
  },
  {
   "front": "Primary hyperparathyroidism raises PTH and calcium together; secondary hyperparathyroidism raises PTH with {{c1::low or normal}} calcium.",
   "fp": "a1b6f94553db",
-  "yield": "MEDIUM",
-  "why": "Primary vs secondary hyperparathyroidism is feedback reasoning with clinical flavor"
+  "yield": "HIGH",
+  "why": "Primary vs secondary hyperparathyroidism is commonly tested feedback reasoning"
  },
  {
   "front": "Prolactin is unique among anterior pituitary hormones: its dominant hypothalamic control is tonic {{c1::inhibition by dopamine}}.",
   "fp": "898d97269c4a",
   "yield": "HIGH",
-  "why": "Prolactin's tonic dopamine inhibition is a classic exception question"
+  "why": "Prolactin tonic dopamine inhibition is a classic exception question"
  },
  {
   "front": "PTH raises serum calcium but {{c1::lowers}} serum phosphate, by blocking phosphate reabsorption in the proximal tubule.",
   "fp": "eb27e8594e64",
   "yield": "MEDIUM",
-  "why": "PTH lowers phosphate; supporting detail on PTH actions"
+  "why": "PTH lowers phosphate is supporting detail on PTH actions"
  },
  {
   "front": "PTH stimulates renal {{c1::1-alpha-hydroxylase}}, the enzyme converting 25-hydroxyvitamin D into active calcitriol.",
   "fp": "3a4d117e5b6a",
-  "yield": "MEDIUM",
-  "why": "PTH activates 1-alpha-hydroxylase for calcitriol; supporting detail"
+  "yield": "HIGH",
+  "why": "PTH activating renal 1-alpha-hydroxylase for calcitriol is commonly tested"
  },
  {
   "front": "Steroid and thyroid hormones ride on carrier proteins, giving them {{c1::long}} half-lives compared with peptide hormones.",
   "fp": "8f4f1d6d519f",
-  "yield": "MEDIUM",
-  "why": "Carrier proteins and half-life; supporting detail on hormone classes"
+  "yield": "HIGH",
+  "why": "Carrier proteins and long half-life of steroid/thyroid hormones is commonly tested"
  },
  {
   "front": "Sweat glands are the classic autonomic exception: sympathetic fibers releasing {{c1::acetylcholine onto muscarinic receptors}}.",
   "fp": "9fafcec64a76",
-  "yield": "MEDIUM",
+  "yield": "HIGH",
   "why": "Sympathetic cholinergic sweat glands is a commonly tested exception"
  },
  {
   "front": "The absolute refractory period exists because voltage-gated Na+ channels are {{c1::inactivated (h-gate closed)}} and cannot reopen until repolarization.",
   "fp": "7db92600870d",
-  "yield": "HIGH",
-  "why": "Na+ channel inactivation causing the absolute refractory period is core AP content"
+  "yield": "ULTRA_HIGH",
+  "why": "Na+ channel inactivation causing the absolute refractory period is tested every year"
  },
  {
   "front": "The action potential's rapid depolarization drives Vm toward {{c1::the sodium equilibrium potential (about +60 mV)}} but never reaches it.",
   "fp": "a355a7a2ab93",
-  "yield": "HIGH",
-  "why": "AP peak approaching E_Na; equilibrium-potential reasoning is core"
+  "yield": "ULTRA_HIGH",
+  "why": "AP peak approaching E_Na; equilibrium-potential reasoning is tested every year"
  },
  {
   "front": "The fast stress response is the sympathoadrenal (epinephrine) system; the slower, sustained response is the {{c1::HPA axis (cortisol)}}.",
   "fp": "daf49cadecda",
   "yield": "HIGH",
-  "why": "Fast sympathoadrenal vs slow HPA stress response is a core contrast"
+  "why": "Fast sympathoadrenal vs slow HPA stress response is a commonly tested contrast"
  },
  {
   "front": "The NMDA receptor is both ligand- and voltage-gated: at resting potential its pore is blocked by {{c1::Mg2+}}.",
   "fp": "9aecb5335794",
   "yield": "MEDIUM",
-  "why": "NMDA Mg2+ block and LTP; secondary synaptic detail"
+  "why": "NMDA Mg2+ block and LTP is secondary synaptic detail"
  },
  {
   "front": "The posterior pituitary releases {{c1::ADH and oxytocin}}, which are synthesized in the {{c2::hypothalamus}}.",
@@ -254,8 +254,8 @@
  {
   "front": "Type 1 versus type 2 diabetes: contrast insulin level, C-peptide, and tendency to ketoacidosis.",
   "fp": "2db2879b649d",
-  "yield": "MEDIUM",
-  "why": "Type 1 vs type 2 diabetes contrast; C-peptide is clinical flavor"
+  "yield": "HIGH",
+  "why": "Type 1 vs type 2 diabetes contrast is commonly tested; C-peptide is clinical flavor"
  },
  {
   "front": "Upper versus lower motor neuron lesion: contrast muscle tone, reflexes, and muscle bulk.",
@@ -266,86 +266,86 @@
  {
   "front": "What are the anterior pituitary hormones?",
   "fp": "3898b626312a",
-  "yield": "HIGH",
-  "why": "Anterior pituitary hormone list is core endocrine content"
+  "yield": "ULTRA_HIGH",
+  "why": "Anterior pituitary hormone list is core endocrine content tested every year"
  },
  {
   "front": "What are the key female reproductive hormones and their roles?",
   "fp": "de5b1daa1d15",
-  "yield": "HIGH",
-  "why": "Estrogen/progesterone/LH/FSH roles are core, heavily tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Estrogen/progesterone/LH/FSH roles are tested every year"
  },
  {
   "front": "What are the three general ways neurotransmitter action is terminated, with an example of each?",
   "fp": "c1998494fbee",
-  "yield": "HIGH",
-  "why": "Three modes of neurotransmitter termination are core synapse content"
+  "yield": "ULTRA_HIGH",
+  "why": "Three modes of neurotransmitter termination are core synapse content tested every year"
  },
  {
   "front": "What are the thyroid hormones and their effects?",
   "fp": "ae6738bfb215",
-  "yield": "HIGH",
-  "why": "Thyroid hormone effects and calcitonin are core endocrine content"
+  "yield": "ULTRA_HIGH",
+  "why": "Thyroid hormone effects and calcitonin are core endocrine content tested every year"
  },
  {
   "front": "What causes the afterhyperpolarization, and why does resting Vm sit close to the K+ equilibrium potential?",
   "fp": "611ec7dc69f8",
-  "yield": "HIGH",
-  "why": "Afterhyperpolarization and resting Vm near E_K are core AP reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "Afterhyperpolarization and resting Vm near E_K are core AP reasoning tested every year"
  },
  {
   "front": "What do insulin and glucagon do (source/target/action)?",
   "fp": "42baeabebc24",
-  "yield": "HIGH",
-  "why": "Insulin vs glucagon source and action is core endocrine content"
+  "yield": "ULTRA_HIGH",
+  "why": "Insulin vs glucagon source and action is core endocrine content tested every year"
  },
  {
   "front": "What does aldosterone do and how is it triggered?",
   "fp": "a415626e5ea4",
-  "yield": "HIGH",
-  "why": "Aldosterone action and RAAS trigger are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Aldosterone action and RAAS trigger are tested every year"
  },
  {
   "front": "What does the adrenal MEDULLA secrete?",
   "fp": "39bb5f5024ae",
-  "yield": "HIGH",
-  "why": "Adrenal medulla catecholamines as modified sympathetic ganglion; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Adrenal medulla catecholamines as modified sympathetic ganglion; tested every year"
  },
  {
   "front": "What does the posterior pituitary release?",
   "fp": "30dbe0c7da22",
-  "yield": "HIGH",
-  "why": "Posterior pituitary hormones and hypothalamic origin; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Posterior pituitary hormones and hypothalamic origin; tested every year"
  },
  {
   "front": "What hormones does the adrenal CORTEX produce?",
   "fp": "fa6df3d70fd0",
-  "yield": "HIGH",
-  "why": "Adrenal cortex layers and hormone classes are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Adrenal cortex layers and hormone classes are tested every year"
  },
  {
   "front": "What hormones regulate appetite and metabolism balance?",
   "fp": "8c2fd04421a7",
   "yield": "MEDIUM",
-  "why": "Leptin vs ghrelin appetite control; secondary hormones"
+  "why": "Leptin vs ghrelin appetite control are secondary hormones"
  },
  {
   "front": "What is the difference between endocrine, paracrine, and autocrine signaling?",
   "fp": "96d3b3b7574c",
   "yield": "HIGH",
-  "why": "Endocrine/paracrine/autocrine distinction is a core definition"
+  "why": "Endocrine/paracrine/autocrine distinction is a commonly tested definition"
  },
  {
   "front": "What is the role of testosterone and its control?",
   "fp": "a0600240109c",
-  "yield": "HIGH",
-  "why": "Testosterone source, LH control and steroid mechanism; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Testosterone source, LH control and steroid mechanism; tested every year"
  },
  {
   "front": "What receptor type does insulin use, and what is the key transporter event in muscle and adipose?",
   "fp": "9de71ec2b2bb",
-  "yield": "HIGH",
-  "why": "Insulin RTK and GLUT4 translocation is core signaling"
+  "yield": "ULTRA_HIGH",
+  "why": "Insulin RTK and GLUT4 translocation is core signaling tested every year"
  },
  {
   "front": "Where do serotonergic neurons originate, and how do SSRIs increase serotonergic signaling?",
@@ -369,25 +369,25 @@
   "front": "Why does abruptly stopping chronic glucocorticoid therapy risk adrenal crisis?",
   "fp": "5cfc2a8855ed",
   "yield": "MEDIUM",
-  "why": "Adrenal atrophy after steroid withdrawal; feedback application"
+  "why": "Adrenal atrophy after steroid withdrawal is a feedback application; skippable"
  },
  {
   "front": "Why does botulinum toxin cause flaccid paralysis while tetanus toxin causes spastic paralysis?",
   "fp": "ea5c21d0d84e",
-  "yield": "MEDIUM",
-  "why": "Botulinum vs tetanus SNARE cleavage is a classic synapse example"
+  "yield": "HIGH",
+  "why": "Botulinum vs tetanus SNARE cleavage is a classic, commonly tested synapse example"
  },
  {
   "front": "Why does dietary iodine deficiency produce a goiter together with low thyroid hormone?",
   "fp": "a6d4d957f40d",
-  "yield": "HIGH",
-  "why": "Iodine-deficiency goiter is the classic lost-feedback reasoning question"
+  "yield": "ULTRA_HIGH",
+  "why": "Iodine-deficiency goiter is the classic lost-feedback reasoning question every year"
  },
  {
   "front": "Why does firing during the relative refractory period require a stronger-than-normal stimulus?",
   "fp": "4685d6d9ce43",
-  "yield": "MEDIUM",
-  "why": "Relative refractory period; supporting detail on the absolute refractory card"
+  "yield": "HIGH",
+  "why": "Relative refractory period mechanism is commonly tested alongside the absolute period"
  },
  {
   "front": "Why does glucagon raise blood glucose via the liver but not via skeletal muscle?",

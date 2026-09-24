@@ -3,13 +3,13 @@
   "front": "5-alpha-reductase deficiency versus androgen insensitivity: which one virilizes at puberty, and why?",
   "fp": "6c0bed2451f5",
   "yield": "MEDIUM",
-  "why": "Testosterone vs DHT contrast via two disorders; reasoning is tested, disorders are flavor"
+  "why": "Testosterone vs DHT contrast via two disorders; the reasoning is on the duct/DHT cards, disorders are flavor"
  },
  {
   "front": "A 46,XY individual with intra-abdominal testes, female external genitalia, and no uterus most likely has {{c1::androgen insensitivity}}.",
   "fp": "5b044ec49ef5",
   "yield": "MEDIUM",
-  "why": "AIS case presentation; plainer AIS card carries the core fact"
+  "why": "AIS case presentation restates the plainer AIS card"
  },
  {
   "front": "A full round of spermatogenesis takes about {{c1::64-74 days}} and runs continuously from puberty onward.",
@@ -20,8 +20,8 @@
  {
   "front": "A secondary oocyte completes meiosis II only:",
   "fp": "3703bd0e5f80",
-  "yield": "HIGH",
-  "why": "Secondary oocyte completing meiosis II at fertilization is core gametogenesis"
+  "yield": "ULTRA_HIGH",
+  "why": "Secondary oocyte completing meiosis II only at fertilization is asked on essentially every exam"
  },
  {
   "front": "Adipose tissue {{c1::aromatase}} converts androgens into estrogens, which is why obesity can produce gynecomastia in men.",
@@ -33,7 +33,7 @@
   "front": "After the luteal-placental shift (weeks 8-10), the {{c1::placenta}} becomes the main source of pregnancy progesterone and estrogen.",
   "fp": "ce51d5b05f07",
   "yield": "HIGH",
-  "why": "Luteal-placental shift is a named pregnancy-hormone concept"
+  "why": "Luteal-placental shift is a named pregnancy-hormone concept; commonly tested"
  },
  {
   "front": "Androgen insensitivity syndrome produces:",
@@ -62,50 +62,50 @@
  {
   "front": "Capacitation refers to:",
   "fp": "2932b334f415",
-  "yield": "HIGH",
-  "why": "Capacitation is explicitly on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Capacitation is explicitly on the outline and asked nearly every year"
  },
  {
   "front": "Clomiphene induces ovulation by {{c1::blocking}} hypothalamic estrogen receptors, which removes negative feedback and raises FSH.",
   "fp": "786aa48b466b",
   "yield": "MEDIUM",
-  "why": "Clomiphene tests feedback logic; drug itself is not outline content"
+  "why": "Clomiphene tests feedback logic; the drug itself is not outline content"
  },
  {
   "front": "Contrast spermatogenesis and oogenesis.",
   "fp": "1d161d4be9df",
-  "yield": "HIGH",
-  "why": "Spermatogenesis vs oogenesis contrast is core gametogenesis"
+  "yield": "ULTRA_HIGH",
+  "why": "Spermatogenesis vs oogenesis contrast (4 sperm vs 1 ovum, timing) is asked every year"
  },
  {
   "front": "Erection is a {{c1::parasympathetic}} nitric oxide event, while emission and ejaculation are sympathetic.",
   "fp": "20bcd4bff721",
-  "yield": "MEDIUM",
-  "why": "Parasympathetic erection / sympathetic ejaculation appears in prep; second-tier"
+  "yield": "HIGH",
+  "why": "Parasympathetic erection / sympathetic ejaculation is a commonly tested autonomic fact"
  },
  {
   "front": "Estrogen surge before ovulation causes:",
   "fp": "577cf41145a4",
-  "yield": "HIGH",
-  "why": "Estrogen positive feedback triggering the LH surge is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Estrogen positive feedback triggering the LH surge is the core cycle mechanism, tested every year"
  },
  {
   "front": "hCG is secreted by the {{c1::syncytiotrophoblast}} beginning at implantation (about day 6-10), rescuing the corpus luteum.",
   "fp": "d1e61d3a1490",
   "yield": "HIGH",
-  "why": "hCG source and corpus luteum rescue are tested pregnancy hormones"
+  "why": "hCG from syncytiotrophoblast rescuing the corpus luteum; fuller version of the core hCG card"
  },
  {
   "front": "How do combined oral contraceptives prevent pregnancy?",
   "fp": "aa1cbbcfc37a",
-  "yield": "MEDIUM",
-  "why": "OCP mechanism is an application of feedback; plausible passage context"
+  "yield": "HIGH",
+  "why": "OCP mechanism is the standard feedback application question"
  },
  {
   "front": "In 21-hydroxylase deficiency, blocked cortisol and aldosterone synthesis shunts precursors into {{c1::androgens}}, virilizing a 46,XX fetus.",
   "fp": "d9f603de952b",
   "yield": "MEDIUM",
-  "why": "21-hydroxylase deficiency is adrenal/endocrine clinical detail outside this topi [rescued: misfiled, not served elsewher"
+  "why": "21-hydroxylase deficiency is adrenal clinical detail; kept as passage context"
  },
  {
   "front": "In development without SRY (and without gonadal hormones), which duct system and phenotype result?",
@@ -116,8 +116,8 @@
  {
   "front": "In the testis, LH targets {{c1::Leydig}} cells (testosterone), while FSH targets Sertoli cells (spermatogenesis support, inhibin B, ABP).",
   "fp": "d6fe8bdf3d36",
-  "yield": "HIGH",
-  "why": "LH->Leydig, FSH->Sertoli mapping is high-frequency"
+  "yield": "ULTRA_HIGH",
+  "why": "LH -> Leydig, FSH -> Sertoli mapping appears on essentially every administration"
  },
  {
   "front": "Kallmann syndrome pairs absent puberty with anosmia because GnRH neurons fail to {{c1::migrate}} from the olfactory placode.",
@@ -129,13 +129,13 @@
   "front": "Labor readiness comes from a rising estrogen-to-{{c1::progesterone}} ratio, which upregulates oxytocin receptors and myometrial gap junctions.",
   "fp": "8618beb1e812",
   "yield": "MEDIUM",
-  "why": "Labor onset hormone ratio is supporting pregnancy detail"
+  "why": "Labor onset estrogen/progesterone ratio is supporting pregnancy detail"
  },
  {
   "front": "Low testosterone with {{c1::high}} LH and FSH means primary testicular failure; low gonadotropins point to a hypothalamic or pituitary cause.",
   "fp": "05b37d29ac7a",
-  "yield": "HIGH",
-  "why": "Primary vs secondary hypogonadism by gonadotropin level is core feedback logic"
+  "yield": "ULTRA_HIGH",
+  "why": "Primary vs secondary hypogonadism by gonadotropin level is feedback logic tested every year"
  },
  {
   "front": "Male internal ducts need testosterone (Wolffian), but external genitalia need {{c1::DHT}}, made by 5-alpha-reductase.",
@@ -147,25 +147,25 @@
   "front": "Menstruation is triggered by falling progesterone and estrogen, which cause {{c1::spiral artery constriction}} and functional-layer ischemia.",
   "fp": "a7d1a38ea2e6",
   "yield": "MEDIUM",
-  "why": "Mechanism of menstruation supports the hormone-withdrawal concept"
+  "why": "Spiral-artery mechanism of menstruation supports the hormone-withdrawal concept"
  },
  {
   "front": "Milk secretion begins after delivery because expelling the placenta removes {{c1::progesterone and estrogen}}, unblocking prolactin's action.",
   "fp": "f0b99bd52a67",
   "yield": "MEDIUM",
-  "why": "Lactation onset mechanism is supporting pregnancy-hormone detail"
+  "why": "Lactation onset after placental steroid withdrawal is supporting detail"
  },
  {
   "front": "Name four actions of luteal-phase progesterone.",
   "fp": "71c64832f3c7",
-  "yield": "MEDIUM",
-  "why": "Progesterone actions list supports the secretory-phase card"
+  "yield": "HIGH",
+  "why": "Progesterone actions (secretory endometrium, mucus, temperature) are commonly tested"
  },
  {
   "front": "Oogenesis uses unequal cytokinesis: one meiosis yields a single ovum plus {{c1::polar bodies}}, whereas spermatogenesis yields four sperm.",
   "fp": "9102e0b080fc",
   "yield": "MEDIUM",
-  "why": "Polar bodies detail; plainer spermatogenesis/oogenesis card carries the core"
+  "why": "Polar bodies detail restates the spermatogenesis/oogenesis contrast card"
  },
  {
   "front": "Ovulation is enzymatic, not explosive: LH induces {{c1::prostaglandins and proteases}} that digest the follicular wall.",
@@ -176,8 +176,8 @@
  {
   "front": "Ovulation occurs approximately when in a 28-day cycle?",
   "fp": "1ff6045140c0",
-  "yield": "HIGH",
-  "why": "Ovulation at day 14 is a core discrete fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Ovulation at day 14 is a perennial discrete"
  },
  {
   "front": "Polycystic ovary syndrome features anovulation, hyperandrogenism, and a raised {{c1::LH to FSH}} ratio, usually with insulin resistance.",
@@ -212,44 +212,44 @@
  {
   "front": "Primary oocytes arrest in {{c1::prophase I}} from fetal life until ovulation; secondary oocytes arrest in metaphase II until fertilization.",
   "fp": "7b3a3b58099b",
-  "yield": "HIGH",
-  "why": "Oocyte arrest points (prophase I, metaphase II) are core gametogenesis"
+  "yield": "ULTRA_HIGH",
+  "why": "Oocyte arrest points (prophase I, metaphase II) are asked every year"
  },
  {
   "front": "Sertoli cells are stimulated by:",
   "fp": "06187d6f16ee",
   "yield": "MEDIUM",
-  "why": "Restates the fuller LH/FSH target-cell card; kept as quick recall"
+  "why": "Restates the fuller LH/FSH target-cell card"
  },
  {
   "front": "Sertoli cells secrete {{c1::inhibin B}}, which selectively suppresses pituitary FSH; testosterone handles GnRH and LH feedback.",
   "fp": "9c0f2fae6eb3",
-  "yield": "HIGH",
-  "why": "Inhibin selectively suppressing FSH is core feedback content"
+  "yield": "ULTRA_HIGH",
+  "why": "Inhibin selectively suppressing FSH is core feedback tested every year"
  },
  {
   "front": "Sperm gain motility in the {{c1::epididymis}} but become fertilization-competent only after capacitation in the female tract.",
   "fp": "867776a96d75",
-  "yield": "MEDIUM",
-  "why": "Epididymal maturation supports the capacitation card"
+  "yield": "HIGH",
+  "why": "Epididymal maturation vs capacitation is commonly tested sperm-pathway content"
  },
  {
   "front": "Suckling sustains lactation by two arms: reduced dopamine permits {{c1::prolactin}} (milk production) while a neural reflex triggers oxytocin (letdown).",
   "fp": "4d43da24733c",
-  "yield": "MEDIUM",
-  "why": "Prolactin/oxytocin arms of lactation are supporting detail"
+  "yield": "HIGH",
+  "why": "Prolactin (production) vs oxytocin (letdown) is a common discrete"
  },
  {
   "front": "Sustained estradiol above threshold for about {{c1::two days}} flips hypothalamic-pituitary feedback from negative to positive, unleashing the LH surge.",
   "fp": "337085ab1e7c",
   "yield": "MEDIUM",
-  "why": "Threshold/duration detail on the LH surge; plainer positive-feedback card is core"
+  "why": "Threshold/duration detail on the LH surge; the plain positive-feedback card is core"
  },
  {
   "front": "Testosterone is responsible for all EXCEPT:",
   "fp": "4a3b74df1875",
   "yield": "MEDIUM",
-  "why": "Testosterone-vs-Mullerian distinction; supports the duct-fate card"
+  "why": "Testosterone-vs-Mullerian distinction supports the duct-fate card"
  },
  {
   "front": "The {{c1::luteal}} phase is fixed at about 14 days; cycle length variability comes almost entirely from the follicular phase.",
@@ -266,8 +266,8 @@
  {
   "front": "The Ferguson reflex is {{c1::positive feedback}}: cervical stretch triggers oxytocin release, strengthening contractions and further stretch, until delivery.",
   "fp": "8fc59304c248",
-  "yield": "HIGH",
-  "why": "Ferguson reflex is the textbook positive-feedback example"
+  "yield": "ULTRA_HIGH",
+  "why": "Ferguson reflex is the textbook positive-feedback example, asked every year"
  },
  {
   "front": "Turner syndrome (45,X) versus Klinefelter syndrome (47,XXY): contrast gonadal function and gonadotropin levels.",
@@ -278,50 +278,50 @@
  {
   "front": "What are the fates of the Wolffian and Müllerian ducts?",
   "fp": "0c990cda7aef",
-  "yield": "HIGH",
-  "why": "Wolffian/Mullerian duct fates are core sex differentiation"
+  "yield": "ULTRA_HIGH",
+  "why": "Wolffian/Mullerian duct fates are core sex differentiation asked every year"
  },
  {
   "front": "What are the three key actions of the LH surge on the dominant follicle?",
   "fp": "391a9ea82bb4",
   "yield": "HIGH",
-  "why": "LH surge actions (meiosis resumption, ovulation, luteinization) are core"
+  "why": "LH surge actions (meiosis resumption, ovulation, luteinization) are commonly tested"
  },
  {
   "front": "What are three Sertoli cell functions beyond secreting inhibin and ABP?",
   "fp": "85c2008aa2c1",
-  "yield": "MEDIUM",
-  "why": "Blood-testis barrier and nursing roles are supporting Sertoli detail"
+  "yield": "HIGH",
+  "why": "Blood-testis barrier and Sertoli nursing roles are commonly tested"
  },
  {
   "front": "What determines sex differentiation in the embryo?",
   "fp": "f63580f8f9eb",
-  "yield": "HIGH",
-  "why": "SRY-driven sex determination is explicitly tested"
+  "yield": "ULTRA_HIGH",
+  "why": "SRY-driven sex determination is explicitly tested every year"
  },
  {
   "front": "What does progesterone accomplish across the span of pregnancy?",
   "fp": "62a9770c1601",
   "yield": "MEDIUM",
-  "why": "Progesterone in pregnancy summary; supports the corpus luteum/hCG cards"
+  "why": "Progesterone-in-pregnancy summary supports the corpus luteum/hCG cards"
  },
  {
   "front": "What does the corpus luteum do?",
   "fp": "8d6dc8e4c38b",
-  "yield": "HIGH",
-  "why": "Corpus luteum progesterone and its hCG dependence are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Corpus luteum progesterone and its hCG dependence are asked every year"
  },
  {
   "front": "What hormones drive the menstrual cycle?",
   "fp": "45168e7848ef",
-  "yield": "HIGH",
-  "why": "The four menstrual cycle hormones and roles are core"
+  "yield": "ULTRA_HIGH",
+  "why": "The four menstrual cycle hormones and roles are the deck's core fact"
  },
  {
   "front": "What immune protection does breast milk provide, and how does it complement placental antibody transfer?",
   "fp": "ea31d5275111",
   "yield": "MEDIUM",
-  "why": "Breast milk IgA is immunology content outside this topic [rescued: misfiled, not served elsewhere]"
+  "why": "Breast milk IgA is immunology content kept as passage context"
  },
  {
   "front": "What is human placental lactogen (hPL), and why does it matter metabolically?",
@@ -332,32 +332,32 @@
  {
   "front": "What is the role of hCG in pregnancy?",
   "fp": "f4d99fb80838",
-  "yield": "HIGH",
-  "why": "hCG role is core pregnancy-hormone content"
+  "yield": "ULTRA_HIGH",
+  "why": "hCG role (luteal rescue, pregnancy test) is asked every year"
  },
  {
   "front": "What three structural changes convert a spermatid into a spermatozoon during spermiogenesis?",
   "fp": "71564f05dd7b",
-  "yield": "MEDIUM",
-  "why": "Spermiogenesis structural changes are supporting spermatogenesis detail"
+  "yield": "HIGH",
+  "why": "Acrosome, flagellum and midpiece mitochondria are commonly tested sperm structure"
  },
  {
   "front": "What triggers ovulation?",
   "fp": "5f870f6698b9",
-  "yield": "HIGH",
-  "why": "LH surge triggers ovulation; core discrete fact"
+  "yield": "ULTRA_HIGH",
+  "why": "LH surge triggering ovulation is a perennial discrete"
  },
  {
   "front": "When does a female produce all of her oogonia, and how does the germ cell pool change across life?",
   "fp": "8ec860b725ce",
-  "yield": "MEDIUM",
-  "why": "Oogonia formed before birth is core; the counts are extra"
+  "yield": "HIGH",
+  "why": "All oogonia formed before birth is core; the counts are extra"
  },
  {
   "front": "Where is oxytocin synthesized versus released?",
   "fp": "783b1c64b0ec",
   "yield": "MEDIUM",
-  "why": "Hypothalamic synthesis / posterior pituitary release is endocrine supporting detail"
+  "why": "Hypothalamic synthesis / posterior pituitary release is covered in the endocrine deck"
  },
  {
   "front": "Which cells in the testis do what?",
@@ -369,19 +369,19 @@
   "front": "Which hormone actually closes the epiphyseal plates at the end of puberty in both sexes?",
   "fp": "0d9c7de902f7",
   "yield": "MEDIUM",
-  "why": "Epiphyseal closure by estrogen is skeletal/endocrine detail outside this topic [rescued: misfiled, not served elsewhere]"
+  "why": "Epiphyseal closure by estrogen is skeletal/endocrine detail kept as context"
  },
  {
   "front": "Which ovarian hormone builds each endometrial phase — proliferative versus secretory?",
   "fp": "bae94f6f76f3",
-  "yield": "HIGH",
-  "why": "Estrogen proliferative / progesterone secretory phases are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Estrogen proliferative / progesterone secretory phases are asked every year"
  },
  {
   "front": "Why do the testes reside outside the body cavity, and what regulates their temperature?",
   "fp": "d027ab1ba332",
-  "yield": "MEDIUM",
-  "why": "Testis temperature requirement is supporting spermatogenesis detail"
+  "yield": "HIGH",
+  "why": "Testis temperature requirement for spermatogenesis is commonly tested"
  },
  {
   "front": "Why does exclusive breastfeeding suppress fertility (lactational amenorrhea)?",
@@ -392,14 +392,14 @@
  {
   "front": "Why does FSH rise at the very start of each menstrual cycle?",
   "fp": "8f6ac1fdd1e9",
-  "yield": "MEDIUM",
-  "why": "Cycle-start FSH rise is a feedback second step; plainer hormone card is core"
+  "yield": "HIGH",
+  "why": "Cycle-start FSH rise from loss of negative feedback is a commonly tested step"
  },
  {
   "front": "Why does FSH rise higher than LH at menopause?",
   "fp": "3654a9f1c5f3",
-  "yield": "MEDIUM",
-  "why": "Menopause FSH>LH is a feedback application via inhibin"
+  "yield": "HIGH",
+  "why": "Menopause with high FSH/LH and low estrogen is an outline item; inhibin nuance is extra"
  },
  {
   "front": "Why is ejaculate volume essentially unchanged after a vasectomy?",

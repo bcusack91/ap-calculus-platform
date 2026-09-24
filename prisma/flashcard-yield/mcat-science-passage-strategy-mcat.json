@@ -1,0 +1,74 @@
+[
+ {
+  "front": "A mental set is:",
+  "fp": "f95548ed41ad",
+  "yield": "LOW",
+  "why": "P/S cognition content misfiled in a strategy deck; covered in the cognition deck"
+ },
+ {
+  "front": "Decay theory of forgetting proposes memories fade due to:",
+  "fp": "8da9170abf1d",
+  "yield": "MEDIUM",
+  "why": "P/S memory content misfiled here; decay vs interference is a plausible P/S item"
+ },
+ {
+  "front": "Globalization's effect on health includes:",
+  "fp": "2b019390a857",
+  "yield": "MEDIUM",
+  "why": "Sociology content misfiled in a strategy deck; covered in sociology decks [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "How do you handle a passage full of unfamiliar terminology?",
+  "fp": "8cadebfa503c",
+  "yield": "HIGH",
+  "why": "Treating unknown terms as labels is a tactic used on nearly every passage"
+ },
+ {
+  "front": "How should you approach questions referencing a specific paragraph?",
+  "fp": "d64f8a0c930c",
+  "yield": "HIGH",
+  "why": "Re-reading the referenced paragraph is a routine step on most passages"
+ },
+ {
+  "front": "How should you read a science passage?",
+  "fp": "8b4e25ce6525",
+  "yield": "ULTRA_HIGH",
+  "why": "Skim-for-structure is the foundational science-passage reading tactic"
+ },
+ {
+  "front": "The testing effect shows that:",
+  "fp": "d399b2d02a49",
+  "yield": "MEDIUM",
+  "why": "P/S learning content misfiled in a strategy deck; covered in learning-memory dec [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "What are the three science passage types?",
+  "fp": "0120b68451f9",
+  "yield": "MEDIUM",
+  "why": "Passage taxonomy; orientation aid rather than a scoring tactic"
+ },
+ {
+  "front": "What is the best use of the first 30 seconds on a passage?",
+  "fp": "331207f27118",
+  "yield": "HIGH",
+  "why": "First-30-seconds orientation is applied on every passage"
+ },
+ {
+  "front": "What percentage of science questions require the passage?",
+  "fp": "7022f6dea280",
+  "yield": "MEDIUM",
+  "why": "Format fact about passage vs discrete share; useful context"
+ },
+ {
+  "front": "What should you identify immediately in a research passage?",
+  "fp": "7c72eb5b9204",
+  "yield": "ULTRA_HIGH",
+  "why": "Hypothesis/IV/DV/control identification is required on every research passage"
+ },
+ {
+  "front": "Why should you not memorize passage details on first read?",
+  "fp": "7ec101df65cd",
+  "yield": "MEDIUM",
+  "why": "Supporting rationale for the skim-first card; near-restatement"
+ }
+]

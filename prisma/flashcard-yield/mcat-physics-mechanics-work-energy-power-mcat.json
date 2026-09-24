@@ -1,0 +1,398 @@
+[
+ {
+  "front": "A 100 W bulb and a 2000 J snack: how long could that energy run the bulb?",
+  "fp": "ec15c82c9bd6",
+  "yield": "MEDIUM",
+  "why": "t = E/P estimation with a snack; supporting power/energy arithmetic"
+ },
+ {
+  "front": "A 1000 kg car at 20 m/s brakes to rest. Work done by brakes?",
+  "fp": "4d14ad4606f0",
+  "yield": "ULTRA_HIGH",
+  "why": "Work by brakes = change in KE; the standard work-energy calculation"
+ },
+ {
+  "front": "A 2 kg mass falls 5 m. Its speed on impact (g = 10) is:",
+  "fp": "c67809248e37",
+  "yield": "ULTRA_HIGH",
+  "why": "v = sqrt(2gh) from energy conservation is calculated on every exam"
+ },
+ {
+  "front": "A 60 kg person climbs 3 m of stairs. What distinguishes the work from the power?",
+  "fp": "8932b44f4813",
+  "yield": "MEDIUM",
+  "why": "Work vs power on stairs; restates the same-work-double-power card"
+ },
+ {
+  "front": "A ball thrown straight up is at half its maximum height. How is its energy divided?",
+  "fp": "5036a95279ed",
+  "yield": "HIGH",
+  "why": "Energy split at half max height and the v0/sqrt(2) trap; common discrete"
+ },
+ {
+  "front": "A block oscillating on a spring has {{c1::zero}} kinetic energy at maximum compression.",
+  "fp": "34788fed59be",
+  "yield": "HIGH",
+  "why": "KE zero at max compression, all elastic PE; standard oscillation energy fact"
+ },
+ {
+  "front": "A block slides down a frictionless ramp of height $h$ and then compresses a spring. Which relation gives maximum compression?",
+  "fp": "932f14bed041",
+  "yield": "HIGH",
+  "why": "mgh = kx^2/2 for ramp-to-spring; classic energy-conservation setup"
+ },
+ {
+  "front": "A box is carried to the second floor by ramp or by stairs. Compare work against gravity and total muscular work.",
+  "fp": "15c8d67d530d",
+  "yield": "MEDIUM",
+  "why": "Ramp vs stairs work comparison; conceptual application of path independence"
+ },
+ {
+  "front": "A cyclist delivering 100 W of mechanical power at 20 percent efficiency dissipates about {{c1::400 W}} as heat.",
+  "fp": "d139d0b617d9",
+  "yield": "MEDIUM",
+  "why": "Efficiency to heat-dissipation arithmetic; second-step application"
+ },
+ {
+  "front": "A horizontal total-energy line is drawn across a potential-energy curve. What do the vertical gap and the intersections mean?",
+  "fp": "8e74d4511689",
+  "yield": "MEDIUM",
+  "why": "Reading KE and turning points off a PE curve; passage graph skill"
+ },
+ {
+  "front": "A jumper's legs push over distance $d$ to reach height $h$. What relation applies?",
+  "fp": "f7839bd05001",
+  "yield": "MEDIUM",
+  "why": "Push-off work equals PE gained; biomechanics application"
+ },
+ {
+  "front": "A kilowatt-hour is a unit of {{c1::energy}}, equal to {{c1::3.6 MJ}}.",
+  "fp": "d5a93578bce8",
+  "yield": "LOW",
+  "why": "Kilowatt-hour conversion is units trivia"
+ },
+ {
+  "front": "A pendulum released from height $h$ reaches a lowest-point speed equal to the square root of {{c1::$2gh$}}.",
+  "fp": "aaab3f13138b",
+  "yield": "HIGH",
+  "why": "Pendulum lowest-point speed sqrt(2gh); restates the drop-speed calculation"
+ },
+ {
+  "front": "A pole vaulter approaches at 9 m/s. What does the energy budget say about the achievable bar height?",
+  "fp": "ab59a08c31d8",
+  "yield": "LOW",
+  "why": "Pole-vault height estimate restates v^2/2g conversion; trivia application"
+ },
+ {
+  "front": "A pulley system has a mechanical advantage of 4. If you pull the rope 8 m, how far does the load move?",
+  "fp": "6ddae617d23f",
+  "yield": "MEDIUM",
+  "why": "Worked pulley distance example; restates the MA distance trade-off card"
+ },
+ {
+  "front": "A pulley with mechanical advantage 4 requires the rope to be pulled {{c1::4 times}} the load's rise.",
+  "fp": "d2f7234a2bde",
+  "yield": "HIGH",
+  "why": "MA of 4 means 4x rope pulled; work in = work out for machines"
+ },
+ {
+  "front": "A resting adult's basal metabolic power is about {{c1::100 W}}.",
+  "fp": "864ed9d3fddc",
+  "yield": "LOW",
+  "why": "Basal metabolic rate of 100 W is estimation trivia"
+ },
+ {
+  "front": "Climbing stairs twice as fast changes work and power how?",
+  "fp": "9c59c0d70e93",
+  "yield": "ULTRA_HIGH",
+  "why": "Same work, double power when climbing faster; asked essentially every year"
+ },
+ {
+  "front": "Does a pulley system reduce the work needed to lift a load?",
+  "fp": "4aa103e28216",
+  "yield": "HIGH",
+  "why": "Machines never reduce work, only force; core simple-machine idea"
+ },
+ {
+  "front": "Does the work-energy theorem account for heat produced by friction?",
+  "fp": "5e72088584e0",
+  "yield": "MEDIUM",
+  "why": "How friction heat fits into the work-energy theorem; supporting reasoning"
+ },
+ {
+  "front": "Doubling a car's speed multiplies its braking distance by {{c1::4}}.",
+  "fp": "5e1e53bb8ad8",
+  "yield": "ULTRA_HIGH",
+  "why": "Doubling speed quadruples braking distance; yearly proportional-reasoning discrete"
+ },
+ {
+  "front": "Efficiency is defined as {{c1::useful energy output divided by total energy input}}.",
+  "fp": "6472f48ca093",
+  "yield": "ULTRA_HIGH",
+  "why": "Efficiency = useful output / total input; used in many physics passages"
+ },
+ {
+  "front": "Elastic potential energy of a spring equals one half of {{c1::$kx^2$}}.",
+  "fp": "a59a904ca89e",
+  "yield": "ULTRA_HIGH",
+  "why": "Elastic PE = 1/2 kx^2 is tested every year"
+ },
+ {
+  "front": "Estimate the kinetic energy of a 70 kg sprinter at 10 m/s and compare it with one food Calorie.",
+  "fp": "b5e81c09ca62",
+  "yield": "LOW",
+  "why": "Sprinter KE vs food Calorie is estimation trivia"
+ },
+ {
+  "front": "For a mass dropped onto a spring, maximum compression obeys {{c1::$mgh = kx^2/2$}} when $h$ is measured to {{c1::the lowest point}}.",
+  "fp": "1d1ba409dd9f",
+  "yield": "HIGH",
+  "why": "Mass dropped onto spring: mgh = kx^2/2 with h to the lowest point; common trap"
+ },
+ {
+  "front": "Gravitational potential energy change depends only on {{c1::the vertical displacement}}.",
+  "fp": "355ed5f16553",
+  "yield": "ULTRA_HIGH",
+  "why": "Delta PE depends only on vertical displacement; path independence tested every year"
+ },
+ {
+  "front": "How can a force change direction of motion without changing speed?",
+  "fp": "4f02d19a4c4b",
+  "yield": "HIGH",
+  "why": "Perpendicular force does no work and cannot change speed; common conceptual item"
+ },
+ {
+  "front": "How do tendons improve running economy?",
+  "fp": "667a26267cce",
+  "yield": "MEDIUM",
+  "why": "Tendon elastic energy storage; biomechanics passage context"
+ },
+ {
+  "front": "How do you find the work done by a variable force without calculus?",
+  "fp": "3de08f6c3540",
+  "yield": "ULTRA_HIGH",
+  "why": "Work as area under an F-x graph; standard graph-reading step on every exam"
+ },
+ {
+  "front": "How do you get the work done by a gas from a PV diagram?",
+  "fp": "d4c0e734e91b",
+  "yield": "HIGH",
+  "why": "PV-diagram work as area; thermodynamics core that is tested yearly"
+ },
+ {
+  "front": "How is the mechanical work done by the left ventricle per beat estimated?",
+  "fp": "bbdfbdc45c3f",
+  "yield": "MEDIUM",
+  "why": "Ventricular work as P dV; physiology passage application"
+ },
+ {
+  "front": "How is work calculated, and when does a force do zero work?",
+  "fp": "1da41c3c64e9",
+  "yield": "HIGH",
+  "why": "Work formula and zero-work condition; duplicates the cloze W = Fd cos card"
+ },
+ {
+  "front": "How much work does a waiter do on a tray carried at constant speed across a level floor?",
+  "fp": "da72aef1bd8b",
+  "yield": "HIGH",
+  "why": "Waiter carrying a tray does zero work; classic discrete"
+ },
+ {
+  "front": "How much work does gravity do on a satellite over one circular orbit?",
+  "fp": "d18840bc1a7d",
+  "yield": "LOW",
+  "why": "Gravity does zero work over a circular orbit; restates the perpendicular-force card"
+ },
+ {
+  "front": "Human metabolic efficiency in converting food energy to work is roughly:",
+  "fp": "61622b6e428e",
+  "yield": "MEDIUM",
+  "why": "Human 20-25 percent efficiency; restates the efficiency card's example"
+ },
+ {
+  "front": "In an isothermal ideal-gas expansion $\\Delta U = 0$, so the heat absorbed equals {{c1::the work done by the gas}}.",
+  "fp": "1eae0f969b33",
+  "yield": "MEDIUM",
+  "why": "Isothermal expansion Q = W; thermodynamics content belonging to another deck"
+ },
+ {
+  "front": "Is the work done by a spring positive or negative while a mass is pulled away from equilibrium?",
+  "fp": "4b07740b603e",
+  "yield": "MEDIUM",
+  "why": "Sign of spring work while stretching; supporting negative-work reasoning"
+ },
+ {
+  "front": "Kinetic energy is {{c1::½mv²}} and gravitational potential energy near Earth is {{c2::mgh}}.",
+  "fp": "2bca66902080",
+  "yield": "ULTRA_HIGH",
+  "why": "KE = 1/2 mv^2 and PE = mgh are the foundation of every energy problem"
+ },
+ {
+  "front": "Lowering a dumbbell slowly is an eccentric contraction, in which the muscle does {{c1::negative}} work.",
+  "fp": "f1f5a01fc855",
+  "yield": "MEDIUM",
+  "why": "Eccentric contraction as negative work; biomechanics application"
+ },
+ {
+  "front": "Of $mgh$, $mv$, $kx$, and $Pt$, the expressions carrying joules are {{c1::$mgh$ and $Pt$}}.",
+  "fp": "4623ee4876a1",
+  "yield": "MEDIUM",
+  "why": "Dimensional screening of energy expressions; units skill"
+ },
+ {
+  "front": "On a force-versus-position graph for a spring, the triangular area under the line equals {{c1::$kx^2/2$}}.",
+  "fp": "8d5ce5f378dc",
+  "yield": "LOW",
+  "why": "Triangle area for spring work restates the F-x area and 1/2 kx^2 cards"
+ },
+ {
+  "front": "On a potential-energy curve, a valley is {{c1::stable}} equilibrium while a peak is {{c1::unstable}} equilibrium.",
+  "fp": "ede69786e535",
+  "yield": "HIGH",
+  "why": "Valley stable, peak unstable on a PE curve; common passage reasoning"
+ },
+ {
+  "front": "On a potential-energy-versus-position curve, motion accelerates toward {{c1::lower potential energy}} and equilibrium sits where {{c1::the curve is flat}}.",
+  "fp": "570195221ed4",
+  "yield": "MEDIUM",
+  "why": "Force from PE-curve slope; restates the stable/unstable equilibrium card"
+ },
+ {
+  "front": "One food Calorie (1 kcal) equals about {{c1::4184 J}}.",
+  "fp": "44b717c68206",
+  "yield": "LOW",
+  "why": "kcal to joule conversion is trivia usually supplied if needed"
+ },
+ {
+  "front": "Power output climbing a staircase of height $h$ in time $t$ is {{c1::$P = mgh/t$}}.",
+  "fp": "827c5cd430ee",
+  "yield": "ULTRA_HIGH",
+  "why": "P = mgh/t is the standard MCAT power calculation"
+ },
+ {
+  "front": "Spring potential energy is:",
+  "fp": "b335176c011f",
+  "yield": "LOW",
+  "why": "Near-restatement of the elastic PE cloze card"
+ },
+ {
+  "front": "The area under a power-versus-time graph equals {{c1::the total energy delivered}}.",
+  "fp": "9426e5c042e6",
+  "yield": "MEDIUM",
+  "why": "Area under a P-t graph is energy; supporting graph skill"
+ },
+ {
+  "front": "The work-energy theorem says the net work done on an object equals {{c1::its change in kinetic energy}}.",
+  "fp": "427fe4e7c268",
+  "yield": "ULTRA_HIGH",
+  "why": "Work-energy theorem W_net = delta KE; tested every year"
+ },
+ {
+  "front": "Two frictionless slides drop the same height but differ in shape. Compare the final speeds.",
+  "fp": "41288b56f04c",
+  "yield": "HIGH",
+  "why": "Same drop height gives same final speed regardless of path; classic discrete"
+ },
+ {
+  "front": "Two objects with equal KE but different mass: the lighter one has:",
+  "fp": "8ca9fe10644a",
+  "yield": "HIGH",
+  "why": "Equal KE, lighter object faster; common comparison"
+ },
+ {
+  "front": "What defines a conservative force?",
+  "fp": "e08b2806d23d",
+  "yield": "ULTRA_HIGH",
+  "why": "Conservative force definition and examples; tested every administration"
+ },
+ {
+  "front": "What does negative work by a force tell you physically?",
+  "fp": "21ef0a3f11ec",
+  "yield": "HIGH",
+  "why": "Meaning of negative work; common conceptual item"
+ },
+ {
+  "front": "What is gravitational potential energy near Earth's surface, and why is the reference height arbitrary?",
+  "fp": "f3267f717b5a",
+  "yield": "HIGH",
+  "why": "PE = mgh with arbitrary reference level; only changes matter"
+ },
+ {
+  "front": "What is power, and what are its two common formulas?",
+  "fp": "9b0f9452a59f",
+  "yield": "ULTRA_HIGH",
+  "why": "Power P = W/t and P = Fv; core formulas used every year"
+ },
+ {
+  "front": "What is the formula for kinetic energy, and how does it scale with speed?",
+  "fp": "e2483d690ec2",
+  "yield": "ULTRA_HIGH",
+  "why": "KE scales with v^2; the quadrupling result is a yearly discrete"
+ },
+ {
+  "front": "What is the power dissipated by drag on an object falling at terminal velocity?",
+  "fp": "f180ac4c7001",
+  "yield": "HIGH",
+  "why": "P = mgv at terminal velocity; classic power application"
+ },
+ {
+  "front": "When is $P = Fv$ valid, and what does it explain about cars?",
+  "fp": "867f57bbad4b",
+  "yield": "MEDIUM",
+  "why": "Validity of P = Fv and fixed-power car reasoning; restates the power card"
+ },
+ {
+  "front": "Which unit measures energy?",
+  "fp": "f17df84497a9",
+  "yield": "HIGH",
+  "why": "Joule vs watt vs newton; quick units discrete"
+ },
+ {
+  "front": "Why can no potential energy be defined for friction?",
+  "fp": "a338e0d6d0ef",
+  "yield": "MEDIUM",
+  "why": "Why friction has no potential energy; restates the conservative-force card"
+ },
+ {
+  "front": "Why does the centripetal force do no work?",
+  "fp": "dc379fb49ba5",
+  "yield": "MEDIUM",
+  "why": "Centripetal force does no work; restates the perpendicular-force card"
+ },
+ {
+  "front": "Why does walking uphill cost more energy than level walking at the same speed?",
+  "fp": "14293ce7fcb8",
+  "yield": "LOW",
+  "why": "Uphill walking costs more energy; generic restatement of work against gravity"
+ },
+ {
+  "front": "With a rough floor between ramp and spring, the energy chain becomes {{c1::$mgh - f_k d = kx^2/2$}}.",
+  "fp": "da104ebea048",
+  "yield": "HIGH",
+  "why": "Energy chain with friction: mgh - f d = kx^2/2; standard multi-step setup"
+ },
+ {
+  "front": "With friction present, the change in mechanical energy is {{c1::$-f_k d$}}, where $d$ is path length.",
+  "fp": "c5d30197b475",
+  "yield": "ULTRA_HIGH",
+  "why": "Mechanical energy lost to friction = f_k d over path length; used every year"
+ },
+ {
+  "front": "Work by a constant force is {{c1::$W = Fd\\cos\\theta$}}, with $\\theta$ between force and displacement.",
+  "fp": "e8d23acd0c43",
+  "yield": "ULTRA_HIGH",
+  "why": "W = Fd cos(theta) is the definition every work problem starts from"
+ },
+ {
+  "front": "Work done by a gas expanding at constant pressure is {{c1::$W = P\\Delta V$}}.",
+  "fp": "022a7a542b99",
+  "yield": "HIGH",
+  "why": "W = P dV for constant-pressure gas work; tested yearly in thermodynamics"
+ },
+ {
+  "front": "Work-energy plus friction gives braking distance {{c1::$v^2/(2\\mu_k g)$}}, which is independent of {{c1::mass}}.",
+  "fp": "41a782993fcd",
+  "yield": "HIGH",
+  "why": "Braking distance v^2/(2 u g) independent of mass; common derivation"
+ }
+]

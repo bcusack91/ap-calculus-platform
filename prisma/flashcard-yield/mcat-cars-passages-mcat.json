@@ -1,0 +1,92 @@
+[
+ {
+  "front": "A passage argues that modern architecture has abandoned humanistic values in favor of pure functionality. The author's main thesis is best described as:",
+  "fp": "ced676226a74",
+  "yield": "HIGH",
+  "why": "Worked main-idea item; main idea is asked on nearly every passage"
+ },
+ {
+  "front": "Are CARS passages excerpted or written for the exam?",
+  "fp": "7684db51d49d",
+  "yield": "LOW",
+  "why": "Passage provenance is trivia"
+ },
+ {
+  "front": "Does CARS ever test science content?",
+  "fp": "2b1ed0c6d158",
+  "yield": "MEDIUM",
+  "why": "Reassurance about science content; the underlying passage-only rule is elsewhere"
+ },
+ {
+  "front": "How long is a typical CARS passage?",
+  "fp": "595ee3ee1377",
+  "yield": "LOW",
+  "why": "Passage length is logistics"
+ },
+ {
+  "front": "How should difficulty affect passage order?",
+  "fp": "27747de8fc42",
+  "yield": "MEDIUM",
+  "why": "Passage-ordering is generic pacing advice with some section-level value"
+ },
+ {
+  "front": "If asked how the author would respond to a critic, you should:",
+  "fp": "1a9c7c718613",
+  "yield": "HIGH",
+  "why": "Author-responds-to-critic is a frequent application question"
+ },
+ {
+  "front": "The AAMC CARS skill \"Foundations of Comprehension\" tests:",
+  "fp": "996e7e27c7d4",
+  "yield": "MEDIUM",
+  "why": "AAMC skill-category name; knowing the label is not a tactic"
+ },
+ {
+  "front": "The safest strategy on an unfamiliar application question is to:",
+  "fp": "a3c09353b394",
+  "yield": "HIGH",
+  "why": "Return-to-the-principle is the standard move on every application question"
+ },
+ {
+  "front": "Understanding \"how ideas relate\" includes recognizing:",
+  "fp": "ba383ced441d",
+  "yield": "HIGH",
+  "why": "Relationship types (contrast, cause, support) underlie most comprehension questions"
+ },
+ {
+  "front": "What disciplines do CARS passages come from?",
+  "fp": "2d8d7a3539dd",
+  "yield": "LOW",
+  "why": "Discipline list is logistics"
+ },
+ {
+  "front": "What distinguishes a persuasive from an expository passage?",
+  "fp": "f09dc9a05fac",
+  "yield": "MEDIUM",
+  "why": "Persuasive vs expository framing is useful but secondary"
+ },
+ {
+  "front": "What does it mean when a passage ends with a qualification?",
+  "fp": "aae3c5401741",
+  "yield": "HIGH",
+  "why": "Closing qualification changes the correct main-idea answer; tested constantly"
+ },
+ {
+  "front": "What is the function of a definition given early in a passage?",
+  "fp": "cb2a1669e8a0",
+  "yield": "MEDIUM",
+  "why": "Early-definition role is a second-step reading note"
+ },
+ {
+  "front": "When two paragraphs present opposing views and the third begins \"Both accounts overlook,\" the author is:",
+  "fp": "4f098ca211d7",
+  "yield": "HIGH",
+  "why": "Two-views-then-author structure is very common; recognizing it is a core move"
+ },
+ {
+  "front": "Why do CARS passages often present multiple viewpoints?",
+  "fp": "5eca0d85e999",
+  "yield": "ULTRA_HIGH",
+  "why": "Separating the author's position from reported views is the central CARS skill every year"
+ }
+]

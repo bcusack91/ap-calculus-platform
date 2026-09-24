@@ -14,26 +14,26 @@
  {
   "front": "$\\Delta G = \\Delta G^{\\circ\\prime} + RT\\ln Q$: a positive {{c1::$\\Delta G^{\\circ\\prime}$}} step proceeds if {{c2::Q}} is kept low.",
   "fp": "fb245fc53224",
-  "yield": "HIGH",
-  "why": "dG vs dG standard with Q: the core bioenergetics relationship"
+  "yield": "ULTRA_HIGH",
+  "why": "dG = dG standard + RT ln Q: the core bioenergetics relationship, tested every year"
  },
  {
   "front": "A buffer resists pH change best within about {{c1::1 pH unit}} of its {{c2::$pK_a$}}, where the Henderson-Hasselbalch ratio stays near {{c3::1}}.",
   "fp": "6dfabc7555c8",
-  "yield": "HIGH",
-  "why": "Buffer range +/-1 pH unit of pKa: classic Henderson-Hasselbalch question"
+  "yield": "ULTRA_HIGH",
+  "why": "Buffer range within 1 pH unit of pKa: Henderson-Hasselbalch asked every year"
  },
  {
   "front": "A nucleoside is base + sugar joined by a beta-{{c1::N-glycosidic}} bond; adding phosphate at the {{c2::5'}} carbon makes a nucleotide.",
   "fp": "96dc3d58abe7",
-  "yield": "MEDIUM",
-  "why": "Nucleoside vs nucleotide, N-glycosidic bond: biomolecule class basics"
+  "yield": "HIGH",
+  "why": "Nucleoside vs nucleotide and N-glycosidic bond: commonly tested biomolecule basics"
  },
  {
   "front": "A reducing sugar has a free {{c1::anomeric}} carbon and therefore gives a positive {{c2::Benedict's}} or Tollens test.",
   "fp": "b6bd0e3928fa",
   "yield": "HIGH",
-  "why": "Reducing sugar / free anomeric carbon: core carbohydrate structure"
+  "why": "Reducing sugar / free anomeric carbon: commonly tested carbohydrate structure"
  },
  {
   "front": "Active AMPK {{c1::inhibits}} ACC and HMG-CoA reductase while {{c2::stimulating}} glucose uptake and fatty acid oxidation.",
@@ -50,14 +50,14 @@
  {
   "front": "Allosteric regulation involves binding:",
   "fp": "e5326c448eee",
-  "yield": "HIGH",
-  "why": "Allosteric site definition: enzyme regulation core"
+  "yield": "ULTRA_HIGH",
+  "why": "Allosteric site definition: enzyme regulation asked every year"
  },
  {
   "front": "Arterial pH is held at {{c1::7.35-7.45}}; the lungs adjust {{c2::$CO_2$}} within minutes while the kidneys adjust bicarbonate over {{c3::days}}.",
   "fp": "5acf45f525e3",
   "yield": "HIGH",
-  "why": "Arterial pH range, lung vs kidney compensation timescale: tested acid-base"
+  "why": "Arterial pH range, lung vs kidney compensation timescale: commonly tested acid-base"
  },
  {
   "front": "At pH 7.4, carboxylic acids are {{c1::deprotonated}} and aliphatic amines are {{c2::protonated}}, so both carry charge and cross membranes poorly.",
@@ -68,14 +68,14 @@
  {
   "front": "At physiological pH (7.4), a typical amino acid exists as a:",
   "fp": "c5ec5bf5dee9",
-  "yield": "HIGH",
-  "why": "Zwitterion at physiological pH: amino acid core"
+  "yield": "ULTRA_HIGH",
+  "why": "Zwitterion at physiological pH: amino acid fact tested every year"
  },
  {
   "front": "ATP hydrolysis is strongly exergonic due to relief of {{c1::charge repulsion}}, {{c2::resonance}} stabilization of $P_i$, and greater solvation of products.",
   "fp": "217228121b76",
   "yield": "HIGH",
-  "why": "Why ATP hydrolysis is exergonic: bioenergetics core"
+  "why": "Why ATP hydrolysis is exergonic: commonly tested bioenergetics"
  },
  {
   "front": "Beyond translation, name three distinct metabolic or signaling roles of GTP specifically.",
@@ -86,14 +86,14 @@
  {
   "front": "Bicarbonate ($pK_a$ {{c1::6.1}}) buffers blood well as an {{c2::open}} system: lungs vent $CO_2$, kidneys set {{c3::$HCO_3^-$}}.",
   "fp": "869915490926",
-  "yield": "HIGH",
-  "why": "Bicarbonate open-system buffer, pKa 6.1: high-frequency"
+  "yield": "ULTRA_HIGH",
+  "why": "Bicarbonate open-system buffer, pKa 6.1: tested every year"
  },
  {
   "front": "Biological amino acids are almost all {{c1::L}} and biological sugars almost all {{c2::D}}, assigned from the chiral carbon farthest from the carbonyl.",
   "fp": "13ad3087e9fb",
-  "yield": "HIGH",
-  "why": "L amino acids / D sugars and Fischer assignment: core"
+  "yield": "ULTRA_HIGH",
+  "why": "L amino acids / D sugars and Fischer assignment: tested every year"
  },
  {
   "front": "Biotin (B7) serves the three major {{c1::carboxylases}} and is bound by {{c2::avidin}} in raw egg white.",
@@ -111,7 +111,7 @@
   "front": "Cells hold the {{c1::$NAD^+$/NADH}} couple oxidized to drive catabolism, but keep {{c2::NADPH/$NADP^+$}} reduced to drive biosynthesis.",
   "fp": "1d133315309c",
   "yield": "HIGH",
-  "why": "NAD+ vs NADPH poised ratios: core redox-cofactor distinction"
+  "why": "NAD+ vs NADPH poised ratios: commonly tested redox-cofactor distinction"
  },
  {
   "front": "Convert a blood glucose of 90 mg/dL to millimolar, given a molar mass of 180 g/mol.",
@@ -122,8 +122,8 @@
  {
   "front": "Disulfide bonds form between which amino acid residues?",
   "fp": "80ce9087cd0b",
-  "yield": "HIGH",
-  "why": "Disulfide bonds between cysteines: core protein structure"
+  "yield": "ULTRA_HIGH",
+  "why": "Disulfide bonds between cysteines: protein structure fact tested every year"
  },
  {
   "front": "Fasting: liver glycogen lasts ~{{c1::24 h}}; gluconeogenesis then dominates; by ~{{c2::3 days}} ketones spare muscle {{c3::protein}}.",
@@ -140,32 +140,32 @@
  {
   "front": "Glucose and galactose are epimers at carbon {{c1::4}}; glucose and mannose are epimers at carbon {{c2::2}}.",
   "fp": "d017f1e952c6",
-  "yield": "HIGH",
-  "why": "Glucose/galactose/mannose epimer positions: high-frequency carbohydrate fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Glucose/galactose C4 and glucose/mannose C2 epimers: asked every year"
  },
  {
   "front": "GPCR outputs: $G_s$ {{c1::raises}} cAMP, $G_i$ lowers it, and $G_q$ activates phospholipase C to generate {{c2::IP3 and DAG}}.",
   "fp": "803754483cab",
-  "yield": "HIGH",
-  "why": "Gs/Gi/Gq outputs: high-frequency signaling"
+  "yield": "ULTRA_HIGH",
+  "why": "Gs/Gi/Gq outputs: signaling fact tested every year"
  },
  {
   "front": "HDL is considered \"good\" cholesterol because it:",
   "fp": "577f5f7e3d07",
-  "yield": "MEDIUM",
-  "why": "HDL reverse cholesterol transport: lipid transport, secondary"
+  "yield": "HIGH",
+  "why": "HDL reverse cholesterol transport: commonly tested discrete"
  },
  {
   "front": "How can you tell by inspection whether a carbon was oxidized in a metabolic step?",
   "fp": "ea974a775fc8",
   "yield": "HIGH",
-  "why": "Recognizing oxidation by C-O/C-H bond count: core reasoning skill"
+  "why": "Recognizing oxidation by C-O/C-H bond count: commonly needed reasoning skill"
  },
  {
   "front": "How do competitive and noncompetitive inhibitors differ kinetically?",
   "fp": "c947a0b94298",
-  "yield": "HIGH",
-  "why": "Competitive vs noncompetitive Km/Vmax: enzyme kinetics core"
+  "yield": "ULTRA_HIGH",
+  "why": "Competitive vs noncompetitive Km/Vmax: enzyme kinetics tested every year"
  },
  {
   "front": "How do cortisol and epinephrine divide the counter-regulatory labor against hypoglycemia?",
@@ -176,8 +176,8 @@
  {
   "front": "How do you compute the isoelectric point of a simple amino acid versus an acidic or basic one?",
   "fp": "89a957b09144",
-  "yield": "HIGH",
-  "why": "Computing pI for neutral/acidic/basic amino acids: classic calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "Computing pI for neutral/acidic/basic amino acids: calculation asked every year"
  },
  {
   "front": "How does phosphocreatine buffer ATP in muscle, and what does the creatine kinase equilibrium accomplish in the first seconds of sprinting?",
@@ -194,20 +194,20 @@
  {
   "front": "Humans digest the {{c1::alpha}}-1,4 linkages of starch but not the {{c2::beta}}-1,4 linkages of cellulose.",
   "fp": "e331ef7f4cce",
-  "yield": "HIGH",
-  "why": "alpha- vs beta-1,4 digestibility: core carbohydrate fact"
+  "yield": "ULTRA_HIGH",
+  "why": "alpha- vs beta-1,4 digestibility (starch vs cellulose): asked every year"
  },
  {
   "front": "In ATP, the alpha phosphate-ribose link is a {{c1::phosphoester}}; the beta-gamma links are high-energy {{c2::phosphoanhydrides}}.",
   "fp": "2080d2716360",
   "yield": "HIGH",
-  "why": "Phosphoester vs phosphoanhydride bonds in ATP: core"
+  "why": "Phosphoester vs phosphoanhydride bonds in ATP: commonly tested"
  },
  {
   "front": "In the well-fed state, which pathways does the high insulin-to-glucagon ratio switch ON in liver, and through what shared second-messenger change?",
   "fp": "7c048a0e0d9b",
   "yield": "HIGH",
-  "why": "Insulin/glucagon well-fed switch via cAMP: metabolic regulation core"
+  "why": "Insulin/glucagon well-fed switch via cAMP: commonly tested regulation"
  },
  {
   "front": "Intracellular/urinary buffering uses {{c1::phosphate}} ($pK_{a2}$ ~6.8); proteins buffer via {{c2::histidine}} side chains.",
@@ -219,7 +219,7 @@
   "front": "Ketone bodies are produced during:",
   "fp": "e34851b90bf4",
   "yield": "HIGH",
-  "why": "Ketone bodies in fasting: high-frequency"
+  "why": "Ketone bodies in fasting: commonly tested (ultra-tier card lives in lipid deck)"
  },
  {
   "front": "List the five cofactors of the pyruvate dehydrogenase complex and the vitamin behind each.",
@@ -230,8 +230,8 @@
  {
   "front": "List the four levels of protein structure.",
   "fp": "2d0a7f166696",
-  "yield": "HIGH",
-  "why": "Four levels of protein structure: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Four levels of protein structure: tested every year"
  },
  {
   "front": "Niacin (B3) forms {{c1::$NAD^+$/$NADP^+$}}, is made from {{c2::tryptophan}}, and deficiency causes {{c3::pellagra}}.",
@@ -242,8 +242,8 @@
  {
   "front": "One pH unit above a group's $pK_a$, the deprotonated-to-protonated ratio is {{c1::10 to 1}}; two units above, it is {{c2::100 to 1}}.",
   "fp": "3b0e11d0fb03",
-  "yield": "HIGH",
-  "why": "10:1 ratio per pH unit from pKa: Henderson-Hasselbalch core"
+  "yield": "ULTRA_HIGH",
+  "why": "10:1 ratio per pH unit from pKa: Henderson-Hasselbalch asked every year"
  },
  {
   "front": "Order-of-magnitude values: cellular ATP about {{c1::5}} mM, cytosolic free $Ca^{2+}$ about {{c2::100}} nM, blood glucose about 5 mM.",
@@ -284,20 +284,20 @@
  {
   "front": "Rank the phosphoryl-transfer potentials: PEP, 1,3-BPG, phosphocreatine, ATP, glucose 6-phosphate. Why is ATP's middle position functionally essential?",
   "fp": "02063bc22cfd",
-  "yield": "HIGH",
-  "why": "Phosphoryl-transfer potential ranking and ATP's middle position: core"
+  "yield": "MEDIUM",
+  "why": "Full phosphoryl-transfer ranking: prep-book detail; ATP mid-position idea is on other cards"
  },
  {
   "front": "Receptor tyrosine kinases signal by {{c1::dimerizing and autophosphorylating}}, whereas GPCRs work through {{c2::G proteins}} and diffusible second messengers.",
   "fp": "65f0eb32fc9a",
-  "yield": "MEDIUM",
-  "why": "RTK vs GPCR signaling: secondary here, belongs to cell signaling"
+  "yield": "HIGH",
+  "why": "RTK dimerize/autophosphorylate vs GPCR: commonly tested signaling contrast"
  },
  {
   "front": "State the relationship between the standard free energy change and the equilibrium constant, and what a tenfold change in $K_{eq}$ is worth at 25 °C.",
   "fp": "bd762a9c4e0b",
-  "yield": "HIGH",
-  "why": "dG standard = -RT ln Keq: core formula"
+  "yield": "ULTRA_HIGH",
+  "why": "dG standard = -RT ln Keq: core formula used every year"
  },
  {
   "front": "Storing glucose as {{c1::glycogen}} avoids the {{c2::osmotic}} catastrophe that an equivalent amount of free glucose would cause in the cytosol.",
@@ -308,14 +308,14 @@
  {
   "front": "The {{c1::anomeric}} carbon is the former carbonyl carbon, and in D-glucopyranose the {{c2::beta}} anomer places its hydroxyl equatorial.",
   "fp": "21e7903d7a4a",
-  "yield": "HIGH",
-  "why": "Anomeric carbon and beta-equatorial OH: core carbohydrate structure"
+  "yield": "ULTRA_HIGH",
+  "why": "Anomeric carbon and beta-equatorial OH: carbohydrate structure asked every year"
  },
  {
   "front": "The hydrophobic effect is driven mainly by {{c1::entropy}}: aggregation of nonpolar groups releases ordered {{c2::water}} molecules from clathrate-like shells.",
   "fp": "eecffd608af4",
-  "yield": "HIGH",
-  "why": "Hydrophobic effect is entropy-driven: high-frequency trap"
+  "yield": "ULTRA_HIGH",
+  "why": "Hydrophobic effect is entropy-driven: perennial trap question"
  },
  {
   "front": "Thiamine pyrophosphate (from vitamin {{c1::B1}}) serves the oxidative decarboxylases (PDH, alpha-KG DH, branched-chain), and {{c2::transketolase}} in the PPP.",
@@ -362,8 +362,8 @@
  {
   "front": "What is $K_m$ and what does a low value mean?",
   "fp": "58cce343a713",
-  "yield": "HIGH",
-  "why": "Km definition and affinity: core enzyme kinetics"
+  "yield": "ULTRA_HIGH",
+  "why": "Km definition and affinity: enzyme kinetics tested every year"
  },
  {
   "front": "What is the pI of a protein?",
@@ -374,8 +374,8 @@
  {
   "front": "What makes energetic coupling through a shared intermediate legitimate, and give the textbook glutamine example.",
   "fp": "d8c4c231def1",
-  "yield": "MEDIUM",
-  "why": "Energetic coupling via shared intermediate: core idea, example is detail"
+  "yield": "HIGH",
+  "why": "Energetic coupling via shared intermediate: commonly tested bioenergetics idea"
  },
  {
   "front": "Which enzyme classes use FAD/FMN (riboflavin), and why can flavins participate in reactions NAD cannot?",
@@ -392,26 +392,26 @@
  {
   "front": "Why are digestive proteases and caspases made as zymogens, and what distinguishes this from phosphorylation control?",
   "fp": "15df45993245",
-  "yield": "MEDIUM",
-  "why": "Zymogen vs phosphorylation control: secondary regulation"
+  "yield": "HIGH",
+  "why": "Zymogen activation vs phosphorylation: outline-named regulation, commonly tested"
  },
  {
   "front": "Why are metabolic control points always the far-from-equilibrium reactions rather than the near-equilibrium ones?",
   "fp": "7ecf80ea7769",
   "yield": "HIGH",
-  "why": "Control points at far-from-equilibrium steps: core regulation logic"
+  "why": "Control points at far-from-equilibrium steps: commonly tested regulation logic"
  },
  {
   "front": "Why do cooperative enzymes show sigmoidal kinetics?",
   "fp": "d0c1224ed43f",
-  "yield": "HIGH",
-  "why": "Cooperativity gives sigmoidal kinetics: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Cooperativity gives sigmoidal kinetics: tested every year"
  },
  {
   "front": "Why do fatty acid salts assemble into {{c1::micelles}} while phospholipids assemble into {{c2::bilayers}}?",
   "fp": "c9b75ba18964",
   "yield": "HIGH",
-  "why": "Micelle vs bilayer by lipid shape: core lipid structure"
+  "why": "Micelle vs bilayer by lipid shape: commonly tested lipid structure"
  },
  {
   "front": "Why does a hormone cascade amplify its signal so powerfully?",
@@ -423,13 +423,13 @@
   "front": "Why does a more {{c1::reduced}} fuel release more energy per carbon when fully oxidized?",
   "fp": "7688bf259b17",
   "yield": "HIGH",
-  "why": "Reduced fuels yield more energy per carbon: core"
+  "why": "Reduced fuels yield more energy per carbon: commonly tested reasoning"
  },
  {
   "front": "Why does denaturation abolish enzyme function?",
   "fp": "bd78eb7db6e4",
-  "yield": "MEDIUM",
-  "why": "Denaturation abolishes function: basic"
+  "yield": "HIGH",
+  "why": "Denaturation abolishes function while peptide bonds stay: basic but commonly asked"
  },
  {
   "front": "Why does enzyme activity fall above the temperature optimum?",

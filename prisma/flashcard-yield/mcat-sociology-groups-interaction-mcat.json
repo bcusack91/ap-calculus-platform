@@ -2,62 +2,62 @@
  {
   "front": "{{c1::Bonding}} social capital is dense within-group ties that supply support; {{c2::bridging}} social capital crosses groups and supplies novel information.",
   "fp": "a9ccc9554221",
-  "yield": "MEDIUM",
-  "why": "Networks/social capital tested; bonding vs bridging is second-tier detail"
+  "yield": "HIGH",
+  "why": "Social capital/networks on outline; bonding vs bridging is a common discrete distinction"
  },
  {
   "front": "{{c1::Emotional labor}} (Hochschild) is managing feeling to meet a job's display rules; {{c2::surface}} acting fakes it, deep acting alters the feeling.",
   "fp": "f9e97e9c86d4",
   "yield": "MEDIUM",
-  "why": "Hochschild emotional labor not on outline but plausible passage context"
+  "why": "Hochschild emotional labor not on outline; plausible passage context only"
  },
  {
   "front": "{{c1::Groupthink}} occurs when a cohesive group's desire for consensus suppresses dissent and realistic appraisal, producing bad decisions.",
   "fp": "068cfb3ad93c",
-  "yield": "HIGH",
-  "why": "Groupthink is named on the 7B outline (group decision-making)"
+  "yield": "ULTRA_HIGH",
+  "why": "Groupthink is named on 7B and tested on essentially every administration"
  },
  {
   "front": "{{c1::Homophily}} is the tendency to form ties with similar others; network {{c2::density}} is the fraction of possible ties that actually exist.",
   "fp": "6f13de1e5a31",
   "yield": "MEDIUM",
-  "why": "Networks on outline; homophily/density are supporting vocabulary"
+  "why": "Homophily/density are supporting network vocabulary a time-pressed student can skip"
  },
  {
   "front": "{{c1::Impression management}} is the conscious shaping of how others perceive us — a physician's white coat, steady tone, and framed diplomas.",
   "fp": "742eb852c793",
-  "yield": "HIGH",
-  "why": "Impression management is core 8C self-presentation"
+  "yield": "ULTRA_HIGH",
+  "why": "Impression management is core 8C self-presentation, tested every year"
  },
  {
   "front": "{{c1::McDonaldization}} (Ritzer): efficiency, calculability, predictability, and control via technology spread from fast food across institutions.",
   "fp": "b2b9e2a4dd43",
   "yield": "HIGH",
-  "why": "McDonaldization is explicitly listed under bureaucracy on the outline"
+  "why": "McDonaldization is explicitly listed under bureaucracy; commonly tested"
  },
  {
   "front": "{{c1::Role conflict}} is tension between roles of two different statuses; {{c2::role strain}} is tension among expectations within a single role.",
   "fp": "ff9af9adf427",
-  "yield": "HIGH",
-  "why": "Role conflict vs role strain is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Role conflict vs role strain is tested on essentially every administration"
  },
  {
   "front": "{{c1::Role exit}} is disengaging from a central role and rebuilding identity — retiring, leaving a religious order, divorcing.",
   "fp": "463fc40f4a4d",
   "yield": "HIGH",
-  "why": "Role exit is named on the 8C outline"
+  "why": "Role exit is named on the 8C outline; appears as a discrete"
  },
  {
   "front": "{{c1::Social isolation}} is objectively having few contacts; {{c2::loneliness}} is the subjective distress of a gap between desired and actual connection.",
   "fp": "540ce0c4f507",
   "yield": "MEDIUM",
-  "why": "Social support/isolation tested; isolation vs loneliness is second-step"
+  "why": "Isolation vs loneliness is a second-step distinction within social support"
  },
  {
   "front": "{{c1::Social loafing}} is reduced individual effort in groups when contributions are unidentifiable, e.g., slacking in a group project.",
   "fp": "681674ff85ba",
-  "yield": "HIGH",
-  "why": "Social loafing is named on the 7B outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Social loafing is named on 7B and tested every year"
  },
  {
   "front": "{{c1::Transactional}} leadership exchanges rewards for performance; {{c2::transformational}} leadership motivates through vision and inspiration.",
@@ -68,80 +68,80 @@
  {
   "front": "A {{c1::dyad}} (Simmel) is the most intimate, least stable group; adding a member creates a {{c2::triad}}, allowing mediation and coalitions.",
   "fp": "990259c73c4d",
-  "yield": "MEDIUM",
-  "why": "Dyad/triad is common prep content, secondary to group types"
+  "yield": "HIGH",
+  "why": "Simmel dyad/triad stability is a common group-size discrete"
  },
  {
   "front": "A {{c1::master status}} overrides all others in how one is perceived — 'ex-convict', 'blind', 'celebrity', often 'physician'.",
   "fp": "e4d0e9348472",
-  "yield": "HIGH",
-  "why": "Master status is core status vocabulary"
+  "yield": "ULTRA_HIGH",
+  "why": "Master status is foundational 8C status vocabulary tested every year"
  },
  {
   "front": "A {{c1::primary}} group (Cooley) has intimate, enduring bonds valued in themselves (family); a {{c2::secondary}} group is impersonal and goal-directed.",
   "fp": "e1a8c9bdfc03",
-  "yield": "HIGH",
-  "why": "Primary vs secondary group is core 8C"
+  "yield": "ULTRA_HIGH",
+  "why": "Primary vs secondary group is core 8C, tested every administration"
  },
  {
   "front": "A {{c1::reference}} group supplies the standards we use to evaluate ourselves, e.g., a premed measuring against admitted medical students.",
   "fp": "468ea7714b39",
-  "yield": "HIGH",
-  "why": "Reference group is core 8C and drives relative deprivation"
+  "yield": "ULTRA_HIGH",
+  "why": "Reference group is core 8C and underlies relative deprivation questions"
  },
  {
   "front": "A hospital committee arrives at a more extreme decision than any member held alone. Name the phenomenon and both directions it can take.",
   "fp": "4102055d37c8",
   "yield": "HIGH",
-  "why": "Group polarization application; risky vs cautious shift is tested"
+  "why": "Group polarization applied; risky vs cautious shift is commonly tested"
  },
  {
   "front": "A neighbor helps you move and you feel obliged to reciprocate. Which interaction theory explains this, and what norm enforces it?",
   "fp": "af633470da97",
   "yield": "HIGH",
-  "why": "Social exchange theory / reciprocity is an outline theoretical approach"
+  "why": "Social exchange theory is an outline theoretical approach; commonly tested"
  },
  {
   "front": "A nurse must work the night of her daughter's recital, and also feels torn between speed and thoroughness on shift. Label each tension.",
   "fp": "cf9a470f75c7",
-  "yield": "MEDIUM",
-  "why": "Application of role conflict/strain; definition card carries the point"
+  "yield": "HIGH",
+  "why": "Role conflict/strain is tested as an applied scenario exactly like this"
  },
  {
   "front": "An {{c1::ascribed}} status is assigned involuntarily (race, sex, birth cohort); an {{c2::achieved}} status is earned (physician, felon, spouse).",
   "fp": "f1b3e5ce8b49",
-  "yield": "HIGH",
-  "why": "Ascribed vs achieved status is core 8C"
+  "yield": "ULTRA_HIGH",
+  "why": "Ascribed vs achieved status is foundational 8C, tested every year"
  },
  {
   "front": "An {{c1::in-group}} commands loyalty and a sense of 'we'; an {{c2::out-group}} is 'they', often viewed with competition or contempt.",
   "fp": "d631626d0d6a",
-  "yield": "HIGH",
-  "why": "In-group/out-group is core 8C"
+  "yield": "ULTRA_HIGH",
+  "why": "In-group/out-group is core 8C and drives bias questions every year"
  },
  {
   "front": "Compare authoritarian, democratic, and laissez-faire leadership styles.",
   "fp": "eee8cb48d249",
   "yield": "MEDIUM",
-  "why": "Leadership styles not on outline but common prep content"
+  "why": "Leadership styles are off-outline prep content; skippable"
  },
  {
   "front": "Compare the central and peripheral routes to persuasion.",
   "fp": "6115371b2c3a",
-  "yield": "HIGH",
-  "why": "Central/peripheral routes (ELM) are tested; belongs to attitudes topic"
+  "yield": "ULTRA_HIGH",
+  "why": "Central vs peripheral route (ELM) is tested on essentially every exam"
  },
  {
   "front": "Contrast Gemeinschaft and Gesellschaft (Tonnies).",
   "fp": "91c98cc0f1d4",
   "yield": "MEDIUM",
-  "why": "Tonnies not on outline; useful parallel to primary/secondary groups"
+  "why": "Tonnies is off-outline; useful parallel to primary/secondary groups"
  },
  {
   "front": "Contrast groupthink and group polarization.",
   "fp": "d795099c9681",
-  "yield": "MEDIUM",
-  "why": "Contrast of two HIGH concepts each already carded"
+  "yield": "HIGH",
+  "why": "Discriminating groupthink from polarization is the way both get tested"
  },
  {
   "front": "Contrast instrumental and expressive leadership.",
@@ -152,8 +152,8 @@
  {
   "front": "Describe cognitive dissonance and its resolution.",
   "fp": "dd14751c94d5",
-  "yield": "HIGH",
-  "why": "Cognitive dissonance is tested; belongs to attitudes topic"
+  "yield": "ULTRA_HIGH",
+  "why": "Cognitive dissonance is tested every year as discrete or passage step"
  },
  {
   "front": "Describe front stage and back stage for a restaurant server.",
@@ -164,20 +164,20 @@
  {
   "front": "Distinguish a group from an aggregate and a category.",
   "fp": "de286385f144",
-  "yield": "MEDIUM",
-  "why": "Group vs aggregate vs category is a plausible discrete distinction"
+  "yield": "HIGH",
+  "why": "Group vs aggregate vs category is a common discrete definition item"
  },
  {
   "front": "Explain the bystander effect.",
   "fp": "1f8b7d5f93e8",
-  "yield": "HIGH",
-  "why": "Bystander effect is named on the 7B outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Bystander effect is named on 7B and tested every administration"
  },
  {
   "front": "Four types of social support: {{c1::emotional}} (empathy), instrumental (tangible aid), {{c2::informational}} (advice), and appraisal (feedback).",
   "fp": "d07a91e0d3f0",
-  "yield": "MEDIUM",
-  "why": "Social support is tested; the four-type taxonomy is supporting detail"
+  "yield": "HIGH",
+  "why": "Social support types (emotional/instrumental/informational) are commonly tested"
  },
  {
   "front": "Garfinkel had students behave as boarders in their own homes, and families reacted with anger and alarm. What was he demonstrating?",
@@ -189,7 +189,7 @@
   "front": "Goffman: a {{c1::discredited}} stigma is already visible; a {{c2::discreditable}} one is concealable, making information control the central task.",
   "fp": "f38e4575bbe1",
   "yield": "MEDIUM",
-  "why": "Stigma tested; discredited vs discreditable is second-tier Goffman"
+  "why": "Discredited vs discreditable is second-tier Goffman; stigma itself carded elsewhere"
  },
  {
   "front": "How can a secondary group become a primary group?",
@@ -207,19 +207,19 @@
   "front": "Implicit bias in clinical settings can cause:",
   "fp": "b0c481bafc43",
   "yield": "MEDIUM",
-  "why": "Implicit bias on outline; card is thin clinical illustration"
+  "why": "Implicit bias is on outline; this card is a thin clinical illustration"
  },
  {
   "front": "In dramaturgy (Goffman), the {{c1::front stage}} is where we perform a role for an audience; the {{c2::back stage}} is where the performance drops.",
   "fp": "fe4994d893cd",
-  "yield": "HIGH",
-  "why": "Front stage/back stage dramaturgy is core 8C"
+  "yield": "ULTRA_HIGH",
+  "why": "Front stage/back stage dramaturgy is core 8C, tested every year"
  },
  {
   "front": "In hospital codes, the most effective fix for delayed action is assigning each task to a named person. Which two group processes does that counteract?",
   "fp": "c07a591ec97a",
-  "yield": "MEDIUM",
-  "why": "Application of diffusion of responsibility and social loafing"
+  "yield": "HIGH",
+  "why": "Applied diffusion of responsibility/social loafing; scenario-style testing"
  },
  {
   "front": "In Milgram's studies, obedience DECREASED when:",
@@ -237,7 +237,7 @@
   "front": "Name common dysfunctions of bureaucracy.",
   "fp": "cdfa5b56382f",
   "yield": "MEDIUM",
-  "why": "Perspectives on bureaucracy on outline; dysfunction list is supporting"
+  "why": "Bureaucracy dysfunction list is supporting detail; skippable"
  },
  {
   "front": "Name the concrete structural remedies Janis proposed to prevent groupthink.",
@@ -248,8 +248,8 @@
  {
   "front": "Relative risk of 2.0 means the exposed group has:",
   "fp": "78bf01f8571b",
-  "yield": "MEDIUM",
-  "why": "Relative risk is tested but belongs to research methods, not this topic"
+  "yield": "HIGH",
+  "why": "Relative risk interpretation is commonly tested, though misfiled here"
  },
  {
   "front": "Social loafing is:",
@@ -261,13 +261,13 @@
   "front": "Support predicts better health only among highly stressed people in one study but among everyone in another. Name the two competing hypotheses.",
   "fp": "4eb911dd818b",
   "yield": "MEDIUM",
-  "why": "Buffering vs main-effect support hypotheses plausible passage frame"
+  "why": "Buffering vs main-effect hypotheses are plausible passage framing only"
  },
  {
   "front": "Symbolic interactionism focuses on:",
   "fp": "81efa3d8c68b",
-  "yield": "HIGH",
-  "why": "Symbolic interactionism is a core paradigm (misfiled from 9A)"
+  "yield": "ULTRA_HIGH",
+  "why": "Symbolic interactionism is a core paradigm tested every year"
  },
  {
   "front": "The {{c1::iron law of oligarchy}} (Michels): all large organizations, even democratic ones, drift toward rule by a small elite.",
@@ -278,56 +278,56 @@
  {
   "front": "The contact hypothesis states prejudice reduces when groups have contact that is:",
   "fp": "9f6dcff6b2d6",
-  "yield": "MEDIUM",
-  "why": "Contact hypothesis conditions are plausible prejudice-reduction stem"
+  "yield": "HIGH",
+  "why": "Contact hypothesis conditions are a common prejudice-reduction item"
  },
  {
   "front": "The organizational chart says the attending decides, but the charge nurse effectively controls bed assignment. Name the distinction at work.",
   "fp": "8d6a16d763af",
   "yield": "MEDIUM",
-  "why": "Formal vs informal organization is supporting detail on organizations"
+  "why": "Formal vs informal organization is supporting detail; skippable"
  },
  {
   "front": "Weber's ideal bureaucracy: division of labor, hierarchy of authority, written {{c1::rules}}, {{c2::impersonality}}, and merit-based hiring.",
   "fp": "bcd152ee41e0",
   "yield": "HIGH",
-  "why": "Weber's ideal bureaucracy characteristics are on the outline"
+  "why": "Weber's ideal bureaucracy characteristics are on the outline; commonly tested"
  },
  {
   "front": "What are Etzioni's three types of formal organizations?",
   "fp": "68fc6752c3cf",
   "yield": "MEDIUM",
-  "why": "Etzioni's utilitarian/normative/coercive types are common prep content"
+  "why": "Etzioni organization types are prep content a time-pressed student can skip"
  },
  {
   "front": "What are the consequences of strong in-group identification?",
   "fp": "926e422d8a2b",
   "yield": "MEDIUM",
-  "why": "Supporting consequences of the in-group card (19)"
+  "why": "Supporting consequences of the in-group card; second step"
  },
  {
   "front": "What did Asch and Milgram each demonstrate?",
   "fp": "a95004676a8a",
-  "yield": "HIGH",
-  "why": "Asch conformity and Milgram obedience are core 7B"
+  "yield": "ULTRA_HIGH",
+  "why": "Asch conformity and Milgram obedience are tested every administration"
  },
  {
   "front": "What did Weber mean by the 'iron cage'?",
   "fp": "aa556be42259",
   "yield": "MEDIUM",
-  "why": "Iron cage supports bureaucracy/rationalization concept"
+  "why": "Iron cage supports the bureaucracy/rationalization concept"
  },
  {
   "front": "What is a role set (Merton)?",
   "fp": "c01692a4b3c9",
   "yield": "MEDIUM",
-  "why": "Role set is secondary status/role vocabulary"
+  "why": "Merton role set is secondary status/role vocabulary"
  },
  {
   "front": "What is a self-fulfilling prophecy in social interaction?",
   "fp": "af7c623b5ed8",
   "yield": "HIGH",
-  "why": "Self-fulfilling prophecy is tested and links to labeling"
+  "why": "Self-fulfilling prophecy is commonly tested and links to labeling"
  },
  {
   "front": "What is a voluntary (normative) association, and what functions does it serve?",
@@ -350,38 +350,38 @@
  {
   "front": "What is group polarization?",
   "fp": "3f5186395c8b",
-  "yield": "HIGH",
-  "why": "Group polarization is named on the 7B outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Group polarization is named on 7B and tested every year"
  },
  {
   "front": "What is social facilitation?",
   "fp": "0609376c16fa",
-  "yield": "HIGH",
-  "why": "Social facilitation is named on the 7B outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Social facilitation is named on 7B and tested every year"
  },
  {
   "front": "What is stereotype threat?",
   "fp": "bfea761d3582",
-  "yield": "HIGH",
-  "why": "Stereotype threat is tested (belongs to self-identity topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Stereotype threat is tested on essentially every administration"
  },
  {
   "front": "What is the 'strength of weak ties' (Granovetter)?",
   "fp": "5930663ff46c",
-  "yield": "MEDIUM",
-  "why": "Weak ties is a plausible network passage fact"
+  "yield": "HIGH",
+  "why": "Granovetter weak ties is a common network discrete"
  },
  {
   "front": "What is the fundamental attribution error?",
   "fp": "dc72048368c2",
-  "yield": "HIGH",
-  "why": "Fundamental attribution error is tested (belongs to attribution topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Fundamental attribution error is tested every year"
  },
  {
   "front": "What is the relationship between status and role?",
   "fp": "b733fc46a8ce",
-  "yield": "HIGH",
-  "why": "Status vs role is the foundational 8C distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Status vs role is the foundational 8C distinction, tested every year"
  },
  {
   "front": "What is the Thomas theorem?",
@@ -393,7 +393,7 @@
   "front": "Which test compares means between two independent groups?",
   "fp": "a43d6bb15527",
   "yield": "MEDIUM",
-  "why": "Naming statistical tests is outside this topic and not required by AAMC [rescued: misfiled, not served elsewhere]"
+  "why": "Naming statistical tests is outside this topic and not required by AAMC"
  },
  {
   "front": "Why did Simmel consider triads more stable than dyads, despite dyads' greater intimacy?",
@@ -410,7 +410,7 @@
  {
   "front": "Worker output at the Hawthorne plant rose whether the lighting was raised or lowered. Name the effect and the design lesson.",
   "fp": "e2e455ccedca",
-  "yield": "MEDIUM",
-  "why": "Hawthorne effect is a tested reactivity concept, misfiled from methods"
+  "yield": "HIGH",
+  "why": "Hawthorne effect is a commonly tested reactivity concept"
  }
 ]

@@ -3,7 +3,7 @@
   "front": "{{c1::Teichoic and lipoteichoic acids}} are anionic polymers found only in the gram-positive wall.",
   "fp": "10e5d3867778",
   "yield": "MEDIUM",
-  "why": "Teichoic acid: secondary gram-positive wall detail; supports the Gram distinction"
+  "why": "Teichoic acid is secondary gram-positive wall detail"
  },
  {
   "front": "A {{c1::chemostat}} continuously adds fresh medium and removes spent culture, holding cells in log phase indefinitely.",
@@ -14,26 +14,26 @@
  {
   "front": "A culture goes from $10^{4}$ to $10^{8}$ cells in 8 hours. What is the generation time?",
   "fp": "78146c50af9f",
-  "yield": "HIGH",
-  "why": "Generation-time calculation from exponential growth is a classic discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Generation-time calculation from exponential growth is a perennial discrete"
  },
  {
   "front": "A culture is plated after a $10^{-6}$ dilution and 240 colonies grow from $0.1$ mL. What is the original titer?",
   "fp": "2238102dcba0",
-  "yield": "MEDIUM",
-  "why": "CFU/dilution arithmetic is passage-plausible but a second-step skill"
+  "yield": "HIGH",
+  "why": "CFU/dilution arithmetic is a recurring passage data skill"
  },
  {
   "front": "A Gram-negative bloodstream infection causes fever and hypotension even after antibiotics kill the bacteria. Why?",
   "fp": "fdd4b9065dec",
   "yield": "MEDIUM",
-  "why": "Clinical illustration of LPS/lipid A endotoxin, which is the tested fact"
+  "why": "Clinical LPS fever illustration; the tested fact is on the LPS card"
  },
  {
   "front": "Acid-fast organisms like Mycobacterium resist Gram staining because of waxy {{c1::mycolic acids}} in their cell walls.",
   "fp": "61d96af389fc",
   "yield": "MEDIUM",
-  "why": "Mycolic acid acid-fast wall: standard second-tier Gram exception"
+  "why": "Mycolic acid acid-fast wall is a second-tier Gram exception"
  },
  {
   "front": "Alternative splicing allows one gene to:",
@@ -44,14 +44,14 @@
  {
   "front": "An {{c1::endospore}} is a dormant survival structure, not a reproductive one: one cell yields exactly one spore.",
   "fp": "d6912dc3d3a7",
-  "yield": "MEDIUM",
-  "why": "Endospore vs fungal spore distinction supports the core endospore card"
+  "yield": "HIGH",
+  "why": "Endospore as survival not reproduction is a commonly tested distinction"
  },
  {
   "front": "An antibiotic is added mid-log phase; turbidity plateaus but viable counts stay flat. Bacteriostatic or bactericidal?",
   "fp": "7c75cc297e02",
-  "yield": "MEDIUM",
-  "why": "Turbidity vs viable count reasoning is a plausible passage data question"
+  "yield": "HIGH",
+  "why": "Turbidity vs viable count reasoning is a common growth-curve data question"
  },
  {
   "front": "An autoclave sterilizes at {{c1::121 C and about 15 psi}} of saturated steam for roughly 15 minutes.",
@@ -68,8 +68,8 @@
  {
   "front": "Bacterial binary fission differs from mitosis because prokaryotes lack {{c1::a spindle apparatus and nuclear envelope}}.",
   "fp": "89095c32a493",
-  "yield": "HIGH",
-  "why": "Binary fission vs mitosis is core prokaryote/eukaryote distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Binary fission vs mitosis is a foundational prokaryote/eukaryote contrast"
  },
  {
   "front": "Biofilm cells live embedded in a self-secreted {{c1::extracellular polysaccharide (EPS) matrix}} attached to a surface.",
@@ -81,43 +81,43 @@
   "front": "Broad-spectrum antibiotics can clear gut flora and permit overgrowth of {{c1::Clostridium difficile}}, causing pseudomembranous colitis.",
   "fp": "e0cef383ed26",
   "yield": "MEDIUM",
-  "why": "C. difficile illustrates colonization resistance by normal flora"
+  "why": "C. difficile overgrowth illustrates colonization resistance; example-level"
  },
  {
   "front": "Cell-wall-targeting antibiotics kill best during the {{c1::log (exponential)}} phase.",
   "fp": "68d6c14db5a3",
-  "yield": "MEDIUM",
-  "why": "Wall antibiotics need growing cells: links growth phase to mechanism"
+  "yield": "HIGH",
+  "why": "Wall antibiotics needing growing cells is a common growth-phase inference"
  },
  {
   "front": "Cells in {{c1::lag}} phase do not divide yet show intense biosynthesis of ribosomes and enzymes.",
   "fp": "376f46adc4d8",
-  "yield": "MEDIUM",
-  "why": "Lag phase as active adaptation is a common growth-curve detail"
+  "yield": "HIGH",
+  "why": "Lag phase as active adaptation is a standard growth-curve detail"
  },
  {
   "front": "Classify bacteria by oxygen requirement.",
   "fp": "141f3d43e482",
-  "yield": "HIGH",
-  "why": "Aerobe/anaerobe/facultative classification is core outline content"
+  "yield": "ULTRA_HIGH",
+  "why": "Aerobe/anaerobe/facultative classification is tested every year"
  },
  {
   "front": "Define an opportunistic pathogen and give an example involving normal flora.",
   "fp": "2e2f37c08572",
-  "yield": "MEDIUM",
-  "why": "Opportunistic pathogen definition with normal-flora examples"
+  "yield": "HIGH",
+  "why": "Opportunistic pathogen from normal flora is standard outline content"
  },
  {
   "front": "Distinguish bactericidal from bacteriostatic agents, and a disinfectant from an antiseptic.",
   "fp": "dffb2c49b505",
-  "yield": "MEDIUM",
+  "yield": "HIGH",
   "why": "Bactericidal vs bacteriostatic is a frequent passage distinction"
  },
  {
   "front": "Exponential growth follows $N = N_0 \\cdot 2^{t/t_d}$, where $t_d$ is the {{c1::doubling (generation) time}}.",
   "fp": "4e58bffc0855",
-  "yield": "HIGH",
-  "why": "Exponential growth formula used in calculation questions"
+  "yield": "ULTRA_HIGH",
+  "why": "Exponential growth formula is used in calculation questions every year"
  },
  {
   "front": "Fastidious organisms require {{c1::enriched}} media such as blood or chocolate agar.",
@@ -134,8 +134,8 @@
  {
   "front": "Fungal membranes use {{c1::ergosterol}} where human membranes use cholesterol, which is the basis of antifungal selectivity.",
   "fp": "82a81a5753e1",
-  "yield": "MEDIUM",
-  "why": "Ergosterol antifungal selectivity supports the fungi vs bacteria card"
+  "yield": "HIGH",
+  "why": "Ergosterol as antifungal target is the standard fungi vs bacteria application"
  },
  {
   "front": "Gap junctions permit:",
@@ -147,19 +147,19 @@
   "front": "Give two reasons biofilm bacteria withstand antibiotic doses that kill planktonic cells.",
   "fp": "d9771689231a",
   "yield": "MEDIUM",
-  "why": "Why biofilms resist antibiotics: reasoning on a tested concept"
+  "why": "Biofilm antibiotic tolerance reasoning is plausible passage context"
  },
  {
   "front": "Gram-positive cells stay purple because thick {{c1::peptidoglycan}} traps the crystal violet-iodine complex through the alcohol wash.",
   "fp": "98b18a601a2c",
-  "yield": "HIGH",
-  "why": "Gram stain mechanism via peptidoglycan thickness is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Gram stain mechanism via peptidoglycan thickness is tested every year"
  },
  {
   "front": "Gut flora synthesizing vitamin K for the host while gaining nutrients is an example of {{c1::mutualism}}.",
   "fp": "7e95615175e1",
-  "yield": "HIGH",
-  "why": "Mutualism/commensalism/parasitism with normal flora is on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Mutualism/commensalism/parasitism with normal flora is a perennial discrete"
  },
  {
   "front": "Heat-labile solutions are cleared of bacteria by passage through a {{c1::0.22 micrometer}} membrane filter.",
@@ -176,20 +176,20 @@
  {
   "front": "How do fungi differ from bacteria?",
   "fp": "5a2fb9acb9aa",
-  "yield": "HIGH",
-  "why": "Fungi vs bacteria (eukaryote, chitin, ergosterol) is a core distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Fungi vs bacteria (eukaryote, chitin, ergosterol) is tested every year"
  },
  {
   "front": "How do Gram-positive and Gram-negative bacteria differ?",
   "fp": "398176c31978",
-  "yield": "HIGH",
-  "why": "Gram-positive vs Gram-negative wall difference is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Gram-positive vs Gram-negative wall difference is tested every year"
  },
  {
   "front": "How does replica plating onto minimal medium identify an auxotrophic mutant?",
   "fp": "397ab4eb815c",
-  "yield": "MEDIUM",
-  "why": "Replica plating auxotroph screen is a plausible experimental passage"
+  "yield": "HIGH",
+  "why": "Replica plating auxotroph screen is a classic experimental passage"
  },
  {
   "front": "In a chemostat the culture is held indefinitely in log phase. What sets the growth rate at steady state?",
@@ -201,19 +201,19 @@
   "front": "In a thioglycollate tube, growth only at the very top means the organism is an {{c1::obligate aerobe}}.",
   "fp": "bd1152675739",
   "yield": "MEDIUM",
-  "why": "Thioglycollate band position applies the oxygen-requirement classes"
+  "why": "Thioglycollate band position is an application a passage would explain"
  },
  {
   "front": "In bacterial chemotaxis, what motion results from counterclockwise versus clockwise flagellar rotation?",
   "fp": "fba596e27dec",
-  "yield": "MEDIUM",
-  "why": "Run/tumble chemotaxis supports flagellar propulsion on the outline"
+  "yield": "HIGH",
+  "why": "Run/tumble chemotaxis is the outline's flagellar-propulsion mechanism"
  },
  {
   "front": "In quorum sensing, each cell secretes {{c1::autoinducers}}; when population density pushes their concentration past threshold, group behaviors switch on.",
   "fp": "d428e6749a7f",
   "yield": "MEDIUM",
-  "why": "Quorum sensing autoinducers: plausible passage mechanism"
+  "why": "Quorum-sensing autoinducers are plausible passage mechanism"
  },
  {
   "front": "List the four Gram stain reagents in order, and give the specific role of the iodine step.",
@@ -225,7 +225,7 @@
   "front": "MacConkey agar contains bile salts and lactose plus a pH indicator. Is it selective, differential, or both?",
   "fp": "b8b1214eadad",
   "yield": "MEDIUM",
-  "why": "Selective vs differential media is a tested lab-reasoning distinction"
+  "why": "Selective vs differential media is lab context a time-pressed student can skip"
  },
  {
   "front": "MacConkey agar is both selective and differential — explain each property.",
@@ -242,14 +242,14 @@
  {
   "front": "Name the three bacterial shapes.",
   "fp": "8badf59bf9f2",
-  "yield": "MEDIUM",
-  "why": "Cocci/bacilli/spirilli shapes are basic vocabulary occasionally asked"
+  "yield": "HIGH",
+  "why": "Cocci/bacilli/spirilli shapes are basic vocabulary the outline names"
  },
  {
   "front": "Name two nutritional contributions of normal gut flora to the human host.",
   "fp": "ac86dd3bfb12",
   "yield": "MEDIUM",
-  "why": "Vitamin K/B synthesis by flora supports the normal-flora mutualism card"
+  "why": "Vitamin K/B synthesis by flora supports the mutualism card"
  },
  {
   "front": "Order the secretory pathway correctly:",
@@ -266,20 +266,20 @@
  {
   "front": "Peptidoglycan is a polymer of alternating {{c1::NAG and NAM}} sugars cross-linked through short peptide bridges.",
   "fp": "d3b342b9c813",
-  "yield": "MEDIUM",
-  "why": "NAG/NAM peptidoglycan composition supports the wall/antibiotic cards"
+  "yield": "HIGH",
+  "why": "NAG/NAM peptidoglycan composition is commonly asked with penicillin action"
  },
  {
   "front": "Prokaryotes lack:",
   "fp": "5a96582bbbba",
-  "yield": "HIGH",
-  "why": "No membrane-bound nucleus is the defining prokaryote fact"
+  "yield": "ULTRA_HIGH",
+  "why": "No membrane-bound nucleus is the defining prokaryote fact, tested every year"
  },
  {
   "front": "The death phase declines exponentially, yet a small dormant subpopulation of {{c1::persister}} cells survives without any resistance mutation.",
   "fp": "59ba97d57e11",
   "yield": "MEDIUM",
-  "why": "Persisters: phenotypic vs genetic resistance is a plausible passage point"
+  "why": "Persisters vs genetic resistance is plausible passage reasoning"
  },
  {
   "front": "The decisive Gram stain step is {{c1::alcohol decolorization}}: it dehydrates thick G+ peptidoglycan to trap dye but strips the G- outer membrane.",
@@ -290,20 +290,20 @@
  {
   "front": "The outer leaflet of the gram-negative outer membrane is built of {{c1::lipopolysaccharide (LPS)}}, whose lipid A moiety is endotoxin.",
   "fp": "bb9d019153fa",
-  "yield": "HIGH",
-  "why": "LPS outer membrane and lipid A endotoxin is core Gram-negative content"
+  "yield": "ULTRA_HIGH",
+  "why": "LPS outer membrane with lipid A endotoxin is core Gram-negative content"
  },
  {
   "front": "The polysaccharide {{c1::capsule}} is antiphagocytic and serves as the antigen in conjugate vaccines.",
   "fp": "b775ef4de5dd",
-  "yield": "MEDIUM",
-  "why": "Capsule as antiphagocytic virulence factor and vaccine antigen"
+  "yield": "HIGH",
+  "why": "Capsule as antiphagocytic virulence factor is commonly tested"
  },
  {
   "front": "UV light damages DNA by creating {{c1::pyrimidine (thymine) dimers}}, which stall replication.",
   "fp": "e9fef1e509bf",
-  "yield": "MEDIUM",
-  "why": "UV thymine dimers: tested DNA-damage mechanism applied to sterilization"
+  "yield": "HIGH",
+  "why": "UV thymine dimers is a tested DNA-damage mechanism"
  },
  {
   "front": "Vaginal Lactobacillus protects its niche by fermenting glycogen to lactic acid, holding the pH near {{c1::4}}.",
@@ -314,32 +314,32 @@
  {
   "front": "What are the phases of the bacterial growth curve?",
   "fp": "97f72ef3973e",
-  "yield": "HIGH",
-  "why": "Lag/log/stationary/death growth curve is core outline content"
+  "yield": "ULTRA_HIGH",
+  "why": "Lag/log/stationary/death growth curve is tested every year"
  },
  {
   "front": "What defines a prokaryote?",
   "fp": "9e997e786228",
-  "yield": "HIGH",
-  "why": "Prokaryote definition (nucleoid, 70S, peptidoglycan) is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Prokaryote definition (nucleoid, 70S, peptidoglycan) is foundational"
  },
  {
   "front": "What is a biofilm and why does it matter clinically?",
   "fp": "5eb956f710f4",
   "yield": "MEDIUM",
-  "why": "Plain biofilm definition and clinical relevance"
+  "why": "Plain biofilm definition is plausible passage context"
  },
  {
   "front": "What is an endospore?",
   "fp": "636a46f7acc4",
-  "yield": "HIGH",
-  "why": "Endospore definition and resistance is frequently tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Endospore definition and resistance is tested every year"
  },
  {
   "front": "What triggers the stationary phase, and which survival programs typically switch on there?",
   "fp": "e94129d99fe4",
-  "yield": "MEDIUM",
-  "why": "Stationary-phase triggers and sporulation support the growth curve"
+  "yield": "HIGH",
+  "why": "Stationary-phase triggers and sporulation are standard growth-curve content"
  },
  {
   "front": "Where are beta-lactamases concentrated in gram-negative bacteria, and why does that location matter?",
@@ -351,13 +351,13 @@
   "front": "Which antibiotic targets the bacterial 30S ribosomal subunit?",
   "fp": "7d443a3be405",
   "yield": "MEDIUM",
-  "why": "30S/50S antibiotic targets test the 70S vs 80S ribosome distinction"
+  "why": "30S/50S antibiotic targets are covered in the antimicrobials deck"
  },
  {
   "front": "Which bond does lysozyme cleave in peptidoglycan, and which reaction does penicillin block?",
   "fp": "6894a26ee0ec",
   "yield": "MEDIUM",
-  "why": "Lysozyme vs penicillin targets on peptidoglycan: second-tier mechanism"
+  "why": "Lysozyme vs penicillin bond targets is second-tier mechanism detail"
  },
  {
   "front": "Which membrane is impermeable to most ions, creating the proton gradient?",
@@ -368,8 +368,8 @@
  {
   "front": "Which prokaryotic group is defined by lacking peptidoglycan entirely, including in cell-walled forms?",
   "fp": "be9fbd585b69",
-  "yield": "HIGH",
-  "why": "Archaea lacking peptidoglycan is the key archaea distinction on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Archaea lacking peptidoglycan is the outline's key archaea distinction"
  },
  {
   "front": "Which temperature class contains nearly all human pathogens, and why?",
@@ -381,7 +381,7 @@
   "front": "Why can't Rickettsia and Chlamydia be grown on cell-free laboratory media?",
   "fp": "38fc9b53ea3a",
   "yield": "MEDIUM",
-  "why": "Obligate intracellular parasites: plausible culture-reasoning question"
+  "why": "Obligate intracellular parasites is plausible culture-reasoning context"
  },
  {
   "front": "Why do staphylococci form grape-like clusters while streptococci form chains?",

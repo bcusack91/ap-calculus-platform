@@ -3,91 +3,91 @@
   "front": "{{c1::Glucose 6-phosphate dehydrogenase}} is the committed, rate-limiting PPP step; it is inhibited by its product {{c2::NADPH}} and induced by {{c3::insulin}}.",
   "fp": "8d8f1d55e68e",
   "yield": "HIGH",
-  "why": "G6PD as rate-limiting PPP step and its NADPH/insulin control is core 1D regulation"
+  "why": "G6PD as PPP rate-limiting step with NADPH/insulin control: commonly tested regulation"
  },
  {
   "front": "{{c1::GLUT2}} (liver, beta cells) is high-$K_m$ and insulin-independent; {{c2::GLUT4}} (muscle, adipose) is insulin-recruited.",
   "fp": "1602ee680084",
-  "yield": "HIGH",
-  "why": "GLUT2 vs GLUT4 Km and insulin dependence is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "GLUT4 insulin-dependent vs GLUT2 high-Km sensor: asked on essentially every exam"
  },
  {
   "front": "1,3-BPG's high-energy {{c1::acyl phosphate}} lets {{c2::phosphoglycerate kinase}} form ATP by substrate-level phosphorylation.",
   "fp": "cb8ddf2ac346",
   "yield": "HIGH",
-  "why": "Substrate-level phosphorylation at PGK is an outline-level glycolysis concept"
+  "why": "Substrate-level phosphorylation at PGK via 1,3-BPG acyl phosphate: standard glycolysis step"
  },
  {
   "front": "A cell needs ribose 5-phosphate but no NADPH (rapid division, ample reducing power). How does the PPP accommodate this?",
   "fp": "21adbe71fb98",
   "yield": "MEDIUM",
-  "why": "PPP flexibility for ribose vs NADPH; passage-level second step"
+  "why": "PPP running nonoxidative branch for ribose only: passage-level second step"
  },
  {
   "front": "A patient with exercise-induced cramps shows a flat venous lactate curve during ischemic forearm testing and a second-wind phenomenon. Diagnosis and logic?",
   "fp": "24942a41fab4",
   "yield": "MEDIUM",
-  "why": "McArdle logic (muscle glycogen -> no lactate) is reasoning; the forearm test itself is clinical detail"
+  "why": "McArdle muscle-glycogen/no-lactate logic: clinical vignette reasoning, secondary"
  },
  {
   "front": "A rising lactate-to-pyruvate ratio in a tissue is a direct readout of which intracellular quantity?",
   "fp": "b617c0d0f995",
   "yield": "HIGH",
-  "why": "Lactate/pyruvate as NADH/NAD+ readout via near-equilibrium LDH; classic passage reasoning"
+  "why": "Lactate/pyruvate as cytosolic NADH/NAD+ readout: recurring passage reasoning"
  },
  {
   "front": "Arsenate lets glycolysis continue but abolishes ATP gain at phosphoglycerate kinase. What is the mechanism?",
   "fp": "e9db73f0e925",
   "yield": "MEDIUM",
-  "why": "Arsenate uncoupling of GAPDH/PGK is a textbook inhibitor experiment passages reuse"
+  "why": "Arsenate uncoupling GAPDH from PGK: classic inhibitor experiment a passage would supply"
  },
  {
   "front": "Beyond fatty acid synthesis, name three other major consumers of NADPH.",
   "fp": "5d64d375f818",
   "yield": "MEDIUM",
-  "why": "Other NADPH consumers (glutathione, P450, NADPH oxidase) support the PPP concept"
+  "why": "Other NADPH consumers (glutathione, P450, NADPH oxidase): supporting PPP context"
  },
  {
   "front": "Classic galactosemia = {{c1::GALT}} deficiency; {{c2::galactokinase}} deficiency causes mainly cataracts via {{c3::galactitol}}.",
   "fp": "a5545f75c631",
   "yield": "MEDIUM",
-  "why": "Galactose (Leloir) pathway defects; secondary to glycolysis/gluconeogenesis"
+  "why": "Galactosemia enzymes and galactitol: Leloir detail secondary to core pathways"
  },
  {
   "front": "Contrast glycogenesis and glycogenolysis and their hormonal control.",
   "fp": "02bb20a4b124",
-  "yield": "HIGH",
-  "why": "Glycogenesis vs glycogenolysis and their hormonal control is core fed/fasting content"
+  "yield": "ULTRA_HIGH",
+  "why": "Glycogen synthase vs phosphorylase under insulin vs glucagon: tested every year"
  },
  {
   "front": "Fructose 1,6-bisphosphatase is allosterically inhibited by {{c1::AMP}} and {{c2::fructose 2,6-bisphosphate}}.",
   "fp": "d7fa0da87a09",
   "yield": "HIGH",
-  "why": "Reciprocal AMP/F2,6BP control of FBPase-1 vs PFK-1 is core regulation"
+  "why": "Reciprocal AMP/F2,6BP control of FBPase-1 vs PFK-1: common regulation question"
  },
  {
   "front": "Fructose: {{c1::fructokinase}} makes F1P, {{c2::aldolase B}} cleaves it, and the carbons enter glycolysis below {{c3::PFK-1}}.",
   "fp": "24064bf18e08",
-  "yield": "MEDIUM",
-  "why": "Fructose entering below PFK-1; plausible passage second step"
+  "yield": "HIGH",
+  "why": "Fructose entering glycolysis below PFK-1: commonly tested bypass of regulation"
  },
  {
   "front": "G6PD deficiency causes hemolysis because red cells cannot regenerate {{c1::NADPH}} to keep {{c2::glutathione}} reduced.",
   "fp": "ed055d0c4752",
   "yield": "HIGH",
-  "why": "G6PD deficiency hemolysis via NADPH/glutathione is a classic tested mechanism"
+  "why": "G6PD deficiency hemolysis via NADPH/glutathione: classic tested mechanism"
  },
  {
   "front": "Glucagon acts via {{c1::PKA}} phosphorylation of the bifunctional enzyme, activating hepatic {{c2::FBPase-2}} and lowering {{c3::fructose 2,6-bisphosphate}}.",
   "fp": "8d5f091fee77",
-  "yield": "HIGH",
-  "why": "Glucagon-PKA control of the bifunctional enzyme and F2,6BP is core hormonal regulation"
+  "yield": "MEDIUM",
+  "why": "PKA control of the bifunctional PFK-2/FBPase-2: named machinery behind the F2,6BP cards"
  },
  {
   "front": "Glycogen phosphorylase cleaves by {{c1::phosphorolysis}} using $P_i$ to release {{c2::glucose 1-phosphate}}, with {{c3::pyridoxal phosphate}} as cofactor.",
   "fp": "ec65f481c032",
   "yield": "HIGH",
-  "why": "Phosphorolysis to G1P is the defining glycogen phosphorylase fact"
+  "why": "Phosphorolysis to glucose 1-phosphate with PLP: defining phosphorylase fact"
  },
  {
   "front": "Glycogen synthase cannot start a chain de novo. What primes glycogen synthesis?",
@@ -99,7 +99,7 @@
   "front": "Glycogen synthase is inactivated by phosphorylation via {{c1::GSK-3 and PKA}}, and reactivated when insulin stimulates {{c2::protein phosphatase 1 (PP1)}}.",
   "fp": "b54905573547",
   "yield": "HIGH",
-  "why": "Covalent on/off control of glycogen synthase by insulin vs PKA is core"
+  "why": "Covalent on/off control of glycogen synthase by insulin (PP1) vs PKA/GSK-3: core"
  },
  {
   "front": "Hemoglobin A1c reflects roughly {{c1::3 months}} of glycemia because it forms {{c2::nonenzymatically}} and red cells survive about 120 days.",
@@ -110,26 +110,26 @@
  {
   "front": "Hepatic {{c1::glucokinase}} has a {{c2::high}} $K_m$ (~10 mM) and, unlike hexokinase, is NOT inhibited by {{c3::glucose 6-phosphate}}.",
   "fp": "eca3a688f30e",
-  "yield": "HIGH",
-  "why": "Glucokinase vs hexokinase Km and G6P inhibition is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Glucokinase vs hexokinase Km and G6P inhibition: appears on essentially every exam"
  },
  {
   "front": "HFI ({{c1::aldolase B}} deficiency): F1P traps {{c2::phosphate}}, causing hypoglycemia after fructose; {{c3::fructokinase}} deficiency is benign.",
   "fp": "94142571220f",
   "yield": "MEDIUM",
-  "why": "HFI phosphate-trapping reasoning; secondary to core fructose entry card"
+  "why": "HFI phosphate-trapping hypoglycemia: secondary to the fructose entry card"
  },
  {
   "front": "How can muscle glycogen phosphorylase b become active during sprinting even before any hormonal signal arrives?",
   "fp": "c92a8f9543bb",
   "yield": "MEDIUM",
-  "why": "AMP allosteric activation of muscle phosphorylase b; supporting regulation detail"
+  "why": "AMP allosteric activation of muscle phosphorylase b: supporting regulation detail"
  },
  {
   "front": "How do insulin and glucagon oppositely regulate blood glucose?",
   "fp": "95bc5039fda1",
-  "yield": "HIGH",
-  "why": "Insulin vs glucagon control of blood glucose is the central fed/fasting concept"
+  "yield": "ULTRA_HIGH",
+  "why": "Insulin vs glucagon on blood glucose: the central fed/fasting fact, tested every year"
  },
  {
   "front": "How does Cori disease (debrancher deficiency) differ biochemically from Von Gierke disease?",
@@ -147,7 +147,7 @@
   "front": "How does the glucose-alanine cycle differ functionally from the Cori cycle?",
   "fp": "bee5c5c7d76f",
   "yield": "MEDIUM",
-  "why": "Alanine cycle vs Cori cycle nitrogen contrast; secondary to the Cori cycle itself"
+  "why": "Alanine cycle vs Cori cycle nitrogen contrast: secondary to Cori cycle itself"
  },
  {
   "front": "How is glucokinase activity controlled acutely in hepatocytes, given that G6P does not inhibit it?",
@@ -158,44 +158,44 @@
  {
   "front": "How many ATP per NADH and FADH₂ in oxidative phosphorylation?",
   "fp": "0357235487fe",
-  "yield": "HIGH",
-  "why": "2.5/1.5 ATP per NADH/FADH2 is used in every yield calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "2.5/1.5 ATP per NADH/FADH2: used in every ATP-yield calculation"
  },
  {
   "front": "In the beta cell, glucose metabolism raises ATP, which {{c1::closes}} $K_{ATP}$ channels, depolarizes the membrane, and opens {{c2::$Ca^{2+}$}} channels.",
   "fp": "fcf327d0cdfb",
   "yield": "HIGH",
-  "why": "K-ATP channel mechanism of glucose-stimulated insulin release is a classic"
+  "why": "K-ATP channel closure triggering insulin release: classic beta-cell mechanism"
  },
  {
   "front": "In the Cori cycle, muscle gains 2 ATP per glucose while the liver spends 6 regenerating it. What is the physiological point of the net 4-ATP loss?",
   "fp": "d142e2c1475e",
-  "yield": "HIGH",
-  "why": "Cori cycle ATP accounting and purpose is outline-level"
+  "yield": "ULTRA_HIGH",
+  "why": "Cori cycle ATP accounting and purpose: recurs on nearly every administration"
  },
  {
   "front": "In the nonoxidative PPP, {{c1::transketolase}} transfers 2-carbon units and requires {{c2::thiamine pyrophosphate}}; transaldolase moves {{c3::3}}-carbon units.",
   "fp": "39e71c42726c",
   "yield": "MEDIUM",
-  "why": "Transketolase/TPP and transaldolase are supporting PPP detail"
+  "why": "Transketolase/TPP and transaldolase carbon units: supporting PPP detail"
  },
  {
   "front": "In untreated type 1 diabetes, blood glucose is high yet tissues behave as if {{c1::starving}}, because {{c2::insulin}} is absent.",
   "fp": "14d10fa615f1",
   "yield": "HIGH",
-  "why": "Untreated T1DM as pseudo-starvation is a core integration concept"
+  "why": "Untreated T1DM as pseudo-starvation: common integration question"
  },
  {
   "front": "Insulin binds a {{c1::receptor tyrosine kinase}} that autophosphorylates and signals through IRS and {{c2::PI3K-Akt}} to move GLUT4 to the surface.",
   "fp": "19d91902df08",
   "yield": "HIGH",
-  "why": "Insulin receptor tyrosine kinase -> PI3K/Akt -> GLUT4 is core signaling"
+  "why": "Insulin receptor tyrosine kinase to PI3K/Akt to GLUT4: commonly tested signaling"
  },
  {
   "front": "Intestinal glucose uptake uses {{c1::SGLT1}}, a $Na^+$-coupled {{c2::secondary active}} transporter, while fructose enters passively through {{c3::GLUT5}}.",
   "fp": "faadade5ca54",
-  "yield": "HIGH",
-  "why": "SGLT1 secondary active transport vs GLUT5 facilitated is a classic"
+  "yield": "ULTRA_HIGH",
+  "why": "SGLT1 secondary active vs GLUT5 facilitated: the canonical transport example"
  },
  {
   "front": "Iodoacetate blocks glycolysis by alkylating the active-site {{c1::cysteine}} of {{c2::glyceraldehyde 3-phosphate dehydrogenase}}.",
@@ -207,7 +207,7 @@
   "front": "Lactase deficiency is confirmed by a {{c1::hydrogen breath}} test because colonic bacteria ferment the undigested {{c2::lactose}}.",
   "fp": "e99277f665cc",
   "yield": "MEDIUM",
-  "why": "Lactose intolerance mechanism is common passage context; breath test is clinical flavor"
+  "why": "Lactase deficiency mechanism: common passage context, breath test is clinical flavor"
  },
  {
   "front": "Metformin lowers glucose by suppressing hepatic {{c1::gluconeogenesis}} and activating {{c2::AMPK}}; its rare serious toxicity is {{c3::lactic acidosis}}.",
@@ -225,31 +225,31 @@
   "front": "Phosphorylase kinase is fully active when phosphorylated by {{c1::PKA}} AND bound by {{c2::$Ca^{2+}$-calmodulin}} (its delta subunit).",
   "fp": "00e1f6ccee3b",
   "yield": "MEDIUM",
-  "why": "Ca-calmodulin plus PKA on phosphorylase kinase links contraction to glycogenolysis"
+  "why": "Ca-calmodulin plus PKA activation of phosphorylase kinase: supporting detail"
  },
  {
   "front": "Pyruvate carboxylase is located in the {{c1::mitochondrial matrix}}, uses the cofactor {{c2::biotin}}, and requires the allosteric activator {{c3::acetyl-CoA}}.",
   "fp": "af2c64e9d657",
-  "yield": "HIGH",
-  "why": "Pyruvate carboxylase location, biotin and acetyl-CoA activation is core gluconeogenesis"
+  "yield": "ULTRA_HIGH",
+  "why": "Pyruvate carboxylase: matrix, biotin, acetyl-CoA activation is asked every year"
  },
  {
   "front": "Pyruvate kinase: feedforward-activated by {{c1::F1,6BP}}, inhibited by ATP and {{c2::alanine}}; liver isozyme inactivated by {{c3::PKA phosphorylation}}.",
   "fp": "9379db3c6cbf",
   "yield": "HIGH",
-  "why": "Feedforward F1,6BP activation and PKA inactivation of liver PK is core regulation"
+  "why": "F1,6BP feedforward and PKA inactivation of liver pyruvate kinase: core regulation"
  },
  {
   "front": "Rapidly dividing tumor cells favor {{c1::aerobic glycolysis}}, the Warburg effect, even when oxygen is plentiful.",
   "fp": "f4c04e6336af",
   "yield": "MEDIUM",
-  "why": "Warburg effect is common passage context, rarely a discrete point"
+  "why": "Warburg effect: common passage context, rarely a discrete point"
  },
  {
   "front": "Red cells lack {{c1::mitochondria}}, so they make ATP only by {{c2::glycolysis}} and must export {{c3::lactate}}.",
   "fp": "5975fe5bde9c",
-  "yield": "HIGH",
-  "why": "RBCs lacking mitochondria and relying on glycolysis is a classic"
+  "yield": "ULTRA_HIGH",
+  "why": "RBCs lack mitochondria, rely on glycolysis and export lactate: perennial discrete"
  },
  {
   "front": "The liver stores roughly {{c1::100}} g of glycogen and muscle roughly {{c2::400}} g, while the brain burns about 120 g of glucose daily.",
@@ -261,7 +261,7 @@
   "front": "The polyol pathway converts glucose to {{c1::sorbitol}} through {{c2::aldose reductase}}, harming tissues that cannot clear it.",
   "fp": "8d18fbb2c541",
   "yield": "MEDIUM",
-  "why": "Polyol/sorbitol pathway is clinical flavor illustrating aldose reductase"
+  "why": "Polyol/sorbitol pathway: clinical flavor illustrating aldose reductase"
  },
  {
   "front": "The rate-limiting enzyme of glycolysis is {{c1::phosphofructokinase-1 (PFK-1)}}.",
@@ -273,97 +273,97 @@
   "front": "The UDP-glucose pyrophosphorylase reaction is nearly isoenergetic. What actually makes UDP-glucose formation irreversible in vivo?",
   "fp": "8b52de3231cf",
   "yield": "MEDIUM",
-  "why": "PPi hydrolysis driving biosynthesis is a reusable thermodynamic principle"
+  "why": "PPi hydrolysis driving UDP-glucose formation: reusable but secondary principle"
  },
  {
   "front": "Three irreversible glycolytic steps are bypassed by which four gluconeogenic enzymes?",
   "fp": "0f035d0cc74e",
-  "yield": "HIGH",
-  "why": "The four gluconeogenic bypass enzymes are core outline content"
+  "yield": "ULTRA_HIGH",
+  "why": "Four gluconeogenic bypass enzymes for three irreversible steps: tested every year"
  },
  {
   "front": "Von Gierke disease (G6Pase deficiency) causes severe {{c1::fasting hypoglycemia}} WITH {{c2::lactic acidosis}}, hepatomegaly, and hyperuricemia.",
   "fp": "b76e04ef82f0",
-  "yield": "MEDIUM",
-  "why": "Von Gierke is the one GSD whose G6Pase logic plausibly appears in a passage"
+  "yield": "HIGH",
+  "why": "Von Gierke G6Pase logic (hypoglycemia plus lactic acidosis): the one GSD worth knowing"
  },
  {
   "front": "What are the net products of glycolysis (per glucose)?",
   "fp": "275eb17a5473",
-  "yield": "HIGH",
-  "why": "Net glycolysis products are a discrete-question staple"
+  "yield": "ULTRA_HIGH",
+  "why": "Net products of glycolysis: discrete-question staple every year"
  },
  {
   "front": "What are the products of ONE turn of the TCA (Krebs) cycle?",
   "fp": "6a25e58ccab3",
-  "yield": "HIGH",
-  "why": "TCA products per turn are a discrete-question staple"
+  "yield": "ULTRA_HIGH",
+  "why": "TCA products per turn: discrete-question staple every year"
  },
  {
   "front": "What does pyruvate dehydrogenase do, and what does it produce?",
   "fp": "30703bc74ca2",
-  "yield": "HIGH",
-  "why": "PDH link reaction and its regulation are core"
+  "yield": "ULTRA_HIGH",
+  "why": "PDH link reaction, products and location: tested every year"
  },
  {
   "front": "What does the Rapoport-Luebering (2,3-BPG) shunt in red blood cells cost energetically, and why is it worth it?",
   "fp": "1d0cc9f15f2e",
   "yield": "MEDIUM",
-  "why": "2,3-BPG shunt cost; supporting detail on Hb oxygen unloading"
+  "why": "2,3-BPG shunt ATP cost: supporting detail on Hb oxygen unloading"
  },
  {
   "front": "What happens to pyruvate under anaerobic conditions (fermentation)?",
   "fp": "bb64a4f035c0",
-  "yield": "HIGH",
-  "why": "Fermentation regenerating NAD+ is core anaerobic metabolism"
+  "yield": "ULTRA_HIGH",
+  "why": "Fermentation regenerates NAD+ so glycolysis continues: tested every year"
  },
  {
   "front": "What is gluconeogenesis and which tissues perform it?",
   "fp": "692b777055ea",
-  "yield": "HIGH",
-  "why": "Gluconeogenesis definition, precursors and tissues are outline-level"
+  "yield": "ULTRA_HIGH",
+  "why": "Gluconeogenesis definition, precursors and tissues: tested every year"
  },
  {
   "front": "What is the purpose of the pentose phosphate pathway (HMP shunt)?",
   "fp": "71a3b80c127d",
-  "yield": "HIGH",
-  "why": "PPP purpose (NADPH, ribose-5-P) is a discrete-question staple"
+  "yield": "ULTRA_HIGH",
+  "why": "PPP purpose (NADPH and ribose-5-P): discrete staple every year"
  },
  {
   "front": "What is the rate-limiting (committed) enzyme of glycolysis and how is it regulated?",
   "fp": "601dc290730e",
-  "yield": "HIGH",
-  "why": "PFK-1 as committed step with its allosteric effectors is the core glycolysis regulation fact"
+  "yield": "ULTRA_HIGH",
+  "why": "PFK-1 as committed step with its allosteric effectors: tested every year"
  },
  {
   "front": "What is the total ATP yield from complete aerobic oxidation of one glucose?",
   "fp": "c2f162dde452",
-  "yield": "HIGH",
-  "why": "Total ATP per glucose is a standard calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "Total ATP per glucose (30-32): standard calculation every year"
  },
  {
   "front": "What nucleotide does PEP carboxykinase use, and how is the enzyme chiefly regulated?",
   "fp": "0ac36f9882fe",
   "yield": "MEDIUM",
-  "why": "PEPCK GTP use and transcriptional control; secondary detail"
+  "why": "PEPCK GTP use and transcriptional control: secondary detail"
  },
  {
   "front": "What two activities does the glycogen debranching enzyme perform, and which product is free glucose?",
   "fp": "597be030e3cd",
   "yield": "MEDIUM",
-  "why": "Debranching enzyme dual activity and free-glucose output; supporting glycogen detail"
+  "why": "Debranching enzyme dual activity and free-glucose fraction: supporting detail"
  },
  {
   "front": "Where does the electron transport chain occur and what is the final electron acceptor?",
   "fp": "14cb8c587eb3",
-  "yield": "HIGH",
-  "why": "ETC location and O2 as final acceptor is core (belongs in bioenergetics deck)"
+  "yield": "ULTRA_HIGH",
+  "why": "ETC location and O2 as final acceptor: tested every year"
  },
  {
   "front": "Where in the cell does glucose 6-phosphatase act, and which tissues have it?",
   "fp": "4f97bc376ae5",
-  "yield": "HIGH",
-  "why": "G6Pase tissue distribution explains why muscle glycogen cannot raise blood glucose"
+  "yield": "ULTRA_HIGH",
+  "why": "G6Pase tissue distribution: why muscle glycogen cannot raise blood glucose, asked yearly"
  },
  {
   "front": "Which glycolytic enzyme does fluoride inhibit, and what practical use follows?",
@@ -375,49 +375,49 @@
   "front": "Which three enzymes regulate the TCA cycle, and what turns them up or down?",
   "fp": "45e40645fc6a",
   "yield": "HIGH",
-  "why": "TCA regulatory enzymes and their effectors are core"
+  "why": "TCA regulatory enzymes and their effectors: commonly tested"
  },
  {
   "front": "Why are red blood cells uniquely vulnerable in G6PD deficiency?",
   "fp": "0746b4f90b4c",
   "yield": "MEDIUM",
-  "why": "Why RBCs are vulnerable in G6PD deficiency; supporting detail on the main card"
+  "why": "Why RBCs are vulnerable in G6PD deficiency: supporting detail on the main card"
  },
  {
   "front": "Why can PFK-1 run at high rates in a fed liver cell even when ATP levels are high?",
   "fp": "3ba8d7de2838",
   "yield": "MEDIUM",
-  "why": "F2,6BP overriding ATP inhibition in fed liver; supporting detail on PFK-1 regulation"
+  "why": "F2,6BP overriding ATP inhibition in fed liver: supporting detail on PFK-1 cards"
  },
  {
   "front": "Why do the malate-aspartate and glycerol-3-phosphate shuttles give different ATP yields?",
   "fp": "97025d96cedb",
   "yield": "HIGH",
-  "why": "Shuttle yields explain the 30 vs 32 ATP difference; standard calculation"
+  "why": "Malate-aspartate vs glycerol-3-P shuttle yields: explains 30 vs 32 ATP, common"
  },
  {
   "front": "Why does 2-deoxyglucose trap itself inside cells, and how is that exploited in imaging?",
   "fp": "507aad48f0ab",
   "yield": "MEDIUM",
-  "why": "Phosphorylation trapping of 2-deoxyglucose illustrates why hexokinase traps glucose"
+  "why": "2-deoxyglucose/FDG trapping: illustrates hexokinase trapping, passage flavor"
  },
  {
   "front": "Why does glucagon not mobilize muscle glycogen, and what hormone does instead?",
   "fp": "fe76ef17ec9c",
   "yield": "HIGH",
-  "why": "Muscle lacks glucagon receptors; epinephrine drives muscle glycogenolysis is a classic"
+  "why": "Muscle lacks glucagon receptors, epinephrine drives muscle glycogenolysis: classic"
  },
  {
   "front": "Why does gluconeogenic oxaloacetate leave the mitochondrion as malate during fasting?",
   "fp": "6b20fdfeb1f8",
   "yield": "MEDIUM",
-  "why": "OAA export as malate carries NADH; plausible passage second step"
+  "why": "OAA export as malate carrying NADH: plausible passage second step"
  },
  {
   "front": "Why does heavy drinking on an empty stomach cause hypoglycemia?",
   "fp": "83924ea4a5ef",
-  "yield": "MEDIUM",
-  "why": "Alcohol hypoglycemia via NADH is classic redox reasoning"
+  "yield": "HIGH",
+  "why": "Alcohol hypoglycemia via NADH stalling gluconeogenesis: classic redox reasoning"
  },
  {
   "front": "Why does Pompe disease damage the heart while leaving blood glucose normal?",
@@ -429,12 +429,12 @@
   "front": "Why does pyruvate kinase deficiency cause hemolytic anemia, and what partially compensates for the oxygen-delivery problem?",
   "fp": "04f903f9f236",
   "yield": "MEDIUM",
-  "why": "PK deficiency hemolysis with 2,3-BPG compensation; RBC reasoning"
+  "why": "PK deficiency hemolysis with 2,3-BPG compensation: RBC reasoning, secondary"
  },
  {
   "front": "Why is glycogen branched at all — what do the alpha-1,6 linkages accomplish?",
   "fp": "2a5fef826b0a",
-  "yield": "MEDIUM",
-  "why": "Why glycogen branches (more ends, solubility) is a common conceptual ask"
+  "yield": "HIGH",
+  "why": "Why glycogen branches (more ends, solubility): common conceptual question"
  }
 ]

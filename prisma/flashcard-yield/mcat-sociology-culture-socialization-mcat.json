@@ -3,25 +3,25 @@
   "front": "{{c1::Acculturative stress}} is the ongoing strain of adapting to a new culture, distinct from the brief disorientation of {{c2::culture shock}}.",
   "fp": "072bfece1a4e",
   "yield": "MEDIUM",
-  "why": "Acculturative stress is secondary; culture shock is the tested term"
+  "why": "Acculturative stress and Berry strategies are second-tier beyond culture shock"
  },
  {
   "front": "{{c1::Anticipatory}} socialization is rehearsing the norms of a future role, e.g., a premed shadowing physicians or an engaged couple cohabiting.",
   "fp": "18c2770245e6",
   "yield": "HIGH",
-  "why": "Anticipatory socialization is a frequently tested socialization type"
+  "why": "Anticipatory socialization is commonly tested socialization content"
  },
  {
   "front": "{{c1::Assimilation}} is a minority absorbing the dominant culture, losing distinctiveness; {{c2::amalgamation}} melts groups into a genuinely new culture.",
   "fp": "251354b5a68a",
   "yield": "HIGH",
-  "why": "Assimilation vs amalgamation (melting pot) is a common discrete distinction"
+  "why": "Assimilation vs amalgamation is a common intergroup-relations discrete"
  },
  {
   "front": "{{c1::Cultural diffusion}} spreads elements between societies (yoga to the West); {{c2::cultural transmission}} passes culture down generations within one.",
   "fp": "eeec0b9134bf",
   "yield": "HIGH",
-  "why": "Cultural transmission and diffusion are named on the AAMC 9A outline"
+  "why": "Cultural transmission and diffusion are named on the outline, commonly tested"
  },
  {
   "front": "{{c1::Cultural lag}} (Ogburn): material culture changes faster than nonmaterial culture, e.g., laws and ethics trailing genetic testing technology.",
@@ -33,13 +33,13 @@
   "front": "{{c1::Culture shock}} is the disorientation felt when immersed in an unfamiliar culture whose taken-for-granted norms no longer apply.",
   "fp": "4a4727ef1459",
   "yield": "HIGH",
-  "why": "Culture shock is named on the AAMC 9A outline"
+  "why": "Culture shock is a common outline discrete"
  },
  {
   "front": "{{c1::Folkways}} are everyday norms of custom and politeness; violations (facing backward in an elevator) draw only mild disapproval.",
   "fp": "c4df06057092",
-  "yield": "HIGH",
-  "why": "Folkways within the norm hierarchy are a core social-control concept"
+  "yield": "ULTRA_HIGH",
+  "why": "Folkways within the norm hierarchy are tested essentially every year"
  },
  {
   "front": "{{c1::Material}} culture is a society's physical objects (tools, dress, buildings); {{c2::nonmaterial}} culture is its values, beliefs, norms, and language.",
@@ -50,20 +50,20 @@
  {
   "front": "{{c1::Mores}} are morally significant norms drawing strong sanctions; {{c2::taboos}} are so deep that violation evokes revulsion, e.g., incest or cannibalism.",
   "fp": "789988b0e89f",
-  "yield": "HIGH",
-  "why": "Mores vs taboos is a core norm-hierarchy distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Mores and taboos are the core norm hierarchy, tested every year"
  },
  {
   "front": "{{c1::Multiculturalism}} (pluralism) endorses distinct cultures coexisting with equal standing — the 'salad bowl' rather than the melting pot.",
   "fp": "8fc9c16f1776",
-  "yield": "MEDIUM",
-  "why": "Multiculturalism/salad bowl supports the plain assimilation vs multiculturalism card"
+  "yield": "HIGH",
+  "why": "Multiculturalism/pluralism is outline content, commonly tested"
  },
  {
   "front": "{{c1::Prescriptive}} norms state what one should do; {{c2::proscriptive}} norms state what one must not do, and are usually enforced more forcefully.",
   "fp": "62cc33eb7934",
   "yield": "MEDIUM",
-  "why": "Prescriptive vs proscriptive norms is prep vocabulary; minor reasoning content"
+  "why": "Prescriptive vs proscriptive is a secondary norm distinction"
  },
  {
   "front": "{{c1::Primary}} socialization is early childhood learning of basic norms in the family; {{c2::secondary}} socialization occurs later in schools and workplaces.",
@@ -75,85 +75,85 @@
   "front": "{{c1::Resocialization}} is discarding old behaviors and identities to adopt new ones, most intensely inside total institutions like boot camp or prison.",
   "fp": "3c6c42b6a98f",
   "yield": "HIGH",
-  "why": "Resocialization in total institutions is a core socialization concept"
+  "why": "Resocialization in total institutions is commonly tested"
  },
  {
   "front": "{{c1::Sanctions}} enforce norms and can be positive or negative, formal (a fine, a diploma) or informal (a smile, gossip, ostracism).",
   "fp": "d718545f8193",
-  "yield": "HIGH",
-  "why": "Formal/informal positive/negative sanctions are core social-control content"
+  "yield": "ULTRA_HIGH",
+  "why": "Formal/informal sanctions are the core of social control, tested every year"
  },
  {
   "front": "{{c1::Sex}} refers to biological characteristics and {{c2::gender}} to socially constructed roles; gender identity is internal, orientation is attraction.",
   "fp": "16fc03d45265",
-  "yield": "MEDIUM",
-  "why": "Sex vs gender distinction is tested but belongs to the gender/identity topic"
+  "yield": "HIGH",
+  "why": "Sex vs gender distinction is commonly tested identity content"
  },
  {
   "front": "A {{c1::subculture}} has distinct norms within the mainstream (e.g., med students); a {{c2::counterculture}} opposes dominant values (e.g., 1960s hippies).",
   "fp": "318a2cfe88ca",
-  "yield": "HIGH",
-  "why": "Subculture vs counterculture is named on the AAMC 9A outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Subculture vs counterculture is tested on essentially every exam"
  },
  {
   "front": "A {{c1::total institution}} (Goffman) controls every aspect of residents' lives — prisons, asylums, boot camps — cut off from wider society.",
   "fp": "d33c18657ba8",
   "yield": "HIGH",
-  "why": "Total institution (Goffman) is a common discrete item"
+  "why": "Goffman total institution is commonly tested"
  },
  {
   "front": "A patient describes an ataque de nervios after a family loss. What is a cultural concept of distress, and how should it be handled clinically?",
   "fp": "cb552221d43a",
   "yield": "MEDIUM",
-  "why": "Culture-bound syndromes are clinical flavor on cultural relativism; rarely decisive"
+  "why": "Cultural concepts of distress is clinical application beyond the outline"
  },
  {
   "front": "A physician's technical vocabulary leaves a patient nodding without understanding. Analyze this using culture and socialization concepts.",
   "fp": "0c3df46607ca",
   "yield": "MEDIUM",
-  "why": "Applies cultural capital and professional argot; supporting application"
+  "why": "Applied argot/cultural capital analysis is second-tier to the definition card"
  },
  {
   "front": "Classify: a hospital forbids staff from accepting gifts; a nurse who does is fired. Folkway, more, or taboo?",
   "fp": "7e7dbaa5f1bf",
-  "yield": "MEDIUM",
-  "why": "Application of the folkway/more/taboo hierarchy; useful practice, not new fact"
+  "yield": "HIGH",
+  "why": "Applied classification of a more is a common item format"
  },
  {
   "front": "Contrast norms, mores, and folkways.",
   "fp": "66db79f0e5e1",
-  "yield": "MEDIUM",
-  "why": "Plain summary overlapping the folkways and mores/taboos cards"
+  "yield": "ULTRA_HIGH",
+  "why": "Norms/mores/folkways contrast is foundational and tested every year"
  },
  {
   "front": "Define cultural capital.",
   "fp": "2c439cc9bb2b",
-  "yield": "HIGH",
-  "why": "Cultural capital (Bourdieu) is a frequently tested concept"
+  "yield": "ULTRA_HIGH",
+  "why": "Cultural capital is tested on essentially every exam"
  },
  {
   "front": "Define socialization and its two phases.",
   "fp": "63407320442e",
-  "yield": "HIGH",
-  "why": "Socialization definition and primary/secondary phases are core 7B"
+  "yield": "ULTRA_HIGH",
+  "why": "Socialization definition and primary/secondary phases are tested every year"
  },
  {
   "front": "Dependency theory argues underdevelopment results from:",
   "fp": "2a04fc747384",
   "yield": "MEDIUM",
-  "why": "Dependency theory is a globalization/stratification concept; secondary, misfiled here"
+  "why": "Dependency theory belongs to globalization topic; secondary here"
  },
  {
   "front": "Display rules refer to:",
   "fp": "d9576f92c67b",
-  "yield": "MEDIUM",
-  "why": "Display rules are tested under emotion; belongs to the emotion topic"
+  "yield": "HIGH",
+  "why": "Display rules are a commonly tested emotion-culture discrete"
  },
  {
   "front": "Distinguish high culture from popular culture.",
   "fp": "0a39904c505b",
   "yield": "MEDIUM",
-  "why": "High vs popular culture is secondary vocabulary tied to cultural capital"
+  "why": "High vs popular culture is second-tier culture content"
  },
  {
   "front": "Distinguish high-context and low-context communication cultures, and give one clinical implication.",
@@ -164,44 +164,44 @@
  {
   "front": "Distinguish material and non-material culture.",
   "fp": "018f12c047a7",
-  "yield": "HIGH",
-  "why": "Material vs nonmaterial culture is a core 9A distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Material vs nonmaterial culture is tested on essentially every exam"
  },
  {
   "front": "Hall's {{c1::proxemics}} studies culturally patterned use of personal space; a physical exam routinely enters the {{c2::intimate}} zone.",
   "fp": "7428b73b6315",
   "yield": "MEDIUM",
-  "why": "Proxemics/personal space is plausible nonverbal-communication context"
+  "why": "Proxemics is secondary nonverbal communication detail"
  },
  {
   "front": "Heavy television viewers overestimate crime rates and distrust strangers more than light viewers. Name the theory and its key confound.",
   "fp": "a504870c6b88",
   "yield": "MEDIUM",
-  "why": "Cultivation theory is a plausible mass-media passage concept; secondary"
+  "why": "Cultivation theory is second-tier media content"
  },
  {
   "front": "How can ethnic enclaves affect assimilation?",
   "fp": "662ce6dda9bb",
   "yield": "MEDIUM",
-  "why": "Ethnic enclaves and assimilation are plausible passage context"
+  "why": "Ethnic enclave effects are secondary assimilation detail"
  },
  {
   "front": "How do laws relate to norms?",
   "fp": "61c73e02d6bd",
-  "yield": "MEDIUM",
-  "why": "Laws as formalized mores is supporting social-control detail"
+  "yield": "HIGH",
+  "why": "Laws as codified mores/formal social control is commonly tested"
  },
  {
   "front": "How does acculturation differ from assimilation?",
   "fp": "e836a614a3ab",
-  "yield": "HIGH",
-  "why": "Acculturation vs assimilation is a common discrete distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Acculturation vs assimilation distinction is tested nearly every year"
  },
  {
   "front": "How does religion function as an agent of socialization, and what is one documented health correlate?",
   "fp": "8380d3b047eb",
   "yield": "MEDIUM",
-  "why": "Religion as socialization agent plus health correlate is plausible passage context"
+  "why": "Religion as agent plus health correlate is supporting detail"
  },
  {
   "front": "How does the workplace act as an agent of socialization?",
@@ -219,19 +219,19 @@
   "front": "Immigrants may speak the new language fluently yet remain excluded from clubs, friendship circles, and intermarriage. Distinguish the two assimilations.",
   "fp": "70b92a4b7964",
   "yield": "MEDIUM",
-  "why": "Cultural vs structural assimilation (Gordon) is second-step assimilation detail"
+  "why": "Cultural vs structural assimilation is a secondary refinement"
  },
  {
   "front": "In {{c1::collectivist}} cultures medical decisions are often family-centered; {{c2::individualist}} cultures center the individual patient's autonomy.",
   "fp": "8dc532d1bc60",
   "yield": "HIGH",
-  "why": "Collectivist vs individualist cultures is a high-frequency distinction"
+  "why": "Collectivist vs individualist framing is commonly tested"
  },
  {
   "front": "In Mead's theory, what are the 'I' and the 'me'?",
   "fp": "21fac2245ade",
-  "yield": "HIGH",
-  "why": "Mead's I and me is core identity/socialization theory"
+  "yield": "ULTRA_HIGH",
+  "why": "Mead I and me is core self-development theory tested every year"
  },
  {
   "front": "Kleinman's {{c1::explanatory model}} interview asks what the patient thinks caused the illness, its name, its course, and the treatment expected.",
@@ -243,31 +243,31 @@
   "front": "Medical students learn detachment, hierarchy, and what not to say by watching residents rather than from the syllabus. Name both concepts at work.",
   "fp": "12d98e49431c",
   "yield": "HIGH",
-  "why": "Hidden curriculum and professional socialization are on the AAMC outline"
+  "why": "Hidden curriculum and professional socialization are commonly tested"
  },
  {
   "front": "Modernization theory proposes societies develop by:",
   "fp": "1f3e47ba349d",
   "yield": "MEDIUM",
-  "why": "Modernization theory is globalization content; secondary, misfiled here"
+  "why": "Modernization theory belongs to globalization topic; secondary here"
  },
  {
   "front": "Neugarten's {{c1::social clock}} is a culture's expected timetable for life events, so being {{c2::off-time}} itself produces distress.",
   "fp": "b7858f557524",
   "yield": "MEDIUM",
-  "why": "Social clock/age norms is secondary; off-time distress is plausible context"
+  "why": "Social clock and off-time events are second-tier detail"
  },
  {
   "front": "One resident washes hands even when unobserved; another only when the attending is watching. Distinguish internalization from mere compliance.",
   "fp": "ec35778de19f",
   "yield": "MEDIUM",
-  "why": "Internalization vs compliance is a useful socialization distinction; secondary"
+  "why": "Internalization vs compliance is supporting reasoning for social control"
  },
  {
   "front": "Parents describe newborn daughters as delicate and sons as strong despite matched birth records. Name the process and its sociological reading.",
   "fp": "20e84e0bf5cb",
-  "yield": "MEDIUM",
-  "why": "Gender socialization illustrates agents of socialization; secondary"
+  "yield": "HIGH",
+  "why": "Gender socialization from birth is a common passage reasoning step"
  },
  {
   "front": "Resocialization is most dramatic in:",
@@ -278,8 +278,8 @@
  {
   "front": "Role exit involves:",
   "fp": "70a8a84e30ff",
-  "yield": "MEDIUM",
-  "why": "Role exit is on the outline but belongs to the statuses/roles topic"
+  "yield": "HIGH",
+  "why": "Role exit is named on the outline and commonly tested"
  },
  {
   "front": "Socialization is the process by which people:",
@@ -296,44 +296,44 @@
  {
   "front": "The {{c1::Sapir-Whorf}} hypothesis (linguistic relativity): the language we speak shapes how we perceive and think about the world.",
   "fp": "ec3955ddd4f7",
-  "yield": "HIGH",
-  "why": "Sapir-Whorf/linguistic relativity is a frequently tested language-culture item"
+  "yield": "ULTRA_HIGH",
+  "why": "Sapir-Whorf linguistic relativity is tested nearly every year"
  },
  {
   "front": "What are agents of socialization?",
   "fp": "1e30eefd8551",
-  "yield": "HIGH",
-  "why": "Agents of socialization are core 7B"
+  "yield": "ULTRA_HIGH",
+  "why": "Agents of socialization roster is foundational, tested every year"
  },
  {
   "front": "What are Mead's three stages in developing the self?",
   "fp": "60eb3428b13e",
-  "yield": "HIGH",
-  "why": "Mead's preparatory/play/game stages and generalized other are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Mead preparatory/play/game stages and generalized other are tested every year"
  },
  {
   "front": "What are the phases of a rite of passage?",
   "fp": "a076c190d45d",
   "yield": "MEDIUM",
-  "why": "Rite-of-passage phases and liminality are secondary ritual detail"
+  "why": "Rite of passage phases and liminality are second-tier detail"
  },
  {
   "front": "What are the three steps of Cooley's looking-glass self?",
   "fp": "b674f4a50c14",
-  "yield": "HIGH",
-  "why": "Cooley's looking-glass self is core identity theory"
+  "yield": "ULTRA_HIGH",
+  "why": "Cooley looking-glass self is tested nearly every year"
  },
  {
   "front": "What do cases of extreme isolation (e.g., Genie) demonstrate about socialization?",
   "fp": "25938eb45b09",
   "yield": "MEDIUM",
-  "why": "Isolation cases show socialization is required; plausible passage context"
+  "why": "Isolation cases are illustrative context rather than a tested point"
  },
  {
   "front": "What is a cultural universal? Give examples.",
   "fp": "dfe105c9e680",
   "yield": "MEDIUM",
-  "why": "Cultural universals are secondary; Murdock catalog is trivia"
+  "why": "Cultural universals are secondary culture content"
  },
  {
   "front": "What is a degradation ceremony?",
@@ -344,14 +344,14 @@
  {
   "front": "What is cultural lag?",
   "fp": "762a97b89596",
-  "yield": "HIGH",
-  "why": "Cultural lag is named on the AAMC 9A outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Cultural lag is a frequent discrete on nearly every exam"
  },
  {
   "front": "What is cultural relativism vs. ethnocentrism?",
   "fp": "5e813b5af609",
-  "yield": "HIGH",
-  "why": "Cultural relativism vs ethnocentrism is a core distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Cultural relativism vs ethnocentrism is tested on essentially every exam"
  },
  {
   "front": "What is ethnocentrism's functional side, per some sociologists?",
@@ -362,8 +362,8 @@
  {
   "front": "What is the difference between assimilation and multiculturalism?",
   "fp": "a32bca8fd138",
-  "yield": "HIGH",
-  "why": "Assimilation vs multiculturalism is named on the AAMC 9A outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Assimilation vs multiculturalism is tested nearly every year"
  },
  {
   "front": "What is xenocentrism?",
@@ -374,20 +374,20 @@
  {
   "front": "What makes something a symbol in the cultural sense?",
   "fp": "b82ae288a5c3",
-  "yield": "MEDIUM",
-  "why": "Symbols as shared meaning is supporting detail on symbolic culture"
+  "yield": "HIGH",
+  "why": "Symbolic culture is named on the outline and commonly tested"
  },
  {
   "front": "Which socialization agent dominates in adolescence, and what does it uniquely teach?",
   "fp": "e10ba36f3e31",
-  "yield": "MEDIUM",
-  "why": "Peer group dominance in adolescence is supporting agent-of-socialization detail"
+  "yield": "HIGH",
+  "why": "Peer group dominance in adolescence is a common agent-of-socialization item"
  },
  {
   "front": "Why does cultural relativism matter in medicine, and where are its limits?",
   "fp": "f6cafd2127dc",
   "yield": "MEDIUM",
-  "why": "Clinical application of cultural relativism; illustrates a tested concept"
+  "why": "Clinical application of cultural relativism is secondary"
  },
  {
   "front": "Why is language considered the keystone of nonmaterial culture?",

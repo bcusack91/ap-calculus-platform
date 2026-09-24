@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Compare cohort, case-control, and cross-sectional studies.",
+  "fp": "a48293cf881e",
+  "yield": "ULTRA_HIGH",
+  "why": "Cohort vs case-control vs cross-sectional is tested on essentially every exam"
+ },
+ {
+  "front": "Contrast experimental and observational study designs.",
+  "fp": "ed53bece35ef",
+  "yield": "ULTRA_HIGH",
+  "why": "Experimental vs observational and causation vs association is a yearly staple"
+ },
+ {
+  "front": "What is external vs. internal validity?",
+  "fp": "e3d13c321ba8",
+  "yield": "HIGH",
+  "why": "Internal vs external validity (generalizability) is commonly tested in P/S"
+ },
+ {
+  "front": "What is recall bias and which design is vulnerable?",
+  "fp": "8a0b9da475f2",
+  "yield": "HIGH",
+  "why": "Recall bias in case-control designs is a standard bias question"
+ },
+ {
+  "front": "What is selection bias?",
+  "fp": "8cf8c498d4d4",
+  "yield": "HIGH",
+  "why": "Selection bias is one of the most frequently named threats to validity"
+ },
+ {
+  "front": "What is the Hawthorne effect?",
+  "fp": "8909154b0571",
+  "yield": "HIGH",
+  "why": "Hawthorne effect is a commonly tested named observer effect"
+ },
+ {
+  "front": "What is the placebo effect?",
+  "fp": "46962b7fffa4",
+  "yield": "HIGH",
+  "why": "Placebo effect and its control by blinding recur in passage design questions"
+ },
+ {
+  "front": "Why is peer review important?",
+  "fp": "813703b53137",
+  "yield": "MEDIUM",
+  "why": "Peer review is a scientific-process concept; rarely the point a question turns on"
+ }
+]

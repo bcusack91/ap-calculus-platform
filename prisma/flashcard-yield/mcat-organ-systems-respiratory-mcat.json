@@ -26,14 +26,14 @@
  {
   "front": "Arterial oxygen content is about $1.34 \\times [Hb] \\times SaO_2$ plus dissolved gas. In anemia, which term falls?",
   "fp": "9681ffeb913c",
-  "yield": "MEDIUM",
-  "why": "O2 content vs PaO2 in anemia: second-step reasoning on O2 transport"
+  "yield": "HIGH",
+  "why": "O2 content vs PaO2 in anemia is a commonly tested O2-transport reasoning step"
  },
  {
   "front": "At altitude, air is still about 21 percent O2; hypoxemia occurs because low {{c1::barometric pressure}} lowers alveolar $PO_2$.",
   "fp": "2d903a7ed644",
-  "yield": "HIGH",
-  "why": "Partial pressure = fraction x barometric pressure; altitude hypoxemia is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Partial pressure = fraction x barometric pressure; altitude hypoxemia is tested every year"
  },
  {
   "front": "Beyond blood changes, what tissue-level adaptations support long-term altitude acclimatization?",
@@ -56,14 +56,14 @@
  {
   "front": "By the alveolar gas equation, alveolar $PO_2$ falls whenever alveolar {{c1::$PCO_2$}} rises, since $P_AO_2 = P_IO_2 - PCO_2/R$.",
   "fp": "ba22117a45b7",
-  "yield": "HIGH",
-  "why": "Alveolar gas equation; hypoventilation causes hypoxemia"
+  "yield": "MEDIUM",
+  "why": "Alveolar gas equation is beyond outline; hypoventilation causing hypoxemia is covered elsewhere"
  },
  {
   "front": "Carbon monoxide, fetal hemoglobin, hypothermia, and low 2,3-BPG all shift the O2-Hb curve to the {{c1::left}}.",
   "fp": "5d8588e5df82",
-  "yield": "HIGH",
-  "why": "Left-shift factors (CO, HbF, cold, low 2,3-BPG) are core O2-Hb curve content"
+  "yield": "ULTRA_HIGH",
+  "why": "Left-shift factors (CO, HbF, cold, low 2,3-BPG) are tested on essentially every exam"
  },
  {
   "front": "Carotid body afferents travel in cranial nerve {{c1::IX (glossopharyngeal)}}; aortic body afferents travel in the vagus.",
@@ -74,8 +74,8 @@
  {
   "front": "Central chemoreceptors sense {{c1::CSF H+}} generated from CO2 that crosses the blood-brain barrier — plasma H+ itself cannot cross.",
   "fp": "76a3e58ae5ce",
-  "yield": "HIGH",
-  "why": "Central chemoreceptors sense CSF H+ from CO2; plasma H+ excluded"
+  "yield": "ULTRA_HIGH",
+  "why": "CO2 crossing the BBB while plasma H+ cannot is a perennial chemoreceptor discrete"
  },
  {
   "front": "Chronic hypoxia stimulates renal {{c1::erythropoietin (EPO)}} release, driving polycythemia over weeks.",
@@ -92,20 +92,20 @@
  {
   "front": "Compliance is volume change per pressure change: contrast emphysema and fibrosis and the consequence of each.",
   "fp": "db0a4828165e",
-  "yield": "MEDIUM",
-  "why": "Compliance contrast (emphysema vs fibrosis): supporting detail on mechanics"
+  "yield": "HIGH",
+  "why": "Compliance definition and emphysema vs fibrosis contrast is commonly tested mechanics"
  },
  {
   "front": "Define tidal volume, vital capacity, and residual volume.",
   "fp": "dface804f7ad",
-  "yield": "HIGH",
-  "why": "TV, VC, RV definitions are core lung-volume content"
+  "yield": "ULTRA_HIGH",
+  "why": "TV, VC, RV definitions are core lung-volume content tested every year"
  },
  {
   "front": "Describe the Bohr effect.",
   "fp": "2e1c3f628c80",
-  "yield": "HIGH",
-  "why": "Bohr effect is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Bohr effect is tested on essentially every administration"
  },
  {
   "front": "Emphysema destroys alveolar walls, raising compliance and lowering {{c1::elastic recoil}}, which collapses small airways during expiration.",
@@ -116,8 +116,8 @@
  {
   "front": "Given a blood gas, how do you name the primary disturbance and judge whether compensation has occurred?",
   "fp": "9f2dec539095",
-  "yield": "HIGH",
-  "why": "Reading a blood gas: primary disturbance and compensation is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Reading a blood gas for primary disturbance and compensation is tested every year"
  },
  {
   "front": "Haldane effect: why does deoxygenated blood carry more CO2 at any given $PCO_2$?",
@@ -146,20 +146,20 @@
  {
   "front": "How does the respiratory system compensate for acid-base disturbances?",
   "fp": "b6f689005992",
-  "yield": "HIGH",
-  "why": "Respiratory compensation of acid-base disturbances is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Respiratory compensation of acid-base disturbances is tested every year"
  },
  {
   "front": "How is most $CO_{2}$ carried in blood?",
   "fp": "11685db4eeda",
-  "yield": "HIGH",
-  "why": "CO2 carried mainly as bicarbonate via carbonic anhydrase is core"
+  "yield": "ULTRA_HIGH",
+  "why": "CO2 carried mainly as bicarbonate via carbonic anhydrase is tested every year"
  },
  {
   "front": "Hyperventilation causes:",
   "fp": "f35f5a67a426",
-  "yield": "HIGH",
-  "why": "Hyperventilation -> respiratory alkalosis is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Hyperventilation -> respiratory alkalosis is tested on essentially every exam"
  },
  {
   "front": "Hypoxemia with a normal A-a gradient means {{c1::hypoventilation or altitude}}; a widened gradient means shunt, V/Q mismatch, or a diffusion barrier.",
@@ -182,8 +182,8 @@
  {
   "front": "In the bicarbonate buffer system, pH depends on the ratio of $HCO_3^-$ to {{c1::$PCO_2$}}, with $pK_a$ 6.1.",
   "fp": "cda8bb532c24",
-  "yield": "HIGH",
-  "why": "Henderson-Hasselbalch for bicarbonate buffer (pKa 6.1, 20:1) is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Henderson-Hasselbalch for bicarbonate buffer (pKa 6.1, 20:1) is used in calculation"
  },
  {
   "front": "In what three forms is CO2 carried in blood, and in what proportions?",
@@ -194,13 +194,13 @@
  {
   "front": "Inspiration follows Boyle's law: diaphragm contraction expands the thorax, making alveolar pressure {{c1::lower than atmospheric}} so air flows in.",
   "fp": "3ee586d754f2",
-  "yield": "HIGH",
-  "why": "Boyle's law explanation of inspiration is the tested framing"
+  "yield": "ULTRA_HIGH",
+  "why": "Boyle's law explanation of inspiration is the tested framing every year"
  },
  {
   "front": "Normal arterial blood gas: pH {{c1::7.35 to 7.45}}, $PCO_2$ {{c2::40}} mmHg, $PO_2$ about 100 mmHg, and $HCO_3^-$ about 24 mEq/L.",
   "fp": "baa61eb7a6fb",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Normal ABG values (pH 7.35-7.45, PCO2 40) are needed to read any gas table"
  },
  {
@@ -230,32 +230,32 @@
  {
   "front": "Quiet expiration is {{c1::passive}}, driven by elastic recoil; forced expiration recruits abdominal muscles and internal intercostals.",
   "fp": "b51c3bf016ba",
-  "yield": "HIGH",
-  "why": "Passive quiet expiration vs active forced expiration is core mechanics"
+  "yield": "ULTRA_HIGH",
+  "why": "Passive quiet expiration vs active forced expiration is tested every year"
  },
  {
   "front": "The chloride shift: as RBC carbonic anhydrase generates $HCO_3^-$, the anion exchanger exports it in exchange for {{c1::chloride}} entering the cell.",
   "fp": "30c52f234b3c",
-  "yield": "HIGH",
-  "why": "Chloride shift is core CO2 transport"
+  "yield": "ULTRA_HIGH",
+  "why": "Chloride shift is a perennial CO2-transport discrete"
  },
  {
   "front": "The countercurrent multiplier system in the loop of Henle creates:",
   "fp": "07b1fd49141c",
-  "yield": "MEDIUM",
-  "why": "Renal countercurrent multiplier: misfiled, belongs to the renal topic [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "Countercurrent multiplier is core renal content; misfiled here but not served elsewhere"
  },
  {
   "front": "The renin–angiotensin–aldosterone system is activated by:",
   "fp": "123dc7f6fa86",
-  "yield": "MEDIUM",
-  "why": "RAAS activation: misfiled, belongs to renal/endocrine topics [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "RAAS activation is core renal/endocrine content; misfiled here but not served elsewhere"
  },
  {
   "front": "The respiratory rate is set by which brain region?",
   "fp": "f7a3c171e4c9",
-  "yield": "HIGH",
-  "why": "Medulla/pons set respiratory rhythm: core control of breathing"
+  "yield": "ULTRA_HIGH",
+  "why": "Medulla/pons set respiratory rhythm: core control of breathing tested every year"
  },
  {
   "front": "The somatic nervous system controls:",
@@ -266,8 +266,8 @@
  {
   "front": "Type I pneumocytes in the lungs are specialized for:",
   "fp": "1b2547374a17",
-  "yield": "MEDIUM",
-  "why": "Type I vs Type II pneumocytes: supporting histology detail"
+  "yield": "HIGH",
+  "why": "Type I (exchange) vs Type II (surfactant) pneumocytes is a commonly asked discrete"
  },
  {
   "front": "Typical values: tidal volume {{c1::500}} mL, anatomic dead space {{c2::150}} mL, vital capacity about 4800 mL, total lung capacity about 6000 mL.",
@@ -290,8 +290,8 @@
  {
   "front": "What do the V/Q extremes of zero and infinity represent physiologically?",
   "fp": "2006302d8b2c",
-  "yield": "MEDIUM",
-  "why": "Shunt vs dead space extremes: supporting detail on V/Q"
+  "yield": "HIGH",
+  "why": "Shunt vs dead space as V/Q extremes is commonly needed in gas-exchange passages"
  },
  {
   "front": "What is the immediate ventilatory response to altitude, and what acid-base problem does it create?",
@@ -302,8 +302,8 @@
  {
   "front": "What is the role of surfactant?",
   "fp": "97e270a3b755",
-  "yield": "HIGH",
-  "why": "Surfactant lowers surface tension; NRDS is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Surfactant lowers surface tension; NRDS is tested on essentially every exam"
  },
  {
   "front": "What maladaptive circulatory change can chronic altitude exposure produce?",
@@ -314,14 +314,14 @@
  {
   "front": "What primarily drives respiratory rate?",
   "fp": "eef0340086ac",
-  "yield": "HIGH",
-  "why": "CO2/pH as primary ventilatory drive is core"
+  "yield": "ULTRA_HIGH",
+  "why": "CO2/pH as primary ventilatory drive is tested every year"
  },
  {
   "front": "Where does gas exchange occur and why is it efficient?",
   "fp": "785add039297",
-  "yield": "HIGH",
-  "why": "Alveolar structure enabling efficient exchange is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Alveolar structure enabling efficient exchange is foundational, tested every year"
  },
  {
   "front": "Which chemoreceptors alone detect hypoxemia, and below what $PO_2$ do they fire strongly?",
@@ -332,8 +332,8 @@
  {
   "front": "Which four factors right-shift the O2-hemoglobin curve, and what single physiologic state produces all of them?",
   "fp": "3a4a8096dd30",
-  "yield": "HIGH",
-  "why": "Right-shift factors and exercise is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Right-shift factors and exercise is tested on essentially every exam"
  },
  {
   "front": "Why are venous red blood cells slightly swollen compared with arterial ones?",
@@ -350,8 +350,8 @@
  {
   "front": "Why can spirometry never measure residual volume, functional residual capacity, or total lung capacity?",
   "fp": "4caadaef4d1b",
-  "yield": "MEDIUM",
-  "why": "Spirometry cannot measure RV/FRC/TLC: commonly asked supporting fact"
+  "yield": "HIGH",
+  "why": "Spirometry cannot measure RV/FRC/TLC is a commonly asked discrete"
  },
  {
   "front": "Why do anemia and CO poisoning fail to stimulate the peripheral chemoreceptors?",
@@ -368,8 +368,8 @@
  {
   "front": "Why does a pneumothorax collapse the lung while the chest wall springs outward?",
   "fp": "7a9ed99db4ec",
-  "yield": "MEDIUM",
-  "why": "Pneumothorax illustrates negative intrapleural pressure and recoil"
+  "yield": "HIGH",
+  "why": "Negative intrapleural pressure and recoil, illustrated by pneumothorax, is commonly tested"
  },
  {
   "front": "Why does a right shift help tissue O2 delivery without meaningfully hurting loading in the lungs?",
@@ -410,7 +410,7 @@
  {
   "front": "Why is fetal hemoglobin different?",
   "fp": "9654c6cabf81",
-  "yield": "HIGH",
-  "why": "HbF higher affinity/left shift is core"
+  "yield": "ULTRA_HIGH",
+  "why": "HbF higher affinity/left shift is tested on essentially every exam"
  }
 ]

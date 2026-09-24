@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you answer a question about a specific word's meaning?",
+  "fp": "84d2529c8a30",
+  "yield": "HIGH",
+  "why": "Word-in-context questions appear on most administrations"
+ },
+ {
+  "front": "How do you approach a main idea question?",
+  "fp": "79297d0d5e44",
+  "yield": "ULTRA_HIGH",
+  "why": "Main-idea questions appear on nearly every passage; predict-then-match is the core move"
+ },
+ {
+  "front": "What is the most common CARS trap answer?",
+  "fp": "dcbfee1ceae2",
+  "yield": "HIGH",
+  "why": "True-but-unsupported trap; the primary rule is ULTRA in the strategy deck"
+ },
+ {
+  "front": "What makes a main-idea answer wrong for being too broad?",
+  "fp": "4456c4fb723a",
+  "yield": "HIGH",
+  "why": "Too-broad is a standard main-idea distractor"
+ },
+ {
+  "front": "What makes a main-idea answer wrong for being too narrow?",
+  "fp": "208f0913de17",
+  "yield": "HIGH",
+  "why": "Too-narrow is a standard main-idea distractor"
+ },
+ {
+  "front": "What must a valid CARS inference be?",
+  "fp": "cf651f2db275",
+  "yield": "ULTRA_HIGH",
+  "why": "Inference-must-follow standard governs every inference question"
+ },
+ {
+  "front": "What should \"the author would most likely agree\" answers rest on?",
+  "fp": "e97b136643bc",
+  "yield": "HIGH",
+  "why": "Author-would-agree questions are common; rest on explicit positions"
+ },
+ {
+  "front": "Why is extreme wording usually a warning sign?",
+  "fp": "4a7ec0e9516d",
+  "yield": "HIGH",
+  "why": "Extreme wording flag; the too-strong rule is ULTRA elsewhere"
+ }
+]

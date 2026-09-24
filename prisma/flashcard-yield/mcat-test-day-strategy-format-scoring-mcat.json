@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How is the MCAT scored?",
+  "fp": "8210e53240d1",
+  "yield": "LOW",
+  "why": "Score-scale logistics; never affects an answer"
+ },
+ {
+  "front": "How many questions and how long is each section?",
+  "fp": "b96323bd86e0",
+  "yield": "MEDIUM",
+  "why": "Section timing sets the pacing budget used on every section"
+ },
+ {
+  "front": "Is there a penalty for wrong answers?",
+  "fp": "2d00b9abddf5",
+  "yield": "HIGH",
+  "why": "No wrong-answer penalty drives always-guess on every section"
+ },
+ {
+  "front": "Roughly how long is the full test day?",
+  "fp": "2f02215932de",
+  "yield": "LOW",
+  "why": "Test-day length logistics"
+ },
+ {
+  "front": "What are the four MCAT sections?",
+  "fp": "791cbdb3639f",
+  "yield": "LOW",
+  "why": "Section names; pure format logistics"
+ },
+ {
+  "front": "What is a percentile vs. a scaled score?",
+  "fp": "214ab774378f",
+  "yield": "LOW",
+  "why": "Percentile vs scaled score; scoring logistics"
+ },
+ {
+  "front": "What is the split between passage-based and discrete questions?",
+  "fp": "0b912b2142ca",
+  "yield": "MEDIUM",
+  "why": "Passage/discrete split informs section pacing"
+ },
+ {
+  "front": "Why is section balance important?",
+  "fp": "4db945558e3c",
+  "yield": "LOW",
+  "why": "Admissions advice about section balance; not a test tactic"
+ }
+]

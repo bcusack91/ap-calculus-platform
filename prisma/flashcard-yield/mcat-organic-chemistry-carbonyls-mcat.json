@@ -1,0 +1,404 @@
+[
+ {
+  "front": "$NaBH_4$ reduces {{c1::aldehydes and ketones}} but not {{c1::esters, amides, or carboxylic acids}}.",
+  "fp": "c859946e0338",
+  "yield": "ULTRA_HIGH",
+  "why": "NaBH4 vs LiAlH4 selectivity is tested every year"
+ },
+ {
+  "front": "1,2- versus 1,4-addition to an enone: which nucleophiles do which?",
+  "fp": "2ef7112571e3",
+  "yield": "HIGH",
+  "why": "Hard 1,2 vs soft 1,4 nucleophile selection is a common item"
+ },
+ {
+  "front": "A Grignard reagent (RMgBr) reacts with a ketone followed by acid workup to produce:",
+  "fp": "b8f44b286d05",
+  "yield": "ULTRA_HIGH",
+  "why": "Grignard plus ketone giving a tertiary alcohol is a perennial discrete"
+ },
+ {
+  "front": "A Grignard reagent is destroyed by any {{c1::acidic proton such as O-H, N-H, S-H, or a terminal alkyne}}.",
+  "fp": "5b274bdeb0e0",
+  "yield": "HIGH",
+  "why": "Grignard quenching by acidic protons is a frequent trap question"
+ },
+ {
+  "front": "A methyl ketone treated with $I_2$ and NaOH gives a yellow precipitate. What happened, and what does it prove?",
+  "fp": "5b0b7bd8ea44",
+  "yield": "LOW",
+  "why": "Iodoform test is off-outline for the MCAT"
+ },
+ {
+  "front": "Acetals serve as {{c1::protecting groups}} for carbonyls because they resist {{c1::base, hydride, and Grignard reagents}}.",
+  "fp": "e31d7a51e105",
+  "yield": "HIGH",
+  "why": "Acetal protecting-group logic is standard outline content"
+ },
+ {
+  "front": "Acid activates the {{c1::electrophile by protonating the carbonyl oxygen}}; base activates the {{c1::nucleophile by deprotonating it}}.",
+  "fp": "07cf6bd84731",
+  "yield": "HIGH",
+  "why": "Acid-vs-base mechanism consistency is a common reasoning step"
+ },
+ {
+  "front": "Acid-catalyzed versus base-promoted ester hydrolysis: which one is reversible?",
+  "fp": "1f339058fdbd",
+  "yield": "HIGH",
+  "why": "Reversible acid vs irreversible base ester hydrolysis is a common item"
+ },
+ {
+  "front": "Alpha protons: simple ketone $pK_a \\approx$ {{c1::20}}; 1,3-dicarbonyl $pK_a \\approx$ {{c1::9-11}}.",
+  "fp": "cff4791125b7",
+  "yield": "HIGH",
+  "why": "Alpha-proton pKa values, including 1,3-dicarbonyls, are on the outline"
+ },
+ {
+  "front": "Amide hydrolysis requires:",
+  "fp": "ba4fd6fe0d0e",
+  "yield": "HIGH",
+  "why": "Amide hydrolysis needing harsh conditions underlies peptide-bond questions"
+ },
+ {
+  "front": "An aldol joins the {{c1::alpha carbon (enolate) of one carbonyl}} to the {{c1::carbonyl carbon of another}}.",
+  "fp": "1e4a61526740",
+  "yield": "ULTRA_HIGH",
+  "why": "Aldol connectivity is tested every year, directly and via aldolase"
+ },
+ {
+  "front": "At equilibrium, simple carbonyls exist overwhelmingly as the {{c1::keto}} tautomer.",
+  "fp": "1a3123cbc296",
+  "yield": "ULTRA_HIGH",
+  "why": "Keto dominance and tautomers as distinct compounds is core outline content"
+ },
+ {
+  "front": "Beta-keto acid decarboxylation passes through a cyclic six-membered transition state, releasing {{c1::$CO_2$}} and {{c2::an enol}} that then tautomerizes.",
+  "fp": "22249ac62674",
+  "yield": "HIGH",
+  "why": "Six-membered TS for beta-keto acid decarboxylation is common"
+ },
+ {
+  "front": "Claisen versus aldol: what is the key mechanistic difference?",
+  "fp": "e35ace01d29c",
+  "yield": "HIGH",
+  "why": "Claisen vs aldol distinction is a standard comparison item"
+ },
+ {
+  "front": "Conjugate (1,4) addition is favored by {{c1::soft, stabilized nucleophiles}} such as thiols, amines, and cyanide.",
+  "fp": "b7e60874b9ec",
+  "yield": "LOW",
+  "why": "Restates the 1,2 vs 1,4 addition card"
+ },
+ {
+  "front": "Describe keto–enol tautomerization.",
+  "fp": "55e7897448b6",
+  "yield": "LOW",
+  "why": "Restates the keto-enol tautomer card"
+ },
+ {
+  "front": "Distinguish an aldol addition from an aldol condensation.",
+  "fp": "d08a7dd3c655",
+  "yield": "HIGH",
+  "why": "Aldol addition vs condensation product is a common item"
+ },
+ {
+  "front": "GAPDH first forms {{c1::a thiohemiacetal}} with an active-site cysteine, which $NAD^+$ then oxidizes to {{c2::a thioester}}.",
+  "fp": "dabe9e2e17dd",
+  "yield": "MEDIUM",
+  "why": "GAPDH thiohemiacetal detail belongs to glycolysis, passage context here"
+ },
+ {
+  "front": "Grignard with an ester versus with a ketone: predict the products.",
+  "fp": "9eb118e8e258",
+  "yield": "HIGH",
+  "why": "Grignard equivalents with ester vs ketone is a frequent discrete"
+ },
+ {
+  "front": "Hemiacetal formation in a sugar is {{c1::intramolecular}}, which is why the cyclic form outnumbers the open chain by roughly {{c2::99 to 1}}.",
+  "fp": "91c621edcd4e",
+  "yield": "MEDIUM",
+  "why": "99:1 cyclic ratio is supporting detail for sugar hemiacetals"
+ },
+ {
+  "front": "How do you recognize a retro-aldol step in a metabolic pathway?",
+  "fp": "0092a950ff3a",
+  "yield": "HIGH",
+  "why": "Retro-aldol via aldolase is a classic metabolism crossover"
+ },
+ {
+  "front": "How does a cyanohydrin form, and why is it reversible?",
+  "fp": "d203b9acf4f8",
+  "yield": "LOW",
+  "why": "Cyanohydrins are off-outline detail"
+ },
+ {
+  "front": "Hydride delivery from NADH to a ketone is {{c1::a 1,2-addition}} at the carbonyl carbon.",
+  "fp": "ca711ac74859",
+  "yield": "MEDIUM",
+  "why": "NADH as biological hydride is helpful framing, secondary"
+ },
+ {
+  "front": "Imine (Schiff base) formation is fastest near pH {{c1::4-5}}.",
+  "fp": "5adf3d0c1202",
+  "yield": "MEDIUM",
+  "why": "Bell-shaped pH dependence of imine formation is second-tier"
+ },
+ {
+  "front": "In Fischer esterification with an $^{18}O$-labeled alcohol, the label ends up in the ester's {{c1::single-bonded alkoxy oxygen}}.",
+  "fp": "c243ec963551",
+  "yield": "LOW",
+  "why": "18O labeling result is trivia-grade specificity"
+ },
+ {
+  "front": "In GAPDH, what displaces the thioester, and why is the product high-energy?",
+  "fp": "fabc73163258",
+  "yield": "MEDIUM",
+  "why": "1,3-BPG acyl phosphate detail is glycolysis passage context"
+ },
+ {
+  "front": "In water, formaldehyde exists mostly as its {{c1::hydrate (gem-diol)}}.",
+  "fp": "548ce8bbd46e",
+  "yield": "LOW",
+  "why": "Formaldehyde hydrate is off-outline detail"
+ },
+ {
+  "front": "LDA at low temperature gives the {{c1::kinetic}} enolate by removing the {{c2::less hindered}} alpha proton irreversibly.",
+  "fp": "7aefd5d8eaf5",
+  "yield": "HIGH",
+  "why": "Kinetic enolate with LDA is named outline content"
+ },
+ {
+  "front": "Name biologically important reactions that run through a Schiff base.",
+  "fp": "5749d949ee12",
+  "yield": "MEDIUM",
+  "why": "List of Schiff-base examples is supporting biochem context"
+ },
+ {
+  "front": "Only {{c1::beta-keto acids and malonic-type diacids}} decarboxylate on mild heating.",
+  "fp": "4425626959c6",
+  "yield": "ULTRA_HIGH",
+  "why": "Which acids decarboxylate on mild heat is tested via TCA and ketone bodies"
+ },
+ {
+  "front": "Predict: benzaldehyde plus a primary amine at mildly acidic pH, followed by a hydride reductant.",
+  "fp": "e38081cc3866",
+  "yield": "MEDIUM",
+  "why": "Reductive amination prediction is a second-tier application"
+ },
+ {
+  "front": "Predict: cyclohexanone plus excess $CH_3MgBr$, then aqueous acid workup.",
+  "fp": "b759eff1e357",
+  "yield": "MEDIUM",
+  "why": "Applies the Grignard-ketone card; excess nuance is secondary"
+ },
+ {
+  "front": "Predict: keto-ester treated with (1) ethylene glycol and acid, (2) $LiAlH_4$, (3) aqueous acid.",
+  "fp": "e6ca5cd9b72b",
+  "yield": "MEDIUM",
+  "why": "Protect-react-deprotect sequence is an application of the acetal card"
+ },
+ {
+  "front": "Primary amine plus ketone versus secondary amine plus ketone: what is formed?",
+  "fp": "fca329796f07",
+  "yield": "ULTRA_HIGH",
+  "why": "Imine vs enamine from primary vs secondary amine is a perennial item"
+ },
+ {
+  "front": "Rank reactivity of carboxylic acid derivatives toward nucleophilic acyl substitution.",
+  "fp": "2cb665c9d171",
+  "yield": "ULTRA_HIGH",
+  "why": "Acid-derivative reactivity ranking is tested every year"
+ },
+ {
+  "front": "Ranked as alpha-carbon nucleophiles, enol and enamine are {{c1::neutral and weaker}} while the enolate is {{c2::anionic and far more reactive}}.",
+  "fp": "404af9ade4c6",
+  "yield": "MEDIUM",
+  "why": "Enol vs enamine vs enolate ranking is second-tier nucleophile detail"
+ },
+ {
+  "front": "Reactivity of acid derivatives: acyl chloride > {{c1::anhydride}} > ester ~ acid > {{c1::amide}}.",
+  "fp": "7d5679219670",
+  "yield": "LOW",
+  "why": "Restates the acid-derivative reactivity ranking card"
+ },
+ {
+  "front": "Serine proteases cleave peptides through a covalent {{c1::acyl-enzyme}} intermediate.",
+  "fp": "5bd45e31dc67",
+  "yield": "HIGH",
+  "why": "Serine protease acyl-enzyme intermediate is a common enzyme mechanism item"
+ },
+ {
+  "front": "Substrate-level phosphorylation is a nucleophilic substitution in which {{c1::ADP}} serves as the attacking nucleophile.",
+  "fp": "4dfa80a4bf37",
+  "yield": "MEDIUM",
+  "why": "Framing substrate-level phosphorylation as substitution is supporting reasoning"
+ },
+ {
+  "front": "The thermodynamic enolate is formed using:",
+  "fp": "59daaacd6a62",
+  "yield": "HIGH",
+  "why": "Thermodynamic enolate conditions are named outline content"
+ },
+ {
+  "front": "Thioester alpha protons are more acidic than an ester's because sulfur {{c1::donates poorly into the carbonyl}}.",
+  "fp": "58190aad5d9c",
+  "yield": "MEDIUM",
+  "why": "Thioester alpha-acidity is supporting detail for acetyl-CoA chemistry"
+ },
+ {
+  "front": "Tollens and Benedict reagents oxidize {{c1::aldehydes}} but not {{c1::ketones}}.",
+  "fp": "6045fd8657cb",
+  "yield": "ULTRA_HIGH",
+  "why": "Tollens/Benedict on aldehydes drives reducing-sugar questions every year"
+ },
+ {
+  "front": "What conditions form an acetal, and what reverses it?",
+  "fp": "5233530c6358",
+  "yield": "MEDIUM",
+  "why": "Acetal formation conditions support the protecting-group card"
+ },
+ {
+  "front": "What does $LiAlH_4$ give with an ester, and how many hydride deliveries does it take?",
+  "fp": "4da96d01c8e2",
+  "yield": "HIGH",
+  "why": "LiAlH4 reducing an ester to a primary alcohol is a common discrete"
+ },
+ {
+  "front": "What does a Grignard reagent plus a ketone yield?",
+  "fp": "af38c03f18a4",
+  "yield": "LOW",
+  "why": "Restates the Grignard-ketone card"
+ },
+ {
+  "front": "What does the oxyanion hole accomplish in protease catalysis?",
+  "fp": "2be7dcef840b",
+  "yield": "MEDIUM",
+  "why": "Oxyanion hole is second-tier enzyme mechanism detail"
+ },
+ {
+  "front": "What is a Michael addition (1,4-conjugate addition)?",
+  "fp": "3725a2dbb215",
+  "yield": "HIGH",
+  "why": "Michael addition definition is standard outline content"
+ },
+ {
+  "front": "What is an aldol condensation?",
+  "fp": "0827b9b97cb7",
+  "yield": "LOW",
+  "why": "Restates the aldol card"
+ },
+ {
+  "front": "What is saponification?",
+  "fp": "28e5100d3531",
+  "yield": "ULTRA_HIGH",
+  "why": "Saponification and its irreversibility are tested every year"
+ },
+ {
+  "front": "What is the Fischer esterification reaction?",
+  "fp": "9cee0e14145b",
+  "yield": "ULTRA_HIGH",
+  "why": "Fischer esterification is a perennial reaction item"
+ },
+ {
+  "front": "What is the product when a hemiacetal/hemiketal forms, and how does it become an acetal?",
+  "fp": "0c6d7459a76d",
+  "yield": "ULTRA_HIGH",
+  "why": "Hemiacetal vs acetal formation is core and drives sugar questions"
+ },
+ {
+  "front": "What makes a proton alpha, and why does that position matter?",
+  "fp": "3d3aaf347124",
+  "yield": "HIGH",
+  "why": "Alpha-carbon definition and nucleophilic role is core reasoning"
+ },
+ {
+  "front": "When a tetrahedral intermediate collapses, which attached group leaves?",
+  "fp": "6a4db17085f8",
+  "yield": "HIGH",
+  "why": "Weaker base leaves from the tetrahedral intermediate is a common step"
+ },
+ {
+  "front": "Which fatty-acid synthesis step is Claisen-type, and why is malonyl used?",
+  "fp": "d5e207cd7976",
+  "yield": "MEDIUM",
+  "why": "Fatty-acid synthesis Claisen step is biochem passage context"
+ },
+ {
+  "front": "Which is more electrophilic, an aldehyde or a ketone, and why?",
+  "fp": "e2a3358c9a89",
+  "yield": "ULTRA_HIGH",
+  "why": "Aldehyde vs ketone electrophilicity reasoning is tested every year"
+ },
+ {
+  "front": "Which is more reactive toward nucleophilic addition: aldehyde or ketone?",
+  "fp": "663cc3ef7338",
+  "yield": "LOW",
+  "why": "Restates the aldehyde vs ketone reactivity card"
+ },
+ {
+  "front": "Why are $\\alpha$-hydrogens acidic?",
+  "fp": "095fc619d5d3",
+  "yield": "ULTRA_HIGH",
+  "why": "Enolate stabilization of alpha-H acidity is foundational"
+ },
+ {
+  "front": "Why are amides so resistant to hydrolysis?",
+  "fp": "8ee126c31231",
+  "yield": "ULTRA_HIGH",
+  "why": "Amide resonance stability underlies peptide-bond questions every year"
+ },
+ {
+  "front": "Why do $\\beta$-keto acids decarboxylate easily?",
+  "fp": "0bb72b9651bf",
+  "yield": "LOW",
+  "why": "Restates the beta-keto acid decarboxylation card"
+ },
+ {
+  "front": "Why do aldehydes and ketones give addition while esters and acid chlorides give substitution?",
+  "fp": "e067a4fb66ba",
+  "yield": "ULTRA_HIGH",
+  "why": "Addition vs substitution set by leaving group is the foundational distinction"
+ },
+ {
+  "front": "Why do Michael acceptors such as acrylamide modify proteins irreversibly?",
+  "fp": "b4bb6e86da10",
+  "yield": "LOW",
+  "why": "Acrylamide protein modification is off-outline detail"
+ },
+ {
+  "front": "Why does a weaker base such as sodium ethoxide at room temperature give the thermodynamic enolate instead?",
+  "fp": "9d3c6bfb3daa",
+  "yield": "MEDIUM",
+  "why": "Reversibility reasoning supports the thermodynamic enolate card"
+ },
+ {
+  "front": "Why does acetoacetate spontaneously become acetone in ketoacidosis?",
+  "fp": "5807f85a762b",
+  "yield": "MEDIUM",
+  "why": "Acetoacetate to acetone is a clinical application of decarboxylation"
+ },
+ {
+  "front": "Why does the body activate acyl groups as thioesters like acetyl-CoA?",
+  "fp": "fa029ebbc940",
+  "yield": "HIGH",
+  "why": "Why thioesters are high-energy is a common biochem crossover"
+ },
+ {
+  "front": "Why is acetoacetyl-CoA cleaved by CoA-SH rather than by water during beta-oxidation?",
+  "fp": "51c600866e95",
+  "yield": "MEDIUM",
+  "why": "Thiolase as retro-Claisen is beta-oxidation passage context"
+ },
+ {
+  "front": "Why is hemiacetal chemistry central to sugars?",
+  "fp": "060e92fd771a",
+  "yield": "HIGH",
+  "why": "Cyclic hemiacetal creating the anomeric carbon is common sugar content"
+ },
+ {
+  "front": "Why is the carbonyl carbon electrophilic?",
+  "fp": "9f3ddfacf273",
+  "yield": "ULTRA_HIGH",
+  "why": "Carbonyl carbon electrophilicity is the foundation of the section"
+ }
+]

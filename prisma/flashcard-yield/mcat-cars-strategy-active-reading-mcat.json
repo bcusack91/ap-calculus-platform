@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you identify the thesis when it is not stated plainly?",
+  "fp": "59fea213fc50",
+  "yield": "HIGH",
+  "why": "Finding an unstated thesis is needed on most main-idea questions"
+ },
+ {
+  "front": "How should you handle dense or confusing sentences?",
+  "fp": "b6dd314f4159",
+  "yield": "MEDIUM",
+  "why": "Keep-moving on dense sentences is pacing advice with some value"
+ },
+ {
+  "front": "What are the highest-value words to notice?",
+  "fp": "b7dee6702f32",
+  "yield": "ULTRA_HIGH",
+  "why": "Transition/signal words are the primary reading cue on every passage"
+ },
+ {
+  "front": "What does active reading mean in CARS?",
+  "fp": "1b590cc53cd6",
+  "yield": "MEDIUM",
+  "why": "Definition of active reading; the specific tactics are on other cards"
+ },
+ {
+  "front": "What is a passage map?",
+  "fp": "0f645fc8a4bd",
+  "yield": "HIGH",
+  "why": "Passage map is the standard structure-tracking tactic used every passage"
+ },
+ {
+  "front": "What is the difference between topic and main idea?",
+  "fp": "d18de9b3e7e5",
+  "yield": "HIGH",
+  "why": "Topic vs main idea separates correct from too-broad answers"
+ },
+ {
+  "front": "What question should you ask at the end of each paragraph?",
+  "fp": "5bf6c986d590",
+  "yield": "HIGH",
+  "why": "Paragraph-function check is applied on every passage"
+ },
+ {
+  "front": "Why is tone so important to track?",
+  "fp": "1e148eb86cd2",
+  "yield": "HIGH",
+  "why": "Tone/attitude questions and certainty-matching are common"
+ }
+]

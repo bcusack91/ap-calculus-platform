@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Compare mean, median, and mode.",
+  "fp": "9a9eeade304a",
+  "yield": "HIGH",
+  "why": "Mean vs median outlier sensitivity is a standard data-interpretation question"
+ },
+ {
+  "front": "Contrast sensitivity and specificity.",
+  "fp": "5ad15d905cc8",
+  "yield": "ULTRA_HIGH",
+  "why": "Sensitivity/specificity appears on essentially every administration"
+ },
+ {
+  "front": "What are positive and negative predictive value?",
+  "fp": "a0d9094c40e9",
+  "yield": "HIGH",
+  "why": "PPV/NPV and their prevalence dependence are commonly tested"
+ },
+ {
+  "front": "What does a confidence interval tell you?",
+  "fp": "b6c762f07697",
+  "yield": "HIGH",
+  "why": "CI including 0 (or 1) = non-significant is a recurring passage-data step"
+ },
+ {
+  "front": "What does a correlation coefficient $r$ indicate?",
+  "fp": "fd0ba1ea0fd9",
+  "yield": "ULTRA_HIGH",
+  "why": "Correlation strength/direction and correlation-not-causation tested every year"
+ },
+ {
+  "front": "What does a p-value mean?",
+  "fp": "1ff2f73ea428",
+  "yield": "ULTRA_HIGH",
+  "why": "p-value meaning and the 0.05 threshold are tested on every exam"
+ },
+ {
+  "front": "What does standard deviation measure?",
+  "fp": "8e0a7b15b8cc",
+  "yield": "HIGH",
+  "why": "SD as spread and the 68-95-99.7 rule are commonly needed for data questions"
+ },
+ {
+  "front": "What is a Type I vs. Type II error?",
+  "fp": "4e129725b8f8",
+  "yield": "ULTRA_HIGH",
+  "why": "Type I/II error definitions are a yearly discrete-level fact"
+ }
+]

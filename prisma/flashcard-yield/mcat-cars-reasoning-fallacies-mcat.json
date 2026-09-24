@@ -1,0 +1,56 @@
+[
+ {
+  "front": "Define post hoc ergo propter hoc.",
+  "fp": "7263fc119c69",
+  "yield": "HIGH",
+  "why": "Post hoc is the correlation/causation flaw, the most common tested reasoning error"
+ },
+ {
+  "front": "How do you recognize a straw man in a passage?",
+  "fp": "03cbd2e6dd65",
+  "yield": "MEDIUM",
+  "why": "Straw-man recognition is occasionally the point of a critique question"
+ },
+ {
+  "front": "What is a false dichotomy?",
+  "fp": "cccc8dbb0dd4",
+  "yield": "MEDIUM",
+  "why": "False-dichotomy pattern appears occasionally in reasoning-flaw questions"
+ },
+ {
+  "front": "What is a hasty generalization?",
+  "fp": "0fdc5ef821e9",
+  "yield": "HIGH",
+  "why": "Hasty generalization is the sample-scope flaw tested frequently"
+ },
+ {
+  "front": "What is a slippery slope fallacy?",
+  "fp": "db2803ae0690",
+  "yield": "MEDIUM",
+  "why": "Slippery slope is a recognizable but infrequent CARS pattern"
+ },
+ {
+  "front": "What is an ad hominem fallacy?",
+  "fp": "fecea110a2ae",
+  "yield": "LOW",
+  "why": "Ad hominem rarely appears in academic CARS prose; name-only trivia"
+ },
+ {
+  "front": "What is an appeal to authority fallacy?",
+  "fp": "1b8e16e728b4",
+  "yield": "MEDIUM",
+  "why": "Appeal to authority surfaces when passages cite experts; secondary"
+ },
+ {
+  "front": "What is an appeal to ignorance?",
+  "fp": "929dbb7436fe",
+  "yield": "LOW",
+  "why": "Appeal to ignorance is seldom the flaw a CARS question targets"
+ },
+ {
+  "front": "What is equivocation?",
+  "fp": "c5862b23cbda",
+  "yield": "MEDIUM",
+  "why": "Equivocation ties to word-in-context shifts; useful but niche"
+ }
+]

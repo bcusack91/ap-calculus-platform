@@ -1,0 +1,410 @@
+[
+ {
+  "front": "A hydraulic lift multiplies force tenfold, so the input piston must move {{c1::ten times farther}}.",
+  "fp": "1ba52a2908b8",
+  "yield": "HIGH",
+  "why": "Hydraulic force-distance tradeoff via incompressibility; common Pascal follow-up"
+ },
+ {
+  "front": "A mass on a spring has period $T = 2\\pi\\sqrt{m/k}$, so its period is independent of {{c1::amplitude and gravity}}.",
+  "fp": "eb8aa5d18981",
+  "yield": "ULTRA_HIGH",
+  "why": "Spring period equation and its amplitude independence; calculated every year"
+ },
+ {
+  "front": "A plot of sound level in dB against the logarithm of $I/I_0$ is a straight line with slope {{c1::10}}.",
+  "fp": "8ef9fc76088f",
+  "yield": "LOW",
+  "why": "dB semi-log slope is graph trivia; the definition card covers it"
+ },
+ {
+  "front": "A simple pendulum has period $T = 2\\pi\\sqrt{L/g}$, so its period is independent of {{c1::the bob's mass}}.",
+  "fp": "820ca6bdd585",
+  "yield": "ULTRA_HIGH",
+  "why": "Pendulum period equation and mass independence; tested every year"
+ },
+ {
+  "front": "A siren and a listener move at the same velocity in the same direction; the observed frequency is {{c1::unchanged}}.",
+  "fp": "562d70c63d2f",
+  "yield": "MEDIUM",
+  "why": "No relative motion means no Doppler shift; edge case of the Doppler card"
+ },
+ {
+  "front": "A sound is 10 times more intense than another. How many decibels louder, and does it sound ten times as loud?",
+  "fp": "c1c850c405f1",
+  "yield": "HIGH",
+  "why": "10x intensity = +10 dB; standard decibel reasoning"
+ },
+ {
+  "front": "A sound wave passes from air into soft tissue. Which wave properties change?",
+  "fp": "df02e9bd2c65",
+  "yield": "HIGH",
+  "why": "Frequency fixed across media; restated by the shorter constant-frequency card"
+ },
+ {
+  "front": "A standing wave forms when:",
+  "fp": "3c6fb8f6954d",
+  "yield": "HIGH",
+  "why": "Standing wave from counter-propagating waves; common discrete"
+ },
+ {
+  "front": "A submarine is at a depth of 100 m in seawater (ρ = 1025 $kg/m^{3}$). What is the gauge pressure? (g = 9.8 $m/s^{2}$)",
+  "fp": "0fdc3ba92cf9",
+  "yield": "ULTRA_HIGH",
+  "why": "Gauge pressure rho*g*h calculation; appears every year"
+ },
+ {
+  "front": "A vessel narrows to half its radius at constant driving pressure. By what factor does flow drop?",
+  "fp": "cfa455c69983",
+  "yield": "HIGH",
+  "why": "Poiseuille r^4 numeric application (half radius, 1/16 flow)"
+ },
+ {
+  "front": "Acoustic impedance is {{c1::$Z = \\rho v$}}, and reflection at a boundary is strongest when {{c1::the mismatch is large}}.",
+  "fp": "b7061bdee9a4",
+  "yield": "MEDIUM",
+  "why": "Acoustic impedance Z=rho*v is prep-book ultrasound detail beyond the outline"
+ },
+ {
+  "front": "An IV bag must hang high enough that {{c1::$\\rho g h$}} exceeds {{c1::the patient's venous pressure}}.",
+  "fp": "bb00851e05be",
+  "yield": "HIGH",
+  "why": "IV bag height via rho*g*h vs venous pressure; classic clinical application"
+ },
+ {
+  "front": "An object floats when its density is:",
+  "fp": "6534f4eaae6a",
+  "yield": "ULTRA_HIGH",
+  "why": "Float/sink by density comparison; foundational buoyancy fact"
+ },
+ {
+  "front": "Blood has a specific gravity near 1.06, so its density is {{c1::about $1060$ kg/m$^3$}}.",
+  "fp": "c17a77da8ad8",
+  "yield": "MEDIUM",
+  "why": "Specific gravity definition with blood value; supporting detail"
+ },
+ {
+  "front": "By Bernoulli's principle, where a fluid speeds up at constant height its pressure {{c1::decreases}}.",
+  "fp": "e690d58f0a3b",
+  "yield": "ULTRA_HIGH",
+  "why": "Bernoulli: faster flow, lower pressure; tested every year"
+ },
+ {
+  "front": "Continuity or Poiseuille: which explains slow capillary flow, and which explains high resistance in a stenosis?",
+  "fp": "e4e5b4644cad",
+  "yield": "HIGH",
+  "why": "Continuity vs Poiseuille for capillaries vs stenosis; common circulation passage step"
+ },
+ {
+  "front": "Contrast longitudinal and transverse waves.",
+  "fp": "4752a12a78e2",
+  "yield": "ULTRA_HIGH",
+  "why": "Longitudinal vs transverse waves; foundational wave definition"
+ },
+ {
+  "front": "Describe the Doppler effect.",
+  "fp": "e28e6c27077d",
+  "yield": "ULTRA_HIGH",
+  "why": "Doppler effect direction; on essentially every administration"
+ },
+ {
+  "front": "Does the buoyant force on a fully submerged object increase with depth?",
+  "fp": "4dc9fd6f3bcd",
+  "yield": "HIGH",
+  "why": "Buoyancy independent of depth for incompressible fluid; classic conceptual"
+ },
+ {
+  "front": "For a string fixed at both ends, the allowed wavelengths are {{c1::$\\lambda_n = 2L/n$}}.",
+  "fp": "b4cd8f1eefbf",
+  "yield": "ULTRA_HIGH",
+  "why": "String harmonics lambda_n=2L/n; standing-wave calculation every year"
+ },
+ {
+  "front": "Give hydrostatic pressure with depth.",
+  "fp": "a45c677fbc10",
+  "yield": "ULTRA_HIGH",
+  "why": "Hydrostatic pressure P=P0+rho*g*h; core fluids equation"
+ },
+ {
+  "front": "Give the continuity equation.",
+  "fp": "a9a8786faee8",
+  "yield": "ULTRA_HIGH",
+  "why": "Continuity equation A1v1=A2v2; used every year"
+ },
+ {
+  "front": "How do the harmonics of an open pipe differ from a pipe closed at one end?",
+  "fp": "4475ee8a55c7",
+  "yield": "ULTRA_HIGH",
+  "why": "Open vs closed pipe harmonics; tested every year"
+ },
+ {
+  "front": "How do you reason out the direction of a Doppler shift without the formula?",
+  "fp": "378cb052fb68",
+  "yield": "MEDIUM",
+  "why": "Doppler direction reasoning; restates the Doppler card"
+ },
+ {
+  "front": "How does absolute pressure at depth differ from gauge pressure?",
+  "fp": "032a38ba92c8",
+  "yield": "ULTRA_HIGH",
+  "why": "Absolute vs gauge pressure distinction; needed on every pressure calculation"
+ },
+ {
+  "front": "How does hydrostatic weighing determine body composition?",
+  "fp": "c78b51020305",
+  "yield": "MEDIUM",
+  "why": "Hydrostatic weighing application; plausible passage context"
+ },
+ {
+  "front": "How does raising hematocrit affect cardiac workload?",
+  "fp": "34ac96f7324b",
+  "yield": "MEDIUM",
+  "why": "Hematocrit and viscosity in Poiseuille; secondary physiology link"
+ },
+ {
+  "front": "How does sound intensity vary with distance from a point source?",
+  "fp": "5ab0f6c47155",
+  "yield": "HIGH",
+  "why": "Inverse-square intensity from a point source; common calculation"
+ },
+ {
+  "front": "How does vessel radius affect flow (Poiseuille)?",
+  "fp": "b9cb4b959fdd",
+  "yield": "ULTRA_HIGH",
+  "why": "Poiseuille r^4 dependence; the qualitative Poiseuille fact tested every year"
+ },
+ {
+  "front": "In Doppler ultrasound of blood flow, why does the angle between beam and vessel matter?",
+  "fp": "f032c85236bd",
+  "yield": "LOW",
+  "why": "Doppler beam angle cos(theta) is off-outline ultrasound detail"
+ },
+ {
+  "front": "In Poiseuille's law, flow rate is proportional to {{c1::the fourth power of the radius}}.",
+  "fp": "59bca7febc02",
+  "yield": "HIGH",
+  "why": "Poiseuille r^4 cloze; restates the main Poiseuille card"
+ },
+ {
+  "front": "In simple harmonic motion, where are speed and acceleration each maximal?",
+  "fp": "4be6d0d8001f",
+  "yield": "HIGH",
+  "why": "SHM speed max at equilibrium, acceleration max at extremes; common discrete"
+ },
+ {
+  "front": "Laplace's law for an alveolus gives $P = 2\\gamma/r$. What does it predict?",
+  "fp": "8c027c226714",
+  "yield": "MEDIUM",
+  "why": "Laplace's law for alveoli; respiratory physiology crossover"
+ },
+ {
+  "front": "Leg swing during walking behaves like a pendulum, so a taller person's natural cadence is {{c1::slower}}.",
+  "fp": "3873bbb363fe",
+  "yield": "LOW",
+  "why": "Walking cadence pendulum analogy is trivia"
+ },
+ {
+  "front": "One mmHg is about {{c1::133 Pa}}, and atmospheric pressure is about {{c1::760 mmHg}}.",
+  "fp": "fd3db82df82e",
+  "yield": "HIGH",
+  "why": "mmHg to Pa and 760 mmHg = 1 atm; unit conversion needed in clinical passages"
+ },
+ {
+  "front": "Pressure in a static fluid depends on depth and density but not on {{c1::the shape or volume of the container}}.",
+  "fp": "6a32dad8edee",
+  "yield": "HIGH",
+  "why": "Pressure independent of container shape; hydrostatic paradox is a common conceptual"
+ },
+ {
+  "front": "Raising sound intensity by a factor of 1000 raises the level by {{c1::30 dB}}.",
+  "fp": "7dea6b9aef69",
+  "yield": "HIGH",
+  "why": "Factor 1000 intensity = +30 dB; standard decibel arithmetic"
+ },
+ {
+  "front": "Relate wave speed, frequency, and wavelength.",
+  "fp": "ef5e90ee8d37",
+  "yield": "ULTRA_HIGH",
+  "why": "v=f*lambda; foundational wave equation"
+ },
+ {
+  "front": "Sound intensity is proportional to {{c1::amplitude squared}}, so doubling the amplitude multiplies intensity by {{c1::4}}.",
+  "fp": "f8229d32a926",
+  "yield": "HIGH",
+  "why": "Intensity proportional to amplitude squared; common wave-property item"
+ },
+ {
+  "front": "Sound level in decibels is {{c1::$\\beta = 10\\log(I/I_0)$}}.",
+  "fp": "b279cafc82a3",
+  "yield": "ULTRA_HIGH",
+  "why": "Decibel definition beta=10log(I/I0); calculated every year"
+ },
+ {
+  "front": "Sound passing through the interior of a liquid or gas travels only as a {{c1::longitudinal}} wave.",
+  "fp": "c981812c21cf",
+  "yield": "MEDIUM",
+  "why": "Sound only longitudinal in fluids; supporting detail for the wave-type card"
+ },
+ {
+  "front": "Sound travels fastest in:",
+  "fp": "378f4932db3f",
+  "yield": "HIGH",
+  "why": "Sound fastest in solids, none in vacuum; common discrete"
+ },
+ {
+  "front": "State Archimedes' principle.",
+  "fp": "ee0c21883644",
+  "yield": "ULTRA_HIGH",
+  "why": "Archimedes' principle; on essentially every administration"
+ },
+ {
+  "front": "State Bernoulli's principle.",
+  "fp": "51c88a623f3d",
+  "yield": "ULTRA_HIGH",
+  "why": "Bernoulli's equation; core fluids equation"
+ },
+ {
+  "front": "State Pascal's principle and its hydraulic consequence.",
+  "fp": "bebf5735b159",
+  "yield": "ULTRA_HIGH",
+  "why": "Pascal's principle and F1/A1=F2/A2; calculated every year"
+ },
+ {
+  "front": "Surface tension arises from {{c1::cohesive forces between liquid molecules}} at an interface.",
+  "fp": "38ab8b55114c",
+  "yield": "MEDIUM",
+  "why": "Surface tension origin; outline item but rarely more than context"
+ },
+ {
+  "front": "The buoyant force equals the weight of {{c1::the fluid displaced}}, not the weight of the object.",
+  "fp": "89c494122405",
+  "yield": "HIGH",
+  "why": "Buoyant force equals displaced fluid weight; restates Archimedes card"
+ },
+ {
+  "front": "The threshold of hearing is {{c1::$10^{-12}$ W/m$^2$}}, defined as {{c1::0 dB}}.",
+  "fp": "7d80ca82c2ad",
+  "yield": "HIGH",
+  "why": "Threshold of hearing 1e-12 W/m^2 = 0 dB; reference value used in dB problems"
+ },
+ {
+  "front": "Two tuning forks at 440 Hz and 444 Hz sound together; the beat frequency is {{c1::4 Hz}}.",
+  "fp": "9d77c44c2e59",
+  "yield": "HIGH",
+  "why": "Beat frequency equals frequency difference; common discrete"
+ },
+ {
+  "front": "Ultrasound imaging relies on:",
+  "fp": "7631dd246951",
+  "yield": "MEDIUM",
+  "why": "Ultrasound relies on impedance reflection; passage context"
+ },
+ {
+  "front": "Vascular resistance is {{c1::$8\\eta L/(\\pi r^4)$}}, so viscosity and length enter {{c1::linearly}}.",
+  "fp": "a5dd0b44fab8",
+  "yield": "HIGH",
+  "why": "Resistance 8*eta*L/(pi*r^4); viscosity and length linear vs r^4"
+ },
+ {
+  "front": "Wave speed on a string is $v = \\sqrt{T/\\mu}$, so tightening a string {{c1::raises}} its pitch.",
+  "fp": "15cb0ab64c9a",
+  "yield": "MEDIUM",
+  "why": "String wave speed sqrt(T/mu) and pitch; beyond outline sound-speed basics"
+ },
+ {
+  "front": "What distinguishes turbulent from laminar flow, and why does it matter clinically?",
+  "fp": "314d94b4009d",
+  "yield": "MEDIUM",
+  "why": "Turbulent vs laminar and Reynolds number; secondary qualitative detail"
+ },
+ {
+  "front": "What four assumptions does Bernoulli's equation require?",
+  "fp": "dd23ebb8835b",
+  "yield": "MEDIUM",
+  "why": "Bernoulli assumptions; useful for understanding, rarely the tested point"
+ },
+ {
+  "front": "What fraction of a floating object sits below the surface?",
+  "fp": "ae4e6e1b52f6",
+  "yield": "ULTRA_HIGH",
+  "why": "Submerged fraction equals density ratio; classic buoyancy calculation"
+ },
+ {
+  "front": "What happens to pressure inside an arterial stenosis?",
+  "fp": "150eae6c957a",
+  "yield": "HIGH",
+  "why": "Pressure drop inside a stenosis; standard Bernoulli application"
+ },
+ {
+  "front": "What is resonance, and where does it matter physiologically?",
+  "fp": "c65fb093c8a8",
+  "yield": "MEDIUM",
+  "why": "Resonance definition with physiological examples; secondary"
+ },
+ {
+  "front": "When a wave enters a new medium, what stays constant?",
+  "fp": "27e85bbd867f",
+  "yield": "ULTRA_HIGH",
+  "why": "Frequency constant across media; foundational wave fact"
+ },
+ {
+  "front": "Which raises resistance more: halving a vessel's radius, or doubling its length?",
+  "fp": "dd61d304468f",
+  "yield": "MEDIUM",
+  "why": "Radius vs length effect on resistance; restates the Poiseuille cards"
+ },
+ {
+  "front": "Why can a forced expiration collapse an airway (dynamic compression)?",
+  "fp": "0290888c01e6",
+  "yield": "LOW",
+  "why": "Dynamic airway compression is respiratory-physiology detail"
+ },
+ {
+  "front": "Why do higher-frequency ultrasound probes give better resolution but shallower penetration?",
+  "fp": "5dbfd3373c88",
+  "yield": "LOW",
+  "why": "Ultrasound resolution vs penetration tradeoff is off-outline"
+ },
+ {
+  "front": "Why do stiletto heels damage a floor when flat shoes do not, if body weight is unchanged?",
+  "fp": "11dd683f7780",
+  "yield": "MEDIUM",
+  "why": "Pressure=F/A applied to heels; definition-level application"
+ },
+ {
+  "front": "Why does a person float higher in salt water than in fresh water?",
+  "fp": "113d1bf552c6",
+  "yield": "HIGH",
+  "why": "Floating higher in denser fluid; common Archimedes conceptual"
+ },
+ {
+  "front": "Why does a person with a higher body fat fraction float more easily?",
+  "fp": "03f636b6251b",
+  "yield": "LOW",
+  "why": "Restates float/sink by density using body-fat trivia"
+ },
+ {
+  "front": "Why does an aneurysm tend to enlarge once it forms?",
+  "fp": "130c88ab8a08",
+  "yield": "LOW",
+  "why": "Aneurysm growth combines Bernoulli and Laplace; off-outline clinical detail"
+ },
+ {
+  "front": "Why is arterial pressure higher in the feet than at the heart when standing?",
+  "fp": "0159cf60661a",
+  "yield": "HIGH",
+  "why": "Hydrostatic column adds rho*g*h to arterial pressure; common physiology application"
+ },
+ {
+  "front": "Why is blood slowest in capillaries even though each capillary is tiny?",
+  "fp": "065f0df44dab",
+  "yield": "MEDIUM",
+  "why": "Capillary velocity via continuity; restates the continuity vs Poiseuille card"
+ },
+ {
+  "front": "Why is coupling gel applied between an ultrasound transducer and the skin?",
+  "fp": "43f5766e1201",
+  "yield": "LOW",
+  "why": "Coupling gel impedance matching is ultrasound trivia"
+ }
+]

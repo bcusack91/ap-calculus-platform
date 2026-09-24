@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Contrast consequentialism and deontology.",
+  "fp": "38ddc9090004",
+  "yield": "MEDIUM",
+  "why": "Framework vocabulary aids ethics passages but CARS never tests it directly"
+ },
+ {
+  "front": "How do you identify an unstated ethical assumption?",
+  "fp": "6e4d8c415031",
+  "yield": "HIGH",
+  "why": "Unstated-assumption questions appear on nearly every persuasive passage"
+ },
+ {
+  "front": "How should you approach an ethics passage you personally disagree with?",
+  "fp": "5fc796ff9b87",
+  "yield": "HIGH",
+  "why": "Setting aside personal views is required on every ethics passage"
+ },
+ {
+  "front": "What are the four principles of medical ethics?",
+  "fp": "63e5313c0bbd",
+  "yield": "LOW",
+  "why": "Medical-ethics content; off-CARS and covered in the Psych/Soc decks"
+ },
+ {
+  "front": "What is a common question type in ethics passages?",
+  "fp": "a496f4190c67",
+  "yield": "HIGH",
+  "why": "Apply-the-principle is one of AAMC's three CARS skills; very common"
+ },
+ {
+  "front": "What is the core structure of an ethics passage?",
+  "fp": "63a911373f9d",
+  "yield": "MEDIUM",
+  "why": "Structural description; useful context, rarely the point a question turns on"
+ },
+ {
+  "front": "What is virtue ethics?",
+  "fp": "1b3ad7722e85",
+  "yield": "LOW",
+  "why": "Virtue-ethics definition is content trivia for a reasoning section"
+ },
+ {
+  "front": "Why are ethics passages often written as dialogues with objections?",
+  "fp": "29e00503d353",
+  "yield": "MEDIUM",
+  "why": "Concession-rebuttal is covered as the primary card in the argument-structure deck"
+ }
+]

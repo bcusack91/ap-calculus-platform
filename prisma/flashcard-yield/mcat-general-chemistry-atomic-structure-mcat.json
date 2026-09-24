@@ -1,0 +1,404 @@
+[
+ {
+  "front": "A configuration ending in {{c1::$ns^2 np^6$}} is a noble gas, which is why ions form to reach it.",
+  "fp": "026807f8058c",
+  "yield": "ULTRA_HIGH",
+  "why": "Ions form to reach noble-gas configuration; predicts charges used on every exam"
+ },
+ {
+  "front": "A neutron-rich nucleus decays by {{c1::beta-minus emission}}; a neutron-poor one uses {{c2::positron emission or electron capture}}.",
+  "fp": "9f3cf032c1ca",
+  "yield": "HIGH",
+  "why": "Decay mode from neutron-to-proton ratio; commonly tested nuclear reasoning"
+ },
+ {
+  "front": "A photon ejects an electron only above a threshold frequency. This shows:",
+  "fp": "1c25c6d8f40d",
+  "yield": "HIGH",
+  "why": "Photoelectric threshold demonstrates quantization; commonly tested"
+ },
+ {
+  "front": "Adding a second electron to an anion is always {{c1::endothermic}}.",
+  "fp": "df04f378fa4d",
+  "yield": "MEDIUM",
+  "why": "Second electron affinity endothermic; secondary detail"
+ },
+ {
+  "front": "After n half-lives the fraction of a sample remaining is {{c1::$(1/2)^n$}}.",
+  "fp": "13052c1c1a2b",
+  "yield": "ULTRA_HIGH",
+  "why": "Fraction remaining (1/2)^n; half-life calculation appears every year"
+ },
+ {
+  "front": "Alpha decay ejects {{c1::a helium-4 nucleus}}, lowering Z by {{c2::2}} and A by 4.",
+  "fp": "48612622a18a",
+  "yield": "ULTRA_HIGH",
+  "why": "Alpha decay lowers Z by 2 and A by 4; balancing nuclear equations is tested every year"
+ },
+ {
+  "front": "An electron dropping to a lower level {{c1::emits}} a photon whose energy equals {{c2::the gap between the two levels}}.",
+  "fp": "9a9acac14125",
+  "yield": "ULTRA_HIGH",
+  "why": "Photon energy equals level gap on emission/absorption; core atomic-spectra fact"
+ },
+ {
+  "front": "An emission spectrum line results from an electron:",
+  "fp": "4e3e58a78053",
+  "yield": "LOW",
+  "why": "Restates the emission-photon card"
+ },
+ {
+  "front": "Carbon-14 dating works on once-living material because $^{14}C$ has a half-life of about {{c1::5730 years}}.",
+  "fp": "91abd989e990",
+  "yield": "LOW",
+  "why": "C-14 half-life 5730 years; trivia number"
+ },
+ {
+  "front": "Compare electron affinity for halogens, noble gases, and group 2 metals.",
+  "fp": "00fbbb8e959d",
+  "yield": "HIGH",
+  "why": "Electron affinity across halogens, noble gases, group 2; common periodic-trend question"
+ },
+ {
+  "front": "Compare positron emission and electron capture.",
+  "fp": "f3291cf58a22",
+  "yield": "HIGH",
+  "why": "Positron emission vs electron capture both lower Z by 1; commonly tested"
+ },
+ {
+  "front": "Compare the penetrating and ionizing power of alpha, beta, and gamma radiation.",
+  "fp": "edf0614a0f4a",
+  "yield": "HIGH",
+  "why": "Penetrating vs ionizing power of alpha, beta, gamma; common discrete"
+ },
+ {
+  "front": "Cr and Cu each promote {{c1::one 4s electron}} into 3d to reach a {{c2::half-filled or completely filled}} d subshell.",
+  "fp": "4a2eaf88d84e",
+  "yield": "HIGH",
+  "why": "Cr and Cu anomalous configurations; frequent electron-configuration item"
+ },
+ {
+  "front": "De Broglie says $\\lambda = h/p$, so a particle's wavelength is {{c1::inversely proportional to its momentum}}.",
+  "fp": "83b676787d54",
+  "yield": "MEDIUM",
+  "why": "De Broglie wavelength; secondary quantum concept"
+ },
+ {
+  "front": "Define effective nuclear charge ($Z_{eff}$).",
+  "fp": "1ee7414165a3",
+  "yield": "MEDIUM",
+  "why": "Zeff = Z - S definition; restated within the Zeff-drives-trends card"
+ },
+ {
+  "front": "Distinguish mass number, atomic mass, and molar mass.",
+  "fp": "1b72b717b91e",
+  "yield": "HIGH",
+  "why": "Mass number vs atomic mass vs molar mass; common definitional question"
+ },
+ {
+  "front": "Effective nuclear charge is about {{c1::$Z - S$}}, where core electrons shield {{c2::well}} but same-shell electrons shield poorly.",
+  "fp": "15cab32a3250",
+  "yield": "ULTRA_HIGH",
+  "why": "Effective nuclear charge drives every periodic trend; the reasoning behind yearly trend questions"
+ },
+ {
+  "front": "Electron configuration of $Fe^{2+}$ (Z=26)?",
+  "fp": "bd9bfdafb3fd",
+  "yield": "ULTRA_HIGH",
+  "why": "Fe2+ is [Ar]3d6, 4s lost first; transition-metal ion configuration tested every year"
+ },
+ {
+  "front": "Energy levels are negative, but an emitted photon carries {{c1::the absolute value of $\\Delta E$}}.",
+  "fp": "0c504c681339",
+  "yield": "MEDIUM",
+  "why": "Negative energy levels and photon carries |dE|; supporting nuance"
+ },
+ {
+  "front": "Gamma emission changes {{c1::neither Z nor A}}.",
+  "fp": "1292c145d56b",
+  "yield": "ULTRA_HIGH",
+  "why": "Gamma emission changes neither Z nor A; decay-type identification every year"
+ },
+ {
+  "front": "How do fission and fusion differ in the nuclei involved?",
+  "fp": "39a1e5a50b8e",
+  "yield": "MEDIUM",
+  "why": "Fission vs fusion; secondary nuclear content"
+ },
+ {
+  "front": "How do isotopes of one element differ, and how does that affect chemistry?",
+  "fp": "16ffcd3f08e5",
+  "yield": "ULTRA_HIGH",
+  "why": "Isotopes: same Z, different neutrons, same chemistry; foundational definition"
+ },
+ {
+  "front": "How do you recognize an excited-state electron configuration?",
+  "fp": "5bbe7257c126",
+  "yield": "HIGH",
+  "why": "Recognizing an excited-state configuration; common discrete"
+ },
+ {
+  "front": "How do you tell an absorption spectrum from an emission spectrum, and why do their lines line up?",
+  "fp": "49d85b14a936",
+  "yield": "MEDIUM",
+  "why": "Absorption vs emission spectra appearance; covered by the discrete-lines card"
+ },
+ {
+  "front": "How does atomic radius trend across a period and down a group?",
+  "fp": "e4cf8bef148c",
+  "yield": "ULTRA_HIGH",
+  "why": "Atomic radius trend across and down; tested every administration"
+ },
+ {
+  "front": "How many orbitals and electrons does a subshell of quantum number l hold?",
+  "fp": "5b5232046392",
+  "yield": "HIGH",
+  "why": "Orbitals and electrons per subshell, 2n^2 per shell; standard counting fact"
+ },
+ {
+  "front": "Hydrogen's levels are $E_n = -13.6/n^2$ eV, so ionizing a ground-state H atom costs {{c1::13.6 eV}}.",
+  "fp": "318fb2272d6e",
+  "yield": "HIGH",
+  "why": "Hydrogen E_n = -13.6/n^2 and 13.6 eV ionization; common Bohr-model calculation"
+ },
+ {
+  "front": "IE dips from Be to B because {{c1::the p electron is higher in energy}} and from N to O because {{c2::of pairing repulsion in a p orbital}}.",
+  "fp": "d6905b202fab",
+  "yield": "HIGH",
+  "why": "Ionization energy dips Be->B and N->O; frequent periodic-trend exception"
+ },
+ {
+  "front": "In a labeling experiment, $^{35}S$ selectively tags {{c1::protein}} while $^{32}P$ tags {{c2::nucleic acid}}.",
+  "fp": "ed71abfd9145",
+  "yield": "MEDIUM",
+  "why": "35S/32P labeling (Hershey-Chase); molecular biology content covered in other dec [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "In beta-minus decay a {{c1::neutron}} converts to a proton, so Z {{c2::increases by 1}} while A is unchanged.",
+  "fp": "641f82631dc9",
+  "yield": "ULTRA_HIGH",
+  "why": "Beta-minus raises Z by 1; nuclear equation balancing every year"
+ },
+ {
+  "front": "In PET, an emitted positron annihilates with an electron to give {{c1::two 511 keV photons}} traveling {{c2::in opposite directions}}.",
+  "fp": "5f60966532f4",
+  "yield": "LOW",
+  "why": "PET 511 keV annihilation photons; off-outline imaging detail"
+ },
+ {
+  "front": "Iodine-131 treats thyroid disease because it is a {{c1::beta emitter}} and the thyroid {{c2::concentrates iodine}}.",
+  "fp": "68c6e69f5772",
+  "yield": "LOW",
+  "why": "I-131 thyroid therapy; off-outline clinical application"
+ },
+ {
+  "front": "Ionization energy, electron affinity, and electronegativity are three distinct quantities. What does each one measure?",
+  "fp": "5c979a2c450a",
+  "yield": "ULTRA_HIGH",
+  "why": "IE, EA, EN as distinct quantities; periodic-trend definitions tested every year"
+ },
+ {
+  "front": "Isotopes are chemically near-identical, which is exactly what makes {{c1::density labeling}} experiments such as Meselson-Stahl work.",
+  "fp": "7fa108db913d",
+  "yield": "LOW",
+  "why": "Meselson-Stahl density labeling; molecular biology content covered elsewhere"
+ },
+ {
+  "front": "Maximum electrons in the $n=3$ shell?",
+  "fp": "d3cd0b748876",
+  "yield": "MEDIUM",
+  "why": "18 electrons in n=3 shell; worked case of the 2n^2 card"
+ },
+ {
+  "front": "On a photoelectron spectrum, peak position gives {{c1::a subshell's binding energy}} and peak height gives {{c2::how many electrons it holds}}.",
+  "fp": "3e0bebacedaa",
+  "yield": "LOW",
+  "why": "Photoelectron spectroscopy peaks; off-outline (AP Chem) content"
+ },
+ {
+  "front": "Photon shortcut: energy in eV equals {{c1::1240}} divided by wavelength in nm.",
+  "fp": "429f47e7078a",
+  "yield": "MEDIUM",
+  "why": "1240/lambda eV shortcut; handy calculation aid, secondary"
+ },
+ {
+  "front": "Quantum number {{c1::n}} sets energy and size, {{c2::l}} sets subshell shape, $m_l$ sets orientation, $m_s$ sets spin.",
+  "fp": "c2b1b09ff449",
+  "yield": "ULTRA_HIGH",
+  "why": "Four quantum numbers and their allowed values; foundational and tested every year"
+ },
+ {
+  "front": "Radioactive decay rate is unaffected by {{c1::temperature, pressure, and chemical bonding}}, unlike a chemical reaction rate.",
+  "fp": "bade0bafeb76",
+  "yield": "MEDIUM",
+  "why": "Decay rate independent of temperature and bonding; supporting nuance"
+ },
+ {
+  "front": "Raising light intensity raises {{c1::the number of ejected electrons}} but not {{c2::their kinetic energy}}.",
+  "fp": "538a8aa87b05",
+  "yield": "HIGH",
+  "why": "Intensity changes electron count, frequency changes KE; common photoelectric question"
+ },
+ {
+  "front": "Relate photon wavelength, frequency, and energy for an atomic transition.",
+  "fp": "c7669613fbe6",
+  "yield": "ULTRA_HIGH",
+  "why": "E = hf = hc/lambda; core equation used in calculations every year"
+ },
+ {
+  "front": "State Hund's rule and the observable property it explains.",
+  "fp": "73f2bfcc26de",
+  "yield": "ULTRA_HIGH",
+  "why": "Hund's rule and paramagnetism; tested every year via unpaired-electron questions"
+ },
+ {
+  "front": "State Hund's rule.",
+  "fp": "a0639e818a37",
+  "yield": "LOW",
+  "why": "Restates Hund's rule card"
+ },
+ {
+  "front": "State the Pauli exclusion principle.",
+  "fp": "7fe4edb95748",
+  "yield": "HIGH",
+  "why": "Pauli exclusion principle; commonly tested"
+ },
+ {
+  "front": "State the photoelectric effect equation and explain the threshold frequency.",
+  "fp": "4ef6d64dad7d",
+  "yield": "ULTRA_HIGH",
+  "why": "KE_max = hf - work function; photoelectric equation used in calculations"
+ },
+ {
+  "front": "Technetium-99m dominates nuclear imaging because it emits {{c1::gamma rays only}} with a half-life of about {{c2::6 hours}}.",
+  "fp": "f195b9c57c60",
+  "yield": "LOW",
+  "why": "Tc-99m imaging properties; off-outline trivia"
+ },
+ {
+  "front": "The {{c1::Balmer}} series is visible because it ends at $n=2$, while the {{c2::Lyman}} series ends at $n=1$ and is ultraviolet.",
+  "fp": "ac318c4c89ed",
+  "yield": "MEDIUM",
+  "why": "Balmer visible vs Lyman UV series; secondary spectra detail"
+ },
+ {
+  "front": "The Bohr model is quantitatively correct only for {{c1::one-electron systems}} such as H and $He^{+}$.",
+  "fp": "aae0705d0a02",
+  "yield": "MEDIUM",
+  "why": "Bohr model only exact for one-electron systems; supporting nuance"
+ },
+ {
+  "front": "The Heisenberg uncertainty principle states you cannot simultaneously know:",
+  "fp": "b293864c404a",
+  "yield": "HIGH",
+  "why": "Heisenberg uncertainty principle; on-outline discrete"
+ },
+ {
+  "front": "The strong nuclear force is {{c1::powerful but very short-range}}, which is why {{c2::large}} nuclei become unstable.",
+  "fp": "74b7e83996d0",
+  "yield": "MEDIUM",
+  "why": "Strong force short range explains large-nucleus instability; supporting reasoning"
+ },
+ {
+  "front": "What do the four quantum numbers describe?",
+  "fp": "4abfa1482f40",
+  "yield": "LOW",
+  "why": "Restates the four-quantum-numbers card"
+ },
+ {
+  "front": "What does a sudden jump in successive ionization energies reveal?",
+  "fp": "0b0f278c7014",
+  "yield": "HIGH",
+  "why": "Jump in successive ionization energies reveals valence count; common data question"
+ },
+ {
+  "front": "What does an orbital actually represent, and how many radial nodes does it have?",
+  "fp": "0e846a267c7d",
+  "yield": "MEDIUM",
+  "why": "Orbital as probability density, radial nodes n-l-1; nodes are beyond outline"
+ },
+ {
+  "front": "What does the photoelectric effect demonstrate?",
+  "fp": "09c0d935bbfb",
+  "yield": "LOW",
+  "why": "Restates the photoelectric quantization cards"
+ },
+ {
+  "front": "What is mass defect and how does it relate to nuclear binding energy?",
+  "fp": "f82cb1ef7ccf",
+  "yield": "HIGH",
+  "why": "Mass defect and binding energy via E = mc^2; commonly tested"
+ },
+ {
+  "front": "Which has the higher ionization energy, $Na$ or $Na^{+}$, and why?",
+  "fp": "3f4db9e85ef7",
+  "yield": "HIGH",
+  "why": "Na+ has far higher IE than Na; common trend reasoning"
+ },
+ {
+  "front": "Which has the larger radius: $Na$ or $Na^{+}$?",
+  "fp": "51c429909be4",
+  "yield": "ULTRA_HIGH",
+  "why": "Cation smaller than parent atom; ionic radius comparison appears every year"
+ },
+ {
+  "front": "Which orbital has the highest energy in a multi-electron atom?",
+  "fp": "b452a3a38404",
+  "yield": "MEDIUM",
+  "why": "Highest-energy orbital by n + l; secondary ordering question"
+ },
+ {
+  "front": "Which quantum number determines the shape of an orbital?",
+  "fp": "f690cb30a170",
+  "yield": "MEDIUM",
+  "why": "l sets orbital shape; part of the quantum-number card"
+ },
+ {
+  "front": "Why are atomic emission spectra discrete lines rather than a continuum?",
+  "fp": "014949421be4",
+  "yield": "HIGH",
+  "why": "Why emission spectra are discrete lines; commonly tested"
+ },
+ {
+  "front": "Why do Cr and Cu have anomalous electron configurations?",
+  "fp": "f26d67a40064",
+  "yield": "LOW",
+  "why": "Restates the Cr/Cu anomaly card"
+ },
+ {
+  "front": "Why do the s, p, d, and f subshells of one shell differ in energy in a multielectron atom?",
+  "fp": "981695fb58c5",
+  "yield": "MEDIUM",
+  "why": "Penetration explains subshell energy splitting; supporting reasoning"
+ },
+ {
+  "front": "Why does the 4s subshell fill before 3d?",
+  "fp": "b66642a9148b",
+  "yield": "HIGH",
+  "why": "4s fills before 3d by n + l rule; common configuration reasoning"
+ },
+ {
+  "front": "Why is a first-order half-life independent of starting amount, unlike a zero-order one?",
+  "fp": "b1768c519fb4",
+  "yield": "MEDIUM",
+  "why": "First-order half-life independence; kinetics content covered in the kinetics deck"
+ },
+ {
+  "front": "Why is a gamma emitter chosen for imaging but an alpha or beta emitter for therapy?",
+  "fp": "ec4e65e21245",
+  "yield": "MEDIUM",
+  "why": "Gamma for imaging, alpha/beta for therapy; secondary application"
+ },
+ {
+  "front": "Why is chlorine's atomic mass 35.45 rather than a whole number?",
+  "fp": "bf29491d620f",
+  "yield": "MEDIUM",
+  "why": "Chlorine 35.45 as weighted average; worked case of the atomic-mass card"
+ },
+ {
+  "front": "Write the electron configuration of $Fe^{2+}$ and explain the removal order.",
+  "fp": "e64796bdb5fb",
+  "yield": "LOW",
+  "why": "Restates the Fe2+ configuration card"
+ }
+]

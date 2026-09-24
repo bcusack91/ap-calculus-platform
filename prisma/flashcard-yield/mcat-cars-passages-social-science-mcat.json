@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do social science passages differ from humanities passages?",
+  "fp": "626becc6e2c3",
+  "yield": "MEDIUM",
+  "why": "Genre contrast is context; evidence-evaluation tactic lives on other cards"
+ },
+ {
+  "front": "How do you handle passages presenting competing theories?",
+  "fp": "c9c0ba656b45",
+  "yield": "HIGH",
+  "why": "Tracking which theory the author endorses is needed on nearly every such passage"
+ },
+ {
+  "front": "How should you evaluate a cited study in a passage?",
+  "fp": "acb217115462",
+  "yield": "HIGH",
+  "why": "Study-evaluation (sample, design vs conclusion) is directly tested research reasoning"
+ },
+ {
+  "front": "What does it mean when an author says a finding is \"suggestive\"?",
+  "fp": "c0af102b8212",
+  "yield": "HIGH",
+  "why": "Hedge words decide certainty-matching, a trap on nearly every passage"
+ },
+ {
+  "front": "What is the most common reasoning flaw tested in these passages?",
+  "fp": "0a965b6c5334",
+  "yield": "ULTRA_HIGH",
+  "why": "Correlation-vs-causation and confounding are tested every year across sections"
+ },
+ {
+  "front": "What should you do when a passage presents statistics?",
+  "fp": "b5cdaac512eb",
+  "yield": "MEDIUM",
+  "why": "Statistic-misdescription is a real but secondary trap"
+ },
+ {
+  "front": "What subjects fall under social science CARS passages?",
+  "fp": "77022eca75b6",
+  "yield": "LOW",
+  "why": "Subject list is logistics"
+ },
+ {
+  "front": "Why is scope especially important in social science passages?",
+  "fp": "941eaf924d87",
+  "yield": "HIGH",
+  "why": "Overgeneralized scope is one of the most common wrong-answer patterns"
+ }
+]

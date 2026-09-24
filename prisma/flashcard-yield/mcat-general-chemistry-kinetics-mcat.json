@@ -1,0 +1,374 @@
+[
+ {
+  "front": "$K_M$ is the substrate concentration giving {{c1::half of $V_{max}$}}, so a low $K_M$ means {{c2::high apparent affinity}}.",
+  "fp": "6609b8ac7550",
+  "yield": "MEDIUM",
+  "why": "KM definition and enzyme independence; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "A catalyst lowers $E_a$ for the forward step. What does it do to the reverse step and to $K_{eq}$?",
+  "fp": "74b5389baff7",
+  "yield": "HIGH",
+  "why": "Catalyst lowers reverse Ea equally and leaves Keq; commonly tested nuance"
+ },
+ {
+  "front": "A competitive inhibitor raises {{c1::$K_M$}} while leaving {{c2::$V_{max}$}} unchanged.",
+  "fp": "52172a8da166",
+  "yield": "MEDIUM",
+  "why": "Competitive inhibitor raises KM; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "A heterogeneous catalyst is one that:",
+  "fp": "d3af8fbdaaac",
+  "yield": "LOW",
+  "why": "Heterogeneous catalyst definition; restated with examples on another card"
+ },
+ {
+  "front": "A linear plot of $[A]$ vs. time indicates {{c1::zero}} order, while a linear plot of $\\ln[A]$ vs. time indicates {{c2::first}} order.",
+  "fp": "926ca4909305",
+  "yield": "ULTRA_HIGH",
+  "why": "Linear [A] vs t (zero) and ln[A] vs t (first); order-from-plot every year"
+ },
+ {
+  "front": "A linear plot of $1/[A]$ versus time is the signature of a {{c1::second}}-order reaction, with slope equal to {{c2::$+k$}}.",
+  "fp": "f4e998dd51e6",
+  "yield": "HIGH",
+  "why": "1/[A] vs t linear for second order with positive slope; common plot question"
+ },
+ {
+  "front": "A mechanism's slow step contains an intermediate. How do you convert its rate law into an experimentally valid one?",
+  "fp": "a44bf9af5c00",
+  "yield": "MEDIUM",
+  "why": "Pre-equilibrium substitution for intermediates; secondary mechanism skill"
+ },
+ {
+  "front": "A reaction has an activation energy of 50 kJ/mol without a catalyst and 30 kJ/mol with a catalyst. By what factor does the rate increase at 310 K? (R = 8.314 J/mol·K)",
+  "fp": "226dc2471460",
+  "yield": "MEDIUM",
+  "why": "Arrhenius ratio for a 20 kJ/mol drop; the exponential arithmetic is beyond exam calculations"
+ },
+ {
+  "front": "A reaction intermediate:",
+  "fp": "545f9ffeed49",
+  "yield": "HIGH",
+  "why": "Intermediate is produced then consumed; common definition"
+ },
+ {
+  "front": "A reaction that is zero order in a substrate has a rate {{c1::independent of}} that substrate's concentration, typically because of {{c2::saturation}}.",
+  "fp": "dcd3d69229bc",
+  "yield": "HIGH",
+  "why": "Zero order from saturation; links to enzyme Vmax, commonly tested"
+ },
+ {
+  "front": "A table shows rate falling as a run proceeds at fixed temperature. Has the rate changed, or the rate constant?",
+  "fp": "5e5f72a5e9ca",
+  "yield": "HIGH",
+  "why": "Rate changes with concentration, k does not; frequent data-table reasoning"
+ },
+ {
+  "front": "After 4 half-lives, what fraction of the original reactant remains?",
+  "fp": "135bb16d3523",
+  "yield": "ULTRA_HIGH",
+  "why": "1/16 after four half-lives; half-life counting appears every year"
+ },
+ {
+  "front": "An Arrhenius plot graphs $\\ln k$ against {{c1::$1/T$}} and gives a straight line of slope {{c2::$-E_a/R$}}.",
+  "fp": "83c97f3e8467",
+  "yield": "ULTRA_HIGH",
+  "why": "Arrhenius plot ln k vs 1/T slope -Ea/R; recurring graph-interpretation item"
+ },
+ {
+  "front": "By what physical mechanism do enzymes and other catalysts actually lower $E_a$?",
+  "fp": "5023eae7f76f",
+  "yield": "MEDIUM",
+  "why": "Catalysts stabilize the transition state; supporting mechanism"
+ },
+ {
+  "front": "Catalytic efficiency is {{c1::$k_{cat}/K_M$}}, and the diffusion limit in $M^{-1}s^{-1}$ is about {{c2::$10^8$ to $10^9$}}.",
+  "fp": "bac7273b02e0",
+  "yield": "LOW",
+  "why": "kcat/KM diffusion limit numbers; off-outline trivia"
+ },
+ {
+  "front": "Collision theory says most collisions accomplish nothing. Which two filters do they have to pass?",
+  "fp": "d3ab10fbf5b1",
+  "yield": "HIGH",
+  "why": "Energy and orientation requirements of collision theory; commonly tested"
+ },
+ {
+  "front": "Compare kinetic and thermodynamic products.",
+  "fp": "4a056c9c554e",
+  "yield": "HIGH",
+  "why": "Kinetic vs thermodynamic product; commonly tested in gen chem and orgo"
+ },
+ {
+  "front": "Distinguish homogeneous from heterogeneous catalysis with an MCAT-level example of each.",
+  "fp": "ab4bd404643b",
+  "yield": "MEDIUM",
+  "why": "Homogeneous vs heterogeneous catalysis examples; secondary"
+ },
+ {
+  "front": "Doubling [A] doubles the rate. The order in A is:",
+  "fp": "672dff211833",
+  "yield": "ULTRA_HIGH",
+  "why": "Doubling [A] doubles rate -> first order; method of initial rates every year"
+ },
+ {
+  "front": "Enzyme rate climbs with temperature then plunges. Why does the Arrhenius picture fail above the optimum?",
+  "fp": "0f09a9cb1763",
+  "yield": "MEDIUM",
+  "why": "Enzyme rate crashes past optimum from denaturation; biochem-flavored nuance"
+ },
+ {
+  "front": "Enzymes are biological catalysts that:",
+  "fp": "57665c4c2724",
+  "yield": "MEDIUM",
+  "why": "Enzymes lower Ea without being consumed; restates the catalyst cards in enzyme terms"
+ },
+ {
+  "front": "Ethanol is cleared by zero-order kinetics. What does that mean clinically?",
+  "fp": "eb97d3656f8d",
+  "yield": "MEDIUM",
+  "why": "Ethanol zero-order clearance; clinical example of saturation kinetics"
+ },
+ {
+  "front": "First-order elimination clears {{c1::a constant fraction}} per unit time, so {{c2::4 to 5 half-lives}} are needed to reach steady state.",
+  "fp": "37642da56c8d",
+  "yield": "MEDIUM",
+  "why": "4-5 half-lives to steady state; pharmacology detail beyond the outline"
+ },
+ {
+  "front": "For $2A \\rightarrow B$, how does the rate of disappearance of A relate to the rate of the reaction?",
+  "fp": "7595497dda9d",
+  "yield": "HIGH",
+  "why": "Species rate divided by stoichiometric coefficient; common factor-of-two step"
+ },
+ {
+  "front": "For a zero-order reaction, half-life:",
+  "fp": "30cbb79686a4",
+  "yield": "HIGH",
+  "why": "Zero-order half-life depends on [A]0; common discrete"
+ },
+ {
+  "front": "For an exothermic reaction, how does $E_a$ of the reverse reaction compare with $E_a$ of the forward reaction?",
+  "fp": "7f563ce9974c",
+  "yield": "HIGH",
+  "why": "Reverse Ea exceeds forward Ea by dH for exothermic; common diagram reasoning"
+ },
+ {
+  "front": "For first-order kinetics $t_{1/2} = {{c1::0.693/k}}$, which is why drug elimination is quoted as a single fixed half-life.",
+  "fp": "eb299922e39f",
+  "yield": "ULTRA_HIGH",
+  "why": "t1/2 = 0.693/k for first order; calculation used every year"
+ },
+ {
+  "front": "Give the Arrhenius equation.",
+  "fp": "fe55715b486a",
+  "yield": "ULTRA_HIGH",
+  "why": "Arrhenius equation k = A e^(-Ea/RT); foundational and tested every year"
+ },
+ {
+  "front": "Give the first-order half-life formula.",
+  "fp": "cc6df1efa512",
+  "yield": "LOW",
+  "why": "Restates the first-order half-life formula card"
+ },
+ {
+  "front": "How can a catalyst appear in the experimental rate law when it is absent from the balanced overall equation?",
+  "fp": "745a321bb79e",
+  "yield": "MEDIUM",
+  "why": "Catalyst can appear in the rate law; secondary nuance"
+ },
+ {
+  "front": "How do you distinguish an intermediate from a catalyst?",
+  "fp": "fd808ceab8e6",
+  "yield": "HIGH",
+  "why": "Intermediate vs catalyst distinction; commonly tested"
+ },
+ {
+  "front": "How do you extract the overall $\\Delta H$ from a reaction-coordinate diagram?",
+  "fp": "58f6d4358840",
+  "yield": "ULTRA_HIGH",
+  "why": "dH from reaction-coordinate diagram; read off nearly every energy diagram question"
+ },
+ {
+  "front": "How do you spot a catalyst versus an intermediate when reading a written-out mechanism?",
+  "fp": "7467d3324baa",
+  "yield": "LOW",
+  "why": "Restates the intermediate vs catalyst card"
+ },
+ {
+  "front": "How does a catalyst speed a reaction?",
+  "fp": "911035bef6bd",
+  "yield": "ULTRA_HIGH",
+  "why": "Catalyst lowers Ea without changing dG or equilibrium; tested every administration"
+ },
+ {
+  "front": "In $k = Ae^{-E_a/RT}$, the exponential term represents the {{c1::fraction of collisions with enough energy}} to react.",
+  "fp": "8c5785b8e283",
+  "yield": "HIGH",
+  "why": "Exponential term is fraction of sufficiently energetic collisions; common Arrhenius reasoning"
+ },
+ {
+  "front": "In a multistep energy diagram, which step is the rate-determining step?",
+  "fp": "85b029013454",
+  "yield": "ULTRA_HIGH",
+  "why": "Rate-determining step has the largest barrier; core diagram reasoning every year"
+ },
+ {
+  "front": "In the method of initial rates, why must you compare trials in which only one reactant's concentration changes?",
+  "fp": "a8b532609f20",
+  "yield": "HIGH",
+  "why": "Change one concentration at a time in initial-rates data; standard data-table method"
+ },
+ {
+  "front": "Kinetic versus thermodynamic product: which dominates at low temperature and short reaction time?",
+  "fp": "8c707718e6bd",
+  "yield": "LOW",
+  "why": "Restates the kinetic vs thermodynamic product card"
+ },
+ {
+  "front": "On a Lineweaver-Burk plot the y-intercept is {{c1::$1/V_{max}$}} and the x-intercept is {{c2::$-1/K_M$}}.",
+  "fp": "b0cb0dc01301",
+  "yield": "MEDIUM",
+  "why": "Lineweaver-Burk intercepts; biochem content covered in the enzymes deck"
+ },
+ {
+  "front": "On a Michaelis-Menten plot of v versus [S], the reaction is {{c1::first}} order at low [S] and {{c2::zero}} order at saturation.",
+  "fp": "e3a2c5fdad1f",
+  "yield": "HIGH",
+  "why": "Michaelis-Menten first order at low [S], zero at saturation; links order to enzyme kinetics"
+ },
+ {
+  "front": "On a reaction profile, activation energy is measured from the {{c1::reactant valley}} up to the peak, not from the axis zero.",
+  "fp": "90cf3ce49fd2",
+  "yield": "HIGH",
+  "why": "Ea measured from the reactant valley; common diagram-reading step"
+ },
+ {
+  "front": "On an energy diagram an intermediate sits at a local {{c1::minimum}} (valley) while a transition state sits at a local {{c2::maximum}} (peak).",
+  "fp": "da2ff0e169cd",
+  "yield": "ULTRA_HIGH",
+  "why": "Intermediate at valley, transition state at peak; foundational diagram reading"
+ },
+ {
+  "front": "Overall reaction order is the {{c1::sum of the exponents}} in the rate law, which need not be an integer or match any coefficient.",
+  "fp": "17a05e495530",
+  "yield": "ULTRA_HIGH",
+  "why": "Overall order is the sum of exponents, may be fractional; core rate-law fact"
+ },
+ {
+  "front": "Reaction order vs molecularity: which is experimental, and which applies only to an elementary step?",
+  "fp": "5f234eeea53a",
+  "yield": "HIGH",
+  "why": "Order (experimental) vs molecularity (elementary step); commonly tested"
+ },
+ {
+  "front": "Replacing a C-H bond with C-D slows the reaction several-fold. What does that reveal about the mechanism?",
+  "fp": "b25e0012b7e9",
+  "yield": "LOW",
+  "why": "Kinetic isotope effect; off-outline mechanism detail"
+ },
+ {
+  "front": "Rule of thumb: near physiological temperature, reaction rate roughly {{c1::doubles}} for every {{c2::10 degrees C}} rise.",
+  "fp": "ac022bf55e33",
+  "yield": "MEDIUM",
+  "why": "Q10 rule of thumb; supporting physiology-flavored detail"
+ },
+ {
+  "front": "The rate constant $k$ depends on temperature and catalyst, but is {{c1::independent of}} reactant concentration.",
+  "fp": "7e91d9ee8ebe",
+  "yield": "ULTRA_HIGH",
+  "why": "k depends on T and catalyst, not concentration; tested every year"
+ },
+ {
+  "front": "The slow step's rate law is the overall rate law directly whenever the slow step is the {{c1::first}} step of the mechanism.",
+  "fp": "5a2971e3947b",
+  "yield": "HIGH",
+  "why": "Slow first step gives the rate law directly; common mechanism question"
+ },
+ {
+  "front": "The units of $k$ are {{c1::$s^{-1}$}} for a first-order reaction and {{c2::$M^{-1}s^{-1}$}} for a second-order reaction.",
+  "fp": "78626b0c9f5a",
+  "yield": "ULTRA_HIGH",
+  "why": "Units of k reveal reaction order; frequent calculation step"
+ },
+ {
+  "front": "Tripling $[A]$ multiplies the rate by 9, so the order in A is {{c1::2}}; if the rate were unchanged the order would be {{c2::0}}.",
+  "fp": "92cb31ab3aae",
+  "yield": "ULTRA_HIGH",
+  "why": "Tripling gives 9x -> second order; initial-rates reasoning every year"
+ },
+ {
+  "front": "Two Arrhenius plots are drawn for one reaction with and without catalyst. The catalyzed line has {{c1::the shallower slope}}.",
+  "fp": "e968a831e89b",
+  "yield": "MEDIUM",
+  "why": "Catalyzed Arrhenius plot has shallower slope; second-tier graph detail"
+ },
+ {
+  "front": "Two reactions have identical $\\Delta G$. What determines which one is faster?",
+  "fp": "5f9c38667e8b",
+  "yield": "ULTRA_HIGH",
+  "why": "dG does not set rate, Ea does; kinetics vs thermodynamics distinction every year"
+ },
+ {
+  "front": "What determines the experimental rate law?",
+  "fp": "baeb6eae53a4",
+  "yield": "ULTRA_HIGH",
+  "why": "Rate law set by the rate-determining step; foundational every year"
+ },
+ {
+  "front": "What two conditions must a molecular collision satisfy to be productive?",
+  "fp": "1a13b7269531",
+  "yield": "LOW",
+  "why": "Restates the collision-theory requirements card"
+ },
+ {
+  "front": "Which does NOT affect the rate constant $k$?",
+  "fp": "4a82428dbb3d",
+  "yield": "LOW",
+  "why": "Restates the k-independent-of-concentration card"
+ },
+ {
+  "front": "Which plot is linear for each reaction order?",
+  "fp": "ddda420b5d38",
+  "yield": "LOW",
+  "why": "Restates the linear-plot cards for each order"
+ },
+ {
+  "front": "Why can't the overall rate law be read off the balanced equation's coefficients?",
+  "fp": "88785650f280",
+  "yield": "HIGH",
+  "why": "Rate law cannot be read from coefficients; commonly tested"
+ },
+ {
+  "front": "Why do kineticists report initial rates rather than rates measured later in the run?",
+  "fp": "0c81a7d558b7",
+  "yield": "MEDIUM",
+  "why": "Why initial rates are used; secondary experimental design reasoning"
+ },
+ {
+  "front": "Why does temperature increase reaction rate?",
+  "fp": "6ecdd27f8142",
+  "yield": "HIGH",
+  "why": "Temperature raises the fraction of collisions above Ea; commonly tested"
+ },
+ {
+  "front": "Why doesn't a catalyst change the yield of an equilibrium-limited reaction?",
+  "fp": "d3f02470d0e2",
+  "yield": "MEDIUM",
+  "why": "Catalyst does not change yield; restates Keq unchanged in yield terms"
+ },
+ {
+  "front": "Why is the rate law of a bimolecular elementary step simply rate $= k[A][B]$?",
+  "fp": "201fb6fda1e2",
+  "yield": "HIGH",
+  "why": "Elementary bimolecular step rate = k[A][B]; commonly tested"
+ },
+ {
+  "front": "Zero-order half-life is {{c1::proportional to}} $[A]_0$, while second-order half-life is {{c2::inversely proportional to}} $[A]_0$.",
+  "fp": "ac14e5413f73",
+  "yield": "HIGH",
+  "why": "Zero- and second-order half-life dependence on [A]0; common discrete"
+ }
+]

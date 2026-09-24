@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Contrast positive and negative controls.",
+  "fp": "cbc6f6cb6f6d",
+  "yield": "ULTRA_HIGH",
+  "why": "Positive vs negative control identification is asked on essentially every exam"
+ },
+ {
+  "front": "Define independent, dependent, and controlled variables.",
+  "fp": "8aef31b03fa7",
+  "yield": "ULTRA_HIGH",
+  "why": "IV/DV/controlled variables are the first step of nearly every research passage"
+ },
+ {
+  "front": "What does double-blind mean and why does it matter?",
+  "fp": "5dae22f17512",
+  "yield": "HIGH",
+  "why": "Double-blind design and what it prevents is a common study-design question"
+ },
+ {
+  "front": "What is a confounding variable?",
+  "fp": "29075bc458b9",
+  "yield": "ULTRA_HIGH",
+  "why": "Confounding variables are a yearly question in both science and P/S passages"
+ },
+ {
+  "front": "What is the difference between reliability and validity?",
+  "fp": "3aa5d634c622",
+  "yield": "HIGH",
+  "why": "Reliability vs validity distinction is commonly tested in P/S methods"
+ },
+ {
+  "front": "What is the purpose of a control group?",
+  "fp": "8c5495331591",
+  "yield": "HIGH",
+  "why": "Control-group purpose is a standard design question; supports the controls card"
+ },
+ {
+  "front": "Why can observational studies not establish causation?",
+  "fp": "1b5bff4965a4",
+  "yield": "HIGH",
+  "why": "Observational designs cannot establish causation is a recurring reasoning step"
+ },
+ {
+  "front": "Why is randomization important?",
+  "fp": "e929dca0d6b7",
+  "yield": "HIGH",
+  "why": "Randomization distributing confounders is commonly asked about RCT design"
+ }
+]

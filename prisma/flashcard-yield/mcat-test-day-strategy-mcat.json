@@ -1,0 +1,92 @@
+[
+ {
+  "front": "A chi-square test is appropriate for:",
+  "fp": "1587d56af060",
+  "yield": "MEDIUM",
+  "why": "Stats content misfiled in a strategy deck; chi-square covered in genetics decks [rescued: misfiled, not served elsewhere"
+ },
+ {
+  "front": "A standardized test must have:",
+  "fp": "bba0ef6f88f5",
+  "yield": "MEDIUM",
+  "why": "P/S content misfiled in a strategy deck; standardization covered in sociology de [rescued: misfiled, not served elsewher"
+ },
+ {
+  "front": "How do you manage fatigue across 7.5 hours?",
+  "fp": "af822c234c4a",
+  "yield": "LOW",
+  "why": "Generic fatigue and stamina advice"
+ },
+ {
+  "front": "How should you handle a question on unfamiliar content?",
+  "fp": "92e89930f752",
+  "yield": "HIGH",
+  "why": "Mining the passage for reasoning cues is applied on every unfamiliar question"
+ },
+ {
+  "front": "How should you use the flag/review feature?",
+  "fp": "a4769fd71376",
+  "yield": "HIGH",
+  "why": "Flag-answer-revisit workflow is used on every section"
+ },
+ {
+  "front": "Projective tests like the Rorschach are criticized primarily for:",
+  "fp": "197502984de0",
+  "yield": "MEDIUM",
+  "why": "P/S assessment content misfiled here; projective-test critique is a plausible P/S item"
+ },
+ {
+  "front": "Should you change answers on review?",
+  "fp": "6eede2a2b262",
+  "yield": "MEDIUM",
+  "why": "Change answers only with a reason; secondary review tactic"
+ },
+ {
+  "front": "Spearman's \"g\" refers to:",
+  "fp": "10995fc6c053",
+  "yield": "MEDIUM",
+  "why": "P/S intelligence content misfiled here; Spearman g covered in cognition deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Specificity is defined as:",
+  "fp": "43c83f50f0bb",
+  "yield": "LOW",
+  "why": "Restates the sensitivity/specificity card in the biostatistics deck"
+ },
+ {
+  "front": "Test-retest reliability measures:",
+  "fp": "3b0b350868a4",
+  "yield": "MEDIUM",
+  "why": "P/S psychometrics content misfiled here; test-retest covered in cognition deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "The Flynn effect describes:",
+  "fp": "97386745af94",
+  "yield": "LOW",
+  "why": "P/S intelligence content misfiled here; Flynn effect covered in cognition deck"
+ },
+ {
+  "front": "What is the best approach to a passage you find overwhelming?",
+  "fp": "89acb2934c73",
+  "yield": "HIGH",
+  "why": "Triage of an overwhelming passage protects the rest of every section"
+ },
+ {
+  "front": "What is the highest-value test-day habit?",
+  "fp": "3c47d6650f66",
+  "yield": "ULTRA_HIGH",
+  "why": "Strict time discipline is the single tactic that governs every section"
+ },
+ {
+  "front": "What mindset helps most between sections?",
+  "fp": "17d0bb6610f9",
+  "yield": "LOW",
+  "why": "Generic mindset advice between sections"
+ },
+ {
+  "front": "What should you do in the final minutes of a section?",
+  "fp": "0ea918bec11e",
+  "yield": "HIGH",
+  "why": "Ensuring every question is answered in the final minutes applies to every section"
+ }
+]

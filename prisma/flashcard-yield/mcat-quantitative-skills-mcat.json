@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you approach proportional reasoning questions?",
+  "fp": "4f5f329ce088",
+  "yield": "ULTRA_HIGH",
+  "why": "Ratio/proportional reasoning underlies most C/P calculation questions"
+ },
+ {
+  "front": "How do you estimate $pH$ from a non-round concentration?",
+  "fp": "23b429f8f717",
+  "yield": "ULTRA_HIGH",
+  "why": "Estimating pH from a non-round [H+] is asked on nearly every C/P section"
+ },
+ {
+  "front": "How do you handle calculations without a calculator?",
+  "fp": "e7610deb2792",
+  "yield": "HIGH",
+  "why": "No-calculator rounding and exponent arithmetic used on every C/P section"
+ },
+ {
+  "front": "How do you multiply numbers in scientific notation?",
+  "fp": "2e9a1a17af13",
+  "yield": "HIGH",
+  "why": "Scientific-notation arithmetic is a required step in most C/P calculations"
+ },
+ {
+  "front": "How should you handle unit conversions?",
+  "fp": "dc621e69366d",
+  "yield": "HIGH",
+  "why": "Dimensional analysis is a routine step; unit traps are common in choices"
+ },
+ {
+  "front": "If $F \\propto 1/r^{2}$ and $r$ triples, what happens to $F$?",
+  "fp": "07fbf7f29439",
+  "yield": "MEDIUM",
+  "why": "Worked inverse-square example; supporting instance of the proportional-reasoning card"
+ },
+ {
+  "front": "What are the key log rules for the MCAT?",
+  "fp": "6c59296238c6",
+  "yield": "HIGH",
+  "why": "Log rules are needed for pH, pKa, Nernst and decibel calculations"
+ },
+ {
+  "front": "What common values are worth memorizing for estimation?",
+  "fp": "6aa6ef2da2af",
+  "yield": "MEDIUM",
+  "why": "Handy estimation constants; useful but secondary to the log rules themselves"
+ }
+]

@@ -3,61 +3,61 @@
   "front": "A 12:3:1 ratio indicates {{c1::dominant epistasis}}: one dominant allele masks the other locus.",
   "fp": "81bd978b0bb4",
   "yield": "MEDIUM",
-  "why": "12:3:1 is a second-tier modified ratio; 9:3:4 is the one usually asked"
+  "why": "12:3:1 dominant epistasis is a second-tier modified ratio; 9:3:4 is the one usually asked"
  },
  {
   "front": "A 9:3:4 dihybrid ratio signals {{c1::recessive epistasis}}: homozygous recessive at one locus masks the second locus.",
   "fp": "a7487a26f996",
   "yield": "HIGH",
-  "why": "Recessive epistasis 9:3:4 (Labrador) is the classic tested modified ratio"
+  "why": "9:3:4 recessive epistasis (Labrador) is the classic modified ratio commonly tested"
  },
  {
   "front": "A bat wing and an insect wing share function but no common ancestral structure, making them {{c1::analogous}}.",
   "fp": "902ef7cfdd65",
-  "yield": "HIGH",
-  "why": "Analogous vs homologous structures is core evidence-for-evolution material"
+  "yield": "ULTRA_HIGH",
+  "why": "Analogous vs homologous structures is asked on essentially every exam"
  },
  {
   "front": "A disomic gamete carries both a maternal grandmother allele and a maternal grandfather allele of one gene. Which meiotic division failed?",
   "fp": "17f0b32d37eb",
-  "yield": "MEDIUM",
-  "why": "Meiosis I vs II nondisjunction reasoning; plausible passage second step"
+  "yield": "HIGH",
+  "why": "Meiosis I vs II nondisjunction from allele identity is a common passage reasoning step"
  },
  {
   "front": "A dominant trait appears to skip a generation: an unaffected person has both an affected parent and an affected child. Interpret.",
   "fp": "a9d129a1cd51",
   "yield": "HIGH",
-  "why": "Incomplete penetrance making a dominant trait skip a generation is a classic pedigree trap"
+  "why": "Incomplete penetrance explaining a skipped generation is a standard pedigree twist"
  },
  {
   "front": "A fossil lineage shows long morphological stasis interrupted by rapid change. Which model does this support?",
   "fp": "4bc0668f55c0",
   "yield": "HIGH",
-  "why": "Punctuated equilibrium vs gradualism is a named, commonly tested contrast"
+  "why": "Recognizing punctuated equilibrium from a fossil pattern is a common discrete"
  },
  {
   "front": "A mule is vigorous but sterile, which is a {{c1::postzygotic}} isolating mechanism.",
   "fp": "20b045c2bc5d",
-  "yield": "HIGH",
-  "why": "Pre- vs postzygotic isolation is core speciation content"
+  "yield": "ULTRA_HIGH",
+  "why": "Pre- vs postzygotic barrier classification is tested every administration"
  },
  {
   "front": "A single ancestral finch lineage produces many species with distinct beak shapes on one archipelago.",
   "fp": "c68fad185f5d",
-  "yield": "HIGH",
-  "why": "Adaptive radiation is a named core evolution concept"
+  "yield": "ULTRA_HIGH",
+  "why": "Adaptive radiation from finch/island scenarios is a perennial discrete"
  },
  {
   "front": "A trait expressed only in males but encoded on an autosome is {{c1::sex-limited}}, not Y-linked.",
   "fp": "6282399083cc",
   "yield": "MEDIUM",
-  "why": "Sex-limited vs Y-linked distinction; secondary pedigree nuance"
+  "why": "Sex-limited vs Y-linked distinction is secondary; a time-pressed student can skip it"
  },
  {
   "front": "A vestigial structure provides evidence for evolution because it:",
   "fp": "70afc25c6354",
-  "yield": "MEDIUM",
-  "why": "Vestigial structures as evidence for evolution; basic supporting fact"
+  "yield": "HIGH",
+  "why": "Vestigial structures as evidence for evolution is commonly tested"
  },
  {
   "front": "A viral surface gene shows dN/dS greater than 1. What does that indicate biologically?",
@@ -68,86 +68,86 @@
  {
   "front": "An X-linked recessive affected father: what is the status of all his daughters and all his sons?",
   "fp": "b4260ff39ab5",
-  "yield": "HIGH",
-  "why": "Affected father -> all daughters carriers, no sons is the key X-linked recessive rule"
+  "yield": "ULTRA_HIGH",
+  "why": "Affected father -> all carrier daughters, no affected sons is core X-linked pedigree logic"
  },
  {
   "front": "Contrast allopatric and sympatric speciation, and give the classic sympatric mechanism.",
   "fp": "9504223a943d",
-  "yield": "HIGH",
-  "why": "Allopatric vs sympatric speciation and polyploidy are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Allopatric vs sympatric speciation appears on nearly every exam"
  },
  {
   "front": "Contrast incomplete dominance and codominance.",
   "fp": "d93beea44c30",
-  "yield": "HIGH",
-  "why": "Incomplete dominance vs codominance is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Incomplete dominance vs codominance is a foundational, every-year distinction"
  },
  {
   "front": "Define epistasis precisely, distinguishing it from dominance.",
   "fp": "1fd7748c933b",
   "yield": "MEDIUM",
-  "why": "Precise epistasis vs dominance definition; supports the plainer epistasis card"
+  "why": "Epistasis vs dominance nuance; the basic definition card already covers what is tested"
  },
  {
   "front": "Define penetrance and expressivity.",
   "fp": "36e7ae1f8b9b",
-  "yield": "HIGH",
-  "why": "Penetrance vs expressivity definitions are explicitly on the AAMC outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Penetrance vs expressivity definitions are tested essentially every year"
  },
  {
   "front": "Distinguish a population bottleneck from a founder effect, then give a human example of each.",
   "fp": "d6fcd3c9bcd1",
-  "yield": "HIGH",
-  "why": "Bottleneck vs founder effect is core genetic drift content"
+  "yield": "ULTRA_HIGH",
+  "why": "Bottleneck vs founder effect (both drift) is a perennial discrete"
  },
  {
   "front": "Distinguish sex-limited from sex-influenced autosomal traits, with an example of each.",
   "fp": "5dcd8ae95567",
   "yield": "MEDIUM",
-  "why": "Sex-limited vs sex-influenced (pattern baldness) is a second-tier distinction"
+  "why": "Sex-limited vs sex-influenced examples are secondary detail"
  },
  {
   "front": "Each node on a phylogenetic tree is {{c1::an inferred common ancestor}} at which two lineages diverged.",
   "fp": "cfdda720837a",
-  "yield": "MEDIUM",
-  "why": "Reading phylogenetic tree nodes; passage context rather than a discrete point"
+  "yield": "HIGH",
+  "why": "Reading a phylogenetic tree node as a common ancestor is needed on tree passages"
  },
  {
   "front": "Explain 9:3:4 with pathway logic: why does knocking out an upstream enzyme hide downstream genotypes?",
   "fp": "8a57f80b9965",
   "yield": "MEDIUM",
-  "why": "Pathway logic behind 9:3:4; supporting detail on the epistasis ratio"
+  "why": "Pathway logic behind 9:3:4 supports the ratio card; rarely tested on its own"
  },
  {
   "front": "For that population, what fraction are carriers?",
   "fp": "db56727091ee",
-  "yield": "MEDIUM",
-  "why": "2pq carrier calc is core, but this card dangles off the q=0.4 card ('that population')"
+  "yield": "HIGH",
+  "why": "2pq carrier calculation is core HW math, though this card depends on a prior stem"
  },
  {
   "front": "Genetic drift changes allele frequencies fastest in {{c1::small}} populations because sampling error scales inversely with size.",
   "fp": "62adfaadbd9c",
-  "yield": "HIGH",
-  "why": "Drift strongest in small populations is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Drift strongest in small populations is a foundational fact tested every year"
  },
  {
   "front": "Hardy–Weinberg equilibrium requires all EXCEPT:",
   "fp": "79a3b4e5cc17",
-  "yield": "HIGH",
-  "why": "Hardy-Weinberg assumptions are a standard discrete question"
+  "yield": "ULTRA_HIGH",
+  "why": "Hardy-Weinberg assumptions are asked on essentially every exam"
  },
  {
   "front": "Homologous structures indicate:",
   "fp": "aa3733304707",
-  "yield": "HIGH",
-  "why": "Homologous structures -> divergent evolution is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Homologous structures -> divergent evolution is a foundational every-year distinction"
  },
  {
   "front": "How can a heterozygous carrier female manifest an X-linked recessive disease?",
   "fp": "5041b267ae07",
   "yield": "MEDIUM",
-  "why": "Manifesting heterozygote via skewed X-inactivation; supporting detail"
+  "why": "Manifesting heterozygote via skewed X-inactivation is second-tier detail"
  },
  {
   "front": "How can uniparental disomy cause an imprinting disorder without any deletion or mutation?",
@@ -165,31 +165,31 @@
   "front": "How does genomic imprinting silence an allele, and when is the imprint erased and reset?",
   "fp": "c858d9edc725",
   "yield": "MEDIUM",
-  "why": "Imprinting by parent-of-origin methylation; plausible passage mechanism"
+  "why": "Imprinting mechanism and erasure is useful context but rarely scored"
  },
  {
   "front": "How does linkage affect inheritance?",
   "fp": "04870089461c",
-  "yield": "HIGH",
-  "why": "Linkage and RF-proportional-to-distance is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Linkage and RF proportional to distance is core, tested every year"
  },
  {
   "front": "How is mitochondrial DNA inherited?",
   "fp": "d64ebfe23fb7",
-  "yield": "HIGH",
-  "why": "Maternal mitochondrial inheritance is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Maternal inheritance of mtDNA is a foundational every-year fact"
  },
  {
   "front": "If 16% of a population is homozygous recessive, what is $q$?",
   "fp": "ac520ab1bb48",
-  "yield": "HIGH",
-  "why": "q from q^2 is the most basic Hardy-Weinberg calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "q from homozygous recessive frequency is the core HW calculation"
  },
  {
   "front": "In a conserved gene, {{c1::synonymous}} substitutions accumulate faster than nonsynonymous ones.",
   "fp": "f352982f0f54",
   "yield": "MEDIUM",
-  "why": "Synonymous vs nonsynonymous under purifying selection; plausible passage inference"
+  "why": "dN/dS reasoning is plausible passage context but secondary"
  },
  {
   "front": "In a long-term E. coli experiment, only one of twelve identical populations evolved citrate use. What does that show?",
@@ -201,13 +201,13 @@
   "front": "In a testcross of a dihybrid, parental gamete classes exceed recombinant classes. What does this reveal?",
   "fp": "46beaa8ea2ca",
   "yield": "HIGH",
-  "why": "Excess parental classes in a testcross means linkage; standard mapping inference"
+  "why": "Inferring linkage from excess parental classes is a common testcross question"
  },
  {
   "front": "In a three-point testcross, how do you identify the middle gene?",
   "fp": "dd144c4c5328",
   "yield": "MEDIUM",
-  "why": "Three-point cross middle gene; gene mapping is on outline but this is prep-level depth"
+  "why": "Three-point cross gene ordering is a second-tier mapping skill"
  },
  {
   "front": "Interference equals 1 minus the {{c1::coefficient of coincidence}} (observed double crossovers over expected).",
@@ -218,26 +218,26 @@
  {
   "front": "List the evidence that mitochondria descend from an engulfed bacterium.",
   "fp": "201c37134110",
-  "yield": "MEDIUM",
-  "why": "Endosymbiosis evidence is tested in cell biology; belongs to another topic but earns points"
+  "yield": "HIGH",
+  "why": "Endosymbiotic evidence for mitochondria is commonly tested"
  },
  {
   "front": "Modified dihybrid ratios always sum to 16 because they are regroupings of the underlying {{c1::9:3:3:1}} classes.",
   "fp": "170ba20bf6a2",
   "yield": "MEDIUM",
-  "why": "Modified ratios regroup 9:3:3:1; useful reasoning heuristic for epistasis"
+  "why": "Ratios summing to 16 is helpful reasoning support, not a scored fact"
  },
  {
   "front": "Neurofibromatosis siblings share one mutant allele, yet one has skin macules and the other severe tumors. What concept is this?",
   "fp": "8414cda144ac",
   "yield": "MEDIUM",
-  "why": "Clinical example of variable expressivity; illustrates a tested concept"
+  "why": "Variable expressivity example; the definition card carries the tested content"
  },
  {
   "front": "Only {{c1::shared derived}} characters define a clade; shared ancestral traits do not.",
   "fp": "790ca12f3258",
   "yield": "MEDIUM",
-  "why": "Shared derived characters define clades; cladistics appears in passages"
+  "why": "Shared derived vs ancestral characters is cladistics detail rarely asked"
  },
  {
   "front": "Penetrance is the fraction of carriers showing {{c1::any phenotype at all}}; expressivity is the severity or form it takes.",
@@ -249,19 +249,19 @@
   "front": "Pleiotropy is one gene affecting {{c1::many phenotypes}}; epistasis is one gene masking another gene's phenotype.",
   "fp": "5e5e7ed8ad76",
   "yield": "HIGH",
-  "why": "Pleiotropy vs epistasis distinction is a high-frequency discrete"
+  "why": "Pleiotropy vs epistasis distinction is a commonly tested contrast"
  },
  {
   "front": "Prader-Willi syndrome reflects loss of the {{c1::paternally}} expressed 15q11 region; Angelman reflects loss of the maternal copy.",
   "fp": "91770207e566",
   "yield": "MEDIUM",
-  "why": "Prader-Willi/Angelman is the standard imprinting example"
+  "why": "Prader-Willi/Angelman is the standard imprinting example but secondary"
  },
  {
   "front": "Random X-inactivation makes every female a {{c1::mosaic}} of clones expressing one X or the other.",
   "fp": "0bad66be9689",
   "yield": "HIGH",
-  "why": "X-inactivation, Barr body, mosaicism and dosage compensation are core"
+  "why": "X-inactivation mosaicism and Barr bodies are commonly tested"
  },
  {
   "front": "Reciprocal adaptation between a pathogen and its host with no net advantage gained is described by the {{c1::Red Queen}} hypothesis.",
@@ -272,20 +272,20 @@
  {
   "front": "Recombination frequency: RF = recombinants/total offspring, and 1 percent RF defines {{c1::one map unit (centimorgan)}}.",
   "fp": "d5d2274e44ac",
-  "yield": "HIGH",
-  "why": "RF formula and 1% = 1 cM is a calculation the exam uses"
+  "yield": "ULTRA_HIGH",
+  "why": "RF = recombinants/total and 1% = 1 cM is used in calculations every year"
  },
  {
   "front": "Sexual dimorphism often results from:",
   "fp": "0c14422215e2",
-  "yield": "MEDIUM",
-  "why": "Sexual selection explains dimorphism; basic supporting fact"
+  "yield": "HIGH",
+  "why": "Sexual dimorphism from sexual selection is a common discrete"
  },
  {
   "front": "The neutral theory of molecular evolution proposes that most variation is:",
   "fp": "1bc667ce3b28",
   "yield": "MEDIUM",
-  "why": "Neutral theory underpins the molecular clock; plausible passage context"
+  "why": "Neutral theory is plausible passage context but secondary"
  },
  {
   "front": "Two lineages differ at 60 sites in a gene whose neutral substitution rate is $2 \\times 10^{-9}$ per site per year over 1000 sites.",
@@ -297,7 +297,7 @@
   "front": "Under Hardy-Weinberg, an X-linked recessive allele at frequency $q$ affects males at frequency {{c1::$q$}} and females at $q^2$.",
   "fp": "a93391aac309",
   "yield": "HIGH",
-  "why": "X-linked HW: male incidence q, female q^2 is a classic calculation"
+  "why": "X-linked HW (males q, females q^2) is a commonly tested calculation"
  },
  {
   "front": "What are pseudoautosomal regions, and how do genes there behave in pedigrees?",
@@ -308,20 +308,20 @@
  {
   "front": "What is a test cross?",
   "fp": "29244b2cd440",
-  "yield": "HIGH",
-  "why": "Test cross definition is core"
+  "yield": "ULTRA_HIGH",
+  "why": "Test cross definition is foundational and tested every year"
  },
  {
   "front": "What is epistasis?",
   "fp": "23075bc7c446",
   "yield": "HIGH",
-  "why": "Plain epistasis definition with Labrador example"
+  "why": "Epistasis definition is solid outline content, commonly tested"
  },
  {
   "front": "What pedigree pattern is diagnostic of mitochondrial inheritance?",
   "fp": "f7fffb775c86",
-  "yield": "HIGH",
-  "why": "Mitochondrial pedigree pattern (all children of affected mother) is a standard discriminator"
+  "yield": "ULTRA_HIGH",
+  "why": "Mitochondrial pedigree pattern is one of the core inheritance modes tested yearly"
  },
  {
   "front": "What pedigree signature suggests an imprinted gene rather than simple dominance?",
@@ -332,7 +332,7 @@
  {
   "front": "What phenotypic ratios come from monohybrid and dihybrid crosses?",
   "fp": "b4bf6175b65a",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Monohybrid 3:1 and dihybrid 9:3:3:1 ratios are foundational"
  },
  {
@@ -350,14 +350,14 @@
  {
   "front": "Why are X-linked recessive traits more common in males?",
   "fp": "5092af337561",
-  "yield": "HIGH",
-  "why": "Hemizygosity explains male excess in X-linked recessive traits; core"
+  "yield": "ULTRA_HIGH",
+  "why": "Hemizygosity explaining male X-linked prevalence is tested every year"
  },
  {
   "front": "Why can recombination frequency never exceed 50 percent, no matter how far apart two genes lie?",
   "fp": "4d9a280fd42f",
   "yield": "HIGH",
-  "why": "RF cap at 50% = independent assortment is commonly tested"
+  "why": "RF cap at 50% equals independent assortment is a common conceptual question"
  },
  {
   "front": "Why do mitochondrial diseases preferentially damage nerve and muscle?",
@@ -368,43 +368,43 @@
  {
   "front": "Why do siblings with the same mitochondrial mutation show very different severity?",
   "fp": "ef0f33b60047",
-  "yield": "MEDIUM",
-  "why": "Heteroplasmy explaining variable severity; plausible passage concept"
+  "yield": "HIGH",
+  "why": "Heteroplasmy explaining variable severity is a common mitochondrial question"
  },
  {
   "front": "Why do two-point crosses underestimate long map distances?",
   "fp": "0999b3d73610",
   "yield": "MEDIUM",
-  "why": "Double crossovers hiding recombinants; outline lists single/double crossovers"
+  "why": "Double-crossover underestimation is second-tier mapping detail"
  },
  {
   "front": "Why does a 9:7 ratio arise from two genes, and how does it relate to complementation?",
   "fp": "dc3bb46556ec",
   "yield": "MEDIUM",
-  "why": "9:7 ratio and complementation; second-tier epistasis example"
+  "why": "9:7 and complementation is a secondary modified ratio"
  },
  {
   "front": "Why does the biological species concept fail for bacteria?",
   "fp": "230ae46f128d",
   "yield": "MEDIUM",
-  "why": "Biological species concept limits for bacteria; plausible discrete"
+  "why": "Species-concept limits for bacteria is secondary context"
  },
  {
   "front": "Why must recombination mapping use a testcross to a homozygous recessive partner?",
   "fp": "ef3694076804",
   "yield": "MEDIUM",
-  "why": "Why mapping uses a testcross; supporting detail on the test cross card"
+  "why": "Why a testcross uses a recessive tester supports the test cross card"
  },
  {
   "front": "X-linked recessive pedigrees show mostly affected {{c1::males}} and never male-to-male transmission.",
   "fp": "23625315a805",
-  "yield": "HIGH",
-  "why": "No male-to-male transmission is the key X-linked recessive pedigree signature"
+  "yield": "ULTRA_HIGH",
+  "why": "No male-to-male transmission is the core X-linked pedigree signature"
  },
  {
   "front": "Y-linked (holandric) inheritance shows {{c1::father-to-all-sons}} transmission with only males affected.",
   "fp": "396ffef46bb1",
-  "yield": "MEDIUM",
-  "why": "Y-linked father-to-all-sons pattern; rare but a clean pedigree discriminator"
+  "yield": "HIGH",
+  "why": "Y-linked father-to-all-sons is needed to rule out modes in pedigrees"
  }
 ]

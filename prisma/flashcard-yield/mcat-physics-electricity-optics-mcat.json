@@ -1,0 +1,356 @@
+[
+ {
+  "front": "A concave lens is also called:",
+  "fp": "b99862312b8d",
+  "yield": "ULTRA_HIGH",
+  "why": "Diverging = concave = negative f/power: sign convention used on every lens question"
+ },
+ {
+  "front": "A concave mirror has a focal length of 10 cm. An object is placed 15 cm from the mirror. Where is the image formed?",
+  "fp": "81cf4b08d3e1",
+  "yield": "ULTRA_HIGH",
+  "why": "Mirror equation calculation with real/virtual sign read; tested every year"
+ },
+ {
+  "front": "A converging lens has {{c1::positive}} focal length; a diverging lens has {{c2::negative}} focal length.",
+  "fp": "5c49dba5b69e",
+  "yield": "ULTRA_HIGH",
+  "why": "Focal-length sign convention for converging vs diverging: foundation of 1/f=1/o+1/i"
+ },
+ {
+  "front": "A diverging (concave) lens always produces an image that is:",
+  "fp": "ed33433e85bb",
+  "yield": "ULTRA_HIGH",
+  "why": "Diverging lens always virtual/upright/reduced; classic discrete"
+ },
+ {
+  "front": "A hyperopic patient is prescribed $+2.0$ D. What is the focal length, and what does the lens accomplish?",
+  "fp": "5eae7daf6acf",
+  "yield": "HIGH",
+  "why": "P=1/f in diopters applied to hyperopia; common vision-correction item"
+ },
+ {
+  "front": "A myopic eye with a far point of $50$ cm needs a corrective lens of power {{c1::$-2.0$ D}}.",
+  "fp": "82d28297ad88",
+  "yield": "HIGH",
+  "why": "Far point to lens power calculation; standard myopia problem"
+ },
+ {
+  "front": "A prescription reads $-2.5$ D. What is the focal length, and what does it say about the far point?",
+  "fp": "83b130a3cf86",
+  "yield": "MEDIUM",
+  "why": "Near-restatement of the myopia far-point card; same P=1/f step"
+ },
+ {
+  "front": "An image has $m = -0.5$. What does that describe?",
+  "fp": "70bc3f6d7c20",
+  "yield": "HIGH",
+  "why": "Reading sign and magnitude of m: required step in image questions"
+ },
+ {
+  "front": "An object is placed 30 cm in front of a converging lens with focal length 15 cm. Image distance is:",
+  "fp": "19d8a1b6440c",
+  "yield": "ULTRA_HIGH",
+  "why": "Thin-lens equation calculation; appears essentially every administration"
+ },
+ {
+  "front": "An object is placed inside the focal point of a converging lens. Describe the image.",
+  "fp": "b50acf9eed6e",
+  "yield": "ULTRA_HIGH",
+  "why": "Object inside f gives virtual upright enlarged image; magnifying glass case is tested yearly"
+ },
+ {
+  "front": "An object lies between $f$ and $2f$ of a converging lens. Describe the image.",
+  "fp": "146a511902f7",
+  "yield": "HIGH",
+  "why": "Object between f and 2f case; common ray-diagram reasoning"
+ },
+ {
+  "front": "An object sits exactly at $2f$ from a converging lens. Where is the image and what is it like?",
+  "fp": "63adb0c319d0",
+  "yield": "HIGH",
+  "why": "Object at 2f gives m=-1; standard lens-case fact"
+ },
+ {
+  "front": "Describe fully the image formed by a plane mirror.",
+  "fp": "7d52d15930fa",
+  "yield": "HIGH",
+  "why": "Plane mirror image properties; frequent discrete"
+ },
+ {
+  "front": "Diffraction is most noticeable when the aperture is:",
+  "fp": "81afd046aba2",
+  "yield": "HIGH",
+  "why": "Diffraction significant when aperture ~ wavelength; outline diffraction basic"
+ },
+ {
+  "front": "Dispersion occurs because the index of refraction depends on {{c1::wavelength}}, so violet bends more than red.",
+  "fp": "1c18396471ec",
+  "yield": "HIGH",
+  "why": "Dispersion via wavelength-dependent n; outline item"
+ },
+ {
+  "front": "During accommodation the ciliary muscle contracts, letting the lens become more {{c1::convex}} and shortening its focal length for near vision.",
+  "fp": "ed7afce5e479",
+  "yield": "MEDIUM",
+  "why": "Accommodation mechanism is physiology context, secondary to lens math"
+ },
+ {
+  "front": "For a lens, what do a positive and a negative image distance each tell you?",
+  "fp": "45afeb445583",
+  "yield": "ULTRA_HIGH",
+  "why": "Sign of image distance decides real vs virtual; used on every image question"
+ },
+ {
+  "front": "For a multi-element system the total magnification is the {{c1::product}} of the individual magnifications, $m = m_1m_2$.",
+  "fp": "9664b5673fb6",
+  "yield": "MEDIUM",
+  "why": "Two-lens magnification product; second-step detail for multi-element systems"
+ },
+ {
+  "front": "For a single lens or mirror, real images are always {{c1::inverted}} and virtual images are always upright.",
+  "fp": "fa409bee0029",
+  "yield": "ULTRA_HIGH",
+  "why": "Real inverted / virtual upright pairing is the core check on every optics answer"
+ },
+ {
+  "front": "For mirrors, a positive image distance places the image {{c1::in front of the mirror}}, where it is real.",
+  "fp": "55c466e94a73",
+  "yield": "HIGH",
+  "why": "Mirror sign convention for real images; needed for spherical mirror problems"
+ },
+ {
+  "front": "For thin lenses placed in contact, the total power is the {{c1::sum}} of the individual powers.",
+  "fp": "0fd72209da3b",
+  "yield": "HIGH",
+  "why": "Powers add for lenses in contact; common corrective-lens reasoning"
+ },
+ {
+  "front": "How do fiber optics in an endoscope use total internal reflection?",
+  "fp": "074dab2cf077",
+  "yield": "MEDIUM",
+  "why": "Fiber-optic TIR application; plausible passage context"
+ },
+ {
+  "front": "How do focal length and radius of curvature relate for a spherical mirror, and what signs apply?",
+  "fp": "2f639ff402c2",
+  "yield": "ULTRA_HIGH",
+  "why": "f=R/2 and mirror sign conventions; tested every year"
+ },
+ {
+  "front": "How do you analyze a two-lens system such as a microscope?",
+  "fp": "75c1054a37ee",
+  "yield": "MEDIUM",
+  "why": "Two-lens procedure; secondary but useful for microscope passages"
+ },
+ {
+  "front": "How does presbyopia differ in cause from hyperopia?",
+  "fp": "8fadc92d1e5a",
+  "yield": "MEDIUM",
+  "why": "Presbyopia vs hyperopia cause; secondary vision-defect detail"
+ },
+ {
+  "front": "How does the single-slit diffraction pattern differ from the double-slit pattern?",
+  "fp": "c20881cf545a",
+  "yield": "MEDIUM",
+  "why": "Single-slit vs double-slit contrast; single-slit minima formula is beyond outline basics"
+ },
+ {
+  "front": "If lens 1's image would form beyond lens 2, that image acts as a {{c1::virtual object}} and its object distance for lens 2 is negative.",
+  "fp": "eff18d9e395b",
+  "yield": "LOW",
+  "why": "Virtual-object negative object distance is off-outline multi-lens detail"
+ },
+ {
+  "front": "In a compound microscope the objective forms a {{c1::real, inverted}} image, which the eyepiece then views as an enlarged virtual image.",
+  "fp": "bb1507987b1e",
+  "yield": "MEDIUM",
+  "why": "Compound microscope stages; plausible passage context"
+ },
+ {
+  "front": "In a prism, which visible color emerges deviated the most from the original beam direction?",
+  "fp": "6d991463a7de",
+  "yield": "LOW",
+  "why": "Restates the dispersion card (violet bends most)"
+ },
+ {
+  "front": "In double-slit interference, bright fringes satisfy $d\\sin\\theta = {{c1::m\\lambda}}$ for integer $m$.",
+  "fp": "15a130575fbb",
+  "yield": "HIGH",
+  "why": "Double-slit bright-fringe condition; outline interference basic"
+ },
+ {
+  "front": "Indices worth memorizing: air $1.00$, water {{c1::1.33}}, ordinary glass about $1.5$, and cornea near $1.38$.",
+  "fp": "0cebc31ba08e",
+  "yield": "MEDIUM",
+  "why": "Index values for water/glass; useful numbers but rarely the point tested"
+ },
+ {
+  "front": "Lens power in diopters is $P = {{c1::1/f}}$, with $f$ expressed in meters.",
+  "fp": "31009a1b4133",
+  "yield": "ULTRA_HIGH",
+  "why": "P=1/f in diopters; used in every vision-correction calculation"
+ },
+ {
+  "front": "Light in air strikes a water surface at $45$ degrees from the normal. Which way does it bend, and roughly how much?",
+  "fp": "52e0c5e87596",
+  "yield": "HIGH",
+  "why": "Snell's law numeric application air to water"
+ },
+ {
+  "front": "Light travels from glass into air. Does it bend toward or away from the normal?",
+  "fp": "29e0a65dc445",
+  "yield": "MEDIUM",
+  "why": "Bend direction restated; covered by the Snell's law cards"
+ },
+ {
+  "front": "Magnification is $m = {{c1::-i/o}}$, so a negative value means the image is inverted.",
+  "fp": "51b0241d5d8f",
+  "yield": "ULTRA_HIGH",
+  "why": "m=-i/o with sign meaning; core equation used every year"
+ },
+ {
+  "front": "Most of the eye's refraction occurs at the {{c1::air-cornea}} interface, not at the crystalline lens.",
+  "fp": "1190a53e41c2",
+  "yield": "MEDIUM",
+  "why": "Most refraction at cornea; underwater-vision passage context"
+ },
+ {
+  "front": "Myopia: where does the uncorrected image form, and which lens corrects it?",
+  "fp": "38304705c5b6",
+  "yield": "ULTRA_HIGH",
+  "why": "Myopia focus in front of retina, corrected by diverging lens; tested every year"
+ },
+ {
+  "front": "Presbyopia results from:",
+  "fp": "85e45ca24aad",
+  "yield": "MEDIUM",
+  "why": "Presbyopia definition; secondary vision defect"
+ },
+ {
+  "front": "Snell's law states $n_1\\sin\\theta_1 = {{c1::n_2\\sin\\theta_2}}$, with angles measured from the normal.",
+  "fp": "93a8d77d4e7f",
+  "yield": "ULTRA_HIGH",
+  "why": "Snell's law equation; on essentially every administration"
+ },
+ {
+  "front": "Spherical aberration occurs because:",
+  "fp": "0cdea5943109",
+  "yield": "MEDIUM",
+  "why": "Spherical aberration is on the outline but rarely tested"
+ },
+ {
+  "front": "State Snell's law and describe which way light bends at an interface.",
+  "fp": "2cde559d2023",
+  "yield": "HIGH",
+  "why": "Full Snell statement with bend direction; near-duplicate of the cloze card"
+ },
+ {
+  "front": "State the thin lens equation and the magnification formula, including sign conventions.",
+  "fp": "0461f6912088",
+  "yield": "ULTRA_HIGH",
+  "why": "Thin-lens equation plus magnification and sign conventions; the master optics card"
+ },
+ {
+  "front": "The critical angle satisfies:",
+  "fp": "54be13d90c23",
+  "yield": "ULTRA_HIGH",
+  "why": "Critical angle sin(theta_c)=n2/n1; calculated every year"
+ },
+ {
+  "front": "The eye forms a real, inverted image on the retina. Why does the world look upright?",
+  "fp": "7f381913e491",
+  "yield": "LOW",
+  "why": "Neural perception of orientation is trivia, not physics"
+ },
+ {
+  "front": "The index of refraction is $n = {{c1::c/v}}$, so it is always at least $1$.",
+  "fp": "b75f6afe7f5b",
+  "yield": "ULTRA_HIGH",
+  "why": "n=c/v definition; foundation of refraction questions"
+ },
+ {
+  "front": "The lower half of a converging lens is covered by an opaque card. What happens to the image?",
+  "fp": "b6e6032f6f5c",
+  "yield": "MEDIUM",
+  "why": "Covered-lens conceptual question; classic but secondary"
+ },
+ {
+  "front": "Total internal reflection occurs when:",
+  "fp": "f2446b40d8c4",
+  "yield": "ULTRA_HIGH",
+  "why": "TIR conditions (dense to less dense, above critical angle); tested every year"
+ },
+ {
+  "front": "Unpolarized light passing through an ideal polarizer emerges with {{c1::half}} its original intensity.",
+  "fp": "b6303d6e5219",
+  "yield": "HIGH",
+  "why": "Polarizer halves unpolarized intensity; outline polarization basic"
+ },
+ {
+  "front": "What corrects astigmatism, and why is a spherical lens insufficient?",
+  "fp": "ddc8afaf920d",
+  "yield": "LOW",
+  "why": "Astigmatism and cylindrical lenses are off-outline"
+ },
+ {
+  "front": "What distinguishes specular from diffuse reflection, and does the law of reflection hold for both?",
+  "fp": "7b2511fc4193",
+  "yield": "MEDIUM",
+  "why": "Specular vs diffuse reflection; low-stakes definition"
+ },
+ {
+  "front": "When light passes from air into water, which of frequency, wavelength, and speed change?",
+  "fp": "a161190fc914",
+  "yield": "HIGH",
+  "why": "Frequency fixed, speed and wavelength scale with n; common conceptual item"
+ },
+ {
+  "front": "Which images can be projected onto a screen, and can a camera photograph a virtual image?",
+  "fp": "5df03e5a4215",
+  "yield": "MEDIUM",
+  "why": "Real images projectable; mostly restates the image-distance sign card"
+ },
+ {
+  "front": "Which type of electromagnetic radiation has the highest energy per photon?",
+  "fp": "d27596542ec6",
+  "yield": "HIGH",
+  "why": "Photon energy E=hf and EM spectrum ordering; common discrete"
+ },
+ {
+  "front": "Why do polarized sunglasses use a vertical transmission axis?",
+  "fp": "fa333a6d5ab3",
+  "yield": "LOW",
+  "why": "Sunglasses orientation is trivia beyond Malus's law"
+ },
+ {
+  "front": "Why does a concave makeup mirror magnify your face only when you hold it close?",
+  "fp": "14dc386e0145",
+  "yield": "HIGH",
+  "why": "Concave mirror inside f gives upright magnified image; classic application"
+ },
+ {
+  "front": "Why does a convex side mirror warn that objects are closer than they appear?",
+  "fp": "759234ed664d",
+  "yield": "HIGH",
+  "why": "Convex mirror always virtual upright reduced; common discrete"
+ },
+ {
+  "front": "Why does a presbyopic patient often need bifocals rather than a single-power lens?",
+  "fp": "ae78b74dfa64",
+  "yield": "LOW",
+  "why": "Bifocal rationale is clinical trivia"
+ },
+ {
+  "front": "Why does bending an endoscope's fiber bundle too sharply cause light loss?",
+  "fp": "7d6dcd83adcc",
+  "yield": "LOW",
+  "why": "Fiber-bend loss is trivia beyond the TIR condition"
+ },
+ {
+  "front": "Why must an optical fiber's cladding have a lower refractive index than its core?",
+  "fp": "073204939ef2",
+  "yield": "LOW",
+  "why": "Restates the fiber-optic TIR card"
+ }
+]

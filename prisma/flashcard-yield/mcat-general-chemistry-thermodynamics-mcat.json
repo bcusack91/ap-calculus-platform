@@ -1,0 +1,398 @@
+[
+ {
+  "front": "$q = mc\\Delta T$ applies only when {{c1::no phase change occurs}}; during a phase change use {{c2::$q = mL$}}.",
+  "fp": "ed31c74810f4",
+  "yield": "ULTRA_HIGH",
+  "why": "q = mcdT vs q = mL and multi-step heating problems are calculated every exam"
+ },
+ {
+  "front": "A calorimetry trace climbs to a peak then drifts down. Why does the peak underestimate $\\Delta T$, and what is the fix?",
+  "fp": "8084b107bdcf",
+  "yield": "MEDIUM",
+  "why": "Calorimetry extrapolation correction is a secondary experimental detail"
+ },
+ {
+  "front": "A constant-volume measurement gives {{c1::$\\Delta U$}} while a constant-pressure measurement gives {{c2::$\\Delta H$}}.",
+  "fp": "e595344eb42c",
+  "yield": "HIGH",
+  "why": "Constant-V gives dU, constant-P gives dH is a common calorimetry discrete"
+ },
+ {
+  "front": "A label reads 200 Calories. Converted properly that is about {{c1::836 kJ}}.",
+  "fp": "3945863b1794",
+  "yield": "LOW",
+  "why": "Calorie vs calorie conversion is trivia-grade unit detail"
+ },
+ {
+  "front": "A reaction is spontaneous when ΔG is {{c1::negative}}; at equilibrium ΔG = {{c2::0}}.",
+  "fp": "3fb4e0c25fbd",
+  "yield": "ULTRA_HIGH",
+  "why": "dG < 0 spontaneous, dG = 0 at equilibrium: foundational, tested every exam"
+ },
+ {
+  "front": "A reaction producing fewer moles of gas than it consumes has a {{c1::negative}} $\\Delta S_{sys}$.",
+  "fp": "411a1f4294e9",
+  "yield": "ULTRA_HIGH",
+  "why": "Predicting the sign of dS from moles of gas is asked essentially every exam"
+ },
+ {
+  "front": "A spontaneous endothermic process must be driven by {{c1::a sufficiently positive $\\Delta S$}} at {{c2::high enough temperature}}.",
+  "fp": "d400b6845b1a",
+  "yield": "HIGH",
+  "why": "Endothermic yet spontaneous via TdS at high T is a common sign-analysis item"
+ },
+ {
+  "front": "A substance with a high specific heat shows {{c1::a smaller}} temperature change for a given amount of heat absorbed.",
+  "fp": "a29fef968f83",
+  "yield": "HIGH",
+  "why": "High specific heat means smaller dT is a common qualitative calorimetry item"
+ },
+ {
+  "front": "An exothermic reaction has a {{c1::negative}} $\\Delta H$, and the {{c2::surroundings}} warm up.",
+  "fp": "27f9d6e114fb",
+  "yield": "ULTRA_HIGH",
+  "why": "Exothermic negative dH and warming surroundings is foundational, tested every exam"
+ },
+ {
+  "front": "Anchor: at 25 degrees C, each factor of 10 in K corresponds to about {{c1::5.7 kJ/mol}} of $\\Delta G^{\\circ}$.",
+  "fp": "72989d188a90",
+  "yield": "MEDIUM",
+  "why": "5.7 kJ/mol per decade of K is an estimation anchor, secondary to the equation"
+ },
+ {
+  "front": "Are bond breaking and bond forming endothermic or exothermic?",
+  "fp": "1f689aa313d0",
+  "yield": "ULTRA_HIGH",
+  "why": "Bond breaking endothermic, forming exothermic underlies dH estimates every exam"
+ },
+ {
+  "front": "ATP hydrolysis is quoted near $-30.5$ kJ/mol, but in a living cell it is closer to {{c1::$-50$ kJ/mol}} because {{c2::Q is far below 1}}.",
+  "fp": "46469a5dd3b4",
+  "yield": "MEDIUM",
+  "why": "ATP in-cell dG vs standard is biochem context, secondary here"
+ },
+ {
+  "front": "Distinguish reversible from irreversible processes thermodynamically.",
+  "fp": "7f5f22b69370",
+  "yield": "MEDIUM",
+  "why": "Reversible vs irreversible process definitions are secondary physics-thermo content"
+ },
+ {
+  "front": "Enthalpy of reaction from bond energies equals:",
+  "fp": "8431a59b4470",
+  "yield": "LOW",
+  "why": "Restates the bond-energy dH cards in this deck"
+ },
+ {
+  "front": "Estimate $\\Delta H$ from bond enthalpies and note the direction of the subtraction.",
+  "fp": "735d22f81431",
+  "yield": "HIGH",
+  "why": "Bond-enthalpy dH estimate with correct subtraction direction is a common calculation"
+ },
+ {
+  "front": "Exothermic vs exergonic: which word describes heat and which describes spontaneity?",
+  "fp": "73f8e8551323",
+  "yield": "ULTRA_HIGH",
+  "why": "Exothermic vs exergonic distinction is tested essentially every exam"
+ },
+ {
+  "front": "For an ideal gas $U$ depends only on {{c1::temperature}}, so an isothermal process has $\\Delta U = 0$ and {{c2::$q = -w$}}.",
+  "fp": "9da6686ea9ab",
+  "yield": "HIGH",
+  "why": "Ideal-gas isothermal/adiabatic/isochoric relations are common physics-thermo items"
+ },
+ {
+  "front": "From formation enthalpies, $\\Delta H_{rxn}$ is {{c1::products minus reactants}}, and $\\Delta H_f$ of an element in its standard state is {{c2::zero}}.",
+  "fp": "7a4dcf07e816",
+  "yield": "ULTRA_HIGH",
+  "why": "dHrxn from formation enthalpies with elements at zero is calculated every exam"
+ },
+ {
+  "front": "Give the calorimetry equation.",
+  "fp": "6af56f8bd4bb",
+  "yield": "ULTRA_HIGH",
+  "why": "q = mcdT is the core calorimetry equation, used every exam"
+ },
+ {
+  "front": "Give the Gibbs free energy equation.",
+  "fp": "24db3be6b026",
+  "yield": "ULTRA_HIGH",
+  "why": "dG = dH - TdS is the central equation of the section"
+ },
+ {
+  "front": "Heat denaturation of a protein has positive $\\Delta H$ and positive $\\Delta S$. What does that combination predict?",
+  "fp": "f08109b70398",
+  "yield": "HIGH",
+  "why": "Protein melting as +dH/+dS crossover is a common biochem application"
+ },
+ {
+  "front": "Heat, temperature, and internal energy are three different quantities. Distinguish them.",
+  "fp": "4ec95875695d",
+  "yield": "MEDIUM",
+  "why": "Heat vs temperature vs internal energy distinction is supporting conceptual content"
+ },
+ {
+  "front": "How do $\\Delta H$ and $\\Delta U$ differ, and when does the difference matter?",
+  "fp": "a02966383afd",
+  "yield": "HIGH",
+  "why": "dH = dU + PdV and when the difference matters is a common discrete"
+ },
+ {
+  "front": "How do cells drive thermodynamically unfavorable reactions?",
+  "fp": "d82c80fc46d2",
+  "yield": "HIGH",
+  "why": "Reaction coupling to ATP hydrolysis is a common thermo/biochem reasoning step"
+ },
+ {
+  "front": "How do ionic charge and radius affect lattice energy?",
+  "fp": "811fe51050a1",
+  "yield": "MEDIUM",
+  "why": "Lattice energy vs charge and radius is secondary bonding content"
+ },
+ {
+  "front": "How does a bomb calorimeter differ from a coffee-cup calorimeter?",
+  "fp": "02a78e30158a",
+  "yield": "HIGH",
+  "why": "Bomb vs coffee-cup calorimeter (dU vs dH, C vs mc) is a common discrete"
+ },
+ {
+  "front": "How does a temperature change shift equilibrium differently from a pressure or concentration change?",
+  "fp": "be6c983c1eb4",
+  "yield": "ULTRA_HIGH",
+  "why": "Only temperature changes K; heat as reactant/product is asked essentially every exam"
+ },
+ {
+  "front": "How does an exothermic reaction raise the entropy of the surroundings?",
+  "fp": "f40067d08f56",
+  "yield": "HIGH",
+  "why": "dS_surr = -dH/T explains temperature dependence of spontaneity; common reasoning step"
+ },
+ {
+  "front": "If $\\Delta G^{\\circ}$ is exactly 0 then K equals {{c1::1}}, and a $\\Delta G^{\\circ}$ of only a few kJ/mol means K is {{c2::near 1}}.",
+  "fp": "076b358cc40d",
+  "yield": "MEDIUM",
+  "why": "Magnitude of dG vs K is supporting interpretation of the dG = -RT ln K card"
+ },
+ {
+  "front": "If $\\Delta G^\\circ$ is positive, then $K$ is:",
+  "fp": "eba27563482d",
+  "yield": "HIGH",
+  "why": "Positive dG means K < 1 is a common direct application"
+ },
+ {
+  "front": "In $\\Delta G = \\Delta G^{\\circ} + RT\\ln Q$, at equilibrium Q equals {{c1::K}} and $\\Delta G$ equals {{c2::0}}.",
+  "fp": "ae4211e92801",
+  "yield": "ULTRA_HIGH",
+  "why": "dG = dG + RT ln Q with Q = K at equilibrium is used essentially every exam"
+ },
+ {
+  "front": "In an adiabatic process the heat exchanged is {{c1::0}}, so the internal energy change equals {{c2::the work done}}.",
+  "fp": "edf3465a720f",
+  "yield": "HIGH",
+  "why": "Adiabatic q = 0, dU = w with compression heating is a common physics-thermo item"
+ },
+ {
+  "front": "In an isochoric (constant volume) process the work is {{c1::0}} and all the heat goes into {{c2::internal energy}}.",
+  "fp": "305544cd8dd7",
+  "yield": "MEDIUM",
+  "why": "Isochoric w = 0 largely restates the constant-volume calorimetry card"
+ },
+ {
+  "front": "In coffee-cup calorimetry the reaction's heat is {{c1::the negative of}} the heat absorbed by the solution.",
+  "fp": "b47cb0f01b60",
+  "yield": "MEDIUM",
+  "why": "Sign flip for q_rxn is supporting detail for the coffee-cup calorimetry card"
+ },
+ {
+  "front": "On a P-V diagram, work equals {{c1::the area under the curve}} and a closed cycle's net work equals {{c2::the enclosed area}}.",
+  "fp": "705e47d95d6c",
+  "yield": "HIGH",
+  "why": "Work as area under a P-V curve is a common physics-thermo figure item"
+ },
+ {
+  "front": "On a plot of $\\Delta G$ versus temperature, the slope equals {{c1::$-\\Delta S$}} and the intercept equals {{c2::$\\Delta H$}}.",
+  "fp": "381fb37fdbf6",
+  "yield": "MEDIUM",
+  "why": "Reading dG vs T as a line is a secondary graphical interpretation"
+ },
+ {
+  "front": "Protein folding lowers the chain's own entropy yet happens spontaneously. What drives it?",
+  "fp": "c451fb912bed",
+  "yield": "HIGH",
+  "why": "Hydrophobic effect driving protein folding is a frequent biochem thermo question"
+ },
+ {
+  "front": "Relate $\\Delta G^\\circ$ to the equilibrium constant.",
+  "fp": "f4c77e3a3768",
+  "yield": "ULTRA_HIGH",
+  "why": "dG = -RT ln K is a core equation used in calculations every exam"
+ },
+ {
+  "front": "Restate the second law in the form that resolves apparent violations.",
+  "fp": "8eef15e41bcc",
+  "yield": "ULTRA_HIGH",
+  "why": "Second law dS_universe > 0 resolving local ordering is asked essentially every exam"
+ },
+ {
+  "front": "Specific heat is per {{c1::gram}}, molar heat capacity is per {{c2::mole}}, and heat capacity belongs to the whole object.",
+  "fp": "825eb7f0c773",
+  "yield": "MEDIUM",
+  "why": "Specific vs molar vs total heat capacity is a supporting setup distinction"
+ },
+ {
+  "front": "Standard conditions mean {{c1::1 atm}} pressure and 1 M solute concentrations, conventionally at {{c2::298 K}}.",
+  "fp": "0d2d8b045678",
+  "yield": "HIGH",
+  "why": "Standard-state conditions and the degree symbol meaning are a common discrete"
+ },
+ {
+  "front": "State functions depend only on {{c1::the initial and final states}}, while {{c2::heat and work}} are path functions.",
+  "fp": "b5a89faa1300",
+  "yield": "ULTRA_HIGH",
+  "why": "State vs path functions is foundational and licenses Hess law; tested every exam"
+ },
+ {
+  "front": "State Hess's law.",
+  "fp": "fb5b83542236",
+  "yield": "ULTRA_HIGH",
+  "why": "Hess law is tested on essentially every exam"
+ },
+ {
+  "front": "State the first law with its sign convention.",
+  "fp": "1a8801a0759c",
+  "yield": "ULTRA_HIGH",
+  "why": "First law with sign convention is foundational and tested every exam"
+ },
+ {
+  "front": "State the third law and what it makes possible.",
+  "fp": "0368ec96704b",
+  "yield": "LOW",
+  "why": "Third law and absolute entropies are rarely tested detail"
+ },
+ {
+  "front": "The biochemical standard state differs from the chemical one mainly by fixing {{c1::pH 7}} instead of 1 M $H^{+}$.",
+  "fp": "d4a6997ca8e2",
+  "yield": "MEDIUM",
+  "why": "Biochemical standard state at pH 7 is secondary context for biochem values"
+ },
+ {
+  "front": "The crossover temperature where spontaneity flips is {{c1::$T = \\Delta H/\\Delta S$}}, the point where $\\Delta G$ equals {{c2::0}}.",
+  "fp": "7f9c50e35d84",
+  "yield": "HIGH",
+  "why": "Crossover temperature T = dH/dS is a common sign-analysis calculation"
+ },
+ {
+  "front": "The first law of thermodynamics states:",
+  "fp": "f19c8b350576",
+  "yield": "LOW",
+  "why": "Restates the first law with the opposite sign convention; the fuller card is kept"
+ },
+ {
+  "front": "Under Hess's law, reversing a reaction {{c1::flips the sign of $\\Delta H$}} and doubling it {{c2::doubles $\\Delta H$}}.",
+  "fp": "e51b17fa6566",
+  "yield": "HIGH",
+  "why": "Reversing and scaling reactions in Hess law is a required calculation step"
+ },
+ {
+  "front": "Water anchors: specific heat {{c1::4.184 J/g per degree C}} and heat of vaporization about {{c2::2260 J/g}}.",
+  "fp": "1c57ff138376",
+  "yield": "HIGH",
+  "why": "Water specific heat 4.184 and heat of vaporization are used in calculations"
+ },
+ {
+  "front": "What decides whether dissolving a salt is exothermic or endothermic?",
+  "fp": "f3f2592987d4",
+  "yield": "MEDIUM",
+  "why": "Lattice vs hydration energy for dissolution is a secondary application"
+ },
+ {
+  "front": "What does a catalyst change, and what does it leave untouched?",
+  "fp": "99a12185bbd0",
+  "yield": "HIGH",
+  "why": "Catalyst leaves dG, K and equilibrium unchanged is asked nearly every exam"
+ },
+ {
+  "front": "What does a coffee-cup calorimeter measure, and how is the calculation set up?",
+  "fp": "26e5f1dbc567",
+  "yield": "HIGH",
+  "why": "Coffee-cup calorimetry measures dH; setup with q = -mcdT is a common calculation"
+ },
+ {
+  "front": "What happens to work, temperature, and entropy when an ideal gas expands freely into a vacuum?",
+  "fp": "de63d6a4c2be",
+  "yield": "MEDIUM",
+  "why": "Free expansion into vacuum is a secondary physics-thermo scenario"
+ },
+ {
+  "front": "What is a state function? Give examples.",
+  "fp": "147ebcb6fa1d",
+  "yield": "LOW",
+  "why": "Restates the state-function cloze card in this deck"
+ },
+ {
+  "front": "What is the sign of $\\Delta S$ for a gas condensing?",
+  "fp": "31d8b36a6523",
+  "yield": "LOW",
+  "why": "Restates the entropy-change cards in this deck"
+ },
+ {
+  "front": "When is a reaction spontaneous at ALL temperatures?",
+  "fp": "8e39424bf488",
+  "yield": "ULTRA_HIGH",
+  "why": "dH/dS sign combinations and spontaneity at all temperatures is asked every exam"
+ },
+ {
+  "front": "Which change has the largest positive $\\Delta S$?",
+  "fp": "7daaee43f95e",
+  "yield": "HIGH",
+  "why": "Vaporization as the largest entropy jump is a common ranking discrete"
+ },
+ {
+  "front": "Which changes reliably increase entropy?",
+  "fp": "95b9695eb693",
+  "yield": "ULTRA_HIGH",
+  "why": "Reliable entropy-increasing changes, especially more gas moles, tested every exam"
+ },
+ {
+  "front": "Which has the highest specific heat?",
+  "fp": "d5923f0f1299",
+  "yield": "LOW",
+  "why": "Restates the water specific-heat cards; trivia as a standalone"
+ },
+ {
+  "front": "Which thermodynamic quantity determines the spontaneity of a reaction at constant temperature and pressure?",
+  "fp": "64da9f81c1c0",
+  "yield": "LOW",
+  "why": "Restates the dG spontaneity cards in this deck"
+ },
+ {
+  "front": "Why can one reaction be favorable inside a cell yet unfavorable at standard state?",
+  "fp": "ad319524da3a",
+  "yield": "MEDIUM",
+  "why": "In-cell vs standard favorability restates the dG = dG + RT ln Q card"
+ },
+ {
+  "front": "Why does a negative $\\Delta G$ say nothing about how fast a reaction runs?",
+  "fp": "4de48f18b433",
+  "yield": "ULTRA_HIGH",
+  "why": "Thermodynamics vs kinetics (spontaneous but slow) is tested essentially every exam"
+ },
+ {
+  "front": "Why is $\\Delta G = 0$ at a normal melting or boiling point?",
+  "fp": "da636d83f255",
+  "yield": "HIGH",
+  "why": "dG = 0 at phase transitions and dS = dH/T is a common calculation shortcut"
+ },
+ {
+  "front": "Why is $\\Delta H_{vap}$ much larger than $\\Delta H_{fus}$ for the same substance?",
+  "fp": "eb3efa912d9d",
+  "yield": "MEDIUM",
+  "why": "Why dHvap exceeds dHfus is supporting explanation"
+ },
+ {
+  "front": "Why is a heating curve flat during melting and boiling?",
+  "fp": "44bbbae1d39c",
+  "yield": "HIGH",
+  "why": "Flat heating-curve plateaus during phase change are a common figure item"
+ }
+]

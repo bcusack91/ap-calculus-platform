@@ -1,0 +1,410 @@
+[
+ {
+  "front": "A battery's terminal voltage equals its emf only when {{c1::no current flows}}; under load $V = \\varepsilon - Ir$.",
+  "fp": "385adf612a38",
+  "yield": "HIGH",
+  "why": "Terminal voltage V = emf - Ir with internal resistance is a common circuit discrete"
+ },
+ {
+  "front": "A cell membrane is about $7$ nm thick with $70$ mV across it. What field results, and why does it matter?",
+  "fp": "f44c58f588f4",
+  "yield": "MEDIUM",
+  "why": "E = V/d applied to a membrane; the core relation is tested, this biological example is secondary"
+ },
+ {
+  "front": "A charged capacitor is disconnected from its battery, then a dielectric is inserted. What happens to $V$ and $E$?",
+  "fp": "1b7ef07ae2b8",
+  "yield": "HIGH",
+  "why": "Dielectric inserted with capacitor isolated (Q fixed) is a frequently tested reasoning step"
+ },
+ {
+  "front": "A charged rod attracts a neutral scrap of paper. What mechanism explains the attraction?",
+  "fp": "6bc680b49032",
+  "yield": "MEDIUM",
+  "why": "Polarization of a neutral object explains attraction; conceptual, rarely the point of a question"
+ },
+ {
+  "front": "A dielectric is slid into a capacitor that remains connected to a battery. What happens to $V$, $C$, and $Q$?",
+  "fp": "372a2a58da4c",
+  "yield": "HIGH",
+  "why": "Dielectric inserted with battery connected (V fixed) is a frequently tested reasoning step"
+ },
+ {
+  "front": "A dielectric raises capacitance because its molecules polarize and create an internal field that {{c1::opposes}} the applied field.",
+  "fp": "34f9b2b8222e",
+  "yield": "MEDIUM",
+  "why": "Why dielectrics raise C (opposing internal field) supports the kappa card; second-tier mechanism"
+ },
+ {
+  "front": "A gel is run at $100$ V instead of $50$ V across the same box. What changes?",
+  "fp": "b53b8cd49ab2",
+  "yield": "MEDIUM",
+  "why": "Doubling gel voltage doubles drift speed and halves run time; applied electrophoresis reasoning"
+ },
+ {
+  "front": "A parallel-plate capacitor has its plate separation doubled with charge held fixed. What happens to $C$ and $V$?",
+  "fp": "0d999dd23eb0",
+  "yield": "HIGH",
+  "why": "C = eps0 A/d with Q fixed, doubling d halves C and doubles V; standard capacitor proportionality"
+ },
+ {
+  "front": "A passage reports an isolated droplet carrying $2.4 \\times 10^{-19}$ C. Why is this measurement suspect?",
+  "fp": "a9657d5ddbc9",
+  "yield": "MEDIUM",
+  "why": "Spotting a non-integer multiple of e is a common application, but the quantization card covers it"
+ },
+ {
+  "front": "A proton and an electron are each released from rest in a uniform field. How does each move relative to potential?",
+  "fp": "2faaf5f71493",
+  "yield": "ULTRA_HIGH",
+  "why": "Direction positive/negative charges move relative to potential is tested on nearly every exam"
+ },
+ {
+  "front": "A pulse oximeter compares absorbance at {{c1::660 nm (red)}} and about $940$ nm (infrared), where the two forms of hemoglobin differ most.",
+  "fp": "d3217789759c",
+  "yield": "LOW",
+  "why": "Pulse oximeter wavelengths are trivia-grade detail far off the outline"
+ },
+ {
+  "front": "A real image is one that:",
+  "fp": "e3ac811be1d8",
+  "yield": "HIGH",
+  "why": "Real vs virtual image (projectable) is a core optics distinction that shows up often"
+ },
+ {
+  "front": "A static shock can involve thousands of volts yet be harmless because the transferred {{c1::charge and energy}} are tiny.",
+  "fp": "8d497f7fb60a",
+  "yield": "LOW",
+  "why": "Why static shocks are harmless is illustrative trivia, not outline content"
+ },
+ {
+  "front": "A surface ECG records potential differences of order {{c1::1 mV}}, produced by the heart acting as a large rotating electric dipole.",
+  "fp": "b6747d07aed4",
+  "yield": "LOW",
+  "why": "ECG signal magnitude and dipole model are off-outline detail"
+ },
+ {
+  "front": "Because its phosphate backbone is negatively charged, DNA migrates toward the {{c1::anode}}, the positive electrode, during electrophoresis.",
+  "fp": "33dcddf27f79",
+  "yield": "HIGH",
+  "why": "DNA migrating to the positive anode in electrophoresis is a classic biology-physics crossover"
+ },
+ {
+  "front": "Between two protons the electrostatic repulsion exceeds the gravitational attraction by roughly a factor of {{c1::$10^{36}$}}.",
+  "fp": "bdf0435705de",
+  "yield": "LOW",
+  "why": "The 10^36 electrostatic-to-gravity ratio is trivia"
+ },
+ {
+  "front": "Bone appears white on a radiograph because calcium's high {{c1::atomic number}} makes it absorb X-rays far more strongly than soft tissue.",
+  "fp": "07384ec967ff",
+  "yield": "LOW",
+  "why": "X-ray absorption vs atomic number is off-outline imaging detail"
+ },
+ {
+  "front": "Capacitance depends only on {{c1::geometry and the dielectric}}, not on the charge stored or voltage applied.",
+  "fp": "3c605d6ca238",
+  "yield": "HIGH",
+  "why": "Capacitance set by geometry and dielectric alone, not Q or V, is a frequently tested concept"
+ },
+ {
+  "front": "Charge is quantized: every observed charge is an integer multiple of the {{c1::elementary charge}}, $e = 1.6 \\times 10^{-19}$ C.",
+  "fp": "dabc6b15f225",
+  "yield": "ULTRA_HIGH",
+  "why": "Charge quantization with e = 1.6e-19 C is foundational and used in calculations every year"
+ },
+ {
+  "front": "Compare resistors in series and parallel.",
+  "fp": "efdcb2d3cb21",
+  "yield": "ULTRA_HIGH",
+  "why": "Series vs parallel resistor combination rules are tested on essentially every exam"
+ },
+ {
+  "front": "Define the electron volt and give its value in joules.",
+  "fp": "aa83e29e90f8",
+  "yield": "HIGH",
+  "why": "The electron volt definition and value is a commonly needed unit conversion"
+ },
+ {
+  "front": "Describe the shape of the equipotential surfaces for a point charge and for a uniform field.",
+  "fp": "c46caa3bacda",
+  "yield": "MEDIUM",
+  "why": "Equipotential surface shapes are useful context; rarely the tested point"
+ },
+ {
+  "front": "Distinguish the units of electric potential from those of electric potential energy.",
+  "fp": "fc3bdf419854",
+  "yield": "HIGH",
+  "why": "Distinguishing volts (J/C) from joules for PE is a common conceptual discrete"
+ },
+ {
+  "front": "Electric potential is a {{c1::scalar}}, so contributions from several charges combine by algebraic addition.",
+  "fp": "7cfe14a80e26",
+  "yield": "HIGH",
+  "why": "Potential as a scalar that adds algebraically, unlike vector fields, is commonly tested"
+ },
+ {
+  "front": "Energy stored in a capacitor is $U = {{c1::\\frac12 CV^2}}$, equivalently $\\frac12 QV$ or $Q^2/(2C)$.",
+  "fp": "1815b38ad67a",
+  "yield": "ULTRA_HIGH",
+  "why": "U = 1/2 CV^2 and its equivalent forms are calculation equations tested every year"
+ },
+ {
+  "front": "For two point charges the potential energy is $U = {{c1::kQq/r}}$, while a single charge sets up potential $V = kQ/r$.",
+  "fp": "69d19e22b956",
+  "yield": "ULTRA_HIGH",
+  "why": "U = kQq/r and V = kQ/r are core equations used in calculations on essentially every exam"
+ },
+ {
+  "front": "Force on a charge moving in a magnetic field is:",
+  "fp": "e142e3f928f4",
+  "yield": "ULTRA_HIGH",
+  "why": "F = qvB sin(theta) is the one magnetism equation tested every year"
+ },
+ {
+  "front": "Give a case where the electric field is zero but the electric potential is not.",
+  "fp": "144818dc2a1a",
+  "yield": "MEDIUM",
+  "why": "E = 0 but V nonzero inside a shell is a nice conceptual example but second-tier"
+ },
+ {
+  "front": "Give Coulomb's law and Ohm's law.",
+  "fp": "f9d1c3c4792b",
+  "yield": "ULTRA_HIGH",
+  "why": "Coulomb's law and Ohm's law are the foundational equations of the section"
+ },
+ {
+  "front": "Give the electrical power formulas.",
+  "fp": "19a86a93ddf3",
+  "yield": "ULTRA_HIGH",
+  "why": "P = IV = I^2 R = V^2/R is used in calculations every year"
+ },
+ {
+  "front": "Give the thin lens equation and magnification.",
+  "fp": "cc1193940692",
+  "yield": "ULTRA_HIGH",
+  "why": "Thin lens equation and magnification are calculation equations tested every year"
+ },
+ {
+  "front": "Grounding an object connects it to a charge reservoir, fixing its potential at {{c1::zero}}.",
+  "fp": "9e4a718b2447",
+  "yield": "MEDIUM",
+  "why": "Grounding fixes potential at zero; supporting definition, rarely the tested point"
+ },
+ {
+  "front": "How do capacitors combine?",
+  "fp": "11425493e92e",
+  "yield": "HIGH",
+  "why": "Capacitor combination rules (opposite of resistors) are commonly tested"
+ },
+ {
+  "front": "How do speed, frequency, and wavelength compare across the EM spectrum in vacuum?",
+  "fp": "7c8d76880e49",
+  "yield": "ULTRA_HIGH",
+  "why": "c = f lambda across the EM spectrum is foundational and used in calculations every year"
+ },
+ {
+  "front": "In a plane mirror, the image is:",
+  "fp": "1c847c939cad",
+  "yield": "HIGH",
+  "why": "Plane mirror image properties are a common optics discrete"
+ },
+ {
+  "front": "In any isolated system the total electric charge is {{c1::conserved}}, even though it can be transferred between objects.",
+  "fp": "8bbb359e18e4",
+  "yield": "HIGH",
+  "why": "Conservation of charge is core but usually a background principle rather than the tested step"
+ },
+ {
+  "front": "In electrostatic equilibrium, excess charge on an isolated conductor resides {{c1::entirely on the outer surface}}.",
+  "fp": "1dc8d77996e7",
+  "yield": "MEDIUM",
+  "why": "Excess charge on outer conductor surface is supporting conceptual detail"
+ },
+ {
+  "front": "In gel electrophoresis, why do DNA fragments drift at constant speed instead of accelerating in the field?",
+  "fp": "66fb46af4f9b",
+  "yield": "MEDIUM",
+  "why": "Terminal drift velocity in a gel balances qE and drag; applied reasoning, second-tier"
+ },
+ {
+  "front": "In vacuum every electromagnetic wave travels at $c = {{c1::3\\times 10^8}}$ m/s; in a medium of index $n$ the speed drops to $c/n$.",
+  "fp": "c95f55558e8f",
+  "yield": "ULTRA_HIGH",
+  "why": "c = 3e8 m/s and v = c/n are used in calculations on essentially every exam"
+ },
+ {
+  "front": "Inserting a dielectric with constant $\\kappa$ changes the capacitance to $C' = {{c1::\\kappa C}}$.",
+  "fp": "6733bc49618e",
+  "yield": "HIGH",
+  "why": "C' = kappa C is a commonly tested capacitor relation"
+ },
+ {
+  "front": "Kirchhoff's junction rule is based on conservation of:",
+  "fp": "4400e3d7ac36",
+  "yield": "HIGH",
+  "why": "Junction rule as conservation of charge is a common discrete"
+ },
+ {
+  "front": "Kirchhoff's loop rule expresses conservation of:",
+  "fp": "18c4e7573b39",
+  "yield": "HIGH",
+  "why": "Loop rule as conservation of energy is a common discrete"
+ },
+ {
+  "front": "MRI uses radiofrequency photons. Why is it considered safer than CT?",
+  "fp": "9e536b71e60b",
+  "yield": "MEDIUM",
+  "why": "MRI uses non-ionizing RF vs CT; plausible passage context, secondary"
+ },
+ {
+  "front": "One coulomb is about {{c1::$6\\times 10^{18}$}} elementary charges, which is why laboratory static charges are quoted in nC or $\\mu$C.",
+  "fp": "3f0984a0b7d2",
+  "yield": "LOW",
+  "why": "Coulomb as 6e18 elementary charges restates the quantization card"
+ },
+ {
+  "front": "Ordered by increasing frequency, the EM spectrum runs radio, microwave, infrared, {{c1::visible}}, ultraviolet, X-ray, gamma.",
+  "fp": "1a1cf90ee6be",
+  "yield": "ULTRA_HIGH",
+  "why": "EM spectrum order by frequency is tested on nearly every exam"
+ },
+ {
+  "front": "Photon energy is $E = hf = {{c1::hc/\\lambda}}$, so shorter wavelength light carries more energy per photon.",
+  "fp": "febe9ac936cf",
+  "yield": "ULTRA_HIGH",
+  "why": "E = hf = hc/lambda is a calculation equation tested every year"
+ },
+ {
+  "front": "Resistors in SERIES have:",
+  "fp": "8eef6da5b32e",
+  "yield": "LOW",
+  "why": "Series resistors card restates the series/parallel comparison card in this deck"
+ },
+ {
+  "front": "State Snell's law and the condition for total internal reflection.",
+  "fp": "5482c38d3ada",
+  "yield": "ULTRA_HIGH",
+  "why": "Snell's law and total internal reflection are tested on essentially every exam"
+ },
+ {
+  "front": "The work done moving a charge along an equipotential surface is {{c1::zero}}.",
+  "fp": "20afc954ce40",
+  "yield": "HIGH",
+  "why": "Zero work along an equipotential is a commonly tested consequence of W = q delta V"
+ },
+ {
+  "front": "The work required to move a charge $q$ through a potential difference $\\Delta V$ is $W = {{c1::q\\Delta V}}$.",
+  "fp": "8b9fa21275c6",
+  "yield": "ULTRA_HIGH",
+  "why": "W = q delta V is the core energy equation of electrostatics, used in calculations every year"
+ },
+ {
+  "front": "Two identical conducting spheres carry $+8$ nC and $-2$ nC. They touch and separate. What charge does each carry?",
+  "fp": "1800a7b238a3",
+  "yield": "HIGH",
+  "why": "Identical conductors sharing charge on contact is a classic frequently tested problem"
+ },
+ {
+  "front": "Two parallel plates sit $2$ mm apart with $10$ V across them. What is the field between them?",
+  "fp": "e8e91c2b7061",
+  "yield": "ULTRA_HIGH",
+  "why": "E = V/d for parallel plates is a calculation used on essentially every exam"
+ },
+ {
+  "front": "Two point charges of +2 μC and -4 μC are separated by 0.3 m. Is the force attractive or repulsive, and what is its magnitude? (k = $9 \\times 10^{9}$ $N\\cdot m^{2}/C^{2}$)",
+  "fp": "1287083616e6",
+  "yield": "HIGH",
+  "why": "Coulomb's law calculation with sign reasoning; a common numeric discrete"
+ },
+ {
+  "front": "What does conductive gel accomplish under an ECG electrode?",
+  "fp": "9a5f5c7a7601",
+  "yield": "LOW",
+  "why": "Conductive gel lowering contact resistance is off-outline clinical detail"
+ },
+ {
+  "front": "What does the dielectric strength of an insulator determine?",
+  "fp": "4ead2b5fad9e",
+  "yield": "MEDIUM",
+  "why": "Dielectric strength and breakdown is a useful definition but secondary"
+ },
+ {
+  "front": "What is the field inside a conductor at electrostatic equilibrium?",
+  "fp": "b0dfb9bf8a25",
+  "yield": "HIGH",
+  "why": "Zero field inside a conductor at equilibrium is a commonly tested concept"
+ },
+ {
+  "front": "What is the sign of the potential energy of two like charges versus two unlike charges?",
+  "fp": "2d083d6212a3",
+  "yield": "HIGH",
+  "why": "Sign of U for like vs unlike charges is a common conceptual question"
+ },
+ {
+  "front": "Where equipotential lines are drawn closer together, the electric field is {{c1::stronger}}.",
+  "fp": "95f728d623cf",
+  "yield": "HIGH",
+  "why": "Closer equipotentials mean stronger field is a commonly tested graphical inference"
+ },
+ {
+  "front": "Which lens corrects myopia vs. hyperopia?",
+  "fp": "951a2da83b59",
+  "yield": "HIGH",
+  "why": "Diverging lens for myopia, converging for hyperopia is a common optics discrete"
+ },
+ {
+  "front": "Which regions of the EM spectrum are ionizing, and what is the clinical consequence?",
+  "fp": "8bdf256f6c2f",
+  "yield": "HIGH",
+  "why": "Which EM regions are ionizing is commonly tested and passage-relevant"
+ },
+ {
+  "front": "Why are EEG signals harder to record cleanly than ECG signals?",
+  "fp": "7364c16102ee",
+  "yield": "LOW",
+  "why": "EEG vs ECG signal size is off-outline clinical trivia"
+ },
+ {
+  "front": "Why does a defibrillator discharge a capacitor rather than connect the patient directly to a battery?",
+  "fp": "aec8b79c7845",
+  "yield": "MEDIUM",
+  "why": "Defibrillator as a capacitor discharge is a plausible passage application; secondary"
+ },
+ {
+  "front": "Why does a grounded metal mesh around an MRI suite block outside radio signals?",
+  "fp": "e0e247da038b",
+  "yield": "LOW",
+  "why": "Faraday cage around MRI restates the zero-field-inside-conductor card"
+ },
+ {
+  "front": "Why is $60$ Hz household AC considered more hazardous than DC at the same voltage?",
+  "fp": "5f5b7feda1ed",
+  "yield": "LOW",
+  "why": "AC vs DC hazard by frequency is off-outline physiology trivia"
+ },
+ {
+  "front": "Why is a bird perched on a single high-voltage line unharmed even at $10^5$ V?",
+  "fp": "c57c8a6f67d3",
+  "yield": "MEDIUM",
+  "why": "Bird on a wire illustrates current needing a potential difference; conceptual example"
+ },
+ {
+  "front": "Why is the same $120$ V outlet far more dangerous when your hands are wet?",
+  "fp": "1993228d98e9",
+  "yield": "MEDIUM",
+  "why": "Wet vs dry skin resistance applies Ohm's law; illustrative, secondary"
+ },
+ {
+  "front": "Why must the electric field just outside a charged conductor be perpendicular to its surface?",
+  "fp": "dc769f240fb9",
+  "yield": "MEDIUM",
+  "why": "Field perpendicular to a conductor surface is supporting electrostatics detail"
+ },
+ {
+  "front": "X-rays and gamma rays overlap in energy and are distinguished mainly by their {{c1::origin}}.",
+  "fp": "9e2c1e7077bc",
+  "yield": "MEDIUM",
+  "why": "X-ray vs gamma distinguished by origin is a plausible discrete but secondary"
+ }
+]

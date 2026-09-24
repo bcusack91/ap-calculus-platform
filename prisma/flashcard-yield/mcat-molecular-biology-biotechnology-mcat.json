@@ -2,38 +2,38 @@
  {
   "front": "A {{c1::Northern}} blot detects a specific RNA with a labeled nucleic acid probe, making it the classic readout of gene expression level.",
   "fp": "d6bfdd375f4e",
-  "yield": "HIGH",
-  "why": "Northern = RNA; core blot distinction (SNoW DRoP) asked directly"
+  "yield": "ULTRA_HIGH",
+  "why": "Southern/Northern/Western distinction is asked on essentially every exam; Northern = RNA expression"
  },
  {
   "front": "A {{c1::Southwestern}} blot identifies proteins that bind a specific DNA sequence.",
   "fp": "0999cbdb3e6f",
   "yield": "MEDIUM",
-  "why": "Southwestern not on AAMC list, but DNA-binding-protein logic is plausible passage context"
+  "why": "Southwestern blot is off-outline; DNA-binding-protein logic only as passage context"
  },
  {
   "front": "A cDNA library contains only the {{c1::exons of genes actively expressed}} in the source tissue.",
   "fp": "a433a4310fa2",
-  "yield": "HIGH",
-  "why": "cDNA library = expressed exons only; core cDNA vs genomic distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "cDNA = spliced exons of expressed genes; cDNA vs genomic library is a perennial discrete"
  },
  {
   "front": "After $n$ PCR cycles the theoretical yield is {{c1::$2^n$}} copies per template molecule.",
   "fp": "87b8c5f656bf",
-  "yield": "HIGH",
-  "why": "2^n amplification is the PCR calculation the exam actually asks"
+  "yield": "ULTRA_HIGH",
+  "why": "2^n amplification is the one PCR calculation asked year after year"
  },
  {
   "front": "After a Cas9 double-strand break, which repair pathway creates knockouts and which enables precise knock-ins?",
   "fp": "41b6ccbbd758",
-  "yield": "MEDIUM",
-  "why": "NHEJ knockout vs HDR knock-in: second step beyond concept-level CRISPR"
+  "yield": "HIGH",
+  "why": "NHEJ knockout vs HDR knock-in is the reasoning step CRISPR passages now turn on"
  },
  {
   "front": "Alternative splicing allows one gene to:",
   "fp": "ac286f33ee45",
   "yield": "MEDIUM",
-  "why": "MISFILED (gene expression, still 1B): alternative splicing is core but not biotech"
+  "why": "Core concept but misfiled here and covered in the transcription deck"
  },
  {
   "front": "Bacteria are made competent for transformation using {{c1::CaCl2 plus heat shock}} (or electroporation).",
@@ -51,25 +51,25 @@
   "front": "Contrast a transgenic mouse with a knockout mouse at the DNA level.",
   "fp": "dc18f4ec465e",
   "yield": "MEDIUM",
-  "why": "Supporting detail (random insertion vs targeted HR) on the knockout/transgenic card"
+  "why": "Random insertion vs targeted HR: supporting detail on the knockout/transgenic card"
  },
  {
   "front": "Distinguish selection from screening in a cloning workflow.",
   "fp": "814d74b1a213",
-  "yield": "MEDIUM",
-  "why": "Selection vs screening: plausible second step in a cloning passage"
+  "yield": "HIGH",
+  "why": "Selection vs screening is a standard cloning-passage question"
  },
  {
   "front": "DNA ligase seals the nick between fragments by forming a phosphodiester bond, consuming {{c1::ATP (or NAD+ in E. coli)}}.",
   "fp": "4f4356163ef9",
   "yield": "MEDIUM",
-  "why": "Ligase needs ATP; NAD+ in E. coli is trivia but energy requirement is askable"
+  "why": "Ligase energy source (ATP/NAD+) is askable but secondary to what ligase does"
  },
  {
   "front": "During gel electrophoresis, DNA migrates toward the {{c1::anode (positive electrode)}} because its phosphate backbone is uniformly negative.",
   "fp": "7f8bae5f9188",
-  "yield": "HIGH",
-  "why": "DNA migrates to anode, separation by size: core electrophoresis fact"
+  "yield": "ULTRA_HIGH",
+  "why": "DNA runs to the anode, separated by size: foundational electrophoresis fact tested every year"
  },
  {
   "front": "Gap junctions permit:",
@@ -87,13 +87,13 @@
   "front": "How do the two PCR primers define exactly which region gets amplified?",
   "fp": "ac238500d7ee",
   "yield": "HIGH",
-  "why": "Primers flank the amplicon, extended 5'->3': tested primer-design reasoning"
+  "why": "Primers flank the amplicon and extend 5'->3': commonly tested primer-design reasoning"
  },
  {
   "front": "How does a bacterium avoid shredding its own genome with the restriction enzymes it produces?",
   "fp": "64a4344a3d05",
   "yield": "MEDIUM",
-  "why": "Restriction-modification methylation: plausible passage context, rarely a point"
+  "why": "Restriction-modification methylation: passage context, rarely worth a point"
  },
  {
   "front": "How does a sandwich ELISA quantify an antigen such as hCG?",
@@ -105,37 +105,37 @@
   "front": "How does CRISPR-Cas9 achieve targeted editing?",
   "fp": "0e1e2f4062eb",
   "yield": "HIGH",
-  "why": "CRISPR-Cas9 guide RNA + DSB: the concept-level fact the outline names"
+  "why": "gRNA-directed Cas9 double-strand break: the concept-level CRISPR fact the outline names"
  },
  {
   "front": "How does RFLP analysis reveal the sickle cell mutation on a Southern blot?",
   "fp": "83168ae44dea",
   "yield": "HIGH",
-  "why": "RFLP sickle-cell Southern blot: classic AAMC application"
+  "why": "RFLP sickle-cell Southern blot is the classic AAMC application of restriction mapping"
  },
  {
   "front": "How does Sanger sequencing work?",
   "fp": "9d9de62ed109",
-  "yield": "HIGH",
-  "why": "Sanger/ddNTP chain termination: core sequencing mechanism"
+  "yield": "ULTRA_HIGH",
+  "why": "ddNTP chain termination is the sequencing mechanism asked on essentially every exam"
  },
  {
   "front": "In a competitive ELISA, signal is {{c1::inversely}} proportional to analyte concentration.",
   "fp": "dc0b6483d647",
   "yield": "MEDIUM",
-  "why": "Competitive ELISA inverse signal: passage would supply, but a plausible second step"
+  "why": "Competitive ELISA inverse signal: a passage would supply the format"
  },
  {
   "front": "In a Sanger trace, why does reading from the shortest fragment to the longest yield the new strand's 5' to 3' sequence?",
   "fp": "aa940eb4f717",
-  "yield": "MEDIUM",
-  "why": "Reading a Sanger trace shortest->longest: supporting reasoning on Sanger"
+  "yield": "HIGH",
+  "why": "Reading a Sanger gel shortest->longest as 5'->3' is a recurring data-interpretation item"
  },
  {
   "front": "In a Western blot, what do the primary and secondary antibodies each do?",
   "fp": "a331b40c6b76",
   "yield": "HIGH",
-  "why": "Primary/secondary antibody roles in a Western: high-frequency lab detail"
+  "why": "Primary/secondary antibody roles are a high-frequency Western blot detail"
  },
  {
   "front": "In an indirect ELISA (e.g., HIV screen), the plate is coated with {{c1::antigen}}; bound patient antibody is detected by an enzyme-linked secondary antibody.",
@@ -146,32 +146,32 @@
  {
   "front": "In blue-white screening, colonies that carry an insert are {{c1::white}}, because the insert disrupts lacZ-alpha and X-gal is not cleaved.",
   "fp": "9096b5b6efae",
-  "yield": "MEDIUM",
-  "why": "Blue-white screening: classic but secondary cloning detail"
+  "yield": "HIGH",
+  "why": "Blue-white screening is the standard cloning screen and a common discrete"
  },
  {
   "front": "In each PCR cycle, denaturation near 95 C is followed by primer annealing at roughly {{c1::50-65}} C (set by primer $T_m$), then extension at 72 C.",
   "fp": "0b34f3c2d5a4",
   "yield": "MEDIUM",
-  "why": "Annealing temp set by primer Tm: supporting detail on the PCR-steps card"
+  "why": "Annealing temperature set by primer Tm: supporting detail on the PCR-steps card"
  },
  {
   "front": "In isoelectric focusing, where does a protein stop migrating, and how is this exploited in 2D electrophoresis?",
   "fp": "41eb506b31c3",
-  "yield": "MEDIUM",
-  "why": "Isoelectric focusing/2D gels: on outline under protein separation (1A), secondary here"
+  "yield": "HIGH",
+  "why": "IEF stops at pI; 2D gel logic is tested under protein separation (1A) and reused here"
  },
  {
   "front": "In qPCR, what does a lower Ct (threshold cycle) value tell you about the sample?",
   "fp": "a28fab3c7efb",
-  "yield": "MEDIUM",
-  "why": "qPCR Ct interpretation: plausible data-interpretation step"
+  "yield": "HIGH",
+  "why": "qPCR Ct interpretation is a common data-figure question"
  },
  {
   "front": "Name the three elements every basic cloning plasmid must carry.",
   "fp": "36a2d59f37ff",
-  "yield": "HIGH",
-  "why": "ori + selectable marker + MCS: named plasmid elements asked directly"
+  "yield": "ULTRA_HIGH",
+  "why": "ori + selectable marker + MCS: plasmid anatomy is asked nearly every administration"
  },
  {
   "front": "On an agarose gel, how does migration distance relate quantitatively to fragment size, and how is an unknown sized?",
@@ -195,19 +195,19 @@
   "front": "Raising temperature or lowering salt during hybridization increases {{c1::stringency}}, so probes remain bound only to perfect matches.",
   "fp": "cec14f27b44c",
   "yield": "MEDIUM",
-  "why": "Hybridization stringency: useful reasoning for blot/PCR passages"
+  "why": "Hybridization stringency: useful reasoning, rarely the tested point"
  },
  {
   "front": "Restriction enzyme recognition sites are typically {{c1::palindromic}} — reading the same 5' to 3' on both strands.",
   "fp": "378057418dcd",
-  "yield": "HIGH",
-  "why": "Palindromic recognition sites, sticky vs blunt: core restriction enzyme fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Palindromic recognition sites with sticky vs blunt ends: tested essentially every year"
  },
  {
   "front": "RT-PCR first uses {{c1::reverse transcriptase}} to copy RNA into cDNA before amplification.",
   "fp": "eb6ca632e746",
   "yield": "HIGH",
-  "why": "RT-PCR uses reverse transcriptase for RNA templates: core"
+  "why": "RT-PCR needs reverse transcriptase for RNA templates: commonly tested"
  },
  {
   "front": "Sanger sequencing terminates chains because ddNTPs lack a {{c1::3'-OH group}}, so no further phosphodiester bond can form.",
@@ -218,20 +218,20 @@
  {
   "front": "SDS coats proteins with uniform negative charge and denatures them, so SDS-PAGE separates by {{c1::molecular mass}} alone.",
   "fp": "de19fbb3f364",
-  "yield": "HIGH",
-  "why": "SDS-PAGE separates by mass; native PAGE by size/charge/shape: core"
+  "yield": "ULTRA_HIGH",
+  "why": "SDS-PAGE separates by mass; native PAGE by size/charge/shape: foundational and perennial"
  },
  {
   "front": "To overexpress a human protein in E. coli, what must the vector add beyond ori and marker — and why must the insert be cDNA?",
   "fp": "8dd46f96bc80",
   "yield": "MEDIUM",
-  "why": "Expression vector needs promoter/Shine-Dalgarno; cDNA reason covered elsewhere"
+  "why": "Promoter/Shine-Dalgarno vector detail; the cDNA reasoning lives on the RT card"
  },
  {
   "front": "What are the three steps of a PCR cycle?",
   "fp": "d12e8428dff8",
-  "yield": "HIGH",
-  "why": "Denature/anneal/extend: the PCR cycle itself"
+  "yield": "ULTRA_HIGH",
+  "why": "Denature/anneal/extend is the PCR cycle itself: on every exam"
  },
  {
   "front": "What distinguishes next-generation sequencing from Sanger sequencing in design and throughput?",
@@ -242,14 +242,14 @@
  {
   "front": "What do restriction enzymes and ligase do?",
   "fp": "a86e7cdab14e",
-  "yield": "HIGH",
-  "why": "Restriction enzymes cut, ligase joins: the core cloning tools"
+  "yield": "ULTRA_HIGH",
+  "why": "Restriction enzymes cut, ligase joins: the core cloning tools, asked every year"
  },
  {
   "front": "What does ELISA detect and how?",
   "fp": "69a818da5e5e",
-  "yield": "HIGH",
-  "why": "ELISA detects antigen via enzyme-linked antibody: core"
+  "yield": "ULTRA_HIGH",
+  "why": "ELISA = enzyme-linked antibody detection of antigen: foundational lab technique"
  },
  {
   "front": "What is a knockout vs. transgenic organism?",
@@ -260,8 +260,8 @@
  {
   "front": "What is reverse transcriptase used for in the lab?",
   "fp": "53102e8ad2f7",
-  "yield": "HIGH",
-  "why": "RT makes intron-free cDNA for bacterial expression: core reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "RT makes intron-free cDNA so bacteria can express eukaryotic genes: perennial reasoning step"
  },
  {
   "front": "Which antibiotic targets the bacterial 30S ribosomal subunit?",
@@ -284,8 +284,8 @@
  {
   "front": "Why do sticky-end restriction fragments ligate far more efficiently than blunt ends?",
   "fp": "24f0c70982c5",
-  "yield": "MEDIUM",
-  "why": "Sticky ends ligate better: supporting detail on restriction/ligation"
+  "yield": "HIGH",
+  "why": "Sticky ends align fragments for ligation; same-enzyme compatibility is commonly tested"
  },
  {
   "front": "Why does an oligo-dT primer selectively initiate reverse transcription of mRNA?",
@@ -302,7 +302,7 @@
  {
   "front": "You need a gene's promoter and an intronic enhancer — which library do you screen, and why is cDNA useless here?",
   "fp": "ea28d72c0ebd",
-  "yield": "MEDIUM",
-  "why": "Genomic vs cDNA library for promoters/introns: application of the cDNA card"
+  "yield": "HIGH",
+  "why": "Genomic vs cDNA library for promoters/introns: commonly tested application"
  }
 ]

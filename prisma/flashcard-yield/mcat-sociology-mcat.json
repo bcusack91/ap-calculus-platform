@@ -2,20 +2,20 @@
  {
   "front": "{{c1::Conflict theory}} explains rising drug prices as firms and elites protecting profit; rooted in Marx's view of competition over scarce resources.",
   "fp": "6eafbd27c36b",
-  "yield": "HIGH",
-  "why": "Conflict theory is a core 9A paradigm"
+  "yield": "ULTRA_HIGH",
+  "why": "Conflict theory is a core 9A paradigm tested every administration"
  },
  {
   "front": "{{c1::Demographic transition}} theory: industrializing societies shift from high birth and death rates to low ones, with rapid growth in stage 2.",
   "fp": "cfbaf8eb4f40",
-  "yield": "HIGH",
-  "why": "Demographic transition is core 9B"
+  "yield": "ULTRA_HIGH",
+  "why": "Demographic transition is core 9B, tested every year"
  },
  {
   "front": "{{c1::Differential association}} theory (Sutherland): deviance is learned through interaction with others whose attitudes favor norm violation.",
   "fp": "6745e63e612b",
   "yield": "HIGH",
-  "why": "Differential association is a named deviance theory"
+  "why": "Differential association is a named deviance theory; commonly tested"
  },
  {
   "front": "{{c1::Endogamy}} is marriage within one's own group and {{c2::exogamy}} is marriage outside it; both are social norms rather than biological rules.",
@@ -27,43 +27,43 @@
   "front": "{{c1::Fecundity}} is the biological potential for reproduction; {{c2::fertility}} is the number of births actually occurring.",
   "fp": "7736bf2e7f27",
   "yield": "MEDIUM",
-  "why": "Fertility tested; fecundity distinction is second-tier"
+  "why": "Fecundity vs fertility is a second-tier distinction"
  },
  {
   "front": "{{c1::Functionalism}} views society as interdependent parts maintaining stability; Durkheim showed how religion builds collective conscience and cohesion.",
   "fp": "26996dba3a7c",
-  "yield": "HIGH",
-  "why": "Functionalism is a core 9A paradigm"
+  "yield": "ULTRA_HIGH",
+  "why": "Functionalism is a core 9A paradigm tested every administration"
  },
  {
   "front": "{{c1::Labeling theory}} holds deviance results from society's reaction to an act; secondary deviance follows internalizing the deviant label.",
   "fp": "8ec59a402a30",
-  "yield": "HIGH",
-  "why": "Labeling theory and secondary deviance are tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Labeling theory and secondary deviance are tested every year"
  },
  {
   "front": "{{c1::Power}} is the ability to impose one's will despite resistance; {{c2::authority}} is power accepted as legitimate; coercion is power without legitimacy.",
   "fp": "6b3a072526c0",
   "yield": "MEDIUM",
-  "why": "Power vs authority vs coercion supports Weber authority card"
+  "why": "Power vs authority vs coercion supports the Weber authority card"
  },
  {
   "front": "{{c1::Social institutions}} are enduring structures meeting core needs: family, education, religion, government, economy, and medicine.",
   "fp": "83f3993954c5",
   "yield": "HIGH",
-  "why": "Social institutions list is core 9A"
+  "why": "Social institutions list is core 9A; commonly tested"
  },
  {
   "front": "{{c1::Symbolic interactionism}} is the micro paradigm asking how meanings (e.g., what counts as 'sick') are created and revised in everyday interaction.",
   "fp": "60f521b5a34b",
-  "yield": "HIGH",
-  "why": "Symbolic interactionism is a core 9A paradigm"
+  "yield": "ULTRA_HIGH",
+  "why": "Symbolic interactionism is a core 9A paradigm tested every administration"
  },
  {
   "front": "{{c1::Tracking}} sorts students into ability groups, while {{c2::credentialism}} requires degrees beyond a job's actual skill demands.",
   "fp": "f93aa89e8a75",
-  "yield": "MEDIUM",
-  "why": "Education institution; tracking/credentialism are conflict-view detail"
+  "yield": "HIGH",
+  "why": "Tracking and credentialism are outline education-stratification content"
  },
  {
   "front": "A {{c1::population pyramid}} with a wide base signals high fertility and a young, growing population, typical of developing nations.",
@@ -74,8 +74,8 @@
  {
   "front": "A hospital measures satisfaction by surveying only patients who return for follow-up. Name the bias and its likely direction.",
   "fp": "872659db8ce0",
-  "yield": "MEDIUM",
-  "why": "Selection bias is tested but belongs to research methods"
+  "yield": "HIGH",
+  "why": "Selection bias identification is commonly tested research-methods reasoning"
  },
  {
   "front": "A society's {{c1::dependency ratio}} compares those under 15 and over 64 with the working-age population; population {{c2::aging}} raises it.",
@@ -98,14 +98,14 @@
  {
   "front": "Contrast relative deprivation theory and resource mobilization theory as explanations for why social movements arise.",
   "fp": "84f6eab0c44a",
-  "yield": "HIGH",
-  "why": "Relative deprivation vs resource mobilization is core movement theory"
+  "yield": "ULTRA_HIGH",
+  "why": "Relative deprivation vs resource mobilization is tested every year"
  },
  {
   "front": "Crude birth rate counts live births per {{c1::1,000}} people per year; total fertility rate is average children per woman over her lifetime.",
   "fp": "563d1edc8c7b",
   "yield": "MEDIUM",
-  "why": "Crude birth rate per 1,000; TFR covered by card 56"
+  "why": "Crude rate denominators are secondary; TFR covered by card 56"
  },
  {
   "front": "Define immigration, emigration, and net migration rate.",
@@ -116,14 +116,14 @@
  {
   "front": "Delta waves characterize:",
   "fp": "4d8b7ec20421",
-  "yield": "MEDIUM",
-  "why": "Delta waves/sleep stages belong to a different topic (6B) [rescued: misfiled, not served elsewhere]"
+  "yield": "HIGH",
+  "why": "Delta waves = stage 3 is commonly tested sleep content, served only here"
  },
  {
   "front": "Distinguish achieved, ascribed, and master status.",
   "fp": "7ff6b6b83691",
-  "yield": "HIGH",
-  "why": "Status types are core 8C (misfiled from groups topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Ascribed/achieved/master status is foundational 8C, tested every year"
  },
  {
   "front": "Distinguish church, sect, and cult (new religious movement).",
@@ -134,44 +134,44 @@
  {
   "front": "Distinguish manifest from latent functions.",
   "fp": "b47994d6dd98",
-  "yield": "HIGH",
-  "why": "Manifest vs latent function is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Manifest vs latent function is tested every administration"
  },
  {
   "front": "Distinguish prejudice, discrimination, and stereotypes.",
   "fp": "926da6c1cfe3",
-  "yield": "HIGH",
-  "why": "Stereotype/prejudice/discrimination distinction is tested (misfiled)"
+  "yield": "ULTRA_HIGH",
+  "why": "Stereotype/prejudice/discrimination distinction is tested every year"
  },
  {
   "front": "Distinguish primary from secondary groups.",
   "fp": "29a309ddea7a",
-  "yield": "HIGH",
-  "why": "Primary/secondary groups core 8C (misfiled from groups topic)"
+  "yield": "ULTRA_HIGH",
+  "why": "Primary vs secondary group is core 8C, tested every year"
  },
  {
   "front": "Distinguish social stratification systems: caste vs. class.",
   "fp": "027ae1075e8d",
   "yield": "HIGH",
-  "why": "Caste vs class stratification is tested (10A)"
+  "why": "Caste vs class stratification is commonly tested (10A)"
  },
  {
   "front": "Distinguish socioeconomic status, poverty types, and social capital.",
   "fp": "ca73b3ac4870",
   "yield": "HIGH",
-  "why": "SES, absolute/relative poverty, social capital are tested (10A)"
+  "why": "SES, absolute/relative poverty and social capital are commonly tested"
  },
  {
   "front": "Distinguish types of social mobility.",
   "fp": "6ff548a87dd4",
   "yield": "HIGH",
-  "why": "Inter/intragenerational and vertical/horizontal mobility tested (10A)"
+  "why": "Inter/intragenerational and vertical/horizontal mobility are commonly tested"
  },
  {
   "front": "Durkheim's {{c1::anomie}} is normlessness arising when rapid change weakens shared norms; he tied it to elevated suicide rates.",
   "fp": "49402b458040",
-  "yield": "HIGH",
-  "why": "Anomie and Durkheim suicide are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Durkheim anomie and suicide are tested every administration"
  },
  {
   "front": "For functionalists, what core functions does the family serve?",
@@ -182,8 +182,8 @@
  {
   "front": "Hazardous waste facilities are sited disproportionately near low-income and minority communities. Name the concept and the two competing explanations.",
   "fp": "cf2c38f11f31",
-  "yield": "MEDIUM",
-  "why": "Environmental justice is on outline; explanations are second step"
+  "yield": "HIGH",
+  "why": "Environmental justice is on the outline; competing explanations are a common stem"
  },
  {
   "front": "How can deviance be functional for society, per Durkheim?",
@@ -212,14 +212,14 @@
  {
   "front": "How would a conflict theorist interpret standardized testing in schools?",
   "fp": "113800db5e58",
-  "yield": "MEDIUM",
-  "why": "Conflict-theory application to schooling"
+  "yield": "HIGH",
+  "why": "Paradigm application to schooling is how conflict theory gets tested"
  },
  {
   "front": "How would a symbolic interactionist study doctor-patient encounters?",
   "fp": "f03c81a61eb4",
-  "yield": "MEDIUM",
-  "why": "Interactionist application to clinical encounter"
+  "yield": "HIGH",
+  "why": "Paradigm application to clinical encounters is how interactionism gets tested"
  },
  {
   "front": "In labeling theory, what distinguishes primary from secondary deviance (Lemert)?",
@@ -230,8 +230,8 @@
  {
   "front": "In Merton's strain theory, an {{c1::innovator}} accepts cultural goals but uses illegitimate means, e.g., dealing drugs to attain wealth.",
   "fp": "adb52c29fc40",
-  "yield": "HIGH",
-  "why": "Merton innovator is the classic strain-theory example"
+  "yield": "ULTRA_HIGH",
+  "why": "Merton innovator is the classic strain-theory item, tested every year"
  },
  {
   "front": "In Merton's strain theory, how does a rebel differ from a retreatist?",
@@ -242,14 +242,14 @@
  {
   "front": "In Merton's typology, a {{c1::ritualist}} abandons the goals but clings to the rules; a {{c2::retreatist}} rejects both goals and means.",
   "fp": "9c5d5a2d9666",
-  "yield": "MEDIUM",
-  "why": "Ritualist/retreatist supporting detail; card 57 lists all five"
+  "yield": "HIGH",
+  "why": "Ritualist vs retreatist is a commonly tested Merton adaptation contrast"
  },
  {
   "front": "Inferring about individuals from group-level data is the {{c1::ecological fallacy}}; inferring about groups from cases is the {{c2::reductionist}} fallacy.",
   "fp": "617fb42da7cb",
-  "yield": "MEDIUM",
-  "why": "Ecological fallacy is a plausible reasoning stem, methods flavor"
+  "yield": "HIGH",
+  "why": "Ecological fallacy is a commonly tested reasoning stem"
  },
  {
   "front": "List the major agents of socialization across the life course.",
@@ -267,7 +267,7 @@
   "front": "Match theorist to claim: deviance is learned in intimate groups; deviance occurs when social bonds weaken; deviance is created by society's reaction.",
   "fp": "6afc2c766a2b",
   "yield": "MEDIUM",
-  "why": "Adds Hirschi social control theory to the deviance set"
+  "why": "Hirschi social control is second-tier; theorist matching is supporting"
  },
  {
   "front": "Merton: {{c1::manifest}} functions are intended and recognized; {{c2::latent}} functions are unintended, e.g., schools fostering mate selection.",
@@ -285,7 +285,7 @@
   "front": "Sensational reporting on a rare drug produces sweeping new laws far out of proportion to the actual harm. Name the phenomenon and the actors involved.",
   "fp": "d5aecaf5d2d6",
   "yield": "MEDIUM",
-  "why": "Moral panic is supporting deviance construction content"
+  "why": "Moral panic is supporting deviance-construction content"
  },
  {
   "front": "The {{c1::family}} is the earliest and most influential agent of socialization, transmitting language, norms, and class-linked values.",
@@ -297,13 +297,13 @@
   "front": "The {{c1::hidden curriculum}} is schooling's unspoken lessons — obedience, punctuality, competition — taught alongside formal academics.",
   "fp": "06bbcef5523e",
   "yield": "HIGH",
-  "why": "Hidden curriculum is named on the outline"
+  "why": "Hidden curriculum is named on the outline; commonly tested"
  },
  {
   "front": "Weber's three types of authority: {{c1::traditional}} (custom and inheritance), {{c2::charismatic}} (personal devotion), and rational-legal (rules and office).",
   "fp": "b8c31447a98d",
-  "yield": "HIGH",
-  "why": "Weber's three authority types are tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Weber's three authority types are tested every administration"
  },
  {
   "front": "What are push and pull factors in migration?",
@@ -314,8 +314,8 @@
  {
   "front": "What are the agents of socialization?",
   "fp": "7d8e27067b61",
-  "yield": "HIGH",
-  "why": "Agents plus primary/secondary socialization are core 7B"
+  "yield": "ULTRA_HIGH",
+  "why": "Agents of socialization and primary/secondary socialization are tested every year"
  },
  {
   "front": "What are the major social institutions and their roles?",
@@ -332,20 +332,20 @@
  {
   "front": "What are the three major sociological theoretical paradigms?",
   "fp": "6b6cbd1105ca",
-  "yield": "HIGH",
-  "why": "Plainest summary of the three paradigms"
+  "yield": "ULTRA_HIGH",
+  "why": "The three paradigms are the foundation of 9A, tested every year"
  },
  {
   "front": "What are total fertility rate, crude mortality rate, and replacement-level fertility?",
   "fp": "516c525ca738",
   "yield": "HIGH",
-  "why": "TFR, crude mortality, replacement 2.1 are tested demography"
+  "why": "TFR, crude mortality and replacement 2.1 are commonly tested demography"
  },
  {
   "front": "What creates strain in Merton's strain theory?",
   "fp": "3881ada5acbd",
-  "yield": "HIGH",
-  "why": "Strain theory and five adaptations are core"
+  "yield": "ULTRA_HIGH",
+  "why": "Strain theory and the five adaptations are tested every year"
  },
  {
   "front": "What is a social fact, per Durkheim?",
@@ -357,7 +357,7 @@
   "front": "What is Malthusian theory, and what are positive checks?",
   "fp": "49878eadcf03",
   "yield": "MEDIUM",
-  "why": "Malthus is secondary population theory in prep books"
+  "why": "Malthus is secondary population theory"
  },
  {
   "front": "What is secularization?",
@@ -369,7 +369,7 @@
   "front": "What is social control, and how do formal and informal sanctions differ?",
   "fp": "4b6c7dbe600a",
   "yield": "HIGH",
-  "why": "Social control and formal/informal sanctions are on the 7B outline"
+  "why": "Social control and formal/informal sanctions are on 7B; commonly tested"
  },
  {
   "front": "What is stigma (Goffman), and how does it connect to labeling theory?",
@@ -380,8 +380,8 @@
  {
   "front": "What is the demographic transition model?",
   "fp": "dfd2add09b74",
-  "yield": "MEDIUM",
-  "why": "Stage list supports the demographic transition card (1)"
+  "yield": "HIGH",
+  "why": "Demographic transition stages are commonly tested as a sequence"
  },
  {
   "front": "What socialization role does mass media play?",
@@ -393,12 +393,12 @@
   "front": "Which method best captures how ICU nurses actually negotiate authority with physicians, and what is its main tradeoff?",
   "fp": "c95604a1d76c",
   "yield": "MEDIUM",
-  "why": "Ethnography tradeoffs are tested but belong to research methods"
+  "why": "Ethnography tradeoffs belong to research methods; second-tier here"
  },
  {
   "front": "Which paradigm best explains how a hospital's division of roles (surgeon, nurse, tech) keeps patient care running smoothly?",
   "fp": "b79002afd4c1",
-  "yield": "MEDIUM",
-  "why": "Functionalism application to hospital roles"
+  "yield": "HIGH",
+  "why": "Paradigm application to hospital roles is how functionalism gets tested"
  }
 ]

@@ -2,14 +2,14 @@
  {
   "front": "$\\Delta G^{\\circ\\prime} = -nF\\Delta E^{\\circ\\prime}$: a redox reaction is spontaneous when $\\Delta E^{\\circ\\prime}$ is {{c1::positive}}.",
   "fp": "ae4ec9ce79b4",
-  "yield": "HIGH",
-  "why": "dG = -nFdE and spontaneity sign: core formula"
+  "yield": "ULTRA_HIGH",
+  "why": "dG = -nFdE and spontaneity sign: equation used every year"
  },
  {
   "front": "$\\Delta G^{\\circ\\prime} = -RT\\ln K_{eq}$: a negative $\\Delta G^{\\circ\\prime}$ means $K_{eq}$ {{c1::greater than 1}}; at equilibrium $\\Delta G =$ {{c2::0}}.",
   "fp": "fd424c1d7256",
-  "yield": "HIGH",
-  "why": "dG = -RTlnK and dG=0 at equilibrium: core"
+  "yield": "ULTRA_HIGH",
+  "why": "dG = -RTlnK and dG = 0 at equilibrium: foundational"
  },
  {
   "front": "A $K^+$-carrying ionophore such as valinomycin collapses which component of the proton-motive force?",
@@ -32,8 +32,8 @@
  {
   "front": "Approximately how many ATP result from complete oxidation of one glucose?",
   "fp": "3e0b1143c316",
-  "yield": "HIGH",
-  "why": "~30-32 ATP per glucose: core number"
+  "yield": "ULTRA_HIGH",
+  "why": "~30-32 ATP per glucose: foundational number"
  },
  {
   "front": "Arsenite poisons which enzyme complexes, and through what chemical interaction?",
@@ -44,26 +44,26 @@
  {
   "front": "ATP hydrolysis has $\\Delta G^{\\circ\\prime} \\approx -30.5$ kJ/mol, yet cellular $\\Delta G$ is about $-50$ kJ/mol. Why the difference?",
   "fp": "b24d09ed71bf",
-  "yield": "MEDIUM",
-  "why": "Standard vs actual dG of ATP hydrolysis; second-step reasoning"
+  "yield": "HIGH",
+  "why": "Standard vs actual dG of ATP hydrolysis: dG = dG' + RTlnQ application"
  },
  {
   "front": "ATP synthase generates ATP by using energy from:",
   "fp": "124eb22228ff",
-  "yield": "HIGH",
-  "why": "ATP synthase driven by proton gradient: core"
+  "yield": "ULTRA_HIGH",
+  "why": "ATP synthase driven by the proton gradient: foundational"
  },
  {
   "front": "ATP synthase: {{c1::$F_0$}} is the membrane proton channel (c-ring); {{c2::$F_1$}} holds the catalytic sites; {{c3::oligomycin}} inhibits it.",
   "fp": "714fe609864e",
-  "yield": "HIGH",
-  "why": "F0/F1 structure and oligomycin: core"
+  "yield": "ULTRA_HIGH",
+  "why": "F0/F1 structure and oligomycin: recurring ATP synthase question"
  },
  {
   "front": "Biochemical standard state for $\\Delta G^{\\circ\\prime}$: pH {{c1::7}}, 1 M solutes, 25 C.",
   "fp": "b55e1e0970e2",
   "yield": "MEDIUM",
-  "why": "Biochemical standard-state definition; useful but rarely asked"
+  "why": "Biochemical standard-state definition: rarely asked"
  },
  {
   "front": "Complete oxidation of glucose releases about $-2870$ kJ/mol, of which roughly {{c1::one-third}} is captured as ATP.",
@@ -74,68 +74,68 @@
  {
   "front": "Complete oxidation of one acetyl-CoA yields about {{c1::10}} ATP, while one pyruvate yields about {{c2::12.5}}.",
   "fp": "218aa03daaef",
-  "yield": "MEDIUM",
-  "why": "ATP per acetyl-CoA/pyruvate: derived counts, second-tier"
+  "yield": "HIGH",
+  "why": "ATP per acetyl-CoA and pyruvate: commonly asked counting"
  },
  {
   "front": "Complex {{c1::IV}} (cytochrome c oxidase) reduces $O_2$ to water and is inhibited by {{c2::cyanide, carbon monoxide, and azide}}.",
   "fp": "bc6e9d210f8a",
-  "yield": "HIGH",
-  "why": "Complex IV reduces O2; cyanide/CO/azide inhibitors: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Complex IV reduces O2; cyanide/CO/azide: tested every year"
  },
  {
   "front": "Complex I (NADH dehydrogenase) pumps {{c1::4}} H$^+$ per NADH and is inhibited by {{c2::rotenone}}.",
   "fp": "44baaa5d5edb",
-  "yield": "HIGH",
-  "why": "Complex I NADH entry, proton pumping, rotenone: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Complex I NADH entry and rotenone: tested every year"
  },
  {
   "front": "Complex II ({{c1::succinate dehydrogenase}}) pumps {{c2::no}} protons and is the only ETC complex that is also a citric acid cycle enzyme.",
   "fp": "33159c5d28e0",
-  "yield": "HIGH",
-  "why": "Complex II = succinate dehydrogenase, no pumping: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Complex II = succinate dehydrogenase, no pumping: foundational"
  },
  {
   "front": "Complex III (cytochrome $bc_1$) moves electrons from CoQ to cytochrome c via the {{c1::Q cycle}} and is blocked by {{c2::antimycin A}}.",
   "fp": "51906129b915",
-  "yield": "MEDIUM",
-  "why": "Complex III / Q cycle / antimycin A: secondary complex detail"
+  "yield": "HIGH",
+  "why": "Complex III / antimycin A: commonly tested complex detail"
  },
  {
   "front": "Consensus P/O yields: matrix NADH makes about {{c1::2.5}} ATP; FADH$_2$ makes about {{c2::1.5}} ATP.",
   "fp": "613bc2608f1b",
-  "yield": "HIGH",
-  "why": "2.5 / 1.5 ATP per NADH/FADH2: core"
+  "yield": "ULTRA_HIGH",
+  "why": "2.5 / 1.5 ATP per NADH/FADH2: foundational numbers"
  },
  {
   "front": "Contracting muscle raises matrix {{c1::$Ca^{2+}$}}, which activates two TCA dehydrogenases and {{c2::pyruvate dehydrogenase phosphatase}}.",
   "fp": "914b83e92e6a",
   "yield": "MEDIUM",
-  "why": "Ca2+ activation of TCA/PDH; belongs to TCA regulation"
+  "why": "Ca2+ activation of TCA/PDH: belongs to TCA regulation"
  },
  {
   "front": "Cyanide and carbon monoxide both block cytochrome c oxidase. What does carbon monoxide do in addition?",
   "fp": "3199d7a60e65",
   "yield": "MEDIUM",
-  "why": "CO on hemoglobin in addition to Complex IV; clinical flavor"
+  "why": "CO on hemoglobin in addition to Complex IV: clinical flavor"
  },
  {
   "front": "Electron leak at Complexes {{c1::I and III}} generates {{c2::superoxide}}, which superoxide dismutase converts to hydrogen peroxide.",
   "fp": "fa8ff63cc817",
   "yield": "MEDIUM",
-  "why": "ROS from electron leak; supporting detail"
+  "why": "ROS from electron leak: supporting detail"
  },
  {
   "front": "Electrons in the ETC flow spontaneously toward carriers with more ___ reduction potential.",
   "fp": "24ac4d6a4b6d",
-  "yield": "HIGH",
-  "why": "Electron flow toward more positive reduction potential: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Electron flow toward more positive reduction potential: foundational"
  },
  {
   "front": "Escape of {{c1::cytochrome c}} from the intermembrane space into the cytosol triggers assembly of the {{c2::apoptosome}} and caspase activation.",
   "fp": "a76d17454d7c",
-  "yield": "MEDIUM",
-  "why": "Cytochrome c in apoptosis; cell-biology crossover"
+  "yield": "HIGH",
+  "why": "Cytochrome c release triggers apoptosis: commonly tested crossover"
  },
  {
   "front": "Give three structural reasons ATP hydrolysis is strongly exergonic.",
@@ -147,25 +147,25 @@
   "front": "How does cytochrome c differ from CoQ as an electron carrier?",
   "fp": "65391316fff7",
   "yield": "MEDIUM",
-  "why": "Cyt c vs CoQ carrier comparison; supporting detail"
+  "why": "Cyt c vs CoQ carrier comparison: supporting detail"
  },
  {
   "front": "How does energetic coupling allow glutamine synthesis (unfavorable) to proceed?",
   "fp": "b93a9f034ea6",
-  "yield": "MEDIUM",
-  "why": "Coupling via shared intermediate; specific example of a HIGH concept"
+  "yield": "HIGH",
+  "why": "Energetic coupling via a shared intermediate: the deck's coupling card"
  },
  {
   "front": "How many ATP are produced per glucose in aerobic respiration?",
   "fp": "c96e36e7aba5",
-  "yield": "MEDIUM",
-  "why": "ATP-per-glucose breakdown; the plain count card is primary"
+  "yield": "HIGH",
+  "why": "ATP-per-glucose breakdown by stage: commonly asked"
  },
  {
   "front": "If acetyl-CoA enters the TCA cycle with both carbons labeled, do those labels appear in the $CO_2$ released on that same turn?",
   "fp": "8507fba030b3",
   "yield": "MEDIUM",
-  "why": "Isotope labeling in TCA; belongs to TCA topic"
+  "why": "Isotope labeling in TCA: belongs to TCA topic"
  },
  {
   "front": "In an oxygen-electrode run on intact mitochondria, why does adding {{c1::ADP}} sharply increase $O_2$ consumption?",
@@ -177,19 +177,19 @@
   "front": "In the binding-change mechanism, what step actually consumes most of the proton-motive energy?",
   "fp": "5b794116e782",
   "yield": "MEDIUM",
-  "why": "Binding-change energetics; secondary mechanism detail"
+  "why": "Binding-change energetics: secondary mechanism detail"
  },
  {
   "front": "In the first seconds of intense exercise, muscle regenerates ATP from {{c1::creatine phosphate}} via creatine kinase.",
   "fp": "f205df3f13e2",
   "yield": "MEDIUM",
-  "why": "Creatine phosphate buffer; physiology crossover"
+  "why": "Creatine phosphate buffer: physiology crossover"
  },
  {
   "front": "Mitochondria are poisoned with rotenone. Can succinate still drive $O_2$ consumption? Can malate?",
   "fp": "45bc5c66c12f",
-  "yield": "HIGH",
-  "why": "Rotenone with succinate vs malate: classic inhibitor-substrate reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "Rotenone with succinate vs malate: inhibitor-substrate reasoning every year"
  },
  {
   "front": "Mitochondrial DNA is inherited {{c1::maternally}} and encodes {{c2::13}} subunits of the oxidative phosphorylation machinery.",
@@ -200,26 +200,26 @@
  {
   "front": "NAD$^+$ accepts a {{c1::hydride (two electrons plus one proton)}}; FAD accepts {{c2::two electrons and two protons}}.",
   "fp": "7825c1c2dc0c",
-  "yield": "HIGH",
-  "why": "NAD+ hydride vs FAD 2e-/2H+: core"
+  "yield": "ULTRA_HIGH",
+  "why": "NAD+ hydride vs FAD 2e-/2H+: foundational carrier chemistry"
  },
  {
   "front": "NADH delivers electrons to which complex?",
   "fp": "344342556b66",
-  "yield": "HIGH",
-  "why": "NADH enters Complex I: core"
+  "yield": "ULTRA_HIGH",
+  "why": "NADH enters Complex I: foundational"
  },
  {
   "front": "On an oxygen-electrode trace, an uncoupler makes $O_2$ consumption {{c1::increase}} whereas an electron transport inhibitor makes it {{c2::stop}}.",
   "fp": "9bfc2e42e901",
-  "yield": "HIGH",
-  "why": "Uncoupler vs inhibitor on O2 consumption: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Uncoupler vs inhibitor on O2 consumption: tested every year"
  },
  {
   "front": "One glucose yields a NET of {{c1::2}} ATP and {{c2::2}} NADH in glycolysis.",
   "fp": "b5ac8c09723f",
-  "yield": "MEDIUM",
-  "why": "Glycolysis net yield; belongs to glycolysis topic"
+  "yield": "HIGH",
+  "why": "Glycolysis net 2 ATP and 2 NADH: universally tested, primarily glycolysis"
  },
  {
   "front": "Oxidative phosphorylation produces approximately how many ATP per glucose?",
@@ -231,25 +231,25 @@
   "front": "Phosphoryl-transfer potential ranking: {{c1::PEP}} > 1,3-BPG > {{c2::creatine phosphate}} > ATP > glucose 6-phosphate.",
   "fp": "60bfedaeb2cc",
   "yield": "HIGH",
-  "why": "Phosphoryl-transfer potential ranking: core"
+  "why": "Phosphoryl-transfer potential ranking: commonly tested"
  },
  {
   "front": "Predict the effects of a DNP overdose on $O_2$ consumption, ATP levels, and body temperature.",
   "fp": "df386737c706",
-  "yield": "MEDIUM",
-  "why": "DNP overdose effects; application of the uncoupler card"
+  "yield": "HIGH",
+  "why": "DNP overdose effects on O2, ATP, temperature: commonly tested application"
  },
  {
   "front": "Protons are pumped into which compartment?",
   "fp": "69fa4c443f3f",
-  "yield": "HIGH",
-  "why": "Protons pumped into intermembrane space: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Protons pumped into the intermembrane space: foundational"
  },
  {
   "front": "Pyruvate dehydrogenase is switched off by {{c1::PDH kinase}}, which is itself stimulated by high ATP, NADH, and {{c2::acetyl-CoA}}.",
   "fp": "d17b965ef00d",
   "yield": "MEDIUM",
-  "why": "PDH kinase regulation; belongs to PDH/TCA regulation"
+  "why": "PDH kinase regulation: belongs to PDH/TCA regulation"
  },
  {
   "front": "Respiratory quotient ($RQ = CO_2$ produced $/ O_2$ consumed): carbohydrate {{c1::1.0}}, fat {{c2::~0.7}}, protein ~0.8.",
@@ -260,44 +260,44 @@
  {
   "front": "Some glycolytic steps (e.g., aldolase) have positive $\\Delta G^{\\circ\\prime}$ yet run forward in cells. How?",
   "fp": "cf8fd5a5e93d",
-  "yield": "HIGH",
-  "why": "Positive dG-prime steps run forward via concentrations: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Positive dG-prime steps run forward via concentrations: every year"
  },
  {
   "front": "Standard reduction potentials: NAD$^+$/NADH $=$ {{c1::$-0.32$ V}}; $O_2$/H$_2$O $=$ {{c2::$+0.82$ V}}.",
   "fp": "b7fe3513568e",
   "yield": "MEDIUM",
-  "why": "Standard reduction potential values; supporting numbers"
+  "why": "Standard reduction potential values: supporting numbers"
  },
  {
   "front": "The ATP-ADP translocase antiports matrix {{c1::ATP}} outward for cytosolic {{c2::ADP}} inward, driven partly by the membrane potential.",
   "fp": "e46dd60c930b",
   "yield": "MEDIUM",
-  "why": "ATP-ADP translocase; secondary transport detail"
+  "why": "ATP-ADP translocase: secondary transport detail"
  },
  {
   "front": "The citric acid cycle occurs in which cellular compartment?",
   "fp": "05155c11a72d",
-  "yield": "HIGH",
-  "why": "TCA in matrix, ETC inner membrane, glycolysis cytosol: core"
+  "yield": "ULTRA_HIGH",
+  "why": "TCA in matrix, ETC inner membrane, glycolysis cytosol: foundational"
  },
  {
   "front": "The electron transport chain generates a proton gradient across the:",
   "fp": "a19e464eb7b8",
-  "yield": "MEDIUM",
-  "why": "Gradient across inner membrane; overlaps the pumping-compartment card"
+  "yield": "HIGH",
+  "why": "Gradient across the inner membrane: overlaps the pumping-compartment card"
  },
  {
   "front": "The energy charge of a cell is defined using:",
   "fp": "af21506ac4fc",
   "yield": "MEDIUM",
-  "why": "Energy charge definition; secondary"
+  "why": "Energy charge definition: secondary"
  },
  {
   "front": "The malate-aspartate shuttle delivers cytosolic NADH electrons as matrix {{c1::NADH}}; the glycerol 3-phosphate shuttle delivers them as {{c2::FADH$_2$}}.",
   "fp": "4f64cd1d2ff1",
   "yield": "HIGH",
-  "why": "Malate-aspartate vs glycerol-3-P shuttle: core"
+  "why": "Malate-aspartate vs glycerol-3-P shuttle: commonly tested"
  },
  {
   "front": "The NADH-to-$O_2$ span is $\\Delta E^{\\circ\\prime} \\approx 1.14$ V, giving $\\Delta G^{\\circ\\prime} \\approx -220$ kJ/mol per {{c1::two}} electrons.",
@@ -308,8 +308,8 @@
  {
   "front": "The proton-motive force has two components: a chemical gradient ({{c1::$\\Delta$pH}}) and an electrical gradient ({{c2::membrane potential, $\\Delta\\psi$}}).",
   "fp": "85337a89e233",
-  "yield": "HIGH",
-  "why": "PMF chemical and electrical components: core"
+  "yield": "ULTRA_HIGH",
+  "why": "PMF chemical and electrical components: foundational"
  },
  {
   "front": "Thiamine deficiency raises blood {{c1::pyruvate and lactate}} as PDH stalls; the resulting syndrome is {{c2::beriberi}} or Wernicke-Korsakoff.",
@@ -321,43 +321,43 @@
   "front": "Ubiquinone (CoQ): what kind of carrier is it, and from which sources does it collect electrons?",
   "fp": "3d4fc6a6b958",
   "yield": "HIGH",
-  "why": "CoQ as mobile lipid carrier collecting from I and II: core"
+  "why": "CoQ as mobile lipid carrier collecting from I and II: commonly tested"
  },
  {
   "front": "Uncouplers such as {{c1::2,4-dinitrophenol}} are lipid-soluble {{c2::protonophores}} that release the gradient's energy as {{c3::heat}}.",
   "fp": "db2d5f872f70",
-  "yield": "HIGH",
-  "why": "Uncouplers/DNP as protonophores releasing heat: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Uncouplers/DNP as protonophores releasing heat: tested every year"
  },
  {
   "front": "Vitamin precursors: NAD$^+$ derives from {{c1::niacin (B3)}} and FAD from {{c2::riboflavin (B2)}}.",
   "fp": "4d73786aedff",
-  "yield": "MEDIUM",
-  "why": "Vitamin origins of NAD/FAD; supporting detail"
+  "yield": "HIGH",
+  "why": "NAD from niacin, FAD from riboflavin: favorite discrete"
  },
  {
   "front": "What is substrate-level phosphorylation?",
   "fp": "a7a216809d24",
-  "yield": "HIGH",
-  "why": "Substrate-level phosphorylation: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Substrate-level phosphorylation: foundational"
  },
  {
   "front": "What is the difference between $\\Delta G$ and $\\Delta G^\\circ$?",
   "fp": "23e75905abbb",
-  "yield": "HIGH",
-  "why": "dG vs dG-standard: core"
+  "yield": "ULTRA_HIGH",
+  "why": "dG vs dG-standard: foundational"
  },
  {
   "front": "What is thermogenin (UCP1), and where does it function?",
   "fp": "bca6618f7ce6",
   "yield": "HIGH",
-  "why": "UCP1/brown fat physiological uncoupling: core"
+  "why": "UCP1/brown fat physiological uncoupling: commonly tested"
  },
  {
   "front": "When an ETC inhibitor acts, carriers upstream of the block become more ___ and carriers downstream become more ___.",
   "fp": "e8c236fd49bb",
-  "yield": "HIGH",
-  "why": "Crossover point localizes ETC block: core data reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "Crossover point localizes an ETC block: data reasoning every year"
  },
  {
   "front": "Which coenzyme is derived from vitamin B3 (niacin)?",
@@ -369,7 +369,7 @@
   "front": "Which ETC complexes pump protons, and how many total per matrix NADH?",
   "fp": "1268735d0d64",
   "yield": "MEDIUM",
-  "why": "Proton counts per complex; supporting numbers"
+  "why": "Proton counts per complex: supporting numbers"
  },
  {
   "front": "Which metabolic state has the highest ATP demand?",
@@ -380,20 +380,20 @@
  {
   "front": "Which reaction is the committed step of the citric acid cycle?",
   "fp": "58e7a92bfbc9",
-  "yield": "MEDIUM",
-  "why": "TCA committed step; belongs to TCA topic"
+  "yield": "HIGH",
+  "why": "TCA committed step and rate-limiting enzyme: commonly tested"
  },
  {
   "front": "Why do cytosolic NADH electrons need a shuttle system at all?",
   "fp": "d7ff9c6cda41",
-  "yield": "MEDIUM",
-  "why": "Why shuttles exist; supporting reasoning on the shuttle card"
+  "yield": "HIGH",
+  "why": "Inner membrane impermeable to NADH, hence shuttles: commonly tested reasoning"
  },
  {
   "front": "Why does complete glucose oxidation yield about 30 ATP in some tissues and about 32 in others?",
   "fp": "1e0a87869c2c",
   "yield": "MEDIUM",
-  "why": "30 vs 32 by shuttle; second step on the shuttle card"
+  "why": "30 vs 32 by shuttle: second step on the shuttle card"
  },
  {
   "front": "Why does nitrite help in cyanide poisoning?",
@@ -405,30 +405,30 @@
   "front": "Why does oligomycin stop electron transport as well as ATP synthesis in coupled mitochondria?",
   "fp": "e08c7a781468",
   "yield": "HIGH",
-  "why": "Oligomycin stalls ETC via respiratory control: core"
+  "why": "Oligomycin stalls ETC via respiratory control: commonly tested"
  },
  {
   "front": "Why does releasing pyrophosphate (PP$_i$) make reactions like fatty acyl-CoA and aminoacyl-tRNA formation effectively irreversible?",
   "fp": "b513c9252eae",
   "yield": "MEDIUM",
-  "why": "PPi hydrolysis drives irreversibility; supporting reasoning"
+  "why": "PPi hydrolysis drives irreversibility: supporting reasoning"
  },
  {
   "front": "Why does the cell maintain NADH for catabolism but NADPH for biosynthesis?",
   "fp": "6f10d29f11dc",
   "yield": "HIGH",
-  "why": "NADH catabolic vs NADPH anabolic: core"
+  "why": "NADH catabolic vs NADPH anabolic: commonly tested"
  },
  {
   "front": "Why is the respiratory quotient lower for fat than for carbohydrate?",
   "fp": "57b7389b8874",
   "yield": "MEDIUM",
-  "why": "RQ reasoning from oxidation state; secondary"
+  "why": "RQ reasoning from oxidation state: secondary"
  },
  {
   "front": "Why must PEP and 1,3-BPG have higher phosphoryl-transfer potential than ATP?",
   "fp": "254695734144",
   "yield": "MEDIUM",
-  "why": "Why PEP/1,3-BPG exceed ATP; supporting reasoning"
+  "why": "Why PEP/1,3-BPG exceed ATP: supporting reasoning"
  }
 ]

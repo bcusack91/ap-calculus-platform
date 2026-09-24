@@ -1,0 +1,416 @@
+[
+ {
+  "front": "A beta-keto ester has an alpha-carbon $pK_a$ near {{c1::11}}, versus roughly {{c2::25}} for a simple ester.",
+  "fp": "42fa97dd474c",
+  "yield": "MEDIUM",
+  "why": "Beta-keto ester pKa numbers are second-tier alpha-chemistry detail"
+ },
+ {
+  "front": "A carbon bearing one OR and one OH is a {{c1::hemiacetal}}; a carbon bearing two OR groups is an {{c2::acetal}}.",
+  "fp": "d987054dfe76",
+  "yield": "ULTRA_HIGH",
+  "why": "Hemiacetal vs acetal recognition is tested every year via sugars"
+ },
+ {
+  "front": "A carboxylic acid with $pK_a$ 4.5 exists at physiological pH almost entirely as {{c1::the carboxylate anion}}.",
+  "fp": "9db534907304",
+  "yield": "ULTRA_HIGH",
+  "why": "Carboxylate ionization at pH 7.4 is a perennial pKa reasoning step"
+ },
+ {
+  "front": "A cyclic ester is a {{c1::lactone}} and a cyclic amide is a {{c2::lactam}}.",
+  "fp": "263080e2cb03",
+  "yield": "HIGH",
+  "why": "Lactone/lactam recognition is standard nomenclature content"
+ },
+ {
+  "front": "A geminal diol, an acetal, and an aldehyde all sit at the same oxidation level. Why?",
+  "fp": "4c6008b30580",
+  "yield": "MEDIUM",
+  "why": "Oxidation-level equivalence of acetal and aldehyde is supporting reasoning"
+ },
+ {
+  "front": "A hemiacetal forms from an aldehyde plus:",
+  "fp": "68634444c73f",
+  "yield": "LOW",
+  "why": "Restates the hemiacetal vs acetal card"
+ },
+ {
+  "front": "A nitrile carbon sits at the oxidation level of a {{c1::carboxylic acid}}.",
+  "fp": "511ab18a301d",
+  "yield": "MEDIUM",
+  "why": "Nitrile oxidation level is a second-tier fact"
+ },
+ {
+  "front": "A primary amine plus a ketone yields an {{c1::imine}}, while a secondary amine yields an {{c2::enamine}}.",
+  "fp": "095e275c2b87",
+  "yield": "HIGH",
+  "why": "Imine vs enamine from primary vs secondary amine is a common item"
+ },
+ {
+  "front": "A primary amine shows {{c1::two}} N-H stretches in the IR, whereas a secondary amine shows {{c2::one}}.",
+  "fp": "61eee7722081",
+  "yield": "LOW",
+  "why": "Counting N-H IR stretches is trivia-grade spectroscopy detail"
+ },
+ {
+  "front": "A quaternary ammonium ion carries a permanent positive charge and {{c1::cannot be deprotonated}}.",
+  "fp": "a51af3a3e41d",
+  "yield": "MEDIUM",
+  "why": "Quaternary ammonium permanent charge is second-tier amine detail"
+ },
+ {
+  "front": "A thioester such as acetyl-CoA outruns an oxygen ester because sulfur {{c1::donates poorly into the carbonyl}}.",
+  "fp": "294d6abbbb01",
+  "yield": "HIGH",
+  "why": "Thioester reactivity via poor sulfur donation is a common biochem crossover"
+ },
+ {
+  "front": "Acyl transfer potential ranks acyl phosphate {{c1::above}} thioester, which in turn far exceeds {{c2::an ordinary oxygen ester}}.",
+  "fp": "43c3bd8de618",
+  "yield": "MEDIUM",
+  "why": "Acyl transfer potential ranking is supporting bioenergetics detail"
+ },
+ {
+  "front": "Alcohol acidity rises from tertiary to secondary to primary to methanol. What drives that trend in solution?",
+  "fp": "14f87fce0ac3",
+  "yield": "MEDIUM",
+  "why": "Solvation-driven alcohol acidity trend is second-tier"
+ },
+ {
+  "front": "Alcohols, ethers, alkyl halides, and amines all sit at {{c1::the same}} carbon oxidation level.",
+  "fp": "64349b79d1e7",
+  "yield": "MEDIUM",
+  "why": "Same oxidation level of C-X groups is supporting reasoning"
+ },
+ {
+  "front": "Aldehydes are more reactive than ketones toward nucleophilic addition for which two reasons?",
+  "fp": "2cb11e7d494d",
+  "yield": "ULTRA_HIGH",
+  "why": "Aldehyde vs ketone reactivity reasoning is tested every year"
+ },
+ {
+  "front": "Amines act as both bases and nucleophiles. Which role dominates when an amine meets a primary alkyl halide?",
+  "fp": "69b479fd8b9f",
+  "yield": "MEDIUM",
+  "why": "Amine over-alkylation is second-tier synthesis detail"
+ },
+ {
+  "front": "An acetal protects a ketone because acetals resist {{c1::base and nucleophiles}} yet are cleaved by {{c2::aqueous acid}}.",
+  "fp": "5f7a8207f570",
+  "yield": "HIGH",
+  "why": "Acetal protecting-group logic is standard outline content"
+ },
+ {
+  "front": "An alpha,beta-unsaturated ketone is electrophilic at the carbonyl carbon and also at {{c1::the beta carbon}}.",
+  "fp": "1aad2a9aadc8",
+  "yield": "HIGH",
+  "why": "Beta-carbon electrophilicity of enones is needed for conjugate addition items"
+ },
+ {
+  "front": "An amide nitrogen is not basic; protonation of an amide happens instead at the {{c1::carbonyl oxygen}}.",
+  "fp": "d9cd95129b04",
+  "yield": "HIGH",
+  "why": "Amide nitrogen being non-basic is a frequent amino acid and peptide item"
+ },
+ {
+  "front": "An anhydride reacts with water to give {{c1::two carboxylic acids}}, which is why anhydrides must be kept dry.",
+  "fp": "3ca026b458ab",
+  "yield": "MEDIUM",
+  "why": "Anhydride hydrolysis is second-tier acyl derivative detail"
+ },
+ {
+  "front": "An epoxide is just a three-membered ether, yet it is highly reactive. What makes the difference?",
+  "fp": "4f717b1ab334",
+  "yield": "HIGH",
+  "why": "Epoxide ring strain reactivity is a common reasoning item"
+ },
+ {
+  "front": "Anilinium has $pK_a$ ~4.6 while cyclohexylammonium has $pK_a$ ~10.6. What makes aniline such a weak base?",
+  "fp": "b5b1a9ca1456",
+  "yield": "HIGH",
+  "why": "Aniline's weak basicity via resonance is a common comparison"
+ },
+ {
+  "front": "Arginine's guanidinium group holds a $pK_a$ near {{c1::12.5}} because its positive charge is {{c2::delocalized over three nitrogens}}.",
+  "fp": "eb00c75682e3",
+  "yield": "MEDIUM",
+  "why": "Arginine pKa belongs to amino acids; resonance reasoning is useful context here"
+ },
+ {
+  "front": "Branching {{c1::lowers}} boiling point because it {{c2::reduces surface area for dispersion contact}}.",
+  "fp": "eb51e64fcb2a",
+  "yield": "HIGH",
+  "why": "Branching lowering boiling point is a frequent IMF item"
+ },
+ {
+  "front": "Carboxylic acids boil anomalously high because they form {{c1::hydrogen-bonded cyclic dimers}}.",
+  "fp": "9dc25c52a34c",
+  "yield": "HIGH",
+  "why": "Carboxylic acid dimers explaining high boiling points is common"
+ },
+ {
+  "front": "Chloroacetic acid has $pK_a$ 2.9 versus 4.8 for acetic acid, a shift driven entirely by {{c1::the inductive effect}}.",
+  "fp": "88063cc78847",
+  "yield": "ULTRA_HIGH",
+  "why": "Inductive effect on carboxylic acid pKa is tested every year"
+ },
+ {
+  "front": "Diethyl ether and THF serve as solvents because ethers are {{c1::chemically inert to acids, bases, and nucleophiles}}.",
+  "fp": "3f18efb11320",
+  "yield": "MEDIUM",
+  "why": "Ether inertness as solvent is supporting context"
+ },
+ {
+  "front": "Ethanethiol ($pK_a$ ~10) far outstrips ethanol ($pK_a$ ~16) in acidity because sulfur is {{c1::larger and more polarizable}}.",
+  "fp": "70a8504c9a6f",
+  "yield": "HIGH",
+  "why": "Thiol vs alcohol acidity explains cysteine nucleophilicity; common"
+ },
+ {
+  "front": "Ethers are poor hydrogen-bond {{c1::donors}} but good {{c2::acceptors}}.",
+  "fp": "2ff7942ba3d9",
+  "yield": "HIGH",
+  "why": "Ethers as H-bond acceptors only is a common boiling-point item"
+ },
+ {
+  "front": "How can you identify a carboxylic acid by a simple chemical test?",
+  "fp": "b42e3beaf129",
+  "yield": "HIGH",
+  "why": "Bicarbonate effervescence test for carboxylic acids is a common discrete"
+ },
+ {
+  "front": "How do amines behave as bases and nucleophiles?",
+  "fp": "75ce5a6cfecc",
+  "yield": "ULTRA_HIGH",
+  "why": "Amine basicity and nucleophilicity ranking is tested every year"
+ },
+ {
+  "front": "How do you pull an amine out of an ether layer and into the aqueous layer?",
+  "fp": "96557fb12204",
+  "yield": "MEDIUM",
+  "why": "Amine extraction belongs to lab methods and is covered there [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "How do you recognize a urea versus an ordinary amide?",
+  "fp": "65284f294957",
+  "yield": "LOW",
+  "why": "Urea vs amide recognition is trivia-grade"
+ },
+ {
+  "front": "How do you tell a phosphate ester from a phosphoanhydride, and why does the difference matter?",
+  "fp": "ca96163dd7ae",
+  "yield": "ULTRA_HIGH",
+  "why": "Phosphoanhydride vs phosphate ester underlies ATP questions every year"
+ },
+ {
+  "front": "How do you tell an ester, an ether, and an anhydride apart by structure?",
+  "fp": "cc6935fbeb93",
+  "yield": "ULTRA_HIGH",
+  "why": "Ester/ether/anhydride recognition is foundational"
+ },
+ {
+  "front": "How does an IR spectrum distinguish an aldehyde from a ketone?",
+  "fp": "9a090ba24e45",
+  "yield": "LOW",
+  "why": "Aldehyde C-H IR stretch numbers are trivia-grade"
+ },
+ {
+  "front": "How does hybridization of a carbon control the acidity of its C-H bond?",
+  "fp": "60682d8a5b69",
+  "yield": "HIGH",
+  "why": "s-character and C-H acidity is a common reasoning item"
+ },
+ {
+  "front": "How is a nitrile related to a carboxylic acid, and what does complete hydrolysis give?",
+  "fp": "99b016511fdf",
+  "yield": "LOW",
+  "why": "Restates the nitrile oxidation level card"
+ },
+ {
+  "front": "Imidazole, indole, and the purine ring system are all {{c1::aromatic heterocycles}}, which makes them {{c2::planar and unusually stable}}.",
+  "fp": "dd3fa8df8b32",
+  "yield": "MEDIUM",
+  "why": "Aromatic heterocycles are supporting context for bases and side chains"
+ },
+ {
+  "front": "Imine (Schiff base) chemistry underlies which two classic biological systems?",
+  "fp": "d88ba21852d1",
+  "yield": "MEDIUM",
+  "why": "Schiff base examples are supporting biochem context"
+ },
+ {
+  "front": "In extraction, aqueous {{c1::$NaHCO_3$}} deprotonates carboxylic acids but leaves phenols neutral in the organic layer.",
+  "fp": "5df8f3c8880f",
+  "yield": "MEDIUM",
+  "why": "Extraction selectivity overlaps the bicarbonate test and lab methods deck"
+ },
+ {
+  "front": "In nucleophilic acyl substitution, the more stable the leaving group, the {{c1::more reactive}} the acyl derivative.",
+  "fp": "425de102d7b6",
+  "yield": "HIGH",
+  "why": "Leaving-group stability driving acyl reactivity is a required step"
+ },
+ {
+  "front": "In water, amine basicity runs secondary above primary above tertiary rather than tracking alkyl donation. Why?",
+  "fp": "be061556a1b3",
+  "yield": "MEDIUM",
+  "why": "Secondary above tertiary amine basicity in water is a second-tier nuance"
+ },
+ {
+  "front": "Ketoses like fructose still give a positive Benedict's test because base drives {{c1::tautomerization to an aldose}}.",
+  "fp": "fc243f03de1f",
+  "yield": "HIGH",
+  "why": "Fructose testing positive via enediol is a common reducing-sugar item"
+ },
+ {
+  "front": "Rank acidity: phenol, ethanol, acetic acid.",
+  "fp": "7ec9281e62ca",
+  "yield": "ULTRA_HIGH",
+  "why": "Acetic acid, phenol, ethanol acidity ranking is tested every year"
+ },
+ {
+  "front": "Rank reactivity toward nucleophilic acyl substitution (most to least):",
+  "fp": "b3ba478412cb",
+  "yield": "ULTRA_HIGH",
+  "why": "Acyl derivative reactivity ranking is tested every year"
+ },
+ {
+  "front": "Rank the acidity of common functional groups (most to least acidic).",
+  "fp": "82ad17b26b18",
+  "yield": "HIGH",
+  "why": "Broader acidity ranking including alkyne and amine N-H is common"
+ },
+ {
+  "front": "Rank the functional group priority for IUPAC naming (highest to lowest).",
+  "fp": "b5f9ec4a322f",
+  "yield": "ULTRA_HIGH",
+  "why": "IUPAC functional-group priority is a perennial nomenclature item"
+ },
+ {
+  "front": "Rank the oxidation states of carbon-oxygen functional groups (least → most oxidized).",
+  "fp": "14604e008564",
+  "yield": "ULTRA_HIGH",
+  "why": "Carbon oxidation-state ranking is tested every year"
+ },
+ {
+  "front": "Roughly how many carbons can a molecule with one hydrogen-bonding group carry and still dissolve in water?",
+  "fp": "17e16d95f10f",
+  "yield": "MEDIUM",
+  "why": "Four-to-five carbon solubility rule is a second-tier heuristic"
+ },
+ {
+  "front": "The anomeric carbon of a cyclic monosaccharide is a {{c1::hemiacetal}} carbon.",
+  "fp": "9ba823b590b7",
+  "yield": "ULTRA_HIGH",
+  "why": "Anomeric carbon as hemiacetal is core sugar content tested every year"
+ },
+ {
+  "front": "The carbon oxidation ladder climbs alkane, alcohol, aldehyde, carboxylic acid, and finally {{c1::$CO_2$}}.",
+  "fp": "f0a655823bb1",
+  "yield": "LOW",
+  "why": "Restates the oxidation-state ranking card"
+ },
+ {
+  "front": "Tosylate is an outstanding leaving group because its conjugate acid is {{c1::a strong sulfonic acid}}.",
+  "fp": "5a3952ebbdb3",
+  "yield": "HIGH",
+  "why": "Tosylate as a leaving group is a common alcohol-activation item"
+ },
+ {
+  "front": "What functional group forms when two cysteines are oxidized, and what reverses it?",
+  "fp": "10b418e76fda",
+  "yield": "HIGH",
+  "why": "Disulfide formation and reduction is common in protein structure items"
+ },
+ {
+  "front": "What functional group interconversion happens at the isomerase steps of glycolysis?",
+  "fp": "3e2308c1abc1",
+  "yield": "HIGH",
+  "why": "Aldose-ketose isomerization via enediol is a common glycolysis crossover"
+ },
+ {
+  "front": "What functional groups result from oxidizing 1° vs 2° vs 3° alcohols?",
+  "fp": "3e03a516790e",
+  "yield": "ULTRA_HIGH",
+  "why": "Oxidation products of 1/2/3 alcohols is tested every year"
+ },
+ {
+  "front": "What is the priority order for IUPAC suffix naming (highest first)?",
+  "fp": "1140b3f44533",
+  "yield": "LOW",
+  "why": "Restates the IUPAC priority card"
+ },
+ {
+  "front": "What structural feature makes a carbohydrate a reducing sugar?",
+  "fp": "7332223632ae",
+  "yield": "ULTRA_HIGH",
+  "why": "Reducing sugar definition is tested every year"
+ },
+ {
+  "front": "Which amino acid has an aromatic R-group that absorbs UV light at 280 nm?",
+  "fp": "43107a93a7de",
+  "yield": "MEDIUM",
+  "why": "Trp 280 nm belongs to amino acids and is covered in that deck [rescued: misfiled, not served elsewhere]"
+ },
+ {
+  "front": "Which boils higher, propylamine or trimethylamine, and why?",
+  "fp": "5426877d4fec",
+  "yield": "MEDIUM",
+  "why": "Amine boiling-point comparison applies the H-bonding card"
+ },
+ {
+  "front": "Which functional group change turns a primary alcohol into a good leaving group without changing its oxidation state?",
+  "fp": "87b261ba7af0",
+  "yield": "MEDIUM",
+  "why": "Alcohol to sulfonate/phosphate ester overlaps the tosylate card"
+ },
+ {
+  "front": "Which functional group is found in all amino acids?",
+  "fp": "bb18ba224396",
+  "yield": "LOW",
+  "why": "Amino plus carboxyl in all amino acids is trivial and covered elsewhere"
+ },
+ {
+  "front": "Which functional group is most water-soluble at physiological pH?",
+  "fp": "b78067ab8836",
+  "yield": "MEDIUM",
+  "why": "Carboxylate solubility restates the pH 7.4 ionization idea"
+ },
+ {
+  "front": "Which functional group produces the very broad IR absorption spanning 2500 to 3500 cm$^{-1}$?",
+  "fp": "dc1bcb5082c6",
+  "yield": "HIGH",
+  "why": "Broad 2500-3500 O-H band for carboxylic acids is a common IR item"
+ },
+ {
+  "front": "Which functional groups can hydrogen-bond, and how does that show up in boiling points?",
+  "fp": "336f8fbe2e2c",
+  "yield": "ULTRA_HIGH",
+  "why": "H-bond donors vs acceptors and boiling points is tested every year"
+ },
+ {
+  "front": "Why does a carboxylic acid, but not an alcohol, dissolve in aqueous $NaHCO_3$ with visible bubbling?",
+  "fp": "f01701e8a964",
+  "yield": "LOW",
+  "why": "Restates the bicarbonate effervescence card"
+ },
+ {
+  "front": "Why does an amide absorb near 1650 cm$^{-1}$ while an ester absorbs near 1735 cm$^{-1}$?",
+  "fp": "3711a11116ba",
+  "yield": "LOW",
+  "why": "Amide vs ester carbonyl frequencies are trivia-grade numbers"
+ },
+ {
+  "front": "Why is penicillin's beta-lactam far more reactive than an ordinary amide?",
+  "fp": "be88ad676f68",
+  "yield": "MEDIUM",
+  "why": "Beta-lactam strain is a passage-level application"
+ },
+ {
+  "front": "Why must an alcohol be protected before a Grignard reaction is run elsewhere in the molecule?",
+  "fp": "fda9062523b7",
+  "yield": "MEDIUM",
+  "why": "Alcohol protection before Grignard overlaps the carbonyls deck"
+ }
+]

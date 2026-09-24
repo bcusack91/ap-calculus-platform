@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you handle a passage contradicting what you learned?",
+  "fp": "7c8c9315ce5d",
+  "yield": "ULTRA_HIGH",
+  "why": "Passage-over-outside-knowledge rule decides answers on nearly every exam"
+ },
+ {
+  "front": "How should you read passages with multiple experiments?",
+  "fp": "7963b4353a37",
+  "yield": "HIGH",
+  "why": "Tracking what changed between experiments is where multi-experiment questions hinge"
+ },
+ {
+  "front": "How should you treat the introductory paragraph of a science passage?",
+  "fp": "92033782eaba",
+  "yield": "MEDIUM",
+  "why": "Intro-paragraph framing; helpful orientation, secondary tactic"
+ },
+ {
+  "front": "What is the difference between reading for gist and reading for detail?",
+  "fp": "ef5cebf6281e",
+  "yield": "MEDIUM",
+  "why": "Gist vs detail restates the skim-first approach"
+ },
+ {
+  "front": "What is the role of the final paragraph in science passages?",
+  "fp": "f5df6546ce8a",
+  "yield": "MEDIUM",
+  "why": "Final-paragraph conclusions/limitations; useful for inference questions"
+ },
+ {
+  "front": "What should you do with a dense methods description?",
+  "fp": "677b53da19b4",
+  "yield": "HIGH",
+  "why": "Extracting manipulated/measured from dense methods is a tactic on most passages"
+ },
+ {
+  "front": "What signals that a sentence is likely to be tested?",
+  "fp": "1d0b8c098aa4",
+  "yield": "HIGH",
+  "why": "Flagging comparisons, causal claims and surprises targets what gets asked"
+ },
+ {
+  "front": "Why is annotating sparingly better than heavily?",
+  "fp": "7220418a9003",
+  "yield": "MEDIUM",
+  "why": "Annotation-economy advice; time tactic of secondary value"
+ }
+]

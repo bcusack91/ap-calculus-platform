@@ -8,8 +8,8 @@
  {
   "front": "{{c1::Secretin}} from duodenal S cells responds to acid by driving pancreatic bicarbonate secretion.",
   "fp": "3530c7c29a41",
-  "yield": "HIGH",
-  "why": "Secretin/S cells/bicarbonate is core hormonal control of digestion"
+  "yield": "ULTRA_HIGH",
+  "why": "Secretin from S cells driving pancreatic bicarbonate is tested on essentially every exam"
  },
  {
   "front": "A gastrin-secreting tumor causes duodenal ulcers plus {{c1::steatorrhea}}, because excess acid inactivates pancreatic lipase in the small intestine.",
@@ -20,20 +20,20 @@
  {
   "front": "About 95 percent of secreted bile salts are reclaimed in the {{c1::terminal ileum}} and returned to the liver.",
   "fp": "8c189b8fb12e",
-  "yield": "MEDIUM",
-  "why": "Enterohepatic recycling in the ileum is useful context; the 95% figure is not asked"
+  "yield": "HIGH",
+  "why": "Enterohepatic recycling of bile salts in the ileum is a commonly tested absorption fact"
  },
  {
   "front": "Acute hemorrhage: baroreceptor firing {{c1::falls}}, releasing the medullary vasomotor center from inhibition and raising sympathetic outflow in seconds.",
   "fp": "7011f4b81caf",
-  "yield": "MEDIUM",
-  "why": "Baroreceptor reflex is core cardio, tested there; here it is cross-system integration"
+  "yield": "HIGH",
+  "why": "Baroreceptor reflex to hemorrhage is a required reasoning step in cardio/integration passages"
  },
  {
   "front": "Aldosterone primarily promotes:",
   "fp": "131c7e11bbc6",
-  "yield": "HIGH",
-  "why": "Aldosterone Na+ retention/K+ excretion is a top-frequency hormone fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Aldosterone Na+ retention/K+ excretion is a top-frequency hormone fact tested every year"
  },
  {
   "front": "Antral pH below about 3 triggers {{c1::somatostatin}} release, which shuts off gastrin secretion.",
@@ -44,8 +44,8 @@
  {
   "front": "Atrial natriuretic peptide (ANP) is released in response to:",
   "fp": "a21ebd754329",
-  "yield": "MEDIUM",
-  "why": "ANP as RAAS antagonist is a plausible second-step in volume passages"
+  "yield": "HIGH",
+  "why": "ANP as the RAAS antagonist is commonly tested in volume-regulation questions"
  },
  {
   "front": "Beyond sympathetic reflexes, name the three slower systems that restore blood volume after hemorrhage.",
@@ -56,20 +56,20 @@
  {
   "front": "Compare the primary and secondary antibody responses in latency, isotype, and affinity.",
   "fp": "d8461f148b4b",
-  "yield": "HIGH",
-  "why": "Primary vs secondary response (IgM to IgG, memory, affinity) is core immunology"
+  "yield": "ULTRA_HIGH",
+  "why": "Primary vs secondary response (IgM to IgG, memory, affinity) is core immunology every year"
  },
  {
   "front": "Contrast the sympathetic and parasympathetic systems.",
   "fp": "9316abece9d4",
-  "yield": "HIGH",
-  "why": "Sympathetic vs parasympathetic effects is a high-frequency distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Sympathetic vs parasympathetic effects is tested on essentially every administration"
  },
  {
   "front": "Dietary fat packaged as chylomicrons enters {{c1::lacteals (intestinal lymphatics)}}, bypassing the hepatic portal system.",
   "fp": "b23c8cebd449",
-  "yield": "HIGH",
-  "why": "Chylomicron entry via lacteals ties lymphatic and digestive systems; on the outline"
+  "yield": "ULTRA_HIGH",
+  "why": "Chylomicrons entering lacteals and bypassing the portal system is a perennial discrete"
  },
  {
   "front": "Distinguish micelles from chylomicrons in fat absorption.",
@@ -80,13 +80,13 @@
  {
   "front": "Duodenal brush-border {{c1::enteropeptidase (enterokinase)}} activates trypsinogen; trypsin then activates the other pancreatic zymogens.",
   "fp": "adc523db0437",
-  "yield": "HIGH",
-  "why": "Enteropeptidase/trypsin zymogen cascade is a named, tested activation mechanism"
+  "yield": "ULTRA_HIGH",
+  "why": "Enteropeptidase/trypsin zymogen cascade is the standard activation mechanism tested yearly"
  },
  {
   "front": "Estrogen surge before ovulation causes:",
   "fp": "577cf41145a4",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Estrogen positive feedback driving the LH surge is a top-frequency endocrine fact"
  },
  {
@@ -98,8 +98,8 @@
  {
   "front": "Glucose and galactose enter enterocytes by {{c1::secondary active transport (Na+-coupled SGLT1)}}, while fructose uses facilitated diffusion via GLUT5.",
   "fp": "6353b9e6fbec",
-  "yield": "HIGH",
-  "why": "SGLT1 secondary active vs GLUT5 facilitated transport is a classic tested contrast"
+  "yield": "ULTRA_HIGH",
+  "why": "SGLT1 secondary active vs GLUT5 facilitated transport is tested every year"
  },
  {
   "front": "Hemolysis versus bile duct obstruction: which bilirubin fraction rises, and what happens to urine and stool?",
@@ -116,8 +116,8 @@
  {
   "front": "How do cutaneous arteriovenous shunts serve thermoregulation?",
   "fp": "c448caffe128",
-  "yield": "HIGH",
-  "why": "Skin vasoconstriction/dilation for thermoregulation is explicitly on the outline"
+  "yield": "MEDIUM",
+  "why": "Skin vasodilation for heat loss is outline content; the AV-shunt specificity is not needed"
  },
  {
   "front": "How do NSAIDs cause gastric ulcers even when acid secretion is normal?",
@@ -135,13 +135,13 @@
   "front": "How does gastrin increase acid secretion by two routes?",
   "fp": "9fefce8d3929",
   "yield": "HIGH",
-  "why": "Gastrin/histamine/parietal cell acid control is core digestive regulation"
+  "why": "Gastrin/histamine/parietal cell acid control is commonly tested digestive regulation"
  },
  {
   "front": "How is pepsinogen activated, and why is the process autocatalytic?",
   "fp": "663cc7034264",
-  "yield": "HIGH",
-  "why": "Pepsinogen activation by HCl and its pH optimum is a standard discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Pepsinogen activation by HCl and pepsin's pH optimum is tested on essentially every exam"
  },
  {
   "front": "In control-system terms, why does fever cause shivering and chills even though body temperature is already elevated?",
@@ -152,14 +152,14 @@
  {
   "front": "In untreated type 1 diabetes, glucose above the renal threshold causes {{c1::osmotic diuresis}}, explaining polyuria, volume depletion, and thirst.",
   "fp": "9c6c77eb3ce4",
-  "yield": "MEDIUM",
+  "yield": "HIGH",
   "why": "Osmotic diuresis in diabetes is a common passage bridge to renal handling"
  },
  {
   "front": "Innate versus adaptive immunity: contrast speed, specificity, and memory.",
   "fp": "66ac8a0d53c1",
-  "yield": "HIGH",
-  "why": "Innate vs adaptive immunity contrast is core lymphatic/immune content"
+  "yield": "ULTRA_HIGH",
+  "why": "Innate vs adaptive immunity contrast is core lymphatic/immune content tested every year"
  },
  {
   "front": "Insulin and glucagon exemplify {{c1::antagonistic}} control, where paired effectors push a variable in opposite directions.",
@@ -176,14 +176,14 @@
  {
   "front": "Lactase deficiency causes {{c1::osmotic}} diarrhea with bloating, because undigested lactose reaches colonic bacteria for fermentation.",
   "fp": "feda7e3f2fa0",
-  "yield": "MEDIUM",
-  "why": "Lactase deficiency osmotic diarrhea illustrates brush-border digestion; clinical flavor"
+  "yield": "HIGH",
+  "why": "Lactase deficiency osmotic diarrhea is a standard passage scenario on brush-border digestion"
  },
  {
   "front": "MHC class I presents {{c1::cytosolic}} peptides to CD8 T cells, while MHC class II presents endocytosed peptides to CD4 T cells.",
   "fp": "e3921ace6fcb",
-  "yield": "HIGH",
-  "why": "MHC I vs II and CD8 vs CD4 pairing is a high-frequency immunology distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "MHC I vs II and CD8 vs CD4 pairing is tested on essentially every administration"
  },
  {
   "front": "Nonshivering thermogenesis in brown fat uses {{c1::UCP1 (thermogenin)}} to uncouple the proton gradient from ATP synthesis.",
@@ -200,8 +200,8 @@
  {
   "front": "Salivary amylase (pH optimum near 7) is inactivated by {{c1::stomach acid}}, while lingual and gastric lipases stay active at acidic pH.",
   "fp": "98f50e33c248",
-  "yield": "MEDIUM",
-  "why": "Enzyme pH optima across digestive compartments is supporting detail"
+  "yield": "HIGH",
+  "why": "Enzyme pH optima across digestive compartments is a commonly tested contrast"
  },
  {
   "front": "Septic versus hemorrhagic shock: predict cardiac output and total peripheral resistance in each.",
@@ -218,8 +218,8 @@
  {
   "front": "State the classic absorption sites for iron, folate, and vitamin B12.",
   "fp": "183dd4d2536b",
-  "yield": "MEDIUM",
-  "why": "B12/intrinsic factor in the ileum is asked occasionally; iron and folate sites are flavor"
+  "yield": "HIGH",
+  "why": "B12/intrinsic factor absorption in the ileum is a commonly asked absorption site"
  },
  {
   "front": "Sustained high estrogen switches its effect on the hypothalamic-pituitary axis from negative to {{c1::positive}} feedback, producing the LH surge.",
@@ -242,8 +242,8 @@
  {
   "front": "The hypothalamus links the nervous and endocrine systems by controlling:",
   "fp": "56fc40c27605",
-  "yield": "HIGH",
-  "why": "Hypothalamus-pituitary link is a top-frequency endocrine/nervous fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Hypothalamus-pituitary link is a top-frequency endocrine/nervous fact tested every year"
  },
  {
   "front": "The incretin {{c1::GIP}} explains why oral glucose evokes more insulin release than the same glucose given intravenously.",
@@ -266,14 +266,14 @@
  {
   "front": "The myelin sheath in the peripheral nervous system is formed by:",
   "fp": "23fd226679db",
-  "yield": "HIGH",
-  "why": "Schwann vs oligodendrocyte myelination is a high-frequency nervous-system discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Schwann vs oligodendrocyte myelination is a perennial nervous-system discrete"
  },
  {
   "front": "The parasympathetic nervous system uses which neurotransmitter at its target organs?",
   "fp": "7c47c95c6b41",
-  "yield": "HIGH",
-  "why": "ACh vs NE at autonomic targets is a classic discrete question"
+  "yield": "ULTRA_HIGH",
+  "why": "ACh vs NE at autonomic targets is a classic discrete tested every year"
  },
  {
   "front": "The somatic nervous system controls:",
@@ -284,19 +284,19 @@
  {
   "front": "Trace blood flow through the heart.",
   "fp": "ba8984ad1f6a",
-  "yield": "HIGH",
-  "why": "Path of blood through the heart is core circulatory content"
+  "yield": "ULTRA_HIGH",
+  "why": "Path of blood through the heart is foundational circulatory content tested every year"
  },
  {
   "front": "Vomiting versus diarrhea: which acid-base disturbance does each produce, and why?",
   "fp": "8004ec24285f",
-  "yield": "MEDIUM",
-  "why": "Vomiting alkalosis vs diarrhea acidosis is a plausible passage second step"
+  "yield": "HIGH",
+  "why": "Vomiting alkalosis vs diarrhea acidosis is a commonly tested acid-base contrast"
  },
  {
   "front": "What are the three germ layers and a derivative of each?",
   "fp": "b55403cb40ab",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Germ layers and derivatives is a top-frequency embryology discrete"
  },
  {
@@ -308,20 +308,20 @@
  {
   "front": "What is cardiac output, and what is its formula?",
   "fp": "35fd0900b0d7",
-  "yield": "HIGH",
-  "why": "CO = HR x SV is a formula used in calculation"
+  "yield": "ULTRA_HIGH",
+  "why": "CO = HR x SV is a formula used in calculation on essentially every exam"
  },
  {
   "front": "What is the cardiac conduction pathway?",
   "fp": "cd28da109da3",
-  "yield": "HIGH",
-  "why": "SA-AV-His-Purkinje conduction pathway is a standard discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "SA-AV-His-Purkinje conduction pathway is a perennial discrete"
  },
  {
   "front": "What is the functional unit of the kidney and its segments?",
   "fp": "65d0a357ff2d",
   "yield": "HIGH",
-  "why": "Nephron as functional unit and its segments is core renal content"
+  "why": "Nephron as functional unit and its segments is core renal content, served fully in renal deck"
  },
  {
   "front": "What is the main nitrogenous waste in humans and where is it made?",
@@ -332,8 +332,8 @@
  {
   "front": "What triggers CCK release, and what three coordinated effects deliver bile and enzymes to dietary fat?",
   "fp": "072aedc907ee",
-  "yield": "HIGH",
-  "why": "CCK triggers and effects (gallbladder, pancreatic enzymes) is core hormonal control"
+  "yield": "ULTRA_HIGH",
+  "why": "CCK triggers and effects (gallbladder, pancreatic enzymes) are tested every year"
  },
  {
   "front": "When ambient temperature exceeds body temperature, {{c1::evaporation (sweating)}} is the only mechanism of heat loss.",
@@ -344,20 +344,20 @@
  {
   "front": "Where are disaccharides finally digested, and how do the resulting monosaccharides enter the enterocyte?",
   "fp": "6e0785bd331f",
-  "yield": "MEDIUM",
-  "why": "Brush-border disaccharidases plus entry transporters; overlaps the SGLT1/GLUT5 card"
+  "yield": "HIGH",
+  "why": "Brush-border disaccharidases and monosaccharide entry are commonly tested absorption steps"
  },
  {
   "front": "Where does most nutrient absorption occur and why?",
   "fp": "c26f7aaab2bc",
-  "yield": "HIGH",
-  "why": "Small intestine villi/microvilli surface area is a basic tested fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Small intestine villi/microvilli surface area is a basic fact tested every year"
  },
  {
   "front": "Which major class of plasma proteins does the liver NOT make?",
   "fp": "4c5faf573943",
-  "yield": "MEDIUM",
-  "why": "Liver makes albumin and clotting factors but not antibodies; supporting liver detail"
+  "yield": "HIGH",
+  "why": "Liver makes albumin and clotting factors but not antibodies; commonly tested liver function"
  },
  {
   "front": "Why are sweat glands the classic exception to sympathetic neurotransmission rules?",
@@ -368,14 +368,14 @@
  {
   "front": "Why can the liver, but not skeletal muscle, release free glucose into the blood?",
   "fp": "c66c481e03fe",
-  "yield": "HIGH",
-  "why": "Glucose-6-phosphatase liver vs muscle is a high-frequency metabolism distinction"
+  "yield": "ULTRA_HIGH",
+  "why": "Glucose-6-phosphatase liver vs muscle is a perennial metabolism distinction"
  },
  {
   "front": "Why do orally absorbed drugs and nutrients reach the liver before the systemic circulation?",
   "fp": "15a97d51bfef",
   "yield": "HIGH",
-  "why": "Hepatic portal system and first-pass metabolism is core digestive/liver content"
+  "why": "Hepatic portal system and first-pass metabolism is commonly tested digestive/liver content"
  },
  {
   "front": "Why do pancreatic amylase and lipase depend on secretin signaling to function?",

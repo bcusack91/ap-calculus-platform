@@ -1,0 +1,44 @@
+[
+ {
+  "front": "How do you spot the pivot point in a passage?",
+  "fp": "8937a3d16a69",
+  "yield": "ULTRA_HIGH",
+  "why": "Contrast-keyword pivot is used on essentially every passage to find the author's claim"
+ },
+ {
+  "front": "How do you tell the main conclusion from an intermediate conclusion?",
+  "fp": "09ae11e26ec3",
+  "yield": "HIGH",
+  "why": "Main vs intermediate conclusion decides many main-idea answers"
+ },
+ {
+  "front": "What does a question asking the \"function\" of a paragraph want?",
+  "fp": "62fa3a9220e1",
+  "yield": "HIGH",
+  "why": "Paragraph-function questions are common; role, not summary"
+ },
+ {
+  "front": "What does it mean when an author qualifies a claim late in the passage?",
+  "fp": "9671b9ce6dd9",
+  "yield": "HIGH",
+  "why": "Late qualification narrows scope; main-idea answers must reflect it"
+ },
+ {
+  "front": "What is the concession-rebuttal structure?",
+  "fp": "608b325b23bc",
+  "yield": "MEDIUM",
+  "why": "Concession-rebuttal recognition is useful structure but a second-step note"
+ },
+ {
+  "front": "What is the difference between an author's claim and their evidence?",
+  "fp": "d0e9847febea",
+  "yield": "HIGH",
+  "why": "Claim vs evidence separation underlies most comprehension questions"
+ },
+ {
+  "front": "What is the role of an example in an argument?",
+  "fp": "54968e4045a2",
+  "yield": "MEDIUM",
+  "why": "Example-is-not-the-thesis supports the too-narrow trap; secondary"
+ }
+]

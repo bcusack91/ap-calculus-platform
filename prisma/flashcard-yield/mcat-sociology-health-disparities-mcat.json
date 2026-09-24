@@ -9,61 +9,61 @@
   "front": "{{c1::Compliance}} implies patient obedience, {{c2::adherence}} implies an agreed plan, and concordance describes shared decision-making about the regimen.",
   "fp": "9464c6bdd08f",
   "yield": "MEDIUM",
-  "why": "Adherence is exam-relevant health behavior; concordance nuance is secondary"
+  "why": "Adherence is exam-relevant; compliance/concordance nuance is skippable"
  },
  {
   "front": "{{c1::Food deserts}} are areas with poor access to affordable nutritious food, concentrating diet-related disease in low-income and rural communities.",
   "fp": "bdf3af0d95a9",
   "yield": "HIGH",
-  "why": "Food deserts: named structural access barrier, core social determinant example"
+  "why": "Food deserts are the standard structural access example; commonly tested"
  },
  {
   "front": "{{c1::Fundamental cause}} theory (Link and Phelan): SES stays linked to disease across eras because money, knowledge, and networks are flexible resources.",
   "fp": "509a72758017",
-  "yield": "HIGH",
-  "why": "Fundamental cause theory is the standard explanation for the persistent SES gradient"
+  "yield": "ULTRA_HIGH",
+  "why": "Fundamental cause theory is the go-to explanation for the SES gradient; tested every year"
  },
  {
   "front": "{{c1::Illness experience}} is the interactionist study of how people manage symptoms, meaning, and identity — central in chronic disease.",
   "fp": "ba4b65d137bd",
-  "yield": "MEDIUM",
-  "why": "Illness experience is AAMC-listed (9A health & medicine) but secondary to disparities"
+  "yield": "HIGH",
+  "why": "Illness experience is AAMC-listed (9A) and appears in chronic-illness passages"
  },
  {
   "front": "{{c1::Incidence}} counts new cases arising over a period; {{c2::prevalence}} counts all existing cases at a point in time.",
   "fp": "0294b40a3006",
-  "yield": "HIGH",
-  "why": "Incidence vs prevalence is core epidemiology; back adds the duration relationship"
+  "yield": "ULTRA_HIGH",
+  "why": "Incidence vs prevalence is core epidemiology, tested every administration"
  },
  {
   "front": "{{c1::Lead-time}} bias lengthens measured survival by diagnosing earlier; {{c2::length}} bias makes screening oversample slow-growing disease.",
   "fp": "cc72bb2befab",
   "yield": "MEDIUM",
-  "why": "Screening biases appear in research-methods passages; second-tier for this topic"
+  "why": "Screening biases belong to research-methods passages; second-tier here"
  },
  {
   "front": "{{c1::Medicalization}} turns nonmedical problems into illnesses (ADHD, baldness); {{c2::demedicalization}} reverses it — homosexuality left the DSM in 1973.",
   "fp": "e9b16b2fefaf",
-  "yield": "MEDIUM",
-  "why": "Medicalization is tested (9A); demedicalization/1973 is supporting detail"
+  "yield": "HIGH",
+  "why": "Medicalization is on the outline and commonly tested; this is the definition card"
  },
  {
   "front": "{{c1::Medicare}} covers people 65 and older plus those with ESRD or disability; {{c2::Medicaid}} is joint federal-state coverage based on income.",
   "fp": "373aeb4d17fe",
-  "yield": "HIGH",
-  "why": "Medicare vs Medicaid is the classic healthcare-access discrete"
+  "yield": "ULTRA_HIGH",
+  "why": "Medicare vs Medicaid is the classic healthcare-access discrete, tested every year"
  },
  {
   "front": "{{c1::Single-payer}} means one entity pays for privately delivered care; {{c2::socialized medicine}} means government also owns facilities and staff.",
   "fp": "b9c312969326",
   "yield": "MEDIUM",
-  "why": "System-type vocabulary; plausible passage context, rarely asked outright"
+  "why": "Single-payer/socialized vocabulary is passage context, rarely asked outright"
  },
  {
   "front": "{{c1::Social epidemiology}} studies how social structure — class, race, gender, place — distributes disease and mortality across populations.",
   "fp": "b1caff1f44a9",
   "yield": "HIGH",
-  "why": "Social epidemiology is a named AAMC concept framing the whole topic"
+  "why": "Social epidemiology is a named AAMC concept framing the topic"
  },
  {
   "front": "A {{c1::DALY}} counts years of healthy life lost to illness and premature death; a {{c2::QALY}} weights years of life gained by their quality.",
@@ -74,8 +74,8 @@
  {
   "front": "A study finds higher hypertension rates among Black patients and concludes there is a genetic cause. What is the interpretive error?",
   "fp": "3323908cf947",
-  "yield": "HIGH",
-  "why": "Race as social construct vs genetic explanation is a classic passage reasoning item"
+  "yield": "ULTRA_HIGH",
+  "why": "Race as social construct vs genetic explanation is a passage reasoning item every year"
  },
  {
   "front": "Ajzen's theory of planned behavior predicts intention from three components. Name them and the model's main limitation.",
@@ -93,7 +93,7 @@
   "front": "Being {{c1::uninsured}} or underinsured predicts delayed care, skipped medications, fewer screenings, and later-stage diagnoses.",
   "fp": "bff764562915",
   "yield": "HIGH",
-  "why": "Uninsurance as an access barrier with signature disparity outcomes"
+  "why": "Uninsurance as an access barrier with signature outcomes; commonly tested"
  },
  {
   "front": "Beyond cost, what barriers limit healthcare access?",
@@ -110,8 +110,8 @@
  {
   "front": "Contrast the sick role and illness experience.",
   "fp": "3ed98483d92b",
-  "yield": "MEDIUM",
-  "why": "Sick role vs illness experience contrast is tested but belongs to 9A"
+  "yield": "HIGH",
+  "why": "Sick role vs illness experience contrast is commonly tested"
  },
  {
   "front": "Contrast upstream and downstream interventions for health disparities.",
@@ -122,32 +122,32 @@
  {
   "front": "Cultural capital refers to:",
   "fp": "65ea5ba4b9b8",
-  "yield": "MEDIUM",
-  "why": "Cultural capital is tested under social class; tangential to health here"
+  "yield": "HIGH",
+  "why": "Cultural capital is commonly tested; tangential to health but must-know"
  },
  {
   "front": "Define social determinants of health.",
   "fp": "a5310e72a0eb",
-  "yield": "HIGH",
-  "why": "Definition of social determinants of health is the topic's anchor concept"
+  "yield": "ULTRA_HIGH",
+  "why": "Social determinants of health is the topic anchor, tested every administration"
  },
  {
   "front": "Discrimination differs from prejudice in being:",
   "fp": "525cb6f78e17",
-  "yield": "MEDIUM",
-  "why": "Prejudice vs discrimination is a tested distinction, though from 8C not 10A"
+  "yield": "ULTRA_HIGH",
+  "why": "Prejudice (attitude) vs discrimination (behavior) is tested every year"
  },
  {
   "front": "Distinguish disease, illness, and sickness.",
   "fp": "d296c8c4ca00",
   "yield": "MEDIUM",
-  "why": "Disease/illness/sickness triad supports sick role and illness experience"
+  "why": "Disease/illness/sickness triad is supporting detail for sick role cards"
  },
  {
   "front": "Distinguish health equality from health equity.",
   "fp": "84a427f2ea2a",
   "yield": "HIGH",
-  "why": "Equity vs equality distinction is a definition the exam uses for disparities"
+  "why": "Equity vs equality is a definition the exam uses for disparities"
  },
  {
   "front": "Distinguish incidence from prevalence.",
@@ -158,68 +158,68 @@
  {
   "front": "Gender paradox: women show higher {{c1::morbidity}} (illness rates) but lower {{c2::mortality}} — living longer while reporting more sickness.",
   "fp": "a0e91c166d1e",
-  "yield": "HIGH",
-  "why": "Gender morbidity/mortality paradox is the standard gender-disparity fact"
+  "yield": "ULTRA_HIGH",
+  "why": "Gender morbidity/mortality paradox is the standard gender-disparity fact, tested yearly"
  },
  {
   "front": "How can health disadvantage transmit across generations?",
   "fp": "690e11c914f6",
   "yield": "MEDIUM",
-  "why": "Intergenerational transmission supports life-course/SES content as a second step"
+  "why": "Intergenerational transmission is a second-step life-course point"
  },
  {
   "front": "How do physicians act as gatekeepers of the sick role?",
   "fp": "d2d6355e8ce7",
   "yield": "MEDIUM",
-  "why": "Physician legitimation of the sick role is supporting detail on the sick role"
+  "why": "Physician legitimation of the sick role is supporting detail"
  },
  {
   "front": "How does implicit bias produce disparities in clinical care?",
   "fp": "86794d1cbae5",
-  "yield": "HIGH",
-  "why": "Implicit bias in clinical care is core healthcare-disparities content"
+  "yield": "ULTRA_HIGH",
+  "why": "Implicit bias producing care disparities is tested every administration"
  },
  {
   "front": "How does residential segregation affect health?",
   "fp": "edbf10bddba0",
   "yield": "HIGH",
-  "why": "Residential segregation is the key spatial-inequality mechanism for disparities"
+  "why": "Residential segregation is the key spatial mechanism; commonly tested"
  },
  {
   "front": "How does stigma affect health and healthcare seeking?",
   "fp": "90e760267ba2",
-  "yield": "HIGH",
-  "why": "Stigma's effect on care-seeking is a frequently tested disparity mechanism"
+  "yield": "ULTRA_HIGH",
+  "why": "Stigma deterring care-seeking is tested on essentially every exam"
  },
  {
   "front": "How does structural competency go beyond cultural competency in addressing disparities?",
   "fp": "e2dc8b804604",
   "yield": "MEDIUM",
-  "why": "Structural competency is a useful frame but secondary vocabulary"
+  "why": "Structural competency is secondary vocabulary; skippable"
  },
  {
   "front": "In life-course models, contrast a critical-period effect with an accumulation effect.",
   "fp": "80974b77fdb4",
   "yield": "MEDIUM",
-  "why": "Critical-period vs accumulation is supporting detail on the life-course model"
+  "why": "Critical-period vs accumulation is supporting life-course detail"
  },
  {
   "front": "In Parsons's {{c1::sick role}}, the ill are exempted from normal obligations and not blamed, but must want recovery and seek competent help.",
   "fp": "48a0f94ae735",
-  "yield": "MEDIUM",
-  "why": "Parsons' sick role is heavily tested but sits in 9A, not disparities"
+  "yield": "ULTRA_HIGH",
+  "why": "Parsons' sick role rights/obligations are tested every year"
  },
  {
   "front": "Institutional discrimination operates through:",
   "fp": "26d925fa0a52",
-  "yield": "HIGH",
+  "yield": "ULTRA_HIGH",
   "why": "Institutional discrimination is the named AAMC concept behind systemic disparities"
  },
  {
   "front": "Limited {{c1::health literacy}} — difficulty obtaining and using health information — impairs navigation and adherence, concentrating in low-SES groups.",
   "fp": "3a96b33ce852",
   "yield": "HIGH",
-  "why": "Health literacy is a named access barrier tied to SES"
+  "why": "Health literacy is a named SES-linked access barrier; commonly tested"
  },
  {
   "front": "Medicalization can worsen inequality by:",
@@ -231,13 +231,13 @@
   "front": "Meyer's {{c1::minority stress}} model explains sexual and gender minority health gaps via stigma, concealment, and {{c2::internalized}} stigma.",
   "fp": "8e1f4921cfd7",
   "yield": "MEDIUM",
-  "why": "Minority stress model explains SGM disparities; named but passage-plausible"
+  "why": "Minority stress model is named but passages supply it"
  },
  {
   "front": "Name the constructs of the Health Belief Model that predict whether a patient takes a preventive action.",
   "fp": "2822f831b2ba",
-  "yield": "MEDIUM",
-  "why": "Health Belief Model constructs appear in health-behavior passages"
+  "yield": "HIGH",
+  "why": "Health Belief Model constructs are commonly tested health-behavior content"
  },
  {
   "front": "Physicians shown identical actor-patients describing chest pain referred Black women for catheterization less often. What does this design establish?",
@@ -249,13 +249,13 @@
   "front": "Social capital contributes to health by:",
   "fp": "2d43dcb412bf",
   "yield": "MEDIUM",
-  "why": "Social capital is tested under social class; health link is secondary"
+  "why": "Social capital's health link is a second step; concept carded under class"
  },
  {
   "front": "Stages of change: precontemplation, {{c1::contemplation}}, preparation, action, {{c2::maintenance}}, with relapse expected rather than a failure.",
   "fp": "6455d49b87e0",
-  "yield": "MEDIUM",
-  "why": "Stages of change is common health-behavior passage material"
+  "yield": "HIGH",
+  "why": "Stages of change (transtheoretical model) is commonly tested"
  },
  {
   "front": "The {{c1::life-course}} perspective: health reflects accumulating exposures from gestation onward, with sensitive periods and chains of risk.",
@@ -266,32 +266,32 @@
  {
   "front": "The {{c1::SES gradient}} in health: outcomes improve at every step up the socioeconomic ladder, not merely above a poverty threshold.",
   "fp": "219e12b86714",
-  "yield": "HIGH",
-  "why": "The SES gradient (not just poverty threshold) is the section's central relationship"
+  "yield": "ULTRA_HIGH",
+  "why": "The SES gradient is the section's central relationship, tested every year"
  },
  {
   "front": "The {{c1::weathering}} hypothesis: chronic stress from racism accelerates physiological aging among Black Americans, worsening outcomes at earlier ages.",
   "fp": "3d60201e6bc6",
   "yield": "MEDIUM",
-  "why": "Weathering hypothesis: named but frequently supplied in race-disparity passages"
+  "why": "Weathering hypothesis is named but usually supplied in passages"
  },
  {
   "front": "The Hispanic paradox refers to:",
   "fp": "32e85f5f83b7",
   "yield": "MEDIUM",
-  "why": "Hispanic paradox is a second-tier disparity example seen in prep and passages"
+  "why": "Hispanic paradox is a second-tier disparity example"
  },
  {
   "front": "What are the main mechanisms linking low SES to poor health?",
   "fp": "3ff4b4859944",
-  "yield": "HIGH",
-  "why": "Mechanisms linking SES to health outcomes are the core of 10A"
+  "yield": "ULTRA_HIGH",
+  "why": "Mechanisms linking low SES to poor health are the core of 10A, tested yearly"
  },
  {
   "front": "What are the major criticisms of Parsons's sick role?",
   "fp": "f63018f93cb8",
-  "yield": "MEDIUM",
-  "why": "Sick-role criticism (chronic illness) is a common test point, though 9A"
+  "yield": "HIGH",
+  "why": "Sick-role criticism (chronic illness) is a common test point"
  },
  {
   "front": "What characterizes the rural mortality penalty in the US?",
@@ -320,8 +320,8 @@
  {
   "front": "What explains the roughly twofold Black-white infant mortality gap in the US?",
   "fp": "23ea58ef139b",
-  "yield": "MEDIUM",
-  "why": "Infant mortality gap is the classic race-disparity example with structural reasoning"
+  "yield": "HIGH",
+  "why": "Black-white infant mortality gap is the classic race-disparity example"
  },
  {
   "front": "What forces drive medicalization?",
@@ -333,7 +333,7 @@
   "front": "What happens to care quality when patients with limited English proficiency do not receive a professional interpreter?",
   "fp": "ada15fd5e302",
   "yield": "MEDIUM",
-  "why": "LEP interpreter outcomes are supporting detail on language access barriers"
+  "why": "LEP interpreter outcomes are supporting detail on language barriers"
  },
  {
   "front": "What is medicalization?",
@@ -350,8 +350,8 @@
  {
   "front": "What is the epidemiological transition?",
   "fp": "4ee76df94f24",
-  "yield": "MEDIUM",
-  "why": "Epidemiological transition pairs with demographic transition; plausible stem"
+  "yield": "HIGH",
+  "why": "Epidemiological transition pairs with demographic transition; commonly tested"
  },
  {
   "front": "What is the inverse care law?",
@@ -368,13 +368,13 @@
  {
   "front": "Which study design suits a rare disease, and which one lets you compute incidence?",
   "fp": "6c5dd47ad762",
-  "yield": "MEDIUM",
-  "why": "Study-design basics are research-methods content; useful epi second step"
+  "yield": "HIGH",
+  "why": "Case-control vs cohort design basics are commonly tested"
  },
  {
   "front": "Why can improved medical technology sometimes WIDEN disparities?",
   "fp": "08a63ba70279",
-  "yield": "MEDIUM",
+  "yield": "HIGH",
   "why": "Technology widening disparities is a direct fundamental-cause prediction"
  },
  {

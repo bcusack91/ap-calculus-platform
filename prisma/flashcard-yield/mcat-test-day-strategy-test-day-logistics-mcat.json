@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How are breaks structured?",
+  "fp": "d8b1cd8a4da2",
+  "yield": "LOW",
+  "why": "Break-structure logistics"
+ },
+ {
+  "front": "How far in advance should you register?",
+  "fp": "753060ff2664",
+  "yield": "LOW",
+  "why": "Registration scheduling logistics"
+ },
+ {
+  "front": "What happens if you void your exam?",
+  "fp": "35c45db9d0af",
+  "yield": "LOW",
+  "why": "Score-void policy logistics"
+ },
+ {
+  "front": "What materials are provided at the test center?",
+  "fp": "9001c10cc1ce",
+  "yield": "LOW",
+  "why": "Test-center materials logistics"
+ },
+ {
+  "front": "What should you bring on test day?",
+  "fp": "3c6281e24737",
+  "yield": "LOW",
+  "why": "What-to-bring logistics"
+ },
+ {
+  "front": "What should you eat before and during the exam?",
+  "fp": "5d2713ba74c4",
+  "yield": "LOW",
+  "why": "Food advice logistics"
+ },
+ {
+  "front": "When are scores released?",
+  "fp": "6c640812e8bc",
+  "yield": "LOW",
+  "why": "Score-release timing logistics"
+ },
+ {
+  "front": "Why should you visit the test center in advance if possible?",
+  "fp": "631ffc93c62b",
+  "yield": "LOW",
+  "why": "Test-center visit logistics"
+ }
+]

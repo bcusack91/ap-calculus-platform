@@ -3,25 +3,25 @@
   "front": "{{c1::Cerebellar}} damage produces ataxia, intention tremor, and dysmetria; {{c2::basal ganglia}} dysfunction produces bradykinesia, resting tremor, or chorea.",
   "fp": "1be352ba357b",
   "yield": "HIGH",
-  "why": "Cerebellar vs basal ganglia signs: high-frequency distinction"
+  "why": "Cerebellar vs basal ganglia signs: commonly tested motor-system distinction"
  },
  {
   "front": "{{c1::Ionotropic}} receptors are ligand-gated channels giving fast, brief responses; {{c2::metabotropic}} receptors act via G proteins, slower and longer.",
   "fp": "b2bd94310264",
-  "yield": "MEDIUM",
-  "why": "Ionotropic vs metabotropic: supporting receptor detail"
+  "yield": "HIGH",
+  "why": "Ionotropic fast vs metabotropic slow receptor classes: standard receptor question"
  },
  {
   "front": "{{c1::Oligodendrocytes}} myelinate many CNS axons apiece; {{c2::Schwann cells}} each myelinate a single segment of one PNS axon.",
   "fp": "72e113d212d5",
-  "yield": "HIGH",
-  "why": "Oligodendrocyte vs Schwann cell: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Oligodendrocyte vs Schwann cell: myelin producers asked nearly every year"
  },
  {
   "front": "{{c1::Synaptic pruning}} removes underused connections into adolescence; adult {{c2::neurogenesis}} in humans is largely confined to the dentate gyrus.",
   "fp": "aacb8b08a366",
   "yield": "MEDIUM",
-  "why": "Pruning and adult neurogenesis: development context"
+  "why": "Pruning and adult neurogenesis: development context, rarely scored"
  },
  {
   "front": "A {{c1::partial agonist}} binds but gives a submaximal response and blunts a full agonist; an {{c2::inverse agonist}} drives activity below baseline.",
@@ -32,8 +32,8 @@
  {
   "front": "A split-brain patient shown an object only in the left visual field cannot {{c1::name}} it, yet the left hand can pick it out by touch.",
   "fp": "48555e508527",
-  "yield": "HIGH",
-  "why": "Split-brain left-field naming failure: classic tested"
+  "yield": "ULTRA_HIGH",
+  "why": "Split-brain left-field naming failure: classic tested every administration"
  },
  {
   "front": "ADH is made mainly in the {{c1::supraoptic}} nucleus and oxytocin mainly in the {{c2::paraventricular}} nucleus; both are stored in the posterior pituitary.",
@@ -44,8 +44,8 @@
  {
   "front": "After bilateral hippocampal damage (patient H.M.), which memory systems fail and which survive?",
   "fp": "6541e2bb5e9c",
-  "yield": "HIGH",
-  "why": "H.M. memory dissociation: classic"
+  "yield": "ULTRA_HIGH",
+  "why": "H.M. anterograde amnesia with spared procedural memory: classic every-year case"
  },
  {
   "front": "Bilateral amygdala destruction produces {{c1::Klüver-Bucy}} syndrome: tameness, hyperorality, and hypersexuality.",
@@ -56,38 +56,38 @@
  {
   "front": "Contrast glutamate, GABA, and glycine.",
   "fp": "05228c80e92f",
-  "yield": "HIGH",
-  "why": "Glutamate/GABA/glycine: core neurotransmitters"
+  "yield": "ULTRA_HIGH",
+  "why": "Glutamate excitatory, GABA/glycine inhibitory: foundational neurotransmitter facts"
  },
  {
   "front": "Contrast the sympathetic and parasympathetic divisions.",
   "fp": "53b8374dc796",
-  "yield": "HIGH",
-  "why": "Sympathetic vs parasympathetic: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Sympathetic vs parasympathetic: foundational, tested every year"
  },
  {
   "front": "CT vs MRI for brain imaging: when is each preferred and why?",
   "fp": "f54137d3cff9",
   "yield": "MEDIUM",
-  "why": "CT vs MRI: research-methods context"
+  "why": "CT vs MRI trade-offs: methods context beyond fMRI/EEG/PET"
  },
  {
   "front": "Damage to the {{c1::fusiform}} gyrus causes prosopagnosia: inability to recognize faces despite otherwise intact vision.",
   "fp": "fb346d5c2996",
-  "yield": "MEDIUM",
-  "why": "Prosopagnosia/fusiform: second-tier lesion example"
+  "yield": "HIGH",
+  "why": "Prosopagnosia/fusiform: common lesion-localization discrete"
  },
  {
   "front": "Damage to the arcuate fasciculus produces which language deficit?",
   "fp": "f7e17bdec80f",
-  "yield": "MEDIUM",
-  "why": "Conduction aphasia: secondary to Broca/Wernicke"
+  "yield": "HIGH",
+  "why": "Conduction aphasia completes the Broca/Wernicke/arcuate triad"
  },
  {
   "front": "Describe synaptic transmission at a chemical synapse.",
   "fp": "bbe37f4aea60",
-  "yield": "HIGH",
-  "why": "Chemical synaptic transmission steps: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Ca2+-triggered vesicle release at chemical synapse: foundational mechanism"
  },
  {
   "front": "Describe the normal diurnal cortisol rhythm and what a flattened rhythm suggests.",
@@ -99,49 +99,49 @@
   "front": "Distinguish temporal from spatial summation, and state where the decision to fire an action potential is made.",
   "fp": "06aee1c7ee7b",
   "yield": "HIGH",
-  "why": "Temporal vs spatial summation, axon hillock: core"
+  "why": "Temporal vs spatial summation, axon hillock: commonly tested integration step"
  },
  {
   "front": "Dopamine pathways: nigrostriatal degeneration causes {{c1::Parkinsonian}} motor signs; tuberoinfundibular blockade causes {{c2::hyperprolactinemia}}.",
   "fp": "2d50170d0122",
   "yield": "MEDIUM",
-  "why": "Nigrostriatal vs tuberoinfundibular: pathway detail"
+  "why": "Nigrostriatal vs tuberoinfundibular: pathway detail beyond dopamine-Parkinson link"
  },
  {
   "front": "fMRI infers neural activity from the {{c1::BOLD}} signal: the shifting ratio of oxygenated to deoxygenated hemoglobin in active regions.",
   "fp": "4508b0ab80a9",
-  "yield": "HIGH",
-  "why": "fMRI BOLD signal: tested method"
+  "yield": "ULTRA_HIGH",
+  "why": "fMRI BOLD signal: brain-imaging method asked on essentially every exam"
  },
  {
   "front": "For millisecond-scale temporal resolution of cortical activity, choose {{c1::EEG}}; its weakness is spatial localization.",
   "fp": "cd0192285cd1",
   "yield": "HIGH",
-  "why": "EEG temporal vs spatial resolution: tested method trade-off"
+  "why": "EEG temporal vs spatial resolution: standard methods trade-off"
  },
  {
   "front": "Heritability is the share of {{c1::variance within a population}} due to genetic differences; it says nothing about an {{c2::individual}} or group gaps.",
   "fp": "2bb3b4d7c9a3",
-  "yield": "HIGH",
-  "why": "Heritability as population variance: core genetics-of-behavior"
+  "yield": "ULTRA_HIGH",
+  "why": "Heritability as population variance, not individual: classic every-year reasoning"
  },
  {
   "front": "How are graded potentials different from action potentials?",
   "fp": "1562aeae0bd1",
-  "yield": "HIGH",
-  "why": "Graded vs action potentials: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Graded vs action potentials: foundational neuron physiology"
  },
  {
   "front": "How do GABA and glutamate map onto anxiety and learning, respectively?",
   "fp": "e4b551d82e38",
   "yield": "MEDIUM",
-  "why": "GABA/anxiolytics and glutamate/LTP: supporting"
+  "why": "GABA/anxiolytics and glutamate/LTP: supporting elaboration of transmitter roles"
  },
  {
   "front": "How does myelination speed conduction?",
   "fp": "b869c9fdf973",
-  "yield": "HIGH",
-  "why": "Saltatory conduction: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Saltatory conduction via myelin and nodes of Ranvier: foundational"
  },
  {
   "front": "How does the arcuate nucleus translate leptin levels into feeding behavior?",
@@ -152,38 +152,38 @@
  {
   "front": "How is signaling terminated for acetylcholine versus serotonin, and which drug class targets each mechanism?",
   "fp": "3a9e63b489d9",
-  "yield": "MEDIUM",
-  "why": "ACh degradation vs serotonin reuptake and drug classes: supporting"
+  "yield": "HIGH",
+  "why": "AChE degradation vs serotonin reuptake and SSRIs: commonly tested termination"
  },
  {
   "front": "HPA axis: hypothalamic {{c1::CRH}} drives pituitary {{c2::ACTH}}, which drives adrenal cortisol, with feedback on both upper levels.",
   "fp": "75804f804002",
-  "yield": "HIGH",
-  "why": "HPA axis CRH-ACTH-cortisol: core"
+  "yield": "ULTRA_HIGH",
+  "why": "HPA axis CRH-ACTH-cortisol with negative feedback: tested every year"
  },
  {
   "front": "In about 95 percent of right-handers, the {{c1::left}} hemisphere dominates language, logic, and calculation.",
   "fp": "e75011f21767",
   "yield": "HIGH",
-  "why": "Left-hemisphere language dominance: core lateralization"
+  "why": "Left-hemisphere language dominance: standard lateralization fact"
  },
  {
   "front": "Lesioning the {{c1::lateral}} hypothalamus abolishes hunger, while lesioning the {{c2::ventromedial}} nucleus causes hyperphagia and obesity.",
   "fp": "923418f81a4d",
-  "yield": "HIGH",
-  "why": "Lateral vs ventromedial hypothalamus: classic"
+  "yield": "ULTRA_HIGH",
+  "why": "Lateral hunger vs ventromedial satiety: classic hypothalamic lesion discrete"
  },
  {
   "front": "Match the function to the glial cell: immune surveillance and phagocytosis; blood-brain barrier support and potassium buffering; cerebrospinal fluid production.",
   "fp": "f9d6e1deff11",
   "yield": "HIGH",
-  "why": "Glial cell functions: core"
+  "why": "Microglia/astrocyte/ependymal functions: commonly tested glia"
  },
  {
   "front": "Name the core limbic structures and the loop that links them for memory and emotion.",
   "fp": "3d089f3ccda5",
   "yield": "MEDIUM",
-  "why": "Limbic structures list; Papez circuit is detail"
+  "why": "Limbic structure list; Papez circuit is detail"
  },
  {
   "front": "Name the tetrad of Gerstmann syndrome and its lesion site.",
@@ -201,19 +201,19 @@
   "front": "Norepinephrine acts as a neurotransmitter at sympathetic synapses, but epinephrine from the adrenal {{c1::medulla}} acts as a {{c2::hormone}}.",
   "fp": "75ce15c2fadd",
   "yield": "HIGH",
-  "why": "NE as transmitter vs epinephrine as hormone from adrenal medulla: core"
+  "why": "NE as transmitter vs epinephrine as adrenal hormone: commonly tested"
  },
  {
   "front": "Placebo analgesia is blocked by naloxone. What does that single result establish?",
   "fp": "e4d94fae01dc",
   "yield": "MEDIUM",
-  "why": "Naloxone-blocked placebo analgesia: endorphin reasoning"
+  "why": "Naloxone-blocked placebo analgesia: endorphin reasoning step"
  },
  {
   "front": "Schizophrenia concordance is about 48 percent in identical twins and 17 percent in fraternal twins. What does the gap show, and what does the shortfall show?",
   "fp": "c073d5629c89",
-  "yield": "HIGH",
-  "why": "Twin concordance interpretation: core genetics reasoning"
+  "yield": "ULTRA_HIGH",
+  "why": "MZ vs DZ concordance interpretation: twin-study reasoning tested every year"
  },
  {
   "front": "Summarize oxytocin's behavioral effects and their key limitation.",
@@ -231,25 +231,25 @@
   "front": "The {{c1::locus coeruleus}} in the pons supplies most of the brain's norepinephrine, governing arousal, vigilance, and stress responses.",
   "fp": "c232569805ab",
   "yield": "MEDIUM",
-  "why": "Locus coeruleus NE source: secondary"
+  "why": "Locus coeruleus as NE source: secondary anatomy"
  },
  {
   "front": "The {{c1::suprachiasmatic}} nucleus is the master circadian clock, entrained by melanopsin ganglion cells via the retinohypothalamic tract.",
   "fp": "68fec705f233",
   "yield": "HIGH",
-  "why": "SCN as master clock: tested"
+  "why": "SCN master clock and melatonin: commonly tested"
  },
  {
   "front": "The {{c1::thalamus}} relays and gates nearly all sensory input to cortex; the {{c2::hypothalamus}} governs homeostasis, autonomic output, and the pituitary.",
   "fp": "18b2f090486e",
-  "yield": "HIGH",
-  "why": "Thalamus vs hypothalamus roles: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Thalamus sensory relay vs hypothalamus homeostasis: foundational"
  },
  {
   "front": "The mesolimbic dopamine pathway projects from the {{c1::VTA}} to the {{c2::nucleus accumbens}}, mediating reward and drug reinforcement.",
   "fp": "de5484e230e7",
-  "yield": "HIGH",
-  "why": "Mesolimbic VTA to nucleus accumbens reward: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Mesolimbic VTA-to-accumbens reward pathway: tested every year"
  },
  {
   "front": "The right-hemisphere analog of aphasia is {{c1::aprosodia}}: impaired production or comprehension of emotional intonation in speech.",
@@ -267,37 +267,37 @@
   "front": "Trace the monosynaptic stretch reflex and explain why it does not require the brain.",
   "fp": "f5526d45e1db",
   "yield": "HIGH",
-  "why": "Monosynaptic stretch reflex: core"
+  "why": "Monosynaptic stretch reflex: commonly tested reflex arc"
  },
  {
   "front": "Walk through the phases of an action potential.",
   "fp": "bef65c91ed3e",
-  "yield": "HIGH",
-  "why": "Action potential phases: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Action potential phases: foundational, tested every year"
  },
  {
   "front": "What are the functions of the major brain lobes?",
   "fp": "e14b9006ec58",
-  "yield": "HIGH",
-  "why": "Brain lobe functions: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Lobe functions: foundational neuroanatomy"
  },
  {
   "front": "What are the roles of dopamine and serotonin?",
   "fp": "0e0571041618",
-  "yield": "HIGH",
-  "why": "Dopamine and serotonin roles: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Dopamine and serotonin roles with Parkinson/schizophrenia/SSRI links: every year"
  },
  {
   "front": "What are the roles of epinephrine/norepinephrine and endorphins?",
   "fp": "945bbbb3c356",
   "yield": "HIGH",
-  "why": "NE/epinephrine and endorphins: core"
+  "why": "NE/epinephrine and endorphins: commonly tested transmitter roles"
  },
  {
   "front": "What are the roles of the limbic system structures?",
   "fp": "78bcfe164726",
-  "yield": "HIGH",
-  "why": "Limbic structure roles: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Amygdala/hippocampus/hypothalamus roles: foundational limbic facts"
  },
  {
   "front": "What did Olds and Milner's intracranial self-stimulation experiments demonstrate?",
@@ -308,14 +308,14 @@
  {
   "front": "What do the hindbrain and midbrain structures do?",
   "fp": "ddbf6fbe9ece",
-  "yield": "HIGH",
-  "why": "Hindbrain/midbrain functions: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Medulla/pons/cerebellum/midbrain functions: foundational"
  },
  {
   "front": "What does \"all-or-none\" and the refractory period mean for action potentials?",
   "fp": "2b89582cb409",
   "yield": "HIGH",
-  "why": "All-or-none and refractory periods: core"
+  "why": "All-or-none and refractory periods: commonly tested"
  },
  {
   "front": "What does human research actually show about testosterone and aggression?",
@@ -326,8 +326,8 @@
  {
   "front": "What does PET measure, and what can it do that fMRI cannot?",
   "fp": "5a3718415c8b",
-  "yield": "MEDIUM",
-  "why": "PET capabilities: methods detail"
+  "yield": "HIGH",
+  "why": "PET radiotracer/receptor imaging vs fMRI: standard methods comparison"
  },
  {
   "front": "What functionally separates primary cortex from association cortex?",
@@ -338,20 +338,20 @@
  {
   "front": "What is acetylcholine's function?",
   "fp": "9ecbdc640f4e",
-  "yield": "HIGH",
-  "why": "Acetylcholine functions: core"
+  "yield": "ULTRA_HIGH",
+  "why": "ACh at NMJ and parasympathetic, AChE: foundational"
  },
  {
   "front": "What maintains the resting membrane potential (~ −70 mV)?",
   "fp": "75aef2c941ca",
-  "yield": "HIGH",
-  "why": "Resting membrane potential mechanism: core"
+  "yield": "ULTRA_HIGH",
+  "why": "Na+/K+ ATPase and K+ leak set resting potential: foundational"
  },
  {
   "front": "Where do serotonergic neurons originate, and which behaviors do they modulate?",
   "fp": "d6efce05c0de",
   "yield": "MEDIUM",
-  "why": "Raphe nuclei serotonin source: secondary"
+  "why": "Raphe nuclei as serotonin source: secondary anatomy"
  },
  {
   "front": "Which cholinergic nucleus degenerates in Alzheimer disease, and what functions decline with it?",
@@ -363,7 +363,7 @@
   "front": "Which functions localize to prefrontal association cortex, and what did the Phineas Gage case reveal?",
   "fp": "7bed99236293",
   "yield": "HIGH",
-  "why": "Prefrontal function and Phineas Gage: classic"
+  "why": "Prefrontal executive function and Phineas Gage: classic"
  },
  {
   "front": "Which hypothalamic area organizes sexual behavior and GnRH release, and what is notable about its anatomy?",
@@ -381,13 +381,13 @@
   "front": "Which method shows a brain region is necessary for a behavior, which shows it is sufficient, and which shows only correlation?",
   "fp": "ba2ef82385ad",
   "yield": "HIGH",
-  "why": "Necessity/sufficiency/correlation methods: core research reasoning"
+  "why": "Lesion=necessity, stimulation=sufficiency, imaging=correlation: core methods reasoning"
  },
  {
   "front": "Why can a small brainstem lesion produce coma when far larger cortical lesions may not?",
   "fp": "0a966eb083ab",
-  "yield": "MEDIUM",
-  "why": "Reticular activating system and coma: supporting"
+  "yield": "HIGH",
+  "why": "Reticular activating system and arousal: commonly tested"
  },
  {
   "front": "Why do split-brain patients name right-visual-field objects normally, and why was the callosum cut at all?",
@@ -399,7 +399,7 @@
   "front": "Why does an adoption study supply information a twin study alone cannot?",
   "fp": "c9903c595974",
   "yield": "HIGH",
-  "why": "Adoption study logic: core genetics-of-behavior"
+  "why": "Adoption study separates genes from rearing: core genetics-of-behavior logic"
  },
  {
   "front": "Why is levodopa given for Parkinson disease rather than dopamine itself, and why is carbidopa added?",
