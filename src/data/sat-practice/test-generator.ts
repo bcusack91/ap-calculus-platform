@@ -324,21 +324,31 @@ async function drawDomain(
  * A passage's questions in authored order, each with a stable id. The whole
  * passage counts toward one domain (from its first question), so a passage
  * mixing skills still stays in one consecutive block within its domain group.
+ *
+ * OPTIONS are shuffled, though: the authored bank keys 52 of 62 items at B, and
+ * the full-test renderer shows options as given, so "always pick B" scored ~60%
+ * on passage items. The shuffle is seeded by the question's own id, so a form
+ * stays fixed (same order for every student, every time) — which a teacher
+ * reviewing "question 12, choice C" with the class depends on.
  */
 function passageQuestions(p: ReadingPassage): SATTestQuestion[] {
   const domain = passageSkillDomain(p.questions[0]?.skill ?? '')
-  return p.questions.map((q, i) => ({
-    id: `sat-passage-${p.id}-q${i}`,
-    question: q.question,
-    options: q.options,
-    correctIndex: q.correctAnswer,
-    explanation: q.explanation,
-    category: `passage-${p.genre}`,
-    section: 'reading-writing' as const,
-    sourceSlug: `passage-${p.genre}`,
-    domain,
-    passage: { id: p.id, title: p.title, genre: p.genre, text: p.text },
-  }))
+  return p.questions.map((q, i) => {
+    const id = `sat-passage-${p.id}-q${i}`
+    const order = shuffle(q.options.map((_, k) => k), mulberry32(hashString(`options-${id}`)))
+    return {
+      id,
+      question: q.question,
+      options: order.map((k) => q.options[k]),
+      correctIndex: order.indexOf(q.correctAnswer),
+      explanation: q.explanation,
+      category: `passage-${p.genre}`,
+      section: 'reading-writing' as const,
+      sourceSlug: `passage-${p.genre}`,
+      domain,
+      passage: { id: p.id, title: p.title, genre: p.genre, text: p.text },
+    }
+  })
 }
 
 /** Whole passages up to `maxQuestions`: this form's passages first, then others. */

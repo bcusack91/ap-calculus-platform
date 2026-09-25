@@ -96,4 +96,16 @@ describe('SAT full-length practice tests', { timeout: 120_000 }, () => {
       if (rebuilt.section === 'reading-writing') expect(passageSetsConsecutive(rebuilt.questions)).toBe(true)
     }
   })
+  it('does not leak answer position on passage items, and keeps the option order fixed per form', async () => {
+    // The authored passage bank keys 52 of 62 items at B and the full-test
+    // renderer shows options as given, so "always pick B" scored ~60% on
+    // passage items until they were shuffled (seeded per question id).
+    const passageItems = forms.flatMap((t) => t.sections.flatMap((s) => s.questions.filter((q) => q.id.startsWith('sat-passage-'))))
+    expect(passageItems.length).toBeGreaterThan(20)
+    const atB = passageItems.filter((q) => q.correctIndex === 1).length / passageItems.length
+    expect(atB).toBeLessThan(0.4)
+    const again = await generateFullTest(1)
+    const opts = (t: SATFullTest) => t.sections.flatMap((s) => s.questions.filter((q) => q.id.startsWith('sat-passage-')).map((q) => `${q.options.join('|')}#${q.correctIndex}`))
+    expect(opts(again)).toEqual(opts(forms[0]))
+  })
 })
