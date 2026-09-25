@@ -153,3 +153,21 @@ describe('nested emphasis', () => {
     expect(out).toContain('<td><strong>2019 <em>1619 Project</em> (Hannah-Jones)</strong></td>')
   })
 })
+
+describe('escaped dollars', () => {
+  const text = (html: string) => html.replace(/<annotation[^>]*>.*?<\/annotation>/g, '').replace(/<[^>]+>/g, '')
+
+  it('never opens a math span at an escaped \\$ in prose', () => {
+    // Found by the SAT audit (2026-09-25): the inline regex could START at the
+    // `$` of `\$`, so the whole sentence between two prices was typeset.
+    const html = renderRichText('A gym charges a fee of \\$25 plus \\$15 for each month.')
+    expect(html).not.toContain('katex')
+    expect(text(html)).toBe('A gym charges a fee of $25 plus $15 for each month.')
+  })
+
+  it('still renders an escaped dollar inside a real math span', () => {
+    const html = renderRichText('Tickets cost $\\$20$ each, or $3x + 2$ in total.')
+    expect(text(html)).not.toContain('\\')
+    expect(text(html)).toContain('each, or')
+  })
+})

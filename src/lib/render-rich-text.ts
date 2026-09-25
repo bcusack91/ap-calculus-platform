@@ -228,12 +228,15 @@ function renderPipeline(text: string, emphasis: boolean): string {
   result = result.replace(/\n/g, '<br>')
 
   // Step 4: Render LaTeX
-  result = result.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (match, latex) => {
+  // An escaped `\$` is currency, never an opening delimiter: without the
+  // lookbehind, "fee of \$25 plus \$15 a month" opened a math span at the first
+  // `\$` and typeset the whole sentence as KaTeX.
+  result = result.replace(/(?<!\\)\$\$((?:[^$\\]|\\.)+)\$\$/g, (match, latex) => {
     if (EMPHASIS_TAG.test(latex)) return match
     try { return renderKatexSync(latex.trim(), { displayMode: true }) }
     catch { return latex }
   })
-  result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (match, latex) => {
+  result = result.replace(/(?<!\\)\$((?:[^$\\]|\\.)+)\$/g, (match, latex) => {
     // Leave currency/prose ("$2 and a notebook costs $5") literal — not math.
     if (looksLikeCurrencyProse(latex)) return match
     // A span that swallowed an emphasis tag is a bare currency `$` pairing with

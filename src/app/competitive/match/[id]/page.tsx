@@ -17,6 +17,7 @@ import AvatarDisplay from '@/components/AvatarDisplay';
 import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
+import { splitInlineMath } from '@/lib/inline-math-parts';
 import { POWER_UPS, activeEffects, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
 import {
   PowerUpBar,
@@ -447,18 +448,17 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     // Handle $...$ and $$...$$ delimited LaTeX in mixed text
     if (text.includes('$')) {
       try {
-        const parts = text.split(/(\$\$[^$]+\$\$|\$[^$]+\$)/);
+        // The shared splitter honors the `\$` currency escape on both sides
+        // (a literal $ in prose, KaTeX's \$ inside math). A bare split on `$`
+        // turned "$\$20$ sign-up fee plus $\$5$" into a KaTeX error, a stray
+        // "20" and a sentence typeset as math.
+        const parts = splitInlineMath(text);
         const rendered = parts.map((part, i) => {
-          if (part.startsWith('$$') && part.endsWith('$$')) {
-            const latex = part.slice(2, -2);
-            const html = renderKatexSync(latex, { throwOnError: false, displayMode: true });
-            return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
-          } else if (part.startsWith('$') && part.endsWith('$')) {
-            const latex = part.slice(1, -1);
-            const html = renderKatexSync(latex, { throwOnError: false, displayMode: false });
+          if (part.type === 'latex') {
+            const html = renderKatexSync(part.content, { throwOnError: false, displayMode: part.display });
             return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
           }
-          return <span key={i}>{part}</span>;
+          return <span key={i}>{part.content}</span>;
         });
         // Plain inline flow (NOT inline-flex): flex items wrap as whole units, so a
         // long text segment after an inline $number$ would drop to the next line en
