@@ -30,7 +30,7 @@ const MATH_SLUGS = [
   'sat-geometry-trigonometry',
   'sat-geometry-basics',
   'sat-circles',
-  'sat-complex-numbers',
+  // Complex numbers are not on the digital SAT, so they never rotate in.
 ]
 
 const RW_SLUGS = [
@@ -83,7 +83,7 @@ export const DOMAIN_TO_DAILY_SLUGS: Record<string, { section: 'math' | 'reading-
   'advanced-math': { section: 'math', slugs: ['sat-quadratic-equations', 'sat-polynomials-factoring', 'sat-polynomial-rational-expressions', 'sat-nonlinear-equations-functions'] },
   functions: { section: 'math', slugs: ['sat-functions', 'sat-exponents-radicals', 'sat-exponential-functions'] },
   'problem-solving': { section: 'math', slugs: ['sat-statistics-data-interpretation', 'sat-data-statistics', 'sat-scatterplots-line-fit', 'sat-probability-two-way-tables', 'sat-ratios-proportions-percents'] },
-  geometry: { section: 'math', slugs: ['sat-geometry-trigonometry', 'sat-geometry-basics', 'sat-circles', 'sat-complex-numbers'] },
+  geometry: { section: 'math', slugs: ['sat-geometry-trigonometry', 'sat-geometry-basics', 'sat-circles'] },
 }
 
 /**

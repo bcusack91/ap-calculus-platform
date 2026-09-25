@@ -194,7 +194,8 @@ export const SAT_POOL_SECTIONS: SatSection[] = [
           sub('quadratic-graphs', 'Quadratic Graphs & Vertex Form', 'Quadratic Graphs', 'Nonlinear functions'),
           sub('exponential-functions', 'Exponential Functions & Growth/Decay', 'Exponentials', 'Nonlinear functions'),
           sub('polynomial-rational', 'Polynomials & Rational Expressions', 'Polynomials & Rationals', 'Equivalent expressions'),
-          sub('radicals-absolute-complex', 'Radicals, Absolute Value & Complex Numbers', 'Radicals & Complex', 'Nonlinear equations in one variable and systems of equations in two variables'),
+          // Slug kept (saved matches reference it); complex numbers left the pool 2026-09-25.
+          sub('radicals-absolute-complex', 'Radicals & Absolute Value', 'Radicals & Abs. Value', 'Nonlinear equations in one variable and systems of equations in two variables'),
           sub('function-notation-transformations', 'Function Notation, Composition & Transformations', 'Functions & Transformations', 'Nonlinear functions'),
         ],
       },

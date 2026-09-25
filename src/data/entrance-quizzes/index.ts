@@ -693,7 +693,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'sat-statistics-data-interpretation': () => import('./sat-data-statistics-sat'),
   'sat-ratios-proportions-percents': () => import('./sat-ratios-proportions-sat'),
   'sat-probability-two-way-tables': () => import('./sat-problem-solving-data-sat'),
-  'sat-scatterplots-line-fit': () => import('./sat-data-statistics-sat'),
+  'sat-scatterplots-line-fit': () => import('./sat-problem-solving-data-sat'),
   'sat-data-statistics': () => import('./sat-data-statistics-sat'),
   // Passport to Advanced Math
   'sat-quadratic-equations': () => import('./sat-quadratic-equations-sat'),
@@ -701,7 +701,10 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'sat-exponential-functions': () => import('./sat-exponential-functions-sat'),
   'sat-polynomials-factoring': () => import('./sat-polynomials-factoring-sat'),
   'sat-polynomial-rational-expressions': () => import('./sat-polynomials-factoring-sat'),
-  'sat-nonlinear-equations-functions': () => import('./sat-passport-advanced-math-sat'),
+  // An alias must use the entrance quiz of the SAME lesson bundle the topic
+  // renders (interactive-lessons/registry.ts): quiz part N credits lesson
+  // part N, so a quiz from another bundle skipped unrelated lesson parts.
+  'sat-nonlinear-equations-functions': () => import('./sat-functions-graphs-sat'),
   // Additional Topics in Math
   'sat-geometry-trigonometry': () => import('./sat-geometry-angles-sat'),
   'sat-geometry-basics': () => import('./sat-geometry-angles-sat'),
@@ -724,9 +727,10 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'sat-transitions-organization': () => import('./sat-expression-ideas-sat'),
   'sat-conciseness-redundancy': () => import('./sat-expression-ideas-sat'),
   // Test-Taking Strategies
-  'calculator-strategies': () => import('./sat-calculator-strategy-sat'),
+  // calculator-strategies and process-of-elimination render their own 5-part
+  // lessons, which no 7-part SAT entrance quiz lines up with; a test-out
+  // there skipped parts the quiz never tested, so they have no entrance quiz.
   'sat-time-management': () => import('./sat-test-day-strategy-sat'),
-  'process-of-elimination': () => import('./sat-test-day-strategy-sat'),
 }
 
 /**

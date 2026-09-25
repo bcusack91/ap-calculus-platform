@@ -1078,7 +1078,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }, [topicSlug, fallbackEntranceQuiz])
 
   // Entrance quiz completion: skip mastered parts, credit them
-  const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
+  const handleEntranceQuizComplete = useCallback((quizMasteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
+    // Only parts this LESSON has can be credited. Several entrance quizzes
+    // have 7 parts gating a 5-part lesson, and counting the overflow let a
+    // student who mastered any 5 of the 7 quiz parts (say 1-3, 6, 7) reach
+    // size === totalParts and be granted full mastery with parts 4-5 failed.
+    const masteredParts = new Set(
+      [...quizMasteredParts].filter((p) => Number.isInteger(p) && p >= 1 && p <= totalParts),
+    )
     setEntranceQuizPhase(null)
     setEntranceQuizMasteredParts(masteredParts)
 
