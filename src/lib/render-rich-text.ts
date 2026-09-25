@@ -120,7 +120,7 @@ export function plainTextPreview(text: string): string {
  * dollar signs the inline-math regex wrongly pairs — rendering the prose between
  * them as italic math and eating the $ signs. Treat a span as currency (leave it
  * literal) when it starts with a number, contains no LaTeX command, and has a
- * word after the number (a space followed by a lowercase letter). Real math
+ * word after the number (a space, then a word of two or more letters). Real math
  * (`$3x+2=11$`, `$5x$`, `$3 \text{m}$`) fails this test and still renders.
  */
 function looksLikeCurrencyProse(span: string): boolean {
@@ -135,7 +135,14 @@ function looksLikeCurrencyProse(span: string): boolean {
   // mode/median data-set questions — is genuine math and must render (that
   // shape can't come from currency pairing, whose spans stop at the comma
   // before the next amount). Real math like $3x+2=11$, $5x$, $100$ renders too.
-  return /\s[a-z]/.test(span) || (/^[\d.,\s]+$/.test(span) && /,\s*$/.test(span))
+  //
+  // "A word" means two or more letters (hyphenated words count whole). A lone
+  // letter after a space is a VARIABLE — `$4x - y$`, `$38 - x$`, `$5 + i$`,
+  // `$11, b, 18, d, 34$` — and treating it as prose printed those spans with
+  // their raw dollar signs (found by the SAT audit, 2026-09-25: ~270 math
+  // spans site-wide). Capitalised words count too ("$55. The price…").
+  const hasWord = (span.match(/\s[a-z]+(?:-[a-z]+)*/gi) ?? []).some((w) => w.trim().length >= 2)
+  return hasWord || (/^[\d.,\s]+$/.test(span) && /,\s*$/.test(span))
 }
 
 /**

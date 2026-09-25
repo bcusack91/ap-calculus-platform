@@ -171,3 +171,18 @@ describe('escaped dollars', () => {
     expect(text(html)).toContain('each, or')
   })
 })
+
+describe('currency prose vs math starting with a number', () => {
+  const text = (html: string) => html.replace(/<annotation[^>]*>.*?<\/annotation>/g, '').replace(/<[^>]+>/g, '')
+
+  it('renders a math span whose only letters are variables', () => {
+    for (const src of ['What is $4x - y$?', 'Solve for $38 - x$.', 'Simplify $7 + i$.', 'Data: $11, b, 18, d, 34$.']) {
+      expect(text(renderRichText(src))).not.toContain('$')
+    }
+  })
+
+  it('still leaves real currency prose literal', () => {
+    expect(text(renderRichText('Prices were $5 to $10 each.'))).toBe('Prices were $5 to $10 each.')
+    expect(text(renderRichText('It cost $55. The next one cost $70.'))).toBe('It cost $55. The next one cost $70.')
+  })
+})
