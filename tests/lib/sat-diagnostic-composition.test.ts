@@ -150,14 +150,15 @@ describe('analyzeDiagnosticResults with the calibrated curve', () => {
     const answers = test1.questions.map((q, i) => answerFor(q, i, true))
     const results = analyzeDiagnosticResults(test1.questions, answers, 'regular')
     expect(results.estimatedScore).toBe(1600)
-    expect(results.scoreRange).toEqual({ low: 1560, high: 1600 })
+    // ±80: the measured sd of the 36-question screen (SAT_DIAGNOSTIC_SCORE_SD).
+    expect(results.scoreRange).toEqual({ low: 1520, high: 1600 })
   })
 
   it('scores an all-wrong run at 400', () => {
     const answers = test1.questions.map((q, i) => answerFor(q, i, false))
     const results = analyzeDiagnosticResults(test1.questions, answers, 'regular')
     expect(results.estimatedScore).toBe(400)
-    expect(results.scoreRange).toEqual({ low: 400, high: 440 })
+    expect(results.scoreRange).toEqual({ low: 400, high: 480 })
   })
 
   it('grades grid-ins on the typed value, not a choice index', () => {
@@ -175,7 +176,7 @@ describe('analyzeDiagnosticResults with the calibrated curve', () => {
     const results = analyzeDiagnosticResults(test1.questions, answers, 'regular')
     expect(results.estimatedScore).toBeLessThan(1120)
     expect(results.estimatedScore).toBeGreaterThan(900)
-    expect(results.scoreRange!.high - results.scoreRange!.low).toBe(80)
+    expect(results.scoreRange!.high - results.scoreRange!.low).toBe(160)
   })
 
   it('leaves the hard and easy bands exactly as they were (Core Skills invariant)', () => {

@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { classPlanCourse, courseForCategory, scoreLabelFromResults, CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
+import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { hasExitQuiz } from '@/data/exit-quizzes'
+import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -19,10 +22,20 @@ interface Ctx { params: Promise<{ id: string }> }
  *
  * Ranking: high-priority recommendation = 2 points, medium/low = 1, summed
  * across students; per-topic names/counts returned so the teacher can
- * overrule. Homework status uses the same module-cleared rule everywhere
- * (entrance mastery, or best exit quiz >=80%); only the MCAT ties it to a
- * retake LOCK (`gated`) — for other courses it's informational.
+ * overrule. Homework status uses the same module-cleared rule as the
+ * student's own plan: an entrance-quiz test-out, a best exit quiz >=80%, or —
+ * only for topics with no exit quiz — the finished lesson. (It used to accept
+ * any finished lesson, which reaches mastery 1.0 without the quiz, so the
+ * teacher saw modules as cleared that the student's plan still listed.) Only
+ * the MCAT ties it to a retake LOCK (`gated`) — elsewhere it's informational.
+ *
+ * SAT students each study in a lane (Core Skills / standard / 700-800), so
+ * their homework comes from the same builder as their own plan (sat-plan.ts),
+ * and the class ranking groups a lane lesson under the skill it teaches.
  */
+
+/** Track-lesson slug → the base skill slug a teacher teaches to the class. */
+const baseSatSlug = (slug: string) => slug.replace(/-(core-skills|advanced)$/, '')
 
 interface RecommendedTopic { slug: string; name: string; priority: 'high' | 'medium' | 'low' }
 
@@ -124,17 +137,17 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   const [progressRows, exitRows] = await Promise.all([
     topics.length === 0 ? [] : prisma.topicProgress.findMany({
       where: { userId: { in: userIds }, topicId: { in: topics.map(t => t.id) } },
-      select: { userId: true, topicId: true, masteryLevel: true },
+      select: { userId: true, topicId: true, masteryLevel: true, masteredParts: true },
     }),
     allSlugs.length === 0 ? [] : prisma.exitQuizAttempt.findMany({
       where: { userId: { in: userIds }, topicSlug: { in: allSlugs } },
       select: { userId: true, topicSlug: true, score: true, totalQuestions: true },
     }),
   ])
-  const mastery = new Map<string, number>()
+  const progress = new Map<string, { masteryLevel: number; masteredParts: unknown }>()
   for (const r of progressRows) {
     const slug = slugById.get(r.topicId)
-    if (slug) mastery.set(`${r.userId}|${slug}`, r.masteryLevel)
+    if (slug) progress.set(`${r.userId}|${slug}`, { masteryLevel: r.masteryLevel, masteredParts: r.masteredParts })
   }
   const bestExit = new Map<string, number>()
   for (const r of exitRows) {
@@ -143,20 +156,64 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const pct = Math.round((r.score / r.totalQuestions) * 100)
     if ((bestExit.get(key) ?? -1) < pct) bestExit.set(key, pct)
   }
-  const moduleCleared = (userId: string, slug: string) =>
-    (mastery.get(`${userId}|${slug}`) ?? 0) >= 1 || (bestExit.get(`${userId}|${slug}`) ?? 0) >= REQUIRED_EXIT_PERCENT
+  const moduleCleared = (userId: string, slug: string) => {
+    const p = progress.get(`${userId}|${slug}`)
+    const masteryLevel = p?.masteryLevel ?? 0
+    return (
+      isEntranceMastery({ topicSlug: slug, masteryLevel, masteredParts: p?.masteredParts }) ||
+      (bestExit.get(`${userId}|${slug}`) ?? 0) >= REQUIRED_EXIT_PERCENT ||
+      (!hasExitQuiz(slug) && masteryLevel >= 1)
+    )
+  }
+
+  // SAT: each student's real plan (track-routed, pre-cleared topics swapped),
+  // from the same builder their own dashboard uses. Built five at a time so a
+  // class of 30 doesn't open 180 queries at once.
+  const satPlans = new Map<string, SatPlan>()
+  let satPlacements: SatPlacement[] = []
+  if (course.key === 'sat') {
+    satPlacements = await satPlacementsFor(userIds)
+    const withAttempts = attempts.map(a => a.userId)
+    for (let i = 0; i < withAttempts.length; i += 5) {
+      const chunk = withAttempts.slice(i, i + 5)
+      const built = await Promise.all(chunk.map(u => buildSatPlan(u)))
+      chunk.forEach((u, j) => satPlans.set(u, built[j]))
+    }
+  }
+  const satPlacementBy = new Map(satPlacements.map(p => [p.userId, p]))
+  const satTitle = new Map<string, string>()
+  if (course.key === 'sat') {
+    const bases = [...new Set([...satPlans.values()].flatMap(pl => pl.recommendedTopics.map(t => baseSatSlug(t.slug))))]
+    if (bases.length > 0) {
+      for (const t of await prisma.topic.findMany({ where: { slug: { in: bases } }, select: { slug: true, title: true } })) {
+        satTitle.set(t.slug, t.title)
+      }
+    }
+  }
 
   // ---- Class aggregation ----
   const agg = new Map<string, { slug: string; name: string; weighted: number; students: { name: string; priority: string; cleared: boolean }[] }>()
-  for (const [userId, recs] of recsByUser) {
-    for (const t of recs) {
-      const entry = agg.get(t.slug) ?? { slug: t.slug, name: t.name, weighted: 0, students: [] }
-      entry.weighted += t.priority === 'high' ? 2 : 1
-      entry.students.push({ name: nameOf.get(userId) ?? 'Student', priority: t.priority, cleared: moduleCleared(userId, t.slug) })
-      agg.set(t.slug, entry)
+  if (course.key === 'sat') {
+    for (const [userId, plan] of satPlans) {
+      for (const t of plan.recommendedTopics) {
+        const base = baseSatSlug(t.slug)
+        const entry = agg.get(base) ?? { slug: base, name: satTitle.get(base) ?? t.name, weighted: 0, students: [] }
+        entry.weighted += t.priority === 'high' ? 2 : 1
+        entry.students.push({ name: nameOf.get(userId) ?? 'Student', priority: t.priority, cleared: t.isSatisfied })
+        agg.set(base, entry)
+      }
+    }
+  } else {
+    for (const [userId, recs] of recsByUser) {
+      for (const t of recs) {
+        const entry = agg.get(t.slug) ?? { slug: t.slug, name: t.name, weighted: 0, students: [] }
+        entry.weighted += t.priority === 'high' ? 2 : 1
+        entry.students.push({ name: nameOf.get(userId) ?? 'Student', priority: t.priority, cleared: moduleCleared(userId, t.slug) })
+        agg.set(t.slug, entry)
+      }
     }
   }
-  const topicFound = new Set(topics.map(t => t.slug))
+  const topicFound = new Set([...topics.map(t => t.slug), ...satTitle.keys()])
   const classTopics = [...agg.values()]
     .sort((a, b) => b.weighted - a.weighted || b.students.length - a.students.length || a.name.localeCompare(b.name))
     .slice(0, 8)
@@ -170,9 +227,14 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   // ---- Per-student roster status ----
   const students = members.map(m => {
     const attempt = byUser.get(m.userId)
-    const recs = recsByUser.get(m.userId) ?? []
-    const pending = recs.filter(t => !moduleCleared(m.userId, t.slug)).length
+    const satPlan = satPlans.get(m.userId)
+    const placement = satPlacementBy.get(m.userId)
+    const recs = satPlan ? satPlan.recommendedTopics : recsByUser.get(m.userId) ?? []
+    const pending = satPlan
+      ? satPlan.recommendedTopics.filter(t => !t.isSatisfied).length
+      : recs.filter(t => !moduleCleared(m.userId, t.slug)).length
     return {
+      ...(placement ? { satLane: placement.lane, satOverride: placement.override } : {}),
       userId: m.userId,
       name: nameOf.get(m.userId) ?? 'Student',
       takenAt: attempt?.createdAt ?? null,

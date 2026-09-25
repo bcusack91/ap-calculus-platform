@@ -699,99 +699,122 @@ export default function SATDiagnosticPage() {
               </div>
             ) : null}
 
-            {/* Core Skills track: the mirror of the hard track at the other end.
-                A student near 400 gets short modules on easy-tier items instead
-                of a 36-question screen that tells them only that they missed
-                most of it. */}
-            {coreSkills?.placed && coreSkills.nextModule !== null && (
-              <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
+            {/* A diagnostic the teacher assigned: one clear way in. The module
+                cards below would otherwise sit above the standard button, and a
+                module attempt is never credited to the assignment. */}
+            {assignedId ? (
+              <div className="mb-2 rounded-xl border-2 border-blue-300 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/20">
                 <div className="mb-1 flex items-center gap-2">
-                  <span className="rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white">CORE SKILLS</span>
-                  <span className="text-xs text-emerald-700 dark:text-emerald-300">
-                    Module {coreSkills.nextModule} of {CORE_MODULE_COUNT}
-                    {coreSkills.completedModules > 0 && ` · ${coreSkills.completedModules} done`}
-                  </span>
+                  <span className="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold text-white">ASSIGNED BY YOUR TEACHER</span>
                 </div>
                 <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
-                  This module is 20 questions — 10 Reading &amp; Writing, 10 Math — covering the
-                  fundamentals every SAT question is built on. You get {CORE_MODULE_MINUTES} minutes,
-                  and the lessons it recommends are short: one core idea, one worked example, and a
-                  little practice.
+                  Your whole class takes this same diagnostic, so your teacher can see where the class
+                  stands and plan lessons around it. It is 36 questions in about 30 minutes.
                 </p>
-                {coreSkills.bestModuleScore !== null && (
-                  <div className="mb-3 rounded-lg border border-emerald-300 bg-white/70 p-3 text-sm text-emerald-900 dark:border-emerald-600/60 dark:bg-emerald-900/30 dark:text-emerald-200">
-                    Your best Core Skills score so far is <strong>{coreSkills.bestModuleScore}</strong>.
-                    {coreSkills.pointsToGraduate !== null && (
-                      <> Reach <strong>{CORE_SKILLS_GRADUATION_SCORE}</strong> — about 16 of 20 correct — and you move up to the standard lessons. That is {coreSkills.pointsToGraduate} points away.</>
-                    )}
-                  </div>
-                )}
                 <button
-                  onClick={() => { setCoreModuleNumber(coreSkills.nextModule); setHardModuleNumber(null); setPhase('testing') }}
-                  className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+                  onClick={() => { setHardModuleNumber(null); setCoreModuleNumber(null); setPhase('testing') }}
+                  className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
                 >
-                  Start Core Skills Module {coreSkills.nextModule}
+                  Start Assigned Diagnostic
                 </button>
               </div>
-            )}
-            {coreSkills?.graduated && (
-              <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 text-sm text-gray-700 dark:border-emerald-700 dark:bg-emerald-900/20 dark:text-gray-300">
-                🎉 You reached {CORE_SKILLS_GRADUATION_SCORE} on a Core Skills module, so you have moved up
-                to the standard lessons and the full diagnostic. The Core Skills modules stay available
-                any time you want to warm up on the fundamentals.
-              </div>
-            )}
-
-            {/* Hard track: once a student proves the top band, the mid-level
-                screen stops telling them anything useful. */}
-            {hardTrack?.unlocked && hardTrack.nextModule !== null && (
-              <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
-                <div className="mb-1 flex items-center gap-2">
-                  <span className="rounded-full bg-purple-600 px-2 py-0.5 text-[10px] font-bold text-white">700-800 TRACK</span>
-                  <span className="text-xs text-purple-700 dark:text-purple-300">
-                    Module {hardTrack.nextModule} of {HARD_MODULE_COUNT}
-                    {hardTrack.completedModules > 0 && ` · ${hardTrack.completedModules} done`}
-                  </span>
+            ) : (
+              <>
+              {/* Core Skills track: the mirror of the hard track at the other end.
+                  A student near 400 gets short modules on easy-tier items instead
+                  of a 36-question screen that tells them only that they missed
+                  most of it. */}
+              {coreSkills?.placed && coreSkills.nextModule !== null && (
+                <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 dark:border-emerald-700 dark:bg-emerald-900/20">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white">CORE SKILLS</span>
+                    <span className="text-xs text-emerald-700 dark:text-emerald-300">
+                      Module {coreSkills.nextModule} of {CORE_MODULE_COUNT}
+                      {coreSkills.completedModules > 0 && ` · ${coreSkills.completedModules} done`}
+                    </span>
+                  </div>
+                  <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+                    This module is 20 questions — 10 Reading &amp; Writing, 10 Math — covering the
+                    fundamentals every SAT question is built on. You get {CORE_MODULE_MINUTES} minutes,
+                    and the lessons it recommends are short: one core idea, one worked example, and a
+                    little practice.
+                  </p>
+                  {coreSkills.bestModuleScore !== null && (
+                    <div className="mb-3 rounded-lg border border-emerald-300 bg-white/70 p-3 text-sm text-emerald-900 dark:border-emerald-600/60 dark:bg-emerald-900/30 dark:text-emerald-200">
+                      Your best Core Skills score so far is <strong>{coreSkills.bestModuleScore}</strong>.
+                      {coreSkills.pointsToGraduate !== null && (
+                        <> Reach <strong>{CORE_SKILLS_GRADUATION_SCORE}</strong> — about 16 of 20 correct — and you move up to the standard lessons. That is {coreSkills.pointsToGraduate} points away.</>
+                      )}
+                    </div>
+                  )}
+                  <button
+                    onClick={() => { setCoreModuleNumber(coreSkills.nextModule); setHardModuleNumber(null); setPhase('testing') }}
+                    className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+                  >
+                    Start Core Skills Module {coreSkills.nextModule}
+                  </button>
                 </div>
-                <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
-                  {hardTrack.graduated
-                    ? 'You have scored in the top band twice in a row, so the standard diagnostic is retired for you — it can no longer tell you anything you do not already know. These modules are 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier.'
-                    : 'Your last diagnostic scored in the top band. This module is 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier — the multi-step modeling, rate chains, and precision-of-language items that separate 700 from 800.'}
-                </p>
-                {/* Soft gate: surface pending recommendations without blocking —
-                    strong students may rightly self-direct. */}
-                {pendingLessons > 0 && (
-                  <div className="mb-3 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-600/60 dark:bg-amber-900/20 dark:text-amber-300">
-                    📘 {pendingLessons} recommended lesson{pendingLessons === 1 ? '' : 's'} from your last module {pendingLessons === 1 ? 'is' : 'are'} still pending —{' '}
-                    <Link href="/sat" className="font-semibold underline">tackle {pendingLessons === 1 ? 'it' : 'them'} first</Link> for the best score gains, or start the next module anyway.
-                  </div>
-                )}
-                <button
-                  onClick={() => { setHardModuleNumber(hardTrack.nextModule); setPhase('testing') }}
-                  className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
-                >
-                  Start Hard Module {hardTrack.nextModule}
-                </button>
-              </div>
-            )}
-            {hardTrack?.graduated && hardTrack.nextModule === null && (
-              <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 text-sm text-gray-700 dark:border-purple-700 dark:bg-purple-900/20 dark:text-gray-300">
-                You have completed all {HARD_MODULE_COUNT} hard modules. Full-length adaptive practice tests are the next step — they route you to the harder Module 2 when you earn it.
-              </div>
-            )}
+              )}
+              {coreSkills?.graduated && (
+                <div className="mb-4 rounded-xl border-2 border-emerald-300 bg-emerald-50 p-4 text-sm text-gray-700 dark:border-emerald-700 dark:bg-emerald-900/20 dark:text-gray-300">
+                  🎉 You reached {CORE_SKILLS_GRADUATION_SCORE} on a Core Skills module, so you have moved up
+                  to the standard lessons and the full diagnostic. The Core Skills modules stay available
+                  any time you want to warm up on the fundamentals.
+                </div>
+              )}
 
-            <button
-              onClick={() => { setHardModuleNumber(null); setPhase('testing') }}
-              className={`w-full rounded-xl px-6 py-3 font-semibold shadow-lg transition hover:shadow-xl ${
-                hardTrack?.graduated
-                  ? 'border border-gray-300 bg-white text-gray-600 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300'
-                  : 'bg-gradient-to-r from-green-600 to-teal-600 text-white'
-              }`}
-            >
-              {hardTrack?.graduated
-                ? 'Take the standard diagnostic anyway'
-                : lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
-            </button>
+              {/* Hard track: once a student proves the top band, the mid-level
+                  screen stops telling them anything useful. */}
+              {hardTrack?.unlocked && hardTrack.nextModule !== null && (
+                <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="rounded-full bg-purple-600 px-2 py-0.5 text-[10px] font-bold text-white">700-800 TRACK</span>
+                    <span className="text-xs text-purple-700 dark:text-purple-300">
+                      Module {hardTrack.nextModule} of {HARD_MODULE_COUNT}
+                      {hardTrack.completedModules > 0 && ` · ${hardTrack.completedModules} done`}
+                    </span>
+                  </div>
+                  <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+                    {hardTrack.graduated
+                      ? 'You have scored in the top band twice in a row, so the standard diagnostic is retired for you — it can no longer tell you anything you do not already know. These modules are 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier.'
+                      : 'Your last diagnostic scored in the top band. This module is 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier — the multi-step modeling, rate chains, and precision-of-language items that separate 700 from 800.'}
+                  </p>
+                  {/* Soft gate: surface pending recommendations without blocking —
+                      strong students may rightly self-direct. */}
+                  {pendingLessons > 0 && (
+                    <div className="mb-3 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-600/60 dark:bg-amber-900/20 dark:text-amber-300">
+                      📘 {pendingLessons} recommended lesson{pendingLessons === 1 ? '' : 's'} from your last module {pendingLessons === 1 ? 'is' : 'are'} still pending —{' '}
+                      <Link href="/sat" className="font-semibold underline">tackle {pendingLessons === 1 ? 'it' : 'them'} first</Link> for the best score gains, or start the next module anyway.
+                    </div>
+                  )}
+                  <button
+                    onClick={() => { setHardModuleNumber(hardTrack.nextModule); setPhase('testing') }}
+                    className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+                  >
+                    Start Hard Module {hardTrack.nextModule}
+                  </button>
+                </div>
+              )}
+              {hardTrack?.graduated && hardTrack.nextModule === null && (
+                <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 text-sm text-gray-700 dark:border-purple-700 dark:bg-purple-900/20 dark:text-gray-300">
+                  You have completed all {HARD_MODULE_COUNT} hard modules. Full-length adaptive practice tests are the next step — they route you to the harder Module 2 when you earn it.
+                </div>
+              )}
+
+              <button
+                onClick={() => { setHardModuleNumber(null); setPhase('testing') }}
+                className={`w-full rounded-xl px-6 py-3 font-semibold shadow-lg transition hover:shadow-xl ${
+                  hardTrack?.graduated
+                    ? 'border border-gray-300 bg-white text-gray-600 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300'
+                    : 'bg-gradient-to-r from-green-600 to-teal-600 text-white'
+                }`}
+              >
+                {hardTrack?.graduated
+                  ? 'Take the standard diagnostic anyway'
+                  : lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
+              </button>
+              </>
+            )}
             <a href="/sat-score-predictor" className="mt-3 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Prefer a quick estimate? Open the SAT Score Predictor</a>
             <a href="/sat-daily-question" className="mt-1 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Need a warm-up first? Try today&apos;s SAT question</a>
           </div>

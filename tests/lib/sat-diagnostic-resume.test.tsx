@@ -139,7 +139,7 @@ describe('SAT diagnostic resume after a refresh', () => {
     searchParams.set('assigned', 'assigned-1')
     mockFetch()
     const first = render(<SATDiagnosticPage />)
-    fireEvent.click(await screen.findByRole('button', { name: /Start Diagnostic Test/i }))
+    fireEvent.click(await screen.findByRole('button', { name: /Start Assigned Diagnostic/i }))
     fireEvent.click(await screen.findByRole('button', { name: /^Start Diagnostic$/ }))
     await screen.findByText('Frozen question one?')
 
@@ -304,7 +304,7 @@ describe('SAT diagnostic seen-key wiring', () => {
     searchParams.set('assigned', 'assigned-1')
     mockFetch()
     render(<SATDiagnosticPage />)
-    fireEvent.click(await screen.findByRole('button', { name: /Start Diagnostic Test/i }))
+    fireEvent.click(await screen.findByRole('button', { name: /Start Assigned Diagnostic/i }))
     await screen.findByRole('button', { name: /^Start Diagnostic$/ })
     expect(seen.loadSeenKeys).not.toHaveBeenCalled()
     expect(gen.generateDiagnosticTest).not.toHaveBeenCalled()

@@ -98,6 +98,29 @@ export function projectionRange(total: number, evidence: EvidenceLevel = 'medium
 }
 
 /**
+ * Measured sampling noise of the 36-question diagnostic screen, as a standard
+ * deviation of the total score. A simulated student of fixed ability re-sat the
+ * screen 400 times at 45/60/75% ability under two ability models (2026-09-25):
+ * sd 73-82 every time. The screen samples only 36 of the ~98 questions a real
+ * SAT asks, so it is roughly twice as noisy as a College Board sitting.
+ * Anything comparing two diagnostics (growth views, placement) must use this,
+ * not the College Board SEM of ~30.
+ */
+export const SAT_DIAGNOSTIC_SCORE_SD = 80
+
+/**
+ * The window a single 36-question diagnostic supports: ±1 sd, about two thirds
+ * of re-sittings. (The practice-test evidence levels above describe full-length
+ * forms and are much tighter.)
+ */
+export function diagnosticScreenRange(total: number): ScoreRange {
+  return {
+    low: Math.max(400, Math.round(total) - SAT_DIAGNOSTIC_SCORE_SD),
+    high: Math.min(1600, Math.round(total) + SAT_DIAGNOSTIC_SCORE_SD),
+  }
+}
+
+/**
  * Rough national percentile for a total score (mean ~1060, SD ~200, normal
  * approximation via an erf estimate). Clamped to 1-99. Ported from the score
  * predictor route so every surface reports the same figure.

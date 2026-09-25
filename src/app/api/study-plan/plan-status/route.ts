@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-config'
+import { buildSatPlan } from '@/lib/sat-plan'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -60,16 +61,57 @@ export async function GET() {
     })
     if (attempts.length === 0) return NextResponse.json({ plans: [] })
 
+    // The SAT plan has its own builder: track routing (Core Skills / 700-800),
+    // hard and Core Skills modules as plan sources, and swapping out topics
+    // cleared in an earlier cycle. Computing it generically here showed the
+    // dashboard a different plan from the SAT page.
+    const satCourse = CLASS_PLAN_COURSES.find((c) => c.key === 'sat')
+    const hasSatAttempt = attempts.some(
+      (a) => a.category === 'sat-full-diagnostic' || a.category.startsWith('sat-hard-module') || a.category.startsWith('sat-core-module'),
+    )
+    const satPlan = satCourse && hasSatAttempt ? await buildSatPlan(userId) : null
+
     // Latest attempt per course, plus the topics it recommended.
     const perCourse = new Map<string, { takenAt: Date; topics: RecommendedTopic[] }>()
     for (const course of CLASS_PLAN_COURSES) {
+      if (course.key === 'sat') continue
       const latest = attempts.find((a) => a.category.startsWith(course.categoryPrefix))
       if (!latest) continue
       const topics = parseRecommended(latest.results)
       if (topics.length === 0) continue
       perCourse.set(course.key, { takenAt: latest.createdAt, topics })
     }
-    if (perCourse.size === 0) return NextResponse.json({ plans: [] })
+    const satEntry =
+      satCourse && satPlan?.hasDiagnostic && satPlan.recommendedTopics.length > 0
+        ? {
+            courseKey: satCourse.key,
+            label: satCourse.label,
+            courseSlug: satCourse.courseSlug ?? null,
+            diagnosticRoute: diagnosticRouteForKey(satCourse.key),
+            gated: satCourse.gated === true,
+            requiredScorePercent: satPlan.requiredScorePercent,
+            takenAt: satPlan.diagnosticCreatedAt.toISOString(),
+            topics: satPlan.recommendedTopics.map((t) => ({
+              slug: t.slug,
+              name: t.name,
+              priority: t.priority,
+              topicPath: t.topicPath,
+              topicFound: t.topicFound,
+              bestExitScorePercent: t.bestExitScorePercent,
+              isSatisfied: t.isSatisfied,
+            })),
+            summary: {
+              total: satPlan.summary.totalRecommended,
+              completed: satPlan.summary.completed,
+              pending: satPlan.summary.pending,
+            },
+            canRetakeDiagnostic: satCourse.gated === true ? satPlan.canRetakeDiagnostic : true,
+          }
+        : null
+
+    if (perCourse.size === 0) {
+      return NextResponse.json({ plans: satEntry ? [satEntry] : [] })
+    }
 
     const allSlugs = Array.from(
       new Set(Array.from(perCourse.values()).flatMap((p) => p.topics.map((t) => t.slug))),
@@ -133,6 +175,8 @@ export async function GET() {
         canRetakeDiagnostic: course.gated === true ? pending === 0 : true,
       }]
     })
+
+    if (satEntry) plans.push(satEntry)
 
     // Most work outstanding first — that is the course that needs attention.
     plans.sort((a, b) => b.summary.pending - a.summary.pending)

@@ -4,10 +4,11 @@ import { requireTeacher } from '@/lib/auth-guard'
 import {
   CORE_MODULE_CATEGORY,
   coreSkillsTrackStatus,
-  type SatTrackOverride,
+  parseSatTrackOverride,
 } from '@/data/sat-practice/core-skills-modules'
+import { satPlacementsFor } from '@/lib/sat-plan'
 
-const VALID_OVERRIDES = ['core-skills', 'regular', 'auto'] as const
+const VALID_OVERRIDES = ['core-skills', 'regular', 'advanced', 'auto'] as const
 type OverrideInput = (typeof VALID_OVERRIDES)[number]
 
 /**
@@ -30,7 +31,7 @@ async function authorizeForStudent(
   if (!classroom) return { error: NextResponse.json({ error: 'Classroom not found' }, { status: 404 }) }
 
   const membership = await prisma.classroomMember.findFirst({
-    where: { classroomId, userId: studentId },
+    where: { classroomId, userId: studentId, isActive: true },
   })
   if (!membership) return { error: NextResponse.json({ error: 'Student not in classroom' }, { status: 404 }) }
   return { ok: true as const }
@@ -48,8 +49,32 @@ export async function GET(req: NextRequest) {
 
   const studentId = req.nextUrl.searchParams.get('studentId')
   const classroomId = req.nextUrl.searchParams.get('classroomId')
-  if (!studentId || !classroomId) {
-    return NextResponse.json({ error: 'studentId and classroomId required' }, { status: 400 })
+  if (!classroomId) {
+    return NextResponse.json({ error: 'classroomId required' }, { status: 400 })
+  }
+
+  // Whole roster: every active student's lane, for the teacher's class view.
+  if (!studentId) {
+    const classroom = await prisma.classroom.findFirst({
+      where:
+        user.role === 'ADMIN'
+          ? { id: classroomId }
+          : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] },
+      select: {
+        members: {
+          where: { isActive: true },
+          select: { userId: true, user: { select: { name: true, email: true } } },
+        },
+      },
+    })
+    if (!classroom) return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
+    const placements = await satPlacementsFor(classroom.members.map((m) => m.userId))
+    const nameBy = new Map(classroom.members.map((m) => [m.userId, m.user.name || m.user.email || 'Student']))
+    return NextResponse.json({
+      students: placements
+        .map((p) => ({ ...p, name: nameBy.get(p.userId) ?? 'Student' }))
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    })
   }
 
   const authz = await authorizeForStudent(user.id, user.role, studentId, classroomId)
@@ -72,7 +97,7 @@ export async function GET(req: NextRequest) {
   const status = coreSkillsTrackStatus(
     regularAttempts,
     coreModuleAttempts,
-    (student?.satTrackOverride ?? null) as SatTrackOverride,
+    parseSatTrackOverride(student?.satTrackOverride ?? null),
   )
   return NextResponse.json({ override: student?.satTrackOverride ?? null, status })
 }

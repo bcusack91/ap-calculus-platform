@@ -1102,7 +1102,16 @@ const quizLoaders: Record<string, QuizLoader> = {
  * Check whether a topic slug has an exit quiz available (synchronous).
  */
 export function hasExitQuiz(topicSlug: string): boolean {
-  return topicSlug in quizLoaders
+  if (topicSlug in quizLoaders) return true
+  // Core Skills topics draw the easy tier of their base topic's pool (see
+  // generateExitQuiz), so they have a quiz whenever the base does. Checking
+  // only the registry said "no quiz" for all 24 of them: the lesson never
+  // offered one, and plan-status and the flashcard unlock cleared the topic
+  // on lesson completion alone.
+  if (topicSlug.endsWith(CORE_SKILLS_SUFFIX)) {
+    return topicSlug.slice(0, -CORE_SKILLS_SUFFIX.length) in quizLoaders
+  }
+  return false
 }
 
 /**

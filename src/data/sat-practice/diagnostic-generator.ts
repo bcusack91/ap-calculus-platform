@@ -19,7 +19,7 @@
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
-import { satSectionScaled, projectionRange, type ScoreRange } from '@/lib/sat-scoring'
+import { satSectionScaled, projectionRange, diagnosticScreenRange, type ScoreRange } from '@/lib/sat-scoring'
 import { gradeGridIn } from '../sat-grid-in'
 
 /* ------------------------------------------------------------------ */
@@ -93,7 +93,7 @@ export interface DiagnosticResults {
 /*  Diagnostic Domains                                                 */
 /* ------------------------------------------------------------------ */
 
-const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
+export const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
   // Reading & Writing domains
   {
     id: 'comprehension',
@@ -214,10 +214,60 @@ const CANONICAL_SLUG_MAP: Record<string, string> = {
   'sat-punctuation-commas-semicolons': 'sat-punctuation',
   // Math
   'sat-geometry-trigonometry': 'sat-geometry-basics',
+  // Grid-ins used to carry a pseudo slug built from their category
+  // ('grid-in-algebra'), which is not a topic: every stored diagnostic taken
+  // between the grid-in launch and the Sept 25 fix recommends one or more of
+  // these. Map them onto the lesson that teaches the same skill.
+  'grid-in-algebra': 'sat-linear-equations-inequalities',
+  'grid-in-advanced-math': 'sat-quadratic-equations',
+  'grid-in-problem-solving': 'sat-ratios-proportions-percents',
+  'grid-in-statistics': 'sat-data-statistics',
+  'grid-in-geometry': 'sat-geometry-basics',
 }
 
-function canonicalizeSlug(slug: string): string {
+/** The real sat-prep topic a grid-in of this category studies. */
+const GRID_IN_TOPIC: Record<string, string> = {
+  Algebra: 'sat-linear-equations-inequalities',
+  'Advanced Math': 'sat-quadratic-equations',
+  'Problem Solving': 'sat-ratios-proportions-percents',
+  Statistics: 'sat-data-statistics',
+  Geometry: 'sat-geometry-basics',
+}
+
+/**
+ * Real topic slug for a diagnostic/skill slug. Exported so stored results from
+ * older attempts (which may hold since-retired pseudo slugs) resolve the same
+ * way fresh ones do.
+ */
+export function canonicalizeSlug(slug: string): string {
   return CANONICAL_SLUG_MAP[slug] ?? slug
+}
+
+/**
+ * Backfill order for a study plan: every topic of the student's weak domains,
+ * then their moderate ones, each in full-test-weight order. Plan-status uses
+ * it to replace recommendations the student had already cleared before this
+ * diagnostic (see selectSatPlanTopics in src/lib/sat-plan.ts).
+ */
+export function satPlanCandidatePool(
+  domains: { domainId: string; level: string }[],
+): { slug: string; name: string; priority: 'high' | 'medium' }[] {
+  const byWeight = (a: { domainId: string }, b: { domainId: string }) =>
+    (FULL_TEST_WEIGHT[b.domainId] ?? 0) - (FULL_TEST_WEIGHT[a.domainId] ?? 0)
+  const out: { slug: string; name: string; priority: 'high' | 'medium' }[] = []
+  const seen = new Set<string>()
+  for (const [level, priority] of [['weak', 'high'], ['moderate', 'medium']] as const) {
+    for (const d of domains.filter((x) => x.level === level).sort(byWeight)) {
+      const def = DIAGNOSTIC_DOMAINS.find((x) => x.id === d.domainId)
+      for (const raw of def?.slugs ?? []) {
+        const slug = canonicalizeSlug(raw)
+        if (seen.has(slug)) continue
+        seen.add(slug)
+        out.push({ slug, name: slugToName(slug), priority })
+      }
+    }
+  }
+  return out
 }
 
 /**
@@ -345,10 +395,10 @@ const MATH_MCQ_COUNTS: Record<string, number> = {
 }
 
 /** Grid-ins by diagnostic domain and the grid-in generator categories that feed it. */
-const MATH_GRID_IN_PLAN: { domain: string; categories: string[]; count: number }[] = [
-  { domain: 'algebra', categories: ['Algebra'], count: 2 },
-  { domain: 'advanced-math', categories: ['Advanced Math'], count: 1 },
-  { domain: 'problem-solving', categories: ['Problem Solving', 'Statistics'], count: 1 },
+const MATH_GRID_IN_PLAN: { domain: string; categories: string[]; count: number; fallbackSlug: string }[] = [
+  { domain: 'algebra', categories: ['Algebra'], count: 2, fallbackSlug: 'sat-linear-equations-inequalities' },
+  { domain: 'advanced-math', categories: ['Advanced Math'], count: 1, fallbackSlug: 'sat-quadratic-equations' },
+  { domain: 'problem-solving', categories: ['Problem Solving', 'Statistics'], count: 1, fallbackSlug: 'sat-ratios-proportions-percents' },
 ]
 
 const stemOf = (text: string) => text.replace(/\s+/g, ' ').trim().toLowerCase()
@@ -565,7 +615,8 @@ export async function generateDiagnosticTest(
         category: p.category,
         difficulty: p.difficulty,
         domain: plan.domain,
-        sourceSlug: `grid-in-${p.category.toLowerCase().replace(/\s+/g, '-')}`,
+        // A real topic, so a missed grid-in recommends a lesson that exists.
+        sourceSlug: GRID_IN_TOPIC[p.category] ?? plan.fallbackSlug,
         section: 'math',
         gridIn: { correctAnswer: p.correctAnswer, acceptableAnswers: p.acceptableAnswers, tolerance: p.tolerance },
       })
@@ -652,16 +703,24 @@ export function analyzeDiagnosticResults(
    *  percentage maps onto the 200-800 section scale. See SECTION_BANDS. */
   band: DiagnosticBand = 'regular',
 ): DiagnosticResults {
+  // Grade every question ONCE, and use that verdict everywhere below. Grid-ins
+  // are graded on the typed value; everything else on the choice. (The topic
+  // tally used to re-grade with `selectedIndex !== correctIndex`, which for a
+  // grid-in is `null !== -1` — every grid-in, even a correct one, counted as a
+  // miss and pushed a recommendation.)
+  const correctAt: boolean[] = questions.map((q, i) => {
+    const ans = answers.find(a => a.questionIndex === i)
+    return q.gridIn
+      ? gradeGridIn(q.gridIn, ans?.textValue ?? '')
+      : ans?.selectedIndex === q.correctIndex
+  })
+
   // Score by domain
   const domainScores = new Map<string, { correct: number; total: number }>()
 
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i]
-    const ans = answers.find(a => a.questionIndex === i)
-    // Grid-ins are graded on the typed value; everything else on the choice.
-    const isCorrect = q.gridIn
-      ? gradeGridIn(q.gridIn, ans?.textValue ?? '')
-      : ans?.selectedIndex === q.correctIndex
+    const isCorrect = correctAt[i]
 
     const entry = domainScores.get(q.domain) ?? { correct: 0, total: 0 }
     entry.total++
@@ -748,7 +807,7 @@ export function analyzeDiagnosticResults(
     const slug = canonicalizeSlug(raw)
     const t = tallies.get(slug) ?? { asked: 0, missed: 0, domainId: q.domain }
     t.asked++
-    if (answers.find(a => a.questionIndex === i)?.selectedIndex !== q.correctIndex) t.missed++
+    if (!correctAt[i]) t.missed++
     tallies.set(slug, t)
   }
 
@@ -824,9 +883,13 @@ export function analyzeDiagnosticResults(
     totalQuestions,
     percentage,
     estimatedScore,
-    // A 36-question sample is 'medium' evidence (±40); the 20-question
-    // hard/easy modules resolve less, so their window is wider (±50).
-    scoreRange: projectionRange(estimatedScore, band === 'regular' ? 'medium' : 'low'),
+    // Measured, not assumed (2026-09-25): a fixed-ability student re-sitting
+    // the 36-question screen scores with sd ≈ 75-80, so the old ±40 held only
+    // ~38% of sittings. ±80 holds about two thirds. The 20-question hard and
+    // easy modules sit on narrower bands and keep their ±50.
+    scoreRange: band === 'regular'
+      ? diagnosticScreenRange(estimatedScore)
+      : projectionRange(estimatedScore, 'low'),
     rwScore,
     mathScore,
     domains,

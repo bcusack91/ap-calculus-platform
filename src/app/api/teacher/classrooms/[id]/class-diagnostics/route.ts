@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { scoreLabelFromResults } from '@/lib/class-plan-config'
+import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -36,16 +37,20 @@ const GENERATABLE: Record<string, { label: string; page: string }> = {
  * Test–retest sd of ONE sitting's total score, in the course's own scale.
  *
  * MCAT 5.5 is measured on this 45-item diagnostic: a student of unchanged
- * ability lands anywhere in a ~25-point window across repeat sittings. SAT 30
- * is the College Board's published SEM for a total score, used as a floor —
- * our unequated 36-item form is certainly noisier, not quieter.
+ * ability lands anywhere in a ~25-point window across repeat sittings. SAT is
+ * measured the same way: sd ≈ 80 on the 36-item screen, so one student's move
+ * is noise inside about ±225, and a class average of 20 inside about ±50.
  *
  * The sd of a CHANGE between two sittings is sd·√2, so a single student's
  * move only clears noise past ~2·sd·√2 (MCAT ≈ 16 points). Class averages of
  * n students clear it √n sooner. Anything inside the band must be presented as
  * noise, never as progress.
  */
-const SCORE_SD_BY_COURSE: Record<string, number> = { mcat: 5.5, sat: 30 }
+// Per-sitting sd of OUR diagnostic, measured by re-simulating a fixed-ability
+// student (MCAT 2026-09-16; SAT 2026-09-25, see SAT_DIAGNOSTIC_SCORE_SD). The
+// SAT value used to be 30 — College Board's SEM for a full test — which made a
+// 36-question screen's noise look like real growth.
+const SCORE_SD_BY_COURSE: Record<string, number> = { mcat: 5.5, sat: SAT_DIAGNOSTIC_SCORE_SD }
 
 function noiseBandFor(courseKey: string, n = 1): number {
   const sd = SCORE_SD_BY_COURSE[courseKey]

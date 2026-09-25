@@ -42,8 +42,20 @@ export const CORE_SKILLS_ENTRY_SCORE = 1050
 /** At or above this on a Core Skills module, the track retires. */
 export const CORE_SKILLS_GRADUATION_SCORE = 950
 
-/** Teacher override values stored on User.satTrackOverride. */
-export type SatTrackOverride = 'core-skills' | 'regular' | null
+/**
+ * Teacher override values stored on User.satTrackOverride. null = automatic
+ * from the student's diagnostics. 'regular' holds a student in the standard
+ * lane (neither Core Skills nor 700-800); 'advanced' puts them in the 700-800
+ * lane whatever they scored.
+ */
+export type SatTrackOverride = 'core-skills' | 'regular' | 'advanced' | null
+
+export const SAT_TRACK_OVERRIDES = ['core-skills', 'regular', 'advanced'] as const
+
+/** Stored column value → override, ignoring anything unrecognised. */
+export function parseSatTrackOverride(value: string | null | undefined): SatTrackOverride {
+  return (SAT_TRACK_OVERRIDES as readonly string[]).includes(value ?? '') ? (value as SatTrackOverride) : null
+}
 
 const RW_SLUGS = [
   'sat-vocabulary-context',
@@ -133,7 +145,17 @@ export function coreSkillsTrackStatus(
   const bestModuleScore = moduleScores.length > 0 ? Math.max(...moduleScores) : null
   const graduated = bestModuleScore !== null && bestModuleScore >= CORE_SKILLS_GRADUATION_SCORE
 
-  const latestRegular = regularAttempts.length > 0 ? estimatedScoreOf(regularAttempts[0].results) : null
+  // Placement reads the mean of the last TWO regular screens (just the one if
+  // there is only one). A single 36-question screen has sd ≈ 80
+  // (SAT_DIAGNOSTIC_SCORE_SD), so on the latest score alone a student near the
+  // 1050 bar flipped between Core Skills and regular lessons about every other
+  // weekly class diagnostic. Averaging two cuts that noise by ~30% while still
+  // placing a brand-new student on their first sitting.
+  const recent = regularAttempts
+    .slice(0, 2)
+    .map((a) => estimatedScoreOf(a.results))
+    .filter((s): s is number => s !== null)
+  const latestRegular = recent.length > 0 ? recent.reduce((a, b) => a + b, 0) / recent.length : null
   const placedByScore = latestRegular !== null && latestRegular < CORE_SKILLS_ENTRY_SCORE
 
   let placed: boolean
@@ -141,7 +163,7 @@ export function coreSkillsTrackStatus(
   if (override === 'core-skills') {
     placed = true
     source = 'override'
-  } else if (override === 'regular') {
+  } else if (override === 'regular' || override === 'advanced') {
     placed = false
     source = 'override'
   } else {

@@ -40,6 +40,15 @@ interface StudentRow {
   recommendedCount: number
   pendingCount: number
   canRetake: boolean
+  /** SAT only: the lane this student studies in, and any teacher override. */
+  satLane?: 'core-skills' | 'regular' | 'advanced'
+  satOverride?: 'core-skills' | 'regular' | 'advanced' | null
+}
+
+const SAT_LANE_LABEL: Record<NonNullable<StudentRow['satLane']>, string> = {
+  'core-skills': 'Core Skills',
+  regular: 'Standard',
+  advanced: '700-800',
 }
 
 interface PlanData {
@@ -57,6 +66,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
   const [error, setError] = useState<string | null>(null)
   const [assigned, setAssigned] = useState<Set<string>>(new Set())
   const [assigning, setAssigning] = useState<string | null>(null)
+  const [trackSaving, setTrackSaving] = useState<string | null>(null)
+  const [trackError, setTrackError] = useState<string | null>(null)
 
   // Discover which courses this roster has diagnostic data for.
   useEffect(() => {
@@ -84,6 +95,28 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
       })
       .catch((e) => setError(e instanceof Error ? e.message : 'Could not load the class plan'))
   }, [classroomId, courseKey])
+
+  // SAT lane override: Automatic follows the student's diagnostics; the other
+  // three pin them. Placement changes which lessons their plan routes to.
+  const setSatTrack = async (studentId: string, override: string) => {
+    setTrackSaving(studentId)
+    setTrackError(null)
+    try {
+      const r = await fetch('/api/teacher/sat-track', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentId, classroomId, override }),
+      })
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}))
+        setTrackError(d.error || 'Could not change the track')
+        return
+      }
+      loadPlan()
+    } finally {
+      setTrackSaving(null)
+    }
+  }
 
   useEffect(() => { loadPlan() }, [loadPlan])
 
@@ -240,7 +273,10 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
           Homework = their personal recommended modules (exit quiz ≥80% or entrance mastery clears one).
           {gated && ' For the MCAT, clearing all of them unlocks their next weekly diagnostic.'}
+          {data.course.key === 'sat' &&
+            ' Each SAT student studies in a track: Core Skills (short lessons, easy items), Standard, or 700-800. Automatic places them from their diagnostics; pick a track to pin it.'}
         </p>
+        {trackError && <p className="mb-3 text-sm text-red-600 dark:text-red-400">{trackError}</p>}
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -249,6 +285,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                 <th className="py-2 pr-4">Last diagnostic</th>
                 <th className="py-2 pr-4">Score</th>
                 <th className="py-2 pr-4">Homework</th>
+                {data.course.key === 'sat' && <th className="py-2 pr-4">Track</th>}
                 {gated && <th className="py-2">Next test</th>}
               </tr>
             </thead>
@@ -270,6 +307,23 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                   <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
                     {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} modules`}
                   </td>
+                  {data.course.key === 'sat' && (
+                    <td className="py-2 pr-4">
+                      <label className="sr-only" htmlFor={`sat-track-${s.userId}`}>SAT track for {s.name}</label>
+                      <select
+                        id={`sat-track-${s.userId}`}
+                        value={s.satOverride ?? 'auto'}
+                        disabled={trackSaving === s.userId}
+                        onChange={e => void setSatTrack(s.userId, e.target.value)}
+                        className="rounded-lg border border-gray-300 bg-white px-2 py-1 text-xs dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                      >
+                        <option value="auto">Automatic{s.satLane && !s.satOverride ? ` (${SAT_LANE_LABEL[s.satLane]})` : ''}</option>
+                        <option value="core-skills">Core Skills</option>
+                        <option value="regular">Standard</option>
+                        <option value="advanced">700-800</option>
+                      </select>
+                    </td>
+                  )}
                   {gated && (
                     <td className="py-2">
                       {s.takenAt === null ? (
