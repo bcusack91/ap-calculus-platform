@@ -26,15 +26,15 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
   },
   {
     id: 2,
-    question: 'Where does the comma go? "Furthermore the evidence was compelling."',
+    question: 'Which sentence is punctuated correctly?',
     options: [
-      'After "Furthermore"',
-      'After "evidence"',
-      'After "the"',
-      'No comma is needed.'
+      'Furthermore the evidence, was compelling.',
+      'Furthermore, the evidence was compelling.',
+      'Furthermore the, evidence was compelling.',
+      'Furthermore the evidence was compelling.'
     ],
-    correctAnswer: 0,
-    explanation: '"Furthermore" is an introductory word (conjunctive adverb) at the start of a sentence and needs a comma after it.',
+    correctAnswer: 1,
+    explanation: '"Furthermore" is an introductory word (a conjunctive adverb) at the start of a sentence and needs a comma after it. A comma between "the" and "evidence" or between the subject "the evidence" and its verb "was" is never correct.',
     difficulty: 'easy',
   },
   {
@@ -44,10 +44,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The dog chased it\'s tail around the yard.',
       'The dogs\' owner called it home.',
       'The dogs bark was very loud.',
-      'The dog\'s are playing in the park.'
+      'The dogs\'s toys were left in the park.'
     ],
     correctAnswer: 1,
-    explanation: '"Dogs\'" shows possession by multiple dogs (plural possessive). "It\'s" means "it is" (wrong here). "Dogs bark" needs an apostrophe for possession. "Dog\'s are" misuses the apostrophe (not a contraction or possessive).',
+    explanation: '"Dogs\'" shows possession by multiple dogs (plural possessive). "It\'s" means "it is" (wrong here; the possessive is "its"). "Dogs bark" needs an apostrophe to show possession. A plural ending in s takes only an apostrophe, so "dogs\'s" is wrong.',
     difficulty: 'easy',
   },
   {
@@ -70,10 +70,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'Their',
       'There',
       'They\'re',
-      'Theyre'
+      'There\'s'
     ],
     correctAnswer: 2,
-    explanation: '"They\'re" = "they are." The sentence means "They are coming to the party tonight." "Their" is possessive, "there" refers to a place.',
+    explanation: '"They\'re" = "they are." The sentence means "They are coming to the party tonight." "Their" is possessive, "there" refers to a place, and "there\'s" means "there is," which does not fit "coming."',
     difficulty: 'easy',
   },
   {
@@ -104,15 +104,15 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
   },
   {
     id: 8,
-    question: 'What does "it\'s" mean?',
+    question: 'Which sentence uses "it\'s" or "its" correctly?',
     options: [
-      'Belonging to it (possessive)',
-      'It is / it has (contraction)',
-      'Plural of "it"',
-      'Past tense of "it"'
+      'The storm lost it\'s strength overnight.',
+      'It\'s been raining since early morning.',
+      'The bird fed it\'s chicks every hour.',
+      'Its been a long week for the whole team.'
     ],
     correctAnswer: 1,
-    explanation: '"It\'s" is a contraction meaning "it is" or "it has." The possessive form is "its" (no apostrophe).',
+    explanation: '"It\'s" is a contraction meaning "it is" or "it has," so "It\'s been raining" (it has been raining) is correct. The possessive form is "its" with no apostrophe, so "lost it\'s strength" and "fed it\'s chicks" are wrong, and "Its been" needs the apostrophe because it means "it has been."',
     difficulty: 'easy',
   },
   // ─── MEDIUM ────────────────────────────────────────────────────────
@@ -123,17 +123,17 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The project—which took two years, was finally completed.',
       'The project, which took two years—was finally completed.',
       'The project—which took two years—was finally completed.',
-      'The project—which took two years; was finally completed.'
+      'The project—which took two years was finally completed.'
     ],
     correctAnswer: 2,
-    explanation: 'Dashes must come in pairs when setting off a nonessential element in the middle of a sentence. You cannot mix a dash with a comma or semicolon.',
+    explanation: 'Dashes must come in pairs when setting off a nonessential element in the middle of a sentence. You cannot open with a dash and close with a comma (or the reverse), and an opening dash with no closing dash leaves the interruption unfinished.',
     difficulty: 'medium',
   },
   {
     id: 10,
     question: 'Which sentence correctly uses a colon?',
     options: [
-      'The ingredients are: flour, sugar, and butter.',
+      'The ingredients for the cake are: flour, sugar, and butter.',
       'She excels at three subjects: math, science, and history.',
       'The store sells: clothing, electronics, and furniture.',
       'They offer: premium and standard plans.'
@@ -152,7 +152,7 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The team—exhausted after the match, celebrated its victory.'
     ],
     correctAnswer: 0,
-    explanation: 'Dashes match on both sides. "Its" (possessive, no apostrophe) is correct for "the team\'s victory." Options C and D mix dashes with commas.',
+    explanation: 'Dashes match on both sides. "Its" (possessive, no apostrophe) is correct for "the team\'s victory," so "it\'s victory" is wrong. The two sentences that open the interruption with one mark and close it with another (a comma and a dash) are also wrong.',
     difficulty: 'medium',
   },
   {
@@ -198,13 +198,13 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     id: 15,
     question: 'Which sentence contains an UNNECESSARY comma?',
     options: [
-      'After the lecture, the students asked questions.',
+      'After the lecture ended, the students asked questions.',
       'The professor explained, that the deadline had been extended.',
-      'She packed her bag, locked the door, and left.',
-      'The dog, who was very old, slept all day.'
+      'She packed her bag, locked the door, and left for work.',
+      'Our old dog, who had been sick for weeks, slept all day.'
     ],
     correctAnswer: 1,
-    explanation: 'A comma should never be placed between a verb ("explained") and a "that" clause ("that the deadline had been extended"). This is a common SAT trap.',
+    explanation: 'A comma should never be placed between a verb ("explained") and a "that" clause ("that the deadline had been extended"). The other commas are all needed: one follows an introductory clause, two separate items in a series, and a pair sets off a nonessential "who" clause.',
     difficulty: 'medium',
   },
   // ─── HARD ──────────────────────────────────────────────────────────
@@ -218,33 +218,33 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The principal, who has served for ten years announced her retirement; the school board praised her leadership.'
     ],
     correctAnswer: 2,
-    explanation: '"Who has served for ten years" is nonrestrictive → paired commas. The two main clauses are joined by a semicolon. Option A has a comma splice. Option B puts a comma between subject and verb. Option D is missing the closing comma.',
+    explanation: '"Who has served for ten years" is nonrestrictive, so it takes paired commas (paired dashes would also work). The two main clauses are joined by a semicolon. The version with dashes joins the two main clauses with only a comma (a comma splice); another puts a comma between the subject and its verb ("years, announced"); and the last is missing the closing comma after "years."',
     difficulty: 'hard',
   },
   {
     id: 19,
-    question: 'The report concluded that the company\'s __(A)__ profits had declined for three consecutive quarters __(B)__ its __(C)__ board of directors __(D)__ therefore __(E)__ voted to restructure operations. Choose the correct answers for all blanks.',
+    question: 'The report concluded that the company\'s profits had declined for three consecutive ___ board of directors, therefore, voted to restructure operations. Which choice fills the blank correctly?',
     options: [
-      '(A) company\'s (B) ; (C) its (D) , (E) ,',
-      '(A) companies (B) , (C) it\'s (D) , (E) ,',
-      '(A) company\'s (B) ; (C) it\'s (D) , (E) ,',
-      '(A) companies\' (B) , (C) its (D) ; (E) ,'
+      'quarters; its',
+      'quarters, its',
+      'quarters its',
+      'quarters, and, its'
     ],
     correctAnswer: 0,
-    explanation: '(A) Singular possessive → company\'s. (B) Two independent clauses → semicolon. (C) Possessive "its" (no apostrophe). (D) and (E) "therefore" as a conjunctive adverb within the second clause → commas around it.',
+    explanation: 'Both parts are independent clauses, and "therefore" sits inside the second one, so it cannot join them. A semicolon is needed; a comma alone creates a comma splice, no punctuation creates a run-on, and a comma after "and" separates the conjunction from its clause.',
     difficulty: 'hard',
   },
   {
     id: 21,
-    question: 'The new regulation—introduced without public comment—affected three industries __(F)__ banking, healthcare, and real estate __(G)__ critics argued that the rule was too broad __(H)__ supporters, however, claimed it was necessary. Choose the correct punctuation for (F), (G), and (H).',
+    question: 'The new regulation, introduced without public comment, affected three ___ banking, healthcare, and real estate. Which choice fills the blank correctly?',
     options: [
-      '(F) : (G) . (H) ;',
-      '(F) , (G) , (H) ,',
-      '(F) : (G) ; (H) ,',
-      '(F) : (G) . (H) ,'
+      'industries:',
+      'industries;',
+      'industries',
+      'industries, including:'
     ],
     correctAnswer: 0,
-    explanation: '(F) Colon introduces the list after a complete sentence. (G) Period ends the first sentence. (H) Semicolon joins the two independent clauses about critics and supporters.',
+    explanation: 'A colon introduces a list after a complete independent clause ("The new regulation ... affected three industries"). A semicolon needs an independent clause after it, no punctuation runs the list into the clause, and a colon cannot follow "including," which already introduces the list.',
     difficulty: 'hard',
   },
   {
@@ -257,7 +257,7 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       ': / ,'
     ],
     correctAnswer: 1,
-    explanation: 'The list is embedded in the middle of the sentence (not at the end), so a colon doesn\'t work (colons don\'t close). Dashes in pairs set off the list as a nonessential element. Commas would also work but could be confusing since the list items contain commas.',
+    explanation: 'The list is embedded in the middle of the sentence, so a colon cannot work: a colon cannot close an interruption, and "before the intermission" belongs to "performed," not to the list. Commas fail because the list already contains commas; a comma before "Beethoven\'s" and after "Overture" would make the three titles read as a longer series with "three pieces" as its first item. Paired dashes set the list off clearly.',
     difficulty: 'hard',
   },
   // ─── EASY (added) ──────────────────────────────────────────────────
@@ -268,7 +268,7 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'dogs',
       'dogs\'',
       'dog\'s',
-      'dogss'
+      'dogs\'s'
     ],
     correctAnswer: 2,
     explanation: 'For a single dog, the singular possessive adds apostrophe + s: dog\'s.',
@@ -293,11 +293,11 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     options: [
       'Their',
       'There',
-      'Theyre',
+      'Their\'s',
       'They\'re'
     ],
     correctAnswer: 3,
-    explanation: '"They\'re" is the contraction of "they are."',
+    explanation: '"They\'re" is the contraction of "they are": "They are going to love the new park." "Their" is possessive, "there" refers to a place, and "their\'s" is not a word (the possessive pronoun is "theirs").',
     difficulty: 'easy',
   },
   {
@@ -357,12 +357,12 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     question: 'Choose the correct word: "___ going to need a jacket."',
     options: [
       'Your',
-      'Youre',
+      'Your\'s',
       'You\'re',
       'Yours'
     ],
     correctAnswer: 2,
-    explanation: '"You\'re" is the contraction of "you are"; "your" is possessive.',
+    explanation: '"You\'re" is the contraction of "you are": "You are going to need a jacket." "Your" and "yours" are possessives, and "your\'s" is not a word.',
     difficulty: 'easy',
   },
   {
@@ -424,10 +424,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'Whose',
       'Who\'s',
       'Whos',
-      'Whose\'s'
+      'Whom'
     ],
     correctAnswer: 0,
-    explanation: '"Whose" is the possessive; "who\'s" means "who is."',
+    explanation: '"Whose" is the possessive pronoun, which is needed to ask about the owner of the car. "Who\'s" means "who is," "whom" is an object pronoun that cannot modify "car," and "whos" is not a word.',
     difficulty: 'easy',
   },
   {
@@ -451,10 +451,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The device—small but powerful—fit in her pocket.',
       'The device—small but powerful, fit in her pocket.',
       'The device, small but powerful—fit in her pocket.',
-      'The device—small but powerful; fit in her pocket.'
+      'The device—small but powerful fit in her pocket.'
     ],
     correctAnswer: 0,
-    explanation: 'Dashes must come in pairs when setting off a nonessential element; mixing a dash with a comma or semicolon is incorrect.',
+    explanation: 'Dashes must come in pairs when setting off a nonessential element; mixing a dash with a comma is incorrect, and an opening dash needs a closing dash after "powerful."',
     difficulty: 'medium',
   },
   {
@@ -501,12 +501,12 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     question: 'Which sentence is punctuated correctly?',
     options: [
       '"I think," he said, "that we should wait."',
-      '"I think" he said "that we should wait."',
+      '"I think", he said, "that we should wait."',
       '"I think," he said "that we should wait."',
       '"I think" he said, "that we should wait."'
     ],
     correctAnswer: 0,
-    explanation: 'When a dialogue tag interrupts a quotation, commas set off the tag and stay inside the quotation marks.',
+    explanation: 'When a dialogue tag interrupts a quotation, commas set off the tag on both sides, and the first comma goes inside the closing quotation mark.',
     difficulty: 'medium',
   },
   {
@@ -516,10 +516,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'The kit contained the following items: bandages, tape, and scissors.',
       'The kit contained the following items; bandages, tape, and scissors.',
       'The kit contained the following items, bandages, tape, and scissors.',
-      'The kit contained the following items bandages, tape, and scissors.'
+      'The kit contained: the following items, bandages, tape, and scissors.'
     ],
     correctAnswer: 0,
-    explanation: 'A colon follows the complete clause "The kit contained the following items" to introduce the list.',
+    explanation: 'A colon follows the complete clause "The kit contained the following items" to introduce the list. A semicolon cannot introduce a list, a comma there blurs the introduction into the list itself, and a colon cannot come between the verb "contained" and its object.',
     difficulty: 'medium',
   },
   {
@@ -594,10 +594,10 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
       'Her explanation—clear and thorough—satisfied everyone.',
       'Her explanation—clear and thorough, satisfied everyone.',
       'Her explanation, clear and thorough—satisfied everyone.',
-      'Her explanation—clear and thorough; satisfied everyone.'
+      'Her explanation—clear and thorough satisfied everyone.'
     ],
     correctAnswer: 0,
-    explanation: 'A pair of dashes sets off the interrupting phrase; mixing a dash with a comma or semicolon is incorrect.',
+    explanation: 'A pair of dashes sets off the interrupting phrase; mixing a dash with a comma is incorrect, and leaving out the closing dash runs "thorough" into the verb "satisfied."',
     difficulty: 'medium',
   },
   {
@@ -655,28 +655,28 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
   },
   {
     id: 56,
-    question: 'Choose the correct answers for the blanks. "The ___(A) lecture ran long ___(B) nevertheless ___(C) the students stayed ___(D) they were fascinated by ___(E) implications."',
+    question: 'The professor\'s lecture ran ___ the students stayed until the very end. Which choice fills the blank correctly?',
     options: [
-      '(A) professor\'s (B) ; (C) , (D) ; (E) its',
-      '(A) professors (B) , (C) , (D) ; (E) it\'s',
-      '(A) professor\'s (B) ; (C) , (D) , (E) its',
-      '(A) professors\' (B) ; (C) , (D) ; (E) it\'s'
+      'long; nevertheless,',
+      'long, nevertheless,',
+      'long nevertheless,',
+      'long, nevertheless'
     ],
     correctAnswer: 0,
-    explanation: 'Singular possessive "professor\'s"; a semicolon precedes and a comma follows "nevertheless"; a semicolon joins the last two independent clauses; and "its" is the correct possessive.',
+    explanation: 'The conjunctive adverb "nevertheless" joins two independent clauses, so it takes a semicolon before it and a comma after it. A comma before "nevertheless" creates a comma splice, and omitting the punctuation before it creates a run-on.',
     difficulty: 'hard',
   },
   {
     id: 57,
-    question: 'Choose the correct answers for the blanks. "The ___(A) new headquarters ___(B) which cost millions to build ___(C) opened last spring ___(D) its ___(E) celebrated the move."',
+    question: 'The company\'s new headquarters, which cost millions to ___ last spring. Which choice fills the blank correctly?',
     options: [
-      '(A) companys (B) , (C) , (D) , (E) employees',
-      '(A) company\'s (B) , (C) , (D) ; (E) employee\'s',
-      '(A) company\'s (B) , (C) , (D) ; (E) employees',
-      '(A) company\'s (B) ; (C) ; (D) ; (E) employees'
+      'build, opened',
+      'build opened',
+      'build; opened',
+      'build: opened'
     ],
-    correctAnswer: 2,
-    explanation: 'Singular possessive "company\'s"; the nonessential clause takes paired commas; a semicolon joins the two independent clauses; and "employees" (plural, no apostrophe) is the subject.',
+    correctAnswer: 0,
+    explanation: 'The nonessential clause "which cost millions to build" opens with a comma, so it must close with one before the verb "opened." Leaving out the closing comma leaves the clause unbalanced, and a semicolon or colon would split the subject from its verb.',
     difficulty: 'hard',
   },
   {
@@ -711,7 +711,7 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     options: [
       'Did she really say, "I quit"?',
       'Did she really say, "I quit?"',
-      'Did she really say "I quit"?',
+      'Did she really say, "I quit?".',
       'Did she really say, "I quit."?'
     ],
     correctAnswer: 0,
@@ -722,13 +722,13 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     id: 61,
     question: 'Which sentence is punctuated correctly?',
     options: [
-      'Charles Dickens\' novels remain popular, and his reader\'s devotion endures.',
-      'Charles Dickens novels remain popular, and his readers\' devotion endures.',
-      'Charles Dickens\'s novels remain popular, and his readers\' devotion endures.',
-      'Charles Dickens\'s novels remain popular, and his readers devotion endures.'
+      'Charles Dickens\' novels remain popular, and his many reader\'s devotion endures.',
+      'Charles Dicken\'s novels remain popular, and his many readers\' devotion endures.',
+      'Charles Dickens\'s novels remain popular, and his many readers\' devotion endures.',
+      'Charles Dickens\'s novels remain popular, and his many readers devotion endures.'
     ],
     correctAnswer: 2,
-    explanation: '"Dickens\'s" is the singular possessive and "readers\'" is the plural possessive for the devotion of many readers.',
+    explanation: 'The author\'s name is Dickens, so the apostrophe goes after the full name: "Dickens\'s" ("Dicken\'s" treats the name as "Dicken"). "Many readers" is plural, so the plural possessive "readers\'" is needed; "reader\'s" is singular, and "readers" with no apostrophe does not show possession.',
     difficulty: 'hard',
   },
   {
@@ -759,15 +759,15 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
   },
   {
     id: 64,
-    question: 'Choose the correct punctuation for the four blanks. "The author\'s memoir ___(A) which took years to write ___(B) finally reached bookstores ___(C) readers praised ___(D) unflinching honesty."',
+    question: 'The author\'s memoir, which took years to write, finally reached ___ praised its unflinching honesty. Which choice fills the blank correctly?',
     options: [
-      '(A) , (B) , (C) ; (D) its',
-      '(A) , (B) , (C) , (D) its',
-      '(A) , (B) , (C) ; (D) it\'s',
-      '(A) ; (B) ; (C) ; (D) its'
+      'bookstores; readers',
+      'bookstores, readers',
+      'bookstores readers',
+      'bookstores: and readers'
     ],
     correctAnswer: 0,
-    explanation: 'The nonessential clause "which took years to write" takes paired commas, a semicolon joins the two independent clauses, and "its" is the correct possessive before "unflinching honesty."',
+    explanation: '"The author\'s memoir ... finally reached bookstores" and "readers praised its unflinching honesty" are independent clauses, so a semicolon joins them. A comma alone creates a comma splice, no punctuation creates a run-on, and a colon cannot come directly before the conjunction "and."',
     difficulty: 'hard',
   },
   {

@@ -343,7 +343,7 @@ const allQuestions: SatMathQuestion[] = [
     "options": [
       "The number of gallons in a full tank",
       "The number of miles driven per gallon",
-      "The total number of miles the car can drive",
+      "The total miles the car can drive",
       "The number of gallons used per mile driven"
     ],
     "correctAnswer": 3,
@@ -761,9 +761,9 @@ const allQuestions: SatMathQuestion[] = [
     "id": 50,
     "question": "A gym membership's total cost $C$, in dollars, after $m$ months is modeled by $C = 25m + 60$. Which statement best interprets the number $25$ in this context?",
     "options": [
-      "The one-time sign-up fee is 25 dollars.",
+      "The one-time sign-up fee for the membership is 25 dollars.",
       "The cost increases by 25 dollars for each additional month.",
-      "The total cost after one month is 25 dollars.",
+      "The total cost after the first month is exactly 25 dollars.",
       "The membership is valid for 25 months."
     ],
     "correctAnswer": 1,
@@ -824,7 +824,7 @@ const allQuestions: SatMathQuestion[] = [
       "The fixed monthly cost when no minutes are used",
       "The cost in dollars for each minute used",
       "The number of minutes included in the plan",
-      "The total cost of using the plan for 30 minutes"
+      "The total monthly cost for 30 minutes"
     ],
     "correctAnswer": 0,
     "explanation": "When $m = 0$, $C = 30$. The constant term is the fixed cost incurred regardless of minutes used, while $0.10$ is the cost per minute.",
@@ -1151,7 +1151,7 @@ const allQuestions: SatMathQuestion[] = [
     "id": 76,
     "question": "A biologist models the height of a plant using $P = 8t + 40$, where $P$ is the height in centimeters and $t$ is the number of weeks since planting. What does the number $8$ represent in this model?",
     "options": [
-      "The plant is 8 centimeters tall when it is planted.",
+      "The plant is 8 centimeters tall when first planted.",
       "The plant grows for a total of 8 weeks.",
       "The plant's height increases by 8 centimeters each week.",
       "The plant reaches a maximum height of 8 centimeters."
@@ -1256,9 +1256,9 @@ const allQuestions: SatMathQuestion[] = [
     "id": 83,
     "question": "The total cost $C$, in dollars, to rent a banquet hall is given by $C = 45n + 300$, where $n$ is the number of guests. Which of the following is the best interpretation of the number $300$ in this context?",
     "options": [
-      "The cost increases by $300 for each additional guest.",
-      "The cost per guest is $300.",
-      "The fixed cost of renting the hall, not including the per-guest charge.",
+      "The cost increases by \\$300 for each additional guest.",
+      "The cost per guest, in dollars, is 300.",
+      "The fixed cost of the hall, in dollars, is 300.",
       "The hall can hold a maximum of 300 guests."
     ],
     "correctAnswer": 2,
@@ -1317,7 +1317,7 @@ const allQuestions: SatMathQuestion[] = [
     "question": "The amount of water $W$, in gallons, remaining in a tank after $t$ minutes is given by $W = 50 - 2.5t$. What is the best interpretation of the value of $t$ for which $W = 0$?",
     "options": [
       "The tank starts with 20 gallons of water.",
-      "The tank loses water at a rate of 20 gallons per minute.",
+      "The tank loses 20 gallons of water per minute.",
       "The tank becomes empty 20 minutes after the start.",
       "The tank becomes empty 50 minutes after the start."
     ],
@@ -1438,7 +1438,7 @@ const allQuestions: SatMathQuestion[] = [
     "options": [
       "$x = 5$ only",
       "$x = 5$ and $x = -5$",
-      "$x = 12.5$",
+      "$x = 25$ and $x = -25$",
       "$x = -5$ only"
     ],
     "correctAnswer": 1,
@@ -2516,7 +2516,7 @@ const allQuestions: SatMathQuestion[] = [
     "id": 167,
     "question": "A ball is thrown upward and its height in feet after $t$ seconds is $h(t) = -16t^2 + 24t + 5$. What does the constant term $5$ represent?",
     "options": [
-      "The maximum height of the ball",
+      "The greatest height the ball reaches",
       "The time when the ball lands",
       "The height of the ball when it is released",
       "The height of the ball after $1$ second"
@@ -2651,10 +2651,10 @@ const allQuestions: SatMathQuestion[] = [
     "id": 176,
     "question": "A shop's daily profit, in dollars, is modeled by $P(x) = -2(x - 25)^2 + 800$, where $x$ is the selling price in dollars. Which statement best interprets the vertex of this model?",
     "options": [
-      "The maximum daily profit is $\\$25$.",
+      "The maximum profit is $\\$25$, at a price of $\\$800$.",
       "The profit is $\\$800$ when the price is $\\$0$.",
-      "The maximum daily profit is $\\$800$, reached when the price is $\\$25$.",
-      "The shop breaks even when the price is $\\$25$."
+      "The maximum profit is $\\$800$, at a price of $\\$25$.",
+      "The minimum profit is $\\$800$, at a price of $\\$25$."
     ],
     "correctAnswer": 2,
     "explanation": "Because the coefficient $-2$ is negative, the parabola opens downward and the vertex $(25, 800)$ is a maximum. So the greatest daily profit of $\\$800$ occurs at a selling price of $\\$25$.",
@@ -3011,10 +3011,10 @@ const allQuestions: SatMathQuestion[] = [
     "id": 200,
     "question": "In a scatterplot relating temperature (degrees) to ice cream sales (dollars), the line of best fit is $y = 8x - 40$. What is the best interpretation of the slope?",
     "options": [
-      "Each additional degree is associated with an $8$-dollar increase in predicted sales",
-      "Sales start at $8$ dollars",
+      "Each additional degree is associated with an $8$-dollar increase in sales",
+      "Predicted sales are $8$ dollars when the temperature is $0$ degrees",
       "Each additional degree is associated with a $40$-dollar decrease in sales",
-      "Every $8$ degrees adds $1$ dollar in sales"
+      "Each additional $8$ degrees adds $1$ dollar in sales"
     ],
     "correctAnswer": 0,
     "explanation": "The slope $8$ is the change in $y$ per unit change in $x$: each extra degree predicts an $8$-dollar rise in sales. The $-40$ is the intercept, not the slope.",
@@ -3026,9 +3026,9 @@ const allQuestions: SatMathQuestion[] = [
     "id": 201,
     "question": "A city surveys shoppers exiting a luxury store and concludes the average city resident spends $300$ dollars per week on clothing. Why is this inference likely invalid?",
     "options": [
-      "The sample size is too large",
+      "The sample of shoppers is too large to be useful",
       "The sample is not representative of all city residents",
-      "Averages cannot measure spending",
+      "Averages cannot describe spending by residents",
       "The survey should have used the median instead"
     ],
     "correctAnswer": 1,
@@ -3104,7 +3104,7 @@ const allQuestions: SatMathQuestion[] = [
       "Exactly $55\\%$ of all voters support the measure",
       "The true support is plausibly between $50\\%$ and $60\\%$",
       "Fewer than half of all voters support the measure",
-      "The sample is biased and unusable"
+      "The sample is biased and cannot be used"
     ],
     "correctAnswer": 1,
     "explanation": "The sample proportion is $\\frac{110}{200} = 55\\%$. With a $\\pm 5$-point margin, the plausible range for true support is $50\\%$ to $60\\%$; the exact value is not known.",
@@ -3133,7 +3133,7 @@ const allQuestions: SatMathQuestion[] = [
     "options": [
       "The car loses 85% of its value each year.",
       "The car's value starts at 850 dollars.",
-      "The car loses 15 dollars in value each year.",
+      "The car loses 15 dollars each year.",
       "The car loses 15% of its value each year."
     ],
     "correctAnswer": 3,
@@ -3162,9 +3162,9 @@ const allQuestions: SatMathQuestion[] = [
     "question": "Which of the following situations is best modeled by a linear function?",
     "options": [
       "A savings account that increases by 3% each year.",
-      "A colony of bacteria that doubles every hour.",
+      "A colony of bacteria that doubles in size every hour.",
       "A savings account that increases by 50 dollars each month.",
-      "An investment that triples every decade."
+      "An investment account that triples in value every decade."
     ],
     "correctAnswer": 2,
     "explanation": "Adding a constant amount (50 dollars each month) is linear. A constant percent (3% per year), doubling, or tripling all describe exponential change.",
@@ -3191,9 +3191,9 @@ const allQuestions: SatMathQuestion[] = [
     "id": 212,
     "question": "A line of best fit relating hours studied $x$ to a test score $y$ is $y = 6x + 52$. Which is the best interpretation of the number 6 in this model?",
     "options": [
-      "The predicted increase in test score for each additional hour studied.",
-      "The predicted test score of a student who studies 0 hours.",
-      "The maximum possible test score.",
+      "The predicted score increase for each additional hour studied.",
+      "The predicted test score of a student who studies for 0 hours.",
+      "The maximum possible test score that any student can earn.",
       "The number of hours needed to reach a score of 100."
     ],
     "correctAnswer": 0,
@@ -3236,8 +3236,8 @@ const allQuestions: SatMathQuestion[] = [
     "id": 215,
     "question": "A quality inspector randomly selects 150 light bulbs from a factory's daily production of 12,000 bulbs and finds that 6 are defective. Which is the most reasonable conclusion?",
     "options": [
-      "Exactly 480 bulbs produced that day are defective.",
-      "Only the 150 bulbs tested are defective.",
+      "About 480 bulbs will be defective on every day of production.",
+      "Only the 150 bulbs that were tested that day are defective.",
       "The defect rate will be exactly 4% every day.",
       "About 4% of the bulbs produced that day are likely defective."
     ],
@@ -3297,7 +3297,7 @@ const allQuestions: SatMathQuestion[] = [
     "question": "A biologist models the relationship between water temperature $x$ (in degrees Celsius) and the number of algae $y$ (in thousands) in a pond as $y = 1.5x + 8$. What does the value 8 represent in this model?",
     "options": [
       "The predicted increase in algae (in thousands) for each 1 degree increase in temperature.",
-      "The water temperature at which there are no algae.",
+      "The temperature, in degrees Celsius, at which there are no algae.",
       "The maximum number of algae the pond can support.",
       "The predicted number of algae (in thousands) when the temperature is 0 degrees Celsius."
     ],
@@ -3356,10 +3356,10 @@ const allQuestions: SatMathQuestion[] = [
     "id": 223,
     "question": "In a study, 45% of a random sample of voters favored a proposal, with a margin of error of 3 percentage points. Which statement best describes what this margin of error indicates?",
     "options": [
-      "Exactly 3% of the surveyed voters were undecided.",
-      "Exactly 45% of all voters favor the proposal.",
-      "The sample size should be increased by 3%.",
-      "The true percentage of all voters who favor the proposal is plausibly between 42% and 48%."
+      "Exactly 3% of the surveyed voters were undecided about it.",
+      "Exactly 45% of all voters in the population favor the proposal.",
+      "The sample size should be increased by 3% to be accurate.",
+      "Between 42% and 48% of all voters plausibly favor the proposal."
     ],
     "correctAnswer": 3,
     "explanation": "With a margin of error of 3 points around 45%, the plausible range for the true population percentage is $45 \\pm 3$, or 42% to 48%. It does not pin down an exact value.",
@@ -3534,15 +3534,15 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 235,
-    "question": "A spinner has four equal-sized regions labeled 1 dollar, 2 dollars, 3 dollars, and 6 dollars. A player spins once and wins the amount shown. What is the expected (average) winning per spin?",
+    "question": "A spinner has four equal-sized regions labeled 1, 2, 3, and 6. If the spinner is spun 200 times, about how many times would it be expected to land on an even number?",
     "options": [
-      "3.50 dollars",
-      "6 dollars",
-      "2 dollars",
-      "3 dollars"
+      "$50$",
+      "$150$",
+      "$25$",
+      "$100$"
     ],
     "correctAnswer": 3,
-    "explanation": "Each region is equally likely (probability $\\frac{1}{4}$), so the expected value is $\\frac{1 + 2 + 3 + 6}{4} = \\frac{12}{4} = 3$ dollars.",
+    "explanation": "Two of the four equally likely regions (2 and 6) are even, so the probability of an even number is $\\frac{2}{4} = \\frac{1}{2}$. Over 200 spins, expect about $\\frac{1}{2} \\times 200 = 100$.",
     "difficulty": "medium",
     "area": "problem-solving",
     "skill": "Probability and conditional probability"
@@ -3587,7 +3587,7 @@ const allQuestions: SatMathQuestion[] = [
       "$\\frac{1}{2}$"
     ],
     "correctAnswer": 2,
-    "explanation": "Use the complement: $P(\\text{at least one heads}) = 1 - P(\\text{no heads}) = 1 - \\left(\\frac{1}{2}\\right)^3 = 1 - \\frac{1}{8} = \\frac{7}{8}$.",
+    "explanation": "Of the $8$ equally likely outcomes (HHH, HHT, ..., TTT), only TTT has no heads. So $7$ of the $8$ outcomes have at least one heads: $\\frac{7}{8}$.",
     "difficulty": "hard",
     "area": "problem-solving",
     "skill": "Probability and conditional probability"
@@ -3602,7 +3602,7 @@ const allQuestions: SatMathQuestion[] = [
       "$\\frac{5}{14}$"
     ],
     "correctAnswer": 3,
-    "explanation": "The draws are dependent (no replacement): $P(\\text{both red}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$. Using $\\frac{5}{8} \\times \\frac{5}{8} = \\frac{25}{64}$ would wrongly treat the draws as independent.",
+    "explanation": "The first marble is red with probability $\\frac{5}{8}$; then $4$ of the remaining $7$ marbles are red. So the probability both are red is $\\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$. Using $\\frac{5}{8} \\times \\frac{5}{8} = \\frac{25}{64}$ wrongly assumes the first marble is put back.",
     "difficulty": "hard",
     "area": "problem-solving",
     "skill": "Probability and conditional probability"
@@ -3626,9 +3626,9 @@ const allQuestions: SatMathQuestion[] = [
     "id": 241,
     "question": "On a standardized test, a student's score is at the 80th percentile. Which statement is the correct interpretation?",
     "options": [
-      "The student answered 80% of the questions correctly.",
-      "About 80% of test-takers scored higher than the student.",
-      "The student's score was 80 points.",
+      "The student answered 80% of the questions on the test correctly.",
+      "About 80% of test-takers scored higher than the student's score.",
+      "The student's score was 80 points, or 80% of the maximum.",
       "About 80% of test-takers scored at or below the student's score."
     ],
     "correctAnswer": 3,
@@ -3644,7 +3644,7 @@ const allQuestions: SatMathQuestion[] = [
       "Class B's scores are higher on average than Class A's.",
       "Class A's median score is higher than Class B's.",
       "Class A's middle 50% of scores is more spread out than Class B's.",
-      "The two classes have identical score distributions."
+      "Class B's middle 50% of scores is more spread out than Class A's."
     ],
     "correctAnswer": 2,
     "explanation": "Both medians are 78, so center is equal. Class A's IQR is $84 - 70 = 14$ versus Class B's $82 - 74 = 8$, so Class A's middle 50% of scores is more spread out.",
@@ -3654,15 +3654,15 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 243,
-    "question": "Every value in a data set with a standard deviation of 5 is multiplied by 3. What is the standard deviation of the resulting data set?",
+    "question": "Every value in data set A is multiplied by 3 to form data set B. Which statement about the spread of the two data sets is true?",
     "options": [
-      "15",
-      "5",
-      "8",
-      "45"
+      "The standard deviation of B is 3 times that of A.",
+      "The standard deviations of A and B are equal.",
+      "The standard deviation of B is 3 more than that of A.",
+      "The standard deviation of B is one-third that of A."
     ],
     "correctAnswer": 0,
-    "explanation": "Multiplying every value by a constant $k$ scales the standard deviation by $|k|$: $5 \\times 3 = 15$. (Adding a constant, by contrast, would leave the standard deviation unchanged.)",
+    "explanation": "Multiplying every value by 3 moves each value three times as far from the mean, so every distance from the mean, and therefore the standard deviation, is 3 times as large. (Adding a constant, by contrast, would leave the spread unchanged.)",
     "difficulty": "hard",
     "area": "problem-solving",
     "skill": "One-variable data: distributions and measures of center and spread"
@@ -3761,10 +3761,10 @@ const allQuestions: SatMathQuestion[] = [
     "id": 250,
     "question": "A gym recruited 300 of its members who volunteered for a study and randomly assigned them to follow either a new training plan or their usual routine. After eight weeks, the new-plan group showed greater fitness improvement. Which conclusion is best supported?",
     "options": [
-      "The new plan causes greater improvement for everyone.",
-      "Members who improve more tend to prefer the new plan.",
-      "For these participants, the new plan likely caused greater improvement, but the result may not generalize to all gym members.",
-      "No cause-and-effect conclusion is possible from this study."
+      "The new plan causes more improvement for every member of the gym.",
+      "Members who improve more tend to choose the new plan instead.",
+      "The new plan likely caused more improvement for these volunteers.",
+      "No cause-and-effect conclusion is possible for volunteers."
     ],
     "correctAnswer": 2,
     "explanation": "Random ASSIGNMENT to the two groups supports a cause-and-effect conclusion for the participants. But because the participants were volunteers rather than a random SELECTION from a larger population, the result may not generalize beyond this group.",
@@ -3851,10 +3851,10 @@ const allQuestions: SatMathQuestion[] = [
     "id": 256,
     "question": "Researchers randomly selected 2,000 adults from across the country and found that those who reported drinking more coffee also reported sleeping more hours per night. The researchers did not assign how much coffee anyone drank. Which conclusion is best supported?",
     "options": [
-      "Drinking more coffee causes people to sleep more.",
-      "There is an association between coffee and sleep that can be generalized to the adult population, but the study does not establish that coffee causes more sleep.",
-      "The association applies only to the 2,000 participants and cannot be generalized to others.",
-      "There is no association between coffee and sleep."
+      "Drinking more coffee causes adults across the country to sleep more.",
+      "Coffee and sleep are associated among adults, but causation is not shown.",
+      "The association holds for the 2,000 participants only.",
+      "There is no association between coffee drinking and sleep among adults."
     ],
     "correctAnswer": 1,
     "explanation": "Random SELECTION from the population supports generalizing the observed association to that population. But because coffee amounts were not randomly ASSIGNED, this observational study cannot establish a cause-and-effect relationship.",
@@ -3882,9 +3882,9 @@ const allQuestions: SatMathQuestion[] = [
     "question": "Two surveys estimate the same population proportion using the same methods. Survey A samples 400 people, and Survey B samples 1,600 people. Which statement about the margin of error is correct?",
     "options": [
       "Survey A will have a smaller margin of error because it uses a smaller sample.",
-      "Both surveys will have the same margin of error.",
-      "A larger sample size increases the margin of error.",
-      "Survey B will tend to have a smaller margin of error because it uses a larger sample size."
+      "Both surveys will have the same margin of error because they use the same methods.",
+      "Survey B will have a larger margin of error because a larger sample adds more error.",
+      "Survey B will tend to have a smaller margin of error because its sample is larger."
     ],
     "correctAnswer": 3,
     "explanation": "With the same methods, a larger sample size produces a smaller margin of error. Since Survey B samples more people, it will tend to have a smaller margin of error and a more precise estimate.",

@@ -16,9 +16,9 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence uses commas correctly in a series?',
     options: [
       'She packed shirts, pants, and shoes.',
-      'She packed shirts pants, and shoes.',
-      'She packed, shirts pants and shoes.',
-      'She packed shirts pants and shoes.'
+      'She packed shirts, pants and, shoes.',
+      'She packed, shirts, pants and shoes.',
+      'She packed shirts pants, and shoes.'
     ],
     correctAnswer: 0,
     explanation: 'Items in a series are separated by commas: shirts, pants, and shoes.',
@@ -91,28 +91,28 @@ const allQuestions: SatPunctuationQuestion[] = [
   },
   {
     id: 7,
-    question: 'Where should the comma go? "However the results were inconclusive."',
+    question: 'Which sentence is punctuated correctly?',
     options: [
-      'After "However"',
-      'After "results"',
-      'After "were"',
-      'No comma is needed.'
+      'However, the results were inconclusive.',
+      'However the results, were inconclusive.',
+      'However the results were, inconclusive.',
+      'However the results were inconclusive.'
     ],
     correctAnswer: 0,
-    explanation: '"However" at the start of a sentence is an introductory word and needs a comma after it.',
+    explanation: '"However" at the start of a sentence is an introductory word and needs a comma after it. No comma belongs between the subject "the results" and the verb "were," or between "were" and "inconclusive."',
     difficulty: 'easy',
   },
   {
     id: 8,
     question: 'Which sentence has CORRECT punctuation?',
     options: [
-      'The teacher, explained the lesson clearly.',
-      'The teacher explained the lesson clearly.',
-      'The teacher explained, the lesson clearly.',
-      'The, teacher explained the lesson clearly.'
+      'Yesterday, the teacher, explained the lesson clearly.',
+      'Yesterday, the teacher explained the lesson clearly.',
+      'Yesterday, the teacher explained, the lesson clearly.',
+      'Yesterday the teacher, explained the lesson clearly.'
     ],
     correctAnswer: 1,
-    explanation: 'No comma should separate a subject ("the teacher") from its verb ("explained").',
+    explanation: 'A comma may follow the introductory word "Yesterday," but no comma should separate a subject ("the teacher") from its verb ("explained") or a verb from its object ("the lesson").',
     difficulty: 'easy',
   },
   // ─── MEDIUM ────────────────────────────────────────────────────────
@@ -120,7 +120,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 9,
     question: 'Which sentence correctly punctuates a nonessential clause?',
     options: [
-      'The CEO who founded the company retired last year.',
+      'The CEO, who founded the company retired, last year.',
       'The CEO, who founded the company, retired last year.',
       'The CEO, who founded the company retired last year.',
       'The CEO who founded the company, retired last year.'
@@ -135,7 +135,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'The experiment failed, then the team decided to start over.',
       'The experiment failed; the team decided to start over.',
-      'The experiment failed, the team, decided to start over.',
+      'The experiment failed, the team decided to start over.',
       'The experiment failed, so, the team decided to start over.'
     ],
     correctAnswer: 1,
@@ -149,10 +149,10 @@ const allQuestions: SatPunctuationQuestion[] = [
       'She studied all night, therefore she passed the exam.',
       'She studied all night; therefore, she passed the exam.',
       'She studied all night therefore; she passed the exam.',
-      'She studied all night; therefore she passed, the exam.'
+      'She studied; all night therefore she passed the exam.'
     ],
     correctAnswer: 1,
-    explanation: 'The pattern is: independent clause + semicolon + conjunctive adverb + comma + independent clause.',
+    explanation: 'The pattern is independent clause + semicolon + conjunctive adverb + comma + independent clause. A comma before "therefore" creates a comma splice, and a semicolon placed after "therefore" or after "studied" splits the clauses in the wrong spot.',
     difficulty: 'medium',
   },
   {
@@ -185,13 +185,13 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 14,
     question: 'Select the correctly punctuated sentence.',
     options: [
-      'The coach told the players, that they needed to improve.',
-      'The coach told the players that they needed to improve.',
-      'The coach, told the players that they needed to improve.',
-      'The coach told, the players that they needed to improve.'
+      'After the game the coach told the players, that they needed to improve.',
+      'After the game, the coach told the players that they needed to improve.',
+      'After the game, the coach, told the players that they needed to improve.',
+      'After the game, the coach told the players, that they needed to improve.'
     ],
     correctAnswer: 1,
-    explanation: 'No comma should come between a verb ("told") and its object clause ("that they needed to improve"). "That" introduces an essential clause.',
+    explanation: 'A comma follows the introductory phrase "After the game," but no comma should come between the subject and verb ("the coach told") or between "told the players" and the "that" clause, which is the essential content of what the coach told them.',
     difficulty: 'medium',
   },
   {
@@ -201,10 +201,10 @@ const allQuestions: SatPunctuationQuestion[] = [
       ': (colon)',
       '; (semicolon)',
       ', (comma)',
-      '— (dash)'
+      'No punctuation'
     ],
     correctAnswer: 0,
-    explanation: '"The delegates came from three cities" is a complete sentence. A colon introduces the list. The list items use semicolons because they contain internal commas.',
+    explanation: '"The delegates came from three cities" is a complete sentence, so a colon introduces the list that explains it. A semicolon would need an independent clause after it, a comma would blur into the commas inside the list, and no punctuation runs "cities" into "Tokyo." The list items use semicolons because they contain internal commas.',
     difficulty: 'medium',
   },
   {
@@ -288,15 +288,15 @@ const allQuestions: SatPunctuationQuestion[] = [
   },
   {
     id: 22,
-    question: 'Renaissance artists such as Leonardo da Vinci ___ Michelangelo ___ and Raphael transformed European art ___ their innovations in perspective ___ anatomy ___ and composition influenced generations of painters. Choose the best punctuation for all five blanks.',
+    question: 'Renaissance artists such as Leonardo da Vinci, Michelangelo, and Raphael transformed European ___ innovations in perspective, anatomy, and composition influenced generations of painters. Which choice fills the blank correctly?',
     options: [
-      ', / , / ; / , / ,',
-      ', / , / , / , / ,',
-      '; / ; / . / , / ,',
-      ', / , / : / , / ,'
+      'art; their',
+      'art, their',
+      'art their',
+      'art and, their'
     ],
     correctAnswer: 0,
-    explanation: 'The first three blanks create a series (commas). A semicolon joins the two independent clauses. The final two blanks are another series (commas).',
+    explanation: 'Both "Renaissance artists ... transformed European art" and "their innovations ... influenced generations of painters" are independent clauses, so a semicolon joins them. A comma alone creates a comma splice, no punctuation creates a run-on, and a comma after "and" separates the conjunction from the clause it introduces.',
     difficulty: 'hard',
   },
   {
@@ -345,8 +345,8 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'We bought apples oranges, and pears.',
       'We bought apples, oranges, and pears.',
-      'We bought, apples oranges and pears.',
-      'We bought apples oranges and pears.'
+      'We bought, apples, oranges and pears.',
+      'We bought apples, oranges and, pears.'
     ],
     correctAnswer: 1,
     explanation: 'Items in a series are separated by commas: apples, oranges, and pears.',
@@ -410,11 +410,11 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'The movie was long we enjoyed it.',
       'The movie was long, but we enjoyed it.',
-      'The movie was, long we enjoyed it.',
-      'The movie was long we, enjoyed it.'
+      'The movie was long but, we enjoyed it.',
+      'The movie was, long but we enjoyed it.'
     ],
     correctAnswer: 1,
-    explanation: 'Adding the conjunction "but" after the comma correctly joins the two independent clauses.',
+    explanation: 'Adding the conjunction "but" after the comma correctly joins the two independent clauses. The comma belongs before the conjunction, not after it, and deleting the comma entirely leaves a run-on.',
     difficulty: 'easy',
   },
   {
@@ -449,7 +449,7 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'The store was closed, we went home.',
       'The store was closed; we went home.',
-      'The store was closed we went home.',
+      'The store was closed we; went home.',
       'The store, was closed we went home.'
     ],
     correctAnswer: 1,
@@ -474,9 +474,9 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence is punctuated correctly?',
     options: [
       'I need pens, paper, and glue.',
-      'I need pens paper and glue.',
+      'I need, pens, paper and glue.',
       'I need pens paper, and glue.',
-      'I, need pens paper and glue.'
+      'I need pens, paper and, glue.'
     ],
     correctAnswer: 0,
     explanation: 'Three items in a series are separated by commas: pens, paper, and glue.',
@@ -529,10 +529,10 @@ const allQuestions: SatPunctuationQuestion[] = [
       'The plan was risky; moreover, it was expensive.',
       'The plan was risky, moreover it was expensive.',
       'The plan was risky moreover; it was expensive.',
-      'The plan was risky; moreover it was expensive.'
+      'The plan was risky moreover, it was expensive.'
     ],
     correctAnswer: 0,
-    explanation: 'A conjunctive adverb linking two independent clauses takes a semicolon before it and a comma after it.',
+    explanation: 'A conjunctive adverb linking two independent clauses takes a semicolon before it and a comma after it. A comma before "moreover" creates a comma splice.',
     difficulty: 'medium',
   },
   {
@@ -542,7 +542,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'My oldest brother, who lives in Denver, is a doctor.',
       'My oldest brother who lives in Denver, is a doctor.',
       'My oldest brother, who lives in Denver is a doctor.',
-      'My oldest brother who lives, in Denver is a doctor.'
+      'My oldest brother, who lives, in Denver is a doctor.'
     ],
     correctAnswer: 0,
     explanation: 'The nonessential clause "who lives in Denver" needs commas on both sides.',
@@ -568,10 +568,10 @@ const allQuestions: SatPunctuationQuestion[] = [
       'She had one goal: to win the championship.',
       'She had one goal; namely to win the championship.',
       'She had one goal, to win, the championship.',
-      'She had one, goal, to win the championship.'
+      'She had: one goal, to win the championship.'
     ],
     correctAnswer: 0,
-    explanation: 'A colon follows a complete clause to introduce an explanation. "To win the championship" is not independent, so a semicolon is wrong.',
+    explanation: 'A colon follows a complete clause ("She had one goal") to introduce an explanation. "To win the championship" is not independent, so a semicolon is wrong, and a colon cannot come between a verb and its object ("had: one goal").',
     difficulty: 'medium',
   },
   {
@@ -591,13 +591,13 @@ const allQuestions: SatPunctuationQuestion[] = [
     id: 45,
     question: 'Which sentence is punctuated correctly?',
     options: [
-      'The book that I borrowed is overdue.',
-      'The book, that I borrowed, is overdue.',
-      'The book that I borrowed, is overdue.',
-      'The book, that I borrowed is overdue.'
+      'Sadly, the book that I borrowed is overdue.',
+      'Sadly, the book, that I borrowed, is overdue.',
+      'Sadly the book that I borrowed, is overdue.',
+      'Sadly, the book, that I borrowed is overdue.'
     ],
     correctAnswer: 0,
-    explanation: 'A restrictive "that" clause is essential to the meaning and takes no commas.',
+    explanation: 'The sentence adverb "Sadly" is set off by a comma, but the restrictive "that" clause is essential to the meaning (it tells which book) and takes no commas, and no comma may separate the subject "the book that I borrowed" from its verb "is."',
     difficulty: 'medium',
   },
   {
@@ -619,11 +619,11 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'The forecast was grim; heavy snow was expected all week.',
       'The forecast was grim, heavy snow was expected all week.',
-      'The forecast was grim heavy snow was expected all week.',
+      'The forecast was grim heavy; snow was expected all week.',
       'The forecast, was grim heavy snow was expected all week.'
     ],
     correctAnswer: 0,
-    explanation: 'A semicolon joins the two independent clauses; the comma version is a splice and the third is a run-on.',
+    explanation: 'A semicolon joins the two independent clauses. A comma alone creates a comma splice, leaving out punctuation creates a run-on, and a semicolon placed inside a clause ("grim heavy; snow") splits it in the wrong spot.',
     difficulty: 'medium',
   },
   {
@@ -633,7 +633,7 @@ const allQuestions: SatPunctuationQuestion[] = [
       'My neighbor, a retired teacher, tutors kids for free.',
       'My neighbor a retired teacher, tutors kids for free.',
       'My neighbor, a retired teacher tutors kids for free.',
-      'My neighbor a retired teacher tutors kids for free.'
+      'My neighbor, a retired teacher tutors kids, for free.'
     ],
     correctAnswer: 0,
     explanation: 'The nonessential appositive "a retired teacher" needs commas on both sides.',
@@ -645,11 +645,11 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'When the bell rang, the students left.',
       'The students left when the bell rang.',
-      'When the bell rang the students left.',
-      'After lunch, we returned to class.'
+      'The students who heard the bell, left the room.',
+      'When the lunch period ended, we returned to class.'
     ],
     correctAnswer: 2,
-    explanation: 'An introductory dependent clause ("When the bell rang") must be followed by a comma; that comma is missing.',
+    explanation: 'A comma cannot separate a subject ("The students who heard the bell") from its verb ("left"). The other three sentences are punctuated correctly: an introductory clause may be followed by a comma, and a clause at the end of a sentence needs none.',
     difficulty: 'medium',
   },
   {
@@ -657,12 +657,12 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence uses commas correctly?',
     options: [
       'For the trip we need tickets, passports, and luggage.',
-      'For the trip we need tickets passports and luggage.',
+      'For the trip, we need, tickets passports and luggage.',
       'For the trip, we need tickets passports and luggage.',
-      'For the trip we need, tickets passports and luggage.'
+      'For the trip we need, tickets, passports and luggage.'
     ],
     correctAnswer: 0,
-    explanation: 'The three series items are separated by commas: tickets, passports, and luggage. The comma after the short introductory phrase "For the trip" is optional; the other sentences are wrong because they omit the series commas (and one misplaces a comma after "need").',
+    explanation: 'The three series items are separated by commas: tickets, passports, and luggage. The comma after the short introductory phrase "For the trip" is optional. The other sentences either omit series commas or put a comma between the verb "need" and its objects.',
     difficulty: 'medium',
   },
   {
@@ -672,10 +672,10 @@ const allQuestions: SatPunctuationQuestion[] = [
       'Three cities hosted the games, they were spread across three continents.',
       'Three cities hosted the games; they were spread across three continents.',
       'Three cities hosted the games they were spread across three continents.',
-      'Three, cities hosted the games they were spread across three continents.'
+      'Three cities hosted the games; they were spread, across three continents.'
     ],
     correctAnswer: 1,
-    explanation: 'A semicolon joins the two independent clauses; the comma version is a splice and the third is a run-on.',
+    explanation: 'A semicolon joins the two independent clauses. A comma alone creates a comma splice, leaving out punctuation creates a run-on, and the comma after "spread" wrongly separates the verb from the phrase that completes it.',
     difficulty: 'medium',
   },
   {
@@ -683,12 +683,12 @@ const allQuestions: SatPunctuationQuestion[] = [
     question: 'Which sentence correctly uses a comma before "and"?',
     options: [
       'The chef prepared the meal, and the waiter served it.',
-      'The chef prepared the meal, and served it.',
-      'The chef, prepared the meal and served it.',
-      'The chef prepared, the meal and served it.'
+      'The chef prepared the meal, and served it to the guests.',
+      'The chef prepared the meal and, the waiter served it.',
+      'The chef prepared, the meal and the waiter served it.'
     ],
     correctAnswer: 0,
-    explanation: 'A comma before "and" is correct when it joins two independent clauses; "and served it" would be only a compound predicate.',
+    explanation: 'A comma before "and" is correct when it joins two independent clauses, as in "the chef prepared the meal" and "the waiter served it." In "and served it to the guests" there is no second subject, so that comma splits a compound predicate; the comma also never goes after "and" or between a verb and its object.',
     difficulty: 'medium',
   },
   {
@@ -815,11 +815,11 @@ const allQuestions: SatPunctuationQuestion[] = [
     options: [
       'Some critics loved the film, others found it dull.',
       'Some critics loved the film others found it dull.',
-      'Some critics loved, the film others found it dull.',
+      'Some critics loved the film; others, found it dull.',
       'Some critics loved the film; others found it dull.'
     ],
     correctAnswer: 3,
-    explanation: 'A semicolon joins the two contrasting independent clauses; the comma version is a splice and the second is a run-on.',
+    explanation: 'A semicolon joins the two contrasting independent clauses. A comma alone creates a comma splice, leaving out punctuation creates a run-on, and no comma may separate the subject "others" from its verb "found."',
     difficulty: 'hard',
   },
   {
