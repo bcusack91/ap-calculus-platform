@@ -33,7 +33,7 @@ export const satTestDayStrategyPart6Data = {
 ### What NOT To Do
 - ❌ Cram the night before (diminishing returns)
 - ❌ Try to learn new concepts (too late for that)
-- ❌ Stay up late studying (sleep deprivation costs ~100 points)
+- ❌ Stay up late studying (a short night hurts focus and recall more than one more hour of review helps)
 - ❌ Change your routine (eat what you normally eat)`
     },
     {
@@ -77,15 +77,15 @@ export const satTestDayStrategyPart6Data = {
 | Pencils for scratch work | ✅ | Digital SAT still allows scratch paper |
 | Phone (silenced) | ✅ | Will be collected during test |
 
-### Sleep vs. Cramming: The Research
+### Sleep vs. Cramming
 
-| Hours of Sleep | Cognitive Performance | Study Value of Extra Hour |
-|---|---|---|
-| 8+ hours | 100% (baseline) | — |
-| 7 hours | ~95% | Low — mild impact |
-| 6 hours | ~85% | Not worth it |
-| 5 hours | ~70% | Significantly harmful |
-| 4 hours | ~55% | Equivalent to losing ~100+ points |
+| The night before | What it does |
+|---|---|
+| A normal full night (8+ hours for most teens) | Working memory, reading focus and careful arithmetic are at their best |
+| Cutting an hour or two to review | Little new material sticks this late, and the lost sleep costs focus on a 2-hour-14-minute test |
+| A very short night | Slower reading and more careless errors, the mistakes that cost the most points on test day |
+
+Sleep research consistently finds that short sleep impairs attention and working memory, both of which the SAT leans on for over two hours. No study gives an exact point cost, so treat any specific number you hear as a guess — but the direction is not in doubt.
 
 ### Breakfast Recommendations
 

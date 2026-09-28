@@ -153,12 +153,12 @@ The drain slows down the filling but doesn't stop it (fill rate > drain rate).`
       content: '**Set Up the Equation** 🔍\n\nFor each scenario, choose the correct equation setup.',
       exercise: {
         dropdowns: [
-          { label: 'Worker A: 8 hrs, Worker B: 12 hrs. Time together?', options: ['1/8 + 1/12 = 1/t', '8 + 12 = t', '1/8 × 1/12 = 1/t', '8 × 12 = t'] },
+          { label: 'Worker A: 8 hrs, Worker B: 12 hrs. Time together?', options: ['1/8 + 1/12 = 1/t', '8 + 12 = t', '1/8  \\times  1/12 = 1/t', '8  \\times  12 = t'] },
           { label: 'Mix x mL of 30% with 50 mL of 60% to get 45%', options: ['0.30x + 0.60(50) = 0.45(x + 50)', '0.30x + 0.60(50) = 0.45x', 'x/30 + 50/60 = 45', '30x + 60(50) = 45'] },
           { label: 'Tap fills in 10 hrs, drain empties in 15 hrs', options: ['Net rate = 1/10 − 1/15', 'Net rate = 1/10 + 1/15', '10 − 15 = net time', '10 + 15 = net time'] },
-          { label: '3 workers do a job in 14 days. Days for 7 workers?', options: ['3 × 14 = 7 × d', '3/14 = 7/d', '3 + 14 = 7 + d', '14/3 = d/7'] }
+          { label: '3 workers do a job in 14 days. Days for 7 workers?', options: ['3  \\times  14 = 7  \\times  d', '3/14 = 7/d', '3 + 14 = 7 + d', '14/3 = d/7'] }
         ],
-        correctAnswers: ['1/8 + 1/12 = 1/t', '0.30x + 0.60(50) = 0.45(x + 50)', 'Net rate = 1/10 − 1/15', '3 × 14 = 7 × d'],
+        correctAnswers: ['1/8 + 1/12 = 1/t', '0.30x + 0.60(50) = 0.45(x + 50)', 'Net rate = 1/10 − 1/15', '3  \\times  14 = 7  \\times  d'],
         hint1: 'Add rates (not times) for combined work: $1/a + 1/b = 1/t$.',
         hint2: 'Amount of substance from each part equals amount in the mixture.',
         hint3: 'Drain works against the fill — subtract its rate.',

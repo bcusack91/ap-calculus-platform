@@ -147,10 +147,10 @@ Some SAT questions use radians instead of degrees:
           'Circle with circumference 18π. Radius = [9|18|36|6]'
         ],
         correctAnswers: ['4π', '10π', '90°', '9'],
-        hint1: 'Arc length = (angle/360) × 2πr.',
-        hint2: 'Sector area = (angle/360) × $\\pi r^{2}$.',
+        hint1: 'Arc length = (angle/360)  \\times  2πr.',
+        hint2: 'Sector area = (angle/360)  \\times  $\\pi r^{2}$.',
         hint3: 'An inscribed angle subtending a diameter (semicircle) is always 90°.',
-        explanation: 'Arc: (90/360)(2π×8) = (1/4)(16π) = 4π. Sector: (36/360)(π×100) = (1/10)(100π) = 10π. Semicircle inscribed angle = 90° (Thales\' theorem). Circumference: 2πr = 18π → r = 9.'
+        explanation: 'Arc: (90/360)(2π \\times 8) = (1/4)(16π) = 4π. Sector: (36/360)(π \\times 100) = (1/10)(100π) = 10π. Semicircle inscribed angle = 90° (Thales\' theorem). Circumference: 2πr = 18π → r = 9.'
       }
     },
     {

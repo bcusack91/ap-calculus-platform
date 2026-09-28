@@ -48,7 +48,7 @@ $100 \\times 1.20 = 120$, then $120 \\times 0.80 = 96$ — that's a 4% net decre
 |------|------|
 | Multiplier for 30% off | $1 - 0.30 = 0.70$ |
 | Set up equation | $0.70x = 56$ |
-| Solve | $x = 56 ÷ 0.70 = 80$, i.e. \\$80 |
+| Solve | $x = 56  \\div  0.70 = 80$, i.e. \\$80 |
 
 ⚠️ Common mistake: adding 30% to \\$56 gives \\$72.80, which is WRONG.
 
@@ -58,11 +58,11 @@ $100 \\times 1.20 = 120$, then $120 \\times 0.80 = 96$ — that's a 4% net decre
 
 | Step | Work |
 |------|------|
-| After 25% rise | $200 × 1.25 = 250$ |
-| After 20% fall | $250 × 0.80 = 200$ |
+| After 25% rise | $200  \\times  1.25 = 250$ |
+| After 20% fall | $250  \\times  0.80 = 200$ |
 | Net change | $\\frac{200 - 200}{200} = 0\\%$ |
 
-This time it happens to be zero — but that's because $1.25 × 0.80 = 1.00$ exactly.`
+This time it happens to be zero — but that's because $1.25  \\times  0.80 = 1.00$ exactly.`
     },
     {
       id: 'rp2-quiz1',
@@ -105,11 +105,11 @@ These are all "percent increase" problems.
 | Component | Calculation | Amount |
 |-----------|-----------|--------|
 | Meal | — | \\$42.00 |
-| Tax (8%) | $42 × 0.08$ | \\$3.36 |
-| Tip (20%) | $42 × 0.20$ | \\$8.40 |
+| Tax (8%) | $42  \\times  0.08$ | \\$3.36 |
+| Tip (20%) | $42  \\times  0.20$ | \\$8.40 |
 | Total | — | \\$53.76 |
 
-**With multiplier:** $42 × (1 + 0.08 + 0.20) = 42 × 1.28 = 53.76$, i.e. \\$53.76
+**With multiplier:** $42  \\times  (1 + 0.08 + 0.20) = 42  \\times  1.28 = 53.76$, i.e. \\$53.76
 
 ### Worked Example 4
 
@@ -119,7 +119,7 @@ These are all "percent increase" problems.
 |------|-----------|
 | 40% markup | $1.40$ |
 | 10% discount | $0.90$ |
-| Net | $1.40 × 0.90 = 1.26$ |
+| Net | $1.40  \\times  0.90 = 1.26$ |
 
 The net markup is **26%**, not 30%.`
     },
@@ -133,7 +133,7 @@ The net markup is **26%**, not 30%.`
             question: 'After an 8% sales tax, a laptop costs \\$810. What was the pre-tax price?',
             options: ['\\$750', '\\$745.20', '\\$802', '\\$774'],
             correctAnswer: 0,
-            explanation: '$1.08x = 810$ → $x = 810 ÷ 1.08 = \\$750$.'
+            explanation: '$1.08x = 810$ → $x = 810  \\div  1.08 = \\$750$.'
           },
           {
             question: 'A population doubles every 10 years. After 30 years, by what percent has it increased?',

@@ -127,7 +127,7 @@ The SAT often asks you to rearrange a formula. Treat every other variable as a n
             question: 'If $d = rt$, which correctly expresses $t$?',
             options: ['$t = \\frac{d}{r}$', '$t = dr$', '$t = d - r$', '$t = \\frac{r}{d}$'],
             correctAnswer: 0,
-            explanation: 'Divide both sides by $r$: $t = d/r$. Distance = rate × time → time = distance ÷ rate.'
+            explanation: 'Divide both sides by $r$: $t = d/r$. Distance = rate  \\times  time → time = distance  \\div  rate.'
           },
           {
             question: 'If $\\frac{x}{a} + \\frac{y}{b} = 1$, what is $y$ in terms of $x$, $a$, and $b$?',

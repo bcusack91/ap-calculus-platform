@@ -86,7 +86,7 @@ $$= 2x \\cdot x + 2x \\cdot (-5) + 3 \\cdot x + 3 \\cdot (-5)$$
 
 $$= 2x^2 - 10x + 3x - 15 = 2x^2 - 7x - 15$$
 
-**Example 4 — Trinomial × Binomial:**
+**Example 4 — Trinomial  \\times  Binomial:**
 
 $$(x^2 + 2x - 1)(x + 3)$$
 

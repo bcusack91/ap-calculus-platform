@@ -86,9 +86,9 @@ the same population, how many would you expect to prefer Brand A?"**
 $500 \\times 0.42 = 210$ people.
 
 ### SAT Probability from Tables — the Full Playbook
-1. **No restriction** ("from all participants"): cell ÷ grand total
+1. **No restriction** ("from all participants"): cell  \\div  grand total
 2. **Restricted group** ("from the seniors" / "from those who said yes"):
-   cell ÷ that row or column total
+   cell  \\div  that row or column total
 3. **"NOT"**: count the other cells, or use 1 minus`
     },
     {

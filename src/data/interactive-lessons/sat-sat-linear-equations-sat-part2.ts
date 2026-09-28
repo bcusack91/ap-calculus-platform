@@ -83,7 +83,7 @@ If the SAT asks "For what value of $k$ does the system have no solution?" — ma
             question: 'The system $2x + 3y = 6$ and $4x + 6y = k$ has infinitely many solutions when $k$ equals:',
             options: ['$12$', '$6$', '$0$', '$24$'],
             correctAnswer: 0,
-            explanation: 'The second equation is exactly 2× the first. So $k = 2 \\times 6 = 12$. If $k \\neq 12$, there are no solutions (parallel lines).'
+            explanation: 'The second equation is exactly 2 \\times  the first. So $k = 2 \\times 6 = 12$. If $k \\neq 12$, there are no solutions (parallel lines).'
           },
           {
             question: 'A store sells apples for \\$2 each and bananas for \\$1 each. Maria buys 8 fruits for \\$11. How many apples did she buy?',

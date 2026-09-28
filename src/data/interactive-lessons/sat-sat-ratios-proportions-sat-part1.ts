@@ -49,8 +49,8 @@ $$\\frac{3}{14} = \\frac{7}{x} \\implies 3x = 98 \\implies x = \\frac{98}{3} \\a
 
 | Store | Calculation | Unit Rate |
 |-------|------------|-----------|
-| A | $8.50 ÷ 5$ | \\$1.70/lb |
-| B | $4.80 ÷ 3$ | \\$1.60/lb |
+| A | $8.50  \\div  5$ | \\$1.70/lb |
+| B | $4.80  \\div  3$ | \\$1.60/lb |
 
 Store B is cheaper by \\$0.10 per pound.`
     },
@@ -70,7 +70,7 @@ Store B is cheaper by \\$0.10 per pound.`
             question: 'A car travels 225 miles on 9 gallons of gas. How many miles per gallon?',
             options: ['$25$', '$20$', '$30$', '$22.5$'],
             correctAnswer: 0,
-            explanation: 'Unit rate: $225 ÷ 9 = 25$ miles per gallon.'
+            explanation: 'Unit rate: $225  \\div  9 = 25$ miles per gallon.'
           },
           {
             question: 'If $\\frac{x}{12} = \\frac{5}{4}$, what is $x$?',
@@ -104,8 +104,8 @@ Sometimes the SAT gives you a ratio and one part, not the total.
 
 | Step | Work |
 |------|------|
-| Gallons needed | $480 ÷ 32 = 15$ gallons |
-| Cost | $15 × 3.60 = 54$, i.e. \\$54 |`
+| Gallons needed | $480  \\div  32 = 15$ gallons |
+| Cost | $15  \\times  3.60 = 54$, i.e. \\$54 |`
     },
     {
       id: 'rp1-quiz2',
@@ -117,13 +117,13 @@ Sometimes the SAT gives you a ratio and one part, not the total.
             question: 'Red, green, and blue marbles are in the ratio $1:2:3$. If there are 18 blue marbles, how many total marbles are there?',
             options: ['$36$', '$24$', '$42$', '$54$'],
             correctAnswer: 0,
-            explanation: 'Blue = 3 parts = 18, so 1 part = 6. Total parts = $1 + 2 + 3 = 6$. Total = $6 × 6 = 36$.'
+            explanation: 'Blue = 3 parts = 18, so 1 part = 6. Total parts = $1 + 2 + 3 = 6$. Total = $6  \\times  6 = 36$.'
           },
           {
             question: 'A factory produces widgets at 120 per hour. How many hours to produce 2,100 widgets?',
             options: ['$17.5$', '$17$', '$18$', '$25.2$'],
             correctAnswer: 0,
-            explanation: '$2100 ÷ 120 = 17.5$ hours.'
+            explanation: '$2100  \\div  120 = 17.5$ hours.'
           },
           {
             question: 'If $\\frac{a}{b} = \\frac{3}{7}$ and $a + b = 40$, what is $a$?',
@@ -159,7 +159,7 @@ Sometimes the SAT gives you a ratio and one part, not the total.
 
 | Concept | Formula | When to Use |
 |---------|---------|-------------|
-| Ratio $a:b$ | Part $= \\frac{a}{a+b} × T$ | Given total |
+| Ratio $a:b$ | Part $= \\frac{a}{a+b}  \\times  T$ | Given total |
 | Ratio with one part | $\\frac{a}{b} = \\frac{x}{\\text{known}}$ | Given one quantity |
 | Unit rate | Divide total by count | Comparing costs/speeds |
 | Cross multiply | $ad = bc$ | Solving proportions |

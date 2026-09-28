@@ -61,8 +61,8 @@ Yes — $k = 3$ is constant, so $y = 3x$.
 
 | Step | Work |
 |------|------|
-| Workers × time = constant | $4 × 9 = 36$ worker-days |
-| New equation | $6 × t = 36$ |
+| Workers × time = constant | $4  \\times  9 = 36$ worker-days |
+| New equation | $6  \\times  t = 36$ |
 | Solve | $t = 6$ days |`
     },
     {

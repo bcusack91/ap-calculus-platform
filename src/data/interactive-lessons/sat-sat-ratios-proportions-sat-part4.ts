@@ -114,7 +114,7 @@ The numerator and denominator conversions partially cancel — a common SAT shor
 
 ### Conversion Chain Template
 
-$$\\text{Start} × \\frac{\\text{new unit}}{\\text{old unit}} × \\frac{\\text{new unit}}{\\text{old unit}} = \\text{Result}$$
+$$\\text{Start}  \\times  \\frac{\\text{new unit}}{\\text{old unit}}  \\times  \\frac{\\text{new unit}}{\\text{old unit}} = \\text{Result}$$
 
 Write every step with units. If units don't cancel correctly, something is flipped.`
     },
@@ -151,14 +151,14 @@ Write every step with units. If units don't cancel correctly, something is flipp
       content: '**Which Conversion Factor?** 🔍\n\nPick the correct factor to go from the starting unit to the target unit.',
       exercise: {
         dropdowns: [
-          { label: 'Miles → feet', options: ['× 5,280', '÷ 5,280', '× 1,760', '÷ 1,760'] },
-          { label: 'Hours → seconds', options: ['× 3,600', '÷ 3,600', '× 60', '÷ 60'] },
-          { label: 'Square feet → square yards', options: ['÷ 9', '÷ 3', '× 9', '× 3'] },
-          { label: '$kg/m^{3}$ → $g/cm^{3}$', options: ['÷ 1,000', '× 1,000', '÷ 1,000,000', '× 1,000,000'] }
+          { label: 'Miles → feet', options: [' \\times  5,280', ' \\div  5,280', ' \\times  1,760', ' \\div  1,760'] },
+          { label: 'Hours → seconds', options: [' \\times  3,600', ' \\div  3,600', ' \\times  60', ' \\div  60'] },
+          { label: 'Square feet → square yards', options: [' \\div  9', ' \\div  3', ' \\times  9', ' \\times  3'] },
+          { label: '$kg/m^{3}$ → $g/cm^{3}$', options: [' \\div  1,000', ' \\times  1,000', ' \\div  1,000,000', ' \\times  1,000,000'] }
         ],
-        correctAnswers: ['× 5,280', '× 3,600', '÷ 9', '÷ 1,000'],
+        correctAnswers: [' \\times  5,280', ' \\times  3,600', ' \\div  9', ' \\div  1,000'],
         hint1: '1 mile = 5,280 feet — bigger unit to smaller, so multiply.',
-        hint2: '1 hour = 3,600 seconds (60 min × 60 sec).',
+        hint2: '1 hour = 3,600 seconds (60 min  \\times  60 sec).',
         hint3: '$1 \\text{ yd}^2 = (3 \\text{ ft})^2 = 9 \\text{ ft}^2$, so divide by 9.',
         explanation: 'Miles to feet: multiply by 5,280. Hours to seconds: $60 × 60 = 3{,}600$. Square feet to square yards: divide by $3^2 = 9$. $kg/m^{3}$ to $g/cm^{3}$: divide by 1,000.'
       }
@@ -172,7 +172,7 @@ Write every step with units. If units don't cancel correctly, something is flipp
 |-----------|----------|
 | Single unit | Multiply by conversion fraction |
 | Rate (two units) | Convert numerator AND denominator |
-| Area units | Square the linear factor: $ft^{2}$ → $yd^{2}$ ÷ 9 |
+| Area units | Square the linear factor: $ft^{2}$ → $yd^{2}$  \\div  9 |
 | Volume units | Cube the linear factor: $ft^{3}$ → $yd^{3}$ ÷ 27 |
 
 - Write units at every step — if they don't cancel, something is wrong

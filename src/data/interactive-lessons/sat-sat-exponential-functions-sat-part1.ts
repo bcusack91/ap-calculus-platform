@@ -30,7 +30,7 @@ $$V(t) = 30000(0.85)^t$$
 
 Exponential growth is NOT linear. It starts slow and gets dramatically fast.
 
-| Year | Linear (+100/yr) | Exponential (×1.5) |
+| Year | Linear (+100/yr) | Exponential ( \\times 1.5) |
 |------|------------------|-------------------|
 | 0 | 100 | 100 |
 | 1 | 200 | 150 |

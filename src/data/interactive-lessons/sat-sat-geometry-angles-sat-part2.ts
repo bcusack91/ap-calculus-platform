@@ -156,8 +156,8 @@ $$6 < x < 16$$`
           'Similar triangles, scale factor 1:4. Area ratio = [1:16|1:4|1:8|1:64]'
         ],
         correctAnswers: ['$7\\sqrt{2}$', '6', '13', '1:16'],
-        hint1: 'For 45-45-90: hypotenuse = leg × $\\sqrt{2}$.',
-        hint2: 'For 30-60-90: hypotenuse = 2 × short leg.',
+        hint1: 'For 45-45-90: hypotenuse = leg  \\times  $\\sqrt{2}$.',
+        hint2: 'For 30-60-90: hypotenuse = 2  \\times  short leg.',
         hint3: 'Area ratio = (side ratio)$^{2}$.',
         explanation: '45-45-90: hyp = $7\\sqrt{2}$. 30-60-90: short leg = 12/2 = 6. Pythagorean: $\\sqrt{25+144}$ = $\\sqrt{169}$ = 13 (a 5-12-13 triple). Area scales as the square of the side ratio: $(1/4)^{2}$ = 1/16.'
       }

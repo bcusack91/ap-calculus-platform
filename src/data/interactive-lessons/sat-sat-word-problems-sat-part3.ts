@@ -16,17 +16,17 @@ Rearranged: $r = d/t$ and $t = d/r$
 ### Same Direction Problems
 Two objects starting at the same point, going the same way:
 - The faster one gets farther ahead over time
-- Gap = (faster speed − slower speed) × time
+- Gap = (faster speed − slower speed)  \\times  time
 
 ### Opposite Direction Problems
 Two objects starting at the same point, going opposite directions:
 - **Combined rate** = $speed_{1}$ + $speed_{2}$
-- Total distance apart = combined rate × time
+- Total distance apart = combined rate  \\times  time
 
 ### Meeting Problems
 Two objects starting at different points, moving toward each other:
 - They cover the distance between them at a **combined rate**
-- Time to meet = total distance ÷ $(speed_{1} + speed_{2})$
+- Time to meet = total distance  \\div  $(speed_{1} + speed_{2})$
 
 **Example:** City A and B are 300 miles apart. Train 1 leaves A at 60 mph, Train 2 leaves B at 40 mph. When do they meet?
 - Combined rate = 60 + 40 = 100 mph
@@ -141,7 +141,7 @@ Two objects starting at different points, moving toward each other:
     {
       id: 'wp3-summary',
       type: 'text' as const,
-      content: `## Part 3 Summary: Rate × Time = Distance
+      content: `## Part 3 Summary: Rate  \\times  Time = Distance
 
 | Problem Type | Formula | Key Insight |
 |---|---|---|

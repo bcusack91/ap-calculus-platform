@@ -49,7 +49,7 @@ $$V = 25000(0.85)^4 \\approx \\$13{,}050$$
         '8,000'
       ],
       correctAnswer: 3,
-      explanation: '12 hours ÷ 3 hours = 4 doubling periods. 500 × $2^{4}$ = 500 × 16 = 8,000. Each doubling: 500 → 1,000 → 2,000 → 4,000 → 8,000.'
+      explanation: '12 hours  \\div  3 hours = 4 doubling periods. 500  \\times  $2^{4}$ = 500  \\times  16 = 8,000. Each doubling: 500 → 1,000 → 2,000 → 4,000 → 8,000.'
     },
     {
       id: 'wp5-text2',

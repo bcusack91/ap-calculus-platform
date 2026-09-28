@@ -141,14 +141,14 @@ In "shaded region" problems, make sure you subtract the RIGHT shape. Draw the ov
         dropdowns: [
           'Triangle with base b and height h → [½bh|bh|$\\tfrac{1}{2} (b_{1} + b_{2})h$|$s^{2}$]',
           'Parallelogram with base b and height h → [bh|½bh|2(b + h)|$b^{2}$]',
-          'Trapezoid with parallel sides $b_{1}$, $b_{2}$ and height h → [$\\tfrac{1}{2} (b_{1} + b_{2})h$|$b_{1}$ × $b_{2}$ × h|bh|$(b_{1} + b_{2})h$]',
-          'Shaded region (large shape minus small shape) → [Total − Unshaded|Total + Unshaded|Total × Unshaded|Total ÷ Unshaded]'
+          'Trapezoid with parallel sides $b_{1}$, $b_{2}$ and height h → [$\\tfrac{1}{2} (b_{1} + b_{2})h$|$b_{1}$  \\times  $b_{2}$  \\times  h|bh|$(b_{1} + b_{2})h$]',
+          'Shaded region (large shape minus small shape) → [Total − Unshaded|Total + Unshaded|Total  \\times  Unshaded|Total  \\div  Unshaded]'
         ],
         correctAnswers: ['½bh', 'bh', '$\\tfrac{1}{2} (b_{1} + b_{2})h$', 'Total − Unshaded'],
         hint1: 'Triangle area always has the ½ factor.',
         hint2: 'Parallelogram is like a rectangle — base times height.',
         hint3: 'Trapezoid averages the two parallel bases, then multiplies by height.',
-        explanation: 'Triangle: ½bh. Parallelogram: bh (not ½bh). Trapezoid: $\\tfrac{1}{2} (b_{1} + b_{2})h$ — think of it as average base × height. Shaded region: always subtract the unshaded part from the total.'
+        explanation: 'Triangle: ½bh. Parallelogram: bh (not ½bh). Trapezoid: $\\tfrac{1}{2} (b_{1} + b_{2})h$ — think of it as average base  \\times  height. Shaded region: always subtract the unshaded part from the total.'
       }
     },
     {
@@ -161,7 +161,7 @@ In "shaded region" problems, make sure you subtract the RIGHT shape. Draw the ov
 | Triangle | $\\frac{1}{2}bh$ | $a + b + c$ |
 | Rectangle | $lw$ | $2l + 2w$ |
 | Square | $s^2$ | $4s$; diagonal $= s\\sqrt{2}$ |
-| Parallelogram | $bh$ (NOT side × side) | $2a + 2b$ |
+| Parallelogram | $bh$ (NOT side  \\times  side) | $2a + 2b$ |
 | Trapezoid | $\\frac{1}{2}(b_1 + b_2)h$ | Sum of all sides |
 
 ### Key Strategies

@@ -89,7 +89,7 @@ If dimensions are scaled by factor $k$:
 
 | Step | Work |
 |---|---|
-| **Problem** | A rectangular box (4 × 6 × 3) needs to be wrapped with no overlap. How much wrapping paper is needed? |
+| **Problem** | A rectangular box (4  \\times  6  \\times  3) needs to be wrapped with no overlap. How much wrapping paper is needed? |
 | **Surface area** | $SA = 2(4 \\cdot 6 + 4 \\cdot 3 + 6 \\cdot 3) = 2(24 + 12 + 18) = 2(54) = 108$ sq units |
 
 ### Scaling Rules — Complete Table
@@ -107,7 +107,7 @@ If dimensions are scaled by factor $k$:
 2. **"How much material to cover?"** → Surface area
 3. **"Pour from one to another"** → Set volumes equal
 4. **"What happens when dimensions change?"** → Scaling rules
-5. **"How long to fill/drain?"** → Volume ÷ rate`
+5. **"How long to fill/drain?"** → Volume  \\div  rate`
     },
     {
       id: 'geo5-quiz2',

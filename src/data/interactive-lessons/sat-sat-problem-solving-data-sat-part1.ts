@@ -43,7 +43,7 @@ $$60 \\frac{\\text{miles}}{\\text{hour}} \\times \\frac{1 \\text{ hour}}{60 \\te
         '30'
       ],
       correctAnswer: 2,
-      explanation: 'Total parts = 7 + 3 = 10. Students who passed = (7/10) × 40 = 28. Common traps: choosing 7 (just the ratio number) or 30 (subtracting the 10 total parts from 40).'
+      explanation: 'Total parts = 7 + 3 = 10. Students who passed = (7/10)  \\times  40 = 28. Common traps: choosing 7 (just the ratio number) or 30 (subtracting the 10 total parts from 40).'
     },
     {
       id: 'psd1-q2',

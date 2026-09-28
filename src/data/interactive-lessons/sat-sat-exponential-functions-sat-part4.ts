@@ -60,7 +60,7 @@ So the half-life is a little under 2 hours. No special formula is needed, just r
             question: 'A colony of bacteria doubles every 4 hours. Starting with 50, how long until there are 3,200?',
             options: ['$24$ hours', '$20$ hours', '$16$ hours', '$32$ hours'],
             correctAnswer: 0,
-            explanation: '$50 \\to 100 \\to 200 \\to 400 \\to 800 \\to 1600 \\to 3200$. That is 6 doublings × 4 hours = 24 hours. Or: $50 \\cdot 2^{t/4} = 3200$ → $2^{t/4} = 64 = 2^6$ → $t = 24$.'
+            explanation: '$50 \\to 100 \\to 200 \\to 400 \\to 800 \\to 1600 \\to 3200$. That is 6 doublings  \\times  4 hours = 24 hours. Or: $50 \\cdot 2^{t/4} = 3200$ → $2^{t/4} = 64 = 2^6$ → $t = 24$.'
           },
           {
             question: 'A car loses 20% of its value each year. After approximately how many years is it worth half its original value?',
@@ -153,7 +153,7 @@ Or: $1200 \\times (1/2)^3 = 1200 / 8 = 150$ grams.
         hint1: '20 min / 10 min = 2 half-lives → $400 \\times (1/2)^2 = 100$.',
         hint2: '12 hr / 3 hr = 4 doublings → $1000 \\times 2^4 = 16{,}000$.',
         hint3: '15/5 = 3 half-lives → $800/8 = 100$. 10/2 = 5 doublings → $50 \\times 2^5 = 1{,}600$.',
-        explanation: '2 half-lives: 400/4=100. 4 doublings: 1000×16=16,000. 3 half-lives: 800/8=100. 5 doublings: 50×32=1,600.'
+        explanation: '2 half-lives: 400/4=100. 4 doublings: 1000 \\times 16=16,000. 3 half-lives: 800/8=100. 5 doublings: 50 \\times 32=1,600.'
       }
     },
     {

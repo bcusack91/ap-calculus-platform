@@ -47,7 +47,7 @@ Scale factors appear in:
 |------|------|
 | Scale factor | $k = 30/20 = 1.5$ |
 | Area factor | $k^2 = 2.25$ |
-| Larger area | $50 × 2.25 = 112.5$ $cm^{2}$ |
+| Larger area | $50  \\times  2.25 = 112.5$ $cm^{2}$ |
 
 ### Worked Example 2 — Volume from Scale Factor
 
@@ -57,7 +57,7 @@ Scale factors appear in:
 |------|------|
 | Scale factor | $k = 24$ |
 | Volume factor | $k^3 = 13{,}824$ |
-| Actual volume | $0.5 × 13{,}824 = 6{,}912$ mL $≈ 6.9$ liters |`
+| Actual volume | $0.5  \\times  13{,}824 = 6{,}912$ mL $≈ 6.9$ liters |`
     },
     {
       id: 'rp5-quiz1',
@@ -101,7 +101,7 @@ The SAT loves problems where you must first identify similar triangles, then set
 |------|------|
 | Set up similar triangles | $\\frac{\\text{height}}{\\text{shadow}} = \\frac{6}{4}$ |
 | Apply to tree | $\\frac{h}{20} = \\frac{6}{4}$ |
-| Solve | $h = \\frac{6 × 20}{4} = 30$ feet |
+| Solve | $h = \\frac{6  \\times  20}{4} = 30$ feet |
 
 ### Worked Example 4
 
@@ -109,8 +109,8 @@ The SAT loves problems where you must first identify similar triangles, then set
 
 | Step | Work |
 |------|------|
-| Actual distance | $6.5 × 40 = 260$ miles |
-| Time | $260 ÷ 65 = 4$ hours |
+| Actual distance | $6.5  \\times  40 = 260$ miles |
+| Time | $260  \\div  65 = 4$ hours |
 
 ### The Scale Factor Cheat Sheet
 
@@ -132,13 +132,13 @@ The SAT loves problems where you must first identify similar triangles, then set
             question: 'A 5-foot child casts a 3-foot shadow. A flagpole casts a 21-foot shadow. How tall is the flagpole?',
             options: ['$35$ feet', '$12.6$ feet', '$63$ feet', '$7$ feet'],
             correctAnswer: 0,
-            explanation: '$\\frac{h}{21} = \\frac{5}{3}$ → $h = 5 × 7 = 35$ feet.'
+            explanation: '$\\frac{h}{21} = \\frac{5}{3}$ → $h = 5  \\times  7 = 35$ feet.'
           },
           {
             question: 'Two similar cylinders have heights 4 and 10. If the smaller has surface area 48 $cm^{2}$, what is the larger\'s surface area?',
             options: ['$300$ $cm^{2}$', '$120$ $cm^{2}$', '$192$ $cm^{2}$', '$750$ $cm^{2}$'],
             correctAnswer: 0,
-            explanation: '$k = 10/4 = 2.5$. Surface area $= 48 × (2.5)^2 = 48 × 6.25 = 300$ $cm^{2}$.'
+            explanation: '$k = 10/4 = 2.5$. Surface area $= 48  \\times  (2.5)^2 = 48  \\times  6.25 = 300$ $cm^{2}$.'
           },
           {
             question: 'If you double every dimension of a box, by what factor does the volume increase?',
@@ -174,9 +174,9 @@ The SAT loves problems where you must first identify similar triangles, then set
 
 | Measurement | Scaling Factor | Example ($k = 3$) |
 |------------|---------------|-------------------|
-| Length | $k$ | $×3$ |
-| Area | $k^2$ | $×9$ |
-| Volume | $k^3$ | $×27$ |
+| Length | $k$ | $ \\times 3$ |
+| Area | $k^2$ | $ \\times 9$ |
+| Volume | $k^3$ | $ \\times 27$ |
 | Angles | 1 (unchanged) | Same |
 
 - Find $k$ by dividing corresponding lengths

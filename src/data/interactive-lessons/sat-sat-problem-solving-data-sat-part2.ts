@@ -28,7 +28,7 @@ Translate directly: "What percent of 80 is 24?"
 $$\\frac{24}{80} \\times 100 = 30\\%$$
 
 ### Percent vs. Percentage Points
-"Increased from 40% to 52%" = increase of **12 percentage points** but a **30% increase** (12/40 × 100).`
+"Increased from 40% to 52%" = increase of **12 percentage points** but a **30% increase** (12/40  \\times  100).`
     },
     {
       id: 'psd2-q1',

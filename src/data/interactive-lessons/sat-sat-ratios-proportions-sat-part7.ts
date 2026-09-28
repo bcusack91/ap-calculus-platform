@@ -37,9 +37,9 @@ export const satRatiosPart7Data = {
 
 | Step | Work |
 |------|------|
-| Markup | $50 × 1.60 = 80$, i.e. \\$80 |
-| Sale discount | $80 × 0.75 = 60$, i.e. \\$60 |
-| Net multiplier | $1.60 × 0.75 = 1.20$ → 20% net markup |
+| Markup | $50  \\times  1.60 = 80$, i.e. \\$80 |
+| Sale discount | $80  \\times  0.75 = 60$, i.e. \\$60 |
+| Net multiplier | $1.60  \\times  0.75 = 1.20$ → 20% net markup |
 
 ### Worked Example 2 — Proportion with Ratio Shift
 
@@ -91,7 +91,7 @@ export const satRatiosPart7Data = {
 | Step | Work |
 |------|------|
 | Original salary | $1.10x = 55000$ → $x = 50000$, i.e. \\$50,000 |
-| Bonus | $55000 × 0.05 = 2750$, i.e. \\$2,750 |
+| Bonus | $55000  \\times  0.05 = 2750$, i.e. \\$2,750 |
 | Total compensation | $55000 + 2750 = 57750$, i.e. \\$57,750 |
 
 ### Worked Example 4 — Scale + Percent
@@ -100,10 +100,10 @@ export const satRatiosPart7Data = {
 
 | Step | Work |
 |------|------|
-| Real dimensions | $6 × 50 = 300$ cm, $8 × 50 = 400$ cm |
+| Real dimensions | $6  \\times  50 = 300$ cm, $8  \\times  50 = 400$ cm |
 | Convert to meters | $3$ m × $4$ m |
 | Room area | $12$ $m^{2}$ |
-| With patio (+20%) | $12 × 1.20 = 14.4$ $m^{2}$ |
+| With patio (+20%) | $12  \\times  1.20 = 14.4$ $m^{2}$ |
 
 ### Top 5 SAT Strategies for This Topic
 
@@ -129,7 +129,7 @@ export const satRatiosPart7Data = {
             question: 'A \\$400 TV is discounted 15%, then another 10% off. What is the final price?',
             options: ['\\$306', '\\$300', '\\$340', '\\$310'],
             correctAnswer: 0,
-            explanation: '$400 × 0.85 = 340$. Then $340 × 0.90 = 306$. Total discount: $1 - 0.85 × 0.90 = 1 - 0.765 = 23.5\\%$.'
+            explanation: '$400  \\times  0.85 = 340$. Then $340  \\times  0.90 = 306$. Total discount: $1 - 0.85  \\times  0.90 = 1 - 0.765 = 23.5\\%$.'
           },
           {
             question: 'If $y$ varies directly with $x^2$ and $y = 48$ when $x = 4$, what is $y$ when $x = 6$?',
@@ -141,7 +141,7 @@ export const satRatiosPart7Data = {
             question: 'Pump A fills a pool in 5 hours, Pump B in 10 hours. If A runs for 2 hours alone, then both run, how much longer until full?',
             options: ['$2$ hours', '$3$ hours', '$4$ hours', '$1$ hour'],
             correctAnswer: 0,
-            explanation: 'A does $2/5$ in 2 hrs. Remaining: $3/5$. Combined rate: $1/5 + 1/10 = 3/10$. Time: $(3/5) ÷ (3/10) = 2$ hours.'
+            explanation: 'A does $2/5$ in 2 hrs. Remaining: $3/5$. Combined rate: $1/5 + 1/10 = 3/10$. Time: $(3/5)  \\div  (3/10) = 2$ hours.'
           }
         ]
       }
@@ -158,7 +158,7 @@ export const satRatiosPart7Data = {
           { label: '"Mix 25% and 60% solutions to get 40%."', options: ['Mixture table: Vol × Conc = Amount', 'Average the percentages', 'Cross multiply 25/60 = 40/x', 'Subtract: 60 − 25 = 35'] }
         ],
         correctAnswers: ['Divide by 0.70', 'Workers × time = constant (inverse)', 'Multiply: 4.5 × 20', 'Mixture table: Vol × Conc = Amount'],
-        hint1: '30% off means you paid 70% of original: $0.70 × \\text{original} = 84$.',
+        hint1: '30% off means you paid 70% of original: $0.70  \\times  \\text{original} = 84$.',
         hint2: 'More machines, less time — that\'s inverse variation.',
         hint3: 'Each inch on the map = 20 real miles.',
         explanation: 'Original price: divide sale price by $(1 - \\text{discount})$. Workers/time: inverse → total work stays constant. Map: multiply distance by scale. Mixture: use table method with Vol × Conc = Amount.'
@@ -171,10 +171,10 @@ export const satRatiosPart7Data = {
 
 | Category | Formula | Common Trap |
 |----------|---------|-------------|
-| Ratios | $\\frac{a}{a+b} × T$ | Forgetting to add parts |
+| Ratios | $\\frac{a}{a+b}  \\times  T$ | Forgetting to add parts |
 | Proportions | $ad = bc$ | Mismatched units |
-| Percent change | $\\frac{\\Delta}{\\text{old}} × 100$ | Dividing by new value |
-| Finding original | $\\text{sale} ÷ (1 - r)$ | Adding percent to sale price |
+| Percent change | $\\frac{\\Delta}{\\text{old}}  \\times  100$ | Dividing by new value |
+| Finding original | $\\text{sale}  \\div  (1 - r)$ | Adding percent to sale price |
 | Successive %  | Multiply multipliers | Adding percentages |
 | Direct variation | $y = kx$, $y/x = k$ | Confusing with inverse |
 | Inverse variation | $xy = k$ | Adding instead of multiplying |

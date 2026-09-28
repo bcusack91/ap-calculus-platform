@@ -139,7 +139,7 @@ To add or subtract, the exponents **must match** first.
         dropdowns: [
           { label: '$350{,}000$ in scientific notation', options: ['$3.5 \\times 10^{5}$', '$35 \\times 10^{4}$', '$3.5 \\times 10^{6}$', '$0.35 \\times 10^{6}$'] },
           { label: '$0.0091$ in scientific notation', options: ['$9.1 \\times 10^{-3}$', '$91 \\times 10^{-4}$', '$9.1 \\times 10^{-2}$', '$0.91 \\times 10^{-2}$'] },
-          { label: 'Largest: $5×10^3$, $8×10^2$, $2×10^4$', options: ['$2 \\times 10^{4}$', '$5 \\times 10^{3}$', '$8 \\times 10^{2}$', 'All equal'] },
+          { label: 'Largest: $5 \\times 10^3$, $8 \\times 10^2$, $2 \\times 10^4$', options: ['$2 \\times 10^{4}$', '$5 \\times 10^{3}$', '$8 \\times 10^{2}$', 'All equal'] },
           { label: '$(2 \\times 10^3)^3$', options: ['$8 \\times 10^{9}$', '$6 \\times 10^{9}$', '$2 \\times 10^{9}$', '$8 \\times 10^{6}$'] }
         ],
         correctAnswers: ['$3.5 \\times 10^{5}$', '$9.1 \\times 10^{-3}$', '$2 \\times 10^{4}$', '$8 \\times 10^{9}$'],
