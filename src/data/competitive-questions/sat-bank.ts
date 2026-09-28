@@ -383,9 +383,9 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Expression of Ideas',
         emoji: '✍️',
         skills: [
-          challenge('sat-effective-language-use', 'Effective Language Use',
+          challenge('sat-effective-language-use', 'Rhetorical Synthesis',
             ['rhetorical-synthesis']),
-          challenge('sat-transitions-organization', 'Transitions and Organization',
+          challenge('sat-transitions-organization', 'Transitions',
             ['transitions']),
         ],
       },

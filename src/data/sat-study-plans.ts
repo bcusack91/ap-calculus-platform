@@ -188,7 +188,7 @@ const twelveWeekTasks: TemplatePlanTask[] = [
   ...weekTasks(4, [
     { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions', dayOfWeek: 0 },
     { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation', dayOfWeek: 1 },
-    { title: 'Effective Language Use Lesson', type: 'LESSON', topicSlug: 'sat-effective-language-use', dayOfWeek: 2 },
+    { title: 'Rhetorical Synthesis Lesson', type: 'LESSON', topicSlug: 'sat-effective-language-use', dayOfWeek: 2 },
     { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions', dayOfWeek: 3 },
     { title: 'Punctuation Quiz', type: 'QUIZ', topicSlug: 'sat-punctuation', dayOfWeek: 4 },
   ]),
@@ -204,7 +204,7 @@ const twelveWeekTasks: TemplatePlanTask[] = [
   ...weekTasks(6, [
     { title: 'Polynomials & Factoring Lesson', type: 'LESSON', topicSlug: 'sat-polynomials-factoring', dayOfWeek: 0 },
     { title: 'Circles & Complex Numbers Lesson', type: 'LESSON', topicSlug: 'sat-circles', dayOfWeek: 1 },
-    { title: 'Transitions & Organization Lesson', type: 'LESSON', topicSlug: 'sat-transitions-organization', dayOfWeek: 2 },
+    { title: 'Transitions Lesson', type: 'LESSON', topicSlug: 'sat-transitions-organization', dayOfWeek: 2 },
     { title: 'Polynomials Quiz', type: 'QUIZ', topicSlug: 'sat-polynomials-factoring', dayOfWeek: 3 },
     { title: 'Circles Quiz', type: 'QUIZ', topicSlug: 'sat-circles', dayOfWeek: 4 },
   ]),

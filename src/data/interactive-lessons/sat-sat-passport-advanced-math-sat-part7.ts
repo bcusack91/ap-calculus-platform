@@ -18,7 +18,7 @@ export const satPassportAdvPart7Data = {
 | **Rational Expressions** | Factor & cancel; LCD for add/subtract; domain excludes denominator zeros |
 | **Radicals** | $a^{m/n} = \\sqrt[n]{a^m}$; isolate & raise to power; check for extraneous solutions |
 | **Nonlinear Systems** | Substitute linear into quadratic; discriminant tells # of solutions |
-| **Functions** | $f(g(x))$: inside-out; inverse: swap $x$/$y$ & solve; domain/range swap |
+| **Functions** | $f(g(x))$: inside-out; undo the outer function first when solving; domain excludes zero denominators and negative radicands |
 
 **Top 5 SAT Strategies for Advanced Math:**
 1. **Factor first** — most problems simplify dramatically.
@@ -46,7 +46,7 @@ $$6x^2 + 4x - 3x - 2 = 2x(3x+2) - 1(3x+2) = (3x+2)(2x-1)$$
 
 **Systems:** $y = x^2+1$ and $y = 5$: $x^2 = 4 \\implies x = \\pm 2$. Two solutions.
 
-**Functions:** $f(x) = 5x+10$, $f^{-1}(x) = \\frac{x-10}{5}$. Check: $f(f^{-1}(20)) = f(2) = 20$ ✓.
+**Functions:** $f(x) = 5x+10$ and $g(x) = x^2$: $f(g(2)) = f(4) = 30$, but $g(f(2)) = g(20) = 400$. Order matters.
       `
     },
     {
@@ -105,15 +105,15 @@ Always read the notation carefully and work from the inside out.
 
 2) Evaluate: $27^{1/3} + 16^{1/2}$.
 
-3) If $f(x) = 3x - 7$, find $f^{-1}(2)$.
+3) If $f(x) = 3x - 7$ and $f(a) = 2$, what is $a$?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['6', '7', '3'],
         hint1: 'Find two numbers that multiply to $30$ and add to $11$: $5$ and $6$.',
         hint2: '$27^{1/3} = 3$ and $16^{1/2} = 4$.',
-        hint3: '$f^{-1}(x) = \\frac{x+7}{3}$. Plug in $x=2$.',
-        explanation: '1) $(x-5)(x-6)$, so $b = 6$. 2) $3 + 4 = 7$. 3) $\\frac{2+7}{3} = 3$.'
+        hint3: 'Solve $3a - 7 = 2$.',
+        explanation: '1) $(x-5)(x-6)$, so $b = 6$. 2) $3 + 4 = 7$. 3) $3a - 7 = 2 \\implies 3a = 9 \\implies a = 3$.'
       }
     },
     {

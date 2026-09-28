@@ -7,7 +7,7 @@ export const satPassportAdvPart6Data = {
       content: `
 # 🔄 Function Notation & Composition
 
-**Part 6 of 7 — $f(g(x))$, Inverse Functions, Domain Restrictions**
+**Part 6 of 7 — $f(g(x))$, Solving with Composition, Domain Restrictions**
 
 **Function notation** $f(x)$ names the output when $x$ is the input.
 
@@ -82,39 +82,41 @@ So $h(f(1)) = 1$.
       id: 'sat-pa6-inverse',
       type: 'text' as const,
       content: `
-## Inverse Functions
+## Domain Restrictions
 
-The **inverse** of $f$, written $f^{-1}$, "undoes" $f$:
+The **domain** is the set of inputs a function accepts. On the SAT, two rules cause restrictions:
 
-$$f(f^{-1}(x)) = x \\quad \\text{and} \\quad f^{-1}(f(x)) = x$$
+- A **denominator** cannot equal $0$.
+- The expression under a **square root** cannot be negative.
 
-**To find $f^{-1}$:**
-1. Write $y = f(x)$.
-2. Swap $x$ and $y$.
-3. Solve for $y$.
+**Example 7:** $f(x) = \\frac{3}{x - 4}$. The denominator is $0$ at $x = 4$, so the domain is all real numbers except $4$.
 
-**Example 7:** $f(x) = 3x - 6$. Find $f^{-1}(x)$.
+**Example 8:** $g(x) = \\sqrt{2x - 6}$. Require $2x - 6 \\geq 0$, so $x \\geq 3$.
 
-$y = 3x - 6 \\implies x = 3y - 6 \\implies x + 6 = 3y \\implies y = \\frac{x+6}{3}$
+**Domain of a composition:** $f(g(x))$ needs $g(x)$ to be an allowed input of $f$.
 
-$$f^{-1}(x) = \\frac{x+6}{3}$$
+**Example 9:** $f(x) = \\frac{1}{x}$ and $g(x) = x - 5$. Then $f(g(x)) = \\frac{1}{x - 5}$, which is undefined at $x = 5$.
 
-**Check:** $f(f^{-1}(0)) = f(2) = 3(2)-6 = 0$ ✓
+## Solving with Composition
 
-**Domain restrictions:** If $f$ has a restricted domain (e.g., $f(x) = \\sqrt{x}$, domain $x \\geq 0$), then the **range** of $f$ becomes the **domain** of $f^{-1}$.
+**Example 10:** $f(x) = 2x + 3$ and $g(x) = x^2$. If $f(g(k)) = 21$, find all possible $k$.
+
+$$2 \\cdot g(k) + 3 = 21 \\implies g(k) = 9 \\implies k^2 = 9 \\implies k = 3 \\text{ or } k = -3$$
+
+**SAT Tip:** Undo the **outer** function first to find the value of the inner one, then solve for the input.
       `
     },
     {
       id: 'sat-pa6-input1',
       type: 'input-boxes' as const,
       content: `
-**Function & Inverse Calculations** 🧮
+**Function & Composition Calculations** 🧮
 
 Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
 
 1) What is $f(g(2))$?
 
-2) Find $f^{-1}(x)$ and evaluate $f^{-1}(9)$.
+2) What value of $x$ satisfies $f(x) = 9$?
 
 3) What is $g(f(1))$?
       `,
@@ -122,9 +124,9 @@ Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
         boxes: 3,
         correctAnswers: ['17', '3', '2'],
         hint1: '$g(2) = 4 + 1 = 5$. Then $f(5) = 20 - 3 = 17$.',
-        hint2: '$f^{-1}(x) = \\frac{x+3}{4}$. Plug in $x = 9$.',
+        hint2: 'Solve $4x - 3 = 9$.',
         hint3: '$f(1) = 4 - 3 = 1$. Then $g(1) = 1 + 1 = 2$.',
-        explanation: '1) $f(g(2)) = f(5) = 17$. 2) $f^{-1}(9) = \\frac{12}{4} = 3$. 3) $g(f(1)) = g(1) = 2$.'
+        explanation: '1) $f(g(2)) = f(5) = 17$. 2) $4x - 3 = 9 \\implies 4x = 12 \\implies x = 3$. 3) $g(f(1)) = g(1) = 2$.'
       }
     },
     {
@@ -140,19 +142,19 @@ Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
             options: ['$f(x)$', '$g(x)$', 'either one', 'neither']
           },
           {
-            label: 'The graph of $f^{-1}$ is a reflection of $f$ over the line …',
-            options: ['$y = 0$', '$x = 0$', '$y = x$', '$y = -x$']
+            label: 'The function $h(x) = \\frac{1}{x - 7}$ is undefined at $x = $ …',
+            options: ['$0$', '$1$', '$7$', '$-7$']
           },
           {
-            label: 'If $f(5) = 12$, then $f^{-1}(12) = $ …',
-            options: ['$12$', '$5$', '$\\frac{1}{12}$', 'Cannot determine']
+            label: 'If $g(2) = 5$ and $f(5) = 12$, then $f(g(2)) = $ …',
+            options: ['$12$', '$5$', '$2$', '$17$']
           }
         ],
-        correctAnswers: ['$g(x)$', '$y = x$', '$5$'],
+        correctAnswers: ['$g(x)$', '$7$', '$12$'],
         hint1: 'Composition works inside-out.',
-        hint2: 'Inverse functions swap the roles of $x$ and $y$.',
-        hint3: 'The inverse undoes the function: if $f(a) = b$, then $f^{-1}(b) = a$.',
-        explanation: 'Evaluate $g(x)$ first (inside-out). Inverse reflects over $y = x$. $f(5)=12$ means $f^{-1}(12) = 5$.'
+        hint2: 'A fraction is undefined where its denominator equals $0$.',
+        hint3: 'First find $g(2)$, then feed that output into $f$.',
+        explanation: 'Evaluate $g(x)$ first (inside-out). $x - 7 = 0$ at $x = 7$, so $h$ is undefined there. $f(g(2)) = f(5) = 12$.'
       }
     },
     {
@@ -164,16 +166,16 @@ Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
       exercise: {
         questions: [
           {
-            question: 'If $f(x) = 2x + 1$ and $g(x) = \\frac{x-1}{2}$, which statement is true?',
-            options: ['$f(g(x)) = x$', '$f(g(x)) = x + 1$', '$g(f(x)) = 2x$', '$f(x) \\cdot g(x) = 1$'],
+            question: 'If $f(x) = 2x + 1$ and $g(x) = x^2 - 3$, which expression is equivalent to $g(f(x))$?',
+            options: ['$4x^2 + 4x - 2$', '$2x^2 - 5$', '$4x^2 - 2$', '$4x^2 + 4x + 4$'],
             correctAnswer: 0,
-            explanation: '$f(g(x)) = 2 \\cdot \\frac{x-1}{2} + 1 = (x-1)+1 = x$. Likewise $g(f(x)) = \\frac{(2x+1)-1}{2} = x$, so $f$ and $g$ are inverse functions. The product $f(x) \\cdot g(x)$ is a different operation from composition and does not equal $1$.'
+            explanation: '$g(f(x)) = (2x + 1)^2 - 3 = 4x^2 + 4x + 1 - 3 = 4x^2 + 4x - 2$. $2x^2 - 5$ is $f(g(x))$, the other order; $4x^2 - 2$ squares $2x + 1$ as $4x^2 + 1$ and drops the middle term.'
           },
           {
-            question: 'The function $f(x) = (x-3)^2$ is defined for $x \\geq 3$. What is the domain of $f^{-1}$?',
-            options: ['All real numbers', '$x \\geq 3$', '$x \\geq 0$', '$x > 0$'],
-            correctAnswer: 2,
-            explanation: 'The range of $f$ (for $x \\geq 3$) is $y \\geq 0$. The domain of $f^{-1}$ equals the range of $f$, so $x \\geq 0$.'
+            question: 'If $f(x) = \\sqrt{x}$ and $g(x) = x - 4$, what is the domain of $f(g(x))$?',
+            options: ['All real numbers', '$x \\geq 4$', '$x \\geq 0$', '$x \\geq -4$'],
+            correctAnswer: 1,
+            explanation: '$f(g(x)) = \\sqrt{x - 4}$, which needs $x - 4 \\geq 0$, so $x \\geq 4$. $x \\geq 0$ is the domain of $f$ alone, not of the composition.'
           }
         ]
       }

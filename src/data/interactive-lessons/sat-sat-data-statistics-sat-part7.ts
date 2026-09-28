@@ -122,10 +122,10 @@ export const satDataStatsPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'In a dataset of 100 values, $Q_1 = 30$, $Q_3 = 70$. Which value is an outlier?',
-            options: ['$140$', '$75$', '$25$', '$125$'],
+            question: 'A data set of 100 values has $Q_1 = 30$, median $50$, $Q_3 = 70$, and largest value $125$. If the largest value is changed to $400$, which statistic must change?',
+            options: ['The mean', 'The median', 'The IQR', 'The first quartile'],
             correctAnswer: 0,
-            explanation: 'IQR $= 70 - 30 = 40$. Outlier threshold: above $Q_3 + 1.5(40) = 70 + 60 = 130$ or below $Q_1 - 60 = -30$. Only $140 > 130$, so $140$ is an outlier; $125$ is large but still inside the fence.'
+            explanation: 'Only the largest value moves, and it stays the largest, so every value keeps its place in order: the median, both quartiles, and the IQR stay the same. The sum rises by $400 - 125 = 275$, so the mean rises by $275/100 = 2.75$. The mean uses every value; the median and quartiles use only positions.'
           },
           {
             question: 'A scatterplot with $r = 0.05$. What does this suggest?',

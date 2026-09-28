@@ -700,11 +700,11 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
   'sat-functions-graphs-sat': {
     parts: [
       { title: 'Function Notation', loader: () => import('./sat-sat-functions-graphs-sat-part1').then(m => m.satFunctionsPart1Data) },
-      { title: 'Interpreting Graphs', loader: () => import('./sat-sat-functions-graphs-sat-part2').then(m => m.satFunctionsPart2Data) },
+      { title: 'Composition & Combining Functions', loader: () => import('./sat-sat-functions-graphs-sat-part2').then(m => m.satFunctionsPart2Data) },
       { title: 'Domain & Range', loader: () => import('./sat-sat-functions-graphs-sat-part3').then(m => m.satFunctionsPart3Data) },
       { title: 'Transformations', loader: () => import('./sat-sat-functions-graphs-sat-part4').then(m => m.satFunctionsPart4Data) },
       { title: 'Function Composition', loader: () => import('./sat-sat-functions-graphs-sat-part5').then(m => m.satFunctionsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-functions-graphs-sat-part6').then(m => m.satFunctionsPart6Data) },
+      { title: 'Exponential Functions & Graphs', loader: () => import('./sat-sat-functions-graphs-sat-part6').then(m => m.satFunctionsPart6Data) },
       { title: 'Review & Applications', loader: () => import('./sat-sat-functions-graphs-sat-part7').then(m => m.satFunctionsPart7Data) },
     ],
   },
@@ -862,7 +862,7 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
       { title: 'Nonlinear Systems', loader: () => import('./sat-sat-passport-advanced-math-sat-part3').then(m => m.satPassportAdvPart3Data) },
       { title: 'Polynomial Manipulation', loader: () => import('./sat-sat-passport-advanced-math-sat-part4').then(m => m.satPassportAdvPart4Data) },
       { title: 'Exponential & Radical Equations', loader: () => import('./sat-sat-passport-advanced-math-sat-part5').then(m => m.satPassportAdvPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-passport-advanced-math-sat-part6').then(m => m.satPassportAdvPart6Data) },
+      { title: 'Composition & Domain Restrictions', loader: () => import('./sat-sat-passport-advanced-math-sat-part6').then(m => m.satPassportAdvPart6Data) },
       { title: 'Review & Applications', loader: () => import('./sat-sat-passport-advanced-math-sat-part7').then(m => m.satPassportAdvPart7Data) },
     ],
   },

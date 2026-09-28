@@ -1,5 +1,5 @@
 /**
- * Remove SAT topics the digital SAT does not test (owner decision 2026-09-28:
+ * Remove (and rename) SAT topics the digital SAT does not test (owner decision 2026-09-28:
  * "If the exam doesn't cover it, we shouldn't have it in the program").
  *
  * Runs LAST in prisma/seed-all.ts, because older SAT seed scripts still create
@@ -17,6 +17,25 @@ import '../src/lib/load-env'
 import { PrismaClient } from '@prisma/client'
 
 export const RETIRED_SAT_TOPICS = ['sat-conciseness-redundancy', 'sat-complex-numbers'] as const
+
+/**
+ * Topics that stay but whose old names advertised off-exam skills
+ * ("Organization", "Effective Language Use" = the old-SAT concision/style
+ * family). Their lessons now teach only what the digital SAT tests.
+ */
+export const RETITLED_SAT_TOPICS: Record<string, { title: string; description?: string }> = {
+  'sat-effective-language-use': {
+    title: 'Rhetorical Synthesis',
+    description: "Use a writer's notes to build the sentence that accomplishes a stated goal: the digital SAT's Rhetorical Synthesis questions.",
+  },
+  'sat-transitions-organization': {
+    title: 'Transitions',
+    description: 'Choose the transition that states the logical relationship between two ideas: contrast, concession, cause and effect, addition, example, or sequence.',
+  },
+  'sat-effective-language-use-advanced': { title: 'Rhetorical Synthesis — 700-800' },
+  'sat-effective-language-use-core-skills': { title: 'Precise Words & Notes — Core Skills' },
+  'sat-transitions-organization-core-skills': { title: 'Transitions — Core Skills' },
+}
 
 async function main() {
   const prisma = new PrismaClient()
@@ -41,6 +60,19 @@ async function main() {
       await prisma.topic.delete({ where: { id: topic.id } })
       console.log(`    deleted`)
     }
+  }
+  for (const [slug, next] of Object.entries(RETITLED_SAT_TOPICS)) {
+    const topic = await prisma.topic.findUnique({ where: { slug }, select: { id: true, title: true, description: true } })
+    if (!topic) {
+      console.log(`  ${slug}: not present`)
+      continue
+    }
+    const data: { title?: string; description?: string } = {}
+    if (topic.title !== next.title) data.title = next.title
+    if (next.description && topic.description !== next.description) data.description = next.description
+    if (Object.keys(data).length === 0) continue
+    console.log(`  ${slug}: "${topic.title}" -> "${next.title}"${data.description ? ' (+ description)' : ''}`)
+    if (!dryRun) await prisma.topic.update({ where: { id: topic.id }, data })
   }
   await prisma.$disconnect()
 }

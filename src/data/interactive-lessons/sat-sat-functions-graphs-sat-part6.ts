@@ -6,78 +6,72 @@ export const satFunctionsPart6Data = {
       type: 'text' as const,
       content: `# Functions & Graphs
 
-**Part 6 of 7 — Even/Odd Functions and Symmetry**
+**Part 6 of 7 — Exponential Functions and Their Graphs**
 
-### Even Functions: $f(-x) = f(x)$
+### The Form $f(x) = a \\cdot b^x$
 
-- Symmetric about the **y-axis**
-- Examples: $x^2$, $|x|$, $\\cos(x)$
-- If $(3, 5)$ is on the graph, then $(-3, 5)$ is too
+- $a$ is the **initial value**: $f(0) = a \\cdot b^0 = a$, so the $y$-intercept is $(0, a)$
+- $b$ is the **growth factor**: each time $x$ goes up by 1, the output is multiplied by $b$
+- $b > 1$ → **growth**; $0 < b < 1$ → **decay**
 
-### Odd Functions: $f(-x) = -f(x)$
+### Reading the Percent from $b$
 
-- Symmetric about the **origin** (180° rotation)
-- Examples: $x^3$, $x$, $\\sin(x)$
-- If $(3, 5)$ is on the graph, then $(-3, -5)$ is too
+| Factor | Meaning |
+|--------|---------|
+| $b = 1 + r$ | Increases by $r$ (as a percent) each step: $1.06$ → up $6\\%$ |
+| $b = 1 - r$ | Decreases by $r$ each step: $0.85$ → down $15\\%$ |
 
-### Testing Algebraically
+### Linear vs. Exponential
 
-For $f(x) = x^4 - 3x^2$:
-$f(-x) = (-x)^4 - 3(-x)^2 = x^4 - 3x^2 = f(x)$ → **even**
-
-For $g(x) = x^3 + x$:
-$g(-x) = -x^3 - x = -(x^3 + x) = -g(x)$ → **odd**
-
-### Neither Even nor Odd
-
-$h(x) = x^2 + x$: $h(-x) = x^2 - x \\neq h(x)$ and $\\neq -h(x)$ → **neither**
+- **Linear**: the output **adds** the same amount each step (constant difference)
+- **Exponential**: the output is **multiplied** by the same factor each step (constant ratio)
 
 ---
 
 ### Worked Example 1
 
-**Determine if $f(x) = \\frac{x^3}{x^2 + 1}$ is even, odd, or neither.**
+**A function $f$ has $f(0) = 5$, $f(1) = 15$, $f(2) = 45$, $f(3) = 135$. Write $f(x)$.**
 
 | Step | Work |
 |------|------|
-| Compute $f(-x)$ | $\\frac{(-x)^3}{(-x)^2 + 1} = \\frac{-x^3}{x^2 + 1}$ |
-| Compare to $-f(x)$ | $-f(x) = \\frac{-x^3}{x^2 + 1}$ |
-| $f(-x) = -f(x)$? | Yes → **odd** |
+| Check differences | $10, 30, 90$ → not constant, so not linear |
+| Check ratios | $15/5 = 45/15 = 135/45 = 3$ → constant ratio |
+| Initial value | $f(0) = 5$ |
+| Result | $f(x) = 5(3)^x$ |
 
 ### Worked Example 2
 
-**If $f$ is odd and $f(3) = 7$, find $f(-3) + f(3)$.**
+**For $f(x) = 800(0.75)^x$, describe the function and find $f(2)$.**
 
 | Step | Work |
 |------|------|
-| Odd → $f(-3) = -f(3)$ | $f(-3) = -7$ |
-| Sum | $-7 + 7 = 0$ |
-
-> **Key insight:** For any odd function, $f(-x) + f(x) = 0$ always. Also $f(0) = 0$ for any odd function (if $0$ is in the domain).`
+| Initial value | $800$ |
+| Factor | $0.75 = 1 - 0.25$ → decreases by $25\\%$ per step |
+| Evaluate | $f(2) = 800(0.75)^2 = 800(0.5625) = 450$ |`
     },
     {
       id: 'fn6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Symmetry** 🎯',
+      content: '**Exponential Basics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which function is odd?',
-            options: ['$f(x) = x^3 - x$', '$f(x) = x^2 + 1$', '$f(x) = |x| - 3$', '$f(x) = x^3 + 1$'],
+            question: 'What is the $y$-intercept of the graph of $y = 250(1.04)^x$ in the $xy$-plane?',
+            options: ['$(0, 250)$', '$(0, 1.04)$', '$(0, 260)$', '$(250, 0)$'],
             correctAnswer: 0,
-            explanation: '$f(-x) = -x^3 + x = -(x^3 - x) = -f(x)$ → odd. $x^2 + 1$ and $|x| - 3$ are even. $x^3 + 1$ is neither: $f(-x) = -x^3 + 1$, which is not $-f(x) = -x^3 - 1$.'
+            explanation: 'At $x = 0$, $(1.04)^0 = 1$, so $y = 250$. The point $(0, 260)$ is the value at $x = 1$, and $(250, 0)$ swaps the coordinates.'
           },
           {
-            question: 'If $f$ is an even function and $f(2) = -5$, what is $f(-2) + f(2)$?',
-            options: ['$-10$', '$0$', '$10$', '$-5$'],
+            question: 'For which function does the value of $f(x)$ decrease by $20\\%$ each time $x$ increases by 1?',
+            options: ['$f(x) = 50(0.8)^x$', '$f(x) = 50(0.2)^x$', '$f(x) = 50(1.2)^x$', '$f(x) = 50 - 0.2x$'],
             correctAnswer: 0,
-            explanation: 'Even: $f(-2) = f(2) = -5$. So $f(-2) + f(2) = -5 + (-5) = -10$.'
+            explanation: 'Losing $20\\%$ leaves $80\\%$, so the factor is $1 - 0.20 = 0.8$. A factor of $0.2$ would keep only $20\\%$ (an $80\\%$ drop), $1.2$ is $20\\%$ growth, and $50 - 0.2x$ subtracts a fixed amount, which is linear.'
           },
           {
-            question: 'If $g$ is an odd function and $g(4) = 3$, what is $g(-4)$?',
-            options: ['$-3$', '$3$', '$0$', '$-4$'],
+            question: 'A function $f$ satisfies $f(0) = 6$, $f(1) = 12$, $f(2) = 24$, and $f(3) = 48$. Which equation could define $f$?',
+            options: ['$f(x) = 6(2)^x$', '$f(x) = 2(6)^x$', '$f(x) = 6x + 6$', '$f(x) = 6(2x)$'],
             correctAnswer: 0,
-            explanation: 'Odd: $g(-4) = -g(4) = -3$.'
+            explanation: 'Each output is double the one before, and $f(0) = 6$, so $f(x) = 6(2)^x$. $2(6)^x$ gives $f(0) = 2$, $6x + 6$ gives $f(2) = 18$, and $6(2x)$ gives $f(0) = 0$.'
           }
         ]
       }
@@ -85,57 +79,60 @@ $h(x) = x^2 + x$: $h(-x) = x^2 - x \\neq h(x)$ and $\\neq -h(x)$ → **neither**
     {
       id: 'fn6-text2',
       type: 'text' as const,
-      content: `### Symmetry and Graphs
+      content: `### Features of Exponential Graphs
 
-#### How Even/Odd Shows on Graphs
+For $f(x) = a \\cdot b^x + k$ with $a > 0$:
 
-| Type | Symmetry | Test |
-|------|----------|------|
-| Even | Fold along y-axis → halves match | Replace $x$ with $-x$; if same equation → even |
-| Odd | Rotate 180° around origin → same graph | Replace $x$ with $-x$; if negated → odd |
+| Feature | How to find it |
+|---------|----------------|
+| $y$-intercept | $f(0) = a + k$ |
+| Level it approaches | The graph gets closer and closer to $y = k$ but never reaches it |
+| $x$-intercept | Set $f(x) = 0$ and solve; there is none if $k \\geq 0$ |
 
 ### Worked Example 3
 
-**A graph passes through $(-2, 4)$, $(0, 0)$, and $(2, -4)$. Could it be even or odd?**
+**Find the intercepts of the graph of $y = 3(2)^x - 12$.**
 
-| Check | Result |
-|-------|--------|
-| Even: $(-2, 4)$ and $(2, 4)$? | No — we have $(2, -4)$, not $(2, 4)$ |
-| Odd: $(-2, 4)$ and $(2, -4)$? | Yes — signs of both coordinates flip ✓ |
-| Also: $(0, 0)$? | Yes — odd functions pass through origin ✓ |
-| Conclusion | Could be odd |
+| Step | Work |
+|------|------|
+| $y$-intercept | $3(1) - 12 = -9$ → $(0, -9)$ |
+| $x$-intercept | $3(2)^x = 12$ → $2^x = 4$ → $x = 2$ → $(2, 0)$ |
 
-### Products and Compositions
+### Worked Example 4 — Other Time Units
 
-| Operation | Even × Even | Odd × Odd | Even × Odd |
-|-----------|-------------|-----------|------------|
-| Result | Even | Even | Odd |
+**A quantity starts at 40 and doubles every 3 years: $Q(t) = 40(2)^{t/3}$. Find $Q(9)$.**
 
-Example: $x^2 \\cdot x^3 = x^5$ → even × odd = odd ✓`
+$9$ years is $9/3 = 3$ doubling periods: $Q(9) = 40(2)^3 = 320$.
+
+> **Key insight:** In $b^{t/n}$, the output is multiplied by $b$ once every $n$ units of $t$.
+
+### Comparing Growth
+
+$g(x) = 100 + 20x$ (linear) and $h(x) = 100(1.2)^x$ (exponential) both start at 100 and both equal 120 at $x = 1$. At $x = 5$: $g(5) = 200$ but $h(5) \\approx 248.8$. An increasing exponential eventually passes any linear function.`
     },
     {
       id: 'fn6-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Even, Odd, or Neither?** 🎯',
+      content: '**Exponential Graphs & Models** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Is $f(x) = x^3 + 1$ even, odd, or neither?',
-            options: ['Neither', 'Odd', 'Even', 'Both'],
+            question: 'At which point does the graph of $y = 3(2)^x - 12$ cross the $x$-axis?',
+            options: ['$(2, 0)$', '$(4, 0)$', '$(0, -9)$', '$(0, -12)$'],
             correctAnswer: 0,
-            explanation: '$f(-x) = -x^3 + 1$. This is not $f(x) = x^3 + 1$ (not even) and not $-f(x) = -x^3 - 1$ (not odd). Neither.'
+            explanation: 'Set $y = 0$: $3(2)^x = 12$, so $2^x = 4$ and $x = 2$. Stopping at $2^x = 4$ and reading $x = 4$ is the common slip, and $(0, -9)$ is the $y$-intercept, not the $x$-intercept.'
           },
           {
-            question: 'If $f$ is odd and $g$ is even, what type of function is $f(x) \\cdot g(x)$?',
-            options: ['Odd', 'Even', 'Neither', 'Cannot determine'],
+            question: 'A population is modeled by $P(t) = 500(2)^{t/4}$, where $t$ is the number of hours after the start. How often does the population double?',
+            options: ['Every 4 hours', 'Every 2 hours', 'Every 8 hours', 'Every 0.25 hours'],
             correctAnswer: 0,
-            explanation: 'Let $h(x) = f(x)g(x)$. Then $h(-x) = f(-x)g(-x) = (-f(x))(g(x)) = -f(x)g(x) = -h(x)$. So $h$ is odd.'
+            explanation: 'The exponent $t/4$ goes up by 1 each time $t$ goes up by 4, and each such step multiplies $P$ by 2. So the population doubles every 4 hours.'
           },
           {
-            question: 'If $f$ is odd, what is $f(0)$?',
-            options: ['$0$', 'Cannot determine', '$1$', 'Undefined'],
+            question: 'Let $g(x) = 100 + 20x$ and $h(x) = 100(1.2)^x$. Which statement is true?',
+            options: ['$h(x) > g(x)$ for all $x > 1$', '$g(x) > h(x)$ for all $x > 1$', '$h(x) = g(x)$ for all $x > 0$', '$g(x) > h(x)$ for all $x > 0$'],
             correctAnswer: 0,
-            explanation: '$f(-0) = -f(0)$ → $f(0) = -f(0)$ → $2f(0) = 0$ → $f(0) = 0$.'
+            explanation: 'The two functions are equal at $x = 0$ and $x = 1$. After that the exponential pulls ahead: $g(2) = 140$ but $h(2) = 144$, and the gap keeps growing ($g(5) = 200$, $h(5) \\approx 248.8$). The last choice fails at $x = 2$.'
           }
         ]
       }
@@ -143,19 +140,19 @@ Example: $x^2 \\cdot x^3 = x^5$ → even × odd = odd ✓`
     {
       id: 'fn6-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Classify Each Function** 🔍\n\nIs each function even, odd, or neither?',
+      content: '**Read the Exponential** 🔍\n\nChoose the correct description for each function.',
       exercise: {
         dropdowns: [
-          { label: '$f(x) = x^6 - x^2 + 1$', options: ['Even', 'Odd', 'Neither'] },
-          { label: '$g(x) = x^5 - x^3$', options: ['Odd', 'Even', 'Neither'] },
-          { label: '$h(x) = x^2 + x$', options: ['Neither', 'Even', 'Odd'] },
-          { label: '$p(x) = \\frac{1}{x}$', options: ['Odd', 'Even', 'Neither'] }
+          { label: '$f(x) = 20(1.15)^x$', options: ['Growth, 15% per step', 'Decay, 15% per step', 'Growth, 115% per step', 'Decay, 85% per step'] },
+          { label: '$f(x) = 20(0.9)^x$', options: ['Decay, 10% per step', 'Decay, 90% per step', 'Growth, 9% per step', 'Growth, 90% per step'] },
+          { label: '$f(x) = 7(3)^x$: the y-intercept is at y =', options: ['7', '3', '21', '0'] },
+          { label: '$f(x) = 5(2)^x + 3$: the graph levels off toward', options: ['y = 3', 'y = 5', 'y = 0', 'y = 8'] }
         ],
-        correctAnswers: ['Even', 'Odd', 'Neither', 'Odd'],
-        hint1: 'All exponents even → likely even function.',
-        hint2: 'All exponents odd → likely odd function.',
-        hint3: 'Mixed even/odd exponents → likely neither.',
-        explanation: '$x^6 - x^2 + 1$: all even powers → even. $x^5 - x^3$: all odd powers → odd. $x^2 + x$: mixed → neither. $1/x = x^{-1}$: odd power → odd.'
+        correctAnswers: ['Growth, 15% per step', 'Decay, 10% per step', '7', 'y = 3'],
+        hint1: 'A factor above 1 means growth; subtract 1 to get the percent.',
+        hint2: 'A factor below 1 means decay; subtract it from 1 to get the percent lost.',
+        hint3: 'As $x$ decreases, $5(2)^x$ shrinks toward 0, so only the $+3$ is left.',
+        explanation: '$1.15 = 1 + 0.15$ → growth of 15% per step. $0.9 = 1 - 0.10$ → decay of 10% per step. $f(0) = 7(3)^0 = 7$. The term $5(2)^x$ approaches 0 as $x$ decreases, so the graph approaches $y = 3$.'
       }
     },
     {
@@ -163,15 +160,16 @@ Example: $x^2 \\cdot x^3 = x^5$ → even × odd = odd ✓`
       type: 'text' as const,
       content: `### Key Takeaways — Part 6
 
-| Property | Definition | Symmetry | Quick Test |
-|----------|-----------|----------|------------|
-| Even | $f(-x) = f(x)$ | y-axis | All terms have even exponents |
-| Odd | $f(-x) = -f(x)$ | Origin | All terms have odd exponents |
-| Neither | Neither condition holds | No symmetry | Mixed exponents |
+| Concept | Rule |
+|---------|------|
+| $f(x) = a \\cdot b^x$ | $a$ = initial value ($y$-intercept); $b$ = factor per step |
+| Growth vs. decay | $b > 1$ grows; $0 < b < 1$ decays |
+| Percent change | $b = 1 + r$ (up $r$) or $b = 1 - r$ (down $r$) |
+| Spotting exponential data | Constant **ratio** between outputs (linear has constant **difference**) |
+| $a \\cdot b^x + k$ | Graph approaches $y = k$; $y$-intercept is $a + k$ |
+| $b^{t/n}$ | Multiplies by $b$ once every $n$ units of $t$ |
 
-- Odd functions always pass through the origin (if defined at $x = 0$)
-- Even × Even = Even; Odd × Odd = Even; Even × Odd = Odd
-- Most real functions are neither even nor odd`
+- An increasing exponential function eventually exceeds any increasing linear function`
     }
   ]
 };

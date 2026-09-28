@@ -138,7 +138,7 @@ $$x^2 - 6x + 5 = 0 \\implies (x-5)(x-1) = 0 \\implies x = 5 \\text{ or } x = 1$$
           },
           {
             label: 'An extraneous solution is one that …',
-            options: ['solves the original equation', 'appears after an algebraic step but fails the original equation', 'is always negative', 'involves imaginary numbers']
+            options: ['solves the original equation', 'appears after an algebraic step but fails the original equation', 'is always negative', 'makes the radicand equal to zero']
           },
           {
             label: 'To solve $\\sqrt[3]{x} = 4$, you raise both sides to the power …',

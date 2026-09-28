@@ -42,9 +42,9 @@ Multiplying stretches the data — spread increases.`
         questions: [
           {
             question: 'Which data set has the largest standard deviation?',
-            options: ['$\\{1, 50, 99\\}$', '$\\{48, 50, 52\\}$', '$\\{50, 50, 50\\}$', '$\\{40, 50, 60\\}$'],
+            options: ['$\\{10, 50, 90\\}$', '$\\{48, 50, 52\\}$', '$\\{50, 50, 50\\}$', '$\\{40, 50, 60\\}$'],
             correctAnswer: 0,
-            explanation: '$\\{1, 50, 99\\}$ has values most spread from the mean (50). The differences are ±49, much larger than the other sets.'
+            explanation: '$\\{10, 50, 90\\}$ has values most spread from the mean (50). The differences are ±40, much larger than the other sets.'
           },
           {
             question: 'A data set has mean 30 and SD 5. If 10 is added to every value, the new SD is:',
@@ -98,7 +98,19 @@ Adding/subtracting does NOT change SD. Multiplying DOES.
 | $Q_3$ (75th percentile) | 75% of data below |
 | IQR = $Q_3 - Q_1$ | Spread of the middle 50% |
 
-A value is an **outlier** if it's more than $1.5 \\times \\text{IQR}$ beyond $Q_1$ or $Q_3$.`
+### Outliers and Resistant Measures
+
+An **outlier** is a value far from the rest of the data, such as one dot sitting far from the others on a dot plot. The SAT asks how an outlier affects each statistic:
+
+| Measure | Effect of an outlier |
+|---------|---------------------|
+| Mean | Pulled toward the outlier |
+| Median | Barely moves (resistant) |
+| Range | Grows, because it uses the extreme value |
+| SD | Grows, because the outlier is far from the mean |
+| IQR | Barely moves (uses only the middle 50%) |
+
+**Example:** $\\{12, 14, 15, 15, 16, 18, 60\\}$ has mean $150/7 \\approx 21.4$ and median $15$. Remove the $60$: the mean drops to $90/6 = 15$, and the median is still $15$.`
     },
     {
       id: 'ds2-quiz2',
@@ -157,7 +169,7 @@ A value is an **outlier** if it's more than $1.5 \\times \\text{IQR}$ beyond $Q_
 | Multiply by $k$ | Mean × $k$; **SD × $|k|$** |
 | SD = 0 | All values identical |
 | IQR | $Q_3 - Q_1$; spread of middle 50% |
-| Outlier threshold | Beyond $Q_1 - 1.5(\\text{IQR})$ or $Q_3 + 1.5(\\text{IQR})$ |
+| Outlier effect | Pulls the mean, range, and SD; median and IQR resist it |
 
 - SD is ALWAYS ≥ 0 (it can never be negative)
 - On the SAT, you compare SDs visually — more clustered = lower SD`

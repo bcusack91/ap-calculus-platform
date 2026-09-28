@@ -15,18 +15,17 @@ export const satFunctionsPart7Data = {
 | $f(a)$ | Substitute $a$ into the function |
 | $f(x) = k$ | Solve for $x$ (or find where $y = k$ on graph) |
 | $f(g(x))$ | Evaluate inside out |
-| $f^{-1}(x)$ | Swap $x/y$, solve for $y$ |
+| $f(x + 1)$ | Replace every $x$ with $(x + 1)$ |
 | Domain | All valid inputs |
 | Range | All possible outputs |
 | Increasing | $f$ goes up as $x$ moves right |
-| Even | $f(-x) = f(x)$, y-axis symmetry |
-| Odd | $f(-x) = -f(x)$, origin symmetry |
+| $a \\cdot b^x$ | $a$ = initial value; $b > 1$ growth, $0 < b < 1$ decay |
 
 ### SAT Strategies for Function Questions
 
 1. **Use the answer choices** — if asked for a function and given formulas, test with a value
 2. **Read graphs carefully** — pay attention to open vs. closed circles
-3. **Don't confuse $f(a) = b$ with $f(b) = a$** — this is the inverse trap
+3. **Don't confuse $f(a) = b$ with $f(b) = a$** — in the first, $a$ is the input; in the second, $a$ is the output
 4. **For word problems**: identify input vs. output
 
 ---
@@ -138,10 +137,10 @@ $f(2) = 3$, then $f(3) = 8$. Answer: $8$.
             explanation: '$f(2) = f(1+1) = f(1) \\cdot f(1) = 9$. $f(4) = f(2+2) = f(2) \\cdot f(2) = 81$. This is $f(x) = 3^x$.'
           },
           {
-            question: 'The graph of $y = f(x)$ is reflected over the line $y = x$. Which describes the new graph?',
-            options: ['$y = f^{-1}(x)$', '$y = -f(x)$', '$y = f(-x)$', '$y = -f(-x)$'],
+            question: 'If $f(x) = 2^x$ and $g(x) = f(x - 3) + 1$, what is $g(5)$?',
+            options: ['$5$', '$4$', '$30$', '$257$'],
             correctAnswer: 0,
-            explanation: 'Reflecting over $y = x$ swaps the $x$ and $y$ coordinates, which gives the inverse function $f^{-1}(x)$.'
+            explanation: '$g(5) = f(5 - 3) + 1 = f(2) + 1 = 4 + 1 = 5$. Forgetting the $+1$ gives 4, subtracting 3 outside the function gives $2^5 - 3 + 1 = 30$, and using $x + 3$ inside gives $2^8 + 1 = 257$.'
           },
           {
             question: 'If $f(x) = 2|x - 1| - 3$, how many solutions does $f(x) = 5$ have?',
@@ -159,15 +158,15 @@ $f(2) = 3$, then $f(3) = 8$. Answer: $8$.
       exercise: {
         dropdowns: [
           { label: '$f(x) = x^2 - 4$: the x-intercepts are', options: ['x = 2 and x = -2', 'x = 4 and x = -4', 'x = 2 only', 'No x-intercepts'] },
-          { label: '$f(x) = 3x - 6$: $f^{-1}(0) = $', options: ['2', '0', '-2', '6'] },
+          { label: '$f(x) = 3x - 6$: the value of $x$ for which $f(x) = 0$', options: ['2', '0', '-2', '6'] },
           { label: '$y = (x+3)^2 - 1$ is obtained from $y = x^2$ by', options: ['Left 3, down 1', 'Right 3, down 1', 'Left 3, up 1', 'Right 3, up 1'] },
-          { label: '$f(x) = x^4 + x^2$: even, odd, or neither?', options: ['Even', 'Odd', 'Neither', 'Both'] }
+          { label: '$f(x) = 4(0.5)^x$: the value of $f(2)$', options: ['1', '2', '0.25', '4'] }
         ],
-        correctAnswers: ['x = 2 and x = -2', '2', 'Left 3, down 1', 'Even'],
+        correctAnswers: ['x = 2 and x = -2', '2', 'Left 3, down 1', '1'],
         hint1: 'Set $x^2 - 4 = 0$ and solve.',
-        hint2: '$f^{-1}(0)$ asks: "What input gives output $0$?" So solve $3x - 6 = 0$.',
+        hint2: 'This asks: "What input gives output $0$?" So solve $3x - 6 = 0$.',
         hint3: '$(x + 3)$ = shift left 3. $-1$ = shift down 1.',
-        explanation: '$x^2 = 4$ → $x = \\pm 2$. $f^{-1}(0)$: solve $3x - 6 = 0$ → $x = 2$. $(x+3)^2 - 1$ = left 3, down 1. $f(-x) = x^4 + x^2 = f(x)$ → even.'
+        explanation: '$x^2 = 4$ → $x = \\pm 2$. Solve $3x - 6 = 0$ → $x = 2$. $(x+3)^2 - 1$ = left 3, down 1. $f(2) = 4(0.5)^2 = 4(0.25) = 1$.'
       }
     },
     {
@@ -179,12 +178,12 @@ $f(2) = 3$, then $f(3) = 8$. Answer: $8$.
 |-------|-----------|
 | Notation | $f(a)$ = plug in; $f(x) = k$ = solve |
 | Composition | Inside out; order matters |
-| Inverse | Swap $x$/$y$; reflect over $y = x$ |
+| Substitution | $f(x + 1)$ changes the input; $f(x) + 1$ changes the output |
 | Transformations | Outside = vertical; inside = horizontal (opposite) |
 | Piecewise | Check which rule applies at each $x$ |
 | Absolute value | V-shape; $|A| = c$ → two cases |
 | Rate of change | $\\frac{f(b)-f(a)}{b-a}$ = secant slope |
-| Even/Odd | Even → y-axis; Odd → origin |
+| Exponential | $a \\cdot b^x$: start at $a$, multiply by $b$ each step |
 | Domain | No ÷ 0, no $\\sqrt{\\text{negative}}$ |
 
 > **Final tip:** On the SAT, always check whether the question asks for an $x$-value or a $y$-value. "At what $x$..." vs. "What is the value of $f$..." are different questions!`
