@@ -836,8 +836,8 @@
  },
  {
   "topicSlug": "sat-geometry-trigonometry-core-skills",
-  "front": "What does $\\sin^{2}\\theta + \\cos^{2}\\theta$ equal?",
-  "back": "It equals 1, for every angle. This is called the Pythagorean identity. When you see this exact sum, write 1 — there is nothing to calculate."
+  "front": "If $\\sin x^{\\circ} = \\frac{3}{5}$ in a right triangle, what is $\\cos(90 - x)^{\\circ}$?",
+  "back": "It is also $\\frac{3}{5}$. The two sharp angles of a right triangle add to $90^{\\circ}$, and the side across from one angle is the side next to the other. So the sine of an angle always equals the cosine of the other sharp angle."
  },
  {
   "topicSlug": "sat-circles-core-skills",

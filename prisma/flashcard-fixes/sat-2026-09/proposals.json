@@ -1,0 +1,1764 @@
+[
+  {
+    "action": "UPDATE",
+    "id": "cmlshiwhr001b0fo3eeimimxh",
+    "topicSlug": "sat-nonlinear-equations-functions",
+    "front": "How do you tell how many solutions $f(x) = k$ has from a graph of $f$?",
+    "back": "Draw the horizontal line $y = k$ and count where it meets the graph. Each meeting point is one solution, and its $x$-coordinate is the solution itself. For a parabola that opens up, a line below the vertex gives 0 solutions, a line through the vertex gives 1, and a line above it gives 2.",
+    "hint": "Draw the horizontal line $y = k$.",
+    "reason": "Logarithm fallback is off the SAT, the hint was about absolute value, and same-base solving already lives in sat-exponents-radicals; slot now teaches counting solutions of f(x) = k from a graph.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djx700750fbz7fgmdpud",
+    "topicSlug": "sat-probability-two-way-tables-advanced",
+    "front": "A question asks for the probability that a randomly chosen person is a junior OR prefers tea, using a two-way table.",
+    "back": "Add the junior row total and the tea column total, subtract the one cell they share (juniors who prefer tea), then divide by the grand total. Adding the row and column totals without subtracting counts that cell twice, and that inflated fraction is always a choice.",
+    "reason": "P(A|B) notation is not used on the digital SAT, and the denominator rule is already card 006z; slot now covers the on-blueprint \"A or B\" count from a table.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djx600700fbzdbuwqfnw",
+    "topicSlug": "sat-probability-two-way-tables-advanced",
+    "front": "Why do 'Of the dogs that have stayed over 3 years, what fraction are cats?' and 'Of the cats, what fraction have stayed over 3 years?' give different answers?",
+    "back": "They share a numerator (the same cell: cats that have stayed over 3 years) but take different denominators: the over-3-years column total versus the cat row total. Reading the group off the wrong half of the sentence is the most common way strong students lose this question, and the reversed value is always offered.",
+    "reason": "Same skill (reversed conditional) restated in words instead of P(A|B) notation.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshism6000y0fjc284htr8l",
+    "topicSlug": "sat-probability-two-way-tables",
+    "front": "In a two-way table, what is the denominator for 'a randomly chosen person is a student AND prefers pizza,' and for 'a randomly chosen person is a student'?",
+    "back": "The grand total both times, because neither question restricts the group you choose from. The 'and' question puts one cell on top (students who prefer pizza); the one-category question puts the whole student row total on top. Only wording like 'of the students' or 'given that' changes the denominator.",
+    "hint": "Only a restriction changes the bottom number.",
+    "reason": "Joint/marginal probability notation P(Student AND Pizza) is off the SAT; same skill restated as the denominator question the SAT actually asks.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djog005s0fbzowycfhmj",
+    "topicSlug": "sat-geometry-trigonometry-advanced",
+    "front": "You need the area of a triangle or quadrilateral given only its vertices in the $xy$-plane.",
+    "back": "Look for a horizontal or vertical side to use as the base: its length is a plain difference of coordinates, and the height is the perpendicular gap to the opposite vertex. If no side is level, draw the smallest rectangle around the figure and subtract the right triangles in its corners. Forgetting the $\\frac{1}{2}$ on a triangle is a standing distractor.",
+    "reason": "Shoelace formula is not SAT content; slot keeps \"area from vertices\" with the base-height / enclosing-rectangle method.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djog005o0fbzftm1inbq",
+    "topicSlug": "sat-geometry-trigonometry-advanced",
+    "front": "'How far is the tower from the straight road?' in the $xy$-plane: which distance does the question mean?",
+    "back": "The PERPENDICULAR distance: the shortest segment from the point to the line meets the line at a right angle. On the SAT the road is usually horizontal or vertical, so the distance is a single coordinate difference; for a slanted road, the perpendicular has the negative-reciprocal slope. Slanted connecting segments are always longer and are offered as choices.",
+    "reason": "Point-to-line distance formula is off the SAT; slot keeps the perpendicular-distance idea with SAT tools (level road, negative-reciprocal slope).",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djog005k0fbzm1zz1z6c",
+    "topicSlug": "sat-geometry-trigonometry-advanced",
+    "front": "Two angles of elevation to the top of a tower are measured from points $d$ apart on the same side of it. How do you set up the height?",
+    "back": "Use two right triangles that share the height $h$. Let $x$ be the distance from the nearer point to the base: $h = x\\tan\\theta_{near}$ and $h = (x + d)\\tan\\theta_{far}$. Set them equal, solve for $x$, then find $h$. Using $d$ as the whole base of one triangle is the most common wrong answer. With $30^{\\circ}$ and $60^{\\circ}$ angles, use the 30-60-90 ratios instead.",
+    "reason": "Cotangent is off the SAT; same two-angle elevation archetype set up with tangent only.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djhc004g0fbztzlakpm1",
+    "topicSlug": "sat-polynomials-factoring-advanced",
+    "front": "A polynomial's graph crosses the $x$-axis at $-2$ and $5$ and touches it without crossing at $1$. Which factored form fits?",
+    "back": "Each $x$-intercept $c$ gives a factor $(x - c)$, so $(x + 2)$ and $(x - 5)$. An intercept where the graph touches and turns back needs an even power, so $(x - 1)^{2}$: $f(x) = a(x + 2)(x - 5)(x - 1)^{2}$. Planted: sign-flipped factors such as $(x - 2)(x + 5)$, and $(x - 1)$ to the first power, which would make the graph cross at $1$.",
+    "reason": "Cubic Vieta (sum of three zeros) is off the SAT; slot now tests zeros-to-factors with multiplicity from a graph.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djhc004p0fbzpg0rnygr",
+    "topicSlug": "sat-polynomials-factoring-advanced",
+    "front": "An item asks for an expression equivalent to $\\frac{x^{2} + 5x + 9}{x + 2}$. How do you get it, and what are the traps?",
+    "back": "Rewrite the numerator around the divisor: $x^{2} + 5x + 9 = (x + 2)(x + 3) + 3$, so the expression equals $x + 3 + \\frac{3}{x + 2}$. Check the remainder with the remainder theorem: the numerator at $x = -2$ is $3$. Planted: $x + 3$ (remainder dropped), $x + 3 + \\frac{3}{x}$ (remainder over the wrong denominator), and a sign-flipped remainder.",
+    "reason": "Cubic Vieta relations are off the SAT (quadratic Vieta is already in quadratic-advanced); slot now tests rewriting a rational expression as quotient plus remainder.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djhc004j0fbzbsmp1e30",
+    "topicSlug": "sat-polynomials-factoring-advanced",
+    "front": "A table shows $p(-1) = 0$, $p(2) = 5$, and $p(4) = 0$ for a polynomial $p$. What must be true?",
+    "back": "Each zero in the table gives a factor: $p(-1) = 0$ means $(x + 1)$ is a factor, and $p(4) = 0$ means $(x - 4)$ is a factor. A nonzero value is a remainder, not a factor: dividing $p(x)$ by $(x - 2)$ leaves remainder $5$. Planted: $(x - 1)$ and $(x + 4)$ from reading the signs as written, and $(x - 2)$ offered as a factor.",
+    "reason": "The Q(1) = P(1)/D(1) sum-of-coefficients trick is not SAT content; slot now tests reading factors and remainders off a table of polynomial values.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000h0fsrbwvu5cnt",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000i0fsrnqu2v2sw",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000j0fsrw1j8obm9",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000k0fsr24ww6iaw",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000l0fsrzdpjijs9",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000m0fsrkpomsg89",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshj03l000n0fsrv56aln5w",
+    "topicSlug": "sat-complex-numbers",
+    "reason": "Complex numbers are beyond the digital SAT (topic is titled \"Beyond the SAT\"); no on-blueprint skill is lost.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgxb00k90f3hgpqsbhy7",
+    "topicSlug": "sat-pronoun-agreement",
+    "front": "Which pronoun fits? 'The results of the survey surprised the researchers because ___ contradicted earlier studies.' (it / they)",
+    "back": "**they** — the pronoun refers to 'results' (plural), not to 'survey,' the noun closest to the blank. Ask what did the contradicting, then match that noun's number. Choosing 'it' because 'survey' sits nearby is the planted error.",
+    "reason": "Marked \"Everyone ... their\" wrong, which the SAT never tests; slot now tests the on-blueprint skill of finding a plural antecedent past a nearer noun.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgxb00kb0f3hukymn1eu",
+    "topicSlug": "sat-pronoun-agreement",
+    "front": "Which possessive pronouns never take an apostrophe?",
+    "back": "**its, whose, their, your, hers, ours, theirs.** The apostrophe forms are contractions: it's (it is), who's (who is), they're (they are), you're (you are). Test by expanding: if 'it is' fits the sentence, write it's; if not, write its.",
+    "reason": "NO CHANGE format is not on the digital SAT and its/it's is already card cmlshq78t000u; slot now covers all apostrophe-free possessive pronouns.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgw200k30f3h5sryw4xe",
+    "topicSlug": "sat-conciseness-redundancy",
+    "front": "How do you tighten a sentence that opens with 'There are many students who...' or 'It is clear that...'?",
+    "back": "Delete the empty opener and start with the real subject: 'Many students...' instead of 'There are many students who...'. These openers delay the subject and add words without adding meaning.",
+    "reason": "NO CHANGE item (not on the digital SAT) that restated the redundancy card; slot now teaches cutting empty openers.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgw200k40f3h6k0q9h61",
+    "topicSlug": "sat-conciseness-redundancy",
+    "front": "Why is 'The festival, which takes place every year, is held annually in May' wordy?",
+    "back": "**'Every year' and 'annually' say the same thing, so one must go.** Redundancy is not always two words side by side: check whether any phrase repeats an idea already stated elsewhere in the sentence, such as a date or a time frame.",
+    "reason": "NO CHANGE / DELETE item (not on the digital SAT) with a hedged key; slot now teaches spotting redundancy spread across a sentence.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr64r00160faxwz1c5ndu",
+    "topicSlug": "calculator-strategies",
+    "front": "How do you find the zeros or the vertex of a quadratic with the built-in Desmos calculator?",
+    "back": "Type the function. Desmos marks the $x$-intercepts and the vertex as gray points; click each one to read its exact coordinates. Use this to check your factoring or to answer 'minimum value' questions in seconds.",
+    "hint": "Click the gray points.",
+    "reason": "TI-84 keystrokes are not what students use in Bluebook; slot now teaches reading zeros and vertex in Desmos.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr64r00190faxcam02fxo",
+    "topicSlug": "calculator-strategies",
+    "front": "How do you evaluate a function at several inputs quickly in Desmos?",
+    "back": "Define it once, for example $f(x) = 3x^{2} - 5$, then type $f(2)$, $f(-1)$, and so on, each on its own line; Desmos prints every value. This checks table-matching and 'which point is on the graph' questions without hand arithmetic.",
+    "hint": "Name the function, then call it.",
+    "reason": "TI-84 TABLE keystrokes are not the Bluebook tool; slot now teaches evaluating a function at many inputs in Desmos.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt29l7kb004n0f4w46klr4b5",
+    "topicSlug": "sat-geometry-trigonometry-core-skills",
+    "front": "If $\\sin x^{\\circ} = \\frac{3}{5}$ in a right triangle, what is $\\cos(90 - x)^{\\circ}$?",
+    "back": "It is also $\\frac{3}{5}$. The two sharp angles of a right triangle add to $90^{\\circ}$, and the side across from one angle is the side next to the other. So the sine of an angle always equals the cosine of the other sharp angle.",
+    "reason": "The Pythagorean identity is not tested on the SAT; Core Skills slot now covers the tested complementary-angle fact.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfei900cf0f3henr8rlne",
+    "topicSlug": "sat-transitions-organization",
+    "front": "When does 'In other words' or 'That is' fit as a transition?",
+    "back": "When the second sentence restates the first more simply or more precisely without adding a new fact: 'The drug is toxic to the kidneys. In other words, it damages them.' If the second sentence adds a new point, 'In other words' is wrong.",
+    "reason": "Essay structure is old-SAT content; transitions slot now covers restatement transitions.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfei900cd0f3hzktquqy9",
+    "topicSlug": "sat-transitions-organization",
+    "front": "Which transitions signal time order, and when do they fit?",
+    "back": "First, then, next, later, subsequently, finally, and meanwhile. Use one only when the sentences describe steps or events in order. 'Meanwhile' is different: it needs two things happening at the same time.",
+    "reason": "Sentence-placement items are not on the digital SAT; transitions slot now covers sequence transitions.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfei900ce0f3hbi0jqq8i",
+    "topicSlug": "sat-transitions-organization",
+    "front": "Which transitions signal similarity, and what must be true to use them?",
+    "back": "Similarly, likewise, and in the same way. The two sentences must describe comparable things doing the same kind of thing: 'Bees communicate by dancing. Similarly, some ants signal with scent trails.' If the second sentence just adds another point about the same subject, use an addition word instead.",
+    "reason": "Keep/delete items are not on the digital SAT; transitions slot now covers similarity transitions.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2xc500090f91pohvar0c",
+    "topicSlug": "sat-time-management",
+    "hint": "32 minutes, 27 questions per module.",
+    "reason": "Hint \"65 ÷ 5 = 13 minutes\" is paper-SAT pacing and contradicts the back.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7d2200050fenx61tk03t",
+    "topicSlug": "sat-quadratic-equations",
+    "back": "- **Positive**: Two distinct real solutions (the graph crosses the $x$-axis twice)\n- **Zero**: One repeated real solution (the vertex sits on the $x$-axis)\n- **Negative**: No real solutions (the graph never reaches the $x$-axis)",
+    "reason": "Drops the \"(two complex solutions)\" aside now that complex numbers are removed from the SAT deck; adds the graph reading the SAT actually asks about.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2323000i0fntzrb6wjun",
+    "topicSlug": "sat-grammar-usage",
+    "front": "Do 'everyone,' 'each,' and 'neither' take a singular or a plural verb?",
+    "back": "A singular verb: 'Everyone **is** ready,' 'Each of the samples **was** tested,' 'Neither of the plans **works**.' The plural noun after 'of' does not change the verb.",
+    "reason": "Claimed \"everyone/each/neither\" need singular pronouns, which the SAT does not test; kept the tested verb-agreement half.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djq9005z0fbz2e4k0p2l",
+    "topicSlug": "sat-circles-advanced",
+    "back": "Substitute the line into the circle equation; tangent means the resulting quadratic has exactly one solution, so its discriminant is $0$. For a horizontal or vertical tangent it is quicker: the line sits exactly $r$ from the center, so $y = k \\pm r$ or $x = h \\pm r$. A Desmos slider on the constant confirms the answer.",
+    "reason": "Not in the audit list: uses the same off-SAT point-to-line distance formula; slot now uses substitution, the discriminant, or the level-line shortcut.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003i0fbzswi3rq84",
+    "topicSlug": "sat-functions-advanced",
+    "front": "Two functions chain a quantity to hours and hours to dollars, and you are given a BUDGET in dollars.",
+    "back": "Work backward: set the dollars function equal to the budget and solve for hours, then set the hours function equal to that and solve for the quantity. Running the chain forward from the budget treats dollars as a quantity and produces a planted wrong answer; stopping after the first step gives hours, another choice.",
+    "reason": "Not in the audit list: inverse-function notation is not used on the SAT and the card had ASCII math; same work-backward skill without it.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003j0fbzlbtycali",
+    "topicSlug": "sat-functions-advanced",
+    "front": "A table gives values of $f$, and $g(x) = f(x - 6)$. You must find $g(10)$.",
+    "back": "Evaluate the inside first: $g(10) = f(4)$, then read $f(4)$ from the table. The inner value $4$ is planted, as is $f(10) - 6$, which moves the shift outside. Reading $f(10)$ and ignoring the shift lands on a table value, which makes it feel right.",
+    "reason": "Not in the audit list: inverse-function notation is not used on the SAT and the card had ASCII math; same inside-shift trap without it.",
+    "category": "off-blueprint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfeh100c70f3hzjhu8q42",
+    "topicSlug": "sat-exponential-functions",
+    "front": "In $V(t) = 30000(0.82)^{t}$, where $t$ is in years, by what percent does the value decrease each year?",
+    "back": "By 18%. A decay factor $b$ means the quantity keeps $b$ of its value each period, so the percent lost is $1 - b = 1 - 0.82 = 0.18$. The planted wrong answer is 82%, which is the percent kept, not the percent lost.",
+    "reason": "Escaped \\$ inside $$ math broke KaTeX; also a multi-step worked problem, rewritten as the one fact it tests (percent lost vs kept).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfeh100c90f3hbve6jiev",
+    "topicSlug": "sat-exponential-functions",
+    "front": "2,000 dollars is invested at 6% annual interest, compounded monthly. Which expression gives its value after 5 years?",
+    "back": "$2000\\left(1 + \\frac{0.06}{12}\\right)^{12 \\cdot 5}$, about 2,697.70 dollars. Divide the annual rate by the periods per year and multiply the years by them. Planted: $2000(1.06)^{5}$ (compounded yearly) and $2000(1.005)^{5}$ (the monthly rate applied only 5 times).",
+    "reason": "Escaped \\$ in the front and inside $$ math broke rendering; worked problem condensed to the setup and its traps (2000(1.005)^60 = 2697.70 verified).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshiogo000k0feube0fv4fm",
+    "topicSlug": "sat-systems-linear-equations",
+    "back": "Identify two unknowns and define variables. Then identify two different relationships (e.g., total quantity and total value) to create two equations. Example: \"40 tickets sold, adult tickets 10 dollars and child tickets 5 dollars, 350 dollars total\" gives $a + c = 40$ and $10a + 5c = 350$.",
+    "reason": "Escaped \\$ amounts collided with the math spans; currency written as words.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshiolb000v0feuw2mjkvin",
+    "topicSlug": "sat-linear-inequalities-graphs",
+    "back": "\"At most\" means $\\leq$ (less than or equal to). Example: \"She can spend at most 50 dollars\" means $\\text{spending} \\leq 50$.",
+    "reason": "Escaped \\$50 paired with the next math span; currency written as words.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500ai0f3h16017k6q",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "A price rises from 80 dollars to 100 dollars. Why is that a 25% increase, when falling from 100 dollars back to 80 dollars is only a 20% decrease?",
+    "back": "Percent change always divides the change by the STARTING value: $\\frac{20}{80} = 0.25$ going up, but $\\frac{20}{100} = 0.20$ coming down. Dividing by the new value is the planted wrong answer.",
+    "reason": "$\\$80$ fails the importer KaTeX gate; worked problem condensed to the divide-by-original fact.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500ak0f3hh7ffak9f",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "A 45-dollar shirt is 20% off, and 8% sales tax is applied after the discount. What single expression gives the total cost?",
+    "back": "$45(0.80)(1.08) = 38.88$, so 38.88 dollars. Each percent change becomes one multiplier: a 20% discount keeps $0.80$ of the price, and 8% tax multiplies by $1.08$. Planted: $45(0.88)$, which nets the two percents first and gives 39.60 dollars.",
+    "reason": "Escaped \\$ inside $$ math broke KaTeX; worked problem condensed to the multiplier fact (45 x 0.80 x 1.08 = 38.88 verified).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500al0f3h3t9cl8dy",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "After a 15% discount, a laptop costs 680 dollars. What was the original price?",
+    "back": "800 dollars. The sale price is 85% of the original, so divide: $\\frac{680}{0.85} = 800$. Planted: adding 15% of the sale price, $680 \\times 1.15 = 782$, which fails because the discount was taken from the original price, not the sale price.",
+    "reason": "Escaped \\$ inside math broke KaTeX; worked problem condensed to the reverse-percent fact (680/0.85 = 800, 680 x 1.15 = 782 verified).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500am0f3h7oxarzgw",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "An investment of 1,000 dollars rises 10% one year and falls 10% the next. What is it worth, and why isn't it back to 1,000 dollars?",
+    "back": "990 dollars, a 1% net decrease: $1000(1.10)(0.90) = 990$. The 10% loss is taken from the larger amount, 1,100 dollars, so it removes more than the gain added. Multiply the factors; never add or cancel the percents.",
+    "reason": "Escaped \\$ inside $$ math broke KaTeX; worked problem condensed to the up-then-down percent fact (1000 x 1.10 x 0.90 = 990 verified).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj7d002x0fbzcomy2t3n",
+    "topicSlug": "sat-linear-inequalities-graphs-advanced",
+    "back": "Fund the requirement first (40 chairs at 12 dollars each is 480 dollars), subtract from the budget, THEN divide the remainder by the other item's price and round down. Skipping the requirement gives the big tempting wrong answer.",
+    "reason": "\"$12 = $480\" paired as a math span and swallowed the dollar signs; currency written as words.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7d2200040fenzajsbfxo",
+    "topicSlug": "sat-quadratic-equations",
+    "hint": "Negative b, plus or minus the square root of b squared minus 4ac, all over 2a.",
+    "reason": "Unicode superscript b² (rejected by the card gate) in the hint.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x1xhs000f0fkws8sgchj2",
+    "topicSlug": "sat-circles",
+    "back": "Circumference: $C = 2\\pi r = \\pi d$. Area: $A = \\pi r^{2}$. Both use the radius, so halve a given diameter first.",
+    "reason": "Unicode πr² outside math; now KaTeX. Kept as the one circle-formula card (geometry-basics copies are rewritten).",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djf300460fbzcacpl5a5",
+    "topicSlug": "sat-exponential-functions-advanced",
+    "back": "Take the k-th ROOT of the factor: $b^{t/k} = \\left(b^{1/k}\\right)^{t}$. Shrinking the time unit means a root, never a power. The reversed conversion $b^{k}$ is planted and is always implausibly large — sanity-check the size.",
+    "reason": "ASCII exponents outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djf300490fbz72y3j25n",
+    "topicSlug": "sat-exponential-functions-advanced",
+    "back": "The effective rate is $\\left(1 + \\frac{r}{n}\\right)^{n} - 1$, where $r$ is the nominal rate and $n$ the periods per year; it always beats the nominal rate. The nominal rate itself is a planted choice, and so is compounding one period too many or too few — count the periods deliberately.",
+    "reason": "ASCII exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djf3004c0fbzw85fzkbe",
+    "topicSlug": "sat-exponential-functions-advanced",
+    "front": "Solving $2^{k} = N$ for a big $N$ such as 1024, 2048, or 4096",
+    "back": "Recognize powers of 2: $2^{8} = 256$, $2^{9} = 512$, $2^{10} = 1024$, $2^{11} = 2048$, $2^{12} = 4096$. Divide the target by the start amount first, then read off the exponent. Never multiply forward step by step.",
+    "reason": "ASCII exponents outside math in front and back.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djf3004d0fbzrayq56il",
+    "topicSlug": "sat-exponential-functions-advanced",
+    "back": "Compare $b^{n}$ with the target ratio, then verify BOTH integers straddling the crossing: the year before (still short) and the year of crossing. Both are planted. The linear estimate (ratio change divided by rate) is also planted and misses the compounding.",
+    "reason": "ASCII exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djf3004f0fbz7xpmi0id",
+    "topicSlug": "sat-exponential-functions-advanced",
+    "back": "Graph $y = a \\cdot b^{x}$ (start amount $a$, factor $b$) and the horizontal threshold line, click the intersection, and take the first integer to the correct side. Still hand-check the integer on each side of the crossing to kill off-by-one errors.",
+    "reason": "ASCII exponent and middle dot outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003c0fbzu899w2e3",
+    "topicSlug": "sat-functions-advanced",
+    "back": "Write the chain with units: minutes to pages to dollars. Solve backward and stop at the link the last sentence names. The page count is always an answer choice; it is the value your algebra produces one step early, in the wrong units.",
+    "reason": "ASCII arrows written as math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003d0fbziaqkrvfc",
+    "topicSlug": "sat-functions-advanced",
+    "front": "A linear cost model $f(x) = mx + b$ in context, and you need x from a given total",
+    "back": "Strip the fixed fee $b$ BEFORE dividing: $x = \\frac{\\text{total} - b}{m}$. Dividing the whole total by $m$ is the single most-planted error and always yields a plausible-looking option (e.g. 84 instead of 80).",
+    "reason": "ASCII math outside $ in front and back.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003e0fbzs529pnsa",
+    "topicSlug": "sat-functions-advanced",
+    "front": "A table of $f$-values plus $g(x) = 2x - 1$, and the equation $f(g(x)) = 4$",
+    "back": "Work outside-in: find the table input that makes $f$ equal $4$, set $g(x)$ equal to it, then undo $g$. The value of $g(x)$ itself is the top distractor; applying $g$ forward to that value is the second distractor.",
+    "reason": "ASCII function notation outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003f0fbz27jo7p56",
+    "topicSlug": "sat-functions-advanced",
+    "front": "$g(x) = f(2x) + 3$ and you need $x$ for a given $g$-value",
+    "back": "Peel the outside first (subtract 3), read the table to get $2x$, then DIVIDE by 2. $f(2x)$ is a horizontal compression, so $x$ is half the table input. The table input itself, and the doubled value from treating it as $f\\left(\\frac{x}{2}\\right)$, are both options.",
+    "reason": "ASCII function notation outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003g0fbzqpen118h",
+    "topicSlug": "sat-functions-advanced",
+    "front": "Graph is translated, then reflected across the $x$-axis",
+    "back": "The reflection negates everything already built: right 3 and down 2 then reflect gives $-[f(x - 3) - 2] = -f(x - 3) + 2$, not $-f(x - 3) - 2$. Forgetting the reflection, and reflecting only the $f$ term, are both planted.",
+    "reason": "ASCII function notation outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003h0fbzj8mm5lit",
+    "topicSlug": "sat-functions-advanced",
+    "back": "Later start means it is younger at time $t$: the input becomes $t - 5$ (inside). The 20% is an output scaling: multiply outside, giving $1.2h(t - 5)$. Putting the $1.2$ inside, or turning the 5-unit delay into a vertical shift, are the two named wrong answers.",
+    "reason": "ASCII function notation outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003k0fbzqo08xk6g",
+    "topicSlug": "sat-functions-advanced",
+    "back": "Round UP, always: 4.85 spools means buy 5. The rounded-down count and the fractional-spool cost ($4.85 \\times$ price) are both options, and both correspond to a job that cannot actually be finished or a purchase that cannot actually be made.",
+    "reason": "ASCII \"x\" used as a times sign.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djag003l0fbz9pbx08fq",
+    "topicSlug": "sat-functions-advanced",
+    "front": "\"Which expression represents...\" with $g(f(1250)) - g(f(900))$ and no proportionality stated",
+    "back": "Track units: $f$ gives gallons, $g$ turns gallons into dollars, so the difference is a difference in DOLLARS. It is NOT $g(f(350))$ — that requires both functions to be proportional, which a setup fee or bulk discount breaks. The gallons-only option stops one link short.",
+    "reason": "ASCII function notation outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj7c002t0fbzb8nup2r3",
+    "topicSlug": "sat-linear-inequalities-graphs-advanced",
+    "front": "Point $(6, b)$ in a system of two inequalities: greatest or least integer $b$",
+    "back": "Substitute $x = 6$ into BOTH inequalities, get a bound from each, keep the tighter one. Then respect strictness: $b < 4$ means the greatest integer is $3$. Using only one inequality is the planted single-constraint trap.",
+    "reason": "ASCII inequalities outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj7c002u0fbzq20ru1ai",
+    "topicSlug": "sat-linear-inequalities-graphs-advanced",
+    "back": "One option is engineered to land EXACTLY on a boundary: it passes with $\\leq$ but fails with $<$. Check every boundary hit against the actual symbol. In Desmos a dashed line means excluded and a solid line means included.",
+    "reason": "ASCII <= and = outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj7d00300fbz3y9047pp",
+    "topicSlug": "sat-linear-inequalities-graphs-advanced",
+    "back": "Express the other ticket count as $\\text{total} - v$, build $\\text{revenue} \\geq \\text{target}$, solve, round UP. Traps: round-down neighbor, the OTHER ticket type's count, and target-divided-by-one-price (ignores the second revenue stream).",
+    "reason": "ASCII >= outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj7d00310fbzbmbk592g",
+    "topicSlug": "sat-linear-inequalities-graphs-advanced",
+    "back": "Type both inequalities as written; the overlap shading is the solution region. Plot answer-choice points to see which lands inside, or add the line $x = 6$ and read the segment of overlap it crosses for integer-$b$ questions.",
+    "reason": "ASCII math outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003n0fbz7lrc7yek",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "front": "Radical equation $\\sqrt{\\text{expression}} = x - c$ solved by squaring",
+    "back": "Pre-check before solving: any valid root needs $x \\geq c$, since a square root can't equal a negative. That tells you in advance which quadratic root survives. The value built from the extraneous root is always among the choices.",
+    "reason": "sqrt(stuff) and >= written in ASCII.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003p0fbzmaxq8qxu",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "front": "Asked for the sum of $y$-coordinates of line-parabola intersections",
+    "back": "Vieta gives the sum of $x$-coordinates from the combined quadratic; then use the LINE: $y_1 + y_2 = m(x_1 + x_2) + 2b$ for a line $y = mx + b$. The $x$-sum itself is the planted trap answer. Never push $x$-values through the parabola — more arithmetic, same result.",
+    "reason": "ASCII math and middle dot outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003q0fbz5ldu8t2i",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "front": "Horizontal line $y = k$ cuts a parabola at two points a given distance apart",
+    "back": "The points straddle the axis of symmetry $x = -\\frac{b}{2a}$ at half the distance each side. Find the axis, step out, evaluate the parabola once. The vertex $y$-value (one-point tangency) is a planted distractor.",
+    "reason": "ASCII math outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003r0fbz73uagbd3",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "back": "Dividing by a negative FLIPS the inequality: $-6|x - 4| \\geq -30$ becomes $|x - 4| \\leq 5$, an inside-the-interval answer. Forgetting the flip gives the outside of the interval — check whether your answer set is bounded when the choices are finite numbers.",
+    "reason": "ASCII absolute-value inequalities outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003s0fbzrzdjsfo5",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "front": "$|x - c| \\leq r$: which number is the answer — 4 candidates in the choices",
+    "back": "Half-width $r$, endpoints $c - r$ and $c + r$, interval length $2r$, integer count $2r + 1$ (for integers $c$ and $r$). All appear as choices. Underline whether the stem asks for a length, an endpoint, or a count before finishing.",
+    "reason": "ASCII math outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djbz003t0fbz1a9i0b2m",
+    "topicSlug": "sat-nonlinear-equations-functions-advanced",
+    "front": "Counting integers in a closed interval $[a, b]$",
+    "back": "The count is $b - a + 1$, not $b - a$. The test plants $b - a$ every time. For strict inequalities, shrink to the integers strictly inside first, then apply the $+1$ rule to the surviving endpoints.",
+    "reason": "ASCII math outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004s0fbzrvh34iyj",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "back": "That root is extraneous and the equation has NO solution. Write $x \\neq$ (excluded values) BEFORE solving. The extraneous root itself is always an option, and so is the over-correction of discarding a legal root like $x = 0$, which is fine unless a bare $x$ sits in a denominator.",
+    "reason": "ASCII != outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004t0fbzohhhiuaj",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "front": "Two pumps/crews: one takes $x$ hours, the other $x + 4$, together they take $T$ hours",
+    "back": "Rates add: $\\frac{1}{x} + \\frac{1}{x + 4} = \\frac{1}{T}$. Solve the quadratic, reject the negative root, then check WHICH worker the question names. The first worker's time is the intermediate; the rejected negative root and the given combined time $T$ are the other two options.",
+    "reason": "ASCII fractions outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004v0fbz607bs82j",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "front": "Average cost $A(x) = \\frac{F + vx}{x}$ set equal to a target, and the ask says ADDITIONAL units",
+    "reason": "ASCII fraction outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004w0fbz1k8bvio9",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "front": "A complex fraction with $(3 - x)$ on top and $(x - 3)$ on the bottom",
+    "back": "Write $3 - x = -(x - 3)$ explicitly before cancelling; the result carries a negative sign. That single sign is usually the only difference between the correct answer and the top distractor. Over-cancelling into $\\frac{1}{x^{2}}$ instead of $\\frac{1}{x}$ is the second-most-planted error.",
+    "reason": "ASCII exponent and fractions outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004x0fbzph65r8jf",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "front": "Combining $\\frac{a}{x + 1} + \\frac{b}{x - 1}$ into a single fraction over $x^{2} - 1$, then asked for a sum of constants",
+    "back": "Each numerator pairs with the OPPOSITE factor, and a subtraction must distribute over both terms. Failing to distribute the minus sign, and pairing each numerator with its own factor, each produce a clean wrong sum. The individual constants $a$ and $b$ are also options.",
+    "reason": "ASCII fractions and exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004y0fbz5709wduk",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "back": "A ratio scales by the ratio of the scale factors: $\\frac{1.20}{1.25} = 0.96$, a 4% DECREASE. The reciprocal $\\frac{1.25}{1.20} \\approx 1.04$ points the wrong direction, and subtracting the percents (25 - 20 = 5) is not how ratios of scale factors behave.",
+    "reason": "ASCII fractions outside math; also the reciprocal is ~4.2% up, not the same magnitude.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djiy004z0fbz8l5bt673",
+    "topicSlug": "sat-polynomial-rational-expressions-advanced",
+    "back": "Set the expression equal to $k$, clear denominators into $kt^{2} - bt + ck = 0$, and require the discriminant to be nonnegative; the largest allowed $k$ is the maximum. The TIME at which it occurs is the classic wrong-coordinate distractor, and dropping the $t^{2}$ term from the denominator gives another.",
+    "reason": "ASCII exponents outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj003w0fbzqbgd4q8w",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "back": "Set the two expressions equal, move everything to one side, and set the discriminant $b^{2} - 4ac$ equal to zero. Exactly one intersection means a zero discriminant; two means positive; none means negative. Keep the parameter inside the discriminant and solve for it.",
+    "reason": "ASCII exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj003x0fbzysawj9y3",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "back": "The vertex $t$-value is the classic intermediate-value plant. Compute $t = -\\frac{b}{2a}$, then SUBSTITUTE BACK to get the height. Sanity-check: does your number make sense as a height, not a time?",
+    "reason": "ASCII fraction outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj003y0fbzftsy85o2",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "back": "Let $n$ be the number of increases. Revenue $= (\\text{price} + \\text{step} \\cdot n)(\\text{customers} - \\text{loss} \\cdot n)$. Expand to a quadratic in $n$, find the vertex, then convert $n$ back into the quantity asked for (price, customers, or dollars).",
+    "reason": "ASCII math with middle dots outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj00400fbzxr9adhql",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "front": "Asked for $\\frac{1}{r} + \\frac{1}{s}$ where $r$ and $s$ are roots of a quadratic",
+    "back": "Rewrite as $\\frac{r + s}{rs}$ and use Vieta: sum $= -\\frac{b}{a}$, product $= \\frac{c}{a}$, so the answer is $-\\frac{b}{c}$. Never find the roots. If your scratch work contains a square root, you took the slow road.",
+    "reason": "ASCII fractions outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj00410fbzjnqbu6eb",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "back": "$r^{2} + s^{2} = (r + s)^{2} - 2rs$ and $(r - s)^{2} = (r + s)^{2} - 4rs$. Get sum and product from Vieta, then plug in. The planted wrong answers drop the $-2rs$ term or flip one sign.",
+    "reason": "ASCII exponents outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj00420fbzs2hsk9o2",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "front": "Quadratic given in factored form like $-2(x - 3)(x - 11)$, asked to maximize",
+    "back": "Do not expand. The vertex sits midway between the zeros: $x = \\frac{3 + 11}{2} = 7$. Then evaluate once. Factored form is a gift — expanding it throws the gift away.",
+    "reason": "ASCII math outside $.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djdj00450fbzt88h8p1f",
+    "topicSlug": "sat-quadratic-equations-advanced",
+    "back": "Solve $b^{2} - 4ac < 0$ as a strict inequality on the parameter, then count integers STRICTLY inside the interval. Endpoints give discriminant zero (one real solution) and must be excluded; forgetting negatives or endpoints gives the planted counts.",
+    "reason": "ASCII exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x00320fbzt7gc3bjq",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "Divide by the product of the multipliers: $\\text{original} = \\frac{\\text{final}}{0.85 \\times 0.92}$. Reversing only one step, and treating the cuts as a single 23% cut, are both planted. A percent decrease is never undone by the same percent increase, because the base changed.",
+    "reason": "ASCII \"x\" as times and slash fraction.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x00330fbzgq8nk5wd",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "$1.25 \\times 0.80 = 1.00$ exactly, so the value returns to where it started and the order does not matter — multiplication commutes. The options offering a nonzero difference between two stores that applied the same two changes in opposite orders are all wrong.",
+    "reason": "ASCII \"x\" as times.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x00360fbzo4wfxs1o",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "front": "A blueprint or map is scaled so that 1 inch represents 5 feet and the question asks for flooring COST",
+    "back": "Convert each LINEAR dimension first, then multiply for area: areas scale by $k^{2}$, not $k$. Scaling the drawing's area by 5 instead of 25, and pricing the drawing's area directly with no scaling, are the two planted errors. The area in square feet is the third.",
+    "reason": "ASCII exponent outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x00370fbzy27e8wes",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "Chain the multipliers on the cost: $1.60 \\times 0.70 = 1.12$, so profit is 12% of cost. The profit in DOLLARS is planted as if it were the percent, 112 (selling price as a percent of cost) is the whole rather than the gain, and subtracting 30 from 60 ignores that the discount applies to the larger list price.",
+    "reason": "ASCII \"x\" as times.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x00380fbzba0frtwf",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "Reduce to the per-hour (or per-unit) rate FIRST, apply the percent to that rate, then scale to the new period. Applying the percent to the old shift's total keeps the old length, and adding the number instead of the percent ($450 + 24$ versus $450 \\times 1.24$) is the third option.",
+    "reason": "ASCII \"x\" as times.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x003a0fbztfunprqq",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "The chained rate is $0.60 \\times 0.35 = 0.21$ of the whole, so divide the given count by 0.21. Dividing by 0.35 alone gives the language-student count and dividing by 0.60 alone gives another intermediate — both are on the list, and both feel like totals.",
+    "reason": "ASCII \"x\" as times.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj8x003b0fbzn02zmj4g",
+    "topicSlug": "sat-ratios-proportions-percents-advanced",
+    "back": "Add the parts to get the whole (10), take the fraction for the named part ($\\frac{3}{10}$), multiply by the total to get its quantity, THEN multiply by the price. The quantity itself, the whole priced at that rate, and a half-versus-three-tenths slip are the three distractors.",
+    "reason": "ASCII fraction outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj5m002i0fbzxwve3vw9",
+    "topicSlug": "sat-systems-linear-equations-advanced",
+    "front": "System with constant $k$ has NO solution — fastest method?",
+    "back": "Ratio the coefficients that line up and are both known (e.g., $\\frac{6}{2} = 3$), multiply the partner coefficient by that scale factor to get $k$, then confirm the constants do NOT follow the same proportion. One division, one multiplication, one check.",
+    "reason": "ASCII fraction outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj5m002j0fbzf6882amj",
+    "topicSlug": "sat-systems-linear-equations-advanced",
+    "back": "The second equation is a constant multiple of the first — every piece: both coefficients AND the constant. If both constants are given, they hand you the scale factor directly ($7 = 21 \\times \\frac{1}{3}$, so the factor is $\\frac{1}{3}$).",
+    "reason": "ASCII \"x\" as times and slash fraction.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj5m002k0fbz7nz177ae",
+    "topicSlug": "sat-systems-linear-equations-advanced",
+    "back": "$6 \\div (-4) = -\\frac{3}{2}$, and a negative factor flips every sign it touches: $-10 \\times \\left(-\\frac{3}{2}\\right) = 15$. The same answer with the wrong sign is always among the options. Write the factor down with its sign before applying it.",
+    "reason": "ASCII fractions and \"x\" as times.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj5m002l0fbzdxvb19td",
+    "topicSlug": "sat-systems-linear-equations-advanced",
+    "front": "Mirrored coefficients: $4x + 3y = 104$ and $3x + 4y = 92$",
+    "back": "Add the equations for a multiple of $x + y$; subtract for $x - y$. Divide by the common coefficient to finish in one step. Distractors: the undivided total (196), $x$ alone, $y$ alone, and the opposite combination.",
+    "reason": "ASCII equations outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj5m002r0fbzpjs5dqny",
+    "topicSlug": "sat-systems-linear-equations-advanced",
+    "back": "Type both equations with the unknowns renamed $x$ and $y$ (for example $7x + 11y = 499$), with no rearranging, then click the intersection and read the point. Then still do the final ask (revenue, difference) by hand.",
+    "reason": "ASCII equation outside math; also Desmos graphs only x and y, so other letters must be renamed.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj3z002f0fbz2naqcqj9",
+    "topicSlug": "sat-linear-equations-inequalities-advanced",
+    "front": "Exact division on a capacity problem ($\\frac{930}{62} = 15$ exactly)",
+    "back": "Check whether the limit is inclusive. 'Maximum capacity 1,500 lb' allows hitting exactly 1,500, so 15 is right — do not round an exact answer down. The over-cautious $n - 1$ is a planted distractor.",
+    "reason": "ASCII fraction outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj3z002g0fbz116vsv44",
+    "topicSlug": "sat-linear-equations-inequalities-advanced",
+    "front": "Asked for an expression like $2x - 5$, not $x$",
+    "back": "Compute it directly after finding $x$, and expect the option set to contain $x$ itself, $2x$, and $x - 5$. At 700+, the literal answer to the equation you solved is the single most tempting wrong choice.",
+    "reason": "ASCII expressions outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj3z002a0fbzqj1hgcvl",
+    "topicSlug": "sat-linear-equations-inequalities-advanced",
+    "front": "Word problem: you solved for $x$ and $x$ is an answer choice",
+    "back": "Stop — reread the final sentence. Hard items ask for the total, the difference, the other quantity, or an expression like $\\frac{x + 3}{2}$. The intermediate value is bait; it appears in nearly every hard-tier option set.",
+    "reason": "ASCII expression outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24dj3z002b0fbzcp9js2kq",
+    "topicSlug": "sat-linear-equations-inequalities-advanced",
+    "back": "Strict inequality excludes the break-even point: at equality the comparison fails. If $m < 25$, the greatest valid whole number is 24, not 25. The break-even value itself is always one of the four options.",
+    "reason": "ASCII inequality outside math.",
+    "category": "render"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7ew400080fflaz1jje2c",
+    "topicSlug": "sat-sentence-structure",
+    "hint": "Missing a subject, a verb, or a complete thought.",
+    "reason": "Hint described a dangling modifier, not a fragment.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7ew400090ffllgnk6m70",
+    "topicSlug": "sat-sentence-structure",
+    "hint": "Two complete sentences need a period, a semicolon, or a comma plus FANBOYS.",
+    "reason": "Hint described parallel structure, not a run-on.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq35d000h0fuf23yhgjq9",
+    "topicSlug": "sat-finding-textual-evidence",
+    "hint": "One passage, one claim, one question.",
+    "reason": "Hint (\"two linked questions\") contradicted the back (no paired questions on the digital SAT).",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq35d000i0fufmd371a63",
+    "topicSlug": "sat-finding-textual-evidence",
+    "hint": "Restate the claim before reading the choices.",
+    "reason": "Hint reversed the method (evidence before claim).",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr6g7001y0fax9ndr3td8",
+    "topicSlug": "process-of-elimination",
+    "hint": "Change only for a concrete reason.",
+    "reason": "Hint (\"first instinct wins\") contradicted the back.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr69t001j0faxdjbir1d1",
+    "topicSlug": "sat-time-management",
+    "hint": "In order, but never linger.",
+    "reason": "Hint (\"strengths first\") contradicted the back (\"go in order\").",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2xc5000a0f910o0dzdqv",
+    "topicSlug": "sat-time-management",
+    "hint": "Module 1 decides which Module 2 you get.",
+    "reason": "Hint (\"after 2x average time\") was unrelated to the adaptive-module point.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2xh6000g0f91sl6wle98",
+    "topicSlug": "process-of-elimination",
+    "hint": "Not in the text, so not the answer.",
+    "reason": "Hint named extremes/opposites, which are different wrong-answer types.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr64r00150fax10wvlt2p",
+    "topicSlug": "calculator-strategies",
+    "hint": "Desmos is built into Bluebook.",
+    "reason": "Hint pushed the TI-84 while the back says Desmos is built in.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq73t000n0fyqga8uvh1v",
+    "topicSlug": "sat-grammar-usage",
+    "hint": "Four complete choices, no NO CHANGE.",
+    "reason": "Hint said the NO CHANGE option is right a quarter of the time; the back says there is no NO CHANGE option.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq73t000l0fyqyrmh9w7c",
+    "topicSlug": "sat-grammar-usage",
+    "hint": "Compare like with like.",
+    "reason": "Hint (\"Seven key error types\") had nothing to do with faulty comparison.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq35e000k0fufp6lfwfxt",
+    "topicSlug": "sat-finding-textual-evidence",
+    "hint": "Reread the claim, not the choices.",
+    "reason": "Hint implied the student's own claim is wrong; the claim is given, the fix is to reread it.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2xh6000f0f91bwtz9ux2",
+    "topicSlug": "process-of-elimination",
+    "hint": "The ABC icon in Bluebook.",
+    "reason": "Hint copied the POE definition card instead of naming the Bluebook tool.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x2xc5000b0f91xelkmk93",
+    "topicSlug": "sat-time-management",
+    "hint": "Flag it, move on, come back before the module ends.",
+    "reason": "Hint (\"easy questions first\") did not describe Mark for Review.",
+    "category": "hint"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgyi00ke0f3hllr4cz9r",
+    "topicSlug": "sat-punctuation-commas-semicolons",
+    "front": "How do you punctuate a transition word such as 'Furthermore' at the start of a sentence?",
+    "back": "**Follow it with a comma: 'Furthermore, the data support the hypothesis.'**\n\nThe transition belongs to the sentence it opens, so no semicolon or colon goes after it.",
+    "reason": "Front asked \"which\" of choices it never showed.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgyi00kf0f3hwn499sk1",
+    "topicSlug": "sat-punctuation-commas-semicolons",
+    "front": "How do you punctuate a list whose items already contain commas, such as cities with their countries?",
+    "reason": "Front asked \"which\" of choices it never showed.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgyi00kg0f3h27zn6rxw",
+    "topicSlug": "sat-punctuation-commas-semicolons",
+    "front": "Dashes or commas: which sets off a parenthetical element with more emphasis?",
+    "back": "**Dashes: 'The results — surprising as they were — changed the entire study.'**\n\nBoth are correct grammar; dashes add emphasis, commas are neutral. Whichever mark opens the element must also close it.",
+    "reason": "Front asked \"which\" of choices it never showed.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgzp00km0f3hl7b3jiih",
+    "topicSlug": "sat-sentence-structure",
+    "front": "How can you combine 'Marie Curie discovered radium' and 'Marie Curie was a pioneering physicist' into one sentence without repeating her name?",
+    "reason": "Front asked \"which\" of choices it never showed.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfei900cg0f3hg23hyf80",
+    "topicSlug": "sat-transitions-organization",
+    "front": "\"Physical health affects academic performance. ___, mental health plays a significant role.\" Which fits: Therefore, However, Equally important, or For example?",
+    "back": "**Equally important**\n\nThe second sentence adds a second factor of the same weight, so an addition word fits. 'Therefore' would say the first sentence caused the second, 'However' signals a contrast that is not there, and 'For example' would make mental health an instance of physical health.",
+    "reason": "Without choices, several transitions fit the blank; the front now lists the four options.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgxb00kc0f3hg6s8bbb2",
+    "topicSlug": "sat-pronoun-agreement",
+    "front": "A passage addresses the reader as 'you.' How should this sentence continue: 'To improve your SAT score, ___'?",
+    "back": "**you need to practice consistently.**\n\nKeep the same point of view: a sentence that says 'your' should continue with 'you,' not 'one' or 'students.'",
+    "reason": "Front was a fragment that did not say what to supply.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgw200k60f3hz558htoy",
+    "topicSlug": "sat-conciseness-redundancy",
+    "front": "Fix the redundancy: 'The committee will reconvene again next week.'",
+    "back": "**The committee will reconvene next week.**\n\n'Reconvene' already means 'meet again,' so 'again' repeats it.",
+    "reason": "\"Fix the tautology:\" had no sentence; new example avoids duplicating the \"returned back\" example on cmo4x7f0m000d.",
+    "category": "front"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq7cv00160fyqhj3qn40q",
+    "topicSlug": "sat-punctuation",
+    "front": "What is the difference between a colon and a semicolon?",
+    "back": "Both need a complete sentence BEFORE them. A semicolon also needs a complete sentence after it and simply joins two related ideas. A colon can be followed by a list, a phrase, or a sentence, but what follows must explain or specify what came before: 'She had one goal: winning.'",
+    "hint": "Semicolon: a sentence on both sides. Colon: a sentence before.",
+    "reason": "Exact duplicate of cmo4x7etv00050 (kept in the commas/semicolons topic); rewritten as colon-vs-semicolon.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq7cv00170fyqra08mit3",
+    "topicSlug": "sat-punctuation",
+    "front": "Where does punctuation go around 'such as' or 'including'?",
+    "back": "Never directly after them: 'She studied wading birds, such as herons and egrets.' A colon or comma right after 'such as' or 'including' cuts the phrase off from its own examples. A comma before the phrase is used when the examples are extra information.",
+    "hint": "Nothing right after 'such as.'",
+    "reason": "Exact duplicate of cmo4x7etv00060 (kept); rewritten as punctuation around \"such as\" / \"including\".",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq7cv00150fyq1i1zbvoa",
+    "topicSlug": "sat-punctuation",
+    "front": "Should 'She asked whether the museum was open' end with a question mark?",
+    "back": "No. An indirect question, one reported inside a statement (often after 'whether,' 'if,' or 'why'), ends with a period. Only a direct question takes a question mark: 'Is the museum open?'",
+    "hint": "Reported question, period. Direct question, question mark.",
+    "reason": "Comma-splice duplicate of cmo4x7etv00070 (kept); rewritten as end punctuation for indirect questions.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgzp00kj0f3hx40685a4",
+    "topicSlug": "sat-sentence-structure",
+    "front": "Why is 'I love reading, however my sister prefers sports' still a comma splice?",
+    "back": "Because 'however' (like therefore, moreover, thus, and consequently) cannot join two sentences. Only the FANBOYS words (for, and, nor, but, or, yet, so) can follow a comma to join them. Fix it with a semicolon: 'I love reading; however, my sister prefers sports.'",
+    "reason": "Comma-splice worked problem duplicating cmo4x7etv00070; rewritten as the conjunctive-adverb splice trap.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgyi00kh0f3hslxgk6ur",
+    "topicSlug": "sat-punctuation-commas-semicolons",
+    "front": "How do you punctuate 'however' or 'for example' when it interrupts a single clause?",
+    "back": "**With a pair of commas: 'The results, however, were inconclusive.'**\n\nIt is extra information inside one sentence, so no semicolon is needed. A semicolon goes before 'however' only when a complete sentence stands on each side of it.",
+    "reason": "Third colon card restating cmo4x7etv00060's own negative example; rewritten as a transition inside one clause.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq78t000t0fyq3lc1fbis",
+    "topicSlug": "sat-grammar-conventions",
+    "front": "Which tense do time markers like 'in 1850,' 'since 2010,' and 'by the time the team arrived' call for?",
+    "back": "'In 1850' (a finished past time) takes simple past: **published**. 'Since 2010' (from then until now) takes present perfect: **has grown**. 'By the time the team arrived' (before a past moment) takes past perfect: **had left**. Read the time marker before choosing the verb.",
+    "hint": "Let the time phrase choose the tense.",
+    "reason": "That/which restates the restrictive-clause card cmlshq78t000z (kept); rewritten as time markers choosing the tense.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq7cw001b0fyqktgv8lt8",
+    "topicSlug": "sat-punctuation",
+    "front": "Does a comma go between a descriptive title and a name, as in 'marine biologist ___ Rachel Carson'?",
+    "back": "No. When a title or description comes right before the name ('marine biologist Rachel Carson,' 'the novel Beloved'), the name is essential and takes no comma. Commas appear only when the name comes first and the description is extra: 'Rachel Carson, a marine biologist, wrote...'",
+    "hint": "Title first, no comma.",
+    "reason": "Restates restrictive/nonrestrictive commas (kept on cmlshq78t000z); rewritten as the heavily tested title-before-name rule.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgyj00ki0f3h62mrsxuc",
+    "topicSlug": "sat-punctuation-commas-semicolons",
+    "front": "Does a comma go before 'and' in 'The team measured the samples and recorded the results'?",
+    "back": "**No.** One subject ('the team') has two verbs, so this is one clause with a compound predicate. A comma (or semicolon) before 'and' is needed only when a new subject and verb follow: 'The team measured the samples, and the lab recorded the results.'",
+    "reason": "Fourth restrictive-clause card; rewritten as the compound-predicate comma rule.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr5fs00060faxpsk5rob3",
+    "topicSlug": "sat-effective-language-use",
+    "front": "On a notes question whose goal is to introduce something to an audience unfamiliar with it, what must the sentence do?",
+    "back": "Name the thing AND say what it is or does: 'The quipu, a system of knotted cords, recorded Inca census data.' Choices that mention it only by name, or only say who studied it, assume the reader already knows it and miss the goal.",
+    "hint": "Name it and say what it is.",
+    "reason": "Redundancy restated (kept on cmo4x7f0m000d); rewritten as the tested \"introduce to an unfamiliar audience\" notes goal.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr5fs00050faxh0yvq74t",
+    "topicSlug": "sat-effective-language-use",
+    "front": "On a notes question whose goal is to emphasize a similarity or difference between two things, what must the right sentence contain?",
+    "back": "Both things, named in the same sentence, plus the feature they share or on which they differ. A choice that describes only one of them, however accurate, cannot show a comparison.",
+    "hint": "Both things, one sentence.",
+    "reason": "Conciseness definition duplicated cmo4x7f0m000e; rewritten as the most tested notes goal (compare two things).",
+    "category": "duplicate"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmstdfgw200k50f3h0p60uync",
+    "topicSlug": "sat-conciseness-redundancy",
+    "reason": "\"Burning fire\" is a one-off tautology that restates the redundancy card cmo4x7f0m000d.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr64r00170faxjuubvxhg",
+    "topicSlug": "calculator-strategies",
+    "front": "How can Desmos find a line of best fit from a table of data?",
+    "back": "Enter the data in a table (columns $x_1$ and $y_1$), then type $y_1 \\sim mx_1 + b$. Desmos reports the best-fit slope and intercept. Use $y_1 \\sim ab^{x_1}$ for an exponential model.",
+    "hint": "Use $\\sim$ instead of an equals sign.",
+    "reason": "Backsolving restated (kept on cmo4x2xh6000h); calculator slot now covers Desmos regression.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshr6g7001v0fax189pyn4k",
+    "topicSlug": "process-of-elimination",
+    "front": "How can a quick estimate eliminate choices on a math question?",
+    "back": "Before computing, decide the answer's rough size and sign. A price after a discount must be less than the original, a probability must be between 0 and 1, and a count must be a whole number. Cross out every choice that breaks the check.",
+    "hint": "Size and sign first.",
+    "reason": "Backsolving restated (kept on cmo4x2xh6000h); POE slot now covers eliminating by estimation.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq39i000w0fuf56c9dl9y",
+    "topicSlug": "sat-command-evidence",
+    "front": "A claim says one group's rate is higher than another's. What must the supporting data choice show?",
+    "back": "BOTH groups on the same measure, with the named group ahead. A choice giving only the named group's figure, however impressive, cannot show 'higher.' Also check that the years, units, and groups in the choice match the claim exactly.",
+    "hint": "Both groups, same measure.",
+    "reason": "Correlation/causation restated (kept on cmlshprg3001h); rewritten as the quantitative-evidence comparison skill.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshprcb00180fgoxlr6zkz0",
+    "topicSlug": "sat-scatterplots-line-fit",
+    "front": "What does the $y$-intercept of a line of best fit mean in context, and when is it meaningless?",
+    "back": "It is the predicted $y$ when $x = 0$, for example the predicted price of a car that is 0 years old. If $x = 0$ lies far outside the data, the intercept is an extrapolation and may have no real meaning, such as a negative weight.",
+    "hint": "Set $x$ to zero.",
+    "reason": "Correlation/causation restated (kept on cmlshprg3001h); rewritten as interpreting the intercept of a line of best fit.",
+    "category": "duplicate"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmlshq73t000j0fyq0lqdsdmz",
+    "topicSlug": "sat-grammar-usage",
+    "reason": "Who/whom duplicate of cmo4x7erc00030 (kept in the pronoun topic).",
+    "category": "duplicate"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmo4x2323000j0fntcfumxeu6",
+    "topicSlug": "sat-grammar-usage",
+    "reason": "Its/it's duplicate of cmlshq78t000u (kept).",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshq73t000i0fyqtahlfk7k",
+    "topicSlug": "sat-grammar-usage",
+    "front": "Which verb forms can never be the main verb of a sentence?",
+    "back": "'-ing' forms alone (concluding), 'to' forms (to conclude), and 'having' forms (having concluded). If the subject has no other verb, choose a finite form: 'The researcher, who studied bees for a decade, **concluded** that...' A choice that leaves the sentence without a main verb creates a fragment.",
+    "hint": "Every sentence needs one finite verb.",
+    "reason": "Pronoun-antecedent duplicate of cmo4x7erc00040 that also marked \"their\" wrong; rewritten as the tested finite-verb rule.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgzp00kk0f3haz8gfe81",
+    "topicSlug": "sat-sentence-structure",
+    "front": "A sentence opens with 'A pioneer of radio astronomy,' followed by a blank. What must come right after the comma?",
+    "back": "The person the phrase describes: 'A pioneer of radio astronomy, **Grote Reber** built...' Choices that start with a possessive ('Reber's telescope'), with 'it,' or with any other noun leave the opening phrase describing the wrong thing.",
+    "reason": "Worked dangling-modifier problem duplicating cmlshq73t000h; rewritten as the appositive-opener form the SAT tests most.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgzp00kl0f3hqj830q7l",
+    "topicSlug": "sat-sentence-structure",
+    "front": "What must follow 'not only' and 'but also' (or 'both' and 'and')?",
+    "back": "The same grammatical form after each half: 'not only **to reduce** costs but also **to improve** safety,' not '...but also improving safety.' Check the word right after each connector and make the two match.",
+    "reason": "Worked parallel-structure problem duplicating cmlshq73t000m; rewritten as parallelism after paired connectors.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x1ux6000d0fjpcl1jdiqz",
+    "topicSlug": "sat-data-statistics",
+    "front": "Random sampling versus random assignment: what conclusion does each allow?",
+    "back": "Random SELECTION of participants lets you generalize the results to the population they were drawn from. Random ASSIGNMENT to groups lets you conclude cause and effect. A study can have one without the other, and the SAT asks which conclusion a given design supports.",
+    "reason": "Mean/median definitions duplicate cmo4x7d7p000e (kept); rewritten as random selection vs random assignment.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x1ux6000e0fjpn3f3o4tm",
+    "topicSlug": "sat-data-statistics",
+    "front": "Two survey estimates, each with a margin of error, have overlapping ranges. Can you conclude one population value is larger?",
+    "back": "No. If the ranges (estimate plus or minus the margin of error) overlap, the data do not establish a difference: 52% and 48%, each with a 4% margin, could both be 50%. Only ranges that do not overlap support saying one population value is larger.",
+    "reason": "Outlier effect duplicates cmo4x7d7p000f (kept); rewritten as comparing two estimates with margins of error.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7d4x00070fenan0zs4oz",
+    "topicSlug": "sat-geometry-basics",
+    "front": "Similar triangles: what is true about their angles and sides?",
+    "back": "Corresponding angles are equal and corresponding sides are proportional: if one side is 3 times its partner, every side is. Match sides by their position relative to the equal angles, not by which looks longest. A line parallel to one side of a triangle cuts off a smaller similar triangle.",
+    "hint": "Same shape, scaled size.",
+    "reason": "Circle-area formula duplicates cmo4x1xhs000f (kept); geometry-basics slot now covers similar triangles.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7d4x00080fenk4kq81iy",
+    "topicSlug": "sat-geometry-basics",
+    "front": "Parallel lines are cut by a transversal. Which angles are equal?",
+    "back": "Corresponding angles and alternate interior angles are equal. Same-side interior angles are supplementary: they add to $180^{\\circ}$. Every angle in the figure is either equal to a given angle or $180^{\\circ}$ minus it.",
+    "hint": "Each angle is x or 180 minus x.",
+    "reason": "Circumference formula duplicates cmo4x1xhs000f (kept); slot now covers parallel lines and a transversal.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshiw3f000n0fo3vq7umv6s",
+    "topicSlug": "sat-exponents-radicals",
+    "front": "Can you add $\\sqrt{2} + \\sqrt{8}$ by adding under one radical?",
+    "back": "No: $\\sqrt{a} + \\sqrt{b} \\neq \\sqrt{a + b}$. Simplify each radical, then combine like radicals the way you combine like terms: $\\sqrt{8} = 2\\sqrt{2}$, so $\\sqrt{2} + \\sqrt{8} = 3\\sqrt{2}$. The planted wrong answer is $\\sqrt{10}$.",
+    "hint": "Simplify first, then combine like radicals.",
+    "reason": "(a+b)^2 trap duplicates cmo4x1v63000n (kept); exponents slot now covers adding radicals.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmo4x7czk00030fendnq98x0j",
+    "topicSlug": "sat-linear-equations-inequalities",
+    "front": "When does a one-variable equation like $3(x + 2) = 3x + k$ have no solution, and when does it have infinitely many?",
+    "back": "Simplify both sides. If the $x$-terms cancel and a false statement remains ($6 = k$ with $k \\neq 6$), there is no solution. If a true statement remains ($k = 6$ gives $6 = 6$), every $x$ works.",
+    "hint": "Do the $x$-terms cancel?",
+    "reason": "No-solution-system card duplicates cmlshiogo000i in sat-systems-linear-equations; rewritten as the one-variable no/infinite-solution test.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmlshism5000t0fjco5ye3s9n",
+    "topicSlug": "sat-probability-two-way-tables",
+    "front": "If an outcome has probability 0.15, about how many times would you expect it in 400 trials?",
+    "back": "About $0.15 \\times 400 = 60$ times. Multiply the probability by the number of trials. The SAT also runs this backward: 60 successes in 400 trials means a probability of $\\frac{60}{400} = 0.15$.",
+    "hint": "Probability times number of trials.",
+    "reason": "Conditional-denominator card duplicates cmlshism5000v (kept); rewritten as predicting a count from a probability.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006m0fbzdh7c5605",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "A histogram is strongly skewed right (a long tail of large values). How do the mean and median compare, and which describes a typical value?",
+    "back": "The mean is pulled toward the tail, so the mean is greater than the median, and the median better describes a typical value. A left skew reverses it. Find the tail, not the tallest bar: the peak tells you the mode, not the direction of the pull.",
+    "reason": "Restated cmt24djx70072 (blank two-way cell); rewritten as mean vs median under skew.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006e0fbzpknxtnp8",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "Two data sets have the same mean. How do you tell which has the larger standard deviation without computing it?",
+    "back": "Look at how far the values sit from the mean: the set with more values far from the center has the larger standard deviation. Equal ranges do not mean equal spread: 1, 5, 5, 5, 9 has a smaller standard deviation than 1, 1, 5, 9, 9. The SAT asks only for the comparison, never the computation.",
+    "reason": "Restated cmt24djx6006y (three percentages from one cell); rewritten as comparing standard deviations without computing (verified 32/5 vs 64/5).",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006f0fbzczqubdlq",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "A random-sample survey estimates 62% with a margin of error of 3%. Which conclusion is justified?",
+    "back": "It is plausible that the population percentage is between 59% and 65%. Reject 'exactly 62%,' 'every sample will land within 3%,' and any claim about a population the sample was not drawn from. A larger random sample would shrink the margin; a non-random sample stays biased whatever the margin.",
+    "reason": "Restated cmt24djx70073 (proportion vs most); rewritten as interpreting a margin of error.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006j0fbzvie04ta1",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "A random sample of 300 students at one high school found that most prefer a later start time. To whom does the conclusion apply?",
+    "back": "Only to students at that high school, the population the sample was randomly drawn from. Choices extending it to 'all high school students in the state,' or to teachers or parents, overreach. Random selection supports generalizing to the sampled population and no further.",
+    "reason": "Restated cmt24djx60071 (when the grand total is the denominator); rewritten as the scope of a sample conclusion.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006k0fbzn3cuas27",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "Students chose whether to join a tutoring program, and those who joined scored higher. What can you conclude?",
+    "back": "Only an association. Participants were not randomly assigned, so no cause-and-effect claim, and not randomly selected, so no generalizing beyond these students. 'The program caused higher scores' is the planted overreach; only random assignment supports a causal claim.",
+    "reason": "Restated cmt24djx60070 (reversed conditional); rewritten as volunteer (self-selected) study conclusions.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006l0fbz6dwzwyp3",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "An outlier far above the other values is removed from a data set. What happens to the mean, median, range, and standard deviation?",
+    "back": "The mean, range, and standard deviation all decrease. The median changes little or not at all, because it depends only on the middle position. Items often ask which statistic changes the LEAST: the median.",
+    "reason": "Restated cmt24djx70074 (\"do NOT prefer coffee\" group); rewritten as the effect of removing an outlier.",
+    "category": "duplicate"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmt24djtq006n0fbztsvaqpqd",
+    "topicSlug": "sat-data-statistics-advanced",
+    "front": "A frequency table lists each score and how many students earned it. How do you find the mean score?",
+    "back": "Multiply each score by its frequency, add those products, then divide by the total frequency (the number of students, not the number of rows). Averaging the listed scores directly ignores how often each occurs and is the planted wrong answer.",
+    "reason": "Restated cmt24djx6006z (\"out of ___\" denominator note); rewritten as the mean of a frequency table.",
+    "category": "duplicate"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7gd5000a0fgjkyj2b22a",
+    "topicSlug": "sat-reading-comprehension",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Reading Comprehension; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7gd5000b0fgjj4k82yw1",
+    "topicSlug": "sat-reading-comprehension",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Reading Comprehension; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7gd5000c0fgjp678xrdo",
+    "topicSlug": "sat-reading-comprehension",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Reading Comprehension; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7gd5000d0fgjnssoqbxn",
+    "topicSlug": "sat-reading-comprehension",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Reading Comprehension; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7gd5000e0fgjta7hcoyq",
+    "topicSlug": "sat-reading-comprehension",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Reading Comprehension; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7ggf000f0fgjycnq2k03",
+    "topicSlug": "sat-central-ideas-details",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Central Ideas and Details; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7ggf000g0fgjo5k1rx7s",
+    "topicSlug": "sat-central-ideas-details",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Central Ideas and Details; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7ggf000h0fgj5cazx8pm",
+    "topicSlug": "sat-central-ideas-details",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Central Ideas and Details; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7ggf000i0fgju7d0b7zb",
+    "topicSlug": "sat-central-ideas-details",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Central Ideas and Details; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "MOVE",
+    "id": "cmo4x7ggf000j0fgjsmqhmref",
+    "topicSlug": "sat-central-ideas-details",
+    "toTopicSlug": "sat-vocabulary-context",
+    "reason": "Isolated vocabulary word filed under Central Ideas and Details; belongs with the other vocab words.",
+    "category": "misfiled"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "How do you check that a choice is the central idea and not just a detail?",
+    "back": "Test it against every sentence: the central idea is the point the whole text supports. If a choice matches only one sentence or example, it is a detail; if it reaches beyond what the text says, it is too broad.",
+    "hint": "Does every sentence support it?",
+    "reason": "Replacement for the moved vocab cards: central idea vs detail check.",
+    "category": "misfiled"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "Where do you look first for the central idea of a short passage?",
+    "back": "At a topic sentence near the start or a conclusion at the end, especially one that follows a pivot like 'however' or 'in fact.' Confirm it by checking that the middle sentences support it; it is a starting point, not a guaranteed rule.",
+    "hint": null,
+    "reason": "Replacement: where the central idea usually sits.",
+    "category": "misfiled"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "On a detail question ('According to the text...'), what makes a choice correct?",
+    "back": "It restates something the text says directly, usually in different words. Find the line that says it. If you cannot point to that line, the choice is out, even if it seems reasonable.",
+    "hint": "Point to the line.",
+    "reason": "Replacement: supporting-detail questions.",
+    "category": "misfiled"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "In a literary passage, how do you answer 'Which choice best describes the character'?",
+    "back": "Use what the character does and says, plus any direct statement of feeling in the text. Choose the description that every one of those details supports, and reject emotions the text never shows.",
+    "hint": null,
+    "reason": "Replacement: describing a character from textual details (literary central-idea items).",
+    "category": "misfiled"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "A passage presents a researcher's claim and then the author's evaluation of it. Whose view is the central idea?",
+    "back": "Usually the author's: the evaluation that follows the claim. Choices that restate only the researcher's claim miss what the author says about it.",
+    "hint": null,
+    "reason": "Replacement: separating a reported claim from the author's point.",
+    "category": "misfiled"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdtc00a70f3hk6iorjll",
+    "topicSlug": "sat-quadratic-equations",
+    "front": "How do you solve an equation of the form $(x - h)^{2} = k$ without expanding?",
+    "back": "Take the square root of both sides and keep both signs: $x - h = \\pm\\sqrt{k}$, so $x = h \\pm \\sqrt{k}$. For $(x - 3)^{2} = 4$, that gives $x = 5$ or $x = 1$. Dropping the negative root loses a solution, and a planted choice lists only one of them.",
+    "reason": "Worked solution of x^2 - 9 = 0 turned into the square-root-method fact with its trap.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdtc00a80f3hva4mdqbg",
+    "topicSlug": "sat-quadratic-equations",
+    "front": "To factor $x^{2} + bx + c$, what two numbers are you looking for?",
+    "back": "Two numbers that multiply to $c$ and add to $b$. For $x^{2} + 7x + 12$ they are $3$ and $4$, so it factors as $(x + 3)(x + 4)$ and the solutions are $x = -3$ and $x = -4$. The signs flip when you set each factor equal to zero.",
+    "reason": "Worked factoring solution turned into the factoring rule plus the sign flip.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdtc00aa0f3hr8yhmmme",
+    "topicSlug": "sat-quadratic-equations",
+    "front": "What are the sum and the product of the solutions of $ax^{2} + bx + c = 0$?",
+    "back": "Sum $= -\\frac{b}{a}$ and product $= \\frac{c}{a}$. For $2x^{2} - 5x - 3 = 0$, the sum is $\\frac{5}{2}$ and the product is $-\\frac{3}{2}$ with no solving needed (the solutions are $3$ and $-\\frac{1}{2}$). The planted error drops the negative sign on the sum.",
+    "reason": "Second worked factoring problem (duplicate of a80); rewritten as the sum/product of solutions (verified roots 3 and -1/2).",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdtc00a90f3hjlbeutsr",
+    "topicSlug": "sat-quadratic-equations",
+    "front": "When should you use the quadratic formula (or Desmos) instead of factoring?",
+    "back": "When the discriminant $b^{2} - 4ac$ is not a perfect square, the quadratic will not factor over the integers. For $2x^{2} - 5x - 3$ it is $49$, so it factors: $(2x + 1)(x - 3)$. For $x^{2} + 4x - 1$ it is $20$, so go straight to the formula or Desmos.",
+    "reason": "Worked quadratic-formula solution turned into when-to-use-the-formula (discriminants 49 and 20 verified).",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdtd00ab0f3hbmi85p46",
+    "topicSlug": "sat-quadratic-equations",
+    "front": "How do you find a parabola's axis of symmetry from its two $x$-intercepts?",
+    "back": "Average them: intercepts at $x = 1$ and $x = 5$ give the axis $x = 3$, and the vertex lies on that line. In standard form $y = ax^{2} + bx + c$, the same line is $x = -\\frac{b}{2a}$.",
+    "reason": "Multi-part worked problem turned into the axis-of-symmetry fact.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfeh100c60f3ho7k80dva",
+    "topicSlug": "sat-exponential-functions",
+    "front": "How do you write a model for a quantity that doubles every $k$ hours?",
+    "back": "$P(t) = P_0 \\cdot 2^{t/k}$, where $P_0$ is the starting amount (use $\\left(\\frac{1}{2}\\right)^{t/k}$ for a half-life). The exponent counts doubling periods, so after $3k$ hours the quantity is $2^{3} = 8$ times the start. Writing $2^{t}$ when the doubling time is not 1 hour is the common error.",
+    "reason": "Worked doubling problem turned into the general doubling-time model.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfeh100c80f3ha3g8smqq",
+    "topicSlug": "sat-exponential-functions",
+    "front": "How do you turn 'increases by 7% each month' into a growth factor, and what are the planted wrong bases?",
+    "back": "Add the rate to 1: $1 + 0.07 = 1.07$, so the model is $f(x) = a(1.07)^{x}$ with $x$ in months. The planted bases are $7$ (the percent used as a whole number), $1.7$ (a 70% increase), and $0.07$ (which would shrink the quantity).",
+    "reason": "Lettered worked problem turned into the growth-factor rule and its planted bases.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfeh100ca0f3hyxdzfuwb",
+    "topicSlug": "sat-exponential-functions",
+    "front": "How can you tell from a table whether a relationship is linear or exponential?",
+    "back": "Use equal steps in $x$ and compare the outputs. A constant DIFFERENCE means linear; a constant RATIO means exponential. Outputs 5, 15, 45, 135 multiply by 3 each step, so they are exponential; outputs 5, 15, 25, 35 add 10 each step, so they are linear.",
+    "reason": "Same-base equation duplicates cmlshiw3e000k in sat-exponents-radicals; rewritten as linear vs exponential from a table.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgxb00k80f3hna9nfzwv",
+    "topicSlug": "sat-pronoun-agreement",
+    "front": "Which pronoun refers back to a single organization such as 'the agency' or 'the company'?",
+    "back": "**it / its**: 'The agency released its report.' An organization, company, or team named as one unit takes 'its,' and 'their' is the planted error.",
+    "reason": "Long worked pronoun item (neither ... her, which the SAT does not test) turned into the tested singular-organization rule.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgxb00ka0f3hvgfbwtzi",
+    "topicSlug": "sat-pronoun-agreement",
+    "front": "How do you choose between 'I' and 'me' (or 'she' and 'her') in a pair like 'Sarah and ___'?",
+    "back": "Drop the other person and read the pronoun alone. 'The gift is for me,' so 'for Sarah and **me**.' 'She presented,' so 'Sarah and **she** presented.' After a preposition (for, to, with, between) use the object form; 'myself' only fits when the subject acts on itself.",
+    "reason": "Lettered worked problem turned into the drop-the-other-person test.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfei900cc0f3haxruktqu",
+    "topicSlug": "sat-transitions-organization",
+    "front": "Which transitions introduce an example or a specific case, and when do they fit?",
+    "back": "For example, for instance, and specifically. The second sentence must be one case of the general statement before it: 'Many birds migrate great distances. For instance, arctic terns fly from pole to pole.' If the second sentence is a new point rather than a case of the first, use an addition word.",
+    "reason": "Lettered worked transition problem (contrast family already has card 000a) turned into the example/specific-case family.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfgw200k20f3hrgu7il60",
+    "topicSlug": "sat-conciseness-redundancy",
+    "front": "How do you tighten 'made a decision,' 'conducted an analysis of,' or 'gave an explanation of'?",
+    "back": "Turn the noun back into its verb: **decided, analyzed, explained.** A verb buried inside a noun phrase adds words without adding meaning.",
+    "reason": "Lettered word-count problem (the red-flag phrase card cmlshr5ft000b already covers it) turned into buried verbs.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500ah0f3hpalqvfdd",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "What is the difference between 'A is 20% of B' and 'A is 20% more than B'?",
+    "back": "'20% of B' means $A = 0.20B$; '20% more than B' means $A = 1.20B$. The planted wrong answer uses $0.20$ when the question says 'more than,' or $1.20$ when it says 'of.'",
+    "reason": "Worked \"15% of 200\" turned into the \"of\" vs \"more than\" distinction.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfdw500aj0f3hdq2x3p67",
+    "topicSlug": "sat-ratios-proportions-percents",
+    "front": "How do you use a part-to-part ratio like $3:5$ to find one group from a total?",
+    "back": "Add the parts to get the whole ($3 + 5 = 8$), then take that group's fraction of the total: girls are $\\frac{5}{8}$ of 40, which is 25. Using $\\frac{5}{3}$ or $\\frac{3}{5}$ of the total is the planted error; a part-to-part ratio is not a fraction of the whole.",
+    "reason": "Worked ratio problem turned into the part-to-part vs part-to-whole fact.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfe9l00bm0f3hwe9uigyb",
+    "topicSlug": "sat-statistics-data-interpretation",
+    "front": "How do you find the median from a dot plot or a frequency table?",
+    "back": "Count the total number of values $n$, then find the value in position $\\frac{n + 1}{2}$ by counting up from the smallest (for even $n$, average the two middle positions). Picking the middle ROW of the table, or the value with the tallest bar, is the planted error.",
+    "reason": "Worked median-of-5 problem turned into finding the median from a dot plot or frequency table.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfe9l00bn0f3hrs6iok59",
+    "topicSlug": "sat-statistics-data-interpretation",
+    "front": "A value is added to a data set with a known mean. What is the fastest route to the new mean?",
+    "back": "Convert the mean to a total first: total $=$ mean $\\times$ count. Add the new value to the total and divide by the NEW count. For 8 values with mean 72, adding 90 gives $\\frac{576 + 90}{9} = 74$.",
+    "reason": "Three-step worked problem turned into the mean-to-total move (576 + 90 = 666, /9 = 74 verified).",
+    "category": "worked-problem"
+  },
+  {
+    "action": "UPDATE",
+    "id": "cmstdfe9l00bo0f3h9u49204n",
+    "topicSlug": "sat-statistics-data-interpretation",
+    "front": "Why can't you just average two group means to get the combined mean?",
+    "back": "Because the groups differ in size. Weight each mean by its group's count: $\\frac{20(78) + 30(84)}{50} = 81.6$, not $81$. The simple average of the two means is right only when the groups are the same size.",
+    "reason": "Worked combined-mean problem turned into the weighting fact (4080/50 = 81.6 verified).",
+    "category": "worked-problem"
+  },
+  {
+    "action": "DELETE",
+    "id": "cmstdfe9l00bp0f3h6m4c8gg2",
+    "topicSlug": "sat-statistics-data-interpretation",
+    "reason": "Adding four table cells is not a recall fact, and two-way table totals are already covered in the probability and Core Skills decks.",
+    "category": "worked-problem"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "What does a 'main purpose' question ask, and how is it different from a main idea question?",
+    "back": "It asks WHY the author wrote the text: to explain a process, argue for a view, describe a discovery, or challenge a belief. Main idea asks WHAT the text says. Purpose choices begin with a verb, so match that verb to what the whole text does.",
+    "hint": "Why, not what.",
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "On a question about the function of one sentence, what do you do first?",
+    "back": "Read the sentences just before and after it and ask what job the sentence does for them: introduce a claim, give an example, state a counterpoint, or draw a conclusion. The answer names that job; a choice that merely paraphrases the sentence's content is a common wrong answer.",
+    "hint": null,
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "Which verbs in purpose choices deserve the closest check against the text?",
+    "back": "Strong ones: argue, criticize, refute, prove, advocate. If the author only reports or describes, a choice saying the author argues or criticizes is too strong. Compare the verb's intensity with the author's actual tone, not just the topic.",
+    "hint": null,
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "How do you describe the overall structure of a short passage?",
+    "back": "Say what each sentence or pair of sentences does, in order, for example: presents a common view, introduces a finding that complicates it, offers an explanation. The correct choice matches every step in the same order; wrong choices skip a step, add one the text never takes, or reverse the order.",
+    "hint": null,
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "A passage opens with what 'many researchers have assumed' and then says 'however.' What structure is this?",
+    "back": "Assumption, then challenge. The author's own view comes after the pivot word, and the purpose is usually to question or refine the assumption. A choice saying the passage supports the assumption misreads the turn.",
+    "hint": null,
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "Why does an author include a specific example, statistic, or quotation?",
+    "back": "To support or illustrate the claim right around it. Name the claim it serves before choosing. Choices saying the detail introduces a new topic or contradicts the author are usually wrong unless a contrast word signals a shift.",
+    "hint": null,
+    "reason": "Text Structure and Purpose had no cards; filed under sat-reading-comprehension, whose Core Skills and 700-800 twins already teach structure/function items (also refills the topic after the vocab MOVE).",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "What does a cross-text question usually ask?",
+    "back": "How the author of Text 2 would most likely respond to a claim, finding, or approach in Text 1. Find the exact point in Text 1 the question names, then find what Text 2 says about that same point.",
+    "hint": null,
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "What should you do before reading the choices on a cross-text question?",
+    "back": "Sum up each text in a few words and name their relationship: agree, disagree, or agree with a limit. Most Text 2s set a limit: they accept the data but question what it shows, how far it applies, or what caused it.",
+    "hint": "Agree, disagree, or agree with a limit?",
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "A choice says the author of Text 2 would reject Text 1's claim entirely. When is that right?",
+    "back": "Only when Text 2 says the claim is false. If Text 2 grants the finding and raises a limitation or another explanation, full rejection is too strong; the answer will be a limited response, such as 'the finding is valid but may not apply to...'.",
+    "hint": null,
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "What is the 'right text, wrong point' trap on cross-text questions?",
+    "back": "A choice that accurately reports something Text 2 says, but not about the claim the question asks about. Check that the choice answers the specific point from Text 1, not just any statement in Text 2.",
+    "hint": null,
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "How do you answer 'How would the author of Text 1 most likely respond to Text 2?'",
+    "back": "Reverse the direction: find Text 2's key claim, then ask what Text 1's evidence or reasoning implies about it. Answering from Text 2's point of view is the most common error on the reversed question.",
+    "hint": null,
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-reading-comprehension",
+    "front": "Both texts discuss the same study. How can they still disagree?",
+    "back": "They may accept the same data but differ on what it means: its cause, its scope, or whether it justifies a recommendation. Words like 'suggests,' 'may,' or 'does not show' in Text 2 often mark where the disagreement lies.",
+    "hint": null,
+    "reason": "Cross-Text Connections had no cards; filed under sat-reading-comprehension, whose 700-800 twin already holds the Text 1 / Text 2 cards.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "What does a 'most logically completes the text' question ask?",
+    "back": "For the conclusion the text's own evidence leads to. The answer must follow from the sentences given, not from outside knowledge and not from a guess about what might also be true.",
+    "hint": "Follow the text's evidence.",
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "What should you do before reading the choices on an inference question?",
+    "back": "Reread the sentence just before the blank and note its direction (contrast, result, or restatement), then predict the conclusion in your own words from the evidence above it.",
+    "hint": null,
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "Why can a choice that is probably true in real life still be wrong on an inference question?",
+    "back": "Because the text must support it. The right answer is the one the passage's evidence makes necessary; a choice that is plausible but unsupported, or supported only by outside knowledge, is out.",
+    "hint": null,
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "A passage says a result held in two regions but not in a third. What kind of conclusion does it support?",
+    "back": "A limited one: something that differs in the third region may matter. Choices that generalize the result to every region, or say it never holds, go beyond the evidence.",
+    "hint": null,
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "How does 'however' or 'but' just before the blank help on an inference question?",
+    "back": "It tells you the completion must turn against the expectation set up earlier. If a method was expected to raise crop yields and the blank follows 'however,' the conclusion should say it did not, or did less than expected.",
+    "hint": null,
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  },
+  {
+    "action": "CREATE",
+    "topicSlug": "sat-central-ideas-details",
+    "front": "What makes an inference choice too strong?",
+    "back": "Words that claim more certainty or scope than the evidence gives: proves, always, the only cause, all species. The correct choice matches the text's level of certainty; if the evidence 'suggests,' the answer usually says 'may' or 'likely.'",
+    "hint": null,
+    "reason": "Inferences had no cards; filed under sat-central-ideas-details, the Information and Ideas topic whose skill (what the whole text supports) an inference extends.",
+    "category": "coverage"
+  }
+]
