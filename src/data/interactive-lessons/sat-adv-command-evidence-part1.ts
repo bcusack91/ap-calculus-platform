@@ -35,13 +35,13 @@ The student concludes that the policy's effect was concentrated among teen borro
 
 Which choice most effectively uses data from the table to support the student's conclusion?`,
       options: [
-        'Teen borrowers rose from 3,100 to 6,800 after fines were eliminated.',
-        'Adult borrowers rose from 12,400 to 12,900 after fines were eliminated.',
-        'Total monthly borrowers rose by roughly 4,200 after fines were eliminated.',
-        'Teen borrowers more than doubled, from 3,100 to 6,800, while adult borrowers rose only about four percent, from 12,400 to 12,900.'
+        'After fines were eliminated, teen borrowers more than doubled, rising from 3,100 to 6,800 cardholders.',
+        'Adult borrowers rose from 12,400 to 12,900 after fines were eliminated, a gain of about 500 cardholders.',
+        'Total monthly borrowers rose from 15,500 to 19,700 after fines were eliminated, a gain of about 4,200.',
+        'Teen borrowers more than doubled, from 3,100 to 6,800, but adult borrowers rose only from 12,400 to 12,900.'
       ],
       correctAnswer: 3,
-      explanation: `"Concentrated among teens" is a comparative claim — it requires the teen gain AND the adult near-flatness in the same choice, which only the choice pairing both groups supplies. The teen-only choice is the classic one-row trap: a teen increase alone cannot show concentration, because adults might have doubled too — the choice is true, on-topic, and shaped wrong. The adult-only choice cites the wrong group and, alone, would suggest the policy helped adults. The total-borrowers choice reports the total, which is the one number that *cannot* localize an effect in either group; totals are how concentration hides.`
+      explanation: `"Concentrated among teens" is a comparative claim — it requires the teen gain AND the adult near-flatness in the same choice, which only the choice pairing both groups supplies. The teen-only choice is the classic one-row trap (its "more than doubled" is accurate): a teen increase alone cannot show concentration, because adults might have doubled too — the choice is true, on-topic, and shaped wrong. The adult-only choice cites the wrong group and, alone, would suggest the policy helped adults. The total-borrowers choice reports the total, which is the one number that *cannot* localize an effect in either group; totals are how concentration hides.`
     },
     {
       id: 'advce1-q2',
@@ -50,13 +50,13 @@ Which choice most effectively uses data from the table to support the student's 
 
 Which quotation from The Glass Orchard most effectively illustrates the student's claim?`,
       options: [
-        '"Her mother had kept the ledgers in French, and Mireille kept them in French still."',
-        '"She sold the west orchard to pay for the new irrigation, and recorded in the ledger, as her mother would have recorded it, that the estate remained whole."',
-        '"Mireille often said that the estate would outlast every fashion in farming."',
-        '"Her neighbors had long since replaced their hedgerows with wire fencing."'
+        '"Her mother had kept the ledgers in French, and Mireille, forty years on, kept them in French still, in the same brown ink."',
+        '"She sold the west orchard to pay for irrigation and wrote, as her mother would have, that the estate was whole."',
+        '"Mireille often said, walking the orchard rows, that the estate would outlast every passing fashion in farming."',
+        '"Her neighbors had long since torn out their old hedgerows and replaced them with wire fencing and new machinery."'
       ],
       correctAnswer: 1,
-      explanation: `The claim has two required parts: a real change AND a self-narration of continuity. The west-orchard quotation contains both in one sentence — selling the orchard for new irrigation is the substantial change, and recording "as her mother would have... that the estate remained whole" is the continuity story she tells herself. The French-ledgers quotation is the trap for readers matching topic instead of shape: it shows genuine continuity, which *supports* Mireille's self-description rather than undercutting it. The outlast-every-fashion quotation restates her general attitude with no change and no narration of one. The hedgerows quotation describes the neighbors — change happening around her, not by her — so neither part of the claim is present.`
+      explanation: `The claim has two required parts: a real change AND a self-narration of continuity. The west-orchard quotation contains both in one sentence — selling the orchard for irrigation is the substantial change, and writing "as her mother would have, that the estate was whole" is the continuity story she tells herself. The French-ledgers quotation is the trap for readers matching topic instead of shape: it shows genuine continuity, which *supports* Mireille's self-description rather than undercutting it. The outlast-every-fashion quotation restates her general attitude with no change and no narration of one. The hedgerows quotation describes the neighbors — change happening around her, not by her — so neither part of the claim is present.`
     },
     {
       id: 'advce1-q3',
@@ -65,10 +65,10 @@ Which quotation from The Glass Orchard most effectively illustrates the student'
 
 Which finding, if true, most directly supports the competition explanation?`,
       options: [
-        'Native bee counts have declined at more than eighty percent of the monitored meadows.',
+        'Native bee counts have declined at more than eighty percent of the monitored meadows over the past fifteen years.',
         'Pesticide residues measured at the meadows fall below the concentrations shown to harm bees in laboratory studies.',
-        'The native bee remains abundant in meadows treated with the same pesticides but lying outside the introduced bee\'s range, and is scarce in untreated meadows the introduced bee has colonized.',
-        'The introduced bee\'s population in the region has grown every year since its arrival.'
+        'The native bee thrives in treated meadows the introduced bee never reached but is scarce in untreated ones it colonized.',
+        'The introduced bee\'s population in the region has grown every year since its arrival, and it now visits the same flowers.'
       ],
       correctAnswer: 2,
       explanation: `The treated-versus-colonized-meadows finding is the dissociation: pesticides without the competitor produce no decline, and the competitor without pesticides produces one. That pattern is predicted by the competition account and contradicts the pesticide account — it discriminates. The low-pesticide-residue finding is the sophisticated near-miss: it *weakens* the rival, but weakening one hypothesis is not positive evidence for the other (a third cause could be at work), and the student asked for support, not for absence of the alternative. The eighty-percent finding documents the decline both explanations exist to explain. The growing-population finding shows the proposed competitor thriving, which is consistent with competition but equally consistent with the introduced bee simply tolerating whatever else — including pesticides — killed the native.`

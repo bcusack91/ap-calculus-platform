@@ -49,11 +49,11 @@ Ignore how impressive a choice sounds. Only the goal decides.
       options: [
         'did a review of',
         'reviewed',
-        'gave a review to',
+        'saw',
         'carried out a reviewing process on'
       ],
       correctAnswer: 1,
-      explanation: '"Reviewed" is correct. It is a single verb that carries the entire meaning of looking over the data, and nothing is lost by using it. The other choices stretch that same verb into a phrase of three or more words, which adds length without adding information.'
+      explanation: '"Reviewed" is correct. It is a single verb that carries the entire meaning of looking over the data, and nothing is lost by using it. Two of the other choices stretch that same verb into a phrase of several words, which adds length without adding information. "Saw" is shorter, but it changes the meaning: glancing at data is not the same as reviewing it.'
     },
     {
       id: 'elu-core-p2-q2',
@@ -61,38 +61,38 @@ Ignore how impressive a choice sounds. Only the goal decides.
       question: 'Which revision removes the repeated idea?\n\n"The two designs are similar and alike."',
       options: [
         'The two designs are similar and also alike.',
-        'The two designs are, similar and alike.',
+        'The two designs differ.',
         'The two designs are similar.',
         'The two designs are alike in a way that is similar.'
       ],
       correctAnswer: 2,
-      explanation: '"The two designs are similar" is correct. "Similar" and "alike" mean the same thing, so keeping one of them says everything the original sentence said. The other choices keep both words, or even add "also," which repeats the idea a third time.'
+      explanation: '"The two designs are similar" is correct. "Similar" and "alike" mean the same thing, so keeping one of them says everything the original sentence said. Two other choices keep both words, one even adding "also." "The two designs differ" is shorter, but it removes the repetition by reversing the meaning.'
     },
     {
       id: 'elu-core-p2-q3',
       type: 'quiz' as const,
       question: 'A student is writing about a local bridge and wants to give the year it opened AND note that it is still used today.\n\nNotes:\n• Opened in 1932\n• Named for the town\'s first mayor\n• Still carries traffic today\n\nWhich choice best accomplishes the student\'s goal?',
       options: [
-        'The bridge is a well-known landmark in the town.',
-        'The bridge opened in 1932.',
-        'The bridge still carries traffic today.',
-        'The bridge, which opened in 1932, still carries traffic today.'
+        'The bridge, which is named for the town\'s first mayor, opened in 1932.',
+        'The bridge, named for the town\'s first mayor, still carries traffic today.',
+        'The bridge, a well-known town landmark, is named for the town\'s first mayor.',
+        'The bridge, which first opened in 1932, is still carrying traffic today.'
       ],
       correctAnswer: 3,
-      explanation: '"The bridge, which opened in 1932, still carries traffic today" is correct. The goal asks for two things — the year it opened and the fact that it is still in use — and this is the only choice that gives both. The other three choices are all true statements from the notes, but each one covers just part of the goal, and a partial answer does not accomplish it.'
+      explanation: '"The bridge, which first opened in 1932, is still carrying traffic today" is correct. The goal asks for two things — the year it opened and the fact that it is still in use — and this is the only choice that gives both. The other three choices are clear sentences, but the mayor-and-1932 choice omits that the bridge is still used, the mayor-and-traffic choice omits the year, and the landmark choice gives neither, so none accomplishes the whole goal.'
     },
     {
       id: 'elu-core-p2-q4',
       type: 'quiz' as const,
       question: 'What is the first thing to do on a question that asks for the most concise choice?',
       options: [
-        'Find the choices that keep the full meaning, then pick the shortest one of those.',
-        'Pick the longest choice, since it gives the most detail.',
-        'Pick the choice with the most advanced vocabulary.',
-        'Pick the first choice listed.'
+        'Find the choices that keep the full meaning, then pick the shortest among them.',
+        'Pick the longest choice, since it gives the reader the most detail and support.',
+        'Pick the choice with the most advanced vocabulary, since it sounds most formal.',
+        'Pick the shortest choice right away, even if it leaves out part of the meaning.'
       ],
       correctAnswer: 0,
-      explanation: 'Start by checking which choices keep the full meaning, then take the shortest of those. Both halves matter: a choice that drops part of the meaning is wrong no matter how short it is, and among choices that say everything, the shortest is the one the question is asking for. Length, vocabulary level, and answer position on their own tell you nothing.'
+      explanation: 'Start by checking which choices keep the full meaning, then take the shortest of those. Both halves matter: a choice that drops part of the meaning is wrong no matter how short it is, and among choices that say everything, the shortest is the one the question is asking for. That is why grabbing the shortest choice right away fails, and length or vocabulary level on their own tell you nothing.'
     }
   ]
 }

@@ -28,10 +28,10 @@ Hard main-idea items reuse the same five wrong-answer species. Learn to name the
       type: 'quiz' as const,
       question: `A passage concedes that a mentoring program "may well have helped some participants" but argues that, because participants volunteered, its evaluation cannot separate the program's effect from the motivation of those who signed up. Which answer choice should a trained test-taker eliminate on sight, and why?`,
       options: [
-        '"The evaluation cannot isolate the program\'s effect" — because it merely repeats the passage',
-        '"Participants volunteered for the mentoring program" — because volunteering is irrelevant to the argument',
-        '"The program did not help its participants" — because it converts the passage\'s hedged concession into a denial the author never makes',
-        '"The evaluation\'s design has a limitation" — because it is too cautious to be a main idea'
+        '"The evaluation cannot isolate the program\'s effect" — because it merely repeats a claim the passage already makes itself',
+        '"Participants volunteered for the mentoring program" — because volunteering plays no real role in the author\'s argument',
+        '"The program did not help its participants" — because it turns the author\'s hedged concession into a flat denial',
+        '"The evaluation\'s design has a limitation" — because a concession this cautious is too limited to serve as a main idea'
       ],
       correctAnswer: 2,
       explanation: `"Did not help" is the Hedge-Inflator in its reverse form: the author explicitly holds the door open ("may well have helped") and attacks only the evaluation's ability to *show* the effect. Denying the effect claims more than the author does, in the opposite direction — the most common wrong answer on selection-bias passages. The "merely repeats the passage" choice describes the correct answer's core, not a trap; restating the passage's actual claim is what right answers do. The "volunteering is irrelevant" choice is wrong about the passage: volunteering is the entire mechanism of the argument. The "too cautious" choice mistakes the signature of a hard-tier correct answer — cautious, limited — for a flaw.`
@@ -41,13 +41,13 @@ Hard main-idea items reuse the same five wrong-answer species. Learn to name the
       type: 'quiz' as const,
       question: `On hard main-idea items, a choice can be fully supported by the passage — every word verifiable — and still be wrong. What makes such a choice wrong?`,
       options: [
-        'Main-idea questions ask what the passage is built to establish, so a verifiable detail that the passage uses only as evidence, background, or mechanism fails the question even though it passes the text',
-        'Verifiable choices are decoys; correct answers always require a small inference beyond the text',
-        'Such choices are usually too long to be correct',
-        'The passage supports it only in the first half, before the pivot'
+        'Main-idea questions ask what the passage is built to establish, and a detail used only as evidence does not answer that',
+        'Verifiable choices are decoys, since a correct main-idea answer always requires an inference beyond the text',
+        'A choice that restates the passage word for word is usually too long and too detailed to capture its central claim',
+        'The passage supports such a choice only in its first half, before the pivot that introduces the author\'s actual claim'
       ],
       correctAnswer: 0,
-      explanation: `This is the True-But-Not-It species. Hard passages contain several true statements — the mechanism ("pavement releases stored heat slowly"), the background fact, the concession — and any of them can be dressed as a choice. The test is aboutness: the main idea is the claim the whole passage is organized to deliver, usually the two-part turn in the final sentence. The decoy choice overcorrects into a myth — correct main-idea answers are supported, not inferred beyond the text; what distinguishes them is scope, not extra inference. The too-long choice is a folk heuristic with no reliability at this level, where correct answers are often the longest because they carry both halves. The before-the-pivot choice describes the Half-Keeper, a different species: this question is about choices supported by the *whole* passage that still miss its point.`
+      explanation: `This is the True-But-Not-It species. Hard passages contain several true statements — the mechanism ("pavement releases stored heat slowly"), the background fact, the concession — and any of them can be dressed as a choice. The test is aboutness: the main idea is the claim the whole passage is organized to deliver, usually the two-part turn in the final sentence. The decoy choice overcorrects into a myth — correct main-idea answers are supported, not inferred beyond the text; what distinguishes them is scope, not extra inference. The too-long choice is a folk heuristic with no reliability: length says nothing about scope, and a correct two-part answer and a narrow detail can run the same length. The before-the-pivot choice describes the Half-Keeper, a different species: this question is about choices supported by the *whole* passage that still miss its point.`
     },
     {
       id: 'advci2-q3',
@@ -58,13 +58,13 @@ Hard main-idea items reuse the same five wrong-answer species. Learn to name the
 
 A test-taker answers that the text suggests Tomás regrets selling the house. Which detail most directly defeats that answer?`,
       options: [
-        'He drove past the house only once',
-        'He slowed the car at the corner',
-        'The new owners removed the fence he had built',
-        'The phrase "lighter than anything he had braced himself for," which reports something closer to relief where the chosen answer requires regret'
+        'The detail that he drove past "exactly once," which suggests he could not bear to see the house again',
+        'The detail that he "slowed at the corner," which shows he was still attached to the property',
+        'The detail that the owners "had already taken down the fence," which shows his work was erased',
+        'The detail that he felt "lighter than anything he had braced himself for," which reads as relief'
       ],
       correctAnswer: 3,
-      explanation: `Motive-Inventor autopsy: "regret" is the plausible imported emotion — a sold house, a demolished summer's work — and the passage supplies the fence detail precisely to make it tempting. But literary hard-tier passages always plant one explicit phrase that settles the feeling, and here it is the final clause: he expected weight and felt lightness, and "to his surprise" confirms the expectation-reality gap. The drove-past-once and slowed-at-the-corner choices are behaviors compatible with either reading (a regretful man and a curious one both drive past once and slow down), so neither can defeat anything. The removed-fence choice is the bait detail itself — it's what makes regret tempting, not what disproves it. The discipline: never answer a "most strongly suggests" question from setup details when the passage states the character's inner state.`
+      explanation: `Motive-Inventor autopsy: "regret" is the plausible imported emotion — a sold house, a demolished summer's work — and the passage supplies the fence detail precisely to make it tempting. But literary hard-tier passages always plant one explicit phrase that settles the feeling, and here it is the final clause: he expected weight and felt lightness, and "to his surprise" confirms the expectation-reality gap. The drove-past-once and slowed-at-the-corner choices point to behaviors compatible with either reading, and their glosses lean toward regret rather than against it (a regretful man and a curious one both drive past once and slow down), so neither can defeat anything. The taken-down-fence choice is the bait detail itself — it's what makes regret tempting, not what disproves it. The discipline: never answer a "most strongly suggests" question from setup details when the passage states the character's inner state.`
     }
   ]
 }

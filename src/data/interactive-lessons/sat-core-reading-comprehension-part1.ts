@@ -49,9 +49,9 @@ For support questions, find the claim, then pick the choice that speaks to that 
 
 Which choice best states the main idea of the text?`,
       options: [
-        `The Arctic tern is the smallest seabird in the world.`,
-        `Researchers prefer tagging birds to observing them directly.`,
-        `Antarctica has more bird species than the Arctic does.`,
+        `The Arctic tern is the smallest seabird in the world, weighing about as much as an apple.`,
+        `Researchers prefer tagging birds to watching them when they study the longest animal migrations.`,
+        `Arctic terns spend more of each year in Antarctica than they spend in the Arctic.`,
         `Despite its small size, the Arctic tern makes the longest annual migration of any animal.`
       ],
       correctAnswer: 3,
@@ -64,10 +64,10 @@ Which choice best states the main idea of the text?`,
 
 Which choice best describes the overall structure of the text?`,
       options: [
-        `It lists the steps of a process in the order they occur.`,
-        `It compares two crops and recommends one of them.`,
-        `It presents a long-held piece of advice, then gives research that contradicts it.`,
-        `It describes a problem and then proposes a detailed solution.`
+        `It lists the steps for loosening clay soil in the order a gardener should do them.`,
+        `It compares two kinds of soil and recommends one of them for home gardens.`,
+        `It presents long-held gardening advice, then gives research that contradicts it.`,
+        `It describes a problem with clay soil and then proposes a detailed solution.`
       ],
       correctAnswer: 2,
       explanation: `Sentence one gives advice gardeners followed for decades, and sentence two says recent trials found the opposite, so the passage sets up a belief and then knocks it down with research. That is the structure described by the choice about long-held advice contradicted by research. No steps of a process are listed anywhere, so the process choice does not match the shape of the text.`
@@ -77,13 +77,13 @@ Which choice best describes the overall structure of the text?`,
       type: 'quiz' as const,
       question: `A neighborhood group argues that the new after-school program has helped students keep up with their homework. Which finding, if true, would most directly support that argument?`,
       options: [
-        `Students enrolled in the program turned in 40 percent more completed assignments than they had the year before.`,
-        `The program is held in the school gymnasium three afternoons a week.`,
-        `The program was started by a former teacher who lives nearby.`,
-        `Parents say they are glad the program exists.`
+        `Students in the program turned in 40 percent more completed assignments than the year before.`,
+        `The program is held for students in the school gymnasium three afternoons a week.`,
+        `The program was started by a former teacher who lives nearby and volunteers her time.`,
+        `In a survey, 90 percent of parents said they were glad their children attend the program.`
       ],
       correctAnswer: 0,
-      explanation: `The argument is specifically about homework, so the evidence needs to measure homework. Students turning in 40 percent more completed assignments than the previous year speaks directly to that. Where and when the program meets is background information about the program, and it says nothing about whether homework improved.`
+      explanation: `The argument is specifically about homework, so the evidence needs to measure homework. Students turning in 40 percent more completed assignments than the previous year speaks directly to that. Where and when the program meets is background information about the program, and it says nothing about whether homework improved. The parent survey measures how families feel about the program, not whether students kept up with their work.`
     },
     {
       id: 'read-core-p1-q4',

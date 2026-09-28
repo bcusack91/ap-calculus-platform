@@ -34,13 +34,13 @@ The subtlest trap: an option that genuinely contrasts the two things — **on th
 
 The student wants to emphasize the difference in the two cell types' longevity. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
-        `Perovskite cells can be printed at low temperatures onto flexible film, whereas silicon cells demand furnace processing above 1,000 degrees Celsius.`,
-        `While silicon solar cells routinely operate for 25 years, perovskite cells begin to lose efficiency after only months of exposure to humidity.`,
-        `Silicon solar cells routinely operate for a quarter of a century.`,
-        `Both perovskite and silicon cells convert sunlight directly into electricity, though the two are manufactured very differently.`
+        `Perovskite cells can be printed at low temperatures onto flexible film, but silicon cells need a furnace.`,
+        `While silicon cells routinely operate for 25 years, perovskite cells begin to lose efficiency after months of humidity.`,
+        `Silicon solar cells routinely operate for 25 years, while perovskite cells can be printed onto flexible film.`,
+        `Perovskite cells begin to lose efficiency after months of humidity, while silicon cells need furnace processing.`
       ],
       correctAnswer: 1,
-      explanation: `The goal names a specific dimension — longevity — and demands both cell types on it, which only the 25-years-versus-months sentence delivers. The printing-versus-furnace option is the wrong-dimension trap: a genuine contrast, but on manufacturing, not lifespan. The quarter-century option gives one lifespan with nothing to compare it to, so no difference is stated. The both-convert-sunlight option emphasizes what the technologies share and waves at a difference without giving it.`
+      explanation: `The goal names a specific dimension — longevity — and demands both cell types on it, which only the 25-years-versus-months sentence delivers. The printing-versus-furnace option is the wrong-dimension trap: a genuine contrast, but on manufacturing, not lifespan. The 25-years-and-flexible-film option gives one lifespan and sets it beside a manufacturing fact, so no difference in longevity is ever stated. The humidity-and-furnace option makes the mirror-image mistake, pairing perovskite's lifespan with silicon's manufacturing.`
     },
     {
       id: 'elu-adv-p1-q2',
@@ -54,13 +54,13 @@ The student wants to emphasize the difference in the two cell types' longevity. 
 
 The student wants to introduce the camera obscura to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
-        `A camera obscura is a darkened chamber into which light enters through a small hole, casting an inverted image of the outside scene onto the far wall.`,
-        `Ibn al-Haytham described the optics of the camera obscura around the year 1021.`,
-        `Some seventeenth-century painters may have traced projections produced by a camera obscura.`,
-        `Modern experiments with room-sized chambers have reproduced the projections some painters may once have traced.`
+        `A camera obscura is a darkened room where light entering a small hole casts an inverted image of the scene outside.`,
+        `Ibn al-Haytham described the optics of the camera obscura around 1021, centuries before painters took an interest in it.`,
+        `Some seventeenth-century painters may have traced the projections produced inside a camera obscura onto their canvases.`,
+        `Modern experiments in room-sized chambers have reproduced the inverted image that a camera obscura casts on a wall.`
       ],
       correctAnswer: 0,
-      explanation: `Introducing an unfamiliar device requires naming it and stating what it physically is and does, which only the darkened-chamber option accomplishes. The other three all mention the camera obscura or its projections while presupposing the reader already knows what the device is: the Ibn al-Haytham option defines it only by who described it, the seventeenth-century-painters option by who may have used it, and the modern-experiments option never names the device at all — the exact failure the audience specification is designed to catch.`
+      explanation: `Introducing an unfamiliar device requires naming it and stating what it physically is and does, which only the darkened-room option accomplishes. The other three all mention the camera obscura or its projections while presupposing the reader already knows what the device is: the Ibn al-Haytham option defines it only by who described it, the seventeenth-century-painters option by who may have used it, and the modern-experiments option by the image it casts without ever saying what the device is — the exact failure the audience specification is designed to catch.`
     },
     {
       id: 'elu-adv-p1-q3',
@@ -73,13 +73,13 @@ The student wants to introduce the camera obscura to an audience unfamiliar with
 
 The student wants to explain why smoke taint can go undetected until after fermentation. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
-        `Grapes absorb volatile phenols from wildfire smoke through their skins.`,
-        `Wine made from smoke-exposed grapes can taste acrid even when the fresh fruit tasted completely normal.`,
-        `Fermentation breaks the chemical bonds that form between smoke phenols and the fruit's sugars.`,
-        `Because smoke phenols bind to the fruit's sugars and turn tasteless, the taint stays hidden until fermentation breaks those bonds and releases the phenols into the wine.`
+        `Grapes absorb volatile phenols from wildfire smoke through their skins, which is how the smoke first enters the fruit.`,
+        `Wine made from smoke-exposed grapes can show smoke taint even when the fresh fruit tasted completely normal.`,
+        `Fermentation breaks the chemical bonds that form between smoke phenols and the fruit's sugars, releasing the phenols.`,
+        `Because smoke phenols bind to sugars and turn tasteless, they emerge only once fermentation breaks those bonds.`
       ],
       correctAnswer: 3,
-      explanation: `An explanation of why the taint hides must run the causal chain end to end: binding makes the phenols tasteless, fermentation unbinds them, so detection comes late. Only the option beginning "Because smoke phenols bind" completes that chain. The absorption option gives the chain's opening link, the fermentation option gives a middle link, and the acrid-wine option states the puzzling outcome without any mechanism — each is accurate, and each answers a question other than 'why.'`
+      explanation: `An explanation of why the taint hides must run the causal chain end to end: binding makes the phenols tasteless, fermentation unbinds them, so detection comes late. Only the option beginning "Because smoke phenols bind" completes that chain. The absorption option gives the chain's opening link, the fermentation option gives a middle link, and the smoke-taint option states the puzzling outcome without any mechanism — each is accurate, and each answers a question other than 'why.'`
     }
   ]
 }

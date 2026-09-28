@@ -62,13 +62,13 @@ The joining words for fix 3 are **for, and, nor, but, or, yet, so** — remember
       type: 'quiz' as const,
       question: 'What defines a compound sentence?',
       options: [
-        'One independent clause by itself.',
-        'One dependent clause by itself.',
-        'Two independent clauses joined by a semicolon, or by a comma plus a FANBOYS word.',
-        'Two dependent clauses with no main sentence.'
+        'One independent clause standing alone, with no other clause joined to it.',
+        'One dependent clause joined to one independent clause by a comma.',
+        'Two independent clauses joined by a semicolon or by a comma and FANBOYS.',
+        'Two dependent clauses joined by a comma, with no main clause at all.'
       ],
       correctAnswer: 2,
-      explanation: 'A compound sentence has two independent clauses joined by a semicolon or by a comma plus a FANBOYS word. Each half could stand alone as its own sentence, and the joining mark puts them together as equals: "The trail was steep, but the hikers kept going." One clause on its own is a simple sentence, and dependent clauses with no main sentence are fragments.'
+      explanation: 'A compound sentence has two independent clauses joined by a semicolon or by a comma plus a FANBOYS word. Each half could stand alone as its own sentence, and the joining mark puts them together as equals: "The trail was steep, but the hikers kept going." One clause on its own is a simple sentence, a dependent clause attached to an independent clause makes a complex sentence, and dependent clauses with no main sentence are fragments.'
     },
     {
       id: 'ss-core-p2-q3',
@@ -78,7 +78,7 @@ The joining words for fix 3 are **for, and, nor, but, or, yet, so** — remember
         'because, although, since, when',
         'for, and, nor, but, or, yet, so',
         'however, therefore, moreover',
-        'who, which, that'
+        'who, which, that, whom, whose'
       ],
       correctAnswer: 1,
       explanation: 'FANBOYS stands for **for, and, nor, but, or, yet, so**. Each letter of the word is the first letter of one of them. These are the words that can join two complete sentences when a comma comes before them. The other lists are real words with real jobs, but they are not the FANBOYS set — "because" and "although" start dependent clauses instead.'

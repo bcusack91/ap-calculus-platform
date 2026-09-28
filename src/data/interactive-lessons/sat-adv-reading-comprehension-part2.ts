@@ -33,10 +33,10 @@ Function questions: read the sentence, then its **neighbors**, and answer from t
       type: 'quiz' as const,
       question: `In hard paired-passage items, which wrong-answer pattern should you eliminate first, before detailed analysis?`,
       options: [
-        'Choices in which Text 2 accepts part of Text 1\'s claim, since partial agreement is rare',
-        'Choices that mention a measurement or study design, since those are distractor topics',
-        'Choices in which Text 2 offers a qualification, since qualifications are too weak to be answers',
-        'Choices in which Text 2 "denies" or "disputes" Text 1\'s reported result, since hard cross-text items almost always have Text 2 accept the data and challenge the inference drawn from it'
+        'Choices in which Text 2 accepts part of Text 1\'s claim, since partial agreement between paired texts is rare',
+        'Choices that mention a measurement or a study design, since those topics usually appear only in distractors',
+        'Choices in which Text 2 offers a qualification, since a mere qualification is too weak to count as a response',
+        'Choices in which Text 2 denies Text 1\'s reported result, since hard Text 2s usually accept the data itself'
       ],
       correctAnswer: 3,
       explanation: `The denial overshoot is the most reliably wrong pattern at this level: hard Text 2s are engineered to concede the numbers ("The biomass recovered," "The equipment is indeed unnecessary," "The zone's clock improved") and to relocate the dispute to what the numbers mean, measure, or omit. A "denies the result" choice contradicts that concession, so it dies on a single quoted sentence. The partial-acceptance and qualification choices describe the anatomy of *correct* answers — partial acceptance plus qualification is exactly the accept-and-narrow shape. The measurement-or-design choice eliminates by topic, which is backwards: measurement and design are usually where the real response lives, and topic-based elimination is the habit hard items exist to punish.`
@@ -46,10 +46,10 @@ Function questions: read the sentence, then its **neighbors**, and answer from t
       type: 'quiz' as const,
       question: `Text 2 of a paired item lists three changes a school district made at once — later start times, shorter bus routes, and afternoon athletics — and concludes that the attendance record "cannot say which of the three mattered, or in what mixture." A distractor reads: "Text 2's author would argue that shorter bus routes were the true cause of the attendance gains." Why is this distractor wrong despite citing a detail genuinely found in Text 2?`,
       options: [
-        'Because the bus routes are mentioned only in Text 1',
-        'Because it commits Text 2 to ranking one confound as the cause, when Text 2\'s stated position is that the evidence cannot rank them',
-        'Because Text 2 denies that attendance improved at all',
-        'Because shorter bus routes could not plausibly affect attendance'
+        'Because the bus routes are mentioned only in Text 1, so it credits the detail to the wrong author',
+        'Because it commits Text 2 to ranking one change as the cause, when Text 2 says the evidence cannot rank them',
+        'Because Text 2 denies that attendance improved, so the changes cannot be the cause of any gains',
+        'Because shorter bus routes could not plausibly affect attendance, so Text 2 would never single them out'
       ],
       correctAnswer: 1,
       explanation: `This is the committed near-miss. Its lure is authenticity — the bus routes really are Text 2's detail, so the choice survives the "is it in the passage?" check. What it fails is the commitment check: Text 2's thesis is agnosticism ("cannot say which... or in what mixture"), and an answer that picks a winner asserts precisely what Text 2 declines to assert. The correct answer to such items always preserves the refusal ("the changes were confounded, so the gains cannot be attributed to any one"). The only-in-Text-1 choice is factually wrong in the scenario given. The attendance-never-improved choice is the denial overshoot — a different trap, and one Text 2's acceptance of the gains rules out. The could-not-plausibly choice argues plausibility, which is irrelevant: the question is what Text 2 *would say*, not what is true about buses.`
@@ -59,10 +59,10 @@ Function questions: read the sentence, then its **neighbors**, and answer from t
       type: 'quiz' as const,
       question: `A passage reports that commentators have long ridiculed a 1962 forecast that computers would remain too costly for home use, then pivots: "The ridicule is easy," and closes by defending the forecaster's reasoning as sound for the facts of 1962. A function question about "The ridicule is easy" draws many answers claiming the sentence "criticizes the forecaster's failure of vision." What did those test-takers miss?`,
       options: [
-        'That the sentence is purely descriptive and criticizes no one',
-        'That "easy" is a term of praise, signaling the author\'s approval of the ridicule',
-        'That the sentence\'s criticism targets the commentators doing the ridiculing — the passage defends the forecaster, so the popular answer reverses the direction of the attack',
-        'That the passage is about the cost of computers rather than about forecasting'
+        'That the sentence is purely descriptive, reporting the ridicule without defending or criticizing anyone',
+        'That "easy" is a term of praise here, since the author approves of the commentators\' ridicule',
+        'That the sentence targets the ridiculing commentators, since the passage goes on to defend the forecaster',
+        'That the passage is mainly about the cost of early computers rather than about the forecaster\'s reasoning'
       ],
       correctAnswer: 2,
       explanation: `Reversed target. The sentence contains criticism, and the passage contains a forecaster — the trap solders them together. But the pivot's dismissiveness ("easy" = cheap, unearned) is aimed at the *ridicule*, and everything after it builds the forecaster's defense: the criticism and its target run in opposite directions from the popular answer. The test-takers answered from the nouns in the window instead of naming the target first. The purely-descriptive choice launders the sentence into neutrality; a three-word pivot like this is never idle description — brevity is what marks it as a verdict. The term-of-praise choice inverts the connotation of "easy," which in this construction belittles the act as unearned rather than endorsing it. The cost-of-computers choice retreats to subject matter, which no function question is asking about.`

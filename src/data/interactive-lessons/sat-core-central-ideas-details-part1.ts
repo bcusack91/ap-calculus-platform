@@ -44,13 +44,13 @@ Notice that "the angle tells them direction" is true, but as a *central idea* it
 
 What is the central idea of this passage?`,
       options: [
-        `Sea urchins live on rocky ocean floors.`,
-        `Kelp can grow very tall in cold water.`,
-        `Sea otters keep urchin numbers down, which allows kelp forests to survive.`,
-        `Sea otters are one of the smallest marine mammals.`
+        `Sea otters eat enormous numbers of sea urchins in kelp forests.`,
+        `Sea urchins protect kelp forests by keeping sea otter numbers down.`,
+        `By keeping urchin numbers down, sea otters help kelp forests survive.`,
+        `Sea otters are one of the smallest marine mammals in the ocean.`
       ],
       correctAnswer: 2,
-      explanation: `The central idea has to cover every sentence. Each sentence here connects otters to urchins to kelp, and the last sentence states the point directly: protecting otters protects the forest. The choice about otters keeping urchin numbers down so kelp survives is the only one that covers the whole chain. The other three are either small side facts or things the passage never says at all.`
+      explanation: `The central idea has to cover every sentence. Each sentence here connects otters to urchins to kelp, and the last sentence states the point directly: protecting otters protects the forest. The choice about otters keeping urchin numbers down so kelp survives is the only one that covers the whole chain. The other three are a small side fact (otters eat urchins), a reversal that swaps the roles of otters and urchins, and a claim the passage never makes.`
     },
     {
       id: 'central-core-p1-q2',
@@ -64,7 +64,7 @@ According to the passage, what happens to kelp in places where otters have disap
         `Urchins multiply and eat the kelp down to bare rock.`,
         `The kelp grows thicker and taller than before.`,
         `Fishing boats remove the kelp for processing.`,
-        `The kelp becomes food for otters instead of urchins.`
+        `Otters multiply and eat the kelp instead of the urchins.`
       ],
       correctAnswer: 0,
       explanation: `This is a detail question, so the answer is written in the passage. Sentence three says that where otters are gone, urchins multiply and chew the kelp down to bare rock, which is exactly the bare-rock choice. The choice about kelp growing thicker describes what happens when otters ARE present, not when they are gone.`
@@ -78,13 +78,13 @@ According to the passage, what happens to kelp in places where otters have disap
 
 What is the central idea of this passage?`,
       options: [
-        `Some libraries lend musical instruments.`,
-        `Coding classes are popular with teenagers.`,
-        `Libraries should charge fees for their services.`,
-        `Libraries have expanded beyond books into broad community services.`
+        `Some library branches now lend musical instruments along with books.`,
+        `Free coding classes at libraries are popular with neighborhood teenagers.`,
+        `Libraries should charge fees for tools, passes, and community classes.`,
+        `Libraries have expanded beyond books into general community services.`
       ],
       correctAnswer: 3,
-      explanation: `Look for the roof that covers every sentence. The passage lists tools, sewing machines, passes, instruments, classes, and interview rooms, then names the pattern: the library has become a community center. The choice about libraries expanding beyond books into broad community services covers all of that. The instrument choice is true but too small — it covers one item from one list.`
+      explanation: `Look for the roof that covers every sentence. The passage lists tools, sewing machines, passes, instruments, classes, and interview rooms, then names the pattern: the library has become a community center. The choice about libraries expanding beyond books into general community services covers all of that. The instruments-along-with-books choice is true but too small — it covers one item from one list. The coding-class choice adds a claim about teenagers the passage never makes, and the fees choice is advice the author never gives.`
     },
     {
       id: 'central-core-p1-q4',

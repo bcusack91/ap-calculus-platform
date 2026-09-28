@@ -59,7 +59,7 @@ Which choice completes the text so that it conforms to the conventions of Standa
 
 Which choice completes the text so that it conforms to the conventions of Standard English?`,
       options: [
-        ` -- a category`,
+        `-- a category`,
         `: a category`,
         `, a category`,
         `; a category`

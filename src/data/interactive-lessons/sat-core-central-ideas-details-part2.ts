@@ -39,10 +39,10 @@ Answer only from the passage. If you know a lot about sharks and the passage say
 
 Which detail from the passage supports the idea that night-shift effects last beyond the work hours?`,
       options: [
-        `Night shifts make workers tired.`,
+        `Night-shift workers report feeling tired during their hours at work.`,
         `Workers report difficulty sleeping even on their days off.`,
-        `Nurses, pilots, and factory workers were studied.`,
-        `Researchers study the human body clock.`
+        `Nurses, pilots, and factory workers were among those studied.`,
+        `Researchers study the body clocks of people who work at night.`
       ],
       correctAnswer: 1,
       explanation: `The claim is that the effects reach past the work hours, so you need the line about time away from work. The passage says workers have trouble sleeping even on their days off, which is exactly that. The list of job types tells you who was studied, not how long the effects last.`
@@ -56,13 +56,13 @@ Which detail from the passage supports the idea that night-shift effects last be
 
 What is the central idea of this passage?`,
       options: [
-        `Bamboo can grow more than a meter in a single day.`,
-        `Hardwood forests take decades to mature.`,
-        `Bamboo is difficult to harvest without special tools.`,
-        `Bamboo's fast regrowth makes it a practical alternative to hardwood for builders.`
+        `Bamboo regrows so quickly that some species add a meter a day.`,
+        `Hardwood forests may need decades to grow back after they are cut.`,
+        `Bamboo is difficult for builders to harvest without special tools.`,
+        `Bamboo's quick regrowth makes it a practical substitute for hardwood.`
       ],
       correctAnswer: 3,
-      explanation: `The roof has to cover all three sentences: fast growth, builders using it instead of hardwood, and the harvest comparison. The choice about fast regrowth making bamboo a practical alternative for builders covers every part of that. The meter-a-day fact is true but too small — it is the evidence, not the point.`
+      explanation: `The roof has to cover all three sentences: fast growth, builders using it instead of hardwood, and the harvest comparison. The choice about quick regrowth making bamboo a practical substitute for hardwood covers every part of that. The meter-a-day fact is true but too small — it is the evidence, not the point.`
     },
     {
       id: 'central-core-p2-q3',
@@ -74,22 +74,22 @@ What is the central idea of this passage?`,
 According to the passage, what causes lodgepole pine cones to open?`,
       options: [
         `Heat from a wildfire melts the resin that seals the cones.`,
-        `Heavy rain washes the resin away.`,
-        `Animals break the cones open while feeding.`,
-        `The cones open on a fixed schedule each spring.`
+        `Warm spring sunshine melts the resin that seals the cones.`,
+        `Animals fleeing a wildfire break the sealed cones open.`,
+        `The cones open on a fixed schedule at the start of each spring.`
       ],
       correctAnswer: 0,
-      explanation: `This is a detail question, so locate the line. Sentence two says the heat melts the resin sealing the cones, and then the cones open — heat from the fire is the cause. Rain and animals are never mentioned in the passage, so neither can be the answer no matter how reasonable they sound.`
+      explanation: `This is a detail question, so locate the line. Sentence two says the heat melts the resin sealing the cones, and then the cones open — heat from the fire is the cause. Spring sunshine and animals are never mentioned in the passage, so neither can be the answer no matter how reasonable they sound.`
     },
     {
       id: 'central-core-p2-q4',
       type: 'quiz' as const,
       question: `You are answering a central idea question. One choice states a fact that appears in the passage but matches only the second sentence. What should you do with that choice?`,
       options: [
-        `Choose it, because anything stated in the passage is correct.`,
-        `Choose it, because specific facts make the strongest main ideas.`,
-        `Rule it out, because a central idea must cover the whole passage, not one sentence.`,
-        `Rule it out, because facts can never appear in a correct answer choice.`
+        `Choose it, because any fact stated in the passage must be the correct answer.`,
+        `Choose it, because specific facts make the strongest central ideas.`,
+        `Rule it out, because a central idea covers the whole passage, not one line.`,
+        `Rule it out, because facts, however accurate, never appear in correct answers.`
       ],
       correctAnswer: 2,
       explanation: `A central idea has to sit over the entire passage like a roof, so a choice that matches only one sentence is too small and should be ruled out. Being true is not enough on this question type — the answer also has to be big enough. That same fact could easily be the right answer on a detail question, which is why reading the question first matters.`

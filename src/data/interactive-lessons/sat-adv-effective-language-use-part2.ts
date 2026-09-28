@@ -35,13 +35,13 @@ Background definitions offered to an expert audience; insider results offered to
 
 The student wants to emphasize the trade-off involved in adding dishes to an interferometer. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
-        `Radio interferometers combine the signals from many small dishes so that the array behaves like one giant dish.`,
-        `Each dish added to an interferometer sharpens its angular resolution but also swells the computing load required to correlate the signals.`,
-        `The correlator that combines one observatory's signals already consumes half of its operating budget.`,
-        `Combining signals from many small dishes yields extremely fine angular resolution.`
+        `Radio interferometers combine the signals from many small dishes so that the whole array behaves like one giant dish.`,
+        `Each added dish sharpens an interferometer's resolution but also increases the computing load needed to correlate signals.`,
+        `At one observatory, the correlator that does the computing already consumes half of the operating budget.`,
+        `Adding dishes to an interferometer steadily sharpens its angular resolution, allowing ever finer detail to be seen.`
       ],
       correctAnswer: 1,
-      explanation: `A trade-off is an advantage set against its cost, and only the resolution-versus-computing-load option holds both in one sentence: sharper resolution bought with heavier computation. The fine-resolution option states the benefit alone and the correlator-budget option the cost alone — each is a half-sentence, and emphasis without the opposing pole is not a trade-off. The one-giant-dish option explains how an interferometer works, accurate background that names neither a gain nor a price.`
+      explanation: `A trade-off is an advantage set against its cost, and only the resolution-versus-computing-load option holds both in one sentence: sharper resolution bought with heavier computation. The sharper-resolution option states the benefit alone and the correlator-budget option the cost alone — each is a half-sentence, and emphasis without the opposing pole is not a trade-off. The one-giant-dish option explains how an interferometer works, accurate background that names neither a gain nor a price.`
     },
     {
       id: 'elu-adv-p2-q2',
@@ -56,7 +56,7 @@ The student wants to emphasize the trade-off involved in adding dishes to an int
 The student wants to emphasize the advantage navigation apps hold over paper maps. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
         `Paper maps require no power source and keep working in cold that can drain a phone's battery within hours.`,
-        `Rangers recommend that hikers carry both a navigation app and a paper map.`,
+        `Rangers recommend that hikers on the trail carry both a navigation app and a paper map.`,
         `Unlike a paper map, a navigation app can show a hiker's live position on the trail.`,
         `Navigation apps depend on phone batteries, which cold weather drains quickly.`
       ],
@@ -74,10 +74,10 @@ The student wants to emphasize the advantage navigation apps hold over paper map
 
 The student wants to emphasize the change in detections between the two surveys. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
       options: [
-        `Shipping lanes in the region were shifted in 2008 to protect the species from ship strikes.`,
-        `A 2023 acoustic survey detected the whale's call at 29 of 40 listening stations.`,
-        `The whale's call can carry roughly 30 kilometers in deep water.`,
-        `The whale's call, detected at just 12 of 40 stations in 2003, was picked up at 29 of those same stations two decades later.`
+        `Shipping lanes in the region were shifted in 2008, between the two surveys, to protect the species from ship strikes.`,
+        `The whale's call was detected at 29 of 40 listening stations in a 2023 acoustic survey.`,
+        `The whale's call can carry roughly 30 kilometers in deep water, so each station listens across a wide area.`,
+        `The whale's call, detected at 12 of 40 stations in 2003, was detected at 29 of those same stations in 2023.`
       ],
       correctAnswer: 3,
       explanation: `A change between surveys requires both counts and both dates in one sentence, which only the 12-to-29-stations option supplies. The 29-of-40 option is the half-sentence trap — a strong figure with no baseline, so no change is visible. The shipping-lane option is true-but-off-goal: it offers a possible cause of the change rather than the change itself, a distinction the hard tier tests relentlessly. The call's 30-kilometer range is method-relevant background that measures nothing across time.`

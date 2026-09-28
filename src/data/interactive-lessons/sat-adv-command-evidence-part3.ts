@@ -30,13 +30,13 @@ The student concludes that the express lanes shortened waits for their users whi
 
 Which choice most effectively uses data from the table to support the student's conclusion?`,
       options: [
-        'Express-lane users waited a median of only 4 minutes.',
-        'Express users waited 4 minutes against the general lanes\' 19, while general-lane waits rose from 12 minutes before the change to 19 after it.',
-        'General-lane waits rose from 12 minutes to 19 minutes after the express lanes opened.',
-        'Thirty percent of fans used the express lanes.'
+        'Express-lane users waited a median of only 4 minutes, a third of the general lanes\' wait the season before.',
+        'Express users waited 4 minutes, while general-lane waits rose from 12 minutes before the change to 19 after.',
+        'General-lane waits rose from 12 minutes before the change to 19 minutes after it, an increase of 7 minutes.',
+        'Thirty percent of fans used the new express lanes, while the other seventy percent kept using the general lanes.'
       ],
       correctAnswer: 1,
-      explanation: `The conclusion is two-part — shortened for users AND lengthened for everyone else — so the evidence must show the express advantage and the general-lane before/after rise together, as the choice pairing both comparisons does. The express-only choice supports only the first half, and weakly: 4 minutes alone isn't even shown to be short without a comparison. The general-lanes-only choice supports only the second half; by itself the rise could reflect higher attendance, leaving the lanes uncredited and unblamed. The thirty-percent choice is a base-rate fact that supports neither clause — it tells you how many fans got the benefit, not whether there was one.`
+      explanation: `The conclusion is two-part — shortened for users AND lengthened for everyone else — so the evidence must show the express advantage and the general-lane before/after rise together, as the choice pairing both comparisons does. The express-only choice supports only the first half: it compares express users with last season's general lanes and says nothing about what happened to everyone else. The general-lanes-only choice supports only the second half; by itself the rise could reflect higher attendance, leaving the lanes uncredited and unblamed. The thirty-percent choice is a base-rate fact that supports neither clause — it tells you how many fans got the benefit, not whether there was one.`
     },
     {
       id: 'advce3-q2',
@@ -45,13 +45,13 @@ Which choice most effectively uses data from the table to support the student's 
 
 Which quotation from Osei's essays most effectively illustrates the student's claim?`,
       options: [
-        '"No sentence I have ever spoken has taught a student to center clay."',
-        '"My own teacher was nearly silent for my first year, and I resented every week of it."',
-        '"Students ask me for the rule, and I tell them that there is no rule."',
-        '"When a student\'s cylinders keep collapsing, I sit down at the next wheel and throw one, slowly, without saying that it is for them."'
+        '"No sentence I have ever spoken, however carefully I chose it, has taught a single student how to center clay."',
+        '"My own teacher was nearly silent for my first year at the wheel, and I resented every week of that silence."',
+        '"Students ask me again and again for the rule, and each time I tell them, as plainly as I can, that there is no rule."',
+        '"When a student\'s cylinders collapse, I sit at the next wheel and throw one slowly, never saying it is for them."'
       ],
       correctAnswer: 3,
-      explanation: `The claim requires the positive mechanism — arranged, wordless demonstration — not merely the rejection of words. The next-wheel quotation shows the staging in detail: she positions herself "at the next wheel," slows the throw so it can be watched, and conceals the pedagogy ("without saying that it is for them") — demonstration deliberately arranged to be seen. The center-clay quotation is the trap for topic-matchers: it restates her denial that words teach, which is the *premise* the student's claim builds on, not the teaching practice the claim describes. The silent-teacher quotation describes her teacher's method and her resentment of it — wrong person, and the resentment even cuts against the claim's approving frame. The no-rule quotation is words about words: a verbal exchange, with no demonstration anywhere in it.`
+      explanation: `The claim requires the positive mechanism — arranged, wordless demonstration — not merely the rejection of words. The next-wheel quotation shows the staging in detail: she positions herself "at the next wheel," slows the throw so it can be watched, and conceals the pedagogy ("never saying it is for them") — demonstration deliberately arranged to be seen. The center-clay quotation is the trap for topic-matchers: it restates her denial that words teach, which is the *premise* the student's claim builds on, not the teaching practice the claim describes. The silent-teacher quotation describes her teacher's method and her resentment of it — wrong person, and the resentment even cuts against the claim's approving frame. The no-rule quotation is words about words: a verbal exchange, with no demonstration anywhere in it.`
     },
     {
       id: 'advce3-q3',
@@ -60,10 +60,10 @@ Which quotation from Osei's essays most effectively illustrates the student's cl
 
 Which finding, if true, most directly supports Reyhan's account?`,
       options: [
-        'The latest occupation layers contain no weapons and no burned material, and the storerooms were emptied of everything portable, with several doorways bricked shut from the outside.',
-        'The fortress walls show repairs made in at least four different centuries.',
-        'A chronicle from a rival city describes the fortress as the wealthiest stronghold in the region.',
-        'A thin layer of ash covers the floors of two rooms near the main gate.'
+        'The final layers hold no weapons or ash, the storerooms were emptied, and several doorways were bricked shut from outside.',
+        'The fortress walls show repairs made in at least four different centuries, the latest of them shortly before 1200.',
+        'A chronicle from a rival city, written around 1190, describes the fortress as the wealthiest stronghold in the region.',
+        'A thin layer of ash, dated to around 1200, covers the floors of two rooms beside the fortress\'s main gate and guardhouse.'
       ],
       correctAnswer: 0,
       explanation: `The emptied-storerooms finding is a package of details each of which the assault account struggles with and the abandonment account predicts: assaults leave weapons and burning, not their absence; emptied storerooms mean residents left with time to pack; doorways bricked "from the outside" mean someone sealed the site and walked away. The repairs finding shows long occupation and maintenance — true under either account, since a fortress can be repaired for centuries and still fall in an afternoon. The chronicle finding is a rival city's praise of the fortress's wealth, which if anything supplies a motive for assault. The ash finding is the wrong-team finding: ash near the gate is the assault account's evidence, and a student citing it would be arguing against Reyhan.`
@@ -73,19 +73,19 @@ Which finding, if true, most directly supports Reyhan's account?`,
       type: 'quiz' as const,
       question: `A grocery chain claims its coupon program is winning new customers. A student examines the redemption data and concludes that the program mostly subsidized purchases its regular customers would have made anyway.
 
-Coupon redemptions: 8,200
+Shoppers who redeemed a coupon: 8,200
 Redeemers enrolled in the chain's loyalty program before the campaign: 7,400
 Median store visits by redeemers in the year before the campaign: 14
 
 Which choice most effectively uses data from the table to support the student's conclusion?`,
       options: [
-        'A total of 8,200 coupons were redeemed during the campaign.',
-        'Some coupon redeemers had never shopped at the chain before the campaign.',
-        'Of the 8,200 redeemers, 7,400 were already loyalty members, and redeemers had made a median of 14 store visits in the prior year — established regulars collecting a discount.',
-        'The 800 redeemers who were not loyalty members made no store visits in the prior year.'
+        'A total of 8,200 shoppers redeemed at least one coupon over the course of the chain\'s coupon campaign.',
+        'Some coupon redeemers had never shopped at the chain before the campaign, and so they count as new customers.',
+        'Of the 8,200 redeemers, 7,400 were already loyalty members, and redeemers had a median of 14 prior visits.',
+        'The 800 redeemers who were not loyalty members, unlike the 7,400 who were, had a median of zero prior visits.'
       ],
       correctAnswer: 2,
-      explanation: `The conclusion says the discounts went mainly to people who were already customers, so the evidence must characterize who the redeemers were before the campaign — and the loyalty-members choice does it twice over: 7,400 of 8,200 already enrolled, with a median of 14 prior-year visits. The 8,200-redeemed choice is the pure headline count: 8,200 redemptions says the program was used, not by whom, and it's the number the chain's own press release would cite. The never-shopped choice, if anything, is the chain's evidence — new customers are exactly what the student's conclusion says the program mostly didn't win. The 800-non-members choice is not in the table: the data give the non-members' count but say nothing about their visit history, and evidence you have to invent supports nothing.`
+      explanation: `The conclusion says the discounts went mainly to people who were already customers, so the evidence must characterize who the redeemers were before the campaign — and the loyalty-members choice does it twice over: 7,400 of 8,200 already enrolled, with a median of 14 prior-year visits. The 8,200-redeemed choice is the pure headline count: 8,200 redeemers says the program was used, not by whom, and it's the number the chain's own press release would cite. The never-shopped choice, if anything, is the chain's evidence — new customers are exactly what the student's conclusion says the program mostly didn't win. The 800-non-members choice is not in the table: the data give the non-members' count but say nothing about their visit history, and evidence you have to invent supports nothing.`
     }
   ]
 }

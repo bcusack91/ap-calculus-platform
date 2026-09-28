@@ -41,10 +41,10 @@ Which choice completes the text with the most logical transition?`,
         `Accordingly,`,
         `For instance,`,
         `In other words,`,
-        `Even so,`
+        `Nevertheless,`
       ],
       correctAnswer: 3,
-      explanation: `The first sentence stacks two handicaps — light pollution and aging equipment — that would ordinarily predict declining output; the second reports benchmark-quality results anyway. 'Even so' marks precisely that defeated expectation. 'Accordingly' is the reversed arrow: it claims the handicaps produced the excellent measurements. 'For instance' would make the benchmark citations an example of the handicaps. 'In other words' would mark a restatement, but the instrument's success is new information running against what preceded it.`
+      explanation: `The first sentence stacks two handicaps — light pollution and aging equipment — that would ordinarily predict declining output; the second reports benchmark-quality results anyway. 'Nevertheless' marks precisely that defeated expectation. 'Accordingly' is the reversed arrow: it claims the handicaps produced the excellent measurements. 'For instance' would make the benchmark citations an example of the handicaps. 'In other words' would mark a restatement, but the instrument's success is new information running against what preceded it.`
     },
     {
       id: 'trans-adv-p3-q3',
@@ -54,12 +54,12 @@ Which choice completes the text with the most logical transition?`,
 Which choice completes the text with the most logical transition?`,
       options: [
         `Nevertheless,`,
-        `Thus,`,
+        `Consequently,`,
         `For example,`,
         `On the other hand,`
       ],
       correctAnswer: 1,
-      explanation: `The third sentence draws the conclusion that follows from combining the two schedules described before it: a ninety-minute overlap means a ninety-minute reproductive window. That synthesis calls for the conclusion-marker 'Thus.' 'Nevertheless' would claim the narrow window exists despite the overlap, when it is the overlap restated as a consequence. 'For example' would need the third sentence to be one instance of a generalization, but it is an inference. 'On the other hand' signals opposition, and nothing here opposes.`
+      explanation: `The third sentence draws the conclusion that follows from combining the two schedules described before it: a ninety-minute overlap means a ninety-minute reproductive window. That synthesis calls for the conclusion-marker 'Consequently.' 'Nevertheless' would claim the narrow window exists despite the overlap, when it is the overlap restated as a consequence. 'For example' would need the third sentence to be one instance of a generalization, but it is an inference. 'On the other hand' signals opposition, and nothing here opposes.`
     },
     {
       id: 'trans-adv-p3-q4',

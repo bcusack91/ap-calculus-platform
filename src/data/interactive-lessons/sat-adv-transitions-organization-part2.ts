@@ -31,13 +31,13 @@ When sentence 2 is a **negation** ('Their reasoning was not sentimental,' 'This 
 
 Which choice completes the text with the most logical transition?`,
       options: [
-        `Similarly,`,
+        `Also,`,
         `Consequently,`,
         `Nevertheless,`,
         `Rather,`
       ],
       correctAnswer: 3,
-      explanation: `The first sentence denies one explanation (a stunt), and the second supplies the real one in its place — the signature setup for 'Rather,' which marks a substituted explanation after a negation. 'Nevertheless' treats the denial as an obstacle the second sentence must overcome, but nothing is being overcome. 'Consequently' would make the historical revival a result of the decision's not being a stunt, which is incoherent. 'Similarly' requires a parallel case, and the second sentence replaces rather than parallels.`
+      explanation: `The first sentence denies one explanation (a stunt), and the second supplies the real one in its place — the signature setup for 'Rather,' which marks a substituted explanation after a negation. 'Nevertheless' treats the denial as an obstacle the second sentence must overcome, but nothing is being overcome. 'Consequently' would make the historical revival a result of the decision's not being a stunt, which is incoherent. 'Also' would add a second, parallel point, but the second sentence replaces the denied explanation rather than adding to it.`
     },
     {
       id: 'trans-adv-p2-q2',
@@ -48,11 +48,11 @@ Which choice completes the text with the most logical transition?`,
       options: [
         `Furthermore,`,
         `However,`,
-        `Therefore,`,
+        `Thus,`,
         `In other words,`
       ],
       correctAnswer: 1,
-      explanation: `The third sentence undercuts the rosy picture by naming what the celebrated filings also contain, so a contrastive transition is required. 'Furthermore' is the skim trap: it correctly registers 'another fact from the same filings' but misses that this fact scores against the company rather than for it — classify the fact's direction, not its source. 'Therefore' would make the tripled costs a consequence of investors repeating the revenue figure. 'In other words' would claim the cost figure restates the revenue figure, but it is new and opposing information.`
+      explanation: `The third sentence undercuts the rosy picture by naming what the celebrated filings also contain, so a contrastive transition is required. 'Furthermore' is the skim trap: it correctly registers 'another fact from the same filings' but misses that this fact scores against the company rather than for it — classify the fact's direction, not its source. 'Thus' would make the tripled costs a consequence of investors repeating the revenue figure. 'In other words' would claim the cost figure restates the revenue figure, but it is new and opposing information.`
     },
     {
       id: 'trans-adv-p2-q3',

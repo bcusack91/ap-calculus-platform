@@ -33,10 +33,10 @@ The answer is a **three-beat map** — goal, obstacles, compromise; explanation 
 
 Which choice best describes the function of the sentence "The doubling may be real" in the text as a whole?`,
       options: [
-        'It retracts the finding described in the first sentence.',
-        'It argues that hedgerows have no effect on pollinator diversity.',
-        'It concedes the result so that the objection that follows falls on the study\'s design rather than on its data.',
-        'It summarizes the survey\'s note about how farms entered the study.'
+        'It retracts the finding described in the first sentence, conceding that the study\'s design never measured the doubling.',
+        'It argues that hedgerows have no real effect on pollinator diversity, whatever the survey\'s figures suggest.',
+        'It concedes the result, leaving the objection that follows to target the study\'s design rather than its data.',
+        'It summarizes the survey\'s note on how farms entered the study, restating that the hedgerow farms volunteered.'
       ],
       correctAnswer: 2,
       explanation: `Strategic concession: by granting that the measured doubling may be genuine, the author narrows the coming objection to attribution — "whose work it is" — where it can't be answered by re-checking the data. The receipt is the next sentence, which attacks only "the survey's design." The retraction choice mistakes concession for retraction; "may be real" keeps the finding alive, which is the opposite of withdrawing it. The no-effect choice overstates in the other direction — the passage questions whether the hedgerows *caused* the diversity, never whether they could. The summary choice attaches the sentence to the wrong material: the volunteering note precedes it and is the objection's evidence, not what this sentence restates.`
@@ -52,10 +52,10 @@ Delay is measured where the charge applies and when it applies. In the priced ci
 
 Based on the texts, how would the author of Text 2 most likely respond to the evidence cited in Text 1?`,
       options: [
-        'By accepting that delays fell inside the zone while asking how much traffic was displaced to other hours and other roads rather than eliminated.',
-        'By denying that traffic delays fell inside the charged zone.',
-        'By arguing that congestion pricing should be repealed in the cities that adopted it.',
-        'By claiming that drivers do not respond to prices.'
+        'By accepting that delays fell inside the zone while asking how much traffic was displaced rather than eliminated.',
+        'By denying that traffic delays actually fell inside the charged zone once deliveries and ride-hail trips are counted.',
+        'By arguing that congestion pricing should be repealed in the cities that adopted it because it burdens the ring roads.',
+        'By claiming that drivers do not respond to prices, since traffic simply moved to other hours and other roads.'
       ],
       correctAnswer: 0,
       explanation: `Text 2 concedes the measured result in so many words ("The zone's clock improved") and objects to the measurement's boundary: the twenty percent excludes the 4 a.m. deliveries and the ring-road lengthening it may have created. That's the accept-the-data, question-the-boundary shape — the displaced-rather-than-eliminated choice. The delays-did-not-fall choice is the reflex denial that hard cross-text items are built to punish; Text 2 never disputes the number. The drivers-do-not-respond choice fails doubly: rerouted deliveries and thinned ride-hail trips *are* drivers responding to prices, so Text 2's own evidence assumes the responsiveness. The repeal choice converts a measurement critique into a policy verdict — Text 2 says the twenty percent doesn't contain the full answer, not that the answer is repeal.`
@@ -67,10 +67,10 @@ Based on the texts, how would the author of Text 2 most likely respond to the ev
 
 Which choice best describes the function of the sentence "The objection is arithmetically correct" in the text as a whole?`,
       options: [
-        'It shows that the author believes the index should be revised.',
-        'It grants the critics\' calculation before redirecting the dispute to the index\'s purpose, where the criticism loses its force.',
-        'It concedes that the index cannot forecast the outcomes of games.',
-        'It explains the formula by which the index weights recent games.'
+        'It shows that the author accepts the critics\' objection and thinks the index should be revised.',
+        'It grants the critics\' calculation before shifting the dispute to the index\'s purpose, where the objection fails.',
+        'It concedes that the index fails at its purpose of forecasting games when a player\'s results are uneven.',
+        'It explains the formula by which the index weights recent games more heavily than games played long ago.'
       ],
       correctAnswer: 1,
       explanation: `Concede-and-redirect: the author gives the critics their arithmetic in full, which moves the disagreement to the only remaining ground — what the number is *for* — where the next sentences win it ("exists to forecast the next game, not to reward the last one"). The receipt is "It also mistakes," which tells you the concession was a setup. The should-be-revised choice reads the concession as agreement with the critics' conclusion; the passage defends the index, so the trap reverses the author's side. The cannot-forecast choice concedes the wrong thing — forecasting is the capacity the passage asserts, not surrenders. The formula choice mistakes a rhetorical move for exposition; no formula appears anywhere in the text.`

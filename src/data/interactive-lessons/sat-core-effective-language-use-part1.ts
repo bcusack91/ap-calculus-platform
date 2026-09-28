@@ -53,12 +53,12 @@ Being suspicious of the longest choice is a good habit here. On a concise-writin
       question: 'Which choice states the idea most concisely without leaving anything out?',
       options: [
         'The reason the race was canceled was because of the fact that the wind was too strong.',
-        'Due to the fact that the wind was strong, the race ended up being canceled.',
+        'The race was canceled.',
         'The race was canceled because the wind was too strong.',
         'The race, on account of strong wind conditions, was a race that got canceled.'
       ],
       correctAnswer: 2,
-      explanation: '"The race was canceled because the wind was too strong" is correct. It keeps both facts — the cancellation and the reason — and states them in the fewest words. The word "because" does the whole job of naming the cause. The other three choices carry the same two facts but pad them with phrases like "due to the fact that" and "ended up being," which add length without adding meaning.'
+      explanation: '"The race was canceled because the wind was too strong" is correct. It keeps both facts — the cancellation and the reason — and states them in the fewest words. The word "because" does the whole job of naming the cause. Two of the other choices carry the same two facts but pad them with phrases like "because of the fact that" and "was a race that got," which add length without adding meaning. "The race was canceled" is shorter, but it leaves out the reason, so it does not keep the full idea.'
     },
     {
       id: 'elu-core-p1-q2',
@@ -66,25 +66,25 @@ Being suspicious of the longest choice is a good habit here. On a concise-writin
       question: 'Which phrase says the same thing twice?',
       options: [
         'free gift',
-        'new bicycle',
+        'new bike',
         'early morning',
         'cold winter'
       ],
       correctAnswer: 0,
-      explanation: '"Free gift" says the same thing twice. A gift is something given without charge, so "free" repeats information the word "gift" already carries, and "gift" alone says it all. In the other three phrases the first word adds something real: a bicycle can be new or used, a morning can be early or late, and a winter can be cold or mild.'
+      explanation: '"Free gift" says the same thing twice. A gift is something given without charge, so "free" repeats information the word "gift" already carries, and "gift" alone says it all. In the other three phrases the first word adds something real: a bike can be new or used, a morning can be early or late, and a winter can be cold or mild.'
     },
     {
       id: 'elu-core-p1-q3',
       type: 'quiz' as const,
       question: 'Which choice expresses the idea most concisely?',
       options: [
-        'The coach, who is the person who trains the athletes, gave a short speech.',
+        'The coach gave a speech.',
         'The coach gave a short speech.',
         'The coach gave a speech that was short in length.',
         'What the coach did was give a speech that was short.'
       ],
       correctAnswer: 1,
-      explanation: '"The coach gave a short speech" is correct. It states who acted, what they did, and that the speech was short — the complete meaning in five words. The other choices say the same thing while stretching it out with phrases like "that was short in length" and "what the coach did was," neither of which adds new information.'
+      explanation: '"The coach gave a short speech" is correct. It states who acted, what they did, and that the speech was short — the complete meaning in five words. The other choices say the same thing while stretching it out with phrases like "that was short in length" and "what the coach did was," neither of which adds new information. "The coach gave a speech" is shorter still, but it drops the fact that the speech was short, so it leaves something out.'
     },
     {
       id: 'elu-core-p1-q4',
@@ -92,12 +92,12 @@ Being suspicious of the longest choice is a good habit here. On a concise-writin
       question: 'Why does the SAT reward the shorter choice on a conciseness question?',
       options: [
         'Shorter answers are always correct on every SAT question.',
-        'Short sentences sound more formal.',
-        'Long sentences break grammar rules.',
-        'Extra words that repeat information make the point harder to find.'
+        'Short sentences sound more formal and more academic to readers.',
+        'Long sentences break grammar rules that the SAT tests directly.',
+        'Words that repeat information make the point harder to find.'
       ],
       correctAnswer: 3,
-      explanation: 'Extra words that repeat information make the point harder to find, and that is what conciseness questions are testing. The goal is clear writing, so the choice that delivers the full meaning with no repeated words wins. Long sentences are not against any grammar rule, and shortness only decides the answer when the question asks about being concise.'
+      explanation: 'Words that repeat information make the point harder to find, and that is what conciseness questions are testing. The goal is clear writing, so the choice that delivers the full meaning with no repeated words wins. Long sentences are not against any grammar rule, and shortness only decides the answer when the question asks about being concise.'
     }
   ]
 }

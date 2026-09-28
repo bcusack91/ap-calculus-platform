@@ -56,10 +56,10 @@ Read the words. Find the subject and the verb. Then ask: does this finish a thou
       type: 'quiz' as const,
       question: '"Because the store closed early."\n\nWhy is this a fragment?',
       options: [
-        'It is too short to be a sentence.',
-        'It has no verb.',
-        'It has no subject.',
-        'It starts with "Because," so the thought is not finished — it needs a main sentence.'
+        'It is too short to be a sentence, so it needs more words added.',
+        'It has no verb, since "closed" works as a describing word here.',
+        'It has no subject, since "the store" is not doing anything.',
+        'It starts with "Because," so the thought is left unfinished.'
       ],
       correctAnswer: 3,
       explanation: 'The word "Because" is what makes this a fragment. The words do have a subject (*the store*) and a verb (*closed*), but "Because" leaves the reader waiting to hear what happened as a result. Adding a complete sentence fixes it: "Because the store closed early, we drove to the next town." Length has nothing to do with it — plenty of two-word sentences are complete.'
@@ -69,10 +69,10 @@ Read the words. Find the subject and the verb. Then ask: does this finish a thou
       type: 'quiz' as const,
       question: 'What does the word "although" do at the start of a clause?',
       options: [
-        'It joins two complete sentences as equals.',
-        'It starts a dependent clause, which cannot stand alone as a sentence.',
-        'It ends a sentence.',
-        'It takes the place of a comma.'
+        'It joins two complete sentences together as equal partners.',
+        'It starts a dependent clause that cannot stand on its own.',
+        'It starts a new sentence, the way a capital letter does.',
+        'It takes the place of the comma between two clauses.'
       ],
       correctAnswer: 1,
       explanation: '"Although" starts a dependent clause. Words like although, because, since, when, and if turn a group of words into one that leaves the thought unfinished, so it has to attach to a complete sentence. "Although the trail was steep" is not a sentence, but "Although the trail was steep, the hikers kept going" is. Joining two complete sentences as equals is the job of a different set of words, such as "and" and "but."'
@@ -82,13 +82,13 @@ Read the words. Find the subject and the verb. Then ask: does this finish a thou
       type: 'quiz' as const,
       question: 'Which choice fixes this fragment?\n\n"Since the project began."',
       options: [
-        'Since the project began!',
-        'Since the project began, and',
+        'Since the project began, and costs rose.',
+        'Since the project began over a year ago.',
         'Since the project began, costs have risen.',
-        'Since, the project began.'
+        'Since, the project began to raise costs.'
       ],
       correctAnswer: 2,
-      explanation: '"Since the project began, costs have risen" is the fix. The dependent clause now attaches to a complete sentence, "costs have risen," and a comma marks where the dependent clause ends. That finishes the thought the word "Since" started. The other choices change the punctuation but never supply the complete sentence the fragment is missing.'
+      explanation: '"Since the project began, costs have risen" is the fix. The dependent clause now attaches to a complete sentence, "costs have risen," and a comma marks where the dependent clause ends. That finishes the thought the word "Since" started. The other choices add words or move commas, but each still leaves the "Since" clause with no complete sentence to attach to.'
     },
     {
       id: 'ss-core-p1-q4',

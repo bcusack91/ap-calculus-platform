@@ -61,10 +61,10 @@ When you see a punctuation question, cover the answer choices. Read the words on
       type: 'quiz' as const,
       question: 'My brother cooks dinner, I wash the dishes.\n\nThis sentence is:',
       options: [
-        'a comma splice (incorrect)',
-        'correct as written',
-        'missing a colon',
-        'missing a question mark'
+        'incorrect, because it is a comma splice',
+        'correct, because a comma can join them',
+        'incorrect, because it needs a colon',
+        'incorrect, because it needs a question mark'
       ],
       correctAnswer: 0,
       explanation: 'This is a comma splice. "My brother cooks dinner" can stand alone as a sentence, and so can "I wash the dishes." When two complete sentences are joined by only a comma, that is a comma splice, and it is always wrong on the SAT. Changing the comma to a semicolon or a period would fix it.'
@@ -87,10 +87,10 @@ When you see a punctuation question, cover the answer choices. Read the words on
       type: 'quiz' as const,
       question: 'Two complete sentences sit next to each other with no joining word like "and" or "but" between them. What punctuation do they need?',
       options: [
-        'a comma by itself',
+        'a comma between them',
         'a period or a semicolon',
         'no punctuation at all',
-        'a question mark'
+        'a question mark at the end'
       ],
       correctAnswer: 1,
       explanation: 'A period or a semicolon is correct. Both marks are strong enough to separate two complete sentences, and with no joining word present, one of those two is what the sentence needs. A comma by itself creates a comma splice, and leaving out punctuation entirely runs the two sentences together.'

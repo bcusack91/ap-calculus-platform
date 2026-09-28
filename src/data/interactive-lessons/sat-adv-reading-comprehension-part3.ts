@@ -24,12 +24,12 @@ Trust eliminations made on quoted phrases. On this question type, your second-gu
 Which choice best describes the function of the sentence "The town's population, though, peaked in 1948" in the text as a whole?`,
       options: [
         'It supplies the fact that unsettles the memorial\'s account of 1931 as the end of the town.',
-        'It establishes that the dam improved the town\'s economy.',
-        'It explains why the memorial was placed beside the spillway.',
-        'It corrects the date at which the falls were submerged.'
+        'It establishes that the dam improved the town\'s economy by drawing new workers after 1931.',
+        'It explains why the memorial beside the spillway was built long after the falls disappeared.',
+        'It corrects the date at which the falls were submerged, moving it from 1931 to 1948.'
       ],
       correctAnswer: 0,
-      explanation: `The sentence is the pivot, flagged by "though": a town supposedly ended in 1931 kept growing for seventeen more years, and the final sentence draws the receipt — "it was not the town," so the memorial commemorates "the death of an explanation." The improved-economy choice overshoots the fact into a causal claim: the passage never credits the dam with the growth, only uses the growth to break the ending story. The spillway-placement choice attaches the sentence to a logistical detail it has nothing to do with — the memorial's location is scenery, not argument. The corrected-date choice invents a dating dispute; 1931 stands unchallenged, and the sentence adds a second date rather than correcting the first.`
+      explanation: `The sentence is the pivot, flagged by "though": a town supposedly ended in 1931 kept growing for seventeen more years, and the final sentence draws the receipt — "it was not the town," so the memorial commemorates "the death of an explanation." The improved-economy choice overshoots the fact into a causal claim: the passage never credits the dam with the growth, only uses the growth to break the ending story. The memorial-timing choice invents a construction history the passage never gives — the memorial is scenery, not argument, and 1948 is a population peak, not a building date. The corrected-date choice invents a dating dispute; 1931 stands unchallenged, and the sentence adds a second date rather than correcting the first.`
     },
     {
       id: 'advrc3-q2',
@@ -42,10 +42,10 @@ The replicated studies observe each participant once, comparing lifelong writers
 
 Based on the texts, how would the author of Text 2 most likely respond to the recommendation in Text 1?`,
       options: [
-        'By denying that handwritten notes have ever produced better recall in laboratory studies.',
-        'By arguing that laptops should be banned from classrooms until more research is complete.',
-        'By agreeing that schools should steer students toward handwriting, since the replications are so consistent.',
-        'By noting that an advantage measured in single sessions may shrink as typists\' own habits develop, so the classroom recommendation outruns what the studies can show.'
+        'By denying that handwritten notes have ever produced better recall than typed notes, even in single sessions.',
+        'By arguing that laptops should be banned from classrooms until longer studies of note-taking are complete.',
+        'By agreeing that schools should steer typists toward handwriting, since the lab results are so consistent.',
+        'By noting that a gap found in single sessions may shrink as typists adapt, so the advice outruns the data.'
       ],
       correctAnswer: 3,
       explanation: `Text 2's shape is accept-and-narrow: "The laboratory gap is real" concedes the data, and the design critique (one session, unfamiliar task, habits "a one-session design has no chance to observe") plus the term-long study's narrowing gap confine the result to the lab. The recommendation is where Text 1 outran its evidence, so the single-session choice is the response. The never-produced-better-recall choice is the denial overshoot, contradicted by "is real." The laptop-ban choice reverses the direction of Text 2's caution — a critic of over-strong recommendations doesn't answer with a stronger one. The agreeing choice hands Text 2 the very conclusion its two paragraphs undermine, mistaking its concession about the data for agreement about the advice.`
@@ -57,13 +57,13 @@ Based on the texts, how would the author of Text 2 most likely respond to the re
 
 Which choice best describes the overall structure of the text?`,
       options: [
-        'It advocates for the reintroduction of the lynx and criticizes those who oppose it.',
-        'It describes two referendum campaigns and predicts the result of a third.',
-        'It reports the campaigns\' explanation for their defeats, presents survey evidence against that explanation, and locates the actual division in voters\' stakes rather than their knowledge.',
-        'It argues that voters are too poorly informed about the lynx to vote responsibly.'
+        'It praises the campaign for the lynx, reviews its two defeats, and blames opponents for spreading misinformation.',
+        'It describes two referendum campaigns, compares their survey results, and predicts the outcome of a third vote.',
+        'It reports the campaign\'s explanation for defeat, offers survey evidence against it, and locates the divide in stakes.',
+        'It notes that voters knew little about the lynx, argues this divided them, and proposes a campaign to correct facts.'
       ],
       correctAnswer: 2,
-      explanation: `Three beats, in order: the blamed cause (misinformation), the evidence against it (high factual accuracy; opponents outscoring supporters), and the relocated division ("not information but stakes"), capped by the consequence for strategy. The reports-presents-locates choice maps all three with matching verbs — reports, presents against, locates. The advocates-for-reintroduction choice imposes advocacy: the passage analyzes why campaigns lose without endorsing either side; if anything it treats the opponents' position as grounded in real stakes. The third-referendum choice promotes a prediction the text never makes — no third vote is mentioned. The poorly-informed choice asserts the exact claim the surveys refute, mistaking the campaigns' excuse for the passage's finding.`
+      explanation: `Three beats, in order: the blamed cause (misinformation), the evidence against it (high factual accuracy; opponents outscoring supporters), and the relocated division ("not information but stakes"), capped by the consequence for strategy. The reports-offers-locates choice maps all three with matching verbs — reports, offers evidence against, locates. The praises-the-campaign choice imposes advocacy and blames opponents the passage never faults: the passage analyzes why campaigns lose without endorsing either side; if anything it treats the opponents' position as grounded in real stakes. The third-referendum choice promotes a prediction the text never makes — no third vote is mentioned. The voters-knew-little choice asserts the exact claim the surveys refute, mistaking the campaigns' excuse for the passage's finding.`
     },
     {
       id: 'advrc3-q4',
@@ -76,13 +76,13 @@ Similarity is scored across the whole genome, and virulence can turn on a handfu
 
 Based on the texts, how would the author of Text 2 most likely respond to the conclusion described in Text 1?`,
       options: [
-        'By denying that the medieval plague genomes were accurately sequenced.',
-        'By objecting that overall genomic similarity cannot establish similar behavior in hosts, so the sequences do not settle what made the Black Death so lethal.',
-        'By agreeing that the medieval world\'s conditions fully explain the Black Death\'s lethality.',
-        'By arguing that the medieval strain would resist modern antibiotics.'
+        'By denying that the medieval plague genomes were accurately recovered and sequenced from fourteenth-century victims.',
+        'By objecting that genome-wide similarity cannot show how the strain behaved in hosts, so it does not settle the question.',
+        'By agreeing that the medieval world\'s crowding, malnutrition, and lack of medicine fully explain the Black Death\'s lethality.',
+        'By arguing that the medieval strain, despite its similarity to today\'s strains, would have resisted modern antibiotics.'
       ],
       correctAnswer: 1,
-      explanation: `Text 2 concedes the data in the strongest terms ("authentic and beautifully recovered") and attacks the inferential bridge: whole-genome similarity is the wrong measure for virulence, which "can turn on a handful of genes" and on expression that sequence can't reveal. The conclusion — pathogen versus conditions — is exactly what the sequences "cannot yet tell us," so the genomic-similarity choice has the right shape and the right modesty ("do not settle," not "are wrong"). The sequencing-denial choice is the denial overshoot, contradicted by Text 2's own praise of the recovery. The conditions-fully-explain choice flips Text 2 to the other side of the debate, when its position is that the evidence decides for neither. The antibiotic-resistance choice commits Text 2 to a biological claim it never makes; antibiotics appear only in Text 1, and Text 2's argument needs no position on them.`
+      explanation: `Text 2 concedes the data in the strongest terms ("authentic and beautifully recovered") and attacks the inferential bridge: whole-genome similarity is the wrong measure for virulence, which "can turn on a handful of genes" and on expression that sequence can't reveal. The conclusion — pathogen versus conditions — is exactly what the sequences "cannot yet tell us," so the genomic-similarity choice has the right shape and the right modesty ("does not settle," not "is wrong"). The sequencing-denial choice is the denial overshoot, contradicted by Text 2's own praise of the recovery. The conditions-fully-explain choice flips Text 2 to the other side of the debate, when its position is that the evidence decides for neither. The antibiotic-resistance choice commits Text 2 to a biological claim it never makes; antibiotics appear only in Text 1, and Text 2's argument needs no position on them.`
     }
   ]
 }

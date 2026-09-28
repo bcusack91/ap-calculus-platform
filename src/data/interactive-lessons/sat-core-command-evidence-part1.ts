@@ -45,10 +45,10 @@ Read the **title**, the **axis labels**, and the **units** before you look at th
       type: 'quiz' as const,
       question: `A student council claims that adding a covered bike rack increased the number of students who bike to school. Which finding, if true, would most directly support that claim?`,
       options: [
-        `The bike rack cost less to install than the council expected.`,
-        `Most students say they enjoy riding bicycles on weekends.`,
-        `The school also repainted the parking lot that year.`,
-        `Daily bike counts rose from 12 riders to 47 in the month after the rack was installed.`
+        `The covered bike rack cost less to install than the council had expected.`,
+        `Most students say in a survey that they enjoy riding bicycles on weekends.`,
+        `The school also repainted the parking lot and added 20 car spaces that year.`,
+        `Daily bike counts rose from 12 to 47 in the month after the rack went in.`
       ],
       correctAnswer: 3,
       explanation: `The claim is that the rack increased the NUMBER of students biking to school, so the evidence has to show that number going up after the rack appeared. The count rising from 12 to 47 in the month after installation does exactly that. The cost of the rack is about money, not about how many students ride, so it does not touch the claim.`
@@ -58,23 +58,23 @@ Read the **title**, the **axis labels**, and the **units** before you look at th
       type: 'quiz' as const,
       question: `On the SAT, a question that asks "Which choice best supports the claim?" is asking you to find:`,
       options: [
-        `the longest and most detailed answer choice`,
-        `the choice that most directly backs up the exact claim stated in the question`,
-        `the choice that uses the most advanced vocabulary`,
-        `any fact from the passage that seems interesting`
+        `the choice that repeats the most words from the question`,
+        `the choice that most directly backs up the exact claim in the question`,
+        `the choice that uses the most advanced vocabulary from the passage`,
+        `any true fact from the passage that relates to the claim's general topic`
       ],
       correctAnswer: 1,
-      explanation: `These questions ask which fact most directly backs up the specific claim in the question, so you match the choice to that claim and nothing else. Read the claim first, then look for the choice that speaks to the same subject and settles it. Length and vocabulary have nothing to do with whether a fact supports a claim.`
+      explanation: `These questions ask which fact most directly backs up the specific claim in the question, so you match the choice to that claim and nothing else. Read the claim first, then look for the choice that speaks to the same subject and settles it. Word overlap with the question and fancy vocabulary have nothing to do with whether a fact supports a claim, and a fact that is merely on the same topic may not support the claim at all.`
     },
     {
       id: 'evid-core-p1-q3',
       type: 'quiz' as const,
       question: `Before you use a graph or table as evidence, what should you do first?`,
       options: [
-        `Read the title, the axis labels, and the units.`,
-        `Find the tallest bar and use it.`,
-        `Assume the graph agrees with the passage.`,
-        `Skip the legend to save time.`
+        `Read the title and labels to see what is measured.`,
+        `Find the tallest bar and use it as your evidence.`,
+        `Assume the graph agrees with what the passage says.`,
+        `Skip the legend and labels to save time on the test.`
       ],
       correctAnswer: 0,
       explanation: `Start with the title, the axis labels, and the units, because those tell you what the numbers actually measure. Once you know what is being counted and in what units, reading the bars or the line is straightforward. Grabbing the tallest bar first is where most graph errors come from, since the tallest bar may not be the one the claim is about.`
@@ -84,10 +84,10 @@ Read the **title**, the **axis labels**, and the **units** before you look at th
       type: 'quiz' as const,
       question: `A biology teacher claims that a new plant food makes tomato plants grow taller. Which of these is the strongest evidence for that claim?`,
       options: [
-        `A neighbor says her tomatoes looked great last summer.`,
-        `The plant food package features a photograph of large tomatoes.`,
-        `A study in which treated plants averaged 30 cm taller than untreated plants grown side by side.`,
-        `The plant food is sold in more stores than any competing brand.`
+        `A neighbor says her tomatoes grew taller last summer after using the plant food.`,
+        `The package shows a photograph of tomatoes twice the size of ordinary ones.`,
+        `In a study, treated plants averaged 30 cm taller than untreated plants beside them.`,
+        `The plant food is sold in more garden stores than any competing brand.`
       ],
       correctAnswer: 2,
       explanation: `The claim is about height, so the strongest evidence measures height under fair conditions. The study comparing treated and untreated plants grown side by side does that, and the 30 cm difference is a measured result rather than an impression. The neighbor's comment is one person's story with no measurement and no comparison group, which makes it much weaker.`

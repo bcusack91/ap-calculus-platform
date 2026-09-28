@@ -24,10 +24,10 @@ One literary item is included — for that one, find the planted phrase that sta
 
 Which choice best states the main idea of the text?`,
       options: [
-        'The frost alerts caused crop losses to increase on remote farms.',
-        'Danquah shows that the frost-alert system does not reduce crop losses.',
-        'Farmers with intermittent cellular coverage chose to ignore the alerts they received.',
-        'The program\'s average benefit conceals that it helped least where losses were greatest, because its delivery depended on the coverage those farms lacked.'
+        'The frost alerts caused crop losses to increase on the remote farms, where cellular coverage was only intermittent.',
+        'Danquah shows that, once farms are separated by coverage, the alerts do not reduce average crop losses at all.',
+        'Farmers with intermittent coverage chose to ignore the alerts, which is why their losses stayed higher than others\'.',
+        'The average benefit hides that the alerts helped least where losses were worst, since remote farms lacked coverage.'
       ],
       correctAnswer: 3,
       explanation: `The turn is in the final sentence's semicolon: averaged, effective; separated, "effective precisely where the problem was smallest." The concealed-distribution choice carries the concession (losses fell where coverage was reliable), the limit (no change where it wasn't), and the mechanism (delivery depends on coverage). The does-not-reduce choice is the Hedge-Inflator: Danquah confirms the reduction on covered farms; the finding is about distribution, not existence. The losses-increased choice invents an increase — "did not change" is a null, not a harm. The chose-to-ignore choice is the Motive-Inventor: farmers with intermittent coverage often never received the alerts; nothing in the text reports a choice to ignore them.`
@@ -41,10 +41,10 @@ Which choice best states the main idea of the text?`,
 
 Which choice does the text most strongly suggest about Odile?`,
       options: [
-        'She refused to teach her granddaughter because she doubted the girl\'s talent.',
-        'She arranges for the girl\'s interest to reveal itself before she consents to teach her.',
-        'She has forgotten exactly where she left the violin case.',
-        'She is angry that the case was moved without her permission.'
+        'She refused to teach her granddaughter because she doubted that the girl had real talent.',
+        'She quietly arranges a test of the girl\'s interest before agreeing to teach her the violin.',
+        'She has forgotten exactly where she left the violin case and notices the change only by chance.',
+        'She is angry that the case was moved without her permission and means to scold the girl.'
       ],
       correctAnswer: 1,
       explanation: `Every staged detail points one way: the unlatched case, the deliberately absent morning ("where she could not hear"), the withheld question at dinner, and the immediate offer to teach ("bring it to the porch") the moment the quarter-inch turn proves the girl touched it. That's a test of the girl's initiative, arranged so it couldn't be performed for Odile's benefit. The doubted-talent choice invents a motive for the refusals that no detail supports — the passage never evaluates the girl's ability. The forgotten-case choice is refuted by the very precision the plot requires: only someone who knew the case's position to the quarter-inch could read the evidence. The angry choice is the Motive-Inventor killed by the outcome — her response to the moved case is an invitation, not a reproach.`
@@ -56,10 +56,10 @@ Which choice does the text most strongly suggest about Odile?`,
 
 Which choice best states the main idea of the text?`,
       options: [
-        'Conservators should decline to acquire artworks that specify obsolete display hardware.',
-        'Digital artworks cannot be exhibited once their specified hardware is no longer manufactured.',
-        'Ito argues that display specifications function as part of the artwork, posing a recurring interpretive problem rather than recording fixed technical facts.',
-        'Musical scores are more difficult to interpret than digital artworks.'
+        'Ito argues that conservators should decline to acquire digital artworks whose specifications call for obsolete hardware.',
+        'Ito argues that digital artworks cannot be exhibited faithfully once their specified hardware is no longer manufactured.',
+        'Ito argues that a hardware specification is part of the artwork, posing an interpretive challenge that recurs over time.',
+        'Ito argues that musical scores are harder to interpret than digital artworks, because performers lack period instruments.'
       ],
       correctAnswer: 2,
       explanation: `The thesis is the reclassification — "better understood as part of the work" — plus its consequence, "a problem the museum must solve anew in every future decade," and the part-of-the-artwork choice carries both. The cannot-be-exhibited choice is the Hedge-Inflator: the score analogy points the opposite way — performers without period instruments still perform, so the problem is recurring interpretation, not impossibility. The decline-to-acquire choice is the Prescriber, drawing acquisition advice from a passage that describes how to *understand* documents, and pointing against its spirit besides. The musical-scores choice borrows the analogy and turns it into a difficulty ranking the text never draws; the score appears to illuminate the specification's function, not to be compared for hardness.`
@@ -71,13 +71,13 @@ Which choice best states the main idea of the text?`,
 
 Which choice best states the main idea of the text?`,
       options: [
-        'The rise in registered diagnoses likely reflects fuller counting of mild cases rather than a true increase in the disease.',
-        'Mortality from the disease rose sharply after 2019.',
-        'The online self-report option caused an epidemic of the disease.',
-        'Clinic-based reporting counts mild cases more completely than self-reporting does.'
+        'The rise in diagnoses likely reflects more complete counting of mild cases, not a real increase in the disease.',
+        'Mortality from the disease rose sharply after 2019, confirming that the jump in registered diagnoses was real.',
+        'The online self-report option caused a genuine epidemic, as the forty percent rise in diagnoses makes clear.',
+        'Clinic-based reporting likely captured mild cases more completely than the new online self-report option does.'
       ],
       correctAnswer: 0,
-      explanation: `The final sentence is the thesis with its hedge: "may at last be measuring the same disease more fully, rather than measuring more disease," supported by two details — flat mortality under unchanged methods, and new cases clustering exactly where the old method "had always captured worst." The fuller-counting choice preserves the hedge ("likely") and the mechanism. The mortality-rose choice contradicts "stayed flat." The caused-an-epidemic choice adopts the commentators' reading, the appearance the passage was built to dismantle — and misplaces the cause besides, since a reporting channel cannot cause disease. The clinic-based-reporting choice reverses a detail: the mild range is where clinic-based reporting was *poorest*, which is why the self-reports concentrate there.`
+      explanation: `The final sentence is the thesis with its hedge: "may at last be measuring the same disease more fully, rather than measuring more disease," supported by two details — flat mortality under unchanged methods, and new cases clustering exactly where the old method "had always captured worst." The more-complete-counting choice preserves the hedge ("likely") and the mechanism. The mortality-rose choice contradicts "stayed flat." The caused-an-epidemic choice adopts the commentators' reading, the appearance the passage was built to dismantle — and misplaces the cause besides, since a reporting channel cannot cause disease. The clinic-based-reporting choice reverses a detail: the mild range is where clinic-based reporting was *poorest*, which is why the self-reports concentrate there.`
     }
   ]
 }

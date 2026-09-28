@@ -42,13 +42,13 @@ If the passage disagrees with what you already know about a topic, the passage w
 
 Which choice best states the main idea of the text?`,
       options: [
-        `Antarctica is colder than any other place on Earth.`,
-        `Snowfall is difficult for scientists to measure accurately.`,
-        `Deserts are defined by low precipitation, which is why Antarctica qualifies as the largest one.`,
-        `Sand covers most of the world's desert regions.`
+        `Antarctica is colder than any other place on Earth, which is why it is defined as a desert.`,
+        `Precipitation in Antarctica is difficult for scientists to measure accurately over long periods.`,
+        `Deserts are defined by low precipitation, which is why Antarctica counts as the largest one.`,
+        `Sand covers most of the world's largest deserts, so Antarctica is an unusual kind of desert.`
       ],
       correctAnswer: 2,
-      explanation: `Both sentences work together to correct an assumption: the passage says deserts are defined by precipitation rather than heat, which is what makes Antarctica a desert. The choice stating that definition and naming Antarctica as the largest desert covers the whole passage. The choice about sand describes the picture the passage says is mistaken, so it is backwards.`
+      explanation: `Both sentences work together to correct an assumption: the passage says deserts are defined by precipitation rather than heat, which is what makes Antarctica a desert. The choice stating that definition and naming Antarctica as the largest desert covers the whole passage. The choice about sand describes the picture the passage says is mistaken, so it is backwards. The colder-than-anywhere choice gets the reason wrong: the passage says temperature is not what makes a desert.`
     },
     {
       id: 'read-core-p2-q2',
@@ -58,9 +58,9 @@ Which choice best states the main idea of the text?`,
 According to the text, why might octopuses prefer crawling to swimming?`,
       options: [
         `Swimming stops the heart that supplies the rest of the body.`,
-        `Crawling allows them to find food more quickly.`,
-        `Their gills work only when they are still.`,
-        `They have poor eyesight in open water.`
+        `Crawling allows them to find food more quickly than swimming does.`,
+        `Their third heart stops pumping blood to the gills when they crawl.`,
+        `They have poor eyesight in open water far from the seafloor.`
       ],
       correctAnswer: 0,
       explanation: `The last sentence gives the reason directly: the third heart, the one that pumps blood to the rest of the body, stops beating when the octopus swims, and the passage links that to the preference for crawling. Finding food faster sounds plausible, but the passage never mentions food at all, so it cannot be the answer.`
@@ -70,10 +70,10 @@ According to the text, why might octopuses prefer crawling to swimming?`,
       type: 'quiz' as const,
       question: `A researcher claims that letting middle schools start an hour later improves student attendance. Which finding, if true, would most directly support that claim?`,
       options: [
-        `Later start times are popular with students and parents alike.`,
-        `Teenagers naturally fall asleep later than younger children do.`,
-        `Later-starting schools spend more on transportation.`,
-        `Schools that moved to a later start recorded 25 percent fewer absences the following year.`
+        `Later start times are popular with students and parents alike, according to school surveys.`,
+        `Teenagers naturally fall asleep about two hours later than younger children do.`,
+        `Later-starting schools spend 10 percent more on buses and other transportation.`,
+        `Schools that moved to a later start recorded 25 percent fewer absences the next year.`
       ],
       correctAnswer: 3,
       explanation: `The claim is about attendance, so the supporting evidence has to count students showing up. Schools recording 25 percent fewer absences after moving to a later start measures exactly that. The fact that later start times are popular measures how people feel about the change, which is a different thing from whether attendance actually improved.`
@@ -83,10 +83,10 @@ According to the text, why might octopuses prefer crawling to swimming?`,
       type: 'quiz' as const,
       question: `You are on a main idea question. One answer choice says the passage "proves that all bridges built before 1950 are unsafe," but the passage only described problems found in three specific bridges. Why should you rule that choice out?`,
       options: [
-        `Because main idea answers are never about safety.`,
-        `Because the choice goes further than the passage does — three bridges cannot support a claim about all of them.`,
-        `Because correct answers never contain the word "all."`,
-        `Because the passage mentioned a year, which makes it a detail question.`
+        `Because main idea answers are never about safety, so any choice about safety is wrong.`,
+        `Because three bridges are far too few to support a claim about every bridge built before 1950.`,
+        `Because correct answers never contain the word "all," whatever a passage says about bridges.`,
+        `Because the passage mentioned three bridges and a year, which makes this a detail question.`
       ],
       correctAnswer: 1,
       explanation: `The passage described three bridges, and the choice claims something about every bridge built before 1950, so the choice reaches well beyond what the text supports. Answers that stretch past the evidence are a common wrong-answer shape, and words like "all," "never," and "proves" are worth a second look for that reason. Those words are not automatically wrong, though — what matters is whether the passage actually backs them up.`

@@ -48,9 +48,9 @@ The same idea applies to a definition: if a sentence explains what a term means,
       type: 'quiz' as const,
       question: 'Which set contains contrast transitions?',
       options: [
-        'first, next, then, finally',
-        'therefore, so, as a result',
-        'for example, for instance, such as',
+        'first, next, then, after that, finally',
+        'therefore, so, as a result, consequently',
+        'for example, for instance, to illustrate',
         'however, on the other hand, nevertheless'
       ],
       correctAnswer: 3,
@@ -63,7 +63,7 @@ The same idea applies to a definition: if a sentence explains what a term means,
       options: [
         'Therefore,',
         'First,',
-        'However,',
+        'Still,',
         'For example,'
       ],
       correctAnswer: 1,
@@ -76,24 +76,24 @@ The same idea applies to a definition: if a sentence explains what a term means,
       options: [
         'Meanwhile,',
         'For instance,',
-        'In conclusion,',
+        'In short,',
         'On the other hand,'
       ],
       correctAnswer: 2,
-      explanation: '"In conclusion" is correct. Conclusion transitions tell the reader that the writer is wrapping up and stating the final point, which is exactly what a summing-up sentence does. Other phrases in this family include "ultimately," "in short," and "all things considered." The other choices announce something happening at the same time, a specific example, or a turn to the opposite side, so none of them signals a wrap-up.'
+      explanation: '"In short" is correct. Conclusion transitions tell the reader that the writer is wrapping up and stating the final point, which is exactly what a summing-up sentence does. Other phrases in this family include "in conclusion," "ultimately," and "all things considered." The other choices announce something happening at the same time, a specific example, or a turn to the opposite side, so none of them signals a wrap-up.'
     },
     {
       id: 'trans-core-p2-q4',
       type: 'quiz' as const,
-      question: 'A paragraph contains this sentence: "She then tested six samples from the canyon floor." Another sentence reads: "Dr. Reyes studied desert soil for twenty years."\n\nWhere should the sentence about Dr. Reyes go?',
+      question: 'A paragraph contains these two sentences: "Dr. Reyes studied desert soil for twenty years." and "She then tested six samples from the canyon floor."\n\nWhy must the sentence about Dr. Reyes come first?',
       options: [
-        'Before the sentence that starts with "She," because "She" points back to that name',
-        'After the sentence that starts with "She," to explain who was tested',
-        'At the very end of the essay',
-        'It should be deleted'
+        'Because "She" must point back to a person the reader already knows',
+        'Because sentences about a person\'s career always open a paragraph',
+        'Because "then" shows the testing happened after twenty years of study',
+        'Because the longer sentence should come first to set up the shorter one'
       ],
       correctAnswer: 0,
-      explanation: 'The sentence naming Dr. Reyes goes first. The word "She" is a pointing-back word, and a reader can only understand it if the person has already been named. Putting the name first gives "She" something to point to. The sentence is not repeating information or wandering off topic, so there is no reason to move it to the end or cut it.'
+      explanation: 'The sentence naming Dr. Reyes goes first. The word "She" is a pointing-back word, and a reader can only understand it if the person has already been named. Putting the name first gives "She" something to point to. A career sentence does not have to open every paragraph, "then" links the testing to an earlier step rather than to the twenty years, and sentence length never decides order.'
     }
   ]
 }

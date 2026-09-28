@@ -31,10 +31,10 @@ Fiction excerpts ask what the text "most strongly suggests." The near-miss choic
 
 Which choice best states the main idea of the text?`,
       options: [
-        'The LED conversion failed to reduce the energy used by each streetlight.',
-        'The conversion cut energy per fixture, but the savings financed new lighting that left the city\'s total brightness unchanged.',
-        'Cities should not convert their streetlights to LEDs.',
-        'Satellite images are an unreliable way to measure a city\'s brightness.'
+        'The LED conversion failed to cut energy use per fixture, so the city\'s total nighttime brightness was unchanged.',
+        'The conversion halved energy per fixture, but the savings paid for new lighting that kept total brightness unchanged.',
+        'Because cheaper LED light led to more lighting overall, cities should not convert their streetlights to LEDs at all.',
+        'Satellite images proved unreliable for measuring the city\'s brightness, so the conversion\'s real effect remains unknown.'
       ],
       correctAnswer: 1,
       explanation: `Two-part main idea: the passage grants the funded outcome ("cut lighting energy use per fixture by half") and then supplies the limit and its mechanism ("total nighttime brightness unchanged" because savings bought new lighting). Only the choice pairing the per-fixture cut with the savings-financed new lighting carries both halves. The failure choice inflates the limit into a failure the text denies — the per-fixture cut is confirmed in the first sentence. The should-not-convert choice converts a described rebound effect into a recommendation the authors never make; noting that cheaper light meant more light is not advice to keep light expensive. The satellite-unreliability choice attacks the instrument, but the passage treats the satellite record as the reliable evidence that revealed the result.`
@@ -46,13 +46,13 @@ Which choice best states the main idea of the text?`,
 
 Which choice best states the main idea of the text?`,
       options: [
-        'Kimura demonstrates that the gentian\'s flowering date has not changed since 1900.',
-        'Nineteenth-century collectors deliberately avoided early-flowering plants.',
-        'The herbarium record proves that warming has advanced flowering by two months.',
-        'Kimura argues that the apparent shift in flowering dates could reflect changes in when collectors arrived rather than only changes in the plants.'
+        'Kimura demonstrates that the gentian\'s flowering date has not changed since 1900, since collectors simply arrived later then.',
+        'Kimura suggests that nineteenth-century collectors deliberately skipped early-flowering plants in favor of later blooms.',
+        'The herbarium record, despite Kimura\'s concerns, proves that warming has advanced the gentian\'s flowering by two months.',
+        'Kimura argues that the apparent shift may partly reflect when collectors arrived, not only when the plants bloomed.'
       ],
       correctAnswer: 3,
-      explanation: `Hedge-preserver: the passage's last sentence keeps three possibilities open ("a change in the flowers, a change in the collectors, or some mixture"), and only the collector-arrival choice preserves that hedge ("could reflect... rather than only"). The unchanged-since-1900 choice converts the hedge into the opposite absolute — Kimura shows the record is ambiguous, not that flowering is unchanged; that's the same overreach as the proves-warming choice, just pointed the other way. The proves-warming choice states "the obvious reading" that the complication was introduced to unsettle. The deliberately-avoided choice invents intent: the collectors' late arrivals came from rail and mule travel, a logistical fact, not a sampling preference.`
+      explanation: `Hedge-preserver: the passage's last sentence keeps three possibilities open ("a change in the flowers, a change in the collectors, or some mixture"), and only the collector-arrival choice preserves that hedge ("may partly reflect... not only"). The unchanged-since-1900 choice converts the hedge into the opposite absolute — Kimura shows the record is ambiguous, not that flowering is unchanged; that's the same overreach as the proves-warming choice, just pointed the other way. The proves-warming choice states "the obvious reading" that the complication was introduced to unsettle. The deliberately-skipped choice invents intent: the collectors' late arrivals came from rail and mule travel, a logistical fact, not a sampling preference.`
     },
     {
       id: 'advci1-q3',
@@ -62,9 +62,9 @@ Which choice best states the main idea of the text?`,
 Which choice best states the main idea of the text?`,
       options: [
         'The shore-power rule improved air quality at the dock while the offshore queue kept the neighborhoods\' exposure largely unchanged.',
-        'The shore-power rule had no effect on exhaust particulates anywhere in the port.',
-        'Ships anchored offshore in order to evade the shore-power regulation.',
-        'The port should extend the shore-power requirement to ships waiting at anchor.'
+        'The shore-power rule had no measurable effect on exhaust particulates, either at the wharf or in the neighborhoods inland.',
+        'Ships began anchoring offshore to evade the rule, and their exhaust then drifted over the nearby inland neighborhoods.',
+        'The shore-power rule should be extended to waiting vessels, since the offshore queue burns the same diesel fuel.'
       ],
       correctAnswer: 0,
       explanation: `Relocated-problem passage: the improvement is real but local ("monitors on the wharf recorded the expected drop"), while the exposure that matters persists because the emitting activity sits outside the rule's reach — and the closing sentence's dry phrasing ("where the compliance measurement was taken") signals that the gap between measured success and experienced air is the point. The no-effect choice inflates the limit into a universal null that the wharf monitors refute. The evade-the-regulation choice invents evasion: the queue lengthened because "traffic grew," and ships at anchor are waiting for berths, not dodging the rule. The extend-the-requirement choice is the recommendation trap — the passage diagnoses a boundary problem without prescribing the fix.`
