@@ -45,15 +45,30 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
-  const distractors = new Set<number>()
-  while (distractors.size < 3) {
-    const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
+// Up to two misconception values first, then integer-offset distractors placed so the key's rank
+// among the four values is as uniform as the misconceptions allow (neither size nor digit count
+// points at the key).
+function makeOptions(correct: number, spread: number = 2, min?: number, misc: number[] = []): { options: string[]; correctIndex: number } {
+  const w = Math.max(3, spread * 3)
+  const ok = (v: number) => v !== correct && (min === undefined || v >= min)
+  const fixed = [...new Set(misc.filter(ok))].slice(0, 2)
+  const below: number[] = []
+  const above: number[] = []
+  for (let d = 1; d <= w; d++) {
+    if (ok(correct - d) && !fixed.includes(correct - d)) below.push(correct - d)
+    if (!fixed.includes(correct + d)) above.push(correct + d)
   }
-  const all = [correct, ...distractors]
-  const shuffled = shuffle(all)
-  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+  const need = 3 - fixed.length
+  const ks: number[] = []
+  for (let k = 0; k <= need; k++) if (k <= below.length && need - k <= above.length) ks.push(k)
+  const k = ks[randInt(0, ks.length - 1)]
+  const all = shuffle([correct, ...fixed, ...shuffle(below).slice(0, k), ...shuffle(above).slice(0, need - k)])
+  return { options: all.map(v => String(Math.round(v * 1e6) / 1e6)), correctIndex: all.indexOf(correct) }
+}
+
+// "(x - h)^2" / "(x + h)^2" / "x^2" with no "- -3" or "- 0" artifacts.
+function sq(v: string, c: number): string {
+  return c === 0 ? `${v}^2` : `(${v} ${c > 0 ? '-' : '+'} ${Math.abs(c)})^2`
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
@@ -99,10 +114,10 @@ const questionPool: QuestionTemplate[] = [
       const r2 = r * r
       const hStr = h === 0 ? 'x' : h > 0 ? `(x - ${h})` : `(x + ${-h})`
       const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
-      const { options, correctIndex } = makeOptions(r, 2, 1)
+      const { options, correctIndex } = makeOptions(r, 2, 1, [r2])
       return {
         id: this.id, category: this.category,
-        question: `Circle equation: $${hStr}^2 + ${kStr}^2 = ${r2}$. What is the radius?`,
+        question: `A circle in the $xy$-plane has equation $${hStr}^2 + ${kStr}^2 = ${r2}$. What is the radius of the circle?`,
         options, correctIndex,
         explanation: `$r^2 = ${r2}$ → $r = \\sqrt{${r2}} = ${r}$.`
       }
@@ -158,23 +173,25 @@ const questionPool: QuestionTemplate[] = [
     category: 'Circle Equations',
     difficulty: 'hard',
     generate() {
-      // Completing the square: x² + y² + Dx + Ey + F = 0
-      const h = randInt(1, 4)
-      const k = randInt(1, 4)
+      // Completing the square: x² + y² + Dx + Ey + F = 0 (signed center, so the key's
+      // shape varies like the distractors' does)
+      const nz = () => { let v = 0; while (v === 0) v = randInt(-4, 4); return v }
+      const h = nz()
+      let k = nz()
+      while (k === h) k = nz()
       const r = randInt(2, 5)
       const F = h * h + k * k - r * r
+      const lin = (c: number, v: string) => ` ${c > 0 ? '+' : '-'} ${Math.abs(c)}${v}`
       const fTerm = F === 0 ? '' : ` ${F > 0 ? '+' : '-'} ${Math.abs(F)}`
-      const correct = `$(${h}, ${k})$, $r = ${r}$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$(${-h}, ${-k})$, $r = ${r}$`,
-        `$(${h}, ${k})$, $r = ${r * r}$`,
-        `$(${-2 * h}, ${-2 * k})$, $r = ${r}$`
-      ])
+      const opt = (a: number, b: number, rad: number) => `$(${a}, ${b})$, $r = ${rad}$`
+      const { options, correctIndex } = makeStringOptions(opt(h, k, r), shuffle([
+        opt(-h, -k, r), opt(h, k, r * r), opt(-2 * h, -2 * k, r), opt(-h, -k, r * r)
+      ]))
       return {
         id: this.id, category: this.category,
-        question: `$x^2 + y^2 - ${2 * h}x - ${2 * k}y${fTerm} = 0$. Find center and radius.`,
+        question: `A circle in the $xy$-plane has equation $x^2 + y^2${lin(-2 * h, 'x')}${lin(-2 * k, 'y')}${fTerm} = 0$. What are its center and radius?`,
         options, correctIndex,
-        explanation: `Complete the square: $(x - ${h})^2 + (y - ${k})^2 = ${r * r}$. Center $(${h}, ${k})$, $r = ${r}$.`
+        explanation: `Complete the square: $${sq('x', h)} + ${sq('y', k)} = ${r * r}$. Center $(${h}, ${k})$, $r = ${r}$.`
       }
     }
   },
@@ -183,22 +200,26 @@ const questionPool: QuestionTemplate[] = [
     category: 'Circle Equations',
     difficulty: 'medium',
     generate() {
+      // Which point is on the circle? (was a yes/no item whose key was always "Yes")
       const h = randInt(-3, 3)
       const k = randInt(-3, 3)
-      const r = randInt(3, 7)
-      const px = h + r
-      const py = k
-      const hStr = h === 0 ? 'x' : h > 0 ? `(x - ${h})` : `(x + ${-h})`
-      const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
-      const correct = 'Yes'
-      const { options, correctIndex } = makeStringOptions(correct, [
-        'No', 'Cannot determine', 'Only if $r > 5$'
-      ])
+      const trip = [[3, 4, 5], [6, 8, 10], [5, 12, 13]][randInt(0, 2)]
+      const r = trip[2]
+      const sx = Math.random() < 0.5 ? 1 : -1
+      const sy = Math.random() < 0.5 ? 1 : -1
+      const [dx, dy] = Math.random() < 0.5 ? [trip[0], trip[1]] : [trip[1], trip[0]]
+      const on = [h + sx * dx, k + sy * dy]
+      const pt = (x: number, y: number) => `$(${x}, ${y})$`
+      const offs = [
+        [h + sx * dx, k + sy * (dy + 1)], [h + sx * (dx + 1), k + sy * dy], [h + sx * dx, k - sy * (dy - 1)],
+        [h + r, k + 1], [h + sx * dy, k + sy * (dx - 1)], [h + sx * (dx - 1), k + sy * dy]
+      ].filter(([x, y]) => (x - h) ** 2 + (y - k) ** 2 !== r * r)
+      const { options, correctIndex } = makeStringOptions(pt(on[0], on[1]), shuffle(offs.map(([x, y]) => pt(x, y))))
       return {
         id: this.id, category: this.category,
-        question: `Is $(${px}, ${py})$ on the circle $${hStr}^2 + ${kStr}^2 = ${r * r}$?`,
+        question: `A circle in the $xy$-plane has equation $${sq('x', h)} + ${sq('y', k)} = ${r * r}$. Which of the following points lies on the circle?`,
         options, correctIndex,
-        explanation: `$(${px} ${h < 0 ? '+' : '-'} ${Math.abs(h)})^2 + (${py} ${k < 0 ? '+' : '-'} ${Math.abs(k)})^2 = ${r}^2 + 0 = ${r * r}$ ✓. Yes, it's on the circle.`
+        explanation: `A point is on the circle when it makes the equation true. For $${pt(on[0], on[1]).replace(/\$/g, '')}$: $(${sx * dx})^2 + (${sy * dy})^2 = ${dx * dx} + ${dy * dy} = ${r * r}$. Each other point gives a different value.`
       }
     }
   },
@@ -209,10 +230,10 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const r = randInt(3, 8)
       const d = 2 * r
-      const { options, correctIndex } = makeOptions(d, 3, 1)
+      const { options, correctIndex } = makeOptions(d, 3, 1, [r])
       return {
         id: this.id, category: this.category,
-        question: `A circle has equation $x^2 + y^2 = ${r * r}$. What is the diameter?`,
+        question: `A circle in the $xy$-plane has equation $x^2 + y^2 = ${r * r}$. What is the diameter of the circle?`,
         options, correctIndex,
         explanation: `$r = ${r}$, so diameter $= 2r = ${d}$.`
       }
@@ -341,7 +362,7 @@ const questionPool: QuestionTemplate[] = [
       const deg = degs[randInt(0, degs.length - 1)]
       const rad = deg === 30 ? '\\frac{\\pi}{6}' : deg === 45 ? '\\frac{\\pi}{4}' : deg === 60 ? '\\frac{\\pi}{3}' : deg === 90 ? '\\frac{\\pi}{2}' : deg === 120 ? '\\frac{2\\pi}{3}' : deg === 180 ? '\\pi' : deg === 270 ? '\\frac{3\\pi}{2}' : '2\\pi'
       const correct = `$${rad}$`
-      const others = degs.filter(d => d !== deg).slice(0, 3).map(d => {
+      const others = shuffle(degs.filter(d => d !== deg)).slice(0, 3).map(d => {
         const r = d === 30 ? '\\frac{\\pi}{6}' : d === 45 ? '\\frac{\\pi}{4}' : d === 60 ? '\\frac{\\pi}{3}' : d === 90 ? '\\frac{\\pi}{2}' : d === 120 ? '\\frac{2\\pi}{3}' : d === 180 ? '\\pi' : d === 270 ? '\\frac{3\\pi}{2}' : '2\\pi'
         return `$${r}$`
       })
@@ -453,7 +474,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = '$\\frac{\\text{opposite}}{\\text{adjacent}}$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        '$\\frac{\\text{adjacent}}{\\text{opposite}}$',
+        '$\\frac{\\text{adjacent}}{\\text{hypotenuse}}$',
         '$\\frac{\\text{opposite}}{\\text{hypotenuse}}$',
         '$\\frac{\\text{hypotenuse}}{\\text{adjacent}}$'
       ])
@@ -470,20 +491,21 @@ const questionPool: QuestionTemplate[] = [
     category: 'Right Triangle Trig',
     difficulty: 'medium',
     generate() {
-      // 3-4-5 or multiples — ratios reduce to the base triple
-      const k = randInt(1, 4)
-      const a = 3 * k
-      const b = 4 * k
-      const c = 5 * k
-      const correct = '$\\frac{3}{5}$'
-      const { options, correctIndex } = makeStringOptions(correct, [
-        '$\\frac{4}{5}$', '$\\frac{3}{4}$', '$\\frac{5}{3}$'
-      ])
+      // Pythagorean-triple sides (scaled), random ratio: the key was always 3/5 before
+      const trips = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]
+      const t = trips[randInt(0, trips.length - 1)]
+      const k = randInt(1, 3)
+      const [opp, adj] = Math.random() < 0.5 ? [t[0], t[1]] : [t[1], t[0]]
+      const hyp = t[2]
+      const fn = ['sin', 'cos', 'tan'][randInt(0, 2)]
+      const f = (n: number, d: number) => `$\\frac{${n}}{${d}}$`
+      const vals: Record<string, string> = { sin: f(opp, hyp), cos: f(adj, hyp), tan: f(opp, adj) }
+      const { options, correctIndex } = makeStringOptions(vals[fn], shuffle([vals.sin, vals.cos, vals.tan, f(adj, opp), f(hyp, opp)].filter(v => v !== vals[fn])))
       return {
         id: this.id, category: this.category,
-        question: `In a right triangle with legs $${a}$ and $${b}$, hypotenuse $${c}$, find $\\sin(\\theta)$ where $\\theta$ is opposite the side of length $${a}$.`,
+        question: `A right triangle has legs of length $${opp * k}$ and $${adj * k}$ and a hypotenuse of length $${hyp * k}$. Angle $\\theta$ is opposite the side of length $${opp * k}$. What is $\\${fn}(\\theta)$?`,
         options, correctIndex,
-        explanation: `$\\sin(\\theta) = \\frac{\\text{opp}}{\\text{hyp}} = \\frac{${a}}{${c}} = \\frac{3}{5}$.`
+        explanation: `Opposite $= ${opp * k}$, adjacent $= ${adj * k}$, hypotenuse $= ${hyp * k}$. So $\\${fn}(\\theta) = $ ${vals[fn]} (in lowest terms).`
       }
     }
   },
@@ -495,7 +517,7 @@ const questionPool: QuestionTemplate[] = [
       // Special triangle: 30-60-90
       const correct = '$\\frac{1}{2}$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        '$\\frac{\\sqrt{3}}{2}$', '$\\frac{\\sqrt{2}}{2}$', '$1$'
+        '$\\frac{\\sqrt{3}}{2}$', '$\\frac{\\sqrt{2}}{2}$', '$\\frac{\\sqrt{3}}{3}$'
       ])
       return {
         id: this.id, category: this.category,
@@ -545,10 +567,10 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       // Find missing side using trig — even hypotenuse keeps the answer an integer
-      const hyp = 2 * randInt(4, 10)
+      const hyp = 2 * randInt(5, 12)
       // sin(30) = opp/hyp → opp = hyp/2
       const opp = hyp / 2
-      const { options, correctIndex } = makeOptions(opp, 3, 1)
+      const { options, correctIndex } = makeOptions(opp, 3, 1, [hyp])
       return {
         id: this.id, category: this.category,
         question: `In a right triangle, hypotenuse $= ${hyp}$ and one angle is $30°$. What is the side opposite the $30°$ angle?`,
@@ -653,9 +675,9 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = '$\\sin^2\\theta + \\cos^2\\theta = 1$'
       const { options, correctIndex } = makeStringOptions(correct, [
+        '$\\sin^2\\theta - \\cos^2\\theta = 1$',
         '$\\sin\\theta + \\cos\\theta = 1$',
-        '$\\sin\\theta \\cdot \\cos\\theta = 1$',
-        '$\\tan^2\\theta + 1 = \\sec\\theta$'
+        '$\\sin^2\\theta \\cdot \\cos^2\\theta = 1$'
       ])
       return {
         id: this.id, category: this.category,
@@ -687,15 +709,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Unit Circle & Special Angles',
     difficulty: 'medium',
     generate() {
-      const correct = 'Undefined'
+      const correct = 'It is undefined'
       const { options, correctIndex } = makeStringOptions(correct, [
-        '$0$', '$1$', '$\\infty$'
+        'It equals $0$', 'It equals $1$', 'It equals $-1$'
       ])
       return {
         id: this.id, category: this.category,
-        question: 'What is $\\tan(90°)$?',
+        question: 'Which statement about $\\tan(90°)$ is true?',
         options, correctIndex,
-        explanation: '$\\tan(90°) = \\frac{\\sin(90°)}{\\cos(90°)} = \\frac{1}{0}$, which is undefined.'
+        explanation: '$\\tan(90°) = \\frac{\\sin(90°)}{\\cos(90°)} = \\frac{1}{0}$, and division by zero is undefined.'
       }
     }
   },
@@ -714,7 +736,7 @@ const questionPool: QuestionTemplate[] = [
       const isPerf = Number.isInteger(c)
       const correct = isPerf ? `$${c}$` : `$\\sqrt{${c2}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${a + b}$`, `$${Math.abs(a - b)}$`, `$\\sqrt{${c2 + randInt(1, 5)}}$`
+        `$${a + b}$`, `$${c2}$`, `$\\sqrt{${c2 + randInt(1, 5)}}$`, `$\\sqrt{${a * a + b}}$`
       ])
       return {
         id: this.id, category: this.category,
@@ -749,21 +771,18 @@ const questionPool: QuestionTemplate[] = [
     category: 'Trig Applications & Review',
     difficulty: 'medium',
     generate() {
-      const angles = [
-        { angle: '30°', sin: '\\frac{1}{2}', cos: '\\frac{\\sqrt{3}}{2}' },
-        { angle: '45°', sin: '\\frac{\\sqrt{2}}{2}', cos: '\\frac{\\sqrt{2}}{2}' },
-        { angle: '60°', sin: '\\frac{\\sqrt{3}}{2}', cos: '\\frac{1}{2}' },
-      ]
-      const pick = angles[randInt(0, 2)]
-      const correct = `$${pick.cos}$`
-      const others = angles.filter(a => a.angle !== pick.angle).map(a => `$${a.cos}$`)
-      others.push('$0$')
-      const { options, correctIndex } = makeStringOptions(correct, others.slice(0, 3))
+      // Special right triangle side lengths (was a duplicate of sct-q21's cos 45°)
+      const s = randInt(2, 9)
+      const adjacent = Math.random() < 0.5
+      const correct = adjacent ? `$${s}$` : `$${s}\\sqrt{3}$`
+      const { options, correctIndex } = makeStringOptions(correct, shuffle([
+        `$${s}$`, `$${s}\\sqrt{3}$`, `$${s}\\sqrt{2}$`, `$${2 * s}$`
+      ].filter(o => o !== correct)))
       return {
         id: this.id, category: this.category,
-        question: `What is $\\cos(${pick.angle})$?`,
+        question: `A right triangle has a $60°$ angle and a hypotenuse of length $${2 * s}$. What is the length of the side ${adjacent ? 'adjacent to' : 'opposite'} the $60°$ angle?`,
         options, correctIndex,
-        explanation: `$\\cos(${pick.angle}) = ${pick.cos}$.`
+        explanation: `In a 30-60-90 triangle the sides are in the ratio $1 : \\sqrt{3} : 2$. With hypotenuse $${2 * s}$, the side adjacent to $60°$ (opposite $30°$) is $${s}$ and the side opposite $60°$ is $${s}\\sqrt{3}$.`
       }
     }
   },
@@ -823,9 +842,8 @@ const questionPool: QuestionTemplate[] = [
       if (angle === 45) dist = `$${height}$`
       else if (angle === 30) dist = `$${height}\\sqrt{3}$`
       else dist = `$\\frac{${height}\\sqrt{3}}{3}$`
-      const { options, correctIndex } = makeStringOptions(dist, [
-        `$${height * 2}$`, `$${Math.round(height / 2)}$`, `$${height + 10}$`
-      ])
+      const pool = [`$${height}$`, `$${height}\\sqrt{3}$`, `$\\frac{${height}\\sqrt{3}}{3}$`, `$${height}\\sqrt{2}$`, `$${height * 2}$`]
+      const { options, correctIndex } = makeStringOptions(dist, shuffle(pool.filter(o => o !== dist)))
       return {
         id: this.id, category: this.category,
         question: `A building is $${height}$ ft tall. From a point on the ground, the angle of elevation is $${angle}°$. How far from the building? (exact answer)`,
@@ -839,14 +857,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Trig Applications & Review',
     difficulty: 'easy',
     generate() {
-      const { options, correctIndex } = makeStringOptions('$1$', [
-        '$0$', '$\\sin(2\\theta)$', '$2\\cos(\\theta)$'
-      ])
+      // Apply the identity (sct-q29 already asks to recognize it)
+      const a = [36, 64, 16, 84, 9, 91, 25, 75][randInt(0, 7)]
+      const dec = (n: number) => `$${(n / 100).toFixed(2)}$`
+      const { options, correctIndex } = makeStringOptions(dec(100 - a), [dec(a), dec(100 + a), dec(Math.abs(100 - 2 * a) || 50)])
       return {
         id: this.id, category: this.category,
-        question: 'Simplify $\\sin^2(\\theta) + \\cos^2(\\theta)$.',
+        question: `For an angle $\\theta$, $\\sin^2(\\theta) = ${(a / 100).toFixed(2)}$. What is the value of $\\cos^2(\\theta)$?`,
         options, correctIndex,
-        explanation: 'Pythagorean identity: $\\sin^2(\\theta) + \\cos^2(\\theta) = 1$.'
+        explanation: `Pythagorean identity: $\\cos^2(\\theta) = 1 - \\sin^2(\\theta) = 1 - ${(a / 100).toFixed(2)} = ${((100 - a) / 100).toFixed(2)}$.`
       }
     }
   },
@@ -859,7 +878,7 @@ const questionPool: QuestionTemplate[] = [
       const r2 = r * r
       const correct = `$${r2}\\pi$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${2 * r}\\pi$`, `$${r}\\pi$`, `$${r2 * 2}$`
+        `$${2 * r}\\pi$`, `$${r}\\pi$`, `$${r2 * 2}\\pi$`
       ])
       return {
         id: this.id, category: this.category,

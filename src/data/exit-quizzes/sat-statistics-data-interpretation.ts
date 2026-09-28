@@ -31,6 +31,8 @@ function randNonZero(min: number, max: number): number {
   return n
 }
 
+function gcd(a: number, b: number): number { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b] } return a }
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -40,15 +42,37 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
-  const distractors = new Set<number>()
-  while (distractors.size < 3) {
-    const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+// Up to two misconception values (kept only when they have the key's digit count, so they cannot
+// stand out by length), then integer-offset distractors placed so the key's rank among the four
+// values is as uniform as the misconceptions allow. Distractors never go below `min`.
+function makeOptions(correct: number, spread: number = 2, min: number = -Infinity, misc: number[] = []): { options: string[]; correctIndex: number } {
+  const w = Math.max(3, spread * 3)
+  const ok = (v: number) => v !== correct && v >= min
+  const fixed = [...new Set(misc.filter(v => ok(v) && String(v).length === String(correct).length))].slice(0, 2)
+  const below: number[] = []
+  const above: number[] = []
+  for (let d = 1; d <= w; d++) {
+    if (ok(correct - d) && !fixed.includes(correct - d)) below.push(correct - d)
+    if (!fixed.includes(correct + d)) above.push(correct + d)
   }
-  const all = [correct, ...distractors]
-  const shuffled = shuffle(all)
-  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+  const need = 3 - fixed.length
+  const ks: number[] = []
+  for (let k = 0; k <= need; k++) if (k <= below.length && need - k <= above.length) ks.push(k)
+  const k = ks[randInt(0, ks.length - 1)]
+  const all = shuffle([correct, ...fixed, ...shuffle(below).slice(0, k), ...shuffle(above).slice(0, need - k)])
+  return { options: all.map(v => String(Math.round(v * 1e6) / 1e6)), correctIndex: all.indexOf(correct) }
+}
+
+// round(100·n/d) with halves rounded up, in exact integer arithmetic (23/40 is 58%, not a float
+// 57.49999 that Math.round sends to 57).
+function pctRound(n: number, d: number): number {
+  return Math.floor((200 * n + d) / (2 * d))
+}
+
+// "mx + b" with no 1x, -1x, "+ -b" or "+ 0" artifacts.
+function lin(m: number, b: number): string {
+  const mx = m === 1 ? 'x' : m === -1 ? '-x' : `${m}x`
+  return b === 0 ? mx : b > 0 ? `${mx} + ${b}` : `${mx} - ${-b}`
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
@@ -73,7 +97,7 @@ const questionPool: QuestionTemplate[] = [
       vals.push(last)
       const sum = vals.reduce((a, b) => a + b, 0)
       const mean = sum / n
-      const { options, correctIndex } = makeOptions(mean, 3)
+      const { options, correctIndex } = makeOptions(mean, 3, 1, [sum / (n - 1) === Math.round(sum / (n - 1)) ? sum / (n - 1) : -1, [...vals].sort((x, y) => x - y)[2]])
       return {
         id: this.id, category: this.category,
         question: `Find the mean of: $${vals.join(', ')}$.`,
@@ -90,7 +114,7 @@ const questionPool: QuestionTemplate[] = [
       const n = 7
       const vals = Array.from({ length: n }, () => randInt(10, 50)).sort((a, b) => a - b)
       const median = vals[3]
-      const { options, correctIndex } = makeOptions(median, 4)
+      const { options, correctIndex } = makeOptions(median, 4, 1, [Math.round(vals.reduce((a, b) => a + b, 0) / n), vals[6] - vals[0]])
       return {
         id: this.id, category: this.category,
         question: `Find the median of: $${vals.join(', ')}$.`,
@@ -127,7 +151,7 @@ const questionPool: QuestionTemplate[] = [
       const fillerVals = new Set<number>()
       while (fillerVals.size < 3) { const v = randInt(1, 25); if (v !== mode) fillerVals.add(v) }
       const dataset = shuffle([mode, mode, mode, ...fillerVals])
-      const { options, correctIndex } = makeOptions(mode, 4)
+      const { options, correctIndex } = makeOptions(mode, 4, 1)
       return {
         id: this.id, category: this.category,
         question: `What is the mode of: $${dataset.join(', ')}$?`,
@@ -182,7 +206,7 @@ const questionPool: QuestionTemplate[] = [
       const vals = [randInt(10, 30), randInt(10, 30), randInt(10, 30), randInt(10, 30), randInt(10, 30)]
       const sorted = [...vals].sort((a, b) => a - b)
       const range = sorted[sorted.length - 1] - sorted[0]
-      const { options, correctIndex } = makeOptions(range, 3)
+      const { options, correctIndex } = makeOptions(range, 3, 1, [sorted[sorted.length - 1], sorted[2]])
       return {
         id: this.id, category: this.category,
         question: `Find the range of: $${vals.join(', ')}$.`,
@@ -198,15 +222,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Spread & Variability',
     difficulty: 'easy',
     generate() {
-      const correct = 'The data values are more spread out from the mean'
+      const correct = 'The values are more spread out'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'The mean is larger',
-        'The data has more values',
-        'The median equals the mean'
+        'The mean of the data set is larger',
+        'The data set contains more values',
+        'The values are packed closer together'
       ])
       return {
         id: this.id, category: this.category,
-        question: 'What does a larger standard deviation indicate?',
+        question: 'Two data sets are compared. What does a larger standard deviation for one of them indicate about that data set?',
         options, correctIndex,
         explanation: 'Standard deviation measures spread around the mean. Larger SD = more spread.'
       }
@@ -221,7 +245,7 @@ const questionPool: QuestionTemplate[] = [
       const q1 = randInt(20, 40)
       const q3 = q1 + randInt(10, 30)
       const iqr = q3 - q1
-      const { options, correctIndex } = makeOptions(iqr, 5)
+      const { options, correctIndex } = makeOptions(iqr, 5, 1, [q1 + q3 >= 100 ? -1 : q1 + q3, (q1 + q3) / 2])
       return {
         id: this.id, category: this.category,
         question: `If $Q_1 = ${q1}$ and $Q_3 = ${q3}$, what is the IQR?`,
@@ -281,8 +305,8 @@ const questionPool: QuestionTemplate[] = [
       const correct = 'Median and IQR'
       const { options, correctIndex } = makeStringOptions(correct, [
         'Mean and standard deviation',
-        'Mode and range',
-        'Mean and mode'
+        'Mode and the range',
+        'Mean and variance'
       ])
       return {
         id: this.id, category: this.category,
@@ -304,7 +328,7 @@ const questionPool: QuestionTemplate[] = [
       const c = randInt(10, 25)
       const d = randInt(15, 30)
       const total = a + b + c + d
-      const { options, correctIndex } = makeOptions(total, 10)
+      const { options, correctIndex } = makeOptions(total, 10, 1, [a + b, a + c])
       return {
         id: this.id, category: this.category,
         question: `What is the total number of people surveyed in this two-way table?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Male | ${a} | ${c} |\n| Female | ${b} | ${d} |`,
@@ -323,13 +347,13 @@ const questionPool: QuestionTemplate[] = [
       const _c = randInt(10, 30)
       const _d = randInt(15, 35)
       const rowTotal = a + b
-      const pct = Math.round((a / rowTotal) * 100)
-      const { options, correctIndex } = makeOptions(pct, 5)
+      const pct = pctRound(a, rowTotal)
+      const { options, correctIndex } = makeOptions(pct, 5, 1, [pctRound(b, rowTotal), pctRound(a, b)])
       return {
         id: this.id, category: this.category,
         question: `Of $${rowTotal}$ males, $${a}$ said Yes and $${b}$ said No. What percent of males said Yes? (Rounded to the nearest percent)`,
         options, correctIndex,
-        explanation: `$\\frac{${a}}{${rowTotal}} \\approx ${pct}\\%$.`
+        explanation: `$\\frac{${a}}{${rowTotal}} \\times 100 \\approx ${pct}\\%$.`
       }
     }
   },
@@ -364,8 +388,8 @@ const questionPool: QuestionTemplate[] = [
       const jNo = randInt(30, 50)
       const totalYes = sYes + jYes
       const total = sYes + sNo + jYes + jNo
-      const pct = Math.round((totalYes / total) * 100)
-      const { options, correctIndex } = makeOptions(pct, 5)
+      const pct = pctRound(totalYes, total)
+      const { options, correctIndex } = makeOptions(pct, 5, 1, [pctRound(sYes, sYes + sNo), pctRound(jYes, jYes + jNo)])
       return {
         id: this.id, category: this.category,
         question: `Seniors: $${sYes}$ yes, $${sNo}$ no. Juniors: $${jYes}$ yes, $${jNo}$ no. What percent of all students said yes? (Rounded to the nearest percent)`,
@@ -404,12 +428,12 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(10, 50)
       const x = randInt(5, 15)
       const y = m * x + b
-      const { options, correctIndex } = makeOptions(y, 10)
+      const { options, correctIndex } = makeOptions(y, 10, 1, [m + b, m * (x + b)])
       return {
         id: this.id, category: this.category,
-        question: `A line of best fit is $y = ${m}x + ${b}$. Predict $y$ when $x = ${x}$.`,
+        question: `A line of best fit is $y = ${lin(m, b)}$. What is the predicted value of $y$ when $x = ${x}$?`,
         options, correctIndex,
-        explanation: `$y = ${m}(${x}) + ${b} = ${m * x} + ${b} = ${y}$.`
+        explanation: `$y = ${m === 1 ? '' : m}(${x}) + ${b} = ${m * x} + ${b} = ${y}$.`
       }
     }
   },
@@ -420,7 +444,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = 'Strong negative linear association'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Strong positive linear association',
+        'Weak positive association',
         'No association',
         'Non-linear association'
       ])
@@ -447,9 +471,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `If the line of best fit is $y = ${m}x + ${b}$, the correlation is:`,
+        question: `If the line of best fit for a scatterplot is $y = ${lin(m, b)}$, the association between $x$ and $y$ is:`,
         options, correctIndex,
-        explanation: `Slope = $${m}$ which is ${m > 0 ? 'positive' : 'negative'}, so correlation is ${correct.toLowerCase()}.`
+        explanation: `The slope, $${m}$, is ${m > 0 ? 'positive' : 'negative'}, so the association is ${correct.toLowerCase()}.`
       }
     }
   },
@@ -459,11 +483,11 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const m = randInt(2, 6)
-      const correct = `For each increase of $1$ in $x$, $y$ increases by $${m}$`
+      const correct = `$y$ increases by $${m}$ for each $1$-unit increase in $x$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$y$ starts at $${m}$`,
-        `$x$ and $y$ are always $${m}$ apart`,
-        `$y$ is always $${m}$ times $x$`
+        `$x$ increases by $${m}$ for each $1$-unit increase in $y$`,
+        `$y$ equals $${m}$ when $x$ equals $0$`,
+        `$y$ is always exactly $${m}$ times as large as $x$`
       ])
       return {
         id: this.id, category: this.category,
@@ -505,13 +529,13 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const total = randInt(20, 50)
       const favorable = randInt(5, total - 5)
-      const pct = Math.round((favorable / total) * 100)
-      const { options, correctIndex } = makeOptions(pct, 5)
+      const pct = pctRound(favorable, total)
+      const { options, correctIndex } = makeOptions(pct, 5, 1, [pctRound(total - favorable, total), pctRound(favorable, total - favorable)])
       return {
         id: this.id, category: this.category,
-        question: `A bag has $${total}$ marbles, $${favorable}$ are red. Probability of drawing red? (as %, rounded)`,
+        question: `A bag has $${total}$ marbles, and $${favorable}$ of them are red. If one marble is drawn at random, what is the probability that it is red, as a percent rounded to the nearest whole percent?`,
         options, correctIndex,
-        explanation: `$P = \\frac{${favorable}}{${total}} \\approx ${pct}\\%$.`
+        explanation: `The probability is $\\frac{${favorable}}{${total}}$, and $\\frac{${favorable}}{${total}} \\times 100 \\approx ${pct}\\%$.`
       }
     }
   },
@@ -523,13 +547,13 @@ const questionPool: QuestionTemplate[] = [
       const total = randInt(30, 60)
       const eventA = randInt(10, 25)
       const complement = total - eventA
-      const pct = Math.round((complement / total) * 100)
-      const { options, correctIndex } = makeOptions(pct, 5)
+      const pct = pctRound(complement, total)
+      const { options, correctIndex } = makeOptions(pct, 5, 1, [pctRound(eventA, total)])
       return {
         id: this.id, category: this.category,
-        question: `$${eventA}$ of $${total}$ students like math. Probability a random student does NOT like math? (as %, rounded)`,
+        question: `In a class of $${total}$ students, $${eventA}$ like math. If a student is chosen at random, what is the probability that the student does NOT like math, as a percent rounded to the nearest whole percent?`,
         options, correctIndex,
-        explanation: `$P(\\text{not math}) = 1 - \\frac{${eventA}}{${total}} = \\frac{${complement}}{${total}} \\approx ${pct}\\%$.`
+        explanation: `$${complement}$ of the $${total}$ students do not like math: $\\frac{${complement}}{${total}} \\times 100 \\approx ${pct}\\%$.`
       }
     }
   },
@@ -571,15 +595,16 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const red = randInt(3, 8)
-      const blue = randInt(3, 8)
-      const _total = red + blue
-      const pRedOrBlue = 100
-      const { options, correctIndex } = makeOptions(pRedOrBlue, 10)
+      let blue = randInt(3, 8)
+      while (blue === red) blue = randInt(3, 8)
+      const total = red + blue
+      const f = (n: number, d: number) => { const g = gcd(n, d); return `$\\frac{${n / g}}{${d / g}}$` }
+      const { options, correctIndex } = makeStringOptions('$1$', [f(red, total), f(blue, total), '$\\frac{1}{2}$'])
       return {
         id: this.id, category: this.category,
-        question: `A bag has $${red}$ red and $${blue}$ blue balls (only). Probability of drawing red OR blue? (as %)`,
+        question: `A bag holds only $${red}$ red balls and $${blue}$ blue balls. If one ball is drawn at random, what is the probability that it is red OR blue?`,
         options, correctIndex,
-        explanation: `Red and blue are the only colors, so $P = 100\\%$.`
+        explanation: `Every ball in the bag is red or blue, so the event is certain: the probability is $\\frac{${total}}{${total}} = 1$.`
       }
     }
   },
@@ -599,9 +624,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `Rolling a fair die, what is $P(\\text{rolling} \\geq ${n})$?`,
+        question: `A fair six-sided die is rolled once. What is the probability of rolling a number greater than or equal to ${n}?`,
         options, correctIndex,
-        explanation: `Values $\\geq ${n}$: ${Array.from({ length: favorable }, (_, i) => n + i).join(', ')}. $P = \\frac{${favorable}}{${faces}}$.`
+        explanation: `The outcomes ${Array.from({ length: favorable }, (_, i) => n + i).join(', ')} are at least ${n}: ${favorable} of the ${faces} equally likely outcomes, so the probability is $\\frac{${favorable}}{${faces}}$.`
       }
     }
   },
@@ -615,10 +640,10 @@ const questionPool: QuestionTemplate[] = [
       const pct = Math.round((suit / total) * 100)
       const suitNames = ['hearts', 'diamonds', 'clubs', 'spades']
       const pick = suitNames[randInt(0, 3)]
-      const { options, correctIndex } = makeOptions(pct, 5)
+      const { options, correctIndex } = makeStringOptions(`${pct}`, ['13', '50', '75'])
       return {
         id: this.id, category: this.category,
-        question: `From a standard 52-card deck, probability of drawing a ${pick}? (as %)`,
+        question: `A standard 52-card deck has 13 cards in each of 4 suits. If one card is drawn at random, what is the probability, as a percent, that it is one of the ${pick}?`,
         options, correctIndex,
         explanation: `$\\frac{13}{52} = \\frac{1}{4} = 25\\%$.`
       }
@@ -631,11 +656,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Study Design',
     difficulty: 'medium',
     generate() {
-      const correct = 'Randomized controlled experiment'
+      const correct = 'Randomized experiment'
       const { options, correctIndex } = makeStringOptions(correct, [
         'Observational study',
-        'Survey',
-        'Census'
+        'Sample survey',
+        'Census of all the patients'
       ])
       return {
         id: this.id, category: this.category,
@@ -653,8 +678,8 @@ const questionPool: QuestionTemplate[] = [
       const correct = 'Observational study'
       const { options, correctIndex } = makeStringOptions(correct, [
         'Experiment',
-        'Clinical trial',
-        'Census'
+        'Controlled trial',
+        'Complete census'
       ])
       return {
         id: this.id, category: this.category,
@@ -669,11 +694,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Study Design',
     difficulty: 'medium',
     generate() {
-      const correct = 'Bias — the sample is not representative'
+      const correct = 'The sample does not represent everyone'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'The sample is too large',
-        'This is perfectly valid',
-        'It is a census'
+        'The sample is too large to analyze',
+        'Exercise habits cannot be measured by a survey',
+        'Gym members always answer dishonestly'
       ])
       return {
         id: this.id, category: this.category,
@@ -688,11 +713,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Study Design',
     difficulty: 'medium',
     generate() {
-      const correct = 'No — correlation does not imply causation'
+      const correct = 'No, because correlation does not show cause'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Yes — the data proves it',
-        'Only if the sample is large',
-        'Yes — if the correlation is strong'
+        'Yes, because the two variables rise and fall together',
+        'Yes, because the data show a strong correlation',
+        'No, because the two events happen in different places'
       ])
       return {
         id: this.id, category: this.category,
@@ -714,15 +739,15 @@ const questionPool: QuestionTemplate[] = [
       const high = pct + margin
       const correct = `$${low}\\%$ to $${high}\\%$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${pct}\\%$ exactly`,
+        `$${pct}\\%$ to $${high}\\%$`,
         `$${pct - 2 * margin}\\%$ to $${pct + 2 * margin}\\%$`,
         `$${low}\\%$ to $${pct}\\%$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `A poll of $${n}$ people finds $${pct}\\%$ support with margin of error $\\pm${margin}\\%$. The confidence interval is:`,
+        question: `A poll of $${n}$ people finds $${pct}\\%$ support with margin of error $\\pm${margin}\\%$. Which range of values for the percentage of the whole population is plausible?`,
         options, correctIndex,
-        explanation: `$${pct}\\% \\pm ${margin}\\% = [${low}\\%, ${high}\\%]$.`
+        explanation: `Plausible values extend the margin of error on both sides of the estimate: $${pct}\\% \\pm ${margin}\\%$, from $${low}\\%$ to $${high}\\%$.`
       }
     }
   },
@@ -739,18 +764,18 @@ const questionPool: QuestionTemplate[] = [
       const sum = vals.reduce((s, v) => s + v, 0)
       const meanExact = sum / 5
       const meanStr = (sum / 5).toFixed(1)
-      const correct = meanExact > median ? 'Mean is larger' : meanExact < median ? 'Median is larger' : 'They are equal'
+      const correct = meanExact > median ? 'The mean is larger' : meanExact < median ? 'The median is larger' : 'They are equal'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Mean is larger',
-        'Median is larger',
+        'The mean is larger',
+        'The median is larger',
         'They are equal',
-        'Cannot determine'
+        'The mode is larger than both'
       ])
       return {
         id: this.id, category: this.category,
-        question: `Data: $${vals.join(', ')}$. Mean = $${meanStr}$, Median = $${median}$. Which is larger?`,
+        question: `For the data set $${vals.join(', ')}$, which statement correctly compares the mean and the median?`,
         options, correctIndex,
-        explanation: `Mean = $${meanStr}$, Median = $${median}$. ${correct}.`
+        explanation: `Mean $= \\frac{${sum}}{5} = ${meanStr}$. In order the values are $${sorted.join(', ')}$, so the median is $${median}$. ${correct}.`
       }
     }
   },
@@ -759,15 +784,17 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     difficulty: 'easy',
     generate() {
-      const total = randInt(80, 200)
-      const eventA = randInt(20, total - 20)
-      const pct = Math.round((eventA / total) * 100)
-      const { options, correctIndex } = makeOptions(pct, 5)
+      // Relative frequency read from a frequency table (was a twin of ssd-q23's "k of n as a percent")
+      let c: number[] = []
+      let total = 0
+      do { c = [randInt(5, 20), randInt(5, 20), randInt(5, 20), randInt(5, 20)]; total = c.reduce((a, b) => a + b, 0) } while ((100 * (c[1] + c[2])) % total !== 0 || c[1] === c[2])
+      const pct = 100 * (c[1] + c[2]) / total
+      const { options, correctIndex } = makeOptions(pct, 4, 1, [100 * c[1] / total, 100 * c[2] / total].filter(v => Number.isInteger(v)))
       return {
         id: this.id, category: this.category,
-        question: `In a group of $${total}$, $${eventA}$ prefer option A. What is the relative frequency? (as %, rounded)`,
+        question: `A group of $${total}$ students chose a favorite sport.\n\n| Sport | Soccer | Basketball | Tennis | Other |\n| --- | --- | --- | --- | --- |\n| Students | ${c[0]} | ${c[1]} | ${c[2]} | ${c[3]} |\n\nWhat percent of the students chose basketball or tennis?`,
         options, correctIndex,
-        explanation: `$\\frac{${eventA}}{${total}} \\approx ${pct}\\%$.`
+        explanation: `$${c[1]} + ${c[2]} = ${c[1] + c[2]}$ of the $${total}$ students: $\\frac{${c[1] + c[2]}}{${total}} \\times 100 = ${pct}\\%$.`
       }
     }
   },
@@ -780,9 +807,10 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(5, 30)
       const x = randInt(8, 15)
       const predicted = m * x + b
-      const actual = predicted + randInt(-10, 10)
+      let actual = predicted
+      while (actual === predicted) actual = predicted + randInt(-10, 10)
       const residual = actual - predicted
-      const { options, correctIndex } = makeOptions(residual, 5)
+      const { options, correctIndex } = makeOptions(residual, 5, -Infinity, [-residual])
       return {
         id: this.id, category: this.category,
         question: `Predicted value = $${predicted}$, actual = $${actual}$. What is the residual?`,
@@ -796,11 +824,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     difficulty: 'medium',
     generate() {
-      const correct = 'To allow cause-and-effect conclusions'
+      const correct = 'It supports causal conclusions'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'To increase sample size',
-        'To reduce cost',
-        'To make the study shorter'
+        'It guarantees a larger sample size',
+        'It lets results apply to every population',
+        'It removes the need for a control group'
       ])
       return {
         id: this.id, category: this.category,
@@ -845,11 +873,11 @@ const questionPool: QuestionTemplate[] = [
       const c = randInt(10, 25)
       const _d = randInt(10, 25)
       const colTotal = a + c
-      const conditionalPct = Math.round((a / colTotal) * 100)
-      const { options, correctIndex } = makeOptions(conditionalPct, 5)
+      const conditionalPct = pctRound(a, colTotal)
+      const { options, correctIndex } = makeOptions(conditionalPct, 5, 1, [pctRound(a, a + _b), pctRound(a, a + _b + c + _d)])
       return {
         id: this.id, category: this.category,
-        question: `What percent of Group 1 said Yes? (Rounded to the nearest percent)\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group 1 | ${a} | ${c} |`,
+        question: `What percent of Group 1 said Yes? (Rounded to the nearest percent)\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group 1 | ${a} | ${c} |\n| Group 2 | ${_b} | ${_d} |`,
         options, correctIndex,
         explanation: `$\\frac{${a}}{${a} + ${c}} = \\frac{${a}}{${colTotal}} \\approx ${conditionalPct}\\%$.`
       }
@@ -860,17 +888,17 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     difficulty: 'hard',
     generate() {
-      const correct = 'Larger samples generally give smaller margins of error'
+      const correct = 'Larger random samples give smaller margins of error'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Larger samples always eliminate bias',
-        'Sample size does not affect margin of error',
-        'Larger samples increase the margin of error'
+        'Larger random samples give larger margins of error',
+        'Larger samples remove every source of bias',
+        'Sample size has no effect on the margin of error'
       ])
       return {
         id: this.id, category: this.category,
         question: 'How does sample size affect margin of error?',
         options, correctIndex,
-        explanation: 'Margin of error ∝ $1/\\sqrt{n}$,' + ' so larger samples produce smaller margins.'
+        explanation: 'Larger random samples produce more precise estimates, so the margin of error shrinks as the sample size grows. Sample size does not fix bias from a poorly chosen sample.'
       }
     }
   },

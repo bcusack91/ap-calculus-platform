@@ -1,6 +1,6 @@
 /**
  * Exit Quiz Question Pool — SAT Data & Statistics
- * 40 questions with randomized numeric generation.
+ * 43 questions with randomized numeric generation.
  */
 
 export interface ExitQuizQuestion {
@@ -33,19 +33,36 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
+function gcd(a: number, b: number): number { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b] } return a }
+
 function distinctVals(vals: number[]): boolean {
   return new Set(vals).size === vals.length
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
-  const distractors = new Set<number>()
-  while (distractors.size < 3) {
-    const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+// Up to two misconception values (kept only when they have the key's digit count, so they cannot
+// stand out by length), then integer-offset distractors placed so the key's rank among the four
+// values is as uniform as the misconceptions allow. Distractors never go below `min`.
+function makeOptions(correct: number, spread: number = 2, min: number = -Infinity, misc: number[] = []): { options: string[]; correctIndex: number } {
+  const w = Math.max(3, spread * 3)
+  const ok = (v: number) => v !== correct && v >= min
+  const fixed = [...new Set(misc.filter(v => ok(v) && String(v).length === String(correct).length))].slice(0, 2)
+  const below: number[] = []
+  const above: number[] = []
+  for (let d = 1; d <= w; d++) {
+    if (ok(correct - d) && !fixed.includes(correct - d)) below.push(correct - d)
+    if (!fixed.includes(correct + d)) above.push(correct + d)
   }
-  const all = [correct, ...distractors]
-  const shuffled = shuffle(all)
-  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+  const need = 3 - fixed.length
+  const ks: number[] = []
+  for (let k = 0; k <= need; k++) if (k <= below.length && need - k <= above.length) ks.push(k)
+  const k = ks[randInt(0, ks.length - 1)]
+  const all = shuffle([correct, ...fixed, ...shuffle(below).slice(0, k), ...shuffle(above).slice(0, need - k)])
+  return { options: all.map(v => String(Math.round(v * 1e6) / 1e6)), correctIndex: all.indexOf(correct) }
+}
+
+// round(100·n/d) with halves rounded up, in exact integer arithmetic (no float ties).
+function pctRound(n: number, d: number): number {
+  return Math.floor((200 * n + d) / (2 * d))
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
@@ -68,7 +85,7 @@ const questionPool: QuestionTemplate[] = [
       vals.push(v5)
       const sum = vals.reduce((a, b) => a + b, 0)
       const mean = sum / 5
-      const { options, correctIndex } = makeOptions(mean, 5)
+      const { options, correctIndex } = makeOptions(mean, 5, 1, [[...vals].sort((x, y) => x - y)[2], Math.max(...vals) - Math.min(...vals)])
       return { id: this.id, category: this.category, question: `Find the mean of: $${vals.join(', ')}$.`, options, correctIndex, explanation: `Mean $= \\frac{${vals.join(' + ')}}{5} = \\frac{${sum}}{5} = ${mean}$.` }
     }
   },
@@ -79,7 +96,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const vals = Array.from({ length: 7 }, () => randInt(5, 30)).sort((a, b) => a - b)
       const median = vals[3]
-      const { options, correctIndex } = makeOptions(median, 4)
+      const { options, correctIndex } = makeOptions(median, 4, 1, [vals[2], vals[4]])
       return { id: this.id, category: this.category, question: `Find the median of: $${vals.join(', ')}$.`, options, correctIndex, explanation: `Sorted: $${vals.join(', ')}$. Middle value (4th of 7) = $${median}$.` }
     }
   },
@@ -104,7 +121,7 @@ const questionPool: QuestionTemplate[] = [
       const vals = Array.from({ length: 5 }, () => randInt(10, 40))
       const sorted = [...vals].sort((a, b) => a - b)
       const range = sorted[sorted.length - 1] - sorted[0]
-      const { options, correctIndex } = makeOptions(range, 5)
+      const { options, correctIndex } = makeOptions(range, 5, 1, [sorted[sorted.length - 1], sorted[2]])
       return { id: this.id, category: this.category, question: `Find the range of: $${vals.join(', ')}$.`, options, correctIndex, explanation: `Range = max $-$ min = $${sorted[sorted.length - 1]} - ${sorted[0]} = ${range}$.` }
     }
   },
@@ -120,7 +137,7 @@ const questionPool: QuestionTemplate[] = [
         sum = scores.reduce((a, b) => a + b, 0)
         needed = target * n - sum
       } while (needed > 100 || needed < 0)
-      const { options, correctIndex } = makeOptions(needed, 8)
+      const { options, correctIndex } = makeOptions(needed, 8, 0, [target])
       return { id: this.id, category: this.category, question: `Current scores: $${scores.join(', ')}$. What score is needed on the next test for a $${target}$ average?`, options, correctIndex, explanation: `Need total $= ${target} \\times ${n} = ${target * n}$. Have $${sum}$. Need $${needed}$.` }
     }
   },
@@ -153,7 +170,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const n = randInt(20, 50); const mean = randInt(70, 90)
       const total = n * mean
-      const { options, correctIndex } = makeOptions(total, 100)
+      const { options, correctIndex } = makeOptions(total, 30, 1, [n + mean, n * (mean + 1)])
       return { id: this.id, category: this.category, question: `A class of $${n}$ students has a test mean of $${mean}$. What is the total of all scores?`, options, correctIndex, explanation: `Total $= n \\times \\text{mean} = ${n} \\times ${mean} = ${total}$.` }
     }
   },
@@ -163,7 +180,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const correct = 'How spread out the values are from the mean'
-      return { id: this.id, category: this.category, question: 'What does standard deviation measure?', ...makeStringOptions(correct, ['The most frequently occurring data value', 'The gap between the maximum and minimum', 'The middle value of the ordered data']), explanation: 'Standard deviation quantifies how spread out data is from the mean.' }
+      return { id: this.id, category: this.category, question: 'What does standard deviation measure?', ...makeStringOptions(correct, ['The most frequently occurring value in the data', 'The gap between the largest and smallest values', 'The middle value when the data are put in order']), explanation: 'Standard deviation quantifies how spread out data is from the mean.' }
     }
   },
   {
@@ -172,7 +189,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'Set B, whose values are farther from 50'
-      return { id: this.id, category: this.category, question: 'Set A: $\\{48, 50, 52\\}$. Set B: $\\{30, 50, 70\\}$. Which has greater standard deviation?', ...makeStringOptions(correct, ['Set A, whose values are closer to 50', 'Neither, since both have mean 50', 'Neither, since both have 3 values']), explanation: 'Set B has values farther from the mean (50), so its standard deviation is larger.' }
+      return { id: this.id, category: this.category, question: 'Set A: $\\{48, 50, 52\\}$. Set B: $\\{30, 50, 70\\}$. Which has greater standard deviation?', ...makeStringOptions(correct, ['Set A, whose values are closer to 50', 'Neither, since both have mean 50', 'Neither, since both have the same number of values']), explanation: 'Set B has values farther from the mean (50), so its standard deviation is larger.' }
     }
   },
   {
@@ -180,10 +197,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'hard',
     generate() {
-      const sd = randInt(3, 8); const mean = randInt(60, 90)
-      const lo = mean - 2 * sd; const hi = mean + 2 * sd
-      const correct = `$${lo}$ to $${hi}$`
-      return { id: this.id, category: this.category, question: `Mean $= ${mean}$, SD $= ${sd}$. Using the 95% rule, what range contains most data?`, ...makeStringOptions(correct, [`$${mean - sd}$ to $${mean + sd}$`, `$${mean}$ to $${hi}$`, `$${lo - sd}$ to $${hi + sd}$`]), explanation: `About 95% of data falls within 2 SDs: mean $\\pm 2 \\cdot$ SD $= ${lo}$ to $${hi}$.` }
+      // Conceptual SD reasoning (the SAT never asks for the empirical rule or an SD computation):
+      // adding a value equal to the mean leaves the mean alone and shrinks the spread.
+      const n = randInt(8, 15); const mean = randInt(60, 90)
+      const correct = 'The mean stays the same and the standard deviation decreases'
+      return { id: this.id, category: this.category, question: `A data set of $${n}$ test scores has a mean of $${mean}$, and the scores are not all equal. A new score of exactly $${mean}$ is added to the data set. Which statement about the new data set is true?`, ...makeStringOptions(correct, ['The mean stays the same and the standard deviation increases', 'The mean increases and the standard deviation stays the same', 'The mean and the standard deviation both stay exactly the same']), explanation: `A value equal to the mean does not move the mean. It adds a data point at distance 0 from the mean, so the typical distance from the mean (the standard deviation) gets smaller.` }
     }
   },
   {
@@ -192,7 +210,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'It stays the same'
-      return { id: this.id, category: this.category, question: 'If 10 is added to every data point, what happens to the standard deviation?', ...makeStringOptions(correct, ['It increases by 10', 'It is multiplied by 10', 'It increases by 100']), explanation: 'Adding a constant shifts all values equally, so spread (standard deviation) stays the same.' }
+      return { id: this.id, category: this.category, question: 'If 10 is added to every data point, what happens to the standard deviation?', ...makeStringOptions(correct, ['It increases by 10', 'It is multiplied by 10', 'It decreases']), explanation: 'Adding a constant shifts all values equally, so spread (standard deviation) stays the same.' }
     }
   },
   {
@@ -202,7 +220,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const k = randInt(2, 5)
       const correct = `It is multiplied by ${k}`
-      return { id: this.id, category: this.category, question: `If every data value is multiplied by $${k}$, what happens to the standard deviation?`, ...makeStringOptions(correct, ['It stays exactly the same', `It is multiplied by ${k} squared`, `It increases by ${k} units`]), explanation: `Multiplying all values by $${k}$ multiplies the SD by $|${k}| = ${k}$.` }
+      return { id: this.id, category: this.category, question: `If every data value is multiplied by $${k}$, what happens to the standard deviation?`, ...makeStringOptions(correct, ['It stays exactly the same', `It is multiplied by ${k * k}`, `It increases by ${k} units`]), explanation: `Multiplying all values by $${k}$ multiplies the SD by $|${k}| = ${k}$.` }
     }
   },
   {
@@ -210,8 +228,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'Class A — its scores are more spread out'
-      return { id: this.id, category: this.category, question: 'Two classes took the same test and had the same mean score. Class A\'s scores ranged from 55 to 98; Class B\'s ranged from 74 to 82. Which class has the larger standard deviation?', ...makeStringOptions(correct, ['Class B — its scores are more tightly clustered', 'Neither — equal means give equal standard deviations', 'Class B — its scores have the smaller range']), explanation: 'Standard deviation measures spread around the mean. A wider spread of scores (55–98 vs 74–82) means a larger standard deviation.' }
+      const correct = 'Class A, because its scores are more spread out'
+      return { id: this.id, category: this.category, question: 'Two classes took the same test and had the same mean score. Class A\'s scores ranged from 55 to 98; Class B\'s ranged from 74 to 82. Which class has the larger standard deviation?', ...makeStringOptions(correct, ['Class B, because its scores are tightly clustered', 'Neither, because equal means give equal spreads', 'Class B, because its scores have a smaller range']), explanation: 'Standard deviation measures spread around the mean. A wider spread of scores (55–98 vs 74–82) means a larger standard deviation.' }
     }
   },
   {
@@ -220,7 +238,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const mean = randInt(60, 80); const add = randInt(3, 8)
-      const { options, correctIndex } = makeOptions(mean + add, 3)
+      const { options, correctIndex } = makeOptions(mean + add, 3, 1, [mean, mean + 2 * add])
       return { id: this.id, category: this.category, question: `A data set has mean $${mean}$. If every value in the data set is increased by $${add}$, what is the new mean?`, options, correctIndex, explanation: `Adding a constant to every value shifts the mean by that constant: $${mean} + ${add} = ${mean + add}$. (The standard deviation does not change.)` }
     }
   },
@@ -229,8 +247,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'It decreases, since values cluster near the mean'
-      return { id: this.id, category: this.category, question: 'A data set is $10, 20, 30, 40, 50$. Each value is replaced so the set becomes $28, 29, 30, 31, 32$ (same mean). What happens to the standard deviation?', ...makeStringOptions(correct, ['It increases, since the values are closer together', 'It stays the same, since the mean has not changed', 'It stays the same, since there are still 5 values']), explanation: 'The new values all lie within 2 of the mean 30, while the original values were up to 20 away. Less spread around the mean means a smaller standard deviation; an unchanged mean or count does not keep the spread the same.' }
+      const correct = 'It decreases, since the values cluster near the mean'
+      return { id: this.id, category: this.category, question: 'A data set is $10, 20, 30, 40, 50$. Each value is replaced so the set becomes $28, 29, 30, 31, 32$ (same mean). What happens to the standard deviation?', ...makeStringOptions(correct, ['It increases, since the values are closer together', 'It stays the same, since the mean has not changed', 'It stays the same, since there are still exactly 5 values']), explanation: 'The new values all lie within 2 of the mean 30, while the original values were up to 20 away. Less spread around the mean means a smaller standard deviation; an unchanged mean or count does not keep the spread the same.' }
     }
   },
   {
@@ -241,7 +259,7 @@ const questionPool: QuestionTemplate[] = [
       let fav = 0; let total = 0
       do { fav = randInt(2, 10); total = fav + randInt(5, 20) } while (fav === total - fav)
       const correct = `$\\frac{${fav}}{${total}}$`
-      return { id: this.id, category: this.category, question: `A bag has $${fav}$ red and $${total - fav}$ blue marbles. If one marble is drawn at random, what is the probability it is red?`, ...makeStringOptions(correct, [`$\\frac{${total - fav}}{${total}}$`, `$\\frac{${fav}}{${fav}}$`, `$\\frac{1}{${total}}$`]), explanation: `$P(\\text{red}) = \\frac{\\text{favorable}}{\\text{total}} = \\frac{${fav}}{${total}}$.` }
+      return { id: this.id, category: this.category, question: `A bag has $${fav}$ red and $${total - fav}$ blue marbles. If one marble is drawn at random, what is the probability it is red?`, ...makeStringOptions(correct, [`$\\frac{${total - fav}}{${total}}$`, `$\\frac{${fav}}{${fav}}$`, `$\\frac{1}{${total}}$`]), explanation: `Probability = favorable outcomes ÷ total outcomes $= \\frac{${fav}}{${total}}$.` }
     }
   },
   {
@@ -254,7 +272,7 @@ const questionPool: QuestionTemplate[] = [
       const french = randInt(30, 45); const spanish = randInt(25, 40)
       const both = randInt(8, Math.min(french, spanish) - 5)
       const either = french + spanish - both
-      const { options, correctIndex } = makeOptions(either, 10)
+      const { options, correctIndex } = makeOptions(either, 10, 1, [french + spanish, either - both])
       return { id: this.id, category: this.category, question: `In a class of 100 students, ${french} take French, ${spanish} take Spanish, and ${both} take both languages. How many students take French or Spanish (or both)?`, options, correctIndex, explanation: `Adding ${french} + ${spanish} counts the ${both} both-takers twice, so subtract once: ${french} + ${spanish} - ${both} = ${either}.` }
     }
   },
@@ -263,10 +281,12 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'medium',
     generate() {
-      const n = randInt(3, 6)
-      const fact = [1, 1, 2, 6, 24, 120, 720][n]
-      const { options, correctIndex } = makeOptions(fact, 30)
-      return { id: this.id, category: this.category, question: `How many ways can $${n}$ books be arranged on a shelf?`, options, correctIndex, explanation: `$${n}! = ${fact}$ arrangements.` }
+      // Expected count from a probability (was an n! arrangements item; counting formulas are not on the SAT)
+      const pct = [2, 3, 4, 5, 6, 8][randInt(0, 5)]
+      const n = randInt(5, 30) * 100
+      const ans = n * pct / 100
+      const { options, correctIndex } = makeOptions(ans, 10, 1, [n * pct / 1000, n - ans])
+      return { id: this.id, category: this.category, question: `The probability that a randomly chosen light bulb from a factory is defective is $0.0${pct}$. In a shipment of $${n}$ bulbs, about how many would be expected to be defective?`, options, correctIndex, explanation: `Expected number $= ${n} \\times 0.0${pct} = ${ans}$.` }
     }
   },
   {
@@ -276,8 +296,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       // Replaced independence-formula item per 2026-08-17 congruence audit —
       // the SAT asks conditional/joint questions in words from tables.
-      const correct = 'Divide club-member seniors by the total number of seniors'
-      return { id: this.id, category: this.category, question: 'A two-way table shows class year (junior/senior) versus club membership. To find the probability that a randomly selected SENIOR is a club member, you should:', ...makeStringOptions(correct, ['Divide club-member seniors by the total of ALL students', 'Divide club-member seniors by all club members', 'Divide the club total by the total number of seniors']), explanation: 'The condition "a senior is selected" restricts you to the senior row: club-member seniors over total seniors.' }
+      const correct = 'Divide club-member seniors by all the seniors'
+      return { id: this.id, category: this.category, question: 'A two-way table shows class year (junior/senior) versus club membership. To find the probability that a randomly selected SENIOR is a club member, you should:', ...makeStringOptions(correct, ['Divide club-member seniors by all students', 'Divide club-member seniors by all club members', 'Divide all club members by the number of seniors']), explanation: 'The condition "a senior is selected" restricts you to the senior row: club-member seniors over total seniors.' }
     }
   },
   {
@@ -295,12 +315,14 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'hard',
     generate() {
-      const n = randInt(5, 10); const r = randInt(2, 3)
-      let comb = 1
-      for (let i = 0; i < r; i++) comb = comb * (n - i) / (i + 1)
-      comb = Math.round(comb)
-      const { options, correctIndex } = makeOptions(comb, 10)
-      return { id: this.id, category: this.category, question: `How many ways to choose $${r}$ items from $${n}$? (combinations)`, options, correctIndex, explanation: `$C(${n}, ${r}) = \\frac{${n}!}{${r}!(${n} - ${r})!} = ${comb}$.` }
+      // How many to add to reach a target probability (was a C(n, r) combinations item; not on the SAT)
+      let r = 0, b = 0, add = 0, num = 0, den = 0
+      do {
+        r = randInt(2, 10); b = randInt(4, 16); add = randInt(2, 12)
+        const g = gcd(r + add, r + add + b); num = (r + add) / g; den = (r + add + b) / g
+      } while (den > 12 || num === 1 || add === r || add === b)
+      const { options, correctIndex } = makeOptions(add, 2, 1, [r + add, b - r > 0 ? b - r : -1])
+      return { id: this.id, category: this.category, question: `A jar holds $${r}$ red marbles and $${b}$ blue marbles. How many red marbles must be added to the jar so that the probability of drawing a red marble at random is $\\frac{${num}}{${den}}$?`, options, correctIndex, explanation: `After adding $x$ red marbles: $\\frac{${r} + x}{${r + b} + x} = \\frac{${num}}{${den}}$. Cross-multiplying gives $${den}(${r} + x) = ${num}(${r + b} + x)$, so $x = ${add}$. Check: $\\frac{${r + add}}{${r + b + add}} = \\frac{${num}}{${den}}$.` }
     }
   },
   {
@@ -312,7 +334,7 @@ const questionPool: QuestionTemplate[] = [
       const total = r + b
       const p1 = r; const p2 = r - 1; const den1 = total; const den2 = total - 1
       const correct = `$\\frac{${p1}}{${den1}} \\times \\frac{${p2}}{${den2}}$`
-      return { id: this.id, category: this.category, question: `$${r}$ red, $${b}$ blue marbles. $P(\\text{2 red without replacement})$?`, ...makeStringOptions(correct, [`$\\frac{${p1}}{${den1}} \\times \\frac{${p1}}{${den1}}$`, `$\\frac{${p1}}{${den1}} + \\frac{${p2}}{${den2}}$`, `$\\frac{${p1}}{${den1}} \\times \\frac{${p2}}{${den1}}$`]), explanation: `Without replacement: $P = \\frac{\\text{red}}{\\text{total}} \\times \\frac{\\text{red} - 1}{\\text{total} - 1}$.` }
+      return { id: this.id, category: this.category, question: `A bag holds $${r}$ red and $${b}$ blue marbles. Two marbles are drawn at random, one after the other, without replacement. Which expression gives the probability that both marbles are red?`, ...makeStringOptions(correct, [`$\\frac{${p1}}{${den1}} \\times \\frac{${p1}}{${den1}}$`, `$\\frac{${p1}}{${den1}} + \\frac{${p2}}{${den2}}$`, `$\\frac{${p1}}{${den1}} \\times \\frac{${p2}}{${den1}}$`]), explanation: `The first draw is red with probability $\\frac{${p1}}{${den1}}$. After one red is removed, $${p2}$ of the remaining $${den2}$ marbles are red, so multiply: $\\frac{${p1}}{${den1}} \\times \\frac{${p2}}{${den2}}$.` }
     }
   },
   {
@@ -323,7 +345,7 @@ const questionPool: QuestionTemplate[] = [
       // Replaced expected-value item (not on the SAT) with margin of error
       // (which is) per 2026-08-17 congruence audit.
       const correct = 'A range of plausible values for the population percentage'
-      return { id: this.id, category: this.category, question: 'A poll based on a random sample reports 54% support with a margin of error of 3 percentage points. The margin of error describes:', ...makeStringOptions(correct, ['The percentage of the sample who answered incorrectly', 'A guarantee that support is between 51% and 57%', 'The share of the population the poll did not survey']), explanation: 'Margin of error gives the plausible range for the population value — here, roughly 51% to 57%.' }
+      return { id: this.id, category: this.category, question: 'A poll based on a random sample reports 54% support with a margin of error of 3 percentage points. The margin of error describes:', ...makeStringOptions(correct, ['The percentage of the sample who answered incorrectly', 'A guaranteed range for the population percentage', 'The share of the population that the poll was not able to survey']), explanation: 'Margin of error gives the plausible range for the population value — here, roughly 51% to 57%.' }
     }
   },
   {
@@ -343,8 +365,8 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(2, 8); const b = randInt(-10, 10)
       const x = randInt(5, 15)
       const y = m * x + b
-      const { options, correctIndex } = makeOptions(y, 10)
-      return { id: this.id, category: this.category, question: `Line of best fit: $y = ${m}x ${b < 0 ? '- ' + Math.abs(b) : '+ ' + b}$. Predict $y$ when $x = ${x}$.`, options, correctIndex, explanation: `$y = ${m}(${x}) ${b < 0 ? '- ' + Math.abs(b) : '+ ' + b} = ${y}$.` }
+      const { options, correctIndex } = makeOptions(y, 10, -Infinity, [m + b + x])
+      return { id: this.id, category: this.category, question: `A line of best fit is $y = ${m}x${b === 0 ? '' : b < 0 ? ' - ' + Math.abs(b) : ' + ' + b}$. What is the predicted value of $y$ when $x = ${x}$?`, options, correctIndex, explanation: `$y = ${m}(${x})${b === 0 ? '' : b < 0 ? ' - ' + Math.abs(b) : ' + ' + b} = ${y}$.` }
     }
   },
   {
@@ -353,8 +375,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const r = randInt(85, 98) / 100
-      const correct = 'Strong positive correlation'
-      return { id: this.id, category: this.category, question: `$r = ${r}$. Describe the correlation.`, ...makeStringOptions(correct, ['A fairly weak positive correlation', 'A strong negative correlation', 'No correlation at all between them']), explanation: `$r$ close to 1 ($${r}$) indicates strong positive correlation.` }
+      const correct = 'A strong positive correlation'
+      return { id: this.id, category: this.category, question: `$r = ${r}$. Describe the correlation.`, ...makeStringOptions(correct, ['A fairly weak positive correlation', 'A strong negative correlation', 'Almost no correlation']), explanation: `$r$ close to 1 ($${r}$) indicates strong positive correlation.` }
     }
   },
   {
@@ -362,8 +384,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = 'The share of variation in $y$ explained by $x$'
-      return { id: this.id, category: this.category, question: 'What does the coefficient of determination ($r^2$) represent?', ...makeStringOptions(correct, ['The slope of the fitted regression line', 'The predicted value of $y$ when $x$ is zero', 'The number of data points used in the model']), explanation: '$r^2$ indicates what fraction of the dependent variable variation is explained by the model.' }
+      const correct = 'The share of the variation in $y$ explained by $x$'
+      return { id: this.id, category: this.category, question: 'What does the coefficient of determination ($r^2$) represent?', ...makeStringOptions(correct, ['The slope of the fitted regression line', 'The predicted value of $y$ when $x$ is zero', 'The number of data points used to fit the model']), explanation: '$r^2$ indicates what fraction of the dependent variable variation is explained by the model.' }
     }
   },
   {
@@ -371,9 +393,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'easy',
     generate() {
-      const actual = randInt(40, 80); const predicted = randInt(35, 75)
+      const actual = randInt(40, 80); let predicted = randInt(35, 75); while (predicted === actual) predicted = randInt(35, 75)
       const residual = actual - predicted
-      const { options, correctIndex } = makeOptions(residual, 8)
+      const { options, correctIndex } = makeOptions(residual, 8, -Infinity, [-residual])
       return { id: this.id, category: this.category, question: `Actual $y = ${actual}$, predicted $y = ${predicted}$. Find the residual.`, options, correctIndex, explanation: `Residual = actual $-$ predicted $= ${actual} - ${predicted} = ${residual}$.` }
     }
   },
@@ -382,8 +404,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'easy',
     generate() {
-      const correct = 'It is an outlier — far from the general pattern'
-      return { id: this.id, category: this.category, question: 'A point in a scatterplot is very far from the line of best fit. What is this point called?', ...makeStringOptions(correct, ['It is the y-intercept of the line of best fit', 'It is a point with a residual of zero', 'It is the median point of the scatterplot']), explanation: 'Points far from the regression line are outliers or influential points.' }
+      const correct = 'An outlier'
+      return { id: this.id, category: this.category, question: 'A point in a scatterplot lies very far from the line of best fit and from the general pattern of the data. What is this point called?', ...makeStringOptions(correct, ['The intercept', 'The midpoint', 'A zero residual']), explanation: 'Points far from the regression line are outliers or influential points.' }
     }
   },
   {
@@ -391,8 +413,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = 'The pattern may not continue outside the observed data'
-      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['The line is always wrong far from the origin', 'The correlation $r$ is zero outside the data range', 'The slope reverses sign outside the observed data']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
+      const correct = 'The pattern may not continue outside the data'
+      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['The line is always wrong far from the origin', 'The correlation $r$ is zero outside the data range', 'The slope changes sign outside the observed data']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
     }
   },
   {
@@ -427,7 +449,7 @@ const questionPool: QuestionTemplate[] = [
       do { yes = randInt(30, 60); no = randInt(20, 50); extra = randInt(10, 30) } while (!distinctVals([yes / (yes + no), no / (yes + no), yes / (yes + no + extra), 0.5]))
       const rowTotal = yes + no
       const correct = `$\\frac{${yes}}{${rowTotal}}$`
-      return { id: this.id, category: this.category, question: `One row of a survey table shows ${yes} people answered Yes and ${no} answered No. If a person is selected at random from THIS row, what is the probability the person answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${no}}{${rowTotal}}$`, `$\\frac{${yes}}{${rowTotal + extra}}$`, `$\\frac{1}{2}$`]), explanation: `Conditional $P = \\frac{${yes}}{\\text{row total } ${rowTotal}} = \\frac{${yes}}{${rowTotal}}$.` }
+      return { id: this.id, category: this.category, question: `One row of a survey table shows ${yes} people answered Yes and ${no} answered No. If a person is selected at random from THIS row, what is the probability the person answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${no}}{${rowTotal}}$`, `$\\frac{${yes}}{${rowTotal + extra}}$`, `$\\frac{1}{2}$`]), explanation: `Only this row counts, so divide by the row total: $\\frac{${yes}}{${rowTotal}}$.` }
     }
   },
   {
@@ -448,7 +470,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'hard',
     generate() {
       const correct = 'No — both groups ordered coffee at the same 50% rate'
-      return { id: this.id, category: this.category, question: 'A table shows 30 of 60 morning customers and 45 of 90 evening customers ordered coffee. Do the data suggest an association between time of day and ordering coffee?', ...makeStringOptions(correct, ['Yes — more evening customers than morning ones ordered coffee', 'Yes — the evening group is larger than the morning group', 'No — a two-way table can never reveal any association']), explanation: 'Compare the RATES: morning 30/60 = 50%, evening 45/90 = 50%. Equal rates suggest NO association — raw counts alone mislead.' }
+      return { id: this.id, category: this.category, question: 'A table shows 30 of 60 morning customers and 45 of 90 evening customers ordered coffee. Do the data suggest an association between time of day and ordering coffee?', ...makeStringOptions(correct, ['Yes — more evening customers than morning ones ordered coffee', 'Yes — the evening group is larger than the morning group', 'No — a table of counts cannot reveal an association']), explanation: 'Compare the RATES: morning 30/60 = 50%, evening 45/90 = 50%. Equal rates suggest NO association — raw counts alone mislead.' }
     }
   },
   {
@@ -461,7 +483,7 @@ const questionPool: QuestionTemplate[] = [
       const totalYes = m_y + f_y
       const grandTotal = m_y + m_n + f_y + f_n
       const correct = `$\\frac{${totalYes}}{${grandTotal}}$`
-      return { id: this.id, category: this.category, question: `In a survey, males answered Yes ${m_y} times and No ${m_n} times; females answered Yes ${f_y} times and No ${f_n} times. If one respondent is selected at random, what is the probability the respondent answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${m_y}}{${grandTotal}}$`, `$\\frac{${f_y}}{${grandTotal}}$`, `$\\frac{${m_y + m_n}}{${grandTotal}}$`]), explanation: `$P(\\text{Yes}) = \\frac{\\text{total Yes}}{\\text{grand total}} = \\frac{${totalYes}}{${grandTotal}}$.` }
+      return { id: this.id, category: this.category, question: `In a survey, males answered Yes ${m_y} times and No ${m_n} times; females answered Yes ${f_y} times and No ${f_n} times. If one respondent is selected at random, what is the probability the respondent answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${m_y}}{${grandTotal}}$`, `$\\frac{${f_y}}{${grandTotal}}$`, `$\\frac{${m_y + m_n}}{${grandTotal}}$`]), explanation: `Total Yes answers ($${m_y} + ${f_y} = ${totalYes}$) divided by all respondents ($${grandTotal}$): $\\frac{${totalYes}}{${grandTotal}}$.` }
     }
   },
   {
@@ -469,8 +491,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Two-way Tables',
     difficulty: 'easy',
     generate() {
-      const correct = '$\\frac{18}{120} = 15\\%$'
-      return { id: this.id, category: this.category, question: 'In a survey table, 18 of the 120 respondents are seniors who bike to school. What is the relative frequency of senior bikers among ALL respondents?', ...makeStringOptions(correct, ['$\\frac{18}{100} = 18\\%$', '$\\frac{18}{120} = 1.5\\%$', '$\\frac{12}{120} = 10\\%$']), explanation: 'Relative frequency among ALL respondents = cell over grand total: $\\frac{18}{120} = 15\\%$.' }
+      let N = 0, pct = 0, k = 0
+      do { N = [80, 120, 160, 200, 240][randInt(0, 4)]; pct = randInt(1, 8) * 5; k = N * pct / 100 } while (!Number.isInteger(k) || k === pct || pct * 10 === 100 - pct)
+      const f = (n: number, v: string) => `$\\frac{${n}}{${N}} = ${v}\\%$`
+      const correct = f(k, `${pct}`)
+      return { id: this.id, category: this.category, question: `In a survey table, $${k}$ of the $${N}$ respondents are seniors who bike to school. What is the relative frequency of senior bikers among ALL respondents?`, ...makeStringOptions(correct, [`$\\frac{${k}}{100} = ${k}\\%$`, f(k, `${pct / 10}`), f(N - k, `${100 - pct}`)]), explanation: `Relative frequency among ALL respondents = cell ÷ grand total: $\\frac{${k}}{${N}} = ${pct}\\%$.` }
     }
   },
   {
@@ -483,8 +508,8 @@ const questionPool: QuestionTemplate[] = [
       let pAgivenRow1 = 0; let pAgivenRow2 = 0; let gap = 0
       do {
         const a = randInt(10, 30); const b = randInt(10, 30); const c = randInt(10, 30); const d = randInt(10, 30)
-        pAgivenRow1 = Math.round(a / (a + b) * 100)
-        pAgivenRow2 = Math.round(c / (c + d) * 100)
+        pAgivenRow1 = pctRound(a, a + b)
+        pAgivenRow2 = pctRound(c, c + d)
         gap = Math.abs(pAgivenRow1 - pAgivenRow2)
       } while (!(gap >= 20 || gap <= 3))
       const isAssoc = gap >= 20
@@ -503,9 +528,47 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const total = randInt(100, 200); const cellCount = randInt(15, 45)
-      const pct = Math.round(cellCount / total * 100)
-      const { options, correctIndex } = makeOptions(pct, 8)
+      const pct = pctRound(cellCount, total)
+      const { options, correctIndex } = makeOptions(pct, 8, 1, [cellCount, pctRound(cellCount, total - cellCount)])
       return { id: this.id, category: this.category, question: `In a two-way table with grand total $${total}$, a cell has count $${cellCount}$. What percentage is this? (Rounded to the nearest percent)`, options, correctIndex, explanation: `$\\frac{${cellCount}}{${total}} \\times 100 \\approx ${pct}\\%$.` }
+    }
+  },
+  {
+    id: 'ds-q41',
+    category: 'Two-way Tables',
+    difficulty: 'easy',
+    generate() {
+      let a = 0; let b = 0; let c = 0; let d = 0
+      do { a = randInt(12, 40); b = randInt(12, 40); c = randInt(12, 40); d = randInt(12, 40) } while (!distinctVals([a + b, a + c, b + d, c + d, a + b + c + d]))
+      const { options, correctIndex } = makeOptions(c + d, 5, 1, [a + c, b + d])
+      return { id: this.id, category: this.category, question: `How many people in Group B were surveyed?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group A | ${a} | ${b} |\n| Group B | ${c} | ${d} |`, options, correctIndex, explanation: `Add across the Group B row: $${c} + ${d} = ${c + d}$.` }
+    }
+  },
+  {
+    id: 'ds-q42',
+    category: 'Scatterplots',
+    difficulty: 'easy',
+    generate() {
+      const m = randInt(2, 9) * 5; const b = randInt(12, 40) * 10; const yr = [2000, 2005, 2010, 2015][randInt(0, 3)]
+      const correct = `The predicted price, in dollars, of the bicycle in ${yr}`
+      return { id: this.id, category: this.category, question: `The line of best fit $y = ${m}x + ${b}$ models the price $y$, in dollars, of a bicycle model $x$ years after ${yr}. What does the number $${b}$ represent?`, ...makeStringOptions(correct, [`The predicted yearly increase in price, in dollars`, `The predicted price, in dollars, after ${m} years`, `The number of years until the price is ${m + b} dollars`]), explanation: `When $x = 0$ (the year ${yr}), $y = ${b}$, so $${b}$ is the predicted price in ${yr}. The yearly increase is the slope, $${m}$.` }
+    }
+  },
+  {
+    id: 'ds-q43',
+    category: 'Probability',
+    difficulty: 'easy',
+    generate() {
+      const n = [8, 10, 12][randInt(0, 2)]
+      const set = new Set<number>(); while (set.size < n) set.add(randInt(1, 40))
+      const vals = [...set].sort((x, y) => x - y)
+      const cut = vals[randInt(2, n - 3)]
+      const fav = vals.filter(v => v > cut).length
+      const g = gcd(fav, n)
+      const frac = (x: number, y: number) => { const h = gcd(x, y); return `$\\frac{${x / h}}{${y / h}}$` }
+      const correct = frac(fav, n)
+      const others = [frac(n - fav, n), frac(fav + 1, n), frac(fav, n - fav), frac(Math.max(1, fav - 1), n)].filter(o => o !== correct)
+      return { id: this.id, category: this.category, question: `A number is chosen at random from this list: $${vals.join(', ')}$. What is the probability that the number is greater than $${cut}$?`, ...makeStringOptions(correct, others), explanation: `${fav} of the ${n} numbers are greater than ${cut}, so the probability is $\\frac{${fav}}{${n}}${g > 1 ? ` = \\frac{${fav / g}}{${n / g}}` : ''}$.` }
     }
   },
 ]

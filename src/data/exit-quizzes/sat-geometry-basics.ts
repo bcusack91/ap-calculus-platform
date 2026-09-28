@@ -46,16 +46,35 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
-  const distractors = new Set<number>()
-  while (distractors.size < 3) {
-    const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
+// Up to two misconception values (kept only when they have the key's digit count, so they cannot
+// stand out by length), then integer-offset distractors placed so the key's rank among the four
+// values is as uniform as the misconceptions allow.
+function makeOptions(correct: number, spread: number = 2, min?: number, misc: number[] = []): { options: string[]; correctIndex: number } {
+  const w = Math.max(3, spread * 3)
+  const ok = (v: number) => v !== correct && (min === undefined || v >= min)
+  const fixed = [...new Set(misc.filter(v => ok(v) && String(v).length === String(correct).length))].slice(0, 2)
+  const below: number[] = []
+  const above: number[] = []
+  for (let d = 1; d <= w; d++) {
+    if (ok(correct - d) && !fixed.includes(correct - d)) below.push(correct - d)
+    if (!fixed.includes(correct + d)) above.push(correct + d)
   }
-  const all = [correct, ...distractors]
-  const shuffled = shuffle(all)
-  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+  const need = 3 - fixed.length
+  const ks: number[] = []
+  for (let k = 0; k <= need; k++) if (k <= below.length && need - k <= above.length) ks.push(k)
+  const k = ks[randInt(0, ks.length - 1)]
+  const all = shuffle([correct, ...fixed, ...shuffle(below).slice(0, k), ...shuffle(above).slice(0, need - k)])
+  return { options: all.map(v => String(Math.round(v * 1e6) / 1e6)), correctIndex: all.indexOf(correct) }
 }
+
+// "mx + b" with no 1x, -1x, 0x, "+ -b" or "+ 0" artifacts.
+function lineExpr(m: number, b: number): string {
+  const mx = m === 0 ? '' : m === 1 ? 'x' : m === -1 ? '-x' : `${m}x`
+  if (!mx) return `${b}`
+  return b === 0 ? mx : b > 0 ? `${mx} + ${b}` : `${mx} - ${-b}`
+}
+// Parenthesize negatives when substituting into a formula: "3 + (-2)".
+function par(v: number): string { return v < 0 ? `(${v})` : `${v}` }
 
 // Uniformly formatted "≈ value" options so the key isn't identifiable by format.
 function makeDecimalOptions(correct: number, extras: number[] = []): { options: string[]; correctIndex: number } {
@@ -68,11 +87,11 @@ function makeDecimalOptions(correct: number, extras: number[] = []): { options: 
     if (v > 0 && !vals.has(v)) { vals.add(v); distractors.push(v) }
   }
   while (distractors.length < 3) {
-    const v = Math.round((c + randInt(1, 12) * 0.5 * (Math.random() < 0.5 ? -1 : 1)) * 10) / 10
+    const v = Math.round((c + randInt(1, 12) * 0.3 * (Math.random() < 0.5 ? -1 : 1)) * 10) / 10
     if (v > 0 && !vals.has(v)) { vals.add(v); distractors.push(v) }
   }
   const all = shuffle([c, ...distractors])
-  return { options: all.map(v => `$\\approx ${v}$`), correctIndex: all.indexOf(c) }
+  return { options: all.map(v => `$\\approx ${v.toFixed(1)}$`), correctIndex: all.indexOf(c) }
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
@@ -89,7 +108,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(30, 80)
       const comp = 90 - a
-      const { options, correctIndex } = makeOptions(comp, 10, 1)
+      const { options, correctIndex } = makeOptions(comp, 10, 1, [180 - a, a])
       return { id: this.id, category: this.category, question: `Two complementary angles measure $${a}°$ and $x°$. Find $x$.`, options, correctIndex, explanation: `Complementary angles sum to $90°$. $x = 90 - ${a} = ${comp}°$.` }
     }
   },
@@ -100,7 +119,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(50, 140)
       const supp = 180 - a
-      const { options, correctIndex } = makeOptions(supp, 15, 1)
+      const { options, correctIndex } = makeOptions(supp, 15, 1, [90 - a, 360 - a])
       return { id: this.id, category: this.category, question: `Find the supplement of a $${a}°$ angle.`, options, correctIndex, explanation: `Supplementary angles sum to $180°$. Supplement $= 180 - ${a} = ${supp}°$.` }
     }
   },
@@ -111,7 +130,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(40, 70)
       const vert = a
-      const { options, correctIndex } = makeOptions(vert, 10, 1)
+      const { options, correctIndex } = makeOptions(vert, 10, 1, [180 - a, 90 - a])
       return { id: this.id, category: this.category, question: `Two lines intersect forming a $${a}°$ angle. What is the measure of the vertical angle?`, options, correctIndex, explanation: `Vertical angles are equal. The vertical angle $= ${a}°$.` }
     }
   },
@@ -133,7 +152,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const ext = randInt(90, 150)
       const int = 180 - ext
-      const { options, correctIndex } = makeOptions(int, 10, 1)
+      const { options, correctIndex } = makeOptions(int, 10, 1, [ext - 90, 360 - ext])
       return { id: this.id, category: this.category, question: `An exterior angle of a triangle is $${ext}°$. What is its adjacent interior angle?`, options, correctIndex, explanation: `An exterior angle and its adjacent interior angle are supplementary: $180 - ${ext} = ${int}°$.` }
     }
   },
@@ -144,7 +163,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(40, 70)
       const alt = a
-      const { options, correctIndex } = makeOptions(alt, 8, 1)
+      const { options, correctIndex } = makeOptions(alt, 8, 1, [180 - a, 90 - a])
       return { id: this.id, category: this.category, question: `Parallel lines cut by a transversal create an angle of $${a}°$. What is the alternate interior angle?`, options, correctIndex, explanation: `Alternate interior angles are equal when lines are parallel: $${alt}°$.` }
     }
   },
@@ -155,7 +174,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(40, 80)
       const co = a
-      const { options, correctIndex } = makeOptions(co, 8, 1)
+      const { options, correctIndex } = makeOptions(co, 8, 1, [180 - a, 90 - a])
       return { id: this.id, category: this.category, question: `A transversal crosses parallel lines creating a $${a}°$ angle. What is the corresponding angle on the other parallel line?`, options, correctIndex, explanation: `Corresponding angles are equal: $${co}°$.` }
     }
   },
@@ -188,7 +207,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const l = randInt(5, 15); const w = randInt(3, 12)
       const p = 2 * (l + w)
-      const { options, correctIndex } = makeOptions(p, 8, 1)
+      const { options, correctIndex } = makeOptions(p, 8, 1, [l + w, l * w])
       return { id: this.id, category: this.category, question: `Find the perimeter of a rectangle with length $${l}$ and width $${w}$.`, options, correctIndex, explanation: `Perimeter $= 2(l + w) = 2(${l} + ${w}) = ${p}$.` }
     }
   },
@@ -199,7 +218,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const b = 2 * randInt(2, 7); const h = randInt(3, 10)
       const area = b * h / 2
-      const { options, correctIndex } = makeOptions(area, 8, 1)
+      const { options, correctIndex } = makeOptions(area, 8, 1, [b * h])
       return { id: this.id, category: this.category, question: `Find the area of a triangle with base $${b}$ and height $${h}$.`, options, correctIndex, explanation: `Area $= \\frac{1}{2}bh = \\frac{1}{2}(${b})(${h}) = ${area}$.` }
     }
   },
@@ -243,7 +262,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const s = randInt(3, 10)
       const area = s * s
-      const { options, correctIndex } = makeOptions(area, 8, 1)
+      const { options, correctIndex } = makeOptions(area, 8, 1, [4 * s, 2 * s])
       return { id: this.id, category: this.category, question: `Find the area of a square with side length $${s}$.`, options, correctIndex, explanation: `Area $= s^2 = ${s}^2 = ${area}$.` }
     }
   },
@@ -254,7 +273,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const s = randInt(3, 10)
       const p = 4 * s
-      const { options, correctIndex } = makeOptions(p, 6, 1)
+      const { options, correctIndex } = makeOptions(p, 6, 1, [s * s, 2 * s])
       return { id: this.id, category: this.category, question: `Find the perimeter of a square with side length $${s}$.`, options, correctIndex, explanation: `Perimeter $= 4s = 4(${s}) = ${p}$.` }
     }
   },
@@ -374,8 +393,10 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const triples = [[3, 4, 5], [5, 12, 13], [8, 15, 17]]
-      const [a, b, c] = triples[randInt(0, triples.length - 1)]
-      const { options, correctIndex } = makeOptions(a, 3, 1)
+      const t = triples[randInt(0, triples.length - 1)]
+      const k = randInt(1, 3)
+      const [a, b, c] = [t[0] * k, t[1] * k, t[2] * k]
+      const { options, correctIndex } = makeOptions(a, 3, 1, [c - b, c + b])
       return { id: this.id, category: this.category, question: `A right triangle has hypotenuse $${c}$ and one leg $${b}$. Find the other leg.`, options, correctIndex, explanation: `$a = \\sqrt{${c}^2 - ${b}^2} = \\sqrt{${c * c} - ${b * b}} = \\sqrt{${c * c - b * b}} = ${a}$.` }
     }
   },
@@ -395,8 +416,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Pythagorean Theorem',
     difficulty: 'easy',
     generate() {
-      const correct = '3-4-5, 5-12-13, 8-15-17, 7-24-25'
-      return { id: this.id, category: this.category, question: 'List four common Pythagorean triples.', ...makeStringOptions(correct, ['2-3-4, 5-6-7', '1-2-3, 4-5-6', '3-5-7, 4-6-8']), explanation: 'Common Pythagorean triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25 (and their multiples).' }
+      // Name the hypotenuse from the right-angle vertex (was "list four triples", whose
+      // key was always the one long option)
+      const letters = shuffle(['P', 'Q', 'R'])
+      const [rt, u, v] = letters
+      const seg = (a: string, b: string) => [a, b].sort().join('')
+      const hyp = seg(u, v), l1 = seg(rt, u), l2 = seg(rt, v)
+      const eq = (a: string, b: string, c: string) => `$${a}^2 + ${b}^2 = ${c}^2$`
+      const correct = eq(l1, l2, hyp)
+      return { id: this.id, category: this.category, question: `In triangle $PQR$, angle $${rt}$ is a right angle. Which equation must be true?`, ...makeStringOptions(correct, [eq(l1, hyp, l2), eq(l2, hyp, l1), `$(${l1} + ${l2})^2 = ${hyp}^2$`]), explanation: `The hypotenuse is the side opposite the right angle at $${rt}$, which is $${hyp}$. The Pythagorean theorem says the squares of the legs $${l1}$ and $${l2}$ add to the square of the hypotenuse.` }
     }
   },
   {
@@ -404,10 +432,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Pythagorean Theorem',
     difficulty: 'hard',
     generate() {
-      const a = randInt(3, 8); const b = randInt(3, 8); const c = randInt(10, 15)
-      const isRight = a * a + b * b === c * c
-      const correct = isRight ? 'Yes, it is a right triangle' : 'No, it is not a right triangle'
-      return { id: this.id, category: this.category, question: `Do sides $${a}$, $${b}$, $${c}$ form a right triangle? Check: $${a}^2 + ${b}^2 = ${a * a + b * b}$, $${c}^2 = ${c * c}$.`, ...makeStringOptions(correct, [isRight ? 'No' : 'Yes', 'Only if angles are given', 'Cannot determine']), explanation: `$${a}^2 + ${b}^2 = ${a * a + b * b} ${isRight ? '=' : '\\neq'} ${c * c} = ${c}^2$. ${isRight ? 'Equal, so right triangle.' : 'Not equal, not a right triangle.'}` }
+      // Converse of the Pythagorean theorem. Every option is a genuine triangle (triangle
+      // inequality holds) and exactly one satisfies a^2 + b^2 = c^2; the student does the check.
+      const bases = [[20, 21, 29], [9, 40, 41], [12, 35, 37], [28, 45, 53], [11, 60, 61], [33, 56, 65], [16, 63, 65], [48, 55, 73]]
+      const [a, b, c] = bases[randInt(0, bases.length - 1)]
+      const isRight = (x: number, y: number, z: number) => x * x + y * y === z * z
+      const near = [[a, b, c + 1], [a + 1, b, c], [a, b + 1, c], [a, b - 1, c], [a - 1, b, c], [a, b, c - 1], [a + 1, b + 1, c + 1]]
+        .filter(([x, y, z]) => !isRight(x, y, z) && x + y > z)
+      const fmt = (t: number[]) => `$${t.join(', ')}$`
+      return { id: this.id, category: this.category, question: 'Which of the following could be the side lengths of a right triangle?', ...makeStringOptions(fmt([a, b, c]), shuffle(near).map(fmt)), explanation: `Check whether the two shorter sides' squares add to the longest side's square: $${a}^2 + ${b}^2 = ${a * a} + ${b * b} = ${c * c} = ${c}^2$. In each other set one side is off by 1, so the equation fails (all four sets do form triangles).` }
     }
   },
   {
@@ -426,9 +459,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Pythagorean Theorem',
     difficulty: 'medium',
     generate() {
-      const k = randInt(2, 4); const a = 3 * k; const b = 4 * k; const c = 5 * k
-      const { options, correctIndex } = makeOptions(c, 5, 1)
-      return { id: this.id, category: this.category, question: `A right triangle has legs $${a}$ and $${b}$. Find the hypotenuse.`, options, correctIndex, explanation: `This is a $${k}\\times$ multiple of the 3-4-5 triple: $${a}$-$${b}$-$${c}$.` }
+      // Diagonal of a rectangle (was a twin of gb-q26's "legs a and b, find the hypotenuse")
+      const t = [[3, 4, 5], [5, 12, 13], [8, 15, 17]][randInt(0, 2)]
+      const k = randInt(1, 3); const a = t[0] * k; const b = t[1] * k; const c = t[2] * k
+      const { options, correctIndex } = makeOptions(c, 2, 1, [a + b, 2 * (a + b)])
+      return { id: this.id, category: this.category, question: `A rectangle is $${b}$ inches long and $${a}$ inches wide. What is the length, in inches, of a diagonal of the rectangle?`, options, correctIndex, explanation: `A diagonal splits the rectangle into two right triangles with legs $${a}$ and $${b}$: $\\sqrt{${a}^2 + ${b}^2} = \\sqrt{${a * a + b * b}} = ${c}$.` }
     }
   },
   {
@@ -450,12 +485,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Coordinate Geometry',
     difficulty: 'medium',
     generate() {
-      const x1 = randInt(-6, 6); const y1 = randInt(-6, 6)
-      let x2 = randInt(-6, 6); let y2 = randInt(-6, 6)
-      while (x2 === x1 && y2 === y1) { x2 = randInt(-6, 6); y2 = randInt(-6, 6) }
+      let x1 = 0, y1 = 0, x2 = 0, y2 = 0
+      do { x1 = randInt(-6, 6); y1 = randInt(-6, 6); x2 = randInt(-6, 6); y2 = randInt(-6, 6) } while ((x2 === x1 && y2 === y1) || [x1, y1, x2, y2].includes(0))
       const mx = (x1 + x2) / 2; const my = (y1 + y2) / 2
       const correct = `$(${mx}, ${my})$`
-      return { id: this.id, category: this.category, question: `Find the midpoint of $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`, ...makeStringOptions(correct, [`$(${x1}, ${y2})$`, `$(${x2}, ${y1})$`, `$(${mx + 1}, ${my - 1})$`, `$(${mx - 1}, ${my + 1})$`, `$(${mx + 2}, ${my})$`]), explanation: `Midpoint $= \\left(\\frac{${x1} + ${x2}}{2}, \\frac{${y1} + ${y2}}{2}\\right) = (${mx}, ${my})$.` }
+      return { id: this.id, category: this.category, question: `Find the midpoint of $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`, ...makeStringOptions(correct, [`$(${x1}, ${y2})$`, `$(${x2}, ${y1})$`, `$(${mx + 1}, ${my - 1})$`, `$(${mx - 1}, ${my + 1})$`, `$(${mx + 2}, ${my})$`]), explanation: `Midpoint $= \\left(\\frac{${x1} + ${par(x2)}}{2}, \\frac{${y1} + ${par(y2)}}{2}\\right) = (${mx}, ${my})$.` }
     }
   },
   {
@@ -463,12 +497,13 @@ const questionPool: QuestionTemplate[] = [
     category: 'Coordinate Geometry',
     difficulty: 'medium',
     generate() {
-      const x1 = randInt(-5, 0); const y1 = randInt(-5, 0)
-      const x2 = randInt(1, 5); const y2 = randInt(1, 5)
+      const x1 = randInt(-5, 0); const y1 = randInt(-5, 5)
+      const x2 = randInt(1, 5); let y2 = randInt(-5, 5)
+      while (y2 === y1) y2 = randInt(-5, 5)
       const rise = y2 - y1; const run = x2 - x1
       const v = rise / run
       const correct = `$${fmtFrac(rise, run)}$`
-      const candPairs: [number, number][] = [[-rise, run], [run, rise], [rise + run, run], [rise + 2 * run, run], [-run, rise]]
+      const candPairs: [number, number][] = [[-rise, run], [run, rise], [rise + run, run], [-run, rise], [rise - run, run], [rise, 2 * run], [2 * rise, run]]
       const seen = new Set<number>([v]); const distractors: string[] = []
       for (const [n, d] of candPairs) {
         if (distractors.length >= 3) break
@@ -493,9 +528,13 @@ const questionPool: QuestionTemplate[] = [
     category: 'Coordinate Geometry',
     difficulty: 'easy',
     generate() {
-      const m = randInt(-3, 3); const b = randInt(-5, 5)
-      const correct = `Parallel (same slope $${m}$)`
-      return { id: this.id, category: this.category, question: `Line 1: $y = ${m}x + ${b}$. Line 2: $y = ${m}x + ${b + randInt(1, 5)}$. What relationship?`, ...makeStringOptions(correct, ['Perpendicular', 'Intersecting', 'Identical']), explanation: `Both lines have slope $${m}$ but different $y$-intercepts, so they are parallel.` }
+      let m = 0
+      while (m === 0) m = randInt(-4, 4)
+      const b = randInt(-5, 5)
+      let b2 = b
+      while (b2 === b) b2 = randInt(-6, 6)
+      const correct = 'Parallel lines'
+      return { id: this.id, category: this.category, question: `Line 1 has equation $y = ${lineExpr(m, b)}$ and line 2 has equation $y = ${lineExpr(m, b2)}$. How are the two lines related?`, ...makeStringOptions(correct, ['Perpendicular', 'The same line', 'Crossing lines']), explanation: `Both lines have slope $${m}$ but different $y$-intercepts ($${b}$ and $${b2}$), so they never meet: they are parallel.` }
     }
   },
   {
@@ -506,7 +545,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(1, 4); const b = randInt(-5, 5); const x = randInt(-3, 3)
       const y = m * x + b
       const { options, correctIndex } = makeOptions(y, 5)
-      return { id: this.id, category: this.category, question: `Find $y$ when $x = ${x}$ on the line $y = ${m}x + ${b}$.`, options, correctIndex, explanation: `$y = ${m}(${x}) + ${b} = ${m * x} + ${b} = ${y}$.` }
+      return { id: this.id, category: this.category, question: `Find $y$ when $x = ${x}$ on the line $y = ${lineExpr(m, b)}$.`, options, correctIndex, explanation: `$y = ${m === 1 ? '' : m}(${x})${b === 0 ? '' : b > 0 ? ` + ${b}` : ` - ${-b}`} = ${y}$.` }
     }
   },
   {
@@ -514,17 +553,14 @@ const questionPool: QuestionTemplate[] = [
     category: 'Coordinate Geometry',
     difficulty: 'hard',
     generate() {
-      const m = randInt(1, 3); const x1 = randInt(-3, 3); const y1 = randInt(-3, 3)
+      const m = randInt(1, 3) * (Math.random() < 0.5 ? -1 : 1); const x1 = randInt(-3, 3); const y1 = randInt(-3, 3)
       const b = y1 - m * x1
-      const lineStr = (slope: number, intercept: number): string => {
-        const bPart = intercept === 0 ? '' : intercept > 0 ? ` + ${intercept}` : ` - ${-intercept}`
-        return `y = ${slope}x${bPart}`
-      }
+      const lineStr = (slope: number, intercept: number): string => `y = ${lineExpr(slope, intercept)}`
       const correct = `$${lineStr(m, b)}$`
       const d1 = `$${lineStr(-m, b)}$`
       const d2 = `$${lineStr(m, b === 0 ? randInt(2, 4) : -b)}$`
       const d3 = `$${lineStr(b === m || b === 0 ? m + 2 : b, m)}$`
-      return { id: this.id, category: this.category, question: `Write the equation of the line through $(${x1}, ${y1})$ with slope $${m}$.`, ...makeStringOptions(correct, [d1, d2, d3]), explanation: `$y - (${y1}) = ${m}(x - (${x1}))$, so $${lineStr(m, b)}$.` }
+      return { id: this.id, category: this.category, question: `Write the equation of the line through $(${x1}, ${y1})$ with slope $${m}$.`, ...makeStringOptions(correct, [d1, d2, d3, `$${lineStr(m, b + m)}$`, `$${lineStr(m, y1)}$`]), explanation: `$y - (${y1}) = ${m}(x - (${x1}))$, so $${lineStr(m, b)}$.` }
     }
   },
   {
