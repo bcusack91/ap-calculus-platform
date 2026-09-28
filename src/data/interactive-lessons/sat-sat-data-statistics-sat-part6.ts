@@ -72,15 +72,15 @@ When the SAT says "95% confidence interval is $52\\% \\pm 3\\%$":
         questions: [
           {
             question: 'A researcher surveys students in the library about study habits. Why might this sample be biased?',
-            options: ['Students in the library may study more than the average student', 'The library is too quiet for surveys', 'All students study equally', 'Libraries are representative of all locations'],
+            options: ['People found there may study more than typical students', 'The number of students surveyed may be too small', 'Students were not randomly assigned to study habits', 'Surveys cannot measure how students study'],
             correctAnswer: 0,
-            explanation: 'This is selection bias — library-goers likely study more, making the sample unrepresentative of all students.'
+            explanation: 'This is selection bias — library-goers likely study more, making the sample unrepresentative of all students. A small sample makes results less precise but is not the source of this bias, and random assignment matters for experiments, not for choosing whom to survey.'
           },
           {
             question: 'A study finds that ice cream sales and drowning rates are positively correlated. Can we conclude ice cream causes drowning?',
-            options: ['No — this is observational, a confounding variable (hot weather) likely explains both', 'Yes — the correlation is clear', 'Only if the sample size is large', 'Yes — if the p-value is small'],
+            options: ['No, because a third factor like hot weather may drive both', 'Yes, because the positive correlation is strong and clear', 'Yes, as long as the study used a large enough sample', 'No, because the correlation between them is not perfect'],
             correctAnswer: 0,
-            explanation: 'Correlation ≠ causation. Hot weather is a confounding variable that increases both ice cream sales and swimming (leading to more drownings).'
+            explanation: 'This is an observational study, and correlation ≠ causation. Hot weather is a confounding variable that increases both ice cream sales and swimming (leading to more drownings). A larger sample or a stronger correlation would not fix that; only random assignment could.'
           },
           {
             question: 'Which study design can establish a cause-and-effect relationship?',
@@ -129,19 +129,19 @@ When the SAT says "95% confidence interval is $52\\% \\pm 3\\%$":
         questions: [
           {
             question: 'A poll of 1,200 randomly selected adults shows 45% ± 3% favor a new law. Which conclusion is valid?',
-            options: ['Between 42% and 48% of the population likely favors the law', 'Exactly 45% of the population favors the law', 'The law should not be passed', '3% of adults are uncertain'],
+            options: ['Between 42% and 48% of all adults likely favor the law', 'Between 45% and 48% of all adults likely favor the law', 'Exactly 45% of all adults in the population favor the law', 'Between 39% and 51% of all adults likely favor the law'],
             correctAnswer: 0,
-            explanation: 'The margin of error creates a range (42%–48%) for the true population value. We cannot say "exactly 45%."'
+            explanation: 'The margin of error extends 3 points on BOTH sides of the estimate: $45\\% - 3\\% = 42\\%$ to $45\\% + 3\\% = 48\\%$. A sample cannot show "exactly 45%," and the margin is applied once, not doubled (which would give 39% to 51%).'
           },
           {
             question: 'A study selects volunteers and randomly assigns them to exercise or no-exercise groups. The exercise group has lower blood pressure. Why can\'t we generalize to all adults?',
-            options: ['Volunteers are not a random sample of the population', 'The study was too short', 'Blood pressure varies too much', 'The sample size was too small'],
+            options: ['The participants were not a random sample of the whole population', 'The participants were not randomly assigned to the two groups', 'Blood pressure varies too much from day to day', 'The participants were too few to be useful'],
             correctAnswer: 0,
-            explanation: 'Random assignment → can conclude causation. But volunteers ≠ random sample → cannot generalize to all adults (only to "people like these volunteers").'
+            explanation: 'The volunteers WERE randomly assigned, so the study supports causation for people like them. But volunteers are not a random sample of all adults, so the results cannot be generalized to all adults.'
           },
           {
             question: 'A survey asks: "Don\'t you agree that taxes are too high?" This is an example of:',
-            options: ['Response bias (leading question)', 'Selection bias', 'Voluntary response bias', 'Random sampling'],
+            options: ['Response bias', 'Selection bias', 'Voluntary response bias', 'Random sampling'],
             correctAnswer: 0,
             explanation: '"Don\'t you agree..." leads respondents toward one answer. This is response bias from a poorly worded question.'
           }
@@ -156,10 +156,10 @@ When the SAT says "95% confidence interval is $52\\% \\pm 3\\%$":
         dropdowns: [
           { label: 'Researchers track 5,000 people over 10 years, recording diet and heart disease rates', options: ['Observational study', 'Experiment', 'Survey', 'Census'] },
           { label: 'Students are randomly assigned to use flashcards or re-reading, then tested', options: ['Experiment', 'Observational study', 'Survey', 'Case study'] },
-          { label: 'A website asks visitors to rate their satisfaction with the product', options: ['Voluntary response survey (biased)', 'Random sample survey', 'Experiment', 'Observational study'] },
-          { label: 'A doctor prescribes a new drug to patients who ask for it and tracks outcomes', options: ['Observational (no random assignment)', 'Experiment', 'Randomized trial', 'Survey'] }
+          { label: 'A website asks visitors to rate their satisfaction with the product', options: ['Voluntary response survey', 'Random sample survey', 'Experiment', 'Observational study'] },
+          { label: 'A doctor prescribes a new drug to patients who ask for it and tracks outcomes', options: ['Observational study', 'Experiment', 'Randomized trial', 'Survey'] }
         ],
-        correctAnswers: ['Observational study', 'Experiment', 'Voluntary response survey (biased)', 'Observational (no random assignment)'],
+        correctAnswers: ['Observational study', 'Experiment', 'Voluntary response survey', 'Observational study'],
         hint1: 'If researchers just observe/record without intervening → observational.',
         hint2: 'Random assignment to groups → experiment.',
         hint3: 'Only people who choose to respond → voluntary response bias. Doctor prescribing based on requests → no random assignment → observational.',

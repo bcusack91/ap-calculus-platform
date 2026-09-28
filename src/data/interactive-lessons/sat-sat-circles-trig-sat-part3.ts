@@ -105,7 +105,7 @@ The diagonal creates a $45\\text{-}45\\text{-}90$ triangle: $d = 6\\sqrt{2}$.
 
 2) $\\sin 30° + \\cos 60° = ?$ (enter a decimal or fraction)
 
-3) A $45\\text{-}45\\text{-}90$ triangle has hypotenuse $10$. What is the length of each leg? Give the exact decimal (rounded to 2 places).
+3) A $45\\text{-}45\\text{-}90$ triangle has hypotenuse $10$. What is the length of each leg? Round to the nearest hundredth.
       `,
       exercise: {
         boxes: 3,

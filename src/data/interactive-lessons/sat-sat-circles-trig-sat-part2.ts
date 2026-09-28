@@ -156,9 +156,9 @@ $$\\frac{3\\pi}{4} \\times \\frac{180}{\\pi} = \\frac{3 \\times 180}{4} = 135°$
         questions: [
           {
             question: 'A circular track has a radius of $50$ meters. A runner completes $\\frac{3}{8}$ of a lap. How far did the runner travel, in meters?',
-            options: ['$\\frac{75\\pi}{2}$', '$\\frac{25\\pi}{4}$', '$\\frac{150\\pi}{4}$', '$\\frac{100\\pi}{3}$'],
+            options: ['$\\frac{75\\pi}{2}$', '$\\frac{25\\pi}{4}$', '$\\frac{75\\pi}{4}$', '$\\frac{100\\pi}{3}$'],
             correctAnswer: 0,
-            explanation: 'Full circumference $= 2\\pi(50)=100\\pi$. $\\frac{3}{8}$ of that $= \\frac{3}{8}\\cdot100\\pi = \\frac{300\\pi}{8} = \\frac{75\\pi}{2}$.'
+            explanation: 'Full circumference $= 2\\pi(50)=100\\pi$. $\\frac{3}{8}$ of that $= \\frac{3}{8}\\cdot100\\pi = \\frac{300\\pi}{8} = \\frac{75\\pi}{2}$. Using $\\pi r = 50\\pi$ instead of the full circumference gives $\\frac{75\\pi}{4}$, half the true distance.'
           },
           {
             question: 'A sector of a circle with radius $r$ has perimeter $5r$. What is the central angle in radians?',

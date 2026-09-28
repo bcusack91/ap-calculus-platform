@@ -62,7 +62,9 @@ $$\\sin \\theta = \\frac{4}{5} \\quad (\\text{positive in QI})$$
 
 **Example 2:** Simplify $\\frac{\\sin^2 x + \\cos^2 x}{\\cos x}$.
 
-$$= \\frac{1}{\\cos x} = \\sec x$$
+$$= \\frac{1}{\\cos x}$$
+
+The numerator is exactly $1$ by the identity, so the whole expression collapses.
 
 **Example 3:** If $\\sin \\theta = 0.6$, what is $\\sin^2 \\theta + \\cos^2 \\theta$?
 

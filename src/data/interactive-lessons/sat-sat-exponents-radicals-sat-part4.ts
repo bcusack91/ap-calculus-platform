@@ -14,10 +14,10 @@ If $2^{3x} = 8^{x+1}$:
 - Rewrite $8 = 2^3$: $2^{3x} = (2^3)^{x+1} = 2^{3x+3}$
 - Bases match → $3x = 3x + 3$? That gives $0 = 3$, so **no solution**.
 
-### Strategy 2: Use Logarithmic Thinking
+### Strategy 2: Bracket the Answer with Whole-Number Powers
 
-If $3^x = 15$, the SAT won't expect you to compute $\\log_3 15$, but it might ask:
-- "Between which two integers is $x$?" Since $3^2 = 9$ and $3^3 = 27$, $x$ is between 2 and 3.
+If $3^x = 15$, no whole-number exponent works, because $15$ is not a power of $3$. The SAT will not ask for an exact value here, but it might ask:
+- "Between which two integers is $x$?" Since $3^2 = 9 < 15 < 27 = 3^3$, $x$ is between 2 and 3.
 
 ### Strategy 3: Exponential Equations from Context
 

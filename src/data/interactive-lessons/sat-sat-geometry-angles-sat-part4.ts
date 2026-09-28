@@ -38,7 +38,7 @@ $$\\text{Inscribed angle} = \\frac{1}{2} \\times \\text{Central angle}$$
 
 ### Tangent Lines
 
-A tangent to a circle is perpendicular to the radius at the point of tangency (`
+A tangent to a circle is perpendicular to the radius at the point of tangency, so the radius and the tangent line form a right angle there.`
     },
     {
       id: 'geo4-quiz',

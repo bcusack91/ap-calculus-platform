@@ -52,15 +52,15 @@ $$\\text{Residual} = \\text{Actual} - \\text{Predicted}$$
           },
           {
             question: 'A scatterplot of study hours vs. exam score has a line of best fit with slope 8.5. This means:',
-            options: ['Each additional hour of study predicts an 8.5 point increase in exam score', 'Each 8.5 hours of study guarantees a 1 point increase', 'The average exam score is 8.5', 'There is a weak positive correlation'],
+            options: ['Each additional hour of study predicts an 8.5 point increase in exam score', 'Each additional hour of study guarantees an 8.5 point increase in exam score', 'Each additional point of exam score requires 8.5 more hours of study', 'The average exam score for the students in the scatterplot is 8.5'],
             correctAnswer: 0,
-            explanation: 'The slope represents the predicted change in $y$ (score) per unit change in $x$ (hours). Each additional hour → predicted 8.5 point increase.'
+            explanation: 'The slope represents the predicted change in $y$ (score) per unit change in $x$ (hours). Each additional hour → predicted 8.5 point increase. A regression line predicts; it does not guarantee, and the slope is score per hour, not hours per point.'
           },
           {
             question: 'If most residuals in a residual plot are positive, this suggests:',
-            options: ['The line of best fit underestimates the data', 'The line of best fit overestimates the data', 'The model is perfect', 'There is no correlation'],
+            options: ['The line of best fit mostly underestimates the actual values', 'The line of best fit mostly overestimates the actual values', 'The line of best fit passes directly through most of the points', 'The line of best fit must have a positive slope'],
             correctAnswer: 0,
-            explanation: 'Positive residuals mean actual > predicted, so the line is below most points — it underestimates.'
+            explanation: 'Positive residuals mean actual > predicted, so the line is below most points — it underestimates. The sign of the residuals says nothing about the sign of the slope.'
           }
         ]
       }
@@ -109,19 +109,19 @@ If a residual plot shows a clear curve, a linear model is NOT the best fit — t
         questions: [
           {
             question: '$\\hat{y} = -1.2x + 100$, where $x$ = absences and $y$ = final grade. What does the slope mean?',
-            options: ['Each additional absence predicts a 1.2 point decrease in final grade', 'Each additional absence causes a 1.2 point drop', 'The final grade starts at 1.2', 'Absences and grades are unrelated'],
+            options: ['Each additional absence predicts a 1.2 point decrease in final grade', 'Each additional absence causes a 1.2 point decrease in final grade', 'Each additional point of final grade predicts 1.2 fewer absences', 'A student with no absences is predicted to earn a grade of 1.2'],
             correctAnswer: 0,
             explanation: 'Negative slope: as absences increase, grade decreases. Each additional absence → predicted decrease of 1.2 points. Use "predicts," not "causes."'
           },
           {
             question: 'A residual plot shows a U-shape (curved pattern). This suggests:',
-            options: ['A non-linear model would fit better', 'The linear model is excellent', 'The data has no pattern', 'The slope should be negative'],
+            options: ['A non-linear model would fit better', 'The linear model already fits the data well', 'The data has no pattern', 'The slope should be negative'],
             correctAnswer: 0,
             explanation: 'A pattern in the residual plot (like a curve) means the linear model is missing something — a quadratic or other non-linear model would fit better.'
           },
           {
             question: 'The correlation coefficient $r = -0.92$. This indicates:',
-            options: ['Strong negative linear relationship', 'Weak negative relationship', 'Strong positive relationship', 'No relationship'],
+            options: ['Strong negative linear relationship', 'Weak negative linear relationship', 'Strong positive linear relationship', 'No linear relationship'],
             correctAnswer: 0,
             explanation: '$r$ close to $-1$ means strong negative correlation. The points closely follow a downward line.'
           }
@@ -134,7 +134,7 @@ If a residual plot shows a clear curve, a linear model is NOT the best fit — t
       content: '**Interpret the Regression** 🔍\n\nFor the equation $\\hat{y} = 2.5x + 40$ where $x$ = study hours and $y$ = test score:',
       exercise: {
         dropdowns: [
-          { label: 'The slope (2.5) means:', options: ['Each additional study hour predicts a 2.5 point increase', 'The test score is always 2.5', 'Studying 2.5 hours is the minimum', '2.5% of students passed'] },
+          { label: 'The slope (2.5) means:', options: ['Each additional study hour predicts a 2.5 point increase', 'Each additional point of score requires 2.5 more hours', 'Every student studied at least 2.5 hours', '2.5% of the students passed the test'] },
           { label: 'The y-intercept (40) represents:', options: ['Predicted score with 0 study hours', 'The minimum possible score', 'The average score', 'The number of students'] },
           { label: 'A student who studies 12 hours, predicted score:', options: ['70', '52.5', '40', '30'] },
           { label: 'If actual score at $x=12$ is 75, the residual is:', options: ['5', '−5', '75', '70'] }

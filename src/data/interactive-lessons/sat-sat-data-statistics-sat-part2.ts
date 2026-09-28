@@ -120,7 +120,7 @@ A value is an **outlier** if it's more than $1.5 \\times \\text{IQR}$ beyond $Q_
           },
           {
             question: 'Two datasets have the same range but different SDs. How is this possible?',
-            options: ['One has values clustered near the mean; the other is spread evenly', 'This is impossible', 'They must have different means', 'Range and SD always match'],
+            options: ['One set has most of its values near the mean', 'This is impossible for two data sets', 'The two sets must have different means', 'Equal ranges always give equal SDs'],
             correctAnswer: 0,
             explanation: 'Range only uses the max and min. SD uses ALL values. Clustering near the mean → low SD even with a wide range.'
           }

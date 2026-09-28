@@ -53,10 +53,10 @@ Range $=$ max $-$ min
             explanation: 'The mean is pulled up by the outlier to $130/6 ≈ 21.7$, while the median is $(7 + 7)/2 = 7$ and mode is 7 — both unaffected.'
           },
           {
-            question: 'The median of 9 numbers in order is 42 (the 5th number). If a new number 50 is added, the new median is:',
-            options: ['$\\frac{42 + 46}{2}$ if the 6th number is 46', '$50$', '$42$', 'Cannot determine without more info'],
-            correctAnswer: 3,
-            explanation: 'With 10 numbers, the median is the average of the 5th and 6th values. We know the 5th is 42, but we need the 6th value to determine the new median.'
+            question: 'Nine numbers are listed in increasing order. The 5th number (the median) is 42 and the 6th number is 46. If the number 50 is added to the list, what is the new median?',
+            options: ['$44$', '$42$', '$46$', '$50$'],
+            correctAnswer: 0,
+            explanation: 'With 10 numbers, the median is the average of the 5th and 6th values. Since $50 > 46$, the new number goes above both, so the 5th and 6th values are still 42 and 46. New median $= \\frac{42 + 46}{2} = 44$.'
           }
         ]
       }
@@ -110,10 +110,10 @@ Range $=$ max $-$ min
             explanation: 'Need total $= 85 \\times 5 = 425$. Current sum $= 82+91+78+85 = 336$. Need $425 - 336 = 89$.'
           },
           {
-            question: 'Data set: $\\{3, 7, 7, 10, 12, x\\}$ in order. If the median is 8.5, what is $x$?',
-            options: ['$x = 10$ (median = $(7+10)/2 = 8.5$)', '$x = 8$', '$x = 9$', '$x = 17$'],
+            question: 'Data set: $\\{3, 7, 7, x, 12, 15\\}$, listed in increasing order. If the median is 8.5, what is $x$?',
+            options: ['$10$', '$8.5$', '$9$', '$17$'],
             correctAnswer: 0,
-            explanation: '6 values → median = average of 3rd and 4th. The 3rd value is 7. We need $(7 + \\text{4th})/2 = 8.5$, so 4th value = 10. Since 10 is already there, $x = 10$ works.'
+            explanation: '6 values → median = average of the 3rd and 4th values. The 3rd value is 7 and the 4th is $x$, so $\\frac{7 + x}{2} = 8.5$ → $7 + x = 17$ → $x = 10$. (Setting $x$ equal to the median gives 8.5; forgetting to subtract the 7 gives 17.)'
           },
           {
             question: 'Group A (10 people, mean 60) and Group B (40 people, mean 80). Combined mean?',
@@ -132,7 +132,7 @@ Range $=$ max $-$ min
         dropdowns: [
           { label: 'Salaries at a company where the CEO makes \\$10M and everyone else makes ~\\$60K', options: ['Median (outlier skews mean)', 'Mean (more accurate)', 'Mode (most common)', 'Range'] },
           { label: 'Test scores that are evenly distributed between 60 and 100', options: ['Mean (no outliers, symmetric)', 'Median (always better)', 'Mode (most frequent)', 'Range'] },
-          { label: 'Home prices in a neighborhood where one mansion sold for $5M', options: ['Median (outlier skews mean)', 'Mean (includes all data)', 'Mode (typical price)', 'Range'] },
+          { label: 'Home prices in a neighborhood where one mansion sold for \\$5M', options: ['Median (outlier skews mean)', 'Mean (includes all data)', 'Mode (typical price)', 'Range'] },
           { label: '"Find the average score to determine the class grade"', options: ['Mean (average = mean)', 'Median (middle value)', 'Mode (most common)', 'Cannot determine'] }
         ],
         correctAnswers: ['Median (outlier skews mean)', 'Mean (no outliers, symmetric)', 'Median (outlier skews mean)', 'Mean (average = mean)'],

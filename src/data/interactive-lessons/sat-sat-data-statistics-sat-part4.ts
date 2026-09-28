@@ -57,7 +57,7 @@ In this example they happen to give the same answer because both totals are 70, 
 
 | Question | Type | Calculation |
 |----------|------|-------------|
-| P(sports AND club) | Joint | $30/120 = 25\\%$ |
+| Selected from all students: sports AND club? | Joint | $30/120 = 25\\%$ |
 | Selected from sports players: in the club? | "From" the sports group | $30/55 ≈ 54.5\\%$ |
 | Selected from club members: plays sports? | "From" the club group | $30/80 = 37.5\\%$ |`
     },
@@ -75,15 +75,15 @@ In this example they happen to give the same answer because both totals are 70, 
           },
           {
             question: 'Using the same table, what is the probability that a randomly chosen person is male AND prefers dogs?',
-            options: ['$1/3$', '$5/8$', '$1/2$', '$50/80$'],
+            options: ['$1/3$', '$5/8$', '$1/2$', '$1/5$'],
             correctAnswer: 0,
-            explanation: 'Joint probability = $50/150 = 1/3$. The denominator is the grand total.'
+            explanation: 'The person is chosen from everyone, so use one cell over the grand total: $50/150 = 1/3$. ($5/8 = 50/80$ uses the male row total, which answers a "selected from the males" question instead.)'
           },
           {
-            question: 'Among dog owners, which gender is more represented?',
-            options: ['Males ($50/80 = 62.5\\%$ of dog owners are male)', 'Females ($30/80 = 37.5\\%$)', 'Equal', 'Cannot determine'],
+            question: 'Using the same table, what percent of the people who prefer dogs are male?',
+            options: ['$62.5\\%$', '$33.3\\%$', '$37.5\\%$', '$50\\%$'],
             correctAnswer: 0,
-            explanation: 'Of 80 dog owners, 50 are male (62.5%) and 30 are female (37.5%). Males dominate the dog preference.'
+            explanation: 'Of the 80 people who prefer dogs, 50 are male: $50/80 = 62.5\\%$. Using the grand total gives $50/150 ≈ 33.3\\%$, and $37.5\\%$ is the female share of dog lovers.'
           }
         ]
       }
@@ -91,11 +91,11 @@ In this example they happen to give the same answer because both totals are 70, 
     {
       id: 'ds4-text2',
       type: 'text' as const,
-      content: `### Independence in Two-Way Tables
+      content: `### Association in Two-Way Tables
 
 Two variables show **no association** when each group has the SAME rate — e.g., juniors and seniors choosing pizza at equal percentages. The SAT asks this as "do the data support an association?", always comparing group rates in words.
 
-From the pet table: $P(\\text{cat}) = 70/150 ≈ 46.7\\%$. But $P(\\text{cat | male}) = 30/80 = 37.5\\%$. Since $37.5\\% \\neq 46.7\\%$, gender and pet preference are **not independent**.
+From the pet table: of the 80 males, 30 prefer cats ($30/80 = 37.5\\%$), while of the 70 females, 40 prefer cats ($40/70 ≈ 57.1\\%$). The two groups prefer cats at clearly different rates, so the data suggest an **association** between gender and pet preference.
 
 ### Worked Example 3 — Relative Frequency Table
 
@@ -124,9 +124,9 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
         questions: [
           {
             question: 'In a survey, 200 students were asked about music preference. What fraction of pop fans are male?\n\n|  | Rock | Pop |\n| --- | --- | --- |\n| Male | 60 | 40 |\n| Female | 30 | 70 |',
-            options: ['$4/11$', '$40/200$', '$40/100$', '$4/20$'],
+            options: ['$4/11$', '$40/200$', '$40/100$', '$4/9$'],
             correctAnswer: 0,
-            explanation: 'Total pop fans = $40 + 70 = 110$. Males who like pop = 40. Fraction = $40/110 = 4/11$.'
+            explanation: 'Total pop fans = $40 + 70 = 110$. Males who like pop = 40. Fraction = $40/110 = 4/11$. ($40/100$ uses the male row total and $4/9 = 40/90$ uses the rock column.)'
           },
           {
             question: 'Using the sports/club table below, what percentage of non-athletes are in a club?\n\n|  | Club | No Club |\n| --- | --- | --- |\n| Sports | 30 | 25 |\n| No Sports | 50 | 15 |',
@@ -136,7 +136,7 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
           },
           {
             question: 'A table shows 40 of 100 surveyed teens and 20 of 50 surveyed adults own a bike. Do the data suggest an association between age group and bike ownership?',
-            options: ['No — both groups own bikes at the same 40% rate', 'Yes — teens are twice as likely to own bikes', 'Yes — more teens than adults own bikes', 'Cannot be determined from a table'],
+            options: ['No, because both groups own bikes at exactly the same rate', 'Yes, because twice as many teens as adults own bikes', 'Yes, because more teens than adults were surveyed', 'No, because the two groups were different sizes'],
             correctAnswer: 0,
             explanation: 'Compare RATES, not counts: teens 40/100 = 40%, adults 20/50 = 40%. Equal rates → the data do not suggest an association.'
           }

@@ -130,9 +130,9 @@ Juniors were slightly more likely. Compare each group's RATE, never the raw coun
           { label: '"Selected at random from all students surveyed"', options: ['The grand total', 'The row total', 'The column total', 'One cell'] },
           { label: '"Selected at random from the sophomores"', options: ['The sophomore row total', 'The grand total', 'The largest cell', 'The senior row total'] },
           { label: '"Selected at random from those who answered Yes"', options: ['The Yes column total', 'The grand total', 'The No column total', 'One cell'] },
-          { label: '"Probability the student is a junior AND answered No"', options: ['The grand total (with the junior-No cell on top)', 'The junior row total', 'The No column total', 'Cannot be found from a table'] }
+          { label: '"Probability the student is a junior AND answered No"', options: ['The grand total', 'The junior row total', 'The No column total', 'Cannot be found from a table'] }
         ],
-        correctAnswers: ['The grand total', 'The sophomore row total', 'The Yes column total', 'The grand total (with the junior-No cell on top)'],
+        correctAnswers: ['The grand total', 'The sophomore row total', 'The Yes column total', 'The grand total'],
         hint1: 'No restriction mentioned → whole table.',
         hint2: '"From the sophomores" → only that row exists now.',
         hint3: '"From those who answered Yes" → only that column. "A and B" from everyone → cell over grand total.',

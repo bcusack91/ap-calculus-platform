@@ -86,7 +86,7 @@ export const satProbSolvDataPart7Data = {
 | Mean | $\\frac{\\text{sum}}{n}$ | Outliers distort |
 | SD | Spread from mean | Add constant → SD unchanged |
 | Scatterplots | Slope = rate of change | Extrapolation ≠ interpolation |
-| Probability | Complement for "at least one" | With vs. without replacement |
+| Probability | Cell ÷ the group named after "from" | Wrong denominator |
 
 ### Time Management for This Section
 
@@ -117,9 +117,9 @@ export const satProbSolvDataPart7Data = {
           },
           {
             question: 'A scatterplot has $r = -0.92$. Which statement is true?',
-            options: ['Strong negative linear association', 'Weak negative association', 'Strong positive association', '$x$ causes $y$ to decrease'],
+            options: ['Strong negative linear association', 'Weak negative linear association', 'Strong positive linear association', 'An increase in $x$ causes $y$ to decrease'],
             correctAnswer: 0,
-            explanation: '$|r| = 0.92$ is close to 1, indicating strong correlation. The negative sign means as $x$ increases, $y$ decreases. Correlation does NOT mean causation (ruling out D).'
+            explanation: '$|r| = 0.92$ is close to 1, indicating strong correlation. The negative sign means as $x$ increases, $y$ decreases. Correlation does NOT mean causation, so a claim that $x$ causes $y$ to decrease goes too far.'
           }
         ]
       }
@@ -132,7 +132,7 @@ export const satProbSolvDataPart7Data = {
         dropdowns: [
           'Ratio 3:7, total 50. Smaller group = [15|21|30|35]',
           '25% increase then 20% decrease. Net multiplier = [1.00|0.95|1.05|1.45]',
-          'A table: 24 of 60 juniors and 30 of 40 seniors have jobs. Selected at random from seniors, P(has job) = [0.75|0.40|0.54|0.30]',
+          'A table: 24 of 60 juniors and 30 of 40 seniors have jobs. Selected at random from seniors, probability of having a job = [0.75|0.40|0.54|0.30]',
           'Mean = 70, every value +5. New mean = [75|70|65|350]'
         ],
         correctAnswers: ['15', '1.00', '0.75', '75'],
@@ -160,7 +160,7 @@ export const satProbSolvDataPart7Data = {
 ### Top Strategies
 1. **Read the question carefully** — identify what the denominator should be
 2. **Use multipliers** for percent problems
-3. **Complement** for "at least one" probability
+3. **1 minus** for "NOT" probability questions
 4. **Median** when data has outliers
 5. **Check your answer** — does it make sense in context?
 

@@ -52,7 +52,7 @@ When the SAT shows a figure with parallel lines, check if they actually SAY the 
       exercise: {
         questions: [
           {
-            question: 'Two parallel lines are cut by a transversal. One of the angles formed is $65°$. What is the measure of the co-interior angle on the same side?',
+            question: 'Two parallel lines are cut by a transversal. One of the interior angles formed is $65°$. What is the measure of the co-interior angle on the same side of the transversal?',
             options: ['$115°$', '$65°$', '$25°$', '$130°$'],
             correctAnswer: 0,
             explanation: 'Co-interior angles (same-side interior) are supplementary: $180° - 65° = 115°$.'
@@ -121,7 +121,7 @@ When the SAT shows a figure with parallel lines, check if they actually SAY the 
           },
           {
             question: 'In △PQR, $\\angle P = 4x°$, $\\angle Q = (x + 10)°$, $\\angle R = (x - 10)°$. The triangle is:',
-            options: ['Obtuse (largest angle $> 90°$)', 'Right (one angle $= 90°$)', 'Acute (all angles $< 90°$)', 'Equilateral'],
+            options: ['Obtuse (largest angle $> 90°$)', 'Right (one angle $= 90°$)', 'Acute (all angles $< 90°$)', 'Equilateral (all angles $= 60°$)'],
             correctAnswer: 0,
             explanation: '$4x + (x + 10) + (x - 10) = 180$ → $6x = 180$ → $x = 30$. Angles: $120°$, $40°$, $20°$. Since $120° > 90°$, the triangle is obtuse.'
           },

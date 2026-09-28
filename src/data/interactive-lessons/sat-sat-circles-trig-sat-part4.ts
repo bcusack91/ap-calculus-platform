@@ -66,7 +66,7 @@ A handy mnemonic for which trig functions are positive:
 | IV | $\\cos$ only | **C**alculus |
 
 **Example:** $\\sin 210°$
-1. QII​I; reference angle $= 210° - 180° = 30°$.
+1. QIII; reference angle $= 210° - 180° = 30°$.
 2. $\\sin 30° = \\frac{1}{2}$.
 3. Sine is negative in QIII: $\\sin 210° = -\\frac{1}{2}$.
       `

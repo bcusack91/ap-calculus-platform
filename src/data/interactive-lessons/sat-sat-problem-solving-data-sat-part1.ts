@@ -16,7 +16,7 @@ A ratio compares two quantities: If a recipe uses 3 cups flour to 2 cups sugar, 
 ### Setting Up Proportions
 **Cross-multiply** to solve:
 
-$$\\frac{3}{5} = \\frac{x}{20} \implies 3 \\times 20 = 5x \implies x = 12$$
+$$\\frac{3}{5} = \\frac{x}{20} \\implies 3 \\times 20 = 5x \\implies x = 12$$
 
 ### Unit Rates
 A unit rate has a denominator of 1:
@@ -43,7 +43,7 @@ $$60 \\frac{\\text{miles}}{\\text{hour}} \\times \\frac{1 \\text{ hour}}{60 \\te
         '30'
       ],
       correctAnswer: 2,
-      explanation: 'Total parts = 7 + 3 = 10. Students who passed = (7/10) × 40 = 28. Common trap: choosing 7 (just the ratio number) or 30 (confusing 7:3 with "7 out of 3").'
+      explanation: 'Total parts = 7 + 3 = 10. Students who passed = (7/10) × 40 = 28. Common traps: choosing 7 (just the ratio number) or 30 (subtracting the 10 total parts from 40).'
     },
     {
       id: 'psd1-q2',

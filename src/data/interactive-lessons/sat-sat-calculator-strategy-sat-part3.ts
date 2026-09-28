@@ -34,7 +34,7 @@ Instead of solving algebraically, graph both equations and **count the intersect
     {
       id: 'cs3-q1',
       type: 'quiz' as const,
-      question: 'The system y = $x^{2}$ and y = 4 has how many solutions? (Think graphically)',
+      question: 'How many solutions does the system $y = x^2$ and $y = 4$ have? (Think graphically.)',
       options: [
         '0',
         '1',
@@ -42,7 +42,7 @@ Instead of solving algebraically, graph both equations and **count the intersect
         '4'
       ],
       correctAnswer: 2,
-      explanation: 'y = $x^{2}$ is a parabola opening upward, and y = 4 is a horizontal line. They intersect at two points: (2, 4) and (-2, 4). In Desmos you\'d see two intersection dots.'
+      explanation: '$y = x^2$ is a parabola opening upward, and $y = 4$ is a horizontal line. They intersect at two points: $(2, 4)$ and $(-2, 4)$. In Desmos you\'d see two intersection dots.'
     },
     {
       id: 'cs3-q2',
@@ -51,7 +51,7 @@ Instead of solving algebraically, graph both equations and **count the intersect
       options: [
         'Exactly one solution',
         'Exactly two solutions',
-        'No solution',
+        'No solutions at all',
         'Infinitely many solutions'
       ],
       correctAnswer: 2,
@@ -66,9 +66,9 @@ Instead of solving algebraically, graph both equations and **count the intersect
 
 | Step | Work |
 |---|---|
-| **Problem** | "Find all solutions to $y = x^2 - 3$ and $y = x + 1$." |
+| **Problem** | "Find all solutions to $y = x^2 - 2$ and $y = x$." |
 | **Desmos** | Type both equations. Two intersection dots appear. |
-| **Click dots** | Intersections at $(-1, 0)$ and $(2, 3)$ → two solutions. |
+| **Click dots** | Intersections at $(-1, -1)$ and $(2, 2)$ → two solutions. |
 | **SAT question might ask** | "What is the sum of the x-coordinates?" → $-1 + 2 = 1$ |
 
 ### Worked Example 2: Finding the Value of k
@@ -106,21 +106,21 @@ Instead of computing the discriminant or manipulating equations:
         questions: [
           {
             question: 'The system $y = x^2$ and $y = -1$ has how many solutions?',
-            options: ['$0$ — parabola is above $y = -1$ everywhere', '$1$ — they touch at the vertex', '$2$ — they cross twice', '$\\infty$ — they overlap'],
+            options: ['$0$', '$1$', '$2$', 'Infinitely many'],
             correctAnswer: 0,
             explanation: '$x^2 \\geq 0$ for all real $x$, so $y = x^2$ never reaches $y = -1$. The horizontal line sits below the entire parabola — 0 intersections.'
           },
           {
             question: 'You graph $y = 3x + 2$ and $y = 3x + 5$ in Desmos and see two parallel lines. What does this tell you about the system?',
-            options: ['No solution — the lines never intersect', 'Infinitely many solutions', 'Exactly one solution', 'Exactly two solutions'],
+            options: ['No solutions', 'Infinitely many solutions', 'Exactly one solution', 'Exactly two solutions'],
             correctAnswer: 0,
             explanation: 'Same slope ($m = 3$) but different y-intercepts ($b = 2$ vs $b = 5$) → parallel lines → no solution. In Desmos, you\'d see two parallel lines with no intersection dot.'
           },
           {
-            question: 'To find the value of $c$ where $y = x^2 + c$ is tangent to $y = 4x - 3$, you should:',
-            options: ['Graph both with a slider for $c$, adjust until they touch at exactly one point', 'Set the discriminant of $x^2 - 4x + (c + 3) = 0$ to zero', 'Both methods work — Desmos is faster', 'Guess values of $c$ by hand'],
-            correctAnswer: 2,
-            explanation: 'Both work. Algebraically: $x^2 - 4x + (c + 3) = 0$, discriminant $= 16 - 4(c+3) = 0$ → $c = 1$. With Desmos, a slider for $c$ shows tangency instantly. Use whichever is faster for you.'
+            question: 'You graph $y = x^2 + c$ with a slider for $c$ and $y = 4x - 3$, then move the slider until the parabola just touches the line. What value should the slider show?',
+            options: ['$1$', '$4$', '$-3$', '$7$'],
+            correctAnswer: 0,
+            explanation: 'Tangent means exactly one intersection. Algebra confirms the slider: $x^2 + c = 4x - 3$ → $x^2 - 4x + (c + 3) = 0$, and one solution needs discriminant $16 - 4(c + 3) = 0$ → $c + 3 = 4$ → $c = 1$. Dropping the $+3$ gives $4$; solving $c + 3 = 0$ gives $-3$.'
           }
         ]
       }
@@ -131,12 +131,12 @@ Instead of computing the discriminant or manipulating equations:
       content: '**Count the Solutions** — How many intersections do these systems have?',
       exercise: {
         dropdowns: [
-          '$y = x^2$ and $y = 0$ → [1 (at origin)|0|2|∞]',
-          '$y = 2x + 1$ and $y = 2x - 3$ → [0 (parallel)|1|2|∞]',
+          '$y = x^2$ and $y = 0$ → [1|0|2|∞]',
+          '$y = 2x + 1$ and $y = 2x - 3$ → [0|1|2|∞]',
           '$y = x^2$ and $y = 4$ → [2|0|1|4]',
-          '$y = x$ and $y = x$ → [∞ (same line)|0|1|2]'
+          '$y = x$ and $y = x$ → [∞|0|1|2]'
         ],
-        correctAnswers: ['1 (at origin)', '0 (parallel)', '2', '∞ (same line)'],
+        correctAnswers: ['1', '0', '2', '∞'],
         hint1: '$x^2 = 0$ only when $x = 0$ — the parabola touches the x-axis at just one point.',
         hint2: 'Same slope, different intercepts = parallel = no intersection.',
         hint3: '$x^2 = 4$ → $x = \\pm 2$ — two intersection points.',

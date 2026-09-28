@@ -33,12 +33,12 @@ $$\\frac{24}{80} \\times 100 = 30\\%$$
     {
       id: 'psd2-q1',
       type: 'quiz' as const,
-      question: 'A store marks up a $40 item by 25%, then offers a 25% discount on the new price. What is the final price?',
+      question: 'A store marks up a \\$40 item by 25%, then offers a 25% discount on the new price. What is the final price?',
       options: [
-        '$40.00',
-        '$37.50',
-        '$42.50',
-        '$50.00'
+        '\\$40.00',
+        '\\$37.50',
+        '\\$42.50',
+        '\\$50.00'
       ],
       correctAnswer: 1,
       explanation: 'Markup: \\$40 × 1.25 = \\$50. Discount: \\$50 × 0.75 = \\$37.50. The final price is \\$37.50, NOT \\$40 — successive equal percent changes don\'t cancel out.'

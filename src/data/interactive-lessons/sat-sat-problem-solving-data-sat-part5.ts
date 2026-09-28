@@ -14,7 +14,7 @@ export const satProbSolvDataPart5Data = {
 - **No association**: no visible pattern
 
 ### Line/Curve of Best Fit
-The line that minimizes the total distance from all points. Key interpretations:
+The line that follows the overall trend of the points as closely as possible. Key interpretations:
 - **Slope** = rate of change (For each 1-unit increase in x, y changes by [slope])
 - **y-intercept** = predicted y-value when x = 0
 
@@ -67,7 +67,7 @@ Residual = actual – predicted
 |---|---|---|
 | Straight upward trend | Linear ($y = mx + b$) | Residuals are random |
 | Curve (increasing rate) | Exponential ($y = ab^x$) | Residuals show U-pattern for linear |
-| Curve (decreasing rate) | Logarithmic or square root | Curve levels off |
+| Curve (decreasing rate) | Growth that slows, such as $y = a\\sqrt{x}$ | Curve levels off |
 | Ups and downs | Quadratic ($y = ax^2 + bx + c$) | Parabolic residual pattern |
 
 ### Correlation Coefficient ($r$)
@@ -91,13 +91,13 @@ Residual = actual – predicted
         questions: [
           {
             question: 'A line of best fit is $y = -2.1x + 95$. What does the slope mean in context if $x$ = hours of TV and $y$ = test score?',
-            options: ['For each additional hour of TV, the predicted test score decreases by 2.1 points', 'Students who watch TV score 2.1 points higher', 'The prediction is 95% accurate', 'Every student loses 2.1 points'],
+            options: ['For each additional hour of TV, the predicted test score decreases by 2.1 points', 'For each additional hour of TV, the predicted test score increases by 2.1 points', 'For each additional hour of TV, every student\'s score drops by exactly 2.1 points', 'For each additional point of test score, predicted TV time falls by 2.1 hours'],
             correctAnswer: 0,
             explanation: 'Slope $= -2.1$ means for each 1-unit increase in $x$ (hour of TV), $y$ (score) decreases by 2.1. It\'s a predicted/estimated change, not exact for every student.'
           },
           {
             question: 'A residual plot for a linear model shows a clear U-shaped curve. This suggests:',
-            options: ['A nonlinear model (quadratic) would be a better fit', 'The linear model is excellent', 'There are too many outliers', 'The data has no correlation'],
+            options: ['A nonlinear model would fit these data better', 'The linear model already fits the data well', 'The data set contains too many outliers', 'The two variables have no correlation'],
             correctAnswer: 0,
             explanation: 'Patterned residuals (U-shape, curves) indicate the model type is wrong. A quadratic or other nonlinear model would better capture the pattern.'
           },

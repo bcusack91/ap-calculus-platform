@@ -103,7 +103,7 @@ export const satCirclesTrigPart7Data = {
       content: `
 **Final mixed problems — enter your answers.** 🧮
 
-1) What is the area of a circle with equation $(x+1)^2 + (y-3)^2 = 49$? Enter in terms of $\\pi$ — give just the coefficient (e.g., if the answer is $25\\pi$, enter 49).
+1) What is the area of a circle with equation $(x+1)^2 + (y-3)^2 = 49$? Enter in terms of $\\pi$ — give just the coefficient (e.g., if the answer is $25\\pi$, enter 25).
 
 2) A tangent to a circle of radius $7$ is drawn from a point $25$ units from the center. How long is the tangent segment?
 

@@ -20,7 +20,7 @@ Enter multiple inequalities. The **overlapping shaded region** is the solution s
 ### Domain Restrictions
 Limit a function to certain x-values using braces:
 - \`y = x^2 {0 < x < 5}\` → only shows parabola between x = 0 and x = 5
-- \`y = 2x + 1 {x >= 0}\` → only shows the positive part
+- \`y = 2x + 1 {x >= 0}\` → only shows the part where x ≥ 0
 
 ### Finding Integer Solutions
 When the SAT asks "how many integer values of x satisfy both inequalities":
@@ -38,10 +38,10 @@ When the SAT asks "how many integer values of x satisfy both inequalities":
       type: 'quiz' as const,
       question: 'To find the solution region of y ≥ x + 1 AND y < -2x + 8 in Desmos, you should:',
       options: [
-        'Solve the system algebraically first',
+        'Solve the system algebraically before opening Desmos',
         'Enter both inequalities and look for the overlapping shaded area',
-        'Graph only the boundary lines',
-        'Use the table to test random points'
+        'Enter both inequalities and look only where the boundary lines cross',
+        'Enter both inequalities and test random points in a table'
       ],
       correctAnswer: 1,
       explanation: 'Enter both inequalities in Desmos. Each will shade a region. The area where both shadings overlap is the solution set. You can then identify boundary points or count integer solutions.'
@@ -80,8 +80,8 @@ When the SAT asks "how many integer values of x satisfy both inequalities":
 ### Domain Restriction Syntax
 
 Use curly braces to limit where a function appears:
-- \`y = x^2 \\{x > 0\\}\` — only the right half of the parabola
-- \`y = 2x + 1 \\{-3 < x < 5\\}\` — only shows between $x = -3$ and $x = 5$
+- \`y = x^2 {x > 0}\` — only the right half of the parabola
+- \`y = 2x + 1 {-3 < x < 5}\` — only shows between $x = -3$ and $x = 5$
 - Useful for piecewise functions the SAT might show`
     },
     {
@@ -98,7 +98,7 @@ Use curly braces to limit where a function appears:
           },
           {
             question: 'How many integer values of $x$ satisfy $|x - 3| < 5$?',
-            options: ['$9$ integers: $-1, 0, 1, 2, 3, 4, 5, 6, 7$', '$10$ integers', '$8$ integers', '$5$ integers'],
+            options: ['$9$', '$10$', '$8$', '$11$'],
             correctAnswer: 0,
             explanation: '$|x - 3| < 5$ means $-5 < x - 3 < 5$, so $-2 < x < 8$. Integers: $-1, 0, 1, 2, 3, 4, 5, 6, 7$ = 9 values. Graph $y = |x-3|$ and $y = 5$ in Desmos to see the region.'
           },

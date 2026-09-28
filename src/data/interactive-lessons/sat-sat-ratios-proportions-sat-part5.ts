@@ -158,9 +158,9 @@ The SAT loves problems where you must first identify similar triangles, then set
           { label: 'The perimeter of a similar figure', options: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale'] },
           { label: 'The surface area of a similar solid', options: ['$k^{2}$ (area)', 'k (linear)', '$k^{3}$ (volume)', 'Does not scale'] },
           { label: 'The volume of a similar solid', options: ['$k^{3}$ (volume)', 'k (linear)', '$k^{2}$ (area)', 'Does not scale'] },
-          { label: 'The angles of a similar figure', options: ['Does not scale (angles are equal)', 'k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)'] }
+          { label: 'The angles of a similar figure', options: ['Does not scale', 'k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)'] }
         ],
-        correctAnswers: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale (angles are equal)'],
+        correctAnswers: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale'],
         hint1: 'Perimeter is a sum of lengths — each length scales by $k$.',
         hint2: 'Surface area is a 2D measurement → $k^2$.',
         hint3: 'Volume is a 3D measurement → $k^3$.',

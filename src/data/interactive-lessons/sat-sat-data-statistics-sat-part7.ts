@@ -18,8 +18,8 @@ export const satDataStatsPart7Data = {
 | Scatterplot slope | Predicted change in $y$ per unit $x$ |
 | Residual | Actual − predicted |
 | Two-way tables | Watch the denominator! |
-| Probability AND | Multiply (if independent) |
-| Probability OR | Add, then subtract overlap |
+| "Selected from [group]" | That group's total is the denominator |
+| "NOT" probability | 1 minus the probability |
 | Causation | Only from randomized experiments |
 
 ### Common SAT Question Types
@@ -54,10 +54,10 @@ export const satDataStatsPart7Data = {
 
 | Question | Answer |
 |----------|--------|
-| P(pass) | $35/50 = 70\\%$ |
+| Selected from everyone: passed? | $35/50 = 70\\%$ |
 | Selected from the males: passed? | $15/20 = 75\\%$ |
 | Selected from those who passed: male? | $15/35 ≈ 42.9\\%$ |
-| Are gender & passing independent? | $P(\\text{pass}) = 70\\% \\neq P(\\text{pass}|\\text{male}) = 75\\%$ → NOT independent |`
+| Is gender associated with passing? | Males pass at $15/20 = 75\\%$, females at $20/30 ≈ 66.7\\%$; the rates differ, so the data suggest an association |`
     },
     {
       id: 'ds7-quiz1',
@@ -123,9 +123,9 @@ export const satDataStatsPart7Data = {
         questions: [
           {
             question: 'In a dataset of 100 values, $Q_1 = 30$, $Q_3 = 70$. Which value is an outlier?',
-            options: ['$140$', '$75$', '$25$', '$90$'],
+            options: ['$140$', '$75$', '$25$', '$125$'],
             correctAnswer: 0,
-            explanation: 'IQR $= 70 - 30 = 40$. Outlier threshold: above $Q_3 + 1.5(40) = 70 + 60 = 130$ or below $Q_1 - 60 = -30$. Only $140 > 130$, so $140$ is an outlier.'
+            explanation: 'IQR $= 70 - 30 = 40$. Outlier threshold: above $Q_3 + 1.5(40) = 70 + 60 = 130$ or below $Q_1 - 60 = -30$. Only $140 > 130$, so $140$ is an outlier; $125$ is large but still inside the fence.'
           },
           {
             question: 'A scatterplot with $r = 0.05$. What does this suggest?',
@@ -171,7 +171,7 @@ export const satDataStatsPart7Data = {
 | 2 | Standard deviation — comparing spread, effect of transformations |
 | 3 | Scatterplots — slope interpretation, residuals, correlation |
 | 4 | Two-way tables — joint, marginal, conditional frequencies |
-| 5 | Probability — complement, AND/OR, conditional |
+| 5 | Probability — complements and "selected from" table questions |
 | 6 | Study design — causation vs. association, bias types |
 | 7 | Review — combining all skills for SAT questions |
 
@@ -180,7 +180,7 @@ export const satDataStatsPart7Data = {
 1. **Mean = Sum ÷ Count** — use Sum = Mean × Count to find missing values
 2. **Correlation ≠ Causation** — only experiments prove cause
 3. **Watch the denominator** — "of males" vs. "of all" changes the answer
-4. **"At least one" = 1 − P(none)** — always use the complement
+4. **"NOT" questions** — the probability of NOT happening is 1 minus the probability of happening
 5. **Slope in context** — "For each additional [x], [y] is predicted to [increase/decrease] by [slope]"`
     }
   ]

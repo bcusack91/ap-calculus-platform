@@ -35,15 +35,15 @@ Graph \`y = |2x - 6|\` and \`y = 10\`. Click intersections to find that x = -2 a
     {
       id: 'cs6-q1',
       type: 'quiz' as const,
-      question: 'If f(x) = $x^{3}$ - 4x, what is the fastest way to find f(3) on the SAT?',
+      question: 'If $f(x) = x^3 - 4x$, which approach finds $f(3)$ in the fewest steps?',
       options: [
-        'Compute 27 - 12 = 15 mentally',
-        'Graph y = $x^{3}$ - 4x and use the table to find y when x = 3',
-        'Both are equally fast; choose based on comfort',
-        'Use substitution in the answer choices'
+        'Substitute $x = 3$ and simplify by hand',
+        'Graph $y = x^3 - 4x$ and trace to $x = 3$',
+        'Build a Desmos table and read the row for $x = 3$',
+        'Solve $x^3 - 4x = 0$ and use the zeros'
       ],
-      correctAnswer: 2,
-      explanation: 'f(3) = 27 - 12 = 15 is quick mental math. Entering it into Desmos would take longer. For harder functions (like f(2.7)), the calculator wins. Choose the faster method for each problem.'
+      correctAnswer: 0,
+      explanation: '$f(3) = 27 - 12 = 15$ takes two mental steps. Graphing or building a table means typing the function first, so it takes longer here; for an ugly input like $f(2.7)$, the calculator wins. The zeros of $f$ tell you where $f(x) = 0$, not the value of $f(3)$.'
     },
     {
       id: 'cs6-text2',
@@ -54,11 +54,11 @@ Graph \`y = |2x - 6|\` and \`y = 10\`. Click intersections to find that x = -2 a
 
 | Step | Work |
 |---|---|
-| **Problem** | "If $f(x) = 2x^3 - 5x + 1$, for what value of $x$ is $f(x) = 14$?" Choices: $-2, 1, 2, 3$ |
-| **Desmos** | Type $y = 2x^3 - 5x + 1$. Look at the table for which $x$ gives $y = 14$. |
-| **Table check** | $f(2) = 16 - 10 + 1 = 7$. $f(3) = 54 - 15 + 1 = 40$. Hmm — try another way. |
-| **Graph + line** | Also type $y = 14$. Click intersection → $x \\approx 2.1$... but that's not a choice. |
-| **Reconsider** | Actually recheck: the intersection gives the exact answer among the choices. |
+| **Problem** | "If $f(x) = 2x^3 - 5x + 1$, for what value of $x$ is $f(x) = 7$?" Choices: $-2, 1, 2, 3$ |
+| **Desmos** | Type $y = 2x^3 - 5x + 1$. Look at the table for which choice gives $y = 7$. |
+| **Table check** | $f(-2) = -5$, $f(1) = -2$, $f(2) = 16 - 10 + 1 = 7$ ✓, $f(3) = 40$. |
+| **Graph + line** | Or also type $y = 7$ and click the intersection → $x = 2$, the only crossing. |
+| **Answer** | $x = 2$ — both Desmos routes land on the same choice. |
 
 ### Worked Example 2: Transformation Matching
 
@@ -96,22 +96,22 @@ When the SAT gives you a parabola through specific points and asks for the equat
       exercise: {
         questions: [
           {
-            question: 'To verify that $(x + 2)^2 = x^2 + 4x + 4$, you can:',
-            options: ['Graph both in Desmos — if they overlap completely, they are equivalent', 'Check one value: $(1 + 2)^2 = 9$ and $1 + 4 + 4 = 9$ ✓', 'Both methods confirm equivalence', 'You cannot verify with Desmos'],
-            correctAnswer: 2,
-            explanation: 'Both work. Graphing shows identical curves. Plugging in a test value gives a quick check. For the SAT, use whichever is faster. Graphing is more conclusive (works for ALL values).'
+            question: 'You graph $y = (x + 2)^2$ and $y = x^2 + 4x + 4$ in Desmos. Which observation confirms that the two expressions are equivalent?',
+            options: ['The two graphs overlap at every point', 'The two graphs cross at exactly one point', 'The two graphs share the same y-intercept', 'The two graphs are both upward parabolas'],
+            correctAnswer: 0,
+            explanation: 'Equivalent expressions give the same output for EVERY $x$, so their graphs coincide completely. Crossing at one point, sharing a y-intercept, or having the same shape only shows agreement at some values — for example, $(x + 2)^2$ and $x^2 + 4$ share the y-intercept $4$ but are not equivalent.'
           },
           {
             question: 'A parabola passes through $(0, 2)$, $(1, 5)$, $(2, 14)$. To find the equation, the fastest Desmos method is:',
-            options: ['Enter points in a table and run quadratic regression', 'Graph $y = ax^2 + bx + c$ with sliders and adjust until it fits', 'Solve the 3-equation system by hand', 'Guess coefficients'],
+            options: ['Enter the points in a table and run quadratic regression', 'Graph $y = ax^2 + bx + c$ and drag sliders until it fits', 'Write and solve a system of three equations by hand', 'Enter the points in a table and run linear regression'],
             correctAnswer: 0,
-            explanation: 'Enter the three points in a table, then type $y_1 \\sim ax_1^2 + bx_1 + c$. Desmos instantly gives $a$, $b$, $c$. Match to answer choices.'
+            explanation: 'Enter the three points in a table, then type $y_1 \\sim ax_1^2 + bx_1 + c$. Desmos instantly gives $a = 3$, $b = 0$, $c = 2$, so $y = 3x^2 + 2$. Sliders and the hand-solved system also work but take longer, and a linear regression cannot fit a parabola.'
           },
           {
-            question: 'For the problem "if $f(x) = x^2 - 4x + k$ has exactly one zero, find $k$," the Desmos approach is:',
-            options: ['Graph with a slider for $k$; adjust until the parabola just touches the x-axis. Read $k = 4$.', 'Set discriminant to 0: $16 - 4k = 0$ → $k = 4$', 'Both give the same answer', 'Desmos cannot solve for $k$'],
-            correctAnswer: 2,
-            explanation: 'Both work. Discriminant: $b^2 - 4ac = 16 - 4k = 0$ → $k = 4$. Desmos: slider for $k$ until one x-intercept appears → $k = 4$. Choose whichever feels faster.'
+            question: 'The function $f(x) = x^2 - 4x + k$ has exactly one zero. You graph it with a slider for $k$ and stop when the parabola just touches the x-axis. What value should the slider show?',
+            options: ['$4$', '$-4$', '$16$', '$2$'],
+            correctAnswer: 0,
+            explanation: 'Exactly one zero means the vertex sits on the x-axis. The discriminant confirms the slider: $b^2 - 4ac = 16 - 4k = 0$ → $k = 4$. $16$ is $b^2$ alone, and $2$ is the x-coordinate of the vertex, not $k$.'
           }
         ]
       }
@@ -124,10 +124,10 @@ When the SAT gives you a parabola through specific points and asks for the equat
         dropdowns: [
           'Check if expressions are equivalent → [Graph both — look for overlap|Use a slider|Run regression|Count zeros]',
           'Find equation through 3 points → [Table + regression|Slider on each coefficient|Guess and check|Factor]',
-          'Solve $|2x + 1| = 7$ → [Graph y = abs(2x+1) and y = 7, click intersections|Use the table only|Factor|Convert to quadratic]',
+          'Solve $|2x + 1| = 7$ → [Graph both sides, click intersections|Use the table only|Factor|Convert to quadratic]',
           'Find parameter for one solution → [Slider until tangent|Graph only the quadratic|Count zeros|Use the table]'
         ],
-        correctAnswers: ['Graph both — look for overlap', 'Table + regression', 'Graph y = abs(2x+1) and y = 7, click intersections', 'Slider until tangent'],
+        correctAnswers: ['Graph both — look for overlap', 'Table + regression', 'Graph both sides, click intersections', 'Slider until tangent'],
         hint1: 'Equivalent expressions produce identical graphs.',
         hint2: 'Three points → table input → regression gives the equation.',
         hint3: 'Absolute value creates a V-shape. A horizontal line crosses it at 0, 1, or 2 points.',

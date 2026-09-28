@@ -117,10 +117,10 @@ The SAT often asks you to rewrite an expression. Know these equivalences:
       exercise: {
         questions: [
           {
-            question: 'Which is equivalent to $x^{5/2}$?',
-            options: ['$x^2\\sqrt{x}$', '$\\sqrt{x^5}$ only', '$x^2 \\cdot x^{1/2}$', 'All of these'],
-            correctAnswer: 3,
-            explanation: '$x^{5/2} = x^2 \\cdot x^{1/2} = x^2\\sqrt{x} = \\sqrt{x^5}$. All three forms are equivalent.'
+            question: 'For $x > 0$, which expression is equivalent to $x^{5/2}$?',
+            options: ['$x^2\\sqrt{x}$', '$\\sqrt[5]{x^2}$', '$\\sqrt{x^{10}}$', '$\\frac{x^5}{\\sqrt{x}}$'],
+            correctAnswer: 0,
+            explanation: '$x^{5/2} = x^{2 + 1/2} = x^2 \\cdot x^{1/2} = x^2\\sqrt{x}$. The others: $\\sqrt[5]{x^2} = x^{2/5}$ swaps the root and the power, $\\sqrt{x^{10}} = x^5$ multiplies by 2 instead of dividing, and $\\frac{x^5}{\\sqrt{x}} = x^{9/2}$.'
           },
           {
             question: 'Simplify: $(x^{1/3})^6$',
@@ -143,7 +143,7 @@ The SAT often asks you to rewrite an expression. Know these equivalences:
       content: '**Radical or Exponent?** 🔍\n\nConvert each expression to the other form.',
       exercise: {
         dropdowns: [
-          { label: '$\\sqrt[3]{x^2}$ in exponent form', options: ['$x^{2/3}$', '$x^{3/2}$', '$x^{2/3}$ or $2x^{1/3}$', '$x^{6}$'] },
+          { label: '$\\sqrt[3]{x^2}$ in exponent form', options: ['$x^{2/3}$', '$x^{3/2}$', '$\\frac{2}{3}x$', '$x^{6}$'] },
           { label: '$x^{-1/2}$ in radical form', options: ['$1/\\sqrt{x}$', '$\\sqrt{x}$', '$-\\sqrt{x}$', '$1/x^{2}$'] },
           { label: '$\\sqrt{x} \\cdot \\sqrt[3]{x}$ as single power', options: ['$x^{5/6}$', '$x^{1/6}$', '$x^{2/3}$', '$x^{1/5}$'] },
           { label: '$(\\sqrt{x})^3$ as single power', options: ['$x^{3/2}$', '$x^{2/3}$', '$x^{3}$', '$x^{1/3}$'] }

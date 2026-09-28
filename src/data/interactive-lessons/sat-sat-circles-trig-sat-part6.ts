@@ -129,14 +129,14 @@ So if $PA$ and $PB$ are tangent to a circle at $A$ and $B$, then $PA = PB$.
           },
           {
             label: 'Tangent meets radius at point of tangency',
-            options: ['Parallel', 'Perpendicular ($90°$)', 'Supplementary', 'Equal']
+            options: ['Parallel', 'Perpendicular', 'Supplementary', 'Equal']
           },
           {
             label: 'Central angle of $50°$ → inscribed angle on same arc',
             options: ['$25°$', '$50°$', '$100°$', '$75°$']
           }
         ],
-        correctAnswers: ['$90°$', 'Perpendicular ($90°$)', '$25°$'],
+        correctAnswers: ['$90°$', 'Perpendicular', '$25°$'],
         hint1: 'Thales\' theorem: inscribed in a semicircle means the intercepted arc is $180°$.',
         hint2: 'A tangent is always perpendicular to the radius at the point of tangency.',
         hint3: 'Inscribed angle $= \\frac{1}{2} \\times$ central angle $= \\frac{50}{2} = 25°$.',
@@ -153,9 +153,9 @@ So if $PA$ and $PB$ are tangent to a circle at $A$ and $B$, then $PA = PB$.
         questions: [
           {
             question: 'In the figure, $PA$ and $PB$ are tangent to circle $O$, with $PA = 9$ and $OA = 12$. What is $OP$?',
-            options: ['$15$', '$\\sqrt{63}$', '$21$', '$3\\sqrt{7}$'],
+            options: ['$15$', '$3$', '$21$', '$3\\sqrt{7}$'],
             correctAnswer: 0,
-            explanation: '$OA \\perp PA$ (tangent-radius). In right triangle $OAP$: $OP = \\sqrt{OA^2 + PA^2} = \\sqrt{144 + 81} = \\sqrt{225} = 15$.'
+            explanation: '$OA \\perp PA$ (tangent-radius). In right triangle $OAP$: $OP = \\sqrt{OA^2 + PA^2} = \\sqrt{144 + 81} = \\sqrt{225} = 15$. Subtracting the squares gives $\\sqrt{63} = 3\\sqrt{7}$, which treats $OP$ as a leg instead of the hypotenuse.'
           },
           {
             question: 'Points $A$, $B$, $C$ lie on a circle. If arc $AB = 100°$ and arc $BC = 130°$, what is the inscribed angle $\\angle ACB$?',

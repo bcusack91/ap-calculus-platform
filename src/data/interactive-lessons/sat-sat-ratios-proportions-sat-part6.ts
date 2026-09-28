@@ -128,9 +128,9 @@ The drain slows down the filling but doesn't stop it (fill rate > drain rate).`
         questions: [
           {
             question: 'Person A completes a job in 6 hours, Person B in 12 hours. After A works alone for 2 hours, both finish together. What total time does it take?',
-            options: ['$4 \\frac{2}{3}$ hours', '$3$ hours', '$6$ hours', '$5$ hours'],
+            options: ['$4\\frac{2}{3}$ hours', '$2\\frac{2}{3}$ hours', '$6$ hours', '$4$ hours'],
             correctAnswer: 0,
-            explanation: 'A does $2/6 = 1/3$ alone. Remaining: $2/3$. Combined: $1/6 + 1/12 = 3/12 = 1/4$. Time: $(2/3) ÷ (1/4) = 8/3$ hrs. Total: $2 + 8/3 = 14/3 = 4\\frac{2}{3}$ hrs.'
+            explanation: 'A does $2/6 = 1/3$ alone. Remaining: $2/3$. Combined: $1/6 + 1/12 = 3/12 = 1/4$. Time: $(2/3) ÷ (1/4) = 8/3$ hrs. Total: $2 + 8/3 = 14/3 = 4\\frac{2}{3}$ hrs. ($2\\frac{2}{3}$ hours is only the shared stretch; $4$ hours is how long the pair would need for the whole job.)'
           },
           {
             question: 'A 10% acid solution and a 40% acid solution are mixed to create 30 ounces of 20% acid. How much of the 10% solution is used?',
@@ -175,7 +175,7 @@ The drain slows down the filling but doesn't stop it (fill rate > drain rate).`
 | Work (together) | $1/a + 1/b = 1/t$ |
 | Work (one starts early) | Find remaining work, then use combined rate |
 | Fill & drain | Subtract drain rate: $1/a - 1/b$ |
-| Mixture | $Amount_{1}$ + $Amount_{2}$ = Amount_mix |
+| Mixture | Amount$_1$ + Amount$_2$ = Amount$_{\\text{mix}}$ |
 | Workers × time | Total work = workers × time (constant) |
 
 - **Never add times** — always convert to rates first

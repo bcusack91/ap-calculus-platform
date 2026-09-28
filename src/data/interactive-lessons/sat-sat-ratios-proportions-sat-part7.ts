@@ -152,9 +152,9 @@ export const satRatiosPart7Data = {
       content: '**Which Strategy?** 🔍\n\nFor each problem, choose the best approach.',
       exercise: {
         dropdowns: [
-          { label: '"After a 30% discount, the price is \\$84. Find the original."', options: ['Divide by 0.70', 'Add 30% to $84', 'Multiply by 1.30', 'Subtract 30% from $84'] },
+          { label: '"After a 30% discount, the price is \\$84. Find the original."', options: ['Divide by 0.70', 'Add 30% to \\$84', 'Multiply by 1.30', 'Subtract 30% from \\$84'] },
           { label: '"3 machines do a job in 8 days. How long for 6 machines?"', options: ['Workers × time = constant (inverse)', 'Set up proportion (direct)', 'Add the rates', 'Multiply 3 × 8 × 6'] },
-          { label: '"Map scale 1 in = 20 mi. Cities are 4.5 in apart."', options: ['Multiply: 4.5 × 20', 'Divide: 20 ÷ 4.5', 'Set up: 1/20 = 4.5/x', 'Add: 1 + 20 + 4.5'] },
+          { label: '"Map scale 1 in = 20 mi. Cities are 4.5 in apart."', options: ['Multiply: 4.5 × 20', 'Divide: 20 ÷ 4.5', 'Set up: 1/20 = x/4.5', 'Add: 1 + 20 + 4.5'] },
           { label: '"Mix 25% and 60% solutions to get 40%."', options: ['Mixture table: Vol × Conc = Amount', 'Average the percentages', 'Cross multiply 25/60 = 40/x', 'Subtract: 60 − 25 = 35'] }
         ],
         correctAnswers: ['Divide by 0.70', 'Workers × time = constant (inverse)', 'Multiply: 4.5 × 20', 'Mixture table: Vol × Conc = Amount'],

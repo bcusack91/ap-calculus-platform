@@ -19,7 +19,7 @@ $$\\text{Probability} = \\frac{\\text{favorable outcomes}}{\\text{total outcomes
 The probability something does NOT happen is 1 minus the probability it does —
 or just count the non-favorable outcomes directly.
 
-**Example:** 4 red, 6 blue, 5 green marbles. P(not red) — count the 11
+**Example:** 4 red, 6 blue, 5 green marbles. The probability of NOT drawing red — count the 11
 non-red marbles: $\\frac{11}{15}$.
 
 ### The Three SAT Probability Setups
@@ -48,7 +48,7 @@ $$\\text{Relative frequency of A} = \\frac{\\text{count of A}}{\\text{total coun
         '2/3'
       ],
       correctAnswer: 1,
-      explanation: 'Count the non-red marbles directly: 6 + 5 = 11 of the 15 marbles, so P(not red) = 11/15. (Same as 1 − 4/15.)'
+      explanation: 'Count the non-red marbles directly: 6 + 5 = 11 of the 15 marbles, so the probability of not drawing red is 11/15. (Same as 1 − 4/15.)'
     },
     {
       id: 'psd6-text2',

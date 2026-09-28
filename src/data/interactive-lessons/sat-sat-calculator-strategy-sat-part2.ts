@@ -50,15 +50,15 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
     {
       id: 'cs2-q2',
       type: 'quiz' as const,
-      question: 'You need to find the vertex of y = $-2x^{2}$ + 8x - 3. The fastest Desmos method is:',
+      question: 'You need to find the vertex of $y = -2x^2 + 8x - 3$. The fastest Desmos method is:',
       options: [
         'Complete the square by hand',
         'Use the -b/2a formula',
         'Graph it and click the maximum point',
-        'Create a table and scan values'
+        'Create a Desmos table and scan the values'
       ],
       correctAnswer: 2,
-      explanation: 'Type y = $-2x^{2}$ + 8x - 3 into Desmos. Since a is negative, the parabola opens downward. Click the highest point to see the vertex coordinates (2, 5). This takes about 5 seconds.'
+      explanation: 'Type $y = -2x^2 + 8x - 3$ into Desmos. Since a is negative, the parabola opens downward. Click the highest point to see the vertex coordinates (2, 5). This takes about 5 seconds.'
     },
     {
       id: 'cs2-text2',
@@ -69,9 +69,9 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
 
 | Step | Work |
 |---|---|
-| **Problem** | "Which point lies on the graph of $y = 3x^2 - 5x + 2$? (A) $(1, 0)$ (B) $(2, 4)$ (C) $(3, 14)$ (D) $(0, 3)$" |
+| **Problem** | "Which point lies on the graph of $y = 3x^2 - 5x + 2$: $(1, 0)$, $(2, 5)$, $(3, 12)$, or $(0, 3)$?" |
 | **Desmos method** | Type the equation. Click the equation number → Table. Check $x = 1, 2, 3, 0$ in the table. |
-| **Read** | $f(1) = 0$ ✓ → Answer is (A) |
+| **Read** | The table shows $y = 0, 4, 14, 2$ at $x = 1, 2, 3, 0$, so only $(1, 0)$ lies on the graph |
 
 ### Worked Example 2: Finding Multiple x-Intercepts
 
@@ -108,19 +108,19 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
         questions: [
           {
             question: 'You type $y = x^2 + 4$ into Desmos and see a parabola that never crosses the x-axis. This tells you:',
-            options: ['The equation has no real zeros (no real x-intercepts)', 'You typed the equation wrong', 'The graph has no y-intercept', 'The equation has infinitely many solutions'],
+            options: ['The equation $x^2 + 4 = 0$ has no real solutions', 'You typed the equation into Desmos incorrectly', 'The graph of the equation has no y-intercept', 'The equation $x^2 + 4 = 0$ has one real solution'],
             correctAnswer: 0,
             explanation: '$x^2 + 4 > 0$ for all real $x$, so the parabola sits entirely above the x-axis. The discriminant is $0 - 16 = -16 < 0$ — no real roots. Desmos confirms this visually.'
           },
           {
-            question: 'To find the vertex of $y = -3(x - 2)^2 + 7$ in Desmos, you should:',
-            options: ['Graph it and click the highest point — it\'s at $(2, 7)$', 'Use the table feature to scan values', 'Create sliders for each coefficient', 'Graph $y = x$ on the same screen'],
+            question: 'You graph $y = -3(x - 2)^2 + 7$ in Desmos and click the highest point. Which coordinates should appear?',
+            options: ['$(2, 7)$', '$(-2, 7)$', '$(2, -7)$', '$(7, 2)$'],
             correctAnswer: 0,
-            explanation: 'This is already in vertex form: $a(x - h)^2 + k$. The vertex is $(2, 7)$. You can confirm by graphing and clicking the peak. Recognizing the form is even faster than Desmos here.'
+            explanation: 'This is already in vertex form, $a(x - h)^2 + k$, so the vertex is $(h, k) = (2, 7)$; since $a = -3 < 0$ it is the highest point. The sign flips only for $h$: $(x - 2)$ means $h = +2$. Knowing the form lets you check the Desmos label instantly.'
           },
           {
-            question: 'You need to check if $(3, 5)$ satisfies $2x - y = 1$. What is the quickest Desmos method?',
-            options: ['Type the equation and use the table — check if $y = 5$ when $x = 3$', 'Graph the line and click near $(3, 5)$', 'Mental math: $2(3) - 5 = 6 - 5 = 1$ ✓', 'Create sliders for $x$ and $y$'],
+            question: 'You need to check whether $(3, 5)$ satisfies $2x - y = 1$. Which approach takes the fewest steps?',
+            options: ['Graph the line in Desmos and zoom in near $(3, 5)$', 'Solve for $y$, then read a Desmos table at $x = 3$', 'Substitute $x = 3$ and $y = 5$ into the left side', 'Create Desmos sliders for both $x$ and $y$'],
             correctAnswer: 2,
             explanation: 'This is faster by mental math: $2(3) - 5 = 1$ ✓. Use Desmos only when the computation is complex. Recognize when brain beats calculator!'
           }

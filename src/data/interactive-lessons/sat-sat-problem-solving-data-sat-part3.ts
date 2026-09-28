@@ -17,22 +17,23 @@ These organize data by two categories. Example:
 | Female | 130 | 150 | 280 |
 | Total | 250 | 250 | 500 |
 
-### Conditional Probability from Tables
+### Fractions of One Group
 "What fraction of sophomores are female?"
 - Look at the **Sophomore column**: 150 female out of 250 total = 150/250 = **3/5**
 
-### "Given that" = Restrict to a Subgroup
-"Given that a student is male, what is the probability they are a freshman?"
-- Restrict to Male row: 120 freshman out of 220 male = 120/220 = **6/11**
+### "Selected From" = Restrict to a Subgroup
+"If a student is selected at random from the males, what is the probability the student is a freshman?"
+- Restrict to the Male row: 120 freshmen out of 220 males = 120/220 = **6/11**
 
-### Marginal vs. Conditional
-- **Marginal**: P(Female) = 280/500 — uses the grand total
-- **"From" questions**: selected from the sophomores, P(female) = 150/250 — the named group's total is the denominator
+### Everyone vs. One Group
+- **Selected from everyone**: the probability of a female is 280/500 — uses the grand total
+- **Selected from the sophomores**: the probability of a female is 150/250 — the named group's total is the denominator
 
-### Association vs. Independence
-Two variables are **independent** if knowing one doesn't change the probability of the other.
-- If the female rate among sophomores equals the female rate overall, the data show no associatiot
-- If those probabilities differ, there's an association`
+### Is There an Association?
+Compare each group's rate, in words.
+- If freshmen and sophomores are female at the same rate, the data show no association between class and gender
+- If the rates differ, the data suggest an association
+- Here: freshmen are $130/250 = 52\\%$ female and sophomores are $150/250 = 60\\%$ female, so the data suggest an association`
     },
     {
       id: 'psd3-q1',
@@ -68,15 +69,15 @@ Two variables are **independent** if knowing one doesn't change the probability 
 | Part-time | 15 | 65 | 80 |
 | Total | 90 | 110 | 200 |
 
-### Worked Example 2: Testing for Independence
+### Worked Example 2: Checking for an Association
 
 | Step | Work |
 |---|---|
-| **Question** | "Is having benefits independent of employment type?" |
-| **Probability a random employee gets benefits** | $90/200 = 0.45$ |
-| **…selected from the full-time employees** | $75/120 = 0.625$ |
-| **Compare** | $0.45 \\neq 0.625$ → NOT independent |
-| **Conclusion** | Full-time employees are more likely to have benefits → there IS an association. |
+| **Question** | "Do the data suggest an association between employment type and having benefits?" |
+| **Rate among full-time employees** | $75/120 = 62.5\\%$ have benefits |
+| **Rate among part-time employees** | $15/80 = 18.75\\%$ have benefits |
+| **Compare** | $62.5\\%$ vs. $18.75\\%$ — very different rates |
+| **Conclusion** | Full-time employees are more likely to have benefits → the data suggest an association. |
 
 ### Denominator Guide
 
@@ -89,8 +90,8 @@ Two variables are **independent** if knowing one doesn't change the probability 
 
 ### SAT Trap: Joint vs. Conditional
 
-- **Joint**: P(male AND freshman) $= 120/500$ (out of everyone)
-- **"From" questions**: selected from the males, P(freshman) $= 120/220$ (males only)`
+- **Selected from everyone**: male AND freshman $= 120/500$ (out of everyone)
+- **Selected from the males**: freshman $= 120/220$ (males only)`
     },
     {
       id: 'psd3-quiz2',
@@ -106,15 +107,15 @@ Two variables are **independent** if knowing one doesn't change the probability 
           },
           {
             question: 'In a survey, 55% of ALL respondents are female, and 55% of those who voted Yes are female. What do the data suggest?',
-            options: ['No association between gender and voting Yes', 'More females voted Yes', 'Gender and voting are strongly associated', 'We need more data'],
+            options: ['No association between gender and voting Yes', 'Females were more likely than males to vote Yes', 'A strong association between gender and voting Yes', 'Males were more likely than females to vote Yes'],
             correctAnswer: 0,
             explanation: 'The female rate among Yes-voters equals the female rate overall — knowing someone voted Yes tells you nothing about gender, so the data suggest no association.'
           },
           {
             question: 'A table shows 30 out of 50 seniors passed and 40 out of 100 juniors passed. Which class had a higher pass rate?',
-            options: ['Seniors ($60\\%$ vs. $40\\%$)', 'Juniors', 'Same rate', 'Cannot determine'],
+            options: ['Seniors', 'Juniors', 'The rates are equal', 'It cannot be determined'],
             correctAnswer: 0,
-            explanation: 'Senior rate: $30/50 = 60\\%$. Junior rate: $40/100 = 40\\%$. Seniors have a higher pass rate.'
+            explanation: 'Senior rate: $30/50 = 60\\%$. Junior rate: $40/100 = 40\\%$. Seniors have a higher pass rate, even though more juniors passed. Compare rates, not counts.'
           }
         ]
       }
@@ -127,14 +128,14 @@ Two variables are **independent** if knowing one doesn't change the probability 
         dropdowns: [
           '"What fraction of all students are male freshmen?" → [Grand total|Male total|Freshman total|Male freshman count]',
           '"Among females, what fraction are sophomores?" → [Female total|Grand total|Sophomore total|Female sophomore count]',
-          'Selected from the sophomores, P(male) → [Sophomore total|Male total|Grand total|Male sophomore count]',
+          'Selected from the sophomores, probability of a male → [Sophomore total|Male total|Grand total|Male sophomore count]',
           '"What percent of the survey respondents chose Option A?" → [Grand total|Option A count|Other option totals|Number of questions]'
         ],
         correctAnswers: ['Grand total', 'Female total', 'Sophomore total', 'Grand total'],
         hint1: '"Of all students" = grand total in denominator.',
         hint2: '"Among females" = restrict to females = female total.',
-        hint3: '"Given Sophomore" = restrict to Sophomore column.',
-        explanation: '"All students" → grand total. "Among females" → female total. "Given Sophomore" → Sophomore total. "Of survey respondents" → grand total.'
+        hint3: '"From the sophomores" = restrict to the Sophomore column.',
+        explanation: '"All students" → grand total. "Among females" → female total. "From the sophomores" → Sophomore total. "Of survey respondents" → grand total.'
       }
     },
     {
@@ -152,7 +153,7 @@ Two variables are **independent** if knowing one doesn't change the probability 
 
 ### SAT Strategy
 - **Read the question word-for-word** to find the correct denominator.
-- "Given that" or "among" = conditional → use a subtotal.
+- "Selected from" or "among" a group → use that group's subtotal.
 - "Of all" = marginal → use the grand total.
 
 *Next: Statistics — mean, median, and standard deviation →*`

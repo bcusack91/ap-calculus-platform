@@ -126,9 +126,9 @@ No extraneous solutions with cube roots (cubing preserves sign).
           },
           {
             question: 'The equation $\\sqrt{ax + b} = cx + d$ will have extraneous solutions when:',
-            options: ['The right side is negative at a proposed solution', 'The left side has no real value', 'Both sides equal zero', 'The equation has only one solution'],
+            options: ['The right side is negative at a proposed solution', 'The left side is undefined at a proposed solution', 'Both sides equal zero at a proposed solution', 'The squared equation has only one solution'],
             correctAnswer: 0,
-            explanation: '$\\sqrt{}$ is always $\\geq 0$, so if $cx + d < 0$ at a proposed solution, that solution is extraneous.'
+            explanation: '$\\sqrt{}$ is always $\\geq 0$, so if $cx + d < 0$ at a proposed solution, that solution is extraneous. The left side cannot be undefined at a solution of the squared equation, because there $ax + b = (cx + d)^2 \\geq 0$.'
           }
         ]
       }

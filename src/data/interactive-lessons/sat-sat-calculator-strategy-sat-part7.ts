@@ -24,7 +24,7 @@ export const satCalcStrategyPart7Data = {
 | Graph analysis (vertex, intercepts) | 15-25 seconds with Desmos |
 
 ### Common Calculator Mistakes
-- **Parentheses errors**: \\$22/3x\` ≠ \`(2/3)x\` in Desmos
+- **Parentheses errors**: \`2/3x\` ≠ \`(2/3)x\` in Desmos
 - **Not zooming**: The intersection might be off-screen — zoom out!
 - **Over-reliance**: Don't use Desmos for 2 + 3
 - **Forgetting to verify**: Calculator gives numbers, but does the answer make sense in context?`
@@ -32,28 +32,28 @@ export const satCalcStrategyPart7Data = {
     {
       id: 'cs7-q1',
       type: 'quiz' as const,
-      question: 'A problem asks: "For what value of k does the system y = 3x + k and y = 3x - 5 have no solution?" The fastest approach is:',
+      question: 'A problem asks for which values of $k$ the system $y = 3x + k$ and $y = 3x - 5$ has no solution. Comparing slopes and intercepts, with no graphing, gives which answer?',
       options: [
-        'Graph both in Desmos and adjust the slider for k',
-        'Recognize that both have slope 3, so they are parallel when k ≠ -5, meaning any k ≠ -5 gives no solution',
-        'Set 3x + k = 3x - 5 and solve for k',
-        'Substitute test values for k'
+        'Only the value $k = -5$',
+        'Every value of $k$ except $-5$',
+        'Only the value $k = 3$',
+        'No value of $k$ works'
       ],
       correctAnswer: 1,
-      explanation: 'Both lines have slope 3 (parallel). They only overlap when k = -5 (same line). For ANY other value of k, the lines are parallel with no intersection. This is conceptual — no calculator needed. The answer is "any value except -5."'
+      explanation: 'Both lines have slope 3 (parallel). They only overlap when k = -5 (same line). For ANY other value of k, the lines are parallel with no intersection. This is conceptual — no calculator needed. The answer is "any value except $-5$"; $k = -5$ gives infinitely many solutions, not none.'
     },
     {
       id: 'cs7-q2',
       type: 'quiz' as const,
       question: 'Which of these SAT Math problems would take the LONGEST to solve without a calculator?',
       options: [
-        'What is 15% of 200?',
-        'Find the intersection of y = $x^{2}$ - 3x + 1 and y = 2x - 3',
-        'Solve: 7x = 49',
-        'What is the slope of the line through (0, 3) and (4, 11)?'
+        'Find $15\\%$ of $200$',
+        'Find where $y = x^2 - 3x + 1$ meets $y = 2x - 3$',
+        'Solve $7x - 49 = 0$',
+        'Find the slope of the line through $(0, 3)$ and $(4, 11)$'
       ],
       correctAnswer: 1,
-      explanation: 'Finding the intersection of a quadratic and a line requires setting $x^{2}$ - 3x + 1 = 2x - 3, solving $x^{2}$ - 5x + 4 = 0, factoring, and finding y-values. With Desmos, graph both and click — done in 10 seconds.'
+      explanation: 'Finding the intersection of a quadratic and a line requires setting $x^2 - 3x + 1 = 2x - 3$, solving $x^2 - 5x + 4 = 0$ to get $x = 1$ or $x = 4$, and then finding the points $(1, -1)$ and $(4, 5)$. The other three are one-step problems. With Desmos, graph both and click — done in 10 seconds.'
     },
     {
       id: 'cs7-text2',
@@ -74,9 +74,9 @@ export const satCalcStrategyPart7Data = {
 
 | Step | Work |
 |---|---|
-| **Problem** | "How many times do $y = \\sin(x)$ and $y = 0.3x - 1$ intersect for $0 \\leq x \\leq 10$?" |
-| **By hand?** | Extremely difficult — transcendental equation. |
-| **Desmos** | Graph both, count intersections: **3 intersections**. Done in 15 seconds. |
+| **Problem** | "How many solutions does $2^x = x + 3$ have?" |
+| **By hand?** | No algebra step isolates $x$ — you would be stuck guessing and checking. |
+| **Desmos** | Graph $y = 2^x$ and $y = x + 3$, count intersections: **2 intersections** (near $x \\approx -2.86$ and $x \\approx 2.44$). Done in 15 seconds. |
 
 ### The 60-Second Rule
 
@@ -97,7 +97,7 @@ export const satCalcStrategyPart7Data = {
 | System of equations | Desmos (graph both, find intersection) |
 | "How many solutions?" | Desmos (count intersections visually) |
 | Data/regression | Desmos tables + regression |
-| Trig / transcendental | Always Desmos |
+| Exponential vs. linear equations | Desmos (count or click intersections) |
 | Backsolving from answer choices | Desmos or plug-in by hand |`
     },
     {
@@ -108,19 +108,19 @@ export const satCalcStrategyPart7Data = {
         questions: [
           {
             question: 'You have 45 seconds left and one unanswered problem: "Find all $x$ where $x^3 - 4x^2 + x + 6 = 0$." Best approach?',
-            options: ['Graph in Desmos, read the x-intercepts', 'Factor by grouping by hand', 'Use the cubic formula', 'Guess and check each answer choice'],
+            options: ['Graph it in Desmos and read off the x-intercepts', 'Factor it by grouping the first two terms', 'Apply the quadratic formula to it', 'Divide by $x$ and solve the resulting quadratic'],
             correctAnswer: 0,
-            explanation: 'With 45 seconds and a cubic equation, graphing in Desmos is fastest. Type the equation, read the zeros from the graph. Factoring a cubic by hand is risky under time pressure.'
+            explanation: 'With 45 seconds and a cubic equation, graphing in Desmos is fastest: the zeros $x = -1$, $2$, and $3$ appear as x-intercepts. Grouping fails here ($x^2(x - 4) + (x + 6)$ has no common factor), the quadratic formula applies only to quadratics, and dividing by $x$ is invalid because of the constant term $6$.'
           },
           {
             question: 'Which parenthesization is correct in Desmos for $\\frac{2}{3}x + 5$?',
-            options: ['$(2/3)x + 5$', '$2/3x + 5$', '$2/(3x + 5)$', '$2/3 \\cdot x + 5$ (all work the same)'],
+            options: ['$(2/3)x + 5$', '$2/3x + 5$', '$2/(3x + 5)$', '$2/(3x) + 5$'],
             correctAnswer: 0,
-            explanation: 'In Desmos, $2/3x$ is interpreted as $\\frac{2}{3x}$. You need $(2/3)x$ or $\\frac{2}{3}x$ using the fraction template to get the correct expression.'
+            explanation: 'In Desmos, typing $2/3x$ puts the $x$ in the denominator, giving $\\frac{2}{3x}$ — the same as $2/(3x)$. You need $(2/3)x$, or the fraction template with the cursor moved out of the denominator, to get $\\frac{2}{3}x + 5$.'
           },
           {
-            question: 'A SAT problem says "Which value of $k$ makes the system $y = 2x + 3$ and $y = kx + 3$ have infinitely many solutions?" You should:',
-            options: ['Recognize $k = 2$ instantly — same slope and same y-intercept', 'Graph both with a slider for $k$', 'Solve the system algebraically', 'Substitute $k = 0, 1, 2, 3$ one at a time'],
+            question: 'Which value of $k$ makes the system $y = 2x + 3$ and $y = kx + 3$ have infinitely many solutions? (Recognize it; no calculator needed.)',
+            options: ['$2$', '$3$', '$-2$', '$\\frac{1}{2}$'],
             correctAnswer: 0,
             explanation: 'Infinitely many solutions = same line. Both have $y$-intercept $3$, so they\'re the same line when slopes match: $k = 2$. This takes 5 seconds of recognition — no calculator needed.'
           }
@@ -152,12 +152,12 @@ export const satCalcStrategyPart7Data = {
 
 | Part | Topic | Key Takeaway |
 |---|---|---|
-| 1 | Desmos Basics | Graph equations, find intersections, use sliders |
-| 2 | Systems of Equations | Graph both lines/curves, click intersection |
-| 3 | Quadratics & Polynomials | Zeros = x-intercepts; vertex from graph |
-| 4 | Tables & Regression | Enter data in table, use regression to fit models |
-| 5 | Backsolving & Estimation | Plug in answer choices; use graph to estimate |
-| 6 | Advanced Desmos | Sliders for parameters, inequalities, piecewise |
+| 1 | When to Use the Calculator | Mental math for clean problems, Desmos for messy ones |
+| 2 | Desmos Fundamentals | Graph equations, click zeros and vertices, tables, sliders |
+| 3 | Systems in Desmos | Graph both lines/curves, click or count intersections |
+| 4 | Inequalities & Restrictions | Shaded overlaps, dashed vs. solid, domain braces |
+| 5 | Regression & Data | Enter data in a table, use regression to fit models |
+| 6 | Advanced Techniques | Backsolving, equivalence checks, sliders for parameters |
 | 7 | Review & Timed Practice | Decision framework, speed benchmarks, common mistakes |
 
 ### The Golden Rules
@@ -172,7 +172,7 @@ export const satCalcStrategyPart7Data = {
 - Mental math problems: 10-15 seconds
 - Desmos graph problems: 20-30 seconds
 - Regression/data problems: 30-45 seconds
-- Total section: ~75 seconds per problem average
+- Total section: ~95 seconds per problem average
 
 🎉 *Calculator Strategy complete! Use these techniques to save time on every SAT Math section.*`
     }

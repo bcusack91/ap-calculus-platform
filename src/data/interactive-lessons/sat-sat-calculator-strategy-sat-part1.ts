@@ -36,13 +36,13 @@ Type both equations, then click the intersection point to get exact coordinates 
       type: 'quiz' as const,
       question: 'Which problem would benefit MOST from using the Desmos calculator?',
       options: [
-        'What is 3/4 of 120?',
-        'Factor $x^{2}$ - 9',
-        'Find where y = $2x^{2}$ - 3x + 1 and y = x + 2 intersect',
-        'Solve 5x = 35'
+        'Find 3/4 of 120 as a whole number',
+        'Factor the expression $x^2 - 9$ completely',
+        'Find where $y = 2x^2 - 3x + 1$ meets $y = x + 2$',
+        'Solve the linear equation $5x = 35$ for $x$'
       ],
       correctAnswer: 2,
-      explanation: 'The system with a quadratic and linear equation has non-integer solutions — graphing both in Desmos and clicking the intersection is much faster than solving algebraically.'
+      explanation: 'Setting $2x^2 - 3x + 1 = x + 2$ gives $2x^2 - 4x - 1 = 0$, whose solutions are irrational — graphing both in Desmos and clicking the intersections is much faster than the quadratic formula. The other three take a few seconds by hand.'
     },
     {
       id: 'cs1-q2',
@@ -55,7 +55,7 @@ Type both equations, then click the intersection point to get exact coordinates 
         'The calculator will not work for some problems'
       ],
       correctAnswer: 1,
-      explanation: 'Using the calculator for simple problems like 3x = 15 wastes 20-30 seconds each. Over 22 Math questions, that adds up to minutes lost on harder problems that actually need more time.'
+      explanation: 'Using the calculator for simple problems like 3x = 15 wastes 20-30 seconds each. Across the 44 Math questions, that adds up to minutes lost on harder problems that genuinely need more time.'
     },
     {
       id: 'cs1-text2',
@@ -74,9 +74,9 @@ Type both equations, then click the intersection point to get exact coordinates 
 
 | Step | Work |
 |---|---|
-| **Problem** | "At what value of $x$ do $y = 0.4x^2 - 1.7x + 3.1$ and $y = 0.8x + 1.2$ intersect in the first quadrant?" |
+| **Problem** | "What is the greater $x$-value at which $y = 0.4x^2 - 1.7x + 3.1$ and $y = 0.8x + 1.2$ intersect?" |
 | **By hand** | $0.4x^2 - 2.5x + 1.9 = 0$ → quadratic formula with ugly numbers. |
-| **Desmos** | Type both equations → click intersection → read answer. ~15 seconds. |
+| **Desmos** | Type both equations → click the right-hand intersection → read $x \\approx 5.36$. ~15 seconds. |
 
 ### Calculator Decision Quick Guide
 
@@ -106,22 +106,22 @@ This leaves a few minutes for review.`
       exercise: {
         questions: [
           {
-            question: 'The equation $x^2 + 3x - 7 = 0$ has solutions that are irrational numbers. The fastest SAT approach is:',
-            options: ['Graph $y = x^2 + 3x - 7$ in Desmos and click the x-intercepts', 'Use the quadratic formula by hand', 'Factor it', 'Guess and check'],
+            question: 'The equation $x^2 + 3x - 7 = 0$ has solutions that are irrational numbers. Which approach reaches decimal values of the solutions in the fewest steps?',
+            options: ['Graph $y = x^2 + 3x - 7$ and click the x-intercepts', 'Apply the quadratic formula by hand to $x^2 + 3x - 7$', 'Factor into two binomials with integer roots', 'Test integer values of $x$ until one works'],
             correctAnswer: 0,
-            explanation: 'Since the roots are irrational (discriminant $= 9 + 28 = 37$, not a perfect square), factoring won\'t work. Desmos gives you the x-intercepts in seconds without the quadratic formula.'
+            explanation: 'Since the roots are irrational (discriminant $= 9 + 28 = 37$, not a perfect square), factoring and testing integers can never land on a solution. The quadratic formula works but takes several steps plus a square root; Desmos gives the x-intercepts in one step.'
           },
           {
-            question: 'If $\\frac{3}{4} \\times 120 = ?$, the fastest approach is:',
-            options: ['Mental math: $120 \\div 4 = 30$, then $30 \\times 3 = 90$', 'Type it into Desmos', 'Set up a proportion and cross-multiply', 'Convert to decimal and multiply'],
+            question: 'Which approach finds $\\frac{3}{4} \\times 120$ with the least work?',
+            options: ['Divide 120 by 4, then multiply by 3', 'Type the product into the Desmos calculator', 'Set up a proportion and cross-multiply', 'Convert 3/4 to a percent, then take that percent of 120'],
             correctAnswer: 0,
             explanation: 'This is clean mental math — break it into $120/4 = 30$, then $30 \\times 3 = 90$. Using the calculator here wastes 15+ seconds.'
           },
           {
-            question: 'You need to find where $y = |2x - 5| + 3$ equals $y = 10$. What is fastest?',
-            options: ['Graph both in Desmos and click intersections', 'Solve $|2x - 5| = 7$ by hand (two cases)', 'Both are about equally fast', 'Use a table of values'],
-            correctAnswer: 2,
-            explanation: 'By hand: $|2x - 5| = 7$ gives $2x - 5 = 7$ or $2x - 5 = -7$, so $x = 6$ or $x = -1$. In Desmos, graph and click. Both take ~15 seconds — choose whichever feels more comfortable.'
+            question: 'You graph $y = |2x - 5| + 3$ and $y = 10$ in Desmos to solve $|2x - 5| + 3 = 10$. What should you see when you click the intersections?',
+            options: ['Two points, at $x = -1$ and $x = 6$', 'One point, at $x = 6$', 'Two points, at $x = 1$ and $x = 6$', 'Two points, at $x = -2.5$ and $x = 7.5$'],
+            correctAnswer: 0,
+            explanation: 'The V-shaped graph crosses the horizontal line twice. By hand: $|2x - 5| = 7$ gives $2x - 5 = 7$ or $2x - 5 = -7$, so $x = 6$ or $x = -1$. Seeing two crossings in Desmos warns you not to stop after the positive case. Forgetting to subtract the 3 first gives $x = -2.5$ and $x = 7.5$.'
           }
         ]
       }
@@ -135,9 +135,9 @@ This leaves a few minutes for review.`
           'Solve $5x = 35$ → [Mental math|Desmos|Backsolve|Pick numbers]',
           'Find the intersection of $y = x^2 - 4$ and $y = 2x + 1$ → [Desmos|Mental math|Pick numbers|Estimate]',
           'What is 25% of 360? → [Mental math|Desmos|Backsolve|Set up proportion]',
-          'How many solutions does $x^2 + 4x + 5 = 0$ have? → [Desmos (or discriminant)|Mental math|Backsolve|Guess]'
+          'How many solutions does $x^2 + 4x + 5 = 0$ have? → [Desmos|Backsolve|Pick numbers|Guess]'
         ],
-        correctAnswers: ['Mental math', 'Desmos', 'Mental math', 'Desmos (or discriminant)'],
+        correctAnswers: ['Mental math', 'Desmos', 'Mental math', 'Desmos'],
         hint1: '$5x = 35$ → $x = 7$. This takes 2 seconds mentally.',
         hint2: 'A quadratic-linear system requires algebra or graphing — Desmos is faster.',
         hint3: '25% of 360 = 360/4 = 90. Quick mental division.',

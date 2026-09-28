@@ -140,13 +140,13 @@ Sometimes the SAT gives you a ratio and one part, not the total.
       content: '**Ratio, Rate, or Proportion?** 🔍\n\nClassify each problem type.',
       exercise: {
         dropdowns: [
-          { label: '"Boys to girls is 4:5 in a class of 36"', options: ['Ratio (part-to-whole)', 'Unit rate', 'Proportion', 'Direct variation'] },
+          { label: '"4 of every 9 students in a class of 36 are boys"', options: ['Ratio (part-to-whole)', 'Unit rate', 'Proportion', 'Direct variation'] },
           { label: '"A runner covers 13.1 miles in 2 hours"', options: ['Unit rate (miles per hour)', 'Ratio', 'Proportion', 'Scale factor'] },
-          { label: '"If 8 pencils cost $2.40, how much do 12 cost?"', options: ['Proportion (cross-multiply)', 'Ratio', 'Unit rate', 'Inverse variation'] },
-          { label: '"Recipe calls for 2 cups flour per 3 cups sugar"', options: ['Ratio (part-to-part)', 'Proportion', 'Unit rate', 'Percent'] }
+          { label: '"If 8 pencils cost \\$2.40, how much do 12 cost?"', options: ['Proportion (cross-multiply)', 'Ratio', 'Unit rate', 'Inverse variation'] },
+          { label: '"Flour and sugar are mixed in a 2:3 ratio"', options: ['Ratio (part-to-part)', 'Proportion', 'Unit rate', 'Percent'] }
         ],
         correctAnswers: ['Ratio (part-to-whole)', 'Unit rate (miles per hour)', 'Proportion (cross-multiply)', 'Ratio (part-to-part)'],
-        hint1: 'A ratio with a total number of items is a part-to-whole problem.',
+        hint1: 'Comparing one group with the whole class is a part-to-whole ratio.',
         hint2: 'Distance over time gives a unit rate.',
         hint3: 'Two equivalent ratios = set up a proportion and cross-multiply.',
         explanation: 'Ratios compare parts (to whole or to each other). Rates include units. Proportions equate two ratios to solve for unknowns.'

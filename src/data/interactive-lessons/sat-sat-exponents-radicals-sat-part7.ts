@@ -66,10 +66,10 @@ export const satExponentsPart7Data = {
             explanation: '$x^{a+5-3} = x^{a+2} = x^{10}$ → $a + 2 = 10$ → $a = 8$.'
           },
           {
-            question: 'Which is greatest: $2^{10}$, $4^5$, $8^3$, $16^2$?',
-            options: ['$2^{10}$ and $4^5$ are equal (both 1024), and they are the greatest', '$16^2$', '$8^3$', 'All are equal'],
+            question: 'Which is greatest: $4^5$, $8^3$, $9^3$, $16^2$?',
+            options: ['$4^5$', '$16^2$', '$8^3$', '$9^3$'],
             correctAnswer: 0,
-            explanation: '$2^{10} = 1024$, $4^5 = (2^2)^5 = 2^{10} = 1024$, $8^3 = (2^3)^3 = 2^9 = 512$, $16^2 = (2^4)^2 = 2^8 = 256$. $2^{10} = 4^5 = 1024$ is greatest.'
+            explanation: 'Rewrite the powers of 2: $4^5 = (2^2)^5 = 2^{10} = 1024$, $8^3 = (2^3)^3 = 2^9 = 512$, $16^2 = (2^4)^2 = 2^8 = 256$. The odd one out is $9^3 = 729$. So $4^5 = 1024$ is greatest, even though its base is the smallest.'
           },
           {
             question: 'Simplify: $\\frac{\\sqrt{50}}{\\sqrt{2}}$',
@@ -143,10 +143,10 @@ Many SAT problems look complex but simplify once you rewrite bases as powers of 
             explanation: '$x^{-1/2} \\cdot x^k = x^{k - 1/2}$. Set equal to $x^{1/2}$: $k - 1/2 = 1/2$ → $k = 1$.'
           },
           {
-            question: 'How many solutions does $\\sqrt{x^2} = -x$ have for real $x$?',
-            options: ['Infinitely many ($x \\leq 0$)', 'One ($x = 0$)', 'None', 'Two'],
+            question: 'Which describes all real solutions of $\\sqrt{x^2} = -x$?',
+            options: ['Infinitely many ($x \\leq 0$)', 'Infinitely many ($x \\geq 0$)', 'Exactly one ($x = 0$)', 'Exactly two ($x = \\pm 1$)'],
             correctAnswer: 0,
-            explanation: '$\\sqrt{x^2} = |x|$. For $|x| = -x$, we need $-x \\geq 0$, meaning $x \\leq 0$. All non-positive $x$ work.'
+            explanation: '$\\sqrt{x^2} = |x|$. For $|x| = -x$, we need $-x \\geq 0$, meaning $x \\leq 0$. All non-positive $x$ work, so there are infinitely many solutions; a positive $x$ fails because $|x| = x \\neq -x$.'
           }
         ]
       }
@@ -157,10 +157,10 @@ Many SAT problems look complex but simplify once you rewrite bases as powers of 
       content: '**Which Strategy?** 🔍\n\nFor each problem, choose the best first step.',
       exercise: {
         dropdowns: [
-          { label: 'Solve $4^{x+1} = 8^x$', options: ['Rewrite as powers of 2', 'Take the log of both sides', 'Multiply both sides by 4', 'Square both sides'] },
+          { label: 'Solve $4^{x+1} = 8^x$', options: ['Rewrite as powers of 2', 'Set the exponents equal right away', 'Multiply both sides by 4', 'Square both sides'] },
           { label: 'Simplify $\\sqrt{75} - \\sqrt{27}$', options: ['Simplify each radical first', 'Multiply the radicals together', 'Square both radicals', 'Add the radicands'] },
           { label: 'Solve $\\sqrt{3x + 1} = 5$', options: ['Square both sides', 'Subtract 1 from both sides', 'Divide by 3', 'Cube both sides'] },
-          { label: 'Find $(-1)^{47} + (-1)^{50}$', options: ['Odd power = −1, even power = +1', 'Calculate both powers directly', 'Factor out (−1)', 'Rewrite as powers of i'] }
+          { label: 'Find $(-1)^{47} + (-1)^{50}$', options: ['Odd power = −1, even power = +1', 'Calculate both powers directly', 'Factor out (−1)', 'Add the exponents first'] }
         ],
         correctAnswers: ['Rewrite as powers of 2', 'Simplify each radical first', 'Square both sides', 'Odd power = −1, even power = +1'],
         hint1: 'Both 4 and 8 are powers of 2: $4 = 2^2$, $8 = 2^3$.',

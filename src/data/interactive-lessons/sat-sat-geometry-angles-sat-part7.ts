@@ -125,15 +125,15 @@ If they DO give you a figure:
           },
           {
             question: 'A 30-60-90 triangle and a 45-45-90 triangle share the same hypotenuse of length 10. What is the positive difference of their areas?',
-            options: ['$25\\sqrt{3} - 25 \\approx 18.3$', '$25$', '$25\\sqrt{3}$', '$50 - 25\\sqrt{2}$'],
+            options: ['$25 - \\frac{25\\sqrt{3}}{2}$', '$50 - 25\\sqrt{3}$', '$25\\sqrt{3} - 25$', '$\\frac{25\\sqrt{3}}{2} - \\frac{25}{2}$'],
             correctAnswer: 0,
-            explanation: '30-60-90: legs $= 5$ and $5\\sqrt{3}$. Area $= \\frac{1}{2}(5)(5\\sqrt{3}) = \\frac{25\\sqrt{3}}{2}$. 45-45-90: legs $= \\frac{10}{\\sqrt{2}} = 5\\sqrt{2}$. Area $= \\frac{1}{2}(5\\sqrt{2})^2 = 25$. Difference $= \\frac{25\\sqrt{3}}{2} - 25 \\approx 21.65 - 25$... Actually $\\frac{25\\sqrt{3}}{2} \\approx 21.65$ and $25$, difference $\\approx 3.35$. But the answer simplifies to $\\frac{25\\sqrt{3} - 50}{2}$... The 30-60-90 area is $\\frac{25\\sqrt{3}}{2} \\approx 21.65$ and 45-45-90 area is $25$, so 45-45-90 is larger: $25 - \\frac{25\\sqrt{3}}{2} \\approx 3.35$.'
+            explanation: '30-60-90: legs $= 5$ and $5\\sqrt{3}$, so area $= \\frac{1}{2}(5)(5\\sqrt{3}) = \\frac{25\\sqrt{3}}{2} \\approx 21.65$. 45-45-90: legs $= \\frac{10}{\\sqrt{2}} = 5\\sqrt{2}$, so area $= \\frac{1}{2}(5\\sqrt{2})^2 = 25$. The 45-45-90 triangle is larger, so the positive difference is $25 - \\frac{25\\sqrt{3}}{2} \\approx 3.35$. Dropping the $\\frac{1}{2}$ from both area formulas gives $50 - 25\\sqrt{3}$, twice the true difference.'
           },
           {
             question: 'A cylinder is inscribed in a sphere of radius 5. The cylinder has maximum volume when its height is $\\frac{10}{\\sqrt{3}}$. What is the cylinder\'s radius?',
-            options: ['$\\frac{5\\sqrt{6}}{3}$', '$5$', '$\\frac{10}{3}$', '$\\sqrt{\\frac{50}{3}}$'],
+            options: ['$\\frac{5\\sqrt{3}}{3}$', '$5$', '$\\frac{10\\sqrt{3}}{3}$', '$\\frac{5\\sqrt{6}}{3}$'],
             correctAnswer: 3,
-            explanation: 'Using $r^2 + (h/2)^2 = R^2$: $r^2 + (\\frac{5}{\\sqrt{3}})^2 = 25$ → $r^2 + \\frac{25}{3} = 25$ → $r^2 = \\frac{50}{3}$ → $r = \\sqrt{\\frac{50}{3}}$.'
+            explanation: 'The sphere\'s center is the midpoint of the cylinder\'s axis, so $r^2 + (h/2)^2 = R^2$: $r^2 + (\\frac{5}{\\sqrt{3}})^2 = 25$ → $r^2 + \\frac{25}{3} = 25$ → $r^2 = \\frac{50}{3}$ → $r = \\sqrt{\\frac{50}{3}} = \\frac{5\\sqrt{6}}{3}$. ($\\frac{5\\sqrt{3}}{3}$ is half the height and $\\frac{10\\sqrt{3}}{3}$ is the full height, not the radius.)'
           }
         ]
       }

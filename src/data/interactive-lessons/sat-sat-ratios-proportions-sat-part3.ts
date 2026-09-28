@@ -161,9 +161,9 @@ If the graph is a hyperbola ($y = k/x$), it's inverse variation.`
           { label: 'More workers → less time to complete a job', options: ['Inverse variation', 'Direct variation', 'Neither', 'Joint variation'] },
           { label: 'More hours worked → more money earned', options: ['Direct variation', 'Inverse variation', 'Neither', 'Joint variation'] },
           { label: 'Higher speed → less time for same trip', options: ['Inverse variation', 'Direct variation', 'Neither', 'Joint variation'] },
-          { label: 'Doubling side length → quadrupling area', options: ['Neither (it\'s quadratic: A = $s^{2}$)', 'Direct variation', 'Inverse variation', 'Joint variation'] }
+          { label: 'Doubling side length → quadrupling area', options: ['Neither', 'Direct variation', 'Inverse variation', 'Joint variation'] }
         ],
-        correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither (it\'s quadratic: A = $s^{2}$)'],
+        correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither'],
         hint1: 'When one goes up and the other goes down (with constant product), it\'s inverse.',
         hint2: 'Hours and pay increase together — that\'s direct.',
         hint3: 'Area varies with the *square* of the side, not linearly — so it\'s not simple direct variation.',

@@ -63,10 +63,10 @@ If dimensions are scaled by factor $k$:
             explanation: '$SA = 4\\pi r^2 = 100\\pi$ → $r^2 = 25$ → $r = 5$. Volume $= \\frac{4}{3}\\pi(5)^3 = \\frac{500\\pi}{3}$.'
           },
           {
-            question: 'A model building is a 1:50 scale replica. If the model has volume 8 cubic inches, the real building has volume:',
-            options: ['$1{,}000{,}000$ cubic inches', '$400$ cubic inches', '$125{,}000$ cubic inches', '$50{,}000$ cubic inches'],
+            question: 'A model building is a 1:50 scale replica. If the model has volume 2 cubic inches, the real building has volume:',
+            options: ['$250{,}000$ cubic inches', '$100$ cubic inches', '$125{,}000$ cubic inches', '$5{,}000$ cubic inches'],
             correctAnswer: 0,
-            explanation: 'Volume scales by $k^3$. Scale factor is 50, so real volume $= 8 \\times 50^3 = 8 \\times 125{,}000 = 1{,}000{,}000$ cubic inches.'
+            explanation: 'Volume scales by $k^3$. Scale factor is 50, so real volume $= 2 \\times 50^3 = 2 \\times 125{,}000 = 250{,}000$ cubic inches. Multiplying by $50$ (giving $100$) or by $50^2$ (giving $5{,}000$) uses the length or area scale instead of the volume scale.'
           }
         ]
       }
@@ -117,7 +117,7 @@ If dimensions are scaled by factor $k$:
         questions: [
           {
             question: 'A cylinder has radius $r$ and height $2r$. Its volume equals the volume of a sphere. What is the sphere\'s radius in terms of $r$?',
-            options: ['$r\\sqrt[3]{\\frac{3}{2}}$', '$r$', '$2r$', '$\\frac{3r}{2}$'],
+            options: ['$r\\sqrt[3]{\\frac{3}{2}}$', '$r\\sqrt[3]{\\frac{2}{3}}$', '$r\\sqrt[3]{2}$', '$\\frac{3r}{2}$'],
             correctAnswer: 0,
             explanation: 'Cylinder: $V = \\pi r^2(2r) = 2\\pi r^3$. Sphere: $V = \\frac{4}{3}\\pi R^3$. Set equal: $\\frac{4}{3}\\pi R^3 = 2\\pi r^3$ → $R^3 = \\frac{3}{2} r^3$ → $R = r\\sqrt[3]{\\frac{3}{2}}$.'
           },

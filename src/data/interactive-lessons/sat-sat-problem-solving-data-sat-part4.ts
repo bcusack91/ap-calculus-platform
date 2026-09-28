@@ -41,13 +41,13 @@ You **won't** calculate SD on the SAT, but you must **compare** SDs:
       type: 'quiz' as const,
       question: 'A dataset has values {2, 3, 3, 4, 4, 4, 5, 5, 100}. Which is the better measure of center?',
       options: [
-        'Mean, because it uses all values',
-        'Median, because the outlier 100 pulls the mean far from typical values',
-        'Mode, because 4 appears most often',
-        'Range, because it shows the full spread'
+        'Mean, because it is the only measure that uses every value',
+        'Median, because the outlier 100 distorts the mean',
+        'Mode, because the value 4 appears more often than any other',
+        'Range, because it shows how far the data spread'
       ],
       correctAnswer: 1,
-      explanation: 'The outlier 100 drags the mean to about 14.4, but most values are 2-5. The median (4) better represents the typical value. On the SAT, when data has outliers, the median is usually the better measure.'
+      explanation: 'The outlier 100 drags the mean to about 14.4, but most values are 2-5, so the mean describes almost none of the data. The range measures spread, not center. The median (4) better represents the typical value. On the SAT, when data has outliers, the median is usually the better measure.'
     },
     {
       id: 'psd4-text2',
