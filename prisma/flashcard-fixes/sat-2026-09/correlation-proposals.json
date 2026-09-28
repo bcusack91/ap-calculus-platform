@@ -1,0 +1,20 @@
+[
+ {
+  "action": "UPDATE",
+  "id": "cmlshprcb00190fgo0xc0dyar",
+  "topicSlug": "sat-scatterplots-line-fit",
+  "category": "off-exam",
+  "front": "The points in a scatterplot fall close to a line that slopes downward from left to right. How do you describe the association?",
+  "back": "A strong negative linear association: as $x$ increases, $y$ tends to decrease, and the points stay close to a line. Points spread widely around the line would make it weak; a curved pattern would make it nonlinear.",
+  "hint": "Direction, form, strength.",
+  "reason": "The correlation coefficient r is not on the digital SAT; association is described in words."
+ },
+ {
+  "action": "UPDATE",
+  "id": "cmlshprcb001b0fgojbu39p7z",
+  "topicSlug": "sat-scatterplots-line-fit",
+  "category": "off-exam",
+  "back": "A point that falls far from the general pattern of the data, far from the line of best fit, so it has a large residual. An outlier can change the slope and intercept of the line of best fit and make the association look weaker.",
+  "reason": "Drop the correlation coefficient; keep residuals."
+ }
+]

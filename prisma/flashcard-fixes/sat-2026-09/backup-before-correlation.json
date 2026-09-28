@@ -1,0 +1,16 @@
+[
+ {
+  "id": "cmlshprcb00190fgo0xc0dyar",
+  "topicSlug": "sat-scatterplots-line-fit",
+  "front": "What does $r = -0.92$ tell you about a scatterplot?",
+  "back": "There is a strong NEGATIVE linear association. As $x$ increases, $y$ tends to decrease. The points cluster closely around a downward-sloping line.",
+  "hint": "The sign tells direction, the magnitude tells strength"
+ },
+ {
+  "id": "cmlshprcb001b0fgojbu39p7z",
+  "topicSlug": "sat-scatterplots-line-fit",
+  "front": "What is an outlier in a scatterplot?",
+  "back": "A point that falls far from the general pattern of the data (far from the line of best fit). It has a large residual. Outliers can significantly affect the correlation coefficient and the line of best fit.",
+  "hint": "A point that does not fit the trend"
+ }
+]

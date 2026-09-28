@@ -1,0 +1,23 @@
+[
+ {
+  "id": "cmlshq73t000j0fyq0lqdsdmz",
+  "topicSlug": "sat-grammar-usage",
+  "front": "When should you use \"who\" vs. \"whom\"?",
+  "back": "**Who** = subject (doing the action). **Whom** = object (receiving the action). Trick: If you can replace it with \"he\" → who. If \"him\" → whom. \"Who called?\" (He called.) \"To whom did you speak?\" (You spoke to him.)",
+  "hint": "He = who, Him = whom"
+ },
+ {
+  "id": "cmo4x2323000j0fntcfumxeu6",
+  "topicSlug": "sat-grammar-usage",
+  "front": "What's the difference between \"its\" and \"it's\"?",
+  "back": "its = possessive (no apostrophe); it's = it is (with apostrophe)",
+  "hint": null
+ },
+ {
+  "id": "cmstdfe9l00bp0f3h6m4c8gg2",
+  "topicSlug": "sat-statistics-data-interpretation",
+  "front": "What is the total number of people surveyed in this two-way table?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Male | 21 | 12 |\n| Female | 24 | 15 |",
+  "back": "**72**\n\n$21 + 24 + 12 + 15 = 72$.",
+  "hint": null
+ }
+]
