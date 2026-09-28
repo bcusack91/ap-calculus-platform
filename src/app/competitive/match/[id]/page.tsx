@@ -422,6 +422,17 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   // Render math in prompt (for both unit circle and multiple-choice)
   // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
+  // Reading & Writing items carry a short passage (or notes, or two texts)
+  // above the question, separated by a blank line. Rendered inside the bold,
+  // centered question heading, the paragraphs and note bullets ran together
+  // on one line. Split the passage off and show it as a left-aligned text
+  // block that keeps its line breaks; the last paragraph is the question.
+  const splitPassage = (text: string): { passage: string | null; stem: string } => {
+    const cut = text.lastIndexOf('\n\n')
+    if (cut < 0) return { passage: null, stem: text }
+    return { passage: text.slice(0, cut).trim(), stem: text.slice(cut + 2).trim() }
+  }
+
   const renderPrompt = (text: string) => {
     // Unit circle coordinate format: "Click the position for coordinate \left(...)\right)"
     if (text.includes('\\')) {
@@ -1010,7 +1021,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                                 </span>
                               )}
                             </p>
-                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto">
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto whitespace-pre-line">
                               {renderPrompt(question.prompt || question.question || '')}
                             </h3>
                           </div>
@@ -1293,9 +1304,21 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           )}
           {/* overflow-x-auto keeps wide KaTeX scrollable instead of blowing out the phone viewport */}
-          <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
-            {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
-          </h2>
+          {(() => {
+            const { passage, stem } = splitPassage(currentQuestion.prompt || currentQuestion.question || '')
+            return (
+              <>
+                {passage && (
+                  <div className={`mb-4 whitespace-pre-line rounded-lg bg-gray-50 p-4 text-left text-base leading-relaxed text-gray-800 dark:bg-gray-700/50 dark:text-gray-100 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`}>
+                    {renderPrompt(passage)}
+                  </div>
+                )}
+                <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto whitespace-pre-line transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
+                  {renderPrompt(stem)}
+                </h2>
+              </>
+            )
+          })()}
 
           {submitError && (
             <div className="mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-2 text-sm text-red-700 dark:text-red-300">
