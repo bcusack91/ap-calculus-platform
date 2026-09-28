@@ -122,9 +122,9 @@ $f(g(x)) = 2\\left(\\frac{x-3}{2}\\right) + 3 = (x - 3) + 3 = x$ ✓`
         questions: [
           {
             question: 'If $f(x) = x + 2$ and $g(x) = x^2$, what is $g(f(x)) - f(g(x))$?',
-            options: ['$2$', '$0$', '$4x$', '$4x + 2$'],
-            correctAnswer: 0,
-            explanation: '$g(f(x)) = (x+2)^2 = x^2 + 4x + 4$. $f(g(x)) = x^2 + 2$. Difference: $4x + 4 - 2 = 4x + 2$... Wait: $(x^2 + 4x + 4) - (x^2 + 2) = 4x + 2$. The answer is $4x + 2$ — but looking at the options, this equals $2$ only when $x = 0$. Let me re-check: the question asks for the expression, and $4x + 2$ is not among the answer choices as stated. Hmm — the correct general answer is $4x + 2$.'
+            options: ['$2$', '$4x + 6$', '$2x + 2$', '$4x + 2$'],
+            correctAnswer: 3,
+            explanation: '$g(f(x)) = (x+2)^2 = x^2 + 4x + 4$ and $f(g(x)) = x^2 + 2$. Subtract: $(x^2 + 4x + 4) - (x^2 + 2) = 4x + 2$. Writing $(x+2)^2$ as $x^2 + 4$ (dropping the middle term) gives $2$; distributing the minus sign incorrectly gives $4x + 6$.'
           },
           {
             question: 'If $f^{-1}(x) = 5x + 2$, what is $f(x)$?',

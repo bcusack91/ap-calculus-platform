@@ -30,15 +30,14 @@ $$y - y_1 = m(x - x_1) \\quad \\text{(point-slope form)}$$
 
 ### Worked Example 1
 
-**Find the line parallel to $y = -4x + 9$ through the point $(2, 1)$.**
+**Find the line parallel to $y = -4x + 9$ through the point $(2, 5)$.**
 
 | Step | Work |
 |------|------|
 | Same slope | $m = -4$ |
-| Point-slope | $y - 1 = -4(x - 2)$ |
-| Simplify | $y = -4x + 9$ |
-
-Wait — same equation! This means $(2, 1)$ is actually ON the original line. Check: $1 = -4(2) + 9 = 1$ ✓
+| Point-slope | $y - 5 = -4(x - 2)$ |
+| Simplify | $y = -4x + 8 + 5 = -4x + 13$ |
+| Check | $-4(2) + 13 = 5$ ✓, and the y-intercept $13 \\neq 9$, so the lines are distinct and parallel |
 
 ### Worked Example 2
 
@@ -121,9 +120,9 @@ A **perpendicular bisector** of a segment passes through its midpoint at a right
         questions: [
           {
             question: 'The distance between $(0, 0)$ and $(a, a)$ is $10$. What is $a$ if $a > 0$?',
-            options: ['$5\\sqrt{2}$', '$5$', '$10$', '$\\sqrt{10}$'],
+            options: ['$5\\sqrt{2}$', '$5$', '$10\\sqrt{2}$', '$\\sqrt{10}$'],
             correctAnswer: 0,
-            explanation: '$d = \\sqrt{a^2 + a^2} = \\sqrt{2a^2} = a\\sqrt{2} = 10$. So $a = 10/\\sqrt{2} = 5\\sqrt{2}$.'
+            explanation: '$d = \\sqrt{a^2 + a^2} = \\sqrt{2a^2} = a\\sqrt{2} = 10$. So $a = 10/\\sqrt{2} = 5\\sqrt{2}$. Multiplying by $\\sqrt{2}$ instead of dividing gives $10\\sqrt{2}$.'
           },
           {
             question: 'If line $p$ has equation $y = \\frac{2}{3}x + 1$ and line $q$ is perpendicular to $p$, what is the slope of $q$?',
@@ -133,9 +132,9 @@ A **perpendicular bisector** of a segment passes through its midpoint at a right
           },
           {
             question: 'Triangle $ABC$ has vertices $A(0,0)$, $B(6,0)$, $C(3,4)$. What is the perimeter?',
-            options: ['$16$', '$6 + 2\\sqrt{5} + 5$', '$6 + 10$', '$6 + 5 + 5$'],
-            correctAnswer: 3,
-            explanation: '$AB = 6$. $BC = \\sqrt{9 + 16} = 5$. $AC = \\sqrt{9+16} = 5$. Perimeter $= 6 + 5 + 5 = 16$.'
+            options: ['$16$', '$20$', '$14$', '$11$'],
+            correctAnswer: 0,
+            explanation: '$AB = 6$. $BC = \\sqrt{(6-3)^2 + (0-4)^2} = \\sqrt{9 + 16} = 5$. $AC = \\sqrt{3^2 + 4^2} = 5$. Perimeter $= 6 + 5 + 5 = 16$. Adding the horizontal and vertical legs ($3 + 4 = 7$) instead of using the distance formula gives $20$; using the height $4$ as each slanted side gives $14$.'
           }
         ]
       }

@@ -165,9 +165,9 @@ Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
         questions: [
           {
             question: 'If $f(x) = 2x + 1$ and $g(x) = \\frac{x-1}{2}$, which statement is true?',
-            options: ['$f$ and $g$ are inverse functions', '$f(g(x)) = x + 1$', '$g(f(x)) = 2x$', '$f(x) \\cdot g(x) = 1$'],
+            options: ['$f(g(x)) = x$', '$f(g(x)) = x + 1$', '$g(f(x)) = 2x$', '$f(x) \\cdot g(x) = 1$'],
             correctAnswer: 0,
-            explanation: '$f(g(x)) = 2 \\cdot \\frac{x-1}{2} + 1 = (x-1)+1 = x$. $g(f(x)) = \\frac{(2x+1)-1}{2} = x$. Since both equal $x$, they are inverses.'
+            explanation: '$f(g(x)) = 2 \\cdot \\frac{x-1}{2} + 1 = (x-1)+1 = x$. Likewise $g(f(x)) = \\frac{(2x+1)-1}{2} = x$, so $f$ and $g$ are inverse functions. The product $f(x) \\cdot g(x)$ is a different operation from composition and does not equal $1$.'
           },
           {
             question: 'The function $f(x) = (x-3)^2$ is defined for $x \\geq 3$. What is the domain of $f^{-1}$?',

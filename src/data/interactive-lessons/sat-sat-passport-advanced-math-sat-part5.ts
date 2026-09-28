@@ -67,8 +67,8 @@ $$x = 4 \\implies y = 3 \\qquad x = 1 \\implies y = 0$$
           {
             question: 'The system $y = x^2 + 2$ and $y = 4x - 2$ intersects at how many points?',
             options: ['$0$', '$1$', '$2$', 'Cannot be determined'],
-            correctAnswer: 2,
-            explanation: '$x^2 + 2 = 4x - 2 \\Rightarrow x^2 - 4x + 4 = 0 \\Rightarrow (x-2)^2 = 0$. One solution: $x=2$, so it\'s tangent — 1 point. Actually wait: $(x-2)^2=0$ gives exactly one point. The answer is 1.'
+            correctAnswer: 1,
+            explanation: 'Set the expressions equal: $x^2 + 2 = 4x - 2 \\Rightarrow x^2 - 4x + 4 = 0 \\Rightarrow (x-2)^2 = 0$. The only solution is $x = 2$ (a repeated root, discriminant $= 0$), so the line is tangent to the parabola and they meet at exactly 1 point, $(2, 6)$.'
           }
         ]
       }

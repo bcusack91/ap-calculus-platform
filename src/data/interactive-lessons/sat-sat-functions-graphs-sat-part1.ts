@@ -74,7 +74,7 @@ On a graph: find where $y = 3$ intersects the curve.
           },
           {
             question: 'What is the domain of $f(x) = \\frac{1}{x - 4}$?',
-            options: ['All real numbers except $x = 4$', 'All real numbers except $x = -4$', 'All real numbers', '$x > 4$'],
+            options: ['All real numbers except $x = 4$', 'All real numbers except $x = -4$', 'All real numbers', 'All real numbers greater than $4$'],
             correctAnswer: 0,
             explanation: 'The denominator cannot be zero: $x - 4 \\neq 0$ → $x \\neq 4$.'
           }
@@ -129,9 +129,9 @@ From this table: $f(1) = 0$, $f(0) = 2$, and $f(f(1)) = f(0) = 2$.
           },
           {
             question: 'The domain of $g(x) = \\frac{\\sqrt{x}}{x - 5}$ is:',
-            options: ['$x \\geq 0$ and $x \\neq 5$', '$x > 0$', '$x \\neq 5$', '$x \\geq 0$'],
+            options: ['$x \\geq 0$ and $x \\neq 5$', '$x > 0$ and $x \\neq 5$', '$x \\geq 0$ and $x < 5$', '$x \\geq 0$'],
             correctAnswer: 0,
-            explanation: 'Need $x \\geq 0$ (square root) AND $x \\neq 5$ (denominator). Both conditions apply.'
+            explanation: 'Need $x \\geq 0$ (square root) AND $x \\neq 5$ (denominator). Both conditions apply. $x = 0$ is allowed because $\\sqrt{0} = 0$ is fine in a numerator, and the denominator only has to be nonzero, so every $x > 5$ is allowed too.'
           }
         ]
       }
@@ -145,7 +145,7 @@ From this table: $f(1) = 0$, $f(0) = 2$, and $f(f(1)) = f(0) = 2$.
           { label: '$f(5) = 3$', options: ['The point (5, 3) is on the graph', 'The point (3, 5) is on the graph', 'The slope is 5/3'] },
           { label: '$f(x) = 0$', options: ['Find the x-intercept(s)', 'Evaluate f at 0', 'The function has no value'] },
           { label: '$f(0) = -2$', options: ['The y-intercept is -2', 'The x-intercept is -2', 'The function is negative'] },
-          { label: '$f(a) = f(b)$, $a \\neq b$', options: ['Two different inputs give the same output', 'The function has no inverse', 'Both — the function is not one-to-one'] }
+          { label: '$f(a) = f(b)$, $a \\neq b$', options: ['Two different inputs give the same output', 'One input gives two different outputs', 'The function is always increasing'] }
         ],
         correctAnswers: ['The point (5, 3) is on the graph', 'Find the x-intercept(s)', 'The y-intercept is -2', 'Two different inputs give the same output'],
         hint1: '$f(5) = 3$ means input 5 gives output 3.',

@@ -17,7 +17,7 @@ export const satWordProblemsPart2Data = {
 - Let son's current age = $s$, Maria's current age = $3s$
 - In 12 years: son = $s + 12$, Maria = $3s + 12$
 - Equation: $3s + 12 = 2(s + 12)$
-- Solve: $3s + 12 = 2s + 24 \implies s = 12$
+- Solve: $3s + 12 = 2s + 24 \\implies s = 12$
 - Son is 12, Maria is 36. Check: In 12 years → 24 and 48. 48 = 2(24) ✓
 
 ### Number Problems
@@ -25,7 +25,7 @@ export const satWordProblemsPart2Data = {
 **Consecutive even/odd:** $n, n+2, n+4$
 
 **Example:** "The sum of 3 consecutive integers is 72."
-$n + (n+1) + (n+2) = 72 \implies 3n + 3 = 72 \implies n = 23$
+$n + (n+1) + (n+2) = 72 \\implies 3n + 3 = 72 \\implies n = 23$
 The integers are 23, 24, 25.
 
 ### Digit Problems
@@ -108,10 +108,10 @@ Read the final question carefully:
             explanation: 'Ben $= b$, Amy $= b + 5$. In 3 years Amy is $(b + 5) + 3 = b + 8$. Set equal to $2b$: $b + 8 = 2b$ → $b = 8$.'
           },
           {
-            question: 'A two-digit number is 3 times the sum of its digits. The tens digit is 1 more than the units digit. Find the number.',
-            options: ['$27$', '$36$', '$54$', '$21$'],
+            question: 'A two-digit number is 4 times the sum of its digits. The units digit is 3 more than the tens digit. Find the number.',
+            options: ['$36$', '$24$', '$48$', '$63$'],
             correctAnswer: 0,
-            explanation: '$t = u + 1$. Number $= 10t + u = 3(t + u)$. Substitute: $10(u+1) + u = 3(u+1+u)$ → $11u + 10 = 6u + 3$ → $5u = -7$... Let\'s re-check: $10t + u = 3(t + u)$ → $10t + u = 3t + 3u$ → $7t = 2u$ → $t = 2u/7$. With $t = u + 1$: $u + 1 = 2u/7$ → $7u + 7 = 2u$ → $5u = -7$. Hmm — try: number is $27$. Digits sum: $9$. $3 \\times 9 = 27$ ✓. Tens $= 2$, units $= 7$. Tens digit is NOT 1 more. The correct answer is $27$ because $27 = 3(2+7)$.'
+            explanation: 'Let the tens digit be $t$ and the units digit $u$. Condition 1: $10t + u = 4(t + u)$ → $6t = 3u$ → $u = 2t$. Condition 2: $u = t + 3$. So $2t = t + 3$ → $t = 3$ and $u = 6$. The number is $36$. Check: $4(3 + 6) = 36$ ✓ and $6 = 3 + 3$ ✓. ($24$ and $48$ satisfy only the first condition; $63$ reverses the digits.)'
           }
         ]
       }

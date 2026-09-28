@@ -134,16 +134,16 @@ This is a common SAT word problem pattern that combines quadratics with real-wor
       content: '**Identify the Approach** 🔍\n\nFor each word problem, select the key equation setup.',
       exercise: {
         dropdowns: [
-          { label: '"When does a ball hit the ground?"', options: ['Set $h(t) = 0$, solve for $t$', 'Find the vertex', 'Compute $h(0)$', 'Find the discriminant'] },
-          { label: '"What is the maximum height?"', options: ['Set $h(t) = 0$', 'Find the vertex ($t = -b/2a$, then $h(t)$)', 'Compute $h(0)$', 'Factor'] },
-          { label: '"What is the initial height?"', options: ['Set $t = 0$, read $h(0)$', 'Find the vertex', 'Set $h(t) = 0$', 'Use discriminant'] },
-          { label: '"What price maximizes revenue?"', options: ['Find zeros', 'Find vertex of $R(x)$', 'Set $R = 0$', 'Find discriminant'] }
+          { label: '"When does a ball hit the ground?"', options: ['Set $h(t) = 0$', 'Find the vertex', 'Compute $h(0)$', 'Find the discriminant'] },
+          { label: '"What is the maximum height?"', options: ['Set $h(t) = 0$', 'Find the vertex', 'Compute $h(0)$', 'Find the discriminant'] },
+          { label: '"What is the initial height?"', options: ['Compute $h(0)$', 'Find the vertex', 'Set $h(t) = 0$', 'Find the discriminant'] },
+          { label: '"What price maximizes revenue?"', options: ['Find the zeros of $R$', 'Find the vertex of $R$', 'Compute $R(0)$', 'Find the discriminant'] }
         ],
-        correctAnswers: ['Set $h(t) = 0$, solve for $t$', 'Find the vertex ($t = -b/2a$, then $h(t)$)', 'Set $t = 0$, read $h(0)$', 'Find vertex of $R(x)$'],
+        correctAnswers: ['Set $h(t) = 0$', 'Find the vertex', 'Compute $h(0)$', 'Find the vertex of $R$'],
         hint1: '"Hits the ground" = height is 0.',
         hint2: '"Maximum" always means vertex for a downward parabola.',
         hint3: '"Initial" means time = 0.',
-        explanation: 'Ground: $h = 0$. Max height: vertex. Initial height: $h(0)$. Max revenue: vertex of the revenue quadratic.'
+        explanation: 'Ground: set $h(t) = 0$ and solve for $t$. Max height: the vertex ($t = -b/(2a)$, then evaluate $h$). Initial height: $h(0)$. Max revenue: vertex of the revenue quadratic.'
       }
     },
     {

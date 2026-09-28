@@ -110,15 +110,15 @@ export const satWordProblemsPart7Data = {
         questions: [
           {
             question: 'A store raises prices 20%, then offers a 20% discount. Compared to the original price, the final price is:',
-            options: ['$96\\%$ of original (4% less)', 'Equal to original', '$104\\%$ of original', '$80\\%$ of original'],
+            options: ['$96\\%$ of original', '$100\\%$ of original', '$104\\%$ of original', '$80\\%$ of original'],
             correctAnswer: 0,
             explanation: 'After 20% increase: $1.20P$. After 20% discount: $0.80 \\times 1.20P = 0.96P$. You lose 4% — a classic trap!'
           },
           {
             question: 'Two pipes fill a tank: Pipe A in 6 hours, Pipe B in 3 hours. If both run for 1 hour, then only B continues, how much longer does B take?',
             options: ['$1$ hour', '$1.5$ hours', '$2$ hours', '$0.5$ hours'],
-            correctAnswer: 0,
-            explanation: 'In 1 hour together: $\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$ tank filled. Remaining: $\\frac{1}{2}$ tank. B alone: $\\frac{1}{2} ÷ \\frac{1}{3} = \\frac{3}{2}$... Actually $\\frac{1/2}{1/3} = \\frac{3}{2} = 1.5$ hours. Wait — let me reconsider. B fills $\\frac{1}{3}$ per hour. To fill $\\frac{1}{2}$ tank: $t = \\frac{1/2}{1/3} = 1.5$ hours. The answer should be $1.5$ hours.'
+            correctAnswer: 1,
+            explanation: 'Pipe A fills $\\frac{1}{6}$ tank per hour and Pipe B fills $\\frac{1}{3}$. In 1 hour together they fill $\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$ of the tank, leaving $\\frac{1}{2}$. B alone needs $t$ hours with $\\frac{1}{3}t = \\frac{1}{2}$, so $t = \\frac{3}{2} = 1.5$ hours.'
           },
           {
             question: 'An item\'s value drops 10% each year. After how many years is it worth less than half its original value?',
@@ -138,9 +138,9 @@ export const satWordProblemsPart7Data = {
           '"A number is 3 more than twice another, their sum is 21" → [System of equations|Exponential model|d = rt|Quadratic formula]',
           '"Population doubles every 8 years" → [Exponential model|Linear equation|System of equations|d = rt]',
           '"Two trains approach each other" → [d = rt with combined rate|System only|Exponential decay|Area formula]',
-          '"Mix 30% and 50% solutions to get 40%" → [Mixture equation (track solute)|d = rt|Pythagorean theorem|Quadratic]'
+          '"Mix 30% and 50% solutions to get 40%" → [Mixture equation|d = rt|Pythagorean theorem|Quadratic]'
         ],
-        correctAnswers: ['System of equations', 'Exponential model', 'd = rt with combined rate', 'Mixture equation (track solute)'],
+        correctAnswers: ['System of equations', 'Exponential model', 'd = rt with combined rate', 'Mixture equation'],
         hint1: 'Two unknowns with two relationships → system.',
         hint2: 'Doubling = exponential growth.',
         hint3: 'Approaching each other = add speeds.',

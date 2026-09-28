@@ -120,10 +120,10 @@ export const satLinearEquationsPart7Data = {
             explanation: 'Perpendicular: $a(a+2) = -1$ → $a^2 + 2a + 1 = 0$ → $(a+1)^2 = 0$ → $a = -1$. Check: slopes are $-1$ and $1$, product $= -1$ ✓.'
           },
           {
-            question: 'A system of two linear equations in $x$ and $y$ has the solution $(3, -2)$. If one equation is $x + 2y = -1$, which could be the other?',
+            question: 'A system of two linear equations in $x$ and $y$ has exactly one solution, $(3, -2)$. If one equation is $x + 2y = -1$, which could be the other?',
             options: ['$2x - y = 8$', '$x + 2y = 5$', '$3x + 6y = -3$', '$x - y = 1$'],
             correctAnswer: 0,
-            explanation: 'Plug $(3, -2)$ into each. $2(3) - (-2) = 8$ ✓. $3x + 6y = -3$ is a multiple of the first equation (infinite solutions, not unique). $x - y = 1$: $3 - (-2) = 5 \\neq 1$.'
+            explanation: 'Plug $(3, -2)$ into each. $2(3) - (-2) = 8$ ✓. $3x + 6y = -3$ is a multiple of the first equation, so that system would have infinitely many solutions, not exactly one. $x + 2y = 5$: $3 - 4 = -1 \\neq 5$. $x - y = 1$: $3 - (-2) = 5 \\neq 1$.'
           },
           {
             question: 'If $2|x - 3| - 4 = 6$, what is the sum of all possible values of $x$?',
@@ -140,16 +140,16 @@ export const satLinearEquationsPart7Data = {
       content: '**Speed Round: What Strategy?** 🔍\n\nFor each problem type, select the fastest solving approach.',
       exercise: {
         dropdowns: [
-          { label: '"What is the slope of $5x - 3y = 15$?"', options: ['Isolate y (slope-intercept)', 'Plug in two points', 'Use $-A/B$ shortcut', 'Graph it'] },
-          { label: '"If $x + y = 9$ and $x - y = 3$, find $x$."', options: ['Substitution', 'Elimination (add)', 'Graphing', 'Back-solve'] },
+          { label: '"What is the slope of $5x - 3y = 15$?"', options: ['Isolate $y$ first', 'Plug in two points', 'Use $-A/B$ shortcut', 'Graph it'] },
+          { label: '"If $x + y = 9$ and $x - y = 3$, find $x$."', options: ['Substitution', 'Elimination', 'Graphing', 'Back-solving'] },
           { label: '"Find the line through $(2,5)$ with slope $-3$."', options: ['Standard form', 'Point-slope form', 'Two-point formula', 'Elimination'] },
           { label: '"Which point satisfies $y > 2x + 1$?"', options: ['Solve algebraically', 'Graph the region', 'Plug in each answer choice', 'Factor'] }
         ],
-        correctAnswers: ['Use $-A/B$ shortcut', 'Elimination (add)', 'Point-slope form', 'Plug in each answer choice'],
+        correctAnswers: ['Use $-A/B$ shortcut', 'Elimination', 'Point-slope form', 'Plug in each answer choice'],
         hint1: 'For slope from standard form, the quickest method is the $-A/B$ formula.',
         hint2: 'When the equations have matching coefficients with opposite signs, add them.',
         hint3: 'When you have a point and a slope, point-slope form is immediate.',
-        explanation: 'Standard form slope: use $-A/B = -5/(-3) = 5/3$. Matching coefficients → elimination. Known point + slope → point-slope. Checking a point in an inequality → plug and check.'
+        explanation: 'Standard form slope: use $-A/B = -5/(-3) = 5/3$. Matching coefficients with opposite signs → elimination (add the equations). Known point + slope → point-slope. Checking a point in an inequality → plug and check.'
       }
     },
     {

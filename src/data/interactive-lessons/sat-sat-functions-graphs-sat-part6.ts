@@ -63,9 +63,9 @@ $h(x) = x^2 + x$: $h(-x) = x^2 - x \\neq h(x)$ and $\\neq -h(x)$ → **neither**
         questions: [
           {
             question: 'Which function is odd?',
-            options: ['$f(x) = x^3 - x$', '$f(x) = x^2 + 1$', '$f(x) = |x|$', '$f(x) = x^4$'],
+            options: ['$f(x) = x^3 - x$', '$f(x) = x^2 + 1$', '$f(x) = |x| - 3$', '$f(x) = x^3 + 1$'],
             correctAnswer: 0,
-            explanation: '$f(-x) = -x^3 + x = -(x^3 - x) = -f(x)$ → odd. The others are all even.'
+            explanation: '$f(-x) = -x^3 + x = -(x^3 - x) = -f(x)$ → odd. $x^2 + 1$ and $|x| - 3$ are even. $x^3 + 1$ is neither: $f(-x) = -x^3 + 1$, which is not $-f(x) = -x^3 - 1$.'
           },
           {
             question: 'If $f$ is an even function and $f(2) = -5$, what is $f(-2) + f(2)$?',

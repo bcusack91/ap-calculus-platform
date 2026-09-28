@@ -54,13 +54,13 @@ Check: are the **differences** constant (linear) or are the **ratios** constant 
           },
           {
             question: '"A town\'s population increases by 2,000 people per year." This is best modeled by:',
-            options: ['A linear function', 'An exponential function', 'A quadratic function', 'Cannot be determined'],
+            options: ['A linear function', 'An exponential function', 'A quadratic function', 'A cubic function'],
             correctAnswer: 0,
             explanation: '"Increases by 2,000" = constant addition → linear. If it said "increases by 2%," that would be exponential.'
           },
           {
             question: 'Which grows faster for large $x$: $f(x) = 1000x$ or $g(x) = 2^x$?',
-            options: ['$g(x) = 2^x$', '$f(x) = 1000x$', 'They grow at the same rate', 'Depends on $x$'],
+            options: ['$g(x) = 2^x$', '$f(x) = 1000x$', 'Neither', 'Depends on $x$'],
             correctAnswer: 0,
             explanation: 'Exponential ALWAYS eventually outpaces linear, no matter how large the linear coefficient. By $x = 20$: $f = 20{,}000$ but $g = 1{,}048{,}576$.'
           }
@@ -114,9 +114,9 @@ Linear and exponential functions may be equal at certain points, but exponential
         questions: [
           {
             question: 'Data: $(0, 80), (1, 60), (2, 45), (3, 33.75)$. The model that fits is:',
-            options: ['$y = 80(0.75)^x$', '$y = 80 - 20x$', '$y = -20x + 80$', '$y = 80(1.25)^x$'],
+            options: ['$y = 80(0.75)^x$', '$y = 80 - 20x$', '$y = 80(0.25)^x$', '$y = 80(1.25)^x$'],
             correctAnswer: 0,
-            explanation: 'Ratios: $60/80 = 0.75$, $45/60 = 0.75$, $33.75/45 = 0.75$. Constant ratio → exponential with $a = 80$, $b = 0.75$.'
+            explanation: 'Ratios: $60/80 = 0.75$, $45/60 = 0.75$, $33.75/45 = 0.75$. Constant ratio → exponential with $a = 80$, $b = 0.75$. The linear model $80 - 20x$ fits the first two points only ($45 \\neq 40$), and $0.25$ is the percent lost, not the factor kept.'
           },
           {
             question: '"A city adds 500 new residents each year." Choose the model:',
@@ -139,7 +139,7 @@ Linear and exponential functions may be equal at certain points, but exponential
       content: '**Linear or Exponential?** 🔍\n\nClassify each scenario.',
       exercise: {
         dropdowns: [
-          { label: '"Your savings increase by $200 every month"', options: ['Linear', 'Exponential', 'Neither', 'Both'] },
+          { label: '"Your savings increase by \\$200 every month"', options: ['Linear', 'Exponential', 'Neither', 'Quadratic'] },
           { label: '"The virus spreads to 3× as many people each week"', options: ['Exponential', 'Linear', 'Neither', 'Quadratic'] },
           { label: '"The temperature drops by 2°F each hour"', options: ['Linear', 'Exponential', 'Neither', 'Quadratic'] },
           { label: '"Each bounce reaches 60% of the previous height"', options: ['Exponential', 'Linear', 'Neither', 'Quadratic'] }

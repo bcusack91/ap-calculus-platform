@@ -69,14 +69,14 @@ A rational expression is undefined when the denominator equals zero. The SAT ask
             explanation: 'Factor: $\\frac{(x+1)(x+3)}{(x+1)(x-1)} = \\frac{x+3}{x-1}$ (cancel $(x+1)$, $x \\neq -1$).'
           },
           {
-            question: 'For what value of $x$ is $\\frac{5}{x^2 - 4}$ undefined?',
-            options: ['$x = 2$ and $x = -2$', '$x = 4$ only', '$x = 2$ only', '$x = 0$'],
+            question: 'For what values of $x$ is $\\frac{5}{x^2 - 4}$ undefined?',
+            options: ['$x = 2$ and $x = -2$', '$x = 4$ only', '$x = 2$ only', '$x = 0$ only'],
             correctAnswer: 0,
             explanation: 'Denominator $= 0$: $x^2 - 4 = 0$ → $(x-2)(x+2) = 0$ → $x = 2$ or $x = -2$.'
           },
           {
             question: '$\\frac{1}{x} + \\frac{1}{x+2} = $',
-            options: ['$\\frac{2x + 2}{x(x+2)}$', '$\\frac{2}{2x + 2}$', '$\\frac{1}{x^2 + 2x}$', '$\\frac{2}{x(x+2)}$'],
+            options: ['$\\frac{2x + 2}{x(x+2)}$', '$\\frac{2x + 2}{x^2 + 2}$', '$\\frac{1}{x^2 + 2x}$', '$\\frac{2}{x(x+2)}$'],
             correctAnswer: 0,
             explanation: 'Common denominator is $x(x+2)$: $\\frac{x+2}{x(x+2)} + \\frac{x}{x(x+2)} = \\frac{2x+2}{x(x+2)}$.'
           }
@@ -148,8 +148,8 @@ $$\\frac{\\frac{1}{x} + \\frac{1}{y}}{\\frac{1}{x} - \\frac{1}{y}}$$
       exercise: {
         dropdowns: [
           { label: '$\\frac{x^2 - 9}{x - 3} = x + 3$', options: ['Valid (factor and cancel)', 'Invalid (can\'t cancel terms)', 'Valid only if x = 3', 'Invalid (sign error)'] },
-          { label: '$\\frac{x + 5}{x + 7} = \\frac{5}{7}$', options: ['Invalid (can\'t cancel x)', 'Valid (cancel the x)', 'Valid only if x > 0', 'Invalid (should be 5/7)'] },
-          { label: '$\\frac{3x}{6x^2} = \\frac{1}{2x}$', options: ['Valid (cancel 3x)', 'Invalid (can\'t cancel)', 'Valid only if x ≠ 0', 'Invalid (should be 1/2)'] },
+          { label: '$\\frac{x + 5}{x + 7} = \\frac{5}{7}$', options: ['Invalid (can\'t cancel x)', 'Valid (cancel the x)', 'Valid only if x > 0', 'Valid (subtract x from both)'] },
+          { label: '$\\frac{3x}{6x^2} = \\frac{1}{2x}$', options: ['Valid (cancel 3x)', 'Invalid (can\'t cancel)', 'Valid only if x > 0', 'Invalid (should be 1/2)'] },
           { label: '$\\frac{x^2 + 4}{x + 2} = x + 2$', options: ['Invalid ($x^{2}$ + 4 doesn\'t factor)', 'Valid (divide)', 'Valid (cancel x + 2)', 'Invalid (need to FOIL)'] }
         ],
         correctAnswers: ['Valid (factor and cancel)', 'Invalid (can\'t cancel x)', 'Valid (cancel 3x)', 'Invalid ($x^{2}$ + 4 doesn\'t factor)'],
@@ -178,7 +178,7 @@ $$\\frac{\\frac{1}{x} + \\frac{1}{y}}{\\frac{1}{x} - \\frac{1}{y}}$$
 | Forgetting restrictions | State $x \\neq$ (zeros of original denominator) |
 | Sign errors in subtraction | Distribute the minus to ALL terms |
 
-- **Partial fractions** (splitting one fraction into two) appear on harder SAT problems — reverse the adding process`
+- **Matching numerators:** when two rational expressions are equal, set the numerators equal and plug in convenient $x$-values to find unknown constants`
     }
   ]
 };

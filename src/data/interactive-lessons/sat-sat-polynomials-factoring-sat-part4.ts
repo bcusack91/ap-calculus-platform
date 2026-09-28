@@ -128,15 +128,15 @@ Both ends down → even degree, negative leading coefficient ✓ (degree 4 is ev
         questions: [
           {
             question: 'A degree-5 polynomial with positive leading coefficient. What is the end behavior?',
-            options: ['Left: $-\\infty$, Right: $+\\infty$', 'Both: $+\\infty$', 'Left: $+\\infty$, Right: $-\\infty$', 'Both: $-\\infty$'],
+            options: ['Left: $-\\infty$, Right: $+\\infty$', 'Left: $+\\infty$, Right: $+\\infty$', 'Left: $+\\infty$, Right: $-\\infty$', 'Left: $-\\infty$, Right: $-\\infty$'],
             correctAnswer: 0,
             explanation: 'Odd degree + positive leading coefficient → down on left, up on right. Think of $x^5$.'
           },
           {
             question: 'If $f(x) = (x+2)^3(x-1)^2$, at which zero does the graph cross the x-axis?',
-            options: ['$x = -2$ only', '$x = 1$ only', 'Both', 'Neither'],
+            options: ['$x = -2$ only', '$x = 1$ only', '$x = -2$ and $x = 1$', '$x = 2$ only'],
             correctAnswer: 0,
-            explanation: 'Odd multiplicity (3) at $x = -2$ → crosses. Even multiplicity (2) at $x = 1$ → bounces. Only $x = -2$ crosses.'
+            explanation: 'Odd multiplicity (3) at $x = -2$ → crosses. Even multiplicity (2) at $x = 1$ → bounces. Only $x = -2$ crosses. (The zeros are $-2$ and $1$, not $2$: the factor $(x+2)$ gives $x = -2$.)'
           },
           {
             question: 'What is the maximum number of turning points for a degree-4 polynomial?',

@@ -12,7 +12,7 @@ export const satWordProblemsPart6Data = {
 **"A garden's length is 3 feet more than twice its width. Its perimeter is 48 feet."**
 - Width = $w$, Length = $2w + 3$
 - $2(w) + 2(2w + 3) = 48$
-- $2w + 4w + 6 = 48 → 6w = 42 → w = 7$
+- $2w + 4w + 6 = 48 \\to 6w = 42 \\to w = 7$
 - Width = 7 ft, Length = 17 ft
 
 ### Volume Problems
@@ -21,7 +21,7 @@ export const satWordProblemsPart6Data = {
 
 "A cylindrical tank with radius 4 feet is being filled at 2 cubic feet per minute. How long to fill it to a height of 10 feet?"
 - Volume = $\\pi(4)^2(10) = 160\\pi \\approx 502.7$ cubic feet
-- Time = $502.7 / 2 ≈ 251$ minutes
+- Time = $502.7 / 2 \\approx 251$ minutes
 
 ### Similar Figures
 If two figures are similar with scale factor $k$:
@@ -102,9 +102,9 @@ Ladder problems, diagonal walks, line-of-sight distances — always draw a right
           },
           {
             question: 'A TV screen is described as "55-inch" (diagonal). If the screen has a 16:9 aspect ratio, approximately what is the width?',
-            options: ['$\\approx 47.9$ inches', '$\\approx 44$ inches', '$\\approx 39$ inches', '$\\approx 55$ inches'],
+            options: ['$\\approx 47.9$ inches', '$\\approx 27.0$ inches', '$\\approx 35.2$ inches', '$\\approx 44.0$ inches'],
             correctAnswer: 0,
-            explanation: 'Width $= 16k$, height $= 9k$. Diagonal: $(16k)^2 + (9k)^2 = 55^2$ → $256k^2 + 81k^2 = 3025$ → $337k^2 = 3025$ → $k \\approx 3.0$. Width $\\approx 16(3.0) \\approx 47.9$ inches.'
+            explanation: 'Width $= 16k$, height $= 9k$. Diagonal: $(16k)^2 + (9k)^2 = 55^2$ → $256k^2 + 81k^2 = 3025$ → $337k^2 = 3025$ → $k = 55/\\sqrt{337} \\approx 2.996$. Width $= 16k \\approx 47.9$ inches. ($27.0$ is the height $9k$; $35.2$ comes from splitting $55$ in the ratio $16 : 9$, which ignores the right triangle.)'
           }
         ]
       }
@@ -136,7 +136,7 @@ Ladder problems, diagonal walks, line-of-sight distances — always draw a right
 |---|---|
 | Perimeter/fencing | $P = 2l + 2w$; against a wall: $P = l + 2w$ |
 | Area problems | Choose correct formula: $lw$, $\\frac{1}{2}bh$, $\\pi r^2$ |
-| Volume/filling | $V = \\pi r^2 h$ (cylinder), $V ÷$ rate $=$ time |
+| Volume/filling | $V = \\pi r^2 h$ (cylinder), $V \\div$ rate $=$ time |
 | Surface area/painting | $SA = 2(lw + lh + wh)$ (box) |
 | Ladder/shadow | Pythagorean theorem: $a^2 + b^2 = c^2$ |
 | Walkway/border | Outer area $-$ inner area |

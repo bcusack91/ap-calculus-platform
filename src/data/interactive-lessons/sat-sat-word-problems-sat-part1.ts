@@ -20,10 +20,10 @@ export const satWordProblemsPart1Data = {
 
 ### Common Sentence Patterns
 **"5 more than twice a number is 17"**
-$$2x + 5 = 17 \implies x = 6$$
+$$2x + 5 = 17 \\implies x = 6$$
 
 **"The product of 3 and a number, decreased by 7, equals 14"**
-$$3x - 7 = 14 \implies x = 7$$
+$$3x - 7 = 14 \\implies x = 7$$
 
 ### SAT Trap: "Less Than" Order
 "5 less than x" = $x - 5$ (NOT $5 - x$)
@@ -117,7 +117,7 @@ Always state what your variable represents:
             explanation: 'Consecutive odd: $n$ and $n + 2$. Sum: $n + (n + 2) = 52$ → $2n = 50$ → $n = 25$. Larger: $27$.'
           },
           {
-            question: '"After a 25% discount, the price is $60." What was the original price?',
+            question: '"After a 25% discount, the price is \\$60." What was the original price?',
             options: ['$80$', '$75$', '$45$', '$85$'],
             correctAnswer: 0,
             explanation: 'After 25% discount, you pay 75% of original: $0.75x = 60$ → $x = 80$. Common trap: adding 25% of 60 ($15$) to get $75$ — but 25% of 75 is $18.75$, not $15$.'

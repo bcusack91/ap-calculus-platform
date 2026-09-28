@@ -135,11 +135,11 @@ $(2x^3 - x^2) + (-6x + 3) = x^2(2x - 1) - 3(2x - 1) = (2x - 1)(x^2 - 3)$
             options: ['$+, +, +$', '$-, +, -$', '$-, -, +$', '$+, -, +$']
           }
         ],
-        correctAnswers: ['difference of squares', '$(x+3)^2$', '$-, -, +$'],
+        correctAnswers: ['difference of squares', '$(x+3)^2$', '$+, -, +$'],
         hint1: 'Two perfect squares separated by a minus sign.',
         hint2: '$x^2 + 6x + 9 = x^2 + 2(3)x + 3^2$.',
-        hint3: '$a^3+b^3 = (a+b)(a^2 - ab + b^2)$. The signs in the trinomial are $-$, implicit $-$, $+$.',
-        explanation: '$25x^2 - 1 = (5x)^2 - 1^2$ is a difference of squares. $x^2+6x+9 = (x+3)^2$. Sum of cubes: trinomial has signs $-ab$ then $+b^2$.'
+        hint3: '$a^3+b^3 = (a+b)(a^2 - ab + b^2)$. Read the signs of the three trinomial terms: $+a^2$, $-ab$, $+b^2$.',
+        explanation: '$25x^2 - 1 = (5x)^2 - 1^2$ is a difference of squares. $x^2+6x+9 = (x+3)^2$. Sum of cubes: the trinomial $a^2 - ab + b^2$ has signs $+, -, +$.'
       }
     },
     {

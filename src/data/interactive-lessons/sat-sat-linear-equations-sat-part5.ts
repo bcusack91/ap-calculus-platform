@@ -119,9 +119,9 @@ The SAT frequently asks questions like:
         questions: [
           {
             question: 'If $P = -0.5t + 100$ models the population of a town (in thousands) $t$ years after 2020, what does $-0.5$ represent?',
-            options: ['The population decreases by 500 per year', 'The population was 500 in 2020', 'The population increases by 0.5 thousand per year', 'The starting population is 0.5 thousand'],
+            options: ['The population decreases by 500 per year', 'The population was 500 in 2020', 'The population grows by 500 per year', 'The starting population is 0.5 thousand'],
             correctAnswer: 0,
-            explanation: 'The slope is $-0.5$ thousand/year = $-500$ people/year. The negative sign means the population is decreasing.'
+            explanation: 'The slope is $-0.5$ thousand/year = $-500$ people/year. The negative sign means the population is decreasing, not growing, and $100$ (not $0.5$) is the starting population in thousands.'
           },
           {
             question: 'A car\'s value is modeled by $V = -2500t + 30000$, where $t$ is years since purchase. When is the car worth \\$10,000?',

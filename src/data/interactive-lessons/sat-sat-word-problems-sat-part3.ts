@@ -9,7 +9,7 @@ export const satWordProblemsPart3Data = {
 **Part 3 of 7 — Motion & Work Problems**
 
 ### The Core Formula
-$$\\text{Distance} = \\text{Rate} \\times \\text{Time} \quad (d = rt)$$
+$$\\text{Distance} = \\text{Rate} \\times \\text{Time} \\quad (d = rt)$$
 
 Rearranged: $r = d/t$ and $t = d/r$
 
@@ -39,12 +39,12 @@ Two objects starting at different points, moving toward each other:
     {
       id: 'wp3-q1',
       type: 'quiz' as const,
-      question: 'A cyclist rides 20 miles at 10 mph, then rides back the same route at 20 mph. What is the average speed for the round trip?',
+      question: 'A cyclist rides 20 miles at 10 mph, then rides back the same route at 20 mph. To the nearest tenth, what is the average speed for the round trip?',
       options: [
-        '15 mph',
+        '15.0 mph',
         '13.3 mph',
-        '12 mph',
-        '14 mph'
+        '12.5 mph',
+        '14.5 mph'
       ],
       correctAnswer: 1,
       explanation: 'Total distance = 20 + 20 = 40 miles. Time out = 20/10 = 2 hours. Time back = 20/20 = 1 hour. Total time = 3 hours. Average speed = 40/3 ≈ 13.3 mph. Note: this is NOT (10+20)/2 = 15.'
@@ -127,7 +127,7 @@ Two objects starting at different points, moving toward each other:
       exercise: {
         dropdowns: [
           'Two cars 300 mi apart, speeds 50 & 70 mph, toward each other. Meet in ___ hrs → [2.5|3|4|5]',
-          'Pipe fills in 8 hrs, another in 12 hrs. Together fill rate (pool/hr) = [5/24|1/20|1/4|20/96]',
+          'Pipe fills in 8 hrs, another in 12 hrs. Together fill rate (pool/hr) = [5/24|1/20|1/4|2/20]',
           'Round trip, 60 mph out, 40 mph back. Average speed = [48|50|45|55]',
           'Car leaves at 30 mph. 2 hrs later, another at 50 mph. Catch-up time for 2nd car = [3 hrs|2 hrs|4 hrs|5 hrs]'
         ],

@@ -137,16 +137,16 @@ Set discriminant = 0: $k^2 - 4(1)(9) = 0$ → $k^2 = 36$ → $k = \\pm 6$`
       content: '**Choose the Best Method** 🔍\n\nFor each equation, select the most efficient solving approach.',
       exercise: {
         dropdowns: [
-          { label: '$x^2 - 9 = 0$', options: ['Factoring (difference of squares)', 'Quadratic formula', 'Completing the square', 'Graphing'] },
+          { label: '$x^2 - 9 = 0$', options: ['Factoring', 'Quadratic formula', 'Completing the square', 'Graphing'] },
           { label: '$3x^2 + 2x - 7 = 0$', options: ['Factoring', 'Quadratic formula', 'Completing the square', 'Graphing'] },
-          { label: '$x^2 + 6x + 9 = 0$', options: ['Factoring (perfect square)', 'Quadratic formula', 'Completing the square', 'Graphing'] },
+          { label: '$x^2 + 6x + 9 = 0$', options: ['Factoring', 'Quadratic formula', 'Completing the square', 'Graphing'] },
           { label: '"How many real solutions does $x^2 + 4x + 5 = 0$ have?"', options: ['Factoring', 'Quadratic formula', 'Discriminant only', 'Graphing'] }
         ],
-        correctAnswers: ['Factoring (difference of squares)', 'Quadratic formula', 'Factoring (perfect square)', 'Discriminant only'],
+        correctAnswers: ['Factoring', 'Quadratic formula', 'Factoring', 'Discriminant only'],
         hint1: '$x^2 - 9 = (x+3)(x-3)$ — instant.',
         hint2: '$3x^2 + 2x - 7$: no obvious factoring, use the formula.',
         hint3: 'When the question only asks "how many" — the discriminant is enough.',
-        explanation: '$x^2 - 9$: instant factoring. $3x^2 + 2x - 7$: messy coefficients → formula. $x^2 + 6x + 9 = (x+3)^2$: perfect square. "How many solutions?": just compute $\\Delta = 16 - 20 = -4 < 0$ → zero.'
+        explanation: '$x^2 - 9$: instant factoring (difference of squares). $3x^2 + 2x - 7$: messy coefficients → formula. $x^2 + 6x + 9 = (x+3)^2$: perfect square. "How many solutions?": just compute $\\Delta = 16 - 20 = -4 < 0$ → zero.'
       }
     },
     {

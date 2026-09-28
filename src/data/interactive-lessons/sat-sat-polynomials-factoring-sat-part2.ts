@@ -104,7 +104,7 @@ $= (x + 3)(x + 4)$
 
 | Step | Work |
 |------|------|
-| $a \\cdot c$ | $6 × (-10) = -60$ |
+| $a \\cdot c$ | $6 \\times (-10) = -60$ |
 | Find pair: product $-60$, sum $11$ | $15$ and $-4$ |
 | Rewrite middle | $6x^2 + 15x - 4x - 10$ |
 | Group | $(6x^2 + 15x) + (-4x - 10)$ |
@@ -153,10 +153,10 @@ $= (x + 3)(x + 4)$
         dropdowns: [
           { label: '$x^2 - 81$', options: ['Difference of squares', 'GCF', 'Trinomial factoring', 'Grouping'] },
           { label: '$4x^3 + 8x^2$', options: ['GCF first', 'Difference of squares', 'Trinomial factoring', 'Perfect square'] },
-          { label: '$x^2 + 9x + 20$', options: ['Trinomial: find two numbers', 'Difference of squares', 'GCF', 'Perfect square'] },
+          { label: '$x^2 + 9x + 20$', options: ['Trinomial factoring', 'Difference of squares', 'GCF first', 'Perfect square'] },
           { label: '$16x^2 - 24x + 9$', options: ['Perfect square trinomial', 'Difference of squares', 'GCF', 'AC method'] }
         ],
-        correctAnswers: ['Difference of squares', 'GCF first', 'Trinomial: find two numbers', 'Perfect square trinomial'],
+        correctAnswers: ['Difference of squares', 'GCF first', 'Trinomial factoring', 'Perfect square trinomial'],
         hint1: '$x^2 - 81 = x^2 - 9^2$ — two squares with a minus between them.',
         hint2: 'Both terms share $4x^2$ as a common factor.',
         hint3: 'What two numbers multiply to 20 and add to 9?',
@@ -174,7 +174,7 @@ $= (x + 3)(x + 4)$
 | Diff. of squares | $a^2 - b^2$ | $x^2 - 49 = (x+7)(x-7)$ |
 | Perfect square | $a^2 \\pm 2ab + b^2$ | $x^2 + 10x + 25 = (x+5)^2$ |
 | Trinomial ($a=1$) | Find pair: product $c$, sum $b$ | $x^2 + 7x + 12 = (x+3)(x+4)$ |
-| AC method ($a≠1$) | Product $ac$, sum $b$, then group | $6x^2 + 11x - 10$ |
+| AC method ($a \\neq 1$) | Product $ac$, sum $b$, then group | $6x^2 + 11x - 10$ |
 
 - "Factor completely" = keep going until nothing else factors
 - $a^2 + b^2$ does NOT factor over the reals

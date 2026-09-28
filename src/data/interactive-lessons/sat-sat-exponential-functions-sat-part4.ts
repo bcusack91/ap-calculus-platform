@@ -30,13 +30,19 @@ Where $d$ = doubling time.
 
 After 21 years: $A = 1000 \\cdot 2^{21/7} = 1000 \\cdot 2^3 = 8000$
 
-### Finding Half-Life from Decay Rate
+### Reading Half-Life from the Exponent
 
-If something decays by $r\\%$ per period:
-- Decay factor: $b = 1 - r/100$
-- Half-life: solve $b^h = 1/2$ → $h = \\frac{\\ln(1/2)}{\\ln(b)}$
+The SAT usually hands you the half-life inside the model. In $A = 500\\left(\\frac{1}{2}\\right)^{t/6}$, the amount is multiplied by $\\frac{1}{2}$ each time $t$ grows by $6$, so the half-life is $6$ units of time. In the same way, $A = 500 \\cdot 2^{t/4}$ doubles every $4$ units.
 
-On the SAT, you can often solve by testing: "After how many periods does the amount drop below half?"`
+### Estimating Half-Life from a Percent Decay Rate
+
+If something decays by $r\\%$ per period, its decay factor is $b = 1 - \\frac{r}{100}$. Multiply by $b$ one period at a time until the running product reaches about $0.5$.
+
+**Example:** A sample loses $30\\%$ per hour, so $b = 0.7$.
+- After 1 hour: $0.7$ of the sample remains
+- After 2 hours: $0.7^2 = 0.49$ remains, just under half
+
+So the half-life is a little under 2 hours. No special formula is needed, just repeated multiplication.`
     },
     {
       id: 'ef4-quiz1',
@@ -60,7 +66,7 @@ On the SAT, you can often solve by testing: "After how many periods does the amo
             question: 'A car loses 20% of its value each year. After approximately how many years is it worth half its original value?',
             options: ['About $3$ years', 'About $2.5$ years', 'About $5$ years', 'About $4$ years'],
             correctAnswer: 0,
-            explanation: 'Each year: $\\times 0.80$. After 3 years: $0.80^3 = 0.512 ≈ 0.5$. So about 3 years to lose half its value.'
+            explanation: 'Each year: $\\times 0.80$. After 3 years: $0.80^3 = 0.512 \\approx 0.5$. So about 3 years to lose half its value.'
           }
         ]
       }

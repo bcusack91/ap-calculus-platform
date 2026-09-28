@@ -75,7 +75,7 @@ So $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$ — this is the difference of cubes formula
             explanation: 'By the Remainder Theorem: $f(2) = 8 - 8 + 2 = 2$. Much faster than doing long division!'
           },
           {
-            question: 'If $(x + 3)$ is a factor of $x^2 + 5x + 6$, then $f(-3) = $',
+            question: 'Let $f(x) = x^2 + 5x + 6$. Given that $(x + 3)$ is a factor of $f(x)$, what is $f(-3)$?',
             options: ['$0$', '$3$', '$6$', '$-3$'],
             correctAnswer: 0,
             explanation: 'If $(x + 3)$ is a factor, the remainder is 0, so $f(-3) = 0$. This is the Factor Theorem: $(x - c)$ is a factor iff $f(c) = 0$.'
@@ -112,7 +112,7 @@ This form appears on the SAT! They may ask "what is the remainder" or "rewrite t
 
 ### SAT Shortcut: Remainder without Division
 
-To find just the remainder of $f(x) ÷ (x - c)$, simply compute $f(c)$. No division needed!`
+To find just the remainder of $f(x) \\div (x - c)$, simply compute $f(c)$. No division needed!`
     },
     {
       id: 'pf3-quiz2',
@@ -171,7 +171,7 @@ To find just the remainder of $f(x) ÷ (x - c)$, simply compute $f(c)$. No divis
 | Remainder Theorem | Find remainder only | Fastest |
 | Factor Theorem | Check if factor | Fastest |
 
-- **Remainder Theorem**: $f(x) ÷ (x-c)$ → remainder $= f(c)$
+- **Remainder Theorem**: $f(x) \\div (x-c)$ → remainder $= f(c)$
 - **Factor Theorem**: $(x - c)$ is a factor iff $f(c) = 0$
 - Include $0$ coefficients for missing terms (e.g., $x^3 - 8$ → $1, 0, 0, -8$)
 - Division result: $f(x) = d(x) \\cdot q(x) + r$`

@@ -113,7 +113,7 @@ $(2x + 3)(x - 4) = 2x^2 - 8x + 3x - 12 = 2x^2 - 5x - 12$
 
 The degree of a product equals the **sum** of the degrees.
 
-$(2x^3 + 1)(x^2 - 5x) → \\text{degree } 3 + 2 = 5$`
+$(2x^3 + 1)(x^2 - 5x) \\to \\text{degree } 3 + 2 = 5$`
     },
     {
       id: 'pf1-quiz2',
@@ -151,7 +151,7 @@ $(2x^3 + 1)(x^2 - 5x) → \\text{degree } 3 + 2 = 5$`
           { label: '$(x + 3)^2 = x^2 + 6x + 9$', options: ['Perfect square trinomial', 'Difference of squares', 'FOIL', 'Factor by grouping'] },
           { label: '$(x + 5)(x - 5) = x^2 - 25$', options: ['Difference of squares', 'Perfect square trinomial', 'Sum of cubes', 'Distribution'] },
           { label: '$(2x + 1)(3x - 4) = 6x^2 - 5x - 4$', options: ['FOIL / Distribution', 'Difference of squares', 'Perfect square trinomial', 'Grouping'] },
-          { label: '$5x^3 - 2x^5 + 7x$ has degree 5', options: ['Highest exponent determines degree', 'Leading term determines degree', 'Count the terms', 'Add the exponents'] }
+          { label: '$5x^3 - 2x^5 + 7x$ has degree 5', options: ['Highest exponent determines degree', 'First term determines degree', 'Count the terms', 'Add the exponents'] }
         ],
         correctAnswers: ['Perfect square trinomial', 'Difference of squares', 'FOIL / Distribution', 'Highest exponent determines degree'],
         hint1: '$(a + b)^2 = a^2 + 2ab + b^2$ — the square of a binomial.',

@@ -132,9 +132,9 @@ No need to find $x$ and $y$ separately!
         questions: [
           {
             question: 'If $5x - 3y = 22$ and $5x + 3y = 8$, what is the value of $y$?',
-            options: ['$-\\frac{7}{3}$', '$3$', '$\\frac{7}{3}$', '$-3$'],
+            options: ['$-\\frac{7}{3}$', '$3$', '$\\frac{7}{3}$', '$-\\frac{3}{7}$'],
             correctAnswer: 0,
-            explanation: 'Subtract first from second: $6y = -14$ → $y = -7/3$. Or add: $10x = 30$ → $x = 3$, then $15 + 3y = 8$ → $y = -7/3$.'
+            explanation: 'Subtract the first equation from the second: $6y = -14$ → $y = -7/3$. Or add: $10x = 30$ → $x = 3$, then $15 + 3y = 8$ → $y = -7/3$. Note that $3$ is the value of $x$, not $y$.'
           },
           {
             question: 'For what value of $a$ does $ax - 2y = 5$ and $6x - 4y = 3$ have no solution?',

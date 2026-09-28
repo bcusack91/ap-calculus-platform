@@ -44,19 +44,19 @@ If you see $(0.95)^{t/2}$:
         questions: [
           {
             question: 'In $A(t) = 2000(1.005)^{12t}$, the 1.005 represents:',
-            options: ['A monthly growth rate of 0.5%', 'An annual growth rate of 0.5%', 'A monthly growth rate of 5%', 'An annual growth rate of 6%'],
+            options: ['A monthly growth rate of 0.5%', 'A yearly growth rate of 0.5%', 'A monthly growth rate of 5%', 'A yearly growth rate of 6%'],
             correctAnswer: 0,
-            explanation: 'The exponent $12t$ means compounding 12 times per year (monthly). The base $1.005$ means each month grows by 0.5%.'
+            explanation: 'The exponent $12t$ means compounding 12 times per year (monthly). The base $1.005$ means each month grows by 0.5%. The yearly rate is not $6\\%$ either: $(1.005)^{12} \\approx 1.0617$, about $6.17\\%$.'
           },
           {
-            question: 'Rewrite $3(2)^{t/5}$ so the exponent is just $t$:',
-            options: ['$3(2^{1/5})^t \\approx 3(1.149)^t$', '$3(2^5)^t = 3(32)^t$', '$3 \\cdot \\frac{2^t}{5}$', '$3(10)^t$'],
+            question: 'Which expression is approximately equivalent to $3(2)^{t/5}$?',
+            options: ['$3(1.149)^t$', '$3(1.200)^t$', '$3(1.400)^t$', '$3(32)^t$'],
             correctAnswer: 0,
-            explanation: '$3(2)^{t/5} = 3(2^{1/5})^t$. Since $2^{1/5} \\approx 1.149$, this represents about 14.9% growth per unit time.'
+            explanation: '$3(2)^{t/5} = 3(2^{1/5})^t$. Since $2^{1/5} \\approx 1.149$, this represents about 14.9% growth per unit time. Spreading the doubling evenly ($100\\% \\div 5 = 20\\%$, factor $1.200$) ignores compounding, and $2^5 = 32$ inverts the exponent.'
           },
           {
             question: 'A company\'s revenue grows 2% per month. Approximately what is the annual growth rate?',
-            options: ['About $26.8\\%$', 'About $24\\%$', 'About $12\\%$', 'About $20\\%$'],
+            options: ['About $26.8\\%$', 'About $24.0\\%$', 'About $12.0\\%$', 'About $20.0\\%$'],
             correctAnswer: 0,
             explanation: 'Annual factor $= (1.02)^{12} \\approx 1.268$. Annual rate $\\approx 26.8\\%$. Note this is more than $12 \\times 2\\% = 24\\%$ due to compounding.'
           }
@@ -116,7 +116,7 @@ If you see $(0.95)^{t/2}$:
           },
           {
             question: 'Monthly growth rate is 1%. What is the approximate annual growth rate?',
-            options: ['About $12.7\\%$', 'About $12\\%$', 'About $1\\%$', 'About $10\\%$'],
+            options: ['About $12.7\\%$', 'About $12.0\\%$', 'About $1.0\\%$', 'About $10.0\\%$'],
             correctAnswer: 0,
             explanation: '$(1.01)^{12} \\approx 1.127$. Annual rate $\\approx 12.7\\%$. It\'s higher than $12 \\times 1\\% = 12\\%$ due to compounding.'
           }
@@ -129,12 +129,12 @@ If you see $(0.95)^{t/2}$:
       content: '**Interpret the Exponent** 🔍\n\nWhat does the exponent structure tell you about the time period?',
       exercise: {
         dropdowns: [
-          { label: '$f(t) = a(b)^{12t}$', options: ['Rate applies monthly (12 per year)', 'Rate applies every 12 years', 'Rate applies daily', 'Rate applies annually'] },
+          { label: '$f(t) = a(b)^{12t}$', options: ['Rate applies monthly', 'Rate applies every 12 years', 'Rate applies daily', 'Rate applies annually'] },
           { label: '$f(t) = a(b)^{t/5}$', options: ['Rate applies every 5 time units', 'Rate applies 5 times per unit', 'Rate applies every 1/5 unit', 'Rate is divided by 5'] },
           { label: '$f(t) = a(b)^{t}$', options: ['Rate applies per time unit', 'Rate applies monthly', 'No specific period', 'Rate applies daily'] },
-          { label: '$f(t) = a(b)^{365t}$', options: ['Rate applies daily (365 per year)', 'Rate applies yearly', 'Rate applies every 365 years', 'Rate applies weekly'] }
+          { label: '$f(t) = a(b)^{365t}$', options: ['Rate applies daily', 'Rate applies yearly', 'Rate applies every 365 years', 'Rate applies weekly'] }
         ],
-        correctAnswers: ['Rate applies monthly (12 per year)', 'Rate applies every 5 time units', 'Rate applies per time unit', 'Rate applies daily (365 per year)'],
+        correctAnswers: ['Rate applies monthly', 'Rate applies every 5 time units', 'Rate applies per time unit', 'Rate applies daily'],
         hint1: 'The number multiplied by $t$ tells you how many times per unit the rate applies.',
         hint2: 'When $t$ is divided, the denominator is the period length.',
         hint3: '$b^{365t}$ → rate of $b$ applies 365 times per year → daily.',

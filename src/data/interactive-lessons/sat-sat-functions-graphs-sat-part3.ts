@@ -61,9 +61,9 @@ The point moves to $(6, 16)$.`
           },
           {
             question: 'If $f(x) = x^2$ and $g(x) = -(x-1)^2 + 4$, how is $g$ obtained from $f$?',
-            options: ['Shift right 1, reflect over x-axis, shift up 4', 'Shift left 1, reflect over x-axis, shift up 4', 'Shift right 1, shift up 4, reflect over x-axis', 'Reflect over y-axis, shift right 1, shift up 4'],
+            options: ['Shift right 1, reflect over x-axis, shift up 4', 'Shift left 1, reflect over x-axis, shift up 4', 'Shift right 1, shift up 4, reflect over x-axis', 'Shift right 1, reflect over y-axis, shift up 4'],
             correctAnswer: 0,
-            explanation: '$g(x) = -f(x-1) + 4$: $(x-1)$ shifts right 1, the negative reflects over x-axis, $+4$ shifts up 4.'
+            explanation: '$g(x) = -f(x-1) + 4$: $(x-1)$ shifts right 1, the negative reflects over the x-axis, $+4$ shifts up 4. Order matters: shifting up 4 before reflecting would give $-(x-1)^2 - 4$, and reflecting over the y-axis does not flip the parabola upside down.'
           },
           {
             question: 'The vertex of $y = x^2$ is at $(0,0)$. Where is the vertex of $y = 3(x+2)^2 - 5$?',
@@ -168,7 +168,7 @@ Apply transformations in this order:
 | $f(-x)$ | Inside | Reflect over y-axis |
 
 - To track a point: apply horizontal changes to $x$, then vertical changes to $y$
-- Vertex transformations: $(0,0) → (h, k)$ in $a f(x - h) + k$`
+- Vertex transformations: $(0,0) \\to (h, k)$ in $a f(x - h) + k$`
     }
   ]
 };

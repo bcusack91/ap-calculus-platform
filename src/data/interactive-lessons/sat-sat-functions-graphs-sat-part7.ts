@@ -66,10 +66,10 @@ export const satFunctionsPart7Data = {
             explanation: '$f(3) = 7$. Then $g(3) = f(f(3)) = f(7) = 2(7) + 1 = 15$.'
           },
           {
-            question: 'The function $h(x) = 3|x - 2| - 6$ has its minimum value at:',
+            question: 'What is the minimum value of the function $h(x) = 3|x - 2| - 6$?',
             options: ['$-6$', '$2$', '$0$', '$-2$'],
             correctAnswer: 0,
-            explanation: 'The vertex of $y = a|x-h| + k$ is at $(h, k)$. Here, vertex is $(2, -6)$. Since $a = 3 > 0$, the function opens up and the minimum value is $-6$.'
+            explanation: 'The vertex of $y = a|x-h| + k$ is at $(h, k)$. Here, vertex is $(2, -6)$. Since $a = 3 > 0$, the function opens up and the minimum value is $-6$ (reached at $x = 2$, which is where the minimum occurs, not its value).'
           },
           {
             question: 'If $f(x) = \\frac{2x + 3}{x - 1}$, which value is NOT in the domain of $f$?',

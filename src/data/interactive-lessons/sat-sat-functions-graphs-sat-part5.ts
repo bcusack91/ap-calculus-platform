@@ -71,7 +71,7 @@ This is just the slope of the **secant line** between two points.
             question: 'A function $f$ has values: $f(1) = 3$, $f(2) = 7$, $f(3) = 5$, $f(4) = 1$. Over which interval is $f$ decreasing?',
             options: ['From $x = 2$ to $x = 4$', 'From $x = 1$ to $x = 3$', 'From $x = 3$ to $x = 4$ only', 'From $x = 1$ to $x = 2$'],
             correctAnswer: 0,
-            explanation: '$f$ goes $7 → 5 → 1$ from $x = 2$ to $x = 4$, so it is decreasing on this interval.'
+            explanation: '$f$ goes $7 \\to 5 \\to 1$ from $x = 2$ to $x = 4$, so it is decreasing on this interval.'
           },
           {
             question: 'If the graph of $y = f(x)$ passes through $(0, -3)$ and $(4, 0)$, which statement is true?',
@@ -138,9 +138,9 @@ $f$ increases fastest on $[3, 4]$ with rate $= 9$.
           },
           {
             question: 'If the average rate of change of $g$ from $x = a$ to $x = b$ equals $0$, which must be true?',
-            options: ['$g(a) = g(b)$', '$g$ is constant on $[a, b]$', '$g$ has no x-intercepts', 'The graph is a horizontal line'],
+            options: ['$g(a) = g(b)$', '$g$ is constant on $[a, b]$', '$g(b) - g(a) = b - a$', 'The graph is a horizontal line'],
             correctAnswer: 0,
-            explanation: 'Rate $= 0$ means $\\frac{g(b) - g(a)}{b - a} = 0$, so $g(b) = g(a)$. The function could still go up and down between $a$ and $b$.'
+            explanation: 'Rate $= 0$ means $\\frac{g(b) - g(a)}{b - a} = 0$, so $g(b) = g(a)$. The function could still go up and down between $a$ and $b$, so it need not be constant. $g(b) - g(a) = b - a$ would mean a rate of $1$, not $0$.'
           }
         ]
       }

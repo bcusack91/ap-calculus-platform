@@ -69,9 +69,9 @@ The inflection point moves from $(0, 0)$ to $(-1, 5)$.`
         questions: [
           {
             question: 'A polynomial graph crosses the x-axis at $-2, 1,$ and $3$, and the y-intercept is $-12$. Which could be the equation?',
-            options: ['$y = -2(x+2)(x-1)(x-3)$', '$y = (x+2)(x-1)(x-3)$', '$y = 2(x+2)(x-1)(x-3)$', '$y = -(x+2)(x-1)(x-3)$'],
+            options: ['$y = -2(x+2)(x-1)(x-3)$', '$y = -2(x-2)(x+1)(x+3)$', '$y = 2(x+2)(x-1)(x-3)$', '$y = -(x+2)(x-1)(x-3)$'],
             correctAnswer: 0,
-            explanation: '$f(x) = a(x+2)(x-1)(x-3)$. At $x=0$: $a(2)(-1)(-3) = 6a = -12$ → $a = -2$.'
+            explanation: '$f(x) = a(x+2)(x-1)(x-3)$. At $x=0$: $a(2)(-1)(-3) = 6a = -12$ → $a = -2$. The factors must be $(x - r)$ for each zero $r$, so $(x-2)(x+1)(x+3)$ would put the zeros at $2, -1, -3$ instead.'
           },
           {
             question: 'If $g(x) = f(x - 3) + 2$, and $f$ has a minimum at $(1, -4)$, then $g$ has a minimum at:',
@@ -80,10 +80,10 @@ The inflection point moves from $(0, 0)$ to $(-1, 5)$.`
             explanation: '$f(x-3)$ shifts right 3: $(1,\\,-4) \\to (4,\\,-4)$. Then $+2$ shifts up 2: $(4,\\,-4) \\to (4,\\,-2)$.'
           },
           {
-            question: 'A degree-4 polynomial with a positive leading coefficient has how many possible shapes for its end behavior?',
-            options: ['Both ends go up (↑↑)', 'Left down, right up (↓↑)', 'Both ends go down (↓↓)', 'Left up, right down (↑↓)'],
+            question: 'Which describes the end behavior of a degree-4 polynomial with a positive leading coefficient?',
+            options: ['Rises on both ends', 'Falls on both ends', 'Falls left, rises right', 'Rises left, falls right'],
             correctAnswer: 0,
-            explanation: 'Even degree + positive leading coefficient: both ends of the graph go up. Think of $x^4$.'
+            explanation: 'Even degree + positive leading coefficient: both ends of the graph go up. Think of $x^4$. Opposite ends (falls left, rises right) belong to odd degree.'
           }
         ]
       }
@@ -146,7 +146,7 @@ A common SAT trap: shifts **inside** the function go the **opposite** direction.
             explanation: 'Original vertex $(0, 0)$. Left 4 → $(-4, 0)$. Down 7 → $(-4, -7)$. Equation: $(x+4)^2 - 7$.'
           },
           {
-            question: 'A polynomial has y-intercept $12$ and factors $(x+1)$, $(x-2)$, and $(x-k)$. What is $k$?',
+            question: 'The polynomial $p(x) = (x+1)(x-2)(x-k)$ has a y-intercept of $12$. What is $k$?',
             options: ['$6$', '$-6$', '$3$', '$-3$'],
             correctAnswer: 0,
             explanation: 'At $x = 0$: $(0+1)(0-2)(0-k) = (1)(-2)(-k) = 2k = 12$, so $k = 6$.'
@@ -160,10 +160,10 @@ A common SAT trap: shifts **inside** the function go the **opposite** direction.
       content: '**Transformation Identifier** 🔍\n\nWhat transformation does each change represent?',
       exercise: {
         dropdowns: [
-          { label: '$f(x) → f(x) + 4$', options: ['Shift up 4', 'Shift right 4', 'Stretch by 4', 'Shift left 4'] },
-          { label: '$f(x) → f(x - 5)$', options: ['Shift right 5', 'Shift left 5', 'Shift down 5', 'Stretch by 5'] },
-          { label: '$f(x) → -f(x)$', options: ['Reflect over x-axis', 'Reflect over y-axis', 'Shift down 1', 'No change'] },
-          { label: '$f(x) → 3f(x)$', options: ['Vertical stretch by 3', 'Shift up 3', 'Horizontal stretch by 3', 'Shift right 3'] }
+          { label: '$f(x) \\to f(x) + 4$', options: ['Shift up 4', 'Shift right 4', 'Stretch by 4', 'Shift left 4'] },
+          { label: '$f(x) \\to f(x - 5)$', options: ['Shift right 5', 'Shift left 5', 'Shift down 5', 'Stretch by 5'] },
+          { label: '$f(x) \\to -f(x)$', options: ['Reflect over x-axis', 'Reflect over y-axis', 'Shift down 1', 'No change'] },
+          { label: '$f(x) \\to 3f(x)$', options: ['Vertical stretch by 3', 'Shift up 3', 'Horizontal stretch by 3', 'Shift right 3'] }
         ],
         correctAnswers: ['Shift up 4', 'Shift right 5', 'Reflect over x-axis', 'Vertical stretch by 3'],
         hint1: 'Adding outside the function → vertical shift.',

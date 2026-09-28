@@ -112,16 +112,16 @@ So every hour, about 20.6% decays.`
             explanation: '$f(0) = a = 12$. $f(3) = 12b^3 = 96$. $b^3 = 8$. $b = 2$.'
           },
           {
-            question: '$A(t) = 5000(0.85)^{t/4}$. Approximately what percent decays per year?',
-            options: ['About $3.9\\%$', 'About $15\\%$', 'About $3.75\\%$', 'About $60\\%$'],
+            question: '$A(t) = 5000(0.85)^{t/4}$, where $t$ is in years. Approximately what percent decays per year?',
+            options: ['About $4.0\\%$', 'About $15.0\\%$', 'About $3.8\\%$', 'About $60.0\\%$'],
             correctAnswer: 0,
-            explanation: 'Rewrite: $(0.85)^{t/4} = (0.85^{1/4})^t \\approx (0.9606)^t$. Annual decay ≈ $1 - 0.9606 = 3.94\\%$.'
+            explanation: 'Rewrite: $(0.85)^{t/4} = (0.85^{1/4})^t \\approx (0.9602)^t$. Annual decay $\\approx 1 - 0.9602 \\approx 0.040 = 4.0\\%$. The $15\\%$ loss happens every 4 years; dividing it evenly ($15\\% \\div 4 \\approx 3.8\\%$) ignores compounding.'
           },
           {
             question: 'A drug loses 30% effectiveness each hour. When is it first below 10% of original effectiveness?',
             options: ['After about 7 hours', 'After about 3 hours', 'After about 5 hours', 'After about 10 hours'],
             correctAnswer: 0,
-            explanation: '$(0.70)^t < 0.10$. Test: $(0.70)^6 ≈ 0.118$ (above), $(0.70)^7 ≈ 0.082$ (below). About 7 hours.'
+            explanation: '$(0.70)^t < 0.10$. Test: $(0.70)^6 \\approx 0.118$ (above), $(0.70)^7 \\approx 0.082$ (below). About 7 hours.'
           }
         ]
       }

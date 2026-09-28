@@ -144,10 +144,10 @@ Don't solve for $x$! Just substitute: $7 + 5 = 12$.
             explanation: 'One solution → $\\Delta = 0$: $36 - 4c = 0$ → $c = 9$. Or: $(x-3)^2 = 0$ → $c = 9$.'
           },
           {
-            question: 'The roots of $3x^2 + bx + 12 = 0$ have a product of $4$. What is $b$ if the roots are equal?',
-            options: ['$\\pm 12$', '$6$', '$-6$', '$12$'],
+            question: 'The equation $3x^2 + bx + 12 = 0$, where $b > 0$, has exactly one real solution. What is the value of $b$?',
+            options: ['$12$', '$6$', '$144$', '$4$'],
             correctAnswer: 0,
-            explanation: 'Product $= c/a = 12/3 = 4$ ✓ (always true). Equal roots → $\\Delta = 0$: $b^2 - 144 = 0$ → $b = \\pm 12$.'
+            explanation: 'Exactly one solution → $\\Delta = 0$: $b^2 - 4(3)(12) = 0$ → $b^2 = 144$ → $b = \\pm 12$. Since $b > 0$, $b = 12$. Check: $3x^2 + 12x + 12 = 3(x + 2)^2$ ✓. ($144$ forgets the square root; $4$ is the product of the roots, $12/3$.)'
           },
           {
             question: 'If $f(x) = x^2 - 4x + 3$, at what value of $x$ does $f(x)$ reach its minimum?',
@@ -165,15 +165,15 @@ Don't solve for $x$! Just substitute: $7 + 5 = 12$.
       exercise: {
         dropdowns: [
           { label: '"What is the sum of the solutions?"', options: ['Vieta\'s formulas', 'Completing the square', 'Graphing', 'Factoring'] },
-          { label: '"What is the minimum value of $f(x)$?"', options: ['Vieta\'s formulas', 'Completing the square / vertex formula', 'Quadratic formula', 'Factoring'] },
-          { label: '"What are the x-intercepts?"', options: ['Vieta\'s formulas', 'Completing the square', 'Graphing', 'Factoring or quadratic formula'] },
-          { label: '"For what value of $k$ is there no solution?"', options: ['Set discriminant < 0', 'Completing the square', 'Vieta\'s formulas', 'Factoring'] }
+          { label: '"What is the minimum value of $f(x)$?"', options: ['Vieta\'s formulas', 'Vertex form', 'Discriminant', 'Factoring'] },
+          { label: '"What are the x-intercepts?"', options: ['Vieta\'s formulas', 'Vertex form', 'Discriminant', 'Factoring'] },
+          { label: '"For what value of $k$ is there no solution?"', options: ['Discriminant', 'Vertex form', 'Vieta\'s formulas', 'Factoring'] }
         ],
-        correctAnswers: ['Vieta\'s formulas', 'Completing the square / vertex formula', 'Factoring or quadratic formula', 'Set discriminant < 0'],
+        correctAnswers: ['Vieta\'s formulas', 'Vertex form', 'Factoring', 'Discriminant'],
         hint1: 'Sum of roots $= -b/a$ — no need to actually find the roots.',
         hint2: 'The minimum of $f(x) = a(x-h)^2 + k$ is $k$ (when $a > 0$).',
         hint3: '"No solution" means no real roots, so the discriminant must be negative.',
-        explanation: 'Sum of solutions → Vieta\'s. Minimum → vertex form. X-intercepts → factor or use quadratic formula. No solution → discriminant < 0.'
+        explanation: 'Sum of solutions → Vieta\'s. Minimum → vertex form (complete the square). X-intercepts → factor (or use the quadratic formula when factoring fails). No solution → set the discriminant $< 0$.'
       }
     },
     {

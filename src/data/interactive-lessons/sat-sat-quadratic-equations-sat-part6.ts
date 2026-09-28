@@ -40,15 +40,16 @@ The discriminant of the resulting equation tells you:
 
 ### Worked Example 2
 
-**For what value of $k$ is $y = kx + 2$ tangent to $y = x^2$?**
+**For what values of $k$ is the line $y = kx - 1$ tangent to $y = x^2$?**
 
 | Step | Work |
 |------|------|
-| Set equal | $x^2 = kx + 2$ → $x^2 - kx - 2 = 0$ |
-| Tangent → $\\Delta = 0$ | $k^2 - 4(1)(-2) = 0$ → $k^2 + 8 = 0$ |
-| Wait — $k^2 = -8$? | No real solution! The line $y = kx + 2$ (y-int $= 2$) can't be tangent to $y = x^2$ |
+| Set equal | $x^2 = kx - 1$ → $x^2 - kx + 1 = 0$ |
+| Tangent → $\\Delta = 0$ | $(-k)^2 - 4(1)(1) = 0$ → $k^2 = 4$ |
+| Solve | $k = 2$ or $k = -2$ |
+| Check $k = 2$ | $x^2 - 2x + 1 = (x - 1)^2 = 0$ → one touch point, $(1, 1)$ ✓ |
 
-Let's try $y = kx - 2$ instead: $x^2 - kx + 2 = 0$, $\\Delta = k^2 - 8 = 0$ → $k = \\pm 2\\sqrt{2}$ ✓`
+> **Why the y-intercept matters:** a line with a positive y-intercept, such as $y = kx + 2$, can never be tangent to $y = x^2$. Setting them equal gives $x^2 - kx - 2 = 0$ with $\\Delta = k^2 + 8$, which is always positive, so the line always crosses the parabola twice.`
     },
     {
       id: 'qe6-quiz1',
@@ -121,10 +122,10 @@ Set the equations equal: $f(x) = g(x)$, rearrange to standard form, then solve.
             explanation: '$x^2 + 2 = 2x^2 - 1$ → $x^2 = 3$ → $x = \\pm\\sqrt{3}$. Two intersection points.'
           },
           {
-            question: 'The line $y = mx$ passes through an intersection of $y = x^2 - 4x$ and the x-axis. What are the possible values of $m$?',
-            options: ['$0$ or undefined (vertical through the origin)', '$0$ only', 'Any value', '$4$ or $0$'],
+            question: 'The line $y = mx$ intersects the parabola $y = x^2 - 4x$ at exactly one point. What is the value of $m$?',
+            options: ['$-4$', '$0$', '$4$', '$-2$'],
             correctAnswer: 0,
-            explanation: '$x^2 - 4x = 0$ → $x(x-4) = 0$. X-intercepts at $(0,0)$ and $(4,0)$. The line $y = mx$ passes through origin by definition. To pass through $(4, 0)$: $0 = 4m$ → $m = 0$. So $m = 0$ (any line through origin already passes through $(0,0)$).'
+            explanation: 'Set equal: $x^2 - 4x = mx$ → $x^2 - (4 + m)x = 0$ → $x(x - (4 + m)) = 0$. The solutions are $x = 0$ and $x = 4 + m$. Exactly one intersection means these coincide: $4 + m = 0$, so $m = -4$. (With $m = 0$ the line is the x-axis, which meets the parabola at $(0, 0)$ and $(4, 0)$.)'
           },
           {
             question: 'For the system $y = x^2$ and $y = 2x + k$, how many intersection points exist when $k = -1$?',

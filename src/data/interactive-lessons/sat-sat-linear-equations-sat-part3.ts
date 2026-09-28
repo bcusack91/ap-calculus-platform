@@ -136,7 +136,7 @@ When two inequalities define a region, the SAT typically asks:
             explanation: 'Solid line = includes boundary ($\\leq$ or $\\geq$). Shaded above = $y \\geq$. So $y \\geq \\frac{1}{2}x + 3$.'
           },
           {
-            question: 'If $|x - 2| > 5$, which graph represents the solution?',
+            question: 'If $|x - 2| > 5$, which describes all solutions?',
             options: ['$x < -3$ or $x > 7$', '$-3 < x < 7$', '$x < -7$ or $x > 3$', '$x < -5$ or $x > 5$'],
             correctAnswer: 0,
             explanation: '$|x - 2| > 5$ splits to $x - 2 > 5$ or $x - 2 < -5$, giving $x > 7$ or $x < -3$. The "greater than" case gives two separate regions.'

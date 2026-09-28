@@ -9,7 +9,7 @@ export const satWordProblemsPart4Data = {
 **Part 4 of 7 — Combining Values Strategically**
 
 ### Mixture Framework
-$$\\text{amount₁ × concentration₁} + \\text{amount₂ × concentration₂} = \\text{total amount × final concentration}$$
+$$\\text{amount}_1 \\times \\text{concentration}_1 + \\text{amount}_2 \\times \\text{concentration}_2 = \\text{total amount} \\times \\text{final concentration}$$
 
 **Example:** How many liters of 30% acid should be mixed with 10 L of 60% acid to get a 50% solution?
 - Let $x$ = liters of 30% acid
@@ -27,10 +27,10 @@ $$\\text{amount₁ × concentration₁} + \\text{amount₂ × concentration₂} 
 - From first equation: $c = 200 - a$
 - $12a + 8(200 - a) = 2000$
 - $12a + 1600 - 8a = 2000$
-- $4a = 400 → a = 100$ adults, $c = 100$ children
+- $4a = 400 \\to a = 100$ adults, $c = 100$ children
 
 ### Weighted Average
-$$\\text{Weighted avg} = \\frac{\\sum (\\text{value × weight})}{\\sum \\text{weights}}$$`
+$$\\text{Weighted avg} = \\frac{\\sum (\\text{value} \\times \\text{weight})}{\\sum \\text{weights}}$$`
     },
     {
       id: 'wp4-q1',
@@ -104,10 +104,10 @@ $$\\text{Weighted avg} = \\frac{\\sum (\\text{value × weight})}{\\sum \\text{we
             explanation: '$8c + 5(12 - c) = 6.50(12)$ → $8c + 60 - 5c = 78$ → $3c = 18$ → $c = 6$ lb coffee.'
           },
           {
-            question: 'A store buys items at \\$15 each and sells them at \\$22 each with \\$3,500 monthly overhead. How many must be sold for \\$1,500 profit?',
-            options: ['$\\approx 714$', '$500$', '$250$', '$1,000$'],
+            question: 'A store buys items at \\$15 each and sells them at \\$22 each with \\$3,500 monthly overhead. How many items must be sold in a month for a \\$1,400 profit?',
+            options: ['$700$', '$500$', '$200$', '$300$'],
             correctAnswer: 0,
-            explanation: 'Profit per item $= 22 - 15 = 7$. Need: $7n - 3500 = 1500$ → $7n = 5000$ → $n \\approx 714.3$. Must sell $715$ items (round up).'
+            explanation: 'Profit per item $= 22 - 15 = 7$. Need: $7n - 3500 = 1400$ → $7n = 4900$ → $n = 700$. Selling $500$ only breaks even ($7n = 3500$); $200$ ignores the overhead; $300$ subtracts the profit from the overhead instead of adding it.'
           }
         ]
       }

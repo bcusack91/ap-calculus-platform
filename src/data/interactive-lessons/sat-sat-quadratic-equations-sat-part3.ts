@@ -156,9 +156,9 @@ Vertex: $(-3, -7)$
           { label: '"What is the maximum height?"', options: ['Standard form', 'Factored form', 'Vertex form'] },
           { label: '"What are the x-intercepts?"', options: ['Standard form', 'Factored form', 'Vertex form'] },
           { label: '"What is the y-intercept?"', options: ['Standard form', 'Factored form', 'Vertex form'] },
-          { label: '"How many real solutions?"', options: ['Standard form (discriminant)', 'Factored form', 'Vertex form'] }
+          { label: '"How many real solutions?"', options: ['Standard form', 'Factored form', 'Vertex form'] }
         ],
-        correctAnswers: ['Vertex form', 'Factored form', 'Standard form', 'Standard form (discriminant)'],
+        correctAnswers: ['Vertex form', 'Factored form', 'Standard form', 'Standard form'],
         hint1: 'Maximum/minimum is the $k$ value in vertex form.',
         hint2: 'X-intercepts are read directly from factored form: $a(x-r)(x-s)$.',
         hint3: 'The y-intercept is the constant $c$ in standard form.',

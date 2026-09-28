@@ -113,9 +113,9 @@ From a graph, identify:
           },
           {
             question: 'If $f(x) = 2^x$ is reflected over the y-axis, the new function is:',
-            options: ['$f(x) = 2^{-x} = (1/2)^x$', '$f(x) = -2^x$', '$f(x) = 2^x + 1$', '$f(x) = -2^{-x}$'],
+            options: ['$f(x) = 2^{-x}$', '$f(x) = -2^x$', '$f(x) = 2^x + 1$', '$f(x) = -2^{-x}$'],
             correctAnswer: 0,
-            explanation: 'Reflecting over the y-axis: replace $x$ with $-x$. $2^{-x} = (1/2)^x$ — turns growth into decay!'
+            explanation: 'Reflecting over the y-axis: replace $x$ with $-x$. $2^{-x} = (1/2)^x$ — turns growth into decay! $-2^x$ is a reflection over the x-axis, and $-2^{-x}$ reflects over both axes.'
           }
         ]
       }
@@ -128,10 +128,10 @@ From a graph, identify:
         dropdowns: [
           { label: '$y = 2(3)^x - 1$: horizontal asymptote?', options: ['y = −1', 'y = 0', 'y = 2', 'y = 3'] },
           { label: '$y = 2(3)^x - 1$: y-intercept?', options: ['(0, 1)', '(0, 2)', '(0, −1)', '(0, 5)'] },
-          { label: '$y = 2(3)^x - 1$: growth or decay?', options: ['Growth (base 3 > 1)', 'Decay (shifted down)', 'Neither', 'Depends on x'] },
+          { label: '$y = 2(3)^x - 1$: growth or decay?', options: ['Growth', 'Decay', 'Neither', 'Depends on x'] },
           { label: '$y = 5(0.4)^x + 3$: range?', options: ['y > 3', 'y > 0', 'y > 5', 'All real numbers'] }
         ],
-        correctAnswers: ['y = −1', '(0, 1)', 'Growth (base 3 > 1)', 'y > 3'],
+        correctAnswers: ['y = −1', '(0, 1)', 'Growth', 'y > 3'],
         hint1: 'Asymptote = the $k$ value at the end of the function.',
         hint2: 'y-intercept: plug $x = 0$: $2(3)^0 - 1 = 2(1) - 1 = 1$.',
         hint3: 'Base $> 1$ → growth regardless of vertical shift. For $y = 5(0.4)^x + 3$: $5(0.4)^x > 0$, so $y > 3$.',

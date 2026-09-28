@@ -79,7 +79,7 @@ $$V = 25000(0.85)^4 \\approx \\$13{,}050$$
 | Type | What They Give You | What They Want |
 |---|---|---|
 | "Find the value after $t$ years" | $A_0$, $r$, $t$ | Plug into formula |
-| "When does it reach $X$?" | $A_0$, $r$, target $A$ | Solve for $t$ (may need log or trial) |
+| "When does it reach $X$?" | $A_0$, $r$, target $A$ | Solve for $t$ (test values or use a graph) |
 | "What is the rate?" | $A_0$, $A$ at time $t$ | Solve for $r$ |
 | "Interpret the base" | Model like $f(t) = 500(0.85)^t$ | "Decreases by 15% per year" |
 
@@ -100,13 +100,13 @@ When the SAT gives you $f(t) = 1000(1.06)^t$:
             question: 'A radioactive substance has a half-life of 4 years. Starting with 960 grams, how much remains after 12 years?',
             options: ['$120$ g', '$80$ g', '$240$ g', '$60$ g'],
             correctAnswer: 0,
-            explanation: '$12 ÷ 4 = 3$ half-lives. $960 \\times (0.5)^3 = 960 \\times 0.125 = 120$ g.'
+            explanation: '$12 \\div 4 = 3$ half-lives. $960 \\times (0.5)^3 = 960 \\times 0.125 = 120$ g.'
           },
           {
             question: 'The model $P(t) = 800(1.03)^t$ describes a town\'s population in thousands, $t$ years after 2020. What is the best interpretation of 1.03?',
-            options: ['Population grows 3% per year', 'Population grows by 3,000 per year', 'Population was 1,030 in 2020', 'Population triples every year'],
+            options: ['Population grows 3% per year', 'Population grows by 3,000 per year', 'Population was 1,030 in 2020', 'Population grows 103% per year'],
             correctAnswer: 0,
-            explanation: 'The base $1.03 = 1 + 0.03$ means a 3% increase each year. The initial population is 800 thousand (when $t = 0$).'
+            explanation: 'The base $1.03 = 1 + 0.03$ means a 3% increase each year. The initial population is 800 thousand (when $t = 0$). A 103% increase would require a factor of $2.03$.'
           },
           {
             question: 'An investment doubles every 9 years. Approximately what is the annual growth rate?',

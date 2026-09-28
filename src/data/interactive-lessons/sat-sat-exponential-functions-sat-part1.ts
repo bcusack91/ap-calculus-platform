@@ -46,9 +46,9 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
         questions: [
           {
             question: 'A bacteria population doubles every 3 hours, starting with 200. The population after $t$ hours is:',
-            options: ['$P(t) = 200 \\cdot 2^{t/3}$', '$P(t) = 200 \\cdot 2^{3t}$', '$P(t) = 200 \\cdot 3^{t/2}$', '$P(t) = 400^t$'],
+            options: ['$P(t) = 200 \\cdot 2^{t/3}$', '$P(t) = 200 \\cdot 2^{3t}$', '$P(t) = 200 \\cdot 2^t$', '$P(t) = 400^t$'],
             correctAnswer: 0,
-            explanation: 'Doubles every 3 hours means the factor of 2 applies per 3-hour period: $2^{t/3}$. At $t = 3$: $200 \\times 2^1 = 400$ ✓'
+            explanation: 'Doubles every 3 hours means the factor of 2 applies per 3-hour period: $2^{t/3}$. At $t = 3$: $200 \\times 2^1 = 400$ ✓. The model $200 \\cdot 2^t$ would double every hour, and $2^{3t}$ would double three times per hour.'
           },
           {
             question: 'A substance decays by 20% each hour. After 2 hours, what fraction of the original remains?',
@@ -108,9 +108,9 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
         questions: [
           {
             question: 'A substance loses 10% of its mass each day. What fraction remains after 3 days?',
-            options: ['$0.729$', '$0.70$', '$0.90$', '$0.81$'],
+            options: ['$0.729$', '$0.700$', '$0.900$', '$0.810$'],
             correctAnswer: 0,
-            explanation: '$0.90^3 = 0.729$. After 3 days, $72.9\\%$ remains.'
+            explanation: 'Each day multiply by $0.90$: $0.90^3 = 0.729$, so $72.9\\%$ remains. Subtracting $3 \\times 10\\% = 30\\%$ gives $0.700$, which ignores that each loss is taken from a smaller amount; $0.810$ is only 2 days.'
           },
           {
             question: 'A population starts at 500 and triples every 6 years. The population after $t$ years is:',
@@ -120,7 +120,7 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
           },
           {
             question: 'Which situation is NOT exponential?',
-            options: ['A pool fills at 50 gallons per hour', 'A bank account earns 5% interest annually', 'A rumors spreads to twice as many people each day', 'A medication loses 25% effectiveness each hour'],
+            options: ['A pool fills at 50 gallons per hour', 'A bank account earns 5% interest annually', 'A rumor spreads to twice as many people each day', 'A medication loses 25% effectiveness each hour'],
             correctAnswer: 0,
             explanation: 'Constant addition (50 gal/hr) is linear. The others all involve constant percentages or ratios → exponential.'
           }
@@ -133,9 +133,9 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
       content: '**Identify the Model** 🔍\n\nFor each scenario, pick the correct model type.',
       exercise: {
         dropdowns: [
-          { label: 'A car depreciates 12% per year from $25,000', options: ['$25000(0.88)^{t}$', '25000 − 0.12t', '$25000(1.12)^{t}$', '25000/0.12t'] },
+          { label: 'A car depreciates 12% per year from \\$25,000', options: ['$25000(0.88)^{t}$', '25000 − 0.12t', '$25000(1.12)^{t}$', '25000/0.12t'] },
           { label: 'A salary increases by \\$2,000 each year from \\$40,000', options: ['40000 + 2000t', '$40000(1.02)^{t}$', '$40000(2000)^{t}$', '$42000^{t}$'] },
-          { label: 'An investment grows 7% annually from $10,000', options: ['$10000(1.07)^{t}$', '10000 + 0.07t', '$10000(0.93)^{t}$', '$10700^{t}$'] },
+          { label: 'An investment grows 7% annually from \\$10,000', options: ['$10000(1.07)^{t}$', '10000 + 0.07t', '$10000(0.93)^{t}$', '$10700^{t}$'] },
           { label: 'A sample halves every 4 years from 600g', options: ['$600(0.5)^{t/4}$', '600 − 150t', '$600(0.5)^{4t}$', '600/2t'] }
         ],
         correctAnswers: ['$25000(0.88)^{t}$', '40000 + 2000t', '$10000(1.07)^{t}$', '$600(0.5)^{t/4}$'],
