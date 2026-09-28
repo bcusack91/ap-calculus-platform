@@ -1689,15 +1689,15 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 112,
-    "question": "If $f(x) = \\dfrac{x + 2}{3}$, what is the inverse $f^{-1}(x)$?",
+    "question": "If $f(x) = x^2 - 4$ and $g(x) = x + 3$, which expression is equivalent to $f(g(x))$?",
     "options": [
-      "$3x - 2$",
-      "$\\dfrac{3}{x + 2}$",
-      "$3x + 2$",
-      "$\\dfrac{x - 2}{3}$"
+      "$x^2 + 6x + 5$",
+      "$x^2 - 1$",
+      "$x^2 + 5$",
+      "$x^2 + 6x + 13$"
     ],
     "correctAnswer": 0,
-    "explanation": "Let $y=\\frac{x+2}{3}$, swap and solve: $x=\\frac{y+2}{3}\\Rightarrow 3x=y+2\\Rightarrow y=3x-2$.",
+    "explanation": "Substitute $g(x)$ for the input of $f$: $f(x + 3) = (x + 3)^2 - 4 = x^2 + 6x + 9 - 4 = x^2 + 6x + 5$. Composing in the other order gives $g(f(x)) = x^2 - 4 + 3 = x^2 - 1$; squaring as $x^2 + 9$ drops the middle term, and adding $4$ instead of subtracting it gives $x^2 + 6x + 13$.",
     "difficulty": "hard",
     "area": "advanced",
     "skill": "Nonlinear functions"
@@ -2079,15 +2079,15 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 138,
-    "question": "If $f(x) = 3x - 5$, which of the following is $f^{-1}(x)$, the inverse of $f$?",
+    "question": "The function $f$ is defined by $f(x) = x^2$. The graph of $y = g(x)$ is the result of shifting the graph of $y = f(x)$ right $4$ units and down $3$ units. Which equation defines $g$?",
     "options": [
-      "$\\frac{x - 5}{3}$",
-      "$3x + 5$",
-      "$\\frac{x + 5}{3}$",
-      "$\\frac{1}{3x - 5}$"
+      "$g(x) = (x + 4)^2 - 3$",
+      "$g(x) = (x - 3)^2 + 4$",
+      "$g(x) = (x - 4)^2 - 3$",
+      "$g(x) = (x - 4)^2 + 3$"
     ],
     "correctAnswer": 2,
-    "explanation": "Write $y = 3x - 5$ and solve for $x$: $y + 5 = 3x \\Rightarrow x = \\frac{y + 5}{3}$. Swapping variables gives $f^{-1}(x) = \\frac{x + 5}{3}$. The inverse is not the reciprocal $\\frac{1}{3x - 5}$.",
+    "explanation": "A shift right $4$ replaces $x$ with $x - 4$, and a shift down $3$ subtracts $3$ from the output: $g(x) = (x - 4)^2 - 3$, whose vertex is $(4, -3)$. Writing $x + 4$ shifts left instead, adding $3$ shifts up, and $(x - 3)^2 + 4$ swaps the two shifts.",
     "difficulty": "hard",
     "area": "advanced",
     "skill": "Nonlinear functions"
