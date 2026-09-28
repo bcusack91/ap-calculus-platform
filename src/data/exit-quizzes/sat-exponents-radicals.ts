@@ -51,6 +51,25 @@ function makeStringOptions(correct: string, others: string[]): { options: string
   return { options: all, correctIndex: all.indexOf(correct) }
 }
 
+/** Decimal without float noise: 1 + 7/100 prints "1.07", never "1.0700000000000001". */
+function num(n: number): string {
+  return String(parseFloat(n.toFixed(10)))
+}
+/**
+ * a * (1 + pct/100)^t rounded to the nearest whole number, computed exactly as
+ * a*(100+pct)^t / 100^t in integers (float pow rounds some .5 ties down).
+ * pct is negative for decay.
+ */
+function roundGrowth(a: number, pct: number, t: number): number {
+  const N = a * Math.pow(100 + pct, t)
+  const D = Math.pow(100, t)
+  return Math.floor((2 * N + D) / (2 * D))
+}
+/** Thousands separators for prose (a comma inside $...$ renders with extra space). */
+function withCommas(n: number): string {
+  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
 const questionPool: QuestionTemplate[] = [
   // ===== LAWS OF EXPONENTS (6 questions) =====
   {
@@ -78,7 +97,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const base = randInt(2, 6)
       const m = randInt(5, 12)
-      const n = randInt(1, m - 1)
+      const n = randInt(2, m - 1)
       const ans = m - n
       const { options, correctIndex } = makeOptions(ans)
       return {
@@ -162,7 +181,7 @@ const questionPool: QuestionTemplate[] = [
       const correct = `$x^{${sumExp}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$x^{${m * n}}$`,
-        `$x^{${Math.abs(m - n)}}$`,
+        Math.abs(m - n) === 1 ? `$x$` : `$x^{${Math.abs(m - n)}}$`,
         `$${a * b}x^{${m * n}}$`
       ])
       return {
@@ -201,7 +220,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const base = randInt(2, 5)
-      const n = randInt(1, 3)
+      const n = randInt(2, 3)
       const correct = `$${base}^{${n}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$-${base}^{${n}}$`,
@@ -226,7 +245,7 @@ const questionPool: QuestionTemplate[] = [
       const diff = m - n // negative
       const correct = `$x^{${diff}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x^{${n - m}}$`,
+        n - m === 1 ? `$x$` : `$x^{${n - m}}$`,
         `$x^{${m * n}}$`,
         `$\\frac{1}{x^{${m + n}}}$`
       ])
@@ -405,7 +424,7 @@ const questionPool: QuestionTemplate[] = [
       const correct = `$${k}\\sqrt{${inner}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${inner}\\sqrt{${k}}$`,
-        `$\\sqrt{${radicand}}$`,
+        `$${k * k}\\sqrt{${inner}}$`,
         `$${k * inner}$`
       ])
       return {
@@ -445,9 +464,10 @@ const questionPool: QuestionTemplate[] = [
     category: 'Simplifying Radicals',
     difficulty: 'easy',
     generate() {
-      let a = randInt(2, 8)
-      let b = randInt(2, 8)
-      while (Number.isInteger(Math.sqrt(a * b))) { a = randInt(2, 8); b = randInt(2, 8) }
+      // a*b is square-free, so sqrt(ab) is already in simplest radical form
+      const pairs: Array<[number, number]> = [[2, 3], [2, 5], [2, 7], [3, 5], [3, 7], [5, 7], [5, 6], [6, 7], [3, 10], [7, 10]]
+      const [p, q] = pairs[randInt(0, pairs.length - 1)]
+      const [a, b] = randInt(0, 1) === 0 ? [p, q] : [q, p]
       const product = a * b
       const correct = `$\\sqrt{${product}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -459,7 +479,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Simplify $\\sqrt{${a}} \\cdot \\sqrt{${b}}$.`,
         options, correctIndex,
-        explanation: `$\\sqrt{${a}} \\cdot \\sqrt{${b}} = \\sqrt{${a} \\cdot ${b}} = \\sqrt{${product}}$.`
+        explanation: `$\\sqrt{${a}} \\cdot \\sqrt{${b}} = \\sqrt{${a} \\cdot ${b}} = \\sqrt{${product}}$, and $${product}$ has no perfect-square factor, so this is fully simplified.`
       }
     }
   },
@@ -473,7 +493,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeStringOptions(correct, [
         `$\\frac{1}{${n}}$`,
         `$\\sqrt{${n}}$`,
-        `$\\frac{${n}}{\\sqrt{${n}}}$`
+        `$\\frac{\\sqrt{${n}}}{${n * n}}$`
       ])
       return {
         id: this.id, category: this.category,
@@ -612,13 +632,13 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${coeff} \\times 10^{${exp - 1}}$`,
         `$${coeff} \\times 10^{${exp + 1}}$`,
-        `$${coeff * 10} \\times 10^{${exp - 1}}$`
+        `$${coeff} \\times 10^{-${exp}}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `Express $${val.toLocaleString()}$ in scientific notation.`,
+        question: `Express ${withCommas(val)} in scientific notation.`,
         options, correctIndex,
-        explanation: `$${val.toLocaleString()} = ${coeff} \\times 10^{${exp}}$.`
+        explanation: `Move the decimal point ${exp} places left: ${withCommas(val)} $= ${coeff} \\times 10^{${exp}}$.`
       }
     }
   },
@@ -714,15 +734,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scientific Notation',
     difficulty: 'easy',
     generate() {
-      const correct = 'Between 1 and 10 (including 1)'
+      const correct = '$1 \\leq a < 10$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Between 0 and 1', 'Any positive number', 'Between 10 and 100'
+        '$0 < a < 1$', '$1 < a \\leq 10$', '$0 \\leq a < 10$'
       ])
       return {
         id: this.id, category: this.category,
         question: 'In scientific notation $a \\times 10^n$, what must be true about $a$?',
         options, correctIndex,
-        explanation: 'In scientific notation, $1 \\leq a < 10$.'
+        explanation: 'In scientific notation the coefficient satisfies $1 \\leq a < 10$: it can equal $1$ but never $10$ (that would be written $1 \\times 10^{n+1}$).'
       }
     }
   },
@@ -737,13 +757,13 @@ const questionPool: QuestionTemplate[] = [
       const rate = randInt(5, 15)
       const t = randInt(1, 3)
       const multiplier = 1 + rate / 100
-      const ans = Math.round(initial * Math.pow(multiplier, t))
+      const ans = roundGrowth(initial, rate, t)
       const { options, correctIndex } = makeOptions(ans, 100, 1)
       return {
         id: this.id, category: this.category,
-        question: `A population of $${initial}$ grows $${rate}\\%$ per year. What is the population after $${t}$ year${t > 1 ? 's' : ''}?`,
+        question: `A population of $${initial}$ grows $${rate}\\%$ per year. What is the population after $${t}$ year${t > 1 ? 's' : ''}, rounded to the nearest whole number?`,
         options, correctIndex,
-        explanation: `$${initial}(1 + ${rate / 100})^{${t}} = ${initial}(${multiplier})^{${t}} \\approx ${ans}$.`
+        explanation: `$${initial}(1 + ${num(rate / 100)})^{${t}} = ${initial}(${num(multiplier)})^{${t}} \\approx ${ans}$.`
       }
     }
   },
@@ -756,13 +776,13 @@ const questionPool: QuestionTemplate[] = [
       const rate = randInt(10, 30)
       const t = randInt(1, 3)
       const multiplier = 1 - rate / 100
-      const ans = Math.round(initial * Math.pow(multiplier, t))
+      const ans = roundGrowth(initial, -rate, t)
       const { options, correctIndex } = makeOptions(ans, 200, 1)
       return {
         id: this.id, category: this.category,
-        question: `A car worth $\\$${initial.toLocaleString()}$ depreciates $${rate}\\%$ per year. What is its value after $${t}$ year${t > 1 ? 's' : ''}?`,
+        question: `A car worth \\$${withCommas(initial)} depreciates $${rate}\\%$ per year. What is its value after $${t}$ year${t > 1 ? 's' : ''}, rounded to the nearest dollar?`,
         options, correctIndex,
-        explanation: `$${initial}(1 - ${rate / 100})^{${t}} = ${initial}(${multiplier})^{${t}} \\approx ${ans}$.`
+        explanation: `$${initial}(1 - ${num(rate / 100)})^{${t}} = ${initial}(${num(multiplier)})^{${t}} \\approx ${ans}$.`
       }
     }
   },
@@ -839,17 +859,17 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const rate = randInt(5, 20)
       const multiplier = (100 - rate) / 100
-      const correct = `$${multiplier}$`
+      const correct = `$${num(multiplier)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${(100 + rate) / 100}$`,
-        `$${rate / 100}$`,
-        `$-${rate / 100}$`
+        `$${num((100 + rate) / 100)}$`,
+        `$${num(rate / 100)}$`,
+        `$-${num(rate / 100)}$`
       ])
       return {
         id: this.id, category: this.category,
         question: `If a quantity decreases by $${rate}\\%$ each period, what is the decay factor (base)?`,
         options, correctIndex,
-        explanation: `Decay factor $= 1 - ${rate / 100} = ${multiplier}$.`
+        explanation: `Decay factor $= 1 - ${num(rate / 100)} = ${num(multiplier)}$.`
       }
     }
   },

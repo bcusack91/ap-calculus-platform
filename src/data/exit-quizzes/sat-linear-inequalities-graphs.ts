@@ -97,9 +97,11 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(-5, 5)
       const x = randInt(0, 6)
       const boundary = m * x + b
-      const testY = boundary + randInt(1, 5)
-      const correct = 'Yes — it lies above the boundary line'
-      return { id: this.id, category: this.category, question: `Does the point $(${x}, ${testY})$ satisfy $y > ${m}x ${pm(b)}$? The boundary value at $x = ${x}$ is $${boundary}$.`, ...makeStringOptions(correct, ['No — it lies below the boundary line', 'No — it lies on the boundary line', 'Yes — it lies on the boundary line']), explanation: `At $x = ${x}$, $mx + b = ${boundary}$. Since $${testY} > ${boundary}$, the point is above the line, so it satisfies the inequality.` }
+      const pos = randInt(0, 2) // 0 above, 1 below, 2 on the line
+      const testY = pos === 0 ? boundary + randInt(1, 5) : pos === 1 ? boundary - randInt(1, 5) : boundary
+      const states = ['Yes — it lies above the boundary line', 'No — it lies below the boundary line', 'No — it lies on the boundary line', 'Yes — it lies on the boundary line']
+      const where = pos === 0 ? 'above the line, so it satisfies the inequality' : pos === 1 ? 'below the line, so it does not satisfy the inequality' : 'on the line, and the strict inequality $>$ excludes the line'
+      return { id: this.id, category: this.category, question: `Does the point $(${x}, ${testY})$ satisfy $y > ${m}x ${pm(b)}$? The boundary value at $x = ${x}$ is $${boundary}$.`, ...makeStringOptions(states[pos], states), explanation: `At $x = ${x}$, the boundary line has $y = ${boundary}$. The point has $y = ${testY}$, which is ${pos === 0 ? 'greater than' : pos === 1 ? 'less than' : 'equal to'} $${boundary}$: the point is ${where}.` }
     }
   },
   {
@@ -110,7 +112,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(1, 4)
       const b = randInt(-6, 6)
       const correct = 'Dashed line'
-      return { id: this.id, category: this.category, question: `When graphing $y < ${m}x ${pm(b)}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Solid line', 'Double line', 'No boundary line']), explanation: 'Strict inequalities ($<$ or $>$) use dashed lines because points on the line are NOT included.' }
+      return { id: this.id, category: this.category, question: `When graphing $y < ${m}x ${pm(b)}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Solid line', 'Double line', 'No line']), explanation: 'Strict inequalities ($<$ or $>$) use dashed lines because points on the line are NOT included.' }
     }
   },
   {
@@ -121,7 +123,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(1, 3)
       const b = randInt(1, 8)
       const correct = 'Solid line'
-      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'Double line', 'No boundary line']), explanation: 'Non-strict inequalities ($\\le$ or $\\ge$) use solid lines because boundary points ARE included.' }
+      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'Double line', 'No line']), explanation: 'Non-strict inequalities ($\\le$ or $\\ge$) use solid lines because boundary points ARE included.' }
     }
   },
   {
@@ -155,8 +157,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 3)
       const b = randInt(0, 5)
-      const correct = 'The half-plane below the line, not including the line'
-      return { id: this.id, category: this.category, question: `Describe the solution set of $y < ${m}x + ${b}$.`, ...makeStringOptions(correct, ['The half-plane above the line, excluding the line', 'The half-plane below the line, including the line', 'Only the points that lie on the line itself']), explanation: '$y < mx + b$ represents all points strictly below the boundary line.' }
+      const correct = 'The half-plane below the line, excluding the line'
+      return { id: this.id, category: this.category, question: `Describe the solution set of $y < ${m}x + ${b}$.`, ...makeStringOptions(correct, ['The half-plane above the line, excluding the line', 'The half-plane below the line, including the line', 'Only the points that lie on the line itself']), explanation: '$y < mx + b$ represents all points strictly below the boundary line; the line itself is not included.' }
     }
   },
   {
@@ -167,7 +169,7 @@ const questionPool: QuestionTemplate[] = [
       const m1 = randInt(1, 3); const b1 = randInt(0, 5)
       const m2 = randInt(-3, -1); const b2 = randInt(1, 8)
       const correct = 'The overlapping shaded region of both inequalities'
-      return { id: this.id, category: this.category, question: `What does the solution set of $y \\le ${m1}x + ${b1}$ AND $y \\ge ${m2}x + ${b2}$ represent?`, ...makeStringOptions(correct, ['Every point shaded by at least one inequality', 'Only the points lying on both boundary lines', 'The region that neither inequality shades']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
+      return { id: this.id, category: this.category, question: `What does the solution set of $y \\le ${m1}x + ${b1}$ AND $y \\ge ${m2}x + ${b2}$ represent?`, ...makeStringOptions(correct, ['Every point shaded by at least one of the inequalities', 'Only the points lying on both of the boundary lines', 'The region that neither of the inequalities shades']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
     }
   },
   {
@@ -185,8 +187,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'easy',
     generate() {
-      const correct = 'Yes — it satisfies both inequalities'
-      return { id: this.id, category: this.category, question: 'Is the point $(2, 3)$ in the solution set of the system $y > x$ and $y < 2x + 1$?', ...makeStringOptions(correct, ['No — it fails the inequality $y > x$', 'No — the point fails $y < 2x + 1$', 'No — it lies on a boundary line']), explanation: 'Check BOTH: $3 > 2$ ✓ and $3 < 5$ ✓ — the point satisfies every inequality, so it is in the solution set.' }
+      // Random lattice point, never on a boundary line; each of the four outcomes is equally likely.
+      const outcome = randInt(0, 3) // 0 both hold, 1 fails first only, 2 fails second only, 3 fails both
+      let x = 0; let y = 0; let ok1 = false; let ok2 = false
+      do {
+        x = randInt(-4, 4); y = randInt(-4, 4)
+        ok1 = y > x; ok2 = y < 2 * x + 1
+      } while (y === x || y === 2 * x + 1 || (outcome === 0 ? !(ok1 && ok2) : outcome === 1 ? !(!ok1 && ok2) : outcome === 2 ? !(ok1 && !ok2) : !(!ok1 && !ok2)))
+      const states = ['Yes — it satisfies both inequalities', 'No — it fails only the first inequality', 'No — it fails only the second inequality', 'No — it fails both of the inequalities']
+      return { id: this.id, category: this.category, question: `Is the point $(${x}, ${y})$ in the solution set of the system $y > x$ and $y < 2x + 1$?`, ...makeStringOptions(states[outcome], states), explanation: `First: $${y} ${ok1 ? '>' : '<'} ${x}$, so $y > x$ ${ok1 ? 'holds' : 'fails'}. Second: $2(${x}) + 1 = ${2 * x + 1}$ and $${y} ${ok2 ? '<' : '>'} ${2 * x + 1}$, so $y < 2x + 1$ ${ok2 ? 'holds' : 'fails'}. The point is in the solution set only when both hold.` }
     }
   },
   {
@@ -212,7 +221,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'medium',
     generate() {
-      const correct = 'No solution — the shaded regions do not overlap'
+      const correct = 'No solution — no point lies in both shaded regions'
       return { id: this.id, category: this.category, question: 'If the graphs of two linear inequalities have no overlapping shaded region, what is the solution?', ...makeStringOptions(correct, ['Infinitely many solutions — every shaded point works', 'Exactly one solution — where the boundary lines meet', 'The union of both shaded regions is the solution']), explanation: 'When shaded regions do not overlap, the system has no solution (empty intersection).' }
     }
   },
@@ -222,8 +231,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'hard',
     generate() {
       const c = randInt(5, 15)
-      const correct = 'A triangle in the first quadrant'
-      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: $x \\ge 0$, $y \\ge 0$, $x + y \\le ${c}$.`, ...makeStringOptions(correct, [`A line segment on the line $x + y = ${c}$`, 'The entire first quadrant and its axes', 'A triangle in the fourth quadrant']), explanation: `These three inequalities form a triangle with vertices at $(0, 0)$, $(${c}, 0)$, and $(0, ${c})$.` }
+      const correct = 'A right triangle in the first quadrant'
+      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: $x \\ge 0$, $y \\ge 0$, $x + y \\le ${c}$.`, ...makeStringOptions(correct, [`A line segment on the line $x + y = ${c}$`, 'The entire first quadrant and its axes', 'A square in the first quadrant']), explanation: `These three inequalities form a right triangle with vertices at $(0, 0)$, $(${c}, 0)$, and $(0, ${c})$.` }
     }
   },
   {
@@ -232,9 +241,10 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'hard',
     generate() {
       const a = randInt(2, 6); const b = randInt(2, 6)
-      const budget = a * 3 + b * 2 + randInt(5, 15)
-      const correct = `$(3, 2)$`
-      return { id: this.id, category: this.category, question: `Which point is a feasible solution of $${a}x + ${b}y \\le ${budget}$ with $x \\ge 1$ and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, ${Math.ceil(budget / b)})$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(3) + ${b}(2) = ${a * 3 + b * 2} \\le ${budget}$, and $3 \\ge 1$, $2 \\ge 1$. Each other point violates at least one constraint.` }
+      const px = randInt(1, 3); const py = randInt(1, 3)
+      const budget = a * px + b * py + randInt(5, 15)
+      const correct = `$(${px}, ${py})$`
+      return { id: this.id, category: this.category, question: `Which point is a feasible solution of $${a}x + ${b}y \\le ${budget}$ with $x \\ge 1$ and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, ${py + 1})$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(${px}) + ${b}(${py}) = ${a * px + b * py} \\le ${budget}$, and $${px} \\ge 1$, $${py} \\ge 1$. Each other point breaks the budget or has $x = 0 < 1$.` }
     }
   },
   {
@@ -242,8 +252,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'medium',
     generate() {
-      const correct = 'At a vertex (corner point) of the feasible region'
-      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center point of the feasible region', 'At the origin, whatever the region looks like', 'At any interior point of the feasible region']), explanation: 'The optimal value of a linear objective function occurs at a vertex of the feasible region (Corner Point Theorem).' }
+      const correct = 'At one of the vertices of the feasible region'
+      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center point of the feasible region', 'At the origin, whatever the region looks like', 'At any interior point of the feasible region']), explanation: 'The optimal value of a linear objective function occurs at a vertex (corner point) of the feasible region.' }
     }
   },
   {
@@ -252,8 +262,9 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const m = randInt(1, 4); const b = randInt(-5, 5)
-      const correct = `Shade below the line $y = ${m}x ${pm(b)}$`
-      return { id: this.id, category: this.category, question: `To graph $y < ${m}x ${pm(b)}$, after drawing a dashed line, where do you shade?`, ...makeStringOptions(correct, [`Shade above and on the line $y = ${m}x ${pm(b)}$`, `Shade only on the line $y = ${m}x ${pm(b)}$`, `Shade right of the line $y = ${m}x ${pm(b)}$`]), explanation: 'For $y < mx + b$, shade the region below the boundary line.' }
+      const L = `$y = ${m}x ${pm(b)}$`
+      const correct = `Shade below the line ${L}`
+      return { id: this.id, category: this.category, question: `To graph $y < ${m}x ${pm(b)}$, after drawing a dashed line, where do you shade?`, ...makeStringOptions(correct, [`Shade above the line ${L}`, `Shade on and below the line ${L}`, `Shade to the right of the line ${L}`]), explanation: 'For $y < mx + b$, shade the region below the boundary line (the dashed line itself is not included).' }
     }
   },
   {
@@ -274,7 +285,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Inequalities',
     difficulty: 'easy',
     generate() {
-      const correct = 'Test a point like $(0, 0)$ and shade the side where it is true'
+      const correct = 'Test a point like $(0, 0)$ and shade the side that works'
       return { id: this.id, category: this.category, question: 'What is the test-point method for determining which side to shade?', ...makeStringOptions(correct, ['Always shade above the line, whatever the inequality says', 'Always shade the side that contains the origin $(0, 0)$', 'Shade the side with the larger area in the viewing window']), explanation: 'Substitute a test point (usually the origin) into the inequality. If true, shade that side; if false, shade the opposite side.' }
     }
   },
@@ -294,8 +305,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const k = randInt(1, 8)
-      const correct = `A vertical line at $x = ${k}$ with shading to the right`
-      return { id: this.id, category: this.category, question: `How is $x \\ge ${k}$ graphed on the coordinate plane?`, ...makeStringOptions(correct, [`A horizontal line at $y = ${k}$ with shading above`, `A vertical line at $x = ${k}$ with shading to the left`, `A dashed vertical line at $x = ${k}$, shading right`]), explanation: `$x \\ge ${k}$ is a solid vertical line at $x = ${k}$ with shading to the right (larger $x$ values).` }
+      const correct = `A solid vertical line at $x = ${k}$, shading right`
+      return { id: this.id, category: this.category, question: `How is $x \\ge ${k}$ graphed on the coordinate plane?`, ...makeStringOptions(correct, [`A solid horizontal line at $y = ${k}$, shading above`, `A solid vertical line at $x = ${k}$, shading left`, `A dashed vertical line at $x = ${k}$, shading right`]), explanation: `$x \\ge ${k}$ is a solid vertical line at $x = ${k}$ (the line is included) with shading to the right (larger $x$ values).` }
     }
   },
   {
@@ -305,7 +316,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const k = randInt(-5, -1)
       const correct = `$y > ${k}$: horizontal dashed line, shade above`
-      return { id: this.id, category: this.category, question: `Describe the graph of $y > ${k}$.`, ...makeStringOptions(correct, [`$y > ${k}$: horizontal solid line, shading above`, `$y > ${k}$: horizontal dashed line, shading below`, `$y > ${k}$: vertical dashed line, shading to the right`]), explanation: `$y > ${k}$ is a horizontal dashed line at $y = ${k}$ with shading above.` }
+      return { id: this.id, category: this.category, question: `Describe the graph of $y > ${k}$.`, ...makeStringOptions(correct, [`$y > ${k}$: horizontal solid line, shade above`, `$y > ${k}$: horizontal dashed line, shade below`, `$y > ${k}$: vertical dashed line, shade right`]), explanation: `$y > ${k}$ is a horizontal dashed line at $y = ${k}$ with shading above.` }
     }
   },
   {
@@ -313,9 +324,13 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Inequalities',
     difficulty: 'easy',
     generate() {
-      const m = randInt(-3, -1); const b = randInt(2, 8)
-      const correct = 'The slope is negative, so the line goes down from left to right'
-      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, describe the boundary line direction.`, ...makeStringOptions(correct, ['The slope is positive, so the line goes up from left to right', 'The slope is zero, so the line is horizontal across the plane', 'The slope is undefined, so the line is perfectly vertical']), explanation: `A negative slope ($m = ${m}$) means the line descends from left to right.` }
+      const neg = randInt(0, 1) === 0
+      const m = neg ? randInt(-3, -1) : randInt(1, 3)
+      const b = randInt(2, 8)
+      const down = 'The slope is negative, so the line goes down from left to right'
+      const up = 'The slope is positive, so the line goes up from left to right'
+      const correct = neg ? down : up
+      return { id: this.id, category: this.category, question: `When graphing $y \\ge ${m}x + ${b}$, describe the boundary line direction.`, ...makeStringOptions(correct, [down, up, 'The slope is zero, so the line is horizontal across the whole plane', 'The slope is undefined, so the line is perfectly vertical']), explanation: `The slope is $m = ${m}$, which is ${neg ? 'negative, so the line descends' : 'positive, so the line rises'} from left to right.` }
     }
   },
   {
@@ -323,9 +338,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Inequalities',
     difficulty: 'easy',
     generate() {
-      const m = randInt(1, 3); const b = randInt(0, 4)
+      const m = randInt(1, 3); const b = randInt(1, 4)
       const correct = 'It is the y-intercept of the boundary line'
-      return { id: this.id, category: this.category, question: `In $y < ${m}x + ${b}$, what role does $${b}$ play in the graph?`, ...makeStringOptions(correct, ['It is the slope of the boundary line', 'It sets which side of the line is shaded', 'It sets if the line is solid or dashed']), explanation: `The constant $${b}$ is the y-intercept — the point $(0, ${b})$ where the boundary line crosses the y-axis.` }
+      return { id: this.id, category: this.category, question: `In $y < ${m}x + ${b}$, what role does $${b}$ play in the graph?`, ...makeStringOptions(correct, ['It is the x-intercept of the boundary line', 'It sets which side of the line is shaded', 'It sets if the line is solid or dashed']), explanation: `The constant $${b}$ is the y-intercept — the point $(0, ${b})$ where the boundary line crosses the y-axis.` }
     }
   },
   {
@@ -389,7 +404,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'No solution'
-      return { id: this.id, category: this.category, question: 'What is the solution to $|x + 3| < -2$?', ...makeStringOptions(correct, ['$-5 < x < -1$', '$x = -3$ only', 'All real numbers']), explanation: 'Absolute value is always $\\ge 0$, so it can never be less than a negative number. No solution.' }
+      return { id: this.id, category: this.category, question: 'What is the solution to $|x + 3| < -2$?', ...makeStringOptions(correct, ['$-5 < x < -1$', '$x = -3$', 'All real numbers']), explanation: 'Absolute value is always $\\ge 0$, so it can never be less than a negative number. No solution.' }
     }
   },
   {
@@ -476,7 +491,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Word Problems',
     difficulty: 'easy',
     generate() {
-      const correct = 'Define a variable, write the inequality, solve, and check'
+      const correct = 'Define a variable, write the inequality, solve, check'
       return { id: this.id, category: this.category, question: 'What is the general strategy for solving inequality word problems?', ...makeStringOptions(correct, ['Use an equation instead and never check the answer', 'Guess and check numbers until one seems to work', 'Multiply both sides by $-1$ before doing anything else']), explanation: 'Define variables, translate word constraints into mathematical inequalities, solve algebraically, and verify the inequality direction matches the context.' }
     }
   },
@@ -500,6 +515,19 @@ const questionPool: QuestionTemplate[] = [
       const needed = minGrade * n
       const correct = `The sum of all $${n}$ scores must be $\\ge ${needed}$`
       return { id: this.id, category: this.category, question: `To earn at least a $${minGrade}$ average across $${n}$ assignments, what must the total points be?`, ...makeStringOptions(correct, [`The sum of all $${n}$ scores must be $\\le ${needed}$`, `The sum of all $${n}$ scores must be $\\ge ${minGrade}$`, `The sum of all $${n}$ scores must equal $${needed}$`]), explanation: `Average $= \\frac{\\text{total}}{${n}} \\ge ${minGrade}$, so total $\\ge ${minGrade} \\times ${n} = ${needed}$.` }
+    }
+  },
+  {
+    id: 'liq-q41',
+    category: 'Slope-Intercept Inequalities',
+    difficulty: 'easy',
+    generate() {
+      const m = randInt(2, 4)
+      const b = randInt(-3, 3)
+      const xs = shuffle([-2, -1, 0, 1, 2]).slice(0, 4)
+      const pt = (x: number, above: boolean) => `$(${x}, ${m * x + b + (above ? randInt(1, 3) : -randInt(1, 3))})$`
+      const correct = pt(xs[0], true)
+      return { id: this.id, category: this.category, question: `Which point is a solution of $y \\ge ${m}x ${pm(b)}$?`, ...makeStringOptions(correct, [pt(xs[1], false), pt(xs[2], false), pt(xs[3], false)]), explanation: `Substitute each $x$ into $${m}x ${pm(b)}$ and compare with $y$. Only ${correct} has a $y$-value at least as large as $${m}x ${pm(b)}$; each other point lies below the line.` }
     }
   },
 ]

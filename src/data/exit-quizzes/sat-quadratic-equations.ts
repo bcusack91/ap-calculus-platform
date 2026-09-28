@@ -62,6 +62,31 @@ function sign(n: number): string {
   return n >= 0 ? `+ ${n}` : `- ${Math.abs(n)}`
 }
 
+/** Polynomial from [coefficient, variable-part] pairs: zero terms dropped, 1/-1 folded, no "+ -4". */
+function poly(...terms: Array<[number, string]>): string {
+  let s = ''
+  for (const [c, v] of terms) {
+    if (c === 0) continue
+    const body = v && Math.abs(c) === 1 ? v : `${Math.abs(c)}${v}`
+    s += s ? (c < 0 ? ` - ${body}` : ` + ${body}`) : (c < 0 ? `-${body}` : body)
+  }
+  return s || '0'
+}
+/** "x - r" with the right sign ("x + 3" for r = -3, "x" for r = 0). */
+function xMinus(r: number): string {
+  return poly([1, 'x'], [-r, ''])
+}
+/** Vertex form a(x - h)^2 + k, formatted: "(x + 3)^2 - 4", "-2x^2 + 5", "3(x - 1)^2". */
+function vertexForm(a: number, h: number, k: number): string {
+  const sq = h === 0 ? 'x^2' : `(${xMinus(h)})^2`
+  const lead = a === 1 ? '' : a === -1 ? '-' : `${a}`
+  return `${lead}${sq}${k === 0 ? '' : ` ${sign(k)}`}`
+}
+/** A number shown as a substituted value: negatives get parentheses. */
+function p(n: number): string {
+  return n < 0 ? `(${n})` : `${n}`
+}
+
 const questionPool: QuestionTemplate[] = [
   // ===== FACTORING (6 questions) =====
   {
@@ -70,16 +95,17 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const r1 = randInt(-9, 9)
-      const r2 = randInt(-9, 9)
+      let r2 = randInt(-9, 9)
+      while (r2 === r1) r2 = randInt(-9, 9)
       const b = -(r1 + r2)
       const c = r1 * r2
       const smaller = Math.min(r1, r2)
       const { options, correctIndex } = makeOptions(smaller)
       return {
         id: this.id, category: this.category,
-        question: `What is the smaller root of $x^2 ${sign(b)}x ${sign(c)} = 0$?`,
+        question: `What is the smaller root of $${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$?`,
         options, correctIndex,
-        explanation: `Factor: $(x - ${r1})(x - ${r2}) = 0$, so $x = ${r1}$ or $x = ${r2}$. The smaller root is $${smaller}$.`
+        explanation: `Factor: $${r1 === 0 ? 'x' : `(${xMinus(r1)})`}${r2 === 0 ? 'x' : `(${xMinus(r2)})`} = 0$, so $x = ${r1}$ or $x = ${r2}$. The smaller root is $${smaller}$.`
       }
     }
   },
@@ -105,7 +131,8 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const r1 = randInt(1, 8)
-      const r2 = randInt(1, 8)
+      let r2 = randInt(1, 8)
+      while (r2 === r1) r2 = randInt(1, 8)
       const product = r1 * r2
       const { options, correctIndex } = makeOptions(product)
       return {
@@ -123,14 +150,15 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(2, 5)
       const r1 = randInt(-6, 6)
-      const r2 = randInt(-6, 6)
+      let r2 = randInt(-6, 6)
+      while (r2 === r1) r2 = randInt(-6, 6) // two different solutions, so "sum of the solutions" is unambiguous
       const sum = r1 + r2
       const { options, correctIndex } = makeOptions(sum)
       return {
         id: this.id, category: this.category,
-        question: `If $${a}(x - ${r1})(x - ${r2}) = 0$, what is the sum of the solutions?`,
+        question: `If $${a}${r1 === 0 ? 'x' : `(${xMinus(r1)})`}${r2 === 0 ? 'x' : `(${xMinus(r2)})`} = 0$, what is the sum of the solutions?`,
         options, correctIndex,
-        explanation: `The solutions are $x = ${r1}$ and $x = ${r2}$. Sum $= ${r1} + ${r2} = ${sum}$.`
+        explanation: `The solutions are $x = ${r1}$ and $x = ${r2}$. Sum $= ${r1 === 0 || r2 === 0 ? '' : `${r1} + ${p(r2)} = `}${sum}$.`
       }
     }
   },
@@ -185,14 +213,15 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       // Ensure integer solutions: a=1, roots r1,r2
       const r1 = randInt(-8, 8)
-      const r2 = randInt(-8, 8)
+      let r2 = randInt(-8, 8)
+      while (r2 === r1) r2 = randInt(-8, 8)
       const b = -(r1 + r2)
       const c = r1 * r2
       const larger = Math.max(r1, r2)
       const { options, correctIndex } = makeOptions(larger)
       return {
         id: this.id, category: this.category,
-        question: `Using the quadratic formula, find the larger solution of $x^2 ${sign(b)}x ${sign(c)} = 0$.`,
+        question: `Using the quadratic formula, find the larger solution of $${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$.`,
         options, correctIndex,
         explanation: `$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ with $a=1, b=${b}, c=${c}$. Solutions are $${r1}$ and $${r2}$. Larger is $${larger}$.`
       }
@@ -210,9 +239,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(disc, 10)
       return {
         id: this.id, category: this.category,
-        question: `What is the discriminant of $${a}x^2 ${sign(b)}x ${sign(c)} = 0$?`,
+        question: `What is the discriminant of $${poly([a, 'x^2'], [b, 'x'], [c, ''])} = 0$?`,
         options, correctIndex,
-        explanation: `Discriminant $= b^2 - 4ac = (${b})^2 - 4(${a})(${c}) = ${b * b} - ${4 * a * c} = ${disc}$.`
+        explanation: `Discriminant $= b^2 - 4ac = (${b})^2 - 4(${a})(${c}) = ${c === 0 ? `${b * b}` : `${b * b} - ${p(4 * a * c)}`} = ${disc}$.`
       }
     }
   },
@@ -223,7 +252,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const scenarios = [
         { disc: 'positive', count: 'Two distinct real solutions' },
-        { disc: 'zero', count: 'Exactly one real solution (repeated root)' },
+        { disc: 'zero', count: 'Exactly one real solution' },
         { disc: 'negative', count: 'No real solutions' },
       ]
       const pick = randInt(0, 2)
@@ -243,7 +272,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeStringOptions(correct, others)
       return {
         id: this.id, category: this.category,
-        question: `How many real solutions does $x^2 ${sign(b)}x ${sign(c)} = 0$ have? (Discriminant $= ${disc}$)`,
+        question: `How many real solutions does $${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$ have? (Discriminant $= ${disc}$)`,
         options, correctIndex,
         explanation: `The discriminant is $${disc}$. ${disc > 0 ? 'Positive → two distinct real solutions.' : disc === 0 ? 'Zero → exactly one repeated root.' : 'Negative → no real solutions.'}`
       }
@@ -262,11 +291,11 @@ const questionPool: QuestionTemplate[] = [
       const disc = b * b - 4 * a * c
       const correct = 'No real solutions'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Two positive solutions', 'Two negative solutions', 'One positive, one negative'
+        'One real solution', 'Two real solutions', 'Two negative real solutions'
       ])
       return {
         id: this.id, category: this.category,
-        question: `The equation $${a}x^2 ${sign(b)}x + ${c} = 0$ has a discriminant of $${disc}$. What can we conclude?`,
+        question: `The equation $${poly([a, 'x^2'], [b, 'x'], [c, ''])} = 0$ has a discriminant of $${disc}$. What can we conclude?`,
         options, correctIndex,
         explanation: `Since the discriminant $${disc} < 0$, the equation has no real solutions.`
       }
@@ -299,20 +328,20 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(1, 8)
       const b = -2 * r
       const c = r * r
-      const correct = `$x^2 ${sign(b)}x + ${c} = 0$`
+      const correct = `$${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$`
       const b2 = b + randNonZero(-3, 3)
       const c2 = c + randNonZero(1, 4)
       const c3 = c - randInt(1, 4)
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x^2 ${sign(b2)}x + ${c} = 0$`,
-        `$x^2 ${sign(b)}x + ${c2} = 0$`,
-        `$x^2 ${sign(b)}x + ${c3} = 0$`
+        `$${poly([1, 'x^2'], [b2, 'x'], [c, ''])} = 0$`,
+        `$${poly([1, 'x^2'], [b, 'x'], [c2, ''])} = 0$`,
+        `$${poly([1, 'x^2'], [b, 'x'], [c3, ''])} = 0$`
       ])
       return {
         id: this.id, category: this.category,
         question: `Which equation has exactly one real solution?`,
         options, correctIndex,
-        explanation: `$x^2 ${sign(b)}x + ${c} = 0$ → discriminant $= (${b})^2 - 4(${c}) = ${b * b - 4 * c} = 0$, so exactly one solution.`
+        explanation: `$${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$ → discriminant $= (${b})^2 - 4(${c}) = ${b * b - 4 * c} = 0$, so exactly one solution.`
       }
     }
   },
@@ -329,7 +358,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(k)
       return {
         id: this.id, category: this.category,
-        question: `What is the $y$-coordinate of the vertex of $y = ${a}(x - ${h})^2 + ${k}$?`,
+        question: `What is the $y$-coordinate of the vertex of $y = ${vertexForm(a, h, k)}$?`,
         options, correctIndex,
         explanation: `In vertex form $y = a(x - h)^2 + k$, the vertex is $(h, k) = (${h}, ${k})$. The $y$-coordinate is $${k}$.`
       }
@@ -345,7 +374,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(h)
       return {
         id: this.id, category: this.category,
-        question: `For $y = 2(x ${sign(-h)})^2 ${sign(k)}$, what is the $x$-coordinate of the vertex?`,
+        question: `For $y = ${vertexForm(2, h, k)}$, what is the $x$-coordinate of the vertex?`,
         options, correctIndex,
         explanation: `Comparing with $y = a(x - h)^2 + k$: $h = ${h}$. The vertex $x$-coordinate is $${h}$.`
       }
@@ -365,9 +394,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(k)
       return {
         id: this.id, category: this.category,
-        question: `Complete the square: $y = x^2 ${sign(b)}x + ${c}$. What is the minimum (or maximum) value of $y$?`,
+        question: `Complete the square: $y = ${poly([1, 'x^2'], [b, 'x'], [c, ''])}$. What is the minimum (or maximum) value of $y$?`,
         options, correctIndex,
-        explanation: `$y = (x ${sign(-h)})^2 + ${k}$. Since $a = 1 > 0$, the minimum value is $k = ${k}$.`
+        explanation: `$y = ${vertexForm(1, h, k)}$. Since $a = 1 > 0$, the minimum value is $k = ${k}$.`
       }
     }
   },
@@ -382,7 +411,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(k)
       return {
         id: this.id, category: this.category,
-        question: `The function $f(x) = ${a}(x - ${h})^2 + ${k}$ has a maximum value. What is it?`,
+        question: `The function $f(x) = ${vertexForm(a, h, k)}$ has a maximum value. What is it?`,
         options, correctIndex,
         explanation: `Since $a = ${a} < 0$, the parabola opens down. Maximum value $= k = ${k}$.`
       }
@@ -402,7 +431,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `What is the axis of symmetry for $y = 3(x - ${h})^2 + ${k}$?`,
+        question: `What is the axis of symmetry for $y = ${vertexForm(3, h, k)}$?`,
         options, correctIndex,
         explanation: `The axis of symmetry is $x = h = ${h}$.`
       }
@@ -425,9 +454,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `Find the vertex of $y = ${a}x^2 ${sign(bStd)}x + ${cStd}$.`,
+        question: `Find the vertex of $y = ${poly([a, 'x^2'], [bStd, 'x'], [cStd, ''])}$.`,
         options, correctIndex,
-        explanation: `$y = ${a}(x ${sign(-h)})^2 + ${k}$, so vertex is $(${h}, ${k})$.`
+        explanation: `$y = ${vertexForm(a, h, k)}$, so vertex is $(${h}, ${k})$.`
       }
     }
   },
@@ -441,11 +470,11 @@ const questionPool: QuestionTemplate[] = [
       const a = randNonZero(-5, 5)
       const correct = a > 0 ? 'Upward' : 'Downward'
       const { options, correctIndex } = makeStringOptions(correct, [
-        a > 0 ? 'Downward' : 'Upward', 'Left', 'Right'
+        a > 0 ? 'Downward' : 'Upward', 'To the left', 'To the right'
       ])
       return {
         id: this.id, category: this.category,
-        question: `In which direction does the parabola $y = ${a}x^2 + 3x - 7$ open?`,
+        question: `In which direction does the parabola $y = ${poly([a, 'x^2'], [3, 'x'], [-7, ''])}$ open?`,
         options, correctIndex,
         explanation: `Since $a = ${a}$ is ${a > 0 ? 'positive' : 'negative'}, the parabola opens ${correct.toLowerCase()}.`
       }
@@ -462,7 +491,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(c)
       return {
         id: this.id, category: this.category,
-        question: `What is the $y$-intercept of $y = ${a}x^2 ${sign(b)}x ${sign(c)}$?`,
+        question: `What is the $y$-intercept of $y = ${poly([a, 'x^2'], [b, 'x'], [c, ''])}$?`,
         options, correctIndex,
         explanation: `Set $x = 0$: $y = ${c}$. The $y$-intercept is $${c}$.`
       }
@@ -482,7 +511,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `What is the range of $f(x) = ${a}(x - ${h})^2 + ${k}$?`,
+        question: `What is the range of $f(x) = ${vertexForm(a, h, k)}$?`,
         options, correctIndex,
         explanation: `Since $a = ${a} > 0$, the minimum is $k = ${k}$. Range: $y \\geq ${k}$.`
       }
@@ -507,7 +536,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `Find the axis of symmetry of $y = ${a}x^2 ${sign(b)}x + 1$.`,
+        question: `Find the axis of symmetry of $y = ${poly([a, 'x^2'], [b, 'x'], [1, ''])}$.`,
         options, correctIndex,
         explanation: `Axis of symmetry $= \\frac{-b}{2a} = \\frac{${-b}}{${2 * a}}${g > 1 ? ' = ' + (sDen === 1 ? sNum : '\\frac{' + sNum + '}{' + sDen + '}') : ''}$.`
       }
@@ -530,7 +559,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `A parabola crosses the $x$-axis at $x = ${r1}$ and $x = ${r2}$. What is the axis of symmetry?`,
         options, correctIndex,
-        explanation: `The axis of symmetry is the midpoint of the roots: $x = \\frac{${r1} + ${r2}}{2} = ${midpoint}$.`
+        explanation: `The axis of symmetry is the midpoint of the roots: $x = \\frac{${r1} + ${p(r2)}}{2} = ${midpoint}$.`
       }
     }
   },
@@ -549,7 +578,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(y1)
       return {
         id: this.id, category: this.category,
-        question: `If $y = x^2$ and $y = ${m}x ${sign(b)}$ intersect at $x = ${x1}$, what is the $y$-value at that point?`,
+        question: `If $y = x^2$ and $y = ${poly([m, 'x'], [b, ''])}$ intersect at $x = ${x1}$, what is the $y$-value at that point?`,
         options, correctIndex,
         explanation: `Substitute $x = ${x1}$ into $y = x^2$: $y = ${x1}^2 = ${y1}$.`
       }
@@ -575,9 +604,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `How many points of intersection do $y = x^2 + ${k}$ and $y = ${c}$ have?`,
+        question: `How many points of intersection do $y = ${poly([1, 'x^2'], [k, ''])}$ and $y = ${c}$ have?`,
         options, correctIndex,
-        explanation: `Set $x^2 + ${k} = ${c}$ → $x^2 = ${diff}$. ${diff > 0 ? 'Positive → two solutions → two points.' : diff === 0 ? 'Zero → one solution → one point (tangent).' : 'Negative → no real solutions → no intersection.'}`
+        explanation: `Set $${poly([1, 'x^2'], [k, ''])} = ${c}$ → $x^2 = ${diff}$. ${diff > 0 ? 'Positive → two solutions → two points.' : diff === 0 ? 'Zero → one solution → one point (tangent).' : 'Negative → no real solutions → no intersection.'}`
       }
     }
   },
@@ -603,15 +632,29 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const a = randInt(1, 3)
-      const r1 = randInt(-4, 0)
-      const r2 = randInt(1, 5)
-      const numSolutions = 2
-      const { options, correctIndex } = makeOptions(numSolutions, 2, 0)
+      const kind = randInt(0, 2)
+      let f: string, count: number, why: string
+      if (kind === 0) {
+        const r1 = randInt(-4, 0)
+        const r2 = randInt(1, 5)
+        f = `${a === 1 ? '' : a}${r1 === 0 ? 'x' : `(${xMinus(r1)})`}(${xMinus(r2)})`; count = 2
+        why = `Setting $y = 0$ gives $x = ${r1}$ or $x = ${r2}$: two different points.`
+      } else if (kind === 1) {
+        const r = randNonZero(-5, 5)
+        f = `${a === 1 ? '' : a}(${xMinus(r)})^2`; count = 1
+        why = `$y = 0$ only when $x = ${r}$ (a repeated root), so the graph touches the $x$-axis at exactly one point.`
+      } else {
+        const h = randNonZero(-4, 4)
+        const k = randInt(1, 6)
+        f = vertexForm(a, h, k); count = 0
+        why = `The minimum value is $${k} > 0$, so $y$ is never $0$ and the graph never meets the $x$-axis.`
+      }
+      const { options, correctIndex } = makeStringOptions(String(count), ['0', '1', '2', '3'])
       return {
         id: this.id, category: this.category,
-        question: `The quadratic $y = ${a}(x - ${r1})(x - ${r2})$ intersects the $x$-axis at how many points?`,
+        question: `The graph of $y = ${f}$ intersects the $x$-axis at how many points?`,
         options, correctIndex,
-        explanation: `Setting $y = 0$: $(x - ${r1})(x - ${r2}) = 0$ gives $x = ${r1}$ and $x = ${r2}$. That's $2$ points.`
+        explanation: why
       }
     }
   },
@@ -627,9 +670,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(x2)
       return {
         id: this.id, category: this.category,
-        question: `$y = ${a}x^2$ and $y = ${b}x$ intersect at the origin and one other point. What is the non-zero $x$-value?`,
+        question: `$y = ${poly([a, 'x^2'])}$ and $y = ${poly([b, 'x'])}$ intersect at the origin and one other point. What is the non-zero $x$-value?`,
         options, correctIndex,
-        explanation: `Set $${a}x^2 = ${b}x$ → $${a}x^2 - ${b}x = 0$ → $x(${a}x - ${b}) = 0$ → $x = 0$ or $x = ${x2}$.`
+        explanation: `Set $${poly([a, 'x^2'])} = ${poly([b, 'x'])}$ → $${poly([a, 'x^2'], [-b, 'x'])} = 0$ → $x(${poly([a, 'x'], [-b, ''])}) = 0$ → $x = 0$ or $x = ${x2}$.`
       }
     }
   },
@@ -680,7 +723,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(xMax, 2, 1)
       return {
         id: this.id, category: this.category,
-        question: `Revenue is $R(x) = ${p}x - ${c}x^2$. How many units maximize revenue?`,
+        question: `Revenue is $R(x) = ${poly([p, 'x'], [-c, 'x^2'])}$. How many units maximize revenue?`,
         options, correctIndex,
         explanation: `The maximum is at the vertex: $x = \\frac{${p}}{2 \\cdot ${c}} = ${xMax}$ units.`
       }
@@ -717,9 +760,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(h, 20)
       return {
         id: this.id, category: this.category,
-        question: `A ball follows $h(t) = -16t^2 + ${v0}t + ${h0}$. What is the height at $t = ${t}$?`,
+        question: `A ball follows $h(t) = ${poly([-16, 't^2'], [v0, 't'], [h0, ''])}$. What is the height at $t = ${t}$?`,
         options, correctIndex,
-        explanation: `$h(${t}) = -16(${t})^2 + ${v0}(${t}) + ${h0} = ${-16 * t * t} + ${v0 * t} + ${h0} = ${h}$.`
+        explanation: `$h(${t}) = -16(${t})^2 + ${v0}(${t})${h0 === 0 ? '' : ` + ${h0}`} = ${-16 * t * t} + ${v0 * t}${h0 === 0 ? '' : ` + ${h0}`} = ${h}$.`
       }
     }
   },
@@ -749,12 +792,13 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const r1 = randInt(-8, 8)
-      const r2 = randInt(-8, 8)
+      let r2 = randInt(-8, 8)
+      while (r2 === r1) r2 = randInt(-8, 8)
       const sum = r1 + r2
       const { options, correctIndex } = makeOptions(sum)
       return {
         id: this.id, category: this.category,
-        question: `If $x^2 ${sign(-(r1 + r2))}x + ${r1 * r2} = 0$, what is the sum of the roots?`,
+        question: `If $${poly([1, 'x^2'], [-(r1 + r2), 'x'], [r1 * r2, ''])} = 0$, what is the sum of the roots?`,
         options, correctIndex,
         explanation: `By Vieta's formulas, sum of roots $= -b/a = ${sum}$. (Or: roots are $${r1}$ and $${r2}$, sum $= ${sum}$).`
       }
@@ -772,9 +816,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(yIntercept, 10)
       return {
         id: this.id, category: this.category,
-        question: `What is the $y$-intercept of $f(x) = ${a}(x - ${h})^2 + ${k}$?`,
+        question: `What is the $y$-intercept of $f(x) = ${vertexForm(a, h, k)}$?`,
         options, correctIndex,
-        explanation: `$f(0) = ${a}(0 - ${h})^2 + ${k} = ${a}(${h * h}) + ${k} = ${a * h * h} + ${k} = ${yIntercept}$.`
+        explanation: `$f(0) = ${a === 1 ? '' : a}(${-h})^2${k === 0 ? '' : ` ${sign(k)}`} = ${a === 1 ? '' : `${a} \\cdot `}${h * h}${k === 0 ? '' : ` ${sign(k)}`} = ${yIntercept}$.`
       }
     }
   },
@@ -790,7 +834,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `Does $f(x) = ${a}x^2 + 5x - 3$ have a minimum or maximum value?`,
+        question: `Does $f(x) = ${poly([a, 'x^2'], [5, 'x'], [-3, ''])}$ have a minimum or maximum value?`,
         options, correctIndex,
         explanation: `Since $a = ${a}$ is ${a > 0 ? 'positive (opens up)' : 'negative (opens down)'}, the function has a ${correct.toLowerCase()}.`
       }
@@ -804,7 +848,7 @@ const questionPool: QuestionTemplate[] = [
       const k = [2, 3, 5, 6, 7, 8, 10][randInt(0, 6)] // never a perfect square
       const correct = `$x = \\pm\\sqrt{${k}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x = ${k}$`, `$x = \\pm ${k}$`, `$x = \\sqrt{${k}}$`
+        `$x = \\pm\\frac{${k}}{2}$`, `$x = \\pm ${k}$`, `$x = \\sqrt{${k}}$`
       ])
       return {
         id: this.id, category: this.category,
@@ -828,7 +872,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(posRoot)
       return {
         id: this.id, category: this.category,
-        question: `What is the positive solution of $x^2 ${sign(b)}x ${sign(c)} = 0$?`,
+        question: `What is the positive solution of $${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$?`,
         options, correctIndex,
         explanation: `Factor: $(x + ${r1})(x - ${r2}) = 0$ → $x = -${r1}$ or $x = ${r2}$. Positive solution: $${r2}$.`
       }

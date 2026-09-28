@@ -51,6 +51,26 @@ function makeStringOptions(correct: string, others: string[]): { options: string
   return { options: all, correctIndex: all.indexOf(correct) }
 }
 
+/** Decimal without float noise: 1 + 14/100 prints "1.14", not "1.1400000000000001". */
+function num(n: number): string {
+  return String(parseFloat(n.toFixed(10)))
+}
+/**
+ * a * (1 + pct/100)^t rounded to the nearest whole number, computed EXACTLY:
+ * the value is a*(100+pct)^t / 100^t, so integer arithmetic gives the true
+ * rounding (float pow would round some .5 ties the wrong way). pct may be
+ * negative for decay. Every numerator here stays far below 2^53.
+ */
+function roundGrowth(a: number, pct: number, t: number): number {
+  const N = a * Math.pow(100 + pct, t)
+  const D = Math.pow(100, t)
+  return Math.floor((2 * N + D) / (2 * D))
+}
+/** Thousands separators for prose (never inside $...$, where a comma renders with extra space). */
+function withCommas(n: number): string {
+  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
 const questionPool: QuestionTemplate[] = [
   // ===== EXPONENTIAL GROWTH (7 questions) =====
   {
@@ -62,13 +82,13 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(5, 20)
       const t = randInt(1, 3)
       const base = 1 + r / 100
-      const ans = Math.round(a * Math.pow(base, t))
+      const ans = roundGrowth(a, r, t)
       const { options, correctIndex } = makeOptions(ans, Math.max(50, Math.round(ans * 0.1)), 1)
       return {
         id: this.id, category: this.category,
-        question: `A population of $${a}$ grows $${r}\\%$ per year. What is the population after $${t}$ year${t > 1 ? 's' : ''}?`,
+        question: `A population of $${a}$ grows $${r}\\%$ per year. What is the population after $${t}$ year${t > 1 ? 's' : ''}, rounded to the nearest whole number?`,
         options, correctIndex,
-        explanation: `$${a}(${base})^{${t}} \\approx ${ans}$.`
+        explanation: `Each year multiplies the population by $1 + ${num(r / 100)} = ${num(base)}$: $${a}(${num(base)})^{${t}} \\approx ${ans}$.`
       }
     }
   },
@@ -80,17 +100,17 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(100, 1000)
       const r = randInt(5, 25)
       const base = 1 + r / 100
-      const correct = `$y = ${a}(${base})^t$`
+      const correct = `$y = ${a}(${num(base)})^t$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$y = ${a} + ${r}t$`,
         `$y = ${a}(${r})^t$`,
-        `$y = ${a}(${(100 - r) / 100})^t$`
+        `$y = ${a}(${num((100 - r) / 100)})^t$`
       ])
       return {
         id: this.id, category: this.category,
         question: `Write an equation for a quantity starting at $${a}$ growing $${r}\\%$ per year.`,
         options, correctIndex,
-        explanation: `Growth: $y = a(1 + r)^t = ${a}(1 + ${r / 100})^t = ${a}(${base})^t$.`
+        explanation: `Growth: $y = a(1 + r)^t = ${a}(1 + ${num(r / 100)})^t = ${a}(${num(base)})^t$.`
       }
     }
   },
@@ -140,15 +160,15 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1000, 5000)
       const r = randInt(3, 12)
       const base = 1 + r / 100
-      const correct = `$${base}$`
+      const correct = `$${num(base)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${r}$`, `$${r / 100}$`, `$${(100 - r) / 100}$`
+        `$${r}$`, `$${num(r / 100)}$`, `$${num((100 - r) / 100)}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `In $y = ${a}(${base})^t$, what is the growth factor?`,
+        question: `In $y = ${a}(${num(base)})^t$, what is the growth factor?`,
         options, correctIndex,
-        explanation: `The growth factor is the base: $${base}$. The growth rate is ${r}%.`
+        explanation: `The growth factor is the base, $${num(base)}$. (The growth rate is $${r}\\%$, because $${num(base)} = 1 + ${num(r / 100)}$.)`
       }
     }
   },
@@ -162,15 +182,16 @@ const questionPool: QuestionTemplate[] = [
       const base = 1 + r / 100
       const t1 = randInt(2, 4)
       const t2 = t1 + 1
-      const v1 = Math.round(a * Math.pow(base, t1))
-      const v2 = Math.round(a * Math.pow(base, t2))
-      const diff = v2 - v1
-      const { options, correctIndex } = makeOptions(diff, Math.round(diff * 0.2))
+      // f(t2) - f(t1) = a*b^t1*(b - 1) = a*(100+r)^t1*r / 100^(t1+1): compute exactly, round once
+      const N = a * Math.pow(100 + r, t1) * r
+      const D = Math.pow(100, t1 + 1)
+      const diff = Math.floor((2 * N + D) / (2 * D))
+      const { options, correctIndex } = makeOptions(diff, Math.max(2, Math.round(diff * 0.2)))
       return {
         id: this.id, category: this.category,
-        question: `$f(t) = ${a}(${base})^t$. How much does $f$ increase from $t = ${t1}$ to $t = ${t2}$?`,
+        question: `$f(t) = ${a}(${num(base)})^t$. By how much does $f$ increase from $t = ${t1}$ to $t = ${t2}$, rounded to the nearest whole number?`,
         options, correctIndex,
-        explanation: `$f(${t1}) \\approx ${v1}$, $f(${t2}) \\approx ${v2}$. Increase = $${v2} - ${v1} = ${diff}$.`
+        explanation: `$f(${t2}) - f(${t1}) = ${a}(${num(base)})^{${t1}}(${num(base)} - 1) = ${a}(${num(base)})^{${t1}}(${num(r / 100)}) \\approx ${diff}$. (Round only at the end: rounding $f(${t1})$ and $f(${t2})$ first can be off by $1$.)`
       }
     }
   },
@@ -202,13 +223,13 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(10, 30)
       const t = randInt(1, 3)
       const base = (100 - r) / 100
-      const ans = Math.round(a * Math.pow(base, t))
+      const ans = roundGrowth(a, -r, t)
       const { options, correctIndex } = makeOptions(ans, Math.max(100, Math.round(ans * 0.12)))
       return {
         id: this.id, category: this.category,
-        question: `A car worth $\\$${a.toLocaleString()}$ depreciates $${r}\\%$ per year. Value after $${t}$ year${t > 1 ? 's' : ''}?`,
+        question: `A car worth \\$${withCommas(a)} depreciates $${r}\\%$ per year. What is its value after $${t}$ year${t > 1 ? 's' : ''}, rounded to the nearest dollar?`,
         options, correctIndex,
-        explanation: `$${a}(${base})^{${t}} \\approx ${ans}$.`
+        explanation: `Each year keeps $1 - ${num(r / 100)} = ${num(base)}$ of the value: $${a}(${num(base)})^{${t}} \\approx ${ans}$ dollars.`
       }
     }
   },
@@ -239,15 +260,15 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const r = randInt(10, 40)
       const base = (100 - r) / 100
-      const correct = `$${base}$`
+      const correct = `$${num(base)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${(100 + r) / 100}$`, `$${r / 100}$`, `$-${r / 100}$`
+        `$${num((100 + r) / 100)}$`, `$${num(r / 100)}$`, `$-${num(r / 100)}$`
       ])
       return {
         id: this.id, category: this.category,
         question: `If a quantity decreases by $${r}\\%$ each period, what is the decay factor?`,
         options, correctIndex,
-        explanation: `Decay factor $= 1 - ${r / 100} = ${base}$.`
+        explanation: `Decay factor $= 1 - ${num(r / 100)} = ${num(base)}$.`
       }
     }
   },
@@ -284,9 +305,9 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(500, 2000)
       const r = randInt(5, 20)
       const base = (100 - r) / 100
-      const correct = `$y = ${a}(${base})^t$`
+      const correct = `$y = ${a}(${num(base)})^t$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$y = ${a}(${(100 + r) / 100})^t$`,
+        `$y = ${a}(${num((100 + r) / 100)})^t$`,
         `$y = ${a} - ${r}t$`,
         `$y = ${a}(${r})^{-t}$`
       ])
@@ -294,7 +315,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Write an equation: initial value $${a}$, decaying $${r}\\%$ per year.`,
         options, correctIndex,
-        explanation: `$y = ${a}(1 - ${r / 100})^t = ${a}(${base})^t$.`
+        explanation: `$y = ${a}(1 - ${num(r / 100)})^t = ${a}(${num(base)})^t$.`
       }
     }
   },
@@ -305,9 +326,9 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = 'The function approaches $0$ but never reaches it'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'The function reaches $0$ after enough time',
-        'The function goes negative eventually',
-        'The function decreases linearly'
+        'The function reaches $0$ after a finite amount of time',
+        'The function eventually becomes negative',
+        'The function decreases at a constant rate'
       ])
       return {
         id: this.id, category: this.category,
@@ -327,13 +348,13 @@ const questionPool: QuestionTemplate[] = [
       const P = randInt(5, 20) * 100
       const r = randInt(3, 8)
       const t = randInt(2, 5)
-      const A = Math.round(P * Math.pow(1 + r / 100, t))
+      const A = roundGrowth(P, r, t)
       const { options, correctIndex } = makeOptions(A, Math.round(A * 0.08))
       return {
         id: this.id, category: this.category,
-        question: `$\\$${P}$ invested at $${r}\\%$ annual interest compounded yearly for $${t}$ years. Final amount?`,
+        question: `$\\$${P}$ invested at $${r}\\%$ annual interest compounded yearly for $${t}$ years. What is the final amount, rounded to the nearest dollar?`,
         options, correctIndex,
-        explanation: `$A = ${P}(1 + ${r / 100})^{${t}} = ${P}(${1 + r / 100})^{${t}} \\approx \\$${A}$.`
+        explanation: `$A = ${P}(1 + ${num(r / 100)})^{${t}} = ${P}(${num(1 + r / 100)})^{${t}} \\approx \\$${A}$.`
       }
     }
   },
@@ -356,9 +377,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `$\\$${P}$ at $${r}\\%$ compounded quarterly for $1$ year. What is $A$?`,
+        question: `$\\$${P}$ at $${r}\\%$ compounded quarterly for $1$ year. What is $A$, rounded to the nearest cent?`,
         options, correctIndex,
-        explanation: `$A = ${P}\\left(1 + \\frac{${r / 100}}{4}\\right)^{4} \\approx \\$${A.toFixed(2)}$.`
+        explanation: `$A = ${P}\\left(1 + \\frac{${num(r / 100)}}{4}\\right)^{4} \\approx \\$${A.toFixed(2)}$.`
       }
     }
   },
@@ -370,8 +391,8 @@ const questionPool: QuestionTemplate[] = [
       const correct = '$A = P\\left(1 + \\frac{r}{n}\\right)^{nt}$'
       const { options, correctIndex } = makeStringOptions(correct, [
         '$A = P(1 + rt)$',
-        '$A = P \\cdot r^t$',
-        '$A = P + Prt$'
+        '$A = P\\left(1 + \\frac{r}{n}\\right)^{t}$',
+        '$A = P\\left(1 + \\frac{n}{r}\\right)^{nt}$'
       ])
       return {
         id: this.id, category: this.category,
@@ -389,14 +410,14 @@ const questionPool: QuestionTemplate[] = [
       const P = randInt(5, 15) * 100
       const r = randInt(4, 10)
       const t = randInt(2, 5)
-      const A = Math.round(P * Math.pow(1 + r / 100, t))
+      const A = roundGrowth(P, r, t)
       const interest = A - P
       const { options, correctIndex } = makeOptions(interest, Math.round(interest * 0.15))
       return {
         id: this.id, category: this.category,
-        question: `$\\$${P}$ at $${r}\\%$ compounded annually for $${t}$ years. How much interest is earned?`,
+        question: `$\\$${P}$ at $${r}\\%$ compounded annually for $${t}$ years. How much interest is earned, rounded to the nearest dollar?`,
         options, correctIndex,
-        explanation: `$A = ${P}(${1 + r / 100})^{${t}} \\approx \\$${A}$. Interest = $${A} - ${P} = \\$${interest}$.`
+        explanation: `$A = ${P}(${num(1 + r / 100)})^{${t}} \\approx \\$${A}$. Interest = $${A} - ${P} = \\$${interest}$.`
       }
     }
   },
@@ -430,7 +451,7 @@ const questionPool: QuestionTemplate[] = [
       const r = 6
       const tSimple = 5
       const simple = P + P * (r / 100) * tSimple
-      const compound = Math.round(P * Math.pow(1 + r / 100, tSimple))
+      const compound = roundGrowth(P, r, tSimple)
       const diff = compound - simple
       const correct = `$\\$${diff}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -438,9 +459,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `$\\$${P}$ at $${r}\\%$ for $${tSimple}$ yrs. How much more does compound give vs. simple interest?`,
+        question: `$\\$${P}$ at $${r}\\%$ for $${tSimple}$ yrs. Rounded to the nearest dollar, how much more does annually compounded interest earn than simple interest?`,
         options, correctIndex,
-        explanation: `Simple: $${P} + ${P}(${r / 100})(${tSimple}) = \\$${simple}$. Compound: $\\approx \\$${compound}$. Difference: $\\$${diff}$.`
+        explanation: `Simple: $${P} + ${P}(${num(r / 100)})(${tSimple}) = \\$${simple}$. Compound: $\\approx \\$${compound}$. Difference: $\\$${diff}$.`
       }
     }
   },
@@ -451,7 +472,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Exponentials',
     difficulty: 'easy',
     generate() {
-      const a = randInt(1, 5)
+      const a = randInt(2, 5)
       const correct = `$(0, ${a})$`
       let b = [2, 3, 4, 5][randInt(0, 3)]
       while (b === a) b = [2, 3, 4, 5][randInt(0, 3)]
@@ -564,11 +585,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Exponentials',
     difficulty: 'medium',
     generate() {
-      const correct = '$(0, \\infty)$ — all positive reals'
+      const correct = '$(0, \\infty)$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'All real numbers',
+        '$(-\\infty, \\infty)$',
         '$[0, \\infty)$',
-        '$(-\\infty, 0)$'
+        '$(1, \\infty)$'
       ])
       return {
         id: this.id, category: this.category,
@@ -716,7 +737,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = 'Exponential'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Linear', 'Quadratic', 'Constant'
+        'Linear', 'Quadratic', 'Square root'
       ])
       return {
         id: this.id, category: this.category,
@@ -731,11 +752,11 @@ const questionPool: QuestionTemplate[] = [
     category: 'Applications & Review',
     difficulty: 'medium',
     generate() {
-      const correct = 'Exponential — it changes by a constant ratio'
+      const correct = 'Exponential — it has a constant ratio'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'Linear — it changes by a constant amount',
+        'Linear — it has a constant difference',
         'Quadratic — it has a squared term',
-        'Neither — it cannot be determined'
+        'Neither — no pattern can be found'
       ])
       return {
         id: this.id, category: this.category,
@@ -752,17 +773,17 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(100, 400)
       const b = [2, 3, 4][randInt(0, 2)]
-      const _x = 0
-      const _f0 = a
-      const correct = String(a)
+      const correct = 'The value of $f(x)$ when $x = 0$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        String(a * b), String(b), '0'
+        'The value of $f(x)$ when $x = 1$',
+        'The factor $f(x)$ is multiplied by each step',
+        'The amount $f(x)$ increases each step'
       ])
       return {
         id: this.id, category: this.category,
         question: `In $f(x) = ${a} \\cdot ${b}^x$, what does $${a}$ represent?`,
         options, correctIndex,
-        explanation: `$${a}$ is the initial value — $f(0) = ${a} \\cdot ${b}^0 = ${a}$.`
+        explanation: `$${a}$ is the initial value: $f(0) = ${a} \\cdot ${b}^0 = ${a}$. (The base $${b}$ is the factor applied each time $x$ increases by $1$.)`
       }
     }
   },
@@ -772,15 +793,17 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const P = randInt(1, 5) * 1000
-      const r = [5, 6, 8, 10][randInt(0, 3)]
-      // Rule of 72
-      const approxDouble = Math.round(72 / r)
-      const { options, correctIndex } = makeOptions(approxDouble, 4, 1)
+      const r = [6, 8, 9, 12][randInt(0, 3)] // 72 / r is a whole number
+      const years = 72 / r
+      // distractors at least 3 years away, so "about" never makes a neighbor defensible
+      const d = new Set<number>()
+      while (d.size < 3) { const v = years + randInt(-12, 12); if (v >= 1 && Math.abs(v - years) >= 3) d.add(v) }
+      const all = shuffle([years, ...d])
       return {
         id: this.id, category: this.category,
-        question: `Using the Rule of 72, about how many years to double $\\$${P}$ at $${r}\\%$ annual compound interest?`,
-        options, correctIndex,
-        explanation: `Rule of 72: $72/${r} \\approx ${approxDouble}$ years.`
+        question: `Using the Rule of 72, about how many years does it take to double \\$${withCommas(P)} at $${r}\\%$ annual compound interest?`,
+        options: all.map(String), correctIndex: all.indexOf(years),
+        explanation: `Rule of 72: $72 / ${r} = ${years}$ years.`
       }
     }
   },
@@ -792,13 +815,13 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(200, 600)
       const r = randInt(5, 15)
       const base = 1 + r / 100
-      const ans = Math.round(a * base)
+      const ans = roundGrowth(a, r, 1)
       const { options, correctIndex } = makeOptions(ans, Math.round(ans * 0.08))
       return {
         id: this.id, category: this.category,
-        question: `$f(t) = ${a}(${base})^t$ models a population. What is the population at $t = 1$?`,
+        question: `$f(t) = ${a}(${num(base)})^t$ models a population. What is the population at $t = 1$, rounded to the nearest whole number?`,
         options, correctIndex,
-        explanation: `$f(1) = ${a}(${base}) = ${ans}$.`
+        explanation: `$f(1) = ${a}(${num(base)}) = ${num(a * base)} \\approx ${ans}$.`
       }
     }
   },
@@ -807,17 +830,17 @@ const questionPool: QuestionTemplate[] = [
     category: 'Applications & Review',
     difficulty: 'easy',
     generate() {
-      const correct = 'Linear grows by addition; exponential grows by multiplication'
+      const correct = 'Linear grows by adding; exponential grows by multiplying'
       const { options, correctIndex } = makeStringOptions(correct, [
-        'They are the same thing',
-        'Linear is always faster than exponential',
-        'Exponential always starts higher than linear'
+        'Linear grows by multiplying; exponential grows by adding',
+        'Linear always grows faster than exponential does',
+        'Exponential always starts at a higher value than linear'
       ])
       return {
         id: this.id, category: this.category,
         question: 'What is the key difference between linear and exponential growth?',
         options, correctIndex,
-        explanation: 'Linear: constant additive change. Exponential: constant multiplicative change (ratio).'
+        explanation: 'Linear: the same amount is added each step. Exponential: each step multiplies by the same factor (ratio).'
       }
     }
   },
@@ -830,13 +853,13 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(10, 25)
       const base = (100 - r) / 100
       const t = randInt(2, 4)
-      const ans = Math.round(a * Math.pow(base, t))
+      const ans = roundGrowth(a, -r, t)
       const { options, correctIndex } = makeOptions(ans, Math.round(ans * 0.15))
       return {
         id: this.id, category: this.category,
-        question: `A medicine's concentration is $${a}$ mg, decreasing $${r}\\%$ per hour. Amount after $${t}$ hours?`,
+        question: `A medicine's concentration is $${a}$ mg, decreasing $${r}\\%$ per hour. How many milligrams remain after $${t}$ hours, rounded to the nearest milligram?`,
         options, correctIndex,
-        explanation: `$${a}(${base})^{${t}} \\approx ${ans}$ mg.`
+        explanation: `Each hour keeps $1 - ${num(r / 100)} = ${num(base)}$ of the medicine: $${a}(${num(base)})^{${t}} \\approx ${ans}$ mg.`
       }
     }
   },

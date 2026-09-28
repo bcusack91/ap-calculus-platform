@@ -86,6 +86,27 @@ function makeFractionOptions(num: number, den: number): { options: string[]; cor
   return { options: shuffled, correctIndex: shuffled.indexOf(correct) }
 }
 
+// --- Formatting helpers (no "1x", "+ -4", "+ 0", "5 - -3" in generated math) ---
+/** Leading term with coefficient folding: "3x", "x", "-x". */
+function lead(c: number, v: string): string {
+  return c === 1 ? v : c === -1 ? `-${v}` : `${c}${v}`
+}
+/** A following term: "+ 3y", "- y", "+ 4", "- 4"; zero prints nothing. */
+function pmTerm(c: number, v = ''): string {
+  if (c === 0) return ''
+  const abs = Math.abs(c)
+  return `${c < 0 ? '-' : '+'} ${abs === 1 && v ? '' : abs}${v}`
+}
+/** "mx + b" with folding. */
+function line(m: number, b: number): string {
+  return b === 0 ? lead(m, 'x') : `${lead(m, 'x')} ${pmTerm(b)}`
+}
+/** Worked subtraction "a - b" with a negative b parenthesized. */
+function minus(a: number, b: number): string {
+  return b === 0 ? `${a}` : `${a} - ${b < 0 ? `(${b})` : b}`
+}
+const SOLUTION_COUNTS = ['No solution', 'Exactly one solution', 'Exactly two solutions', 'Infinitely many solutions']
+
 // ================== QUESTION TEMPLATES ==================
 
 const questionPool: QuestionTemplate[] = [
@@ -112,7 +133,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'One-Step Equations',
     difficulty: 'easy',
     generate() {
-      const a = randNonZero(-9, 9)
+      let a = randNonZero(-9, 9)
+      while (Math.abs(a) === 1) a = randNonZero(-9, 9)
       const x = randInt(-10, 10)
       const b = a * x
       const { options, correctIndex } = makeOptions(x)
@@ -120,7 +142,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Solve for $x$: $${a}x = ${b}$`,
         options, correctIndex,
-        explanation: `Divide both sides by ${a}: $x = \\frac{${b}}{${a}} = ${x}$`
+        explanation: `Divide both sides by $${a}$: $x = \\frac{${b}}{${a}} = ${x}$`
       }
     }
   },
@@ -165,16 +187,20 @@ const questionPool: QuestionTemplate[] = [
     category: 'Two-Step Equations',
     difficulty: 'medium',
     generate() {
-      const a = randNonZero(2, 7)
-      const b = randNonZero(-12, 12)
-      const x = randInt(-8, 8)
-      const c = a * x - b
-      const { options, correctIndex } = makeOptions(x)
+      // Fractional coefficient: (n/d)x - b = c, with x a multiple of d so every step stays whole
+      const d = randInt(2, 5)
+      let n = randInt(1, d + 2)
+      while (gcd(n, d) !== 1) n = randInt(1, d + 2)
+      const b = randInt(1, 12)
+      const x = d * randNonZero(-6, 6)
+      const c = (n * x) / d - b
+      const { options, correctIndex } = makeOptions(x, 3)
+      const coefTex = `\\frac{${n}}{${d}}`
       return {
         id: this.id, category: this.category,
-        question: `Solve for $x$: $${a}x ${b < 0 ? '+' : '-'} ${Math.abs(b)} = ${c}$`,
+        question: `Solve for $x$: $${coefTex}x - ${b} = ${c}$`,
         options, correctIndex,
-        explanation: `${b < 0 ? `Subtract ${-b} from` : `Add ${b} to`} both sides: $${a}x = ${c + b}$. Divide by ${a}: $x = ${x}$`
+        explanation: `Add $${b}$ to both sides: $${coefTex}x = ${c + b}$. Multiply both sides by $\\frac{${d}}{${n}}$: $x = ${c + b} \\cdot \\frac{${d}}{${n}} = ${x}$`
       }
     }
   },
@@ -259,30 +285,21 @@ const questionPool: QuestionTemplate[] = [
     category: 'Variables on Both Sides',
     difficulty: 'hard',
     generate() {
-      const a = randInt(3, 8)
-      const b = randInt(1, 12)
-      const c = randInt(1, a - 1) // ensure c < a so coefficient is positive
-      const d = randInt(1, 12)
-      // ax + b = cx + d => (a-c)x = d-b => x = (d-b)/(a-c)
+      // ax + b = cx + d with a fractional solution (d - b)/(a - c)
+      let a = 0, b = 0, c = 0, d = 0
+      do {
+        a = randInt(3, 8); b = randInt(1, 12); c = randInt(1, a - 1); d = randInt(1, 12)
+      } while (a - c < 2 || (d - b) % (a - c) === 0)
       const num = d - b
       const den = a - c
-      if (num % den === 0) {
-        const x = num / den
-        const { options, correctIndex } = makeOptions(x)
-        return {
-          id: this.id, category: this.category,
-          question: `Solve: $${a}x + ${b} = ${c}x + ${d}$`,
-          options, correctIndex,
-          explanation: `Subtract ${c}x: $${a - c}x + ${b} = ${d}$. Subtract ${b}: $${a - c}x = ${d - b}$. Divide by ${a - c}: $x = ${x}$`
-        }
-      }
       const g = gcd(num, den) || 1
       const { options, correctIndex } = makeFractionOptions(num, den)
+      const ans = num < 0 ? `-\\frac{${-num / g}}{${den / g}}` : `\\frac{${num / g}}{${den / g}}`
       return {
         id: this.id, category: this.category,
-        question: `Solve: $${a}x + ${b} = ${c}x + ${d}$`,
+        question: `Solve: $${a}x + ${b} = ${lead(c, 'x')} + ${d}$`,
         options, correctIndex,
-        explanation: `Subtract ${c}x: $${a - c}x + ${b} = ${d}$. Subtract ${b}: $${a - c}x = ${d - b}$. Divide by ${a - c}: $x = \\frac{${num / g}}{${den / g}}$`
+        explanation: `Subtract $${lead(c, 'x')}$ from both sides: $${a - c}x + ${b} = ${d}$. Subtract $${b}$: $${a - c}x = ${d - b}$. Divide by $${a - c}$: $x = ${ans}$`
       }
     }
   },
@@ -291,18 +308,18 @@ const questionPool: QuestionTemplate[] = [
     category: 'Variables on Both Sides',
     difficulty: 'medium',
     generate() {
+      // ax - b = d - cx: the x terms have opposite signs on the two sides
       const a = randInt(2, 6)
-      const b = randInt(1, 10)
+      const c = randInt(2, 5)
       const x = randInt(-5, 5)
-      const rhs = a * x + b
-      const c = randInt(1, a - 1 > 0 ? a - 1 : 2)
-      const d = rhs - c * x
+      const b = randInt(1, 10)
+      const rhs = a * x - b + c * x // right-side constant so that ax - b = rhs - cx
       const { options, correctIndex } = makeOptions(x)
       return {
         id: this.id, category: this.category,
-        question: `Solve: $${a}x + ${b} = ${c}x ${d < 0 ? '-' : '+'} ${Math.abs(d)}$`,
+        question: `Solve: $${a}x - ${b} = ${rhs} - ${c}x$`,
         options, correctIndex,
-        explanation: `Move ${c}x to left: $${a - c}x + ${b} = ${d}$. Subtract ${b}: $${a - c}x = ${d - b}$. Divide: $x = ${x}$`
+        explanation: `Add $${c}x$ to both sides: $${a + c}x - ${b} = ${rhs}$. Add $${b}$: $${a + c}x = ${rhs + b}$. Divide by $${a + c}$: $x = ${x}$`
       }
     }
   },
@@ -311,18 +328,18 @@ const questionPool: QuestionTemplate[] = [
     category: 'Variables on Both Sides',
     difficulty: 'hard',
     generate() {
-      const a = randInt(2, 5)
+      const a = randInt(3, 5)
       const b = randInt(1, 6)
       const x = randInt(1, 8)
       const ab = a * b
-      // a(x-b) = cVal + x where cVal = (a-1)x - ab
+      // a(x - b) = x + cVal where cVal = (a - 1)x - ab
       const cVal = (a - 1) * x - ab
       const { options, correctIndex } = makeOptions(x)
       return {
         id: this.id, category: this.category,
-        question: `Solve: $${a}(x - ${b}) = ${cVal} + x$`,
+        question: `Solve: $${a}(x - ${b}) = ${line(1, cVal)}$`,
         options, correctIndex,
-        explanation: `Distribute: $${a}x - ${ab} = ${cVal} + x$. Subtract $x$: $${a - 1}x - ${ab} = ${cVal}$. Add ${ab}: $${a - 1}x = ${cVal + ab}$. Divide: $x = ${x}$`
+        explanation: `Distribute: $${a}x - ${ab} = ${line(1, cVal)}$. Subtract $x$: $${a - 1}x - ${ab} = ${cVal}$. Add $${ab}$: $${a - 1}x = ${cVal + ab}$. Divide by $${a - 1}$: $x = ${x}$`
       }
     }
   },
@@ -333,17 +350,16 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const x = randInt(-5, 5)
-      const y = randInt(-5, 5)
-      const a1 = randNonZero(1, 4)
+      const y = randNonZero(-5, 5)
+      const a1 = randInt(2, 4)
       const b1 = randNonZero(-3, 3)
       const c1 = a1 * x + b1 * y
-      // second equation: just y = constant
       const { options, correctIndex } = makeOptions(x)
       return {
         id: this.id, category: this.category,
-        question: `Given the system: $${a1}x ${b1 < 0 ? '-' : '+'} ${Math.abs(b1)}y = ${c1}$ and $y = ${y}$, find $x$.`,
+        question: `Given the system $${a1}x ${pmTerm(b1, 'y')} = ${c1}$ and $y = ${y}$, find $x$.`,
         options, correctIndex,
-        explanation: `Substitute $y = ${y}$: $${a1}x ${b1 < 0 ? '-' : '+'} ${Math.abs(b1)}(${y}) = ${c1}$. So $${a1}x ${b1 * y < 0 ? '-' : '+'} ${Math.abs(b1 * y)} = ${c1}$, giving $${a1}x = ${c1 - b1 * y}$, so $x = ${x}$`
+        explanation: `Substitute $y = ${y}$: $${a1}x ${pmTerm(b1 * y)} = ${c1}$, so $${a1}x = ${c1 - b1 * y}$ and $x = ${x}$`
       }
     }
   },
@@ -352,20 +368,20 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Equations',
     difficulty: 'hard',
     generate() {
-      // Elimination: ax + by = c1, ax + dy = c2 => subtract
+      // Elimination: ax + b1y = c1, ax + b2y = c2 => subtract
       const x = randInt(-4, 4)
       const y = randInt(-4, 4)
-      const a = randNonZero(1, 3)
-      const b1 = randNonZero(1, 4)
+      const a = randInt(2, 3)
+      const b1 = randInt(1, 4)
       const b2 = randNonZero(-4, -1)
       const c1 = a * x + b1 * y
       const c2 = a * x + b2 * y
       const { options, correctIndex } = makeOptions(y)
       return {
         id: this.id, category: this.category,
-        question: `Solve the system by elimination. Find $y$:\n\n$${a}x + ${b1}y = ${c1}$\n\n$${a}x - ${-b2}y = ${c2}$`,
+        question: `Solve the system by elimination. Find $y$:\n\n$${a}x ${pmTerm(b1, 'y')} = ${c1}$\n\n$${a}x ${pmTerm(b2, 'y')} = ${c2}$`,
         options, correctIndex,
-        explanation: `Subtract the second equation from the first: $(${b1} - (${b2}))y = ${c1} - ${c2}$. So $${b1 - b2}y = ${c1 - c2}$, giving $y = ${y}$`
+        explanation: `Subtract the second equation from the first: $${b1 - b2}y = ${minus(c1, c2)} = ${c1 - c2}$, so $y = ${y}$`
       }
     }
   },
@@ -402,7 +418,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Solve the system for $x$:\n\n$x + y = ${c1}$\n\n$${a}x + y = ${c2}$`,
         options, correctIndex,
-        explanation: `Subtract first from second: $${a - 1}x = ${c2 - c1}$, so $x = ${x}$`
+        explanation: `Subtract the first equation from the second: $${lead(a - 1, 'x')} = ${c2 - c1}$, so $x = ${x}$`
       }
     }
   },
@@ -467,18 +483,20 @@ const questionPool: QuestionTemplate[] = [
     category: 'Modeling with Equations',
     difficulty: 'medium',
     generate() {
-      const originalPrice = randInt(40, 100)
-      const discountPct = randInt(10, 30)
-      const discount = Math.round(originalPrice * discountPct / 100)
+      // Price a multiple of $20 and a discount that is a multiple of 5%, so the sale price is a whole number of dollars
+      const originalPrice = 20 * randInt(2, 5)
+      const discountPct = 5 * randInt(2, 6)
+      const discount = (originalPrice * discountPct) / 100
       const salePrice = originalPrice - discount
       const correct = `$\\$${salePrice}$`
-      const options = shuffle([correct, `$\\$${salePrice + 5}$`, `$\\$${salePrice - 5}$`, `$\\$${salePrice + 10}$`])
+      const options = shuffle([correct, `$\\$${discount}$`, `$\\$${originalPrice - discountPct}$`, `$\\$${salePrice + 5}$`].filter((o, i, arr) => arr.indexOf(o) === i))
+      while (options.length < 4) options.push(`$\\$${salePrice - 5 * options.length}$`)
       return {
         id: this.id, category: this.category,
         question: `A shirt originally costs $\\$${originalPrice}$. It is on sale for ${discountPct}% off. What is the sale price?`,
         options,
         correctIndex: options.indexOf(correct),
-        explanation: `Discount = $${originalPrice} \\times ${discountPct / 100} = \\$${discount}$. Sale price = $${originalPrice} - ${discount} = \\$${salePrice}$`
+        explanation: `Discount $= ${originalPrice} \\times ${discountPct / 100} = \\$${discount}$. Sale price $= ${originalPrice} - ${discount} = \\$${salePrice}$`
       }
     }
   },
@@ -610,7 +628,7 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(1, 10)
       const c = b + randNonZero(1, 5) // different constant = no solution
       const correct = 'No solution'
-      const options = shuffle([correct, 'One solution', 'Infinitely many solutions', 'Two solutions'])
+      const options = shuffle([...SOLUTION_COUNTS])
       return {
         id: this.id, category: this.category,
         question: `How many solutions does this equation have? $${a}x + ${b} = ${a}x + ${c}$`,
@@ -628,13 +646,13 @@ const questionPool: QuestionTemplate[] = [
       const a = randNonZero(2, 5)
       const b = randInt(1, 10)
       const correct = 'Infinitely many solutions'
-      const options = shuffle([correct, 'No solution', 'One solution', 'Two solutions'])
+      const options = shuffle([...SOLUTION_COUNTS])
       return {
         id: this.id, category: this.category,
         question: `How many solutions does this equation have? $${a}(x + ${b}) = ${a}x + ${a * b}$`,
         options,
         correctIndex: options.indexOf(correct),
-        explanation: `Distribute: $${a}x + ${a * b} = ${a}x + ${a * b}$. This is always true! **Infinitely many solutions** (same line).`
+        explanation: `Distribute: $${a}x + ${a * b} = ${a}x + ${a * b}$. This is always true, so there are **infinitely many solutions**.`
       }
     }
   },
@@ -651,7 +669,7 @@ const questionPool: QuestionTemplate[] = [
       const options = shuffle([correct, `${b}`, `${-m}`, `${m + 1}`])
       return {
         id: this.id, category: this.category,
-        question: `What is the slope of the line $y = ${m}x ${bTerm}$?`,
+        question: `What is the slope of the line $y = ${line(m, b)}$?`,
         options,
         correctIndex: options.indexOf(correct),
         explanation: `In $y = mx + b$ form, the slope is $m = ${m}$ and the y-intercept is $b = ${b}$.`
@@ -668,7 +686,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(b)
       return {
         id: this.id, category: this.category,
-        question: `What is the y-intercept of the line $y = ${m}x + ${b}$?`,
+        question: `What is the y-intercept of the line $y = ${line(m, b)}$?`,
         options, correctIndex,
         explanation: `In $y = mx + b$ form, the y-intercept is $b = ${b}$ (the point $(0, ${b})$).`
       }
@@ -692,7 +710,7 @@ const questionPool: QuestionTemplate[] = [
           id: this.id, category: this.category,
           question: `Find the slope of the line through $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`,
           options, correctIndex,
-          explanation: `Slope $= \\frac{${y2} - ${y1}}{${x2} - ${x1}} = \\frac{${rise}}{${run}} = ${m}$`
+          explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}} = \\frac{${rise}}{${run}} = ${m}$`
         }
       }
       const g = gcd(rise, run) || 1
@@ -701,7 +719,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Find the slope of the line through $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`,
         options, correctIndex,
-        explanation: `Slope $= \\frac{${y2} - ${y1}}{${x2} - ${x1}} = \\frac{${rise}}{${run}}${Math.abs(g) > 1 ? ` = \\frac{${rise / g}}{${run / g}}` : ''}$`
+        explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}} = \\frac{${rise}}{${run}}${Math.abs(g) > 1 ? ` = \\frac{${rise / g}}{${run / g}}` : ''}$`
       }
     }
   },
@@ -844,7 +862,7 @@ const questionPool: QuestionTemplate[] = [
       const options = shuffle([correct, 'The starting value (y-intercept)', 'The x-intercept', 'The maximum value'])
       return {
         id: this.id, category: this.category,
-        question: `In the function $f(x) = ${m}x + ${b}$, what does the value ${m} represent?`,
+        question: `In the function $f(x) = ${line(m, b)}$, what does the value $${m}$ represent?`,
         options,
         correctIndex: options.indexOf(correct),
         explanation: `In $f(x) = mx + b$, the coefficient of $x$ (here ${m}) is the **slope** — the rate of change per unit increase in $x$.`
@@ -860,8 +878,8 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(1, 10)
       // Parallel lines: same slope, different intercept
       const c = b + randNonZero(1, 5)
-      const correct = 'No solution — the lines are parallel'
-      const options = shuffle([correct, 'Exactly one solution', 'Infinitely many solutions', 'Exactly two solutions'])
+      const correct = 'No solution'
+      const options = shuffle([...SOLUTION_COUNTS])
       return {
         id: this.id, category: this.category,
         question: `The system $y = ${a}x + ${b}$ and $y = ${a}x + ${c}$ has how many solutions?`,
@@ -882,13 +900,89 @@ const questionPool: QuestionTemplate[] = [
       const c = a + randNonZero(1, 3)
       const d = randInt(-5, 5)
       const correct = 'Exactly one solution'
-      const options = shuffle([correct, 'No solution', 'Infinitely many solutions', 'Cannot be determined'])
+      const options = shuffle([...SOLUTION_COUNTS])
       return {
         id: this.id, category: this.category,
-        question: `The system $y = ${a}x + ${b}$ and $y = ${c}x + ${d}$ has how many solutions?`,
+        question: `The system $y = ${line(a, b)}$ and $y = ${line(c, d)}$ has how many solutions?`,
         options,
         correctIndex: options.indexOf(correct),
         explanation: `The slopes are ${a} and ${c} (different), so the lines intersect at exactly one point → **one solution**.`
+      }
+    }
+  },
+  // ===== Additional easy items (Core Skills retakes draw only easy templates) =====
+  {
+    id: 'sle-q41',
+    category: 'Two-Step Equations',
+    difficulty: 'easy',
+    generate() {
+      const a = randInt(2, 9)
+      const b = randInt(1, 15)
+      const x = randInt(1, 9)
+      const c = a * x + b
+      const { options, correctIndex } = makeOptions(a * x, 3)
+      return {
+        id: this.id, category: this.category,
+        question: `If $${a}x + ${b} = ${c}$, what is the value of $${a}x$?`,
+        options, correctIndex,
+        explanation: `Subtract $${b}$ from both sides: $${a}x = ${c} - ${b} = ${a * x}$. (There is no need to find $x$ itself.)`
+      }
+    }
+  },
+  {
+    id: 'sle-q42',
+    category: 'Modeling with Equations',
+    difficulty: 'easy',
+    generate() {
+      const fee = 5 * randInt(3, 10)
+      const rate = randInt(4, 12)
+      const correct = `$${fee} + ${rate}n$`
+      const options = shuffle([correct, `$${fee}n + ${rate}$`, `$${fee + rate}n$`, `$${rate}(${fee} + n)$`])
+      return {
+        id: this.id, category: this.category,
+        question: `A gym charges a one-time fee of $\\$${fee}$ plus $\\$${rate}$ per class. Which expression gives the total cost, in dollars, of $n$ classes?`,
+        options,
+        correctIndex: options.indexOf(correct),
+        explanation: `The fee is paid once ($${fee}$) and $${rate}$ is paid for each of the $n$ classes ($${rate}n$), so the total is $${fee} + ${rate}n$.`
+      }
+    }
+  },
+  {
+    id: 'sle-q43',
+    category: 'Inequalities',
+    difficulty: 'easy',
+    generate() {
+      const a = randInt(2, 12)
+      const b = randInt(-5, 20)
+      const v = b - a
+      const correct = `$x < ${v}$`
+      const options = shuffle([correct, `$x > ${v}$`, `$x < ${b + a}$`, `$x > ${b + a}$`])
+      return {
+        id: this.id, category: this.category,
+        question: `Solve: $x + ${a} < ${b}$`,
+        options,
+        correctIndex: options.indexOf(correct),
+        explanation: `Subtract $${a}$ from both sides (subtracting does not flip the sign): $x < ${b} - ${a}$, so $x < ${v}$.`
+      }
+    }
+  },
+  {
+    id: 'sle-q44',
+    category: 'Review - Slope & Intercept',
+    difficulty: 'easy',
+    generate() {
+      let m = randNonZero(-6, 6)
+      while (Math.abs(m) === 1) m = randNonZero(-6, 6)
+      let b = randNonZero(-9, 9)
+      while (Math.abs(b) === Math.abs(m)) b = randNonZero(-9, 9)
+      const correct = `$y = ${line(m, b)}$`
+      const options = shuffle([correct, `$y = ${line(b, m)}$`, `$y = ${line(m, -b)}$`, `$y = ${line(-m, b)}$`])
+      return {
+        id: this.id, category: this.category,
+        question: `A line has slope $${m}$ and $y$-intercept $${b}$. Which is an equation of the line?`,
+        options,
+        correctIndex: options.indexOf(correct),
+        explanation: `Slope-intercept form is $y = mx + b$ with slope $m = ${m}$ and $y$-intercept $b = ${b}$: $y = ${line(m, b)}$.`
       }
     }
   },

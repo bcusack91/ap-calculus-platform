@@ -78,6 +78,32 @@ function quad(a: number, b: number, c: number): string {
   return s
 }
 
+/** A number shown as a substituted value: negatives get parentheses. */
+function p(n: number): string {
+  return n < 0 ? `(${n})` : `${n}`
+}
+/** coefficient times a parenthesized quantity: "3(x + 1)", "(x + 1)", "-(x + 1)". */
+function times(m: number, inner: string): string {
+  return m === 1 ? `(${inner})` : m === -1 ? `-(${inner})` : `${m}(${inner})`
+}
+/** "m(x) + b" with x substituted, e.g. "3(-2) + 5", "2 - 1"; zero constant dropped. */
+function subLin(m: number, x: number, b: number): string {
+  const head = m === 1 ? p(x) : m === -1 ? `-(${x})` : `${m}(${x})`
+  return b === 0 ? head : `${head} ${sign(b)}`
+}
+/** A running sum "a + b - c", dropping zero terms after the first. */
+function sumStr(...ns: number[]): string {
+  let s = `${ns[0]}`
+  for (const n of ns.slice(1)) if (n !== 0) s += ` ${sign(n)}`
+  return s
+}
+/** Inverse of f(x) = mx + b as TeX, with a positive denominator. */
+function inverseTex(m: number, b: number): string {
+  if (m === 1) return linear(1, -b)
+  if (m === -1) return linear(-1, b)
+  return m > 0 ? `\\frac{${linear(1, -b)}}{${m}}` : `\\frac{${linear(-1, b)}}{${-m}}`
+}
+
 const questionPool: QuestionTemplate[] = [
   // ===== FUNCTION NOTATION (5 questions) =====
   {
@@ -94,7 +120,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$, what is $f(${x})$?`,
         options, correctIndex,
-        explanation: `$f(${x}) = ${a}(${x}) ${sign(b)} = ${a * x} ${sign(b)} = ${ans}$.`
+        explanation: `$f(${x}) = ${subLin(a, x, b)} = ${sumStr(a * x, b)} = ${ans}$.`
       }
     }
   },
@@ -113,7 +139,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${quad(a, b, c)}$, find $f(${x})$.`,
         options, correctIndex,
-        explanation: `$f(${x}) = ${a}(${x})^2 ${sign(b)}(${x}) ${sign(c)} = ${a * x * x} ${sign(b * x)} ${sign(c)} = ${ans}$.`
+        explanation: `$f(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${b > 0 ? '+' : '-'} ${Math.abs(b) === 1 ? '' : Math.abs(b)}(${x})`}${c === 0 ? '' : ` ${sign(c)}`} = ${sumStr(a * x * x, b * x, c)} = ${ans}$.`
       }
     }
   },
@@ -161,7 +187,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Given $g(x) = ${quad(a, 0, b)}$, evaluate $g(${x})$.`,
         options, correctIndex,
-        explanation: `$g(${x}) = ${a}(${x})^2 ${sign(b)} = ${a * x * x} ${sign(b)} = ${ans}$.`
+        explanation: `$g(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${sign(b)}`} = ${sumStr(a * x * x, b)} = ${ans}$.`
       }
     }
   },
@@ -182,7 +208,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(m, b)}$, what is $f(${x2}) - f(${x1})$?`,
         options, correctIndex,
-        explanation: `$f(${x2}) = ${f2}$, $f(${x1}) = ${f1}$. Difference $= ${f2} - ${f1} = ${diff}$.`
+        explanation: `$f(${x2}) = ${f2}$, $f(${x1}) = ${f1}$. Difference $= ${f1 === 0 ? `${f2}` : `${f2} - ${p(f1)}`} = ${diff}$.`
       }
     }
   },
@@ -218,9 +244,9 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `What is the domain of $f(x) = \\sqrt{x - ${a}}$?`,
+        question: `What is the domain of $f(x) = \\sqrt{${linear(1, -a)}}$?`,
         options, correctIndex,
-        explanation: `The expression under the radical must be $\\geq 0$: $x - ${a} \\geq 0$ → $x \\geq ${a}$.`
+        explanation: `The expression under the radical must be $\\geq 0$: $${linear(1, -a)} \\geq 0$ → $x \\geq ${a}$.`
       }
     }
   },
@@ -248,16 +274,17 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const a = randInt(1, 6)
-      const b = randInt(1, 6)
+      let b = randInt(1, 6)
+      while (b === a) b = randInt(1, 6)
       const correct = `$x \\neq ${a}$ and $x \\neq -${b}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x \\neq ${a}$`, `$x \\neq -${b}$`, 'All real numbers'
+        `$x \\neq -${a}$ and $x \\neq ${b}$`, `$x \\neq ${a}$ and $x \\neq ${b}$`, 'All real numbers'
       ])
       return {
         id: this.id, category: this.category,
         question: `What is the domain of $f(x) = \\frac{x}{(x - ${a})(x + ${b})}$?`,
         options, correctIndex,
-        explanation: `Denominator is zero when $x = ${a}$ or $x = -${b}$. Exclude both.`
+        explanation: `The denominator is zero when $x = ${a}$ or $x = -${b}$, so both values are excluded.`
       }
     }
   },
@@ -268,13 +295,13 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const correct = 'All real numbers'
       const { options, correctIndex } = makeStringOptions(correct, [
-        '$x \\geq 0$', '$x \\neq 0$', '$x > 0$'
+        '$x \\geq 0$', 'All real numbers except $x = 0$', '$x > 0$'
       ])
       return {
         id: this.id, category: this.category,
-        question: `What is the domain of $f(x) = x^3 - ${randInt(1, 10)}x + ${randInt(1, 10)}$?`,
+        question: `What is the domain of $f(x) = x^3 - ${randInt(2, 10)}x + ${randInt(1, 10)}$?`,
         options, correctIndex,
-        explanation: `Polynomials are defined for all real numbers. Domain: all real numbers.`
+        explanation: `A polynomial is defined for every real number: there is no denominator and no square root. Domain: all real numbers.`
       }
     }
   },
@@ -286,19 +313,22 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const h = randInt(1, 8)
-      const dir = h > 0 ? 'right' : 'left'
-      const correct = `Shifts $f(x)$ ${dir} by $${Math.abs(h)}$ units`
-      const opp = h > 0 ? 'left' : 'right'
+      const right = randInt(0, 1) === 0
+      const dir = right ? 'right' : 'left'
+      const opp = right ? 'left' : 'right'
+      const correct = `Shifts $f(x)$ ${dir} by $${h}$ units`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `Shifts $f(x)$ ${opp} by $${Math.abs(h)}$ units`,
-        `Shifts $f(x)$ up by $${Math.abs(h)}$ units`,
-        `Shifts $f(x)$ down by $${Math.abs(h)}$ units`
+        `Shifts $f(x)$ ${opp} by $${h}$ units`,
+        `Shifts $f(x)$ up by $${h}$ units`,
+        `Shifts $f(x)$ down by $${h}$ units`
       ])
       return {
         id: this.id, category: this.category,
-        question: `How does $g(x) = f(x - ${h})$ relate to $f(x)$?`,
+        question: `How does $g(x) = f(x ${right ? '-' : '+'} ${h})$ relate to $f(x)$?`,
         options, correctIndex,
-        explanation: `$f(x - ${h})$ shifts the graph right by $${h}$ units.`
+        explanation: right
+          ? `Replacing $x$ with $x - ${h}$ shifts the graph right by $${h}$ units.`
+          : `Replacing $x$ with $x + ${h}$ shifts the graph left by $${h}$ units.`
       }
     }
   },
@@ -308,17 +338,20 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'easy',
     generate() {
       const k = randInt(1, 10)
-      const correct = `Shifts $f(x)$ up by $${k}$ units`
+      const up = randInt(0, 1) === 0
+      const correct = `Shifts $f(x)$ ${up ? 'up' : 'down'} by $${k}$ units`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `Shifts $f(x)$ down by $${k}$ units`,
+        `Shifts $f(x)$ ${up ? 'down' : 'up'} by $${k}$ units`,
         `Shifts $f(x)$ right by $${k}$ units`,
-        `Stretches $f(x)$ vertically by factor $${k}$`
+        `Shifts $f(x)$ left by $${k}$ units`
       ])
       return {
         id: this.id, category: this.category,
-        question: `What transformation does $g(x) = f(x) + ${k}$ apply to $f(x)$?`,
+        question: `What transformation does $g(x) = f(x) ${up ? '+' : '-'} ${k}$ apply to $f(x)$?`,
         options, correctIndex,
-        explanation: `Adding $${k}$ to $f(x)$ shifts the graph up by $${k}$ units.`
+        explanation: up
+          ? `Adding $${k}$ to every output shifts the graph up by $${k}$ units.`
+          : `Subtracting $${k}$ from every output shifts the graph down by $${k}$ units.`
       }
     }
   },
@@ -368,17 +401,23 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const h = randInt(1, 6)
       const k = randInt(1, 8)
-      const correct = `Right $${h}$, up $${k}$`
+      const right = randInt(0, 1) === 0
+      const up = randInt(0, 1) === 0
+      const H = right ? 'Right' : 'Left'
+      const Hx = right ? 'Left' : 'Right'
+      const V = up ? 'up' : 'down'
+      const Vx = up ? 'down' : 'up'
+      const correct = `${H} $${h}$, ${V} $${k}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `Left $${h}$, up $${k}$`,
-        `Right $${h}$, down $${k}$`,
-        `Left $${h}$, down $${k}$`
+        `${Hx} $${h}$, ${V} $${k}$`,
+        `${H} $${h}$, ${Vx} $${k}$`,
+        `${Hx} $${h}$, ${Vx} $${k}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `$g(x) = f(x - ${h}) + ${k}$ shifts $f(x)$ in which direction?`,
+        question: `$g(x) = f(x ${right ? '-' : '+'} ${h}) ${up ? '+' : '-'} ${k}$ shifts the graph of $f(x)$ in which directions?`,
         options, correctIndex,
-        explanation: `$x - ${h}$ → right $${h}$; $+ ${k}$ → up $${k}$.`
+        explanation: `$x ${right ? '-' : '+'} ${h}$ inside the function shifts ${right ? 'right' : 'left'} $${h}$; ${up ? 'adding' : 'subtracting'} $${k}$ outside shifts ${V} $${k}$.`
       }
     }
   },
@@ -401,7 +440,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$ and $g(x) = ${linear(c, d)}$, what is $f(g(${x}))$?`,
         options, correctIndex,
-        explanation: `$g(${x}) = ${c}(${x}) ${sign(d)} = ${gx}$. $f(${gx}) = ${a}(${gx}) ${sign(b)} = ${ans}$.`
+        explanation: `$g(${x}) = ${subLin(c, x, d)} = ${gx}$. $f(${gx}) = ${subLin(a, gx, b)} = ${ans}$.`
       }
     }
   },
@@ -420,7 +459,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$, what is $f(f(${x}))$?`,
         options, correctIndex,
-        explanation: `$f(${x}) = ${fx}$. $f(${fx}) = ${a}(${fx}) ${sign(b)} = ${ans}$.`
+        explanation: `$f(${x}) = ${fx}$. $f(${fx}) = ${subLin(a, fx, b)} = ${ans}$.`
       }
     }
   },
@@ -439,7 +478,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$ and $g(x) = x^2$, find $f(g(${x}))$.`,
         options, correctIndex,
-        explanation: `$g(${x}) = ${x}^2 = ${gx}$. $f(${gx}) = ${a}(${gx}) ${sign(b)} = ${ans}$.`
+        explanation: `$g(${x}) = ${x}^2 = ${gx}$. $f(${gx}) = ${subLin(a, gx, b)} = ${ans}$.`
       }
     }
   },
@@ -485,7 +524,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(m, b1)}$ and $g(x) = ${linear(n, b2)}$, express $f(g(x))$ in simplified form.`,
         options, correctIndex,
-        explanation: `$f(g(x)) = ${m}(${linear(n, b2)}) ${sign(b1)} = ${linear(compM, m * b2)} ${sign(b1)} = ${linear(compM, compB)}$.`
+        explanation: `$f(g(x)) = ${times(m, linear(n, b2))}${b1 === 0 ? '' : ` ${sign(b1)}`} = ${linear(compM, m * b2)}${b1 === 0 ? '' : ` ${sign(b1)}`} = ${linear(compM, compB)}$.`
       }
     }
   },
@@ -496,7 +535,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Inverses',
     difficulty: 'hard',
     generate() {
-      const m = randNonZero(-5, 5)
+      let m = randNonZero(-5, 5)
+      while (Math.abs(m) === 1) m = randNonZero(-5, 5)
       const b = randInt(-8, 8)
       // f(x) = mx + b → f⁻¹(x) = (x - b)/m
       const y = m * randInt(-3, 3) + b // make sure f⁻¹(y) is integer
@@ -506,7 +546,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(m, b)}$, what is $f^{-1}(${y})$?`,
         options, correctIndex,
-        explanation: `$f^{-1}(x) = \\frac{x ${sign(-b)}}{${m}}$. $f^{-1}(${y}) = \\frac{${y} ${sign(-b)}}{${m}} = \\frac{${y - b}}{${m}} = ${ans}$.`
+        explanation: `Solve $y = ${linear(m, b)}$ for $x$: $f^{-1}(x) = \\frac{${linear(1, -b)}}{${m}}$. So $f^{-1}(${y}) = \\frac{${sumStr(y, -b)}}{${m}}${b === 0 ? '' : ` = \\frac{${y - b}}{${m}}`} = ${ans}$.`
       }
     }
   },
@@ -515,19 +555,21 @@ const questionPool: QuestionTemplate[] = [
     category: 'Inverses',
     difficulty: 'hard',
     generate() {
-      const m = randNonZero(-5, 5)
+      // |m| >= 2 so the key never collapses to "(x - b)/1" and the distractors stay distinct
+      let m = randNonZero(-5, 5)
+      while (Math.abs(m) === 1) m = randNonZero(-5, 5)
       const b = randNonZero(-8, 8)
-      const correct = `$f^{-1}(x) = \\frac{x ${sign(-b)}}{${m}}$`
+      const correct = `$f^{-1}(x) = ${inverseTex(m, b)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$f^{-1}(x) = ${linear(m, -b)}$`,
-        `$f^{-1}(x) = \\frac{${m}}{x ${sign(-b)}}$`,
-        `$f^{-1}(x) = \\frac{x ${sign(b)}}{${m}}$`
+        `$f^{-1}(x) = \\frac{${m}}{${linear(1, -b)}}$`,
+        `$f^{-1}(x) = ${inverseTex(m, -b)}$`
       ])
       return {
         id: this.id, category: this.category,
         question: `Find the inverse of $f(x) = ${linear(m, b)}$.`,
         options, correctIndex,
-        explanation: `Swap $x$ and $y$: $x = ${m}y ${sign(b)}$ → $y = \\frac{x ${sign(-b)}}{${m}}$.`
+        explanation: `Swap $x$ and $y$: $x = ${coef(m)}y ${sign(b)}$. Then $${coef(m)}y = ${linear(1, -b)}$, so $y = ${inverseTex(m, b)}$.`
       }
     }
   },
@@ -610,15 +652,28 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graph Interpretation',
     difficulty: 'easy',
     generate() {
-      const r1 = randInt(-6, -1)
-      const r2 = randInt(1, 6)
-      const numZeros = 2
-      const { options, correctIndex } = makeOptions(numZeros)
+      const kind = randInt(0, 2)
+      let f: string, count: number, why: string
+      if (kind === 0) {
+        const r1 = randInt(-6, -1)
+        const r2 = randInt(1, 6)
+        f = `(x ${sign(-r1)})(x ${sign(-r2)})`; count = 2
+        why = `Setting $f(x) = 0$ gives $x = ${r1}$ or $x = ${r2}$: two different $x$-intercepts.`
+      } else if (kind === 1) {
+        const r = randNonZero(-6, 6)
+        f = `(x ${sign(-r)})^2`; count = 1
+        why = `$f(x) = 0$ only when $x = ${r}$, so there is one $x$-intercept (the graph touches the axis there).`
+      } else {
+        const k = randInt(1, 9)
+        f = `x^2 + ${k}`; count = 0
+        why = `$x^2 + ${k} \\geq ${k} > 0$ for every $x$, so the graph never meets the $x$-axis.`
+      }
+      const { options, correctIndex } = makeStringOptions(String(count), ['0', '1', '2', '3'])
       return {
         id: this.id, category: this.category,
-        question: `$f(x) = (x ${sign(-r1)})(x ${sign(-r2)})$ has how many $x$-intercepts?`,
+        question: `How many $x$-intercepts does the graph of $f(x) = ${f}$ have?`,
         options, correctIndex,
-        explanation: `Setting $f(x) = 0$: $x = ${r1}$ and $x = ${r2}$. That's $2$ $x$-intercepts.`
+        explanation: why
       }
     }
   },
@@ -651,11 +706,12 @@ const questionPool: QuestionTemplate[] = [
       const k = randInt(-5, 5)
       const min = k
       const { options, correctIndex } = makeOptions(min)
+      const inner = h === 0 ? 'x^2' : `(${linear(1, -h)})^2`
       return {
         id: this.id, category: this.category,
-        question: `What is the minimum value of $f(x) = ${a}(x - ${h})^2 + ${k}$?`,
+        question: `What is the minimum value of $f(x) = ${a === 1 ? '' : a}${inner}${k === 0 ? '' : ` ${sign(k)}`}$?`,
         options, correctIndex,
-        explanation: `Since $a > 0$, the minimum is at the vertex: $f(${h}) = ${k}$.`
+        explanation: `The squared term is never negative and equals $0$ at $x = ${h}$, so the minimum value is $f(${h}) = ${k}$.`
       }
     }
   },
@@ -699,16 +755,16 @@ const questionPool: QuestionTemplate[] = [
     category: 'Piecewise',
     difficulty: 'easy',
     generate() {
-      const c = randInt(1, 8)
+      const c = randInt(2, 8)
       const correct = `$x = ${c}$ or $x = ${-c}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x = ${c}$`, `$x = -${c}$`, `No solution`
+        `$x = ${c}$ only`, `$x = ${c * c}$ or $x = ${-c * c}$`, `No solution`
       ])
       return {
         id: this.id, category: this.category,
         question: `Solve $|x| = ${c}$.`,
         options, correctIndex,
-        explanation: `$|x| = ${c}$ means $x = ${c}$ or $x = -${c}$.`
+        explanation: `Both $${c}$ and $-${c}$ are $${c}$ units from $0$, so $x = ${c}$ or $x = -${c}$.`
       }
     }
   },
@@ -719,17 +775,20 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randNonZero(-5, 5)
       const b = randInt(-8, 8)
-      const c = randInt(1, 10)
-      // |ax + b| = c → ax + b = c or ax + b = -c
-      const _x1 = (c - b) / a
-      const _x2 = (-c - b) / a
-      const numSolns = 2
-      const { options, correctIndex } = makeOptions(numSolns)
+      const kind = randInt(0, 2)
+      const c = kind === 0 ? randInt(1, 10) : kind === 1 ? 0 : -randInt(1, 10)
+      const count = kind === 0 ? 2 : kind === 1 ? 1 : 0
+      const { options, correctIndex } = makeStringOptions(String(count), ['0', '1', '2', 'Infinitely many'])
+      const expr = linear(a, b)
       return {
         id: this.id, category: this.category,
-        question: `How many solutions does $|${linear(a, b)}| = ${c}$ have?`,
+        question: `How many solutions does $|${expr}| = ${c}$ have?`,
         options, correctIndex,
-        explanation: `Since $${c} > 0$, there are two cases: $${linear(a, b)} = ${c}$ and $${linear(a, b)} = -${c}$. Two solutions.`
+        explanation: kind === 0
+          ? `Since $${c} > 0$, there are two cases, $${expr} = ${c}$ and $${expr} = -${c}$, each with one solution: two solutions.`
+          : kind === 1
+            ? `An absolute value equals $0$ only when the inside is $0$: $${expr} = 0$ has exactly one solution.`
+            : `An absolute value is never negative, so $|${expr}| = ${c}$ has no solution.`
       }
     }
   },
@@ -750,7 +809,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `$f(x) = \\begin{cases} ${linear(a, b)} & \\text{if } x < ${breakpoint} \\\\ ${linear(c, d)} & \\text{if } x \\geq ${breakpoint} \\end{cases}$. Find $f(${x})$.`,
         options, correctIndex,
-        explanation: `Since $${x} < ${breakpoint}$, use the first piece: $f(${x}) = ${a}(${x}) ${sign(b)} = ${ans}$.`
+        explanation: `Since $${x} < ${breakpoint}$, use the first piece: $f(${x}) = ${subLin(a, x, b)} = ${ans}$.`
       }
     }
   },
@@ -790,7 +849,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $h(x) = ${linear(m, b)}$, calculate $h(${x})$.`,
         options, correctIndex,
-        explanation: `$h(${x}) = ${m}(${x}) ${sign(b)} = ${ans}$.`
+        explanation: `$h(${x}) = ${subLin(m, x, b)} = ${ans}$.`
       }
     }
   },
@@ -799,7 +858,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     difficulty: 'easy',
     generate() {
-      const a = randInt(1, 5)
+      const a = randInt(2, 5)
       const correct = `$x \\geq 0$`
       const { options, correctIndex } = makeStringOptions(correct, [
         '$x > 0$', 'All real numbers', '$x \\neq 0$'
@@ -835,7 +894,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$ and $g(x) = ${linear(c, d)}$, find $g(f(x))$.`,
         options, correctIndex,
-        explanation: `$g(f(x)) = ${c}(${linear(a, b)}) ${sign(d)} = ${linear(compM, c * b)} ${sign(d)} = ${linear(compM, compB)}$.`
+        explanation: `$g(f(x)) = ${times(c, linear(a, b))}${d === 0 ? '' : ` ${sign(d)}`} = ${linear(compM, c * b)}${d === 0 ? '' : ` ${sign(d)}`} = ${linear(compM, compB)}$.`
       }
     }
   },
