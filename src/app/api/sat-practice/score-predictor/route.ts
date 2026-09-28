@@ -106,7 +106,6 @@ export async function GET() {
       'sat-pronoun-agreement': 'reading-writing',
       'sat-effective-language-use': 'reading-writing',
       'sat-transitions-organization': 'reading-writing',
-      'sat-conciseness-redundancy': 'reading-writing',
       'sat-subject-verb-agreement': 'reading-writing',
       // Math
       'sat-linear-equations-inequalities': 'math',
@@ -117,7 +116,6 @@ export async function GET() {
       'sat-statistics-data-interpretation': 'math',
       'sat-exponential-functions': 'math',
       'sat-circles': 'math',
-      'sat-complex-numbers': 'math',
       'sat-systems-equations': 'math',
       'sat-systems-linear-equations': 'math',
       'sat-linear-inequalities-graphs': 'math',

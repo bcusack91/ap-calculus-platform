@@ -25,7 +25,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'sat-statistics-data-interpretation': () => import('./sat-statistics-data-interpretation'),
   'sat-exponential-functions': () => import('./sat-exponential-functions'),
   'sat-circles': () => import('./sat-circles'),
-  'sat-complex-numbers': () => import('./sat-complex-numbers'),
   // New math
   'sat-systems-linear-equations': () => import('./sat-systems-linear-equations'),
   'sat-systems-equations': () => import('./sat-systems-linear-equations'), // alias
@@ -53,7 +52,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'sat-pronoun-agreement': () => import('./sat-pronoun-agreement'),
   'sat-effective-language-use': () => import('./sat-effective-language-use'),
   'sat-transitions-organization': () => import('./sat-transitions-organization'),
-  'sat-conciseness-redundancy': () => import('./sat-conciseness-redundancy'),
   'sat-subject-verb-agreement': () => import('./sat-subject-verb-agreement'),
   // Strategy
   'sat-time-management': () => import('./sat-time-management'),

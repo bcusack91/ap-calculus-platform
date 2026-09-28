@@ -1,0 +1,51 @@
+[
+ {
+  "id": "cmlshj03l000h0fsrbwvu5cnt",
+  "topicSlug": "sat-complex-numbers",
+  "front": "What is $i$ and what is $i^2$?",
+  "back": "$i = \\sqrt{-1}$ (the imaginary unit). $i^2 = -1$. This is the foundation of all complex number operations.",
+  "hint": "It is defined as the square root of negative one"
+ },
+ {
+  "id": "cmlshj03l000i0fsrnqu2v2sw",
+  "topicSlug": "sat-complex-numbers",
+  "front": "What is the cycle of powers of $i$?",
+  "back": "$i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$, then it repeats. To find $i^n$, divide $n$ by 4 and use the remainder.",
+  "hint": "It repeats every 4 powers"
+ },
+ {
+  "id": "cmlshj03l000j0fsrw1j8obm9",
+  "topicSlug": "sat-complex-numbers",
+  "front": "What is the conjugate of $a + bi$?",
+  "back": "$a - bi$. Flip the sign of the imaginary part. Key property: $(a+bi)(a-bi) = a^2 + b^2$ (a real number).",
+  "hint": "Change the sign of the imaginary part"
+ },
+ {
+  "id": "cmlshj03l000k0fsr24ww6iaw",
+  "topicSlug": "sat-complex-numbers",
+  "front": "How do you divide complex numbers?",
+  "back": "Multiply numerator and denominator by the CONJUGATE of the denominator. This eliminates $i$ from the denominator. Example: $\\frac{a+bi}{c+di} \\times \\frac{c-di}{c-di}$.",
+  "hint": "Multiply by the conjugate of the bottom"
+ },
+ {
+  "id": "cmlshj03l000l0fsrzdpjijs9",
+  "topicSlug": "sat-complex-numbers",
+  "front": "When does a quadratic equation have complex solutions?",
+  "back": "When the discriminant $b^2 - 4ac < 0$. The solutions come in conjugate pairs: $\\frac{-b \\pm i\\sqrt{|\\Delta|}}{2a}$.",
+  "hint": "Negative discriminant"
+ },
+ {
+  "id": "cmlshj03l000m0fsrkpomsg89",
+  "topicSlug": "sat-complex-numbers",
+  "front": "What is $\\sqrt{-25}$ in terms of $i$?",
+  "back": "$\\sqrt{-25} = \\sqrt{25} \\cdot \\sqrt{-1} = 5i$. Factor out the negative as $i$, then take the square root of the positive part.",
+  "hint": "Separate the negative sign as i"
+ },
+ {
+  "id": "cmlshj03l000n0fsrv56aln5w",
+  "topicSlug": "sat-complex-numbers",
+  "front": "How do you add complex numbers?",
+  "back": "Add real parts together and imaginary parts together: $(a+bi) + (c+di) = (a+c) + (b+d)i$. They combine like \"like terms.\"",
+  "hint": "Real with real, imaginary with imaginary"
+ }
+]

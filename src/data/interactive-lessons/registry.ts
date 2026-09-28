@@ -130,7 +130,6 @@ const slugAliases: Record<string, string> = {
   // SAT Prep
   'sat-quadratic-equations': 'sat-quadratic-equations-sat',
   'sat-exponents-radicals': 'sat-exponents-radicals-sat',
-  'sat-complex-numbers': 'sat-complex-numbers-sat',
   'sat-grammar-conventions': 'sat-grammar-conventions-sat',
   'sat-punctuation': 'sat-punctuation-sat',
   'sat-punctuation-commas-semicolons': 'sat-punctuation-commas-semicolons-sat',
@@ -167,7 +166,6 @@ const slugAliases: Record<string, string> = {
   'sat-central-ideas-details': 'sat-reading-evidence-sat',
   'sat-vocabulary-context': 'sat-reading-evidence-sat',
   'sat-finding-textual-evidence': 'sat-reading-evidence-sat',
-  'sat-conciseness-redundancy': 'sat-expression-ideas-sat',
   'sat-transitions-organization': 'sat-expression-ideas-sat',
   'sat-grammar-usage': 'sat-grammar-conventions-sat',
   'sat-sentence-structure': 'sat-grammar-conventions-sat',

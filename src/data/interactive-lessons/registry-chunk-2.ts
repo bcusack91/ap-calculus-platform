@@ -785,17 +785,6 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./sat-sat-circles-trig-sat-part7').then(m => m.satCirclesTrigPart7Data) },
     ],
   },
-  'sat-complex-numbers-sat': {
-    parts: [
-      { title: 'Imaginary Unit', loader: () => import('./sat-sat-complex-numbers-sat-part1').then(m => m.satComplexPart1Data) },
-      { title: 'Complex Arithmetic', loader: () => import('./sat-sat-complex-numbers-sat-part2').then(m => m.satComplexPart2Data) },
-      { title: 'Complex Conjugates', loader: () => import('./sat-sat-complex-numbers-sat-part3').then(m => m.satComplexPart3Data) },
-      { title: 'Quadratics & Complex Roots', loader: () => import('./sat-sat-complex-numbers-sat-part4').then(m => m.satComplexPart4Data) },
-      { title: 'Powers of i', loader: () => import('./sat-sat-complex-numbers-sat-part5').then(m => m.satComplexPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-complex-numbers-sat-part6').then(m => m.satComplexPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./sat-sat-complex-numbers-sat-part7').then(m => m.satComplexPart7Data) },
-    ],
-  },
   'sat-reading-evidence-sat': {
     parts: [
       { title: 'Evidence-Based Reading', loader: () => import('./sat-sat-reading-evidence-sat-part1').then(m => m.satReadingEvidencePart1Data) },

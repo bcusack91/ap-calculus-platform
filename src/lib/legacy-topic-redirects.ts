@@ -82,6 +82,10 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       'radius-interval-convergence': 'power-series-calcbc',
       'taylor-maclaurin-series': 'taylor-maclaurin-series-calcbc',
       'common-taylor-series': 'taylor-maclaurin-series-calcbc',
+      // SAT topics retired 2026-09-28 because the digital SAT does not test
+      // them: send old links to the tested skill of the same domain.
+      'sat-conciseness-redundancy': 'sat-effective-language-use',
+      'sat-complex-numbers': 'sat-quadratic-equations',
 }
 
 export function isLegacyTopicSlug(slug: string): boolean {

@@ -188,7 +188,7 @@ const twelveWeekTasks: TemplatePlanTask[] = [
   ...weekTasks(4, [
     { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions', dayOfWeek: 0 },
     { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation', dayOfWeek: 1 },
-    { title: 'Effective Language Use Lesson', type: 'LESSON', topicSlug: 'sat-conciseness-redundancy', dayOfWeek: 2 },
+    { title: 'Effective Language Use Lesson', type: 'LESSON', topicSlug: 'sat-effective-language-use', dayOfWeek: 2 },
     { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions', dayOfWeek: 3 },
     { title: 'Punctuation Quiz', type: 'QUIZ', topicSlug: 'sat-punctuation', dayOfWeek: 4 },
   ]),

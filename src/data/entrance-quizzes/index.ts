@@ -303,7 +303,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'sat-data-statistics-sat': () => import('./sat-data-statistics-sat'),
   'sat-exponential-functions-sat': () => import('./sat-exponential-functions-sat'),
   'sat-circles-trig-sat': () => import('./sat-circles-trig-sat'),
-  'sat-complex-numbers-sat': () => import('./sat-complex-numbers-sat'),
   'sat-passport-advanced-math-sat': () => import('./sat-passport-advanced-math-sat'),
   'sat-word-problems-sat': () => import('./sat-word-problems-sat'),
   'sat-problem-solving-data-sat': () => import('./sat-problem-solving-data-sat'),
@@ -708,7 +707,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   // Additional Topics in Math
   'sat-geometry-trigonometry': () => import('./sat-geometry-angles-sat'),
   'sat-geometry-basics': () => import('./sat-geometry-angles-sat'),
-  'sat-complex-numbers': () => import('./sat-complex-numbers-sat'),
   'sat-circles': () => import('./sat-circles-trig-sat'),
   // Reading & Writing
   'sat-reading-comprehension': () => import('./sat-reading-evidence-sat'),
@@ -725,7 +723,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'sat-pronoun-agreement': () => import('./sat-grammar-conventions-sat'),
   'sat-effective-language-use': () => import('./sat-expression-ideas-sat'),
   'sat-transitions-organization': () => import('./sat-expression-ideas-sat'),
-  'sat-conciseness-redundancy': () => import('./sat-expression-ideas-sat'),
   // Test-Taking Strategies
   // calculator-strategies and process-of-elimination render their own 5-part
   // lessons, which no 7-part SAT entrance quiz lines up with; a test-out

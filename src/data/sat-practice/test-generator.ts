@@ -115,7 +115,7 @@ const RW_DOMAIN_SLUGS: Record<RWDomain, string[]> = {
     'sat-pronoun-agreement',
     'sat-subject-verb-agreement',
   ],
-  expression: ['sat-effective-language-use', 'sat-transitions-organization', 'sat-conciseness-redundancy'],
+  expression: ['sat-effective-language-use', 'sat-transitions-organization'],
 }
 
 /** Real exam order of R&W domains within a module. */

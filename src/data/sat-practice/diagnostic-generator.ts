@@ -127,7 +127,9 @@ export const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
     id: 'expression',
     name: 'Expression & Style',
     section: 'reading-writing',
-    slugs: ['sat-effective-language-use', 'sat-conciseness-redundancy', 'sat-transitions-organization'],
+    // Digital SAT Expression of Ideas = Rhetorical Synthesis + Transitions.
+    // Conciseness is not tested and its topic was retired 2026-09-28.
+    slugs: ['sat-effective-language-use', 'sat-transitions-organization'],
     questionCount: 2,
   },
   {
@@ -210,7 +212,10 @@ const CANONICAL_SLUG_MAP: Record<string, string> = {
   'sat-command-evidence': 'sat-finding-textual-evidence',
   'sat-grammar-conventions': 'sat-grammar-usage',
   'sat-subject-verb-agreement': 'sat-grammar-usage',
-  'sat-effective-language-use': 'sat-conciseness-redundancy',
+  // Retired 2026-09-28 (not on the digital SAT): older stored results that
+  // recommend these resolve to the tested skill of the same domain.
+  'sat-conciseness-redundancy': 'sat-effective-language-use',
+  'sat-complex-numbers': 'sat-quadratic-equations',
   'sat-punctuation-commas-semicolons': 'sat-punctuation',
   // Math
   'sat-geometry-trigonometry': 'sat-geometry-basics',
@@ -371,7 +376,7 @@ const RW_DISCRETE_PLAN: { domain: string; slugs: string[]; count: number }[] = [
   { domain: 'grammar', slugs: ['sat-grammar-usage', 'sat-subject-verb-agreement', 'sat-grammar-conventions'], count: 2 },
   { domain: 'punctuation', slugs: ['sat-sentence-structure', 'sat-punctuation-commas-semicolons', 'sat-punctuation'], count: 1 },
   // Meta-strategy pools ABOUT the SAT stay excluded; these measure the skill.
-  { domain: 'expression', slugs: ['sat-conciseness-redundancy', 'sat-effective-language-use'], count: 2 },
+  { domain: 'expression', slugs: ['sat-effective-language-use', 'sat-transitions-organization'], count: 2 },
 ]
 
 /**

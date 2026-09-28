@@ -424,6 +424,8 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       'update-bc-to-free.ts', 'update-integrated-rate-laws.ts',
       'update-unit-circle-with-table.ts', 'split-negative-coterminal-angles.ts',
       'split-parametric-vectors-polar.ts', 'split-unit-circle-topic.ts',
+      // Must stay last: older SAT seeds recreate these off-exam topics.
+      'retire-sat-topics.ts',
     ],
   },
 ]

@@ -44,7 +44,6 @@ const SAT_MATH_TOPICS = new Set([
   'sat-exponential-functions',
   'sat-polynomials-factoring',
   'sat-polynomial-rational-expressions',
-  'sat-complex-numbers',
   'sat-problem-solving-data',
   'sat-ratios-proportions-percents',
   'sat-data-statistics',
@@ -70,7 +69,6 @@ const SAT_READING_TOPICS = new Set([
   'sat-vocabulary-context',
   'sat-expression-ideas',
   'sat-transitions-organization',
-  'sat-conciseness-redundancy',
   'sat-effective-language-use',
 ])
 
@@ -190,7 +188,6 @@ const CURRICULUM_TO_SKILLS: Record<string, string[]> = {
   'sat-exponential-functions': ['sat-skill-nonlinear-functions', 'sat-skill-exponential-functions'],
   'sat-polynomials-factoring': ['sat-skill-equivalent-expressions', 'sat-skill-polynomial-rational'],
   'sat-polynomial-rational-expressions': ['sat-skill-equivalent-expressions', 'sat-skill-polynomial-rational'],
-  'sat-complex-numbers': ['sat-skill-nonlinear-equations', 'sat-skill-radicals-absolute-complex'],
 
   // --- Math: Problem-Solving & Data Analysis ---
   'sat-problem-solving-data': ['sat-skill-ratios-rates-units', 'sat-skill-percentages'],
@@ -223,7 +220,6 @@ const CURRICULUM_TO_SKILLS: Record<string, string[]> = {
   // --- Reading & Writing: Expression of Ideas ---
   'sat-expression-ideas': ['sat-skill-rhetorical-synthesis', 'sat-skill-transitions'],
   'sat-transitions-organization': ['sat-skill-transitions'],
-  'sat-conciseness-redundancy': ['sat-skill-rhetorical-synthesis'],
   'sat-effective-language-use': ['sat-skill-rhetorical-synthesis', 'sat-skill-words-in-context'],
 
   // --- Reading & Writing: Standard English Conventions ---

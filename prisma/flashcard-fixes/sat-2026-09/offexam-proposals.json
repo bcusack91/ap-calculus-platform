@@ -1,0 +1,48 @@
+[
+ {
+  "action": "UPDATE",
+  "id": "cmlshr5ft000b0fax90puh4c1",
+  "topicSlug": "sat-effective-language-use",
+  "category": "off-exam",
+  "front": "A rhetorical synthesis question asks you to emphasize a similarity between two studies. What must the correct choice do?",
+  "back": "Mention both studies and the point they share. A choice that describes only one study, or states a difference, fails the goal even if every fact in it is true and comes from the notes.",
+  "hint": "Match the goal, not just the notes.",
+  "reason": "Wordiness is not on the digital SAT; Expression of Ideas is rhetorical synthesis and transitions."
+ },
+ {
+  "action": "UPDATE",
+  "id": "cmt29l6u2001k0f4wpem5pl51",
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "category": "off-exam",
+  "front": "What does a rhetorical synthesis question give you?",
+  "back": "A list of notes a student took, plus a goal, such as introducing a study to readers who have never heard of it. You choose the sentence that uses the notes to do exactly that goal.",
+  "reason": "Concision is not tested; replaced with the tested Expression skill."
+ },
+ {
+  "action": "UPDATE",
+  "id": "cmt29l6u2001l0f4wd6mb1n1d",
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "category": "off-exam",
+  "front": "How do you answer a rhetorical synthesis question?",
+  "back": "Read the goal first. Cross out every choice that does not do that goal, even if its facts are true. From what is left, pick the choice that uses the notes accurately.",
+  "reason": "Concision is not tested; replaced with the tested Expression skill."
+ },
+ {
+  "action": "UPDATE",
+  "id": "cmt29l6u2001m0f4w1blia2sd",
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "category": "off-exam",
+  "front": "What does \"most logical and precise word\" mean in a words-in-context question?",
+  "back": "The word must match the exact meaning the text needs, not just the general idea. If a text says every trial matched the prediction, the results were consistent; a loose fit such as good is not precise enough.",
+  "reason": "Redundancy is not tested; replaced with precise word choice (Words in Context)."
+ },
+ {
+  "action": "UPDATE",
+  "id": "cmt29l6u2001n0f4whmdze4fw",
+  "topicSlug": "sat-effective-language-use-core-skills",
+  "category": "off-exam",
+  "front": "How do you choose the most precise word for a blank?",
+  "back": "Use the clues in the text to predict your own word before you look at the choices. Pick the choice closest to your prediction, then reread the full sentence with it in place to check.",
+  "reason": "Redundancy is not tested; replaced with precise word choice (Words in Context)."
+ }
+]
