@@ -42,7 +42,7 @@ Before every answer, say the denominator out loud:
         'Urban and suburban have the same approval rate'
       ],
       correctAnswer: 0,
-      explanation: `Compute each rate against its own regional total: urban $\\frac{168}{300} = 56\\%$, suburban $\\frac{210}{450} \\approx 46.7\\%$, rural $\\frac{112}{250} = 44.8\\%$. Urban is highest. The trap is suburban, which contributes the most approvals in raw count ($210$ versus urban's $168$) simply because it is the largest region — the count-versus-rate split that this archetype is built on. Rural is lowest on both measures, making it a safe-looking but doubly wrong pick.`
+      explanation: `Compute each rate against its own regional total: urban $\\frac{168}{300} = 56\\%$, suburban $\\frac{210}{450} \\approx 46.7\\%$, rural $\\frac{112}{250} = 44.8\\%$. Urban is highest. The trap is suburban, which contributes the most approvals in raw count ($210$ versus urban's $168$) simply because it is the largest region — the count-versus-rate split that this archetype is built on. Rural is lowest on both measures, making it a safe-looking but doubly wrong pick. The tie option fails because $56\\%$ and about $46.7\\%$ are far apart.`
     },
     {
       id: 'prob-adv-p3-q3',

@@ -66,9 +66,9 @@ That is the whole trick. Nothing else about inequalities is different.`
       id: 'lei-core-p2-q4',
       type: 'quiz' as const,
       question: 'You divide both sides of an inequality by $-4$. What happens to the inequality sign?',
-      options: ['It stays pointing the same way', 'It becomes an equals sign', 'It flips to point the other way', 'It disappears'],
+      options: ['It stays pointing the same way', 'It flips only if the answer is negative', 'It flips to point the other way', 'It flips only if both sides are negative'],
       correctAnswer: 2,
-      explanation: 'The sign flips to point the other way. Dividing or multiplying both sides by a negative number reverses the direction of the sign. For example, $-4x < 8$ becomes $x > -2$ after you divide both sides by $-4$. The sign only stays the same when the number you divide by is positive.'
+      explanation: 'The sign flips to point the other way. Dividing or multiplying both sides by a negative number reverses the direction of the sign, every time. For example, $-4x < 8$ becomes $x > -2$ after you divide both sides by $-4$. What decides the flip is the number you divide by, not whether the answer or the other side is negative: $-4x < -8$ also flips, giving $x > 2$. The sign only stays the same when the number you divide by is positive.'
     }
   ]
 }

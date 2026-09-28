@@ -12,23 +12,23 @@ Every wrong answer in this topic is a **correct calculation of the wrong quantit
 
 ### Species 1: The Reversed Conditional
 
-"Of the poetry readers, what percent are under 30?" and "Of the members under 30, what percent prefer poetry?" share a numerator and differ in denominator — column total versus row total. Both values appear in the choices, often as 39.6 and 16.4.
+"Of the jazz fans, what percent are under 25?" and "Of the members under 25, what percent prefer jazz?" share a numerator and differ in denominator — column total versus row total. Both values appear in the choices, usually a few rows apart.
 
 **Defense:** the group named right after "of" is the denominator. Write it down before dividing.
 
 ### Species 2: The Grand-Total Denominator
 
-Dividing by the grand total answers "what share of **everyone** is in this cell." It is correct only when the question actually says "of all 620 employees." When a question restricts to a row or a column and you divide by the grand total anyway, the value is always too small — and always on the menu.
+Dividing by the grand total answers "what share of **everyone** is in this cell." It is correct only when the question actually says "of all 540 employees." When a question restricts to a row or a column and you divide by the grand total anyway, the value is always too small — and always on the menu.
 
 ### Species 3: The Complement
 
-$32/53$ instead of $21/53$. The arithmetic is flawless and the answer is the percentage of exactly the group you were **not** asked about. When your answer and one other choice sum to about 100 percent, re-read which side of the split the question wanted.
+$27/45$ instead of $18/45$. The arithmetic is flawless and the answer is the percentage of exactly the group you were **not** asked about. When your answer and one other choice sum to about 100 percent, re-read which side of the split the question wanted.
 
 ### Species 4: Count Instead of Rate
 
-"144 participants improved with Treatment Y and only 126 with Treatment X, so Y is better." Y also had 50 more participants. Raw counts are comparable **only** when the group totals are equal, and hard items never make them equal. Whenever a claim rests on which number is bigger, convert both to rates before believing it.
+"150 participants improved with Program B and only 132 with Program A, so B is better." B also had 80 more participants. Raw counts are comparable **only** when the group totals are equal, and hard items never make them equal. Whenever a claim rests on which number is bigger, convert both to rates before believing it.
 
-The same species appears as **ratio of counts instead of ratio of rates**: $40/14 = 2.9$ when the true ratio of defect rates is $4.0$, because the two lines inspected different numbers of units.
+The same species appears as **ratio of counts instead of ratio of rates**: $30/12 = 2.5$ when the true ratio of defect rates is $3.5$, because the two lines inspected different numbers of units.
 
 ### Species 5: The Mismatched Scaling
 
@@ -36,9 +36,9 @@ The population you are estimating and the rate you multiply by must describe the
 
 | Population being estimated | Correct rate |
 |---|---|
-| All 12,000 customers | cell ÷ grand total |
-| The 6,300 parents in the district | cell ÷ parents row total |
-| The 9,500 Location B customers | cell ÷ Location B row total |
+| All 15,000 residents | cell ÷ grand total |
+| The 5,600 teachers in the county | cell ÷ teachers row total |
+| The 8,000 North branch members | cell ÷ North branch row total |
 
 Scaling a row rate by the whole population, or a whole-sample rate by one subgroup, is the built-in trap on every one of these items.
 
@@ -71,7 +71,7 @@ If the question excludes a category ("among those who were not absent," "with in
 
 ### Speed Technique 5: Estimate to Eliminate
 
-Rates in these tables are usually clean-ish fractions. $105/400$ is a hair over one quarter; $54/300$ is under one fifth. That is enough to rule out two choices instantly and to catch a denominator error before you commit — if your "rate" comes out above 100 percent or absurdly small, you grabbed the wrong margin.`
+Rates in these tables are usually clean-ish fractions. $87/320$ is a hair over one quarter; $52/290$ is under one fifth. That is enough to rule out two choices instantly and to catch a denominator error before you commit — if your "rate" comes out above 100 percent or absurdly small, you grabbed the wrong margin.`
     },
     {
       id: 'ds-adv-p2-q1',

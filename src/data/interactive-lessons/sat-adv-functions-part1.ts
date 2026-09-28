@@ -52,13 +52,13 @@ If $f(1) = -4$, then $g(4) = -(-4) + 2 = 6$. The choice $-6$ is "reflection forg
 
 **The word-problem version.** "A second plant was sown $5$ days later and is $20\\%$ taller at every corresponding age." Later planting $\\rightarrow$ it is *younger* at time $t$ $\\rightarrow$ inside becomes $t - 5$. Taller $\\rightarrow$ output scaling $\\rightarrow$ $1.2$ outside. Answer: $1.2h(t - 5)$. The wrong answers put the $20\\%$ inside ($h(1.2t - 5)$) or turn the $5$-day delay into a $5$-centimeter drop ($1.2h(t) - 5$).
 
-### Archetype 4: Inverses and the Reversal Rule
+### Archetype 4: Composition Order — Match the Units
 
-If the forward chain is bicycles $\\rightarrow$ (apply $h$) $\\rightarrow$ hours $\\rightarrow$ (apply $c$) $\\rightarrow$ dollars, then dollars $= c(h(n))$. To go from a **budget** back to bicycles, undo the chain **in reverse order**: $n = h^{-1}\\big(c^{-1}(B)\\big)$.
+A stem gives two rules and asks for one expression. Suppose $h(B)$ gives the number of hours of shop time a budget of $B$ dollars buys, and $c(t)$ gives the number of bicycles a crew can assemble in $t$ hours. The chain is dollars $\\rightarrow$ (apply $h$) $\\rightarrow$ hours $\\rightarrow$ (apply $c$) $\\rightarrow$ bicycles, so the number of bicycles a budget of $B$ dollars produces is $c(h(B))$.
 
-Undo the *last* function first. The choice $c^{-1}(h^{-1}(B))$ has both inverses but the wrong order — it would require $B$ to be measured in hours. The choices without inverses run the chain forward and produce dollars, not bicycles.
+The **inner** function is the one whose input matches what you HAVE (dollars); the **outer** function is the one whose output matches what you WANT (bicycles). The choice $h(c(B))$ has the right functions in the wrong order — it feeds a dollar amount into $c$, which expects hours. The choice $h(B)$ stops one link early and produces hours, not bicycles. The choice $h(B) \\cdot c(B)$ multiplies two outputs instead of chaining them.
 
-For inverses with a shift, evaluate the inside first: if $g(x) = f^{-1}(x - 6)$ and $f(2) = 12$, then $g(18) = f^{-1}(12) = 2$. The choice $12$ is the inner value; the choice $f^{-1}(18) - 6$ moves the shift outside.`
+When a rule is defined by working backward, evaluate the inside first. If $g(x)$ is the value of $t$ for which $f(t) = x - 6$, and $f(3) = 11$, then $g(17)$ is the value of $t$ for which $f(t) = 11$, which is $3$. The choice $11$ is the inner value. The other planted route solves $f(t) = 17$ first and then subtracts $6$ from that $t$, which moves the shift outside.`
     },
     {
       id: 'fn-adv-p1-q1',
@@ -89,15 +89,15 @@ For inverses with a shift, evaluate the inside first: if $g(x) = f^{-1}(x - 6)$ 
     {
       id: 'fn-adv-p1-q3',
       type: 'quiz' as const,
-      question: 'At a bakery, the function $p(c)$ gives the number of pounds of dough needed to make $c$ cakes, and the function $t(p)$ gives the number of minutes of mixer time needed to prepare $p$ pounds of dough. Both functions are increasing and invertible. The bakery has $M$ minutes of mixer time available tomorrow. Which expression gives the number of cakes the bakery can make?',
+      question: 'At a bakery, the function $k(p)$ gives the number of cakes that can be made from $p$ pounds of dough, and the function $d(m)$ gives the number of pounds of dough that can be prepared with $m$ minutes of mixer time. The bakery has $M$ minutes of mixer time available tomorrow. Which expression gives the number of cakes the bakery can make?',
       options: [
-        '$t(p(M))$',
-        '$p(t^{-1}(M))$',
-        '$t^{-1}(p^{-1}(M))$',
-        '$p^{-1}(t^{-1}(M))$'
+        '$d(k(M))$',
+        '$k(d(M))$',
+        '$k(M) \\cdot d(M)$',
+        '$k(M)$'
       ],
-      correctAnswer: 3,
-      explanation: 'Forward, cakes feed into $p$ to give pounds and pounds feed into $t$ to give minutes: $\\text{minutes} = t(p(c))$. To run that backward from a minute budget, undo the LAST function first: $t^{-1}(M)$ turns minutes into pounds, then $p^{-1}$ turns pounds into cakes, giving $p^{-1}(t^{-1}(M))$. The traps: $t^{-1}(p^{-1}(M))$ uses both inverses but in the wrong order — it treats $M$ as a number of pounds. $t(p(M))$ runs the chain forward and outputs minutes, not cakes. $p(t^{-1}(M))$ correctly converts minutes to pounds but then applies $p$ forward instead of $p^{-1}$, producing pounds of dough for $M$ cakes.'
+      correctAnswer: 1,
+      explanation: 'Track units. The bakery starts with minutes, and $d$ is the function that accepts minutes, so $d(M)$ is the number of pounds of dough. The function $k$ accepts pounds and returns cakes, so apply it next: $k(d(M))$ cakes. The inner function matches the units you HAVE; the outer function matches the units you WANT. The traps: $d(k(M))$ uses both functions in the wrong order, treating $M$ minutes as pounds of dough and then treating a number of cakes as minutes. $k(M)$ skips the mixer link entirely and treats $M$ minutes as pounds. $k(M) \\cdot d(M)$ multiplies two outputs instead of feeding one into the other, and it too treats $M$ as pounds inside $k$.'
     }
   ]
 };

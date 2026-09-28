@@ -37,9 +37,9 @@ If the statement had come out false, you would shade the other side instead.`
       id: 'lig-core-p2-q1',
       type: 'quiz' as const,
       question: 'Is the point $(0, 0)$ in the solution set of $y < x + 6$?',
-      options: ['No, because $0$ is not less than $6$', 'Yes, because $0 < 6$ is true', 'It is on the boundary line', 'There is not enough information'],
+      options: ['No, because the point sits on the boundary line', 'Yes, because $0 < 0 + 6$ is a true statement', 'No, because the point is below the line $y = x + 6$', 'No, because $6 < 0$ is a false statement'],
       correctAnswer: 1,
-      explanation: 'The answer is yes. Put $x = 0$ and $y = 0$ into the inequality to get $0 < 0 + 6$, which is $0 < 6$. That statement is true, so the point $(0, 0)$ is inside the shaded region. Since $0$ really is smaller than $6$, the "$0$ is not less than $6$" choice states something that is not true.'
+      explanation: 'The answer is yes. Put $x = 0$ and $y = 0$ into the inequality to get $0 < 0 + 6$, which is $0 < 6$. That statement is true, so the point $(0, 0)$ is inside the shaded region. The point is not on the boundary line, because $0 = 0 + 6$ is false. It is below the line, and "$y <$" means the region below the line is exactly the solution set. Writing $6 < 0$ puts the numbers on the wrong sides: $y$ goes on the left and $x + 6$ on the right.'
     },
     {
       id: 'lig-core-p2-q2',
@@ -53,9 +53,9 @@ If the statement had come out false, you would shade the other side instead.`
       id: 'lig-core-p2-q3',
       type: 'quiz' as const,
       question: 'How is $x \\geq 2$ graphed on the coordinate plane?',
-      options: ['A vertical line at $x = 2$, shaded to the right', 'A vertical line at $x = 2$, shaded to the left', 'A horizontal line at $y = 2$, shaded above', 'A slanted line through the origin'],
+      options: ['A vertical line at $x = 2$, shaded to the right', 'A vertical line at $x = 2$, shaded to the left', 'A horizontal line at $y = 2$, shaded above', 'A horizontal line at $y = 2$, shaded below'],
       correctAnswer: 0,
-      explanation: 'The answer is a vertical line at $x = 2$ with shading to the right. The boundary is the vertical line where $x$ equals $2$. Numbers greater than $2$ sit to the right on the $x$-axis, so that is the side you shade. The sign $\\geq$ also tells you the line itself is solid, because points on it are included.'
+      explanation: 'The answer is a vertical line at $x = 2$ with shading to the right. The boundary is the vertical line where $x$ equals $2$. Numbers greater than $2$ sit to the right on the $x$-axis, so that is the side you shade. The sign $\\geq$ also tells you the line itself is solid, because points on it are included. A horizontal line at $y = 2$ would describe $y$, not $x$.'
     },
     {
       id: 'lig-core-p2-q4',

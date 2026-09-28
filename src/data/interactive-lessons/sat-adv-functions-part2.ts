@@ -40,9 +40,9 @@ Note how *reasonable* $84$ looks. Fixed fees must be stripped **before** any div
 
 You correctly isolate a quantity, then divide by a rate from the wrong link of the chain: dollars divided by miles-per-gallon, leftover cost divided by trays-per-hour, budget divided by liters-per-bottle instead of dollars-per-bottle. Every one of these produces a plausible number in impossible units. **Cancel units in the division**, not just the numbers.
 
-### Species 4: Direction Errors on Inverses and Transformations
+### Species 4: Direction Errors in Chains and Transformations
 
-Applying $g$ forward when the situation calls for $g^{-1}$; shifting left when the story says the second thing started *later*; stretching when the rule says $f(2x)$; inverting a composition without reversing the order; multiplying by an exchange rate when the conversion required dividing.
+Applying $g$ forward when the situation calls for working backward from its output; shifting left when the story says the second thing started *later*; stretching when the rule says $f(2x)$; nesting two functions in the wrong order; multiplying by an exchange rate when the conversion required dividing.
 
 **The size check catches almost all of these.** If a euro is worth more than a dollar, the dollar figure must be bigger. If the second plant was sown later, it must be shorter at time $t$ (before its $20\\%$ advantage is applied). If a compression pulls points toward the $y$-axis, the $x$-coordinate must shrink.`
     },
@@ -101,9 +101,9 @@ And when a stem says **fewer than** or **more than**, the boundary is *not* the 
       question: 'A museum uses two functions: $n(d)$ gives the number of visitors on day $d$, and $r(v)$ gives the total revenue, in dollars, produced by $v$ visitors. Neither function is assumed to be proportional, because the museum receives a fixed daily operating credit. Which of the following best describes what $r(n(30)) - r(n(12))$ represents?',
       options: [
         'The number of additional visitors on day $30$ compared with day $12$',
-        'The revenue, in dollars, produced by $18$ visitors',
-        'The average revenue, in dollars, per visitor over that period',
-        'The additional revenue, in dollars, produced on day $30$ compared with day $12$'
+        'The revenue, in dollars, that $18$ additional visitors would produce',
+        'The average revenue, in dollars, per visitor from day $12$ to day $30$',
+        'The additional revenue, in dollars, on day $30$ compared with day $12$'
       ],
       correctAnswer: 3,
       explanation: '$n(30)$ and $n(12)$ are visitor counts; applying $r$ to each converts them to dollar amounts, and a difference of two dollar amounts is a difference in revenue. The traps: the additional-visitors option stops one link early — that would be $n(30) - n(12)$, measured in visitors, not dollars. The 18-visitors option is the signature distractor for this archetype: it would require $r$ and $n$ to be directly proportional, and the stem explicitly mentions a fixed daily credit, so $r(n(30)) - r(n(12))$ need not equal the revenue from $18$ visitors. The average-revenue option describes a quotient, not a difference.'

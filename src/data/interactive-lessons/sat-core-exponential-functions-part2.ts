@@ -59,9 +59,9 @@ One year of growth is one multiplication. Two years is two multiplications, and 
       id: 'exp-core-p2-q4',
       type: 'quiz' as const,
       question: 'What is the main difference between linear growth and exponential growth?',
-      options: ['Linear growth adds the same amount each step; exponential growth multiplies by the same number each step', 'Linear growth and exponential growth are two names for the same thing', 'Linear growth is always faster than exponential growth', 'Exponential growth always starts at a higher value'],
+      options: ['Linear growth adds a fixed amount each step, while exponential growth multiplies by a fixed number', 'Linear growth multiplies by a fixed number each step, while exponential growth adds a fixed amount', 'Linear growth is faster at every step, while exponential growth always stays below it', 'Linear growth starts from zero, while exponential growth always starts at a higher value'],
       correctAnswer: 0,
-      explanation: 'The answer is that linear growth adds the same amount each step while exponential growth multiplies by the same number each step. Adding $10$ each time gives $10, 20, 30, 40$. Multiplying by $2$ each time gives $10, 20, 40, 80$. Exponential growth starts slowly but passes linear growth once enough steps go by, so it is not always the smaller one at the start.'
+      explanation: 'The answer is that linear growth adds a fixed amount each step while exponential growth multiplies by a fixed number. Adding $10$ each time gives $10, 20, 30, 40$. Multiplying by $2$ each time gives $10, 20, 40, 80$. Swapping the two descriptions is the most common mix-up. Exponential growth may start slowly, but it passes linear growth once enough steps go by, so linear growth is not always faster, and neither kind has to start at a particular value.'
     }
   ]
 }

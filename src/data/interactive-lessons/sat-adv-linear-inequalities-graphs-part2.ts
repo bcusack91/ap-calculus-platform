@@ -38,15 +38,15 @@ For "which ordered pair is a solution" items, don't graph — **test each option
     {
       id: 'advlig2-q2',
       type: 'quiz' as const,
-      question: `A caterer's budget allows at most t tables, where the cost constraint reduces to t <= 26.4. The answer choices are 25, 26, 27, and 29, and a student under time pressure picks 27. What exactly went wrong?`,
+      question: `A caterer's budget allows at most $t$ tables, where the cost constraint reduces to $t \\le 26.4$. The answer choices are 25, 26, 27, and 29, and a student under time pressure picks 27. Which statement correctly describes what the student should have done?`,
       options: [
-        'The student ignored one of the constraints in the problem',
-        'The student used the wrong per-table rate',
-        'The student rounded down when the problem required rounding up',
-        'The student rounded 26.4 up, but a budget cap means the greatest WHOLE number available is 26'
+        'She should have chosen 25, because 26 tables would still go over budget',
+        'She should have kept 27, because a partial table counts as a whole one',
+        'She should have chosen 29, because the limit sets a floor, not a ceiling',
+        'She should have chosen 26, because a budget cap calls for rounding down'
       ],
       correctAnswer: 3,
-      explanation: 'With $t \\le 26.4$, buying $27$ tables costs more than the budget allows — fractional capacity never funds a whole extra unit. The greatest valid whole number is $26$. This is the signature budget-rounding trap: the round-up neighbor of the true answer is always planted ($27$ here), often alongside an extra-cautious round-down ($25$) and an ignored-constraint number ($29$). Requirements ("at least") round up; capacities and budgets round down — every time.'
+      explanation: 'With $t \\le 26.4$, buying $27$ tables costs more than the budget allows — fractional capacity never funds a whole extra unit. The greatest valid whole number is $26$. This is the signature budget-rounding trap: the round-up neighbor of the true answer is always planted ($27$ here). Keeping $27$ applies the "partial unit counts as whole" rule, which belongs to requirements, not caps. Dropping to $25$ is over-cautious: $26 \\le 26.4$, so $26$ tables fit. Choosing $29$ reads "at most" as "at least." Requirements ("at least") round up; capacities and budgets round down — every time.'
     },
     {
       id: 'advlig2-q3',

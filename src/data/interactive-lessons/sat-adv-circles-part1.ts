@@ -73,10 +73,10 @@ A path of uniform width $w$ around a circle of radius $r$ has area $\\pi\\left[(
     {
       id: 'circ-adv-p1-q3',
       type: 'quiz' as const,
-      question: `In the $xy$-plane, a circle has center $(2, -1)$ and passes through the point $(5, 3)$. The line tangent to the circle at $(5, 3)$ crosses the $y$-axis at what value of $y$?`,
-      options: ['$-3.67$', '$-0.75$', '$6.75$', '$9$'],
-      correctAnswer: 2,
-      explanation: `The radius to $(5, 3)$ has slope $\\frac{3 - (-1)}{5 - 2} = \\frac{4}{3}$, so the tangent has the negative reciprocal slope $-\\frac{3}{4}$. Through $(5, 3)$: $y = -\\frac{3}{4}x + \\frac{27}{4}$, giving a $y$-intercept of $6.75$. The traps: $-3.67$ uses the RADIUS's slope $\\frac{4}{3}$ for the tangent line; $-0.75$ takes the reciprocal but drops the negative sign, using $\\frac{3}{4}$; $9$ is the $x$-intercept of the correct tangent line — right line, wrong axis.`
+      question: `In the $xy$-plane, a circle has center $(-2, 1)$ and passes through the point $(4, 3)$. The line tangent to the circle at $(4, 3)$ crosses the $y$-axis at what value of $y$?`,
+      options: ['$-9$', '$\\frac{5}{3}$', '$5$', '$15$'],
+      correctAnswer: 3,
+      explanation: `The radius to $(4, 3)$ has slope $\\frac{3 - 1}{4 - (-2)} = \\frac{2}{6} = \\frac{1}{3}$, so the tangent has the negative reciprocal slope $-3$. Through $(4, 3)$: $y - 3 = -3(x - 4)$, so $y = -3x + 15$, giving a $y$-intercept of $15$. The traps: $\\frac{5}{3}$ uses the RADIUS's slope $\\frac{1}{3}$ for the tangent line; $-9$ takes the reciprocal but drops the negative sign, using slope $3$; $5$ is the $x$-intercept of the correct tangent line — right line, wrong axis.`
     }
   ]
 }

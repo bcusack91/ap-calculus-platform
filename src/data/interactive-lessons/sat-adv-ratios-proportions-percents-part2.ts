@@ -33,15 +33,15 @@ export const lessonData = {
     {
       id: 'advrpp2-q2',
       type: 'quiz' as const,
-      question: `A jacket's price after a 40% markdown is $\\$57$. To find the original price, a student computes $57 \\times 1.40 = 79.80$ and answers $\\$79.80$. What is wrong with this?`,
+      question: `A jacket's price after a 40% markdown is $\\$57$. To find the original price, a student computes $57 \\times 1.40 = 79.80$ and answers $\\$79.80$. The student's answer is wrong. Which calculation gives the original price?`,
       options: [
-        'Nothing — $\\$79.80$ is the original price',
-        'Reversing a 40% decrease requires dividing by 0.60: the original is $\\$95$ (since $57 \\div 0.60 = 95$), because increasing by 40% is a smaller-sized step once the base has shrunk',
-        'The student should have computed 57 × 0.60',
-        'The student should have divided by 1.40 instead'
+        'Divide $57$ by $0.40$',
+        'Divide $57$ by $0.60$',
+        'Multiply $57$ by $0.60$',
+        'Divide $57$ by $1.40$'
       ],
       correctAnswer: 1,
-      explanation: 'A $40\\%$ markdown means the sale price is $0.60$ of the original: $0.60P = 57$, so $P = 57 \\div 0.60 = \\$95$. Check: $95 \\times 0.60 = 57$. Multiplying by $1.40$ fails because the $40\\%$ being restored would be $40\\%$ of the SMALLER sale price ($57$), not of the original — percent steps are not symmetric. $57 \\times 0.60$ discounts an already-discounted price, and dividing by $1.40$ reverses a markUP that never happened. On the SAT, $\\$79.80$ will be sitting in the options, priced exactly for this error.'
+      explanation: 'A $40\\%$ markdown means the sale price is $0.60$ of the original: $0.60P = 57$, so $P = 57 \\div 0.60 = \\$95$. Check: $95 \\times 0.60 = 57$. The student\'s $57 \\times 1.40$ fails because it adds back $40\\%$ of the SMALLER sale price ($0.40 \\times 57 = 22.80$), while the markdown removed $40\\%$ of the larger original ($0.40 \\times 95 = 38$) — percent steps are not symmetric. Dividing by $0.40$ treats $\\$57$ as the $40\\%$ that was taken off rather than the $60\\%$ that remains, giving $\\$142.50$. Multiplying by $0.60$ discounts an already-discounted price. Dividing by $1.40$ reverses a markup that never happened. On the SAT, $\\$79.80$ will be sitting in the options, priced exactly for this error.'
     },
     {
       id: 'advrpp2-q3',

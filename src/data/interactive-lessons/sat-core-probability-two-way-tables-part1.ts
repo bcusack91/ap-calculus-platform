@@ -10,7 +10,7 @@ export const lessonData = {
 
 **Probability** is a number that says how likely something is. You write it as a fraction, and the fraction is always built the same way:
 
-$P = \\frac{\\text{number of outcomes you want}}{\\text{total number of outcomes}}$
+$\\text{probability} = \\frac{\\text{number of outcomes you want}}{\\text{total number of outcomes}}$
 
 The top is what you are hoping for. The bottom is everything that could happen. Nothing else changes.
 
@@ -22,11 +22,11 @@ A bag holds $3$ red marbles, $5$ blue marbles, and $2$ green marbles. One marble
 
 **Step 2 — Find how many you want.** There are $3$ red marbles.
 
-**Step 3 — Write the fraction.** $P(\\text{red}) = \\frac{3}{10}$.
+**Step 3 — Write the fraction.** The probability of drawing red is $\\frac{3}{10}$.
 
 ### The word "not"
 
-If a question asks for the probability of **not** red, count everything that is not red. That is the $5$ blue plus the $2$ green, which is $5 + 2 = 7$ marbles. So $P(\\text{not red}) = \\frac{7}{10}$.
+If a question asks for the probability of **not** red, count everything that is not red. That is the $5$ blue plus the $2$ green, which is $5 + 2 = 7$ marbles. So the probability of drawing a marble that is not red is $\\frac{7}{10}$.
 
 ### When the question hands you a smaller group
 
@@ -42,7 +42,7 @@ Sometimes a question narrows the group down before it asks. Here is a two-way ta
 
 The words "a junior is picked" tell you the group is only the juniors. So the bottom of the fraction is $20$, not $40$. The top is the $15$ juniors who said Yes.
 
-$P = \\frac{15}{20}$
+$\\text{probability} = \\frac{15}{20}$
 
 Both numbers divide by $5$: $15 \\div 5 = 3$ and $20 \\div 5 = 4$, so the answer is $\\frac{3}{4}$.
 

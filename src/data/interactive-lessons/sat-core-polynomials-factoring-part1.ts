@@ -70,9 +70,9 @@ A **zero** of a function is a value of $x$ that makes the function equal $0$. If
       id: 'poly-core-p1-q4',
       type: 'quiz' as const,
       question: 'If $f(3) = 0$, what does that tell you about $f(x)$?',
-      options: ['$f(x)$ is equal to $0$ for every value of $x$', '$(x - 3)$ is a factor of $f(x)$', '$(x + 3)$ is a factor of $f(x)$', '$f(0) = 3$'],
+      options: ['$f(x)$ equals $0$ for every value of $x$', '$(x - 3)$ is a factor of $f(x)$', '$(x + 3)$ is a factor of $f(x)$', 'The graph of $f$ crosses the $y$-axis at $3$'],
       correctAnswer: 1,
-      explanation: 'The answer is that $(x - 3)$ is a factor of $f(x)$. When putting $3$ in for $x$ gives an output of $0$, the number $3$ is a zero of the function, and every zero comes from a factor. The factor that gives the zero $3$ is $(x - 3)$, because setting $x - 3 = 0$ gives $x = 3$. The choice $(x + 3)$ would give the zero $x = -3$ instead.'
+      explanation: 'The answer is that $(x - 3)$ is a factor of $f(x)$. When putting $3$ in for $x$ gives an output of $0$, the number $3$ is a zero of the function, and every zero comes from a factor. The factor that gives the zero $3$ is $(x - 3)$, because setting $x - 3 = 0$ gives $x = 3$. The choice $(x + 3)$ would give the zero $x = -3$ instead. The statement $f(3) = 0$ describes the point $(3, 0)$ on the $x$-axis, not a $y$-intercept, and it says nothing about other inputs.'
     }
   ]
 }

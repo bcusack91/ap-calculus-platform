@@ -37,9 +37,9 @@ For example, $8, 9, 10$ has a range of $10 - 8 = 2$, so those numbers sit close 
       id: 'stat-core-p2-q2',
       type: 'quiz' as const,
       question: `Find the median of this data set: $11, 4, 9, 20, 6, 15, 8$`,
-      options: ['$8$', '$11$', '$6$', '$9$'],
+      options: ['$8$', '$11$', '$20$', '$9$'],
       correctAnswer: 3,
-      explanation: `Put the numbers in order from smallest to largest: $4, 6, 8, 9, 11, 15, 20$. There are $7$ numbers, so the middle one is the fourth number. Counting in from the left: $4$ is first, $6$ is second, $8$ is third, and $9$ is fourth. The median is $9$. The number $11$ sits in the middle of the original unsorted list, which is why sorting first matters.`
+      explanation: `Put the numbers in order from smallest to largest: $4, 6, 8, 9, 11, 15, 20$. There are $7$ numbers, so the middle one is the fourth number. Counting in from the left: $4$ is first, $6$ is second, $8$ is third, and $9$ is fourth. The median is $9$. The number $20$ sits in the middle of the original unsorted list, which is why sorting first matters. The numbers $8$ and $11$ sit one spot too far left or right of the middle.`
     },
     {
       id: 'stat-core-p2-q3',
@@ -54,13 +54,13 @@ For example, $8, 9, 10$ has a range of $10 - 8 = 2$, so those numbers sit close 
       type: 'quiz' as const,
       question: `Two data sets each have five values. Set A is $20, 21, 22, 23, 24$. Set B is $5, 14, 22, 30, 39$. Which set has the larger range, and what does that tell you?`,
       options: [
-        'Set A, because its numbers are larger',
-        'They have the same range',
-        'Set B, because its values are more spread out',
-        'Set A, because it has more values'
+        'Set A, so its values are larger on average',
+        'Set A, so its values are more spread out',
+        'Set B, so its values are more spread out',
+        'Set B, so its values are larger on average'
       ],
       correctAnswer: 2,
-      explanation: `Find each range by subtracting the smallest value from the biggest value. For Set A: $24 - 20 = 4$. For Set B: $39 - 5 = 34$. Since $34$ is larger than $4$, Set B has the larger range, and a larger range means the values are more spread out from each other. Set A does contain some large numbers, but range measures the distance between the ends of a list, not how big the numbers are.`
+      explanation: `Find each range by subtracting the smallest value from the biggest value. For Set A: $24 - 20 = 4$. For Set B: $39 - 5 = 34$. Since $34$ is larger than $4$, Set B has the larger range, and a larger range means the values are more spread out from each other. Range does not tell you how big the numbers are. In fact, both sets have the same mean, $22$, and the same middle value, $22$, so neither set is larger on average. Picking Set A comes from thinking range measures how big the numbers are.`
     }
   ]
 }

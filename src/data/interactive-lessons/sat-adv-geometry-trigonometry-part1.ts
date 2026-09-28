@@ -12,15 +12,15 @@ This is the largest hard-tier bank on the test, and it splits cleanly into two h
 
 ### Archetype 1: The Two-Observation Height Problem
 
-A surveyor sights the top of a tower at $32^{\\circ}$, walks $40$ m closer, and sights it at $48^{\\circ}$. A drone hovers between two ground points $500$ m apart. A lighthouse keeper watches a boat approach.
+A surveyor sights the top of a tower at $27^{\\circ}$, walks $35$ m closer, and sights it at $44^{\\circ}$. A drone hovers between two ground points $600$ m apart. A lighthouse keeper watches a boat approach.
 
 Every one of these has the same skeleton. Let $h$ be the unknown height. The two horizontal distances are $\\frac{h}{\\tan\\theta_{1}}$ and $\\frac{h}{\\tan\\theta_{2}}$, and the given distance is either their **difference** (observer moves toward the object) or their **sum** (object is between the two observers). Factor out $h$:
 
-$h\\left(\\frac{1}{\\tan 32^{\\circ}} - \\frac{1}{\\tan 48^{\\circ}}\\right) = 40$
+$h\\left(\\frac{1}{\\tan 27^{\\circ}} - \\frac{1}{\\tan 44^{\\circ}}\\right) = 35$
 
 One equation, one unknown, no law of sines needed. **Angle of depression from a height equals the angle of elevation from the ground** — they are alternate interior angles.
 
-The planted answers are the two horizontal distances, plus the value $40\\tan 32^{\\circ}$ from treating the $40$ m as the whole distance to the base.
+The planted answers are the two horizontal distances, plus the value $35\\tan 27^{\\circ}$ from treating the $35$ m as the whole distance to the base.
 
 ### Archetype 2: A Trig Ratio Names a Pythagorean Triple
 
@@ -34,11 +34,11 @@ Worth memorizing: $3$-$4$-$5$, $5$-$12$-$13$, $8$-$15$-$17$, $7$-$24$-$25$, $20$
 
 In a right triangle the two acute angles are complementary, which produces three facts hard items lean on constantly:
 
-- $\\sin\\theta = \\cos(90^{\\circ} - \\theta)$, so $\\sin(3a) = \\cos(a+10^{\\circ})$ means $3a + (a+10) = 90$. Pure algebra, no calculator.
+- $\\sin\\theta = \\cos(90^{\\circ} - \\theta)$, so $\\sin(2a) = \\cos(a+15^{\\circ})$ means $2a + (a+15) = 90$. Pure algebra, no calculator.
 - $\\cos R = \\sin P$ when $P$ and $R$ are the two acute angles.
-- $\\tan B = \\frac{1}{\\tan A}$, so $\\sin A \\cdot \\tan B = \\sin A \\cdot \\frac{\\cos A}{\\sin A} = \\cos A$.
+- $\\tan B = \\frac{1}{\\tan A}$, so $\\tan A \\cdot \\tan B = 1$ for the two acute angles of any right triangle.
 
-The distractors are always **the right angle with the wrong ratio** ($\\sin 60^{\\circ}$ offered next to $\\tan 60^{\\circ}$) and **the right ratio of the other angle** ($\\tan 30^{\\circ}$).`
+The distractors are always **the right angle with the wrong ratio** ($\\sin 50^{\\circ}$ offered next to $\\tan 50^{\\circ}$) and **the right ratio of the other angle** ($\\tan 40^{\\circ}$).`
     },
     {
       id: 'geot-adv-p1-arch456',
@@ -47,9 +47,9 @@ The distractors are always **the right angle with the wrong ratio** ($\\sin 60^{
 
 Whenever a line is drawn parallel to a side, or a figure is enlarged, or two triangles are declared similar: **lengths scale by $k$, areas by $k^{2}$.**
 
-If $AD:DB = 3:2$ then $AD:AB = 3:5$ — converting a part-to-part ratio into a part-to-whole ratio is where most of the errors live. The area ratio is then $\\frac{9}{25}$, and the *quadrilateral* is the big triangle minus the small one, never a direct ratio.
+If $AD:DB = 4:3$ then $AD:AB = 4:7$ — converting a part-to-part ratio into a part-to-whole ratio is where most of the errors live. The area ratio is then $\\frac{16}{49}$, and the *quadrilateral* is the big triangle minus the small one, never a direct ratio.
 
-Running it backwards works too: an enlargement with $2.25$ times the area has linear factor $\\sqrt{2.25} = 1.5$.
+Running it backwards works too: an enlargement with $1.69$ times the area has linear factor $\\sqrt{1.69} = 1.3$.
 
 ### Archetype 5: Area as a Bridge (the Altitude Trick)
 
@@ -64,8 +64,8 @@ The distractors write themselves: the **area** and the **base** are both choices
 
 Distance, midpoint, slope — plus one condition that resolves an ambiguity.
 
-- **Unknown coordinate + given distance**: $(a+2)^{2} + 5^{2} = 13^{2}$ gives two values of $a$, and a condition like "$a > 0$" or "$k > 3$" picks one. The rejected root's answer is always a choice.
-- **Moving a set distance along a line**: a slope of $\\frac{5}{12}$ means each step of $12$ right and $5$ up covers exactly $13$ units. To travel $26$, take two steps. Never use the distance formula with a variable here.
+- **Unknown coordinate + given distance**: $(a-1)^{2} + 8^{2} = 17^{2}$ gives two values of $a$, and a condition like "$a > 0$" or "$k > 3$" picks one. The rejected root's answer is always a choice.
+- **Moving a set distance along a line**: a slope of $\\frac{3}{4}$ means each step of $4$ right and $3$ up covers exactly $5$ units. To travel $15$, take three steps. Never use the distance formula with a variable here.
 - **Perpendicular bisector = the set of points equidistant from two points.** "Equidistant from $A$ and $B$" and "on line $\\ell$" is a two-line system.
 - **Distance from a point to a line** is $\\frac{|Ax_{0}+By_{0}+C|}{\\sqrt{A^{2}+B^{2}}}$ — the shortest path, and the only one the item means by "shortest."
 - **Shoelace** handles any polygon's area from its vertices, and the vertices must be listed in order around the figure.

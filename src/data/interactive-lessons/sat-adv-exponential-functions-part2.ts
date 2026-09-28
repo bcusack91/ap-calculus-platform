@@ -28,39 +28,39 @@ export const lessonData = {
       type: 'quiz' as const,
       question: 'The amount of a chemical is modeled by $A(t) = 200(0.8)^{t}$ grams, with $t$ in hours. Asked "by what percent does the amount decrease over 2 hours," a student answers $64\\%$. What went wrong?',
       options: [
-        'They treated the decay as linear and doubled $20\\%$',
-        'They compounded three periods instead of two',
-        'They reported the percent REMAINING instead of the percent decrease',
-        'They used $0.2$ as the decay factor instead of $0.8$'
+        'They doubled the hourly $20\\%$ loss as if the decay were linear',
+        'They applied the hourly factor three times instead of two',
+        'They gave the share left over instead of the share lost',
+        'They used $0.2$ as the hourly factor instead of $0.8$'
       ],
       correctAnswer: 2,
-      explanation: 'Over 2 hours the amount is multiplied by $(0.8)^{2} = 0.64$ — so $64\\%$ REMAINS, and the decrease is $100\\% - 64\\% = 36\\%$. The complement trap is the single most common exponential-decay distractor: the computation is right, but it answers the opposite question. (The linear-doubling error would give $40\\%$, a different planted choice.)'
+      explanation: 'Over 2 hours the amount is multiplied by $(0.8)^{2} = 0.64$ — so $64\\%$ REMAINS, and the decrease is $100\\% - 64\\% = 36\\%$. The complement trap is the single most common exponential-decay distractor: the computation is right, but it answers the opposite question. None of the other slips produces $64$: doubling $20\\%$ gives $40\\%$, three factors give $(0.8)^{3} = 0.512$, and a factor of $0.2$ gives $(0.2)^{2} = 0.04$.'
     },
     {
       id: 'ea2-q2',
       type: 'quiz' as const,
       question: 'A car loses $2.5\\%$ of its value each month. A student claims it loses $30\\%$ per year. Why is $30\\%$ wrong?',
       options: [
-        'Each month\'s $2.5\\%$ is taken from a smaller base, so the true annual loss is about $26.2\\%$ — less than the linear stack',
-        'Compounding accelerates decay, so the true annual loss is more than $30\\%$',
-        'The true loss is $73.8\\%$, the complement of the student\'s answer',
-        'The student should have used $13$ months, since the first month counts twice'
+        'Each monthly loss hits a smaller value, so the yearly loss is about $26.2\\%$',
+        'Compounding makes the losses snowball, so the yearly loss is about $34.5\\%$',
+        'The value is multiplied by $0.975^{12}$, so the yearly loss is about $73.8\\%$',
+        'A year spans $13$ monthly steps, so the yearly loss is about $32.5\\%$'
       ],
       correctAnswer: 0,
-      explanation: 'The monthly factor is $0.975$, and $(0.975)^{12} \\approx 0.738$, so about $26.2\\%$ is lost — LESS than $2.5 \\times 12 = 30\\%$. For decay, compounding always loses less than the linear stack because each percent comes off an already-shrunken value. (For growth it is the reverse: compounding gains MORE than the linear stack.) Knowing the direction of the error lets you eliminate half the choices without computing.'
+      explanation: 'The monthly factor is $0.975$, and $(0.975)^{12} \\approx 0.738$, so about $26.2\\%$ is lost — LESS than $2.5 \\times 12 = 30\\%$. For decay, compounding always loses less than the linear stack because each percent comes off an already-shrunken value. (For growth it is the reverse: compounding gains MORE than the linear stack.) Knowing the direction of the error lets you eliminate half the choices without computing. $34.5\\%$ is $(1.025)^{12} - 1$, the growth computation; $73.8\\%$ is the share of value that REMAINS, not the loss; $32.5\\%$ is the fencepost slip $2.5 \\times 13$.'
     },
     {
       id: 'ea2-q3',
       type: 'quiz' as const,
       question: 'A student rewrites $f(t) = 500(1.3)^{t/4}$ as $f(t) = 500(1.3^{4})^{t}$ to find the per-unit growth rate. What is the verdict?',
       options: [
-        'Correct — exponent rules allow regrouping $t/4$ as $4t$',
-        'Wrong — the base should be $(1.3)^{1/4}$; they multiplied the exponent instead of dividing',
-        'Wrong — the coefficient $500$ must also be raised to the fourth power',
-        'Wrong — the base should be $0.3$, the growth part alone'
+        'Correct, since exponent rules let $t/4$ be regrouped as $4t$',
+        'Wrong, since the per-unit base should be $1.3^{1/4}$, not $1.3^{4}$',
+        'Wrong, since the $500$ must also be raised to the fourth power',
+        'Wrong, since the per-unit base should be $1.3 \\div 4$, not $1.3^{4}$'
       ],
       correctAnswer: 1,
-      explanation: 'Since $\\frac{t}{4} = \\frac{1}{4} \\cdot t$, the correct regrouping is $\\left[(1.3)^{1/4}\\right]^{t} \\approx (1.0678)^{t}$ — about $6.8\\%$ per unit of $t$. The student\'s version, $(1.3^{4})^{t} = (2.8561)^{t}$, is the conversion run backward and wildly overstates the growth. Quick check: $t/4$ makes growth SLOWER per unit $t$ than $1.3$, so the correct per-unit base must be smaller than $1.3$.'
+      explanation: 'Since $\\frac{t}{4} = \\frac{1}{4} \\cdot t$, the correct regrouping is $\\left[(1.3)^{1/4}\\right]^{t} \\approx (1.0678)^{t}$ — about $6.8\\%$ per unit of $t$. The student\'s version, $(1.3^{4})^{t} = (2.8561)^{t}$, is the conversion run backward and wildly overstates the growth. Quick check: $t/4$ makes growth SLOWER per unit $t$ than $1.3$, so the correct per-unit base must be smaller than $1.3$. Dividing the base by $4$ gives $0.325$, a decay factor, which cannot describe a growing model, and the $500$ is a starting value that the exponent never touches.'
     }
   ]
 };

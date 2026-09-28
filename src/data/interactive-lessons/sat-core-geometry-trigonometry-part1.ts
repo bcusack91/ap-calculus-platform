@@ -8,13 +8,13 @@ export const lessonData = {
 
 **Part 1 of 2 — One Skill, One Idea**
 
-Trigonometry on the SAT starts with one shape: a **right triangle**, which is a triangle with one $90°$ angle.
+Trigonometry on the SAT starts with one shape: a **right triangle**, which is a triangle with one $90^{\\circ}$ angle.
 
 ### Naming the three sides
 
 Pick one of the two slanted angles and call it $\\theta$ (that is the Greek letter theta — it is a name for "the angle we care about"). Now the three sides get names:
 
-- **Hypotenuse** — the longest side, always the one across from the $90°$ angle. Its name never changes.
+- **Hypotenuse** — the longest side, always the one across from the $90^{\\circ}$ angle. Its name never changes.
 - **Opposite** — the side across the triangle from $\\theta$.
 - **Adjacent** — the other leg, the one touching $\\theta$.
 

@@ -25,15 +25,15 @@ export const lessonData = {
     {
       id: 'na2-q1',
       type: 'quiz' as const,
-      question: 'Solving $\\sqrt{2x + 3} = x - 6$ by squaring gives $x^{2} - 14x + 33 = 0$, so $x = 3$ or $x = 11$. A student reports both as solutions. What did they miss?',
+      question: 'Solving $\\sqrt{2x + 3} = x - 6$ by squaring gives $x^{2} - 14x + 33 = 0$, so $x = 3$ or $x = 11$. A student reports both as solutions. Which statement correctly evaluates the student\'s answer?',
       options: [
-        '$x = 11$ fails the original equation, so only $x = 3$ works',
-        'Squaring loses a solution, so there is a third root',
-        'The domain of $\\sqrt{2x + 3}$ excludes $x = 11$',
-        '$x = 3$ makes the right side $-3$, and a square root cannot equal a negative number'
+        'Only $x = 3$ is a solution, because $x = 11$ makes $2x + 3$ greater than $x - 6$',
+        'Both are solutions, because each one satisfies $x^{2} - 14x + 33 = 0$',
+        'Neither is a solution, because each one makes $2x + 3$ unequal to $x - 6$',
+        'Only $x = 11$ is a solution, because $x = 3$ makes $x - 6$ less than zero'
       ],
       correctAnswer: 3,
-      explanation: 'At $x = 3$ the right side is $3 - 6 = -3$, but $\\sqrt{2(3) + 3} = 3 \\ge 0$ — the two sides cannot match, so $x = 3$ is extraneous. At $x = 11$: $\\sqrt{25} = 5$ and $11 - 6 = 5$ — valid. The pre-check $x \\ge 6$ (right side must be nonnegative) would have killed $x = 3$ before any substitution. Squaring can only ADD fake roots, never lose real ones.'
+      explanation: 'At $x = 3$ the right side is $3 - 6 = -3$, but $\\sqrt{2(3) + 3} = 3 \\ge 0$ — the two sides cannot match, so $x = 3$ is extraneous. At $x = 11$: $\\sqrt{25} = 5$ and $11 - 6 = 5$ — valid. The pre-check $x \\ge 6$ (right side must be nonnegative) would have killed $x = 3$ before any substitution. The traps: rejecting $x = 11$ because $25 \\ne 5$, or rejecting both roots because $9 \\ne -3$ and $25 \\ne 5$, compares the RADICAND $2x + 3$ with the right side and forgets to take the square root; accepting both trusts the squared equation, but squaring can ADD fake roots, so every root must be checked in the original.'
     },
     {
       id: 'na2-q2',

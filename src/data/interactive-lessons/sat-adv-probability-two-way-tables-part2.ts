@@ -43,7 +43,7 @@ A percent answer must state its base. $\\frac{240}{510}$ and $\\frac{240}{450}$ 
 
 **Write the denominator first.** Before touching a number, write "out of ___" and fill in the population the sentence restricted you to. The numerator then takes care of itself.
 
-**Translate "given that" mechanically.** $P(A \\mid B) = \\frac{\\text{count in both } A \\text{ and } B}{\\text{total in } B}$. The condition after "given that" is always $B$, and $B$ is always the denominator.
+**Translate "given that" mechanically.** Rewrite "given that the person is a staff member, the probability that the person prefers tea" as "of the staff members, what fraction prefer tea?" The group named after "given that" is always the denominator, and the numerator is the members of that group who also have the other trait.
 
 **For rate comparisons, use a common yardstick.** Convert each group's count to a percent of its own total before comparing. Comparing raw counts across unequal groups is meaningless — and is precisely what the wrong answer does.
 

@@ -35,7 +35,7 @@ Mass $=$ volume $\\times$ density. Every hard item in this family plants the raw
 
 The alloy variant is worth memorizing: melting two metals adds their **volumes** and adds their **masses**, so the new density is $\\frac{\\text{total mass}}{\\text{total volume}}$. Averaging the two densities is valid only for equal volumes — and the average is always a choice.
 
-Melting or melting-down never changes mass. Ice at $0.92$ g/cm³ becoming water at $1.00$ g/cm³ keeps its $828$ g and loses volume.`
+Melting or melting-down never changes mass. Ice at $0.92$ g/cm³ becoming water at $1.00$ g/cm³: $900$ cm³ of ice keeps its $828$ g and shrinks to $828$ cm³ of water.`
     },
     {
       id: 'geob-adv-p1-arch45',
@@ -64,15 +64,15 @@ The same idea drives cone-filling rate problems: at depth $5$ in a cone that is 
     {
       id: 'geob-adv-p1-q1',
       type: 'quiz' as const,
-      question: 'An engineer redesigns a cylindrical canister so that its radius is $25$ percent greater and its height is $36$ percent smaller than before. What is the effect on the canister’s volume?',
+      question: 'An engineer redesigns a cylindrical canister so that its radius is $25$ percent greater and its height is $36$ percent smaller than before. The new volume is what percent of the original volume?',
       options: [
-        'It is unchanged.',
-        'It decreases by $11$ percent.',
-        'It increases by $56$ percent.',
-        'It decreases by $20$ percent.'
+        '$100$',
+        '$89$',
+        '$156.25$',
+        '$80$'
       ],
       correctAnswer: 0,
-      explanation: 'Volume scales by $(1.25)^{2}(0.64) = 1.5625 \\times 0.64 = 1.0$ exactly, so the volume is unchanged. The distractors: "decreases by $11$ percent" just adds the stated percents ($+25 - 36$). "Increases by $56$ percent" applies $(1.25)^{2}$ and ignores the height change. "Decreases by $20$ percent" multiplies the linear factors $1.25 \\times 0.64 = 0.8$, forgetting that the radius is squared — that factor governs the lateral surface area, not the volume.'
+      explanation: 'Volume scales by $(1.25)^{2}(0.64) = 1.5625 \\times 0.64 = 1$ exactly, so the new volume is $100$ percent of the original: the volume is unchanged. The traps: $89$ just adds the stated percents, $100 + 25 - 36$. $156.25$ applies $(1.25)^{2}$ and ignores the height change. $80$ multiplies the linear factors $1.25 \\times 0.64 = 0.8$, forgetting that the radius is squared — that product governs the lateral surface area, not the volume.'
     },
     {
       id: 'geob-adv-p1-q2',

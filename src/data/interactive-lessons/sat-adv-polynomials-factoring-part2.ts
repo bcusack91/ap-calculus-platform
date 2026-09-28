@@ -19,7 +19,7 @@ export const lessonData = {
 
 - **$P(1)$ is the sum of the coefficients.** "Remainder when divided by $x - 1$," "sum of coefficients of the quotient" — both collapse to evaluations at $1$. For a clean division $P(x) = D(x)Q(x)$: $Q(1) = \\frac{P(1)}{D(1)}$.
 - **Remainder theorem over long division.** Remainder of $P(x) \\div (x - c)$ is $P(c)$. Long division is for finding QUOTIENTS only — and even then, synthetic division is faster.
-- **Vieta before dividing.** Asked for a sum or product of remaining zeros? Total (from Vieta) minus the known zero. Division is only needed when you must know the zeros individually.
+- **Vieta before dividing.** Asked for a sum or product of remaining zeros? Take the total from Vieta, then subtract the known zero (for a sum) or divide by it (for a product). Division is only needed when you must know the zeros individually.
 - **Desmos exploit:** graph the polynomial and read the zeros directly; for a parameter, add a slider and tune until the graph passes through the required zero. Exact fractions still deserve an algebra check.`
     },
     {
@@ -40,13 +40,13 @@ export const lessonData = {
       type: 'quiz' as const,
       question: 'A student lists the zeros of $f(x) = x(2x + 5)(x - 4)$ as $0$, $\\frac{5}{2}$, and $-4$. What is the error?',
       options: [
-        'The signs are flipped: the correct zeros are $0$, $-\\frac{5}{2}$, and $4$',
-        'The zero $0$ should not be included',
-        'The zero of $2x + 5$ is $-5$, since the $2$ divides the constant only',
-        'Nothing — the list is correct'
+        'The signs of $\\frac{5}{2}$ and $-4$ are reversed, since each factor must equal $0$',
+        'The zero $0$ should be dropped, since the factor $x$ has no constant term',
+        'The zero of $2x + 5$ should be $-5$, since the $2$ does not affect the zero',
+        'The list is already correct, since each zero keeps the sign in its factor'
       ],
       correctAnswer: 0,
-      explanation: 'Each factor is set to ZERO: $2x + 5 = 0$ gives $x = -\\frac{5}{2}$, and $x - 4 = 0$ gives $x = 4$. Reading zeros with the sign of the constant as-written (the "$+5$ means $+\\frac{5}{2}$" reflex) is the single most common factored-form error, and the fully sign-flipped list is a standard planted choice. $0$ IS a zero — the lone factor $x$ contributes it.'
+      explanation: 'Each factor is set to ZERO: $2x + 5 = 0$ gives $x = -\\frac{5}{2}$, and $x - 4 = 0$ gives $x = 4$, so the correct zeros are $0$, $-\\frac{5}{2}$, and $4$. Reading zeros with the sign of the constant as-written (the "$+5$ means $+\\frac{5}{2}$" reflex) is the single most common factored-form error. $0$ IS a zero — the lone factor $x$ equals $0$ when $x = 0$. And the $2$ does matter: $2x + 5 = 0$ requires dividing $-5$ by $2$.'
     },
     {
       id: 'pa2-q3',

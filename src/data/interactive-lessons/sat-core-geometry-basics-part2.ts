@@ -19,16 +19,16 @@ export const lessonData = {
 
 These four cover most SAT angle questions.
 
-- **Straight line: $180°$.** Two angles that together form a straight line are called **supplementary**. They add to $180°$.
-- **Right angle: $90°$.** Two angles that together form a right angle are called **complementary**. They add to $90°$.
-- **Triangle: $180°$.** The three angles inside any triangle add to $180°$.
+- **Straight line: $180^\\circ$.** Two angles that together form a straight line are called **supplementary**. They add to $180^\\circ$.
+- **Right angle: $90^\\circ$.** Two angles that together form a right angle are called **complementary**. They add to $90^\\circ$.
+- **Triangle: $180^\\circ$.** The three angles inside any triangle add to $180^\\circ$.
 - **Vertical angles are equal.** When two straight lines cross, they make an X. The two angles directly across from each other are equal.
 
-To find a missing angle, write the total and subtract what you know. If two angles are supplementary and one is $130°$, the other is $180 - 130 = 50°$.
+To find a missing angle, write the total and subtract what you know. If two angles are supplementary and one is $130^\\circ$, the other is $180 - 130 = 50^\\circ$.
 
 ### The Pythagorean theorem
 
-A **right triangle** has one $90°$ angle. The two short sides that form the right angle are the **legs**. The long side across from the right angle is the **hypotenuse**.
+A **right triangle** has one $90^\\circ$ angle. The two short sides that form the right angle are the **legs**. The long side across from the right angle is the **hypotenuse**.
 
 $$a^{2} + b^{2} = c^{2}$$
 
@@ -45,57 +45,57 @@ Three sets of numbers show up constantly: $3$-$4$-$5$, $6$-$8$-$10$, and $5$-$12
     {
       id: 'geobas-core-p2-q1',
       type: 'quiz' as const,
-      question: `Two angles are supplementary. One of them measures $110°$. What is the measure of the other angle?`,
+      question: `Two angles are supplementary. One of them measures $110^\\circ$. What is the measure of the other angle?`,
       options: [
-        `$110°$`,
-        `$70°$`,
-        `$20°$`,
-        `$250°$`
+        `$110^\\circ$`,
+        `$70^\\circ$`,
+        `$20^\\circ$`,
+        `$250^\\circ$`
       ],
       correctAnswer: 1,
-      explanation: `The answer is $70°$.
+      explanation: `The answer is $70^\\circ$.
 
-Supplementary angles add up to $180°$. So subtract the angle you know from $180$:
+Supplementary angles add up to $180^\\circ$. So subtract the angle you know from $180$:
 
 $$180 - 110 = 70$$
 
-The other angle is $70°$.
+The other angle is $70^\\circ$.
 
-Subtracting from $90$ would give $-20$, and that is the complementary rule. Supplementary means a straight line, which is $180°$.`
+The value $20^\\circ$ comes from using $90$, the complementary total, and subtracting the smaller number from the larger: $110 - 90 = 20$. Supplementary means a straight line, which is $180^\\circ$.`
     },
     {
       id: 'geobas-core-p2-q2',
       type: 'quiz' as const,
-      question: `Two straight lines cross each other. One of the four angles formed measures $72°$. What is the measure of the angle directly across from it?`,
+      question: `Two straight lines cross each other. One of the four angles formed measures $72^\\circ$. What is the measure of the angle directly across from it?`,
       options: [
-        `$18°$`,
-        `$108°$`,
-        `$36°$`,
-        `$72°$`
+        `$18^\\circ$`,
+        `$108^\\circ$`,
+        `$36^\\circ$`,
+        `$72^\\circ$`
       ],
       correctAnswer: 3,
-      explanation: `The answer is $72°$.
+      explanation: `The answer is $72^\\circ$.
 
 When two straight lines cross, they form an X shape. The two angles directly across from each other are called **vertical angles**, and vertical angles are always equal.
 
-So the angle across from the $72°$ angle is also $72°$. No arithmetic is needed.
+So the angle across from the $72^\\circ$ angle is also $72^\\circ$. No arithmetic is needed.
 
-The value $108°$ is $180 - 72$. That is the angle **next to** the $72°$ one, not the one across from it.`
+The value $108^\\circ$ is $180 - 72$. That is the angle **next to** the $72^\\circ$ one, not the one across from it.`
     },
     {
       id: 'geobas-core-p2-q3',
       type: 'quiz' as const,
-      question: `A triangle has angles measuring $50°$ and $60°$. What is the measure of the third angle?`,
+      question: `A triangle has angles measuring $50^\\circ$ and $60^\\circ$. What is the measure of the third angle?`,
       options: [
-        `$70°$`,
-        `$110°$`,
-        `$80°$`,
-        `$90°$`
+        `$70^\\circ$`,
+        `$110^\\circ$`,
+        `$80^\\circ$`,
+        `$90^\\circ$`
       ],
       correctAnswer: 0,
-      explanation: `The answer is $70°$.
+      explanation: `The answer is $70^\\circ$.
 
-The three angles inside any triangle add up to $180°$.
+The three angles inside any triangle add up to $180^\\circ$.
 
 Step 1 — Add the two angles you know:
 
@@ -105,9 +105,9 @@ Step 2 — Subtract that from $180$:
 
 $$180 - 110 = 70$$
 
-The third angle is $70°$.
+The third angle is $70^\\circ$.
 
-Answering $110°$ means stopping after Step 1. That sum is what the two known angles use up, not what is left over.`
+Answering $110^\\circ$ means stopping after Step 1. That sum is what the two known angles use up, not what is left over.`
     },
     {
       id: 'geobas-core-p2-q4',

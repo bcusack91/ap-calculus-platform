@@ -10,7 +10,7 @@ export const lessonData = {
 
 Work at about **90 seconds per question** — the realistic budget for a hard Module 2 function item. For each one, run the same three-beat routine:
 
-1. **Ten seconds:** name the archetype (rate chain, table reversal, transformation, inverse order) and write the chain with units.
+1. **Ten seconds:** name the archetype (rate chain, table reversal, transformation, composition order) and write the chain with units.
 2. **Sixty seconds:** compute, keeping every intermediate labeled with its units.
 3. **Twenty seconds:** re-read the final sentence and confirm your number wears the units it asks for. If your value appears among the choices in the *wrong* units, that is confirmation you built the right chain — and a warning that the trap is one step behind you.
 
@@ -35,17 +35,17 @@ Do not look at the answer choices before step 2. On these items the choices are 
       question: 'A fabrication shop\'s laser cutter uses coolant at a rate of $22$ milliliters per hour of cutting. Coolant is sold only in sealed $1.5$-liter bottles at $\\$34$ each, and an opened bottle cannot be carried over to the next month. The shop has $190$ hours of cutting scheduled for next month. What is the shop\'s coolant cost, in dollars, for next month?',
       options: [
         '$68$',
-        '$94.76$',
+        '$94.75$',
         '$102$',
         '$4{,}180$'
       ],
       correctAnswer: 2,
-      explanation: 'Coolant needed: $190 \\times 22 = 4{,}180$ milliliters, or $4.18$ liters. Bottles needed: $4.18 \\div 1.5 = 2.79$, and since bottles are sealed and cannot be carried over, the shop must buy $3$. Cost: $3 \\times 34 = \\$102$. The traps: $4{,}180$ is the milliliters of coolant, an intermediate in the wrong units. $68$ rounds $2.79$ DOWN to $2$ bottles, which would leave the month\'s cutting unfinished. $94.76$ pays for a fractional bottle, $2.787 \\times 34$, ignoring that bottles are sold whole.'
+      explanation: 'Coolant needed: $190 \\times 22 = 4{,}180$ milliliters, or $4.18$ liters. Bottles needed: $4.18 \\div 1.5 \\approx 2.79$, and since bottles are sealed and cannot be carried over, the shop must buy $3$. Cost: $3 \\times 34 = \\$102$. The traps: $4{,}180$ is the milliliters of coolant, an intermediate in the wrong units. $68$ rounds $2.79$ DOWN to $2$ bottles, which would leave the month\'s cutting unfinished. $94.75$ pays for a fractional bottle, $\\frac{4.18}{1.5} \\times 34 \\approx 94.75$, ignoring that bottles are sold whole.'
     },
     {
       id: 'fn-adv-p3-q3',
       type: 'quiz' as const,
-      question: 'The function $f$ is invertible, with $f(1) = 4$, $f(2) = 9$, $f(3) = 15$, $f(4) = 21$, and $f(5) = 30$. The function $g$ is defined by $g(x) = f^{-1}(x - 6)$. What is the value of $g(21)$?',
+      question: 'The function $f$ has $f(1) = 4$, $f(2) = 9$, $f(3) = 15$, $f(4) = 21$, and $f(5) = 30$, and no two inputs of $f$ give the same output. For each value of $x$, $g(x)$ is defined as the value of $t$ for which $f(t) = x - 6$. What is the value of $g(21)$?',
       options: [
         '$-2$',
         '$4$',
@@ -53,7 +53,7 @@ Do not look at the answer choices before step 2. On these items the choices are 
         '$3$'
       ],
       correctAnswer: 3,
-      explanation: 'Evaluate the inside first: $21 - 6 = 15$. Then $g(21) = f^{-1}(15)$, and since $f(3) = 15$, the answer is $3$. The traps: $15$ is the value of the inner expression $x - 6$, the intermediate handed to $f^{-1}$. $4$ ignores the $-6$ and computes $f^{-1}(21) = 4$ — dangerously plausible because $21$ is a table value. $-2$ applies the shift on the outside instead of the inside, computing $f^{-1}(21) - 6 = 4 - 6$.'
+      explanation: 'Evaluate the inside first: $21 - 6 = 15$. So $g(21)$ is the value of $t$ for which $f(t) = 15$. Reading the table backward, $f(3) = 15$, so the answer is $3$. The traps: $15$ is the value of the inner expression $x - 6$, the intermediate you look up in the table, not the answer. $4$ ignores the $-6$ and solves $f(t) = 21$ instead, which gives $t = 4$ — dangerously plausible because $21$ is a table value. $-2$ applies the shift on the outside instead of the inside: it solves $f(t) = 21$ to get $4$ and then subtracts $6$.'
     },
     {
       id: 'fn-adv-p3-q4',

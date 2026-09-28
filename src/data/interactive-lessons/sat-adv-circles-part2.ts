@@ -16,9 +16,9 @@ Completing the square leaves you holding $r^{2}$. Every question then wants some
 
 "How far is $P$ from the circle?" is not "how far is $P$ from the center." For an external point:
 
-$$\\text{shortest distance to the circle} = \\overline{PC} - r$$
+$$\\text{shortest distance to the circle} = PC - r$$
 
-and the distance to the far side is $\\overline{PC} + r$. Both $\\overline{PC}$ and $\\overline{PC} + r$ are always offered.
+and the distance to the far side is $PC + r$. Both $PC$ and $PC + r$ are always offered.
 
 ### Distractor Species 3: The Sign Slip Reading the Center
 
@@ -62,15 +62,15 @@ Sprinkler, gravel, and tile items run **area $\\rightarrow$ volume $\\rightarrow
       question: `In the $xy$-plane, a circle is given by $x^{2} + y^{2} + 6x - 8y - 11 = 0$, and $P$ is the point $(4, 9)$. What is the shortest distance from $P$ to the circle itself, to the nearest hundredth?`,
       options: ['$2.60$', '$5.10$', '$8.60$', '$14.60$'],
       correctAnswer: 0,
-      explanation: `Completing the square: $(x + 3)^{2} + (y - 4)^{2} = 11 + 9 + 16 = 36$, so the center is $(-3, 4)$ and $r = 6$. Then $\\overline{PC} = \\sqrt{(4 + 3)^{2} + (9 - 4)^{2}} = \\sqrt{74} \\approx 8.60$, and the shortest distance to the circle is $8.60 - 6 = 2.60$. The traps: $8.60$ is the distance to the CENTER, stopping before the circle; $14.60$ is $\\overline{PC} + r$, the distance to the far side; $5.10$ reads the center as $(3, 4)$ — the sign slip on $(x + 3)^{2}$ — giving $\\sqrt{26}$.`
+      explanation: `Completing the square: $(x + 3)^{2} + (y - 4)^{2} = 11 + 9 + 16 = 36$, so the center is $(-3, 4)$ and $r = 6$. Then $PC = \\sqrt{(4 + 3)^{2} + (9 - 4)^{2}} = \\sqrt{74} \\approx 8.60$, and the shortest distance to the circle is $8.60 - 6 = 2.60$. The traps: $8.60$ is the distance to the CENTER, stopping before the circle; $14.60$ is $PC + r$, the distance to the far side; $5.10$ reads the center as $(3, 4)$ — the sign slip on $(x + 3)^{2}$ — giving $\\sqrt{26}$.`
     },
     {
       id: 'circ-adv-p2-q3',
       type: 'quiz' as const,
-      question: `In the $xy$-plane, the line $y = 2x + k$ is tangent to the circle $x^{2} + y^{2} - 4x + 2y - 20 = 0$. What is the positive value of $k$, to the nearest hundredth?`,
+      question: `In the $xy$-plane, the line $y = 2x + k$ is tangent to the circle $x^{2} + y^{2} + 2x - 6y - 15 = 0$. What is the positive value of $k$, to the nearest hundredth?`,
       options: ['$5$', '$6.18$', '$11.18$', '$16.18$'],
-      correctAnswer: 1,
-      explanation: `The circle is $(x - 2)^{2} + (y + 1)^{2} = 25$: center $(2, -1)$, $r = 5$. Writing the line as $2x - y + k = 0$, tangency means the distance from the center equals the radius: $\\frac{|2(2) - (-1) + k|}{\\sqrt{5}} = 5$, so $|5 + k| = 5\\sqrt{5} \\approx 11.18$ and $k = 5\\sqrt{5} - 5 \\approx 6.18$. The traps: $11.18$ is $5\\sqrt{5}$, stopping before subtracting the $5$; $16.18$ is the magnitude of the OTHER solution ($k = -5\\sqrt{5} - 5$), the tangent line on the far side; $5$ is simply the radius.`
+      correctAnswer: 3,
+      explanation: `The circle is $(x + 1)^{2} + (y - 3)^{2} = 25$: center $(-1, 3)$, $r = 5$. Writing the line as $2x - y + k = 0$, tangency means the distance from the center equals the radius: $\\frac{|2(-1) - 3 + k|}{\\sqrt{5}} = 5$, so $|k - 5| = 5\\sqrt{5} \\approx 11.18$ and $k = 5 + 5\\sqrt{5} \\approx 16.18$ (the other solution, $5 - 5\\sqrt{5} \\approx -6.18$, is negative). The traps: $11.18$ is $5\\sqrt{5}$, stopping before adding the $5$; $6.18$ is the magnitude of the OTHER solution, the tangent line on the far side with its sign dropped; $5$ is simply the radius.`
     }
   ]
 }

@@ -18,10 +18,10 @@ $$\\text{sum} = n \\times \\text{mean}$$
 
 Every hard item that mentions a mean is really handing you a **total**. Convert immediately, work with the total, convert back at the end.
 
-- **Missing value.** Nine seedlings, mean 46 g. Total is $9 \\times 46 = 414$. Add the eight known masses, subtract, and the ninth appears.
-- **Removed value.** Ten sheets, mean 6.4. Total 64. Remove a 9.1 sheet: new total 54.9 across **nine** sheets, so the new mean is $54.9/9 = 6.1$. The classic error is dividing by 10 again.
-- **Corrected entry.** 25 scores with mean 79.2, but a 58 was typed as 85. The total is $27$ too high, so subtract 27 from the **total** (not from the mean) and re-divide.
-- **Added values.** 20 values with mean 47, then 52 and 64 join. New total $940 + 116 = 1056$, new count 22, new mean 48.
+- **Missing value.** Eleven seedlings, mean 38 g. Total is $11 \\times 38 = 418$. Add the ten known masses, subtract, and the eleventh appears.
+- **Removed value.** Twelve sheets, mean 5.5. Total 66. Remove an 8.8 sheet: new total 57.2 across **eleven** sheets, so the new mean is $57.2/11 = 5.2$. The classic error is dividing by 12 again.
+- **Corrected entry.** 30 scores with mean 81.4, but a 67 was typed as 76. The total is $9$ too high, so subtract 9 from the **total** (not from the mean) and re-divide.
+- **Added values.** 15 values with mean 52, then 55 and 66 join. New total $780 + 121 = 901$, new count 17, new mean 53.
 
 The trap in every one of these: the question usually asks for a *change* or a *second statistic*, and the intermediate total or the intermediate mean is sitting right there in the answer choices.
 
@@ -51,13 +51,13 @@ The reliable method is totals:
 
 $$\\text{combined mean} = \\frac{n_1 m_1 + n_2 m_2}{n_1 + n_2}$$
 
-**Worked example.** 18 students average 84 and 12 students average 91. Total $= 18(84) + 12(91) = 2604$, so the combined mean is $2604/30 = 86.8$ — not $87.5$, which is what averaging 84 and 91 gives.
+**Worked example.** 14 students average 78 and 21 students average 88. Total $= 14(78) + 21(88) = 2940$, so the combined mean is $2940/35 = 84$ — not $83$, which is what averaging 78 and 88 gives.
 
 **The lever shortcut.** The combined mean always lands closer to the **larger** group. If the combined mean sits $a$ above group 1's mean and $b$ below group 2's mean, then
 
 $$\\frac{n_1}{n_2} = \\frac{b}{a}$$
 
-The sizes are proportional to the **opposite** distances. Group means 26 and 34 with a combined mean of 29? The distances are 3 and 5, so the sizes are in ratio $5:3$ — group 1 is bigger, which is why the combined mean drifted toward 26. Writing the ratio as $3:5$ is the single most common error on this archetype, and it is always an answer choice.
+The sizes are proportional to the **opposite** distances. Group means 50 and 62 with a combined mean of 54? The distances are 4 and 8, so the sizes are in ratio $8:4 = 2:1$ — group 1 is bigger, which is why the combined mean drifted toward 50. Writing the ratio as $1:2$ is the single most common error on this archetype, and it is always an answer choice.
 
 The same lever solves "how many more must be added": if you need the mean to reach a target, remember that new members enlarge the **denominator** too. Set up $\\dfrac{S + vt}{n + t} = \\text{target}$ and solve — never $vt = \\text{shortfall}$.
 

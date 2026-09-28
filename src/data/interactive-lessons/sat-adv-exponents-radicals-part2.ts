@@ -89,15 +89,15 @@ $\\sqrt{18} + \\sqrt{8} \\neq \\sqrt{26}$. Radicals add only after they are simp
     {
       id: 'expr-adv-p2-q3',
       type: 'quiz' as const,
-      question: 'A single bacterium has a mass of $4 \\times 10^{-13}$ grams. Asked how many such bacteria have a combined mass of $2$ kilograms, a student computes $2 \\div \\left(4 \\times 10^{-13}\\right) = 5 \\times 10^{12}$. What went wrong?',
+      question: 'A single bacterium has a mass of $4 \\times 10^{-13}$ grams. Asked how many such bacteria have a combined mass of $2$ kilograms, a student computes $2 \\div \\left(4 \\times 10^{-13}\\right) = 5 \\times 10^{12}$. Which change to the student\'s work gives the correct count?',
       options: [
-        'Nothing went wrong; $5 \\times 10^{12}$ is correct.',
-        'The exponents should have been added, giving $5 \\times 10^{-14}$.',
-        'The kilograms were never converted to grams; the answer is $5 \\times 10^{15}$.',
-        'The mantissas should have been multiplied, giving $8 \\times 10^{12}$.'
+        'Replace the $2$ with $2 \\times 10^{-3}$ before dividing.',
+        'Replace the $2$ with $2 \\times 10^{3}$ before dividing.',
+        'Multiply $2$ by $4 \\times 10^{-13}$ instead of dividing.',
+        'Replace the $10^{-13}$ with $10^{13}$ before dividing.'
       ],
-      correctAnswer: 2,
-      explanation: 'The bacterium’s mass is in GRAMS but the target mass is in KILOGRAMS, so the division mixes units. Convert first: $2$ kg $= 2 \\times 10^{3}$ g, and $\\frac{2 \\times 10^{3}}{4 \\times 10^{-13}} = 0.5 \\times 10^{16} = 5 \\times 10^{15}$. The distractors name the other three ways to go wrong: calling $5 \\times 10^{12}$ correct is the unit trap itself, the exponent rule for division is subtraction (not addition), and dividing scientific notation divides the mantissas rather than multiplying them.'
+      correctAnswer: 1,
+      explanation: 'The bacterium’s mass is in GRAMS but the target mass is in KILOGRAMS, so the division mixes units. Convert first: one kilogram is $10^{3}$ grams, so $2$ kg $= 2 \\times 10^{3}$ g, and $\\frac{2 \\times 10^{3}}{4 \\times 10^{-13}} = 0.5 \\times 10^{16} = 5 \\times 10^{15}$ bacteria. The traps: using $2 \\times 10^{-3}$ converts in the wrong direction (grams to kilograms), giving only $5 \\times 10^{9}$; a larger unit must become MORE of the smaller unit. Multiplying gives $8 \\times 10^{-13}$, which is the mass of two bacteria, not a count. Changing $10^{-13}$ to $10^{13}$ misreads the tiny mass as a huge one and gives $5 \\times 10^{-14}$, a count smaller than one.'
     }
   ]
 };

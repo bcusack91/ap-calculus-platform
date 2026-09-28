@@ -35,7 +35,7 @@ On a hard systems item, the option set is almost always: **the correct value**, 
     {
       id: 'advsys2-q2',
       type: 'quiz' as const,
-      question: `A company's cost to make n units is C = 2,000 + 15n dollars, and its revenue is R = 25n dollars. A competitor's cost for n units is C = 3,500 + 10n dollars. At the production level where the company breaks even, what is the competitor's cost?`,
+      question: `A company's cost to make $n$ units is $C = 2{,}000 + 15n$ dollars, and its revenue is $R = 25n$ dollars. A competitor's cost for $n$ units is $C = 3{,}500 + 10n$ dollars. At the production level where the company breaks even, what is the competitor's cost?`,
       options: ['$\\$200$', '$\\$3{,}500$', '$\\$5{,}000$', '$\\$5{,}500$'],
       correctAnswer: 3,
       explanation: `Company break-even: $2000 + 15n = 25n$, so $10n = 2000$ and $n = 200$ units. The competitor's cost at $n = 200$: $3500 + 10(200) = 5{,}500$ dollars. The traps: $\\$5{,}000$ is the COMPANY's own cost and revenue at break-even — right computation, wrong entity, and the algebra's natural stopping point. $\\$200$ is the unit count wearing a dollar sign. $\\$3{,}500$ is the competitor's fixed cost, read straight off the problem. One extra substitution separates 700 from 800 here.`

@@ -60,12 +60,12 @@ Then solve, and finish by asking the only question that matters at this level: *
       question: 'The concentration of a nutrient in a hydroponic tank, in grams per liter, is modeled by $N(t) = \\frac{180t}{t^{2} + 9}$, where $t$ is the number of hours since the nutrient was added. The concentration rises, reaches a single maximum, and then falls. What is that maximum concentration, in grams per liter?',
       options: [
         '$3$',
-        '$6$',
+        '$18$',
         '$30$',
         '$60$'
       ],
       correctAnswer: 2,
-      explanation: 'Ask which values $k$ are attainable. Setting $\\frac{180t}{t^{2}+9} = k$ gives $kt^{2} - 180t + 9k = 0$, which has a real solution only when the discriminant is nonnegative: $180^{2} - 4(k)(9k) \\ge 0$, so $32{,}400 \\ge 36k^{2}$ and $k \\le 30$. The maximum is $30$ grams per liter, attained when the discriminant is zero, at $t = 3$. The traps: $3$ is the TIME at which the maximum occurs, not the concentration — the wrong-coordinate error this archetype is built on. $60$ comes from evaluating $\\frac{180(3)}{9}$, dropping the $t^{2}$ term from the denominator. $6$ is $2t$, from doubling the time as though the model were symmetric about $t = 3$ in a way that doubles the input.'
+      explanation: 'Ask which values $k$ are attainable. Setting $\\frac{180t}{t^{2}+9} = k$ gives $kt^{2} - 180t + 9k = 0$, which has a real solution only when the discriminant is nonnegative: $180^{2} - 4(k)(9k) \\ge 0$, so $32{,}400 \\ge 36k^{2}$ and $k \\le 30$. The maximum is $30$ grams per liter, attained when the discriminant is zero, at $t = 3$. The traps: $3$ is the TIME at which the maximum occurs, not the concentration — the wrong-coordinate error this archetype is built on. $60$ comes from evaluating $\\frac{180(3)}{9}$, dropping the $t^{2}$ term from the denominator. $18$ is $N(9) = \\frac{1620}{90}$, from assuming the peak occurs at $t = 9$ (the constant in the denominator) instead of at $t = \\sqrt{9} = 3$.'
     }
   ]
 };

@@ -28,13 +28,13 @@ Every hard-tier option list is engineered. If you know the four molds the distra
       type: 'quiz' as const,
       question: `Gym A charges an $\\$18$ monthly rate plus a $\\$150$ joining fee; Gym B charges $\\$24$ monthly with no fee. A student is asked for the greatest number of months for which Gym B's total cost is LESS than Gym A's. She correctly reduces the comparison to $6m < 150$, gets $m < 25$, and answers 25. What went wrong?`,
       options: [
-        'Nothing went wrong — 25 is correct',
-        'At $m = 25$ the two totals are exactly equal, so the strict "less than" fails; the greatest valid month count is 24',
-        'The student should have rounded 25 up to 26',
-        'The student set up the inequality backward and should have gotten $m > 25$'
+        'The answer should stay 25, because 25 is the cutoff the inequality gives',
+        'The answer should be 24, because at 25 months the two totals are equal',
+        'The answer should be 26, because Gym B becomes cheaper after month 25',
+        'The answer should be 6, because the 150 fee covers about 6 months of Gym B'
       ],
       correctAnswer: 1,
-      explanation: 'From $6m < 150$, $m$ must be STRICTLY less than $25$. At exactly $25$ months both gyms have cost the same amount, which is not "less than." So the greatest whole number of months is $24$. This is the boundary-value trap: the equality point is always planted in the options. The setup was fine, and rounding up would make the violation worse.'
+      explanation: 'From $6m < 150$, $m$ must be STRICTLY less than $25$. At exactly $25$ months both gyms cost $\\$600$, which is not "less than." So the greatest whole number of months is $24$ ($\\$576$ at Gym B versus $\\$582$ at Gym A). This is the boundary-value trap: the equality point is always planted in the options. Keeping 25 treats the strict cutoff as if it were included. Gym B is the cheaper gym BEFORE month 25, not after, so 26 has the direction backward. Dividing the fee by $\\$24$ ignores that Gym A also charges $\\$18$ each month; the monthly gap is only $\\$6$.'
     },
     {
       id: 'advlei2-q2',

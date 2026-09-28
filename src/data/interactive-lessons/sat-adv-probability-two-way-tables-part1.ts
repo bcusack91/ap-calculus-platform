@@ -31,7 +31,7 @@ All three are always in the options. The phrase **"given that"** — or "of the 
 
 ### Archetype 2: The Reversed Conditional
 
-$P(A \\mid B)$ and $P(B \\mid A)$ are different numbers built from the same cell. "Given that the animal is a cat, the probability it has been here over 3 years" is $\\frac{40}{210}$; "given that it has been here over 3 years, the probability it is a cat" is $\\frac{40}{83}$. Reading the condition off the wrong side of the sentence is the most common way strong students lose this question.
+"Of the cats, what fraction have been here over 3 years" and "of the animals here over 3 years, what fraction are cats" are different numbers built from the same cell. "Given that the animal is a cat, the probability it has been here over 3 years" is $\\frac{40}{210}$; "given that it has been here over 3 years, the probability it is a cat" is $\\frac{40}{83}$. Reading the condition off the wrong side of the sentence is the most common way strong students lose this question.
 
 ### Archetype 3: The Missing Entry
 
@@ -64,10 +64,10 @@ One cell is blank, and you recover it from the margins: a row must sum to its ro
     {
       id: 'prob-adv-p1-q3',
       type: 'quiz' as const,
-      question: `At a competition, Country X won $60$ medals in total: $24$ gold, $18$ silver, and the rest bronze. Across all countries, $69$ bronze medals were awarded out of $180$ medals overall. What fraction of all the bronze medals were won by Country X?`,
-      options: ['$\\frac{18}{69}$', '$\\frac{18}{60}$', '$\\frac{18}{180}$', '$\\frac{69}{180}$'],
+      question: `At a competition, Country X won $60$ medals in total: $21$ gold, $20$ silver, and the rest bronze. Across all countries, $69$ bronze medals were awarded out of $180$ medals overall. What fraction of all the bronze medals were won by Country X?`,
+      options: ['$\\frac{19}{69}$', '$\\frac{19}{60}$', '$\\frac{19}{180}$', '$\\frac{69}{180}$'],
       correctAnswer: 0,
-      explanation: `First recover the missing cell from the row: Country X's bronze count is $60 - 24 - 18 = 18$. The question asks what fraction of the BRONZE medals those represent, so the denominator is the $69$ bronze medals: $\\frac{18}{69}$. The traps: $\\frac{18}{60}$ uses Country X's own total, answering "what fraction of Country X's medals were bronze" — the reversed conditional; $\\frac{18}{180}$ uses the grand total, giving the joint probability; $\\frac{69}{180}$ is the overall share of medals that were bronze, which ignores Country X.`
+      explanation: `First recover the missing cell from the row: Country X's bronze count is $60 - 21 - 20 = 19$. The question asks what fraction of the BRONZE medals those represent, so the denominator is the $69$ bronze medals: $\\frac{19}{69}$. The traps: $\\frac{19}{60}$ uses Country X's own total, answering "what fraction of Country X's medals were bronze," the reversed conditional; $\\frac{19}{180}$ uses the grand total, giving the joint probability; $\\frac{69}{180}$ is the overall share of medals that were bronze, which ignores Country X.`
     }
   ]
 }

@@ -20,13 +20,13 @@ Say it as SOH-CAH-TOA. Label the sides first, then pick the ratio.
 
 Six numbers. Learning them means some questions take no work at all.
 
-- $\\sin 30° = \\frac{1}{2}$
-- $\\cos 60° = \\frac{1}{2}$
-- $\\sin 45° = \\frac{\\sqrt{2}}{2}$ and $\\cos 45° = \\frac{\\sqrt{2}}{2}$
-- $\\tan 45° = 1$
-- $\\sin 90° = 1$ and $\\sin 0° = 0$
+- $\\sin 30^{\\circ} = \\frac{1}{2}$
+- $\\cos 60^{\\circ} = \\frac{1}{2}$
+- $\\sin 45^{\\circ} = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^{\\circ} = \\frac{\\sqrt{2}}{2}$
+- $\\tan 45^{\\circ} = 1$
+- $\\sin 90^{\\circ} = 1$ and $\\sin 0^{\\circ} = 0$
 
-The $\\sin 30° = \\frac{1}{2}$ one is worth extra attention. It says the side across from a $30°$ angle is exactly **half the hypotenuse**. That turns some problems into a single division by $2$.
+The $\\sin 30^{\\circ} = \\frac{1}{2}$ one is worth extra attention. It says the side across from a $30^{\\circ}$ angle is exactly **half the hypotenuse**. That turns some problems into a single division by $2$.
 
 ### One identity
 
@@ -36,12 +36,12 @@ This is true for every angle, always. The little $2$ means "square the whole thi
 
 ### Radians, in one line
 
-Angles can be measured in degrees or in **radians**. A full circle is $360°$, which is the same as $2\\pi$ radians. To go from degrees to radians, multiply by $\\frac{\\pi}{180}$.`
+Angles can be measured in degrees or in **radians**. A full circle is $360^{\\circ}$, which is the same as $2\\pi$ radians. To go from degrees to radians, multiply by $\\frac{\\pi}{180}$.`
     },
     {
       id: 'geotrig-core-p2-q1',
       type: 'quiz' as const,
-      question: `What is $\\sin 30°$?`,
+      question: `What is $\\sin 30^{\\circ}$?`,
       options: [
         `$1$`,
         `$\\frac{\\sqrt{3}}{2}$`,
@@ -51,16 +51,16 @@ Angles can be measured in degrees or in **radians**. A full circle is $360°$, w
       correctAnswer: 2,
       explanation: `The answer is $\\frac{1}{2}$.
 
-This is one to memorize: $\\sin 30° = \\frac{1}{2}$.
+This is one to memorize: $\\sin 30^{\\circ} = \\frac{1}{2}$.
 
-What it means in a picture: in any right triangle with a $30°$ angle, the side across from that $30°$ angle is exactly half as long as the hypotenuse. Half of the hypotenuse over the whole hypotenuse is $\\frac{1}{2}$.
+What it means in a picture: in any right triangle with a $30^{\\circ}$ angle, the side across from that $30^{\\circ}$ angle is exactly half as long as the hypotenuse. Half of the hypotenuse over the whole hypotenuse is $\\frac{1}{2}$.
 
-The value $\\frac{\\sqrt{2}}{2}$ belongs to $45°$, not $30°$.`
+The value $\\frac{\\sqrt{2}}{2}$ belongs to $45^{\\circ}$, not $30^{\\circ}$.`
     },
     {
       id: 'geotrig-core-p2-q2',
       type: 'quiz' as const,
-      question: `What is $\\tan 45°$?`,
+      question: `What is $\\tan 45^{\\circ}$?`,
       options: [
         `$1$`,
         `$0$`,
@@ -70,13 +70,13 @@ The value $\\frac{\\sqrt{2}}{2}$ belongs to $45°$, not $30°$.`
       correctAnswer: 0,
       explanation: `The answer is $1$.
 
-Tangent is opposite over adjacent. In a right triangle with a $45°$ angle, the two legs are the same length, so the opposite side and the adjacent side are equal.
+Tangent is opposite over adjacent. In a right triangle with a $45^{\\circ}$ angle, the two legs are the same length, so the opposite side and the adjacent side are equal.
 
 Any number divided by itself is $1$. For example, if both legs are $7$:
 
-$$\\tan 45° = \\frac{7}{7} = 1$$
+$$\\tan 45^{\\circ} = \\frac{7}{7} = 1$$
 
-So $\\tan 45° = 1$, no matter how big the triangle is.`
+So $\\tan 45^{\\circ} = 1$, no matter how big the triangle is.`
     },
     {
       id: 'geotrig-core-p2-q3',
@@ -102,21 +102,21 @@ The choice $2$ comes from counting the two terms, but the identity is about thei
     {
       id: 'geotrig-core-p2-q4',
       type: 'quiz' as const,
-      question: `A right triangle has a hypotenuse of length $10$ and one angle measuring $30°$. What is the length of the side opposite the $30°$ angle?`,
+      question: `A right triangle has a hypotenuse of length $10$ and one angle measuring $30^{\\circ}$. What is the length of the side opposite the $30^{\\circ}$ angle?`,
       options: [
         `$10$`,
         `$5$`,
         `$20$`,
-        `$3$`
+        `$5\\sqrt{3}$`
       ],
       correctAnswer: 1,
       explanation: `The answer is $5$.
 
 Step 1 — Sine is opposite over hypotenuse, so:
 
-$$\\sin 30° = \\frac{\\text{opposite}}{10}$$
+$$\\sin 30^{\\circ} = \\frac{\\text{opposite}}{10}$$
 
-Step 2 — You know $\\sin 30° = \\frac{1}{2}$, so:
+Step 2 — You know $\\sin 30^{\\circ} = \\frac{1}{2}$, so:
 
 $$\\frac{1}{2} = \\frac{\\text{opposite}}{10}$$
 
@@ -124,9 +124,11 @@ Step 3 — Multiply both sides by $10$:
 
 $$\\text{opposite} = \\frac{1}{2} \\times 10 = 5$$
 
-The side opposite the $30°$ angle is $5$.
+The side opposite the $30^{\\circ}$ angle is $5$.
 
-The shortcut is worth saying out loud: the side across from a $30°$ angle is half the hypotenuse.`
+The shortcut is worth saying out loud: the side across from a $30^{\\circ}$ angle is half the hypotenuse.
+
+The choice $5\\sqrt{3}$ is the other leg, the side next to the $30^{\\circ}$ angle. That one uses cosine, not sine. The choice $20$ doubles the hypotenuse instead of halving it.`
     }
   ]
 }

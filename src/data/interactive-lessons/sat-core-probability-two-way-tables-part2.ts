@@ -18,7 +18,7 @@ $\\frac{12}{30}$: both numbers divide by $6$, and $12 \\div 6 = 2$ while $30 \\d
 
 ### The word "not"
 
-For a "not" question, count everything that does **not** match, and put that count on top. In a bag of $10$ marbles where $3$ are red, "not red" is $10 - 3 = 7$ marbles, so $P = \\frac{7}{10}$.
+For a "not" question, count everything that does **not** match, and put that count on top. In a bag of $10$ marbles where $3$ are red, "not red" is $10 - 3 = 7$ marbles, so the probability is $\\frac{7}{10}$.
 
 ### Working from a table
 

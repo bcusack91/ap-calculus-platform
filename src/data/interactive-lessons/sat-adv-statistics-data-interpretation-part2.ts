@@ -12,7 +12,7 @@ Hard-tier statistics items are not hard arithmetic. They are easy arithmetic wit
 
 ### Species 1: The Intermediate Value
 
-This is the most common wrong answer in the entire topic. You solve for the missing value, the new mean, the second group's mean — and then the question asks for the **change**, the **median**, or the **difference**. Your correct intermediate result is choice C, waiting.
+This is the most common wrong answer in the entire topic. You solve for the missing value, the new mean, the second group's mean — and then the question asks for the **change**, the **median**, or the **difference**. Your correct intermediate result is sitting among the choices, waiting.
 
 > Before you bubble, re-read the last clause of the question. "By how much does it differ," "what is the median," "how many more" — these are not the quantity you just computed.
 
@@ -45,11 +45,11 @@ Answer choices systematically **swap** the two changes — attaching the mean's 
 
 Never average a list twice. Convert to a total once, edit the total, divide once at the end.
 
-*After 9 rounds her mean is 82.6; she wants a 10-round mean of at least 83.* Total so far $= 743.4$; required total $= 830$; required round $= 86.6$. One multiplication, one subtraction.
+*After 6 rounds her mean is 74.5; she wants a 7-round mean of at least 76.* Total so far $= 6(74.5) = 447$; required total $= 7(76) = 532$; required round $= 532 - 447 = 85$. Two multiplications, one subtraction.
 
 ### Speed Technique 2: Deviations From an Anchor
 
-To average 87, 91, 84, 90, 88, anchor at 88: the deviations are $-1, +3, -4, +2, 0$, summing to $0$. The mean is exactly 88. This is faster and far less error-prone than adding five three-digit numbers, and it is how you should check any mean you compute under time pressure.
+To average 87, 91, 84, 90, 88, anchor at 88: the deviations are $-1, +3, -4, +2, 0$, summing to $0$. The mean is exactly 88. This is faster and far less error-prone than adding five two-digit numbers, and it is how you should check any mean you compute under time pressure.
 
 ### Speed Technique 3: Transformations Move Center, Scaling Moves Spread
 
@@ -57,9 +57,9 @@ If every value becomes $ax + b$:
 
 - **Mean** becomes $a(\\text{mean}) + b$
 - **Median** becomes $a(\\text{median}) + b$
-- **Standard deviation** becomes $|a| \\times \\text{SD}$ — the $+b$ shifts everything equally and changes nothing about spread.
+- **Spread** (the range, or the standard deviation) is stretched by a factor of $|a|$, because multiplying every value by $a$ multiplies every gap between values by $|a|$. The $+b$ slides every value the same distance, so it changes nothing about spread.
 
-Order matters. "Increase by 3, then double" is $2(x+3)$; "double, then increase by 3" is $2x + 3$. Both results appear among the choices.
+Order matters. "Increase by 5, then triple" is $3(x+5)$; "triple, then increase by 5" is $3x + 5$. Both results appear among the choices.
 
 ### Speed Technique 4: Read Frequency Tables by Cumulative Count
 
@@ -67,7 +67,7 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
 
 ### Speed Technique 5: Constraint Items — Push One Variable to Its Limit
 
-"Five positive integers, mean 20, median 18, smallest 11, largest 34, what is the greatest possible second-largest value?" Write the ordered list $11, b, 18, d, 34$. The mean fixes the total, so $b + d$ is a constant. To **maximize** $d$, drive $b$ to its **minimum** legal value. Maximizing one member of a fixed-sum pair always means minimizing the other; choosing the split evenly, or pushing the wrong variable, produces the distractors.`
+"Five positive integers, mean 16, median 15, smallest 9, largest 27, what is the greatest possible second-largest value?" Write the ordered list $9, b, 15, d, 27$. The mean fixes the total, so $b + d$ is a constant. To **maximize** $d$, drive $b$ to its **minimum** legal value. Maximizing one member of a fixed-sum pair always means minimizing the other; choosing the split evenly, or pushing the wrong variable, produces the distractors.`
     },
     {
       id: 'sdi-adv-p2-q1',
@@ -76,7 +76,7 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
       options: [
         'Section R has the greater standard deviation.',
         'Section S has the greater standard deviation.',
-        'The standard deviations are equal, because the sections have the same mean and the same median.',
+        'The two sections have equal standard deviations.',
         'Section S has the greater median.'
       ],
       correctAnswer: 1,
@@ -85,28 +85,28 @@ For a frequency table with $N$ entries, find the median by **position**, not by 
     {
       id: 'sdi-adv-p2-q2',
       type: 'quiz' as const,
-      question: 'After 9 quizzes a student’s mean score is 82.6 points. She wants her mean over 10 quizzes to be at least 83.0 points. Quiz scores are whole numbers of points. What is the least score she can earn on the tenth quiz and still meet her goal?',
+      question: 'After 8 quizzes a student’s mean score is 82.5 points. She wants her mean over 9 quizzes to be at least 83.5 points. Quiz scores are whole numbers of points. What is the least score she can earn on the ninth quiz and still meet her goal?',
       options: [
-        '$83$',
-        '$86$',
-        '$86.6$',
-        '$87$'
+        '$83.5$',
+        '$91$',
+        '$91.5$',
+        '$92$'
       ],
       correctAnswer: 3,
-      explanation: 'Her total after 9 quizzes is $9(82.6) = 743.4$. To average at least 83.0 over 10 quizzes she needs a total of at least $10(83.0) = 830$, so the tenth score $s$ must satisfy $743.4 + s \\ge 830$, giving $s \\ge 86.6$. Because scores are whole numbers, the least one that works is 87. The $86.6$ choice is the value before rounding, and it is the most-picked wrong answer on this archetype. The $86$ choice rounds 86.6 the wrong direction: at 86 the total is 829.4 and the mean is 82.94, just short of the goal. The $83$ choice is the target mean itself, treated as a single score.'
+      explanation: 'Her total after 8 quizzes is $8(82.5) = 660$. To average at least 83.5 over 9 quizzes she needs a total of at least $9(83.5) = 751.5$, so the ninth score $s$ must satisfy $660 + s \\ge 751.5$, giving $s \\ge 91.5$. Because scores are whole numbers, the least one that works is 92. The $91.5$ choice is the value before rounding, and it is the most-picked wrong answer on this archetype. The $91$ choice rounds 91.5 the wrong direction: at 91 the total is 751 and the mean is about 83.44, just short of the goal. The $83.5$ choice is the target mean itself, treated as a single score.'
     },
     {
       id: 'sdi-adv-p2-q3',
       type: 'quiz' as const,
-      question: 'A data set has a mean of 14, a median of 12, and a standard deviation of 5. Every value in the data set is multiplied by 3, and then 4 is subtracted from each result. What are the mean, median, and standard deviation of the new data set?',
+      question: 'A data set has a mean of 14 and a median of 12. Every value in the data set is multiplied by 3, and then 4 is subtracted from each result. Which of the following correctly describes the mean, the median, and the spread of the new data set?',
       options: [
-        'Mean 38, median 32, standard deviation 15',
-        'Mean 38, median 32, standard deviation 11',
-        'Mean 42, median 36, standard deviation 15',
-        'Mean 38, median 32, standard deviation 5'
+        'Mean 38, median 32, and the spread is tripled',
+        'Mean 38, median 32, and the spread is unchanged',
+        'Mean 30, median 24, and the spread is tripled',
+        'Mean 30, median 24, and the spread is unchanged'
       ],
       correctAnswer: 0,
-      explanation: 'Under $x \\to 3x - 4$, both measures of center transform exactly like a data value: the mean becomes $3(14) - 4 = 38$ and the median becomes $3(12) - 4 = 32$. Standard deviation is a distance, so it is stretched by the factor 3 but untouched by the shift: $3(5) = 15$. The standard-deviation-11 choice subtracts the 4 from the standard deviation too, but shifting every value by the same amount moves the whole data set without changing how spread out it is. The mean-42 choice applies only the multiplication to the centers, dropping the $-4$. The standard-deviation-5 choice leaves the standard deviation alone, treating scaling like a shift.'
+      explanation: 'Under $x \\to 3x - 4$, both measures of center transform exactly like a data value: the mean becomes $3(14) - 4 = 38$ and the median becomes $3(12) - 4 = 32$. Multiplying every value by 3 triples every gap between values, so the spread triples; subtracting 4 then slides every value the same distance, which moves the data set without changing how spread out it is. The choices with mean 30 and median 24 subtract the 4 before multiplying, computing $3(14 - 4)$ and $3(12 - 4)$, which reverses the stated order. The spread-unchanged choices treat the scaling like a shift: a shift leaves the spread alone, but a multiplication stretches it.'
     }
   ]
 };

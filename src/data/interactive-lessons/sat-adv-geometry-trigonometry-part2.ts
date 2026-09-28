@@ -12,11 +12,11 @@ Hard-tier geometry rarely punishes a bad theorem. It punishes a **correct calcul
 
 ### Distractor Species 1: The Intermediate Leg
 
-You are asked for a *perimeter*, an *area*, or a *difference*, and one option is the leg you found on the way. In a $\\tan A = \\frac{7}{24}$ problem with hypotenuse $50$, the legs are $14$ and $48$ — and $48$ will be sitting right there in the option list. Before you bubble, reread the last six words of the question.
+You are asked for a *perimeter*, an *area*, or a *difference*, and one option is the leg you found on the way. In a $\\tan A = \\frac{7}{24}$ problem with hypotenuse $75$, the legs are $21$ and $72$ — and $72$ will be sitting right there in the option list. Before you bubble, reread the last six words of the question.
 
 ### Distractor Species 2: The Un-Scaled Triple
 
-Given $\\sin A = \\frac{8}{17}$, your instinct correctly says "8-15-17." But the triangle in the question has hypotenuse $68$, not $17$. The scale factor is $68 \\div 17 = 4$, so the legs are $32$ and $60$, **not** $8$ and $15$. The area of the *unscaled* triangle is always planted as an option.
+Given $\\sin A = \\frac{8}{17}$, your instinct correctly says $8\\text{-}15\\text{-}17$. But the triangle in the question has hypotenuse $34$, not $17$. The scale factor is $34 \\div 17 = 2$, so the legs are $16$ and $30$, **not** $8$ and $15$. The area of the *unscaled* triangle is always planted as an option.
 
 Memorize the triples so the recognition is free: $3\\text{-}4\\text{-}5$, $5\\text{-}12\\text{-}13$, $7\\text{-}24\\text{-}25$, $8\\text{-}15\\text{-}17$, $9\\text{-}40\\text{-}41$, $20\\text{-}21\\text{-}29$.
 
@@ -32,7 +32,7 @@ for a line written $Ax + By = C$.
 
 ### Distractor Species 5: Linear Ratio Where Area Ratio Belongs
 
-Lengths scale by $k$; areas scale by $k^{2}$. An item that gives you a *difference* of areas is testing exactly this: if $k = 2.5$, then $\\text{big} - \\text{small} = 6.25A - A = 5.25A$, and the trap divides by $1.5$ instead.
+Lengths scale by $k$; areas scale by $k^{2}$. An item that gives you a *difference* of areas is testing exactly this: if $k = 3$, then $\\text{big} - \\text{small} = 9A - A = 8A$, and the trap divides by $2$ instead.
 
 ---
 

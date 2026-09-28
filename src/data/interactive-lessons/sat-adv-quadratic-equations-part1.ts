@@ -56,12 +56,12 @@ Hard items ask for expressions **built from** the roots so that you never need t
       question: 'In the $xy$-plane, the graph of $y = x^{2} + 4x + k$ and the line $y = 2x - 5$ intersect at exactly one point. What is the value of $k$?',
       options: [
         '$-6$',
+        '$-5$',
         '$-4$',
-        '$-1$',
-        '$5$'
+        '$-1$'
       ],
-      correctAnswer: 1,
-      explanation: 'Set equal: $x^{2} + 4x + k = 2x - 5$ gives $x^{2} + 2x + (k + 5) = 0$. One intersection means discriminant zero: $4 - 4(k + 5) = 0$, so $k + 5 = 1$ and $k = -4$. The trap choices: $-1$ is the $x$-coordinate of the tangent point (from $x^{2} + 2x + 1 = 0$), $-6$ comes from the sign slip $4 + 4(k+5) = 0$, and $5$ comes from setting $k + 5 = 0$ instead of the discriminant.'
+      correctAnswer: 2,
+      explanation: 'Set equal: $x^{2} + 4x + k = 2x - 5$ gives $x^{2} + 2x + (k + 5) = 0$. One intersection means discriminant zero: $4 - 4(k + 5) = 0$, so $k + 5 = 1$ and $k = -4$. The trap choices: $-1$ is the $x$-coordinate of the tangent point (from $x^{2} + 2x + 1 = 0$), $-6$ comes from the sign slip $4 + 4(k+5) = 0$, and $-5$ comes from setting the constant term $k + 5$ equal to $0$ instead of the discriminant.'
     },
     {
       id: 'qa1-q2',
@@ -74,7 +74,7 @@ Hard items ask for expressions **built from** the roots so that you never need t
         '$92$'
       ],
       correctAnswer: 2,
-      explanation: 'Vertex at $t = -\\frac{30}{2(-5)} = 3$ seconds. Then $h(3) = -5(9) + 30(3) + 2 = -45 + 90 + 2 = 47$ meters. The classic trap: $3$ is the TIME of the maximum, not the height — always the most-picked wrong answer. $45$ is the squared term alone, and $92$ is $90 + 2$ with the $-45$ dropped.'
+      explanation: 'Vertex at $t = -\\frac{30}{2(-5)} = 3$ seconds. Then $h(3) = -5(9) + 30(3) + 2 = -45 + 90 + 2 = 47$ meters. The classic trap: $3$ is the TIME of the maximum, not the height — always the most-picked wrong answer. $45$ is the size of the squared term $-5(9)$ alone, and $92$ is $90 + 2$ with the $-45$ dropped.'
     },
     {
       id: 'qa1-q3',

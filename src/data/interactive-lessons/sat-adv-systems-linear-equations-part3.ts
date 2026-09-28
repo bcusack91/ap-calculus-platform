@@ -40,7 +40,7 @@ Start the clock.`
       question: 'The system $9x + 6y = 21$ and $ax + by = 7$ has infinitely many solutions, where $a$ and $b$ are constants. What is the value of $a + b$?',
       options: ['$2$', '$3$', '$5$', '$15$'],
       correctAnswer: 2,
-      explanation: 'The constants reveal the multiple: $7 = 21 \\times \\frac{1}{3}$, so the second equation is one-third of the first. Then $a = 9 \\times \\frac{1}{3} = 3$ and $b = 6 \\times \\frac{1}{3} = 2$, giving $a + b = 5$. The traps: $3$ is $a$ alone, $2$ is $b$ alone. $15$ is $a + b$ computed with the factor applied only to one coefficient ($9 + 6$). Here the scale factor came from the CONSTANTS because both were known — use whichever pair of knowns lines up.'
+      explanation: 'The constants reveal the multiple: $7 = 21 \\times \\frac{1}{3}$, so the second equation is one-third of the first. Then $a = 9 \\times \\frac{1}{3} = 3$ and $b = 6 \\times \\frac{1}{3} = 2$, giving $a + b = 5$. The traps: $3$ is $a$ alone, $2$ is $b$ alone. $15$ is $9 + 6$, the first equation\'s coefficients added without applying the factor at all. Here the scale factor came from the CONSTANTS because both were known — use whichever pair of knowns lines up.'
     },
     {
       id: 'advsys3-q4',
@@ -48,7 +48,7 @@ Start the clock.`
       question: `Streaming service A charges $\\$60$ for a device plus $\\$9$ per month. Service B charges $\\$24$ for a device plus $\\$12$ per month. At the point when the total amount paid to A exceeds the total paid to B by exactly $\\$15$, what is the total amount paid to B?`,
       options: ['$\\$7$', '$\\$108$', '$\\$123$', '$\\$231$'],
       correctAnswer: 1,
-      explanation: 'After $m$ months, A totals $60 + 9m$ and B totals $24 + 12m$. Set $(60 + 9m) - (24 + 12m) = 15$: $36 - 3m = 15$, so $3m = 21$ and $m = 7$. B has been paid $24 + 12(7) = \\$108$. (Check: A is at $60 + 63 = 123$, and $123 - 108 = 15$.) The traps: $\\$7$ is the month count, $\\$123$ is A’s total — the other entity — and $\\$231$ is both totals added. The subtraction direction is also a trap: "A exceeds B" means A minus B, and reversing it gives $3m - 36 = 15$, $m = 17$, which matches none of the checks.'
+      explanation: 'After $m$ months, A totals $60 + 9m$ and B totals $24 + 12m$. Set $(60 + 9m) - (24 + 12m) = 15$: $36 - 3m = 15$, so $3m = 21$ and $m = 7$. B has been paid $24 + 12(7) = \\$108$. (Check: A is at $60 + 63 = 123$, and $123 - 108 = 15$.) The traps: $\\$7$ is the month count, $\\$123$ is A’s total — the other entity — and $\\$231$ is both totals added. The subtraction direction is also a trap: "A exceeds B" means A minus B, and reversing it gives $3m - 36 = 15$, $m = 17$, the month when B exceeds A by $\\$15$ instead.'
     }
   ]
 };

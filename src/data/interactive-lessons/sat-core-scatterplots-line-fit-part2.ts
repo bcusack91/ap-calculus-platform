@@ -37,21 +37,21 @@ The line of best fit gives a **prediction**, not a guarantee. Real dots sit a li
       type: 'quiz' as const,
       question: `A line of best fit is $y = 6x + 12$. What does the number $12$ represent?`,
       options: [
-        'The slope of the line',
-        'The number of data points',
-        'The predicted value of $y$ when $x = 0$',
-        'The largest value of $y$ in the data'
+        'The change in $y$ when $x$ increases by $1$',
+        'The value of $x$ when $y$ is $0$',
+        'The predicted value of $y$ when $x$ is $0$',
+        'The predicted value of $y$ when $x$ is $1$'
       ],
       correctAnswer: 2,
-      explanation: `The number added at the end of the equation is the y-intercept, and the y-intercept is the predicted value of $y$ when $x$ is $0$. You can check it by substituting: $y = 6(0) + 12 = 0 + 12 = 12$. The slope of this line is the $6$ in front of $x$, not the $12$.`
+      explanation: `The number added at the end of the equation is the y-intercept, and the y-intercept is the predicted value of $y$ when $x$ is $0$. You can check it by substituting: $y = 6(0) + 12 = 0 + 12 = 12$. The change in $y$ for each increase of $1$ in $x$ is the slope, which is the $6$ in front of $x$, not the $12$. The line crosses $y = 0$ at $x = -2$, not at $12$, and at $x = 1$ it predicts $6(1) + 12 = 18$.`
     },
     {
       id: 'scat-core-p2-q3',
       type: 'quiz' as const,
       question: `On a scatterplot, most of the dots follow a clear upward path, but one dot sits far away from all the others. What is that dot called?`,
-      options: ['The slope', 'The y-intercept', 'The line of best fit', 'An outlier'],
+      options: ['A residual', 'A y-intercept', 'A trend line', 'An outlier'],
       correctAnswer: 3,
-      explanation: `A data point that sits far away from the general pattern of the other points is called an outlier. It is a single dot that does not follow the trend the rest of the data shows. The slope and the y-intercept are numbers in the equation of the line, not points on the graph.`
+      explanation: `A data point that sits far away from the general pattern of the other points is called an outlier. It is a single dot that does not follow the trend the rest of the data shows. A residual is the vertical gap between a dot and the line, not the dot itself. A y-intercept is a number in the equation of the line, and a trend line is the line of best fit, not a single point.`
     },
     {
       id: 'scat-core-p2-q4',

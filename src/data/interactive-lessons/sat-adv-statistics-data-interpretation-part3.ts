@@ -23,13 +23,13 @@ If you find yourself averaging two averages, stop — you have almost certainly 
       type: 'quiz' as const,
       question: 'The seven values in a data set are 5, 8, 10, 13, 16, 19, and 27. The largest value, 27, is replaced by 48, and no other value changes. Which of the following correctly describes the effect on the mean and on the median?',
       options: [
-        'The mean increases by 21 and the median is unchanged.',
-        'The median increases by 3 and the mean is unchanged.',
-        'Both the mean and the median increase by 3.',
-        'The mean increases by 3 and the median is unchanged.'
+        'The mean increases by 21, and the median is unchanged.',
+        'The mean is unchanged, and the median increases by 3.',
+        'The mean increases by 3, and the median increases by 3.',
+        'The mean increases by 3, and the median is unchanged.'
       ],
       correctAnswer: 3,
-      explanation: 'The original values total 98, so the mean is $98/7 = 14$ and the median is the fourth value, 13. Replacing 27 with 48 adds 21 to the total, giving $119/7 = 17$, an increase of 3. The edit happens at the top of the ordered list, so the fourth value is still 13 and the median does not move. The increases-by-21 choice applies the raw change of $48 - 27 = 21$ directly to the mean instead of spreading it across all seven values. The median-increases-by-3 choice swaps the roles, giving the response to an extreme edit to the median. The both-increase choice drags the median along with the mean, but changing the largest value cannot shift the middle position.'
+      explanation: 'The original values total 98, so the mean is $98/7 = 14$ and the median is the fourth value, 13. Replacing 27 with 48 adds 21 to the total, giving $119/7 = 17$, an increase of 3. The edit happens at the top of the ordered list, so the fourth value is still 13 and the median does not move. The increases-by-21 choice applies the raw change of $48 - 27 = 21$ directly to the mean instead of spreading it across all seven values. The mean-unchanged choice swaps the roles, attaching the change in the mean to the median instead. The choice in which both increase by 3 drags the median along with the mean, but changing the largest value cannot shift the middle position.'
     },
     {
       id: 'sdi-adv-p3-q2',

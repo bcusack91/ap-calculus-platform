@@ -35,7 +35,7 @@ When a question asks what a number "represents," check whether it is attached to
       id: 'fn-core-p2-q1',
       type: 'quiz' as const,
       question: 'In the function $f(x) = 6x + 40$, what does the value $6$ represent?',
-      options: ['The starting value', 'The largest possible output', 'The rate of change (slope)', 'The $x$-intercept'],
+      options: ['The starting value', 'The largest possible output', 'The rate of change', 'The $x$-intercept'],
       correctAnswer: 2,
       explanation: 'The value $6$ is the rate of change, also called the slope. It is the number multiplied by $x$, which means every time $x$ goes up by $1$, the output goes up by $6$. The starting value in this function is $40$, because that is the number standing alone with no $x$ attached to it.'
     },

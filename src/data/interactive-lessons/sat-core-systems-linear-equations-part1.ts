@@ -84,9 +84,9 @@ The solution is $(7, 3)$.`
       id: 'sys-core-p1-q4',
       type: 'quiz' as const,
       question: 'Two lines are graphed and they cross at the point $(5, 2)$. What is the value of $x + y$ at that point?',
-      options: ['$3$', '$10$', '$7$', '$52$'],
+      options: ['$3$', '$10$', '$7$', '$-3$'],
       correctAnswer: 2,
-      explanation: 'The answer is $7$. In a point written $(x, y)$, the first number is $x$ and the second number is $y$. So $x = 5$ and $y = 2$. Adding them gives $5 + 2 = 7$. The choice $3$ comes from subtracting instead of adding.'
+      explanation: 'The answer is $7$. In a point written $(x, y)$, the first number is $x$ and the second number is $y$. So $x = 5$ and $y = 2$. Adding them gives $5 + 2 = 7$. The choice $3$ comes from subtracting instead of adding, $-3$ from subtracting in the wrong order ($2 - 5$), and $10$ from multiplying.'
     }
   ]
 }

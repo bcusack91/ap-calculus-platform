@@ -27,15 +27,15 @@ Every hard-tier quadratic item plants its wrong answers deliberately. Learn the 
     {
       id: 'qa2-q1',
       type: 'quiz' as const,
-      question: 'A question gives $h(t) = -16t^{2} + 64t + 5$ for a ball\'s height in feet and asks for the maximum height. Which answer choice is the classic trap, and why?',
+      question: 'A question gives $h(t) = -16t^{2} + 64t + 5$ for a ball\'s height in feet and asks for the maximum height. A student answers $2$. Which describes the student\'s error?',
       options: [
-        '$5$ — students report the starting height',
-        '$128$ — students drop the negative term',
-        '$2$ — students report the vertex $t$-value as if it were the height',
-        '$69$ — students make an addition error'
+        'The student reported the starting height instead of the height at the peak',
+        'The student dropped the $-16t^{2}$ term before substituting the peak time',
+        'The student reported when the peak occurs instead of the height at the peak',
+        'The student subtracted the starting height from the height reached at the peak'
       ],
       correctAnswer: 2,
-      explanation: 'The vertex is at $t = \\frac{64}{32} = 2$ seconds, and $h(2) = -64 + 128 + 5 = 69$ feet is the real answer. The single most common wrong answer on this item type is $2$: solving for the vertex $t$ and stopping. The question asks for a HEIGHT, so a 2-second sanity check ("is 2 feet a plausible max for a thrown ball?") catches the trap.'
+      explanation: 'The vertex is at $t = \\frac{64}{32} = 2$ seconds, and $h(2) = -64 + 128 + 5 = 69$ feet is the real answer. An answer of $2$ is the vertex TIME: the student found when the peak happens and stopped. The question asks for a HEIGHT, so a quick sanity check ("is 2 feet a plausible max for a thrown ball?") catches it. The other slips produce different numbers: reporting the starting height gives $h(0) = 5$, dropping the squared term gives $128 + 5 = 133$, and subtracting the launch height gives $69 - 5 = 64$. None of them produces $2$.'
     },
     {
       id: 'qa2-q2',
@@ -58,10 +58,10 @@ Every hard-tier quadratic item plants its wrong answers deliberately. Learn the 
         '$1036$',
         '$1040$',
         '$1040.50$',
-        '$1044$'
+        '$1072$'
       ],
       correctAnswer: 1,
-      explanation: 'The vertex is at $w = \\frac{36}{16} = 2.25$ — not a whole number, so test both neighbors: $R(2) = 1000 + 72 - 32 = 1040$ and $R(3) = 1000 + 108 - 72 = 1036$. The answer is $1040$ at $w = 2$. The central trap is $1040.50 = R(2.25)$: the true vertex value, which the whole-number restriction makes unattainable. $1036$ comes from rounding $2.25$ up without testing both sides.'
+      explanation: 'The vertex is at $w = \\frac{36}{16} = 2.25$ — not a whole number, so test both neighbors: $R(2) = 1000 + 72 - 32 = 1040$ and $R(3) = 1000 + 108 - 72 = 1036$. The answer is $1040$ at $w = 2$. The central trap is $1040.50 = R(2.25)$: the true vertex value, which the whole-number restriction makes unattainable. $1036$ comes from rounding $2.25$ up without testing both sides, and $1072$ is $R(2)$ with the $-8w^{2}$ term dropped.'
     }
   ]
 };

@@ -58,7 +58,7 @@ To solve $x^{2} + bx + c = 0$ by factoring:
       question: 'What are the solutions of $x^{2} = 36$?',
       options: ['$x = 6$ only', '$x = 18$ or $x = -18$', '$x = 36$', '$x = 6$ or $x = -6$'],
       correctAnswer: 3,
-      explanation: 'The answer is $x = 6$ or $x = -6$. Take the square root of both sides and keep both signs. Since $6 \\times 6 = 36$, one solution is $x = 6$. Since $(-6) \\times (-6) = 36$ as well, $x = -6$ works too. The choice $x = 6$ only leaves out the negative answer, which a quadratic almost always has.'
+      explanation: 'The answer is $x = 6$ or $x = -6$. Take the square root of both sides and keep both signs. Since $6 \\times 6 = 36$, one solution is $x = 6$. Since $(-6) \\times (-6) = 36$ as well, $x = -6$ works too. The choice $x = 6$ only leaves out the negative square root, and $x = 18$ or $x = -18$ comes from dividing $36$ by $2$ instead of taking the square root.'
     }
   ]
 }

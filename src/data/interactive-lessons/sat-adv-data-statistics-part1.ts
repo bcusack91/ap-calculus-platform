@@ -12,13 +12,13 @@ This topic is **reading two-way tables and drawing rates out of them**. The arit
 
 ### Archetype 1: The Denominator Decides
 
-Any single cell in a two-way table supports **three completely different percentages**. Take the cell 92 in a table whose row total is 240, column total is 272, and grand total is 660:
+Any single cell in a two-way table supports **three completely different percentages**. Take the cell 84 in a table whose row total is 280, column total is 336, and grand total is 700:
 
 | Phrasing | Denominator | Value |
 |---|---|---|
-| "of **all** respondents" | grand total 660 | 13.9% |
-| "of respondents **in the 35-54 group**" | row total 240 | 38.3% |
-| "of respondents **who disapproved**" | column total 272 | 33.8% |
+| "of **all** respondents" | grand total 700 | 12.0% |
+| "of respondents **in the 30-44 group**" | row total 280 | 30.0% |
+| "of respondents **who opposed the plan**" | column total 336 | 25.0% |
 
 Same numerator, three answers. Hard items exploit this by pairing a correct number with the wrong phrasing, or by asking two of the three in one question and shuffling them.
 
@@ -26,9 +26,9 @@ Same numerator, three answers. Hard items exploit this by pairing a correct numb
 
 ### Archetype 2: Rate Comparison Across Rows
 
-"For each grade, the bus rate is the number of students in that grade who take the bus divided by the number of students in that grade. By how many percentage points does Grade 9 exceed Grade 11?"
+"For each club, the attendance rate is the number of members in that club who attended divided by the number of members in that club. By how many percentage points does the chess club exceed the robotics club?"
 
-Each group's rate uses **its own row total** — never a shared denominator. That is the whole point: comparing $\\frac{84}{500}$ to $\\frac{40}{500}$ is not a comparison of rates, it is a comparison of counts wearing a percent sign.
+Each group's rate uses **its own row total** — never a shared denominator. That is the whole point: comparing $\\frac{63}{400}$ to $\\frac{45}{400}$ is not a comparison of rates, it is a comparison of counts wearing a percent sign.
 
 Watch for two variants:
 - **"Percentage points" vs. "times."** A difference of rates is measured in percentage points; a ratio of rates is "how many times." Compute the one asked.
@@ -43,20 +43,20 @@ Roughly a third of hard items hide one or two entries behind a question mark. Re
       type: 'text' as const,
       content: `### Archetype 4: Scaling a Sample to a Population
 
-"The 800 people surveyed are representative of the company's 12,000 customers. Estimate the number of customers ages 35 and over who prefer the website."
+"The 600 people surveyed are representative of the town's 15,000 residents. Estimate the number of residents ages 50 and over who prefer the evening market."
 
 The one rule that decides these:
 
 > **The rate's denominator must match the population you are scaling.**
 
 - Estimating over the **whole** population? The rate must come from the **whole** sample: $\\frac{\\text{cell}}{\\text{grand total}} \\times \\text{population}$.
-- Estimating within a **subgroup** ("the 450 parents surveyed were drawn from 6,300 parents in the district")? The rate must be computed **inside that row**: $\\frac{\\text{cell}}{\\text{row total}} \\times \\text{subgroup population}$.
+- Estimating within a **subgroup** ("the 320 teachers surveyed were drawn from 5,600 teachers in the county")? The rate must be computed **inside that row**: $\\frac{\\text{cell}}{\\text{row total}} \\times \\text{subgroup population}$.
 
 Mixing them is the signature error of this archetype, and the item is built so that the mismatch produces a plausible-looking number. If you scale a within-row rate by the entire population, you overestimate wildly; if you scale a whole-sample rate by a subgroup, you underestimate.
 
 Two further variants:
 
-- **Apply a stated rate to a new group.** "All 300 Premium subscribers will move to the Plus plan; if the resulting 750 renew at the current **Plus** rate..." — use the Plus row's rate, not the Premium row's, and not the overall rate. The whole item is a test of reading which group's rate was specified.
+- **Apply a stated rate to a new group.** "All 120 Gold members will move to the Silver tier; if the resulting 480 renew at the current **Silver** rate..." — use the Silver row's rate, not the Gold row's, and not the overall rate. The whole item is a test of reading which group's rate was specified.
 - **Growth between two years.** Scale the same cell rate to both population sizes and **subtract**. Both intermediate counts will be on the menu.
 
 ### Archetype 5: "Which Statement Is Supported?"

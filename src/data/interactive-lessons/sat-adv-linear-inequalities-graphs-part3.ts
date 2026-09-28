@@ -29,7 +29,7 @@ Start the clock.`
     {
       id: 'advlig3-q2',
       type: 'quiz' as const,
-      question: `A florist makes b bouquets and w wreaths. She can make at most 60 items in total. Each bouquet uses 5 roses and each wreath uses 8 roses, and at most 400 roses are available. She must make at least 15 wreaths. Which system represents these conditions?`,
+      question: `A florist makes $b$ bouquets and $w$ wreaths. She can make at most 60 items in total. Each bouquet uses 5 roses and each wreath uses 8 roses, and at most 400 roses are available. She must make at least 15 wreaths. Which system represents these conditions?`,
       options: [
         '$b + w \\le 60$, $8b + 5w \\le 400$, $w \\ge 15$',
         '$b + w \\le 60$, $5b + 8w \\le 400$, $w \\le 15$',

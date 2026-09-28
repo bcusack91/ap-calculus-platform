@@ -12,7 +12,7 @@ Hard exponential items are about **growth factors and time units**, not about pl
 
 ### Archetype 1: Rebasing the Time Unit
 
-A model like $A(t) = 60(0.5)^{t/3}$ (t in hours) states its factor per 3 hours. To get the **per-hour** rate, rewrite:
+A model like $A(t) = 60(0.5)^{t/3}$ ($t$ in hours) states its factor per 3 hours. To get the **per-hour** rate, rewrite:
 
 $$A(t) = 60\\left[(0.5)^{1/3}\\right]^{t}$$
 
@@ -22,7 +22,7 @@ and $(0.5)^{1/3} \\approx 0.7937$ — about a $20.6\\%$ decrease per hour. The d
 
 ### Archetype 2: Compound vs. Linear
 
-Two plans: one loses a fixed amount per year, one loses a fixed **percent** per year. Or: a nominal $6\\%$ annual rate compounded monthly. The compound side must be computed as a power — $(1.005)^{12} \\approx 1.0617$, so the effective rate is $6.17\\%$, not $6\\%$. Every linear shortcut ($1.5\\% \\times 12 = 18\\%$) is a planted distractor; the true compound answer for decay is always LESS loss than the linear estimate, and for growth MORE gain.
+Two plans: one loses a fixed amount per year, one loses a fixed **percent** per year. Or: a nominal $6\\%$ annual rate compounded monthly. The compound side must be computed as a power — $(1.005)^{12} \\approx 1.0617$, so the effective rate is $6.17\\%$, not $6\\%$. Every linear shortcut (a monthly $0.5\\%$ times $12$ is $6\\%$) is a planted distractor; the true compound answer for decay is always LESS loss than the linear estimate, and for growth MORE gain.
 
 ### Archetype 3: Counting Doublings and Halvings
 

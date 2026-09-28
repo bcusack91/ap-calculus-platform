@@ -63,12 +63,12 @@ If the real value is $15$ and the line predicted $13$, the residual is $15 - 13 
       question: `A scatterplot shows dots that rise steadily from left to right in a roughly straight pattern. How would you describe the association?`,
       options: [
         'No association',
-        'Negative linear — as $x$ increases, $y$ decreases',
-        'The dots form a U shape',
-        'Positive linear — as $x$ increases, $y$ also increases'
+        'Negative linear association',
+        'Nonlinear association',
+        'Positive linear association'
       ],
       correctAnswer: 3,
-      explanation: `Read the dots from left to right. They are rising, which means that as $x$ gets bigger, $y$ gets bigger too. That is a positive association, and because the dots follow a roughly straight path it is called positive linear. A negative association would show dots falling as you move to the right, which is the opposite of what happens here.`
+      explanation: `Read the dots from left to right. They are rising, which means that as $x$ gets bigger, $y$ gets bigger too. That is a positive association, and because the dots follow a roughly straight path it is called positive linear. A negative association would show dots falling as you move to the right, which is the opposite of what happens here. A nonlinear association would follow a curve, such as a U shape, instead of a roughly straight path.`
     },
     {
       id: 'scat-core-p1-q2',
@@ -84,12 +84,12 @@ If the real value is $15$ and the line predicted $13$, the residual is $15 - 13 
       question: `A line of best fit is $y = 4x + 10$. What does the slope of $4$ tell you?`,
       options: [
         'Each time $x$ increases by $1$, $y$ increases by about $4$',
-        'The value of $y$ is always $4$',
-        'There are $4$ dots on the scatterplot',
-        'When $x$ is $0$, $y$ is $4$'
+        'Each time $x$ increases by $4$, $y$ increases by about $1$',
+        'Each time $x$ increases by $1$, $y$ is multiplied by about $4$',
+        'When $x$ is $0$, the predicted value of $y$ is about $4$'
       ],
       correctAnswer: 0,
-      explanation: `The slope is the number in front of $x$, which is $4$ here. Slope always answers the same question: how much does $y$ change when $x$ goes up by $1$? So each time $x$ increases by $1$, $y$ increases by about $4$. The statement "when $x$ is $0$, $y$ is $4$" describes a y-intercept, and in this equation the y-intercept is $10$, not $4$.`
+      explanation: `The slope is the number in front of $x$, which is $4$ here. Slope always answers the same question: how much does $y$ change when $x$ goes up by $1$? So each time $x$ increases by $1$, $y$ increases by about $4$. Reading it as "$x$ up by $4$, $y$ up by $1$" swaps the roles of $x$ and $y$. A line adds the same amount at each step; it never multiplies. The statement about $x$ being $0$ describes a y-intercept, and in this equation the y-intercept is $10$, not $4$.`
     },
     {
       id: 'scat-core-p1-q4',

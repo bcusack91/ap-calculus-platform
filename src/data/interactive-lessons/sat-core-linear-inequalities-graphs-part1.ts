@@ -44,25 +44,25 @@ That is the finished graph: a dashed line with everything below it shaded.`
       id: 'lig-core-p1-q1',
       type: 'quiz' as const,
       question: 'When graphing $y \\geq 3x + 1$, what kind of boundary line should you draw?',
-      options: ['Dashed', 'No line at all', 'A double line', 'Solid'],
+      options: ['Dashed, because the sign includes "equal to"', 'Solid, because the sign leaves out "equal to"', 'Dashed, because the sign leaves out "equal to"', 'Solid, because the sign includes "equal to"'],
       correctAnswer: 3,
-      explanation: 'The answer is a solid line. The sign $\\geq$ has a small line underneath it, which means "or equal to." Points sitting right on the boundary line make the inequality true, so those points count and the line is drawn solid. A dashed line is used only for $>$ and $<$, where the boundary points do not count.'
+      explanation: 'The answer is a solid line, because $\\geq$ includes "equal to." The sign $\\geq$ has a small line underneath it, which means "or equal to." Points sitting right on the boundary line make the inequality true, so those points count and the line is drawn solid. A dashed line is used only for $>$ and $<$, the signs that leave out "equal to," where the boundary points do not count.'
     },
     {
       id: 'lig-core-p1-q2',
       type: 'quiz' as const,
       question: 'When graphing $y < x - 4$, what kind of boundary line should you draw?',
-      options: ['Dashed', 'Solid', 'A double line', 'No line at all'],
+      options: ['Dashed, because the sign leaves out "equal to"', 'Solid, because the sign leaves out "equal to"', 'Dashed, because the sign includes "equal to"', 'Solid, because the sign includes "equal to"'],
       correctAnswer: 0,
-      explanation: 'The answer is a dashed line. The sign $<$ has no line underneath it, so points sitting right on the boundary do not make the inequality true. A dashed line shows that those points are left out. A solid line would be used for $\\leq$, which does include the boundary points.'
+      explanation: 'The answer is a dashed line, because $<$ leaves out "equal to." The sign $<$ has no line underneath it, so points sitting right on the boundary do not make the inequality true. A dashed line shows that those points are left out. A solid line would be used for $\\leq$, which does include the boundary points.'
     },
     {
       id: 'lig-core-p1-q3',
       type: 'quiz' as const,
       question: 'To graph $y > 2x + 3$, where do you shade?',
-      options: ['On the line only', 'Above the line', 'Below the line', 'Both sides of the line'],
+      options: ['On the line only', 'Above the line', 'Below the line', 'Only where $y$ is positive'],
       correctAnswer: 1,
-      explanation: 'The answer is above the line. The variable $y$ is already alone on the left, and the sign is $>$, which means "greater than." Greater $y$ values sit higher up on the graph, so you shade the region above the boundary line. Shading below would be right for $y < 2x + 3$.'
+      explanation: 'The answer is above the line. The variable $y$ is already alone on the left, and the sign is $>$, which means "greater than." Greater $y$ values sit higher up on the graph, so you shade the region above the boundary line. Shading below would be right for $y < 2x + 3$. The inequality compares $y$ with $2x + 3$, not with $0$, so "where $y$ is positive" answers a different question ($y > 0$). An inequality never means the line only; that is what the equation $y = 2x + 3$ shows.'
     },
     {
       id: 'lig-core-p1-q4',

@@ -51,7 +51,7 @@ $3 - x = -(x - 3)$, $y^{2} - x^{2} = -(x^{2} - y^{2})$. In a complex fraction, t
 
 **4. Inequalities with a guaranteed-positive denominator are safe.** In context, $p > 0$ or $x \\ge 1$, so you may multiply through by $p$ without flipping the sign. $\\frac{45 + 4p}{p} \\le 4.5$ becomes $45 \\le 0.5p$, so $p \\ge 90$. Outside of context, do not multiply by a variable of unknown sign.
 
-**5. Counting integer solutions: simplify, solve, count inclusively, then remove excluded values.** From $\\frac{n^{2}-100}{n-10} = n + 10$, the condition $n + 10 \\ge 30$ gives $n \\ge 20$, and the count from $20$ to $30$ is $30 - 20 + 1 = 11$. Two errors are planted: dropping the $+1$, and forgetting to remove the excluded value when it falls inside the range.
+**5. Counting integer solutions: simplify, solve, count inclusively, then remove excluded values.** From $\\frac{n^{2}-100}{n-10} = n + 10$, the condition $30 \\le n + 10 \\le 40$ gives $20 \\le n \\le 30$, and the count from $20$ to $30$ is $30 - 20 + 1 = 11$ (the excluded value $n = 10$ lies outside this range, so nothing is removed). Two errors are planted: dropping the $+1$, and forgetting to remove the excluded value when it falls inside the range.
 
 **6. Verify a messy root by substitution, not by re-deriving.** If you get $x = \\frac{13}{2}$, plugging it back into the original equation on your calculator takes fifteen seconds and catches every distribution error at once.
 
@@ -81,7 +81,7 @@ $3 - x = -(x - 3)$, $y^{2} - x^{2} = -(x^{2} - y^{2})$. In a complex fraction, t
         '$-\\frac{1}{80}$'
       ],
       correctAnswer: 2,
-      explanation: 'Combine the numerator: $\\frac{1}{x} - \\frac{1}{5} = \\frac{5 - x}{5x}$. Dividing by $x - 5$ gives $\\frac{5-x}{5x(x-5)}$, and since $5 - x = -(x - 5)$, this is $-\\frac{1}{5x}$. At $x = 4$: $-\\frac{1}{20}$. The traps: $\\frac{1}{20}$ misses the sign flip from $5 - x = -(x-5)$, which is the entire point of the item. $-\\frac{1}{5}$ simplifies to $-\\frac{1}{5}$ and loses the $x$ in the denominator. $-\\frac{1}{80}$ comes from cancelling incorrectly into $-\\frac{1}{5x^{2}}$.'
+      explanation: 'Combine the numerator: $\\frac{1}{x} - \\frac{1}{5} = \\frac{5 - x}{5x}$. Dividing by $x - 5$ gives $\\frac{5-x}{5x(x-5)}$, and since $5 - x = -(x - 5)$, this is $-\\frac{1}{5x}$. At $x = 4$: $-\\frac{1}{20}$. The traps: $\\frac{1}{20}$ misses the sign flip from $5 - x = -(x-5)$, which is the entire point of the item. $-\\frac{1}{5}$ cancels the $x$ along with the $x - 5$, reducing the expression to the constant $-\\frac{1}{5}$. $-\\frac{1}{80}$ comes from cancelling incorrectly into $-\\frac{1}{5x^{2}}$.'
     },
     {
       id: 'prex2-q3',
@@ -89,12 +89,12 @@ $3 - x = -(x - 3)$, $y^{2} - x^{2} = -(x^{2} - y^{2})$. In a complex fraction, t
       question: 'A city measures per-capita water use as $w = \\frac{U}{P}$, where $U$ is total water used and $P$ is population. Over the next year the city\'s total water use is projected to rise by $30$ percent while its population rises by $20$ percent. How will per-capita water use change?',
       options: [
         'It will increase by about $8.3$ percent.',
-        'It will decrease by about $8.3$ percent.',
+        'It will decrease by about $7.7$ percent.',
         'It will increase by $10$ percent.',
         'It will decrease by $10$ percent.'
       ],
       correctAnswer: 0,
-      explanation: 'The new per-capita figure is $\\frac{1.30U}{1.20P} = \\frac{1.30}{1.20} \\cdot \\frac{U}{P} \\approx 1.083w$, an INCREASE of about $8.3$ percent. The traps: "decrease by about $8.3$ percent" has the right magnitude but the wrong direction, from computing the reciprocal $\\frac{1.20}{1.30} \\approx 0.923$; sanity-check with the sizes, since the numerator grew faster than the denominator, the quotient must grow. "Increase by $10$ percent" subtracts the percent changes, $30 - 20$, which is not how a ratio of scale factors behaves. "Decrease by $10$ percent" makes both errors at once.'
+      explanation: 'The new per-capita figure is $\\frac{1.30U}{1.20P} = \\frac{1.30}{1.20} \\cdot \\frac{U}{P} \\approx 1.083w$, an INCREASE of about $8.3$ percent. The traps: "decrease by about $7.7$ percent" comes from computing the reciprocal $\\frac{1.20}{1.30} \\approx 0.923$, which flips the direction; sanity-check with the sizes: the numerator grew faster than the denominator, so the quotient must grow. "Increase by $10$ percent" subtracts the percent changes, $30 - 20$, which is not how a ratio of scale factors behaves. "Decrease by $10$ percent" makes both errors at once.'
     }
   ]
 };

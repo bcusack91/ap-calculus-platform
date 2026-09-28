@@ -31,7 +31,7 @@ Run the checklist before every answer:
       question: `A bicycle wheel of radius $0.4$ m rotates through $\\dfrac{5\\pi}{3}$ radians each second as the bicycle rolls without slipping. To the nearest tenth of a meter, how far does the bicycle travel in $6$ seconds?`,
       options: ['$2.1$', '$12.6$', '$25.1$', '$31.4$'],
       correctAnswer: 1,
-      explanation: `Rolling without slipping means the distance travelled equals the arc length. Per second: $r\\theta = 0.4\\left(\\frac{5\\pi}{3}\\right) = \\frac{2\\pi}{3} \\approx 2.09$ m. Over $6$ seconds: $6 \\times 2.09 \\approx 12.6$ m. The traps: $2.1$ is the distance for ONE second, ignoring the six; $25.1$ uses the DIAMETER $0.8$ in place of the radius, doubling the answer; $31.4$ multiplies the angle by the time ($\\frac{5\\pi}{3} \\times 6 = 10\\pi$) and reports radians as though they were meters, skipping the radius entirely.`
+      explanation: `Rolling without slipping means the distance travelled equals the arc length. Per second: $r\\theta = 0.4\\left(\\frac{5\\pi}{3}\\right) = \\frac{2\\pi}{3} \\approx 2.09$ m. Over $6$ seconds: $6 \\times \\frac{2\\pi}{3} = 4\\pi \\approx 12.6$ m. The traps: $2.1$ is the distance for ONE second, ignoring the six; $25.1$ uses the DIAMETER $0.8$ in place of the radius, doubling the answer; $31.4$ multiplies the angle by the time ($\\frac{5\\pi}{3} \\times 6 = 10\\pi$) and reports radians as though they were meters, skipping the radius entirely.`
     },
     {
       id: 'circ-adv-p3-q3',
