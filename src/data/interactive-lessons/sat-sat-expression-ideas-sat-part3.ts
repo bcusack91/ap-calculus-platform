@@ -4,120 +4,119 @@ export const satExpressionPart3Data = {
     {
       id: 'ei3-intro',
       type: 'text' as const,
-      content: `# Effective Introductions & Conclusions
+      content: `# Transitions II: Cause, Addition, Example, and Sequence
 
-**Part 3 of 7 — Opening and Closing Sentences**
+**Part 3 of 7 — Transitions: Cause, Addition, Example, and Sequence**
 
-The SAT may ask which sentence best introduces or concludes a paragraph or passage. Strong openings and closings share specific characteristics.
+Part 2 covered the "but" family. The other transition families each carry a specific promise about the second sentence. Check whether the text keeps that promise.
 
-### Effective Topic Sentences (Paragraph Openers)
+### The Families and Their Promises
 
-A good topic sentence:
-- States the paragraph's main point
-- Connects to the previous paragraph (if not the first)
-- Is general enough to cover the paragraph's content
-- Is specific enough to give direction
+| Family | Transitions | The second sentence must… |
+|---|---|---|
+| **Cause → effect** | therefore, thus, consequently, as a result, accordingly | be a **result** of the first |
+| **Addition** | moreover, furthermore, in addition, additionally, also | add **another point** pushing the same way |
+| **Similarity** | similarly, likewise | show a **different subject** doing a parallel thing |
+| **Example** | for example, for instance | give a **specific case** of the first sentence's general claim |
+| **Restatement** | in other words, that is | say the **same thing** more plainly |
+| **Sequence** | first, next, then, subsequently, finally | describe the **next step or event** in time |
 
-**Test:** Can you predict what the paragraph will discuss from the topic sentence alone?
+### Check the Direction of Cause and Effect
 
-✅ "While solar panels reduce electricity costs, their manufacturing process raises environmental concerns."  
-→ You can predict: the paragraph will discuss environmental downsides of solar panel production.
+"Therefore," "thus," and "as a result" introduce the **effect**. If the second sentence gives the **reason** for the first, those words run backward.
 
-❌ "Solar panels are interesting."  
-→ Too vague — could go anywhere.
+- ✅ "The river flooded the valley. *As a result*, farmers lost most of their crops." (flood → crop loss)
+- ❌ "Farmers lost most of their crops. *As a result*, the river flooded the valley." (crop loss did not cause the flood)
 
-### Effective Conclusions
+### Example vs. Addition vs. Similarity
 
-A conclusion should:
-- NOT introduce new information
-- Synthesize or summarize the main point
-- Sometimes look forward (implications, significance)
-
-### Bad Conclusion Signals
-
-- Introduces a brand-new topic
-- Asks a question that the paragraph hasn't addressed
-- Contradicts the paragraph's argument
-- Restates the introduction word-for-word (too mechanical)`
+- **Example:** the second sentence is one *instance* of the first. "Some birds cannot fly. *For instance*, the ostrich runs rather than flies."
+- **Addition:** the second sentence is a *new, separate point*. "Cycling to work saves money on fuel. *Moreover*, it builds exercise into the day."
+- **Similarity:** the second sentence is about a *different subject* that behaves the same way. "Dolphins find prey by echolocation. *Similarly*, many bats hunt by listening for echoes."`
     },
     {
       id: 'ei3-quiz',
       type: 'multiple-choice' as const,
-      content: '**Introduction & Conclusion Practice** 🎯',
+      content: '**Transition Families Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A paragraph discusses how composting reduces landfill waste and produces nutrient-rich soil. Which is the best concluding sentence?',
-            options: ['Composting thus turns a disposal problem into a resource for healthier gardens.', 'Recycling is another important environmental practice that more people should adopt.', 'The practice of composting dates back thousands of years to ancient farming cultures.', 'Many kinds of composting bins can now be purchased at local hardware stores.'],
+            question: `Beavers build dams that slow the flow of streams. ______ the water behind a dam spreads out and soaks into the surrounding soil, creating wetlands. Which choice completes the text with the most logical transition?`,
+            options: ['As a result,', 'For example,', 'Nevertheless,', 'Previously,'],
             correctAnswer: 0,
-            explanation: 'A good conclusion synthesizes the paragraph\'s two main points: waste that would have been a disposal problem becomes nutrient-rich soil. The recycling option introduces a new topic, the ancient-civilizations option goes backward to history, and the hardware-store option introduces commercial information not discussed.'
+            explanation: `Slowing the stream is what makes the water spread out and form wetlands, so the second sentence is an effect of the first: "As a result" fits. The wetlands are not an instance of dam building, nothing is being overcome, and "Previously" would put the wetlands before the dams.`
           },
           {
-            question: 'Which would be the best topic sentence for a paragraph about the decline of honeybee populations?',
-            options: ['Honeybee numbers have fallen sharply in recent years, threatening crops.', 'Honeybees are fascinating insects that live in complex social colonies.', 'Many people are allergic to bee stings and avoid areas with hives.', 'Scientists have studied insects of all kinds for many centuries.'],
+            question: `Some animals change color with the seasons. ______ the snowshoe hare grows a white coat each fall and a brown one each spring. Which choice completes the text with the most logical transition?`,
+            options: ['For instance,', 'Consequently,', 'Nevertheless,', 'Finally,'],
             correctAnswer: 0,
-            explanation: 'This topic sentence names the issue (the falling numbers), places it in time, and signals why it matters (crops). The social-colonies sentence is about honeybees but not their decline, the allergy sentence is off-topic, and the insects-for-centuries sentence is far too broad.'
+            explanation: `The first sentence makes a general claim, and the snowshoe hare is one specific animal that does exactly that, so "For instance" fits. The hare's coat is not caused by other animals changing color, nothing about it pushes against the claim, and nothing marks it as the last step in a sequence.`
           }
         ]
       }    },
     {
       id: 'ei3-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Crafting Strong Openings & Closings
+      content: `## Deep Dive: Keeping Each Family's Promise
 
-### Worked Example 1: Evaluating Topic Sentences
+### Worked Example 1: Cause or Addition?
 
-| Candidate Topic Sentence | Paragraph About | Verdict |
+"Many cities are replacing old streetlights with LED bulbs. ______ one large city cut its streetlight energy use by more than half after switching."
+
+| Candidate | Promise | Kept? |
 |---|---|---|
-| "Dogs are great." | Benefits of therapy dogs in hospitals | ❌ Too vague, too informal |
-| "Therapy dogs can improve patient outcomes." | Benefits of therapy dogs in hospitals | ✅ Specific, matches scope |
-| "Golden retrievers make excellent therapy dogs." | Benefits of therapy dogs in hospitals | ❌ Too narrow (only one breed) |
-| "Animals have been domesticated for millennia." | Benefits of therapy dogs in hospitals | ❌ Too broad |
+| For example, | The city is one case of the general trend | ✅ One city that switched to LEDs |
+| Moreover, | A separate, new point | ❌ It is the same point, narrowed to one city |
+| As a result, | Sentence 2 is caused by sentence 1 | ❌ Other cities switching did not cut this city's energy use |
+| In contrast, | A different subject behaving differently | ❌ The city follows the trend |
 
-### Worked Example 2: Evaluating Conclusions
+### Worked Example 2: Similarity vs. Example
 
-**Paragraph topic:** "How vertical farms use less water than traditional farming."
-
-| Candidate Conclusion | Verdict | Why |
+| Text | Right choice | Why |
 |---|---|---|
-| "Vertical farming's water efficiency may prove critical as freshwater scarcity intensifies." | ✅ Best | Synthesizes main point + looks forward |
-| "Vertical farms also produce food closer to urban markets." | ❌ | New information (not about water) |
-| "Water is important for all life on Earth." | ❌ | Too broad, doesn't connect to vertical farming |
-| "Traditional farming uses a lot of water." | ❌ | Restates known info, doesn't conclude |
+| "Dolphins find prey by echolocation. ___ many bats hunt by listening for echoes." | Similarly, | Bats are not dolphins; they are a parallel case |
+| "Some mammals find prey by echolocation. ___ many bats hunt by listening for echoes." | For example, | Bats are one of the mammals the claim covers |
 
-### Introduction vs. Conclusion Checklist
+One word in sentence 1 changes the answer. Read the first sentence for its **scope**: a general claim invites an example; a claim about one specific subject invites a parallel.
 
-| Feature | Introduction | Conclusion |
-|---|---|---|
-| States main point | ✅ Previews | ✅ Summarizes |
-| Introduces new data | ✅ Sets up | ❌ Never |
-| Broad or specific? | Broad enough to cover paragraph | Synthesizes specifics into a takeaway |
-| Connects to other paragraphs | Forward-looking | Backward-looking |
-| Uses "In conclusion" | ❌ Not on SAT | ❌ Cliché — avoid |`
+### Worked Example 3: Sequence and Restatement
+
+| Text | Right choice |
+|---|---|
+| "The bakers first mixed the dough. ___ they left it to rise for two hours." | Next, |
+| "Many deep-sea fish are bioluminescent. ___ they produce their own light through chemical reactions." | In other words, |
+
+### Direction Check for Cause and Effect
+
+| Order in the text | "As a result" correct? |
+|---|---|
+| Cause, then effect | ✅ Yes |
+| Effect, then cause | ❌ No; the second sentence is the reason, not the result |
+| Two unrelated facts | ❌ No; nothing causes anything |`
     },
     {
       id: 'ei3-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Introductions & Conclusions Challenge** 🎯',
+      content: '**Transition Families Challenge** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A paragraph discusses three advantages of electric vehicles: lower emissions, cheaper fuel costs, and reduced noise pollution. Which conclusion is best?',
-            options: ['Electric vehicles thus benefit drivers and communities in several ways at once.', 'The first electric vehicles were built in the 1830s by the inventor Robert Anderson.', 'There are now many different types of electric vehicles available to buyers.', 'In conclusion, electric vehicles are good and everyone should get one.'],
+            question: `Octopuses can change the color of their skin in a fraction of a second to blend in with their surroundings. ______ cuttlefish use pigment cells in their skin to match the rocks and sand around them. Which choice completes the text with the most logical transition?`,
+            options: ['Similarly,', 'Therefore,', 'For instance,', 'Still,'],
             correctAnswer: 0,
-            explanation: 'The paragraph\'s three advantages help both drivers (cheaper fuel) and communities (cleaner air, less noise), and the first option pulls them together into one takeaway. The 1830s option introduces new historical information, the many-types option shifts to a new topic, and the "In conclusion" option is simplistic, adds an unsupported demand, and uses a cliché.'
+            explanation: `Cuttlefish are a different animal doing a parallel thing, so "Similarly" fits. Cuttlefish camouflage is not caused by octopus camouflage, cuttlefish are not an instance of octopuses, and nothing is overcome.`
           },
           {
-            question: 'A topic sentence for a paragraph about antibiotic resistance should:',
-            options: ['Name the problem and signal why it matters to the reader', 'List every statistic that will appear later in the paragraph', 'Begin by announcing what the paragraph is going to discuss', 'Make a bold claim that the paragraph never goes on to support'],
+            question: `To make paper by hand, workers first beat plant fibers into a watery pulp. ______ they lift a fine screen up through the pulp, catching a thin layer of fibers that dries into a sheet. Which choice completes the text with the most logical transition?`,
+            options: ['After that,', 'Instead,', 'Similarly,', 'For example,'],
             correctAnswer: 0,
-            explanation: 'A good topic sentence previews the paragraph\'s content without listing every detail. It names the subject, signals its importance, and creates expectations for the evidence to follow.'
+            explanation: `"First" in the opening sentence starts a process, and lifting the screen is the following step, so "After that" fits. The screen step does not replace the pulp step, it is not a parallel case, and it is not an example of beating fibers.`
           },
           {
-            question: 'Which is a red flag that a conclusion is wrong?',
-            options: ['It introduces information the paragraph never discussed', 'It refers back to the idea in the topic sentence', 'It uses slightly different wording than the introduction', 'It is noticeably shorter than the paragraph\'s topic sentence'],
+            question: `Planting trees along city streets lowers summer temperatures by shading the pavement. ______ street trees absorb rainwater that would otherwise flood storm drains. Which choice completes the text with the most logical transition?`,
+            options: ['Moreover,', 'In contrast,', 'Consequently,', 'For instance,'],
             correctAnswer: 0,
-            explanation: 'Conclusions synthesize — they do NOT introduce new facts, studies, or topics. If a "conclusion" brings up something never mentioned, it\'s a wrong answer on the SAT.'
+            explanation: `The second sentence adds a separate benefit of street trees, so "Moreover" fits. Absorbing rainwater does not contradict cooling, it is not caused by shading, and it is a different benefit rather than an instance of lower temperatures.`
           }
         ]
       }
@@ -125,19 +124,19 @@ A conclusion should:
     {
       id: 'ei3-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Openings & Closings Check** — Select the correct answer.',
+      content: '**Transition Families Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'A topic sentence should be [specific enough to preview but broad enough to cover|as broad as the whole subject|focused on one detail|a question to the reader]',
-          'Conclusions should [synthesize the main point|introduce new evidence|restate the intro word-for-word|ask a new question]',
-          'A good conclusion for a paragraph about water conservation would mention [water conservation|the history of plumbing|rainfall in deserts|bottled water brands]',
-          '"In conclusion" on the SAT is [cliché — avoid|required|preferred|the best transition]'
+          '"Therefore" introduces [a result|a reason|an example|a contrast]',
+          '"The dam slowed the stream. ___, wetlands formed." [As a result|For example|However|Similarly]',
+          '"Many spiders spin webs to catch prey. ___, the orb weaver builds a new spiral web each night." [For instance|Therefore|In contrast|Meanwhile]',
+          '"Similarly" needs [a second subject doing a parallel thing|a cause followed by its effect|a claim followed by an exception|one step followed by the next]'
         ],
-        correctAnswers: ['specific enough to preview but broad enough to cover', 'synthesize the main point', 'water conservation', 'cliché — avoid'],
-        hint1: 'Not too broad, not too narrow — just right.',
-        hint2: 'Synthesize = summarize + add significance.',
-        hint3: 'The conclusion must relate to the paragraph\'s topic.',
-        explanation: 'Topic sentences preview without being too broad or narrow. Conclusions synthesize, never introduce new info. Conclusions connect to the paragraph\'s topic. "In conclusion" is formulaic — the SAT prefers more sophisticated transitions.'
+        correctAnswers: ['a result', 'As a result', 'For instance', 'a second subject doing a parallel thing'],
+        hint1: 'Therefore = so.',
+        hint2: 'Slowing the water is what creates the wetlands.',
+        hint3: 'The orb weaver is one of the many web-spinning spiders.',
+        explanation: '"Therefore" introduces a result. The dam causes the wetlands ("As a result"). The orb weaver is one case of the general claim ("For instance"). "Similarly" needs a different subject behaving in a parallel way.'
       }
     },
     {
@@ -145,13 +144,15 @@ A conclusion should:
       type: 'text' as const,
       content: `## Part 3 Summary
 
-| Element | Must Do | Must NOT Do |
-|---|---|---|
-| Topic sentence | Preview the paragraph's scope | Be too broad or too narrow |
-| Conclusion | Synthesize main point(s) | Introduce new information |
-| Introduction | Connect to previous paragraph | Use "In this paragraph…" |
-| Conclusion | Look forward (significance) | Restate intro word-for-word |
+| Family | Promise to check |
+|---|---|
+| Cause → effect | Sentence 2 is the result, and the direction is right |
+| Addition | Sentence 2 is a new point pushing the same way |
+| Similarity | A different subject behaves in a parallel way |
+| Example | Sentence 2 is one case of sentence 1's general claim |
+| Restatement | Sentence 2 says the same thing more plainly |
+| Sequence | Sentence 2 is the next step or event |
 
-*Next: Synthesis & Integrating Information →*`    }
+*Next: Rhetorical Synthesis — Reading the Goal →*`    }
   ]
 };

@@ -4,122 +4,117 @@ export const satExpressionPart5Data = {
     {
       id: 'ei5-intro',
       type: 'text' as const,
-      content: `# Style, Tone, and Audience
+      content: `# Rhetorical Synthesis II: Choosing the Right Notes
 
-**Part 5 of 7 — Matching Register and Purpose**
+**Part 5 of 7 — Rhetorical Synthesis: Choosing the Right Notes**
 
-The SAT tests whether you can adjust language to fit the passage's style, audience, and purpose.
+A synthesis question usually gives four to six notes, and the correct choice usually needs only **one to three** of them. The rest are true but irrelevant to the goal, and the wrong choices are built from exactly those notes.
 
-### Register Levels
+### Tick Before You Read the Choices
 
-| Register | Audience | Example |
+After turning the goal into a checklist (Part 4), go down the notes and tick only the ones that serve the goal. Then look for the choice built from your ticked notes.
+
+### The Four Trap Choices
+
+| Trap | What it looks like | Why it fails |
 |---|---|---|
-| **Formal/Academic** | Scholars, specialists | "The data substantiate the hypothesis" |
-| **Professional** | General educated audience | "The study supports the theory" |
-| **Informal** | Friends, casual setting | "The study totally backs it up" |
+| **True but off-goal** | An accurate note about a different aspect of the topic | Does a different job |
+| **Half the goal** | One side of a comparison, a benefit without its cost, a cause without its effect | The goal needs both halves |
+| **Background instead of the point** | The topic's definition when the goal asks for a finding or a reason | Sets the scene but never delivers |
+| **Note-stuffer** | Packs in three or four notes, none of which serve the goal | More notes is not more relevant |
 
-### The SAT almost always uses **professional** register. But occasionally you'll see:
-- **Science passages:** More formal, technical vocabulary
-- **Literary narratives:** More descriptive, figurative
-- **Social science:** Analytical, balanced
+### Using More Notes Is Not a Virtue
 
-### Consistency Rule
-
-Within a single passage, tone must stay consistent. If a passage is formal throughout, inserting a casual phrase is wrong.
-
-❌ "The researchers meticulously documented each specimen and they basically found a lot of new stuff."  
-✅ "The researchers meticulously documented each specimen and identified several previously unknown species."
-
-### Audience-Appropriate Detail
-
-When the question asks about what information to include:
-- **Expert audience:** Can skip basic definitions
-- **General audience:** Needs brief explanations of technical terms
-- **The SAT reader:** Assumed to be a general educated reader`
+The note-stuffer trap works because a long, fact-packed sentence *looks* thorough. The SAT does not reward coverage. A short sentence built from the one note the goal needs beats a long sentence built from three notes it does not.`
     },
     {
       id: 'ei5-quiz',
       type: 'multiple-choice' as const,
-      content: '**Style & Tone Practice** 🎯',
+      content: '**Note-Selection Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'In a formal scientific passage, which phrase best replaces "Scientists figured out that the gene was messed up"?',
-            options: ['Researchers determined that the gene carried a harmful mutation', 'Scientists figured out that the gene had gotten all messed up', 'The researchers found out that the gene was sort of broken down', 'Science folks discovered that the gene had a big problem'],
+            question: `While researching a topic, a student has taken the following notes: • The axolotl is a salamander native to lakes near Mexico City. • Unlike most salamanders, it keeps its gills and lives in water its whole life. • It can regrow lost limbs and even parts of its heart and brain. • Wild axolotls are critically endangered because of pollution and habitat loss. The student wants to explain why scientists who study healing are interested in the axolotl. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['An axolotl can regrow lost limbs and even parts of its heart and its brain.', 'The axolotl, a salamander native to lakes near Mexico City, is endangered.', 'Unlike most salamanders, the axolotl keeps its gills its whole life.', 'Pollution and habitat loss have made wild axolotls critically endangered.'],
             correctAnswer: 0,
-            explanation: '"Researchers determined" is formal and precise, and "harmful mutation" is proper scientific wording. The other options use informal language ("figured out," "messed up," "sort of broken down," "science folks," "a big problem") inappropriate for a scientific passage.'
+            explanation: `Only one note connects to healing: the axolotl regrows limbs and parts of its heart and brain. The other choices are accurate but describe where it lives, its gills, and its endangered status, none of which explains an interest in healing.`
           },
           {
-            question: 'A passage about art history consistently uses formal language. Which sentence best fits? "Monet\'s late works _____."',
-            options: ['reveal an increasingly abstract use of color and light', 'are really amazing and super beautiful paintings of his gardens', 'show he was getting into way different stuff toward the end', 'basically changed how everyone thought about art forever'],
+            question: `A synthesis question gives five notes. How many of them does the correct choice need to use?`,
+            options: ['Only the notes that serve the goal', 'All five, combined into one sentence', 'At least four of the five notes', 'Whichever notes contain numbers'],
             correctAnswer: 0,
-            explanation: '"Reveal" and "increasingly abstract use of color and light" match the formal tone of art criticism. The other options are too casual ("really amazing," "super," "getting into way different stuff," "basically") for the passage\'s established register.'
+            explanation: `The correct choice uses the notes the goal calls for, often just one or two. A choice that combines all or most of the notes is usually a trap, and numbers matter only when the goal is about the quantity they measure.`
           }
         ]
       }    },
     {
       id: 'ei5-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Detecting Tone Mismatches
+      content: `## Deep Dive: Ticking the Notes
 
-### Worked Example 1: Register Identification
+### Worked Example 1: One Goal, Five Notes
 
-| Passage Excerpt | Register | Clue Words |
+**Notes:**
+1. Mangroves are trees that grow in salty coastal water in the tropics.
+2. Their tangled roots slow waves and reduce erosion during storms.
+3. The roots also shelter young fish, crabs, and shrimp.
+4. Mangrove forests store large amounts of carbon in their soil.
+5. Many mangrove forests have been cleared to make room for shrimp farms.
+
+**Goal:** emphasize how mangroves protect coastlines.
+
+| Note | Tick? | Reason |
 |---|---|---|
-| "The longitudinal study yielded statistically significant results." | Formal/Academic | "longitudinal," "yielded," "statistically significant" |
-| "The study showed the approach works well in practice." | Professional | Straightforward, no jargon |
-| "Turns out, the thing actually works!" | Informal | "Turns out," "actually," exclamation mark |
+| 1 | ➖ | Identifies mangroves; optional context |
+| 2 | ✅ | Slowing waves and reducing erosion **is** coastal protection |
+| 3 | ❌ | About wildlife habitat |
+| 4 | ❌ | About carbon storage |
+| 5 | ❌ | About a threat to mangroves |
 
-### Worked Example 2: Spotting the Tone Mismatch
+| Choice | Verdict |
+|---|---|
+| "The tangled roots of mangroves slow waves and reduce erosion during storms." | ✅ Built from note 2 |
+| "Mangrove roots shelter young fish, and mangrove soil stores large amounts of carbon." | ❌ Two true, off-goal notes |
+| "Mangroves, tropical trees that shelter fish and store carbon, are often cleared for shrimp farms." | ❌ Note-stuffer: notes 1, 3, 4, and 5, but not 2 |
+| "Mangroves are trees that grow in salty coastal water in the tropics." | ❌ Background only |
 
-**Passage tone: Formal academic**
+### Worked Example 2: The Half-the-Goal Trap
 
-| Choice | Tone Match? | Problem |
-|---|---|---|
-| "The data corroborate earlier findings." | ✅ Formal | — |
-| "The data kind of support earlier findings." | ❌ Informal | "Kind of" is casual hedging |
-| "The data unequivocally prove earlier findings." | ❌ Too strong | "Unequivocally prove" is overstatement for science |
-| "The data, which are really cool, support findings." | ❌ Informal | "Really cool" has no place in academic writing |
+**Goal:** emphasize a trade-off of a new battery design (a benefit *and* its cost).
 
-### Style Consistency Rules
+| Choice | Verdict |
+|---|---|
+| "The new battery charges in ten minutes but wears out twice as fast." | ✅ Benefit + cost |
+| "The new battery charges in just ten minutes." | ❌ Benefit only |
+| "The new battery wears out twice as fast as older designs." | ❌ Cost only |
 
-| Rule | Right | Wrong |
-|---|---|---|
-| No slang in formal writing | "The results indicate…" | "The results are fire" |
-| No jargon for general audience | "The gene was inactive" | "The gene was transcriptionally silenced" (if audience is general) |
-| No unnecessary qualifiers | "The impact was significant" | "The impact was, like, pretty significant" |
-| Consistent formality level | All sentences match register | One casual sentence in a formal passage |
+### The Relevance Question
 
-### SAT Tone-Matching Strategy
-
-1. **Read 2-3 sentences** of the passage to establish the tone
-2. **Identify the register** (formal, professional, or informal)
-3. **Eliminate choices** that don't match
-4. **Among matching choices**, pick the most precise one`
+For every note, ask one question: **"Would the goal be accomplished without this?"** If yes, the note is optional. If the correct choice cannot do its job without it, it is required.`
     },
     {
       id: 'ei5-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Style & Tone Challenge** 🎯',
+      content: '**Note-Selection Challenge** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A professional-register passage about climate change includes this blank: "Rising sea levels _____ coastal communities worldwide." Which fits?',
-            options: ['threaten', 'mess with', 'beat up on', 'endanger upon'],
+            question: `While researching a topic, a student has taken the following notes: • Tardigrades are microscopic animals, usually less than a millimeter long. • They live in moss, soil, and ocean sediments around the world. • When their surroundings dry out, they can enter a state called a tun, in which their metabolism nearly stops. • In the tun state, some tardigrades have survived years without water. The student wants to explain how tardigrades survive drought. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['In dry conditions, tardigrades enter a tun state, in which their metabolism nearly stops.', 'In the tun state, some tardigrades have survived for years without any water.', 'Tardigrades, which are microscopic animals, live in moss, soil, and ocean sediments.', 'Tardigrades are found living in moss, soil, and ocean sediments in many parts of the world.'],
             correctAnswer: 0,
-            explanation: '"Threaten" is professional register: clear, direct, and appropriate. "Mess with" and "beat up on" are informal, and "endanger upon" is not idiomatic ("endanger" takes a direct object with no preposition).'
+            explanation: `"How" asks for the mechanism: when conditions turn dry, tardigrades enter a tun state and their metabolism nearly stops. The years-without-water sentence says how long they can last in that state, not what the state is or what triggers it. The other two describe their size and habitat.`
           },
           {
-            question: 'Which passage type on the SAT is MOST likely to use technical vocabulary?',
-            options: ['Science passages', 'Literary narratives', 'Social science passages', 'History essays'],
+            question: `While researching a topic, a student has taken the following notes: • Perovskite solar cells are a newer type of solar cell. • In the lab, they convert sunlight to electricity about as efficiently as standard silicon cells. • They can be made at lower temperatures, which could reduce manufacturing costs. • They tend to break down when exposed to moisture and heat. The student wants to emphasize a challenge facing perovskite solar cells. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['Perovskite solar cells tend to break down under moisture and heat.', 'Perovskite cells can be made at low temperatures, which could reduce costs.', 'In the lab, perovskite cells convert sunlight about as well as silicon cells.', 'Perovskite cells are a newer kind of solar cell that could lower costs.'],
             correctAnswer: 0,
-            explanation: 'Science passages use discipline-specific terminology (e.g., "mitosis," "photosynthesis"). Literary narratives use figurative language, social science uses analytical terms, and history uses period-specific terms — but science is most technical.'
+            explanation: `A challenge is a problem to overcome, and breaking down under moisture and heat is the only drawback in the notes. Lower manufacturing costs and silicon-level efficiency are advantages, and the last sentence mixes background with an advantage.`
           },
           {
-            question: 'A formal passage contains: "The architect designed the building." A proposed revision: "The architect totally nailed the building design." Should you accept the revision?',
-            options: ['No, because "totally nailed" is too casual for the writing around it', 'Yes, because the new wording is more vivid and engaging', 'Yes, because it shows enthusiasm for the architect\'s work', 'No, because the revision is too short to be effective'],
+            question: `While researching a topic, a student has taken the following notes: • Blue whales are the largest animals known to have lived. • An adult can be about 30 meters long. • Blue whales feed almost entirely on krill, tiny shrimplike animals. • An adult can eat several tons of krill a day during feeding season. The student wants to emphasize the contrast between the size of blue whales and the size of the animals they eat. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['At up to about 30 meters long, blue whales feed almost entirely on tiny krill.', 'Blue whales, the largest animals known, can be about 30 meters long as adults.', 'Blue whales, up to 30 meters long, eat several tons of food a day in feeding season.', 'Blue whales feed almost entirely on krill, which are small, shrimplike animals.'],
             correctAnswer: 0,
-            explanation: '"Totally nailed" is slang/informal. Even though it\'s vivid, it clashes with the formal register established in the passage. Tone consistency overrides vividness.'
+            explanation: `A contrast in size needs both sizes: the whale's enormous length and its food's tiny size. Only the 30-meters-and-tiny-krill sentence has both. The largest-animals sentence gives the whale's size alone, the several-tons sentence never says the food is small, and the krill sentence never says the whale is large.`
           }
         ]
       }
@@ -127,19 +122,19 @@ When the question asks about what information to include:
     {
       id: 'ei5-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Tone & Register Check** — Select the correct answer.',
+      content: '**Note-Selection Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'SAT passages typically use [professional|informal|slang|texting] register',
-          '"Kind of" and "sort of" are [too informal|perfectly formal|academic|scientific]',
-          'In a science passage: "The reaction _____ a precipitate." [produced|made|gave us|spit out]',
-          'Tone consistency means [every sentence matches the register|varying tone is fine|informal is always best|longer is better]'
+          'A note that is true but does not serve the goal should be [left out|included anyway|placed first|paraphrased]',
+          'Goal: "emphasize how mangroves protect coastlines." The relevant note is about [roots slowing waves|carbon in the soil|young fish|shrimp farms]',
+          'The choice that packs in the most notes is [often a trap|always correct|usually the shortest|never accurate]',
+          'Before reading the choices, [tick the notes that serve the goal|reread every note twice|count the notes|find the longest choice]'
         ],
-        correctAnswers: ['professional', 'too informal', 'produced', 'every sentence matches the register'],
-        hint1: 'Most SAT passages are written for a general educated audience.',
-        hint2: '"Kind of" hedges informally.',
-        hint3: '"Produced" is the precise scientific term.',
-        explanation: 'SAT = professional register. "Kind of" is too casual. "Produced" is precise scientific language. Tone must stay consistent throughout a passage.'
+        correctAnswers: ['left out', 'roots slowing waves', 'often a trap', 'tick the notes that serve the goal'],
+        hint1: 'Accuracy is not the test; relevance to the goal is.',
+        hint2: 'Which note describes protecting a coast?',
+        hint3: 'Coverage looks thorough but is not what the goal asks for.',
+        explanation: 'True but off-goal notes stay out. Slowing waves protects coastlines. A note-stuffer is often a trap. Tick the relevant notes before reading the choices.'
       }
     },
     {
@@ -149,12 +144,13 @@ When the question asks about what information to include:
 
 | Concept | Key Rule |
 |---|---|
-| SAT register | Almost always professional |
-| Consistency | Every sentence must match the passage's tone |
-| Science passages | More formal, technical vocabulary |
-| Common trap | Right meaning but wrong register |
-| Strategy | Identify tone → eliminate mismatches → choose most precise |
+| Notes needed | Usually one to three, not all of them |
+| Tick first | Mark the notes that serve the goal before reading the choices |
+| True but off-goal | Accurate, wrong job |
+| Half the goal | Comparisons and trade-offs need both halves |
+| Note-stuffer | Coverage is not relevance |
+| Relevance test | Could the goal be met without this note? |
 
-*Next: Cohesion & Paragraph Unity →*`    }
+*Next: Rhetorical Synthesis — Comparisons and Audience →*`    }
   ]
 };

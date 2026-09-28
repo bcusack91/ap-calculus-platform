@@ -19,10 +19,10 @@ export const satRWStrategyPart7Data = {
 
 | Type | ~Questions Per Module |
 |---|---|
-| Craft and Structure | 6-7 |
+| Craft and Structure | 6-8 |
 | Information and Ideas | 6-7 |
-| Standard English Conventions | 6-7 |
-| Expression of Ideas | 6-7 |
+| Standard English Conventions | 5-8 |
+| Expression of Ideas | 4-6 |
 
 ### Time Strategy: The 70-Second Rule
 
@@ -33,8 +33,8 @@ export const satRWStrategyPart7Data = {
 
 ### Decision Framework for Writing Questions
 
-1. Is there a grammar error? → Fix it (conventions)
-2. Is there wordiness? → Choose concise option (eliminate redundancy)
+1. Do the choices differ in verb or pronoun form? → Find the subject or antecedent (Form, Structure, and Sense)
+2. Do the choices differ only in punctuation? → Check clause boundaries and supplement pairs (Boundaries)
 3. Is there a transition? → Identify the relationship (addition, contrast, cause)
 4. Is it a rhetorical synthesis? → Match the stated goal
 
@@ -43,7 +43,7 @@ export const satRWStrategyPart7Data = {
 - **Read answer choices vertically** — compare what's different between them to identify what's being tested
 - **On pronouns:** Always check what the pronoun refers to
 - **On transitions:** Cover the transition word and predict the relationship first
-- **On conciseness:** Among grammatically correct choices, shorter is usually better
+- **On punctuation:** A supplement that opens with a comma or dash closes with the same mark
 - **When stuck:** Eliminate the two most obviously wrong choices, then compare the remaining two carefully`
     },
     {
@@ -53,10 +53,10 @@ export const satRWStrategyPart7Data = {
       exercise: {
         questions: [
           {
-            question: '"The study, which was conducted by researchers at MIT, _____ that sleep deprivation affects memory." Which choice is grammatically correct and most concise?',
-            options: ['showed', 'shown', 'was able to show', 'had the finding'],
+            question: 'The study, which was conducted by researchers at two universities, ______ that losing sleep weakens memory. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['showed', 'shown', 'showing', 'to show'],
             correctAnswer: 0,
-            explanation: '"Showed" is grammatical and says it in one word. "Shown" is a participle that needs a helping verb ("has shown"), so it is ungrammatical here. "Was able to show" and "had the finding" are grammatical but wordy ways of saying "showed."'
+            explanation: 'The subject "The study" needs a main verb, and only "showed" can serve as one. "Shown" needs a helping verb ("has shown"), and "showing" and "to show" are not finite verbs, so each of them leaves the sentence without a main verb.'
           },
           {
             question: 'Approximately how many seconds should you spend on each R&W question?',
@@ -82,11 +82,11 @@ export const satRWStrategyPart7Data = {
 
 | Clue in the Question | Question Type | Strategy |
 |---|---|---|
-| Underlined portion with grammar options | Standard English Conventions | Find the grammar rule being tested |
+| A blank whose choices differ only in punctuation or verb form | Standard English Conventions | Find the grammar rule being tested |
 | "Which choice completes the text with the most logical transition?" | Transitions | Predict the relationship first |
 | Bullet-point notes + "Which choice most effectively…" | Rhetorical Synthesis | Read the goal first |
 | "Which choice best states the main idea?" | Information & Ideas | Eliminate details, find the central claim |
-| Shorter vs. longer answer choices | Conciseness | Grammar first, then shortest wins |
+| Two short texts + "How would the author of Text 2 most likely respond…?" | Cross-Text Connections | State each author's claim, then find where they agree or disagree |
 | "Which choice completes the text with the most logical and precise word or phrase?" | Craft & Structure (Words in Context) | Predict a word from the context before reading the choices |
 
 ### Worked Example 2: Module Pacing Plan
@@ -104,10 +104,10 @@ When comparing answer choices, look at what DIFFERS between them:
 
 | Choice A | Choice B | Choice C | Choice D |
 |---|---|---|---|
-| found | discovered | found out | came to find |
-| ↑ concise | ↑ concise | ↑ wordy | ↑ wordy |
+| its | it's | their | they're |
+| singular possessive | "it is" | plural possessive | "they are" |
 
-**Differences = what's being tested.** Here, conciseness. Choose A or B, then pick the more natural fit.
+**Differences = what's being tested.** Here, two things at once: singular vs. plural, and possessive vs. contraction. Find the antecedent to settle the number, then check whether the sentence needs ownership or "it is / they are."
 
 ### Complete R&W Checklist
 
@@ -116,7 +116,7 @@ When comparing answer choices, look at what DIFFERS between them:
 | Grammar | Is there a subject-verb agreement error? |
 | Pronouns | Does the pronoun clearly refer to one noun? |
 | Transitions | What's the logical relationship between ideas? |
-| Conciseness | Is there a shorter option that means the same? |
+| Supplements | Does a supplement open and close with the same mark? |
 | Punctuation | Is the comma/semicolon/dash used correctly? |
 | Synthesis | Does this answer match the stated goal? |`
     },
@@ -175,7 +175,7 @@ When comparing answer choices, look at what DIFFERS between them:
 | Sentence Structure (1) | Know comma splices, run-ons, fragments |
 | Subject-Verb Agreement (2) | Find the true subject; ignore interrupters |
 | Transitions (3) | Predict the relationship before reading choices |
-| Conciseness (4) | Grammar → meaning → shortest option wins |
+| Supplements, Colons, Lists (4) | Matching pairs; colon only after a complete clause |
 | Pronouns (5) | Clear antecedent + number agreement |
 | Rhetorical Synthesis (6) | Goal first, match notes to purpose |
 | Overall Strategy (7) | 70 seconds/question, vertical comparison, never leave blanks |

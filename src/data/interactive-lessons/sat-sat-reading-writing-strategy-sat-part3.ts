@@ -8,7 +8,7 @@ export const satRWStrategyPart3Data = {
 
 **Part 3 of 7 — Connecting Ideas Effectively**
 
-Transition questions test whether you understand the logical relationship between sentences or paragraphs. They're among the most frequent on the SAT Writing section.
+Transition questions test whether you understand the logical relationship between sentences or paragraphs. They are among the most frequent writing questions on the Reading and Writing section.
 
 ### Transition Categories
 
@@ -77,9 +77,9 @@ Transition questions test whether you understand the logical relationship betwee
 | Sentence 1 | Sentence 2 | Relationship | Correct Transition |
 |---|---|---|---|
 | "Sales increased 20%." | "The company hired 50 new employees." | Cause → Effect | As a result |
-| "Sales increased 20%." | "Customer complaints also rose." | Addition (unexpected) | However / Nevertheless |
+| "Sales increased 20%." | "Profits fell." | Contrast | However / Yet |
 | "Sales increased 20%." | "Revenue grew from \\$1M to \\$1.2M." | Example / Restatement | Specifically / In fact |
-| "Sales increased 20%." | "Costs increased 30%." | Contrast | However / Yet |
+| "Sales increased 20%." | "Its main rival's sales also rose 20%." | Similarity | Similarly / Likewise |
 
 ### Worked Example 2: The "However" Trap
 
@@ -89,8 +89,8 @@ Transition questions test whether you understand the logical relationship betwee
 |---|---|---|
 | "The plan is expensive. _____, it produces results." | ✅ Yes | However (contrast: cost vs. effectiveness) |
 | "The plan is expensive. _____, it requires significant funding." | ❌ No | Indeed / In fact (continuation, not contrast) |
-| "The plan is expensive. _____, the company invested in it." | ⚠️ Maybe | Nevertheless (despite the cost) |
-| "The plan is expensive. _____, the team cut the budget in half." | ✅ Yes | Therefore (cause → response) |
+| "The plan is expensive. _____, the company invested in it." | ✅ Yes | However or Nevertheless (despite the cost) |
+| "The plan is expensive. _____, the team looked for ways to cut costs." | ❌ No | Therefore (cause → response) |
 
 ### Transition Decision Flowchart
 
@@ -161,6 +161,6 @@ Transition questions test whether you understand the logical relationship betwee
 | Concession | Admittedly, Granted, While true |
 | #1 trap | "However" when the relationship is actually addition |
 
-*Next: Conciseness & Redundancy →*`    }
+*Next: Supplements, Colons, and Lists →*`    }
   ]
 };

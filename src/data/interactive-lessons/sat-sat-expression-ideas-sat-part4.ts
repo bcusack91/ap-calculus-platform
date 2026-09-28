@@ -4,120 +4,122 @@ export const satExpressionPart4Data = {
     {
       id: 'ei4-intro',
       type: 'text' as const,
-      content: `# Synthesis & Integrating Information
+      content: `# Rhetorical Synthesis I: Reading the Goal
 
-**Part 4 of 7 — Combining Ideas Effectively**
+**Part 4 of 7 — Rhetorical Synthesis: Reading the Goal**
 
-Synthesis questions ask you to combine information from multiple sources or multiple parts of a passage into a single, coherent statement.
+Every Rhetorical Synthesis question ends the same way: "The student wants to ___. Which choice most effectively uses relevant information from the notes to accomplish this goal?" The blank is the only part that changes, and it decides the answer.
 
-### Combining with Relative Clauses
+### Turn the Goal into a Checklist
 
-Two choppy sentences:
-- "Marie Curie discovered radium in 1898."
-- "She was the first woman to win a Nobel Prize."
+Read the goal **before** the notes, and translate it into what the correct sentence must contain.
 
-Combined: "Marie Curie, **who was the first woman to win a Nobel Prize**, discovered radium in 1898."
+| The student wants to… | The correct sentence must… |
+|---|---|
+| **emphasize** X | put X at the center of the sentence |
+| **present a finding / conclusion** of a study | state the result, not just what the researchers did |
+| **describe the method / approach** | say how the study was done |
+| **explain why / how** | give the reason or the mechanism |
+| **introduce** X **to an audience unfamiliar with it** | say what X is (a category or a brief description) |
+| **present** X **to an audience already familiar with it** | skip the basic definition and give specifics |
+| **emphasize a similarity / difference** | name both things and the shared or differing feature |
+| **make a generalization** | state a broad claim, beyond any single example |
 
-### Combining with Appositives
+### Why the Goal Beats the Notes
 
-An appositive renames or describes a noun:
-- "Dr. Marcus Thompson, **a leading cardiologist at Johns Hopkins**, published the study."
+Wrong choices are built from real notes. A choice can be accurate, detailed, and well written and still fail, because it does a *different* job: it gives background when the goal asks for a finding, or a method when the goal asks for a result.
 
-### Combining with Participial Phrases
+### The "Unfamiliar Audience" Signal
 
-- "The hurricane destroyed 500 homes." + "It caused \\$2 billion in damage."
-- → "**Destroying 500 homes**, the hurricane caused \\$2 billion in damage."
-
-### Which Information to Keep?
-
-When combining, ask: **What is the most important information for the passage's purpose?**
-
-If the passage is about scientific achievement:
-✅ Keep: discovery, impact, significance
-❌ Cut: biographical trivia, exact dates (unless relevant)
-
-### SAT Trap ⚠️
-
-Trap answers combine the information correctly but **change the emphasis** or **relationship** between ideas. Always check that the relative importance of each idea is preserved.`
+"An audience unfamiliar with X" is a precise instruction: the reader does not know what X is. A sentence that names X without identifying it fails, however impressive its facts. Look for an identifying phrase: "X, **a mathematician at NASA**, …" or "X, **a seed bank on an Arctic island**, …".`
     },
     {
       id: 'ei4-quiz',
       type: 'multiple-choice' as const,
-      content: '**Synthesis Practice** 🎯',
+      content: '**Goal-Reading Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which best combines these sentences? "The Great Barrier Reef spans 2,300 kilometers. It is the world\'s largest coral reef system. It is visible from space."',
-            options: ['At 2,300 kilometers, the Great Barrier Reef is the world\'s largest coral reef system and is visible from space.', 'Spanning 2,300 kilometers, the Great Barrier Reef is large and visible from space, being the world\'s largest coral reef system.', 'The world\'s largest coral reef system is the Great Barrier Reef, which spans 2,300 kilometers, and it is visible from space.', 'The Great Barrier Reef spans 2,300 kilometers; it is the world\'s largest coral reef system; it is visible from space.'],
+            question: `A synthesis question says: "The student wants to introduce the Rosetta Stone to an audience unfamiliar with it." What must the correct choice include?`,
+            options: ['A brief statement of what the Rosetta Stone is', 'The exact year the Rosetta Stone was discovered', 'The name of the scholar who first decoded it', 'A comparison with another ancient inscription'],
             correctAnswer: 0,
-            explanation: 'The best version folds the length into a short introductory phrase and joins the other two facts with "and," so it flows well and keeps all three pieces of information. The "Spanning" version is wordy and repeats itself ("is large… being the world\'s largest"), the "which spans…, and it is" version is structurally awkward, and the semicolon version just strings the three sentences together without combining them.'
+            explanation: `An unfamiliar audience does not know what the Rosetta Stone is, so the sentence must identify it. The discovery year, the scholar's name, or a comparison could appear in a good sentence, but none of them tells a new reader what the object is.`
           },
           {
-            question: 'When combining sentences on the SAT, the most important factor is:',
-            options: ['Keeping the original meaning and emphasis of each idea', 'Making the combined sentence as short as possible', 'Using the most sophisticated grammatical structure', 'Keeping every word from both of the original sentences'],
+            question: `While researching a topic, a student has taken the following notes: • The Voyager 1 space probe was launched by NASA in 1977. • In 2012, it became the first human-made object to enter interstellar space. • It carries a gold-plated record with sounds and images from Earth. • It is powered by a generator whose output drops a little each year. The student wants to emphasize an achievement of Voyager 1. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['In 2012, Voyager 1 became the first human-made object in interstellar space.', 'Voyager 1 carries a gold-plated record holding sounds and images from Earth.', 'Launched by NASA in 1977, Voyager 1 is powered by an onboard generator.', 'The power output of the generator on Voyager 1 drops a little every year.'],
             correctAnswer: 0,
-            explanation: 'The SAT values clarity and flow. You can cut words, but you must not change the meaning or shift which idea is emphasized. Brevity and complexity are secondary, and keeping every original word usually defeats the point of combining.'
+            explanation: `An achievement is something the probe accomplished, and reaching interstellar space first is the only accomplishment in the notes. The record is something it carries, the launch and power source are background facts, and the falling power output is a limitation.`
           }
         ]
       }    },
     {
       id: 'ei4-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Advanced Sentence Combining
+      content: `## Deep Dive: One Set of Notes, Four Goals
 
-### Worked Example 1: Choosing the Best Combination Method
+### Worked Example 1: The Goal Picks the Answer
 
-| Original Sentences | Method | Combined |
+**Notes:**
+- Mary Anning (1799–1847) was a fossil collector in Lyme Regis, England.
+- In 1823, she discovered the first complete plesiosaur skeleton.
+- As a woman, she was barred from joining the Geological Society of London.
+- Scientists often published descriptions of her finds without crediting her.
+
+| Goal | Best sentence | What it has that others lack |
 |---|---|---|
-| "Ada Lovelace wrote the first algorithm." + "She is considered the first computer programmer." | Appositive | "Ada Lovelace, **the first computer programmer**, wrote the first algorithm." |
-| "The volcano erupted in 79 AD." + "It buried the city of Pompeii." | Participial | "**Erupting in 79 AD**, the volcano buried the city of Pompeii." |
-| "The dolphin uses echolocation." + "Echolocation allows it to navigate murky waters." | Relative clause | "The dolphin uses echolocation, **which allows it to navigate murky waters**." |
+| Emphasize a discovery | "In 1823, Anning discovered the first complete plesiosaur skeleton." | The find itself |
+| Introduce Anning to an unfamiliar audience | "Mary Anning, a 19th-century English fossil collector, found the first complete plesiosaur skeleton." | Who she was |
+| Describe an obstacle she faced | "As a woman, Anning was barred from the Geological Society of London." | A barrier |
+| Emphasize that her work went unrecognized | "Scientists often published her finds without crediting her." | Missing credit |
 
-### Worked Example 2: Spotting the Emphasis Trap
+Each of the four sentences is accurate. Each one is right for exactly one goal.
 
-**Original:** "The vaccine was developed in record time. It underwent rigorous safety testing."
+### Worked Example 2: Finding vs. Method
 
-| Combined Version | Emphasis | Correct? |
+A study goal comes in two flavors, and the SAT offers both as choices.
+
+| Goal says… | Needs | Trap choice |
 |---|---|---|
-| "Although developed in record time, the vaccine underwent rigorous safety testing." | Safety testing is the main point | ✅ if passage emphasizes safety |
-| "The vaccine was developed in record time, though it underwent safety testing." | Speed is the main point; safety is downplayed | ✅ if passage emphasizes speed |
-| "The vaccine, which underwent safety testing, was developed in record time." | Speed is main; safety is parenthetical | ❌ if passage equally values both |
+| "present the study's finding" | What the researchers **learned** | A sentence describing what they **did** |
+| "describe the study's method" | What the researchers **did** | A sentence reporting the result |
 
-**Key:** The SAT answer must preserve the passage's intended emphasis.
+### Worked Example 3: Audience Cues
 
-### Combining Method Quick Reference
-
-| Method | Structure | Best For |
+| Audience | Good opening | Why |
 |---|---|---|
-| Appositive | Noun, **description**, verb… | Identifying a person/thing |
-| Relative clause | …noun **who/which/that** verb… | Adding essential/non-essential info |
-| Participial phrase | **Verb-ing/verb-ed**, subject verb… | Showing simultaneous or causal actions |
-| Conjunction | Sentence **and/but/so** sentence | Equal-weight ideas |
-| Semicolon | Sentence**;** related sentence | Closely related independent clauses |`
+| Unfamiliar with CRISPR | "CRISPR, a tool for editing genes, …" | Defines the term first |
+| Already familiar with CRISPR | "A new CRISPR therapy for sickle cell disease…" | Skips the definition and gives news |
+
+### The Goal Checklist Routine
+
+1. Read the goal and note its verb (emphasize, introduce, explain, present, compare).
+2. Write a two- or three-word checklist ("both birds + size," "what X is," "the result").
+3. Check each choice against the list. Most choices fail on the first item.`
     },
     {
       id: 'ei4-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Synthesis Challenge** 🎯',
+      content: '**Goal-Reading Challenge** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Combine: "Dr. Patel leads the neuroscience lab." + "She has published over 200 papers." The writer wants to emphasize Dr. Patel\'s publication record.',
-            options: ['Dr. Patel, who leads the neuroscience lab, has published over 200 papers.', 'Dr. Patel, who has published over 200 papers, leads the neuroscience lab.', 'Having published over 200 papers, Dr. Patel leads the neuroscience lab.', 'Dr. Patel leads the neuroscience lab, although she has published over 200 papers.'],
+            question: `While researching a topic, a student has taken the following notes: • A lichen is made of a fungus and an alga living together. • The fungus provides structure and absorbs water and minerals. • The alga makes food through photosynthesis. • Lichens can grow on bare rock, where few other organisms survive. The student wants to explain how the partners in a lichen depend on each other. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['In a lichen, the fungus supplies water and minerals, and the alga supplies food.', 'Lichens, which can grow even on bare rock, are made of a fungus and an alga.', 'Lichens can survive on bare rock, where few other kinds of organisms can live.', 'Inside a lichen, the alga makes food through the process of photosynthesis.'],
             correctAnswer: 0,
-            explanation: 'The main clause carries the emphasis. To emphasize her publications, "has published over 200 papers" must be the main clause, with her lab role tucked into the relative clause. The second and third versions put the lab role in the main clause, and "although" sets up a contrast that makes no sense.'
+            explanation: `Dependence on each other means each partner supplies something the other uses, so the sentence needs both roles. Only the water-and-minerals-and-food sentence gives both. The bare-rock sentences describe where lichens live and, at most, what they are made of, and the photosynthesis sentence gives the alga's role alone.`
           },
           {
-            question: 'Which combining method inserts a noun phrase that renames the subject, set off by commas?',
-            options: ['Appositive', 'Conjunction', 'Participial phrase', 'Semicolon'],
+            question: `While researching a topic, a student has taken the following notes: • Katherine Johnson (1918–2020) was a mathematician at NASA. • She calculated the flight path for Alan Shepard's 1961 spaceflight. • Before his 1962 orbital flight, John Glenn asked that she check the computer's calculations. • In 2015, she received the Presidential Medal of Freedom. The student wants to introduce Katherine Johnson to an audience unfamiliar with her. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['Katherine Johnson was a NASA mathematician who calculated a 1961 flight path.', 'Before his 1962 flight, John Glenn asked that Johnson check the computer\'s calculations.', 'Johnson did the calculations for the flight path of Alan Shepard\'s 1961 spaceflight.', 'In 2015, at age 97, Katherine Johnson received the Presidential Medal of Freedom.'],
             correctAnswer: 0,
-            explanation: 'An appositive is a noun phrase set off by commas that renames or describes the subject: "Marie Curie, **a Polish physicist**, discovered radium."'
+            explanation: `A reader who has never heard of Johnson needs to learn who she was. Only the first sentence identifies her as a NASA mathematician. The Glenn sentence and the flight-path sentence assume the reader already knows who "Johnson" is, and the award sentence names an honor without saying what she did to earn it.`
           },
           {
-            question: '"Although the cost was high, the results justified the investment." This structure emphasizes:',
-            options: ['the cost of the investment', 'the results of the investment', 'the cost and results equally', 'neither cost nor results'],
-            correctAnswer: 1,
-            explanation: 'The "although" clause is subordinate (background). The main clause — "the results justified the investment" — carries the emphasis. "Although" downgrades the cost concern.'
+            question: `While researching a topic, a student has taken the following notes: • Many plants, including coffee and citrus, make nectar with small amounts of caffeine. • In a 2013 study, Geraldine Wright's team trained honeybees to link a floral scent with a sugar reward. • Some bees received sugar laced with caffeine; others received plain sugar. • Bees given caffeine were three times as likely to remember the scent 24 hours later. The student wants to present the study's main finding. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
+            options: ['Bees given caffeine were three times as likely to recall the scent a day later.', 'Wright\'s team trained honeybees to link a floral scent with a reward of sugar water.', 'In the study, some bees got sugar laced with caffeine, and others got plain sugar.', 'Coffee and citrus plants make nectar that contains small amounts of caffeine.'],
+            correctAnswer: 0,
+            explanation: `A finding is what the researchers learned: caffeine made bees three times as likely to remember the scent. The training sentence and the two-groups sentence describe the method, and the coffee-and-citrus sentence is background that came before the study.`
           }
         ]
       }
@@ -125,19 +127,19 @@ Trap answers combine the information correctly but **change the emphasis** or **
     {
       id: 'ei4-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Sentence Combining Check** — Select the correct answer.',
+      content: '**Goal Checklist Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"Einstein, a theoretical physicist, developed relativity." uses an [appositive|relative clause|participial phrase|conjunction]',
-          'Combining must preserve the [original meaning and emphasis|exact original words|original sentence count|original word order]',
-          '"Discovering penicillin, Fleming changed medicine." uses a [participial phrase|appositive|semicolon|conjunction]',
-          'Two closely related independent clauses can be joined by a [semicolon|comma alone|comma + "however"|colon + "and"]'
+          '"Introduce X to an audience unfamiliar with it" requires [saying what X is|the most recent statistic|a comparison to Y|a direct quotation]',
+          '"Present the study\'s finding" requires [the result|the method|the researchers\' names|the sample size]',
+          '"Explain why" requires [a reason|a date|a location|a name]',
+          'The first thing to read in a synthesis question is the [goal|first note|longest choice|last note]'
         ],
-        correctAnswers: ['appositive', 'original meaning and emphasis', 'participial phrase', 'semicolon'],
-        hint1: '"A theoretical physicist" renames Einstein — that\'s an appositive.',
-        hint2: 'The SAT penalizes answers that shift emphasis.',
-        hint3: '"Discovering" is a present participle starting a modifying phrase.',
-        explanation: 'Appositives rename nouns. Combining must keep meaning + emphasis. "Discovering…" is a participial phrase. Semicolons join related independent clauses.'
+        correctAnswers: ['saying what X is', 'the result', 'a reason', 'goal'],
+        hint1: 'An unfamiliar reader does not know what X is.',
+        hint2: 'A finding is what the researchers learned.',
+        hint3: '"Why" asks for a cause or reason.',
+        explanation: 'An unfamiliar audience needs X identified. A finding is the result, not the method. "Explain why" needs a reason. Read the goal first, then check each choice against it.'
       }
     },
     {
@@ -145,14 +147,16 @@ Trap answers combine the information correctly but **change the emphasis** or **
       type: 'text' as const,
       content: `## Part 4 Summary
 
-| Method | Example Pattern | Best For |
-|---|---|---|
-| Appositive | Noun, *description*, verb | Identifying people/things |
-| Relative clause | …who/which + verb | Adding info about a noun |
-| Participial phrase | *Verb-ing*, subject verb | Simultaneous/causal actions |
-| Conjunction | Sentence + and/but/so | Equal-weight ideas |
-| Key rule | Preserve meaning AND emphasis | Always check |
+| Goal wording | Checklist |
+|---|---|
+| Emphasize X | X at the center |
+| Present a finding | The result, not the method |
+| Explain why / how | A reason or mechanism |
+| Introduce to an unfamiliar audience | Identify what X is |
+| Familiar audience | Skip the definition; give specifics |
+| Similarity / difference | Both things + the feature |
+| Strategy | Goal first, checklist second, choices last |
 
-*Next: Style, Tone, and Audience →*`    }
+*Next: Rhetorical Synthesis — Choosing the Right Notes →*`    }
   ]
 };

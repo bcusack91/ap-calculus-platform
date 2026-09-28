@@ -4,131 +4,128 @@ export const satRWStrategyPart4Data = {
     {
       id: 'rw4-intro',
       type: 'text' as const,
-      content: `# Conciseness & Redundancy
+      content: `# Punctuation Inside the Sentence
 
-**Part 4 of 7 — Eliminating Wordiness**
+**Part 4 of 7 — Supplements, Colons, and Lists**
 
-The SAT rewards clear, concise writing. If two answer choices are grammatically correct, the **shorter one is usually right**.
+Part 1 covered the boundary *between* clauses: periods, semicolons, and comma splices. Many Boundaries questions instead test punctuation *inside* a sentence: extra information set off from the main clause, colons, and items in a series.
 
-### Common Redundancy Patterns
+### Supplements: Use a Matching Pair
 
-| Redundant | Concise |
+A **supplement** (a nonessential element) adds information the sentence could do without. It is set off by a **matching pair** of marks:
+
+| Pair | Example |
 |---|---|
-| "In the event that" | "If" |
-| "Due to the fact that" | "Because" |
-| "In order to" | "To" |
-| "At the present time" | "Now" / "Currently" |
-| "Each and every" | "Each" or "Every" |
-| "Past history" | "History" |
-| "True fact" | "Fact" |
-| "Completely eliminate" | "Eliminate" |
-| "The reason why is because" | "The reason is" or "Because" |
+| Two commas | "The okapi**,** a relative of the giraffe**,** lives in the rainforests of Central Africa." |
+| Two dashes | "The okapi**—**a relative of the giraffe**—**lives in the rainforests of Central Africa." |
+| Two parentheses | "The okapi **(**a relative of the giraffe**)** lives in the rainforests of Central Africa." |
 
-### The Conciseness Rule
+**Never mix the pair.** A supplement that opens with a dash must close with a dash, not a comma.
 
-When choosing between answer options:
+**The removal test:** delete everything between the marks. If the rest is a complete sentence with the same core meaning, the marks are placed correctly.
 
-1. **Eliminate grammatically incorrect choices first**
-2. **Among correct choices, pick the most concise**
-3. **Don't sacrifice clarity for brevity** — the shortest answer isn't correct if it changes the meaning
+### Essential Elements Take No Commas
 
-### Example
+If the information identifies *which* one you mean, it is essential and gets no commas.
 
-"The artist, **who was known for her innovative and groundbreaking approach to sculpture**, won the award."
+- ✅ "The novelist Toni Morrison won the Nobel Prize in 1993." (Which novelist? Morrison. No commas.)
+- ✅ "Toni Morrison, the novelist, won the Nobel Prize in 1993." (The name already identifies her; "the novelist" is extra.)
 
-Best revision: "The artist, **known for her innovative approach to sculpture**, won the award."
+### Colons
 
-- Removed "who was" (unnecessary)
-- Removed "groundbreaking" (redundant with "innovative")
-- Same meaning, fewer words
+A colon must follow an **independent clause**, and what comes after it explains, lists, or specifies.
 
-### SAT Trap ⚠️
+- ✅ "The recipe needs only three ingredients**:** flour, water, and salt."
+- ❌ "The recipe needs**:** flour, water, and salt." (no complete clause before the colon)
+- ❌ "The recipe needs ingredients such as**:** flour and salt." (never after "such as" or "including")
 
-Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
+### Items in a Series
 
-❌ "She told her she was wrong." (Ambiguous: who is "she"?)  
-✅ "Maria told Sarah that Sarah was wrong." (Clear but longer)`
+- Separate simple items with commas: "maps, compasses, and flashlights."
+- If the items contain commas themselves, separate them with **semicolons**: "Austin, Texas; Denver, Colorado; and Portland, Oregon."`
     },
     {
       id: 'rw4-quiz',
       type: 'multiple-choice' as const,
-      content: '**Conciseness Practice** 🎯',
+      content: '**Supplements and Colons Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which is the most concise and effective revision? "The CEO, who is the person in charge of leading the company, announced a new strategy."',
-            options: ['The CEO announced a new strategy.', 'The CEO announced strategy.', 'The CEO of the company announced a new strategy.', 'The CEO, the company leader, announced a new strategy.'],
+            question: 'The ______ launched in 1990, has made more than a million observations of stars, galaxies, and planets. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['Hubble Space Telescope, which was', 'Hubble Space Telescope—which was', 'Hubble Space Telescope which was', 'Hubble Space Telescope; which was'],
             correctAnswer: 0,
-            explanation: 'A CEO is by definition the person leading the company, so "who is the person in charge of leading the company" is redundant. "The CEO announced a new strategy" keeps all the essential information. "Announced strategy" is shorter but drops the article and the word "new," which changes the meaning; the other two versions still repeat the idea of leading the company.'
+            explanation: 'The supplement "which was launched in 1990" closes with a comma after "1990," so it must open with a comma too. A dash would open a pair the comma cannot close, no punctuation leaves the closing comma unmatched, and a semicolon cannot introduce a relative clause.'
           },
           {
-            question: '"Due to the fact that the weather was bad, the game was postponed." The most concise revision is:',
-            options: ['Because of bad weather, the game was postponed.', 'Bad weather, the game was postponed.', 'The game was postponed due to the fact of bad weather.', 'Since the weather was bad in nature, the game was postponed.'],
+            question: 'The expedition\'s ship carried everything the crew would need for the ______ fuel, canned food, and spare parts for the engines. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['winter:', 'winter;', 'winter, such as:', 'winter, and'],
             correctAnswer: 0,
-            explanation: '"Due to the fact that" → "Because of." This is one of the most common wordiness patterns the SAT tests. "Bad weather, the game was postponed" is shorter but ungrammatical (the opening noun phrase is not connected to the clause). The other two versions keep padding ("due to the fact of," "in nature").'
+            explanation: '"The expedition\'s ship carried everything the crew would need for the winter" is an independent clause, and the list that follows specifies "everything," so a colon fits. A semicolon needs an independent clause after it, a colon cannot follow "such as," and "and" joins the list to the clause as if it were one more item, which makes no sense.'
           }
         ]
       }    },
     {
       id: 'rw4-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Spotting & Eliminating Wordiness
+      content: `## Deep Dive: Reading the Punctuation Around a Blank
 
-### Worked Example 1: Wordy → Concise Transformations
+### Worked Example 1: Find the Other Half of the Pair
 
-| Wordy Version | Concise Version | Words Saved |
+"Octopuses—animals with no bones at ______ can squeeze through gaps barely wider than their beaks."
+
+| Step | Action |
+|---|---|
+| 1 | Spot the mark that opens the supplement: a dash after "Octopuses" |
+| 2 | Find where the supplement ends: after "all" |
+| 3 | Close with the same mark: "all—" |
+| **Reject** | "all," (mixed pair), "all" (unclosed), "all;" (breaks the sentence in two) |
+
+### Worked Example 2: Essential or Supplement?
+
+| Sentence | Commas? | Why |
 |---|---|---|
-| "She was of the opinion that the data was unreliable." | "She believed the data was unreliable." | 4 words |
-| "Despite the fact that it rained, they played outside." | "Despite the rain, they played outside." | 3 words |
-| "He made the decision to resign from his position." | "He decided to resign." | 5 words |
-| "The experiment was carried out by the research team." | "The research team conducted the experiment." | 1 word + active voice |
-| "There are many students who enjoy reading." | "Many students enjoy reading." | 3 words |
+| "The painter Frida Kahlo was born in 1907." | None | The name tells *which* painter |
+| "Frida Kahlo, a Mexican painter, was born in 1907." | Around "a Mexican painter" | The name already identifies her; the description is extra |
+| "Students who study daily improve fastest." | None | "Who study daily" tells *which* students |
+| "My sister, who studies daily, improved quickly." | Around "who studies daily" | "My sister" already identifies her |
 
-### Worked Example 2: Identifying Redundancy
+### Worked Example 3: Colon Checklist
 
-| Redundant Phrase | Why It's Redundant | Fix |
-|---|---|---|
-| "Advance planning" | Planning is always in advance | "Planning" |
-| "Brief summary" | Summaries are brief by definition | "Summary" |
-| "Collaborate together" | Collaborate means work together | "Collaborate" |
-| "End result" | A result is the end | "Result" |
-| "Free gift" | Gifts are free by definition | "Gift" |
-| "Personal opinion" | Opinions are personal | "Opinion" |
-| "Revert back" | Revert means go back | "Revert" |
-| "Unexpected surprise" | Surprises are unexpected | "Surprise" |
+| Check | Question |
+|---|---|
+| Before the colon | Is it a complete sentence on its own? |
+| After the colon | Does it explain, list, or specify something from before? |
+| Trap words | Is the colon right after "such as," "including," or a verb like "are"? If so, delete it. |
 
-### The Conciseness Decision Process
+### Worked Example 4: Series With Internal Commas
 
-| Step | Ask Yourself | Action |
-|---|---|---|
-| 1 | Is any choice grammatically wrong? | Eliminate it |
-| 2 | Do any choices change the meaning? | Eliminate them |
-| 3 | Among remaining choices, which is shortest? | Choose it |
-| 4 | Does the shortest create ambiguity? | Choose next shortest |`
+"The tour stops in Austin, Texas______ Denver, Colorado; and Portland, Oregon."
+
+The later items are separated by semicolons, so the first break must be a semicolon too: "Texas;". A comma would make it impossible to tell where one item ends and the next begins.`
     },
     {
       id: 'rw4-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Advanced Conciseness Challenge** 🎯',
+      content: '**Supplements, Colons, and Lists Challenge** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which is most concise? "The reason why the project failed was because of insufficient funding."',
-            options: ['The project failed because of insufficient funding.', 'The project failed, insufficient funding.', 'The reason the project failed was because of insufficient funding.', 'The project failed, and the reason was insufficient funding.'],
+            question: 'The Rosetta Stone—a stone slab carved with the same decree in three different ______ helped scholars decode Egyptian hieroglyphs. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['scripts—', 'scripts,', 'scripts', 'scripts;'],
             correctAnswer: 0,
-            explanation: '"The reason why…was because" is doubly redundant: "the reason" and "because" both announce the cause. "The project failed because of insufficient funding" says it once. "The project failed, insufficient funding" is shorter but ungrammatical, "The reason…was because" keeps the redundancy, and "and the reason was" adds a roundabout second clause.'
+            explanation: 'The supplement opens with a dash after "Rosetta Stone," so it must close with a dash after "scripts." A comma would mix the pair, no punctuation leaves the supplement unclosed, and a semicolon would split the subject from its verb "helped."'
           },
           {
-            question: 'Which phrase is NOT redundant?',
-            options: ['Unexpected delay', 'Close proximity', 'Future plans', 'Combined total'],
+            question: 'In 1993, the ______ became the first Black woman to win the Nobel Prize in Literature. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['novelist Toni Morrison', 'novelist, Toni Morrison,', 'novelist, Toni Morrison', 'novelist Toni Morrison,'],
             correctAnswer: 0,
-            explanation: '"Unexpected delay" is not redundant, because delays can be expected (a scheduled closure) or unexpected (a sudden storm), so the adjective adds information. "Close proximity" (proximity = nearness), "future plans" (plans are always for the future), and "combined total" (a total is already combined) all repeat themselves.'
+            explanation: '"The novelist" alone does not say which novelist, so the name is essential and takes no commas. Commas around the name would treat it as removable, leaving "the novelist became the first Black woman," and the one-comma versions put a single comma between the subject and its verb or between a noun and its name.'
           },
           {
-            question: 'When multiple answer choices are grammatically correct, the SAT almost always prefers the:',
-            options: ['shortest option that keeps the meaning clear', 'briefest option, even if it drops key information', 'option with the most precise academic vocabulary', 'option that adds the greatest amount of detail'],
+            question: 'The traveling exhibit will open in Lyon, ______ Kyoto, Japan; and Lima, Peru. Which choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['France;', 'France,', 'France:', 'France'],
             correctAnswer: 0,
-            explanation: 'The SAT\'s conciseness rule: among grammatically correct options that say the same thing, the shortest wins. But brevity never beats meaning: an option that drops essential information is wrong however short it is. Vocabulary sophistication and extra detail are not what the SAT rewards.'
+            explanation: 'Each item in this list contains a comma (city, country), so the items are separated by semicolons, as the later ones already are. A comma would blur where one item ends, a colon cannot separate list items, and no punctuation runs "France" into "Kyoto."'
           }
         ]
       }
@@ -136,19 +133,19 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
     {
       id: 'rw4-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Conciseness Check** — Select the concise version.',
+      content: '**Inside-the-Sentence Punctuation Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"In order to succeed" → [To succeed|In order that one might succeed|For the purpose of succeeding|So as to succeed]',
-          '"Past history" is [redundant|correct|formal|academic]',
-          'Among correct choices with the same meaning, prefer the [shortest|most detailed|most complex|most formal]',
-          '"There are many people who believe…" → [Many people believe…|There exist many people believing…|It is believed by many…|People, many of whom believe…]'
+          'A supplement that opens with a dash must close with a [dash|comma|colon|semicolon]',
+          '"The poet Emily Dickinson" needs [no commas|commas around the name|a dash after "poet"|a colon after "poet"]',
+          'A colon must follow [an independent clause|"such as"|"including"|a verb like "are"]',
+          'List items that contain commas are separated by [semicolons|commas|colons|dashes]'
         ],
-        correctAnswers: ['To succeed', 'redundant', 'shortest', 'Many people believe…'],
-        hint1: '"In order to" = "to."',
-        hint2: 'History is already in the past.',
-        hint3: 'Concise = correct on the SAT.',
-        explanation: '"In order to" simplifies to "to." History is inherently past (redundant). Shortest correct option wins. "There are…who" → remove the clutter.'
+        correctAnswers: ['dash', 'no commas', 'an independent clause', 'semicolons'],
+        hint1: 'Supplements are set off by a matching pair.',
+        hint2: 'Which poet? The name tells you, so it is essential.',
+        hint3: 'The words before a colon must be able to stand alone as a sentence.',
+        explanation: 'Dash opens, dash closes. An identifying name after a title noun is essential, so no commas. A colon follows an independent clause. Items that contain commas are separated by semicolons.'
       }
     },
     {
@@ -158,11 +155,11 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
 
 | Concept | Key Rule |
 |---|---|
-| Wordy phrases | "Due to the fact that" → "Because" |
-| Redundancy | "Past history" → "History" |
-| Decision process | Grammar first → meaning preserved → shortest wins |
-| Exception | Don't sacrifice clarity for brevity |
-| Passive → active | "Was conducted by the team" → "The team conducted" |
+| Supplement | Set off by a matching pair: two commas, two dashes, or two parentheses |
+| Removal test | Delete the supplement; a complete sentence must remain |
+| Essential element | Identifies which one, so no commas ("the novelist Toni Morrison") |
+| Colon | Only after an independent clause; never after "such as" or "including" |
+| Series | Commas between items; semicolons when items contain commas |
 
 *Next: Pronoun Clarity & Agreement →*`    }
   ]

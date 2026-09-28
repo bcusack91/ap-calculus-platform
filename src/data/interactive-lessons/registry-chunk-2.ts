@@ -835,13 +835,13 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
   },
   'sat-expression-ideas-sat': {
     parts: [
-      { title: 'Effective Language Use', loader: () => import('./sat-sat-expression-ideas-sat-part1').then(m => m.satExpressionPart1Data) },
-      { title: 'Conciseness', loader: () => import('./sat-sat-expression-ideas-sat-part2').then(m => m.satExpressionPart2Data) },
-      { title: 'Tone & Style', loader: () => import('./sat-sat-expression-ideas-sat-part3').then(m => m.satExpressionPart3Data) },
-      { title: 'Transitions', loader: () => import('./sat-sat-expression-ideas-sat-part4').then(m => m.satExpressionPart4Data) },
-      { title: 'Sentence Combining', loader: () => import('./sat-sat-expression-ideas-sat-part5').then(m => m.satExpressionPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-expression-ideas-sat-part6').then(m => m.satExpressionPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./sat-sat-expression-ideas-sat-part7').then(m => m.satExpressionPart7Data) },
+      { title: 'Expression of Ideas: How It Works', loader: () => import('./sat-sat-expression-ideas-sat-part1').then(m => m.satExpressionPart1Data) },
+      { title: 'Transitions: Contrast & Concession', loader: () => import('./sat-sat-expression-ideas-sat-part2').then(m => m.satExpressionPart2Data) },
+      { title: 'Transitions: Cause, Addition, Example & Sequence', loader: () => import('./sat-sat-expression-ideas-sat-part3').then(m => m.satExpressionPart3Data) },
+      { title: 'Rhetorical Synthesis: Reading the Goal', loader: () => import('./sat-sat-expression-ideas-sat-part4').then(m => m.satExpressionPart4Data) },
+      { title: 'Rhetorical Synthesis: Choosing the Notes', loader: () => import('./sat-sat-expression-ideas-sat-part5').then(m => m.satExpressionPart5Data) },
+      { title: 'Rhetorical Synthesis: Comparisons & Audience', loader: () => import('./sat-sat-expression-ideas-sat-part6').then(m => m.satExpressionPart6Data) },
+      { title: 'Mixed Timed Practice', loader: () => import('./sat-sat-expression-ideas-sat-part7').then(m => m.satExpressionPart7Data) },
     ],
   },
   'sat-word-problems-sat': {
@@ -890,13 +890,13 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
   },
   'sat-reading-writing-strategy-sat': {
     parts: [
-      { title: 'Section Overview', loader: () => import('./sat-sat-reading-writing-strategy-sat-part1').then(m => m.satRWStrategyPart1Data) },
-      { title: 'Time Management', loader: () => import('./sat-sat-reading-writing-strategy-sat-part2').then(m => m.satRWStrategyPart2Data) },
-      { title: 'Passage Strategy', loader: () => import('./sat-sat-reading-writing-strategy-sat-part3').then(m => m.satRWStrategyPart3Data) },
-      { title: 'Answer Elimination', loader: () => import('./sat-sat-reading-writing-strategy-sat-part4').then(m => m.satRWStrategyPart4Data) },
-      { title: 'Evidence Pairing', loader: () => import('./sat-sat-reading-writing-strategy-sat-part5').then(m => m.satRWStrategyPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./sat-sat-reading-writing-strategy-sat-part6').then(m => m.satRWStrategyPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./sat-sat-reading-writing-strategy-sat-part7').then(m => m.satRWStrategyPart7Data) },
+      { title: 'Run-ons, Fragments & Combining', loader: () => import('./sat-sat-reading-writing-strategy-sat-part1').then(m => m.satRWStrategyPart1Data) },
+      { title: 'Subject-Verb Agreement', loader: () => import('./sat-sat-reading-writing-strategy-sat-part2').then(m => m.satRWStrategyPart2Data) },
+      { title: 'Connecting Ideas', loader: () => import('./sat-sat-reading-writing-strategy-sat-part3').then(m => m.satRWStrategyPart3Data) },
+      { title: 'Supplements, Colons & Lists', loader: () => import('./sat-sat-reading-writing-strategy-sat-part4').then(m => m.satRWStrategyPart4Data) },
+      { title: 'Pronoun Reference & Number', loader: () => import('./sat-sat-reading-writing-strategy-sat-part5').then(m => m.satRWStrategyPart5Data) },
+      { title: 'Notes-Based Questions', loader: () => import('./sat-sat-reading-writing-strategy-sat-part6').then(m => m.satRWStrategyPart6Data) },
+      { title: 'Putting It All Together', loader: () => import('./sat-sat-reading-writing-strategy-sat-part7').then(m => m.satRWStrategyPart7Data) },
     ],
   },
   'sat-test-day-strategy-sat': {

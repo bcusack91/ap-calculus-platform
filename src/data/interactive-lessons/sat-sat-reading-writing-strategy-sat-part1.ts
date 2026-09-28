@@ -8,7 +8,7 @@ export const satRWStrategyPart1Data = {
 
 **Part 1 of 7 — Run-ons, Fragments, and Sentence Combining**
 
-The SAT Writing section tests your ability to identify and fix sentence structure errors. These appear in nearly every test.
+Standard English Conventions questions on the Reading and Writing section test your ability to identify and fix sentence structure errors. These appear in nearly every test.
 
 ### Run-on Sentences (Comma Splices)
 

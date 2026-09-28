@@ -4,120 +4,117 @@ export const satExpressionPart2Data = {
     {
       id: 'ei2-intro',
       type: 'text' as const,
-      content: `# Organization & Logical Sequence
+      content: `# Transitions I: Contrast and Concession
 
-**Part 2 of 7 — Paragraph Organization**
+**Part 2 of 7 — Transitions: Contrast and Concession**
 
-The Digital SAT never asks you to move a sentence to a new position, but it constantly tests whether you can follow the logical sequence of a short text. Transition questions and "Which choice most logically completes the text?" questions both depend on it.
+"However" is the transition students pick most often, right or wrong. The SAT exploits that by offering several words that all *feel* like "but." To choose among them, you need to know which kind of "but" the text needs.
 
-### Reading for Logical Sequence
+### Three Kinds of "But"
 
-To decide what logically comes next in a text, look for:
+| Relationship | What the second sentence does | Transitions |
+|---|---|---|
+| **Contrast** | Puts a *second thing* beside the first and shows how it differs | by contrast, in contrast, on the other hand, conversely, however |
+| **Concession** | Says something is true *despite* the first sentence | nevertheless, nonetheless, even so, still, however |
+| **Replacement** | Says what happened *instead of* something the first sentence expected or denied | instead, rather |
 
-1. **Referential links:** Does the sentence mention something that must come AFTER its introduction?
-2. **Transition clues:** Does it start with "However," "Additionally," "For example"?
-3. **Chronological order:** Does it describe an event that happened before or after other events?
-4. **General → Specific:** Broad claims usually come before supporting details
+### How to Tell Them Apart
 
-### Example
+- **Contrast:** two subjects, one feature. "Emperor penguins breed in winter. Adélie penguins, *by contrast*, breed in summer."
+- **Concession:** one situation, an obstacle, and a result that holds anyway. "The sample was small. *Nevertheless*, the findings have been confirmed three times."
+- **Replacement:** a prediction or a rejected option, then what actually happened. "The committee did not reject the plan. *Instead*, it asked for a cost estimate."
 
-**A logically sequenced text:**
+### Why "However" Is Rarely the Deciding Choice
 
-Monarch butterflies migrate up to 3,000 miles each fall. For decades, scientists were puzzled by how they find their way. We now know they navigate using a combination of the sun's position and Earth's magnetic field. Recent research even identified magnetic particles in their antennae that may act as a biological compass.
-
-Why it flows: behavior → puzzle about it → the answer → the newest detail. Each sentence builds on the one before it, and "they" always points back to the butterflies.
-
-### Transition Signals and Where They Fit
-
-| If a sentence starts with... | It must come... |
-|---|---|
-| "For example" or "For instance" | AFTER a general claim |
-| "However" or "Nevertheless" | AFTER a point it contradicts |
-| "As a result" or "Consequently" | AFTER a cause |
-| "First" / "Finally" | At the start / end of a sequence |
-| "This" + noun | AFTER the noun is introduced |`
+"However" can express contrast or concession, so when it appears among the choices, the other options usually belong to entirely different families. When two "but" words appear together, ask which specific kind of "but" the text needs.`
     },
     {
       id: 'ei2-quiz',
       type: 'multiple-choice' as const,
-      content: '**Organization Practice** 🎯',
+      content: '**Contrast and Concession Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Sea turtles travel thousands of miles between feeding grounds and nesting beaches. When researchers attached GPS devices to 40 female turtles, each one returned to nest on the beach where it had hatched. Later experiments showed that young turtles can sense Earth\'s magnetic field. Taken together, these findings suggest that ______ Which choice most logically completes the text?',
-            options: ['turtles may use magnetic cues to find the beaches where they were born.', 'turtles return to their home beaches mainly by following ocean currents.', 'every migrating animal relies on Earth\'s magnetic field to navigate.', 'GPS devices can disrupt a sea turtle\'s natural sense of direction.'],
+            question: `Engineers expected the lighter bridge design to sway more in strong winds than the heavier original. ______ in wind-tunnel tests, the lighter design proved the steadier of the two. Which choice completes the text with the most logical transition?`,
+            options: ['However,', 'For instance,', 'Thus,', 'Likewise,'],
             correctAnswer: 0,
-            explanation: 'The text moves from the behavior (turtles return to their birth beaches) to a possible mechanism (they can sense Earth\'s magnetic field), so the logical conclusion links the two: turtles may use magnetic cues to find those beaches. Ocean currents are never mentioned, "every migrating animal" generalizes far beyond turtles, and nothing suggests the GPS devices interfered with the turtles.'
+            explanation: `The engineers predicted more sway, and the tests showed the opposite, so the second sentence contradicts the first: "However" fits. The test result is not an example of the prediction, it is not caused by the prediction, and it is not a parallel case.`
           },
           {
-            question: 'A sentence begins "This phenomenon, known as..." It most logically follows a sentence that:',
-            options: ['Describes something without naming it', 'Provides a statistic about the phenomenon', 'Sums up the whole paragraph\'s main argument', 'Introduces a second, unrelated concept'],
+            question: `The first trial of the new malaria vaccine enrolled only 200 volunteers, a small number for a medical study. ______ the results were strong enough that regulators approved a much larger trial within months. Which choice completes the text with the most logical transition?`,
+            options: ['Nonetheless,', 'Conversely,', 'Therefore,', 'In fact,'],
             correctAnswer: 0,
-            explanation: '"This phenomenon, known as..." uses "this" to refer back to something just described and then provides its technical name. It must follow the description of that phenomenon.'
+            explanation: `A small trial is a reason to doubt the results, yet regulators approved a larger trial anyway: a concession, so "Nonetheless" fits. "Conversely" needs a second thing to set against the first, and there is only one trial. A small sample does not cause approval ("Therefore"), and the approval does not intensify the point about the small sample ("In fact").`
           }
         ]
       }    },
     {
       id: 'ei2-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Mastering Logical Sequence
+      content: `## Deep Dive: Choosing the Right Kind of "But"
 
-### Worked Example 1: Tracking Reference Links
+### Worked Example 1: Contrast
 
-| Sentence | Key Clue | Must Follow |
-|---|---|---|
-| "This adaptation allows the species to survive extreme cold." | "This adaptation" | A sentence describing the adaptation |
-| "However, recent evidence complicates this conclusion." | "However" + "this conclusion" | A sentence stating the conclusion |
-| "For example, the 2019 study found a 30% increase." | "For example" | A general claim that the study supports |
+"Most spiders live and hunt alone. *Anelosimus eximius*, a spider of South American rainforests, ______ lives in colonies that can hold thousands of spiders."
 
-### Worked Example 2: Why This Order Works
-
-**Given sentences (scrambled):**
-- [A] "The team collected over 500 soil samples from three continents."
-- [B] "This global pattern suggests that soil carbon levels are declining universally, not just regionally."
-- [C] "Soil carbon is critical for both agriculture and climate regulation."
-- [D] "Analysis revealed that carbon content had dropped by 15% compared to 1990 levels."
-
-| Step | Reasoning | Order |
-|---|---|---|
-| 1 | Start with the broadest/introductory statement | C |
-| 2 | What did researchers do? Collected samples | A |
-| 3 | What did they find? | D |
-| 4 | What does this mean? ("This global pattern" = data from three continents) | B |
-| **Final** | | **C → A → D → B** |
-
-### Sequence Red Flags
-
-| Red Flag | Why It's Wrong |
+| Test | Answer |
 |---|---|
-| Pronoun without antecedent | "This" or "they" appears before what it refers to |
-| Effect before cause | "As a result..." appears before the cause |
-| Example before claim | "For instance..." appears with no prior general statement |
-| Contradiction without setup | "However..." with nothing to contrast against |`
+| Two subjects? | Yes: most spiders and *A. eximius* |
+| Same feature? | Yes: living alone or in groups |
+| Obstacle overcome? | No: nothing about other spiders makes colony life harder for this one |
+| **Choice** | "by contrast," ✅ — "nevertheless," ❌ (no obstacle), "for example," ❌ (this spider breaks the pattern) |
+
+### Worked Example 2: Concession
+
+"Early reviewers called the novel too long to hold readers' attention. ______ it has stayed in print for more than a century."
+
+| Test | Answer |
+|---|---|
+| Two subjects? | No: one novel |
+| Obstacle overcome? | Yes: bad reviews, yet it lasted |
+| **Choice** | "Nevertheless," ✅ — "In contrast," ❌ (no second subject), "Therefore," ❌ (bad reviews did not cause its success) |
+
+### Worked Example 3: Replacement
+
+"The city council did not vote the proposal down. ______ it sent the plan back to its authors with a request for a cost estimate."
+
+| Test | Answer |
+|---|---|
+| Is something denied or predicted? | Yes: the council did not vote it down |
+| Does sentence 2 say what happened in its place? | Yes: it sent the plan back |
+| **Choice** | "Instead," ✅ — "Similarly," ❌, "As a result," ❌ |
+
+### Quick Reference
+
+| If the text… | Choose… |
+|---|---|
+| Sets two things side by side on one feature | by contrast / in contrast / on the other hand |
+| Reports an outcome that holds despite an obstacle | nevertheless / even so / still |
+| Reports what happened in place of what was expected or denied | instead / rather |`
     },
     {
       id: 'ei2-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Advanced Organization Challenge** 🎯',
+      content: '**Contrast and Concession Challenge** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A sentence reads: "As a result, shipping costs decreased by 40%." The sentence right before it must:',
-            options: ['describe a change that would lower costs', 'summarize the history of the shipping trade', 'report that shipping costs had been rising', 'state the paragraph\'s overall conclusion'],
+            question: `Most frogs lay their eggs in water, and their young hatch as swimming tadpoles. The coquí frog of Puerto Rico, ______ lays its eggs on land, and its young hatch as tiny frogs. Which choice completes the text with the most logical transition?`,
+            options: ['by contrast,', 'nevertheless,', 'as a result,', 'for example,'],
             correctAnswer: 0,
-            explanation: '"As a result" signals a cause-effect relationship. This sentence IS the effect, so the sentence before it must supply the cause: some change (a new route, a new technology) that would lower costs. History, rising costs, or a conclusion would not produce the result the sentence announces.'
+            explanation: `The text sets two subjects side by side, most frogs and the coquí, on the same feature: where eggs are laid and how the young hatch. That is a contrast. "Nevertheless" would need an obstacle the coquí overcomes, "as a result" would make the coquí's habits a consequence of other frogs' habits, and the coquí is an exception, not an example.`
           },
           {
-            question: 'When judging whether the ideas in a text are in a logical order, which principle matters most?',
-            options: ['Shorter sentences should come before longer ones', 'Each sentence must follow what it refers back to', 'The most striking sentence should always come first', 'Sentences with numbers belong at the very end'],
-            correctAnswer: 1,
-            explanation: 'The SAT tests logical flow. Pronouns must follow their antecedents, examples must follow claims, and effects must follow causes. These reference links, not sentence length, drama, or numbers, determine the logical order.'
+            question: `Critics predicted that the novel, at more than 900 pages, would find few readers. ______ it sold more than a million copies in its first year. Which choice completes the text with the most logical transition?`,
+            options: ['Instead,', 'Likewise,', 'For instance,', 'Thus,'],
+            correctAnswer: 0,
+            explanation: `The first sentence makes a prediction, and the second reports what happened in its place, so "Instead" fits. The sales figure is not a parallel case, not an instance of the prediction, and not a result of it.`
           },
           {
-            question: 'A sentence begins "These findings suggest…" Where in a text can it logically appear?',
-            options: ['At the very start, to introduce the topic', 'After the sentences that describe the findings', 'Only as the final sentence of the text', 'Just before the findings, to preview them'],
-            correctAnswer: 1,
-            explanation: '"These findings" is a demonstrative + noun that MUST refer back to specific findings already described. Putting it first or before the findings creates a reference to nothing, and nothing requires it to be the very last sentence.'
+            question: `The city's new protected bike lanes carry fewer than 300 riders a day. ______ planners argue that the lanes are worth keeping, since ridership on similar lanes in other cities took about five years to peak. Which choice completes the text with the most logical transition?`,
+            options: ['Even so,', 'Thus,', 'Likewise,', 'In other words,'],
+            correctAnswer: 0,
+            explanation: `Low ridership is a reason to remove the lanes, yet planners want to keep them: a concession, so "Even so" fits. "Thus" would make low ridership the reason to keep them, "Likewise" signals a parallel case, and "In other words" would restate the first sentence rather than push against it.`
           }
         ]
       }
@@ -125,19 +122,19 @@ Why it flows: behavior → puzzle about it → the answer → the newest detail.
     {
       id: 'ei2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Logical Sequence Check** — Select the correct answer.',
+      content: '**Contrast vs. Concession Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"For example, the 2020 study…" goes [after a general claim|before any claims|at the paragraph start|at the end of the text]',
-          '"However, new data contradicts…" goes [after the point it contradicts|at the start|before the data|at the end always]',
-          '"This discovery" must follow [the discovery being described|any noun|the conclusion|the introduction]',
-          'General → specific means [broad claim first, details after|details first, claim after|newest findings first|shortest sentence first]'
+          '"Emperor penguins breed in winter. Adélie penguins, ___, breed in summer." [by contrast|nevertheless|therefore|for instance]',
+          '"The study\'s sample was small. ___, its findings have been confirmed three times." [Even so|In contrast|Thus|Similarly]',
+          '"The panel did not reject the plan. ___, it asked for a cost estimate." [Instead|Similarly|Therefore|For example]',
+          '"In contrast" needs [two things compared on one feature|a cause followed by its result|a claim followed by an example|a list of steps in order]'
         ],
-        correctAnswers: ['after a general claim', 'after the point it contradicts', 'the discovery being described', 'broad claim first, details after'],
-        hint1: 'Examples illustrate a preceding claim.',
-        hint2: '"However" signals contrast — it needs something to contrast with.',
-        hint3: '"This" is a demonstrative pronoun pointing back to a specific referent.',
-        explanation: 'Examples follow claims. "However" follows the item it contradicts. "This + noun" must follow its referent. General-to-specific means claims before evidence.'
+        correctAnswers: ['by contrast', 'Even so', 'Instead', 'two things compared on one feature'],
+        hint1: 'Two kinds of penguin, one feature (breeding season).',
+        hint2: 'A small sample is an obstacle; the findings held up anyway.',
+        hint3: 'The panel did something in place of rejecting the plan.',
+        explanation: 'Two subjects on one feature = contrast ("by contrast"). A result that holds despite an obstacle = concession ("Even so"). An action in place of a denied one = replacement ("Instead"). "In contrast" requires two things compared on the same feature.'
       }
     },
     {
@@ -145,14 +142,14 @@ Why it flows: behavior → puzzle about it → the answer → the newest detail.
       type: 'text' as const,
       content: `## Part 2 Summary
 
-| Strategy | Detail |
-|---|---|
-| Sequence rule #1 | Pronouns/demonstratives must follow their referents |
-| Sequence rule #2 | Examples follow claims, effects follow causes |
-| Transition clues | "However" = after contrast, "For example" = after claim |
-| Re-ordering | Start broad, then narrow: intro → evidence → conclusion |
-| Red flags | Pronoun without antecedent, effect before cause |
+| Relationship | Signal in the text | Transitions |
+|---|---|---|
+| Contrast | Two subjects, one feature | by contrast, in contrast, on the other hand |
+| Concession | An obstacle, and a result that holds anyway | nevertheless, even so, still |
+| Replacement | A prediction or denial, then what happened instead | instead, rather |
+| "However" | Works for contrast or concession | Rarely the only "but" among the choices |
+| Strategy | Name the kind of "but" before reading the choices | Eliminate other families first |
 
-*Next: Effective Introductions & Conclusions →*`    }
+*Next: Transitions — Cause, Addition, Example, and Sequence →*`    }
   ]
 };
