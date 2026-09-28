@@ -41,13 +41,13 @@ export const satTestDayStrategyPart6Data = {
       type: 'quiz' as const,
       question: 'Research shows that pulling an all-nighter before the SAT will most likely:',
       options: [
-        'Improve your score by ~50 points due to extra review',
-        'Have no significant effect on performance',
-        'Decrease your score due to impaired focus, memory, and processing speed',
-        'Help with Reading but hurt Math performance'
+        'Raise your score, since the extra review stays fresh',
+        'Have no real effect as long as you drink coffee',
+        'Lower your score by hurting focus and memory',
+        'Help on Reading but hurt Math, which needs more focus'
       ],
       correctAnswer: 2,
-      explanation: 'Sleep deprivation impairs working memory, processing speed, and focus — all critical for SAT performance. Studies suggest sleep loss can reduce cognitive performance by 20-25%. A full night\'s sleep is worth more than any last-minute studying.'
+      explanation: 'Sleep deprivation impairs working memory, processing speed, and focus — all critical for SAT performance. Caffeine can mask sleepiness but does not restore memory or focus, and the damage is not limited to one section. A full night\'s sleep is worth more than any last-minute studying.'
     },
     {
       id: 'tds6-text2',
@@ -103,19 +103,19 @@ export const satTestDayStrategyPart6Data = {
         questions: [
           {
             question: 'Three days before the SAT, you should focus on:',
-            options: ['Learning new topics you haven\'t studied', 'Light review of flashcards and key concepts', 'Taking 3 full practice tests back-to-back', 'Nothing — rest completely'],
+            options: ['Learning the topics you have not studied yet', 'Light review of flashcards and key concepts', 'Taking three full practice tests back to back', 'Resting completely, with no review at all'],
             correctAnswer: 1,
             explanation: '3-4 days before = light reinforcement only. No new material (it won\'t stick), no marathon testing (it causes burnout). Flashcards and formula review keep your skills sharp.'
           },
           {
             question: 'The single most impactful thing you can do the night before is:',
-            options: ['Review every practice test you\'ve taken', 'Memorize 50 vocabulary words', 'Sleep 8+ hours', 'Take a final practice test'],
+            options: ['Review every practice test you have taken', 'Memorize a final list of 50 vocabulary words', 'Go to bed early enough to sleep eight or more hours', 'Take one last full-length practice test'],
             correctAnswer: 2,
             explanation: 'Research shows sleep is the #1 performance booster. 8+ hours of sleep improves working memory, processing speed, and focus more than any amount of last-minute studying.'
           },
           {
             question: 'Your error log shows you keep making sign errors on negative exponents. You should:',
-            options: ['Study all exponent rules from scratch', 'Practice 5-10 negative exponent problems until the pattern is automatic', 'Skip exponent questions on test day', 'Memorize every possible exponent combination'],
+            options: ['Reread the full chapter on exponent rules from the start', 'Drill 5-10 problems on that exact rule until automatic', 'Plan to skip exponent questions on test day', 'Memorize a table of every possible exponent result'],
             correctAnswer: 1,
             explanation: 'Target your specific weak spot with focused practice. 5-10 problems on negative exponents will build the muscle memory you need without wasting time reviewing rules you already know.'
           }
@@ -129,9 +129,9 @@ export const satTestDayStrategyPart6Data = {
       exercise: {
         dropdowns: [
           'Last full practice test should be taken [7 days before|night before|morning of|2 days before]',
-          'Night before sleep target = [8+ hours|6 hours|10+ hours|doesn\'t matter]',
+          'Night before sleep target = [8+ hours|6 hours|10+ hours|5 hours plus extra review]',
           'Arrive at test center [30 min early|5 min early|1 hour early|exactly on time]',
-          'The Bluebook app should be [installed and updated|downloaded morning of|not needed|optional]'
+          'The Bluebook app should be [installed and updated|downloaded morning of|installed at the test center|opened for the first time on test day]'
         ],
         correctAnswers: ['7 days before', '8+ hours', '30 min early', 'installed and updated'],
         hint1: 'Take your last full test a week out — then switch to light review.',

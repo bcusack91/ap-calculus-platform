@@ -35,37 +35,37 @@ Before we dive in, remember the decision tree:
       exercise: {
         questions: [
           {
-            question: 'Read the passage and answer: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (1) and (2)?',
+            question: 'The Great Barrier Reef, the world\'s largest coral reef _____ home to thousands of species. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(1) no punctuation ... (2) no punctuation',
-              '(1) , ... (2) ,',
-              '(1) : ... (2) ,',
-              '(1) , ... (2) no punctuation'
+              'system is',
+              'system, is',
+              'system: is',
+              'system; is'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "the world\'s largest coral reef system" is a nonessential appositive renaming "The Great Barrier Reef." It needs commas on BOTH sides.'
+            explanation: 'Correct — "the world\'s largest coral reef system" is a nonessential appositive renaming "The Great Barrier Reef." It needs commas on BOTH sides: the comma after "Reef" opens it, so a comma after "system" must close it.'
           },
           {
-            question: 'Still referring to the passage: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (3) and (4)?',
+            question: 'Scientists have warned that rising ocean temperatures, which contribute to coral _____ devastate the reef within decades. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(3) no punctuation ... (4) no punctuation',
-              '(3) , ... (4) ,',
-              '(3) , ... (4) no punctuation',
-              '(3) : ... (4) ,'
+              'bleaching could',
+              'bleaching, could',
+              'bleaching; could',
+              'bleaching: could'
             ],
             correctAnswer: 1,
             explanation: 'Correct — "which contribute to coral bleaching" is a nonessential clause (it adds information but isn\'t required to identify which temperatures). Nonessential clauses with "which" need commas on both sides.'
           },
           {
-            question: 'Still referring to the passage: The Great Barrier Reef __(1)__ the world\'s largest coral reef system __(2)__ is home to thousands of species. Scientists have warned that rising ocean temperatures __(3)__ which contribute to coral bleaching __(4)__ could devastate the reef within decades. Many conservation groups are working to protect the reef __(5)__ however __(6)__ funding remains limited.\n\nWhat is the best punctuation for blanks (5) and (6)?',
+            question: 'Many conservation groups are working to protect the _____ funding remains limited. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(5) , ... (6) ,',
-              '(5) ; ... (6) ,',
-              '(5) : ... (6) ,',
-              '(5) . ... (6) no punctuation'
+              'reef, however,',
+              'reef; however,',
+              'reef: however,',
+              'reef; however'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "however" is a conjunctive adverb joining two independent clauses. The pattern is: clause + semicolon + however + comma + clause.'
+            explanation: 'Correct — "however" is a conjunctive adverb joining two independent clauses. The pattern is: clause + semicolon + however + comma + clause. A comma before "however" creates a comma splice, a colon is the wrong mark for a contrast, and leaving out the comma after "however" breaks the pattern.'
           }
         ]
       }
@@ -76,7 +76,7 @@ Before we dive in, remember the decision tree:
       content: `
 ### Passage Analysis
 
-Let's look at the corrected passage:
+Here is the full text these three questions come from, correctly punctuated:
 
 > *The Great Barrier Reef, the world's largest coral reef system, is home to thousands of species. Scientists have warned that rising ocean temperatures, which contribute to coral bleaching, could devastate the reef within decades. Many conservation groups are working to protect the reef; however, funding remains limited.*
 
@@ -95,15 +95,15 @@ Let's look at the corrected passage:
       exercise: {
         questions: [
           {
-            question: 'The city council approved the new park, the playground equipment, and the walking trails. However funding for the parking lot __(7)__ which was the most expensive item __(8)__ was delayed. The mayor explained the situation: the budget had been allocated to emergency road repairs. Which correctly fills blanks (7) and (8)?',
+            question: 'The city council approved the new park, the playground equipment, and the walking trails. Funding for the parking lot, which was the most expensive _____ delayed. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(7) no punctuation ... (8) no punctuation',
-              '(7) , ... (8) ,',
-              '(7) , ... (8) no punctuation',
-              '(7) ; ... (8) ,'
+              'item was',
+              'item, was',
+              'item; was',
+              'item: was'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "which was the most expensive item" is a nonessential clause providing extra information about the parking lot. It needs commas on both sides.'
+            explanation: 'Correct — "which was the most expensive item" is a nonessential clause providing extra information about the parking lot. The comma after "lot" opens it, so a comma after "item" must close it; a semicolon or colon would cut the subject "Funding" off from its verb "was delayed."'
           },
           {
             question: 'Which sentence is correctly punctuated?',

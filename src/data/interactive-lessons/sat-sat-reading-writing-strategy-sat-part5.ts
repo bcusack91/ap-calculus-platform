@@ -52,15 +52,15 @@ For every pronoun, ask: "Can I point to EXACTLY one noun this refers to?" If not
         questions: [
           {
             question: '"Neither the coach nor the players have expressed _____ opinion on the new rule." Which pronoun is correct?',
-            options: ['their—agrees with "players" (nearer plural subject)', 'his—agrees with "coach" (first subject)', 'its—collective noun', 'his or her—formal agreement'],
+            options: ['their', 'his', 'its', 'his or her'],
             correctAnswer: 0,
-            explanation: 'Like subject-verb agreement with "neither...nor," the pronoun agrees with the nearer subject. "Players" is nearer and plural, so "their" is correct.'
+            explanation: 'Like subject-verb agreement with "neither...nor," the pronoun agrees with the nearer subject. "Players" is nearer and plural, so "their" is correct. "His" and "his or her" would agree only with "coach," the farther subject, and "its" fits neither.'
           },
           {
             question: 'Which revision fixes the ambiguous pronoun? "The biologist showed the student her research."',
-            options: ['The biologist showed the student the biologist\'s research.', 'The biologist showed her research to the student.', 'She showed the student her research.', 'The biologist showed them her research.'],
+            options: ['The biologist showed the student her research again.', 'The biologist showed her research to the student.', 'She showed the student all of her research.', 'The biologist showed them all her research.'],
             correctAnswer: 1,
-            explanation: 'Rearranging to "showed her research to the student" makes clear that "her" refers to the biologist (the subject). The original was ambiguous because "her" could refer to either person.'
+            explanation: 'Rearranging to "showed her research to the student" places "her" before the student is even mentioned, so it can only refer to the biologist. "Her research again" is still ambiguous (either woman\'s research), "She showed the student all of her research" keeps the ambiguity, and "them" changes the meaning to a group.'
           }
         ]
       }
@@ -106,16 +106,16 @@ For every pronoun, ask: "Can I point to EXACTLY one noun this refers to?" If not
       exercise: {
         questions: [
           {
-            question: '"The committee submitted their report, and the board reviewed it at its next meeting." What pronoun error exists?',
-            options: ['"Their" should be "its" — committee is a collective singular noun', '"It" should be "the report" to avoid ambiguity', '"Its" should be "their" for consistency', 'No error — all pronouns are correct'],
+            question: '"The committee submitted their report, and the board reviewed it at its next meeting." Which revision corrects the pronoun error?',
+            options: ['The committee submitted its report, and the board reviewed it at its next meeting.', 'The committee submitted their report, and the board reviewed it at its monthly meeting.', 'The committee submitted their report, and the board reviewed it at their next meeting.', 'The committee submitted its report, and the board reviewed them at its next meeting.'],
             correctAnswer: 0,
-            explanation: '"Committee" is a collective singular noun and should take "its." The corrected sentence: "The committee submitted its report, and the board reviewed it at its next meeting."'
+            explanation: '"Committee" is a collective singular noun and should take "its": "The committee submitted its report." Changing "next" to "monthly" leaves "their" in place, "their next meeting" adds a second error, and "reviewed them" no longer agrees with the singular "report."'
           },
           {
-            question: 'Which sentence contains a pronoun error? A) "Anyone who forgets their password can reset it." B) "If a student is struggling, they should visit the tutor." C) "When one exercises regularly, you feel more energetic." D) "Each of the dogs wagged its tail."',
-            options: ['C — pronoun person shift from "one" to "you"', 'A — "their" doesn\'t agree with "anyone"', 'D — "its" should be "their"', 'B — "they" doesn\'t agree with "student"'],
+            question: 'Which sentence contains a pronoun error?',
+            options: ['When one exercises regularly, you feel more energetic.', 'Anyone who forgets their password can reset it.', 'If a student is struggling, they should see a tutor.', 'Each of the dogs in the yard wagged its tail.'],
             correctAnswer: 0,
-            explanation: 'C has a person shift: "one" (third person) switches to "you" (second person). Fix: "When you exercise regularly, you feel more energetic." A and B use acceptable singular "they." D is correct.'
+            explanation: 'The exercise sentence shifts person: "one" (third person) switches to "you" (second person). Fix: "When you exercise regularly, you feel more energetic." The password and tutor sentences use singular "they," which the SAT accepts, and "Each of the dogs in the yard wagged its tail" is correct because "each" is singular.'
           },
           {
             question: 'SAT question: "The researchers published _____ findings in a peer-reviewed journal, noting that the data supported _____ hypothesis." Select the correct pair.',
@@ -135,7 +135,7 @@ For every pronoun, ask: "Can I point to EXACTLY one noun this refers to?" If not
           '"The committee submitted ___ report." → [its|their|his|it\'s]',
           '"If one studies hard, ___ will succeed." → [one|you|they|he]',
           '"Maya told Zara that she won." This pronoun is [ambiguous|correct|plural|possessive]',
-          '"Every student brought ___ laptop." → [their|his|her|its]'
+          '"Every student brought ___ laptop." → [their|they\'re|there|its]'
         ],
         correctAnswers: ['its', 'one', 'ambiguous', 'their'],
         hint1: 'Committee is collective singular.',

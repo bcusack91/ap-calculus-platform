@@ -43,9 +43,9 @@ Every punctuation rule on the SAT comes down to understanding these three things
             question: 'Which of the following is an independent clause?',
             options: [
               'Although the rain stopped',
-              'Running through the park on a sunny day',
+              'Running through the park',
               'The team won the championship',
-              'Because she studied hard for the test'
+              'Because she studied hard'
             ],
             correctAnswer: 2,
             explanation: 'Correct — "The team won the championship" has a subject ("the team"), a verb ("won"), and expresses a complete thought. The others are either dependent clauses (starting with "although" or "because") or phrases (no main verb).'
@@ -53,13 +53,13 @@ Every punctuation rule on the SAT comes down to understanding these three things
           {
             question: 'Which word group is a phrase (NOT a clause)?',
             options: [
-              'She runs every morning.',
+              'She runs every morning',
               'After finishing dinner',
-              'Although it was late, she continued.',
-              'The dog barked loudly.'
+              'Although it was late',
+              'The dog barked loudly'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "After finishing dinner" has no subject performing a main action and no finite verb. It\'s a prepositional/participial phrase, not a clause.'
+            explanation: 'Correct — "After finishing dinner" has no subject and no finite verb, so it is a phrase, not a clause. "She runs every morning" and "The dog barked loudly" are independent clauses, and "Although it was late" is a dependent clause: it cannot stand alone, but it still has a subject ("it") and a verb ("was").'
           }
         ]
       }
@@ -108,10 +108,10 @@ A **run-on sentence** fuses two independent clauses without proper punctuation:
               'The library closed early we went, to the café instead.',
               'The library closed early, we went to the café instead.',
               'The library closed early; we went to the café instead.',
-              'The library, closed early we went to the café instead.'
+              'The library; closed early we went to the café instead.'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — A semicolon correctly joins two independent clauses. The "closed early, we went" option creates a comma splice. The "we went, to the café" and "The library, closed early" options place commas incorrectly.'
+            explanation: 'Correct — A semicolon correctly joins two independent clauses. The "closed early, we went" option creates a comma splice. The "we went, to the café" option places a comma incorrectly, and "The library; closed early" puts the semicolon between a subject and its verb.'
           },
           {
             question: 'How many independent clauses are in this sentence? "Although it rained all morning, the game continued, and the fans stayed in their seats."',

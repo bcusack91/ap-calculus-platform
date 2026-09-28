@@ -24,7 +24,7 @@ export const satTestDayStrategyPart1Data = {
 ### What This Means for You
 - **Every Module 1 question matters** — it determines your Module 2 difficulty
 - Module 2 hard = access to 600-800 range per section
-- Module 2 easy = score capped around 200-500 per section
+- Module 2 easy = lower score ceiling (roughly the mid-500s to about 600 per section; College Board does not publish exact cutoffs)
 
 ### Scoring
 - R&W: 200-800
@@ -42,10 +42,10 @@ export const satTestDayStrategyPart1Data = {
       type: 'quiz' as const,
       question: 'On the Digital SAT, if you perform well on Math Module 1, what happens?',
       options: [
-        'You skip Module 2',
-        'Module 2 becomes harder, giving access to higher scores',
-        'Module 2 stays the same difficulty',
-        'You get extra time on Module 2'
+        'An easier Module 2 follows so you can bank points',
+        'Module 2 gets harder, raising your score ceiling',
+        'Module 2 stays at the same difficulty level',
+        'You receive extra time to finish Module 2'
       ],
       correctAnswer: 1,
       explanation: 'The Digital SAT is adaptive: strong Module 1 performance unlocks a harder Module 2, which has questions that can push your score to 700-800. A weaker Module 1 leads to an easier Module 2 with a lower score ceiling.'
@@ -60,7 +60,7 @@ export const satTestDayStrategyPart1Data = {
 | Module 2 Path | Module 1 Performance | Score Range (per section) | Strategy |
 |---|---|---|---|
 | Hard Module 2 | ~70 %+ correct on M1 | ~550–800 | Maximize accuracy on hard Qs |
-| Easy Module 2 | <70 % correct on M1 | ~200–550 | Every correct answer matters |
+| Easy Module 2 | <70 % correct on M1 | ~200 to the mid-500s/600 | Every correct answer matters |
 
 **Takeaway:** Module 1 accuracy is your priority. Don't rush — getting 70 %+ right on Module 1 is worth more than finishing fast.
 
@@ -92,21 +92,21 @@ export const satTestDayStrategyPart1Data = {
         questions: [
           {
             question: 'How many total questions are on the Digital SAT?',
-            options: ['88', '98', '108', '154'],
+            options: ['88', '98', '84', '96'],
             correctAnswer: 1,
             explanation: 'R&W has 54 questions (27 × 2 modules) and Math has 44 questions (22 × 2 modules). Total: 54 + 44 = 98.'
           },
           {
             question: 'You finished Module 1 of R&W and scored well. Module 2 will be harder. This is:',
-            options: ['Bad — harder questions mean a lower score', 'Good — harder Module 2 gives access to scores above 550', 'Neutral — score range is the same regardless', 'Impossible — adaptive testing does not exist on the Digital SAT'],
+            options: ['Bad, because harder questions mean a lower score', 'Good, because it unlocks the top of the score range', 'Neutral, because the score range is the same either way', 'Bad, because Module 2 now counts for less of your score'],
             correctAnswer: 1,
             explanation: 'Getting the harder Module 2 is a GOOD sign. It means you performed well and now have access to the full 200-800 scoring range for that section.'
           },
           {
             question: 'Which tool is NOT built into the Digital SAT interface?',
-            options: ['Desmos calculator', 'Highlight & annotate', 'Spell checker', 'Mark for review'],
+            options: ['Desmos calculator', 'Highlight & annotate', 'Spell-check tool', 'Mark for review'],
             correctAnswer: 2,
-            explanation: 'The Digital SAT includes Desmos, highlighting/annotation, and mark-for-review. There is no built-in spell checker — you need to know how to spell on your own for grid-in and written responses.'
+            explanation: 'The Digital SAT includes Desmos, highlighting/annotation, and mark-for-review. There is no spell checker, and none is needed: the SAT has no essay or written responses.'
           }
         ]
       }

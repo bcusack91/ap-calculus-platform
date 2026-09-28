@@ -30,8 +30,8 @@ export const satTestDayStrategyPart7Data = {
 - Don't start a new complex question with 30 seconds left — guess and move on
 
 ### After the Test
-- **Scores arrive in ~2 weeks**
-- You can take the SAT **up to 7 times** (most colleges see your best score)
+- **Scores usually arrive within about two weeks** (often sooner)
+- You can retake the SAT, and many colleges consider your best score or superscore across dates
 - If you feel bad about a section, remember: the adaptive scoring may have given you harder questions because you did well on Module 1`
     },
     {
@@ -39,13 +39,13 @@ export const satTestDayStrategyPart7Data = {
       type: 'quiz' as const,
       question: 'During a Math module, you have 5 minutes left and 4 questions remaining. What is the best strategy?',
       options: [
-        'Spend 5 minutes on the hardest one — it is worth the most points',
-        'Quickly attempt each, putting your best guess for any you cannot solve in ~1 minute',
-        'Guess on all 4 and use the time to double-check earlier answers',
-        'Skip them all — they are probably too hard'
+        'Spend all 5 minutes on the hardest, since it is worth the most',
+        'Attempt each one, guessing on any that passes about a minute',
+        'Guess on all 4 and use the time to recheck earlier answers',
+        'Leave them blank, since the last questions are the hardest'
       ],
       correctAnswer: 1,
-      explanation: 'With ~75 seconds per question, quickly attempt each one. Some may be easier than they look. If you cannot solve one in 60 seconds, make an educated guess and move to the next. Every question is worth the same — don\'t leave any blank.'
+      explanation: 'With ~75 seconds per question, quickly attempt each one. Some may be easier than they look. If you cannot solve one in 60 seconds, make an educated guess and move to the next. Every question is worth the same, question order does not track difficulty, and a quick look may turn up an easy one, so attempt each and don\'t leave any blank.'
     },
     {
       id: 'tds7-text2',
@@ -91,8 +91,8 @@ export const satTestDayStrategyPart7Data = {
 |---|---|---|
 | "That was easy" | Got harder M2 | 600-800 possible |
 | "Pretty good" | Got harder M2 | 550-750 possible |
-| "Mixed" | Average M2 | 450-600 possible |
-| "Struggled" | Got easier M2 | 200-500 range |`
+| "Mixed" | Either path, depending on M1 accuracy | 450-650 possible |
+| "Struggled" | Got easier M2 | 200 to the mid-500s/600 |`
     },
     {
       id: 'tds7-quiz2',
@@ -102,19 +102,19 @@ export const satTestDayStrategyPart7Data = {
         questions: [
           {
             question: 'You just spent 3 minutes on a question and got it wrong (you think). The best response is:',
-            options: ['Go back and try again', '"Next play" — fully focus on the current question', 'Feel discouraged and rush through the next few', 'Count how many you think you\'ve missed'],
+            options: ['Go back and try that question one more time', 'Let it go and give the current question full focus', 'Speed up on the next few to make up the lost time', 'Keep a running count of the questions you have missed'],
             correctAnswer: 1,
             explanation: '"Next play" mentality means the past question is done. Dwelling on it steals focus from the current question. Each new question is a fresh opportunity.'
           },
           {
             question: 'During the 10-minute break between R&W and Math, you should NOT:',
-            options: ['Eat a snack', 'Discuss R&W questions with other students', 'Use the restroom', 'Do some light stretching'],
+            options: ['Eat a snack and drink some water', 'Discuss R&W questions with others', 'Use the restroom and stretch your legs', 'Do some slow, deep breathing'],
             correctAnswer: 1,
-            explanation: 'Discussing answers with others only causes anxiety — you can\'t change your R&W answers. Use the break to physically and mentally reset for Math.'
+            explanation: 'Discussing test questions is against the testing rules, and it only causes anxiety because you can\'t change your R&W answers. Use the break to physically and mentally reset for Math.'
           },
           {
             question: 'You received a harder Module 2 for Math. This most likely means:',
-            options: ['You did poorly on Module 1', 'You did well on Module 1 and have access to higher scores', 'The test is the same difficulty for everyone', 'You should be worried about your score'],
+            options: ['Your Module 1 went poorly and you must catch up', 'You did well on Module 1 and can reach top scores', 'Everyone receives the same Module 2 regardless', 'Your final score will be lower than on an easy Module 2'],
             correctAnswer: 1,
             explanation: 'A harder Module 2 = you performed well on Module 1. This is GOOD — it means you\'re eligible for scores in the 600-800 range. Embrace the challenge.'
           }
@@ -127,9 +127,9 @@ export const satTestDayStrategyPart7Data = {
       content: '**Test Day Tactics Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'After a hard question, say [next play|I failed|that was unfair|I should give up]',
+          'After a hard question, say [next play|go back and fix it|speed up to catch up|count your misses]',
           'Break between sections = [10 min|5 min|15 min|30 min]',
-          'With 30 sec left and 1 Q blank: [guess immediately|leave blank|start solving|ask for time]',
+          'With 30 sec left and 1 Q blank: [guess immediately|leave blank|start solving|flag it for later]',
           'Harder Module 2 means your score ceiling is [higher|lower|unchanged|zero]'
         ],
         correctAnswers: ['next play', '10 min', 'guess immediately', 'higher'],

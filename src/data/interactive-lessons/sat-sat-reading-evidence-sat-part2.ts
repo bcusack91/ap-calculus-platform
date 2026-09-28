@@ -12,13 +12,13 @@ export const satReadingEvidencePart2Data = {
 
 ### Two Main Types
 
-**Type 1: "Which choice provides the best evidence for the answer to the previous question?"**
-- These are paired with another question
-- Strategy: Answer the first question, THEN find the quote that supports your answer
+**Type 1: "Which quotation from the text most effectively illustrates the claim?"**
+- You're given a claim and must find the matching quote
+- Strategy: Restate the claim in your own words, then ask of each quote "Does this directly show that?"
 
-**Type 2: "Which quotation from the passage most effectively illustrates the claim?"**
-- You're given a claim and must find the matching evidence
-- Strategy: Read each quote and ask "Does this directly support the stated claim?"
+**Type 2: "Which finding, if true, would most directly support the researcher's hypothesis?"**
+- You're given a hypothesis and four possible results
+- Strategy: Predict what result the hypothesis requires, then find the finding that matches it
 
 ### The Evidence Must Be DIRECT
 
@@ -44,15 +44,15 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
         questions: [
           {
             question: 'Claim: "The author argues that social media has fundamentally altered how people form political opinions." Which quote best supports this claim?',
-            options: ['"A 2023 survey found that 68% of adults under 30 cited social media as their primary source of political news, compared to just 12% who relied on newspapers"', '"Social media companies have faced increasing scrutiny from lawmakers concerned about data privacy"', '"The first social media platform launched in 2003 and quickly gained millions of users"', '"Political advertising spending on social media reached \\$3 billion in 2024"'],
+            options: ['"In a 2023 survey, 68% of adults under 30 named social media as their primary source of political news"', '"Social media companies have faced growing scrutiny from lawmakers concerned about how user data is stored"', '"The first major social media platform launched in 2003 and gained millions of users within two years"', '"Political campaigns spent over \\$3 billion on social media advertising during the 2024 election cycle"'],
             correctAnswer: 0,
-            explanation: 'The claim is about HOW people form political opinions. The survey data showing 68% get political news from social media directly supports this fundamental change. The other options discuss related topics (regulation, history, spending) but don\'t address opinion formation.'
+            explanation: 'The claim is about HOW people form political opinions. The survey showing that 68% of young adults get their political news mainly from social media speaks directly to where opinions are formed. The other quotes discuss related topics (regulation, history, ad spending) but say nothing about how people form their views; spending shows what campaigns did, not how audiences changed.'
           },
           {
-            question: 'When answering a paired evidence question, what is the most efficient approach?',
-            options: ['Answer the first question using the passage, then match your answer to one of the evidence quotes', 'Read all four evidence quotes first, then answer the first question', 'Skip the first question and only answer the evidence question', 'Choose the longest quote as evidence'],
+            question: 'A question asks which quotation most effectively illustrates a claim. What is the most reliable first step?',
+            options: ['Restate the claim in your own words, then test each quote against it', 'Pick the quote that repeats the most words from the claim itself', 'Read all four quotes first, then decide what the claim really means to say', 'Choose the quote that contains the most specific numbers or data'],
             correctAnswer: 0,
-            explanation: 'The most efficient method is to answer the comprehension question first based on the passage, then find the quote that directly supports your answer. Working backwards from quotes is less efficient and more error-prone.'
+            explanation: 'Pinning down exactly what the claim says gives you a standard to test each quote against. Word-matching is the classic trap (a quote can echo the claim and still not support it), deciding the claim\'s meaning from the quotes lets the choices steer you, and data-heavy quotes can be off-target.'
           },
           {
             question: 'A passage argues that wolves reintroduced to Yellowstone improved the entire ecosystem. Which evidence would be WEAKEST support for this claim?',
@@ -78,15 +78,15 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
 | "Many students enjoy playing sports after school" | Neither — about enjoyment, not performance | ❌ Same topic, wrong focus |
 | "High-performing students tend to have better sleep habits" | Neither — about sleep, not exercise | ❌ Different variable entirely |
 
-### Worked Example 2: Paired Evidence Question Strategy
+### Worked Example 2: "Which Finding Would Support" Strategy
 
 | Step | Action |
 |---|---|
-| 1. Read Q1 | "The author suggests that remote work increases productivity. Which claim does the passage support?" |
-| 2. Answer Q1 from passage | Your answer: "Remote workers complete 13% more tasks per day" |
-| 3. Read Q2 | "Which quote best supports the answer to Q1?" |
-| 4. Match | Find the quote that mentions remote workers and task completion |
-| 5. Result | The quote about "13% more tasks" directly supports your Q1 answer ✅ |
+| 1. Read the hypothesis | "A researcher hypothesizes that remote work increases productivity." |
+| 2. Predict | The hypothesis needs a result showing remote workers get MORE done |
+| 3. Read the question | "Which finding, if true, would most directly support the hypothesis?" |
+| 4. Match | Find the finding that compares remote and office workers' output |
+| 5. Result | "Remote workers completed 13% more tasks per day than office workers" directly supports it ✅ |
 
 ### Evidence Evaluation Checklist
 
@@ -105,21 +105,21 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
         questions: [
           {
             question: 'Claim: "Deforestation is the primary driver of species extinction in the Amazon." Which quote is BEST evidence?',
-            options: ['"Between 2000-2020, deforestation destroyed habitats for an estimated 10,000 species in the Amazon basin"', '"The Amazon rainforest covers approximately 5.5 million square kilometers"', '"Climate change also threatens biodiversity worldwide"', '"Brazil has implemented new logging regulations in recent years"'],
+            options: ['"Habitat loss from deforestation accounts for most documented species extinctions in the Amazon"', '"The Amazon rainforest covers roughly 5.5 million square kilometers across nine countries"', '"Climate change also threatens species with extinction across tropical forests worldwide"', '"Brazil has tightened its logging rules, and deforestation has slowed in some recent years"'],
             correctAnswer: 0,
-            explanation: 'The claim is about deforestation driving extinction. Only the 10,000-species quote directly links deforestation to species impact (10,000 species affected). The 5.5-million-square-kilometers quote is geography. The climate-change quote mentions a different threat. The logging-regulations quote discusses policy, not extinction.'
+            explanation: 'The claim is that deforestation is the PRIMARY driver of extinction. Only the habitat-loss quote ties deforestation to extinctions and ranks it first ("most documented extinctions"). The 5.5-million-square-kilometers quote is geography. The climate-change quote names a different threat. The logging-rules quote discusses policy and clearing rates, not extinction.'
           },
           {
-            question: 'When evaluating evidence quotes, the biggest mistake students make is:',
-            options: ['Choosing a quote on the same TOPIC that doesn\'t actually SUPPORT the specific claim', 'Spending too long reading each quote', 'Always choosing the longest quote', 'Ignoring transition words in quotes'],
+            question: 'According to this lesson, which trap catches the most students on evidence questions?',
+            options: ['Choosing a quote on the right topic that does not support the claim', 'Rereading every quote twice and running out of time in the module', 'Choosing the longest quote simply because it looks the most thorough', 'Ignoring the transition words that open each of the quotes'],
             correctAnswer: 0,
             explanation: 'Same-topic-different-support is the #1 trap. A quote about the Amazon doesn\'t automatically support a claim about Amazon deforestation. The evidence must support the SPECIFIC claim, not just be related.'
           },
           {
             question: 'Claim: "Bilingual children show enhanced executive function." Which is the WEAKEST evidence?',
-            options: ['"Bilingual children learn two languages from birth"', '"Bilingual 5-year-olds outperformed monolinguals on task-switching tests by 23%"', '"MRI scans showed increased gray matter in bilingual children\'s prefrontal cortex"', '"Bilingual children scored higher on standardized measures of cognitive flexibility"'],
+            options: ['"Most bilingual children in the study had heard two languages at home from birth"', '"Bilingual 5-year-olds outperformed monolinguals on task-switching tests by 23%"', '"MRI scans showed increased gray matter in bilingual children\'s prefrontal cortex"', '"Bilingual children scored higher on standardized measures of cognitive flexibility"'],
             correctAnswer: 0,
-            explanation: 'The learn-two-languages-from-birth quote defines what bilingual means — it says nothing about executive function. The task-switching, MRI, and cognitive-flexibility quotes all provide direct evidence of enhanced cognitive ability. The from-birth quote is true but doesn\'t support the claim.'
+            explanation: 'The heard-two-languages-since-birth quote describes the children\'s background; it says nothing about executive function. The task-switching, MRI, and cognitive-flexibility quotes all provide evidence of enhanced cognitive ability. The background quote may be true, but it doesn\'t support the claim.'
           }
         ]
       }
@@ -131,15 +131,15 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
       exercise: {
         dropdowns: [
           'Best evidence is [direct support for the specific claim|any quote about the topic|the longest quote|the first quote in the passage]',
-          'For paired Q1-Q2 evidence questions: answer [Q1 first, then match evidence|Q2 first|both simultaneously|whichever is easier]',
+          'For "which finding would support the hypothesis" questions, first [predict the result the hypothesis needs|reread the whole passage|pick the most detailed finding|find the most recent finding]',
           'A quote on the same topic but supporting a different claim is [a trap answer|correct|partially correct|irrelevant]',
           'Evidence must support the [specific claim|general topic|author\'s background|passage title]'
         ],
-        correctAnswers: ['direct support for the specific claim', 'Q1 first, then match evidence', 'a trap answer', 'specific claim'],
+        correctAnswers: ['direct support for the specific claim', 'predict the result the hypothesis needs', 'a trap answer', 'specific claim'],
         hint1: 'Direct > indirect > same topic but wrong claim.',
-        hint2: 'Answer the comprehension question first, then find matching evidence.',
+        hint2: 'Know what result would confirm the hypothesis before you read the findings.',
         hint3: 'Same topic ≠ same claim.',
-        explanation: 'Best evidence directly supports the specific claim. Answer Q1 first, then match. Same-topic quotes are traps if they don\'t support the exact claim. Always match evidence to the specific claim.'
+        explanation: 'Best evidence directly supports the specific claim. For hypothesis questions, predict the needed result first, then match. Same-topic quotes are traps if they don\'t support the exact claim. Always match evidence to the specific claim.'
       }
     },
     {
@@ -151,7 +151,7 @@ Trap answers are quotes that mention the same topic as the claim but don't actua
 |---|---|
 | Evidence must be | DIRECT support for the SPECIFIC claim |
 | Biggest trap | Same topic, wrong claim |
-| Paired questions | Answer Q1 first → find matching quote |
+| Hypothesis questions | Predict the result the hypothesis needs → find the matching finding |
 | Elimination | Does it mention the claim's topic? Does it support or just relate? |
 
 *Next: Inference & Implied Meaning →*`    }

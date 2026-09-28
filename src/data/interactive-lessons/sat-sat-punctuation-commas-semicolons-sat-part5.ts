@@ -34,9 +34,9 @@ Never separate a subject from its verb with a single comma.
             question: 'Which sentence contains an UNNECESSARY comma?',
             options: [
               'The students who passed the exam, celebrated afterward.',
-              'After the exam, the students celebrated.',
+              'After the exam, the students celebrated with pizza.',
               'The students celebrated, and the teachers applauded.',
-              'However, the results were delayed.'
+              'However, the results of the exam were delayed.'
             ],
             correctAnswer: 0,
             explanation: 'Correct — There is no reason to separate "The students who passed the exam" (subject) from "celebrated" (verb) with a comma. "Who passed the exam" is an essential clause — no commas needed around it.'
@@ -44,10 +44,10 @@ Never separate a subject from its verb with a single comma.
           {
             question: 'Which version is correct?',
             options: [
-              'The research team from Harvard, published their findings.',
-              'The research team from Harvard published their findings.',
-              'The research, team from Harvard published their findings.',
-              'The research team, from Harvard published their findings.'
+              'The research team from Harvard, published its findings.',
+              'The research team from Harvard published its findings.',
+              'The research, team from Harvard published its findings.',
+              'The research team, from Harvard published its findings.'
             ],
             correctAnswer: 1,
             explanation: 'Correct — "The research team from Harvard" is the subject and "published" is the verb. No comma should separate them, no matter how long the subject is.'
@@ -96,7 +96,7 @@ When you have only TWO items (not a list of three), do not use a comma:
               'The senator argued, that the bill should pass.',
               'The senator argued that, the bill should pass.',
               'The senator argued that the bill should pass.',
-              'The senator, argued that the bill should pass.'
+              'The senator argued, the bill should pass.'
             ],
             correctAnswer: 2,
             explanation: 'Correct — No comma between the verb "argued" and its object clause "that the bill should pass." This is a common SAT trap.'
@@ -104,13 +104,13 @@ When you have only TWO items (not a list of three), do not use a comma:
           {
             question: 'How many commas are needed in this sentence? "The talented young musician played the piano and sang beautifully."',
             options: [
-              'Zero — the sentence is correct as written.',
-              'One — after "musician"',
-              'One — after "piano"',
-              'Two — after "talented" and "piano"'
+              'No commas are needed',
+              'One, after "musician"',
+              'One, after "piano"',
+              'Two, after "talented" and "piano"'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — There are only two compound elements ("played the piano" and "sang beautifully"), so no comma is needed before "and." No comma goes after the subject "musician" before the verb "played."'
+            explanation: 'Correct — There are only two compound elements ("played the piano" and "sang beautifully"), so no comma is needed before "and." No comma goes after the subject "musician" before the verb "played," and "talented young" are cumulative adjectives (you would not say "talented and young musician"), so no comma goes between them either.'
           }
         ]
       }

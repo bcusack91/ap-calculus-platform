@@ -145,15 +145,15 @@ Rewrite ONLY the underlined/incorrect element to make each sentence parallel.
         questions: [
           {
             question: 'The volunteers were praised for <u>their enthusiasm, their dependability, and they were always willing to help</u>. \nWhich revision fixes the parallelism error?',
-            options: ['their enthusiasm, their dependability, and their willingness to help', 'their enthusiasm, their dependability, and for being always willing to help', 'their enthusiasm, dependability, and they were willing to help', 'No change needed'],
+            options: ['their enthusiasm, their dependability, and their willingness to help', 'their enthusiasm, their dependability, and for being always willing to help', 'their enthusiasm, dependability, and they were willing to help', 'their enthusiasm, their dependability, and always being willing to help'],
             correctAnswer: 0,
-            explanation: 'The list should contain three parallel noun phrases: "their enthusiasm, their dependability, and their willingness to help."'
+            explanation: 'The list should contain three parallel noun phrases: "their enthusiasm, their dependability, and their willingness to help." The other versions end the list with a prepositional phrase ("for being…"), a full clause ("they were…"), or a gerund phrase ("always being…"), none of which matches the first two nouns.'
           },
           {
             question: 'The salary of a software engineer in San Francisco is significantly higher than <u>a teacher in rural Iowa</u>. \nWhich revision fixes the comparison?',
-            options: ['that of a teacher in rural Iowa', 'a teacher in rural Iowa is', 'teachers from rural Iowa', 'No change needed'],
+            options: ['that of a teacher in rural Iowa', 'a teacher in rural Iowa is', 'teachers from rural Iowa', 'those of teachers in Iowa'],
             correctAnswer: 0,
-            explanation: 'You must compare salary to salary. "That of a teacher in rural Iowa" refers back to "the salary of," making the comparison logical.'
+            explanation: 'You must compare salary to salary. "That of a teacher in rural Iowa" refers back to "the salary," making the comparison logical. The other versions compare a salary to people ("a teacher," "teachers"), and "those" is plural, so it cannot stand for the singular "salary."'
           }
         ]
       }

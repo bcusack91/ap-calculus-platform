@@ -93,23 +93,23 @@ You've learned all the major comma, semicolon, and colon rules tested on the SAT
             explanation: 'Correct — "who specializes in cardiology" is nonessential (commas on both sides). "Dr. Martinez has published over fifty papers" and "she recently received a grant" are independent clauses joined by "and" → comma before "and."'
           },
           {
-            question: 'The research team compiled their findings __(A)__ analyzed three years of data __(B)__ and presented the results to the board. Which punctuation is correct for (A) and (B)?',
+            question: 'The research team compiled its _____ three years of data, and presented the results to the board. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(A) , ... (B) ,',
-              '(A) ; ... (B) ;',
-              '(A) no punctuation ... (B) no punctuation',
-              '(A) : ... (B) ,'
+              'findings, analyzed',
+              'findings; analyzed',
+              'findings analyzed',
+              'findings: analyzed'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — This is a series of three actions: compiled, analyzed, and presented. Items in a series are separated by commas.'
+            explanation: 'Correct — This is a series of three actions: compiled, analyzed, and presented. Items in a series are separated by commas, so a comma goes after "findings" to match the one after "data." A semicolon or colon would need an independent clause after it, and no punctuation runs the first two items together.'
           },
           {
-            question: 'Which option best completes this sentence? "The library contains an impressive collection ___ first editions, signed manuscripts, and rare maps."',
+            question: 'The library contains an impressive _____ editions, signed manuscripts, and rare maps. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              ', (comma)',
-              ': (colon)',
-              '; (semicolon)',
-              '— no punctuation'
+              'collection, first',
+              'collection: first',
+              'collection; first',
+              'collection first'
             ],
             correctAnswer: 1,
             explanation: 'Correct — "The library contains an impressive collection" is a complete sentence. A colon introduces the list that explains what the collection includes.'

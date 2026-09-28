@@ -60,21 +60,21 @@ Subject: impact (singular) → Verb: has (singular) ✅`
         questions: [
           {
             question: '"Each of the scientists _____ the findings independently." Which verb is correct?',
-            options: ['verified', 'were verifying', 'verify', 'have verified'],
+            options: ['has verified', 'are verifying', 'verify', 'have verified'],
             correctAnswer: 0,
-            explanation: '"Each" is ALWAYS singular, regardless of the prepositional phrase "of the scientists." So the singular "verified" is correct.'
+            explanation: '"Each" is ALWAYS singular, regardless of the prepositional phrase "of the scientists." So the singular "has verified" is correct; "are verifying," "verify," and "have verified" are plural forms that agree with "scientists."'
           },
           {
-            question: '"The data from the three experiments _____ a clear pattern." Which verb is correct?',
-            options: ['reveal—"data" is treated as plural in scientific writing on the SAT', 'reveals—"data" is always singular', 'has revealed—singular collective noun', 'are revealing—always use plural with "data"'],
+            question: '"The results from the three experiments _____ a clear pattern." Which verb is correct?',
+            options: ['have revealed', 'has revealed', 'is revealing', 'reveals'],
             correctAnswer: 0,
-            explanation: 'On the SAT, "data" is typically treated as plural (its original Latin form). "The data reveal" is standard. However, note that both singular and plural are accepted in modern usage—on the SAT, match the context clues.'
+            explanation: 'Cross out "from the three experiments": the subject is "results," which is plural, so the verb must be plural: "have revealed." "Has revealed," "is revealing," and "reveals" are all singular forms that agree with "experiment," not with the true subject.'
           },
           {
             question: '"Neither the CEO nor the board members _____ willing to compromise." Which is correct?',
-            options: ['were—the verb agrees with "board members" (nearer, plural)', 'was—the verb agrees with "CEO" (first subject)', 'is—always use singular with "neither"', 'has been—use present perfect with "neither/nor"'],
+            options: ['were', 'was', 'is', 'has been'],
             correctAnswer: 0,
-            explanation: 'With "neither...nor," the verb agrees with the subject CLOSER to it. "Board members" is closer and plural, so "were" is correct.'
+            explanation: 'With "neither...nor," the verb agrees with the subject CLOSER to it. "Board members" is closer and plural, so "were" is correct. "Was," "is," and "has been" are singular forms that agree with "CEO," the farther subject.'
           }
         ]
       }    },
@@ -124,21 +124,21 @@ Subject: impact (singular) → Verb: has (singular) ✅`
         questions: [
           {
             question: '"The teacher, as well as her students, _____ excited about the field trip." Which verb is correct?',
-            options: ['is — "as well as" doesn\'t make the subject plural', 'are — "teacher" and "students" together are plural', 'were — past tense is needed', 'have been — present perfect required'],
+            options: ['was', 'were', 'are', 'seem'],
             correctAnswer: 0,
-            explanation: '"As well as" is NOT the same as "and." It doesn\'t create a compound subject. The true subject is still "teacher" (singular), so the verb is "is."'
+            explanation: '"As well as" is NOT the same as "and." It doesn\'t create a compound subject. The true subject is still "teacher" (singular), so the verb must be singular: "was." "Were," "are," and "seem" are all plural forms.'
           },
           {
-            question: '"A number of complaints _____ been filed." Which is correct?',
-            options: ['have — "a number of" = many (plural)', 'has — "number" is singular', 'is — "a" makes it singular', 'was — past tense singular'],
+            question: '"A number of complaints _____ filed last week." Which is correct?',
+            options: ['were', 'was', 'is', 'has been'],
             correctAnswer: 0,
-            explanation: '"A number of" means "many/several" and takes a plural verb. Compare: "THE number of complaints HAS increased" (singular). "A number" = plural, "The number" = singular.'
+            explanation: '"A number of" means "many/several" and takes a plural verb: "were filed." Compare: "THE number of complaints HAS increased" (singular). "A number" = plural, "The number" = singular.'
           },
           {
             question: '"None of the evidence _____ conclusive." Which verb is correct?',
-            options: ['is — "evidence" is uncountable (singular)', 'are — "none" is always plural', 'were — past tense plural', 'have been — "none" takes plural'],
+            options: ['was', 'were', 'have been', 'seem'],
             correctAnswer: 0,
-            explanation: '"None" is context-dependent. "Evidence" is uncountable, so it takes a singular verb: "is." If it were "None of the RESULTS," "are" would be correct.'
+            explanation: '"None" is context-dependent. "Evidence" is uncountable, so it takes a singular verb: "was." "Were," "have been," and "seem" are plural. If it were "None of the RESULTS," a plural verb would be correct.'
           }
         ]
       }
@@ -152,7 +152,7 @@ Subject: impact (singular) → Verb: has (singular) ✅`
           '"Each of the students _____ prepared." [is|are|were|have been]',
           '"The news _____ surprising." [is|are|were|have been]',
           '"A number of issues _____ raised." [were|was|is|has been]',
-          '"Along with" makes the subject [still singular|plural|either|unknown]'
+          '"Along with" makes a singular subject [still singular|plural|compound|either one]'
         ],
         correctAnswers: ['is', 'is', 'were', 'still singular'],
         hint1: '"Each" is always singular.',

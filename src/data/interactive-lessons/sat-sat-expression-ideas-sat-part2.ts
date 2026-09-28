@@ -8,11 +8,11 @@ export const satExpressionPart2Data = {
 
 **Part 2 of 7 — Paragraph Organization**
 
-These questions ask you to place a sentence in the best location within a paragraph, or to determine the most logical order for ideas.
+The Digital SAT never asks you to move a sentence to a new position, but it constantly tests whether you can follow the logical sequence of a short text. Transition questions and "Which choice most logically completes the text?" questions both depend on it.
 
-### Sentence Placement Strategy
+### Reading for Logical Sequence
 
-When asked "Where should this sentence be placed?" look for:
+To decide what logically comes next in a text, look for:
 
 1. **Referential links:** Does the sentence mention something that must come AFTER its introduction?
 2. **Transition clues:** Does it start with "However," "Additionally," "For example"?
@@ -21,20 +21,15 @@ When asked "Where should this sentence be placed?" look for:
 
 ### Example
 
-**Paragraph order question:**
+**A logically sequenced text:**
 
-[1] Monarch butterflies migrate up to 3,000 miles each fall.  
-[2] They navigate using a combination of the sun's position and Earth's magnetic field.  
-[3] Scientists were puzzled by this navigational ability for decades.  
-[4] Recent research identified magnetite crystals in their antennae as the key biological compass.
+Monarch butterflies migrate up to 3,000 miles each fall. For decades, scientists were puzzled by how they find their way. We now know they navigate using a combination of the sun's position and Earth's magnetic field. Recent research even identified magnetic particles in their antennae that may act as a biological compass.
 
-**Best order:** 1, 3, 2, 4
+Why it flows: behavior → puzzle about it → the answer → the newest detail. Each sentence builds on the one before it, and "they" always points back to the butterflies.
 
-Because: Introduce the behavior (1) → puzzle about it (3) → describe the ability (2) → explain the discovery (4).
+### Transition Signals and Where They Fit
 
-### Transition Signals for Placement
-
-| If the sentence starts with... | It likely goes... |
+| If a sentence starts with... | It must come... |
 |---|---|
 | "For example" or "For instance" | AFTER a general claim |
 | "However" or "Nevertheless" | AFTER a point it contradicts |
@@ -49,14 +44,14 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
       exercise: {
         questions: [
           {
-            question: 'Where should this sentence go? "This discovery challenged the long-held assumption that birds were the only animals capable of true migration navigation." [1] Sea turtles have been tracked traveling thousands of miles. [2] Researchers attached GPS devices to 40 turtles. [3] [INSERT] [4] Further studies confirmed that turtles use Earth\'s magnetic signature to find their birth beaches.',
-            options: ['Position 3 is correct—it responds to the GPS tracking findings and leads into further studies', 'Position 1—it should open the paragraph', 'After position 4—as a concluding statement', 'Position 2—between the introduction and the tracking study'],
+            question: 'Sea turtles travel thousands of miles between feeding grounds and nesting beaches. When researchers attached GPS devices to 40 female turtles, each one returned to nest on the beach where it had hatched. Later experiments showed that young turtles can sense Earth\'s magnetic field. Taken together, these findings suggest that ______ Which choice most logically completes the text?',
+            options: ['turtles may use magnetic cues to find the beaches where they were born.', 'turtles return to their home beaches mainly by following ocean currents.', 'every migrating animal relies on Earth\'s magnetic field to navigate.', 'GPS devices can disrupt a sea turtle\'s natural sense of direction.'],
             correctAnswer: 0,
-            explanation: 'The sentence discusses a "discovery" (the GPS tracking results from sentence 2) and "challenged" an assumption (setting up the confirmation in sentence 4). Position 3 creates a logical flow: track→discover→challenge assumption→confirm.'
+            explanation: 'The text moves from the behavior (turtles return to their birth beaches) to a possible mechanism (they can sense Earth\'s magnetic field), so the logical conclusion links the two: turtles may use magnetic cues to find those beaches. Ocean currents are never mentioned, "every migrating animal" generalizes far beyond turtles, and nothing suggests the GPS devices interfered with the turtles.'
           },
           {
             question: 'A sentence begins "This phenomenon, known as..." It most logically follows a sentence that:',
-            options: ['Describes the phenomenon without naming it', 'Provides a statistic about the phenomenon', 'Concludes the paragraph', 'Introduces an unrelated concept'],
+            options: ['Describes something without naming it', 'Provides a statistic about the phenomenon', 'Sums up the whole paragraph\'s main argument', 'Introduces a second, unrelated concept'],
             correctAnswer: 0,
             explanation: '"This phenomenon, known as..." uses "this" to refer back to something just described and then provides its technical name. It must follow the description of that phenomenon.'
           }
@@ -65,7 +60,7 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
     {
       id: 'ei2-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Mastering Sentence Placement
+      content: `## Deep Dive: Mastering Logical Sequence
 
 ### Worked Example 1: Tracking Reference Links
 
@@ -75,7 +70,7 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
 | "However, recent evidence complicates this conclusion." | "However" + "this conclusion" | A sentence stating the conclusion |
 | "For example, the 2019 study found a 30% increase." | "For example" | A general claim that the study supports |
 
-### Worked Example 2: Full Re-ordering
+### Worked Example 2: Why This Order Works
 
 **Given sentences (scrambled):**
 - [A] "The team collected over 500 soil samples from three continents."
@@ -91,7 +86,7 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
 | 4 | What does this mean? ("This global pattern" = data from three continents) | B |
 | **Final** | | **C → A → D → B** |
 
-### Placement Red Flags
+### Sequence Red Flags
 
 | Red Flag | Why It's Wrong |
 |---|---|
@@ -107,22 +102,22 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
       exercise: {
         questions: [
           {
-            question: 'Sentence to place: "As a result, shipping costs decreased by 40%." This sentence must follow:',
-            options: ['A sentence describing a cause (new shipping route, technology, etc.)', 'A sentence about shipping history', 'A conclusion about the shipping industry', 'An introduction to a passage about economics'],
+            question: 'A sentence reads: "As a result, shipping costs decreased by 40%." The sentence right before it must:',
+            options: ['describe a change that would lower costs', 'summarize the history of the shipping trade', 'report that shipping costs had been rising', 'state the paragraph\'s overall conclusion'],
             correctAnswer: 0,
-            explanation: '"As a result" signals a cause-effect relationship. This sentence IS the effect, so it must follow the cause. It cannot come before the explanation of what caused the decrease.'
+            explanation: '"As a result" signals a cause-effect relationship. This sentence IS the effect, so the sentence before it must supply the cause: some change (a new route, a new technology) that would lower costs. History, rising costs, or a conclusion would not produce the result the sentence announces.'
           },
           {
-            question: 'Which ordering principle is MOST important on SAT placement questions?',
-            options: ['Alphabetical order of key terms', 'Logical flow: referential links and transitions', 'Sentence length: short before long', 'Putting the most impressive sentence first'],
+            question: 'When judging whether the ideas in a text are in a logical order, which principle matters most?',
+            options: ['Shorter sentences should come before longer ones', 'Each sentence must follow what it refers back to', 'The most striking sentence should always come first', 'Sentences with numbers belong at the very end'],
             correctAnswer: 1,
-            explanation: 'The SAT tests logical flow. Pronouns must follow their antecedents, examples must follow claims, and effects must follow causes. These referential links determine correct placement.'
+            explanation: 'The SAT tests logical flow. Pronouns must follow their antecedents, examples must follow claims, and effects must follow causes. These reference links, not sentence length, drama, or numbers, determine the logical order.'
           },
           {
-            question: '"These findings" at the start of a sentence means it should be placed:',
-            options: ['At the start of the paragraph', 'After sentences describing the findings it refers to', 'At the end of the passage', 'Anywhere — "these" is vague enough to work anywhere'],
+            question: 'A sentence begins "These findings suggest…" Where in a text can it logically appear?',
+            options: ['At the very start, to introduce the topic', 'After the sentences that describe the findings', 'Only as the final sentence of the text', 'Just before the findings, to preview them'],
             correctAnswer: 1,
-            explanation: '"These findings" is a demonstrative pronoun + noun that MUST refer back to specific findings already described. Placing it before the findings are mentioned creates a dangling reference.'
+            explanation: '"These findings" is a demonstrative + noun that MUST refer back to specific findings already described. Putting it first or before the findings creates a reference to nothing, and nothing requires it to be the very last sentence.'
           }
         ]
       }
@@ -130,13 +125,13 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
     {
       id: 'ei2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Sentence Placement Check** — Select the correct answer.',
+      content: '**Logical Sequence Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"For example, the 2020 study…" goes [after a general claim|before any claims|at the paragraph start|anywhere]',
+          '"For example, the 2020 study…" goes [after a general claim|before any claims|at the paragraph start|at the end of the text]',
           '"However, new data contradicts…" goes [after the point it contradicts|at the start|before the data|at the end always]',
           '"This discovery" must follow [the discovery being described|any noun|the conclusion|the introduction]',
-          'General → specific means [broad claim first, details after|details first, claim after|random order|longest first]'
+          'General → specific means [broad claim first, details after|details first, claim after|newest findings first|shortest sentence first]'
         ],
         correctAnswers: ['after a general claim', 'after the point it contradicts', 'the discovery being described', 'broad claim first, details after'],
         hint1: 'Examples illustrate a preceding claim.',
@@ -152,8 +147,8 @@ Because: Introduce the behavior (1) → puzzle about it (3) → describe the abi
 
 | Strategy | Detail |
 |---|---|
-| Placement rule #1 | Pronouns/demonstratives must follow their referents |
-| Placement rule #2 | Examples follow claims, effects follow causes |
+| Sequence rule #1 | Pronouns/demonstratives must follow their referents |
+| Sequence rule #2 | Examples follow claims, effects follow causes |
 | Transition clues | "However" = after contrast, "For example" = after claim |
 | Re-ordering | Start broad, then narrow: intro → evidence → conclusion |
 | Red flags | Pronoun without antecedent, effect before cause |

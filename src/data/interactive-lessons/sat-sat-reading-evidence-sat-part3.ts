@@ -42,21 +42,21 @@ Inference questions ask you to determine what the passage **implies** or **sugge
         questions: [
           {
             question: 'A passage describes a musician who "abandoned a lucrative career in law to pursue composing, despite her family\'s vocal disapproval." What can most reasonably be inferred?',
-            options: ['Music was more important to her than financial security or family approval', 'She was unsuccessful as a lawyer', 'Her family eventually supported her decision', 'She regretted leaving law'],
+            options: ['She valued composing more than both money and family approval', 'She had struggled to succeed as a lawyer before switching careers', 'Her family eventually came to accept her decision to compose', 'She later came to regret giving up a secure legal career'],
             correctAnswer: 0,
-            explanation: 'She gave up something "lucrative" (financial security) and acted "despite" disapproval (family approval). This directly implies music mattered more than both. The other options require information not in the passage.'
+            explanation: 'She gave up something "lucrative" (money) and acted "despite" disapproval (family approval). This directly implies composing mattered more than both. "Lucrative" suggests she was doing well in law, not struggling, and nothing in the sentence tells us about her family\'s later acceptance or her later regret.'
           },
           {
             question: 'A historian writes: "While popular accounts credit Edison as the sole inventor of the lightbulb, the reality involves at least two dozen contemporaneous inventors working on similar designs." The author most likely believes:',
-            options: ['Innovation is typically a collective rather than individual process', 'Edison should receive no credit for the lightbulb', 'Popular history is always inaccurate', 'The other inventors were more talented than Edison'],
+            options: ['The lightbulb was developed by many people, not by Edison alone', 'Edison deserves no credit at all for inventing the lightbulb', 'Popular histories of science cannot be trusted on any subject', 'Edison\'s rivals had produced better lightbulb designs than he had'],
             correctAnswer: 0,
-            explanation: 'The contrast between "sole inventor" and "two dozen contemporaneous inventors" implies innovation is collective. The author doesn\'t say Edison deserves NO credit (just not sole credit), doesn\'t say popular history is ALWAYS wrong, and makes no comparison of talent.'
+            explanation: 'The contrast between "sole inventor" and "two dozen contemporaneous inventors" implies the lightbulb was a shared achievement. The author doesn\'t say Edison deserves NO credit (just not sole credit), doesn\'t condemn popular history on every subject, and never compares the quality of the rival designs.'
           },
           {
             question: 'Which approach is MOST reliable for inference questions?',
-            options: ['Choose the answer that is supported by specific evidence in the passage', 'Choose the answer that seems most logical based on your outside knowledge', 'Choose the most detailed or specific answer', 'Choose the answer that the author would most likely agree with personally'],
+            options: ['Pick the answer you can tie to specific words in the passage', 'Pick the answer that seems most logical from what you already know', 'Pick the answer that repeats a sentence from the passage word for word', 'Pick the answer with the most specific details and examples'],
             correctAnswer: 0,
-            explanation: 'SAT inferences must be textually grounded. Outside knowledge, level of detail, and personal opinions are all unreliable criteria. Always ask: "What specific words in the passage support this?"'
+            explanation: 'SAT inferences must be textually grounded. Outside knowledge and level of detail are unreliable criteria, and an answer that repeats a sentence word for word is a restatement, not an inference. Always ask: "What specific words in the passage support this?"'
           }
         ]
       }    },
@@ -105,21 +105,21 @@ Inference questions ask you to determine what the passage **implies** or **sugge
         questions: [
           {
             question: 'A passage states: "The new medication reduced symptoms in 73% of participants, though 15% reported mild side effects including headache and fatigue." We can infer:',
-            options: ['The medication is broadly effective but not without drawbacks', 'The medication should be approved immediately', 'The side effects are dangerous', 'All patients should take this medication'],
+            options: ['The medication is broadly effective but has some drawbacks', 'The medication should be approved for public use right away', 'The side effects reported are dangerous for most patients', 'The medication will relieve symptoms in every patient who takes it'],
             correctAnswer: 0,
-            explanation: '73% effectiveness = broadly effective. 15% with side effects = not without drawbacks. The passage doesn\'t say anything about approval, danger level, or universal recommendation.'
+            explanation: '73% improvement = broadly effective. 15% with mild side effects = some drawbacks. The passage says nothing about approval, calls the side effects "mild" rather than dangerous, and 73% is not every patient.'
           },
           {
             question: 'An author writes about a CEO: "She transformed a struggling startup into a Fortune 500 company, though former employees describe a workplace culture of relentless pressure." The author\'s attitude is most likely:',
-            options: ['Acknowledging both achievement and its human cost', 'Entirely admiring of the CEO', 'Entirely critical of the CEO', 'Indifferent to the CEO\'s success'],
+            options: ['Appreciative of her success yet aware of its human cost', 'Admiring of her success and dismissive of any complaints', 'Critical of her methods and doubtful of her real success', 'Indifferent to both her company\'s growth and its culture'],
             correctAnswer: 0,
             explanation: '"Transformed" + "Fortune 500" = acknowledging achievement. "Relentless pressure" = noting the cost. The author presents both sides, suggesting a balanced/nuanced view.'
           },
           {
             question: 'Which inference goes too far? Passage: "The study was conducted with 50 college students at a single university."',
-            options: ['"The results may not generalize to all populations"', '"The researchers had limited resources"', '"College students are poor research subjects"', '"The study is one step in a larger body of research"'],
+            options: ['"The findings may not hold for people outside of college"', '"Every participant was a student at the same university"', '"College students make unreliable subjects for any research"', '"The sample was drawn from a fairly narrow group of people"'],
             correctAnswer: 2,
-            explanation: 'The passage says 50 students at one university — we can infer limited generalizability. But calling college students "poor research subjects" goes beyond what the passage states and adds a judgment not supported by the text.'
+            explanation: 'Fifty students at one university supports three of these: every participant attended the same school, the sample is narrow, and so the findings may not hold outside college. Calling college students unreliable subjects for ANY research is a sweeping judgment the sentence never makes.'
           }
         ]
       }
@@ -133,7 +133,7 @@ Inference questions ask you to determine what the passage **implies** or **sugge
           'A valid inference is supported by [specific text evidence|outside knowledge|common sense|personal opinion]',
           '"The passage proves" is usually [too strong|perfectly fine|required|neutral]',
           'If a passage says "largely attributed to," you can infer [it was a major factor, not the only one|it was the only cause|it was unimportant|the author is uncertain]',
-          'Speculation goes [beyond what the text supports|exactly as far as the text|not far enough|nowhere]'
+          'Speculation goes [beyond what the text supports|exactly as far as the text|only as far as the tone|no further than the data]'
         ],
         correctAnswers: ['specific text evidence', 'too strong', 'it was a major factor, not the only one', 'beyond what the text supports'],
         hint1: 'Always point to specific words as support.',

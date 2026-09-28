@@ -45,7 +45,7 @@ That's it. If one side of a semicolon is not an independent clause (or it's not 
             options: [
               'Always — semicolons are stronger than commas in lists.',
               'Only when list items themselves contain commas.',
-              'Only when there are more than five items in the list.',
+              'When there are more than five items in the list.',
               'Never — semicolons only join independent clauses.'
             ],
             correctAnswer: 1,
@@ -97,10 +97,10 @@ A **colon (:)** follows an **independent clause** and introduces:
               'The experiment was successful; the results confirmed the hypothesis.',
               'The experiment was successful the results confirmed the hypothesis.',
               'The experiment; was successful, the results confirmed the hypothesis.',
-              'The experiment was successful: the results confirmed the hypothesis.'
+              'The experiment was successful, the results, confirmed the hypothesis.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. The colon version could also work since the second clause explains the first, but a semicolon is the standard fix and the best answer here.'
+            explanation: 'Correct — A semicolon between two independent clauses fixes the comma splice. Deleting the comma creates a fused sentence, the semicolon after "experiment" splits the subject from its verb, and adding a comma after "results" leaves the splice and splits another subject from its verb.'
           },
           {
             question: 'Which sentence uses a colon INCORRECTLY?',

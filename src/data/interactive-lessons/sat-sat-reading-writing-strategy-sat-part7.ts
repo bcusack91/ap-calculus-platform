@@ -53,20 +53,20 @@ export const satRWStrategyPart7Data = {
       exercise: {
         questions: [
           {
-            question: '"The study, which was conducted by researchers at MIT, _____ that sleep deprivation affects memory." Which answer is most concise and correct?',
-            options: ['found', 'was able to find out and determine', 'found and concluded definitively', 'had the finding that'],
+            question: '"The study, which was conducted by researchers at MIT, _____ that sleep deprivation affects memory." Which choice is grammatically correct and most concise?',
+            options: ['showed', 'shown', 'was able to show', 'had the finding'],
             correctAnswer: 0,
-            explanation: 'All convey similar meaning, but "found" is the most concise. The SAT consistently rewards eliminating unnecessary words. "Was able to find out and determine" is redundant; "had the finding that" is wordy.'
+            explanation: '"Showed" is grammatical and says it in one word. "Shown" is a participle that needs a helping verb ("has shown"), so it is ungrammatical here. "Was able to show" and "had the finding" are grammatical but wordy ways of saying "showed."'
           },
           {
             question: 'Approximately how many seconds should you spend on each R&W question?',
-            options: ['About 70 seconds (32 min ÷ 27 questions)', 'About 30 seconds to leave time for review', 'About 2 minutes per question', 'Exactly 60 seconds'],
+            options: ['About 70 seconds', 'About 30 seconds', 'About 120 seconds', 'About 45 seconds'],
             correctAnswer: 0,
             explanation: '32 minutes ÷ 27 questions = approximately 71 seconds each. Budget less time for easy questions (30-45s) and more for hard ones (up to 2 minutes), but 70 seconds is the target average.'
           },
           {
             question: '"The new medication proved effective. _____, it carried fewer side effects than existing treatments." Best transition:',
-            options: ['Moreover — adds another positive point', 'However — this contrasts with effectiveness', 'Therefore — side effects are a result of effectiveness', 'For example — side effects illustrate effectiveness'],
+            options: ['Moreover', 'However', 'Therefore', 'For example'],
             correctAnswer: 0,
             explanation: 'Both sentences present positive aspects of the medication. "Moreover" adds supporting information. "However" would imply contrast (but both points are positive). "Therefore" implies causation that isn\'t present.'
           }
@@ -87,7 +87,7 @@ export const satRWStrategyPart7Data = {
 | Bullet-point notes + "Which choice most effectively…" | Rhetorical Synthesis | Read the goal first |
 | "Which choice best states the main idea?" | Information & Ideas | Eliminate details, find the central claim |
 | Shorter vs. longer answer choices | Conciseness | Grammar first, then shortest wins |
-| "Which choice most logically completes the text?" | Craft & Structure | Check context before and after the blank |
+| "Which choice completes the text with the most logical and precise word or phrase?" | Craft & Structure (Words in Context) | Predict a word from the context before reading the choices |
 
 ### Worked Example 2: Module Pacing Plan
 
@@ -128,19 +128,19 @@ When comparing answer choices, look at what DIFFERS between them:
         questions: [
           {
             question: 'A question gives you bullet-point notes and asks: "Which choice most effectively presents a contrast between the two methods?" What type of question is this?',
-            options: ['Rhetorical synthesis — notes + goal = synthesis question', 'Standard English Conventions — it\'s testing grammar', 'Information and Ideas — it asks about a main idea', 'Craft and Structure — it tests text structure'],
+            options: ['Rhetorical Synthesis', 'Form, Structure, and Sense', 'Central Ideas and Details', 'Text Structure and Purpose'],
             correctAnswer: 0,
-            explanation: 'Notes + a stated goal ("effectively presents a contrast") = rhetorical synthesis. Strategy: read the goal, filter relevant notes, pick the answer that compares BOTH methods (since "contrast" requires mentioning both).'
+            explanation: 'Notes + a stated goal ("effectively presents a contrast") = rhetorical synthesis. Form, Structure, and Sense questions test grammar, Central Ideas asks for a main idea, and Text Structure asks about a text\'s purpose or organization. Strategy: read the goal, filter relevant notes, pick the answer that compares BOTH methods (since "contrast" requires mentioning both).'
           },
           {
-            question: '"The orchestra, along with the choir, _____ performing at the benefit concert this Saturday." Which is correct?',
-            options: ['is — "orchestra" is the subject; "along with" is a parenthetical, not a compound subject', 'are — orchestra + choir makes a plural subject', 'were — past tense matches "this Saturday"', 'have been — present perfect for future events'],
+            question: '"The orchestra, along with the choir, _____ rehearsing for the benefit concert for weeks." Which is correct?',
+            options: ['has been', 'have been', 'were', 'are'],
             correctAnswer: 0,
-            explanation: '"Along with the choir" is a parenthetical phrase — it does NOT make the subject plural. The true subject is "orchestra" (singular) → "is." This is different from "and," which WOULD create a compound plural subject.'
+            explanation: '"Along with the choir" is a parenthetical phrase; it does NOT make the subject plural. The true subject is "orchestra" (singular) → "has been." "Have been," "were," and "are" are plural forms. This is different from "and," which WOULD create a compound plural subject.'
           },
           {
             question: 'You have 5 minutes left and 3 questions remaining. What should you do?',
-            options: ['Answer all 3 — ~1.5 minutes each is enough time', 'Pick the easiest-looking one, guess on the other 2', 'Skip all 3 and review previous answers', 'Spend all 5 minutes on the hardest question'],
+            options: ['Work through all 3, spending about a minute and a half on each', 'Answer the easiest one carefully and guess on the other 2', 'Leave all 3 blank and use the time to check earlier answers', 'Spend the full 5 minutes getting the hardest one right'],
             correctAnswer: 0,
             explanation: '1.5 minutes per question is enough for most R&W questions (average is ~70 seconds). Never leave questions blank on the SAT — there\'s no penalty for wrong answers. Answer all three with your remaining time.'
           }
@@ -155,7 +155,7 @@ When comparing answer choices, look at what DIFFERS between them:
         dropdowns: [
           'Target time per R&W question: about [70|30|120|90] seconds',
           '"Along with" creates a [parenthetical|compound|plural|collective] phrase',
-          'When stuck between two choices, re-read the [question stem|passage title|first answer|notes]',
+          'When stuck between two choices, re-read the [question stem|previous question|test directions|first choice you liked]',
           'No penalty for wrong answers, so [never leave blanks|guess only if time is short|skip hard questions|leave uncertain answers blank]'
         ],
         correctAnswers: ['70', 'parenthetical', 'question stem', 'never leave blanks'],

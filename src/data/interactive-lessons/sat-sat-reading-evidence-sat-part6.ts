@@ -46,13 +46,13 @@ The Digital SAT includes informational graphics alongside some Reading & Writing
         questions: [
           {
             question: 'A passage claims "Exercise significantly improves test scores." A table shows students who exercised 30 min/day scored an average of 82%, while non-exercisers scored 78%. Does the data support the claim?',
-            options: ['Partially—the data shows improvement but "significantly" may overstate a 4-point difference', 'Yes—any improvement counts as significant', 'No—the data completely contradicts the claim', 'The data is irrelevant to the claim'],
+            options: ['It shows higher scores, but not that the gap is large enough to be significant', 'It shows a significant gain, but not whether exercise caused the higher scores', 'It shows exercise raises scores, but not how much each student improved', 'It shows exercise has no effect, but not why the two averages differ'],
             correctAnswer: 0,
-            explanation: 'The data does show improvement (82 vs 78), so it partially supports the claim. But a 4-percentage-point difference might not qualify as "significant"—the word choice in the passage is stronger than the data warrants.'
+            explanation: 'The data does show higher scores for exercisers (82 vs 78), but a 4-point difference alone does not establish that the improvement is "significant": the passage\'s wording is stronger than the data warrants. The second option already grants that the gain is significant, the third assumes exercise CAUSES the higher scores (the table only compares two groups), and the fourth ignores a gap that does exist.'
           },
           {
             question: 'When a graph appears with a passage, you should read:',
-            options: ['The passage first, then the graph title and labels, then integrate both', 'The graph first because visual data is more objective', 'Only the passage—the graph is supplementary', 'Only the graph—the passage is just context'],
+            options: ['First the text\'s claim, then the graph\'s title and axis labels', 'The graph first, since visual data is always more objective than text', 'The text only, and treat the graph as optional background', 'The graph only, and treat the text as optional background'],
             correctAnswer: 0,
             explanation: 'Start with the passage to understand the argument, then examine the graph with attention to title, axes, and units. Integration of both is always required for correct answers.'
           }
@@ -103,19 +103,19 @@ The Digital SAT includes informational graphics alongside some Reading & Writing
         questions: [
           {
             question: 'A bar chart shows Country A spending 5% of GDP on education and Country B spending 4.9%. The text claims "a substantial gap in education investment." The data:',
-            options: ['Undermines the claim — a 0.1% difference is not "substantial"', 'Fully supports the claim', 'Is irrelevant to the claim', 'Proves the claim definitively'],
+            options: ['Undercuts it, since a gap of 0.1 percentage point is slight', 'Supports it, since Country A does spend more than Country B', 'Proves it, since any measured gap in spending is a real gap', 'Has no bearing on it, since GDP share says nothing of funding'],
             correctAnswer: 0,
-            explanation: '5% vs. 4.9% = 0.1 percentage point difference. While technically A spends more, calling this "substantial" is an overstatement that the data doesn\'t support.'
+            explanation: '5% vs. 4.9% = a 0.1 percentage point difference. Country A technically spends more, but calling this "substantial" is an overstatement the data doesn\'t support. Share of GDP spent on education is a direct measure of education investment, so the data is relevant.'
           },
           {
             question: 'A graph shows temperatures rising from 14.0°C to 14.8°C over 100 years, but the y-axis starts at 13.5°C instead of 0. This means:',
-            options: ['The visual exaggerates the temperature increase', 'The temperature change is larger than it appears', 'The data is incorrect', 'The graph is unreadable'],
+            options: ['The visual exaggerates the temperature increase', 'The temperature change is larger than it appears', 'The underlying temperature data must be incorrect', 'The graph cannot be used to compare any two years'],
             correctAnswer: 0,
             explanation: 'A truncated y-axis (not starting at 0) magnifies visual differences. The 0.8°C increase looks much larger on a 13.5-15.0 scale than it would on a 0-15 scale. Always check the axis range.'
           },
           {
             question: 'Text claims: "Exercise reduces heart disease risk." A table shows 50% lower risk for those exercising 150+ min/week vs. sedentary. The data:',
-            options: ['Strongly supports the claim with quantitative evidence', 'Partially supports — 50% is not enough', 'Contradicts the claim', 'Is irrelevant'],
+            options: ['Supports it, since the risk was cut in half for regular exercisers', 'Only partly supports it, since 50% is not a large enough drop', 'Contradicts it, since half of the exercisers were still at risk', 'Is irrelevant to it, since the table measures minutes rather than health'],
             correctAnswer: 0,
             explanation: 'A 50% risk reduction is substantial quantitative evidence directly supporting the claim that exercise reduces heart disease risk. The data and text align well.'
           }
@@ -128,10 +128,10 @@ The Digital SAT includes informational graphics alongside some Reading & Writing
       content: '**Data + Reading Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'Always check the graph\'s [y-axis scale and units|color scheme|font size|legend position]',
-          'Text says "dramatic increase," data shows 0.5% change → [data qualifies/undermines the text|data supports|data is wrong|text is always right]',
+          'Always check the graph\'s [y-axis scale and units|largest bar first|most recent value|overall trend line only]',
+          'Text says "dramatic increase," data shows 0.5% change → [data qualifies/undermines the text|data supports the text|data proves the text|data is irrelevant to the text]',
           'Read the [passage first, then the graph|graph first|passage only|graph only]',
-          'A graph not starting at 0 can [exaggerate visual differences|hide the data|be ignored|simplify the analysis]'
+          'A graph not starting at 0 can [exaggerate visual differences|shrink visual differences|reverse the trend shown|change the underlying values]'
         ],
         correctAnswers: ['y-axis scale and units', 'data qualifies/undermines the text', 'passage first, then the graph', 'exaggerate visual differences'],
         hint1: 'Scale and units determine how to interpret the data.',

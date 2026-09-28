@@ -52,21 +52,21 @@ Choose the word whose connotation matches the author's attitude.`
         questions: [
           {
             question: '"The scientist _____ that the species had migrated further north than any previous study had documented." Which verb is most precise?',
-            options: ['discovered', 'found out', 'knew about', 'saw'],
+            options: ['discovered', 'found out', 'knew about', 'noticed'],
             correctAnswer: 0,
-            explanation: '"Discovered" implies finding something new and previously unknown, which matches documenting something no previous study had shown. "Found out" is informal, "knew about" implies prior knowledge, and "saw" is too literal.'
+            explanation: '"Discovered" implies finding something new and previously unknown, which matches documenting something no previous study had shown. "Found out" is informal, "knew about" implies prior knowledge, and "noticed" suggests a casual observation rather than a documented finding.'
           },
           {
             question: 'In a formal academic passage about economic policy, which word best replaces "things got worse"?',
-            options: ['conditions deteriorated', 'stuff declined', 'things went downhill', 'the situation got bad'],
+            options: ['conditions worsened', 'stuff got a lot worse', 'things went downhill', 'the situation tanked'],
             correctAnswer: 0,
-            explanation: '"Conditions deteriorated" matches academic tone perfectly. "Stuff" and "things" are informal, and "went downhill" is colloquial.'
+            explanation: '"Conditions worsened" matches academic tone. "Stuff" is informal, "went downhill" is colloquial, and "tanked" is slang.'
           },
           {
             question: 'A passage praises an architect\'s innovative design. Which word best describes her approach? "Her _____ approach to public spaces transformed urban design."',
-            options: ['visionary', 'weird', 'radical', 'unusual'],
+            options: ['visionary', 'eccentric', 'peculiar', 'unusual'],
             correctAnswer: 0,
-            explanation: 'The passage praises the architect, so we need a positive connotation. "Visionary" (positive), "weird" (negative), "radical" (neutral-to-negative in this context), "unusual" (neutral but underwhelming). "Visionary" best matches the praising tone.'
+            explanation: 'The passage praises the architect, so we need a clearly positive connotation. "Visionary" is positive. "Eccentric" and "peculiar" suggest oddness, and "unusual" is neutral: none of them conveys praise for an approach that "transformed urban design."'
           }
         ]
       }    },
@@ -112,19 +112,19 @@ Choose the word whose connotation matches the author's attitude.`
         questions: [
           {
             question: 'A passage criticizes a historical policy. Which word best completes: "The policy\'s _____ consequences became apparent only decades later"?',
-            options: ['detrimental', 'bad', 'unfortunate', 'interesting'],
+            options: ['harmful', 'beneficial', 'trivial', 'crummy'],
             correctAnswer: 0,
-            explanation: '"Detrimental" is formal, precise, and carries the right negative weight for a critical passage. "Bad" is too informal. "Unfortunate" is too mild. "Interesting" is neutral and doesn\'t match the critical tone.'
+            explanation: '"Harmful" is formal, precise, and carries the right negative weight for a critical passage. "Beneficial" reverses the author\'s attitude, "trivial" says the consequences did not matter (then why would they "become apparent"?), and "crummy" is too informal for the register.'
           },
           {
             question: 'A passage describes a scientist\'s careful experiment. Best fit: "She _____ each variable to ensure accurate results."',
-            options: ['controlled', 'handled', 'dealt with', 'managed'],
+            options: ['controlled', 'handled', 'dealt with', 'juggled'],
             correctAnswer: 0,
-            explanation: '"Controlled" is the precise scientific term for managing variables in experiments. "Handled" and "dealt with" are too informal. "Managed" is acceptable but less specific to the scientific context.'
+            explanation: '"Controlled" is the precise scientific term for holding variables in check so results are accurate. "Handled" and "dealt with" are vague and informal, and "juggled" suggests hurried multitasking, the opposite of a careful experiment.'
           },
           {
             question: 'Which answer choice is a "right meaning, wrong tone" trap? Passage is formal academic writing.',
-            options: ['"The findings were pretty significant"', '"The findings were statistically significant"', '"The findings were noteworthy"', '"The findings were consequential"'],
+            options: ['"The findings were pretty significant"', '"The findings were very significant"', '"The findings were noteworthy"', '"The findings were consequential"'],
             correctAnswer: 0,
             explanation: '"Pretty" is colloquial/informal. In casual speech, "pretty significant" works, but in formal academic writing, it clashes with the register. The other options all maintain formal tone.'
           }
@@ -139,13 +139,13 @@ Choose the word whose connotation matches the author's attitude.`
         dropdowns: [
           'Formal passage: "The economy _____ in Q3." [contracted|shrank|went down|got worse]',
           'Positive connotation for a leader: [assertive|aggressive|pushy|bossy]',
-          'Scientific precision: "The study _____ a link." [established|found|saw|noticed]',
+          'Scientific precision: "The study _____ a link." [established|saw|noticed|guessed]',
           'Matching tone: formal passage ≠ [colloquial language|precise vocabulary|technical terms|academic register]'
         ],
         correctAnswers: ['contracted', 'assertive', 'established', 'colloquial language'],
         hint1: '"Contracted" is the formal economic term for decline.',
         hint2: '"Assertive" is positive; the others are negative.',
-        hint3: '"Established" carries more scientific weight than "found."',
+        hint3: '"Established" is the precise term for demonstrating a relationship with evidence.',
         explanation: '"Contracted" = formal economic term. "Assertive" = positive leadership connotation. "Established" = precise scientific language. Colloquial language never belongs in formal passages.'
       }
     },

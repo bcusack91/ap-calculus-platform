@@ -22,8 +22,8 @@ export const satTestDayStrategyPart4Data = {
 
 ### When to Backsolve
 Best for: "Which value of x satisfies..." or when answer choices are simple numbers.
-1. Start with choice B or C (middle value)
-2. If too big/small, you know which direction to go
+1. Answer choices are usually listed in increasing order, so start with a middle choice
+2. If the result is too big or too small, you know which direction to go
 3. Often faster than algebraic manipulation
 
 ### When to Pick Numbers
@@ -35,7 +35,7 @@ Best for: Problems with variables in the answer choices.
 
 ### Grid-In (Student-Produced Response)
 - ~25% of Math questions are grid-in (type your answer)
-- **No negative answers** on grid-in
+- **Negative answers are allowed**: type the minus sign
 - Fractions and decimals both accepted
 - If you get a range, give any value in the range`
     },
@@ -44,10 +44,10 @@ Best for: Problems with variables in the answer choices.
       type: 'quiz' as const,
       question: 'For a problem that says "If 2x + 3 = ax + 6 has no solution, what is a?" — what approach is fastest?',
       options: [
-        'Backsolve with answer choices',
-        'Recognize that no solution means same slope, different constant → a = 2',
-        'Graph both sides in Desmos',
-        'Pick a number for x and test'
+        'Backsolve by testing each answer choice',
+        'Match the coefficients of x, so a = 2',
+        'Graph both sides in Desmos and compare',
+        'Pick a value for x and solve for a'
       ],
       correctAnswer: 1,
       explanation: 'For a linear equation to have no solution, the coefficients of x must be equal (parallel lines) but the constants must differ. So a = 2 (matching the coefficient of x on the left). This takes 5 seconds — no calculation needed.'
@@ -61,14 +61,13 @@ Best for: Problems with variables in the answer choices.
 
 | Step | Work |
 |---|---|
-| **Problem** | "If $3x + 5 = 2x^2 - 7$, which value of $x$ is a solution?" Choices: A) $-2$ B) $-1$ C) $3$ D) $4$ |
-| **Try C ($x = 3$)** | Left: $3(3) + 5 = 14$. Right: $2(9) - 7 = 11$. Not equal ❌ |
-| **Try D ($x = 4$)** | Left: $3(4) + 5 = 17$. Right: $2(16) - 7 = 25$. Not equal ❌ |
-| **Try A ($x = -2$)** | Left: $3(-2) + 5 = -1$. Right: $2(4) - 7 = 1$. Not equal ❌ |
-| **Must be B ($x = -1$)** | Left: $3(-1) + 5 = 2$. Right: $2(1) - 7 = -5$... Wait, check algebra! |
-| **Verify** | Actually solve: $2x^2 - 3x - 12 = 0$ → use quadratic formula or Desmos |
+| **Problem** | "If $2x^2 - 3x = 5$, which value of $x$ is a solution?" Choices: $-2$, $-1$, $2$, $3$ |
+| **Try a middle choice ($x = 2$)** | $2(4) - 3(2) = 8 - 6 = 2$. We need 5, so $x = 2$ fails ❌ |
+| **Try $x = 3$** | $2(9) - 3(3) = 18 - 9 = 9$. Too big, and larger $x$ only grows it ❌ |
+| **Try $x = -1$** | $2(1) - 3(-1) = 2 + 3 = 5$ ✅ |
+| **Answer** | $x = -1$ (quick check on $x = -2$: $2(4) + 6 = 14$, not 5) |
 
-**Lesson:** Backsolving is fast, but verify. If no choice works cleanly, switch methods.
+**Lesson:** Backsolving turns a quadratic into plain arithmetic: plug in each choice and stop at the one that makes both sides equal. (Factoring confirms it: $2x^2 - 3x - 5 = (2x - 5)(x + 1)$, so $x = -1$ or $x = \\frac{5}{2}$, and only $-1$ is a choice.)
 
 ### Worked Example 2: Pick Numbers
 
@@ -99,15 +98,15 @@ Best for: Problems with variables in the answer choices.
         questions: [
           {
             question: 'The best approach for "Which of the following is equivalent to $\\frac{x^2 - 4}{x + 2}$?" is:',
-            options: ['Backsolve', 'Pick numbers', 'Factor and simplify directly', 'Graph in Desmos'],
+            options: ['Backsolve', 'Pick numbers', 'Factor directly', 'Graph in Desmos'],
             correctAnswer: 2,
-            explanation: '$x^2 - 4 = (x+2)(x-2)$: so $\\frac{(x+2)(x-2)}{x+2} = x-2$. Direct factoring is fastest here because the numerator is a classic difference of squares.'
+            explanation: '$x^2 - 4 = (x+2)(x-2)$: so $\\frac{(x+2)(x-2)}{x+2} = x-2$. Direct factoring is fastest here because the numerator is a classic difference of squares. Picking numbers would also work (variables are in the choices), but it takes longer than spotting the factoring, and there are no numeric choices to backsolve.'
           },
           {
             question: 'Grid-in questions can have:',
-            options: ['Negative answers', 'Fractions or decimals', 'Multiple correct answers displayed', 'Only whole number answers'],
+            options: ['Only positive whole numbers', 'Negative numbers, fractions, and decimals', 'Units, labels, or words with the number', 'Mixed numbers such as 3 1/2'],
             correctAnswer: 1,
-            explanation: 'Grid-in accepts fractions (like 3/4) and decimals (like 0.75). Negative answers are NOT allowed on grid-in. A range of answers may be accepted but you only enter one.'
+            explanation: 'Digital SAT grid-ins accept negative numbers (type the minus sign), fractions (like 3/4), and decimals (like 0.75). You never type units or words, and mixed numbers are not accepted: enter 3 1/2 as 7/2 or 3.5.'
           },
           {
             question: 'Approximately what percentage of Math questions are Algebra and Advanced Math combined?',
@@ -126,14 +125,14 @@ Best for: Problems with variables in the answer choices.
         dropdowns: [
           '"Which value of x satisfies…" with choices 2, 5, 7, 10 → [Backsolve|Pick numbers|Desmos|Direct solve]',
           'Variables in ALL answer choices → [Pick numbers|Backsolve|Desmos|Direct solve]',
-          '"At what point do the graphs intersect?" → [Desmos|Pick numbers|Backsolve|Guess]',
-          'Grid-in: negative answers are [not allowed|allowed|sometimes allowed|required]'
+          '"At what point do the graphs intersect?" → [Desmos|Pick numbers|Backsolve|Estimate from a sketch]',
+          'Grid-in: negative answers are [allowed|not allowed|allowed only as fractions|required]'
         ],
-        correctAnswers: ['Backsolve', 'Pick numbers', 'Desmos', 'not allowed'],
+        correctAnswers: ['Backsolve', 'Pick numbers', 'Desmos', 'allowed'],
         hint1: 'Simple number choices → plug them in to check.',
         hint2: 'Variables in choices → assign a value to the variable.',
         hint3: 'Graph intersection points are instant on Desmos.',
-        explanation: 'Backsolve when choices are numbers. Pick numbers when choices have variables. Desmos for graph intersections. Grid-in never allows negatives.'
+        explanation: 'Backsolve when choices are numbers. Pick numbers when choices have variables. Desmos for graph intersections. Grid-ins accept negative answers: just type the minus sign.'
       }
     },
     {
@@ -148,7 +147,7 @@ Best for: Problems with variables in the answer choices.
 | Pick numbers | Variables in answer choices |
 | Desmos | Graphs, intersections, systems |
 | Math distribution | ~35% Algebra, ~35% Adv Math, ~15% PSD, ~15% Geo/Trig |
-| Grid-in | ~25% of Math Qs, no negatives, fractions OK |
+| Grid-in | ~25% of Math Qs, negatives and fractions OK |
 
 *Next: Strategic Elimination & Guessing →*`
     }

@@ -28,13 +28,13 @@ One of the most frequently tested comma rules on the SAT involves **nonessential
           {
             question: 'Which sentence correctly punctuates a nonessential clause?',
             options: [
-              'The scientist who discovered penicillin won a Nobel Prize.',
-              'The scientist, who discovered penicillin, won a Nobel Prize.',
-              'The scientist who discovered penicillin, won a Nobel Prize.',
-              'The scientist, who discovered penicillin won a Nobel Prize.'
+              'Alexander Fleming who discovered penicillin won a Nobel Prize.',
+              'Alexander Fleming, who discovered penicillin, won a Nobel Prize.',
+              'Alexander Fleming, who discovered, penicillin won a Nobel Prize.',
+              'Alexander Fleming, who discovered penicillin won a Nobel Prize.'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "who discovered penicillin" is nonessential information (we already know which scientist). It should be set off by commas on BOTH sides.'
+            explanation: 'Correct — The name "Alexander Fleming" already identifies the person, so "who discovered penicillin" is nonessential information. It must be set off by commas on BOTH sides: no commas treats it as essential, a lone opening comma leaves it unclosed, and a comma after "discovered" splits the verb from its object.'
           },
           {
             question: 'In which sentence is the clause essential (no commas needed)?',
@@ -103,7 +103,7 @@ Why? Without "who completed the extra credit," the sentence claims ALL students 
               'Abraham Lincoln the 16th president abolished slavery.',
               'Abraham Lincoln, the 16th president, abolished slavery.',
               'Abraham Lincoln, the 16th president abolished slavery.',
-              'Abraham Lincoln the 16th president, abolished slavery.'
+              'Abraham Lincoln, the 16th, president abolished slavery.'
             ],
             correctAnswer: 1,
             explanation: 'Correct — "the 16th president" is an appositive (a renaming phrase) that is nonessential — we already know who Abraham Lincoln is. Nonessential phrases require commas on both sides.'

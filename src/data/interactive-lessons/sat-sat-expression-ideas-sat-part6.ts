@@ -8,15 +8,15 @@ export const satExpressionPart6Data = {
 
 **Part 6 of 7 — Keeping Paragraphs Focused**
 
-Cohesion questions ask whether a sentence belongs in a paragraph, or whether the paragraph maintains a consistent focus.
+The Digital SAT no longer asks "Should the writer add or delete this sentence?", but the unity test behind that old question type still decides Rhetorical Synthesis, Transitions, and "most logically completes the text" questions: the right choice stays on the text's focus.
 
 ### The Unity Test
 
 Every sentence in a paragraph should support the topic sentence. If a sentence introduces unrelated information, it should be deleted.
 
-### "Should the writer add/delete this sentence?"
+### Does This Information Belong?
 
-When you see this question type:
+Ask this whenever you judge whether a choice fits a text:
 
 **Reasons to ADD:**
 - Provides needed context or definition
@@ -50,16 +50,16 @@ Sentences should connect to each other. Look for:
       exercise: {
         questions: [
           {
-            question: 'A paragraph argues that public libraries promote literacy. A writer wants to add: "Libraries also serve as community meeting spaces and warming centers during winter." Should this sentence be added?',
-            options: ['No—it introduces services unrelated to the paragraph\'s focus on literacy', 'Yes—it shows libraries are important', 'Yes—all library benefits should be included', 'No—the sentence is too long'],
+            question: 'A short text argues that public libraries promote literacy. Would the sentence "Libraries also serve as community meeting spaces and warming centers during winter" strengthen that argument?',
+            options: ['No, because it describes services unrelated to reading skills', 'Yes, because it shows that libraries matter to communities', 'Yes, because an argument should include every benefit', 'No, because it is too long to fit in a short text'],
             correctAnswer: 0,
             explanation: 'The paragraph is specifically about literacy. Meeting spaces and warming centers are valuable library functions but are off-topic here. Adding this would weaken the paragraph\'s focus.'
           },
           {
             question: 'Which question should you ask yourself when deciding if a sentence belongs?',
-            options: ['Does this sentence directly support the paragraph\'s topic sentence?', 'Is this sentence interesting to read?', 'Is this sentence grammatically correct?', 'Is this the longest sentence in the paragraph?'],
+            options: ['Does it support the main point of the text?', 'Is it interesting enough to hold the reader?', 'Is it grammatically correct as written?', 'Does it add a new statistic or fact?'],
             correctAnswer: 0,
-            explanation: 'Paragraph unity means every sentence supports the topic. A sentence can be interesting, grammatically perfect, and any length—but if it doesn\'t support the topic sentence, it doesn\'t belong.'
+            explanation: 'Unity means every sentence supports the main point. A sentence can be interesting, grammatically perfect, and packed with new facts, but if it doesn\'t support the main point, it doesn\'t belong.'
           }
         ]
       }    },
@@ -110,7 +110,7 @@ Sentences should connect to each other. Look for:
       exercise: {
         questions: [
           {
-            question: 'Topic: "Benefits of remote work for employees." Which sentence should be DELETED?',
+            question: 'Topic: "Benefits of remote work for employees." Which sentence does NOT belong in a text on this topic?',
             options: ['Remote workers report 20% higher job satisfaction.', 'Many companies have also reduced their office real estate costs.', 'Flexible schedules allow employees to manage personal obligations.', 'Commute elimination saves the average worker 40 minutes daily.'],
             correctAnswer: 1,
             explanation: 'The paragraph is about benefits for EMPLOYEES. Company real estate costs are a benefit for EMPLOYERS — this is off-topic for the paragraph\'s specific focus, even though it\'s related to remote work.'
@@ -123,9 +123,9 @@ Sentences should connect to each other. Look for:
           },
           {
             question: 'A paragraph about volcanic eruptions includes: "Mount Vesuvius is located in southern Italy near Naples, which is known for its excellent pizza." Should this clause be kept?',
-            options: ['No — "known for its excellent pizza" is irrelevant to volcanic eruptions', 'Yes — it provides geographical context', 'Yes — it makes the writing more engaging', 'No — it is factually incorrect'],
+            options: ['No, because the pizza detail is off-topic here', 'Yes, because it gives useful geographic context', 'Yes, because it makes the writing more engaging', 'No, because Naples is not actually near Vesuvius'],
             correctAnswer: 0,
-            explanation: 'Naples\' pizza reputation has nothing to do with volcanic eruptions. While the location information (southern Italy, near Naples) is relevant, the pizza detail breaks paragraph unity.'
+            explanation: 'Naples\' pizza reputation has nothing to do with volcanic eruptions. The location information (southern Italy, near Naples) is relevant and accurate, but the pizza clause is not geographic context, and engaging trivia still breaks paragraph unity.'
           }
         ]
       }
@@ -136,9 +136,9 @@ Sentences should connect to each other. Look for:
       content: '**Unity & Cohesion Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'Every sentence must support the [topic sentence|most interesting sentence|longest sentence|first answer choice]',
+          'Every sentence must support the [topic sentence|most interesting sentence|closing sentence|most detailed sentence]',
           'Repeating information already stated = [delete|keep|add more detail|move to start]',
-          '"These findings suggest…" creates cohesion by [referring back to evidence|introducing new info|changing the topic|adding humor]',
+          '"These findings suggest…" creates cohesion by [referring back to evidence|introducing new info|changing the topic|adding a new claim]',
           'A sentence about cooking in a paragraph about astronomy should be [deleted|added|moved to the end|expanded]'
         ],
         correctAnswers: ['topic sentence', 'delete', 'referring back to evidence', 'deleted'],

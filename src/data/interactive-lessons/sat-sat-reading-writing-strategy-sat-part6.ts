@@ -49,13 +49,13 @@ All four answer choices will use information from the notes. The trap is choosin
         questions: [
           {
             question: 'Notes: Prairie dogs live in underground burrow systems called "towns." Some towns contain thousands of individuals. Prairie dogs use distinct alarm calls for different predators—one call for hawks, another for coyotes. Researchers believe this represents a sophisticated language system. Goal: "Emphasize the complexity of prairie dog communication."',
-            options: ['"Prairie dogs use distinct alarm calls to differentiate between predators such as hawks and coyotes, which researchers consider a sophisticated language system."', '"Prairie dogs live in large underground burrow systems called towns that can contain thousands of individuals."', '"Researchers have studied prairie dogs to understand their underground living habitat and social behavior."', '"Prairie dogs, which live in underground towns, are found throughout the American Great Plains."'],
+            options: ['"Researchers consider the prairie dog\'s distinct calls for hawks and coyotes a sophisticated language."', '"Prairie dogs live in underground burrow systems called towns, some of which hold thousands of individuals."', '"Researchers have studied prairie dogs to learn about their underground towns and their social behavior."', '"Prairie dogs sound alarm calls to warn one another when predators such as hawks or coyotes approach."'],
             correctAnswer: 0,
-            explanation: 'The goal is about communication complexity. Only the alarm-call sentence discusses alarm calls and language sophistication. The burrow-towns and Great Plains sentences focus on habitat, and the researchers-have-studied sentence is too general.'
+            explanation: 'The goal is the COMPLEXITY of communication. Only the first sentence conveys it: distinct calls for different predators, described by researchers as a sophisticated language system. The simple alarm-call sentence is about communication but presents it as a generic warning, not a complex system. The burrow-towns sentence is about habitat, and the researchers-have-studied sentence never mentions communication at all.'
           },
           {
             question: 'When answering rhetorical synthesis questions, what should you do FIRST?',
-            options: ['Underline the specific goal stated in the question', 'Read all the notes carefully', 'Look at the answer choices', 'Identify the main topic of the notes'],
+            options: ['Pin down the exact goal you are asked to achieve', 'Read every note carefully before doing anything else', 'Scan the answer choices to see which notes they use', 'Work out the main topic that all of the notes share'],
             correctAnswer: 0,
             explanation: 'The goal is everything in these questions. All answers will be factually based on the notes, but only one achieves the stated goal. Reading the goal first focuses your evaluation.'
           }
@@ -117,9 +117,9 @@ All four answer choices will use information from the notes. The trap is choosin
         questions: [
           {
             question: 'Notes: Octopuses have three hearts and blue blood. They can change color and texture in milliseconds. A 2021 study found octopuses throw debris at other octopuses they seem irritated with. Octopuses have been observed using coconut shells as portable shelters. Goal: "Present evidence of intelligent behavior."',
-            options: ['"Octopuses demonstrate intelligence by using coconut shells as portable shelters and deliberately throwing debris at other octopuses."', '"With three hearts and blue blood, octopuses are among the most physiologically unique marine animals."', '"Octopuses can change color and texture in milliseconds, a remarkable camouflage ability."', '"A 2021 study documented several notable behaviors in octopuses, including debris throwing."'],
+            options: ['"Octopuses use coconut shells as portable shelters and throw debris at octopuses that irritate them."', '"With three hearts and blue blood, octopuses are among the most physically unusual animals in the sea."', '"Octopuses can change both their color and their texture in milliseconds, a remarkable camouflage skill."', '"A 2021 study examined octopuses, animals with three hearts, blue blood, and color-changing skin."'],
             correctAnswer: 0,
-            explanation: 'The goal is "evidence of intelligent behavior." Tool use (coconut shells) and deliberate social behavior (throwing debris) are intelligence indicators. The three-hearts option discusses physiology, the color-change option discusses camouflage, and the 2021-study option is too vague about intelligence.'
+            explanation: 'The goal is "evidence of intelligent behavior." Tool use (coconut shells) and targeted social behavior (throwing debris at a particular octopus) are behaviors that indicate intelligence. The three-hearts option describes anatomy, the color-change option describes a physical camouflage ability, and the 2021-study option mentions the study but lists only anatomy, not any behavior.'
           },
           {
             question: 'A student is writing about solar energy. Notes mention cost decreases, efficiency improvements, environmental benefits, and land use concerns. Goal: "Acknowledge a limitation of solar energy." Which type of information should the answer focus on?',
@@ -129,7 +129,7 @@ All four answer choices will use information from the notes. The trap is choosin
           },
           {
             question: 'Why does the SAT make all four answer choices factually correct in rhetorical synthesis questions?',
-            options: ['To test whether you can match information to a specific rhetorical purpose', 'To make the questions easier by removing factual errors', 'To test reading comprehension of the notes', 'To ensure students read all the notes carefully'],
+            options: ['To test whether you can match accurate information to a stated goal', 'To make the questions easier by removing all factual errors', 'To test how well you remember the details listed in the notes', 'To reward students who read every one of the notes carefully'],
             correctAnswer: 0,
             explanation: 'Rhetorical synthesis tests PURPOSE, not accuracy. All answers are true based on the notes — the skill is selecting the one that achieves the stated GOAL. This is what makes goal-reading the critical first step.'
           }
@@ -142,9 +142,9 @@ All four answer choices will use information from the notes. The trap is choosin
       content: '**Rhetorical Synthesis Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'First step: read the [goal|notes|answers|title]',
+          'First step: read the [goal|notes|answers|first note]',
           '"Emphasize a difference" requires mentioning [both items|one item|all notes|the main topic]',
-          'All four answers will be factually [correct|incorrect|similar|identical]',
+          'All four answers will be factually [correct|incorrect|unrelated|incomplete]',
           'The trap is choosing an answer that is correct but doesn\'t match the [goal|notes|format|tone]'
         ],
         correctAnswers: ['goal', 'both items', 'correct', 'goal'],

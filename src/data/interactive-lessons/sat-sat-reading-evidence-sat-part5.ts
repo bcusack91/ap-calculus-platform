@@ -22,7 +22,7 @@ Purpose questions test your ability to understand not just WHAT the author says,
 
 ### Function of a Specific Paragraph/Sentence
 
-Some questions ask: "The author includes the anecdote in lines 15-20 primarily to..."
+Some questions ask: "Which choice best describes the function of the underlined sentence in the text as a whole?"
 
 **Common functions:**
 - Provide a concrete example of an abstract concept
@@ -45,13 +45,13 @@ Some questions ask: "The author includes the anecdote in lines 15-20 primarily t
         questions: [
           {
             question: 'A passage begins with a personal anecdote about the author\'s grandmother, then shifts to discussing the economics of elder care in America. The anecdote primarily serves to:',
-            options: ['Create an emotional connection before presenting data-driven arguments', 'Prove that the author has personal expertise in elder care', 'Entertain the reader before a dry topic', 'Show that the author\'s grandmother needed better care'],
+            options: ['Make the issue human before turning to the statistics', 'Show that the author has expertise in elder care', 'Give the reader a light moment before a dry and technical topic', 'Argue that the author\'s grandmother received poor care'],
             correctAnswer: 0,
-            explanation: 'Opening anecdotes in argumentative passages humanize the issue and create emotional investment before the author presents statistics and policy arguments. This is a standard rhetorical move.'
+            explanation: 'Opening anecdotes in argumentative passages humanize the issue and create emotional investment before the author presents statistics and policy arguments. A family story does not establish expertise, the shift is toward economics rather than away from a "dry" topic for its own sake, and the passage moves to elder care in America, not to a complaint about one person\'s care.'
           },
           {
             question: 'In a passage about ocean acidification, the author writes: "Some might argue that marine organisms have adapted to changing conditions for millions of years." This sentence primarily serves to:',
-            options: ['Acknowledge a counterargument the author will likely challenge', 'Support the author\'s central claim about adaptation', 'Shift the focus from ocean chemistry to biology', 'Conclude the author\'s argument'],
+            options: ['Introduce a view the author will likely go on to dispute', 'Support the author\'s central claim about adaptation', 'Shift the focus of the passage from ocean chemistry to biology', 'Summarize the evidence the author has already given'],
             correctAnswer: 0,
             explanation: '"Some might argue" is a classic signal that the author is introducing a counterargument. The author will almost certainly follow this with "However" or "But" and then present evidence against this view.'
           }
@@ -64,9 +64,9 @@ Some questions ask: "The author includes the anecdote in lines 15-20 primarily t
 
 ### Worked Example 1: Identifying Paragraph Function
 
-**Paragraph sequence in a passage about space exploration:**
+**Sentence sequence in a short text about space exploration:**
 
-| Paragraph | Content | Function |
+| Sentence | Content | Function |
 |---|---|---|
 | 1 | "Space exploration has long captured human imagination…" | **Introduces** the topic and sets context |
 | 2 | "However, critics argue that the billions spent on space could address problems on Earth" | **Presents counterargument** |
@@ -87,11 +87,11 @@ Some questions ask: "The author includes the anecdote in lines 15-20 primarily t
 
 | Purpose Phrasing | Usually Correct When |
 |---|---|
-| "To provide an example of…" | Paragraph follows a general claim |
-| "To introduce a counterargument" | Paragraph starts with "Critics argue" or "Some suggest" |
-| "To qualify a previous claim" | Paragraph adds nuance like "however" or "although" |
-| "To establish the significance of" | Paragraph explains why the topic matters |
-| "To transition between" | Paragraph shifts from one subtopic to another |`
+| "To provide an example of…" | The sentence follows a general claim |
+| "To introduce a counterargument" | The sentence starts with "Critics argue" or "Some suggest" |
+| "To qualify a previous claim" | The sentence adds nuance like "however" or "although" |
+| "To establish the significance of" | The sentence explains why the topic matters |
+| "To transition between" | The sentence shifts from one subtopic to another |`
     },
     {
       id: 're5-quiz2',
@@ -101,19 +101,19 @@ Some questions ask: "The author includes the anecdote in lines 15-20 primarily t
         questions: [
           {
             question: 'An author writes: "The proposed dam would provide clean energy for 200,000 homes. However, it would also flood 50 square miles of wetland habitat." The author\'s primary purpose in juxtaposing these facts is to:',
-            options: ['Highlight the tension between energy needs and environmental preservation', 'Argue against building the dam', 'Argue in favor of the dam', 'Compare dams to other energy sources'],
+            options: ['Show that the dam involves a real trade-off between two public goods', 'Argue that the harm to wetlands outweighs the dam\'s benefits', 'Argue that clean energy for 200,000 homes justifies the dam', 'Compare hydroelectric dams with other clean energy sources'],
             correctAnswer: 0,
-            explanation: 'The author presents both a benefit and a cost without declaring a winner. This juxtaposition highlights the tension/trade-off. If the author took a side, the passage would need more evidence.'
+            explanation: 'The author presents a benefit (clean energy) and a cost (lost wetland habitat) without declaring a winner, so the juxtaposition shows a trade-off. Neither "argue" option is supported, because the author never weighs one fact against the other, and no other energy source is mentioned.'
           },
           {
             question: 'A passage opens with a vivid description of a child struggling to read, then transitions to education policy recommendations. The opening description serves to:',
-            options: ['Create emotional engagement before presenting policy arguments', 'Prove that reading difficulties are common', 'Entertain the reader with a story', 'Show the author\'s personal experience'],
+            options: ['Draw readers in emotionally before the argument begins', 'Prove that most children struggle to learn to read', 'Show that the author once struggled to read as a child', 'Illustrate a reading program the author later criticizes'],
             correctAnswer: 0,
-            explanation: 'Opening anecdotes in policy passages create emotional stakes. The reader cares about the child, making them more receptive to the policy recommendations that follow.'
+            explanation: 'Opening anecdotes in policy passages create emotional stakes. The reader cares about the child, making them more receptive to the policy recommendations that follow. One child cannot prove that MOST children struggle, nothing says the child is the author, and no reading program is described.'
           },
           {
             question: '"Some might argue" followed by "However, the evidence suggests otherwise" is an example of:',
-            options: ['Introducing and refuting a counterargument', 'Agreeing with critics', 'Presenting two equally valid perspectives', 'Admitting the author\'s argument is weak'],
+            options: ['Raising an objection and rejecting it', 'Conceding a point to the author\'s critics', 'Presenting two equally valid perspectives', 'Admitting a weakness in the author\'s own case'],
             correctAnswer: 0,
             explanation: '"Some might argue" = counterargument introduced. "However, the evidence suggests otherwise" = refutation. This is a classic argue-and-refute rhetorical move.'
           }

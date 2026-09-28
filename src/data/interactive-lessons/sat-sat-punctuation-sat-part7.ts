@@ -88,26 +88,26 @@ You've covered every major punctuation concept the SAT tests. Let's do a compreh
       exercise: {
         questions: [
           {
-            question: 'The city council—facing mounting pressure from residents—voted to approve the new park __(A)__ the mayor, however, expressed reservations about __(B)__ impact on the annual budget. Choose the correct punctuation for (A) and the correct word for (B).',
+            question: 'The city council—facing mounting pressure from residents—voted to approve the new _____ however, expressed reservations about its impact on the annual budget. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(A) , ... (B) it\'s',
-              '(A) ; ... (B) its',
-              '(A) ; ... (B) it\'s',
-              '(A) , ... (B) its'
+              'park, the mayor,',
+              'park; the mayor,',
+              'park the mayor,',
+              'park: the mayor,'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — (A): Two independent clauses with "however" between them → semicolon before "the mayor." (B): Possessive "its" (the park\'s impact), not the contraction "it\'s" (it is).'
+            explanation: 'Correct — "The city council… voted to approve the new park" and "the mayor, however, expressed reservations" are two independent clauses, so a semicolon goes before "the mayor." "However" sits inside the second clause and is set off with commas. A comma alone creates a comma splice, no punctuation fuses the clauses, and a colon would present the mayor\'s view as an explanation of the vote.'
           },
           {
-            question: 'Dr. Vasquez __(C)__ a professor of marine biology __(D)__ has studied coral reef ecosystems in three regions __(E)__ the Caribbean, the South Pacific, and the Indian Ocean. Choose the correct punctuation for (C), (D), and (E).',
+            question: 'Dr. Vasquez, a professor of marine biology, has studied coral reef ecosystems in three _____ Caribbean, the South Pacific, and the Indian Ocean. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(C) , ... (D) , ... (E) :',
-              '(C) , ... (D) , ... (E) ,',
-              '(C) — ... (D) — ... (E) ;',
-              '(C) , ... (D) — ... (E) :'
+              'regions: the',
+              'regions, the',
+              'regions; the',
+              'regions the'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — "A professor of marine biology" is a nonrestrictive appositive → paired commas. "Dr. Vasquez has studied coral reef ecosystems in three regions" is a complete sentence → colon introduces the list.'
+            explanation: 'Correct — "Dr. Vasquez… has studied coral reef ecosystems in three regions" is a complete sentence, so a colon can introduce the list that names the regions. A semicolon needs an independent clause on both sides, a comma makes the list look like more items in a series, and no punctuation runs the list into the sentence.'
           },
           {
             question: 'Which version is completely error-free?',

@@ -45,15 +45,15 @@ When the question asks about what information to include:
         questions: [
           {
             question: 'In a formal scientific passage, which phrase best replaces "Scientists figured out that the gene was messed up"?',
-            options: ['Researchers determined that the gene contained a deleterious mutation', 'Scientists found that the gene was broken', 'The gene was found to be messed up by researchers', 'Science people discovered a gene problem'],
+            options: ['Researchers determined that the gene carried a harmful mutation', 'Scientists figured out that the gene had gotten all messed up', 'The researchers found out that the gene was sort of broken down', 'Science folks discovered that the gene had a big problem'],
             correctAnswer: 0,
-            explanation: '"Researchers determined" is formal and precise. "Deleterious mutation" is proper scientific terminology. The other options use informal language ("broken," "messed up," "science people") inappropriate for an academic passage.'
+            explanation: '"Researchers determined" is formal and precise, and "harmful mutation" is proper scientific wording. The other options use informal language ("figured out," "messed up," "sort of broken down," "science folks," "a big problem") inappropriate for a scientific passage.'
           },
           {
             question: 'A passage about art history consistently uses formal language. Which sentence best fits? "Monet\'s late works _____."',
-            options: ['demonstrate an increasingly abstract approach to color and light', 'are really amazing and beautiful paintings', 'show he was getting into different stuff toward the end', 'basically changed how everyone thought about art'],
+            options: ['reveal an increasingly abstract use of color and light', 'are really amazing and super beautiful paintings of his gardens', 'show he was getting into way different stuff toward the end', 'basically changed how everyone thought about art forever'],
             correctAnswer: 0,
-            explanation: '"Demonstrate" and "increasingly abstract approach" match formal art criticism tone. The other options are too casual for the passage\'s established register.'
+            explanation: '"Reveal" and "increasingly abstract use of color and light" match the formal tone of art criticism. The other options are too casual ("really amazing," "super," "getting into way different stuff," "basically") for the passage\'s established register.'
           }
         ]
       }    },
@@ -105,19 +105,19 @@ When the question asks about what information to include:
         questions: [
           {
             question: 'A professional-register passage about climate change includes this blank: "Rising sea levels _____ coastal communities worldwide." Which fits?',
-            options: ['threaten', 'are messing with', 'imperatively endanger', 'impact negatively upon'],
+            options: ['threaten', 'mess with', 'beat up on', 'endanger upon'],
             correctAnswer: 0,
-            explanation: '"Threaten" is professional register — clear, direct, appropriate. "Messing with" is informal. "Imperatively endanger" is unnecessarily complex. "Impact negatively upon" is wordy and awkward.'
+            explanation: '"Threaten" is professional register: clear, direct, and appropriate. "Mess with" and "beat up on" are informal, and "endanger upon" is not idiomatic ("endanger" takes a direct object with no preposition).'
           },
           {
             question: 'Which passage type on the SAT is MOST likely to use technical vocabulary?',
-            options: ['Science passages', 'Literary narratives', 'Social science passages', 'Historical essays'],
+            options: ['Science passages', 'Literary narratives', 'Social science passages', 'History essays'],
             correctAnswer: 0,
             explanation: 'Science passages use discipline-specific terminology (e.g., "mitosis," "photosynthesis"). Literary narratives use figurative language, social science uses analytical terms, and history uses period-specific terms — but science is most technical.'
           },
           {
             question: 'A formal passage contains: "The architect designed the building." A proposed revision: "The architect totally nailed the building design." Should you accept the revision?',
-            options: ['No — "totally nailed" is informal and breaks the passage\'s formal tone', 'Yes — it\'s more vivid and engaging', 'Yes — it shows enthusiasm for the subject', 'No — it\'s too short'],
+            options: ['No, because "totally nailed" is too casual for the writing around it', 'Yes, because the new wording is more vivid and engaging', 'Yes, because it shows enthusiasm for the architect\'s work', 'No, because the revision is too short to be effective'],
             correctAnswer: 0,
             explanation: '"Totally nailed" is slang/informal. Even though it\'s vivid, it clashes with the formal register established in the passage. Tone consistency overrides vividness.'
           }

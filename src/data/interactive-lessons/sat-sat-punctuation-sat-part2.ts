@@ -104,13 +104,13 @@ Use a comma **before** a FANBOYS conjunction **only** when joining two **indepen
           {
             question: 'Should there be a comma before "and" in this sentence? "The athlete trained intensely and won the gold medal."',
             options: [
-              'Yes — it separates two actions.',
-              'No — "won the gold medal" is not an independent clause.',
-              'Yes — it comes before a conjunction.',
-              'No — commas never come before "and."'
+              'Yes, because it separates two actions',
+              'No, because the second part lacks its own subject',
+              'Yes, because a comma always precedes "and"',
+              'No, because commas never come before "and"'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "Won the gold medal" cannot stand alone as a sentence (no subject). The FANBOYS comma rule only applies when BOTH sides are independent clauses.'
+            explanation: 'Correct — "Won the gold medal" cannot stand alone as a sentence (no subject). The FANBOYS comma rule only applies when BOTH sides are independent clauses. Two actions sharing one subject take no comma, but commas do go before "and" when it joins two independent clauses or ends a list.'
           }
         ]
       }

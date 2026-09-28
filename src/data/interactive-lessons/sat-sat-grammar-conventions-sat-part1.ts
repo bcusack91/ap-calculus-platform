@@ -63,14 +63,14 @@ When the subject comes **after** the verb, agreement still applies:
       exercise: {
         questions: [
           {
-            question: 'Select the correct sentence: \n(A) The group of scientists were conducting an experiment. \n(B) The group of scientists was conducting an experiment.',
-            options: ['Sentence A is correct', 'Sentence B is correct', 'Both are correct', 'Neither is correct'],
+            question: 'Which sentence conforms to the conventions of Standard English?',
+            options: ['The group of scientists were conducting an experiment.', 'The group of scientists was conducting an experiment.', 'The group of scientists have been conducting an experiment.', 'The group of scientists are conducting an experiment.'],
             correctAnswer: 1,
-            explanation: 'The subject is "group" (singular), not "scientists." A singular subject takes a singular verb: "was conducting."'
+            explanation: 'The subject is "group" (singular), not "scientists." A singular subject takes a singular verb: "was conducting." "Were," "have been," and "are" are all plural forms that agree with "scientists," the object of the preposition.'
           },
           {
             question: 'Choose the correct verb: "Each of the students _____ required to submit a final project."',
-            options: ['are', 'is', 'were', 'have been'],
+            options: ['are', 'is', 'were', 'be'],
             correctAnswer: 1,
             explanation: '"Each" is always singular, so the correct verb is "is." Ignore the prepositional phrase "of the students."'
           }
@@ -137,14 +137,14 @@ Type the correct form of the verb in parentheses.
       exercise: {
         questions: [
           {
-            question: 'The news about the budget cuts <u>have</u> alarmed many employees. \nWhich correction should be made?',
-            options: ['Change "have" to "has"', 'Change "have" to "had"', 'Change "alarmed" to "alarming"', 'No change needed'],
+            question: 'The news about the budget cuts _____ alarmed many employees. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['has', 'have', 'were', 'are'],
             correctAnswer: 0,
-            explanation: '"News" is a singular noun (even though it ends in -s). The correct verb is "has alarmed."'
+            explanation: '"News" is a singular noun (even though it ends in -s), so the verb is singular: "has alarmed." "Have," "were," and "are" are plural, and "were alarmed" or "are alarmed" would also garble the sentence, since the news is doing the alarming.'
           },
           {
-            question: 'A number of residents <u>has</u> voiced their concerns about the new policy. \nWhich correction should be made?',
-            options: ['No change needed', 'Change "has" to "have"', 'Change "their" to "its"', 'Change "voiced" to "voicing"'],
+            question: 'A number of residents _____ voiced their concerns about the new policy. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['has', 'have', 'was', 'is'],
             correctAnswer: 1,
             explanation: '"A number of" is an idiomatic expression that takes a plural verb. "A number of residents have voiced…" is correct. (Compare with "The number of residents is…" which is singular.)'
           }

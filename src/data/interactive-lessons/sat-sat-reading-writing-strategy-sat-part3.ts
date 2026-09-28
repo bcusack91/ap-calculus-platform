@@ -49,19 +49,19 @@ Transition questions test whether you understand the logical relationship betwee
         questions: [
           {
             question: '"The new policy reduced carbon emissions by 15%. _______, manufacturing output remained unchanged, dispelling fears of economic harm." Choose the best transition.',
-            options: ['Moreover', 'However', 'Therefore', 'For example'],
+            options: ['Moreover', 'Therefore', 'For example', 'Instead'],
             correctAnswer: 0,
-            explanation: 'The first sentence gives a positive result (emissions down). The second adds ANOTHER positive result (output stayed the same). "Moreover" adds supporting information. "However" would imply contrast, which isn\'t the relationship here.'
+            explanation: 'The first sentence gives a positive result (emissions down). The second adds ANOTHER positive result (output stayed the same). "Moreover" adds supporting information. Steady output is not caused by lower emissions ("Therefore"), is not an example of them ("For example"), and does not replace them ("Instead").'
           },
           {
             question: '"Critics argued the study was flawed due to its small sample size. _______, the researchers conducted a follow-up study with 10,000 participants and found identical results."',
-            options: ['In response', 'Similarly', 'For instance', 'Meanwhile'],
+            options: ['In response', 'Similarly', 'Meanwhile', 'Moreover'],
             correctAnswer: 0,
-            explanation: 'The second sentence directly addresses the criticism from the first. "In response" captures this action-reaction relationship. "Similarly" implies the same kind of thing happened. "For instance" would give an example of the criticism.'
+            explanation: 'The second sentence directly addresses the criticism from the first. "In response" captures this action-reaction relationship. "Similarly" implies the same kind of thing happened, "Meanwhile" implies an unrelated event at the same time, and "Moreover" would add another criticism.'
           },
           {
             question: 'The transition "nevertheless" is most similar in meaning to:',
-            options: ['Despite that / even so (contrast despite expectation)', 'As a result (cause-effect)', 'In addition (continuation)', 'Specifically (example)'],
+            options: ['Even so', 'As a result', 'In addition', 'Specifically'],
             correctAnswer: 0,
             explanation: '"Nevertheless" means "despite what was just said" — it introduces a contrasting result that goes against expectation. It belongs in the contrast/concession category alongside "however" and "yet."'
           }
@@ -110,19 +110,19 @@ Transition questions test whether you understand the logical relationship betwee
         questions: [
           {
             question: '"The vaccine was 95% effective in trials. _____, the company applied for emergency authorization." Best transition:',
-            options: ['Accordingly — the effectiveness justified the application', 'However — this contrasts with effectiveness', 'For example — this illustrates effectiveness', 'Nevertheless — despite the effectiveness'],
+            options: ['Accordingly', 'However', 'For example', 'Nevertheless'],
             correctAnswer: 0,
-            explanation: 'High effectiveness → applying for authorization. This is a cause/effect + logical consequence relationship. "Accordingly" means "as a logical result."'
+            explanation: 'High effectiveness → applying for authorization. This is a cause/effect relationship, and "Accordingly" means "as a logical result." "However" and "Nevertheless" signal contrast, which does not fit a result the evidence supports, and the application is not an example of effectiveness.'
           },
           {
             question: '"The evidence overwhelmingly supports the theory. _____, not all scientists are convinced." Best transition:',
-            options: ['Nevertheless — contrast despite evidence', 'Therefore — scientists should be convinced', 'Moreover — adds more supporting info', 'For instance — gives an example'],
+            options: ['Nevertheless', 'Therefore', 'Consequently', 'For instance'],
             correctAnswer: 0,
-            explanation: 'Despite overwhelming evidence, some scientists disagree. "Nevertheless" captures this "despite what you\'d expect" contrast.'
+            explanation: 'Despite overwhelming evidence, some scientists disagree. "Nevertheless" captures this "despite what you\'d expect" contrast. "Therefore" and "Consequently" would claim the evidence CAUSED the doubt, and the doubt is not an instance of the evidence.'
           },
           {
             question: '"The city built 5 new parks. _____, it expanded the public transit system." Best transition:',
-            options: ['In addition — both are city improvements', 'However — parks contrast with transit', 'Therefore — parks caused transit expansion', 'For example — transit is an example of parks'],
+            options: ['In addition', 'However', 'As a result', 'For example'],
             correctAnswer: 0,
             explanation: 'Both sentences describe city improvements — this is a continuation/addition relationship. "In addition" adds another similar action.'
           }

@@ -26,46 +26,44 @@ When you encounter a punctuation question, run through this checklist:
       id: 'sat-p6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**SAT-Style Passage Practice** 🎯
+**SAT-Style Practice** 🎯
 
-*Read the passage and answer the questions.*
-
-The International Space Station __(1)__ a collaboration among five space agencies __(2)__ orbits Earth approximately every 90 minutes. Astronauts living aboard the station __(3)__ conduct experiments in biology, physics, and astronomy __(4)__ their research has contributed to advances in medicine, materials science, and climate monitoring. Since its launch in 1998 __(5)__ the station has hosted more than 250 visitors from 20 countries.
+*Each question is a short text with one blank, just as on the digital SAT.*
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the best punctuation for blanks (1) and (2)?',
+            question: 'The International Space Station, a collaboration among five space _____ Earth approximately every 90 minutes. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(1) no punctuation ... (2) no punctuation',
-              '(1) , ... (2) ,',
-              '(1) ; ... (2) ,',
-              '(1) , ... (2) no punctuation'
+              'agencies orbits',
+              'agencies, orbits',
+              'agencies; orbits',
+              'agencies: orbits'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "a collaboration among five space agencies" is a nonrestrictive appositive renaming "The International Space Station." It needs commas on both sides.'
+            explanation: 'Correct — "a collaboration among five space agencies" is a nonrestrictive appositive renaming "The International Space Station." The comma after "Station" opens it, so a comma after "agencies" must close it. A semicolon or colon would cut the subject off from its verb "orbits."'
           },
           {
-            question: 'What is the best punctuation for blanks (3) and (4)?',
+            question: 'Astronauts living aboard the station conduct experiments in biology, physics, and _____ research has contributed to advances in medicine and climate monitoring. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(3) no punctuation ... (4) , (comma)',
-              '(3) , ... (4) ,',
-              '(3) no punctuation ... (4) ; (semicolon)',
-              '(3) no punctuation ... (4) . (period)'
+              'astronomy, their',
+              'astronomy their',
+              'astronomy; their',
+              'astronomy; and, their'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — "Astronauts living aboard the station" is the subject (no comma before verb "conduct"). After "astronomy," two independent clauses need a semicolon (or period) — a comma would create a comma splice.'
+            explanation: 'Correct — "Astronauts… conduct experiments in biology, physics, and astronomy" and "their research has contributed…" are both independent clauses, so a semicolon joins them. A comma alone creates a comma splice, no punctuation fuses the clauses, and a semicolon followed by "and," doubles up the connectors and adds a comma that does not belong.'
           },
           {
-            question: 'What is the best punctuation for blank (5)?',
+            question: 'Since its launch in _____ station has hosted more than 250 visitors from 20 countries. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              'No punctuation',
-              ', (comma)',
-              '; (semicolon)',
-              ': (colon)'
+              '1998 and the',
+              '1998, the',
+              '1998; the',
+              '1998: the'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "Since its launch in 1998" is an introductory prepositional phrase. It needs a comma before the main clause begins.'
+            explanation: 'Correct — "Since its launch in 1998" is an introductory phrase, so a comma separates it from the main clause. A semicolon or colon needs a complete sentence before it, and "and" would leave the introductory phrase with no main clause to attach to.'
           }
         ]
       }
@@ -76,7 +74,7 @@ The International Space Station __(1)__ a collaboration among five space agencie
       content: `
 ### Passage Analysis
 
-Here is the corrected passage:
+Here is the full text these three questions come from, correctly punctuated:
 
 > *The International Space Station, a collaboration among five space agencies, orbits Earth approximately every 90 minutes. Astronauts living aboard the station conduct experiments in biology, physics, and astronomy; their research has contributed to advances in medicine, materials science, and climate monitoring. Since its launch in 1998, the station has hosted more than 250 visitors from 20 countries.*
 
@@ -96,23 +94,23 @@ Here is the corrected passage:
       exercise: {
         questions: [
           {
-            question: 'The novelist __(6)__ whose latest book was a bestseller __(7)__ spoke at the university. The event __(8)__ which was free and open to the public __(9)__ drew a crowd of over 500 people. What is the correct punctuation for all four blanks?',
+            question: 'The novelist, whose latest book was a _____ at the university. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              '(6) , (7) , (8) , (9) ,',
-              '(6) no punctuation (7) no punctuation (8) , (9) ,',
-              '(6) , (7) , (8) no punctuation (9) no punctuation',
-              '(6) , (7) no punctuation (8) , (9) ,'
+              'bestseller, spoke',
+              'bestseller spoke',
+              'bestseller; spoke',
+              'bestseller: spoke'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Both "whose latest book was a bestseller" and "which was free and open to the public" are nonrestrictive clauses adding extra information. Each needs commas on both sides.'
+            explanation: 'Correct — "whose latest book was a bestseller" is a nonrestrictive clause adding extra information about a specific novelist. The comma after "novelist" opens it, so a comma after "bestseller" must close it. A semicolon or colon would cut the subject off from its verb "spoke."'
           },
           {
             question: 'Which sentence is free of all punctuation errors?',
             options: [
-              'The committee voted to approve the budget, and the new park, however, they rejected the parking garage proposal.',
-              'The committee voted to approve the budget and new park; however, they rejected the parking garage proposal.',
-              'The committee voted to approve the budget and new park, however, they rejected the parking garage proposal.',
-              'The committee voted, to approve the budget and new park; however they rejected the parking garage proposal.'
+              'The committee voted to approve the budget, and the new park, however, it rejected the parking garage proposal.',
+              'The committee voted to approve the budget and new park; however, it rejected the parking garage proposal.',
+              'The committee voted to approve the budget and new park, however, it rejected the parking garage proposal.',
+              'The committee voted, to approve the budget and new park; however it rejected the parking garage proposal.'
             ],
             correctAnswer: 1,
             explanation: 'Correct — "The committee voted to approve the budget and new park" is one independent clause. A semicolon precedes "however" (conjunctive adverb), which is followed by a comma. The "budget and new park, however," version is a comma splice.'

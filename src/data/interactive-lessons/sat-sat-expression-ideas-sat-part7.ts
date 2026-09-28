@@ -13,10 +13,10 @@ export const satExpressionPart7Data = {
 | Question Asks About | Look For |
 |---|---|
 | **Best word/phrase** | Precision, tone match, correct connotation |
-| **Sentence placement** | Reference links, transition clues, chronology |
+| **Logical sequence** | Reference links, transition clues, chronology |
 | **Best introduction** | Covers paragraph scope, connects to previous |
 | **Best conclusion** | Synthesizes (no new info), looks forward |
-| **Add/delete sentence** | Does it support the topic sentence? |
+| **Relevance (does it belong?)** | Does it support the main point of the text? |
 | **Combine sentences** | Preserve meaning, improve flow |
 | **Rhetorical synthesis** | Match the stated goal, not just accuracy |
 
@@ -44,13 +44,13 @@ Before choosing your answer on any Expression question:
         questions: [
           {
             question: 'A passage about marine conservation uses formal language throughout. Which sentence best fits at the end of a paragraph about coral bleaching? "The implications of a 2°C ocean temperature rise _____."',
-            options: ['could prove catastrophic for reef ecosystems that support approximately 25% of all marine species', 'would be really bad for all the fish and stuff living near coral', 'might possibly maybe cause some issues for ocean life', 'are worrisome, concerning, and deeply troubling to scientists and researchers worldwide'],
+            options: ['could prove catastrophic for reefs that shelter a quarter of ocean species', 'would be really bad for all the fish and stuff that live near the coral', 'might possibly maybe cause some kind of issues for ocean life in general', 'are worrisome, concerning, and deeply troubling to scientists worldwide'],
             correctAnswer: 0,
-            explanation: 'The "could prove catastrophic" option is precise (2°C, 25%), formal, and specific. The "fish and stuff" option is informal, the "might possibly maybe" option is hedging with redundant qualifiers, and the "worrisome, concerning" option is redundant ("worrisome, concerning, and deeply troubling" all mean the same thing).'
+            explanation: 'The "could prove catastrophic" option is formal and specific (reefs, a quarter of marine species). The "fish and stuff" option is informal, the "might possibly maybe" option piles up redundant hedges, and the "worrisome, concerning" option is redundant ("worrisome," "concerning," and "deeply troubling" all mean the same thing).'
           },
           {
             question: 'When asked "Which choice most effectively accomplishes the goal?" the key word is:',
-            options: ['"Goal" — you must identify and match the specific stated objective', '"Effectively" — choose the most sophisticated writing', '"Choice" — compare all options before deciding', '"Most" — pick the longest, most detailed option'],
+            options: ['"Goal," since the right choice must achieve that specific aim', '"Effectively," since the best choice uses the most elegant prose', '"Choice," since every option has to be compared before deciding', '"Most," since the best choice includes the most information'],
             correctAnswer: 0,
             explanation: 'The stated goal is the deciding factor. All choices will be grammatically correct and use information from the notes. Only one actually accomplishes the specific goal asked for.'
           }
@@ -79,7 +79,7 @@ Before choosing your answer on any Expression question:
 | "Which choice most effectively…" | Rhetorical goal | Read the goal, match to the choice that achieves it |
 | "Which choice best introduces…" | Introduction | Choose the one that previews the paragraph scope |
 | "Which choice best concludes…" | Conclusion | No new info; synthesize main point |
-| "Should the writer add…" | Add/Delete | Does it support the topic sentence? |
+| "Which choice most logically completes the text?" | Logical completion | Follow the text's reasoning to its conclusion |
 | "The writer wants to emphasize…" | Emphasis | Match the stated emphasis |
 | "Which choice uses the most precise…" | Word choice | Specific > vague, match tone |
 
@@ -88,8 +88,8 @@ Before choosing your answer on any Expression question:
 | First Ask | Then Ask | Final Decision |
 |---|---|---|
 | Does the question state a goal? | → Match the goal exactly | Choose the option that achieves the stated purpose |
-| Is it about placement? | → Check referential links | Pronouns follow antecedents, examples follow claims |
-| Is it about adding/deleting? | → Does it support the topic? | Add if relevant, delete if off-topic or repetitive |
+| Is it about logical order? | → Check referential links | Pronouns follow antecedents, examples follow claims |
+| Is it about relevance? | → Does it support the main point? | Keep what supports it; reject off-topic or repetitive choices |
 | Is it about word choice? | → Match tone + precision | Eliminate informal, over-specific, and wrong-connotation options |`
     },
     {
@@ -100,19 +100,19 @@ Before choosing your answer on any Expression question:
         questions: [
           {
             question: 'Notes: A study found that students who slept 8+ hours scored 15% higher. A study also found sleep-deprived students had 30% more errors. Goal: "emphasize the negative impact of insufficient sleep."',
-            options: ['Sleep-deprived students made 30% more errors, underscoring the cognitive cost of insufficient rest.', 'Students who slept 8+ hours scored 15% higher on exams.', 'Two studies examined the relationship between sleep and academic performance.', 'Sleep is important for students.'],
+            options: ['Students who lacked sleep made 30% more errors than well-rested peers.', 'Students who slept eight or more hours scored 15% higher on exams.', 'Two studies examined how sleep relates to students\' academic performance.', 'Students who get enough sleep tend to perform better on their exams.'],
             correctAnswer: 0,
-            explanation: 'The goal is to emphasize NEGATIVE impact. Only the 30%-more-errors sentence focuses on the negative data (30% more errors) and frames it as a "cognitive cost." The 8+ hours sentence emphasizes the positive. The two-studies and "Sleep is important" sentences are too general.'
+            explanation: 'The goal is to emphasize the NEGATIVE impact of too little sleep. Only the 30%-more-errors sentence puts the students who lacked sleep and their worse results front and center. The eight-hours sentence and the enough-sleep sentence frame the finding positively (the benefit of sleep), and the two-studies sentence names no result at all.'
           },
           {
             question: 'A paragraph about ocean acidification contains this sentence: "Many marine biologists enjoy scuba diving as a hobby." Should the writer keep it?',
-            options: ['No — it\'s irrelevant personal information that breaks paragraph unity', 'Yes — it provides context about marine biologists', 'Yes — it makes the paragraph more relatable', 'No — it\'s too short'],
+            options: ['No, because a hobby is unrelated to the topic', 'Yes, because it gives context about marine biologists', 'Yes, because it makes the paragraph more relatable', 'No, because it is too short to add any real value'],
             correctAnswer: 0,
             explanation: 'Marine biologists\' hobbies are irrelevant to a paragraph about ocean acidification. Even though it\'s about marine biologists (who study acidification), their personal hobbies don\'t support the topic.'
           },
           {
             question: 'Which skill is MOST important for Expression of Ideas questions overall?',
-            options: ['Reading the stated goal or purpose carefully', 'Knowing advanced vocabulary', 'Writing quickly', 'Memorizing grammar rules'],
+            options: ['Reading and matching the stated goal or purpose', 'Knowing as much advanced vocabulary as possible', 'Memorizing every grammar and punctuation rule', 'Choosing the most sophisticated-sounding option'],
             correctAnswer: 0,
             explanation: 'Expression of Ideas questions almost always include a stated purpose: "emphasize," "introduce," "conclude," "combine." Reading and matching that goal is the single most important skill.'
           }
@@ -125,10 +125,10 @@ Before choosing your answer on any Expression question:
       content: '**Expression of Ideas Final Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"Which choice most effectively accomplishes the goal?" → Focus on [the stated goal|the longest answer|grammar|word count]',
+          '"Which choice most effectively accomplishes the goal?" → Focus on [the stated goal|the most detailed answer|grammar alone|the most formal answer]',
           'Off-topic but interesting sentence = [delete|keep|expand|move]',
           'Combining sentences must preserve [meaning and emphasis|every original word|complexity|length]',
-          'The most common Expression question type involves [matching a stated purpose|vocabulary|grammar|spelling]'
+          'The most common Expression question type involves [matching a stated purpose|defining vocabulary|fixing punctuation|counting words]'
         ],
         correctAnswers: ['the stated goal', 'delete', 'meaning and emphasis', 'matching a stated purpose'],
         hint1: 'The goal in the question stem decides the answer.',
@@ -145,7 +145,7 @@ Before choosing your answer on any Expression question:
 | Part | Topic | Core Skill |
 |---|---|---|
 | 1 | Word Choice | Precision, tone, connotation |
-| 2 | Organization | Sentence placement, logical sequence |
+| 2 | Organization | Logical sequence and reference links |
 | 3 | Intros & Conclusions | Preview scope, synthesize (no new info) |
 | 4 | Synthesis | Combine sentences preserving meaning |
 | 5 | Style & Tone | Match register, consistency |

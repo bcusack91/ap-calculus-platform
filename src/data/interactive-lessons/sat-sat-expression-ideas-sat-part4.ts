@@ -48,15 +48,15 @@ Trap answers combine the information correctly but **change the emphasis** or **
         questions: [
           {
             question: 'Which best combines these sentences? "The Great Barrier Reef spans 2,300 kilometers. It is the world\'s largest coral reef system. It is visible from space."',
-            options: ['The Great Barrier Reef, the world\'s largest coral reef system, spans 2,300 kilometers and is visible from space.', 'Spanning 2,300 kilometers, the Great Barrier Reef is large and visible from space, being the world\'s largest coral reef system.', 'The world\'s largest coral reef system is the Great Barrier Reef, which spans 2,300 kilometers, and it is visible from space.', 'The Great Barrier Reef spans 2,300 kilometers; it is the world\'s largest coral reef system; it is visible from space.'],
+            options: ['At 2,300 kilometers, the Great Barrier Reef is the world\'s largest coral reef system and is visible from space.', 'Spanning 2,300 kilometers, the Great Barrier Reef is large and visible from space, being the world\'s largest coral reef system.', 'The world\'s largest coral reef system is the Great Barrier Reef, which spans 2,300 kilometers, and it is visible from space.', 'The Great Barrier Reef spans 2,300 kilometers; it is the world\'s largest coral reef system; it is visible from space.'],
             correctAnswer: 0,
-            explanation: 'The "spans 2,300 kilometers and is visible from space" version uses an appositive cleanly, flows well, and preserves all three pieces of information. The other options are either wordy ("Spanning 2,300 kilometers"), structurally awkward ("which spans 2,300 kilometers, and it is"), or just a list with semicolons.'
+            explanation: 'The best version folds the length into a short introductory phrase and joins the other two facts with "and," so it flows well and keeps all three pieces of information. The "Spanning" version is wordy and repeats itself ("is large… being the world\'s largest"), the "which spans…, and it is" version is structurally awkward, and the semicolon version just strings the three sentences together without combining them.'
           },
           {
             question: 'When combining sentences on the SAT, the most important factor is:',
-            options: ['Maintaining the original meaning while improving flow', 'Making the sentence as short as possible', 'Using the most complex grammatical structure', 'Keeping every word from both original sentences'],
+            options: ['Keeping the original meaning and emphasis of each idea', 'Making the combined sentence as short as possible', 'Using the most sophisticated grammatical structure', 'Keeping every word from both of the original sentences'],
             correctAnswer: 0,
-            explanation: 'The SAT values clarity and flow. You can cut words, but you must not change the meaning. Brevity and complexity are secondary to preserving meaning and improving readability.'
+            explanation: 'The SAT values clarity and flow. You can cut words, but you must not change the meaning or shift which idea is emphasized. Brevity and complexity are secondary, and keeping every original word usually defeats the point of combining.'
           }
         ]
       }    },
@@ -102,20 +102,20 @@ Trap answers combine the information correctly but **change the emphasis** or **
       exercise: {
         questions: [
           {
-            question: 'Combine: "Dr. Patel leads the neuroscience lab." + "She has published over 200 papers." The passage focuses on her credentials.',
-            options: ['Dr. Patel, who has published over 200 papers, leads the neuroscience lab.', 'Dr. Patel leads the neuroscience lab, and she has published over 200 papers.', 'Leading the neuroscience lab, Dr. Patel has published over 200 papers.', 'Dr. Patel leads the neuroscience lab; she has published over 200 papers.'],
+            question: 'Combine: "Dr. Patel leads the neuroscience lab." + "She has published over 200 papers." The writer wants to emphasize Dr. Patel\'s publication record.',
+            options: ['Dr. Patel, who leads the neuroscience lab, has published over 200 papers.', 'Dr. Patel, who has published over 200 papers, leads the neuroscience lab.', 'Having published over 200 papers, Dr. Patel leads the neuroscience lab.', 'Dr. Patel leads the neuroscience lab, although she has published over 200 papers.'],
             correctAnswer: 0,
-            explanation: 'Since the passage focuses on credentials, her publications (credentials) should be highlighted. The relative clause "who has published over 200 papers" adds this credential smoothly, with "leads the lab" as the main clause establishing her role.'
+            explanation: 'The main clause carries the emphasis. To emphasize her publications, "has published over 200 papers" must be the main clause, with her lab role tucked into the relative clause. The second and third versions put the lab role in the main clause, and "although" sets up a contrast that makes no sense.'
           },
           {
-            question: 'Which combination method uses a comma + descriptor between subject and verb?',
+            question: 'Which combining method inserts a noun phrase that renames the subject, set off by commas?',
             options: ['Appositive', 'Conjunction', 'Participial phrase', 'Semicolon'],
             correctAnswer: 0,
             explanation: 'An appositive is a noun phrase set off by commas that renames or describes the subject: "Marie Curie, **a Polish physicist**, discovered radium."'
           },
           {
             question: '"Although the cost was high, the results justified the investment." This structure emphasizes:',
-            options: ['The cost', 'The results and their justification', 'Both equally', 'Neither — it\'s neutral'],
+            options: ['the cost of the investment', 'the results of the investment', 'the cost and results equally', 'neither cost nor results'],
             correctAnswer: 1,
             explanation: 'The "although" clause is subordinate (background). The main clause — "the results justified the investment" — carries the emphasis. "Although" downgrades the cost concern.'
           }
@@ -129,9 +129,9 @@ Trap answers combine the information correctly but **change the emphasis** or **
       exercise: {
         dropdowns: [
           '"Einstein, a theoretical physicist, developed relativity." uses an [appositive|relative clause|participial phrase|conjunction]',
-          'Combining must preserve the [original meaning and emphasis|exact original words|longest version|most complex structure]',
+          'Combining must preserve the [original meaning and emphasis|exact original words|original sentence count|original word order]',
           '"Discovering penicillin, Fleming changed medicine." uses a [participial phrase|appositive|semicolon|conjunction]',
-          'Two closely related independent clauses can be joined by a [semicolon|comma alone|period only|question mark]'
+          'Two closely related independent clauses can be joined by a [semicolon|comma alone|comma + "however"|colon + "and"]'
         ],
         correctAnswers: ['appositive', 'original meaning and emphasis', 'participial phrase', 'semicolon'],
         hint1: '"A theoretical physicist" renames Einstein — that\'s an appositive.',

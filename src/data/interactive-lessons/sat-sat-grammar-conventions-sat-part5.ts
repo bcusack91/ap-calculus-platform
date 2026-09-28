@@ -71,16 +71,16 @@ A **squinting modifier** is ambiguously placed between two things it could modif
       exercise: {
         questions: [
           {
-            question: '<u>Hoping to improve her grades,</u> the tutor was hired by Maria. \nWhat is the error?',
-            options: ['Comma splice', 'Dangling modifier — "Hoping to improve" should modify Maria, not "the tutor"', 'Subject-verb disagreement', 'No error'],
+            question: 'Hoping to improve her grades, _____ \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['a tutor was hired by Maria.', 'Maria hired a tutor.', 'the tutor was hired by Maria.', 'Maria\'s tutor was hired.'],
             correctAnswer: 1,
-            explanation: 'The introductory phrase "Hoping to improve her grades" must be followed by the person doing the hoping: Maria. Corrected: "Hoping to improve her grades, Maria hired a tutor."'
+            explanation: 'The introductory phrase "Hoping to improve her grades" must be followed immediately by the person doing the hoping: Maria. In the other three choices the word right after the comma is "a tutor," "the tutor," or "Maria\'s tutor," so the sentence says the tutor was hoping to improve her grades.'
           },
           {
-            question: 'The dog bit the mail carrier <u>running across the yard</u>. Who was running?',
-            options: ['The dog', 'The mail carrier', 'It is ambiguous', 'Neither — the phrase is a fragment'],
+            question: '"The dog bit the mail carrier running across the yard." Which revision makes clear that the DOG was the one running across the yard?',
+            options: ['The dog bit the mail carrier, running across the yard.', 'The dog bit the running mail carrier across the yard.', 'Running across the yard, the dog bit the mail carrier.', 'Running across the yard, the mail carrier was bitten by the dog.'],
             correctAnswer: 2,
-            explanation: 'The modifier "running across the yard" is misplaced — it could describe either the dog or the mail carrier. This is ambiguous and needs to be rewritten.'
+            explanation: 'An introductory modifier describes the noun right after the comma, so "Running across the yard, the dog…" can only mean the dog was running. With the phrase at the end, it still sits next to "the mail carrier," "the running mail carrier" makes the carrier the runner, and "Running across the yard, the mail carrier…" says the carrier was running.'
           }
         ]
       }
@@ -93,7 +93,7 @@ A **squinting modifier** is ambiguously placed between two things it could modif
 
 Type "dangling," "misplaced," "squinting," or "correct" for each sentence.
 
-1) Covered in chocolate, the children eagerly ate the strawberries.
+1) Covered in chocolate, the strawberries disappeared within minutes.
 
 2) She only ate vegetables for dinner last night.
 
@@ -102,10 +102,10 @@ Type "dangling," "misplaced," "squinting," or "correct" for each sentence.
       exercise: {
         boxes: 3,
         correctAnswers: ['correct', 'misplaced', 'dangling'],
-        hint1: 'Who or what is covered in chocolate — the children or the strawberries? Actually, the strawberries — but "children" is the subject. Wait: the strawberries are covered in chocolate, but "children" follows the modifier. This is actually correct IF the children are the ones covered in chocolate. Since the context makes the strawberries covered in chocolate, it could be read as dangling — but structurally, "Covered in chocolate" could describe the children eating them messily. Let us say this is correct here because "children" is the logical subject.',
+        hint1: 'What is covered in chocolate? The strawberries, and "the strawberries" is exactly the noun right after the comma.',
         hint2: '"Only" should modify "vegetables," not "ate." Move it: "She ate only vegetables."',
         hint3: '"Driving to work" has no proper subject — the accident was not driving.',
-        explanation: '1) Correct — the introductory phrase can logically modify the subject "children." 2) Misplaced — "only" modifies the wrong word; it should be "ate only vegetables." 3) Dangling — "the accident" is not the one driving; the subject who was driving is missing.'
+        explanation: '1) Correct — "Covered in chocolate" describes "the strawberries," which comes right after it. 2) Misplaced — "only" modifies the wrong word; it should be "ate only vegetables." 3) Dangling — "the accident" is not the one driving; the subject who was driving is missing.'
       }
     },
     {
@@ -146,15 +146,15 @@ Type "dangling," "misplaced," "squinting," or "correct" for each sentence.
         questions: [
           {
             question: '<u>Having studied all night,</u> the exam seemed easy to Marcus. \nWhich revision best corrects the error?',
-            options: ['Having studied all night, the exam was easy for Marcus.', 'Having studied all night, Marcus found the exam easy.', 'Having studied all night, it seemed easy to Marcus, the exam.', 'No change needed.'],
+            options: ['Having studied all night, the exam was easy for Marcus.', 'Having studied all night, Marcus found the exam easy.', 'Having studied all night, it seemed easy to Marcus, the exam.', 'Having studied all night, Marcus\'s exam seemed easy.'],
             correctAnswer: 1,
-            explanation: 'The introductory phrase "Having studied all night" must be followed by the person who studied: Marcus. "Marcus found the exam easy" correctly places Marcus as the subject.'
+            explanation: 'The introductory phrase "Having studied all night" must be followed by the person who studied: Marcus. "Marcus found the exam easy" makes Marcus the subject. The other versions put "the exam," "it," or "Marcus\'s exam" right after the comma, and an exam cannot study.'
           },
           {
-            question: 'The gallery displayed paintings by local artists <u>that were recently restored</u>. \nWhat does "that were recently restored" most likely modify?',
-            options: ['The gallery', 'Paintings', 'Local artists', 'It is ambiguous and should be clarified'],
+            question: '"The gallery displayed paintings by local artists that were recently restored." Which revision makes clear that the PAINTINGS were restored?',
+            options: ['The gallery displayed paintings by local artists that were recently restored.', 'Recently restored, the gallery displayed paintings by local artists.', 'The gallery, recently restored, displayed paintings by local artists.', 'The gallery displayed recently restored paintings made by artists from the area.'],
             correctAnswer: 3,
-            explanation: 'The modifier "that were recently restored" could describe the paintings or the artists (though artists aren\'t "restored"). In context it means the paintings, but the placement creates ambiguity. Better: "The gallery displayed recently restored paintings by local artists."'
+            explanation: 'Placing "recently restored" directly before "paintings" leaves only one thing it can describe. The original leaves "that were recently restored" next to "local artists," and the other two versions make the gallery the thing that was restored.'
           }
         ]
       }

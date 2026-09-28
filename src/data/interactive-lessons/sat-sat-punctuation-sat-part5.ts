@@ -33,7 +33,7 @@ This is one of the **most heavily tested** concepts on the SAT Writing section. 
               'The Eiffel Tower which is in Paris attracts millions of visitors.',
               'The Eiffel Tower, which is in Paris, attracts millions of visitors.',
               'The Eiffel Tower, which is in Paris attracts millions of visitors.',
-              'The Eiffel Tower which is in Paris, attracts millions of visitors.'
+              'The Eiffel Tower, which is in Paris attracts, millions of visitors.'
             ],
             correctAnswer: 1,
             explanation: 'Correct — Everyone knows which tower is meant, so "which is in Paris" is extra information (nonrestrictive). It needs commas on BOTH sides.'
@@ -106,15 +106,15 @@ If a nonrestrictive element is in the **middle** of a sentence, it MUST have com
             explanation: 'Correct — "That" introduces a restrictive clause (it identifies WHICH car). Essential/restrictive clauses do not get commas. Never put a comma before "that."'
           },
           {
-            question: 'Select the version with correct punctuation: "Marie Curie ___ the first woman to win a Nobel Prize ___ conducted groundbreaking research on radioactivity."',
+            question: 'Marie Curie, the first woman to win a Nobel _____ groundbreaking research on radioactivity. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
             options: [
-              'No punctuation / no punctuation',
-              ', / ,',
-              '; / ,',
-              ', / no punctuation'
+              'Prize conducted',
+              'Prize, conducted',
+              'Prize; conducted',
+              'Prize: conducted'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "The first woman to win a Nobel Prize" is a nonrestrictive appositive (we already know who Marie Curie is). It requires commas on both sides.'
+            explanation: 'Correct — "The first woman to win a Nobel Prize" is a nonrestrictive appositive (we already know who Marie Curie is). The comma after "Curie" opens it, so a comma after "Prize" must close it. No punctuation leaves the appositive open, and a semicolon or colon would cut the subject off from its verb "conducted."'
           }
         ]
       }

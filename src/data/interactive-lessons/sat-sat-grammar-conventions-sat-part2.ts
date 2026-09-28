@@ -14,12 +14,12 @@ A **pronoun** must agree with its **antecedent** (the noun it refers to) in numb
 > *The student finished **her** project.* ✅ (singular antecedent → singular pronoun)
 > *The students finished **their** projects.* ✅ (plural antecedent → plural pronoun)
 
-**Common SAT trap:** Singular indefinite pronouns paired with "their."
+**Common SAT trap:** A pronoun that does not match a clearly singular or plural noun.
 
-> ❌ *Everyone should bring **their** book.*
-> ✅ *Everyone should bring **his or her** book.* (formal/SAT style)
+> ❌ *The company raised **their** prices.* ✅ *The company raised **its** prices.*
+> ❌ *The new laptops each come with **its** own charger.* ✅ *…with **their** own chargers.*
 
-On the SAT, the formally correct answer is usually preferred.
+**Singular "they":** The digital SAT accepts "they/their" for a person whose gender is unknown ("Everyone should bring their book"). It will not make that the error, so focus on nouns whose number is unmistakable: companies, committees, objects, and plural groups.
       `
     },
     {
@@ -65,10 +65,10 @@ A pronoun is **ambiguous** when it could refer to more than one antecedent.
       exercise: {
         questions: [
           {
-            question: 'Neither of the girls brought _____ notebook to class.',
-            options: ['their', 'her', 'its', 'his'],
+            question: 'The twins celebrated _____ birthday with a single cake.',
+            options: ['its', 'their', 'his', 'her'],
             correctAnswer: 1,
-            explanation: '"Neither" is singular, and the antecedent is "girls" (female), so "her" is correct.'
+            explanation: '"Twins" is plural, so the pronoun must be plural: "their." "Its" is for things, and "his" or "her" would refer to only one person.'
           },
           {
             question: 'The committee announced _____ decision after a long debate.',
@@ -87,7 +87,7 @@ A pronoun is **ambiguous** when it could refer to more than one antecedent.
 
 Type the correct pronoun for each blank.
 
-1) Each of the boys must submit _____ essay by Friday. (his / their)
+1) Each of the laptops came with _____ own charger. (its / their)
 
 2) The award was given to Maria and _____ . (I / me)
 
@@ -95,11 +95,11 @@ Type the correct pronoun for each blank.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['his', 'me', 'Whom'],
-        hint1: '"Each" is singular. The antecedent is "boys" (male).',
+        correctAnswers: ['its', 'me', 'Whom'],
+        hint1: '"Each" is singular, and a laptop is a thing.',
         hint2: '"Given to" requires an object pronoun. "To Maria and me."',
         hint3: 'We should contact him → objective case → "Whom."',
-        explanation: '1) "his" — "each" is singular. 2) "me" — object of the preposition "to." 3) "Whom" — it is the object of "contact" (we should contact him/her).'
+        explanation: '1) "its" — "each" is singular and refers to a thing. 2) "me" — object of the preposition "to." 3) "Whom" — it is the object of "contact" (we should contact him/her).'
       }
     },
     {
@@ -139,16 +139,16 @@ Type the correct pronoun for each blank.
       exercise: {
         questions: [
           {
-            question: 'When the officer stopped the driver, <u>they</u> asked for identification. \nWhat is the problem with this sentence?',
-            options: ['The pronoun "they" is ambiguous — it could refer to the officer or the driver', 'The verb "asked" should be "ask"', '"Identification" should be "an identification"', 'No error'],
+            question: 'When the officer stopped the driver, _____ asked for identification. \nWhich choice makes clear who asked?',
+            options: ['the officer', 'the person', 'he or she', 'that person'],
             correctAnswer: 0,
-            explanation: '"They" could refer to either "the officer" or "the driver." The sentence should be revised to clarify: "the officer asked for identification."'
+            explanation: 'With two people in the sentence, a pronoun or vague label ("the person," "he or she," "that person") could point to either the officer or the driver. Naming the noun, "the officer," removes the ambiguity.'
           },
           {
-            question: 'Each student must make sure that <u>they have</u> all necessary materials before the exam. \nWhich revision is best?',
-            options: ['they has', 'he or she has', 'we have', 'No change needed'],
+            question: 'Each of the new laptops comes with _____ own charger. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['it\'s', 'its', 'their', 'they\'re'],
             correctAnswer: 1,
-            explanation: '"Each" is singular, so the pronoun should be singular: "he or she has." On the SAT, formal pronoun agreement is tested.'
+            explanation: '"Each" is singular and refers to a thing (a laptop), so the possessive is "its." "It\'s" means "it is," "their" is plural, and "they\'re" means "they are."'
           }
         ]
       }
@@ -163,7 +163,7 @@ Type the correct pronoun for each blank.
 2. **Ambiguous pronouns:** If a pronoun could refer to more than one noun, replace it with the specific noun.
 3. **Who vs. whom:** Who = subject, whom = object. Test by substituting he/him.
 4. **Pronoun case:** After prepositions and as objects → me, him, her, us, them, whom.
-5. **SAT style:** The test prefers "he or she" over "they" for singular antecedents.
+5. **Singular "they":** Accepted on the digital SAT for a person of unknown gender; the tested errors involve nouns whose number is unmistakable.
 
 **Up next:** Verb Tense & Mood →
       `

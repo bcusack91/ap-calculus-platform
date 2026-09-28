@@ -44,10 +44,10 @@ An **em dash** (—) on the SAT works similarly to commas or parentheses — it 
           {
             question: 'A dash at the END of a sentence is used to:',
             options: [
-              'Introduce a dramatic conclusion or explanation.',
-              'Replace a period.',
-              'Indicate a question.',
-              'Show that a list follows.'
+              'Set off an emphatic final element',
+              'Replace the period at the end',
+              'Signal that a question is being asked',
+              'Mark a word as a direct quotation'
             ],
             correctAnswer: 0,
             explanation: 'Correct — A single dash at the end of a sentence can introduce a dramatic or emphatic final element: "She had only one goal—to win."'
@@ -95,20 +95,20 @@ Both dashes and commas can set off nonessential information. On the SAT, the cho
       exercise: {
         questions: [
           {
-            question: 'Which is the correct possessive form? "The _____ uniforms were new this season."',
+            question: 'Every member of the team got a new uniform this season. Which choice correctly completes the next sentence? "The _____ uniforms arrived on Monday."',
             options: [
-              'players (no apostrophe)',
-              'player\'s (one player has uniforms)',
-              'players\' (multiple players have uniforms)',
-              'players\'s (multiple players)'
+              'players',
+              'player\'s',
+              'players\'',
+              'players\'s'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Multiple players own the uniforms. For regular plural nouns ending in "s," add just an apostrophe after the "s" → players\'.'
+            explanation: 'Correct — Many players own the uniforms, so the noun is plural and possessive. For regular plural nouns ending in "s," add just an apostrophe after the "s" → players\'. "Players" has no possession, "player\'s" is one player, and "players\'s" is not standard.'
           },
           {
             question: 'Which sentence uses an apostrophe correctly?',
             options: [
-              'The dog wagged it\'s tail happily.',
+              'The dog wagged it\'s tail.',
               'Its going to rain tomorrow.',
               'The cat cleaned its whiskers.',
               'The tree lost it\'s leaves.'

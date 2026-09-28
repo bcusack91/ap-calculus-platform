@@ -42,13 +42,13 @@ Both sides of the semicolon must be able to stand alone as complete sentences.
           {
             question: 'Why is this semicolon INCORRECT? "The dog barked; loudly at the stranger."',
             options: [
-              'You cannot use semicolons with animals.',
+              'A semicolon can never come directly after a verb.',
               '"Loudly at the stranger" is not an independent clause.',
-              'A comma should always replace a semicolon.',
+              'A semicolon is only allowed before a word like "however."',
               'There should be a conjunction after the semicolon.'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — "Loudly at the stranger" cannot stand alone as a complete sentence. Both sides of a semicolon must be independent clauses.'
+            explanation: 'Correct — "Loudly at the stranger" cannot stand alone as a complete sentence, and both sides of a semicolon must be independent clauses. A semicolon can follow a verb when the clause is complete ("The dog barked; the cat hissed."), it is not limited to words like "however," and adding a conjunction after it would not fix the fragment.'
           }
         ]
       }

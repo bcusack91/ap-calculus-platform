@@ -57,15 +57,15 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
         questions: [
           {
             question: 'Which is the most concise and effective revision? "The CEO, who is the person in charge of leading the company, announced a new strategy."',
-            options: ['The CEO announced a new strategy.', 'The CEO of the company announced a new strategy for the future.', 'The company leader and CEO announced a new strategy.', 'Being the CEO, she announced a new strategy.'],
+            options: ['The CEO announced a new strategy.', 'The CEO announced strategy.', 'The CEO of the company announced a new strategy.', 'The CEO, the company leader, announced a new strategy.'],
             correctAnswer: 0,
-            explanation: 'Everyone knows what a CEO does—"who is the person in charge of leading the company" is completely redundant. The simplest version preserves all essential information.'
+            explanation: 'A CEO is by definition the person leading the company, so "who is the person in charge of leading the company" is redundant. "The CEO announced a new strategy" keeps all the essential information. "Announced strategy" is shorter but drops the article and the word "new," which changes the meaning; the other two versions still repeat the idea of leading the company.'
           },
           {
             question: '"Due to the fact that the weather was bad, the game was postponed." The most concise revision is:',
-            options: ['Because of bad weather, the game was postponed.', 'The game was postponed due to the fact of bad weather.', 'Since the weather was bad in nature, the game was postponed.', 'Owing to the inclement weather conditions, the game was postponed.'],
+            options: ['Because of bad weather, the game was postponed.', 'Bad weather, the game was postponed.', 'The game was postponed due to the fact of bad weather.', 'Since the weather was bad in nature, the game was postponed.'],
             correctAnswer: 0,
-            explanation: '"Due to the fact that" → "Because of." This is one of the most common wordiness patterns the SAT tests. Always replace multi-word phrases with single words when possible.'
+            explanation: '"Due to the fact that" → "Because of." This is one of the most common wordiness patterns the SAT tests. "Bad weather, the game was postponed" is shorter but ungrammatical (the opening noun phrase is not connected to the clause). The other two versions keep padding ("due to the fact of," "in nature").'
           }
         ]
       }    },
@@ -114,21 +114,21 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
         questions: [
           {
             question: 'Which is most concise? "The reason why the project failed was because of insufficient funding."',
-            options: ['The project failed because of insufficient funding.', 'The reason the project failed was because of insufficient funding.', 'The reason why the project failed was due to the fact that funding was insufficient.', 'It was because of insufficient funding that the project failed.'],
+            options: ['The project failed because of insufficient funding.', 'The project failed, insufficient funding.', 'The reason the project failed was because of insufficient funding.', 'The project failed, and the reason was insufficient funding.'],
             correctAnswer: 0,
-            explanation: '"The reason why…was because" is triply redundant. "Because" alone establishes the cause. The "project failed because of insufficient funding" option eliminates all wordiness while preserving meaning.'
+            explanation: '"The reason why…was because" is doubly redundant: "the reason" and "because" both announce the cause. "The project failed because of insufficient funding" says it once. "The project failed, insufficient funding" is shorter but ungrammatical, "The reason…was because" keeps the redundancy, and "and the reason was" adds a roundabout second clause.'
           },
           {
             question: 'Which phrase is NOT redundant?',
-            options: ['Essential requirement', 'Close proximity', 'Future plans', 'Combined total'],
+            options: ['Unexpected delay', 'Close proximity', 'Future plans', 'Combined total'],
             correctAnswer: 0,
-            explanation: '"Essential requirement" is not redundant — requirements can be essential or non-essential (nice-to-have). "Close proximity" (proximity = nearness), "future plans" (plans = future), and "combined total" (total = combined) are all redundant.'
+            explanation: '"Unexpected delay" is not redundant, because delays can be expected (a scheduled closure) or unexpected (a sudden storm), so the adjective adds information. "Close proximity" (proximity = nearness), "future plans" (plans are always for the future), and "combined total" (a total is already combined) all repeat themselves.'
           },
           {
             question: 'When multiple answer choices are grammatically correct, the SAT almost always prefers the:',
-            options: ['Most concise option that preserves meaning', 'Longest and most detailed option', 'Option with the most academic vocabulary', 'Option that sounds most formal'],
+            options: ['shortest option that keeps the meaning clear', 'briefest option, even if it drops key information', 'option with the most precise academic vocabulary', 'option that adds the greatest amount of detail'],
             correctAnswer: 0,
-            explanation: 'The SAT\'s #1 conciseness rule: among grammatically correct options, shorter wins. Length, vocabulary sophistication, and formality are secondary to brevity + clarity.'
+            explanation: 'The SAT\'s conciseness rule: among grammatically correct options that say the same thing, the shortest wins. But brevity never beats meaning: an option that drops essential information is wrong however short it is. Vocabulary sophistication and extra detail are not what the SAT rewards.'
           }
         ]
       }
@@ -141,7 +141,7 @@ Sometimes the most concise answer creates ambiguity. Clarity beats brevity:
         dropdowns: [
           '"In order to succeed" → [To succeed|In order that one might succeed|For the purpose of succeeding|So as to succeed]',
           '"Past history" is [redundant|correct|formal|academic]',
-          'Among correct choices, prefer the [shortest|longest|most complex|most formal]',
+          'Among correct choices with the same meaning, prefer the [shortest|most detailed|most complex|most formal]',
           '"There are many people who believe…" → [Many people believe…|There exist many people believing…|It is believed by many…|People, many of whom believe…]'
         ],
         correctAnswers: ['To succeed', 'redundant', 'shortest', 'Many people believe…'],

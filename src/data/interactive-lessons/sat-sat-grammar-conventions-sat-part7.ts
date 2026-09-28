@@ -21,7 +21,7 @@ You've covered all the major grammar conventions tested on the SAT:
 | 6 | Parallel Structure & Comparisons | Lists, pairs, and comparisons must be parallel |
 
 **Strategy: The Error-Spotting Checklist**
-When you see an underlined portion on the SAT, run through these checks:
+When a Standard English Conventions question gives you a blank and four versions to choose from, run through these checks:
 1. ✅ Does the verb agree with its subject?
 2. ✅ Are pronouns clear and correctly matched?
 3. ✅ Is the tense consistent and logical?
@@ -75,14 +75,14 @@ When you see an underlined portion on the SAT, run through these checks:
       exercise: {
         questions: [
           {
-            question: 'The team of researchers <u>have</u> published <u>their</u> findings in a prestigious journal. \nWhich correction, if any, should be made?',
-            options: ['Change "have" to "has" but keep "their"', 'Change "their" to "its" but keep "have"', 'Change "have" to "has" and "their" to "its"', 'No change is needed to the verb or pronoun'],
+            question: 'The team of researchers _____ findings in a prestigious journal. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['has published their', 'have published their', 'has published its', 'have published its'],
             correctAnswer: 2,
             explanation: '"Team" is singular: "The team…has published its findings." Both the verb and the pronoun should be singular to match the collective noun.'
           },
           {
             question: '<u>Analyzing the data carefully,</u> several unexpected trends were discovered by the researchers. \nWhat error does this sentence contain?',
-            options: ['Comma splice', 'Dangling modifier', 'Verb tense error', 'Faulty comparison'],
+            options: ['Comma splice', 'Dangling modifier', 'Tense error', 'Bad comparison'],
             correctAnswer: 1,
             explanation: '"Analyzing the data carefully" modifies the researchers, but "trends" is the subject. Corrected: "Analyzing the data carefully, the researchers discovered several unexpected trends."'
           }
@@ -149,16 +149,16 @@ Identify the grammar error type in each sentence. Type one of: "subject-verb agr
       exercise: {
         questions: [
           {
-            question: 'The professor insists that every student <u>submits</u> their final paper on time. \nWhich correction(s) should be made?',
-            options: ['Change "submits" to "submit" only', 'Change "their" to "his or her" only', 'Change "submits" to "submit" AND "their" to "his or her"', 'No change needed'],
+            question: 'The professor insists that every student _____ the final paper on time. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['sent', 'submits', 'submit', 'will submit'],
             correctAnswer: 2,
-            explanation: 'After "insists that," use the subjunctive: "submit" (not "submits"). Also, "every student" is singular, so "his or her" is correct (SAT standard).'
+            explanation: 'After "insists that," use the subjunctive, which is the base form of the verb: "submit" (not "submits"). "Sent" is past tense and "will submit" is future; neither is the subjunctive a demand requires.'
           },
           {
             question: 'The company not only increased employee salaries <u>but also was providing</u> better health benefits. \nWhich revision fixes the error?',
-            options: ['but also providing', 'but also provided', 'but it also will provide', 'No change needed'],
+            options: ['but also provides', 'but also provided', 'but it also will provide', 'but also was providing'],
             correctAnswer: 1,
-            explanation: '"Not only increased…but also ___" — the verb forms must be parallel. "Increased" and "provided" are both simple past.'
+            explanation: '"Not only increased…but also ___" — the verb forms must be parallel. "Increased" and "provided" are both simple past. "Provides" and "will provide" shift tense, and "was providing" (the original) breaks the parallel with "increased."'
           }
         ]
       }
@@ -171,7 +171,7 @@ Identify the grammar error type in each sentence. Type one of: "subject-verb agr
 
 1. **Read the full sentence** before looking at the answer choices — understand the intended meaning first.
 2. **Use the checklist:** subject-verb agreement → pronouns → tense → structure → modifiers → parallelism.
-3. **"No change" is sometimes correct** — don't fix what isn't broken.
+3. **Don't over-correct** — the simplest grammatical choice is often right; a more elaborate version is not better just because it looks formal.
 4. **Shorter is often better:** The SAT tends to prefer concise, clear phrasing over wordy alternatives.
 5. **Trust your ear, but verify with rules.** If it sounds wrong, find the specific grammar rule that's violated.
 6. **Eliminate clearly wrong answers first,** then compare the remaining choices carefully.

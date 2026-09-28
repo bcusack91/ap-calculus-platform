@@ -71,7 +71,7 @@ Used for wishes, demands, suggestions, and hypothetical situations:
         questions: [
           {
             question: 'By the time we arrived at the theater, the movie _____.',
-            options: ['already started', 'has already started', 'had already started', 'will have started'],
+            options: ['already started', 'has started', 'had already started', 'will have started'],
             correctAnswer: 2,
             explanation: 'The movie starting happened BEFORE arriving (both past events). Use past perfect: "had already started."'
           },
@@ -142,16 +142,16 @@ Used for wishes, demands, suggestions, and hypothetical situations:
       exercise: {
         questions: [
           {
-            question: 'The scientist conducted the experiment in March and <u>will publish</u> the results in the same journal two months later. \nWhich correction should be made?',
-            options: ['Change "will publish" to "published"', 'Change "conducted" to "conducts"', 'Change "will publish" to "has published"', 'No change needed'],
+            question: 'Last year, the scientist conducted the experiment in March and _____ the results in a journal two months later. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['published', 'will publish', 'publishes', 'has published'],
             correctAnswer: 0,
-            explanation: 'Both actions are in the past ("in March" and "two months later"). Using "will publish" is an inappropriate tense shift. "Published" keeps the tense consistent.'
+            explanation: 'Both actions are finished events in a stated past time ("Last year… in March… two months later"), so the simple past "published" matches "conducted." "Will publish" and "publishes" shift out of the past, and "has published" (present perfect) cannot be used with a specific finished time.'
           },
           {
-            question: 'If the budget <u>was</u> larger, the school could hire more teachers. \nWhich correction should be made?',
-            options: ['Change "was" to "were"', 'Change "could hire" to "can hire"', 'Change "was" to "is"', 'No change needed'],
+            question: 'If the budget _____ larger, the school could hire more teachers. \nWhich choice completes the text so that it conforms to the conventions of Standard English?',
+            options: ['were', 'was', 'is', 'will be'],
             correctAnswer: 0,
-            explanation: 'This is a hypothetical (contrary-to-fact) statement. The subjunctive requires "were," not "was."'
+            explanation: 'This is a hypothetical (contrary-to-fact) statement, signaled by "could hire." The subjunctive requires "were," not "was." "Is" and "will be" do not fit a condition paired with "could."'
           }
         ]
       }

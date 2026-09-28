@@ -19,7 +19,7 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
 
 ### Question Type Strategy
 
-**Vocabulary in Context** (~6 per module):
+**Vocabulary in Context** (~5 per module):
 - Substitute each answer choice into the sentence
 - Pick the one that preserves the original meaning
 
@@ -31,11 +31,11 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
 - Which quote/data best supports the claim?
 - Match the evidence to the specific claim, not the general topic
 
-**Grammar & Conventions** (~5 per module):
+**Grammar & Conventions** (~7 per module):
 - Trust your ear first, then apply rules
 - Subject-verb agreement, punctuation, and pronoun clarity are most common
 
-**Rhetoric/Expression** (~4 per module):
+**Rhetoric/Expression** (~5 per module):
 - Which choice best accomplishes the stated goal?
 - Focus on the PURPOSE stated in the question`
     },
@@ -44,10 +44,10 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
       type: 'quiz' as const,
       question: 'The most effective approach to SAT R&W questions is:',
       options: [
-        'Read the passage carefully, then read all answer choices, then reread the passage',
-        'Read the question stem first, then read the passage with purpose, then eliminate wrong answers',
-        'Skim the passage quickly, pick the answer that sounds best',
-        'Read all answer choices first, then find supporting evidence in the passage'
+        'Read the passage, then every choice, then reread the passage',
+        'Read the stem first, then the passage, then eliminate choices',
+        'Skim the passage and pick the choice that sounds best',
+        'Read the four choices first, then hunt for them in the passage'
       ],
       correctAnswer: 1,
       explanation: 'Reading the question first gives you a target — you know what to look for in the passage. This focused reading is faster and more accurate than reading the passage "cold" without knowing the question.'
@@ -80,12 +80,12 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
 
 | Type | Count | Time Tip |
 |---|---|---|
-| Vocabulary in Context | ~6 | Fast — 45-60 sec |
+| Vocabulary in Context | ~5 | Fast — 45-60 sec |
 | Central Ideas / Purpose | ~4 | Medium — 60-75 sec |
 | Command of Evidence | ~4 | Slow — 75-90 sec |
-| Grammar & Conventions | ~5 | Fast — 45-60 sec |
-| Rhetoric / Expression | ~4 | Medium — 60-75 sec |
-| Inferences / Conclusions | ~4 | Medium — 60-90 sec |`
+| Grammar & Conventions | ~7 | Fast — 45-60 sec |
+| Transitions & Rhetorical Synthesis | ~5 | Medium — 60-75 sec |
+| Inferences / Conclusions | ~2 | Medium — 60-90 sec |`
     },
     {
       id: 'tds3-quiz2',
@@ -95,19 +95,19 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
         questions: [
           {
             question: 'A passage says a policy "may help reduce some forms of pollution." An answer choice says the policy "eliminates all pollution." This is an example of:',
-            options: ['A half-right answer', 'A too-extreme answer', 'An out-of-scope answer', 'The correct answer'],
+            options: ['A half-right answer', 'A too-extreme answer', 'An out-of-scope answer', 'An opposite answer'],
             correctAnswer: 1,
             explanation: '"May help reduce some" → "eliminates all" is a massive exaggeration. Too-extreme answers overstate what the passage actually says.'
           },
           {
             question: 'On Vocabulary in Context questions, the FIRST step should be:',
-            options: ['Look up the word\'s dictionary definition', 'Cover the word, read the sentence, and predict your own word', 'Read each answer choice and pick the one you know', 'Skip it — vocabulary questions are the hardest'],
+            options: ['Recall the dictionary definition of the word', 'Predict your own word before looking at the choices', 'Pick the choice that is the most familiar word', 'Skip it, since these questions take the longest'],
             correctAnswer: 1,
             explanation: 'Covering the target word and predicting your own replacement avoids being tricked by common definitions. The SAT often tests secondary meanings.'
           },
           {
             question: 'For Command of Evidence questions, the evidence must support:',
-            options: ['The general topic of the passage', 'The specific claim stated in the question', 'The author\'s overall opinion', 'Any statement in the passage'],
+            options: ['The general topic of the passage', 'The exact claim that you are asked about', 'The overall opinion of the author', 'Any claim made anywhere in the whole text'],
             correctAnswer: 1,
             explanation: 'Evidence must match the SPECIFIC claim, not just the topic. A quote about climate change that discusses temperature does NOT support a claim about ocean acidity, even though both relate to climate.'
           }
@@ -120,10 +120,10 @@ Each question is a **short passage** (1-2 paragraphs) followed by **one question
       content: '**R&W Question Type Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          '"As used in line 3, \'critical\' most nearly means" is a [Vocabulary in Context|Central Ideas|Evidence|Grammar] question',
-          'Best R&W reading order: read [question first|passage first|answers first|title first]',
+          '"As used in the text, what does the word \'critical\' most nearly mean?" is a [Vocabulary in Context|Central Ideas|Evidence|Grammar] question',
+          'Best R&W reading order: read [question first|passage first|answers first|last sentence first]',
           'An answer that goes beyond what the passage says is [Out of scope|Half-right|Too extreme|Correct]',
-          'Grammar questions are typically [fast (45-60 sec)|slow (90+ sec)|medium (75 sec)|impossible]'
+          'Grammar questions are typically [fast (45-60 sec)|slow (90+ sec)|medium (75 sec)|the slowest type]'
         ],
         correctAnswers: ['Vocabulary in Context', 'question first', 'Out of scope', 'fast (45-60 sec)'],
         hint1: 'Questions about word meaning "as used" = Vocabulary in Context.',

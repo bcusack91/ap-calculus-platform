@@ -40,13 +40,13 @@ If you must guess randomly on multiple questions, pick the same letter for all o
       type: 'quiz' as const,
       question: 'On the Digital SAT, if you cannot solve a problem and have 15 seconds left in the module, you should:',
       options: [
-        'Leave it blank — wrong answers are penalized',
-        'Guess randomly — there is no penalty for wrong answers',
-        'Choose the longest answer — it is usually correct',
-        'Choose A — it is the most common correct answer'
+        'Leave it blank, since a wrong answer costs points',
+        'Pick any answer, since wrong answers cost nothing',
+        'Flag it and plan to finish it after time runs out',
+        'Guess only if you can first rule out two choices'
       ],
       correctAnswer: 1,
-      explanation: 'The Digital SAT has NO wrong-answer penalty. Always guess rather than leaving a question blank. Even a random guess gives you a 25% chance. If you can eliminate even one choice, your odds improve to 33%.'
+      explanation: 'The Digital SAT has NO wrong-answer penalty. Always guess rather than leaving a question blank. Even a random guess gives you a 25% chance, and ruling out one choice raises it to 33%, but you should guess even when you cannot rule anything out. Flagging does not buy extra time: when the module timer ends, unanswered questions are simply wrong.'
     },
     {
       id: 'tds5-text2',
@@ -106,13 +106,13 @@ If you must guess randomly on multiple questions, pick the same letter for all o
           },
           {
             question: 'On the SAT, "Letter of the Day" means:',
-            options: ['Always choosing the longest answer', 'Picking the same letter for all random guesses', 'Reading every answer choice carefully', 'Skipping questions you cannot answer'],
+            options: ['Choosing the letter that has come up least often so far', 'Using the same letter for every blind guess you make', 'Switching letters on each guess', 'Guessing only on questions where you ruled out a choice'],
             correctAnswer: 1,
-            explanation: '"Letter of the Day" is a time-saving strategy: if you must randomly guess on multiple questions, pick the same letter (e.g., C) for all of them. Statistically, you\'ll get ~25% right, same as random but faster.'
+            explanation: '"Letter of the Day" is a time-saving strategy: if you must randomly guess on multiple questions, pick the same letter (e.g., C) for all of them. Statistically, you\'ll get ~25% right, same as random but faster. Hunting for the least-used letter or alternating letters does not improve the odds, because correct answers are not placed in a pattern.'
           },
           {
             question: 'A Math answer should be positive (you\'re finding a length). Choices are: A) $-8$ B) $3$ C) $8$ D) $15$. Which can you eliminate immediately?',
-            options: ['A only', 'A and D', 'B and C', 'None — you need to calculate'],
+            options: ['Only $-8$', '$-8$ and $15$', '$3$ and $8$', 'None of them'],
             correctAnswer: 0,
             explanation: 'Lengths must be positive, so A) $-8$ is impossible. You cannot eliminate D) $15$ just because it\'s large — without calculating, it could be correct.'
           }

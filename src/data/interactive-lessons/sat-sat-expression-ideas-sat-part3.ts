@@ -48,15 +48,15 @@ A conclusion should:
         questions: [
           {
             question: 'A paragraph discusses how composting reduces landfill waste and produces nutrient-rich soil. Which is the best concluding sentence?',
-            options: ['By diverting organic waste from landfills and enriching soil, composting offers a practical solution to two environmental challenges simultaneously.', 'Recycling is another important environmental practice that people should consider.', 'The history of composting dates back thousands of years to ancient civilizations.', 'There are many types of composting bins available at hardware stores.'],
+            options: ['Composting thus turns a disposal problem into a resource for healthier gardens.', 'Recycling is another important environmental practice that more people should adopt.', 'The practice of composting dates back thousands of years to ancient farming cultures.', 'Many kinds of composting bins can now be purchased at local hardware stores.'],
             correctAnswer: 0,
-            explanation: 'A good conclusion synthesizes the paragraph\'s two main points (waste reduction + soil enrichment). The recycling option introduces a new topic, the ancient-civilizations option goes backward to history, and the hardware-store option introduces commercial information not discussed.'
+            explanation: 'A good conclusion synthesizes the paragraph\'s two main points: waste that would have been a disposal problem becomes nutrient-rich soil. The recycling option introduces a new topic, the ancient-civilizations option goes backward to history, and the hardware-store option introduces commercial information not discussed.'
           },
           {
             question: 'Which would be the best topic sentence for a paragraph about the decline of honeybee populations?',
-            options: ['Honeybee populations have declined by nearly 40% in the past decade, threatening both agriculture and ecosystem stability.', 'Honeybees are fascinating creatures that live in complex social colonies.', 'Many people are allergic to bee stings.', 'Scientists have studied insects for centuries.'],
+            options: ['Honeybee numbers have fallen sharply in recent years, threatening crops.', 'Honeybees are fascinating insects that live in complex social colonies.', 'Many people are allergic to bee stings and avoid areas with hives.', 'Scientists have studied insects of all kinds for many centuries.'],
             correctAnswer: 0,
-            explanation: 'This topic sentence names the issue (decline), quantifies it (40%), situates it in time (past decade), and explains its significance (agriculture + ecosystems). The other options are either too general or off-topic.'
+            explanation: 'This topic sentence names the issue (the falling numbers), places it in time, and signals why it matters (crops). The social-colonies sentence is about honeybees but not their decline, the allergy sentence is off-topic, and the insects-for-centuries sentence is far too broad.'
           }
         ]
       }    },
@@ -103,19 +103,19 @@ A conclusion should:
         questions: [
           {
             question: 'A paragraph discusses three advantages of electric vehicles: lower emissions, cheaper fuel costs, and reduced noise pollution. Which conclusion is best?',
-            options: ['By reducing emissions, costs, and noise, electric vehicles offer practical benefits that extend beyond environmental impact.', 'Electric vehicles were first invented in the 1830s by Robert Anderson.', 'There are many types of electric vehicles available today.', 'In conclusion, electric vehicles are good.'],
+            options: ['Electric vehicles thus benefit drivers and communities in several ways at once.', 'The first electric vehicles were built in the 1830s by the inventor Robert Anderson.', 'There are now many different types of electric vehicles available to buyers.', 'In conclusion, electric vehicles are good and everyone should get one.'],
             correctAnswer: 0,
-            explanation: 'The emissions, costs, and noise option mentions all three benefits (synthesizes) and adds forward-looking significance. The 1830s option introduces history (new info). The many-types option is vague. The "electric vehicles are good" option is simplistic and uses the cliché "In conclusion."'
+            explanation: 'The paragraph\'s three advantages help both drivers (cheaper fuel) and communities (cleaner air, less noise), and the first option pulls them together into one takeaway. The 1830s option introduces new historical information, the many-types option shifts to a new topic, and the "In conclusion" option is simplistic, adds an unsupported demand, and uses a cliché.'
           },
           {
             question: 'A topic sentence for a paragraph about antibiotic resistance should:',
-            options: ['Name the problem, hint at its significance, and set up the evidence that follows', 'List every statistic that will appear in the paragraph', 'Begin with "In this paragraph, I will discuss..."', 'Make a bold claim with no connection to the paragraph content'],
+            options: ['Name the problem and signal why it matters to the reader', 'List every statistic that will appear later in the paragraph', 'Begin by announcing what the paragraph is going to discuss', 'Make a bold claim that the paragraph never goes on to support'],
             correctAnswer: 0,
             explanation: 'A good topic sentence previews the paragraph\'s content without listing every detail. It names the subject, signals its importance, and creates expectations for the evidence to follow.'
           },
           {
             question: 'Which is a red flag that a conclusion is wrong?',
-            options: ['It introduces brand-new information not discussed in the paragraph', 'It refers back to the topic sentence', 'It uses slightly different wording than the introduction', 'It is shorter than the topic sentence'],
+            options: ['It introduces information the paragraph never discussed', 'It refers back to the idea in the topic sentence', 'It uses slightly different wording than the introduction', 'It is noticeably shorter than the paragraph\'s topic sentence'],
             correctAnswer: 0,
             explanation: 'Conclusions synthesize — they do NOT introduce new facts, studies, or topics. If a "conclusion" brings up something never mentioned, it\'s a wrong answer on the SAT.'
           }
@@ -128,9 +128,9 @@ A conclusion should:
       content: '**Openings & Closings Check** — Select the correct answer.',
       exercise: {
         dropdowns: [
-          'A topic sentence should be [specific enough to preview but broad enough to cover|as vague as possible|exactly one word|a question]',
+          'A topic sentence should be [specific enough to preview but broad enough to cover|as broad as the whole subject|focused on one detail|a question to the reader]',
           'Conclusions should [synthesize the main point|introduce new evidence|restate the intro word-for-word|ask a new question]',
-          'A good conclusion for a paragraph about water conservation would mention [water conservation|space exploration|cooking tips|exercise]',
+          'A good conclusion for a paragraph about water conservation would mention [water conservation|the history of plumbing|rainfall in deserts|bottled water brands]',
           '"In conclusion" on the SAT is [cliché — avoid|required|preferred|the best transition]'
         ],
         correctAnswers: ['specific enough to preview but broad enough to cover', 'synthesize the main point', 'water conservation', 'cliché — avoid'],

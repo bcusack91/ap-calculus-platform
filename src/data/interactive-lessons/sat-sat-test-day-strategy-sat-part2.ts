@@ -40,13 +40,13 @@ export const satTestDayStrategyPart2Data = {
       type: 'quiz' as const,
       question: 'You have been working on a Math question for 2 minutes with no clear path forward. What should you do?',
       options: [
-        'Keep working — you are close',
-        'Flag it, put your best guess, and move on to easier questions',
-        'Skip it entirely and leave it blank',
-        'Start over with a completely different approach'
+        'Keep working, since you have already invested two minutes',
+        'Enter a guess and flag it to revisit if time allows',
+        'Leave it blank and come back only if time remains',
+        'Start over from scratch with a completely new approach'
       ],
       correctAnswer: 1,
-      explanation: 'After 2 minutes, the opportunity cost is high — easier questions are waiting. Flag it for review, select your best guess (no penalty for guessing), and come back with fresh eyes if time permits.'
+      explanation: 'After 2 minutes, the opportunity cost is high: easier questions are waiting. Enter your best guess (there is no penalty for guessing), flag it, and come back with fresh eyes if time permits. The two minutes already spent are gone either way, a blank can never earn a point, and restarting from scratch spends even more time.'
     },
     {
       id: 'tds2-text2',
@@ -97,14 +97,14 @@ Getting stuck on ONE question can cost you 4-5 questions at the end.
             explanation: '35 min × 60 sec = 2100 sec ÷ 22 Qs ≈ 95 seconds per question.'
           },
           {
-            question: 'During your first pass, you should answer approximately what percentage of questions?',
-            options: ['100% — answer everything in order', '~60% — skip anything that takes more than 90 seconds', '~30% — only the easiest ones', '~80% — skip only the very hardest'],
+            question: 'Which rule matches the two-pass strategy for your first pass through a module?',
+            options: ['Answer every question in order, however long each one takes', 'Guess and flag any question that passes about 90 seconds', 'Answer only the five easiest questions, then start pass two', 'Skip every question with a graph or table until pass two'],
             correctAnswer: 1,
-            explanation: 'Aim to answer ~60% on the first pass using ~60% of your time. This banks time for the harder flagged questions on your second pass.'
+            explanation: 'On the first pass you answer everything you can solve quickly, and when a question passes about 90 seconds you enter a guess and flag it. That banks time for the flagged questions on pass two. Working strictly in order lets one hard question eat your time, stopping after five easy questions wastes the first pass, and graphs and tables are often quick points.'
           },
           {
             question: 'With 2 minutes left and 3 questions unanswered, the best approach is:',
-            options: ['Skip all three — you cannot solve them in time', 'Guess on all 3 quickly, then check earlier answers', 'Spend the full 2 minutes on one question', 'Give an answer for each, using elimination where possible'],
+            options: ['Skip all three, since there is no time to solve them', 'Use the time to recheck answers you already gave', 'Spend the full 2 minutes solving just one of them', 'Answer all three, using quick elimination on each one'],
             correctAnswer: 3,
             explanation: 'With ~40 seconds each, try to eliminate at least 1-2 choices and make an educated guess. Every question answered is a chance at a point — never leave anything blank.'
           }
@@ -118,9 +118,9 @@ Getting stuck on ONE question can cost you 4-5 questions at the end.
       exercise: {
         dropdowns: [
           'R&W per-question time budget ≈ [71 sec|60 sec|90 sec|120 sec]',
-          'If stuck > 90 sec, you should [flag and move on|keep trying|skip permanently|ask for help]',
+          'If stuck > 90 sec, you should [flag and move on|keep trying|skip permanently|restart the problem]',
           'Two-pass strategy: first pass uses ~[60%|30%|80%|100%] of time',
-          'Last 2 min: main goal = [no blanks|reread all Qs|check math|relax]'
+          'Last 2 min: main goal = [no blanks|reread all Qs|check math|change doubtful answers]'
         ],
         correctAnswers: ['71 sec', 'flag and move on', '60%', 'no blanks'],
         hint1: '32 min ÷ 27 Qs = ~71 seconds per question.',

@@ -73,16 +73,16 @@ Uses subordinating conjunctions: **because, although, since, while, if, when, af
       exercise: {
         questions: [
           {
-            question: 'Which of the following is a fragment? \n(A) After the rain stopped, we went outside. \n(B) While the band played their final song. \n(C) She ran to the store and bought milk. \n(D) The book, written by a famous author, was a bestseller.',
-            options: ['Sentence A', 'Sentence B', 'Sentence C', 'Sentence D'],
+            question: 'Which of the following is a fragment?',
+            options: ['Because the rain stopped, we left.', 'While the band played their final song.', 'She ran to the store and bought milk.', 'The author\'s book was a bestseller.'],
             correctAnswer: 1,
             explanation: '"While the band played their final song" is a dependent clause with no main clause to complete the thought — it\'s a fragment.'
           },
           {
             question: 'The experiment failed, the researchers started over. \nHow should this comma splice be corrected?',
-            options: ['The experiment failed the researchers started over.', 'The experiment failed; the researchers started over.', 'The experiment failed, researchers started over.', 'The experiment, failed the researchers started over.'],
+            options: ['The experiment failed the researchers started over.', 'The experiment failed; the researchers started over.', 'The experiment failed, researchers started over.', 'The experiment; failed the researchers started over.'],
             correctAnswer: 1,
-            explanation: 'A semicolon correctly joins two independent clauses. The original is a comma splice (two independent clauses joined by only a comma).'
+            explanation: 'A semicolon correctly joins two independent clauses. The original is a comma splice (two independent clauses joined by only a comma). Removing the comma creates a fused sentence, dropping "the" leaves the splice in place, and a semicolon after "experiment" splits a subject from its verb.'
           }
         ]
       }
@@ -148,15 +148,15 @@ Type "fragment," "run-on," "comma splice," or "correct" for each sentence.
         questions: [
           {
             question: 'The orchestra performed brilliantly, earning a standing ovation, <u>they</u> had rehearsed every day for three months. \nWhich revision best fixes the error?',
-            options: ['brilliantly, earning a standing ovation they', 'brilliantly and earned a standing ovation, they', 'brilliantly, earning a standing ovation; they', 'brilliantly. Earning a standing ovation, they'],
+            options: ['brilliantly; earning a standing ovation, they', 'brilliantly and earned a standing ovation, they', 'brilliantly, earning a standing ovation; they', 'brilliantly. Earning a standing ovation, they'],
             correctAnswer: 2,
-            explanation: 'The original has a comma splice between "ovation" and "they." A semicolon correctly separates the two independent clauses.'
+            explanation: 'The original has a comma splice between "ovation" and "they." A semicolon there correctly separates the two independent clauses. A semicolon after "brilliantly" leaves a fragment, "and earned…, they" is still a splice, and the period version makes "Earning a standing ovation" describe the rehearsals, which happened before the ovation.'
           },
           {
             question: 'Because of the heavy rain and the flooded roads. The school decided to cancel classes for the day. \nWhich revision best fixes the error?',
-            options: ['No change needed', 'Because of the heavy rain and the flooded roads, the school decided to cancel classes for the day.', 'Because of the heavy rain and the flooded roads; the school decided to cancel classes for the day.', 'Because of the heavy rain, and the flooded roads the school decided to cancel classes for the day.'],
+            options: ['Because of the heavy rain and the flooded roads, and the school decided to cancel classes for the day.', 'Because of the heavy rain and the flooded roads, the school decided to cancel classes for the day.', 'Because of the heavy rain and the flooded roads; the school decided to cancel classes for the day.', 'Because of the heavy rain, and the flooded roads the school decided to cancel classes for the day.'],
             correctAnswer: 1,
-            explanation: 'The first part is a prepositional/causal phrase that should be connected to the main clause with a comma, not separated by a period.'
+            explanation: 'The first part is a prepositional phrase, not a sentence, so it must be attached to the main clause with a comma, not separated by a period. Adding "and" leaves the phrase with nothing to attach to, a semicolon can only join two independent clauses, and the misplaced comma splits "the heavy rain" from "the flooded roads."'
           }
         ]
       }

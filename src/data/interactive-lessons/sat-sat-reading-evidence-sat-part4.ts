@@ -41,7 +41,7 @@ The word "table" most nearly means:
 
 ### SAT Trap ⚠️
 
-The most **obvious** definition is almost always wrong. If "table" is in the answer choices and one option is "a flat surface for eating," that's the trap. The SAT wants the **secondary** or **contextual** meaning.`
+The most **obvious** definition is the most common trap. If the word is "table" and one option is "a flat surface for eating," that's the trap. The common meaning is not automatically wrong, though: let the context decide, and pick whichever meaning the sentence actually requires.`
     },
     {
       id: 're4-quiz',
@@ -51,19 +51,19 @@ The most **obvious** definition is almost always wrong. If "table" is in the ans
         questions: [
           {
             question: '"The senator sought to TEMPER her criticism of the bill with acknowledgment of its sponsors\' good intentions." In this context, "temper" most nearly means:',
-            options: ['moderate', 'anger', 'heat-treat (as metal)', 'disposition'],
+            options: ['moderate', 'anger', 'harden', 'disposition'],
             correctAnswer: 0,
-            explanation: 'She is softening her criticism by also praising intentions. "Moderate"—to reduce the intensity of—fits perfectly. "Temper" meaning anger or heat-treating metal doesn\'t fit this context.'
+            explanation: 'She is softening her criticism by also praising intentions. "Moderate"—to reduce the intensity of—fits perfectly. "Temper" meaning anger, a general disposition, or hardening metal doesn\'t fit this context.'
           },
           {
             question: '"The artist\'s PEDESTRIAN approach to the landscape disappointed critics who expected innovation." "Pedestrian" most nearly means:',
-            options: ['unimaginative and dull', 'walking on foot', 'related to foot traffic', 'methodical and thorough'],
+            options: ['ordinary', 'walking', 'crowded', 'meticulous'],
             correctAnswer: 0,
-            explanation: 'Critics expected innovation but were disappointed—so the approach was the opposite of innovative. "Pedestrian" meaning "ordinary, unimaginative" fits. The literal meaning (walking) is the trap.'
+            explanation: 'Critics expected innovation but were disappointed, so the approach was the opposite of innovative: "ordinary." The literal meanings (walking, crowded with foot traffic) are the traps, and "meticulous" is a compliment that would not disappoint critics.'
           },
           {
             question: 'When you encounter a vocabulary-in-context question, the FIRST thing you should do is:',
-            options: ['Reread the sentence and predict a synonym BEFORE looking at the choices', 'Look at all four choices and pick the most common definition', 'Think about how you personally use the word', 'Choose the most sophisticated-sounding option'],
+            options: ['Predict a replacement word before you read the four choices', 'Read all four choices first and pick the meaning you know best', 'Think about how you personally use the word in conversation', 'Choose the option that sounds the most sophisticated or formal'],
             correctAnswer: 0,
             explanation: 'Predicting before looking prevents you from being attracted to trap answers. Your prediction based on context will almost always match the correct choice.'
           }
@@ -122,21 +122,21 @@ The most **obvious** definition is almost always wrong. If "table" is in the ans
         questions: [
           {
             question: '"The teacher sought to CULTIVATE a love of reading in her students." "Cultivate" most nearly means:',
-            options: ['develop and nurture', 'farm', 'dig up', 'harvest'],
+            options: ['foster', 'plow', 'plant', 'harvest'],
             correctAnswer: 0,
-            explanation: '"Cultivate" here means to develop and nurture over time. The farming-related definitions (farm, dig, harvest) are the common/literal meanings — the SAT tests the figurative meaning.'
+            explanation: '"Cultivate" here means to foster, that is, to develop and nurture over time. The farming meanings (plow, plant, harvest) are literal and do not fit "a love of reading."'
           },
           {
             question: '"The **singular** achievement of landing on the moon united the nation." "Singular" most nearly means:',
-            options: ['remarkable and unique', 'one in number', 'isolated', 'grammatically singular'],
+            options: ['remarkable', 'solitary', 'individual', 'peculiar'],
             correctAnswer: 0,
-            explanation: 'In context, "singular achievement" means remarkable/unique — not just "one." The moon landing was unique, extraordinary, and unprecedented.'
+            explanation: 'In context, "singular achievement" means remarkable, not just "one" (individual) or "alone" (solitary). "Peculiar" is another meaning of singular, but a strange achievement would not unite a nation.'
           },
           {
-            question: 'The #1 rule for vocabulary-in-context questions is:',
-            options: ['The most common definition is almost always the WRONG answer', 'Choose the longest word', 'Pick the hardest vocabulary word', 'The answer is always the first word you think of'],
+            question: 'Which rule is most reliable for vocabulary-in-context questions?',
+            options: ['Let the sentence around the word decide the meaning that fits', 'Rule out the most common meaning of the word every time', 'Choose the most sophisticated word among the four choices', 'Go with the first meaning of the word that comes to mind'],
             correctAnswer: 0,
-            explanation: 'The SAT deliberately tests secondary meanings. If "check" is the word, "verify" (the common meaning) is the trap. The contextual meaning (restrain, examine, etc.) is what they want.'
+            explanation: 'Context decides. The common meaning is a frequent trap (if the word is "check" and the sentence is about regulations slowing expansion, "verify" is wrong), but it is not automatically wrong: when the sentence calls for the common meaning, it is the answer. Sophistication and first instinct are not evidence.'
           }
         ]
       }
@@ -150,7 +150,7 @@ The most **obvious** definition is almost always wrong. If "table" is in the ans
           '"The discovery arrested the decline" → arrested means [stopped|jailed|photographed|identified]',
           '"The gravity of the crisis" → gravity means [seriousness|weight|physics|attraction]',
           '"She qualified her endorsement" → qualified means [limited|earned|completed|improved]',
-          'First step for vocab questions: [cover the word and predict|read all choices first|pick the common meaning|guess]'
+          'First step for vocab questions: [cover the word and predict|read all choices first|rule out the common meaning|find the hardest word]'
         ],
         correctAnswers: ['stopped', 'seriousness', 'limited', 'cover the word and predict'],
         hint1: 'A decline being "arrested" = being stopped.',
@@ -167,7 +167,7 @@ The most **obvious** definition is almost always wrong. If "table" is in the ans
 | Strategy | Detail |
 |---|---|
 | Substitution method | Cover word → predict → match |
-| #1 trap | The most common definition is usually wrong |
+| #1 trap | The most common definition when the context calls for another |
 | Multiple-meaning words | SAT tests secondary/contextual meanings |
 | Key words to know | Table, arrest, check, qualify, gravity, champion, craft, temper |
 | Context clues | Surrounding words reveal the intended meaning |

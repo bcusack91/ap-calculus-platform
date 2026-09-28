@@ -47,15 +47,15 @@ Long sentences aren't automatically run-ons. A sentence can be 40+ words and sti
         questions: [
           {
             question: 'Which correctly fixes this run-on? "The museum opened in 1923, it quickly became a cultural landmark."',
-            options: ['The museum opened in 1923; it quickly became a cultural landmark.', 'The museum opened in 1923 it quickly became a cultural landmark.', 'The museum opened in 1923, becoming a cultural landmark quickly.', 'The museum, opened in 1923, it quickly became a cultural landmark.'],
+            options: ['The museum opened in 1923; it quickly became a cultural landmark.', 'The museum opened in 1923 it quickly became a cultural landmark.', 'The museum opened in 1923, quickly it became a cultural landmark.', 'The museum, opened in 1923, it quickly became a cultural landmark.'],
             correctAnswer: 0,
-            explanation: 'A semicolon correctly joins two related independent clauses. The original is a comma splice (two independent clauses joined by just a comma). The "becoming a cultural landmark quickly" option changes the meaning, and the "The museum, opened in 1923, it" option creates a new error.'
+            explanation: 'A semicolon correctly joins two related independent clauses. The original is a comma splice (two independent clauses joined by just a comma). The "quickly it became" version is still a comma splice (moving the adverb does not change the clause), the version with no punctuation is a fused sentence, and "The museum, opened in 1923, it" gives the sentence two subjects for one verb.'
           },
           {
-            question: 'Which is a sentence fragment? (A) "Although she studied for weeks." (B) "She studied for weeks." (C) "She studied for weeks and passed the exam."',
-            options: ['A—"Although" makes it a dependent clause that can\'t stand alone', 'B—it\'s too short to be a complete sentence', 'C—compound sentences are fragments', 'None of these are fragments'],
+            question: 'Which of these is a sentence fragment?',
+            options: ['Although she studied for weeks.', 'She studied for weeks.', 'She studied for weeks and passed the exam.', 'After weeks of study, she passed.'],
             correctAnswer: 0,
-            explanation: '"Although she studied for weeks" is a dependent clause—it has a subject and verb but starts with a subordinating conjunction ("although") that makes it incomplete. It needs an independent clause to finish the thought.'
+            explanation: '"Although she studied for weeks" is a dependent clause: it has a subject and verb, but the subordinating conjunction "although" makes it incomplete. It needs an independent clause to finish the thought. "She studied for weeks" is short but complete, the compound sentence is complete, and "After weeks of study, she passed" has a full independent clause after the introductory phrase.'
           }
         ]
       }    },
@@ -103,19 +103,19 @@ Ask two questions:
         questions: [
           {
             question: '"The professor published her findings, _____ her colleagues praised her methodology." Which creates a grammatically correct sentence?',
-            options: ['and', 'she', 'it', 'they'],
+            options: ['and', 'then', 'thus', 'also'],
             correctAnswer: 0,
-            explanation: 'Two independent clauses need a conjunction after the comma. "And" creates a proper comma + coordinating conjunction. "She," "it," or "they" after a comma creates a comma splice.'
+            explanation: 'Two independent clauses joined by a comma need a coordinating conjunction (for, and, nor, but, or, yet, so). "And" is one. "Then," "thus," and "also" are adverbs, not conjunctions, so a comma followed by any of them still leaves a comma splice.'
           },
           {
             question: 'Which of the following is a complete sentence?',
-            options: ['The researchers, having analyzed data from three continents, published their results.', 'Although the researchers analyzed data from three continents.', 'Having analyzed data from three continents, the results of which were surprising.', 'The researchers who, despite many setbacks in their work.'],
+            options: ['The researchers, having analyzed data from three continents, published results.', 'Although the researchers analyzed data from three continents and published results.', 'Having analyzed data from three continents, the results of which were surprising.', 'Researchers who, despite setbacks, had analyzed data from three continents.'],
             correctAnswer: 0,
-            explanation: 'A has subject (researchers) + main verb (published). B starts with "although" (dependent). C has no main verb. D has no main verb — "who" starts a relative clause that never completes.'
+            explanation: 'The complete sentence has a subject ("researchers") and a main verb ("published"), with the participial phrase set off by commas. The "Although" version is one long dependent clause. The "Having analyzed" version never gets a main verb ("the results of which were surprising" is a relative clause). In the "Researchers who" version, "who" starts a relative clause, so "Researchers" never gets a verb of its own.'
           },
           {
             question: 'How can you tell the difference between a long correct sentence and a run-on?',
-            options: ['Check whether independent clauses are properly joined (conjunction, semicolon, or period)', 'Long sentences are always run-ons', 'Count the commas — more than 2 means run-on', 'Read it aloud — if you need to breathe, it\'s a run-on'],
+            options: ['Check whether each pair of independent clauses is properly joined', 'Count the commas, since more than two usually signals a run-on', 'Read it aloud, since needing a breath signals a run-on', 'Assume any sentence over thirty words is probably a run-on'],
             correctAnswer: 0,
             explanation: 'Length doesn\'t determine correctness. A run-on happens when independent clauses are joined improperly (usually a comma splice). Properly connected clauses can form long, correct sentences.'
           }
@@ -130,8 +130,8 @@ Ask two questions:
         dropdowns: [
           '"She ran to the store, she bought milk." is a [comma splice|fragment|correct sentence|complex sentence]',
           '"Although she studied all night." is a [fragment|run-on|complete sentence|comma splice]',
-          'Two independent clauses can be joined by [semicolon or comma + conjunction|comma alone|nothing|a subordinating word]',
-          'A fragment is missing a [subject, verb, or complete thought|comma|transition|paragraph]'
+          'Two independent clauses can be joined by [semicolon or comma + conjunction|comma alone|no punctuation at all|comma + "however"]',
+          'A fragment is missing a [subject, verb, or complete thought|comma before the verb|transition word|closing punctuation mark]'
         ],
         correctAnswers: ['comma splice', 'fragment', 'semicolon or comma + conjunction', 'subject, verb, or complete thought'],
         hint1: 'Two independent clauses joined by only a comma = comma splice.',
