@@ -116,10 +116,10 @@ export const satProbSolvDataPart7Data = {
             explanation: '$\\frac{x}{12} = \\frac{15}{20} = \\frac{3}{4}$. Cross multiply: $4x = 36$ → $x = 9$.'
           },
           {
-            question: 'A scatterplot has $r = -0.92$. Which statement is true?',
+            question: 'In an observational study, a scatterplot of $x$ and $y$ shows points that fall from left to right and lie very close to the line of best fit. Which statement is true?',
             options: ['Strong negative linear association', 'Weak negative linear association', 'Strong positive linear association', 'An increase in $x$ causes $y$ to decrease'],
             correctAnswer: 0,
-            explanation: '$|r| = 0.92$ is close to 1, indicating strong correlation. The negative sign means as $x$ increases, $y$ decreases. Correlation does NOT mean causation, so a claim that $x$ causes $y$ to decrease goes too far.'
+            explanation: 'Points lying very close to the line make the association strong and linear, and falling from left to right makes it negative: as $x$ increases, $y$ tends to decrease. An observational study shows association, not causation, so a claim that $x$ causes $y$ to decrease goes too far.'
           }
         ]
       }
@@ -153,7 +153,7 @@ export const satProbSolvDataPart7Data = {
 | 2 | Percentages | Multiplier method, successive changes compound |
 | 3 | Two-Way Tables | Marginal vs. conditional vs. joint probability |
 | 4 | Statistics | Mean/median/SD, outlier effects, skewness |
-| 5 | Scatterplots | Slope in context, residuals, $r$ and $r^2$ |
+| 5 | Scatterplots | Slope in context, residuals, describing association |
 | 6 | Probability | Tables, "from" rule, NOT questions, predicting counts |
 | 7 | Review | Decision framework, time management, traps |
 

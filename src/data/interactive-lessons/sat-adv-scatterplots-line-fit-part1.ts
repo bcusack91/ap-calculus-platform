@@ -46,7 +46,7 @@ Given two sets of residuals for the same data, the better model is the one whose
 
 - A point far above the others at a **typical $x$** raises the intercept and barely moves the slope.
 - A point at an **extreme $x$** (high leverage) can swing the slope substantially.
-- Any point far off the pattern **weakens** the correlation.`
+- Any point far off the pattern **weakens** the association.`
     },
     {
       id: 'scat-adv-p1-q1',

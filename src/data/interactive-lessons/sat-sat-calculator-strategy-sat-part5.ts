@@ -17,7 +17,7 @@ After entering data points, type: \`y₁ ~ mx₁ + b\`
 Desmos finds the best-fit line and gives you:
 - **m** (slope) — the rate of change
 - **b** (y-intercept) — starting value
-- **$r^{2}$** — how well the line fits (closer to 1 = better fit)
+- **residuals** — actual minus predicted for each point (small and patternless = good fit)
 
 ### When the SAT Gives You a Scatterplot
 1. Enter the visible data points into a Desmos table
@@ -69,7 +69,7 @@ A **residual** = actual value − predicted value. If residuals show a pattern (
 |---|---|
 | **Problem** | "Data curves upward. Is it linear, quadratic, or exponential?" |
 | **Try each** | Linear: $y_1 \\sim mx_1 + b$. Quadratic: $y_1 \\sim ax_1^2 + bx_1 + c$. Exponential: $y_1 \\sim ab^{x_1}$. |
-| **Compare $r^2$** | Whichever has $r^2$ closest to 1 is the best fit. |
+| **Compare the fit** | Whichever curve passes closest to the points, leaving small residuals with no pattern, is the best fit. |
 
 ### Regression Types You Need
 
@@ -85,7 +85,7 @@ A **residual** = actual value − predicted value. If residuals show a pattern (
 |---|---|
 | $m$ (slope) | Rate of change per unit of $x$ |
 | $b$ (y-intercept) | Predicted $y$ when $x = 0$ |
-| $r^2$ | Fit quality: 1.0 = perfect, 0.8+ = good, <0.5 = poor |
+| Residuals | Actual minus predicted: small and patternless = good fit |
 | $a, b$ in exponential | $a$ = initial value, $b$ = growth factor |
 
 ### Using Regression to Predict
@@ -99,10 +99,10 @@ Once you have the equation, plug in any $x$ to predict $y$. In Desmos, just look
       exercise: {
         questions: [
           {
-            question: 'You run linear regression and get $r^2 = 0.42$. This means:',
-            options: ['The linear model is only a weak fit for the data', 'The linear model is a strong fit for the data', 'The slope of the best-fit line is 0.42', 'The linear model passes through 42% of the points'],
+            question: 'You fit a line to a table of data in Desmos. The residuals are positive for the smallest and largest $x$-values and negative for the $x$-values in the middle. What does this suggest?',
+            options: ['A nonlinear model would fit the data better', 'The linear model is a strong fit for the data', 'The slope of the best-fit line is too steep', 'The linear model passes through every point'],
             correctAnswer: 0,
-            explanation: '$r^2 = 0.42$ means only 42% of the variation in $y$ is explained by $x$ linearly. That\'s a poor fit. Try a different model (quadratic, exponential) to see if $r^2$ improves.'
+            explanation: 'Positive residuals at both ends and negative residuals in the middle mean the data curve away from the line: the line underestimates at the ends and overestimates in the middle. That pattern means a linear model is a poor choice. Try a quadratic or exponential model and check whether the residuals become small and patternless.'
           },
           {
             question: 'A regression gives $y = 3.2x + 15$. What does the 15 represent?',
@@ -128,13 +128,13 @@ Once you have the equation, plug in any $x$ to predict $y$. In Desmos, just look
           'Data follows a straight-line pattern → [Linear|Exponential|Quadratic|None]',
           'Data doubles repeatedly → [Exponential|Linear|Quadratic|Constant]',
           'Data forms an arch shape (rises then falls) → [Quadratic|Linear|Exponential|Constant]',
-          '$r^{2}$ close to 1 means → [Model fits well|Model fits poorly|Slope is 1|Data is linear]'
+          'Residuals small and randomly scattered → [Model fits well|Model fits poorly|Slope is 1|Data is linear]'
         ],
         correctAnswers: ['Linear', 'Exponential', 'Quadratic', 'Model fits well'],
         hint1: 'Constant rate of change = linear.',
         hint2: 'Repeated multiplication = exponential.',
         hint3: 'Parabolic shape = quadratic.',
-        explanation: 'Linear for constant growth, exponential for percent-based growth, quadratic for parabolic patterns. $r^{2}$ near 1 means the model explains the data well.'
+        explanation: 'Linear for constant growth, exponential for percent-based growth, quadratic for parabolic patterns. Small, randomly scattered residuals mean the model fits the data well.'
       }
     },
     {
@@ -149,7 +149,7 @@ Once you have the equation, plug in any $x$ to predict $y$. In Desmos, just look
 | Exponential | $y_1 \\sim ab^{x_1}$ | Repeated multiplication |
 
 ### Key Outputs
-- **$r^2$** near 1 = good fit; near 0 = poor fit
+- **Fit check**: the best model leaves small residuals with no pattern
 - **Slope** = rate of change (linear)
 - **y-intercept** = predicted value at $x = 0$
 - **Residuals** should be random if the model is appropriate

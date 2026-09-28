@@ -374,9 +374,31 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'easy',
     generate() {
-      const r = randInt(85, 98) / 100
-      const correct = 'A strong positive correlation'
-      return { id: this.id, category: this.category, question: `$r = ${r}$. Describe the correlation.`, ...makeStringOptions(correct, ['A fairly weak positive correlation', 'A strong negative correlation', 'Almost no correlation']), explanation: `$r$ close to 1 ($${r}$) indicates strong positive correlation.` }
+      // Describe the association shown in a table, in words.
+      const kind = randInt(0, 2)
+      const noise = () => randInt(-1, 1)
+      const xs = [1, 2, 3, 4, 5]
+      let ys: number[]
+      if (kind === 2) {
+        const top = randInt(30, 45); const c = randInt(3, 5)
+        ys = xs.map(x => top - c * (x - 3) * (x - 3) + (x === 3 ? 0 : noise()))
+      } else {
+        const start = kind === 0 ? randInt(5, 25) : randInt(35, 60); const d = randInt(5, 8) * (kind === 0 ? 1 : -1)
+        ys = xs.map(x => start + d * (x - 1) + noise())
+      }
+      const labels = [
+        'Positive linear — as x increases, y also increases',
+        'Negative linear — as x increases, y decreases',
+        'Nonlinear — y rises, then falls as x increases',
+      ]
+      const correct = labels[kind]
+      const why = [
+        'the y-values rise by roughly the same amount at each step, so the association is positive and linear',
+        'the y-values fall by roughly the same amount at each step, so the association is negative and linear',
+        'the y-values rise to a peak at $x = 3$ and then fall, so the association is nonlinear',
+      ][kind]
+      const table = `| $x$ | ${xs.join(' | ')} |\n| --- | --- | --- | --- | --- | --- |\n| $y$ | ${ys.join(' | ')} |`
+      return { id: this.id, category: this.category, question: `The table shows five pairs of values of $x$ and $y$. Which best describes the association between $x$ and $y$?\n\n${table}`, ...makeStringOptions(correct, [...labels.filter(l => l !== correct), 'No association — y does not change with x']), explanation: `Reading left to right, ${why}.` }
     }
   },
   {
@@ -384,8 +406,15 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
     difficulty: 'medium',
     generate() {
-      const correct = 'The share of the variation in $y$ explained by $x$'
-      return { id: this.id, category: this.category, question: 'What does the coefficient of determination ($r^2$) represent?', ...makeStringOptions(correct, ['The slope of the fitted regression line', 'The predicted value of $y$ when $x$ is zero', 'The number of data points used to fit the model']), explanation: '$r^2$ indicates what fraction of the dependent variable variation is explained by the model.' }
+      // Interpret the y-intercept of a line of best fit in context.
+      if (Math.random() < 0.5) {
+        const m = randInt(2, 9) / 10; const b = randInt(8, 30)
+        const correct = 'The predicted height, in centimeters, at day 0'
+        return { id: this.id, category: this.category, question: `A botanist models the height $h$, in centimeters, of a plant $d$ days after she first measured it with the line of best fit $h = ${m}d + ${b}$. What is the best interpretation of ${b} in this context?`, ...makeStringOptions(correct, ['The predicted growth, in centimeters, for each day', `The predicted height, in centimeters, at day ${b}`, 'The predicted number of days until the height is 0 cm']), explanation: `In $h = ${m}d + ${b}$, the constant ${b} is the value of $h$ when $d = 0$: the predicted height, in centimeters, on the day of the first measurement. The coefficient ${m} is the predicted growth per day.` }
+      }
+      const m = randInt(2, 4); const b = randInt(24, 38)
+      const correct = 'The predicted value, in thousands of dollars, at age 0'
+      return { id: this.id, category: this.category, question: `A dealer models the value $v$, in thousands of dollars, of a used car that is $a$ years old with the line of best fit $v = ${b} - ${m}a$. What is the best interpretation of ${b} in this context?`, ...makeStringOptions(correct, ['The predicted drop, in thousands of dollars, per year', `The predicted value, in thousands of dollars, at age ${b}`, 'The predicted age, in years, when the value is 0']), explanation: `In $v = ${b} - ${m}a$, the constant ${b} is the value of $v$ when $a = 0$: the predicted value, in thousands of dollars, of a car that is 0 years old. The ${m} is the predicted drop in value, in thousands of dollars, per year.` }
     }
   },
   {
@@ -414,7 +443,7 @@ const questionPool: QuestionTemplate[] = [
     difficulty: 'medium',
     generate() {
       const correct = 'The pattern may not continue outside the data'
-      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['The line is always wrong far from the origin', 'The correlation $r$ is zero outside the data range', 'The slope changes sign outside the observed data']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
+      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict $y$ for x-values far outside the data range?', ...makeStringOptions(correct, ['The line is always wrong far from the origin', 'The residuals are all zero outside the data range', 'The slope changes sign outside the observed data']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
     }
   },
   {

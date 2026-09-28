@@ -110,7 +110,7 @@ export const satDataStatsPart7Data = {
 | Mistake | Fix |
 |---------|-----|
 | Using wrong denominator in two-way table | Re-read "of [group]" to find denominator |
-| Saying correlation = causation | Use "associated with" unless random assignment |
+| Saying association = causation | Use "associated with" unless random assignment |
 | Using the grand total when the question says "from those who…" | The word after "from" names your denominator |
 | Confusing "all values" with "the mean" | Adding 10 to every value ≠ adding 10 to just the mean |
 | Ignoring "without replacement" | After removing one item, total decreases by 1 |`
@@ -128,10 +128,10 @@ export const satDataStatsPart7Data = {
             explanation: 'Only the largest value moves, and it stays the largest, so every value keeps its place in order: the median, both quartiles, and the IQR stay the same. The sum rises by $400 - 125 = 275$, so the mean rises by $275/100 = 2.75$. The mean uses every value; the median and quartiles use only positions.'
           },
           {
-            question: 'A scatterplot with $r = 0.05$. What does this suggest?',
-            options: ['Virtually no linear relationship', 'Strong positive relationship', 'Strong negative relationship', 'Perfect positive correlation'],
+            question: 'The points on a scatterplot form a shapeless cloud with no upward or downward trend. What does this suggest?',
+            options: ['Virtually no linear relationship', 'Strong positive relationship', 'Strong negative relationship', 'Perfect positive relationship'],
             correctAnswer: 0,
-            explanation: '$r$ near 0 means almost no linear relationship between the variables.'
+            explanation: 'A positive relationship would show the points rising from left to right, and a negative one would show them falling. A shapeless cloud with neither trend means there is virtually no linear relationship between the variables.'
           },
           {
             question: 'A weighted average of two groups is 72. Group A (20 people) averages 60, and Group B averages 80. How many people are in Group B?',
@@ -149,15 +149,15 @@ export const satDataStatsPart7Data = {
       exercise: {
         dropdowns: [
           { label: 'A dataset: {5, 5, 5, 5, 5}. What is the SD?', options: ['0', '5', '1', 'Cannot determine'] },
-          { label: 'Correlation between shoe size and SAT score is r = 0.01', options: ['No meaningful relationship', 'Strong positive relationship', 'Moderate relationship', 'Shoe size causes high scores'] },
+          { label: 'A scatterplot of shoe size vs. SAT score shows a shapeless cloud of points', options: ['No meaningful relationship', 'Strong positive relationship', 'Moderate relationship', 'Shoe size causes high scores'] },
           { label: 'Poll: 50% ± 4%. Can we conclude a majority?', options: ['No — interval includes values below 50%', 'Yes — 50% is a majority', 'Yes — the margin is only 4%', 'Need more data'] },
           { label: '"Students who eat breakfast scored 15 points higher on average"', options: ['Association, not necessarily causation', 'Breakfast causes higher scores', 'Higher scores cause breakfast eating', 'No relationship'] }
         ],
         correctAnswers: ['0', 'No meaningful relationship', 'No — interval includes values below 50%', 'Association, not necessarily causation'],
         hint1: 'All identical values → zero distance from the mean → SD = 0.',
-        hint2: '$r = 0.01$ is essentially zero — no linear pattern.',
+        hint2: 'No upward or downward trend in the cloud means no linear pattern.',
         hint3: 'Confidence interval: $46\\%$ to $54\\%$. Since $46\\% < 50\\%$, we can\'t guarantee a majority.',
-        explanation: 'Identical values → SD = 0. $r ≈ 0$ → no linear relationship. Interval includes below 50% → can\'t conclude majority. Observational → association only.'
+        explanation: 'Identical values → SD = 0. Shapeless cloud → no linear relationship. Interval includes below 50% → can\'t conclude majority. Observational → association only.'
       }
     },
     {
@@ -169,7 +169,7 @@ export const satDataStatsPart7Data = {
 |------|------------|
 | 1 | Mean, median, mode — and how outliers affect them |
 | 2 | Standard deviation — comparing spread, effect of transformations |
-| 3 | Scatterplots — slope interpretation, residuals, correlation |
+| 3 | Scatterplots — slope interpretation, residuals, describing association |
 | 4 | Two-way tables — joint, marginal, conditional frequencies |
 | 5 | Probability — complements and "selected from" table questions |
 | 6 | Study design — causation vs. association, bias types |
@@ -178,7 +178,7 @@ export const satDataStatsPart7Data = {
 ### Top 5 SAT Data & Statistics Rules
 
 1. **Mean = Sum ÷ Count** — use Sum = Mean × Count to find missing values
-2. **Correlation ≠ Causation** — only experiments prove cause
+2. **Association ≠ Causation** — only experiments prove cause
 3. **Watch the denominator** — "of males" vs. "of all" changes the answer
 4. **"NOT" questions** — the probability of NOT happening is 1 minus the probability of happening
 5. **Slope in context** — "For each additional [x], [y] is predicted to [increase/decrease] by [slope]"`

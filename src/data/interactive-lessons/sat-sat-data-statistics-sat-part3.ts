@@ -12,12 +12,13 @@ export const satDataStatsPart3Data = {
 
 Each point represents two measurements for one individual/item.
 
-### Correlation
+### Describing an Association (in Words)
 
-- **Positive**: as $x$ increases, $y$ increases
-- **Negative**: as $x$ increases, $y$ decreases
-- **No correlation**: no clear pattern
-- **Strength**: how closely points follow a line (strong vs. weak)
+The SAT asks you to describe the pattern in words — never with a number:
+- **Direction**: *positive* (as $x$ increases, $y$ tends to increase) or *negative* (as $x$ increases, $y$ tends to decrease)
+- **Form**: *linear* (points follow a straight band) or *nonlinear* (points follow a curve, such as a U shape or a leveling-off curve)
+- **Strength**: *strong* (points lie close to the trend) or *weak* (points are widely scattered around it)
+- **No clear association**: no upward or downward trend at all
 
 ### Line of Best Fit (Regression Line)
 
@@ -120,10 +121,10 @@ If a residual plot shows a clear curve, a linear model is NOT the best fit — t
             explanation: 'A pattern in the residual plot (like a curve) means the linear model is missing something — a quadratic or other non-linear model would fit better.'
           },
           {
-            question: 'The correlation coefficient $r = -0.92$. This indicates:',
+            question: 'In a scatterplot, the data points fall from left to right and all lie very close to a straight line. Which best describes the association?',
             options: ['Strong negative linear relationship', 'Weak negative linear relationship', 'Strong positive linear relationship', 'No linear relationship'],
             correctAnswer: 0,
-            explanation: '$r$ close to $-1$ means strong negative correlation. The points closely follow a downward line.'
+            explanation: 'Falling from left to right makes the association negative, and points lying very close to a straight line make it strong and linear. A weak association would show points widely scattered around the line.'
           }
         ]
       }
@@ -158,8 +159,8 @@ If a residual plot shows a clear curve, a linear model is NOT the best fit — t
 | Residual | Actual − Predicted |
 | Positive residual | Point above the line |
 | Negative residual | Point below the line |
-| $r$ close to ±1 | Strong linear correlation |
-| $r$ close to 0 | Weak or no linear correlation |
+| Points close to a line | Strong linear association |
+| Points widely scattered, no trend | Weak or no association |
 
 | SAT Wording | Correct Response |
 |-------------|-----------------|

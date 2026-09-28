@@ -70,18 +70,19 @@ Residual = actual – predicted
 | Curve (decreasing rate) | Growth that slows, such as $y = a\\sqrt{x}$ | Curve levels off |
 | Ups and downs | Quadratic ($y = ax^2 + bx + c$) | Parabolic residual pattern |
 
-### Correlation Coefficient ($r$)
+### Worked Example 3: Describing an Association in Words
 
-| $r$ Value | Strength | Direction |
-|---|---|---|
-| $r = 1.0$ | Perfect | Positive |
-| $0.7 < r < 1.0$ | Strong | Positive |
-| $0.3 < r < 0.7$ | Moderate | Positive |
-| $0 < r < 0.3$ | Weak | Positive |
-| $r = 0$ | None | — |
-| $r < 0$ | Same scale, opposite direction | Negative |
+The SAT describes an association in words: direction, form, and strength.
 
-> **SAT key fact:** $r^2$ = proportion of variation in $y$ explained by $x$. If $r = 0.8$, then $r^2 = 0.64$, meaning 64% of the variation is explained.`
+| What the scatterplot looks like | How to describe it |
+|---|---|
+| Points lie close to a rising line | Strong positive linear association |
+| Points loosely follow a rising line, widely scattered | Weak positive linear association |
+| Points lie close to a falling line | Strong negative linear association |
+| Points follow a curve | Nonlinear association |
+| Points form a cloud with no upward or downward trend | No clear association |
+
+> **SAT key fact:** strength is how closely the points follow the trend, not how steep the trend is. A steep line with widely scattered points is a weak association; a gentle line that the points hug is a strong one.`
     },
     {
       id: 'psd5-quiz2',
@@ -97,15 +98,15 @@ Residual = actual – predicted
           },
           {
             question: 'A residual plot for a linear model shows a clear U-shaped curve. This suggests:',
-            options: ['A nonlinear model would fit these data better', 'The linear model already fits the data well', 'The data set contains too many outliers', 'The two variables have no correlation'],
+            options: ['A nonlinear model would fit these data better', 'The linear model already fits the data well', 'The data set contains too many outliers', 'The two variables have no association'],
             correctAnswer: 0,
             explanation: 'Patterned residuals (U-shape, curves) indicate the model type is wrong. A quadratic or other nonlinear model would better capture the pattern.'
           },
           {
-            question: 'The correlation between hours studied and score is $r = 0.9$. What percent of the variation in scores is explained by hours studied?',
-            options: ['$81\\%$', '$90\\%$', '$9\\%$', '$45\\%$'],
+            question: 'In scatterplot A, the points lie very close to a line of best fit with slope $0.5$. In scatterplot B, the points are widely scattered around a line of best fit with slope $4$. Which statement is true?',
+            options: ['The association in A is stronger than in B', 'The association in B is stronger than in A', 'The association in A is as strong as in B', 'Neither scatterplot shows any association'],
             correctAnswer: 0,
-            explanation: '$r^2 = (0.9)^2 = 0.81 = 81\\%$. The coefficient of determination $r^2$ gives the proportion of variation explained.'
+            explanation: 'Strength measures how closely the points follow the trend, not how steep the line is. The points in A hug their line, so A shows a strong association; the points in B are widely scattered, so B shows a weak one. Both lines have positive slopes, so both scatterplots show some positive association.'
           }
         ]
       }
@@ -118,14 +119,14 @@ Residual = actual – predicted
         dropdowns: [
           'Positive residual means actual value is [above|below|on|unrelated to] the line',
           'Extrapolation predicts [outside|within|at the center of|exactly at] the data range',
-          'Correlation $r = -0.85$ indicates a [strong negative|weak negative|strong positive|no] relationship',
-          'Curved residual pattern suggests [wrong model type|good fit|no correlation|outliers]'
+          'Points lying close to a falling line show a [strong negative|weak negative|strong positive|no] association',
+          'Curved residual pattern suggests [wrong model type|good fit|no association|outliers]'
         ],
         correctAnswers: ['above', 'outside', 'strong negative', 'wrong model type'],
         hint1: 'Residual = actual − predicted. Positive means actual is higher.',
         hint2: 'Extrapolation goes beyond what the data covers.',
-        hint3: '$|r|$ close to 1 = strong. Negative sign = negative direction.',
-        explanation: 'Positive residual → above the line. Extrapolation → outside data range (unreliable). r = −0.85 → strong negative. Curved residuals → model doesn\'t capture the pattern.'
+        hint3: 'Close to the line = strong. Falling from left to right = negative.',
+        explanation: 'Positive residual → above the line. Extrapolation → outside data range (unreliable). Points close to a falling line → strong negative. Curved residuals → model doesn\'t capture the pattern.'
       }
     },
     {
@@ -138,14 +139,14 @@ Residual = actual – predicted
 | Slope | Rate of change in context |
 | y-intercept | Predicted value when $x = 0$ |
 | Residual | Actual − predicted |
-| $r$ | Strength and direction of linear relationship |
-| $r^2$ | Proportion of variation explained |
+| Direction | Positive (rising) or negative (falling) trend |
+| Strength | How closely the points follow the trend |
 | Random residuals | Good model fit |
 | Patterned residuals | Try different model type |
 | Interpolation | Reliable (within data range) |
 | Extrapolation | Unreliable (beyond data range) |
 
-*Next: Probability and expected value →*`
+*Next: Probability →*`
     }
   ]
 };

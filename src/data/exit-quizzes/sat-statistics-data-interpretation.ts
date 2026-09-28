@@ -509,21 +509,22 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots & Best Fit',
     difficulty: 'medium',
     generate() {
-      const rChoices = [
-        { r: '0.95', desc: 'very strong positive' },
-        { r: '-0.88', desc: 'strong negative' },
-        { r: '0.12', desc: 'very weak positive' },
-        { r: '-0.02', desc: 'essentially none' },
+      // Describe an association in words, as the SAT does.
+      const plots = [
+        { look: 'lie very close to a straight line that rises from left to right', desc: 'Strong positive linear', why: 'rising from left to right makes it positive, and points hugging the line make it strong' },
+        { look: 'lie very close to a straight line that falls from left to right', desc: 'Strong negative linear', why: 'falling from left to right makes it negative, and points hugging the line make it strong' },
+        { look: 'drift upward from left to right but are widely scattered around the trend', desc: 'Weak positive linear', why: 'the upward drift makes it positive, and the wide scatter makes it weak' },
+        { look: 'form a cloud with no upward or downward trend', desc: 'No clear association', why: 'without any upward or downward trend there is no direction to describe' },
       ]
-      const pick = rChoices[randInt(0, rChoices.length - 1)]
+      const pick = plots[randInt(0, plots.length - 1)]
       const correct = pick.desc
-      const others = rChoices.filter(c => c.r !== pick.r).map(c => c.desc)
-      const { options, correctIndex } = makeStringOptions(correct, others.slice(0, 3))
+      const others = plots.filter(c => c.desc !== pick.desc).map(c => c.desc)
+      const { options, correctIndex } = makeStringOptions(correct, others)
       return {
         id: this.id, category: this.category,
-        question: `A correlation coefficient is $r = ${pick.r}$. This suggests:`,
+        question: `The points on a scatterplot ${pick.look}. Which best describes the association between the two variables?`,
         options, correctIndex,
-        explanation: `$r = ${pick.r}$ indicates a ${pick.desc} linear relationship.`
+        explanation: `${pick.desc}: ${pick.why}.`
       }
     }
   },

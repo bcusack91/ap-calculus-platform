@@ -70,7 +70,7 @@ Dividing by the *sum* of the slopes is a planted option, so check that you subtr
         'The slope becomes negative, because the new point breaks the positive association'
       ],
       correctAnswer: 1,
-      explanation: `A point at a typical $x$-value has almost no leverage to rotate the line (it sits near the balance point), so the slope barely moves. But it pulls the whole line downward to reduce its own large residual, which lowers the intercept. The traps: the sharp-slope-decrease option describes what a point at an EXTREME $x$-value would do (high leverage rotates the line); the both-unchanged option is the common intuition that one point in forty-one is negligible, when in fact an outlier's influence is exactly what these items test; the negative-slope option overstates the effect, since one low point cannot reverse a strong positive association, though it does weaken the correlation.`
+      explanation: `A point at a typical $x$-value has almost no leverage to rotate the line (it sits near the balance point), so the slope barely moves. But it pulls the whole line downward to reduce its own large residual, which lowers the intercept. The traps: the sharp-slope-decrease option describes what a point at an EXTREME $x$-value would do (high leverage rotates the line); the both-unchanged option is the common intuition that one point in forty-one is negligible, when in fact an outlier's influence is exactly what these items test; the negative-slope option overstates the effect, since one low point cannot reverse a strong positive association, though it does make it weaker.`
     },
     {
       id: 'scat-adv-p2-q3',
