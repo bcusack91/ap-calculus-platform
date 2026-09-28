@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Transitions & Connections ────────────
-  {
-    id: 'sei-ent-1a',
-    question:
-      'A paragraph ends by explaining that renewable energy is less reliable than fossil fuels. The next paragraph argues that battery storage technology is rapidly improving. Which transition best connects these two paragraphs?',
-    options: [
-      'In addition, battery storage technology is rapidly improving.',
-      'For example, battery storage technology is rapidly improving.',
-      'Nevertheless, battery storage technology is rapidly improving.',
-      'Similarly, battery storage technology is rapidly improving.',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Nevertheless" signals a contrast—acknowledging the reliability concern while introducing a counter-development. "In addition" implies continuation, "for example" implies illustration, and "similarly" implies a parallel idea, none of which fit the contrast between the two paragraphs.',
-    partNumber: 1,
-    partTitle: 'Transitions & Connections',
-  },
-  {
-    id: 'sei-ent-1b',
-    question:
-      'A writer wants to introduce a sentence that provides a specific example supporting the previous sentence. Which transition word is most appropriate?',
-    options: [
-      'However',
-      'Therefore',
-      'For instance',
-      'Furthermore',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"For instance" signals that an example follows, which is exactly what the writer needs. "However" signals contrast, "therefore" signals conclusion or result, and "furthermore" signals an additional point, not a specific illustration.',
-    partNumber: 1,
-    partTitle: 'Transitions & Connections',
-  },
-
-  // ── Part 2: Conciseness ───────────────────────────
-  {
-    id: 'sei-ent-2a',
-    question:
-      'Which version of the sentence is the most concise without losing meaning?',
-    options: [
-      'Due to the fact that it was raining outside, the game was cancelled.',
-      'Because of the outdoor rain conditions that were present, the game was cancelled.',
-      'Because it was raining, the game was cancelled.',
-      'The game was cancelled on account of the rain that was occurring outside.',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Because it was raining, the game was cancelled" conveys the full meaning in the fewest words. The other options use wordy phrases like "due to the fact that," "on account of," and unnecessary modifiers like "outdoor" and "that was occurring."',
-    partNumber: 2,
-    partTitle: 'Conciseness',
-  },
-  {
-    id: 'sei-ent-2b',
-    question:
-      'Which words in this passage should be deleted because they are redundant?\n"The new innovation revolutionized manufacturing. Each individual worker saw their output increase. The end result was higher profit. The final conclusion was widely celebrated."',
-    options: [
-      'Only "new," since the other words add meaning',
-      'Only "individual" and "end"; the others add meaning',
-      'None of the words; each one adds useful emphasis',
-      'All four: "new," "individual," "end," and "final"',
-    ],
-    correctIndex: 3,
-    explanation:
-      'All four words are redundant: "innovation" is inherently new; "individual" is implied by "each"; "result" is inherently an end; "conclusion" is inherently final. On the SAT, identifying and eliminating redundancy is a key conciseness skill.',
-    partNumber: 2,
-    partTitle: 'Conciseness',
-  },
-
-  // ── Part 3: Relevance & Purpose ──────────────────
-  {
-    id: 'sei-ent-3a',
-    question:
-      'A paragraph focuses on the economic benefits of urban farming. Which sentence should be DELETED because it is irrelevant to the paragraph\'s focus?',
-    options: [
-      '"Urban farms can reduce food transportation costs by supplying produce locally."',
-      '"Community gardens create jobs and generate income for neighborhood residents."',
-      '"The history of farming dates back more than ten thousand years to ancient civilizations."',
-      '"Rooftop farms in New York City have attracted investment from local entrepreneurs."',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"The history of farming dates back more than ten thousand years" is interesting but entirely unrelated to the paragraph\'s focus on the economic benefits of urban farming. Removing irrelevant information is a key SAT expression-of-ideas skill.',
-    partNumber: 3,
-    partTitle: 'Relevance & Purpose',
-  },
-  {
-    id: 'sei-ent-3b',
-    question:
-      'A student wants to add a sentence to a paragraph arguing that social media harms teen mental health. Which addition BEST supports the paragraph\'s purpose?',
-    options: [
-      '"Social media platforms were first developed in the early 2000s."',
-      '"A 2022 study found that teens who spent more than three hours daily on social media were twice as likely to report symptoms of depression."',
-      '"Many teenagers enjoy sharing photos and videos with their friends online."',
-      '"Instagram was acquired by Facebook in 2012 for approximately one billion dollars."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The paragraph argues that social media harms teen mental health. Only the sentence citing the 2022 study provides direct evidence (specific data) supporting that claim. The other options are factual but irrelevant to the argument being made.',
-    partNumber: 3,
-    partTitle: 'Relevance & Purpose',
-  },
-
-  // ── Part 4: Tone & Word Choice ────────────────────
-  {
-    id: 'sei-ent-4a',
-    question:
-      'A formal academic essay discusses climate policy. Which word choice is most appropriate for this context?',
-    options: [
-      '"Government officials need to get their act together on climate stuff."',
-      '"Policymakers must implement comprehensive strategies to mitigate climate change."',
-      '"Politicians are totally failing at dealing with the climate crisis."',
-      '"Folks in charge should probably do something about the weather situation."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The "Policymakers must implement" sentence uses formal, precise vocabulary ("policymakers," "implement," "comprehensive strategies," "mitigate") appropriate for academic writing. The other options use informal language ("get their act together," "stuff," "totally," "folks") inconsistent with an academic register.',
-    partNumber: 4,
-    partTitle: 'Tone & Word Choice',
-  },
-  {
-    id: 'sei-ent-4b',
-    question:
-      'Which word most precisely fills the blank in this sentence: "The scientist\'s findings were ______, overturning decades of accepted theory."',
-    options: [
-      'good',
-      'important',
-      'groundbreaking',
-      'notable',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Groundbreaking" most precisely captures the idea of research so significant it overturns established thinking. "Good" and "important" are vague, and while "notable" is more specific, it lacks the sense of radical transformation that "groundbreaking" conveys.',
-    partNumber: 4,
-    partTitle: 'Tone & Word Choice',
-  },
-
-  // ── Part 5: Organization ──────────────────────────
-  {
-    id: 'sei-ent-5a',
-    question:
-      'Four sentences need to be arranged into a logical paragraph. Which order is most logical?\n1. "These fungi form networks that transfer nutrients between trees."\n2. "Scientists call this underground system the "wood wide web."\n3. "Forests are not collections of isolated trees but interconnected communities."\n4. "Through these networks, older trees can sustain younger seedlings."',
-    options: [
-      '1 → 2 → 3 → 4',
-      '3 → 1 → 2 → 4',
-      '2 → 3 → 1 → 4',
-      '4 → 1 → 2 → 3',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The logical flow is: introduce the broad idea (sentence 3: forests are interconnected), explain the mechanism (sentence 1: fungi networks), name the concept (sentence 2: "wood wide web"), and give a specific example of its function (sentence 4: sustaining seedlings). Order: 3 → 1 → 2 → 4.',
-    partNumber: 5,
-    partTitle: 'Organization',
-  },
-  {
-    id: 'sei-ent-5b',
-    question:
-      'Where should the following sentence be inserted in the paragraph?\n"This disparity is most pronounced in urban neighborhoods with limited access to grocery stores."\nParagraph: [Sentence 1] Research shows that food insecurity affects millions of Americans. [Sentence 2] Low-income families are disproportionately impacted. [Sentence 3] Community food banks struggle to meet demand.',
-    options: [
-      'Before Sentence 1',
-      'After Sentence 1, before Sentence 2',
-      'After Sentence 2, before Sentence 3',
-      'After Sentence 3',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The new sentence explains a specific aspect of the disparity mentioned in Sentence 2 ("Low-income families are disproportionately impacted"). Inserting it after Sentence 2 creates a logical sequence: general disparity → specific location of disparity → consequence (food banks overwhelmed).',
-    partNumber: 5,
-    partTitle: 'Organization',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'sei-ent-6a',
-    question:
-      'A writer is revising a paragraph and wants to make the writing more concise while preserving the formal tone. Which revision is best?\nOriginal: "In spite of the fact that there are many different kinds of renewable energy sources that are available, the majority of households have not yet made the transition to using them."',
-    options: [
-      '"Despite many available renewable energy sources, most households have not yet transitioned to them."',
-      '"Even though renewable energy is out there, not many families have switched yet."',
-      '"Renewable energy sources exist and are available, but households have not adopted them in large numbers."',
-      '"In spite of renewables existing, the transition has not happened for most households yet."',
-    ],
-    correctIndex: 0,
-    explanation:
-      '"Despite many available renewable energy sources..." reduces the sentence from 35 words to 16 while preserving formal register and exact meaning. The "out there" version is informal; the "exist and are available" and "In spite of renewables existing" versions are not significantly more concise than the original or use awkward phrasing.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'sei-ent-6b',
-    question:
-      'Which revision adds the most relevant supporting detail to the claim that "Electric vehicles are becoming increasingly affordable"?',
-    options: [
-      '"Electric vehicles are becoming increasingly affordable, and they come in many colors."',
-      '"Electric vehicles are becoming increasingly affordable; the average EV price dropped by 18% between 2020 and 2023."',
-      '"Electric vehicles are becoming increasingly affordable, which is a positive development for consumers."',
-      '"Electric vehicles are becoming increasingly affordable, and they are also better for the environment."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The revision citing the 18% price drop adds a specific, quantified statistic directly supporting the affordability claim. The other options introduce vague affirmations, different topics (color, environment), or circular reasoning without providing concrete evidence.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'sei-ent-7a',
-    question:
-      'On the SAT, "expression of ideas" questions test all of the following EXCEPT:',
-    options: [
-      'Whether transitions logically connect ideas between sentences.',
-      'Whether details are relevant to the paragraph\'s main purpose.',
-      'Whether subject and verb agree grammatically.',
-      'Whether a sentence should be added, deleted, or moved.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Subject-verb agreement is tested under "Standard English Conventions" (grammar), not "Expression of Ideas." Expression of ideas focuses on rhetoric: organization, transitions, development, relevance, and conciseness.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'sei-ent-7b',
-    question:
-      'A student is asked to revise a paragraph so that it flows more logically. The best strategy is to:',
-    options: [
-      'Add more transition words to every sentence regardless of meaning.',
-      'Shorten every sentence to under ten words.',
-      'Identify the paragraph\'s main claim and ensure each sentence directly supports or develops it.',
-      'Replace simple words with advanced vocabulary throughout.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Logical flow depends on ensuring each sentence has a clear relationship to the paragraph\'s central idea. Overusing transitions, shortening sentences arbitrarily, or inflating vocabulary can all obscure rather than improve coherence.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'sei-ent-1a', question: 'The new bridge design is ______ than the old one: it uses 40 percent less steel while carrying the same load.\n\nWhich choice completes the text with the most logical and precise word or phrase?', options: ['more efficient', 'more attractive', 'more expensive', 'more famous'], correctIndex: 0, explanation: 'The colon explains the blank: the design does the same job with less material, which is the precise meaning of "more efficient." Nothing in the text concerns looks, cost, or fame.', partNumber: 1, partTitle: 'Precision and Word Choice' },
+  { id: 'sei-ent-1b', question: 'The medication did not cure the disease, but it ______ the symptoms, making patients far more comfortable.\n\nWhich choice completes the text with the most logical and precise word or phrase?', options: ['eased', 'caused', 'diagnosed', 'revealed'], correctIndex: 0, explanation: '"But" contrasts with "did not cure," and "more comfortable" shows the symptoms were reduced, so "eased" is precise. A medication that caused or revealed symptoms would not make patients more comfortable, and diagnosing is what doctors do, not what a medication does.', partNumber: 1, partTitle: 'Precision and Word Choice' },
+  { id: 'sei-ent-2a', question: 'Sea otters eat large numbers of sea urchins, and sea urchins feed on kelp. When hunters wiped out otters along parts of the Pacific coast in the 1800s, urchin populations exploded. As a result, ______\n\nWhich choice most logically completes the text?', options: ['most of the kelp forests in those areas were eaten away.', 'kelp forests in those areas grew thicker than before.', 'sea otters in those areas began to feed on kelp.', 'sea urchins in those areas started to prey on otters.'], correctIndex: 0, explanation: 'Follow the chain: fewer otters meant more urchins, and more urchins eat more kelp, so the kelp was eaten away. Thicker kelp reverses the chain, and the otters were gone, so they could not switch foods.', partNumber: 2, partTitle: 'Paragraph Organization' },
+  { id: 'sei-ent-2b', question: 'A sentence in a text begins, "This process, known as echolocation, allows the animals to hunt in total darkness."\n\nThe sentence most logically follows a sentence that:', options: ['describes how bats locate insects using echoes', 'names the kinds of insects that bats most often eat', 'explains why some bats spend the winter in caves', 'gives the total number of bat species on Earth'], correctIndex: 0, explanation: '"This process" must point back to a process the text has just described, and "known as echolocation" then names it. Only the sentence describing how bats locate prey by echoes supplies that process.', partNumber: 2, partTitle: 'Paragraph Organization' },
+  { id: 'sei-ent-3a', question: 'Green roofs cover buildings with soil and plants. They absorb rainwater that would otherwise overwhelm storm drains, and they insulate buildings, lowering heating and cooling costs.\n\nWhich choice most effectively concludes the text?', options: ['In this way, green roofs help cities manage both runoff and energy use.', 'Solar panels are another way to make city buildings more efficient.', 'Some green roofs are planted with grasses, and others with shrubs.', 'Green roofs thus cost more to install than they save on energy.'], correctIndex: 0, explanation: 'A good conclusion synthesizes the text\'s points: rainwater absorption and insulation. The solar-panel sentence starts a new topic, the planting detail adds new information, and the last choice contradicts the text\'s point that green roofs lower energy costs.', partNumber: 3, partTitle: 'Opening and Closing Sentences' },
+  { id: 'sei-ent-3b', question: 'A paragraph continues: "Teenagers\' internal clocks shift later during puberty. Schools that moved their start times to 8:30 a.m. or later saw attendance rise and car crashes among teen drivers fall."\n\nWhich choice would be the most effective topic sentence for the paragraph?', options: ['Starting high school later in the morning can benefit teenagers.', 'Many elementary schools start later in the morning than high schools do.', 'Teenagers often enjoy staying up late to talk with their friends.', 'Car crashes are a leading cause of injury among young drivers.'], correctIndex: 0, explanation: 'The body gives a reason (shifted body clocks) and results (better attendance, fewer crashes) for later start times, so the topic sentence should state that later starts benefit teens. The other choices are too narrow or off-topic to cover the whole paragraph.', partNumber: 3, partTitle: 'Opening and Closing Sentences' },
+  { id: 'sei-ent-4a', question: '"Ada Lovelace wrote the first published computer program. She was the daughter of the poet Lord Byron."\n\nWhich choice most effectively combines the sentences while keeping the focus on Lovelace\'s achievement?', options: ['Ada Lovelace, daughter of the poet Lord Byron, wrote the first published computer program.', 'Ada Lovelace, who wrote the first published computer program, was the daughter of Lord Byron.', 'Ada Lovelace wrote the first published computer program, she was Lord Byron\'s daughter.', 'The first published computer program was written, and Ada Lovelace was Lord Byron\'s daughter.'], correctIndex: 0, explanation: 'Putting the family detail in an appositive keeps the achievement in the main clause. The "who wrote" version buries the achievement in a relative clause, the third choice is a comma splice, and the last one loses the link between Lovelace and the program.', partNumber: 4, partTitle: 'Combining Ideas Effectively' },
+  { id: 'sei-ent-4b', question: '"The volcano erupted for three weeks. It buried two nearby villages under ash."\n\nWhich choice most effectively combines the sentences?', options: ['Erupting for three weeks, the volcano buried two nearby villages in ash.', 'Erupting for three weeks, two nearby villages were buried under the ash.', 'The volcano erupted for three weeks, it buried two nearby villages in ash.', 'Erupting for three weeks, and the volcano buried two villages in ash.'], correctIndex: 0, explanation: 'A participial phrase must modify the noun right after it: "Erupting for three weeks, the volcano..." is correct. In the second choice the villages seem to erupt (a dangling modifier), the third is a comma splice, and in the fourth the "and" leaves the opening phrase with nothing to modify.', partNumber: 4, partTitle: 'Combining Ideas Effectively' },
+  { id: 'sei-ent-5a', question: 'A student is writing a formal research paper on climate policy.\n\nWhich sentence best matches the register of the paper?', options: ['Lawmakers must adopt broad new strategies to reduce carbon emissions.', 'Government officials need to get their act together on climate stuff.', 'Politicians are totally failing to deal with this whole climate thing.', 'The folks in charge should probably do something about the weather.'], correctIndex: 0, explanation: 'A formal paper calls for precise, professional wording such as "lawmakers," "adopt," and "carbon emissions." The other sentences use slang ("get their act together," "stuff," "totally," "folks").', partNumber: 5, partTitle: 'Matching Register and Purpose' },
+  { id: 'sei-ent-5b', question: 'A science museum is writing a sign about photosynthesis for visitors who are about seven years old.\n\nWhich sentence best suits this audience and purpose?', options: ['Plants use the energy in sunlight to turn air and water into food.', 'Photosynthetic organisms convert light energy into chemical energy.', 'Chlorophyll-driven carbon fixation yields carbohydrate molecules.', 'Autotrophs synthesize glucose from carbon dioxide and water vapor.'], correctIndex: 0, explanation: 'Young children need plain, concrete words. The first sentence explains the same idea without technical terms like "photosynthetic organisms," "carbon fixation," or "autotrophs," which suit a biology textbook instead.', partNumber: 5, partTitle: 'Matching Register and Purpose' },
+  { id: 'sei-ent-6a', question: 'A student is writing a paragraph arguing that urban farms strengthen local economies.\n\nWhich sentence would best support the paragraph\'s focus?', options: ['Urban farms cut shipping costs by selling produce in the same neighborhood.', 'Farming began more than ten thousand years ago in parts of the Middle East.', 'Tomatoes grown on urban rooftops are often picked only once fully ripe.', 'Some city farms raise chickens and bees along with their rows of vegetables.'], correctIndex: 0, explanation: 'Only the sentence about lower shipping costs and local sales connects urban farms to the local economy. The others are about farms, but they add history, harvest details, or animals, none of which supports the economic claim.', partNumber: 6, partTitle: 'Keeping Paragraphs Focused' },
+  { id: 'sei-ent-6b', question: 'A text argues that protected bike lanes make city streets safer.\n\nWhich added sentence would most directly support the argument?', options: ['After the city built such lanes, crashes on those roads fell by a third.', 'The city\'s first bike lanes were proposed by a council member in the year 2015.', 'Many cyclists say they enjoy riding most when the weather is mild and sunny.', 'Bicycles cost far less to buy and maintain than cars do over a lifetime.'], correctIndex: 0, explanation: 'The argument is about safety, and only the crash statistic measures safety. The other sentences are about bike lanes or cycling but give history, preferences, or costs.', partNumber: 6, partTitle: 'Keeping Paragraphs Focused' },
+  { id: 'sei-ent-7a', question: 'Wind and solar farms produce less power on calm or cloudy days. ______ large batteries can store surplus power from sunny, windy days for use when production drops.\n\nWhich choice completes the text with the most logical transition?', options: ['However,', 'For example,', 'Similarly,', 'In addition,'], correctIndex: 0, explanation: 'The second sentence answers the limitation in the first (storage offsets weak production), a contrast that "However" signals. It is not an example of the problem, not a similar problem, and not an additional problem.', partNumber: 7, partTitle: 'Comprehensive Review' },
+  { id: 'sei-ent-7b', question: '"In spite of the fact that many kinds of renewable energy are available, most households have not yet switched to them."\n\nWhich revision is most concise while keeping the original meaning and a formal tone?', options: ['Though many kinds of renewable energy are available, most households have not yet switched.', 'Even though renewable energy is out there, not a lot of families have made the switch yet.', 'Despite the fact that renewable energy exists, households have not yet switched to using it.', 'Many kinds of renewable energy are available, most households have not yet switched to them.'], correctIndex: 0, explanation: '"Though" replaces "in spite of the fact that" and keeps every idea. The second choice is informal, the third is still wordy and drops "many kinds" and "most," and the fourth is a comma splice.', partNumber: 7, partTitle: 'Comprehensive Review' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Transitions & Connections' },
-    { partNumber: 2, partTitle: 'Conciseness' },
-    { partNumber: 3, partTitle: 'Relevance & Purpose' },
-    { partNumber: 4, partTitle: 'Tone & Word Choice' },
-    { partNumber: 5, partTitle: 'Organization' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Precision and Word Choice' },
+    { partNumber: 2, partTitle: 'Paragraph Organization' },
+    { partNumber: 3, partTitle: 'Opening and Closing Sentences' },
+    { partNumber: 4, partTitle: 'Combining Ideas Effectively' },
+    { partNumber: 5, partTitle: 'Matching Register and Purpose' },
+    { partNumber: 6, partTitle: 'Keeping Paragraphs Focused' },
+    { partNumber: 7, partTitle: 'Comprehensive Review' },
   ]
 }

@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: SAT R&W Overview ──────────────────────
-  {
-    id: 'srws-ent-1a',
-    question:
-      'On the digital SAT, the Reading and Writing (R&W) section is structured as:',
-    options: [
-      'One long section with 80 questions over 100 minutes.',
-      'Two separately timed modules of 27 questions each, for a total of 54 questions in 64 minutes.',
-      'Three modules: reading, grammar, and vocabulary, each 20 minutes.',
-      'Four passages, each followed by 10 questions, totaling 40 questions.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The digital SAT R&W section consists of two 32-minute modules with 27 questions each (54 questions total, 64 minutes combined). Performance on Module 1 determines whether Module 2 is easier or harder (adaptive testing).',
-    partNumber: 1,
-    partTitle: 'SAT R&W Overview',
-  },
-  {
-    id: 'srws-ent-1b',
-    question:
-      'Which of the following best describes the adaptive nature of the digital SAT R&W section?',
-    options: [
-      'Each question adapts based on your answer to the previous question.',
-      'All students receive identical questions regardless of performance.',
-      'Performance on Module 1 determines the difficulty level of Module 2.',
-      'Students may choose which difficulty level to attempt.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The digital SAT uses multistage adaptive testing: all students take the same Module 1. Students who perform well receive a harder Module 2 (with higher scoring potential), while those who struggle receive an easier Module 2. Individual questions within a module do not adapt.',
-    partNumber: 1,
-    partTitle: 'SAT R&W Overview',
-  },
-
-  // ── Part 2: Question Types ────────────────────────
-  {
-    id: 'srws-ent-2a',
-    question:
-      'Which of the following is NOT a major question type in the SAT Reading and Writing section?',
-    options: [
-      'Words in Context (vocabulary)',
-      'Rhetorical Synthesis (combining notes into a sentence)',
-      'Standard English Conventions (grammar and mechanics)',
-      'Extended Reasoning (multi-passage comparison with historical context)',
-    ],
-    correctIndex: 3,
-    explanation:
-      '"Extended Reasoning" with multi-passage historical comparison is an ACT Reading concept, not a standalone SAT R&W question type. The four SAT R&W domains are: Craft and Structure, Information and Ideas, Expression of Ideas, and Standard English Conventions.',
-    partNumber: 2,
-    partTitle: 'Question Types',
-  },
-  {
-    id: 'srws-ent-2b',
-    question:
-      'A "Words in Context" question on the SAT asks: "As used in line 14, \'acute\' most nearly means…" What is the best strategy for answering this?',
-    options: [
-      'Read the surrounding sentences to determine the meaning that fits the passage\'s context.',
-      'Select the longest answer choice, as it is usually the most precise.',
-      'Pick the definition you have memorized from vocabulary study.',
-      'Choose the most common everyday definition of the word.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'Context is king on "Words in Context" questions. Many words have multiple meanings ("acute" can mean sharp, severe, intelligent, or less than 90 degrees). The correct answer is the meaning that fits the specific usage in the passage, which requires reading surrounding context.',
-    partNumber: 2,
-    partTitle: 'Question Types',
-  },
-
-  // ── Part 3: Passage Strategy ──────────────────────
-  {
-    id: 'srws-ent-3a',
-    question:
-      'Which approach to reading SAT R&W passages is most effective for most students?',
-    options: [
-      'Read the entire passage carefully before looking at the questions.',
-      'Read the questions first, then skim the passage for keywords.',
-      'Read the passage actively, noting the main idea and structure, then tackle the questions.',
-      'Skip the passage entirely and answer all questions from the answer choices alone.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Active reading—noting the main idea, the author\'s purpose, and the passage structure—gives you a mental map before the questions. This is more efficient than blind skimming or rereading from scratch. The best approach varies by student, but active engagement beats passive reading or skipping.',
-    partNumber: 3,
-    partTitle: 'Passage Strategy',
-  },
-  {
-    id: 'srws-ent-3b',
-    question:
-      'On the SAT, paired passages appear in the "Cross-Text Connections" question type. When both passages discuss the same topic, what should you determine first?',
-    options: [
-      'Which passage is longer and therefore more authoritative.',
-      'The relationship between the two passages: do they agree, disagree, or complement each other?',
-      'The publication date of each passage to determine which is more current.',
-      'The vocabulary level to decide which passage is harder.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Cross-Text Connection questions ask about the relationship between passages. Identifying whether they agree, contradict, or complement each other is the essential first step—it frames how you interpret the questions that follow.',
-    partNumber: 3,
-    partTitle: 'Passage Strategy',
-  },
-
-  // ── Part 4: Elimination Techniques ───────────────
-  {
-    id: 'srws-ent-4a',
-    question:
-      'Which type of answer choice should be eliminated first on SAT Reading questions?',
-    options: [
-      'Choices that are too short or concise.',
-      'Choices that use absolute language ("always," "never," "all") when the passage is nuanced.',
-      'Choices that include vocabulary you do not recognize.',
-      'Choices that reference ideas mentioned early in the passage.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Absolute language ("always," "never," "all," "none") is a red flag because SAT Reading passages are typically nuanced—they rarely make absolute claims. Meanwhile, unfamiliar vocabulary in an answer choice is not itself a reason to eliminate it.',
-    partNumber: 4,
-    partTitle: 'Elimination Techniques',
-  },
-  {
-    id: 'srws-ent-4b',
-    question:
-      'You are down to two answer choices on an SAT Reading question. One is directly supported by a specific phrase in the passage; the other is a reasonable inference. Which should you choose?',
-    options: [
-      'The reasonable inference, because SAT questions reward deeper thinking.',
-      'The directly supported choice, because SAT answers must be grounded in the passage.',
-      'The longer choice, because it provides more detail.',
-      'Flip a coin—both are equally valid.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'SAT Reading questions are designed so that correct answers are always directly supported by the text. "Reasonable" inferences that go beyond what the passage states are attractive distractors. Always select the choice with the strongest textual basis.',
-    partNumber: 4,
-    partTitle: 'Elimination Techniques',
-  },
-
-  // ── Part 5: Time Management ────────────────────────
-  {
-    id: 'srws-ent-5a',
-    question:
-      'With 27 R&W questions in 32 minutes per module, approximately how much time does a student have per question?',
-    options: [
-      'About 45 seconds per question',
-      'About 1 minute per question',
-      'About 1 minute 10 seconds per question',
-      'About 2 minutes per question',
-    ],
-    correctIndex: 2,
-    explanation:
-      '32 minutes $\\div$ 27 questions $\\approx$ 1.19 minutes $\\approx$ 1 minute 10 seconds per question. This is tight, so skipping a question and flagging it for review (rather than spending 3+ minutes on one hard item) is a key strategy.',
-    partNumber: 5,
-    partTitle: 'Time Management',
-  },
-  {
-    id: 'srws-ent-5b',
-    question:
-      'Which time management strategy is MOST effective when you encounter a very difficult SAT R&W question?',
-    options: [
-      'Spend as much time as needed—every question is worth the same points.',
-      'Skip it immediately and never return.',
-      'Make a quick elimination, flag the question, move on, and return if time allows.',
-      'Choose option A (the first choice) for any question you cannot solve.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Every question on the SAT is worth the same number of points. Spending too long on one hard question costs you time on easier questions. The optimal strategy is to make a quick best-guess using elimination, flag the question for review, and return to it if time allows.',
-    partNumber: 5,
-    partTitle: 'Time Management',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'srws-ent-6a',
-    question:
-      'A student is struggling with "Rhetorical Synthesis" questions that ask her to "introduce a study." Which of the following best describes what an introductory sentence should do?',
-    options: [
-      'Provide the most detailed summary of all the notes given.',
-      'Use the most technical vocabulary from the notes.',
-      'Present the study\'s topic and key finding in a way that gives the reader essential context.',
-      'Agree with the study\'s conclusion and emphasize it strongly.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'An introductory sentence orients the reader by presenting the topic and a key finding—giving context without burying the reader in every detail. Rhetorical Synthesis questions test whether students can match sentence function (introduce, contrast, emphasize) to the stated goal.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'srws-ent-6b',
-    question:
-      'A "Boundaries" (punctuation) question reads: "Which choice completes the text so that it conforms to the conventions of Standard Written English?" When should you choose a semicolon versus a comma + coordinating conjunction?',
-    options: [
-      'Use a semicolon when the second clause is shorter.',
-      'Use either interchangeably—they are grammatically equivalent.',
-      'Use a semicolon between two independent clauses with no coordinating conjunction; use a comma only when followed by a coordinating conjunction (FANBOYS).',
-      'Use a comma for formal writing; use a semicolon for informal writing.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The rule is precise: a semicolon alone can join two independent clauses; a comma requires a coordinating conjunction (for, and, nor, but, or, yet, so). A comma alone between two independent clauses is a comma splice—one of the most tested errors on the SAT.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'srws-ent-7a',
-    question:
-      'Which domain of the SAT R&W section includes questions about transitions, adding/deleting sentences, and revising for conciseness?',
-    options: [
-      'Standard English Conventions',
-      'Craft and Structure',
-      'Expression of Ideas',
-      'Information and Ideas',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Expression of Ideas" covers rhetorical choices: transitions, relevance, conciseness, organization, and developing ideas. "Standard English Conventions" covers grammar and punctuation. "Craft and Structure" covers vocabulary, text structure, and author\'s purpose. "Information and Ideas" covers comprehension and evidence.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'srws-ent-7b',
-    question:
-      'What is the most important habit a student should develop to improve SAT R&W performance over time?',
-    options: [
-      'Memorizing long vocabulary lists of uncommon words.',
-      'Reading widely across genres—science articles, literary fiction, history, and opinion—to build reading fluency and contextual vocabulary.',
-      'Practicing only the grammar rules, since vocabulary is untestable.',
-      'Focusing exclusively on timed practice tests without reviewing mistakes.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Wide reading builds the background knowledge, vocabulary in context, and comprehension speed that the SAT R&W rewards. Reviewing mistakes on practice tests is also essential, but neither vocabulary lists nor grammar drills alone produce the flexible reading skills the SAT demands.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'srws-ent-1a', question: 'Honeybees tell hive mates where food is through a movement called the waggle ______ angle of the dance shows the direction of the food relative to the sun.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['dance. The', 'dance, the', 'dance the', 'dance; and the'], correctIndex: 0, explanation: 'Both "Honeybees tell hive mates ... the waggle dance" and "the angle of the dance shows ..." are independent clauses, so they need a period (or a semicolon alone). A comma alone creates a comma splice, no punctuation creates a run-on, and a semicolon should not be followed by "and."', partNumber: 1, partTitle: 'Run-ons, Fragments, and Sentence Combining' },
+  { id: 'srws-ent-1b', question: 'Tracked by a satellite collar, one young Arctic fox ______ more than 3,000 kilometers across sea ice and land in less than three months.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['traveled', 'traveling', 'having traveled', 'who traveled'], correctIndex: 0, explanation: 'The subject "one young Arctic fox" needs a main verb, and only "traveled" supplies one. "Traveling," "having traveled," and "who traveled" all leave the sentence a fragment with no main verb.', partNumber: 1, partTitle: 'Run-ons, Fragments, and Sentence Combining' },
+  { id: 'srws-ent-2a', question: 'The collection of rare maps, which includes several drawn by hand in the sixteenth century, ______ now on display in the library\'s east wing.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['is', 'are', 'were', 'have been'], correctIndex: 0, explanation: 'Cross out the interrupting clause: "The collection ... is now on display." The subject is the singular noun "collection," not "maps," so the verb must be singular.', partNumber: 2, partTitle: 'Making Subjects and Verbs Match' },
+  { id: 'srws-ent-2b', question: 'Neither the lead scientist nor her two assistants ______ able to explain the unexpected result.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['was', 'were', 'is', 'has been'], correctIndex: 1, explanation: 'With "neither ... nor," the verb agrees with the nearer subject. "Assistants" is plural, so the verb is "were." The past tense also matches the reported event.', partNumber: 2, partTitle: 'Making Subjects and Verbs Match' },
+  { id: 'srws-ent-3a', question: 'The city added twelve new bus routes in 2019. ______ ridership rose by a third the following year.\n\nWhich choice completes the text with the most logical transition?', options: ['As a result,', 'However,', 'For example,', 'Nevertheless,'], correctIndex: 0, explanation: 'The second sentence describes an effect of the first (more routes led to more riders), so a cause-and-effect transition fits. "However" and "Nevertheless" signal contrast, and the rise in ridership is not an example of adding routes.', partNumber: 3, partTitle: 'Connecting Ideas Effectively' },
+  { id: 'srws-ent-3b', question: 'Early reviewers dismissed the novel as too slow to hold readers\' attention. ______ it has stayed in print for more than a century and is now taught in schools across the country.\n\nWhich choice completes the text with the most logical transition?', options: ['Nevertheless,', 'Similarly,', 'For example,', 'Therefore,'], correctIndex: 0, explanation: 'The second sentence contrasts with the first: despite the harsh early reviews, the novel has endured. "Nevertheless" signals that contrast; "Similarly" and "For example" signal continuation, and "Therefore" signals a result.', partNumber: 3, partTitle: 'Connecting Ideas Effectively' },
+  { id: 'srws-ent-4a', question: '"Due to the fact that the bridge was closed for repairs, commuters were forced to take a longer route."\n\nWhich revision is most concise while keeping the original meaning and remaining grammatically correct?', options: ['Because the bridge was closed for repairs, commuters had to take a longer route.', 'Due to the bridge being closed, commuters were forced to take a different route.', 'Because of the fact that the bridge was closed, commuters took a longer route.', 'The bridge was closed for repairs, commuters had to take a longer route.'], correctIndex: 0, explanation: '"Because" replaces the wordy "due to the fact that" without losing any meaning. "A different route" changes the meaning, "because of the fact that" is still wordy, and the shortest choice is a comma splice.', partNumber: 4, partTitle: 'Eliminating Wordiness' },
+  { id: 'srws-ent-4b', question: 'Wildlife officials plan to ______ the invasive vine from the island by 2030.\n\nWhich choice completes the text most concisely while remaining correct?', options: ['eliminate', 'completely eliminate', 'rid', 'eliminate entirely and completely'], correctIndex: 0, explanation: '"Eliminate" already means to remove completely, so "completely" and "entirely and completely" are redundant. "Rid" is shorter but wrong here: the idiom is "rid the island of the vine," not "rid the vine from the island."', partNumber: 4, partTitle: 'Eliminating Wordiness' },
+  { id: 'srws-ent-5a', question: 'After a two-hour meeting, the city council announced ______ decision to delay the vote.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['its', 'their', 'it\'s', 'they\'re'], correctIndex: 0, explanation: 'A council acting as one body is a singular collective noun, so the possessive pronoun is "its." "It\'s" means "it is," and "they\'re" means "they are."', partNumber: 5, partTitle: 'Pronoun Reference and Number' },
+  { id: 'srws-ent-5b', question: '"When the managers met with the clients, they were disappointed."\n\nWhich revision best removes the ambiguity in the sentence?', options: ['When the managers met with the clients, the clients were disappointed.', 'When the managers met with the clients, they were very disappointed.', 'When the managers met with the clients, it was disappointing to them.', 'When the managers met with the clients, they felt disappointed by it.'], correctIndex: 0, explanation: 'In the original, "they" could mean the managers or the clients. Only the first revision replaces the pronoun with the noun it refers to. The others keep an unclear "they" or "them" and add an unclear "it."', partNumber: 5, partTitle: 'Pronoun Reference and Number' },
+  { id: 'srws-ent-6a', question: 'While researching a topic, a student has taken these notes:\n\n- The Atacama Desert in Chile is one of the driest places on Earth.\n- Some weather stations there have never recorded rain.\n- NASA has tested Mars rovers in the Atacama.\n- The desert\'s soil resembles Martian soil in its lack of moisture and organic matter.\n\nThe student wants to explain why NASA tests rovers in the Atacama. Which choice most effectively uses relevant information from the notes to accomplish this goal?', options: ['NASA has tested rovers in the Atacama because its dry soil is much like Mars\'s soil.', 'Because it is so dry, some weather stations in the Atacama have never recorded rain.', 'The Atacama Desert, located in Chile, is one of the very driest places on the Earth.', 'Mars rovers have been tested by NASA in the Atacama, a desert located in Chile.'], correctIndex: 0, explanation: 'The goal is a reason for NASA\'s testing, and only the first choice gives one: the soil resembles Martian soil. The others state accurate facts from the notes but never say why NASA tests there.', partNumber: 6, partTitle: 'Notes-Based Questions' },
+  { id: 'srws-ent-6b', question: 'While researching a topic, a student has taken these notes:\n\n- Honeybee colonies can contain tens of thousands of bees.\n- Bumblebee colonies usually contain fewer than 500 bees.\n- Bumblebees can fly in cooler weather than honeybees can.\n- Both species pollinate crops such as tomatoes and blueberries.\n\nThe student wants to contrast how large the two species\' colonies can be. Which choice most effectively uses relevant information from the notes to accomplish this goal?', options: ['Honeybee colonies can hold tens of thousands of bees, while bumblebee colonies rarely reach 500.', 'Bumblebees can fly in cooler weather, while honeybees need warmer weather before they will fly.', 'Tens of thousands of bees can live in a honeybee colony, and both of the species pollinate crops.', 'Both honeybees and bumblebees pollinate crops such as tomatoes and blueberries.'], correctIndex: 0, explanation: 'Only the first choice compares the sizes of both species\' colonies. The flight-temperature choice is a contrast, but not about colony size; the third gives only one colony size; the last states a similarity.', partNumber: 6, partTitle: 'Notes-Based Questions' },
+  { id: 'srws-ent-7a', question: 'On a Reading and Writing question, the four answer choices are "has," "have," "had," and "having." Comparing the choices this way, what is the question most likely testing?', options: ['Verb agreement and verb tense', 'Transitions between ideas', 'Punctuation at a boundary', 'Concision and wordiness'], correctIndex: 0, explanation: 'Reading the choices vertically shows what changes: here only the form of the verb "have" changes, so the question tests verb agreement and tense. A transition question would vary the linking word, and a boundary question would vary the punctuation.', partNumber: 7, partTitle: 'Putting It All Together' },
+  { id: 'srws-ent-7b', question: 'The results of the trial were ______ who walked for thirty minutes a day recovered twice as fast as those who did not.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['striking: patients', 'striking, patients', 'striking patients', 'striking; and patients'], correctIndex: 0, explanation: 'The first clause ("The results of the trial were striking") is independent, and the second explains it, so a colon fits. A comma alone is a comma splice, no punctuation misreads "striking patients" as a phrase, and a semicolon should not be followed by "and."', partNumber: 7, partTitle: 'Putting It All Together' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'SAT R&W Overview' },
-    { partNumber: 2, partTitle: 'Question Types' },
-    { partNumber: 3, partTitle: 'Passage Strategy' },
-    { partNumber: 4, partTitle: 'Elimination Techniques' },
-    { partNumber: 5, partTitle: 'Time Management' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Run-ons, Fragments, and Sentence Combining' },
+    { partNumber: 2, partTitle: 'Making Subjects and Verbs Match' },
+    { partNumber: 3, partTitle: 'Connecting Ideas Effectively' },
+    { partNumber: 4, partTitle: 'Eliminating Wordiness' },
+    { partNumber: 5, partTitle: 'Pronoun Reference and Number' },
+    { partNumber: 6, partTitle: 'Notes-Based Questions' },
+    { partNumber: 7, partTitle: 'Putting It All Together' },
   ]
 }

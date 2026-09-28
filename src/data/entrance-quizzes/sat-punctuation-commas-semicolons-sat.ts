@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Comma Rules ───────────────────────────
-  {
-    id: 'spcs-ent-1a',
-    question:
-      'Which sentence correctly uses a comma before a coordinating conjunction?',
-    options: [
-      'She wanted to leave early, but the meeting ran long.',
-      'She wanted to leave early but, the meeting ran long.',
-      'She wanted to leave, early but the meeting ran long.',
-      'She wanted to leave early but the, meeting ran long.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'A comma is placed before a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so) when it joins two independent clauses. "She wanted to leave early" and "the meeting ran long" are both independent clauses, so a comma before "but" is correct.',
-    partNumber: 1,
-    partTitle: 'Comma Rules',
-  },
-  {
-    id: 'spcs-ent-1b',
-    question:
-      'Which sentence INCORRECTLY uses a comma with a subordinating conjunction?',
-    options: [
-      'Because it rained heavily, the game was postponed.',
-      'The game was postponed, because it rained heavily.',
-      'After the storm passed, the players returned to the field.',
-      'Although she was tired, she finished the assignment.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'When a subordinate clause comes AFTER the main clause, a comma is generally not used before the subordinating conjunction. "The game was postponed because it rained heavily" should have no comma. The sentences opening with "Because," "After," and "Although" correctly use a comma after an introductory subordinate clause.',
-    partNumber: 1,
-    partTitle: 'Comma Rules',
-  },
-
-  // ── Part 2: Comma Splices ─────────────────────────
-  {
-    id: 'spcs-ent-2a',
-    question:
-      'Which sentence contains a comma splice?',
-    options: [
-      'I finished my homework, and then I watched television.',
-      'I finished my homework; then I watched television.',
-      'I finished my homework, then I watched television.',
-      'After finishing my homework, I watched television.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'A comma splice occurs when two independent clauses are joined with only a comma. "I finished my homework" and "then I watched television" are both independent clauses—joining them with just a comma is incorrect. The versions using ", and then," a semicolon, or "After finishing" all fix this correctly.',
-    partNumber: 2,
-    partTitle: 'Comma Splices',
-  },
-  {
-    id: 'spcs-ent-2b',
-    question:
-      'Which option correctly repairs the comma splice: "The report was due Monday, the team did not finish it in time"?',
-    options: [
-      'The report was due Monday and, the team did not finish it in time.',
-      'The report was due Monday; the team did not finish it in time.',
-      'The report was due Monday, but, the team did not finish it in time.',
-      'The report was due Monday, the team, did not finish it in time.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The most direct fix for a comma splice is to replace the comma with a semicolon, which correctly joins two closely related independent clauses. "The report was due Monday; the team did not finish it in time" does this correctly.',
-    partNumber: 2,
-    partTitle: 'Comma Splices',
-  },
-
-  // ── Part 3: Semicolons ────────────────────────────
-  {
-    id: 'spcs-ent-3a',
-    question:
-      'When is it correct to use a semicolon?',
-    options: [
-      'Before a list introduced by a verb such as "include."',
-      'To join a dependent clause to an independent clause.',
-      'Between two independent clauses that are closely related in meaning.',
-      'After an introductory phrase at the start of a sentence.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'A semicolon\'s primary role is to join two independent clauses that are closely related without using a coordinating conjunction. It cannot join a dependent clause to an independent clause, and it is not used after introductory phrases.',
-    partNumber: 3,
-    partTitle: 'Semicolons',
-  },
-  {
-    id: 'spcs-ent-3b',
-    question:
-      'Which sentence uses a semicolon INCORRECTLY?',
-    options: [
-      'She loves hiking; he prefers cycling.',
-      'The conference will cover three topics; climate change, renewable energy, and policy reform.',
-      'Marcus stayed late; consequently, he missed the bus.',
-      'The lab results were inconclusive; the researchers ordered additional tests.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'In the conference sentence, the semicolon is used before a list that follows the word "topics." A colon (not a semicolon) should introduce a list after a complete clause: "The conference will cover three topics: climate change, renewable energy, and policy reform."',
-    partNumber: 3,
-    partTitle: 'Semicolons',
-  },
-
-  // ── Part 4: Independent Clauses ──────────────────
-  {
-    id: 'spcs-ent-4a',
-    question:
-      'Which of the following is an independent clause?',
-    options: [
-      'Although the research was promising',
-      'Because scientists discovered a new compound',
-      'Which had been studied for decades',
-      'The experiment yielded surprising results',
-    ],
-    correctIndex: 3,
-    explanation:
-      'An independent clause has a subject and a verb and expresses a complete thought. "The experiment yielded surprising results" can stand alone as a sentence. The other options are dependent (subordinate) clauses that cannot stand alone.',
-    partNumber: 4,
-    partTitle: 'Independent Clauses',
-  },
-  {
-    id: 'spcs-ent-4b',
-    question:
-      'Which sentence correctly joins two independent clauses?',
-    options: [
-      'The storm intensified, it knocked out power across the city.',
-      'The storm intensified it knocked out power across the city.',
-      'The storm intensified; it knocked out power across the city.',
-      'The storm intensified, and, it knocked out power across the city.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'A semicolon correctly joins two independent clauses. "The storm intensified, it knocked out" is a comma splice, the version with no punctuation is a run-on, and "intensified, and, it" incorrectly places a comma after the coordinating conjunction "and."',
-    partNumber: 4,
-    partTitle: 'Independent Clauses',
-  },
-
-  // ── Part 5: Lists & Series ────────────────────────
-  {
-    id: 'spcs-ent-5a',
-    question:
-      'Which sentence correctly punctuates a series using semicolons?',
-    options: [
-      'The team included researchers from Austin, Texas, Boston, Massachusetts, and Portland, Oregon.',
-      'The team included researchers from Austin, Texas; Boston, Massachusetts; and Portland, Oregon.',
-      'The team included researchers from Austin; Texas; Boston; Massachusetts; and Portland; Oregon.',
-      'The team included researchers from Austin Texas, Boston Massachusetts, and Portland Oregon.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'When items in a list themselves contain commas (city, state), semicolons should be used between items to prevent confusion. "Austin, Texas; Boston, Massachusetts; and Portland, Oregon" is the only version that correctly uses semicolons between the city-state pairs.',
-    partNumber: 5,
-    partTitle: 'Lists & Series',
-  },
-  {
-    id: 'spcs-ent-5b',
-    question:
-      'Which sentence uses commas correctly in a simple three-item series?',
-    options: [
-      'The recipe calls for sugar salt and flour.',
-      'The recipe calls for sugar, salt and flour.',
-      'The recipe calls for sugar, salt, and flour.',
-      'The recipe calls for, sugar, salt, and flour.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'In a simple series, commas separate each item. "Sugar, salt, and flour" includes the Oxford (serial) comma before "and," which is standard in formal writing and on the SAT. The version "sugar salt and flour" has no commas; "sugar, salt and flour" omits the serial comma; "calls for, sugar" incorrectly places a comma after "for."',
-    partNumber: 5,
-    partTitle: 'Lists & Series',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'spcs-ent-6a',
-    question:
-      'A student writes: "I enjoy reading novels especially historical fiction however I rarely have time to finish them." Which revision is most correct?',
-    options: [
-      '"I enjoy reading novels, especially historical fiction; however, I rarely have time to finish them."',
-      '"I enjoy reading novels especially historical fiction, however I rarely have time to finish them."',
-      '"I enjoy reading novels; especially historical fiction; however, I rarely have time to finish them."',
-      '"I enjoy reading novels especially historical fiction however; I rarely have time to finish them."',
-    ],
-    correctIndex: 0,
-    explanation:
-      '"Especially historical fiction" is a nonrestrictive phrase and should be set off with a comma. A semicolon then correctly joins the two independent clauses before "however," and a comma follows "however." Only "novels, especially historical fiction; however, I rarely" places all punctuation correctly.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'spcs-ent-6b',
-    question:
-      'Which sentence demonstrates the BEST use of both a comma and a semicolon?',
-    options: [
-      'After years of research, the cure was announced; it was hailed as a breakthrough.',
-      'After years of research the cure was announced; it was hailed, as a breakthrough.',
-      'After years of research, the cure was announced, it was hailed as a breakthrough.',
-      'After years of research; the cure was announced, it was hailed as a breakthrough.',
-    ],
-    correctIndex: 0,
-    explanation:
-      '"After years of research, the cure was announced; it was hailed as a breakthrough" correctly uses a comma after the introductory adverbial phrase "After years of research" and a semicolon to join two related independent clauses. The other options misplace the comma, create a comma splice, or use a semicolon after an introductory phrase.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'spcs-ent-7a',
-    question:
-      'On the SAT, you see the sentence: "The architect designed the bridge with two goals in mind safety and efficiency." Which revision is correct?',
-    options: [
-      '"The architect designed the bridge with two goals in mind, safety and efficiency."',
-      '"The architect designed the bridge with two goals in mind: safety and efficiency."',
-      '"The architect designed the bridge with two goals in mind; safety and efficiency."',
-      '"The architect designed the bridge with two goals in mind safety, and efficiency."',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Two goals in mind" is a complete clause that introduces a list; a colon is the correct punctuation to introduce the listed items. A semicolon after "in mind" would be wrong because what follows ("safety and efficiency") is not an independent clause.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'spcs-ent-7b',
-    question:
-      'Which general rule about commas and semicolons is TRUE?',
-    options: [
-      'A semicolon can always replace a comma in any sentence.',
-      'A comma can join two independent clauses without a coordinating conjunction.',
-      'A semicolon joins two independent clauses; a comma does so only with a coordinating conjunction.',
-      'Commas and semicolons are interchangeable when the sentence is long.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'This is the core rule: a semicolon alone can join two independent clauses; a comma requires a coordinating conjunction (FANBOYS) to do the same job. A comma alone between two independent clauses is a comma splice.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'spcs-ent-1a', question: 'Which sentence uses a comma correctly with a coordinating conjunction?', options: ['She wanted to leave early, but the meeting ran long.', 'She wanted to leave early but, the meeting ran long.', 'She wanted to leave, early but the meeting ran long.', 'She wanted to leave early but the, meeting ran long.'], correctIndex: 0, explanation: 'When a coordinating conjunction (for, and, nor, but, or, yet, so) joins two independent clauses, the comma goes before the conjunction. "She wanted to leave early" and "the meeting ran long" are both independent clauses.', partNumber: 1, partTitle: 'Comma Basics' },
+  { id: 'spcs-ent-1b', question: 'Which sentence is punctuated correctly?', options: ['Before the concert began, the orchestra tuned its instruments.', 'Before the concert began the orchestra, tuned its instruments.', 'Before, the concert began the orchestra tuned its instruments.', 'Before the concert, began the orchestra tuned its instruments.'], correctIndex: 0, explanation: 'An introductory clause ("Before the concert began") is followed by a comma before the main clause. The other commas split a subject from its verb or break the introductory clause apart.', partNumber: 1, partTitle: 'Comma Basics' },
+  { id: 'spcs-ent-2a', question: 'Of the three bridges in town, the bridge ______ the river at Main Street will close for repairs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['that crosses', ', which crosses', 'that crosses,', ', that crosses'], correctIndex: 0, explanation: 'The clause identifies WHICH of the three bridges will close, so it is essential (restrictive): use "that" with no commas. Removing it would leave the reader unable to tell which bridge is meant, and a comma after "crosses" would split the subject from its verb.', partNumber: 2, partTitle: 'Nonessential vs. Essential Clauses' },
+  { id: 'spcs-ent-2b', question: 'The soccer team\'s only ______ Ortiz, scored the winning goal in the final minute.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['captain, Maya', 'captain Maya', 'captain: Maya', 'captain; Maya'], correctIndex: 0, explanation: 'The team has only one captain, so her name is extra (nonessential) information and is set off by a pair of commas. The comma after "Ortiz" must be matched by one after "captain."', partNumber: 2, partTitle: 'Nonessential vs. Essential Clauses' },
+  { id: 'spcs-ent-3a', question: 'Marcus stayed late at the ______ he missed the last bus home.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['lab; consequently,', 'lab, consequently,', 'lab; consequently', 'lab consequently,'], correctIndex: 0, explanation: '"Consequently" is a conjunctive adverb, not a conjunction, so it cannot join two independent clauses with commas alone. Use a semicolon before it and a comma after it.', partNumber: 3, partTitle: 'Semicolons' },
+  { id: 'spcs-ent-3b', question: 'Which sentence punctuates the series correctly?', options: ['The team included researchers from Austin, Texas; Boston, Massachusetts; and Portland, Oregon.', 'The team included researchers from Austin, Texas, Boston, Massachusetts, and Portland, Oregon.', 'The team included researchers from Austin; Texas; Boston; Massachusetts; and Portland; Oregon.', 'The team included researchers from Austin Texas; Boston Massachusetts; and Portland Oregon.'], correctIndex: 0, explanation: 'When the items in a series already contain commas (city, state), semicolons separate the items so the reader can tell where each one ends. The commas inside each city-state pair stay.', partNumber: 3, partTitle: 'Semicolons' },
+  { id: 'spcs-ent-4a', question: '"The architect designed the bridge with two goals in mind safety and efficiency."\n\nWhich revision is punctuated correctly?', options: ['The architect designed the bridge with two goals in mind: safety and efficiency.', 'The architect designed the bridge with two goals in mind; safety and efficiency.', 'The architect designed the bridge with two goals: in mind safety and efficiency.', 'The architect designed the bridge with two goals in mind safety, and efficiency.'], correctIndex: 0, explanation: '"The architect designed the bridge with two goals in mind" is a complete clause that introduces the goals, so a colon fits. A semicolon needs an independent clause after it, and "safety and efficiency" is not one.', partNumber: 4, partTitle: 'Colons' },
+  { id: 'spcs-ent-4b', question: 'Which sentence uses a colon correctly?', options: ['The coach gave one piece of advice: stay calm under pressure.', 'The coach said: that we should all stay calm under pressure.', 'The coach gave: one piece of advice about staying calm.', 'The coach, gave one piece of advice: stay calm under pressure.'], correctIndex: 0, explanation: 'A colon must follow a complete clause, and "The coach gave one piece of advice" is complete. In the other choices the colon interrupts a clause ("said: that," "gave: one piece"), or a comma separates the subject from its verb.', partNumber: 4, partTitle: 'Colons' },
+  { id: 'spcs-ent-5a', question: 'Which sentence is punctuated correctly?', options: ['The students who arrived early received the best seats.', 'The students who arrived early, received the best seats.', 'The students, who arrived early received the best seats.', 'The students who arrived, early received the best seats.'], correctIndex: 0, explanation: '"Who arrived early" tells which students got the best seats, so it is essential and takes no commas. A single comma between the subject ("The students who arrived early") and its verb ("received") is never correct.', partNumber: 5, partTitle: 'Unnecessary Commas & Common Traps' },
+  { id: 'spcs-ent-5b', question: 'The researchers measured the temperature ______ the depth of each water sample.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['and', ', and', 'and,', ', and,'], correctIndex: 0, explanation: '"The temperature and the depth" are two objects of the same verb, joined by "and." Two items joined by a conjunction take no comma; a comma before "and" is needed only when it joins two independent clauses.', partNumber: 5, partTitle: 'Unnecessary Commas & Common Traps' },
+  { id: 'spcs-ent-6a', question: '"I enjoy reading novels especially historical fiction however I rarely have time to finish them."\n\nWhich revision is punctuated correctly?', options: ['I enjoy reading novels, especially historical fiction; however, I rarely have time to finish them.', 'I enjoy reading novels especially historical fiction, however I rarely have time to finish them.', 'I enjoy reading novels; especially historical fiction; however, I rarely have time to finish them.', 'I enjoy reading novels, especially historical fiction, however, I rarely have time to finish them.'], correctIndex: 0, explanation: '"Especially historical fiction" is set off by a comma, and "however" joins two independent clauses, so it needs a semicolon before it and a comma after it. Commas alone around "however" create a comma splice.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'spcs-ent-6b', question: 'Which sentence uses both a comma and a semicolon correctly?', options: ['After years of research, the cure was announced; it was hailed as a breakthrough.', 'After years of research the cure was announced; it was hailed, as a breakthrough.', 'After years of research, the cure was announced, it was hailed as a breakthrough.', 'After years of research; the cure was announced, it was hailed as a breakthrough.'], correctIndex: 0, explanation: 'A comma follows the introductory phrase "After years of research," and a semicolon joins the two independent clauses. The other versions put a comma inside a verb phrase, create a comma splice, or place a semicolon after a phrase.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'spcs-ent-7a', question: 'Which sentence contains a comma splice?', options: ['I finished my homework, and then I watched television.', 'I finished my homework; then I watched television.', 'I finished my homework, then I watched television.', 'After finishing my homework, I watched television.'], correctIndex: 2, explanation: 'A comma splice joins two independent clauses with only a comma. "Then" is an adverb, not a coordinating conjunction, so "homework, then I watched" is a splice. A comma plus "and," a semicolon, or an introductory phrase all work.', partNumber: 7, partTitle: 'Review & Final Challenge' },
+  { id: 'spcs-ent-7b', question: 'Which statement about joining two independent clauses is correct?', options: ['A semicolon by itself can join two independent clauses.', 'A comma alone can join two independent clauses.', 'A colon can never join two independent clauses.', 'A semicolon can join them only when "and" follows it.'], correctIndex: 0, explanation: 'A semicolon alone correctly joins two independent clauses. A comma alone makes a comma splice (it needs a coordinating conjunction), a colon can join independent clauses when the second explains the first, and "; and" is not standard.', partNumber: 7, partTitle: 'Review & Final Challenge' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Comma Rules' },
-    { partNumber: 2, partTitle: 'Comma Splices' },
+    { partNumber: 1, partTitle: 'Comma Basics' },
+    { partNumber: 2, partTitle: 'Nonessential vs. Essential Clauses' },
     { partNumber: 3, partTitle: 'Semicolons' },
-    { partNumber: 4, partTitle: 'Independent Clauses' },
-    { partNumber: 5, partTitle: 'Lists & Series' },
+    { partNumber: 4, partTitle: 'Colons' },
+    { partNumber: 5, partTitle: 'Unnecessary Commas & Common Traps' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 7, partTitle: 'Review & Final Challenge' },
   ]
 }

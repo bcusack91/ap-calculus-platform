@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: When to Use a Calculator ─────────────
-  {
-    id: 'scals-ent-1a',
-    question:
-      'On the SAT Math section, which type of problem is generally BEST solved without a calculator?',
-    options: [
-      'Finding the decimal value of $\\sqrt{157}$ to four decimal places.',
-      'Solving 2x + 6 = 14 for x.',
-      'Calculating 17.3% of 842.',
-      'Evaluating $\\sin(47^\\circ)$ to three decimal places.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '2x + 6 = 14 → 2x = 8 → x = 4 requires only simple mental arithmetic. A calculator adds no value here and slows you down. The other options (irrational roots, percentages of large numbers, trigonometric values) genuinely benefit from calculator use.',
-    partNumber: 1,
-    partTitle: 'When to Use a Calculator',
-  },
-  {
-    id: 'scals-ent-1b',
-    question:
-      'A student uses a calculator to evaluate $(3/7) \\times (14/9)$. Which answer would the calculator display, and is it the most efficient method?',
-    options: [
-      '0.6667; and yes, a calculator is most efficient here.',
-      '2/3; and a calculator is not necessary—mental simplification is faster.',
-      '0.4762; and a calculator is the only way to solve this.',
-      '3/14; and a calculator is needed to find this fraction.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '$(3/7) \\times (14/9) = (3 \\times 14)/(7 \\times 9)$ = 42/63 = 2/3. Cross-canceling: 3/9 = 1/3 and 14/7 = 2, so $(1/3) \\times 2$ = 2/3. Mental simplification is faster and avoids decimal rounding. The result is exactly 2/3.',
-    partNumber: 1,
-    partTitle: 'When to Use a Calculator',
-  },
-
-  // ── Part 2: Graphing Functions ────────────────────
-  {
-    id: 'scals-ent-2a',
-    question:
-      'You graph y = $x^{2}$ − 4x − 5 on your calculator. What feature of the graph helps you find the x-intercepts (roots) most directly?',
-    options: [
-      'The y-intercept',
-      'The vertex (minimum point)',
-      'The zero/root finder (where the graph crosses the x-axis)',
-      'The table of values at y = 0',
-    ],
-    correctIndex: 2,
-    explanation:
-      'X-intercepts are where y = 0—literally where the graph crosses the x-axis. Using the "zero" or "root" function on a graphing calculator locates these points directly. A table of values at y = 0 can also help but is less direct than the built-in zero finder.',
-    partNumber: 2,
-    partTitle: 'Graphing Functions',
-  },
-  {
-    id: 'scals-ent-2b',
-    question:
-      'When using a graphing calculator to find the intersection of y = 2x + 1 and y = $x^{2}$ − 3, what does the intersection point represent?',
-    options: [
-      'The vertex of the parabola.',
-      'The x-value where both functions equal zero.',
-      'The point(s) where the two equations have the same x and y values—i.e., the solution(s) to 2x + 1 = $x^{2}$ − 3.',
-      'The average of the two functions.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The intersection of two graphs represents the point(s) where both equations are simultaneously satisfied. Finding intersections graphically is equivalent to solving the system algebraically: 2x + 1 = $x^{2}$ − 3.',
-    partNumber: 2,
-    partTitle: 'Graphing Functions',
-  },
-
-  // ── Part 3: Solving Equations Graphically ────────
-  {
-    id: 'scals-ent-3a',
-    question:
-      'To solve the equation $x^{3}$ − 3x = 2 using a graphing calculator, which strategy is most effective?',
-    options: [
-      'Graph y = $x^{3}$ − 3x − 2 and find every zero, even touch points.',
-      'Graph y = $x^{3}$ − 3x − 2 and keep only zeros where it crosses the axis.',
-      'Evaluate $x^{3}$ − 3x at x = 1, 2, 3 and stop once it equals 2.',
-      'Graph y = $x^{3}$ and y = 3x, then find where the graphs intersect.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'Rewrite the equation as $x^{3}$ − 3x − 2 = 0, which factors as (x − 2)$(x + 1)^{2}$. Its zeros are x = 2, where the graph crosses the x-axis, and x = −1, a double root where the graph only touches the axis. Finding every zero, touch points included, gives both solutions. Keeping only sign-change crossings misses x = −1, testing x = 1, 2, 3 finds only x = 2, and intersecting y = $x^{3}$ with y = 3x solves a different equation.',
-    partNumber: 3,
-    partTitle: 'Solving Equations Graphically',
-  },
-  {
-    id: 'scals-ent-3b',
-    question:
-      'You graph y = |2x − 6| and y = 4 on your calculator to solve |2x − 6| = 4. The graph shows two intersection points at x = 1 and x = 5. What does this mean algebraically?',
-    options: [
-      'The equation has no solution.',
-      'The only solution is x = 1.',
-      'The solutions are x = 1 and x = 5.',
-      'The equation simplifies to 2x − 6 = 4 only.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'An absolute value equation |2x − 6| = 4 has two cases: 2x − 6 = 4 (x = 5) and 2x − 6 = −4 (x = 1). The graph confirms both solutions as intersection points. Both are valid solutions.',
-    partNumber: 3,
-    partTitle: 'Solving Equations Graphically',
-  },
-
-  // ── Part 4: Using Tables ──────────────────────────
-  {
-    id: 'scals-ent-4a',
-    question:
-      'You use the TABLE function on a graphing calculator and see: x = 0 gives y = −3; x = 1 gives y = 0; x = 2 gives y = 5. What can you immediately conclude?',
-    options: [
-      'The function has a zero at x = 0.',
-      'The function has a zero at x = 1.',
-      'The function has a zero between x = 0 and x = 1.',
-      'The function is decreasing over the interval shown.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'A zero of a function occurs where y = 0. The table shows y = 0 when x = 1, so x = 1 is a zero. (If the table showed a sign change without hitting exactly zero, you would use the Intermediate Value Theorem to locate a root between two values.)',
-    partNumber: 4,
-    partTitle: 'Using Tables',
-  },
-  {
-    id: 'scals-ent-4b',
-    question:
-      'On the SAT, a table of values for a linear function shows: (0, 5), (1, 8), (2, 11), (3, 14). What is the equation of the function?',
-    options: [
-      'y = 3x + 5',
-      'y = 5x + 3',
-      'y = 3x − 5',
-      'y = 2x + 5',
-    ],
-    correctIndex: 0,
-    explanation:
-      'The y-value increases by 3 for each unit increase in x, so the slope is 3. The y-intercept is 5 (value when x = 0). Equation: y = 3x + 5. Check: y(2) = 3(2) + 5 = 11 ✓.',
-    partNumber: 4,
-    partTitle: 'Using Tables',
-  },
-
-  // ── Part 5: Estimation Strategies ────────────────
-  {
-    id: 'scals-ent-5a',
-    question:
-      'Which estimation technique is most useful for checking whether a calculator answer is reasonable on the SAT?',
-    options: [
-      'Round all numbers to the nearest thousand before calculating.',
-      'Use front-end estimation: round each number to its leading digit and compute mentally.',
-      'Divide your calculator answer by 2 to check for errors.',
-      'Substitute your answer back into the original problem and verify it satisfies the conditions.',
-    ],
-    correctIndex: 3,
-    explanation:
-      'Substituting your answer back into the original problem is the most reliable check—it directly tests whether the answer satisfies all given conditions. Front-end estimation (rounding to leading digits) is also useful for quick sanity checks, but verification by substitution is the gold standard.',
-    partNumber: 5,
-    partTitle: 'Estimation Strategies',
-  },
-  {
-    id: 'scals-ent-5b',
-    question:
-      'Without using a calculator, estimate which of the following is closest to $\\sqrt{50}$.',
-    options: [
-      '6',
-      '7',
-      '8',
-      '25',
-    ],
-    correctIndex: 1,
-    explanation:
-      '$6^{2}$ = 36 and $7^{2}$ = 49 and $8^{2}$ = 64. Since 49 < 50 < 64, $\\sqrt{50}$ is slightly above 7. Among the choices, 7 is the closest estimate to $\\sqrt{50}$ $\\approx$ 7.07.',
-    partNumber: 5,
-    partTitle: 'Estimation Strategies',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'scals-ent-6a',
-    question:
-      'A student needs to find all x-values where f(x) = $x^{3}$ − $6x^{2}$ + 9x equals zero. She graphs the function. The graph touches the x-axis at x = 0 and x = 3 but does not cross at x = 3. What does this tell her?',
-    options: [
-      'x = 3 is not actually a root.',
-      'x = 3 is a root of multiplicity 2 (a repeated root), and the graph is tangent to the x-axis there.',
-      'The function has no roots.',
-      'The graph has an error because a cubic must cross the x-axis three times.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Factor: $x^{3}$ − $6x^{2}$ + 9x = $x(x^{2} - 6x + 9)$ = $x(x - 3)^{2}$. The factor $(x - 3)^{2}$ creates a repeated root at x = 3, causing the graph to "bounce" off (touch without crossing) the x-axis at that point. x = 0 is a simple root where the graph does cross.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'scals-ent-6b',
-    question:
-      'Which setting adjustment on a graphing calculator is MOST important when solving an SAT problem involving the graph of y = sin(x)?',
-    options: [
-      'Setting the window\'s y-range to [−100, 100].',
-      'Switching the angle mode from degrees to radians (or vice versa) to match the problem\'s context.',
-      'Changing the color of the graph line.',
-      'Increasing the graph\'s resolution by reducing the x-step.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Graphing calculators can be set to degree or radian mode. If the mode does not match the problem\'s context, all values will be wrong. On the SAT, always confirm your calculator is in the correct angle mode before evaluating or graphing trigonometric functions.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'scals-ent-7a',
-    question:
-      'The SAT now has one Math section. Which of the following is true about calculator use on this section?',
-    options: [
-      'No calculator is permitted on any part of the SAT Math section.',
-      'A calculator is permitted and a Desmos graphing calculator is available in the digital SAT interface.',
-      'Only a basic four-function calculator may be used.',
-      'Students must bring a physical calculator; no digital calculator is provided.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'On the digital SAT (introduced in 2024), a built-in Desmos graphing calculator is available for the entire Math section, in addition to any approved personal calculator the student brings. This makes graphical problem-solving more accessible than ever.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'scals-ent-7b',
-    question:
-      'A student uses her calculator to solve $3x^{2}$ + 7x − 6 = 0 graphically and finds x $\\approx$ 0.667. How can she verify this is a reasonable answer?',
-    options: [
-      'Substitute x = 0.667 back into $3x^{2}$ + 7x − 6 and check if the result is approximately 0.',
-      'Check that 0.667 appears in the table of values as a y-value.',
-      'Confirm that $0.667 \\times 3$ = 2 exactly.',
-      'Verify that the discriminant is negative.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'Substituting x $\\approx$ 0.667 into $3(0.667)^{2}$ + 7(0.667) − 6 $\\approx$ 3(0.445) + 4.669 − 6 $\\approx$ 1.335 + 4.669 − 6 $\\approx$ 0.004 $\\approx$ 0 ✓. This confirms the answer is correct to three decimal places. Note: the exact root is x = 2/3.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'scals-ent-1a', question: 'Which of these tasks is the Desmos graphing calculator most likely to speed up?', options: ['Solving $4(x - 2) + 9 = 3x + 15$', 'Finding $25\\%$ of $640$', 'Solving $1.3x^2 - 2.7x - 4.1 = 0$', 'Factoring $x^2 - 10x + 25$'], correctIndex: 2, explanation: 'The quadratic with decimal coefficients has irrational solutions, so graphing it and clicking its zeros beats the quadratic formula. The others only look busy: the linear equation simplifies to $x = 14$, $25\\%$ of 640 is 160, and $x^2 - 10x + 25 = (x - 5)^2$, all faster by hand than typing into Desmos.', partNumber: 1, partTitle: 'Knowing When the Calculator Helps' },
+  { id: 'scals-ent-1b', question: 'If $5x + 3 = 18$, what is the value of $10x + 6$?', options: ['15', '30', '33', '36'], correctIndex: 3, explanation: 'No calculator needed: $10x + 6 = 2(5x + 3) = 2(18) = 36$. Solving for $x = 3$ first also works but takes longer. (15 is the value of $5x$; 33 doubles only $5x$.)', partNumber: 1, partTitle: 'Knowing When the Calculator Helps' },
+  { id: 'scals-ent-2a', question: 'You graph $y = x^2 - 4x - 5$ in Desmos and click the points where the graph crosses the $x$-axis. Which points are marked?', options: ['$(-1, 0)$ and $(5, 0)$', '$(1, 0)$ and $(-5, 0)$', '$(0, -5)$ and $(2, -9)$', '$(-5, 0)$ and $(-1, 0)$'], correctIndex: 0, explanation: 'The $x$-intercepts are the zeros: $x^2 - 4x - 5 = (x - 5)(x + 1)$, so $x = 5$ and $x = -1$. $(0, -5)$ is the $y$-intercept and $(2, -9)$ is the vertex.', partNumber: 2, partTitle: 'Essential Desmos Skills' },
+  { id: 'scals-ent-2b', question: 'You graph $y = -x^2 + 6x - 4$ in Desmos and click its highest point. What are the coordinates of that point?', options: ['$(3, 5)$', '$(-3, 5)$', '$(3, -4)$', '$(6, -4)$'], correctIndex: 0, explanation: 'The highest point is the vertex. Its $x$-coordinate is $-\\dfrac{6}{2(-1)} = 3$, and $y = -9 + 18 - 4 = 5$. ($(3, -4)$ reuses the constant term as the $y$-value.)', partNumber: 2, partTitle: 'Essential Desmos Skills' },
+  { id: 'scals-ent-3a', question: 'To solve $|2x - 6| = 4$, you graph $y = |2x - 6|$ and $y = 4$ in Desmos. At which $x$-values do the two graphs intersect?', options: ['$x = 5$ only', '$x = -1$ and $x = 5$', '$x = 1$ and $x = 5$', '$x = 2$ and $x = 5$'], correctIndex: 2, explanation: 'The horizontal line $y = 4$ crosses both arms of the V: $2x - 6 = 4$ gives $x = 5$, and $2x - 6 = -4$ gives $x = 1$. Each intersection is a solution of the equation; stopping at $x = 5$ misses the second arm.', partNumber: 3, partTitle: 'Graphical Solutions to Systems' },
+  { id: 'scals-ent-3b', question: 'How many solutions does the system $y = 2x + 3$ and $4x - 2y = 6$ have?', options: ['No solution', 'Exactly one solution', 'Exactly two', 'Infinitely many'], correctIndex: 0, explanation: 'Solve the second equation for $y$: $y = 2x - 3$. Both lines have slope 2 but different $y$-intercepts, so they are parallel and never meet: no solution. Desmos would show two parallel lines.', partNumber: 3, partTitle: 'Graphical Solutions to Systems' },
+  { id: 'scals-ent-4a', question: 'How many integer values of $x$ satisfy both $x > -2$ and $3x - 1 \\leq 11$?', options: ['5', '6', '7', '8'], correctIndex: 1, explanation: '$3x - 1 \\leq 11$ gives $x \\leq 4$. Combined with $x > -2$: $-2 < x \\leq 4$, so the integers are $-1, 0, 1, 2, 3, 4$, which is 6 values. ($-2$ is excluded because the first inequality is strict.)', partNumber: 4, partTitle: 'Shading, Domains, and Constraints' },
+  { id: 'scals-ent-4b', question: 'You enter $y \\geq x + 1$ and $y < -2x + 8$ in Desmos. Which point lies in the region where the two shadings overlap?', options: ['$(1, 3)$', '$(3, 2)$', '$(0, 0)$', '$(2, 4)$'], correctIndex: 0, explanation: 'Test each point in both: $(1, 3)$ gives $3 \\geq 2$ and $3 < 6$, both true. $(3, 2)$ fails $2 \\geq 4$; $(0, 0)$ fails $0 \\geq 1$; $(2, 4)$ lies on the dashed line $y = -2x + 8$, and $4 < 4$ is false.', partNumber: 4, partTitle: 'Shading, Domains, and Constraints' },
+  { id: 'scals-ent-5a', question: 'A Desmos linear regression on a data table reports $m = 2.4$ and $b = 0.4$. What does the model predict for $x = 10$?', options: ['6.4', '24', '24.4', '28'], correctIndex: 2, explanation: 'The model is $y = 2.4x + 0.4$, so $y = 2.4(10) + 0.4 = 24.4$. (6.4 swaps the slope and intercept; 24 drops the intercept.)', partNumber: 5, partTitle: 'Tables, Regression, and Curve Fitting' },
+  { id: 'scals-ent-5b', question: 'A data set increases by roughly the same percent from each $x$-value to the next. Which Desmos entry fits the best model to the table?', options: ['$y_1 \\sim mx_1 + b$', '$y_1 \\sim ax_1^2 + bx_1 + c$', '$y_1 \\sim ab^{x_1}$', '$y_1 = ab^{x_1}$'], correctIndex: 2, explanation: 'Constant percent change is exponential, and the tilde $\\sim$ tells Desmos to run a regression on the table columns. With an equals sign, Desmos tries to graph an equation with sliders instead of fitting the data.', partNumber: 5, partTitle: 'Tables, Regression, and Curve Fitting' },
+  { id: 'scals-ent-6a', question: 'For $f(x) = x^3 - 2x^2 + 3$, which of the following values of $x$ gives $f(x) = 12$?', options: ['$-1$', '$1$', '$2$', '$3$'], correctIndex: 3, explanation: 'Backsolve by testing the choices (or read them from a Desmos table): $f(-1) = 0$, $f(1) = 2$, $f(2) = 3$, and $f(3) = 27 - 18 + 3 = 12$.', partNumber: 6, partTitle: 'Power Moves for the SAT' },
+  { id: 'scals-ent-6b', question: 'Which expression is equivalent to $(x + 3)(x - 2) + 5$?', options: ['$x^2 + x - 1$', '$x^2 + x + 11$', '$x^2 - x - 1$', '$x^2 + 5x - 1$'], correctIndex: 0, explanation: 'Expand: $x^2 + x - 6 + 5 = x^2 + x - 1$. In Desmos, an equivalent expression graphs exactly on top of the original. ($x^2 + x + 11$ adds 6 instead of $-6$.)', partNumber: 6, partTitle: 'Power Moves for the SAT' },
+  { id: 'scals-ent-7a', question: 'Desmos shows that the graph of $y = 3x^2 + 7x - 6$ crosses the $x$-axis at $x \\approx 0.667$ and at one other point. What are the exact solutions of $3x^2 + 7x - 6 = 0$?', options: ['$x = \\frac{2}{3}$ and $x = -3$', '$x = \\frac{2}{3}$ and $x = 3$', '$x = -\\frac{2}{3}$ and $x = 3$', '$x = \\frac{3}{2}$ and $x = -3$'], correctIndex: 0, explanation: 'Factor: $3x^2 + 7x - 6 = (3x - 2)(x + 3)$, so $x = \\frac{2}{3} \\approx 0.667$ and $x = -3$. Recognizing $0.667$ as $\\frac{2}{3}$ confirms the decimal Desmos reports.', partNumber: 7, partTitle: 'Putting It All Together' },
+  { id: 'scals-ent-7b', question: 'The equation $2x^2 - 8x + c = 0$ has exactly one real solution. What is the value of $c$?', options: ['2', '4', '8', '16'], correctIndex: 2, explanation: 'One real solution means the discriminant is zero: $(-8)^2 - 4(2)(c) = 64 - 8c = 0$, so $c = 8$. Algebra is faster here than adjusting a Desmos slider until the parabola just touches the $x$-axis.', partNumber: 7, partTitle: 'Putting It All Together' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'When to Use a Calculator' },
-    { partNumber: 2, partTitle: 'Graphing Functions' },
-    { partNumber: 3, partTitle: 'Solving Equations Graphically' },
-    { partNumber: 4, partTitle: 'Using Tables' },
-    { partNumber: 5, partTitle: 'Estimation Strategies' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Knowing When the Calculator Helps' },
+    { partNumber: 2, partTitle: 'Essential Desmos Skills' },
+    { partNumber: 3, partTitle: 'Graphical Solutions to Systems' },
+    { partNumber: 4, partTitle: 'Shading, Domains, and Constraints' },
+    { partNumber: 5, partTitle: 'Tables, Regression, and Curve Fitting' },
+    { partNumber: 6, partTitle: 'Power Moves for the SAT' },
+    { partNumber: 7, partTitle: 'Putting It All Together' },
   ]
 }

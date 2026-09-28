@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Main Idea ─────────────────────────────
-  {
-    id: 'sre-ent-1a',
-    question:
-      'A passage opens: "For decades, scientists dismissed the idea that plants communicate. Recent studies, however, reveal that trees in a forest exchange nutrients and distress signals through vast underground fungal networks, fundamentally challenging our understanding of plant behavior." What is the main idea of this passage?',
-    options: [
-      'Scientists have always known that plants communicate underground.',
-      'Trees use fungal networks to communicate, overturning prior scientific assumptions.',
-      'Fungi are more important to forests than trees are.',
-      'Scientists should study underground networks instead of plant behavior.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The passage contrasts the old dismissal of plant communication with new evidence of underground fungal networks, making "Trees use fungal networks to communicate, overturning prior scientific assumptions" the central claim. The other options either contradict the passage or misrepresent its focus.',
-    partNumber: 1,
-    partTitle: 'Main Idea',
-  },
-  {
-    id: 'sre-ent-1b',
-    question:
-      'A passage states: "The popularity of electric vehicles has grown steadily, yet range anxiety—fear of running out of charge—remains the single greatest barrier to mass adoption. Charging infrastructure, critics argue, must triple before EVs become truly practical." Which statement best summarizes the central tension in the passage?',
-    options: [
-      'Electric vehicles are more popular than gasoline cars.',
-      'Critics oppose electric vehicles for environmental reasons.',
-      'EV growth is hindered by insufficient charging infrastructure and consumer fear.',
-      'Range anxiety is caused by the high price of electric vehicles.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The passage highlights two interrelated problems—range anxiety and inadequate infrastructure—as obstacles to EV adoption. The statement about insufficient charging infrastructure and consumer fear accurately captures both elements of this tension.',
-    partNumber: 1,
-    partTitle: 'Main Idea',
-  },
-
-  // ── Part 2: Supporting Evidence ───────────────────
-  {
-    id: 'sre-ent-2a',
-    question:
-      'A student claims: "The author believes urban green spaces improve mental health." Which quotation from the passage provides the BEST evidence for this claim?',
-    options: [
-      '"City parks were first established in the nineteenth century to provide leisure for the working class."',
-      '"Exposure to natural environments, even brief walks through tree-lined streets, consistently lowers cortisol levels and self-reported stress."',
-      '"The cost of maintaining urban parks has increased significantly in recent decades."',
-      '"Many cities have reduced their green space budgets due to fiscal constraints."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The cortisol quotation directly connects natural environments to measurable mental-health outcomes (lower cortisol, reduced stress), directly supporting the claim. The other options discuss history or costs, not mental health benefits.',
-    partNumber: 2,
-    partTitle: 'Supporting Evidence',
-  },
-  {
-    id: 'sre-ent-2b',
-    question:
-      'A passage argues that social media increases teenage depression. Which piece of evidence would MOST weaken this argument?',
-    options: [
-      'A study showing teens who use social media more than 3 hours daily report higher anxiety.',
-      'A survey indicating teens prefer texting over face-to-face communication.',
-      'A longitudinal study finding no significant difference in depression rates between heavy and light social media users.',
-      'Data showing that social media companies profit from teen engagement.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'A longitudinal study finding no significant difference directly contradicts the causal claim. The other options are either irrelevant or could even support the argument.',
-    partNumber: 2,
-    partTitle: 'Supporting Evidence',
-  },
-
-  // ── Part 3: Inference Skills ──────────────────────
-  {
-    id: 'sre-ent-3a',
-    question:
-      'A passage notes: "Despite being the world\'s largest democracy, India\'s voter turnout in rural areas often exceeds that of urban centers, a pattern that inverts trends seen in most Western nations." What can be inferred about Western nations?',
-    options: [
-      'In most Western nations, urban voter turnout tends to be higher than rural turnout.',
-      'Western nations have lower overall voter turnout than India.',
-      'Western rural voters are less politically engaged than Indian rural voters.',
-      'India copied its democratic system from Western nations.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'The phrase "inverts trends seen in most Western nations" implies that in the West the usual pattern is the opposite—urban turnout exceeds rural turnout. That urban turnout tends to be higher than rural turnout in most Western nations is the direct inference.',
-    partNumber: 3,
-    partTitle: 'Inference Skills',
-  },
-  {
-    id: 'sre-ent-3b',
-    question:
-      'A character in a short story never speaks directly, but other characters consistently defer to her opinions and seek her approval before acting. What can the reader most reasonably infer about this character?',
-    options: [
-      'She is shy and prefers to avoid conflict.',
-      'She holds significant social authority within the group.',
-      'She is unaware of the group\'s activities.',
-      'She is new to the community and still learning its norms.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'When others consistently defer to and seek approval from a character, the most reasonable inference is that she possesses social authority, even if she is not overtly assertive.',
-    partNumber: 3,
-    partTitle: 'Inference Skills',
-  },
-
-  // ── Part 4: Text Structure ────────────────────────
-  {
-    id: 'sre-ent-4a',
-    question:
-      'A passage begins by describing a problem (ocean plastic pollution), then presents two failed government solutions, and concludes by proposing a market-based incentive as the best remedy. Which text structure does this passage use?',
-    options: [
-      'Chronological order',
-      'Compare and contrast',
-      'Problem-solution with evaluation of alternatives',
-      'Cause and effect only',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The passage identifies a problem, evaluates failed solutions, and proposes a preferred remedy—a classic problem-solution structure with comparative evaluation of alternatives.',
-    partNumber: 4,
-    partTitle: 'Text Structure',
-  },
-  {
-    id: 'sre-ent-4b',
-    question:
-      'An author devotes the first three paragraphs to praising a scientific theory, then spends the final two paragraphs detailing its flaws. What is the most likely purpose of this organizational choice?',
-    options: [
-      'To confuse the reader about the author\'s true opinion.',
-      'To build credibility by acknowledging strengths before presenting a critical evaluation.',
-      'To show that the theory has more strengths than weaknesses.',
-      'To argue that the theory should be abandoned immediately.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Presenting strengths first before a critique is a rhetorical strategy that establishes the author\'s fairness and credibility, making the subsequent criticism more persuasive.',
-    partNumber: 4,
-    partTitle: 'Text Structure',
-  },
-
-  // ── Part 5: Author's Purpose ──────────────────────
-  {
-    id: 'sre-ent-5a',
-    question:
-      'An author writes: "We must act now. Every year we delay, another 8 million metric tons of plastic enter our oceans. Our grandchildren will inherit a world where fish are outnumbered by plastic debris—if we let that happen." What is the author\'s primary purpose?',
-    options: [
-      'To inform readers of plastic recycling techniques.',
-      'To persuade readers to take immediate action on plastic pollution.',
-      'To entertain readers with vivid descriptions of ocean life.',
-      'To compare plastic pollution in different countries.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The imperative "We must act now," the alarming statistics, and the emotional appeal to grandchildren all signal persuasive intent aimed at motivating immediate action.',
-    partNumber: 5,
-    partTitle: "Author's Purpose",
-  },
-  {
-    id: 'sre-ent-5b',
-    question:
-      'A science writer describes, in vivid detail, the life cycle of a monarch butterfly—its migration, metamorphosis, and habitat—without recommending any action. What is most likely the author\'s purpose?',
-    options: [
-      'To persuade readers to protect monarch butterflies.',
-      'To argue that butterflies are more important than other insects.',
-      'To inform and engage readers with the natural world.',
-      'To critique government environmental policy.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Without calls to action or argumentation, the vivid descriptive detail suggests the author\'s goal is to inform and engage—sharing knowledge about the butterfly\'s life cycle.',
-    partNumber: 5,
-    partTitle: "Author's Purpose",
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'sre-ent-6a',
-    question:
-      'You are asked: "Which choice most effectively uses relevant information from the notes to accomplish the goal of introducing a key counterargument?" The goal is to acknowledge that some researchers dispute the study\'s findings. Which sentence best accomplishes this?',
-    options: [
-      '"The study was conducted over five years."',
-      '"Some researchers, however, contend that the study\'s sample size was too small to support its sweeping conclusions."',
-      '"The study received funding from a private foundation."',
-      '"Participants were between the ages of 18 and 25."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The "sample size was too small" sentence directly introduces a counterargument (disputing the conclusions) with a specific critique (sample size). The other options are factual details that do not constitute counterarguments.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'sre-ent-6b',
-    question:
-      'A student reads two paired passages. Passage 1 argues that remote work increases productivity. Passage 2 argues it decreases collaboration. Which synthesis best captures the relationship between the two passages?',
-    options: [
-      'Both passages agree that remote work is beneficial for employees.',
-      'Passage 1 focuses on individual output while Passage 2 focuses on team dynamics, revealing that remote work has mixed effects depending on the measure used.',
-      'Passage 2 directly refutes every claim made in Passage 1.',
-      'Both passages use the same data to reach opposite conclusions.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The passages address different dimensions (individual productivity vs. team collaboration), so the most accurate synthesis acknowledges their different foci and the nuanced, context-dependent nature of remote work\'s effects.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'sre-ent-7a',
-    question:
-      'On the SAT Reading section, if a question asks "Which choice best supports the claim made in the previous sentence?" what should you do FIRST?',
-    options: [
-      'Read all four answer choices before re-reading the passage.',
-      'Re-read the specific sentence the question references and identify exactly what claim needs support.',
-      'Choose the longest answer choice, as it provides the most detail.',
-      'Pick the answer that mentions the same topic as the passage title.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Textual-evidence questions require you to anchor your search in the specific claim being made. Reading the referenced sentence first ensures you know precisely what kind of support you need before evaluating the choices.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'sre-ent-7b',
-    question:
-      'A passage\'s final paragraph begins: "Ultimately, the evidence suggests that neither extreme position is fully correct." What role does this sentence most likely play in the passage?',
-    options: [
-      'It introduces a brand-new topic unrelated to the rest of the passage.',
-      'It serves as a transitional hook leading to the next passage.',
-      'It refutes the passage\'s thesis and introduces an opposing view.',
-      'It signals a concluding synthesis that qualifies or moderates the positions discussed.',
-    ],
-    correctIndex: 3,
-    explanation:
-      '"Ultimately" signals a conclusion, and the idea that "neither extreme is fully correct" is a classic moderating synthesis—the author is pulling together the discussion to reach a nuanced resolution.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'sre-ent-1a', question: 'For decades, botanists assumed that trees in a forest competed for light and water as isolated individuals. Recent field studies complicate that picture: trees are linked by underground fungal networks that carry sugars and chemical warning signals from one tree to another, sometimes from older trees to struggling seedlings.\n\nWhich choice best states the main idea of the text?', options: ['Research suggests that forest trees interact more than scientists thought.', 'Fungal networks harm seedlings by moving their sugars to older, taller trees.', 'Older trees compete harder for light and water than seedlings do.', 'Botanists no longer study how trees in a forest compete for water and light.'], correctIndex: 0, explanation: 'The text contrasts an old assumption (trees compete as isolated individuals) with new findings (trees share sugars and signals through fungal networks), so its main idea is that trees interact more than once believed. The text says sugars move toward struggling seedlings, not away from them, and it never says botanists stopped studying competition.', partNumber: 1, partTitle: 'Finding the Central Idea' },
+  { id: 'sre-ent-1b', question: 'Sales of electric vehicles have risen every year for a decade. Yet surveys find that many drivers who like the idea of an electric car still hesitate to buy one, chiefly because they worry about running out of charge far from a charging station. Until public chargers become far more common, analysts predict, that worry will keep many buyers away.\n\nWhich choice best states the main idea of the text?', options: ['Though demand is growing, fear of being stranded without power deters drivers.', 'Electric car sales have risen because drivers want to avoid high fuel costs.', 'Most buyers avoid electric cars because they believe the cars cost too much.', 'Public chargers are now common enough to end most drivers\' worries about range.'], correctIndex: 0, explanation: 'The text pairs rising sales ("Yet") with a persistent obstacle: fear of running out of charge where chargers are scarce. It never compares electric and gasoline sales or mentions price, and it says chargers still need to become far more common.', partNumber: 1, partTitle: 'Finding the Central Idea' },
+  { id: 'sre-ent-2a', question: 'In an essay, a city planner claims that urban parks improve residents\' mental health.\n\nWhich quotation from the essay most effectively illustrates the claim?', options: ['"Residents who walked in a park for twenty minutes reported far lower stress."', '"The city\'s first public park opened in 1868 on land that had once been a dairy farm."', '"Maintaining the city\'s parks now costs nearly twice what it did twenty years ago."', '"Several groups of residents have asked the council to add benches and lights to parks."'], correctIndex: 0, explanation: 'Only the quotation about lower stress after a walk connects parks to a mental-health outcome. The others are about parks (history, cost, requests for benches) but say nothing about residents\' mental health, which is the classic same-topic trap.', partNumber: 2, partTitle: 'Finding Evidence in the Text' },
+  { id: 'sre-ent-2b', question: 'A biologist hypothesizes that a species of rainforest frog uses its bright skin color to warn predators that it is toxic.\n\nWhich finding, if true, would most directly support the biologist\'s hypothesis?', options: ['Birds that ate one brightly colored frog avoided frogs of that color afterward.', 'Brightly colored frogs of this species are more common in wet regions than dry ones.', 'Toxic frogs of this species lay more eggs than the frogs of related nontoxic species.', 'The frogs\' skin grows brighter as the animals age and gain body weight.'], correctIndex: 0, explanation: 'A warning signal works only if predators learn to associate the color with a bad experience and then avoid it, which is exactly what the bird finding shows. Where the frogs live, how many eggs they lay, and how their color changes with age do not show that the color deters predators.', partNumber: 2, partTitle: 'Finding Evidence in the Text' },
+  { id: 'sre-ent-3a', question: 'In India, voter turnout in rural districts often exceeds turnout in cities, a pattern that reverses the one typically seen in most Western democracies.\n\nBased on the text, what is most likely true of most Western democracies?', options: ['Urban turnout tends to be higher than turnout in rural areas.', 'Overall turnout tends to be lower than it is in India.', 'Rural voters tend to be more engaged than urban voters.', 'Turnout tends to be similar in rural and urban areas.'], correctIndex: 0, explanation: 'If India\'s pattern (rural turnout above urban) "reverses" the Western one, then in most Western democracies urban turnout is higher. The text compares the patterns, not overall turnout levels, so the claim about lower overall turnout is unsupported.', partNumber: 3, partTitle: 'Reading Between the Lines' },
+  { id: 'sre-ent-3b', question: 'Archaeologists found grinding stones with traces of wild grain at a site dated to about 23,000 years ago, roughly 10,000 years before the earliest known farming. Because the grain was wild rather than cultivated, the find suggests that ______\n\nWhich choice most logically completes the text?', options: ['people were already processing grain for food long before they began to farm it.', 'farming began in the region about 23,000 years ago, earlier than thought.', 'the grinding stones were carried to the site later by farming communities.', 'wild grain was more nutritious than the grain grown by the first farmers.'], correctIndex: 0, explanation: 'The stones were used on wild (not farmed) grain long before farming began, so people processed grain before they cultivated it. The text rules out early farming by stressing that the grain was wild, and it says nothing about nutrition or about the stones being moved.', partNumber: 3, partTitle: 'Reading Between the Lines' },
+  { id: 'sre-ent-4a', question: 'The researcher was careful to qualify her conclusion, noting that the results held only for the small coastal population she had studied and might not apply to other groups.\n\nAs used in the text, what does the word "qualify" most nearly mean?', options: ['limit', 'certify', 'announce', 'defend'], correctIndex: 0, explanation: 'She restricts her conclusion to one population, so "qualify" means to limit it. "Certify" reflects the familiar sense of "qualify" (to become eligible), which is the common-meaning trap.', partNumber: 4, partTitle: 'Word Meaning from Context' },
+  { id: 'sre-ent-4b', question: 'Early vaccination campaigns helped check the spread of smallpox, and within a few decades the disease had disappeared from much of Europe.\n\nAs used in the text, what does the word "check" most nearly mean?', options: ['restrain', 'verify', 'document', 'predict'], correctIndex: 0, explanation: 'The campaigns slowed the disease until it disappeared, so "check" means to restrain or halt. "Verify" is the everyday meaning of "check" and does not fit a spreading disease.', partNumber: 4, partTitle: 'Word Meaning from Context' },
+  { id: 'sre-ent-5a', question: 'Some critics argue that wind and solar power cannot reliably supply a modern electrical grid. A recent analysis of one country\'s grid, however, found that wind and solar provided most of its electricity for a full year with no increase in power outages.\n\nWhich choice best describes the function of the first sentence in the overall structure of the text?', options: ['It presents a view that the text then challenges with evidence.', 'It states the main claim that the rest of the text supports.', 'It offers an example that illustrates the analysis that follows.', 'It summarizes the findings of the analysis described later.'], correctIndex: 0, explanation: '"Some critics argue" introduces a view, and "however" signals that the analysis that follows undercuts it. The author does not endorse the critics\' view, and the first sentence is a general claim, not an example or a summary of findings.', partNumber: 5, partTitle: 'Author\'s Purpose and Function' },
+  { id: 'sre-ent-5b', question: 'Each autumn, monarch butterflies born in Canada fly as far as 4,800 kilometers to a few mountain forests in central Mexico, a place none of them has seen before. Researchers have found that the butterflies steer by the position of the sun, correcting for the time of day with an internal clock located in their antennae.\n\nWhich choice best states the main purpose of the text?', options: ['To explain how monarchs manage to navigate on their long yearly journey', 'To argue that the forests where monarchs spend winter need protection', 'To compare the migration of monarchs with the migrations of other insects', 'To question whether monarchs really use the sun to find their direction'], correctIndex: 0, explanation: 'The text describes the journey and then reports how the butterflies navigate, so its purpose is to explain. It makes no argument about protecting forests, mentions no other insects, and presents the sun-compass finding without doubting it.', partNumber: 5, partTitle: 'Author\'s Purpose and Function' },
+  { id: 'sre-ent-6a', question: 'A researcher studying four cities suspects that residents of cities with more park area per person report less stress. The data in the table support this suspicion: ______\n\n| City | Park area per resident (square meters) | Adults reporting high stress |\n| --- | --- | --- |\n| Arden | 12 | 31% |\n| Belmont | 25 | 22% |\n| Corwin | 8 | 35% |\n| Dunmore | 18 | 27% |\n\nWhich choice most effectively uses data from the table to complete the statement?', options: ['Belmont had the most park area per resident and also the lowest share of highly stressed adults.', 'Corwin had less park area per resident than Belmont but a lower share of highly stressed adults.', 'Dunmore had the most park area per resident and the highest share of highly stressed adults.', 'Arden had more park area per resident than Dunmore and a lower share of highly stressed adults.'], correctIndex: 0, explanation: 'Belmont has the largest park area (25 square meters) and the lowest high-stress share (22%), which fits the researcher\'s suspicion. Corwin\'s stress share (35%) is higher than Belmont\'s, not lower; Dunmore does not have the most park area; and Arden has less park area than Dunmore (12 versus 18).', partNumber: 6, partTitle: 'Charts, Graphs, and Tables' },
+  { id: 'sre-ent-6b', question: 'A student concludes from the table that the more students sleep, the higher their quiz scores are.\n\n| Nightly sleep | 5 hours | 6 hours | 7 hours | 8 hours | 9 hours |\n| --- | --- | --- | --- | --- | --- |\n| Average quiz score | 71 | 76 | 83 | 84 | 82 |\n\nWhich choice best describes how the data in the table relate to the student\'s conclusion?', options: ['They partly support it: scores rise through 8 hours but drop at 9.', 'They fully support it: scores rise with every added hour of sleep.', 'They partly support it: scores rise through 7 hours but drop after.', 'They partly support it: scores rise through 6 hours but level off.'], correctIndex: 0, explanation: 'Scores climb from 71 to 84 as sleep rises from 5 to 8 hours, then fall to 82 at 9 hours, so the pattern holds only up to 8 hours. Scores do not drop after 7 hours (83 to 84 is a rise), and they do not level off after 6 hours (76 jumps to 83).', partNumber: 6, partTitle: 'Charts, Graphs, and Tables' },
+  { id: 'sre-ent-7a', question: 'A Reading and Writing module on the digital SAT has 27 questions and a 32-minute time limit. About how much time is available per question?', options: ['About 50 seconds', 'About 70 seconds', 'About 90 seconds', 'About 2 minutes'], correctIndex: 1, explanation: '32 minutes is 1,920 seconds, and $1{,}920 \\div 27 \\approx 71$ seconds, so budget a little over a minute per question and flag any question that runs past about 2 minutes.', partNumber: 7, partTitle: 'Comprehensive Review & Test Strategy' },
+  { id: 'sre-ent-7b', question: 'Critics of year-round schooling say it exhausts students; supporters say it prevents the learning loss of long summers. A new review of 40 studies found small gains in some subjects and none in others. Ultimately, the evidence suggests that neither camp is entirely right.\n\nWhich choice best describes the function of the last sentence in the text as a whole?', options: ['It reaches a conclusion that tempers the two views given above.', 'It introduces a new topic that the text has not yet discussed.', 'It adopts the critics\' view as the author\'s own final position.', 'It rejects all of the evidence that the review has presented.'], correctIndex: 0, explanation: '"Ultimately" signals a conclusion, and "neither camp is entirely right" moderates both positions in light of the mixed findings. The sentence stays on the same topic, sides with neither camp, and builds on the review rather than rejecting it.', partNumber: 7, partTitle: 'Comprehensive Review & Test Strategy' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Main Idea' },
-    { partNumber: 2, partTitle: 'Supporting Evidence' },
-    { partNumber: 3, partTitle: 'Inference Skills' },
-    { partNumber: 4, partTitle: 'Text Structure' },
-    { partNumber: 5, partTitle: "Author's Purpose" },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Finding the Central Idea' },
+    { partNumber: 2, partTitle: 'Finding Evidence in the Text' },
+    { partNumber: 3, partTitle: 'Reading Between the Lines' },
+    { partNumber: 4, partTitle: 'Word Meaning from Context' },
+    { partNumber: 5, partTitle: 'Author\'s Purpose and Function' },
+    { partNumber: 6, partTitle: 'Charts, Graphs, and Tables' },
+    { partNumber: 7, partTitle: 'Comprehensive Review & Test Strategy' },
   ]
 }

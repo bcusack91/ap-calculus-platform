@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Comma Usage ───────────────────────────
-  {
-    id: 'spu-ent-1a',
-    question:
-      'Which sentence uses commas correctly?\nA. "My sister, who lives in Boston, is a doctor."\nB. "My sister who lives in Boston, is a doctor."\nC. "My sister, who lives in Boston is a doctor."\nD. "My, sister who lives in Boston is a doctor."',
-    options: [
-      '"My sister, who lives in Boston, is a doctor."',
-      '"My sister who lives in Boston, is a doctor."',
-      '"My sister, who lives in Boston is a doctor."',
-      '"My, sister who lives in Boston is a doctor."',
-    ],
-    correctIndex: 0,
-    explanation:
-      '"Who lives in Boston" is a nonrestrictive (nonessential) clause because it adds extra information—we already know which sister is being discussed. Nonrestrictive clauses must be set off with commas on both sides.',
-    partNumber: 1,
-    partTitle: 'Comma Usage',
-  },
-  {
-    id: 'spu-ent-1b',
-    question:
-      'Which sentence correctly omits the Oxford comma in a context where ambiguity results?\n(Identify the sentence with a comma error that creates ambiguity.)',
-    options: [
-      '"I want to thank my parents, Oprah Winfrey, and God."',
-      '"I want to thank my parents, Oprah Winfrey and God."',
-      '"I want to thank my parents, Oprah Winfrey, and, God."',
-      '"I want to thank my parents Oprah Winfrey and God."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Omitting the Oxford comma before "and God" creates ambiguity—it could be read as saying the speaker\'s parents are Oprah Winfrey and God. "My parents, Oprah Winfrey and God" demonstrates how omitting the serial comma can introduce confusion.',
-    partNumber: 1,
-    partTitle: 'Comma Usage',
-  },
-
-  // ── Part 2: Semicolons & Colons ───────────────────
-  {
-    id: 'spu-ent-2a',
-    question:
-      'Which sentence uses a semicolon correctly?',
-    options: [
-      'She studied all night; however she still felt unprepared.',
-      'She studied all night; however, she still felt unprepared.',
-      'She studied all night, however; she still felt unprepared.',
-      'She studied all night however; she still felt unprepared.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'When a conjunctive adverb like "however" connects two independent clauses, the correct pattern is: [clause]; however, [clause]. The semicolon comes before "however" and a comma follows it.',
-    partNumber: 2,
-    partTitle: 'Semicolons & Colons',
-  },
-  {
-    id: 'spu-ent-2b',
-    question:
-      'Which sentence uses a colon correctly?',
-    options: [
-      'The recipe requires: flour, eggs, and butter.',
-      'The ingredients are: flour, eggs, and butter.',
-      'You will need three things: flour, eggs, and butter.',
-      'You will need: flour, eggs, and butter.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'A colon should be preceded by a complete independent clause. "You will need three things" is a complete clause, making "You will need three things: flour, eggs, and butter" correct. The versions with a colon right after "requires," "are," or "need" place a colon after a verb or incomplete construction, which is incorrect.',
-    partNumber: 2,
-    partTitle: 'Semicolons & Colons',
-  },
-
-  // ── Part 3: Apostrophes ───────────────────────────
-  {
-    id: 'spu-ent-3a',
-    question:
-      'Which sentence correctly uses an apostrophe?',
-    options: [
-      "The student's essays were graded by two professors'.",
-      "The students essays were graded by two professor's.",
-      "The students' essays were graded by two professors.",
-      "The student's essays' were graded by two professors.",
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Students\'" is the plural possessive (multiple students own the essays), so the apostrophe follows the s. "Professors" needs no apostrophe because it is simply a plural noun, not a possessive.',
-    partNumber: 3,
-    partTitle: 'Apostrophes',
-  },
-  {
-    id: 'spu-ent-3b',
-    question:
-      'Which sentence correctly distinguishes between "its" and "it\'s"?',
-    options: [
-      "The dog wagged it's tail after it's owner returned.",
-      "The dog wagged its tail after its owner returned.",
-      "The dog wagged its' tail after its' owner returned.",
-      "The dog wagged it's tail after its owner returned.",
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Its" (no apostrophe) is the possessive pronoun; "it\'s" (with apostrophe) is the contraction of "it is." Both instances here are possessive, so neither should have an apostrophe.',
-    partNumber: 3,
-    partTitle: 'Apostrophes',
-  },
-
-  // ── Part 4: Dashes & Parentheses ─────────────────
-  {
-    id: 'spu-ent-4a',
-    question:
-      'Which sentence correctly uses an em dash?',
-    options: [
-      'The scientist—who had spent forty years in the field—published her findings at last.',
-      'The scientist—who had spent forty years in the field, published her findings at last.',
-      'The scientist, who had spent forty years in the field—published her findings at last.',
-      'The scientist—who had spent forty years in the field published her findings at last.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'Em dashes used as parenthetical insertions must come in pairs, one on each side of the interrupting phrase—just like parentheses. The sentence with a dash on each side of "who had spent forty years in the field" correctly places an em dash both before and after the nonessential clause.',
-    partNumber: 4,
-    partTitle: 'Dashes & Parentheses',
-  },
-  {
-    id: 'spu-ent-4b',
-    question:
-      'Which sentence uses parentheses appropriately on the SAT?',
-    options: [
-      'The Great Wall of China (is not, as is commonly claimed, visible from space).',
-      'The Great Wall of China is not (as is commonly claimed) visible from space.',
-      'The Great Wall (of China) is not visible from space.',
-      'The Great Wall of China is not visible from space (a well-known fact).',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Parentheses should enclose supplementary, nonessential information that fits grammatically into the sentence when removed. Enclosing only "as is commonly claimed" in parentheses correctly sets it off without disrupting the main clause.',
-    partNumber: 4,
-    partTitle: 'Dashes & Parentheses',
-  },
-
-  // ── Part 5: End Punctuation ───────────────────────
-  {
-    id: 'spu-ent-5a',
-    question:
-      'A sentence ends with a quoted question. Which punctuation is correct?',
-    options: [
-      'She asked, "Are you coming?".',
-      'She asked, "Are you coming?"',
-      'She asked, "Are you coming"?',
-      'She asked, "Are you coming?."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'When a quoted sentence ends with a question mark, the question mark goes inside the closing quotation mark and serves as the end punctuation for the entire sentence—no additional period is needed outside the quotes.',
-    partNumber: 5,
-    partTitle: 'End Punctuation',
-  },
-  {
-    id: 'spu-ent-5b',
-    question:
-      'Which sentence is punctuated correctly at its end?',
-    options: [
-      'He wondered whether the train had left already?',
-      'He wondered whether the train had left already.',
-      'He wondered whether the train had left already!',
-      'He wondered, "whether the train had left already."',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"He wondered whether the train had left already" is an indirect question (the wondering is stated, but no direct question is quoted), so it ends with a period, not a question mark.',
-    partNumber: 5,
-    partTitle: 'End Punctuation',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'spu-ent-6a',
-    question:
-      'Choose the punctuation option that makes the following sentence correct: "Three cities __ Paris, Rome, and Athens __ were on the tour itinerary."',
-    options: [
-      'commas: "Three cities, Paris, Rome, and Athens, were on the tour itinerary."',
-      'em dashes: "Three cities—Paris, Rome, and Athens—were on the tour itinerary."',
-      'colons: "Three cities: Paris, Rome, and Athens: were on the tour itinerary."',
-      'semicolons: "Three cities; Paris, Rome, and Athens; were on the tour itinerary."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Because the list itself contains commas, using commas as the enclosing punctuation would be confusing. Em dashes are the correct choice to set off an internally punctuated appositive list, making the sentence clear.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'spu-ent-6b',
-    question:
-      'Which version of the sentence is correctly punctuated throughout?',
-    options: [
-      "It's the teams' responsibility to submit it's report by Friday's deadline.",
-      "Its the team's responsibility to submit its report by Friday's deadline.",
-      "It's the team's responsibility to submit its report by Friday's deadline.",
-      "It's the teams responsibility to submit its report by Fridays deadline.",
-    ],
-    correctIndex: 2,
-    explanation:
-      '"It\'s" = contraction of "it is" (correct here). "team\'s" = singular possessive. "its" = possessive pronoun (no apostrophe). "Friday\'s" = singular possessive. All four are correctly handled only in "It\'s the team\'s responsibility to submit its report by Friday\'s deadline."',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'spu-ent-7a',
-    question:
-      'On the SAT Writing section, when should you choose NO CHANGE for a punctuation question?',
-    options: [
-      'Always pick NO CHANGE to save time.',
-      'When the original punctuation correctly joins or separates sentence elements without error.',
-      'When the sentence seems too long and a period would shorten it.',
-      'When all other answer choices use unfamiliar punctuation marks.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'NO CHANGE is correct when the existing punctuation accurately reflects the grammatical relationship between sentence elements. Always verify that the original is error-free before selecting it.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'spu-ent-7b',
-    question:
-      'A sentence reads: "The new policy affects all employees however managers will receive additional guidance." Which punctuation correctly fixes this sentence?',
-    options: [
-      '"The new policy affects all employees, however, managers will receive additional guidance."',
-      '"The new policy affects all employees; however, managers will receive additional guidance."',
-      '"The new policy affects all employees however; managers will receive additional guidance."',
-      '"The new policy affects all employees; however managers will receive additional guidance."',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Two independent clauses joined by the conjunctive adverb "however" require a semicolon before "however" and a comma after it: [IC]; however, [IC]. The version reading "employees; however, managers" is the only choice with both marks correctly placed.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'spu-ent-1a', question: 'Which sentence is punctuated correctly?', options: ['She asked, "Are you coming?".', 'She asked, "Are you coming?"', 'She asked, "Are you coming"?', 'She asked, "Are you coming?."'], correctIndex: 1, explanation: 'When a quoted question ends the sentence, its question mark goes inside the closing quotation mark and ends the whole sentence, so no period is added.', partNumber: 1, partTitle: 'Overview & End-of-Sentence Punctuation' },
+  { id: 'spu-ent-1b', question: 'Which sentence is punctuated correctly?', options: ['He wondered whether the train had already left?', 'He wondered whether the train had already left.', 'He wondered whether the train had already left!', 'He wondered, "whether the train had already left."'], correctIndex: 1, explanation: '"He wondered whether..." reports a question indirectly; it does not ask one. An indirect question is a statement, so it ends with a period.', partNumber: 1, partTitle: 'Overview & End-of-Sentence Punctuation' },
+  { id: 'spu-ent-2a', question: 'Which sentence uses commas correctly?', options: ['After the storm passed, the crew began repairing the roof.', 'After the storm passed the crew, began repairing the roof.', 'After, the storm passed the crew began repairing the roof.', 'After the storm, passed the crew began repairing the roof.'], correctIndex: 0, explanation: 'An introductory dependent clause ("After the storm passed") is followed by a comma before the main clause ("the crew began..."). The other choices split the clause or separate a subject from its verb.', partNumber: 2, partTitle: 'Commas: The Most-Tested Mark' },
+  { id: 'spu-ent-2b', question: 'Which sentence is punctuated correctly?', options: ['Lena finished the report and emailed it to her manager.', 'Lena finished the report, and emailed it to her manager.', 'Lena finished the report and, emailed it to her manager.', 'Lena finished the report; and emailed it to her manager.'], correctIndex: 0, explanation: '"Emailed it to her manager" has no subject of its own; it is a second verb for "Lena." Two verbs sharing one subject take no comma. A comma before "and" is needed only when "and" joins two independent clauses.', partNumber: 2, partTitle: 'Commas: The Most-Tested Mark' },
+  { id: 'spu-ent-3a', question: 'Which sentence uses a semicolon correctly?', options: ['She studied all night; however she still felt unprepared.', 'She studied all night; however, she still felt unprepared.', 'She studied all night, however; she still felt unprepared.', 'She studied all night however; she still felt unprepared.'], correctIndex: 1, explanation: 'When "however" links two independent clauses, the pattern is: clause; however, clause. The semicolon goes before "however" and a comma follows it.', partNumber: 3, partTitle: 'Semicolons & Colons' },
+  { id: 'spu-ent-3b', question: 'Which sentence uses a colon correctly?', options: ['You will require: flour, eggs, and butter.', 'The ingredients are: flour, eggs, and butter.', 'You will need three things: flour, eggs, and butter.', 'You will need: flour, eggs, and butter.'], correctIndex: 2, explanation: 'A colon must follow a complete independent clause. "You will need three things" is complete; "You will require," "The ingredients are," and "You will need" each break off in the middle of a clause.', partNumber: 3, partTitle: 'Semicolons & Colons' },
+  { id: 'spu-ent-4a', question: 'Which sentence uses dashes correctly?', options: ['The scientist—who had spent forty years in the field—published her findings at last.', 'The scientist—who had spent forty years in the field, published her findings at last.', 'The scientist, who had spent forty years in the field—published her findings at last.', 'The scientist—who had spent forty years in the field published her findings at last.'], correctIndex: 0, explanation: 'An interruption set off by dashes needs a dash on both sides, just like parentheses. Mixing a dash with a comma, or opening with a dash and never closing it, is not standard.', partNumber: 4, partTitle: 'Dashes & Apostrophes' },
+  { id: 'spu-ent-4b', question: 'Which sentence uses "its" and "it\'s" correctly?', options: ['The dog wagged it\'s tail after it\'s owner returned.', 'The dog wagged its tail after its owner returned.', 'The dog wagged its\' tail after its\' owner returned.', 'The dog wagged it\'s tail after its owner returned.'], correctIndex: 1, explanation: '"Its" with no apostrophe is the possessive pronoun, and "it\'s" means "it is." Both blanks show possession (the dog\'s tail, the dog\'s owner), so both are "its." "Its\'" is never correct.', partNumber: 4, partTitle: 'Dashes & Apostrophes' },
+  { id: 'spu-ent-5a', question: 'Which sentence is punctuated correctly if the speaker has only one sister?', options: ['My sister, who lives in Boston, is a doctor.', 'My sister, who lives in Boston, is, a doctor.', 'My sister, who lives in Boston is a doctor.', 'My sister who lives in Boston is a doctor.'], correctIndex: 0, explanation: 'With only one sister, "who lives in Boston" is extra (nonrestrictive) information, so it is set off by a pair of commas. No commas would imply the speaker has several sisters, a single comma is never correct here, and no comma belongs between "is" and "a doctor."', partNumber: 5, partTitle: 'Restrictive vs. Nonrestrictive Elements' },
+  { id: 'spu-ent-5b', question: 'Students ______ their permission forms by Friday may attend the field trip.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['who return', ', who return', 'who return,', ', who return,'], correctIndex: 0, explanation: 'The clause identifies WHICH students may attend, so it is restrictive (essential) and takes no commas. Setting it off with commas would suggest that all students return their forms.', partNumber: 5, partTitle: 'Restrictive vs. Nonrestrictive Elements' },
+  { id: 'spu-ent-6a', question: 'The tour visited three ______ Rome, and Athens—in just six days.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['cities—Paris,', 'cities, Paris,', 'cities: Paris,', 'cities; Paris,'], correctIndex: 0, explanation: 'The list is closed by a dash after "Athens," so it must open with a dash too. Paired dashes are the clearest way to set off a list that already contains commas; a comma, colon, or semicolon cannot pair with the closing dash.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'spu-ent-6b', question: 'Which sentence is punctuated correctly throughout?', options: ['It\'s the teams\' responsibility to submit it\'s report by Friday\'s deadline.', 'Its the team\'s responsibility to submit its report by Friday\'s deadline.', 'It\'s the team\'s responsibility to submit its report by Friday\'s deadline.', 'It\'s the teams responsibility to submit its report by Fridays deadline.'], correctIndex: 2, explanation: '"It\'s" means "it is" (correct at the start), "team\'s" is the possessive of one team, "its" is the possessive pronoun, and "Friday\'s" is a singular possessive. Only the third sentence gets all four right.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'spu-ent-7a', question: 'Which sentence uses apostrophes correctly?', options: ['The student\'s essays were graded by two professors\'.', 'The students essays were graded by two professor\'s.', 'The students\' essays were graded by two professors.', 'The students\' essays\' were graded by two professors.'], correctIndex: 2, explanation: '"Students\'" is a plural possessive (essays belonging to several students), so the apostrophe follows the s. "Professors" is simply plural, not possessive, so it takes no apostrophe.', partNumber: 7, partTitle: 'Review & Final Challenge' },
+  { id: 'spu-ent-7b', question: 'The expedition faced one serious ______ river had washed out the only road into the valley.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['obstacle: the', 'obstacle, the', 'obstacle the', 'obstacle: and the'], correctIndex: 0, explanation: 'The first clause is complete, and the second explains what the obstacle was, so a colon fits. A comma alone makes a comma splice, no punctuation makes a run-on, and "and" should not follow a colon that introduces an explanation.', partNumber: 7, partTitle: 'Review & Final Challenge' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Comma Usage' },
-    { partNumber: 2, partTitle: 'Semicolons & Colons' },
-    { partNumber: 3, partTitle: 'Apostrophes' },
-    { partNumber: 4, partTitle: 'Dashes & Parentheses' },
-    { partNumber: 5, partTitle: 'End Punctuation' },
+    { partNumber: 1, partTitle: 'Overview & End-of-Sentence Punctuation' },
+    { partNumber: 2, partTitle: 'Commas: The Most-Tested Mark' },
+    { partNumber: 3, partTitle: 'Semicolons & Colons' },
+    { partNumber: 4, partTitle: 'Dashes & Apostrophes' },
+    { partNumber: 5, partTitle: 'Restrictive vs. Nonrestrictive Elements' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 7, partTitle: 'Review & Final Challenge' },
   ]
 }

@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Subject-Verb Agreement ───────────────
-  {
-    id: 'sgc-ent-1a',
-    question:
-      'Which sentence demonstrates correct subject-verb agreement?',
-    options: [
-      'The committee have reached a decision after hours of debate.',
-      'The committee has reached a decision after hours of debate.',
-      'The committees has reached a decision after hours of debate.',
-      'The committee have been reaching a decision after hours of debate.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Committee" is a collective noun treated as singular in American English, so it takes a singular verb ("has"). "The committees" (plural) would take "have," but "committee" (singular) requires "has."',
-    partNumber: 1,
-    partTitle: 'Subject-Verb Agreement',
-  },
-  {
-    id: 'sgc-ent-1b',
-    question:
-      'Choose the sentence with correct subject-verb agreement when a prepositional phrase separates subject and verb.',
-    options: [
-      'The results of the experiment was surprising to everyone.',
-      'The results of the experiment were surprising to everyone.',
-      'The result of the experiments were surprising to everyone.',
-      'The results of the experiment is surprising to everyone.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The subject is "results" (plural), not "experiment" (part of the prepositional phrase "of the experiment"). A plural subject requires a plural verb: "were." Crossing out the prepositional phrase helps identify the true subject.',
-    partNumber: 1,
-    partTitle: 'Subject-Verb Agreement',
-  },
-
-  // ── Part 2: Pronoun Agreement ─────────────────────
-  {
-    id: 'sgc-ent-2a',
-    question:
-      'Which sentence correctly uses a pronoun that agrees with its antecedent?',
-    options: [
-      'Each of the students must bring their own pencil.',
-      'Each of the students must bring his or her own pencil.',
-      'Each of the students must bring our own pencil.',
-      'Each of the students must bring its own pencil.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Each" is an indefinite pronoun that is grammatically singular, so it requires a singular pronoun. "His or her" is the formally correct singular agreement. Note: on the SAT, "their" with singular antecedents is increasingly accepted, but "his or her" remains the safest formal choice.',
-    partNumber: 2,
-    partTitle: 'Pronoun Agreement',
-  },
-  {
-    id: 'sgc-ent-2b',
-    question:
-      'Which sentence contains a pronoun-antecedent agreement error?',
-    options: [
-      'The jury reached their verdict after three days of deliberation.',
-      'The dog chased its tail for several minutes.',
-      'Neither of the boys remembered their lines.',
-      'The team celebrated its championship victory.',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Neither" is an indefinite singular pronoun and should take a singular pronoun: "Neither of the boys remembered his line." Using "their" with "neither" is a common agreement error on the SAT.',
-    partNumber: 2,
-    partTitle: 'Pronoun Agreement',
-  },
-
-  // ── Part 3: Verb Tense ────────────────────────────
-  {
-    id: 'sgc-ent-3a',
-    question:
-      'A passage describes historical events in the past tense. Which verb correctly maintains tense consistency?',
-    options: [
-      'By the time the treaty was signed, the army has already retreated.',
-      'By the time the treaty was signed, the army had already retreated.',
-      'By the time the treaty was signed, the army retreated already.',
-      'By the time the treaty is signed, the army had already retreated.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The past perfect ("had retreated") correctly indicates that the retreat happened before another past event (the signing of the treaty). "By the time [simple past], [past perfect]" is the standard sequence-of-events pattern.',
-    partNumber: 3,
-    partTitle: 'Verb Tense',
-  },
-  {
-    id: 'sgc-ent-3b',
-    question:
-      'Which sentence contains a verb tense error?',
-    options: [
-      'She has lived in New York since 2010.',
-      'She lived in New York when she was a child.',
-      'She has lived in New York before she moved to Boston.',
-      'She had lived in New York for a decade before relocating.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Present perfect ("has lived") implies an action that continues to the present or has present relevance. "Before she moved to Boston" signals a completed sequence in the past, requiring the past perfect: "She had lived in New York before she moved to Boston."',
-    partNumber: 3,
-    partTitle: 'Verb Tense',
-  },
-
-  // ── Part 4: Modifiers ─────────────────────────────
-  {
-    id: 'sgc-ent-4a',
-    question:
-      'Which sentence contains a dangling modifier?',
-    options: [
-      'Running through the park, a loud noise startled the dog.',
-      'Running through the park, the children startled the dog.',
-      'Having finished the assignment, Maria submitted it online.',
-      'Exhausted from the hike, the campers set up their tents.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'In "Running through the park, a loud noise startled the dog," the phrase "Running through the park" should modify the subject that follows, but that subject is "a loud noise," which cannot run, so the modifier dangles. In the other sentences, the subject right after the comma (the children, Maria, the campers) can logically perform the action.',
-    partNumber: 4,
-    partTitle: 'Modifiers',
-  },
-  {
-    id: 'sgc-ent-4b',
-    question:
-      'Which sentence places a modifying clause correctly to avoid ambiguity?',
-    options: [
-      'I almost drove my car to the store every day last week.',
-      'I drove my car to the store almost every day last week.',
-      'I drove almost my car to the store every day last week.',
-      'Almost I drove my car to the store every day last week.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Almost" should be placed immediately before the word it modifies: "almost every day." Placing it before "drove" ("I almost drove") implies the speaker nearly drove but didn\'t, which changes the meaning. "I drove my car to the store almost every day last week" is the only one that places "almost" correctly.',
-    partNumber: 4,
-    partTitle: 'Modifiers',
-  },
-
-  // ── Part 5: Parallel Structure ────────────────────
-  {
-    id: 'sgc-ent-5a',
-    question:
-      'Which sentence correctly uses parallel structure?',
-    options: [
-      'The candidate promised to lower taxes, creating jobs, and that she would improve education.',
-      'The candidate promised to lower taxes, create jobs, and improve education.',
-      'The candidate promised lowering taxes, to create jobs, and improving education.',
-      'The candidate promised she would lower taxes, creation of jobs, and improve education.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Parallel structure requires that items in a series use the same grammatical form. In "promised to lower taxes, create jobs, and improve education," all three items are infinitive phrases: "to lower," "create," and "improve" (the "to" is understood for the second and third). The other options mix forms inconsistently.',
-    partNumber: 5,
-    partTitle: 'Parallel Structure',
-  },
-  {
-    id: 'sgc-ent-5b',
-    question:
-      'Which sentence is NOT parallel in structure?',
-    options: [
-      'She enjoys hiking, swimming, and cycling.',
-      'The essay was thoughtful, well-organized, and had good evidence.',
-      'He works quickly, carefully, and efficiently.',
-      'The study was thorough, objective, and peer-reviewed.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The sentence about the essay mixes adjectives ("thoughtful," "well-organized") with a verb phrase ("had good evidence"). The parallel version would be: "thoughtful, well-organized, and well-evidenced." The other options maintain consistent grammatical form throughout their series.',
-    partNumber: 5,
-    partTitle: 'Parallel Structure',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'sgc-ent-6a',
-    question:
-      'A sentence reads: "Neither the principal nor the teachers was prepared for the announcement." What is the error, and how should it be corrected?',
-    options: [
-      'No error; the sentence is correct.',
-      'Change "was" to "were" because "teachers" (the noun closer to the verb) is plural.',
-      'Change "nor" to "or" because only "or" can connect plural nouns.',
-      'Change "the principal" to "the principals" to make both subjects plural.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'With "neither…nor" constructions, the verb agrees with the subject closest to it. "Teachers" is plural, so the verb should be "were," not "was." This rule is called proximity agreement or the "nearest subject" rule.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'sgc-ent-6b',
-    question:
-      'Which revision correctly fixes all grammar errors in: "Everyone on the team did their best but the coach knew that some players needed to improve their techniques"?',
-    options: [
-      'Everyone on the team did their best, but the coach knew that some players needed to improve their techniques.',
-      'Everyone on the team did his or her best, but the coach knew that some players needed to improve his or her techniques.',
-      'Everyone on the team did his or her best, but the coach knew that some players needed to improve their techniques.',
-      'Everyone on the team did their best; but the coach knew that some players needed to improve their techniques.',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Everyone" is singular, so "his or her best" is the formally correct pronoun. However, "some players" is plural, so "their techniques" is correct for that clause. The version with "his or her best" and "their techniques" makes both choices correctly. The version with "their best; but" incorrectly places a semicolon before "but."',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'sgc-ent-7a',
-    question:
-      'An SAT sentence reads: "The data suggests that climate change are accelerating faster than previously predicted." How many grammar errors does this sentence contain?',
-    options: [
-      'Zero — the sentence is correct.',
-      'One — "suggests" should be "suggest" because "data" is plural.',
-      'Two — "suggests" should be "suggest" and "are" should be "is."',
-      'One — "are" should be "is" because "climate change" is a singular concept.',
-    ],
-    correctIndex: 2,
-    explanation:
-      '"Data" is the plural of "datum," so it takes a plural verb: "suggest." Additionally, the subordinate clause says "climate change are accelerating"—"climate change" is singular, so "is" is correct. There are two agreement errors: "suggests→suggest" and "are→is."',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'sgc-ent-7b',
-    question:
-      'Which sentence is grammatically correct in all respects?',
-    options: [
-      'Having studied hard, the exam seemed easy to Maria.',
-      'Having studied hard, Maria found the exam easy.',
-      'Maria, having studied hard, the exam seemed easy.',
-      'The exam seemed easy to Maria, having studied hard.',
-    ],
-    correctIndex: 1,
-    explanation:
-      '"Having studied hard, Maria found the exam easy" correctly places the participle phrase "Having studied hard" next to its subject "Maria." In the other options, the participial phrase dangles or is misplaced—in "Having studied hard, the exam seemed easy to Maria" and "The exam seemed easy to Maria, having studied hard," it seems to modify "the exam," which cannot study.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'sgc-ent-1a', question: 'Which sentence demonstrates correct subject-verb agreement?', options: ['The committee have reached a decision after hours of debate.', 'The committee has reached a decision after hours of debate.', 'The committees has reached a decision after hours of debate.', 'The committee have been reaching a decision after hours of debate.'], correctIndex: 1, explanation: '"Committee" is a collective noun acting as a single unit, so it takes the singular verb "has." The plural "committees" would need "have."', partNumber: 1, partTitle: 'Subject-Verb Agreement' },
+  { id: 'sgc-ent-1b', question: 'Which sentence demonstrates correct subject-verb agreement?', options: ['The results of the experiment was surprising to everyone.', 'The results of the experiment were surprising to everyone.', 'The result of the experiments were surprising to everyone.', 'The results of the experiment is surprising to everyone.'], correctIndex: 1, explanation: 'Cross out the prepositional phrase "of the experiment": the subject is "results," which is plural, so the verb is "were." In the third sentence the subject "result" is singular, so "were" is wrong there.', partNumber: 1, partTitle: 'Subject-Verb Agreement' },
+  { id: 'sgc-ent-2a', question: 'The scientist ______ the committee selected will lead the three-year project.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['whom', 'who', 'which', 'whose'], correctIndex: 0, explanation: 'The pronoun is the object of "selected" (the committee selected her), so the object form "whom" is correct. "Who" is the subject form, "which" does not refer to people, and "whose" shows possession.', partNumber: 2, partTitle: 'Pronouns: Agreement, Clarity, and Case' },
+  { id: 'sgc-ent-2b', question: 'The award for best design was shared by Priya and ______.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['me', 'I', 'myself', 'mine'], correctIndex: 0, explanation: 'The pronoun is the object of the preposition "by," so the object form "me" is correct. Test it alone: "shared by me," not "shared by I." "Myself" needs an earlier "I" in the sentence to refer back to.', partNumber: 2, partTitle: 'Pronouns: Agreement, Clarity, and Case' },
+  { id: 'sgc-ent-3a', question: 'Which sentence uses verb tense correctly?', options: ['By the time the treaty was signed, the army has already retreated.', 'By the time the treaty was signed, the army had already retreated.', 'By the time the treaty was signed, the army retreated already.', 'By the time the treaty is signed, the army had already retreated.'], correctIndex: 1, explanation: 'The retreat happened before another past event (the signing), so it takes the past perfect "had retreated." "By the time [simple past], [past perfect]" is the standard sequence.', partNumber: 3, partTitle: 'Verb Tense and Mood' },
+  { id: 'sgc-ent-3b', question: 'The safety board recommended that every pilot ______ the new checklist before each flight.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['complete', 'completes', 'will complete', 'has completed'], correctIndex: 0, explanation: 'After verbs of recommending or requiring ("recommended that"), Standard English uses the subjunctive: the base form "complete," even with a singular subject like "every pilot."', partNumber: 3, partTitle: 'Verb Tense and Mood' },
+  { id: 'sgc-ent-4a', question: 'Sea turtles can live for more than fifty ______ many never reach adulthood because predators eat most hatchlings.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['years, but', 'years but,', 'years, but,', 'years; but'], correctIndex: 0, explanation: 'Two independent clauses joined by the conjunction "but" need a comma before the conjunction and nothing after it. A comma after "but" or a semicolon before it is not standard.', partNumber: 4, partTitle: 'Fragments, Run-Ons, and Comma Splices' },
+  { id: 'sgc-ent-4b', question: 'Which of the following is a complete sentence?', options: ['Although the museum was crowded, we saw every exhibit.', 'Although the museum was crowded and we saw every exhibit.', 'Although the museum, which was crowded on a Saturday.', 'The museum being crowded, which we saw every exhibit.'], correctIndex: 0, explanation: 'Only the first choice attaches the dependent clause ("Although the museum was crowded") to an independent clause ("we saw every exhibit"). The others lack an independent clause, so they are fragments.', partNumber: 4, partTitle: 'Fragments, Run-Ons, and Comma Splices' },
+  { id: 'sgc-ent-5a', question: 'Which sentence contains a dangling modifier?', options: ['Running through the park, a loud noise startled the dog.', 'Running through the park, the children startled the dog.', 'Running through the hallway, Maria reached class on time.', 'Exhausted from the hike, the campers set up their tents.'], correctIndex: 0, explanation: 'An opening modifier must describe the noun right after the comma. "A loud noise" cannot run through a park, so that modifier dangles. The children, Maria, and the campers can each do what their modifiers describe.', partNumber: 5, partTitle: 'Dangling and Misplaced Modifiers' },
+  { id: 'sgc-ent-5b', question: 'Which sentence clearly says that the speaker drove to the store on most, but not all, days last week?', options: ['I almost drove my car to the store every day last week.', 'I drove my car to the store almost every day last week.', 'I drove my car almost to the store every day last week.', 'I drove almost my car to the store every day last week.'], correctIndex: 1, explanation: '"Almost" modifies the word right after it. "Almost every day" means most days. "Almost drove" means the speaker nearly drove but did not, and "almost to the store" means the speaker stopped short of the store.', partNumber: 5, partTitle: 'Dangling and Misplaced Modifiers' },
+  { id: 'sgc-ent-6a', question: 'Which sentence uses parallel structure correctly?', options: ['The candidate promised to lower taxes, creating jobs, and that she would improve schools.', 'The candidate promised to lower taxes, create new jobs, and improve local schools.', 'The candidate promised lowering taxes, to create jobs, and improving schools.', 'The candidate promised she would lower taxes, creation of jobs, and improve schools.'], correctIndex: 1, explanation: 'Items in a series must share one grammatical form. "To lower taxes, create new jobs, and improve local schools" uses three infinitive phrases (with "to" understood for the second and third); the other choices mix infinitives, "-ing" forms, clauses, and nouns.', partNumber: 6, partTitle: 'Parallelism and Comparisons' },
+  { id: 'sgc-ent-6b', question: 'The population of Tokyo is much larger than ______.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['that of Paris', 'Paris', 'those of Paris', 'the city of Paris'], correctIndex: 0, explanation: 'Compare like with like: a population with a population. "That of Paris" means "the population of Paris." "Paris" and "the city of Paris" compare a population to a city, and "those" is plural while "population" is singular.', partNumber: 6, partTitle: 'Parallelism and Comparisons' },
+  { id: 'sgc-ent-7a', question: 'There ______ several reasons for the delay in the bridge\'s construction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?', options: ['is', 'are', 'was', 'has been'], correctIndex: 1, explanation: 'In a sentence beginning with "There," the subject follows the verb. Here the subject is "several reasons," which is plural, so the verb is "are."', partNumber: 7, partTitle: 'Mixed Review & Test Strategies' },
+  { id: 'sgc-ent-7b', question: 'Which sentence is grammatically correct in all respects?', options: ['Having studied hard, the exam seemed easy to Maria.', 'Having studied hard, Maria found the exam easy.', 'Having studied hard, Maria\'s exam seemed easy.', 'The exam seemed easy to Maria, having studied hard.'], correctIndex: 1, explanation: '"Having studied hard" must sit next to the person who studied. Only the second sentence puts "Maria" right after the phrase. The others make "the exam" or "Maria\'s exam" seem to have done the studying.', partNumber: 7, partTitle: 'Mixed Review & Test Strategies' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -253,11 +30,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Subject-Verb Agreement' },
-    { partNumber: 2, partTitle: 'Pronoun Agreement' },
-    { partNumber: 3, partTitle: 'Verb Tense' },
-    { partNumber: 4, partTitle: 'Modifiers' },
-    { partNumber: 5, partTitle: 'Parallel Structure' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 2, partTitle: 'Pronouns: Agreement, Clarity, and Case' },
+    { partNumber: 3, partTitle: 'Verb Tense and Mood' },
+    { partNumber: 4, partTitle: 'Fragments, Run-Ons, and Comma Splices' },
+    { partNumber: 5, partTitle: 'Dangling and Misplaced Modifiers' },
+    { partNumber: 6, partTitle: 'Parallelism and Comparisons' },
+    { partNumber: 7, partTitle: 'Mixed Review & Test Strategies' },
   ]
 }

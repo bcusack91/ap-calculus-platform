@@ -7,243 +7,20 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // ── Part 1: Test Structure ────────────────────────
-  {
-    id: 'stds-ent-1a',
-    question:
-      'How is the digital SAT structured in terms of sections and total time?',
-    options: [
-      '2 sections: Reading & Writing (2 modules) and Math (2 modules), with a 10-minute break between sections — approximately 2 hours 14 minutes.',
-      '4 sections: Reading, Writing, Math (no calculator), Math (calculator) — 3 hours.',
-      '3 sections: Reading, Writing & Language, Math — 3 hours 45 minutes with an optional essay.',
-      '5 sections of equal length totaling 4 hours.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'The digital SAT (2024+) has two sections: Reading & Writing (two 32-minute modules = 64 min) and Math (two 35-minute modules = 70 min), separated by a 10-minute break. Total testing time is approximately 2 hours 14 minutes—significantly shorter than the old paper SAT.',
-    partNumber: 1,
-    partTitle: 'Test Structure',
-  },
-  {
-    id: 'stds-ent-1b',
-    question:
-      'On the digital SAT, what happens if a student finishes a module early?',
-    options: [
-      'The extra time automatically carries over to the next module.',
-      'The student may review and change answers within that module, but cannot advance to the next module early.',
-      'The student must wait silently and cannot review answers.',
-      'The student may begin the next section immediately.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'On the digital SAT, time is managed per module. Finishing early allows you to review and change answers within the current module, but time does not carry over and you cannot advance to the next module ahead of schedule.',
-    partNumber: 1,
-    partTitle: 'Test Structure',
-  },
-
-  // ── Part 2: Time Management ────────────────────────
-  {
-    id: 'stds-ent-2a',
-    question:
-      'Which time management strategy is recommended for the SAT Math modules?',
-    options: [
-      'Spend equal time on every question regardless of difficulty.',
-      'Answer the questions in order, spending no more than about 1.5 minutes on each, flag difficult questions, and return to them at the end.',
-      'Start with the hardest questions first to get them out of the way.',
-      'Skip all word problems and focus only on pure algebra.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Each SAT question is worth the same point value. The most efficient strategy is to move through questions at a steady pace (~1.5 min each for Math), flag items you\'re unsure about, complete the rest, then return to flagged items with remaining time.',
-    partNumber: 2,
-    partTitle: 'Time Management',
-  },
-  {
-    id: 'stds-ent-2b',
-    question:
-      'A student has 5 minutes left in a Math module and has 4 questions remaining. What is the best approach?',
-    options: [
-      'Spend all 5 minutes on the first remaining question to ensure it is correct.',
-      'Quickly attempt each question, use process of elimination to make educated guesses, and ensure all 4 are answered before time expires.',
-      'Leave the last 4 questions blank to avoid the guessing penalty.',
-      'Only answer questions with nice whole-number answers.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The digital SAT has NO guessing penalty—unanswered questions score the same as incorrect ones (zero points). Therefore, always fill in an answer for every question. With 5 minutes and 4 questions, quickly attempt each and guess if needed rather than leaving blanks.',
-    partNumber: 2,
-    partTitle: 'Time Management',
-  },
-
-  // ── Part 3: Guessing Strategy ────────────────────
-  {
-    id: 'stds-ent-3a',
-    question:
-      'What is the guessing penalty on the digital SAT?',
-    options: [
-      '−1 point for each wrong answer.',
-      '−0.25 points for each wrong answer.',
-      'There is no guessing penalty; wrong answers and blank answers both score zero.',
-      'The penalty depends on the difficulty level of the question.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The digital SAT (and the redesigned SAT since 2016) has no penalty for wrong answers. Every unanswered question also scores zero. Therefore, you should always guess rather than leave a question blank—you have at least a 25% chance of being correct.',
-    partNumber: 3,
-    partTitle: 'Guessing Strategy',
-  },
-  {
-    id: 'stds-ent-3b',
-    question:
-      'If you must guess on a 4-option multiple-choice SAT question after eliminating one obviously wrong answer, what is your probability of guessing correctly?',
-    options: [
-      '25%',
-      '33%',
-      '50%',
-      '75%',
-    ],
-    correctIndex: 1,
-    explanation:
-      'After eliminating one wrong answer, you have 3 remaining choices. The probability of a correct random guess among 3 choices is $1/3 \\approx 33$%. Eliminating even one answer significantly improves your odds from 25% to 33%.',
-    partNumber: 3,
-    partTitle: 'Guessing Strategy',
-  },
-
-  // ── Part 4: Managing Anxiety ──────────────────────
-  {
-    id: 'stds-ent-4a',
-    question:
-      'Which evidence-based technique is most effective for reducing acute test anxiety during a SAT exam?',
-    options: [
-      'Reading through all unanswered questions rapidly to assess how many remain.',
-      'Slow, diaphragmatic breathing (breathing deeply into the belly for 4 counts, holding 4, exhaling for 6) to activate the parasympathetic nervous system.',
-      'Caffeinating heavily before the exam to maximize alertness.',
-      'Reminding yourself of every question you found difficult in past practice tests.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Deep diaphragmatic breathing activates the parasympathetic nervous system, reducing cortisol and adrenaline levels. This is one of the most effective, immediate interventions for test anxiety and can be used during the test without losing significant time.',
-    partNumber: 4,
-    partTitle: 'Managing Anxiety',
-  },
-  {
-    id: 'stds-ent-4b',
-    question:
-      'Which mindset best supports optimal SAT performance, according to cognitive performance research?',
-    options: [
-      'A fixed mindset: believing your score reflects your innate, unchangeable intelligence.',
-      'A performance-avoidance mindset: focusing entirely on avoiding failure.',
-      'A growth mindset: believing that performance improves with effort, strategy, and practice.',
-      'A perfectionist mindset: setting a goal of 100% accuracy on every question.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Research by Carol Dweck and others consistently shows that a growth mindset—believing ability improves with effort—leads to better academic outcomes. Fixed and perfectionist mindsets increase anxiety and reduce resilience when facing difficult questions.',
-    partNumber: 4,
-    partTitle: 'Managing Anxiety',
-  },
-
-  // ── Part 5: Section Strategy ──────────────────────
-  {
-    id: 'stds-ent-5a',
-    question:
-      'For the SAT Reading & Writing section, which approach to answer elimination is most reliable?',
-    options: [
-      'Eliminate answers that are longer than the others.',
-      'Eliminate answers that contradict, distort, or go beyond what the passage states.',
-      'Eliminate the first and last answer choices, as they are rarely correct.',
-      'Eliminate answers that use vocabulary you recognize from your SAT prep books.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'SAT Reading answer choices that contradict the passage, over-generalize, or introduce ideas not in the text are the most reliably incorrect. The correct answer is always directly grounded in the passage.',
-    partNumber: 5,
-    partTitle: 'Section Strategy',
-  },
-  {
-    id: 'stds-ent-5b',
-    question:
-      'For the SAT Math section, what should you do if you are completely stuck on a problem and cannot see any path to a solution?',
-    options: [
-      'Leave it blank—guessing hurts your score.',
-      'Try plugging in the answer choices to see which one satisfies the equation or condition.',
-      'Skip it and never return—difficult problems are not worth your time.',
-      'Always choose the middle value (B or C) when guessing.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'Plugging in answer choices (back-solving) is a powerful SAT Math strategy when direct solving feels impossible. Start with the middle numerical value to narrow down your choices quickly. This often turns a hard algebra problem into simple arithmetic.',
-    partNumber: 5,
-    partTitle: 'Section Strategy',
-  },
-
-  // ── Part 6: Problem-Solving Workshop ─────────────
-  {
-    id: 'stds-ent-6a',
-    question:
-      'The night before the SAT, which of the following is the BEST use of your time?',
-    options: [
-      'Take a full-length timed practice test to maximize preparation.',
-      'Review the most difficult concepts you struggled with for three or more hours.',
-      'Do light review of key formulas and strategies, organize your materials, and get a full night of sleep.',
-      'Study as many new vocabulary words as possible.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'The night before a major exam, the marginal gain from additional studying is small compared to the cost of reduced sleep. Sleep is critical for memory consolidation and cognitive function. Light review plus logistical preparation (ID, calculator, pencils, snacks) is the optimal approach.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'stds-ent-6b',
-    question:
-      'A student realizes mid-test that she has been spending 4 minutes per question in the R&W section and is falling behind pace. What is the best immediate response?',
-    options: [
-      'Continue at her current pace and accept a lower score.',
-      'Immediately skip all remaining questions and guess.',
-      'Request extra time from the proctor.',
-      'Consciously accelerate pace, trust her first instinct on the next several questions, and stop over-analyzing.',
-    ],
-    correctIndex: 3,
-    explanation:
-      'When behind pace, the best response is to trust first instincts (which are often correct) and consciously reduce time per question. Research shows over-analysis frequently leads to second-guessing correct initial answers. Speed up, trust your preparation, and keep moving.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-
-  // ── Part 7: Review & Applications ────────────────
-  {
-    id: 'stds-ent-7a',
-    question:
-      'Which of the following is on the official College Board list of items you are REQUIRED to bring to an in-person SAT administration?',
-    options: [
-      'Your own graphing calculator and a number 2 pencil (for the digital SAT).',
-      'An acceptable photo ID and your registration confirmation (ticket).',
-      'A printed copy of your practice test results.',
-      'A specific brand of approved headphones.',
-    ],
-    correctIndex: 1,
-    explanation:
-      'The College Board requires an acceptable photo ID and your admission ticket (confirmation) to test. For the digital SAT, the test is administered on a provided or approved device using Bluebook software. Pencils are optional for scratch work; a physical calculator is optional since Desmos is built in.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
-  {
-    id: 'stds-ent-7b',
-    question:
-      'After receiving SAT scores, a student scores 680 on Math and 620 on R&W. She wants to improve her composite score by 60 points. Which is the most strategic approach?',
-    options: [
-      'Spend equal time on both sections regardless of where the gaps are.',
-      'Focus exclusively on Math, since the score is already higher there.',
-      'Analyze her score report to identify specific question types where she lost the most points, then target those specifically.',
-      'Retake the SAT immediately without additional preparation.',
-    ],
-    correctIndex: 2,
-    explanation:
-      'Score reports break down performance by question type and domain. The highest ROI strategy is to identify and target specific weaknesses—not to study randomly across all topics. Targeted practice on specific weak areas is the most efficient path to score improvement.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
-  },
+  { id: 'stds-ent-1a', question: 'How many questions and how many minutes does each Math module of the digital SAT have?', options: ['22 questions in 35 minutes', '27 questions in 32 minutes', '22 questions in 32 minutes', '27 questions in 35 minutes'], correctIndex: 0, explanation: 'Each Math module has 22 questions in 35 minutes (44 questions, 70 minutes in all). The 27-question, 32-minute modules are Reading and Writing.', partNumber: 1, partTitle: 'Know What You\'re Walking Into' },
+  { id: 'stds-ent-1b', question: 'A student answers most of the questions in Math Module 1 correctly. What happens in Module 2?', options: ['It is harder and allows a higher possible score', 'It is easier so the student can bank points', 'It has the same difficulty as Module 1', 'It gives the student extra time to finish'], correctIndex: 0, explanation: 'The test is adaptive by module: strong Module 1 performance routes the student to a harder Module 2, which has a higher score ceiling. Timing never changes.', partNumber: 1, partTitle: 'Know What You\'re Walking Into' },
+  { id: 'stds-ent-2a', question: 'A Math module gives 35 minutes for 22 questions. About how much time is that per question, on average?', options: ['About 60 seconds', 'About 70 seconds', 'About 95 seconds', 'About 2 minutes'], correctIndex: 2, explanation: '35 minutes is 2,100 seconds, and $2{,}100 \\div 22 \\approx 95$ seconds per question. (About 70 seconds is the Reading and Writing pace: 32 minutes for 27 questions.)', partNumber: 2, partTitle: 'Pace Yourself' },
+  { id: 'stds-ent-2b', question: 'Under the two-pass strategy, what should you do with a question you have worked on for about 90 seconds without making progress?', options: ['Guess, flag it, and move on to the next one', 'Keep working, since you have already invested time', 'Leave it blank, flag it, and come back later', 'Start over, using a completely different method'], correctIndex: 0, explanation: 'Put down a guess (there is no penalty for wrong answers), flag the question, and move on; return in the second pass if time allows. Leaving it blank risks never answering it.', partNumber: 2, partTitle: 'Pace Yourself' },
+  { id: 'stds-ent-3a', question: 'On a central-idea question about a text that describes three studies of octopus learning, one choice states only the result of the second study. Why is that choice most likely wrong?', options: ['It is too narrow to cover the whole text', 'It is too broad to match what the text says', 'It brings in facts from outside the text', 'It contradicts the result of the second study'], correctIndex: 0, explanation: 'A central idea must cover the whole text. A choice built on one of three studies is a supporting detail, so it is too narrow, even though it accurately reports that study.', partNumber: 3, partTitle: 'Approaching Reading & Writing Questions' },
+  { id: 'stds-ent-3b', question: '"The mayor\'s plan was novel: no other city had ever tried charging drivers by the mile."\n\nAs used in the text, what does the word "novel" most nearly mean?', options: ['original', 'fictional', 'lengthy', 'popular'], correctIndex: 0, explanation: 'Cover the word and predict: the colon explains that no city had tried the idea before, so the plan was new or original. "Fictional" reflects the noun "novel" (a book), which is the common-meaning trap.', partNumber: 3, partTitle: 'Approaching Reading & Writing Questions' },
+  { id: 'stds-ent-4a', question: 'If $x^2 + 4x = 21$, which of the following is a solution?', options: ['$-3$', '$3$', '$5$', '$7$'], correctIndex: 1, explanation: 'Backsolve by testing the choices: $3^2 + 4(3) = 9 + 12 = 21$. The others give $-3$, 45, and 77. (The other solution, $-7$, is not a choice.)', partNumber: 4, partTitle: 'Maximizing Your Math Score' },
+  { id: 'stds-ent-4b', question: 'If $n$ is an odd integer, which of the following must be even?', options: ['$n + 2$', '$3n$', '$n + 1$', '$n^2$'], correctIndex: 2, explanation: 'Pick a number: with $n = 3$, the choices are 5, 9, 4, and 9. Only $n + 1$ is even, and one more than any odd integer is always even.', partNumber: 4, partTitle: 'Maximizing Your Math Score' },
+  { id: 'stds-ent-5a', question: 'On a four-choice question, you eliminate two choices and then guess at random between the remaining two. What is the probability that your guess is correct?', options: ['25%', '33%', '50%', '75%'], correctIndex: 2, explanation: 'Two choices remain and exactly one is correct, so the chance is $\\frac{1}{2}$, or 50%. (25% is a blind guess among all four, and 33% is the chance after eliminating one.)', partNumber: 5, partTitle: 'When You\'re Stuck' },
+  { id: 'stds-ent-5b', question: 'A rectangle has an area of 66 square units, and its length is 5 units more than its width. What is its width?', options: ['$3$', '$6$', '$11$', '$16$'], correctIndex: 1, explanation: 'Estimate first: the width must be less than $\\sqrt{66} \\approx 8$, which rules out 11 and 16. Test 6: $6 \\times 11 = 66$. (11 is the length, not the width.)', partNumber: 5, partTitle: 'When You\'re Stuck' },
+  { id: 'stds-ent-6a', question: 'According to the final-week plan, what should you focus on three to four days before the test?', options: ['Light review of the material you already know', 'Learning topics you have not studied yet', 'Taking two full practice tests every day', 'Studying late into the night to cram more'], correctIndex: 0, explanation: 'Three to four days out, the plan calls for light review (flashcards, formula sheets) and no new material; this is reinforcement, not learning. Late nights and heavy testing wear you out before the test.', partNumber: 6, partTitle: 'Final Preparation Checklist' },
+  { id: 'stds-ent-6b', question: 'Which of these does the night-before checklist tell you to confirm?', options: ['That the Bluebook app is installed and updated', 'That you have learned one last new math topic', 'That you can stay up late for a final review', 'That you have taken one more full practice test'], correctIndex: 0, explanation: 'The digital SAT runs in the Bluebook app, so the checklist has you confirm it is installed and updated, lay out your ID, device, and charger, do only light review, and get a full night of sleep.', partNumber: 6, partTitle: 'Final Preparation Checklist' },
+  { id: 'stds-ent-7a', question: 'How long is the scheduled break between the Reading and Writing section and the Math section?', options: ['5 minutes', '10 minutes', '15 minutes', '30 minutes'], correctIndex: 1, explanation: 'There is a 10-minute break between the two sections. Use it to eat, drink water, and reset, and avoid discussing questions with other test takers.', partNumber: 7, partTitle: 'Performing Your Best on Test Day' },
+  { id: 'stds-ent-7b', question: 'With 30 seconds left in a module, one question remains that you have not started, and it looks long. What should you do?', options: ['Enter a guess, since a wrong answer costs you nothing', 'Leave it blank, since a wrong answer loses points', 'Start working on it and hope to finish in time', 'Go back and recheck an answer you already gave'], correctIndex: 0, explanation: 'There is no penalty for wrong answers, so an entered guess can only help, while a blank is always scored as wrong. Starting a long question with 30 seconds left almost guarantees leaving it blank.', partNumber: 7, partTitle: 'Performing Your Best on Test Day' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -252,12 +29,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Test Structure' },
-    { partNumber: 2, partTitle: 'Time Management' },
-    { partNumber: 3, partTitle: 'Guessing Strategy' },
-    { partNumber: 4, partTitle: 'Managing Anxiety' },
-    { partNumber: 5, partTitle: 'Section Strategy' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Know What You\'re Walking Into' },
+    { partNumber: 2, partTitle: 'Pace Yourself' },
+    { partNumber: 3, partTitle: 'Approaching Reading & Writing Questions' },
+    { partNumber: 4, partTitle: 'Maximizing Your Math Score' },
+    { partNumber: 5, partTitle: 'When You\'re Stuck' },
+    { partNumber: 6, partTitle: 'Final Preparation Checklist' },
+    { partNumber: 7, partTitle: 'Performing Your Best on Test Day' },
   ]
 }
