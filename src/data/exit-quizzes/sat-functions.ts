@@ -1,7 +1,8 @@
 /**
  * Exit Quiz Question Pool — SAT Functions & Graphs
  * 40 questions covering function notation, domain/range, transformations,
- * composition, inverses, graph interpretation, piecewise & absolute value.
+ * composition, solving function equations, graph interpretation, piecewise &
+ * absolute value.
  */
 
 export interface ExitQuizQuestion {
@@ -96,12 +97,6 @@ function sumStr(...ns: number[]): string {
   let s = `${ns[0]}`
   for (const n of ns.slice(1)) if (n !== 0) s += ` ${sign(n)}`
   return s
-}
-/** Inverse of f(x) = mx + b as TeX, with a positive denominator. */
-function inverseTex(m: number, b: number): string {
-  if (m === 1) return linear(1, -b)
-  if (m === -1) return linear(-1, b)
-  return m > 0 ? `\\frac{${linear(1, -b)}}{${m}}` : `\\frac{${linear(-1, b)}}{${-m}}`
 }
 
 const questionPool: QuestionTemplate[] = [
@@ -529,106 +524,123 @@ const questionPool: QuestionTemplate[] = [
     }
   },
 
-  // ===== INVERSES (5 questions) =====
+  // ===== FUNCTION EQUATIONS (5 questions) =====
   {
     id: 'sfg-q21',
-    category: 'Inverses',
+    category: 'Function Equations',
     difficulty: 'hard',
     generate() {
-      let m = randNonZero(-5, 5)
-      while (Math.abs(m) === 1) m = randNonZero(-5, 5)
+      const m = randNonZero(-4, 4)
+      const n = randNonZero(-4, 4)
       const b = randInt(-8, 8)
-      // f(x) = mx + b → f⁻¹(x) = (x - b)/m
-      const y = m * randInt(-3, 3) + b // make sure f⁻¹(y) is integer
-      const ans = (y - b) / m
-      const { options, correctIndex } = makeOptions(ans)
+      const c = randInt(-6, 6)
+      const x0 = randInt(-4, 4)
+      const K = m * c + b // f(g(x)) = (mn)x + K
+      const y = m * n * x0 + K
+      const { options, correctIndex } = makeOptions(x0)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${linear(m, b)}$, what is $f^{-1}(${y})$?`,
+        question: `If $f(x) = ${linear(m, b)}$ and $g(x) = ${linear(n, c)}$, for what value of $x$ does $f(g(x)) = ${y}$?`,
         options, correctIndex,
-        explanation: `Solve $y = ${linear(m, b)}$ for $x$: $f^{-1}(x) = \\frac{${linear(1, -b)}}{${m}}$. So $f^{-1}(${y}) = \\frac{${sumStr(y, -b)}}{${m}}${b === 0 ? '' : ` = \\frac{${y - b}}{${m}}`} = ${ans}$.`
+        explanation: `Substitute $g(x)$ into $f$: $f(g(x)) = ${times(m, linear(n, c))}${b === 0 ? '' : ` ${sign(b)}`} = ${linear(m * n, K)}$. Set this equal to $${y}$: ${K === 0 ? `$${linear(m * n, 0)} = ${y}$` : `$${linear(m * n, 0)} = ${y} ${sign(-K)} = ${y - K}$`}, so $x = ${x0}$.`
       }
     }
   },
   {
     id: 'sfg-q22',
-    category: 'Inverses',
+    category: 'Function Equations',
     difficulty: 'hard',
     generate() {
-      // |m| >= 2 so the key never collapses to "(x - b)/1" and the distractors stay distinct
-      let m = randNonZero(-5, 5)
-      while (Math.abs(m) === 1) m = randNonZero(-5, 5)
-      const b = randNonZero(-8, 8)
-      const correct = `$f^{-1}(x) = ${inverseTex(m, b)}$`
+      // |m| >= 2 and k != 0 so the four constants below can all differ
+      let m = 0, b = 0, h = 0, k = 0, C = 0, d1 = 0, d2 = 0, d3 = 0
+      do {
+        m = randNonZero(-5, 5)
+        while (Math.abs(m) === 1) m = randNonZero(-5, 5)
+        b = randInt(-8, 8)
+        h = randInt(1, 5)
+        k = randNonZero(-6, 6)
+        C = b - m * h + k   // correct: m(x - h) + b + k
+        d1 = b + m * h + k  // shifts the wrong way: m(x + h)
+        d2 = b - h + k      // forgets to multiply the shift by m
+        d3 = b - m * h - k  // subtracts the vertical shift
+      } while (new Set([C, d1, d2, d3]).size < 4)
+      const correct = `$g(x) = ${linear(m, C)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$f^{-1}(x) = ${linear(m, -b)}$`,
-        `$f^{-1}(x) = \\frac{${m}}{${linear(1, -b)}}$`,
-        `$f^{-1}(x) = ${inverseTex(m, -b)}$`
+        `$g(x) = ${linear(m, d1)}$`,
+        `$g(x) = ${linear(m, d2)}$`,
+        `$g(x) = ${linear(m, d3)}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `Find the inverse of $f(x) = ${linear(m, b)}$.`,
+        question: `The function $f$ is defined by $f(x) = ${linear(m, b)}$. The function $g$ is defined by $g(x) = f(x - ${h}) ${sign(k)}$. Which equation defines $g$?`,
         options, correctIndex,
-        explanation: `Swap $x$ and $y$: $x = ${coef(m)}y ${sign(b)}$. Then $${coef(m)}y = ${linear(1, -b)}$, so $y = ${inverseTex(m, b)}$.`
+        explanation: `Replace $x$ with $x - ${h}$ in $f$, then ${k > 0 ? 'add' : 'subtract'} $${Math.abs(k)}$: $g(x) = ${times(m, `x - ${h}`)}${b === 0 ? '' : ` ${sign(b)}`} ${sign(k)} = ${linear(m, C)}$.`
       }
     }
   },
   {
     id: 'sfg-q23',
-    category: 'Inverses',
+    category: 'Function Equations',
     difficulty: 'hard',
     generate() {
-      const a = randInt(2, 6)
-      const b = randInt(-5, 5)
-      const x = randInt(-3, 3)
-      const fx = a * x + b
-      // f(f⁻¹(x)) = x always — the answer is x itself, so options must center on x
-      const { options, correctIndex } = makeOptions(x)
+      const m = randNonZero(-5, 5)
+      const b = randInt(-10, 10)
+      const x1 = randInt(-3, 2)
+      const x2 = x1 + randInt(2, 4)
+      let x3 = randInt(-5, 8)
+      while (x3 === x1 || x3 === x2) x3 = randInt(-5, 8)
+      const y1 = m * x1 + b, y2 = m * x2 + b, y3 = m * x3 + b
+      const { options, correctIndex } = makeOptions(y3, 3)
       return {
         id: this.id, category: this.category,
-        question: `If $f(${x}) = ${fx}$, what is $f^{-1}(${fx})$?`,
+        question: `The function $f$ is linear, with $f(${x1}) = ${y1}$ and $f(${x2}) = ${y2}$. What is the value of $f(${x3})$?`,
         options, correctIndex,
-        explanation: `Since $f(${x}) = ${fx}$, we know $f^{-1}(${fx}) = ${x}$.`
+        explanation: `The slope is $\\frac{${y2} - ${p(y1)}}{${x2} - ${p(x1)}} = \\frac{${y2 - y1}}{${x2 - x1}} = ${m}$. From $x = ${x2}$ to $x = ${x3}$ the input changes by $${x3 - x2}$, so $f(${x3}) = ${y2} + ${p(m)}(${x3 - x2}) = ${sumStr(y2, m * (x3 - x2))} = ${y3}$.`
       }
     }
   },
   {
     id: 'sfg-q24',
-    category: 'Inverses',
+    category: 'Function Equations',
     difficulty: 'easy',
     generate() {
-      const correct = '$y = x$'
-      const { options, correctIndex } = makeStringOptions(correct, [
-        '$y = -x$', '$y = 0$', 'The $x$-axis'
-      ])
+      const a = randInt(2, 5)
+      const b = randInt(-9, 9)
+      const x0 = randInt(-5, 6)
+      const y = a * x0 + b
+      const { options, correctIndex } = makeOptions(x0)
       return {
         id: this.id, category: this.category,
-        question: `The graph of $f(x)$ and its inverse $f^{-1}(x)$ are reflections across which line?`,
+        question: `If $f(x) = ${linear(a, b)}$, for what value of $x$ does $f(x) = ${y}$?`,
         options, correctIndex,
-        explanation: `A function and its inverse are always reflections across the line $y = x$.`
+        explanation: b === 0
+          ? `Set $${a}x = ${y}$ and divide by $${a}$: $x = ${x0}$.`
+          : `Set $${linear(a, b)} = ${y}$. ${b > 0 ? 'Subtracting' : 'Adding'} $${Math.abs(b)}$ gives $${a}x = ${y - b}$, so $x = ${x0}$.`
       }
     }
   },
   {
     id: 'sfg-q25',
-    category: 'Inverses',
+    category: 'Function Equations',
     difficulty: 'easy',
     generate() {
-      const a = randInt(1, 5)
-      const b = randInt(-5, 5)
-      const x = randInt(-3, 3)
-      const _ans = a * x + b
-      // f⁻¹(f(x)) = x
-      const { options, correctIndex } = makeOptions(x)
+      let a = 0, b = 0, x0 = 0, v1 = 0, v2 = 0
+      do { // neither value may be 0, so the sum never prints "+ 0"
+        a = randNonZero(-5, 5)
+        b = randNonZero(-8, 8)
+        x0 = randInt(1, 5)
+        v1 = a * x0 + b
+        v2 = -a * x0 + b
+      } while (v1 === 0 || v2 === 0)
+      const { options, correctIndex } = makeOptions(2 * b, 3)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${linear(a, b)}$, what is $f^{-1}(f(${x}))$?`,
+        question: `If $f(x) = ${linear(a, b)}$, what is the value of $f(${x0}) + f(-${x0})$?`,
         options, correctIndex,
-        explanation: `$f^{-1}(f(x)) = x$ for any $x$ in the domain. So $f^{-1}(f(${x})) = ${x}$.`
+        explanation: `$f(${x0}) = ${subLin(a, x0, b)} = ${v1}$ and $f(-${x0}) = ${subLin(a, -x0, b)} = ${v2}$. The $x$-terms cancel, so the sum is $${v1} + ${p(v2)} = ${2 * b}$.`
       }
     }
   },
-
   // ===== GRAPH INTERPRETATION (5 questions) =====
   {
     id: 'sfg-q26',

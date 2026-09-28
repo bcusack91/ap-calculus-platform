@@ -259,22 +259,29 @@ const questionPool: QuestionTemplate[] = [
     category: 'Spread & Variability',
     difficulty: 'hard',
     generate() {
-      const q1 = randInt(20, 40)
-      const q3 = q1 + 2 * randInt(8, 15)
-      const iqr = q3 - q1
-      const lowerFence = q1 - 1.5 * iqr
-      const upperFence = q3 + 1.5 * iqr
-      const correct = `Above $${upperFence}$ or below $${lowerFence}$`
+      // Six clustered values plus one far-off recording error; the standard deviation is checked,
+      // not assumed, to fall when the error is removed.
+      const sd = (a: number[]) => { const m = a.reduce((x, y) => x + y, 0) / a.length; return Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length) }
+      let rest: number[] = [], bad = 0
+      do {
+        const base = randInt(20, 40)
+        rest = Array.from({ length: 6 }, () => base + randInt(0, 12))
+        bad = base + randInt(45, 70)
+      } while (!(sd(rest) < sd([...rest, bad])) || new Set(rest).size < 4)
+      const sorted = [...rest, bad].sort((x, y) => x - y)
+      const lo = sorted[0]
+      const hiRest = Math.max(...rest)
+      const correct = 'The range and the standard deviation both decrease'
       const { options, correctIndex } = makeStringOptions(correct, [
-        `Above $${q3}$ or below $${q1}$`,
-        `Above $${q3 + iqr}$`,
-        `More than $${iqr}$ from the median`
+        'The range decreases, and the standard deviation increases',
+        'The range stays the same, and the standard deviation decreases',
+        'The range and the standard deviation both increase'
       ])
       return {
         id: this.id, category: this.category,
-        question: `With $Q_1 = ${q1}$, $Q_3 = ${q3}$, IQR = $${iqr}$, a value is an outlier if it is:`,
+        question: `A data set consists of the values $${sorted.join(', ')}$. The value $${bad}$ is found to be a recording error and is removed. Which statement correctly describes how removing it changes the range and the standard deviation of the data set?`,
         options, correctIndex,
-        explanation: `Outlier if $< Q_1 - 1.5 \\times IQR = ${lowerFence}$ or $> Q_3 + 1.5 \\times IQR = ${upperFence}$.`
+        explanation: `Without $${bad}$, the largest value is $${hiRest}$, so the range falls from $${bad} - ${lo} = ${bad - lo}$ to $${hiRest} - ${lo} = ${hiRest - lo}$. The removed value was far from all the others, so the remaining values sit closer to their mean and the standard deviation also decreases.`
       }
     }
   },

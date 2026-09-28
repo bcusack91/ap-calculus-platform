@@ -2,7 +2,7 @@
  * Exit Quiz — SAT Effective Language Use (Digital SAT Format)
  *
  * Passage-based questions following the Digital SAT Reading & Writing format.
- * Tests Expression of Ideas: transitions, rhetorical synthesis, and conciseness.
+ * Tests Expression of Ideas: transitions and rhetorical synthesis.
  *
  * Domain: Expression of Ideas
  */
@@ -143,55 +143,45 @@ const questionPool: QuestionTemplate[] = [
       }
     }
   },
-  // ─── Conciseness ───
+  // ─── Transitions and Rhetorical Synthesis ───
   {
-    id: 'elu-q10', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q10', category: 'Transitions', difficulty: 'easy',
     generate() {
-      const correct = 'The study found that sleep deprivation impairs decision-making.'
-      const opts = shuffle([
-        correct,
-        'The study found that a lack of sleep and rest impairs decision-making ability.',
-        'What the study found was that sleep deprivation impairs decision-making.',
-        'The study found that it impairs decisions.'
-      ])
+      const correct = 'As a result,'
+      const opts = shuffle([correct, 'For example,', 'In contrast,', 'On the other hand,'])
       return { id: this.id, category: this.category,
-        question: `Researchers at the University of Pennsylvania conducted a week-long experiment in which participants were limited to four hours of sleep per night. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        question: `In March 1913, heavy rain fell across southwestern Ohio for several days in a row, soaking ground that was already saturated. _______ the Great Miami River overflowed its levees and flooded much of downtown Dayton.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice conveys the finding clearly and concisely without redundancy. Other options repeat ideas ("sleep and rest") or add a wordy "What the study found was" opener, and the shortest version uses an unclear "it" that never names sleep deprivation.`
+        explanation: `The flooding described in the second sentence was caused by the days of heavy rain described in the first. "As a result" signals that an effect follows. "For example" would introduce an illustration, and "In contrast" and "On the other hand" would signal a difference, but the second sentence reports a consequence.`
       }
     }
   },
   {
-    id: 'elu-q11', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q11', category: 'Transitions', difficulty: 'easy',
     generate() {
-      const correct = 'The bridge, completed in 1937, remains an iconic symbol of San Francisco.'
-      const opts = shuffle([
-        correct,
-        'Completed in 1937, remains an iconic symbol of San Francisco.',
-        'The bridge, which was completed in 1937, still remains an iconic symbol of San Francisco.',
-        'Completed in 1937, the bridge is still today an iconic symbol that represents San Francisco.'
-      ])
+      const correct = 'However,'
+      const opts = shuffle([correct, 'Therefore,', 'For instance,', 'Likewise,'])
       return { id: this.id, category: this.category,
-        question: `The Golden Gate Bridge was a marvel of civil engineering when it opened. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        question: `Most spiders catch their prey by spinning sticky webs and waiting for insects to become trapped. _______ jumping spiders spin no webs to catch food; they stalk insects and then leap onto them from several body lengths away.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice is concise and clear. Other versions add redundancies such as "still remains" or "still today... represents," and the shortest version drops the subject, leaving an unclear sentence fragment.`
+        explanation: `The first sentence describes how most spiders hunt, and the second describes jumping spiders, which hunt in a different way. "However" signals this contrast. "Therefore" would present the jumping spiders' hunting as a result of the first sentence, "For instance" would make them an example of web-spinning, and "Likewise" would signal a similarity.`
       }
     }
   },
   {
-    id: 'elu-q12', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q12', category: 'Rhetorical Synthesis', difficulty: 'easy',
     generate() {
-      const correct = 'Because the soil lacked nitrogen, the crops failed.'
+      const correct = 'Including all of its branches, the Great Wall of China stretches for more than 13,000 miles.'
       const opts = shuffle([
         correct,
-        'The soil lacked nitrogen; the crops failed.',
-        'The reason the crops failed was because the soil lacked nitrogen.',
-        'Due to the fact that the soil lacked nitrogen, the crops failed.'
+        'The Great Wall of China is a series of fortifications located in the northern part of China.',
+        'The main sections of the Great Wall of China were built during the Ming dynasty, 1368 to 1644.',
+        'The Great Wall of China was built mainly to guard against raids from northern nomadic groups.'
       ])
       return { id: this.id, category: this.category,
-        question: `A student is revising a paragraph about agricultural challenges in sub-Saharan Africa and wants to express a causal relationship as concisely as possible.\n\nWhich choice states the relationship most concisely?`,
+        question: `While researching a topic, a student has taken the following notes:\n\n• The Great Wall of China is a series of fortifications in northern China.\n• Its main sections were built during the Ming dynasty (1368 to 1644).\n• Including all of its branches, it stretches for more than 13,000 miles.\n• It was built mainly to guard against raids from northern nomadic groups.\n\nThe student wants to emphasize the length of the Great Wall of China. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `"Because the soil lacked nitrogen, the crops failed" is the most concise version. Other versions use wordy phrases like "due to the fact that" or "the reason...was because," and the version joined by a semicolon places the two facts side by side without stating that one caused the other.`
+        explanation: `The goal is to emphasize the wall's length, and only one choice gives it: more than 13,000 miles including its branches. The other choices describe what the wall is, when its main sections were built, or why it was built, but none of them says how long it is.`
       }
     }
   },
@@ -238,21 +228,16 @@ const questionPool: QuestionTemplate[] = [
       }
     }
   },
-  // ─── Additional Conciseness ───
+  // ─── Additional Transitions ───
   {
-    id: 'elu-q16', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q16', category: 'Transitions', difficulty: 'easy',
     generate() {
-      const correct = 'The architect designed the building to maximize natural light.'
-      const opts = shuffle([
-        correct,
-        'The architect designed the building for light.',
-        'The architect designed the building in a way that would maximize natural light.',
-        'The building was designed by the architect with the goal of maximizing natural light.'
-      ])
+      const correct = 'Additionally,'
+      const opts = shuffle([correct, 'Instead,', 'For this reason,', 'Nevertheless,'])
       return { id: this.id, category: this.category,
-        question: `A student is revising an essay about sustainable building design and wants to express a key design decision concisely.\n\nWhich choice states the idea most concisely without sacrificing clarity?`,
+        question: `Sea otters have several unusual habits. They float on their backs and use rocks as tools to crack open the shells of clams and crabs. _______ they often wrap themselves in strands of kelp while they sleep so that they do not drift away.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice directly states the design intent without wordy constructions like "in a way that would" or "with the goal of." The shortest version is vague: "for light" loses the idea of maximizing natural light.`
+        explanation: `The first sentence says sea otters have several unusual habits, and the next two sentences each describe one of them. "Additionally" signals that a second, related habit is being added. "Instead" would suggest the kelp habit replaces tool use, "For this reason" would make it an effect of tool use, and "Nevertheless" would signal a contrast that is not there.`
       }
     }
   },
@@ -298,19 +283,19 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q20', category: 'Conciseness', difficulty: 'medium',
+    id: 'elu-q20', category: 'Rhetorical Synthesis', difficulty: 'medium',
     generate() {
-      const correct = 'The experiment confirmed that plants grow faster under blue light than under red light.'
+      const correct = 'Mauna Loa has broad, gently sloping sides, whereas the sides of Mount Fuji are steep.'
       const opts = shuffle([
         correct,
-        'The experiment confirmed that plants grow faster under blue light.',
-        'What the experiment confirmed was that plants grow faster under blue light than under red light.',
-        'The experiment confirmed that plants grow at a faster rate under blue light than they do under red light.'
+        'Mauna Loa and Mount Fuji are both volcanoes; one is in Hawaii, and the other is in Japan.',
+        'Mount Fuji, a stratovolcano in Japan, was built from many layers of thick lava and ash.',
+        'Mauna Loa is a shield volcano in Hawaii whose sides were built up by flows of runny lava.'
       ])
       return { id: this.id, category: this.category,
-        question: `A student is revising a lab report and wants to state a key finding concisely.\n\nWhich choice expresses the finding most concisely without sacrificing clarity?`,
+        question: `While researching a topic, a student has taken the following notes:\n\n• Mauna Loa, in Hawaii, is a shield volcano.\n• Shield volcanoes have broad, gently sloping sides built up by flows of runny lava.\n• Mount Fuji, in Japan, is a stratovolcano.\n• Stratovolcanoes have steep sides built from layers of thick lava and ash.\n\nThe student wants to contrast the shapes of the two volcanoes. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice states the finding in a direct, active sentence. Other versions add wordy constructions, and the shortest version drops the comparison with red light, changing the finding.`
+        explanation: `A contrast of shapes must describe both volcanoes' shapes and set them against each other. Only one choice does this: Mauna Loa's broad, gentle slopes versus Mount Fuji's steep sides. The choice naming both volcanoes contrasts their locations, not their shapes, and the other two choices each describe only one volcano.`
       }
     }
   },
@@ -496,99 +481,84 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q34', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q34', category: 'Rhetorical Synthesis', difficulty: 'easy',
     generate() {
-      const correct = 'The council postponed the vote until the following week.'
+      const correct = 'When she flew aboard Endeavour in 1992, Mae Jemison became the first African American woman in space.'
       const opts = shuffle([
         correct,
-        'The council postponed the vote until later, delaying it to a future date the following week.',
-        'The vote was postponed by the council, which put it off until the following week.',
-        'The council postponed it.'
+        'Mae Jemison, who had trained as both a physician and an engineer, joined NASA\'s astronaut program in 1987.',
+        'In September 1992, Mae Jemison flew aboard the space shuttle Endeavour as one of its crew members.',
+        'Mae Jemison was trained as a physician and an engineer before she was selected as a NASA astronaut.'
       ])
       return { id: this.id, category: this.category,
-        question: `The city council had planned to vote on the new zoning rules on Monday, but several members asked for more time to study the proposal. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        question: `While researching a topic, a student has taken the following notes:\n\n• Mae Jemison was trained as a physician and an engineer.\n• She joined NASA's astronaut program in 1987.\n• In September 1992, she flew aboard the space shuttle Endeavour.\n• She was the first African American woman to travel into space.\n\nThe student wants to emphasize what made Jemison's 1992 flight historic. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice states what happened clearly and without repetition. The other longer versions repeat the idea of delay ("postponed... until later, delaying it" and "postponed... put it off"), and the shortest version uses "it" and drops the new date, leaving out when the vote will happen.`
+        explanation: `The flight was historic because it made Jemison the first African American woman in space, and only one choice connects the 1992 flight to that first. One choice mentions the flight but not why it mattered, and the other two describe her training and her selection by NASA.`
       }
     }
   },
   {
-    id: 'elu-q35', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q35', category: 'Transitions', difficulty: 'easy',
     generate() {
-      const correct = 'The museum is open every day except Monday.'
-      const opts = shuffle([
-        correct,
-        'The museum is open every single day of the week except for on Mondays.',
-        'Except for Mondays, the museum is open daily, every day of the week.',
-        'The museum opens its doors to visitors daily, with the exception of Mondays.'
-      ])
+      const correct = 'Next,'
+      const opts = shuffle([correct, 'However,', 'For example,', 'Similarly,'])
       return { id: this.id, category: this.category,
-        question: `A student is writing a visitor guide for a local history museum and wants to state the museum's schedule concisely.\n\nWhich choice states the schedule most concisely without sacrificing clarity?`,
+        question: `To build a snow shelter, a camper first shovels loose snow into a large mound and lets it harden for about two hours. _______ the camper digs a small entrance into the side of the mound and hollows out a space inside.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice gives the complete schedule in the fewest words. Other versions add unnecessary words ("every single day of the week except for on") repeat themselves ("daily, every day"), or use a roundabout phrasing ("opens its doors to visitors... with the exception of") where a plain one works.`
+        explanation: `The text describes the steps of building a shelter in order: the first sentence says what the camper does "first," and the second gives the following step. "Next" signals the step that comes after. "However" would signal a contrast, "For example" an illustration, and "Similarly" a comparable action.`
       }
     }
   },
   {
-    id: 'elu-q36', category: 'Conciseness', difficulty: 'medium',
+    id: 'elu-q36', category: 'Transitions', difficulty: 'medium',
     generate() {
-      const correct = 'The festival, held each October, attracts thousands of visitors.'
-      const opts = shuffle([
-        correct,
-        'The annual festival, which is held each year in October, attracts thousands of visitors.',
-        'Every year, the yearly festival that takes place in October attracts thousands of visitors.',
-        'The festival attracts visitors.'
-      ])
+      const correct = 'Instead,'
+      const opts = shuffle([correct, 'Similarly,', 'For this reason,', 'Meanwhile,'])
       return { id: this.id, category: this.category,
-        question: `A student is writing about a small town known for its apple harvest and wants to describe the town's best-known event. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        question: `Many people assume that the tallest trees in an old forest must also be the oldest. When researchers measured the ages of trees in one old-growth forest, however, they found no such pattern. _______ many of the oldest trees were only of moderate height, having lost their tops to storms over the centuries.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice gives the timing and the size of the crowd with no repetition. Other versions say the same thing twice ("annual... each year" and "Every year, the yearly"), and the shortest version drops both when the festival is held and how many people attend.`
+        explanation: `The researchers did not find the expected pattern, and the last sentence reports what they found in its place. "Instead" signals that an alternative replaces the expected result. "Similarly" would signal agreement with the assumption, "For this reason" would present the finding as caused by the absence of a pattern, and "Meanwhile" would describe something happening at the same time.`
       }
     }
   },
   {
-    id: 'elu-q37', category: 'Conciseness', difficulty: 'medium',
+    id: 'elu-q37', category: 'Rhetorical Synthesis', difficulty: 'medium',
     generate() {
-      const correct = 'The researchers repeated the experiment to confirm their results.'
+      const correct = 'Restudying led to better recall after five minutes, but testing led to better recall a week later.'
       const opts = shuffle([
         correct,
-        'The researchers repeated the experiment again in order to confirm their results.',
-        'The researchers repeated the experiment so that they could confirm and verify their results.',
-        'The researchers repeated the experiment a second time to confirm their results.'
+        'In a 2006 experiment, Roediger and Karpicke studied how students learn from reading prose passages.',
+        'After reading a passage, some students restudied it, and others wrote down everything they recalled.',
+        'Five minutes after the study session, the students who had restudied the passage remembered more.'
       ])
       return { id: this.id, category: this.category,
-        question: `A student is revising a science article and wants to explain why a research team ran its study a second time. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        question: `While researching a topic, a student has taken the following notes:\n\n• In 2006, psychologists Henry Roediger and Jeffrey Karpicke studied how students learn from prose passages.\n• After reading a passage, some students restudied it, while others took a test in which they wrote down everything they could recall.\n• Five minutes later, the students who had restudied remembered more.\n• One week later, the students who had been tested remembered more.\n\nThe student wants to emphasize that which study method worked better depended on when recall was measured. Which choice most effectively uses relevant information from the notes to accomplish this goal?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice explains the action and its purpose directly. Every other version adds a redundancy: "repeated... again," "repeated... a second time," and "confirm and verify" each say the same thing twice, and "in order to" and "so that they could" are wordier than "to."`
+        explanation: `To show that the better method depended on timing, a choice must report both results: restudying won at five minutes, and testing won at one week. Only one choice does. The choice about the five-minute result gives only half of the comparison, and the other two describe the study and its procedure without any results.`
       }
     }
   },
   {
-    id: 'elu-q38', category: 'Conciseness', difficulty: 'medium',
+    id: 'elu-q38', category: 'Transitions', difficulty: 'medium',
     generate() {
-      const correct = 'In 1903, the Wright brothers made the first controlled, powered airplane flight.'
-      const opts = shuffle([
-        correct,
-        'In the year of 1903, the Wright brothers made the first airplane flight that was both controlled and powered.',
-        'The first controlled, powered airplane flight was one that was made by the Wright brothers in 1903.',
-        'The Wright brothers flew in 1903.'
-      ])
+      const correct = 'In other words,'
+      const opts = shuffle([correct, 'Nevertheless,', 'For example,', 'On the other hand,'])
       return { id: this.id, category: this.category,
-        question: `A student is revising a sentence about the history of aviation and wants to state a key event concisely.\n\nWhich choice states the event most concisely without sacrificing clarity?`,
+        question: `The stone pillars of Göbekli Tepe, in southeastern Turkey, were raised roughly 11,000 years ago, before people in the region had begun farming. _______ the people who built the site still got their food by hunting animals and gathering wild plants.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice states the date, the people, and the achievement directly. Other versions add wordy phrases ("In the year of," "that was both," "was one that was made by"), and the shortest version loses the key point that this was the first controlled, powered airplane flight.`
+        explanation: `People who had not begun farming got their food by hunting and gathering, so the second sentence restates the first sentence's point in more concrete terms. "In other words" signals this restatement. "Nevertheless" and "On the other hand" would signal a contrast, and "For example" would introduce an illustration, but the second sentence simply explains what the first one means.`
       }
     }
   },
   {
-    id: 'elu-q39', category: 'Conciseness', difficulty: 'easy',
+    id: 'elu-q39', category: 'Transitions', difficulty: 'easy',
     generate() {
-      const correct = 'Voter turnout rose sharply this year.'
-      const opts = shuffle([correct, 'Voter turnout rose sharply upward this year.', 'This year, the turnout of voters rose and increased sharply.', 'Voter turnout this year rose sharply higher.'])
+      const correct = 'Likewise,'
+      const opts = shuffle([correct, 'Instead,', 'As a result,', 'For instance,'])
       return { id: this.id, category: this.category,
-        question: `A student is revising a news report about a recent local election and wants to avoid redundancy.\n\nWhich choice states the idea most concisely without sacrificing clarity?`,
+        question: `The Venus flytrap grows in bogs whose soil holds very little nitrogen, and it makes up for this by trapping and digesting insects. _______ the sundew, another plant of nutrient-poor bogs, catches insects on its sticky hairs and digests them for the nitrogen its soil lacks.\n\nWhich choice completes the text with the most logical transition?`,
         options: opts, correctIndex: opts.indexOf(correct),
-        explanation: `The correct choice states the idea once, clearly. The other versions are redundant: "rose... upward," "rose and increased," and "rose... higher" each repeat the idea of rising.`
+        explanation: `Both sentences describe a bog plant that gets missing nitrogen by digesting insects, so the second sentence presents a similar case. "Likewise" signals this similarity. "Instead" would suggest the sundew replaces the flytrap, "As a result" would make the sundew's behavior an effect of the flytrap's, and "For instance" would make the sundew an example of the Venus flytrap.`
       }
     }
   },

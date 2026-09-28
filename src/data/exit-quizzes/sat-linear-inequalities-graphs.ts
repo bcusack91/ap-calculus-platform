@@ -244,7 +244,7 @@ const questionPool: QuestionTemplate[] = [
       const px = randInt(1, 3); const py = randInt(1, 3)
       const budget = a * px + b * py + randInt(5, 15)
       const correct = `$(${px}, ${py})$`
-      return { id: this.id, category: this.category, question: `Which point is a feasible solution of $${a}x + ${b}y \\le ${budget}$ with $x \\ge 1$ and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, ${py + 1})$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(${px}) + ${b}(${py}) = ${a * px + b * py} \\le ${budget}$, and $${px} \\ge 1$, $${py} \\ge 1$. Each other point breaks the budget or has $x = 0 < 1$.` }
+      return { id: this.id, category: this.category, question: `Which point is a solution to the system $${a}x + ${b}y \\le ${budget}$, $x \\ge 1$, and $y \\ge 1$?`, ...makeStringOptions(correct, [`$(${Math.ceil(budget / a) + 1}, 1)$`, `$(0, ${py + 1})$`, `$(${Math.ceil(budget / a)}, ${Math.ceil(budget / b)})$`]), explanation: `$${a}(${px}) + ${b}(${py}) = ${a * px + b * py} \\le ${budget}$, and $${px} \\ge 1$, $${py} \\ge 1$. Each other point breaks the budget or has $x = 0 < 1$.` }
     }
   },
   {
@@ -252,8 +252,14 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'medium',
     generate() {
-      const correct = 'At one of the vertices of the feasible region'
-      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center point of the feasible region', 'At the origin, whatever the region looks like', 'At any interior point of the feasible region']), explanation: 'The optimal value of a linear objective function occurs at a vertex (corner point) of the feasible region.' }
+      // Prices of $2 or more and a != b, so no "1x" and the swapped-price distractor is distinct.
+      const a = randInt(2, 6)
+      let b = randInt(2, 6)
+      while (b === a) b = randInt(2, 6)
+      const budget = randInt(30, 60)
+      const n = randInt(8, 15)
+      const correct = `$${a}x + ${b}y \\le ${budget}$ and $x + y \\ge ${n}$`
+      return { id: this.id, category: this.category, question: `A student buys $x$ notebooks at $\\$${a}$ each and $y$ pens at $\\$${b}$ each. The student can spend at most $\\$${budget}$ and needs at least $${n}$ items in total. Which system of inequalities represents this situation?`, ...makeStringOptions(correct, [`$${a}x + ${b}y \\ge ${budget}$ and $x + y \\ge ${n}$`, `$${a}x + ${b}y \\le ${budget}$ and $x + y \\le ${n}$`, `$${b}x + ${a}y \\le ${budget}$ and $x + y \\ge ${n}$`]), explanation: `The cost is $${a}x + ${b}y$ dollars, and "at most $\\$${budget}$" means $${a}x + ${b}y \\le ${budget}$. The number of items is $x + y$, and "at least $${n}$" means $x + y \\ge ${n}$. Each price must multiply its own item's variable: $\\$${a}$ goes with the notebooks, $x$.` }
     }
   },
   {
