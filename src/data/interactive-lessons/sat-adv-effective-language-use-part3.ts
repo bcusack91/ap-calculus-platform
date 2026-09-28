@@ -11,7 +11,7 @@ export const lessonData = {
 Four questions at genuine 700-800 difficulty. These passages are long, so budget **60 seconds each** — and win the time back with reading order:
 
 1. **Goal sentence first.** Convert it to a structural checklist before touching the notes.
-2. **Options second**, scanned against the checklist. Two-halves goals kill single-half options on sight; audience goals kill mismatched register on sight.
+2. **Options second**, scanned against the checklist. Two-halves goals kill single-half options on sight; audience goals kill options that explain what the audience already knows, or skip what it does not.
 3. **Notes last**, and only to break a tie.
 
 Start the clock.`

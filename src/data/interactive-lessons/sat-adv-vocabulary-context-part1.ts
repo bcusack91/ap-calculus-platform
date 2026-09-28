@@ -8,7 +8,7 @@ export const lessonData = {
 
 **Part 1 of 3 — The Four Archetypes Hard Items Are Built From**
 
-At this level, every wrong answer is *plausible*. The test no longer includes words that are simply the wrong register or obviously off-topic. Instead, hard items are engineered from four repeatable patterns — and each pattern tells you exactly where the answer is hiding.
+At this level, every wrong answer is *plausible*. The test no longer includes words that are simply wrong in meaning or obviously off-topic. Instead, hard items are engineered from four repeatable patterns — and each pattern tells you exactly where the answer is hiding.
 
 ### Archetype 1: The Colon-Defined Blank
 The sentence defines the blank **after** it appears — usually with a colon, dash, or appositive: *"The claim is ______: it is offered as a hypothesis, not a settled result."* The definition is a contract. Test every candidate against the definition **word for word**, not against your overall impression. The trap choice is a near-synonym that matches the vibe but violates one clause of the definition (e.g., *imprecise* when the passage stipulates the number was "accurately derived" — the flaw is in what it *reveals*, so the answer is *uninformative*).

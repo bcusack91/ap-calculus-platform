@@ -8,70 +8,76 @@ export const lessonData = {
 
 **Part 2 of 2 — Precise Words and Notes Questions**
 
-### One strong verb beats a phrase
+### Quick recap: the precise word
 
-Wordy writing often turns a verb into a longer phrase. Turn it back:
+On a "most logical and precise word" question, match the clue in the text on three things:
 
-- *did a review of* → **reviewed**
-- *made a decision* → **decided**
-- *gave an explanation of* → **explained**
-- *is able to* → **can**
-
-Each fix keeps the exact same meaning in one word.
+- **Detail** — *whispered* is quiet; *announced* is to a group.
+- **Strength** — *limited* is weaker than *banned*.
+- **Feeling** — *careful with money* is positive; *stingy* is negative.
 
 ### Notes questions
 
 Some questions show you a student's bullet-point notes and a goal, like:
 
-> The student wants to say **when** the bridge opened **and** that it is **still in use**.
+> The student wants to give the year the bridge **opened** and note that it is **still in use**.
 
-Then four sentences follow. The right answer is the one that hits **every part of the goal**. A sentence can be perfectly true and still be wrong if it covers only half of what the goal asked for.
+Then four sentences follow. Every one of them is true, because each one comes from the notes. The right answer is the one that does **exactly what the goal asks**. A sentence can be perfectly true and still be wrong if it covers only half of the goal.
 
-Handle these in three steps:
+### Common goals and what they require
 
-1. **Read the goal twice.** Underline each thing it asks for. Often there are two.
-2. **Check each choice against the goal.** Does it include both things?
+- **"Emphasize a similarity"** between two things → the choice must name **both** things and show what they share (*both*, *like*, *also*).
+- **"Emphasize a difference"** → the choice must name **both** things and show how they are unlike (*while*, *but*, *unlike*).
+- **"Give the year… and note that…"** → the choice must include **every** piece the goal lists.
+- **"Introduce X to an audience unfamiliar with it"** → the choice must say **what X is**, not just its name.
+
+### Handle these in three steps
+
+1. **Read the goal first**, before the notes. Underline each thing it asks for. Often there are two.
+2. **Check each choice against the goal.** Does it include every piece?
 3. **Cross out any choice that misses one.** True but incomplete is still wrong.
 
-Ignore how impressive a choice sounds. Only the goal decides.
+Ignore how impressive a choice sounds, and do not pick a choice just because it uses the most notes. Only the goal decides.
 
 ### Your checklist
 
-1. Conciseness question → pick the shortest choice that keeps all the meaning.
-2. Watch for repeated ideas (*free gift*, *combined together*, *in the year 1937*).
-3. Turn stretched-out phrases back into one verb (*made a decision* → *decided*).
-4. Notes question → list what the goal asks for, then keep only the choice that covers all of it.`
+1. Precise word → find the clue, say your own word (with its strength), then match.
+2. Cross out words that are too strong, too weak, or carry the wrong feel.
+3. Notes question → list what the goal asks for, then keep only the choice that covers all of it.
+4. Similarity or difference goal → the answer must mention **both** things.`
     },
     {
       id: 'elu-core-p2-q1',
       type: 'quiz' as const,
-      question: 'Which choice completes the sentence most concisely?\n\n"Before publishing the study, the scientist ______ the data one last time."',
+      question: `The storm did not destroy the garden, but it ______ the young tomato plants: several stems bent sideways, although every plant survived.
+
+Which choice completes the text with the most logical and precise word?`,
       options: [
-        'did a review of',
-        'reviewed',
-        'saw',
-        'carried out a reviewing process on'
+        'destroyed',
+        'damaged',
+        'protected',
+        'strengthened'
       ],
       correctAnswer: 1,
-      explanation: '"Reviewed" is correct. It is a single verb that carries the entire meaning of looking over the data, and nothing is lost by using it. Two of the other choices stretch that same verb into a phrase of several words, which adds length without adding information. "Saw" is shorter, but it changes the meaning: glancing at data is not the same as reviewing it.'
+      explanation: '"Damaged" is correct. The clue after the colon says stems bent sideways but every plant survived. That is harm, but not total harm, and "damaged" means harmed without being ruined. "Destroyed" is too strong, since the plants survived and the text says the garden was not destroyed. "Protected" and "strengthened" go the wrong direction, because bent stems show the storm hurt the plants.'
     },
     {
       id: 'elu-core-p2-q2',
       type: 'quiz' as const,
-      question: 'Which revision removes the repeated idea?\n\n"The two designs are similar and alike."',
+      question: 'While researching a topic, a student has taken the following notes:\n\n• Honeybees use a "waggle dance" to show other bees where food is.\n• Some ant species leave scent trails that lead other ants to food.\n• A honeybee hive can hold tens of thousands of bees.\n• Both insects share what they learn about food with the rest of their colony.\n\nThe student wants to emphasize a similarity between honeybees and ants. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
       options: [
-        'The two designs are similar and also alike.',
-        'The two designs differ.',
-        'The two designs are similar.',
-        'The two designs are alike in a way that is similar.'
+        'Honeybees use a "waggle dance" to show where food is, but some ants leave scent trails.',
+        'Honeybees live together in large hives, which can hold tens of thousands of bees.',
+        'Honeybees and some ants both tell the rest of their colony where food can be found.',
+        'Some species of ants leave scent trails that lead other ants in the colony to food.'
       ],
       correctAnswer: 2,
-      explanation: '"The two designs are similar" is correct. "Similar" and "alike" mean the same thing, so keeping one of them says everything the original sentence said. Two other choices keep both words, one even adding "also." "The two designs differ" is shorter, but it removes the repetition by reversing the meaning.'
+      explanation: 'The goal is a similarity, so the answer must mention both insects and show something they share. Only the choice saying that honeybees and some ants both tell their colony where food is does that. The waggle-dance choice mentions both insects, but it shows how they differ. The hive choice is only about honeybees, and the scent-trail choice is only about ants, so neither can show a similarity.'
     },
     {
       id: 'elu-core-p2-q3',
       type: 'quiz' as const,
-      question: 'A student is writing about a local bridge and wants to give the year it opened AND note that it is still used today.\n\nNotes:\n• Opened in 1932\n• Named for the town\'s first mayor\n• Still carries traffic today\n\nWhich choice best accomplishes the student\'s goal?',
+      question: 'While researching a topic, a student has taken the following notes:\n\n• A local bridge opened in 1932.\n• It is named for the town\'s first mayor.\n• It still carries traffic today.\n\nThe student wants to give the year the bridge opened and note that it is still in use. Which choice most effectively uses relevant information from the notes to accomplish this goal?',
       options: [
         'The bridge, which is named for the town\'s first mayor, opened in 1932.',
         'The bridge, named for the town\'s first mayor, still carries traffic today.',
@@ -79,20 +85,20 @@ Ignore how impressive a choice sounds. Only the goal decides.
         'The bridge, which first opened in 1932, is still carrying traffic today.'
       ],
       correctAnswer: 3,
-      explanation: '"The bridge, which first opened in 1932, is still carrying traffic today" is correct. The goal asks for two things — the year it opened and the fact that it is still in use — and this is the only choice that gives both. The other three choices are clear sentences, but the mayor-and-1932 choice omits that the bridge is still used, the mayor-and-traffic choice omits the year, and the landmark choice gives neither, so none accomplishes the whole goal.'
+      explanation: 'The goal asks for two things: the year the bridge opened and the fact that it is still in use. Only the choice saying the bridge first opened in 1932 and is still carrying traffic today gives both. The mayor-and-1932 choice leaves out that the bridge is still used, the mayor-and-traffic choice leaves out the year, and the landmark choice gives neither, so none of them accomplishes the whole goal.'
     },
     {
       id: 'elu-core-p2-q4',
       type: 'quiz' as const,
-      question: 'What is the first thing to do on a question that asks for the most concise choice?',
+      question: 'A notes question asks for the choice that "emphasizes a contrast" between two painters. What must the correct choice do?',
       options: [
-        'Find the choices that keep the full meaning, then pick the shortest among them.',
-        'Pick the longest choice, since it gives the reader the most detail and support.',
-        'Pick the choice with the most advanced vocabulary, since it sounds most formal.',
-        'Pick the shortest choice right away, even if it leaves out part of the meaning.'
+        'Name both painters and show one way that their work is unlike.',
+        'Describe one painter in as much detail as the notes allow.',
+        'Name both painters and list every fact the notes give about each.',
+        'Name both painters and show one way that their work is alike.'
       ],
       correctAnswer: 0,
-      explanation: 'Start by checking which choices keep the full meaning, then take the shortest of those. Both halves matter: a choice that drops part of the meaning is wrong no matter how short it is, and among choices that say everything, the shortest is the one the question is asking for. That is why grabbing the shortest choice right away fails, and length or vocabulary level on their own tell you nothing.'
+      explanation: 'A contrast is a difference between two things, so the correct choice has to name both painters and show how their work differs. Describing only one painter cannot show a contrast, no matter how detailed it is. Listing every fact about both painters still never says how they differ, and using the most facts is not the goal. Showing what the two painters share is a similarity, which is the opposite of what the question asks for.'
     }
   ]
 }

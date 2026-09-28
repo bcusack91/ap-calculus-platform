@@ -4,29 +4,33 @@ export const lessonData = {
     {
       id: 'trans-core-p2-recap',
       type: 'text' as const,
-      content: `# Transitions and Organization: Practice
+      content: `# Transitions: Practice
 
-**Part 2 of 2 — Two More Families, Plus Order**
+**Part 2 of 2 — Two More Families, Plus Look-Alikes**
 
 Part 1 covered adding, contrast, cause/effect, and example. Two more groups show up often.
 
 **5. Sequence** — puts steps in order.
 *first, next, then, later, finally, subsequently*
 
-**6. Conclusion** — wraps things up.
-*in conclusion, ultimately, in short, all things considered*
+**6. Summing up** — wraps up several points that came before.
+*in short, in sum, ultimately, all things considered*
 
-### Organization questions
+### Look-alike families
 
-Some questions do not ask for a word. They ask **where a sentence belongs**. The clue is almost always a word inside the sentence that points backward.
+Many wrong choices are close relatives of the right one. Two pairs cause most mistakes.
 
-> Dr. Reyes studied desert soil for twenty years. **She** then tested six samples from the canyon floor.
+**Example or adding?** Ask: is the second sentence **one case** of what the first sentence said?
 
-The word "She" points back to a name. So the sentence with "She" has to come **after** the sentence that names Dr. Reyes. If it came first, the reader would not know who "she" is.
+> Many everyday products were invented by accident. **For example,** the microwave oven was developed after a radar machine melted a candy bar in an engineer's pocket.
 
-Look for these pointing-back words: **she, he, it, they, this, that, these, those**. Whatever they point to must already have been said.
+The microwave is one case of "invented by accident," so this is an example.
 
-The same idea applies to a definition: if a sentence explains what a term means, it goes **before** the sentence that uses that term in a new way.
+> The town library lends books. **In addition,** it lends laptops and tablets.
+
+Laptops are not a case of "lends books." They are a **new, separate point** of the same kind, so this is adding.
+
+**Result or summing up?** A cause/effect word (*therefore, as a result*) says the first sentence **made the second one happen**. A summing-up word (*in short, ultimately*) **pulls together several points** that came before into one final statement.
 
 ### Your checklist for transitions
 
@@ -34,14 +38,13 @@ The same idea applies to a definition: if a sentence explains what a term means,
 2. Say the sentence before the blank in your own words.
 3. Say the sentence after the blank in your own words.
 4. Same direction, or opposite?
-5. Same direction → adding, cause/effect, example, sequence, or conclusion. Opposite → contrast.
+5. Same direction → adding, cause/effect, example, sequence, or summing up. Opposite → contrast.
 6. Now look at the choices and pick the one that matches.
 
-### Your checklist for organization
+### Your checklist for look-alikes
 
-1. Find pointing-back words (*she, it, this, they*).
-2. Find what they point to.
-3. The sentence with the pointing-back word goes after the sentence that introduces the thing.`
+1. Example or adding? → Is the second sentence one case of the first? If yes, example.
+2. Result or summing up? → Did the first sentence cause the second, or does the second pull several points together?`
     },
     {
       id: 'trans-core-p2-q1',
@@ -72,28 +75,28 @@ The same idea applies to a definition: if a sentence explains what a term means,
     {
       id: 'trans-core-p2-q3',
       type: 'quiz' as const,
-      question: 'A writer has finished making an argument and wants the last sentence to sum it all up. Which transition fits a concluding sentence?',
+      question: 'Mia\'s garden gave her tomatoes in June, peppers in July, and squash all through August. ______ her small backyard plot fed her family for the whole summer.\n\nWhich choice completes the text with the most logical transition?',
       options: [
         'Meanwhile,',
         'For instance,',
         'In short,',
-        'On the other hand,'
+        'Even so,'
       ],
       correctAnswer: 2,
-      explanation: '"In short" is correct. Conclusion transitions tell the reader that the writer is wrapping up and stating the final point, which is exactly what a summing-up sentence does. Other phrases in this family include "in conclusion," "ultimately," and "all things considered." The other choices announce something happening at the same time, a specific example, or a turn to the opposite side, so none of them signals a wrap-up.'
+      explanation: '"In short" is correct. The first sentence lists what the garden produced month by month, and the second sentence pulls those points together into one final statement: the garden fed the family all summer. That is the job of a summing-up transition. "Meanwhile" would mean something else was happening at the same time, "For instance" would introduce one case of an earlier claim, and "Even so" would mean the second sentence holds true despite the first, but the second sentence follows naturally from the first.'
     },
     {
       id: 'trans-core-p2-q4',
       type: 'quiz' as const,
-      question: 'A paragraph contains these two sentences: "Dr. Reyes studied desert soil for twenty years." and "She then tested six samples from the canyon floor."\n\nWhy must the sentence about Dr. Reyes come first?',
+      question: 'Some birds can recognize individual human faces. ______ crows in one study scolded the researchers who had once trapped them, even years later, while ignoring other people.\n\nWhich choice completes the text with the most logical transition?',
       options: [
-        'Because "She" must point back to a person the reader already knows',
-        'Because sentences about a person\'s career always open a paragraph',
-        'Because "then" shows the testing happened after twenty years of study',
-        'Because the longer sentence should come first to set up the shorter one'
+        'In addition,',
+        'However,',
+        'For example,',
+        'As a result,'
       ],
-      correctAnswer: 0,
-      explanation: 'The sentence naming Dr. Reyes goes first. The word "She" is a pointing-back word, and a reader can only understand it if the person has already been named. Putting the name first gives "She" something to point to. A career sentence does not have to open every paragraph, "then" links the testing to an earlier step rather than to the twenty years, and sentence length never decides order.'
+      correctAnswer: 2,
+      explanation: '"For example" is correct. The first sentence makes a general claim: some birds can recognize human faces. The crows picking out the exact researchers who trapped them are one case of that claim, which is what "For example" signals. "In addition" is the look-alike trap: it would fit only if the second sentence made a new, separate point, but this sentence illustrates the first one. "However" would signal a turn, and the crows agree with the claim. "As a result" would mean the first sentence caused the crows\' behavior, and a general claim cannot cause anything.'
     }
   ]
 }

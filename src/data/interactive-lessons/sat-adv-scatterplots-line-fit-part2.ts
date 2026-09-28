@@ -18,7 +18,7 @@ Every residual item offers both $+r$ and $-r$. Anchor on the picture, not the fo
 
 ### Distractor Species 3: The Sum-of-Residuals Decoy
 
-The residuals of a least-squares line always sum to approximately zero — for *any* least-squares fit, good or bad. So "Model 1's residuals sum to zero, therefore Model 1 fits better" is a statement with no content. Compare **magnitudes**, never the signed sum.
+A line of best fit runs through the middle of the data, with points above it and points below it, so positive and negative residuals cancel and the signed sum lands near zero for a good fit and a bad fit alike. So "Model 1's residuals sum to zero, therefore Model 1 fits better" is a statement with no content. Compare **magnitudes**, never the signed sum.
 
 ### Distractor Species 4: "Causes"
 
@@ -57,7 +57,7 @@ Dividing by the *sum* of the slopes is a planted option, so check that you subtr
         'Model 1 fits the data better, because its residuals cover a wider range of values'
       ],
       correctAnswer: 1,
-      explanation: `Model 1's residuals run as large as $2.6$ in magnitude; Model 2's never exceed $1.2$. Smaller residuals mean the predictions sit closer to the actual data, so Model 2 is the better fit. The traps: the sum-to-zero option is a genuine arithmetic observation (Model 1's residuals really do sum to $0$ while Model 2's sum to $-0.2$), but the signed sum of least-squares residuals is always about zero regardless of fit quality, so it distinguishes nothing; the equal-fit option counts signs, which is equally uninformative; the wider-range option treats a wider spread of errors as a virtue when it is the definition of a worse fit.`
+      explanation: `Model 1's residuals run as large as $2.6$ in magnitude; Model 2's never exceed $1.2$. Smaller residuals mean the predictions sit closer to the actual data, so Model 2 is the better fit. The traps: the sum-to-zero option is a genuine arithmetic observation (Model 1's residuals really do sum to $0$ while Model 2's sum to $-0.2$), but positive and negative residuals cancel in a signed sum, so a sum near zero can hide large misses and distinguishes nothing; the equal-fit option counts signs, which is equally uninformative; the wider-range option treats a wider spread of errors as a virtue when it is the definition of a worse fit.`
     },
     {
       id: 'scat-adv-p2-q2',

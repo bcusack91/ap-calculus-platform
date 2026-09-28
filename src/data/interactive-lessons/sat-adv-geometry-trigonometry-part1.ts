@@ -55,7 +55,7 @@ Running it backwards works too: an enlargement with $1.69$ times the area has li
 
 A triangle has one area but three bases and three altitudes. That gives a two-line route to any altitude:
 
-1. Compute the area using the **convenient** base (a horizontal side, or an isosceles triangle's natural altitude, or the shoelace formula in the coordinate plane).
+1. Compute the area using the **convenient** base (a horizontal or vertical side, an isosceles triangle's natural altitude, or, in the coordinate plane, an enclosing rectangle minus its corner triangles).
 2. Set $\\text{Area} = \\frac{1}{2}(\\text{other base})(h)$ and solve.
 
 The distractors write themselves: the **area** and the **base** are both choices, and so is the answer that divided the area by the base without doubling first.
@@ -67,8 +67,8 @@ Distance, midpoint, slope — plus one condition that resolves an ambiguity.
 - **Unknown coordinate + given distance**: $(a-1)^{2} + 8^{2} = 17^{2}$ gives two values of $a$, and a condition like "$a > 0$" or "$k > 3$" picks one. The rejected root's answer is always a choice.
 - **Moving a set distance along a line**: a slope of $\\frac{3}{4}$ means each step of $4$ right and $3$ up covers exactly $5$ units. To travel $15$, take three steps. Never use the distance formula with a variable here.
 - **Perpendicular bisector = the set of points equidistant from two points.** "Equidistant from $A$ and $B$" and "on line $\\ell$" is a two-line system.
-- **Distance from a point to a line** is $\\frac{|Ax_{0}+By_{0}+C|}{\\sqrt{A^{2}+B^{2}}}$ — the shortest path, and the only one the item means by "shortest."
-- **Shoelace** handles any polygon's area from its vertices, and the vertices must be listed in order around the figure.
+- **Shortest distance from a point to a line** is the path that meets the line at a right angle. To a horizontal line $y = c$ it is just $|y_{0} - c|$; to a vertical line $x = c$ it is $|x_{0} - c|$. For a slanted line, give the path the negative-reciprocal slope, solve the system to find where it meets the line, then use the distance formula between the two points.
+- **Area from vertices**: if a side is horizontal or vertical, use it as the base and read the height off the coordinates. Otherwise, enclose the figure in a rectangle and subtract the right triangles cut off in its corners.
 
 The final trap in this half is almost always **which number was asked for**: the $x$-coordinate when the $y$ was wanted, the intercept on the wrong axis, the area when the cost was wanted.`
     },

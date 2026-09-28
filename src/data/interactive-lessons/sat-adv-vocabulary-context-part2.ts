@@ -33,10 +33,10 @@ You don't miss hard vocabulary items because you don't know the words. You miss 
         'Both words fit after "has not rejected," so the item is flawed and either answer should be accepted',
         'The contrast with "has not rejected" rules out "dismissed," and "a second review" signals postponement',
         '"Dismissed" is correct, because a committee that sets conditions before a second review has said no',
-        'The formal register of "committee" favors "dismissed," the more official-sounding of the two words'
+        'The formal setting of a "committee" favors "dismissed," the more official-sounding of the two words'
       ],
       correctAnswer: 1,
-      explanation: `This is the "rather than" scaffold in semicolon form: "has not rejected... it has ______" makes the blank the *alternative* to rejection, so any synonym of rejection ("dismissed") is structurally excluded no matter how cynical a reading of committees you hold. "Before a second review" independently confirms the action is a postponement. The choice calling "dismissed" correct is exactly the trap thinking the item is built to punish — importing real-world cynicism to override the sentence's explicit contrast. The flawed-item choice surrenders the structural evidence that decides it. The formal-register choice invents a register test; both words are equally official-sounding, and register almost never separates final contenders on hard items.`
+      explanation: `This is the "rather than" scaffold in semicolon form: "has not rejected... it has ______" makes the blank the *alternative* to rejection, so any synonym of rejection ("dismissed") is structurally excluded no matter how cynical a reading of committees you hold. "Before a second review" independently confirms the action is a postponement. The choice calling "dismissed" correct is exactly the trap thinking the item is built to punish — importing real-world cynicism to override the sentence's explicit contrast. The flawed-item choice surrenders the structural evidence that decides it. The formal-setting choice invents a test of how official a word sounds; both words are equally official-sounding, and Words in Context items are decided by meaning in context, never by how formal a word sounds.`
     },
     {
       id: 'advvc2-q2',
@@ -62,7 +62,7 @@ You don't miss hard vocabulary items because you don't know the words. You miss 
         'The passage never discusses field conditions in any sentence, so readers must guess at what they were like'
       ],
       correctAnswer: 0,
-      explanation: `The trap is a register-momentum trap: three sentences build a positive impression, and readers who answer from the passage's overall tone rather than from the blank's local clause carry that momentum straight through the pivot. The blank sits inside the "however" clause and describes *limits*, so it must be a word like "inhospitable" — the tone flipped one word before the blank. This is the vocabulary version of the concession-pivot structure that runs through all hard Reading & Writing items: the sentence containing the blank outranks the paragraph containing the sentence. The more-advanced-word choice is false and irrelevant — difficulty of the word is never the test. The grammar choice is false ("favorable to," "inhospitable to," and others all collocate with "to," which is why grammar can't decide). The never-discusses choice contradicts the quoted sentence itself.`
+      explanation: `The trap is a momentum trap: three sentences build a positive impression, and readers who answer from the passage's overall tone rather than from the blank's local clause carry that momentum straight through the pivot. The blank sits inside the "however" clause and describes *limits*, so it must be a word like "inhospitable" — the tone flipped one word before the blank. This is the vocabulary version of the concession-pivot structure that runs through all hard Reading & Writing items: the sentence containing the blank outranks the paragraph containing the sentence. The more-advanced-word choice is false and irrelevant — difficulty of the word is never the test. The grammar choice is false ("favorable to," "inhospitable to," and others all collocate with "to," which is why grammar can't decide). The never-discusses choice contradicts the quoted sentence itself.`
     }
   ]
 }

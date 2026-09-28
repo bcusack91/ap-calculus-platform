@@ -40,7 +40,7 @@ Solving for the input and then reporting the *output* — or vice versa — is t
 
 ### Archetype 5: Which Model Fits Better
 
-Given two sets of residuals for the same data, the better model is the one whose residuals are **smaller in absolute value**. Residuals of a least-squares line always sum to about zero, so "these sum to zero" is evidence of nothing at all — and that is precisely the distractor offered.
+Given two sets of residuals for the same data, the better model is the one whose residuals are **smaller in absolute value**. Adding the residuals with their signs proves nothing: a miss of $+5$ and a miss of $-5$ cancel to $0$, so a line with big misses in both directions can still have residuals that "sum to zero." That signed sum is precisely the distractor offered.
 
 ### Archetype 6: What One New Point Does
 

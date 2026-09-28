@@ -44,7 +44,7 @@ Sprinkler, gravel, and tile items run **area $\\rightarrow$ volume $\\rightarrow
 
 **Chord on a horizontal line, instantly.** For center $(h, k)$ and radius $r$, the line $y = c$ cuts a chord of length $2\\sqrt{r^{2} - (c - k)^{2}}$. Tangency is exactly the case where that radicand is zero.
 
-**Tangency without a discriminant.** Set the perpendicular distance from the center to the line equal to $r$ and solve the absolute-value equation. One line replaces a page of substitution.
+**Tangency, fastest route first.** For a horizontal or vertical line, compare the center's coordinate with $r$: $y = c$ is tangent when $|c - k| = r$. For a slanted line, substitute and set the discriminant to $0$. When the contact point is given, use the fact that the radius is perpendicular to the tangent.
 
 **Sector shortcut.** In radians, the sector area is $\\frac{1}{2}r^{2}\\theta$ and the arc is $r\\theta$ — so $\\text{area} = \\frac{1}{2} \\cdot r \\cdot \\text{arc}$. If a question gives you the sector area and asks for the arc, that relationship gets there in one step.`
     },
@@ -67,10 +67,10 @@ Sprinkler, gravel, and tile items run **area $\\rightarrow$ volume $\\rightarrow
     {
       id: 'circ-adv-p2-q3',
       type: 'quiz' as const,
-      question: `In the $xy$-plane, the line $y = 2x + k$ is tangent to the circle $x^{2} + y^{2} + 2x - 6y - 15 = 0$. What is the positive value of $k$, to the nearest hundredth?`,
-      options: ['$5$', '$6.18$', '$11.18$', '$16.18$'],
-      correctAnswer: 3,
-      explanation: `The circle is $(x + 1)^{2} + (y - 3)^{2} = 25$: center $(-1, 3)$, $r = 5$. Writing the line as $2x - y + k = 0$, tangency means the distance from the center equals the radius: $\\frac{|2(-1) - 3 + k|}{\\sqrt{5}} = 5$, so $|k - 5| = 5\\sqrt{5} \\approx 11.18$ and $k = 5 + 5\\sqrt{5} \\approx 16.18$ (the other solution, $5 - 5\\sqrt{5} \\approx -6.18$, is negative). The traps: $11.18$ is $5\\sqrt{5}$, stopping before adding the $5$; $6.18$ is the magnitude of the OTHER solution, the tangent line on the far side with its sign dropped; $5$ is simply the radius.`
+      question: `In the $xy$-plane, the line $y = x + k$ is tangent to the circle $x^{2} + y^{2} - 2x - 4y - 3 = 0$. What is the positive value of $k$?`,
+      options: ['$1$', '$3$', '$5$', '$6$'],
+      correctAnswer: 2,
+      explanation: `Complete the square: $(x - 1)^{2} + (y - 2)^{2} = 3 + 1 + 4 = 8$, so the center is $(1, 2)$ and $r^{2} = 8$. Substitute $y = x + k$: $(x - 1)^{2} + (x + k - 2)^{2} = 8$, which collects to $2x^{2} + (2k - 6)x + (k - 2)^{2} - 7 = 0$. Tangent means exactly one intersection, so the discriminant is $0$: $(2k - 6)^{2} - 8\\left[(k - 2)^{2} - 7\\right] = 0$ simplifies to $-4k^{2} + 8k + 60 = 0$, or $k^{2} - 2k - 15 = (k - 5)(k + 3) = 0$. The positive value is $k = 5$. (Check: with $k = 5$ the quadratic is $2x^{2} + 4x + 2 = 0$, a double root at $x = -1$, so the line touches the circle only at $(-1, 4)$.) The traps: $3$ reads the center as $(-1, -2)$, the sign slip in completing the square, which leads to $k^{2} + 2k - 15 = 0$; $6$ drops the leading $2$ when the two $x^{2}$ terms combine; $1$ is the $k$ that sends the line through the center, which cuts the circle twice instead of touching it once.`
     }
   ]
 }

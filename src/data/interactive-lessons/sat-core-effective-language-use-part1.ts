@@ -6,98 +6,98 @@ export const lessonData = {
       type: 'text' as const,
       content: `# Word Choice: The Basics
 
-**Part 1 of 2 — Shorter Wins**
+**Part 1 of 2 — The Precise Word**
 
-Some SAT questions give you four choices that all mean roughly the same thing. Nothing is misspelled. Nothing is ungrammatical. The question asks which choice says it **most concisely** — which means saying the same thing in the fewest words.
+Some SAT questions give you a short text with a blank and four words that all mean something close. The question asks:
 
-The answer is the shortest choice that still keeps every piece of the meaning.
+> Which choice completes the text with the most **logical and precise** word or phrase?
 
-### Look at a real pair
+"Close" is not enough. Only one choice has **exactly** the meaning the text needs. The text itself tells you which one.
 
-> **Wordy:** Due to the fact that the wind was too strong, the race ended up being canceled.
->
-> **Concise:** The race was canceled because the wind was too strong.
+### Three ways close words differ
 
-Both sentences tell you the same two facts: the race was canceled, and strong wind was the reason. The second one does it with fewer words, so it is the better choice.
+**1. Detail.** Many words share a general meaning but add a different detail.
+- *said, whispered, shouted, announced* — all are ways of speaking, but only one is quiet.
 
-### What got cut
+**2. Strength.** Some words are milder or stronger versions of the same idea.
+- *liked* → *adored*
+- *limited* → *banned*
+- *disagreed* → *refused*
 
-- *Due to the fact that* → **because**. Five words doing one word's job.
-- *ended up being canceled* → **was canceled**. "Ended up being" adds nothing.
+**3. Feeling.** Some words point the same way but carry a positive or a negative feel.
+- *careful with money* (positive) vs. *stingy* (negative)
+- *confident* (positive) vs. *arrogant* (negative)
 
-### Repeated words
+### Look at a real example
 
-Some phrases say the same thing twice. Once you notice them, they are easy to spot:
+> The coach did not cancel Monday's practice; she ______ it, moving it to Thursday afternoon.
 
-- *free gift* (a gift is already free)
-- *combined together* (combining is already putting things together)
-- *the reason is because* (pick one)
-- *past history* (history is already past)
-- *in the year 1937* → *in 1937*
-
-### Why the SAT tests this
-
-Extra words do not make writing sound smarter. They make the reader work harder to find the point. A shorter sentence that keeps all the information is clearer.
+The clue is "moving it to Thursday afternoon." Practice still happens, just later. **Postponed** fits exactly: it means moved to a later time. *Canceled* is too strong, since the text says practice was not canceled, and *shortened* changes the length of practice, which the text never mentions.
 
 ### Your move
 
-1. Read all four choices.
-2. Cross out any choice that leaves out a piece of the meaning.
-3. Of the ones that are left, pick the shortest.
-
-Being suspicious of the longest choice is a good habit here. On a concise-writing question, the longest answer is usually the wrong one.`
+1. Read the text and find the **clue** — the part that describes the blank.
+2. Say your own word, and decide **how strong** it should be.
+3. Cross out choices that are too strong, too weak, or carry the wrong feel.
+4. Pick the choice that matches **every** detail of the clue.`
     },
     {
       id: 'elu-core-p1-q1',
       type: 'quiz' as const,
-      question: 'Which choice states the idea most concisely without leaving anything out?',
+      question: `The librarian ______ a warning to the noisy students, speaking so softly that only the students at the nearest table could hear her.
+
+Which choice completes the text with the most logical and precise word?`,
       options: [
-        'The reason the race was canceled was because of the fact that the wind was too strong.',
-        'The race was canceled.',
-        'The race was canceled because the wind was too strong.',
-        'The race, on account of strong wind conditions, was a race that got canceled.'
+        'shouted',
+        'announced',
+        'whispered',
+        'posted'
       ],
       correctAnswer: 2,
-      explanation: '"The race was canceled because the wind was too strong" is correct. It keeps both facts — the cancellation and the reason — and states them in the fewest words. The word "because" does the whole job of naming the cause. Two of the other choices carry the same two facts but pad them with phrases like "because of the fact that" and "was a race that got," which add length without adding meaning. "The race was canceled" is shorter, but it leaves out the reason, so it does not keep the full idea.'
+      explanation: '"Whispered" is correct. The clue is "speaking so softly that only the students at the nearest table could hear her," and to whisper means to speak very quietly. "Shouted" is the opposite of soft speech. "Announced" suggests telling a whole room or group, but only one table could hear. "Posted" means putting up a written notice, and the text says she was speaking.'
     },
     {
       id: 'elu-core-p1-q2',
       type: 'quiz' as const,
-      question: 'Which phrase says the same thing twice?',
+      question: `The new pool rule did not completely ban phones; it ______ them, allowing phone use only in the shaded seating area.
+
+Which choice completes the text with the most logical and precise word?`,
       options: [
-        'free gift',
-        'new bike',
-        'early morning',
-        'cold winter'
+        'banned',
+        'limited',
+        'ignored',
+        'encouraged'
       ],
-      correctAnswer: 0,
-      explanation: '"Free gift" says the same thing twice. A gift is something given without charge, so "free" repeats information the word "gift" already carries, and "gift" alone says it all. In the other three phrases the first word adds something real: a bike can be new or used, a morning can be early or late, and a winter can be cold or mild.'
+      correctAnswer: 1,
+      explanation: '"Limited" is correct. The text says the rule did not completely ban phones, but it did allow them only in one area. To limit something is to hold it within set bounds without getting rid of it, which matches both parts of the clue. "Banned" is too strong, since the text says the ban was not complete. "Encouraged" goes the wrong direction, and "ignored" would mean the rule had no effect on phones at all.'
     },
     {
       id: 'elu-core-p1-q3',
       type: 'quiz' as const,
-      question: 'Which choice expresses the idea most concisely?',
+      question: `Friends describe Omar as ______ with money. He compares prices before every purchase, but he happily pays for his sister's birthday dinner every year.
+
+Which choice completes the text with the most logical and precise word?`,
       options: [
-        'The coach gave a speech.',
-        'The coach gave a short speech.',
-        'The coach gave a speech that was short in length.',
-        'What the coach did was give a speech that was short.'
+        'wasteful',
+        'stingy',
+        'careful',
+        'careless'
       ],
-      correctAnswer: 1,
-      explanation: '"The coach gave a short speech" is correct. It states who acted, what they did, and that the speech was short — the complete meaning in five words. The other choices say the same thing while stretching it out with phrases like "that was short in length" and "what the coach did was," neither of which adds new information. "The coach gave a speech" is shorter still, but it drops the fact that the speech was short, so it leaves something out.'
+      correctAnswer: 2,
+      explanation: '"Careful" is correct. Comparing prices shows that Omar pays close attention to how he spends, and happily paying for his sister\'s dinner shows he is not unwilling to spend. "Careful" fits both facts and has a positive feel. "Stingy" means unwilling to spend or share, which the birthday dinner contradicts. "Wasteful" and "careless" go against his habit of comparing prices.'
     },
     {
       id: 'elu-core-p1-q4',
       type: 'quiz' as const,
-      question: 'Why does the SAT reward the shorter choice on a conciseness question?',
+      question: 'On a question that asks for the "most logical and precise word," two of the choices mean roughly the same thing. How should you decide between them?',
       options: [
-        'Shorter answers are always correct on every SAT question.',
-        'Short sentences sound more formal and more academic to readers.',
-        'Long sentences break grammar rules that the SAT tests directly.',
-        'Words that repeat information make the point harder to find.'
+        'Pick the one whose strength and detail fit the clue in the text.',
+        'Pick the longer, more advanced word, since it sounds more academic.',
+        'Pick the more common word, since everyday words are safer choices.',
+        'Pick either one, since two words with the same meaning both work.'
       ],
-      correctAnswer: 3,
-      explanation: 'Words that repeat information make the point harder to find, and that is what conciseness questions are testing. The goal is clear writing, so the choice that delivers the full meaning with no repeated words wins. Long sentences are not against any grammar rule, and shortness only decides the answer when the question asks about being concise.'
+      correctAnswer: 0,
+      explanation: 'Words that mean roughly the same thing still differ in strength, detail, or feel, and the clue in the text decides which one fits exactly. A word is not better because it sounds advanced or because it is common. And two close words almost never both work: one of them will be too strong, too weak, or missing a detail the text requires.'
     }
   ]
 }

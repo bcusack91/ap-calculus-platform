@@ -33,13 +33,12 @@ To find where a circle crosses the $y$-axis, set $x = 0$ and solve the resulting
 
 The tangent is **perpendicular to the radius** at the point of contact. So: slope of radius $\\rightarrow$ negative reciprocal $\\rightarrow$ point-slope through the contact point $\\rightarrow$ whatever intercept was requested. Using the radius's own slope is the planted error.
 
-### Archetype 4: Tangency as a Distance Condition
+### Archetype 4: Tangency With No Contact Point Given
 
-When a line is tangent to a circle but no contact point is given, tangency means **the distance from the center to the line equals $r$**:
+When a line is tangent to a circle but the contact point is not given, tangency means **exactly one intersection point**.
 
-$$\\frac{|Ah + Bk - C|}{\\sqrt{A^{2} + B^{2}}} = r$$
-
-This turns "for what $k$ is $y = 2x + k$ tangent?" into a one-line absolute-value equation instead of a discriminant slog.
+- **Horizontal or vertical line:** $y = c$ is tangent exactly when $|c - k| = r$, and $x = c$ exactly when $|c - h| = r$. "Tangent to the $x$-axis" means $r = |k|$.
+- **Slanted line** such as $y = x + b$: substitute it into the circle's equation, collect into one quadratic in $x$, and set the discriminant equal to $0$. Solve for the parameter, then check the condition in the stem ("the positive value") to choose between the two answers.
 
 ### Archetype 5: Sectors, Arcs, and Rotation
 

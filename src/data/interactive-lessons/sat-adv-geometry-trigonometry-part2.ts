@@ -26,9 +26,7 @@ When a stem says $\\sin(\\text{something}) = \\cos(\\text{something else})$, the
 
 ### Distractor Species 4: Vertical Distance Masquerading as Perpendicular Distance
 
-"How far is the tower from the road?" means the **perpendicular** distance. Measuring straight up or straight across to the line gives a larger number that is always an option. Use
-$$d = \\frac{|Ax_{0} + By_{0} - C|}{\\sqrt{A^{2} + B^{2}}}$$
-for a line written $Ax + By = C$.
+"How far is the tower from the road?" means the **perpendicular** distance. Measuring straight up or straight across to the line gives a larger number that is always an option. Build the right angle instead: the path's slope is the **negative reciprocal** of the line's slope, so write that path through the point, solve the two-line system to find where it meets the line, and finish with the distance formula. Using the plain reciprocal (dropping the sign change) is the planted slip, and it lands on the wrong point of the line.
 
 ### Distractor Species 5: Linear Ratio Where Area Ratio Belongs
 
@@ -38,13 +36,13 @@ Lengths scale by $k$; areas scale by $k^{2}$. An item that gives you a *differen
 
 ## Speed Techniques
 
-**Ratio → triangle.** Given $\\sin\\theta = \\frac{2}{5}$ or $\\tan\\theta = \\frac{2}{5}$, immediately draw the triangle with those two sides and fill the third by Pythagoras. Every other ratio is then free — no calculator, no inverse trig.
+**Ratio → triangle.** Given $\\sin\\theta = \\frac{2}{5}$ or $\\tan\\theta = \\frac{2}{5}$, immediately draw the triangle with those two sides and fill the third by Pythagoras. Every other ratio is then free — no calculator needed.
 
 **The two-observation formula.** Two elevation angles from points $d$ apart, same side:
-$$h = \\frac{d}{\\cot\\theta_{\\text{far}} - \\cot\\theta_{\\text{near}}} = \\frac{d}{\\frac{1}{\\tan\\theta_{\\text{far}}} - \\frac{1}{\\tan\\theta_{\\text{near}}}}$$
-Subtract the **cotangents**, never the tangents. That single sign-of-approach error is the most common wrong answer in the bank.
+$$h = \\frac{d}{\\frac{1}{\\tan\\theta_{\\text{far}}} - \\frac{1}{\\tan\\theta_{\\text{near}}}}$$
+Each $\\frac{1}{\\tan\\theta}$ is the horizontal distance per unit of height, so subtract the **reciprocals** of the tangents, never the tangents themselves. That single sign-of-approach error is the most common wrong answer in the bank.
 
-**Shoelace for any polygon.** List the vertices in order, repeat the first at the bottom, cross-multiply down-right minus down-left, halve the absolute value. It beats decomposition every time and never miscounts a region.
+**Area in the coordinate plane: box it, then subtract.** If the figure has a horizontal or vertical side, use that side as the base and read the height straight off the coordinates. If it has none, draw the smallest rectangle whose sides pass through the vertices, then subtract the right triangles cut off in the corners. Each corner triangle's legs are just differences of coordinates, so no distance formula is needed. The planted errors are forgetting to halve the corner triangles and reporting the rectangle itself.
 
 **Midpoint runs backwards.** If $M$ is the midpoint of $\\overline{AB}$ and you know $A$, then $B = 2M - A$. Doing $M - A$ instead is a planted option.`
     },
@@ -68,9 +66,9 @@ Subtract the **cotangents**, never the tangents. That single sign-of-approach er
       id: 'geot-adv-p2-q3',
       type: 'quiz' as const,
       question: `On a map where $1$ unit represents $1$ km, a straight pipeline follows the line $3x + 4y = 12$, and a pumping station stands at $(8, 9)$. A service road will be built from the station to meet the pipeline at a right angle. To the nearest tenth of a kilometer, how long is the service road?`,
-      options: ['$6.9$', '$9.6$', '$12.0$', '$16.0$'],
+      options: ['$7.7$', '$9.6$', '$10.0$', '$12.0$'],
       correctAnswer: 1,
-      explanation: `"Meets at a right angle" means perpendicular distance: $d = \\frac{|3(8) + 4(9) - 12|}{\\sqrt{3^{2} + 4^{2}}} = \\frac{48}{5} = 9.6$ km. The traps are the two easier distances and one formula slip: $12.0$ is the VERTICAL distance (at $x = 8$ the line is at $y = -3$, and $9 - (-3) = 12$); $16.0$ is the HORIZONTAL distance (at $y = 9$ the line is at $x = -8$); $6.9$ divides by $3 + 4 = 7$ instead of $\\sqrt{3^{2} + 4^{2}} = 5$. Perpendicular distance is always the smallest of the three, which is a useful sanity check.`
+      explanation: `"Meets at a right angle" means the road is perpendicular to the pipeline. The pipeline $3x + 4y = 12$ has slope $-\\frac{3}{4}$, so the road has slope $\\frac{4}{3}$: $y - 9 = \\frac{4}{3}(x - 8)$. Substituting into $3x + 4y = 12$ gives $3x + 36 + \\frac{16}{3}(x - 8) = 12$, so $25x = 56$, $x = 2.24$, and $y = 9 + \\frac{4}{3}(-5.76) = 1.32$. The road runs from $(8, 9)$ to $(2.24, 1.32)$: $\\sqrt{5.76^{2} + 7.68^{2}} = \\sqrt{92.16} = 9.6$ km. The traps: $12.0$ is the VERTICAL distance (at $x = 8$ the line is at $y = -3$, and $9 - (-3) = 12$); $10.0$ uses slope $\\frac{3}{4}$, the reciprocal without the sign change, which meets the pipeline at $(0, 3)$, and $\\sqrt{8^{2} + 6^{2}} = 10$; $7.7$ is only the vertical leg $9 - 1.32 = 7.68$, stopping before the distance formula. The perpendicular distance is always the shortest, which is a useful sanity check.`
     }
   ]
 }

@@ -8,7 +8,7 @@ export const lessonData = {
 
 **Part 3 of 3 — Four Items at Test Pace**
 
-Give yourself about **90 seconds per question**. These are built from the four highest-frequency hard-tier skeletons: the two-observation height, the reversed midpoint, the similar-figure area difference, and the shoelace-plus-cost polygon.
+Give yourself about **90 seconds per question**. These are built from the four highest-frequency hard-tier skeletons: the two-observation height, the reversed midpoint, the similar-figure area difference, and the boxed-in polygon with a cost step.
 
 Before each answer, run the two-second checklist:
 
@@ -22,7 +22,7 @@ Before each answer, run the two-second checklist:
       question: `From a point on level ground, the angle of elevation to the top of a monument is $34$ degrees. From a second point $30$ m farther from the monument, along the same straight line, the angle of elevation is $21$ degrees. To the nearest tenth of a meter, how tall is the monument?`,
       options: ['$11.5$', '$20.2$', '$26.7$', '$103.2$'],
       correctAnswer: 2,
-      explanation: `Let $h$ be the height. The near distance is $\\frac{h}{\\tan 34^{\\circ}}$ and the far distance is $\\frac{h}{\\tan 21^{\\circ}}$, and they differ by $30$: $h\\left(\\frac{1}{\\tan 21^{\\circ}} - \\frac{1}{\\tan 34^{\\circ}}\\right) = 30$, so $h(2.6051 - 1.4826) = 30$ and $h = \\frac{30}{1.1225} \\approx 26.7$ m. The traps: $103.2$ subtracts the TANGENTS instead of the cotangents — the single most common error in this archetype; $20.2$ is $30\\tan 34^{\\circ}$ and $11.5$ is $30\\tan 21^{\\circ}$, both treating the $30$ m walk as though it were the full horizontal distance to the monument.`
+      explanation: `Let $h$ be the height. The near distance is $\\frac{h}{\\tan 34^{\\circ}}$ and the far distance is $\\frac{h}{\\tan 21^{\\circ}}$, and they differ by $30$: $h\\left(\\frac{1}{\\tan 21^{\\circ}} - \\frac{1}{\\tan 34^{\\circ}}\\right) = 30$, so $h(2.6051 - 1.4826) = 30$ and $h = \\frac{30}{1.1225} \\approx 26.7$ m. The traps: $103.2$ subtracts the TANGENTS instead of their reciprocals — the single most common error in this archetype; $20.2$ is $30\\tan 34^{\\circ}$ and $11.5$ is $30\\tan 21^{\\circ}$, both treating the $30$ m walk as though it were the full horizontal distance to the monument.`
     },
     {
       id: 'geot-adv-p3-q2',
@@ -43,10 +43,10 @@ Before each answer, run the two-second checklist:
     {
       id: 'geot-adv-p3-q4',
       type: 'quiz' as const,
-      question: `A plot of land has corners at $(0, 0)$, $(7, 2)$, $(9, 8)$, and $(2, 6)$, listed in order, where each unit represents $1$ meter. Sod costs $8$ dollars per square meter. What is the total cost, in dollars, of sodding the entire plot?`,
-      options: ['$38$', '$304$', '$576$', '$608$'],
-      correctAnswer: 1,
-      explanation: `Shoelace: down-right products give $0(2) + 7(8) + 9(6) + 2(0) = 110$; down-left products give $0(7) + 2(9) + 8(2) + 6(0) = 34$. Area $= \\frac{|110 - 34|}{2} = 38$ square meters, so the cost is $38 \\times 8 = 304$ dollars. The traps: $38$ is the AREA, stopping one step before the cost the question asked for; $608$ omits the halving in the shoelace formula and then multiplies by $8$; $576$ prices the $9 \\times 8$ bounding box instead of the plot, the classic result of estimating rather than computing.`
+      question: `A plot of land has corners at $(0, 2)$, $(6, 0)$, $(9, 6)$, and $(3, 8)$, listed in order, where each unit represents $1$ meter. Sod costs $8$ dollars per square meter. What is the total cost, in dollars, of sodding the entire plot?`,
+      options: ['$42$', '$96$', '$336$', '$576$'],
+      correctAnswer: 2,
+      explanation: `Enclose the plot in the rectangle from $x = 0$ to $x = 9$ and $y = 0$ to $y = 8$, whose area is $9 \\times 8 = 72$. Every corner of the plot lies on a side of that rectangle, so four right triangles are cut off: bottom left, legs $6$ and $2$, area $6$; bottom right, legs $3$ and $6$, area $9$; top right, legs $6$ and $2$, area $6$; top left, legs $3$ and $6$, area $9$. The plot's area is $72 - (6 + 9 + 6 + 9) = 42$ square meters, so the cost is $42 \\times 8 = 336$ dollars. The traps: $42$ is the AREA, stopping one step before the cost the question asked for; $96$ subtracts the corner triangles without halving them ($72 - 60 = 12$, then $12 \\times 8$); $576$ prices the whole $9 \\times 8$ rectangle instead of the plot.`
     }
   ]
 }
