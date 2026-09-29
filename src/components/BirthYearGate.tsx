@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 
 /**
@@ -11,19 +11,67 @@ import { useSession } from 'next-auth/react'
  * `birthYear = null`. For COPPA child-directed treatment we must know the age, so
  * this gate asks once — non-dismissably — before the account can use the app.
  * Renders nothing for signed-out users or anyone who already has a birth year.
+ *
+ * "Already has a birth year" is decided by the database, not the session
+ * token. The token carries a copy of the field, but the cookie holding it is
+ * only rewritten by /api/auth/session — the update() below, or the client's
+ * own session fetches — and that write can fail (rate limit, network) or be
+ * overtaken by a stale response. Students who had given their year were
+ * asked again on every full page load until the copy caught up. So when the
+ * token says null, the gate checks the row first: if the year is there it
+ * stays hidden and quietly refreshes the token; only a null row shows it.
  */
+export type BirthYearCheck = 'pending' | 'known' | 'missing'
+
+/** Whether to render the gate, from what the session and the row say. */
+export function shouldShowBirthYearGate(input: {
+  status: 'loading' | 'authenticated' | 'unauthenticated'
+  tokenBirthYear: number | null | undefined
+  dbCheck: BirthYearCheck
+  saved: boolean
+}): boolean {
+  if (input.status !== 'authenticated') return false
+  if (input.tokenBirthYear != null) return false
+  if (input.saved) return false
+  return input.dbCheck === 'missing'
+}
+
 export default function BirthYearGate() {
   const { data: session, status, update } = useSession()
   const [birthYear, setBirthYear] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
   const [saved, setSaved] = useState(false)
+  const [dbCheck, setDbCheck] = useState<BirthYearCheck>('pending')
 
-  if (status !== 'authenticated') return null
-  if (session?.user?.birthYear != null) return null
-  // Once the birth year has been saved server-side, unmount immediately rather
-  // than waiting on the session refresh — so the user is never stuck on "Saving…".
-  if (saved) return null
+  const tokenBirthYear = session?.user?.birthYear
+  const needsCheck = status === 'authenticated' && tokenBirthYear == null && !saved
+
+  useEffect(() => {
+    if (!needsCheck) return
+    let cancelled = false
+    fetch('/api/user/birth-year', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { birthYear?: number | null } | null) => {
+        if (cancelled) return
+        if (data && data.birthYear != null) {
+          // The row is filled; the token is just behind. Heal it in the
+          // background so the rest of the app (and the next page load) see it.
+          setDbCheck('known')
+          void update().catch(() => undefined)
+        } else if (data) {
+          setDbCheck('missing')
+        }
+        // A failed check (rate limit, offline) leaves 'pending': asking again
+        // is the bug this guards against, and the next page load re-checks.
+      })
+      .catch(() => undefined)
+    return () => {
+      cancelled = true
+    }
+  }, [needsCheck, update])
+
+  if (!shouldShowBirthYearGate({ status, tokenBirthYear, dbCheck, saved })) return null
 
   const thisYear = new Date().getFullYear()
 
@@ -54,9 +102,11 @@ export default function BirthYearGate() {
       }
       // The birth year is now persisted server-side, so dismiss the gate right
       // away (no dependence on the session round-trip), then refresh the session
-      // in the background so birthYear propagates to the rest of the app.
+      // in the background so birthYear propagates to the rest of the app. If
+      // that refresh fails, the row still has the year and the check above
+      // keeps the gate hidden on the next page.
       setSaved(true)
-      void update()
+      void update().catch(() => undefined)
     } catch {
       setError('Something went wrong. Please try again.')
       setSubmitting(false)

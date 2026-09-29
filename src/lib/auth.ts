@@ -4,6 +4,7 @@ import Google from "next-auth/providers/google"
 import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id"
 import Credentials from "next-auth/providers/credentials"
 import { prisma } from "@/lib/prisma"
+import { shouldRefreshFromDb } from "@/lib/auth-token-refresh"
 
 // Microsoft Entra ID (Azure AD) SSO is wired but only activated when the org
 // provides credentials, so districts on Microsoft can sign in without code
@@ -155,13 +156,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
       // Refresh role/emailVerified/birthYear from DB on an explicit client
       // session update() (e.g. right after the BirthYearGate saves a birth
-      // year) AND periodically (every 5 minutes) otherwise — so an update()
-      // reflects immediately instead of waiting out the throttle window, while
-      // ordinary auth() calls avoid redundant DB queries.
+      // year), periodically otherwise, and sooner while the token has no
+      // birth year — see shouldRefreshFromDb for why that field is special.
       if (!user && token.sub) {
-        const lastRefreshed = (token.lastRefreshed as number) || 0
-        const fiveMinutes = 5 * 60 * 1000
-        if (trigger === 'update' || Date.now() - lastRefreshed > fiveMinutes) {
+        if (shouldRefreshFromDb(token, trigger)) {
           const dbUser = await prisma.user.findUnique({
             where: { id: token.sub },
             select: { emailVerified: true, role: true, stripeCustomerId: true, birthYear: true },
