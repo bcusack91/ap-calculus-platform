@@ -205,7 +205,7 @@ export default function GroupsPanel({
   // Migration not applied yet — a subtle note, never a broken panel.
   if (!available) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mt-6">
+      <div id="groups" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mt-6">
         <div className="flex items-center gap-2 text-gray-400 dark:text-gray-500 text-sm">
           <Users className="w-4 h-4" aria-hidden="true" />
           Groups aren&apos;t available yet on this server.
@@ -215,9 +215,9 @@ export default function GroupsPanel({
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mt-6">
+    <section id="groups" aria-labelledby="groups-heading" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mt-6">
       <div className="flex flex-wrap items-center justify-between gap-y-2 mb-1">
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white inline-flex items-center gap-2">
+        <h2 id="groups-heading" className="text-xl font-bold text-gray-900 dark:text-white inline-flex items-center gap-2">
           <Users className="w-5 h-5 text-accent" aria-hidden="true" />
           Groups {groups !== null && `(${groups.length})`}
         </h2>
@@ -403,6 +403,6 @@ export default function GroupsPanel({
       )}
 
       <ConfirmDialog request={confirmReq} onClose={() => setConfirmReq(null)} />
-    </div>
+    </section>
   )
 }

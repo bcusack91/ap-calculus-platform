@@ -4,7 +4,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 /**
- * "Go Live" controls on the teacher classroom page. Self-contained: fetches
+ * Live lesson controls on the teacher classroom page ("Live lesson" = video;
+ * "Class game" = the review games, which live under Work › Class games). Self-contained: fetches
  * and manages the classroom's live-session state itself, so the (large)
  * classroom page only has to render <LiveSessionTeacherCard classroomId=…/>.
  *
@@ -43,7 +44,7 @@ export default function LiveSessionTeacherCard({ classroomId }: { classroomId: s
       })
       const d = await r.json().catch(() => ({}))
       if (!r.ok) {
-        setError(d.error || 'Could not start the session')
+        setError(d.error || 'Could not start the live lesson')
         return
       }
       router.push(`/live/${d.session.id}`)
@@ -53,7 +54,7 @@ export default function LiveSessionTeacherCard({ classroomId }: { classroomId: s
   }
 
   const end = async () => {
-    if (!confirm('End this live session for everyone?')) return
+    if (!confirm('End this live lesson for everyone?')) return
     setBusy(true)
     try {
       await fetch(`/api/teacher/classrooms/${classroomId}/live-session`, { method: 'DELETE' })
@@ -82,14 +83,14 @@ export default function LiveSessionTeacherCard({ classroomId }: { classroomId: s
             onClick={() => router.push(`/live/${live.id}`)}
             className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700"
           >
-            Open session
+            Open live lesson
           </button>
           <button
             onClick={end}
             disabled={busy}
             className="rounded-lg border border-red-300 px-4 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-100 disabled:opacity-50 dark:border-red-700 dark:text-red-300 dark:hover:bg-red-900/40"
           >
-            End session
+            End live lesson
           </button>
         </div>
       </div>
@@ -100,13 +101,13 @@ export default function LiveSessionTeacherCard({ classroomId }: { classroomId: s
     return (
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          <span className="font-semibold text-gray-900 dark:text-white">🔴 Live class sessions</span> — run video class right here on StudyMondo.
+          <span className="font-semibold text-gray-900 dark:text-white">Live lesson</span> — teach over video right here: everyone on camera, or a webcast the class watches.
         </p>
         <button
           onClick={() => setPicking(true)}
           className="rounded-lg bg-gradient-to-r from-red-500 to-rose-500 px-5 py-2 text-sm font-semibold text-white shadow transition hover:shadow-md"
         >
-          Go Live
+          Start a live lesson
         </button>
       </div>
     )
@@ -115,8 +116,8 @@ export default function LiveSessionTeacherCard({ classroomId }: { classroomId: s
   return (
     <div className="mb-6 rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div className="mb-3 flex items-center justify-between">
-        <h3 className="font-bold text-gray-900 dark:text-white">Start a live session</h3>
-        <button onClick={() => { setPicking(false); setAskingUrl(false); setError(null) }} className="text-sm text-gray-400 hover:text-gray-600">✕</button>
+        <h3 className="font-bold text-gray-900 dark:text-white">Start a live lesson</h3>
+        <button onClick={() => { setPicking(false); setAskingUrl(false); setError(null) }} aria-label="Close" className="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">✕</button>
       </div>
       {error && <p className="mb-3 text-sm text-red-600 dark:text-red-400">{error}</p>}
       {!askingUrl ? (

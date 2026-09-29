@@ -10,6 +10,17 @@ import { trackSignUp } from '@/lib/analytics'
 import { pendingJoinUrl } from '@/lib/pending-join'
 import { authContextCopy, parseAuthReason, safeCallbackUrl, signInUrl } from '@/lib/auth-redirect'
 
+/** Teacher accounts are for adults; the birth year still drives COPPA handling for everyone. */
+const TEACHER_MIN_AGE = 18
+
+/**
+ * Where a new teacher lands: the teacher dashboard (its Getting started
+ * checklist is the next step), unless they were already headed to a teacher page.
+ */
+function teacherDestination(callback: string): string {
+  return callback.startsWith('/teacher') ? callback : '/teacher'
+}
+
 function SignUpForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -20,7 +31,16 @@ function SignUpForm() {
   const reason = parseAuthReason(searchParams?.get('reason'))
   const label = searchParams?.get('label') ?? null
   const context = authContextCopy('signup', reason, label)
-  const signInHref = signInUrl({ callbackUrl: safeCallback, reason, label })
+
+  // "I'm a teacher" (also opened by /for-teachers via ?role=teacher): one form
+  // that creates the account AND turns on teacher features, with no avatar
+  // step, then lands on the teacher dashboard.
+  const [teacherMode, setTeacherMode] = useState(searchParams?.get('role') === 'teacher')
+  const [attestTeacher, setAttestTeacher] = useState(false)
+  // An existing account activates teacher features on /for-teachers.
+  const signInHref = teacherMode
+    ? signInUrl({ callbackUrl: '/for-teachers' })
+    : signInUrl({ callbackUrl: safeCallback, reason, label })
 
   // With no explicit callback, honor a pending class-join intent (persisted as
   // a cookie by /join-class) so a student who scanned a teacher's QR code and
@@ -68,6 +88,10 @@ function SignUpForm() {
         setError('Please enter your birth year')
         return
       }
+      if (teacherMode && thisYear - yr < TEACHER_MIN_AGE) {
+        setError(`Teacher accounts are for educators ${TEACHER_MIN_AGE} or older. Students can switch to a student account above.`)
+        return
+      }
 
       if (!password) {
         setError('Password is required')
@@ -87,6 +111,16 @@ function SignUpForm() {
 
       if (password.length < 8) {
         setError('Password must be at least 8 characters')
+        return
+      }
+
+      if (teacherMode) {
+        if (!attestTeacher) {
+          setError('Please confirm you are a teacher or educator.')
+          return
+        }
+        // Teachers skip the avatar step.
+        await createAccount(null)
         return
       }
 
@@ -152,6 +186,27 @@ function SignUpForm() {
 
       trackSignUp('credentials')
 
+      if (teacherMode) {
+        // Turn on teacher features in the same flow (same endpoint and
+        // attestation as /for-teachers), then sign in again so the session
+        // carries the TEACHER role the /teacher pages check.
+        const activate = await fetch('/api/teacher/activate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ attest: true }),
+        }).catch(() => null)
+        if (!activate?.ok) {
+          // The account exists; /for-teachers explains and retries activation.
+          router.push('/for-teachers')
+          router.refresh()
+          return
+        }
+        await signIn('credentials', { email, password, redirect: false })
+        router.push(teacherDestination(safeCallback))
+        router.refresh()
+        return
+      }
+
       // If the user was heading somewhere specific (callbackUrl or a pending
       // class-join), honor it; otherwise send new users through the guided
       // onboarding wizard (course pick + first topic) instead of dropping
@@ -169,16 +224,20 @@ function SignUpForm() {
       <div className="max-w-2xl w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
           <h1
-            className={`${step === 1 && context ? 'text-2xl sm:text-3xl' : 'text-4xl'} font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent`}
+            className={`${step === 1 && (context || teacherMode) ? 'text-2xl sm:text-3xl' : 'text-4xl'} font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent`}
           >
-            {step === 1 ? (context?.heading ?? 'Create Account') : 'Choose Your Avatar'}
+            {step === 1
+              ? (teacherMode ? 'Create your free teacher account' : (context?.heading ?? 'Create Account'))
+              : 'Choose Your Avatar'}
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             {step === 1
-              ? (context?.subheading ?? 'Start your learning journey today')
+              ? (teacherMode
+                  ? 'Teacher tools are free. Next you create a class and get a join code for your students.'
+                  : (context?.subheading ?? 'Start your learning journey today'))
               : 'Pick an avatar that represents you'}
           </p>
-          {step === 1 && context && (
+          {step === 1 && (context || teacherMode) && (
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               Already have an account?{' '}
               <Link href={signInHref} className="text-accent hover:text-accent-hover font-semibold">
@@ -187,11 +246,37 @@ function SignUpForm() {
             </p>
           )}
 
-          {/* Step indicator */}
-          <div className="flex justify-center gap-2 mt-4">
-            <div className={`h-2 w-20 rounded-full ${step === 1 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
-            <div className={`h-2 w-20 rounded-full ${step === 2 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
-          </div>
+          {step === 1 && (
+            <div role="radiogroup" aria-label="Account type" className="mt-4 inline-flex rounded-xl bg-gray-100 dark:bg-gray-700 p-1">
+              {([
+                { teacher: false, label: 'I’m a student' },
+                { teacher: true, label: 'I’m a teacher' },
+              ] as const).map((opt) => (
+                <button
+                  key={opt.label}
+                  type="button"
+                  role="radio"
+                  aria-checked={teacherMode === opt.teacher}
+                  onClick={() => { setTeacherMode(opt.teacher); setError('') }}
+                  className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition-colors ${
+                    teacherMode === opt.teacher
+                      ? 'bg-white dark:bg-gray-800 text-accent shadow-sm'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Step indicator (students pick an avatar next; teachers don't) */}
+          {!teacherMode && (
+            <div className="flex justify-center gap-2 mt-4">
+              <div className={`h-2 w-20 rounded-full ${step === 1 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
+              <div className={`h-2 w-20 rounded-full ${step === 2 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
+            </div>
+          )}
         </div>
 
         <form noValidate onSubmit={(e) => { e.preventDefault(); handleContinue() }} className="mt-8 space-y-6">
@@ -290,6 +375,18 @@ function SignUpForm() {
                   placeholder="••••••••"
                 />
               </div>
+
+              {teacherMode && (
+                <label className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={attestTeacher}
+                    onChange={(e) => setAttestTeacher(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 rounded accent-accent"
+                  />
+                  <span>I confirm I’m a teacher or educator.</span>
+                </label>
+              )}
             </div>
           ) : (
             // Step 2: Avatar Selection
@@ -349,7 +446,11 @@ function SignUpForm() {
               disabled={isLoading}
               className="flex-1 px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'Creating account...' : step === 1 ? 'Next' : 'Create Account'}
+              {isLoading
+                ? 'Creating account...'
+                : teacherMode
+                ? 'Create teacher account'
+                : step === 1 ? 'Next' : 'Create Account'}
             </button>
           </div>
 
@@ -369,8 +470,12 @@ function SignUpForm() {
                   trackSignUp('google')
                   // Google creates the account in one hop, so with nowhere
                   // specific to go a new user lands in the onboarding wizard
-                  // (course pick → diagnostic), not on the homepage.
-                  signIn('google', { callbackUrl: resolveDestination() ?? '/onboarding' })
+                  // (course pick → diagnostic), not on the homepage. A teacher
+                  // lands on /for-teachers, where one click turns on teacher
+                  // features for the new account.
+                  signIn('google', {
+                    callbackUrl: teacherMode ? '/for-teachers#activate' : (resolveDestination() ?? '/onboarding'),
+                  })
                 }}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-300"
               >

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
-import { scoreLabelFromResults } from '@/lib/class-plan-config'
+import { CLASS_PLAN_COURSES, classPlanCourse, scoreLabelFromResults } from '@/lib/class-plan-config'
+import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey } from '@/lib/class-diagnostic-open'
 import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
 
 interface Ctx { params: Promise<{ id: string }> }
@@ -28,6 +29,14 @@ const GENERATABLE: Record<string, { label: string; page: string }> = {
   mcat: { label: 'MCAT', page: '/mcat-diagnostic' },
   sat: { label: 'SAT', page: '/sat-diagnostic' },
 }
+
+/**
+ * Every other course with a diagnostic can be assigned too, as an OPEN class
+ * diagnostic (src/lib/class-diagnostic-open.ts): no frozen test — each student
+ * takes the course's standard diagnostic, and any sitting after the
+ * assignment was made counts. Same banner, due date and results panel.
+ */
+const labelFor = (courseKey: string) => GENERATABLE[courseKey]?.label ?? classPlanCourse(courseKey)?.label ?? courseKey
 
 /* ------------------------------------------------------------------ */
 /*  Growth across successive diagnostics                               */
@@ -136,12 +145,12 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   const access = await requireClassroomAccess(id)
   if ('error' in access) return access.error
 
-  const [diagnostics, members] = await Promise.all([
+  const [rawDiagnostics, members, pinned] = await Promise.all([
     prisma.classDiagnostic.findMany({
       where: { classroomId: id },
       orderBy: { createdAt: 'desc' },
       select: {
-        id: true, courseKey: true, title: true, dueDate: true, createdAt: true,
+        id: true, courseKey: true, title: true, dueDate: true, createdAt: true, testData: true,
         attempts: { select: { userId: true, createdAt: true, results: true } },
       },
     }),
@@ -149,13 +158,47 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       where: { classroomId: id, isActive: true },
       select: { userId: true, nickname: true, user: { select: { name: true } } },
     }),
+    prisma.classroomCourse.findMany({
+      where: { classroomId: id },
+      select: { courseSlug: true },
+      orderBy: { createdAt: 'asc' },
+    }),
   ])
   const nameOf = new Map(members.map(m => [m.userId, m.nickname || m.user.name || 'Student']))
+  const memberIds = members.map(m => m.userId)
+
+  // OPEN diagnostics have no linked attempts: any sitting of that course's
+  // diagnostic by a member, on or after the assignment date, counts.
+  const openCourses = [...new Set(rawDiagnostics.filter(d => isOpenClassDiagnostic(d.testData)).map(d => d.courseKey))]
+  const openAttempts = new Map<string, { userId: string; createdAt: Date; results: unknown }[]>()
+  if (openCourses.length > 0 && memberIds.length > 0) {
+    await Promise.all(openCourses.map(async courseKey => {
+      const course = classPlanCourse(courseKey)
+      if (!course) return
+      const oldest = rawDiagnostics
+        .filter(d => d.courseKey === courseKey)
+        .reduce((min, d) => (d.createdAt < min ? d.createdAt : min), new Date())
+      const rows = await prisma.diagnosticTest.findMany({
+        where: { userId: { in: memberIds }, category: { startsWith: course.categoryPrefix }, createdAt: { gte: oldest } },
+        select: { userId: true, createdAt: true, results: true },
+      })
+      openAttempts.set(courseKey, rows)
+    }))
+  }
+  const diagnostics = rawDiagnostics.map(d => {
+    const open = isOpenClassDiagnostic(d.testData)
+    return {
+      ...d,
+      open,
+      attempts: open
+        ? (openAttempts.get(d.courseKey) ?? []).filter(a => a.createdAt >= d.createdAt)
+        : d.attempts,
+    }
+  })
 
   // Retake-gate waiver state (MCAT only): a waiver is "active" (unused) while
   // User.diagnosticGateWaivedAt is NEWER than the student's latest
   // mcat-full-diagnostic attempt — the same comparison plan-status makes.
-  const memberIds = members.map(m => m.userId)
   const hasMcat = diagnostics.some(d => d.courseKey === 'mcat')
   const waivedAtByUser = new Map<string, Date>()
   const latestMcatByUser = new Map<string, Date>()
@@ -320,7 +363,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       // `avgNoiseBand` are the thresholds the UI must respect before calling
       // any of this progress.
       const deltas = students.map(s => s.growthDelta).filter((v): v is number => typeof v === 'number')
-      const growth = priorDiagnostics.length > 0 && deltas.length > 0
+      // Growth is only shown where the test's noise band has been measured
+      // (MCAT, SAT); elsewhere a change could not be told apart from noise.
+      const growth = !d.open && noiseBandFor(d.courseKey) > 0 && priorDiagnostics.length > 0 && deltas.length > 0
         ? {
             fromTitle: priorDiagnostics[0].title,
             pairedCount: deltas.length,
@@ -333,7 +378,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       return {
         id: d.id,
         courseKey: d.courseKey,
-        courseLabel: GENERATABLE[d.courseKey]?.label ?? d.courseKey,
+        courseLabel: labelFor(d.courseKey),
+        /** Open = each student takes the course's standard diagnostic (no frozen test). */
+        open: d.open,
         title: d.title,
         dueDate: d.dueDate,
         createdAt: d.createdAt,
@@ -349,7 +396,12 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         students,
       }
     }),
-    assignableCourses: Object.entries(GENERATABLE).map(([key, v]) => ({ key, label: v.label })),
+    // Every course with a diagnostic. `frozen` = one generated test shared by
+    // the class (MCAT, SAT); otherwise each student takes the standard one.
+    assignableCourses: CLASS_PLAN_COURSES.map(c => ({ key: c.key, label: c.label, frozen: !!GENERATABLE[c.key] })),
+    // The class's first pinned course (Settings › Class courses), so the
+    // assign form starts on the course this class actually teaches.
+    defaultCourseKey: defaultDiagnosticCourseKey(pinned.map(p => p.courseSlug)),
   }, { headers: { 'Cache-Control': 'private, no-store' } })
 }
 
@@ -360,13 +412,29 @@ export async function POST(req: NextRequest, { params }: Ctx) {
 
   const body = await req.json().catch(() => ({}))
   const courseKey = typeof body?.courseKey === 'string' ? body.courseKey : ''
-  if (!GENERATABLE[courseKey]) {
-    return NextResponse.json(
-      { error: `Assignable diagnostics are available for: ${Object.keys(GENERATABLE).join(', ')}` },
-      { status: 400 },
-    )
+  if (!classPlanCourse(courseKey)) {
+    return NextResponse.json({ error: 'Pick a course that has a diagnostic.' }, { status: 400 })
   }
   const dueDate = resolveDueDate(body?.dueDate, body?.tzOffsetMinutes)
+
+  if (!GENERATABLE[courseKey]) {
+    // Open class diagnostic: nothing to generate or freeze.
+    const priorTitles = await prisma.classDiagnostic.findMany({
+      where: { classroomId: id, courseKey },
+      select: { title: true },
+    })
+    const diagnostic = await prisma.classDiagnostic.create({
+      data: {
+        classroomId: id,
+        courseKey,
+        title: nextDiagnosticTitle(priorTitles.map(p => p.title)),
+        testData: OPEN_DIAGNOSTIC_TEST_DATA,
+        dueDate,
+      },
+      select: { id: true, title: true, courseKey: true, dueDate: true },
+    })
+    return NextResponse.json({ diagnostic: { ...diagnostic, open: true } })
+  }
 
   // Everything this class has already been served in this course. Both
   // generators take `excludeQuestionIds` and prefer unseen items, so passing

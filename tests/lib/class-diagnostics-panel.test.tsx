@@ -128,3 +128,40 @@ describe('deleting an assignment', () => {
     })
   })
 })
+
+describe('assigning a diagnostic', () => {
+  it('starts on the class’s pinned course and assigns it', async () => {
+    const withCourses = {
+      ...makePayload(),
+      assignableCourses: [
+        { key: 'mcat', label: 'MCAT', frozen: true },
+        { key: 'ap-bio', label: 'AP Biology', frozen: false },
+      ],
+      defaultCourseKey: 'ap-bio',
+    }
+    payload = withCourses as Payload
+    render(<ClassDiagnosticsPanel classroomId="class-1" />)
+    await waitFor(() => expect(screen.getByText(/Diagnostic 2/)).toBeInTheDocument())
+    fireEvent.click(screen.getByRole('button', { name: /Assign a diagnostic/ }))
+
+    const select = screen.getByRole('combobox') as HTMLSelectElement
+    expect(select.value).toBe('ap-bio')
+    // Course-neutral copy for a course without a frozen class test.
+    expect(screen.getByText(/Each student takes the AP Biology diagnostic/)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Assign to class' }))
+    await waitFor(() => {
+      const post = fetchMock.mock.calls.find(c => (c[1] as RequestInit)?.method === 'POST')
+      expect(post).toBeDefined()
+      expect(JSON.parse(String((post![1] as RequestInit).body)).courseKey).toBe('ap-bio')
+    })
+  })
+
+  it('opens the form when the Assignments tab asks it to', async () => {
+    const { rerender } = render(<ClassDiagnosticsPanel classroomId="class-1" openSignal={0} />)
+    await waitFor(() => expect(screen.getByText(/Diagnostic 2/)).toBeInTheDocument())
+    expect(screen.queryByRole('button', { name: 'Assign to class' })).toBeNull()
+    rerender(<ClassDiagnosticsPanel classroomId="class-1" openSignal={1} />)
+    expect(await screen.findByRole('button', { name: 'Assign to class' })).toBeInTheDocument()
+  })
+})

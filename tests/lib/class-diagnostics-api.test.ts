@@ -35,8 +35,9 @@ vi.mock('@/lib/prisma', () => ({
       count: vi.fn(),
     },
     classroomMember: { findMany: vi.fn().mockResolvedValue([]) },
+    classroomCourse: { findMany: vi.fn().mockResolvedValue([]) },
     user: { findMany: vi.fn().mockResolvedValue([]) },
-    diagnosticTest: { groupBy: vi.fn().mockResolvedValue([]) },
+    diagnosticTest: { groupBy: vi.fn().mockResolvedValue([]), findMany: vi.fn().mockResolvedValue([]) },
   },
 }))
 
@@ -187,11 +188,80 @@ describe('POST — auto-numbering survives a deletion', () => {
     expect(mockCreate.mock.calls[0][0].data.title).toBe('Diagnostic 1')
   })
 
-  it('rejects a course with no generator', async () => {
+  it('rejects a course that has no diagnostic', async () => {
     const { POST } = await import(ROUTE)
     const res = await POST(postBody({ courseKey: 'ap-calc' }) as never, ctx as never)
     expect(res.status).toBe(400)
     expect(mockCreate).not.toHaveBeenCalled()
+  })
+})
+
+/**
+ * Only MCAT and SAT can freeze one test for a class. Every other course is
+ * assigned as an OPEN diagnostic: no generator runs, the row carries a marker
+ * instead of questions, and any sitting of that course's diagnostic on or
+ * after the assignment date counts (src/lib/class-diagnostic-open.ts).
+ */
+describe('open class diagnostics (courses without a class test generator)', () => {
+  it('POST assigns the course diagnostic without generating a test', async () => {
+    const { POST } = await import(ROUTE)
+    const res = await POST(postBody({ courseKey: 'ap-bio', dueDate: '2026-10-02', tzOffsetMinutes: 0 }) as never, ctx as never)
+    expect(res.status).toBe(200)
+    expect(mockGenerateMCAT).not.toHaveBeenCalled()
+    expect(mockGenerateSAT).not.toHaveBeenCalled()
+    const data = mockCreate.mock.calls[0][0].data
+    expect(data.courseKey).toBe('ap-bio')
+    expect(data.testData).toEqual({ mode: 'course-diagnostic' })
+    expect(data.title).toBe('Diagnostic 1')
+    expect(data.dueDate.toISOString()).toBe('2026-10-02T23:59:59.999Z')
+    expect((await res.json()).diagnostic.open).toBe(true)
+  })
+
+  it('GET counts any sitting of that course on or after the assignment date', async () => {
+    const { prisma } = await import('@/lib/prisma')
+    const assigned = new Date('2026-09-20T12:00:00.000Z')
+    mockFindMany.mockResolvedValueOnce([
+      { id: 'o1', courseKey: 'ap-bio', title: 'Diagnostic 1', dueDate: null, createdAt: assigned, testData: { mode: 'course-diagnostic' }, attempts: [] },
+    ])
+    vi.mocked(prisma.classroomMember.findMany).mockResolvedValueOnce([
+      { userId: 'u1', nickname: null, user: { name: 'Ava' } },
+      { userId: 'u2', nickname: null, user: { name: 'Ben' } },
+    ] as never)
+    vi.mocked(prisma.diagnosticTest.findMany).mockResolvedValueOnce([
+      { userId: 'u1', createdAt: new Date('2026-09-21T09:00:00.000Z'), results: { percentage: 64, estimatedAPScore: 3 } },
+    ] as never)
+    const { GET } = await import(ROUTE)
+    const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
+
+    const where = vi.mocked(prisma.diagnosticTest.findMany).mock.calls[0][0]!.where as Record<string, unknown>
+    expect(where.category).toEqual({ startsWith: 'ap-bio-diagnostic' })
+    expect(where.createdAt).toEqual({ gte: assigned })
+
+    const d = body.diagnostics[0]
+    expect(d.open).toBe(true)
+    expect(d.courseLabel).toBe('AP Biology')
+    expect(d.takenCount).toBe(1)
+    expect(d.growth).toBeNull()
+    const ava = d.students.find((s: { userId: string }) => s.userId === 'u1')
+    expect(ava.scoreLabel).toBe('3/5')
+    const ben = d.students.find((s: { userId: string }) => s.userId === 'u2')
+    expect(ben.takenAt).toBeNull()
+  })
+
+  it('GET offers every diagnostic course and defaults to the class’s pinned course', async () => {
+    const { prisma } = await import('@/lib/prisma')
+    vi.mocked(prisma.classroomCourse.findMany).mockResolvedValueOnce([
+      { courseSlug: 'mcat-competitive' }, // no diagnostic of its own
+      { courseSlug: 'ap-chemistry' },
+    ] as never)
+    const { GET } = await import(ROUTE)
+    const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
+    expect(body.defaultCourseKey).toBe('ap-chem')
+    const keys = body.assignableCourses.map((c: { key: string }) => c.key)
+    expect(keys).toContain('ap-chem')
+    expect(keys).toContain('calcab')
+    const frozen = body.assignableCourses.filter((c: { frozen: boolean }) => c.frozen).map((c: { key: string }) => c.key)
+    expect(frozen.sort()).toEqual(['mcat', 'sat'])
   })
 })
 

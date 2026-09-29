@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomOwner, requireClassroomAccess } from '@/lib/teacher-auth'
+import { studentActivity } from '@/lib/student-activity'
 
 /**
  * GET  /api/teacher/classrooms/[id] — get classroom details with members
@@ -62,9 +63,23 @@ export async function GET(
       },
     })
 
+    if (!classroom) {
+      return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
+    }
+
+    // Per-member sign-in and last-activity, so the roster can say "Never
+    // signed in" for an imported student instead of the import date, and
+    // "Active <date>" for everyone else (see src/lib/student-activity.ts).
+    const activity = await studentActivity(classroom.members.map((m) => m.userId))
+    const members = classroom.members.map((m) => {
+      const a = activity.get(m.userId)
+      return { ...m, signedIn: a?.signedIn ?? false, lastActiveAt: a?.lastActiveAt ?? null }
+    })
+
     // isOwner lets the client gate owner-only controls (settings, archive,
-    // managing co-teachers) even though co-teachers can view this payload.
-    return NextResponse.json({ ...classroom, isOwner: result.isOwner })
+    // managing co-teachers, competitive grants) even though co-teachers can
+    // view this payload.
+    return NextResponse.json({ ...classroom, members, isOwner: result.isOwner })
   } catch (error) {
     console.error('[GET /api/teacher/classrooms/[id]]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

@@ -83,7 +83,7 @@ function SlideLibrary() {
         <Link href="/teacher" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-400">← Dashboard</Link>
         <h1 className="mb-1 mt-2 text-3xl font-bold text-gray-900 dark:text-white">🖥️ Slide Library</h1>
         <p className="mb-6 text-gray-500 dark:text-gray-400">
-          Ready-made decks for every topic — preview here, then present from a live session (Go Live → Present slides).
+          Ready-made decks for every topic — preview here, then present one in a live lesson (Start a live lesson → Present slides).
         </p>
         {error && <p className="mb-4 text-sm text-red-600 dark:text-red-400">{error}</p>}
 

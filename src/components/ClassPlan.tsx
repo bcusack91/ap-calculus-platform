@@ -2,7 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import { BookOpen, CalendarDays, Check, ClipboardList, Presentation, RefreshCw } from 'lucide-react'
 import ClassDiagnosticsPanel from '@/components/ClassDiagnosticsPanel'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { topicReviewAssignment } from '@/lib/topic-review-assignment'
 
 /**
  * "Class Plan" tab on the teacher classroom page — works for any course with
@@ -14,7 +17,8 @@ import ClassDiagnosticsPanel from '@/components/ClassDiagnosticsPanel'
  * The course selector only offers courses this roster actually has attempts
  * for; it auto-picks the one with the most. Top 4 topics are this week's
  * blocks; ranks 5-8 are swap candidates. Each block links the lesson (present
- * it over a live session) and one-click-assigns exit-quiz practice at 80%.
+ * it in a live lesson) and one-click-assigns the topic review (lesson + exit
+ * quiz, cleared at TOPIC_CLEAR_PERCENT — see topic-review-assignment.ts).
  * For the MCAT (gated), the roster also shows whether each student's next
  * weekly diagnostic is unlocked — homework completion IS the unlock.
  */
@@ -68,6 +72,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
   const [assigning, setAssigning] = useState<string | null>(null)
   const [trackSaving, setTrackSaving] = useState<string | null>(null)
   const [trackError, setTrackError] = useState<string | null>(null)
+  const [assignError, setAssignError] = useState<string | null>(null)
 
   // Discover which courses this roster has diagnostic data for.
   useEffect(() => {
@@ -123,22 +128,22 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
   const assignPractice = async (topic: ClassTopic) => {
     if (!data) return
     setAssigning(topic.slug)
+    setAssignError(null)
     try {
-      const due = new Date()
-      due.setDate(due.getDate() + 7)
       const r = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title: `Practice: ${topic.name}`,
-          description: `Assigned from this week’s ${data.course.label} class plan — pass the exit quiz to complete.`,
-          type: 'QUIZ',
+        body: JSON.stringify(topicReviewAssignment({
           topicSlug: topic.slug,
-          dueDate: due.toISOString(),
-          requiredScore: 0.8,
-        }),
+          topicTitle: topic.name,
+          source: `this week’s ${data.course.label} class plan`,
+        })),
       })
       if (r.ok) setAssigned(prev => new Set(prev).add(topic.slug))
+      else {
+        const d = await r.json().catch(() => ({}))
+        setAssignError(d.error || `Could not assign ${topic.name}. Please try again.`)
+      }
     } finally {
       setAssigning(null)
     }
@@ -161,12 +166,11 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
       <div className="space-y-6">
       <ClassDiagnosticsPanel classroomId={classroomId} />
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
-        <p className="mb-2 text-3xl">🗓️</p>
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">No diagnostics yet</h2>
+        <CalendarDays className="mx-auto mb-2 h-8 w-8 text-accent" aria-hidden="true" />
+        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">No diagnostic results yet</h2>
         <p className="mx-auto max-w-md text-sm text-gray-500 dark:text-gray-400">
-          Once your students take their course&apos;s diagnostic test (MCAT, SAT, or any AP course), this tab pools
-          everyone&apos;s results and ranks the topics your class collectively needs — sized to four 45-minute
-          teaching blocks per week. Have each student take their diagnostic before your first meeting.
+          Assign a diagnostic above. Once your students take it, this tab pools everyone&apos;s results and ranks the
+          topics your class most needs this week, sized to four 45-minute teaching blocks.
         </p>
       </div>
       </div>
@@ -185,7 +189,10 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-3">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">🗓️ This week&apos;s class plan</h2>
+            <h2 className="inline-flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+              <CalendarDays className="h-5 w-5 text-accent" aria-hidden="true" />
+              This week&apos;s class plan
+            </h2>
             {available.length > 1 ? (
               <select
                 value={data.course.key}
@@ -197,17 +204,22 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                 ))}
               </select>
             ) : (
-              <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+              <span className="rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted">
                 {data.course.label}
               </span>
             )}
           </div>
-          <button onClick={loadPlan} className="text-xs font-medium text-blue-600 hover:underline dark:text-blue-400">↻ Refresh</button>
+          <button onClick={loadPlan} className="inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline dark:text-accent-muted">
+            <RefreshCw className="h-3.5 w-3.5" aria-hidden="true" /> Refresh
+          </button>
         </div>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
           Ranked from your students&apos; latest {data.course.label} diagnostics ({data.studentsWithAttempts} of {data.totalStudents} have
           taken one) — high-priority needs count double. Four blocks ≈ two 90-minute meetings.
+          {' '}<strong className="font-semibold text-gray-700 dark:text-gray-300">Assign review</strong> gives the class
+          the topic&apos;s lesson; students clear it by scoring {TOPIC_CLEAR_PERCENT}% or higher on its exit quiz.
         </p>
+        {assignError && <p role="alert" className="mb-3 text-sm text-red-600 dark:text-red-400">{assignError}</p>}
         <div className="grid gap-3 md:grid-cols-2">
           {blocks.map((t, i) => (
             <div key={t.slug} className="rounded-xl border-2 border-emerald-200 bg-emerald-50/50 p-4 dark:border-emerald-800 dark:bg-emerald-900/10">
@@ -228,23 +240,27 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
               </p>
               <div className="flex flex-wrap gap-2">
                 {t.lessonPath && (
-                  <Link href={t.lessonPath} target="_blank" className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-700">
-                    📖 Present lesson
+                  <Link href={t.lessonPath} target="_blank" className="inline-flex items-center gap-1 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-700">
+                    <BookOpen className="h-3.5 w-3.5" aria-hidden="true" /> Present lesson
                   </Link>
                 )}
                 <Link
                   href={`/teacher/slides?topic=${encodeURIComponent(t.slug)}`}
                   target="_blank"
-                  className="rounded-lg border border-emerald-300 px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/30"
+                  className="inline-flex items-center gap-1 rounded-lg border border-emerald-300 px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/30"
                 >
-                  🖥️ Slides
+                  <Presentation className="h-3.5 w-3.5" aria-hidden="true" /> Slides
                 </Link>
                 <button
                   onClick={() => void assignPractice(t)}
                   disabled={assigning === t.slug || assigned.has(t.slug)}
-                  className="rounded-lg border border-emerald-300 px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 disabled:opacity-60 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/30"
+                  className="inline-flex items-center gap-1 rounded-lg border border-emerald-300 px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 disabled:opacity-60 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/30"
                 >
-                  {assigned.has(t.slug) ? '✓ Practice assigned' : assigning === t.slug ? 'Assigning…' : '📋 Assign practice'}
+                  {assigned.has(t.slug)
+                    ? <><Check className="h-3.5 w-3.5" aria-hidden="true" /> Review assigned</>
+                    : assigning === t.slug
+                    ? 'Assigning…'
+                    : <><ClipboardList className="h-3.5 w-3.5" aria-hidden="true" /> Assign review</>}
                 </button>
               </div>
             </div>
@@ -263,7 +279,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
           </div>
         )}
         <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">
-          Teach a block live: Go Live above → share your screen or the whiteboard while walking through the lesson.
+          Teach a block live: start a live lesson at the top of this class, then share your screen or the whiteboard while you walk through the lesson.
         </p>
       </div>
 
@@ -271,7 +287,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">Students</h2>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-          Homework = their personal recommended modules (exit quiz ≥80% or entrance mastery clears one).
+          Homework = their personal recommended topics (an exit quiz score of {TOPIC_CLEAR_PERCENT}% or higher, or entrance-quiz mastery, clears one).
           {gated && ' For the MCAT, clearing all of them unlocks their next weekly diagnostic.'}
           {data.course.key === 'sat' &&
             ' Each SAT student studies in a track: Core Skills (short lessons, easy items), Standard, or 700-800. Automatic places them from their diagnostics; pick a track to pin it.'}
@@ -305,7 +321,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                   </td>
                   <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">{s.scoreLabel ?? '—'}</td>
                   <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
-                    {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} modules`}
+                    {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} topics`}
                   </td>
                   {data.course.key === 'sat' && (
                     <td className="py-2 pr-4">
@@ -331,7 +347,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                       ) : s.canRetake ? (
                         <span className="text-xs font-medium text-green-600 dark:text-green-400">✓ unlocked</span>
                       ) : (
-                        <span className="text-xs font-medium text-amber-600 dark:text-amber-400">🔒 {s.pendingCount} module{s.pendingCount === 1 ? '' : 's'} left</span>
+                        <span className="text-xs font-medium text-amber-600 dark:text-amber-400">🔒 {s.pendingCount} topic{s.pendingCount === 1 ? '' : 's'} left</span>
                       )}
                     </td>
                   )}

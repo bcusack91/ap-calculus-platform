@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher } from '@/lib/teacher-auth'
-import { applyDismissals, INACTIVITY_REASON, type AttentionEntry } from '@/lib/attention-dismissals'
+import { applyDismissals, membershipAttention, scoredBelowTarget, type AttentionEntry } from '@/lib/attention-dismissals'
+import { studentActivity } from '@/lib/student-activity'
+import { gettingStartedStatus } from '@/lib/teacher-getting-started'
 
 /**
  * GET /api/teacher/dashboard — teacher dashboard overview
@@ -34,7 +36,8 @@ export async function GET() {
   const classroomIds = classrooms.map((c) => c.id)
   const allMembers = await prisma.classroomMember.findMany({
     where: { classroomId: { in: classroomIds }, isActive: true },
-    select: { userId: true, classroomId: true },
+    select: { userId: true, classroomId: true, joinedAt: true },
+    orderBy: { joinedAt: 'asc' },
   })
   const uniqueStudentIds = [...new Set(allMembers.map((m) => m.userId))]
 
@@ -89,14 +92,17 @@ export async function GET() {
     take: 5,
   })
 
-  // Overall student progress snapshot
-  let avgMastery = 0
+  // Overall student progress snapshot. null (not 0) when there is nothing to
+  // average — no students, or students with no topic progress yet — so the
+  // dashboard can say so instead of showing a red "0%".
+  let avgMastery: number | null = null
   if (uniqueStudentIds.length > 0) {
     const progressAgg = await prisma.topicProgress.aggregate({
       where: { userId: { in: uniqueStudentIds } },
       _avg: { masteryLevel: true },
     })
-    avgMastery = Math.round((progressAgg._avg.masteryLevel || 0) * 100)
+    const avg = progressAgg._avg.masteryLevel
+    avgMastery = typeof avg === 'number' ? Math.round(avg * 100) : null
   }
 
   /**
@@ -106,16 +112,16 @@ export async function GET() {
    * teacher can act on, and it actively hides the students who need help. This
    * names them instead, with the reason, so the dashboard points at work.
    *
-   * Three signals, cheapest first, deliberately conservative so the list stays
-   * short enough to actually be worked through:
-   *   failing   — a graded submission below the assignment's required score
-   *   overdue   — an assignment past due with nothing submitted
-   *   inactive  — no lesson activity in 14 days (only counted for students who
-   *               have been active at some point, so a class that has not
-   *               started yet does not light up red on day one)
+   * Signals, deliberately conservative so the list stays short enough to
+   * actually be worked through:
+   *   failing      — a graded submission below the assignment's required score
+   *   overdue      — an assignment past due with nothing submitted
+   *   account      — never signed in, signed in but never started, or no
+   *                  study activity in 14 days (membershipAttention). The first
+   *                  two wait a few days after the student was added, so a
+   *                  roster imported today does not fill the list.
    */
-  const attentionSince = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000)
-  const [failingSubs, overdueAssignments, recentActivity] = await Promise.all([
+  const [failingSubs, overdueAssignments, activity] = await Promise.all([
     prisma.assignmentSubmission.findMany({
       where: {
         assignment: { classroomId: { in: classroomIds } },
@@ -140,11 +146,7 @@ export async function GET() {
       },
       take: 50,
     }),
-    prisma.topicProgress.findMany({
-      where: { userId: { in: uniqueStudentIds }, lastAccessed: { gte: attentionSince } },
-      select: { userId: true },
-      distinct: ['userId'],
-    }),
+    studentActivity(uniqueStudentIds),
   ])
 
   const attention = new Map<string, AttentionEntry>()
@@ -160,9 +162,7 @@ export async function GET() {
   }
 
   for (const sub of failingSubs) {
-    // requiredScore is a percentage; submission score is a 0-1 fraction.
-    const required = sub.assignment.requiredScore ?? 70
-    if (sub.score !== null && sub.score * 100 < required) {
+    if (scoredBelowTarget(sub.score, sub.assignment.requiredScore)) {
       noteAttention(
         sub.student.id, sub.student.name || sub.student.email || 'Student',
         sub.assignment.classroomId, `scored below target on "${sub.assignment.title}"`, 3
@@ -192,40 +192,50 @@ export async function GET() {
     }
   }
 
-  const activeRecently = new Set(recentActivity.map((r) => r.userId))
-  const everActive = new Set(
-    (await prisma.topicProgress.findMany({
-      where: { userId: { in: uniqueStudentIds } },
-      select: { userId: true },
-      distinct: ['userId'],
-    })).map((r) => r.userId)
-  )
-  for (const m of allMembers) {
-    if (everActive.has(m.userId) && !activeRecently.has(m.userId)) {
-      noteAttention(m.userId, studentNameById.get(m.userId) ?? 'Student', m.classroomId, INACTIVITY_REASON, 1)
-    }
+  for (const r of membershipAttention(allMembers, activity, now)) {
+    noteAttention(r.userId, studentNameById.get(r.userId) ?? 'Student', r.classroomId, r.reason, r.weight)
   }
 
   // Drop what this teacher has already marked as seen (see
   // src/lib/attention-dismissals.ts). Filter BEFORE the cap, or cleared rows
   // would still use up slots and hide students behind them.
-  const [dismissals, lastActivity] = await Promise.all([
-    prisma.attentionDismissal.findMany({
-      where: { teacherId, studentId: { in: [...attention.keys()] } },
-      select: { studentId: true, reason: true, dismissedAt: true },
-    }),
-    prisma.topicProgress.groupBy({
-      by: ['userId'],
-      where: { userId: { in: [...attention.keys()] } },
-      _max: { lastAccessed: true },
-    }),
-  ])
-  const lastActivityByStudent = new Map(
-    lastActivity.filter((r) => r._max.lastAccessed).map((r) => [r.userId, r._max.lastAccessed as Date]),
-  )
+  const dismissals = await prisma.attentionDismissal.findMany({
+    where: { teacherId, studentId: { in: [...attention.keys()] } },
+    select: { studentId: true, reason: true, dismissedAt: true },
+  })
+  const lastActivityByStudent = new Map<string, Date>()
+  for (const [id, a] of activity) if (a.lastActiveAt) lastActivityByStudent.set(id, a.lastActiveAt)
   const needsAttention = applyDismissals([...attention.values()], dismissals, lastActivityByStudent)
     .sort((a, b) => b.severity - a.severity)
     .slice(0, 12)
+
+  // "Getting started" checklist signals (see src/lib/teacher-getting-started.ts).
+  // Counted across every class this teacher can see, plus the games and live
+  // lessons they ran themselves.
+  const [diagnosticCount, lessonAssignmentCount, classGameCount, liveLessonCount] = classroomIds.length === 0
+    ? [0, 0, 0, 0]
+    : await Promise.all([
+        prisma.classDiagnostic.count({ where: { classroomId: { in: classroomIds } } }),
+        prisma.assignment.count({
+          where: { classroomId: { in: classroomIds }, type: { in: ['INTERACTIVE_LESSON', 'QUIZ'] } },
+        }),
+        prisma.teacherLobby.count({ where: { teacherId, studentHosted: false } }),
+        prisma.liveSession.count({ where: { teacherId } }),
+      ])
+  const signedInMemberCount = uniqueStudentIds.filter((id) => activity.get(id)?.signedIn).length
+  const gettingStarted = {
+    // The newest class the teacher OWNS is where the checklist deep-links.
+    classroomId: classrooms.find((c) => c.teacherId === teacherId)?.id ?? classrooms[0]?.id ?? null,
+    steps: gettingStartedStatus({
+      classroomCount: classrooms.length,
+      memberCount: allMembers.length,
+      signedInMemberCount,
+      diagnosticCount,
+      lessonAssignmentCount,
+      classGameCount,
+      liveLessonCount,
+    }),
+  }
 
   return NextResponse.json({
     // coTaught flag lets the UI badge classes the teacher co-teaches (vs owns).
@@ -262,6 +272,7 @@ export async function GET() {
     })),
     upcomingCompetitions,
     needsAttention,
+    gettingStarted,
   })
   } catch (error) {
     console.error('[GET /api/teacher/dashboard]', error)

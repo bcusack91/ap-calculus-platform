@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { Check, ChevronDown, ChevronRight, RotateCcw, SlidersHorizontal } from 'lucide-react'
+import { Check, ChevronDown, ChevronRight, RotateCcw, Settings, SlidersHorizontal } from 'lucide-react'
 import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import {
   DEFAULT_MAX_REVIEWS_PER_DAY,
@@ -14,7 +14,7 @@ import {
 
 /**
  * Class-wide flashcard daily limits, for the teacher classroom page's
- * Engagement view. Reads/writes /api/teacher/classrooms/[id]/flashcard-limits,
+ * Settings view (Insights › Engagement shows the read-only summary below). Reads/writes /api/teacher/classrooms/[id]/flashcard-limits,
  * which sets the SAME per-student fields the student's own "Daily limits"
  * control on /flashcards/review uses — so what the teacher applies here is
  * exactly what each student then sees (and may still change themselves).
@@ -146,7 +146,7 @@ export default function ClassFlashcardLimits({ classroomId }: { classroomId: str
   const anyInput = FIELDS.some(f => values[f.key].trim() !== '')
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
+    <div id="flashcard-limits" className="scroll-mt-24 rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
       <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">
         <SlidersHorizontal className="-mt-1 mr-1.5 inline h-5 w-5 text-accent" aria-hidden />
         Flashcard daily limits
@@ -272,6 +272,59 @@ export default function ClassFlashcardLimits({ classroomId }: { classroomId: str
       )}
 
       <ConfirmDialog request={confirmReq} onClose={() => setConfirmReq(null)} />
+    </div>
+  )
+}
+
+/**
+ * Read-only view of the class's flashcard limits for Insights › Engagement.
+ * Changing them is a setting, so the control itself lives in Settings.
+ */
+export function ClassFlashcardLimitsSummary({
+  classroomId,
+  onOpenSettings,
+}: {
+  classroomId: string
+  onOpenSettings: () => void
+}) {
+  const [summary, setSummary] = useState<Snapshot['summary'] | null>(null)
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/teacher/classrooms/${classroomId}/flashcard-limits`, { cache: 'no-store' })
+      .then(async r => {
+        if (!r.ok) throw new Error()
+        const d = await r.json()
+        if (!cancelled) setSummary(d.summary ?? null)
+      })
+      .catch(() => { if (!cancelled) setFailed(true) })
+    return () => { cancelled = true }
+  }, [classroomId])
+
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white p-5 shadow-lg dark:bg-gray-800">
+      <div>
+        <h2 className="inline-flex items-center gap-2 text-base font-bold text-gray-900 dark:text-white">
+          <SlidersHorizontal className="h-4 w-4 text-accent" aria-hidden />
+          Flashcard daily limits
+        </h2>
+        <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
+          {summary
+            ? `${summary.onDefaults} on defaults (${DEFAULT_NEW_PER_DAY} new / ${DEFAULT_MAX_REVIEWS_PER_DAY} reviews), ${summary.custom} custom.`
+            : failed
+            ? 'Could not load the class limits.'
+            : 'Loading…'}
+        </p>
+      </div>
+      <button
+        type="button"
+        onClick={onOpenSettings}
+        className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 px-3 py-1.5 text-sm font-semibold text-gray-700 transition hover:border-accent hover:text-accent dark:border-gray-600 dark:text-gray-200"
+      >
+        <Settings className="h-4 w-4" aria-hidden />
+        Change in Settings
+      </button>
     </div>
   )
 }

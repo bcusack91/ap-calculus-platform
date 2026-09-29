@@ -255,7 +255,9 @@ export async function middleware(request: NextRequest) {
     // by student participants. Per-user access is enforced inside the page + APIs.
     const isTeacherLobbyShared = /^\/teacher\/lobby\/[^/]+(\/play)?\/?$/.test(nextUrl.pathname)
     if (!isTeacherLobbyShared && role !== 'TEACHER' && role !== 'ADMIN') {
-      return NextResponse.redirect(new URL('/dashboard', nextUrl.origin))
+      // Not silently to /dashboard: /for-teachers explains teacher accounts
+      // and turns them on for this signed-in user in one click.
+      return NextResponse.redirect(new URL('/for-teachers', nextUrl.origin))
     }
   }
 

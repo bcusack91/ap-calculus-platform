@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { diagnosticRouteForKey } from '@/lib/class-plan-config'
+import { classPlanCourse, diagnosticRouteForKey } from '@/lib/class-plan-config'
+import { isOpenClassDiagnostic } from '@/lib/class-diagnostic-open'
 
 /**
  * GET /api/class-diagnostics/pending — assigned class diagnostics in my active
@@ -26,15 +27,35 @@ export async function GET() {
     orderBy: { createdAt: 'desc' },
     take: 20,
     select: {
-      id: true, courseKey: true, title: true, dueDate: true,
+      id: true, courseKey: true, title: true, dueDate: true, createdAt: true, testData: true,
       classroom: { select: { id: true, name: true } },
       attempts: { where: { userId }, select: { id: true }, take: 1 },
     },
   })
 
+  // OPEN diagnostics (any course without a frozen class test, see
+  // src/lib/class-diagnostic-open.ts) are done once the student has taken
+  // that course's diagnostic on or after the assignment date.
+  const latestByCourse = new Map<string, Date>()
+  const openCourses = [...new Set(diagnostics.filter(d => isOpenClassDiagnostic(d.testData)).map(d => d.courseKey))]
+  await Promise.all(openCourses.map(async courseKey => {
+    const course = classPlanCourse(courseKey)
+    if (!course) return
+    const latest = await prisma.diagnosticTest.findFirst({
+      where: { userId, category: { startsWith: course.categoryPrefix } },
+      orderBy: { createdAt: 'desc' },
+      select: { createdAt: true },
+    })
+    if (latest) latestByCourse.set(courseKey, latest.createdAt)
+  }))
+
   return NextResponse.json({
     pending: diagnostics
-      .filter(d => d.attempts.length === 0)
+      .filter(d => {
+        if (!isOpenClassDiagnostic(d.testData)) return d.attempts.length === 0
+        const latest = latestByCourse.get(d.courseKey)
+        return !latest || latest < d.createdAt
+      })
       .map(d => ({
         id: d.id,
         title: d.title,
@@ -42,7 +63,10 @@ export async function GET() {
         dueDate: d.dueDate,
         classroomId: d.classroom.id,
         classroomName: d.classroom.name,
-        href: `${diagnosticRouteForKey(d.courseKey)}?assigned=${d.id}`,
+        // Frozen tests load by id; an open one is the course's normal diagnostic.
+        href: isOpenClassDiagnostic(d.testData)
+          ? diagnosticRouteForKey(d.courseKey)
+          : `${diagnosticRouteForKey(d.courseKey)}?assigned=${d.id}`,
       })),
   }, { headers: { 'Cache-Control': 'private, no-store' } })
 }

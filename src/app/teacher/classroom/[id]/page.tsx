@@ -12,10 +12,20 @@ import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 import LiveSessionTeacherCard from '@/components/LiveSessionTeacherCard'
 import ClassPlan from '@/components/ClassPlan'
 import ClassEngagement from '@/components/ClassEngagement'
+import ClassDiagnosticsPanel from '@/components/ClassDiagnosticsPanel'
 import StudentReportModal from '@/components/StudentReportModal'
 import ConfirmDialog, { type ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import GroupsPanel from '@/components/teacher/GroupsPanel'
-import ClassFlashcardLimits from '@/components/teacher/ClassFlashcardLimits'
+import ClassFlashcardLimits, { ClassFlashcardLimitsSummary } from '@/components/teacher/ClassFlashcardLimits'
+import ClassGameOptions, {
+  DEFAULT_CLASS_GAME,
+  classGameRequestBody,
+  type ClassGameSettings,
+} from '@/components/teacher/ClassGameOptions'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { topicReviewAssignment } from '@/lib/topic-review-assignment'
+import { markJoinCodeShared } from '@/lib/teacher-getting-started'
 import ImportRosterModal from '@/components/teacher/ImportRosterModal'
 import AssignmentModal, {
   ASSIGNMENT_TYPES,
@@ -38,6 +48,7 @@ import {
   Copy,
   Download,
   Link as LinkIcon,
+  ClipboardCheck,
   Megaphone,
   Play,
   QrCode,
@@ -55,7 +66,18 @@ interface Member {
   id: string
   isActive: boolean
   joinedAt: string
+  /** Has this student ever signed in (see src/lib/student-activity.ts)? */
+  signedIn?: boolean
+  /** Newest study activity (lessons, quizzes, diagnostics, flashcards). */
+  lastActiveAt?: string | null
   user: { id: string; name: string | null; email: string | null; image: string | null }
+}
+
+/** Roster status line: who has actually signed in, and how recently they studied. */
+function memberStatus(m: Member): { label: string; tone: 'muted' | 'warn' } {
+  if (m.lastActiveAt) return { label: `Active ${new Date(m.lastActiveAt).toLocaleDateString()}`, tone: 'muted' }
+  if (m.signedIn === false) return { label: 'Never signed in', tone: 'warn' }
+  return { label: `Joined ${new Date(m.joinedAt).toLocaleDateString()} · no activity yet`, tone: 'muted' }
 }
 
 interface Assignment {
@@ -211,14 +233,14 @@ const SUB_VIEWS: Record<'work' | 'insights', { key: ViewType; label: string; ico
   work: [
     { key: 'assignments', label: 'Assignments', icon: ClipboardList, desc: 'Create work, set due dates, and see who has actually finished each assignment.' },
     { key: 'announcements', label: 'Announcements', icon: Megaphone, desc: 'Post messages the whole class sees on their dashboard.' },
-    { key: 'competitions', label: 'Live games', icon: Swords, desc: 'Run a real-time review game now, or put one on the calendar.' },
+    { key: 'competitions', label: 'Class games', icon: Swords, desc: 'Run a real-time review game now, or put one on the calendar.' },
   ],
   insights: [
     { key: 'performance', label: 'Performance', icon: BarChart3, desc: 'Mastery, assignment averages, streaks, and exit-quiz results for each student.' },
-    { key: 'gradebook', label: 'Gradebook', icon: BookOpenCheck, desc: 'Every assignment score in one grid — exportable for your SIS.' },
+    { key: 'gradebook', label: 'Gradebook', icon: BookOpenCheck, desc: 'Every assignment score in one grid. Edit a score, print it, or export a CSV for your SIS.' },
     { key: 'standards', label: 'Standards', icon: Target, desc: 'Class mastery mapped to curriculum standards.' },
-    { key: 'classplan', label: 'Class plan', icon: CalendarDays, desc: 'A day-by-day pacing plan for this class.' },
-    { key: 'engagement', label: 'Engagement', icon: Activity, desc: 'Who is logging in, when, and how much time they spend.' },
+    { key: 'classplan', label: 'Class plan', icon: CalendarDays, desc: 'What your class most needs this week, from their latest diagnostics.' },
+    { key: 'engagement', label: 'Engagement', icon: Activity, desc: 'Who is logging in, when, how much time they spend, and their flashcard habits.' },
   ],
 }
 
@@ -289,6 +311,31 @@ export default function ClassroomDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
   const [copiedCode, setCopiedCode] = useState(false)
+  const [copiedLink, setCopiedLink] = useState(false)
+
+  // "Share this with your students": opened once right after the class is
+  // created (?welcome=1) and from the dashboard checklist (?share=1). Closing
+  // it drops the flag from the URL so a reload doesn't bring it back.
+  const [shareMode] = useState<'welcome' | 'share' | null>(
+    searchParams.get('welcome') === '1' ? 'welcome' : searchParams.get('share') === '1' ? 'share' : null,
+  )
+  const [shareOpen, setShareOpen] = useState(shareMode !== null)
+  const closeShare = useCallback(() => {
+    setShareOpen(false)
+    const url = new URL(window.location.href)
+    url.searchParams.delete('welcome')
+    url.searchParams.delete('share')
+    window.history.replaceState(null, '', url.toString())
+  }, [])
+
+  // Assign a diagnostic from Work › Assignments: bumping this opens the
+  // panel's assign form and scrolls to it.
+  const [diagnosticSignal, setDiagnosticSignal] = useState(0)
+
+  // Start class game dialog (same options as /teacher/lobby, tied to this class).
+  const [showGameDialog, setShowGameDialog] = useState(false)
+  const [gameSettings, setGameSettings] = useState<ClassGameSettings>(DEFAULT_CLASS_GAME)
+  const [gameError, setGameError] = useState('')
 
   // Assignment creation / editing (form lives in AssignmentModal)
   const [showAssignmentModal, setShowAssignmentModal] = useState(false)
@@ -439,6 +486,28 @@ export default function ClassroomDetailPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeView])
 
+  // Deep links from the dashboard checklist: ?assign=diagnostic opens the
+  // diagnostic form in Work › Assignments; ?assign=lesson opens a new
+  // assignment. One-shot: the flag is dropped from the URL once handled.
+  const [assignIntent] = useState(searchParams.get('assign'))
+  useEffect(() => {
+    if (!classroom || !assignIntent) return
+    const url = new URL(window.location.href)
+    url.searchParams.delete('assign')
+    window.history.replaceState(null, '', url.toString())
+    if (assignIntent === 'diagnostic') {
+      setActiveView('assignments')
+      setDiagnosticSignal((n) => n + 1)
+    } else if (assignIntent === 'lesson') {
+      setActiveView('assignments')
+      void loadTopics()
+      setEditingAssignment(null)
+      setShowAssignmentModal(true)
+    }
+    // Run once, when the classroom first arrives.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [!!classroom])
+
   const saveClassCourses = async (slugs: string[]) => {
     setCourseSaveState('saving')
     setClassCourses(slugs) // optimistic — checkbox flips immediately
@@ -456,19 +525,29 @@ export default function ClassroomDetailPage() {
     }
   }
 
+  // Sharing happens outside the site, so copying the code or link is the best
+  // signal the dashboard checklist can get before a student joins.
+  const noteShared = () => {
+    if (session?.user?.id) markJoinCodeShared(session.user.id)
+  }
+
   const copyJoinCode = () => {
     if (!classroom) return
-    navigator.clipboard.writeText(classroom.joinCode)
+    navigator.clipboard?.writeText(classroom.joinCode).catch(() => {})
+    noteShared()
     setCopiedCode(true)
     setTimeout(() => setCopiedCode(false), 2000)
   }
 
+  const joinLink = () =>
+    `${typeof window !== 'undefined' ? window.location.origin : 'https://www.studymondo.com'}/join-class?code=${classroom?.joinCode ?? ''}`
+
   const copyJoinLink = () => {
     if (!classroom) return
-    const link = `${window.location.origin}/join-class?code=${classroom.joinCode}`
-    navigator.clipboard.writeText(link)
-    setCopiedCode(true)
-    setTimeout(() => setCopiedCode(false), 2000)
+    navigator.clipboard?.writeText(joinLink()).catch(() => {})
+    noteShared()
+    setCopiedLink(true)
+    setTimeout(() => setCopiedLink(false), 2000)
   }
 
   const [showQR, setShowQR] = useState(false)
@@ -744,52 +823,48 @@ export default function ClassroomDetailPage() {
       .sort((a, b) => b.count - a.count)
   }
 
+  // Same assignment the Class plan's "Assign review" creates (one recommender
+  // vocabulary — see src/lib/topic-review-assignment.ts).
   const createRemediation = async (topicSlug: string, title: string) => {
     setCreatingRemediation(topicSlug)
     try {
       const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title: `Remediation: ${title}`,
-          type: 'INTERACTIVE_LESSON',
-          topicSlug,
-          dueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
-          requiredScore: 0.8,
-          maxAttempts: 3,
-        }),
+        body: JSON.stringify(topicReviewAssignment({ topicSlug, topicTitle: title, source: 'your exit-quiz results' })),
       })
       if (res.ok) {
         await loadClassroom() // refresh assignments so this topic drops out of suggestions
         loadAssignmentDetails()
       } else {
-        setPageError('Could not create the remediation assignment. Please try again.')
+        setPageError('Could not assign the review. Please try again.')
       }
     } finally {
       setCreatingRemediation(null)
     }
   }
 
-  // Launch a real-time team game (Teacher Lobby) tied to this classroom, then
-  // jump straight into the lobby control room. Surfaces the live mode that
-  // otherwise lived only under /teacher/lobby.
-  const startLiveLobby = async () => {
+  // Start a class game (Teacher Lobby) tied to this classroom with the same
+  // options /teacher/lobby offers (Teams / Free-for-all, Chaos), then jump
+  // straight into the lobby control room.
+  const startClassGame = async () => {
     setStartingLobby(true)
+    setGameError('')
     try {
       const res = await fetch('/api/teacher/lobby', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: `${classroom?.name ?? 'Class'} Live Game`, numTeams: 2, classroomId }),
+        body: JSON.stringify(classGameRequestBody(gameSettings, classroomId, `${classroom?.name ?? 'Class'} game`)),
       })
       const json = await res.json().catch(() => ({}))
       if (res.ok && json.lobby?.id) {
         router.push(`/teacher/lobby/${json.lobby.id}`)
         return
       }
+      setGameError(json.error || 'Could not start the class game. Please try again.')
     } catch {
-      // fall through to the visible error below
+      setGameError('Could not start the class game. Check your connection and try again.')
     }
-    setPageError('Could not start the live game. Please try again.')
     setStartingLobby(false)
   }
 
@@ -845,7 +920,7 @@ export default function ClassroomDetailPage() {
     } catch {
       // fall through to the visible error below
     }
-    setPageError('Could not launch the game. Please try again.')
+    setPageError('Could not launch the class game. Please try again.')
     setLaunchingCompId(null)
   }
 
@@ -886,6 +961,8 @@ export default function ClassroomDetailPage() {
   if (!classroom) return null
 
   const activeMembers = classroom.members.filter((m) => m.isActive)
+  // Co-teachers can view everything but not owner-only controls.
+  const isOwner = classroom.isOwner !== false
   const query = memberQuery.trim().toLowerCase()
   const filteredMembers = query
     ? activeMembers.filter(
@@ -1029,11 +1106,11 @@ export default function ClassroomDetailPage() {
               className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
               title="Copy shareable invite link"
             >
-              <LinkIcon className="w-3.5 h-3.5" aria-hidden="true" />
-              Copy Link
+              {copiedLink ? <Check className="w-3.5 h-3.5" aria-hidden="true" /> : <LinkIcon className="w-3.5 h-3.5" aria-hidden="true" />}
+              {copiedLink ? 'Link copied' : 'Copy Link'}
             </button>
             <button
-              onClick={() => setShowQR(!showQR)}
+              onClick={() => { if (!showQR) noteShared(); setShowQR(!showQR) }}
               className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
               title="Show QR code for students to scan"
             >
@@ -1042,6 +1119,85 @@ export default function ClassroomDetailPage() {
             </button>
           </div>
         </div>
+
+        {/* One-time "share this" panel: right after the class is created, and
+            from the dashboard checklist. Same code, link and QR as the header. */}
+        {shareOpen && (
+          <section
+            aria-labelledby="share-heading"
+            className="mb-6 rounded-2xl border-2 border-accent-light dark:border-accent-light/40 bg-white dark:bg-gray-800 p-6 shadow-lg"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h2 id="share-heading" className="text-xl font-bold text-gray-900 dark:text-white">
+                  {shareMode === 'welcome' ? 'Your class is ready. Share this with your students' : 'Share this with your students'}
+                </h2>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Students go to <strong>studymondo.com/join-class</strong> and enter the code, open the link, or scan
+                  the QR code. They join as soon as they sign in.
+                </p>
+              </div>
+              <button
+                onClick={closeShare}
+                className="shrink-0 rounded-lg p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                aria-label="Close the share panel"
+              >
+                <X className="w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-4 grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center">
+              <div className="space-y-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Join code</p>
+                  <div className="mt-1 flex flex-wrap items-center gap-3">
+                    <span className="font-mono text-4xl font-bold tracking-widest text-accent">{classroom.joinCode}</span>
+                    <button
+                      onClick={copyJoinCode}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 dark:border-gray-600 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:border-accent hover:text-accent"
+                    >
+                      {copiedCode ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
+                      {copiedCode ? 'Copied' : 'Copy code'}
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Join link</p>
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <code className="min-w-0 max-w-full truncate rounded-lg bg-gray-100 dark:bg-gray-700 px-3 py-1.5 text-sm text-gray-800 dark:text-gray-200">
+                      {joinLink()}
+                    </code>
+                    <button
+                      onClick={copyJoinLink}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 dark:border-gray-600 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:border-accent hover:text-accent"
+                    >
+                      {copiedLink ? <Check className="w-4 h-4" aria-hidden="true" /> : <LinkIcon className="w-4 h-4" aria-hidden="true" />}
+                      {copiedLink ? 'Copied' : 'Copy link'}
+                    </button>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Have a class list?{' '}
+                  <button onClick={() => setShowImport(true)} className="font-semibold text-accent hover:underline">
+                    Import your roster
+                  </button>{' '}
+                  from a CSV or pasted emails instead.
+                </p>
+              </div>
+              <div className="justify-self-center rounded-xl bg-white p-3">
+                {/* Self-hosted SVG QR — no third-party host (school filters) and the join link never leaves the page */}
+                <QRCodeSVG value={joinLink()} size={168} title={`QR code to join classroom ${classroom.name}`} />
+              </div>
+            </div>
+            <div className="mt-4 flex justify-end">
+              <button
+                onClick={closeShare}
+                className="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover"
+              >
+                Done
+              </button>
+            </div>
+          </section>
+        )}
 
         {/* Visible surface for background failures (grants, launches, removals) */}
         {pageError && (
@@ -1066,7 +1222,7 @@ export default function ClassroomDetailPage() {
             <div className="bg-white p-4 rounded-lg inline-block mb-3">
               {/* Self-hosted SVG QR — no third-party host (school filters) and the join link never leaves the page */}
               <QRCodeSVG
-                value={`${typeof window !== 'undefined' ? window.location.origin : 'https://www.studymondo.com'}/join-class?code=${classroom.joinCode}`}
+                value={joinLink()}
                 size={200}
                 title={`QR code to join classroom ${classroom.name}`}
                 className="mx-auto"
@@ -1076,7 +1232,7 @@ export default function ClassroomDetailPage() {
             <p className="text-xs text-gray-400">Students can scan this or go to studymondo.com/join-class</p>
             <button
               onClick={() => setShowQR(false)}
-              className="mt-3 text-xs text-gray-500 hover:text-gray-700 transition-colors"
+              className="mt-3 text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
             >
               Close
             </button>
@@ -1113,7 +1269,9 @@ export default function ClassroomDetailPage() {
             view answers" so five analytics screens stop blurring together. */}
         {(activeGroup === 'work' || activeGroup === 'insights') && (
           <div className="mb-6">
-            <div className="flex flex-wrap gap-1.5">
+            {/* Pointer devices: compact chips with the description as a tooltip
+                plus the active one spelled out below. */}
+            <div className="flex flex-wrap gap-1.5 max-sm:hidden pointer-coarse:hidden">
               {SUB_VIEWS[activeGroup].map((sub) => {
                 const Icon = sub.icon
                 const active = activeView === sub.key
@@ -1135,9 +1293,37 @@ export default function ClassroomDetailPage() {
                 )
               })}
             </div>
-            <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+            <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400 max-sm:hidden pointer-coarse:hidden">
               {SUB_VIEWS[activeGroup].find((s) => s.key === activeView)?.desc}
             </p>
+            {/* Touch and small screens have no hover, so every option carries
+                its description inline. */}
+            <div className="hidden max-sm:grid pointer-coarse:grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+              {SUB_VIEWS[activeGroup].map((sub) => {
+                const Icon = sub.icon
+                const active = activeView === sub.key
+                return (
+                  <button
+                    key={sub.key}
+                    onClick={() => setActiveView(sub.key)}
+                    aria-current={active ? 'page' : undefined}
+                    className={`flex items-start gap-2 rounded-xl px-3 py-2 text-left transition-all ${
+                      active
+                        ? 'bg-accent-light dark:bg-accent-light/30 ring-1 ring-accent'
+                        : 'bg-white dark:bg-gray-800 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`}
+                  >
+                    <Icon className={`mt-0.5 w-4 h-4 shrink-0 ${active ? 'text-accent-dark dark:text-accent-muted' : 'text-gray-500 dark:text-gray-400'}`} aria-hidden="true" />
+                    <span>
+                      <span className={`block text-sm font-semibold ${active ? 'text-accent-dark dark:text-accent-muted' : 'text-gray-800 dark:text-gray-200'}`}>
+                        {sub.label}
+                      </span>
+                      <span className="block text-xs text-gray-500 dark:text-gray-400">{sub.desc}</span>
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
           </div>
         )}
         {(activeGroup === 'roster' || activeGroup === 'settings') && <div className="mb-4" />}
@@ -1151,15 +1337,27 @@ export default function ClassroomDetailPage() {
                 Students ({activeMembers.length})
               </h2>
               <div className="flex flex-wrap items-center gap-3 gap-y-2">
-                <button
-                  onClick={() => setShowImport(true)}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
-                  title="Bulk-add students from a CSV or pasted list of emails"
+                <a
+                  href="#groups"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-accent hover:text-accent transition-colors"
                 >
-                  <Upload className="w-3.5 h-3.5" aria-hidden="true" />
-                  Import students
-                </button>
-                {activeMembers.length > 0 && (
+                  <Users className="w-3.5 h-3.5" aria-hidden="true" />
+                  Groups
+                </a>
+                <span className="inline-flex items-center gap-1">
+                  <button
+                    onClick={() => setShowImport(true)}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
+                    title="Bulk-add students from a CSV or pasted list of emails"
+                  >
+                    <Upload className="w-3.5 h-3.5" aria-hidden="true" />
+                    Import students
+                  </button>
+                  <HelpLink article={HELP_ARTICLES.rosterImport} label="How roster import works" size={14} />
+                </span>
+                {/* Competitive grants are owner-only (the endpoint refuses a
+                    co-teacher), so co-teachers don't get a button that errors. */}
+                {isOwner && activeMembers.length > 0 && (
                   <button
                     onClick={() => {
                       const allGranted = activeMembers.every((m) => competitiveGrants[m.user.id])
@@ -1187,6 +1385,18 @@ export default function ClassroomDetailPage() {
                 </div>
               </div>
             </div>
+            {activeMembers.length > 0 && (
+              <p className="-mt-2 mb-4 text-xs text-gray-500 dark:text-gray-400">
+                {isOwner ? (
+                  <>
+                    <strong className="font-semibold text-gray-700 dark:text-gray-300">Grant Competitive</strong> lets a
+                    student play Competitive Mode before they unlock it by clearing topics. Class games don&apos;t need it.
+                  </>
+                ) : (
+                  <>Only the class owner can grant Competitive Mode access. Class games don&apos;t need it.</>
+                )}
+              </p>
+            )}
             {activeMembers.length === 0 ? (
               <div className="text-center py-12">
                 <Users className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
@@ -1250,9 +1460,22 @@ export default function ClassroomDetailPage() {
                           </button>
                         </div>
                         <div className="flex flex-wrap items-center gap-3 gap-y-2">
-                          <span className="text-xs text-gray-400">
-                            Joined {new Date(m.joinedAt).toLocaleDateString()}
-                          </span>
+                          {(() => {
+                            const st = memberStatus(m)
+                            return (
+                              <span
+                                className={`text-xs ${
+                                  st.tone === 'warn'
+                                    ? 'rounded-full bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 font-medium text-amber-700 dark:text-amber-300'
+                                    : 'text-gray-500 dark:text-gray-400'
+                                }`}
+                                title={st.tone === 'warn' ? `Added ${new Date(m.joinedAt).toLocaleDateString()}. They join as soon as they sign in with this email.` : undefined}
+                              >
+                                {st.label}
+                              </span>
+                            )
+                          })()}
+                          {isOwner && (
                           <button
                             onClick={() => toggleCompetitiveAccess(m.user.id)}
                             disabled={grantingAccess === m.user.id}
@@ -1266,6 +1489,12 @@ export default function ClassroomDetailPage() {
                             <Swords className="w-3.5 h-3.5" aria-hidden="true" />
                             {grantingAccess === m.user.id ? '…' : competitiveGrants[m.user.id] ? 'Competitive ✓' : 'Grant Competitive'}
                           </button>
+                          )}
+                          {!isOwner && competitiveGrants[m.user.id] && (
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-green-700 dark:text-green-400">
+                              <Swords className="w-3.5 h-3.5" aria-hidden="true" /> Competitive granted
+                            </span>
+                          )}
                           <button
                             onClick={() => removeMember(m)}
                             className="text-red-500 hover:text-red-700 text-sm font-medium"
@@ -1297,27 +1526,41 @@ export default function ClassroomDetailPage() {
 
         {/* Work › Assignments */}
         {activeView === 'assignments' && (
+          <div className="space-y-6">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex flex-wrap justify-between items-center gap-3 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 Assignments ({classroom.assignments.length})
               </h2>
-              <button
-                onClick={() => {
-                  loadTopics()
-                  setEditingAssignment(null)
-                  setShowAssignmentModal(true)
-                }}
-                className="px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
-              >
-                + New Assignment
-              </button>
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => setDiagnosticSignal((n) => n + 1)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 border-2 border-accent text-accent dark:text-accent-muted font-semibold rounded-xl hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-all text-sm"
+                >
+                  <ClipboardCheck className="w-4 h-4" aria-hidden="true" />
+                  Assign a diagnostic
+                </button>
+                <HelpLink article={HELP_ARTICLES.classDiagnostics} label="How class diagnostics work" />
+                <button
+                  onClick={() => {
+                    loadTopics()
+                    setEditingAssignment(null)
+                    setShowAssignmentModal(true)
+                  }}
+                  className="px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
+                >
+                  + New Assignment
+                </button>
+              </div>
             </div>
             {classroom.assignments.length === 0 ? (
               <div className="text-center py-12">
                 <ClipboardList className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
                 <h3 className="text-lg font-bold mb-2">No assignments yet</h3>
-                <p className="text-gray-500">Create your first assignment for this class</p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Start with a diagnostic so each student gets a study plan, then assign a first lesson. Students clear a
+                  lesson by scoring {TOPIC_CLEAR_PERCENT}% or higher on its exit quiz.
+                </p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -1335,14 +1578,22 @@ export default function ClassroomDetailPage() {
               </div>
             )}
           </div>
+          {/* Class diagnostics live here too: assigning one is assigning work. */}
+          <ClassDiagnosticsPanel
+            classroomId={classroomId}
+            openSignal={diagnosticSignal}
+            onAssigned={() => void refreshClassroom()}
+          />
+          </div>
         )}
 
-        {/* Work › Live games */}
+        {/* Work › Class games */}
         {activeView === 'competitions' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                Competitions ({classroom.competitions.length})
+              <h2 className="inline-flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+                Class games ({classroom.competitions.length} scheduled)
+                <HelpLink article={HELP_ARTICLES.classGamesAndLiveLessons} label="How class games work" />
               </h2>
               <div className="flex flex-wrap gap-2">
                 <button
@@ -1352,31 +1603,33 @@ export default function ClassroomDetailPage() {
                     setShowScheduleModal(true)
                   }}
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
-                  title="Put a live game on the calendar — students see it on their assignments page"
+                  title="Put a class game on the calendar — students see it on their assignments page"
                 >
                   <CalendarPlus className="w-4 h-4" aria-hidden="true" />
-                  Schedule live game
+                  Schedule class game
                 </button>
                 <button
-                  onClick={startLiveLobby}
-                  disabled={startingLobby}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm disabled:opacity-50"
-                  title="Run a real-time team game your students join live"
+                  onClick={() => { setGameError(''); setShowGameDialog(true) }}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm"
+                  title="Run a real-time review game your students join from any device"
                 >
                   <Play className="w-4 h-4" aria-hidden="true" />
-                  {startingLobby ? 'Starting…' : 'Start live game'}
+                  Start class game
                 </button>
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 -mt-2 mb-4">
-              <strong>Start live game</strong> runs a real-time team match your students join live from any device.{' '}
-              <strong>Schedule live game</strong> puts one on the calendar — students see it on their assignments page, and you hit <strong>Launch now</strong> at game time.
+              <strong>Start class game</strong> runs a real-time review game now: pick Teams or Free-for-all, and
+              optionally Chaos Mode. Students join from any device with the game code.{' '}
+              <strong>Schedule class game</strong> puts one on the calendar. Students see it on their assignments page,
+              and you choose <strong>Launch now</strong> at game time. Video teaching is a <strong>live lesson</strong>,
+              started at the top of this page.
             </p>
             {classroom.competitions.length === 0 ? (
               <div className="text-center py-12">
                 <Swords className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" aria-hidden="true" />
-                <h3 className="text-lg font-bold mb-2">No competitions yet</h3>
-                <p className="text-gray-500">Start a live game to run a real-time review match with your class</p>
+                <h3 className="text-lg font-bold mb-2">No scheduled class games</h3>
+                <p className="text-gray-500 dark:text-gray-400">Start a class game now, or schedule one for later.</p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -1422,7 +1675,7 @@ export default function ClassroomDetailPage() {
                           onClick={() => launchCompetition(c.id)}
                           disabled={launchingCompId === c.id}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all disabled:opacity-50"
-                          title="Start this game now as a live lobby your students join by code"
+                          title="Start this class game now. Students join with the game code"
                         >
                           <Play className="w-3.5 h-3.5" aria-hidden="true" />
                           {launchingCompId === c.id ? 'Launching…' : 'Launch now'}
@@ -1494,10 +1747,11 @@ export default function ClassroomDetailPage() {
                     <div className="mb-6 rounded-2xl border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/10 p-5">
                       <div className="flex items-center gap-2 mb-1">
                         <Target className="w-5 h-5 text-orange-600 dark:text-orange-400" aria-hidden="true" />
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white">Suggested remediation</h3>
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white">Suggested review</h3>
                       </div>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-                        Topics where students didn’t pass the exit quiz. One click assigns a targeted review lesson to the class.
+                        Topics where students haven’t cleared the exit quiz yet. <strong>Assign review</strong> gives the
+                        class the topic’s lesson; a student clears it by scoring {TOPIC_CLEAR_PERCENT}% or higher on its exit quiz.
                       </p>
                       <div className="space-y-2">
                         {suggestions.map((sug) => (
@@ -1516,7 +1770,7 @@ export default function ClassroomDetailPage() {
                               disabled={creatingRemediation === sug.topicSlug}
                               className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg bg-accent text-white hover:bg-accent-hover disabled:opacity-50 transition-all"
                             >
-                              {creatingRemediation === sug.topicSlug ? 'Assigning…' : '+ Assign review'}
+                              {creatingRemediation === sug.topicSlug ? 'Assigning…' : 'Assign review'}
                             </button>
                           </div>
                         ))}
@@ -1667,11 +1921,18 @@ export default function ClassroomDetailPage() {
 
         {activeView === 'classplan' && <ClassPlan classroomId={classroomId} />}
 
-        {/* Insights › Engagement — plus the class-wide flashcard daily-limit control */}
+        {/* Insights › Engagement — read-only; the flashcard-limit control is a
+            setting, so it lives in Settings and this links there. */}
         {activeView === 'engagement' && (
           <div className="space-y-6">
             <ClassEngagement classroomId={classroomId} />
-            <ClassFlashcardLimits classroomId={classroomId} />
+            <ClassFlashcardLimitsSummary
+              classroomId={classroomId}
+              onOpenSettings={() => {
+                setActiveView('settings')
+                setTimeout(() => document.getElementById('flashcard-limits')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50)
+              }}
+            />
           </div>
         )}
 
@@ -1693,7 +1954,8 @@ export default function ClassroomDetailPage() {
 
         {/* Settings */}
         {activeView === 'settings' && (
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 max-w-2xl">
+          <div className="space-y-6 max-w-2xl">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Classroom Settings</h2>
             <div className="space-y-4">
               <div>
@@ -1939,6 +2201,10 @@ export default function ClassroomDetailPage() {
               )}
             </div>
           </div>
+          {/* Class-wide flashcard daily limits (moved here from Engagement:
+              it changes what students get, so it is a setting). */}
+          <ClassFlashcardLimits classroomId={classroomId} />
+          </div>
         )}
       </div>
 
@@ -1953,17 +2219,59 @@ export default function ClassroomDetailPage() {
         onSaved={onAssignmentSaved}
       />
 
-      {/* Schedule live game (creates a ScheduledCompetition calendar entry) */}
+      {/* Start class game — same options as /teacher/lobby, tied to this class */}
+      <FocusTrapDialog
+        open={showGameDialog}
+        onClose={() => setShowGameDialog(false)}
+        title="Start class game"
+      >
+        <div className="p-4 sm:p-8">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Start class game</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+            A real-time review game for {classroom.name}. Students join from any device with the game code. They
+            don&apos;t need Competitive Mode unlocked.
+          </p>
+          <ClassGameOptions
+            value={gameSettings}
+            onChange={setGameSettings}
+            namePlaceholder={`${classroom.name} game`}
+            idPrefix="classroom-game"
+          />
+          {gameError && (
+            <p role="alert" className="mt-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg text-sm">
+              {gameError}
+            </p>
+          )}
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowGameDialog(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={startClassGame}
+              disabled={startingLobby}
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 disabled:opacity-50 transition-all"
+            >
+              <Play className="w-4 h-4" aria-hidden="true" />
+              {startingLobby ? 'Starting…' : 'Start game'}
+            </button>
+          </div>
+        </div>
+      </FocusTrapDialog>
+
+      {/* Schedule class game (creates a ScheduledCompetition calendar entry) */}
       <FocusTrapDialog
         open={showScheduleModal}
         onClose={() => setShowScheduleModal(false)}
-        title="Schedule live game"
+        title="Schedule class game"
       >
         <div className="p-4 sm:p-8">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Schedule live game</h2>
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Schedule class game</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             Students see this on their assignments page so they know to be in class.
-            At game time, hit <strong>Launch now</strong> on the competition to open the live lobby.
+            At game time, choose <strong>Launch now</strong> on the game to open it for students.
           </p>
           <div className="space-y-4">
             <div>

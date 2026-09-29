@@ -1,16 +1,21 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
-import { Minus, Trash2, TrendingDown, TrendingUp, Unlock } from 'lucide-react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { ClipboardCheck, Minus, Plus, Trash2, TrendingDown, TrendingUp, Unlock } from 'lucide-react'
 import ConfirmDialog, { ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import { formatDueDate } from '@/components/ClassDiagnosticBanner'
 
 /**
- * Assigned class diagnostics — sits at the top of the Class Plan tab.
- * "Assign Diagnostic" freezes ONE generated test for the whole roster
- * (identical questions — owner decision), students get a dashboard banner
- * until they take it, and results aggregate here: completion, class average,
- * weakest domains, per-student scores.
+ * Assigned class diagnostics — shown in Work › Assignments (where teachers
+ * assign work) and at the top of Insights › Class plan (which is built from
+ * the results).
+ *
+ * MCAT and SAT freeze ONE generated test for the whole roster (identical
+ * questions — owner decision). Every other course is an OPEN diagnostic: each
+ * student takes that course's standard diagnostic (src/lib/class-diagnostic-
+ * open.ts). Either way students get a dashboard banner until they take it, and
+ * results aggregate here: completion, class average, weakest domains,
+ * per-student scores.
  */
 
 interface DiagStudent {
@@ -41,6 +46,8 @@ interface Diag {
   id: string
   courseKey: string
   courseLabel: string
+  /** Open = each student takes the course's standard diagnostic (no frozen test). */
+  open?: boolean
   title: string
   dueDate: string | null
   createdAt: string
@@ -101,12 +108,26 @@ function ChangeChip({ delta, band, label }: { delta: number; band: number; label
   )
 }
 
-export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: string }) {
+interface AssignableCourse { key: string; label: string; frozen?: boolean }
+
+export default function ClassDiagnosticsPanel({
+  classroomId,
+  openSignal = 0,
+  onAssigned,
+}: {
+  classroomId: string
+  /** Bump to open the assign form and scroll the panel into view. */
+  openSignal?: number
+  onAssigned?: () => void
+}) {
   const [diagnostics, setDiagnostics] = useState<Diag[] | null>(null)
-  const [assignable, setAssignable] = useState<{ key: string; label: string }[]>([])
+  const [assignable, setAssignable] = useState<AssignableCourse[]>([])
   const [expanded, setExpanded] = useState<string | null>(null)
   const [assigning, setAssigning] = useState(false)
-  const [courseKey, setCourseKey] = useState('mcat')
+  // '' until the API says which course this class teaches (its first pinned
+  // course), so the form never silently defaults to a course the class skips.
+  const [courseKey, setCourseKey] = useState('')
+  const rootRef = useRef<HTMLDivElement>(null)
   const [dueDate, setDueDate] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -118,13 +139,29 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
         const d = await r.json().catch(() => ({}))
         if (!r.ok) throw new Error(d.error || 'Could not load diagnostics')
         setDiagnostics(d.diagnostics)
-        setAssignable(d.assignableCourses ?? [])
+        const courses: AssignableCourse[] = d.assignableCourses ?? []
+        setAssignable(courses)
+        setCourseKey(k => k || d.defaultCourseKey || courses[0]?.key || '')
         setError(null)
       })
       .catch(e => setError(e instanceof Error ? e.message : 'Could not load diagnostics'))
   }, [classroomId])
 
   useEffect(() => { load() }, [load])
+
+  // The panel renders nothing until its data arrives, so the scroll waits for
+  // the element to exist.
+  const pendingScroll = useRef(false)
+  useEffect(() => {
+    if (openSignal <= 0) return
+    setAssigning(true)
+    pendingScroll.current = true
+  }, [openSignal])
+  useEffect(() => {
+    if (!pendingScroll.current || !rootRef.current) return
+    pendingScroll.current = false
+    rootRef.current.scrollIntoView?.({ behavior: 'smooth', block: 'start' })
+  }, [openSignal, diagnostics, error])
 
   const assign = async () => {
     setBusy(true)
@@ -147,6 +184,7 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
       setAssigning(false)
       setDueDate('')
       load()
+      onAssigned?.()
     } finally {
       setBusy(false)
     }
@@ -236,49 +274,68 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
 
   if (diagnostics === null && !error) return null
 
+  const selected = assignable.find(c => c.key === courseKey)
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+    <div ref={rootRef} id="class-diagnostics" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
       <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white">📝 Assigned diagnostics</h2>
+        <h2 className="inline-flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+          <ClipboardCheck className="h-5 w-5 text-accent" aria-hidden="true" />
+          Class diagnostics
+        </h2>
         <button
           onClick={() => setAssigning(v => !v)}
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+          aria-expanded={assigning}
+          className="inline-flex items-center gap-1.5 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover"
         >
-          {assigning ? 'Cancel' : '➕ Assign diagnostic'}
+          {assigning ? 'Cancel' : <><Plus className="h-4 w-4" aria-hidden="true" /> Assign a diagnostic</>}
         </button>
       </div>
       <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-        One frozen test, identical questions for everyone — results are directly comparable. Students see a
-        banner on their dashboard until they&apos;ve taken it.
+        Every student takes the course diagnostic. Their results build each student&apos;s study plan and your class
+        plan. Students see a banner on their dashboard until they&apos;ve taken it.
       </p>
-      {error && <p className="mb-3 text-sm text-red-600 dark:text-red-400">{error}</p>}
+      {error && <p role="alert" className="mb-3 text-sm text-red-600 dark:text-red-400">{error}</p>}
 
       {assigning && (
-        <div className="mb-4 flex flex-wrap items-end gap-3 rounded-xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20">
-          <label className="text-sm">
-            <span className="mb-1 block text-xs text-gray-500 dark:text-gray-400">Course</span>
-            <select value={courseKey} onChange={e => setCourseKey(e.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white">
-              {assignable.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
-            </select>
-          </label>
-          <label className="text-sm">
-            <span className="mb-1 block text-xs text-gray-500 dark:text-gray-400">Due date (optional)</span>
-            <input type="date" value={dueDate} onChange={e => setDueDate(e.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white" />
-          </label>
-          <button
-            onClick={() => void assign()}
-            disabled={busy}
-            className="rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:opacity-50"
-          >
-            {busy ? 'Generating test…' : 'Assign to class'}
-          </button>
+        <div className="mb-4 rounded-xl border border-accent-light bg-accent-subtle p-4 dark:border-accent-light/30 dark:bg-accent-light/10">
+          <div className="flex flex-wrap items-end gap-3">
+            <label className="text-sm">
+              <span className="mb-1 block text-xs text-gray-600 dark:text-gray-400">Course</span>
+              <select
+                value={courseKey}
+                onChange={e => setCourseKey(e.target.value)}
+                className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              >
+                {assignable.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
+              </select>
+            </label>
+            <label className="text-sm">
+              <span className="mb-1 block text-xs text-gray-600 dark:text-gray-400">Due date (optional)</span>
+              <input type="date" value={dueDate} onChange={e => setDueDate(e.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white" />
+            </label>
+            <button
+              onClick={() => void assign()}
+              disabled={busy || !courseKey}
+              className="rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover disabled:opacity-50"
+            >
+              {busy ? (selected?.frozen ? 'Generating test…' : 'Assigning…') : 'Assign to class'}
+            </button>
+          </div>
+          {selected && (
+            <p className="mt-2 text-xs text-gray-600 dark:text-gray-400">
+              {selected.frozen
+                ? `Everyone gets the same ${selected.label} questions, so results compare directly. Later diagnostics avoid questions this class has already seen.`
+                : `Each student takes the ${selected.label} diagnostic. Any attempt from today on counts, and results show here as students finish.`}
+            </p>
+          )}
         </div>
       )}
 
       {(diagnostics ?? []).length === 0 ? (
-        <p className="text-sm text-gray-400">
-          Nothing assigned yet. Assign Diagnostic 1 after your introductory class — every student gets the same
-          questions, and this panel fills with results as they take it.
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          Nothing assigned yet. Start the course with a diagnostic so every student gets a personal study plan and
+          this class gets its plan for the week.
         </p>
       ) : (
         <div className="space-y-3">

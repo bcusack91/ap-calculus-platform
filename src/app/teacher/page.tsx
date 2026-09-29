@@ -8,9 +8,23 @@ import FocusTrapDialog from '@/components/FocusTrapDialog'
 import {
   ClipboardList, FileText, AlertTriangle, AlertCircle, RefreshCw, CheckCircle2,
   School, Users, Swords, Wrench, PenLine, Layers, BookOpen, Presentation, Check,
+  Circle, UserPlus, X,
 } from 'lucide-react'
 import StudentReportModal from '@/components/StudentReportModal'
 import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
+import { HELP_ARTICLES, helpHref } from '@/components/HelpLink'
+import {
+  GETTING_STARTED_STEPS,
+  gettingStartedDismissed,
+  joinCodeSharedLocally,
+  setGettingStartedDismissed,
+  type GettingStartedStatus,
+} from '@/lib/teacher-getting-started'
+import {
+  INACTIVITY_REASON,
+  NEVER_SIGNED_IN_REASON,
+  NOT_STARTED_REASON,
+} from '@/lib/attention-dismissals'
 
 interface ClassroomSummary {
   id: string
@@ -27,7 +41,8 @@ interface ClassroomSummary {
 
 interface DashboardData {
   classrooms: ClassroomSummary[]
-  stats: { totalClassrooms: number; totalStudents: number; avgMastery: number; needsAttentionCount: number }
+  /** avgMastery is null when there is nothing to average yet (no students or no progress). */
+  stats: { totalClassrooms: number; totalStudents: number; avgMastery: number | null; needsAttentionCount: number }
   needsAttention: {
     studentId: string
     studentName: string
@@ -67,6 +82,8 @@ interface DashboardData {
     classroom: { name: string }
     _count: { participants: number }
   }[]
+  /** Getting-started checklist, detected from real data (teacher-getting-started.ts). */
+  gettingStarted?: { classroomId: string | null; steps: GettingStartedStatus }
 }
 
 /**
@@ -78,9 +95,131 @@ function humanizeReason(raw: string): string {
   if (m) return `They scored below the target on “${m[1]}”.`
   m = raw.match(/^has not submitted "(.+)"$/)
   if (m) return `They haven’t submitted “${m[1]}” yet.`
-  if (raw === 'no activity in 14 days') return 'They haven’t been active in the last 14 days.'
+  if (raw === INACTIVITY_REASON) return 'They haven’t been active in the last 14 days.'
+  if (raw === NEVER_SIGNED_IN_REASON) return 'They haven’t signed in yet. Check they have the join code or their school login.'
+  if (raw === NOT_STARTED_REASON) return 'They signed in but haven’t started any work yet.'
   const sentence = raw.charAt(0).toUpperCase() + raw.slice(1)
   return sentence.endsWith('.') ? sentence : `${sentence}.`
+}
+
+/**
+ * First-week checklist. Every step is detected from real data by the
+ * dashboard API; the card hides itself once all six are done, and a teacher
+ * can dismiss it early (remembered per teacher in this browser).
+ */
+function GettingStartedCard({
+  userId,
+  gettingStarted,
+  onCreate,
+}: {
+  userId: string
+  gettingStarted: NonNullable<DashboardData['gettingStarted']>
+  onCreate: () => void
+}) {
+  // Browser flags load after mount: localStorage isn't readable while
+  // rendering on the server, and reading it here avoids a hydration mismatch.
+  const [dismissed, setDismissed] = useState<boolean | null>(null)
+  const [sharedLocally, setSharedLocally] = useState(false)
+  useEffect(() => {
+    setDismissed(gettingStartedDismissed(userId))
+    setSharedLocally(joinCodeSharedLocally(userId))
+  }, [userId])
+
+  const steps = { ...gettingStarted.steps, shareCode: gettingStarted.steps.shareCode || sharedLocally }
+  const done = GETTING_STARTED_STEPS.filter((s) => steps[s.key]).length
+  const total = GETTING_STARTED_STEPS.length
+  if (dismissed !== false || done === total) return null
+  const next = GETTING_STARTED_STEPS.find((s) => !steps[s.key])
+
+  return (
+    <section
+      aria-labelledby="getting-started-heading"
+      className="mb-8 rounded-2xl border-2 border-accent-light dark:border-accent-light/40 bg-white dark:bg-gray-800 p-6 shadow-lg"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <h2 id="getting-started-heading" className="text-xl font-bold text-gray-900 dark:text-white">
+            Getting started
+          </h2>
+          <p className="mt-0.5 text-sm text-gray-600 dark:text-gray-400">
+            Your first week, in order. Steps tick off on their own as they happen. {done} of {total} done.{' '}
+            <Link href={helpHref(HELP_ARTICLES.gettingStartedTeachers)} className="font-semibold text-accent hover:underline">
+              Read the teacher guide
+            </Link>
+          </p>
+        </div>
+        <button
+          onClick={() => { setGettingStartedDismissed(userId, true); setDismissed(true) }}
+          className="shrink-0 rounded-lg p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+          aria-label="Hide the getting started checklist"
+          title="Hide checklist"
+        >
+          <X className="w-5 h-5" aria-hidden />
+        </button>
+      </div>
+      <div
+        className="mt-3 h-2 w-full overflow-hidden rounded-full bg-gray-100 dark:bg-gray-700"
+        role="progressbar"
+        aria-label="Getting started progress"
+        aria-valuemin={0}
+        aria-valuemax={total}
+        aria-valuenow={done}
+      >
+        <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${(done / total) * 100}%` }} />
+      </div>
+      <ol className="mt-4 space-y-2">
+        {GETTING_STARTED_STEPS.map((step, i) => {
+          const complete = steps[step.key]
+          const isNext = next?.key === step.key
+          const href = step.href(gettingStarted.classroomId)
+          return (
+            <li
+              key={step.key}
+              className={`flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl px-3 py-2 ${
+                isNext ? 'bg-accent-subtle dark:bg-accent-light/10 ring-1 ring-accent-light dark:ring-accent-light/30' : ''
+              }`}
+            >
+              {complete ? (
+                <CheckCircle2 className="w-5 h-5 shrink-0 text-green-600" aria-hidden />
+              ) : (
+                <Circle className="w-5 h-5 shrink-0 text-gray-300 dark:text-gray-600" aria-hidden />
+              )}
+              <div className="min-w-0 flex-1">
+                <p className={`text-sm font-semibold ${complete ? 'text-gray-500 dark:text-gray-400 line-through' : 'text-gray-900 dark:text-white'}`}>
+                  <span className="sr-only">{complete ? 'Done: ' : 'To do: '}</span>
+                  {i + 1}. {step.title}
+                </p>
+                {!complete && <p className="text-xs text-gray-600 dark:text-gray-400">{step.detail}</p>}
+              </div>
+              {!complete && step.key !== 'createClass' && !gettingStarted.classroomId ? (
+                <span className="shrink-0 text-xs text-gray-400 dark:text-gray-500">After you create a class</span>
+              ) : !complete && (
+                step.key === 'createClass' ? (
+                  <button
+                    onClick={onCreate}
+                    className={`shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold ${
+                      isNext ? 'bg-accent text-accent-foreground hover:bg-accent-hover' : 'text-accent hover:underline'
+                    }`}
+                  >
+                    {step.action}
+                  </button>
+                ) : (
+                  <Link
+                    href={href}
+                    className={`shrink-0 rounded-lg px-3 py-1.5 text-xs font-semibold ${
+                      isNext ? 'bg-accent text-accent-foreground hover:bg-accent-hover' : 'text-accent hover:underline'
+                    }`}
+                  >
+                    {step.action}
+                  </Link>
+                )
+              )}
+            </li>
+          )
+        })}
+      </ol>
+    </section>
+  )
 }
 
 export default function TeacherDashboard() {
@@ -116,7 +255,8 @@ export default function TeacherDashboard() {
     try {
       const res = await fetch('/api/teacher/dashboard')
       if (res.status === 403) {
-        router.push('/dashboard')
+        // Not a teacher yet: /for-teachers explains and turns it on.
+        router.push('/for-teachers')
         return
       }
       if (!res.ok) throw new Error(`Dashboard request failed (${res.status})`)
@@ -180,6 +320,18 @@ export default function TeacherDashboard() {
     if (session) loadDashboard()
   }, [session, loadDashboard])
 
+  // The checklist's "Create a class" link lands here with ?create=1.
+  // (Read from window rather than useSearchParams, which would force a
+  // Suspense boundary on this statically rendered page.)
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (url.searchParams.get('create') !== '1') return
+    setCreateError(null)
+    setShowCreateModal(true)
+    url.searchParams.delete('create')
+    window.history.replaceState(null, '', url.toString())
+  }, [])
+
   // Schools for the optional "school" picker in Create Classroom (feeds the
   // admin district rollup). Empty until an admin has created schools.
   useEffect(() => {
@@ -200,8 +352,15 @@ export default function TeacherDashboard() {
         body: JSON.stringify(newClass),
       })
       if (res.ok) {
-        setShowCreateModal(false)
+        const body = await res.json().catch(() => ({}))
         setNewClass({ name: '', subject: '', grade: '', section: '', description: '', schoolId: '' })
+        if (body?.classroom?.id) {
+          // Open the new class with its one-time "share this" panel (join
+          // code, link and QR) instead of dropping back to the dashboard.
+          router.push(`/teacher/classroom/${body.classroom.id}?welcome=1`)
+          return
+        }
+        setShowCreateModal(false)
         loadDashboard()
       } else {
         const body = await res.json().catch(() => ({}))
@@ -280,6 +439,14 @@ export default function TeacherDashboard() {
           </button>
         </div>
 
+        {session?.user?.id && data.gettingStarted && (
+          <GettingStartedCard
+            userId={session.user.id}
+            gettingStarted={data.gettingStarted}
+            onCreate={() => { setCreateError(null); setShowCreateModal(true) }}
+          />
+        )}
+
         {/* Stats Cards — each one links to the place you act on that number */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Link
@@ -295,20 +462,39 @@ export default function TeacherDashboard() {
           >
             <div className="text-4xl font-bold text-green-600">{data.stats.totalStudents}</div>
             <div className="text-gray-600 dark:text-gray-400 mt-1">Total Students</div>
+            {data.stats.totalStudents === 0 && (
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {data.stats.totalClassrooms === 0 ? 'Create a class to add students.' : 'Share your join code to add students.'}
+              </div>
+            )}
           </Link>
           <Link
             href="#classrooms"
             title="Open a classroom for its full analytics"
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:border-accent-muted transition-all"
           >
-            <div
-              className={`text-4xl font-bold ${
-                data.stats.avgMastery >= 70 ? 'text-green-600' : data.stats.avgMastery >= 50 ? 'text-amber-600' : 'text-red-600'
-              }`}
-            >
-              {data.stats.avgMastery}%
-            </div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Avg Mastery</div>
+            {data.stats.avgMastery === null ? (
+              <>
+                <div className="text-4xl font-bold text-gray-400 dark:text-gray-500" aria-label="No data yet">—</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-1">Avg Mastery</div>
+                <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                  {data.stats.totalStudents === 0
+                    ? 'Shows once students join and start lessons.'
+                    : 'Shows once students start lessons.'}
+                </div>
+              </>
+            ) : (
+              <>
+                <div
+                  className={`text-4xl font-bold ${
+                    data.stats.avgMastery >= 70 ? 'text-green-600' : data.stats.avgMastery >= 50 ? 'text-amber-600' : 'text-red-600'
+                  }`}
+                >
+                  {data.stats.avgMastery}%
+                </div>
+                <div className="text-gray-600 dark:text-gray-400 mt-1">Avg Mastery</div>
+              </>
+            )}
           </Link>
           <Link
             href="#needs-attention"
@@ -345,7 +531,26 @@ export default function TeacherDashboard() {
             )}
           </div>
         )}
-        {data.needsAttention.length === 0 ? (
+        {data.needsAttention.length === 0 && data.stats.totalStudents === 0 ? (
+          // No students yet: "all on track" would be a false all-clear.
+          <div id="needs-attention" className="mb-8 scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg px-6 py-4 border border-gray-200 dark:border-gray-700 flex items-center gap-2">
+            <UserPlus className="w-5 h-5 shrink-0 text-accent" aria-hidden />
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Add students to see who needs attention.
+              {data.gettingStarted?.classroomId && (
+                <>
+                  {' '}
+                  <Link
+                    href={`/teacher/classroom/${data.gettingStarted.classroomId}?share=1`}
+                    className="font-semibold text-accent hover:underline"
+                  >
+                    Share your join code
+                  </Link>
+                </>
+              )}
+            </p>
+          </div>
+        ) : data.needsAttention.length === 0 ? (
           <div id="needs-attention" className="mb-8 scroll-mt-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg px-6 py-4 border border-green-100 dark:border-green-900/30 flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5 shrink-0 text-green-600" aria-hidden />
             <p className="text-sm font-medium text-green-700 dark:text-green-400">
@@ -435,7 +640,9 @@ export default function TeacherDashboard() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-12 text-center">
               <School className="w-12 h-12 mx-auto mb-4 text-accent" aria-hidden />
               <h3 className="text-xl font-bold mb-2">No classrooms yet</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-6">Create your first classroom to start managing students and assignments.</p>
+              <p className="text-gray-500 dark:text-gray-400 mb-6">
+                Create your first class. You get a join code to share with students right away.
+              </p>
               <button
                 onClick={() => { setCreateError(null); setShowCreateModal(true) }}
                 className="px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-xl hover:bg-accent-hover transition-all"
@@ -472,7 +679,7 @@ export default function TeacherDashboard() {
                   <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
                     <span><Users className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />{cls._count.members} students</span>
                     <span><ClipboardList className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />{cls._count.assignments} assignments</span>
-                    <span><Swords className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />{cls._count.competitions} competitions</span>
+                    <span><Swords className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />{cls._count.competitions} scheduled games</span>
                   </div>
                 </Link>
               ))}
@@ -574,10 +781,10 @@ export default function TeacherDashboard() {
           </div>
         </div>
 
-        {/* Upcoming Competitions */}
+        {/* Scheduled class games */}
         {data.upcomingCompetitions.length > 0 && (
           <div className="mt-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white"><Swords className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Upcoming Competitions</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white"><Swords className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Scheduled class games</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {data.upcomingCompetitions.map((c) => (
                 <div key={c.id} className="p-4 rounded-xl border border-accent-light dark:border-accent-light bg-accent-subtle dark:bg-accent-light/10">
@@ -616,7 +823,7 @@ export default function TeacherDashboard() {
             {[
               { icon: PenLine, label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
               { icon: Layers, label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
-              { icon: Swords, label: 'Class Lobby', href: '/teacher/lobby' },
+              { icon: Swords, label: 'Class games', href: '/teacher/lobby' },
               { icon: BookOpen, label: 'Content Library', href: '/teacher/content' },
               { icon: Presentation, label: 'Slide Library', href: '/teacher/slides' },
             ].map((tool) => (

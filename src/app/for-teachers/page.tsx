@@ -17,7 +17,7 @@ const FEATURES = [
   { Icon: Target, title: 'Standards mastery', body: 'Class mastery grouped by official AP unit, SAT domain, or MCAT category.' },
   { Icon: Repeat, title: 'One-click remediation', body: 'See exactly which topics failed and assign targeted review in one click.' },
   { Icon: UserPlus, title: 'Co-teachers', body: 'Share a class with another teacher while owner-only settings stay protected.' },
-  { Icon: Gamepad2, title: 'Live review games', body: 'Run real-time, team-based review games students join from any device.' },
+  { Icon: Gamepad2, title: 'Class games', body: 'Run real-time review games, as teams or a free-for-all, that students join from any device.' },
 ]
 
 export default function ForTeachersPage() {
@@ -37,7 +37,9 @@ export default function ForTeachersPage() {
               Rosters, a real gradebook, standards-mastery, and one-click remediation across {COURSE_COUNT} courses
               from Grade 4 through AP, SAT/ACT, and MCAT — all free.
             </p>
-            <TeacherActivateCTA />
+            <div id="activate" className="scroll-mt-24">
+              <TeacherActivateCTA />
+            </div>
           </div>
         </div>
       </section>
@@ -66,7 +68,7 @@ export default function ForTeachersPage() {
             <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-10">Get started in three steps</h2>
             <div className="grid gap-8 sm:grid-cols-3 text-center">
               {[
-                { n: '1', t: 'Activate your account', b: 'Confirm you’re an educator — teacher features turn on instantly, free.' },
+                { n: '1', t: 'Create your teacher account', b: 'Sign up as a teacher. Teacher features turn on instantly, free.' },
                 { n: '2', t: 'Add your class', b: 'Create a classroom and import your roster by code, link, or CSV.' },
                 { n: '3', t: 'Assign & track', b: 'Post assignments and watch mastery, gradebook, and remediation update live.' },
               ].map((s) => (

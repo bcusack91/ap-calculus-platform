@@ -53,12 +53,13 @@ export interface HelpArticle {
 
 /** Where teacher features live in the classroom page today. */
 export const TEACHER_UI = {
-  classDiagnostic: 'Insights › Class plan',
+  classDiagnostic: 'Work › Assignments',
   classPlan: 'Insights › Class plan',
   assignments: 'Work › Assignments',
-  gradebookExport: 'Insights › Performance',
-  classGameInClass: 'Work › Live games',
-  classLobby: 'Class Lobby',
+  gradebookExport: 'Insights › Gradebook',
+  classGameInClass: 'Work › Class games',
+  classLobby: 'Class games',
+  flashcardLimits: 'Settings',
 } as const
 
 const PASS = `${TOPIC_CLEAR_PERCENT}%`
@@ -419,12 +420,13 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         type: 'steps',
         items: [
           'Go to [For Teachers](/for-teachers).',
-          'No account yet? Choose **Sign up free to get started**.',
-          'Tick **I confirm I’m a teacher or educator**.',
-          'Choose **Activate my free teacher account**. Teacher features turn on right away.',
+          'No account yet? Choose **Sign up free to get started**. The sign-up form opens as **I’m a teacher**: fill it in, tick **I confirm I’m a teacher or educator**, and you land on your teacher dashboard.',
+          'Already have an account? Sign in, tick **I confirm I’m a teacher or educator**, and choose **Activate my free teacher account**.',
+          'Teacher features turn on right away.',
         ],
       },
-      { type: 'note', text: 'Have a paid Premium student account? Contact us to switch it to a teacher account.' },
+      { type: 'note', text: 'Have a paid Premium student account? One account can’t be both yet. Ask us to add teacher tools to it, or sign up again as a teacher with your school email.' },
+      { type: 'p', text: 'Your teacher dashboard shows a **Getting started** checklist. Each step ticks off on its own when it happens.' },
       { type: 'h2', id: 'create-class', text: '2. Create a class' },
       {
         type: 'steps',
@@ -432,7 +434,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
           'Open **My Classes** in the menu.',
           'Choose **New Classroom**.',
           'Give it a name, like “Period 3 AP Calculus”.',
-          'Open the class from your list.',
+          'The new class opens with its join code, link and QR code ready to share.',
         ],
       },
       { type: 'h2', id: 'add-students', text: '3. Add your students' },
@@ -452,10 +454,10 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         type: 'list',
         items: [
           '**Class plan**: ranks the topics your class most needs.',
-          '**Performance**: mastery, averages and exit-quiz results per student. **Export CSV** is here.',
-          '**Gradebook**: every assignment score in one grid.',
+          '**Performance**: mastery, averages and exit-quiz results per student.',
+          '**Gradebook**: every assignment score in one grid. **Export CSV** is here.',
           '**Standards**: class mastery by standard, such as AP unit or SAT domain.',
-          '**Engagement**: who logs in, when, and daily flashcard habits.',
+          '**Engagement**: who logs in, when, and daily flashcard habits. Class flashcard limits are set in **Settings**.',
         ],
       },
       { type: 'h2', id: 'assign', text: '6. Assign lessons and practice' },
@@ -475,7 +477,8 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         type: 'list',
         items: [
           'Your teacher dashboard lists students who need you.',
-          'A student appears if they missed a due assignment, scored below target, or had no activity for 14 days.',
+          'A student appears if they missed a due assignment, scored below target, had no activity for 14 days, or still hasn’t signed in (or started any work) a few days after joining.',
+          'The **Roster** shows **Never signed in** for students who haven’t claimed their account yet.',
           'Choose **Mark as seen** once you have handled it. A new problem will still show.',
         ],
       },
@@ -490,27 +493,32 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
     audience: 'teacher',
     blocks: [
       { type: 'p', text: 'A diagnostic is a practice test for one course. Each student gets a personal study plan from it. The Class plan pools everyone’s results.' },
-      { type: 'h2', id: 'sat-mcat', text: 'SAT and MCAT: assign one test to everyone' },
+      { type: 'h2', id: 'sat-mcat', text: 'Assign a diagnostic' },
       {
         type: 'steps',
         items: [
           `Open your class, then **${TEACHER_UI.classDiagnostic}**.`,
-          'Choose **Assign diagnostic**.',
-          'Pick the course and an optional due date.',
+          'Choose **Assign a diagnostic**.',
+          'Pick the course (your class’s course is already picked) and an optional due date.',
           'Choose **Assign to class**.',
         ],
       },
       {
         type: 'list',
         items: [
-          'Every student gets the same questions.',
           'Students see a banner on their Dashboard until they take it.',
           'You see who has taken it, the class average, the weakest areas and each score.',
-          'Assign a second diagnostic later to see growth.',
+          'The same list also sits at the top of **Insights › Class plan**.',
         ],
       },
-      { type: 'h2', id: 'other-courses', text: 'Other courses' },
-      { type: 'p', text: 'Share the course diagnostic with your students. Each course page has a **Start with the free diagnostic** button. Their results still feed your Class plan.' },
+      { type: 'h2', id: 'other-courses', text: 'SAT and MCAT compared with other courses' },
+      {
+        type: 'list',
+        items: [
+          'SAT and MCAT: every student gets the same questions, so scores compare directly. Assign a second diagnostic later to see growth.',
+          'Every other course: each student takes that course’s standard diagnostic. Any attempt after you assign it counts.',
+        ],
+      },
       { type: 'h2', id: 'class-plan', text: 'Using the Class plan' },
       {
         type: 'list',
@@ -537,18 +545,18 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       {
         type: 'steps',
         items: [
-          `Open **${TEACHER_UI.classLobby}** from your teacher dashboard.`,
-          'Choose **New Lobby** and name it.',
+          `Open **${TEACHER_UI.classLobby}** under Teacher Tools on your teacher dashboard.`,
+          'Choose **New class game** and name it. Optionally pick the class it is for.',
           'Pick **Teams** (balanced teams, highest total wins) or **Free-for-all** (one leaderboard).',
           'Optional: turn on **Chaos Mode**. Power-ups drop as students answer.',
           'Show the game code. Students go to /competitive/join and type it.',
           'Start the game when everyone is in.',
         ],
       },
-      { type: 'p', text: `You can also start or schedule a game from inside your class, under **${TEACHER_UI.classGameInClass}**.` },
+      { type: 'p', text: `You can also start a game from inside your class, under **${TEACHER_UI.classGameInClass}**: **Start class game** offers the same Teams, Free-for-all and Chaos options, and **Schedule class game** puts one on the calendar.` },
       { type: 'note', tone: 'tip', text: 'Students do not need Competitive Mode unlocked to join a class game.' },
       { type: 'h2', id: 'live-lesson', text: 'Run a live lesson' },
-      { type: 'p', text: 'Open your class. Find **Live class sessions** at the top. Pick one of two kinds:' },
+      { type: 'p', text: 'Open your class. Choose **Start a live lesson** at the top. Pick one of two kinds:' },
       {
         type: 'list',
         items: [

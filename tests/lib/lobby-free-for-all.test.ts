@@ -72,7 +72,11 @@ describe('free-for-all reaches every surface', () => {
     const start = repoFile('src/app/api/teacher/lobby/[id]/start/route.ts')
     expect(start).toContain("if (lobby.format === 'RACE_FFA') {")
     expect(start).not.toContain("lobby.studentHosted && lobby.format === 'RACE_FFA'")
-    expect(repoFile('src/app/teacher/lobby/page.tsx')).toContain("key: 'RACE_FFA'")
+    // The format picker is shared by /teacher/lobby and the classroom's
+    // "Start class game" dialog, so both offer free-for-all.
+    expect(repoFile('src/components/teacher/ClassGameOptions.tsx')).toContain("key: 'RACE_FFA'")
+    expect(repoFile('src/app/teacher/lobby/page.tsx')).toContain('<ClassGameOptions')
+    expect(repoFile('src/app/teacher/classroom/[id]/page.tsx')).toContain('<ClassGameOptions')
   })
 
   it('the room page never demands a team balance for a free-for-all', () => {

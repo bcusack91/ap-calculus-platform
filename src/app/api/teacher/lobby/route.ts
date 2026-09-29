@@ -46,9 +46,17 @@ export async function POST(req: NextRequest) {
   const durationSec = Math.max(60, Math.min(60 * 60, Math.floor(Number(body?.durationSec) || 600)))
 
   if (classroomId) {
-    const classroom = await prisma.classroom.findUnique({ where: { id: classroomId } })
-    if (!classroom || classroom.teacherId !== teacher.id) {
-      return NextResponse.json({ error: 'Classroom not found or not owned by you' }, { status: 403 })
+    // Owner OR co-teacher: a co-teacher runs the class too, and the classroom's
+    // "Start class game" button is shown to both.
+    const classroom = await prisma.classroom.findFirst({
+      where: {
+        id: classroomId,
+        OR: [{ teacherId: teacher.id }, { coTeachers: { some: { userId: teacher.id } } }],
+      },
+      select: { id: true },
+    })
+    if (!classroom) {
+      return NextResponse.json({ error: 'You don’t teach that class.' }, { status: 403 })
     }
   }
 

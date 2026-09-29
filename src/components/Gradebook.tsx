@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import Link from 'next/link'
-import { Printer, BarChart3, MessageSquare, FileText } from 'lucide-react'
+import { Printer, BarChart3, MessageSquare, FileText, Download } from 'lucide-react'
 import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
 
 interface Assignment {
@@ -272,7 +272,16 @@ export default function Gradebook({ classroomId, classroomName }: GradebookProps
       </div>
 
       {/* Toolbar (hidden when printing) */}
-      <div className="flex justify-end gap-2 mb-4 print:hidden">
+      <div className="flex flex-wrap justify-end gap-2 mb-4 print:hidden">
+        {/* Same export the Performance view offers: one row per student, one
+            column per assignment, ready for an SIS import. */}
+        <a
+          href={`/api/teacher/classrooms/${classroomId}/export?format=csv`}
+          download
+          className="px-4 py-2 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+        >
+          <Download className="inline w-4 h-4 mr-1.5 -mt-0.5" aria-hidden />Export CSV
+        </a>
         <Link
           href={`/teacher/classroom/${classroomId}/report`}
           className="px-4 py-2 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
