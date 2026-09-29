@@ -185,7 +185,7 @@ export default function ApUsGovernmentHub() {
       <CourseHero
         courseName='AP US Government'
         tagline='Interactive lessons covering the Constitution, civil liberties, political parties, voting, and all AP Gov units.'
-        primaryCta={{ href: '/ap-us-gov-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-us-gov-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-us-government', label: 'Browse Lessons' }}
         accentFrom="blue"
         accentTo="indigo"

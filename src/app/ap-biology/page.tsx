@@ -208,7 +208,7 @@ export default function APBiologyHub() {
       <CourseHero
         courseName="AP Biology"
         tagline='175+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-bio-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-bio-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-biology', label: 'Browse Lessons' }}
         accentFrom="green"
         accentTo="emerald"

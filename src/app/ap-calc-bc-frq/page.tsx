@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-calc-bc-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APCalcBCFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-calc-bc-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-calc-bc-frq', reason: 'frq', label: 'AP Calculus BC' }))
     }
   }, [status, router])
 

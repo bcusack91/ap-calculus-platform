@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-enviro-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APAPESFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-enviro-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-enviro-frq', reason: 'frq', label: 'AP Environmental Science' }))
     }
   }, [status, router])
 

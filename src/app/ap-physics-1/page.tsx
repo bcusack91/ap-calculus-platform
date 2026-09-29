@@ -178,7 +178,7 @@ export default function APPhysics1Hub() {
       <CourseHero
         courseName='AP Physics 1'
         tagline='161+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-physics1-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-physics1-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-physics-1', label: 'Browse Lessons' }}
         accentFrom="blue"
         accentTo="cyan"

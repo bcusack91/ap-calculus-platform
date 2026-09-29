@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { trackLogin } from '@/lib/analytics'
 import { pendingJoinUrl } from '@/lib/pending-join'
+import { authContextCopy, parseAuthReason, safeCallbackUrl, signUpUrl } from '@/lib/auth-redirect'
 
 function SignInForm() {
   const router = useRouter()
@@ -18,11 +19,12 @@ function SignInForm() {
   // Honor `callbackUrl` so users following shared links (e.g.
   // /competitive/async/<id>) return to where they started after sign-in.
   // Only allow same-origin internal paths to avoid open-redirects.
-  const rawCallback = searchParams?.get('callbackUrl') ?? ''
-  const safeCallback =
-    rawCallback.startsWith('/') && !rawCallback.startsWith('//')
-      ? rawCallback
-      : '/'
+  const safeCallback = safeCallbackUrl(searchParams?.get('callbackUrl')) ?? '/'
+  // Context from a sign-up wall (reason=diagnostic&label=…): the heading says
+  // what signing in unlocks, and the sign-up link keeps the same context.
+  const reason = parseAuthReason(searchParams?.get('reason'))
+  const label = searchParams?.get('label') ?? null
+  const context = authContextCopy('signin', reason, label)
 
   // With no explicit callback, honor a pending class-join intent (persisted as
   // a cookie by /join-class) so students who detoured through auth still land
@@ -72,11 +74,13 @@ function SignInForm() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
       <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
-            Welcome Back
+          <h1
+            className={`${context ? 'text-2xl sm:text-3xl' : 'text-4xl'} font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent`}
+          >
+            {context?.heading ?? 'Welcome Back'}
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Sign in to continue your learning journey
+            {context?.subheading ?? 'Sign in to continue your learning journey'}
           </p>
         </div>
 
@@ -187,11 +191,7 @@ function SignInForm() {
             <p className="text-gray-600 dark:text-gray-400">
               Don&apos;t have an account?{' '}
               <Link
-                href={
-                  safeCallback && safeCallback !== '/'
-                    ? `/auth/signup?callbackUrl=${encodeURIComponent(safeCallback)}`
-                    : '/auth/signup'
-                }
+                href={signUpUrl({ callbackUrl: safeCallback, reason, label })}
                 className="text-accent hover:text-accent-hover font-semibold"
               >
                 Sign up

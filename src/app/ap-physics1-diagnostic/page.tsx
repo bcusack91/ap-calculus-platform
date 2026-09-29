@@ -20,6 +20,7 @@ import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -60,7 +61,7 @@ export default function APPhysics1DiagnosticPage() {
   const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/ap-physics1-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/ap-physics1-diagnostic', reason: 'diagnostic', label: 'AP Physics 1' }))
   }, [status, router])
 
   useEffect(() => {

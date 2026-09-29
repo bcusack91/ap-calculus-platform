@@ -13,6 +13,7 @@ const mockAuth = vi.fn()
 const mockLearningPath = vi.fn()
 const mockProgressCount = vi.fn()
 const mockMemberCount = vi.fn()
+const mockDiagnosticCount = vi.fn()
 
 vi.mock('@/lib/auth', () => ({ auth: () => mockAuth() }))
 vi.mock('@/lib/prisma', () => ({
@@ -20,6 +21,7 @@ vi.mock('@/lib/prisma', () => ({
     learningPath: { findUnique: (...a: unknown[]) => mockLearningPath(...a) },
     topicProgress: { count: (...a: unknown[]) => mockProgressCount(...a) },
     classroomMember: { count: (...a: unknown[]) => mockMemberCount(...a) },
+    diagnosticTest: { count: (...a: unknown[]) => mockDiagnosticCount(...a) },
   },
 }))
 
@@ -31,6 +33,7 @@ describe('GET /api/onboarding — hasCompletedOnboarding', () => {
     mockLearningPath.mockResolvedValue({ currentTopic: null, topicOrder: null })
     mockProgressCount.mockResolvedValue(0)
     mockMemberCount.mockResolvedValue(0)
+    mockDiagnosticCount.mockResolvedValue(0)
   })
 
   it('is false for a brand-new account with no class', async () => {

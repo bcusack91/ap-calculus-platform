@@ -97,7 +97,7 @@ export default function GeometryHub() {
         courseName="Geometry"
         courseDescription={metadata.description as string}
         tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Geometry."
-        primaryCta={{ href: '/geometry-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/geometry-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/geometry', label: 'Browse Lessons' }}
         finalCtaHref="/geometry-diagnostic"
         accent="green"

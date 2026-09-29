@@ -160,7 +160,7 @@ export default function APPsychologyHub() {
       <CourseHero
         courseName='AP Psychology'
         tagline='161+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-psych-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-psych-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-psychology', label: 'Browse Lessons' }}
         accentFrom="pink"
         accentTo="rose"

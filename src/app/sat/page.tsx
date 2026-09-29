@@ -176,7 +176,7 @@ export default function SATLandingPage() {
       <CourseHero
         courseName='Digital SAT'
         tagline='Full-length practice tests, diagnostic assessments, 35+ topic quizzes, interactive lessons, and a personalized score predictor.'
-        primaryCta={{ href: '/sat-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/sat-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/sat-practice', label: 'Take Practice Test' }}
         accentFrom="purple"
         accentTo="pink"

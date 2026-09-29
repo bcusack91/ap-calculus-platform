@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -57,7 +58,7 @@ export default function APWorldHistoryDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-world-history-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-world-history-diagnostic', reason: 'diagnostic', label: 'AP World History' }))
     }
   }, [status, router])
 

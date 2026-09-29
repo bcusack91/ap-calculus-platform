@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-world-history-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APWorldHistoryFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-world-history-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-world-history-frq', reason: 'frq', label: 'AP World History' }))
     }
   }, [status, router])
 

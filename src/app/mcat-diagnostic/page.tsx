@@ -19,6 +19,8 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 import { DataVisual, DiagnosticPassageContent, FigureStudy } from '@/components/MCATDiagnosticVisuals'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
+import { signUpUrl } from '@/lib/auth-redirect'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -210,7 +212,7 @@ export default function MCATDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/mcat-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/mcat-diagnostic', reason: 'diagnostic', label: 'MCAT' }))
     }
   }, [status, router])
 
@@ -1000,8 +1002,9 @@ export default function MCATDiagnosticPage() {
                 )}
               </div>
               <p className="mb-3 text-sm text-emerald-700 dark:text-emerald-400">
-                From your last diagnostic — based on the questions you missed. Clear each module
-                — finish its lesson, or score ≥{planStatus.requiredScorePercent}% on its practice quiz — to unlock your next diagnostic.
+                From your last diagnostic — based on the questions you missed. Clear each module to
+                unlock your next diagnostic. Clear a module by scoring {TOPIC_CLEAR_PERCENT}% or better on its
+                exit quiz (or by testing out on its entrance quiz).
               </p>
               <div className="space-y-2">
                 {planStatus.recommendedTopics.map((topic, i) => (

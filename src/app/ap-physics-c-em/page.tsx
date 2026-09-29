@@ -201,7 +201,7 @@ export default function APPhysicsCEMHub() {
       <CourseHero
         courseName='AP Physics C: E&amp;M'
         tagline='Calculus-based electricity &amp; magnetism — from electrostatics and circuits to magnetic fields and electromagnetic induction. Diagnostics, FRQ practice, daily questions, and competitive mode.'
-        primaryCta={{ href: '/ap-physics-c-em-diagnostic', label: 'Take Diagnostic' }}
+        primaryCta={{ href: '/ap-physics-c-em-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/ap-physics-c-em-frq', label: 'FRQ Practice' }}
         accentFrom="amber"
         accentTo="orange"

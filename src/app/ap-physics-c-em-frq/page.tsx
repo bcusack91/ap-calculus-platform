@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-physics-c-em-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -72,7 +73,7 @@ function APPhysicsCEMFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-physics-c-em-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-physics-c-em-frq', reason: 'frq', label: 'AP Physics C: E&M' }))
     }
   }, [status, router])
 

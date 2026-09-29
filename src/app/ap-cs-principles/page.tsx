@@ -174,7 +174,7 @@ export default function ApCsPrinciplesHub() {
       <CourseHero
         courseName='AP CS Principles'
         tagline='Interactive lessons on computing, data, algorithms, the internet, and the impact of technology on society.'
-        primaryCta={{ href: '/ap-csp-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-csp-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-computer-science-principles', label: 'Browse Lessons' }}
         accentFrom="blue"
         accentTo="sky"

@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-us-history-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APUSHistoryFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-us-history-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-us-history-frq', reason: 'frq', label: 'AP US History' }))
     }
   }, [status, router])
 

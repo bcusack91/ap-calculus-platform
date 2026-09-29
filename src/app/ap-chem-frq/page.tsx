@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-chem-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -72,7 +73,7 @@ function APChemFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-chem-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-chem-frq', reason: 'frq', label: 'AP Chemistry' }))
     }
   }, [status, router])
 

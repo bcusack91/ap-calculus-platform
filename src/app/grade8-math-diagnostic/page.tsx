@@ -19,6 +19,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -58,7 +59,7 @@ export default function Grade8MathDiagnosticPage() {
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/grade8-math-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/grade8-math-diagnostic', reason: 'diagnostic', label: 'Grade 8 Math' }))
   }, [status, router])
 
   useEffect(() => {

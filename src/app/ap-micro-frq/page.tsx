@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-micro-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -61,7 +62,7 @@ function APMicroFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-micro-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-micro-frq', reason: 'frq', label: 'AP Microeconomics' }))
     }
   }, [status, router])
 

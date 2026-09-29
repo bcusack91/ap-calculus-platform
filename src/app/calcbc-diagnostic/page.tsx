@@ -20,6 +20,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function renderLatex(text: string): string {
   try {
@@ -79,7 +80,7 @@ export default function CalcBCDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/calcbc-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/calcbc-diagnostic', reason: 'diagnostic', label: 'AP Calculus BC' }))
     }
   }, [status, router])
 

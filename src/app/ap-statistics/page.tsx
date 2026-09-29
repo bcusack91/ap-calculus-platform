@@ -172,7 +172,7 @@ export default function APStatisticsHub() {
       <CourseHero
         courseName='AP Statistics'
         tagline='Interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-stats-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-stats-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-statistics', label: 'Browse Lessons' }}
         accentFrom="indigo"
         accentTo="blue"

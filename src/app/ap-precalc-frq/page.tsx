@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-precalc-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APPrecalcFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-precalc-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-precalc-frq', reason: 'frq', label: 'AP Precalculus' }))
     }
   }, [status, router])
 

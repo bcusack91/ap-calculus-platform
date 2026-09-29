@@ -16,6 +16,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -223,7 +224,7 @@ export default function SATDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/sat-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/sat-diagnostic', reason: 'diagnostic', label: 'SAT' }))
     }
   }, [status, router])
 

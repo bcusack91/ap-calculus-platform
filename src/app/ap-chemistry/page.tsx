@@ -198,7 +198,7 @@ export default function APChemistryHub() {
       <CourseHero
         courseName='AP Chemistry'
         tagline='245+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-chem-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-chem-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-chemistry', label: 'Browse Lessons' }}
         accentFrom="teal"
         accentTo="cyan"

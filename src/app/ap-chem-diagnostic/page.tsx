@@ -21,6 +21,7 @@ import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -93,7 +94,7 @@ export default function APChemDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-chem-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-chem-diagnostic', reason: 'diagnostic', label: 'AP Chemistry' }))
     }
   }, [status, router])
 

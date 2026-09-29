@@ -19,6 +19,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -59,7 +60,7 @@ export default function APPhysics2DiagnosticPage() {
   const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/ap-physics2-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/ap-physics2-diagnostic', reason: 'diagnostic', label: 'AP Physics 2' }))
   }, [status, router])
 
   useEffect(() => {

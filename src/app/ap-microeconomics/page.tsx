@@ -185,7 +185,7 @@ export default function ApMicroeconomicsHub() {
       <CourseHero
         courseName='AP Microeconomics'
         tagline='Interactive lessons on supply & demand, market structures, elasticity, factor markets, and market failure.'
-        primaryCta={{ href: '/ap-micro-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-micro-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-microeconomics', label: 'Browse Lessons' }}
         accentFrom="violet"
         accentTo="purple"

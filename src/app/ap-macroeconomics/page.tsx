@@ -199,7 +199,7 @@ export default function ApMacroeconomicsHub() {
       <CourseHero
         courseName="AP Macroeconomics"
         tagline='Interactive lessons on GDP, monetary & fiscal policy, international trade, and all macroeconomics concepts.'
-        primaryCta={{ href: '/ap-macro-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-macro-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-macroeconomics', label: 'Browse Lessons' }}
         accentFrom="emerald"
         accentTo="green"

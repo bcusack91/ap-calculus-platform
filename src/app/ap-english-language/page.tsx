@@ -220,7 +220,7 @@ export default function ApEnglishLanguageHub() {
       <CourseHero
         courseName='AP English Language'
         tagline='Interactive lessons on rhetorical analysis, argumentation, synthesis, and persuasive writing techniques.'
-        primaryCta={{ href: '/ap-english-lang-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-english-lang-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-english-language', label: 'Browse Lessons' }}
         accentFrom="cyan"
         accentTo="teal"

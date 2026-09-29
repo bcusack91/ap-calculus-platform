@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -57,7 +58,7 @@ export default function APUsGovDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-us-gov-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-us-gov-diagnostic', reason: 'diagnostic', label: 'AP US Government' }))
     }
   }, [status, router])
 

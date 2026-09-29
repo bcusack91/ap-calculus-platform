@@ -174,7 +174,7 @@ export default function APPhysics2Hub() {
       <CourseHero
         courseName='AP Physics 2'
         tagline='126+ interactive lessons covering fluids, thermodynamics, electromagnetism, optics, and modern physics — everything you need to score a 5.'
-        primaryCta={{ href: '/ap-physics2-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-physics2-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-physics-2', label: 'Browse Lessons' }}
         accentFrom="violet"
         accentTo="purple"

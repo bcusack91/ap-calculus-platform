@@ -19,6 +19,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -58,7 +59,7 @@ export default function Algebra2DiagnosticPage() {
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/algebra2-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/algebra2-diagnostic', reason: 'diagnostic', label: 'Algebra 2' }))
   }, [status, router])
 
   useEffect(() => {

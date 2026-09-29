@@ -281,7 +281,7 @@ export default function MCATLandingPage() {
       <CourseHero
         courseName='MCAT'
         tagline='Practice questions across all 4 MCAT sections, diagnostic assessments, 170+ interactive lesson parts, study plans, and daily practice.'
-        primaryCta={{ href: '/mcat-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/mcat-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/mcat-practice', label: 'Practice Questions' }}
         accentFrom="emerald"
         accentTo="teal"

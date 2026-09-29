@@ -185,7 +185,7 @@ export default function ApEnvironmentalScienceHub() {
       <CourseHero
         courseName='AP Environmental Science'
         tagline='Interactive lessons covering ecosystems, biodiversity, energy, pollution, climate change, and sustainability.'
-        primaryCta={{ href: '/ap-enviro-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-enviro-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-environmental-science', label: 'Browse Lessons' }}
         accentFrom="green"
         accentTo="emerald"

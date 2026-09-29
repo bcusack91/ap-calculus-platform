@@ -30,6 +30,7 @@ import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
 import SixSigmaDashboard from '@/components/SixSigmaDashboard'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 const FlashcardStudySession = dynamic(
   () => import('@/components/FlashcardStudySession'),
@@ -251,7 +252,10 @@ function DashboardContent() {
     }
     if (onboardRes.status === 'fulfilled' && onboardRes.value.ok) {
       const d = await onboardRes.value.json()
-      if (!d.hasCompletedOnboarding) {
+      // ?from=onboarding means the user just finished or skipped the wizard —
+      // never bounce them straight back (the skip is also saved server-side,
+      // this covers a failed save so it can't loop).
+      if (!d.hasCompletedOnboarding && searchParams.get('from') !== 'onboarding') {
         router.push('/onboarding')
         return
       }
@@ -663,7 +667,7 @@ function DashboardContent() {
                     </div>
                     {plan.gated && (
                       <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
-                        Retake unlock rule: reach lesson mastery, or at least {plan.requiredScorePercent}% on the exit quiz, for each recommended topic.
+                        Retake unlock rule: clear each recommended topic. Clear a topic by scoring {TOPIC_CLEAR_PERCENT}% or better on its exit quiz (or by testing out on its entrance quiz).
                       </p>
                     )}
                     <div className="space-y-1.5">

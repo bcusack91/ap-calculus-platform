@@ -215,7 +215,7 @@ export default function APPhysicsCMechanicsHub() {
       <CourseHero
         courseName='AP Physics C: Mechanics'
         tagline='Calculus-based mechanics — from kinematics and Newton&apos;s laws to rotation, oscillations, and gravitation. Diagnostics, FRQ practice, daily questions, and competitive mode.'
-        primaryCta={{ href: '/ap-physics-c-mech-diagnostic', label: 'Take Diagnostic' }}
+        primaryCta={{ href: '/ap-physics-c-mech-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/ap-physics-c-mech-frq', label: 'FRQ Practice' }}
         accentFrom="blue"
         accentTo="indigo"

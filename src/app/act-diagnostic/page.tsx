@@ -19,6 +19,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -58,7 +59,7 @@ export default function ACTDiagnosticPage() {
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/act-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/act-diagnostic', reason: 'diagnostic', label: 'ACT' }))
   }, [status, router])
 
   useEffect(() => {

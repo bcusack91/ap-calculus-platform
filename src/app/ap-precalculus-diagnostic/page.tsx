@@ -18,6 +18,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -50,7 +51,7 @@ export default function APPrecalculusDiagnosticPage() {
   const [history, setHistory] = useState<HistoryEntry[]>([])
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/ap-precalculus-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/ap-precalculus-diagnostic', reason: 'diagnostic', label: 'AP Precalculus' }))
   }, [status, router])
 
   useEffect(() => {

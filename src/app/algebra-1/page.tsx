@@ -97,7 +97,7 @@ export default function Algebra1Hub() {
         courseName="Algebra 1"
         courseDescription={metadata.description as string}
         tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Algebra 1."
-        primaryCta={{ href: '/algebra1-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/algebra1-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/algebra-1', label: 'Browse Lessons' }}
         finalCtaHref="/algebra1-diagnostic"
         accent="sky"

@@ -8,15 +8,19 @@ import AvatarDisplay from '@/components/AvatarDisplay'
 import { PRESET_AVATARS, AvatarData } from '@/types/avatar'
 import { trackSignUp } from '@/lib/analytics'
 import { pendingJoinUrl } from '@/lib/pending-join'
+import { authContextCopy, parseAuthReason, safeCallbackUrl, signInUrl } from '@/lib/auth-redirect'
 
 function SignUpForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const rawCallback = searchParams?.get('callbackUrl') ?? ''
-  const safeCallback =
-    rawCallback.startsWith('/') && !rawCallback.startsWith('//')
-      ? rawCallback
-      : '/'
+  const safeCallback = safeCallbackUrl(searchParams?.get('callbackUrl')) ?? '/'
+  // Why the visitor is here (e.g. reason=diagnostic&label=AP Calculus AB from
+  // a diagnostic's sign-up wall) — drives the contextual heading below and is
+  // carried over to the sign-in link.
+  const reason = parseAuthReason(searchParams?.get('reason'))
+  const label = searchParams?.get('label') ?? null
+  const context = authContextCopy('signup', reason, label)
+  const signInHref = signInUrl({ callbackUrl: safeCallback, reason, label })
 
   // With no explicit callback, honor a pending class-join intent (persisted as
   // a cookie by /join-class) so a student who scanned a teacher's QR code and
@@ -164,13 +168,25 @@ function SignUpForm() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-12">
       <div className="max-w-2xl w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
-            {step === 1 ? 'Create Account' : 'Choose Your Avatar'}
+          <h1
+            className={`${step === 1 && context ? 'text-2xl sm:text-3xl' : 'text-4xl'} font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent`}
+          >
+            {step === 1 ? (context?.heading ?? 'Create Account') : 'Choose Your Avatar'}
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            {step === 1 ? 'Start your learning journey today' : 'Pick an avatar that represents you'}
+            {step === 1
+              ? (context?.subheading ?? 'Start your learning journey today')
+              : 'Pick an avatar that represents you'}
           </p>
-          
+          {step === 1 && context && (
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Already have an account?{' '}
+              <Link href={signInHref} className="text-accent hover:text-accent-hover font-semibold">
+                Sign in
+              </Link>
+            </p>
+          )}
+
           {/* Step indicator */}
           <div className="flex justify-center gap-2 mt-4">
             <div className={`h-2 w-20 rounded-full ${step === 1 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
@@ -351,7 +367,10 @@ function SignUpForm() {
                 type="button"
                 onClick={() => {
                   trackSignUp('google')
-                  signIn('google', { callbackUrl: resolveDestination() ?? safeCallback })
+                  // Google creates the account in one hop, so with nowhere
+                  // specific to go a new user lands in the onboarding wizard
+                  // (course pick → diagnostic), not on the homepage.
+                  signIn('google', { callbackUrl: resolveDestination() ?? '/onboarding' })
                 }}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-300"
               >
@@ -366,11 +385,7 @@ function SignUpForm() {
               <p className="text-gray-600 dark:text-gray-400">
                 Already have an account?{' '}
                 <Link
-                  href={
-                    safeCallback && safeCallback !== '/'
-                      ? `/auth/signin?callbackUrl=${encodeURIComponent(safeCallback)}`
-                      : '/auth/signin'
-                  }
+                  href={signInHref}
                   className="text-accent hover:text-accent-hover font-semibold"
                 >
                   Sign in

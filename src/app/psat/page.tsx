@@ -80,7 +80,7 @@ export default function PsatHubPage() {
       <CourseHero
         courseName='the PSAT/NMSQT'
         tagline={<>The PSAT tests the same Reading &amp; Writing and Math skills as the Digital SAT &mdash; so every minute here builds <strong>both</strong> scores. Start with a diagnostic and follow your plan.</>}
-        primaryCta={{ href: '/sat-diagnostic', label: 'Start with the Diagnostic' }}
+        primaryCta={{ href: '/sat-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/psat-practice', label: 'Take a Practice Test' }}
         accentFrom="indigo"
         accentTo="blue"

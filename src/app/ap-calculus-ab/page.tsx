@@ -160,7 +160,7 @@ export default function APCalculusABHub() {
       <CourseHero
         courseName='AP Calculus AB'
         tagline='154+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
-        primaryCta={{ href: '/calcab-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/calcab-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-calculus-ab', label: 'Browse Lessons' }}
         accentFrom="orange"
         accentTo="amber"

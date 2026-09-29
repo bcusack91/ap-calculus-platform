@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-us-gov-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APUSGovFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-us-gov-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-us-gov-frq', reason: 'frq', label: 'AP US Government' }))
     }
   }, [status, router])
 

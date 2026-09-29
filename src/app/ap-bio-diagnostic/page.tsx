@@ -19,6 +19,7 @@ import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -72,7 +73,7 @@ export default function APBioDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-bio-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-bio-diagnostic', reason: 'diagnostic', label: 'AP Biology' }))
     }
   }, [status, router])
 

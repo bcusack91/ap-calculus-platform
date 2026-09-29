@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-bio-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APBioFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-bio-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-bio-frq', reason: 'frq', label: 'AP Biology' }))
     }
   }, [status, router])
 

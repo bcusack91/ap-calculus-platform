@@ -62,7 +62,7 @@ export default function OrganicChemistry2Hub() {
         badgeIcon={<span>🎓</span>}
         badgeLabel='Second-semester organic chemistry · AP-equivalent rigor'
         tagline={<>Second-semester organic chemistry at AP-equivalent rigor &mdash; pericyclic reactions, the full aromatic/carbonyl/acyl-substitution machinery, enolate condensations, biomolecules, advanced 2D NMR, and full retrosynthetic planning. Includes a <strong>1&ndash;5 AP-equivalent score predictor</strong>.</>}
-        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/ochem2-score-predictor', label: 'View 1\u20135 Score Predictor', accent: 'teal' }}
         extraCtas={[{ href: '/courses/organic-chemistry-2', label: 'Browse Lessons', accent: 'emerald' }]}
         accentFrom="emerald"

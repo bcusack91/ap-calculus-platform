@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -57,7 +58,7 @@ export default function APEnglishLangDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-english-lang-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-english-lang-diagnostic', reason: 'diagnostic', label: 'AP English Language' }))
     }
   }, [status, router])
 

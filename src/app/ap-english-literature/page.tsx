@@ -220,7 +220,7 @@ export default function ApEnglishLiteratureHub() {
       <CourseHero
         courseName='AP English Literature'
         tagline='Interactive lessons on prose fiction, poetry, drama, figurative language, and literary analysis techniques.'
-        primaryCta={{ href: '/ap-english-lit-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-english-lit-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-english-literature', label: 'Browse Lessons' }}
         accentFrom="rose"
         accentTo="pink"

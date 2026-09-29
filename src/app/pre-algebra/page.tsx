@@ -97,7 +97,7 @@ export default function PreAlgebraHub() {
         courseName="Pre-Algebra"
         courseDescription={metadata.description as string}
         tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Pre-Algebra."
-        primaryCta={{ href: '/prealgebra-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/prealgebra-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/pre-algebra', label: 'Browse Lessons' }}
         finalCtaHref="/prealgebra-diagnostic"
         accent="amber"

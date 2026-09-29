@@ -185,7 +185,7 @@ export default function ApComputerScienceAHub() {
       <CourseHero
         courseName='AP Computer Science A'
         tagline='Interactive lessons on Java programming — variables, control flow, arrays, OOP, inheritance, and algorithms.'
-        primaryCta={{ href: '/ap-csa-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-csa-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-computer-science-a', label: 'Browse Lessons' }}
         accentFrom="amber"
         accentTo="orange"

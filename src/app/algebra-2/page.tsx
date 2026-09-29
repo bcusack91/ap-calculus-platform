@@ -97,7 +97,7 @@ export default function Algebra2Hub() {
         courseName="Algebra 2"
         courseDescription={metadata.description as string}
         tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Algebra 2."
-        primaryCta={{ href: '/algebra2-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/algebra2-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/algebra-2', label: 'Browse Lessons' }}
         finalCtaHref="/algebra2-diagnostic"
         accent="cyan"

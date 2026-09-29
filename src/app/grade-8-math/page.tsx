@@ -97,7 +97,7 @@ export default function Grade8MathHub() {
         courseName="Grade 8 Math"
         courseDescription={metadata.description as string}
         tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace 8th grade math."
-        primaryCta={{ href: '/grade8-math-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/grade8-math-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/grade-8-math', label: 'Browse Lessons' }}
         finalCtaHref="/grade8-math-diagnostic"
         accent="violet"

@@ -220,7 +220,7 @@ export default function ApWorldHistoryHub() {
       <CourseHero
         courseName="AP World History"
         tagline='From ancient civilizations to modern globalization — interactive lessons covering every AP World History period.'
-        primaryCta={{ href: '/ap-world-history-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-world-history-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-world-history', label: 'Browse Lessons' }}
         accentFrom="amber"
         accentTo="orange"

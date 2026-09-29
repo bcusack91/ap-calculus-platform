@@ -185,7 +185,7 @@ export default function ApUsHistoryHub() {
       <CourseHero
         courseName='AP US History'
         tagline='From colonial America to the modern era — interactive lessons covering every APUSH period with DBQ and LEQ practice.'
-        primaryCta={{ href: '/ap-us-history-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-us-history-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-us-history', label: 'Browse Lessons' }}
         accentFrom="red"
         accentTo="rose"

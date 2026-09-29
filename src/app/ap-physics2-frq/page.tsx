@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-physics-2-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APPhysics2FRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-physics2-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-physics2-frq', reason: 'frq', label: 'AP Physics 2' }))
     }
   }, [status, router])
 

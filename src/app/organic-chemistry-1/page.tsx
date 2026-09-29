@@ -61,7 +61,7 @@ export default function OrganicChemistry1Hub() {
         tagline={<>Structure and bonding, stereochemistry, substitution and elimination, alkene/alkyne/radical reactions, alcohols, and 1D spectroscopy. Includes a <strong>1&ndash;5 AP-equivalent score predictor</strong>.</>}
         badgeIcon={<span>🎓</span>}
         badgeLabel='First-semester organic chemistry · AP-equivalent rigor'
-        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/ochem1-score-predictor', label: 'View 1\u20135 Score Predictor', accent: 'emerald' }}
         extraCtas={[{ href: '/courses/organic-chemistry-1', label: 'Browse Lessons', accent: 'lime' }]}
         accentFrom="lime"

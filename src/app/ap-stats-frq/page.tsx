@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-stats-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APStatsFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-stats-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-stats-frq', reason: 'frq', label: 'AP Statistics' }))
     }
   }, [status, router])
 

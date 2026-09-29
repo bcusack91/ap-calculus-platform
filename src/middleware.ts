@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 import { getToken } from 'next-auth/jwt'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
+import { authReasonForPath, signInUrl, signUpUrl } from '@/lib/auth-redirect'
 
 // ── API Rate Limiter (optional — skipped if Upstash not configured) ──
 let apiRatelimit: Ratelimit | null = null
@@ -231,12 +232,19 @@ export async function middleware(request: NextRequest) {
   })
 
   if (!token) {
-    const signInUrl = new URL('/auth/signin', nextUrl.origin)
     // Preserve the query string too — join/share links carry their intent in
     // params (e.g. /competitive/join?code=ABC123), and dropping the search
     // stranded students on a blank join form after sign-in.
-    signInUrl.searchParams.set('callbackUrl', nextUrl.pathname + nextUrl.search)
-    return NextResponse.redirect(signInUrl)
+    const callbackUrl = nextUrl.pathname + nextUrl.search
+    // Most logged-out visitors to student pages have no account yet, so they
+    // get a contextual sign-UP page (with a "Sign in" link that keeps the
+    // callback). Teacher and admin pages are reached by existing accounts, so
+    // those still go straight to sign-in.
+    const staffOnly = nextUrl.pathname.startsWith('/teacher') || nextUrl.pathname.startsWith('/admin')
+    const target = staffOnly
+      ? signInUrl({ callbackUrl })
+      : signUpUrl({ callbackUrl, reason: authReasonForPath(nextUrl.pathname) })
+    return NextResponse.redirect(new URL(target, nextUrl.origin))
   }
 
   const role = token.role as string

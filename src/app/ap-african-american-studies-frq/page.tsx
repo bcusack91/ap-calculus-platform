@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-african-american-studies-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APAASFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-african-american-studies-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-african-american-studies-frq', reason: 'frq', label: 'AP African American Studies' }))
     }
   }, [status, router])
 

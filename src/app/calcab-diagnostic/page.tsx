@@ -20,6 +20,7 @@ import {
   type CalcABDiagnosticTestData,
   type CalcABDiagnosticResults,
 } from '@/data/ap-calculus-ab-diagnostic'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function renderLatex(text: string): string {
   try {
@@ -79,7 +80,7 @@ export default function CalcABDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/calcab-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/calcab-diagnostic', reason: 'diagnostic', label: 'AP Calculus AB' }))
     }
   }, [status, router])
 

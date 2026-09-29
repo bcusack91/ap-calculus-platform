@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-psych-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APPsychFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-psych-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-psych-frq', reason: 'frq', label: 'AP Psychology' }))
     }
   }, [status, router])
 

@@ -3,7 +3,9 @@
 import { useState, useEffect }  from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import Link from 'next/link'
+import { signUpUrl } from '@/lib/auth-redirect'
+import { diagnosticRouteForCourseSlug } from '@/lib/onboarding-destination'
+import { getCourseHref } from '@/data/course-metadata'
 
 interface CourseOption {
   slug: string
@@ -30,6 +32,7 @@ const COURSE_GROUPS = [
       { slug: 'algebra-1', name: 'Algebra 1', icon: '📊', description: 'Linear equations, functions' },
       { slug: 'geometry', name: 'Geometry', icon: '📐', description: 'Shapes, angles, proofs' },
       { slug: 'algebra-2', name: 'Algebra 2', icon: '🔣', description: 'Advanced functions, logs' },
+      { slug: 'precalculus', name: 'Precalculus', icon: '🧭', description: 'Functions, trig, vectors, sequences' },
       { slug: 'ap-precalculus', name: 'AP Precalculus', icon: '📈', description: 'Functions, trig, vectors' },
     ],
   },
@@ -81,8 +84,16 @@ const COURSE_GROUPS = [
     ],
   },
   {
+    label: 'College Sciences',
+    courses: [
+      { slug: 'organic-chemistry-1', name: 'Organic Chemistry I', icon: '⚗️', description: 'Structure, stereochem, SN/E, spectroscopy' },
+      { slug: 'organic-chemistry-2', name: 'Organic Chemistry II', icon: '🧪', description: 'Aromatics, carbonyls, retrosynthesis' },
+    ],
+  },
+  {
     label: 'Test Prep',
     courses: [
+      { slug: 'psat', name: 'PSAT/NMSQT', icon: '🎯', description: 'Same skills as the Digital SAT' },
       { slug: 'sat-prep', name: 'SAT Prep', icon: '📝', description: 'Math, Reading, Writing' },
       { slug: 'act-prep', name: 'ACT Prep', icon: '📋', description: 'Math, English, Reading, Science' },
       { slug: 'mcat-prep', name: 'MCAT Prep', icon: '🏥', description: 'Science sections' },
@@ -104,12 +115,50 @@ export default function OnboardingPage() {
   const [selectedGoal, setSelectedGoal] = useState('')
   const [selectedCourse, setSelectedCourse] = useState<CourseOption | null>(null)
   const [saving, setSaving] = useState(false)
+  // Until we know whether this account already finished (or skipped)
+  // onboarding, show the spinner instead of flashing the wizard.
+  const [checked, setChecked] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/onboarding')
+      router.push(signUpUrl({ callbackUrl: '/onboarding', reason: 'generic' }))
+      return
+    }
+    if (status !== 'authenticated') return
+    // "Sign up with Google" now lands here by default, and so does an existing
+    // user who clicks it — send anyone already onboarded to the dashboard.
+    let cancelled = false
+    fetch('/api/onboarding')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((d) => {
+        if (cancelled) return
+        if (d?.hasCompletedOnboarding) router.replace('/dashboard')
+        else setChecked(true)
+      })
+      .catch(() => {
+        if (!cancelled) setChecked(true)
+      })
+    return () => {
+      cancelled = true
     }
   }, [status, router])
+
+  // "Skip for now" is remembered server-side so the dashboard stops sending
+  // the user back here. The ?from=onboarding param stops the loop even if the
+  // save itself fails.
+  const handleSkip = async () => {
+    setSaving(true)
+    try {
+      await fetch('/api/onboarding', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ skipped: true }),
+      })
+    } catch {
+      /* the query param below still breaks the loop */
+    }
+    router.push('/dashboard?from=onboarding')
+  }
 
   const handleComplete = async () => {
     if (!selectedCourse) return
@@ -128,19 +177,27 @@ export default function OnboardingPage() {
         }),
       })
       const data = await res.json()
-      if (data.firstTopic) {
-        router.push(`/topics/${data.firstTopic}`)
+      if (res.ok && typeof data.destination === 'string' && data.destination.startsWith('/')) {
+        router.push(data.destination)
       } else {
-        router.push(`/courses/${selectedCourse.slug}`)
+        router.push(getCourseHref(selectedCourse.slug))
       }
     } catch {
-      router.push('/dashboard')
+      router.push('/dashboard?from=onboarding')
     } finally {
       setSaving(false)
     }
   }
 
-  if (status === 'loading') {
+  // Mirrors onboardingDestination(): what "Start" will open, for the copy.
+  const nextStep: 'diagnostic' | 'hub' | 'lesson' =
+    selectedGoal === 'just-browsing'
+      ? 'hub'
+      : selectedCourse && diagnosticRouteForCourseSlug(selectedCourse.slug)
+        ? 'diagnostic'
+        : 'lesson'
+
+  if (status !== 'authenticated' || !checked) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
@@ -200,9 +257,14 @@ export default function OnboardingPage() {
                 </button>
               ))}
             </div>
-            <Link href="/dashboard" className="inline-block mt-8 text-sm text-gray-500 dark:text-gray-400 hover:text-accent">
+            <button
+              type="button"
+              onClick={handleSkip}
+              disabled={saving}
+              className="inline-block mt-8 text-sm text-gray-500 dark:text-gray-400 hover:text-accent disabled:opacity-50"
+            >
               Skip for now →
-            </Link>
+            </button>
           </div>
         )}
 
@@ -252,9 +314,14 @@ export default function OnboardingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Link href="/dashboard" className="text-sm text-gray-500 dark:text-gray-400 hover:text-accent">
+              <button
+                type="button"
+                onClick={handleSkip}
+                disabled={saving}
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-accent disabled:opacity-50"
+              >
                 Skip for now →
-              </Link>
+              </button>
             </div>
           </div>
         )}
@@ -273,17 +340,24 @@ export default function OnboardingPage() {
               Starting with <span className="font-semibold text-accent">{selectedCourse.name}</span>
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-10">
-              We&apos;ll guide you through the material step by step.
-              {selectedGoal === 'exam-prep' && " Focus on practice problems and flashcards for exam prep."}
-              {selectedGoal === 'catch-up' && " We'll start from the fundamentals and build up."}
-              {selectedGoal === 'get-ahead' && " Let's jump into new concepts!"}
+              {nextStep === 'diagnostic'
+                ? 'First, a free diagnostic. It shows what you already know and builds your personal study plan.'
+                : nextStep === 'hub'
+                  ? "We'll take you to the course page so you can look around."
+                  : "We'll guide you through the material step by step."}
             </p>
             <button
               onClick={handleComplete}
               disabled={saving}
               className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-accent to-accent-secondary rounded-xl hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg hover:shadow-xl disabled:opacity-50"
             >
-              {saving ? 'Setting up...' : 'Start Learning →'}
+              {saving
+                ? 'Setting up...'
+                : nextStep === 'diagnostic'
+                  ? 'Take the free diagnostic →'
+                  : nextStep === 'hub'
+                    ? 'Go to the course →'
+                    : 'Start Learning →'}
             </button>
             <p className="mt-6 text-xs text-gray-400">
               You can explore any other course anytime from the Courses menu.

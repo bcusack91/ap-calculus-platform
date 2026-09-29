@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-physics-c-mech-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -72,7 +73,7 @@ function APPhysicsCMechFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-physics-c-mech-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-physics-c-mech-frq', reason: 'frq', label: 'AP Physics C: Mechanics' }))
     }
   }, [status, router])
 

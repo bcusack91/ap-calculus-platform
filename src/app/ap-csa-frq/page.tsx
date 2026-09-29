@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-csa-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APCSAFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-csa-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-csa-frq', reason: 'frq', label: 'AP Computer Science A' }))
     }
   }, [status, router])
 

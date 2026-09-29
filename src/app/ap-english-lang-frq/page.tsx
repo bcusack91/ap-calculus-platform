@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-english-lang-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APEngLangFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-english-lang-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-english-lang-frq', reason: 'frq', label: 'AP English Language' }))
     }
   }, [status, router])
 

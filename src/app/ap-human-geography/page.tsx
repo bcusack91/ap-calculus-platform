@@ -185,7 +185,7 @@ export default function ApHumanGeographyHub() {
       <CourseHero
         courseName='AP Human Geography'
         tagline='Interactive lessons covering all units of AP Human Geography — population, culture, political geography, urbanization, and more.'
-        primaryCta={{ href: '/ap-human-geo-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-human-geo-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-human-geography', label: 'Browse Lessons' }}
         accentFrom="blue"
         accentTo="indigo"

@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-human-geo-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function gradeResponse(
   response: string,
@@ -60,7 +61,7 @@ function APHumanGeoFRQPageInner() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-human-geo-frq')
+      router.push(signUpUrl({ callbackUrl: '/ap-human-geo-frq', reason: 'frq', label: 'AP Human Geography' }))
     }
   }, [status, router])
 

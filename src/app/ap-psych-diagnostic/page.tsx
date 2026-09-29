@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -69,7 +70,7 @@ export default function APPsychDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-psych-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-psych-diagnostic', reason: 'diagnostic', label: 'AP Psychology' }))
     }
   }, [status, router])
 

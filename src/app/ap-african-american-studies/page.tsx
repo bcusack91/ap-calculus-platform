@@ -185,7 +185,7 @@ export default function ApAfricanAmericanStudiesHub() {
       <CourseHero
         courseName='AP African American Studies'
         tagline='Interactive lessons covering African origins, the diaspora, resistance, cultural movements, and contemporary issues.'
-        primaryCta={{ href: '/ap-african-american-studies-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/ap-african-american-studies-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-african-american-studies', label: 'Browse Lessons' }}
         accentFrom="amber"
         accentTo="yellow"

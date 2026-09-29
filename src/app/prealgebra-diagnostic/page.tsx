@@ -19,6 +19,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -58,7 +59,7 @@ export default function PreAlgebraDiagnosticPage() {
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/prealgebra-diagnostic')
+    if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/prealgebra-diagnostic', reason: 'diagnostic', label: 'Pre-Algebra' }))
   }, [status, router])
 
   useEffect(() => {

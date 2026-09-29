@@ -19,6 +19,7 @@ import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -60,7 +61,7 @@ export default function APStatsDiagnosticPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      router.push('/auth/signin?callbackUrl=/ap-stats-diagnostic')
+      router.push(signUpUrl({ callbackUrl: '/ap-stats-diagnostic', reason: 'diagnostic', label: 'AP Statistics' }))
     }
   }, [status, router])
 

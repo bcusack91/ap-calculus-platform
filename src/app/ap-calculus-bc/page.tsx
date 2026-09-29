@@ -148,7 +148,7 @@ export default function APCalculusBCHub() {
       <CourseHero
         courseName='AP Calculus BC'
         tagline='140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.'
-        primaryCta={{ href: '/calcbc-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/calcbc-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-calculus-bc', label: 'Browse Lessons' }}
         accentFrom="emerald"
         accentTo="teal"

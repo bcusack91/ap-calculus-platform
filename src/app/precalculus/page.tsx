@@ -118,7 +118,7 @@ export default function PrecalculusHub() {
         courseName="Precalculus"
         courseDescription={metadata.description as string}
         tagline="Diagnostics, unit tests, full practice tests, and day-by-day study plans — everything you need to get through Precalculus."
-        primaryCta={{ href: '/precalc-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/precalc-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/precalc-unit-tests', label: 'Browse Unit Tests' }}
         finalCtaHref="/precalc-diagnostic"
         accent="purple"

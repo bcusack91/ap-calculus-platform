@@ -174,7 +174,7 @@ export default function ACTLandingPage() {
       <CourseHero
         courseName='ACT'
         tagline='Interactive lessons, daily practice, flashcards, and competitive challenges across all four ACT sections — English, Math, Reading, and Science.'
-        primaryCta={{ href: '/act-diagnostic', label: 'Start with Diagnostic' }}
+        primaryCta={{ href: '/act-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/act-prep', label: 'Browse Lessons' }}
         accentFrom="red"
         accentTo="orange"
