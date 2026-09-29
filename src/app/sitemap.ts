@@ -9,6 +9,7 @@ import matter from 'gray-matter'
 import { topicHubs } from '@/data/topic-hubs'
 import { CRAM_PLANS, CRAM_PLAN_COURSE_SLUGS } from '@/data/cram-plans'
 import { courseHubPaths } from '@/data/course-metadata'
+import { HELP_ARTICLE_LIST } from '@/data/help/articles'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -53,6 +54,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    // Help center: static, indexable how-to articles.
+    {
+      url: `${baseUrl}/help`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    ...HELP_ARTICLE_LIST.map((article) => ({
+      url: `${baseUrl}/help/${article.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
     {
       url: `${baseUrl}/pricing`,
       lastModified: new Date(),
