@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
-import { Trophy, Search, Users, Info, Mail, CreditCard, LayoutGrid, User, Shield, LogOut } from 'lucide-react'
+import { Trophy, Search, Users, Info, Mail, CreditCard, LayoutGrid, User, Shield, LogOut, CircleHelp } from 'lucide-react'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
 import { courseMeta, sectionOrder, getCourseHref } from '@/data/course-metadata'
@@ -178,6 +178,9 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         </Link>
         <Link href="/pricing" className={linkClass('/pricing')} onClick={onClose}>
           <CreditCard className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> Pricing
+        </Link>
+        <Link href="/help" className={linkClass('/help')} onClick={onClose}>
+          <CircleHelp className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> Help &amp; getting started
         </Link>
         <Link href="/about" className={linkClass('/about')} onClick={onClose}>
           <Info className="inline w-4 h-4 mr-1.5 -mt-0.5 text-accent" aria-hidden /> About

@@ -9,6 +9,7 @@ import { PowerUpShop } from '@/components/PowerUps'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import AchievementBanner from '@/components/AchievementBanner'
 import { COMPETITIVE_COURSE_CATEGORIES } from '@/lib/competitive-catalog'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 interface CompetitiveProfile {
   rank: string
@@ -195,7 +196,7 @@ export default function CompetitivePage() {
       {
         done: !!requirements?.quizPassed,
         title: 'Pass any exit quiz (80%+)',
-        detail: 'Take an entrance or exit quiz from any course',
+        detail: 'Score 80% or better on any topic\'s exit quiz',
       },
       {
         done: !!requirements?.diagnosticPassed,
@@ -213,7 +214,10 @@ export default function CompetitivePage() {
         <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8">
           <div className="text-center">
             <Lock className="mx-auto mb-6 h-14 w-14 text-gray-400" aria-hidden />
-            <h1 className="text-4xl font-bold mb-4">Competitive Mode Locked</h1>
+            <h1 className="text-4xl font-bold mb-4">
+              Competitive Mode Locked{' '}
+              <HelpLink article={HELP_ARTICLES.competitiveMode} label="How Competitive Mode works" size={24} />
+            </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
               Unlock competitive challenges by doing any ONE of the following:
             </p>

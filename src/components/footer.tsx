@@ -25,6 +25,7 @@ const footerLinks = {
     { name: 'Pricing', href: '/pricing' },
   ],
   'Company': [
+    { name: 'Help & getting started', href: '/help' },
     { name: 'About', href: '/about' },
     { name: 'For Teachers', href: '/for-teachers' },
     { name: 'Blog', href: '/blog' },

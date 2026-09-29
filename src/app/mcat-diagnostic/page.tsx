@@ -22,6 +22,7 @@ import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 import { signUpUrl } from '@/lib/auth-redirect'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -920,7 +921,8 @@ export default function MCATDiagnosticPage() {
             {!planStatus?.canRetakeDiagnostic && planStatus?.pendingTopics?.length ? (
               <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-700 dark:bg-amber-900/20">
                 <h4 className="mb-2 text-sm font-bold text-amber-900 dark:text-amber-200">
-                  Next diagnostic is locked until remediation is complete
+                  Next diagnostic is locked until remediation is complete{' '}
+                  <HelpLink article={HELP_ARTICLES.whatClearedMeans} label="What does clearing a topic mean?" />
                 </h4>
                 <p className="mb-3 text-xs text-amber-800 dark:text-amber-300">
                   Scoring at least {planStatus.requiredScorePercent}% on a topic&apos;s exit quiz clears its requirement.

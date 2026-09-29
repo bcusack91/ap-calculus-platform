@@ -8,6 +8,7 @@ import FlashcardDailyLimits from '@/components/FlashcardDailyLimits'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { NextStudyStepButton } from '@/components/StudyPlanNextUp'
 import { FLASHCARD_UNLOCK_RULE } from '@/lib/flashcard-links'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 interface ReviewStats {
   total: number
@@ -168,7 +169,10 @@ export default function FlashcardReviewDashboard() {
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 No cards in your deck yet
               </h2>
-              <p className="text-lg text-gray-700 mb-6">{FLASHCARD_UNLOCK_RULE}</p>
+              <p className="text-lg text-gray-700 mb-6">
+                {FLASHCARD_UNLOCK_RULE}{' '}
+                <HelpLink article={HELP_ARTICLES.flashcardsLocked} label="Why are my flashcards locked?" />
+              </p>
               <NextStudyStepButton />
             </div>
           </div>

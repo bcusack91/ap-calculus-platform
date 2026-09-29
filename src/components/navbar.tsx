@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react'
 import { useEffectiveRole } from '@/lib/use-effective-role'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
-import { Trophy, Users, Info, Mail, CreditCard, LayoutGrid } from 'lucide-react'
+import { Trophy, Users, Info, Mail, CreditCard, LayoutGrid, CircleHelp } from 'lucide-react'
 import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
@@ -428,6 +428,9 @@ export function Navbar() {
                   </Link>
                   <Link href="/pricing" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     <CreditCard className="w-4 h-4 text-accent" aria-hidden /> Pricing
+                  </Link>
+                  <Link href="/help" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                    <CircleHelp className="w-4 h-4 text-accent" aria-hidden /> Help &amp; getting started
                   </Link>
                   <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     <Info className="w-4 h-4 text-accent" aria-hidden /> About

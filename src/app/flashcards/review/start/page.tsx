@@ -18,6 +18,7 @@ import { ClozeFlashcard } from '@/components/cloze-flashcard'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
 import { signUpUrl } from '@/lib/auth-redirect'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 const cardId = (c: FlashcardProgress) => c.flashcard.id
 
@@ -262,7 +263,10 @@ function FlashcardReviewSession() {
             <h1 className="text-3xl font-bold mb-4 text-foreground">
               {topicSlug ? `${prettifySlug(topicSlug)}: no cards in your deck yet` : 'Your deck is empty — for now'}
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">{FLASHCARD_UNLOCK_RULE}</p>
+            <p className="text-lg text-muted-foreground mb-8">
+              {FLASHCARD_UNLOCK_RULE}{' '}
+              <HelpLink article={HELP_ARTICLES.flashcardsLocked} label="Why are my flashcards locked?" />
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               {topicSlug ? (
                 <>
