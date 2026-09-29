@@ -9,6 +9,7 @@ import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 import { unitTestRouteFor, frqRouteFor } from '@/lib/course-activity-routes'
 import { toBankSlugs } from '@/lib/mcat-topic-map'
+import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 interface AssignmentItem {
   id: string
@@ -103,7 +104,10 @@ function getActionUrl(a: AssignmentItem): string {
       // Teacher-created set → the set viewer (carrying the assignment id so the
       // student can mark it studied). Otherwise fall back to topic flashcards.
       if (a.flashcardSetId) return `/flashcard-sets/${a.flashcardSetId}?assignment=${a.id}`
-      return slug ? `/flashcards/${slug}` : '/flashcards'
+      // Topic assignments open the RATED review session for that topic (the
+      // flip viewer at /flashcards/[slug] can't record a review, so it could
+      // never complete the assignment).
+      return slug ? topicFlashcardReviewHref(slug) : '/flashcards/review/start'
     case 'QUIZ':
       return slug ? `/topics/${slug}` : '/topics'
     case 'COMPETITIVE_PRACTICE': {

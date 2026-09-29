@@ -86,6 +86,18 @@ describe('GET /api/flashcards/review', () => {
     for (const c of qs) expect(carriesPredicate(c), `${c.model}.${c.op} leaks low-yield cards`).toBe(true)
   })
 
+  it('narrows to one topic by slug (the rated topic session) and reports that topic\'s deck size', async () => {
+    const { GET } = await import('@/app/api/flashcards/review/route')
+    const res = await GET(new NextRequest('http://localhost/api/flashcards/review?topicSlug=ap-chem-moles'))
+    const body = await res.json()
+    const qs = queueCalls()
+    for (const c of qs) expect(carriesPredicate(c), `${c.model}.${c.op} leaks low-yield cards`).toBe(true)
+    const topicScoped = qs.filter((c) => JSON.stringify(c.args.where).includes('"slug":"ap-chem-moles"'))
+    // due batch, due count, new count, later-today, next-upcoming, deck size
+    expect(topicScoped.length).toBeGreaterThanOrEqual(6)
+    expect(body.stats.filteredTotal).toBe(10)
+  })
+
   it('applies no yield filter when the student opted into every tier', async () => {
     includeLowPref = true
     const { GET } = await import('@/app/api/flashcards/review/route')

@@ -23,6 +23,7 @@ import BookmarkButton from '@/components/BookmarkButton'
 import StudyNotes from '@/components/StudyNotes'
 import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
@@ -904,20 +905,26 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           // No more unmastered parts — show exit quiz
           await openExitQuiz()
           return
+        } else {
+          // Every remaining part was tested out and there is no quiz left:
+          // this click finishes the lesson — show the completion panel.
+          setCompletedSections(new Set(sections.map((_, i) => i)))
         }
       } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
         // Show exit quiz regardless of completion destination
         await openExitQuiz()
         return
       } else if (entersCompetitiveModeOnComplete) {
-        // On final section, save full mastery then move to competitive mode
+        // On final section, save full mastery, then STAY on the completion
+        // panel (lessonFinished) — its primary action is the student's next
+        // study step, with Competitive Mode offered as a secondary link. Never
+        // auto-redirect a student off the completion screen (owner rule
+        // 2026-09-28: Competitive is secondary).
+        const allSections = new Set(sections.map((_, i) => i))
+        setCompletedSections(allSections)
         const finalSave = async () => {
           if (session?.user) {
             try {
-              // Mark all sections as complete and save with mastery 1.0
-              const allSections = new Set(sections.map((_, i) => i))
-              setCompletedSections(allSections)
-              
               await fetch('/api/progress/save', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -935,9 +942,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
               console.error('Failed to save final progress:', error)
             }
           }
-          // Route to course-specific competitive mode with the topic
-          // pre-selected (matches the exit-quiz completion handler).
-          router.push(competitiveHrefForCourse(courseSlug, topicSlug))
         }
         finalSave()
       } else {
@@ -1012,8 +1016,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     }))
 
     if (passed) {
-      // Passed! Navigate to course-specific competitive mode with topic pre-selected
-      router.push(competitiveHrefForCourse(courseSlug, topicSlug))
+      // Passed: the quiz's results screen already led with the next study
+      // step (and offered Competitive as a secondary link); this is its
+      // "Back to the lesson" action, so just return to the lesson.
     } else if (totalVariants > 1 && variant < totalVariants) {
       // Failed exit quiz and more variants available → advance to next variant
       const nextVariant = variant + 1
@@ -1077,6 +1082,47 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     setEntranceQuizLoading(false)
   }, [topicSlug, fallbackEntranceQuiz])
 
+  // Aced-entrance-quiz persistence, run as soon as the results screen shows
+  // every part mastered — BEFORE the student picks a destination — so the
+  // results screen can lead with the next study step (StudyPlanNextUp) and
+  // its links can navigate straight away without losing the test-out. One
+  // request carries masteredParts AND full mastery, so the flashcard unlock
+  // (entrance-mastery waiver in flashcard-unlock.ts) sees both together.
+  const entranceMasteryPersistedRef = useRef(false)
+  const persistEntranceMastery = useCallback(async (quizMasteredParts: Set<number>): Promise<{ saved: boolean }> => {
+    const masteredParts = new Set(
+      [...quizMasteredParts].filter((p) => Number.isInteger(p) && p >= 1 && p <= totalParts),
+    )
+    if (masteredParts.size !== totalParts) return { saved: false }
+    try {
+      localStorage.setItem(`entranceQuiz_${topicSlug}`, JSON.stringify(Array.from(masteredParts)))
+    } catch {}
+    if (!session?.user) return { saved: false }
+    try {
+      const res = await fetch('/api/progress/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topicId: cachedTopicId,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          lessonPart: totalParts,
+          completedSections: [],
+          masteryLevel: 1.0,
+          timeSpent: consumeTimeSpentSeconds(),
+          isPartCompletion: true,
+          masteredParts: Array.from(masteredParts),
+        }),
+      })
+      if (!res.ok) return { saved: false }
+      entranceMasteryPersistedRef.current = true
+      // Trigger competitive mode unlock check so the profile is created/updated
+      fetch('/api/competitive/unlock-check').catch(() => {})
+      return { saved: true }
+    } catch {
+      return { saved: false }
+    }
+  }, [totalParts, topicSlug, session?.user, cachedTopicId, consumeTimeSpentSeconds])
+
   // Entrance quiz completion: skip mastered parts, credit them
   const handleEntranceQuizComplete = useCallback((quizMasteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
     // Only parts this LESSON has can be credited. Several entrance quizzes
@@ -1099,7 +1145,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       } catch {}
       // Also persist server-side (TopicProgress.masteredParts) so skips sync
       // across devices (#29). The save route never downgrades mastery/status.
-      if (session?.user) {
+      // Already done when persistEntranceMastery ran for a full test-out.
+      if (session?.user && !entranceMasteryPersistedRef.current) {
         fetch('/api/progress/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1137,7 +1184,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     if (masteredParts.size === totalParts) {
       // All parts mastered! Save full mastery directly (bypasses calculatePartMastery
       // which would return ~0 since lessonPart/completedSections haven't advanced yet)
-      if (session?.user) {
+      // — unless persistEntranceMastery already saved it from the results screen.
+      if (session?.user && !entranceMasteryPersistedRef.current) {
         fetch('/api/progress/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1222,10 +1270,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   // Lesson fully finished on THIS surface: viewing the last section of the
   // final unmastered part with every section complete, and no exit quiz left
-  // to take (passing one routes to competitive mode, so with a pending quiz
-  // this state is never "done"). Competitive-destination lessons also route
-  // away on completion, so they never linger here either. Drives the
-  // study-plan "next up" panel below the navigation buttons.
+  // to take. Drives the completion panel below the navigation buttons (next
+  // study step first, Competitive Mode secondary) — including for lessons
+  // configured with completionDestination 'competitive', which no longer
+  // auto-redirect.
   const hasLaterUnmasteredPart = (() => {
     for (let i = lessonPart + 1; i <= totalParts; i++) {
       if (!entranceQuizMasteredParts.has(i)) return true
@@ -1237,8 +1285,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     sections.length > 0 &&
     currentSectionIndex === sections.length - 1 &&
     completedSections.size >= sections.length &&
-    (!topicHasExitQuiz || exitQuizStatus.hasPassed) &&
-    !entersCompetitiveModeOnComplete
+    (!topicHasExitQuiz || exitQuizStatus.hasPassed)
 
   // Keyboard navigation for lessons
   useLessonKeyboard({
@@ -1248,6 +1295,28 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     canGoPrevious: !!currentSection && currentSectionIndex > 0,
     enabled: !showPracticeMode && !!currentSection,
   })
+
+  // "Lesson Complete!" fallback when there is no study-plan next step.
+  const lessonCompleteFallback = (secondary: boolean) => (
+    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+      <Link
+        href={courseSlug ? `/courses/${courseSlug}` : '/topics'}
+        className={
+          secondary
+            ? 'px-6 py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 text-center'
+            : 'px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg text-center'
+        }
+      >
+        Back to course
+      </Link>
+      <Link
+        href="/topics"
+        className="px-6 py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 text-center"
+      >
+        Browse more topics
+      </Link>
+    </div>
+  )
 
   // Lesson title for progress bar and bookmark
   const lessonTitle = preloadedParts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
@@ -1324,6 +1393,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         questions={entranceQuizQuestions}
         partTitles={entranceQuizParts}
         onComplete={handleEntranceQuizComplete}
+        onAllPartsMastered={persistEntranceMastery}
         onCancel={() => setEntranceQuizPhase(null)}
       />
     )
@@ -1585,9 +1655,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                 if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
                   return (<><span className="sm:hidden">📝 Quiz →</span><span className="hidden sm:inline">📝 Take Exit Quiz →</span></>)
                 }
-                if (entersCompetitiveModeOnComplete) {
-                  return (<><span className="sm:hidden">🎮 Compete →</span><span className="hidden sm:inline">🎮 Enter Competitive Mode →</span></>)
-                }
                 return (<><span className="sm:hidden">✅ Done!</span><span className="hidden sm:inline">✅ Lesson Complete!</span></>)
               })()}
         </button>
@@ -1600,14 +1667,36 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         </div>
       )}
 
-      {/* Study-plan routing on lesson completion: if this topic was one of
-          the student's diagnostic recommendations, point them at the next one
-          (or the diagnostic retake once the plan is done), plus a flashcards-
-          unlocked notice. Fetches on mount — i.e. only once the lesson is
-          finished — and renders nothing for topics outside any plan or on any
-          fetch failure. Signed-out students skip it entirely. */}
-      {lessonFinished && session?.user && (
-        <StudyPlanNextUp topicSlug={topicSlug} completion="lesson" />
+      {/* Lesson complete — never a dead end. Primary: the study-plan next
+          step when this topic is one of the student's diagnostic
+          recommendations (StudyPlanNextUp fetches on mount, i.e. only once
+          the lesson is finished), else this topic's flashcards to rate, else
+          "Back to course" / "Browse more topics". Competitive Mode is a
+          secondary link. Signed-out students get the fallback directly. */}
+      {lessonFinished && (
+        <div
+          data-testid="lesson-complete-panel"
+          className="rounded-2xl border-2 border-green-200 dark:border-green-800 bg-white/95 dark:bg-gray-800/95 p-6 text-center shadow-md"
+        >
+          <p className="text-xl font-bold text-gray-900 dark:text-white">🎉 Lesson complete!</p>
+          {session?.user ? (
+            <StudyPlanNextUp
+              topicSlug={topicSlug}
+              completion="lesson"
+              fallback={({ cardsToReview }) => lessonCompleteFallback(cardsToReview > 0)}
+            />
+          ) : (
+            <div className="mt-4">{lessonCompleteFallback(false)}</div>
+          )}
+          <div className="mt-4 text-sm">
+            <Link
+              href={competitiveHrefForCourse(courseSlug, topicSlug)}
+              className="text-gray-600 dark:text-gray-300 hover:underline"
+            >
+              ⚔️ Try Competitive Mode
+            </Link>
+          </div>
+        </div>
       )}
 
 
@@ -1629,6 +1718,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         newCards={flashcardNotificationData.newCards}
         totalActive={flashcardNotificationData.totalActive}
         topicTitle={flashcardNotificationData.topicTitle}
+        topicSlug={topicSlug}
         onDismiss={() => {
           setShowFlashcardNotification(false)
           setFlashcardNotificationData(null)

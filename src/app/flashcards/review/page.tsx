@@ -6,6 +6,8 @@ import Link from 'next/link'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 import FlashcardDailyLimits from '@/components/FlashcardDailyLimits'
 import { formatTimeUntil } from '@/lib/format-due-time'
+import { NextStudyStepButton } from '@/components/StudyPlanNextUp'
+import { FLASHCARD_UNLOCK_RULE } from '@/lib/flashcard-links'
 
 interface ReviewStats {
   total: number
@@ -157,6 +159,19 @@ export default function FlashcardReviewDashboard() {
               </p>
             </div>
           </div>
+        ) : stats && stats.total === 0 ? (
+          /* Zero unlocked cards: explain the unlock rule and point at the
+             next study step — "All Caught Up!" would be misleading. */
+          <div className="bg-gradient-to-r from-accent-subtle to-blue-50 border-2 border-accent-muted rounded-xl p-8 mb-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">🎴</div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                No cards in your deck yet
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">{FLASHCARD_UNLOCK_RULE}</p>
+              <NextStudyStepButton />
+            </div>
+          </div>
         ) : (
           <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-2 border-green-300 rounded-xl p-8 mb-8">
             <div className="text-center">
@@ -167,7 +182,7 @@ export default function FlashcardReviewDashboard() {
               <p className="text-lg text-gray-700 mb-6">
                 {stats?.nextDueAt
                   ? `No cards due right now — your next review is ${formatTimeUntil(stats.nextDueAt)}.`
-                  : 'No cards due right now. Keep learning to add more!'}
+                  : `No cards due right now. ${FLASHCARD_UNLOCK_RULE}`}
               </p>
             </div>
           </div>
@@ -187,9 +202,9 @@ export default function FlashcardReviewDashboard() {
                 1
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-2">Complete a Topic</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Finish a Topic&apos;s Lesson and Exit Quiz</h3>
                 <p className="text-gray-600">
-                  When you finish a topic or pass a check for understanding, flashcards are automatically generated from the key concepts, equations, and definitions.
+                  {FLASHCARD_UNLOCK_RULE} Testing out of every part with the entrance quiz counts too. New cards are then introduced up to your daily new-card limit.
                 </p>
               </div>
             </div>
@@ -238,7 +253,7 @@ export default function FlashcardReviewDashboard() {
           <ul className="space-y-2 text-sm text-blue-900">
             <li>• Review daily for best results (even just 5-10 minutes)</li>
             <li>• Be honest with your ratings - it helps the algorithm work better</li>
-            <li>• New cards appear immediately after completing topics</li>
+            <li>• New cards join your deck when you finish a topic&apos;s lesson and take its exit quiz</li>
             <li>• The more you use it, the smarter the scheduling becomes</li>
             <li>• Struggling with a card? Hit &quot;Again&quot; to see it sooner</li>
           </ul>
@@ -261,7 +276,7 @@ export default function FlashcardReviewDashboard() {
           >
             <div className="text-2xl mb-2">🎯</div>
             <h3 className="font-bold text-gray-900 mb-1">Continue Learning</h3>
-            <p className="text-sm text-gray-600">Complete more topics to add flashcards</p>
+            <p className="text-sm text-gray-600">Finish a lesson and its exit quiz to add that topic&apos;s cards</p>
           </Link>
         </div>
       </div>

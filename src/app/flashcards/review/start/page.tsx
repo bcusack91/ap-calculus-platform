@@ -1,8 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { NextStudyStepButton } from '@/components/StudyPlanNextUp'
+import { FLASHCARD_UNLOCK_RULE, topicFlashcardBrowseHref } from '@/lib/flashcard-links'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import { previewIntervals, formatIntervalShort } from '@/lib/spaced-repetition'
@@ -14,6 +17,7 @@ import { detectCloze } from '@/lib/cloze-utils'
 import { ClozeFlashcard } from '@/components/cloze-flashcard'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
+import { signUpUrl } from '@/lib/auth-redirect'
 
 const cardId = (c: FlashcardProgress) => c.flashcard.id
 
@@ -50,10 +54,41 @@ interface ReviewStats {
   dueLaterToday: number
   /** ISO timestamp of the next upcoming card, or null when none scheduled. */
   nextDueAt: string | null
+  /** Topic-filtered sessions only: this topic's cards already in the deck. */
+  filteredTotal?: number
 }
 
+function prettifySlug(slug: string): string {
+  return slug.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
+}
+
+/**
+ * The rated spaced-repetition session. `?topic=<slug>` limits it to one
+ * topic's unlocked cards — every "study these cards" link on the site
+ * (topic pages, study plan, assignments, catalog) lands here, so ratings are
+ * recorded and the study-plan "rate this topic's cards first" hold releases.
+ */
 export default function FlashcardReviewPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="container py-10">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
+            <p className="mt-4 text-muted-foreground">Loading your flashcards...</p>
+          </div>
+        </div>
+      }
+    >
+      <FlashcardReviewSession />
+    </Suspense>
+  )
+}
+
+function FlashcardReviewSession() {
   const { status } = useSession()
+  const searchParams = useSearchParams()
+  const topicSlug = searchParams.get('topic')?.trim() || null
   const [cards, setCards] = useState<FlashcardProgress[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
@@ -66,15 +101,10 @@ export default function FlashcardReviewPage() {
   // come back mid-batch as soon as they're due, instead of after the batch.
   const [pending, setPending] = useState<PendingCard<FlashcardProgress>[]>([])
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      loadDueCards()
-    }
-  }, [status])
-
-  async function loadDueCards() {
+  const loadDueCards = useCallback(async () => {
     try {
-      const response = await fetch(`/api/flashcards/review?tzOffset=${new Date().getTimezoneOffset()}`)
+      const topicParam = topicSlug ? `&topicSlug=${encodeURIComponent(topicSlug)}` : ''
+      const response = await fetch(`/api/flashcards/review?tzOffset=${new Date().getTimezoneOffset()}${topicParam}`)
       if (!response.ok) throw new Error('Failed to load flashcards')
 
       const data = await response.json()
@@ -96,7 +126,13 @@ export default function FlashcardReviewPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [topicSlug])
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadDueCards()
+    }
+  }, [status, loadDueCards])
 
   // On the completion screen, tick every 20s so the "next card in N minutes"
   // countdown stays fresh — and automatically pull the queue again once the
@@ -112,7 +148,7 @@ export default function FlashcardReviewPage() {
   useEffect(() => {
     if (!reviewComplete || !nextDueAt) return
     if (new Date(nextDueAt).getTime() <= nowTick) loadDueCards()
-  }, [nowTick, reviewComplete, nextDueAt])
+  }, [nowTick, reviewComplete, nextDueAt, loadDueCards])
 
   async function handleRating(rating: 'again' | 'hard' | 'good' | 'easy') {
     if (reviewing) return // Prevent double-clicks
@@ -188,16 +224,66 @@ export default function FlashcardReviewPage() {
     return (
       <div className="container py-10">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-3xl font-bold mb-4">Sign In Required</h1>
+          <h1 className="text-3xl font-bold mb-4">Save your flashcard progress</h1>
           <p className="text-lg text-muted-foreground mb-6">
-            Please sign in to review your flashcards with spaced repetition.
+            Create a free account (or sign in) to review flashcards with spaced repetition and keep your progress.
           </p>
-          <Link
-            href="/auth/signin"
-            className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
-          >
-            Sign In
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href={signUpUrl({ callbackUrl: topicSlug ? `/flashcards/review/start?topic=${encodeURIComponent(topicSlug)}` : '/flashcards/review/start', reason: 'generic' })}
+              className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
+            >
+              Create a free account
+            </Link>
+            {topicSlug && (
+              <Link
+                href={topicFlashcardBrowseHref(topicSlug)}
+                className="inline-block px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
+              >
+                Browse these cards without an account
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Nothing unlocked (for this topic, or at all): say HOW cards get into the
+  // deck and point at the next study step, instead of a misleading
+  // "All Caught Up!".
+  const deckSize = topicSlug ? stats?.filteredTotal : stats?.total
+  if ((reviewComplete || cards.length === 0) && stats && deckSize === 0) {
+    return (
+      <div className="container py-10">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center bg-card border-2 border-accent-light dark:border-accent/40 rounded-xl p-10">
+            <div className="text-6xl mb-4">🎴</div>
+            <h1 className="text-3xl font-bold mb-4 text-foreground">
+              {topicSlug ? `${prettifySlug(topicSlug)}: no cards in your deck yet` : 'Your deck is empty — for now'}
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8">{FLASHCARD_UNLOCK_RULE}</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              {topicSlug ? (
+                <>
+                  <Link
+                    href={`/topics/${topicSlug}/interactive`}
+                    className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
+                  >
+                    Start this topic&apos;s lesson →
+                  </Link>
+                  <Link
+                    href={topicFlashcardBrowseHref(topicSlug)}
+                    className="px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
+                  >
+                    Browse the cards
+                  </Link>
+                </>
+              ) : (
+                <NextStudyStepButton />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -212,12 +298,18 @@ export default function FlashcardReviewPage() {
           <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950/40 dark:to-blue-950/40 border-2 border-green-300 dark:border-green-700 rounded-xl p-12">
             <div className="text-6xl mb-4">{moreToday > 0 ? '⏳' : '🎉'}</div>
             <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-              {moreToday > 0 ? 'Done for now — but not for today!' : 'All Caught Up!'}
+              {moreToday > 0
+                ? 'Done for now — but not for today!'
+                : topicSlug
+                  ? 'This topic’s cards are done for now!'
+                  : 'All Caught Up!'}
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
               {moreToday > 0
                 ? 'You’ve cleared everything due right now. Spaced repetition brings cards back after a short wait — that second look is where the learning sticks.'
-                : 'You’ve reviewed all your due flashcards. Great work!'}
+                : topicSlug
+                  ? 'You’ve rated every card due in this topic. Keep going with your next topic.'
+                  : 'You’ve reviewed all your due flashcards. Great work!'}
             </p>
 
             {moreToday > 0 && (
@@ -265,19 +357,23 @@ export default function FlashcardReviewPage() {
               </div>
             )}
 
-            <div className="flex gap-4 justify-center">
-              <Link
-                href="/flashcards"
-                className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
-              >
-                Browse All Flashcards
-              </Link>
-              <Link
-                href="/topics"
-                className="px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
-              >
-                Continue Learning
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <NextStudyStepButton fallbackLabel="Continue learning" />
+              {topicSlug ? (
+                <Link
+                  href="/flashcards/review/start"
+                  className="px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
+                >
+                  Review all my due cards
+                </Link>
+              ) : (
+                <Link
+                  href="/flashcards"
+                  className="px-6 py-3 bg-card border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
+                >
+                  Browse All Flashcards
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -297,9 +393,13 @@ export default function FlashcardReviewPage() {
           <Link href="/flashcards/review" className="text-accent hover:underline mb-2 inline-block">
             ← Back to Review Dashboard
           </Link>
-          <h1 className="text-3xl font-bold mb-2">Flashcard Review</h1>
+          <h1 className="text-3xl font-bold mb-2">
+            {topicSlug
+              ? `Flashcard Review: ${cards[0]?.flashcard.topic.title || prettifySlug(topicSlug)}`
+              : 'Flashcard Review'}
+          </h1>
           <p className="text-muted-foreground">
-            Card {currentIndex + 1} of {cards.length} • {stats?.due || 0} cards due today
+            Card {currentIndex + 1} of {cards.length} • {stats?.due || 0} cards due {topicSlug ? 'in this topic' : 'today'}
           </p>
         </div>
 

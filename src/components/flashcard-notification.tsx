@@ -2,16 +2,19 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
+import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 interface FlashcardNotificationProps {
   show: boolean
   newCards: number
   totalActive: number
   topicTitle: string
+  /** When set, "Review Now" opens the rated session for this topic's cards. */
+  topicSlug?: string
   onDismiss: () => void
 }
 
-export function FlashcardNotification({ show, newCards, totalActive, topicTitle, onDismiss }: FlashcardNotificationProps) {
+export function FlashcardNotification({ show, newCards, totalActive, topicTitle, topicSlug, onDismiss }: FlashcardNotificationProps) {
   const [visible, setVisible] = useState(false)
 
   const handleDismiss = useCallback(() => {
@@ -60,7 +63,7 @@ export function FlashcardNotification({ show, newCards, totalActive, topicTitle,
             </p>
             <div className="flex gap-2">
               <Link
-                href="/flashcards/review/start"
+                href={topicSlug ? topicFlashcardReviewHref(topicSlug) : '/flashcards/review/start'}
                 className="px-4 py-2 bg-white text-accent rounded-lg font-semibold text-sm hover:bg-accent-subtle transition-all"
                 onClick={handleDismiss}
               >

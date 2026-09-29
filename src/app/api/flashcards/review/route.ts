@@ -159,8 +159,11 @@ export async function POST(req: NextRequest) {
 }
 
 /**
- * GET /api/flashcards/review?topicId=xxx or /api/flashcards/review (all due cards)
- * Get flashcards due for review
+ * GET /api/flashcards/review?topicId=xxx | ?topicSlug=xxx | ?courseSlug=xxx,
+ * or /api/flashcards/review (all due cards)
+ * Get flashcards due for review. topicSlug powers the topic-filtered rated
+ * session (/flashcards/review/start?topic=…) that every "study these cards"
+ * link opens.
  */
 export async function GET(req: NextRequest) {
   try {
@@ -194,16 +197,22 @@ export async function GET(req: NextRequest) {
     localDayEnd.setUTCHours(23, 59, 59, 999)
     const endOfStudentDay = new Date(localDayEnd.getTime() + tzOffsetMs)
 
-    // Optional narrowing: a single topic, or a whole course (used by course
-    // pages to show "N SAT flashcards due now"-style banners).
+    // Optional narrowing: a single topic (by id or slug), or a whole course
+    // (used by course pages to show "N SAT flashcards due now"-style banners).
     const courseSlug = searchParams.get('courseSlug')
+    const topicSlug = searchParams.get('topicSlug')?.trim() || null
     const flashcardFilter: Prisma.FlashcardWhereInput = {
       ...servedFlashcardWhere(prefs),
       ...(topicId ? { topicId } : {}),
-      ...(courseSlug ? { topic: { category: { course: { slug: courseSlug } } } } : {}),
+      ...(topicSlug
+        ? { topic: { slug: topicSlug } }
+        : courseSlug
+          ? { topic: { category: { course: { slug: courseSlug } } } }
+          : {}),
     }
+    const isFiltered = !!(topicId || topicSlug || courseSlug)
     const topicFilter: Prisma.FlashcardProgressWhereInput =
-      topicId || courseSlug ? { flashcard: flashcardFilter } : {}
+      isFiltered ? { flashcard: flashcardFilter } : {}
 
     const cardInclude = {
       flashcard: {
@@ -231,7 +240,7 @@ export async function GET(req: NextRequest) {
     //      forward into today's allowance.
     // Allowances shrink as reviews are logged (FlashcardDailyActivity), so
     // batch refetches naturally stop at the daily limits.
-    if (!topicId && !courseSlug) {
+    if (!isFiltered) {
       const dailyState = await getDailyQueueState(session.user.id, context, now)
 
       const [reviewRows, totalCards, dueLaterToday, nextUpcoming] = await Promise.all([
@@ -321,7 +330,7 @@ export async function GET(req: NextRequest) {
     // finished) plus REAL counts: deriving stats from the capped batch made
     // "Due Now" top out at 50 and showed "All Caught Up" with thousands of
     // cards still due.
-    const [dueCards, totalCards, dueCount, newCards, dueLaterToday, nextUpcoming] = await Promise.all([
+    const [dueCards, totalCards, dueCount, newCards, dueLaterToday, nextUpcoming, filteredTotal] = await Promise.all([
       prisma.flashcardProgress.findMany({
         where,
         include: cardInclude,
@@ -360,6 +369,16 @@ export async function GET(req: NextRequest) {
         orderBy: { nextReview: 'asc' },
         select: { nextReview: true },
       }),
+      // Cards of THIS topic/course already in the student's deck. Zero means
+      // "not unlocked yet" (vs. "all done for today"), so the session page can
+      // state the unlock rule instead of a misleading "All Caught Up!".
+      prisma.flashcardProgress.count({
+        where: {
+          userId: session.user.id,
+          context,
+          ...topicFilter,
+        },
+      }),
     ])
 
     const reviewCards = dueCount - newCards
@@ -372,7 +391,8 @@ export async function GET(req: NextRequest) {
         new: newCards,
         review: reviewCards,
         dueLaterToday,
-        nextDueAt: nextUpcoming?.nextReview ?? null
+        nextDueAt: nextUpcoming?.nextReview ?? null,
+        filteredTotal,
       }
     })
 

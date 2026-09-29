@@ -12,6 +12,7 @@ import { formatFlashcardContent } from '@/lib/format-flashcard-content'
 import { detectCloze } from '@/lib/cloze-utils'
 import { ClozeText } from '@/components/cloze-text'
 import { InArticleAd } from '@/components/ad-banner'
+import { FLASHCARD_UNLOCK_RULE, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 interface Flashcard {
   id: string
@@ -35,6 +36,12 @@ interface Topic {
   flashcards: Flashcard[]
 }
 
+/**
+ * BROWSE-only flip-through of every card in a topic. It cannot rate cards and
+ * ignores unlock state, study mode and daily limits, so every "study" link on
+ * the site goes to the rated session (topicFlashcardReviewHref) instead; this
+ * page points there with a "Study these cards" button.
+ */
 export default function FlashcardStudyPage() {
   const params = useParams()
   const slug = params.slug as string
@@ -45,6 +52,23 @@ export default function FlashcardStudyPage() {
   const [showHint, setShowHint] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  // How many of this topic's cards are already in the student's deck (active
+  // study mode). null = signed out / unknown — the note is simply omitted.
+  const [unlockedCount, setUnlockedCount] = useState<number | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/flashcards/review?topicSlug=${encodeURIComponent(slug)}&tzOffset=${new Date().getTimezoneOffset()}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((body) => {
+        const n = Number(body?.stats?.filteredTotal)
+        if (!cancelled && Number.isFinite(n)) setUnlockedCount(n)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [slug])
 
   useEffect(() => {
     async function loadTopic() {
@@ -171,10 +195,40 @@ export default function FlashcardStudyPage() {
           <Link href={`/topics/${topic.slug}`} className="text-accent hover:underline mb-4 inline-block">
             ← Back to Topic
           </Link>
-          <h1 className="text-3xl font-bold mb-2">{topic.title} - Flashcards</h1>
+          <h1 className="text-3xl font-bold mb-2">Browse cards: {topic.title}</h1>
           <p className="text-muted-foreground">
-            Card {currentIndex + 1} of {topic.flashcards.length}
+            Card {currentIndex + 1} of {topic.flashcards.length} · browsing doesn&apos;t record reviews
           </p>
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <Link
+              href={topicFlashcardReviewHref(topic.slug)}
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-accent hover:bg-accent-hover text-white font-semibold shadow"
+            >
+              Study these cards →
+            </Link>
+            <span className="text-sm text-muted-foreground">
+              Rate each card so spaced repetition can schedule it.
+            </span>
+          </div>
+          {unlockedCount !== null && (
+            <p className="mt-3 text-sm rounded-lg border border-card-border bg-card px-4 py-3 text-foreground">
+              {unlockedCount === 0 ? (
+                <>
+                  None of these cards are in your deck yet. {FLASHCARD_UNLOCK_RULE}{' '}
+                  <Link href={`/topics/${topic.slug}/interactive`} className="text-accent font-semibold hover:underline">
+                    Start this topic&apos;s lesson →
+                  </Link>
+                </>
+              ) : unlockedCount < topic.flashcards.length ? (
+                <>
+                  {unlockedCount} of {topic.flashcards.length} cards are in your deck. Some cards may be hidden by
+                  your exam-yield settings or not yet unlocked. {FLASHCARD_UNLOCK_RULE}
+                </>
+              ) : (
+                <>All {topic.flashcards.length} cards are in your deck.</>
+              )}
+            </p>
+          )}
         </div>
 
             {/* Progress Bar */}
@@ -318,18 +372,24 @@ export default function FlashcardStudyPage() {
               <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
                 <h3 className="text-xl font-bold text-green-900 mb-2">🎉 Great Job!</h3>
                 <p className="text-green-900 mb-4">
-                  You&apos;ve reviewed all {topic.flashcards.length} flashcards for this topic.
+                  You&apos;ve flipped through all {topic.flashcards.length} flashcards for this topic.
                 </p>
                 <div className="flex gap-4 justify-center">
+                  <Link
+                    href={topicFlashcardReviewHref(topic.slug)}
+                    className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold"
+                  >
+                    Study these cards
+                  </Link>
                   <button
                     onClick={() => {
                       setCurrentIndex(0)
                       setIsFlipped(false)
                       setShowHint(false)
                     }}
-                    className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold"
+                    className="px-4 py-2 rounded-lg bg-white border border-green-600 text-green-900 font-semibold hover:bg-green-50"
                   >
-                    Review Again
+                    Browse Again
                   </button>
                   <Link
                     href={`/topics/${topic.slug}`}

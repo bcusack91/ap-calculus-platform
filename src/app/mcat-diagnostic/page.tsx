@@ -21,6 +21,7 @@ import { DataVisual, DiagnosticPassageContent, FigureStudy } from '@/components/
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 import { signUpUrl } from '@/lib/auth-redirect'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -142,7 +143,7 @@ function RemediationTopicRow({ topic }: { topic: PlanTopicStatus }) {
         ) : null}
         {flashcardCount > 0 ? (
           <Link
-            href={topic.flashcardsPath ?? `/flashcards/${topic.slug}`}
+            href={topic.flashcardsPath ?? topicFlashcardReviewHref(topic.slug)}
             className="rounded-md border border-emerald-300 px-2.5 py-1 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
           >
             Flashcards ({flashcardCount})

@@ -32,6 +32,7 @@ import StudyNotes from '@/components/StudyNotes'
 import TrackedLink from '@/components/TrackedLink'
 import { getTopicAdVariant } from '@/lib/experiments'
 import { getBuildTimeTopicSlugs } from '@/lib/static-topic-params'
+import { FLASHCARD_UNLOCK_RULE, topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
@@ -275,8 +276,8 @@ export default async function TopicPage(props: TopicPageProps) {
                   </Link>
                 )}
                 {flashcardCount > 0 && (
-                  <Link href={`/flashcards/${topic.slug}`} className="inline-flex items-center justify-center rounded-md border border-accent-muted px-6 py-3 text-base font-semibold text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20">
-                    Flashcards ({flashcardCount})
+                  <Link href={topicFlashcardReviewHref(topic.slug)} className="inline-flex items-center justify-center rounded-md border border-accent-muted px-6 py-3 text-base font-semibold text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20">
+                    Study Flashcards ({flashcardCount})
                   </Link>
                 )}
                 {topicHasQuiz && (
@@ -698,7 +699,7 @@ export default async function TopicPage(props: TopicPageProps) {
             {/* Related Links with card styling */}
             <div className="mt-12 grid gap-4 sm:grid-cols-2">
               <Link
-                href={`/flashcards/${topic.slug}`}
+                href={topicFlashcardReviewHref(topic.slug)}
                 className="block rounded-lg border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-cyan-50 p-6 hover:shadow-lg transition-all hover:border-blue-400"
               >
                 <div className="flex items-center gap-3 mb-2">
@@ -706,7 +707,7 @@ export default async function TopicPage(props: TopicPageProps) {
                   <h3 className="font-semibold text-blue-900">Practice with Flashcards</h3>
                 </div>
                 <p className="text-sm text-blue-700">
-                  Review key concepts with our flashcard system
+                  Rate this topic&apos;s cards with spaced repetition. {FLASHCARD_UNLOCK_RULE}
                 </p>
               </Link>
               <Link
@@ -807,8 +808,11 @@ export default async function TopicPage(props: TopicPageProps) {
                   <Link href={`/categories/${topic.category.slug}`} className="block text-accent-hover hover:text-accent-dark hover:underline">
                     📂 {topic.category.name}
                   </Link>
-                  <Link href={`/flashcards/${topic.slug}`} className="block text-accent-hover hover:text-accent-dark hover:underline">
-                    🎴 Flashcards
+                  <Link href={topicFlashcardReviewHref(topic.slug)} className="block text-accent-hover hover:text-accent-dark hover:underline">
+                    🎴 Study flashcards
+                  </Link>
+                  <Link href={topicFlashcardBrowseHref(topic.slug)} className="block text-accent-hover hover:text-accent-dark hover:underline">
+                    🗂️ Browse cards
                   </Link>
                 </div>
               </div>

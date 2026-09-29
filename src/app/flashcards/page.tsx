@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 import { Layers, ChevronDown } from 'lucide-react'
+import { FLASHCARD_UNLOCK_RULE, topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -71,6 +72,12 @@ export default async function FlashcardsPage({
           >
             🎯 Start Review Session
           </Link>
+          {/* Static copy (this page is ISR — no per-student reads): the unlock
+              rule, so a student with an empty deck knows why. */}
+          <p className="mt-3 text-sm text-muted-foreground">
+            <span className="font-semibold text-foreground">How cards get into your deck:</span>{' '}
+            {FLASHCARD_UNLOCK_RULE} &ldquo;Study&rdquo; rates a topic&apos;s unlocked cards; &ldquo;Browse&rdquo; lets you flip through every card.
+          </p>
         </div>
 
         <div className="space-y-4 mt-8">
@@ -110,21 +117,29 @@ export default async function FlashcardsPage({
 
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 px-5 pb-5">
                   {category.topics.map((topic) => (
-                    <Link
+                    // "Study" opens the RATED session for this topic's
+                    // unlocked cards; "Browse" is the read-only flip viewer.
+                    <div
                       key={topic.id}
-                      href={`/flashcards/${topic.slug}`}
-                      className="block group/card rounded-xl bg-card border border-card-border p-6 hover:shadow-lg transition-all hover:border-accent-muted"
+                      className="block rounded-xl bg-card border border-card-border p-6 hover:shadow-lg transition-all hover:border-accent-muted"
                     >
-                      <h3 className="font-semibold mb-2 group-hover/card:text-accent transition-colors">
-                        {topic.title}
+                      <h3 className="font-semibold mb-2">
+                        <Link href={topicFlashcardReviewHref(topic.slug)} className="hover:text-accent transition-colors">
+                          {topic.title}
+                        </Link>
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {topic._count.flashcards} {topic._count.flashcards === 1 ? 'card' : 'cards'}
                       </p>
-                      <div className="mt-4 text-sm text-accent group-hover/card:underline">
-                        Study now →
+                      <div className="mt-4 flex items-center gap-4 text-sm">
+                        <Link href={topicFlashcardReviewHref(topic.slug)} className="text-accent hover:underline font-semibold">
+                          Study now →
+                        </Link>
+                        <Link href={topicFlashcardBrowseHref(topic.slug)} className="text-muted-foreground hover:underline">
+                          Browse cards
+                        </Link>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </details>

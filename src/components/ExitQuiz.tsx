@@ -4,7 +4,9 @@ import { useState, useEffect, useCallback, useMemo , useRef } from 'react'
 import ReportProblem from '@/components/ReportProblem'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
-import { EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
+import { EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION, TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { competitiveHrefForCourse } from '@/lib/competitive-course-map'
+import Link from 'next/link'
 import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
@@ -83,6 +85,14 @@ export default function ExitQuiz({
   const [showReference, setShowReference] = useState(false)
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
   const resolvedCourseSlug = courseSlug || getCourseSlugFromTopic(topicSlug)
+  // CourseEntranceQuiz reuses this component for COURSE-level quizzes
+  // (topicSlug === courseSlug). There is no topic to clear, no topic
+  // flashcards and no plan topic; its onComplete reveals the student's
+  // personalized topic list, which is that surface's next step.
+  const isCourseLevelQuiz = !!courseSlug && topicSlug === courseSlug
+  const courseHref = resolvedCourseSlug ? `/courses/${resolvedCourseSlug}` : '/topics'
+  const courseLabel = resolvedCourseSlug ? 'Back to course' : 'Browse more topics'
+  const competitiveHref = competitiveHrefForCourse(resolvedCourseSlug, isCourseLevelQuiz ? undefined : topicSlug)
 
   // Eagerly load KaTeX on mount
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
@@ -272,10 +282,12 @@ export default function ExitQuiz({
           {passed ? (
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-6">
               <p className="text-green-800 dark:text-green-300 font-semibold text-lg">
-                ⚔️ Competitive mode for this section is now unlocked!
+                {isCourseLevelQuiz ? 'You passed!' : 'You cleared this topic!'}
               </p>
               <p className="text-green-600 dark:text-green-400 text-sm mt-2">
-                You can now challenge other students in {topicTitle}.
+                {isCourseLevelQuiz
+                  ? `You scored at least ${TOPIC_CLEAR_PERCENT}% on ${topicTitle}.`
+                  : `${topicTitle} counts as done in your study plan, and its flashcards are now in your deck.`}
               </p>
             </div>
           ) : quizMustRedoUnit ? (
@@ -299,14 +311,101 @@ export default function ExitQuiz({
             </div>
           )}
 
-          {/* Study-plan routing: if this topic was one of the student's
-              diagnostic recommendations, point them at the next one (or the
-              diagnostic retake once the plan is done), plus a flashcards-
-              unlocked notice. Mounted only after the results POST settles so
-              the plan fetch sees this attempt; renders nothing for signed-out
-              students, topics outside any plan, or fetch failures. */}
-          {passed && submitSettled && (
-            <StudyPlanNextUp topicSlug={topicSlug} completion="quiz" quizPassed />
+          {/* NEXT STEP FIRST (owner rule 2026-09-28). The action row sits ABOVE
+              the answer review so a student never has to scroll past ten
+              explanations to find out what to do next. On a pass the primary
+              action is the student's next study step — the StudyPlanNextUp
+              panel's next topic when this topic is in their diagnostic plan,
+              else "Review your N flashcards" when this pass unlocked cards,
+              else "Back to course". Competitive Mode is a secondary link.
+              StudyPlanNextUp mounts only after the results POST settles so its
+              fetches see this attempt. */}
+          {passed ? (
+            <div className="mt-2">
+              {isCourseLevelQuiz ? (
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs, wrongPartNumbers)}
+                    className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
+                  >
+                    Continue →
+                  </button>
+                </div>
+              ) : submitSettled ? (
+                <StudyPlanNextUp
+                  topicSlug={topicSlug}
+                  completion="quiz"
+                  quizPassed
+                  fallback={({ cardsToReview }) => (
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                      <Link
+                        href={courseHref}
+                        className={
+                          cardsToReview > 0
+                            ? 'px-6 py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 text-center'
+                            : 'px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg text-center'
+                        }
+                      >
+                        {courseLabel}
+                      </Link>
+                    </div>
+                  )}
+                />
+              ) : (
+                <p className="text-sm text-gray-500 dark:text-gray-400" role="status">
+                  Saving your result…
+                </p>
+              )}
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+                {!isCourseLevelQuiz && (
+                  <button
+                    type="button"
+                    onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs, wrongPartNumbers)}
+                    className="text-gray-600 dark:text-gray-300 hover:underline"
+                  >
+                    ← Back to the lesson
+                  </button>
+                )}
+                {isCourseLevelQuiz && (
+                  <Link href={courseHref} className="text-gray-600 dark:text-gray-300 hover:underline">
+                    {courseLabel}
+                  </Link>
+                )}
+                <Link
+                  href={competitiveHref}
+                  className="text-gray-600 dark:text-gray-300 hover:underline"
+                >
+                  ⚔️ Try Competitive Mode
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-2 flex flex-col sm:flex-row gap-4 justify-center">
+              {quizMustRedoUnit ? (
+                <button
+                  onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs, wrongPartNumbers)}
+                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
+                >
+                  📚 Review This Section
+                </button>
+              ) : onRetake ? (
+                <button
+                  onClick={() => { onRetake(score, totalQuestions) }}
+                  disabled={!submitSettled}
+                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg disabled:opacity-60"
+                >
+                  🔄 Retake Quiz Now
+                </button>
+              ) : (
+                /* No redraw available on this surface — say what the button does. */
+                <button
+                  onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs, wrongPartNumbers)}
+                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg"
+                >
+                  ← Back to the Lesson
+                </button>
+              )}
+            </div>
           )}
 
           {/* Answer Review */}
@@ -337,50 +436,6 @@ export default function ExitQuiz({
                 )
               })}
             </div>
-          </div>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            {passed ? (
-              <>
-                <button
-                  onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs, wrongPartNumbers)}
-                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg"
-                >
-                  ⚔️ Go to Competitive Mode
-                </button>
-                {courseSlug && (
-                  <a
-                    href={`/courses/${courseSlug}`}
-                    className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg text-center"
-                  >
-                    📋 Back to Course
-                  </a>
-                )}
-              </>
-            ) : quizMustRedoUnit ? (
-              <button
-                onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs, wrongPartNumbers)}
-                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
-              >
-                📚 Review This Section
-              </button>
-            ) : onRetake ? (
-              <button
-                onClick={() => { onRetake(score, totalQuestions) }}
-                disabled={!submitSettled}
-                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg disabled:opacity-60"
-              >
-                🔄 Retake Quiz Now
-              </button>
-            ) : (
-              /* No redraw available on this surface — say what the button does. */
-              <button
-                onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs, wrongPartNumbers)}
-                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg"
-              >
-                ← Back to the Lesson
-              </button>
-            )}
           </div>
 
           {onPracticeAtDifficulty && (
@@ -428,7 +483,8 @@ export default function ExitQuiz({
             </h2>
             <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               {previousAttempts > 0 && `Attempt #${previousAttempts + 1} • `}
-              Score {passThreshold}/{totalQuestions} to unlock competitive mode
+              Score {passThreshold}/{totalQuestions} ({TOPIC_CLEAR_PERCENT}%){' '}
+              {isCourseLevelQuiz ? 'to pass' : 'to clear this topic and unlock its flashcards'}
             </p>
           </div>
           <button

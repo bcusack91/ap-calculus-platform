@@ -5,6 +5,7 @@ import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 import {
   planCandidateUniverse,
   selectPlanTopics,
@@ -307,7 +308,7 @@ export async function GET() {
         hasLesson,
         lessonPath: hasLesson ? `/topics/${topic.slug}/interactive` : null,
         flashcardCount: flashcardCountBySlug.get(topic.slug) ?? 0,
-        flashcardsPath: `/flashcards/${topic.slug}`,
+        flashcardsPath: topicFlashcardReviewHref(topic.slug),
         hasExitQuiz: topicHasExitQuiz,
         exitQuizPath: topicHasExitQuiz ? `/topics/${topic.slug}/interactive?exitQuiz=1` : null,
         // The exit quiz is the requirement unless the student tested out of the

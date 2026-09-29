@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import Link from 'next/link'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { isSatMathTopic } from '@/lib/sat-math-topics'
 import { preloadKatex } from '@/lib/katex-lazy'
@@ -12,6 +13,8 @@ import { ENTRANCE_QUIZ_SKIP_FRACTION } from '@/lib/mastery'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
+import StudyPlanNextUp from '@/components/StudyPlanNextUp'
+import { competitiveHrefForCourse } from '@/lib/competitive-course-map'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
@@ -20,6 +23,13 @@ interface TopicEntranceQuizProps {
   questions: EntranceQuizQuestion[]
   partTitles: { partNumber: number; partTitle: string }[]
   onComplete: (masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => void
+  /**
+   * Called once when the results screen shows EVERY part mastered, before the
+   * student picks a destination: persists the test-out so the results screen
+   * can lead with the next study step (whose links navigate away directly).
+   * `saved` = the mastery (and so the topic's flashcards) reached the server.
+   */
+  onAllPartsMastered?: (masteredParts: Set<number>) => Promise<{ saved: boolean }> | { saved: boolean }
   onCancel: () => void
 }
 
@@ -34,6 +44,7 @@ export default function TopicEntranceQuiz({
   questions,
   partTitles,
   onComplete,
+  onAllPartsMastered,
   onCancel,
 }: TopicEntranceQuizProps) {
   const [phase, setPhase] = useState<'intro' | 'quiz' | 'results'>('intro')
@@ -151,6 +162,33 @@ export default function TopicEntranceQuiz({
   const handleFinish = useCallback((destination?: 'dashboard' | 'course' | 'competitive') => {
     onComplete(masteredParts, destination)
   }, [onComplete, masteredParts])
+
+  // Aced every part: persist the test-out as soon as the results show, so the
+  // next-step panel (and its navigating links) never outruns the save.
+  // null = still saving; ref guards against a double save.
+  const allPartsMastered = phase === 'results' && partTitles.length > 0 && masteredParts.size === partTitles.length
+  const [masterySave, setMasterySave] = useState<{ saved: boolean } | null>(null)
+  const masterySaveStartedRef = useRef(false)
+  // Unmount guard only — NOT a per-run cleanup: the save starts once, and a
+  // later dependency change (e.g. a new onAllPartsMastered identity) must not
+  // discard its result and strand the screen on "Saving…".
+  const mountedRef = useRef(true)
+  useEffect(() => {
+    mountedRef.current = true
+    return () => {
+      mountedRef.current = false
+    }
+  }, [])
+  useEffect(() => {
+    if (!allPartsMastered || masterySaveStartedRef.current) return
+    masterySaveStartedRef.current = true
+    Promise.resolve()
+      .then(() => (onAllPartsMastered ? onAllPartsMastered(masteredParts) : { saved: false }))
+      .catch(() => ({ saved: false }))
+      .then((result) => {
+        if (mountedRef.current) setMasterySave(result)
+      })
+  }, [allPartsMastered, onAllPartsMastered, masteredParts])
 
   // ── Intro Screen ──
   if (phase === 'intro') {
@@ -460,27 +498,60 @@ export default function TopicEntranceQuiz({
           <div className="space-y-3">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-2">
               <p className="text-green-700 dark:text-green-300 font-semibold text-center">
-                🏆 This topic is now marked as mastered!
+                🏆 You tested out — this topic is now marked as mastered!
               </p>
+              {masterySave?.saved && (
+                <p className="text-green-700 dark:text-green-300 text-sm text-center mt-1">
+                  🎴 This topic&apos;s flashcards were added to your deck.
+                </p>
+              )}
             </div>
-            <button
-              onClick={() => handleFinish('competitive')}
-              className="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transition-colors shadow-lg"
-            >
-              ⚔️ Enter Competitive Mode
-            </button>
-            <button
-              onClick={() => handleFinish('course')}
-              className="w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg"
-            >
-              📚 Return to {courseSlug ? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
-            </button>
-            <button
-              onClick={() => handleFinish('dashboard')}
-              className="w-full py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >
-              🏠 Return to Dashboard
-            </button>
+            {/* NEXT STEP FIRST (owner rule 2026-09-28): the study-plan next
+                topic when this topic is in the student's diagnostic plan, else
+                this topic's flashcards to rate, else back to the course.
+                Competitive Mode is a secondary link below. */}
+            {masterySave === null ? (
+              <p className="text-sm text-center text-gray-500 dark:text-gray-400" role="status">
+                Saving your result…
+              </p>
+            ) : (
+              <StudyPlanNextUp
+                topicSlug={topicSlug}
+                completion="entrance"
+                fallback={({ cardsToReview }) => (
+                  <button
+                    onClick={() => handleFinish('course')}
+                    className={
+                      cardsToReview > 0
+                        ? 'w-full py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors'
+                        : 'w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg'
+                    }
+                  >
+                    📚 Return to {courseSlug ? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
+                  </button>
+                )}
+              />
+            )}
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-2 text-sm">
+              <button
+                onClick={() => handleFinish('dashboard')}
+                className="text-gray-600 dark:text-gray-300 hover:underline"
+              >
+                🏠 Return to Dashboard
+              </button>
+              <Link
+                href={competitiveHrefForCourse(courseSlug, topicSlug)}
+                onClick={(e) => {
+                  // Route through onComplete so the lesson state settles the
+                  // same way as the other destinations.
+                  e.preventDefault()
+                  handleFinish('competitive')
+                }}
+                className="text-gray-600 dark:text-gray-300 hover:underline"
+              >
+                ⚔️ Try Competitive Mode
+              </Link>
+            </div>
           </div>
         ) : (
           <button
