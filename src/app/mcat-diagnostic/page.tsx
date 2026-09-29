@@ -24,6 +24,7 @@ import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
+import { attemptScoreLine, summarizeAttemptScores } from '@/lib/diagnostic-attempt-scores'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -974,10 +975,24 @@ export default function MCATDiagnosticPage() {
               </h3>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
-                    {String(lastResult.estimatedScore ?? '—')}
-                  </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Score</p>
+                  {(() => {
+                    const s = summarizeAttemptScores(history[0].category, lastResult)
+                    return (
+                      <>
+                        <p className="text-3xl font-bold tabular-nums text-emerald-600 dark:text-emerald-400">
+                          {s.overall?.value ?? '—'}
+                        </p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          Estimated Score{s.overall?.detail ? ` · ${s.overall.detail}` : ''}
+                        </p>
+                        {s.sections.length > 0 && (
+                          <p className="mt-1 text-sm tabular-nums text-gray-600 dark:text-gray-300">
+                            {s.sections.map((x) => `${x.key} ${x.value}`).join(' · ')}
+                          </p>
+                        )}
+                      </>
+                    )
+                  })()}
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -1161,8 +1176,8 @@ export default function MCATDiagnosticPage() {
                     <Link
                       key={h.id} href={`/diagnostic-review/${h.id}`}
                       className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
-                        Score: {String(parsed.estimatedScore ?? '—')}
+                      <span className="text-sm tabular-nums text-gray-700 dark:text-gray-300">
+                        Score: {attemptScoreLine(h.category, parsed) || '—'}
                       </span>
                       <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}

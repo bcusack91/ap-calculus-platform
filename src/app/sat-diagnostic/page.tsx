@@ -18,6 +18,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 import { signUpUrl } from '@/lib/auth-redirect'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
+import { attemptScoreLine } from '@/lib/diagnostic-attempt-scores'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -855,13 +856,8 @@ export default function SATDiagnosticPage() {
                     <Link
                       key={h.id} href={`/diagnostic-review/${h.id}`}
                       className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
-                        Score: {(() => {
-                          const r = parsed.scoreRange as { low?: number; high?: number } | undefined
-                          return r?.low != null && r?.high != null
-                            ? `${r.low}–${r.high}`
-                            : String(parsed.estimatedScore ?? '—')
-                        })()}
+                      <span className="text-sm tabular-nums text-gray-700 dark:text-gray-300">
+                        Score: {attemptScoreLine(h.category, parsed) || '—'}
                       </span>
                       <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}

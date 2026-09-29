@@ -5,6 +5,8 @@ import { useParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import DiagnosticReview, { type ReviewQuestion } from '@/components/DiagnosticReview'
+import DiagnosticAttemptScores from '@/components/DiagnosticAttemptScores'
+import { diagnosticPathForCategory } from '@/lib/diagnostic-attempt-scores'
 
 interface AttemptResults {
   form?: number | string
@@ -30,14 +32,9 @@ interface Attempt {
   createdAt: string
 }
 
-// Map a category prefix back to the diagnostic page where students retake.
-function diagnosticPathForCategory(category: string): string {
-  const slug = category.replace(/-\d+$/, '') // strip trailing -<form>
-  return `/${slug}`
-}
-
 function prettyCategory(category: string): string {
-  const slug = category.replace(/-\d+$/, '').replace(/-diagnostic$/, '')
+  // Name from the page the attempt belongs to (sat-full-diagnostic → SAT).
+  const slug = diagnosticPathForCategory(category).slice(1).replace(/-diagnostic$/, '')
   return slug
     .split('-')
     .map(p => (p.length <= 3 ? p.toUpperCase() : p.charAt(0).toUpperCase() + p.slice(1)))
@@ -118,35 +115,7 @@ export default function DiagnosticAttemptReviewPage() {
           <h1 className="mb-1 text-3xl font-bold text-gray-900 dark:text-white">📝 Past Attempt Review</h1>
           <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">{niceName} · {date}</p>
 
-          <div className="mb-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <p className="text-xs uppercase text-gray-500 dark:text-gray-400">Score</p>
-              <p className="mt-1 text-2xl font-bold text-accent-hover dark:text-accent-muted">
-                {results.totalCorrect != null && results.totalQuestions != null
-                  ? `${results.totalCorrect}/${results.totalQuestions}`
-                  : '—'}
-              </p>
-              {typeof results.percentage === 'number' && (
-                <p className="text-xs text-gray-500 dark:text-gray-400">{Math.round(results.percentage)}%</p>
-              )}
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <p className="text-xs uppercase text-gray-500 dark:text-gray-400">Estimate</p>
-              <p className="mt-1 text-2xl font-bold text-gray-800 dark:text-gray-200">
-                {String(
-                  results.estimatedAPScore ??
-                  results.estimatedLevel ??
-                  results.estimatedScore ??
-                  results.estimatedComposite ??
-                  '—'
-                )}
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <p className="text-xs uppercase text-gray-500 dark:text-gray-400">Form</p>
-              <p className="mt-1 text-2xl font-bold text-gray-800 dark:text-gray-200">{String(results.form ?? '—')}</p>
-            </div>
-          </div>
+          <DiagnosticAttemptScores category={attempt.category} results={attempt.results} />
 
           {review && Array.isArray(review.questions) && Array.isArray(review.answers) ? (
             <DiagnosticReview

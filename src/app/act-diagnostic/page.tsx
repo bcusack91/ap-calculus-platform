@@ -20,6 +20,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { attemptScoreLine, summarizeAttemptScores } from '@/lib/diagnostic-attempt-scores'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -444,6 +445,14 @@ export default function ACTDiagnosticPage() {
                   })()}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Composite (out of 36)</p>
+                {(() => {
+                  const sections = summarizeAttemptScores(history[0].category, lastResult).sections
+                  return sections.length > 0 ? (
+                    <p className="mt-1 text-sm tabular-nums text-gray-600 dark:text-gray-300">
+                      {sections.map((x) => `${x.key} ${x.value}`).join(' · ')}
+                    </p>
+                  ) : null
+                })()}
               </div>
               <div className="text-right"><p className="text-sm text-gray-600 dark:text-gray-400">{String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct</p><p className="text-xs text-gray-400">Form {String(lastResult.form ?? '—')} · {new Date(history[0].createdAt).toLocaleDateString()}<br /><Link href={`/diagnostic-review/${history[0].id}`} className="mt-1 inline-block text-xs font-semibold text-purple-600 hover:underline dark:text-purple-400" onClick={(e) => e.stopPropagation()}>Review past attempt →</Link></p></div>
             </div>
@@ -488,7 +497,7 @@ export default function ACTDiagnosticPage() {
                 const parsed = h.results as Record<string, unknown>
                 return (
                   <Link key={h.id} href={`/diagnostic-review/${h.id}`} className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
-                    <div className="flex items-center gap-3"><span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Score: {String(parsed?.estimatedComposite ?? '—')}/36</span><span className="text-xs text-gray-500 dark:text-gray-400">Form {String(parsed?.form ?? '?')}</span></div>
+                    <div className="flex items-center gap-3"><span className="text-sm font-semibold tabular-nums text-gray-700 dark:text-gray-300">Composite: {attemptScoreLine(h.category, parsed) || '—'}</span><span className="text-xs text-gray-500 dark:text-gray-400">Form {String(parsed?.form ?? '?')}</span></div>
                     <span className="text-xs text-gray-400">{new Date(h.createdAt).toLocaleDateString()}</span>
                   </Link>
                 )
