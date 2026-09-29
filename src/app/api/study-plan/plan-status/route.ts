@@ -5,6 +5,7 @@ import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { buildSatPlan } from '@/lib/sat-plan'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -22,7 +23,7 @@ import { buildSatPlan } from '@/lib/sat-plan'
  */
 
 /** A topic counts as done at lesson mastery, or an exit quiz at/above this. */
-const REQUIRED_SCORE_PERCENT = 80
+const REQUIRED_SCORE_PERCENT = TOPIC_CLEAR_PERCENT
 
 type RecommendedTopic = { slug: string; name: string; priority: 'high' | 'medium' | 'low' }
 

@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import {
   planCandidateUniverse,
   selectPlanTopics,
@@ -110,7 +111,7 @@ export async function GET() {
       return NextResponse.json({
         hasDiagnostic: false,
         canRetakeDiagnostic: true,
-        requiredScorePercent: 80,
+        requiredScorePercent: TOPIC_CLEAR_PERCENT,
         recommendedTopics: [],
         pendingTopics: [],
       })
@@ -134,7 +135,7 @@ export async function GET() {
         diagnosticId: latestDiagnostic.id,
         diagnosticCreatedAt: latestDiagnostic.createdAt,
         canRetakeDiagnostic: true,
-        requiredScorePercent: 80,
+        requiredScorePercent: TOPIC_CLEAR_PERCENT,
         recommendedTopics: [],
         pendingTopics: [],
       })
@@ -207,7 +208,7 @@ export async function GET() {
     // save and can only ever drift later, which errs toward keeping a topic in
     // the plan rather than swapping it out).
     const firstPassAtBySlug = new Map<string, Date>()
-    const requiredScorePercent = 80
+    const requiredScorePercent = TOPIC_CLEAR_PERCENT
     exitAttempts.forEach((attempt) => {
       if (!attempt.totalQuestions || attempt.totalQuestions <= 0) return
       const scorePercent = Math.round((attempt.score / attempt.totalQuestions) * 100)

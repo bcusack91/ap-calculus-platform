@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 type RecommendedTopic = {
   slug: string
@@ -49,7 +50,7 @@ export async function GET() {
       return NextResponse.json({
         hasDiagnostic: false,
         canRetakeDiagnostic: true,
-        requiredScorePercent: 80,
+        requiredScorePercent: TOPIC_CLEAR_PERCENT,
         recommendedTopics: [],
         pendingTopics: [],
       })
@@ -73,7 +74,7 @@ export async function GET() {
         diagnosticId: latestDiagnostic.id,
         diagnosticCreatedAt: latestDiagnostic.createdAt,
         canRetakeDiagnostic: true,
-        requiredScorePercent: 80,
+        requiredScorePercent: TOPIC_CLEAR_PERCENT,
         recommendedTopics: [],
         pendingTopics: [],
       })
@@ -116,7 +117,7 @@ export async function GET() {
       }
     })
 
-    const requiredScorePercent = 80
+    const requiredScorePercent = TOPIC_CLEAR_PERCENT
 
     const recommendedWithStatus = recommendedTopics.map((topic) => {
       const progress = progressBySlug.get(topic.slug)

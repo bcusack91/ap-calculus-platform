@@ -9,7 +9,7 @@ import { satBankSlugsForCourseTopic, type SatBankSlug } from '@/lib/sat-topic-ma
  * Check if user has unlocked competitive mode
  * Requirements (any ONE of the following):
  * - Complete any topic with 60%+ mastery (interactive lessons)
- * - Score 70%+ on any entrance/exit quiz
+ * - Pass any exit quiz (80%+, the site-wide pass mark)
  * - Score 60%+ on any diagnostic test
  * - Receive a teacher grant
  * - Accept a challenge from another student
@@ -60,7 +60,7 @@ export async function GET() {
     
     const completedTopicSlugsFromProgress = completedTopics.map(tp => tp.topic.slug)
 
-    // Also check exit quiz attempts — a passed exit quiz (70%+) should count as completion
+    // Also check exit quiz attempts — a passed exit quiz (the 80% pass mark, EXIT_QUIZ_PASS_FRACTION) should count as completion
     // even if the topic slug doesn't exist in the Topic table
     const passedExitQuizzes = await prisma.exitQuizAttempt.findMany({
       where: { userId: user.id, passed: true },

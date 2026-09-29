@@ -173,7 +173,7 @@ export default function CourseStudyPlan({ courseSlug, courseLabel, planStatusEnd
             </ul>
             {!allDone && (
               <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                Finish a module by completing its lesson or scoring at least {plan!.requiredScorePercent}% on its exit quiz. Complete all modules to unlock your next diagnostic.
+                Clear a module by scoring {plan!.requiredScorePercent}% or better on its exit quiz (or by testing out on its entrance quiz). Clear them all to unlock your next diagnostic.
               </p>
             )}
             {allDone && (

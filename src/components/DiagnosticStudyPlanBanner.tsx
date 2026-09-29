@@ -10,12 +10,6 @@ interface DiagnosticResult {
   recommendedTopics?: { slug: string; name: string; priority: string }[]
 }
 
-interface TopicProgressInfo {
-  status: string
-  masteryLevel: number
-  completedAt: string | null
-}
-
 /**
  * Maps course slugs to their diagnostic API history endpoint and styling.
  */
@@ -30,7 +24,11 @@ const diagnosticConfig: Record<string, { apiPath: string; icon: string; label: s
 export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: string }) {
   const { data: _session, status } = useSession()
   const [result, setResult] = useState<DiagnosticResult | null>(null)
-  const [topicProgress, setTopicProgress] = useState<Record<string, TopicProgressInfo>>({})
+  // Slugs this student has CLEARED under the site-wide rule (exit quiz at the
+  // pass mark, or an entrance-quiz test-out), straight from the same endpoint
+  // the dashboard plan uses. The banner used to count any COMPLETED lesson as
+  // done, so it disagreed with the dashboard about the same topic.
+  const [cleared, setCleared] = useState<Set<string>>(new Set())
 
   const config = diagnosticConfig[courseSlug]
 
@@ -43,31 +41,22 @@ export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: 
           const latestResult = data.attempts[0].results as DiagnosticResult
           setResult(latestResult)
 
-          // Fetch progress for recommended topics
-          const slugs = latestResult.recommendedTopics?.map(t => t.slug)
-          if (slugs?.length) {
-            fetch(`/api/progress/batch?slugs=${slugs.join(',')}`)
-              .then(r => r.ok ? r.json() : null)
-              .then(progressData => {
-                if (progressData?.progress) {
-                  setTopicProgress(progressData.progress)
-                }
-              })
-              .catch(() => {})
-          }
+          fetch('/api/study-plan/plan-status')
+            .then(r => (r.ok ? r.json() : null))
+            .then((plans: { plans?: { courseSlug: string | null; topics: { slug: string; isSatisfied: boolean }[] }[] } | null) => {
+              const plan = plans?.plans?.find(p => p.courseSlug === courseSlug)
+              if (plan) setCleared(new Set(plan.topics.filter(t => t.isSatisfied).map(t => t.slug)))
+            })
+            .catch(() => {})
         }
       })
       .catch(() => {})
-  }, [status, config])
+  }, [status, config, courseSlug])
 
   if (!config || !result?.recommendedTopics?.length) return null
 
-  // Filter out topics that are COMPLETED or MASTERED
-  const remainingTopics = result.recommendedTopics.filter(topic => {
-    const progress = topicProgress[topic.slug]
-    if (!progress) return true
-    return progress.status !== 'COMPLETED' && progress.status !== 'MASTERED'
-  })
+  // Topics still to clear (exit quiz at the pass mark, or an entrance test-out).
+  const remainingTopics = result.recommendedTopics.filter(topic => !cleared.has(topic.slug))
 
   const completedCount = result.recommendedTopics.length - remainingTopics.length
 

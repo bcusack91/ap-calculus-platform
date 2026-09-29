@@ -194,7 +194,7 @@ export default function CompetitivePage() {
       },
       {
         done: !!requirements?.quizPassed,
-        title: 'Pass any topic quiz (70%+)',
+        title: 'Pass any exit quiz (80%+)',
         detail: 'Take an entrance or exit quiz from any course',
       },
       {

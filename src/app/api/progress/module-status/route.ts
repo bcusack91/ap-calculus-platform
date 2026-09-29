@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { EXIT_QUIZ_PASS_FRACTION } from '@/lib/mastery'
 
 /**
  * GET /api/progress/module-status?slugs=a,b,c
@@ -15,7 +16,7 @@ import { hasExitQuiz } from '@/data/exit-quizzes'
  * they've already worked through.
  */
 
-const REQUIRED_EXIT_FRACTION = 0.8
+const REQUIRED_EXIT_FRACTION = EXIT_QUIZ_PASS_FRACTION
 const MAX_SLUGS = 40
 
 export async function GET(req: NextRequest) {

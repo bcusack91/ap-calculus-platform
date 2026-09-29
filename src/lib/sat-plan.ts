@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { canonicalizeSlug, satPlanCandidatePool } from '@/data/sat-practice/diagnostic-generator'
@@ -25,7 +26,7 @@ export type SatLane = 'core-skills' | 'advanced' | 'regular'
 
 type RecommendedTopic = { slug: string; name: string; priority: 'high' | 'medium' | 'low' }
 
-export const SAT_REQUIRED_SCORE_PERCENT = 80
+export const SAT_REQUIRED_SCORE_PERCENT = TOPIC_CLEAR_PERCENT
 
 /**
  * The diagnostic can recommend six slugs that have no track twin of their own.

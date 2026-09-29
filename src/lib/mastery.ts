@@ -13,7 +13,8 @@
  * The current model, in one view:
  *
  *   entrance quiz  — answer EVERY question in a part correctly → skip that part
- *   exit quiz      — ≥70% pass (topic → MASTERED) · <50% forced unit review
+ *   exit quiz      — ≥80% pass (topic → MASTERED, topic cleared everywhere)
+ *                    · <50% forced unit review
  *   diagnostics    — ≥75% strong · <50% weak (recommendations key off "weak")
  *   MCAT diagnostic— ≥70% strong · <40% weak (deliberately easier banding:
  *                    MCAT domains have fewer questions each, so wider bands
@@ -24,8 +25,23 @@
  * when touching those files.
  */
 
-/** Exit quiz: fraction correct required to pass (topic marked MASTERED). */
-export const EXIT_QUIZ_PASS_FRACTION = 0.7
+/**
+ * Exit quiz: fraction correct required to pass (topic marked MASTERED).
+ *
+ * Owner decision 2026-09-28: ONE pass mark everywhere. It used to be 70% here
+ * while study plans, class plans and the MCAT/SAT retake gates cleared a topic
+ * at 80%, so a student could see "Quiz Passed!" at 75% while their plan still
+ * said "Pending". Existing MASTERED rows are never downgraded.
+ */
+export const EXIT_QUIZ_PASS_FRACTION = 0.8
+
+/**
+ * The same pass mark as a whole percent, for code that compares a stored
+ * attempt's percentage (study plans, class plans, retake gates). A topic is
+ * cleared by an exit-quiz attempt at or above this, or by an entrance-quiz
+ * test-out (isEntranceMastery in flashcard-unlock.ts).
+ */
+export const TOPIC_CLEAR_PERCENT = Math.round(EXIT_QUIZ_PASS_FRACTION * 100)
 
 /** Exit quiz: below this fraction the student must redo the unit's lesson parts. */
 export const EXIT_QUIZ_REDO_FRACTION = 0.5

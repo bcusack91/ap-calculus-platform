@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { classPlanCourse, courseForCategory, scoreLabelFromResults, CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
+import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
 
@@ -56,7 +57,7 @@ function parseRecommendedTopics(results: unknown): RecommendedTopic[] {
 }
 
 const STALE_MS = 7 * 24 * 60 * 60 * 1000
-const REQUIRED_EXIT_PERCENT = 80
+const REQUIRED_EXIT_PERCENT = TOPIC_CLEAR_PERCENT
 
 export async function GET(req: NextRequest, { params }: Ctx) {
   const { id } = await params
