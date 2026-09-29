@@ -41,7 +41,7 @@ const features: HubFeature[] = [
     stats: 'Vocab · Formulas · Rules',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh Algebra 1 question every day covering different units. Build consistency.',
     href: '/algebra1-daily-question',
     icon: 'daily',

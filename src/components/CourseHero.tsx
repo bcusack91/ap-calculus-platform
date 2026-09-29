@@ -1,5 +1,8 @@
 import type { ReactNode } from 'react'
 import Link from 'next/link'
+import CourseStudyPlan from '@/components/CourseStudyPlan'
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { courseDiagnosticForHref } from '@/lib/student-courses'
 
 /**
  * The hero block shared by every bespoke course hub page.
@@ -14,6 +17,10 @@ import Link from 'next/link'
  *
  * It also gives cross-cutting hero changes a single home: adding breadcrumbs,
  * adjusting heading levels, or fixing contrast is now one edit rather than 29.
+ *
+ * When the primary CTA is a course diagnostic, the hero is followed by that
+ * course's "Start here" block (CourseStudyPlan): the diagnostic for a visitor,
+ * the next topic for a student with a study plan.
  */
 export type HeroAccent =
   | 'green' | 'emerald' | 'teal' | 'cyan' | 'sky' | 'blue' | 'indigo' | 'violet'
@@ -45,6 +52,13 @@ export interface CourseHeroProps {
   badgeIcon?: ReactNode
   /** Verb before the course name. Defaults to "Master". */
   leadWord?: string
+  /**
+   * The "Start here" block + personalized study plan under the hero. On by
+   * default whenever `primaryCta` is a course diagnostic (the block is a client
+   * component that fetches after mount, so the page stays static). Pass false
+   * to opt out.
+   */
+  startHere?: boolean
 }
 
 /**
@@ -122,10 +136,13 @@ export default function CourseHero({
   badgeLabel = 'Free for All Students',
   badgeIcon,
   leadWord = 'Master',
+  startHere = true,
 }: CourseHeroProps) {
   const gradient = `bg-gradient-to-r ${GRADIENT[accentFrom]} ${GRADIENT_TO[accentTo]}`
+  const diagnosticCourse = startHere ? courseDiagnosticForHref(primaryCta.href) : null
 
   return (
+    <>
     <section className="container py-12 sm:py-20">
       <div className="mx-auto max-w-4xl text-center">
         <div
@@ -171,5 +188,13 @@ export default function CourseHero({
         {children}
       </div>
     </section>
+    {diagnosticCourse && (
+      <CourseStudyPlan
+        courseKey={diagnosticCourse.key}
+        courseSlug={classPlanCourse(diagnosticCourse.key)?.courseSlug}
+        diagnosticHref={primaryCta.href}
+      />
+    )}
+    </>
   )
 }

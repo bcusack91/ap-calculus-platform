@@ -80,7 +80,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Physics 1 question every day covering different units. Build consistency.',
     href: '/ap-physics1-daily-question',
     icon: (

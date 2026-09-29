@@ -4,12 +4,12 @@ import { config, GRADE8_MATH_PLANS } from '@/data/grade8-math-study-plans'
 import { getContentItems, CONTENT_TYPES } from '@/lib/content-store'
 
 export const metadata: Metadata = {
-  title: 'Grade 8 Math Study Plans | Study Mondo',
+  title: 'Grade 8 Math Study Schedules | Study Mondo',
   description:
     'Pick a Grade 8 Math study plan — a sprint or a standard pace — with a day-by-day schedule of lessons, practice, and review.',
   alternates: { canonical: 'https://www.studymondo.com/grade8-math-study-plans' },
   openGraph: {
-    title: 'Grade 8 Math Study Plans',
+    title: 'Grade 8 Math Study Schedules',
     description: 'Day-by-day Grade 8 Math study schedules built around lessons, practice, and review.',
     url: 'https://www.studymondo.com/grade8-math-study-plans',
   },

@@ -134,7 +134,7 @@ export const AP_HUMAN_GEO_PLANS: StudyPlanTemplate[] = [sprint, standard, compre
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Human Geography',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-human-geography', label: 'AP Human Geography' },
   apiEndpoint: '/api/ap-human-geo-study-plans',
   diagnosticPrefix: 'ap-human-geo-diagnostic',

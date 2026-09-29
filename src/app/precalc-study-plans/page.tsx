@@ -4,12 +4,12 @@ import { config, PRECALCULUS_PLANS } from '@/data/precalculus-study-plans'
 import { getContentItems, CONTENT_TYPES } from '@/lib/content-store'
 
 export const metadata: Metadata = {
-  title: 'Precalculus Study Plans | Study Mondo',
+  title: 'Precalculus Study Schedules | Study Mondo',
   description:
     'Pick a Precalculus study plan — a sprint or a standard pace — with a day-by-day schedule of lessons, practice, and review.',
   alternates: { canonical: 'https://www.studymondo.com/precalc-study-plans' },
   openGraph: {
-    title: 'Precalculus Study Plans',
+    title: 'Precalculus Study Schedules',
     description: 'Day-by-day Precalculus study schedules built around lessons, practice, and review.',
     url: 'https://www.studymondo.com/precalc-study-plans',
   },

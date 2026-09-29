@@ -11,6 +11,9 @@
  * (the generic catalog) up to parity with hand-built AP hubs.
  */
 import Link from 'next/link'
+import CourseStudyPlan from '@/components/CourseStudyPlan'
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { courseDiagnosticForHref } from '@/lib/student-courses'
 import { courseJsonLd } from '@/lib/jsonld'
 import { courseHubPaths } from '@/data/course-metadata'
 
@@ -421,6 +424,9 @@ export function CourseHub(props: CourseHubProps) {
   const finalCtaHref = props.finalCtaHref ?? props.primaryCta.href
   const finalCtaLabel = props.finalCtaLabel ?? 'Get Started Free'
   const startHereSteps = deriveStartHereSteps(props.features)
+  // A course with a diagnostic gets the one personalized "Start here" block
+  // (client-fetched, so this page stays static); others keep the static steps.
+  const diagnosticCourse = courseDiagnosticForHref(props.primaryCta.href)
 
   return (
     <div className={`min-h-screen ${a.pageBg}`}>
@@ -469,10 +475,19 @@ export function CourseHub(props: CourseHubProps) {
         </div>
       </section>
 
+      {diagnosticCourse && (
+        <CourseStudyPlan
+          courseKey={diagnosticCourse.key}
+          courseSlug={classPlanCourse(diagnosticCourse.key)?.courseSlug}
+          diagnosticHref={props.primaryCta.href}
+        />
+      )}
+
       {/* Guided "Start Here" path — gives a new student an obvious first move
-          instead of a wall of feature cards. Only shown when we can resolve at
-          least two ordered steps from the hub's features. */}
-      {startHereSteps.length >= 2 && (
+          instead of a wall of feature cards. Only for hubs without a
+          diagnostic, and only when we can resolve at least two ordered steps
+          from the hub's features. */}
+      {!diagnosticCourse && startHereSteps.length >= 2 && (
         <section className="container pb-4">
           <div className="mx-auto max-w-5xl">
             <div className={`rounded-2xl border ${a.ctaSecondaryBorder} bg-white/60 p-6 dark:bg-gray-800/40`}>

@@ -129,7 +129,7 @@ export const AP_CSP_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehensiv
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP CS Principles',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-cs-principles', label: 'AP CS Principles' },
   apiEndpoint: '/api/ap-csp-study-plans',
   diagnosticPrefix: 'ap-csp-diagnostic',

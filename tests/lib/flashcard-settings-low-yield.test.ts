@@ -7,6 +7,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 
 const mockFindUnique = vi.fn()
 const mockUpdate = vi.fn()
+const mockProgressFindFirst = vi.fn()
 
 vi.mock('@/lib/auth', () => ({ auth: async () => ({ user: { id: 'student-1' } }) }))
 vi.mock('@/lib/prisma', () => ({
@@ -14,6 +15,9 @@ vi.mock('@/lib/prisma', () => ({
     user: {
       findUnique: (...a: unknown[]) => mockFindUnique(...a),
       update: (...a: unknown[]) => mockUpdate(...a),
+    },
+    flashcardProgress: {
+      findFirst: (...a: unknown[]) => mockProgressFindFirst(...a),
     },
   },
 }))
@@ -29,6 +33,7 @@ beforeEach(() => {
   vi.clearAllMocks()
   mockFindUnique.mockResolvedValue(stored)
   mockUpdate.mockImplementation(async ({ data }: { data: Record<string, unknown> }) => ({ ...stored, ...data }))
+  mockProgressFindFirst.mockResolvedValue(null)
 })
 
 async function patch(body: unknown) {
@@ -44,6 +49,16 @@ describe('GET /api/flashcards/settings', () => {
     const json = await res.json()
     expect(json.includeLowYield).toBe(false)
     expect(json.includeMediumYield).toBe(true)
+  })
+
+  it('reports whether the student has yield-tiered (MCAT) cards, so the UI can hide the toggles', async () => {
+    const { GET } = await import('@/app/api/flashcards/settings/route')
+    expect((await (await GET()).json()).hasYieldCards).toBe(false)
+    expect(mockProgressFindFirst).toHaveBeenLastCalledWith(
+      expect.objectContaining({ where: { userId: 'student-1', flashcard: { examYield: { not: null } } } }),
+    )
+    mockProgressFindFirst.mockResolvedValue({ id: 'p1' })
+    expect((await (await GET()).json()).hasYieldCards).toBe(true)
   })
 })
 

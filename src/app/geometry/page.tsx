@@ -41,7 +41,7 @@ const features: HubFeature[] = [
     stats: 'Theorems · Formulas · Vocab',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh Geometry question every day covering different units. Build consistency.',
     href: '/geometry-daily-question',
     icon: 'daily',

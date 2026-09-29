@@ -41,7 +41,7 @@ const features: HubFeature[] = [
     stats: 'Vocab · Rules · Concepts',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh 8th grade math question every day covering different units.',
     href: '/grade8-math-daily-question',
     icon: 'daily',

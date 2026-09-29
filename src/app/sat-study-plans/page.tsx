@@ -31,7 +31,7 @@ const PLANS: PlanTemplate[] = [
   },
   {
     id: '8-week-comprehensive',
-    title: '8-Week Comprehensive Plan',
+    title: '8-Week Comprehensive Schedule',
     description:
       'A balanced study plan that covers every SAT domain in depth with two practice tests. Ideal for students aiming for a solid score improvement.',
     durationWeeks: 8,
@@ -42,7 +42,7 @@ const PLANS: PlanTemplate[] = [
   },
   {
     id: '12-week-mastery',
-    title: '12-Week Mastery Plan',
+    title: '12-Week Mastery Schedule',
     description:
       'The most thorough plan with deep coverage of every topic, multiple practice tests, targeted remediation, and test-day strategy. For students targeting 1400+.',
     durationWeeks: 12,
@@ -116,10 +116,10 @@ export default function SATStudyPlansPage() {
             SAT Prep
           </Link>
           <h1 className="mb-3 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-            SAT Study Plan Templates
+            SAT Study Schedules
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
-            Choose a pre-built study schedule that fits your timeline. Each plan includes
+            Choose a pre-built study schedule that fits your timeline. Each schedule includes
             lessons, quizzes, practice tests, and review tasks — automatically scheduled
             for you.
           </p>
@@ -128,7 +128,7 @@ export default function SATStudyPlansPage() {
         {/* Success Banner */}
         {success && (
           <div className="mx-auto mb-8 max-w-lg rounded-xl bg-green-100 p-4 text-center text-green-800 dark:bg-green-900/30 dark:text-green-300">
-            <p className="font-semibold">Plan adopted! Redirecting to your dashboard…</p>
+            <p className="font-semibold">Schedule started! Redirecting to your dashboard…</p>
           </div>
         )}
 
@@ -220,8 +220,8 @@ export default function SATStudyPlansPage() {
                         className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50"
                       >
                         {adopting === plan.id
-                          ? 'Creating Plan…'
-                          : 'Start This Plan'}
+                          ? 'Creating schedule…'
+                          : 'Start this schedule'}
                       </button>
                       <button
                         onClick={() => setSelectedPlan(null)}
@@ -235,7 +235,7 @@ export default function SATStudyPlansPage() {
                       onClick={() => setSelectedPlan(plan.id)}
                       className="w-full rounded-xl border-2 border-purple-500 py-2.5 font-semibold text-purple-600 transition hover:bg-purple-50 dark:text-purple-400 dark:hover:bg-purple-900/20"
                     >
-                      Select Plan
+                      Choose this schedule
                     </button>
                   )}
                 </div>
@@ -247,12 +247,12 @@ export default function SATStudyPlansPage() {
         {/* Footer Info */}
         <div className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-500 dark:text-gray-400">
           <p>
-            Plans are added to your{' '}
-            <Link href="/dashboard" className="font-medium text-purple-600 hover:underline dark:text-purple-400">
+            Schedules are added to your{' '}
+            <Link href="/dashboard?tab=practice" className="font-medium text-purple-600 hover:underline dark:text-purple-400">
               dashboard
             </Link>{' '}
-            Study Planner where you can track progress, check off tasks, and adjust
-            the schedule.
+            (Practice › Study schedules), where you can track progress, check off
+            tasks, and adjust the dates.
           </p>
         </div>
       </div>

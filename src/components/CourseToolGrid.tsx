@@ -81,9 +81,9 @@ export default function CourseToolGrid({
     row('unit_tests', '🎯', courseUnitTestsMap[courseSlug], 'Unit Tests'),
     row('practice_test', '📝', coursePracticeTestMap[courseSlug], 'Practice Test'),
     row('frq', '✍️', courseFRQMap[courseSlug], 'FRQ Practice'),
-    row('study_plans', '📅', courseStudyPlanMap[courseSlug], 'Study Plans'),
+    row('study_plans', '📅', courseStudyPlanMap[courseSlug], 'Study schedules'),
     row('flashcards', '🃏', courseFlashcardMap[courseSlug], 'Flashcards'),
-    row('daily_question', '📆', courseDailyQuestionMap[courseSlug], "Today's Question"),
+    row('daily_question', '📆', courseDailyQuestionMap[courseSlug], 'Daily question'),
     row('score_predictor', '📈', courseScorePredictorMap[courseSlug], 'Score Predictor'),
   ]
   const tools = candidates.filter((t): t is Tool => t !== null)

@@ -12,10 +12,13 @@ import {
 } from '@/lib/flashcard-daily-limits'
 
 /**
- * Anki-style flashcard daily-limit settings.
+ * Flashcard daily-limit settings.
  *
  * GET  /api/flashcards/settings — the user's stored prefs (null = unset),
- *      the effective values, and the defaults/bounds for the UI.
+ *      the effective values, the defaults/bounds for the UI, and
+ *      `hasYieldCards` (does the student have any card with an exam-yield
+ *      tier — today only MCAT cards — so the UI knows whether to offer the
+ *      medium/low-yield toggles).
  * PATCH /api/flashcards/settings — update either or both limits. A field set
  *      to null resets it to the code default; an omitted field is unchanged.
  *      Bounds: newPerDay 1-500, maxReviewsPerDay 10-1000.
@@ -54,7 +57,14 @@ export async function GET() {
   if (!user) {
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
-  return NextResponse.json(settingsPayload(user))
+  // Any studied card carrying a yield tier (NULL = unlabeled, every non-MCAT card).
+  const yieldCard = await prisma.flashcardProgress
+    .findFirst({
+      where: { userId: session.user.id, flashcard: { examYield: { not: null } } },
+      select: { id: true },
+    })
+    .catch(() => null)
+  return NextResponse.json({ ...settingsPayload(user), hasYieldCards: yieldCard !== null })
 }
 
 /** null → reset to default; integer → clamp-checked; anything else → error. */

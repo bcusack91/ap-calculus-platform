@@ -129,7 +129,7 @@ export const AP_MICRO_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehens
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Microeconomics',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-microeconomics', label: 'AP Microeconomics' },
   apiEndpoint: '/api/ap-micro-study-plans',
   diagnosticPrefix: 'ap-micro-diagnostic',

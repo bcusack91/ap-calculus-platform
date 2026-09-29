@@ -80,7 +80,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Physics C: E&M question every day covering different units. Build consistency.',
     href: '/ap-physics-c-em-daily-question',
     icon: (
@@ -116,7 +116,7 @@ const features = [
     stats: '30 questions · 45 min',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'Pre-built 4, 8, or 12-week study schedules tailored to your timeline and AP Physics C: E&M goals.',
     href: '/ap-physics-c-em-study-plans',
     icon: (

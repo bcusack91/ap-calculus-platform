@@ -83,7 +83,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Biology question every day covering different units. Build consistency with daily practice.',
     href: '/ap-bio-daily-question',
     icon: (

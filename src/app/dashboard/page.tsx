@@ -5,12 +5,11 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { ClipboardList, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
-import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -31,6 +30,20 @@ import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
 import SixSigmaDashboard from '@/components/SixSigmaDashboard'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import NextStepCard from '@/components/dashboard/NextStepCard'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { deckDisplayName, type ContextOption } from '@/components/StudyModeSwitcher'
+import {
+  FLASHCARD_REVIEW_HREF,
+  isFirstVisit,
+  pickContinueTopic,
+  resolveNextStep,
+  studyPlanTopicHref,
+  type NextStepClassDiagnostic,
+  type NextStepCourse,
+} from '@/lib/dashboard-next-step'
+import { courseDiagnosticForSlug } from '@/lib/student-courses'
+import { getCourseHref } from '@/data/course-metadata'
 
 const FlashcardStudySession = dynamic(
   () => import('@/components/FlashcardStudySession'),
@@ -95,6 +108,8 @@ interface DashboardData {
     mastered: number
     inProgress: number
   }[]
+  /** The student's chosen / most-studied course (for the next step). */
+  primaryCourse?: { slug: string; name: string } | null
   recentActivity: {
     topicTitle: string
     topicSlug: string
@@ -135,11 +150,13 @@ function DashboardContent() {
   const [sendingVerification, setSendingVerification] = useState(false)
   const [verificationError, setVerificationError] = useState(false)
   const [pendingAssignments, setPendingAssignments] = useState(0)
-  // Pending class diagnostics (same endpoint ClassDiagnosticBanner uses) so the
-  // page can decide which single "today" item deserves the full-card slot.
-  const [classDiags, setClassDiags] = useState<{ id: string; title: string; href: string }[]>([])
-  // Daily Challenge, when demoted to a chip, expands in place on click.
-  const [showDailyChallenge, setShowDailyChallenge] = useState(false)
+  // Pending class diagnostics (same endpoint ClassDiagnosticBanner uses) — an
+  // input to the one "Your next step" card.
+  const [classDiags, setClassDiags] = useState<(NextStepClassDiagnostic & { id: string })[]>([])
+  // The daily question is a chip in the "Also today" row that expands in place.
+  const [showDailyQuestion, setShowDailyQuestion] = useState(false)
+  // The active flashcard deck (study mode), shown on the flashcard card.
+  const [activeDeck, setActiveDeck] = useState<ContextOption | null>(null)
   const [showTutorial, setShowTutorial] = useState(false)
   const [pathTopic, setPathTopic] = useState<string | null>(null)
   const [achievements, setAchievements] = useState<AchievementData[]>([])
@@ -152,11 +169,13 @@ function DashboardContent() {
    * SAT, MCAT) plus a cleared-modules lookup. Because each course had to be
    * hand-wired here, the other 28 courses with diagnostics had no plan at all.
    */
+  const [plansLoaded, setPlansLoaded] = useState(false)
   const [studyPlans, setStudyPlans] = useState<{
     courseKey: string
     label: string
     diagnosticRoute: string
     gated: boolean
+    canRetakeDiagnostic?: boolean
     requiredScorePercent: number
     topics: {
       slug: string
@@ -277,11 +296,24 @@ function DashboardContent() {
     // per-topic done/pending already computed server-side. This replaced six
     // sequential fetches (four course histories, the MCAT plan, and a
     // module-status lookup) that between them still only covered five courses.
+    // The active deck rides along (it only labels the flashcard card).
+    const [planRes, deckRes] = await Promise.allSettled([
+      fetch('/api/study-plan/plan-status'),
+      fetch('/api/study-context', { cache: 'no-store' }),
+    ])
     try {
-      const planRes = await fetch('/api/study-plan/plan-status')
-      if (planRes.ok) {
-        const d = await planRes.json()
+      if (planRes.status === 'fulfilled' && planRes.value.ok) {
+        const d = await planRes.value.json()
         setStudyPlans(Array.isArray(d.plans) ? d.plans : [])
+      }
+    } catch { /* silent */ }
+    // Resolved either way — the next-step card stops waiting on a failure.
+    setPlansLoaded(true)
+    try {
+      if (deckRes.status === 'fulfilled' && deckRes.value.ok) {
+        const d = await deckRes.value.json()
+        const active = (d.contexts as ContextOption[] | undefined)?.find((c) => c.key === d.active)
+        if (active) setActiveDeck(active)
       }
     } catch { /* silent */ }
 
@@ -372,6 +404,42 @@ function DashboardContent() {
     ? Math.round((overview?.topicsMastered ?? 0) / totalTopics * 100)
     : 0
 
+  // ── The one "Your next step" (see src/lib/dashboard-next-step.ts) ──
+  const dueFlashcards = overview?.dueFlashcards ?? 0
+  const totalFlashcards = overview?.totalFlashcards ?? 0
+  const primaryCourse = data?.primaryCourse ?? null
+  const primaryDiagnostic = courseDiagnosticForSlug(primaryCourse?.slug)
+  const preferredCourse: NextStepCourse | null = primaryCourse
+    ? {
+        key: primaryDiagnostic?.key ?? null,
+        label: primaryDiagnostic?.label ?? primaryCourse.name,
+        diagnosticHref: primaryDiagnostic?.diagnosticHref ?? null,
+        courseHref: getCourseHref(primaryCourse.slug),
+      }
+    : null
+  const nextStep = resolveNextStep({
+    pendingAssignments,
+    classDiagnostics: classDiags,
+    dueFlashcards,
+    plans: plansLoaded ? studyPlans : null,
+    preferredCourse,
+    firstTopicSlug: pathTopic,
+  })
+  // Continue: the latest topic that isn't cleared, and isn't the next step.
+  const clearedSlugs = new Set(studyPlans.flatMap((p) => p.topics.filter((t) => t.isSatisfied).map((t) => t.slug)))
+  const continueTopic = pickContinueTopic(
+    recentActivity,
+    clearedSlugs,
+    nextStep.kind === 'plan-topic' ? nextStep.topic.slug : null,
+  )
+  const firstVisit = isFirstVisit({
+    topicsStarted: overview?.topicsStarted ?? 0,
+    totalFlashcards,
+    longestStreak: streak?.longest ?? 0,
+    hasPlans: studyPlans.length > 0,
+  })
+  const deckName = activeDeck ? deckDisplayName(activeDeck) : null
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {newAchievements.length > 0 && (
@@ -385,29 +453,36 @@ function DashboardContent() {
             <AvatarDisplay avatarData={avatarData} size={56} className="ring-2 ring-accent rounded-full" />
             <div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Welcome back, {session.user?.name || 'Student'}!
+                {firstVisit ? 'Welcome' : 'Welcome back'}, {session.user?.name || 'Student'}!
               </h1>
-              <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
+              <p className="text-gray-600 dark:text-gray-400">
+                {firstVisit ? 'Your first step is right below.' : 'Here’s your next step and your progress'}
+              </p>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            {/* Quiet secondary actions share one outlined style; the single
-                brand-gradient primary is Review Flashcards. */}
-            <Link href="/join-class" className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
+            {/* Quiet secondary actions share one outlined style. The page's one
+                primary button lives in the "Your next step" card below. */}
+            <Link data-tour="join-class" href="/join-class" className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               <School className="w-4 h-4" aria-hidden /> Join a Class
             </Link>
             <Link href="/profile" className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               Edit Profile
             </Link>
-            <Link href="/flashcards/review" className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all">
-              Review Flashcards {overview && overview.dueFlashcards > 0 && (
-                <span className="ml-1.5 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
-              )}
-            </Link>
+            {/* A student with no cards yet gets no flashcard button at all —
+                "Review Flashcards" into an empty deck was a dead end. */}
+            {totalFlashcards > 0 && (
+              <Link href={FLASHCARD_REVIEW_HREF} className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
+                <Layers className="w-4 h-4" aria-hidden /> Review flashcards
+                {dueFlashcards > 0 && (
+                  <span className="ml-0.5 px-2 py-0.5 bg-accent-subtle dark:bg-accent-light/20 text-accent-hover dark:text-accent-muted rounded-full text-xs font-semibold">{dueFlashcards} due</span>
+                )}
+              </Link>
+            )}
             <button
               onClick={() => setShowTutorial(true)}
-              title="Replay the dashboard tour"
-              aria-label="Replay the dashboard tour"
+              title="How StudyMondo works (replay the tour)"
+              aria-label="How StudyMondo works (replay the tour)"
               className="p-2 rounded-lg text-gray-400 hover:text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors"
             >
               <HelpCircle className="w-5 h-5" aria-hidden />
@@ -460,76 +535,67 @@ function DashboardContent() {
           </div>
         )}
 
-        {/* One full-width card at most above the stats. LiveNowBanner always
-            stays (time-critical). Of the rest, only the single highest-priority
-            item gets the full-card slot (assignments > class diagnostic > daily
-            challenge); the others demote to compact chips in the "Today" row.
+        {/* ONE next step above the stats (assignment > class diagnostic >
+            cards due > next study-plan topic > the diagnostic). LiveNowBanner
+            stays too (time-critical). Everything else that is due today is a
+            compact chip in the "Also today" row, never a second primary card.
             This all sits deliberately ABOVE the fetchError guard further down —
-            each item loads from its own endpoint, so a failure of the
+            each input loads from its own endpoint, so a failure of the
             /api/dashboard stats payload must not hide a live session, an
             assigned diagnostic, or due work. */}
 
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
 
-        {(() => {
-          const primary: 'assignments' | 'diagnostic' | 'daily' =
-            pendingAssignments > 0 ? 'assignments' : classDiags.length > 0 ? 'diagnostic' : 'daily'
-          return (
-            <>
-              {primary === 'assignments' && (
-                <Link href="/assignments" className="mb-6 flex items-center justify-between bg-accent-subtle dark:bg-accent-light/20 border border-accent-light dark:border-accent-hover rounded-xl p-4 hover:shadow-md transition-all group">
-                  <div className="flex items-center gap-3">
-                    <ClipboardList className="w-7 h-7 text-accent shrink-0" aria-hidden />
-                    <div>
-                      <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
-                    </div>
-                  </div>
-                  <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
-                </Link>
-              )}
+        <NextStepCard step={nextStep} />
 
-              {/* Assigned class diagnostics not yet taken (self-hides when none) */}
-              {primary === 'diagnostic' && <ClassDiagnosticBanner />}
+        {/* Also today — whatever the next-step card didn't take */}
+        <div className="mb-6 flex flex-wrap items-center gap-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Also today</span>
+          {nextStep.kind !== 'class-diagnostic' && classDiags.length > 0 && (
+            <Link
+              href={classDiags[0].href}
+              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
+            >
+              <NotebookPen className="w-4 h-4 text-accent" aria-hidden />
+              Class diagnostic due{classDiags.length > 1 ? ` (${classDiags.length})` : ''}
+            </Link>
+          )}
+          {nextStep.kind === 'class-diagnostic' && classDiags.length > 1 && (
+            <Link
+              href={classDiags[1].href}
+              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
+            >
+              <NotebookPen className="w-4 h-4 text-accent" aria-hidden />
+              {classDiags.length - 1} more class diagnostic{classDiags.length > 2 ? 's' : ''}
+            </Link>
+          )}
+          {nextStep.kind !== 'flashcards' && dueFlashcards > 0 && (
+            <Link href={FLASHCARD_REVIEW_HREF} className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors">
+              <Layers className="w-4 h-4 text-accent" aria-hidden />
+              {dueFlashcards} flashcard{dueFlashcards !== 1 ? 's' : ''} due
+            </Link>
+          )}
+          <button
+            onClick={() => setShowDailyQuestion((v) => !v)}
+            aria-expanded={showDailyQuestion}
+            aria-controls="dashboard-daily-question"
+            className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
+          >
+            <Target className="w-4 h-4 text-accent" aria-hidden />
+            Daily question
+            {showDailyQuestion
+              ? <ChevronUp className="w-3.5 h-3.5" aria-hidden />
+              : <ChevronDown className="w-3.5 h-3.5" aria-hidden />}
+          </button>
+        </div>
 
-              {/* Demoted items become one compact "Today" chip row */}
-              {primary !== 'daily' && (
-                <div className="mb-6 flex flex-wrap items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Today</span>
-                  {primary === 'assignments' && classDiags.length > 0 && (
-                    <Link
-                      href={classDiags[0].href}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
-                    >
-                      <NotebookPen className="w-4 h-4 text-accent" aria-hidden />
-                      Class diagnostic due{classDiags.length > 1 ? ` (${classDiags.length})` : ''}
-                    </Link>
-                  )}
-                  <button
-                    onClick={() => setShowDailyChallenge((v) => !v)}
-                    aria-expanded={showDailyChallenge}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent-muted hover:text-accent transition-colors"
-                  >
-                    <Target className="w-4 h-4 text-accent" aria-hidden />
-                    Daily Challenge
-                    {showDailyChallenge
-                      ? <ChevronUp className="w-3.5 h-3.5" aria-hidden />
-                      : <ChevronDown className="w-3.5 h-3.5" aria-hidden />}
-                  </button>
-                </div>
-              )}
-
-              {/* Daily Challenge — the full card when nothing outranks it, or
-                  expanded on demand from its chip */}
-              {(primary === 'daily' || showDailyChallenge) && (
-                <div className="mb-6">
-                  <DailyChallenge />
-                </div>
-              )}
-            </>
-          )
-        })()}
+        {/* Daily question — from the student's own course, expanded on demand */}
+        {showDailyQuestion && (
+          <div id="dashboard-daily-question" className="mb-6">
+            <DailyChallenge />
+          </div>
+        )}
 
         {/* Streak Notification (#122) */}
         <StreakNotification />
@@ -567,9 +633,9 @@ function DashboardContent() {
               <div className="text-xs text-gray-600 dark:text-gray-400 group-hover:text-accent transition-colors">Mastered</div>
             </div>
           </Link>
-          <Link href="/flashcards/review" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:border-accent-muted hover:shadow-md transition-all group">
+          <Link href={FLASHCARD_REVIEW_HREF} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:border-accent-muted hover:shadow-md transition-all group">
             <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">{overview?.totalFlashcards ?? 0}</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 group-hover:text-accent transition-colors">Flashcards Studied</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-1 group-hover:text-accent transition-colors">Flashcards studied</div>
           </Link>
           <Link href="/dashboard?tab=extras" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm hover:border-accent-muted hover:shadow-md transition-all group">
             <div className="text-3xl font-bold text-gray-900 dark:text-white">{streak?.current ?? 0}<span aria-hidden>🔥</span></div>
@@ -601,57 +667,44 @@ function DashboardContent() {
         {tab === 'overview' && (
         <div role="tabpanel" id="dashboard-tabpanel-overview" aria-labelledby="dashboard-tab-overview" className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
-            {/* Continue where you left off — THE single next action, derived from
-                the most recent topic activity. The one gradient-prominent card on
-                the page; everything else stays neutral so this reads first.
-                (New users with no activity get the cold-start card below instead.) */}
-            {recentActivity.length > 0 && (
-              <div className="rounded-2xl bg-gradient-to-r from-accent to-accent-secondary p-6 sm:p-7 text-white shadow-lg">
-                <p className="text-xs font-bold uppercase tracking-wider text-white/80 mb-2">
-                  Continue where you left off
-                </p>
-                <h2 className="text-2xl font-bold mb-1 truncate">{recentActivity[0].topicTitle}</h2>
-                <p className="text-sm text-white/85 mb-4">
-                  {recentActivity[0].courseName}
-                  {typeof recentActivity[0].masteryLevel === 'number' && recentActivity[0].masteryLevel > 0 && (
-                    <> · {Math.round(recentActivity[0].masteryLevel * 100)}% mastery</>
-                  )}
-                </p>
-                <div className="flex flex-wrap items-center gap-3">
-                  <Link
-                    href={`/topics/${recentActivity[0].topicSlug}`}
-                    className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-accent-hover shadow hover:bg-white/90 transition-colors"
-                  >
-                    <Play className="w-4 h-4" aria-hidden /> Continue topic
-                  </Link>
-                  {(overview?.dueFlashcards ?? 0) > 0 && (
-                    <Link
-                      href="/flashcards"
-                      className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-                    >
-                      <Layers className="w-4 h-4" aria-hidden /> Review {overview!.dueFlashcards} due card{overview!.dueFlashcards === 1 ? '' : 's'}
-                    </Link>
-                  )}
-                  {(streak?.current ?? 0) > 0 && (
-                    <span className="ml-auto text-sm font-semibold text-white/90" title="Current daily streak">
-                      🔥 {streak!.current}-day streak
-                    </span>
-                  )}
+            {/* Continue where you left off — the latest topic that is NOT
+                cleared yet (and isn't already the next step above). Opens the
+                interactive lesson, where the entrance quiz, lesson parts and
+                exit quiz live. Neutral on purpose: the next-step card is the
+                page's one primary action. */}
+            {continueTopic && (
+              <div data-tour="continue" className="flex flex-wrap items-center justify-between gap-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm">
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+                    Continue where you left off
+                  </p>
+                  <h2 className="text-lg font-bold text-gray-900 dark:text-white truncate">{continueTopic.topicTitle}</h2>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {continueTopic.courseName}
+                    {continueTopic.masteryLevel > 0 && (
+                      <> · {Math.round(continueTopic.masteryLevel * 100)}% through the lesson</>
+                    )}
+                  </p>
                 </div>
+                <Link
+                  href={continueTopic.href}
+                  className="inline-flex items-center gap-2 rounded-lg border border-accent-muted dark:border-accent px-4 py-2 text-sm font-semibold text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors"
+                >
+                  <Play className="w-4 h-4" aria-hidden /> Continue topic
+                </Link>
               </div>
             )}
-
-            {/* Compact engagement strip — streak, weekly-challenge XP, leaderboard.
-                One row by design; never a banner. */}
-            <EngagementStrip streak={streak?.current ?? 0} />
 
             {/* Diagnostic study plans, for EVERY course the student has taken a
                 diagnostic in. This was five courses written out one after
                 another, each with its own state, its own fetch and its own copy
                 of this markup — which is why the other 28 silently had none. */}
             {studyPlans.length > 0 && (
-              <div className="space-y-4">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
+              <div data-tour="study-plans" className="space-y-4">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your study plans
+                  <HelpLink article={HELP_ARTICLES.diagnosticsAndStudyPlans} label="How study plans work" className="ml-1.5" />
+                </h2>
                 {studyPlans.map((plan) => (
                   <div key={plan.courseKey} className="bg-white dark:bg-gray-800 rounded-xl border-2 border-accent-light dark:border-accent-hover p-5 shadow-sm">
                     <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -659,22 +712,23 @@ function DashboardContent() {
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {plan.summary.pending === 0
-                            ? 'All recommended topics complete'
-                            : `${plan.summary.completed} of ${plan.summary.total} done`}
+                            ? 'Every topic cleared'
+                            : `${plan.summary.completed} of ${plan.summary.total} cleared`}
                         </span>
                         <Link href={plan.diagnosticRoute} className="text-xs text-accent hover:underline">View plan →</Link>
                       </div>
                     </div>
-                    {plan.gated && (
-                      <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
-                        Retake unlock rule: clear each recommended topic. Clear a topic by scoring {TOPIC_CLEAR_PERCENT}% or better on its exit quiz (or by testing out on its entrance quiz).
-                      </p>
-                    )}
+                    <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
+                      Clear a topic by scoring {TOPIC_CLEAR_PERCENT}% or better on its exit quiz (or by testing out on its entrance quiz).{' '}
+                      {plan.gated
+                        ? 'Clear every topic to unlock your diagnostic retake.'
+                        : 'When every topic is cleared, retake the diagnostic to see your growth and get a new plan.'}
+                    </p>
                     <div className="space-y-1.5">
                       {plan.topics.map((topic, i) => (
                         <Link
                           key={topic.slug}
-                          href={topic.topicPath}
+                          href={studyPlanTopicHref(topic, plan.courseKey)}
                           className={`flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group ${topic.isSatisfied ? 'opacity-60' : ''}`}
                         >
                           <div className="flex flex-wrap items-center gap-2">
@@ -682,7 +736,7 @@ function DashboardContent() {
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.isSatisfied ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}`}>
-                              {topic.isSatisfied ? '✓ Done' : 'Pending'}
+                              {topic.isSatisfied ? '✓ Cleared' : 'To do'}
                             </span>
                           </div>
                           <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
@@ -694,39 +748,25 @@ function DashboardContent() {
               </div>
             )}
             {studyPlans.length === 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
+              <div data-tour="study-plans" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your study plans
+                  <HelpLink article={HELP_ARTICLES.diagnosticsAndStudyPlans} label="How study plans work" className="ml-1.5" />
+                </h2>
                 <EmptyState
                   icon={ClipboardList}
-                  message="Take a diagnostic in any course and a personalized study plan will appear here."
-                  ctaHref="/courses"
-                  ctaLabel="Find your course"
+                  message="Take a course's free diagnostic and your study plan appears here: the topics you most need, in order."
+                  ctaHref={preferredCourse?.diagnosticHref ?? '/topics'}
+                  ctaLabel={preferredCourse?.diagnosticHref ? `Take the ${preferredCourse.label} diagnostic` : 'Find your course'}
                   compact
                 />
               </div>
             )}
 
-            {/* Cold start: onboarding picked a course but nothing studied yet —
-                give the promised "start your study path" entry point. */}
-            {courseProgress.length === 0 && pathTopic && (
-              <div className="bg-gradient-to-r from-accent to-accent-secondary rounded-xl p-6 shadow-sm text-white">
-                <h2 className="text-xl font-bold mb-1"><Rocket className="inline w-5 h-5 mr-1.5 -mt-1" aria-hidden /> Start your study path</h2>
-                <p className="text-sm text-accent-light mb-4">
-                  Your course is ready — jump into your first topic and your progress will show up here.
-                </p>
-                <Link
-                  href={`/topics/${pathTopic}`}
-                  className="inline-block px-5 py-2.5 bg-white text-accent-hover font-semibold rounded-lg hover:bg-accent-subtle transition-colors"
-                >
-                  Start your first topic →
-                </Link>
-              </div>
-            )}
-
             {/* Course Progress */}
             {courseProgress.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course Progress</h2>
+              <div data-tour="course-progress" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course progress</h2>
                 <div className="space-y-4">
                   {courseProgress.map((course) => {
                     const total = course.completed + course.mastered + course.inProgress
@@ -747,18 +787,22 @@ function DashboardContent() {
                 </div>
               </div>
             )}
-            {courseProgress.length === 0 && !pathTopic && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course Progress</h2>
+            {courseProgress.length === 0 && (
+              <div data-tour="course-progress" className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course progress</h2>
                 <EmptyState
                   icon={BookOpen}
                   message="Start any topic and your course progress will show up here."
-                  ctaHref="/topics"
-                  ctaLabel="Browse topics"
+                  ctaHref={pathTopic ? `/topics/${pathTopic}/interactive` : '/topics'}
+                  ctaLabel={pathTopic ? 'Start your first topic' : 'Browse courses'}
                   compact
                 />
               </div>
             )}
+
+            {/* Streak, weekly XP, leaderboard — deliberately BELOW the study
+                plans and course progress: motivation, not the next step. */}
+            <EngagementStrip streak={streak?.current ?? 0} />
 
           </div>
           {/* Overview sidebar — quick actions + what's weak */}
@@ -766,25 +810,36 @@ function DashboardContent() {
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Zap className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Quick Actions</h3>
               <div className="space-y-3">
-                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border border-accent-light dark:border-accent-hover hover:border-accent-muted transition-colors group">
+                <Link data-tour="flashcards" href={FLASHCARD_REVIEW_HREF} className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border border-accent-light dark:border-accent-hover hover:border-accent-muted transition-colors group">
                   <Layers className="w-6 h-6 text-accent shrink-0" aria-hidden />
-                  <div>
-                    <p className="font-medium text-accent-dark dark:text-accent-dark">Review Flashcards</p>
-                    <p className="text-xs text-accent dark:text-accent-muted">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
+                  <div className="min-w-0">
+                    <p className="font-medium text-accent-dark dark:text-accent-muted">Review flashcards</p>
+                    <p className="text-xs text-accent dark:text-accent-muted">
+                      {totalFlashcards === 0
+                        ? 'Clear a topic (lesson + exit quiz) to unlock its cards'
+                        : dueFlashcards > 0
+                          ? `${dueFlashcards} card${dueFlashcards === 1 ? '' : 's'} due today`
+                          : 'Nothing due right now'}
+                    </p>
+                    {deckName && (
+                      <p className="text-xs text-gray-600 dark:text-gray-400 truncate" title="Change decks on the flashcard review page">
+                        Deck: {deckName}
+                      </p>
+                    )}
                   </div>
                 </Link>
-                <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
+                <Link data-tour="competitive" href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
                   <Gamepad2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0" aria-hidden />
                   <div>
                     <p className="font-medium text-green-900 dark:text-green-200">Competitive Mode</p>
-                    <p className="text-xs text-green-600 dark:text-green-400">Challenge AI or other students</p>
+                    <p className="text-xs text-green-600 dark:text-green-400">Optional: race the AI or other students</p>
                   </div>
                 </Link>
                 <Link href="/topics" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 hover:border-amber-300 transition-colors group">
                   <BookOpen className="w-6 h-6 text-amber-600 dark:text-amber-400 shrink-0" aria-hidden />
                   <div>
-                    <p className="font-medium text-amber-900 dark:text-amber-200">Browse Topics</p>
-                    <p className="text-xs text-amber-600 dark:text-amber-400">Explore all study materials</p>
+                    <p className="font-medium text-amber-900 dark:text-amber-200">Browse courses</p>
+                    <p className="text-xs text-amber-600 dark:text-amber-400">Every course and its topics</p>
                   </div>
                 </Link>
                 <div className="p-3">

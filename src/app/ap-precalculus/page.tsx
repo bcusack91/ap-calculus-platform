@@ -49,7 +49,7 @@ const features: HubFeature[] = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Precalculus question every day covering different units. Build consistency.',
     href: '/ap-precalculus-daily-question',
     icon: 'daily',
@@ -105,7 +105,7 @@ const features: HubFeature[] = [
     stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'Multi-week guided plans that pace lessons, quizzes, and FRQ practice up to exam day.',
     href: '/ap-precalc-study-plans',
     icon: 'studyPlan',

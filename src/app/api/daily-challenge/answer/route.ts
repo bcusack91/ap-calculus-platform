@@ -3,19 +3,24 @@ import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { touchDailyStreak, displayStreak } from '@/lib/streak'
-import { getDailyQuestions, getUtcDayKey, dayKeyToDate, DAILY_CHALLENGE_SIZE } from '@/lib/daily-challenge'
+import { getDailyQuestions, getUtcDayKey, dayKeyToDate, DAILY_CHALLENGE_SIZE, isDailySetKey, pickDailySet } from '@/lib/daily-challenge'
+import { getStudentCourseRanking } from '@/lib/student-courses-server'
 
 export const dynamic = 'force-dynamic'
 
 const answerSchema = z.object({
   // Indices into each question's SERVED option order, in question order.
   answers: z.array(z.number().int().min(0).max(9)).min(1).max(DAILY_CHALLENGE_SIZE),
+  // The question set GET served (the student's course bank). Optional so an
+  // older client still grades — the server then re-resolves the set.
+  set: z.string().max(64).optional(),
 })
 
 /**
  * POST /api/daily-challenge/answer
- * Grades today's challenge server-side (regenerating the same deterministic
- * question set), upserts DailyChallengeResult (one per user per UTC day) and
+ * Grades today's questions server-side (regenerating the same deterministic
+ * question set — the one GET served, echoed back as `set`), upserts
+ * DailyChallengeResult (one per user per UTC day) and
  * advances the daily streak. A second submission on the same day is rejected
  * with the existing result.
  */
@@ -34,8 +39,11 @@ export async function POST(request: Request) {
 
     const day = getUtcDayKey()
     const dayDate = dayKeyToDate(day)
-    const questions = await getDailyQuestions(day)
-    const { answers } = parsed.data
+    const { answers, set: requestedSet } = parsed.data
+    const set = isDailySetKey(requestedSet)
+      ? requestedSet
+      : pickDailySet(await getStudentCourseRanking(userId).catch(() => [] as string[]))
+    const questions = await getDailyQuestions(day, set)
     if (answers.length !== questions.length) {
       return NextResponse.json(
         { error: `Expected ${questions.length} answers, got ${answers.length}` },

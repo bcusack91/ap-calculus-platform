@@ -51,7 +51,7 @@ const features: HubFeature[] = [
     stats: 'Mixed · All units',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'A day-by-day schedule of lessons, practice, and review — pick a sprint or a standard pace.',
     href: '/precalc-study-plans',
     icon: 'studyPlan',
@@ -59,7 +59,7 @@ const features: HubFeature[] = [
     stats: 'Sprint or standard pace',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh Precalculus question every day, rotating across units to keep every topic warm.',
     href: '/precalc-daily-question',
     icon: 'daily',
@@ -117,7 +117,7 @@ export default function PrecalculusHub() {
         courseSlug="precalculus"
         courseName="Precalculus"
         courseDescription={metadata.description as string}
-        tagline="Diagnostics, unit tests, full practice tests, and day-by-day study plans — everything you need to get through Precalculus."
+        tagline="Diagnostics, unit tests, full practice tests, and day-by-day study schedules — everything you need to get through Precalculus."
         primaryCta={{ href: '/precalc-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/precalc-unit-tests', label: 'Browse Unit Tests' }}
         finalCtaHref="/precalc-diagnostic"

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import type { Metadata } from 'next'
-import CourseStudyPlan from '@/components/CourseStudyPlan'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
 import { InArticleAd } from '@/components/ad-banner'
 import CourseToolGrid from '@/components/CourseToolGrid'
@@ -121,7 +120,7 @@ const features = [
     stats: '29 topics · 170+ lesson parts',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'Pre-built 3-month, 6-month, and 12-month study schedules with daily tasks, auto-populated to your dashboard.',
     href: '/mcat-study-plans',
     icon: (
@@ -133,7 +132,7 @@ const features = [
     stats: '3 templates · 3–12 months',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh MCAT question every day from a rotating section. Build consistency with daily practice.',
     href: '/mcat-daily-question',
     icon: (
@@ -268,19 +267,11 @@ export default function MCATLandingPage() {
           canonicalPath: '/mcat',
         })) }}
       />
-      {/* Personalized plan: flashcards due + diagnostic study modules */}
-      <CourseStudyPlan
-        courseSlug="mcat-prep"
-        courseLabel="MCAT"
-        planStatusEndpoint="/api/mcat-diagnostic/plan-status"
-        diagnosticHref="/mcat-diagnostic"
-        accent="emerald"
-      />
       {/* Hero */}
       <CourseUniqueIntro slug="mcat" />
       <CourseHero
         courseName='MCAT'
-        tagline='Practice questions across all 4 MCAT sections, diagnostic assessments, 170+ interactive lesson parts, study plans, and daily practice.'
+        tagline='Practice questions across all 4 MCAT sections, diagnostic assessments, 170+ interactive lesson parts, study schedules, and daily practice.'
         primaryCta={{ href: '/mcat-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/mcat-practice', label: 'Practice Questions' }}
         accentFrom="emerald"

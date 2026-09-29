@@ -135,7 +135,7 @@ export const AP_WORLD_HISTORY_PLANS: StudyPlanTemplate[] = [sprint, standard, co
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP World History',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-world-history', label: 'AP World History' },
   apiEndpoint: '/api/ap-world-history-study-plans',
   diagnosticPrefix: 'ap-world-history-diagnostic',

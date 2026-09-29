@@ -5,6 +5,7 @@ import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { cached, dashboardCacheKey } from '@/lib/redis'
 import { displayStreak } from '@/lib/streak'
+import { getStudentCourseRanking } from '@/lib/student-courses-server'
 
 export async function GET() {
   try {
@@ -151,6 +152,21 @@ async function buildDashboard(userId: string) {
     const topicsInProgress = topicProgress.filter(
       (tp) => tp.status === 'IN_PROGRESS'
     ).length
+    // The student's chosen / most-studied course — the dashboard's next step
+    // offers its diagnostic to a student who has no study plan yet.
+    const primaryCourseSlug = (await getStudentCourseRanking(userId).catch(() => [] as string[]))[0] ?? null
+    const primaryCourse = primaryCourseSlug
+      ? {
+          slug: primaryCourseSlug,
+          name:
+            courseMap[primaryCourseSlug]?.name ??
+            (await prisma.course
+              .findUnique({ where: { slug: primaryCourseSlug }, select: { name: true } })
+              .catch(() => null))?.name ??
+            primaryCourseSlug,
+        }
+      : null
+
     const totalTimeSpent = topicProgress.reduce(
       (sum, tp) => sum + (tp.timeSpent || 0),
       0
@@ -177,6 +193,7 @@ async function buildDashboard(userId: string) {
           }
         : { current: 0, longest: 0, lastActive: null },
       courseProgress: Object.values(courseMap),
+      primaryCourse,
       recentActivity: recentActivity.map((a) => ({
         topicTitle: a.topic.title,
         topicSlug: a.topic.slug,

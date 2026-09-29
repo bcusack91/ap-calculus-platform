@@ -49,7 +49,7 @@ export default function StudyPlanner() {
     setLoading(true)
     setError(null)
     fetch('/api/study-plans')
-      .then((r) => { if (!r.ok) throw new Error('Failed to load plans'); return r.json() })
+      .then((r) => { if (!r.ok) throw new Error('Failed to load your study schedules'); return r.json() })
       .then((data) => {
         setPlans(data.plans ?? [])
         if (data.plans?.length) setActivePlan(data.plans[0].id)
@@ -156,7 +156,7 @@ export default function StudyPlanner() {
   if (error) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">📋 Study Planner</h2>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">📋 Study schedules</h2>
         <div className="text-center py-6">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>
@@ -174,13 +174,13 @@ export default function StudyPlanner() {
       {/* Header */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-          📋 Study Planner
+          📋 Study schedules
         </h2>
         <button
           onClick={() => setShowCreate(!showCreate)}
           className="text-sm bg-accent text-white px-3 py-1.5 rounded-lg hover:bg-accent-hover transition-colors"
         >
-          + New Plan
+          + New schedule
         </button>
       </div>
 
@@ -190,7 +190,7 @@ export default function StudyPlanner() {
           <input
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
-            placeholder="Plan title (e.g., AP Calculus Exam Prep)"
+            placeholder="Schedule title (e.g., AP Calculus Exam Prep)"
             className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-2"
           />
           <div className="flex gap-2">
@@ -367,19 +367,19 @@ export default function StudyPlanner() {
             onClick={() => deletePlan(plan.id)}
             className="mt-4 text-xs text-red-500 hover:text-red-600 transition-colors"
           >
-            Delete this plan
+            Delete this schedule
           </button>
         </div>
       ) : (
         <div className="p-8 text-center text-gray-500 dark:text-gray-400">
           <p className="text-3xl mb-2">📋</p>
-          <p className="font-medium">No study plans yet</p>
-          <p className="text-sm mt-1">Create a plan to organize your study schedule</p>
+          <p className="font-medium">No study schedules yet</p>
+          <p className="text-sm mt-1">Create one here, or start a ready-made schedule from your course&apos;s Study schedules page.</p>
         </div>
       )}
     </div>
 
-    {/* Ad — after the study plan list */}
+    {/* Ad — after the study schedule list */}
     <InArticleAd />
     </>
   )

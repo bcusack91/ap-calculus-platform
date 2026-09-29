@@ -225,7 +225,7 @@ export const AP_CHEM_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehensi
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Chemistry',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-chemistry', label: 'AP Chemistry' },
   apiEndpoint: '/api/ap-chem-study-plans',
   diagnosticPrefix: 'ap-chem-diagnostic',

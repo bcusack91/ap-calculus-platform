@@ -134,7 +134,7 @@ export const AP_ENG_LANG_PLANS: StudyPlanTemplate[] = [sprint, standard, compreh
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP English Language',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-english-language', label: 'AP English Language' },
   apiEndpoint: '/api/ap-english-lang-study-plans',
   diagnosticPrefix: 'ap-english-lang-diagnostic',

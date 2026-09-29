@@ -133,7 +133,7 @@ export const AP_ENVIRO_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehen
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Environmental Science',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-environmental-science', label: 'AP Environmental Science' },
   apiEndpoint: '/api/ap-enviro-study-plans',
   diagnosticPrefix: 'ap-enviro-diagnostic',

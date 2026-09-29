@@ -4,12 +4,12 @@ import { config, ALGEBRA2_PLANS } from '@/data/algebra2-study-plans'
 import { getContentItems, CONTENT_TYPES } from '@/lib/content-store'
 
 export const metadata: Metadata = {
-  title: 'Algebra 2 Study Plans | Study Mondo',
+  title: 'Algebra 2 Study Schedules | Study Mondo',
   description:
     'Pick a Algebra 2 study plan — a sprint or a standard pace — with a day-by-day schedule of lessons, practice, and review.',
   alternates: { canonical: 'https://www.studymondo.com/algebra2-study-plans' },
   openGraph: {
-    title: 'Algebra 2 Study Plans',
+    title: 'Algebra 2 Study Schedules',
     description: 'Day-by-day Algebra 2 study schedules built around lessons, practice, and review.',
     url: 'https://www.studymondo.com/algebra2-study-plans',
   },

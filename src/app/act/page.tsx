@@ -71,7 +71,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'Fresh ACT questions every day across all four sections. Build consistency with quick daily practice.',
     href: '/act-daily-question',
     icon: (
@@ -274,7 +274,7 @@ export default function ACTLandingPage() {
           </div>
           <div className="mt-6 text-center">
             <Link
-              href="/courses/act-prep"
+              href="/act-diagnostic"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-600 to-orange-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg"
             >
               Get Started Free

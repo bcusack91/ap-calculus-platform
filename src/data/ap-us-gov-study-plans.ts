@@ -131,7 +131,7 @@ export const AP_US_GOV_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehen
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP US Government',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-us-government', label: 'AP US Government' },
   apiEndpoint: '/api/ap-us-gov-study-plans',
   diagnosticPrefix: 'ap-us-gov-diagnostic',

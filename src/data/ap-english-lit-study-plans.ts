@@ -131,7 +131,7 @@ export const AP_ENG_LIT_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehe
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP English Literature',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-english-literature', label: 'AP English Literature' },
   apiEndpoint: '/api/ap-english-lit-study-plans',
   diagnosticPrefix: 'ap-english-lit-diagnostic',

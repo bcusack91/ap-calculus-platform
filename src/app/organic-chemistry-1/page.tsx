@@ -23,7 +23,7 @@ const features = [
   { title: 'Diagnostic Test', description: 'Benchmark your performance across the OChem 1 curriculum and surface the topics to prioritize.', href: '/ochem-diagnostic', stats: '~30 questions · 25 min', color: 'from-blue-500 to-indigo-500', icon: '🎯' },
   { title: 'AP-Equivalent Score Predictor', description: 'Convert your quiz performance and topic mastery into an AP-equivalent 1–5 score, the way AP Chemistry students are scored.', href: '/ochem1-score-predictor', stats: '1–5 scale · live updates', color: 'from-emerald-500 to-teal-500', icon: '⭐' },
   { title: 'Flashcards', description: 'Reagents, named reactions, and key spectroscopy data for OChem 1.', href: '/flashcards?course=organic-chemistry-1', stats: 'Reagents · Named reactions', color: 'from-purple-500 to-pink-500', icon: '🃏' },
-  { title: 'Daily Question', description: 'A fresh organic question every day — keep mechanisms sharp.', href: '/ochem-daily-question', stats: 'New daily', color: 'from-rose-500 to-pink-500', icon: '📅' },
+  { title: 'Daily question', description: 'A fresh organic question every day — keep mechanisms sharp.', href: '/ochem-daily-question', stats: 'New daily', color: 'from-rose-500 to-pink-500', icon: '📅' },
   { title: 'Exit Quizzes', description: 'Per-lesson assessments confirm mastery before you advance.', href: '/courses/organic-chemistry-1', stats: 'Per topic · Instant feedback', color: 'from-cyan-500 to-blue-500', icon: '✅' },
 ]
 

@@ -152,14 +152,14 @@ function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
             {backLink.label}
           </Link>
           <h1 className="mb-3 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-            {subject} Study Plan Templates
+            {subject} Study Schedules
           </h1>
           <p className="text-gray-600 dark:text-gray-400">{description}</p>
         </div>
 
         {success && (
           <div className="mx-auto mb-8 max-w-lg rounded-xl bg-green-100 p-4 text-center text-green-800 dark:bg-green-900/30 dark:text-green-300">
-            <p className="font-semibold">Plan adopted! Redirecting to your dashboard…</p>
+            <p className="font-semibold">Schedule started! Redirecting to your dashboard…</p>
           </div>
         )}
 
@@ -201,14 +201,14 @@ function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
                       </label>
                       <button onClick={() => adoptPlan(plan.id)} disabled={!!adopting}
                         className={`w-full rounded-xl bg-gradient-to-r ${t.btnBg} py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-50`}>
-                        {adopting === plan.id ? 'Creating Plan…' : 'Start This Plan'}
+                        {adopting === plan.id ? 'Creating schedule…' : 'Start this schedule'}
                       </button>
                       <button onClick={() => setSelectedPlan(null)} className="w-full text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400">Cancel</button>
                     </div>
                   ) : (
                     <button onClick={() => setSelectedPlan(plan.id)}
                       className={`w-full rounded-xl border-2 ${t.btnBorder} py-2.5 font-semibold ${t.btnText} transition ${t.btnHover}`}>
-                      Select Plan
+                      Choose this schedule
                     </button>
                   )}
                 </div>
@@ -218,7 +218,7 @@ function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>Plans are added to your <Link href="/dashboard" className={`font-medium ${t.link}`}>dashboard</Link> Study Planner where you can track progress, check off tasks, and adjust the schedule.</p>
+          <p>Schedules are added to your <Link href="/dashboard?tab=practice" className={`font-medium ${t.link}`}>dashboard</Link> (Practice › Study schedules), where you can track progress, check off tasks, and adjust the dates. Want to know what to study first? Take the course diagnostic for a personal study plan.</p>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@ export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
           ),
         }}
       />
-      <ToolBreadcrumb subjectName={config.subject} tool="Study Plan" />
+      <ToolBreadcrumb subjectName={config.subject} tool="Study Schedule" />
       <StudyPlanSelectorInner {...config} />
       <ToolPageSeoBody subjectName={config.subject} tool="study-plan" />
     </>

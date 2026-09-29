@@ -80,7 +80,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Calculus AB question every day covering different topics. Build consistency.',
     href: '/ap-calcab-daily-question',
     icon: (

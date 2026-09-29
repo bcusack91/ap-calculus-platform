@@ -86,7 +86,7 @@ export default function StartStudyPlanButton({
       }
       if (!res.ok) {
         const j = await res.json().catch(() => ({}))
-        throw new Error(j.error || 'Could not create your plan')
+        throw new Error(j.error || 'Could not create your study schedule')
       }
       router.push('/study-plan')
     } catch (e) {
@@ -104,7 +104,7 @@ export default function StartStudyPlanButton({
   return (
     <div className={`rounded-2xl border-2 border-accent bg-accent-subtle dark:border-accent-hover dark:bg-accent-light/10 p-5 ${className}`}>
       <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-        Turn this into a day-by-day plan
+        Turn this into a day-by-day study schedule
       </h3>
       <p className="mt-1 mb-4 text-sm text-gray-600 dark:text-gray-400">
         We&apos;ll build a dated schedule of lessons, practice and review — and put the
@@ -121,7 +121,7 @@ export default function StartStudyPlanButton({
               disabled={creating}
               className="rounded-xl bg-accent px-6 py-3 font-semibold text-white shadow transition hover:opacity-90 disabled:opacity-50"
             >
-              {creating ? 'Building your plan…' : `Start the ${primary.durationWeeks}-week plan`}
+              {creating ? 'Building your schedule…' : `Start the ${primary.durationWeeks}-week study schedule`}
             </button>
             {secondary && (
               <button
@@ -139,7 +139,7 @@ export default function StartStudyPlanButton({
             href={endpoints.view}
             className="rounded-xl bg-accent px-6 py-3 font-semibold text-white shadow transition hover:opacity-90"
           >
-            Choose a study plan
+            Choose a study schedule
           </a>
         )}
       </div>

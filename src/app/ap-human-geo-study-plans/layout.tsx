@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { toolMetadata } from '@/lib/tool-metadata'
 
 export const metadata: Metadata = toolMetadata({
-  title: "AP Human Geography Study Plans | Study Mondo",
+  title: "AP Human Geography Study Schedules | Study Mondo",
   description: "Pre-built AP Human Geography study plans that organize every unit from population to urbanization plus FRQ practice into a clear day-by-day schedule before the exam.",
   path: "/ap-human-geo-study-plans",
 })

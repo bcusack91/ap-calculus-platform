@@ -4,8 +4,9 @@ import { useCallback, useEffect, useState } from 'react'
 import { MathText } from '@/components/MathText'
 
 /**
- * Daily Challenge — 5 server-selected questions per UTC day, same for every
- * user. Questions come from GET /api/daily-challenge (answers stripped);
+ * Daily question — 5 server-selected questions per UTC day from the student's
+ * own course bank (the mixed set when their course has none). Questions come
+ * from GET /api/daily-challenge (answers stripped);
  * grading, completion state and streak advancement are all server-side via
  * POST /api/daily-challenge/answer. Completion is the DailyChallengeResult
  * row, not localStorage.
@@ -20,6 +21,10 @@ interface PublicQuestion {
 
 interface ChallengeData {
   day: string
+  /** Question set served (the student's course); echoed back on submit. */
+  set?: string
+  /** Course label for the set, or null for the mixed set. */
+  setLabel?: string | null
   questions: PublicQuestion[]
   result: { score: number; total: number; completedAt: string } | null
   streak: number
@@ -71,7 +76,7 @@ export function DailyChallenge() {
       const res = await fetch('/api/daily-challenge/answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answers }),
+        body: JSON.stringify({ answers, set: data.set }),
       })
       const body = await res.json()
       if (res.ok) {
@@ -95,8 +100,8 @@ export function DailyChallenge() {
   if (loadError) {
     return (
       <div className={cardClass}>
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">🎯 Daily Challenge</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Couldn&apos;t load today&apos;s challenge.</p>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">🎯 Daily question</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Couldn&apos;t load today&apos;s questions.</p>
         <button
           onClick={load}
           className="px-4 py-2 text-base bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
@@ -110,7 +115,7 @@ export function DailyChallenge() {
   if (!data) {
     return (
       <div className={cardClass}>
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🎯 Daily Challenge</h3>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">🎯 Daily question</h3>
         <div className="animate-pulse space-y-3">
           <div className="h-4 bg-indigo-200/60 dark:bg-gray-700 rounded w-3/4" />
           <div className="h-10 bg-indigo-200/60 dark:bg-gray-700 rounded" />
@@ -125,7 +130,7 @@ export function DailyChallenge() {
     return (
       <div className={cardClass}>
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white">🎯 Daily Challenge</h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">🎯 Daily question</h3>
           {done.streak !== null && done.streak > 0 && (
             <span className="text-sm font-bold text-orange-600 dark:text-orange-400">🔥 {done.streak}-day streak</span>
           )}
@@ -135,7 +140,7 @@ export function DailyChallenge() {
             {done.score}/{done.total}
           </p>
           <p className="text-sm font-semibold text-green-600 dark:text-green-400 mt-1">
-            ✅ Completed for today — come back tomorrow for a new challenge!
+            ✅ Done for today — come back tomorrow for new questions!
           </p>
         </div>
         {review && (
@@ -179,8 +184,8 @@ export function DailyChallenge() {
   if (!question) {
     return (
       <div className={cardClass}>
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">🎯 Daily Challenge</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400">No challenge available today. Check back tomorrow!</p>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">🎯 Daily question</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">No questions available today. Check back tomorrow!</p>
       </div>
     )
   }
@@ -194,9 +199,9 @@ export function DailyChallenge() {
     <div className={cardClass}>
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white">🎯 Daily Challenge</h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">🎯 Daily question</h3>
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Question {current + 1} of {total} · {question.subject}
+            Question {current + 1} of {total} · {data.setLabel ? `From your ${data.setLabel} course` : question.subject}
           </p>
         </div>
         {data.streak > 0 && (

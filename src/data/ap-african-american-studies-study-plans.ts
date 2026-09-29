@@ -124,7 +124,7 @@ export const AP_AAS_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehensiv
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP African American Studies',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-african-american-studies', label: 'AP African American Studies' },
   apiEndpoint: '/api/ap-african-american-studies-study-plans',
   diagnosticPrefix: 'ap-aas-diagnostic',

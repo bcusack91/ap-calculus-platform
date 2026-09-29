@@ -9,6 +9,7 @@ import {
   getPendingJoinCode,
   clearPendingJoinCode,
 } from '@/lib/pending-join'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 function JoinClassContent() {
   const { data: session, status } = useSession()
@@ -90,7 +91,7 @@ function JoinClassContent() {
         <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
           <div className="text-5xl mb-4">🔒</div>
           <h1 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Sign in to join a class</h1>
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-500 dark:text-gray-400 mb-6">
             You need an account to join a classroom.
             {joinCode ? ' Your class code is saved — you’ll join automatically after signing in.' : ''}
           </p>
@@ -152,7 +153,7 @@ function JoinClassContent() {
         {/* Back link */}
         <Link
           href="/dashboard"
-          className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 mb-6"
+          className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 mb-6"
         >
           ← Back to Dashboard
         </Link>
@@ -167,8 +168,12 @@ function JoinClassContent() {
               <p className="text-gray-600 dark:text-gray-400 mb-1">
                 You joined <span className="font-semibold text-accent">{success.name}</span>
               </p>
-              <p className="text-sm text-gray-500 mb-6">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 Teacher: {success.teacher}
+              </p>
+              <p className="mb-6 rounded-lg bg-accent-subtle dark:bg-accent-light/10 px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
+                Class flashcards go into a separate class deck that starts fresh, and your personal deck still keeps every card you earn.
+                <HelpLink article={HELP_ARTICLES.studyModesAndDecks} label="How decks work" className="ml-1" />
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link

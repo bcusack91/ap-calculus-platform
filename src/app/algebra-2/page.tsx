@@ -41,7 +41,7 @@ const features: HubFeature[] = [
     stats: 'Identities · Formulas · Concepts',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh Algebra 2 question every day covering different units. Build consistency.',
     href: '/algebra2-daily-question',
     icon: 'daily',

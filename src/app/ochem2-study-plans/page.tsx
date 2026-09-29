@@ -4,12 +4,12 @@ import { config, OCHEM2_PLANS } from '@/data/ochem2-study-plans'
 import { getContentItems, CONTENT_TYPES } from '@/lib/content-store'
 
 export const metadata: Metadata = {
-  title: 'Organic Chemistry 2 Study Plans | Study Mondo',
+  title: 'Organic Chemistry 2 Study Schedules | Study Mondo',
   description:
     'Pick a Organic Chemistry 2 study plan — a sprint or a full-semester pace — with a day-by-day schedule of lessons, mechanism practice, and unit tests.',
   alternates: { canonical: 'https://www.studymondo.com/ochem2-study-plans' },
   openGraph: {
-    title: 'Organic Chemistry 2 Study Plans',
+    title: 'Organic Chemistry 2 Study Schedules',
     description: 'Day-by-day Organic Chemistry 2 study schedules built around lessons, practice, and unit tests.',
     url: 'https://www.studymondo.com/ochem2-study-plans',
   },

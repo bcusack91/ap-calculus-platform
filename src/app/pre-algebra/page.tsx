@@ -41,7 +41,7 @@ const features: HubFeature[] = [
     stats: 'Vocab · Rules · Properties',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh Pre-Algebra question every day covering different units. Build consistency.',
     href: '/prealgebra-daily-question',
     icon: 'daily',

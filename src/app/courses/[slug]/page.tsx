@@ -5,7 +5,8 @@ import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
 import CourseExitQuizGate from '@/components/CourseExitQuizGate'
-import DiagnosticStudyPlanBanner from '@/components/DiagnosticStudyPlanBanner'
+import CourseStudyPlan from '@/components/CourseStudyPlan'
+import { courseDiagnosticForSlug } from '@/lib/student-courses'
 import TrackedLink from '@/components/TrackedLink'
 import { ArticleByline } from '@/components/ArticleByline'
 import {
@@ -255,8 +256,15 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         </div>
 
-        {/* Personalized study plan from previous diagnostic — shown prominently at top */}
-        <DiagnosticStudyPlanBanner courseSlug={slug} />
+        {/* Start here — the one next step for this course: the free diagnostic
+            for a visitor, the next study-plan topic for a student with a plan
+            (client-fetched, so this page stays static). Same block as the hub. */}
+        {(() => {
+          const startHere = courseDiagnosticForSlug(slug)
+          return startHere ? (
+            <CourseStudyPlan courseKey={startHere.key} courseSlug={slug} className="mb-12" />
+          ) : null
+        })()}
 
         {/* Course Overview */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
@@ -303,10 +311,11 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         </div>
 
-        {/* Diagnostic Test CTA — shown for all courses that have a diagnostic */}
+        {/* Diagnostic Test CTA — only for a course whose diagnostic has no
+            study-plan course (the Start here block above covers the rest) */}
         {(() => {
           const diag = courseDiagnosticMap[slug]
-          if (!diag) return null
+          if (!diag || courseDiagnosticForSlug(slug)) return null
           const predictor = courseScorePredictorMap[slug]
           const dailyQuestion = courseDailyQuestionMap[slug]
           return (
@@ -387,6 +396,14 @@ export default async function CoursePage({ params }: CoursePageProps) {
             { key: 'frq', icon: '✍️', cfg: courseFRQMap[slug] },
             { key: 'study_plans', icon: '📅', cfg: courseStudyPlanMap[slug] },
             { key: 'flashcards', icon: '🃏', cfg: courseFlashcardMap[slug] },
+            // With the Start here block in place of the diagnostic banner, its
+            // two side links live here with the other tools.
+            ...(courseDiagnosticForSlug(slug)
+              ? [
+                  { key: 'score_predictor', icon: '📈', cfg: courseScorePredictorMap[slug] },
+                  { key: 'daily_question', icon: '📆', cfg: courseDailyQuestionMap[slug] },
+                ]
+              : []),
           ].filter((t) => t.cfg)
           if (tools.length === 0) return null
           const btnClass = 'inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-800 shadow-sm transition hover:border-indigo-400 hover:bg-indigo-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/20'
@@ -421,10 +438,10 @@ export default async function CoursePage({ params }: CoursePageProps) {
             <div className="mb-5 flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-                  📚 Study Plans &amp; Cram Guides
+                  📚 Study schedules &amp; cram guides
                 </h2>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Pick the plan that matches your timeline — from a 1-month build-up to a night-before review.
+                  Pick the schedule that matches your timeline — from a 1-month build-up to a night-before review.
                 </p>
               </div>
             </div>

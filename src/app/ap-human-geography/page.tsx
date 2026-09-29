@@ -71,7 +71,7 @@ const features = [
     stats: 'Key terms · Definitions',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh question every day covering different units. Build consistency with daily practice.',
     href: '/ap-human-geo-daily-question',
     icon: (
@@ -83,7 +83,7 @@ const features = [
     stats: 'New daily · All units',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'Structured 4, 10, or 16-week study schedules tailored to your timeline.',
     href: '/ap-human-geo-study-plans',
     icon: (
@@ -92,7 +92,7 @@ const features = [
       </svg>
     ),
     color: 'from-cyan-500 to-blue-500',
-    stats: '3 plans · Auto-scheduled',
+    stats: '3 schedules · Auto-scheduled',
   },
   {
     title: 'Score Predictor',

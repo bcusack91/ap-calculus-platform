@@ -80,7 +80,7 @@ const features = [
     stats: 'Real-time · Leaderboard',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'A fresh AP Calculus BC question every day covering AB and BC-only topics.',
     href: '/ap-calcbc-daily-question',
     icon: (

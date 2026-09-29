@@ -12,11 +12,24 @@ import {
 } from '@/lib/flashcard-daily-limits'
 
 /**
- * Anki-style "Daily limits" control for the flashcard review dashboard.
+ * "Daily limits" control for the flashcard review dashboard.
  * Two number inputs (new cards/day, max reviews/day) saved optimistically to
  * PATCH /api/flashcards/settings on blur/Enter; blank = use the default
- * (100 new / 200 reviews). Reverts and shows an error if the save fails.
+ * (see flashcard-daily-limits.ts). Reverts and shows an error if the save fails.
+ *
+ * The exam-yield toggles only appear for a student who has MCAT cards (the MCAT
+ * is the only course whose cards carry yield tiers); for everyone else they
+ * would change nothing and just raise questions.
  */
+
+/**
+ * Show the medium/low-yield toggles? Only when the student has cards that
+ * carry an exam-yield tier (today: MCAT cards). An older API response without
+ * the flag hides them, the safe default for the non-MCAT majority.
+ */
+export function shouldShowYieldToggles(settings: { hasYieldCards?: unknown } | null | undefined): boolean {
+  return settings?.hasYieldCards === true
+}
 
 interface FlashcardDailyLimitsProps {
   /** Called after a successful save so the parent can refetch due counts. */
@@ -60,6 +73,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
   // medium (default on) and low (default off) are the student's choice.
   const [includeMediumYield, setIncludeMediumYield] = useState(true)
   const [includeLowYield, setIncludeLowYield] = useState(false)
+  const [showYield, setShowYield] = useState(false)
   // Last server-confirmed values, for reverting a failed optimistic save.
   const confirmed = useRef<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
   const savedTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -78,6 +92,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
         setValues(loaded)
         setIncludeMediumYield(data.includeMediumYield !== false)
         setIncludeLowYield(!!data.includeLowYield)
+        setShowYield(shouldShowYieldToggles(data))
       })
       .catch(() => {})
     return () => {
@@ -151,25 +166,25 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
   }
 
   return (
-    <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-8">
+    <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 mb-8">
       <div className="flex items-center justify-between mb-1">
-        <h2 className="font-bold text-gray-900 flex items-center gap-2">
+        <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
           <SlidersHorizontal className="w-4 h-4 text-accent" aria-hidden />
           Daily limits
         </h2>
-        <span aria-live="polite" className="text-xs font-semibold text-green-700">
+        <span aria-live="polite" className="text-xs font-semibold text-green-700 dark:text-green-400">
           {saved ? 'Saved ✓' : ''}
         </span>
       </div>
-      <p className="text-sm text-gray-600 mb-4">
-        Anki-style pacing — leave a field blank to use the defaults ({DEFAULT_NEW_PER_DAY} new
-        / {DEFAULT_MAX_REVIEWS_PER_DAY} reviews).
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        How many cards you see each day. Leave a field blank to use the defaults ({DEFAULT_NEW_PER_DAY} new
+        cards / {DEFAULT_MAX_REVIEWS_PER_DAY} reviews).
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {FIELDS.map((f) => (
           <div key={f.key}>
-            <label htmlFor={`daily-limit-${f.key}`} className="block text-sm font-semibold text-gray-900 mb-1">
+            <label htmlFor={`daily-limit-${f.key}`} className="block text-sm font-semibold text-gray-900 dark:text-white mb-1">
               {f.label}
             </label>
             <input
@@ -187,47 +202,52 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
                 if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
               }}
               aria-describedby={`daily-limit-${f.key}-help`}
-              className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-light text-gray-900 bg-white"
+              className="w-full px-3 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-600 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-light text-gray-900 dark:text-white bg-white dark:bg-gray-700"
             />
-            <p id={`daily-limit-${f.key}-help`} className="mt-1 text-xs text-gray-500">
+            <p id={`daily-limit-${f.key}-help`} className="mt-1 text-xs text-gray-500 dark:text-gray-400">
               {f.help}
             </p>
           </div>
         ))}
       </div>
 
-      <p className="mt-4 text-xs text-gray-500">
-        MCAT decks label every card by exam yield. Ultra-high and high-yield cards are always in
-        your queue; choose whether to add the rest. Your review history is kept either way.
-      </p>
-      <label className="mt-2 flex items-start gap-3 text-sm text-gray-900">
-        <input
-          id="daily-limit-includeMediumYield"
-          type="checkbox"
-          checked={includeMediumYield}
-          onChange={(e) => toggleYield('includeMediumYield', e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
-        />
-        <span>
-          <span className="font-semibold">Include medium-yield cards</span>
-          <span className="block text-xs text-gray-500">Plausible but secondary material. On by default.</span>
-        </span>
-      </label>
-      <label className="mt-2 flex items-start gap-3 text-sm text-gray-900">
-        <input
-          id="daily-limit-includeLowYield"
-          type="checkbox"
-          checked={includeLowYield}
-          onChange={(e) => toggleYield('includeLowYield', e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
-        />
-        <span>
-          <span className="font-semibold">Include low-yield cards</span>
-          <span className="block text-xs text-gray-500">Detail most students will not need. Off by default.</span>
-        </span>
-      </label>
+      {showYield && (
+        <>
+          <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+            MCAT cards are labeled by how often their content shows up on the exam. Ultra-high and
+            high-yield cards are always in your queue; choose whether to add the rest. Your review
+            history is kept either way.
+          </p>
+          <label className="mt-2 flex items-start gap-3 text-sm text-gray-900 dark:text-white">
+            <input
+              id="daily-limit-includeMediumYield"
+              type="checkbox"
+              checked={includeMediumYield}
+              onChange={(e) => toggleYield('includeMediumYield', e.target.checked)}
+              className="mt-0.5 h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-accent focus:ring-accent"
+            />
+            <span>
+              <span className="font-semibold">Include medium-yield MCAT cards</span>
+              <span className="block text-xs text-gray-500 dark:text-gray-400">Plausible but secondary material. On by default.</span>
+            </span>
+          </label>
+          <label className="mt-2 flex items-start gap-3 text-sm text-gray-900 dark:text-white">
+            <input
+              id="daily-limit-includeLowYield"
+              type="checkbox"
+              checked={includeLowYield}
+              onChange={(e) => toggleYield('includeLowYield', e.target.checked)}
+              className="mt-0.5 h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-accent focus:ring-accent"
+            />
+            <span>
+              <span className="font-semibold">Include low-yield MCAT cards</span>
+              <span className="block text-xs text-gray-500 dark:text-gray-400">Detail most students will not need. Off by default.</span>
+            </span>
+          </label>
+        </>
+      )}
       {error && (
-        <p role="alert" className="mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+        <p role="alert" className="mt-3 text-sm text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg px-3 py-2">
           {error}
         </p>
       )}

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import CourseStudyPlan from '@/components/CourseStudyPlan'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
@@ -71,7 +70,7 @@ const features = [
     stats: '22+ lessons · All topics',
   },
   {
-    title: 'Study Plans',
+    title: 'Study schedules',
     description: 'Pre-built 4, 8, and 12-week study schedules with daily tasks. Pick a plan and it auto-populates your dashboard planner.',
     href: '/sat-study-plans',
     icon: (
@@ -83,7 +82,7 @@ const features = [
     stats: '3 templates · 4–12 weeks',
   },
   {
-    title: 'Daily Question',
+    title: 'Daily question',
     description: 'Two fresh SAT questions every day — one Math, one Reading & Writing. Build consistency with daily practice.',
     href: '/sat-daily-question',
     icon: (
@@ -164,14 +163,6 @@ export default function SATLandingPage() {
           slug: 'sat-prep',
           canonicalPath: '/sat',
         })) }}
-      />
-      {/* Personalized plan: flashcards due + diagnostic study modules */}
-      <CourseStudyPlan
-        courseSlug="sat-prep"
-        courseLabel="SAT"
-        planStatusEndpoint="/api/sat-diagnostic/plan-status"
-        diagnosticHref="/sat-diagnostic"
-        accent="purple"
       />
       <CourseHero
         courseName='Digital SAT'

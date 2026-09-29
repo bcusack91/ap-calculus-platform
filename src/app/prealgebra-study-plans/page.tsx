@@ -4,12 +4,12 @@ import { config, PREALGEBRA_PLANS } from '@/data/prealgebra-study-plans'
 import { getContentItems, CONTENT_TYPES } from '@/lib/content-store'
 
 export const metadata: Metadata = {
-  title: 'Pre-Algebra Study Plans | Study Mondo',
+  title: 'Pre-Algebra Study Schedules | Study Mondo',
   description:
     'Pick a Pre-Algebra study plan — a sprint or a standard pace — with a day-by-day schedule of lessons, practice, and review.',
   alternates: { canonical: 'https://www.studymondo.com/prealgebra-study-plans' },
   openGraph: {
-    title: 'Pre-Algebra Study Plans',
+    title: 'Pre-Algebra Study Schedules',
     description: 'Day-by-day Pre-Algebra study schedules built around lessons, practice, and review.',
     url: 'https://www.studymondo.com/prealgebra-study-plans',
   },

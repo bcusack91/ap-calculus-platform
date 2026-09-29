@@ -227,7 +227,7 @@ export const AP_CALCBC_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehen
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Calculus BC',
-  description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule that fits your timeline. Each schedule includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-calculus-bc', label: 'AP Calculus BC' },
   apiEndpoint: '/api/ap-calcbc-study-plans',
   diagnosticPrefix: 'calcbc-diagnostic',
