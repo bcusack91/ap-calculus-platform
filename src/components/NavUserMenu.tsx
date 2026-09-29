@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
 import { ViewAsToggle } from './ViewAsToggle'
-import { LayoutDashboard, User, School, Shield, LogOut } from 'lucide-react'
+import { LayoutDashboard, User, School, Shield, LogOut, ClipboardList } from 'lucide-react'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
 import { useRef, useCallback } from 'react'
@@ -15,12 +15,14 @@ interface NavUserMenuProps {
   isPremium: boolean
   isTeacher: boolean
   isAdmin: boolean
+  /** Signed-in student in an active class — adds "My Class" (→ /assignments). */
+  isClassStudent?: boolean
   isOpen: boolean
   onToggle: () => void
   onClose: () => void
 }
 
-export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin, isOpen, onToggle, onClose }: NavUserMenuProps) {
+export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin, isClassStudent = false, isOpen, onToggle, onClose }: NavUserMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null)
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -64,6 +66,11 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
           <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
             <LayoutDashboard className="w-4 h-4" aria-hidden /> Dashboard
           </Link>
+          {isClassStudent && (
+            <Link href="/assignments" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
+              <ClipboardList className="w-4 h-4" aria-hidden /> My Class
+            </Link>
+          )}
           <Link href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
             <User className="w-4 h-4" aria-hidden /> Profile
           </Link>

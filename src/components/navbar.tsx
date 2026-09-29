@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react'
 import { useEffectiveRole } from '@/lib/use-effective-role'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
-import { Gamepad2, Trophy, Users, Info, Mail, School, CreditCard } from 'lucide-react'
+import { Trophy, Users, Info, Mail, CreditCard, LayoutGrid } from 'lucide-react'
 import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
@@ -81,6 +81,34 @@ function Chevron({ open }: { open: boolean }) {
   )
 }
 
+/** sessionStorage key for the signed-in navbar bootstrap (avatar + class membership). */
+const NAV_CACHE_KEY = 'navData-auth'
+const NAV_CACHE_TTL_MS = 30 * 60 * 1000
+/** A "not in a class" answer expires sooner, so a freshly joined class shows "My Class" quickly. */
+const NAV_CACHE_NOT_IN_CLASS_TTL_MS = 5 * 60 * 1000
+
+interface NavCache {
+  uid?: string
+  avatarData?: AvatarData | null
+  inClass?: boolean | null
+  _ts?: number
+}
+
+function readNavCache(): NavCache | null {
+  try {
+    const raw = sessionStorage.getItem(NAV_CACHE_KEY)
+    return raw ? (JSON.parse(raw) as NavCache) : null
+  } catch {
+    return null
+  }
+}
+
+function writeNavCache(next: NavCache) {
+  try {
+    sessionStorage.setItem(NAV_CACHE_KEY, JSON.stringify({ ...next, _ts: Date.now() }))
+  } catch { /* storage unavailable — non-fatal */ }
+}
+
 /** Arrow-key navigation inside dropdown menus */
 function useDropdownKeyNav(containerRef: React.RefObject<HTMLDivElement | null>, isOpen: boolean) {
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -113,6 +141,10 @@ export function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
+  // Is this signed-in student an active member of a class? null = not known yet
+  // (render neither "My Class" nor "For Teachers" until it is, so the slot
+  // never flips from one to the other).
+  const [inClass, setInClass] = useState<boolean | null>(null)
   const [coursesOpen, setCoursesOpen] = useState(false)
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [moreOpen, setMoreOpen] = useState(false)
@@ -128,34 +160,40 @@ export function Navbar() {
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
   const isAdmin = session?.user?.role === 'ADMIN'
 
-  // Courses render synchronously from static metadata — only the avatar is dynamic.
-  // Fetch it for signed-in users, cached in sessionStorage with TTL.
+  // Courses render synchronously from static metadata — only the avatar and the
+  // class-membership flag are dynamic. Fetch them for signed-in users, cached in
+  // sessionStorage (per user) with a TTL.
+  const userId = session?.user?.id
   useEffect(() => {
-    if (!session) return
-    const cacheKey = 'navData-auth'
-    const cached = sessionStorage.getItem(cacheKey)
-    if (cached) {
-      try {
-        const parsed = JSON.parse(cached)
-        // Use cached data if under 30 minutes old
-        if (parsed._ts && Date.now() - parsed._ts < 30 * 60 * 1000) {
-          if (parsed.avatarData) {
-            const timeoutId = setTimeout(() => setAvatarData(parsed.avatarData), 0)
-            return () => clearTimeout(timeoutId)
-          }
-          return
-        }
-      } catch { /* fetch fresh */ }
+    if (!userId) return
+    const cached = readNavCache()
+    if (cached && cached.uid === userId && cached._ts && typeof cached.inClass === 'boolean') {
+      const ttl = cached.inClass ? NAV_CACHE_TTL_MS : NAV_CACHE_NOT_IN_CLASS_TTL_MS
+      if (Date.now() - cached._ts < ttl) {
+        const timeoutId = setTimeout(() => {
+          setAvatarData(cached.avatarData ?? null)
+          setInClass(cached.inClass ?? false)
+        }, 0)
+        return () => clearTimeout(timeoutId)
+      }
     }
 
+    let cancelled = false
     fetch('/api/navbar')
       .then(res => res.json())
       .then(data => {
+        if (cancelled) return
+        const nextInClass = data.inClass === true
         if (data.avatarData) setAvatarData(data.avatarData)
-        sessionStorage.setItem(cacheKey, JSON.stringify({ avatarData: data.avatarData ?? null, _ts: Date.now() }))
+        setInClass(nextInClass)
+        writeNavCache({ uid: userId, avatarData: data.avatarData ?? null, inClass: nextInClass })
       })
-      .catch(err => console.error('Error fetching navbar data:', err))
-  }, [session])
+      .catch(err => {
+        console.error('Error fetching navbar data:', err)
+        if (!cancelled) setInClass(false)
+      })
+    return () => { cancelled = true }
+  }, [userId])
 
   // Update the top-right avatar the instant it's changed on the profile page,
   // rather than waiting out the 30-minute sessionStorage cache. The profile save
@@ -164,9 +202,9 @@ export function Navbar() {
     const onAvatarUpdated = (e: Event) => {
       const next = (e as CustomEvent).detail ?? null
       setAvatarData(next)
-      try {
-        sessionStorage.setItem('navData-auth', JSON.stringify({ avatarData: next, _ts: Date.now() }))
-      } catch { /* storage unavailable — non-fatal */ }
+      // Keep the cached class-membership flag; only the avatar changed.
+      const cached = readNavCache()
+      writeNavCache({ ...cached, avatarData: next })
     }
     window.addEventListener('avatar-updated', onAvatarUpdated)
     return () => window.removeEventListener('avatar-updated', onAvatarUpdated)
@@ -200,17 +238,24 @@ export function Navbar() {
   }, [])
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
-  const topLinkClass = (href: string) =>
-    isActive(href)
-      ? 'text-accent font-semibold underline underline-offset-8 decoration-2'
-      : 'text-gray-700 dark:text-gray-300 transition-colors hover:text-accent'
+  const activeTopClass = 'text-accent font-semibold underline underline-offset-8 decoration-2'
+  const idleTopClass = 'text-gray-700 dark:text-gray-300 transition-colors hover:text-accent'
+  const topLinkClass = (href: string) => (isActive(href) ? activeTopClass : idleTopClass)
+
+  // Primary nav slots. Signed-in users get Dashboard first; the class slot is
+  // "My Classes" for teachers and "My Class" for students in an active class.
+  const isClassStudent = !!session && !isTeacher && inClass === true
+  // "For Teachers" is marketing: signed-out visitors and signed-in non-class
+  // students. Hidden while membership is still unknown (no swap flicker).
+  const showForTeachers = !session || (!isTeacher && inClass === false)
+  const coursesActive = isActive('/topics') || isActive('/courses')
 
   return (
     <header role="banner" className="sticky top-0 z-50">
     <nav aria-label="Main navigation" className="w-full border-b bg-white dark:bg-gray-950">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 flex flex-1 items-center justify-between">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+        <div className="mr-2 md:mr-4 flex flex-1 items-center justify-between">
+          <Link href="/" className="mr-2 md:mr-6 flex items-center space-x-2">
             <span className="inline-block align-middle" style={{ width: 32, height: 32 }}>
               {/* Mascot: Smiling Book SVG */}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
@@ -231,24 +276,24 @@ export function Navbar() {
                 <path d="M13.5 19 Q16 20.8 18.5 19" stroke="var(--accent)" strokeWidth="0.7" fill="none"/>
               </svg>
             </span>
-            <span className="text-xl font-bold">Study Mondo</span>
+            <span className="text-lg sm:text-xl font-bold whitespace-nowrap">Study Mondo</span>
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-5 text-sm font-medium">
-            <Link href="/topics" className={topLinkClass('/topics')}>
-              Topics
-            </Link>
-            {isTeacher ? (
-              <Link
-                href="/teacher"
-                className={`text-accent dark:text-accent-muted font-semibold transition-colors hover:text-accent-hover ${isActive('/teacher') ? 'underline underline-offset-8 decoration-2' : ''}`}
-              >
-                <School className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden /> My Classes
+            {session && (
+              <Link href="/dashboard" className={topLinkClass('/dashboard')}>
+                Dashboard
               </Link>
-            ) : (
-              <Link href="/for-teachers" className={topLinkClass('/for-teachers')}>
-                For Teachers
+            )}
+            {session && isTeacher && (
+              <Link href="/teacher" className={topLinkClass('/teacher')}>
+                My Classes
+              </Link>
+            )}
+            {isClassStudent && (
+              <Link href="/assignments" className={topLinkClass('/assignments')}>
+                My Class
               </Link>
             )}
 
@@ -256,7 +301,7 @@ export function Navbar() {
             <div ref={coursesRef} className="relative" onKeyDown={coursesKeyNav}>
               <button
                 onClick={() => { setCoursesOpen(!coursesOpen); setMoreOpen(false); setUserMenuOpen(false) }}
-                className="text-gray-700 dark:text-gray-300 transition-colors hover:text-accent flex items-center gap-1"
+                className={`${coursesActive ? 'text-accent font-semibold' : 'text-gray-700 dark:text-gray-300'} transition-colors hover:text-accent flex items-center gap-1`}
                 aria-haspopup="true"
                 aria-expanded={coursesOpen}
               >
@@ -289,6 +334,16 @@ export function Navbar() {
 
                     return (
                       <>
+                        <div className="px-2 pb-2 mb-2 border-b border-gray-100 dark:border-gray-700">
+                          <Link
+                            href="/topics"
+                            className="flex items-center gap-2 px-2 py-2 text-sm font-semibold rounded-md text-gray-900 dark:text-gray-100 hover:bg-accent-subtle dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted transition-colors"
+                            onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
+                          >
+                            <LayoutGrid className="w-4 h-4 text-accent dark:text-accent-muted" aria-hidden />
+                            All courses
+                          </Link>
+                        </div>
                         {testPrepCourses.length > 0 && (
                           <div className="px-2 pb-2 mb-2 border-b border-gray-100 dark:border-gray-700">
                             <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-accent dark:text-accent-muted">
@@ -340,11 +395,17 @@ export function Navbar() {
               )}
             </div>
 
+            {showForTeachers && (
+              <Link href="/for-teachers" className={topLinkClass('/for-teachers')}>
+                For Teachers
+              </Link>
+            )}
             <Link href="/flashcards" className={topLinkClass('/flashcards')}>
               Flashcards
             </Link>
-            <Link href="/competitive" className={`text-accent dark:text-accent-muted font-semibold transition-colors hover:text-accent-hover ${isActive('/competitive') ? 'underline underline-offset-8 decoration-2' : ''}`}>
-              <Gamepad2 className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden /> Competitive
+            {/* Secondary: same weight as every other item (no accent / icon). */}
+            <Link href="/competitive" className={topLinkClass('/competitive')}>
+              Competitive
             </Link>
             {/* More Dropdown */}
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
@@ -400,6 +461,7 @@ export function Navbar() {
                 isPremium={isPremium}
                 isTeacher={isTeacher}
                 isAdmin={isAdmin}
+                isClassStudent={isClassStudent}
                 isOpen={userMenuOpen}
                 onToggle={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setExpandedSection(null); setMoreOpen(false) }}
                 onClose={() => setUserMenuOpen(false)}
@@ -423,6 +485,17 @@ export function Navbar() {
             )}
           </div>
 
+          {/* Mobile: compact Sign up next to the hamburger for signed-out visitors */}
+          {!session && (
+            <Link
+              href="/auth/signup"
+              className="md:hidden shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-sm font-semibold bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
+              data-testid="mobile-header-signup"
+            >
+              Sign up
+            </Link>
+          )}
+
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 -mr-2"
@@ -445,6 +518,8 @@ export function Navbar() {
           avatarData={avatarData}
           isTeacher={isTeacher}
           isAdmin={isAdmin}
+          isClassStudent={isClassStudent}
+          showForTeachers={showForTeachers}
           onClose={() => setMobileMenuOpen(false)}
         />
       )}

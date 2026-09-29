@@ -18,6 +18,10 @@ const getCachedCourses = unstable_cache(
  * Returns navbar bootstrap data in a single request:
  * - courses (for the courses dropdown)
  * - avatarData (if the user is logged in)
+ * - inClass (signed-in students only): true when they are an active member of
+ *   an active classroom, so the nav can show "My Class" → /assignments.
+ *   Deliberately NOT server-cached — joining a class must show up on the next
+ *   fetch. One indexed findFirst on ClassroomMember(userId).
  */
 export async function GET() {
   try {
@@ -27,6 +31,7 @@ export async function GET() {
     ])
 
     let avatarData = null
+    let inClass: boolean | null = null
     if (session?.user?.id) {
       const getCachedAvatar = unstable_cache(
         async (userId: string) => {
@@ -41,10 +46,22 @@ export async function GET() {
         // immediately (otherwise a fresh tab / reload showed the old avatar).
         { revalidate: 1800, tags: [`avatar-${session.user.id}`] }
       )
-      avatarData = await getCachedAvatar(session.user.id)
+      const role = session.user.role
+      const isTeacherRole = role === 'TEACHER' || role === 'ADMIN'
+      const [avatar, membership] = await Promise.all([
+        getCachedAvatar(session.user.id),
+        isTeacherRole
+          ? Promise.resolve(null)
+          : prisma.classroomMember.findFirst({
+              where: { userId: session.user.id, isActive: true, classroom: { isActive: true } },
+              select: { id: true },
+            }),
+      ])
+      avatarData = avatar
+      inClass = !isTeacherRole && membership !== null
     }
 
-    const res = NextResponse.json({ courses, avatarData })
+    const res = NextResponse.json({ courses, avatarData, inClass })
 
     // Allow CDN / browser to cache anonymous responses; private for auth users
     if (session?.user) {
