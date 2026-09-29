@@ -47,6 +47,7 @@ import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import { shuffleArray } from '@/lib/shuffle-options'
+import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Detects a markdown pipe-table (a row containing "|" immediately followed by a
@@ -433,45 +434,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const queryCountRef = useRef(0) // Track API calls
 
-  // Active study-time tracking. `activeSinceRef` marks when the current active
-  // (visible) interval began; `accumulatedMsRef` holds time from prior intervals
-  // that has not yet been flushed to the server. consumeTimeSpentSeconds() folds
-  // the in-progress interval into the accumulator, returns the whole-second delta,
-  // and resets the accumulator so each saved value is a non-overlapping increment.
-  // Initialized in the mount effect below (Date.now() can't be called during render).
-  const activeSinceRef = useRef<number | null>(null)
-  const accumulatedMsRef = useRef<number>(0)
-  const consumeTimeSpentSeconds = useCallback(() => {
-    const now = Date.now()
-    if (activeSinceRef.current != null) {
-      accumulatedMsRef.current += now - activeSinceRef.current
-      activeSinceRef.current = now
-    }
-    const seconds = Math.round(accumulatedMsRef.current / 1000)
-    if (seconds > 0) {
-      accumulatedMsRef.current -= seconds * 1000
-    }
-    return seconds
-  }, [])
-
-  // Pause/resume the active timer when the tab visibility changes so background
-  // time (other tabs, minimized window) isn't counted as study time.
-  useEffect(() => {
-    // Start the active interval on mount (deferred out of render).
-    activeSinceRef.current = Date.now()
-    const handleVisibility = () => {
-      if (document.visibilityState === 'hidden') {
-        if (activeSinceRef.current != null) {
-          accumulatedMsRef.current += Date.now() - activeSinceRef.current
-          activeSinceRef.current = null
-        }
-      } else {
-        activeSinceRef.current = Date.now()
-      }
-    }
-    document.addEventListener('visibilitychange', handleVisibility)
-    return () => document.removeEventListener('visibilitychange', handleVisibility)
-  }, [])
 
   // Celebration animation state
   const [showCelebration, setShowCelebration] = useState(false)
@@ -580,6 +542,24 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }
 
   // Save progress to database
+  // Active study time rides on every progress save (see useLessonProgressSaver).
+  // The clock pauses while the entrance or exit quiz owns the screen — those
+  // are timed as their own activity, not as lesson time.
+  const { sendProgress } = useLessonProgressSaver({
+    paused: showExitQuiz || entranceQuizPhase === 'quiz',
+    unloadPayload: () => {
+      if (!session?.user || (!cachedTopicId && !topicSlug)) return null
+      const sectionCount = lessonData?.sections?.length ?? 1
+      return {
+        topicId: cachedTopicId ?? undefined,
+        topicSlug: cachedTopicId ? undefined : topicSlug,
+        lessonPart,
+        completedSections: Array.from(completedSections),
+        masteryLevel: calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts),
+      }
+    },
+  })
+
   const saveProgress = useCallback(async (forceTopicId?: string, isPartCompletion: boolean = false) => {
     if (!session?.user) return // Only save if user is logged in
     
@@ -591,19 +571,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       const sectionCount = lessonData?.sections?.length ?? 1
       const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
       
-      const response = await fetch('/api/progress/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topicId: forceTopicId || cachedTopicId,
-          topicSlug: !forceTopicId && !cachedTopicId ? topicSlug : undefined, // Fallback to slug if no ID cached
-          lessonPart,
-          completedSections: Array.from(completedSections),
-          masteryLevel,
-          timeSpent: consumeTimeSpentSeconds(),
-          isPartCompletion, // Flag to indicate this is a part completion, not just progress save
-          variant,
-        }),
+      const response = await sendProgress({
+        topicId: forceTopicId || cachedTopicId,
+        topicSlug: !forceTopicId && !cachedTopicId ? topicSlug : undefined, // Fallback to slug if no ID cached
+        lessonPart,
+        completedSections: Array.from(completedSections),
+        masteryLevel,
+        isPartCompletion, // Flag to indicate this is a part completion, not just progress save
+        variant,
       })
       
       // Check if flashcards were created (only show notification on part completion)
@@ -619,7 +594,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
-  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant, consumeTimeSpentSeconds])
+  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant, sendProgress])
 
   // Load progress from database on mount
   useEffect(() => {
@@ -765,26 +740,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     loadProgress()
   }, [session, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz])
   
-  // Save progress when user leaves page
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      if (session?.user && completedSections.size > 0 && cachedTopicId) {
-        // Use sendBeacon for reliable save on page unload
-        const sectionCount = lessonData?.sections?.length ?? 1
-        const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
-        navigator.sendBeacon('/api/progress/save', JSON.stringify({
-          topicId: cachedTopicId,
-          lessonPart,
-          completedSections: Array.from(completedSections),
-          masteryLevel,
-          timeSpent: consumeTimeSpentSeconds(),
-        }))
-      }
-    }
-
-    window.addEventListener('beforeunload', handleBeforeUnload)
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
-  }, [session, completedSections, cachedTopicId, lessonPart, lessonData?.sections?.length, totalParts, consumeTimeSpentSeconds])
 
   // Smart batched saves: Save every 3 sections for progress tracking
   useEffect(() => {
@@ -925,16 +880,11 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         const finalSave = async () => {
           if (session?.user) {
             try {
-              await fetch('/api/progress/save', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  topicSlug,
-                  lessonPart: totalParts,
-                  completedSections: Array.from(allSections),
-                  masteryLevel: 1.0, // Full mastery
-                  timeSpent: consumeTimeSpentSeconds(),
-                }),
+              await sendProgress({
+                topicSlug,
+                lessonPart: totalParts,
+                completedSections: Array.from(allSections),
+                masteryLevel: 1.0, // Full mastery
               })
               // Trigger competitive mode unlock check so the profile is ready
               fetch('/api/competitive/unlock-check').catch(() => {})
@@ -1039,19 +989,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
       // Save variant + failedExitParts to DB
       if (session?.user) {
-        fetch('/api/progress/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topicId: cachedTopicId,
-            topicSlug: !cachedTopicId ? topicSlug : undefined,
-            lessonPart: partsToRedo[0],
-            completedSections: [],
-            masteryLevel: 0,
-            timeSpent: consumeTimeSpentSeconds(),
-            variant: nextVariant,
-            failedExitParts: partsToRedo,
-          }),
+        sendProgress({
+          topicId: cachedTopicId,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          lessonPart: partsToRedo[0],
+          completedSections: [],
+          masteryLevel: 0,
+          variant: nextVariant,
+          failedExitParts: partsToRedo,
         }).catch(err => console.error('Failed to save variant progress:', err))
       }
 
@@ -1099,19 +1044,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch {}
     if (!session?.user) return { saved: false }
     try {
-      const res = await fetch('/api/progress/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topicId: cachedTopicId,
-          topicSlug: !cachedTopicId ? topicSlug : undefined,
-          lessonPart: totalParts,
-          completedSections: [],
-          masteryLevel: 1.0,
-          timeSpent: consumeTimeSpentSeconds(),
-          isPartCompletion: true,
-          masteredParts: Array.from(masteredParts),
-        }),
+      const res = await sendProgress({
+        topicId: cachedTopicId,
+        topicSlug: !cachedTopicId ? topicSlug : undefined,
+        lessonPart: totalParts,
+        completedSections: [],
+        masteryLevel: 1.0,
+        isPartCompletion: true,
+        masteredParts: Array.from(masteredParts),
       })
       if (!res.ok) return { saved: false }
       entranceMasteryPersistedRef.current = true
@@ -1121,7 +1061,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch {
       return { saved: false }
     }
-  }, [totalParts, topicSlug, session?.user, cachedTopicId, consumeTimeSpentSeconds])
+  }, [totalParts, topicSlug, session?.user, cachedTopicId, sendProgress])
 
   // Entrance quiz completion: skip mastered parts, credit them
   const handleEntranceQuizComplete = useCallback((quizMasteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
@@ -1147,14 +1087,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       // across devices (#29). The save route never downgrades mastery/status.
       // Already done when persistEntranceMastery ran for a full test-out.
       if (session?.user && !entranceMasteryPersistedRef.current) {
-        fetch('/api/progress/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topicId: cachedTopicId,
-            topicSlug: !cachedTopicId ? topicSlug : undefined,
-            masteredParts: Array.from(masteredParts),
-          }),
+        sendProgress({
+          topicId: cachedTopicId,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          masteredParts: Array.from(masteredParts),
         }).catch(() => {})
       }
     }
@@ -1186,18 +1122,13 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       // which would return ~0 since lessonPart/completedSections haven't advanced yet)
       // — unless persistEntranceMastery already saved it from the results screen.
       if (session?.user && !entranceMasteryPersistedRef.current) {
-        fetch('/api/progress/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topicId: cachedTopicId,
-            topicSlug: !cachedTopicId ? topicSlug : undefined,
-            lessonPart: totalParts,
-            completedSections: [],
-            masteryLevel: 1.0,
-            timeSpent: consumeTimeSpentSeconds(),
-            isPartCompletion: true,
-          }),
+        sendProgress({
+          topicId: cachedTopicId,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          lessonPart: totalParts,
+          completedSections: [],
+          masteryLevel: 1.0,
+          isPartCompletion: true,
         })
           .then(() => {
             // Trigger competitive mode unlock check so the profile is created/updated
@@ -1221,23 +1152,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         const partWeight = 1.0 / Math.max(totalParts, 1)
         // Calculate mastery based on the number of mastered parts
         const masteryLevel = Math.min(0.999, masteredParts.size * partWeight)
-        fetch('/api/progress/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topicId: cachedTopicId,
-            topicSlug: !cachedTopicId ? topicSlug : undefined,
-            lessonPart: targetPart,
-            completedSections: [],
-            masteryLevel,
-            timeSpent: consumeTimeSpentSeconds(),
-            isPartCompletion: true,
-          }),
+        sendProgress({
+          topicId: cachedTopicId,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          lessonPart: targetPart,
+          completedSections: [],
+          masteryLevel,
+          isPartCompletion: true,
         }).catch(console.error)
       }
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, consumeTimeSpentSeconds])
+  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, sendProgress])
 
   const [retryCounts, setRetryCounts] = useState<Record<number, number>>({})
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)

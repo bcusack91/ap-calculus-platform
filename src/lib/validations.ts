@@ -23,13 +23,20 @@ export const queueJoinSchema = z.object({
 export type QueueJoin = z.infer<typeof queueJoinSchema>
 
 // ─── Progress Save ─────────────────────────────────────────────────────
+export const MAX_PROGRESS_SAVE_SECONDS = 30 * 60
+
 export const progressSaveSchema = z.object({
   topicSlug: z.string().min(1).max(200).optional(),
   topicId: z.string().optional(),
   lessonPart: z.number().int().min(0).optional(),
-  completedSections: z.array(z.string()).optional(),
+  // Section indexes. The lesson renderers send numbers; this was
+  // z.array(z.string()) until 2026-09-29, which rejected every save with a
+  // completed section (400) — and the lost saves took their study time along.
+  completedSections: z.array(z.union([z.number().int().min(0), z.string().max(100)])).max(500).optional(),
   masteryLevel: z.number().min(0).max(1).optional().default(0),
-  timeSpent: z.number().min(0).optional().default(0),
+  // Seconds of active study since the last save. Saves go out at least every
+  // minute and on leave, so anything past 30 minutes is a broken client.
+  timeSpent: z.number().min(0).optional().default(0).transform((s) => Math.min(Math.round(s), MAX_PROGRESS_SAVE_SECONDS)),
   isPartCompletion: z.boolean().optional(),
   variant: z.number().int().min(1).max(3).optional(),
   failedExitParts: z.array(z.number().int().min(1)).optional(),

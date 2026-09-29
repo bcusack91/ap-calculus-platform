@@ -13,6 +13,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { renderRichText } from '@/lib/render-rich-text'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
+import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -469,47 +470,23 @@ export default function DynamicInteractiveLessonRenderer({
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const [progressLoaded, setProgressLoaded] = useState(false)
   const [lessonComplete, setLessonComplete] = useState(false)
+
+  // Active study time rides on every progress save (see useLessonProgressSaver).
+  const { sendProgress } = useLessonProgressSaver({
+    paused: false,
+    unloadPayload: () => {
+      if (!session?.user || (!cachedTopicId && !topicSlug)) return null
+      return {
+        topicId: cachedTopicId ?? undefined,
+        topicSlug: cachedTopicId ? undefined : topicSlug,
+        lessonPart: 1,
+        completedSections: Array.from(completedSections),
+        masteryLevel: Math.min(1, completedSections.size / Math.max(sections.length, 1)),
+      }
+    },
+  })
   const queryCountRef = useRef(0)
 
-  // Active study-time tracking. `activeSinceRef` marks when the current active
-  // (visible) interval began; `accumulatedMsRef` holds time from prior intervals
-  // not yet flushed to the server. consumeTimeSpentSeconds() folds the in-progress
-  // interval into the accumulator, returns the whole-second delta, and resets the
-  // accumulator so each saved value is a non-overlapping increment.
-  // Initialized in the mount effect below (Date.now() can't be called during render).
-  const activeSinceRef = useRef<number | null>(null)
-  const accumulatedMsRef = useRef<number>(0)
-  const consumeTimeSpentSeconds = useCallback(() => {
-    const now = Date.now()
-    if (activeSinceRef.current != null) {
-      accumulatedMsRef.current += now - activeSinceRef.current
-      activeSinceRef.current = now
-    }
-    const seconds = Math.round(accumulatedMsRef.current / 1000)
-    if (seconds > 0) {
-      accumulatedMsRef.current -= seconds * 1000
-    }
-    return seconds
-  }, [])
-
-  // Pause/resume the active timer on tab visibility changes so background time
-  // (other tabs, minimized window) isn't counted as study time.
-  useEffect(() => {
-    // Start the active interval on mount (deferred out of render).
-    activeSinceRef.current = Date.now()
-    const handleVisibility = () => {
-      if (document.visibilityState === 'hidden') {
-        if (activeSinceRef.current != null) {
-          accumulatedMsRef.current += Date.now() - activeSinceRef.current
-          activeSinceRef.current = null
-        }
-      } else {
-        activeSinceRef.current = Date.now()
-      }
-    }
-    document.addEventListener('visibilitychange', handleVisibility)
-    return () => document.removeEventListener('visibilitychange', handleVisibility)
-  }, [])
 
   const currentSection = sections[currentSectionIndex]
   const currentQuiz = quizzes[currentSectionIndex]
@@ -533,24 +510,19 @@ export default function DynamicInteractiveLessonRenderer({
           1,
           completedSections.size / Math.max(sections.length, 1),
         )
-        await fetch('/api/progress/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topicId: cachedTopicId ?? undefined,
-            topicSlug: !cachedTopicId ? topicSlug : undefined,
-            lessonPart: 1,
-            completedSections: Array.from(completedSections),
-            masteryLevel,
-            timeSpent: consumeTimeSpentSeconds(),
-            isPartCompletion: isCompletion,
-          }),
+        await sendProgress({
+          topicId: cachedTopicId ?? undefined,
+          topicSlug: !cachedTopicId ? topicSlug : undefined,
+          lessonPart: 1,
+          completedSections: Array.from(completedSections),
+          masteryLevel,
+          isPartCompletion: isCompletion,
         })
       } catch (err) {
         console.error('Failed to save progress:', err)
       }
     },
-    [session, cachedTopicId, topicSlug, completedSections, sections.length, consumeTimeSpentSeconds],
+    [session, cachedTopicId, topicSlug, completedSections, sections.length, sendProgress],
   )
 
   // Load progress on mount
@@ -572,29 +544,6 @@ export default function DynamicInteractiveLessonRenderer({
     loadProgress()
   }, [session, topicSlug, progressLoaded])
 
-  // Save on page unload
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      if (session?.user && completedSections.size > 0 && cachedTopicId) {
-        const masteryLevel = Math.min(
-          1,
-          completedSections.size / Math.max(sections.length, 1),
-        )
-        navigator.sendBeacon(
-          '/api/progress/save',
-          JSON.stringify({
-            topicId: cachedTopicId,
-            lessonPart: 1,
-            completedSections: Array.from(completedSections),
-            masteryLevel,
-            timeSpent: consumeTimeSpentSeconds(),
-          }),
-        )
-      }
-    }
-    window.addEventListener('beforeunload', handleBeforeUnload)
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
-  }, [session, completedSections, cachedTopicId, sections.length, consumeTimeSpentSeconds])
 
   // Checkpoint save every 3 sections
   useEffect(() => {
