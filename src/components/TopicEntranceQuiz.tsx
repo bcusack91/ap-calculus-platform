@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef, useContext } from 'react'
 import Link from 'next/link'
+import { SessionContext } from 'next-auth/react'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { isSatMathTopic } from '@/lib/sat-math-topics'
 import { preloadKatex } from '@/lib/katex-lazy'
@@ -15,6 +16,7 @@ import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
 import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import { competitiveHrefForCourse } from '@/lib/competitive-course-map'
+import { postQuestionActivity } from '@/lib/question-activity-client'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
@@ -57,6 +59,25 @@ export default function TopicEntranceQuiz({
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
 
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
+
+  // Read the session without useSession(), which throws outside a
+  // SessionProvider (component tests render this quiz bare).
+  const signedIn = useContext(SessionContext)?.status === 'authenticated'
+
+  // Record the answers for the teacher's report once the quiz finishes.
+  // Fire-and-forget; signed-out students are skipped (the route would 401).
+  const answersPostedRef = useRef(false)
+  useEffect(() => {
+    if (phase !== 'results' || answersPostedRef.current || !signedIn || answers.length === 0) return
+    answersPostedRef.current = true
+    postQuestionActivity(answers.map((a) => ({
+      source: 'ENTRANCE',
+      topicSlug,
+      questionKey: a.questionId,
+      answered: 1,
+      correct: a.correct ? 1 : 0,
+    })))
+  }, [phase, signedIn, answers, topicSlug])
 
   const question = questions[currentQuestion]
   const totalQuestions = questions.length

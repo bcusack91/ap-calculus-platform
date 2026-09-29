@@ -27,9 +27,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
   }
 
-  // Verify student is a member
+  // Verify student is an ACTIVE member — a student who left the class is no
+  // longer this teacher's to read.
   const membership = await prisma.classroomMember.findFirst({
-    where: { classroomId, userId: studentId },
+    where: { classroomId, userId: studentId, isActive: true },
     include: { user: { select: { id: true, name: true, email: true, image: true } } },
   })
   if (!membership) {

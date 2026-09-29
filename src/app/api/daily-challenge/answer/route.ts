@@ -5,6 +5,7 @@ import { prisma } from '@/lib/prisma'
 import { touchDailyStreak, displayStreak } from '@/lib/streak'
 import { getDailyQuestions, getUtcDayKey, dayKeyToDate, DAILY_CHALLENGE_SIZE, isDailySetKey, pickDailySet } from '@/lib/daily-challenge'
 import { getStudentCourseRanking } from '@/lib/student-courses-server'
+import { recordQuestions } from '@/lib/study-tracking'
 
 export const dynamic = 'force-dynamic'
 
@@ -92,6 +93,15 @@ export async function POST(request: Request) {
       }
       throw err
     }
+
+    // Teacher report: one DAILY row per question from the server's grading.
+    await recordQuestions(userId, questions.map((q, i) => ({
+      source: 'DAILY' as const,
+      discipline: q.subject,
+      questionKey: q.id,
+      answered: 1,
+      correct: correct[i] ? 1 : 0,
+    })))
 
     const streakRow = await prisma.dailyStreak.findUnique({
       where: { userId },

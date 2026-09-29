@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { renderRichText } from '@/lib/render-rich-text'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
+import { postQuestionActivity } from '@/lib/question-activity-client'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -229,11 +230,14 @@ function generateQuizForSection(
 function QuizBlock({
   quiz,
   onCorrect,
+  onAnswer,
   isAnswered,
   sectionId,
 }: {
   quiz: QuizQuestion
   onCorrect: () => void
+  /** Every checked answer, right or wrong (for study tracking). */
+  onAnswer?: (correct: boolean) => void
   isAnswered: boolean
   sectionId: string
 }) {
@@ -269,6 +273,7 @@ function QuizBlock({
     setSubmitted(true)
     const correct = selected === quiz.correctIndex
     setIsCorrect(correct)
+    onAnswer?.(correct)
     if (correct) onCorrect()
   }
 
@@ -486,6 +491,22 @@ export default function DynamicInteractiveLessonRenderer({
     },
   })
   const queryCountRef = useRef(0)
+
+  // Record each section's FIRST checked answer for the teacher's report
+  // (retries until correct would otherwise read as near-100% accuracy).
+  // Signed-in only, fire-and-forget.
+  const recordedQuizRef = useRef<Set<number>>(new Set())
+  const recordQuizAnswer = (sectionIndex: number, correct: boolean) => {
+    if (!session?.user || recordedQuizRef.current.has(sectionIndex)) return
+    recordedQuizRef.current.add(sectionIndex)
+    postQuestionActivity([{
+      source: 'LESSON',
+      topicSlug,
+      questionKey: `${topicSlug}:p1:s${sectionIndex}`,
+      answered: 1,
+      correct: correct ? 1 : 0,
+    }])
+  }
 
 
   const currentSection = sections[currentSectionIndex]
@@ -727,6 +748,7 @@ export default function DynamicInteractiveLessonRenderer({
                   new Set([...prev, currentSectionIndex]),
                 )
               }
+              onAnswer={(correct) => recordQuizAnswer(currentSectionIndex, correct)}
               isAnswered={quizCorrect.has(currentSectionIndex)}
             />
           )}

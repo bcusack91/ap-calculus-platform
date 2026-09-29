@@ -55,6 +55,7 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 mt-2">
             <li><strong>Device Information:</strong> Browser type, operating system, device type (mobile/desktop)</li>
             <li><strong>Usage Data:</strong> Pages visited, time spent on pages, click patterns, navigation paths</li>
+            <li><strong>Study Activity:</strong> For signed-in students, active study time (time while the page is open and in use; idle and background time is not counted), flashcard ratings and time per card, and answers to lesson, quiz and test questions. This powers the student&apos;s own progress and is shown to the teachers of any class the student joins.</li>
             <li><strong>Technical Data:</strong> IP address, referring URLs, timestamps</li>
             <li><strong>Performance Data:</strong> Page load times, error messages</li>
           </ul>

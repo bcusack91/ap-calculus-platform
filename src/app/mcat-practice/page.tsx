@@ -12,6 +12,7 @@ import {
   scoreSectionTest,
   type MCATSectionTest,
 } from '@/data/mcat-practice/test-generator'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -101,6 +102,8 @@ export default function MCATractricePage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
   const [showResults, setShowResults] = useState(false)
+  // Teacher reports: a running timed section counts reading time even without input.
+  useActivitySurface({ surface: 'PRACTICE_TEST', courseSlug: 'mcat-prep', timed: !!activeTest && !showResults })
   const [testResult, setTestResult] = useState<ReturnType<typeof scoreSectionTest> | null>(null)
   const [history, setHistory] = useState<TestAttempt[]>([])
   const [stats, setStats] = useState<TestStats | null>(null)

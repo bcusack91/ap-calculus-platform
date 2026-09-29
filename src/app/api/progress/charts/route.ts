@@ -88,7 +88,8 @@ export async function GET() {
 
       studyTimeline.push({
         week: weekStart.toISOString().split('T')[0],
-        minutes: weekActivities.reduce((s, a) => s + a.timeSpent, 0),
+        // timeSpent is stored in SECONDS; this field has always been named minutes.
+        minutes: Math.round(weekActivities.reduce((s, a) => s + a.timeSpent, 0) / 60),
       })
     }
 
@@ -133,7 +134,7 @@ export async function GET() {
       totals: {
         totalTopics: topicProgress.length,
         totalReviews: flashcardProgress.length,
-        totalTimeMinutes: topicProgress.reduce((s, p) => s + p.timeSpent, 0),
+        totalTimeMinutes: Math.round(topicProgress.reduce((s, p) => s + p.timeSpent, 0) / 60),
       },
     })
   },

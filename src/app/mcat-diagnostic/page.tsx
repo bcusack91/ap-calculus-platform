@@ -23,6 +23,7 @@ import { signUpUrl } from '@/lib/auth-redirect'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { topicFlashcardReviewHref } from '@/lib/flashcard-links'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -197,6 +198,8 @@ export default function MCATDiagnosticPage() {
   const [answers, setAnswers] = useState<(number | null)[]>([])
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
+  // Teacher reports: the timed diagnostic counts reading time even without input.
+  useActivitySurface({ surface: 'DIAGNOSTIC', courseSlug: 'mcat-prep', timed: phase === 'testing' })
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   // The countdown is started once per sitting, so it would capture the
   // handleFinish built when every answer was still null — a timeout then

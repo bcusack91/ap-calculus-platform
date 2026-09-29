@@ -53,6 +53,9 @@ export const flashcardReviewSchema = z.object({
    *  real-world range ±14h) — lets day-scale intervals land at the student's
    *  4am day rollover. Optional for backward compatibility. */
   tzOffset: z.number().int().min(-900).max(900).optional(),
+  /** Visible time from card shown to rated, for the review log. The server
+   *  clamps it to 60 s; optional so older clients still validate. */
+  durationMs: z.number().min(0).max(3_600_000).optional(),
 })
 
 export type FlashcardReview = z.infer<typeof flashcardReviewSchema>

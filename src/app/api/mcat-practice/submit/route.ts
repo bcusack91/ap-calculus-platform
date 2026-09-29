@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recordQuestions } from '@/lib/study-tracking'
+import { mcatPracticeBatchRow } from '@/lib/question-activity-rows'
 
 export async function POST(req: Request) {
   try {
@@ -59,6 +61,10 @@ export async function POST(req: Request) {
         completedAt: new Date(),
       },
     })
+
+    // Teacher report: one PRACTICE batch row for the section (see mcatPracticeBatchRow).
+    const row = mcatPracticeBatchRow({ sectionId, sectionName, correct, total, timeSpent, answers })
+    if (row.answered) await recordQuestions(session.user.id, [row])
 
     return NextResponse.json({ success: true, attemptId: attempt.id })
   } catch (error) {

@@ -17,6 +17,7 @@ import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 /**
  * In-progress sitting, so a refresh or a closed tab does not destroy a
@@ -151,6 +152,8 @@ export default function SATDiagnosticPage() {
   const assignedId = searchParams.get('assigned')
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
+  // Teacher reports: the timed diagnostic counts reading time even without input.
+  useActivitySurface({ surface: 'DIAGNOSTIC', courseSlug: 'sat-prep', timed: phase === 'testing' })
   const [testData, setTestData] = useState<DiagnosticTestData | null>(null)
   const [results, setResults] = useState<DiagnosticResults | null>(null)
   const [rawAnswers, setRawAnswers] = useState<(number | null)[]>([])

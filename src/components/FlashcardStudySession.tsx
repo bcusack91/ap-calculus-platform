@@ -8,6 +8,7 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
 import { formatTimeUntil } from '@/lib/format-due-time'
+import { useCardShownTimer } from '@/hooks/useCardShownTimer'
 
 interface SessionCard {
   id: string
@@ -58,6 +59,8 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   const submittingRef = useRef(false)
   // Re-render trigger for lazily loaded KaTeX (read indirectly via cardHtml).
   const [katexReady, setKatexReady] = useState(false)
+  // Visible time on the current card, sent with its rating for the review log.
+  const cardShownMs = useCardShownTimer(cards[currentIndex])
 
   const loadSession = useCallback(() => {
     setLoading(true)
@@ -107,7 +110,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         const res = await fetch('/api/flashcards/review', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ flashcardId: card.id, rating, tzOffset: new Date().getTimezoneOffset() }),
+          body: JSON.stringify({ flashcardId: card.id, rating, tzOffset: new Date().getTimezoneOffset(), durationMs: cardShownMs() }),
         })
         const result = res.ok ? await res.json().catch(() => null) : null
         const p = result?.progress
@@ -150,7 +153,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         setCurrentIndex((i) => i + 1)
       }
     },
-    [cards, currentIndex, topicSlug, pending]
+    [cards, currentIndex, topicSlug, pending, cardShownMs]
   )
 
   // Keyboard shortcuts

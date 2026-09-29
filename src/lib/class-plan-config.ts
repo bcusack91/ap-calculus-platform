@@ -102,9 +102,13 @@ export function courseForCategory(category: string): ClassPlanCourse | null {
  */
 export function scoreLabelFromResults(results: unknown): string | null {
   if (!results || typeof results !== 'object') return null
-  const r = results as { estimatedAPScore?: unknown; estimatedScore?: unknown; percentage?: unknown }
+  const r = results as { estimatedAPScore?: unknown; estimatedScore?: unknown; percentage?: unknown; total?: unknown; sections?: unknown }
   if (typeof r.estimatedAPScore === 'number') return `${r.estimatedAPScore}/5`
   if (typeof r.estimatedScore === 'number') return `${r.estimatedScore}`
   if (typeof r.percentage === 'number') return `${r.percentage}%`
+  // MCAT full-length (category 'mcat-full-length'): scaled total + per-section
+  // scores. `total` alone is ambiguous elsewhere (a question count), so it only
+  // counts next to the sections array and inside the 472-528 scale.
+  if (Array.isArray(r.sections) && typeof r.total === 'number' && r.total >= 472 && r.total <= 528) return `${r.total}`
   return null
 }

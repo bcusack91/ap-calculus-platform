@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
+import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
+import { recordQuestions } from '@/lib/study-tracking'
 
 function parseMaybeJsonArray(value: unknown): string | number | boolean | object | undefined {
   if (value == null) return undefined
@@ -55,6 +57,7 @@ export async function POST(req: Request) {
     // Mirrors the SAT submit route; without this the teacher class-diagnostics
     // panel never sees MCAT attempts.
     let assignedId: string | null = null
+    let assignedClassroomId: string | null = null
     if (typeof classDiagnosticId === 'string' && classDiagnosticId) {
       const assigned = await prisma.classDiagnostic.findUnique({
         where: { id: classDiagnosticId },
@@ -65,7 +68,10 @@ export async function POST(req: Request) {
           where: { classroomId_userId: { classroomId: assigned.classroomId, userId: session.user.id } },
           select: { isActive: true },
         })
-        if (member?.isActive) assignedId = classDiagnosticId
+        if (member?.isActive) {
+          assignedId = classDiagnosticId
+          assignedClassroomId = assigned.classroomId
+        }
       }
     }
 
@@ -83,6 +89,13 @@ export async function POST(req: Request) {
         })(),
       },
     })
+
+    // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
+    await recordQuestions(
+      session.user.id,
+      diagnosticQuestionRows(parsedResults, { category, courseSlug: 'mcat-prep' }),
+      { classroomId: assignedClassroomId },
+    )
 
     return NextResponse.json({ success: true, id: diagnostic.id })
   } catch (error) {

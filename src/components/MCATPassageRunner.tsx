@@ -32,6 +32,7 @@ import { scoreMCAT, projectionRange, type MCATScoreReport } from '@/lib/mcat-sco
 import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
 import { MCAT_SECTION_META, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import 'katex/dist/katex.min.css'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 function RichText({ text, className, inline = false }: { text: string; className?: string; inline?: boolean }) {
   const [ready, setReady] = useState(false)
@@ -139,6 +140,12 @@ export default function MCATPassageRunner({
 
   // ----- Sectioned-exam state (only meaningful when `sectioned`) -----
   const [phase, setPhase] = useState<Phase>('section-start')
+  // Teacher reports: a running exam counts reading time even without input.
+  useActivitySurface({
+    surface: sectioned ? 'FULL_LENGTH' : 'PRACTICE_TEST',
+    courseSlug: 'mcat-prep',
+    timed: mode === 'exam' && !submitted && (!sectioned || phase === 'in-section'),
+  })
   const [sectionIdx, setSectionIdx] = useState(0)
   // Wall-clock deadlines (epoch ms) so reloads / backgrounded tabs still lose time.
   const [sectionDeadline, setSectionDeadline] = useState<number | null>(null)

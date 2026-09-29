@@ -88,6 +88,26 @@ export async function requireClassroomAccess(classroomId: string) {
 }
 
 /**
+ * Verify the current user may read one student's data in a classroom: teaching
+ * access to the class (owner, co-teacher or admin — requireClassroomAccess)
+ * AND the student is an ACTIVE member. A student who left the class is no
+ * longer the teacher's to read.
+ */
+export async function requireStudentInClassroom(classroomId: string, studentId: string) {
+  const access = await requireClassroomAccess(classroomId)
+  if ('error' in access) return access
+
+  const member = await prisma.classroomMember.findUnique({
+    where: { classroomId_userId: { classroomId, userId: studentId } },
+    select: { isActive: true, user: { select: { id: true, name: true, email: true } } },
+  })
+  if (!member?.isActive) {
+    return { error: NextResponse.json({ error: 'Student not in this class' }, { status: 404 }) }
+  }
+  return { ...access, student: member.user }
+}
+
+/**
  * Generate a random 6-character join code (uppercase alphanumeric, no ambiguous chars).
  */
 export function generateJoinCode(): string {

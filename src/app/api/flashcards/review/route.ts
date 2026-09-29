@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
-import { Prisma } from '@prisma/client'
+import { Prisma, type FlashcardRating } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
@@ -10,6 +10,12 @@ import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
 import { yieldPrefsFor } from '@/lib/flashcard-yield-prefs'
+import { classroomIdFromContext } from '@/lib/study-tracking'
+
+/** Longest time on one card the review log keeps; beyond this the student walked away. */
+const MAX_CARD_MS = 60_000
+
+const RATING_ENUM = { again: 'AGAIN', hard: 'HARD', good: 'GOOD', easy: 'EASY' } as const satisfies Record<string, FlashcardRating>
 
 /**
  * POST /api/flashcards/review
@@ -34,7 +40,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       )
     }
-    const { flashcardId, rating, tzOffset } = parsed.data
+    const { flashcardId, rating, tzOffset, durationMs } = parsed.data
 
     // Reviews accrue to the user's ACTIVE study mode (personal / class /
     // course) — resolved server-side so each mode is an independent deck.
@@ -131,8 +137,32 @@ export async function POST(req: NextRequest) {
     // the set-viewer's explicit submit). Helper swallows its own failures.
     const reviewedCard = await prisma.flashcard.findUnique({
       where: { id: flashcardId },
-      select: { topic: { select: { slug: true } } },
+      select: { topic: { select: { slug: true, category: { select: { course: { select: { slug: true } } } } } } },
     })
+
+    // Best-effort review log for the teacher's per-student report: one row
+    // per rating, with the time on card (client-measured, visible time only,
+    // capped at 60 s). `wasNew` matches the rollup's "introduced" rule above;
+    // `intervalBefore` is the day-scale interval before this rating (0 for a
+    // learning-step minute interval or a brand-new card).
+    try {
+      await prisma.flashcardReviewLog.create({
+        data: {
+          userId: session.user.id,
+          flashcardId,
+          context,
+          classroomId: classroomIdFromContext(context),
+          courseSlug: reviewedCard?.topic?.category?.course?.slug ?? '',
+          rating: RATING_ENUM[rating],
+          wasNew: reviewCount === 0,
+          intervalBefore: progress && !isMinuteInterval ? Math.max(0, Math.round(interval)) : 0,
+          durationMs: durationMs == null ? null : Math.max(0, Math.min(Math.round(durationMs), MAX_CARD_MS)),
+        },
+      })
+    } catch (logError) {
+      console.error('flashcard review log failed (non-fatal):', logError)
+    }
+
     if (reviewedCard?.topic?.slug) {
       await recordAssignmentCompletion({
         userId: session.user.id,

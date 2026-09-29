@@ -45,6 +45,8 @@ export interface RegradeResult {
   unresolvedCount: number
   /** True if any answer could not be resolved and fell back to the client value. */
   usedFallback: boolean
+  /** Per-answer verdict, in submitted order (the same grading `score` counts). */
+  perAnswer: boolean[]
 }
 
 interface AnswerKeyEntry {
@@ -178,19 +180,23 @@ export async function regradeExitQuizSeeded(
   let score = 0
   let resolvedCount = 0
   let unresolvedCount = 0
+  const perAnswer: boolean[] = []
   for (const answer of answers) {
     const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
     const entry = id ? key.get(id) : undefined
+    let ok: boolean
     if (entry && typeof answer.selectedAnswer === 'number') {
       const { correctIndex } = shuffleOptions(entry.options, entry.correctIndex, id + entry.question)
-      if (answer.selectedAnswer === correctIndex) score++
+      ok = answer.selectedAnswer === correctIndex
       resolvedCount++
     } else {
-      if (answer.correct === true) score++
+      ok = answer.correct === true
       unresolvedCount++
     }
+    if (ok) score++
+    perAnswer.push(ok)
   }
-  return { score, resolvedCount, unresolvedCount, usedFallback: unresolvedCount > 0 }
+  return { score, resolvedCount, unresolvedCount, usedFallback: unresolvedCount > 0, perAnswer }
 }
 
 /**
@@ -210,11 +216,13 @@ export async function regradeExitQuiz(
   let score = 0
   let resolvedCount = 0
   let unresolvedCount = 0
+  const perAnswer: boolean[] = []
 
   for (const answer of answers) {
     const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
     const entry = id && key ? key.get(id) : undefined
 
+    let ok: boolean
     if (entry && typeof answer.selectedAnswer === 'number') {
       // Reproduce the exact deterministic shuffle the client rendered.
       const { correctIndex } = shuffleOptions(
@@ -222,13 +230,15 @@ export async function regradeExitQuiz(
         entry.correctIndex,
         id + entry.question,
       )
-      if (answer.selectedAnswer === correctIndex) score++
+      ok = answer.selectedAnswer === correctIndex
       resolvedCount++
     } else {
       // Could not resolve this question — trust the client's assertion for now.
-      if (answer.correct === true) score++
+      ok = answer.correct === true
       unresolvedCount++
     }
+    if (ok) score++
+    perAnswer.push(ok)
   }
 
   return {
@@ -236,5 +246,6 @@ export async function regradeExitQuiz(
     resolvedCount,
     unresolvedCount,
     usedFallback: unresolvedCount > 0,
+    perAnswer,
   }
 }

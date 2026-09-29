@@ -80,7 +80,7 @@ export default function SecurityPage() {
           <h2 className="text-2xl font-semibold mb-4">What we collect &amp; why</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Account data</strong> — name and email, used to authenticate the student and associate progress.</li>
-            <li><strong>Learning activity</strong> — topics studied, quiz/assignment results, mastery, streaks. This powers the teacher dashboard and the student&apos;s own progress.</li>
+            <li><strong>Learning activity</strong> — topics studied, quiz/assignment results, mastery, streaks, active study time (idle and background time excluded), flashcard ratings and time per card, and answers to lesson, quiz and test questions. This powers the teacher dashboard and the student&apos;s own progress; teachers see it only for students in their classes.</li>
             <li><strong>Limited technical data</strong> — standard server logs used for security, reliability, and abuse prevention.</li>
           </ul>
           <p className="mt-4">

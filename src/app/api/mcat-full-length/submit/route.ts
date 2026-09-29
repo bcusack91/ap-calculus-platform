@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
+import { recordQuestions } from '@/lib/study-tracking'
+import { mcatFullLengthRows } from '@/lib/question-activity-rows'
 
 /**
  * Persist a completed MCAT full-length practice exam so a weak result feeds the
@@ -140,6 +142,9 @@ export async function POST(req: Request) {
         strengths: null,
       },
     })
+
+    // Teacher report: one FULL_LENGTH batch row per section.
+    await recordQuestions(session.user.id, mcatFullLengthRows(results))
 
     return NextResponse.json({ success: true, id: record.id })
   } catch (error) {

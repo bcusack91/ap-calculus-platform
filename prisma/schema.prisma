@@ -48,6 +48,9 @@ model User {
   diagnosticTests             DiagnosticTest[]
   flashcardProgress           FlashcardProgress[]
   flashcardDailyActivity      FlashcardDailyActivity[]
+  flashcardReviewLogs         FlashcardReviewLog[]
+  activeTimeDaily             ActiveTimeDaily[]
+  questionActivity            QuestionActivity[]
   learningPath                LearningPath?
   sessions                    Session[]
   topicProgress               TopicProgress[]
@@ -539,6 +542,108 @@ model FlashcardDailyActivity {
 
   @@unique([userId, day])
   @@index([userId, day])
+}
+
+// ─── Study tracking (teacher reports) ──────────────────────────────────
+// Added 2026-09-29 so teachers can see how students actually study: every
+// flashcard rating with its time, active time per day and surface, and every
+// answered question by where it was asked. `classroomId` is "" for personal
+// study and a classroom id when the work was done in that class's study mode
+// or for that class's assignment/diagnostic — the report's "This class only"
+// filter. Rows are append-only (ActiveTimeDaily is an upsert rollup) and
+// cascade-delete with the user.
+
+enum FlashcardRating {
+  AGAIN
+  HARD
+  GOOD
+  EASY
+}
+
+/// One row per flashcard rating.
+model FlashcardReviewLog {
+  id             String          @id @default(cuid())
+  userId         String
+  flashcardId    String
+  /// Study context the card was reviewed in ('personal' | 'class:<id>' | 'course:<slug>').
+  context        String          @default("personal")
+  classroomId    String          @default("")
+  courseSlug     String          @default("")
+  rating         FlashcardRating
+  /// Card shown → rated, hidden time excluded, capped at 60 s. Null from old clients.
+  durationMs     Int?
+  /// First-ever review of this card in this context.
+  wasNew         Boolean         @default(false)
+  /// Scheduled interval in days before this rating (mature card = 21+).
+  intervalBefore Int             @default(0)
+  reviewedAt     DateTime        @default(now())
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, reviewedAt])
+  @@index([classroomId, reviewedAt])
+}
+
+enum ActivitySurface {
+  LESSON
+  ENTRANCE_QUIZ
+  EXIT_QUIZ
+  FLASHCARDS
+  DIAGNOSTIC
+  PRACTICE_TEST
+  FULL_LENGTH
+  COMPETITIVE
+  OTHER
+}
+
+/// Active study seconds per student-local day, surface, course and class.
+/// Counted by the site-wide ActiveTimeTracker (idle 2+ min and hidden tabs excluded).
+model ActiveTimeDaily {
+  id          String          @id @default(cuid())
+  userId      String
+  day         DateTime        @db.Date
+  surface     ActivitySurface
+  courseSlug  String          @default("")
+  classroomId String          @default("")
+  seconds     Int             @default(0)
+  updatedAt   DateTime        @updatedAt
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, day, surface, courseSlug, classroomId])
+  @@index([userId, day])
+  @@index([classroomId, day])
+}
+
+enum QuestionSource {
+  ENTRANCE
+  LESSON
+  EXIT
+  DIAGNOSTIC
+  PRACTICE
+  FULL_LENGTH
+  DAILY
+  COMPETITIVE
+}
+
+/// Answered questions. One row per answer where the source knows each answer
+/// (answered = 1); one row per batch otherwise (an in-lesson section's score/total).
+model QuestionActivity {
+  id          String         @id @default(cuid())
+  userId      String
+  source      QuestionSource
+  topicSlug   String         @default("")
+  courseSlug  String         @default("")
+  /// MCAT section / SAT domain / skill when known — powers "weakest areas".
+  discipline  String         @default("")
+  classroomId String         @default("")
+  questionKey String         @default("")
+  answered    Int            @default(1)
+  correct     Int            @default(0)
+  durationMs  Int?
+  answeredAt  DateTime       @default(now())
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, answeredAt])
+  @@index([classroomId, answeredAt])
 }
 
 model DailyStreak {

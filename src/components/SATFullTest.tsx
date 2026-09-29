@@ -7,6 +7,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
 import { module2Tier, regenerateModule2 } from '@/data/sat-practice/test-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -97,6 +98,8 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [sectionAnswers, setSectionAnswers] = useState<Map<string, QuestionAnswer[]>>(new Map())
   const [timeRemaining, setTimeRemaining] = useState(0)
+  // Teacher reports: a running section counts reading time even without input.
+  useActivitySurface({ surface: 'PRACTICE_TEST', courseSlug: 'sat-prep', timed: phase === 'testing' })
   const [sectionStartTime, setSectionStartTime] = useState(0)
   const [completedSections, setCompletedSections] = useState<SectionResult[]>([])
   const [showNav, setShowNav] = useState(false)

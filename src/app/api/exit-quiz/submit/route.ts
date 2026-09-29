@@ -8,6 +8,7 @@ import { regradeExitQuiz, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
+import { recordQuestions } from '@/lib/study-tracking'
 
 // Bounded payload: quizzes are 10 questions (score = number correct), but allow
 // headroom up to 100. answers mirrors the client shape
@@ -70,6 +71,10 @@ export async function POST(request: Request) {
     // Only answers whose questionId can't be resolved fall back to the client value,
     // and we warn once per request when that happens.
     const answers_ = answers || []
+    // The answers as stored: each `correct` replaced by the server's verdict
+    // whenever a regrade ran (the attempt record, analytics and the teacher
+    // report must never show the client's claim over the server's grading).
+    let gradedAnswers: typeof answers_ = answers_
     let score: number
     if (answers_.length > 0) {
       // Preferred path: the client sent the generation seed, so regenerate the
@@ -82,6 +87,7 @@ export async function POST(request: Request) {
       if (regrade.resolvedCount > 0) {
         // At least one question graded from the bank — trust the server count.
         score = Math.min(regrade.score, totalQuestions)
+        gradedAnswers = answers_.map((a, i) => ({ ...a, correct: regrade.perAnswer[i] === true }))
       } else {
         // Nothing resolvable (bank not found or non-reproducible ids) — preserve the
         // legacy behavior: use the client's per-answer booleans, else the raw score.
@@ -139,7 +145,7 @@ export async function POST(request: Request) {
           passed: !!passed,
           mustRedoUnit: !!mustRedoUnit,
           variant: typeof variant === 'number' ? variant : 1,
-          answers: answers || [],
+          answers: gradedAnswers,
           timeSpent: timeSpent || 0,
         }
       })
@@ -219,7 +225,7 @@ export async function POST(request: Request) {
     // never roll back (or fail) the quiz submission. problemType = topicSlug so the
     // per-type breakdown reads as a per-topic breakdown in the aggregate view.
     try {
-      const scored = (answers || []).filter((a) => typeof a.correct === 'boolean')
+      const scored = gradedAnswers.filter((a) => typeof a.correct === 'boolean')
       if (scored.length > 0) {
         const perQuestionMs = timeSpent > 0 ? Math.round((timeSpent * 1000) / scored.length) : 0
         await prisma.factoringPerformanceMetrics.createMany({
@@ -239,6 +245,30 @@ export async function POST(request: Request) {
       }
     } catch (metricsError) {
       console.error('exit-quiz metrics write failed (non-fatal):', metricsError)
+    }
+
+    // Teacher report: one EXIT row per question from the server's grading
+    // (one batch row when the client sent no per-question answers). After the
+    // transaction commits; recordQuestions never throws.
+    const graded = gradedAnswers.filter((a) => typeof a.correct === 'boolean')
+    if (graded.length > 0 && graded.length === gradedAnswers.length) {
+      const perQuestionMs = timeSpent > 0 ? Math.round((timeSpent * 1000) / graded.length) : null
+      await recordQuestions(userId, graded.map((a) => ({
+        source: 'EXIT' as const,
+        topicSlug,
+        questionKey: a.questionId == null ? '' : String(a.questionId),
+        answered: 1,
+        correct: a.correct ? 1 : 0,
+        durationMs: perQuestionMs,
+      })))
+    } else {
+      await recordQuestions(userId, [{
+        source: 'EXIT',
+        topicSlug,
+        answered: totalQuestions,
+        correct: score,
+        durationMs: timeSpent > 0 ? timeSpent * 1000 : null,
+      }])
     }
 
     // Auto-record classroom-assignment submissions from this result. `score` is the

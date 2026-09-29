@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
+import { recordQuestions } from '@/lib/study-tracking'
 
 export async function POST(request: Request) {
   const session = await auth()
@@ -24,6 +26,9 @@ export async function POST(request: Request) {
       strengths: strengths ?? '',
     },
   })
+
+  // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
+  await recordQuestions(session.user.id, diagnosticQuestionRows(results, { category }))
 
   return NextResponse.json({ test })
 }

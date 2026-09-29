@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
+import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
+import { recordQuestions } from '@/lib/study-tracking'
 
 export async function POST(req: Request) {
   try {
@@ -47,6 +49,7 @@ export async function POST(req: Request) {
     // after verifying the assignment exists and this student belongs to its
     // classroom (a spoofed id must not attach to another class's results).
     let assignedId: string | null = null
+    let assignedClassroomId: string | null = null
     if (typeof classDiagnosticId === 'string' && classDiagnosticId) {
       const assigned = await prisma.classDiagnostic.findUnique({
         where: { id: classDiagnosticId },
@@ -57,7 +60,10 @@ export async function POST(req: Request) {
           where: { classroomId_userId: { classroomId: assigned.classroomId, userId: session.user.id } },
           select: { isActive: true },
         })
-        if (member?.isActive) assignedId = classDiagnosticId
+        if (member?.isActive) {
+          assignedId = classDiagnosticId
+          assignedClassroomId = assigned.classroomId
+        }
       }
     }
 
@@ -71,6 +77,13 @@ export async function POST(req: Request) {
         classDiagnosticId: assignedId,
       },
     })
+
+    // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
+    await recordQuestions(
+      session.user.id,
+      diagnosticQuestionRows(parsedResults, { category, courseSlug: 'sat-prep' }),
+      { classroomId: assignedClassroomId },
+    )
 
     return NextResponse.json({ success: true, id: diagnostic.id })
   } catch (error) {

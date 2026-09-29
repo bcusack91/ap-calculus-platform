@@ -19,6 +19,7 @@ import { formatTimeUntil } from '@/lib/format-due-time'
 import { releaseDue, returnsThisSession, scheduleReturn, type PendingCard } from '@/lib/flashcard-session-queue'
 import { signUpUrl } from '@/lib/auth-redirect'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { useCardShownTimer } from '@/hooks/useCardShownTimer'
 
 const cardId = (c: FlashcardProgress) => c.flashcard.id
 
@@ -101,6 +102,8 @@ function FlashcardReviewSession() {
   // Cards rated into a minute-scale learning step (e.g. "Again" → 1m). They
   // come back mid-batch as soon as they're due, instead of after the batch.
   const [pending, setPending] = useState<PendingCard<FlashcardProgress>[]>([])
+  // Visible time on the current card, sent with its rating for the review log.
+  const cardShownMs = useCardShownTimer(cards[currentIndex])
 
   const loadDueCards = useCallback(async () => {
     try {
@@ -164,7 +167,8 @@ function FlashcardReviewSession() {
         body: JSON.stringify({
           flashcardId: currentCard.flashcard.id,
           rating,
-          tzOffset: new Date().getTimezoneOffset()
+          tzOffset: new Date().getTimezoneOffset(),
+          durationMs: cardShownMs(),
         })
       })
 

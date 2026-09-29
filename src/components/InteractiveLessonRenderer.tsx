@@ -28,6 +28,7 @@ import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
+import { postQuestionActivity } from '@/lib/question-activity-client'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
@@ -48,6 +49,7 @@ import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import { shuffleArray } from '@/lib/shuffle-options'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
+import { useActivitySurface } from '@/hooks/useActivitySurface'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Detects a markdown pipe-table (a row containing "|" immediately followed by a
@@ -559,6 +561,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
     },
   })
+  // Site-wide active time: the entrance and exit quizzes are their own activity.
+  useActivitySurface(
+    showExitQuiz
+      ? { surface: 'EXIT_QUIZ', topicSlug }
+      : entranceQuizPhase === 'quiz'
+        ? { surface: 'ENTRANCE_QUIZ', topicSlug }
+        : null,
+  )
 
   const saveProgress = useCallback(async (forceTopicId?: string, isPartCompletion: boolean = false) => {
     if (!session?.user) return // Only save if user is logged in
@@ -926,6 +936,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       setCelebrationTotal(total)
       setCelebrationKey(prev => prev + 1)
       setShowCelebration(true)
+    }
+
+    // Record the section's score for the teacher's report (fire-and-forget).
+    if (session?.user && typeof score === 'number' && typeof total === 'number' && total > 0) {
+      const answered = Math.min(Math.round(total), 50)
+      postQuestionActivity([{
+        source: 'LESSON',
+        topicSlug,
+        questionKey: `${topicSlug}:p${lessonPart}:s${currentSectionIndex}`,
+        answered,
+        correct: Math.max(0, Math.min(Math.round(score), answered)),
+      }])
     }
   }
 

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recordQuestions } from '@/lib/study-tracking'
 
 export async function POST(req: Request) {
   try {
@@ -84,6 +85,26 @@ export async function POST(req: Request) {
         completedAt: new Date(),
       },
     })
+
+    // Teacher report: one PRACTICE batch row per section from the clamped
+    // tallies stored above (the test is graded in the browser; per-question
+    // flags in `answers` are the client's and are not re-recorded).
+    await recordQuestions(
+      session.user.id,
+      [
+        { discipline: 'Reading and Writing', key: 'rw', ...rw },
+        { discipline: 'Math', key: 'math', ...math },
+      ]
+        .filter((sec) => sec.total > 0)
+        .map((sec) => ({
+          source: 'PRACTICE' as const,
+          courseSlug: 'sat-prep',
+          discipline: sec.discipline,
+          questionKey: `sat-practice:${testNumber}:${sec.key}`,
+          answered: Math.min(sec.total, 300),
+          correct: Math.min(sec.correct, sec.total, 300),
+        })),
+    )
 
     return NextResponse.json({ success: true, attemptId: attempt.id })
   } catch (error) {
