@@ -12,17 +12,18 @@
  * Refresh when:
  *  - the client asked for it (update() after a profile change), or
  *  - the copy is older than REFRESH_AFTER_MS, or
- *  - the token has no birth year. That field gates the whole app (the
- *    BirthYearGate blocks every page until it is known), so a stale null is
- *    the one value worth a cheaper re-check: a user whose row still has null
- *    costs one indexed read per NULL_RECHECK_MS, and once the row is filled
- *    the token stops qualifying.
+ *  - the token has no birth year or no verified email. Both are set in one
+ *    place (a form, an emailed link — often opened on another device) and
+ *    read everywhere else from this copy: a stale null re-asks for a birth
+ *    year the student gave, or keeps a "Verify your email" banner up after
+ *    they verified. A user whose row still has null costs one indexed read
+ *    per NULL_RECHECK_MS; once the row is filled the token stops qualifying.
  */
 export const REFRESH_AFTER_MS = 5 * 60 * 1000
 export const NULL_RECHECK_MS = 30 * 1000
 
 export function shouldRefreshFromDb(
-  token: { lastRefreshed?: unknown; birthYear?: unknown },
+  token: { lastRefreshed?: unknown; birthYear?: unknown; emailVerified?: unknown },
   trigger: string | undefined,
   now = Date.now(),
 ): boolean {
@@ -30,5 +31,5 @@ export function shouldRefreshFromDb(
   const lastRefreshed = typeof token.lastRefreshed === 'number' ? token.lastRefreshed : 0
   const age = now - lastRefreshed
   if (age > REFRESH_AFTER_MS) return true
-  return token.birthYear == null && age > NULL_RECHECK_MS
+  return (token.birthYear == null || token.emailVerified == null) && age > NULL_RECHECK_MS
 }

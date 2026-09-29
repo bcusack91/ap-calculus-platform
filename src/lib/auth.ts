@@ -33,6 +33,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      // Google has already verified the address when it says so — a new
+      // Google account is created verified, so it is never asked to verify an
+      // email Google vouched for. (Same fields as the library default, plus
+      // emailVerified, which the Prisma adapter writes on create.)
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          image: profile.picture,
+          emailVerified: profile.email_verified ? new Date() : null,
+          role: 'FREE' as const, // the schema default; teachers activate afterwards
+        }
+      },
     }),
     ...(microsoftSsoEnabled
       ? [
@@ -97,7 +111,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     })
   ],
   callbacks: {
-    async signIn({ user, account }) {
+    async signIn({ user, account, profile }) {
       // Allow all credential sign-ins
       if (account?.provider === 'credentials') return true
 
@@ -122,6 +136,22 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           if (!existingUser.emailVerified) {
             return false
           }
+        }
+
+        // An existing Google account created before Google sign-ups were
+        // marked verified: Google vouches for the address, so record it now
+        // (runs before the jwt callback, which then reads it). Not for
+        // Microsoft — some Entra accounts can set their own email claim.
+        if (
+          account.provider === 'google' &&
+          existingUser &&
+          existingUser.accounts.length > 0 &&
+          !existingUser.emailVerified &&
+          (profile as { email_verified?: boolean } | undefined)?.email_verified === true
+        ) {
+          await prisma.user
+            .update({ where: { email: user.email }, data: { emailVerified: new Date() } })
+            .catch((err) => console.error('[auth] could not record Google-verified email (ignored):', err))
         }
 
         return true
