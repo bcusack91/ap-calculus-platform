@@ -1,16 +1,180 @@
 'use client'
 
 import { Fragment, useCallback, useEffect, useState } from 'react'
+import Link from 'next/link'
+import { Download } from 'lucide-react'
+import type { ClassStudentRow, MetricsRange } from '@/lib/student-metrics'
+import {
+  FlagBadge,
+  NO_DATA_COPY,
+  StudyFilters,
+  fmtHours,
+  fmtPct,
+  type StudyScope,
+} from '@/components/teacher/StudyReportShared'
 
 /**
  * "Engagement" tab on the teacher classroom page: honest time-on-task.
  *
- * Study-time table (total minutes, lessons completed, ⚠ click-through count —
- * lessons completed in under 5 minutes), expandable to a per-lesson breakdown
- * per student, plus live-session attendance (who was in the room, for how
- * long). The point: a student who "completed" 12 lessons in 40 total minutes
- * is visible at a glance.
+ * Leads with the per-student study-activity table (GET …/activity, the same
+ * numbers as the "Export activity CSV" download): active hours and days,
+ * flashcard reviews / minutes / Again rate, questions answered and accuracy,
+ * exit-quiz passes, overdue cards, and flags. Each name opens that student's
+ * full study report.
+ *
+ * Below it, the older lesson-level views that the table does not replace:
+ * lesson time with click-through flags (lessons completed in under 5
+ * minutes) and a per-lesson drill-down, the 7-day flashcard habit grid, and
+ * live-session attendance.
  */
+
+type ActivityStudent = ClassStudentRow & { id: string; name: string | null; email: string | null }
+interface ActivityPayload {
+  range: MetricsRange
+  scope: StudyScope
+  target: { courseSlug: string; label: string; hours: number; topics: number } | null
+  students: ActivityStudent[]
+}
+
+const TH = 'py-2 pr-3 font-medium align-bottom leading-tight'
+const NUM = 'py-2 pr-3 text-right tabular-nums text-gray-700 dark:text-gray-300'
+
+/** Per-student activity table with Range + Scope filters and the CSV export. */
+export function ClassActivityTable({ classroomId }: { classroomId: string }) {
+  const [range, setRange] = useState<MetricsRange>('7d')
+  const [scope, setScope] = useState<StudyScope>('all')
+  const [data, setData] = useState<ActivityPayload | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  // Which filter pair the shown rows belong to; a mismatch means a refetch is
+  // in flight, and the old rows stay up dimmed rather than flashing a skeleton.
+  const [loadedFor, setLoadedFor] = useState<string | null>(null)
+  const key = `${range}|${scope}`
+  const loading = loadedFor !== key
+
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/teacher/classrooms/${classroomId}/activity?range=${range}&scope=${scope}`, { cache: 'no-store' })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) throw new Error(d.error || 'Could not load class activity')
+        if (!cancelled) {
+          setData(d)
+          setError(null)
+        }
+      })
+      .catch((e) => !cancelled && setError(e instanceof Error ? e.message : 'Could not load class activity'))
+      .finally(() => !cancelled && setLoadedFor(`${range}|${scope}`))
+    return () => {
+      cancelled = true
+    }
+  }, [classroomId, range, scope])
+
+  const qs = `range=${range}&scope=${scope}`
+  const csvHref = `/api/teacher/classrooms/${classroomId}/activity?${qs}&format=csv`
+  const reportHref = (id: string) =>
+    `/teacher/classroom/${classroomId}/student/${id}${range !== '7d' || scope !== 'all' ? `?${qs}` : ''}`
+  const students = data?.students ?? []
+  const nothingRecorded =
+    students.length > 0 && students.every((s) => s.activeSeconds === 0 && s.reviews === 0 && s.answered === 0)
+
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+      <div className="mb-1 flex flex-wrap items-start justify-between gap-3">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Study activity</h2>
+        <a
+          href={csvHref}
+          download
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+        >
+          <Download className="w-4 h-4" aria-hidden />
+          Export activity CSV
+        </a>
+      </div>
+      <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+        Active time excludes idle (2+ minutes without input) and hidden tabs. Click a name for the full study report.
+        {data?.target && ` Below target = under the ${data.target.label} pace of ${data.target.hours} h a week.`}
+      </p>
+      <StudyFilters
+        range={range}
+        scope={scope}
+        onChange={(next) => {
+          setRange(next.range)
+          setScope(next.scope)
+        }}
+        className="mb-4"
+      />
+
+      {error ? (
+        <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+      ) : !data ? (
+        <div className="h-40 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" />
+      ) : students.length === 0 ? (
+        <p className="text-sm text-gray-500 dark:text-gray-400">No students yet.</p>
+      ) : (
+        <>
+          {nothingRecorded && (
+            <p className="mb-3 rounded-xl border border-dashed border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-700 dark:text-gray-200">
+              {NO_DATA_COPY}. Active time, flashcard ratings and answered questions will fill in as students study.
+            </p>
+          )}
+          <div className={`overflow-x-auto transition-opacity ${loading ? 'opacity-60' : ''}`} aria-busy={loading}>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-200 text-left text-xs uppercase text-gray-500 dark:border-gray-700 dark:text-gray-400">
+                  <th className={`${TH} sticky left-0 bg-white dark:bg-gray-800`}>Student</th>
+                  <th className={`${TH} text-right`}>Active hours</th>
+                  <th className={`${TH} text-right`}>Active days</th>
+                  <th className={`${TH} text-right`}>Flashcard reviews</th>
+                  <th className={`${TH} text-right`}>Flashcard minutes</th>
+                  <th className={`${TH} text-right`}>Again %</th>
+                  <th className={`${TH} text-right`}>Questions answered</th>
+                  <th className={`${TH} text-right`}>Accuracy</th>
+                  <th className={`${TH} text-right`}>Exit passes</th>
+                  <th className={`${TH} text-right`}>Overdue</th>
+                  <th className={`${TH} min-w-[9rem]`}>Flags</th>
+                </tr>
+              </thead>
+              <tbody>
+                {students.map((s) => (
+                  <tr key={s.id} className="border-b border-gray-100 dark:border-gray-700/50">
+                    <td className="sticky left-0 bg-white dark:bg-gray-800 py-2 pr-3 whitespace-nowrap">
+                      <Link
+                        href={reportHref(s.id)}
+                        className="font-medium text-gray-900 dark:text-white hover:text-accent hover:underline"
+                      >
+                        {s.name || s.email || 'Unnamed Student'}
+                      </Link>
+                    </td>
+                    <td className={NUM}>{fmtHours(s.activeSeconds)}</td>
+                    <td className={NUM}>{s.activeDays}</td>
+                    <td className={NUM}>{s.reviews}</td>
+                    <td className={NUM}>{Math.round(s.flashcardSeconds / 60)}</td>
+                    <td className={NUM}>{fmtPct(s.againRate)}</td>
+                    <td className={NUM}>{s.answered}</td>
+                    <td className={NUM}>{fmtPct(s.accuracy)}</td>
+                    <td className={NUM}>{s.exitPasses}</td>
+                    <td className={NUM}>{s.overdue}</td>
+                    <td className="py-2">
+                      {s.flags.length ? (
+                        <span className="flex flex-wrap gap-1">
+                          {s.flags.map((f) => (
+                            <FlagBadge key={f} flag={f} />
+                          ))}
+                        </span>
+                      ) : (
+                        <span className="text-xs text-gray-400">—</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
 
 interface StudentRow { userId: string; name: string; totalSeconds: number; completedLessons: number; flaggedLessons: number }
 interface TopicRow { title: string; course: string | null; status: string; seconds: number; lastAccessed: string | null; flagged: boolean }
@@ -57,21 +221,31 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
     load(userId)
   }
 
-  if (error) return <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-sm text-red-600 dark:text-red-400">{error}</div>
-  if (!students) {
+  // The activity table loads on its own, so a slow or failed lesson-time
+  // load never hides it.
+  if (error || !students) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-        <div className="h-40 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" />
+      <div className="space-y-6">
+        <ClassActivityTable classroomId={classroomId} />
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+          {error ? (
+            <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+          ) : (
+            <div className="h-40 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" />
+          )}
+        </div>
       </div>
     )
   }
 
   return (
     <div className="space-y-6">
+      <ClassActivityTable classroomId={classroomId} />
+
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">⏱ Study time</h2>
+        <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">⏱ Lesson time</h2>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-          Real time spent inside lessons. <span className="font-medium text-amber-600 dark:text-amber-400">⚠ flags</span> mark
+          Real time spent inside lessons, all time. <span className="font-medium text-amber-600 dark:text-amber-400">⚠ flags</span> mark
           lessons completed in under 5 minutes — usually clicking through for credit. Click a student for their per-lesson breakdown.
         </p>
         <div className="overflow-x-auto">
@@ -79,7 +253,7 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
             <thead>
               <tr className="border-b border-gray-200 text-left text-xs uppercase text-gray-500 dark:border-gray-700 dark:text-gray-400">
                 <th className="py-2 pr-4">Student</th>
-                <th className="py-2 pr-4">Total study time</th>
+                <th className="py-2 pr-4">Lesson time</th>
                 <th className="py-2 pr-4">Lessons completed</th>
                 <th className="py-2">Click-through flags</th>
               </tr>

@@ -1495,6 +1495,14 @@ export default function ClassroomDetailPage() {
                               <Swords className="w-3.5 h-3.5" aria-hidden="true" /> Competitive granted
                             </span>
                           )}
+                          <Link
+                            href={`/teacher/classroom/${classroomId}/student/${m.user.id}`}
+                            className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-hover hover:underline"
+                            title="Full study report: active time, flashcards, questions by source"
+                          >
+                            <BarChart3 className="w-3.5 h-3.5" aria-hidden="true" />
+                            Report
+                          </Link>
                           <button
                             onClick={() => removeMember(m)}
                             className="text-red-500 hover:text-red-700 text-sm font-medium"

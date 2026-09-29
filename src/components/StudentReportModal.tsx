@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { Printer } from 'lucide-react'
+import Link from 'next/link'
+import { BarChart3, Printer } from 'lucide-react'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
 
 /**
@@ -173,13 +174,25 @@ export default function StudentReportModal({
               {report.student.email ? (
                 <p className="text-sm text-gray-500 dark:text-gray-400">{report.student.email}</p>
               ) : <span />}
-              <button
-                type="button"
-                onClick={() => window.print()}
-                className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
-              >
-                <Printer className="w-4 h-4" aria-hidden />Print report
-              </button>
+              <div className="flex shrink-0 flex-wrap justify-end gap-2">
+                {/* The deep study report (active time, flashcard ratings,
+                    questions by source, MCAT trend) lives on its own page. */}
+                {studentId && classroomId && (
+                  <Link
+                    href={`/teacher/classroom/${classroomId}/student/${studentId}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-semibold rounded-lg bg-accent text-accent-foreground hover:bg-accent-hover shadow-sm"
+                  >
+                    <BarChart3 className="w-4 h-4" aria-hidden />Full report
+                  </Link>
+                )}
+                <button
+                  type="button"
+                  onClick={() => window.print()}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+                >
+                  <Printer className="w-4 h-4" aria-hidden />Print report
+                </button>
+              </div>
             </div>
 
             {/* Headline numbers */}
