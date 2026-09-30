@@ -11,7 +11,7 @@ import { MCAT_SECTION_ORDER, MCAT_SECTION_META } from '@/data/mcat/types'
 const BREAKS = [10, 30, 10]
 
 /** localStorage key the runner persists sectioned progress under, per form. */
-const progressKey = (form: 1 | 2) => `mcat-fl-progress-v1:form-${form}`
+const progressKey = (form: 1 | 2) => `mcat-fl-progress-v2:form-${form}`
 
 /* Saved-progress detection as an external store: localStorage is client-only,
  * so the server snapshot is always "none" and the client snapshot re-reads on

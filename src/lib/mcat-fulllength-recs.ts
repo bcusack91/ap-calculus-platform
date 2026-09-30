@@ -63,6 +63,9 @@ export const DISCIPLINE_TOPIC_MAP: Record<string, string> = {
   'developmental-psychology': 'mcat-psychology-behavior-mcat',
   'biological-basis-of-behavior': 'mcat-psychology-behavior-mcat',
   'personality-and-disorders': 'mcat-psychology-behavior-mcat',
+  // Sociology passages roll up to the same behavior topic the diagnostic uses
+  // for its sociology domain (CANONICAL_TOPIC_MAP 'mcat-psychology-sociology').
+  sociology: 'mcat-psychology-behavior-mcat',
 }
 // NOTE: 'sociology' is authored in BOTH the psych-soc bank (section 'psych-soc')
 // and the CARS social-science bank (section 'cars'), so it is intentionally NOT

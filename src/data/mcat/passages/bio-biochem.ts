@@ -26,14 +26,14 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'equation, obtaining a $K_m$ of 0.10 mM and a $V_{max}$ of 50 µmol/min.\n\n' +
       'In Experiment 2, they repeated the assay in the presence of a fixed concentration of inorganic phosphate, ' +
       'a product of the reaction. The apparent $K_m$ rose to 0.40 mM while $V_{max}$ was unchanged at 50 µmol/min.\n\n' +
-      'In Experiment 3, they added sodium orthovanadate, a transition-state analog. The apparent $V_{max}$ fell ' +
+      'In Experiment 3, they added a small-molecule inhibitor that binds AP at a regulatory site distinct from the active site. The apparent $V_{max}$ fell ' +
       'and could not be restored to 50 µmol/min by adding more substrate; the apparent $K_m$ was unchanged.\n\n' +
       'The team also noted that AP requires $\\text{Zn}^{2+}$ in its active site. Treatment with the metal chelator ' +
       'EDTA abolished activity, and activity was recovered when excess $\\text{Zn}^{2+}$ was added back after EDTA ' +
       'was dialyzed out.',
     chart: {
       title:
-        'Figure 1. Michaelis-Menten kinetics of alkaline phosphatase (control vs. inorganic phosphate vs. orthovanadate)',
+        'Figure 1. Michaelis-Menten kinetics of alkaline phosphatase (control vs. inorganic phosphate vs. regulatory-site inhibitor)',
       kind: 'line',
       xLabel: '[pNPP]',
       xUnit: 'mM',
@@ -48,7 +48,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
           yValues: [0, 5.6, 10.0, 16.7, 21.4, 27.8, 32.6, 35.7, 39.5, 41.7, 44.1],
         },
         {
-          label: 'Exp 3: + orthovanadate — noncompetitive (Km 0.10, Vmax 18)',
+          label: 'Exp 3: + regulatory-site inhibitor — noncompetitive (Km 0.10, Vmax 18)',
           yValues: [0, 6.0, 9.0, 12.0, 13.5, 15.0, 15.9, 16.4, 16.9, 17.1, 17.4],
         },
       ],
@@ -74,7 +74,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       },
       {
         question:
-          'In Experiment 3, orthovanadate lowered $V_{max}$ and this could not be reversed by adding more substrate, while $K_m$ stayed at 0.10 mM. This is best classified as:',
+          'In Experiment 3, the regulatory-site inhibitor lowered $V_{max}$ and this could not be reversed by adding more substrate, while $K_m$ stayed at 0.10 mM. This is best classified as:',
         options: [
           'Substrate activation',
           'A change in enzyme concentration',
@@ -82,7 +82,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
           'Noncompetitive inhibition'],
         correctAnswer: 3,
         explanation:
-          'Decreased $V_{max}$ with unchanged $K_m$ that cannot be overcome by adding substrate is classic noncompetitive inhibition: the inhibitor binds equally well to free enzyme and to the ES complex (at a site distinct from substrate competition), effectively removing a fraction of active enzyme regardless of [S]. As a transition-state analog binding tightly outside the simple competitive scheme, vanadate lowers the maximum achievable rate. Competitive inhibition would raise $K_m$; substrate activation and changing [E] do not match an inhibitor added at fixed enzyme.',
+          'Decreased $V_{max}$ with unchanged $K_m$ that cannot be overcome by adding substrate is classic noncompetitive inhibition: the inhibitor binds equally well to free enzyme and to the ES complex (at a site distinct from substrate competition), effectively removing a fraction of active enzyme regardless of [S]. Because it binds a site other than the active site, it does not compete with substrate, so raising [S] cannot restore the original rate. (A transition-state analog, by contrast, occupies the active site and behaves competitively.) Competitive inhibition would raise $K_m$; substrate activation and changing [E] do not match an inhibitor added at fixed enzyme.',
         skill: 'Enzyme kinetics',
       },
       {
@@ -429,7 +429,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'Investigators infused glucose to raise plasma glucose stepwise and measured, at each plasma level, the rate ' +
       'of glucose filtered, reabsorbed, and excreted in the urine.\n\n' +
       'At low plasma glucose, essentially all filtered glucose was reabsorbed and none appeared in urine. As plasma ' +
-      'glucose rose past a threshold (around a plasma concentration of 300 mg/dL in this study), glucose began to ' +
+      'glucose rose past a threshold (around a plasma concentration of 200 mg/dL in this study), glucose began to ' +
       'appear in the urine. Above that threshold, the reabsorption rate plateaued at a constant value (the $T_m$), ' +
       'and any additional filtered glucose was excreted. The filtration rate of glucose rose linearly with plasma ' +
       'glucose throughout, because filtration is not saturable in this range.',
@@ -444,11 +444,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       xValues: [100, 200, 300, 400, 500],
       yValues: [125, 250, 375, 500, 625],
       comparisonSeries: [
-        { label: 'Reabsorbed', yValues: [125, 250, 320, 320, 320] },
-        { label: 'Excreted', yValues: [0, 0, 55, 180, 305] },
+        { label: 'Reabsorbed', yValues: [125, 250, 250, 250, 250] },
+        { label: 'Excreted', yValues: [0, 0, 125, 250, 375] },
       ],
       annotations: [
-        { xIndex: 2, label: 'threshold ≈ 300 mg/dL; Tm = 320 mg/min' },
+        { xIndex: 1, label: 'threshold ≈ 200 mg/dL; Tm = 250 mg/min' },
       ],
     },
     questions: [
@@ -469,10 +469,10 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       {
         question:
           'From the data, the transport maximum ($T_m$) for glucose reabsorption is approximately:',
-        options: [ '500 mg/min', '305 mg/min','125 mg/min', '320 mg/min'],
+        options: ['500 mg/min', '375 mg/min', '125 mg/min', '250 mg/min'],
         correctAnswer: 3,
         explanation:
-          'The reabsorption rate climbs and then plateaus at 320 mg/min (at plasma glucose 300, 400, and 500 mg/dL), which is the saturated maximum, the $T_m$. 125 mg/min is reabsorption at the lowest plasma level (not yet maximal). 500 mg/min is the filtered load at 400 mg/dL. 305 mg/min is the excretion rate at 500 mg/dL, not the reabsorption plateau.',
+          'The reabsorption rate climbs and then plateaus at 250 mg/min (at plasma glucose 200 mg/dL and above), which is the saturated maximum, the $T_m$. 125 mg/min is reabsorption at the lowest plasma level (not yet maximal). 500 mg/min is the filtered load at 400 mg/dL. 375 mg/min is the excretion rate at 500 mg/dL, not the reabsorption plateau.',
         skill: 'Data interpretation',
       },
       {
@@ -491,7 +491,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       },
       {
         question:
-          'Glucose begins to appear in the urine once plasma glucose exceeds about 300 mg/dL. The best explanation is that:',
+          'Glucose begins to appear in the urine once plasma glucose exceeds about 200 mg/dL. The best explanation is that:',
         options: [
           "The $\\text{Na}^+/\\text{K}^+$-ATPase shuts off at this level",
           "The glomerulus stops filtering glucose above this level",
@@ -514,7 +514,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 3,
         explanation:
-          'Blocking SGLT reduces the tubule’s capacity to reabsorb filtered glucose, so glucose escapes into the urine even when plasma glucose is normal and well below the usual threshold. Increased reabsorption is the opposite of what the drug does. At 100 mg/dL reabsorption was complete but not maximal (the $T_m$ is 320; far above the 125 mg/min reabsorbed), so blocking the transporters does change things rather than having no effect. Inhibiting reabsorption does not raise glucose filtration.',
+          'Blocking SGLT reduces the tubule’s capacity to reabsorb filtered glucose, so glucose escapes into the urine even when plasma glucose is normal and well below the usual threshold. Increased reabsorption is the opposite of what the drug does. At 100 mg/dL reabsorption was complete but not maximal (the $T_m$ is 250; well above the 125 mg/min reabsorbed), so blocking the transporters does change things rather than having no effect. Inhibiting reabsorption does not raise glucose filtration.',
         skill: 'Mechanism application',
       },
     ],

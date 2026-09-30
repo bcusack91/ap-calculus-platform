@@ -227,7 +227,7 @@ export default function MCATPassageRunner({
   }
 
   // ---------- Resume safety: restore sectioned progress from localStorage ----------
-  const storageKey = sectioned && mode === 'exam' && form ? `mcat-fl-progress-v1:form-${form}` : null
+  const storageKey = sectioned && mode === 'exam' && form ? `mcat-fl-progress-v2:form-${form}` : null
   useEffect(() => {
     if (!storageKey) { setRestored(true); return }
     try {
