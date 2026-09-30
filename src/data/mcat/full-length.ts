@@ -1,5 +1,5 @@
 /**
- * Assembles the two full-length MCAT practice exams from their dedicated,
+ * Assembles the four full-length MCAT practice exams from their dedicated,
  * blueprinted banks (src/data/mcat/full-length/), in real-exam section order,
  * with the discrete (non-passage) questions interspersed among the passages
  * as on the AAMC form.
@@ -22,7 +22,7 @@
 import type { MCATPassage, MCATPassageQuestion, MCATDiscreteQuestion, MCATSection } from './types'
 import { MCAT_SECTION_META, countQuestions } from './types'
 import { buildDiscretesPassage } from './passages/discretes-helper'
-import { FULL_LENGTH_BANKS, type ScienceSection } from './full-length/index'
+import { FULL_LENGTH_BANKS, FULL_LENGTH_FORM_NUMBERS, type FullLengthFormNumber, type ScienceSection } from './full-length/index'
 
 /** Max number of interleaved discrete mini-blocks per science section. */
 const MAX_DISCRETE_BINS = 4
@@ -114,7 +114,7 @@ function interleaveEven<T>(base: T[], inserts: T[]): T[] {
   return out
 }
 
-function assembleScienceSection(section: ScienceSection, form: 1 | 2): { passages: MCATPassage[]; count: number } {
+function assembleScienceSection(section: ScienceSection, form: FullLengthFormNumber): { passages: MCATPassage[]; count: number } {
   const bank = FULL_LENGTH_BANKS[form].science[section]
   const passages = bank.passages.map((p) => declusterPassage(p, form))
   const bins = buildDiscreteBins(section, bank.discretes, form)
@@ -123,13 +123,13 @@ function assembleScienceSection(section: ScienceSection, form: 1 | 2): { passage
 }
 
 export interface MCATFullLength {
-  form: 1 | 2
+  form: FullLengthFormNumber
   passages: MCATPassage[]
   questionCount: number
   sectionCounts: Record<MCATSection, number>
 }
 
-export function buildFullLength(form: 1 | 2): MCATFullLength {
+export function buildFullLength(form: FullLengthFormNumber): MCATFullLength {
   const cp = assembleScienceSection('chem-phys', form)
   const cars = FULL_LENGTH_BANKS[form].cars.map((p) => declusterPassage(p, form))
   const bb = assembleScienceSection('bio-biochem', form)
@@ -143,7 +143,7 @@ export function buildFullLength(form: 1 | 2): MCATFullLength {
   }
 }
 
-export const FULL_LENGTH_FORMS: MCATFullLength[] = [buildFullLength(1), buildFullLength(2)]
+export const FULL_LENGTH_FORMS: MCATFullLength[] = FULL_LENGTH_FORM_NUMBERS.map((f) => buildFullLength(f))
 
 // Backward-compatible exports (form 1).
 export const FULL_LENGTH_PASSAGES: MCATPassage[] = FULL_LENGTH_FORMS[0].passages

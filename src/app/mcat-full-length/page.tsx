@@ -5,13 +5,14 @@ import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
 import { InArticleAd } from '@/components/ad-banner'
 import { FULL_LENGTH_FORMS } from '@/data/mcat/full-length'
+import { FULL_LENGTH_FORM_NUMBERS, type FullLengthFormNumber } from '@/data/mcat/full-length/index'
 import { MCAT_SECTION_ORDER, MCAT_SECTION_META } from '@/data/mcat/types'
 
 /** Break lengths between sections (after S1 / S2 / S3) — mirrors the runner. */
 const BREAKS = [10, 30, 10]
 
 /** localStorage key the runner persists sectioned progress under, per form. */
-const progressKey = (form: 1 | 2) => `mcat-fl-progress-v2:form-${form}`
+const progressKey = (form: FullLengthFormNumber) => `mcat-fl-progress-v2:form-${form}`
 
 /* Saved-progress detection as an external store: localStorage is client-only,
  * so the server snapshot is always "none" and the client snapshot re-reads on
@@ -28,7 +29,7 @@ function subscribeProgress(cb: () => void) {
 }
 function readProgressSnapshot(): string {
   try {
-    return ([1, 2] as const).filter((f) => localStorage.getItem(progressKey(f)) !== null).join(',')
+    return FULL_LENGTH_FORM_NUMBERS.filter((f) => localStorage.getItem(progressKey(f)) !== null).join(',')
   } catch {
     return ''
   }
@@ -37,9 +38,9 @@ const serverProgressSnapshot = () => ''
 
 export default function MCATFullLengthPage() {
   const [started, setStarted] = useState(false)
-  const [form, setForm] = useState<1 | 2>(1)
+  const [form, setForm] = useState<FullLengthFormNumber>(1)
   const inProgressStr = useSyncExternalStore(subscribeProgress, readProgressSnapshot, serverProgressSnapshot)
-  const inProgress = inProgressStr === '' ? [] : (inProgressStr.split(',').map(Number) as (1 | 2)[])
+  const inProgress = inProgressStr === '' ? [] : (inProgressStr.split(',').map(Number) as FullLengthFormNumber[])
   const fl = FULL_LENGTH_FORMS[form - 1]
 
   if (started) {
@@ -103,7 +104,7 @@ export default function MCATFullLengthPage() {
 
         {/* Form selector — two interchangeable full-lengths for retakes */}
         <div className="mb-5 inline-flex rounded-xl border border-gray-200 bg-white p-1 dark:border-gray-700 dark:bg-gray-800" role="group" aria-label="Choose full-length form">
-          {([1, 2] as const).map((f) => (
+          {FULL_LENGTH_FORM_NUMBERS.map((f) => (
             <button
               key={f}
               onClick={() => setForm(f)}
