@@ -1,47 +1,28 @@
 /**
- * Assembles a passage-based full-length MCAT practice exam from the section
- * banks, in real-exam section order, with discrete (non-passage) questions
- * interspersed among the passages — mirroring the AAMC format.
+ * Assembles the two full-length MCAT practice exams from their dedicated,
+ * blueprinted banks (src/data/mcat/full-length/), in real-exam section order,
+ * with the discrete (non-passage) questions interspersed among the passages
+ * as on the AAMC form.
  *
- * Targets the official form: Chem/Phys 59, CARS 54, Bio/Biochem 59, Psych/Soc 59
- * (realized total 231). Each science section is packed to its exact count: whole
- * passages first, then a window of discrete questions fills the remainder.
+ * Each form is curated, not packed: per science section exactly 10 passages
+ * (44 questions) plus 15 discretes = 59; CARS 9 passages = 53; 230 in all,
+ * the official count. Rebuilt 2026-09-29 after a blueprint review found the
+ * old pool-packed forms short on passage length, information passages,
+ * biochemistry and sociology, and one-genre per CARS form. The full-length
+ * banks are separate from the diagnostic / section-practice banks, so nothing
+ * a student saw in a diagnostic reappears here.
  *
- * REDUNDANCY NOTES — measured against the current banks:
- *   chem-phys  25 passages / 135 passage-Q + 8 discretes  (target 59)
- *   bio-biochem 25 / 133 + 9   (target 59)
- *   psych-soc  25 / 132 + 8    (target 59)
- *   cars       76 / 456        (target 53 → ~9 passages)
- *
- * Since the wave-2 expansion (chem-phys-2/bio-biochem-2/psych-soc-2, 15 new
- * passages per science section) each bank holds ~2.3 forms' worth of passage
- * questions, so Form 1 and Form 2 draw genuinely different passage SETS via
- * orderPassagesForForm. The question-level differentiation below still breaks
- * up within-test redundancy:
- *   1. orderPassagesForForm — deterministic per-form passage SEQUENCE (same set,
- *      different order), so a retake doesn't feel identical.
- *   2. declusterPassage / spreadSkills — reorder a passage's questions to avoid
- *      back-to-back same-skill items, but ONLY when the passage actually has a
- *      skill collision (so CARS reading-order passages keep their authored order).
- *   3. a rotated discrete WINDOW + buildDiscreteBins — the 8-question discrete
- *      "wall" is split into up to MAX_DISCRETE_BINS skill-balanced mini-blocks and
- *      interleaved among the passages (the psych-soc identify-the-concept wall
- *      drops from a same-skill run of 4 to 3). The window rotates per form, which
- *      changes the drawn discretes for chem-phys/bio-biochem; for psych-soc the
- *      window (8) equals the pool (8) so it is order-only.
- * All ordering is a pure function of the form number via an FNV-1a hash — no
- * Math.random / Date.now — so each form is fully reproducible.
- *
- * Two CONTENT defects are not assembly-fixable and need a retag/rebalance pass:
- *   - cp-orgo-01 has 4 of 5 questions tagged 'Extraction' (residual run floor 3);
- *   - the psych-soc discrete pool is 7 of 8 'identify-the-concept'.
+ * What the assembler still does per form (all deterministic — a pure function
+ * of the form number via an FNV-1a hash, no Math.random / Date.now):
+ *   1. declusterPassage / spreadSkills — reorder a passage's questions only when
+ *      it has back-to-back same-skill items (CARS reading order is preserved).
+ *   2. buildDiscreteBins — the 15 discretes become up to MAX_DISCRETE_BINS
+ *      skill-balanced mini-blocks interleaved evenly among the passages.
  */
 import type { MCATPassage, MCATPassageQuestion, MCATDiscreteQuestion, MCATSection } from './types'
 import { MCAT_SECTION_META, countQuestions } from './types'
-import { CARS_PASSAGES, SECTION_PASSAGES, SECTION_DISCRETES } from './passages'
 import { buildDiscretesPassage } from './passages/discretes-helper'
-
-type ScienceSection = Exclude<MCATSection, 'cars'>
+import { FULL_LENGTH_BANKS, type ScienceSection } from './full-length/index'
 
 /** Max number of interleaved discrete mini-blocks per science section. */
 const MAX_DISCRETE_BINS = 4
@@ -72,10 +53,8 @@ function maxSkillFreq(questions: MCATPassageQuestion[]): number {
 /**
  * Reorder questions to minimize adjacent same-skill items: greedily emit the
  * skill-group with the most remaining items that isn't the one just placed
- * (forced to repeat only when a single skill is all that's left). This reaches
- * the theoretical-minimum run. Deterministic — the form only varies tie-breaks,
- * so it never worsens the run. Never drops or duplicates a question. Unskilled
- * items become singleton groups so they freely separate same-skill runs.
+ * (forced to repeat only when a single skill is all that's left). Deterministic
+ * — the form only varies tie-breaks. Never drops or duplicates a question.
  */
 function spreadSkills<T extends MCATPassageQuestion>(questions: T[], form: number): T[] {
   const groups = new Map<string, T[]>()
@@ -88,7 +67,6 @@ function spreadSkills<T extends MCATPassageQuestion>(questions: T[], form: numbe
   const buckets = [...groups.entries()].map(([key, items]) => ({ key, items: [...items] }))
   const bySize = (a: { key: string; items: T[] }, b: { key: string; items: T[] }) =>
     b.items.length - a.items.length || stableHash(a.key, form) - stableHash(b.key, form)
-
   const out: T[] = []
   let lastKey: string | null = null
   while (out.length < questions.length) {
@@ -107,26 +85,13 @@ function declusterPassage(p: MCATPassage, form: number): MCATPassage {
   return maxSkillFreq(p.questions) <= 1 ? p : { ...p, questions: spreadSkills(p.questions, form) }
 }
 
-/** Deterministic per-form ordering of a passage list (stable hash on id+form). */
-function orderPassagesForForm(passages: MCATPassage[], form: number): MCATPassage[] {
-  return [...passages].sort((a, b) => stableHash(a.id, form) - stableHash(b.id, form))
-}
-
-/** Take `size` discretes from `pool` starting at a form-dependent offset, so the
- *  two forms draw different items wherever the pool is larger than the window. */
-function rotateWindow<T>(pool: T[], form: number, size: number): T[] {
-  if (pool.length === 0 || size <= 0) return []
-  const off = stableHash('discretes', form) % pool.length
-  return [...pool.slice(off), ...pool.slice(0, off)].slice(0, Math.min(size, pool.length))
-}
-
-/** Split a discrete window into up to MAX_DISCRETE_BINS skill-balanced mini-blocks
+/** Split the discretes into up to MAX_DISCRETE_BINS skill-balanced mini-blocks
  *  (round-robin over a skill-spread order so same-skill items land in different
  *  bins), each a synthetic passage with a UNIQUE id suffix. */
-function buildDiscreteBins(section: ScienceSection, window: MCATDiscreteQuestion[], form: number): MCATPassage[] {
-  if (!window.length) return []
-  const binCount = Math.min(MAX_DISCRETE_BINS, window.length)
-  const spread = spreadSkills(window, form)
+function buildDiscreteBins(section: ScienceSection, discretes: MCATDiscreteQuestion[], form: number): MCATPassage[] {
+  if (!discretes.length) return []
+  const binCount = Math.min(MAX_DISCRETE_BINS, discretes.length)
+  const spread = spreadSkills(discretes, form)
   const bins: MCATDiscreteQuestion[][] = Array.from({ length: binCount }, () => [])
   spread.forEach((q, i) => bins[i % binCount].push(q))
   const nonEmpty = bins.filter((b) => b.length)
@@ -149,90 +114,12 @@ function interleaveEven<T>(base: T[], inserts: T[]): T[] {
   return out
 }
 
-/**
- * Real-exam split for a 59-question science section: about 10 passages carrying
- * ~44 questions, plus ~15 discrete questions (roughly 75/25). The assembler
- * used to pack whole passages up to the full 59, which left only 2–4 discretes.
- */
-const SCIENCE_PASSAGE_QUESTION_TARGET = 44
-/** Stop adding passages once within this many questions of the target. */
-const PASSAGE_TARGET_SLACK = 2
-
-/**
- * Split a pool into two DISJOINT halves by a fixed (form-independent) order, so
- * Form 1 and Form 2 never share an item. Returns this form's half.
- */
-function formHalf<T extends { id: string }>(pool: T[], form: number): T[] {
-  const fixed = [...pool].sort((a, b) => stableHash(a.id, 0) - stableHash(b.id, 0))
-  return fixed.filter((_, i) => i % 2 === form - 1)
-}
-
-/**
- * Pack a science section to its official count with the real-exam balance:
- * whole passages from this form's half of the bank until ~44 passage questions,
- * de-clustered and ordered per form, then fill the rest of the 59 with this
- * form's half of the discrete pool, binned and interleaved among the passages.
- * If this form's discrete half is too small, it tops up from the full pool
- * (rotated), so the section never comes up short.
- */
-function packScienceSection(section: ScienceSection, form: number): { passages: MCATPassage[]; count: number } {
-  const target = MCAT_SECTION_META[section].questions
-  const chosen: MCATPassage[] = []
-  let count = 0
-  const pool = orderPassagesForForm(formHalf(SECTION_PASSAGES[section], form), form)
-  const maxPassageQs = SCIENCE_PASSAGE_QUESTION_TARGET + PASSAGE_TARGET_SLACK
-  const picked: MCATPassage[] = []
-  for (const p of pool) {
-    if (count >= SCIENCE_PASSAGE_QUESTION_TARGET) break
-    if (count + p.questions.length <= maxPassageQs) {
-      picked.push(p)
-      count += p.questions.length
-    }
-  }
-  // Passages hold 5–6 questions, so greedy packing can stall at 43. Swap a
-  // shorter chosen passage for a longer unused one until the section reaches
-  // the target: 44+ passage questions keeps the discrete remainder at 15 or
-  // fewer, within this form's disjoint half of the discrete pool.
-  for (const unused of pool.filter((p) => !picked.includes(p))) {
-    if (count >= SCIENCE_PASSAGE_QUESTION_TARGET) break
-    const swapIndex = picked.findIndex((p) => {
-      const next = count - p.questions.length + unused.questions.length
-      return next > count && next <= maxPassageQs
-    })
-    if (swapIndex >= 0) {
-      count += unused.questions.length - picked[swapIndex].questions.length
-      picked[swapIndex] = unused
-    }
-  }
-  for (const p of picked) chosen.push(declusterPassage(p, form))
-  let bins: MCATPassage[] = []
-  const remainder = target - count
-  if (remainder > 0) {
-    const half = formHalf(SECTION_DISCRETES[section], form)
-    const window =
-      half.length >= remainder
-        ? rotateWindow(half, form, remainder)
-        : rotateWindow(SECTION_DISCRETES[section], form, remainder)
-    bins = buildDiscreteBins(section, window, form)
-    count += window.length
-  }
-  return { passages: interleaveEven(chosen, bins), count }
-}
-
-/** CARS has no discretes: take whole passages (de-clustered, per-form order)
- *  until the target is met or just passed (the last passage can push slightly
- *  over the 53 target). The per-form order varies which 9-of-12 are chosen. */
-function packCars(form: number): { passages: MCATPassage[]; count: number } {
-  const target = MCAT_SECTION_META.cars.questions
-  const out: MCATPassage[] = []
-  let count = 0
-  // Disjoint halves of the CARS bank, so the two forms share no passage.
-  for (const p of orderPassagesForForm(formHalf(CARS_PASSAGES, form), form)) {
-    if (count >= target) break
-    out.push(declusterPassage(p, form))
-    count += p.questions.length
-  }
-  return { passages: out, count }
+function assembleScienceSection(section: ScienceSection, form: 1 | 2): { passages: MCATPassage[]; count: number } {
+  const bank = FULL_LENGTH_BANKS[form].science[section]
+  const passages = bank.passages.map((p) => declusterPassage(p, form))
+  const bins = buildDiscreteBins(section, bank.discretes, form)
+  const all = interleaveEven(passages, bins)
+  return { passages: all, count: countQuestions(all) }
 }
 
 export interface MCATFullLength {
@@ -242,24 +129,17 @@ export interface MCATFullLength {
   sectionCounts: Record<MCATSection, number>
 }
 
-/**
- * Two full-length forms. The science passage SET is identical across forms (see
- * the header — irreducible with current bank sizes), but each form sequences its
- * passages differently, de-clusters same-skill questions, and draws a rotated,
- * interleaved discrete window, so a retake is meaningfully re-paced rather than a
- * verbatim repeat. CARS additionally varies which 9 of its 12 passages appear.
- */
 export function buildFullLength(form: 1 | 2): MCATFullLength {
-  const cp = packScienceSection('chem-phys', form)
-  const cars = packCars(form)
-  const bb = packScienceSection('bio-biochem', form)
-  const ps = packScienceSection('psych-soc', form)
-  const passages = [...cp.passages, ...cars.passages, ...bb.passages, ...ps.passages]
+  const cp = assembleScienceSection('chem-phys', form)
+  const cars = FULL_LENGTH_BANKS[form].cars.map((p) => declusterPassage(p, form))
+  const bb = assembleScienceSection('bio-biochem', form)
+  const ps = assembleScienceSection('psych-soc', form)
+  const passages = [...cp.passages, ...cars, ...bb.passages, ...ps.passages]
   return {
     form,
     passages,
     questionCount: countQuestions(passages),
-    sectionCounts: { 'chem-phys': cp.count, cars: cars.count, 'bio-biochem': bb.count, 'psych-soc': ps.count },
+    sectionCounts: { 'chem-phys': cp.count, cars: countQuestions(cars), 'bio-biochem': bb.count, 'psych-soc': ps.count },
   }
 }
 
