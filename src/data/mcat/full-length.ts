@@ -1,5 +1,5 @@
 /**
- * Assembles the four full-length MCAT practice exams from their dedicated,
+ * Assembles the six full-length MCAT practice exams from their dedicated,
  * blueprinted banks (src/data/mcat/full-length/), in real-exam section order,
  * with the discrete (non-passage) questions interspersed among the passages
  * as on the AAMC form.

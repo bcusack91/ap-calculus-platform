@@ -1,5 +1,5 @@
 /**
- * The two full-length forms match the AAMC blueprint (rebuilt 2026-09-30).
+ * The full-length forms match the AAMC blueprint (rebuilt 2026-09-30).
  *
  * The 2026-09-29 review found the old pool-packed forms ran passages at
  * ~200-270 words, 8-9 passages per section, nearly all experiment-based, one
@@ -15,7 +15,7 @@ const words = (t: string) => t.replace(/\$[^$]*\$/g, ' ').split(/\s+/).filter(Bo
 const count = (ps: MCATPassage[]) => ps.reduce((n, p) => n + p.questions.length, 0)
 const SCIENCE = ['chem-phys', 'bio-biochem', 'psych-soc'] as const
 
-describe.each([1, 2, 3, 4] as const)('full-length form %i', (form) => {
+describe.each([1, 2, 3, 4, 5, 6] as const)('full-length form %i', (form) => {
   const bank = FULL_LENGTH_BANKS[form]
 
   it('has the official section counts: 59 / 53 / 59 / 59 = 230', () => {
@@ -82,20 +82,20 @@ describe.each([1, 2, 3, 4] as const)('full-length form %i', (form) => {
   })
 })
 
-describe('the four forms', () => {
+describe('the six forms', () => {
   it('share no passage id and no discrete id', () => {
-    const ids = (form: 1 | 2 | 3 | 4) => {
+    const ids = (form: 1 | 2 | 3 | 4 | 5 | 6) => {
       const b = FULL_LENGTH_BANKS[form]
       return [...SCIENCE.flatMap((s) => [...b.science[s].passages.map((p) => p.id), ...b.science[s].discretes.map((d) => d.id)]), ...b.cars.map((p) => p.id)]
     }
-    const all = ([1, 2, 3, 4] as const).flatMap(ids)
+    const all = ([1, 2, 3, 4, 5, 6] as const).flatMap(ids)
     expect(new Set(all).size, 'duplicate ids across forms').toBe(all.length)
   })
 
   it('never reuse a diagnostic or section-practice passage', async () => {
     const { ALL_MCAT_PASSAGES } = await import('@/data/mcat/passages')
     const shared = new Set(ALL_MCAT_PASSAGES.map((p) => p.id))
-    for (const form of [1, 2, 3, 4] as const) {
+    for (const form of [1, 2, 3, 4, 5, 6] as const) {
       for (const p of FULL_LENGTH_FORMS[form - 1].passages) expect(shared.has(p.id), `${p.id} also in shared bank`).toBe(false)
     }
   })

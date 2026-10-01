@@ -102,8 +102,8 @@ export default function MCATFullLengthPage() {
           </div>
         )}
 
-        {/* Form selector — two interchangeable full-lengths for retakes */}
-        <div className="mb-5 inline-flex rounded-xl border border-gray-200 bg-white p-1 dark:border-gray-700 dark:bg-gray-800" role="group" aria-label="Choose full-length form">
+        {/* Form selector — interchangeable full-lengths for retakes; wraps on narrow screens */}
+        <div className="mb-5 inline-flex max-w-full flex-wrap rounded-xl border border-gray-200 bg-white p-1 dark:border-gray-700 dark:bg-gray-800" role="group" aria-label="Choose full-length form">
           {FULL_LENGTH_FORM_NUMBERS.map((f) => (
             <button
               key={f}

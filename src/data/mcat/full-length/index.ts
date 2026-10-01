@@ -1,6 +1,6 @@
 /**
- * The four full-length forms' dedicated banks (Forms 1-2 rebuilt 2026-09-29,
- * Forms 3-4 added 2026-09-30, all to the AAMC blueprint). Each form is an
+ * The six full-length forms' dedicated banks (Forms 1-2 rebuilt 2026-09-29,
+ * Forms 3-6 added 2026-09-30, all to the AAMC blueprint). Each form is an
  * explicit, curated set: per science section 10 passages (44 questions) + 15
  * discretes = 59; CARS 9 passages = 53; 230 questions. These banks are used
  * ONLY by the full-length exam, so a student's diagnostics and section
@@ -47,10 +47,26 @@ import { FL4_PSYCH_SOC_A_PASSAGES, FL4_PSYCH_SOC_A_DISCRETES } from './fl4-psych
 import { FL4_PSYCH_SOC_B_PASSAGES, FL4_PSYCH_SOC_B_DISCRETES } from './fl4-psych-soc-b'
 import { FL4_CARS_A_PASSAGES } from './fl4-cars-a'
 import { FL4_CARS_B_PASSAGES } from './fl4-cars-b'
+import { FL5_CHEM_PHYS_A_PASSAGES, FL5_CHEM_PHYS_A_DISCRETES } from './fl5-chem-phys-a'
+import { FL5_CHEM_PHYS_B_PASSAGES, FL5_CHEM_PHYS_B_DISCRETES } from './fl5-chem-phys-b'
+import { FL5_BIO_BIOCHEM_A_PASSAGES, FL5_BIO_BIOCHEM_A_DISCRETES } from './fl5-bio-biochem-a'
+import { FL5_BIO_BIOCHEM_B_PASSAGES, FL5_BIO_BIOCHEM_B_DISCRETES } from './fl5-bio-biochem-b'
+import { FL5_PSYCH_SOC_A_PASSAGES, FL5_PSYCH_SOC_A_DISCRETES } from './fl5-psych-soc-a'
+import { FL5_PSYCH_SOC_B_PASSAGES, FL5_PSYCH_SOC_B_DISCRETES } from './fl5-psych-soc-b'
+import { FL5_CARS_A_PASSAGES } from './fl5-cars-a'
+import { FL5_CARS_B_PASSAGES } from './fl5-cars-b'
+import { FL6_CHEM_PHYS_A_PASSAGES, FL6_CHEM_PHYS_A_DISCRETES } from './fl6-chem-phys-a'
+import { FL6_CHEM_PHYS_B_PASSAGES, FL6_CHEM_PHYS_B_DISCRETES } from './fl6-chem-phys-b'
+import { FL6_BIO_BIOCHEM_A_PASSAGES, FL6_BIO_BIOCHEM_A_DISCRETES } from './fl6-bio-biochem-a'
+import { FL6_BIO_BIOCHEM_B_PASSAGES, FL6_BIO_BIOCHEM_B_DISCRETES } from './fl6-bio-biochem-b'
+import { FL6_PSYCH_SOC_A_PASSAGES, FL6_PSYCH_SOC_A_DISCRETES } from './fl6-psych-soc-a'
+import { FL6_PSYCH_SOC_B_PASSAGES, FL6_PSYCH_SOC_B_DISCRETES } from './fl6-psych-soc-b'
+import { FL6_CARS_A_PASSAGES } from './fl6-cars-a'
+import { FL6_CARS_B_PASSAGES } from './fl6-cars-b'
 
 export type ScienceSection = Exclude<MCATSection, 'cars'>
-export type FullLengthFormNumber = 1 | 2 | 3 | 4
-export const FULL_LENGTH_FORM_NUMBERS: readonly FullLengthFormNumber[] = [1, 2, 3, 4]
+export type FullLengthFormNumber = 1 | 2 | 3 | 4 | 5 | 6
+export const FULL_LENGTH_FORM_NUMBERS: readonly FullLengthFormNumber[] = [1, 2, 3, 4, 5, 6]
 
 export interface FullLengthFormBank {
   form: FullLengthFormNumber
@@ -97,5 +113,23 @@ export const FULL_LENGTH_BANKS: Record<FullLengthFormNumber, FullLengthFormBank>
       'psych-soc': section({ passages: FL4_PSYCH_SOC_A_PASSAGES, discretes: FL4_PSYCH_SOC_A_DISCRETES }, { passages: FL4_PSYCH_SOC_B_PASSAGES, discretes: FL4_PSYCH_SOC_B_DISCRETES }),
     },
     cars: [...FL4_CARS_A_PASSAGES, ...FL4_CARS_B_PASSAGES],
+  },
+  5: {
+    form: 5,
+    science: {
+      'chem-phys': section({ passages: FL5_CHEM_PHYS_A_PASSAGES, discretes: FL5_CHEM_PHYS_A_DISCRETES }, { passages: FL5_CHEM_PHYS_B_PASSAGES, discretes: FL5_CHEM_PHYS_B_DISCRETES }),
+      'bio-biochem': section({ passages: FL5_BIO_BIOCHEM_A_PASSAGES, discretes: FL5_BIO_BIOCHEM_A_DISCRETES }, { passages: FL5_BIO_BIOCHEM_B_PASSAGES, discretes: FL5_BIO_BIOCHEM_B_DISCRETES }),
+      'psych-soc': section({ passages: FL5_PSYCH_SOC_A_PASSAGES, discretes: FL5_PSYCH_SOC_A_DISCRETES }, { passages: FL5_PSYCH_SOC_B_PASSAGES, discretes: FL5_PSYCH_SOC_B_DISCRETES }),
+    },
+    cars: [...FL5_CARS_A_PASSAGES, ...FL5_CARS_B_PASSAGES],
+  },
+  6: {
+    form: 6,
+    science: {
+      'chem-phys': section({ passages: FL6_CHEM_PHYS_A_PASSAGES, discretes: FL6_CHEM_PHYS_A_DISCRETES }, { passages: FL6_CHEM_PHYS_B_PASSAGES, discretes: FL6_CHEM_PHYS_B_DISCRETES }),
+      'bio-biochem': section({ passages: FL6_BIO_BIOCHEM_A_PASSAGES, discretes: FL6_BIO_BIOCHEM_A_DISCRETES }, { passages: FL6_BIO_BIOCHEM_B_PASSAGES, discretes: FL6_BIO_BIOCHEM_B_DISCRETES }),
+      'psych-soc': section({ passages: FL6_PSYCH_SOC_A_PASSAGES, discretes: FL6_PSYCH_SOC_A_DISCRETES }, { passages: FL6_PSYCH_SOC_B_PASSAGES, discretes: FL6_PSYCH_SOC_B_DISCRETES }),
+    },
+    cars: [...FL6_CARS_A_PASSAGES, ...FL6_CARS_B_PASSAGES],
   },
 }
