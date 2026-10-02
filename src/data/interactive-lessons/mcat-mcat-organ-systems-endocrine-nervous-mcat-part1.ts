@@ -26,10 +26,14 @@ The nervous system is **fast, wired, and brief** (milliseconds, point-to-point);
 
 ### Second-Messenger Cascades (Peptide Playbook)
 
-- **Gs-protein GPCR** → adenylyl cyclase → **cAMP** → protein kinase A (glucagon, epinephrine at beta receptors, ADH-V2, TSH, LH). Gi inhibits the same cascade.
+- **Gs-protein GPCR** → adenylyl cyclase → **cAMP** → protein kinase A (glucagon, epinephrine at beta receptors, ADH at kidney V2 receptors, TSH, LH). Gi inhibits the same cascade.
 - **Gq GPCR** → phospholipase C → **IP3 + DAG** → Ca$^{2+}$ release + PKC (epinephrine at alpha-1, GnRH, oxytocin).
 - **Receptor tyrosine kinase** → phosphorylation cascades (insulin, growth factors).
 - Each enzymatic step multiplies the signal — **amplification** is why nanomolar hormones move whole organs.
+
+<!-- yield:low -->
+- Vascular V1 receptors are Gq-coupled (vasoconstriction).
+<!-- /yield -->
 
 ### The Hypothalamic–Pituitary Command Structure
 
@@ -55,20 +59,23 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
         questions: [
           {
             question: `A hormone's effect on its target cell appears within seconds and is abolished when adenylyl cyclase is blocked. Which hormone-receptor pairing fits best?`,
-            options: [`Cortisol acting through a nuclear receptor`, `Glucagon acting through a Gs-coupled receptor`, `Insulin acting through a receptor tyrosine kinase`, `Epinephrine acting through a Gq-coupled alpha-1 receptor`],
+            options: [`Cortisol acting through an intracellular steroid receptor`, `Glucagon acting through a Gs-coupled receptor`, `Insulin acting through a receptor tyrosine kinase`, `Epinephrine acting through a Gq-coupled alpha-1 receptor`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Gs-coupled receptors activate adenylyl cyclase to make cAMP, and glucagon on hepatocytes is the archetype — its enzymatic steps explain both the speed and the amplification. Insulin also binds a surface receptor, but its tyrosine kinase signals through phosphorylation cascades, not cAMP. Epinephrine at alpha-1 receptors acts in seconds too, yet through Gq, phospholipase C, IP3 and DAG. Cortisol changes transcription over hours, not seconds.`
           },
           {
             question: `Unlike anterior pituitary hormones, the hormones released from the posterior pituitary are:`,
             options: [`Steroids synthesized from cholesterol within the pituitary`, `Governed by releasing factors in the hypophyseal portal blood`, `Tropic hormones that act mainly on other endocrine glands`, `Made in hypothalamic neurons and shipped down axons for release`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The posterior pituitary is neural tissue — hypothalamic neurons make ADH and oxytocin in their cell bodies and ship them down axons for storage and release. The PORTAL system and releasing hormones govern the ANTERIOR pituitary, a genuine gland. Both posterior hormones are peptides, and both act on final targets (kidney, uterus/breast) rather than on other glands.`
           },
           {
             question: `A woman starting oral estrogen makes more thyroxine-binding globulin. Weeks later her total T4 is high, but her free T4 and TSH are normal and she has no hyperthyroid symptoms. The best explanation is:`,
             options: [`Only unbound T4 acts on target tissues and feeds back on the pituitary`, `Bound T4 is converted to inactive reverse T3 before reaching tissues`, `Target cells downregulate their nuclear receptors to offset excess T4`, `The kidneys clear the extra T4 before it can reach target tissues`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Carrier-bound hormone is a reservoir: only the small free fraction enters cells, binds receptors, and is sensed by the hypothalamus and pituitary. More binding globulin briefly lowers free T4, TSH rises until the thyroid restores free T4 to normal, and total T4 stays high with no change in hormone action. Bound T4 is not diverted to reverse T3, receptor downregulation would not explain a normal free T4 and TSH, and T4 is protein-bound rather than rapidly cleared by the kidney.`
           }
         ]
@@ -122,7 +129,11 @@ Examples: TRH → TSH → thyroid → T3/T4; CRH → ACTH → adrenal cortex →
 - Nervous = fast/wired/brief; endocrine = slow/broadcast/durable; the hypothalamus bridges them.
 - Peptides: surface receptors, second messengers (cAMP, IP3/DAG, RTK), fast, stored in vesicles. Steroids: cholesterol-derived, carrier-bound, nuclear receptors, transcription, slow and lasting. Tyrosine derivatives split: epinephrine acts peptide-like, thyroid hormone steroid-like.
 - Posterior pituitary releases hypothalamus-made ADH/oxytocin; anterior pituitary (portal-controlled) makes FLAT PEG — FSH, LH, ACTH, TSH tropic; prolactin, endorphins, GH direct.
-- Three-tier axes with long-loop negative feedback set hormone levels; exogenous hormone suppresses the whole axis and atrophies the gland; LH surge and oxytocin are the positive-feedback exceptions.`
+- Three-tier axes with long-loop negative feedback set hormone levels; exogenous hormone suppresses the whole axis and atrophies the gland; LH surge and oxytocin are the positive-feedback exceptions.
+
+<!-- yield:low -->
+- Low-yield extras: vascular V1 receptors are Gq-coupled (vasoconstriction)
+<!-- /yield -->`
     }
   ]
 };

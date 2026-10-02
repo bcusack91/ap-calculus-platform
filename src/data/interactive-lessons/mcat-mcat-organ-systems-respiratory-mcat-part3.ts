@@ -10,15 +10,23 @@ export const mcatRespSubPart3Data = {
 
 ### The Respiratory Control Center
 
-- Rhythm is generated in the **medulla oblongata** (dorsal and ventral respiratory groups); pontine centers fine-tune the pattern. Breathing is automatic but can be voluntarily overridden (cortex) — up to the point where chemoreceptor drive wins (you cannot hold your breath to death).
-- Motor output travels via the **phrenic nerve** (C3–C5) to the diaphragm.
+- Rhythm is generated in the **medulla oblongata**; pontine centers fine-tune the pattern. Breathing is automatic but can be voluntarily overridden (cortex) — up to the point where chemoreceptor drive wins (you cannot hold your breath to death).
+- Motor output travels via the **phrenic nerve** to the diaphragm.
+
+<!-- yield:low -->
+- The medullary rhythm generators are the dorsal and ventral respiratory groups; the phrenic nerve arises from spinal roots C3–C5.
+<!-- /yield -->
 
 ### Chemoreceptors — CO2 Is the Boss
 
 | Receptor | Location | Senses | Notes |
 |----------|----------|--------|-------|
 | **Central** | Medulla | H$^+$ in brain CSF, generated from CO2 that crosses the blood–brain barrier | **Cannot sense O2**; provides the dominant minute-to-minute drive |
-| **Peripheral** | Carotid bodies (CN IX), aortic bodies (CN X) | Low arterial $P_{O_2}$ (significant only below ~60 mmHg), plus ↑CO2 and ↑H$^+$ | The ONLY sensors of hypoxemia; also respond to arterial pH directly |
+| **Peripheral** | Carotid bodies, aortic bodies | Low arterial $P_{O_2}$ (significant only below ~60 mmHg), plus ↑CO2 and ↑H$^+$ | The ONLY sensors of hypoxemia; also respond to arterial pH directly |
+
+<!-- yield:low -->
+- The carotid bodies signal via the glossopharyngeal nerve (CN IX), the aortic bodies via the vagus (CN X).
+<!-- /yield -->
 
 - Blood H$^+$ crosses the blood–brain barrier poorly, but CO2 crosses freely and is hydrated to H$^+$ in the CSF — so central chemoreceptors read arterial CO2 with an H$^+$ electrode.
 - Normal drive: a rise in arterial $P_{CO_2}$ of just a few mmHg sharply increases ventilation. Hypoxic drive matters at altitude and in chronic CO2 retainers.
@@ -39,7 +47,12 @@ Because $CO_2 + H_2O \\rightleftharpoons H^+ + HCO_3^-$, ventilation directly co
 
 Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilation / capillary perfusion (ideal ≈ 0.8 overall).
 
-- **Upright lung:** gravity sends more blood AND more ventilation to the base, but perfusion increases faster → **V/Q is high at the apex (~3), low at the base (~0.6)**.
+- **Upright lung:** gravity sends more blood AND more ventilation to the base, but perfusion increases faster → **V/Q is high at the apex, low at the base**.
+
+<!-- yield:low -->
+- Typical upright values: V/Q about 3 at the apex and about 0.6 at the base.
+<!-- /yield -->
+
 - **Shunt** (V/Q → 0): perfused but not ventilated (mucus plug, pneumonia fluid). Blood passes unoxygenated; giving 100% O2 helps little because the gas never reaches those alveoli.
 - **Dead space** (V/Q → ∞): ventilated but not perfused (pulmonary embolism). Air moves but no blood collects it.
 
@@ -47,7 +60,11 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
 
 - Systemic arterioles **dilate** in hypoxia (feed the starving tissue).
 - Pulmonary arterioles **constrict** where alveolar O2 is low — diverting blood AWAY from poorly ventilated alveoli toward well-ventilated ones. This is self-correction of V/Q mismatch.
-- Cost: global alveolar hypoxia (altitude, COPD) constricts the whole pulmonary tree → pulmonary hypertension → right-ventricular strain (cor pulmonale).`
+- Cost: global alveolar hypoxia (altitude, COPD) constricts the whole pulmonary tree → pulmonary hypertension → right-ventricular strain.
+
+<!-- yield:low -->
+- Right-heart failure caused by lung disease is called cor pulmonale.
+<!-- /yield -->`
     },
     {
       id: 'rsp3-quiz1',
@@ -57,20 +74,23 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
         questions: [
           {
             question: `An anxious student hyperventilates for several minutes and begins to feel lightheaded with tingling fingers. Their arterial blood shows:`,
-            options: [`Low CO2 and elevated pH (respiratory alkalosis)`, `High CO2 and low pH (respiratory acidosis)`, `Low O2 and low pH (hypoxemic acidosis)`, `Normal gases — the symptoms are purely psychological`],
+            options: [`Low CO2 and elevated pH (acute respiratory alkalosis)`, `High CO2 and low pH (respiratory acidosis)`, `Low O2 and low pH (hypoxemic acidosis)`, `Normal gases — the symptoms are purely psychological`],
             correctAnswer: 0,
-            explanation: `Ventilation exceeding metabolic CO2 production blows off CO2; by $CO_2 + H_2O \\rightleftharpoons H^+ + HCO_3^-$, losing CO2 pulls the equilibrium left and H$^+$ falls — respiratory alkalosis. Alkalosis increases calcium binding to albumin, producing the classic tingling; cerebral vasoconstriction from low CO2 causes the lightheadedness. O2 was never the problem — the plateau of the Hb curve keeps saturation near-maximal.`
+            yield: 'ULTRA_HIGH',
+            explanation: `Ventilation exceeding metabolic CO2 production blows off CO2; by $CO_2 + H_2O \\rightleftharpoons H^+ + HCO_3^-$, losing CO2 pulls the equilibrium left and H$^+$ falls — respiratory alkalosis, and an ACUTE one: minutes are far too short for renal compensation, so bicarbonate is still near normal. Alkalosis increases calcium binding to albumin, producing the classic tingling; cerebral vasoconstriction from low CO2 causes the lightheadedness. O2 was never the problem — the plateau of the Hb curve keeps saturation near-maximal.`
           },
           {
             question: `A patient's central chemoreceptors are the dominant regulators of resting ventilation. These receptors directly detect:`,
             options: [`Falling arterial oxygen partial pressure`, `Hydrogen ions in CSF, produced from diffused CO2`, `Arterial hydrogen ions crossing into the medulla`, `Stretch of the carotid sinus and aortic arch walls`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Central chemoreceptors sense CSF pH. Charged H$^+$ crosses the blood-brain barrier poorly, but neutral CO2 diffuses freely and is hydrated (carbonic anhydrase) to carbonic acid in the CSF — so CSF H$^+$ is effectively a CO2 readout. They are blind to O2 (falling arterial oxygen is sensed by the peripheral carotid/aortic bodies), and stretch of the carotid sinus and aortic arch is sensed by BAROreceptors, blood-pressure sensors.`
           },
           {
             question: `A pulmonary embolus completely blocks blood flow to a lung region that remains ventilated. That region now represents:`,
             options: [`A shunt, with V/Q approaching zero`, `Normal V/Q matching maintained by bronchial circulation`, `Alveolar dead space, with V/Q approaching infinity`, `A region of increased gas exchange due to unopposed ventilation`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Ventilation without perfusion is wasted air — dead space (V/Q → ∞ as Q → 0). No blood arrives to collect the O2, so exchange in that region ceases. A shunt is the mirror image (perfusion without ventilation, V/Q → 0), the trap answer here. Local bronchoconstriction and hypocapnia partially redirect air away, mirroring hypoxic vasoconstriction on the blood side.`
           }
         ]
@@ -126,7 +146,11 @@ Gas exchange needs air AND blood at the same alveolus. $V/Q$ = alveolar ventilat
 - Medulla generates rhythm (phrenic nerve → diaphragm); CO2 (read as CSF H⁺ by central chemoreceptors) is the dominant drive; only peripheral carotid/aortic bodies sense low O2 (< ~60 mmHg).
 - Hypoventilation → respiratory acidosis; hyperventilation → respiratory alkalosis; ventilation compensates metabolic disorders (Kussmaul in DKA) but never overshoots.
 - V/Q ≈ 0.8 ideally; apex high V/Q, base low V/Q upright. Shunt = perfused/unventilated (O2-refractory hypoxemia); dead space = ventilated/unperfused (embolism).
-- Pulmonary vessels CONSTRICT in hypoxia (opposite of systemic) to self-correct V/Q; global hypoxia → pulmonary hypertension → right-heart strain.`
+- Pulmonary vessels CONSTRICT in hypoxia (opposite of systemic) to self-correct V/Q; global hypoxia → pulmonary hypertension → right-heart strain.
+
+<!-- yield:low -->
+- Low-yield extras: the dorsal and ventral respiratory groups (medullary rhythm generators); phrenic nerve roots C3–C5; carotid bodies on CN IX, aortic bodies on CN X; typical V/Q values of ~3 at the apex and ~0.6 at the base; the term cor pulmonale for lung-driven right-heart failure.
+<!-- /yield -->`
     }
   ]
 };

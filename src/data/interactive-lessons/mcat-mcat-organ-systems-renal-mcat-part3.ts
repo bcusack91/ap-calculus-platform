@@ -58,18 +58,21 @@ The lungs adjust CO2 in minutes; the kidneys adjust HCO3$^-$ over days but can f
             question: `A patient produces 10 L/day of very dilute urine. Water deprivation does not concentrate the urine, but injected ADH analog does. The diagnosis is:`,
             options: [`Nephrogenic diabetes insipidus — kidney unresponsive to ADH`, `Central diabetes insipidus — inadequate pituitary ADH release`, `Diabetes mellitus — osmotic diuresis from heavy glucosuria`, `Primary polydipsia — compulsive water drinking, intact ADH`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Failure to concentrate despite dehydration shows the ADH SYSTEM is broken (dehydration should maximize ADH). Response to exogenous ADH localizes the lesion upstream: the kidney works, the hormone was missing — CENTRAL DI. Nephrogenic DI would ignore the injection; mellitus produces glucose-laden (osmotic) urine; primary polydipsia concentrates urine normally once water is withheld.`
           },
           {
             question: `Aldosterone increases sodium reabsorption in the collecting duct. Which additional finding is a direct consequence of aldosterone excess?`,
-            options: [`High plasma potassium (hyperkalemia)`, `Large increases in plasma osmolarity`, `Decreased circulating blood volume`, `Low plasma potassium (hypokalemia)`],
+            options: [`High plasma potassium (hyperkalemia)`, `Large increases in plasma osmolarity`, `Decreased circulating blood volume and pressure`, `Low plasma potassium (hypokalemia)`],
             correctAnswer: 3,
-            explanation: `Principal cells reabsorb Na$^+$ in exchange for secreting K$^+$ (the basolateral Na$^+$/K$^+$-ATPase and luminal electronegativity couple them), so aldosterone excess wastes potassium — hypokalemia, not hyperkalemia (plus mild alkalosis from H$^+$ secretion). Osmolarity barely changes because water follows the reabsorbed salt; volume EXPANDS, raising blood pressure.`
+            yield: 'HIGH',
+            explanation: `Principal cells reabsorb Na$^+$ in exchange for secreting K$^+$ (the basolateral Na$^+$/K$^+$-ATPase and luminal electronegativity couple them), so aldosterone excess wastes potassium — hypokalemia, not hyperkalemia (plus mild alkalosis from H$^+$ secretion). Osmolarity barely changes because water follows the reabsorbed salt; volume EXPANDS and blood pressure rises, rather than falling.`
           },
           {
             question: `The vasa recta preserve the medullary osmotic gradient because they:`,
             options: [`Actively pump NaCl back into the medullary interstitium using ATP`, `Are impermeable to water and solutes, so nothing is exchanged`, `Form passive countercurrent hairpins that exchange solute and water`, `Carry blood only through the cortex, bypassing the medulla entirely`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `The vasa recta are freely permeable capillaries arranged in countercurrent hairpins: descending blood gains solute and loses water, ascending blood reverses both, so blood exits only slightly hypertonic and the gradient is supplied with O2 without being washed out. The MULTIPLIER (active NaCl transport) is the ascending limb's job; the vasa recta are purely passive EXCHANGERS.`
           }
         ]
@@ -95,11 +98,11 @@ The lungs adjust CO2 in minutes; the kidneys adjust HCO3$^-$ over days but can f
 <details>
 <summary><b>Example 2: Seawater vs. fresh water — an osmolarity ceiling problem</b></summary>
 
-**Question:** Why does drinking seawater (~2000 mOsm/L) dehydrate a human, given maximal urine osmolarity of ~1200 mOsm/L?
+**Question:** Why does drinking seawater (~1100 mOsm/L, mostly NaCl) dehydrate a human, given maximal urine osmolarity of ~1200 mOsm/L?
 
 **Solution:**
 1. The kidney can concentrate urine only as high as the deepest medullary interstitium — ~1200 mOsm/L.
-2. Excreting the salt in 1 L of 2000 mOsm seawater requires MORE than 1 L of maximally concentrated urine (2000/1200 ≈ 1.7 L of urine per liter drunk).
+2. Not all of that 1200 is available for salt: urea and other wastes must still be excreted and fill a large share of it (urea supplies up to about half of the deep-medullary osmolarity). If only ~600–700 mOsm/L of urine can be NaCl, clearing the ~1100 mOsm of salt in 1 L of seawater takes about 1.6–1.8 L of urine.
 3. Net water balance is negative — each drink costs more water than it delivers, drawing on body water. ✓
 
 **Concept tested:** urine concentration has a hard ceiling set by the countercurrent gradient, not by ADH enthusiasm.

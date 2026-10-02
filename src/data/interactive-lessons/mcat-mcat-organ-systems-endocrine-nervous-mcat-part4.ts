@@ -12,7 +12,12 @@ export const mcatEndoNervSubPart4Data = {
 
 The hypothalamus is the anatomical answer to "how do neurons control hormones?" — it is a piece of brain that secretes. Three fusion points recur in passages:
 
-1. **Posterior pituitary**: hypothalamic NEURONS extend axons into the gland and release ADH and oxytocin directly into blood — a **neuroendocrine reflex** with no intermediate tropic hormone. Suckling → mechanoreceptors → hypothalamus → oxytocin → milk ejection is a neural afferent limb with a hormonal efferent limb (and one of the body's few POSITIVE feedback loops, like ferguson reflex labor contractions).
+1. **Posterior pituitary**: hypothalamic NEURONS extend axons into the gland and release ADH and oxytocin directly into blood — a **neuroendocrine reflex** with no intermediate tropic hormone. Suckling → mechanoreceptors → hypothalamus → oxytocin → milk ejection is a neural afferent limb with a hormonal efferent limb (and one of the body's few POSITIVE feedback loops, like oxytocin-driven labor contractions).
+
+<!-- yield:low -->
+   - The labor loop (cervical stretch → oxytocin → stronger contractions → more stretch) is called the Ferguson reflex.
+<!-- /yield -->
+
 2. **Adrenal medulla**: a modified sympathetic ganglion — preganglionic sympathetic fibers (ACh, nicotinic) synapse directly on chromaffin cells, which dump epinephrine into blood. One synapse, then a hormone.
 3. **Anterior pituitary**: neurons release RELEASING hormones into the hypophyseal PORTAL system — neural timing (pulsatility, circadian rhythm) imposed on an endocrine cascade.
 
@@ -31,7 +36,7 @@ The logic is pure negative feedback: an intact pituitary always moves its tropic
 
 ### Suppression & Stimulation Tests — Feedback as a Probe
 
-- **Stimulation test** (suspected HYPOfunction): give the tropic hormone; if the gland responds, the gland is fine and the lesion is upstream. Give ACTH — cortisol rises → adrenal is healthy → the problem is pituitary.
+- **Stimulation test** (suspected HYPOfunction): give the tropic hormone; if the gland responds, the gland is fine and the lesion is upstream. Give ACTH — cortisol rises → adrenal is healthy → the problem is upstream (pituitary or hypothalamus).
 - **Suppression test** (suspected HYPERfunction): give negative-feedback input (e.g., dexamethasone, a cortisol mimic); a NORMAL axis suppresses. Autonomous tumors ignore feedback — failure to suppress localizes autonomy.
 - Exogenous hormone abuse mimics primary hyperfunction with one giveaway: the GLAND ATROPHIES (no tropic support), e.g., anabolic steroid users with low LH and shrunken testes.
 
@@ -68,7 +73,7 @@ A cell with no receptor is deaf to a hormone no matter the plasma level — rece
 
 **Step 2 — use dexamethasone to separate the two "both high" patients.** A pituitary ACTH tumor usually RETAINS partial feedback sensitivity — high-dose dexamethasone suppresses it (Patient 1). An ECTOPIC ACTH source (e.g., a lung tumor secreting ACTH) has no hypothalamic-pituitary machinery to inhibit — no suppression (Patient 4). Patient 2's non-suppression is expected: her ACTH is already floored; the adrenal source never listened to ACTH in the first place.
 
-**Step 3 — anticipate the anatomy question.** Which patients have ENLARGED adrenal cortices? Patients 1 and 4 — chronic ACTH is trophic. Patient 2's contralateral adrenal ATROPHIES (its ACTH support is suppressed), a favorite trap: high cortisol with a shrunken gland on one side.
+**Step 3 — anticipate the anatomy question.** Which patients have ENLARGED adrenal cortices? Patients 1 and 4 — chronic ACTH is trophic. If Patient 2 has a one-sided adrenal tumor, the OTHER adrenal ATROPHIES (its ACTH support is suppressed), a favorite trap: high cortisol with a shrunken gland on one side.
 
 **The transferable strategy:** in any endocrine data table, (1) pair final + tropic hormone to localize, (2) treat suppression/stimulation rows as feedback probes, (3) predict gland size from chronic tropic exposure. The hormone names change; this algorithm does not.`
     },
@@ -82,30 +87,35 @@ A cell with no receptor is deaf to a hormone no matter the plasma level — rece
             question: `Milk ejection during suckling is triggered within seconds. Which feature of this reflex identifies it as neuroendocrine rather than purely neural or purely endocrine?`,
             options: [`Oxytocin is released from the anterior pituitary under portal-system control`, `The efferent limb is a sympathetic neuron releasing norepinephrine`, `A neural afferent limb drives neurons that secrete oxytocin into blood`, `Ejection is controlled entirely by local stretch of the mammary ducts`],
             correctAnswer: 2,
-            explanation: `The sensory (neural) limb — nipple mechanoreceptors to hypothalamus — is wired like any reflex, but the output is hormonal: magnocellular hypothalamic neurons fire action potentials down axons ending in the posterior pituitary and release oxytocin into blood. Placing oxytocin release in the anterior pituitary under portal control is wrong: the anterior pituitary receives releasing hormones via the portal system instead of housing hypothalamic axon terminals. A sympathetic efferent would make the reflex purely neural, and local duct stretch would make it neither neural nor endocrine.`
+            yield: 'HIGH',
+            explanation: `The sensory (neural) limb — nipple mechanoreceptors to hypothalamus — is wired like any reflex, but the output is hormonal: hypothalamic neurons fire action potentials down axons ending in the posterior pituitary and release oxytocin into blood. Placing oxytocin release in the anterior pituitary under portal control is wrong: the anterior pituitary receives releasing hormones via the portal system instead of housing hypothalamic axon terminals. A sympathetic efferent would make the reflex purely neural, and local duct stretch would make it neither neural nor endocrine.`
           },
           {
             question: `A patient has low free T4 with a LOW TSH. A TRH stimulation test produces a robust rise in TSH. The lesion is most likely in the:`,
-            options: [`Hypothalamus, as the pituitary still responds to TRH`, `Thyroid gland, because the primary defect is low T4 output`, `Pituitary, because TSH failed to rise before the test`, `Peripheral tissues, from deiodinase deficiency`],
+            options: [`Hypothalamus, as the pituitary still responds to TRH`, `Thyroid gland, because the primary defect is low T4 output`, `Pituitary, because TSH was already low before the test`, `Peripheral tissues, which fail to convert T4 into active T3`],
             correctAnswer: 0,
-            explanation: `Low T4 with low TSH is central (same-direction pair): gland failure would drive TSH UP. The stimulation test then splits the two central levels — a pituitary that answers exogenous TRH is healthy but understimulated, so the missing signal is hypothalamic TRH (tertiary hypofunction). Blaming the thyroid gland ignores the tropic-hormone pairing; blaming the pituitary is refuted by the positive TRH response.`
+            yield: 'MEDIUM',
+            explanation: `Low T4 with low TSH is central (same-direction pair): gland failure would drive TSH UP. The stimulation test then splits the two central levels — a pituitary that answers exogenous TRH is healthy but understimulated, so the missing signal is hypothalamic TRH (tertiary hypofunction). Blaming the thyroid gland ignores the tropic-hormone pairing; blaming the pituitary is refuted by the positive TRH response. A failure to convert T4 to T3 in peripheral tissues would not lower T4 and TSH together.`
           },
           {
             question: `An athlete self-administers testosterone for a year. Compared with a patient whose Leydig-cell tumor autonomously secretes the same amount of testosterone, the athlete uniquely shows:`,
             options: [`High LH, driving enlargement of both testes`, `Atrophy of both testes rather than a unilateral mass`, `Normal testes, since exogenous testosterone escapes feedback`, `Low LH, a finding the tumor patient does not share`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Both scenarios flood the circulation with androgen, so both suppress GnRH/LH — the tropic hormone is low in each, so low LH cannot distinguish them. The difference is anatomical: the tumor keeps one testis (its own) active and enlarging while feedback shrinks the other, whereas exogenous hormone supports NO testicular tissue, so both atrophy. Exogenous steroids absolutely engage feedback — that is why the normal-testes answer fails.`
           },
           {
             question: `A drug blocks nicotinic acetylcholine receptors at autonomic ganglia. Which stress response component survives the blockade?`,
-            options: [`Epinephrine release from the adrenal medulla`, `Sympathetic acceleration of heart rate via cardiac nerves`, `Cortisol secretion driven by the CRH-ACTH axis`, `Norepinephrine release from postganglionic sympathetic terminals`],
+            options: [`Epinephrine release from adrenal medullary chromaffin cells`, `Sympathetic acceleration of heart rate via cardiac nerves`, `Cortisol secretion driven by the CRH-ACTH axis`, `Norepinephrine release from postganglionic sympathetic terminals`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Ganglionic blockade silences everything downstream of preganglionic neurons: postganglionic sympathetic firing (cardiac acceleration and norepinephrine release from sympathetic terminals) and the adrenal medulla's epinephrine release, since the medulla is itself innervated by preganglionic fibers acting on nicotinic receptors. The HPA axis is humoral — CRH travels in portal blood, ACTH in systemic blood — no autonomic synapse required, so cortisol still rises. This is the double-dissociation logic passages use to separate the two stress waves.`
           },
           {
             question: `In an endocrine passage, patients W and X both have elevated hormone H. Patient W's tropic hormone T is elevated; patient X's is nearly undetectable. Without any further tests, the best conclusion is:`,
             options: [`W has a primary disorder of the gland; X has a pituitary tumor`, `Both have primary gland disorders that differ only in severity`, `W's gland is autonomously hypersecreting; X's pituitary is hypersecreting T`, `W's H is driven by excess T; X's H comes from an autonomous source`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Same-direction pair (H high, T high) means the drive is T itself — pituitary or ectopic — because an intact pituitary would have suppressed T in response to high H. Opposite-direction pair (H high, T low) means feedback is working at the pituitary while the gland (or an outside source of H) acts on its own. The answers calling W's gland the primary or autonomous problem and blaming X's pituitary each assign the patterns backwards — the single most tested reversal in endocrinology.`
           }
         ]
@@ -120,7 +130,11 @@ A cell with no receptor is deaf to a hormone no matter the plasma level — rece
 - Localize lesions by PAIRING final and tropic hormones: opposite directions = intact pituitary, problem at the gland (primary); same direction = problem at the pituitary level or ectopic/exogenous source
 - Stimulation tests probe suspected HYPOfunction (does the gland answer its tropic hormone?); suppression tests probe HYPERfunction (does the axis obey feedback?); autonomous tissue ignores feedback
 - Exogenous hormone mimics primary hyperfunction but ATROPHIES the native gland — low tropic hormone plus a shrunken gland is the signature
-- Nervous system = fast, wired, brief; endocrine = slower, broadcast, sustained; receptor expression is the endocrine version of anatomical specificity — and every passage table yields to the pair-then-probe algorithm`
+- Nervous system = fast, wired, brief; endocrine = slower, broadcast, sustained; receptor expression is the endocrine version of anatomical specificity — and every passage table yields to the pair-then-probe algorithm
+
+<!-- yield:low -->
+- Low-yield extras: the oxytocin labor loop is called the Ferguson reflex
+<!-- /yield -->`
     }
   ]
 };

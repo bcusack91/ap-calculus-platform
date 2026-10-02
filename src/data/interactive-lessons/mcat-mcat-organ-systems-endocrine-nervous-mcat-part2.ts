@@ -22,9 +22,13 @@ $$E_{ion} = \\frac{61}{z} \\log_{10} \\frac{[ion]_{out}}{[ion]_{in}} \\text{ (mV
 ### The Action Potential — A Fixed Sequence
 
 1. **Depolarization to threshold** (~ −55 mV) by summed synaptic input.
-2. **Rising phase:** voltage-gated **Na$^+$ channels** open → Na$^+$ rushes in → potential shoots toward $E_{Na}$ (~ +40 mV). Positive feedback: depolarization opens more Na$^+$ channels.
-3. **Falling phase:** Na$^+$ channels **inactivate** (ball-and-chain plug); slower voltage-gated **K$^+$ channels** open → K$^+$ exits → repolarization.
+2. **Rising phase:** voltage-gated **Na$^+$ channels** open → Na$^+$ rushes in → potential shoots toward $E_{Na}$ (~ +60 mV), peaking near +30 to +40 mV. Positive feedback: depolarization opens more Na$^+$ channels.
+3. **Falling phase:** Na$^+$ channels **inactivate** (an inactivation gate plugs the open channel); slower voltage-gated **K$^+$ channels** open → K$^+$ exits → repolarization.
 4. **Hyperpolarization:** K$^+$ channels close slowly → brief overshoot below rest, then leak channels restore −70 mV.
+
+<!-- yield:low -->
+- The inactivation gate is often pictured as a "ball-and-chain" that swings into the channel's pore.
+<!-- /yield -->
 
 - **All-or-none:** amplitude never grades with stimulus strength — **intensity is coded as frequency** of firing (and number of neurons recruited).
 - **Absolute refractory period** (Na$^+$ channels inactivated): no second spike, no matter what; caps maximum firing rate and forces one-way propagation. **Relative refractory** (during hyperpolarization): only a stronger stimulus fires.
@@ -64,18 +68,21 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
             question: `A toxin selectively prevents the inactivation of voltage-gated sodium channels. Its immediate effect on a neuron's action potential is:`,
             options: [`Failure to reach threshold, silencing the neuron`, `Prolonged depolarization with impaired repolarization`, `Faster repolarization from enhanced potassium efflux`, `Deeper hyperpolarization following each spike`],
             correctAnswer: 1,
-            explanation: `Repolarization requires BOTH Na$^+$-channel inactivation (stopping the inward rush) and delayed K$^+$ efflux. If Na$^+$ channels stay open, inward current persists and the membrane lingers near the sodium equilibrium potential — a prolonged spike (this is how batrachotoxin, brevetoxin and scorpion alpha-toxins work). The refractory period, which depends on inactivation, is also lost.`
+            yield: 'ULTRA_HIGH',
+            explanation: `Repolarization requires BOTH Na$^+$-channel inactivation (stopping the inward rush) and delayed K$^+$ efflux. If Na$^+$ channels stay open, inward current persists and the membrane lingers near the sodium equilibrium potential — a prolonged spike (the mechanism of several natural neurotoxins). The refractory period, which depends on inactivation, is also lost.`
           },
           {
             question: `An inhibitory synapse opens chloride channels on the postsynaptic dendrite. This inhibits firing because chloride entry:`,
             options: [`Depolarizes the axon hillock, inactivating its sodium channels`, `Blocks calcium channels in the presynaptic terminal`, `Holds the membrane near or below rest, opposing EPSPs`, `Destroys excitatory neurotransmitter in the cleft`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Cl$^-$ influx produces an IPSP — a graded hyperpolarization (or clamping near rest) that algebraically subtracts from concurrent EPSPs during spatial summation, so summed EPSPs are less likely to reach threshold. The axon hillock's ledger determines firing; inhibition works by keeping that sum under the ~-55 mV threshold, not by depolarizing the hillock, acting on the presynaptic cell, or destroying the transmitter itself.`
           },
           {
             question: `Both sympathetic and parasympathetic preganglionic neurons release the same neurotransmitter onto the same receptor type. That signal is:`,
             options: [`Acetylcholine on nicotinic receptors`, `Norepinephrine on beta-1 receptors`, `Acetylcholine on muscarinic receptors`, `Epinephrine on alpha receptors`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Every autonomic ganglion — sympathetic or parasympathetic — is a cholinergic NICOTINIC synapse (as is the neuromuscular junction). The branches diverge only at the final effector synapse: sympathetic postganglionics release norepinephrine onto adrenergic receptors, parasympathetic postganglionics release ACh onto MUSCARINIC receptors. A ganglionic nicotinic blocker therefore silences both divisions at once.`
           }
         ]
@@ -129,7 +136,11 @@ At the **neuromuscular junction**, ACh on nicotinic receptors always excites mus
 - Resting potential ≈ −70 mV: Na⁺/K⁺-ATPase builds gradients; K⁺ leak dominates, holding the membrane near $E_K$. Potential always moves toward the equilibrium potential of the most permeable ion.
 - Action potential: Na⁺ in (rise, positive feedback) → Na⁺ inactivation + delayed K⁺ out (fall) → hyperpolarization. All-or-none; intensity = frequency; refractory periods enforce one-way travel; myelin + nodes = saltatory speed.
 - Synapse: Ca²⁺-triggered vesicle release; EPSPs/IPSPs are graded and summed (temporal + spatial) at the axon hillock; termination by reuptake, AChE, or diffusion.
-- Autonomic wiring: all ganglia = ACh/nicotinic; sympathetic endings = NE (adrenal medulla broadcasts epinephrine hormonally); parasympathetic endings = ACh/muscarinic; most organs get antagonistic dual input — know which side dominates at rest.`
+- Autonomic wiring: all ganglia = ACh/nicotinic; sympathetic endings = NE (adrenal medulla broadcasts epinephrine hormonally); parasympathetic endings = ACh/muscarinic; most organs get antagonistic dual input — know which side dominates at rest.
+
+<!-- yield:low -->
+- Low-yield extras: the Na⁺-channel inactivation gate is pictured as a "ball-and-chain" plug
+<!-- /yield -->`
     }
   ]
 };

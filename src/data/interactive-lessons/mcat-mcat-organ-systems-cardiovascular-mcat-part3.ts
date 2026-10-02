@@ -44,10 +44,14 @@ Small solutes and gases cross by **diffusion** down their gradients (O$_2$ and C
 
 ### The Baroreceptor Reflex — Short-Term Pressure Control
 
-1. Stretch receptors in the **carotid sinus** (glossopharyngeal afferents) and **aortic arch** (vagal afferents) fire in proportion to arterial pressure.
+1. Stretch receptors in the **carotid sinus** and **aortic arch** fire in proportion to arterial pressure.
 2. Signals reach the **medulla** (cardiovascular centers).
 3. **Pressure falls** → less baroreceptor firing → ↑ sympathetic, ↓ parasympathetic output → ↑ HR, ↑ contractility, arteriolar constriction, venoconstriction → pressure restored.
 4. **Pressure rises** → the mirror image.
+
+<!-- yield:low -->
+- Afferent nerves: the carotid sinus signals via the glossopharyngeal nerve (CN IX), the aortic arch via the vagus (CN X).
+<!-- /yield -->
 
 This is a classic **negative feedback** loop acting within seconds. Long-term pressure control belongs to the kidneys (blood volume via RAAS/ADH — covered in the renal lesson).
 
@@ -65,20 +69,23 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
         questions: [
           {
             question: `A patient with nephrotic syndrome loses large amounts of albumin in the urine and develops widespread edema. The primary Starling-force change is:`,
-            options: [`Increased capillary hydrostatic pressure`, `Decreased plasma colloid oncotic pressure`, `Increased interstitial hydrostatic pressure`, `Decreased interstitial oncotic pressure`],
+            options: [`Increased capillary hydrostatic pressure`, `Decreased plasma oncotic pressure`, `Increased interstitial hydrostatic pressure`, `Decreased interstitial oncotic pressure`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Albumin is the chief generator of plasma oncotic pressure ($\\pi_c$), the main force pulling fluid back into capillaries. Losing albumin lowers $\\pi_c$, so filtration outweighs reabsorption along the whole capillary → interstitial fluid accumulates (edema). The same mechanism operates in liver failure (less albumin synthesis).`
           },
           {
             question: `A healthy subject stands up quickly; blood pools in the leg veins and arterial pressure transiently dips. The immediate compensatory response is:`,
             options: [`Increased baroreceptor firing causing reflex bradycardia`, `Renin release expanding blood volume within seconds`, `Decreased baroreceptor firing, raising sympathetic outflow`, `Vagal activation slowing the heart to boost filling`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Venous pooling cuts venous return → preload → SV → MAP. Carotid/aortic baroreceptors stretch LESS and fire LESS, disinhibiting sympathetic output and withdrawing (not raising) vagal tone: HR and contractility rise and arterioles/veins constrict, restoring pressure within a couple of beats. Renin/volume mechanisms act over hours, not seconds — the classic short-term vs long-term control distinction.`
           },
           {
             question: `An experiment increases venous return to an isolated heart with no nerve supply, and stroke volume rises within a few beats. Which mechanism best explains the rise?`,
             options: [`Filling stretches sarcomeres toward optimal overlap, adding cross-bridges`, `A larger ventricle has lower wall stress, so the afterload it faces falls`, `Atrial stretch speeds SA-node firing, so each beat ejects more blood`, `Stretch opens more fast sodium channels, enlarging each action potential`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The Frank–Starling mechanism is intrinsic to the myocardium: more filling stretches sarcomeres toward optimal actin–myosin overlap (and raises troponin calcium sensitivity), so more cross-bridges form and the contraction is stronger — no autonomic input required. By the law of Laplace a larger ventricle has HIGHER wall stress, so afterload rises rather than falls. A faster rate shortens filling time and does not raise stroke volume. The action potential is all-or-none, so stretch does not strengthen contraction by enlarging it; the extra force comes from the sarcomeres themselves.`
           }
         ]
@@ -134,7 +141,11 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
 - Starling forces: filtration = $(P_c - P_i) - (\\pi_c - \\pi_i)$; hydrostatic pushes out, oncotic (albumin) pulls in; lymphatics clear the surplus.
 - Edema causes: ↑$P_c$, ↓$\\pi_c$, ↑ permeability, lymph blockage.
 - Baroreceptor reflex (carotid sinus + aortic arch → medulla) is the seconds-scale negative-feedback controller of MAP; kidneys control pressure long-term via volume.
-- Preload changes move you along a Starling curve; contractility changes create a new curve.`
+- Preload changes move you along a Starling curve; contractility changes create a new curve.
+
+<!-- yield:low -->
+- Low-yield extras: baroreceptor afferents run in the glossopharyngeal nerve (carotid sinus) and the vagus (aortic arch)
+<!-- /yield -->`
     }
   ]
 };

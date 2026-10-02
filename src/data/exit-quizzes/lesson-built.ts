@@ -64,6 +64,11 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-genetics-evolution-immunology-mcat',
   'mcat-genetics-evolution-mcat',
   'mcat-genetics-evolution-mendelian-mcat',
+  'mcat-organ-systems-respiratory-mcat',
+  'mcat-organ-systems-renal-mcat',
+  'mcat-organ-systems-cardiovascular-mcat',
+  'mcat-organ-systems-endocrine-nervous-mcat',
+  'mcat-organ-systems-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

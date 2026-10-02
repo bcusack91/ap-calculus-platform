@@ -17,8 +17,12 @@ Every diuretic is a question about one nephron segment. Predict its effects from
 | Osmotic (mannitol) | Nothing — adds unreabsorbable solute | Whole nephron | Water held in lumen everywhere (glucose in diabetes acts identically) |
 | Carbonic-anhydrase inhibitor | HCO3$^-$ reclamation | PCT | Mild diuresis + bicarbonate loss → metabolic acidosis |
 | **Loop diuretic** | Na$^+$-K$^+$-2Cl$^-$ cotransporter | Ascending limb | Most powerful; **destroys the medullary gradient** (kills concentrating ability); K$^+$ wasting |
-| Thiazide | NaCl cotransporter | DCT | Moderate; spares the gradient; ↑Ca$^{2+}$ reabsorption |
+| Thiazide | NaCl cotransporter | DCT | Moderate; spares the gradient; K$^+$ wasting |
 | K$^+$-sparing (aldosterone antagonists / Na-channel blockers) | Principal-cell Na$^+$ entry | Collecting duct | Weak alone; prevents the K$^+$ loss the others cause |
+
+<!-- yield:low -->
+- Thiazides also INCREASE Ca$^{2+}$ reabsorption in the DCT (the opposite of loop diuretics, which lose Ca$^{2+}$).
+<!-- /yield -->
 
 - **Downstream logic:** any drug that dumps extra Na$^+$ into the collecting duct increases Na$^+$/K$^+$ exchange there → hypokalemia (loops, thiazides). Blocking that exchange spares K$^+$.
 - **Gradient logic:** only agents acting on the ascending limb erase the countercurrent multiplier itself.
@@ -56,18 +60,21 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
             question: `A patient on a powerful loop diuretic becomes unable to produce concentrated urine even when severely dehydrated with maximal ADH levels. The best explanation is:`,
             options: [`The drug blocks V2 ADH receptors on the collecting duct's principal cells`, `The drug prevents aquaporin-2 insertion into the apical membrane`, `Loss of ascending-limb NaCl transport has dissipated the medullary gradient`, `The drug increases GFR so much that fluid moves too quickly to be concentrated`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `ADH only opens water channels — water then leaves the collecting duct ONLY if the surrounding medulla is hypertonic. Loop diuretics block the Na$^+$-K$^+$-2Cl$^-$ cotransporter of the ascending limb that builds that gradient, so even wide-open aquaporins have nowhere to send water; the drug does not act on V2 receptors or aquaporin trafficking. Concentrating ability = ADH x gradient; either factor at zero gives dilute urine.`
           },
           {
             question: `A dehydrated patient has very concentrated urine with almost no urinary sodium, and plasma creatinine is mildly elevated. This picture indicates:`,
-            options: [`Pre-renal azotemia from hypoperfusion of healthy kidneys`, `Acute tubular necrosis with loss of reabsorptive function`, `Nephrogenic diabetes insipidus with ADH resistance`, `Acute glomerulonephritis with red cell casts in urine`],
+            options: [`Pre-renal failure from hypoperfusion of healthy kidneys`, `Acute tubular necrosis with loss of reabsorptive function`, `Nephrogenic diabetes insipidus with ADH resistance`, `Acute glomerulonephritis with red cell casts in urine`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Concentrated, sodium-poor urine is what a WORKING kidney produces under RAAS and ADH drive — the appropriate response to low perfusion, so the kidneys are hypoperfused but intrinsically healthy. The creatinine bump reflects reduced GFR from low pressure, not nephron damage. Tubular necrosis would show dilute, sodium-wasting urine (broken transporters); DI would show dilute urine; and glomerulonephritis would add hematuria and red cell casts.`
           },
           {
             question: `A researcher gives a drug that blocks aldosterone receptors. Compared with a loop diuretic, this drug's effect on potassium is different because:`,
             options: [`It increases potassium secretion by raising distal sodium delivery`, `It blocks principal-cell sodium uptake that drives potassium secretion`, `It stimulates the sodium-potassium ATPase throughout the nephron`, `It acidifies the urine, forcing extra potassium into the tubule`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Potassium secretion in the collecting duct is coupled to sodium reabsorption through principal cells (aldosterone's target). An aldosterone antagonist shuts that exchange down, so potassium is retained — potassium-SPARING. It also reduces H$^+$ secretion, making the urine less acidic, not more. Loop diuretics do the opposite: they deliver a flood of sodium to those same principal cells, accelerating the exchange and wasting K$^+$. Same ion, opposite fates, depending on where in the nephron you act.`
           }
         ]
@@ -93,15 +100,18 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
 <details>
 <summary><b>Example 2: The glucose titration curve</b></summary>
 
-**Question:** A passage plots filtered, reabsorbed, and excreted glucose versus plasma concentration. Explain the "threshold," the "$T_m$ plateau," and the rounded "splay" between them.
+**Question:** A passage plots filtered, reabsorbed, and excreted glucose versus plasma concentration. Explain the "threshold" and the "$T_m$ plateau."
 
 **Solution:**
 1. Below threshold (~200 mg/dL plasma): reabsorption = filtration; excretion = 0.
-2. Above $T_m$ (~375 mg/min): carriers saturated; reabsorption is flat, so excretion rises in parallel with filtration (slope = GFR).
-3. **Splay:** the rounded transition exists because nephrons are heterogeneous (some saturate early) and carrier affinity is finite — glucose starts spilling slightly BEFORE the average $T_m$ is reached. ✓
+2. Glucose begins to spill just above threshold; full saturation comes a bit later because nephrons saturate at different loads. Once the filtered load passes $T_m$ (~375 mg/min): carriers saturated; reabsorption is flat, so excretion rises in parallel with filtration (slope = GFR). ✓
 
 **Graph skill:** on such plots, excretion = filtration − reabsorption at every x-value; check the curves obey the master ledger.
 </details>
+
+<!-- yield:low -->
+- **Splay:** the curves bend gradually between threshold and $T_m$ rather than at a sharp corner, because nephrons are heterogeneous (some saturate early) and carrier affinity is finite — glucose starts spilling slightly BEFORE the average $T_m$ is reached.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 3: ACE-inhibitor experiment with renal-artery stenosis</b></summary>
@@ -121,11 +131,15 @@ The pre-renal signature is the highest-yield: a **healthy kidney responding corr
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Diuretics map one-to-one onto segments: mannitol (osmotic, everywhere), CA inhibitors (PCT, acidosis), loops (ascending limb — strongest, erase the gradient), thiazides (DCT, spare Ca²⁺), K⁺-sparing (collecting duct).
+- Diuretics map one-to-one onto segments: mannitol (osmotic, everywhere), CA inhibitors (PCT, acidosis), loops (ascending limb — strongest, erase the gradient), thiazides (DCT, moderate, gradient intact), K⁺-sparing (collecting duct).
 - Extra Na⁺ delivered to principal cells = K⁺ wasted; block the exchange = K⁺ spared.
 - Pre-renal failure looks like a healthy kidney hoarding salt and water (concentrated, Na⁺-poor urine); intrinsic damage wastes salt and leaks protein/cells; post-renal = obstruction.
 - Nephrotic = barrier leak → albuminuria → oncotic edema; nephritic = inflammation → hematuria, hypertension, falling GFR.
-- Passage method: filtered load first; place clearances on the 0 → urea → GFR → RPF ladder; classify hormone problems as osmolarity (ADH) vs. volume (RAAS); propagate any blocked transporter downstream.`
+- Passage method: filtered load first; place clearances on the 0 → urea → GFR → RPF ladder; classify hormone problems as osmolarity (ADH) vs. volume (RAAS); propagate any blocked transporter downstream.
+
+<!-- yield:low -->
+- Low-yield extras: thiazides increase DCT Ca²⁺ reabsorption (loops lose Ca²⁺); the glucose titration curve's "splay" — a gradual bend before $T_m$ from nephron heterogeneity and finite carrier affinity.
+<!-- /yield -->`
     }
   ]
 };

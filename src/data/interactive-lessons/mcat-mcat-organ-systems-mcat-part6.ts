@@ -68,20 +68,23 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
         questions: [
           {
             question: `Multiple sclerosis destroys myelin sheaths. This would:`,
-            options: [`Slow or block action potential conduction`, `Speed conduction by lowering membrane capacitance`, `Have no effect on signal transmission`, `Directly inhibit vesicle fusion at the synapse`],
+            options: [`Slow or block action potential conduction`, `Speed conduction by lowering membrane capacitance`, `Have no effect, because nodes of Ranvier remain intact`, `Directly inhibit vesicle fusion at the synapse`],
             correctAnswer: 0,
-            explanation: `Myelin insulates axons, enabling saltatory conduction (the AP jumps between nodes of Ranvier). Without myelin, current leaks across the membrane and conduction slows dramatically or fails, causing motor and sensory deficits. Demyelination never speeds conduction — losing myelin actually raises membrane capacitance — and it acts on axonal conduction, not directly on vesicle fusion or neurotransmitter release at synapses. MS targets CNS myelin (made by oligodendrocytes), so its deficits reflect slowed or blocked central conduction.`
+            yield: 'HIGH',
+            explanation: `Myelin insulates axons, enabling saltatory conduction (the AP jumps between nodes of Ranvier). Without myelin, current leaks across the membrane and conduction slows dramatically or fails, causing motor and sensory deficits. Intact nodes do not rescue conduction, because the depolarizing current decays across the leaky internodes before reaching the next node. Demyelination never speeds conduction — losing myelin actually raises membrane capacitance — and it acts on axonal conduction, not directly on vesicle fusion or neurotransmitter release at synapses. MS targets CNS myelin (made by oligodendrocytes), so its deficits reflect slowed or blocked central conduction.`
           },
           {
             question: `A neurotoxin blocks voltage-gated $Na^{+}$ channels (like tetrodotoxin). What is the direct effect on neurons?`,
-            options: [`Action potentials cannot fire because the upstroke is blocked`, `Neurons fire continuously because they cannot repolarize`, `The resting potential becomes more negative than $E_K$`, `Only the relative refractory period is prolonged by the toxin`],
+            options: [`Action potentials cannot fire because the upstroke is blocked`, `Neurons fire continuously because they cannot repolarize`, `The resting potential becomes more negative than $E_K$`, `Only the relative refractory period is prolonged`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The rising phase of the AP depends on voltage-gated $Na^{+}$ influx. Block those channels and the membrane cannot depolarize to +30 mV, so no AP fires → paralysis. Continuous firing describes a channel that fails to inactivate (the opposite). Resting potential is set mainly by $K^{+}$ leak, not these channels, so it does not fall below $E_K$, and the entire spike — not just the relative refractory period — is abolished.`
           },
           {
             question: `An inhibitory interneuron releases GABA onto a postsynaptic cell, opening $Cl^{-}$ channels. How does this make the postsynaptic neuron less likely to fire?`,
             options: [`$Cl^{-}$ influx hyperpolarizes the cell, away from threshold`, `$Cl^{-}$ efflux depolarizes the cell toward firing threshold`, `It triggers $Ca^{2+}$ influx and immediate vesicle release`, `It permanently inactivates the neuron's $Na^{+}/K^{+}$ ATPase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Opening $Cl^{-}$ channels drives $Cl^{-}$ into the neuron (its equilibrium is near/below rest), hyperpolarizing the membrane — an inhibitory postsynaptic potential (IPSP). This moves $V_m$ away from the $-55$ mV threshold, so more excitatory input is needed to fire. $Cl^{-}$ enters (not exits) and the effect is inhibitory, ruling out the efflux, calcium-triggered release, and pump-inactivation options.`
           }
         ]
@@ -114,8 +117,12 @@ $$= 61 \\times (-1.45) \\approx \\textbf{-88 mV} \\;✓$$
 2. Inhibit it → ACh accumulates → receptors are continuously activated → **sustained depolarization**.
 3. The motor end plate cannot repolarize/reset → **depolarizing block** → muscle fasciculations then paralysis. ✓
 
-**Interpretation:** Too much "go" signal is as paralyzing as too little — the channels stay inactivated. This is why nerve-agent poisoning causes the "SLUDGE" cholinergic crisis plus respiratory muscle failure.
+**Interpretation:** Too much "go" signal is as paralyzing as too little — the channels stay inactivated. This is why nerve-agent poisoning causes a cholinergic crisis (excess parasympathetic activity) plus respiratory muscle failure.
 </details>
+
+<!-- yield:low -->
+- The cholinergic crisis is remembered as **SLUDGE**: salivation, lacrimation, urination, defecation, GI upset, emesis.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 3: Reason about synaptic summation</b></summary>
@@ -137,9 +144,13 @@ $$= 61 \\times (-1.45) \\approx \\textbf{-88 mV} \\;✓$$
 
 - Sympathetic: fight-or-flight. Parasympathetic: rest-and-digest.
 - Action potential: resting → depolarization (Na$^+$ in) → repolarization (K$^+$ out); all-or-none, frequency-coded
-- Resting $V_m$ sits near $E_K$ (~$-90$ mV by Nernst); refractory periods enforce one-way propagation
+- Resting $V_m$ (~$-70$ mV) sits near $E_K$ (~$-90$ mV by Nernst); refractory periods enforce one-way propagation
 - Myelin enables saltatory conduction (faster signaling); MS demyelinates CNS axons
-- Synapse: $Ca^{2+}$ influx → vesicle fusion → NT release; EPSP/IPSP summation decides firing`
+- Synapse: $Ca^{2+}$ influx → vesicle fusion → NT release; EPSP/IPSP summation decides firing
+
+<!-- yield:low -->
+- Low-yield extras: the SLUDGE mnemonic for the signs of a cholinergic crisis
+<!-- /yield -->`
     }
   ]
 };

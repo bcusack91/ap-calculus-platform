@@ -106,7 +106,7 @@ Prophase I is the longest and most complex phase:
 |---------|----------------|-----------|
 | Products per meiosis | 4 functional sperm | 1 functional egg + 2–3 polar bodies |
 | Timing | Continuous from puberty | Begins in fetal life, arrested at prophase I until ovulation, then at metaphase II until fertilization |
-| Completion | ~64 days per cycle | May take decades (arrested at prophase I!) |
+| Completion | About 2 months per cycle (continuous) | May take decades (arrested at prophase I!) |
 | Location | Seminiferous tubules (testes) | Ovarian follicles |
 
 **Why this matters for MCAT**: Older maternal age → higher nondisjunction risk because oocytes arrested in prophase I for decades, cohesin proteins degrade over time.

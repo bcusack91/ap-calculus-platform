@@ -64,20 +64,23 @@ Every renal question is one of these four words. Reabsorption = tubule → blood
         questions: [
           {
             question: `A toxin selectively destroys podocytes and strips the negative charge from the glomerular basement membrane. The most likely urinary finding is:`,
-            options: [`Large amounts of glucose in the urine`, `Many red and white blood cells in the urine`, `Large amounts of albumin in the urine`, `Markedly elevated urea concentration in the urine`],
+            options: [`Large amounts of glucose and amino acids in the urine`, `Many red and white blood cells in the urine`, `Large amounts of albumin in the urine`, `Markedly elevated urea concentration in the urine`],
             correctAnswer: 2,
-            explanation: `The barrier excludes albumin by BOTH size (podocyte slit diaphragms) and charge (the anionic basement membrane repels negatively charged albumin). Damaging both lets albumin through — proteinuria, the hallmark of glomerular injury (nephrotic syndrome). Glucose and urea are freely filtered normally, and cells require far grosser structural damage to pass.`
+            yield: 'HIGH',
+            explanation: `The barrier excludes albumin by BOTH size (podocyte slit diaphragms) and charge (the anionic basement membrane repels negatively charged albumin). Damaging both lets albumin through — proteinuria, the hallmark of glomerular injury (nephrotic syndrome). Glucose, amino acids and urea are freely filtered normally (the intact PCT still reclaims all the glucose and amino acids), and cells require far grosser structural damage to pass.`
           },
           {
             question: `Blood in the renal circulation passes through two capillary beds in series. The vessel connecting them is:`,
-            options: [`The efferent arteriole, leading to the peritubular capillaries`, `The renal vein, which redistributes blood to the tubules`, `The afferent arteriole, which supplies both beds simultaneously`, `The vasa recta, linking the glomerulus directly to the loop of Henle`],
+            options: [`The efferent arteriole, leading to the peritubular capillaries`, `The renal vein, which redistributes glomerular blood to the tubules`, `The afferent arteriole, which supplies both beds simultaneously`, `The vasa recta, linking the glomerulus directly to the loop of Henle`],
             correctAnswer: 0,
-            explanation: `The renal portal arrangement runs afferent arteriole → glomerulus → EFFERENT ARTERIOLE → peritubular capillaries (and vasa recta for juxtamedullary nephrons): the efferent arteriole drains the glomerulus and feeds the second bed. An arteriole downstream of a capillary bed is rare and is exactly what keeps glomerular pressure high and adjustable. The vasa recta are part of the second bed, not the connector.`
+            yield: 'HIGH',
+            explanation: `The renal portal arrangement runs afferent arteriole → glomerulus → EFFERENT ARTERIOLE → peritubular capillaries (and vasa recta for juxtamedullary nephrons): the efferent arteriole drains the glomerulus and feeds the second bed. An arteriole downstream of a capillary bed is rare and is exactly what keeps glomerular pressure high and adjustable. The vasa recta are part of the second bed, not the connector, and the renal vein drains the kidney after both beds.`
           },
           {
             question: `Compared with plasma, the fluid in Bowman's space of a healthy nephron contains:`,
             options: [`Similar concentrations of all solutes including proteins`, `Similar concentrations of glucose and sodium, but almost no protein`, `No glucose, because it is reabsorbed during filtration`, `A higher concentration of urea, because urea is secreted at the glomerulus`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Filtration is passive bulk flow through a size/charge sieve: small solutes (glucose, Na$^+$, urea, amino acids) pass at plasma concentrations, while proteins and cells are retained. Glucose reabsorption happens LATER, in the PCT — not during filtration — and nothing is secreted at the glomerulus itself.`
           }
         ]
@@ -121,11 +124,15 @@ Every renal question is one of these four words. Reabsorption = tubule → blood
 
 **Solution:**
 1. Higher arterial pressure → higher glomerular pressure → GFR transiently rises → more NaCl reaches the distal nephron.
-2. The **macula densa** senses the increased NaCl delivery and signals the **afferent arteriole to constrict** (adenosine/ATP paracrine signal).
+2. The **macula densa** senses the increased NaCl delivery and signals the **afferent arteriole to constrict** (a local paracrine signal).
 3. Inflow falls, glomerular pressure normalizes, GFR returns toward baseline. The myogenic stretch response of the afferent wall acts in the same direction, faster. ✓
 
 **Classify:** sensor = macula densa; effector = afferent arteriole; variable defended = GFR (NaCl delivery as its proxy) — a textbook negative-feedback loop.
-</details>`
+</details>
+
+<!-- yield:low -->
+- The macula densa's paracrine signal to the afferent arteriole is adenosine (derived from released ATP).
+<!-- /yield -->`
     },
     {
       id: 'ren1-summary',
@@ -137,7 +144,11 @@ Every renal question is one of these four words. Reabsorption = tubule → blood
 - Portal circulation: afferent arteriole → glomerulus → efferent arteriole → peritubular capillaries — two adjustable resistors bracket the filter.
 - Filtration barrier (fenestrae, anionic basement membrane, podocytes) sieves by size AND charge; filtrate = protein-free plasma; GFR ≈ 125 mL/min (180 L/day), ~20% filtration fraction.
 - Constrict afferent → ↓GFR; constrict efferent → ↑GFR. Autoregulation = myogenic response + macula-densa tubuloglomerular feedback.
-- Excretion = filtration − reabsorption + secretion — the master ledger for everything that follows.`
+- Excretion = filtration − reabsorption + secretion — the master ledger for everything that follows.
+
+<!-- yield:low -->
+- Low-yield extras: the tubuloglomerular-feedback mediator from the macula densa is adenosine (from released ATP).
+<!-- /yield -->`
     }
   ]
 };

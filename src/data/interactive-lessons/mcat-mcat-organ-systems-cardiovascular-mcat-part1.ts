@@ -49,7 +49,12 @@ $$SV = EDV - ESV \\approx 70 \\text{ mL}, \\qquad EF = \\frac{SV}{EDV} \\approx 
 
 $$\\text{SA node} \\to \\text{atrial muscle} \\to \\text{AV node (delay)} \\to \\text{Bundle of His} \\to \\text{bundle branches} \\to \\text{Purkinje fibers}$$
 
-- **SA node** is the pacemaker: its cells depolarize spontaneously (funny Na$^+$ current + T-type Ca$^{2+}$), intrinsic rate ~60–100 bpm. Cardiac muscle is **myogenic** — the beat originates in the heart itself; nerves only modulate it.
+- **SA node** is the pacemaker: its cells depolarize spontaneously (a slow inward Na$^+$ leak, then Ca$^{2+}$ influx), intrinsic rate ~100 bpm. Cardiac muscle is **myogenic** — the beat originates in the heart itself; nerves only modulate it.
+
+<!-- yield:low -->
+- The pacemaker currents have names: the "funny" Na$^+$ current ($I_f$) and T-type Ca$^{2+}$ channels.
+<!-- /yield -->
+
 - **AV node delay** (~0.1 s) lets the atria finish emptying before ventricular contraction; it is the **only electrical path** between atria and ventricles (the fibrous skeleton insulates them).
 - **Gap junctions** in intercalated discs let depolarization spread cell-to-cell, so the myocardium contracts as a functional syncytium.
 - Autonomic control: **sympathetic** (norepinephrine, beta-1) raises rate and contractility; **parasympathetic** (vagus, acetylcholine, muscarinic) slows the SA node. Resting "vagal tone" is why resting HR (~70) is below the SA node's intrinsic rate.
@@ -73,20 +78,23 @@ The ECG records **electrical** events; contraction (mechanical) follows each dep
         questions: [
           {
             question: `Which vessel carries deoxygenated blood?`,
-            options: [`The aorta`, `The pulmonary vein`, `The pulmonary artery`, `The coronary arteries during diastole`],
+            options: [`The aorta leaving the left ventricle`, `The pulmonary veins entering the left atrium`, `The pulmonary artery to the lungs`, `The coronary arteries during diastole`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Arteries are defined by direction (away from the heart), not oxygen content. The pulmonary artery carries deoxygenated blood from the RV to the lungs; the pulmonary veins return oxygenated blood to the LA. This is the single most-tested "exception" in cardiovascular anatomy.`
           },
           {
             question: `During isovolumetric contraction of the left ventricle:`,
             options: [`The mitral valve is open and the aortic valve is closed`, `Both the mitral and aortic valves are closed`, `The aortic valve is open and blood is ejected`, `Volume falls while pressure stays constant`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `In isovolumetric contraction the ventricle has just begun contracting: pressure has risen above atrial pressure (mitral valve slams shut — S1) but not yet above aortic pressure (aortic valve still closed). With all valves closed, volume cannot change — pressure rises at constant volume.`
           },
           {
             question: `A patient's ECG shows a normal P wave followed by an abnormally long PR interval. The structure most likely responsible for the delay is:`,
             options: [`The sinoatrial node`, `The Purkinje fiber network`, `The left and right bundle branches`, `The atrioventricular node`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The PR interval spans from the start of atrial depolarization to the start of ventricular depolarization — most of that time is the built-in AV-node delay. A prolonged PR interval (first-degree heart block) reflects slowed conduction through the AV node, the sole electrical gateway between atria and ventricles. A normal P wave argues against the SA node, and slowed conduction in the bundle branches or Purkinje network widens the QRS complex rather than lengthening the PR interval.`
           }
         ]
@@ -147,7 +155,11 @@ Order: b → d/a → c.
 - $SV = EDV - ESV$; $EF = SV/EDV$ (normal ≈ 55–70%); $CO = HR \\times SV$.
 - S1 = AV valves close (start of systole); S2 = semilunar valves close (start of diastole); valves are passive.
 - Conduction: SA node (myogenic pacemaker) → AV node (delay, only atria-ventricle path) → His–Purkinje. P = atrial depolarization, QRS = ventricular depolarization, T = ventricular repolarization.
-- Sympathetic NE (beta-1) speeds and strengthens; vagal ACh slows — resting HR sits below the SA node's intrinsic ~100 bpm because vagal tone dominates.`
+- Sympathetic NE (beta-1) speeds and strengthens; vagal ACh slows — resting HR sits below the SA node's intrinsic ~100 bpm because vagal tone dominates.
+
+<!-- yield:low -->
+- Low-yield extras: the pacemaker currents are named the "funny" Na$^+$ current ($I_f$) and T-type Ca$^{2+}$ channels
+<!-- /yield -->`
     }
   ]
 };

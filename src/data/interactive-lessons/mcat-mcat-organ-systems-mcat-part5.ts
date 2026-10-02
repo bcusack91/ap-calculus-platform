@@ -69,20 +69,23 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
         questions: [
           {
             question: `A patient has high T3/T4 levels AND high TSH. The most likely cause is:`,
-            options: [`A TSH-secreting pituitary tumor`, `A hyperfunctioning thyroid nodule`, `Normal feedback functioning`, `Dietary iodine deficiency`],
+            options: [`A TSH-secreting pituitary tumor`, `A hyperfunctioning thyroid nodule`, `Intact negative feedback on the pituitary`, `Iodine deficiency limiting hormone synthesis`],
             correctAnswer: 0,
-            explanation: `Normally, high T3/T4 suppresses TSH (negative feedback). If both are high, the pituitary is autonomously producing TSH and ignoring feedback — a TSH-secreting adenoma (secondary hyperthyroidism). A primary thyroid problem such as a hyperfunctioning nodule would raise T3/T4 but SUPPRESS TSH. Iodine deficiency lowers T3/T4 and raises TSH — the reverse of the thyroid-hormone half of this pattern.`
+            yield: 'HIGH',
+            explanation: `Normally, high T3/T4 suppresses TSH (negative feedback). If both are high, the pituitary is autonomously producing TSH and ignoring feedback — a TSH-secreting adenoma (secondary hyperthyroidism). A primary thyroid problem such as a hyperfunctioning nodule would raise T3/T4 but SUPPRESS TSH. Iodine deficiency limits T3/T4 synthesis, so T3/T4 fall while TSH rises — the reverse of the thyroid-hormone half of this pattern. Intact feedback on the pituitary is exactly what this lab pair rules out.`
           },
           {
             question: `A researcher gives a patient dexamethasone (a synthetic cortisol analog). In a healthy person, plasma ACTH should:`,
             options: [`Fall, because it mimics cortisol's negative feedback on the HPA axis`, `Rise, because the body senses extra steroid and compensates`, `Stay unchanged, because dexamethasone does not bind cortisol receptors`, `Fall, but only because dexamethasone destroys ACTH directly`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Dexamethasone acts at the glucocorticoid receptor and triggers negative feedback on the pituitary and hypothalamus (HPA axis) → ↓CRH and ↓ACTH (this is the basis of the dexamethasone suppression test). A rise in ACTH reverses the feedback; the claim that it does not bind cortisol receptors is false (it is a potent agonist); and direct destruction of ACTH is an invented mechanism — feedback suppression, not degradation, lowers ACTH.`
           },
           {
             question: `Why does a peptide hormone like insulin act within seconds while a steroid like aldosterone takes hours, despite both being potent regulators?`,
             options: [`Insulin uses existing signaling; aldosterone needs new protein synthesis`, `Insulin is lipophilic and crosses membranes faster than aldosterone`, `Aldosterone circulates unbound and is cleared before it can act`, `Insulin alters gene transcription while aldosterone uses cAMP`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Hydrophilic peptide hormones bind surface receptors and activate existing enzymes/channels via second messengers — fast and transient. Lipophilic steroids cross the membrane, bind nuclear receptors, and change TRANSCRIPTION, which requires time to synthesize new protein — slow and durable. Calling insulin lipophilic swaps the solubilities; the claim that aldosterone circulates unbound is false (steroids are carrier-bound, extending half-life); and pairing insulin with transcription and aldosterone with cAMP reverses the two mechanisms.`
           }
         ]
@@ -126,10 +129,14 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
 
 **Solution:**
 1. No PTH → loss of bone resorption, less renal $Ca^{2+}$ reabsorption, less vitamin-D activation → **serum $Ca^{2+}$ falls** (hypocalcemia). ✓
-2. Low $Ca^{2+}$ increases neuromuscular excitability → **tetany** (muscle cramps/spasms, e.g., Chvostek/Trousseau signs).
+2. Low $Ca^{2+}$ increases neuromuscular excitability → **tetany** (muscle cramps/spasms).
 
 **High-yield connection:** PTH is the dominant minute-to-minute $Ca^{2+}$ regulator. Without it, calcitonin cannot compensate (calcitonin only lowers $Ca^{2+}$), so hypocalcemia results. Hyperparathyroidism does the opposite: bone pain, kidney stones, "stones, bones, groans."
-</details>`
+</details>
+
+<!-- yield:low -->
+- Bedside signs of hypocalcemic tetany: **Chvostek's sign** (facial twitch when the facial nerve is tapped) and **Trousseau's sign** (carpal spasm under an inflated blood-pressure cuff).
+<!-- /yield -->`
     },
     {
       id: 'os5-summary',
@@ -140,7 +147,11 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
 - Use tropic vs. target hormone pattern to localize disease (primary vs. secondary)
 - Peptide hormones: surface receptors + second messengers (fast). Steroids: nuclear receptors + transcription (slow).
 - Insulin lowers glucose (fed); glucagon raises it (fasting) — judge by the RATIO.
-- PTH raises Ca$^{2+}$; Calcitonin lowers Ca$^{2+}$ (opposite effects)`
+- PTH raises Ca$^{2+}$; Calcitonin lowers Ca$^{2+}$ (opposite effects)
+
+<!-- yield:low -->
+- Low-yield extras: Chvostek and Trousseau signs as the bedside tests for hypocalcemic tetany
+<!-- /yield -->`
     }
   ]
 };

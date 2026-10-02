@@ -39,7 +39,7 @@ $$\\text{Blood Pressure} = \\text{CO} \\times \\text{Total Peripheral Resistance
 
 $$\\text{SA node} \\to \\text{AV node (delay)} \\to \\text{Bundle of His} \\to \\text{Purkinje fibers}$$
 
-- **SA node** = pacemaker (~60–100 bpm intrinsic rate); sets sinus rhythm.
+- **SA node** = pacemaker: fastest intrinsic rate (~100 bpm); ~60–100 bpm at rest under vagal tone; sets sinus rhythm.
 - **AV node delay** (~0.1 s) lets atria finish emptying before ventricles contract.
 - ECG: **P wave** = atrial depolarization; **QRS** = ventricular depolarization (masks atrial repolarization); **T wave** = ventricular repolarization.
 
@@ -73,20 +73,23 @@ $$J_v \\propto (P_c - P_i) - (\\pi_c - \\pi_i)$$
         questions: [
           {
             question: `During exercise, cardiac output increases primarily through:`,
-            options: [`Increased heart rate and stroke volume`, `Increased stroke volume with heart rate unchanged`, `Decreased peripheral resistance only`, `Increased blood vessel diameter only`],
+            options: [`Increased heart rate and stroke volume`, `Increased stroke volume with heart rate unchanged`, `Decreased total peripheral resistance only`, `Increased muscle arteriole diameter only`],
             correctAnswer: 0,
-            explanation: `CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise; heart rate does not stay unchanged.`
+            yield: 'HIGH',
+            explanation: `CO = HR $\\times$ SV. During exercise, sympathetic activation increases both HR (via SA node stimulation) and SV (via increased contractility and venous return). Both contribute to the ~4-5x increase in CO during vigorous exercise; heart rate does not stay unchanged. Muscle arterioles do dilate and total peripheral resistance does fall, but those changes redirect flow and aid venous return; the rise in CO itself comes from the pump (HR × SV).`
           },
           {
             question: `An arteriole vasoconstricts so that its radius decreases to one-half its original value. Assuming flow is driven by the same pressure gradient, resistance to flow through that vessel:`,
             options: [`Increases 16-fold`, `Increases 2-fold`, `Increases 4-fold`, `Decreases 16-fold`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `By Poiseuille's law $R \\propto 1/r^4$. Halving the radius gives $(1/2)^4 = 1/16$ of the radius-term, i.e. resistance rises 16×. This $r^4$ dependence is why small arteriolar changes produce large blood-pressure swings.`
           },
           {
             question: `A patient with severe liver disease has very low plasma albumin. The most direct cardiovascular consequence is:`,
             options: [`Edema due to reduced capillary oncotic pressure`, `Increased capillary reabsorption of interstitial fluid`, `Hypertension from increased blood viscosity`, `Reduced cardiac preload from blood loss`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Albumin generates plasma oncotic pressure ($\\pi_c$), which normally pulls fluid back into capillaries at the venular end. Low albumin → low $\\pi_c$ → filtration exceeds reabsorption → fluid accumulates in the interstitium (edema/ascites). This links cardiovascular Starling forces to hepatic and renal pathology.`
           }
         ]

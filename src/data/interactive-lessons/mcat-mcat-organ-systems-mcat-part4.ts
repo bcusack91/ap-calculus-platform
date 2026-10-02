@@ -27,7 +27,7 @@ $$\\text{Glomerulus} \\to \\text{PCT} \\to \\text{Loop of Henle} \\to \\text{DCT
 | Hormone | Source | Effect |
 |---------|--------|--------|
 | **ADH** (vasopressin) | Posterior pituitary | Inserts aquaporins → H$_2$O reabsorption in collecting duct |
-| **Aldosterone** | Adrenal cortex | Na$^+$ reabsorption (+ K$^+$ secretion) in DCT |
+| **Aldosterone** | Adrenal cortex | Na$^+$ reabsorption (+ K$^+$ secretion) in late DCT/collecting duct |
 | **ANP** | Heart (atria) | Na$^+$ excretion, opposes RAAS |
 
 ### GFR
@@ -47,7 +47,7 @@ $$P_{net} = (P_{GC} - P_{BS}) - (\\pi_{GC} - \\pi_{BS})$$
 - $\\pi_{GC}$ = glomerular oncotic pressure (pulls IN, ~30 mmHg)
 - $\\pi_{BS}$ ≈ 0 (essentially protein-free filtrate)
 
-GFR is regulated by adjusting afferent vs. efferent arteriole tone — this is the single most testable renal concept.
+GFR is regulated by adjusting afferent vs. efferent arteriole tone — this is the single most testable renal concept. Dilating the afferent arteriole (or constricting the efferent one) raises glomerular capillary pressure and GFR; constricting the afferent arteriole lowers both.
 
 ### Renal Clearance & the Filtration Equation
 
@@ -58,6 +58,7 @@ where $U_x$ = urine concentration of substance x, $V$ = urine flow rate, $P_x$ =
 - **Inulin** is freely filtered, not reabsorbed or secreted → its clearance EQUALS GFR.
 - **PAH** (para-aminohippurate) is filtered AND maximally secreted → its clearance estimates renal plasma flow (RPF).
 - If $C_x >$ GFR → net secretion. If $C_x <$ GFR → net reabsorption.
+
 
 ### Countercurrent Multiplier (How Concentrated Urine Is Made)
 
@@ -71,20 +72,23 @@ The thick ascending limb actively pumps $Na^{+}/K^{+}/2Cl^{-}$ out (impermeable 
         questions: [
           {
             question: `A patient with diabetes insipidus (ADH deficiency) would present with:`,
-            options: [`Large volumes of dilute urine and thirst`, `Small volumes of concentrated urine`, `Glucosuria from high blood glucose`, `Dilutional hyponatremia from water retention`],
+            options: [`Copious dilute urine and thirst`, `Small volumes of concentrated urine`, `Glucosuria from high blood glucose`, `Dilutional hyponatremia from water retention`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Without ADH, aquaporins aren't inserted in the collecting duct → water can't be reabsorbed → large volumes of very dilute urine (polyuria) + excessive thirst (polydipsia). Not to be confused with diabetes mellitus, which causes high blood glucose and glucosuria! Water retention with dilutional hyponatremia is the picture of ADH EXCESS (SIADH), the opposite condition.`
           },
           {
             question: `Constriction of the EFFERENT arteriole (e.g., by angiotensin II at moderate levels) will, in the short term:`,
             options: [`Increase glomerular capillary pressure and increase GFR`, `Decrease glomerular capillary pressure and decrease GFR`, `Have no effect on GFR, since filtration is autoregulated`, `Decrease both renal blood flow and GFR proportionally`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The efferent arteriole is downstream of the glomerulus. Constricting it dams blood in the glomerular capillary, raising $P_{GC}$ → higher net filtration pressure → higher GFR (even though total renal blood flow falls). This is why ACE inhibitors can drop GFR in renal artery stenosis: they remove angiotensin II's efferent constriction.`
           },
           {
             question: `Inulin clearance is 120 mL/min. A drug X has a clearance of 480 mL/min. What can you conclude about drug X?`,
             options: [`It is filtered and net secreted by the tubule`, `It is freely filtered and net reabsorbed`, `It is filtered but neither secreted nor reabsorbed`, `It binds plasma proteins and cannot be filtered`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Inulin clearance = GFR = 120 mL/min. Because $C_X$ (480) far exceeds GFR, the kidney must be adding X to the tubular fluid beyond filtration → net secretion. Clearance above GFR always implies secretion; below GFR implies reabsorption. A substance filtered but neither secreted nor reabsorbed would have a clearance equal to GFR, like inulin itself.`
           }
         ]
@@ -130,7 +134,7 @@ Clearance (30) < GFR (120) → the tubule reabsorbs most of the filtered substan
 1. The thick ascending limb normally pumps NaCl into the interstitium to build the medullary gradient.
 2. Blocking the cotransporter → less NaCl deposited → the medullary gradient COLLAPSES.
 3. Without a steep gradient, the collecting duct cannot extract water even when ADH is present.
-4. Result: large volume of dilute urine (powerful diuresis), plus $K^{+}$ wasting ($K^{+}$ no longer recycled). ✓
+4. Result: large volume of dilute urine (powerful diuresis), plus $K^{+}$ wasting (more $Na^{+}$ and fluid reach the collecting duct, where aldosterone-driven $Na^{+}$ reabsorption is coupled to $K^{+}$ secretion). ✓
 
 **High-yield connection:** This is why loop diuretics are the strongest class — they attack the gradient itself, not just one segment's transport.
 </details>`
@@ -143,7 +147,8 @@ Clearance (30) < GFR (120) → the tubule reabsorbs most of the filtered substan
 - Nephron: Glomerulus → PCT → Loop of Henle → DCT → Collecting duct
 - Descending loop: water out. Ascending loop: salt out (countercurrent multiplier).
 - ADH: water reabsorption. Aldosterone: Na$^+$ reabsorption + K$^+$ secretion.
-- 180 L/day filtered but only ~1.5 L urine (99% reabsorbed!)`
+- 180 L/day filtered but only ~1.5 L urine (99% reabsorbed!)
+- Clearance: inulin clearance = GFR; PAH (filtered and maximally secreted) clearance ≈ renal plasma flow`
     }
   ]
 };

@@ -43,7 +43,12 @@ The fluid lining each alveolus creates surface tension that resists expansion. F
 $$P = \\frac{2T}{r}$$
 
 - Smaller radius → **higher** collapsing pressure: without correction, small alveoli would empty into big ones.
-- **Surfactant** (a phospholipid, mainly dipalmitoylphosphatidylcholine, from type II cells) lowers surface tension — and lowers it MORE where the surfactant molecules are crowded (small alveoli) — stabilizing alveoli of different sizes and increasing compliance.
+- **Surfactant** (a phospholipid mixture from type II cells) lowers surface tension — and lowers it MORE where the surfactant molecules are crowded (small alveoli) — stabilizing alveoli of different sizes and increasing compliance.
+
+<!-- yield:low -->
+- The main surfactant phospholipid is dipalmitoylphosphatidylcholine (DPPC).
+<!-- /yield -->
+
 - Premature infants lacking surfactant develop **neonatal respiratory distress syndrome**: stiff lungs, collapsing alveoli.
 
 ### Lung Volumes & Capacities (capacities = sums of volumes)
@@ -74,20 +79,23 @@ Rapid shallow breathing wastes a larger fraction of each breath on dead space: 2
         questions: [
           {
             question: `During quiet inspiration, air enters the lungs because:`,
-            options: [`Diaphragm contraction pushes air downward into the alveoli`, `Thoracic expansion drops alveolar pressure below atmospheric`, `Elastic recoil of the lungs actively draws air into the alveoli`, `Active transport proteins move air across the alveolar membrane`],
+            options: [`Diaphragm contraction raises thoracic pressure, pushing air into the alveoli`, `Thoracic expansion drops alveolar pressure below atmospheric`, `Elastic recoil of the lungs actively draws air into the alveoli`, `Active transport proteins move air across the alveolar membrane`],
             correctAnswer: 1,
-            explanation: `Breathing is Boyle's law: the diaphragm and external intercostals expand the thorax, alveolar pressure falls below atmospheric, and air flows passively down the pressure gradient. The muscles act on VOLUME, not by pushing air; pressure and flow follow. The lung's elastic recoil pulls inward and powers quiet expiration, not inspiration, and gases are never actively transported.`
+            yield: 'ULTRA_HIGH',
+            explanation: `Breathing is Boyle's law: the diaphragm and external intercostals expand the thorax, alveolar pressure falls below atmospheric, and air flows passively down the pressure gradient. The muscles act on VOLUME, not by raising pressure; alveolar pressure FALLS and flow follows. The lung's elastic recoil pulls inward and powers quiet expiration, not inspiration, and gases are never actively transported.`
           },
           {
             question: `A stab wound opens the right pleural cavity to the atmosphere. The right lung collapses because:`,
             options: [`Air enters at positive pressure and squeezes the lung`, `The diaphragm on that side loses its ability to contract`, `Intrapleural pressure rises to atmospheric, freeing lung recoil`, `Surfactant escapes through the wound, raising surface tension`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The lung is held expanded only by the negative (sub-alveolar) intrapleural pressure coupling it to the chest wall. Venting the pleural space to atmosphere abolishes that pressure difference, and the lung's own inward elastic recoil — always present — collapses it. The diaphragm and surfactant are untouched.`
           },
           {
             question: `Which measurement CANNOT be obtained from simple spirometry?`,
             options: [`Tidal volume`, `Forced expiratory volume in one second`, `Inspiratory reserve volume`, `Functional residual capacity`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `FRC = ERV + RV, and residual volume can never be exhaled into a spirometer, so any capacity containing RV (FRC, TLC) requires helium-dilution or body-plethysmography methods. TV, IRV, ERV, VC, and FEV1 are all exhalable/inhalable air movements a spirometer records directly.`
           }
         ]
@@ -144,7 +152,11 @@ Rapid shallow breathing wastes a larger fraction of each breath on dead space: 2
 - Breathing is Boyle's law: muscles change thoracic volume → alveolar pressure → passive airflow. Quiet expiration is passive elastic recoil.
 - Negative intrapleural pressure couples lung to chest wall; pneumothorax breaks the seal and recoil collapses the lung.
 - Laplace ($P = 2T/r$) predicts small-alveolus collapse; surfactant lowers surface tension preferentially in small alveoli.
-- Alveolar ventilation $= (TV - V_{dead}) \\times f$; deep slow breathing beats rapid shallow breathing. Spirometry cannot measure RV, FRC, or TLC.`
+- Alveolar ventilation $= (TV - V_{dead}) \\times f$; deep slow breathing beats rapid shallow breathing. Spirometry cannot measure RV, FRC, or TLC.
+
+<!-- yield:low -->
+- Low-yield extras: the main surfactant phospholipid is dipalmitoylphosphatidylcholine (DPPC).
+<!-- /yield -->`
     }
   ]
 };

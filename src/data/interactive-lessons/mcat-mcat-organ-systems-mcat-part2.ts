@@ -45,7 +45,7 @@ The curve plots **% Hb saturation (y)** vs. **$P_{O_2}$ (x)** and is **sigmoidal
 
 The flat upper plateau means modest drops in alveolar $P_{O_2}$ (altitude, mild lung disease) barely lower loading. The **steep middle** means small $P_{O_2}$ drops in tissue cause large $O_{2}$ release — efficient unloading exactly where metabolism is high.
 
-### The Bohr Effect (MCAT FAVORITE)
+### Right-Shift Factors, incl. the Bohr Effect (MCAT FAVORITE)
 
 Conditions that RIGHT-shift the curve (raise $P_{50}$, lower affinity, promote O$_2$ unloading):
 - Increased CO$_2$ (metabolically active tissue)
@@ -87,18 +87,21 @@ $$\\uparrow P_{CO_2} \\to \\uparrow \\text{H}^+ \\text{ in CSF} \\to \\text{cent
             question: `During intense exercise, the O$_2$-hemoglobin dissociation curve shifts RIGHT because:`,
             options: [`Rising CO$_2$, acidity, and heat lower Hb's O$_2$ affinity`, `Working muscles consume less oxygen during intense exercise`, `Hemoglobin concentration increases in working muscle capillaries`, `The lungs load more oxygen onto each hemoglobin molecule`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Active muscles produce CO$_2$, lactic acid (lower pH), and heat. All three right-shift the curve (Bohr effect), lowering Hb's $O_{2}$ affinity so more $O_{2}$ is released to working muscles exactly where it is needed. The claim that muscles consume less oxygen is the opposite of reality; Hb concentration and lung loading do not change the curve's position.`
           },
           {
             question: `A climber at 4500 m has a chronically low arterial $P_{O_2}$. Over days, RBCs upregulate 2,3-BPG. The adaptive benefit of increased 2,3-BPG is best described as:`,
             options: [`It right-shifts the curve, improving $O_{2}$ unloading in tissues`, `It left-shifts the curve so the lungs load $O_{2}$ more easily`, `It increases the total number of hemoglobin molecules per RBC`, `It stimulates erythropoietin release, raising the hematocrit`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `2,3-BPG binds deoxyhemoglobin and stabilizes the low-affinity (T) state, right-shifting the curve. On the steep portion of the curve this markedly improves $O_{2}$ delivery to tissues despite the low arterial $P_{O_2}$. A left shift would hold $O_{2}$ more tightly and worsen unloading — the wrong direction. 2,3-BPG changes affinity, not Hb quantity, and it does not trigger erythropoietin release; raised EPO is a separate kidney response to hypoxia.`
           },
           {
             question: `A patient with pulmonary fibrosis has thickened alveolar membranes. By Fick's law, which intervention would MOST directly compensate for impaired $O_{2}$ diffusion?`,
             options: [`Raising the inspired $O_{2}$ fraction`, `Lowering the patient's body temperature`, `Decreasing the alveolar surface area`, `Reducing hemoglobin concentration`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Fick's law: $V_{gas} \\propto A \\cdot (P_1 - P_2)/T$. Fibrosis raises $T$ (thickness), reducing flux. You cannot easily thin the membrane, but supplemental $O_{2}$ raises alveolar $P_{O_2}$, increasing the alveolar–capillary $(P_1 - P_2)$ gradient to partially offset the larger $T$. Decreasing surface area reduces $A$ and worsens exchange; temperature and Hb concentration do not appear in Fick's diffusion equation.`
           }
         ]
@@ -152,7 +155,7 @@ $$\\uparrow P_{CO_2} \\to \\uparrow \\text{H}^+ \\text{ in CSF} \\to \\text{cent
 
 - Gas exchange driven by partial pressure gradients (Fick's law: $V_{gas} \\propto A(P_1-P_2)/T$)
 - O$_2$ transport: 98.5% on hemoglobin (cooperative binding, sigmoidal curve)
-- Bohr effect: right shift = more O$_2$ release (higher CO$_2$, lower pH, higher temp, ↑2,3-BPG)
+- Right-shift factors (incl. the Bohr effect): right shift = more O$_2$ release (higher CO$_2$, lower pH, higher temp, ↑2,3-BPG)
 - CO$_2$ transport: mostly as bicarbonate (70%); chloride shift maintains charge balance
 - Ventilation is driven mainly by $CO_{2}/pH$ via central chemoreceptors, not by $O_{2}$`
     }

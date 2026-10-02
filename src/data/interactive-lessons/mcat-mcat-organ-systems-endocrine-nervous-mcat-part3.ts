@@ -42,7 +42,12 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
 - **Cortex** (steroids, zones from outside in — "salt, sugar, sex"):
   - **Aldosterone** (mineralocorticoid): Na$^+$ retention, K$^+$/H$^+$ excretion — controlled by RAAS, not ACTH.
   - **Cortisol** (glucocorticoid, via CRH → ACTH): gluconeogenesis, protein/fat mobilization, vascular tone permissiveness, **immune suppression** (why it's a drug); the long-term stress hormone with a morning-peaked circadian rhythm.
-  - Weak androgens (DHEA).
+  - Weak androgens.
+
+<!-- yield:low -->
+  - The main adrenal androgen is DHEA.
+<!-- /yield -->
+
 - **Medulla** (modified sympathetic ganglion): **epinephrine** — the short-term stress broadcast.
 - **Stress response, two waves:** seconds = sympathetic + epinephrine (HR, glucose, blood to muscle); minutes-to-days = HPA axis + cortisol (sustained fuel mobilization at the cost of immunity, healing, memory circuits).
 
@@ -61,18 +66,21 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
             question: `Hours into strenuous fasting exercise, blood glucose remains stable. Which hormone pattern maintains it?`,
             options: [`Rising insulin that drives glucose uptake into working muscle`, `Low insulin with high glucagon, epinephrine, and cortisol`, `High insulin and high glucagon acting synergistically on muscle`, `Low glucagon with suppressed epinephrine to spare glycogen`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Fasting exercise is a mobilization state: insulin falls (sparing glucose for insulin-independent tissues like brain and working muscle, whose contraction-stimulated GLUT4 uptake does not need insulin), while glucagon and epinephrine drive hepatic glycogenolysis and gluconeogenesis, with cortisol supporting substrate supply. Rising insulin would push storage and hypoglycemia — exactly wrong — and suppressing glucagon or epinephrine would remove the very signals that mobilize hepatic glucose. Four counter-regulatory hormones (glucagon, epinephrine, cortisol, plus growth hormone) versus one storage hormone is the design.`
           },
           {
             question: `A patient in a region with severely iodine-deficient soil develops a large goiter with LOW thyroid hormone levels. The gland enlarged because:`,
             options: [`Low T4 raised TRH, which directly stimulated follicular growth`, `Calcitonin secretion from C cells expanded the gland`, `Loss of T4 feedback raised TSH, which stimulated gland growth`, `Iodine deficiency triggers autoimmune destruction that swells the gland`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `No iodine → no T4/T3 → the pituitary never receives its inhibitory feedback → TSH secretion climbs relentlessly. TSH is trophic as well as tropic: it drives both hormone synthesis (futile without iodine) and tissue growth — hence a big, underproducing gland. TRH does rise too, but it acts on the pituitary thyrotrophs, not directly on thyroid follicles. Feedback loops explain gland SIZE as reliably as they explain hormone levels.`
           },
           {
             question: `During thyroid surgery, all four parathyroid glands are accidentally removed. Within days the patient develops muscle spasms and perioral tingling. The mechanism is:`,
             options: [`Loss of calcitonin causing calcium to accumulate in neurons`, `Falling plasma calcium increasing nerve excitability (tetany)`, `Rising phosphate directly stimulating muscle contraction`, `Loss of PTH lowering potassium excretion, depolarizing muscle`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Without PTH, bone resorption, renal calcium reclamation, and vitamin D activation all fade — plasma Ca$^{2+}$ falls. Extracellular calcium normally stabilizes voltage-gated Na$^+$ channels; hypocalcemia lowers their effective threshold, so nerves fire spontaneously: tingling, cramps, tetany. Calcitonin loss is clinically silent — PTH is the hormone that defends calcium.`
           }
         ]
@@ -90,7 +98,7 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
 
 **Solution:**
 1. No insulin → muscle and fat cannot insert GLUT4 → glucose stays in blood; cells run a fasting program despite hyperglycemia.
-2. Unopposed glucagon: liver adds MORE glucose (gluconeogenesis) and shunts liberated fatty acids to **ketone bodies** → ketoacidosis (metabolic acidosis → Kussmaul breathing, from the respiratory lesson).
+2. Unopposed glucagon: liver adds MORE glucose (gluconeogenesis) and shunts liberated fatty acids to **ketone bodies** → ketoacidosis (metabolic acidosis → Kussmaul breathing: deep, rapid breaths that blow off CO$_2$ to partially compensate).
 3. Weight loss: fat and muscle are being catabolized, and glucose above the renal $T_m$ spills into urine, wasting calories and water (renal lesson). ✓
 
 **Integration note:** one hormone's absence links four organ systems — the MCAT's favorite kind of question.
@@ -128,7 +136,11 @@ PTH is the hormone that matters clinically: losing the parathyroids (thyroid sur
 - Thyroid: TRH → TSH → T4/T3 (nuclear receptors) sets metabolic rate and enables CNS development; iodine deficiency → low T4, high TSH, goiter. Feedback explains gland size.
 - Calcium: PTH (bone resorption, renal reabsorption, vitamin D activation) defends low Ca²⁺; calcitonin is a minor brake. No PTH → hypocalcemic tetany.
 - Adrenal: cortex = aldosterone (RAAS-run), cortisol (HPA, long-term stress, immunosuppression), androgens; medulla = epinephrine (seconds). Stress = two waves, two mechanisms, two timescales.
-- GH acts via IGF-1 (gigantism vs. acromegaly by growth-plate status); prolactin is dopamine-inhibited — stalk section raises it uniquely.`
+- GH acts via IGF-1 (gigantism vs. acromegaly by growth-plate status); prolactin is dopamine-inhibited — stalk section raises it uniquely.
+
+<!-- yield:low -->
+- Low-yield extras: the main adrenal androgen is DHEA
+<!-- /yield -->`
     }
   ]
 };

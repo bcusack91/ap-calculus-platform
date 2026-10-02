@@ -64,18 +64,21 @@ where $C_a$ and $C_v$ are arterial and venous O$_2$ contents. Rearranged, this m
             question: `A researcher measures a subject's O2 consumption as 250 mL/min, arterial O2 content as 200 mL O2 per liter of blood, and venous O2 content as 150 mL O2 per liter. The subject's cardiac output is:`,
             options: [`2.5 L/min`, `10 L/min`, `5 L/min`, `7.5 L/min`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Fick principle: $CO = \\frac{\\text{O}_2 \\text{ consumption}}{C_a - C_v} = \\frac{250}{200 - 150} = \\frac{250}{50} = 5$ L/min. Each liter of blood drops off 50 mL of O2, so delivering 250 mL/min requires 5 L/min of flow — a normal resting output.`
           },
           {
             question: `On a left-ventricular pressure–volume loop, a drug that purely increases contractility (no change in preload or afterload) would:`,
             options: [`Shift the right edge of the loop rightward, increasing EDV`, `Decrease the end-systolic volume, widening the loop leftward`, `Raise the pressure at which the aortic valve opens`, `Make the loop traverse clockwise instead of counterclockwise`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Higher contractility ejects blood more completely at the same afterload: ESV falls, so the loop's LEFT edge shifts left and stroke volume (loop width) grows. EDV (right edge) is set by preload, and aortic-valve opening pressure is set by afterload — both unchanged. Loops always run counterclockwise in a functioning ventricle.`
           },
           {
             question: `A patient in septic shock has warm, flushed skin, cardiac output of 8 L/min (elevated), and dangerously low blood pressure. The hemodynamic explanation is:`,
             options: [`Vasodilation has collapsed total peripheral resistance`, `Blood loss has decreased preload and stroke volume`, `Pump failure has depressed myocardial contractility`, `Increased blood viscosity has raised resistance to flow`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `$MAP = CO \\times TPR$. With CO elevated, low MAP forces the conclusion that TPR has collapsed — inflammatory mediators (e.g., nitric oxide) cause profound arteriolar dilation body-wide. Warm skin confirms dilated cutaneous beds. Hypovolemic and cardiogenic shock would instead show LOW output with cool, clamped-down skin, and raised viscosity would increase, not collapse, resistance.`
           }
         ]

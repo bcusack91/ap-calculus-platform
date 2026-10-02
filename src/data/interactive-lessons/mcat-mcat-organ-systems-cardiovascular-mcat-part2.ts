@@ -26,7 +26,11 @@ $$MAP \\approx P_{dias} + \\frac{1}{3}(P_{sys} - P_{dias}), \\qquad \\text{Pulse
 
 - MAP is weighted toward diastolic because the heart spends about two-thirds of each cycle in diastole at rest.
 - Pulse pressure rises with larger stroke volume or **stiffer arteries** (less elastic damping — why isolated systolic hypertension appears with age).
-- Elastic arteries act as a **pressure reservoir** (Windkessel effect): they stretch during systole and recoil during diastole, keeping flow continuous.
+- Elastic arteries act as a **pressure reservoir**: they stretch during systole and recoil during diastole, keeping flow continuous.
+
+<!-- yield:low -->
+- This elastic-reservoir behavior of the large arteries is called the **Windkessel effect**.
+<!-- /yield -->
 
 ### Poiseuille's Law — Radius Rules
 
@@ -67,18 +71,21 @@ Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 �
             question: `A drug dilates arterioles throughout the body, doubling their average radius. Ignoring reflexes, resistance in those arterioles becomes approximately:`,
             options: [`One-half its original value`, `One-quarter its original value`, `One-eighth its original value`, `One-sixteenth its original value`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Poiseuille: $R \\propto 1/r^4$. Doubling $r$ gives $R_{new} = R/2^4 = R/16$. The fourth-power dependence is why arteriolar smooth muscle exerts such powerful control over blood pressure — and why the MCAT loves this calculation.`
           },
           {
             question: `Blood moves most slowly through the capillaries because:`,
             options: [`Capillaries' tiny radius makes resistance highest there`, `Their combined cross-sectional area is the largest anywhere`, `Capillary walls absorb most of the pressure energy`, `Most blood volume is stored in the capillaries at rest`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `By continuity, $v = Q/A_{total}$. Though each capillary is narrow, billions in parallel give the greatest TOTAL cross-sectional area, so velocity is lowest — ideal for exchange. (Most blood volume at rest is in the VEINS, not capillaries, and the largest pressure drop occurs in the arterioles.)`
           },
           {
             question: `A patient's blood pressure is 130/70 mmHg. Their mean arterial pressure is closest to:`,
             options: [`100 mmHg`, `70 mmHg`, `90 mmHg`, `110 mmHg`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `$MAP \\approx 70 + \\frac{1}{3}(130-70) = 70 + 20 = 90$ mmHg. MAP is NOT the simple average (that would be 100) because diastole lasts roughly twice as long as systole at resting heart rates.`
           }
         ]
@@ -96,11 +103,15 @@ Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 �
 
 **Solution:**
 1. If TPR were constant, quadrupling CO would nearly quadruple MAP — it doesn't.
-2. Exercising skeletal-muscle arterioles dilate massively (local metabolites: CO2, H$^+$, adenosine, K$^+$), opening huge parallel beds → **TPR falls to roughly a quarter** of resting value.
+2. Exercising skeletal-muscle arterioles dilate massively (local metabolites: CO2, H$^+$, adenosine, K$^+$), opening huge parallel beds → **TPR falls to roughly a third to a quarter** of resting value (MAP rises only modestly because CO quadruples).
 3. $MAP = 20 \\times TPR_{new} \\approx$ only modestly above resting MAP. ✓
 
-**Takeaway:** Local metabolic vasodilation in active muscle dominates sympathetic vasoconstriction there ("functional sympatholysis"); the net effect is high flow at nearly constant pressure.
+**Takeaway:** Local metabolic vasodilation in active muscle overrides sympathetic vasoconstriction there; the net effect is high flow at nearly constant pressure.
 </details>
+
+<!-- yield:low -->
+- The override of sympathetic vasoconstriction by local metabolites in exercising muscle is called **functional sympatholysis**.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Series vs. parallel resistance calculation</b></summary>
@@ -135,7 +146,11 @@ Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 �
 - $MAP \\approx P_{dias} + \\frac{1}{3}(\\text{pulse pressure})$ — weighted toward diastole.
 - Poiseuille: $R \\propto \\eta L / r^4$ — radius dominates; arterioles are the resistance (and largest pressure-drop) site.
 - Parallel organ beds keep total resistance low; opening beds lowers TPR, closing them raises it.
-- $v = Q / A_{total}$: capillaries have the largest total area → slowest velocity → best exchange. Veins are the volume reservoir (~2/3 of blood).`
+- $v = Q / A_{total}$: capillaries have the largest total area → slowest velocity → best exchange. Veins are the volume reservoir (~2/3 of blood).
+
+<!-- yield:low -->
+- Low-yield extras: the arterial pressure-reservoir effect is named the Windkessel effect; metabolic override of sympathetic constriction in exercising muscle is named functional sympatholysis
+<!-- /yield -->`
     }
   ]
 };

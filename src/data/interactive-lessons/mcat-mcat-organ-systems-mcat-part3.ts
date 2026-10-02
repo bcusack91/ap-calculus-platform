@@ -58,7 +58,11 @@ Flow: fatty/acidic chyme enters duodenum → **secretin + CCK** released → pan
 
 ### Carbohydrate Absorption Mechanism
 
-Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport powered by the $Na^{+}$ gradient from the basolateral $Na^{+}/K^{+}$ ATPase), then exit to blood via **GLUT2**. Fructose enters by facilitated diffusion via **GLUT5**. This $Na^{+}$-coupled uptake is why oral rehydration therapy pairs glucose with sodium.`
+Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport powered by the $Na^{+}$ gradient from the basolateral $Na^{+}/K^{+}$ ATPase), then exit to blood via **GLUT2**. Fructose enters by facilitated diffusion. This $Na^{+}$-coupled uptake is why oral rehydration therapy pairs glucose with sodium.
+
+<!-- yield:low -->
+- Fructose's apical facilitated-diffusion transporter is **GLUT5**.
+<!-- /yield -->`
     },
     {
       id: 'os3-quiz1',
@@ -70,18 +74,21 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
             question: `Bile salts aid fat digestion by:`,
             options: [`Emulsifying fat globules into smaller droplets`, `Hydrolyzing triglycerides into free fatty acids`, `Neutralizing acidic chyme entering the duodenum`, `Converting pepsinogen into active pepsin`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Bile salts are amphipathic — they break large fat globules into smaller droplets (emulsification), vastly increasing surface area for pancreatic lipase. Bile does NOT chemically digest fat — hydrolyzing triglycerides is lipase's job; bile physically prepares fat. Neutralizing acidic chyme is bicarbonate's job; pepsinogen is activated by HCl.`
           },
           {
             question: `Surgical removal of the terminal ileum would most likely cause which two deficiencies, and why?`,
-            options: [`Vitamin B$_{12}$ deficiency and bile-salt malabsorption, because both are taken up in the ileum`, `Iron and calcium deficiency, because both are absorbed in the ileum`, `Protein and carbohydrate malabsorption, because all enzymes act in the ileum`, `Water-soluble vitamin loss only, because the ileum absorbs all vitamins`],
+            options: [`Vitamin B$_{12}$ and bile salts, both of which are absorbed in the ileum`, `Iron and calcium deficiency, because both are absorbed in the ileum`, `Protein and carbohydrate malabsorption, because all enzymes act in the ileum`, `Water-soluble vitamin loss only, because the ileum absorbs all vitamins`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → $B_{12}$ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed mainly in the duodenum, not the ileum; most macronutrient absorption occurs in the jejunum; and the ileum does not absorb all vitamins.`
           },
           {
             question: `A patient takes a proton-pump inhibitor that strongly suppresses parietal-cell HCl secretion. Which hormone level rises, and which digestive process does the drug impair?`,
             options: [`Gastrin rises; conversion of pepsinogen to pepsin is impaired`, `Somatostatin rises; pancreatic lipase secretion is impaired`, `Secretin rises; bile-salt emulsification of fat is impaired`, `Gastrin falls; parietal-cell intrinsic factor secretion is impaired`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Acid normally suppresses gastrin, partly by stimulating somatostatin release from D cells. Blocking acid removes that brake: somatostatin FALLS and G cells release MORE gastrin (hypergastrinemia), so a falling gastrin reverses the feedback logic. The drug's low gastric acid impairs conversion of pepsinogen to active pepsin, which needs an acidic pH. Less acid reaches the duodenum, so secretin falls rather than rises. Pancreatic lipase and bile-salt emulsification depend on CCK and the gallbladder, not on gastric acid, and PPIs do not block intrinsic factor secretion.`
           }
         ]
@@ -140,7 +147,11 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
 - Stomach: HCl (parietal cells), pepsinogen (chief cells), gastrin (G cells)
 - Proteases secreted as zymogens; trypsin is the master activator (pancreatitis = self-digestion)
 - Hormones: gastrin ↑acid; secretin ↑bicarbonate; CCK → bile + enzymes + slows emptying
-- Bile emulsifies fat (liver-made, gallbladder-stored); B$_{12}$ + bile salts absorbed in ileum`
+- Bile emulsifies fat (liver-made, gallbladder-stored); B$_{12}$ + bile salts absorbed in ileum
+
+<!-- yield:low -->
+- Low-yield extras: fructose enters enterocytes through the GLUT5 transporter
+<!-- /yield -->`
     }
   ]
 };
