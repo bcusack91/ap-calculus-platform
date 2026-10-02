@@ -52,7 +52,12 @@ Migratory cells that delaminate from the neural tube edges → form **PNS gangli
 
 ### Induction & Determination
 
-- **Induction**: one tissue secretes signals (e.g., notochord/organizer → noggin and chordin, which block BMP) that direct the fate of a neighbor (neural plate). Loss of an inducer → loss of the induced structure.
+- **Induction**: one tissue secretes signals (e.g., the notochord/organizer signaling the overlying ectoderm) that direct the fate of a neighbor (neural plate). Loss of an inducer → loss of the induced structure.
+
+<!-- yield:low -->
+- The organizer's neural inducers are noggin and chordin, which block BMP signaling; later, notochord Sonic hedgehog patterns the ventral neural tube.
+<!-- /yield -->
+
 - **Determination** precedes **differentiation**: a cell is *committed* (determined) before it visibly *specializes* (differentiates). Commitment can be revealed by transplant experiments.
 
 ### Fetal Circulation Shunts (high-yield)
@@ -77,18 +82,21 @@ These close at birth when the lungs inflate and pressures shift; a patent ductus
             question: `In a frog embryo, a researcher surgically removes the cells that will form the notochord at the start of gastrulation, before they can signal to the overlying ectoderm. The most likely result is:`,
             options: [`Dorsal ectoderm stays non-neural, so no neural plate appears`, `The neural plate forms early from mesoderm instead of ectoderm`, `Two neural tubes form because lateral inhibition is lost`, `The overlying ectoderm transdifferentiates into endoderm`],
             correctAnswer: 0,
-            explanation: `The notochord and the organizer mesoderm it arises from are the classic inducers of neurulation: they secrete BMP antagonists (e.g., noggin and chordin) that let the overlying ectoderm become the neural plate/tube. Later, notochord Sonic hedgehog patterns the ventral neural tube. Remove the inducer and the induced structure fails to form. The neural plate is ectodermal (not mesodermal), and removing an inducer causes loss, not duplication, of the structure.`
+            yield: 'HIGH',
+            explanation: `The notochord and the organizer mesoderm it arises from are the classic inducers of neurulation: they secrete signals that let the overlying ectoderm become the neural plate/tube. Remove the inducer and the induced structure fails to form. The neural plate is ectodermal (not mesodermal), and removing an inducer causes loss, not duplication, of the structure.`
           },
           {
             question: `A patient is born with the adrenal cortex intact but a defective adrenal medulla. From a developmental standpoint, which other tissue is most likely affected by the same underlying defect?`,
-            options: [`Melanocytes, because both derive from neural crest`, `Skeletal muscle, because both derive from mesoderm`, `Thyroid follicles, because both derive from endoderm`, `Kidney tubules, because both derive from mesoderm`],
+            options: [`Melanocytes, because both derive from neural crest`, `Skeletal muscle, because both derive from embryonic mesoderm`, `Thyroid follicles, because both derive from endoderm`, `Kidney tubules, because both derive from the mesoderm layer`],
             correctAnswer: 0,
-            explanation: `The adrenal medulla and melanocytes are both neural crest derivatives (ectoderm), so a neural-crest defect could affect both. The adrenal *cortex*, in contrast, is mesodermal — which is the trap behind the muscle and kidney options. Thyroid follicular cells derive from endoderm, not neural crest. This "split adrenal gland" is a high-yield discrimination point.`
+            yield: 'ULTRA_HIGH',
+            explanation: `The adrenal medulla and melanocytes are both neural crest derivatives (ectoderm), so a neural-crest defect could affect both. The adrenal *cortex*, in contrast, is mesodermal — which is the trap behind the muscle and kidney options (the medulla shares no mesodermal origin with either). Thyroid follicular cells derive from endoderm, not neural crest. This "split adrenal gland" is a high-yield discrimination point.`
           },
           {
             question: `During cleavage, the total volume of the early embryo stays roughly constant even though cell number rises sharply. What is the direct consequence most relevant to development?`,
             options: [`The nuclear-to-cytoplasmic ratio rises as cells get smaller`, `Each cell accumulates more cytoplasm, increasing totipotency`, `The embryo grows substantially in mass before implantation`, `DNA replication pauses between divisions to conserve resources`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Cleavage is mitosis without growth: the same cytoplasm is partitioned into more, smaller cells, so the nuclear:cytoplasmic ratio rises — a prerequisite for normal gene-expression control later. Cells get *less* cytoplasm (not more), the embryo does not gain mass during cleavage, and DNA replication does not pause — it occurs in every rapid cycle (that's how cell number rises).`
           }
         ]
@@ -111,8 +119,12 @@ These close at birth when the lungs inflate and pressures shift; a patent ductus
 - (d) Adrenal medulla → **ectoderm** (neural crest!) — note the cortex is mesoderm.
 - (e) Intestinal lining → **endoderm**. ✓
 
-**MCAT note:** When two parts of one organ split layers (adrenal gland; teeth: enamel = ectoderm vs. dentin/pulp = neural-crest mesenchyme), that's exactly where exams probe.
+**MCAT note:** When two parts of one organ split layers (the adrenal gland), that's exactly where exams probe.
 </details>
+
+<!-- yield:low -->
+- Teeth split layers too: enamel is ectoderm, while dentin and pulp come from neural-crest mesenchyme.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Distinguish morula, blastocyst, and inner cell mass</b></summary>
@@ -137,7 +149,7 @@ These close at birth when the lungs inflate and pressures shift; a patent ductus
 2. The overlying flank ectoderm, receiving the inducing signal, forms a **second neural tube** (a secondary axis).
 3. Principle: **induction** — competent tissue adopts a new fate when exposed to an inducing signal from a neighbor. ✓
 
-**Interpretation:** This is the logic of the classic Spemann–Mangold organizer experiment. Removing an inducer → structure absent (Example/quiz above); adding one ectopically → structure duplicated.
+**Interpretation:** This is the logic of the classic organizer-transplant experiment. Removing an inducer → structure absent (Example/quiz above); adding one ectopically → structure duplicated.
 </details>`
     },
     {
@@ -149,7 +161,11 @@ These close at birth when the lungs inflate and pressures shift; a patent ductus
 - Germ layers: **Ecto** (skin/nervous), **Meso** (muscle/bone/blood/gonads/adrenal cortex), **Endo** (GI & respiratory lining + liver/pancreas/thyroid).
 - Neural crest (ectoderm) → PNS, melanocytes, **adrenal medulla** — the split-adrenal trap.
 - Induction: the notochord induces the neural plate (remove → no neural tube; add → extra one).
-- Trophoblast → placenta + hCG; inner cell mass → embryo.`
+- Trophoblast → placenta + hCG; inner cell mass → embryo.
+
+<!-- yield:low -->
+- Low-yield extras: the organizer's neural inducers are noggin and chordin (BMP blockers), and notochord Sonic hedgehog later patterns the ventral neural tube; teeth split layers (enamel = ectoderm, dentin/pulp = neural-crest mesenchyme); the organizer-transplant experiment is the Spemann–Mangold experiment
+<!-- /yield -->`
     }
   ]
 };

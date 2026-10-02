@@ -43,7 +43,7 @@ export const mcatAnatPhysPart4Data = {
 | Protection | Keratin/corneum barrier vs. pathogens & water loss; melanin absorbs UV |
 | Thermoregulation | Sweat (evaporative cooling); cutaneous vasodilation/vasoconstriction |
 | Sensation | Mechanoreceptors (Meissner, Pacinian), thermoreceptors, nociceptors |
-| Vitamin D synthesis | UV-B converts 7-dehydrocholesterol → cholecalciferol $(vit D_{3})$ |
+| Vitamin D synthesis | UV-B converts 7-dehydrocholesterol → cholecalciferol (vitamin D$_3$) |
 | Excretion | Sweat removes small amounts of water, salts, urea |
 
 ### Thermoregulation (a negative-feedback loop)
@@ -76,18 +76,21 @@ The **hypothalamus** is the body's thermostat (set point ~37 °C).
             question: `A patient sustains a large third-degree burn over the trunk. Which complication is the most immediate life-threatening concern, and why?`,
             options: [`Fluid and electrolyte loss, because the skin's barrier is destroyed`, `Severe pain, because the burned nociceptors fire continuously`, `Hypothermia, because melanin can no longer absorb UV radiation`, `Vitamin D deficiency, because 7-dehydrocholesterol is gone`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Third-degree burns destroy the full-thickness barrier that prevents evaporation, so the body loses fluid and electrolytes rapidly by evaporation and exudation — the leading early cause of shock in burn patients (along with infection). Notably, full-thickness burns are *painless* in the burned area because nociceptors are destroyed, which rules out the "severe pain" trap. The vitamin D and UV options are not acute threats.`
           },
           {
             question: `A long-distance runner competes in a hot, very humid environment and her core temperature climbs despite heavy sweating. The best physiological explanation is that:`,
             options: [`High humidity limits evaporation, so sweat removes little heat`, `Sweating triggers vasoconstriction, trapping heat in the core`, `Sweat glands shut down once core temperature exceeds 37 °C`, `Increased melanin production blocks radiant heat loss from the skin`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Sweat cools by *evaporation* (latent heat of vaporization). In high humidity the air is near saturation, so sweat cannot evaporate efficiently and simply drips off — carrying away little heat — even though the body keeps producing it. Heat stress causes vasodilation (not vasoconstriction), sweat glands keep working at high core temperatures, and melanin governs UV absorption, not radiant heat loss.`
           },
           {
             question: `A pharmaceutical company develops a topical drug and finds it works only if it can reach the dermal blood supply. Which property must the formulation have to be absorbed, given the structure of the epidermis?`,
             options: [`It must be lipophilic enough to cross the lipid-rich stratum corneum`, `It must be highly water-soluble to dissolve in epidermal capillaries`, `It must be taken up by melanocytes in the stratum corneum`, `It must be injected because the epidermis is impermeable to all molecules`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The epidermis is avascular, so a topical drug must diffuse down through the dead, lipid-rich stratum corneum to reach dermal capillaries; lipophilic, small molecules cross this barrier best (the basis of transdermal patches). There are no capillaries in the epidermis (ruling out the water-soluble option), melanocytes reside in the stratum basale, not the corneum, and the epidermis is selectively — not absolutely — impermeable.`
           }
         ]
@@ -131,11 +134,15 @@ The **hypothalamus** is the body's thermostat (set point ~37 °C).
 
 **Solution:**
 1. Skin tone reflects the **amount and type of melanin produced and transferred**, not the number of melanocytes.
-2. More melanin (and more eumelanin) → more UV absorbed before it reaches keratinocyte DNA → fewer thymine dimers.
+2. More melanin → more UV absorbed before it reaches keratinocyte DNA → fewer thymine dimers.
 3. Less melanin → more UV reaches DNA → more dimers → higher mutation/cancer risk if repair (NER) is overwhelmed. ✓
 
 **Interpretation:** This is why xeroderma pigmentosum (defective NER) is so dangerous regardless of pigmentation — the protective and repair systems are complementary layers of defense.
-</details>`
+</details>
+
+<!-- yield:low -->
+- Melanin type matters as well as amount: eumelanin (brown-black) is more UV-protective than pheomelanin (red-yellow).
+<!-- /yield -->`
     },
     {
       id: 'ap4-summary',
@@ -146,7 +153,11 @@ The **hypothalamus** is the body's thermostat (set point ~37 °C).
 - Thermoregulation is a hypothalamic negative-feedback loop: vasodilation + sweating (hot) vs. vasoconstriction + shivering (cold). Sweat cools by **evaporation** → fails in humidity.
 - Topical drugs must cross the lipid-rich stratum corneum to reach dermal vessels (favors lipophilic molecules).
 - Vitamin D synthesis begins with UV-B on 7-dehydrocholesterol; melanin shields DNA from UV.
-- Burns: 1st (epidermis), 2nd (partial dermis, blisters, most painful), 3rd (full dermis, painless, fluid loss/infection are the killers).`
+- Burns: 1st (epidermis), 2nd (partial dermis, blisters, most painful), 3rd (full dermis, painless, fluid loss/infection are the killers).
+
+<!-- yield:low -->
+- Low-yield extras: melanin types — eumelanin (brown-black) protects against UV better than pheomelanin (red-yellow)
+<!-- /yield -->`
     }
   ]
 };

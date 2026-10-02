@@ -56,12 +56,22 @@ Sarcomere (contracted):  Z|=I=|========A========|=I=|Z   (Z lines closer, I & H 
 
 ### Bone Structure & Remodeling
 
-- **Osteoblasts**: BUILD bone (deposit osteoid + hydroxyapatite, Ca$_{10}$(PO$_4$)$_6$(OH)$_2$).
+- **Osteoblasts**: BUILD bone (deposit osteoid + hydroxyapatite, the calcium phosphate mineral).
+
+<!-- yield:low -->
+- Hydroxyapatite's formula is Ca$_{10}$(PO$_4$)$_6$(OH)$_2$.
+<!-- /yield -->
+
 - **Osteoclasts**: Break down (CLAST = break) bone; multinucleate, secrete H$^+$ and acid hydrolases.
 - **Osteocytes**: Mature cells in lacunae; mechanosensors that coordinate remodeling.
 
 Remodeling is hormonally controlled:
-- **PTH** → stimulates osteoclast activity (indirectly via RANKL on osteoblasts) → raises blood Ca$^{2+}$; also ↑ renal Ca reabsorption and ↑ active vitamin D.
+- **PTH** → stimulates osteoclast activity (indirectly, by acting on osteoblasts) → raises blood Ca$^{2+}$; also ↑ renal Ca reabsorption and ↑ active vitamin D.
+
+<!-- yield:low -->
+- The osteoblast signal that activates osteoclasts is RANKL.
+<!-- /yield -->
+
 - **Calcitonin** → inhibits osteoclasts → lowers blood Ca$^{2+}$.
 - **Vitamin D (calcitriol)** → ↑ intestinal Ca$^{2+}$ absorption.
 
@@ -75,21 +85,24 @@ Remodeling is hormonally controlled:
         questions: [
           {
             question: `A researcher adds a drug that blocks the SERCA pump in isolated skeletal muscle fibers, then stimulates them once. Compared with normal fibers, the treated fibers will most likely:`,
-            options: [`Fail to relax normally because cytosolic $Ca^{2+}$ stays high`, `Fail to contract at all because $Ca^{2+}$ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because $Ca^{2+}$ is pumped out of the cell instead`],
+            options: [`Fail to relax fully, as cytosolic $Ca^{2+}$ stays high`, `Fail to contract at all because $Ca^{2+}$ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because $Ca^{2+}$ is pumped out of the cell instead`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `SERCA pumps cytosolic $Ca^{2+}$ back into the SR to terminate contraction. Block it and $Ca^{2+}$ stays high, keeping troponin occupied and tropomyosin off the binding sites → sustained contraction (impaired relaxation). The trap "fail to contract" confuses SERCA (relaxation) with the ryanodine release channel (contraction) — $Ca^{2+}$ release is unaffected here. SERCA pumps into the SR, not out of the cell.`
           },
           {
             question: `An experimental sarcomere is stretched so far that thick and thin filaments barely overlap, then stimulated. The force it generates is much lower than at resting length. This is best explained by:`,
             options: [`Fewer myosin heads can form cross-bridges with actin when stretched`, `Less $Ca^{2+}$ is released from the SR at long sarcomere lengths`, `Troponin loses its affinity for $Ca^{2+}$ when stretched`, `ATP hydrolysis by myosin is inhibited by the increased length`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Active force depends on the number of cross-bridges, which depends on filament overlap (the length–tension relationship). At extreme stretch, overlap is minimal, so few heads can bind actin and force falls. $Ca^{2+}$ release, troponin affinity, and ATP hydrolysis are not the length-dependent limiters here — the geometry of overlap is. This is the molecular basis of the Frank–Starling-style length–tension curve.`
           },
           {
             question: `A patient with chronic kidney disease cannot activate vitamin D and develops low blood $Ca^{2+}$. The expected compensatory hormonal change and its effect on bone is:`,
             options: [`Increased PTH, which drives osteoclast resorption, releasing bone $Ca^{2+}$`, `Increased calcitonin, which drives $Ca^{2+}$ into bone`, `Decreased PTH, which spares bone from osteoclast resorption`, `Increased calcitonin, which stimulates osteoblasts to absorb $Ca^{2+}$`],
             correctAnswer: 0,
-            explanation: `Low blood $Ca^{2+}$ is sensed by the parathyroid glands → PTH rises. PTH increases osteoclast activity (via RANKL), liberating $Ca^{2+}$ from bone, and boosts renal $Ca^{2+}$ reabsorption. Chronically this causes renal osteodystrophy (weakened bone). Calcitonin would *lower* blood $Ca^{2+}$ — the wrong direction for a hypocalcemic patient — so the calcitonin options are traps.`
+            yield: 'HIGH',
+            explanation: `Low blood $Ca^{2+}$ is sensed by the parathyroid glands → PTH rises. PTH increases osteoclast activity (indirectly, through osteoblasts), liberating $Ca^{2+}$ from bone, and boosts renal $Ca^{2+}$ reabsorption. Chronically this causes renal osteodystrophy (weakened bone). Calcitonin would *lower* blood $Ca^{2+}$ — the wrong direction for a hypocalcemic patient — so the calcitonin options are traps.`
           }
         ]
       }
@@ -148,7 +161,11 @@ Remodeling is hormonally controlled:
 - A band = constant. H zone and I band shrink during contraction (filaments slide).
 - ATP needed for contraction (detachment) AND relaxation (SERCA) → rigor mortis when ATP gone.
 - Osteoblasts build, osteoclasts break; PTH raises blood Ca$^{2+}$, calcitonin lowers it.
-- Cardiac contraction needs extracellular Ca$^{2+}$ (Ca-induced Ca release); skeletal does not.`
+- Cardiac contraction needs extracellular Ca$^{2+}$ (Ca-induced Ca release); skeletal does not.
+
+<!-- yield:low -->
+- Low-yield extras: hydroxyapatite is Ca$_{10}$(PO$_4$)$_6$(OH)$_2$; PTH reaches osteoclasts through RANKL displayed on osteoblasts
+<!-- /yield -->`
     }
   ]
 };

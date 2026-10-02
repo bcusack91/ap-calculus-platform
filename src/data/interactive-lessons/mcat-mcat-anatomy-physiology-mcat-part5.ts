@@ -56,10 +56,14 @@ Stereocilia bend toward the tallest → **tip links** pull open $K^{+}$ channels
 
 ### Conductive vs. Sensorineural Hearing Loss
 
-| Type | Lesion | Rinne/Weber |
-|------|--------|-------------|
-| Conductive | Outer/middle ear (ossicles, eardrum, wax) | Bone > air conduction; Weber lateralizes to **bad** ear |
-| Sensorineural | Cochlea / CN VIII (hair cells) | Air > bone (both reduced); Weber lateralizes to **good** ear |
+| Type | Lesion | What fails |
+|------|--------|------------|
+| Conductive | Outer/middle ear (ossicles, eardrum, wax) | Sound is not delivered to the cochlea; the cochlea and nerve still work |
+| Sensorineural | Cochlea / CN VIII (hair cells) | Sound arrives but is not transduced or carried to the brain |
+
+<!-- yield:low -->
+- Bedside tuning-fork tests: in conductive loss, bone conduction beats air conduction in the affected ear (Rinne) and sound lateralizes to the **bad** ear (Weber); in sensorineural loss, air still beats bone (both reduced) and sound lateralizes to the **good** ear.
+<!-- /yield -->
 
 ### Vestibular Sense (Balance)
 
@@ -82,18 +86,21 @@ Stereocilia bend toward the tallest → **tip links** pull open $K^{+}$ channels
             question: `A researcher records from an isolated vertebrate photoreceptor in complete darkness and finds it is steadily releasing glutamate. When a flash of light is delivered, the most direct sequence of events is:`,
             options: [`cGMP-gated $Na^{+}$ channels close, the cell hyperpolarizes, and glutamate release decreases`, `cGMP-gated $Na^{+}$ channels open, the cell depolarizes, and glutamate release increases`, `Voltage-gated $Ca^{2+}$ channels open, the cell depolarizes, and glutamate release increases`, `$Cl^{-}$ channels open, the cell depolarizes, and glutamate release decreases`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Photoreceptors are depolarized in the dark (high cGMP keeps $Na^{+}$ channels open, "dark current"), continuously releasing glutamate. Light activates the opsin → transducin → phosphodiesterase cascade, which DEGRADES cGMP, closing the $Na^{+}$ channels. The cell therefore HYPERPOLARIZES and releases LESS glutamate. The sequence in which cGMP-gated channels open, the cell depolarizes, and glutamate release increases describes the dark state, not the response to light — a classic trap because most receptors depolarize to their stimulus. Phototransduction is the textbook exception.`
           },
           {
             question: `A patient with a slowly growing pituitary tumor compressing the optic chiasm at the midline would most likely present with:`,
             options: [`Bitemporal hemianopia — loss of both temporal fields`, `Monocular blindness — complete vision loss in one eye`, `Binasal hemianopia — loss of both nasal visual fields`, `Central scotoma — loss of central (foveal) vision only`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `At the chiasm, the crossing fibers are the NASAL retinal fibers, which carry information from the TEMPORAL visual fields. A central chiasm lesion destroys these crossing fibers bilaterally → bitemporal hemianopia (loss of both temporal, peripheral fields; "tunnel"-like vision). Complete monocular blindness implies an optic-NERVE lesion anterior to the chiasm. Binasal loss would require bilateral lateral compression, which is rare. Central/foveal loss is macular, not chiasmal.`
           },
           {
             question: `An audiologist performs Rinne and Weber tests. In the right ear, bone conduction is louder than air conduction, and on the Weber test the tuning fork lateralizes to the right ear. The most likely diagnosis is:`,
             options: [`Conductive hearing loss in the right ear`, `Sensorineural hearing loss in the right ear`, `Sensorineural hearing loss in the left ear`, `Conductive hearing loss in the left ear`],
             correctAnswer: 0,
+            yield: 'LOW',
             explanation: `Bone > air conduction (abnormal Rinne) in a given ear indicates a CONDUCTIVE problem in that ear — sound is not being transmitted normally through the air pathway (ossicles/eardrum), as in otosclerosis or cerumen impaction. On Weber, conductive loss lateralizes to the BAD ear (masking of ambient noise makes the affected ear pick up bone-conducted sound better), and sensorineural loss lateralizes to the GOOD ear. Right-ear sensorineural loss would keep air > bone in the right ear and send Weber to the left. Left-ear sensorineural loss would send Weber to the right, but the right ear's Rinne would then be normal (air > bone), not bone > air. Conductive loss in the left ear would lateralize Weber to the left and would not make bone conduction louder in the right ear.`
           }
         ]
@@ -153,8 +160,12 @@ Stereocilia bend toward the tallest → **tip links** pull open $K^{+}$ channels
 - Phototransduction is **hyperpolarizing**: light closes cGMP-gated $Na^{+}$ channels → less glutamate.
 - Chiasm lesion → bitemporal hemianopia (nasal fibers cross).
 - Tonotopy: cochlear base = high frequency, apex = low frequency.
-- Conductive loss → Weber to bad ear; sensorineural → Weber to good ear.
-- Smell uniquely bypasses the thalamus → direct limbic connection.`
+- Conductive loss = outer/middle ear fails to deliver sound; sensorineural loss = cochlear hair cells or CN VIII fail.
+- Smell uniquely bypasses the thalamus → direct limbic connection.
+
+<!-- yield:low -->
+- Low-yield extras: Rinne/Weber tuning-fork tests — conductive loss gives bone > air in the bad ear and lateralizes to the bad ear; sensorineural loss keeps air > bone and lateralizes to the good ear
+<!-- /yield -->`
     }
   ]
 };

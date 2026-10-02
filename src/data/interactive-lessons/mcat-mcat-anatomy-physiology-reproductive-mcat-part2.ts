@@ -12,13 +12,17 @@ export const mcatReproPart2Data = {
 
 Sperm travel: **S**eminiferous tubules → **E**pididymis (maturation and storage; sperm gain motility here) → **V**as deferens → **E**jaculatory duct → (**N**othing) → **U**rethra → **P**enis.
 
-Semen is mostly glandular fluid, not sperm:
+Semen is mostly glandular fluid, not sperm — the seminal vesicles and prostate add their secretions downstream of the vas deferens:
 
 | Gland | Contribution |
 |-------|--------------|
-| Seminal vesicles | ~60% of volume; **fructose** (sperm fuel), prostaglandins, alkaline fluid |
-| Prostate | Milky, **alkaline** fluid that buffers the acidic vagina |
+| Seminal vesicles | Most of the volume; **fructose** (sperm fuel), prostaglandins, and the **alkaline** fluid that buffers the acidic vagina |
+| Prostate | Thin, milky fluid rich in citrate and enzymes (e.g., PSA) that liquefy semen; slightly acidic |
 | Bulbourethral (Cowper's) glands | Pre-ejaculatory mucus that clears and lubricates the urethra |
+
+<!-- yield:low -->
+- The seminal vesicles supply about 60% of semen volume.
+<!-- /yield -->
 
 ### Female Anatomy
 
@@ -46,7 +50,7 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
 
 - Childhood: the axis idles; puberty begins when hypothalamic GnRH pulses ramp up, raising LH/FSH and gonadal steroids
 - **Testosterone** → male secondary sex characteristics (facial/axillary hair, voice deepening, muscle mass, libido); **estrogen** → breast development, fat redistribution, and (with growth hormone) the growth spurt followed by epiphyseal plate closure
-- Genetic sex: the **SRY gene on the Y chromosome** triggers testis development; testosterone and Mullerian inhibitory factor then masculinize the internal tract. Absent SRY, the default developmental pathway is ovarian/female.`
+- Genetic sex: the **SRY gene on the Y chromosome** triggers testis development; testosterone maintains the Wolffian ducts, and Müllerian inhibitory factor (from Sertoli cells) makes the Müllerian ducts regress. Absent SRY, the default developmental pathway is ovarian/female.`
     },
     {
       id: 'rep2-worked',
@@ -79,30 +83,35 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
             question: `After leaving the seminiferous tubules and crossing the rete testis and efferent ductules, sperm next enter which structure, and what happens there?`,
             options: [`The vas deferens, where they are stored until ejaculation`, `The epididymis, where they mature and gain motility`, `The prostate, where they acquire fructose`, `The ejaculatory duct, where capacitation occurs`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `SEVEN UP: Seminiferous tubules → Epididymis → Vas deferens → Ejaculatory duct → (Nothing) → Urethra → Penis. (The short rete testis and efferent ductules only conduct sperm; the epididymis is the first major duct and the first site of maturation.) The epididymis is the maturation/storage site where sperm become motile. Fructose comes from the SEMINAL VESICLES (not the prostate), and capacitation happens later, inside the female tract.`
           },
           {
             question: `In the ovarian two-cell model, estrogen synthesis requires both theca and granulosa cells because:`,
             options: [`Theca cells make androgens under LH; granulosa cells aromatize them under FSH`, `Granulosa cells make androgens under FSH; theca cells aromatize them under LH`, `Theca cells make androgens under FSH; granulosa cells aromatize them under LH`, `Both cell types independently synthesize estrogen, and their products simply add`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `LH drives theca cells to convert cholesterol to androgens; FSH induces aromatase in granulosa cells, which convert those androgens to estrogen. Reversing which cell makes androgens is the standard trap. Keeping the cells right but swapping the hormones also fails: theca cells are the LH target, and granulosa aromatase is induced by FSH. Neither cell type has the full pathway alone — that is exactly why the model exists.`
           },
           {
             question: `Fertilization most commonly occurs in the:`,
-            options: [`Uterine cavity, before implantation`, `Cervix, at the mucus barrier`, `Ampulla of the fallopian tube`, `Surface of the ovary at ovulation`],
+            options: [`Uterine cavity, before implantation`, `Cervix, as sperm cross the mucus barrier`, `Ampulla of the fallopian tube`, `Surface of the ovary at ovulation`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The ovulated secondary oocyte is swept into the tube by the fimbriae and is typically fertilized in the ampulla, the wide upper portion. The EMBRYO then travels to the uterus and implants in the endometrium days later — implantation site is not fertilization site. Sperm meet cervical mucus early, but the gametes do not unite there.`
           },
           {
             question: `Inhibin, secreted by Sertoli cells (male) and granulosa cells (female), acts primarily to:`,
             options: [`Stimulate hypothalamic GnRH release`, `Suppress LH secretion while sparing FSH`, `Stimulate aromatase activity in theca cells`, `Selectively suppress pituitary FSH secretion`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Inhibin's defining feature is SELECTIVE negative feedback on FSH, letting the gonad tune gamete-supporting drive separately from steroid drive (which testosterone/estrogen regulate mainly via GnRH and LH). Suppressing LH while sparing FSH inverts the selectivity, and inhibin inhibits — it never stimulates the axis. Theca cells lack aromatase entirely.`
           },
           {
             question: `An embryo carries one X and one Y chromosome, but its Y chromosome bears a deletion of the SRY gene. The gonads will most likely:`,
             options: [`Develop as testes, because the other Y-linked genes are sufficient`, `Take the ovarian pathway, because SRY is required to form testes`, `Fail to form, because no gonad can develop without SRY`, `Develop as one testis and one ovary, as SRY acts on one side`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `SRY is the master switch that commits the bipotential gonad to become a testis; without it, development follows the ovarian (default) pathway regardless of the rest of the Y chromosome, whose other genes cannot substitute. The gonad still forms — SRY directs its fate, it does not create it — and the switch acts on both gonads the same way rather than on one side. In real XY SRY deletion (Swyer syndrome) development defaults to the female pathway, though the gonads typically end up as nonfunctional streak gonads rather than working ovaries.`
           }
         ]
@@ -113,12 +122,16 @@ The hypothalamus releases **GnRH in pulses** into the portal system; the anterio
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- SEVEN UP for the male path; seminal vesicles = fructose and ~60% of volume, prostate = alkaline buffer, bulbourethral = lubricating mucus
+- SEVEN UP for the male path; seminal vesicles = fructose, most of the volume, and the alkaline buffer; prostate = milky, enzyme-rich fluid; bulbourethral = lubricating mucus
 - Female: fimbriae capture the oocyte; fertilization in the tube's ampulla; endometrium is shed, myometrium contracts
 - GnRH must be PULSATILE; LH → Leydig/theca (steroid side), FSH → Sertoli/granulosa (gamete-support side)
 - Two-cell model: theca androgens (LH) + granulosa aromatase (FSH) = estrogen
 - Sex steroids feed back on GnRH/LH; inhibin selectively suppresses FSH — use which-hormone-is-high to localize axis lesions
-- SRY on the Y chromosome initiates testis development; without it, the ovarian pathway is the default`
+- SRY on the Y chromosome initiates testis development; without it, the ovarian pathway is the default
+
+<!-- yield:low -->
+- Low-yield extras: the seminal vesicles supply about 60% of semen volume
+<!-- /yield -->`
     }
   ]
 };

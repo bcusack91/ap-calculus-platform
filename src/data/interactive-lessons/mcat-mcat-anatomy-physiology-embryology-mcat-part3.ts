@@ -44,7 +44,11 @@ The fetal lungs are fluid-filled and nonfunctional, and the liver is metabolical
 | Foramen ovale | Right atrium → left atrium | **Right ventricle and lungs** |
 | Ductus arteriosus | Pulmonary artery → aorta | **Lungs** |
 
-**Closure at birth**: the first breath inflates the lungs, pulmonary resistance plummets, and left atrial pressure rises above right — the pressure reversal slams the foramen ovale's flap shut (becomes the fossa ovalis). Rising O₂ and falling **prostaglandins** constrict the ductus arteriosus (becomes the ligamentum arteriosum). Clamping the cord ends flow through the ductus venosus.
+**Closure at birth**: the first breath inflates the lungs, pulmonary resistance plummets, and left atrial pressure rises above right — the pressure reversal slams the foramen ovale's flap shut. Rising O₂ and falling **prostaglandins** constrict the ductus arteriosus. Clamping the cord ends flow through the ductus venosus.
+
+<!-- yield:low -->
+- Adult remnants: foramen ovale → **fossa ovalis**; ductus arteriosus → **ligamentum arteriosum**; ductus venosus → **ligamentum venosum**.
+<!-- /yield -->
 
 ### Fetal Hemoglobin (HbF)
 
@@ -56,7 +60,11 @@ HbF (two alpha, two gamma subunits) binds **2,3-BPG poorly**, so it holds O₂ *
 
 ### Apoptosis Builds Anatomy
 
-Programmed cell death is a normal sculpting tool: the webbing between embryonic digits is removed by **apoptosis** to separate fingers and toes. Failure → syndactyly. Development uses death as deliberately as division.`
+Programmed cell death is a normal sculpting tool: the webbing between embryonic digits is removed by **apoptosis** to separate fingers and toes. Development uses death as deliberately as division.
+
+<!-- yield:low -->
+- When this apoptosis fails, the digits stay webbed: **syndactyly**.
+<!-- /yield -->`
     },
     {
       id: 'emb3-worked',
@@ -71,7 +79,11 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
 
 **Step 3 — The parallel path.** Blood that does enter the right ventricle is pumped into the pulmonary artery, but high pulmonary resistance pushes most of it through the **ductus arteriosus** into the aorta — a second lung bypass, joining the aorta downstream of the head vessels.
 
-**Step 4 — Prediction for a patent ductus arteriosus (PDA) after birth.** After the first breath, pulmonary resistance falls and aortic pressure exceeds pulmonary pressure — so flow through an open ductus REVERSES: now aorta → pulmonary artery (left-to-right shunt). Oxygenated blood recirculates through the lungs, volume-overloading the pulmonary circuit; the classic pharmacology link is that prostaglandins keep the ductus open, so a **prostaglandin synthesis inhibitor (e.g., indomethacin)** promotes closure, while prostaglandin infusion keeps it open when a heart defect makes the ductus temporarily life-saving.
+**Step 4 — Prediction for a patent ductus arteriosus (PDA) after birth.** After the first breath, pulmonary resistance falls and aortic pressure exceeds pulmonary pressure — so flow through an open ductus REVERSES: now aorta → pulmonary artery (left-to-right shunt). Oxygenated blood recirculates through the lungs, volume-overloading the pulmonary circuit; the classic pharmacology link is that prostaglandins keep the ductus open, so a **prostaglandin synthesis inhibitor (an NSAID)** promotes closure, while prostaglandin infusion keeps it open when a heart defect makes the ductus temporarily life-saving.
+
+<!-- yield:low -->
+- The NSAID classically used to close a PDA is **indomethacin**.
+<!-- /yield -->
 
 **MCAT payoff.** Every shunt question reduces to: what does it bypass, which pressures drive the flow, and what reverses at birth.`
     },
@@ -83,32 +95,37 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
         questions: [
           {
             question: `Which fetal vessel carries the MOST oxygenated blood?`,
-            options: [`The umbilical arteries`, `The pulmonary veins`, `The umbilical vein`, `The descending aorta`],
+            options: [`The umbilical arteries`, `The pulmonary veins`, `The one umbilical vein`, `The descending aorta`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The umbilical VEIN carries freshly oxygenated blood from the placenta to the fetus — the naming trap, since veins usually carry deoxygenated blood. The two umbilical ARTERIES carry deoxygenated blood back to the placenta. Fetal pulmonary veins return blood from nonfunctional, fluid-filled lungs, and the descending aorta carries mixed blood diluted by the ductus arteriosus inflow.`
           },
           {
             question: `The foramen ovale allows fetal blood to bypass the lungs by shunting blood:`,
             options: [`From the pulmonary artery directly into the aorta`, `From the right atrium into the left atrium`, `From the umbilical vein into the inferior vena cava`, `From the left ventricle into the right ventricle`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The foramen ovale is a flap between the atria: right atrium → left atrium, skipping the right ventricle and pulmonary circuit. Pulmonary artery → aorta is the DUCTUS ARTERIOSUS, and umbilical vein → IVC is the DUCTUS VENOSUS (liver bypass) — the three shunts are distinguished precisely by these routes. No fetal shunt connects the ventricles.`
           },
           {
             question: `At birth, the foramen ovale closes primarily because:`,
             options: [`Rising oxygen tension directly constricts its muscular wall`, `Prostaglandin levels rise sharply once the cord is clamped`, `Clamping the umbilical cord stops all blood flow to the heart`, `Left atrial pressure rises above right, pressing the flap shut`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The foramen ovale is a one-way flap closed mechanically by a PRESSURE REVERSAL: the first breath opens the pulmonary circuit, venous return to the left atrium surges, and higher left-sided pressure presses the flap against the septum. Oxygen-and-prostaglandin chemistry is how the DUCTUS ARTERIOSUS closes (prostaglandins FALL, not rise). Cord clamping stops placental flow but does not itself shut the flap.`
           },
           {
             question: `The first fetal blood cells and the primordial germ cells both originate in the:`,
             options: [`Yolk sac`, `Amnion`, `Chorion`, `Placenta`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The yolk sac is the site of earliest hematopoiesis (before the liver and then bone marrow take over) and the origin of primordial germ cells, which later migrate to the developing gonads. The amnion is the fluid cushion, the chorion is the fetal placenta and hCG source — neither makes blood cells. The placenta exchanges blood contents but does not originate these lineages.`
           },
           {
             question: `A woman is exposed to a potent teratogen. Structural malformations of organs (e.g., limb or heart defects) are MOST likely if the exposure occurs during:`,
-            options: [`The two weeks before implantation is complete`, `Weeks 3-8, during organogenesis`, `The third trimester`, `Labor and delivery`],
+            options: [`The two weeks before implantation is complete`, `Weeks 3-8, during organogenesis`, `The third trimester, during rapid fetal growth`, `Late gestation, at labor and delivery`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Weeks 3-8 are when organ systems are being constructed, so an insult derails their architecture — thalidomide, alcohol, and rubella all do their worst here. Very early exposure (pre-implantation) tends to be all-or-none: either the embryo is lost or it recovers completely. Third-trimester exposure mainly impairs growth and CNS function, since the structures already exist.`
           }
         ]
@@ -125,7 +142,12 @@ Programmed cell death is a normal sculpting tool: the webbing between embryonic 
 - Shunts: ductus venosus bypasses the liver; foramen ovale (RA → LA) bypasses the right ventricle and lungs; ductus arteriosus (pulmonary artery → aorta) bypasses the lungs
 - Birth: pressure reversal closes the foramen ovale; rising O₂ + falling prostaglandins close the ductus arteriosus
 - HbF binds 2,3-BPG poorly → higher O₂ affinity (left-shifted curve) → pulls O₂ from maternal HbA
-- Teratogen window: organogenesis weeks 3-8 (thalidomide, alcohol, rubella); apoptosis normally sculpts anatomy (digit separation)`
+- Teratogen window: organogenesis weeks 3-8 (thalidomide, alcohol, rubella); apoptosis normally sculpts anatomy (digit separation)
+- A patent ductus after birth shunts left to right (aorta → pulmonary artery); prostaglandin inhibitors (NSAIDs) close it, prostaglandin infusion holds it open
+
+<!-- yield:low -->
+- Low-yield extras: shunt remnants (fossa ovalis, ligamentum arteriosum, ligamentum venosum); indomethacin as the NSAID used to close a PDA; failed digit apoptosis = syndactyly
+<!-- /yield -->`
     }
   ]
 };

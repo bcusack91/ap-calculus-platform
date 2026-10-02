@@ -19,7 +19,11 @@ Two details examiners exploit:
 
 ### Middle-Ear Impedance Matching
 
-Airborne sound striking fluid directly would mostly reflect. The middle ear amplifies pressure two ways: the tympanic membrane's area is ~17-20 times the oval window's (same force, smaller area → higher pressure, $P = F/A$), and the ossicles add lever action. Together this impedance matching allows efficient air-to-fluid transfer.
+Airborne sound striking fluid directly would mostly reflect. The middle ear amplifies pressure two ways: the tympanic membrane's area is far larger than the oval window's (same force, smaller area → higher pressure, $P = F/A$), and the ossicles add lever action. Together this impedance matching allows efficient air-to-fluid transfer.
+
+<!-- yield:low -->
+- The numbers: the eardrum's area is roughly 17-20 times the oval window's, so the area ratio alone multiplies pressure by about that factor.
+<!-- /yield -->
 
 ### Tonotopy: Place Theory
 
@@ -30,7 +34,11 @@ The basilar membrane is not uniform:
 
 Each frequency maximally vibrates one place; the brain reads pitch from WHICH hair cells fire (**place theory**), preserved as a tonotopic map up the pathway. **Loudness** is coded separately, by vibration **amplitude** → firing rate and recruitment. For sound intensity comparisons, remember the decibel scale is logarithmic: $\\beta = 10 \\log(I/I_0)$.
 
-Central route: cochlear nuclei (brainstem) → (superior olive, inferior colliculus) → **medial geniculate nucleus (MGN)** of the thalamus → **auditory cortex in the temporal lobe**. (Vision uses the LGN; audition the MGN.)
+Central route: cochlear nuclei (brainstem) → further brainstem and midbrain relays → **medial geniculate nucleus (MGN)** of the thalamus → **auditory cortex in the temporal lobe**. (Vision uses the LGN; audition the MGN.)
+
+<!-- yield:low -->
+- The intermediate relays are the superior olive (which compares input from the two ears to localize sound) and the inferior colliculus.
+<!-- /yield -->
 
 ### The Vestibular System: Two Kinds of Acceleration
 
@@ -55,9 +63,9 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
 
 **Passage-style problem.** Three patients report hearing difficulty. Testing measures (i) air-conduction thresholds via headphones, (ii) bone-conduction thresholds via a vibrator on the mastoid bone (which shakes the skull and cochlear fluid directly), and (iii) audiograms by frequency.
 
-- Patient 1: air conduction poor, bone conduction NORMAL, all frequencies affected equally. Otoscopy shows the ossicular chain immobilized by abnormal bone growth (otosclerosis).
+- Patient 1: air conduction poor, bone conduction NORMAL, all frequencies affected equally. Imaging shows the stapes fixed by abnormal bone growth (otosclerosis).
 - Patient 2: air AND bone conduction equally poor, with loss concentrated above 4000 Hz. Long career operating jackhammers.
-- Patient 3: normal audiogram, but cannot understand speech presented to the left ear; MRI shows a tumor on the left vestibulocochlear nerve.
+- Patient 3: near-normal pure-tone audiogram, but poor understanding of speech presented to the left ear; MRI shows a tumor on the left vestibulocochlear nerve.
 
 **Patient 1 — conductive loss.** Bone conduction bypasses the outer and middle ear and stimulates the cochlea directly; when it outperforms air conduction, the cochlea is fine and the MECHANICAL pathway is the problem. Fixed ossicles cannot perform impedance matching, so airborne sound reflects off the cochlear fluid. A hearing AID (amplifying sound) or surgery helps, because the sensory machinery is intact.
 
@@ -77,30 +85,35 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
             question: `Which sequence correctly orders the structures sound energy traverses?`,
             options: [`Tympanic membrane → oval window → malleus → incus → stapes → basilar membrane → hair cells`, `Tympanic membrane → malleus → incus → stapes → oval window → basilar membrane → hair cells`, `Oval window → tympanic membrane → ossicles → cochlea → hair cells`, `Tympanic membrane → malleus → incus → stapes → round window → basilar membrane → hair cells`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Eardrum → the ossicular chain in order (malleus, incus, stapes) → the stapes footplate on the OVAL window → cochlear fluid → basilar membrane → hair cells. The oval window comes AFTER the ossicles, not before them, and the tympanic membrane, not the oval window, receives sound first; the ROUND window is the pressure-relief outlet, not the entry point.`
           },
           {
             question: `A pure 8000 Hz tone maximally stimulates hair cells located:`,
             options: [`At the apex of the basilar membrane, where it is wide and floppy`, `Uniformly along the entire basilar membrane`, `At the base of the basilar membrane, where it is narrow and stiff`, `On the cupula of the horizontal semicircular canal`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Tonotopy: the stiff, narrow BASE resonates at HIGH frequencies; the wide, compliant APEX handles LOW frequencies. (A useful anchor: noise-induced hearing loss starts with high frequencies because basal hair cells absorb the most energy.) The cupula belongs to the vestibular system and does not encode sound.`
           },
           {
             question: `Hair cells depolarize when their stereocilia bend toward the tallest cilium because:`,
             options: [`Voltage-gated Na+ channels open in the stereocilia`, `Mechanically gated channels let K+ flow out to perilymph`, `Mechanically gated channels admit Na+ from Na+-rich endolymph`, `Mechanically gated channels let K+ flow in from endolymph`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The endolymph surrounding the stereocilia is unusually potassium-rich (and sodium-poor), so the electrochemical gradient drives K+ INTO the cell when tip-link-gated channels open — depolarization by K+ influx, the reverse of the usual neuronal role of K+. K+ flowing OUT would hyperpolarize, not depolarize. The channels are mechanically gated, not voltage-gated, and the trigger is not Na+.`
           },
           {
             question: `After spinning at constant velocity for 30 seconds, a dancer no longer feels rotation; when she abruptly stops, she feels she is spinning the opposite way. This is because the semicircular canals:`,
-            options: [`Detect only angular acceleration, via endolymph lagging the head`, `Use otoliths to sense linear motion, and these fatigue during spinning`, `Adapt because their otoliths dissolve with prolonged motion`, `Are disabled by high K+ in the endolymph during rotation`],
+            options: [`Detect angular acceleration, not constant rotation`, `Use otoliths to sense linear motion, and these fatigue during spinning`, `Adapt because their otoliths dissolve with prolonged motion`, `Are disabled by high K+ in the endolymph during rotation`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The canals work by endolymph INERTIA: fluid lags during acceleration, deflecting the cupula. At constant velocity the fluid reaches the head's speed and the signal fades; deceleration then makes the still-moving fluid push the cupula the OTHER way — a false reversed-rotation signal. Otoliths belong to the utricle/saccule (linear acceleration), and they do not dissolve.`
           },
           {
             question: `A patient hears a tuning fork better when it is pressed against the mastoid bone than when held next to the ear canal. This pattern indicates:`,
             options: [`Sensorineural loss from hair cell damage`, `A unilateral lesion of the auditory cortex`, `Conductive hearing loss in the outer or middle ear`, `Normal hearing, since bone conduction always wins`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Bone conduction vibrates the skull and stimulates the cochlea directly, bypassing the eardrum and ossicles. Bone beating air means the cochlea is functional but the mechanical (conductive) route through the outer/middle ear is blocked. In sensorineural loss BOTH routes are poor. In normal ears air conduction is the more efficient route, so the claim that bone conduction always wins is backwards.`
           }
         ]
@@ -115,7 +128,11 @@ Utricle ≈ horizontal accelerations (car speeding up); saccule ≈ vertical (el
 - Middle ear = impedance matcher: large eardrum onto small oval window plus ossicular leverage
 - Tonotopy: base = stiff/narrow = high frequency; apex = wide/floppy = low frequency (place theory); loudness = amplitude; MGN → temporal cortex
 - Semicircular canals (cupula) = rotational ACCELERATION in three orthogonal planes; utricle/saccule (otoliths) = linear acceleration and head tilt
-- Conductive loss: mechanical path fails, bone conduction preserved; sensorineural loss: hair cells/CN VIII fail, both routes poor, noise damage hits high frequencies first`
+- Conductive loss: mechanical path fails, bone conduction preserved; sensorineural loss: hair cells/CN VIII fail, both routes poor, noise damage hits high frequencies first
+
+<!-- yield:low -->
+- Low-yield extras: the eardrum is about 17-20 times the oval window's area; the brainstem relays between the cochlear nuclei and the MGN are the superior olive (sound localization) and the inferior colliculus
+<!-- /yield -->`
     }
   ]
 };

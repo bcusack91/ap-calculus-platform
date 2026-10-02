@@ -29,9 +29,13 @@ Light traverses: cornea → aqueous humor → pupil (iris aperture) → lens →
 | Color | None (one pigment: rhodopsin) | Three opsins → color vision |
 | Acuity | Low (high convergence onto bipolar cells) | High (fovea: ~1:1 wiring) |
 | Location | Peripheral retina | Concentrated in the **fovea** |
-| Count | ~120 million | ~6 million |
+| Count | Far more numerous | Far fewer |
 
 High **convergence** (many rods → one ganglion cell) pools signals — great sensitivity, poor resolution. The fovea's private-line wiring gives maximal acuity, which is why you look DIRECTLY at what you want to see, but a dim star is best seen slightly off-center.
+
+<!-- yield:low -->
+- Approximate counts: about 120 million rods vs. about 6 million cones per retina.
+<!-- /yield -->
 
 ### Phototransduction: The Dark Current (get the direction right)
 
@@ -45,7 +49,11 @@ Light reverses everything:
 4. **cGMP falls → channels close → the cell HYPERPOLARIZES**
 5. **Glutamate release DECREASES** — light is signaled by LESS transmitter
 
-So the photoreceptor is a "dark detector" that light turns down. Bipolar cells read the glutamate change (ON-bipolars are inhibited by glutamate, so they depolarize in light; OFF-bipolars do the opposite).
+So the photoreceptor is a "dark detector" that light turns down, and the bipolar cells downstream read the change in glutamate.
+
+<!-- yield:low -->
+- Bipolar subtypes: ON-bipolar cells are inhibited by glutamate, so they depolarize in light; OFF-bipolar cells do the opposite.
+<!-- /yield -->
 
 ### Retinal Circuitry and the Visual Pathway
 
@@ -87,30 +95,35 @@ Functionally identical at this level of analysis: both knockouts freeze the casc
             question: `In complete darkness, a rod photoreceptor is:`,
             options: [`Hyperpolarized, with cGMP-gated channels closed`, `Depolarized, with cGMP-gated channels held open`, `At rest at -70 mV, like a typical neuron`, `Firing action potentials at a steady rate`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The dark current is the trap: high cGMP keeps cation channels open in darkness, so the rod sits depolarized (~-40 mV) and constantly releases glutamate. LIGHT closes the channels and hyperpolarizes the cell. Photoreceptors are also graded-potential cells — they never fire action potentials (only ganglion cells do in the retina).`
           },
           {
             question: `Place the phototransduction steps in correct order after a photon is absorbed: (1) PDE activated, (2) cGMP-gated channels close, (3) retinal isomerizes and rhodopsin activates transducin, (4) cGMP concentration falls.`,
             options: [`3 → 1 → 4 → 2`, `3 → 4 → 1 → 2`, `1 → 3 → 2 → 4`, `3 → 1 → 2 → 4`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Photon → 11-cis-retinal isomerizes, activating rhodopsin → transducin (G protein) → phosphodiesterase → PDE hydrolyzes cGMP so its level FALLS → channels that cGMP held open now CLOSE → hyperpolarization. The channel closing must follow the cGMP drop (it is caused by it), which eliminates the 3 → 1 → 2 → 4 ordering.`
           },
           {
             question: `A student sees a faint star best by looking slightly AWAY from it. The explanation is that:`,
             options: [`The fovea contains mostly rods, which saturate when aimed at the star`, `Looking away engages the blind spot, which enhances contrast`, `The image then falls on the rod-rich, highly convergent periphery`, `Cones in the periphery have lower thresholds than foveal cones`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The fovea is nearly rod-free — it is packed with cones, which need bright light. Averting the gaze drops the image onto the peripheral retina, where many highly sensitive rods converge onto each ganglion cell, pooling the faint signal. The claim that the fovea contains mostly rods inverts foveal anatomy; the blind spot detects nothing at all.`
           },
           {
             question: `A myopic (nearsighted) eye focuses distant objects in front of the retina. The appropriate corrective lens is:`,
             options: [`A converging lens, to add refractive power`, `A cylindrical lens, to correct the asymmetry`, `No lens; the ciliary muscle can compensate by contracting`, `A diverging lens, to reduce total refractive power`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Myopia = too much converging power (or too long an eye), so the fix is a diverging (concave) lens that pushes the focal point back onto the retina. Converging lenses correct HYPEROPIA and presbyopia. Accommodation only ADDS power (a rounder lens), which would worsen myopia — the eye cannot flatten its lens below the relaxed state. Cylindrical lenses correct astigmatism.`
           },
           {
             question: `A lesion that destroys the crossing fibers at the optic chiasm (as from a pituitary tumor pressing on it) would most directly impair:`,
             options: [`All vision in the left eye, sparing the right eye`, `Input from both nasal retinas, which see the temporal fields`, `The entire left visual field of both eyes`, `Input from both temporal retinas, abolishing central vision`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Only NASAL retinal fibers cross at the chiasm, and each nasal retina views the TEMPORAL visual field of its eye. Cutting the crossing fibers therefore blinds both outer visual fields (bitemporal hemianopsia), the classic pituitary-tumor deficit. One whole eye would require an optic NERVE lesion; one whole visual field requires a lesion behind the chiasm (optic tract or cortex).`
           }
         ]
@@ -126,7 +139,11 @@ Functionally identical at this level of analysis: both knockouts freeze the casc
 - Dark current: in darkness cGMP holds channels OPEN → depolarized rod releasing glutamate; light → rhodopsin → transducin → PDE → cGMP falls → channels close → HYPERPOLARIZATION and less glutamate
 - Vertical circuit: photoreceptor → bipolar → ganglion (only ganglion cells spike; their axons = optic nerve); horizontal and amacrine cells process laterally
 - Chiasm: nasal fibers cross → left visual field maps to right cortex; pathway continues LGN (thalamus) → V1
-- Dark adaptation is slow (rhodopsin regeneration, ~20-30 min); light adaptation is fast (bleaching, switch to cones)`
+- Dark adaptation is slow (rhodopsin regeneration, ~20-30 min); light adaptation is fast (bleaching, switch to cones)
+
+<!-- yield:low -->
+- Low-yield extras: about 120 million rods vs. 6 million cones; ON-bipolar cells depolarize in light (glutamate inhibits them), OFF-bipolar cells do the opposite
+<!-- /yield -->`
     }
   ]
 };

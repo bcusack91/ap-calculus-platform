@@ -24,7 +24,7 @@ Fertilization by more than one sperm produces a nonviable triploid zygote, so th
 | Fast block | Seconds | **Depolarization** of the oocyte membrane (ion influx) repels additional sperm | Transient |
 | Slow block | Minutes | **Cortical reaction**: Ca²⁺ wave triggers cortical granule exocytosis; enzymes harden the zona pellucida into the **fertilization envelope** | Permanent |
 
-Sperm–egg fusion also triggers the oocyte to complete **meiosis II** (it had been arrested in metaphase II); only then do the pronuclei fuse to form the diploid **zygote**.
+Sperm–egg fusion also triggers the oocyte to complete **meiosis II** (it had been arrested in metaphase II); only then do the two pronuclei combine their chromosomes on the first spindle, forming the diploid **zygote**.
 
 ### Cleavage: Division Without Growth
 
@@ -35,11 +35,15 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
 
 ### Morula → Blastocyst → Implantation
 
-- **Morula** (~day 3-4): a solid ball of cells, still inside the zona pellucida.
-- **Blastocyst** (~day 5): a fluid-filled cavity (blastocoel) appears, dividing cells into two lineages you must keep straight:
+- **Morula**: a solid ball of cells, still inside the zona pellucida.
+- **Blastocyst**: a fluid-filled cavity (blastocoel) appears, dividing cells into two lineages you must keep straight:
   - **Trophoblast** (outer ring) → placenta (fetal portion) and chorion; secretes **hCG**
   - **Inner cell mass (ICM)** → the embryo proper (plus amnion and yolk sac)
-- **Implantation** (~day 6-10): the blastocyst hatches from the zona and the trophoblast burrows into the **endometrium**. Trophoblast-derived **hCG** maintains the corpus luteum (so progesterone keeps the endometrium intact) and is the hormone detected by pregnancy tests.
+- **Implantation** (about one week after fertilization): the blastocyst hatches from the zona and the trophoblast burrows into the **endometrium**. Trophoblast-derived **hCG** maintains the corpus luteum (so progesterone keeps the endometrium intact) and is the hormone detected by pregnancy tests.
+
+<!-- yield:low -->
+- Day counts after fertilization: morula ~day 3-4, blastocyst ~day 5, hatching ~day 5-6, implantation ~days 6-10.
+<!-- /yield -->
 
 ### Twinning
 
@@ -73,31 +77,36 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
             question: `The slow block to polyspermy is best described as:`,
             options: [`Depolarization of the oocyte membrane upon sperm binding`, `Completion of meiosis II by the fertilized oocyte`, `A calcium-triggered cortical reaction hardening the zona pellucida`, `Digestion of the zona pellucida by enzymes from the acrosome`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The slow block is the cortical reaction: a Ca²⁺ wave causes cortical granules to exocytose enzymes that crosslink and harden the zona into an impenetrable fertilization envelope. Depolarization is the FAST block (transient, seconds). Completing meiosis II is triggered by fertilization but does not exclude sperm, and acrosomal digestion is how sperm get IN, not how they are kept out.`
           },
           {
             question: `Which statement about cleavage-stage divisions is correct?`,
             options: [`Cell number increases while total embryo size stays roughly constant`, `Each blastomere grows to full size before dividing, so the embryo enlarges steadily`, `Cleavage divisions are meiotic, halving the chromosome number each round`, `Cleavage begins only after the blastocyst has implanted`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Cleavage is rapid mitosis WITHOUT growth: G1/G2 are minimal, cytoplasm is partitioned among more and more cells, so blastomeres shrink and the N:C ratio climbs. The divisions are mitotic (diploid throughout), and cleavage happens in the fallopian tube DURING transit — days before implantation.`
           },
           {
             question: `In the blastocyst, the inner cell mass and trophoblast give rise, respectively, to:`,
             options: [`The chorion and fetal placenta; the embryo proper`, `The yolk sac and the amnion; the maternal decidua`, `The maternal decidua; the yolk sac and the amnion`, `The embryo proper; the chorion and fetal placenta`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The ICM becomes the embryo itself (plus amnion and yolk sac contributions), while the outer trophoblast becomes the chorion and the fetal side of the placenta and secretes hCG. Reversing the two lineages is the classic error. The amnion and yolk sac come from the ICM, not the trophoblast, and the decidua is MATERNAL uterine tissue that neither embryonic lineage builds — the trophoblast invades it.`
           },
           {
             question: `Monozygotic twins are found to share a single chorion but have two separate amnions. Compared with monozygotic twins who have two chorions and two amnions, the single-chorion twins' embryo most likely split:`,
-            options: [`Earlier, before the blastocyst had formed`, `Later, after the trophoblast lineage was set`, `At fertilization, when two sperm entered one egg`, `Never, since they must be dizygotic twins`],
+            options: [`Earlier, at the two-cell stage before the morula formed`, `Later, after the trophoblast lineage was set`, `At fertilization, when two sperm entered one egg`, `Never, since one shared chorion means dizygotic twins`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `The rule is: the later the split, the more extraembryonic structures are shared. Splitting after the blastocyst's trophoblast (chorion precursor) is set means both embryos sit inside ONE chorion; because they split before amnion formation, each still gets its own amnion. An earlier split gives fully separate membranes. Dizygotic twins always have two chorions, and dispermy produces a nonviable triploid, not twins.`
           },
           {
             question: `A human blastocyst reaches the uterus on schedule and develops normally, but it cannot hatch from its zona pellucida. The most likely consequence is:`,
             options: [`Normal implantation, because the zona itself adheres to the endometrium`, `Polyspermy, because the zona can no longer exclude late-arriving sperm`, `Failed implantation, because the trophoblast cannot contact the endometrium`, `Implantation in the fallopian tube, because the trapped embryo stalls there`],
             correctAnswer: 2,
-            explanation: `The zona pellucida surrounds the embryo through cleavage and the morula stage, and its non-adhesive coat keeps the embryo from implanting too early. Around days 5-6 the blastocyst must hatch so its outer trophoblast can attach to and invade the endometrium (implantation, about days 6-10). A blastocyst still trapped in its zona cannot implant. The zona does not adhere to the endometrium; polyspermy is irrelevant because fertilization finished days earlier; and an embryo already in the uterus cannot implant back in the tube.`
+            yield: 'MEDIUM',
+            explanation: `The zona pellucida surrounds the embryo through cleavage and the morula stage, and its non-adhesive coat keeps the embryo from implanting too early. Once it reaches the uterus, the blastocyst must hatch so its outer trophoblast can attach to and invade the endometrium (implantation, about a week after fertilization). A blastocyst still trapped in its zona cannot implant. The zona does not adhere to the endometrium; polyspermy is irrelevant because fertilization finished days earlier; and an embryo already in the uterus cannot implant back in the tube.`
           }
         ]
       }
@@ -111,8 +120,12 @@ Cleavage is a series of **rapid mitotic divisions with NO overall growth**: the 
 - Two blocks to polyspermy: fast = membrane depolarization (transient); slow = Ca²⁺-triggered cortical reaction → hardened fertilization envelope (permanent)
 - Cleavage = rapid mitosis with NO growth: blastomeres shrink, N:C ratio rises; indeterminate cleavage (uncommitted blastomeres) enables monozygotic twinning
 - Morula (solid) → blastocyst (hollow): trophoblast → chorion/fetal placenta + hCG; inner cell mass → embryo proper
-- Implantation into the endometrium ~day 6-10; trophoblast hCG rescues the corpus luteum → progesterone maintained
-- Twinning timing rule: the later a monozygotic split, the more membranes shared (separate everything → shared chorion → shared chorion and amnion)`
+- Implantation into the endometrium about one week after fertilization; trophoblast hCG rescues the corpus luteum → progesterone maintained
+- Twinning timing rule: the later a monozygotic split, the more membranes shared (separate everything → shared chorion → shared chorion and amnion)
+
+<!-- yield:low -->
+- Low-yield extras: exact day counts after fertilization — morula ~day 3-4, blastocyst ~day 5, hatching ~day 5-6, implantation ~days 6-10
+<!-- /yield -->`
     }
   ]
 };

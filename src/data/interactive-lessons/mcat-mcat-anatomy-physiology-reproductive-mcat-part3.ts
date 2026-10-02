@@ -20,7 +20,12 @@ export const mcatReproPart3Data = {
 ### The Feedback Switch (the single most-tested fact)
 
 - **Moderate estrogen** exerts **negative** feedback on GnRH/LH/FSH — the axis idles through most of the follicular phase.
-- **Sustained HIGH estrogen** (roughly above a threshold for ~36-48 hours, produced only by a large dominant follicle) **flips to positive feedback**, triggering the massive **LH surge** → ovulation around day 14.
+- **Sustained HIGH estrogen** (produced only by a large dominant follicle) **flips to positive feedback**, triggering the massive **LH surge** → ovulation around day 14.
+
+<!-- yield:low -->
+- "Sustained" means estrogen held above a threshold for roughly 36-48 hours.
+<!-- /yield -->
+
 - After ovulation, **progesterone** from the corpus luteum restores strong negative feedback (no second surge in one cycle) and maintains the secretory endometrium while raising basal body temperature slightly.
 - If no pregnancy occurs, the corpus luteum degenerates after ~14 days (luteolysis) → progesterone falls → the endometrium loses hormonal support → menstruation. The luteal phase length (~14 days) is more constant than the follicular phase.
 
@@ -29,8 +34,10 @@ export const mcatReproPart3Data = {
 1. **Capacitation**: hours in the female tract destabilize the sperm membrane, a prerequisite for fertilization
 2. **Acrosome reaction**: contact with the **zona pellucida** releases acrosomal enzymes that digest a path
 3. Membrane fusion; the sperm nucleus enters
-4. **Cortical reaction**: calcium waves trigger cortical granule exocytosis, hardening the zona — the **slow block to polyspermy** (a fast, depolarization-based block occurs first in many species)
+4. **Cortical reaction**: calcium waves trigger cortical granule exocytosis, hardening the zona — the **slow block to polyspermy**
 5. The secondary oocyte finally **completes meiosis II**, extrudes the second polar body, and the pronuclei unite → diploid zygote
+
+Before the cortical reaction, many species use a **fast block**: sperm fusion opens Na+ channels and depolarizes the egg membrane within seconds, briefly preventing further fusion. In mammals the fast block is minor, and the cortical (slow) block does most of the work.
 
 ### Implantation and the hCG Rescue
 
@@ -51,7 +58,7 @@ export const mcatReproPart3Data = {
 **Passage-style problem.** A home pregnancy test uses monoclonal antibodies against the beta subunit of hCG. A woman with a regular 28-day cycle has intercourse on day 14 and tests on day 18 (about 4 days post-ovulation); the test is negative. She retests on day 30 (about 2 days after her missed period); the test is positive.
 
 **Question 1 — Why was the day-18 test negative even if she conceived?**
-At 4 days post-fertilization the conceptus is a morula/early blastocyst still traveling the tube — it has **not implanted**, and meaningful hCG secretion requires the trophoblast to contact maternal blood after implantation (days 6-10). Testing before implantation cannot detect a real pregnancy: a false negative of timing, not chemistry.
+At 4 days post-fertilization the conceptus is a morula/early blastocyst still free in the tube or uterine cavity — it has **not implanted**, and meaningful hCG secretion requires the trophoblast to contact maternal blood after implantation (days 6-10). Testing before implantation cannot detect a real pregnancy: a false negative of timing, not chemistry.
 
 **Question 2 — Physiologically, what has the rising hCG accomplished by day 30?**
 Without pregnancy, luteolysis around day 26-28 would have crashed progesterone and triggered menstruation. hCG, acting through **LH receptors** on the corpus luteum (it is a structural LH analog sharing the alpha subunit — hence antibodies target beta), sustains luteal progesterone. Progesterone maintains the secretory endometrium and suppresses uterine contractions — the missed period IS the rescue, observed from outside.
@@ -72,30 +79,35 @@ Lower than the first-trimester peak: once the placenta assumes steroid synthesis
             question: `The mid-cycle LH surge is triggered by:`,
             options: [`Falling estrogen levels removing negative feedback`, `Progesterone secretion from the newly formed corpus luteum`, `A fall in FSH once a dominant follicle is selected`, `Sustained high estrogen switching to positive feedback`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Moderate estrogen suppresses LH, but the sustained high estrogen produced by a mature dominant follicle FLIPS the feedback to positive, unleashing the LH surge that causes ovulation. Falling estrogen describes menstruation's trigger logic, not the surge; the corpus luteum and its progesterone exist only AFTER ovulation. FSH does dip as a dominant follicle is selected, but that fall does not trigger the surge — FSH actually rises alongside LH at mid-cycle.`
           },
           {
             question: `The cortical reaction that follows sperm-egg fusion functions primarily to:`,
-            options: [`Complete the oocyte's first meiotic division`, `Harden the zona pellucida against additional sperm`, `Trigger the acrosome reaction in the fertilizing sperm`, `Initiate implantation of the zygote in the uterine wall`],
+            options: [`Complete the oocyte's first meiotic division and expel a polar body`, `Harden the zona pellucida against additional sperm`, `Trigger the acrosome reaction in the fertilizing sperm`, `Initiate implantation of the zygote in the uterine wall`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Calcium release drives cortical granule exocytosis, which modifies and hardens the zona pellucida — the slow block to polyspermy. Meiosis I finished before ovulation (fertilization completes meiosis II, not I). The acrosome reaction PRECEDES fusion, and implantation is days away and involves the blastocyst, not the zygote.`
           },
           {
             question: `In a non-pregnant cycle, menstruation is most directly caused by:`,
             options: [`Corpus luteum regression and falling progesterone`, `The mid-cycle LH surge and ovulation`, `Rising FSH recruiting the next follicle cohort`, `Peak estrogen levels eroding the functional endometrium`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `The secretory endometrium is maintained by luteal progesterone. When the corpus luteum degenerates (~14 days after ovulation, absent hCG), progesterone collapses and the functional layer is shed. The LH surge causes ovulation, not menses; rising FSH recruits the next cohort; estrogen builds the endometrium rather than destroying it.`
           },
           {
             question: `hCG from the trophoblast prevents menstruation in early pregnancy by:`,
             options: [`Directly stimulating the endometrium to proliferate and thicken`, `Suppressing FSH so that no new follicles are recruited`, `Acting on the corpus luteum to sustain its progesterone output`, `Stimulating the placenta to secrete progesterone during week 2`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `hCG is an LH analog: it rescues the corpus luteum, whose PROGESTERONE maintains the endometrium — hCG's effect on the lining is indirect. The placenta cannot supply steroids until it matures near the end of the first trimester, which is exactly why the rescue is needed. Gonadotropin suppression happens but is not what preserves the lining.`
           },
           {
             question: `A nursing mother notices milk release when her infant cries, before any suckling occurs. The hormone responsible for this milk ejection is:`,
             options: [`Prolactin, released by the anterior pituitary`, `Oxytocin, released by the posterior pituitary`, `Progesterone from residual corpus luteum activity`, `Estrogen acting on myoepithelial cells`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Oxytocin contracts myoepithelial cells around alveoli to EJECT milk, and its release is a neuroendocrine reflex that can be conditioned to cues like a cry. Prolactin drives milk SYNTHESIS, not let-down — the classic role swap. Estrogen and progesterone actually inhibit lactation during pregnancy; their postpartum fall permits it.`
           }
         ]
@@ -108,10 +120,14 @@ Lower than the first-trimester peak: once the placenta assumes steroid synthesis
 
 - Follicular phase: FSH → follicle → rising estrogen; luteal phase: corpus luteum → progesterone; luteal length (~14 days) is the constant one
 - THE switch: moderate estrogen = negative feedback, sustained high estrogen = positive feedback → LH surge → ovulation ~day 14
-- Fertilization order: capacitation → acrosome reaction → fusion → cortical reaction (slow polyspermy block) → completion of meiosis II
+- Fertilization order: capacitation → acrosome reaction → fusion → (fast depolarization block, then) cortical reaction (slow polyspermy block) → completion of meiosis II
 - Blastocyst implants days 6-10; trophoblast hCG (an LH analog, unique beta subunit) rescues the corpus luteum — the basis of pregnancy tests
 - Placenta takes over steroid production by the end of the first trimester; hCG peaks ~week 10 then falls
-- Parturition = oxytocin positive feedback; lactation = prolactin makes milk, oxytocin ejects it`
+- Parturition = oxytocin positive feedback; lactation = prolactin makes milk, oxytocin ejects it
+
+<!-- yield:low -->
+- Low-yield extras: "sustained" high estrogen means roughly 36-48 hours above threshold
+<!-- /yield -->`
     }
   ]
 };

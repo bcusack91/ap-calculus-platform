@@ -13,8 +13,8 @@ export const mcatAnatPhysPart2Data = {
 - **Testes**: Spermatogenesis in seminiferous tubules. **Sertoli cells** form the blood–testis barrier and nourish developing sperm (respond to FSH); **Leydig cells** in the interstitium produce **testosterone** (respond to LH).
 - **Epididymis**: Sperm maturation (gain motility) and storage.
 - **Vas deferens**: Transports sperm to the ejaculatory duct.
-- **Seminal vesicles**: **Fructose** (energy for sperm) + prostaglandins.
-- **Prostate**: Alkaline fluid (neutralizes acidic vaginal tract).
+- **Seminal vesicles**: **Fructose** (energy for sperm) + prostaglandins + alkaline fluid that buffers the acidic vaginal tract.
+- **Prostate**: Thin, milky, enzyme-rich fluid (e.g., PSA) that liquefies semen.
 - **Bulbourethral (Cowper's) glands**: Pre-ejaculate lubrication.
 
 **Spermatogenesis path:** spermatogonium (2n) → primary spermatocyte (2n) → [meiosis I] → secondary spermatocyte (n) → [meiosis II] → spermatid (n) → spermatozoon (n). Spermiogenesis adds the acrosome, flagellum, and midpiece (packed with mitochondria).
@@ -34,7 +34,7 @@ export const mcatAnatPhysPart2Data = {
 | Products per meiosis | 4 functional sperm | 1 ovum + 2–3 polar bodies |
 | Timing | Continuous from puberty | Cyclical; arrests prophase I & metaphase II |
 | Cytoplasm division | Equal | Unequal (egg keeps it) |
-| Completion | ~64 days, continuous | Finished only if fertilized |
+| Completion | About 2 months, continuous | Finished only if fertilized |
 
 ### Menstrual Cycle (~28 days)
 
@@ -62,7 +62,11 @@ Endometrium: shed → proliferative → ───── secretory ────�
 - If fertilization occurs, the implanting blastocyst's trophoblast secretes **hCG**, which mimics LH and **rescues the corpus luteum** so it keeps making progesterone until the placenta takes over (~week 8–12). hCG is the molecule pregnancy tests detect.
 - No pregnancy → corpus luteum degenerates → progesterone falls → menstruation.
 
-**Clinical correlations:** Ectopic pregnancy (implantation in the fallopian tube — a surgical emergency); polycystic ovary syndrome (anovulation, elevated LH:FSH ratio); the combined oral contraceptive uses estrogen + progestin to maintain negative feedback, suppressing the FSH/LH surge and preventing ovulation.`
+**Clinical correlations:** Ectopic pregnancy (implantation in the fallopian tube — a surgical emergency); polycystic ovary syndrome (anovulation); the combined oral contraceptive uses estrogen + progestin to maintain negative feedback, suppressing the FSH/LH surge and preventing ovulation.
+
+<!-- yield:low -->
+- Polycystic ovary syndrome classically shows an elevated LH:FSH ratio on lab testing.
+<!-- /yield -->`
     },
     {
       id: 'ap2-quiz1',
@@ -72,20 +76,23 @@ Endometrium: shed → proliferative → ───── secretory ────�
         questions: [
           {
             question: `A combined oral contraceptive delivers steady estrogen + progestin throughout the cycle. The most direct reason it prevents pregnancy is that it:`,
-            options: [`Keeps feedback negative, so no LH surge triggers ovulation`, `Causes positive feedback that prematurely depletes all follicles`, `Directly blocks sperm–egg fusion in the fallopian tube`, `Stimulates the corpus luteum to overproduce progesterone`],
+            options: [`Keeps feedback negative, preventing the LH surge`, `Causes positive feedback that prematurely depletes all follicles`, `Directly blocks sperm–egg fusion in the fallopian tube`, `Stimulates the corpus luteum to overproduce progesterone`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Constant exogenous estrogen/progestin keeps hypothalamic–pituitary feedback in the *negative* mode, suppressing pituitary gonadotropin release, so the mid-cycle estrogen threshold that normally flips feedback to positive is never reached. Without the LH surge, no ovulation occurs. The "positive feedback" and "block fertilization" options describe the wrong mechanism — the pill works upstream by preventing egg release, not by acting at the tube.`
           },
           {
             question: `In an IVF clinic, a researcher examines an oocyte arrested at metaphase II that has just been penetrated by a sperm. What completes next, and what is the immediate product?`,
             options: [`Meiosis II completes, yielding a mature ovum and a second polar body`, `Meiosis I completes, yielding a secondary oocyte and first polar body`, `Mitosis begins immediately, producing two identical daughter cells`, `Meiosis II completes, yielding two functional haploid ova`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The secondary oocyte is arrested in metaphase II and only finishes meiosis II upon fertilization, producing one ovum (keeping the cytoplasm) and a small second polar body. Meiosis I already finished at ovulation, so that option is too early. Oogenesis never yields two functional ova — unequal division conserves resources for a single egg.`
           },
           {
             question: `A pregnant patient's blood is sampled at week 6. Which finding best explains why her endometrium has NOT been shed despite the time elapsed since her last period?`,
             options: [`hCG is sustaining the corpus luteum, keeping progesterone high`, `The LH surge is being repeated monthly to maintain the lining`, `FSH is elevated, driving continued endometrial proliferation`, `Oxytocin is keeping the uterine lining from being shed`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In pregnancy the blastocyst's trophoblast secretes hCG, an LH analog that rescues the corpus luteum so it continues secreting progesterone — and progesterone maintains the secretory endometrium, preventing menstruation. There is no repeated monthly LH surge during pregnancy, FSH is suppressed, and oxytocin stimulates uterine contraction rather than preserving the lining — all distractors.`
           }
         ]
@@ -144,7 +151,11 @@ Endometrium: shed → proliferative → ───── secretory ────�
 - LH surge → ovulation, driven by **positive feedback** when estrogen crosses a threshold.
 - Sertoli cells (FSH) support sperm; Leydig cells (LH) make testosterone.
 - Spermatogenesis → 4 sperm (equal division); oogenesis → 1 ovum + polar bodies (unequal). Oocyte arrests in prophase I, then metaphase II until fertilized.
-- No pregnancy → corpus luteum dies → progesterone drops → menstruation. Pregnancy → hCG rescues the corpus luteum.`
+- No pregnancy → corpus luteum dies → progesterone drops → menstruation. Pregnancy → hCG rescues the corpus luteum.
+
+<!-- yield:low -->
+- Low-yield extras: polycystic ovary syndrome labs classically show an elevated LH:FSH ratio
+<!-- /yield -->`
     }
   ]
 };

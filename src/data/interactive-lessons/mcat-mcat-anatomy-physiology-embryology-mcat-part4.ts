@@ -31,16 +31,24 @@ Order: specification (reversible bias) → determination (commitment) → differ
 
 **Induction** is one tissue directing the developmental fate of an adjacent tissue, usually via secreted **paracrine** signals. Examples already met: the notochord inducing neural plate; the optic vesicle inducing the lens. The signal-sender is the **inducer**; the receiver must be **competent** (have the receptors) to respond.
 
-### The Spemann-Mangold Organizer — Logic of a Legendary Experiment
+### The Organizer — Logic of a Legendary Experiment
 
 Transplant the **dorsal lip of the blastopore** from a donor newt gastrula onto the OPPOSITE (ventral) side of a host embryo. Result: a **second, nearly complete body axis** — a conjoined twin — forms at the graft site. The decisive observation: the second axis is built mostly from **HOST cells**.
 
 - If the graft had simply developed into its own fated structures, the second axis would be donor-derived — that would show only self-differentiation.
 - Because HOST cells were **recruited** and re-directed into neural tube and other axial structures, the graft must have been SIGNALING its neighbors: proof of **induction**. The dorsal lip was named the **organizer**.
 
+<!-- yield:low -->
+- This is the **Spemann-Mangold** experiment (1924); the dorsal lip is also called the Spemann organizer.
+<!-- /yield -->
+
 ### Morphogens: Concentration Encodes Fate
 
-A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others. This is the "French flag" concept: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)** patterning the neural tube ventrally and the limb; **BMPs** patterning dorsally. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate — cells near the source see high levels and adopt one fate; farther cells see less and adopt others: one gradient, several thresholds, several tissue stripes. Name-level examples: **Sonic hedgehog (Shh)** patterning the neural tube ventrally and the limb; **BMPs** patterning dorsally. A gradient explains how ONE signal specifies MANY fates — a single on/off signal could only specify two.
+
+<!-- yield:low -->
+- This threshold picture is nicknamed the **"French flag" model**: one gradient read as three stripes.
+<!-- /yield -->
 
 ### The Experimentalist's Toolbox — What Each Design Can Conclude
 
@@ -90,30 +98,35 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
             question: `Embryonic stem cells derived from the inner cell mass can form all three germ layers but cannot form trophoblast. They are therefore classified as:`,
             options: [`Totipotent`, `Pluripotent`, `Multipotent`, `Unipotent`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Pluripotent = every cell of the embryo proper (all three germ layers) but NOT the extraembryonic trophoblast lineage — exactly the ICM/ES-cell profile. Totipotency requires the ability to make placenta too (zygote and earliest blastomeres only). Multipotent cells are restricted to one tissue family (e.g., hematopoietic stem cells), and unipotent cells make a single type.`
           },
           {
             question: `A cell that has committed to becoming muscle but has not yet produced muscle-specific proteins or changed shape is best described as:`,
-            options: [`Differentiated but not determined`, `Neither determined nor specified`, `Determined but not differentiated`, `Totipotent, like an early blastomere`],
+            options: [`Differentiated but not determined`, `Neither determined nor specified`, `Determined but not yet differentiated`, `Totipotent, like an early blastomere`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Determination is the invisible COMMITMENT step; differentiation is the later, observable construction of the specialized phenotype (contractile proteins, myotube morphology). Differentiated-but-not-determined reverses the order — differentiation cannot precede determination. A committed cell is far past specification and is certainly not totipotent.`
           },
           {
-            question: `In the Spemann-Mangold experiment, the observation that PROVED the dorsal lip acts by induction (rather than merely developing into its own fated structures) was that:`,
+            question: `In the classic organizer experiment, the dorsal lip of the blastopore was grafted onto the ventral side of a host gastrula, and a second body axis formed. The observation that PROVED the dorsal lip acts by induction (rather than merely developing into its own fated structures) was that:`,
             options: [`Recruited host cells made up most of the secondary axis`, `Grafted donor cells survived on the host's ventral side`, `Grafted donor cells made up the entire secondary axis`, `The host embryo died when the dorsal lip was removed`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Induction means directing NEIGHBORING cells' fates. Because the second axis was built mostly from host cells that would otherwise have made belly tissue, the graft must have signaled and re-programmed them — the definition of an organizer. An axis made entirely of donor cells would show only self-differentiation, the opposite conclusion. Survival alone proves nothing, and the experiment's key arm was a transplant, not an ablation.`
           },
           {
             question: `A single secreted molecule patterns a tissue into three distinct cell types arranged in bands at increasing distance from the source. The most direct explanation is that the molecule acts as:`,
             options: [`A binary on/off switch triggering one alternative fate`, `An intracellular transcription factor inherited by some daughter cells`, `A hormone acting equally on all cells through the bloodstream`, `A morphogen whose gradient sets fates by concentration thresholds`],
             correctAnswer: 3,
-            explanation: `Multiple fates ordered by DISTANCE from a source is the signature of a morphogen gradient (the French-flag model; Shh and BMP are the name-level examples): high, medium, and low concentrations cross different thresholds. A binary switch yields only two states, a purely intracellular factor cannot pattern neighbors by distance, and a bloodborne hormone reaching all cells equally could not create position-dependent bands.`
+            yield: 'MEDIUM',
+            explanation: `Multiple fates ordered by DISTANCE from a source is the signature of a morphogen gradient (Shh and BMP are the name-level examples): high, medium, and low concentrations cross different thresholds. A binary switch yields only two states, a purely intracellular factor cannot pattern neighbors by distance, and a bloodborne hormone reaching all cells equally could not create position-dependent bands.`
           },
           {
             question: `A researcher wants to know what a particular blastomere ACTUALLY becomes during normal, undisturbed development. The appropriate technique — and a key limit on its conclusions — is:`,
-            options: [`Ablation; it shows necessity but not the cell's descendants`, `Gene knockout; it shows gene function but not cell fate`, `Lineage tracing; it follows fate but not the cell's potency`, `Transplantation to a new site; it shows potency but not lineage`],
+            options: [`Ablation; it shows necessity but not descendants`, `Gene knockout; it shows gene function but not cell fate`, `Lineage tracing; it follows fate but not the cell's potency`, `Transplantation; it shows potency but not lineage`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Lineage tracing follows a labeled cell through NORMAL development, giving its actual fate — but says nothing about what the cell COULD become if challenged (potency), which requires transplantation to a new environment. Ablation tests necessity (and infers fate only indirectly from what is missing), knockouts test gene function, and transplantation deliberately perturbs the environment, so it probes potency and commitment rather than undisturbed fate.`
           }
         ]
@@ -127,10 +140,14 @@ A **morphogen** is a diffusible signal whose CONCENTRATION determines cell fate 
 - Potency narrows: totipotent (zygote/early blastomeres — can make trophoblast) → pluripotent (ICM/ES cells — three germ layers only) → multipotent (adult stem cells); iPSCs = somatic cells reprogrammed to pluripotency
 - Determination = invisible commitment, tested by transplantation; differentiation = the visible build-out; determination always comes first
 - Induction = one tissue directing a competent neighbor's fate via paracrine signals (notochord → neural plate; optic vesicle → lens)
-- Spemann-Mangold: dorsal-lip graft creates a second axis made of HOST cells → the organizer INDUCES; a donor-only axis would have meant mere self-differentiation
-- Morphogens encode multiple fates in one gradient via concentration thresholds (French flag; Shh, BMP at name level)
+- Organizer graft: dorsal-lip graft creates a second axis made of HOST cells → the organizer INDUCES; a donor-only axis would have meant mere self-differentiation
+- Morphogens encode multiple fates in one gradient via concentration thresholds (Shh, BMP at name level)
 - Toolbox: transplant → commitment/induction; ablation → necessity; lineage tracing → fate (never potency); knockout → gene necessity
-- Regulative development (indeterminate cleavage, mammals) permits compensation and monozygotic twinning; mosaic development (determinate cleavage) loses whatever a removed blastomere would have made`
+- Regulative development (indeterminate cleavage, mammals) permits compensation and monozygotic twinning; mosaic development (determinate cleavage) loses whatever a removed blastomere would have made
+
+<!-- yield:low -->
+- Low-yield extras: the organizer experiment's eponym (Spemann-Mangold, 1924; the "Spemann organizer"); the "French flag" nickname for threshold-based morphogen patterning
+<!-- /yield -->`
     }
   ]
 };

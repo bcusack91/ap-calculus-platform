@@ -69,6 +69,11 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-organ-systems-cardiovascular-mcat',
   'mcat-organ-systems-endocrine-nervous-mcat',
   'mcat-organ-systems-mcat',
+  'mcat-anatomy-physiology-musculoskeletal-mcat',
+  'mcat-anatomy-physiology-reproductive-mcat',
+  'mcat-anatomy-physiology-sensory-mcat',
+  'mcat-anatomy-physiology-embryology-mcat',
+  'mcat-anatomy-physiology-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

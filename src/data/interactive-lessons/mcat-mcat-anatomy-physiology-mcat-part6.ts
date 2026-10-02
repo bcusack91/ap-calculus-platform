@@ -40,10 +40,18 @@ $$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightarrow{\\text{carbonic anhydrase}} 
 ### Hemostasis (Clotting)
 
 1. **Vascular spasm**: injured vessel constricts.
-2. **Platelet plug**: platelets adhere to exposed collagen (via von Willebrand factor), activate, and aggregate.
-3. **Coagulation cascade**: intrinsic + extrinsic pathways converge → **prothrombin → thrombin → fibrinogen → fibrin** → stable mesh. (Thrombin also activates factor XIII to cross-link fibrin.)
+2. **Platelet plug**: platelets adhere to exposed collagen, activate, and aggregate.
+3. **Coagulation cascade**: intrinsic + extrinsic pathways converge → **prothrombin → thrombin → fibrinogen → fibrin** → stable mesh.
 
-- **Vitamin K** is required to synthesize factors II, VII, IX, X (target of warfarin).
+<!-- yield:low -->
+- Named helpers: platelets grip collagen through von Willebrand factor, and thrombin activates factor XIII, which cross-links the fibrin mesh.
+<!-- /yield -->
+
+- **Vitamin K** is required to synthesize several clotting factors (target of warfarin).
+
+<!-- yield:low -->
+- The vitamin K–dependent clotting factors are II (prothrombin), VII, IX and X.
+<!-- /yield -->
 
 ### Hematocrit
 
@@ -78,18 +86,21 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
             question: `A physiologist measures the oxygen-hemoglobin dissociation curve of blood sampled from an actively contracting skeletal muscle and compares it to resting arterial blood. Relative to rest, the curve from exercising muscle is shifted, and this shift is adaptive because:`,
             options: [`Shifted right — higher $CO_{2}$ and $H^{+}$ lower affinity, aiding $O_{2}$ unloading`, `Shifted left — lower pH raises Hb affinity, helping Hb hold onto $O_{2}$`, `Shifted right — higher pH lowers Hb affinity, promoting $O_{2}$ loading in the lungs`, `Unchanged — Hb affinity is fixed and independent of local conditions`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Active muscle produces $CO_{2}$, $H^{+}$ (lactic acid), and heat, all of which lower hemoglobin's $O_{2}$ affinity — a RIGHTWARD shift (Bohr effect). This makes Hb release more $O_{2}$ precisely where metabolic demand is highest. The left-shift option confuses the direction (low pH shifts RIGHT, not left, and lowers affinity). The higher-pH option fails because exercising tissue is more acidic, and the shift serves unloading in tissue, not loading in the lungs. The unchanged-curve option ignores the well-established modulation by local chemistry.`
           },
           {
             question: `Compared with adult hemoglobin (HbA), fetal hemoglobin (HbF) binds 2,3-bisphosphoglycerate (2,3-BPG) much more weakly. The functional consequence at the placenta is that HbF:`,
             options: [`Has a higher $O_{2}$ affinity, letting it pull $O_{2}$ from maternal HbA`, `Has a lower $O_{2}$ affinity, allowing the fetus to dump $O_{2}$ into maternal blood`, `Has the same $O_{2}$ affinity as HbA, so transfer depends only on the pressure gradient`, `Cannot bind $O_{2}$ until after birth, when fetal 2,3-BPG levels fall`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `2,3-BPG binds in the central cavity of hemoglobin and STABILIZES the low-affinity (T) state. Because HbF binds 2,3-BPG poorly, it is locked toward the high-affinity (R) state → LEFT-shifted curve → higher $O_{2}$ affinity than maternal HbA. This affinity gradient lets the fetus extract $O_{2}$ across the placenta. The lower-affinity option reverses the direction of transfer; the same-affinity option ignores the 2,3-BPG difference; and HbF does not wait until birth to bind $O_{2}$ — it carries $O_{2}$ throughout fetal life.`
           },
           {
             question: `A trauma patient with unknown blood type needs an emergency transfusion before cross-matching can be completed. Which donor red-cell type is safest to give, and why?`,
             options: [`Type O — its RBCs lack A and B antigens for recipient antibodies to bind`, `Type AB — it has no plasma antibodies, so it cannot react with the recipient`, `Type A — it is the most common type and least likely to react`, `The patient's own type, which can be inferred from their symptoms`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `For packed RED CELLS, the donor's ANTIGENS matter (the relevant antibodies live in the RECIPIENT's plasma). Type O cells display neither A nor B antigen, so they cannot be agglutinated by the recipient's anti-A or anti-B antibodies → O is the universal RBC donor. The Type AB option confuses the universal RECIPIENT rule (AB plasma has no antibodies, relevant for receiving) with donating cells. Type A cells carry A antigen and would be agglutinated by a type O or B recipient's anti-A. Blood type cannot be guessed from symptoms.`
           }
         ]
@@ -119,7 +130,7 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
 **Question:** A patient on warfarin (a vitamin K antagonist) has prolonged clotting time. Which step of hemostasis is impaired, and would a platelet count be abnormal?
 
 **Solution:**
-1. Vitamin K is required to synthesize functional clotting factors **II, VII, IX, X**. Warfarin blocks vitamin K recycling → these factors are deficient. ✓
+1. Vitamin K is required to synthesize several functional **clotting factors** (prothrombin among them). Warfarin blocks vitamin K recycling → these factors are deficient. ✓
 2. The impaired step is the **coagulation cascade** (fibrin formation), NOT vascular spasm or the platelet plug.
 3. **Platelet count is normal** — warfarin affects the cascade, not platelet number. (Aspirin, by contrast, impairs platelet aggregation.) ✓
 
@@ -146,11 +157,15 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
       content: `### Key Takeaways — Part 6
 
 - Blood: ~55% plasma + ~45% RBCs (hematocrit) + <1% WBCs/platelets.
-- Bohr effect: ↑$CO_{2}/H^{+}/temp/2$,3-BPG → RIGHT shift → $O_{2}$ unloading. HbF is left-shifted.
+- Right shift (Bohr effect = ↑ $CO_{2}$/$H^{+}$; also ↑ temperature, ↑ 2,3-BPG) → $O_{2}$ unloading. HbF is left-shifted.
 - $CO_{2}$ travels mostly as bicarbonate (carbonic anhydrase + chloride shift).
-- Clotting: vascular spasm → platelet plug → fibrin (cascade; vitamin K for II, VII, IX, X).
+- Clotting: vascular spasm → platelet plug → fibrin (cascade; vitamin K-dependent factors, blocked by warfarin).
 - Type O = universal RBC donor; type AB = universal recipient.
-- Lymphatics return interstitial fluid, absorb fats (lacteals), and filter pathogens.`
+- Lymphatics return interstitial fluid, absorb fats (lacteals), and filter pathogens.
+
+<!-- yield:low -->
+- Low-yield extras: platelets bind collagen via von Willebrand factor; factor XIII cross-links fibrin; the vitamin K-dependent factors are II, VII, IX and X
+<!-- /yield -->`
     }
   ]
 };
