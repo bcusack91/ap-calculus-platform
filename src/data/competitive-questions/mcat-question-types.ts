@@ -1,3 +1,4 @@
+import type { LessonYield } from '@/lib/lesson-yield'
 /**
  * Shared shape for MCAT competitive-mode questions authored specifically for
  * head-to-head play (short stems, fast to read, one concept each).
@@ -24,4 +25,7 @@ export interface McatBankQuestion {
   difficulty: 'easy' | 'medium' | 'hard'
   /** Must match a subtopic slug declared in mcat-bank.ts. */
   subtopicSlug: string
+  /** Exam-yield tier (src/lib/lesson-yield.ts). Exit quizzes never serve LOW
+   *  items: they gate on the content every student is shown by default. */
+  yield?: LessonYield
 }

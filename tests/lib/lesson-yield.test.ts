@@ -115,7 +115,25 @@ describe('pilot lesson: Transcription & RNA Processing', () => {
     }
   })
 
-  it('hides material in Parts 1-3 and none in Part 4', () => {
-    expect(parts.map((secs) => lessonHasLowYield(secs))).toEqual([true, true, true, false])
+  it('hides some material in every part, but never a whole step', () => {
+    expect(parts.map((secs) => lessonHasLowYield(secs))).toEqual([true, true, true, true])
+  })
+
+  it('keeps Part 4 (experiment reasoning) as a real part: 3+ questions shown by default', () => {
+    const shown = filterSectionsForYield(parts[3], false).flatMap((s) => s.exercise?.questions ?? [])
+    expect(shown.length).toBeGreaterThanOrEqual(3)
+  })
+})
+
+describe('exit quiz never asks low-yield material', () => {
+  it('drops LOW items from the Transcription pool, so the 80% gate tests what students are shown', async () => {
+    const { generateExitQuiz } = await import('@/data/exit-quizzes/mcat-biology')
+    const pool = generateExitQuiz(1000, 'mcat-molecular-biology-transcription-mcat')
+    expect(pool.length).toBeGreaterThanOrEqual(10) // still fills a full 10-question quiz
+    expect(pool.some((q) => /attenuation/i.test(q.question))).toBe(false)
+    for (let i = 0; i < 200; i++) {
+      const quiz = generateExitQuiz(10, 'mcat-molecular-biology-transcription-mcat')
+      expect(quiz.some((q) => /attenuation/i.test(q.question))).toBe(false)
+    }
   })
 })

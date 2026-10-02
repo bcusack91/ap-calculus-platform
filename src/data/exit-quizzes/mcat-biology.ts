@@ -373,7 +373,12 @@ function shuffleArray<T>(items: T[]): T[] {
 }
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
-  const source = topicSlug ? mcatSubtopicPool(fullPool, 'cell-mol-bio', topicSlug) : fullPool
+  // Low-yield items are hidden in lessons by default (lesson-yield.ts), so the
+  // exit quiz never asks them: the 80% gate tests what every student is shown.
+  // Filtered AFTER subtopic selection so the rest of the pool is unchanged, and
+  // inside the generator so the server's seeded regrade rebuilds the same quiz.
+  const source = (topicSlug ? mcatSubtopicPool(fullPool, 'cell-mol-bio', topicSlug) : fullPool)
+    .filter((q) => !('yield' in q && q.yield === 'LOW'))
   const shuffled = shuffleArray(source)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `biology-${i}`,

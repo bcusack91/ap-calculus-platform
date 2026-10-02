@@ -36,7 +36,12 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
 - Sigma reads two promoter elements, at **-10 (TATAAT, the Pribnow box)** and **-35**. Alternative sigmas re-point the polymerase at new gene sets (heat shock).
 <!-- /yield -->
 
-- **Eukaryotes**: three polymerases — **Pol I** (rRNA, in the nucleolus), **Pol II** (mRNA + many regulatory RNAs; the one all mRNA questions mean), **Pol III** (tRNA, 5S rRNA). Pol II cannot find promoters alone: **general transcription factors** (TFIID's TBP subunit binding the **TATA box** ~-25) assemble a preinitiation complex, and enhancer-bound activators (Part 3) tune its output.
+- **Eukaryotes**: three polymerases — **Pol I** (rRNA, in the nucleolus), **Pol II** (mRNA + many regulatory RNAs; the one all mRNA questions mean), **Pol III** (tRNA, 5S rRNA). Pol II cannot find promoters alone: **general transcription factors** bind the promoter's **TATA box** (~-25) and recruit it, and enhancer-bound activators (Part 3) tune its output.
+
+<!-- yield:low -->
+- The TATA-binding protein (TBP) is a subunit of the factor TFIID; the assembled factors plus Pol II form the preinitiation complex.
+<!-- /yield -->
+
 - Numbering convention: +1 = transcription start site; negative numbers = upstream. The promoter is upstream, on the same molecule, and is NOT transcribed into the mRNA.
 
 <!-- yield:low -->
@@ -48,7 +53,10 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
 
 - **Alpha-amanitin** (death cap mushroom): potent inhibitor of eukaryotic **Pol II** — mRNA synthesis dies first; hepatotoxicity follows.
 - **Rifampin**: blocks initiation by **bacterial** RNA polymerase — selective toxicity, and a passage favorite for "which process stops first" kinetics.
-- **Actinomycin D** intercalates into DNA, blocking transcription in ALL cells — a lab tool for "freeze transcription and watch mRNA decay."`
+
+<!-- yield:low -->
+- **Actinomycin D** intercalates into DNA, blocking transcription in ALL cells — a lab tool for "freeze transcription and watch mRNA decay."
+<!-- /yield -->`
     },
     {
       id: 'txn1-worked',
@@ -117,13 +125,13 @@ No primer requirement is why primase (an RNA polymerase) can start replication �
 - Template strand: read 3' to 5' by polymerase; coding strand: equals mRNA with T for U — label the given strand before any base arithmetic, and remember templates are per gene, not per chromosome
 - RNA polymerase: 5' to 3' synthesis, no primer (starts de novo), minimal proofreading — acceptable because transcripts are disposable
 - Prokaryotes: one polymerase + a sigma factor that finds the promoter
-- Eukaryotes: Pol I = rRNA (nucleolus), Pol II = mRNA (TATA box, TBP/TFIID, preinitiation complex), Pol III = tRNA and 5S
+- Eukaryotes: Pol I = rRNA (nucleolus), Pol II = mRNA (TATA box + general transcription factors), Pol III = tRNA and 5S
 - Promoters are upstream, untranscribed, cis-acting: mutations change amount, not protein sequence, and affect only the adjacent gene
-- Inhibitor toolkit: alpha-amanitin (euk Pol II), rifampin (bacterial RNA pol — selective toxicity), actinomycin D (intercalates, all transcription)
+- Inhibitor toolkit: alpha-amanitin (euk Pol II), rifampin (bacterial RNA pol — selective toxicity)
 - After a transcription block, each protein decays on its mRNA's half-life — expect kinetics questions built on that lag
 
 <!-- yield:low -->
-- Low-yield extras: sigma reads the -10 (TATAAT) and -35 elements, and alternative sigmas redirect whole gene programs; termination is by hairpin or rho in bacteria, and by poly-A cleavage for Pol II
+- Low-yield extras: sigma reads the -10 (TATAAT) and -35 elements, and alternative sigmas redirect whole gene programs; termination is by hairpin or rho in bacteria, and by poly-A cleavage for Pol II; TBP (in TFIID) binds the TATA box and the factors assemble a preinitiation complex; actinomycin D intercalates and blocks all transcription
 <!-- /yield -->`
     }
   ]

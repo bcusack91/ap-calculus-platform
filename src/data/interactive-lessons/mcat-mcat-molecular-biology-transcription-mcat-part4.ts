@@ -19,9 +19,12 @@ Transcription passages hand you data from a small toolkit. Know what QUESTION ea
 | Reporter assay | Does this DNA element drive/regulate transcription? | Luciferase or GFP output from the element fused to a reporter gene |
 | ChIP (chromatin immunoprecipitation) | Is protein X bound to DNA site Y in living cells? | Antibody pulls down the protein with its crosslinked DNA; PCR asks which sequences came along |
 | EMSA (gel shift) | Does protein X bind DNA sequence Y in a tube? | Bound probe migrates slower — the band "shifts" up |
-| Nuclear run-on | Is regulation at transcription itself or at mRNA stability? | Labels only RNAs being actively transcribed at that moment |
 
-**The run-on distinction matters**: steady-state mRNA (northern/qPCR) = synthesis MINUS decay. If a treatment doubles mRNA but run-on shows unchanged transcription, the treatment stabilized the mRNA — a stability story wearing a transcription costume.
+**Steady state is a balance**: an mRNA's level (northern/qPCR) = synthesis MINUS decay. A rise in mRNA alone does not prove the gene is transcribed faster — the mRNA could simply be decaying more slowly.
+
+<!-- yield:low -->
+- **Nuclear run-on** asks whether regulation is at transcription itself or at mRNA stability: it labels only the RNAs being actively transcribed at that moment. If a treatment doubles mRNA but run-on shows unchanged transcription, the treatment stabilized the mRNA — a stability story wearing a transcription costume.
+<!-- /yield -->
 
 ### Reporter Dissection — The Standard Puzzle Format
 
@@ -34,30 +37,39 @@ Fuse candidate DNA fragments to luciferase; measure light:
 
 ### Integration Rules for Passage Day
 
-1. **Locate the level**: DNA element (cis) vs protein factor (trans) vs chromatin state vs RNA stability — each has a diagnostic experiment (reporter, expression rescue, ChIP for histone marks, run-on).
+1. **Locate the level**: DNA element (cis) vs protein factor (trans) vs chromatin state vs RNA stability — each has a diagnostic experiment (reporter, expression rescue, ChIP for histone marks, measures of synthesis rate).
 2. **In-vitro binding is not in-vivo function**: EMSA shows CAN bind; ChIP shows IS bound; the reporter shows binding DOES something. Strong passages stack all three — track which claim each figure supports.
-3. **Kinetics order the cascade**: after a stimulus, transcription factors activate in minutes (pre-existing protein, phosphorylation), immediate-early mRNAs rise in ~15-30 min, protein products follow, and secondary target genes rise only after those proteins accumulate. A gene needing new protein synthesis to respond (blocked by cycloheximide) is a SECONDARY response gene.
-4. **Controls are answers**: the no-antibody ChIP lane, the empty reporter vector, the scrambled probe in EMSA — when a question asks "why include X," name the artifact X rules out.`
+3. **Controls are answers**: the no-antibody ChIP lane, the empty reporter vector, the scrambled probe in EMSA — when a question asks "why include X," name the artifact X rules out.
+
+<!-- yield:low -->
+- **Kinetics order the cascade**: after a stimulus, transcription factors activate in minutes (pre-existing protein, phosphorylation), immediate-early mRNAs rise in ~15-30 min, protein products follow, and secondary target genes rise only after those proteins accumulate. A gene needing new protein synthesis to respond (blocked by the translation inhibitor cycloheximide) is a SECONDARY response gene.
+<!-- /yield -->`
     },
     {
       id: 'txn4-worked',
       type: 'text' as const,
       content: `### Worked Example — A Hormone-Response Passage, Assembled
 
-**Passage-style problem.** A steroid hormone induces gene G in liver cells. Researchers gather four results:
+**Passage-style problem.** A steroid hormone induces gene G in liver cells. Researchers gather three results:
 
-- **Fig 1 (RT-qPCR)**: G mRNA rises 20-fold within 60 minutes of hormone; the rise persists when cycloheximide (a translation inhibitor) is present.
-- **Fig 2 (nuclear run-on)**: transcription of G increases 20-fold with hormone — matching the mRNA rise.
-- **Fig 3 (ChIP with anti-receptor antibody)**: hormone treatment causes the receptor to be recovered with a DNA region 3 kb upstream of G; no recovery without hormone, and none at a control locus.
-- **Fig 4 (reporter)**: the 3 kb-upstream fragment fused to luciferase confers hormone responsiveness; deleting a 15 bp palindrome within it abolishes the response.
+- **Fig 1 (RT-qPCR)**: G mRNA rises 20-fold within 60 minutes of hormone.
+- **Fig 2 (ChIP with anti-receptor antibody)**: hormone treatment causes the receptor to be recovered with a DNA region 3 kb upstream of G; no recovery without hormone, and none at a control locus.
+- **Fig 3 (reporter)**: the 3 kb-upstream fragment fused to luciferase confers hormone responsiveness; deleting a 15 bp palindrome within it abolishes the response.
 
-**Question 1 — Primary or secondary response gene?** Primary. Cycloheximide blocks synthesis of NEW protein; since induction survives it, everything required (the receptor) pre-existed. Secondary response genes — needing a freshly made transcription factor — would be silenced by cycloheximide. One drug cleanly cuts the cascade in two.
+**Question 1 — What does each figure contribute that the others cannot?** Fig 1: the transcript accumulates (but cannot say why). Fig 2: the receptor is physically at the upstream site in vivo, hormone-dependently. Fig 3: that site is FUNCTIONAL — it converts hormone into transcription, and the 15 bp palindrome is the responsible element (a hormone response element; palindromic because the receptor binds as a dimer). Amount, occupancy, function — three claims, three techniques.
 
-**Question 2 — What does each figure contribute that the others cannot?** Fig 1: the transcript accumulates (but cannot say why). Fig 2: because synthesis increased — not stability (run-on isolates the synthesis term). Fig 3: the receptor is physically at the upstream site in vivo, hormone-dependently. Fig 4: that site is FUNCTIONAL — it converts hormone into transcription, and the 15 bp palindrome is the responsible element (a hormone response element; palindromic because the receptor binds as a dimer). Amount, mechanism, occupancy, function — four claims, four techniques.
+<!-- yield:low -->
+Two more results, for students going deeper:
 
-**Question 3 — Predict: receptor mutant that binds hormone but cannot dimerize.** ChIP recovery lost (weak/no binding to the palindromic HRE), reporter response lost, G induction lost — but the mutant is trans-acting, so supplying wild-type receptor restores everything. Conversely, deleting the HRE in the genome is cis: no amount of good receptor rescues gene G, though other hormone targets respond normally.
+- **Fig 4 (nuclear run-on)**: transcription of G increases 20-fold with hormone — matching the mRNA rise. This adds MECHANISM: run-on isolates the synthesis term, so the mRNA rose because synthesis increased, not because decay slowed.
+- **Fig 5 (RT-qPCR with cycloheximide)**: the rise in G mRNA persists when cycloheximide (a translation inhibitor) is present.
 
-**The template generalizes**: every regulation passage is these four claims in some order. Name which claim a figure makes before answering anything about it.`
+**Primary or secondary response gene?** Primary. Cycloheximide blocks synthesis of NEW protein; since induction survives it (Fig 5), everything required (the receptor) pre-existed. Secondary response genes — needing a freshly made transcription factor — would be silenced by cycloheximide. One drug cleanly cuts the cascade in two.
+<!-- /yield -->
+
+**Question 2 — Predict: receptor mutant that binds hormone but cannot dimerize.** ChIP recovery lost (weak/no binding to the palindromic HRE), reporter response lost, G induction lost — but the mutant is trans-acting, so supplying wild-type receptor restores everything. Conversely, deleting the HRE in the genome is cis: no amount of good receptor rescues gene G, though other hormone targets respond normally.
+
+**The template generalizes**: every regulation passage is a few of these claims (amount, occupancy, function) in some order. Name which claim a figure makes before answering anything about it.`
     },
     {
       id: 'txn4-quiz1',
@@ -69,7 +81,7 @@ Fuse candidate DNA fragments to luciferase; measure light:
             question: `A treatment triples the steady-state level of an mRNA, but nuclear run-on assays show no change in its transcription rate. The best interpretation is that the treatment:`,
             options: [`Slowed degradation of the existing mRNA`, `Activated the gene's enhancer elements`, `Recruited more RNA polymerase to the promoter`, `Amplified the gene's copy number in the genome`],
             correctAnswer: 0,
-            yield: 'MEDIUM',
+            yield: 'LOW',
             explanation: `Steady-state mRNA is a bathtub level set by faucet (synthesis) and drain (decay). Run-on measures the faucet directly and found it unchanged, so the drain must have narrowed: stabilization. Enhancer activation or polymerase recruitment would have raised the run-on signal. This synthesis-vs-stability dissection is the single most common analytical trap in transcription passages — never infer "transcriptional activation" from steady-state levels alone.`
           },
           {
@@ -90,7 +102,7 @@ Fuse candidate DNA fragments to luciferase; measure light:
             question: `Gene A's induction by a growth factor is unaffected by cycloheximide, while gene B's induction is completely blocked by it. The relationship between the genes is most likely that:`,
             options: [`Gene B's mRNA is less stable than gene A's`, `Gene A is induced by transcription, gene B by mRNA stabilization`, `Both are primary response genes with different kinetics`, `A is a primary response gene; B is a secondary response gene`],
             correctAnswer: 3,
-            yield: 'MEDIUM',
+            yield: 'LOW',
             explanation: `Cycloheximide freezes the proteome: anything inducible under it uses only pre-existing proteins (primary response — e.g., phosphorylation of a waiting factor), while anything blocked needed new protein made first (secondary response). The classic architecture is a cascade: primary gene products (like Fos/Jun) are themselves transcription factors for secondary genes. Because gene B needs a newly made protein, suspect gene A's product as its activator — cascades are the point of the two-tier design.`
           },
           {
@@ -108,13 +120,16 @@ Fuse candidate DNA fragments to luciferase; measure light:
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Map technique to claim: northern/RT-qPCR = how much RNA (steady state); run-on = synthesis rate; reporter = element function; ChIP = in-vivo occupancy; EMSA = in-vitro binding
-- Steady state = synthesis minus decay: mRNA up with flat run-on means stabilization, not activation
+- Map technique to claim: northern/RT-qPCR = how much RNA (steady state); reporter = element function; ChIP = in-vivo occupancy; EMSA = in-vitro binding
+- Steady state = synthesis minus decay: a rise in mRNA alone does not prove faster transcription
 - Reporter deletion logic: activity down = removed activator/core element; activity up = removed silencer; distance/orientation independence = enhancer
 - Binding is three separate claims — CAN bind (EMSA), IS bound (ChIP), MATTERS (reporter) — never let one stand in for another
-- Cycloheximide splits cascades: induction that survives it = primary response (pre-existing factors); induction it blocks = secondary response (needs a newly made protein, often the primary gene's product)
 - Controls name artifacts: no-antibody ChIP (nonspecific pulldown), control locus (site specificity), empty vector (baseline), cold competitor (binding specificity)
-- Cis lesions (deleted response elements) cannot be rescued in trans; factor mutations can — the rescue experiment assigns the level of every defect`
+- Cis lesions (deleted response elements) cannot be rescued in trans; factor mutations can — the rescue experiment assigns the level of every defect
+
+<!-- yield:low -->
+- Low-yield extras: nuclear run-on measures synthesis rate directly — mRNA up with flat run-on means stabilization, not activation; cycloheximide splits cascades: induction that survives it = primary response (pre-existing factors), induction it blocks = secondary response (needs a newly made protein, often the primary gene's product)
+<!-- /yield -->`
     }
   ]
 };

@@ -117,7 +117,7 @@ The primary transcript (pre-mRNA, hnRNA) is processed co-transcriptionally insid
             question: `A mutation deep inside an intron, 400 bases from either splice site, creates a new AG sequence followed by a strong downstream GU. Patient mRNA is longer than normal and contains a premature stop. The best mechanistic explanation is:`,
             options: [`The mutation blocked the poly-A signal`, `Intronic sequence was included as a pseudo-exon`, `The promoter was relocated into the intron`, `The mutation prevented 5' capping`],
             correctAnswer: 1,
-            yield: 'MEDIUM',
+            yield: 'LOW',
             explanation: `New splice-site consensus sequences arising within introns can compete with the real ones: a new acceptor AG with a new donor GU downstream of it outlines an exon-shaped block in mid-intron, so the spliceosome joins the authentic donor to the new AG and the new GU to the authentic acceptor, stitching that block into the mature mRNA as a pseudo-exon. Extra sequence brings frameshifts and premature stops — typically triggering nonsense-mediated decay. The lesson generalizes: intron interiors are usually silent, EXCEPT where a mutation creates splicing signals; boundaries and branch points are always critical.`
           }
         ]
@@ -132,11 +132,11 @@ The primary transcript (pre-mRNA, hnRNA) is processed co-transcriptionally insid
 - Spliceosome: snRNPs (snRNA + protein); invariant GU donor, branch-point A, AG acceptor; the intron leaves as a lariat
 - RNA can catalyze: self-splicing introns, the spliceosome core, and rRNA peptidyl transferase are ribozymes
 - Alternative splicing multiplies the proteome — same DNA, tissue-specific isoforms differing by whole exons
-- Splice pathology: boundary mutations cause intron retention, exon skipping, or cryptic-site use (beta-thalassemia); deep intronic mutations matter when they CREATE splice signals
+- Splice pathology: boundary mutations cause intron retention, exon skipping, or cryptic-site use (beta-thalassemia)
 - Blot logic: larger-than-normal mRNA + reduced protein = processing defect downstream of transcription, upstream of translation — localize lesions by which measurement first deviates
 
 <!-- yield:low -->
-- Low-yield extras: the snRNPs are U1, U2, U4/U6 and U5; splicing is two transesterifications, closing the lariat with a 2'-5' bond only RNA's 2'-OH can make; eIF4E binds the cap; AAUAAA signals cleavage; histone mRNAs lack a tail; ApoB is RNA editing (a created stop), not splicing; nonsense-mediated decay removes premature-stop transcripts; anti-snRNP (anti-Smith) antibodies mark lupus
+- Low-yield extras: the snRNPs are U1, U2, U4/U6 and U5; splicing is two transesterifications, closing the lariat with a 2'-5' bond only RNA's 2'-OH can make; eIF4E binds the cap; AAUAAA signals cleavage; histone mRNAs lack a tail; ApoB is RNA editing (a created stop), not splicing; nonsense-mediated decay removes premature-stop transcripts; anti-snRNP (anti-Smith) antibodies mark lupus; a deep intronic mutation matters when it CREATES splice signals (a pseudo-exon)
 <!-- /yield -->`
     }
   ]
