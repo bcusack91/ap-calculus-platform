@@ -57,32 +57,37 @@ This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)
         questions: [
           {
             question: `FADH$_2$ yields less ATP than NADH because:`,
-            options: [`FADH$_2$ carries only one electron`, `Its electrons bypass Complex I's proton pumping`, `Its electrons bypass Complex III's proton pumping`, `Its electrons bypass Complex IV's proton pumping`],
+            options: [`FADH$_2$ donates only one electron per molecule to CoQ`, `Its electrons bypass Complex I's proton pumping`, `Its electrons bypass Complex III's proton pumping`, `Its electrons bypass Complex IV's proton pumping`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Complex II transfers succinate/FADH$_2$ electrons to CoQ without pumping protons, so fewer protons per electron pair cross the membrane — roughly 1.5 ATP versus 2.5 for NADH, which enters at the proton-pumping Complex I. FADH$_2$'s electrons still pass through Complexes III and IV, and like NADH it donates two electrons.`
           },
           {
             question: `Mitochondria treated with oligomycin stop consuming oxygen. Adding DNP to these same mitochondria will:`,
             options: [`Further decrease oxygen consumption`, `Restore oxygen consumption but not ATP synthesis`, `Restore both oxygen consumption and ATP synthesis`, `Have no effect, because Complex IV is blocked`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Oligomycin blocks the proton channel of ATP synthase; the gradient builds until pumping (and thus electron flow and O$_2$ use) stalls. DNP ferries protons across the membrane, collapsing the gradient — electron transport and O$_2$ consumption resume, but with no gradient, ATP synthase still makes no ATP. This classic experiment PROVES chemiosmotic coupling.`
           },
           {
             question: `Cyanide poisoning halts oxygen consumption entirely, while rotenone only reduces it. The difference is that rotenone:`,
             options: [`Blocks Complex I, leaving Complex II entry intact`, `Is a partial, reversible inhibitor of Complex IV`, `Blocks Complex II, leaving Complex I entry intact`, `Blocks Complex III, downstream of both entry points`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Rotenone blocks only the NADH entry point (Complex I); succinate-derived FADH$_2$ electrons still enter at Complex II and reach O$_2$. Cyanide blocks Complex IV — the single final doorway to O$_2$ — so ALL electron flow stops. Rotenone does not act on Complex II, III, or IV; a Complex III block would sit downstream of both entry points and, like cyanide, stop all O$_2$ consumption.`
           },
           {
             question: `The proton-motive force that drives ATP synthase consists of:`,
-            options: [`Only a pH difference across the inner membrane`, `Only a membrane potential, with the matrix positive`, `Both a pH gradient and a membrane electrical potential`, `Both a pH gradient and potential across the outer membrane`],
+            options: [`Only a pH difference across the inner membrane`, `Only a membrane potential, with the matrix positive`, `Both a pH gradient and a membrane potential`, `Both a pH gradient and potential across the outer membrane`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Pumping H$^+$ into the intermembrane space makes the matrix relatively alkaline (chemical component) and negative (electrical component). Both contribute to the free energy released when protons re-enter through F$_o$. The outer membrane is porous and holds no gradient.`
           },
           {
             question: `In muscle using the glycerol-3-phosphate shuttle, each cytosolic NADH from glycolysis ultimately yields about:`,
             options: [`2.5 ATP`, `1.5 ATP`, `Zero ATP`, `4 ATP`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `The shuttle hands cytosolic NADH electrons to a membrane-bound FAD, producing FADH$_2$-level entry at CoQ — bypassing Complex I. The malate-aspartate shuttle (heart/liver) preserves the NADH level (~2.5 ATP); this difference is why glucose's total yield is a range.`
           }
         ]
@@ -97,7 +102,11 @@ This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)
 - Proton-motive force = $\\Delta$pH + $\\Delta\\psi$ across the INNER membrane; ATP synthase (F$_o$F$_1$) is a rotary motor
 - Inhibitor map: rotenone I, antimycin A III, CN/CO/azide IV, oligomycin ATP synthase
 - Uncouplers (DNP, thermogenin): O$_2$ consumption UP, ATP DOWN, heat UP — opposite O$_2$ signature from inhibitors
-- Shuttles for cytosolic NADH: malate-aspartate (keeps NADH value) vs. glycerol-3-phosphate (drops to FADH$_2$ value)`
+- Shuttles for cytosolic NADH: malate-aspartate (keeps NADH value) vs. glycerol-3-phosphate (drops to FADH$_2$ value)
+
+<!-- yield:low -->
+- Low-yield extras: antimycin A acts at Complex III's Qi site, the matrix-facing quinone-binding site of the Q cycle
+<!-- /yield -->`
     },
     {
       id: 'be3-worked-examples',
@@ -112,10 +121,14 @@ This shuttle choice is why total ATP per glucose is quoted as a **range (~30-32)
 **Solution:**
 1. Everything UPSTREAM of a block backs up in the reduced state (electrons pile up); everything downstream drains to the oxidized state.
 2. The reduced/oxidized boundary lies between Complex III and cytochrome c.
-3. The inhibitor blocks electron transfer from Complex III to cytochrome c — the behavior of antimycin A (acting within Complex III's Q cycle at the cyt c-facing side).
+3. The inhibitor blocks electron transfer from Complex III to cytochrome c — the behavior of antimycin A, a Complex III inhibitor.
 
 **MCAT Strategy:** "Reduced before, oxidized after" — find the boundary and you have found the inhibitor's target. This is the ETC's version of a dammed river.
 </details>
+
+<!-- yield:low -->
+- Example 1 aside: within Complex III, antimycin A binds the Q cycle's matrix-facing quinone site (Qi), stalling electron flow through the complex.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Why does aspirin overdose cause fever and metabolic derangement?</b></summary>

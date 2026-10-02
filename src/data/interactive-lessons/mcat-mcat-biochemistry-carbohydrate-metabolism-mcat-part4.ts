@@ -34,7 +34,7 @@ export const mcatCarbMetabPart4Data = {
 
 ### Beta-Cell Glucose Sensing (A Favorite Passage)
 
-Glucose enters via GLUT2 → glucokinase (high $K_m$, no product inhibition — the true "glucostat") → glycolysis + oxidation raise ATP/ADP → **ATP-sensitive K$^+$ channels CLOSE** → membrane depolarizes → voltage-gated Ca$^{2+}$ channels open → insulin granule exocytosis. Sulfonylurea drugs close the K$^+$ channel directly.
+Glucose enters via GLUT2 → glucokinase (high $K_m$, no product inhibition — the true "glucostat") → glycolysis + oxidation raise ATP/ADP → **ATP-sensitive K$^+$ channels CLOSE** → membrane depolarizes → voltage-gated Ca$^{2+}$ channels open → insulin granule exocytosis. **Sulfonylurea** drugs (used in type 2 diabetes) close the K$_{ATP}$ channel directly → depolarization → Ca$^{2+}$ entry → insulin release, even without a glucose signal.
 
 ### Timeline of a Fast
 
@@ -49,7 +49,11 @@ Glucose enters via GLUT2 → glucokinase (high $K_m$, no product inhibition — 
 
 - **Type 1:** no insulin → unrestrained lipolysis and glucagon action → hyperglycemia + **diabetic ketoacidosis** possible.
 - **Type 2:** insulin resistance → GLUT4 translocation impaired, hepatic gluconeogenesis inadequately suppressed → hyperglycemia; ketosis rare (some insulin remains).
-- Chronic hyperglycemia drives **nonenzymatic glycation** (HbA1c as the 3-month average) and sorbitol accumulation (aldose reductase) in lens and nerves.
+- Chronic hyperglycemia drives **nonenzymatic glycation** (HbA1c as the 3-month average).
+
+<!-- yield:low -->
+- In lens and nerve cells, aldose reductase converts excess glucose to sorbitol, which accumulates and contributes to cataracts and neuropathy.
+<!-- /yield -->
 
 ### Passage-Reading Drill
 
@@ -63,32 +67,37 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
         questions: [
           {
             question: `During intense exercise, skeletal muscle increases glucose uptake even in the absence of insulin because:`,
-            options: [`Muscle expresses glucagon receptors that recruit GLUT4`, `Contraction itself triggers GLUT4 translocation`, `Muscle switches to high-$K_m$ GLUT2 during exercise`, `SGLT transporters are activated by lactate`],
+            options: [`Muscle expresses glucagon receptors that recruit GLUT4`, `Contraction itself triggers GLUT4 translocation`, `Muscle switches to high-$K_m$ GLUT2 during exercise`, `SGLT1 is induced in muscle by rising intracellular lactate`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Contraction (via AMPK and Ca$^{2+}$ signaling) recruits GLUT4 vesicles independently of insulin — the basis for exercise as therapy in type 2 diabetes. Muscle has no glucagon receptors, and GLUT2/SGLT are not muscle transporters.`
           },
           {
             question: `Pancreatic beta cells use GLUT2 and glucokinase — both with high $K_m$ values — rather than GLUT1 and hexokinase, because high-$K_m$ components:`,
             options: [`Maximize glucose uptake at all concentrations`, `Let glucose metabolism track blood glucose levels`, `Saturate at fasting glucose to hold insulin steady`, `Are insulin-independent, unlike GLUT1 and hexokinase`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Low-$K_m$ systems saturate at fasting glucose and cannot distinguish 5 mM from 10 mM. High-$K_m$ GLUT2/glucokinase keep flux — and therefore ATP production and insulin secretion — proportional to blood glucose. The sensor must not saturate.`
           },
           {
             question: `A patient with untreated type 1 diabetes has high blood glucose, yet adipose and muscle cells behave as if starved. The single best explanation is:`,
             options: [`GLUT4 stays intracellular without insulin`, `Glucose is toxic to these tissues`, `Glucagon blocks all glucose transporters`, `Insulin is needed to open GLUT1 channels`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `GLUT4 translocation requires insulin signaling. Without it, muscle and fat starve amid plenty ("starvation in the midst of abundance"), triggering lipolysis, ketogenesis, and muscle proteolysis while the liver adds MORE glucose via unopposed glucagon.`
           },
           {
             question: `Twenty hours into a fast, the majority of hepatic glucose output shifts from glycogenolysis to gluconeogenesis because:`,
-            options: [`Glucagon secretion falls as the fast lengthens`, `Liver glycogen stores are nearly exhausted`, `Muscle glycogen takes over blood glucose maintenance`, `The brain stops using glucose entirely`],
+            options: [`Glucagon secretion falls as the fast lengthens`, `Liver glycogen stores are nearly exhausted`, `Muscle glycogen takes over blood glucose maintenance`, `The brain stops using glucose and switches to ketones`],
             correctAnswer: 1,
-            explanation: `Liver glycogen (~100 g) supports blood glucose for about 12-24 hours. As it empties, gluconeogenesis from lactate, alanine, and glycerol ramps up. Muscle glycogen cannot export glucose (no G6Pase), and the brain still requires substantial glucose early in fasting.`
+            yield: 'HIGH',
+            explanation: `Liver glycogen (~100 g) supports blood glucose for about 12-24 hours. As it empties, gluconeogenesis from lactate, alanine, and glycerol ramps up. Muscle glycogen cannot export glucose (no G6Pase), and the brain still requires substantial glucose early in fasting; its shift toward ketones takes days, not hours.`
           },
           {
             question: `HbA1c reflects average blood glucose over ~3 months because glycation of hemoglobin is:`,
-            options: [`Catalyzed by a glucose-activated kinase`, `Nonenzymatic and persists for the RBC's lifespan`, `Reversed within days by erythrocyte phosphatases`, `Dependent on insulin-stimulated GLUT4 uptake`],
+            options: [`Catalyzed by a glucose-activated kinase`, `Nonenzymatic and persists for the RBC's lifespan`, `Reversed within days by RBC phosphatases`, `Dependent on insulin-stimulated GLUT4 uptake`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Glucose condenses nonenzymatically with hemoglobin amino groups; the modification is essentially irreversible for the cell's life. Since RBCs live ~120 days, the glycated fraction integrates glycemia over that window — no enzyme, no regulation, pure chemistry and time.`
           }
         ]
@@ -101,9 +110,13 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
 
 - Insulin = RTK, anabolic, GLUT4 translocation; glucagon = GPCR/cAMP, liver-only, catabolic; epinephrine covers muscle in stress
 - Transporter map: GLUT1 basal, GLUT2 high-$K_m$ sensor (liver/beta cell), GLUT3 neurons, GLUT4 insulin/exercise, SGLT secondary active
-- Beta-cell sensing: GLUT2 → glucokinase → ATP up → K$_{ATP}$ channels close → depolarize → Ca$^{2+}$ → insulin
+- Beta-cell sensing: GLUT2 → glucokinase → ATP up → K$_{ATP}$ channels close → depolarize → Ca$^{2+}$ → insulin; sulfonylureas close K$_{ATP}$ directly
 - Fast timeline: glycogen carries ~24 h, then gluconeogenesis; ketones spare protein in prolonged fasting
-- T1DM = absent insulin (DKA risk); T2DM = resistance; HbA1c = nonenzymatic glycation clock`
+- T1DM = absent insulin (DKA risk); T2DM = resistance; HbA1c = nonenzymatic glycation clock
+
+<!-- yield:low -->
+- Low-yield extras: aldose reductase makes sorbitol in lens and nerves (cataracts, neuropathy); the glucokinase set-point mutation is called MODY2
+<!-- /yield -->`
     },
     {
       id: 'cm4-worked-examples',
@@ -113,7 +126,7 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
 <details>
 <summary><b>Example 1: Predict the phenotype of a glucokinase mutation</b></summary>
 
-**Question:** A family carries a heterozygous glucokinase mutation raising its $K_m$ for glucose twofold. Predict the effect on insulin secretion and fasting blood glucose (this is MODY2 in real medicine).
+**Question:** A family carries a heterozygous glucokinase mutation raising its $K_m$ for glucose twofold. Predict the effect on insulin secretion and fasting blood glucose.
 
 **Solution:**
 1. The beta cell's "glucostat" now needs HIGHER glucose to generate the same glycolytic ATP signal.
@@ -122,6 +135,10 @@ When a carbohydrate passage shows a knockout, drug, or hormone clamp, ask: (1) W
 
 **MCAT Strategy:** A $K_m$ shift in a SENSOR enzyme moves the set point; a $V_{max}$ loss would cap the response. Distinguish those two outcomes whenever a passage mutates glucokinase.
 </details>
+
+<!-- yield:low -->
+- In clinical terms, heterozygous glucokinase loss is MODY2 (a monogenic form of diabetes).
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Interpret a euglycemic clamp experiment</b></summary>

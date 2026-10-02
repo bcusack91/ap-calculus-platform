@@ -25,7 +25,11 @@ Because OAA cannot cross the inner mitochondrial membrane, it leaves as **malate
 - **Lactate** (Cori cycle: RBC/muscle lactate → liver glucose → back out)
 - **Alanine** (glucose-alanine cycle from muscle protein)
 - **Glycerol** (from triglyceride breakdown; enters as DHAP; needs liver glycerol kinase)
-- **Propionyl-CoA** from odd-chain fatty acids (via B12-dependent methylmalonyl-CoA mutase → succinyl-CoA)
+- **Propionyl-CoA** from odd-chain fatty acids (converted to the TCA intermediate succinyl-CoA)
+
+<!-- yield:low -->
+- The route runs propionyl-CoA → methylmalonyl-CoA → succinyl-CoA; the last step is catalyzed by methylmalonyl-CoA mutase, which requires vitamin B12.
+<!-- /yield -->
 
 **NEVER acetyl-CoA:** PDH is irreversible, and the TCA cycle loses two carbons as CO$_2$ per acetyl group — even-chain fatty acids cannot yield net glucose.
 
@@ -58,30 +62,35 @@ Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and O
             question: `Which enzyme is found in liver but NOT in skeletal muscle, explaining why muscle glycogen cannot raise blood glucose directly?`,
             options: [`Glycogen phosphorylase`, `Glucose-6-phosphatase`, `Phosphoglucomutase`, `Hexokinase`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Muscle degrades glycogen to G6P but, lacking glucose-6-phosphatase, cannot dephosphorylate it for export; the G6P is consumed by muscle glycolysis. Liver (and kidney) G6Pase releases free glucose into blood.`
           },
           {
             question: `Even-numbered fatty acids cannot support NET glucose synthesis because:`,
             options: [`Fatty acids cannot enter mitochondria during fasting`, `Each turn loses two CO$_2$, so OAA shows no net gain`, `Fatty acid oxidation consumes more ATP than it yields`, `Acetyl-CoA allosterically inhibits pyruvate carboxylase`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Acetyl-CoA enters the TCA cycle by condensing with OAA, but one full turn releases 2 CO$_2$ — no NET gain of intermediates, so no net carbon flows to glucose. (The CO$_2$ carbons lost in a given turn are not literally the acetyl carbons just added; the point is net accounting: two carbons in, two out, OAA only regenerated.) (Odd-chain fats are the exception via propionyl-CoA → succinyl-CoA.) Acetyl-CoA actually ACTIVATES pyruvate carboxylase.`
           },
           {
             question: `The Cori cycle describes:`,
-            options: [`Glucose oxidation to CO$_2$ in exercising muscle`, `Lactate recycled into glucose by the liver for the periphery`, `Muscle alanine carried to the liver and converted to glucose`, `Adipose glycerol converted to glucose via hepatic DHAP`],
+            options: [`Glucose oxidation to CO$_2$ in exercising muscle`, `Lactate recycled into glucose by the liver for the periphery`, `Muscle alanine converted to glucose by the liver`, `Adipose glycerol converted to glucose via hepatic DHAP`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Anaerobic tissues (muscle, RBCs) export lactate; the liver spends 6 ATP-equivalents to remake glucose and ships it back. The energy cost is transferred to the liver — the cycle shifts the metabolic burden, it does not create energy. The alanine route is the separate glucose-alanine cycle, and glycerol from adipose is a one-way gluconeogenic substrate, not a cycle.`
           },
           {
             question: `A high level of acetyl-CoA in a fasting hepatocyte simultaneously:`,
             options: [`Activates PDH and inhibits pyruvate carboxylase`, `Inhibits PDH and activates pyruvate carboxylase`, `Activates both PDH and pyruvate carboxylase`, `Inhibits both PDH and pyruvate carboxylase`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Acetyl-CoA (from fatty acid oxidation) signals that the liver has fuel: it inhibits PDH (sparing pyruvate from oxidation) and allosterically activates pyruvate carboxylase (committing pyruvate to gluconeogenesis) — a coordinated fork-in-the-road switch.`
           },
           {
             question: `A fasting patient presents with hypoglycemia after an alcohol binge. The most direct mechanism is that ethanol metabolism:`,
             options: [`Raises the NADH/NAD$^+$ ratio, depleting pyruvate and OAA`, `Raises the NADH/NAD$^+$ ratio, sparing pyruvate and OAA`, `Lowers the NADH/NAD$^+$ ratio, sparing pyruvate and OAA`, `Lowers the NADH/NAD$^+$ ratio, depleting pyruvate and OAA`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Alcohol dehydrogenase and aldehyde dehydrogenase both reduce NAD$^+$ to NADH, raising (not lowering) the cytosolic NADH/NAD$^+$ ratio, and that high NADH depletes rather than spares the gluconeogenic substrates. High NADH pushes the LDH and malate dehydrogenase equilibria away from pyruvate and OAA (toward lactate and malate) — the two key gluconeogenic entry points — so a fasting liver (glycogen already depleted) cannot make glucose.`
           }
         ]
@@ -96,7 +105,11 @@ Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and O
 - Substrates: lactate (Cori), alanine, glycerol, odd-chain propionyl-CoA — NEVER net glucose from acetyl-CoA/even-chain fat
 - Cost: 6 high-energy bonds per glucose (vs. 2 earned by glycolysis) — futile cycling is prevented by reciprocal regulation
 - F2,6-BP is the fed/fasting toggle: activates PFK-1, inhibits F1,6-BPase; glucagon destroys it, insulin raises it
-- Ethanol → high NADH → substrate steal → fasting hypoglycemia`
+- Ethanol → high NADH → substrate steal → fasting hypoglycemia
+
+<!-- yield:low -->
+- Low-yield extras: odd-chain propionyl-CoA reaches succinyl-CoA via methylmalonyl-CoA, using the vitamin B12-dependent methylmalonyl-CoA mutase
+<!-- /yield -->`
     },
     {
       id: 'cm2-worked-examples',
@@ -125,7 +138,7 @@ Ethanol oxidation floods the liver with NADH, pushing pyruvate → lactate and O
 1. (a) Glycerol → glycerol-3-P → DHAP: YES, direct gluconeogenic entry.
 2. (b) Palmitate → 8 acetyl-CoA: NO net glucose (carbons lost as CO$_2$); it only provides ATP and the acetyl-CoA activation signal.
 3. (c) Alanine → pyruvate (transamination): YES.
-4. (d) Propionate → propionyl-CoA → methylmalonyl-CoA → succinyl-CoA (B12): YES — the odd-carbon exception.
+4. (d) Propionate → propionyl-CoA → succinyl-CoA (a TCA intermediate that becomes OAA): YES — the odd-carbon exception.
 
 **MCAT Strategy:** Sort every precursor into "becomes pyruvate/OAA/TCA intermediate/DHAP" (glucogenic) vs. "becomes acetyl-CoA only" (not).
 </details>

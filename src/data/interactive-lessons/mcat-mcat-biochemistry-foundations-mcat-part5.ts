@@ -14,7 +14,7 @@ export const mcatBiochemPart5Data = {
 |------|-----------|----------|
 | Triglycerides | 3 fatty acids + glycerol | Energy storage |
 | Phospholipids | 2 fatty acids + glycerol + phosphate head | Membranes |
-| Steroids | 4 fused rings | Hormones (cholesterol, testosterone, estrogen) |
+| Steroids | 4 fused rings | Cholesterol (membranes) and steroid hormones (testosterone, estrogen) |
 | Sphingolipids | Sphingosine backbone | Myelin, cell signaling |
 
 ### $\\beta$-Oxidation (Mitochondrial Matrix)
@@ -40,20 +40,23 @@ In fasting, lipolysis and beta-oxidation increase while fatty acid synthesis dec
         questions: [
           {
             question: `Carnitine shuttle is required for $\\beta$-oxidation because:`,
-            options: [`Long-chain acyl-CoA cannot cross the inner membrane without it`, `It activates fatty acids in the cytoplasm`, `It generates FADH$_2$ for beta-oxidation`, `Short-chain fatty acids need it for transport`],
+            options: [`Long-chain acyl-CoA can't cross the inner membrane`, `It activates free fatty acids to acyl-CoA in the cytosol`, `It generates FADH$_2$ for beta-oxidation`, `Short-chain fatty acids need it for transport`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The inner mitochondrial membrane is impermeable to long-chain acyl-CoA. Carnitine acyltransferase I (CPT-I) transfers the acyl group to carnitine for transport. CPT-I is also the rate-limiting step, inhibited by malonyl-CoA. Activation to acyl-CoA is done by acyl-CoA synthetase, FADH$_2$ comes from acyl-CoA dehydrogenase inside the matrix, and short-chain fatty acids enter without carnitine.`
           },
           {
             question: `Malonyl-CoA inhibits CPT-I primarily to:`,
             options: [`Stimulate beta-oxidation in the fed state`, `Avoid futile cycling of fatty acids`, `Increase hepatic ketone body production`, `Activate carnitine-mediated fatty acid transport`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Malonyl-CoA is a fatty-acid synthesis signal and inhibits CPT-I to prevent futile cycling — fatty acids being made and oxidized at the same time. Blocking CPT-I blocks carnitine transport and so lowers beta-oxidation and ketone production.`
           },
           {
             question: `Each round of beta-oxidation directly yields:`,
             options: [`2 NADH and no FADH$_2$`, `1 NADH and 1 FADH$_2$`, `2 FADH$_2$ and no NADH`, `1 NADH and 1 ATP directly`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Each cycle produces 1 NADH, 1 FADH$_2$, and shortens chain by 2 carbons, releasing one acetyl-CoA (except final cleavage yields two acetyl-CoA). No ATP is made directly by the cycle.`
           }
         ]

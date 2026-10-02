@@ -14,7 +14,7 @@ $$v = \\frac{V_{max}[S]}{K_m + [S]}$$
 
 - $K_m$ = Michaelis constant = [S] at which $v = V_{max}/2$
 - Low $K_m$ → high affinity (enzyme binds substrate tightly at low [S])
-- $V_{max}$ depends on $[E]_{total}$ and $k_{cat}$: $V_{max} = k_{cat}[E]_T$
+- $V_{max}$ depends on $[E]_{total}$ and $k_{cat}$: $V_{max} = k_{cat}[E]_T$ (so adding more enzyme raises $V_{max}$ but leaves $K_m$ unchanged)
 
 ### Lineweaver-Burk (Double Reciprocal) Plot
 
@@ -45,24 +45,28 @@ Catalytic efficiency is often summarized by $k_{cat}/K_m$, useful for comparing 
             question: `A researcher adds a molecule that binds ONLY to the enzyme-substrate complex. This is an example of:`,
             options: [`Uncompetitive inhibition`, `Competitive inhibition`, `Noncompetitive inhibition`, `Allosteric activation`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Uncompetitive inhibitors bind ONLY to the ES complex (not free enzyme). This decreases both $V_{max}$ and $K_m$ (apparent). On a Lineweaver-Burk plot, lines are parallel.`
           },
           {
             question: `An enzyme has $K_m = 2$ mM and $V_{max} = 100$ $\\mu$mol/min. At $[S] = 18$ mM, the reaction velocity is approximately:`,
             options: [`90 $\\mu$mol/min`, `50 $\\mu$mol/min`, `100 $\\mu$mol/min`, `10 $\\mu$mol/min`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `$v = V_{max}[S]/(K_m + [S]) = 100(18)/(2 + 18) = 1800/20 = 90$ $\\mu$mol/min. At high [S] relative to $K_m$, the enzyme approaches $V_{max}$.`
           },
           {
             question: `A competitive inhibitor can often be overcome by:`,
             options: [`Lowering substrate concentration`, `Increasing substrate concentration`, `Removing enzyme`, `Increasing pH only`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Competitive inhibitors compete at the active site, so higher substrate concentration can outcompete inhibitor binding.`
           },
           {
             question: `At $[S]=K_m$, reaction velocity equals:`,
             options: [`$V_{max}$`, `$V_{max}/2$`, `$2V_{max}$`, `$V_{max}/4$`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `By definition of Michaelis-Menten kinetics, $K_m$ is the substrate concentration at half-maximal velocity.`
           }
         ]
@@ -122,12 +126,12 @@ Classify each inhibitor type.
 2. **Inhibitor B**: $K_m$ unchanged (5), $V_{max}$ decreases (100 → 50) → **Noncompetitive** ✓
    - Binds to both E and ES complex with equal affinity
    - Cannot be overcome by increasing [S]
-  - On Lineweaver-Burk, x-intercept stays fixed while y-intercept increases
+   - On Lineweaver-Burk, x-intercept stays fixed while y-intercept increases
 
 3. **Inhibitor C**: $K_m$ increases (5 → 10), $V_{max}$ decreases (100 → 60) → **Mixed** ✓
    - Binds to both E and ES complex but with different affinities
    - Both $K_m$ and $V_{max}$ are affected (intermediate behavior)
-   - Lines converge at a different point on Lineweaver-Burk
+   - On Lineweaver-Burk, lines intersect off both axes (left of the y-axis)
 
 **MCAT Strategy**: Rapid classification: if only $V_{max}$ changes → noncompetitive; if only $K_m$ changes → competitive; if both change → mixed or uncompetitive (uncompetitive is rare but decreases both proportionally).
 </details>
@@ -191,7 +195,7 @@ Identify the inhibitor types.
 3. **Plot 2 (Inhibitor B)**:
    - y-intercept changes → $V_{max}$ decreases (0.01 → 0.02 = $1/V_{max}$, so $V_{max}$ goes from 100 to 50)
    - x-intercept unchanged → $K_m$ unchanged
-  - Pattern matches **noncompetitive inhibition** (x-intercept conserved, y-intercept increased)
+   - Pattern matches **noncompetitive inhibition** (x-intercept conserved, y-intercept increased)
 
 4. **Answer**: Inhibitor A = competitive; Inhibitor B = noncompetitive
 

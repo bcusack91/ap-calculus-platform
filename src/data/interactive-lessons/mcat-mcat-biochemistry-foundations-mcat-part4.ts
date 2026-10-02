@@ -21,7 +21,7 @@ $$\\text{Acetyl-CoA} + \\text{OAA} \\to \\text{Citrate} \\to \\cdots \\to \\text
 | Complex | Accepts from | Pumps H$^+$ |
 |---------|-------------|-------------|
 | I (NADH dehydrogenase) | NADH | Yes (4 H$^+$) |
-| II (Succinate dehydrogenase) | FADH$_2$ | No |
+| II (Succinate dehydrogenase) | Succinate (via FADH$_2$) | No |
 | III (Cytochrome bc1) | CoQ | Yes (4 H$^+$) |
 | IV (Cytochrome c oxidase) | Cyt c → O$_2$ | Yes (2 H$^+$) |
 | ATP Synthase (V) | H$^+$ gradient | Makes ATP |
@@ -45,24 +45,28 @@ Chemiosmosis links ETC to ATP synthase: proton-motive force (electrochemical gra
             question: `Cyanide poisoning inhibits Complex IV. The IMMEDIATE effect is:`,
             options: [`The whole chain stalls and ATP synthesis falls`, `Only Complex IV stops; the others continue normally`, `Oxygen consumption rises to compensate for the block`, `Glycolysis is directly inhibited by the cyanide`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `If Complex IV is blocked, electrons cannot pass to O$_2$. All upstream complexes become fully reduced and stop. No proton pumping → no gradient → no oxidative phosphorylation. NADH and FADH$_2$ accumulate. Oxygen consumption falls rather than rises, and glycolysis is not inhibited — it speeds up as the cell turns to anaerobic ATP production.`
           },
           {
             question: `FADH$_2$ produces fewer ATP than NADH because:`,
             options: [`FADH$_2$ enters at Complex II, skipping Complex I`, `FADH$_2$ passes electrons straight to Complex IV`, `FADH$_2$ transfers one electron, not two`, `FADH$_2$ is consumed within the TCA cycle itself`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `FADH$_2$ donates electrons to Complex II, which does NOT pump protons. NADH enters at Complex I, which DOES pump protons. So FADH$_2$ contributes to fewer H$^+$ pumped → fewer ATP (~1.5 vs ~2.5 per electron pair). FADH$_2$ still carries two electrons, passes them to CoQ and Complex III rather than straight to Complex IV, and is not consumed by the TCA cycle.`
           },
           {
             question: `The final electron acceptor in the ETC is:`,
             options: [`NAD+`, `FAD`, `O$_2$`, `CO$_2$`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Oxygen accepts electrons at Complex IV and is reduced to water.`
           },
           {
             question: `An uncoupler primarily causes which immediate effect?`,
             options: [`Increased proton gradient`, `Reduced oxygen consumption`, `Dissipation of the proton gradient`, `Direct inhibition of glycolysis`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Uncouplers allow protons to re-enter matrix without ATP synthase, dissipating the gradient and reducing ATP yield despite ongoing electron transport.`
           }
         ]
@@ -75,7 +79,7 @@ Chemiosmosis links ETC to ATP synthase: proton-motive force (electrochemical gra
 
 - TCA: 3 NADH + 1 FADH$_2$ + 1 GTP per acetyl-CoA
 - ETC: NADH → Complex I; FADH$_2$ → Complex II (fewer ATP)
-- Poisons: Rotenone (I), Antimycin A (III), Cyanide/CO (IV), Oligomycin (ATP synthase)
+- Poisons: Rotenone (I), Antimycin A (III), Cyanide/CO (IV) back up the chain; Oligomycin (ATP synthase) stalls it by backpressure; uncouplers (DNP) dissipate the gradient
 - ~30-32 ATP per glucose total (aerobic metabolism)`
     },
     {

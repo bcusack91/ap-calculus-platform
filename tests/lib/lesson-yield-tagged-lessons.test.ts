@@ -9,7 +9,7 @@
  */
 import { describe, it, expect } from 'vitest'
 import { LESSON_BUILT_EXIT_TOPICS } from '@/data/exit-quizzes/lesson-built'
-import { LESSON_YIELDS, filterSectionsForYield, stripLowYield } from '@/lib/lesson-yield'
+import { LESSON_YIELDS, filterSectionsForYield, splitYieldBlocks, stripLowYield } from '@/lib/lesson-yield'
 
 type Sec = { id: string; type?: string; content?: string; exercise?: { questions?: { yield?: string }[] } }
 const partFiles = import.meta.glob('../../src/data/interactive-lessons/mcat-mcat-*-part*.ts')
@@ -40,6 +40,12 @@ describe.each([...LESSON_BUILT_EXIT_TOPICS])('%s lesson', (slug) => {
         const close = (c.match(/^[ \t]*<!--\s*\/yield\s*-->[ \t]*$/gm) ?? []).length
         expect(open, `${s.id} markers`).toBe(close)
         expect(stripLowYield(c), `${s.id} default view`).not.toMatch(/<!--\s*\/?yield/)
+        // The renderer draws each block separately, so a marker inside a
+        // <details> dropdown would split its HTML in two.
+        for (const b of splitYieldBlocks(c)) {
+          const opens = (b.text.match(/<details\b/g) ?? []).length
+          expect(opens, `${s.id} <details> split by a yield marker`).toBe((b.text.match(/<\/details>/g) ?? []).length)
+        }
       }
       const shown = filterSectionsForYield(secs, false)
       expect(shown.length, 'steps in the default view').toBe(secs.length)

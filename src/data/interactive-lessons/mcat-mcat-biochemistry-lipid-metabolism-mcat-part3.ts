@@ -31,7 +31,11 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
 
 - **Diabetic ketoacidosis (DKA):** with no insulin, hormone-sensitive lipase and ketogenesis run unopposed; ketoacids (pKa ~4) dissociate and overwhelm bicarbonate buffering → anion-gap metabolic acidosis, Kussmaul breathing, fruity acetone breath. Typical of type 1 diabetes.
 - **Prolonged fasting/starvation:** ketosis is milder because some insulin remains to restrain lipolysis.
-- **Alcoholic ketoacidosis:** ethanol metabolism raises NADH/NAD$^+$, pushing the ketone pool toward beta-hydroxybutyrate — the standard nitroprusside dipstick (which detects acetoacetate) can UNDERESTIMATE it.`
+- **Alcoholic ketoacidosis:** ethanol metabolism raises NADH/NAD$^+$, pushing the ketone pool toward beta-hydroxybutyrate.
+
+<!-- yield:low -->
+- The standard nitroprusside dipstick detects acetoacetate (weakly acetone), not beta-hydroxybutyrate, so it can UNDERESTIMATE ketosis when NADH is high.
+<!-- /yield -->`
     },
     {
       id: 'lm3-quiz1',
@@ -43,30 +47,35 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
             question: `The liver synthesizes ketone bodies but cannot oxidize them because hepatocytes lack:`,
             options: [`Mitochondrial beta-hydroxybutyrate dehydrogenase`, `Carnitine palmitoyltransferase I`, `Mitochondria with an intact TCA cycle`, `Succinyl-CoA:acetoacetate CoA-transferase`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Succinyl-CoA:acetoacetate CoA-transferase (thiophorase, SCOT) transfers CoA from succinyl-CoA to acetoacetate, the obligatory activation step for ketone use. Its absence in liver makes ketones a one-way export. Beta-hydroxybutyrate dehydrogenase is used by the liver to MAKE beta-hydroxybutyrate, so hepatocytes clearly have it; they also have CPT-I and a working TCA cycle.`
           },
           {
             question: `During starvation, ketogenesis accelerates in part because gluconeogenesis depletes a key TCA-cycle intermediate. That intermediate is:`,
             options: [`Oxaloacetate`, `Citrate`, `Succinyl-CoA`, `Alpha-ketoglutarate`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Oxaloacetate is pulled toward phosphoenolpyruvate (via PEPCK) for glucose synthesis. With OAA scarce, citrate synthase cannot condense the incoming acetyl-CoA, which is instead diverted into acetoacetate and beta-hydroxybutyrate.`
           },
           {
-            question: `After heavy ethanol use, a patient's hepatocytes have a markedly elevated NADH/NAD$^+$ ratio. The ketone body profile will shift toward:`,
+            question: `After heavy ethanol use, a patient's hepatocytes have a markedly elevated NADH/NAD$^+$ ratio. (Standard nitroprusside urine dipsticks detect acetoacetate.) The ketone body profile will shift toward:`,
             options: [`Acetone, which nitroprusside dipsticks detect only weakly`, `Beta-hydroxybutyrate, which dipsticks may underestimate`, `Acetoacetate, raising the measured dipstick ketone level`, `Acetyl-CoA, which appears directly in serum`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Beta-hydroxybutyrate dehydrogenase equilibrates the two ketoacids with the NADH/NAD$^+$ ratio: high NADH pushes acetoacetate toward beta-hydroxybutyrate. Nitroprusside reagents react with acetoacetate (and weakly acetone), so true ketosis can be masked. Acetyl-CoA never circulates free in serum.`
           },
           {
             question: `Which tissue can use neither fatty acids nor ketone bodies and therefore remains absolutely glucose-dependent at all times?`,
             options: [`Cardiac muscle`, `Renal cortex`, `Red blood cells`, `Fasting brain`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Erythrocytes have no mitochondria — no beta-oxidation, no TCA, no ketone use; they live on anaerobic glycolysis. Heart happily burns both fat and ketones, and the brain adapts to ketones after days of fasting (though it never burns fatty acids directly).`
           },
           {
             question: `The rate-limiting, committed step of ketogenesis is catalyzed by:`,
-            options: [`Cytosolic HMG-CoA reductase`, `Mitochondrial HMG-CoA synthase`, `Hormone-sensitive lipase`, `Mitochondrial acetoacetyl-CoA thiolase`],
+            options: [`Cytosolic HMG-CoA reductase (statin target)`, `Mitochondrial HMG-CoA synthase`, `Adipocyte hormone-sensitive lipase`, `Mitochondrial acetoacetyl-CoA thiolase`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Mitochondrial HMG-CoA synthase commits acetoacetyl-CoA plus acetyl-CoA to HMG-CoA destined for ketones. The thiolase condensation that precedes it is freely reversible (the reverse of beta-oxidation's final thiolysis), so it commits nothing. HMG-CoA reductase is the cytosolic, cholesterol-pathway enzyme (statin target) — the classic compartment trap. HSL supplies substrate upstream but is not part of ketogenesis proper.`
           }
         ]
@@ -82,7 +91,11 @@ Peripheral tissues reverse the process: beta-hydroxybutyrate → acetoacetate (r
 - Liver lacks **thiophorase** → cannot burn its own ketones; RBCs cannot use them either (no mitochondria)
 - Fasting brain runs largely on ketones after ~3 days, sparing muscle protein
 - DKA: unopposed lipolysis + ketogenesis → anion-gap acidosis; high NADH (alcohol) shifts pool to beta-hydroxybutyrate
-- Compartment trap: mitochondrial HMG-CoA → ketones; cytosolic HMG-CoA → cholesterol`
+- Compartment trap: mitochondrial HMG-CoA → ketones; cytosolic HMG-CoA → cholesterol
+
+<!-- yield:low -->
+- Low-yield extras: nitroprusside dipsticks detect acetoacetate, not beta-hydroxybutyrate, so they underestimate high-NADH (alcoholic) ketosis
+<!-- /yield -->`
     },
     {
       id: 'lm3-worked-examples',

@@ -40,25 +40,29 @@ Integrated MCAT passages often ask you to infer dominant pathways from hormone s
             question: `After a 24-hour fast, which metabolic pathway is MOST active in the liver?`,
             options: [`Gluconeogenesis`, `Glycolysis`, `Fatty acid synthesis`, `Glycogenesis`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `After 24 hours, liver glycogen is depleted. Glucagon stimulates gluconeogenesis (making glucose from lactate, amino acids, glycerol) to maintain blood glucose for the brain.`
           },
           {
             question: `Insulin deficiency (Type 1 diabetes) leads to ketoacidosis because:`,
             options: [`Unchecked lipolysis drives hepatic ketogenesis`, `The liver cannot perform glycolysis`, `Excess blood glucose is converted into ketones`, `Muscle cells release excess lactic acid`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Without insulin: uncontrolled lipolysis → excess fatty acids → hepatic $\\beta$-oxidation → excess acetyl-CoA → ketone bodies (acetoacetate, $\\beta$-hydroxybutyrate, acetone). These are acids that lower blood pH. The ketones come from fatty acids, not from glucose, and lactate is not the driver of DKA.`
           },
           {
             question: `In the fed state, high insulin most directly promotes:`,
             options: [`Glycogenolysis and lipolysis`, `Glycogenesis and lipolysis`, `Glycogenesis and lipogenesis`, `Glycogenolysis and lipogenesis`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Insulin signals nutrient abundance and promotes storage/anabolic pathways like glycogenesis and fatty acid synthesis (lipogenesis), while suppressing the mobilizing pathways glycogenolysis and lipolysis.`
           },
           {
             question: `High hepatic malonyl-CoA is most consistent with:`,
-            options: [`Active beta-oxidation`, `Reduced fatty acid entry via CPT-I`, `Low fatty acid synthesis`, `Fasting glucagon dominance`],
+            options: [`Active beta-oxidation in liver mitochondria`, `Reduced fatty acid entry via CPT-I`, `Low acetyl-CoA carboxylase activity`, `Fasting glucagon dominance`],
             correctAnswer: 1,
-            explanation: `Malonyl-CoA inhibits CPT-I, suppressing long-chain fatty acid entry into mitochondria and reducing beta-oxidation.`
+            yield: 'HIGH',
+            explanation: `Malonyl-CoA inhibits CPT-I, suppressing long-chain fatty acid entry into mitochondria and reducing beta-oxidation. Malonyl-CoA is made by acetyl-CoA carboxylase, so a high level signals ACTIVE carboxylase and fatty acid synthesis — the insulin-driven fed state, not glucagon-dominated fasting.`
           }
         ]
       }

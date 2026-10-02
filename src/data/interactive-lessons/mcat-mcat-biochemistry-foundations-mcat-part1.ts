@@ -14,7 +14,7 @@ export const mcatBiochemPart1Data = {
 |----------|-------------|-------------|
 | Nonpolar/Hydrophobic | G, A, V, L, I, P, F, W, M | Interior of proteins |
 | Polar uncharged | S, T, C, Y, N, Q | H-bonding |
-| Positively charged (pH 7) | K, R, H | Basic side chains |
+| Positively charged / basic | K, R, H | Basic side chains (K, R fully + at pH 7; H, pKa ≈ 6, only partly) |
 | Negatively charged (pH 7) | D, E | Acidic side chains |
 
 ### Protein Structure Levels
@@ -47,24 +47,28 @@ This is heavily tested in electrophoresis and separation contexts.`
             question: `Proline is unique among amino acids because it:`,
             options: [`Has a ring that includes its backbone N`, `Is the only amino acid lacking a chiral alpha carbon`, `Has the smallest and most flexible side chain`, `Can form disulfide bonds with cysteine residues`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Proline is an imino acid — its side chain cyclizes back to the backbone N, creating a rigid kink. This is why proline is a "helix breaker" in $\\alpha$-helices. Lacking a chiral alpha carbon and having the smallest, most flexible side chain both describe glycine, and only cysteine forms disulfide bonds.`
           },
           {
             question: `$\\alpha$-helices are stabilized primarily by:`,
             options: [`Backbone C=O to N-H hydrogen bonds`, `Disulfide bonds between cysteines`, `Hydrophobic interactions`, `Ionic bonds between side chains`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `$\\alpha$-helices are stabilized by H-bonds between the C=O of residue $i$ and the N-H of residue $i+4$. These are backbone (not side chain) interactions, making them secondary structure. Disulfide bonds, hydrophobic interactions, and ionic side-chain bonds stabilize tertiary structure instead.`
           },
           {
             question: `At pH well above its isoelectric point, a protein will usually have net:`,
             options: [`Positive charge`, `Negative charge`, `Zero charge always`, `No ionizable groups`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `At pH above pI, more groups are deprotonated, producing a net negative charge.`
           },
           {
             question: `Which amino acid side chain can form a disulfide bond under oxidizing conditions?`,
             options: [`Serine`, `Methionine`, `Cysteine`, `Tyrosine`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Cysteine thiol groups can oxidize to form a disulfide linkage (cystine).`
           }
         ]
@@ -76,7 +80,7 @@ This is heavily tested in electrophoresis and separation contexts.`
       content: `### Key Takeaways — Part 1
 
 - Know amino acid categories cold (nonpolar, polar, positive, negative)
-- Proline = helix breaker (rigid ring); Glycine = most flexible (no side chain)
+- Proline = helix breaker (rigid ring); Glycine = most flexible (side chain is a single H; achiral)
 - Primary: sequence. Secondary: $\\alpha$-helix/$\\beta$-sheet. Tertiary: 3D fold. Quaternary: subunits.
 - Disulfide bonds (Cys-Cys) = only COVALENT bond in tertiary structure`
     },
@@ -96,7 +100,7 @@ This is heavily tested in electrophoresis and separation contexts.`
 3. The $\\alpha$-amino group (pKa ≈ 9.6) is protonated: $-NH_{3}^{+}$
 4. Net charge: (−1 from side chain) + (−1 from backbone) + (+1 from backbone $NH_{3}$) = **−1 (negatively charged)**
 
-**MCAT Strategy:** At physiological pH (~7), acidic amino acids (D, E) are negative; basic amino acids (K, R, H) are positive because their pKa values are far from 7.
+**MCAT Strategy:** At physiological pH (~7.4), acidic amino acids (D, E) are negative and K and R are positive, because their side-chain pKa values are far from 7.4. Histidine (side-chain pKa ≈ 6) is the exception: it is classed as basic but is mostly uncharged at pH 7.4.
 </details>
 
 <details>

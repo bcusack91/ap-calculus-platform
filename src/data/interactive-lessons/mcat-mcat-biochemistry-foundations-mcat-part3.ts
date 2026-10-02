@@ -8,7 +8,7 @@ export const mcatBiochemPart3Data = {
 
 **Part 3 of 7 — Glycolysis & Gluconeogenesis**
 
-### Glycolysis (Cytoplasm, Anaerobic)
+### Glycolysis (Cytoplasm, No O$_2$ Required)
 
 $$\\text{Glucose} \\xrightarrow{10\\text{ steps}} 2\\text{ Pyruvate}$$
 
@@ -44,24 +44,28 @@ Gluconeogenesis bypasses the three irreversible glycolysis steps using pyruvate 
             question: `A cell is exposed to high levels of ATP and citrate. The DIRECT effect on glycolysis is:`,
             options: [`PFK-1 is inhibited`, `Hexokinase is activated`, `Pyruvate kinase is activated`, `Glycolysis speeds up`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Both ATP and citrate are allosteric inhibitors of PFK-1, the rate-limiting enzyme, so glycolysis slows. This signals that the cell has plenty of energy and TCA intermediates.`
           },
           {
             question: `During vigorous exercise, muscle cells produce lactate primarily to:`,
-            options: [`Regenerate NAD$^+$ for glycolysis`, `Produce ATP directly from pyruvate`, `Feed carbon into the TCA cycle`, `Lower blood glucose during exercise`],
+            options: [`Regenerate NAD$^+$ so glycolysis can continue`, `Produce ATP directly from pyruvate`, `Feed carbon into the TCA cycle`, `Lower blood glucose during exercise`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Lactate dehydrogenase converts pyruvate → lactate while oxidizing NADH → NAD$^+$. The regenerated NAD$^+$ is needed for glyceraldehyde-3-P dehydrogenase (step 6) to keep glycolysis running anaerobically. The lactate step itself makes no ATP, diverts pyruvate away from the TCA cycle, and lowering blood glucose is not its purpose.`
           },
           {
             question: `The primary rate-limiting enzyme of glycolysis is:`,
             options: [`Hexokinase`, `PFK-1`, `Pyruvate kinase`, `Lactate dehydrogenase`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `PFK-1 is the committed, major regulatory step and the classic rate-limiting enzyme for glycolysis.`
           },
           {
             question: `High fructose-2,6-bisphosphate tends to:`,
             options: [`Inhibit glycolysis`, `Activate glycolysis`, `Block pyruvate kinase`, `Activate glycogenolysis only`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Fructose-2,6-bisphosphate activates PFK-1 and promotes glycolytic flux.`
           }
         ]

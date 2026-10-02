@@ -44,10 +44,14 @@ Oxidative phosphorylation converts carriers at ~2.5 ATP/NADH and ~1.5 ATP/FADH$_
 MCAT bioenergetics passages often show O$_2$ consumption traces of isolated mitochondria:
 
 1. **Substrate added (e.g., succinate or malate):** slow O$_2$ use (limited by ADP availability).
-2. **ADP added:** O$_2$ use accelerates ("state 3") — proof that respiration is coupled to phosphorylation.
-3. **ADP exhausted:** slows again ("state 4").
+2. **ADP added:** O$_2$ use accelerates — proof that respiration is coupled to phosphorylation.
+3. **ADP exhausted:** slows again.
 4. **Oligomycin:** O$_2$ use stops (synthase blocked, gradient maxed).
-5. **DNP/FCCP:** O$_2$ use surges to maximum with NO ATP made (uncoupled).
+5. **Uncoupler (DNP):** O$_2$ use surges to maximum with NO ATP made (uncoupled).
+
+<!-- yield:low -->
+- Lab labels: ADP-stimulated respiration is called "state 3" and the slower rate after ADP runs out "state 4"; FCCP is a laboratory uncoupler used like DNP.
+<!-- /yield -->
 
 Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NADH-linked substrates (malate/glutamate) than for succinate — because of Complex I.`
     },
@@ -61,31 +65,36 @@ Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NAD
             question: `A cell forced to rely on anaerobic glycolysis must consume roughly how many times more glucose to maintain its ATP supply compared with full aerobic oxidation (~30 ATP/glucose)?`,
             options: [`About 2 times more`, `About 5 times more`, `About 15 times more`, `The same amount`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Anaerobic glycolysis nets 2 ATP per glucose versus ~30 aerobically: a ~15-fold gap. This is why hypoxic tissues and glycolytic tumor cells (Warburg effect) exhibit enormous glucose uptake.`
           },
           {
             question: `Isolated mitochondria given malate consume little O$_2$ until ADP is added, after which respiration accelerates sharply. This observation demonstrates that:`,
             options: [`ADP is an allosteric activator of Complex I`, `Electron transport is coupled to ATP synthesis`, `ADP is an electron donor for the chain`, `Oxygen is not the final electron acceptor`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Without ADP, ATP synthase has no substrate; protons cannot re-enter, the gradient backs up, and electron flow (hence O$_2$ use) is restrained. Supplying ADP lets protons flow through the synthase, unleashing respiration — respiratory control, the hallmark of coupling.`
           },
           {
             question: `Adenylate kinase interconverts 2 ADP $\\rightleftharpoons$ ATP + AMP. Why is AMP a more sensitive indicator of energy stress than ADP?`,
             options: [`AMP is present at much higher concentrations than ATP`, `Small ATP drops cause far larger fractional AMP rises`, `Adenylate kinase converts AMP directly into cAMP`, `AMP changes by a smaller fraction than ADP does`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Because cellular AMP levels are tiny compared to ATP, the adenylate kinase equilibrium amplifies changes: a small percentage fall in ATP shifts a comparatively huge percentage rise in AMP. AMPK exploits this amplified signal as the cell's fuel gauge.`
           },
           {
             question: `Mitochondria respiring on succinate show a lower P/O ratio than mitochondria respiring on malate because succinate-derived electrons:`,
             options: [`Reduce oxygen only partially, to superoxide`, `Enter at Complex II, skipping Complex I`, `Bypass Complex III and cytochrome c`, `Generate more heat per electron`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Malate oxidation generates matrix NADH (enters at Complex I; ~2.5 ATP per pair of electrons), while succinate reduces FAD at Complex II (~1.5). Fewer protons pumped per electron pair = less ATP per oxygen atom consumed = lower P/O ratio.`
           },
           {
             question: `During fasting, liver PDH is largely switched off as PDH kinase is induced and PDH's own products, acetyl-CoA and NADH, build up. The metabolic purpose is to:`,
             options: [`Accelerate glucose oxidation in the liver`, `Preserve pyruvate carbons for gluconeogenesis`, `Divert pyruvate into hepatic fatty acid synthesis`, `Block fatty acid oxidation in the liver`],
             correctAnswer: 1,
-            explanation: `The fasting hormonal state acts on PDH only indirectly: it induces PDH kinase (PDK4), and fatty-acid oxidation supplies acetyl-CoA and NADH that further inhibit the complex. Acetyl-CoA carbons cannot return to glucose (PDH is irreversible). Switching PDH off routes pyruvate, lactate, and alanine toward oxaloacetate and gluconeogenesis, while the liver burns fatty acids for its own ATP — the essence of fasting fuel logic.`
+            yield: 'HIGH',
+            explanation: `The fasting hormonal state acts on PDH only indirectly: it induces PDH kinase, and fatty-acid oxidation supplies acetyl-CoA and NADH that further inhibit the complex. Acetyl-CoA carbons cannot return to glucose (PDH is irreversible). Switching PDH off routes pyruvate, lactate, and alanine toward oxaloacetate and gluconeogenesis, while the liver burns fatty acids for its own ATP — the essence of fasting fuel logic.`
           }
         ]
       }
@@ -99,7 +108,11 @@ Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NAD
 - Yield range comes from the cytosolic-NADH shuttle choice (~2.5 vs ~1.5 each)
 - AMP (amplified by adenylate kinase) → AMPK = low-energy alarm; ATP/NADH/citrate = abundance signals
 - Respirometry: ADP addition speeds O$_2$ use (coupling), oligomycin stops it, uncoupler maximizes it without ATP
-- P/O ratio: NADH-linked substrates > succinate (Complex I pumping); fasting turns PDH off to spare gluconeogenic carbon`
+- P/O ratio: NADH-linked substrates > succinate (Complex I pumping); fasting turns PDH off to spare gluconeogenic carbon
+
+<!-- yield:low -->
+- Low-yield extras: respirometry jargon — ADP-stimulated respiration is "state 3", the post-ADP rate is "state 4"; FCCP is a lab uncoupler that behaves like DNP
+<!-- /yield -->`
     },
     {
       id: 'be4-worked-examples',
@@ -127,9 +140,9 @@ Also expect the **P/O ratio** (ATP made per oxygen atom reduced): higher for NAD
 **Question:** A trace shows: malate added (slow O$_2$ decline) → ADP added (fast decline) → plateau → compound X added (O$_2$ decline stops) → compound Y added (fastest decline of all). Identify X and Y.
 
 **Solution:**
-1. The ADP response and later plateau are normal state 3/state 4 respiration.
+1. The ADP response and later plateau are normal coupled respiration: fast while ADP is available, slow again once it is used up.
 2. X halts O$_2$ consumption with substrate still present: it blocks either the chain or the synthase. Because Y subsequently RESTORES rapid O$_2$ use, the chain must be intact — so X is **oligomycin** (ATP synthase block; gradient back-pressure stops electron flow).
-3. Y bypasses the synthase by collapsing the gradient: an **uncoupler** (DNP/FCCP). Maximum electron flow, zero ATP.
+3. Y bypasses the synthase by collapsing the gradient: an **uncoupler** (such as DNP). Maximum electron flow, zero ATP.
 
 **MCAT Strategy:** An uncoupler is the only agent that INCREASES O$_2$ consumption after oligomycin; if Y had been cyanide, the trace would have stayed flat.
 </details>

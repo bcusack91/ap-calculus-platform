@@ -60,30 +60,35 @@ A titration curve for an amino acid shows one **buffering plateau per ionizable 
             question: `A glutamate side chain has pKa 4.3. At pH 6.3, the ratio of deprotonated to protonated forms is approximately:`,
             options: [`1:100`, `1:1`, `10:1`, `100:1`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Henderson-Hasselbalch: $pH - pK_a = \\log([A^-]/[HA]) = 6.3 - 4.3 = 2$, so the ratio is $10^{2} = 100:1$ in favor of the deprotonated carboxylate.`
           },
           {
             question: `Glycine has pKa values of 2.3 ($\\alpha$-COOH) and 9.6 ($\\alpha$-NH$_3^+$). Its isoelectric point is approximately:`,
             options: [`2.3`, `5.95`, `9.6`, `11.9`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `For an amino acid with a non-ionizable side chain, $pI = (pK_{a1} + pK_{a2})/2 = (2.3 + 9.6)/2 = 5.95$. At this pH the zwitterion dominates and net charge is zero.`
           },
           {
             question: `Aspartate has pKa values of 2.1 ($\\alpha$-COOH), 3.9 (side chain COOH), and 9.8 ($\\alpha$-NH$_3^+$). Its pI is calculated as:`,
             options: [`(2.1 + 3.9)/2 = 3.0`, `(3.9 + 9.8)/2 = 6.85`, `(2.1 + 9.8)/2 = 5.95`, `(2.1 + 3.9 + 9.8)/3 = 5.3`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `For acidic amino acids, average the two LOWEST pKa values — the ones flanking the species with zero net charge. Averaging all three or the wrong pair is the classic trap.`
           },
           {
             question: `A protein with pI = 8.5 is placed in a buffer at pH 6.0 and subjected to electrophoresis. It will:`,
             options: [`Migrate toward the cathode, because it is net positive`, `Migrate toward the anode, because it is net negative`, `Not migrate, because pH is below pI`, `Precipitate immediately, because it is at its pI`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `At pH (6.0) below pI (8.5), the protein is more protonated than at its neutral point, giving a net POSITIVE charge; positive species migrate toward the negative electrode (cathode). It is not at its pI, so it does migrate.`
           },
           {
             question: `Which group functions as the best physiological buffer AT pH 7.4 inside a protein?`,
             options: [`Aspartate side chains (pKa ~3.9)`, `Histidine side chains (pKa ~6.0)`, `Arginine side chains (pKa ~12.5)`, `Backbone carboxyl groups (pKa ~2)`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Buffering is strongest within about one pH unit of the pKa. Histidine's imidazole (pKa ~6) is the only listed group near 7.4 — this is why hemoglobin's histidines buffer blood pH. The others are fully ionized (or fully protonated) at physiological pH.`
           }
         ]

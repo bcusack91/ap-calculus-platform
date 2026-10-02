@@ -22,7 +22,7 @@ All 20 standard amino acids are **L-stereoisomers** with **(S) absolute configur
 | Aromatic | Phe (F), Trp (W), Tyr (Y) | Absorb UV at 280 nm (Trp, Tyr especially) |
 | Polar, uncharged | Ser (S), Thr (T), Cys (C), Asn (N), Gln (Q) | H-bond donors/acceptors |
 | Acidic (negative at pH 7) | Asp (D), Glu (E) | Side-chain carboxylate, pKa ~4 |
-| Basic (positive at pH 7) | Lys (K), Arg (R), His (H) | Side-chain amine/guanidinium/imidazole |
+| Basic | Lys (K), Arg (R), His (H) | Side-chain amine/guanidinium/imidazole; K and R are positive at pH 7, His (pKa ≈ 6) is mostly neutral |
 
 **Tyrosine caution:** its phenol -OH makes it polar-ish, but the MCAT usually groups it with the aromatics; it is a common phosphorylation site (along with Ser and Thr).
 
@@ -48,30 +48,35 @@ In a water-soluble globular protein, nonpolar residues (V, L, I, F, M) cluster i
             question: `Which amino acid is achiral?`,
             options: [`Alanine`, `Glycine`, `Serine`, `Proline`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Glycine's side chain is a hydrogen atom, so its $\\alpha$-carbon bears two identical H substituents and is not a stereocenter. All other proteinogenic amino acids are chiral (L-configuration).`
           },
           {
             question: `A transmembrane $\\alpha$-helix of a receptor is mutated so that a leucine is replaced by glutamate. The most likely consequence is:`,
             options: [`Improved anchoring in the bilayer due to stronger interactions`, `No change, because both side chains are similar in size`, `Destabilization from a charge buried among lipid tails`, `Formation of a new disulfide bond with a neighboring helix`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Leucine is nonpolar and compatible with the hydrophobic bilayer core; glutamate carries a negative charge at pH 7. Burying a charge in the lipid environment is energetically very unfavorable and destabilizes the helix within the membrane, because the charged residue now faces the hydrophobic lipid tails. Similar size does not make the residues interchangeable when their polarity differs, and disulfides require cysteine, not glutamate.`
           },
           {
             question: `Which residue's side chain has a pKa closest to physiological pH, allowing it to act as both proton donor and acceptor in enzyme active sites?`,
             options: [`Lysine`, `Aspartate`, `Histidine`, `Arginine`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Histidine's imidazole pKa is about 6, so near pH 7 meaningful amounts of both protonated and deprotonated forms coexist — ideal for general acid-base catalysis. Lys (~10.5) and Arg (~12.5) stay protonated; Asp (~3.9) stays deprotonated.`
           },
           {
             question: `Proline destabilizes $\\alpha$-helices primarily because it:`,
             options: [`Is too hydrophilic for the helix interior`, `Has a rigid ring and lacks a backbone N-H to donate`, `Forms disulfide crosslinks that distort the helix`, `Is too large to fit within the helix`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Proline's side chain bonds back to its backbone nitrogen, creating a rigid ring that restricts rotation, and the nitrogen (a secondary amine within the ring) has no N-H hydrogen to donate to the helix's i to i+4 hydrogen-bonding pattern.`
           },
           {
             question: `A researcher monitors protein concentration by absorbance at 280 nm. This assay depends mainly on which residues?`,
             options: [`Tryptophan and tyrosine`, `Aspartate and glutamate`, `Serine and threonine`, `Glycine and alanine`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Aromatic side chains absorb UV light near 280 nm; tryptophan (strongest) and tyrosine dominate the signal, with a minor contribution from phenylalanine. Aliphatic and charged residues do not absorb appreciably at 280 nm.`
           }
         ]

@@ -59,30 +59,35 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
             question: `The planarity of the peptide bond results from:`,
             options: [`Steric hindrance between neighboring side chains`, `Partial double-bond character in the C-N bond`, `Hydrogen bonding between neighboring backbone atoms`, `The tetrahedral geometry around the alpha-carbon`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Resonance is the cause: the amide nitrogen's lone pair delocalizes into the carbonyl, giving the C-N bond roughly 40% double-bond character. Rotation about it is restricted, forcing the six atoms of the peptide unit into a plane.`
           },
           {
             question: `Treating a protein with urea and $\\beta$-mercaptoethanol, then removing both, sometimes allows full recovery of activity. This supports the conclusion that:`,
             options: [`Quaternary structure is covalently maintained`, `The primary sequence encodes the native fold`, `Chaperones are required for all protein folding`, `Denaturation cleaves peptide bonds reversibly`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `This is the logic of Anfinsen's experiment: if a fully denatured, reduced protein refolds spontaneously to an active conformation, the sequence itself must contain the information needed to specify the native fold. Denaturants do not break peptide bonds, and chaperones prevent aggregation rather than specify folds.`
           },
           {
             question: `Which interaction is disrupted by dithiothreitol (DTT) but NOT by urea?`,
             options: [`Hydrogen bonds between backbone atoms`, `Hydrophobic packing of the core`, `Disulfide bonds between cysteines`, `Salt bridges between Lys and Asp`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `DTT (like $\\beta$-mercaptoethanol) is a reducing agent that specifically reduces covalent disulfide bonds to free thiols. Urea disrupts noncovalent interactions (H-bonds, hydrophobic effect) but cannot reduce disulfides.`
           },
           {
             question: `The principal thermodynamic driving force for the folding of a globular protein in water is:`,
             options: [`The decrease in conformational entropy of the polypeptide`, `The entropy gain of water freed from nonpolar surfaces`, `The enthalpy released by forming peptide bonds`, `Hydrogen bonding within the protein backbone`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Folding costs conformational entropy (unfavorable), but sequestering hydrophobic side chains frees ordered water shells, and that solvent entropy gain dominates. Peptide bonds already exist before folding, so no bond-forming enthalpy is involved. Backbone hydrogen bonds largely replace hydrogen bonds those same groups already made with water, so their net contribution is small compared with the hydrophobic effect.`
           },
           {
             question: `Hemoglobin's cooperative oxygen binding depends on communication between its four subunits. Cooperativity is therefore a property of which structural level?`,
             options: [`Primary`, `Secondary`, `Tertiary`, `Quaternary`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Cooperativity requires multiple subunits whose conformational changes influence one another (T to R state shifts) — by definition quaternary structure. Myoglobin, a single chain with tertiary structure only, binds oxygen without cooperativity.`
           }
         ]
@@ -97,7 +102,11 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
 - 1° sequence → 2° backbone H-bonding ($\\alpha$-helix i to i+4; $\\beta$-sheets) → 3° side-chain interactions → 4° multi-subunit assembly
 - Hydrophobic effect (solvent entropy) drives folding; sequence encodes the fold (Anfinsen); chaperones prevent aggregation
 - Match the denaturant to its target: reducing agents = disulfides only; SDS = hydrophobic; pH = ionic/H-bonds
-- Cooperativity (hemoglobin) = quaternary phenomenon`
+- Cooperativity (hemoglobin) = quaternary phenomenon
+
+<!-- yield:low -->
+- Low-yield extras: in vivo, correct disulfide pairing is often aided by the ER enzyme protein disulfide isomerase (PDI), which reshuffles mispaired disulfides
+<!-- /yield -->`
     },
     {
       id: 'aa3-worked-examples',
@@ -125,7 +134,7 @@ Misfolding has clinical stakes: aggregated $\\beta$-sheet-rich conformers underl
 **Solution:**
 1. Stability in urea alone → the fold is unusually robust to loss of noncovalent interactions, implying covalent crosslinks hold it together.
 2. Adding a reducing agent destroys activity → **disulfide bonds** were the critical stabilizers.
-3. No recovery after dilution → the reduced protein misfolds or aggregates; the disulfides likely needed to form in a specific order (often aided in vivo by protein disulfide isomerase).
+3. No recovery after dilution → the reduced protein misfolds or aggregates instead of re-forming its native disulfide pairs; the disulfides likely needed to form in a specific order.
 
 **MCAT Strategy:** Urea vs. reducing agent is the classic experimental dissection: urea = noncovalent, $\\beta$-ME/DTT = covalent disulfides.
 </details>

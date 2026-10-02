@@ -37,7 +37,7 @@ The deepest statement of catalysis: enzymes bind the **transition state** more t
 
 - **Acid-base catalysis:** His (pKa ~6) donates/accepts protons
 - **Covalent catalysis:** transient enzyme-substrate covalent bond (e.g., serine protease acyl-enzyme intermediate via the Ser-His-Asp catalytic triad)
-- **Electrostatic/metal-ion catalysis:** metal cations stabilize negative charge (e.g., $Zn^{2+}$ in carbonic anhydrase)
+- **Electrostatic/metal-ion catalysis:** metal cations stabilize negative charge or activate water (e.g., $Zn^{2+}$ in carbonic anhydrase lowers bound water's pKa so a $Zn$-bound hydroxide attacks CO$_2$)
 - **Proximity and orientation:** holding substrates next to each other in the right geometry
 
 ### Cofactors and Coenzymes
@@ -73,30 +73,35 @@ MCAT trap: **kinase** (transfers phosphate from ATP to substrate) vs. **phosphat
             question: `An enzyme increases the rate of a reaction by a factor of $10^{6}$. Which quantity is unchanged by the enzyme?`,
             options: [`The activation energy`, `The rate of the forward reaction`, `The equilibrium constant $K_{eq}$`, `The transition-state energy`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Catalysts lower $E_a$ and accelerate forward AND reverse rates equally, so equilibrium position ($K_{eq}$, and $\\Delta G^{\\circ}$) is untouched. The enzyme changes how fast equilibrium is reached, never where it lies.`
           },
           {
             question: `Transition-state analogs are among the most potent enzyme inhibitors known because:`,
             options: [`They form irreversible covalent bonds with active-site residues`, `They mimic the transition state that enzymes bind most tightly`, `They bind an allosteric site and lock the enzyme in its T state`, `They shift the equilibrium of the reaction toward reactants`],
             correctAnswer: 1,
-            explanation: `Enzymes bind the transition state more tightly than the substrate itself, so a stable mimic of that state binds extremely tightly. Catalysis works by complementing the transition state's geometry and charge, and the analog exploits those tightest binding interactions, giving very low dissociation constants. No covalent chemistry is required, the analog occupies the active site rather than an allosteric site, and no inhibitor can shift an equilibrium position.`
+            yield: 'HIGH',
+            explanation: `Enzymes bind the transition state more tightly than the substrate itself, so a stable mimic of that state binds extremely tightly. Catalysis works by complementing the transition state's geometry and charge, and the analog exploits those tightest binding interactions, giving very low dissociation constants. No covalent chemistry is required; the analog occupies the active site rather than an allosteric site, and no inhibitor can shift an equilibrium position.`
           },
           {
             question: `A patient with severe thiamine (vitamin B1) deficiency shows impaired activity of pyruvate dehydrogenase. In this context, thiamine pyrophosphate is best described as a:`,
             options: [`Substrate consumed by the reaction`, `Coenzyme required by the enzyme`, `Competitive inhibitor of the enzyme`, `Tightly bound prosthetic heme group`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `TPP is an organic, vitamin-derived helper molecule — a coenzyme. Without it the apoenzyme cannot function. It is regenerated each cycle (not consumed like a substrate) and it promotes, not inhibits, catalysis. It is also not a heme group: heme is an iron porphyrin, not a vitamin-B1 derivative.`
           },
           {
             question: `The enzyme that catalyzes glucose-6-phosphate to fructose-6-phosphate belongs to which enzyme class?`,
             options: [`Isomerase`, `Transferase`, `Hydrolase`, `Ligase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The reaction rearranges atoms within a single molecule (aldose to ketose) — an isomerization. No group is transferred between molecules, no water is used, and no ATP-dependent joining occurs.`
           },
           {
             question: `In chymotrypsin's catalytic triad (Ser-His-Asp), the role of histidine is to:`,
-            options: [`Form the covalent acyl-enzyme intermediate`, `Act as a general base that deprotonates serine`, `Coordinate a zinc ion that polarizes the carbonyl`, `Form the oxyanion hole that stabilizes the intermediate`],
+            options: [`Form the covalent acyl-enzyme intermediate by attacking the carbonyl`, `Act as a general base that deprotonates serine`, `Coordinate a zinc ion that polarizes the carbonyl`, `Form the oxyanion hole that stabilizes the intermediate`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `His abstracts the proton from Ser's hydroxyl (general base catalysis), generating the strong serine nucleophile that attacks the substrate carbonyl; Asp orients and stabilizes protonated His. Serine, not histidine, forms the covalent intermediate; backbone N-H groups form the oxyanion hole. Chymotrypsin uses no metal ion; zinc polarizing a substrate carbonyl belongs to metalloproteases such as carboxypeptidase A.`
           }
         ]

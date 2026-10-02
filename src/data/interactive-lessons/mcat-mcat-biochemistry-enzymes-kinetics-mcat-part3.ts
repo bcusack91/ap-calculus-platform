@@ -53,31 +53,36 @@ Uncompetitive and mixed inhibitors are pharmacologically attractive: a competiti
             question: `An inhibitor raises the apparent $K_m$ of an enzyme without changing $V_{max}$. Increasing substrate concentration restores full activity. The inhibitor is:`,
             options: [`Noncompetitive`, `Uncompetitive`, `Competitive`, `Irreversible`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Higher apparent $K_m$, unchanged $V_{max}$, and reversal by excess substrate are the three fingerprints of competitive inhibition — the substrate can always outcompete the inhibitor for the shared active site.`
           },
           {
             question: `On a Lineweaver-Burk plot, adding an inhibitor produces a line parallel to the uninhibited line. The inhibitor binds:`,
             options: [`The free enzyme's active site`, `Only the enzyme-substrate complex`, `The free enzyme and ES complex with equal affinity`, `The substrate itself`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Parallel lines mean the slope $K_m/V_{max}$ is constant, which happens only when $K_m$ and $V_{max}$ decrease by the same factor — the signature of uncompetitive inhibition, which requires the ES complex to already exist before the inhibitor can bind.`
           },
           {
             question: `A noncompetitive inhibitor at a fixed concentration is added to an assay. Which statement is TRUE at saturating substrate?`,
             options: [`The reaction reaches the original $V_{max}$ because substrate displaces the inhibitor`, `The reaction runs below the original $V_{max}$ no matter how much substrate is added`, `The apparent $K_m$ triples`, `The enzyme is covalently inactivated`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `A noncompetitive inhibitor binds an allosteric site, so substrate cannot displace it regardless of concentration. It functionally removes active enzyme, capping the rate below the original $V_{max}$ while leaving $K_m$ unchanged.`
           },
           {
             question: `After exposure to an organophosphate, a patient's acetylcholinesterase activity does not recover when the enzyme is extensively dialyzed. This is because the inhibitor:`,
             options: [`Has an extremely low $K_m$`, `Covalently phosphorylated the active-site serine`, `Competitively blocks the acetylcholine site`, `Binds cooperatively at four sites`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Dialysis removes reversibly bound small molecules; failure to recover activity indicates a covalent modification. Organophosphates phosphorylate the catalytic serine of acetylcholinesterase, permanently inactivating each modified enzyme molecule. A merely competitive inhibitor holds the active site noncovalently, so dialysis would wash it out and restore activity.`
           },
           {
             question: `Methotrexate closely resembles dihydrofolate and inhibits dihydrofolate reductase. In cells treated with methotrexate, which change would MOST directly reduce the drug's effectiveness?`,
             options: [`A rise in intracellular dihydrofolate concentration`, `A fall in intracellular dihydrofolate concentration`, `Increased temperature`, `A decrease in enzyme expression`],
             correctAnswer: 0,
-            explanation: `A structural analog of the substrate acts as a competitive inhibitor. Accumulating substrate (dihydrofolate) competes the drug off the active site — the defining vulnerability of competitive inhibition. This is also why cancer cells amplify DHFR expression to resist methotrexate, but among the options, more substrate is the direct competitive effect.`
+            yield: 'HIGH',
+            explanation: `A structural analog of the substrate acts as a competitive inhibitor. Accumulating substrate (dihydrofolate) competes the drug off the active site — the defining vulnerability of competitive inhibition. Less enzyme would strengthen the drug's effect, not blunt it (cancer cells resist methotrexate the opposite way, by amplifying the DHFR gene), less dihydrofolate would let the drug occupy even more active sites, and raising the temperature does not selectively displace a competitive inhibitor.`
           }
         ]
       }
@@ -134,7 +139,7 @@ Uncompetitive and mixed inhibitors are pharmacologically attractive: a competiti
 2. Reversible inhibitor: dissociates and washes away; activity returns toward 100%.
 3. Irreversible inhibitor: the covalent adduct stays; activity remains ~10% after dialysis. (Confirmation: mass spectrometry showing an enzyme mass increase equal to the adduct.)
 
-**MCAT Strategy:** "Does activity recover after dialysis/dilution?" is the standard experimental discriminator; time-dependent, concentration-independent loss of activity also hints at covalent chemistry.
+**MCAT Strategy:** "Does activity recover after dialysis/dilution?" is the standard experimental discriminator; activity that keeps falling with incubation time at a fixed inhibitor concentration also hints at covalent chemistry.
 </details>`
     }
   ]

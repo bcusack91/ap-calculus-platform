@@ -35,7 +35,11 @@ $K_m$ is an **inverse measure of apparent affinity**: a LOW $K_m$ means the enzy
 
 $$\\text{efficiency} = \\frac{k_{cat}}{K_m}$$
 
-This ratio compares enzymes (or one enzyme's preference among substrates) at low, physiological substrate levels. Its ceiling is the diffusion limit ($\\sim 10^{8}$-$10^{9}\\ M^{-1}s^{-1}$); enzymes near it (catalase, carbonic anhydrase) are "catalytically perfect."
+This ratio compares enzymes (or one enzyme's preference among substrates) at low, physiological substrate levels. Its ceiling is the diffusion limit — the enzyme cannot convert substrate faster than substrate can collide with it; enzymes near it (catalase, carbonic anhydrase) are "catalytically perfect."
+
+<!-- yield:low -->
+The diffusion limit is roughly $10^{8}$-$10^{9}\\ M^{-1}s^{-1}$.
+<!-- /yield -->
 
 ### The Lineweaver-Burk (Double-Reciprocal) Plot
 
@@ -63,30 +67,35 @@ Hexokinase (most tissues) has a LOW $K_m$ — it works at full speed even at low
             question: `An enzyme has $K_m = 2$ mM and $V_{max} = 100$ $\\mu$mol/min. At $[S] = 2$ mM, the initial velocity is:`,
             options: [`100 $\\mu$mol/min`, `50 $\\mu$mol/min`, `25 $\\mu$mol/min`, `Cannot be determined without $k_{cat}$`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `By definition, $K_m$ is the substrate concentration at which the enzyme runs at half of $V_{max}$. Plugging in: $v_0 = V_{max}(2)/(2+2) = V_{max}/2 = 50$ $\\mu$mol/min. Dividing $V_{max}$ by $(K_m + [S])$ while dropping $[S]$ from the numerator gives the 25 $\\mu$mol/min trap.`
           },
           {
             question: `Doubling the total enzyme concentration in an assay will:`,
             options: [`Double $K_m$ and double $V_{max}$`, `Double $V_{max}$ but leave $K_m$ unchanged`, `Halve $K_m$ but leave $V_{max}$ unchanged`, `Leave both unchanged`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `$V_{max} = k_{cat}[E]_{total}$, so it scales with enzyme concentration. $K_m$ reflects the intrinsic enzyme-substrate interaction (binding and catalysis rate constants) and is independent of how much enzyme is present.`
           },
           {
             question: `Enzyme A has $k_{cat} = 100\\ s^{-1}$ and $K_m = 10\\ \\mu M$; enzyme B has $k_{cat} = 1000\\ s^{-1}$ and $K_m = 1000\\ \\mu M$. At very low substrate concentrations, which enzyme converts substrate faster (per enzyme molecule)?`,
             options: [`Enzyme A, because its $k_{cat}/K_m$ is ten times higher`, `Enzyme B, because its $k_{cat}$ is ten times higher`, `They are identical, because $k_{cat}/K_m$ ratios cancel`, `Enzyme B, because a larger $K_m$ means tighter binding`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `At low $[S]$, rate per enzyme is approximately $(k_{cat}/K_m)[S]$. Enzyme A: $100/10 = 10\\ \\mu M^{-1}s^{-1}$; enzyme B: $1000/1000 = 1$. A is ten-fold more efficient. Raw $k_{cat}$ only wins at saturating substrate, and a larger $K_m$ means WEAKER apparent affinity.`
           },
           {
             question: `On a Lineweaver-Burk plot, an enzyme variant shows the same y-intercept as wild type but an x-intercept closer to the origin. The variant has:`,
             options: [`The same $V_{max}$ and a higher $K_m$`, `The same $V_{max}$ and a lower $K_m$`, `A higher $V_{max}$ and the same $K_m$`, `A lower $V_{max}$ and a lower $K_m$`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Same y-intercept ($1/V_{max}$) means $V_{max}$ is unchanged. The x-intercept is $-1/K_m$; moving toward zero means $1/K_m$ shrank, so $K_m$ INCREASED — weaker apparent affinity for substrate.`
           },
           {
             question: `At a substrate concentration 100-fold above $K_m$, an assay's velocity no longer responds to added substrate. The reaction is best described as:`,
             options: [`First order in substrate`, `Second order in substrate`, `Zero order in substrate`, `Near chemical equilibrium`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `At saturating substrate, essentially every active site is occupied, so rate = $V_{max}$ regardless of $[S]$: zero order in substrate. The reaction is far from equilibrium — it is simply running at the enzyme's maximum capacity. Saturating conditions are exactly how experimenters measure $V_{max}$.`
           }
         ]
@@ -101,7 +110,11 @@ Hexokinase (most tissues) has a LOW $K_m$ — it works at full speed even at low
 - Low $K_m$ = high apparent affinity; $K_m$ ignores enzyme amount, $V_{max}$ scales with it ($V_{max} = k_{cat}[E]_t$)
 - $k_{cat}/K_m$ = efficiency at low substrate; diffusion limit defines "catalytic perfection"
 - Lineweaver-Burk: y-intercept $1/V_{max}$, x-intercept $-1/K_m$, slope $K_m/V_{max}$
-- Hexokinase (low $K_m$, always on) vs. glucokinase (high $K_m$, glucose sensor) is the classic physiological application`
+- Hexokinase (low $K_m$, always on) vs. glucokinase (high $K_m$, glucose sensor) is the classic physiological application
+
+<!-- yield:low -->
+- Low-yield extras: the numerical diffusion limit, roughly $10^{8}$-$10^{9}\\ M^{-1}s^{-1}$
+<!-- /yield -->`
     },
     {
       id: 'ek2-worked-examples',

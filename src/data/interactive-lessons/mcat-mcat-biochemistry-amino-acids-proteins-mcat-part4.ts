@@ -29,9 +29,14 @@ The MCAT tests proteins mostly through **experimental passages**. You must know 
 ### Quantification & Identification
 
 - **UV 280 nm:** Trp/Tyr absorbance; fast, nondestructive.
-- **Bradford / BCA assays:** colorimetric total-protein assays read on a spectrophotometer (Beer's law: $A = \\epsilon l c$).
+- **Bradford assay:** colorimetric total-protein assay read on a spectrophotometer (Beer's law: $A = \\epsilon l c$).
 - **Western blot:** SDS-PAGE → transfer → antibody detection of one specific protein.
-- **ELISA:** antibody-based detection/quantification in solution (sandwich ELISA: capture + detection antibodies).
+- **ELISA:** antibody-based detection/quantification of a specific protein in a sample, done in plate wells with no gel step.
+
+<!-- yield:low -->
+- The **BCA assay** is a second colorimetric total-protein assay, read the same way as the Bradford. A **sandwich ELISA** uses two antibodies: a capture antibody fixed to the plate and a labelled detection antibody.
+<!-- /yield -->
+
 - **Edman degradation:** removes and identifies one residue at a time from the **N-terminus**; fails past ~50 residues and on blocked N-termini.
 - **Mass spectrometry:** measures mass-to-charge; identifies proteins from peptide fragment masses.
 - **X-ray crystallography / cryo-EM / NMR:** full 3D structure (NMR for small proteins in solution).
@@ -50,30 +55,35 @@ Purification tables track **total protein** (mg), **total activity** (units), an
             question: `In size-exclusion chromatography, which protein elutes first?`,
             options: [`The smallest, because it enters the pores fastest`, `The largest, because it is excluded from the bead pores`, `The one with the highest pI, as it binds beads least`, `The most hydrophobic, since it avoids polar beads`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Small proteins enter the porous beads and take a longer, tortuous path; large proteins are excluded from the pores and flow around the beads, eluting first. This inversion (big first) is a favorite MCAT trap. Size-exclusion beads separate by size alone, so charge (pI) and hydrophobicity do not set the elution order.`
           },
           {
             question: `A protein with pI 9.2 is loaded at pH 7 onto a column packed with negatively charged beads. This is an example of:`,
             options: [`Anion-exchange chromatography, and the protein binds`, `Cation-exchange chromatography, and the protein binds`, `Cation-exchange chromatography, and the protein flows through`, `Affinity chromatography`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Negative beads capture CATIONS — this is cation-exchange. At pH 7, below the protein's pI of 9.2, the protein is net positive and binds. It is later eluted with a salt or pH gradient.`
           },
           {
             question: `On reducing SDS-PAGE, a purified protein shows two bands at 60 kDa and 40 kDa. On size-exclusion chromatography under native conditions it elutes as a single 200 kDa species. The most consistent structure is:`,
             options: [`A monomeric 100 kDa protein`, `A heterotetramer of two 60 kDa and two 40 kDa subunits`, `Two unrelated proteins that copurified by chance`, `A 200 kDa single polypeptide cleaved by SDS`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `SDS-PAGE reveals individual subunit sizes (60 + 40); native sizing shows the assembled complex (200 kDa). Two of each subunit: $2(60) + 2(40) = 200$ kDa — an $\\alpha_2\\beta_2$ heterotetramer. SDS does not cleave peptide bonds, and two unrelated proteins would not travel together as one 200 kDa species under native conditions.`
           },
           {
             question: `Edman degradation of a peptide yields no signal, but mass spectrometry confirms plenty of intact peptide is present. A likely explanation is:`,
             options: [`The N-terminus is chemically blocked`, `The peptide contains no aromatic residues`, `The peptide is too small for Edman chemistry`, `The C-terminal carboxyl group is amidated`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Edman chemistry requires a free N-terminal amine to react with phenylisothiocyanate. N-terminal modifications (acetylation, cyclization) block the first coupling step. C-terminal changes and aromatic content are irrelevant to Edman.`
           },
           {
             question: `After an affinity chromatography step, total activity fell from 10,000 to 8,000 units while total protein fell from 500 mg to 20 mg. The fold purification for this step is:`,
             options: [`1.25-fold`, `5-fold`, `20-fold`, `25-fold`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Specific activity before: $10000/500 = 20$ units/mg. After: $8000/20 = 400$ units/mg. Fold purification $= 400/20 = 20$. Losing some total activity while massively increasing specific activity is the signature of a good step.`
           }
         ]
@@ -88,7 +98,11 @@ Purification tables track **total protein** (mg), **total activity** (units), an
 - Ion exchange: beads bind opposite charge; protein charge set by pH vs. pI; elute with salt
 - Reducing vs. nonreducing SDS-PAGE reveals disulfide-linked subunit composition
 - Edman = N-terminal sequencing (needs free N-terminus, short peptides); mass spec = identification by fragment mass
-- Specific activity (units/mg) is the purity metric; fold purification compares specific activities`
+- Specific activity (units/mg) is the purity metric; fold purification compares specific activities
+
+<!-- yield:low -->
+- Low-yield extras: the BCA assay is a second colorimetric total-protein assay; a sandwich ELISA pairs a plate-bound capture antibody with a labelled detection antibody
+<!-- /yield -->`
     },
     {
       id: 'aa4-worked-examples',
@@ -124,7 +138,7 @@ Purification tables track **total protein** (mg), **total activity** (units), an
 <details>
 <summary><b>Example 3: Sequencing with overlapping fragments</b></summary>
 
-**Question:** A pentapeptide gives these data: Edman degradation releases Met first. Trypsin (cleaves after Lys/Arg) yields two fragments: Met-Ala-Lys and Gly-Phe. Chymotrypsin (cleaves after aromatic residues) yields Met-Ala-Lys-Gly-Phe uncleaved internally except a C-terminal Phe. What is the sequence?
+**Question:** A pentapeptide gives these data: Edman degradation releases Met first. Trypsin (cleaves after Lys/Arg) yields two fragments: Met-Ala-Lys and Gly-Phe. Chymotrypsin (cleaves after aromatic residues) makes no internal cut. What is the sequence?
 
 **Solution:**
 1. Edman: N-terminus is **Met**.

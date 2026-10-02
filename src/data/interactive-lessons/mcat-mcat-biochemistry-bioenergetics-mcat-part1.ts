@@ -64,32 +64,37 @@ Glutamate + NH$_3$ → glutamine has $\\Delta G^{\\circ\\prime} = +14$ kJ/mol. C
         questions: [
           {
             question: `A reaction has $\\Delta G^{\\circ\\prime} = +5$ kJ/mol yet proceeds forward continuously in cells. The best explanation is that:`,
-            options: [`An enzyme changes the reaction's equilibrium constant`, `The cell keeps the product-to-reactant ratio low`, `The reaction absorbs heat from the surroundings`, `$\\Delta G^{\\circ\\prime}$ was measured incorrectly`],
+            options: [`An enzyme changes the reaction's equilibrium constant`, `The cell keeps the product-to-reactant ratio low`, `Heat absorbed from the surroundings offsets the positive $\\Delta G^{\\circ\\prime}$`, `$\\Delta G^{\\circ\\prime}$ was measured incorrectly`],
             correctAnswer: 1,
-            explanation: `$\\Delta G = \\Delta G^{\\circ\\prime} + RT\\ln Q$. If downstream enzymes constantly consume the product, $Q$ stays small, $RT\\ln Q$ is strongly negative, and actual $\\Delta G < 0$. Enzymes never alter $K_{eq}$.`
+            yield: 'ULTRA_HIGH',
+            explanation: `$\\Delta G = \\Delta G^{\\circ\\prime} + RT\\ln Q$. If downstream enzymes constantly consume the product, $Q$ stays small, $RT\\ln Q$ is strongly negative, and actual $\\Delta G < 0$. Enzymes never alter $K_{eq}$, and absorbed heat cannot offset a positive $\\Delta G^{\\circ\\prime}$, which already accounts for enthalpy ($\\Delta H$).`
           },
           {
             question: `Which compound can phosphorylate ADP to ATP directly in a substrate-level phosphorylation?`,
             options: [`Glucose-6-phosphate`, `Phosphoenolpyruvate`, `AMP`, `Glycerol-3-phosphate`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Only compounds with MORE negative phosphoryl-transfer free energy than ATP can donate a phosphate to ADP. PEP (~−62 kJ/mol) qualifies — pyruvate kinase uses it in glycolysis. Glucose-6-phosphate (~−14) sits below ATP on the ladder and cannot.`
           },
           {
             question: `For a reaction at equilibrium inside a test tube, $\\Delta G$ equals:`,
             options: [`$\\Delta G^{\\circ\\prime}$`, `Zero`, `$-RT\\ln K_{eq}$`, `$+RT\\ln Q$`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `At equilibrium there is no net driving force in either direction: $\\Delta G = 0$ (and $Q = K_{eq}$). $\\Delta G^{\\circ\\prime}$ is generally nonzero — $-RT\\ln K_{eq}$ is the formula for $\\Delta G^{\\circ\\prime}$ (standard conditions), not for the actual $\\Delta G$ at equilibrium, which is zero.`
           },
           {
             question: `ATP hydrolysis is strongly exergonic for all of the following reasons EXCEPT:`,
             options: [`Relief of electrostatic repulsion between phosphate groups`, `Resonance stabilization of the released inorganic phosphate`, `Better solvation of the products than of ATP`, `Energy released as the phosphoanhydride bond breaks`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Breaking any bond always REQUIRES energy; the net energy release comes from forming more stable, better-solvated, resonance-stabilized products with less charge repulsion. The idea that energy is "stored in the bond" and released when it breaks is the classic misconception the MCAT tests.`
           },
           {
             question: `During the first seconds of a sprint, muscle ATP levels barely drop even though ATP consumption spikes. The molecule most responsible is:`,
             options: [`Creatine phosphate via creatine kinase`, `Glucose-6-phosphate via hexokinase`, `NADH via the electron transport chain`, `cAMP via protein kinase A`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Creatine phosphate's transfer potential (~−43 kJ/mol) exceeds ATP's, so creatine kinase rapidly transfers its phosphate to ADP, buffering ATP for the first several seconds until glycolysis and oxidative phosphorylation ramp up.`
           }
         ]
@@ -132,7 +137,7 @@ Glutamate + NH$_3$ → glutamine has $\\Delta G^{\\circ\\prime} = +14$ kJ/mol. C
 **Solution:**
 1. $K_{eq} < 1$ means reactants favored: $\\Delta G^{\\circ\\prime} > 0$.
 2. $\\Delta G^{\\circ\\prime} = -RT\\ln K_{eq} = -2.6 \\times \\ln(0.1) = -2.6 \\times (-2.3) \\approx +6$ kJ/mol.
-3. Modest positive values like this are routinely overcome in vivo by concentration effects (e.g., glycolysis' aldolase step).
+3. Modest positive values like this are routinely overcome in vivo by concentration effects (e.g., glycolysis' triose phosphate isomerase step, about +7.5 kJ/mol).
 
 **MCAT Strategy:** Each factor of 10 in $K_{eq}$ corresponds to roughly 6 kJ/mol (1.4 kcal/mol) at body temperature — a fast mental conversion the exam rewards.
 </details>
