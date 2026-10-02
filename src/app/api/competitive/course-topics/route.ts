@@ -48,6 +48,41 @@ export async function GET(request: NextRequest) {
       }, { headers: { 'Cache-Control': 'private, no-store' } })
     }
 
+    // MCAT is in the same position: its competitive play runs on the MCAT bank
+    // (section → area → subtopic), with no Course row, so the DB lookup below
+    // 404'd and lobby hosts saw "No topics available". generateMatchQuestions
+    // resolves every level (isMcatSlug), so expose all of them: the whole exam
+    // and each section first, then one unit per area — "All of <area>" first,
+    // then its subtopics.
+    if (courseSlug === 'mcat') {
+      const { MCAT_SECTIONS, MCAT_ALL_SLUG } = await import('@/data/competitive-questions/mcat-bank')
+      const pick = (slug: string, title: string) => ({ slug, title, completed: true, masteryLevel: 0 })
+      return NextResponse.json({
+        courseSlug: 'mcat',
+        courseName: 'MCAT Prep',
+        units: [
+          {
+            name: '🩺 Whole sections',
+            slug: 'mcat-sections',
+            topics: [
+              pick(MCAT_ALL_SLUG, 'Full MCAT (all 4 sections)'),
+              ...MCAT_SECTIONS.map((s) => pick(s.slug, `All of ${s.short}`)),
+            ],
+          },
+          ...MCAT_SECTIONS.flatMap((section) =>
+            section.areas.map((area) => ({
+              name: `${section.emoji} ${section.short} — ${area.title}`,
+              slug: area.slug,
+              topics: [
+                pick(area.slug, `All of ${area.title}`),
+                ...area.subtopics.map((t) => pick(t.slug, t.title)),
+              ],
+            }))
+          ),
+        ],
+      }, { headers: { 'Cache-Control': 'private, no-store' } })
+    }
+
     const course = await prisma.course.findUnique({
       where: { slug: courseSlug },
       select: {

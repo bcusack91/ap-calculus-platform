@@ -38,6 +38,15 @@ export function decomposeTopicSlug(slug: string | null | undefined): string[] {
 
 /** Human label for a bank slug (client-side; no bank imports). */
 export function topicSlugLabel(slug: string): string {
+  if (slug === 'mcat') return 'MCAT (Full Exam)'
+  if (slug.startsWith('mcat-')) {
+    // mcat-section-chem-phys / mcat-area-biochemistry / mcat-<area>-<topic>-mcat
+    const rest = slug
+      .replace(/^mcat-(section|area)-/, '')
+      .replace(/^mcat-/, '')
+      .replace(/-mcat$/, '')
+    return 'MCAT ' + rest.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+  }
   return slug
     .replace(/^sat-skill-/, '')
     .replace(/^sat-topic-/, '')
@@ -67,6 +76,9 @@ export default function CompetitiveTopicPicker({
   const [course, setCourse] = useState('')
   const [units, setUnits] = useState<TopicUnit[] | null>(null)
   const [loading, setLoading] = useState(false)
+  // Titles of every topic seen so far, so chips keep their real names after
+  // the user browses to another course.
+  const [titles, setTitles] = useState<Record<string, string>>({})
 
   // Units reset happens in the change handler (an event); the effect only does
   // the async fetch — this repo's lint forbids synchronous setState in effects.
@@ -75,7 +87,17 @@ export default function CompetitiveTopicPicker({
     let active = true
     fetch(`/api/competitive/course-topics?course=${encodeURIComponent(course)}`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => { if (active) { setUnits(d?.units ?? []); setLoading(false) } })
+      .then((d) => {
+        if (!active) return
+        const loaded: TopicUnit[] = d?.units ?? []
+        setUnits(loaded)
+        setLoading(false)
+        setTitles((prev) => {
+          const next = { ...prev }
+          for (const u of loaded) for (const t of u.topics) next[t.slug] = t.title
+          return next
+        })
+      })
       .catch(() => { if (active) { setUnits([]); setLoading(false) } })
     return () => { active = false }
   }, [course])
@@ -116,7 +138,7 @@ export default function CompetitiveTopicPicker({
                 title="Remove"
                 className={`rounded-full border px-3 py-1 text-xs font-medium transition ${on}`}
               >
-                {topicSlugLabel(slug)} ✕
+                {titles[slug] ?? topicSlugLabel(slug)} ✕
               </button>
             ))}
           </div>
