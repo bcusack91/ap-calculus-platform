@@ -1,30 +1,13 @@
 /**
- * Exit-quiz pool for the MCAT Transcription interactive lesson
- * (src/data/interactive-lessons/mcat-mcat-molecular-biology-transcription-mcat-part1..4.ts).
- *
- * Every item tests what the lesson teaches and nothing else. Items tagged
- * ULTRA_HIGH / HIGH / MEDIUM are answerable from the lesson's default
- * (visible) text; items tagged LOW test material that appears only inside
- * the lesson's `<!-- yield:low -->` blocks, so they belong in the quiz only
- * when the student has opted into low-yield content.
- *
- * Stems are new scenarios, not rewordings of the lesson's own practice or
- * worked-example questions. Options within an item are parallel and similar
- * in length (check with scripts/audit-answer-length-tell.ts).
+ * Exit-quiz pool for the MCAT Transcription & RNA Processing lesson, written
+ * from the lesson itself and tagged by exam-yield tier (see ../lesson-built.ts).
+ * Verified 2026-10-02: a blind solver agreed with all 53 keys and judged every
+ * default item taught by the lesson's default view, every LOW item only by its
+ * low-yield boxes.
  */
-import type { LessonYield } from '@/lib/lesson-yield'
+import { makeLessonExitQuiz, type LessonExitItem } from '../lesson-built'
 
-export interface TranscriptionExitItem {
-  question: string
-  options: [string, string, string, string]
-  correctAnswer: number
-  explanation: string
-  difficulty: 'easy' | 'medium' | 'hard'
-  yield: LessonYield
-  part: 1 | 2 | 3 | 4
-}
-
-export const TRANSCRIPTION_EXIT_POOL: TranscriptionExitItem[] = [
+export const EXIT_POOL: LessonExitItem[] = [
   // ───────────────────────── Part 1 — default ─────────────────────────
   {
     question: `The template strand of a gene is written 5'-AGTCCA-3'. The mRNA transcribed from this region reads:`,
@@ -733,3 +716,5 @@ export const TRANSCRIPTION_EXIT_POOL: TranscriptionExitItem[] = [
     part: 4,
   },
 ]
+
+export const generateExitQuiz = makeLessonExitQuiz(EXIT_POOL, 'mcat-molecular-biology-transcription-mcat')

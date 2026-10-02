@@ -15,15 +15,24 @@ export const mcatBiotechnologyPart3Data = {
 | **Knockout** | DNA | Delete/disrupt the gene (homologous recombination in ES cells, or CRISPR) | No — permanent, complete |
 | **Knockdown (RNAi)** | RNA | siRNA/shRNA guides RISC to cleave or repress complementary mRNA | Yes — partial, transient |
 | **Dominant negative** | Protein | Express a mutant that poisons the wild-type protein's complex | While expressed |
-| **CRISPR interference / small-molecule inhibitor** | Transcription / activity | Block without altering sequence | Yes |
+| **Small-molecule inhibitor** | Protein | Block the protein's activity without altering the gene | Yes |
+
+<!-- yield:low -->
+- **CRISPR interference (CRISPRi)**: a catalytically dead Cas9, guided to the promoter, blocks transcription without altering the sequence — reversible, at the transcription level.
+<!-- /yield -->
 
 Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware developmental compensation and lethality); knockdown's residual expression can mask phenotypes; a knockout phenotype rescued by re-introducing the gene proves causality (the rescue is the control that eliminates off-target explanations).
 
 ### CRISPR-Cas9 — Programmable Cutting
 
-- A **guide RNA** base-pairs with a chosen ~20 bp genomic sequence (adjacent to a PAM motif); **Cas9** makes a double-strand break there. Targeting is by RNA-DNA base pairing — reprogramming means changing a 20-nt RNA, not engineering a new protein (why CRISPR displaced zinc-finger nucleases).
+- A **guide RNA** base-pairs with a chosen ~20 bp genomic sequence; **Cas9** makes a double-strand break there. Targeting is by RNA-DNA base pairing — reprogramming means changing a 20-nt RNA, not engineering a new protein.
+
+<!-- yield:low -->
+- The target must sit next to a short PAM motif that Cas9 itself recognizes. Earlier editors (zinc-finger nucleases, TALENs) needed a newly engineered protein for every site, which is why CRISPR displaced them.
+<!-- /yield -->
+
 - The CELL's repair choice determines the outcome (DNA replication lesson crossover): **NHEJ** = error-prone indels → frameshift knockout; **HDR with a supplied template** = precise edits/insertions (efficient mainly in dividing cells).
-- Origin: a bacterial adaptive immune system storing phage sequence "mug shots" — recognize the endosymbiosis-style repurposing narrative.
+- Origin: a bacterial adaptive immune system that stores snippets of past phage DNA as "mug shots" to recognize and cut repeat invaders — a natural defense repurposed as a lab tool, just like restriction enzymes.
 
 ### Transgenics, Knock-ins & Conditional Control
 
@@ -34,7 +43,12 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
 
 ### Gene Therapy — Delivery Is the Hard Part
 
-- Add a working gene copy (viral vectors: AAV — small capacity, low immunogenicity, largely non-integrating; retro/lentivirus — integrates into the genome = durable but **insertional mutagenesis risk**, the early SCID-trial leukemias).
+- Add a working gene copy (viral vectors: AAV — small capacity, low immunogenicity, largely non-integrating; retro/lentivirus — integrates into the genome = durable but **insertional mutagenesis risk**: a vector landing beside a proto-oncogene can switch it on).
+
+<!-- yield:low -->
+- Historical anchor: early retroviral SCID gene-therapy trials caused leukemias when the vector integrated beside the proto-oncogene LMO2.
+<!-- /yield -->
+
 - Ex vivo strategy: remove patient cells (e.g., hematopoietic stem cells), correct them in culture, verify, reinfuse — sickle cell and SCID successes; safer because correction is checked before return.
 - Somatic editing affects the patient only; germline changes are heritable — the ethical bright line passages probe.`
     },
@@ -45,7 +59,11 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
 
 **Passage-style problem.** Gene Q is hypothesized to drive pathological cardiac hypertrophy in adult mice. Complication: Q-null embryos die at day 10 from failed heart tube formation.
 
-**Question 1 — Why is a conventional knockout the wrong tool, and what replaces it?** The gene has an EARLIER essential function: constitutive deletion kills the embryo before adult hypertrophy can be studied — the lethality masks the phenotype of interest. Solution: **conditional knockout** — flox Q, and supply Cre under a cardiomyocyte-specific promoter that is additionally drug-inducible (tamoxifen-activated CreER), so deletion happens only in heart muscle AND only when the adult mouse is dosed. Space and time are separate switches; the design needs both.
+**Question 1 — Why is a conventional knockout the wrong tool, and what replaces it?** The gene has an EARLIER essential function: constitutive deletion kills the embryo before adult hypertrophy can be studied — the lethality masks the phenotype of interest. Solution: **conditional knockout** — flox Q, and supply Cre under a cardiomyocyte-specific promoter in a drug-inducible form (Cre stays inactive until the drug is given), so deletion happens only in heart muscle AND only when the adult mouse is dosed. Space and time are separate switches; the design needs both — a heart-specific promoter alone would still delete Q in the embryonic heart tube.
+
+<!-- yield:low -->
+The standard inducible version is **CreER**: Cre fused to a modified estrogen-receptor domain, held outside the nucleus until tamoxifen frees it.
+<!-- /yield -->
 
 **Question 2 — The team also tries siRNA against Q in cultured cardiomyocytes and sees only a 60% mRNA reduction with no phenotype. A colleague concludes Q is not involved. Critique.** Knockdown is not knockout: 40% residual protein may exceed the functional threshold, especially for catalytic proteins where a little enzyme suffices. Absence of phenotype under PARTIAL loss cannot exclude the hypothesis — only complete (conditional) deletion, or a dominant-negative, tests requirement cleanly.
 
@@ -63,30 +81,35 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
             question: `CRISPR-Cas9 is retargeted to a new genomic site by:`,
             options: [`Evolving a new Cas9 protein with different DNA-binding domains`, `Redesigning the ~20-nucleotide guide RNA sequence`, `Methylating the old target site to block binding`, `Swapping in a different restriction enzyme domain`],
             correctAnswer: 1,
-            explanation: `Specificity lives in the guide RNA's Watson-Crick pairing with the target (plus the adjacent PAM); Cas9 is a constant cutting chassis. Reprogramming is therefore an oligonucleotide-design problem — cheap and fast — where earlier tools (zinc fingers, TALENs) required engineering a new PROTEIN for every site. This protein-vs-RNA recognition distinction is the conceptual heart of every CRISPR question; restriction enzymes, with fixed recognition sites, cannot be retargeted at all.`
+            yield: 'HIGH',
+            explanation: `Specificity lives in the guide RNA's Watson-Crick pairing with the target; Cas9 is a constant cutting chassis. Reprogramming is therefore an oligonucleotide-design problem — cheap and fast — where earlier protein-engineering tools required engineering a new PROTEIN for every site. This protein-vs-RNA recognition distinction is the conceptual heart of every CRISPR question; restriction enzymes, with fixed recognition sites, cannot be retargeted at all.`
           },
           {
             question: `After Cas9 creates a double-strand break in a gene, researchers who want a precise point-mutation knock-in must supply a homologous repair template and use dividing cells, because:`,
             options: [`Cas9 itself writes the new sequence into the break`, `NHEJ needs a donor template and works only in S/G2`, `Precise HDR needs a template and is active mainly in S/G2`, `Non-dividing cells cannot express Cas9 protein`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Cas9 only cuts; the CELL repairs, and the repair pathway decides the product. NHEJ — templateless, active all cycle — glues ends with occasional indels (great for knockouts, useless for precision). HDR copies a provided donor template but essentially requires S/G2, when its machinery and (normally) a sister chromatid are available. This is the DNA-repair lesson operating as an engineering constraint: to control the edit, you must bias the pathway competition.`
           },
           {
             question: `A gene is essential for embryonic development, but its function in adult liver is unknown. The most appropriate strategy is:`,
             options: [`A liver-specific conditional (Cre-lox) knockout`, `A conventional whole-body germline knockout`, `Overexpressing the gene in all tissues`, `A transgenic mouse carrying a second copy of the gene`],
             correctAnswer: 0,
-            explanation: `Constitutive deletion never yields an adult: the embryonic requirement kills first, hiding all later functions — the standard motivation for conditional systems. Floxing the gene and restricting Cre expression by promoter (liver) and timing (drug-inducible CreER) deletes the gene only where and when you choose. The generalizable exam skill: when a phenotype of interest is downstream of an earlier lethality, look for the answer that separates deletion in SPACE and TIME from deletion per se.`
+            yield: 'MEDIUM',
+            explanation: `Constitutive deletion never yields an adult: the embryonic requirement kills first, hiding all later functions — the standard motivation for conditional systems. Floxing the gene and restricting Cre expression by promoter (liver) and timing (drug-inducible Cre) deletes the gene only where and when you choose. The generalizable exam skill: when a phenotype of interest is downstream of an earlier lethality, look for the answer that separates deletion in SPACE and TIME from deletion per se.`
           },
           {
             question: `In early gene-therapy trials using retroviral vectors, some treated SCID patients later developed leukemia. The mechanistic basis of this adverse outcome was:`,
             options: [`The therapeutic gene product was directly oncogenic`, `Patients rejected the vector immunologically`, `The corrected T cells could not proliferate`, `Insertional mutagenesis activating a proto-oncogene`],
             correctAnswer: 3,
-            explanation: `Integration is a double-edged sword: it makes correction permanent in dividing cells, but the insertion site is poorly controlled, and a strong viral promoter/enhancer landing beside a proto-oncogene (LMO2 in the actual trials) can drive it — a somatic gain-of-function event, connecting to the cancer framework of the cell-cycle lesson. Non-integrating vectors like AAV trade durability for this safety; expect questions weighing that exact trade-off. The therapy worked — cells proliferated all too well.`
+            yield: 'MEDIUM',
+            explanation: `Integration is a double-edged sword: it makes correction permanent in dividing cells, but the insertion site is poorly controlled, and a strong viral promoter/enhancer landing beside a proto-oncogene can drive it — a somatic gain-of-function event, connecting to the cancer framework of the cell-cycle lesson. Non-integrating vectors like AAV trade durability for this safety; expect questions weighing that exact trade-off. The therapy worked — cells proliferated all too well.`
           },
           {
             question: `A mouse line expresses GFP under the control of gene X's promoter (promoter-GFP, no X coding sequence). Green fluorescence appears only in kidney tubules. This experiment demonstrates:`,
             options: [`That protein X localizes to the tubule cell membrane`, `That gene X's promoter is active in kidney tubules`, `That GFP is required for kidney development`, `That gene X has been knocked out in all other tissues`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Construct anatomy determines the claim: promoter-GFP borrows only X's regulatory switch, so fluorescence maps promoter ACTIVITY (which cells transcribe X). To ask where protein X GOES, you need a FUSION of GFP to X's coding sequence — a different construct whose fluorescence follows the protein (its subcellular address, its trafficking). Confusing the two constructs is the designed trap whenever GFP appears in a passage; neither reports function, and no endogenous gene was altered.`
           }
         ]
@@ -99,11 +122,15 @@ Interpretation rules: knockouts reveal what a gene is REQUIRED for (but beware d
 
 - Perturbation hierarchy: knockout = permanent DNA-level absence (requirement); knockdown (RNAi) = partial, reversible RNA-level reduction — residual protein can hide phenotypes; dominant negative poisons at the protein level
 - CRISPR: guide RNA base-pairing (not protein engineering) targets Cas9's cut; the cell's repair choice sets the outcome — NHEJ indels = knockout, HDR + template (S/G2, dividing cells) = precise knock-in
-- Conditional (Cre-lox) systems separate deletion in space (tissue-specific promoter) and time (inducible CreER) — the answer whenever early lethality masks a later function
+- Conditional (Cre-lox) systems separate deletion in space (tissue-specific promoter) and time (drug-inducible Cre) — the answer whenever early lethality masks a later function
 - Promoter-GFP reports where a promoter fires; GFP-protein fusions report where the protein goes — match construct to claim
 - Rescue experiments (re-express the gene, phenotype reverts) are the causality gold standard against off-target effects
-- Gene therapy: integrating vectors (retro/lenti) = durable + insertional mutagenesis risk (SCID leukemias, proto-oncogene activation); AAV = safer, non-integrating, small capacity; ex vivo correction allows verification before reinfusion
-- Somatic editing stays with the patient; germline edits are heritable — the ethical boundary passages test`
+- Gene therapy: integrating vectors (retro/lenti) = durable + insertional mutagenesis risk (proto-oncogene activation); AAV = safer, non-integrating, small capacity; ex vivo correction allows verification before reinfusion
+- Somatic editing stays with the patient; germline edits are heritable — the ethical boundary passages test
+
+<!-- yield:low -->
+- Low-yield extras: CRISPR interference (dead Cas9 blocks transcription); the PAM motif beside every Cas9 target; zinc-finger nucleases and TALENs as the protein-engineered predecessors; tamoxifen-activated CreER; the LMO2 leukemias of the early retroviral SCID trials
+<!-- /yield -->`
     }
   ]
 };

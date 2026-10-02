@@ -10,7 +10,7 @@ export const mcatDnaReplicationPart1Data = {
 
 ### The Molecule You Are Copying
 
-- **Nucleotide** = nitrogenous base + deoxyribose + phosphate(s). Base + sugar alone = nucleoside. Purines (**A**denine, **G**uanine) are two-ringed; pyrimidines (**C**ytosine, **T**hymine, and uracil in RNA) are one-ringed. Mnemonic check: purines are the bigger word class with the smaller letter count of members.
+- **Nucleotide** = nitrogenous base + deoxyribose + phosphate(s). Base + sugar alone = nucleoside. Purines (**A**denine, **G**uanine) are two-ringed; pyrimidines (**C**ytosine, **T**hymine, and uracil in RNA) are one-ringed. Mnemonics: "Pure As Gold" (purines = A, G); "CUT the PY" (pyrimidines = C, U, T).
 - **Base pairing**: A pairs T via **2 hydrogen bonds**; G pairs C via **3**. Consequence: GC-rich DNA has a **higher melting temperature** ($T_m$) — more heat to separate strands. Every pairing is purine + pyrimidine, keeping helix width constant (~2 nm).
 - **Chargaff's rules**: in double-stranded DNA, %A = %T and %G = %C. A virus with %A different from %T must have **single-stranded** genetic material — a classic trap.
 - **Directionality**: the sugar-phosphate backbone links the 3' hydroxyl of one sugar to the 5' phosphate of the next (**phosphodiester bonds**). The two strands are **antiparallel**: one runs 5' to 3', its partner 3' to 5'. Sequences are written 5' to 3' by convention.
@@ -19,7 +19,12 @@ export const mcatDnaReplicationPart1Data = {
 ### Helix Geometry & Packaging
 
 - B-DNA: right-handed double helix, major and minor grooves; sequence-specific proteins (transcription factors) mostly read the **major groove**.
-- Eukaryotic packaging: DNA wraps ~1.7 turns around a **histone octamer** (2 each of H2A, H2B, H3, H4) forming a nucleosome; H1 seals the linker. Histones are **lysine/arginine-rich (positively charged)** to bind the polyanionic backbone — acetylation neutralizes that charge and loosens packing (regulation lesson crossover).
+- Eukaryotic packaging: DNA wraps around a **histone octamer** (2 each of H2A, H2B, H3, H4) forming a nucleosome; H1 seals the linker. Histones are **lysine/arginine-rich (positively charged)** to bind the polyanionic backbone — acetylation neutralizes that charge and loosens packing (regulation lesson crossover).
+
+<!-- yield:low -->
+- The wrap is about 1.7 turns (~147 bp) per octamer.
+<!-- /yield -->
+
 - **Heterochromatin** = dense, transcriptionally quiet; **euchromatin** = open, active. Replication must transiently displace and then restore this packaging.
 
 ### The Central Question of 1958: How Does Copying Distribute Old Strands?
@@ -61,30 +66,35 @@ Three hypotheses were on the table:
             question: `Analysis of a viral genome shows 32% adenine, 18% thymine, 24% guanine, and 26% cytosine. The best conclusion is that the genome is:`,
             options: [`Double-stranded DNA carrying modified bases`, `Single-stranded DNA with no pairing constraint`, `A double-stranded RNA genome`, `Contaminated, as the numbers are impossible`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Chargaff's equalities (%A = %T, %G = %C) are forced by complementary base pairing, so they hold ONLY for double-stranded nucleic acids. Violation means single-stranded material; the presence of thymine (not uracil) says DNA. Single strands have no pairing constraint, so any composition is possible — nothing is "impossible" about the numbers, and dsRNA would show A = U anyway.`
           },
           {
             question: `Two DNA duplexes of equal length are melted by gradual heating. Duplex 1 separates at a noticeably higher temperature than Duplex 2. The most direct explanation is that Duplex 1:`,
             options: [`Has a higher GC content (3 H-bonds per pair)`, `Contains more phosphodiester bonds per strand`, `Has more nicks in its sugar-phosphate backbone`, `Has a higher AT content, since AT pairs stack more tightly`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Melting separates the strands by disrupting hydrogen bonding and base stacking; GC pairs (3 H-bonds, stronger stacking) raise the melting temperature. Equal length means equal numbers of phosphodiester bonds — and those covalent backbone bonds are not broken by melting at all. This structure-to-thermodynamics link also predicts that replication origins tend to be AT-rich: easier to open.`
           },
           {
             question: `In the Meselson-Stahl experiment, the single intermediate-density band observed after one generation ruled out conservative replication but not dispersive. Which later observation eliminated the dispersive model?`,
             options: [`The intermediate band grew progressively heavier over time`, `All DNA became heavy again when cells were returned to heavy medium`, `Generation 2 showed two discrete bands, hybrid and light`, `The hybrid band disappeared entirely at generation 2`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Dispersive replication scatters old fragments through BOTH daughter strands, so every molecule in every generation would be a uniform blend — one band, drifting lighter each round. Semiconservative replication keeps each old strand intact, producing discrete classes: hybrid molecules (one old strand) and fully light molecules. Two clean bands at generation 2 is exactly the discreteness dispersive cannot produce; the hybrid band persists (it does not disappear), making up 1/2 of molecules at generation 2 and diluting to 1/4 at generation 3.`
           },
           {
             question: `A repair enzyme finds a uracil base in one strand of a cell's DNA. This uracil most likely arose from:`,
             options: [`Normal incorporation, since uracil is a standard DNA base`, `Depurination of an adenine residue`, `Methylation of a thymine base`, `Spontaneous deamination of a cytosine base`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Cytosine deaminates spontaneously to uracil, which would pair with adenine and fix a C-to-T mutation at the next replication. Because DNA uses thymine (5-methyluracil) as its standard base, any uracil in DNA is unambiguously damage — this is the accepted rationale for why DNA evolved thymine. Depurination removes a base leaving an abasic site (no uracil appears), and methylating thymine cannot produce uracil — thymine is already 5-methyluracil, and adding a methyl group never removes one.`
           },
           {
             question: `One strand of a duplex reads 5'-ATGCCG-3'. Its complementary strand, written in conventional 5' to 3' orientation, is:`,
             options: [`5'-TACGGC-3'`, `5'-CGGCAT-3'`, `5'-GCCGTA-3'`, `5'-ATGCCG-3'`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Two operations, in order: complement each base (A-T, G-C) to get 3'-TACGGC-5', then reverse it to honor the 5' to 3' writing convention: 5'-CGGCAT-3'. 5'-TACGGC-3' is the complement WITHOUT reversal — the single most common error on this question type. Always do the reverse-complement as two explicit steps and label the ends before answering.`
           }
         ]
@@ -101,7 +111,11 @@ Three hypotheses were on the table:
 - Thymine instead of uracil lets cells recognize deaminated cytosine (uracil in DNA) as damage; the 2'-OH absent in deoxyribose makes DNA more stable than RNA
 - Packaging: nucleosome = DNA around a histone octamer (positively charged lysine/arginine tails); acetylation loosens, heterochromatin silences
 - Meselson-Stahl: one hybrid band at generation 1 kills conservative; two discrete bands (hybrid + light) at generation 2 kills dispersive; hybrid fraction = 1 over 2 to the (n-1) as original strands dilute
-- Passage skill: state explicitly which models each observation excludes — early data often eliminate fewer hypotheses than they seem to`
+- Passage skill: state explicitly which models each observation excludes — early data often eliminate fewer hypotheses than they seem to
+
+<!-- yield:low -->
+- Low-yield extras: DNA wraps about 1.7 turns (~147 bp) around each histone octamer
+<!-- /yield -->`
     }
   ]
 };

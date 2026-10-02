@@ -37,11 +37,15 @@ export const mcatMolBioPart5Data = {
 | Mechanism | What It Fixes | How It Works | Disease If Defective |
 |-----------|-------------|-------------|---------------------|
 | **Proofreading** | Replication errors | DNA Pol III 3' → 5' exonuclease removes mismatched bases | — |
-| **Mismatch repair (MMR)** | Post-replication mismatches | MutS detects mismatch → MutL recruits → excise and resynthesize | HNPCC (Lynch syndrome) |
-| **Base excision repair (BER)** | Small base damage (deamination, oxidation) | Glycosylase removes damaged base → AP endonuclease cuts → Pol fills → Ligase seals | — |
-| **Nucleotide excision repair (NER)** | Bulky lesions (thymine dimers, adducts) | Excise ~24-32 nt stretch around damage → Pol fills → Ligase seals | Xeroderma pigmentosum (XP) |
+| **Mismatch repair (MMR)** | Post-replication mismatches | Mismatch detected on the new strand → excise and resynthesize | Lynch syndrome (hereditary colon cancer) |
+| **Base excision repair (BER)** | Small base damage (deamination, oxidation) | Glycosylase removes damaged base → backbone cut → Pol fills → Ligase seals | — |
+| **Nucleotide excision repair (NER)** | Bulky lesions (thymine dimers, adducts) | Excise a short stretch around damage → Pol fills → Ligase seals | Xeroderma pigmentosum (XP) |
 | **Homologous recombination** | Double-strand breaks (high fidelity) | Uses sister chromatid as template for repair | BRCA1/2 mutations → cancer |
-| **Non-homologous end joining (NHEJ)** | Double-strand breaks (error-prone) | Directly ligates broken ends (may lose nucleotides) | Severe combined immunodeficiency |`
+| **Non-homologous end joining (NHEJ)** | Double-strand breaks (error-prone) | Directly ligates broken ends (may lose nucleotides) | — |
+
+<!-- yield:low -->
+- **Repair details**: in MMR, MutS detects the mismatch and MutL recruits the excision machinery; Lynch syndrome is also called HNPCC, and its tumors show microsatellite instability. In BER, AP endonuclease cuts the backbone at the base-less site. NER excises a ~24-32 nt stretch. NHEJ defects can cause severe combined immunodeficiency (SCID), because antibody and T-cell receptor gene rearrangement relies on NHEJ.
+<!-- /yield -->`
     },
     {
       id: 'mb5-quiz1',
@@ -53,19 +57,22 @@ export const mcatMolBioPart5Data = {
             question: `A single nucleotide deletion in the second codon of an mRNA would:`,
             options: [`Shift the reading frame, altering every codon downstream`, `Alter only the codons within a few bases of the deletion`, `Have no effect, because the genetic code is degenerate`, `Remove one amino acid, leaving the rest of the protein intact`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `A single deletion (not a multiple of 3) shifts the reading frame by one nucleotide. Every triplet codon downstream is now read differently → every amino acid from that point on is wrong → almost certainly nonfunctional protein, often with a premature stop codon.`
           },
           {
-            question: `In sickle cell disease, the mutation is GAG → GUG in the beta-globin gene. This is classified as a:`,
+            question: `In sickle cell disease, the mutation is GAG → GUG in a beta-globin mRNA codon. This is classified as a:`,
             options: [`Non-conservative missense: charged Glu is replaced by nonpolar Val`, `Conservative missense: one nonpolar residue swapped for another`, `Nonsense mutation that creates a premature stop codon`, `Silent mutation, since both codons encode similar residues`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Glu (glutamic acid) is negatively charged and hydrophilic. Val (valine) is nonpolar and hydrophobic. This dramatic chemical change causes hemoglobin S to polymerize under low O$_2$ conditions → sickle-shaped RBCs. This is the classic example of how a single amino acid change can cause devastating disease.`
           },
           {
             question: `A patient with xeroderma pigmentosum (XP) has extreme UV sensitivity because they lack:`,
             options: [`Nucleotide excision repair, which removes thymine dimers`, `Mismatch repair, which fixes errors missed by proofreading`, `Base excision repair, which removes single damaged bases`, `Proofreading by the 3' to 5' exonuclease of DNA polymerase`],
             correctAnswer: 0,
-            explanation: `UV light causes cyclobutane thymine dimers (covalent links between adjacent thymines). NER normally excises a ~24-32 nucleotide patch around the dimer and resynthesizes the segment. Without NER, thymine dimers accumulate → replication errors → skin cancer at very young ages. XP patients must avoid all UV exposure.`
+            yield: 'HIGH',
+            explanation: `UV light causes cyclobutane thymine dimers (covalent links between adjacent thymines). NER normally excises a short patch around the dimer and resynthesizes the segment. Without NER, thymine dimers accumulate → replication errors → skin cancer at very young ages. XP patients must avoid all UV exposure.`
           }
         ]
       }
@@ -91,21 +98,27 @@ export const mcatMolBioPart5Data = {
 - If colonies grow → reversion mutations occurred → substance is a mutagen (likely carcinogen)
 - More colonies = more mutagenic
 
+<!-- yield:low -->
 ### Nonsense-Mediated Decay (NMD)
 
 - Quality control mechanism that degrades mRNAs with **premature stop codons**
 - Prevents translation of truncated, potentially harmful proteins
 - If a stop codon appears >50 nt upstream of the last exon-exon junction → mRNA degraded
 - Clinically important: some genetic diseases are caused by NMD destroying mRNA before any protein is made
+<!-- /yield -->
 
 ### p53 — The Guardian of the Genome
 
 p53 is the central hub connecting DNA damage to cell fate:
-1. DNA damage detected → ATM/ATR kinases activate → phosphorylate p53 → stabilize it (normally degraded by MDM2)
-2. p53 activates **p21** (CDK inhibitor) → cell cycle arrest at G$_1$/S
+1. DNA damage detected → damage-sensing kinases phosphorylate p53 → stabilize it (normally it is constantly degraded)
+2. p53 switches on **p21**, a CDK inhibitor → cell cycle arrest at G$_1$/S
 3. If damage is repairable → DNA repair occurs → cell cycle resumes
-4. If damage is irreparable → p53 activates **Bax** → apoptosis
+4. If damage is irreparable → p53 activates **pro-apoptotic genes** → apoptosis
 5. p53 also upregulates DNA repair genes
+
+<!-- yield:low -->
+- The named players: ATM/ATR are the damage-sensing kinases; MDM2 is the ubiquitin ligase that normally degrades p53; Bax is its pro-apoptotic target.
+<!-- /yield -->
 
 **p53 is mutated or inactivated in >50% of all human cancers** — the single most commonly altered gene in cancer.`
     },
@@ -119,12 +132,14 @@ p53 is the central hub connecting DNA damage to cell fate:
             question: `The Ames test detects mutagens by measuring:`,
             options: [`Reversion of his-minus bacteria to growth without histidine`, `Breakage of bacterial DNA seen as smears on an agarose gel`, `The death rate of bacteria exposed to the test compound`, `Emergence of antibiotic resistance in treated bacterial colonies`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The Ames test uses Salmonella his$^-$ mutants that cannot grow without histidine. A mutagen causes reversion mutations (his$^-$ → his$^+$) → bacteria can now synthesize histidine → colony growth on histidine-free plates. More colonies = stronger mutagen. Results correlate strongly with carcinogenicity because most carcinogens are mutagens.`
           },
           {
             question: `Homologous recombination repair of double-strand breaks is more accurate than NHEJ because:`,
             options: [`It copies the intact sister chromatid as a repair template`, `It directly rejoins the broken ends without trimming them`, `It works mainly in G$_1$, before replication can add errors`, `It uses reverse transcriptase to rebuild the missing sequence`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Homologous recombination (HR) uses the intact sister chromatid as a template to faithfully repair the break → high fidelity. NHEJ directly ligates the broken ends without a template → nucleotides may be lost or added → error-prone. HR is only available in S/G$_2$ phase (when a sister chromatid exists). BRCA1/BRCA2 are essential for HR — their loss forces reliance on error-prone NHEJ → genomic instability → cancer.`
           }
         ]
@@ -138,10 +153,14 @@ p53 is the central hub connecting DNA damage to cell fate:
 - Point mutations: silent (no change) < conservative missense < non-conservative missense < nonsense (truncation)
 - Frameshifts (insertions/deletions not in multiples of 3): most devastating, alter all downstream codons
 - Transitions (purine↔purine, pyrimidine↔pyrimidine) more common than transversions
-- Repair hierarchy: proofreading → mismatch repair (Lynch syndrome) → BER (small damage) → NER (bulky lesions, XP)
+- Repair hierarchy: proofreading → mismatch repair (Lynch syndrome when defective) → BER (small damage) → NER (bulky lesions, XP)
 - Double-strand break repair: HR (accurate, needs sister chromatid, BRCA1/2) vs. NHEJ (error-prone, any phase)
 - Ames test: his$^-$ Salmonella reversion on mutagen exposure = carcinogen screen
-- p53: DNA damage → cell cycle arrest (p21) or apoptosis (Bax); mutated in >50% of cancers`
+- p53: DNA damage → cell cycle arrest (via the CDK inhibitor p21) or apoptosis; mutated in >50% of cancers
+
+<!-- yield:low -->
+- Low-yield extras: MutS/MutL in mismatch repair; HNPCC as Lynch syndrome's other name, and microsatellite instability; AP endonuclease in BER; NER's ~24-32 nt excision patch; NHEJ defects and SCID; nonsense-mediated decay destroys mRNAs whose stop codon sits >50 nt upstream of the last exon junction; the p53 pathway's other named players — ATM/ATR, MDM2, Bax
+<!-- /yield -->`
     }
   ]
 };

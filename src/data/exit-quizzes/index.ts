@@ -152,7 +152,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Bio/Biochem
   'mcat-biology': () => import('./mcat-biology'),
   'mcat-cell-biology-mcat': () => import('./mcat-biology'), // alias
-  'mcat-molecular-biology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-molecular-biology-mcat': () => import('./lesson-built/mcat-molecular-biology-mcat'),
   'mcat-microbiology-mcat': () => import('./mcat-biology'), // alias
   // Subtopic aliases → the shared bio pool, so the diagnostic's specific
   // recommendations (see mcat-practice/subtopic-map.ts) have a working exit
@@ -162,12 +162,13 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-cell-biology-membrane-transport-mcat': () => import('./mcat-biology'),
   'mcat-cell-biology-signaling-mcat': () => import('./mcat-biology'),
   'mcat-cell-biology-cell-cycle-mcat': () => import('./mcat-biology'),
-  'mcat-molecular-biology-dna-replication-mcat': () => import('./mcat-biology'),
-  // Dedicated pool built from the lesson itself (owner request 2026-10-02):
-  // the keyword-picked biology pool served off-topic items (Golgi, macrolides…).
-  'mcat-molecular-biology-transcription-mcat': () => import('./mcat-transcription'),
-  'mcat-molecular-biology-translation-mcat': () => import('./mcat-biology'),
-  'mcat-molecular-biology-biotechnology-mcat': () => import('./mcat-biology'),
+  'mcat-molecular-biology-dna-replication-mcat': () => import('./lesson-built/mcat-molecular-biology-dna-replication-mcat'),
+  // Lesson-built pools (./lesson-built.ts, owner request 2026-10-02): the quiz
+  // covers exactly what the lesson teaches; the keyword-picked biology pool
+  // served off-topic items (Golgi, macrolides…).
+  'mcat-molecular-biology-transcription-mcat': () => import('./lesson-built/mcat-molecular-biology-transcription-mcat'),
+  'mcat-molecular-biology-translation-mcat': () => import('./lesson-built/mcat-molecular-biology-translation-mcat'),
+  'mcat-molecular-biology-biotechnology-mcat': () => import('./lesson-built/mcat-molecular-biology-biotechnology-mcat'),
   'mcat-microbiology-bacteria-mcat': () => import('./mcat-biology'),
   'mcat-microbiology-viruses-mcat': () => import('./mcat-biology'),
   'mcat-microbiology-genetics-mcat': () => import('./mcat-biology'),

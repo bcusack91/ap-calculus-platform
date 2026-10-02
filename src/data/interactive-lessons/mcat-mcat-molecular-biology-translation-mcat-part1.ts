@@ -23,7 +23,11 @@ export const mcatTranslationPart1Data = {
 - Cloverleaf secondary structure, L-shaped 3D structure; two business ends:
   - **Anticodon** (bottom loop): base-pairs with the mRNA codon, **antiparallel** — codon 5'-AUG-3' pairs anticodon 3'-UAC-5'.
   - **3' CCA acceptor end**: the amino acid is esterified to the terminal A's ribose — a **high-energy ester bond** whose hydrolysis later powers peptide bond formation.
-- **Wobble**: the codon's third base pairs loosely with the anticodon's first (5') base — G-U pairs and inosine's promiscuity allowed. One tRNA can read several synonymous codons; this is WHY the code's redundancy concentrates at position 3, and why cells need ~40 tRNAs, not 61.
+- **Wobble**: the codon's third base pairs loosely with the anticodon's first (5') base — nonstandard pairs such as G-U are allowed. One tRNA can read several synonymous codons; this is WHY the code's redundancy concentrates at position 3, and why cells need far fewer tRNA species than the 61 sense codons.
+
+<!-- yield:low -->
+- Inosine, a modified base at the anticodon's wobble position, pairs with U, C or A — which is how roughly 40 tRNA species cover all 61 sense codons.
+<!-- /yield -->
 
 ### Aminoacyl-tRNA Synthetases — Where Accuracy Actually Lives
 
@@ -43,7 +47,11 @@ export const mcatTranslationPart1Data = {
 
 **Question 2 — A mutation inserts a single C immediately after the AUG. Translate again.** New message after the start: AUG - CGC - UUG - GUG - A... The frame is shifted; every downstream codon changes (Arg-Leu-Val...), and the original UGA stop is no longer in frame — translation continues until a new in-frame stop appears. Frameshift = new sequence AND usually new length. Contrast inserting THREE bases: one amino acid added, frame preserved.
 
-**Question 3 — The tRNA reading UGG (Trp) has what anticodon, and could it also read UGA?** Written antiparallel, the anticodon is 3'-ACC-5' (conventionally written 5'-CCA-3' — always state orientation). UGA differs at the third codon position (G to A); wobble tolerates some third-position mismatches, but a normal tryptophan tRNA does not read UGA — UGA is a stop recognized by release factors. However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonsense suppressors), inserting an amino acid at UGA and producing read-through protein — a classic passage twist.
+**Question 3 — The tRNA reading UGG (Trp) has what anticodon, and could it also read UGA?** Written antiparallel, the anticodon is 3'-ACC-5' (conventionally written 5'-CCA-3' — always state orientation). UGA differs at the third codon position (G to A); wobble tolerates some third-position mismatches, but a normal tryptophan tRNA does not read UGA — UGA is a stop recognized by release factors.
+
+<!-- yield:low -->
+However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonsense suppressors), inserting an amino acid at UGA and producing read-through protein — a classic passage twist.
+<!-- /yield -->
 
 **Question 4 — Why did the exam give you both GCU and GCA as Ala?** To make degeneracy concrete: a GCU-to-GCA change at codon 2 would be silent (third-position wobble), while GCU-to-GAU would not. Track WHICH position mutated before predicting the effect.`
     },
@@ -57,30 +65,35 @@ export const mcatTranslationPart1Data = {
             question: `A point mutation changes a codon's third base, yet the protein is completely unchanged. The property of the genetic code responsible is:`,
             options: [`Universality of the code`, `Degeneracy of the code`, `Unambiguity of the code`, `Nonoverlapping reading frames`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Multiple codons per amino acid (degeneracy) is organized so synonyms usually share their first two bases and differ at position 3, where wobble pairing lets one tRNA serve several codons. Third-position changes are therefore frequently silent. Unambiguity is the reverse guarantee (one codon, one meaning), universality says the dictionary is shared across organisms, and nonoverlap concerns how frames are read — each property maps to its own question type; keep the definitions crisp.`
           },
           {
             question: `In the classic Chapeville experiment, cysteine already attached to tRNA-Cys was chemically converted to alanine. In translation, this alanine was inserted at cysteine codons. The conclusion is that:`,
             options: [`Alanine and cysteine share the same set of codons`, `The ribosome proofreads the amino acid on each tRNA`, `Codon recognition depends only on the tRNA's anticodon`, `Aminoacyl-tRNA synthetases are not needed`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The ribosome reads base pairing, not side chains: cargo swapped after charging rides the tRNA's anticodon straight into cysteine positions. Fidelity of the amino-acid-to-codon match therefore lives entirely upstream, in the synthetases' recognition and editing sites — which is why the experiment made them, not the ribosome, the "second genetic code." Expect this logic re-skinned: any manipulation after charging is invisible to the ribosome.`
           },
           {
             question: `Wobble base pairing explains why:`,
             options: [`Stop codons are decoded by tRNAs lacking amino acids`, `One codon can specify two different amino acids`, `Each codon requires its own tRNA, giving 61 tRNA species`, `Fewer than 61 tRNA species can read all sense codons`],
             correctAnswer: 3,
-            explanation: `Relaxed pairing rules at the codon's third position (the anticodon's 5' base) — G-U pairs, and inosine reading U, C, or A — let a single tRNA cover a family of synonymous codons, cutting the required tRNA count to roughly 40. Note wobble NEVER creates ambiguity in the protein: synonymous codons already encode the same amino acid, so loose reading among them is safe. Stop codons remain tRNA-free, read by protein release factors.`
+            yield: 'HIGH',
+            explanation: `Relaxed pairing rules at the codon's third position (the anticodon's 5' base) — such as G-U pairs — let a single tRNA cover a family of synonymous codons, so far fewer than 61 tRNA species are needed. Note wobble NEVER creates ambiguity in the protein: synonymous codons already encode the same amino acid, so loose reading among them is safe. Stop codons remain tRNA-free, read by protein release factors.`
           },
           {
             question: `Charging a tRNA with its amino acid consumes ATP with release and hydrolysis of pyrophosphate. The chemical purpose of this investment is to:`,
             options: [`Store energy in the aminoacyl-tRNA ester bond`, `Power the tRNA's transport into the nucleus`, `Unwind mRNA secondary structure before initiation`, `Methylate the amino acid for recognition`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Peptide bond formation at the ribosome uses no ATP or GTP directly — the energy was banked in advance as the activated ester linking amino acid to tRNA (2 ATP equivalents, since pyrophosphate hydrolysis pulls the reaction). The ribosome's peptidyl transferase (a ribozyme) just transfers the chain onto the incoming amino group. Energy accounting questions hinge on this: charging is where the peptide bond is paid for.`
           },
           {
             question: `An mRNA codon reads 5'-GAU-3'. The anticodon of the tRNA that decodes it is:`,
             options: [`5'-GAU-3'`, `5'-CUA-3'`, `5'-AUC-3'`, `5'-UAG-3'`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Pairing is antiparallel and complementary: codon 5'-GAU-3' pairs anticodon 3'-CUA-5', which written in conventional 5' to 3' order is 5'-AUC-3'. 5'-CUA-3' is the same bases left unreversed — the standard orientation trap (and note 5'-CUA-3' would pair UAG, a stop). Treat codon-anticodon problems exactly like strand problems: complement, then reverse, then double-check by aligning the two strands head-to-tail.`
           }
         ]
@@ -94,10 +107,13 @@ export const mcatTranslationPart1Data = {
 - Code properties as question types: triplet, degenerate (synonyms differ at position 3 — silent mutations), unambiguous, nonoverlapping/comma-free (indels not divisible by 3 = frameshift), nearly universal (mitochondria deviate)
 - AUG starts and sets the frame; UAA/UAG/UGA stop via release factors, not tRNAs; translation begins at the first AUG, not the first base
 - tRNA: anticodon pairs the codon antiparallel (complement THEN reverse); amino acid rides the 3' CCA end on a high-energy ester bond that later pays for the peptide bond
-- Wobble at the third position: one tRNA reads a codon family (~40 tRNAs for 61 codons); wobble never makes protein ambiguous
+- Wobble at the third position: one tRNA reads a codon family (far fewer tRNAs than 61 codons); wobble never makes protein ambiguous
 - Synthetases are the code's guardians: one per amino acid, two-step charging costing 2 ATP equivalents, editing sites reject near-miss substrates
 - Chapeville: the ribosome checks only codon-anticodon pairing — mischarged tRNA delivers the wrong amino acid unchallenged
-- Mutant anticodons can suppress stop codons (read-through) — the exception that proves the pairing rules`
+
+<!-- yield:low -->
+- Low-yield extras: inosine at the wobble position pairs with U, C or A, letting ~40 tRNA species read all 61 sense codons; mutant (nonsense-suppressor) tRNAs with altered anticodons can read stop codons and cause read-through
+<!-- /yield -->`
     }
   ]
 };

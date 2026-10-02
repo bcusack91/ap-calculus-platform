@@ -17,12 +17,18 @@ export const mcatBiotechnologyPart1Data = {
 
 ### Cloning a Gene — The Assembly Line
 
-1. Cut **vector** (usually a plasmid: circular, autonomously replicating, with an **origin of replication**, a **selectable marker** like an antibiotic-resistance gene, and a **multiple cloning site**) and **insert** with the same enzyme(s).
-2. Ligate; transform into bacteria (heat shock/electroporation makes them competent).
+1. Cut **vector** (usually a plasmid: circular, autonomously replicating, with an **origin of replication** so it is copied and passed to daughter cells, a **selectable marker** like an antibiotic-resistance gene, and a **multiple cloning site**) and **insert** with the same enzyme(s).
+2. Ligate; transform into bacteria (the cells take up the plasmid).
 3. **Select**: plate on the antibiotic — only plasmid-bearing cells grow.
 4. **Screen** for insert-containing plasmids: classic **blue-white screening** — the cloning site interrupts lacZ, so insert-bearing colonies stay WHITE on X-gal (functional lacZ = blue = empty vector).
 
+<!-- yield:low -->
+- Bacteria are made "competent" to take up DNA by heat shock (with calcium chloride) or by electroporation.
+<!-- /yield -->
+
 **Expressing human protein in bacteria has a catch**: bacteria cannot splice. Clone the **cDNA** (reverse-transcribed from mature mRNA — intron-free), not genomic DNA, and put it behind a bacterial promoter. Insulin is the classic product. Proteins needing glycosylation or complex folding move to yeast/mammalian cells — no ER, no N-glycans in E. coli.
+
+- **DNA libraries**: a **genomic library** holds all of an organism's DNA, including introns and noncoding regions; a **cDNA library** is made from mRNA, so it holds only the genes expressed in that tissue, with no introns — the right source for expressing eukaryotic genes in bacteria.
 
 ### PCR — Copying Without Cells
 
@@ -68,30 +74,35 @@ Each cycle, three temperature steps:
             question: `A circular plasmid is digested with an enzyme that has three recognition sites on it. Complete digestion produces:`,
             options: [`Four fragments`, `Three fragments`, `Two fragments`, `One linearized fragment`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `A circle has no free ends: the first cut linearizes (still one piece), and each additional cut adds one fragment — so n cuts give n fragments for circular DNA, versus n+1 for linear DNA. Three sites, three fragments. Gel questions build on this: if a "three-site" plasmid digest shows four bands, suspect a fourth site or partial digestion. Draw the circle and cut it; never answer fragment-counting from memory alone.`
           },
           {
             question: `To produce functional human insulin in E. coli, researchers clone cDNA rather than the genomic insulin gene because:`,
             options: [`cDNA includes stronger bacterial promoters`, `Genomic DNA is too chemically unstable to clone`, `cDNA lacks introns, which bacteria cannot splice out`, `cDNA is double-stranded but genomic DNA is not`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `The eukaryotic gene is interrupted by introns that only a spliceosome can remove; E. coli would faithfully transcribe and translate the introns into nonsense. Reverse transcriptase run on mature mRNA (primed off the poly-A tail with oligo-dT) captures the post-splicing sequence — exactly the protein-coding information, nothing else. This single fact — cDNA = snapshot of the mature transcript — also explains why comparing cDNA to genomic DNA reveals where the introns were.`
           },
           {
             question: `In blue-white screening, colonies containing the desired recombinant plasmid appear white because:`,
             options: [`The antibiotic-resistance gene produces a white pigment`, `White colonies failed to take up any plasmid`, `X-gal stains the insert DNA directly`, `The insert disrupts lacZ, so X-gal is not cleaved`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The multiple cloning site sits INSIDE lacZ by design: ligating an insert there breaks the beta-galactosidase reading frame, and no functional enzyme means no blue X-gal cleavage product — white signals success. Blue colonies carry re-circularized empty vector with lacZ intact. Cells with no plasmid at all never appear: ampicillin killed them (blaming failed plasmid uptake confuses the screen with the selection — keep those two steps distinct, as exam questions deliberately blur them).`
           },
           {
             question: `PCR uses Taq polymerase rather than ordinary E. coli DNA polymerase because Taq:`,
             options: [`Survives the repeated ~95 C denaturation steps`, `Requires no primers to begin synthesis`, `Can synthesize DNA in the 3' to 5' direction`, `Proofreads more accurately than any other polymerase`],
             correctAnswer: 0,
-            explanation: `The thermostability of Thermus aquaticus polymerase is what made PCR automatable: mesophilic polymerases denature at the strand-separation temperature and originally had to be replenished each cycle by hand. Taq still obeys every polymerase law — 5' to 3' synthesis, absolute primer dependence (the reaction supplies synthetic primers precisely because of it) — and in fact LACKS 3' to 5' proofreading, which is why high-fidelity thermostable enzymes (Pfu) replaced it for cloning where sequence accuracy matters.`
+            yield: 'HIGH',
+            explanation: `The thermostability of Thermus aquaticus polymerase is what made PCR automatable: mesophilic polymerases denature at the strand-separation temperature and originally had to be replenished each cycle by hand. Taq still obeys every polymerase law — 5' to 3' synthesis, absolute primer dependence (the reaction supplies synthetic primers precisely because of it) — and in fact LACKS 3' to 5' proofreading, which is why high-fidelity proofreading thermostable enzymes replaced it for cloning where sequence accuracy matters.`
           },
           {
             question: `Starting from 10 copies of a template, roughly how many double-stranded copies exist after 10 PCR cycles at perfect efficiency?`,
             options: [`About 100 (10 times 10 cycles)`, `About 1,000 (10 times 10 to the 2nd)`, `About 10,000 (10 times 2 to the 10th)`, `About 110 (10 plus 10 per cycle)`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Each cycle doubles every existing copy: final = initial times 2 to the n. Ten cycles multiply by 2^10 = 1,024, so 10 templates become ~10,240. The MCAT rewards the estimate, not the exact integer — know 2^10 is about 10^3, so 30 cycles multiply by about 10^9 (2^30). Linear thinking (10 plus 10 per cycle) is the planted error; amplification is exponential, which is also why single-molecule contamination ruins forensic PCR.`
           }
         ]
@@ -108,7 +119,11 @@ Each cycle, three temperature steps:
 - Express human proteins from cDNA (reverse-transcribed mRNA, intron-free) because bacteria cannot splice; move to yeast/mammalian hosts when glycosylation or complex folding is required
 - PCR: denature ~95 C, anneal primers ~55 C, extend ~72 C with thermostable Taq; heat replaces helicase, supplied primers replace primase; no proofreading in Taq
 - Amplification = initial times 2 to the n; 2^10 is about 10^3 — estimate, do not compute
-- qPCR quantifies (earlier threshold = more starting template); RT-PCR reaches back to mRNA via reverse transcriptase`
+- qPCR quantifies (earlier threshold = more starting template); RT-PCR reaches back to mRNA via reverse transcriptase
+
+<!-- yield:low -->
+- Low-yield extras: bacteria are made competent for transformation by heat shock or electroporation
+<!-- /yield -->`
     }
   ]
 };
