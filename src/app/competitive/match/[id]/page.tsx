@@ -18,7 +18,8 @@ import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
 import { splitInlineMath } from '@/lib/inline-math-parts';
-import { POWER_UPS, activeEffects, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
+import { POWER_UPS, activeEffects, type ActiveEffect, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
+import { ingestEffects } from '@/lib/chaos-arrival';
 import {
   PowerUpBar,
   InkSplatOverlay,
@@ -166,6 +167,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [displayOrder, setDisplayOrder] = useState<number[] | null>(null);
   const [usingPowerUp, setUsingPowerUp] = useState(false);
   const seenEffectIds = useRef<Set<string>>(new Set());
+  // Effects on this player as this screen runs them: attacks are timed from
+  // when they ARRIVED here, not from when they were fired (server clock), so
+  // the 500ms poll and any device-clock drift no longer shorten them, and they
+  // stay up after the server prunes them (see chaos-arrival.ts).
+  const arrivedEffectIds = useRef<Set<string>>(new Set());
+  const heldEffects = useRef<ActiveEffect[]>([]);
+  const [chaosEffects, setChaosEffects] = useState<ActiveEffect[]>([]);
   // Practice-bot power-up pacing: `botFireLock` is a timestamp the bot won't
   // fire before (covers the in-flight request + the 500ms poll catching up, so
   // one drop can't be spent twice); `botFailed` backs off items the server
@@ -212,6 +220,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
       setMatchState(data.match);
       setCurrentUserId(data.currentUserId);
+      if (data.match.gameMode === 'CHAOS') {
+        const mineNow = newIsPlayer1 ? data.match.gameData?.powerUps?.player1 : data.match.gameData?.powerUps?.player2;
+        heldEffects.current = ingestEffects(heldEffects.current, mineNow?.effects, Date.now(), arrivedEffectIds.current).effects;
+        setChaosEffects(heldEffects.current);
+      }
       setLoading(false);
 
       if (data.match.status === 'COMPLETED' && !previousState?.status) {
@@ -263,8 +276,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const myPowerUps = isChaosMode
     ? (amPlayer1 ? matchState?.gameData?.powerUps?.player1 : matchState?.gameData?.powerUps?.player2)
     : undefined;
-  const chaosNow = useChaosNow(myPowerUps?.effects);
-  const myEffectsList = myPowerUps?.effects;
+  const chaosNow = useChaosNow(chaosEffects);
+  const myEffectsList = chaosEffects;
   const myActiveEffects = useMemo(
     () => (isChaosMode ? activeEffects(myEffectsList, chaosNow) : []),
     [isChaosMode, myEffectsList, chaosNow]
