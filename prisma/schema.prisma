@@ -33,6 +33,8 @@ model User {
   // ULTRA_HIGH + HIGH. Progress rows for hidden cards are never deleted.
   flashcardIncludeMediumYield Boolean                       @default(true)
   flashcardIncludeLowYield    Boolean                       @default(false)
+  // Interactive lessons: show low-yield passages and questions (hidden by default).
+  lessonIncludeLowYield       Boolean                       @default(false)
   stripeCustomerId            String?                       @unique
   stripeSubscriptionId        String?                       @unique
   stripePriceId               String?

@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { filterSectionsForYield, stripLowYield } from '@/lib/lesson-yield'
 import { generateExitQuiz } from '@/data/exit-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
@@ -343,12 +344,14 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       const partCount = cfg?.parts.length ?? 0
       for (let part = 1; part <= partCount && (content.length < MAX_CONTENT_SLIDES || lessonPolls.length < MAX_POLLS); part++) {
         const data = await reg.getInteractiveLessonData(topicSlug, part).catch(() => null)
-        for (const sec of data?.sections ?? []) {
+        // Decks present the default view: low-yield sections and questions
+        // are left out (lesson-yield.ts), as they are for students by default.
+        for (const sec of filterSectionsForYield(data?.sections ?? [], false)) {
           const secType = (sec as { type?: string }).type
           if (secType === 'text' && baseThin && typeof sec.content === 'string' && content.length < MAX_CONTENT_SLIDES) {
             // Drop lesson-navigation lines ("Part 3 of 7 — …") — deck pacing
             // is the teacher's, not the lesson's.
-            const cleaned = stripMetaSections(sec.content.replace(/^\*\*Part \d+ of \d+.*$/gm, ''))
+            const cleaned = stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, ''))
             for (const slideFromLesson of contentSlidesFrom(cleaned, topic.title)) {
               if (content.length >= MAX_CONTENT_SLIDES) break
               if (slideFromLesson.blocks.length > 0) content.push(slideFromLesson)

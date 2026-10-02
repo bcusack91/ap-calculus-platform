@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
+import { useState, useRef, useEffect, useCallback, useMemo, createContext, useContext } from 'react'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { isSatMathTopic } from '@/lib/sat-math-topics'
 import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
@@ -29,6 +29,7 @@ import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
 import { postQuestionActivity } from '@/lib/question-activity-client'
+import { filterSectionsForYield, lessonHasLowYield, splitYieldBlocks, stripLowYield, hasLowYieldBlock } from '@/lib/lesson-yield'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
@@ -373,7 +374,8 @@ function buildFallbackEntranceQuiz(
         pool.push(q)
       }
     }
-    for (const section of part.data?.sections ?? []) {
+    // Placement checks use the default view: low-yield questions never appear.
+    for (const section of filterSectionsForYield(part.data?.sections ?? [], false)) {
       const s = section as { type?: string; exercise?: { questions?: RawQuestion[] } } & RawQuestion
       // Authoring shapes: 'multiple-choice' sections nest questions under
       // exercise.questions; 'mcq' (Physics C) and 'quiz' (SAT lessons)
@@ -532,6 +534,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
   const lessonData = activePreloadedParts[lessonPart - 1]?.data ?? null
 
+  // Exam-yield tiers (src/lib/lesson-yield.ts): low-yield sections and quiz
+  // questions are hidden unless the student opts in (User.lessonIncludeLowYield).
+  // Everything downstream (navigation, progress, mastery) uses this filtered
+  // list, so a part completes at 100% whichever way the toggle is set.
+  const [includeLowYield, setIncludeLowYield] = useState(false)
+  const rawSections = lessonData?.sections
+  const sections = useMemo(() => filterSectionsForYield(rawSections ?? [], includeLowYield), [rawSections, includeLowYield])
+  const partHasLowYield = useMemo(() => lessonHasLowYield(rawSections ?? []), [rawSections])
+
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: LessonPart) => {
     setLessonPart(newPart)
@@ -551,7 +562,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     paused: showExitQuiz || entranceQuizPhase === 'quiz',
     unloadPayload: () => {
       if (!session?.user || (!cachedTopicId && !topicSlug)) return null
-      const sectionCount = lessonData?.sections?.length ?? 1
+      const sectionCount = sections.length || 1
       return {
         topicId: cachedTopicId ?? undefined,
         topicSlug: cachedTopicId ? undefined : topicSlug,
@@ -578,7 +589,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     
     try {
       // Calculate mastery level based on overall progress
-      const sectionCount = lessonData?.sections?.length ?? 1
+      const sectionCount = sections.length || 1
       const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
       
       const response = await sendProgress({
@@ -604,7 +615,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
-  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant, sendProgress])
+  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, sections.length, variant, sendProgress])
 
   // Load progress from database on mount
   useEffect(() => {
@@ -812,7 +823,39 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     void Promise.resolve().then(() => openExitQuiz())
   }, [topicHasExitQuiz, session?.user, openExitQuiz])
 
-  const sections = lessonData?.sections ?? []
+  // The student's saved choice (signed out: hidden, toggle lasts the visit).
+  useEffect(() => {
+    if (!session?.user) return
+    let active = true
+    fetch('/api/lessons/settings')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (active && typeof d?.includeLowYield === 'boolean') setIncludeLowYield(d.includeLowYield) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [session?.user])
+
+  /** Flip the low-yield setting, keeping the student on the same material:
+   *  the current section and the completed ones are carried over by id. */
+  const toggleLowYield = () => {
+    const next = !includeLowYield
+    const nextSections = filterSectionsForYield(rawSections ?? [], next)
+    const idAt = (i: number) => (sections[i] as { id?: string } | undefined)?.id
+    const indexOf = (id: string | undefined) => (id ? nextSections.findIndex((x) => (x as { id?: string }).id === id) : -1)
+    let target = indexOf(idAt(currentSectionIndex))
+    // The current section is being hidden: fall back to the nearest earlier one that stays.
+    for (let i = currentSectionIndex - 1; target === -1 && i >= 0; i--) target = indexOf(idAt(i))
+    setCurrentSectionIndex(Math.max(0, Math.min(target, nextSections.length - 1)))
+    setCompletedSections((prev) => new Set([...prev].map((i) => indexOf(idAt(i))).filter((i) => i >= 0)))
+    setIncludeLowYield(next)
+    if (session?.user) {
+      void fetch('/api/lessons/settings', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ includeLowYield: next }),
+      }).catch(() => {})
+    }
+  }
+
   const currentSection = sections?.[currentSectionIndex]
   const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
   
@@ -1394,7 +1437,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }
 
   return (
-    <>
+    <LessonYieldContext.Provider value={includeLowYield}>
       {/* Reading Progress Bar */}
       <ReadingProgressBar />
 
@@ -1429,6 +1472,27 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             enrichment for students who want to dig deeper. You won&apos;t need it on
             test day.
           </p>
+        </div>
+      )}
+      {/* Exam-yield toggle: shown only when this part has low-yield material. */}
+      {partHasLowYield && (
+        <div className="flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800">
+          <div>
+            <p id="low-yield-label" className="text-sm font-semibold text-gray-900 dark:text-white">Include low-yield details</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              Extra depth the exam rarely tests. Hidden by default; shown in labelled boxes when on.
+            </p>
+          </div>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={includeLowYield}
+            aria-labelledby="low-yield-label"
+            onClick={toggleLowYield}
+            className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${includeLowYield ? 'bg-accent' : 'bg-gray-300 dark:bg-gray-600'}`}
+          >
+            <span className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${includeLowYield ? 'translate-x-5' : 'translate-x-0.5'}`} />
+          </button>
         </div>
       )}
       {/* Part Navigation Menu - Show for multi-part lessons (hide if only 1 unmastered part remains) */}
@@ -1673,7 +1737,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         }}
       />
     )}
-    </>
+    </LessonYieldContext.Provider>
   )
 }
 
@@ -3042,8 +3106,35 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
   )
 }
 
+/** Whether the student has opted in to low-yield detail (lesson-yield.ts). */
+const LessonYieldContext = createContext(false)
+
 // Fade-in Text Component with LaTeX support
 function FadeInText({ content, onComplete }: { content: string; onComplete?: () => void }) {
+  // Low-yield passages: removed by default; shown in place, in a labelled box,
+  // once the student opts in. Inner blocks carry no markers, so this recursion
+  // stops after one level.
+  const includeLowYield = useContext(LessonYieldContext)
+  if (hasLowYieldBlock(content)) {
+    if (!includeLowYield) {
+      content = stripLowYield(content)
+    } else {
+      return (
+        <>
+          {splitYieldBlocks(content).map((block, i) =>
+            block.low ? (
+              <div key={i} className="my-4 rounded-xl border border-dashed border-gray-300 bg-gray-50 px-4 pb-1 pt-3 dark:border-gray-600 dark:bg-gray-800/60">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Low yield — beyond core MCAT</p>
+                <FadeInText content={block.text} onComplete={onComplete} />
+              </div>
+            ) : (
+              <FadeInText key={i} content={block.text} onComplete={onComplete} />
+            ),
+          )}
+        </>
+      )
+    }
+  }
   // Escape currency dollar amounts ($5 ... $10) so remark-math does not treat
   // them as inline-math delimiters and swallow the prose between them.
   content = escapeCurrencyMath(content)

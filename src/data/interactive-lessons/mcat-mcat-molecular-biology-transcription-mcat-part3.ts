@@ -24,7 +24,11 @@ An **operon** = one promoter driving several genes onto ONE polycistronic mRNA �
 - **Negative control**: the LacI repressor sits on the **operator** (DNA between promoter and genes) until the inducer **allolactose** pulls it off.
 - **Positive control**: low glucose raises **cAMP**; cAMP-CAP binds upstream and recruits polymerase. Both conditions must be right — use lactose only when the better fuel is gone.
 
-**The trp operon (repressible, anabolic)**: the repressor is INACTIVE alone; **tryptophan is a corepressor** that activates it. Product shuts off its own synthesis — end-product feedback at the gene level. (Attenuation adds a second, translation-coupled brake.)
+**The trp operon (repressible, anabolic)**: the repressor is INACTIVE alone; **tryptophan is a corepressor** that activates it. Product shuts off its own synthesis — end-product feedback at the gene level.
+
+<!-- yield:low -->
+Attenuation adds a second, translation-coupled brake on the trp operon.
+<!-- /yield -->
 
 > Classify any operon question fast: catabolic pathways are inducible (substrate turns them ON); anabolic pathways are repressible (product turns them OFF).
 
@@ -54,11 +58,17 @@ An **operon** = one promoter driving several genes onto ONE polycistronic mRNA �
 
 **Analysis.** The chromosome makes no repressor, but the plasmid's I$^+$ produces diffusible repressor that finds and binds the chromosomal O$^+$, restoring control of Z$^+$. **I$^+$ is trans-dominant over I$^-$** — the defining demonstration that repressor is a diffusible product.
 
+<!-- yield:low -->
 **Strain 3**: I$^s$ (super-repressor that cannot bind allolactose) O$^+$ Z$^+$ / F' I$^+$ O$^+$ Z$^-$. Result: NO enzyme even WITH inducer.
 
 **Analysis.** I$^s$ repressor binds operators normally but ignores the inducer — it never lets go. Because it diffuses, it clamps every O$^+$ in the cell, and wild-type repressor cannot displace it (an empty operator is instantly rebound). **I$^s$ is trans-dominant negative** — uninducible.
+<!-- /yield -->
 
-**The algorithm**: (1) inventory every functional Z; (2) examine only the operator physically attached to it; (3) let all repressor genes contribute one shared repressor pool; (4) remember O$^c$ = cis-constitutive, I$^-$ = trans-recessive, I$^s$ = trans-dominant uninducible.`
+**The algorithm**: (1) inventory every functional Z; (2) examine only the operator physically attached to it; (3) let all repressor genes contribute one shared repressor pool; (4) remember O$^c$ = cis-constitutive, I$^-$ = trans-recessive.
+
+<!-- yield:low -->
+And I$^s$, the super-repressor, = trans-dominant uninducible.
+<!-- /yield -->`
     },
     {
       id: 'txn3-quiz1',
@@ -70,30 +80,35 @@ An **operon** = one promoter driving several genes onto ONE polycistronic mRNA �
             question: `E. coli are grown with abundant glucose AND abundant lactose. Lac operon transcription is minimal because:`,
             options: [`The repressor remains bound to the operator despite lactose`, `Allolactose is only produced when glucose is absent`, `High glucose keeps cAMP low, so CAP cannot assist polymerase`, `Glucose directly inhibits beta-galactosidase enzyme activity`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Both switches must be ON: lactose (via allolactose) removes the repressor — negative control cleared — but the weak lac promoter still needs cAMP-CAP to recruit polymerase effectively, and glucose suppresses adenylate cyclase, keeping cAMP low. Result: a trickle, not full expression. This is catabolite repression, the cell's fuel-preference circuit. The "repressor remains bound" and "allolactose only without glucose" options misstate inducer logic (allolactose forms whenever lactose enters), and direct inhibition of beta-galactosidase confuses gene regulation with enzyme inhibition.`
           },
           {
             question: `In the trp operon, tryptophan functions as a corepressor. This means high tryptophan levels:`,
             options: [`Activate the repressor so it binds the operator`, `Bind the repressor and pull it off the operator`, `Directly inhibit RNA polymerase in all operons`, `Raise cAMP levels so CAP recruits polymerase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Anabolic logic runs opposite to catabolic: the trp repressor is born unable to bind DNA and needs its corepressor (the pathway's END PRODUCT) to fold into binding shape — so abundance of tryptophan shuts down its own production line. Compare lac: there the small molecule (allolactose, the substrate signal) INACTIVATES the repressor. One sentence to memorize: inducers disable repressors of catabolic operons; corepressors enable repressors of anabolic operons.`
           },
           {
             question: `An enhancer located 40,000 base pairs downstream of a human gene strongly increases its transcription. Deleting the enhancer reduces expression of this gene but no others, and supplying the enhancer sequence on a separate plasmid does not restore expression. The enhancer is best described as:`,
             options: [`A trans-acting factor, since it works at a distance`, `A cis-acting element that acts through DNA looping`, `A silencer element with repressive activity`, `An alternative promoter located downstream`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Distance does not make something trans — physical connectivity is the criterion. Enhancers act on genes sharing their DNA molecule (cis), which is exactly why a detached plasmid copy fails: looping can only deliver activators to promoters on the same chromosome. Trans factors are the diffusible PROTEINS that bind the enhancer. Positioning (40 kb away, orientation-independent, downstream-capable) distinguishes enhancers from promoters, which sit at fixed short range and set the start site.`
           },
           {
             question: `A drug inhibiting histone deacetylases (HDACs) is applied to cells. The predicted direct consequence for chromatin and transcription is:`,
             options: [`Increased DNA methylation and gene silencing`, `Tighter DNA-histone binding and heterochromatin spread`, `Complete loss of nucleosomes from promoters`, `More acetylated histones and increased transcription`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Acetylation is written by HATs and erased by HDACs; block the eraser and acetyl marks accumulate. Acetyl groups neutralize the lysine positive charges that grip the negatively charged backbone, so nucleosomes loosen and promoters become accessible — transcription rises. Work the causal chain: enzyme inhibited, mark accumulates, charge neutralized, packing opens, output up. HDAC inhibitors are real chemotherapeutics that de-repress silenced tumor-suppressor genes; methylation is an entirely separate silencing system.`
           },
           {
             question: `A female mammal silences one X chromosome in each cell (the Barr body), and daughter cells maintain the SAME silenced X through many divisions without any DNA sequence change. The property that best explains this stable inheritance is:`,
             options: [`A mutation in the silenced X's promoters`, `Continuous action of the lac repressor`, `Epigenetic marks such as DNA methylation`, `Loss of the silenced chromosome during mitosis`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Heritable-but-not-genetic is the definition of epigenetics: methylated CpGs are restored on new daughter strands by maintenance methyltransferases that recognize hemimethylated sites, so the silent state survives replication indefinitely — sequence untouched, chromosome retained (it is visible as the Barr body). The same machinery underlies genomic imprinting. Calico cat coat patterns are the standard phenotypic evidence: patches descend from single cells that fixed one X's inactivation early.`
           }
         ]
@@ -107,10 +122,14 @@ An **operon** = one promoter driving several genes onto ONE polycistronic mRNA �
 - Operon = one promoter, polycistronic mRNA, coordinated pathway control; catabolic operons are inducible (lac), anabolic are repressible (trp)
 - lac needs BOTH: repressor off (allolactose) AND cAMP-CAP on (low glucose); glucose present = catabolite repression regardless of lactose
 - trp: tryptophan is a corepressor that arms its repressor — end product silences its own synthesis
-- Cis vs trans by connectivity, not distance: operators/promoters/enhancers serve their own molecule (O-c is cis-dominant constitutive); repressors/activators diffuse (I-plus rescues I-minus in trans; I-s super-repressor is trans-dominant uninducible)
+- Cis vs trans by connectivity, not distance: operators/promoters/enhancers serve their own molecule (O-c is cis-dominant constitutive); repressors/activators diffuse (I-plus rescues I-minus in trans)
 - Merodiploid algorithm: for each functional structural gene, consult only ITS operator; pool all repressors
 - Eukaryotes: enhancers act far away via looping (still cis); histone acetylation opens chromatin (HAT up, HDAC down); CpG methylation silences stably
-- Epigenetics = heritable expression states without sequence change: maintenance methylation copies marks at replication (X-inactivation, imprinting)`
+- Epigenetics = heritable expression states without sequence change: maintenance methylation copies marks at replication (X-inactivation, imprinting)
+
+<!-- yield:low -->
+- Low-yield extras: the I-s super-repressor is trans-dominant and uninducible; attenuation is trp's second, translation-coupled brake
+<!-- /yield -->`
     }
   ]
 };
