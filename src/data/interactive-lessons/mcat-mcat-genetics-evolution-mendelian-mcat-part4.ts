@@ -17,6 +17,7 @@ A typical passage gives you a cross, an expected Mendelian ratio, and data that 
 | $2:1$ instead of $3:1$ in a monohybrid cross | **Recessive lethal**: homozygous dominant (or homozygous mutant) class dies (e.g., mouse yellow-coat $A^Y$) |
 | $9:3:4$ instead of $9:3:3:1$ | **Recessive epistasis**: aa at one locus masks the other gene |
 | $9:7$ | **Duplicate recessive (complementary genes)**: recessive homozygosity at either locus blocks the pathway |
+| $12:3:1$ | **Dominant epistasis**: a dominant allele at one locus masks the other gene |
 | Three phenotypes ($1:2:1$) from a monohybrid cross | **Incomplete dominance** (blended intermediate) or **codominance** (both expressed) |
 | Fewer affected individuals than predicted | **Incomplete penetrance** — genotype present, phenotype not always expressed |
 | Same genotype, variable severity | **Variable expressivity** |
@@ -75,31 +76,36 @@ So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-
             question: `A cross of two yellow-coated mice yields 62 yellow and 31 non-yellow pups ($2:1$). Repeated crosses never produce a true-breeding yellow line. The best explanation is:`,
             options: [`Yellow is recessive to non-yellow`, `Yellow is dominant but homozygous lethal`, `Incomplete penetrance of yellow`, `Yellow is X-linked and dominant`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Expected $3:1$ becomes $2:1$ when the homozygous $A^YA^Y$ class dies in utero: survivors are $2\\ A^Ya$ (yellow) $: 1\\ aa$ (non-yellow). The absence of true-breeding yellows confirms that all yellow mice are heterozygotes. This is the classic recessive-lethal/dominant-visible allele: dominant for coat color but lethal when homozygous. A recessive yellow allele would make every yellow $\\times$ yellow pup yellow, incomplete penetrance would not prevent true-breeding yellow lines or produce a steady $2:1$ ratio, and an X-linked dominant allele would still allow true-breeding yellow lines.`
           },
           {
             question: `In snapdragons, a red $\\times$ white cross gives all pink F1, and pink $\\times$ pink gives 1 red : 2 pink : 1 white. If instead each heterozygote had displayed BOTH red and white patches, the allele relationship would be called:`,
-            options: [`Complete dominance`, `Epistasis`, `Codominance`, `Incomplete dominance`],
+            options: [`Complete dominance`, `Recessive epistasis`, `Codominance`, `Incomplete dominance`],
             correctAnswer: 2,
-            explanation: `Intermediate blending (pink) = incomplete dominance; simultaneous full expression of both alleles (patches, or AB blood type expressing both A and B antigens) = codominance. Both produce a $1:2:1$ phenotype ratio, so the heterozygote's APPEARANCE, not the ratio, distinguishes them.`
+            yield: 'HIGH',
+            explanation: `Intermediate blending (pink) = incomplete dominance; simultaneous full expression of both alleles (patches, or AB blood type expressing both A and B antigens) = codominance. Both produce a $1:2:1$ phenotype ratio, so the heterozygote's APPEARANCE, not the ratio, distinguishes them. Recessive epistasis is an interaction between two genes, not a relationship between two alleles of one gene.`
           },
           {
             question: `A man with type AB blood and a woman with type O blood have children. Which blood types are possible among their children?`,
             options: [`Only A or B`, `Only AB`, `A, B, AB, or O`, `Only O`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Dad is $I^AI^B$, mom is $ii$. Each child gets $I^A$ or $I^B$ from dad and $i$ from mom: $I^Ai$ (type A) or $I^Bi$ (type B). AB is impossible (mom cannot give $I^A$ or $I^B$) and O is impossible (dad cannot give $i$).`
           },
           {
             question: `A dihybrid F2 shows 9 agouti : 3 black : 4 albino mice. The albino class combines what would have been the "3" and "1" categories. This pattern indicates:`,
-            options: [`Recessive epistasis`, `Homozygous lethality`, `Codominance at the albino locus`, `Dominant epistasis`],
+            options: [`Recessive epistasis`, `Homozygous lethality`, `Codominance at the albino locus`, `Complementary gene action`],
             correctAnswer: 0,
-            explanation: `$9:3:4$ is the signature of recessive epistasis: homozygous $cc$ (no pigment at all) masks whatever the second locus (agouti vs. black) specifies, merging the $ccB\\_$ (3) and $ccbb$ (1) classes into one albino class of 4. The pigment-production gene is epistatic to the pigment-pattern gene: cc blocks pigment production regardless of the agouti/black genotype. Dominant epistasis gives $12:3:1$ instead, a homozygous lethal would remove a class rather than merge two, and codominance at a single locus cannot merge dihybrid classes.`
+            yield: 'MEDIUM',
+            explanation: `$9:3:4$ is the signature of recessive epistasis: homozygous $cc$ (no pigment at all) masks whatever the second locus (agouti vs. black) specifies, merging the $ccB\\_$ (3) and $ccbb$ (1) classes into one albino class of 4. The pigment-production gene is epistatic to the pigment-pattern gene: cc blocks pigment production regardless of the agouti/black genotype. Complementary gene action (recessive homozygosity at EITHER locus blocks the pathway) collapses the F2 to two classes, $9:7$, not three; dominant epistasis would give $12:3:1$; a homozygous lethal would remove a class rather than merge two, and codominance at a single locus cannot merge dihybrid classes.`
           },
           {
             question: `A researcher hypothesizes a $9:3:3:1$ ratio for 320 F2 offspring (expected 180:60:60:20) but observes 152:88:62:18, giving a large chi-square value with p below 0.01. The most appropriate conclusion is:`,
             options: [`The data confirm independent assortment`, `The test needs more degrees of freedom`, `The 9:3:3:1 hypothesis should be rejected`, `The sample size is too small to conclude anything`],
             correctAnswer: 2,
-            explanation: `A significant chi-square means the observed data are unlikely under the hypothesized ratio — reject $9:3:3:1$. The statistic does not identify the true model; the sensible next step is a specific alternative hypothesis (here, an excess of two classes suggests linkage) tested with a new cross. With n = 320, sample size is ample; df is fixed at $4 - 1 = 3$ by the number of classes.`
+            yield: 'MEDIUM',
+            explanation: `A significant chi-square means the observed data are unlikely under the hypothesized ratio — reject $9:3:3:1$. The statistic does not identify the true model; the sensible next step is a specific alternative hypothesis (here, the double-dominant class is short by 28 and one single-dominant class is over by exactly 28, suggesting that some double-dominant offspring show the single-dominant phenotype, e.g., incomplete penetrance of one dominant allele) tested with a new cross. With n = 320, sample size is ample; df is fixed at $4 - 1 = 3$ by the number of classes.`
           }
         ]
       }
@@ -109,7 +115,7 @@ So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Ratio diagnostics: $2:1$ = homozygous lethal; $9:3:4$ = recessive epistasis; $9:7$ = duplicate recessive/complementation; $1:2:1$ phenotypes = incomplete dominance or codominance
+- Ratio diagnostics: $2:1$ = homozygous lethal; $9:3:4$ = recessive epistasis; $9:7$ = duplicate recessive/complementation; $12:3:1$ = dominant epistasis; $1:2:1$ phenotypes = incomplete dominance or codominance
 - Two mutant parents + wild-type offspring = complementation → the mutations are in DIFFERENT genes
 - ABO: codominant $I^A$/$I^B$, both dominant to $i$ — multiple alleles, 4 phenotypes
 - Penetrance = whether the phenotype appears at all; expressivity = how strongly it appears

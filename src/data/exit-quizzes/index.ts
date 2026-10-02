@@ -151,17 +151,17 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-cars-reasoning-strengthen-weaken-mcat': () => import('./mcat-cars'),
   // Bio/Biochem
   'mcat-biology': () => import('./mcat-biology'),
-  'mcat-cell-biology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-cell-biology-mcat': () => import('./lesson-built/mcat-cell-biology-mcat'), // alias
   'mcat-molecular-biology-mcat': () => import('./lesson-built/mcat-molecular-biology-mcat'),
   'mcat-microbiology-mcat': () => import('./mcat-biology'), // alias
   // Subtopic aliases → the shared bio pool, so the diagnostic's specific
   // recommendations (see mcat-practice/subtopic-map.ts) have a working exit
   // quiz and the remediation credit loop can clear them — the same pattern
   // the general-chemistry subtopics above already use.
-  'mcat-cell-biology-organelles-mcat': () => import('./mcat-biology'),
-  'mcat-cell-biology-membrane-transport-mcat': () => import('./mcat-biology'),
-  'mcat-cell-biology-signaling-mcat': () => import('./mcat-biology'),
-  'mcat-cell-biology-cell-cycle-mcat': () => import('./mcat-biology'),
+  'mcat-cell-biology-organelles-mcat': () => import('./lesson-built/mcat-cell-biology-organelles-mcat'),
+  'mcat-cell-biology-membrane-transport-mcat': () => import('./lesson-built/mcat-cell-biology-membrane-transport-mcat'),
+  'mcat-cell-biology-signaling-mcat': () => import('./lesson-built/mcat-cell-biology-signaling-mcat'),
+  'mcat-cell-biology-cell-cycle-mcat': () => import('./lesson-built/mcat-cell-biology-cell-cycle-mcat'),
   'mcat-molecular-biology-dna-replication-mcat': () => import('./lesson-built/mcat-molecular-biology-dna-replication-mcat'),
   // Lesson-built pools (./lesson-built.ts, owner request 2026-10-02): the quiz
   // covers exactly what the lesson teaches; the keyword-picked biology pool
@@ -185,11 +185,11 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-anatomy-physiology-sensory-mcat': () => import('./mcat-organ-systems'),
   'mcat-anatomy-physiology-embryology-mcat': () => import('./mcat-organ-systems'),
   'mcat-genetics-evolution': () => import('./mcat-genetics-evolution'),
-  'mcat-genetics-evolution-mcat': () => import('./mcat-genetics-evolution'), // alias
-  'mcat-genetics-evolution-mendelian-mcat': () => import('./mcat-genetics-evolution'),
-  'mcat-genetics-evolution-population-genetics-mcat': () => import('./mcat-genetics-evolution'),
-  'mcat-genetics-evolution-natural-selection-mcat': () => import('./mcat-genetics-evolution'),
-  'mcat-genetics-evolution-immunology-mcat': () => import('./mcat-genetics-evolution'),
+  'mcat-genetics-evolution-mcat': () => import('./lesson-built/mcat-genetics-evolution-mcat'), // alias
+  'mcat-genetics-evolution-mendelian-mcat': () => import('./lesson-built/mcat-genetics-evolution-mendelian-mcat'),
+  'mcat-genetics-evolution-population-genetics-mcat': () => import('./lesson-built/mcat-genetics-evolution-population-genetics-mcat'),
+  'mcat-genetics-evolution-natural-selection-mcat': () => import('./lesson-built/mcat-genetics-evolution-natural-selection-mcat'),
+  'mcat-genetics-evolution-immunology-mcat': () => import('./lesson-built/mcat-genetics-evolution-immunology-mcat'),
   // Psych/Soc
   'mcat-psychology-sociology': () => import('./mcat-psychology-sociology'),
   'mcat-psychology-behavior-mcat': () => import('./mcat-psychology-sociology'), // alias

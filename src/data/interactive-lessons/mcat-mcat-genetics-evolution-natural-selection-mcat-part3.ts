@@ -27,7 +27,12 @@ The **biological species concept**: a species is a group of populations whose me
 **Postzygotic barriers** act after fertilization:
 
 - **Hybrid inviability** — hybrid zygotes fail to develop or die young
-- **Hybrid sterility** — hybrids live but cannot reproduce: the **mule** (horse × donkey) is robust but sterile, partly because mismatched chromosome sets (63 total) cannot pair properly in meiosis
+- **Hybrid sterility** — hybrids live but cannot reproduce: the **mule** (horse × donkey) is robust but sterile, partly because mismatched chromosome sets cannot pair properly in meiosis
+
+<!-- yield:low -->
+- The mule's count: horse 2n = 64, donkey 2n = 62, so the mule carries an odd 63.
+<!-- /yield -->
+
 - **Hybrid breakdown** — first-generation hybrids are fertile, but their offspring are feeble or sterile
 
 Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so selection can strengthen them where hybrids fare poorly (reinforcement).
@@ -52,7 +57,11 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
 
 ### Tempo
 
-**Gradualism**: change accumulates steadily. **Punctuated equilibrium** (Eldredge & Gould): fossil species show long stasis interrupted by geologically rapid change, often associated with speciation events. "Rapid" here means thousands of generations — still ordinary population genetics, compressed relative to stasis, not a different mechanism.`
+**Gradualism**: change accumulates steadily. **Punctuated equilibrium**: fossil species show long stasis interrupted by geologically rapid change, often associated with speciation events. "Rapid" here means thousands of generations — still ordinary population genetics, compressed relative to stasis, not a different mechanism.
+
+<!-- yield:low -->
+Punctuated equilibrium was proposed by Niles Eldredge and Stephen Jay Gould (1972).
+<!-- /yield -->`
     },
     {
       id: 'ns3-worked',
@@ -81,30 +90,35 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
             question: `A horse and a donkey can mate and produce a mule, which is healthy and long-lived but cannot produce offspring of its own. The barrier isolating horses and donkeys is classified as:`,
             options: [`Prezygotic — gametic isolation`, `Postzygotic — hybrid sterility`, `Postzygotic — hybrid inviability`, `Prezygotic — behavioral isolation`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `A zygote forms and develops into a vigorous adult, so the barrier is postzygotic; because the hybrid LIVES but cannot reproduce (its mismatched chromosome complement fails at meiotic pairing), it is hybrid sterility. Hybrid inviability would mean the hybrid dies or fails to develop; prezygotic barriers would have prevented fertilization altogether.`
           },
           {
             question: `Two closely related frog species occupy the same ponds, but one breeds in early spring and the other in late summer, so their gametes never meet. This is:`,
             options: [`Temporal isolation, a prezygotic barrier`, `Hybrid breakdown, a postzygotic barrier`, `Mechanical isolation, a prezygotic barrier`, `Gametic isolation, a postzygotic barrier`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Breeding at different times prevents mating in the first place — temporal isolation, which is prezygotic since no zygote ever forms. Mechanical isolation involves incompatible reproductive structures, and gametic isolation (also prezygotic, despite the distractor's label) involves sperm-egg incompatibility after mating; here the sexes never even overlap in breeding season.`
           },
           {
             question: `A diploid plant lineage produces a tetraploid individual through a meiotic error. The tetraploid can self-fertilize, but its crosses with the parental diploids yield sterile triploids. This scenario illustrates:`,
             options: [`Allopatric speciation driven by a geographic barrier`, `Adaptive radiation into open niches`, `Hybrid breakdown in the second generation`, `Sympatric speciation by polyploidy`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Polyploidy isolates the new lineage instantly, within a single generation, and requires no geographic separation — the hallmark sympatric mechanism, common in plants (a large fraction of flowering plant species have polyploid ancestry). No physical barrier exists, so it is not allopatric; the sterile triploid is the isolating MECHANISM here, not multigenerational hybrid breakdown.`
           },
           {
             question: `The wings of bats and the wings of insects both generate lift for flight but develop from entirely different ancestral structures. These wings are best described as:`,
             options: [`Homologous structures produced by divergent evolution`, `Vestigial structures`, `Analogous structures produced by convergent evolution`, `Monophyletic structures inherited from a common flying ancestor`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Similar function with independent evolutionary origins defines analogy, the product of convergent evolution under similar selective demands — an instance of homoplasy. Homology is the reverse pattern (shared ancestry, e.g., a bat's wing versus a human arm), and the last common ancestor of bats and insects had no wings at all.`
           },
           {
             question: `On a cladogram, a monophyletic group (clade) is defined as:`,
             options: [`A common ancestor together with all of its descendant taxa`, `Any taxa drawn next to each other at the tree's tips`, `All taxa that share a similar overall body plan`, `The taxa with the greatest number of derived characters`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `A clade is an ancestor plus every one of its descendants — omit any descendant and the group is paraphyletic (e.g., "reptiles" without birds). Tip adjacency is meaningless because branches can rotate freely around nodes, and overall similarity fails whenever convergence (homoplasy) makes unrelated taxa look alike.`
           }
         ]
@@ -121,7 +135,11 @@ Prezygotic barriers are "cheaper": no gametes are wasted on doomed offspring, so
 - Adaptive radiation: one colonist lineage → many niche specialists (Darwin's finches, honeycreepers)
 - Divergence → homology (same origin, different function); convergence → analogy/homoplasy (same function, different origin)
 - Cladograms: nodes = common ancestors, clade = ancestor + ALL descendants, sister taxa share the immediate node; branch rotation is free, and no tip is "more evolved"
-- Punctuated equilibrium = long stasis + geologically rapid change at speciation; still standard mechanisms, different tempo`
+- Punctuated equilibrium = long stasis + geologically rapid change at speciation; still standard mechanisms, different tempo
+
+<!-- yield:low -->
+- Low-yield extras: the mule's 63 chromosomes (horse 64, donkey 62); punctuated equilibrium's proposers, Eldredge and Gould
+<!-- /yield -->`
     }
   ]
 };

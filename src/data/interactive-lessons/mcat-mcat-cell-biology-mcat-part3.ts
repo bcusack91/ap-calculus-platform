@@ -28,7 +28,7 @@ export const mcatCellBioPart3Data = {
 | After S | 2n (46) | 4C | 92 (sister chromatids joined) |
 | After mitosis | 2n (46) | 2C | 46 |
 
-**Key insight**: After S phase, the chromosome number does NOT double — sisters are still joined at the centromere. The DNA content doubles (2C → 4C) but chromosome count stays at 2n until anaphase of meiosis I.
+**Key insight**: After S phase, the chromosome number does NOT double — sisters are still joined at the centromere. The DNA content doubles (2C → 4C) but chromosome count stays at 46 until anaphase, when the centromeres split and each sister chromatid becomes its own chromosome.
 
 ### Mitosis Stages (PMAT)
 
@@ -73,18 +73,21 @@ export const mcatCellBioPart3Data = {
             question: `A cell has 46 chromosomes in G$_1$. After S phase but before mitosis, it has:`,
             options: [`46 chromosomes, 92 chromatids, 4C DNA content`, `92 chromosomes, 92 chromatids, 4C DNA content`, `46 chromosomes, 46 chromatids, 2C DNA content`, `23 chromosomes, 46 chromatids, 2C DNA content`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `DNA replicates in S phase, doubling DNA content (2C → 4C). However, sister chromatids are joined at the centromere, so chromosome count stays at 46. Each chromosome now consists of 2 identical sister chromatids = 92 total chromatids. They only become separate chromosomes when the centromere splits in anaphase.`
           },
           {
             question: `Loss of p53 function would most directly affect:`,
-            options: [`The G$_1$/S checkpoint response to DNA damage`, `Chromosome condensation during prophase`, `The spindle checkpoint at kinetochore attachment`, `Cytokinesis and cleavage furrow formation`],
+            options: [`The G$_1$/S checkpoint response to DNA damage`, `Chromosome condensation driven by MPF in prophase`, `The spindle checkpoint at kinetochore attachment`, `Cytokinesis by the actin-myosin cleavage furrow`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `p53 is the "guardian of the genome." When DNA damage is detected, p53 activates p21 (a CDK inhibitor) to arrest the cell at G$_1$/S. p53 can also trigger apoptosis if damage is irreparable. Loss of p53 → cells with damaged DNA continue dividing → accumulate mutations → cancer.`
           },
           {
             question: `Maturation Promoting Factor (MPF) consists of:`,
-            options: [`Cyclin B + CDK1, triggering entry into mitosis`, `Cyclin D + CDK4, responding to growth factors in G$_1$`, `Cyclin E + CDK2, triggering entry into S phase`, `p53 + p21, arresting the cycle at G$_1$/S`],
+            options: [`Cyclin B + CDK1, triggering entry into mitosis`, `Cyclin D + CDK4, responding to growth factors in G$_1$`, `Cyclin E + CDK2, committing the cell to enter S phase`, `p53 + p21, arresting the cycle at the G$_1$/S checkpoint`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `MPF = Cyclin B + CDK1. As cyclin B accumulates during G$_2$, it activates CDK1, which phosphorylates proteins needed for mitotic entry: nuclear lamins (envelope breakdown), condensins (chromosome condensation), and histones. MPF activity peaks at metaphase and drops sharply when cyclin B is degraded by the APC/C complex.`
           }
         ]
@@ -115,8 +118,8 @@ This is one of the most tested MCAT topics in cell biology. Understand the analo
 
 ### The APC/C (Anaphase-Promoting Complex)
 
-- Ubiquitin ligase activated at the metaphase-to-anaphase transition
-- Targets securin for degradation → separase released → cleaves cohesin → sister chromatids separate
+- Ubiquitin ligase activated at the metaphase-to-anaphase transition (once the spindle checkpoint is satisfied); its targets are destroyed by the proteasome
+- Targets **securin** for degradation → the protease **separase** is released → separase cleaves cohesin → sister chromatids separate
 - Also targets cyclin B for degradation → MPF inactivated → cell exits mitosis`
     },
     {
@@ -129,12 +132,14 @@ This is one of the most tested MCAT topics in cell biology. Understand the analo
             question: `A mutation in the Ras gene that prevents GTP hydrolysis would:`,
             options: [`Keep Ras constantly active, driving continuous division`, `Lock Ras in the inactive GDP-bound state, halting growth`, `Have no effect, because Ras acts as a tumor suppressor`, `Keep Ras active only while growth factor stays bound`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Ras is a G-protein that cycles between active (GTP-bound) and inactive (GDP-bound) states. If it cannot hydrolyze GTP, it stays permanently active → continuous growth signaling → uncontrolled cell division. This is a gain-of-function mutation making Ras an oncogene. Ras mutations are found in ~30% of all human cancers.`
           },
           {
             question: `According to the two-hit hypothesis, tumor suppressor genes require:`,
             options: [`Both alleles to be inactivated before suppression is lost`, `Only one mutant allele, since the mutation acts dominantly`, `Gene amplification that raises copy number in the cell`, `Two hits within the same allele before function is lost`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Knudson's two-hit hypothesis: one functional copy of a tumor suppressor is sufficient to prevent cancer (haplosufficient). Both copies must be lost — by mutation, deletion, or epigenetic silencing. In hereditary cancers (e.g., retinoblastoma), one hit is inherited and only one somatic mutation is needed → earlier onset.`
           }
         ]
@@ -151,7 +156,7 @@ This is one of the most tested MCAT topics in cell biology. Understand the analo
 - p53 → p21 → CDK inhibition at G$_1$/S checkpoint. p53 loss = cancer hallmark
 - Oncogenes: gain-of-function, dominant (Ras, Myc, HER2). Tumor suppressors: loss-of-function, both alleles (p53, Rb, BRCA)
 - Rb normally sequesters E2F; phosphorylation by CDK releases E2F for S-phase gene activation
-- APC/C ubiquitinates securin and cyclin B → triggers anaphase and mitotic exit`
+- APC/C (a ubiquitin ligase) destroys securin (freeing separase to cleave cohesin) and cyclin B → triggers anaphase and mitotic exit`
     }
   ]
 };

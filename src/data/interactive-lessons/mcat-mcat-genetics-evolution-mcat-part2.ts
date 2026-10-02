@@ -37,7 +37,11 @@ export const mcatGeneticsPart2Data = {
 
 - mtDNA is inherited **maternally** (sperm mitochondria are excluded/degraded after fertilization)
 - An affected mother passes the trait to **all** of her children; affected fathers pass it to none
-- Examples: Leber hereditary optic neuropathy (LHON), MELAS, mitochondrial myopathies`
+- Examples: mitochondrial myopathies and other disorders of oxidative phosphorylation, which hit energy-hungry tissues (muscle, nerve) hardest
+
+<!-- yield:low -->
+- Named mitochondrial disorders: Leber hereditary optic neuropathy (LHON) and MELAS.
+<!-- /yield -->`
     },
     {
       id: 'ge2-worked',
@@ -66,30 +70,35 @@ export const mcatGeneticsPart2Data = {
             question: `A mother with blood type A (genotype $I^Ai$) and a father with blood type B (genotype $I^Bi$) can have children with which blood types?`,
             options: [`A, B, AB, or O`, `A or B only`, `AB only`, `AB or O only`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Cross $I^Ai \\times I^Bi$: offspring can be $I^AI^B$ (AB), $I^Ai$ (A), $I^Bi$ (B), or ii (O). All four blood types are possible — a classic MCAT genetics question.`
           },
           {
             question: `A red-flowered snapdragon ($C^RC^R$) is crossed with a white one ($C^WC^W$), producing all pink ($C^RC^W$) F1 plants. If two pink F1 plants are crossed, what phenotype ratio is expected in the F2?`,
             options: [`1 red : 2 pink : 1 white`, `3 red : 1 white`, `All pink`, `9 red : 3 pink : 4 white`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `This is incomplete dominance, so the genotype ratio (1:2:1) equals the phenotype ratio: $1\\ C^RC^R$ (red) : $2\\ C^RC^W$ (pink) : $1\\ C^WC^W$ (white). The heterozygote has its own distinct, intermediate phenotype.`
           },
           {
             question: `What is the key difference between incomplete dominance and codominance?`,
             options: [`Heterozygotes are intermediate in incomplete dominance but express both alleles in codominance`, `Heterozygotes express both alleles in incomplete dominance but are intermediate in codominance`, `Heterozygotes are intermediate in both; codominance simply involves more than two alleles`, `Heterozygotes express both alleles in both; incomplete dominance simply involves more alleles`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Incomplete dominance = a new intermediate phenotype (red + white → pink). Codominance = both phenotypes appear simultaneously and distinctly (type AB blood shows BOTH A and B antigens; roan cattle show both red and white hairs). Swapping the two definitions gets both backward, and the number of alleles is not what separates them: ABO blood type has three alleles yet its A and B alleles are codominant, while snapdragon flower color has only two alleles and shows incomplete dominance.`
           },
           {
             question: `A person with type O blood receives a transfusion of type A blood. What is the immediate immunological problem?`,
             options: [`The recipient's anti-A antibodies agglutinate the donor's red cells`, `The donor's anti-B antibodies agglutinate the recipient's red cells`, `The recipient's anti-B antibodies agglutinate the donor's red cells`, `The recipient's anti-O antibodies agglutinate the donor's red cells`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Type O plasma contains BOTH anti-A and anti-B antibodies. Transfused type A red cells carry A antigen, so the recipient's anti-A antibodies bind and agglutinate them → a dangerous transfusion reaction. This is why type O individuals can only receive type O blood (they are universal DONORS, not universal recipients). Anti-B antibodies have no target here: type A donor cells carry no B antigen, and type O recipient cells carry neither A nor B antigen for the donor's anti-B to bind. There is no anti-O antibody, because type O cells lack A and B antigens rather than carrying an O antigen.`
           },
           {
             question: `In Labrador retrievers, the B gene controls pigment (B = black, b = brown) but a second gene E controls whether ANY pigment is deposited (ee = yellow regardless of B genotype). A yellow lab that is "ee" appears yellow even if it carries BB. This is an example of:`,
             options: [`Epistasis`, `Incomplete dominance`, `Pleiotropy`, `Codominance`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Epistasis occurs when one gene (E) masks or modifies the phenotypic effect of another gene (B) at a different locus. An ee genotype blocks pigment deposition entirely, so the dog is yellow no matter what alleles are present at the B locus. Contrast with pleiotropy, where ONE gene affects MANY traits.`
           }
         ]
@@ -104,7 +113,11 @@ export const mcatGeneticsPart2Data = {
 - ABO: $I^A$ and $I^B$ codominant, both dominant over i; type O child needs an i from BOTH parents
 - Pleiotropy = one gene, many effects. Epistasis = one gene masks another (different loci).
 - Polygenic traits show continuous variation (bell curve)
-- Mitochondrial DNA is inherited maternally → affected mother passes to all children`
+- Mitochondrial DNA is inherited maternally → affected mother passes to all children
+
+<!-- yield:low -->
+- Low-yield extras: the named mitochondrial disorders LHON and MELAS
+<!-- /yield -->`
     }
   ]
 };

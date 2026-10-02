@@ -63,18 +63,21 @@ $$\\text{Signal (ligand)} \\to \\text{Receptor} \\to \\text{Transduction (amplif
             question: `Steroid hormones (like cortisol and testosterone) can directly activate genes because they:`,
             options: [`Diffuse in to bind receptors that act as transcription factors`, `Bind cell-surface GPCRs and use cAMP as a second messenger`, `Activate receptor tyrosine kinases at the plasma membrane`, `Enter through ion channels and bind DNA with no receptor`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Steroids are derived from cholesterol (lipid-soluble). They diffuse through the membrane, bind cytoplasmic or nuclear receptors, and the hormone-receptor complex acts directly as a transcription factor. This is why steroid effects are slower (hours) but longer-lasting than peptide hormone effects.`
           },
           {
             question: `Cholera toxin permanently activates the G$_s$ subunit by preventing GTP hydrolysis. The primary cellular effect is:`,
             options: [`Persistently high cAMP, driving Cl$^-$ and water secretion`, `Low cAMP from locked adenylyl cyclase, reducing secretion`, `Activation of phospholipase C, raising IP$_3$ and Ca$^{2+}$`, `Blocking of all G-protein signaling in intestinal cells`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `G$_s$ normally activates adenylyl cyclase, raising cAMP. Cholera toxin ADP-ribosylates G$_s\\alpha$, preventing GTP hydrolysis → G$_s$ stays permanently ON → cAMP stays high → CFTR chloride channels open → massive Cl$^-$ and water secretion → severe watery diarrhea. Pertussis toxin does the opposite: locks G$_i$ in the OFF state.`
           },
           {
             question: `Insulin binds to a receptor tyrosine kinase (RTK). The first step after ligand binding is:`,
-            options: [`Tyrosine autophosphorylation within the receptor dimer`, `Activation of a heterotrimeric G-protein by GDP release`, `Opening of an ion channel within the receptor itself`, `Recruitment of IRS-1 before any tyrosines are phosphorylated`],
+            options: [`Tyrosine autophosphorylation within the receptor`, `Activation of a heterotrimeric G-protein by GDP release`, `Opening of an ion channel within the receptor itself`, `Recruitment of IRS-1 before any tyrosines are phosphorylated`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `RTK mechanism: ligand binding brings the kinase domains together. Most RTKs do this by dimerizing; the insulin receptor is already a disulfide-linked dimer, so insulin binding instead triggers a conformational change. Each half then phosphorylates the other's tyrosine residues (autophosphorylation). Phosphotyrosines recruit adapter proteins (like IRS-1 for insulin) → PI3K/Akt (GLUT4 translocation) and Ras → MAPK (gene expression). RTKs do NOT use heterotrimeric G-proteins.`
           }
         ]
@@ -104,7 +107,12 @@ Each enzyme activates multiple substrates, creating an **exponential amplificati
 ### Receptor Desensitization
 
 Cells can turn down signaling when overstimulated:
-- **Receptor phosphorylation**: Kinases phosphorylate the receptor → arrestin binds → blocks G-protein coupling
+- **Receptor phosphorylation**: Kinases phosphorylate the active receptor → it is uncoupled from its G-protein
+
+<!-- yield:low -->
+- The adapter that does the uncoupling is **arrestin**: it binds the phosphorylated receptor, blocks G-protein coupling, and helps target the receptor for endocytosis.
+<!-- /yield -->
+
 - **Receptor internalization**: Endocytosis removes receptors from the surface
 - **Downregulation**: Decreased receptor gene expression
 - This explains drug tolerance and why chronic stimulation leads to diminished response
@@ -114,8 +122,12 @@ Cells can turn down signaling when overstimulated:
 - NO is a gas that diffuses freely through membranes (no receptor needed at surface)
 - Activates soluble guanylyl cyclase → cGMP ↑ → PKG → smooth muscle relaxation → vasodilation
 - Very short-lived (seconds)
-- NO synthase uses arginine + O$_2$ → citrulline + NO
-- Clinical: nitroglycerin releases NO → relieves angina`
+- NO is made from arginine by NO synthase
+- Clinical: nitroglycerin releases NO → relieves angina
+
+<!-- yield:low -->
+- The NO synthase reaction uses O$_2$ as well and releases citrulline as the by-product.
+<!-- /yield -->`
     },
     {
       id: 'cb5-quiz2',
@@ -127,12 +139,14 @@ Cells can turn down signaling when overstimulated:
             question: `Caffeine inhibits phosphodiesterase (PDE). This leads to:`,
             options: [`Prolonged cAMP signaling, since PDE normally degrades cAMP`, `Lower cAMP levels, since PDE is what synthesizes cAMP`, `Increased IP$_3$ signaling from activated phospholipase C`, `Reduced PKA activity as cAMP is hydrolyzed faster`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `PDE breaks down cAMP → AMP (terminating the signal). When caffeine inhibits PDE, cAMP accumulates → PKA stays active longer → sustained PKA signaling (at typical doses, caffeine's stimulant effect comes mainly from adenosine receptor antagonism). This is the same principle behind Viagra inhibiting PDE5 (cGMP accumulates → vasodilation).`
           },
           {
             question: `A mutation causes a receptor tyrosine kinase to dimerize and autophosphorylate even without ligand binding. This would most likely cause:`,
             options: [`Uncontrolled cell growth from constant growth signaling`, `Cell death from excessive pro-apoptotic signaling`, `No effect, since downstream proteins still need the ligand`, `Decreased sensitivity to growth factors in the cell`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Constitutively active RTKs signal growth continuously, even without growth factor present. This is exactly what happens with HER2 gene amplification (breast cancer) and activating EGFR mutations (lung cancer). Anti-cancer drugs like trastuzumab (Herceptin) and erlotinib target these overactive RTKs.`
           }
         ]
@@ -150,7 +164,12 @@ Cells can turn down signaling when overstimulated:
 - Second messengers: cAMP, IP$_3$, DAG, Ca$^{2+}$, cGMP — know what produces each and what each activates
 - Cholera = G$_s$ locked ON; Pertussis = G$_i$ locked OFF; both raise cAMP
 - Signal amplification: each cascade step multiplies the signal exponentially
-- NO: gaseous signal → guanylyl cyclase → cGMP → vasodilation`
+- NO: gaseous signal → guanylyl cyclase → cGMP → vasodilation
+- Desensitization: receptor phosphorylation, internalization, and downregulation explain tolerance
+
+<!-- yield:low -->
+- Low-yield extras: arrestin binds phosphorylated receptors to uncouple them from G-proteins; citrulline as the by-product of NO synthase
+<!-- /yield -->`
     }
   ]
 };

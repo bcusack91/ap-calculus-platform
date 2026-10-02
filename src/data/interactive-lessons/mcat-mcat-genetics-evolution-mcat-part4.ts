@@ -77,30 +77,35 @@ $p^2 = (0.98)^2 = 0.9604 \\approx 96\\%$
             question: `In a population, 1 in 10,000 individuals has a recessive genetic disease. The carrier frequency is approximately:`,
             options: [`About 2%`, `About 1%`, `About 0.01%`, `About 10%`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `$q^2 = 1/10{,}000 = 0.0001$, so $q = 0.01$ and $p = 0.99$. Carrier frequency = $2pq = 2(0.99)(0.01) = 0.0198 \\approx 2\\%$. Carrier frequency is MUCH higher than disease frequency — clinically important!`
           },
           {
             question: `In a Hardy-Weinberg population, the recessive allele frequency is $q = 0.3$. What fraction of individuals are expected to be heterozygous?`,
             options: [`0.42 (42%)`, `0.09 (9%)`, `0.21 (21%)`, `0.49 (49%)`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `$p = 1 - 0.3 = 0.7$. Heterozygotes = $2pq = 2(0.7)(0.3) = 0.42$. (Homozygous dominant $p^2 = 0.49$; homozygous recessive $q^2 = 0.09$; these sum to 1.)`
           },
           {
             question: `Which of the following, by itself, does NOT necessarily cause a population to deviate from Hardy-Weinberg equilibrium?`,
             options: [`A very large population size`, `Strong natural selection against the recessive phenotype`, `Frequent migration into the population`, `Nonrandom (assortative) mating`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A LARGE population size helps MAINTAIN equilibrium by minimizing genetic drift, so it is a condition FOR equilibrium, not a violation. Selection, gene flow (migration), and nonrandom mating each violate a Hardy-Weinberg assumption and can change allele/genotype frequencies.`
           },
           {
             question: `For an X-linked recessive trait with recessive allele frequency $q$, the expected frequency of affected MALES (who are hemizygous) is:`,
             options: [`$q$`, `$q^2$`, `$2pq$`, `$p^2$`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Males have a single X, so an affected male simply needs one recessive allele: the frequency of affected males equals the recessive allele frequency $q$. Affected FEMALES need two copies, so they occur at frequency $q^2$ — which is why X-linked recessive traits are far more common in males.`
           },
           {
             question: `Over several generations, the frequency of a recessive disease allele in a small island population rises sharply, with no change in selection pressure. The MOST likely explanation is:`,
             options: [`Genetic drift, which has a large effect in small populations`, `An increase in the mutation rate that exactly targets this allele`, `Hardy-Weinberg equilibrium being maintained`, `Natural selection favoring the homozygous dominant genotype`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In a SMALL population, random sampling error in which alleles get passed on (genetic drift) can cause large, directionless swings in allele frequency. With selection unchanged and the population small, drift is the best explanation. (The scenario explicitly violates the "large population" Hardy-Weinberg condition.)`
           }
         ]

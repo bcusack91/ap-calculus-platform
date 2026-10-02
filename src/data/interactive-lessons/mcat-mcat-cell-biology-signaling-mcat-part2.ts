@@ -57,18 +57,21 @@ One epinephrine molecule → ~100 G proteins → each adenylyl cyclase makes man
             question: `A mutant G-alpha-s subunit binds GTP normally but has lost its intrinsic GTPase activity. In cells expressing it, glucagon stimulation will produce:`,
             options: [`No cAMP signal at all, since GTP hydrolysis is the activating step`, `A prolonged cAMP signal that persists after hormone washout`, `A normal cAMP signal, since arrestin still terminates it`, `Reduced cAMP, since the mutant traps beta-gamma subunits`],
             correctAnswer: 1,
-            explanation: `G-alpha is active while GTP-bound; hydrolysis to GDP is the OFF step, not the ON step. Losing GTPase activity locks the subunit in the active state, so adenylyl cyclase keeps producing cAMP long after ligand is gone. This is precisely what cholera toxin does chemically (ADP-ribosylation of G-alpha-s) and what activating GNAS mutations do in some endocrine tumors.`
+            yield: 'HIGH',
+            explanation: `G-alpha is active while GTP-bound; hydrolysis to GDP is the OFF step, not the ON step. Losing GTPase activity locks the subunit in the active state, so adenylyl cyclase keeps producing cAMP long after ligand is gone. This is precisely what cholera toxin does chemically (ADP-ribosylation of G-alpha-s).`
           },
           {
             question: `Acetylcholine slows heart rate through M2 muscarinic receptors but triggers smooth muscle contraction through M3 receptors. The M2 and M3 pathways differ in that:`,
             options: [`M2 is an ionotropic channel, while M3 is a GPCR`, `M2 is intracellular, while M3 is on the surface`, `M2 raises cGMP and M3 raises cAMP`, `M2 couples to Gi, while M3 couples to Gq`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Both are muscarinic GPCRs for the same ligand; the downstream G protein differs. M2 (heart) is Gi-coupled — it inhibits adenylyl cyclase and its freed beta-gamma subunits open GIRK K$^+$ channels, hyperpolarizing pacemaker cells. M3 (smooth muscle, glands) is Gq-coupled — PLC → IP$_3$ → Ca$^{2+}$ → contraction/secretion. Same first messenger, different wiring: the MCAT's favorite signaling theme.`
           },
           {
             question: `In hepatocytes, a single PKA activation event simultaneously accelerates glycogen breakdown and halts glycogen synthesis. This is possible because:`,
             options: [`PKA phosphorylates several substrates at once`, `cAMP allosterically activates glycogen phosphorylase`, `PKA targets glycogen synthase to the proteasome`, `PKA degrades the mRNA encoding glycogen synthase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A kinase with broad substrate specificity coordinates a whole program: phosphorylation activates phosphorylase kinase (which activates glycogen phosphorylase) AND inhibits glycogen synthase. Reciprocal regulation by one signal prevents a futile cycle. cAMP itself binds PKA's regulatory subunits — it does not act directly on phosphorylase — and no transcription or transport step is needed for this acute response.`
           }
         ]
@@ -85,10 +88,13 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
 |------------------|---------|------------------|
 | ER release (IP$_3$ receptor) | Gq/PLC signaling | Smooth muscle contraction, secretion |
 | ER/SR release (ryanodine receptor) | Depolarization (heart: Ca$^{2+}$-induced Ca$^{2+}$ release) | Cardiac and skeletal contraction |
-| Plasma-membrane voltage-gated channels | Action potential at nerve terminal | Synaptotagmin-triggered vesicle fusion |
+| Plasma-membrane voltage-gated channels | Action potential at nerve terminal | Ca$^{2+}$-triggered neurotransmitter vesicle fusion |
 
-- **Calmodulin** is the universal decoder: Ca$^{2+}$-CaM activates CaM kinase II (learning/memory), MLCK (smooth muscle), and calcineurin (a phosphatase — immunosuppressants cyclosporine/tacrolimus block it)
-- Signals are often **oscillatory**; frequency encodes information (CaMKII acts as a frequency decoder)
+- **Calmodulin** is the universal decoder for Ca$^{2+}$ from all three sources
+
+<!-- yield:low -->
+- Named calmodulin targets: CaM kinase II (learning/memory) and calcineurin (a phosphatase — the immunosuppressants cyclosporine/tacrolimus block it). Ca$^{2+}$ signals are often **oscillatory**, and frequency encodes information (CaMKII acts as a frequency decoder). At the nerve terminal, the Ca$^{2+}$ sensor that triggers vesicle fusion is **synaptotagmin**.
+<!-- /yield -->
 
 ### Second Messengers at a Glance
 
@@ -98,7 +104,7 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
 | cGMP | Guanylyl cyclase (soluble = NO target; membrane = ANP receptor) | PDE5 and others | PKG, CNG channels (vision) |
 | IP$_3$ | PLC (from PIP$_2$) | Phosphatases | IP$_3$ receptor on ER |
 | DAG | PLC (from PIP$_2$) | DAG kinase/lipases | PKC |
-| Ca$^{2+}$ | Opened channels (not synthesized) | Pumps/exchangers/buffers | Calmodulin, PKC, synaptotagmin, troponin C |
+| Ca$^{2+}$ | Opened channels (not synthesized) | Pumps/exchangers/buffers | Calmodulin, PKC, troponin C |
 
 > Caffeine and theophylline are nonselective **PDE inhibitors** — they prolong cAMP signals, which is why methylxanthines mimic mild adrenergic stimulation.
 
@@ -117,12 +123,14 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
             question: `A cell is treated with a drug that blocks the IP$_3$ receptor on the ER. Stimulation of a Gq-coupled receptor in these cells will still produce:`,
             options: [`A normal cytosolic Ca$^{2+}$ spike released from the ER`, `Extra cAMP, since IP$_3$ is rerouted to adenylyl cyclase`, `DAG in the plasma membrane, produced upstream of the block`, `Nothing at all, since Gq signaling starts with IP$_3$`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `PLC generates IP$_3$ and DAG in one cleavage; blocking the IP$_3$ receptor only prevents the downstream ER Ca$^{2+}$ release. DAG production is untouched (though PKC activation will be weakened, since PKC needs Ca$^{2+}$ as a coactivator). Mapping where in a cascade an inhibitor acts — and what remains intact upstream and in parallel — is the core MCAT signaling skill.`
           },
           {
-            question: `In rod photoreceptors, light causes hyperpolarization rather than depolarization. The mechanistic reason is that photon absorption:`,
+            question: `In rod photoreceptors, light causes hyperpolarization rather than depolarization. The mechanistic reason is that photon absorption ultimately activates:`,
             options: [`An adenylyl cyclase raising cAMP in the outer segment`, `A PDE that lowers cGMP, closing open cation channels`, `A phosphatase that opens chloride channels directly`, `An inhibitor of the Na$^+$/K$^+$ ATPase in the rod`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `In darkness, high cGMP holds cation channels open (the "dark current") and the cell sits relatively depolarized. Light-activated rhodopsin → transducin → PDE drops cGMP, channels close, and the cell hyperpolarizes, reducing glutamate release. Signaling by removing a messenger is counterintuitive and therefore heavily tested.`
           }
         ]
@@ -136,10 +144,14 @@ Cytosolic free Ca$^{2+}$ is kept near $10^{-7}$ M against ~$2.5 \\times 10^{-3}$
 - G protein cycle: receptor = GEF (GDP → GTP exchange turns G-alpha ON); intrinsic GTPase turns it OFF — activity duration is a hydrolysis timer
 - Gs → adenylyl cyclase up → cAMP → PKA; Gi → cyclase down (+ beta-gamma opens K$^+$ channels, e.g., M2 slowing the heart); Gq → PLC → IP$_3$ (ER Ca$^{2+}$ release) + DAG (PKC)
 - PKA coordinates programs by phosphorylating many substrates with opposite effects (phosphorylase ON, glycogen synthase OFF) — no futile cycles
-- Ca$^{2+}$ is a second messenger released, not synthesized; ~10,000-fold gradient makes small fluxes loud; calmodulin decodes it (CaMKII, MLCK, calcineurin)
+- Ca$^{2+}$ is a second messenger released, not synthesized; ~10,000-fold gradient makes small fluxes loud; calmodulin decodes it (CaM kinases, MLCK)
 - Messenger removal is a drug target: PDE inhibitors (caffeine, sildenafil) prolong cyclic-nucleotide signals
 - Vision inverts the logic: light lowers cGMP → channels close → hyperpolarization
-- Amplification occurs only at catalytic steps; a locked-on G-alpha (GTPase-dead, cholera toxin) means a signal that outlives its ligand`
+- Amplification occurs only at catalytic steps; a locked-on G-alpha (GTPase-dead, cholera toxin) means a signal that outlives its ligand
+
+<!-- yield:low -->
+- Low-yield extras: CaMKII (learning/memory, a Ca$^{2+}$-frequency decoder), calcineurin and its blockers cyclosporine/tacrolimus, oscillatory Ca$^{2+}$ coding, and synaptotagmin as the Ca$^{2+}$ sensor for vesicle fusion
+<!-- /yield -->`
     }
   ]
 };

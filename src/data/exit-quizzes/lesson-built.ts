@@ -54,6 +54,16 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-biochemistry-enzymes-kinetics-mcat',
   'mcat-biochemistry-foundations-mcat',
   'mcat-biochemistry-carbohydrate-metabolism-mcat',
+  'mcat-cell-biology-signaling-mcat',
+  'mcat-cell-biology-membrane-transport-mcat',
+  'mcat-cell-biology-organelles-mcat',
+  'mcat-cell-biology-cell-cycle-mcat',
+  'mcat-cell-biology-mcat',
+  'mcat-genetics-evolution-natural-selection-mcat',
+  'mcat-genetics-evolution-population-genetics-mcat',
+  'mcat-genetics-evolution-immunology-mcat',
+  'mcat-genetics-evolution-mcat',
+  'mcat-genetics-evolution-mendelian-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

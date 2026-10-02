@@ -43,7 +43,12 @@ export const mcatCellBioPart7Data = {
 
 ### Connective Tissue Components
 
-- **Collagen**: Most abundant protein in the body; provides tensile strength (Type I in bone/tendon, Type II in cartilage, Type IV in basement membranes)
+- **Collagen**: Most abundant protein in the body; provides tensile strength
+
+<!-- yield:low -->
+- Collagen types: Type I in bone/tendon, Type II in cartilage, Type IV in basement membranes.
+<!-- /yield -->
+
 - **Elastin**: Allows stretch and recoil (lungs, arteries, skin)
 - **Fibroblasts**: Produce collagen and ECM components
 - **Ground substance**: Gel-like matrix of proteoglycans and glycosaminoglycans (GAGs)`
@@ -56,20 +61,23 @@ export const mcatCellBioPart7Data = {
         questions: [
           {
             question: `Cardiac muscle has intercalated discs primarily because they:`,
-            options: [`Contain gap junctions that electrically couple the cells`, `Contain tight junctions that seal the spaces between cells`, `Store calcium that is released to trigger contraction`, `Allow cardiac cells to divide and regenerate damaged tissue`],
+            options: [`Contain gap junctions that electrically couple cells`, `Contain tight junctions that seal the spaces between cells`, `Store calcium, releasing it into the cytosol to trigger contraction`, `Allow cardiac cells to divide and regenerate damaged tissue`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Intercalated discs have gap junctions (allow ion flow for rapid electrical signal spread → synchronized contraction) and desmosomes (mechanical adhesion so cells don't pull apart). This makes the heart a functional syncytium — individual cells but acting as one coordinated unit.`
           },
           {
             question: `The alveoli of the lungs are lined with simple squamous epithelium because:`,
             options: [`A single thin layer allows rapid gas exchange by diffusion`, `Multiple layers would provide better protection against infection`, `Columnar cells would be more efficient at gas exchange`, `Squamous cells actively pump oxygen across the membrane`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Gas exchange requires minimal distance for diffusion. Simple squamous epithelium is one cell thick and flat → shortest diffusion distance. This is also why capillaries have simple squamous endothelium. Fick's Law: diffusion rate is inversely proportional to membrane thickness.`
           },
           {
             question: `A patient with scurvy (vitamin C deficiency) has weakened connective tissue. This is because vitamin C is required for:`,
             options: [`Hydroxylation of proline and lysine residues in collagen`, `Cross-linking of elastin fibers in blood vessel walls`, `Glycosylation of collagen chains in the Golgi apparatus`, `Disulfide bonding of keratin in epithelial tissues`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Collagen synthesis requires hydroxylation of proline → hydroxyproline and lysine → hydroxylysine (by prolyl and lysyl hydroxylase, which need vitamin C as a cofactor). Without hydroxylation, collagen cannot form stable triple helices → weak connective tissue → bleeding gums, poor wound healing, fragile blood vessels.`
           }
         ]
@@ -92,18 +100,25 @@ export const mcatCellBioPart7Data = {
 
 | Junction | Function | Key Proteins | Found In |
 |----------|----------|-------------|----------|
-| Tight junctions (zonula occludens) | Seal between cells (barrier) | Claudins, occludins | Intestinal epithelium, BBB |
+| Tight junctions (zonula occludens) | Seal between cells (barrier) | Transmembrane sealing strands | Intestinal epithelium, BBB |
 | Adherens junctions | Cell-cell adhesion | Cadherins (Ca$^{2+}$-dependent) | Epithelial tissues |
-| Desmosomes | Strong mechanical attachment | Cadherins (desmogleins) + intermediate filaments | Skin, cardiac muscle |
+| Desmosomes | Strong mechanical attachment | Cadherins + intermediate filaments | Skin, cardiac muscle |
 | Gap junctions | Direct cell-cell communication | Connexins → connexons | Cardiac muscle, smooth muscle |
 | Hemidesmosomes | Cell-to-basement membrane | Integrins + intermediate filaments | Epithelial base |
+
+<!-- yield:low -->
+- Junction protein names: tight-junction strands are built from **claudins** and **occludins**; the desmosomal cadherins are the **desmogleins**.
+<!-- /yield -->
 
 ### Extracellular Matrix (ECM) Signaling
 
 - **Integrins**: Transmembrane receptors linking ECM to cytoskeleton
 - Bidirectional signaling: "outside-in" (ECM signals affect cell behavior) and "inside-out" (cell regulates integrin adhesion)
-- ECM composition influences cell fate: stiff ECM → bone differentiation; soft ECM → neuronal differentiation
 - **Matrix metalloproteinases (MMPs)**: Enzymes that degrade ECM (important in wound healing, but exploited by cancer cells for invasion/metastasis)
+
+<!-- yield:low -->
+- ECM stiffness influences stem-cell fate: stiff ECM favors bone differentiation; soft ECM favors neuronal differentiation.
+<!-- /yield -->
 
 ### Germ Layer Origins — What Comes From Where
 
@@ -123,12 +138,14 @@ export const mcatCellBioPart7Data = {
             question: `Tight junctions in intestinal epithelial cells function to:`,
             options: [`Seal the space between cells, blocking paracellular leakage`, `Allow ions to pass directly between adjacent cytoplasms`, `Anchor the basal surface of cells to the basement membrane`, `Provide mechanical strength to resist shearing forces`],
             correctAnswer: 0,
-            explanation: `Tight junctions (claudins, occludins) form a seal near the apical surface of epithelial cells, creating a barrier that regulates what passes between cells (paracellular pathway). In the intestine, this prevents bacteria and undigested food from leaking into the blood. In the blood-brain barrier, tight junctions are exceptionally restrictive.`
+            yield: 'HIGH',
+            explanation: `Tight junctions form a seal near the apical surface of epithelial cells, creating a barrier that regulates what passes between cells (paracellular pathway). In the intestine, this prevents bacteria and undigested food from leaking into the blood. In the blood-brain barrier, tight junctions are exceptionally restrictive.`
           },
           {
             question: `Hematopoietic stem cells in bone marrow are classified as:`,
             options: [`Multipotent: they form all blood cell types but no others`, `Totipotent: they can form any cell, including placenta`, `Pluripotent: they can form cells of all three germ layers`, `Unipotent: they produce only one type of blood cell`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Hematopoietic stem cells (HSCs) can differentiate into all blood cell lineages: RBCs, WBCs (neutrophils, lymphocytes, monocytes, etc.), and platelets. But they cannot become neurons, muscle, or other non-blood cells → multipotent. This is the basis of bone marrow transplants for leukemia treatment.`
           }
         ]
@@ -148,7 +165,11 @@ export const mcatCellBioPart7Data = {
 - Stem cell potency: totipotent → pluripotent → multipotent → oligopotent → unipotent
 - Cell junctions: tight (barrier), adherens/desmosomes (adhesion), gap (communication), hemidesmosomes (to basement membrane)
 - Integrins: link ECM to cytoskeleton; bidirectional signaling
-- Germ layers: ectoderm (nerves, skin), mesoderm (muscle, bone, blood), endoderm (GI lining, liver, lungs)`
+- Germ layers: ectoderm (nerves, skin), mesoderm (muscle, bone, blood), endoderm (GI lining, liver, lungs)
+
+<!-- yield:low -->
+- Low-yield extras: collagen types (I bone/tendon, II cartilage, IV basement membrane); junction protein names (claudins, occludins, desmogleins); ECM stiffness steering stem-cell fate
+<!-- /yield -->`
     }
   ]
 };

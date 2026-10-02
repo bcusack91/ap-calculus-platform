@@ -12,10 +12,10 @@ export const mcatPopGenPart4Data = {
 
 Males are hemizygous: one X means one allele, so a male's phenotype directly reports his genotype.
 
-| Group | Affected frequency (X-linked recessive, allele freq q) |
+| Group | Frequency (X-linked recessive, allele freq q) |
 |-------|--------------------------------------------------------|
-| Males | $q$ |
-| Females | $q^2$ |
+| Affected males | $q$ |
+| Affected females | $q^2$ |
 | Carrier females | $2pq$ |
 
 Two exam-ready consequences:
@@ -50,7 +50,12 @@ Solving order: type O is the only pure class, so start with $r = \\sqrt{r^2}$, t
 
 The chi-square only says "not H-W" — the pattern of deviation names the culprit:
 
-- **Heterozygote deficit** (too few Aa): inbreeding or positive assortative mating; OR unrecognized population substructure — pooling two subpopulations with different allele frequencies produces a heterozygote shortfall even if each subpopulation is itself in H-W (**Wahlund effect**).
+- **Heterozygote deficit** (too few Aa): inbreeding or positive assortative mating; OR unrecognized population substructure — pooling two subpopulations with different allele frequencies produces a heterozygote shortfall even if each subpopulation is itself in H-W.
+
+<!-- yield:low -->
+- This pooling artifact is named the **Wahlund effect**.
+<!-- /yield -->
+
 - **Heterozygote excess**: overdominant selection acting before sampling, or negative assortative mating.
 - **Allele frequencies shifting across generations** (genotypes still fitting H-W within each generation): selection, drift, or migration — use population size and directionality across replicates to separate them.
 
@@ -95,30 +100,35 @@ Twelve to thirteen affected males for every affected female — the hallmark of 
             question: `An X-linked recessive disorder affects 1 in 100 males in a randomly mating population. The expected frequency of affected females is:`,
             options: [`1 in 100`, `1 in 10,000`, `1 in 200`, `1 in 5,000`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Affected males give the allele frequency directly: $q = 0.01$. Affected females are homozygous: $q^2 = 0.0001 = 1/10{,}000$. Choosing 1 in 100 forgets that females need two copies; 1 in 200 incorrectly halves the male frequency instead of squaring the allele frequency.`
           },
           {
             question: `In a population at H-W equilibrium for the ABO locus, the allele frequencies are p(I-A) = 0.3, q(I-B) = 0.3, r(i) = 0.4. The expected frequency of blood type AB is:`,
             options: [`0.09`, `0.12`, `0.24`, `0.18`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Type AB has exactly one genotype, the heterozygote $I^A I^B$, at frequency $2pq = 2(0.3)(0.3) = 0.18$. Answer 0.09 is $pq$ without the factor of 2 (heterozygotes form two ways); 0.24 is $2pr$, the A-carrier heterozygote with i, which contributes to type A, not AB.`
           },
           {
             question: `Researchers genotype a wide sample drawn from across an island and find significantly FEWER heterozygotes than H-W predicts, though allele frequencies are stable across generations. The most likely explanation is:`,
             options: [`Nonrandom mating or pooled subpopulations`, `Heterozygote advantage or balancing selection`, `A high mutation rate at this locus`, `Strong directional selection against the recessive allele`],
             correctAnswer: 0,
-            explanation: `A heterozygote deficit with unchanged allele frequencies is the signature of nonrandom mating or hidden substructure — pooling two H-W subpopulations with different allele frequencies mimics inbreeding in the combined sample. Inbreeding, assortative mating, or the unrecognized pooling of distinct subpopulations (the Wahlund effect) all fit. Heterozygote advantage, a form of balancing selection, would produce an EXCESS of heterozygotes, and selection or recurrent mutation would shift allele frequencies over time, which was ruled out.`
+            yield: 'MEDIUM',
+            explanation: `A heterozygote deficit with unchanged allele frequencies is the signature of nonrandom mating or hidden substructure — pooling two H-W subpopulations with different allele frequencies mimics inbreeding in the combined sample. Inbreeding, assortative mating, or the unrecognized pooling of distinct subpopulations all fit. Heterozygote advantage, a form of balancing selection, would produce an EXCESS of heterozygotes, and selection or recurrent mutation would shift allele frequencies over time, which was ruled out.`
           },
           {
             question: `A chi-square test compares observed AA/Aa/aa counts to H-W expectations, with the allele frequency estimated from the same sample. The appropriate degrees of freedom is:`,
             options: [`3`, `2`, `1`, `0`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Start with 3 genotype classes, subtract 1 because the counts must sum to the sample size, and subtract 1 more because one parameter ($p$) was estimated from the data: $3 - 1 - 1 = 1$. Answering 2 is the classic error of forgetting the estimated-parameter penalty.`
           },
           {
             question: `An autosomal recessive disease affects 1 in 10,000 people. A healthy man whose brother has the disease (both parents unaffected) marries an unrelated woman from the general population. The approximate probability their first child is affected is:`,
             options: [`1/600`, `1/300`, `1/150`, `1/10,000`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The man: his parents are obligate carriers, and given he is unaffected, he is Aa with probability $2/3$. The woman: $q^2 = 10^{-4}$ gives $q = 0.01$, so her carrier probability is about $2q = 1/50$. Child affected: $\\tfrac{2}{3} \\times \\tfrac{1}{50} \\times \\tfrac{1}{4} = \\tfrac{1}{300}$. Using $1/3$ for the man's carrier probability (confusing it with his chance of being AA) gives 1/600; using $1/2$ instead of $1/4$ for the final Aa x Aa cross gives 1/150; and 1/10,000 is the general population risk, which ignores the family history.`
           }
         ]
@@ -133,8 +143,12 @@ Twelve to thirteen affected males for every affected female — the hallmark of 
 - A random woman's son is affected with probability $q$ — the two-path calculation (affected mothers + half of carriers' sons) must collapse to $q$
 - ABO: $p + q + r = 1$; start from type O ($r^2$), the only single-genotype class; AB $= 2pq$
 - H-W fit test: expected counts from allele-counted frequencies; $\\chi^2 = \\sum (O-E)^2/E$; df $= 3 - 1 - 1 = 1$ for two alleles
-- Heterozygote deficit → inbreeding, assortative mating, or Wahlund substructure; heterozygote excess → overdominance or negative assortative mating; shifting allele frequencies → selection, drift, or migration
-- Hybrid pedigree problems: population gives the outsider's carrier risk ($\\approx 2q$), Mendel gives the relative's (unaffected sib of affected $= 2/3$), multiply both by $\\tfrac{1}{4}$`
+- Heterozygote deficit → inbreeding, assortative mating, or pooled subpopulations (hidden substructure); heterozygote excess → overdominance or negative assortative mating; shifting allele frequencies → selection, drift, or migration
+- Hybrid pedigree problems: population gives the outsider's carrier risk ($\\approx 2q$), Mendel gives the relative's (unaffected sib of affected $= 2/3$), multiply both by $\\tfrac{1}{4}$
+
+<!-- yield:low -->
+- Low-yield extras: the heterozygote deficit from pooling subpopulations is named the Wahlund effect
+<!-- /yield -->`
     }
   ]
 };

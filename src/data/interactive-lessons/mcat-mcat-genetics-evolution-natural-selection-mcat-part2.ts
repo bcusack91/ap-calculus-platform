@@ -16,7 +16,7 @@ export const mcatNatSelPart2Data = {
 | Stabilizing | The intermediate | Human birth weight (historically, very small and very large newborns had elevated mortality) | Mean unchanged, variance shrinks |
 | Disruptive | Both extremes | African seedcrackers: large-billed birds crack hard seeds, small-billed handle soft seeds efficiently; intermediates do neither well | Variance grows; distribution can become bimodal |
 
-Disruptive selection is the one with speciation potential: if the two favored extremes also begin mating assortatively (like with like), the population can split — a thread picked up in Part 3.
+Disruptive selection is the mode with speciation potential WITHIN a single population: if the two favored extremes also begin mating assortatively (like with like), the population can split — a thread picked up in Part 3.
 
 ### Sexual Selection: Fitness Includes Mating Success
 
@@ -25,7 +25,11 @@ Sexual selection is differential reproductive success arising from competition f
 - **Intersexual selection (mate choice)**: members of one sex (usually females, the higher-investing sex) choose among the other. Drives ornaments — peacock trains, bright plumage, courtship displays.
 - **Intrasexual selection (same-sex competition)**: typically male-male combat or display for access to mates. Drives weapons and size — antlers, horns, sexual dimorphism in body mass.
 
-**Why do costly ornaments persist when they reduce survival?** Because fitness is reproduction, not survival. A train that costs a peacock some predation risk but multiplies his matings can raise net fitness. Choice for such ornaments can be maintained because ornaments serve as **indicators of male condition or genetic quality** — only a healthy male can afford the handicap — or through runaway preference dynamics. The result is a survival/mating trade-off, and sexual dimorphism is its visible signature.
+**Why do costly ornaments persist when they reduce survival?** Because fitness is reproduction, not survival. A train that costs a peacock some predation risk but multiplies his matings can raise net fitness. Choice for such ornaments can be maintained because ornaments serve as **indicators of male condition or genetic quality** — only a healthy male can afford the handicap. The result is a survival/mating trade-off, and sexual dimorphism is its visible signature.
+
+<!-- yield:low -->
+A second route is runaway (Fisherian) selection: the female preference and the male ornament become genetically correlated, so each generation's choice amplifies both.
+<!-- /yield -->
 
 ### Altruism, Kin Selection & Hamilton's Rule
 
@@ -60,7 +64,11 @@ $rB = 0.125 \\times 3 = 0.375 < 1 = C$
 
 Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, the benefit would need to exceed $C/r = 1/0.125 = 8$ offspring-equivalents before calling paid.
 
-**Interpretation.** This is the quantitative core of Haldane's quip that he would lay down his life "for two brothers or eight cousins": with $B$ measured in lives-worth-of-offspring, $2 \\times 0.5 = 1$ and $8 \\times 0.125 = 1$ just balance the cost of one self.
+**Interpretation.** This is the quantitative core of the famous quip about laying down one's life "for two brothers or eight cousins": with $B$ measured in lives-worth-of-offspring, $2 \\times 0.5 = 1$ and $8 \\times 0.125 = 1$ just balance the cost of one self.
+
+<!-- yield:low -->
+The quip is the geneticist J.B.S. Haldane's.
+<!-- /yield -->
 
 **Data connection.** In Belding's ground squirrels, alarm calling is concentrated in females — the philopatric sex that lives surrounded by mothers, sisters, and daughters — while males, who disperse away from kin, rarely call. That sex difference is exactly what kin selection predicts and what a "predator-confusion benefits everyone equally" account does not.`
     },
@@ -74,30 +82,35 @@ Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, t
             question: `Historically, human newborns of intermediate birth weight had the lowest mortality, while very small and very large newborns died more often. This pattern illustrates:`,
             options: [`Stabilizing selection`, `Directional selection`, `Disruptive selection`, `Frequency-dependent selection`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Selection removing both extremes and favoring the intermediate is stabilizing: the population mean stays put while variance is trimmed. Directional selection would favor one tail (steadily heavier or lighter babies); disruptive would favor both tails over the middle, which is the opposite of this pattern.`
           },
           {
             question: `During industrialization, soot darkened tree trunks and the frequency of dark (melanic) peppered moths rose sharply as birds preferentially found and ate light moths. This is an example of:`,
             options: [`Stabilizing selection on wing color`, `Sexual selection by female moths for dark males`, `Directional selection favoring one extreme phenotype`, `Genetic drift in a small moth population`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Predation consistently favored one end of the phenotype range (dark), shifting the population mean in that single direction — directional selection. The agent was differential predation, not mate choice, and the shift was consistent and environment-linked (reversing after clean-air laws), which rules out directionless drift.`
           },
           {
             question: `A peacock's enormous train increases his predation risk. Its persistence over evolutionary time is best explained by the fact that:`,
             options: [`Traits that harm survival cannot actually be heritable`, `Females prefer elaborate trains, raising mating success`, `The train startles predators, so it raises survival overall`, `Peahens must mate with the nearest male regardless of train`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Fitness includes mating success, and females preferentially mate with elaborate-trained males. This is intersexual selection: a survival cost can be outweighed by a mating-success benefit, and an honest-indicator (handicap) logic explains why choice for the ornament persists — only high-condition males can afford it. The startle idea contradicts the premise that the train raises predation risk, denying heritability contradicts the trait's evolutionary elaboration, and forced mating with the nearest male would remove any selection on the train at all.`
           },
           {
             question: `An individual can perform an act that costs it C = 2 offspring-equivalents and gives a full sibling (r = 0.5) a benefit of B = 6 offspring-equivalents. According to Hamilton's rule, the act:`,
             options: [`Is not favored, because C is greater than r`, `Is not favored, because altruism can never evolve`, `Is favored only if the whole group benefits`, `Is favored, because rB = 3 exceeds C = 2`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Hamilton's rule favors altruism when $rB > C$: here $0.5 \\times 6 = 3 > 2$. Comparing C directly to r confuses the rule's terms, and no group-level benefit is required — the accounting runs entirely through shared alleles in the relative. Kin-directed altruism evolves readily; what rarely works is species-benefit ("group selection") reasoning.`
           },
           {
             question: `In African seedcrackers, birds with large bills efficiently crack hard seeds and birds with small bills efficiently process soft seeds, while intermediate-billed birds handle both poorly. Continued selection of this kind, combined with a tendency of birds to mate with similar-billed partners, would most likely produce:`,
             options: [`A single intermediate bill size with reduced variance`, `A steady increase in the mean bill size`, `A bimodal distribution of bill sizes`, `No evolutionary change, since both extremes are favored equally`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Favoring both extremes over the middle is disruptive selection, which inflates variance and can split the distribution into two modes. Adding assortative mating restricts gene flow between the modes — the recipe for sympatric divergence, so the bimodal outcome is a possible first step toward sympatric speciation. Reduced variance around the middle would be stabilizing selection, and a steady mean increase would be directional; "no change" is wrong because the intermediate class is actively being removed.`
           }
         ]
@@ -113,7 +126,11 @@ Calling is NOT favored; the indirect gain cannot cover the cost. For a cousin, t
 - Sexual selection: intersexual = mate choice (ornaments), intrasexual = same-sex competition (weapons, size); both produce sexual dimorphism
 - Costly ornaments persist because fitness includes mating success; ornaments can be honest indicators of condition
 - Kin selection: relatedness r discounts benefits to relatives; altruism favored when $rB > C$; inclusive fitness = direct + indirect components
-- Relatedness ladder: offspring/full sib 0.5, half-sib/grandchild/niece 0.25, first cousin 0.125; "good of the species" explanations lose to cheater invasion — reframe via kin selection or reciprocity`
+- Relatedness ladder: offspring/full sib 0.5, half-sib/grandchild/niece 0.25, first cousin 0.125; "good of the species" explanations lose to cheater invasion — reframe via kin selection or reciprocity
+
+<!-- yield:low -->
+- Low-yield extras: runaway (Fisherian) selection, in which a genetically correlated preference and ornament amplify each other, is a second route to elaborate ornaments; the "two brothers or eight cousins" quip is J.B.S. Haldane's
+<!-- /yield -->`
     }
   ]
 };

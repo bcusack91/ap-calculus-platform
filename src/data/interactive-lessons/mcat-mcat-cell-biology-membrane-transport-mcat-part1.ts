@@ -62,18 +62,21 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
             question: `A researcher measures the rate at which four molecules cross a pure phospholipid bilayer (no proteins). Which molecule crosses fastest?`,
             options: [`Glucose — polar and hydrogen-bonding`, `Na$^+$ — a small but charged ion`, `O$_2$ — a small nonpolar gas`, `A tripeptide — polar and bulky`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Permeability across a protein-free bilayer tracks size and polarity: small nonpolar gases (O$_2$, CO$_2$) cross fastest. Glucose is polar and too large; ions are charged and essentially excluded regardless of size (their hydration shells and charge make the hydrophobic core an enormous energy barrier); a tripeptide is both large and polar.`
           },
           {
             question: `Bacteria grown at low temperature increase the proportion of unsaturated fatty acids in their membrane phospholipids. The most likely purpose is to:`,
             options: [`Maintain fluidity, since kinks block tight packing`, `Increase membrane thickness for better insulation`, `Reduce the membrane's permeability to water`, `Strengthen the peptidoglycan of the cell wall`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Cold temperatures rigidify membranes by allowing tails to pack tightly. Cis double bonds introduce kinks that disrupt packing, restoring fluidity — a classic homeoviscous adaptation. This is a favorite MCAT experimental setup: expect fluidity logic (unsaturation, tail length, cholesterol, temperature).`
           },
           {
             question: `Cortisol (a steroid) and insulin (a peptide) both regulate metabolism, but only cortisol binds a receptor inside the cytosol. This difference exists because:`,
             options: [`Insulin is destroyed by cytosolic proteases first`, `Cortisol is pumped inward by ABC transporters actively`, `Steroid receptors simply have higher affinity`, `Cortisol is lipophilic and crosses the bilayer`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Steroids have high oil/water partition coefficients, so they cross the bilayer and bind intracellular (cytosolic or nuclear) receptors that act as transcription factors. Hydrophilic peptide hormones cannot cross and must signal through cell-surface receptors and second messengers. This structural logic — not receptor affinity — determines receptor location.`
           }
         ]
@@ -92,19 +95,37 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
 
 - Fast, complete recovery → freely diffusing (mobile) molecules
 - Slow or incomplete recovery → molecules anchored to the cytoskeleton or confined to domains
-- The **Frye-Edidin experiment** (fusing a mouse cell with a human cell and watching surface proteins intermix within ~40 minutes) was the original demonstration of lateral mobility
+
+- Fusing a mouse cell with a human cell, each with differently labeled surface proteins, showed the proteins intermix within ~40 minutes — direct evidence of lateral mobility (mixing slows at low temperature)
+
+<!-- yield:low -->
+- This is the Frye-Edidin experiment
+<!-- /yield -->
 
 ### Lipid Rafts and Anchored Proteins
 
 - **Lipid rafts**: cholesterol- and sphingolipid-rich microdomains that are thicker and more ordered; they concentrate signaling proteins
-- Some proteins are lipid-anchored (GPI anchors on the outer leaflet; prenylation/palmitoylation on the inner leaflet) rather than transmembrane
-- Cytoskeletal tethering (e.g., spectrin-ankyrin in red blood cells) restricts protein diffusion — a common explanation for incomplete FRAP recovery
+- Some proteins are held at the membrane by a covalently attached lipid anchor rather than spanning the bilayer
+
+<!-- yield:low -->
+- Lipid-anchor types: GPI anchors hold proteins on the outer leaflet; prenylation and palmitoylation hold them on the inner leaflet
+<!-- /yield -->
+
+- Cytoskeletal tethering restricts protein diffusion — a common explanation for incomplete FRAP recovery
+
+<!-- yield:low -->
+- The textbook tether is the spectrin-ankyrin network under the red blood cell membrane
+<!-- /yield -->
 
 ### Why Membrane Asymmetry Is Maintained
 
 - New phospholipids are synthesized on the **cytosolic leaflet of the ER**
-- Flippases (ATP-dependent) move specific lipids (like PS) to the cytosolic leaflet; scramblases randomize during apoptosis
-- Loss of asymmetry (PS exposed outside) → recognized by macrophages → phagocytosis of the apoptotic cell`
+- Flippases (ATP-dependent) move specific lipids (like PS) to the cytosolic leaflet
+- Loss of asymmetry (PS exposed outside) → recognized by macrophages → phagocytosis of the apoptotic cell
+
+<!-- yield:low -->
+- During apoptosis, scramblases randomize the lipids between leaflets, which is how PS reaches the outer surface
+<!-- /yield -->`
     },
     {
       id: 'mt1-quiz2',
@@ -116,12 +137,14 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
             question: `In a FRAP experiment, a membrane protein shows only 40% fluorescence recovery even after long times. The best interpretation is:`,
             options: [`The laser physically destroyed the membrane in the bleached spot`, `Much of the protein is immobilized by the cytoskeleton`, `The protein was internalized by endocytosis meanwhile`, `The fluorophore spontaneously regenerated over time`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `The mobile fraction (here 40%) diffuses back into the bleached spot; the immobile fraction (60%) cannot, most often because it is tethered to the cytoskeleton or trapped in a domain. Photobleaching is irreversible, so recovery must come from lateral diffusion of unbleached neighbors — the whole basis of the assay.`
           },
           {
             question: `A cell line lacking flippase activity for phosphatidylserine would most likely:`,
             options: [`Show far faster spontaneous flip-flop of lipids between leaflets`, `Lose membrane fluidity entirely at body temperature`, `Display PS on its outer leaflet and be eaten by macrophages`, `Be unable to synthesize phospholipids at all`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Flippases actively keep PS on the inner (cytosolic) leaflet. Without them, PS accumulates on the outer leaflet — the "eat me" signal normally displayed by apoptotic cells — so macrophages would engulf otherwise healthy cells. Flippase loss does not abolish fluidity or synthesis, and spontaneous flip-flop remains rare, not increased.`
           }
         ]
@@ -138,7 +161,11 @@ where $P$ is permeability, $D$ is the diffusion coefficient within the membrane,
 - Fluidity increases with unsaturation, shorter tails, higher temperature; cholesterol buffers fluidity in both directions
 - FRAP: fluorescence recovery = lateral mobility; incomplete recovery = immobile (anchored) fraction
 - Membrane asymmetry is active and meaningful: PS on the outer leaflet is an apoptotic "eat me" signal
-- Carbohydrates (glycolipids/glycoproteins) always face the extracellular side`
+- Carbohydrates (glycolipids/glycoproteins) always face the extracellular side
+
+<!-- yield:low -->
+- Low-yield extras: the mouse-human cell fusion is the Frye-Edidin experiment; lipid anchors come as GPI (outer leaflet) or prenyl/palmitoyl groups (inner leaflet); spectrin-ankyrin is the red-cell tether; scramblases randomize the leaflets during apoptosis
+<!-- /yield -->`
     }
   ]
 };

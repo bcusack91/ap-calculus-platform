@@ -15,7 +15,11 @@ export const mcatGeneticsPart7Data = {
 | Huntington's disease | HTT gene, CAG trinucleotide repeat expansion |
 | Marfan syndrome | Fibrillin-1, connective tissue |
 | Familial hypercholesterolemia | LDL receptor deficiency |
-| Achondroplasia | FGFR3 mutation, short-limbed dwarfism |
+| Achondroplasia | Short-limbed dwarfism (gain-of-function mutation) |
+
+<!-- yield:low -->
+- Achondroplasia's gene is FGFR3, a growth-factor receptor whose overactive form slows cartilage growth in the long bones.
+<!-- /yield -->
 
 ### Autosomal Recessive Diseases
 
@@ -34,11 +38,11 @@ export const mcatGeneticsPart7Data = {
 | Turner syndrome | 45,X (monosomy X) | Female, short stature, infertile |
 | Klinefelter syndrome | 47,XXY | Male, tall, often infertile |
 
-Most aneuploidies arise from **nondisjunction** — the failure of chromosomes (meiosis I) or sister chromatids (meiosis II) to separate properly.
+Most aneuploidies arise from **nondisjunction** — the failure of homologous chromosomes (meiosis I) or sister chromatids (meiosis II) to separate properly.
 
 ### Heterozygote Advantage
 
-Sickle cell carriers (HbAS) are resistant to malaria, which explains the high frequency of the sickle cell allele in malaria-endemic regions. This is **balancing selection** maintaining both alleles in the population.`
+Sickle cell carriers (HbAS) are protected against severe malaria, which explains the high frequency of the sickle cell allele in malaria-endemic regions. This is **balancing selection** maintaining both alleles in the population.`
     },
     {
       id: 'ge7-worked',
@@ -67,30 +71,35 @@ Sickle cell carriers (HbAS) are resistant to malaria, which explains the high fr
             question: `Sickle cell disease persists at high frequency in malaria-endemic regions because:`,
             options: [`Carriers are protected against malaria`, `The sickle allele is dominant`, `No selection acts against it`, `The allele benefits every genotype`],
             correctAnswer: 0,
-            explanation: `HbAS carriers have mild sickling that kills malaria parasites in RBCs but lack the severe complications of HbSS. This heterozygote advantage (a form of balancing selection) maintains the allele at substantial frequency in affected regions. The allele is not simply dominant, it is strongly selected against in HbSS homozygotes, and it harms rather than benefits those individuals.`
+            yield: 'HIGH',
+            explanation: `In HbAS carriers, parasitized red cells sickle and are cleared by the spleen, limiting the infection, yet carriers lack the severe complications of HbSS. This heterozygote advantage (a form of balancing selection) maintains the allele at substantial frequency in affected regions. The allele is not simply dominant, it is strongly selected against in HbSS homozygotes, and it harms rather than benefits those individuals.`
           },
           {
             question: `Huntington's disease is autosomal dominant with onset typically after age 40. Why does the disease allele persist in the population despite being harmful?`,
             options: [`Symptoms usually begin after reproductive age`, `The allele is recessive, hidden in carriers`, `Heterozygotes resist an infectious disease`, `The allele arises only from new mutations`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Because Huntington's is late-onset, affected individuals frequently have children before symptoms appear. Natural selection cannot efficiently remove an allele whose harm comes after reproduction, so the dominant allele persists across generations. The allele is dominant, not recessive, no heterozygote advantage is known to maintain it, and most cases are inherited from an affected parent rather than arising anew.`
           },
           {
             question: `A karyotype shows 45 chromosomes with a single X and no Y (45,X). This describes:`,
-            options: [`Turner syndrome`, `Klinefelter syndrome`, `Down syndrome`, `Edwards syndrome`],
+            options: [`Turner syndrome`, `Klinefelter syndrome`, `Down syndrome`, `Triple X syndrome`],
             correctAnswer: 0,
-            explanation: `45,X is monosomy X, characteristic of Turner syndrome: affected individuals are phenotypically female, typically short, and usually infertile (streak gonads). It is the only viable human monosomy. Klinefelter syndrome is 47,XXY, Down syndrome is trisomy 21, and Edwards syndrome is trisomy 18; all have 47 chromosomes.`
+            yield: 'HIGH',
+            explanation: `45,X is monosomy X, characteristic of Turner syndrome: affected individuals are phenotypically female, typically short, and usually infertile. It is the only viable human monosomy. Klinefelter syndrome is 47,XXY, Down syndrome is trisomy 21, and Triple X syndrome is 47,XXX; all have 47 chromosomes.`
           },
           {
             question: `Cystic fibrosis is autosomal recessive. Two unaffected parents already have a child with CF. What is the probability that their NEXT child is an unaffected CARRIER?`,
             options: [`1/2`, `1/4`, `1/3`, `2/3`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Both parents must be carriers (Aa × Aa). Across all offspring, the genotype ratio is 1 AA : 2 Aa : 1 aa, so the probability of an Aa carrier (out of ALL children) is 2/4 = 1/2. (Note: 2/3 would be the answer only if you condition on the child being unaffected.)`
           },
           {
             question: `Klinefelter syndrome (47,XXY) most commonly results from:`,
-            options: [`Meiotic nondisjunction of sex chromosomes`, `A point mutation in an X-linked gene`, `Deletion of part of the Y chromosome`, `Mitochondrial inheritance from the mother`],
+            options: [`Meiotic nondisjunction of sex chromosomes`, `A point mutation in an X-linked gene`, `Deletion of part of the Y chromosome`, `Maternal mitochondrial inheritance`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `47,XXY is an aneuploidy caused by nondisjunction in meiosis (either an XX egg fertilized by a Y sperm, or an X egg fertilized by an XY sperm). It is a whole-chromosome number error, not a point mutation or deletion.`
           }
         ]
@@ -106,7 +115,11 @@ From Mendel to Hardy-Weinberg to natural selection to genetic diseases, genetics
 **High-yield reminders:**
 - Late-onset dominant alleles (Huntington's) escape selection by acting after reproduction
 - Heterozygote advantage (sickle cell + malaria) is balancing selection
-- Aneuploidy comes from nondisjunction: MI = both homologs, MII = identical sister chromatids`
+- Aneuploidy comes from nondisjunction: MI = both homologs, MII = identical sister chromatids
+
+<!-- yield:low -->
+- Low-yield extras: achondroplasia's gene is FGFR3 (an overactive growth-factor receptor)
+<!-- /yield -->`
     }
   ]
 };

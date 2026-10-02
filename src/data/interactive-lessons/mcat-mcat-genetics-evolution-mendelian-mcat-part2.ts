@@ -25,6 +25,7 @@ During **prophase I**, homologous chromosomes synapse and exchange segments (cro
 $RF = \\frac{\\text{number of recombinant offspring}}{\\text{total offspring}} \\times 100\\%$
 
 - $1\\%$ recombination = **1 map unit** = 1 centimorgan (cM)
+- Map distances add (approximately): if A–C is 7 cM and C–B is 5 cM, A–B is about 12 cM, so C lies between A and B. Ordering three genes = finding the one whose two distances sum to the third.
 - RF increases with the physical distance between genes: more room for a crossover
 - **Maximum observable RF is 50%** — genes very far apart on the same chromosome (or on different chromosomes) assort as if independent. RF can never exceed 50% because even guaranteed crossovers produce at most half recombinant chromatids
 
@@ -45,7 +46,11 @@ If the parent were in **trans** (repulsion) configuration ($Ab/aB$), the identit
 
 - X-linked genes: males are **hemizygous** (one allele = phenotype). No father-to-son transmission of X-linked alleles
 - In fruit fly and human crosses, reciprocal crosses give **different results** for X-linked genes — a classic experimental signature (autosomal reciprocal crosses give identical results)
-- Y-linked (holandric) traits: strictly father-to-all-sons`
+- Y-linked traits: strictly father-to-all-sons
+
+<!-- yield:low -->
+- Y-linked inheritance is also called **holandric** inheritance.
+<!-- /yield -->`
     },
     {
       id: 'men2-worked',
@@ -80,30 +85,35 @@ $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
             question: `Two genes show a recombination frequency of 50% in a test cross. Which conclusion is best supported?`,
             options: [`The genes are exactly 50 nucleotides apart`, `The genes behave as if unlinked`, `The genes lie close together on one chromosome`, `Crossing over never occurs between them`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `RF saturates at 50%, the value expected for independent assortment. A 50% RF therefore cannot distinguish "different chromosomes" from "same chromosome but very far apart." The genes assort as if independent: they are on different chromosomes or very far apart on the same one. Tightly linked genes lying close together would show RF near 0%, not 50%.`
           },
           {
             question: `In a test cross of a dihybrid, the four offspring classes appear at 44%, 44%, 6%, and 6%. The recombination frequency between the genes is:`,
             options: [`6%`, `44%`, `12%`, `50%`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Recombinants are the TWO rare classes combined: $6\\% + 6\\% = 12\\%$, so the genes are 12 cM apart. Choosing 6% (a single class) is the classic error — recombination events produce two reciprocal recombinant classes, and both count.`
           },
           {
-            question: `A test cross of a dihybrid fly yields mostly $Ab$ and $aB$ offspring gamete types, with few $AB$ and $ab$. The heterozygous parent's chromosome configuration was:`,
+            question: `A test cross of a dihybrid fly yields mostly offspring that received $Ab$ or $aB$ gametes from the heterozygous parent, with few from $AB$ or $ab$ gametes. The heterozygous parent's chromosome configuration was:`,
             options: [`Trans, with A and b on one homolog`, `Cis, with A and B on one homolog`, `Unlinked, on separate chromosomes`, `Homozygous at both loci`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Parental classes are the most frequent, and here they are $Ab$ and $aB$ — so those combinations sat together on the parent's homologs: $Ab/aB$, the trans (repulsion) arrangement. With A and b on one homolog, a and B sit on the other. Cis (coupling) would have made $AB$ and $ab$ the majority classes, unlinked genes would give four roughly equal classes, and a parent homozygous at both loci would produce only one gamete type.`
           },
           {
             question: `Why can recombination frequency never exceed 50%, even for genes at opposite ends of a long chromosome?`,
             options: [`Crossing over occurs in at most half of all meioses`, `Each crossover involves only two of the four chromatids`, `Natural selection removes recombinant gametes`, `Genes more than 50 cM apart cannot recombine`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `A single crossover involves 2 of the 4 chromatids of a tetrad, yielding 2 recombinant + 2 parental products (50% recombinant for that meiosis). Multiple crossovers can restore parental arrangements, so averaged over many meioses the recombinant fraction approaches but never exceeds 50%, even when crossing over is guaranteed. Crossing over occurs in most meioses along a long chromosome, selection does not remove recombinant gametes, and genes more than 50 cM apart recombine freely.`
           },
           {
             question: `Reciprocal crosses (mother's and father's phenotypes swapped) give clearly different F1 results for a particular trait. This is evidence that the trait is:`,
-            options: [`Autosomal dominant`, `Autosomal recessive`, `Controlled by two unlinked genes`, `Sex-linked`],
+            options: [`Autosomal dominant`, `Autosomal recessive`, `Controlled by two unlinked genes`, `Sex-linked (X-linked)`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `For autosomal genes, reciprocal crosses give identical results because each parent contributes one autosomal allele either way. X-linked genes break this symmetry: sons get their only X from the mother, so swapping the parents changes son phenotypes. (Mitochondrial and imprinted genes also give reciprocal-cross differences.)`
           }
         ]
@@ -118,7 +128,12 @@ $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
 - $RF = \\text{recombinants}/\\text{total} \\times 100\\%$; $1\\% = 1$ map unit (cM); RF maxes out at 50%
 - Both rare reciprocal classes count as recombinants — never just one
 - Identify parental configuration (cis $AB/ab$ vs. trans $Ab/aB$) from the two most frequent classes
-- Reciprocal-cross asymmetry is the experimental fingerprint of X-linkage; no father-to-son X transmission`
+- Reciprocal-cross asymmetry is the experimental fingerprint of X-linkage; no father-to-son X transmission
+- Y-linked traits pass from father to all sons
+
+<!-- yield:low -->
+- Low-yield extras: Y-linked inheritance is also called holandric inheritance
+<!-- /yield -->`
     }
   ]
 };

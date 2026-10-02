@@ -60,18 +60,21 @@ Cytokine receptors (erythropoietin, growth hormone, interferons) have **no kinas
             question: `A truncated EGF receptor lacks its intracellular kinase domain but binds EGF normally. When co-expressed with wild-type receptors, it suppresses EGF signaling. The best explanation is that the truncated receptor:`,
             options: [`Dimerizes with wild-type receptors, poisoning each pair`, `Sequesters the cell's entire ATP pool away from the kinases`, `Degrades EGF in the medium before it can reach a receptor`, `Blocks transcription of the wild-type receptor gene`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `RTK activation requires each partner in a dimer to phosphorylate the other. A kinase-dead subunit that still dimerizes poisons every dimer it joins — the wild-type partner has no one to phosphorylate it. This dominant-negative logic is a standard MCAT experimental construct; note the mutant would NOT affect a pathway that signals through monomeric receptors.`
           },
           {
             question: `Grb2 contains SH2 and SH3 domains but no enzymatic activity, yet it is essential for RTK-driven Ras activation. Its role is to:`,
             options: [`Phosphorylate Raf directly on its activation loop`, `Hydrolyze the GTP bound to Ras after activation`, `Link the receptor's phosphotyrosines to SOS`, `Carry activated ERK through the nuclear pore`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Adaptor proteins are pure connectors: the SH2 domain reads phosphotyrosine on the activated receptor; the SH3 domains hold SOS. Bringing SOS to the membrane — where Ras is prenyl-anchored — is sufficient to activate Ras. Signal transduction frequently works by regulated proximity rather than catalysis, a concept passages love to test with adaptor mutants.`
           },
           {
             question: `Cells lacking functional PTEN show elevated Akt activity even without growth factors. This occurs because PTEN normally:`,
             options: [`Phosphorylates PI3K and shuts off its lipid kinase activity`, `Dephosphorylates PIP$_3$ to PIP$_2$, erasing Akt's docking site`, `Targets the insulin receptor for lysosomal degradation`, `Represses transcription of the gene encoding Akt itself`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `PI3K writes the PIP$_3$ signal; PTEN erases it. Without the eraser, basal PI3K activity accumulates PIP$_3$, so Akt stays membrane-recruited and active — constitutive survival/growth signaling. This is why PTEN is among the most frequently lost tumor suppressors. Distinguish lipid phosphatases (PTEN) from protein phosphatases: PTEN's substrate is a membrane lipid.`
           }
         ]
@@ -86,9 +89,13 @@ The insulin receptor illustrates how a single RTK produces both acute and long-t
 
 | Timescale | Pathway branch | Effect |
 |-----------|----------------|--------|
-| Seconds-minutes | PI3K → Akt | GLUT4 vesicles fuse with membrane; glycogen synthase activated (Akt inhibits GSK-3) |
+| Seconds-minutes | PI3K → Akt | GLUT4 vesicles fuse with membrane; glycogen synthase activated |
 | Minutes | Akt → phosphodiesterase activation | cAMP falls → opposes glucagon/epinephrine signaling |
 | Hours | Ras-MAPK → gene expression | Growth-promoting transcription |
+
+<!-- yield:low -->
+- Akt activates glycogen synthase indirectly: it phosphorylates and inhibits **GSK-3**, the kinase that would otherwise keep glycogen synthase switched off.
+<!-- /yield -->
 
 > Insulin and glucagon meet at cAMP: glucagon (Gs) raises it, insulin lowers it. Hormone pairs that converge on one node with opposite signs are classic passage material.
 
@@ -99,17 +106,25 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
 - **Amplification**: each active kinase phosphorylates many downstream molecules
 - **Ultrasensitivity**: multi-step cascades convert graded inputs into switch-like outputs
 - **Cross-talk nodes**: PKA can phosphorylate and inhibit Raf — a cAMP pathway vetoing a growth pathway
-- **Scaffold proteins** hold Raf/MEK/ERK together, insulating parallel MAPK cascades (ERK vs. JNK vs. p38) that share components
+- **Scaffold proteins** hold Raf/MEK/ERK together, insulating parallel MAPK cascades that share components
+
+<!-- yield:low -->
+- The parallel MAPK cascades a scaffold keeps apart are named **ERK, JNK and p38** (the latter two respond mainly to stress and cytokines).
+<!-- /yield -->
 
 ### Experimental Dissection Toolkit
 
 | Tool | What it shows |
 |------|---------------|
-| Constitutively active Ras (GTPase-dead, e.g., G12V) | Downstream events proceed WITHOUT growth factor — places Ras upstream of the response |
+| Constitutively active Ras (GTPase-dead) | Downstream events proceed WITHOUT growth factor — places Ras upstream of the response |
 | Dominant-negative Ras (locked GDP form) | Blocks growth-factor response — Ras is REQUIRED |
 | Kinase inhibitor added at different times | Defines when in the response each kinase acts |
 | Phospho-specific antibody (western blot for phospho-ERK) | Read-out of pathway activity, not protein amount |
 | Epistasis: active downstream mutant + upstream inhibitor | If the response persists, the downstream component acts after the blocked step |
+
+<!-- yield:low -->
+- The standard GTPase-dead Ras used in the lab is **G12V** (glycine 12 replaced by valine) — the same codon most often mutated in human tumors.
+<!-- /yield -->
 
 > Epistasis logic: a constitutively active MEK rescues signaling in Ras-inhibited cells (MEK is downstream), but a constitutively active receptor does not rescue MEK inhibition.`
     },
@@ -123,12 +138,14 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
             question: `In cells expressing a constitutively active MEK mutant, an EGF-receptor kinase inhibitor fails to block ERK phosphorylation. This result indicates that:`,
             options: [`The inhibitor fails to enter cells under any condition`, `ERK phosphorylation does not require MEK at all`, `The EGF receptor and MEK are the same protein`, `MEK acts downstream of the receptor in the cascade`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Classic epistasis: constitutive activity at a downstream node makes upstream input unnecessary. Active MEK phosphorylates ERK regardless of receptor status, so the receptor inhibitor loses its effect. Had MEK been upstream of the receptor (or in a parallel pathway), the inhibitor would still have blocked ERK. Ordering pathway components from such experiments is a guaranteed MCAT skill.`
           },
           {
             question: `Erythropoietin stimulates red-cell precursors through a receptor with no intrinsic kinase domain, yet triggers rapid tyrosine phosphorylation and STAT-dependent transcription. The receptor accomplishes this by:`,
             options: [`Using associated JAK kinases that phosphorylate its tails`, `Using an intrinsic guanylyl cyclase domain to make cGMP`, `Coupling to Gs, raising cAMP and activating PKA`, `Entering the nucleus together with its bound ligand`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Cytokine receptors outsource catalysis: JAKs bound to the receptor tails are brought into range when ligand dimerizes the receptor, then phosphorylate the receptor and the docking STATs. Phosphorylated STATs dimerize via reciprocal SH2-phosphotyrosine contacts and act directly as transcription factors — the shortest membrane-to-gene route among the major pathways.`
           }
         ]
@@ -145,7 +162,11 @@ Why stack three kinases (Raf → MEK → ERK) instead of one?
 - JAK-STAT: receptor has no kinase; JAKs phosphorylate, STATs dimerize and go straight to DNA (cytokines, EPO, interferons)
 - Insulin signals on two timescales: acute Akt effects (GLUT4, glycogen synthase, cAMP lowering) and slower MAPK-driven transcription
 - Adaptors and scaffolds signal by proximity, not catalysis; cascades add amplification and switch-like behavior
-- Experimental logic: constitutively active mutant = sufficiency (and bypasses upstream blocks); dominant-negative = necessity; epistasis orders the pathway`
+- Experimental logic: constitutively active mutant = sufficiency (and bypasses upstream blocks); dominant-negative = necessity; epistasis orders the pathway
+
+<!-- yield:low -->
+- Low-yield extras: Akt activates glycogen synthase by inhibiting GSK-3; the parallel MAPK cascades are ERK, JNK and p38; the lab's GTPase-dead Ras is G12V
+<!-- /yield -->`
     }
   ]
 };

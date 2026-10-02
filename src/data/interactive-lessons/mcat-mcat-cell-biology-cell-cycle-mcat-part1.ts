@@ -26,12 +26,16 @@ export const mcatCellCyclePart1Data = {
 
 | Stage | Key events |
 |-------|-----------|
-| **Prophase** | Chromatin condenses (condensin); mitotic spindle begins forming between separating centrosomes |
+| **Prophase** | Chromatin condenses; mitotic spindle begins forming between separating centrosomes |
 | **Prometaphase** | Nuclear envelope breaks down; kinetochores (protein plates on centromeres) capture spindle microtubules |
 | **Metaphase** | Chromosomes align at the metaphase plate under balanced tension |
 | **Anaphase** | Cohesin is cleaved → sister chromatids (now called chromosomes) move to opposite poles; poles also push apart |
 | **Telophase** | Nuclear envelopes re-form; chromosomes decondense |
 | **Cytokinesis** | Actin-myosin **contractile ring** pinches the cell in two (animal cells); overlaps late mitosis |
+
+<!-- yield:low -->
+- Prophase condensation is driven by **condensin** complexes.
+<!-- /yield -->
 
 > Anaphase is the moment ploidy bookkeeping changes: 46 chromosomes of 2 chromatids become (transiently) 92 chromosomes of 1 chromatid, then 46 per daughter.
 
@@ -43,7 +47,7 @@ Stain DNA with a quantitative fluorescent dye and count cells by DNA content:
 - **4C peak** = G$_2$ and M cells
 - **Between the peaks** = S phase (actively replicating)
 
-A drug that arrests cells in mitosis grows the 4C peak; one that blocks replication initiation grows the 2C peak; one that stalls forks piles cells between the peaks. **BrdU/EdU pulse labeling** marks only cells synthesizing DNA during the pulse — the direct S-phase census.`
+A drug that arrests cells in mitosis grows the 4C peak; one that blocks replication initiation grows the 2C peak; one that stalls forks piles cells between the peaks. **BrdU/EdU pulse labeling** marks only cells synthesizing DNA during the pulse — the direct S-phase census. Mitotic cells are counted separately, by their condensed chromosomes (the **mitotic index**).`
     },
     {
       id: 'cc1-quiz1',
@@ -55,18 +59,21 @@ A drug that arrests cells in mitosis grows the 4C peak; one that blocks replicat
             question: `A human somatic cell in G$_2$ contains how many chromosomes and how much DNA relative to a G$_1$ cell?`,
             options: [`92 chromosomes, since each chromatid is counted separately`, `46 chromosomes and exactly the same DNA content as G$_1$`, `46 chromosomes, each with two chromatids, and twice the DNA`, `23 chromosomes, one set having already segregated`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `S phase duplicates DNA but not chromosome number: each of the 46 chromosomes now consists of two cohesin-joined sister chromatids, so DNA content is 4C while the count remains 46. Chromatids are not counted as separate chromosomes until cohesin cleavage at anaphase separates them. Confusing n (chromosome sets) with C (DNA mass) is the most common cell-cycle error.`
           },
           {
             question: `Flow cytometry of a tumor sample treated with a new drug shows a dramatic increase in cells with exactly 4C DNA content and condensed chromosomes. The drug most likely arrests cells in:`,
             options: [`Mitosis, with replication already complete`, `Mid-S phase, partway through DNA replication`, `G$_1$, before replication has begun`, `G$_0$, quiescent and outside the cycle`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `4C DNA means replication is complete (G$_2$ or M); condensed chromosomes distinguish M from G$_2$, since chromatin condenses only in mitosis. Spindle poisons such as vinca alkaloids and taxanes produce exactly this profile by triggering the spindle checkpoint (Part 2). A G$_1$ block would grow the 2C peak; an S block accumulates intermediate DNA contents.`
           },
           {
-            question: `Cardiac muscle damaged by infarction is replaced by scar tissue rather than new cardiomyocytes because adult cardiomyocytes:`,
-            options: [`They are permanently arrested in metaphase instead`, `They lack functional DNA polymerase genes altogether`, `They are haploid and cannot undergo mitosis`, `They reside in G$_0$ and cannot re-enter the cycle`],
+            question: `Cardiac muscle damaged by infarction is replaced by scar tissue rather than new cardiomyocytes. Which statement about adult cardiomyocytes explains this?`,
+            options: [`They are permanently arrested in metaphase of mitosis`, `They lack functional DNA polymerase genes altogether`, `They are haploid and cannot undergo mitosis`, `They reside in G$_0$ and cannot re-enter the cycle`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Terminally differentiated cardiomyocytes and most neurons exit permanently to G$_0$: their cycle machinery is transcriptionally shut down, not mutated away. Fibroblasts, which CAN divide, fill the wound with collagenous scar instead. Contrast with liver (facultative divider — hepatocytes re-enter the cycle after resection) and gut/skin epithelium (continuously cycling stem-cell compartments).`
           }
         ]
@@ -111,13 +118,15 @@ Both leave kinetochores without proper tension → spindle checkpoint arrest →
             question: `Colchicine and paclitaxel arrest cells in mitosis through opposite effects on microtubules. Their common downstream consequence is:`,
             options: [`DNA replication forks are directly inhibited`, `The spindle checkpoint is never satisfied`, `Cohesin is cleaved before metaphase alignment`, `The nuclear envelope breaks down prematurely`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `A functional spindle must be dynamic: colchicine prevents microtubule assembly, while paclitaxel freezes microtubules so they cannot search, release, and re-attach. Either way kinetochores are not all attached under bipolar tension, the spindle checkpoint stays on, and anaphase never fires. Two opposite biochemical actions converging on one checkpoint is classic MCAT reasoning.`
           },
           {
             question: `Cells are pulsed with EdU (a thymidine analog) for 30 minutes, and 40% of cells become labeled. The best interpretation is that:`,
             options: [`About 40% of the cells are quiescent, resting in G$_0$`, `The complete cell cycle lasts roughly 40 minutes total`, `About 40% of the population was in S phase during the pulse`, `About 40% of the cells were in mitosis during the pulse`],
             correctAnswer: 2,
-            explanation: `A nucleotide analog is incorporated only by cells actively replicating DNA, so the labeled fraction estimates the S-phase fraction (and, since time-in-phase is proportional to fraction-of-cells in an asynchronous steady-state culture, S occupies ~40% of the cycle length). Mitotic cells would be identified instead by condensed chromosomes or phospho-histone H3 staining.`
+            yield: 'MEDIUM',
+            explanation: `A nucleotide analog is incorporated only by cells actively replicating DNA, so the labeled fraction estimates the S-phase fraction (and, since time-in-phase is proportional to fraction-of-cells in an asynchronous steady-state culture, S occupies ~40% of the cycle length). Mitotic cells would be identified instead by their condensed chromosomes.`
           }
         ]
       }
@@ -133,7 +142,11 @@ Both leave kinetochores without proper tension → spindle checkpoint arrest →
 - Three checkpoints: restriction point (G$_1$/S, growth-factor dependent), G$_2$/M (DNA integrity), spindle checkpoint (attachment/tension)
 - Flow cytometry reads phase by DNA content (2C vs. 4C vs. between); EdU/BrdU pulse marks S phase directly
 - Spindle poisons work oppositely (destabilize vs. hyper-stabilize) but both trigger checkpoint arrest — hence shared chemotherapy logic and toxicity
-- Karyokinesis and cytokinesis are separable: endomitosis (megakaryocytes) and binucleate hepatocytes are normal outcomes`
+- Karyokinesis and cytokinesis are separable: endomitosis (megakaryocytes) and binucleate hepatocytes are normal outcomes
+
+<!-- yield:low -->
+- Low-yield extras: condensin complexes drive prophase chromosome condensation
+<!-- /yield -->`
     }
   ]
 };

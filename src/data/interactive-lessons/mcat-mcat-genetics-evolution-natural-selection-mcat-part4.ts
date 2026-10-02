@@ -12,11 +12,15 @@ export const mcatNatSelPart4Data = {
 
 | Evidence | What it demonstrates | Flagship examples |
 |----------|----------------------|-------------------|
-| Fossil record | Change over time; transitional forms | Tiktaalik (fish → tetrapod), whale ancestors with hind limbs |
+| Fossil record | Change over time; transitional forms | Fish-to-tetrapod intermediates, whale ancestors with hind limbs |
 | Comparative anatomy | Common descent via homology | Vertebrate forelimb; VESTIGIAL structures (whale pelvis, human appendix, cave-fish eyes) — remnants that make sense only as inherited leftovers |
 | Molecular homology | Universal ancestry; divergence proportional to relatedness | Shared genetic code; cytochrome c and rRNA sequence similarity tracking anatomy-based trees |
 | Biogeography | Descent with modification shaped by geography | Island species resembling the nearest mainland species, not similar-habitat species elsewhere |
 | Direct observation | Selection operating in real time | Antibiotic and pesticide resistance, Galápagos finch beak shifts |
+
+<!-- yield:low -->
+- Named transitional fossils: Tiktaalik (a fish with limb-like fins and a neck, intermediate between fish and tetrapods) and Ambulocetus (a legged, amphibious whale ancestor).
+<!-- /yield -->
 
 ### Three Datasets the MCAT Recycles
 
@@ -36,7 +40,11 @@ To claim a trait is **heritable and selected**, an experiment needs:
 
 ### Molecular Clocks (concept level)
 
-Neutral mutations accumulate at a roughly constant average rate, so the number of neutral sequence differences between two lineages grows approximately linearly with time since their divergence. Calibrated against fossil-dated splits, sequence divergence estimates the TIMING of branch points. Caveats a passage may exploit: rates differ among genes (histones slow, fibrinopeptides fast) and among lineages, and selection-constrained sites do not tick neutrally.`
+Neutral mutations accumulate at a roughly constant average rate, so the number of neutral sequence differences between two lineages grows approximately linearly with time since their divergence. Calibrated against fossil-dated splits, sequence divergence estimates the TIMING of branch points. Caveats a passage may exploit: rates differ among genes and among lineages, and selection-constrained sites do not tick neutrally.
+
+<!-- yield:low -->
+- Gene-rate extremes: histones (tightly constrained) tick very slowly; fibrinopeptides (little functional constraint) tick fast.
+<!-- /yield -->`
     },
     {
       id: 'ns4-worked',
@@ -70,30 +78,35 @@ A replica-plating test on a SEPARATE, never-exposed culture finds resistant colo
             question: `In the Lederbergs' replica-plating experiment, resistant colonies appeared at the same positions on every antibiotic replica plate stamped from one antibiotic-free master plate. This result demonstrates that:`,
             options: [`Antibiotic exposure induces cells to mutate toward resistance`, `Resistance spreads between colonies by conjugation during stamping`, `Resistance mutations arose before exposure and were then selected`, `All cells carry latent resistance that the antibiotic activates`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Position-matching is the key: replicas share only the geography of the master plate, which never saw antibiotic, so the resistant cells at those spots must have existed there already: resistance mutations arose randomly before any antibiotic exposure, and the antibiotic merely selected them. Mutation is random with respect to need, and selection acts afterward. Induced mutation would scatter resistant colonies at different positions on different replicas, and neither conjugation during stamping nor universal latent resistance explains reproducible positions with mostly sensitive colonies elsewhere.`
           },
           {
             question: `After the 1977 drought on Daphne Major left mainly large, hard seeds, surviving medium ground finches had deeper beaks than the pre-drought population, and their OFFSPRING also had deeper beaks than the pre-drought generation. The offspring measurement was essential because it established:`,
             options: [`That the drought increased the mutation rate for beak genes`, `That finches can deepen their beaks by cracking hard seeds`, `That beak depth is controlled by a single gene`, `That the survivors' deeper beaks were heritable`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Differential survival alone shows selection acting WITHIN a generation; only offspring resemblance shows the shift transmits across generations — the heritability ingredient that turns selection into evolution, so the population had actually evolved. No mutation-rate change is needed (selection sorted standing variation), beak depth is polygenic, and use-induced beak change would be an acquired trait that could not explain offspring born with deeper beaks.`
           },
           {
             question: `Modern whales retain small, functionless pelvic and hind-limb bones embedded in their body wall. In evolutionary reasoning, such vestigial structures are best interpreted as:`,
             options: [`Analogous structures produced by convergent evolution`, `Remnants of functional ancestral structures, showing common descent`, `Structures kept by strong positive selection in whales`, `Evidence that whales are actively re-evolving hind limbs`],
             correctAnswer: 1,
-            explanation: `Vestigial structures make sense only as inherited leftovers from ancestors in which they functioned (terrestrial, limbed ancestors of whales — confirmed by fossils like Ambulocetus). They are homologous, not analogous, to other vertebrate hindlimbs; their reduced state reflects relaxed or reversed selection, not strong positive maintenance, and evolution has no goal of "re-evolving" them.`
+            yield: 'HIGH',
+            explanation: `Vestigial structures make sense only as inherited leftovers from ancestors in which they functioned (terrestrial, limbed ancestors of whales — confirmed by fossil whale ancestors with hind limbs). They are homologous, not analogous, to other vertebrate hindlimbs; their reduced state reflects relaxed or reversed selection, not strong positive maintenance, and evolution has no goal of "re-evolving" them.`
           },
           {
             question: `Two species' cytochrome c genes differ at 12 neutral sites, while each differs from a third, more distantly related species at about 30 neutral sites. Under the molecular clock concept, these counts primarily allow researchers to estimate:`,
             options: [`The relative TIME since each pair of lineages diverged`, `Which species is most anatomically advanced`, `The strength of natural selection acting on cytochrome c function`, `The current population sizes of the three species`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Neutral substitutions accumulate at a roughly constant average rate, so neutral divergence scales with time since the lineages split — 30 differences implies a divergence roughly 2.5 times older than 12, once calibrated with fossil dates. NEUTRAL sites by definition say little about selection on the protein, nothing about "advancement" (no tip of a tree is more evolved), and divergence counts do not report population size.`
           },
           {
             question: `Twelve replicate fish populations experience a new predator; twelve matched replicates do not. Which outcome would MOST strongly indicate that camouflage coloration evolved by natural selection rather than genetic drift?`,
             options: [`Coloration changes in scattered, opposite directions across the predator-exposed replicates`, `Only the smallest predator-exposed populations change color`, `One predator-exposed population becomes dramatically more camouflaged while the others do not`, `Nearly all exposed replicates shift toward camouflage, unlike controls`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Selection is directional and repeatable: the same environment pushes nearly all independent predator-exposed replicates consistently toward camouflage, in large populations as well as small, and the unexposed controls isolate the predator as the cause. Scattered bidirectional change, effects confined to small populations, or a single-replicate anomaly are all what drift predicts, since drift is random in direction and strongest when populations are small.`
           }
         ]
@@ -110,7 +123,11 @@ A replica-plating test on a SEPARATE, never-exposed culture finds resistant colo
 - Peppered moths: reversible, environment-linked directional selection replicated across regions
 - Demonstrating adaptation experimentally requires a common-garden heritability check, fitness measured against the trait with controls, and replication
 - Selection vs. drift in data: consistent, size-independent, replicated directional shifts = selection; scattered, size-dependent shifts = drift
-- Molecular clocks: neutral divergence grows roughly linearly with time; calibrate with fossils, beware gene- and lineage-specific rate differences`
+- Molecular clocks: neutral divergence grows roughly linearly with time; calibrate with fossils, beware gene- and lineage-specific rate differences
+
+<!-- yield:low -->
+- Low-yield extras: named transitional fossils (Tiktaalik, fish to tetrapod; Ambulocetus, legged whale ancestor); molecular-clock rate extremes (histones slow, fibrinopeptides fast)
+<!-- /yield -->`
     }
   ]
 };

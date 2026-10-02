@@ -28,13 +28,17 @@ The population-genetic signature to memorize: **directional moves the mean; stab
 
 **Heterozygote advantage (overdominance)** maintains a stable polymorphism because the fittest genotype, Aa, cannot breed true — every generation of $Aa \\times Aa$ matings regenerates both homozygotes. Classic case: **sickle cell**. Where malaria is endemic, HbA/HbS heterozygotes resist severe malaria, outreproducing both HbA/HbA (malaria-susceptible) and HbS/HbS (sickle cell disease). Selection therefore holds HbS at high frequency in malaria regions and lets it decay where malaria is absent — allele frequency maps mirror malaria maps.
 
-**Heterozygote disadvantage (underdominance)** is unstable: whichever allele is rarer spends more of its time in low-fitness heterozygotes, so it is driven out. The population tips toward fixing whichever allele started more common.
+**Heterozygote disadvantage (underdominance)** is unstable: whichever allele is rarer spends more of its time in low-fitness heterozygotes, so it is driven out. The population tips toward fixing whichever allele starts on the favored side of an unstable equilibrium (the more common allele when the two homozygotes are equally fit).
 
 **Negative frequency-dependent selection** gives a genotype higher fitness when it is RARE (predators overlook uncommon prey morphs; rare self-incompatibility alleles in plants find more compatible mates). It actively protects polymorphism, pushing frequencies back toward an interior equilibrium.
 
 ### Inbreeding: Mating, Not Selection
 
-The inbreeding coefficient $F$ is the probability that an individual's two alleles are identical by descent. Inbreeding **redistributes genotypes** — heterozygosity falls from $2pq$ to $2pq(1 - F)$, with the deficit split between the homozygote classes — but by itself it does **not change allele frequencies**. It is not evolution at the allele level; it changes WHO carries the alleles. **Inbreeding depression** follows because rare deleterious recessives are suddenly exposed as homozygotes.
+Inbreeding (mating between relatives) **redistributes genotypes** — heterozygotes become rarer and both homozygote classes become more common — but by itself it does **not change allele frequencies**. It is not evolution at the allele level; it changes WHO carries the alleles. **Inbreeding depression** follows because rare deleterious recessives are suddenly exposed as homozygotes.
+
+<!-- yield:low -->
+The inbreeding coefficient $F$ is the probability that an individual's two alleles are identical by descent. Heterozygosity falls from $2pq$ to $2pq(1 - F)$, with the deficit split equally between the two homozygote classes.
+<!-- /yield -->
 
 ### Why Rare Recessives Resist Selection
 
@@ -58,7 +62,11 @@ $q' = \\frac{\\tfrac{1}{2}(0.48)(1) + (0.16)(0.5)}{\\bar{w}} = \\frac{0.24 + 0.0
 
 So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
 
-**Step 4 — Contrast with a RARE recessive.** For a recessive lethal ($s = 1$), the recursion is $q' = q/(1 + q)$. At $q = 0.01$: $q' = 0.01/1.01 \\approx 0.0099$ — a change of about 1% of its value, because only $q^2 = 0.0001$ of the population is visible to selection. Rare recessives are nearly immortal in the gene pool.
+**Step 4 — Contrast with a RARE recessive.** Now suppose aa is lethal ($s = 1$) and $q = 0.01$. Selection can remove only the aa class, $q^2 = 0.0001$ of the population, while about $2q = 0.02$ of the population carries the allele unseen. The share of all a copies sitting in aa individuals is $2q^2 / 2q = q$ — just 1% — so even a lethal removes only about 1% of the allele's copies per generation: $q$ falls from 0.0100 to about 0.0099. Rare recessives are nearly immortal in the gene pool.
+
+<!-- yield:low -->
+The general recursion for a recessive lethal is $q' = q/(1 + q)$, which gives $q_t = q_0/(1 + t\\,q_0)$ after $t$ generations: halving a rare lethal's frequency takes about $1/q_0$ generations (about 100 generations at $q_0 = 0.01$).
+<!-- /yield -->
 
 **Balanced-polymorphism check.** In a malaria zone, suppose $w_{AS} = 1$, $w_{AA} = 0.85$ (malaria deaths), $w_{SS} = 0.2$ (sickle cell disease). Both homozygotes lose to the heterozygote, so neither allele can be eliminated: at equilibrium the S allele settles where the two homozygote penalties balance — high enough that S can reach frequencies near 0.1 to 0.2 despite being lethal when homozygous.`
     },
@@ -72,30 +80,35 @@ So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
             question: `Genotype AA leaves an average of 100 offspring, Aa leaves 100, and aa leaves 60. The selection coefficient s against aa is:`,
             options: [`0.6`, `1.0`, `0.4`, `0.16`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Relative fitness is scaled to the best genotype: $w_{aa} = 60/100 = 0.6$, and $s = 1 - w = 0.4$. Choosing 0.6 confuses the fitness itself with the selection coefficient; 1.0 would mean aa is lethal or sterile, which contradicts its 60 offspring.`
           },
           {
             question: `The HbS (sickle) allele remains at frequencies above 10% in regions where malaria is endemic, despite HbS/HbS causing severe disease. The best explanation is:`,
             options: [`Heterozygotes resist malaria and outreproduce homozygotes`, `A high recurrent mutation rate from HbA to HbS`, `Genetic drift in large tropical populations`, `The HbS allele is dominant, shielding it from selection`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `This is the textbook balanced polymorphism: where malaria kills HbA/HbA individuals, the heterozygote resists malaria and has the highest fitness, outreproducing both homozygotes, and this heterozygote advantage (overdominance) holds both alleles in the population. Mutation rates (about $10^{-5}$ per generation or less) are far too small, drift is weak in large populations and would not track malaria geography, and HbS is not dominant for the disease phenotype.`
           },
           {
             question: `A population of songbirds experiences strong selection in which intermediate-sized individuals survive best. After many generations, the expected population-genetic outcome is:`,
             options: [`A shift in mean body size toward the larger extreme`, `An increase in variance and a bimodal size distribution`, `A change in mean size with no change in variance`, `Little change in mean body size but reduced variance in size`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Selection favoring the intermediate is stabilizing selection: it trims both tails, leaving the mean where it is while shrinking the variance. A mean shift is the signature of directional selection, and a bimodal, high-variance outcome is the signature of disruptive selection.`
           },
           {
             question: `In a population with no selection, mutation, migration, or drift, several generations of intense inbreeding will:`,
             options: [`Raise heterozygosity but leave allele frequencies unchanged`, `Raise homozygosity but leave allele frequencies unchanged`, `Raise homozygosity and lower the recessive allele frequency`, `Raise heterozygosity and lower the recessive allele frequency`],
             correctAnswer: 1,
-            explanation: `Inbreeding is nonrandom mating: it reshuffles alleles into more homozygous GENOTYPES — heterozygosity falls to $2pq(1-F)$ — but no allele copies are added or removed, so $p$ and $q$ are untouched. Allele frequencies only change afterward if the newly exposed recessive homozygotes suffer reduced fitness (inbreeding depression), which is a separate, selective step, excluded here by the absence of selection. Heterozygosity drops rather than rises, and the recessive allele frequency does not fall without selection.`
+            yield: 'HIGH',
+            explanation: `Inbreeding is nonrandom mating: it reshuffles alleles into more homozygous GENOTYPES — heterozygotes become rarer — but no allele copies are added or removed, so $p$ and $q$ are untouched. Allele frequencies only change afterward if the newly exposed recessive homozygotes suffer reduced fitness (inbreeding depression), which is a separate, selective step, excluded here by the absence of selection. Heterozygosity drops rather than rises, and the recessive allele frequency does not fall without selection.`
           },
           {
             question: `A fully penetrant lethal recessive allele is at frequency q = 0.01. Selection against it is extremely slow because:`,
             options: [`The mutation rate back to the normal allele is high`, `Lethal alleles are protected by heterozygote advantage`, `Nearly all copies are in unaffected carriers`, `Selection cannot act on alleles rarer than 5%`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `At $q = 0.01$, homozygotes are $q^2 = 0.0001$ of the population while carriers are about $2q = 0.02$ — roughly 200 carriers for every affected individual. Carriers are phenotypically normal, so the allele copies they hold are invisible to selection, which removes only the $q^2$ class each generation; the decline is glacial. Nothing in the problem invokes back-mutation or overdominance, and there is no 5% threshold below which selection stops acting.`
           }
         ]
@@ -108,10 +121,14 @@ So one generation of strong selection moves $q$ from 0.40 only to about 0.35.
 
 - Relative fitness $w$ is scaled to the best genotype; selection coefficient $s = 1 - w$
 - Directional selection shifts the mean; stabilizing shrinks variance; disruptive inflates variance (bimodality)
-- Heterozygote advantage (sickle cell in malaria zones) is a stable balanced polymorphism; heterozygote disadvantage is unstable and fixes the more common allele
+- Heterozygote advantage (sickle cell in malaria zones) is a stable balanced polymorphism; heterozygote disadvantage is unstable and fixes whichever allele starts on the favored side (the more common one when homozygotes are equally fit)
 - Negative frequency-dependent selection favors rare types and preserves polymorphism
-- Inbreeding raises $F$ and homozygosity — heterozygosity becomes $2pq(1-F)$ — without changing allele frequencies; inbreeding depression comes from exposed deleterious recessives
-- Selection against a rare recessive is inefficient because the allele hides in heterozygotes ($2pq$ dwarfs $q^2$); recessive lethals follow $q' = q/(1+q)$`
+- Inbreeding raises homozygosity and lowers heterozygosity without changing allele frequencies; inbreeding depression comes from exposed deleterious recessives
+- Selection against a rare recessive is inefficient because the allele hides in heterozygotes ($2pq$ dwarfs $q^2$); a lethal at frequency $q$ removes only about the fraction $q$ of its copies per generation
+
+<!-- yield:low -->
+- Low-yield extras: the inbreeding coefficient $F$ (probability two alleles are identical by descent) lowers heterozygosity to $2pq(1-F)$; a recessive lethal follows $q' = q/(1+q)$, so halving a rare lethal takes about $1/q_0$ generations
+<!-- /yield -->`
     }
   ]
 };

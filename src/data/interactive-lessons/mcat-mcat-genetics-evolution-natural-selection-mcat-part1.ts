@@ -29,9 +29,13 @@ Selection screens **individual phenotypes** — a predator catches the slow rabb
 - **Individuals do not evolve.** An organism's genotype is fixed at fertilization; it can acclimate physiologically, but acclimation is not evolution.
 - Environmentally caused phenotypes (a bodybuilder's muscles, a sun tan) are invisible to evolution because they are not transmitted.
 
-### Adaptation and Exaptation
+### Adaptation
 
-An **adaptation** is a heritable trait that increased in frequency BECAUSE it improved fitness in that environment. An **exaptation** is a trait that evolved serving one function and was later co-opted for another: feathers likely spread for insulation and display before any bird flew; middle-ear bones derive from reptilian jaw bones. Exaptations matter because they answer "what good is half a wing?" — the intermediate stages were useful for something else.
+An **adaptation** is a heritable trait that increased in frequency BECAUSE it improved fitness in that environment.
+
+<!-- yield:low -->
+An **exaptation** is a trait that evolved serving one function and was later co-opted for another: feathers likely spread for insulation and display before any bird flew; middle-ear bones derive from reptilian jaw bones. Exaptations matter because they answer "what good is half a wing?" — the intermediate stages were useful for something else.
+<!-- /yield -->
 
 ### Misconceptions to Kill on Sight
 
@@ -76,30 +80,35 @@ Fitness components compete for the same energy budget: bright coloration attract
             question: `In evolutionary biology, the fitness of an organism is best defined as its:`,
             options: [`Physical strength and ability to dominate rivals`, `Lifespan relative to other members of the population`, `Ability to survive extreme environmental conditions`, `Relative contribution of offspring to the next generation`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Fitness is reproductive success relative to others in the population. Strength, longevity, and survival matter only insofar as they increase the number of surviving offspring — an organism that survives a century but never reproduces has a fitness of zero for that generation.`
           },
           {
             question: `Which statement describes giraffe neck evolution in correct Darwinian (rather than Lamarckian) terms?`,
             options: [`Ancestral giraffes stretched their necks reaching for high leaves, and the lengthened necks were passed to offspring`, `Ancestral populations contained heritable variation in neck length, and longer-necked individuals left more offspring`, `Giraffes developed long necks because they needed to reach higher food`, `Every giraffe gradually grew a longer neck over its own lifetime as the species evolved`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Darwinian change requires pre-existing heritable variation plus differential reproduction. Necks stretched by reaching and then passed on, or necks that lengthen within each giraffe's own lifetime, describe inheritance of acquired characteristics (Lamarck), and developing long necks because they were needed invokes need-driven change — selection has no foresight and cannot create variation on demand.`
           },
           {
             question: `Natural selection acts directly on ______, while evolutionary change is measured in ______.`,
             options: [`phenotypes of individuals; allele frequencies of populations`, `genotypes of individuals; phenotypes of individuals`, `allele frequencies of populations; phenotypes of individuals`, `genotypes of individuals; allele frequencies of populations`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Predators, climates, and mates interact with an organism's PHENOTYPE; genotypes are screened only indirectly, through the phenotypes they help produce. The response — evolution — is a shift in allele frequencies across generations in the population. Individuals cannot evolve because their genotypes are fixed at fertilization.`
           },
           {
             question: `Feathers appear in the fossil record on non-flying dinosaurs, where they likely functioned in insulation and display, and were only later used in flight. Feathers used for flight are therefore an example of:`,
             options: [`Convergent evolution`, `An acquired characteristic`, `Exaptation`, `Directed mutation`],
             correctAnswer: 2,
+            yield: 'LOW',
             explanation: `A trait that evolved under selection for one role and was later recruited for a different role is an exaptation: a trait co-opted for a new function. This dissolves the "what good is half a wing?" objection: intermediate feathered forms were already useful for insulation and display. Convergence involves separate lineages independently evolving similar traits, mutations are never directed by the need to fly, and feathers are heritable, not characteristics acquired during an individual's life.`
           },
           {
             question: `Which process is the ultimate source of entirely NEW alleles in a population?`,
             options: [`Crossing over`, `Mutation`, `Independent assortment`, `Random fertilization`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Only mutation writes new sequence variants. Crossing over, independent assortment, and random fertilization are enormously important generators of new COMBINATIONS, but they can only shuffle alleles that mutation already created.`
           }
         ]
@@ -113,9 +122,13 @@ Fitness components compete for the same energy budget: bright coloration attract
 - Selection follows necessarily from heritable variation plus differential reproductive success; remove either ingredient and the trait cannot evolve
 - Fitness = relative reproductive success; survival and vigor are only means to that end
 - Selection screens phenotypes; evolution is a change in population allele frequencies — individuals never evolve, and acquired traits are not inherited
-- Adaptation = trait spread because it raised fitness; exaptation = trait co-opted for a new role (feathers, middle-ear bones)
+- Adaptation = heritable trait that spread because it raised fitness in that environment
 - No foresight, no need-driven change, no perfection: selection can only sort existing variation under trade-off constraints
-- Mutation is the sole source of new alleles; recombination, independent assortment, and random fertilization multiply combinations`
+- Mutation is the sole source of new alleles; recombination, independent assortment, and random fertilization multiply combinations
+
+<!-- yield:low -->
+- Low-yield extras: exaptation = a trait co-opted for a new role after evolving for another (feathers for insulation and display before flight; middle-ear bones from reptilian jaw bones), which answers "what good is half a wing?"
+<!-- /yield -->`
     }
   ]
 };

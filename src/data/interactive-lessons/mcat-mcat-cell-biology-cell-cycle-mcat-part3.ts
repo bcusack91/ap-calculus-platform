@@ -10,7 +10,11 @@ export const mcatCellCyclePart3Data = {
 
 ### p53 — Guardian of the Genome
 
-**p53** is a transcription factor kept scarce in healthy cells: the E3 ubiquitin ligase **MDM2** continuously tags it for proteasomal destruction. DNA damage (via ATM/ATR kinases) phosphorylates p53, blocking MDM2 binding — p53 **stabilizes and accumulates** (regulation by degradation, not synthesis).
+**p53** is a transcription factor kept scarce in healthy cells: the E3 ubiquitin ligase **MDM2** continuously tags it for proteasomal destruction. DNA damage signaling (checkpoint kinases) phosphorylates p53, blocking MDM2 binding — p53 **stabilizes and accumulates** (regulation by degradation, not synthesis).
+
+<!-- yield:low -->
+- The damage-sensing kinases are ATM and ATR.
+<!-- /yield -->
 
 Accumulated p53 transcribes a triage program:
 
@@ -18,8 +22,12 @@ Accumulated p53 transcribes a triage program:
 |--------|---------|
 | **p21** | CDK inhibition → G$_1$ arrest (pause to repair) |
 | DNA repair genes | Fix the damage |
-| **PUMA, BAX** | If damage is irreparable → apoptosis |
-| MDM2 itself | Negative feedback — the alarm resets once damage clears |
+| **BAX** and other pro-apoptotic genes | If damage is irreparable → apoptosis |
+| MDM2 (its own ubiquitin ligase) | Negative feedback — the alarm resets once damage clears |
+
+<!-- yield:low -->
+- PUMA is the other classic pro-apoptotic p53 target.
+<!-- /yield -->
 
 - **TP53 is mutated in over half of human cancers** — the single most commonly mutated cancer gene
 - **Li-Fraumeni syndrome**: inherited one bad TP53 allele → early cancers of many tissues (the second allele is lost somatically)
@@ -29,10 +37,14 @@ Accumulated p53 transcribes a triage program:
 Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cysteine proteases cleaving after aspartate, made as inactive zymogens):
 
 **Intrinsic (mitochondrial) pathway** — the cell-cycle-relevant one:
-1. Stress/damage shifts the balance of **Bcl-2 family** proteins: pro-apoptotic **BAX/BAK** overcome anti-apoptotic **Bcl-2/Bcl-xL**
+1. Stress/damage shifts the balance of **Bcl-2 family** proteins: pro-apoptotic **BAX/BAK** overcome anti-apoptotic **Bcl-2**
 2. BAX/BAK permeabilize the outer mitochondrial membrane → **cytochrome c** escapes to the cytosol
-3. Cytochrome c + Apaf-1 assemble the **apoptosome**, activating initiator **caspase-9**
+3. Cytochrome c assembles the **apoptosome**, activating initiator **caspase-9**
 4. Caspase-9 activates executioner **caspases-3/7** → controlled demolition
+
+<!-- yield:low -->
+- Bcl-xL is a second anti-apoptotic family member, and the adaptor that cytochrome c binds to build the apoptosome is Apaf-1.
+<!-- /yield -->
 
 **Extrinsic (death receptor) pathway**: Fas ligand or TNF binds surface death receptors → initiator **caspase-8** → executioners. Used by cytotoxic T cells and immune homeostasis.
 
@@ -59,18 +71,21 @@ Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cyst
             question: `In unstressed cells p53 protein is nearly undetectable, yet within an hour of irradiation it is abundant — without any increase in TP53 mRNA. The mechanism is:`,
             options: [`MDM2 can no longer ubiquitinate p53, which accumulates`, `Radiation directly switches on transcription of the TP53 gene`, `Radiation halts all protein synthesis except that of p53`, `p53 protein is imported from neighboring damaged cells`],
             correctAnswer: 0,
-            explanation: `p53 is constitutively made and constitutively destroyed; its steady-state level is set by MDM2-driven turnover. ATM/ATR phosphorylation of p53 (and MDM2) breaks the interaction, so half-life jumps from minutes to hours with no transcriptional change. Regulation-by-stabilization is faster than transcription — appropriate for an emergency responder — and the constant mRNA with rising protein is the passage giveaway.`
+            yield: 'MEDIUM',
+            explanation: `p53 is constitutively made and constitutively destroyed; its steady-state level is set by MDM2-driven turnover. Checkpoint-kinase phosphorylation of p53 (and MDM2) breaks the interaction, so half-life jumps from minutes to hours with no transcriptional change. Regulation-by-stabilization is faster than transcription — appropriate for an emergency responder — and the constant mRNA with rising protein is the passage giveaway.`
           },
           {
             question: `A lymphoma overexpresses Bcl-2 due to a chromosomal translocation. These tumor cells resist chemotherapy primarily because:`,
             options: [`Bcl-2 directly repairs the DNA damage caused by the drugs`, `Bcl-2 drives cells past checkpoints faster than the drug`, `Bcl-2 blocks BAX/BAK pores, so cytochrome c stays in`, `Bcl-2 pumps chemotherapeutic drugs back out of the cell`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Most chemotherapies kill by damaging cells badly enough that the intrinsic apoptotic pathway executes them. Bcl-2 guards the mitochondrial outer membrane; overexpression raises the threshold for BAX/BAK pore formation, so cytochrome c stays inside and caspase-9 is never activated — damaged cells survive. This is follicular lymphoma's t(14;18) lesion: an oncogene that works by blocking death rather than driving proliferation.`
           },
           {
             question: `A child develops bilateral retinoblastoma at age one; an unrelated adult develops a single unilateral tumor at 25. Knudson's two-hit model explains the difference because the child:`,
             options: [`Was exposed to far more ionizing radiation in utero`, `Inherited one mutant RB allele in every cell of the body`, `Carries a dominant activating oncogene in the retina`, `Has defective apoptosis in every tissue of the body`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `RB is a tumor suppressor: both alleles must be lost. In hereditary cases every retinoblast starts one hit deep, and with millions of target cells, several will independently take the second hit — early, bilateral, often multifocal tumors. Sporadic disease needs two rare hits in the SAME cell: later onset, single tumor. The kinetics of tumor appearance were Knudson's actual data — a statistics argument establishing a molecular mechanism.`
           }
         ]
@@ -93,16 +108,29 @@ Apoptosis is ATP-dependent, non-inflammatory, and executed by **caspases** (cyst
 
 ### Senescence — The Third Fate
 
-Besides cycling and apoptosis, damaged or telomere-exhausted cells can enter **senescence**: permanent G$_1$ exit enforced by p16/Rb and p53/p21, cells remain metabolically alive. Senescence is a tumor-suppressive barrier (oncogene-induced senescence explains why benign moles with BRAF mutations stop growing).
+Besides cycling and apoptosis, damaged or telomere-exhausted cells can enter **senescence**: permanent G$_1$ exit enforced by p16/Rb and p53/p21, cells remain metabolically alive. Senescence is a tumor-suppressive barrier: an activated oncogene can itself trigger senescence (oncogene-induced senescence), halting a lesion before it becomes a cancer.
+
+<!-- yield:low -->
+- Benign moles are the classic example: they carry activating BRAF mutations, yet stop growing because of oncogene-induced senescence.
+<!-- /yield -->
 
 ### Metastasis in One Paragraph
 
-Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — part of the epithelial-to-mesenchymal transition (EMT) — then basement-membrane degradation (matrix metalloproteinases), intravasation, survival in circulation, extravasation, and colonization. Tumors also secrete **VEGF** to recruit blood vessels (angiogenesis); without new vessels a tumor stalls at ~1-2 mm (diffusion limit).
+Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — part of the epithelial-to-mesenchymal transition (EMT) — then basement-membrane degradation (matrix metalloproteinases), intravasation, survival in circulation, extravasation, and colonization. Tumors also secrete **VEGF** to recruit blood vessels (angiogenesis); without new vessels a tumor stalls at a small size, set by the diffusion limit for oxygen and nutrients.
+
+<!-- yield:low -->
+- That avascular limit is roughly 1-2 mm.
+<!-- /yield -->
 
 ### Therapy Logic Preview
 
 - Traditional chemo (spindle poisons, antimetabolites, alkylators) targets **proliferation itself** → toxic to gut/marrow/hair
-- Targeted agents exploit specific lesions: imatinib (BCR-ABL), trastuzumab (HER2), CDK4/6 inhibitors (palbociclib — only useful when Rb is intact, a beautiful pathway-logic question)
+- Targeted agents exploit specific lesions: imatinib (BCR-ABL), trastuzumab (HER2), CDK4/6 inhibitors (only useful when Rb is intact, a beautiful pathway-logic question)
+
+<!-- yield:low -->
+- Palbociclib is the prototype CDK4/6 inhibitor.
+<!-- /yield -->
+
 - **Synthetic lethality**: PARP inhibitors kill BRCA-mutant cells because losing BOTH single-strand repair (drug) and homologous recombination (mutation) is lethal, while normal cells retain one route`
     },
     {
@@ -115,12 +143,14 @@ Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — par
             question: `CDK4/6 inhibitors benefit breast cancers with cyclin D overexpression but fail entirely in tumors that have deleted the RB gene. The reason for the failure is that:`,
             options: [`RB deletion raises drug efflux through ABC transporters`, `CDK4/6 inhibitors need Rb as a cofactor to bind CDK4`, `RB-deleted cells cannot enter the cell cycle at all`, `Without Rb, E2F is free regardless of CDK4/6 activity`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The drug works upstream of Rb: it prevents Rb phosphorylation, keeping E2F sequestered. If Rb itself is gone, E2F is permanently liberated and the pathway's control node has vanished — blocking the kinase that would have phosphorylated a nonexistent brake accomplishes nothing. Drug-sensitivity-depends-on-downstream-intactness is a signature MCAT reasoning pattern.`
           },
           {
             question: `Fibroblasts transfected with an activated RAS gene form colonies in soft agar, while untransfected fibroblasts do not. This result demonstrates that the transfected cells have:`,
             options: [`Lost their dependence on anchorage for growth`, `Gained contact inhibition and stopped dividing`, `Become dependent on much higher serum levels`, `Entered permanent replicative senescence early`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Normal adherent cells require integrin-mediated attachment signals to pass the restriction point; suspended in agar, they arrest. Growth as free-floating colonies means proliferation signaling has become attachment-independent — constitutive Ras output substitutes for the missing adhesion and growth-factor inputs. Soft agar is the classic functional read-out that a gene is transforming (oncogenic).`
           }
         ]
@@ -131,13 +161,17 @@ Invasion requires loss of **E-cadherin** (epithelial cell-cell adhesion) — par
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- p53 is regulated by degradation: MDM2 destroys it continuously; damage signaling (ATM/ATR) stabilizes it → p21 (arrest), repair genes, or PUMA/BAX (apoptosis); mutated in >50% of cancers; Li-Fraumeni = inherited first hit
+- p53 is regulated by degradation: MDM2 (an E3 ubiquitin ligase) destroys it continuously; damage signaling stabilizes it → p21 (arrest), repair genes, or BAX (apoptosis); mutated in >50% of cancers; Li-Fraumeni = inherited first hit
 - Intrinsic apoptosis: Bcl-2 family balance → BAX/BAK pores → cytochrome c → apoptosome → caspase-9 → caspases-3/7; extrinsic: death receptors → caspase-8
 - Apoptosis is tidy (shrinkage, laddering, PS exposure, no inflammation); necrosis is messy (swelling, lysis, inflammation)
 - Oncogenes = stuck accelerator, one allele, gain-of-function (RAS, MYC, HER2, Bcl-2); tumor suppressors = cut brakes, two hits, loss-of-function (RB, TP53, PTEN, BRCA)
 - Two-hit model: inherited first hit → early, multiple, bilateral tumors; sporadic → late, single
 - Transformation signatures: no contact inhibition, anchorage independence (soft agar), immortality via telomerase, reduced growth-factor need
-- Therapy logic: targeted drugs need their pathway node intact (CDK4/6 inhibitors need Rb); synthetic lethality (PARP + BRCA) kills only doubly-deficient cells`
+- Therapy logic: targeted drugs need their pathway node intact (CDK4/6 inhibitors need Rb); synthetic lethality (PARP + BRCA) kills only doubly-deficient cells
+
+<!-- yield:low -->
+- Low-yield extras: ATM/ATR are the damage kinases; PUMA is a second pro-apoptotic p53 target; Bcl-xL is another anti-apoptotic Bcl-2 member; Apaf-1 is the apoptosome adaptor; BRAF-mutant moles illustrate oncogene-induced senescence; the avascular tumor limit is ~1-2 mm; palbociclib is the prototype CDK4/6 inhibitor
+<!-- /yield -->`
     }
   ]
 };

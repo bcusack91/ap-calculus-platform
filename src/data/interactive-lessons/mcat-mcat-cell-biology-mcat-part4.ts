@@ -61,18 +61,21 @@ Prophase I is the longest and most complex phase:
             question: `Crossing over occurs between:`,
             options: [`Non-sister chromatids of homologs during prophase I`, `Sister chromatids of one chromosome during prophase I`, `Non-sister chromatids of homologs during metaphase II`, `Non-homologous chromosomes paired during prophase I`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Crossing over exchanges genetic material between non-sister chromatids of homologous chromosomes during prophase I, forming chiasmata. Sister chromatid exchange would not produce new combinations because sisters are genetically identical (before crossing over).`
           },
           {
             question: `After meiosis I but before meiosis II, a human cell contains:`,
             options: [`23 chromosomes, 46 chromatids (1n, 2C)`, `46 chromosomes, 92 chromatids (2n, 4C)`, `23 chromosomes, 23 chromatids (1n, 1C)`, `46 chromosomes, 46 chromatids (2n, 2C)`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Meiosis I is the reduction division: homologs separate, going from 2n to 1n. But sister chromatids are still joined, so each chromosome still has 2 chromatids (2C DNA). Meiosis II then separates sisters: 1n, 1C.`
           },
           {
             question: `Independent assortment generates diversity because:`,
             options: [`Each homolog pair orients randomly at metaphase I`, `Homologs always segregate in the same fixed pattern`, `Crossing over at metaphase I swaps whole chromosomes`, `Linked genes on one chromosome always sort separately`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `At metaphase I, each bivalent (pair of homologs) independently chooses which pole to face. With 23 bivalents in humans: $2^{23} \\approx 8.4$ million possible combinations per gamete, even without crossing over. This is Mendel's Law of Independent Assortment.`
           }
         ]
@@ -92,14 +95,17 @@ Prophase I is the longest and most complex phase:
 - **Trisomy 21** (Down syndrome): 3 copies of chromosome 21
 - **Turner syndrome** (45, XO): only one X chromosome in females
 - **Klinefelter syndrome** (47, XXY): extra X in males
+
+<!-- yield:low -->
 - **Trisomy 18** (Edwards syndrome), **Trisomy 13** (Patau syndrome)
+<!-- /yield -->
 
 ### Oogenesis vs. Spermatogenesis
 
 | Feature | Spermatogenesis | Oogenesis |
 |---------|----------------|-----------|
-| Products per meiosis | 4 functional sperm | 1 functional egg + 3 polar bodies |
-| Timing | Continuous from puberty | Begins in fetal life, arrested at prophase I until ovulation |
+| Products per meiosis | 4 functional sperm | 1 functional egg + 2–3 polar bodies |
+| Timing | Continuous from puberty | Begins in fetal life, arrested at prophase I until ovulation, then at metaphase II until fertilization |
 | Completion | ~64 days per cycle | May take decades (arrested at prophase I!) |
 | Location | Seminiferous tubules (testes) | Ovarian follicles |
 
@@ -123,12 +129,14 @@ The MCAT loves to test this:
             question: `Nondisjunction during meiosis I produces:`,
             options: [`Four gametes, all with abnormal chromosome numbers`, `Two normal gametes and two with abnormal numbers`, `One gamete with an extra chromosome, three normal`, `Four normal gametes if crossing over has occurred`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In meiosis I nondisjunction, both homologs go to one cell. After meiosis II: 2 gametes have an extra chromosome (n+1) and 2 are missing one (n-1). All 4 are abnormal. In meiosis II nondisjunction, only 2 of 4 gametes are affected.`
           },
           {
             question: `Female oocytes are arrested at prophase I until ovulation. This long arrest contributes to increased risk of aneuploidy in older mothers because:`,
             options: [`Cohesin holding sister chromatids together degrades over time`, `DNA replication errors pile up during the long arrest`, `Spindle microtubules lose elasticity as the oocyte ages`, `The nuclear envelope grows leaky during decades of arrest`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Oocytes can remain arrested in prophase I for 12-50+ years. During this time, cohesin complexes (which hold chromosomes together) gradually degrade. Weakened cohesion → increased chance of improper segregation → nondisjunction → aneuploid offspring (e.g., Down syndrome risk increases with maternal age).`
           }
         ]
@@ -143,9 +151,13 @@ The MCAT loves to test this:
 - Prophase I is unique: synapsis, crossing over at chiasmata, recombinant chromosomes
 - Genetic diversity: crossing over + independent assortment ($2^{23}$) + random fertilization
 - Nondisjunction in meiosis I → all 4 gametes abnormal; in meiosis II → 2 of 4 abnormal
-- Spermatogenesis → 4 functional sperm; Oogenesis → 1 egg + 3 polar bodies
+- Spermatogenesis → 4 functional sperm; Oogenesis → 1 egg + 2–3 polar bodies
 - Oocyte arrest at prophase I for decades → cohesin degradation → maternal age-related aneuploidy
-- Always track ploidy (n) and DNA content (C) independently`
+- Always track ploidy (n) and DNA content (C) independently
+
+<!-- yield:low -->
+- Low-yield extras: the rarer named trisomies — trisomy 18 (Edwards) and trisomy 13 (Patau)
+<!-- /yield -->`
     }
   ]
 };

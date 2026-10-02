@@ -92,30 +92,35 @@ Carriers $= 0.1128 \\times 10000 = 1128$ people.
             question: `In a sample of 200 individuals: 90 are AA, 60 are Aa, and 50 are aa. What is the frequency of allele a?`,
             options: [`0.40`, `0.25`, `0.55`, `0.30`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Count alleles: $a$ copies $= 2(50) + 60 = 160$ out of $2 \\times 200 = 400$ total, so $q = 160/400 = 0.40$. Answer 0.25 is the aa GENOTYPE frequency (50/200) — genotype frequency and allele frequency are different quantities.`
           },
           {
             question: `A recessive condition affects 1 in 2,500 newborns in a large randomly mating population. The expected carrier frequency is approximately:`,
             options: [`1/2500`, `1/25`, `1/50`, `1/625`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `$q^2 = 1/2500$ → $q = 1/50 = 0.02$; $p = 0.98$. Carriers $= 2pq = 2(0.98)(0.02) \\approx 0.039 \\approx 1/25$. Shortcut: $2q = 2/50 = 1/25$. Choosing 1/50 confuses the ALLELE frequency with the carrier (heterozygote) frequency.`
           },
           {
             question: `Which situation still satisfies Hardy-Weinberg assumptions?`,
             options: [`Individuals preferentially mate with phenotypically similar partners`, `A small island population of 30 breeding adults`, `A huge, closed population with equal fitness and no mutation`, `Steady one-way migration from a neighboring population each generation`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `A huge population whose genotypes survive and reproduce equally well, with no migration in or out and no new mutations, violates none of the stated assumptions, unlike every other option. H-W requires all five conditions at once: no selection, no mutation, no migration, random mating, and large population size. Assortative mating violates random mating, 30 adults invites drift, and one-way migration is gene flow.`
           },
           {
             question: `In a Hardy-Weinberg population, 64% of individuals display the dominant phenotype. What fraction of the population is heterozygous?`,
             options: [`0.36`, `0.48`, `0.16`, `0.24`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Recessive phenotype $= 1 - 0.64 = 0.36 = q^2$, so $q = 0.6$ and $p = 0.4$. Heterozygotes $= 2pq = 2(0.4)(0.6) = 0.48$. The trap is taking $\\sqrt{0.64}$: the dominant phenotype mixes $p^2$ and $2pq$, so it can never be square-rooted directly.`
           },
           {
             question: `Why must the Hardy-Weinberg solving process begin with the recessive phenotype frequency rather than the dominant one?`,
             options: [`Recessive alleles are more common than dominant alleles`, `Dominant phenotypes cannot be counted accurately in the field`, `The recessive allele frequency is always exactly 0.5`, `Only the recessive phenotype has a single genotype`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The recessive phenotype corresponds to exactly one genotype ($q^2$), while the dominant phenotype pools two genotypes ($p^2 + 2pq$). Only the recessive class maps one-to-one onto a genotype, so only it yields an allele frequency by a simple square root. Dominance says nothing about how COMMON an allele is (dominant alleles can be rare, e.g., Huntington), so recessive alleles are not generally more common, and no allele frequency is fixed at 0.5. Dominant phenotypes can be counted just as easily; the problem is that their count cannot be square-rooted.`
           }
         ]

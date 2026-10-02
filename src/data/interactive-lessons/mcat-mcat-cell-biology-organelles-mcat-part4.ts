@@ -12,7 +12,12 @@ export const mcatCellOrganellesPart4Data = {
 
 - **Nuclear envelope**: two membranes; the outer one is continuous with the rough ER and can carry ribosomes. The envelope is perforated by **nuclear pore complexes (NPCs)**.
 - **Traffic rules**: ions and proteins under ~40 kDa diffuse through pores freely; larger proteins need a **nuclear localization signal (NLS)** recognized by importins, and export needs a nuclear export signal (NES) with exportins. The **Ran-GTP gradient** (high GTP-bound Ran inside the nucleus) gives transport its direction — cargo drops off where Ran-GTP binds importin.
-- **Nuclear lamina**: a mesh of lamin **intermediate filaments** under the inner membrane. Phosphorylation of lamins by mitotic CDKs disassembles the envelope in prometaphase; dephosphorylation reassembles it in telophase. Lamin mutations cause progeria — a favorite structure-to-disease link.
+- **Nuclear lamina**: a mesh of lamin **intermediate filaments** under the inner membrane. Phosphorylation of lamins by mitotic CDKs disassembles the envelope in prometaphase; dephosphorylation reassembles it in telophase.
+
+<!-- yield:low -->
+- Lamin mutations cause progeria (Hutchinson-Gilford premature aging).
+<!-- /yield -->
+
 - **Nucleolus**: not membrane-bound; the site of rRNA transcription (RNA Pol I) and ribosomal subunit assembly. Cells ramping up protein synthesis grow larger nucleoli.
 - Key consequence of the envelope: **transcription and translation are uncoupled in eukaryotes** — splicing happens before export, so introns never meet a ribosome. Prokaryotes, lacking a nucleus, translate mRNA while it is still being made.
 
@@ -20,13 +25,21 @@ export const mcatCellOrganellesPart4Data = {
 
 | Process | Machinery | Why it matters |
 |---------|-----------|----------------|
-| Mitochondrial fission | Drp1 (a dynamin-like GTPase) | Distributes mitochondria to daughter cells; isolates damaged segments for mitophagy |
-| Mitochondrial fusion | Mitofusins (outer), OPA1 (inner) | Mixes contents, buffers mtDNA mutations — complements heteroplasmy logic from Part 3 |
-| ER-mitochondria contact sites | Tethering proteins (MAMs) | Direct Ca$^{2+}$ transfer and lipid exchange without vesicles |
+| Mitochondrial fission | A dynamin-like GTPase constricts the organelle | Distributes mitochondria to daughter cells; isolates damaged segments for mitophagy |
+| Mitochondrial fusion | Fusion GTPases on the outer and inner membranes | Mixes contents, buffers mtDNA mutations — complements heteroplasmy logic from Part 3 |
+| ER-mitochondria contact sites | Tethering proteins | Direct Ca$^{2+}$ transfer and lipid exchange without vesicles |
 | Autophagy/mitophagy | Double-membrane autophagosome, then lysosome fusion | Quality control; induced by starvation (mTOR off) |
 
+<!-- yield:low -->
+- Machinery names: **Drp1** drives fission; **mitofusins** (outer membrane) and **OPA1** (inner membrane) drive fusion; ER-mitochondria contacts are called **MAMs** (mitochondria-associated membranes).
+<!-- /yield -->
+
 - **Inheritance at division**: organelles are not built from scratch — ER, Golgi fragments, and mitochondria are partitioned to daughters, and mitochondria arise only from existing mitochondria (fission), echoing endosymbiosis.
-- **Vesicle identity refresher** (from Part 2): COPII = ER to Golgi (anterograde); COPI = Golgi to ER (retrograde, KDEL receptors); clathrin = trans-Golgi to lysosome and receptor-mediated endocytosis.
+- **Vesicle identity refresher** (from Part 2): ER-to-Golgi vesicles run anterograde, Golgi-to-ER vesicles retrieve escaped ER residents; **clathrin** coats vesicles from the trans-Golgi to lysosomes and in receptor-mediated endocytosis.
+
+<!-- yield:low -->
+- Coat names: COPII = ER to Golgi (anterograde); COPI = Golgi to ER (retrograde, KDEL receptors).
+<!-- /yield -->
 
 ### The Passage-Strategy Layer
 
@@ -66,31 +79,36 @@ Organelle passages almost never ask "what does the Golgi do?" They give you an *
             question: `A 100 kDa transcription factor accumulates in the nucleus in healthy cells. After a mutation deletes a short basic stretch of its sequence, the protein remains functional in vitro but stays cytosolic. The deleted element is most likely:`,
             options: [`A signal peptide for the rough ER`, `A mannose-6-phosphate sorting tag`, `A transmembrane anchor sequence`, `A nuclear localization signal`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `A 100 kDa protein is far above the nuclear pore's passive diffusion limit, so nuclear entry requires an NLS — classically a short, basic (lysine/arginine-rich) stretch bound by importins. A signal peptide would have sent it INTO the ER lumen (and it was nuclear before the mutation), M6P routes lysosomal hydrolases, and a transmembrane anchor would place it in a membrane, not the nucleoplasm.`
           },
           {
             question: `In prokaryotes, ribosomes commonly translate an mRNA while RNA polymerase is still transcribing it. The reason this is impossible for a eukaryotic nuclear gene is that:`,
             options: [`Eukaryotic RNA polymerase degrades ribosomes it meets`, `The nuclear envelope separates the two processes`, `Eukaryotic ribosomes need a Shine-Dalgarno sequence`, `Eukaryotic mRNA is translated in the nucleolus`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Compartmentalization uncouples the two processes: pre-mRNA is capped, spliced, and polyadenylated inside the nucleus, and only mature mRNA is exported through nuclear pores to meet ribosomes. This is why intron-containing transcripts are never translated in healthy cells. The Shine-Dalgarno point is a prokaryotic initiation detail, not the barrier; the nucleolus assembles ribosomal subunits and translates nothing.`
           },
           {
             question: `At the onset of mitosis, the nuclear envelope disassembles. The direct molecular trigger is:`,
             options: [`The envelope fuses with the plasma membrane and is lost`, `Lysosomal hydrolases digest the nuclear envelope`, `CDK phosphorylation of lamins disassembles the lamina`, `Ran-GTP hydrolysis seals the nuclear pore complexes`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `The lamina is a shell of lamin intermediate filaments; mitotic CDK (cyclin B-CDK1) phosphorylation makes lamins disassemble, and the envelope fragments into vesicles/ER until telophase, when phosphatases reverse the modification. It is a reversible phosphorylation switch — no proteolysis or membrane fusion with the cell surface is involved. The same add-phosphate/remove-phosphate logic runs the whole cell cycle lesson.`
           },
           {
             question: `Cells expressing a dominant-negative Drp1 (blocking mitochondrial fission) accumulate elongated, hyperfused mitochondria. Which downstream defect is the most direct prediction?`,
             options: [`Damaged segments cannot be pinched off and sent to mitophagy`, `Loss of the proton gradient across the inner membrane`, `Failure to transcribe nuclear-encoded mitochondrial genes`, `Immediate arrest of glycolysis in the cytosol`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Fission serves logistics: it pinches off damaged segments so autophagosomes can engulf them (mitophagy) and creates enough discrete units to distribute to daughter cells. Blocking it therefore lets damage accumulate in the network and skews inheritance. Fusion, not fission, mixes contents; the ETC can still run in a hyperfused network, and glycolysis is cytosolic — deliberately placed distractors from adjacent compartments.`
           },
           {
             question: `A secreted protease is normal in sequence, yet in patient cells it accumulates in the Golgi and never reaches secretory vesicles; all other secreted proteins behave normally. The most focused hypothesis is a defect in:`,
-            options: [`The signal recognition particle in the cytosol`, `Proteasomal degradation of the mature protein`, `General vesicle fusion machinery at the surface`, `A sorting receptor specific to this one cargo`],
+            options: [`The signal recognition particle in the cytosol`, `ER-associated proteasomal degradation of the protein`, `General vesicle fusion machinery at the surface`, `A sorting receptor specific to this one cargo`],
             correctAnswer: 3,
-            explanation: `Localization plus specificity is the whole question: the block is AFTER the ER (protein reached the Golgi, so SRP and translocation work) and affects ONE cargo (so shared machinery like SNARE-mediated fusion or COPII is intact). That leaves a cargo-specific sorting event at the trans-Golgi — the same one-station-upstream logic as I-cell disease, where the M6P tag fails and hydrolases are missorted. Broken-shared-machinery answers contradict the normal behavior of other proteins.`
+            yield: 'MEDIUM',
+            explanation: `Localization plus specificity is the whole question: the block is AFTER the ER (protein reached the Golgi, so SRP and translocation work) and affects ONE cargo (so shared machinery like ER-to-Golgi transport and vesicle fusion is intact). That leaves a cargo-specific sorting event at the trans-Golgi — the same one-station-upstream logic as I-cell disease, where the M6P tag fails and hydrolases are missorted. Broken-shared-machinery answers contradict the normal behavior of other proteins. ER-associated degradation destroys misfolded proteins in the ER, which would deplete the protein rather than strand it in the Golgi.`
           }
         ]
       }
@@ -104,9 +122,13 @@ Organelle passages almost never ask "what does the Golgi do?" They give you an *
 - Accumulation against a gradient = signal + receptor + energy; equilibration = passive diffusion — brightness patterns in injection experiments tell you which
 - Nuclear lamina = lamin intermediate filaments; CDK phosphorylation dissolves the envelope in mitosis, dephosphorylation rebuilds it; nucleolus (no membrane) = rRNA synthesis and subunit assembly
 - The envelope uncouples transcription from translation: splicing precedes export, so eukaryotes never translate introns; prokaryotes co-transcriptionally translate
-- Mitochondria remodel constantly: Drp1 fission (segregation, mitophagy) vs mitofusin/OPA1 fusion (content mixing buffers heteroplasmy); ER-mitochondria contacts pass Ca$^{2+}$ and lipids directly
+- Mitochondria remodel constantly: fission (segregation, mitophagy) vs fusion (content mixing buffers heteroplasmy); ER-mitochondria contacts pass Ca$^{2+}$ and lipids directly
 - Passage strategy: localize (markers, fractionation), trace the secretory route and stall one station upstream of the lesion, classify enzyme-vs-delivery-vs-compartment defects, and ask which gradient (pH, Ca$^{2+}$, redox, Ran-GTP) powers the step
-- Specific-cargo defects point to specific sorting signals/receptors; everything-affected defects point to shared machinery`
+- Specific-cargo defects point to specific sorting signals/receptors; everything-affected defects point to shared machinery
+
+<!-- yield:low -->
+- Low-yield extras: lamin mutations cause progeria; Drp1 drives fission, mitofusins (outer) and OPA1 (inner) drive fusion, ER-mitochondria contacts are MAMs; COPII = anterograde coat, COPI = retrograde coat (KDEL)
+<!-- /yield -->`
     }
   ]
 };

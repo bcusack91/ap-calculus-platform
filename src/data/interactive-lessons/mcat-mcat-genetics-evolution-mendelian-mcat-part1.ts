@@ -47,7 +47,7 @@ For any multi-gene cross with independent assortment, decompose into single-gene
 
 ### How Many Gamete Types?
 
-An individual heterozygous at $n$ independently assorting loci produces $2^n$ genetically distinct gamete classes (ignoring crossing over within genes). AaBBCc → heterozygous at 2 loci → $2^2 = 4$ gamete types.`
+An individual heterozygous at $n$ independently assorting loci produces $2^n$ genetically distinct gamete classes (assuming the loci are unlinked). AaBBCc → heterozygous at 2 loci → $2^2 = 4$ gamete types.`
     },
     {
       id: 'men1-worked',
@@ -77,30 +77,35 @@ $P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$
             question: `Which meiotic event is the physical basis of Mendel's Law of Segregation?`,
             options: [`Crossing over between homologs in prophase I`, `Separation of homologous chromosomes in anaphase I`, `Separation of sister chromatids in anaphase II`, `Alignment of chromosomes in metaphase II`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The two alleles of a gene sit on the two homologous chromosomes. When homologs separate in anaphase I, the alleles segregate into different cells — the Law of Segregation. (Metaphase I ORIENTATION underlies independent assortment; anaphase II separates identical sister chromatids.)`
           },
           {
             question: `An individual with genotype AaBbCCDd (all genes on different chromosomes) can produce how many genetically distinct gamete classes?`,
             options: [`16`, `4`, `8`, `2`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Only heterozygous loci contribute choices: Aa, Bb, and Dd are heterozygous (3 loci); CC always contributes C. So $2^3 = 8$ gamete types. The distractor 16 comes from wrongly counting CC as a fourth heterozygous locus.`
           },
           {
             question: `In the cross $AaBb \\times aabb$ with independent assortment, what fraction of offspring show BOTH dominant phenotypes?`,
             options: [`9/16`, `1/2`, `1/8`, `1/4`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `Each gene is a test-cross pattern: $P(A\\_) = \\tfrac{1}{2}$ and $P(B\\_) = \\tfrac{1}{2}$, so $\\tfrac{1}{2} \\times \\tfrac{1}{2} = \\tfrac{1}{4}$. The 9/16 answer is the trap — it applies to a dihybrid F2 (AaBb $\\times$ AaBb), not a test cross.`
           },
           {
             question: `Two parents are both Aa. What is the probability that at least one of their three children is homozygous recessive (aa)?`,
             options: [`$37/64$`, `$1/64$`, `$3/4$`, `$27/64$`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Use the complement: $P(\\text{no aa child}) = \\left(\\tfrac{3}{4}\\right)^3 = \\tfrac{27}{64}$, so $P(\\text{at least one}) = 1 - \\tfrac{27}{64} = \\tfrac{37}{64}$. Adding $\\tfrac{1}{4}$ three times gives 3/4 and double-counts families with multiple aa children. 1/64 is the chance that ALL three children are aa, and 27/64 is the chance that NONE is.`
           },
           {
             question: `A researcher test-crosses a purple-flowered plant of unknown genotype and obtains 62 purple and 58 white offspring. The best conclusion is that the tested plant was:`,
             options: [`Homozygous dominant (PP)`, `Heterozygous (Pp)`, `Homozygous recessive (pp)`, `Impossible to determine from these data`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `A test cross is unknown $\\times$ pp. The observed ratio is very close to $1:1$, the signature of $Pp \\times pp$ ($\\tfrac{1}{2}$ purple, $\\tfrac{1}{2}$ white). PP would give all purple offspring, and a pp plant would have white flowers itself. With 120 offspring, the $1:1$ result is statistically convincing.`
           }
         ]

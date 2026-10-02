@@ -23,7 +23,7 @@ export const mcatGeneticsPart5Data = {
 |------|----------------------|---------|
 | **Stabilizing** | Narrows distribution (favors the average) | Human birth weight |
 | **Directional** | Shifts the mean toward one extreme | Antibiotic resistance |
-| **Disruptive** | Favors both extremes, disfavors the average | Beak size in finches |
+| **Disruptive** | Favors both extremes, disfavors the average | Bill size in African seedcrackers |
 
 ### Genetic Drift
 
@@ -72,30 +72,35 @@ Fitness is **not** about being the strongest or living the longest — it is abo
             question: `After a hurricane destroys 90% of a lizard population, the surviving 10% have different allele frequencies than the original population. This is:`,
             options: [`Bottleneck effect`, `Natural selection`, `Gene flow`, `Directional selection`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A bottleneck drastically reduces population size at random. Survivors aren't necessarily more fit — they were just lucky. Their allele frequencies may differ from the original population purely by chance. This is a form of genetic drift, not selection (which requires survival tied to heritable fitness differences) and not gene flow (no migrants are involved).`
           },
           {
             question: `A population of bacteria is exposed to an antibiotic. Over time, the mean resistance of the population steadily increases as resistant cells out-reproduce susceptible ones. This is an example of:`,
             options: [`Directional selection`, `Stabilizing selection`, `Disruptive selection`, `Genetic drift`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Directional selection shifts the population mean toward one extreme — here, increasing resistance. The antibiotic is a selective pressure favoring one tail of the distribution, so the mean moves in that direction over generations.`
           },
           {
             question: `On the MCAT, "evolutionary fitness" is BEST defined as:`,
             options: [`An organism's reproductive success relative to others in the population`, `An organism's physical strength relative to others in the population`, `An organism's body size relative to others in the population`, `An organism's survival rate relative to others in the population`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Fitness is reproductive success relative to others in the population, measured by the viable, fertile offspring an organism contributes to the next generation, NOT strength, size, or survival. An organism that survives long but never reproduces has zero fitness, while a short-lived organism that leaves many fertile offspring has high fitness.`
           },
           {
             question: `A peacock's elaborate tail makes it more visible to predators yet persists in the population. The best explanation is:`,
             options: [`Intersexual selection through mate choice`, `Intrasexual selection by male combat`, `Stabilizing selection on tail size`, `Genetic drift in a small population`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `This is sexual selection, specifically intersexual selection (mate choice). The trait reduces survival but increases mating success enough that its net effect on fitness is positive, so the alleles for large tails spread despite the predation cost: peahens preferentially mate with males bearing larger tails. The tail is an ornament judged by females, not a weapon used in male-male combat (intrasexual selection), and a trait maintained by a consistent mating advantage is not explained by random drift or by selection favoring average tail size.`
           },
           {
             question: `Two previously separated populations begin exchanging migrants each generation. Holding everything else constant, the expected effect of this gene flow is to:`,
             options: [`Reduce the genetic differences between the two populations`, `Increase the genetic differences between the two populations`, `Have no effect on allele frequencies`, `Immediately create a new species`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Gene flow (migration) mixes alleles between populations, making their allele frequencies more similar over time. It is a homogenizing force that opposes the divergence produced by drift or differing selection — and it tends to PREVENT speciation rather than cause it.`
           }
         ]

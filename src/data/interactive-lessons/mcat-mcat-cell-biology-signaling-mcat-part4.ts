@@ -12,12 +12,16 @@ export const mcatCellSignalingPart4Data = {
 
 | ON event | OFF machinery |
 |----------|---------------|
-| G-alpha binds GTP | Intrinsic GTPase, accelerated by **RGS proteins** (GAPs for G-alpha) |
+| G-alpha binds GTP | Intrinsic GTPase, accelerated by GTPase-activating proteins (GAPs) |
 | Ras binds GTP | Intrinsic GTPase, accelerated by **GAPs** (e.g., neurofibromin/NF1) |
 | Kinase phosphorylates substrate | **Phosphatases** remove the phosphate (PP1 reverses PKA targets; tyrosine phosphatases reset RTKs) |
 | cAMP/cGMP rise | **Phosphodiesterases** hydrolyze them |
 | Ca$^{2+}$ rises | SERCA/PMCA pumps and Na$^+$/Ca$^{2+}$ exchange restore ~100 nM |
 | Receptor active at surface | Desensitization and downregulation (below) |
+
+<!-- yield:low -->
+- The GAPs that accelerate G-alpha's GTPase are the **RGS proteins** (regulators of G-protein signaling).
+<!-- /yield -->
 
 ### Receptor Desensitization — Three Depths of Shutdown
 
@@ -39,10 +43,14 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
 
 ### When Termination Fails: Cancer Signatures
 
-- **Oncogenic Ras** (~30% of human cancers): point mutations (commonly codon 12) destroy GTPase activity and GAP sensitivity → permanent proliferation signal; a **gain-of-function** change needing only ONE mutant allele
+- **Oncogenic Ras** (~30% of human cancers): point mutations destroy GTPase activity and GAP sensitivity → permanent proliferation signal; a **gain-of-function** change needing only ONE mutant allele
 - **HER2 amplification** (breast cancer): so many RTKs that they dimerize without ligand — trastuzumab targets the extracellular domain
 - **BCR-ABL** (chronic myeloid leukemia): translocation fuses ABL kinase into a constitutively active form — imatinib occupies its ATP site
-- **Loss of PTEN or NF1**: an eraser/GAP is deleted — **loss-of-function**, typically requiring both alleles (contrast with oncogenes)`
+- **Loss of PTEN or NF1**: an eraser/GAP is deleted — **loss-of-function**, typically requiring both alleles (contrast with oncogenes)
+
+<!-- yield:low -->
+- Oncogenic Ras mutations most often hit **codon 12**.
+<!-- /yield -->`
     },
     {
       id: 'sig4-quiz1',
@@ -54,18 +62,21 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
             question: `Cholera toxin and an activating G-alpha-s point mutation both cause sustained cAMP elevation. The shared biochemical lesion is:`,
             options: [`A rise in the receptor's affinity for its ligand`, `Direct allosteric activation of PKA by the toxin`, `Blocked breakdown of adenylyl cyclase protein`, `Loss of GTPase activity in G-alpha-s itself`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `ADP-ribosylation by cholera toxin chemically disables the same GTPase function that the mutation destroys genetically. Either way, G-alpha-s cannot hydrolyze GTP, so adenylyl cyclase is stimulated continuously. Recognizing that a toxin phenocopies a mutation (and vice versa) is a recurring MCAT passage device.`
           },
           {
             question: `An asthma patient using a beta-2 agonist inhaler many times daily finds it progressively less effective. Receptor studies would most likely show:`,
             options: [`Conversion of beta-2 receptors into alpha-1 receptors`, `GRK/arrestin desensitization with fewer surface receptors`, `A rise in beta-2 receptor affinity for the agonist`, `Depletion of ATP stores in airway smooth muscle`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Sustained agonist exposure activates the full shutdown ladder: GRK phosphorylates occupied receptors, arrestin uncouples and internalizes them, and prolonged stimulation downregulates total receptor expression. The result is tachyphylaxis — the same dose produces less response. Receptors do not interconvert between subtypes, and affinity typically does not rise with overuse.`
           },
           {
             question: `Neurofibromin (NF1) is a GAP for Ras. In cells that have lost both NF1 alleles, growth-factor stimulation produces:`,
             options: [`Constitutive autophosphorylation of the receptor itself`, `Normal signaling, because SOS compensates for the loss`, `Normal onset but abnormally prolonged Ras-GTP signaling`, `No Ras activation, since GAPs are needed to load GTP`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `GAPs act on the OFF step: they accelerate Ras's slow intrinsic GTP hydrolysis. Without NF1, Ras still requires a GEF (SOS) to turn on — so onset is ligand-dependent and normal — but once on, it lingers far longer, producing excessive proliferation (neurofibromatosis type 1). Distinguish GEF loss (can't turn ON) from GAP loss (can't turn OFF).`
           }
         ]
@@ -87,8 +98,12 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
 
 ### Choosing the Right Control
 
-- **Membrane-permeant analogs** (dibutyryl-cAMP, phorbol esters for PKC via the DAG site) let you activate a pathway mid-stream — the "chemical epistasis" trick
-- Phorbol esters activate PKC persistently because, unlike DAG, they are **not metabolized** — chronic PKC activation is why they are tumor promoters
+- **Membrane-permeant analogs** (of cAMP, or of DAG for PKC) let you activate a pathway mid-stream — the "chemical epistasis" trick
+
+<!-- yield:low -->
+- The standard analogs are **dibutyryl-cAMP** and **phorbol esters** (which bind PKC's DAG site). Phorbol esters activate PKC persistently because, unlike DAG, they are **not metabolized** — chronic PKC activation is why they are tumor promoters.
+<!-- /yield -->
+
 - A **receptor-negative cell line** transfected with the receptor of interest is the cleanest test of receptor sufficiency
 
 ### Integration Across Topics
@@ -108,12 +123,14 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
             question: `In permeabilized cells, GTP-gamma-S (a nonhydrolyzable GTP analog) triggers sustained glycogen breakdown even without epinephrine. Epinephrine plus GDP-beta-S (which locks G proteins in the GDP state) triggers none. Together these results show that:`,
             options: [`A G protein's nucleotide state controls the response`, `Epinephrine acts by entering the cell and binding G proteins`, `Glycogen breakdown requires receptor internalization first`, `GTP is a substrate for glycogen phosphorylase`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `GTP-gamma-S bypasses the receptor and locks any activated G-alpha ON (sufficiency without ligand); GDP-beta-S prevents activation even with ligand present (necessity). The paired sufficiency/necessity design brackets the G protein between receptor and effector — exactly how heterotrimeric G proteins were originally mapped, and a template for interpreting any two-part passage experiment.`
           },
           {
             question: `A tumor's cells show high phospho-Akt. Treating them with an RTK inhibitor does not lower phospho-Akt, but a PI3K inhibitor does. The most likely driver lesion is:`,
             options: [`Overexpression of the growth-factor ligand itself`, `A gain-of-function lesion acting downstream of Akt`, `An activating mutation in the receptor kinase`, `An activating PI3K mutation, or loss of PTEN`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `If the receptor were the driver (mutation or autocrine ligand), blocking it would drop Akt phosphorylation — it did not, so the lesion is downstream of the RTK. The PI3K inhibitor still works, so the lesion is at or upstream of PI3K's output (activating PI3K mutation, or loss of PTEN, which lets basal PIP$_3$ accumulate). Ordering lesions by which inhibitors still work is the pharmacologic version of epistasis.`
           }
         ]
@@ -124,13 +141,17 @@ Both cholera and pertussis raise cAMP — one by jamming the accelerator ON, one
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Termination machinery is specific and essential: GTPase (+ RGS/GAP acceleration), phosphatases, PDEs, Ca$^{2+}$ pumps, and receptor desensitization
+- Termination machinery is specific and essential: GTPase (+ GAP acceleration), phosphatases, PDEs, Ca$^{2+}$ pumps, and receptor desensitization
 - GPCR shutdown ladder: GRK phosphorylates occupied receptors → beta-arrestin uncouples → internalization → lysosomal downregulation; explains drug tolerance
 - Cholera locks Gs ON (GTPase blocked); pertussis locks Gi OFF (coupling blocked) — different lesions, both raise cAMP
-- Oncogene logic: gain-of-function (Ras G12, HER2 amplification, BCR-ABL) needs one allele; tumor-suppressor logic: loss-of-function (PTEN, NF1) needs both
+- Oncogene logic: gain-of-function (oncogenic Ras, HER2 amplification, BCR-ABL) needs one allele; tumor-suppressor logic: loss-of-function (PTEN, NF1) needs both
 - GEF loss = cannot turn on; GAP loss = cannot turn off — keep the on/off steps straight
-- GTP-gamma-S mimicking hormone places a G protein in the pathway; cAMP analogs and phorbol esters activate pathways mid-stream for epistasis mapping
-- Inhibitor panels order a pathway: a driver lesion is downstream of every inhibitor that fails and upstream of every inhibitor that works`
+- GTP-gamma-S mimicking hormone places a G protein in the pathway; membrane-permeant cAMP or DAG analogs activate pathways mid-stream for epistasis mapping
+- Inhibitor panels order a pathway: a driver lesion is downstream of every inhibitor that fails and at or upstream of every inhibitor that works
+
+<!-- yield:low -->
+- Low-yield extras: RGS proteins (GAPs for G-alpha); Ras codon 12; dibutyryl-cAMP and phorbol esters, the persistent non-metabolized DAG mimics that act as tumor promoters
+<!-- /yield -->`
     }
   ]
 };

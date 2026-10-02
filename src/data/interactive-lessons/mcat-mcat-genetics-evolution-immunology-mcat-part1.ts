@@ -44,15 +44,19 @@ Innate receptors are **pattern recognition receptors (PRRs)** — e.g., **Toll-l
 
 A cascade of ~30 plasma proteins (made mainly by the liver) with three effector outcomes:
 
-1. **Opsonization** — C3b coats microbes, flagging them for phagocytosis
+1. **Opsonization** — the fragment **C3b** coats microbes, flagging them for phagocytosis
 2. **Membrane attack complex (MAC)** — terminal components form a lytic pore in the pathogen membrane
-3. **Anaphylatoxins** (C3a, C5a) — amplify inflammation and recruit phagocytes
+3. **Anaphylatoxins** — small complement fragments that amplify inflammation and recruit phagocytes
+
+<!-- yield:low -->
+- Component names: **C3a** and **C5a** are the anaphylatoxins, and C5a is also a strong neutrophil chemoattractant.
+<!-- /yield -->
 
 Activation routes at concept level: the **classical pathway** is triggered by antibody bound to antigen (so it links to adaptive immunity), while the **alternative pathway** fires spontaneously on microbial surfaces with no antibody required — purely innate.
 
 ### Inflammation, Fever & Interferons
 
-The inflammation cascade: tissue damage → mast cells release **histamine** → **vasodilation** (redness, heat) and increased capillary permeability (swelling) → neutrophils adhere to endothelium and squeeze out via **diapedesis** → follow chemical gradients (**chemotaxis**, e.g., toward C5a) to the site.
+The inflammation cascade: tissue damage → mast cells release **histamine** → **vasodilation** (redness, heat) and increased capillary permeability (swelling) → neutrophils adhere to endothelium and squeeze out via **diapedesis** → follow chemical gradients (**chemotaxis**, e.g., toward complement fragments and bacterial products) to the site.
 
 **Fever**: pyrogens (e.g., IL-1) reset the hypothalamic set point; moderate fever inhibits some pathogens and speeds immune reactions. **Interferons** are cytokines released by virus-infected cells that warn NEIGHBORING cells to degrade RNA and dampen protein synthesis — an antiviral state that slows viral spread before adaptive immunity arrives.`
     },
@@ -65,7 +69,7 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
 
 **Question 1 — Why redness, heat, and swelling within hours?** Damaged tissue and resident mast cells release histamine. Local arterioles dilate (more warm blood → redness and heat) and capillaries become leaky (plasma leaks out → swelling). This is the stereotyped innate inflammatory response — no recognition of the specific strain is required.
 
-**Question 2 — How do neutrophils "know" where to go?** Bacterial products and complement fragments (C5a) form a chemical gradient. Circulating neutrophils tether to activated endothelium, exit the vessel by diapedesis, and crawl up the gradient by chemotaxis. The pus at day 2 is largely dead neutrophils and debris.
+**Question 2 — How do neutrophils "know" where to go?** Bacterial products and complement fragments form a chemical gradient. Circulating neutrophils tether to activated endothelium, exit the vessel by diapedesis, and crawl up the gradient by chemotaxis. The pus at day 2 is largely dead neutrophils and debris.
 
 **Question 3 — The strain is new to her immune system. How can it be cleared in 4 days when adaptive responses take a week or more?** Innate recognition does not need prior exposure: TLRs on macrophages and neutrophils bind conserved PAMPs (e.g., LPS on Gram-negative walls), and the alternative complement pathway opsonizes the bacteria spontaneously. Phagocytosis of C3b-coated bacteria clears the small inoculum before an adaptive response is even necessary.
 
@@ -79,32 +83,37 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
         questions: [
           {
             question: `A virus-infected cell downregulates its MHC I molecules to evade cytotoxic T cells. Which immune cell is specialized to kill it anyway?`,
-            options: [`Neutrophil granulocyte`, `Natural killer cell`, `B lymphocyte`, `Eosinophil granulocyte`],
+            options: [`Neutrophil granulocyte`, `Natural killer cell`, `Activated B lymphocyte`, `Eosinophil granulocyte`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `NK cells kill host cells that LACK MHC I ("missing self") — precisely the evasion strategy described. Neutrophils phagocytose extracellular microbes, not host cells; B cells make antibody rather than killing cells directly; eosinophils target parasites. This complementarity (T cells need MHC I present, NK cells attack when it is absent) leaves viruses no easy escape.`
           },
           {
             question: `Toll-like receptors allow a macrophage to respond to a bacterial species it has never encountered because TLRs:`,
             options: [`Are randomly rearranged during development to cover all possible antigens`, `Bind antibodies already attached to the bacterium`, `Recognize conserved patterns shared by broad microbial classes`, `Detect the absence of MHC I on the bacterial surface`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `PRRs like TLRs are germline-encoded and bind conserved PAMPs (LPS, flagellin, dsRNA) common to whole microbial classes — pattern-based, not pathogen-specific. Random rearrangement describes B/T-cell receptors, the adaptive strategy. Antibody-dependent recognition would require prior adaptive response, and MHC I surveillance is the NK-cell mechanism for HOST cells, not bacteria.`
           },
           {
             question: `Which set correctly lists the three major effector outcomes of complement activation?`,
             options: [`Opsonization, membrane attack complex, and inflammation`, `Antibody production, memory cell formation, and clonal expansion`, `Histamine release, fever induction, and interferon secretion`, `Neutralization, agglutination, and class switching`],
             correctAnswer: 0,
-            explanation: `Complement's three outcomes are C3b opsonization (tagging for phagocytosis), the MAC lytic pore, and anaphylatoxins (C3a/C5a) that amplify inflammation. Antibody production, memory, and clonal expansion are adaptive B-cell events; histamine, fever, and interferon are mast-cell and cytokine effects that are not complement products; neutralization, agglutination, and class switching are antibody functions (and class switching is a B-cell process).`
+            yield: 'MEDIUM',
+            explanation: `Complement's three outcomes are opsonization (C3b tags microbes for phagocytosis), the MAC lytic pore, and anaphylatoxins (small complement fragments) that amplify inflammation. Antibody production, memory, and clonal expansion are adaptive B-cell events; histamine, fever, and interferon are mast-cell and cytokine effects that are not complement products; neutralization, agglutination, and class switching are antibody functions (and class switching is a B-cell process).`
           },
           {
             question: `During inflammation, the correct order of neutrophil events is:`,
             options: [`Chemotaxis → diapedesis → adhesion to endothelium`, `Diapedesis → adhesion to endothelium → chemotaxis`, `Phagocytosis → diapedesis → vasodilation`, `Adhesion to endothelium → diapedesis → chemotaxis`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The neutrophil must first stick to the activated vessel wall (adhesion), then squeeze between endothelial cells out of the blood (diapedesis), and only then migrate through tissue along the chemical gradient (chemotaxis) to reach the microbes it will phagocytose. Options placing chemotaxis or diapedesis before adhesion reverse the physical sequence — a cell cannot exit a vessel it has not stopped in.`
           },
           {
             question: `Interferons released by a virus-infected cell primarily act to:`,
             options: [`Lyse the infected cell that released them`, `Directly neutralize free virions in the blood`, `Recruit eosinophils to the infected tissue`, `Induce an antiviral state in neighboring cells`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Interferons are a warning signal: neighboring cells respond by degrading RNA and slowing protein synthesis, hobbling viral replication before it starts. They do not lyse the secreting cell (cytotoxic T and NK cells kill infected cells), and direct virion neutralization is an ANTIBODY function. Eosinophil recruitment belongs to antiparasitic and allergic responses.`
           }
         ]
@@ -119,8 +128,12 @@ The inflammation cascade: tissue damage → mast cells release **histamine** →
 - Innate = fast, pattern-based (PRRs like TLRs binding PAMPs), germline-encoded, no memory; adaptive = slow first time, epitope-specific, with memory
 - Dendritic cells are the innate→adaptive bridge: capture antigen in tissue, present it to naive T cells in lymph nodes
 - NK cells kill host cells LACKING MHC I ("missing self") — the counter to viral MHC downregulation
-- Complement: opsonization (C3b), MAC lysis, anaphylatoxins (C3a/C5a); classical pathway = antibody-triggered, alternative = spontaneous on microbial surfaces
-- Inflammation sequence: histamine → vasodilation and permeability → adhesion → diapedesis → chemotaxis; fever and interferons buy time against pathogens system-wide`
+- Complement: opsonization (C3b), MAC lysis, anaphylatoxins; classical = antibody-triggered, alternative = spontaneous on microbial surfaces
+- Inflammation sequence: histamine → vasodilation and permeability → adhesion → diapedesis → chemotaxis; fever and interferons buy time against pathogens system-wide
+
+<!-- yield:low -->
+- Low-yield extras: C3a and C5a are the anaphylatoxins (C5a is also a neutrophil chemoattractant)
+<!-- /yield -->`
     }
   ]
 };

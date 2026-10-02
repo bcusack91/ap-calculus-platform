@@ -35,7 +35,7 @@ export const mcatGeneticsPart6Data = {
 
 - **Homologous structures**: same evolutionary origin, possibly different function (human arm vs. whale flipper) → indicate **common ancestry** (divergent evolution)
 - **Analogous structures**: different origin, similar function (bird wing vs. insect wing) → result from **convergent evolution**
-- **Vestigial structures**: reduced, nonfunctional remnants (human appendix, whale hip bones)
+- **Vestigial structures**: reduced remnants that have lost their ancestral function (human appendix, whale hip bones)
 
 ### Patterns and Rates
 
@@ -69,30 +69,35 @@ export const mcatGeneticsPart6Data = {
             question: `Two species of frogs live in the same pond but breed in different months. This is an example of:`,
             options: [`Temporal isolation`, `Postzygotic isolation`, `Allopatric speciation`, `Mechanical isolation`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Temporal isolation means the two species breed at different times, preventing interbreeding. It is prezygotic because it prevents mating (and thus fertilization) from occurring in the first place. Mechanical isolation is also prezygotic, but it involves incompatible reproductive structures, not different breeding times; allopatric speciation requires geographic separation, which the shared pond rules out.`
           },
           {
             question: `A mule (horse $\\times$ donkey) is robust and healthy but cannot produce offspring. This represents which type of reproductive barrier?`,
-            options: [`Postzygotic — hybrid sterility`, `Prezygotic — gametic isolation`, `Prezygotic — mechanical isolation`, `Postzygotic — hybrid inviability`],
+            options: [`Postzygotic — hybrid sterility`, `Prezygotic — temporal isolation`, `Prezygotic — mechanical isolation`, `Postzygotic — hybrid inviability`],
             correctAnswer: 0,
-            explanation: `A viable but sterile hybrid is the definition of hybrid sterility, a POSTzygotic barrier (the hybrid forms but cannot reproduce). Horses (2n = 64) and donkeys (2n = 62) produce a mule whose chromosomes cannot pair properly in meiosis, so it cannot make functional gametes.`
+            yield: 'HIGH',
+            explanation: `A viable but sterile hybrid is the definition of hybrid sterility, a POSTzygotic barrier (the hybrid forms but cannot reproduce). Horse and donkey chromosome sets differ, so the mule's chromosomes cannot pair properly in meiosis and it cannot make functional gametes.`
           },
           {
             question: `The wing of a bird and the wing of an insect perform the same function (flight) but evolved independently from different ancestral structures. These are:`,
             options: [`Analogous structures, the product of convergent evolution`, `Homologous structures, the product of divergent evolution`, `Vestigial structures`, `Homologous structures showing common ancestry`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Analogous structures share function but not evolutionary origin; they arise via convergent evolution when unrelated lineages face similar selective pressures. Homologous structures (e.g., bird wing vs. bat wing vs. human arm) share a common ancestral origin even if their functions differ.`
           },
           {
             question: `In plants, a single individual sometimes undergoes a doubling of its chromosome number (polyploidy) and can no longer interbreed with the parent population, instantly forming a new species in the same location. This is an example of:`,
             options: [`Sympatric speciation`, `Allopatric speciation`, `Gradualism`, `Gametic isolation between populations`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Polyploidy creates reproductive isolation WITHOUT geographic separation — the new polyploid lives in the same area as its parents but cannot produce fertile offspring with them. Speciation in the same geographic location is SYMPATRIC, and polyploidy is its classic plant example.`
           },
           {
             question: `According to the model of punctuated equilibrium, the fossil record should typically show:`,
-            options: [`Long stasis interrupted by brief bursts of rapid change`, `Slow, continuous change at a constant rate`, `No change at all over geologic time`, `Change only in response to gene flow`],
+            options: [`Long stasis interrupted by brief bursts of rapid change`, `Slow, continuous change at a roughly constant rate over time`, `No change at all over geologic time`, `Change only in response to gene flow`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Punctuated equilibrium proposes that species remain morphologically stable (stasis) for long stretches, then change rapidly during short intervals (often associated with speciation events). This contrasts with gradualism, which predicts slow, steady, continuous change.`
           }
         ]

@@ -15,16 +15,24 @@ export const mcatCellCyclePart4Data = {
 | Flow cytometry (DNA dye) | Phase distribution by DNA content | 2C peak (G$_1$), 4C peak (G$_2$/M), between = S |
 | BrdU/EdU pulse | Cells replicating during the pulse | Labeled fraction ≈ S-phase fraction |
 | BrdU pulse-**chase** | Movement of a cohort through the cycle | Time for labeled cells to reach mitosis = length of G$_2$ |
-| Phospho-histone H3 stain | Mitotic cells specifically | Mitotic index |
 | Mitotic index (microscopy) | Fraction of cells in M | Rises if cells arrest in M; falls if blocked earlier |
 | ³H-thymidine autoradiography | Historical S-phase label | Same logic as BrdU |
+
+<!-- yield:low -->
+- Mitotic cells can also be stained specifically with an antibody to phospho-histone H3.
+<!-- /yield -->
 
 ### Synchronization — Making a Population March in Step
 
 Asynchronous cultures blur phase-specific events; synchronization sharpens them:
 
-- **Double thymidine block**: excess thymidine feedback-inhibits ribonucleotide reductase → dNTP imbalance stalls S phase; release, block again → all cells parked at the G$_1$/S border
-- **Nocodazole block**: spindle poison → checkpoint arrest in M; gently shake off the rounded mitotic cells (**mitotic shake-off**)
+- **Double thymidine block**: excess thymidine stalls S phase; release, block again → all cells parked at the G$_1$/S border
+
+<!-- yield:low -->
+- Excess thymidine works by feedback-inhibiting ribonucleotide reductase, unbalancing the dNTP pools.
+<!-- /yield -->
+
+- **Spindle-poison block**: checkpoint arrest in M; gently shake off the rounded mitotic cells (**mitotic shake-off**)
 - **Serum starvation**: withdraw growth factors → cells retreat to G$_0$; re-adding serum starts a synchronized G$_1$ cohort — also THE assay for restriction-point timing
 
 > Restriction-point experiment: starve cells, re-feed with serum, then remove serum at increasing times. Cells given serum for less than ~R hours return to G$_0$; cells past R complete the entire cycle without serum. Commitment is all-or-none.
@@ -34,11 +42,15 @@ Asynchronous cultures blur phase-specific events; synchronization sharpens them:
 | Drug | Mechanism | Arrest profile |
 |------|-----------|----------------|
 | Hydroxyurea | Inhibits ribonucleotide reductase (no dNTPs) | Early S; cells pile just above 2C |
-| Aphidicolin | Inhibits replicative DNA polymerases | G$_1$/S border and S |
+| DNA polymerase inhibitors | Block replicative DNA polymerases | G$_1$/S border and S |
 | Methotrexate / 5-FU | Block thymidylate synthesis (antimetabolites) | S phase |
-| Etoposide | Topoisomerase II poison → double-strand breaks | G$_2$ (damage checkpoint) |
-| Nocodazole / vinblastine / paclitaxel | Spindle disruption | M (4C, condensed chromosomes, high mitotic index) |
-| Palbociclib | CDK4/6 inhibitor | G$_1$ (2C) — only in Rb-intact cells |
+| Topoisomerase II poisons | Trap topo II on DNA → double-strand breaks | G$_2$ (damage checkpoint) |
+| Vinblastine / paclitaxel | Spindle disruption | M (4C, condensed chromosomes, high mitotic index) |
+| CDK4/6 inhibitors | Block cyclin D-CDK4/6 | G$_1$ (2C) — only in Rb-intact cells |
+
+<!-- yield:low -->
+- Named lab and clinic examples: aphidicolin (DNA polymerase inhibitor), etoposide (topo II poison), nocodazole (the lab spindle poison used for mitotic shake-off), palbociclib (CDK4/6 inhibitor).
+<!-- /yield -->
 
 ### Cycle Arithmetic
 
@@ -58,18 +70,21 @@ Example: 5% mitotic cells with a 20-hour cycle → M lasts about $0.05 \\times 2
             question: `Cells are pulsed with BrdU for 15 minutes, washed, and sampled hourly. Labeled mitotic figures first appear 4 hours after the pulse. This 4-hour lag corresponds to:`,
             options: [`The time cells spend in S phase`, `The length of one complete cell cycle`, `The length of G$_1$ in these cells`, `The time cells spend in G$_2$`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Only S-phase cells took the label. The first labeled cells to reach mitosis are those that were at the very END of S during the pulse; their journey to M is exactly G$_2$. (The window during which labeled mitoses keep appearing then reports S-phase length.) This percent-labeled-mitoses design is the classic way phase durations were first measured, and its logic is pure MCAT.`
           },
           {
             question: `A population is treated with hydroxyurea, which depletes dNTP pools. Flow cytometry after 24 hours will show cells accumulated:`,
             options: [`Exclusively at 4C, with replication complete`, `At or just above 2C, stalled at entry into S phase`, `At 8C, having re-replicated the whole genome`, `Spread evenly across every possible DNA content`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Without dNTPs, replication cannot proceed: cells reaching G$_1$/S stall immediately, and cells already in S stall with barely-begun synthesis. The population collects at ~2C (slightly above for those that had started). A 4C pile-up would indicate a G$_2$/M block; 8C would require re-replication, which licensing forbids. Matching a drug's biochemical target to its flow profile is a staple passage question.`
           },
           {
             question: `Fibroblasts are serum-starved, re-fed, and serum is then withdrawn from separate dishes at 2-hour intervals. Cells given at least 8 hours of serum divide even after withdrawal; cells given less return to quiescence. The experiment locates:`,
             options: [`The G$_2$/M checkpoint, reached 8 hours after re-feeding`, `The time serum proteins need to enter cells`, `The restriction point, about 8 hours into G$_1$`, `The length of mitosis in these fibroblasts`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Passing the restriction point means cyclin E-CDK2/Rb-E2F positive feedback has become self-sustaining: external mitogens are no longer required to finish the cycle. Cells short of that point still need serum-driven cyclin D and slip back to G$_0$. The all-or-none outcome at a sharp time threshold is the experimental signature of a bistable commitment switch.`
           }
         ]
@@ -84,8 +99,12 @@ Example: 5% mitotic cells with a 20-hour cycle → M lasts about $0.05 \\times 2
 
 **Pattern 2: Checkpoint status as a diagnostic.** Irradiate two cell lines; measure mitotic index over time.
 - Line 1: mitotic index falls (cells arrest in G$_2$) → checkpoints intact
-- Line 2: mitotic index unchanged, cells enter mitosis with broken chromosomes → checkpoint-deficient (p53 or ATM pathway loss)
-- Caffeine (an ATM/ATR inhibitor at high doses in vitro) can convert line 1 into line 2 — "checkpoint override"
+- Line 2: mitotic index unchanged, cells enter mitosis with broken chromosomes → checkpoint-deficient (loss of the damage-sensing kinases or p53)
+- A drug that inhibits the damage-sensing kinases converts line 1 into line 2 — "checkpoint override"
+
+<!-- yield:low -->
+- The classic override drug is caffeine, which inhibits ATM/ATR at high doses in vitro.
+<!-- /yield -->
 
 **Pattern 3: Growth fraction vs. cycle speed.** A tumor whose cells cycle every 2 days but with a growth fraction of 10% grows slower than a tissue cycling every 5 days with 100% participation. Chemotherapy that targets S or M phase spares the non-cycling 90% — the rationale for repeated dosing cycles, which catch cells as they re-enter.
 
@@ -100,7 +119,11 @@ Example: 5% mitotic cells with a 20-hour cycle → M lasts about $0.05 \\times 2
 | Crossing over | No (normally) | Yes — prophase I | No |
 | Reductional? | No (equational) | Yes (2n → n) | No (equational) |
 
-The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I protects centromeric cohesin (shugoshin) so only arm cohesin is cleaved — chromatids stay paired until meiosis II.`
+The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I protects centromeric cohesin so only arm cohesin is cleaved — chromatids stay paired until meiosis II.
+
+<!-- yield:low -->
+- The protector of centromeric cohesin in meiosis I is shugoshin.
+<!-- /yield -->`
     },
     {
       id: 'cc4-quiz2',
@@ -112,12 +135,14 @@ The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I pr
             question: `HPV E7 protein binds host Rb, and E6 promotes degradation of host p53. Cells expressing both proteins would be expected to show:`,
             options: [`Unscheduled S-phase entry plus no damage response`, `Permanent G$_1$ arrest with Rb held in active form`, `Hyperactive apoptosis that clears infected cells early`, `Failure to replicate the viral DNA in host cells`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `E7 sequestering Rb liberates E2F (constant proliferative drive, which the virus needs because it relies on host S-phase machinery); E6 destroying p53 removes the damage-triggered arrest/apoptosis response that would otherwise kill such abnormally cycling cells. The virus phenocopies the two most common tumor-suppressor losses in human cancer — the molecular basis of HPV-driven cervical carcinoma.`
           },
           {
             question: `Two tumors have identical cell-cycle durations, but tumor A has a growth fraction of 90% and tumor B of 15%. S-phase-targeted chemotherapy will:`,
             options: [`Kill both equally, since cycle lengths are identical`, `Kill more of tumor B, whose quiescent cells are fragile`, `Have no effect on either tumor, regardless of dose`, `Kill more of tumor A, which has more cycling cells`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Phase-specific agents only hit cells that traverse the sensitive phase while drug is present. Tumor B's 85% quiescent (G$_0$) cells are untouched and can re-enter the cycle later — the reason slow-growth-fraction tumors respond poorly and regrow between doses, and why chemotherapy is given in repeated cycles. Fast-renewing normal tissues (marrow, gut) have high growth fractions, explaining shared toxicity.`
           }
         ]
@@ -128,13 +153,17 @@ The cell-cycle machinery (CDKs, APC/C, cohesin/separase) is shared; meiosis I pr
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Phase census tools: flow cytometry (DNA content), EdU/BrdU pulse (S), phospho-H3/mitotic index (M); pulse-chase lag to labeled mitoses = G$_2$ length
-- Synchronization: double thymidine (G$_1$/S), nocodazole shake-off (M), serum starvation (G$_0$) — the last doubles as the restriction-point assay (all-or-none serum commitment)
-- Drug arrest profiles: hydroxyurea/aphidicolin ~2C (S entry), etoposide 4C (G$_2$ damage), spindle poisons 4C condensed (M), palbociclib 2C only with intact Rb
+- Phase census tools: flow cytometry (DNA content), EdU/BrdU pulse (S), mitotic index (M); pulse-chase lag to labeled mitoses = G$_2$ length
+- Synchronization: double thymidine (G$_1$/S), spindle-poison shake-off (M), serum starvation (G$_0$) — the last doubles as the restriction-point assay (all-or-none serum commitment)
+- Drug arrest profiles: hydroxyurea/DNA polymerase inhibitors ~2C (S entry), topo II poisons 4C (G$_2$ damage), spindle poisons 4C condensed (M), CDK4/6 inhibitors 2C only with intact Rb
 - Cycle arithmetic: fraction in phase = phase time / cycle time; population doubling requires the growth fraction, not just cycle speed
-- Checkpoint diagnostics: damage should drop the mitotic index; entering M with broken DNA = checkpoint loss (or caffeine override)
+- Checkpoint diagnostics: damage should drop the mitotic index; entering M with broken DNA = checkpoint loss (or a drug overriding the checkpoint)
 - HPV E6 = p53 degradation, E7 = Rb inactivation — a virus that installs both classic cancer lesions
-- Meiosis reuses the machinery: MI separates homologs (reductional, centromeric cohesin protected); MII separates chromatids like mitosis`
+- Meiosis reuses the machinery: MI separates homologs (reductional, centromeric cohesin protected); MII separates chromatids like mitosis
+
+<!-- yield:low -->
+- Low-yield extras: phospho-histone H3 staining marks mitotic cells; thymidine blocks act through ribonucleotide reductase; named drugs aphidicolin, etoposide, nocodazole and palbociclib; caffeine as the ATM/ATR checkpoint-override drug; shugoshin protects centromeric cohesin in meiosis I
+<!-- /yield -->`
     }
   ]
 };

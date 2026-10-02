@@ -1170,7 +1170,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     correctAnswer: 2,
     explanation: `MDM2 is the ubiquitin ligase that normally marks p53 for degradation. Bax is a pro-apoptotic target of p53, ATM is a damage-sensing kinase whose phosphorylation stabilizes p53, and p21 is a CDK inhibitor that p53 switches on.`,
     difficulty: 'medium',
-    yield: 'LOW',
+    yield: 'MEDIUM',
     part: 5,
   },
   {

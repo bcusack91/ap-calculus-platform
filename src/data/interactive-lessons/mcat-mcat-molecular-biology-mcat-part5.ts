@@ -110,17 +110,17 @@ export const mcatMolBioPart5Data = {
 ### p53 — The Guardian of the Genome
 
 p53 is the central hub connecting DNA damage to cell fate:
-1. DNA damage detected → damage-sensing kinases phosphorylate p53 → stabilize it (normally it is constantly degraded)
+1. DNA damage detected → damage-sensing kinases phosphorylate p53 → stabilize it (normally it is constantly degraded by its ubiquitin ligase, **MDM2**)
 2. p53 switches on **p21**, a CDK inhibitor → cell cycle arrest at G$_1$/S
 3. If damage is repairable → DNA repair occurs → cell cycle resumes
-4. If damage is irreparable → p53 activates **pro-apoptotic genes** → apoptosis
+4. If damage is irreparable → p53 activates **pro-apoptotic genes** such as **Bax** → apoptosis
 5. p53 also upregulates DNA repair genes
 
 <!-- yield:low -->
-- The named players: ATM/ATR are the damage-sensing kinases; MDM2 is the ubiquitin ligase that normally degrades p53; Bax is its pro-apoptotic target.
+- The named damage-sensing kinases: ATM and ATR.
 <!-- /yield -->
 
-**p53 is mutated or inactivated in >50% of all human cancers** — the single most commonly altered gene in cancer.`
+**p53 is mutated or inactivated in roughly half of all human cancers** — the single most commonly altered gene in cancer.`
     },
     {
       id: 'mb5-quiz2',
@@ -159,7 +159,7 @@ p53 is the central hub connecting DNA damage to cell fate:
 - p53: DNA damage → cell cycle arrest (via the CDK inhibitor p21) or apoptosis; mutated in >50% of cancers
 
 <!-- yield:low -->
-- Low-yield extras: MutS/MutL in mismatch repair; HNPCC as Lynch syndrome's other name, and microsatellite instability; AP endonuclease in BER; NER's ~24-32 nt excision patch; NHEJ defects and SCID; nonsense-mediated decay destroys mRNAs whose stop codon sits >50 nt upstream of the last exon junction; the p53 pathway's other named players — ATM/ATR, MDM2, Bax
+- Low-yield extras: MutS/MutL in mismatch repair; HNPCC as Lynch syndrome's other name, and microsatellite instability; AP endonuclease in BER; NER's ~24-32 nt excision patch; NHEJ defects and SCID; nonsense-mediated decay destroys mRNAs whose stop codon sits >50 nt upstream of the last exon junction; the p53 pathway's damage-sensing kinases, ATM/ATR
 <!-- /yield -->`
     }
   ]

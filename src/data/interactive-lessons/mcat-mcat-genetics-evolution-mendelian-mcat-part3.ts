@@ -15,8 +15,12 @@ export const mcatMendelianPart3Data = {
 | Autosomal dominant | Every generation; affected child has an affected parent; both sexes equally | Huntington disease, Marfan syndrome, familial hypercholesterolemia |
 | Autosomal recessive | Skips generations; unaffected carrier parents; consanguinity raises risk | Cystic fibrosis, PKU, sickle cell disease, Tay-Sachs |
 | X-linked recessive | Mostly males; NO father-to-son transmission; carrier mothers | Hemophilia A/B, Duchenne MD, color blindness, G6PD deficiency |
-| X-linked dominant | Affected father → ALL daughters, NO sons; affected in every generation | Rare (e.g., X-linked hypophosphatemic rickets) |
-| Mitochondrial | Affected mother → ALL children; affected father → NONE | LHON, MELAS |
+| X-linked dominant | Affected father → ALL daughters, NO sons; affected in every generation | Rare — identify by the pattern, not by name |
+| Mitochondrial | Affected mother → ALL children; affected father → NONE | Mitochondrial myopathies (defects in oxidative phosphorylation) |
+
+<!-- yield:low -->
+- Named examples: X-linked hypophosphatemic rickets (X-linked dominant); LHON (Leber hereditary optic neuropathy) and MELAS (mitochondrial).
+<!-- /yield -->
 
 ### The Decision Procedure
 
@@ -77,30 +81,35 @@ $P(\\text{child has CF}) = \\frac{2}{3} \\times \\frac{1}{25} \\times \\frac{1}{
             question: `A healthy couple has a child with an autosomal recessive disorder. Their next child is phenotypically healthy. What is the probability this healthy child is a carrier?`,
             options: [`1/2`, `2/3`, `1/4`, `1/3`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Both parents are obligate carriers. Offspring ratio: $1\\ AA : 2\\ Aa : 1\\ aa$. Given the child is healthy, the $aa$ class is excluded, leaving $1\\ AA : 2\\ Aa$ — so $P(Aa) = 2/3$. The unconditioned answer 1/2 ignores the child's known phenotype.`
           },
           {
             question: `A man with hemophilia A (X-linked recessive) and a woman who is homozygous normal have children. Which statement is correct?`,
             options: [`All daughters will be carriers`, `Half the sons will have hemophilia`, `All daughters will have hemophilia`, `Sons have a 25% risk of hemophilia`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `The father gives his single mutant X to every daughter (all obligate carriers) and his Y to every son. Since the mother contributes only normal X chromosomes, no child is affected and sons carry no disease allele. Affected sons would require a carrier or affected mother.`
           },
           {
-            question: `In a pedigree, an affected woman has four children (two sons, two daughters) — ALL affected. Her affected brother's three children are ALL unaffected. The most consistent inheritance pattern is:`,
+            question: `In a pedigree, an affected woman has four children (two sons, two daughters) — ALL affected. Her affected brother's three children (two daughters, one son) are ALL unaffected. The most consistent inheritance pattern is:`,
             options: [`Autosomal dominant, reduced penetrance`, `X-linked dominant`, `Mitochondrial inheritance`, `Autosomal recessive`],
             correctAnswer: 2,
-            explanation: `Mitochondria pass exclusively through the egg: an affected mother transmits to ALL children, an affected father to NONE. That exact asymmetry is shown here. X-linked dominant fails because an affected father would pass the trait to all his daughters.`
+            yield: 'HIGH',
+            explanation: `Mitochondria pass exclusively through the egg: an affected mother transmits to ALL children, an affected father to NONE. That exact asymmetry is shown here. X-linked dominant fails because an affected father would pass the trait to all his daughters, and the brother's two daughters are unaffected. Autosomal dominant would predict about half of each sibling's children affected, not all of hers and none of his, and autosomal recessive would need her unrelated husband to carry the allele and pass it to all four children.`
           },
           {
             question: `Huntington disease is autosomal dominant with onset typically after age 40. A 25-year-old whose parent has Huntington disease asks for his risk of eventually developing it (assume the affected parent is heterozygous). The risk is:`,
             options: [`1/4`, `2/3`, `Near 0`, `1/2`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `$Hh \\times hh$ → half the children inherit the dominant allele, and dominant means one copy suffices: risk $= 1/2$. Being symptom-free at 25 provides almost no information because onset is late — this distinguishes late-onset dominant conditions from the 2/3 conditioning logic used for recessive traits.`
           },
           {
             question: `Which observation would definitively EXCLUDE autosomal recessive inheritance for a trait in a pedigree?`,
             options: [`An affected child born to two affected parents`, `An affected child of two unaffected parents`, `Two affected parents producing an unaffected child`, `The trait appearing more often in males`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `If the trait is autosomal recessive, affected parents are both $aa$ and can transmit only $a$ — every child must be $aa$ (affected). An unaffected child therefore excludes the model. Unaffected-parents-with-affected-child is the SIGNATURE of recessive inheritance, and modest sex bias can occur by chance.`
           }
         ]
@@ -115,7 +124,11 @@ $P(\\text{child has CF}) = \\frac{2}{3} \\times \\frac{1}{25} \\times \\frac{1}{
 - Obligate carriers: unaffected parents of an AR child; every daughter of an XR-affected father
 - The unaffected sibling of an AR patient is a carrier with probability $2/3$, not $1/2$ — condition on the known phenotype
 - Recurrence risk = product of each required event: (carrier?) $\\times$ (carrier?) $\\times$ $1/4$
-- Two affected AR parents cannot have an unaffected child; late-onset dominant disease keeps risk at $1/2$ despite a healthy young adult phenotype`
+- Two affected AR parents cannot have an unaffected child; late-onset dominant disease keeps risk at $1/2$ despite a healthy young adult phenotype
+
+<!-- yield:low -->
+- Low-yield extras: X-linked hypophosphatemic rickets is the textbook X-linked dominant example; LHON and MELAS are the named mitochondrial examples
+<!-- /yield -->`
     }
   ]
 };

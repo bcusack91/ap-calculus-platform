@@ -21,8 +21,12 @@ Apoptosis is an **orderly, energy-requiring** process — fundamentally differen
 | Pathway | Trigger | Initiator Caspase | Key Steps |
 |---------|---------|-------------------|-----------|
 | Intrinsic (mitochondrial) | DNA damage, oxidative stress, growth factor withdrawal | Caspase-9 | Mitochondria release cytochrome c → apoptosome forms → caspase-9 activation |
-| Extrinsic (death receptor) | Death ligands (FasL, TNF, TRAIL) | Caspase-8 | Ligand binds Fas → DISC forms → caspase-8 activation |
+| Extrinsic (death receptor) | Death ligands (FasL, TNF) | Caspase-8 | Ligand binds its death receptor (e.g., Fas) → caspase-8 activation |
 | Both pathways converge → | | **Caspase-3** (executioner) | Cleaves cellular substrates → cell death |
+
+<!-- yield:low -->
+- Extrinsic-pathway detail: TRAIL is a third death ligand, and ligand-bound Fas assembles a death-inducing signaling complex (DISC) that activates caspase-8.
+<!-- /yield -->
 
 ### Key Regulators of Apoptosis
 
@@ -30,9 +34,11 @@ Apoptosis is an **orderly, energy-requiring** process — fundamentally differen
 |---------|------|-------------------|
 | **Bcl-2** | Anti-apoptotic (blocks cytochrome c release) | Overexpressed in follicular lymphoma |
 | **Bax, Bak** | Pro-apoptotic (form pores in mitochondria → cytochrome c release) | Promote apoptosis |
-| **p53** | Pro-apoptotic (upregulates Bax, activates intrinsic pathway) | Mutated in >50% of cancers |
-| **IAPs** | Inhibitors of apoptosis (bind and inhibit caspases) | Can contribute to cancer survival |
-| **Smac/DIABLO** | Inhibits IAPs → promotes apoptosis | Released from mitochondria with cytochrome c |
+| **p53** | Pro-apoptotic (upregulates Bax, activates intrinsic pathway) | Mutated in ~50% of cancers |
+
+<!-- yield:low -->
+- **IAPs** (inhibitors of apoptosis) bind and inhibit caspases, which can help cancer cells survive; **Smac/DIABLO**, released from mitochondria with cytochrome c, inhibits the IAPs and so promotes apoptosis.
+<!-- /yield -->
 
 ### Apoptosis vs. Necrosis
 
@@ -55,18 +61,21 @@ Apoptosis is an **orderly, energy-requiring** process — fundamentally differen
             question: `A cancer cell overexpresses Bcl-2 protein. The most direct effect is:`,
             options: [`Resistance to apoptosis by blocking cytochrome c release`, `Increased apoptosis from enhanced caspase-9 activation`, `Arrest of the cell cycle at the G$_1$/S checkpoint`, `Increased sensitivity to Fas death receptor ligands`],
             correctAnswer: 0,
-            explanation: `Bcl-2 is anti-apoptotic — it stabilizes the outer mitochondrial membrane, preventing Bax/Bak from forming pores and blocking cytochrome c release. This blocks the intrinsic apoptotic pathway. Overexpression in follicular lymphoma (due to t(14;18) translocation) prevents B-cell apoptosis → lymphoma.`
+            yield: 'MEDIUM',
+            explanation: `Bcl-2 is anti-apoptotic — it stabilizes the outer mitochondrial membrane, preventing Bax/Bak from forming pores and blocking cytochrome c release. This blocks the intrinsic apoptotic pathway. Overexpression in follicular lymphoma prevents B-cell apoptosis → lymphoma.`
           },
           {
             question: `During apoptosis, phosphatidylserine (PS) appears on the outer leaflet of the plasma membrane. The function of this is:`,
             options: [`An "eat me" signal marking the cell for phagocytosis`, `A signal that recruits neutrophils to trigger inflammation`, `A trigger that activates intracellular caspases`, `A way to increase membrane fluidity for blebbing`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `PS is normally kept on the inner leaflet by flippases. During apoptosis, scramblases expose PS on the outer surface. Macrophages have PS receptors and recognize this as an "eat me" signal → phagocytosis of apoptotic bodies without inflammation. This is why apoptosis does not trigger an immune response.`
           },
           {
             question: `A researcher observes DNA fragmented into a distinct ladder pattern of ~180 bp repeats on gel electrophoresis. This indicates:`,
-            options: [`Apoptosis, with cuts between nucleosomes`, `Necrosis, with random DNA degradation`, `Viral infection causing random DNA breaks`, `Restriction enzyme cutting at specific sites`],
+            options: [`Apoptosis, with cuts between nucleosomes`, `Necrosis, with random cleavage by lysosomal nucleases`, `Viral infection causing random DNA breaks`, `Restriction enzyme cutting at specific sites`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `During apoptosis, caspase-activated DNase (CAD) cleaves DNA between nucleosomes. Since DNA wraps around nucleosomes every ~180 bp, this creates a characteristic "ladder" pattern on gel electrophoresis. Necrotic DNA degradation is random and appears as a continuous smear, not a ladder.`
           }
         ]
@@ -85,12 +94,14 @@ Autophagy is distinct from apoptosis — it is a **survival mechanism**, not a d
 
 **MCAT distinction**: Apoptosis = programmed cell DEATH. Autophagy = programmed cell SURVIVAL under stress.
 
+<!-- yield:low -->
 ### Necroptosis — Programmed Necrosis
 
 - A regulated form of necrosis (combines features of both)
 - Triggered by death receptors (like extrinsic apoptosis) but when caspase-8 is inhibited
 - RIPK1 → RIPK3 → MLKL → membrane rupture
 - Results in inflammation (like necrosis) but is genetically programmed (like apoptosis)
+<!-- /yield -->
 
 ### Clinical Connections — MCAT Favorites
 
@@ -119,12 +130,14 @@ Autophagy is distinct from apoptosis — it is a **survival mechanism**, not a d
             question: `A cell deprived of growth factors for an extended period activates the intrinsic apoptotic pathway. The key mitochondrial event that initiates the caspase cascade is:`,
             options: [`Release of cytochrome c to the cytoplasm via Bax/Bak pores`, `Release of Bcl-2 into the cytoplasm to activate caspases`, `Loss of ATP synthesis, which directly activates caspases`, `Degradation of mitochondrial DNA by activated caspase-3`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Without growth factor survival signals, pro-apoptotic Bax and Bak oligomerize in the outer mitochondrial membrane, forming pores. Cytochrome c (normally in the intermembrane space for the ETC) leaks out into the cytoplasm → binds Apaf-1 → forms the apoptosome → activates caspase-9 → caspase-3 → cell death.`
           },
           {
             question: `During T cell development in the thymus, T cells that strongly react to self-antigens undergo apoptosis. This process is called:`,
             options: [`Negative selection, eliminating self-reactive T cells`, `Positive selection, keeping T cells that recognize self-MHC`, `Clonal expansion, proliferating antigen-specific T cells`, `Peripheral anergy, leaving self-reactive cells unresponsive`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Negative selection occurs in the thymic medulla: T cells that bind self-antigens too strongly are eliminated by apoptosis. This is clonal deletion — a key mechanism of central tolerance. Failure of negative selection → self-reactive T cells escape → autoimmune disease. Positive selection (in the cortex) eliminates T cells that cannot recognize self-MHC at all.`
           }
         ]
@@ -142,7 +155,11 @@ Autophagy is distinct from apoptosis — it is a **survival mechanism**, not a d
 - PS exposure on outer membrane = "eat me" signal for phagocytes
 - Autophagy = survival mechanism (self-digestion under stress), NOT death
 - Apoptosis essential in development (digit separation, thymic negative selection, neural pruning)
-- Too little apoptosis → cancer; too much → neurodegeneration, immunodeficiency`
+- Too little apoptosis → cancer; too much → neurodegeneration, immunodeficiency
+
+<!-- yield:low -->
+- Low-yield extras: TRAIL and the DISC in the extrinsic pathway; IAPs (caspase inhibitors) and Smac/DIABLO (their mitochondrial antagonist); necroptosis — programmed, inflammatory necrosis via RIPK1 → RIPK3 → MLKL when caspase-8 is blocked
+<!-- /yield -->`
     }
   ]
 };
