@@ -40,7 +40,7 @@ Attenuation adds a second, translation-coupled brake on the trp operon.
 ### Eukaryotic Layers
 
 1. **Enhancers/silencers**: cis elements that work at huge distances, in either orientation, upstream or downstream — DNA **looping** brings their bound activators to the promoter's mediator complex. Contrast with the fixed, close-range prokaryotic operator.
-2. **Chromatin**: **histone acetylation** (HATs) neutralizes lysine's positive charge, loosening DNA-histone grip → transcription up; **HDACs** reverse it. **DNA methylation** of CpG islands (promoter regions) silences — stable, heritable through division = **epigenetics** (genomic imprinting, X-inactivation/Barr body).
+2. **Chromatin**: **histone acetylation** (HATs) neutralizes lysine's positive charge, loosening DNA-histone grip → transcription up; **HDACs** reverse it. **DNA methylation** of CpG islands (promoter regions) silences — stable, heritable through division = **epigenetics** (genomic imprinting, where a gene is silenced according to which parent it came from; X-inactivation/Barr body).
 3. **Combinatorial control**: each gene's promoter integrates many transcription factors; tissue identity = the combination of factors present. No polycistronic mRNAs — each eukaryotic mRNA is monocistronic (one gene, one message).`
     },
     {

@@ -24,6 +24,9 @@ const submitSchema = z.object({
   // regenerates the identical quiz and grades authoritatively (no client trust).
   seed: z.number().int().optional(),
   difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
+  // Whether the draw included low-yield items (the student's lesson setting).
+  // A generation input like difficulty, used only to reproduce the draw.
+  includeLowYield: z.boolean().optional(),
   timeSpent: z.number().int().min(0).max(36000).optional().default(0),
   answers: z
     .array(
@@ -59,7 +62,7 @@ export async function POST(request: Request) {
         .join('; ')
       return NextResponse.json({ error: message }, { status: 400 })
     }
-    const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant, seed, difficulty } = parsed.data
+    const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant, seed, difficulty, includeLowYield } = parsed.data
     const userId = session.user.id
 
     // Pass/fail and mastery are decided HERE, not by the client. These gate MASTERED
@@ -81,7 +84,7 @@ export async function POST(request: Request) {
       // exact quiz and grade authoritatively. Falls through to the probe-based
       // regrade if seeding isn't available or reproduces no key.
       const seeded = typeof seed === 'number'
-        ? await regradeExitQuizSeeded(topicSlug, answers_, seed, totalQuestions, difficulty)
+        ? await regradeExitQuizSeeded(topicSlug, answers_, seed, totalQuestions, difficulty, includeLowYield)
         : null
       const regrade = seeded ?? (await regradeExitQuiz(topicSlug, answers_))
       if (regrade.resolvedCount > 0) {

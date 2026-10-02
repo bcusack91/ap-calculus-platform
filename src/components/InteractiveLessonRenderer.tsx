@@ -457,6 +457,11 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [showExitQuiz, setShowExitQuiz] = useState(false)
   const [showReference, setShowReference] = useState(false)
   const [exitQuizQuestions, setExitQuizQuestions] = useState<ExitQuizQuestion[]>([])
+  // "Include low-yield details" (User.lessonIncludeLowYield, lesson-yield.ts).
+  // Declared here because the exit-quiz opener below reads it.
+  const [includeLowYield, setIncludeLowYield] = useState(false)
+  // The setting the CURRENT exit quiz was drawn with (sent with its seed).
+  const [exitQuizIncludeLowYield, setExitQuizIncludeLowYield] = useState(false)
   // Seed the quiz generation so the server can regenerate + regrade this exact
   // quiz authoritatively (see /api/exit-quiz/submit). 31-bit positive int.
   const [exitQuizSeed, setExitQuizSeed] = useState<number>(0)
@@ -488,12 +493,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
       let questions: ExitQuizQuestion[] = []
       try {
-        questions = await generateExitQuiz(topicSlug, 10, difficulty, seed)
+        // Low-yield questions are asked only of students who chose to see
+        // low-yield material in the lesson.
+        questions = await generateExitQuiz(topicSlug, 10, difficulty, seed, { includeLowYield })
       } catch {
         return false // topic without a usable quiz pool
       }
       if (questions.length === 0) return false
       setExitQuizSeed(seed)
+      setExitQuizIncludeLowYield(includeLowYield)
       setExitQuizDifficulty(difficulty)
       setExitQuizQuestions(questions)
       setExitQuizRun((run) => run + 1)
@@ -501,7 +509,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return true
     },
-    [topicSlug],
+    [topicSlug, includeLowYield],
   )
 
   // Entrance quiz state (topic-level, e.g. moles-molar-mass). When no authored
@@ -538,7 +546,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // questions are hidden unless the student opts in (User.lessonIncludeLowYield).
   // Everything downstream (navigation, progress, mastery) uses this filtered
   // list, so a part completes at 100% whichever way the toggle is set.
-  const [includeLowYield, setIncludeLowYield] = useState(false)
   const rawSections = lessonData?.sections
   const sections = useMemo(() => filterSectionsForYield(rawSections ?? [], includeLowYield), [rawSections, includeLowYield])
   const partHasLowYield = useMemo(() => lessonHasLowYield(rawSections ?? []), [rawSections])
@@ -1328,6 +1335,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         questions={exitQuizQuestions}
         seed={exitQuizSeed}
         difficulty={exitQuizDifficulty}
+        includeLowYield={exitQuizIncludeLowYield}
         onPracticeAtDifficulty={startExitQuizPractice}
         onRetake={handleExitQuizRetake}
         onComplete={handleExitQuizComplete}

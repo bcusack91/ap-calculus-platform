@@ -88,7 +88,9 @@ async function probeAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
   for (let probe = 0; probe < STABILITY_PROBES; probe++) {
     let questions: Awaited<ReturnType<typeof generateExitQuiz>>
     try {
-      questions = await generateExitQuiz(topicSlug, FULL_POOL_COUNT)
+      // Every item, LOW included: this key only resolves answers by id, and a
+      // student who opted in to low-yield detail may have been served LOW items.
+      questions = await generateExitQuiz(topicSlug, FULL_POOL_COUNT, undefined, undefined, { includeLowYield: true })
     } catch {
       return null
     }
@@ -155,12 +157,13 @@ export async function regradeExitQuizSeeded(
   seed: number,
   count: number,
   difficulty?: ExitQuizDifficulty,
+  includeLowYield?: boolean,
 ): Promise<RegradeResult | null> {
   if (!hasExitQuiz(topicSlug) || !Number.isFinite(seed)) return null
 
   let questions: Awaited<ReturnType<typeof generateExitQuiz>>
   try {
-    questions = await generateExitQuiz(topicSlug, count, difficulty, seed)
+    questions = await generateExitQuiz(topicSlug, count, difficulty, seed, { includeLowYield })
   } catch {
     return null
   }

@@ -40,6 +40,7 @@ interface ExitQuizProps {
   variant?: number // current content variant (1-3)
   seed?: number // generation seed — lets the server regenerate + regrade this exact quiz
   difficulty?: 'easy' | 'medium' | 'hard' // tier the quiz was generated at
+  includeLowYield?: boolean // the draw included low-yield items (student's lesson setting)
   onPracticeAtDifficulty?: (difficulty: 'easy' | 'medium' | 'hard') => void // re-open as tiered practice
   /**
    * Start a NEW graded attempt right away (fresh draw). Surfaces that can
@@ -67,6 +68,7 @@ export default function ExitQuiz({
   variant,
   seed,
   difficulty,
+  includeLowYield,
   onPracticeAtDifficulty,
   onRetake
 }: ExitQuizProps) {
@@ -235,7 +237,8 @@ export default function ExitQuiz({
           timeSpent,
           variant: variant ?? 1,
           ...(typeof seed === 'number' ? { seed } : {}),
-          ...(difficulty ? { difficulty } : {})
+          ...(difficulty ? { difficulty } : {}),
+          ...(includeLowYield ? { includeLowYield: true } : {})
         })
       })
     } catch (err) {
@@ -243,7 +246,7 @@ export default function ExitQuiz({
     } finally {
       setSubmitSettled(true)
     }
-  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
+  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty, includeLowYield])
 
   useEffect(() => {
     if (quizComplete) {

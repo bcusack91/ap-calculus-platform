@@ -12,8 +12,13 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 /*  Lazy loader map — each entry dynamically imports its quiz file     */
 /* ------------------------------------------------------------------ */
 
+/** Per-student generation options. `includeLowYield`: also serve questions
+ *  tagged LOW (src/lib/lesson-yield.ts) — the student turned on "Include
+ *  low-yield details". Pools that ignore the argument behave as before. */
+export interface ExitQuizOptions { includeLowYield?: boolean }
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard') => any[] }>
+type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard', opts?: ExitQuizOptions) => any[] }>
 
 const quizLoaders: Record<string, QuizLoader> = {
   // Original math
@@ -158,7 +163,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-cell-biology-signaling-mcat': () => import('./mcat-biology'),
   'mcat-cell-biology-cell-cycle-mcat': () => import('./mcat-biology'),
   'mcat-molecular-biology-dna-replication-mcat': () => import('./mcat-biology'),
-  'mcat-molecular-biology-transcription-mcat': () => import('./mcat-biology'),
+  // Dedicated pool built from the lesson itself (owner request 2026-10-02):
+  // the keyword-picked biology pool served off-topic items (Golgi, macrolides…).
+  'mcat-molecular-biology-transcription-mcat': () => import('./mcat-transcription'),
   'mcat-molecular-biology-translation-mcat': () => import('./mcat-biology'),
   'mcat-molecular-biology-biotechnology-mcat': () => import('./mcat-biology'),
   'mcat-microbiology-bacteria-mcat': () => import('./mcat-biology'),
@@ -1171,7 +1178,7 @@ function mulberry32(seed: number): () => number {
  * override/call/restore is fully synchronous, so it can't interleave with other
  * requests on Node's single thread.
  */
-export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty, seed?: number): Promise<ExitQuizQuestion[]> {
+export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty, seed?: number, opts?: ExitQuizOptions): Promise<ExitQuizQuestion[]> {
   // Core Skills topics have no item pool of their own: they draw the EASY tier
   // of the topic they are built from. Normalizing here rather than registering
   // 26 adapter entries means the difficulty is forced to 'easy' no matter what
@@ -1195,12 +1202,12 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
     const realRandom = Math.random
     Math.random = rng
     try {
-      questions = mod.generateExitQuiz(count, topicSlug, difficulty)
+      questions = mod.generateExitQuiz(count, topicSlug, difficulty, opts)
     } finally {
       Math.random = realRandom
     }
   } else {
-    questions = mod.generateExitQuiz(count, topicSlug, difficulty)
+    questions = mod.generateExitQuiz(count, topicSlug, difficulty, opts)
   }
   questions = await blendHardTier(topicSlug, questions, count, difficulty, seed)
 

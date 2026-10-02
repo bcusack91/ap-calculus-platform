@@ -372,13 +372,19 @@ function shuffleArray<T>(items: T[]): T[] {
   return shuffled
 }
 
-export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
-  // Low-yield items are hidden in lessons by default (lesson-yield.ts), so the
-  // exit quiz never asks them: the 80% gate tests what every student is shown.
-  // Filtered AFTER subtopic selection so the rest of the pool is unchanged, and
-  // inside the generator so the server's seeded regrade rebuilds the same quiz.
+export function generateExitQuiz(
+  count: number = 10,
+  topicSlug?: string,
+  _difficulty?: 'easy' | 'medium' | 'hard',
+  opts?: { includeLowYield?: boolean },
+): ExitQuizQuestion[] {
+  // Low-yield items are hidden in lessons unless the student opts in
+  // (lesson-yield.ts), so the exit quiz asks them only for those students: the
+  // 80% gate tests what the student was shown. Filtered AFTER subtopic
+  // selection so the rest of the pool is unchanged, and inside the generator
+  // so the server's seeded regrade rebuilds the same quiz.
   const source = (topicSlug ? mcatSubtopicPool(fullPool, 'cell-mol-bio', topicSlug) : fullPool)
-    .filter((q) => !('yield' in q && q.yield === 'LOW'))
+    .filter((q) => opts?.includeLowYield || !('yield' in q && q.yield === 'LOW'))
   const shuffled = shuffleArray(source)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `biology-${i}`,

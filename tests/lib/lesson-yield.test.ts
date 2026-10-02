@@ -125,15 +125,13 @@ describe('pilot lesson: Transcription & RNA Processing', () => {
   })
 })
 
-describe('exit quiz never asks low-yield material', () => {
-  it('drops LOW items from the Transcription pool, so the 80% gate tests what students are shown', async () => {
+describe('biology area exit pool respects the low-yield setting', () => {
+  // The Transcription topic now has its own pool (transcription-exit-quiz.test.ts);
+  // the shared biology pool still carries one LOW item (trp attenuation).
+  it('serves LOW items only to students who opted in', async () => {
     const { generateExitQuiz } = await import('@/data/exit-quizzes/mcat-biology')
-    const pool = generateExitQuiz(1000, 'mcat-molecular-biology-transcription-mcat')
-    expect(pool.length).toBeGreaterThanOrEqual(10) // still fills a full 10-question quiz
-    expect(pool.some((q) => /attenuation/i.test(q.question))).toBe(false)
-    for (let i = 0; i < 200; i++) {
-      const quiz = generateExitQuiz(10, 'mcat-molecular-biology-transcription-mcat')
-      expect(quiz.some((q) => /attenuation/i.test(q.question))).toBe(false)
-    }
+    const asks = (qs: { question: string }[]) => qs.some((q) => /attenuation/i.test(q.question))
+    expect(asks(generateExitQuiz(1000))).toBe(false)
+    expect(asks(generateExitQuiz(1000, undefined, undefined, { includeLowYield: true }))).toBe(true)
   })
 })
